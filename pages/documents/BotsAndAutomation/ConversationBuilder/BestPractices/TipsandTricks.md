@@ -16,12 +16,6 @@ There is no set order to the document - each heading is meant to be a single def
 
 ### Conversation Flow
 
-#### How do I get the bot to close the conversation?
-
-Create text interaction with the special string "LP_CLOSECONVERSATION"
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_2.png">
-
 #### How to: Create Reusable "yes" and “no” intents to reuse across dialogs
 
 Rather than having to constantly enter and re-enter patterns inside response conditions  for variations of "yes" or “no”, I recommend building out two specific intents which encompass these.
@@ -36,97 +30,11 @@ You can wrap all variations that encompass "yes" or “no”. Once done you can 
 
 <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_5.png"><img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_6.png">
 
+#### Creating a single "resolve and close" dialog
 
+##### Why? 
 
-### Suggestions for Bot Builders ahead of launch:
-
-#### 1- "Chaos Monkey" Testing = random, unfamiliar user testing the unhappy paths
-
- 
-
-* Be as disruptive as possible to try and break the flows you have already built.
-
-* **Find the gaps / cracks in your bot now - ****_not when it’s in front of all your customers._**
-
-* From within any/all intent dialogs deliberate enter gibberish  messages and see how the fallback plays out from this trigger?
-
-            - are you catching answers that are not expected question responses using * patterns and the repeat question approach we have built?
-
- 
-
-            Consider the following scenario:
-
-            - If someone unexpectedly jumps to the fallback mid-dialog flow, do you want to try and recognise this when they hit the fallback and offer them a way back to the previous intent dialog?
-
-                        - ***Note*** : doing this would require more conditional logic and some code to track and create this functionality.
-
-                        - maybe we set a "current_consumer_intent" variable at the top of each dialog?
-
-                        eg "current_consumer_intent" = “CARD_ACTIVATION”
-
-                        - then if they suddenly enter unrecognised utterances mid-dialog which trigger fallback, your fallback dialog can check this variable before decided what contextual message to show?
-
-                        *if* **current_consumer_intent** has a value 
-
-                        *then *
-
-*                                    ->* jump to fallback contextual message and skip known intents menu
-
-                                    -> "I see you were just in “card activation" but I didn’t understand your last message. Would you like to go back to where you were? Or speak to an agent?”
-
-                                                "go back to CARD ACTIVATION"
-
-                                                "talk to an agent"
-
-#### 2- Anticipate how you will react to unmatched intents on day 1
-
-* pre-build a dialog flow which recognises the customer wants help with a popular intent / question that the bot cannot currently handle
-
-* build out the dialog steps where you explain this and gracefully bring in an agent via transfer
-
-* then during the retraining downtime of the bot on day 1, you just need to create a new intent from the unmatched intents data, and connect it to this dialog.
-
-* you can then quickly put this live for round 2 of the bot on day 1 and quickly demonstrate how quickly you can *learn* from what customers are asking you.
-
-* extending this concept, you could also pre-build some dialogs which refer to incidents around specific service outages that might occur whilst the BOT is live - again hooking them up to common phrases people might ask in the event of an outage.
-
-* You can then quickly enable these dialogs on the fly should an incident occur as a way to help deflect / contain people who flood the channel during outages / issues.
-
-* Again, this can all be pre-built and tested ahead of the go-live based on the knowledge you have on how you respond / communicate service outages when customers come into agents at the moment.
-
-#### Avoid mismatched intents for unhandled use cases
-
-If there are known phrases / patterns for sensitive customer intents that you are not handling in the bot for launch, the recommendation is to create placeholder dialogs that target these specific patterns and immediately transfer to a human agent.
-
-This avoids the bot trying and failing to respond with the appropriate tone for something the customer says which you have not anticipated.
-
-E.g.
-
-"My partner has passed away" relates to bereavement and should be transferred immediately. 
-
-Create a dialog with the pattern for the User Says interaction of  "*passed away*" and other variations and have this immediately transfer to agent.
-
-This prevents hitting the fallback or mismatched intent with another dialog.
-
-### How best to program the intents and entities for compound sentences?
-
-E.g.
-
-#### should entities be used for variations of "don’t" “can’t” “won’t” ? 
-
-Will this benefit the system NLU in anyway? What about "cannot" “will not” “do not” variations?
-
-* You don’t have to define variations. During runtime, we expand sentences and process it. Can’t transforms to Cannot
-
-* Do not include I/We/You..
-
-* NLU takes care of compound phrases. It is good to test and tune the matched status from within the domain before using it in a dialog. Testing and tuning the sentence is a good practice.
-
-### Creating a single "resolve and close" dialog
-
-#### Why? 
-
-*- *to avoid having to repeatedly design and build the following sequence of questions within every dialog/intent flow
+* to avoid having to repeatedly design and build the following sequence of questions within every dialog/intent flow
 
 Did that resolve your question?
 
@@ -138,7 +46,7 @@ Yes = send goodbye message and close conversation
 
 No = Ask for user input and match intent etc.
 
-#### How? - 
+##### How? - 
 
 1- Create a new dialog inside your bot called "Confirm Resolution and Close"
 
@@ -172,7 +80,7 @@ E.g.
 
 <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_14.png">
 
-#### Demo
+##### Demo
 
 In my example bot I will start the billing flow…
 
@@ -198,169 +106,75 @@ Or say "no" and we close the conversation
 
 <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_19.png">
 
-### How to keep people inside a single dialog flow
 
-#### Why?
 
-Depending on the use case, it might be needed to ensure users do not jump out into other dialogs due to the next utterance, reply matching another intent within the NLU.
+### Suggestions for Bot Builders ahead of launch:
 
-At various branching points within certain dialogs, users are asked to answer questions or make choices on how to proceed.
+#### 1- "Chaos Monkey" Testing = random, unfamiliar user testing the unhappy paths
 
-Whilst effort can be made to help them pick certain predefined options, there is always a possibility that users will just type their needs separately and not pick from menus of buttons or multi-choice answers.
+* Be as disruptive as possible to try and break the flows you have already built.
 
-Unless these types of input are caught, they could allow the user to jump from the current flow into the next dialog. 
+* **Find the gaps / cracks in your bot now -** _not when it’s in front of all your customers._
 
-Whilst this may be an OK experience for certain dialogs, others may have specific questions and answers to collect and therefore we need a way to contain them in the current dialog until we have collected answers we need.
+* From within any/all intent dialogs deliberate enter gibberish  messages and see how the fallback plays out from this trigger?
 
-#### How?
+    * are you catching answers that are not expected question responses using * patterns and the repeat question approach we have built?
 
-When asking questions (pink) that specifically await user input, this allows the opportunity to define specific "response conditions" that can either allow/deny non-expected input to jump out into other dialogs.
+Consider the following scenario:
 
-As an example, this Balance dialog has 2 sequential questions: account number and email address. Both have specific conditions defined to validate the input.
+- If someone unexpectedly jumps to the fallback mid-dialog flow, do you want to try and recognise this when they hit the fallback and offer them a way back to the previous intent dialog?
 
-6 digits and valid email address respectively.
+    - ***Note*** : doing this would require more conditional logic and some code to track and create this functionality.
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_20.png">
+- maybe we set a "current_consumer_intent" variable at the top of each dialog?
 
-However, because no "catch all other" condition has been added, if the user types anything other than valid responses, the utterance is evaluated against NLU for matching intents which could jump dialogs. In the below example, nothing matches the response so the **fallback** dialog is invoked. Because **fallback **does not wait for any input, it immediately drops out of the bottom and returns them to the previous dialog…
+    - eg "current_consumer_intent" = “CARD_ACTIVATION”
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_21.png"><img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_22.png">
+- then if they suddenly enter unrecognised utterances mid-dialog which trigger fallback, your fallback dialog can check this variable before decided what contextual message to show?
 
-If you wanted to prevent this behaviour, the following condition could be added to each question:
+*if* **current_consumer_intent** has a value 
 
-Using the * pattern match as **the final condition **will catch any other responses to that question which do not match any of the previous conditions defined.
+*then*  
+        
+    - jump to fallback contextual message and skip known intents menu
 
-You can use this condition to repeat the same question if you desire or redirect anywhere else within the automation if you desire.
+        - "I see you were just in “card activation" but I didn’t understand your last message. Would you like to go back to where you were? Or speak to an agent?”
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_23.png">
+            - "go back to CARD ACTIVATION"
 
-### How does CB handle jumping between different intents and dialogs?
+            - "talk to an agent"
 
-#### Background:
+#### 2- Anticipate how you will react to unmatched intents on day 1
 
-Every time the user enters a new utterance in the conversation, this has the chance of matching a new intent and "jumping" you out of one dialog and into another one for the newly matched intent.
+* pre-build a dialog flow which recognises the customer wants help with a popular intent / question that the bot cannot currently handle
 
-**Note**: Depending on if the user’s utterance is in response to 
+* build out the dialog steps where you explain this and gracefully bring in an agent via transfer
 
-A) open-ended statement 
+* then during the retraining downtime of the bot on day 1, you just need to create a new intent from the unmatched intents data, and connect it to this dialog.
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_24.png">
+* you can then quickly put this live for round 2 of the bot on day 1 and quickly demonstrate how quickly you can *learn* from what customers are asking you.
 
-… or ...
+* extending this concept, you could also pre-build some dialogs which refer to incidents around specific service outages that might occur whilst the BOT is live - again hooking them up to common phrases people might ask in the event of an outage.
 
-B) specific question type 
+* You can then quickly enable these dialogs on the fly should an incident occur as a way to help deflect / contain people who flood the channel during outages / issues.
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_25.png">
+* Again, this can all be pre-built and tested ahead of the go-live based on the knowledge you have on how you respond / communicate service outages when customers come into agents at the moment.
 
-will affect your ability to restrict, redirect or prevent this behaviour.
+#### Avoid mismatched intents for unhandled use cases
 
-Let’s first look at the scenario A):
+If there are known phrases / patterns for sensitive customer intents that you are not handling in the bot for launch, the recommendation is to create placeholder dialogs that target these specific patterns and immediately transfer to a human agent.
 
-In this situation, the bot has presented a text statement: "please type your question" variation and awaits the user’s input.
+This avoids the bot trying and failing to respond with the appropriate tone for something the customer says which you have not anticipated.
 
-Because this not being captured in response to a specific (pink) question type, no response conditions can be applied what the user types - **_whatever the utterance is, will be processed by the NLU engine to try and find a matching intent and dialog flow._**
-
-Therefore if a new matching dialog flow is detected, this will be "pushed" onto the top of a virtual “stack” of dialogs in progress…
-
-Take the following bot automation where there are 2 defined intents - balance and billing question.
-
-1. In the first step, the user types an utterance ("balance") to trigger the first intent and dialog...
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_26.png">
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_27.png">*This represents the "stack" of dialogs being tracked by CB. Newest matched intent / dialogs are on the top - removed after completion of the final step *
-
-2) Mid Balance Enquiry dialog, the user types "billing question" utterance This matches the Billing Question intent and dialog, which is immediately **pushed to the top of the stack **The user then sees the steps for that intent...
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_28.png">
-
-3) Once the billing question dialog flow ends, the user is returned to the next dialog still on the stack in this case : Balance... 
-
-**Note**: The last interaction to be presented before leaving is shown again - in this case the "provide email address" question.
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_29.png">
-
-Note: This behaviour allows for many dialogs to stack and then pop as they are completed. In the following example, we start with Balance, then trigger Billing Question and then a specific answer in Billing Question routes us to "Sub Billing" Dialog. After that completes it is removed from the stack, then Billing Question is removed and finally we return to the Balance dialog and see the same interaction before we branched out.
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_30.png"><img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_31.png">
-
-#### How can I prevent / alter this behaviour?
-
-* If one of the dialogs added to the stack **ends the conversation** - this should prevent the system falling back to the dialog underneath in the stack.
-
-* If one of the stacked dialogs contains a question type that uses conditional matching to route to an end conversation interaction.
-
-* (TBC) an open question type with no routing conditions that just continues to next interaction, *appears* to block the NLU detection and dialog jumping behaviour - more testing required to confirm 100%
-
-Apart from that, the system will remove any stacked dialogs as they complete and return you to the previous one.
-
-**NOTE**: From March 15th there should be a fix in Production which prevents the above behaviour from happening if you ever trigger the fallback dialog. *Therefore if you jump from fallback to another intent dialog, you should ***_NOT_*** then be dropped back into fallback once the intent dialog is complete.*
-
-Add the following pre-process code to your escalation / transfer to agent action to prevent the above behaviour
-
-```javascript
-botContext.setBotVariable('skipPreviousDialog', 'true',true,false);
-```
-
-##### Demo
-
-[https://youtu.be/vcCuewGgvVE](https://youtu.be/vcCuewGgvVE)
-
-### How to ignore customer responses whilst the bot is sending out instructions before the next question is asked.
-
-A common scenario is having the bot present several text interactions of information with small delays between each interaction (to aid accessibility issues). After these interactions have been sent in sequence, the bot asks the user a question to help decide the next course of action.
-
-However, there is nothing stopping the consumer from typing utterances whilst the bot is still in the process of sending its sequence of text interactions. 
-
-In this situation, an utterance would be processed for any matching intents/patterns to dialogs and potentially "jump" the user into another dialog, fallback or be treated as a response to an upcoming question in the current dialog.
-
-#### Solution:
-
-By setting the following Automation Environment Variables at Bot Automation level, the bot can be set to "ignore" utterances sent by the consumer within a dialog until the next logical branching option is reached - e.g. a question with conditions that allow you jump out to other dialogs.
-
-<table>
- <tr>
- <td>Environment Variable Name</td>
- <td>Value</td>
- <td>Description</td>
- </tr>
- <tr>
- <td>system_handleIntermediateUserMessage</td>
- <td>true</td>
- <td>Enables the behaviour to catch intermediate user messages mid dialog flow</td>
- </tr>
- <tr>
- <td>system_intermediateBotMessage</td>
- <td>(Optional) Message String to respond with if triggered
 E.g.
-"Please wait...we are still responding to your last message"</td>
- <td>The message the bot will respond with if the feature is triggered by the user sending an utterance.
-If this value is not set then the bot will simply not respond with anything should the ignore feature be enabled.</td>
- </tr>
- <tr>
- <td>system_intermediateBotResponseTimeout</td>
- <td>Time Out period in milliseconds
-E.g 15000 = 15 seconds</td>
- <td>If for some reason, bot is waiting on Message #1 and the wait is way too long, then it should timeout and move on to Message #2, instead of waiting for message #1 to complete.</td>
- </tr>
-</table>
+
+"My partner has passed away" relates to bereavement and should be transferred immediately. 
+
+Create a dialog with the pattern for the User Says interaction of  "*passed away*" and other variations and have this immediately transfer to agent.
+
+This prevents hitting the fallback or mismatched intent with another dialog.
 
 
-*If you have an existing set of Automation Variables assigned to your bot already, please ***_append_*** these variables to that existing set to enable this feature. *
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_32.png">
-
-*Otherwise, create a new automation environment set to store these settings inside and assign them to your bot automation…*
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_33.png"><img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_34.png">
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_35.png">
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_36.png">
-
-Essentially, you will be "locked" to the current dialog and be shown the system_intermediateBotMessage text each time you try and interrupt the bot mid-flow
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_37.png">
 
 ### Agent to Bot Transfer Scenarios
 
@@ -483,11 +297,29 @@ You can glean some information from Kibana by using this query param:
 
 {{Account Id}} AND "Login Failed" AND {{Bot login name}}
 
-### Avoiding False Positives (How to Optimise / Train NLU Intent Detection)
+### NLU
 
-#### [UPDATE: New document from Ravi here](https://docs.google.com/document/d/1Dw2sXrMmUPWZd-fkV_3vr3b77altwKfHlJKweVcQtmo/edit?usp=sharing)
+#### How best to program the intents and entities for compound sentences?
 
-#### Beware overuse of entities in training phrases
+E.g.
+
+##### should entities be used for variations of "don’t" “can’t” “won’t” ? 
+
+Will this benefit the system NLU in anyway? What about "cannot" “will not” “do not” variations?
+
+* You don’t have to define variations. During runtime, we expand sentences and process it. Can’t transforms to Cannot
+
+* Do not include I/We/You..
+
+* NLU takes care of compound phrases. It is good to test and tune the matched status from within the domain before using it in a dialog. Testing and tuning the sentence is a good practice.
+
+
+
+#### Avoiding False Positives (How to Optimise / Train NLU Intent Detection)
+
+[UPDATE: New document from Ravi here](https://docs.google.com/document/d/1Dw2sXrMmUPWZd-fkV_3vr3b77altwKfHlJKweVcQtmo/edit?usp=sharing)
+
+##### Beware overuse of entities in training phrases
 
 The greater the number of matching entities in a single training phrase, the higher the score level.
 
@@ -503,7 +335,7 @@ Further HSBC specific use cases / examples linked here [https://docs.google.com/
 
 [https://docs.google.com/a/liveperson.com/spreadsheets/d/1CWsDLKIA6kRLuge70nPZjjP_n-YkEu5wbu512RSYPAs/edit?disco=AAAAC4Su_Qk](https://docs.google.com/a/liveperson.com/spreadsheets/d/1CWsDLKIA6kRLuge70nPZjjP_n-YkEu5wbu512RSYPAs/edit?disco=AAAAC4Su_Qk)
 
-#### Training Phrases should be one sentence - not many
+##### Training Phrases should be one sentence - not many
 
 In intent "Activate a Card" remove text "I think I need to ENT_activate it." from training phrase 
 
@@ -511,7 +343,7 @@ In intent "Activate a Card" remove text "I think I need to ENT_activate it." fro
 
 Training phrase should be one sentence, not multiple. Multiple sentences increase risk of false positive as they provide more opportunity for a wider range of matching.
 
-#### "Stop" Words and their impact on NLU
+##### "Stop" Words and their impact on NLU
 
 Below is the stop word list. When we use training sentences these words may not carry weight in comparison to words that are not in this list.
 
@@ -529,11 +361,9 @@ If you have/had training phrases which contain any of these words **_they will b
 
 ### Troubleshooting
 
-#### Known issues
+#### *Messages are delivered out of order*
 
-##### *Messages are delivered out of order*
-
-###### Why is this? 
+##### Why is this? 
 
 * UMS processes messages in its queue on a rolling 2 second loop.
 
@@ -541,13 +371,13 @@ If you have/had training phrases which contain any of these words **_they will b
 
 * This means **_there is no guarantee what order they will be delivered to the consumer_**
 
-###### Mitigation = Add minimum 2 second delay to each message in a sequence
+##### Mitigation = Add minimum 2 second delay to each message in a sequence
 
 * Ensure you have a minimum of 2 seconds delay (2000ms) for each interaction within CB where you care about the order (which is 99% of the time always!)
 
  * This will mean each message added to the UMS queue *should* be at least 2 seconds apart and not be grouped together in a batch that could be delivered out of order.
 
-##### Long messages are broken up into smaller ones - what is the word limit per single message?
+#### Long messages are broken up into smaller ones - what is the word limit per single message?
 
 320 characters on a word boundary
 
@@ -561,15 +391,15 @@ tag::breakWithDelay=2000
 
 <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_43.png">
 
-##### "My Quick Reply question is not showing"
+#### "My Quick Reply question is not showing"
 
-###### *Quick Replies only show a maximum of **3** options when used inside FB Messenger*
+##### *Quick Replies only show a maximum of **3** options when used inside FB Messenger*
 
-##### *Unmatched Phrases Not Showing in Analytics*
+#### *Unmatched Phrases Not Showing in Analytics*
 
-###### Reason = When using a Knowledge Base without using any intents in intent builder, analytics does not track the unmatched phrases.
+##### Reason = When using a Knowledge Base without using any intents in intent builder, analytics does not track the unmatched phrases.
 
-###### Mitigation = Add the following global function
+##### Mitigation = Add the following global function
 
 ```javascript
 function __initConversation(){

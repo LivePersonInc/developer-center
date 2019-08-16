@@ -80,9 +80,9 @@ See [Integrations](conversation-builder-conversation-builder-integrations.html) 
 
   * Bot Variable: `{$botContext.botVariableName}`
 
-  * Slot Variable: `{$botContext.slot.slotName}`
+  * [Slot Variable](conversation-builder-conversation-builder-conditions.html): `{$botContext.slot.slotName}`
 
-  * Environment Variable: `{$env.envVariableName}`
+  * [Environment Variable](conversation-builder-best-practices-using-environment-variables.html): `{$env.envVariableName}`
 
   * API Integration custom data values: `{apiName.variableName}`
 

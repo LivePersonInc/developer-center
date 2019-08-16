@@ -137,11 +137,13 @@
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
+            - subpagename: Dialogs
             - subpagename: Interactions
             - subpagename: Conditions
             - subpagename: Assist
             - subpagename: Integrations
             - subpagename: Scripting Functions
+            - subpagename: Keyword Triggers
       - pagename: Intent Builder
         subpages:
           - subpagename: Overview
