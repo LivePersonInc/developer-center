@@ -58,10 +58,7 @@ A slot is a container for storing a value or parameter, so it can be used in sub
 
 As an example, you might have a Text Question interaction that asks the user for their 6-digit account number. If that condition is met (the user enters a 6-digit number), the number is then stored in a slot named `accountNumber`. A subsequent Integration interaction uses that number to retrieve the user's balance.
 
-<img class="fancyimage" src="img/ConvoBuilder/conditions_and_slots.png">
-<!--
-Do I need to add style="width:{some pixel number}px" to the img tag above?
--->
+<img class="fancyimage" width="750" src="img/ConvoBuilder/conditions_and_slots.png">
 
 For more on working with slots, see [Slots](conversation-builder-conversation-builder-slots.html).
 
