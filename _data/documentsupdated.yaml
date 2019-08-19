@@ -139,8 +139,9 @@
             - subpagename: Overview
             - subpagename: Dialogs
             - subpagename: Interactions
-            - subpagename: Conditions
+            - subpagename: Interaction Details
             - subpagename: Assist
+            - subpagename: Slots & Variables
             - subpagename: Integrations
             - subpagename: Scripting Functions
             - subpagename: Keyword Triggers
