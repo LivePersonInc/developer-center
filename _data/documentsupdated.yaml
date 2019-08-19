@@ -154,10 +154,12 @@
       - pagename: Accounts
         subpages:
           - subpagename: User Role Permissions
+      - pagename: Operations
       - pagename: Best Practices
         subpages:
           - subpagename: Transfer to an Agent or Bot
           - subpagename: Using Environment Variables
+          - subpagename: Common Conversation Patterns
           - subpagename: Training and Tuning Your Intents and FAQs
           - subpagename: Versions, Releases, & Change Management
       #- pagename: Operations
