@@ -196,107 +196,6 @@ This document steps through how to create logic in your fallback and welcome/gre
 
 [https://docs.google.com/document/d/1SjzCsHOhLK6QRbZRsLOCveQpG53_oESlpkhBsuQqPLg/edit?usp=sharing](https://docs.google.com/document/d/1SjzCsHOhLK6QRbZRsLOCveQpG53_oESlpkhBsuQqPLg/edit?usp=sharing)
 
-### IP Login Policy
-
-If a LiveEngage account has ip login restrictions in place, you must add the below IP addresses to the login policy in legacy backend. There are two sets that need whitelisting, depending on whether CB is hosted in AWS or LP Cloud.
-
-#### AWS:
-
-```
-13.52.0.0-13.52.255.255
-13.56.0.0-13.56.255.255
-13.57.0.0-13.57.255.255
-18.144.0.0-18.145.255.255
-50.18.0.0-50.18.255.255
-52.8.0.0-52.8.255.255
-52.9.0.0-52.9.255.255
-52.52.0.0-52.53.255.255
-52.92.48.0-52.92.51.255
-52.93.34.56-52.93.34.56
-52.93.34.57-52.93.34.57
-52.93.37.222-52.93.37.222
-52.93.37.223-52.93.37.223
-52.94.12.0-52.94.12.255
-52.94.72.0-52.94.75.255
-52.94.198.0-52.94.198.15
-52.119.176.0-52.119.183.255
-52.144.194.192-52.144.194.255
-52.219.20.0-52.219.23.255
-52.219.24.0-52.219.31.255
-54.231.232.0-54.231.239.255
-54.239.0.16-54.239.0.31
-54.240.198.0-54.240.198.255
-54.240.212.0-54.240.215.255
-176.32.112.0-176.32.119.255
-204.246.160.0-204.246.163.255
-205.251.228.0-205.251.231.255
-52.94.248.128-52.94.248.143
-52.94.249.80-52.94.249.95
-52.95.246.0-52.95.246.255
-52.95.255.96-52.95.255.111
-54.67.0.0-54.67.255.255
-54.151.0.0-54.151.127.255
-54.153.0.0-54.153.127.255
-54.176.0.0-54.177.255.255
-54.183.0.0-54.183.255.255
-54.193.0.0-54.193.255.255
-54.215.0.0-54.215.255.255
-54.219.0.0-54.219.255.255
-54.241.0.0-54.241.255.255
-184.72.0.0-184.72.63.255
-184.169.128.0-184.169.255.255
-204.236.128.0-204.236.191.255
-216.182.236.0-216.182.237.255
-```
-
-#### LP Cloud:
-
-```
-52.124.128.0-52.124.255.255
-54.230.0.0-54.230.255.255
-54.239.128.0-54.239.191.255
-99.84.0.0-99.84.255.255
-205.251.192.0-205.251.223.255
-54.239.192.0-54.239.223.255
-70.132.0.0-70.132.63.255
-13.32.0.0-13.33.255.255
-13.224.0.0-13.227.255.255
-13.35.0.0-13.35.255.255
-204.246.172.0-204.246.173.255
-204.246.164.0-204.246.167.255
-204.246.168.0-204.246.171.255
-71.152.0.0-71.152.127.255
-216.137.32.0-216.137.63.255
-205.251.249.0-205.251.249.255
-99.86.0.0-99.86.255.255
-52.46.0.0-52.46.63.255
-52.84.0.0-52.85.255.255
-64.252.64.0-64.252.127.255
-204.246.174.0-204.246.175.255
-64.252.128.0-64.252.191.255
-205.251.254.0-205.251.254.255
-143.204.0.0-143.204.255.255
-205.251.252.0-205.251.253.255
-204.246.176.0-204.246.191.255
-13.249.0.0-13.249.255.255
-54.240.128.0-54.240.191.255
-205.251.250.0-205.251.251.255
-52.222.128.0-52.222.255.255
-54.182.0.0-54.182.255.255
-54.192.0.0-54.192.255.255
-```
-
-
-### Debugging login failures
-
-If the bot connector is online but the LE connection status is not up, there is likely a login issue.
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_38.png">
-
-You can glean some information from Kibana by using this query param: 
-
-{{Account Id}} AND "Login Failed" AND {{Bot login name}}
-
 ### NLU
 
 #### How best to program the intents and entities for compound sentences?
@@ -371,7 +270,9 @@ If you have/had training phrases which contain any of these words **_they will b
 
 * This means **_there is no guarantee what order they will be delivered to the consumer_**
 
-##### Mitigation = Add minimum 2 second delay to each message in a sequence
+##### Mitigation
+
+Add minimum 2 second delay to each message in a sequence
 
 * Ensure you have a minimum of 2 seconds delay (2000ms) for each interaction within CB where you care about the order (which is 99% of the time always!)
 
@@ -393,13 +294,17 @@ tag::breakWithDelay=2000
 
 #### "My Quick Reply question is not showing"
 
-##### *Quick Replies only show a maximum of **3** options when used inside FB Messenger*
+*Quick Replies only show a maximum of **3** options when used inside FB Messenger*
 
 #### *Unmatched Phrases Not Showing in Analytics*
 
-##### Reason = When using a Knowledge Base without using any intents in intent builder, analytics does not track the unmatched phrases.
+##### Reason
 
-##### Mitigation = Add the following global function
+When using a Knowledge Base without using any intents in intent builder, analytics does not track the unmatched phrases.
+
+##### Mitigation
+
+Add the following global function
 
 ```javascript
 function __initConversation(){
@@ -417,7 +322,8 @@ This function should be called at the start of every conversation processed by y
 
 Yes - you can now "overwrite" the contents of one domain using the CSV intent / entity export CSV files from any other domain.
 
-**PLEASE NOTE: **This is a complete override of the target with the source data - no merge.
+{: .important}
+This is a complete override of the target with the source data - no merge.
 
 ### Exporting/Importing Bot Automations from AWS farm to LPPC
 
