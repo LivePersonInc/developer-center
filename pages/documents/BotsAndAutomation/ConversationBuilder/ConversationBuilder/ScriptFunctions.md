@@ -588,3 +588,22 @@ var platformType = botContext.getUserPlatformType();
 // display the results...
 botContext.printDebugMessage('The userPlatformId = ' + userId + 'and the userPlatformType = ' + platformType);
 ```
+
+### Get Disambiguated Intent
+
+These functions can be used in preProcess/postProcess/processUserResponse code to get the relevant disambiguated intent data.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getDisambiguatedIntentName()` | None | selected intent name from the disambiguation interaction (string) |
+| `getDisambiguatedIntentId()` | None | selected intent ID from the disambiguation interaction (string) |
+
+#### Example
+```javascript
+// get the disambiguated intent name
+var intentName = botContext.getDisambiguatedIntentName() ;
+// get the disambiguated intent ID
+var intentID = botContext.getDisambiguatedIntentId();
+// display the results...
+botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent ID = ' + intentID);
+```

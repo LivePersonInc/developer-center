@@ -185,7 +185,7 @@ You can use this condition to repeat the same question if you desire or redirect
 
 ### Create Reusable "yes" and “no” intents
 
-Rather than having to constantly enter and re-enter patterns inside response conditions  for variations of "yes" or “no”, I recommend building out two specific intents which encompass these.
+Rather than having to constantly enter and re-enter patterns inside response conditions  for variations of "yes" or “no”, it is  recommended to build out two specific intents which encompass these.
 
 * Affirmation
 
@@ -199,10 +199,9 @@ You can wrap all variations that encompass "yes" or “no”. Once done you can 
 
 ### Create "resolve and close" dialog
 
-#### Why
+This will help to avoid having to repeatedly design and build the following sequence of questions within every dialog/intent flow:
 
-* to avoid having to repeatedly design and build the following sequence of questions within every dialog/intent flow
-
+```
 Did that resolve your question?
 
 * Yes
@@ -212,28 +211,29 @@ Did that resolve your question?
 Yes = send goodbye message and close conversation
 
 No = Ask for user input and match intent etc.
+```
 
 #### How 
 
-1- Create a new dialog inside your bot called "Confirm Resolution and Close"
+1. Create a new dialog inside your bot called "Confirm Resolution and Close"
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_9.png">
+    <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_9.png">
 
-2 - Setup the following interactions
+2. Setup the following interactions
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_10.png">
+    <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_10.png">
 
-3 - Ask for confirmation of resolution
+3. Ask for confirmation of resolution
 
-4 - Setup Affirmation and Negative Affirmation response intents to capture their answer
+4. Setup Affirmation and Negative Affirmation response intents to capture their answer
 
-Affirmation goes to your interaction where you ask them to enter the next question. In my example that interaction is named "wait for next utterance"
+    Affirmation goes to your interaction where you ask them to enter the next question. In my example that interaction is named "wait for next utterance"
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_11.png">
+    <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_11.png">
 
-Negative Affirmation goes to the "happy to help message" which then goes to the **LP_CLOSECONVERSATION** code to end the conversation.
+    Negative Affirmation goes to the "happy to help message" which then goes to the [**LP_CLOSECONVERSATION** code to end the conversation.](conversation-builder-conversation-builder-keyword-triggers.html#close-conversation)
 
-5 - Wire up all your other existing intents to this one dialog flow when they have reached their logical end and you want to ask for confirmation the problem has been resolved.
+5. Wire up all your other existing intents to this one dialog flow when they have reached their logical end and you want to ask for confirmation the problem has been resolved.
 
 In my example bot I have two separate intents: billing and balance.
 
