@@ -151,6 +151,9 @@
           - subpagename: NLU Engines
       - pagename: Knowledge Base
       - pagename: Analytics
+      - pagename: Accounts
+        subpages:
+          - subpagename: User Role Permissions
       - pagename: Best Practices
         subpages:
           - subpagename: Transfer to an Agent or Bot

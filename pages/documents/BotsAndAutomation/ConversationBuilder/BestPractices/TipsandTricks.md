@@ -343,18 +343,6 @@ Yes - however you must consider the following caveats.
 
 [https://docs.google.com/document/d/1d9rbMetEX4DRKgi85XWCg7LFTT1EW3GTHEhDR4dZTyg/edit#](https://docs.google.com/document/d/1d9rbMetEX4DRKgi85XWCg7LFTT1EW3GTHEhDR4dZTyg/edit#)
 
-### Roles and Permissions
-
-The following document provides a table of the different CB roles and the actions they can perform within CB tool.
-
-[https://docs.google.com/spreadsheets/d/1C-SXlGbGzs9Pj7sM6r2sDP-pNzqyH6_wRN7qJ-Zk2oI/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1C-SXlGbGzs9Pj7sM6r2sDP-pNzqyH6_wRN7qJ-Zk2oI/edit?usp=sharing)
-
-In the past, everyone who got CB access was given admin access. However now, if a profile does not have any permissions associated, user will not have access to CB. Please update user permission. SSO Permissions guide here: [https://docs.google.com/document/d/1OQVtt2Rl5qrfUPI59ASH2HCR25IHELnGk5kac-vB0lg/edit?usp=sharing](https://docs.google.com/document/d/1OQVtt2Rl5qrfUPI59ASH2HCR25IHELnGk5kac-vB0lg/edit?usp=sharing)
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_44.png">
-
-(via [https://docs.google.com/document/d/1OQVtt2Rl5qrfUPI59ASH2HCR25IHELnGk5kac-vB0lg/edit](https://docs.google.com/document/d/1OQVtt2Rl5qrfUPI59ASH2HCR25IHELnGk5kac-vB0lg/edit))
-
 ### Undocumented Custom Configurations that impact bot agent behaviour
 
 Within CB when adding an "Enterprise Integration" to connect your automation to a LE bot agent user, there is a UI section at the bottom of the screen where credentials are entered called 
