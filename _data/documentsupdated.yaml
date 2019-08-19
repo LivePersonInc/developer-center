@@ -137,6 +137,7 @@
       - pagename: Conversation Builder
         subpages:
             - subpagename: Overview
+            - subpagename: Automations
             - subpagename: Dialogs
             - subpagename: Interactions
             - subpagename: Interaction Details
