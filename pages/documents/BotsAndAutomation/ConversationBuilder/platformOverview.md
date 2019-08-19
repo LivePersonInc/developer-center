@@ -23,9 +23,9 @@ Conversation Builder is a suite of integrated apps that work together to provide
 
 - [Analytics](conversation-builder-analytics.html) holds all of the operational and usage data for your automations.
 
-- Accounts is the administration area for managing permissions of Conversation Builder users.
+- [Accounts](conversation-builder-accounts-user-role-permissions.html) is the administration area for managing permissions of Conversation Builder users.
 
-- Operations allows you to view and change the status of all of your automations in various environments.
+- [Operations](conversation-builder-operations.html) allows you to view and change the status of all of your automations in various environments.
 
 ### Learn
 

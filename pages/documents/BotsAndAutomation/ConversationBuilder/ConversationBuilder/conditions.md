@@ -30,15 +30,19 @@ When a condition is met, the action defined under the Next Step dropdown menu wi
 
 ### Pattern Matching
 
-Patterns are combinations of keywords, wildcards and alternates which are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". However, Patterns can use alternates for specific variations, e.g., "I want a pair of (headphones&#124;head phones&#124;earbuds&#124;earphones)" will match "I want a pair of headphones" or "I want a pair of earphones", etc. Patterns can also include wildcards for looser matches, e.g., "&#42;home&#42;" would match "homes", "home run", "home is where the heart is".
+Patterns are combinations of keywords, wildcards and alternates which are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". 
+
+However, Patterns can use alternates for specific variations, e.g., `I want a pair of (headphones|head phones|earbuds|earphones)` will match "I want a pair of headphones" or "I want a pair of earphones", etc. 
+
+Patterns can also include wildcards for looser matches, e.g., `*home*` would match "homes", "home run", "home is where the heart is".
 
 You can use wildcards and alternates together like this:
 
-* "&#42; (some&#124;a pair of) (headphones&#124;earbuds)&#42;"
+* `* (some|a pair of) (headphones|earbuds)*`
 
-* "(thank(&#124;s)&#124;thank you)&#42;"
+* `(thank(|s)|thank you)*`
 
-* "&#42;headphones&#42;"
+* `*headphones*`
 
 Once the automation detects a match to the pattern which you defined, the dialog configured with that pattern kicks in and the conversation begins. If the pattern is configured for a user input in the middle of the conversation (like an answer to a question), the appropriate response will be triggered.
 
@@ -62,7 +66,7 @@ As an example, you might have a Text Question interaction that asks the user for
 
 For more on working with slots, see [Slots](conversation-builder-conversation-builder-slots.html).
 
-#### Change Response
+### Change Response
 
 Below the condition configuration box, you will find three check boxes. These control three different responses to the interaction you can use when using conditions:
 
@@ -75,9 +79,15 @@ Below the condition configuration box, you will find three check boxes. These co
 * Cancel response. Similarly, a user might wish to cancel their request with a phrase like "Never mind". The automation will then clear the data in the slot and send the cancelled message to the user, as defined by you.
 -->
 
-#### Code
+### Code
 
-This will enable you to write JavaScript code directly into your automation, further defining and controlling the flow of the dialog with even more advanced configurations. See [scripting functions](conversation-builder-conversation-builder-scripting-functions.html) for the available built-in functions.
+Javascript code can be utilized in the following areas:
+
+* preProcess
+* postProcess
+* processUserResponse
+
+This will enable you to use [built-in scripting functions](conversation-builder-conversation-builder-scripting-functions.html) to access variables and manipulate data to expand your automation capabilities.
 
 <!--
 Change Response and Code sections were H4s, i.e., subsections of slots. Do those belong in the Interactions topic instead?
