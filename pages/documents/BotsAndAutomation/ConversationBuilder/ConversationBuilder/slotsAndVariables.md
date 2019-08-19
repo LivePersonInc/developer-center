@@ -12,6 +12,8 @@ indicator: both
 
 In the [Interaction Details Response Match & Actions](conversation-builder-conversation-builder-interaction-details.html#next-actions-response-match-actions) settings, you can assign various data points to either Slots or Variables.
 
+One or the more common use cases of slots and variables is [storing user input](conversation-builder-conversation-builder-interactions.html#capture-and-use-consumer-response-to-a-question).
+
 ### Difference Between Slots and Variables
 
 When to use one or the other

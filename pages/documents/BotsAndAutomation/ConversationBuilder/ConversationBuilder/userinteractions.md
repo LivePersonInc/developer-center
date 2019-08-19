@@ -60,7 +60,7 @@ The following special syntax can also be used to access and save responses into 
 
 `{$query}`
 
-This is special syntax - used during **Response Conditions** for a question where you want to save the response from the consumer into a variable.
+This is special syntax - [used during **Response Conditions**](conversation-builder-conversation-builder-interaction-details.html#next-actions-variables) for a question where you want to save the response from the consumer into a variable.
 
 The below would store whatever the user response was to a question in this variable name.
 

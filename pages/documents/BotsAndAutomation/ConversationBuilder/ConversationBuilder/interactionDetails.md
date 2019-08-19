@@ -32,9 +32,15 @@ The Settings panel contains essential data about the selected Interaction.
 * Required
   * On/Off selector for required or not-required
 
-### Next Actions - Response Match & Actions
+### Next Actions
 
-#### Conditions
+Each Next Actions panel can contain 1 or many Response Match & Action sets. 
+
+Each Response Match & Action set will contain instructions for how to respond to various user inputs.
+
+For example, if you ask the user what their favorite color is, you may create a Response Match & Action set for each possible primary color.
+
+### Response Match & Actions - Conditions
 
 In the first dropdown within Conditions, you can set how you would like to match user input. 
 
@@ -43,7 +49,7 @@ In the first dropdown within Conditions, you can set how you would like to match
 * Pattern
 * Exact Value
 
-##### Pattern Matching
+#### Pattern Matching
 
 Patterns are combinations of keywords, wildcards and alternates which are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". 
 
@@ -71,7 +77,7 @@ The basic operators available for use with pattern matching are:
 
 If you need more advanced operators, you can also use [Regular Expressions](http://www.rexegg.com/regex-quickstart.html) with pattern matching.
 
-#### Slots
+### Response Match & Actions - Slots
 
 A slot is a container for storing a value or parameter, so it can be used in subsequent actions. You can store values in slots based on whether a condition is met.
 
@@ -81,11 +87,11 @@ As an example, you might have a Text Question interaction that asks the user for
 
 [See here](conversation-builder-conversation-builder-slots-variables.html#slots) for more on working with slots.
 
-#### Variables
+### Response Match & Actions - Variables
 
 [See here](conversation-builder-conversation-builder-slots-variables.html#variables) for more on working with variables.
 
-#### Next Step
+### Response Match & Actions - Next Step
 
 When adding a [question interaction](conversation-builder-conversation-builder-interactions.html) to the dialog, you can configure conditional logic based on the user's response. These are basically "if then" type decisions but, when combined with pattern matching, intents, and entities, they can deliver a powerful flow control engine for the automation.
 
@@ -109,11 +115,23 @@ When a condition is met, the action defined under the Next Step dropdown menu wi
 
 If a user asks for a slot to be changed but the automation couldn't recognize the phrase the user used ("give me a different color" for example), it will send a fallback response. This could be something like "I'm sorry, I didn't understand. Can you try again?" for example.
 
+### Next Actions - Process User Response
+
+This enables you to add javscript code for processing user input _upon receiving the input_.
+
+This is useful for cleaning or normalizing user input, or even passing the data to an API.
+
+Use [built-in scripting functions](conversation-builder-conversation-builder-scripting-functions.html) to access variables and manipulate data.
+
 ### Code
 
-Javascript code can be utilized in the following areas:
+The Code panel allows you to add a script for the following options:
 
 * Pre-Process Code
 * Post-Process Code
 
-This will enable you to use [built-in scripting functions](conversation-builder-conversation-builder-scripting-functions.html) to access variables and manipulate data to expand your automation capabilities.
+This enables you to add javscript code that executes _before or after_ the interaction runs.
+
+This is useful for any kind of build-up or tear-down that must take place.
+
+Use [built-in scripting functions](conversation-builder-conversation-builder-scripting-functions.html) to access variables and manipulate data.
