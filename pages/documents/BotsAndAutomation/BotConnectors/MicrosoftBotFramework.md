@@ -109,6 +109,77 @@ This should contain a valid structured content body, along with an optional prop
 
 Figure 4.1 Activity with Structured Content
 
+
+### Sending Quick Replies (Structured Content)
+
+Quick Replies is a special type of Structured Content. Is is a message sent along with predefined answers. The documentation can be found [here](quick-replies-introduction-to-quick-replies.html).
+The message property in the Structured Content is mandatory.
+
+```json
+{
+  "type": "message",
+  "text": "", 
+ "channelData": {
+     "metadata": [
+       {
+         "type": "ExternalId",
+          "id": "ABCD1234"
+       }
+     ],
+     "structuredContent": {
+           "quickReplies": {
+             "type": "quickReplies",
+             "itemsPerRow": 8,
+             "replies": [
+               {
+                 "type": "button",
+                 "tooltip": "yes i do",
+                 "title": "yes",
+                 "click": {
+                   "actions": [
+                     {
+                       "type": "publishText",
+                       "text": "yep"
+                     }
+                   ],
+                   "metadata": [
+                     {
+                       "type": "ExternalId",
+                       "id": "Yes-1234"
+                     }
+                   ]
+                 }
+               },
+               {
+                 "type": "button",
+                 "tooltip": "No!",
+                 "title": "No!",
+                 "click": {
+                   "actions": [
+                     {
+                       "type": "publishText",
+                       "text": "No!"
+                     }
+                   ],
+                   "metadata": [
+                     {
+                       "type": "ExternalId",
+                       "id": "No-4321"
+                     }
+                   ]
+                 }
+               }
+             ]
+           },
+           "message": "Do you like Bots?"
+     }
+  }
+}
+```
+
+Figure 5.1 Activity with Quick Replies
+ 
+
 ### Change Time To Response of Conversation
 
 By providing a specific **action** in the **channelData**, the bot can change the TTR of a conversation.
@@ -139,7 +210,7 @@ A text message can also be provided simultaneously in the activity json.
   }
 }
 ```
-Figure 5.1 Activity with TTR Change
+Figure 6.1 Activity with TTR Change
 
 ### Transfer / Escalations
 
@@ -167,7 +238,7 @@ An additional text message can also be provided.
   }
 }
 ```
-Figure 6.1 Activity excerpt for a transfer Request
+Figure 7.1 Activity excerpt for a transfer Request
 
 ### Close Chat/Conversation
 To close a chat or messaging conversation, we provide the action object as we did for a transfer. The activity should contain the following action.
@@ -185,7 +256,7 @@ An additional text message can also be provided.
   }
 }
 ```
-Figure 7.1 Activity excerpt for a close conversation request
+Figure 8.1 Activity excerpt for a close conversation request
 
 ### Welcome Event
 
@@ -208,4 +279,4 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
   }
 }
 ```
-Figure 8.1 Customer activity excerpt on a new chat
+Figure 9.1 Customer activity excerpt on a new chat

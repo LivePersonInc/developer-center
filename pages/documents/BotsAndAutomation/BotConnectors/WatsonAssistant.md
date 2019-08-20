@@ -490,9 +490,11 @@ Put the structured content objects that is shown in Figure 3.6 with the metadata
 
 Figure 3.6 Structured Content Watson JSON Example (IAM)
 
-For using [quickReplies](quick-replies-introduction-to-quick-replies.html), we require a special formatting of the structured content.
-The quick replies rich content should be added to the quickReplies property of the structuredContent object, and also a message should be included.
-This message will be sent to the customer along with the quick replies. **Figure 3.7** **Figure 3.8**
+### Send Quick Replies (Structured Content)
+
+For using [Quick Replies](quick-replies-introduction-to-quick-replies.html), we require a special formatting of the structured content.
+The content should be added to the quickReplies property of the structuredContent object and must also a include a message (**Figure 3.7** and **Figure 3.8**).
+This message will be sent to the customer along with the quick replies.
 
 ```json
 {
