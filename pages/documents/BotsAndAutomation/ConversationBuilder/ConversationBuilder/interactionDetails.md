@@ -29,7 +29,7 @@ The Interaction Details widget can contain three panels:
 The Settings panel contains essential data about the selected interaction:
 
 * **ID**: This is useful for debugging.
-* **Interaction Name**: Change the name to something memorable and useful to reference in the [Next Step](#response-match-actions-next-step) selector.
+* **Interaction Name**: Change the name to something memorable and useful to reference in the [Next Step](#response-match--actions---next-step) selector.
 * **Interaction Type**: Shows the [Interaction Type](conversation-builder-conversation-builder-interactions.html). Be aware that it is possible to change the type from this dropdown.
 * **Interaction Delay**: Set the millisecond time delay between sending this message. It is recommended to add a 2000 millisecond delay if you want to ensure a consistent message order.
 * **Enabled**: On/Off selector for enabling or disabling.
@@ -50,14 +50,14 @@ The following image illustrates two Response Match & Actions sets, where the fir
 
 When adding a question or integration [interaction](conversation-builder-conversation-builder-interactions.html) to the dialog, you can configure conditional logic based on the user's response. These are basically "if..., then..." type decisions, but, when combined with pattern matching, intents, and entities, they can deliver a powerful flow control engine for the automation.
 
-In the first dropdown within Conditions, you can set how you want to match the user input. 
+In the first dropdown within Conditions, you can set how you want to match the user input: 
 
-* **Response [Intent](conversation-builder-intent-builder-overview.html)**: The automation will trigger the [Next Step](#next-step) action when a specific intent is sent to it by the NLU engine. Make sure to connect your domain and populate it with intents, so they'll be available for conditions.
-* **Regular Expression**: The automation will trigger the [Next Step](#next-step) action when the user input matches the RegEx you define. All standard RegEx rules apply.
-* **Pattern**: The automation will trigger the [Next Step](#next-step) action when the user input matches the pattern you define. See below for more information on pattern matching.
-* **Exact Value**: The automation will trigger the [Next Step](#next-step) action when the user input matches an exact value you define. This is useful for questions where you present the user a set or predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
+* **Response [Intent](conversation-builder-intent-builder-overview.html)**: The automation will trigger the [Next Step](#response-match--actions---next-step) action when a specific intent is sent to it by the NLU engine. Make sure to connect your domain and populate it with intents, so they'll be available for conditions.
+* **Regular Expression**: The automation will trigger the [Next Step](#response-match--actions---next-step) action when the user input matches the RegEx you define. All standard RegEx rules apply.
+* **Pattern**: The automation will trigger the [Next Step](#response-match--actions---next-step) action when the user input matches the pattern you define. See below for more information on pattern matching.
+* **Exact Value**: The automation will trigger the [Next Step](#response-match--actions---next-step) action when the user input matches an exact value you define. This is useful for questions where you present the user a set or predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
 
-You can add more than one condition to an interaction for more complex flow control. To do so, click the <img style="width:25px" src="img/ConvoBuilder/icon_addCondition.png"> icon in the Conditions section.</div>
+You can add more than one condition to an interaction for more complex flow control. To do so, click the <img style="width:25px" src="img/ConvoBuilder/icon_addCondition.png"> icon in the Conditions section.
 
 <img style="width:400px" src="img/ConvoBuilder/interactionDetails_addCondition.png">
 
