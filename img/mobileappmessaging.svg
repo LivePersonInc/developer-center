@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <g fill="none" fill-rule="nonzero">
-        <path stroke="#F2F1F2" stroke-width="2" d="M13 16.983L5.722 3H2.154C1.5 3 1 3.465 1 4v18c0 .535.5 1 1.154 1h9.692C12.5 23 13 22.535 13 22v-5.017z"/>
-        <circle cx="7" cy="19" r="1" fill="#F2F1F2"/>
-        <path stroke="#F2F1F2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 12.7V2.119C11 1.5 11.456 1 12.018 1h9.963C22.543 1 23 1.501 23 2.119v7.448c0 .618-.457 1.119-1.019 1.119-2.304 0-7.77-.002-8.473 0a.467.467 0 0 0-.224.059L11.34 12.99c-.172.047-.34-.096-.34-.291z"/>
-    </g>
-</svg>
+<svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g fill="none"><path d="m13 16.983-7.278-13.983h-3.568c-.654 0-1.154.465-1.154 1v18c0 .535.5 1 1.154 1h9.692c.654 0 1.154-.465 1.154-1z" stroke="#f2f1f2" stroke-width="2"/><circle cx="7" cy="19" fill="#f2f1f2" r="1"/><path d="m11 12.7v-10.581c0-.619.456-1.119 1.018-1.119h9.963c.562 0 1.019.501 1.019 1.119v7.448c0 .618-.457 1.119-1.019 1.119-2.304 0-7.77-.002-8.473 0a.467.467 0 0 0 -.224.059l-1.944 2.245c-.172.047-.34-.096-.34-.291z" stroke="#f2f1f2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></g></svg>

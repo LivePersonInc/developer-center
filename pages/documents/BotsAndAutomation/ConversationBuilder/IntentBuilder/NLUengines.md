@@ -3,7 +3,7 @@ pagename: NLU Engines
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Intent Builder
 permalink: conversation-builder-intent-builder-nlu-engines.html
@@ -12,18 +12,26 @@ indicator: both
 
 One of the essential tools of the Conversation Builder platform is Natural Language Understanding (NLU). This is what allows Intent Builder to analyze consumer input and assign accurate intents.
 
-Conversation Builder allows you to choose your preferred NLU Engine for analyzing text by routing all NLU analysis and training through an API. 
+While LivePerson provides its own propriety NLU out of the box, the Conversation Builder also allows you to choose your preferred NLU Engine for analyzing text by routing all NLU analysis and training through an API. 
 
 This API layer of abstraction allows you to choose from the following NLU engines:
 
 - LivePerson's native NLU
-- Google DialogFlow
+- Google Dialogflow
 - IBM Watson
 
 {: .important}
-If you choose LivePerson's native NLU, no changes need to be made. This engine is already configured and set up to work with the Platform.
+If you choose LivePerson's native NLU, no changes need to be made in Conversation Builder. This engine is already configured and set up by default.
 
-### Using a 3rd party NLU Engine
+### Language Support
+
+LivePerson NLU supports intent detection for English and Spanish.
+
+[IBW Watson supports](https://cloud.ibm.com/docs/services/natural-language-understanding?topic=natural-language-understanding-language-support#language-support) Arabic, Chinese, Dutch, English, French, German, Italian, Japanese, Korean, Portuguese, Russian, Spanish, and Swedish.
+
+[Google Dialogflow supports](https://cloud.google.com/dialogflow/docs/reference/language) Cantonese, Chinese, Danish, Dutch, English, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Ukranian.
+
+### Connecting a 3rd party NLU Engine
 
 #### Step 1: Enable 3rd Party NLU Support
 
@@ -43,7 +51,7 @@ Once 3rd party NLU support is enabled, you can start creating domains (with 3rd 
 
 4. View and copy the newly created credentials
 
-##### Google DialogFlow
+##### Google Dialogflow
 
 1. Log in to the Dialogflow console
 
@@ -59,7 +67,7 @@ Once 3rd party NLU support is enabled, you can start creating domains (with 3rd 
 
 1. Click on ‘NLU Provider Credentials’ on domain dashboard
 
-    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_0.png">
+<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_0.png">
 
 2. Create a new NLU provider credential
 
@@ -71,7 +79,9 @@ Once 3rd party NLU support is enabled, you can start creating domains (with 3rd 
 
 #### Step 4: Add a domain for your NLU Provider
 
+
 Import your intents and entities or add them later manually before Step 5.
+
 
 <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_2.png">
 
@@ -92,13 +102,14 @@ Import your intents and entities or add them later manually before Step 5.
 4. Once training is completed, you can start testing with the modal version in the intent tester.
 
 
+
 ### Limitations
 
 #### 3rd Party NLU limitations
 
 - Third Party NLU Domain length should not exceed 64 characters. (Watson limitation)
 - Each domain can only support one language and it is available in the settings page.
- 
+
 #### NLU engine API limitations:
 - Knowledge Base does not support 3rd party NLU right now
-- Conversation Builder does not support pulling existing models from IBM Watson and Google DialogFlow into Intent Builder, only model push is supported. 
+- Conversation Builder does not support pulling existing models from IBM Watson and Google Dialogflow into Intent Builder, only model push is supported.

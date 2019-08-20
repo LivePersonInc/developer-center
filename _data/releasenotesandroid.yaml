@@ -1,6 +1,8 @@
 - operatingsystem: Android
   releases:
-  - releasename: 3.9.0
+  - releasename: 4.1.0
+  - releasename: Mobile App Messaging SDK for Android Release Notes 4.0.0
+  - releasename: Mobile App Messaging SDK for Android Release Notes 3.9.0
   - releasename: Mobile App Messaging SDK for Android Release Notes 3.8.1
   - releasename: Mobile App Messaging SDK for Android Release Notes 3.8.0
   - releasename: Mobile App Messaging SDK for Android Release Notes 3.7.0

@@ -12,7 +12,7 @@ indicator: both
 
 When calling the `get` method, you receive the current state of the data for your widget. The current state might not contain the data you are trying to use and you'll receive an error. When using the `bind` method, your code is called with the data from the widget when it's available, and after every change. Don't forget the behavior for `bind` - each time you get the "newValue", not just the changes. Thus, the `bind` method is preferable, making sure your data stays fresh and comprehensive. The only exception is the chat lines - where each time the callback is called with the new lines only.
 
-If you only wish to receive the data once - you can call `unbind` after receiving the initial data.
+If you only wish to receive the data once, you can call `unbind` after receiving the initial data.
 
 ### Be Specific
 

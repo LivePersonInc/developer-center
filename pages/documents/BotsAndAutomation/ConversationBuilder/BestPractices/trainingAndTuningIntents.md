@@ -3,7 +3,7 @@ pagename: Training and Tuning Your Intents and FAQs
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Best Practices
 permalink: conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html

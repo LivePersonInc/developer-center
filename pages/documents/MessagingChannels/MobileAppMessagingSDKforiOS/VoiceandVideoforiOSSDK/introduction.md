@@ -16,7 +16,7 @@ LivePerson's **Voice & Video SDK** allows you to communicate with your customers
 
 ![Introduction](img/iphone_001.png){:style="max-height:420px;"}
 
-Your agents engage from a web browser using our LiveEngage platform, while your consumers will be using your brand's own app, obtained fom the AppStore.
+Your agents engage from a web browser using our LiveEngage platform, while your consumers will be using your brand's own app, obtained from the AppStore.
 
 In addition to voice & video calls, the SDK supports realtime screen-sharing and in-app remote control, referred to as _In-app CoBrowsing_. This means that you can control your mobile app from any supported browser. This allows you to give visual guidance and helps you resolve difficult issues more quickly.
 

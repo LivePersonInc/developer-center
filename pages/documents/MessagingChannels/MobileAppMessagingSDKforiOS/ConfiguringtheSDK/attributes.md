@@ -677,14 +677,14 @@ Color code for date separator background color.
 #### dateSeparatorFontSize  
 Define the Date Separator font text style. 
 
- <div style="float: left; width: 35%;height: 65px;">
+ <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> UIFontTextStyle</li>
       <li><b>Default value:</b> UIFontTextStyle.footnote</li>
    </ul>
 </div>
 
-<div style="float: right; width: 65%;height: 65px;">
+<div style="float: right; width: 65%;height: 36px;">
    <figure>
    <figcaption></figcaption>
    <img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize">
@@ -967,12 +967,6 @@ Refers to the style in which the link preview cell will be displayed.
 </div>
 
 
-#### linkPreviewSiteNameTextColor  
-Color code for the description site name link preview area inside cell.
-
-   - **Type:** UIColor
-   - **Default value:**  
-
 
 #### urlRealTimePreviewBackgroundColor 
 The background color of the url real time preview.
@@ -1025,7 +1019,7 @@ The border width of the url real time preview.
 <div style="float: left; width: 35%;height: 50px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> </li>
+      <li><b>Default value:</b> 1.0 </li>
    </ul>
 </div>
 
@@ -1048,7 +1042,7 @@ The title text color of the url real time preview.
 <div style="float: left; width: 35%;height: 50px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> </li>
+      <li><b>Default value:</b> UIColor.Black</li>
    </ul>
 </div>
 
@@ -1070,7 +1064,7 @@ The description text color of the url real time preview.
 <div style="float: left; width: 35%;height: 50px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> </li>
+      <li><b>Default value:</b> #5b5c5e</li>
    </ul>
 </div>
 
@@ -1551,10 +1545,10 @@ Should display status bar of the secure form screen in Light Content Mode (UISta
 Background color of navigation bar in secure form screen. 
 
    - **Type:** UIColor
-   - **Default value:** #0362AC 
-
-
-
+   - **Default value:** #229A49
+   
+   
+   
 #### secureFormNavigationTitleColor  
 Navigation title color in secure form screen.
 
@@ -1748,7 +1742,7 @@ Enable or Disable toggle for Structured Content feature in conversations.
 Structured Content bubble border width in pixels.
 
    - **Type:** Double
-   - **Default value:** 0.3 
+   - **Default value:** 1.0 
 
 
 
@@ -1764,7 +1758,7 @@ Structured Content bubble border color.
 Structured Content bubble top left corner radius in pixels. 
 
    - **Type:** Float
-   - **Default value:** 0.0 
+   - **Default value:** 8.0 
 
 
 
@@ -1772,7 +1766,7 @@ Structured Content bubble top left corner radius in pixels.
 Structured Content bubble top right corner radius in pixels.
 
    - **Type:** Float
-   - **Default value:** 0.0 
+   - **Default value:** 8.0 
 
  
 
@@ -1780,7 +1774,7 @@ Structured Content bubble top right corner radius in pixels.
 Structured Content bubble bottom left corner radius in pixels.
 
    - **Type:** Float
-   - **Default value:** 0.0  
+   - **Default value:** 8.0  
 
 
 
@@ -1788,7 +1782,7 @@ Structured Content bubble bottom left corner radius in pixels.
 Structured Content bubble bottom right corner radius in pixels.
 
    - **Type:** Float
-   - **Default value:** 0.0 
+   - **Default value:** 8.0 
 
 
 
@@ -2150,7 +2144,7 @@ Number of seconds before the first Time to Respond (TTR) notification appears.
 #### ttrShouldShowTimestamp  
 When set to **true**, the timestamp of the TTR notification displays. Otherwise, the "An agent will respond shortly" message displays.   
 
-<div style="float: left; width: 35%;height: 30px;">
+<div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> Bool</li>
       <li><b>Default value:</b> false</li>
@@ -2180,7 +2174,7 @@ Controls the TTR frequency, for example, don’t show the TTR more than once in 
 #### showUrgentButtonInTTRNotification  
 When set to **true**, the Urgent button shows in the TTR notification.
 
-<div style="float: left; width: 35%;height: 30px;">
+<div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> Bool</li>
       <li><b>Default value:</b> false</li>
@@ -2202,7 +2196,7 @@ When set to **true**, the Urgent button shows in the TTR notification.
 #### showOffHoursBanner  
 Enable or disable the off-hours toaster. 
 
-<div style="float: left; width: 35%;height: 30px;">
+<div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> Bool</li>
       <li><b>Default value:</b> true</li>
@@ -2224,7 +2218,7 @@ Enable or disable the off-hours toaster.
 #### ttrBannerBackgroundColor  
 Background color for banner. 
 
-<div style="float: left; width: 35%;height: 30px;">
+<div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
       <li><b>Default value:</b> #52A742</li>
@@ -2246,7 +2240,7 @@ Background color for banner.
 #### ttrBannerTextColor  
 Text color of the banner. 
 
-<div style="float: left; width: 35%;height: 30px;">
+<div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> UIColor</li>
       <li><b>Default value:</b> #52A742</li>
@@ -2269,7 +2263,7 @@ Text color of the banner.
 #### ttrBannerOpacityAlpha  
 Opacity level of the banner background (values: 0.0 - 1.0). 
 
-<div style="float: left; width: 35%;height: 30px;">
+<div style="float: left; width: 35%;height: 51px;">
    <ul>
       <li><b>Type:</b> Double</li>
       <li><b>Default value:</b> 0.8</li>
@@ -2471,7 +2465,10 @@ Toggle the mode of the Scroll to bottom unread message text preview.
 
 
 #### unreadMessagesDividerEnabled 
-Toggle the mode of the Unread Messages divider. If disabled, scroll to bottom button scrolls to bottom although we can have new messages and don't show the badge at all nor "new message preview." 
+Toggle the mode of the Unread Messages divider. 
+If **unreadMessagesDividerEnabled**  is disabled, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed".
+
+Note: Regardless of **unreadMessagesDividerEnabled** value, the conversation screen will always scrolls to the last position where the user left off. 
 
    - **Type:** Bool
    - **Default value:** true 
@@ -2981,7 +2978,7 @@ Bottom left Radius corner on the Remote bubble. Setting the radius to a value gr
 <div style="float: left; width: 35%;height: 125px;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
+      <li><b>Default value:</b> 0</li>
    </ul>
 </div>
 
@@ -3343,7 +3340,7 @@ Bottom right Radius corner on the user's bubble. Setting the radius to a value g
 <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
+      <li><b>Default value:</b> 0</li>
    </ul>
 </div>
 

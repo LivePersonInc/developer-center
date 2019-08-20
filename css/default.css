@@ -159,7 +159,8 @@ code pre {
 
   .sidebartop {
     display: flex;
-    height: 90px;
+    flex-direction: column;
+    height: 150px;
     width: 100%;
     background-color: #162036;
     position: -webkit-sticky;
@@ -606,11 +607,40 @@ table tbody td img {
 }
 
 .sidebarbuttons {
-  display: none;
   flex: 1;
-  align-self: flex-end;
-  margin-bottom: 10px;
-  margin-left: 20px;
+  align-self: flex-start;
+  margin-top: 24px;
+  margin-left: 30px;
+  color: #fff;
+  display: flex;
+}
+
+.sidebarbuttons div {
+  border-radius: 25px;
+  padding: 7px 25px;
+  font-size: 12px;
+  height: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.sidebarbuttons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.loginText {
+  margin-right: 12px;
+}
+
+.loginButton {
+  background-color: #5879DA;
+}
+
+.trialButton {
+  background-color: #ff720b;
+  display: none !important;
 }
 
 .documentsbutton {
@@ -1189,6 +1219,31 @@ a.anchoritem {
  margin-left: 400px;
 }
 
+.heroPanelExplorer {
+  margin-bottom: 50px;
+}
+
+.cardInnerTextExplorer {
+  width: 40%;
+}
+
+.secondConfirmCardImgExplorer {
+  display: none;
+}
+
+.thirdPanelExplorer {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.confirmationFooterExplorer {
+  height: 50px;
+}
+
+.formContainerExplorer {
+  margin-left: 150px;
+}
+
 #apiList {
   display: none;
   height: 165px;
@@ -1314,6 +1369,10 @@ input#csds-button {
   display: none;
 }
 
+.sidebarSVG {
+  width: 24px;
+}
+
 /* Media Queries Begin */
 
 @media screen and (max-width:1870px){
@@ -1321,6 +1380,25 @@ input#csds-button {
   .anchorlist {
     margin-right: initial;
   }
+}
+
+@media screen and (max-width: 1555px) {
+  .sidebarbuttons {
+    flex-direction: column;
+  }
+
+  .sitelogo {
+    margin-top: 8px;
+  }
+
+  .sidebarbuttons {
+    margin-top: 15px;
+  }
+
+  .loginButton {
+    margin-bottom: 10px;
+  }
+}
 
 @media screen and (max-width:1440px){
   .defaultwrapper {
@@ -1513,6 +1591,10 @@ input#csds-button {
   #capabilitiesSearch {
     display: none;
   }
+
+  .sidebarbuttons div {
+    padding: 7px 10px;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -1548,6 +1630,10 @@ input#csds-button {
 
   .defaultsidebar {
     width: 125%;
+  }
+
+  .sidebarbuttons div {
+    display: none;
   }
 
   /*.daybtn {

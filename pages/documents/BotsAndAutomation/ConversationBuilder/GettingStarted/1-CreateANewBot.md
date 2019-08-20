@@ -3,7 +3,7 @@ pagename: 1 - Dialogs and Patterns
 redirect_from: conversation-builder-getting-started-getting-started-part-1.html
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Getting Started
 permalink: conversation-builder-getting-started-1-dialogs-and-patterns.html

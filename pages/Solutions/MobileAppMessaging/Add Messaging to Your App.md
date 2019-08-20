@@ -119,36 +119,40 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * The following is the list of features that need to be configured in order to be completely accessible:
 
-    **iOS:**
+    * IOS:
 
-    1. Enter timeout & expiration controls: 
-    
-       * `sendingMessageTimeoutInMinutes (60)`  
-    
-       * `csatSurveyExpirationInMinutes (1440)`
-    
-    2. Disable shortcut to new messages feature:
-    
-       * `scrollToBottomButtonEnabled (false)`
-    
-       * `scrollToBottomButtonMessagePreviewEnabled (false)`
-    
-       * `unreadMessagesDividerEnabled (false)`
-    
-     3. Disable link preview `enablelinkPreview (false)`
-    
-     **Android:**
-    
-     1. Set the Snackbar duration: `<integer name = snachbar_duration_for_accessibility> 60000 </integer>`
-    
-     2. Disable Link preview:
-    
-       * `<bool name ="link_preview_enable_real_time_preview"> false </bool>`
-    
-       * `<bool name ="link_preview_enable_feature"> false </bool>`
-    
-     3. Disable In-conversation shortcut to new messages:
-    
-       * `<bool name ="scroll_down_indicator_enabled"> false </bool>`
-    
-       * `<bool name ="scroll_down_indicator_unread_summary_enabled"> false </bool>`
+* Enter timeout & expiration controls:
+
+    * sendingMessageTimeoutInMinutes (60)
+
+    * csatSurveyExpirationInMinutes (1440)
+
+* Disable shortcut to new messages feature:
+
+    * scrollToBottomButtonEnabled (false)
+
+    * scrollToBottomButtonMessagePreviewEnabled (false)
+
+    * unreadMessagesDividerEnabled (false)
+
+* Disable link preview
+
+    * enablelinkPreview (false)
+
+    * Android
+
+        * Snackbar duration: `<integer name="snackbar_duration_for_accessibility">60000</integer>`
+
+            * (Note: This value was previously named 'snachbar_duration_for_accessibility', and its spelling has since been corrected.)
+
+        * Disable Link preview -
+
+            * `<bool name ="link_preview_enable_real_time_preview">false</bool>`
+
+            * `<bool name="link_preview_enable_feature">false</bool>`
+
+        * Disable In-conversation shortcut to new messages
+
+            * `<bool name="scroll_down_indicator_enabled">false</bool>`
+
+            * `<bool name="scroll_down_indicator_unread_summary_enabled">false</bool>`

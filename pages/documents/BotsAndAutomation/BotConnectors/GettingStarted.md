@@ -10,7 +10,7 @@ redirect_from:
   - customer-facing-bots-overview.html
   - customer-facing-bots-prerequisites.html
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Bot Connectors
 permalink: bot-connectors-getting-started.html
 indicator:
@@ -27,15 +27,15 @@ If you need to connect a external bot that does not have a pre-built connector, 
 
 Each connector provides the functionality to
 
-* send/receive text messages
+- send/receive text messages
 
-* send [structured content](getting-started-with-rich-messaging-introduction.html)
+- send [structured content](getting-started-with-rich-messaging-introduction.html)
 
-* transfer the conversation to other skills
+- transfer the conversation to other skills
 
-* change Time To Response for a messaging conversation
+- change Time To Response for a messaging conversation
 
-* close a conversation
+- close a conversation
 
 Some connectors may provide more or less functionality depending on the specifics of the product to which it is connecting.
 
@@ -45,7 +45,37 @@ There are two steps to setting up a new bot connector.
 
 2. Provision connector in the Bot Connector dashboard
 
+### Bot Lifecycle
+
+The running Bot can have different states based on the health status of the services it utilizes, such as LivePerson APIs, AI vendors, etc.
+
+#### Offline
+
+The Bot is offline and won't accept any conversations.
+
+#### Online
+
+The Bot is online and will accept and process new conversations.
+
+#### Vendor Interruption
+
+The Bot is online and will accept new conversations, but will directly escalate them to the default transfer skill, because the set up AI Vendor is not reachable/working.
+
+#### Service Interruption
+
+The Bot is in the delayed state and will not accept new conversation or process existing conversations. This state is a result of an interruption within Liveperson APIs/servers.
+
+In this state the bot will try to restart automatically once every minute until the interruption is resolved.
+
+
 ### Limitations
+
+#### Supported customer content
+
+Currently the Bot Connector only supports text input from the customer. If the customer sends an image or a file to the Bot, the Bot will replace it with a special identifier so the Bot can handle this special use-case with custom code.
+
+The send identifier is **com.liveperson.bot-connectors.consumer.send-file**
+
 
 #### Creating and starting Bots
 
@@ -67,23 +97,23 @@ Please note that your bot setup should always return an intent or an action as a
 
 1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, contact your LivePerson account manager to enable the feature.
 
-    <img style="width:600px" src="img/dialogflowversion2/image_0.png">
+   <img style="width:600px" src="img/dialogflowversion2/image_0.png">
 
 2. Add login method as "API key" and generate new API key for the new user
 
-    <img style="width:600px" src="img/dialogflowversion2/image_1.png">
+   <img style="width:600px" src="img/dialogflowversion2/image_1.png">
 
 3. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
 
 4. Set Max No of Live Chats
 
-    * If Chat in the drop down select  - Value > 1.
+   - If Chat in the drop down select - Value > 1.
 
-    * If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Conversations to Custom Setting and enter a value greater than 0**
+   - If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Conversations to Custom Setting and enter a value greater than 0**
 
 5. Find api key name in bot user profile
 
-    <img style="width:400px" src="img/dialogflowversion2/image_2.png">
+   <img style="width:400px" src="img/dialogflowversion2/image_2.png">
 
 ---
 
@@ -101,41 +131,41 @@ Follow the steps below to add a new bot connector.
 
 1. Navigate to the Config page and click “+ADD NEW BOT”
 
-    <img style="width:800px" src="img/botconnectordashboard/add_new_bot.png">
+   <img style="width:800px" src="img/botconnectordashboard/add_new_bot.png">
 
-2. Assign agent:  Assign the bot agent that you just created
+1. Assign agent: Assign the bot agent that you just created
 
-3. Choose conversation type:  Chat or Messaging
+1. Choose conversation type: Chat or Messaging
 
-  Settings for Chat:
-  <img style="width:900px" src="img/botconnectordashboard/chat_settings.png">
+Settings for Chat:
+<img style="width:900px" src="img/botconnectordashboard/chat_settings.png">
 
-  * Time until warning: Set up the time span after which the consumer will get an inactivity warning.
+- Time until warning: Set up the time span after which the consumer will get an inactivity warning.
 
-  * Warning message: The warning message the chat consumer gets if he reaches the threshold.
+- Warning message: The warning message the chat consumer gets if he reaches the threshold.
 
-  * Time until conversation close: Set up the time duration after which the consumer chat conversation will be closed if the customer is inactive
+- Time until conversation close: Set up the time duration after which the consumer chat conversation will be closed if the customer is inactive
 
-  * Close message: The message which the consumer will receive prior to closing the conversation
+- Close message: The message which the consumer will receive prior to closing the conversation
 
-  Settings for Messaging:
-  <img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
+Settings for Messaging:
+<img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
 
-  * No special settings are needed for messaging bots
+- No special settings are needed for messaging bots
 
 4. Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service
 
   <img style="width:900px" src="img/botconnectordashboard/error_handling.png">
 
-  * Transfer message to Customer: Default escalation message to the consumer in case the bot encounters an error
+- Transfer message to Customer: Default escalation message to the consumer in case the bot encounters an error
 
-  * Transfer message to Agent: Message to the Agent from the escalating bot which will be provided together with the conversation when it is transferred
+- Transfer message to Agent: Message to the Agent from the escalating bot which will be provided together with the conversation when it is transferred
 
-  * Transfer failure message: Message to the customer in case the escalation to the default escalation skill did not work.
+- Transfer failure message: Message to the customer in case the escalation to the default escalation skill did not work.
 
-  * Transfer to skill: Default escalation skill the bot should escalate to in case of any error.
+- Transfer to skill: Default escalation skill the bot should escalate to in case of any error.
 
-  **Note**: if no other skills are configured, it might be that the bot will escalate the conversation to itself. However in this case only new messages will be processed.
+**Note**: if no other skills are configured, it might be that the bot will escalate the conversation to itself. However in this case only new messages will be processed.
 
 5. Connect to A.I.: Choose an AI engine from a list. Add the configuration of AI. See [Next Steps](#next-steps).
 
@@ -143,12 +173,14 @@ Follow the steps below to add a new bot connector.
 
 Move on to the product guides to learn how to connect and configure your specific bot framework/builder.
 
-* [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
+- [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
 
-* [Dialogflow V1](bot-connectors-google-dialogflow.html)
+- [Dialogflow V1](bot-connectors-google-dialogflow.html)
 
-* [Dialogflow V2](bot-connectors-google-dialogflow-version-2.html)
+- [Dialogflow V2](bot-connectors-google-dialogflow-version-2.html)
 
-* [Amazon Lex](bot-connectors-amazon-lex.html)
+- [Amazon Lex](bot-connectors-amazon-lex.html)
 
-* [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)
+- [Microsoft Bot Framework](bot-connectors-microsoft-bot-framework.html)
+
+- [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)

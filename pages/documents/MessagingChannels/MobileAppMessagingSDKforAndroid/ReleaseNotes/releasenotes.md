@@ -13,6 +13,55 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+### Android Messaging SDK - Version 4.1.0
+
+**Release date:** July 25, 2019
+
+### Overview
+Android Mobile Messaging SDK version 4.1.0 primarily provides enhancements to SDK stability and Accessibility tools (TalkBack).
+
+### Environmental Requirements
+The Android Mobile Messaging SDK version 4.1.0 uses:
+- Minimum API version 19
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+
+### New Features:
+- Added a callback parameter to the `unregisterLPPusher` API, similar to the one that exists for the `registerLPPusher` API.
+- A backwards-compatible copy of `unregisterLPPusher` without the callback has also been added, and marked Deprecated, as the version with a callback is the preferred one for all uses. 
+
+### Bugs fixed:
+- Hyperlink color property `consumer_bubble_message_link_text_color` is now properly applied to both preview-able and non-preview-able links.
+- Incoming messages are no longer marked as "read" when the user is looking at the History View instead of the active conversation.
+- CSAT survey screen no longer loses the Agent's information when an Agent closes and immediately re-opens a conversation.
+- Image resources `lp_messaging_ui_ic_agent_avatar` and `lp_messaging_ui_brand_logo` can now both be overridden with Vector Drawables in the `drawable` folder, where previously a workaround was required.
+- Corrected several instances of String resources not respecting the SDK language settings, instead picking up the device language.
+- Pressing the scroll-to-bottom button while in an Unauthenticated flow no longer occasionally crashes the SDK.
+- Automatic Messages now correctly adapt to the relevant language settings in circumstances that previously caused a mismatch.
+- Using the Control History API while in Fragment Mode will no longer show a blank screen instead of a "no conversations" message.
+- Using Quick Replies and Emojis no longer occasionally duplicates the unread message banner.
+- Fixed several issues related to what TalkBack reads to users.
+
+### Important Notes for Developers
+- Resource misspelled as `snachbar_duration_for_accessibility` has been renamed to `snackbar_duration_for_accessibility`; if you override this value, please update the override accordingly.
+- PushMessage method misspelled as `getCurrentUnreadMessgesCounter()` has been renamed to `getCurrentUnreadMessagesCounter()`; if you use this method, you will need to update it in your code.
+- Class `MonitoringParams` was moved from package `com.liveperson.sdk` to `com.liveperson.monitoring.sdk` to better reflect its class associations; updating your `import` statements may be necessary.
+- Interface `EngagementCallbacks` was moved from package `com.liveperson.sdk.callbacks` to `com.liveperson.monitoring.sdk.callbacks` to better reflect its class associations; updating your `import` statements may be necessary.
+
+
+### Android Messaging SDK - Version 4.0.0
+
+**Release date:** July 8, 2019
+
+### Overview
+Android Mobile Messaging SDK version 4.0.0 provides Android P support. 
+Built with Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+### Environmental requirements
+The Android Mobile Messaging SDK version 4.0.0 requires the minimum Android API version 19, SDK is compiled against API 28 and targeted API is 28.
+
 ### Android Messaging SDK - Version 3.9.0
 
 **Release date:** June 18, 2019

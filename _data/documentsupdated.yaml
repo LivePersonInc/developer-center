@@ -110,22 +110,9 @@
       - pagename: Postman Resources
 
 
-- categoryname: Bots & Automation
+- categoryname: Conversational AI
   image: agent-experience
   documents:
-  - documentname: Messaging Agent SDK
-    pages:
-      - pagename: Overview
-      - pagename: Examples
-      - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
-  - documentname: Bot Connectors
-    pages:
-      - pagename: Getting Started
-      - pagename: Google Dialogflow
-      - pagename: Google Dialogflow Version 2
-      - pagename: IBM Watson Assistant
-      - pagename: Amazon Lex
   - documentname: Conversation Builder
     pages:
       - pagename: Platform Overview
@@ -144,6 +131,7 @@
           - subpagename: Overview
           - subpagename: Simple Router
           - subpagename: Full Lead Gen
+          - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
       - pagename: Conversation Builder
@@ -152,6 +140,7 @@
             - subpagename: Interactions
             - subpagename: Conditions
             - subpagename: Assist
+            - subpagename: Integrations
             - subpagename: Scripting Functions
       - pagename: Intent Builder
         subpages:
@@ -165,7 +154,47 @@
           - subpagename: Transfer to an Agent or Bot
           - subpagename: Using Environment Variables
           - subpagename: Training and Tuning Your Intents and FAQs
+          - subpagename: Versions, Releases, & Change Management
       #- pagename: Operations
+  - documentname: Maven
+    pages:
+      - pagename: Overview
+      - pagename: Maven Assist
+        subpages:
+          - subpagename: Overview
+          - subpagename: Recommended Actions for Automations
+          - subpagename: Recommended Actions for Knowledge Base
+      - pagename: Context Warehouse
+        subpages:
+          - subpagename: Overview
+          - subpagename: Inbox System Attributes
+          - subpagename: Custom Static or Function
+          - subpagename: Context Session Store
+      - pagename: AI Powered Routing
+        subpages:
+          - subpagename: Overview
+          - subpagename: Intent & Context Policies
+          - subpagename: Set Up Maven in LivePerson
+          - subpagename: Use Maven with Your Bot
+      - pagename: AskMaven
+        subpages:
+          - subpagename: Overview
+          - subpagename: Methods
+  - documentname: Messaging Agent SDK
+    pages:
+      - pagename: Overview
+      - pagename: Examples
+      - pagename: Conversation Metadata Guide
+      - pagename: Release Notes
+  - documentname: Bot Connectors
+    pages:
+      - pagename: Getting Started
+      - pagename: Bot Status Dashboard
+      - pagename: Google Dialogflow
+      - pagename: Google Dialogflow Version 2
+      - pagename: IBM Watson Assistant
+      - pagename: Amazon Lex
+      - pagename: Microsoft Bot Framework
   - documentname: Custom Third Party Bots
 
 - categoryname: Client Side Configuration
@@ -488,23 +517,33 @@
 - categoryname: Developer Tools
   image: developer-tools
   documents:
-  - documentname: Function as a Service
+  - documentname: LivePerson Functions
     pages:
       - pagename: Overview
       - pagename: Getting Started
-      - pagename: Developing with FaaS
+      - pagename: Development
         subpages:
           - subpagename: Overview
           - subpagename: "Events & Templates"
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
-      - pagename: Deploying Functions
+      - pagename: Deployment
+      - pagename: Monitoring
+        subpages:
+          - subpagename: Logs
+      - pagename: Scheduled Invocations
       - pagename: External Invocations
+        subpages:
+          - subpagename: Overview
+          - subpagename: Client Credentials
+          - subpagename: Authorization Code
       - pagename: Use Cases
         subpages:
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
+          - subpagename: Messaging Conversation Survey
+
 
 - categoryname: Historical Data
   image: historical-data
@@ -738,6 +777,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Agent Status
+          - subpagename: Agent List
           - subpagename: Summary
   - documentname: Messaging Operations API
     basedomain: https://{domain}/operations/api/account/{accountID}
@@ -950,9 +990,9 @@
         - pagename: Google AdWords - Click-to-Message
         - pagename: SMS via Mobile App Messaging
         - pagename: Appendix
-    - documentname: Video Chat
-      pages:
-        - pagename: Add Video to Chat Conversations
-        - pagename: Plan Your Service
-        - pagename: Develop the Service
-        - pagename: Build Your Widgets
+    # - documentname: Video Chat
+    #   pages:
+    #     - pagename: Add Video to Chat Conversations
+    #     - pagename: Plan Your Service
+    #     - pagename: Develop the Service
+    #     - pagename: Build Your Widgets
