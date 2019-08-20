@@ -46,7 +46,7 @@ Just like any other function, this function must be deployed before it can be us
 ### Payload details
 
 <table>
-<thead><tr><th>1. level</th><th>description</th><th>type</th><th>example</th></tr></thead><tbody>
+<thead><tr><th>property</th><th>description</th><th>type</th><th>example</th></tr></thead><tbody>
  <tr><td>conversationId</td><td>ID of conversation</td><td>STRING</td><td>c840e51e-5f65-4ad4-8d34-5c82b99a2200</td></tr>
  <tr><td>arguments</td><td>Array of strings with the arguments the Agent provided.</td><td>ARRAY</td><td>["arg1", "arg2", "argN"]</td></tr>
 
