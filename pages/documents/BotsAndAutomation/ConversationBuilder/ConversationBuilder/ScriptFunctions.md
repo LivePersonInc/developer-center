@@ -3,7 +3,7 @@ pagename: Scripting Functions
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
 permalink: conversation-builder-conversation-builder-scripting-functions.html
@@ -63,6 +63,36 @@ if (count > 10) {
   botContext.sendMessage('Sorry, you dont have any items with you... ');
 }
 ```
+
+### Get Current and Previous Skills
+
+Used to add previous and current skillIds to the botContext. If the conversation was transferred to the bot, you can track the previous skill Id that the consumer came from.
+
+{: .important}
+Previous Skill Id only works for Messaging. If used in a Chat conversation, it will be set to the same ID as the current Skill ID.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getLPEngagementAttribute()` | `"currentSkillId"`, `"previousSkillId"` | skillID (string) |
+
+#### Example
+
+The following example shows how to access current skill and previous skill IDs and set them to a botContext variable.
+
+```javascript
+var currentSkill = botContext.getLPEngagementAttribute("currentSkillId");
+var previousSkill = botContext.getLPEngagementAttribute("previousSkillId");
+
+botContext.setBotVariable("currentSkill", currentSkill, true, false);
+botContext.setBotVariable("previousSkill", previousSkill, true, false);
+```
+
+**Messaging Connector Requirements:**
+- Ensure that the bot is set up with API OAuth login rather than password login
+- Ensure that the OAuth keys have permission to Engagement History
+
+<img class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
+
 
 ### Get Environment Variable
 
@@ -222,6 +252,9 @@ botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just
 
 Delivers a message to the user immediately and stops the message flow and any other subsequent code within this message.
 
+{: .important}
+[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
+
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `sendImmediateReply(message)` | message – (string or array) – A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
@@ -238,6 +271,9 @@ botContext.sendImmediateReply('I think you said, ' + response);
 ### Send Message
 
 Used to send a single message to user. Using this function we can send messages to the user at any place of the code, without stopping the message flow.
+
+{: .important}
+[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
 
 {: .important}
 To send multiple messages use the [sendMessages()](#send-messages) function.
@@ -258,6 +294,9 @@ if(count > 10){
 ### Send Messages
 
 Used to send array of the messages to the user. In most cases we use message delay for the send messages function.
+
+{: .important}
+[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
 
 {: .important}
 To send a single message use the [sendMessage()](#send-message) function.

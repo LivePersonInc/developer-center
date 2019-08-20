@@ -96,7 +96,7 @@ body {
   font-size: 18px;
 }
 
-#country {
+#region {
   border: solid 1px #d6d6d6;
   background-color: #ffffff;
   height: 50px;
@@ -192,6 +192,10 @@ input:-moz-placeholder { /* Firefox 18- */
   text-decoration: none;
 }
 
+#registerContainer {
+  display: flex;
+}
+
 #registerButton {
   border-radius: 5px;
   background-color: #ff720b;
@@ -214,6 +218,13 @@ input:-moz-placeholder { /* Firefox 18- */
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
+}
+
+#loader {
+  display: none;
+  align-self: flex-end;
+  margin-bottom: 7px;
+  margin-left: 20px;
 }
 
 #checkboxContainer {
@@ -239,6 +250,10 @@ input:-moz-placeholder { /* Firefox 18- */
   font-style: italic;
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 15px;
+}
+
+.success {
+  color: #5779da;
 }
 
 /* Media queries begin, don't panic! */

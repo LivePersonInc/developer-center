@@ -10,7 +10,7 @@ redirect_from:
   - customer-facing-bots-overview.html
   - customer-facing-bots-prerequisites.html
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Bot Connectors
 permalink: bot-connectors-getting-started.html
 indicator:
@@ -75,6 +75,10 @@ In this state the bot will try to restart automatically once every minute until 
 Currently the Bot Connector only supports text input from the customer. If the customer sends an image or a file to the Bot, the Bot will replace it with a special identifier so the Bot can handle this special use-case with custom code.
 
 The send identifier is **com.liveperson.bot-connectors.consumer.send-file**
+
+#### Support for different messaging channels and the corresponding rich content
+
+The Bot Connector system is designed to support [all relevant rich content](getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html), since it only forwards the received structured content and metadata to LivePerson's messaging and chat service. We have verified and tested the support for **Web Messaging**, **Facebook** and **Apple Business Chat**. All other channels are not verified, but should work if you send the right structured content for the channel. If you experience any issues, please contact LivePerson support or your account team.
 
 
 #### Creating and starting Bots
@@ -180,5 +184,7 @@ Move on to the product guides to learn how to connect and configure your specifi
 - [Dialogflow V2](bot-connectors-google-dialogflow-version-2.html)
 
 - [Amazon Lex](bot-connectors-amazon-lex.html)
+
+- [Microsoft Bot Framework](bot-connectors-microsoft-bot-framework.html)
 
 - [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)
