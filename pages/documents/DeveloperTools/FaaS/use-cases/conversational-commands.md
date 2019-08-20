@@ -13,8 +13,6 @@ This guide explains how to enable Conversational Commands for LivePerson Functio
 
 With **Conversational Commands** agents are able to invoke `lambdas` from the Agent Workspace by typing `/` into the messaging input in the connections panel. This empowers agents to use a bank of preconfigured, account-specific commands, to enrich the conversation with integrated functions that will help them interact efficiently with the consumer.
 
-TODO Image
-
 Along with the invocation, the function is sent a payload containing the conversation ID and the arguments provided by the agent. This payload can then be used in the function for further processing and referencing. The result of the function has to either be a string or a number and will be shown in the Agent Workspace as a message in the transcript. 
 
 **Note** The response is not actually stored in the conversation transcript, it will only be stored temporarily in the browser and is only visible to the agent.
@@ -48,7 +46,7 @@ Just like any other function, this function must be deployed before it can be us
 ### Payload details
 
 <table>
-<thead><tr><th>1. level</th><th>description</th><th>type</th><th>example</th></tr></thead><tbody>
+<thead><tr><th>property</th><th>description</th><th>type</th><th>example</th></tr></thead><tbody>
  <tr><td>conversationId</td><td>ID of conversation</td><td>STRING</td><td>c840e51e-5f65-4ad4-8d34-5c82b99a2200</td></tr>
  <tr><td>arguments</td><td>Array of strings with the arguments the Agent provided.</td><td>ARRAY</td><td>["arg1", "arg2", "argN"]</td></tr>
 
