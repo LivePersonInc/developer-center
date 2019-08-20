@@ -10,7 +10,7 @@ permalink: conversation-builder-templates-overview.html
 indicator: both
 ---
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_selection2.png">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_selection3.png">
 
 All Conversation Builder Automations are based upon **templates**. The Basic Automation Template is the best choice if you want to create a completely custom automation from scratch.
 
@@ -26,20 +26,16 @@ Each conversational template consists of the following capabilities:
 
 ### Template Use Cases
 
-The following Use Cases will be provided for multiple different industry verticals. 
+The following Use Cases will be provided for multiple different industry verticals.
 
 | Template | Capabilities | Integrations |
 | --- | --- | --- |
-| Concierge | Welcome message with choices to route to bots or agents | Route to Bots, Agents, Shopify |
-| Lead Generation | Capture lead’s contact info, interest in product/service and related details. Sends the captured info to email, SMS or CRM | Email, phone, CRM: (Google Sheets), Shopify, (Salesforce) |
-| Product Promotion | Offer detailed promotions, discounts and deals, then route to bot or agents to transact | Shopify |
-| Schedule Appointments | Schedule Appointments based on store location, date and time slot and register appointments in your calendar/schedule management service | Google Calendar, (Time Trade) |
-| Product Search & Shopping | Shoppers can Search and shop for products in your catalog, filter based on attributes like size etc. | Shopify |
-| Checkout | Complete Checkout from Shopping Bot or Agents using payment forms like Apple Pay | Shopify, Apple Pay | 
+| Simple Router | Welcome message with choices to route to bots or agents | Route to Bots, Agents |
+| Simple FAQ | Offer detailed responses for frequently asked questions via a knowledge base of questions and answers | Knowledge Base |
+| Simple Lead Generation | Capture lead’s basic contact info. Sends the captured info to email | Email |
+| Full Lead Generation | Capture lead’s contact info, interest in product/service and related details. Sends the captured info to email or SMS | Email, Twilio number |
 | Order Status | Shoppers can check the status of their orders with authentication via order number and name etc. | Shopify |
-| Off Business Hours | Capture Shopper’s contact info and a short note, during off hours. Sends the captured info to Agent’s email, SMS or CRM | Email, phone, CRM: (Google Sheets), Shopify, (Salesforce) |
-| FAQ | Offer detailed responses for frequently asked questions via a knowledge base of questions and answers | Knowledge Base |
-| Gift Guide | Offer a curated guide for gift recommendations for different occasions & relationships | Shopify |
+
 
 <!--
 <table>
@@ -127,4 +123,3 @@ The following Use Cases will be provided for multiple different industry vertica
 3. Review what the template includes (dialogs, intents/entities, integrations, etc.)
 
 4. Configure the parts that need to be customized (API Integration details, brand voice in dialog interactions, etc.)
-
