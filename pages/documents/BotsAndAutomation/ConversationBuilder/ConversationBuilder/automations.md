@@ -18,7 +18,7 @@ LivePerson recommends that—before you create an automation—you set up the [d
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_suggestion.png">
 
 **To create an automation**
-1. If you logged into Conversation Builder directly (that is, _not_ from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the automation should exist is displayed. If the correct organization isn’t displayed, select it from the **Org Name** dropdown list.
+1. If you logged into Conversation Builder directly (that is, _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the automation should exist is displayed. If the correct organization isn’t displayed, select it from the **Org Name** dropdown list.
 
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 
@@ -45,7 +45,7 @@ You can add an automation by importing an automation JSON file that was previous
 Before you import an automation from a different environment (that is, from one region or hosting platform to another), check whether the automation uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the automation, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the automation to the intents and entities will break during the automation import. If that happens, you’ll need to reassociate the intents and entities manually.
 
 **To import an automation**
-1. If you logged into Conversation Builder directly (i.e., _not_ from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the automation should exist is displayed. If it isn’t displayed, select it from the **Org** Name dropdown list.
+1. If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the automation should exist is displayed. If it isn’t displayed, select it from the **Org** Name dropdown list.
 
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 
