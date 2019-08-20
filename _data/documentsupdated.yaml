@@ -543,6 +543,7 @@
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
+          - subpagename: Conversational Commands
 
 
 - categoryname: Historical Data
