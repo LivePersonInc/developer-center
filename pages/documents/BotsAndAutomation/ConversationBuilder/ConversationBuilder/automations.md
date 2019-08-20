@@ -56,8 +56,7 @@ Before you import an automation from a different environment (that is, from one 
 
 ### Configure automation settings
 **To configure automation settings**
-
-1. Open the automation, and click the gear icon <img style="width:40px" src="img/ConvoBuilder/helloworld/gearicon.png"> that’s displayed in the upper-left corner (beside the automation name).
+1. Open the automation, and click the gear icon <img style="width:25px" src="img/ConvoBuilder/helloworld/gearicon.png"> that’s displayed in the upper-left corner (beside the automation name).
 2. Select **Automation Settings** from the menu that appears.
 3. Click **More Settings** to display all the settings.
 4. Configure the settings as needed, and click **Save**.
@@ -104,9 +103,9 @@ You might need to export an automation for a few reasons:
 In case 2 above—moving or copying an automation to a different environment (that is, from one region or hosting platform to another)—check whether the automation uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the automation, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the automation to the intents and entities will break during the automation import. If that happens, you’ll need to reassociate the intents and entities manually.
 
 **To export an automation**
-1. Open the automation, and click the gear icon <img style="width:40px" src="img/ConvoBuilder/helloworld/gearicon.png"> that’s displayed in the upper-left corner.
+1. Open the automation, and click the gear icon <img style="width:25px" src="img/ConvoBuilder/helloworld/gearicon.png"> that’s displayed in the upper-left corner.
 2. Select **Automation Settings** from the menu that appears.
-3. Click **More Settings**, and then click the **Export Automation** (download) icon.
+3. Click **More Settings**, and then click the **Export Automation** icon <img style="width:25px" src="img/ConvoBuilder/icon_export.png">.
 4. Follow the browser prompts to access and save the JSON file to a location of your choice.
 
 ### Delete an automation
@@ -116,10 +115,9 @@ Deleting an automation is a non-recoverable action, so be certain about doing so
 If you want to delete an automation that is deployed, first stop the automation, un-deploy it, and remove any enterprise integrations that are running. This helps to ensure there are no adverse effects.
 
 **To delete an automation**
-
-1. Open the automation, and click the gear icon <img style="width:40px" src="img/ConvoBuilder/helloworld/gearicon.png"> that’s displayed in the upper-left corner.
+1. Open the automation, and click the gear icon <img style="width:25px" src="img/ConvoBuilder/helloworld/gearicon.png"> that’s displayed in the upper-left corner.
 2. Select **Automation Settings** from the menu that appears.
-3. Click **More Settings**, and then click the **Delete Automation** (trash can) icon.
+3. Click **More Settings**, and then click the **Delete Automation** icon <img style="width:25px" src="img/ConvoBuilder/icon_delete.png">.
 4. In the confirmation dialog:
     1. If you want to delete all the logs and analytics data for the automation, select the checkbox.
     2. Click **Proceed**.
