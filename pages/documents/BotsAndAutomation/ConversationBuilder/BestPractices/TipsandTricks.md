@@ -154,31 +154,6 @@ Training phrase should be one sentence, not multiple. Multiple sentences increas
 
 ### Troubleshooting
 
-<<<<<<< HEAD
-##### Mitigation
-
-Add minimum 2 second delay to each message in a sequence
-
-* Ensure you have a minimum of 2 seconds delay (2000ms) for each interaction within CB where you care about the order (which is 99% of the time always!)
-
- * This will mean each message added to the UMS queue *should* be at least 2 seconds apart and not be grouped together in a batch that could be delivered out of order.
-
-#### Long messages are broken up into smaller ones - what is the word limit per single message?
-
-320 characters on a word boundary
-
-If you wish to control exactly where within a large block of text the split occurs you can use the following special syntax within a text interaction.
-
-tag::breakWithDelay=2000 
-
-(example in context…)
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_42.png">
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_43.png">
-
-=======
->>>>>>> 9172dfdd058363b21b4f3193d0021becc6927a00
 #### "My Quick Reply question is not showing"
 
 *Quick Replies only show a maximum of **3** options when used inside FB Messenger*
