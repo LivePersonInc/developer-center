@@ -193,6 +193,7 @@
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
+      - pagename: IBM Watson Assistant Version 2
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
   - documentname: Custom Third Party Bots
