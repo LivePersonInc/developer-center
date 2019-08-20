@@ -146,7 +146,9 @@ function postRequest () {
     //load the confirmation page
     window.location = '/confirmation.html';
   })
-  .catch(err=>console.log(err))
+  .catch(function(err){
+    console.log(err);
+  })
 }
 
 //a simple fuction to hide typed passwords and show them when the relevant checkbox is filled
