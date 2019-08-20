@@ -72,6 +72,14 @@ function validateInfo (){
   } else {
     $('#agreeButton').hide();
   }
+  //check if email is valid
+  var emailRegexPtn = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  var isValidEmail = emailRegexPtn.test(emailAddress);
+  if (!isValidEmail) {
+      $('#invalidEmail').show();
+  } else {
+        $('#invalidEmail').hide();
+  }
   //check password length
   if(password.length < 8) {
     $('#passwordTooShort').show();
@@ -87,7 +95,7 @@ function validateInfo (){
       $('#passwordErrorMatch').hide();
   }
   //check that password meets requirements
-  passwordStrength = new RegExp ('^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])');
+  passwordStrength = new RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])');
   if (password.match(passwordStrength)){
     $('#passwordErrorStrength').hide();
     passwordPassed = true;
@@ -102,7 +110,7 @@ function validateInfo (){
     $('#allFields').show();
   }
   //if all fields were filled and the passwords match, call the request to create an account
-  if ((firstName && lastName && region && emailAddress && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword)) {
+  if ((firstName && lastName && region && emailAddress && isValidEmail && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword)) {
 
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
