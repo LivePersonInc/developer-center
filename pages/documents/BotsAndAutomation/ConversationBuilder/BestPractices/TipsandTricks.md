@@ -166,16 +166,6 @@ If you have/had training phrases which contain any of these words **_they will b
 
 ### Troubleshooting
 
-#### *Messages are delivered out of order*
-
-##### Why is this? 
-
-* UMS processes messages in its queue on a rolling 2 second loop.
-
-* Any messages queued when the next loop runs will all be attempted to be "put on the wire" simultaneously.
-
-* This means **_there is no guarantee what order they will be delivered to the consumer_**
-
 ##### Mitigation
 
 Add minimum 2 second delay to each message in a sequence

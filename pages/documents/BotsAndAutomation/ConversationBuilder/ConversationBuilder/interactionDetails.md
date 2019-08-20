@@ -31,7 +31,11 @@ The Settings panel contains essential data about the selected interaction:
 * **ID**: This is useful for debugging.
 * **Interaction Name**: Change the name to something memorable and useful to reference in the [Next Step](#response-match--actions---next-step) selector.
 * **Interaction Type**: Shows the [Interaction Type](conversation-builder-conversation-builder-interactions.html). Be aware that it is possible to change the type from this dropdown.
-* **Interaction Delay**: Set the millisecond time delay between sending this message. It is recommended to add a 2000 millisecond delay if you want to ensure a consistent message order.
+* **Interaction Delay**: Set the millisecond time delay before sending this message.
+
+    {: .important}
+    If you see messages out of order, add a 1000-2000 millisecond (1-2 second) delay. A 2-second delay is recommended to ensure a consistent message order.
+
 * **Enabled**: On/Off selector for enabling or disabling.
 * **Required**: Available for Question interactions only. On/Off selector for required or not required.
 
