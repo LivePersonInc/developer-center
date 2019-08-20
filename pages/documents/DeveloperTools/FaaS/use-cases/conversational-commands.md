@@ -25,13 +25,15 @@ Along with the invocation, the function is sent a payload containing the convers
 
 #### Conversational Command
 
-All deployed `lambdas` that for that event will be available as Conversational Commands in the Agent Workspace. 
+All deployed `lambdas` for that event will be available as Conversational Commands in the Agent Workspace. 
 
 ### Step-by-Step implementation guide
 
 #### Step 1 - Create function
 
-Create a new function using the Conversational Command event.
+Create a new function using the Conversational Command event. The `name` of the function will be displayed as the name of the Conversational Command in the Agent Workspace.
+
+ The `description` will also be shown in the Agent Workspace. To give the Agent a hint on how to use the function we recommend to provide the available arguments in square brackets. Here is an example for the description of a Conversational Command that sends the transcript of the conversation via email: `[email, subject:optional] - Sends the transcript of the conversation to the provided email address.`
 
 #### Step 2 - Edit the Function
 
