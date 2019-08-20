@@ -24,6 +24,11 @@ See [NLU Engines](conversation-builder-intent-builder-nlu-engines.html) to learn
 
 The first step to using the intent builder is to add a domain by clicking the **ADD DOMAIN** panel on the left side of the Intent Builder. You will then be prompted to choose a name for the domain and select whether you'd like to manually add intents or import a pre-configured list of intents. **We recommend using standard naming conventions when creating domains, to make sure they are easy to sort and find**.
 
+You can "overwrite" the contents of one domain using the CSV intent / entity export CSV files from any other domain.
+
+{: .important}
+This is a complete override of the target with the source data - no merge.
+
 ### The Domain View
 
 Once you've added a domain, you will be automatically navigated to the Domain View. On the left hand side, you can find a list of the intents a domain includes, which will originally be empty, since you haven't created any intents yet. On the right hand side you'll find the domain's Settings Toolbar. It includes four buttons:

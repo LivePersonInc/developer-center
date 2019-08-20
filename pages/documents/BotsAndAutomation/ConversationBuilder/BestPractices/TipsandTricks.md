@@ -14,9 +14,9 @@ This document is a collection of useful information, tips and tricks accumulated
 
 There is no set order to the document - each heading is meant to be a single defined topic taken on its own.
 
-### Suggestions for Bot Builders ahead of launch:
+### Pre-Launch "Chaos Monkey" Testing
 
-#### 1- "Chaos Monkey" Testing = random, unfamiliar user testing the unhappy paths
+random, unfamiliar user testing the unhappy paths
 
 * Be as disruptive as possible to try and break the flows you have already built.
 
@@ -50,7 +50,9 @@ Consider the following scenario:
 
             - "talk to an agent"
 
-#### 2- Anticipate how you will react to unmatched intents on day 1
+### Post-Launch Optimization
+
+Anticipate how you will react to unmatched intents on day 1
 
 * pre-build a dialog flow which recognises the customer wants help with a popular intent / question that the bot cannot currently handle
 
@@ -66,7 +68,7 @@ Consider the following scenario:
 
 * Again, this can all be pre-built and tested ahead of the go-live based on the knowledge you have on how you respond / communicate service outages when customers come into agents at the moment.
 
-#### Avoid mismatched intents for unhandled use cases
+### Avoid mismatched intents for unhandled use cases
 
 If there are known phrases / patterns for sensitive customer intents that you are not handling in the bot for launch, the recommendation is to create placeholder dialogs that target these specific patterns and immediately transfer to a human agent.
 
@@ -96,7 +98,9 @@ However, this cannot be guaranteed to always be consistent. Whilst the agent may
 
 In this situation, the first message the bot receives would be "OK" utterance - which is likely to trigger the fallback dialog and we are already off to a poor start customer experience and conversation wise.
 
-#### Solution: [How to respond to transfer into a bot with custom Fallback dialog routing](https://docs.google.com/document/d/1SjzCsHOhLK6QRbZRsLOCveQpG53_oESlpkhBsuQqPLg/edit?usp=sharing)
+#### Solution
+
+[How to respond to transfer into a bot with custom Fallback dialog routing](https://docs.google.com/document/d/1SjzCsHOhLK6QRbZRsLOCveQpG53_oESlpkhBsuQqPLg/edit?usp=sharing)
 
 This document steps through how to create logic in your fallback and welcome/greeting dialogs to always offer a consistent greeting when the bot receives a transfer from human agent when the last utterance does not match a known intent/pattern dialog within the bot.
 
@@ -148,55 +152,7 @@ In intent "Activate a Card" remove text "I think I need to ENT_activate it." fro
 
 Training phrase should be one sentence, not multiple. Multiple sentences increase risk of false positive as they provide more opportunity for a wider range of matching.
 
-##### "Stop" Words and their impact on NLU
-
-Below is the stop word list. When we use training sentences these words may not carry weight in comparison to words that are not in this list.
-
-```
-"a","about","again","against","all","am","an","and","any","are","aren't","as","at","be","because","been","being","both","but","by","can't","can", "cannot","could","couldn't","did","didn't","do","does","doing","don't","during","each","for","from","further","had","hadn't","has","hasn't","have","haven't","having","he","he'd","he'll","he's","her","here","here's","hers","herself","him","himself","his","how","how's","i","i'd","i'll","i'm","i've","if","in","into","is","isn't","it","it's","its","itself","let's","me","more","most","mustn't","my","myself","no","nor","of","on","once","only","or","other","ought","our","ours","ourselves","shan't","she","she'd","she'll","she's","should","shouldn't","so","some","such","than","that","that's","the","their","theirs","them","themselves","then","there","there's","these","they","they'd","they'll","they're","they've","this","those","through","to","too","very","was","wasn't","we","we'd","we'll","we're","we've","were","weren't","what","what's","when","when's","where","where's","which","while","who","who's","whom","why","why's","with","won't","would","wouldn't","you","you'd","you'll","you're","you've","your","yours","yourself","yourselves”
-```
-
-The following words have recently been **_removed_** from the list of stop words that are ignored within training phrases in the NLU intents.
-
-```
-"above","after","before","below","between","down","few","off","out","over","own","same","under","until","up”
-```
-
-If you have/had training phrases which contain any of these words **_they will be now be counted towards the matching score for an utterance_** - where they would have been previously ignored. **_We suggest testing your Intents and training phrases to check everything still works as expected_** and that these stop word changes have not had any major impact on your intent matching phrases.
-
 ### Troubleshooting
-
-#### *Messages are delivered out of order*
-
-##### Why is this? 
-
-* UMS processes messages in its queue on a rolling 2 second loop.
-
-* Any messages queued when the next loop runs will all be attempted to be "put on the wire" simultaneously.
-
-* This means **_there is no guarantee what order they will be delivered to the consumer_**
-
-##### Mitigation
-
-Add minimum 2 second delay to each message in a sequence
-
-* Ensure you have a minimum of 2 seconds delay (2000ms) for each interaction within CB where you care about the order (which is 99% of the time always!)
-
- * This will mean each message added to the UMS queue *should* be at least 2 seconds apart and not be grouped together in a batch that could be delivered out of order.
-
-#### Long messages are broken up into smaller ones - what is the word limit per single message?
-
-320 characters on a word boundary
-
-If you wish to control exactly where within a large block of text the split occurs you can use the following special syntax within a text interaction.
-
-tag::breakWithDelay=2000 
-
-(example in context…)
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_42.png">
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_43.png">
 
 #### "My Quick Reply question is not showing"
 
@@ -222,36 +178,15 @@ function __initConversation(){
 
 This function should be called at the start of every conversation processed by your bot automation. Within this function the code sets the flag to recording unmatched pattern phrases.
 
-### Exporting/Importing Domains
+### Exporting/Importing Bot Automations to other environments
 
-#### Can I export from one domain to another?
-
-Yes - you can now "overwrite" the contents of one domain using the CSV intent / entity export CSV files from any other domain.
-
-{: .important}
-This is a complete override of the target with the source data - no merge.
-
-### Exporting/Importing Bot Automations from AWS farm to LPPC
-
-#### Can I export a bot automation from AWS Conversation Builder into LPPC Automation tab Conversation Builder inside LE account?
-
-Yes - however you must consider the following caveats.
-
-* If your automation uses domains for intents and entities **_you MUST export/import the domain first from AWS into LPPC version_**
-
- * *You ***_MUST_*** ensure the domain name remains the same once imported into LPPC ***_BEFORE_*** you import your automation *- otherwise the import will fail to find its expected domain for all linked dialog response intents and they will become disconnected. 	
-
- * If you ensure the domain exists with the same name, then the import should be able to find and reconnect dialog conditions to the intent at the new location.
-
- * If you forget, the imported automation will lose any/all response intent connections and you would have to manually rewire them back up to the relevant intents and entities.
-
-##### Process Guide : 
+##### Process Guide
 
 [https://docs.google.com/document/d/1d9rbMetEX4DRKgi85XWCg7LFTT1EW3GTHEhDR4dZTyg/edit#](https://docs.google.com/document/d/1d9rbMetEX4DRKgi85XWCg7LFTT1EW3GTHEhDR4dZTyg/edit#)
 
-### Undocumented Custom Configurations that impact bot agent behaviour
+### Enterprise Integrations Custom Configurations
 
-Within CB when adding an "Enterprise Integration" to connect your automation to a LE bot agent user, there is a UI section at the bottom of the screen where credentials are entered called 
+Within CB when adding an "**Enterprise Integration**" to connect your automation to a LE bot agent user, there is a UI section at the bottom of the screen where feature flags are entered called 
 
 **_"Custom Configurations"_**
 
@@ -259,7 +194,7 @@ This allows key/value pairs to set/change various settings that can have a massi
 
 **This causes potentially many issues as it allows for human error when connecting the bot "brain" to an agent “body”.** These custom, undocumented flags allow for fundamental changes in bot behaviour *outside* of the design of the automation and are injected at the point of connecting a bot automation to an agent on a 1:1 basis!
 
-**_Example: _***Should you forget/mis-configure these settings for 1 of your 3 duplicate bot agents all running the same "automation" you will get different behaviour between the bots within an account!*
+**_Example:_** *Should you forget/mis-configure these settings for 1 of your 3 duplicate bot agents all running the same "automation" you will get different behaviour between the bots within an account!*
 
 If you have specialist bot automations receiving conversations from routing bots where you enabled the [skipAgentMessage](#heading=h.ki1xdn1y3r25) setting on 2 of the 3 bot agents, they will not behave the same when receiving conversations! 
 
