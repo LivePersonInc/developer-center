@@ -10,7 +10,7 @@ permalink: mutual-tls-authentication-certificate-management.html
 indicator: both
 ---
 
-This method allows you manage certificates according to specified parameters (accountId, name, p12 and password).
+This method allows you to manage certificates according to specified parameters (accountId, name, p12 and password).
 
 ### Request
 
