@@ -17,7 +17,9 @@ $(document).ready(function () {
   //if you're working locally, comment out the next function to bypass captcha
   disableBtn();
   radioListener();
-  showError();
+  setTimeout(function () {
+    showError();
+  }, 2000);
 });
 
 function dynamicUserDetails () {
