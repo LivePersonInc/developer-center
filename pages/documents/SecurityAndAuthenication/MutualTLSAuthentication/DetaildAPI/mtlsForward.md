@@ -10,8 +10,7 @@ permalink: mutual-tls-authentication-request-forwarding.html
 indicator: both
 ---
 
-General overview:
-The Forwarding method wraps and forwards any request according to specified parameters in the request headers, after the Gatekeeper validates the header. This method is validating that the existing certificate is in Hasicorp's Vault. Once the required certificate exists and vaild, it is forwarding the request to the required endpoint (if not - it forwards the non-mtls request to the required endpoint).
+The Request Forwarding method wraps and forwards any request according to specified parameters in the request headers, after LivePerson's Gatekeeper validates these headers. This means that this method is useful for validating that the existing certificate is in Hasicorp's Vault. Once the required certificate exists and is vaild, the request is then forwarded to the required endpoint (if not - it forwards the non-mtls request to the required endpoint).
 
 ### Request
 
