@@ -150,6 +150,7 @@ function postRequest () {
   .catch(function(err){
     console.log(err);
     localStorage.setItem ('errorHappened', true);
+    location.reload();
   })
 }
 
