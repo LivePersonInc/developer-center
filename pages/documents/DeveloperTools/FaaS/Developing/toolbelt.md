@@ -15,14 +15,40 @@ As mentioned in the [Getting Started document](function-as-a-service-getting-sta
 
 Currently, the Toolbelt offers the following methods:
 
-| Method | Description |
-| :------- | :----- |
-| Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
-| Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
-| Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
-| Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
-| Toolbelt.ConversationUtil(apiCredentials) | Returns a Conversation Util instance, which is configured using the provided API credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
-| Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
+<table style="width: 100%;">
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Toolbelt.SFClient()</td>
+<td>Returns a Salesforce Client, that is configured to work with the FaaS Proxy.</td>
+</tr>
+<tr>
+<td>Toolbelt.HTTPClient()</td>
+<td>Returns a HTTP Client, that is configured to work with the FaaS Proxy.</td>
+</tr>
+<tr>
+<td>Toolbelt.SecretClient()</td>
+<td>Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage.</td>
+</tr>
+<tr>
+<td>Toolbelt.SMTPClient(config)</td>
+<td>Returns an SMTP Client instance, which is configured using the provided config.</td>
+</tr>
+<tr>
+<td>Toolbelt.ConversationUtil(apiCredentials)</td>
+<td>Returns a Conversation Util instance, which is configured using the provided API credentials (<a href="https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html">API Key</a>).</td>
+</tr>
+<tr>
+<td>Toolbelt.GDPRUtil()</td>
+<td>Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation.</td>
+</tr>
+</tbody>
+</table>
 
 Here are usage example, which are taken out of the official templates:
 
@@ -31,19 +57,17 @@ Here are usage example, which are taken out of the official templates:
 Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsforce) for connecting LivePerson Functions to any Salesforce system.
 
 ```javascript
-const { Toolbelt } = require('lp-faas-toolbelt');
+const { Toolbelt } = require("lp-faas-toolbelt");
 const sfClient = Toolbelt.SFClient(); // for API docs look @ hhtps://jsforce.github.io/
 
 //This will establish a connection with SF. And leverage Access Token / Refresh Token to login
 const con = sfClient.connectToSalesforce({
-	loginUrl: "https://test.salesforce.com",
-	accessToken: "PROVIDE_YOUR_ACCESS_TOKEN", //Obtain it from Secret Store
-	refreshToken: "PROVIDE_YOUR_REFRESH_TOKEN" // Obtain it from Secret Store
+  loginUrl: "https://test.salesforce.com",
+  accessToken: "PROVIDE_YOUR_ACCESS_TOKEN", //Obtain it from Secret Store
+  refreshToken: "PROVIDE_YOUR_REFRESH_TOKEN" // Obtain it from Secret Store
 });
 
-con.query(query, function(err, queryResult) {
-
-});
+con.query(query, function(err, queryResult) {});
 ```
 
 ### HTTP Client:
@@ -73,24 +97,29 @@ httpClient(URL, {
 
 The LivePerson (LP) Client is a wrapper for the [HTTP Client](https://developers.liveperson.com/liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization.
 
- Every LivePerson API has a service name. This is documented in the respective page on [developers.liveperson.com](https://developers.liveperson.com). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance has the service name `msgHist`. The LP Client expects the LpService name as the first argument. This can be done by using our `LpServices` enum or by manually providing the service name as a string.
- 
-Additionally, most of the LivePerson API calls need authorization. The LP Client also takes care of that by automatically creating the respective HTTP headers. Currently, only APIs that use [API Key](https://developers.liveperson.com/guides-gettingstarted.html) authorization are supported. In order to perform this authorization, the API reads credentials from a [secret](https://developers.liveperson.com/liveperson-functions-development-storing-secrets.html). By default, the secret name is `lp-faas-default-app-key`, but it can be overriden by setting `options.appKeySecretName`. 
+Every LivePerson API has a service name. This is documented in the respective page on [developers.liveperson.com](https://developers.liveperson.com). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance has the service name `msgHist`. The LP Client expects the LpService name as the first argument. This can be done by using our `LpServices` enum or by manually providing the service name as a string.
+
+Additionally, most of the LivePerson API calls need authorization. The LP Client also takes care of that by automatically creating the respective HTTP headers. Currently, only APIs that use [API Key](https://developers.liveperson.com/guides-gettingstarted.html) authorization are supported. In order to perform this authorization, the API reads credentials from a [secret](https://developers.liveperson.com/liveperson-functions-development-storing-secrets.html). By default, the secret name is `lp-faas-default-app-key`, but it can be overriden by setting `options.appKeySecretName`.
 
 ####Using the LP Client
 In order to use the LP Client you have to execute the following steps:
- 1. Create and maintain API Key credentials (see below).
- 2. Whitelist `api.liveperson.net`
-  * Go to `Settings -> Domain Whitelist`
-  * Add `api.liveperson.net`
- 3. Whitelist the API you want to use
-  * Retrieve the domain for the service you want to use as described [here](https://developers.liveperson.com/agent-domain-domain-api.html).
-  * Go to `Settings -> Domain Whitelist`
-  * Add the domain
+
+1.  Create and maintain API Key credentials (see below).
+2.  Whitelist `api.liveperson.net`
+
+- Go to `Settings -> Domain Whitelist`
+- Add `api.liveperson.net`
+
+3.  Whitelist the API you want to use
+
+- Retrieve the domain for the service you want to use as described [here](https://developers.liveperson.com/agent-domain-domain-api.html).
+- Go to `Settings -> Domain Whitelist`
+- Add the domain
 
 **Create and maintain an API Key**
-* Create an API Key as described [here](https://developers.liveperson.com/guides-gettingstarted.html). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance needs the permission `Data -> Engagement History / Messaging Interactions`
-* Create a new secret of the JSON to save the API Key credentials created before. The JSON has the following structure:
+
+- Create an API Key as described [here](https://developers.liveperson.com/guides-gettingstarted.html). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance needs the permission `Data -> Engagement History / Messaging Interactions`
+- Create a new secret of the JSON to save the API Key credentials created before. The JSON has the following structure:
 
 ```javascript
 {
@@ -141,49 +170,94 @@ Storage Client that is able to read & update secret values. The following method
 
 Searches the secret that belongs to the provided key. Will raise an error if there is no secret for the provided key.
 
-| Parameter | Description |
-| :------- | :----- |
-| key | Name of the secret |
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</td>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >key</td>
+<td >Name of the secret</td>
+</tr>
+</tbody>
+</table>
 
-| Returns | Description |
-| :------- | :----- |
-| secretEntry | Object with properties `key` & `value` |
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Returns</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >secretEntry</td>
+<td >Object with properties <code>key</code> &amp; <code>value</code></td>
+</tr>
+</tbody>
+</table>
 
 **SecretClient.updateSecret**
 
 Updates the secret with the provided update entry.
 
-| Parameter | Description |
-| :------- | :----- |
-| secretEntry |  Object with properties `key` & `value` |
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >secretEntry</td>
+<td >Object with properties <code>key</code> &amp; <code>value</code></td>
+</tr>
+</tbody>
+</table>
 
-| Returns | Description |
-| :------- | :----- |
-| secretEntry | Created entry |
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Returns</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >secretEntry</td>
+<td >Created entry</td>
+</tr>
+</tbody>
+</table>
 
 **Sample Usage**
 
 ```javascript
 // import FaaS Toolbelt
-const { Toolbelt } = require('lp-faas-toolbelt');
+const { Toolbelt } = require("lp-faas-toolbelt");
 // obtain SecretClient from Toolbelt
 const secretClient = Toolbelt.SecretClient();
 // this is how you can access your stored secret
-secretClient.readSecret('my_Secret-Key')
-.then(mySecret => {
-  // Fetching the secret value
-  const value = mySecret.value
-  // you can also update your secret e.g. if you received a new OAuth2 token
-  mySecret.value = 'nEw.oaUtH2-tOKeN!!11!';
-  return secretClient.updateSecret(mySecret)
-})
-.then(_ => {
-  callback(null, { message: 'Successfully updated secret' });
-})
-.catch(err => {
-  console.error(`Failed during secret operation with ${err.message}`)
-  callback(err, null);
-});
+secretClient
+  .readSecret("my_Secret-Key")
+  .then(mySecret => {
+    // Fetching the secret value
+    const value = mySecret.value;
+    // you can also update your secret e.g. if you received a new OAuth2 token
+    mySecret.value = "nEw.oaUtH2-tOKeN!!11!";
+    return secretClient.updateSecret(mySecret);
+  })
+  .then(_ => {
+    callback(null, { message: "Successfully updated secret" });
+  })
+  .catch(err => {
+    console.error(`Failed during secret operation with ${err.message}`);
+    callback(err, null);
+  });
 ```
 
 ### SMTP Client:
@@ -191,7 +265,6 @@ secretClient.readSecret('my_Secret-Key')
 SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
 
 <div class="important">The client will use a unique connection for every email sent. It will close each connection after sending.</div>
-
 
 **Sample Usage**
 
@@ -295,12 +368,30 @@ const scannerResult = conversationUtil.scanConversationForKeywords(
 
 The method collects every message which contains a keyword in an array. It retrieves a timestamp, information on who sent the message and adds a tag detailing the keyword for which the message has been selected. If one message contains more than one keyword it will appear as often in the array. (see example underneath)
 
-| Attribute     | Description                                                                          | Type/Value |
-| :------------ | :----------------------------------------------------------------------------------- | :--------- |
-| message       | The whole message which is containing at least one keyword                           | string     |
-| sentTimestamp | Timestamp (Current Unix epoch time in milliseconds) when the message was sent        | number     |
-| sentBy        | Who the conversation was sent by                                                     | string     |
-| tag           | Tag stating because of which keyword the message is included in the scanner Results. | string     |
+<table  style="width: 100%;">
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Type/Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>message</td>
+<td>The whole message which is containing at least one keyword</td>
+<td>string</td>
+</tr>
+<tr>
+<td>sentTimestamp</td>
+<td>Timestamp (Current Unix epoch time in milliseconds) when the message was sent</td>
+<td>number</td>
+</tr>
+<tr>
+<td>sentBy</td>
+<td>Who the conversation was sent by</td>
+<td>string</td>
+</tr>
 
 ```javascript
 [

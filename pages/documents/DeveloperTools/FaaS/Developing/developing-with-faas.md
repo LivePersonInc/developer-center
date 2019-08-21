@@ -14,7 +14,8 @@ redirect_from:
 
 After successfully creating a `lambda` (using the [Getting Started guide](function-as-a-service-getting-started.html)) you will find yourself in the editor, the heart of the LivePerson Functions UI. Here you can develop the function itself.
 
-![](img/faas-editor.png)
+<img src="img/faas-editor.png" alt="LivePerson Functions Editor" style="width:100%;"/>
+
 
 ### Code Completion / Context Menu
 
@@ -26,7 +27,7 @@ By right-clicking inside the editor area, you're able to open the context menu, 
 
 By pressing the marked button you are able to hide or show the sidebar. This sidebar offers you access to two tabs (Settings and Payload, see below for more information). On smaller screens it will be hidden by default. On larger screens, it is shown by default.
 
-![](img/faas-sidebar.png)
+<img class="fancyimage" src="img/faas-sidebar.png" alt="LivePerson Functions Editor Sidebar">
 
 #### Settings Tab
 

@@ -26,7 +26,7 @@ There are 3 user permissions pertaining to Functions:
 
 * FaaS-Invocation - only allowed to invoke lambdas externally. This permission is granted to a user dedicated to external invocations. When an external system needs to invoke a Functions `lambda`, the external system needs to use an account user with this permission <strong>enabled</strong> to access the LivePerson platform.
 
-<table class="thinner">
+<table class="thinner" style="width: 100%">
 <thead>
   <tr>
     <th>Component</th>
@@ -139,13 +139,18 @@ To get access to this page, you'll need to ask your LivePerson account team to e
 
 The Functions UI is divided into three main components. On the left hand side of the UI, you can the navigation bar which will allow you to navigate these components. The **Functions** screen (see below) is the default page that will be visible.
 
-![](img/faas-menus.png)
+<img src="img/faas-home.png" alt="FaaS Landing" style="width:100%;"/>
+
+The **Home** section serves as the landing page of LivePerson Functions. Here you can inspect the basic metrics of your Functions Account such as the total number of lambdas or the number of invocations since the beginning of the month.
 
 The **Functions** section contains an overview of the functions sorted by their state: *Draft* and *Productive* / *Modified*. This allows for quick access to features surrounding the management of functions. [More information on developing a function can be found here](function-as-a-service-developing-with-faas-overview.html).
 
 The **Deployments** section provides an overview of the functions that are currently deployed, and allows for quick access to deployment features. Furthermore, it also allows access to a test page where you can test your function with known, static input. **Note**: if the deployment of a function fails, you can hover over the deployment state to see the cause for the failure. [More information on deploying and testing your functions can be found here](function-as-a-service-deploying-functions.html).
 
 The **Schedules** section allows to define a time-based execution of lambdas via Cron expressions. [More information on scheduling a function can be found here](liveperson-functions-scheduled-invocations.html)
+
+The **Logs** section is for analysing your functions' past invocations by searching through the logs you defined. [More information on logging your function can be found here](function-as-a-service-developing-with-faas-overview.html).
+
 
 The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains and maintain secrets (i.e. OAuth tokens).
 
@@ -155,7 +160,7 @@ Once you've familiarized yourself with the different sections of the UI, it's ti
 
 In order to get started with a function, start the creation process using the **Create a Function** button that can be found at the **Functions** section.
 
-![](img/faas-function.png)
+<img src="img/faas-function.png" alt="LivePerson Functions Function Overview" style="width:100%;"/>
 
 This opens the Creation Window. The Creation Window includes a 3 Step process:
 
@@ -169,7 +174,7 @@ This opens the Creation Window. The Creation Window includes a 3 Step process:
 
 We provide developer templates out of the box. These are pre-made functions which are bound to a specific event. The templates are by default runnable out of the box, allowing you to directly deploy them and see the response. You can see a preview of the template on the right-hand side.
 
-![](img/faas-templates.png)
+<img src="img/faas-templates.png" alt="LivePerson Functions Function Templates" style="width:100%;"/>
 
 Please see [this document](function-as-a-service-templates.html) for more information about templates and their associated events.
 
