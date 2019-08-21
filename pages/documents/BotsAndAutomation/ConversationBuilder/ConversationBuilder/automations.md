@@ -78,7 +78,7 @@ Automation settings include:
 
 - **Entity**: You can use this option to associate _a domain_ with the automation. However, the Assist tool provides you with help in associating domains with dialogs, so typically you don’t need to specify a domain here.
 
-- **Automation Account**: If you logged into Conversation Builder directly (i.e., _not_ via single signon from LiveEngage) and you have access to multiple organizations within your LiveEngage account, you can use this setting to change the organization under which this automation exists. If you logged into Conversation Builder via single sign-on from LiveEngage, the organization you were using in LiveEngage is active and can't be changed, and nothing appears in this list.
+- **Automation Account**: If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, you can use this setting to change the organization under which this automation exists. If you logged into Conversation Builder via single sign-on from LiveEngage, the organization you were using in LiveEngage is active and can't be changed, and nothing appears in this list.
 
 - **Public**: When you want other users in your LiveEngage account to be able to view and edit the automation, click the slider to On. The default value is Off. 
 
