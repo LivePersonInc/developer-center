@@ -151,7 +151,7 @@ function postRequest () {
   })
   .catch(function(err){
     console.log(err);
-    localStorage.setItem ('errorHappened', true);
+    localStorage.setItem ('errorHappened', 'true');
     location.reload();
   })
 }
@@ -159,7 +159,7 @@ function postRequest () {
 //simple function to detect if the page was refreshed because of an error call and display a corresponding error message if so
 function showError() {
 let errorHappened = localStorage.getItem ('errorHappened');
-if (errorHappened == true) {
+if (errorHappened == 'true') {
     $('#requestError').show();
     localStorage.setItem ('errorHappened', false);
 } else {
