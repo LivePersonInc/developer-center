@@ -1,12 +1,12 @@
 ---
-pagename: Slots & Variables
+pagename: Variables & Slots
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
-permalink: conversation-builder-conversation-builder-slots-variables.html
+permalink: conversation-builder-conversation-builder-variables-slots.html
 indicator: both
 ---
 
@@ -17,6 +17,8 @@ One or the more common use cases of slots and variables is [storing user input](
 ### Difference Between Slots and Variables
 
 When to use one or the other
+
+### Variables
 
 ### Slots
 
@@ -41,5 +43,3 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 "You answered: {$botContext.slot.animal}!"
 
 If your automation asked the user "which animal do you like?" and the user answered "dogs" or something similar, the slot for the entity `animal` would be populated with their answer. The automation would then respond with "You answered: dogs!" populating the code above with the user's reply.
-
-### Variables

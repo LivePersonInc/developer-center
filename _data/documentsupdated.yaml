@@ -142,7 +142,7 @@
             - subpagename: Interactions
             - subpagename: Interaction Details
             - subpagename: Assist
-            - subpagename: Slots & Variables
+            - subpagename: Variables & Slots
             - subpagename: Integrations
             - subpagename: Scripting Functions
             - subpagename: Keyword Triggers
