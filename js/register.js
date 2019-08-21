@@ -122,7 +122,7 @@ function validateInfo (){
 
 function postRequest () {
 //defining the endpoint for account creation
-  const URL = 'https://ssuw1fkby4.execute-api.us-east-2.amazonaws.com/prod/devaccount';
+  const URL = 'https://d0j6xh4g99.execute-api.us-east-2.amazonaws.com/prod/devaccount';
 //filling in request body with variables from the form
   const user = {
     firstName: firstName,
@@ -136,7 +136,7 @@ function postRequest () {
   axios({
     method: 'post',
     url: URL,
-    headers: {'x-api-key': 'WOhfspRcQX2rXsYhdkFSU5LBAy87mw78VdEus7ej', 'Content-Type': 'application/json', 'Accept': 'application/json'},
+    headers: {'x-api-key': 'GaFtPrUlIE9KusPOWUzSu4DQTG0BHz264ep4RqKo', 'Content-Type': 'application/json', 'Accept': 'application/json'},
     data: user
   })
   .then(function (response) {
