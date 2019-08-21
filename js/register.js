@@ -17,6 +17,7 @@ $(document).ready(function () {
   //if you're working locally, comment out the next function to bypass captcha
   disableBtn();
   radioListener();
+  showError();
 });
 
 function dynamicUserDetails () {
@@ -148,7 +149,19 @@ function postRequest () {
   })
   .catch(function(err){
     console.log(err);
+    localStorage.setItem ('errorHappened', true);
   })
+}
+
+//simple function to detect if the page was refreshed because of an error call and display a corresponding error message if so
+function showError() {
+let errorHappened = localStorage.getItem ('errorHappened');
+if (errorHappened == true) {
+    $('#requestError').show();
+    localStorage.setItem ('errorHappened', false);
+} else {
+    $('#requestError').hide();
+  }
 }
 
 //a simple fuction to hide typed passwords and show them when the relevant checkbox is filled
