@@ -161,7 +161,7 @@ function showError() {
 let errorHappened = localStorage.getItem ('errorHappened');
 if (errorHappened == 'true') {
     $('#requestError').show();
-    localStorage.setItem ('errorHappened', false);
+    localStorage.setItem ('errorHappened', 'false');
 } else {
     $('#requestError').hide();
   }
