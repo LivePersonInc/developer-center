@@ -58,7 +58,7 @@ However, instead of hardcoding the authorization server, it is recommended to us
 
 Use the Functions UI to retrieve the `lambda UUID` of the function that should be invoked. Do so by navigating to the **Deployments** section and opening the "Invoke your Function" screen by clicking "Invoke" on the function. The function's `UUID` is then displayed at the top of the page which opens, beneath your function's name. Note it down.
 
-![](img/faas-invokeuuid.png)
+<img src="img/faas-invokeuuid.png" alt="LivePerson Functions Get UUID" style="width:100%;"/>
 
 ### Step 5: Generate OAuth 2.0 token
 
@@ -66,7 +66,8 @@ Together with the retrieved domain of the authorization server and the `client_i
 
 In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the authorization server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
 
-![](img/faas-postman.png)
+<img src="img/faas-postman.png" alt="Postman" style="width:100%;"/>
+
 
 1. In your request-tab under your function click on **Authorization**
 

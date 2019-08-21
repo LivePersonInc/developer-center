@@ -10,11 +10,13 @@ indicator: both
 
 To give brands the option to call their functions on a regular basis, we developed time-based scheduling for LivePerson Functions. Similar to Cron on Unix systems, we allow to define recurring invocations via Cron expression for functions that are not connected to any events (functions that are connected to events don't need scheduling, since they are invoked whenever the event is fired).
 
-![](img/faas-schedule.png)
+<img src="img/faas-schedule.png" alt="LivePerson Functions Schedule Overview" style="width:100%;"/>
+
 
 In order to schedule a new function invocation, simply navigate to the **Schedules** section and start the process using the **Create a Schedule** button.
 
-![](img/faas-newschedule.png)
+<img src="img/faas-newschedule.png" alt="LivePerson Functions Create Schedule" style="width:100%;"/>
+
 
 In the **Create a Scheduled Invocation** dialog you are prompted to select an already deployed function and enter a Cron expression for scheduling the execution.
 

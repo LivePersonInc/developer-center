@@ -532,6 +532,7 @@
       - pagename: Monitoring
         subpages:
           - subpagename: Logs
+          - subpagename: Metrics
       - pagename: Scheduled Invocations
       - pagename: External Invocations
         subpages:
