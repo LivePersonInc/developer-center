@@ -10,17 +10,45 @@ permalink: conversation-builder-conversation-builder-variables-slots.html
 indicator: both
 ---
 
-In the Interaction Details [Response Match & Actions](conversation-builder-conversation-builder-response-match-actions.html) settings, you can assign various data points to either Slots or Variables.
+In the Interaction Details [Response Match & Actions](conversation-builder-conversation-builder-response-match-actions.html) settings, you can assign various data points to either Slots or Variables. Both are useful in [API Integrations](conversation-builder-conversation-builder-integrations.html).
 
-One or the more common use cases of slots and variables is [storing user input](conversation-builder-conversation-builder-interactions.html#capture-and-use-consumer-response-to-a-question).
+### Displaying Data to the User
+
+[See here](conversation-builder-conversation-builder-interactions.html#display-variables-in-interactions) for how to display variables and slots in interactions.
 
 ### Variables
 
+Variables are the default way to store and access important data points throughout the flow of an automation. 
 
+#### Storing User Responses
+
+The most common use case for variables is storing user responses to [questions](conversation-builder-conversation-builder-interactions.html#questions).
+
+The following special syntax can be used to access and save responses into a variable: 
+
+`{$query}`
+
+This is special syntax [used with Response Match and Action sets](conversation-builder-conversation-builder-response-match-actions.html) for a question where you want to save the response from the consumer into a variable.
+
+The below would store the user response in this variable name.
+
+<img class="fancyimage" width="400" src="img/ConvoBuilder/bestPractices/tips_image_7.png">
+
+#### Storing and Accessing Variables with Code
+
+The [Get and Set Bot Variables functions](conversation-builder-conversation-builder-scripting-functions.html#get-and-set-bot-variable) can be used to store and access variables in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interaction-details.html#process-user-response) JavaScript code panels.
 
 ### Slots
 
-Slots are a useful way to store user responses for usage in an API Integration or other interactions. Slots can be set to a simple value based on a condition or they can be associated with entities, which give them additional capability. When a user selects an answer or types their own input and invokes an [entity](conversation-builder-intent-builder-entities.html) (by, for example, indicating that they want "sandals", which belongs to the "product_shoes" entity), the specific object selected by them might be useful in the future. For example, the automation could refer to it in a reply later in the dialog or you could use an integration to query an API with the slot and retrieve specific information about a product the user was looking for, create a lead with that information or store it for future use outside of the automation (like in the case of an email address).
+Slots are a *special type* of variable. Most of the time, you will use [variables](#variables) to take what a user says and hold on to it for later use. Slots are useful for more specialized use cases.
+
+#### Slots & Entities
+
+When combined with [entities](conversation-builder-intent-builder-entities.html), slots bring dynamic, fluid behavior to storing user input data.
+
+For example, if you add a question interaction "what type of shoes are you looking for?", the [Assist](conversation-builder-conversation-builder-assist.html#assigning-an-entity-and-slots-to-an-interaction) tool will suggest appropriate entities and slots for that interaction. As long as the user stays within the bounds of entities that you have created, slots will automatically adjust and update based upon user input throughout the conversation.
+
+#### Adding a Slot
 
 To configure a slot, simply click the interaction where you'd like to look for entities in the user's input (like a multiple choice question, for example), and go to User Response in the middle of the Interaction Details panel. From there, click the blue **+** icon right to the right of Slot.
 
@@ -41,3 +69,9 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 "You answered: {$botContext.slot.animal}!"
 
 If your automation asked the user "which animal do you like?" and the user answered "dogs" or something similar, the slot for the entity `animal` would be populated with their answer. The automation would then respond with "You answered: dogs!" populating the code above with the user's reply.
+
+### When to use Variables vs Slots
+
+Variables are the default storage unit of Conversation Builder, while slots are a special type of variable. The only reason to favor Slots is if you need extra functionality that is linked to entities or if entities will be used in an API Integration catalog search, for example.
+
+When in doubt, it is best to use variables. The [Assist](conversation-builder-conversation-builder-assist.html) tool will help to display when slots are most useful.

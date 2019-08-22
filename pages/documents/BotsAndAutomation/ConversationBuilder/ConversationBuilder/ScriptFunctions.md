@@ -10,7 +10,9 @@ permalink: conversation-builder-conversation-builder-scripting-functions.html
 indicator: both
 ---
 
-Functions are modules of code that are used for accomplishing a certain task programatically. With few exceptions, functions can be used in any of the preProcess Code, postProcess Code or the processUser Response JavaScript code panels.
+Functions are modules of code that are used for accomplishing a certain task programatically. 
+
+With few exceptions, functions can be used in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interaction-details.html#process-user-response) JavaScript code panels.
 
 **Please note:**
 

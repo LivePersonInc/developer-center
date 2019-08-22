@@ -65,15 +65,15 @@ If you need more advanced operators, you can use [Regular Expressions](http://ww
 
 ### Slots
 
-A slot is a container for storing a value or parameter, so it can be used in subsequent actions. You can store values in slots based on whether a condition is met.
-
-As an example, you might have a Text Question interaction that asks the user for their 6-digit account number. If that condition is met (the user enters a 6-digit number), the number is then stored in a slot named `accountNumber`. A subsequent Integration interaction uses that number to retrieve the user's balance.
-
-<img class="fancyimage" width="750" src="img/ConvoBuilder/interactionDetails_slots.png">
-
 [See here](conversation-builder-conversation-builder-variables-slots.html#slots) for more on working with slots.
 
 ### Variables
+
+A variable is a container for storing a value or parameter, so it can be used in subsequent actions. You can store values in variables based on whether a condition is met.
+
+As an example, you might have a Text Question interaction that asks the user for their 6-digit account number. If that condition is met (the user enters a 6-digit number), the number is then stored in a variable named `accountNumber`. A subsequent Integration interaction uses that number to retrieve the user's balance.
+
+<img class="fancyimage" width="750" src="img/ConvoBuilder/interactionDetails_slots.png">
 
 [See here](conversation-builder-conversation-builder-variables-slots.html#variables) for more on working with variables.
 

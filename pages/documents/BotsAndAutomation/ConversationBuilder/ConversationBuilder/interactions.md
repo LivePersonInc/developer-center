@@ -54,19 +54,7 @@ This type of interaction is interactive and meant to be answered by the user. Th
 
   * Time Picker. **Note: time picker is relevant specifically to Apple Business Chat only**. This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment.
 
-#### Capture and Use Consumer Response to a Question 
-
-Question interactions can be used to fill [slots](conversation-builder-conversation-builder-slots-variables.html#slots) with key information based on the user's response, making it available for future use.
-
-The following special syntax can also be used to access and save responses into a variable: 
-
-`{$query}`
-
-This is special syntax - [used during **Response Conditions**](conversation-builder-conversation-builder-interaction-details.html#next-actions-variables) for a question where you want to save the response from the consumer into a variable.
-
-The below would store whatever the user response was to a question in this variable name.
-
-<img class="fancyimage" width="400" src="img/ConvoBuilder/bestPractices/tips_image_7.png">
+User responses to question interactions can be saved in [variables](conversation-builder-conversation-builder-variables-slots.html#storing-user-responses), making it available for future use.
 
 ### Integrations
 
@@ -76,30 +64,30 @@ See [Integrations](conversation-builder-conversation-builder-integrations.html) 
 
 ### Formatting
 
-#### How do I show a variable inside a text interaction?
+#### Display Variables in Interactions
 
-* `{}` is used for inserting dynamic values inside of text interactions
+* `{}` is used for inserting dynamic values inside of interactions
 
-  * Bot Variable: `{$botContext.botVariableName}`
+  * [Bot Variable](conversation-builder-conversation-builder-variables-slots.html#variables): `{$botContext.botVariableName}`
 
-  * [Slot Variable](conversation-builder-conversation-builder-conditions.html): `{$botContext.slot.slotName}`
+  * [Slot Variable](conversation-builder-conversation-builder-variables-slots.html#slots): `{$botContext.slot.slotName}`
 
   * [Environment Variable](conversation-builder-best-practices-using-environment-variables.html): `{$env.envVariableName}`
 
-  * API Integration custom data values: `{apiName.variableName}`
+  * [API Integration](conversation-builder-conversation-builder-integrations.html) custom data values: `{apiName.variableName}`
 
-#### How do I add line breaks inside text interactions?
+#### Line Breaks
 
 CTRL+ENTER - Hold control and hit enter/return.
 
 {: .important}
 This does not render when using the the Preview tool inside Conversation Builder. You will not see line breaks in the preview tool.
 
-#### What is the character limit on a single text interaction before it gets split into 2 parts?
+#### Character Limit
 
-320 characters on word boundary
+One single text interaction has a limit of 320 characters on word boundary before it gets split into 2 parts.
 
-#### How to specify the break point within a large block of text
+#### Break point within a large block of text
 
 Add the following special tag inline inside your text interaction to force a break into 2 separate blocks of text.
 

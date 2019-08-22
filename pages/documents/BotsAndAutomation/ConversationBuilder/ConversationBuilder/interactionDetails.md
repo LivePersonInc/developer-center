@@ -58,7 +58,9 @@ See [Response Match & Actions](conversation-builder-conversation-builder-respons
 
 ##### Fallback Response
 
-If a user asks for a slot to be changed, but the automation can't recognize the phrase the user used ("give me a different color," for example), it will send a fallback response. This could be something like, "I'm sorry; I didn't understand. Can you try again?"
+If a user is currently within an interaction flow (eg. Answering a Question), this fallback response will trigger if the user response has no [conditions](conversation-builder-conversation-builder-response-match-actions.html#conditions) that are met.
+
+If you do **not** set this fallback response within the interaction, and no conditions or intents are matched, the automation will defer to a [Fallback **Dialog**](conversation-builder-conversation-builder-dialogs.html#fallback).
 
 #### Process User Response
 
