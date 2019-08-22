@@ -141,8 +141,9 @@
             - subpagename: Automations
             - subpagename: Dialogs
             - subpagename: Interactions
-            - subpagename: Interaction Details
             - subpagename: Assist
+            - subpagename: Interaction Details
+            - subpagename: Response Match & Actions
             - subpagename: Variables & Slots
             - subpagename: Integrations
             - subpagename: Scripting Functions
