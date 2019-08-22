@@ -17,6 +17,9 @@ $(document).ready(function () {
   //if you're working locally, comment out the next function to bypass captcha
   disableBtn();
   radioListener();
+  setTimeout(function () {
+    showError();
+  }, 2000);
 });
 
 function dynamicUserDetails () {
@@ -72,6 +75,14 @@ function validateInfo (){
   } else {
     $('#agreeButton').hide();
   }
+  //check if email is valid
+  var emailRegexPtn = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  var isValidEmail = emailRegexPtn.test(emailAddress);
+  if (!isValidEmail) {
+      $('#invalidEmail').show();
+  } else {
+        $('#invalidEmail').hide();
+  }
   //check password length
   if(password.length < 8) {
     $('#passwordTooShort').show();
@@ -87,7 +98,7 @@ function validateInfo (){
       $('#passwordErrorMatch').hide();
   }
   //check that password meets requirements
-  passwordStrength = new RegExp ('^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])');
+  passwordStrength = new RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])');
   if (password.match(passwordStrength)){
     $('#passwordErrorStrength').hide();
     passwordPassed = true;
@@ -102,7 +113,7 @@ function validateInfo (){
     $('#allFields').show();
   }
   //if all fields were filled and the passwords match, call the request to create an account
-  if ((firstName && lastName && region && emailAddress && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword)) {
+  if ((firstName && lastName && region && emailAddress && isValidEmail && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword)) {
 
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
@@ -114,7 +125,7 @@ function validateInfo (){
 
 function postRequest () {
 //defining the endpoint for account creation
-  const URL = 'https://ssuw1fkby4.execute-api.us-east-2.amazonaws.com/prod/devaccount';
+  const URL = 'https://d0j6xh4g99.execute-api.us-east-2.amazonaws.com/prod/devaccount';
 //filling in request body with variables from the form
   const user = {
     firstName: firstName,
@@ -128,7 +139,7 @@ function postRequest () {
   axios({
     method: 'post',
     url: URL,
-    headers: {'x-api-key': 'WOhfspRcQX2rXsYhdkFSU5LBAy87mw78VdEus7ej', 'Content-Type': 'application/json', 'Accept': 'application/json'},
+    headers: {'x-api-key': 'GaFtPrUlIE9KusPOWUzSu4DQTG0BHz264ep4RqKo', 'Content-Type': 'application/json', 'Accept': 'application/json'},
     data: user
   })
   .then(function (response) {
@@ -138,7 +149,22 @@ function postRequest () {
     //load the confirmation page
     window.location = '/confirmation.html';
   })
-  .catch(err=>console.log(err))
+  .catch(function(err){
+    console.log(err);
+    localStorage.setItem ('errorHappened', 'true');
+    location.reload();
+  })
+}
+
+//simple function to detect if the page was refreshed because of an error call and display a corresponding error message if so
+function showError() {
+let errorHappened = localStorage.getItem ('errorHappened');
+if (errorHappened == 'true') {
+    $('#requestError').show();
+    localStorage.setItem ('errorHappened', 'false');
+} else {
+    $('#requestError').hide();
+  }
 }
 
 //a simple fuction to hide typed passwords and show them when the relevant checkbox is filled

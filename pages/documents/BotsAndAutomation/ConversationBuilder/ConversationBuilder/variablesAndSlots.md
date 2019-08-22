@@ -24,13 +24,9 @@ Variables are the default way to store and access important data points througho
 
 The most common use case for variables is storing user responses to [questions](conversation-builder-conversation-builder-interactions.html#questions).
 
-The following special syntax can be used to access and save responses into a variable: 
+Frequently you will want to capture what was just said by the user as the value of your variable. You can use `{$query}` to do this.
 
-`{$query}`
-
-This is special syntax [used with Response Match and Action sets](conversation-builder-conversation-builder-response-match-actions.html) for a question where you want to save the response from the consumer into a variable.
-
-The below would store the user response in this variable name.
+For example:
 
 <img class="fancyimage" width="400" src="img/ConvoBuilder/bestPractices/tips_image_7.png">
 

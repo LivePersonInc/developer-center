@@ -101,18 +101,21 @@ body {
   background-color: #ffffff;
   height: 50px;
   margin-bottom: 20px;
-  padding: 10px 14px;
   font-size: 18px;
   font-family: "Open Sans";
   font-weight: normal;
   font-style: italic;
   color: #666666;
   text-indent: 5px;
+  -webkit-appearance: initial;
+  -webkit-padding-start: 9px;
 }
 
 select {
-  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .mandatory:before {
@@ -244,6 +247,7 @@ input:-moz-placeholder { /* Firefox 18- */
 
 .conditionButton {
   display: none;
+  text-align: left;
   color: red;
   align-self: baseline;
   margin-top: 5px;

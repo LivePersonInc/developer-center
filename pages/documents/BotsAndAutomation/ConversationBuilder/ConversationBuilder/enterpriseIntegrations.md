@@ -13,22 +13,18 @@ indicator: both
 
 ### Custom Configuration Flags
 
-Within CB when adding an "**Enterprise Integration**" to connect your automation to a LE bot agent user, there is a UI section at the bottom of the screen where feature flags are entered called 
+When adding an Enterprise Integration to connect your automation to an LE bot agent user, there is a UI section at the bottom of the screen where feature flags are entered called **_Custom Configurations_**.
 
-**_"Custom Configurations"_**
+This section allows you to add key/value pairs that alter the behavior of your bot. 
 
-This allows key/value pairs to set/change various settings that can have a massive impact on your bot automation and the behaviour.
+These custom flags allow for fundamental changes in bot behaviour *outside* of the design of the automation and are injected at the point of connecting a bot automation to an agent on a 1:1 basis.
 
-**This causes potentially many issues as it allows for human error when connecting the bot "brain" to an agent “body”.** These custom flags allow for fundamental changes in bot behaviour *outside* of the design of the automation and are injected at the point of connecting a bot automation to an agent on a 1:1 basis!
-
-**_Example:_** *Should you forget/mis-configure these settings for 1 of your 3 duplicate bot agents all running the same "automation" you will get different behaviour between the bots within an account!*
-
-If you have specialist bot automations receiving conversations from routing bots where you enabled the [skipAgentMessage](#skipAgentMessage) setting on 2 of the 3 bot agents, they will not behave the same when receiving conversations! 
+{: .important}
+This can potentially cause many issues because it allows for human error when connecting the bot "brain" to an agent “body”. For example, if you forget/mis-configure these settings for 1 of your 3 duplicate bot agents all running the same automation you will get different behaviour between the bots within an account.
 
 #### Applying these settings
 
-**Note**: when making additions/edits/deletions of these properties to your existing bot agent connections, you MUST restart the bot for the changes to take effect! This means stopping and then starting the bot again via the Operations role in Conversation Builder or via the Enterprise integrations section of an individual bot automation.
-
+When making additions/edits/deletions of these properties to your existing bot agent connections, you **must restart** the bot for the changes to take effect. This means stopping and then starting the bot again via the Operations role in Conversation Builder or via the Enterprise integrations section of an individual bot automation.
 
 #### Flags
 
