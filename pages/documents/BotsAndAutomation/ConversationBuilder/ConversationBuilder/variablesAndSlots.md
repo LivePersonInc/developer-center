@@ -14,12 +14,6 @@ In the [Interaction Details Response Match & Actions](conversation-builder-conve
 
 One or the more common use cases of slots and variables is [storing user input](conversation-builder-conversation-builder-interactions.html#capture-and-use-consumer-response-to-a-question).
 
-### Difference Between Slots and Variables
-
-When to use one or the other
-
-### Variables
-
 ### Slots
 
 Slots are a useful way to store user responses for usage in an API Integration or other interactions. Slots can be set to a simple value based on a condition or they can be associated with entities, which give them additional capability. When a user selects an answer or types their own input and invokes an [entity](conversation-builder-intent-builder-entities.html) (by, for example, indicating that they want "sandals", which belongs to the "product_shoes" entity), the specific object selected by them might be useful in the future. For example, the automation could refer to it in a reply later in the dialog or you could use an integration to query an API with the slot and retrieve specific information about a product the user was looking for, create a lead with that information or store it for future use outside of the automation (like in the case of an email address).
