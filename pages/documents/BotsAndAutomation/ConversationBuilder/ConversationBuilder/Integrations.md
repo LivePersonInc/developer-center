@@ -113,11 +113,8 @@ The following screen from the API integration setup shows that you must remember
 
     ```javascript
     var company = jsonResponse.company;
-
     var guid = jsonResponse.guid || false;
-
     var age = jsonResponse.age || false;
-
     var email = jsonResponse.email || false;
     ```
 
@@ -128,11 +125,8 @@ The following screen from the API integration setup shows that you must remember
 
 ```javascript
 botContext.setBotVariable("guid", guid, true, false);
-
 botContext.setBotVariable("age", age, true, false);
-
 botContext.setBotVariable("email", email, true, false);
-
 botContext.printDebugMessage("*** checking values were set: " + guid + age + email);
 ```
 
@@ -192,7 +186,7 @@ Conversation Builder allows you to attach credentials to bot API integrations. W
 
     Go to Accounts -> Choose your organization
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/oauth2_image_0.png">
+    <!--<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/oauth2_image_0.png">-->
 
     Click on the 3 dots and choose Credentials
 

@@ -10,15 +10,17 @@ permalink: conversation-builder-conversation-builder-interactions.html
 indicator: both
 ---
 
-### Overview
-
-The User Interactions section of the [Interactions Toolbar](conversation-builder-conversation-builder-overview.html#the-interactions-toolbar) is made up of only one type of interaction, "User Says". This interaction is the textual prompt to which the automation responds, whether it is the first message which starts the Dialog or some sort of input during it. When you add a "User Says" interaction, you give an example of a question the user might ask at the start of a conversation.
-
-Instead of just looking for the specific phrase you originally defined (which would result in the automation not recognizing many of your user's inputs), you can direct the automation to look for a specific pattern (a method called [pattern matching](conversation-builder-conversation-builder-interaction-details.html#pattern-matching)) or to look for more broad and flexible [intents](conversation-builder-intent-builder-overview.html) in the user's input, by using our NLU engine.
-
-For more information on Pattern Matching, see the link above. For more information on setting up and using intents, see either [part 2 of the Getting Started tutorial](conversation-builder-getting-started-2-intents.html) or a more in-depth [breakdown of the Intent Builder](conversation-builder-intent-builder-overview.html).
-
 The Interactions Toolbar is made up of different types of interactions including the following:
+
+### User Says
+
+The User Says interaction in the [Interactions Toolbar](conversation-builder-conversation-builder-overview.html#the-interactions-toolbar) is how the automation matches user input and triggers [dialogs](conversation-builder-conversation-builder-dialogs.html).
+
+When you add a "User Says" interaction, you give an example of a question the user might ask at the start of a conversation.
+
+Instead of just looking for the specific phrase you originally defined (which would result in the automation not recognizing many of your users' inputs), you can direct the automation to look for a specific pattern (a method called [pattern matching](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching)) or to look for more broad and flexible [intents](conversation-builder-intent-builder-overview.html) in the user's input, by using our NLU engine.
+
+For more information on setting up and using intents, see either [part 2 of the Getting Started tutorial](conversation-builder-getting-started-2-intents.html) or a more in-depth [breakdown of the Intent Builder](conversation-builder-intent-builder-overview.html).
 
 ### Statements 
 

@@ -65,7 +65,7 @@ On the top-left of the screen, you will find the **Bot Menu** gear icon which in
 
 * **Automation Settings** - Includes settings that you selected during automation creation. Includes more advanced settings like public/private visibility, delete automation, etc.
 
-* **Enterprise Integrations** - Settings for connecting to LiveEngage.
+* **Enterprise Integrations** - Settings for connecting to LiveEngage. Includes settings for [feature flags](conversation-builder-conversation-enterprise-integrations.html#custom-configuration-flags).
 
 * **Automation Change History** - View all of the changes made to the automation by time/date. Useful when automations are managed by teams.
 
