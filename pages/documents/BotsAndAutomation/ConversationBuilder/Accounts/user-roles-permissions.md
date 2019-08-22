@@ -9,62 +9,69 @@ permalink: conversation-builder-accounts-user-role-permissions.html
 indicator: both
 ---
 
+### Super Admin
+
+A user should have this role if they own the entire brand's automation project.
+
+#### Included Permissions
+
+The Super Admin has the following permissions **in addition to all permissions that the [Admin](#admin) role has.**
+
+* Bot Builder (Read All Bots In All Accounts)
+* Bot Builder (Write All Bots In All Accounts)
+* Knowledge base (Read All KBs In All Accounts)
+* Knowledge base (Write All KBs In All Accounts)
+* Intent Builder (Read All Domains In All Accounts)
+* Intent Builder (Write All Domains in All Accounts)
+* Analytics (Read All Bots In All Accounts)
+* Accounts (Read All Accounts)
+* Accounts (Write All Accounts)
+* Operations (Read Own & Account Bot Agents)
+* Operations (Write Own & Account Bot Agents)
+* Operations (Read All Bot Agents In Account)
+* Operations (Write All Bot Agents In Account)
+* Operations (Read All Bot Agents In All Accounts)
+* Operations (Write All Bot Agents In All Accounts)
+* Operations (Read All Servers)
+* Operations (Write All Servers)
+* Template (Write & Read)
+
 ### Admin
 
-A user should have this role if they own the entire bot business project. All permissions are included.
+A user should have this role if they own a segment of the brand's automation project.
 
 #### Included Permissions
 
-* Create Bots
-* Edit Bot Logic and Bot settings
-* Export bots
-* Import bots
-* Create a new Release version for a bot
-* Accept a new Release version for a bot
-* Connect Bot with LiveEngage use Bot Agent User
-* Create NLU Domains
-* Edit NLU Domains
-* Create Intents
-* Edit Intents by adding Training Phrases
-* Create Entities
-* Edit Entities
-* Delete Entities
-* Create Knowledge Base
-* Edit Knowledge Base settings
-* Add Articles 
-* Edit / Delete Articles
-* Create new Users
-* Edit roles for each User
-* View Analytics
+* Bot Builder (Read Own & Account Bot)
+* Bot Builder (Write Own & Account Bot)
+* Bot Builder (Read All Bots In Account)
+* Bot Builder (Write All Bots In Account)
+* Knowledge base (Read Own & Account KBs)
+* Knowledge base (Write Own & Account KBs)
+* Knowledge base (Read All KBs In Account)
+* Knowledge base (Write All KBs In Account)
+* Intent Builder (Read Own & Account Domains)
+* Intent Builder (Write Own & Account Domains)
+* Intent Builder (Read All Domains In Account)
+* Intent Builder (Write All Domains in Account)
+* Analytics (Read Own & Account Bots)
+* Analytics (Read All Bots In Account)
+* Accounts (Read Own Accounts)
+* Accounts (Write Own Accounts)
 
-### Admin Read Only
+### Bot Builder
 
-A read only version of the [Admin](#admin) role. This role cannot create or edit data.
-
-### Conversation Builder
-
-A user should have this role if they are responsible for setting up or editing an automation.
+A user should have this role if they are responsible for creating or maintaining an automation.
 
 #### Included Permissions
 
-* Create Bots
-* Edit Bot Logic and Bot settings
-* Export bots
-* Import bots
-* Create a new Release version for a bot
-* Connect Bot with LiveEngage use Bot Agent User
-* Create NLU Domains
-* Edit NLU Domains
-* Create Intents
-* Edit Intents by adding Training Phrases
-* Create Entities
-* Edit Entities
-* Delete Entities
-* Create Knowledge Base
-* Edit Knowledge Base settings
-* Add Articles 
-* Edit / Delete Articles
-* View Analytics
+* Bot Builder (Read Own & Account Bot)
+* Bot Builder (Write Own & Account Bot)
+* Knowledge base (Read Own & Account KBs)
+* Knowledge base (Write Own & Account KBs)
+* Intent Builder (Read Own & Account Domains)
+* Intent Builder (Write Own & Account Domains)
+* Analytics (Read Own & Account Bots)
 
 ### Content User
 
@@ -72,27 +79,21 @@ A user should have this role if they are responsible for maintaining the busines
 
 #### Included Permissions
 
-* Create NLU Domains
-* Edit NLU Domains
-* Create Intents
-* Edit Intents by adding Training Phrases
-* Create Entities
-* Edit Entities
-* Delete Entities
-* Create Knowledge Base
-* Edit Knowledge Base settings
-* Add Articles 
-* Edit / Delete Articles
-* View Analytics
+* Bot Builder (Read Own & Account Bot)
+* Knowledge base (Read Own & Account KBs)
+* Knowledge base (Write Own & Account KBs)
+* Intent Builder (Read Own & Account Domains)
+* Intent Builder (Write Own & Account Domains)
+* Analytics (Read Own & Account Bots)
 
-### Operation
+### Operations
 
 A user should have this role if they are a system admin that is responsible for maintaining long running processes like bots.
 
 #### Included Permissions
 
-* Stop / Pause a connector
-* Start a Connector
+* Operations (Read Own & Account Bot Agents)
+* Operations (Write Own & Account Bot Agents)
 
 ### Business User
 
@@ -100,33 +101,52 @@ A user should have this role if they are a business analyst that is responsible 
 
 #### Included Permissions
 
-* View Analytics
+* Analytics (Read Own & Account Bots)
+
+### Template Manager
+
+A user should have this role if they want to create and maintain bot templates that are useful for their business domain.
+
+#### Included Permissions
+
+* Template (Write & Read)
 
 ### Role Permissions Comparison
 
-| Permission | Admin | Conversation Builder | Content User | Business User | Operation |
-|----|---------|-----------------|-----------------------|-------------|----------|
-| Create Bots                                    | Yes                                      | Yes                                      | No                                       | No              | No         |
-| Edit Bot Logic and Bot settings                | Yes                                      | Yes                                      | No                                       | No              | No         |
-| Export bots                                    | Yes                                      | Yes                                      | No                                       | No              | No         |
-| Import bots                                    | Yes                                      | Yes                                      | No                                       | No              | No         |
-| Create a new Release version for a bot         | Yes                                      | Yes                                      | No                                       | No              | No         |
-| Accept a new Release version for a bot         | Yes                                      | No                                       | No                                       | No              | No         |
-| Connect Bot with LiveEngage use Bot Agent User | Yes                                      | Yes                                      | No                                       | No              | No         |
-| Stop / Pause a connector                       | No                                       | No                                       | No                                       | No              | Yes        |
-| Start a Connector                              | No                                       | No                                       | No                                       | No              | Yes        |
-| Create NLU Domains                             | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Edit NLU Domains                               | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Create Intents                                 | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Edit Intents by adding Training Phrases        | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Delete Intents                                 | No / Only owner of the Domain can delete | No / Only owner of the Domain can delete | No / Only owner of the Domain can delete | No              | No         |
-| Create Entities                                | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Edit Entities                                  | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Delete Entities                                | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Create Knowledge Base                          | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Edit Knowledge Base settings                   | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Add Articles                                   | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Edit / Delete Articles                         | Yes                                      | Yes                                      | Yes                                      | No              | No         |
-| Create new Users                               | Yes                                      | No                                       | No                                       | No              | No         |
-| Edit roles for each User                       | Yes                                      | No                                       | No                                       | No              | No         |
-| View Analytics                                 | Yes                                      | Yes                                      | Yes                                      | Yes             | No         |
+| Policy                                               | Content User | Bot Builder | Business User  | Operations | Admin | Super Admin | Template Manager |
+|------------------------------------------------------|--------------|-------------|----------------|------------|-------|-------------|------------------|
+| Bot Builder \(Read Own & Account Bot\)               | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
+| Bot Builder \(Write Own & Account Bot\)              | No           | Yes         | No             | No         | Yes   | Yes         | No               |
+| Bot Builder \(Read All Bots In Account\)             | No           | No          | No             | No         | Yes   | Yes         | No               |
+| Bot Builder \(Write All Bots In Account\)            | No           | No          | No             | No         | Yes   | Yes         | No               |
+| Bot Builder \(Read All Bots In All Accounts\)        | No           | No          | No             | No         | No    | Yes         | No               |
+| Bot Builder \(Write All Bots In All Accounts\)       | No           | No          | No             | No         | No    | Yes         | No               |
+| Knowledge base \(Read Own & Account KBs\)            | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
+| Knowledge base \(Write Own & Account KBs\)           | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
+| Knowledge base \(Read All KBs In Account\)           | No           | No          | No             | No         | Yes   | Yes         | No               |
+| Knowledge base \(Write All KBs In Account\)          | No           | No          | No             | No         | Yes   | Yes         | No               |
+| Knowledge base \(Read All KBs In All Accounts\)      | No           | No          | No             | No         | No    | Yes         | No               |
+| Knowledge base \(Write All KBs In All Accounts\)     | No           | No          | No             | No         | No    | Yes         | No               |
+| Intent Builder \(Read Own & Account Domains\)        | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
+| Intent Builder \(Write Own & Account Domains\)       | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
+| Intent Builder \(Read All Domains In Account\)       | No           | No          | No             | No         | Yes   | Yes         | No               |
+| Intent Builder \(Write All Domains in Account\)      | No           | No          | No             | No         | Yes   | Yes         | No               |
+| Intent Builder \(Read All Domains In All Accounts\)  | No           | No          | No             | No         | No    | Yes         | No               |
+| Intent Builder \(Write All Domains in All Accounts\) | No           | No          | No             | No         | No    | Yes         | No               |
+| Analytics \(Read Own & Account Bots\)                | Yes          | Yes         | Yes            | No         | Yes   | Yes         | No               |
+| Analytics \(Read All Bots In Account\)               | No           | No          | No             | No         | Yes   | Yes         | No               |
+| Analytics \(Read All Bots In All Accounts\)          | No           | No          | No             | No         | No    | Yes         | No               |
+| Accounts \(Read Own Accounts\)                       | No           | No          | No             | No         | Yes   | Yes         | No               |
+| Accounts \(Write Own Accounts\)                      | No           | No          | No             | No         | Yes   | Yes         | No               |
+| Accounts \(Read All Accounts\)                       | No           | No          | No             | No         | No    | Yes         | No               |
+| Accounts \(Write All Accounts\)                      | No           | No          | No             | No         | No    | Yes         | No               |
+| Operations \(Read Own & Account Bot Agents\)         | No           | No          | No             | Yes        | No    | Yes         | No               |
+| Operations \(Write Own & Account Bot Agents\)        | No           | No          | No             | Yes        | No    | Yes         | No               |
+| Operations \(Read All Bot Agents In Account\)        | No           | No          | No             | No         | No    | Yes         | No               |
+| Operations \(Write All Bot Agents In Account\)       | No           | No          | No             | No         | No    | Yes         | No               |
+| Operations \(Read All Bot Agents In All Accounts\)   | No           | No          | No             | No         | No    | Yes         | No               |
+| Operations \(Write All Bot Agents In All Accounts\)  | No           | No          | No             | No         | No    | Yes         | No               |
+| Operations \(Read All Servers\)                      | No           | No          | No             | No         | No    | Yes         | No               |
+| Operations \(Write All Servers\)                     | No           | No          | No             | No         | No    | Yes         | No               |
+| Download Data \- Bulk                                | No           | No          | No             | No         | No    | No          | No               |
+| Template \(Write & Read\)                            | No           | No          | No             | No         | No    | Yes         | Yes              |

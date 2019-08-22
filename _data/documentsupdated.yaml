@@ -155,9 +155,9 @@
           - subpagename: NLU Engines
       - pagename: Knowledge Base
       - pagename: Analytics
-      #- pagename: Accounts
-        #subpages:
-          #- subpagename: User Role Permissions
+      - pagename: Accounts
+        subpages:
+          - subpagename: User Role Permissions
       #- pagename: Operations
       - pagename: Best Practices
         subpages:
