@@ -264,4 +264,4 @@ Conversation Builder allows you to attach credentials to bot API integrations. W
 
 ### Display integration data in an interaction
 
-For information on how to display the data that's retrieved by an integration call (and stored in the custom data fields) in an interaction, see [here](conversation-builder-conversation-builder-interactions.html).
+For information on how to take the data that's retrieved by an integration call and stored in custom data fields and display it in an interaction, see [here](conversation-builder-conversation-builder-interactions.html).
