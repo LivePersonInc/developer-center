@@ -41,7 +41,7 @@ Before you add a FaaS integration in Conversation Builder, you must create and d
     - **Version Number**:
     - **FaaS User ID**:
     - **Function Headers**:
-    - **Function Payload**:
+    - **Function Payload**: Enter the payload to pass into the function.
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result into JSON format, so you can use the information in the automation's dialogs. For more on this, see [Transform an API result](#transform-an-api-result) farther below.
     - **Custom Data Fields**: 
 3. Click **Save**.
