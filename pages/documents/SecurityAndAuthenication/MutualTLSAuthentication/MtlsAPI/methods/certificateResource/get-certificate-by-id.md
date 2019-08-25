@@ -9,7 +9,7 @@ documentname: MTLS API
 subfoldername: Methods
 ---
 
-This API gets certificate by account id.
+This API gets certificate by account id and certificate id.
 
 ### Request
 
