@@ -30,7 +30,7 @@ This API updates certificate for specific account id.
 	"name":"myCert1",
 	"p12":[98,121,116,101,115],
 	"password":"paw1",
-  "id":2628739923
+        "id":2628739923
 }]
 ```
 
@@ -67,7 +67,7 @@ for example:
          "displayName":"{certificateName}",
          "siteId":"accountId",
          "status":"Available",
-	       "expirationDate": null
+	 "expirationDate": null
       }
    ],
    "failedSaveToVaultCertificates":[  
