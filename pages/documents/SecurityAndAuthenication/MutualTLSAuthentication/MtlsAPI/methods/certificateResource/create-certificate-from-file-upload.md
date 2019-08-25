@@ -81,6 +81,6 @@ for example:
 | displayName    | A certificate's display name.  | string | Required | |
 | siteId | A site ID of the certificate. | string | Required | |
 | status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both Hashicorp Vault and DB and if isn't expired)|
-| expirationDate | certificate's expiration date. | string | Required | |
+| expirationDate | certificate's expiration date. | string | Not Required | |
 
 
