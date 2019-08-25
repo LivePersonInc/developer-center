@@ -68,7 +68,7 @@ for example:
 }
 
 
-**Entity Structure:
+**Entity Structure:**
 
 | Attribute | Description  | Type/Value | Required | Notes |
 | :------   | :--------    | :-------- | :--- | :--- |
