@@ -53,22 +53,24 @@ This API creates certificate by uploading file for specific account id.
 **Response Body**
 
 for example:
-{
-    
-    "id": 3515906310,
-    
-    "deleted": false,
-    
-    "name": "Cert1",
-    
-    "displayName": "Cert1",
-    
-    "siteId": "le1606809",
-    
-    "status": "UnAvailable",
-    
-    "expirationDate": null
+```
+{  
+   "successfulySavedCertificates":[  
+      {  
+         "id":2628739923,
+         "deleted":false,
+         "name":"{certificateName}",
+         "displayName":"{certificateName}",
+         "siteId":"accountId",
+         "status":"Available",
+	       "expirationDate": null
+      }
+   ],
+   "failedSaveToVaultCertificates":[  
+
+   ]
 }
+```
 
 
 **Entity Structure:**
