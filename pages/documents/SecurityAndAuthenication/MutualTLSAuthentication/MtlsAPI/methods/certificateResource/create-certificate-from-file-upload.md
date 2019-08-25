@@ -28,7 +28,7 @@ This API creates certificate by uploading file for specific account id.
 
 **Request Body**
 
-see following print screen.
+see following print screen 1.
 
 **Path Parameters**
 
@@ -63,7 +63,7 @@ for example:
          "displayName":"{certificateName}",
          "siteId":"accountId",
          "status":"Available",
-	       "expirationDate": null
+	 "expirationDate": null
       }
    ],
    "failedSaveToVaultCertificates":[  
