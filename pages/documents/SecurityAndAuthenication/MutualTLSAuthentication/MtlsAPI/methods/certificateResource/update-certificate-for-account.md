@@ -25,7 +25,14 @@ This API updates certificate for specific account id.
  |Authorization|    Contains token string to allow request authentication and authorization.  |
 
 **Request Body**
-
+```
+[{
+	"name":"myCert1",
+	"p12":[98,121,116,101,115],
+	"password":"paw1",
+  "id":2628739923
+}]
+```
 
 **Path Parameters**
 
@@ -50,22 +57,24 @@ This API updates certificate for specific account id.
 **Response Body**
 
 for example:
-{
-    
-    "id": 3515906310,
-    
-    "deleted": false,
-    
-    "name": "Cert1",
-    
-    "displayName": "Cert1",
-    
-    "siteId": "le1606809",
-    
-    "status": "UnAvailable",
-    
-    "expirationDate": null
+```
+{  
+   "successfulySavedCertificates":[  
+      {  
+         "id":2628739923,
+         "deleted":false,
+         "name":"{certificateName}",
+         "displayName":"{certificateName}",
+         "siteId":"accountId",
+         "status":"Available",
+	       "expirationDate": null
+      }
+   ],
+   "failedSaveToVaultCertificates":[  
+
+   ]
 }
+```
 
 
 **Entity Structure:**
