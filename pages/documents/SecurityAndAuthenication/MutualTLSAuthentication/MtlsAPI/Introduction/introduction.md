@@ -16,13 +16,13 @@ MTLS - Mutual Transport Layer Security (Mutual TLS), is a new solution from Live
 MTLS  - While TLS means that only one side needs to authenticate the connection, with MTLS, the more widespread and common for the business to business solution, both parties need to authenticate it. This solution is safer and becoming a standard, especially among the banking industry. The process is: the client authenticates the server (TLS wise) then server authenticates back to the client. Traffic will flow only after mutual (back and forth) authentication success. 
 
 
-What is Hashicorp vault?
+What is Hashicorp vault
 
 HashiCorp provides a suite of open-source tools intended to support development and deployment of large-scale service-oriented software installations. Vault, first released on April 2015, provides secrets management, identity-based access, and encrypting application data for auditing of secrets for applications, systems, users.
 
 
 
-Use cases - Why should I use this?
+Use cases - Why should I use this
 
 As a bank, I would like to use MTLS in order for me to be able to be aligned with open banking standards and because I would like my connection to be more secure.
 
@@ -37,7 +37,7 @@ Once the certificate is ready, support needs to upload the new certificate, map 
 
 Limitations
 
-Technical limitations:
+A. Technical limitations:
 
 P12 (private + public) must be Java compliant, created key must use suppoted algorithm and key strength, the p12 tester resource exist to make sure that created P12 is fully supported.
 
