@@ -9,7 +9,7 @@ documentname: MTLS API
 subfoldername: Methods
 ---
 
-This API checks for mapping configuration existence for specific tupple: accountId, serviceName and url.
+This API checks for mapping configuration existence for specific tupple: serviceName, accountId and url.
 
 
 ### Request
@@ -28,16 +28,12 @@ This API checks for mapping configuration existence for specific tupple: account
 **Request Body**
 
 Contains list of CertificateMappingParamters objects:
-
-[
-
- {"accountId":"test1","serviceName":"test1","url":"https://test.com"},
- {"accountId":"test2","serviceName":"test1","url":"https://test.com"},
- {"accountId":"test3","serviceName":"test1","url":"https://test.com"},
- {"accountId":"test4","serviceName":"test1","url":"https://test.com"}
-
+```
+[ 
+	{"serviceName":"IDP","accountId":"52653865","url":"https://lp-idp-qa.dev.lprnd.net/mock/auth/token?v=2.0"}, 
+	{"serviceName":"TEST_SERVICE","accountId":"52653865","url":"https://lp-mtls-qa.dev.lprnd.net/test"}
 ]
-
+```
 
 ### Response
 
@@ -46,7 +42,6 @@ Contains list of CertificateMappingParamters objects:
 | Code | Description           |
 |------|-----------------------|
 | 200  | OK                    |
-| 201  | Created               |
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
@@ -55,14 +50,12 @@ Contains list of CertificateMappingParamters objects:
 **Response Headers**
 
 **Response Body**
-
+```
 {
-    "CertificateMappingParamters{serviceName='test1', accountId='test515', url='https://test.com'}": false,
-    "CertificateMappingParamters{serviceName='test1', accountId='test7', url='https://test.com'}": false,
-    "CertificateMappingParamters{serviceName='test1', accountId='test527', url='https://test.com'}": false,
-    "CertificateMappingParamters{serviceName='test1', accountId='test511', url='https://test.com'}": true
+ "CertificateMappingParamters{serviceName='TEST_SERVICE', accountId='52653865', url='https://lp-mtls-qa.dev.lprnd.net/test'}": true,
+"CertificateMappingParamters{serviceName='IDP', accountId='52653865', url='https://lp-idp-qa.dev.lprnd.net/mock/auth/token'}": false
 }
-
+```
 
 **Entity Structure:**
 
