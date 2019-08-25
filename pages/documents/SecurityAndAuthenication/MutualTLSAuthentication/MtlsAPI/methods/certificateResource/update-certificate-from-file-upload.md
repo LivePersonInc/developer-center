@@ -42,7 +42,6 @@ This API updates certificate by uploading file for specific account id.
 | Code | Description           |
 |------|-----------------------|
 | 200  | OK                    |
-| 201  | Created               |
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
