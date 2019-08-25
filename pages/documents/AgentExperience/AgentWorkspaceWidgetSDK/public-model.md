@@ -36,13 +36,11 @@ Structure example:
         "agentName": "",
         "agentGroupName": "",
         "agentId": 1,
-        "agentNickname": ""
     },
     "agentInfo": {
         "accountId": "",
         "agentName": "",
         "agentId": 1,
-        "agentNickname": "",
         "agentEmail": "",
         "maxChats": 1
     },
@@ -155,12 +153,10 @@ Structure example:
 | chattingAgentInfo.agentName                 | The name of the agent                                                                                | The name of the agent                                                                    | string  |                                                            |
 | chattingAgentInfo.agentGroupName            | The name of the agent group                                                                          | The name of the agent group                                                              | string  |                                                            |
 | chattingAgentInfo.agentId                   | The ID of the agent                                                                                  | The ID of the agent                                                                      | number  |                                                            |
-| chattingAgentInfo.agentNickname             | The nickname of the agent                                                                            | The nickname of the agent                                                                | string  |                                                            |
 | **agentInfo**                               | Information about the agent which is currently logged in (may not be the chatting agent)             | Information about the agent which is currently logged in (may not be the assigned agent) | object  |                                                            |
 | agentInfo.accountId                         | The account ID                                                                                       | The account ID                                                                           | string  |                                                            |
 | agentInfo.agentName                         | The name of the agent                                                                                | The name of the agent                                                                    | string  |                                                            |
 | agentInfo.agentId                           | The ID of the agent                                                                                  | The ID of the agent                                                                      | number  |                                                            |
-| agentInfo.agentNickname                     | The nickname of the agent                                                                            | The nickname of the agent                                                                | string  |                                                            |
 | agentInfo.agentEmail                        | The email of the agent                                                                               | The email of the agent                                                                   | string  |                                                            |
 | agentInfo.maxChats                          | The maximum number of chats the agent can be in                                                      | The maximum number of (real-time) chats the agent can be in                              | number  |                                                            |
 | chatTranscript.lines                        | Array of chat lines                                                                                  | Array of chat lines                                                                      | array   |                                                            |
@@ -227,8 +223,8 @@ Structure example:
 | SDE.serviceActivity                         | Array of service activity information                                                                | Array of service activity information                                                    | array   |                                                            |
 | SDE.error                                   | Array of visitor errors                                                                              | Array of visitor errors                                                                  | array   |                                                            |
 | **authenticatedData**                       | Object containing SDEs (Engagement Attributes) received from authenticated visitors                  | Object containing SDEs (Engagement Attributes) received from authenticated consumers     | object  | deprecated - use 'claimsAndAuthType' instead             |
-| authenticatedData.customerDetails           | customer details                                                                                     | customer details                                                                         | object  | deprecated - use 'claimsAndAuthType.claims' instead                                            | 
-| authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  | deprecated - use 'claimsAndAuthType.claims' instead                                            | 
+| authenticatedData.customerDetails           | customer details                                                                                     | customer details                                                                         | object  | deprecated - use 'claimsAndAuthType.claims' instead                                            |
+| authenticatedData.personalInfo              | personal information                                                                                 | personal information                                                                     | object  | deprecated - use 'claimsAndAuthType.claims' instead                                            |
 | **claimsAndAuthType**                       | Object containing SDEs passed by the IDP on the JWT and authentication type                         | Object containing SDEs passed by the IDP on the JWT and authentication type              | object  |                                                              |
 | claimsAndAuthType.claims                    | Object containing SDEs passed by the IDP on the JWT                                                 | Object containing SDEs passed by the IDP on the JWT                                      | object  | deprecates the "authenticatedData" key                |
 | claimsAndAuthType.acr                       | The authentication type ("0" - unauthenticated, "loa1" - authenticated)                             | the authentication type ("0" - unauthenticated, "loa1" - authenticated)                  | object  |                                                              |
@@ -339,7 +335,7 @@ Structure example:
 ```json
 {
     "encrypted"         : true,
-    "status"            : true, 
+    "status"            : true,
     "token"             : "token encrypted string",
     "requestIdentifier" : "Request Identifier Unique Key",
     "errors"            : [{
