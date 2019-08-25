@@ -25,7 +25,7 @@ This API creates certificate for specific account id.
  |Authorization|    Contains token string to allow request authentication and authorization.  |
 
 **Request Body**
-
+```
 [
 {
 	"name":"myCert1",
@@ -33,6 +33,7 @@ This API creates certificate for specific account id.
 	"password":"paw1"
 }
 ]
+```
 
 **Path Parameters**
 
@@ -59,6 +60,7 @@ This API creates certificate for specific account id.
 
 for example:
     
+```
 {  
    "successfulySavedCertificates":[  
       {  
@@ -74,6 +76,7 @@ for example:
 
    ]
 }
+```
 
 
 
