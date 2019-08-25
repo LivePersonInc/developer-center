@@ -28,7 +28,7 @@ This API updates certificate by uploading file for specific account id.
 
 **Request Body**
 
-see print screen.
+see print screen 2.
 
 **Path Parameters**
 
