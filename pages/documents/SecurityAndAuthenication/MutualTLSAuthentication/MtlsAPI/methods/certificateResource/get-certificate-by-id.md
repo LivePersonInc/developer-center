@@ -40,6 +40,7 @@ This API gets certificate by account id.
 
 | Code | Description           |
 |------|-----------------------|
+| 200  | OK                    |
 | 201  | Created               |
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
