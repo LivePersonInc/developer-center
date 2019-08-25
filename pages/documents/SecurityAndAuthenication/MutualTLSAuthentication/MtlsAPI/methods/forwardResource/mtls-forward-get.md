@@ -9,8 +9,7 @@ documentname: MTLS API
 subfoldername: Methods
 ---
 
-This API forward GET requests with required certificate.
-This API wraps and forwards any request according to specified parameters in the request headers with the requried certificate if the certificate exists (if not - it forwards the non-mtls request to the required endpont).
+This API forward GET requests with required certificate if the certificate exists (if not - it forwards the non-mtls request to the required endpont).
 
 
 ### Request
