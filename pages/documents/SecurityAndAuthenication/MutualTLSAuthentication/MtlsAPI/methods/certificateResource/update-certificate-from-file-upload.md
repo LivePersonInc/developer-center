@@ -24,7 +24,7 @@ This API updates certificate by uploading file for specific account id.
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
  |file|    Contains p12 file in multipart/form-data key value field. |
- |body|    Contains the certificate DTO in multipart/form-data key value field.  |
+ |certificate|    Contains the certificate DTO in multipart/form-data key value field.  |
 
 **Request Body**
 
