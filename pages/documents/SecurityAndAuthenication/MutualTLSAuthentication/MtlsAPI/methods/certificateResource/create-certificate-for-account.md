@@ -1,7 +1,7 @@
 ---
 pagename: Create certificate for account
 redirect_from:
-  - 
+  - xxx.html
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
