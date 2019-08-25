@@ -65,7 +65,7 @@ for example:
          "deleted":false,
          "name":"{certificateName}",
          "displayName":"{certificateName}",
-         "siteId":"accountId",
+         "siteId":"{accountId}",
          "status":"Available",
 	 "expirationDate": null
       }
