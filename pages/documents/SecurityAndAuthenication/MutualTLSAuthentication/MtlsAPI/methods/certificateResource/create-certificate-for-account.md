@@ -26,6 +26,13 @@ This API creates certificate for specific account id.
 
 **Request Body**
 
+[
+{
+	"name":"myCert1",
+	"p12":[98,121,116,101,115, ...],
+	"password":"paw1"
+}
+]
 
 **Path Parameters**
 
@@ -51,22 +58,23 @@ This API creates certificate for specific account id.
 **Response Body**
 
 for example:
-{
     
-    "id": 3515906310,
-    
-    "deleted": false,
-    
-    "name": "Cert1",
-    
-    "displayName": "Cert1",
-    
-    "siteId": "le1606809",
-    
-    "status": "UnAvailable",
-    
-    "expirationDate": null
+{  
+   "successfulySavedCertificates":[  
+      {  
+         "id":2628739923,
+         "deleted":false,
+         "name":"{certificateName}",
+         "displayName":"{certificateName}",
+         "siteId":"accountId",
+         "status":"Available"
+      }
+   ],
+   "failedSaveToVaultCertificates":[  
+
+   ]
 }
+
 
 
 **Entity Structure:**
@@ -79,5 +87,3 @@ for example:
 | displayName    | A certificate's display name.  | string | Required | |
 | siteId | A site ID of the certificate. | string | Required | |
 | status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both Hashicorp Vault and DB and if isn't expired)|
-| expirationDate | certificate's expiration date. | string | Required | |
-
