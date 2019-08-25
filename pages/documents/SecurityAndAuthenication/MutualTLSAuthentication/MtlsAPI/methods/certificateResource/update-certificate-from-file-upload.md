@@ -15,7 +15,7 @@ This API updates certificate by uploading file for specific account id.
 
  |Method|      URL|  
  |:--------  |:---  |
- |POST|  https://[{domain}]/mtls/account/{accountId}/certificates/by-file |
+ |PUT|  https://[{domain}]/mtls/account/{accountId}/certificates/by-file |
 
 
 **Request Headers**
