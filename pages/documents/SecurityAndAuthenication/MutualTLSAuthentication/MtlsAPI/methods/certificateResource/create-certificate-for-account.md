@@ -9,7 +9,7 @@ documentname: MTLS API
 subfoldername: Methods
 ---
 
-This API creates certificate for specific account Id.
+This API creates certificate for specific account id.
 
 ### Request
 
@@ -68,5 +68,15 @@ for example:
 }
 
 
-please click Appendix for entity structure.
+**Entity Structure:
+
+| Attribute | Description  | Type/Value | Required | Notes |
+| :------   | :--------    | :-------- | :--- | :--- |
+| id | A certificate's unique object ID in account config table. | long number | Read only | |
+| deleted   | Indicates whether the certificate is deleted or not. | Boolean | Read only | |
+| name | A certificate's unique name. | unique string | Required | |
+| displayName    | A certificate's display name.  | string | Required | |
+| siteId | A site ID of the certificate. | string | Required | |
+| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both Hashicorp Vault and DB and if isn't expired)|
+| expirationDate | certificate's expiration date. | string | Required | |
 
