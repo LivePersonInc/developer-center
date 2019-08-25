@@ -51,6 +51,7 @@ This API gets all certificates by account id.
 
 for example:
 ```
+[
 {
     
     "id": 3515906310,
@@ -67,6 +68,7 @@ for example:
     
     "expirationDate": null
 }
+]
 ```
 
 **Entity Structure:**
