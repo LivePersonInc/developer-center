@@ -42,7 +42,6 @@ see following print screen.
 
 | Code | Description           |
 |------|-----------------------|
-| 200  | OK                    |
 | 201  | Created               |
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
