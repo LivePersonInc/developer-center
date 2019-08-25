@@ -52,6 +52,7 @@ This API gets certificate by account id.
 **Response Body**
 
 for example:
+```
 {
     
     "id": 3515906310,
@@ -68,7 +69,7 @@ for example:
     
     "expirationDate": null
 }
-
+```
 
 **Entity Structure:**
 
