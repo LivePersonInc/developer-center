@@ -13,6 +13,7 @@
     - pagename: Domain API
     - pagename: Engagement Attributes
     - pagename: Report Builder Data Metrics
+    - pagename: Retry Policy Recommendations
 
 - categoryname: Agent Experience
   image: agent-experience-new
