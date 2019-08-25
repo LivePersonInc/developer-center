@@ -15,7 +15,7 @@ This API updates certificate for specific account id.
 
  |Method|      URL|  
  |:--------  |:---  |
- |POST|  https://[{domain}]/mtls/account/{accountId}/certificates |
+ |PUT|  https://[{domain}]/mtls/account/{accountId}/certificates |
 
 
 **Request Headers**
