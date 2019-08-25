@@ -30,7 +30,7 @@ This API checks for mapping configuration existence for specific tupple: service
 Contains list of CertificateMappingParamters objects:
 ```
 [ 
-	{"serviceName":"IDP","accountId":"52653865","url":"https://lp-idp-qa.dev.lprnd.net/mock/auth/token?v=2.0"}, 
+	{"serviceName":"IDP","accountId":"52653865","url":"https://lp-idp-qa.dev.lprnd.net/mock/auth/token"}, 
 	{"serviceName":"TEST_SERVICE","accountId":"52653865","url":"https://lp-mtls-qa.dev.lprnd.net/test"}
 ]
 ```
