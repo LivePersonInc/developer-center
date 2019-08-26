@@ -29,9 +29,11 @@ This API creates a certificate by uploading a file, for a specific account ID.
 form-data body
 
 KEY: file  (File field type)
+
 VALUE: select p12 file
 
 KEY: certificate  (Text field type)
+
 VALUE: {"name":"myCertificate", "password":"1234"}
 
 
