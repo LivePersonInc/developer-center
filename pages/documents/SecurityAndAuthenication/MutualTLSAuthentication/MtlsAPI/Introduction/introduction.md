@@ -32,6 +32,9 @@ In order for MTLS to work, you'll need to generate a specific MTLS certificate. 
 
 Once the certificate is ready, our support team needs to upload the new certificate, map the service that will support the MTLS and tie it to a specific URL. The upcoming future solution will allow our customers to self-serve the entire process, including uploading the new certificate to store it on HashiCorp vault.
 
+For the entire onboarding process please click here:
+https://lpgithub.dev.lprnd.net/vault/lp-mtls-app/wiki/MTLS-Onboarding-walkthrough
+
 ### Limitations
 
 #### Technical limitations:
