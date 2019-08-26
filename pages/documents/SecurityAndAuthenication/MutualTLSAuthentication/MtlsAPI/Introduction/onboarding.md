@@ -1,18 +1,18 @@
 ## General explanation
 The following is a step by step walkthrough on how to use lp-MTLS service
 
-## 1)Certificate creation
+## 1. Certificate creation
 First thing needed to start the onboarding process is a p12 file (and its corresponding password):
 [P12 creation](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/Introduction/p12-creation.md)
 
-## 2)Run the created certificate through the tester 
+## 2. Run the created certificate through the tester 
 Wiki: [Tester API wiki](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/methods/p12TesterResource/mtls-check-p12.md)
 
 What the Api does is to submit a request to the MTLS protected endpoint (at this stage without storing certificate in Hashicorp Vault)
 
 **This is an important step, this is actually a test that Java API supports and is able to process the p12 file and forward the request**
 
-## 3)Upload certificate 
+## 3. Upload certificate 
 
 **Will be available through UI in phase 3**
 
@@ -24,7 +24,7 @@ The Api creates both the MySql entities (non secure parts) and the Hashicorp Vau
 
 The Id returned is needed to further configuration.
 
-## 4)Create MTLS Mapping object
+## 4. Create MTLS Mapping object
 
 **Will be available through UI in phase 3**
 
@@ -60,7 +60,7 @@ Example body (Certificate array):
 ]
 ```
 
-## 5) Use the runtime
+## 5. Use the runtime
 
 If all successful can now start using the runtime: [Mapping Resource](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/methods/mappingResource/mtls-check-multiple-mapping.md) , [Forward resource](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/tree/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/methods/forwardResource)
 
