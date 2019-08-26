@@ -24,7 +24,11 @@ Functions (or `lambdas`) are code snippets that accomplish certain tasks. A deve
 
 ### Invocation
 
-Functions are triggered by services that have integrations with the Functions platform. Depending on the type of function, different triggers will be used. These triggers can be an internal LivePerson event, for example when a new conversation is started or a CSAT Post Survey is completed. As part of the invocation, the integrated invokers can pass a payload into the function. This payload is specific to the triggered event. This means that depending on the event, the function will have different data available as an input.
+Functions are triggered by services that have integrations with the Functions platform. Depending on the type of function, different triggers will be used. These triggers can be an internal LivePerson event, for example, when a new conversation is started or a CSAT Post Survey is completed.
+
+In addition, users who are tasked with creating bots (automations) in Conversation Builder can easily integrate function calls within dialog flows, so functions can be invoked by bots too. Adding this kind of [integration interaction](conversation-builder-conversation-builder-interactions.html#integrations) to a dialog works just like adding any other type of integration interaction. See [Add a FaaS integration](conversation-builder-conversation-builder-integrations.html#add-a-faas-integration) for information on how to make a function (FaaS) integration available for use in a bot; this is a more technical task.
+
+As part of the invocation, the invoker can pass a payload into the function. This payload is specific to the triggered event. This means that, depending on the event, the function will have different data available as an input.
 
 ### Response / Action
 

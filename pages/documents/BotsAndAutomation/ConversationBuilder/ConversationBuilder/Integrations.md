@@ -19,7 +19,7 @@ Want some practice with integrations? [Tutorial #3](conversation-builder-getting
 ### Integration types
 An integration can be one of the following types:
 
-- **API**: Use this type to invoke an API that performs some action. You might want to fetch data from a Customer Relationship Management (CRM) system or Content Management System (CMS). Or, you might want to query a brand internal API to get information needed to answer a question or to look up a customer's history.
+- **API**: Use this type to invoke an API that performs some action. For example, you might want to fetch data from a Customer Relationship Management (CRM) system or Content Management System (CMS). Or, you might want to query a brand internal API to get information needed to answer a question or to look up a customer's history.
 - **Email**: Use this type to send an email.
 - **Knowledge Base**: Use this type to search a knowledge base for articles.
 - **LivePerson Agent Escalation**: Use this type to transfer the conversation to another skill.
@@ -33,14 +33,14 @@ Before you add a FaaS integration in Conversation Builder, you must create and d
 
 1. Open the automation, and click **Integrations** in the upper-left corner.
 2. Configure the integration settings:
-    - **Integration Name**: 
-    - **Response Data Variable Name**: 
+    - **Integration Name**: Enter the name of integration.
+    - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **FaaS**.
-    - **Credential**: 
-    - **Function**:
-    - **Version Number**:
-    - **FaaS User ID**:
-    - **Function Headers**:
+    - **Credential**: (Optional) If required, select the credential to be used to authorize the API call. You can select from all credentials added under your LivePerson account.
+    - **Function**: Select the function (`lambda`) that will be invoked via this integration. You can select from all functions added under your LivePerson account.
+    - **Version Number**: Deprecated. This field isn't used.
+    - **FaaS User ID**: Enter your user ID for the [LivePerson Functions](liveperson-functions-overview.html) UI.
+    - **Function Headers**: Add the necessary data in key/value pairs to pass into the request via the header.
     - **Function Payload**: Enter the payload to pass into the function.
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result into JSON format, so you can use the information in the automation's dialogs. For more on this, see [Transform an API result](#transform-an-api-result) farther below.
     - **Custom Data Fields**: 

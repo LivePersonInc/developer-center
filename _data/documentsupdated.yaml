@@ -543,6 +543,7 @@
       - pagename: Monitoring
         subpages:
           - subpagename: Logs
+      - pagename: Bot Invocations
       - pagename: Scheduled Invocations
       - pagename: External Invocations
         subpages:
