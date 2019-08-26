@@ -30,9 +30,11 @@ This API updates a certificate by uploading a file for specific account ID.
 form-data body
 
 KEY: file  (File field type)
+
 VALUE: select p12 file
 
 KEY: certificate  (Text field type)
+
 VALUE: {"name":"myCertificate", "password":"1234", "id":937706832}
 
 **Path Parameters**
