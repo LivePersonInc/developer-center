@@ -37,7 +37,7 @@ Before you add a FaaS integration in Conversation Builder, you must create and d
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **FaaS**.
     - **Credential**: (Optional) If required, select the credential to be used to authorize the API call. You can select from all credentials added under your LivePerson account.
-    - **Function**: Select the function (`lambda`) that will be invoked via this integration. You can select from all functions added under your LivePerson account.
+    - **Function**: Select the function (`lambda`) to invoke via this integration. You can select from all functions added under your LivePerson account.
     - **Version Number**: Deprecated. This field isn't used.
     - **FaaS User ID**: Enter your user ID for the [LivePerson Functions](liveperson-functions-overview.html) UI.
     - **Function Headers**: Add the necessary data in key/value pairs to pass into the request via the header.
