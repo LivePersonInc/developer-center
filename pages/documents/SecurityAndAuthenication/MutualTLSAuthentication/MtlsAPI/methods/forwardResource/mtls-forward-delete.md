@@ -1,15 +1,14 @@
 ---
-pagename: MTLS forawrd delete request
-redirect_from:
-  - xxx.html
+pagename: Forward delete request
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
+permalink: mtls-methods-forward-delete-request.html
 ---
 
-This API forward DELETE requests with required certificate if the certificate exists (if not - it forwards the non-mtls request to the required endpont).
+This API forwards a DELETE request with the required certificate if the certificate exists (if not - it forwards the non-mtls request to the required endpoint).
 
 
 ### Request
@@ -26,7 +25,7 @@ This API forward DELETE requests with required certificate if the certificate ex
  |Authorization|    Contains token string to allow request authentication and authorization.|
  |LP-service-name|    Contains the service name which has the certificate in Hashicorp-Vault. Not Required.  |
  |LP-forward-url|    Contains the desired endpoint url of the client.  |
- |LP-authorization-override|    Contains the authorizaion for the desired endpoint url of the client. Not Required. |
+ |LP-authorization-override|    Contains the authorization for the desired endpoint url of the client. Not Required. |
 
 **Request Body**
 
@@ -40,7 +39,7 @@ same body as the client sends to the original endpoint.
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -55,6 +54,3 @@ same body as the client sends to the original endpoint.
 **Response Body**
 
 same body as the server responses.
-
-
-

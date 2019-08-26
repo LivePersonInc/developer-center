@@ -1,15 +1,14 @@
 ---
-pagename: MTLS check mappings
-redirect_from:
-  - xxx.html
+pagename: Check mapping configuration
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
+permalink: mtls-methods-check-mapping-configuration.html
 ---
 
-This API checks for mapping configuration existence for specific tupple: serviceName, accountId and url.
+This method checks for mapping configuration existence for a specific tuple: serviceName, accountId and url.
 
 
 ### Request
@@ -27,17 +26,18 @@ This API checks for mapping configuration existence for specific tupple: service
 
 **Request Body**
 
-Contains list of CertificateMappingParamters objects:
-```
-[ 
-   {"serviceName":"IDP","accountId":"52653865","url":"https://lp-idp-qa.dev.lprnd.net/mock/auth/token"}, 
+Contains list of `CertificateMappingParamters` objects:
+
+```JSON
+[
+   {"serviceName":"IDP","accountId":"52653865","url":"https://lp-idp-qa.dev.lprnd.net/mock/auth/token"},
    {"serviceName":"TEST_SERVICE","accountId":"52653865","url":"https://lp-mtls-qa.dev.lprnd.net/test"}
 ]
 ```
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -50,6 +50,7 @@ Contains list of CertificateMappingParamters objects:
 **Response Headers**
 
 **Response Body**
+
 ```
 {
  "CertificateMappingParamters{serviceName='TEST_SERVICE', accountId='52653865', url='https://lp-mtls-qa.dev.lprnd.net/test'}": true,
@@ -63,8 +64,6 @@ CertificateMappingParameters object which contains:
 
 | Attribute | Description  | Type/Value | Required | Notes |
 | :------   | :--------    | :-------- | :--- | :--- |
-| serviceName | Contains the service name which has corresponding certificate in Hashicorp-Vault. | string |  | |
-| accountId | Account ID which has corresponding certificate in Hashicorp-Vault. | string |  | |
-| url | Contains the URL which has corresponding certificate in Hashicorp-Vault. | string |  | |
-
-
+| serviceName | Contains the service name which has a corresponding certificate in Hashicorp-Vault. | string |  | |
+| accountId | Account ID which has a corresponding certificate in Hashicorp-Vault. | string |  | |
+| url | Contains the URL which has a corresponding certificate in Hashicorp-Vault. | string |  | |

@@ -1,15 +1,14 @@
 ---
-pagename: Create certificate for account from file upload
-redirect_from:
-  - xxx.html
+pagename: Create certificate from file
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
+permalink: mtls-methods-create-certificate-from-file.html
 ---
 
-This API creates certificate by uploading file for specific account id.
+This API creates a certificate by uploading a file, for a specific account ID.
 
 ### Request
 
@@ -38,7 +37,7 @@ see following print screen 1.
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -53,7 +52,8 @@ see following print screen 1.
 **Response Body**
 
 for example:
-```
+
+```JSON
 {  
    "successfulySavedCertificates":[  
       {  
@@ -77,12 +77,10 @@ for example:
 
 | Attribute | Description  | Type/Value | Required | Notes |
 | :------   | :--------    | :-------- | :--- | :--- |
-| id | A certificate's unique object ID in account config table. | long number | Read only | |
+| id | A certificate's unique object ID in the account config table. | long number | Read only | |
 | deleted   | Indicates whether the certificate is deleted or not. | Boolean | Read only | |
 | name | A certificate's unique name. | unique string | Required | |
 | displayName    | A certificate's display name.  | string | Required | |
-| siteId | A site ID of the certificate. | string | Required | |
-| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both Hashicorp Vault and DB and if isn't expired)|
+| siteId | The account ID the certificate is associated with. | string | Required | |
+| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both Hashicorp Vault and LivePerson's Data Base and if isn't expired)|
 | expirationDate | certificate's expiration date. | string | Not Required | |
-
-

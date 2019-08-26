@@ -1,57 +1,53 @@
 ---
-pagename: introduction
-redirect_from:
-  - xxx.html
+pagename: Overview
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: MTLS API
-
 indicator: both
+permalink: mtls-overview.html
 ---
 
-MTLS - Mutual Transport Layer Security (Mutual TLS), is a new solution from LivePerson, to centralize certificate management and to store the certificates in a secured location over Hashicorp’s vault. The service will be self-serve, which will allow users to manage their own certificates, without the need to reach out to a CSM or to the support team.
+MTLS or Mutual Transport Layer Security (also known as Mutual TLS), is a new solution from LivePerson. The purpose of this solution is to centralize certificate management and to store certificates in a secured location over Hashicorp’s vault. This solution is intended to be self-served. This will allow users to manage their own certificates, without the need to reach out to a LivePerson representative or to the support team.
 
+### What is MTLS?
 
-MTLS  - While TLS means that only one side needs to authenticate the connection, with MTLS, the more widespread and common for the business to business solution, both parties need to authenticate it. This solution is safer and becoming a standard, especially among the banking industry. The process is: the client authenticates the server (TLS wise) then server authenticates back to the client. Traffic will flow only after mutual (back and forth) authentication success. 
+Transport Layer Security is a protocol for verifying the identity of a service over the Internet. While TLS meant that only one side needs to authenticate the connection, with MTLS, the more widespread and common protocol in the industry today, both parties need to authenticate their identity. This protocol is safer and fast becoming an industry standard, especially in the banking industry.
 
+The optimal flow looks like this: the client authenticates the server (just like in TLS) then the server authenticates back to the client. Traffic will flow only after mutual (back and forth) authentication was achieved.
 
-What is Hashicorp vault
+### What is Hashicorp vault?
 
 HashiCorp provides a suite of open-source tools intended to support development and deployment of large-scale service-oriented software installations. Vault, first released on April 2015, provides secrets management, identity-based access, and encrypting application data for auditing of secrets for applications, systems, users.
 
+### Use cases - Why should I use MTLS?
 
+As a bank, use this if you would like to be aligned with open banking standards and because you would like my connection to be more secure.
 
-Use cases - Why should I use this
+As any kind of business, you would use the MTLS API to upload a certificate, map an existing certificate, wrap and forward MTLS requests etc.
 
-As a bank, I would like to use MTLS in order for me to be able to be aligned with open banking standards and because I would like my connection to be more secure.
+### Prerequisites
 
-As a brand, I would use the MTLS API to upload a certificate, map an existing certificate, wrap and forward mtls requeses etc’.
+In order for MTLS to work, you'll need to generate a specific MTLS certificate. You can accomplish this by receiving a CSR from our support team, filling out the CSR with the required details and signing the certificate with a 3rd party provider.
 
-Prerequisites - 
+Once the certificate is ready, our support team needs to upload the new certificate, map the service that will support the MTLS and tie it to a specific URL. The upcoming future solution will allow our customers to self-serve the entire process, including uploading the new certificate to store it on HashiCorp vault.
 
-In order for MTLS to work, the brand needs to generate a specific MTLS certificate. The brand is doing it by receiving a CSR from the support, filling the CSR with the required details and signing the certificate with a 3rd party provider.
+### Limitations
 
-Once the certificate is ready, support needs to upload the new certificate, map the service that will support the MTLS and tie it to a specific URL. The upcoming future solution will allow customers to self-serve the entire process, including uploading the new certificate to store it on Hashicorp vault.
+#### Technical limitations:
 
+* The P12 key (private + public) must be Java compliant. The created key must use supported algorithms and key strength. To test your P12 key, please use the [P12 Key Tester](p12-key-tester.html) resource included in this API.
 
-Limitations
+* Resources support the oAuth1 (app key + app secret) and Bearer authentication methods with a few limitations:
 
-A. Technical limitations:
+  - The Check Mapping Configuration method supports oAuth1 only.
 
-P12 (private + public) must be Java compliant, created key must use supported algorithm and key strength, the p12 tester resource exist to make sure that created P12 is fully supported.
+  - Any methods which create certificates "by-file" support Bearer authentication only.
 
-Resources support oAuth1 (app key + app secret) and Bearer as described in Wiki, with a few limitations:
-- Mapping Resource is oAuth1 (not account related operation)
-- Certificate Resource "by-file" operations are Bearer only operations.
-- P12Tester Resource is Bearer authorized only resource.
-- Forwarding resource supports both oAuth1 (app key + app secret) and Bearer.
+  - The P12 Key Tester supports Bearer authentication only.
 
-MTLS service is throttling protected, allowing only 10 requests per second (for incoming IP), this is used to limit traffic through the service, as MTLS service proxies both MTLS and TLS traffic this limits the 'bandwidth' for each service.
+  - The Forwarding methods support both oAuth1 (app key + app secret) and Bearer.
 
-Uploaded certificates/mappings will reflect to runtime after 5 minutes, this is due to caching mechanism embedded in the runtime resources, Configration (certificate CRUD) resource is not cached.
+* The MTLS service is throttling protected, allowing only 10 requests per second (per incoming IP).
 
-B. Product limitations:
-
-MTLS will not act as a feature that we can enable or disable for an account at this phase. In the upcoming future releases, it will be acting as an AC- Feature.
-
+* Uploaded certificates/mappings will be updated to runtime after 5 minutes. This is due to caching mechanisms embedded in the runtime resources. The Configration (certificate CRUD) resource is not cached.

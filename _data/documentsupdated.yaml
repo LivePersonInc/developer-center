@@ -908,6 +908,25 @@
             - subpagename: Application Login
             - subpagename: Refresh
             - subpagename: Logout
+    - documentname: MTLS
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Create certificate for account
+            - subpagename: Create certificate from file
+            - subpagename: Delete certificate by ID
+            - subpagename: Get all certificates by account
+            - subpagename: Get certificate by ID
+            - subpagename: Update certificate for account
+            - subpagename: Update certificate from file
+            - subpagename: Forward delete request
+            - subpagename: Forward get request
+            - subpagename: Forward post request
+            - subpagename: Forward put request
+            - subpagename: Check mapping configuration
+            - subpagename: P12 Key Tester
+
 
 - categoryname: Website Monitoring
   image: website-monitoring

@@ -1,17 +1,14 @@
 ---
-pagename: MTLS check p12 file
-redirect_from:
-  - xxx.html
+pagename: P12 Key Tester
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
+permalink: mtls-methods-p12-key-tester.html
 ---
 
-This API will allow you to test your p12 before uploading a certificate and test whether the corresponding endpoint is correct and working through our system or not.
-
-
+This method will allow you to test your P12 Key before uploading a certificate and test whether the corresponding endpoint is correct and working.
 
 ### Request
 
@@ -26,7 +23,7 @@ This API will allow you to test your p12 before uploading a certificate and test
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
  |LP-forward-url|   Contains the desired endpoint url of the client.  |
- |LP-authorization-override|  Contains the authorizaion for the desired endpoint url of the client. Not required. |
+ |LP-authorization-override|  Contains the authorization for the desired endpoint url of the client. Not required. |
  |LP-content-type-override|  Contains the content type for the desired endpoint url of the client. Not required. |
  |LP-method-override|  Contains the method for the desired endpoint url of the client. Not required. |
  |file (multipart value)| The file containing the p12.  |
@@ -45,7 +42,7 @@ same body as the client sends to original endpoint.
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -61,5 +58,3 @@ same body as the client sends to original endpoint.
 **Response Body**
 
 The API will return the body as is (as if contacted the forward URL directly).
-
-

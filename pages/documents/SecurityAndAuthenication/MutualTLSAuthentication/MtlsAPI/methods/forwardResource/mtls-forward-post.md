@@ -1,12 +1,11 @@
 ---
-pagename: MTLS forawrd post request
-redirect_from:
-  - xxx.html
+pagename: Forward post request
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
+permalink: mtls-methods-forward-post-request.html
 ---
 
 This API forward POST requests with required certificate if the certificate exists (if not - it forwards the non-mtls request to the required endpont).
@@ -40,7 +39,7 @@ same body as the client sends to the original endpoint.
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -56,6 +55,3 @@ same body as the client sends to the original endpoint.
 **Response Body**
 
 same body as the server responses.
-
-
-
