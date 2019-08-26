@@ -26,13 +26,22 @@ This method will allow you to test your P12 Key before uploading a certificate a
  |LP-authorization-override|  Contains the authorization for the desired endpoint url of the client. Not required. |
  |LP-content-type-override|  Contains the content type for the desired endpoint url of the client. Not required. |
  |LP-method-override|  Contains the method for the desired endpoint url of the client. Not required. |
- |file (multipart value)| The file containing the p12.  |
- |password (multipart value)| The password matching this specific p12  |
- |body (multipart value)|  Contains the body for the desired endpoint url of the client. Not required. |
 
 **Request Body**
 
-same body as the client sends to original endpoint.
+form-data body
+
+KEY: file (File field)
+
+VALUE: The file containing the p12
+
+KEY: password (Text field)
+
+VALUE: The password matching this specific p12 
+
+KEY: body (multipart value)|  
+
+VALUE: Contains the same body as the client sends for the original endpoint. Not required. 
 
 **Path Parameters**
 
