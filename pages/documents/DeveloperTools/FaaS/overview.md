@@ -24,9 +24,11 @@ Functions (or `lambdas`) are code snippets that accomplish certain tasks. A deve
 
 ### Invocation
 
-Functions are triggered by services that have integrations with the Functions platform. Depending on the type of function, different triggers will be used. These triggers can be an internal LivePerson event, for example, when a new conversation is started or a CSAT Post Survey is completed.
+Functions can be triggered in two ways:
 
-In addition, users who are tasked with creating bots (automations) in Conversation Builder can easily integrate function calls within dialog flows, so functions can be invoked by bots too. Adding this kind of [integration interaction](conversation-builder-conversation-builder-interactions.html#integrations) to a dialog works just like adding any other type of integration interaction. See [Add a FaaS integration](conversation-builder-conversation-builder-integrations.html#add-a-faas-integration) for information on how to make a function (FaaS) integration available for use in a bot; this is a more technical task.
+- Functions can be triggered by services that have integrations with the Functions platform. Depending on the type of function, different triggers will be used. These triggers can be an internal LivePerson event, for example, when a new conversation is started or a CSAT Post Survey is completed.
+
+- Functions can be triggered by bots (automations). Users who are tasked with creating bots in Conversation Builder can easily integrate function calls within their dialog flows. Adding this kind of [integration interaction](conversation-builder-conversation-builder-interactions.html#integrations) to a dialog in a bot works just like adding any other type of integration interaction. Before this though, a more technical user must 1) create and deploy the function in the LivePerson Functions UI, and then 2) [add a FaaS-type integration] (conversation-builder-conversation-builder-integrations.html#add-a-faas-integration) to the bot. This makes the integration available for use in an interaction.
 
 As part of the invocation, the invoker can pass a payload into the function. This payload is specific to the triggered event. This means that, depending on the event, the function will have different data available as an input.
 
