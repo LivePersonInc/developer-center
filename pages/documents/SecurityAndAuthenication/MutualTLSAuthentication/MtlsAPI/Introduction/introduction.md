@@ -51,3 +51,5 @@ Once the certificate is ready, our support team needs to upload the new certific
 * The MTLS service is throttling protected, allowing only 10 requests per second (per incoming IP).
 
 * Uploaded certificates/mappings will be updated to runtime after 5 minutes. This is due to caching mechanisms embedded in the runtime resources. The Configration (certificate CRUD) resource is not cached.
+
+* It is possible to use the same certificate for different services but for each mapping of accountId + serviceName + url it will be only one certificate and the certificate name is unique.
