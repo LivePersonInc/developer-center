@@ -22,7 +22,7 @@ HashiCorp provides a suite of open-source tools intended to support development 
 
 ### Use cases - Why should I use MTLS?
 
-As a bank, use this if you would like to be aligned with open banking standards and because you would like my connection to be more secure.
+As a bank, use this if you would like to be aligned with open banking standards and because you would like your connection to be more secure.
 
 As any kind of business, you would use the MTLS API to upload a certificate, map an existing certificate, wrap and forward MTLS requests etc.
 
