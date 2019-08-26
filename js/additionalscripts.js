@@ -323,13 +323,6 @@ function sidebarCollapse(url) {
 		$(".innerfolder > .active > button").addClass("clicked");
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
-		$(".post-content").on("click", "a", function () {
-			$(".sidebarbutton").removeClass("clicked");
-			$(".topfolder > a").next().slideUp(400);
-			$(".topfolder > a").data("expanded", "false");
-			$(".homeitem > a").removeClass("active");
-			$(".topfolder > a").removeClass("active");
-		});
 		if (currentPage.isInViewport() && !scrollOnce) {
 		scrollOnce = true;
 		$('#mysidebar').animate({
