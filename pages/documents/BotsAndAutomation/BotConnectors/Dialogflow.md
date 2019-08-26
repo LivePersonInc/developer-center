@@ -277,9 +277,9 @@ Below is an example of what the response JSON from Dialogflow will look like, an
 }
 ```
 
-### Send Rich Content (Structured content)
+### Sending Rich Content (Structured content)
 
-Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via Dialogflow, use the Dialogflow option to send a _custom payload_ via the intent, containing valid structured content, along with metadata required for the structured content (as seen in Figure 4.2). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
+Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via Dialogflow, use the Dialogflow option to send a _custom payload_ via the intent, containing valid structured content, along with metadata required for the structured content (as seen in Figure 4.2). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
 <img class="fancyimage" style="width:600px" src="img/dialogflow/image_10.png">
 
@@ -325,9 +325,10 @@ Figure 5.1
 
 Figure 5.2 Dialogflow Example Custom Payload
 
-### Send quickReplies (Structured Content)
+### Sending Quick Replies (Structured Content)
 
- Quick Replies is a special type of Structured Content. Is is a message sent with along with predefined answers. The documentation can be found [here](quick-replies-introduction-to-quick-replies.html)
+Quick Replies is a special type of Structured Content. Is is a message sent with along with predefined answers.
+For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
  ```json
 {
