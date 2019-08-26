@@ -31,17 +31,17 @@ This method will allow you to test your P12 Key before uploading a certificate a
 
 form-data body
 
-KEY: file (File field)
+Key: file (File field)
 
-VALUE: The file containing the p12
+Value: The file containing the p12
 
-KEY: password (Text field)
+Key: password (Text field)
 
-VALUE: The password matching this specific p12 
+Value: The password matching this specific p12 
 
-KEY: body (Text field)| 
+Key: body (Text field)| 
 
-VALUE: Contains the same body as the client sends for the original endpoint. Not required. 
+Value: Contains the same body as the client sends for the original endpoint. Not required. 
 
 **Path Parameters**
 
