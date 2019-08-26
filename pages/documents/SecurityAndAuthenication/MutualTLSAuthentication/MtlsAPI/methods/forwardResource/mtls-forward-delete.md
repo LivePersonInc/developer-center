@@ -9,6 +9,7 @@ permalink: mtls-methods-forward-delete-request.html
 ---
 
 This API forwards a DELETE request with the required certificate if the certificate exists (if not - it forwards the non-mtls request to the required endpoint).
+
 When submitting the forward request, the certificate will be fetched according to service name + url, wrapped and forwarded to the desired endponit and the response will be returned as if contacted the remote endpoint directly.
 
 
