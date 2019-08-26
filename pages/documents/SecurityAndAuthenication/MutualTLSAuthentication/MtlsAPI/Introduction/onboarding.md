@@ -1,6 +1,5 @@
 ## General explanation
-The following is a step by step walkthrough on how to get MTLS up and running,
-[troubleshooting](https://lpgithub.dev.lprnd.net/vault/lp-mtls-app/wiki/MTLS-Troubleshooting) and [certificate creation](https://lpgithub.dev.lprnd.net/vault/lp-mtls-app/wiki/Support---TLS-Certificate-creation) will be explained in a different section.
+The following is a step by step walkthrough on how to use lp-MTLS service
 
 ## 1)Certificate creation
 First thing needed to start the onboarding process is a p12 file (and its corresponding password):
