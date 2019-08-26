@@ -10,7 +10,7 @@ permalink: mtls-methods-check-mapping-configuration.html
 
 This method checks for mapping configuration existence for a specific tuple: serviceName, accountId and url.
 
-This resource helps you check if a certificate exists to some serviceName + accountId + url.
+This resource helps you check if a certificate exists to some serviceName + accountId + url in order to send MTLS request (with certificate).
 
 ### Request
 
