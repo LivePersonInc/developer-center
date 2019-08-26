@@ -3,10 +3,10 @@ The following is a step by step walkthrough on how to use lp-MTLS service
 
 ## 1)Certificate creation
 First thing needed to start the onboarding process is a p12 file (and its corresponding password):
-[P12 creation](https://lpgithub.dev.lprnd.net/vault/lp-mtls-app/wiki/Support---TLS-Certificate-creation)
+[P12 creation](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/Introduction/p12-creation.md)
 
-## 2)Run the created certificate through the tester (important)
-Wiki: [Tester API wiki](https://lpgithub.dev.lprnd.net/vault/lp-mtls-app/wiki/P12-Testing-Resource)
+## 2)Run the created certificate through the tester 
+Wiki: [Tester API wiki](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/methods/p12TesterResource/mtls-check-p12.md)
 
 What the Api does is to submit a request to the MTLS protected endpoint (at this stage without storing certificate in Hashicorp Vault)
 
@@ -18,7 +18,7 @@ What the Api does is to submit a request to the MTLS protected endpoint (at this
 
 Before mapping the certificate it needs to be uploaded.
 
-Done by the following API: [Certificate Resource](https://lpgithub.dev.lprnd.net/vault/lp-mtls-app/wiki/MTLS-Certificate-Resource)
+Done by the following API: [Certificate Resource](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/tree/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/methods/certificateResource)
 
 The Api creates both the MySql entities (non secure parts) and the Hashicorp Vault entry (secured parts)
 
