@@ -39,7 +39,7 @@ KEY: password (Text field)
 
 VALUE: The password matching this specific p12 
 
-KEY: body (multipart value)|  
+KEY: body (Text field)| 
 
 VALUE: Contains the same body as the client sends for the original endpoint. Not required. 
 
