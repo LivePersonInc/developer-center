@@ -130,6 +130,9 @@ Structure example:
         "claims": {},
         "acr": ""
     },
+    "applicationInfo": {
+        "theme": "",
+    },
     "customVariables": [],
     "splitSession": {
         "customVariables": []
@@ -231,6 +234,8 @@ Structure example:
 | **customVariables**                         | Array of custom variables                                                                            | N/A                                                                                      | array   |                                                            |
 | **splitSession**                            | Information from the previous split session                                                          | N/A                                                                                      | object  |                                                            |
 | splitSession.customVariables                | Array of custom variables from previous split session                                                | N/A                                                                                      | array   |                                                            |
+| **applicationInfo**                          | N/A                                              | Information regarding the agent application in the site                                                                                      | object  |                                                            |
+| applicationInfo.theme                          | N/A                                              | the theme of the application                                                                                      | string  |                                                            |
 
 Some of the public model data specified above returns an object or an array of objects. Below is the structure of these objects/arrays that can be returned.
 
