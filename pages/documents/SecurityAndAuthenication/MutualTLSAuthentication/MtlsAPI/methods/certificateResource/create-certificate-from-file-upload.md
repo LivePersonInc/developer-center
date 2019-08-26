@@ -30,7 +30,7 @@ form-data body
 
 KEY: file  (File field type)
 
-VALUE: select p12 file
+VALUE: p12 file
 
 KEY: certificate  (Text field type)
 
