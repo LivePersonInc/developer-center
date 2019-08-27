@@ -23,10 +23,10 @@ An integration can be one of the following types:
 - **Email**: Use this type to send an email.
 - **Knowledge Base**: Use this type to search a knowledge base for articles.
 - **LivePerson Agent Escalation**: Use this type to transfer the conversation to another skill.
-- **FaaS**: Use this type to invoke a function (`lambda`) that is deployed to LivePerson's infrastructure.
+- **FaaS**: Use this type to invoke a function (`lambda`) that is deployed to LivePerson's Function as a Service (FaaS) platform.
 
 ### Add a FaaS integration
-Use a FaaS integration to invoke a function (`lambda`) that is deployed to LivePerson's infrastructure. 
+Use a FaaS integration to invoke a function (`lambda`) that is deployed to LivePerson's Function as a Service (FaaS) platform. 
 
 Before you add a FaaS integration in Conversation Builder, you must create and deploy the function using the LivePerson Functions UI. For help with this, see [here](liveperson-functions-getting-started.html).
 
