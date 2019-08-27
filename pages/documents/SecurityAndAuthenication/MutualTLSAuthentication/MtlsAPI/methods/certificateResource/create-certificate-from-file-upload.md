@@ -22,12 +22,20 @@ This API creates a certificate by uploading a file, for a specific account ID.
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
- |file|    Contains p12 file in multipart/form-data key value field. |
- |certificate|    Contains the certificate DTO in multipart/form-data key value field.  |
+
 
 **Request Body**
 
-see following print screen 1.
+form-data body
+
+KEY: file  (File field type)
+
+VALUE: p12 file
+
+KEY: certificate  (Text field type)
+
+VALUE: {"name":"myCertificate", "password":"1234"}
+
 
 **Path Parameters**
 
