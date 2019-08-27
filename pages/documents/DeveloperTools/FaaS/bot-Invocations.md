@@ -12,4 +12,4 @@ Users who are tasked with creating bots (automations) in Conversation Builder ca
 
 Before a function can be used in an interaction, users who are tasked with more technical work in Conversation Builder must first 1) [create and deploy the function](liveperson-functions-getting-started.html) in the LivePerson Functions UI, and then 2) [add a FaaS-type integration](conversation-builder-conversation-builder-integrations.html#add-a-faas-integration) to the bot. This makes the integration available for use in an interaction.
 
-As part of the invocation, the bot can pass a payload into the function. This payload is specific to the triggered event. This means that, depending on the event, the function will have different data available as an input.
+As part of the invocation, the bot can pass a payload into the function. This payload is specific to the triggered bot interaction. This means that, depending on the interaction, the function will have different data available as an input.

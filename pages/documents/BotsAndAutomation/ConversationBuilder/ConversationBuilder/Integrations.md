@@ -23,11 +23,12 @@ An integration can be one of the following types:
 - **Email**: Use this type to send an email.
 - **Knowledge Base**: Use this type to search a knowledge base for articles.
 - **LivePerson Agent Escalation**: Use this type to transfer the conversation to another skill.
-- **FaaS**: Use this type to invoke a function (`lambda`) that has been created and deployed via the [LivePerson Functions](liveperson-functions-overview.html) UI.
+- **FaaS**: Use this type to invoke a function (`lambda`) that is deployed to LivePerson's infrastructure.
 
 ### Add a FaaS integration
+Use a FaaS integration to invoke a function (`lambda`) that is deployed to LivePerson's infrastructure. 
 
-Before you add a FaaS integration in Conversation Builder, you must create and deploy the function (`lambda`) using the LivePerson Functions UI. For help with this, see [here](liveperson-functions-getting-started.html).
+Before you add a FaaS integration in Conversation Builder, you must create and deploy the function using the LivePerson Functions UI. For help with this, see [here](liveperson-functions-getting-started.html).
 
 **To add a FaaS integration**
 
@@ -37,13 +38,15 @@ Before you add a FaaS integration in Conversation Builder, you must create and d
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **FaaS**.
     - **Credential**: (Optional) If required, select the credential to be used to authorize the API call. You can select from all credentials added under your LivePerson account.
-    - **Function**: Select the function (`lambda`) to invoke via this integration. You can select from all functions added under your LivePerson account.
+    - **Function**: Select the function (`lambda`) to invoke via this integration. You can select from all functions added under your LivePerson account. Each is listed with its status.
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/integrations_faasFunctionList.png">
+    The Function list provides an easy pass-through to the Functions UI in case you still need to create or modify the relevant function. Clicking the **Create New Function** or <img style="width:25px" src="img/ConvoBuilder/icon_pencilModify.png"> (pencil icon) both open a new browser window and prompt you to log into the Functions UI where you can do either. Once done, return here and click <img style="width:25px" src="img/ConvoBuilder/icon_functionReload.png"> (reload icon) to refresh the list if needed.
     - **Version Number**: Deprecated. This field isn't used.
     - **FaaS User ID**: Enter your user ID for the [LivePerson Functions](liveperson-functions-overview.html) UI.
     - **Function Headers**: Add the necessary data in key/value pairs to pass into the request via the header.
     - **Function Payload**: Enter the payload to pass into the function.
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result into JSON format, so you can use the information in the automation's dialogs. For more on this, see [Transform an API result](#transform-an-api-result) farther below.
-    - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating automations can use and display this data in interactions by referencing these fields as described [here](conversation-builder-conversation-builder-interactions.html).
+    - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating automations can use and display this data in interactions by referencing these fields as described [here](conversation-builder-conversation-builder-interactions.html#display-variables-in-interactions).
 3. Click **Save**.
 
 ### Transform an API result
@@ -254,7 +257,9 @@ Conversation Builder allows you to attach credentials to bot API integrations. W
     Attach the relevant credentials to the API integration. The bot will automatically enhance the request based on the credentials’ type and data.
 
 ### Delete an integration
-{ add intro describing important considerations/actions before doing this }
+If the automation is no longer using a particular integration, you might want to delete the integration. Before doing so, make sure there are no API interactions that reference the integration.
+
+Deleting an integration affects only the automation for which it's been added.
 
 **To delete an integration**
 
@@ -264,4 +269,4 @@ Conversation Builder allows you to attach credentials to bot API integrations. W
 
 ### Display integration data in an interaction
 
-For information on how to take the data that's retrieved by an integration call and stored in custom data fields, and display it in an interaction, see [here](conversation-builder-conversation-builder-interactions.html).
+For information on how to take the data that's retrieved by an integration call and stored in custom data fields, and display it in an interaction, see [here](conversation-builder-conversation-builder-interactions.html#display-variables-in-interactions).
