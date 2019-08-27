@@ -22,7 +22,7 @@ HashiCorp provides a suite of open-source tools intended to support development 
 
 ### Use cases - Why should I use MTLS?
 
-As a bank, use this if you would like to be aligned with open banking standards and because you would like my connection to be more secure.
+As a bank, use this if you would like to be aligned with open banking standards and because you would like your connection to be more secure.
 
 As any kind of business, you would use the MTLS API to upload a certificate, map an existing certificate, wrap and forward MTLS requests etc.
 
@@ -31,6 +31,7 @@ As any kind of business, you would use the MTLS API to upload a certificate, map
 In order for MTLS to work, you'll need to generate a specific MTLS certificate. You can accomplish this by receiving a CSR from our support team, filling out the CSR with the required details and signing the certificate with a 3rd party provider.
 
 Once the certificate is ready, our support team needs to upload the new certificate, map the service that will support the MTLS and tie it to a specific URL. The upcoming future solution will allow our customers to self-serve the entire process, including uploading the new certificate to store it on HashiCorp vault.
+
 
 ### Limitations
 
@@ -51,3 +52,5 @@ Once the certificate is ready, our support team needs to upload the new certific
 * The MTLS service is throttling protected, allowing only 10 requests per second (per incoming IP).
 
 * Uploaded certificates/mappings will be updated to runtime after 5 minutes. This is due to caching mechanisms embedded in the runtime resources. The Configration (certificate CRUD) resource is not cached.
+
+* It is possible to use the same certificate for different services but for each mapping of accountId + serviceName + url it will be only one certificate and the certificate name is unique.

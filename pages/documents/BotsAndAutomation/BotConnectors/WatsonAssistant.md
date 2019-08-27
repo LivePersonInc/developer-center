@@ -490,20 +490,60 @@ Put the structured content objects that is shown in Figure 3.6 with the metadata
 
 Figure 3.6 Structured Content Watson JSON Example (IAM)
 
-For using [quickReplies](quick-replies-introduction-to-quick-replies.html), we require a special formatting of the structured content.
-The quick replies rich content should be added to the quickReplies property of the structuredContent object, and also a message should be included.
-This message will be sent to the customer along with the quick replies. **Figure 3.7** **Figure 3.8**
+### Sending Quick Replies (Structured Content)
+
+Quick Replies are a special kind of the Structured Content.
+The content should be added to the quickReplies property of the structuredContent object and there also a message be included in the structuredContent object.
+This message will be sent to the customer along with the Quick Replies.
+For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
 ```json
 {
   "structuredContent": {
     "quickReplies": {
-      // insert quickReplies rich content here as described here
-      //https://developers.liveperson.com/quick-replies-introduction-to-quick-replies.html
-      "type": "quickReplies",
-      "replies": [...],
-      "itemsPerRow": 8
-    },
+       "type": "quickReplies",
+       "itemsPerRow": 8,
+       "replies": [
+         {
+           "type": "button",
+           "tooltip": "yes i do",
+           "title": "yes",
+           "click": {
+             "actions": [
+               {
+                 "type": "publishText",
+                 "text": "yep"
+               }
+             ],
+             "metadata": [
+               {
+                 "type": "ExternalId",
+                 "id": "Yes-1234"
+               }
+             ]
+           }
+         },
+         {
+           "type": "button",
+           "tooltip": "No!",
+           "title": "No!",
+           "click": {
+             "actions": [
+               {
+                 "type": "publishText",
+                 "text": "No!"
+               }
+             ],
+             "metadata": [
+               {
+                 "type": "ExternalId",
+                 "id": "No-4321"
+               }
+             ]
+           }
+         }
+       ]
+     },
     "message": "Message to send before sending QuickReplies content"
   },
   "metadata": [
@@ -513,79 +553,10 @@ This message will be sent to the customer along with the quick replies. **Figure
     }
   ]
 }
-
 ```
 
-Figure 3.7 Quick Replies StructuredContent structure.
+Figure 3.7 Quick Replies StructuredContent example.
 
-```json
-{
-  "output": {
-    "text": {
-      "values": [
-        {
-          "metadata": [
-            {
-              "id": "1234",
-              "type": "ExternalId"
-            }
-          ],
-          "structuredContent": {
-            "quickReplies": {
-              "type": "quickReplies",
-              "itemsPerRow": 8,
-              "replies": [
-                {
-                  "type": "button",
-                  "tooltip": "yes i do",
-                  "title": "yes",
-                  "click": {
-                    "actions": [
-                      {
-                        "type": "publishText",
-                        "text": "yep"
-                      }
-                    ],
-                    "metadata": [
-                      {
-                        "type": "ExternalId",
-                        "id": "Yes-1234"
-                      }
-                    ]
-                  }
-                },
-                {
-                  "type": "button",
-                  "tooltip": "No!",
-                  "title": "No!",
-                  "click": {
-                    "actions": [
-                      {
-                        "type": "publishText",
-                        "text": "No!"
-                      }
-                    ],
-                    "metadata": [
-                      {
-                        "type": "ExternalId",
-                        "id": "No-4321"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            "message": "Do you like Bots?"
-          }
-        }
-      ],
-      "selection_policy": "sequential"
-    }
-  }
-}
-```
-
-Figure 3.8 Watson Quick Replies StructuredContent example.
 
 ### Change Time To Response of Conversation
 
