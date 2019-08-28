@@ -22,7 +22,7 @@ An integration can be one of the following types:
 - **API**: Use this type to invoke an API that performs some action. For example, you might want to fetch data from a Customer Relationship Management (CRM) system or Content Management System (CMS). Or, you might want to query a brand internal API to get information needed to answer a question or to look up a customer's history.
 - **Email**: Use this type to send an email.
 - **Knowledge Base**: Use this type to search a knowledge base for articles.
-- **LivePerson Agent Escalation**: Use this type to transfer the conversation to another skill.
+- **LivePerson Agent Escalation**: Use this type to transfer the conversation to a live agent or another bot.
 - **FaaS**: Use this type to invoke a function (`lambda`) that is deployed to LivePerson's Function as a Service (FaaS) platform.
 
 ### Add a FaaS integration
