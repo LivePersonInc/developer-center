@@ -83,7 +83,7 @@ The relevant fields in this dialog are ``channelType`` and inside ``metaData`` t
 
 After the invitation has been received, trigger the following event on consumer side using the ``lpTag.events.publish`` function.
 
-```js
+```javascript
 lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
  	serviceId: "<ServiceId from the dialog>",
  	agentId: "<Agent ID>",
@@ -102,7 +102,7 @@ lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
 ### Step 4 - Accept/Reject call
 If the consumer decides to accept the call, trigger the following event in order to start the call:
 
-```js
+```javascript
 lpTag.events.publish("lpCoBrowse", "cobrowseAccepted", {
  	serviceId: "<ServiceId from the dialog>",
  	agentId: "<Agent ID>",
@@ -120,7 +120,7 @@ lpTag.events.publish("lpCoBrowse", "cobrowseAccepted", {
 
 In case the consumer rejects the invitation, trigger the following event to reject the invitation:
 
-```js
+```javascript
 lpTag.events.publish("lpCoBrowse", "cobrowseDeclined", {
  	serviceId: "<ServiceId from the dialog>",
  	agentId: "<Agent ID>",
@@ -142,7 +142,8 @@ The voice or video call UI will be rendered into a container on the website. The
 
 ### Resuming calls after reloading the page
 The voice and video call application will store information in the browser's storage that allows it to detect and resume active calls after reloading the page or navigating to another tagged page. An event will be triggered when an active call was detected:
-```js
+
+```javascript
 lpTag.events.bind({
     appName: "cobrowse",
     eventName: "sessionResume",
@@ -151,13 +152,15 @@ lpTag.events.bind({
 ```
 
 Upon receiving this event, the call UI container should be created and the following event sent in response:
-```js
+
+```javascript
 lpTag.events.publish("lpCoBrowse", "sliderOpened");
 ```
 
 ### Handling errors
 In case there is a problem establishing the connection or the browser is not supported, an error event is triggered. Please use the following code to listen for error events:
-```js
+
+```javascript
 lpTag.events.bind({
     appName: "cobrowse",
     eventName: "sessionError",
