@@ -28,7 +28,7 @@ And before you can do anything, you must do a few things first. By the end of th
 
 ### Step 1. Create a LiveEngage account
 
-Before you can use LiveEngage, you must first have a working account. If you don't already have one, you can sign up for a [developer's account](http://register.liveperson.com/developer/signup) and then contact your account team or LivePerson support to have features enabled. For example, if you know you are going to build a customized messaging window, you will need to make sure that messaging is enabled on your account.
+Before you can use LiveEngage, you must first have a working account. If you don't already have one, you can sign up for a [developer's account](https://developers.liveperson.com/register.html) and then contact your account team or LivePerson support to have features enabled. For example, if you know you are going to build a customized messaging window, you will need to make sure that messaging is enabled on your account.
 
 {:.note}
 If you already have a LiveEngage account, you can use that account instead of a creating a developer's account. However, we recommend creating a new account to make sure that any changes and customizations you make do not affect your site visitors until you are ready to launch them.
@@ -43,7 +43,7 @@ Some features to get started with include:
 - Photo sharing
 
 <p style="text-align: right">
-<a href="http://register.liveperson.com/developer/signup" center><img src="../../img/btn-create-dev-account.png" style="height: 30px; width: auto;"></a><br></p>
+<a href="https://developers.liveperson.com/register.html" center><img src="../../img/btn-create-dev-account.png" style="height: 30px; width: auto;"></a><br></p>
 <p></p>
 ---
 <p></p>
