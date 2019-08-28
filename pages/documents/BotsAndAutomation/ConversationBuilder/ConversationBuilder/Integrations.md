@@ -22,7 +22,7 @@ An integration can be one of the following types:
 - **API**: Use this type to invoke an API that performs some action. For example, you might want to fetch data from a Customer Relationship Management (CRM) system or Content Management System (CMS). Or, you might want to query a brand internal API to get information needed to answer a question or to look up a customer's history.
 - **Email**: Use this type to send an email.
 - **Knowledge Base**: Use this type to search a knowledge base for articles.
-- **LivePerson Agent Escalation**: Use this type to transfer the conversation to a live agent or another bot.
+- **LivePerson Agent Escalation**: Use this type to transfer the conversation to a human agent or another bot. For best practices when working with this integration type, see [here](conversation-builder-best-practices-transfer-to-an-agent-or-bot.html).
 - **FaaS**: Use this type to invoke a function (`lambda`) that is deployed to LivePerson's Function as a Service (FaaS) platform.
 
 ### Add a FaaS integration
@@ -259,14 +259,14 @@ Conversation Builder allows you to attach credentials to bot API integrations. W
 ### Delete an integration
 If the automation is no longer using a particular integration, you might want to delete the integration. Before doing so, make sure there are no API interactions that reference the integration.
 
-Deleting an integration affects only the automation for which it's been added.
+Deleting an integration affects only the bot for which it's been added.
 
 **To delete an integration**
 
-1. In the automation, click **Integrations**.
+1. In the bot, click **Integrations**.
 2. In the left panel, move your mouse over the integration name, and click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
 3. Click **Delete Integration**, and then click **Yes** in the confirmation dialog that appears.
 
 ### Display integration data in an interaction
 
-For information on how to take the data that's retrieved by an integration call and stored in custom data fields, and display it in an interaction, see [here](conversation-builder-conversation-builder-interactions.html#display-variables-in-interactions).
+For information on how to take the data that's retrieved by an integration call and stored in custom data fields, and display it in a bot interaction, see [here](conversation-builder-conversation-builder-interactions.html#display-variables-in-interactions).
