@@ -284,6 +284,7 @@
         - subpagename: Client Properties
         - subpagename: Avoid Websocket Headers
         - subpagename: CoBrowse
+        - subpagename: Voice and Video Calls
         - subpagename: File Sharing
       - pagename: Samples
         subpages:

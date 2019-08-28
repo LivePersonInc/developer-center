@@ -4,10 +4,7 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-
-order: 89
-permalink: messaging-window-api-tutorials-calls.html
-
+permalink: messaging-window-api-tutorials-voice-and-video-calls.html
 indicator: messaging
 ---
 
@@ -50,13 +47,12 @@ In your [initConnection](/consumer-int-msg-init-con.html) request, make sure you
 Start a messaging conversation with an agent by following the steps described in the previous tutorials. The important part is to subscribe to [Conversation Metadata](/consumer-int-conversation-md.html) since the call invitation is sent as part of the metadata.
 If your account is set up correctly, you should see the following button inside the Agent Workspace that allows you to voice and video calls:
 
-![agent_invitation](img/agent_call_invitation.png)
+<img class="fancyimage" width="750px" src="img/agent_call_invitation.png">
 
 ### Step 3 - Handle call invitation event on Consumer side
 Once the agent sends an invitation, you should see a new event of type ``cqm.ExConversationChangeNotification``. Inside the event, there is a ``conversationDetails`` object containing two dialogs. The first one is the existing messaging dialog, the second one is a new dialog with ``channelType=COBROWSE``:
 
 ```json
-...
 {
     "dialogId": "c26b9d3b-e943-42af-8047-aba830de64ea",
     "participants": [
@@ -81,8 +77,6 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
     "creationTs": 1502893041905,
     "metaDataLastUpdateTs": 1502893041905
 }
-...
-
 ```
 
 The relevant fields in this dialog are ``channelType`` and inside ``metaData`` the ``serviceId``, ``mode`` and ``sessionState`` fields. ``channelType`` always equals ``COBROWSE`` and can be used to check if the new dialog has the correct type. The ``serviceId`` is used to match Consumer and Agent and needs to be passed to the CoBrowse API on the website. ``mode`` is equal to the mode that the Agent selected. Possible modes are ``VOICE_CALL`` for voice calls and ``VIDEO_CALL`` for video calls.
