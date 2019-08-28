@@ -18,7 +18,7 @@ This tutorial explains how to start a Voice or Video Call on consumer side using
 * LivePerson account must be enabled with LiveVoice and/or LiveVideo features: ``LiveVoice.LiveVoice_Integration``, ``LiveVoice.LiveVoice_Integration``	and Site-Setting ``coapp.enabled``. If you are not sure that your account is enabled with these two features, please contact LivePerson Support.
 
 ### Important information
-The Voice & Video Call feature leverages WebRTC and tries to establish a peer to peer connection between agent and the consumer. To support calls on different devices and networks, additional video relay infrastructure is required to cover scenarios in which a peer to peer connection is not possible. It is recommended to work with the LivePerson support team to verify that your network infrastructure can support peer to peer connections. On the consumer side, this can not be guaranteed and calls might require an additional relay (TURN) server. For testing purposes, LivePerson will provide such a server using a 3rd party. For production deployments, brands can set up their own infrastructure. Your LivePerson representative can assist you with that step and also outline alternatives to hosting your own infrastructure. LivePerson keeps the right to change the use case of this service at any time in the future.  
+The Voice & Video Call feature leverages WebRTC and tries to establish a peer to peer connection between agent and the consumer. To support calls on different devices and networks, additional video relay infrastructure is required to cover scenarios in which a peer to peer connection is not possible. It is recommended to work with the LivePerson support team to verify that your network infrastructure can support peer to peer connections. On the consumer side, this can not be guaranteed and calls might require an additional relay (TURN) server. For testing purposes, LivePerson will provide such a server using a 3rd party. For production deployments, brands must either set up their own infrastructure or use a 3rd party provider. Your LivePerson representative can assist you with that step and also outline alternatives to hosting your own infrastructure. LivePerson keeps the right to change the use case of this service at any time in the future.  
 
 
 ### Step 1 - Set required Feature in Client Properties
@@ -56,6 +56,7 @@ If your account is set up correctly, you should see the following button inside 
 Once the agent sends an invitation, you should see a new event of type ``cqm.ExConversationChangeNotification``. Inside the event, there is a ``conversationDetails`` object containing two dialogs. The first one is the existing messaging dialog, the second one is a new dialog with ``channelType=COBROWSE``:
 
 ```json
+...
 {
     "dialogId": "c26b9d3b-e943-42af-8047-aba830de64ea",
     "participants": [
@@ -66,7 +67,7 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
     "channelType": "COBROWSE",
     "metaData": {
         "serviceId": "cc05f2b9-916b-496e-89fe-66a46d975ae2#7904fffd-fc68-4d93-b611-4dc06ab26bf4",
-        "mode": "shared",
+        "mode": "VIDEO_CALL",
         "expires": 1.502893131855E9,
         "sessionState": "INVITED",
         "permissions": "audio,screen,control",
@@ -80,11 +81,13 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
     "creationTs": 1502893041905,
     "metaDataLastUpdateTs": 1502893041905
 }
+...
+
 ```
 
 The relevant fields in this dialog are ``channelType`` and inside ``metaData`` the ``serviceId``, ``mode`` and ``sessionState`` fields. ``channelType`` always equals ``COBROWSE`` and can be used to check if the new dialog has the correct type. The ``serviceId`` is used to match Consumer and Agent and needs to be passed to the CoBrowse API on the website. ``mode`` is equal to the mode that the Agent selected. Possible modes are ``VOICE_CALL`` for voice calls and ``VIDEO_CALL`` for video calls.
 
-After the invitation has been received, the following event should be triggered on consumer side using the ``lpTag.events.publish`` function.
+After the invitation has been received, trigger the following event on consumer side using the ``lpTag.events.publish`` function.
 
 ```js
 lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
@@ -103,7 +106,7 @@ lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
 ```
 
 ### Step 4 - Accept/Reject call
-If the consumer decides to accept the call, the following event should be triggered in order to start the call:
+If the consumer decides to accept the call, trigger the following event in order to start the call:
 
 ```js
 lpTag.events.publish("lpCoBrowse", "cobrowseAccepted", {
@@ -121,7 +124,7 @@ lpTag.events.publish("lpCoBrowse", "cobrowseAccepted", {
 );
 ```
 
-In case the consumer rejects the invitation, you can trigger the following event to reject the invitation:
+In case the consumer rejects the invitation, trigger the following event to reject the invitation:
 
 ```js
 lpTag.events.publish("lpCoBrowse", "cobrowseDeclined", {
@@ -140,7 +143,7 @@ lpTag.events.publish("lpCoBrowse", "cobrowseDeclined", {
 ```
 
 ### Step 5 - Prepare UI
-The voice or video call UI will be rendered into a container on the website. The website developer is responsible to create a container, e.g. a ``<div>`` element on the website with a classname called ``lp_cobrowse_callscreen_container`` after the invitation has been accepted.
+The voice or video call UI will be rendered into a container on the website. The website developer is responsible to create a container, e.g. a ``<div>`` element on the website with the classname ``lp_cobrowse_callscreen_container`` directly after the invitation has been accepted - at the latest. A loading indicator can be added to the content of the container. All content will be replaced with a call UI once connected.
 
 
 ### Resuming calls after reloading the page
@@ -180,8 +183,7 @@ Error IDs:
 
 
 ### Handling hanging-up, cancelled invitation and expiry
-A call invitation can be cancelled by the agent or expires after 2 minutes if not cancelled, accepted or rejected. In case of cancelation or expiry, a new ``cqm.ExConversationChangeNotification`` event is triggered with ``CLOSED`` as ``sessionState`` property.
-The same event is triggered when the call ended.
+The following ``cqm.ExConversationChangeNotification`` event is triggered when a call ended, an invitation was cancelled by the Agent or in case the invitation expired after 2 minutes:
 
 ```json
 {
