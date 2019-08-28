@@ -257,7 +257,7 @@ Conversation Builder allows you to attach credentials to bot API integrations. W
     Attach the relevant credentials to the API integration. The bot will automatically enhance the request based on the credentials’ type and data.
 
 ### Delete an integration
-If the automation is no longer using a particular integration, you might want to delete the integration. Before doing so, make sure there are no API interactions that reference the integration.
+If the bot is no longer using a particular integration, you might want to delete the integration. Before doing so, make sure there are no integration interactions that reference the specific integration.
 
 Deleting an integration affects only the bot for which it's been added.
 
