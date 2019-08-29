@@ -31,7 +31,7 @@ Functions can be triggered in two ways:
 - Functions can be triggered by bots (automations). Users who are tasked with creating bots in Conversation Builder can easily integrate function calls within their dialog flows. Adding this kind of [integration interaction](conversation-builder-conversation-builder-interactions.html#integrations) to a dialog in a bot works just like adding any other type of integration interaction. Before this though, a more technical user must first 1) [create and deploy the function](liveperson-functions-getting-started.html) in the LivePerson Functions UI, and then 2) [add a FaaS-type integration](conversation-builder-conversation-builder-integrations.html#add-a-faas-integration) to the bot. This makes the integration available for use in an interaction.
 
   {: .important}
-  In the Functions UI, when you create a function that's intended for invocation by a bot, select "No Event" for the event. The use of FaaS events is *not* supported.
+  In the Functions UI, when you create a function that's intended for invocation by a bot, select "No Event" for the event. The use of FaaS events is *not* supported when the function is invoked by a bot.
 
 As part of the invocation, the invoker can pass a payload into the function. This payload is specific to the triggered event or bot interaction. This means that, depending on the event or bot interaction, the function will have different data available as an input.
 

@@ -31,7 +31,7 @@ Use a FaaS integration to invoke a function (`lambda`) that is deployed to LiveP
 Before you add a FaaS integration in Conversation Builder, you must create and deploy the function using the LivePerson Functions UI. For help with this, see [here](liveperson-functions-getting-started.html).
 
 {: .important}
- In the Functions UI, when you create a function that's intended for invocation by a bot, select "No Event" for the event. The use of FaaS events is *not* supported.
+ In the Functions UI, when you create a function that's intended for invocation by a bot, select "No Event" for the event. The use of FaaS events is *not* supported when the function is invoked by a bot.
 
 **To add a FaaS integration**
 

@@ -15,4 +15,4 @@ Before a function can be used in an interaction, users who are tasked with more 
 As part of the invocation, the bot can pass a payload into the function. This payload is specific to the triggered bot interaction. This means that, depending on the interaction, the function will have different data available as an input.
 
 {: .important}
-In the Functions UI, when you create a function that's intended for invocation by a bot, select "No Event" for the event. The use of FaaS events is *not* supported.
+In the Functions UI, when you create a function that's intended for invocation by a bot, select "No Event" for the event. The use of FaaS events is *not* supported when the function is invoked by a bot.
