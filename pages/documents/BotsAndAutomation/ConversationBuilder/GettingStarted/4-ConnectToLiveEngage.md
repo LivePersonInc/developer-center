@@ -97,8 +97,10 @@ Click **Save** once everything is entered.
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_12.png">
 
 #### Deploy the Bot Agent
-
 To finally connect your Bot User Agent with your LiveEngage account, you need to deploy your Bot Agent.
+
+{: .important}
+LivePerson recommends that, when you connect your bot to LiveEngage, you deploy at least two LiveEngage bot agents for a single bot. This is so the second bot agent can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more bot agents.
 
 To deploy to the Demo server environment (for testing), just hit the green play button to start. Skip to [testing](#step-13-testing-the-connection) if you do this.
 
