@@ -4,13 +4,13 @@ sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Window Customization API
 subfoldername: Samples
-
-order: 90
-
 permalink: window-customization-api-samples-css-sample.html
 indicator: both
 ---
-````css
+
+The below is an example of a full CSS file making use of the CSS classes reserved for window customization. If you load it into a webpage with the LE-tag and start a conversation, you'll see the changes these CSS classes enact.
+
+```css
 .lpc_desktop.lpc_body {
     background: #e7e4e3 !important;
 }
@@ -452,5 +452,5 @@ indicator: both
     background-size: 18px;
     height: 30px !important;
 }
-````
+```
 
