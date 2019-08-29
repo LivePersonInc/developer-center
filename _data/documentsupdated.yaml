@@ -3,7 +3,6 @@
   documents:
   - documentname: Before You Get Started
     pages:
-    - pagename: Considerations and Requirements
     - pagename: Let's Get Started
   - documentname: Essential Resources
     pages:
@@ -962,13 +961,7 @@
             - subpagename: getEngagementState
     - documentname: LE-Tag
       pages:
-        - pagename: Overview
-        - pagename: How to Use LiveEngage Tag Events
         - pagename: Events
-          subpages:
-            - subpagename: Visitor Flow Events
-            - subpagename: Engagement Events
-            - subpagename: Engagement Window Events
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
