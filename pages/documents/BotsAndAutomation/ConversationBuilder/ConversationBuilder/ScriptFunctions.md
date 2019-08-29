@@ -617,6 +617,6 @@ These functions retrieve session-scoped variables that were set via the [Web Vie
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `getWebViewVariable(variableName)` | _variableName_ - the name of the variable to retrieve | string |
-| `getWebViewVariables()` | none | string |
+| `getWebViewVariables()` | none | object:list of strings |
 
 #### Example
