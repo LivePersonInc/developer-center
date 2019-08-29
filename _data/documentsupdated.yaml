@@ -351,6 +351,7 @@
       - pagename: Samples
         subpages:
         - subpagename: CSS Sample
+      - pagename: Taglet
 - categoryname: Contact Center Management
   image: contact-center
   documents:
