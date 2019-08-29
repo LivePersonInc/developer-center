@@ -8,36 +8,40 @@ indicator: both
 ---
 # Window Customization
 
-You can easily customize the unified window yourself by using 
-these classes and examples. Classes are broken up into "blocks" and "elements".
+You can easily customize the unified window yourself by using these classes and examples. Classes are broken up into "blocks" and "elements".
 
 
 ### Naming convention
-`lpc` namespace for customization api
 
-`block` component of the window
+`lpc` - general namespace for the customization classes
 
-`element` the specific item within the block   
+`block` - a component of the window
 
-`modifier` defines the appearance, state, or behavior of a block or element
+`element` - a specific item within a block   
+
+`modifier` - defines the appearance, state, or behavior of a block or element (for example, `maximized` vs. `minimized`)
 
     lpc_block__element_modifier
     
     lpc_block_modifier
     
 ### Window
-The primary container for all elements
 
-available modifiers
+The primary container for all elements.
+
+Available modifiers:
+
 `maximized` `minimized` `slider-open` 
 
-````css
+```css
 .lpc_window {
 
 }
-````
+```
+
 ### Maximized Header
-````css
+
+```css
 .lpc_maximized-header {
 
 }
@@ -81,10 +85,11 @@ available modifiers
 .lpc_maximized-header__icon-asset {
     
  }
-````
+```
 
 ### Minimized Header
-````css
+
+```css
 .lpc_minimized-header {
 
 }
@@ -124,30 +129,35 @@ available modifiers
 .lpc_minimized-header__notification-counter {
 
 }
-````
+```
 
 ### Body
-Full area below header
 
-available modifiers `maximized` `slider-open`
-````css
+Full area below the header.
+
+Available modifiers: `maximized` `slider-open`
+
+```css
 .lpc_body {
 
 }
-````
+```
 
 ### Layout
-area between header and footer
 
-````css
+The area between the header and the footer.
+
+```css
 .lpc_layout {
 
 }
-````
+```
 
 ### Banner Image
-Top banner logo
-````css
+
+Top banner logo.
+
+```css
 .lpc_banner-image-area {
 
 }
@@ -163,10 +173,13 @@ Top banner logo
 .lpc_banner-image-area__link {
 
 }
-````
+```
+
 ### Hero Image
-hero image of window
-````css
+
+Hero image of the window.
+
+```css
 .lpc_hero-image-area {
     
 }
@@ -178,26 +191,36 @@ hero image of window
 .lpc_hero-image-area__image {
 
 }
-````
+```
+
 ### History spinner
-The loading icon when getting conversation history
-````css
+
+The loading icon when waiting for the conversation history to be retrieved.
+
+```css
 .lpc_history-spinner {
 
 }
-````
+```
+
 ### Transcript
-Transcript area
-````css
+
+Transcript area.
+
+```css
 .lpc_transcript {
 
 }
-````
-### Message Area
-element entry into transcript
+```
 
-available modifiers `agent` `visitor` `system` `visitor-fs` `avatar-shown` `avatar-hidden`
-````css
+### Message Area
+
+Element entry into transcript.
+
+
+Available modifiers: `agent` `visitor` `system` `visitor-fs` `avatar-shown` `avatar-hidden`.
+
+```css
 .lpc_message-area {
 
 }
@@ -213,13 +236,16 @@ available modifiers `agent` `visitor` `system` `visitor-fs` `avatar-shown` `avat
 .lpc_message-area__indicator {
         
 }
-````
+```
+
  
 ### Message
-received message 
 
-Available modifiers `agent` `visitor` `system` `card` `visitor-fs` `avatar-shown` `avatar-hidden`
-````css
+A received message in the window, whether agent or visitor (see modifiers).
+
+Available modifiers: `agent` `visitor` `system` `card` `visitor-fs` `avatar-shown` `avatar-hidden`.
+
+```css
 .lpc_message {
     
 }
@@ -227,11 +253,13 @@ Available modifiers `agent` `visitor` `system` `card` `visitor-fs` `avatar-shown
 .lpc_message__text {
         
  }
-````
+```
+
 ### Message Tail
 
-Available modifiers `agent` `visitor` `system` `visitor-fs`
-````css
+Available modifiers: `agent` `visitor` `system` `visitor-fs`.
+
+```css
 .lpc_message-tail {
     
 }
@@ -239,21 +267,25 @@ Available modifiers `agent` `visitor` `system` `visitor-fs`
 .lpc_message-tail__border {
     
 }
-````
+```
 
 ### Typing Indication
-Typing indicator
 
-Available modifiers `agent`
-````css
+Typing indicator.
+
+Available modifiers: `agent`.
+
+```css
 .lpc_typing-indication {
 
 }
-````
+```
 
 ### Action Menu
+
 Menu which is accessed with the footer action button. Appears in keyboard area.
-````css
+
+```css
 .lpc_menu {
 
 }
@@ -265,10 +297,13 @@ Menu which is accessed with the footer action button. Appears in keyboard area.
 .lpc_menu__banner {
 
 }
-````
+```
+
 ### Composer
-area to create message from user
-````css
+
+Area in which the user composes their messages.
+
+```css
 .lpc_composer {
 
 }
@@ -304,10 +339,13 @@ area to create message from user
 .lpc_composer__file-attachment-button-asset {
     
 }
-````
+```
+
 ### Slider 
-Area where a widget is loaded when opened including header
-````css
+
+Area where a widget is loaded when opened, including its header.
+
+```css
 .lpc_slider {
 
 }
@@ -315,11 +353,11 @@ Area where a widget is loaded when opened including header
 .lpc_slider__body {
 
 }
-````
+```
 
 ### Slider Header
 
-````css
+```css
 .lpc_slider-header {
 
 }
@@ -343,10 +381,13 @@ Area where a widget is loaded when opened including header
 .lpc_slider-header__text {
 
 }
-````
+```
+
 ### Confirmation Dialog
-Prompt for user interaction
-````css
+
+Prompt for user interaction.
+
+```css
 .lpc_confirmation-dialog {
 
 }
@@ -362,12 +403,15 @@ Prompt for user interaction
 .lpc_confirmation-dialog__title {
 
 }
-````
-### Card
-Structured Content
+```
 
-Available modifiers `horizontal` `vertical`
-````css
+### Card
+
+Structured Content card.
+
+Available modifiers: `horizontal` `vertical`.
+
+```css
 .lpc_card {
 
 }
@@ -387,20 +431,25 @@ Available modifiers `horizontal` `vertical`
 .lpc_card__text {
         
 }
-````
+```
 
 ### Survey Area Wrapper
-used to define survey common styles. Primarily background  
-````css
+
+Used to define survey common styles. Primarily background for the survey.
+
+```css
 .lpc_survey-area-wrapper {
 
 }
-````
-### Survey Area
-Survey Area of window
+```
 
-Available modifiers: `logo`
-````css
+### Survey Area
+
+Survey Area of the window.
+
+Available modifiers: `logo`.
+
+```css
 .lpc_survey-area {
 
 }
@@ -444,25 +493,36 @@ Available modifiers: `logo`
 .lpc_survey-area__close-button {
     
 }
-````
+```
+
 ### Device Types
-To specify different device type css, chain the below selectors to the below class names. If no device type class is chained, it will apply to all devices,
-````
+
+To specify different device type CSS, chain the below selectors to the above class names. If no device type class is chained, it will apply to all devices.
+
+```
 .lpc_desktop
 .lpc_mobile
 .lpc_tablet
-````
+```
+
 ### Tips and Best Practices
+
 ### Overriding styles
-To actually override the existing styles of a block or an element, it is suggested using the `!important` property for each style.
-````css
+
+To actually override the existing styles of a block or an element, it is suggested to use the `!important` property for each style.
+
+For example:
+
+```css
 .lpc_desktop.lpc_window_maximized {
     width: 400px !important;
 }
-````
+```
+
 In the unlikely case that `!important` does not override the style, we suggest using `#lpChat` as a parent selector so there will be more priority.
-````css
+
+```css
 #lpChat .lpc_desktop.lpc_window_maximized {
     width: 400px !important;
 }
-````    
+``` 
