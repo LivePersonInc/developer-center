@@ -170,6 +170,12 @@ body {
   width: 50px;
 }
 
+@-moz-document url-prefix() {
+    .cardImage {
+        height: 80px;
+    }
+}
+
 .cardContent {
   display: flex;
   margin-left: 24px;

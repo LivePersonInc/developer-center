@@ -22,7 +22,7 @@ Entities are usually one or two words as they represent groups of simple objects
 
 ### Built In entities
 
-The platform automatically detects the entities listed below. Using the Assistant tool, you can assign these default entities to User Interactions and have the automation populate a Slot with the user's input to the question to which the entity was assigned.
+The platform automatically detects the entities listed below. Using the [Assist](conversation-builder-conversation-builder-assist.html) tool, you can assign these default entities to User Interactions and have the automation populate a [Slot](conversation-builder-conversation-builder-variables-slots.html#slots) with the user's input to the question to which the entity was assigned.
 
 * PERSON - Names of people, persons.
 
