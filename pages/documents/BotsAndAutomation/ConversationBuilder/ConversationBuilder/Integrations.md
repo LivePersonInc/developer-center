@@ -23,10 +23,15 @@ An integration can be one of the following types:
 - **Email**: Use this type to send an email.
 - **Knowledge Base**: Use this type to search a knowledge base for articles.
 - **LivePerson Agent Escalation**: Use this type to transfer the conversation to a human agent or another bot. For best practices when working with this integration type, see [here](conversation-builder-best-practices-transfer-to-an-agent-or-bot.html).
-- **FaaS**: Use this type to invoke a function (`lambda`) that is deployed to LivePerson's Function as a Service (FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with a FaaS integration.
+- **FaaS**: Use this type to invoke a function (`lambda`) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with a FaaS integration.
+
+### Add a LivePerson Agent Escalation integration
+
+{: .important}
+The **Message To User** field is required, but if you don't want to send a message, you can enter "BLANK_MESSAGE". This satisfies the underlying, system requirement for a message, but it doesn't actually send one.
 
 ### Add a FaaS integration
-Use a FaaS integration to invoke a function (`lambda`) that is deployed to LivePerson's Function as a Service (FaaS) platform.
+Use a FaaS integration to invoke a function (`lambda`) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform.
 
 Before you add a FaaS integration in Conversation Builder, you must create and deploy the function using the LivePerson Functions UI. For help with this, see [here](liveperson-functions-getting-started.html).
 
