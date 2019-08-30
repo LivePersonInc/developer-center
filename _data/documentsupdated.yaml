@@ -542,18 +542,18 @@
       - pagename: Monitoring
         subpages:
           - subpagename: Logs
-      - pagename: Bot Invocations
       - pagename: Scheduled Invocations
       - pagename: External Invocations
         subpages:
           - subpagename: Overview
           - subpagename: Client Credentials
           - subpagename: Authorization Code
-      - pagename: Use Cases
+      - pagename: LivePerson Integrations
         subpages:
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
+          - subpagename: Conversation Builder
 
 
 - categoryname: Historical Data

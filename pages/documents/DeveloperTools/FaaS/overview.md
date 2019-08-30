@@ -24,16 +24,7 @@ Functions (or `lambdas`) are code snippets that accomplish certain tasks. A deve
 
 ### Invocation
 
-Functions can be triggered in two ways:
-
-- Functions can be triggered by services that have integrations with the Functions platform. Depending on the type of function, different triggers will be used. These triggers can be an internal LivePerson event, for example, when a new conversation is started or a CSAT Post Survey is completed.
-
-- Functions can be triggered by bots (automations). Users who are tasked with creating bots in Conversation Builder can easily integrate function calls within their dialog flows. Adding this kind of [integration interaction](conversation-builder-conversation-builder-interactions.html#integrations) to a dialog in a bot works just like adding any other type of integration interaction. Before this though, a more technical user must first 1) [create and deploy the function](liveperson-functions-getting-started.html) in the LivePerson Functions UI, and then 2) [add a FaaS-type integration](conversation-builder-conversation-builder-integrations.html#add-a-faas-integration) to the bot. This makes the integration available for use in an interaction.
-
-  {: .important}
-  Be aware that Conversation Builder always invokes a function by its ID, which means that the use of events to invoke a function within a conversation flow isn't supported.
-
-As part of the invocation, the invoker can pass a payload into the function. This payload is specific to the triggered event or bot interaction. This means that, depending on the event or bot interaction, the function will have different data available as an input.
+Functions are triggered by services that have integrations with the Functions platform. Depending on the type of function, different triggers will be used. These triggers can be an internal LivePerson event, for example when a new conversation is started or a CSAT Post Survey is completed. As part of the invocation, the integrated invokers can pass a payload into the function. This payload is specific to the triggered event. This means that depending on the event, the function will have different data available as an input.
 
 ### Response / Action
 

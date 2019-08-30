@@ -1,10 +1,11 @@
 ---
-pagename: Bot Invocations
+pagename: Conversation Builder
 keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
-permalink: liveperson-functions-bot-invocations.html
+subfoldername: Use Cases
+permalink: liveperson-functions-use-cases-conversation-builder.html
 indicator: both
 ---
 
@@ -13,6 +14,3 @@ Users who are tasked with creating bots in Conversation Builder can easily integ
 Before a function can be used in an interaction, users who are tasked with more technical work in Conversation Builder must first 1) [create and deploy the function](liveperson-functions-getting-started.html) in the LivePerson Functions UI, and then 2) [add a FaaS-type integration](conversation-builder-conversation-builder-integrations.html#add-a-faas-integration) to the bot. This makes the integration available for use in an interaction.
 
 As part of the invocation, the bot can pass a payload into the function. This payload is specific to the triggered bot interaction. This means that, depending on the interaction, the function will have different data available as an input.
-
-{: .important}
-Be aware that Conversation Builder always invokes a function by its ID, which means that the use of events to invoke a function within a conversation flow isn't supported.
