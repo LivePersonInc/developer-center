@@ -1,3 +1,14 @@
+---
+pagename: Creating a P12 File
+keywords:
+sitesection: Documents
+categoryname: "Security & Authenication"
+documentname: MTLS API
+indicator: both
+permalink: mtls-creating-a-p12-file.html
+---
+
+
 ## General explanation
 The following is a step by step walkthrough on how to create a certificate to work with MTLS Api.
 
@@ -44,6 +55,3 @@ openssl x509 -req -days 365 -in {csrName}.csr -CA {caCertName}.crt -CAkey {caKey
 ```
 openssl pkcs12 -export -out {p12Name}.{p12/pfx} -inkey {privateKeyName}.key -in {certificateName}.crt
 ```
-
-
-

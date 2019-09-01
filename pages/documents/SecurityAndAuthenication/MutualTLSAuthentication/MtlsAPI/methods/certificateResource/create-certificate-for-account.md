@@ -25,7 +25,7 @@ This API creates a certificate for a specific account ID.
 
 **Request Body**
 
-```JSON
+```json
 [
   {
   	"name":"myCert1",
@@ -59,7 +59,7 @@ This API creates a certificate for a specific account ID.
 
 For example:
 
-```
+```json
 {  
    "successfulySavedCertificates":[  
       {  
