@@ -323,8 +323,7 @@ function sidebarCollapse(url) {
 		$(".innerfolder > .active > button").addClass("clicked");
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
-		if (currentPage.isInViewport() && !scrollOnce) {
-		scrollOnce = true;
+		if (!currentPage.isInViewport()) {
 		$('#mysidebar').animate({
 			scrollTop: currentPage.offset().top - 200
 		}, 2000);
