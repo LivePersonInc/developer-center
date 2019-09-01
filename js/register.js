@@ -97,14 +97,37 @@ function validateInfo (){
   } else {
       $('#passwordErrorMatch').hide();
   }
+
+  const includesSpecialCharacter = /.*[~!@#$%^&*()<>,.;:/?=]/;
+  const includesUppercase = /[A-Z]/;
+  const includesNumber = /\d/;
+
+  if(!includesSpecialCharacter.test(password)) {
+    $('#passwordSpecialCharacterNeeded').show();
+  } else {
+    $('#passwordSpecialCharacterNeeded').hide();
+  }
+
+  if(!includesUppercase.test(password)) {
+    $('#passwordUppercaseNeeded').show();
+  } else {
+    $('#passwordUppercaseNeeded').hide();
+  }
+
+  if(!includesNumber.test(password)) {
+    $('#passwordNumberNeeded').show();
+  } else {
+    $('#passwordNumberNeeded').hide();
+  }
+
   //check that password meets requirements
-  passwordStrength = new RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&])');
+  passwordStrength = new RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()<>,.;:/?=])');
   if (password.match(passwordStrength)){
     $('#passwordErrorStrength').hide();
     passwordPassed = true;
   } else {
     $('#passwordErrorStrength').show();
-    passwordPassed = false
+    passwordPassed = false;
   }
     //make sure all fields are filled
   if (firstName && lastName && region && emailAddress && password && confirmPassword) {
