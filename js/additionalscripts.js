@@ -284,7 +284,7 @@ function mobileHamburger() {
 }
 
 $.fn.isInViewport = function() {
-  var elementTop = $(this).offset().top;
+  var elementTop = $(this).offset().top - 150;
   var elementBottom = elementTop + $(this).outerHeight();
 
   var viewportTop = $(window).scrollTop();
@@ -293,7 +293,6 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-	let scrollOnce;
 //Refactored this a bit from its original nightmare-state. Needs improvement.
 function sidebarCollapse(url) {
 	var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
@@ -327,6 +326,7 @@ function sidebarCollapse(url) {
 		$('#mysidebar').animate({
 			scrollTop: currentPage.offset().top - 200
 		}, 2000);
+			$(currentPage).parents('.highlightlink').trigger('click');
 	};
 	};
 };
