@@ -18,7 +18,7 @@ Most user actions within LiveEngage can be performed programmatically using the 
 Also, if you have not already done so:
 
 1. Read the [API Terms of Use](https://www.liveperson.com/policies/apitou).
-2. Read the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
+2. Read the [Systems Requirements and Language Support](https://knowledge.liveperson.com/admin-settings-system-requirements.html) guide.
 
 And before you can do anything, you must do a few things first. By the end of this Getting Started guide, you will be ready to customize and implement features in LiveEngage.
 
