@@ -174,18 +174,8 @@ This method retrieves a conversation from the [Messaging Interactions API](https
   // import FaaS Toolbelt
   const { Toolbelt } = require("lp-faas-toolbelt");
 
-  // set API Key credentials
-  const apiCredentials = {
-    oauthConsumerKey: '...',
-    oauthConsumerSecret: '...',
-    oauthAccessToken: '...',
-    oauthAccessTokenKey: '...',
-  }
-
-  // Create instance with API credentials
-  const conversationUtil = Toolbelt.ConversationUtil(
-    apiCredentials
-  );
+  // Create instance, uses credentials of secret "lp-faas-default-app-key"
+  const conversationUtil = Toolbelt.ConversationUtil();
 
   // Get conversation
   conversationUtil.getConversationById(conversationId)
@@ -203,16 +193,8 @@ This method scans a conversation that has been retrieved with `getConversationBy
 // import FaaS Toolbelt
 const { Toolbelt } = require("lp-faas-toolbelt");
 
-// set API Key credentials
-const apiCredentials = {
-  oauthConsumerKey: "...",
-  oauthConsumerSecret: "...",
-  oauthAccessToken: "...",
-  oauthAccessTokenKey: "..."
-};
-
-// Create instance with API credentials
-const conversationUtil = Toolbelt.ConversationUtil(apiCredentials);
+// Create instance, uses credentials of secret "lp-faas-default-app-key"
+const conversationUtil = Toolbelt.ConversationUtil();
 
 // Get conversation
 const conversation = await conversationUtil.getConversationById(conversationId);
@@ -274,44 +256,34 @@ This method replaces all files of a conversation from LivePerson's [file storage
 **Sample Usage**
 
 ```javascript
-  // import FaaS Toolbelt
-  const { Toolbelt } = require("lp-faas-toolbelt");
+// import FaaS Toolbelt
+const { Toolbelt } = require("lp-faas-toolbelt");
 
-  // set API Key credentials
-  const apiCredentials = {
-    oauthConsumerKey: '...',
-    oauthConsumerSecret: '...',
-    oauthAccessToken: '...',
-    oauthAccessTokenKey: '...',
-  }
+// set file storage credentials (get from Account Manager)
+const fileStorageCredentials = {
+  username: '...',
+  password: '...'
+}
 
-  // set file storage credentials (get from Account Manager)
-  const fileStorageCredentials = {
-    username: '...',
-    password: '...'
-  }
+// Create instance, uses credentials of secret "lp-faas-default-app-key"
+const conversationUtil = Toolbelt.ConversationUtil();
 
-  // Create Conversation Util instance with API credentials
-  const conversationUtil = Toolbelt.ConversationUtil(
-    apiCredentials
-  );
+// Create GDPR Util instance
+const gdprUtil = Toolbelt.GDPRUtil();
+const shouldReplace = (filePath) => ... // filter here by returning boolean
+const replacementFile = {
+  body: Buffer.from('...', 'base64'), // create file from base64
+  contentType: 'image/png',
+};
 
-  // Create GDPR Util instance
-  const gdprUtil = Toolbelt.GDPRUtil();
-  const shouldReplace = (filePath) => ... // filter here by returning boolean
-  const replacementFile = {
-    body: Buffer.from('...', 'base64'), // create file from base64
-    contentType: 'image/png',
-  };
-
-  // Get conversation and replace files
-  conversationUtil.getConversationById(conversationId)
-    .then(conversation => gdprUtil.replaceConversationFiles(
-          conversation,
-          fileStorageCredentials,
-          shouldReplace, //(optional) defaults to (path) => true
-          replacementFile, //(optional) defaults to a black 1px*1px png
-    ))
-    .then(replacedFiles => //TODO: react on the response)
-    .catch(err => //TODO: React to error);
+// Get conversation and replace files
+conversationUtil.getConversationById(conversationId)
+  .then(conversation => gdprUtil.replaceConversationFiles(
+        conversation,
+        fileStorageCredentials,
+        shouldReplace, //(optional) defaults to (path) => true
+        replacementFile, //(optional) defaults to a black 1px*1px png
+  ))
+  .then(replacedFiles => //TODO: react on the response)
+  .catch(err => //TODO: React to error);
 ```
