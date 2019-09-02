@@ -13,13 +13,13 @@ permalink: connector-api-webhooks-notification-protocol.html
 
 ### Protocol and Security
 
-* The Webhooks (WH) notifications are sent as (REST) POST requests in the HTTP protocol over SSL only (HTTPS). Therefore, the application endpoint is required to be set up with a valid web-server SSL certificate.
+* Webhooks notifications are sent as POST requests over TLS. Every endpoint is required to be set up with a valid server side SSL certificate supporting at least TLS version 1.3.
 
-* Each WH notification request includes LivePerson standard headers which have the header name prefix of “**x-liveperson-**”.  
+* Each Webhooks notification request contains LivePerson standard headers which have the header name prefix of “**x-liveperson-**”.  
 
-* The application endpoint is expected to immediately respond to each a notification request. A response delay of over 10 seconds will lead to a WH (client-side) timeout of that notification request.
+* Each endpoint is expected to immediately respond to a request. A response delay of over 10 seconds will lead to a client-side read timeout. A read timeout is considered a failure which triggers the retry mechanism.
 
-* The application endpoint is expected to respond with either a 200 or 201 response code to each a notification request. Any other response code will be considered as a notification request failure.
+* An endpoint is expected to respond with either a 200 or 201 response code to a notification request. Any other response code will be considered as a notification request failure which triggers the retry mechanism.
 
 ### Authentication
 
