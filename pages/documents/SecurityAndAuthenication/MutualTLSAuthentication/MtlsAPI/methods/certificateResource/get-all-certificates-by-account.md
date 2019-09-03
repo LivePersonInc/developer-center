@@ -44,8 +44,6 @@ This API gets all certificates from a specific account by account ID.
 | 500  | Internal Server Error |
 
 
-**Response Headers**
-
 **Response Body**
 
 for example:
