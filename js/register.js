@@ -136,13 +136,15 @@ function validateInfo (){
     $('#allFields').show();
   }
 
+  const isValidForm = (firstName && lastName && region && emailAddress && isValidEmail && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword);
+
   // current acceptance criteria as of 9/3/19 for hotjar form submit metrics are to tally an error for
   //  "Anything that would cause a submit to fail (i.e. both invalid form values and network errors)."
-  if (!passwordPassed && window.hj) {
+  if (!isValidForm && window.hj) {
     window.hj('formSubmitFailed');
   }
   //if all fields were filled and the passwords match, call the request to create an account
-  if ((firstName && lastName && region && emailAddress && isValidEmail && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword)) {
+  if (isValidForm) {
 
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
