@@ -52,8 +52,6 @@ This end-point receives information formatted as `form-data`. The below is an ex
 | 500  | Internal Server Error |
 
 
-**Response Headers**
-
 **Response Body**
 
 for example:
