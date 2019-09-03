@@ -51,7 +51,6 @@ same body as the client sends to the original endpoint.
 | 500  | Internal Server Error |
 
 
-**Response Headers**
 
 **Response Body**
 
