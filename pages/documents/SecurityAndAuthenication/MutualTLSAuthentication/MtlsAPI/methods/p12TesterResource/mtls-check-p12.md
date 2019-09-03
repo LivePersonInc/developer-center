@@ -62,7 +62,6 @@ Value: Contains the same body as the client sends for the original endpoint. Not
 | 500  | Internal Server Error |
 
 
-**Response Headers**
 
 **Response Body**
 
