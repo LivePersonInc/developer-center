@@ -23,8 +23,6 @@ This API gets a certificate by account ID and certificate ID.
 |:------|        :--------  |
 |Authorization|    Contains token string to allow request authentication and authorization.  |
 
-**Request Body**
-
 
 **Path Parameters**
 
@@ -44,8 +42,6 @@ This API gets a certificate by account ID and certificate ID.
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
 
-
-**Response Headers**
 
 **Response Body**
 
