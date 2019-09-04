@@ -170,7 +170,7 @@ function postRequest () {
   axios({
     method: 'post',
     url: URL,
-    headers: {'x-api-key': 'GaFtPrUlIE9KusPOWUzSu4DQTG0BHz264ep4RqKo', 'Content-Type': 'application/json', 'Accept': 'application/json'},
+    headers: {'x-api-key': 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW', 'Content-Type': 'application/json', 'Accept': 'application/json'},
     data: user
   })
   .then(function (response) {
