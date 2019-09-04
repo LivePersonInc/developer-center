@@ -79,6 +79,8 @@ This section contains API details that are common to every API’s resource and 
 | transferToAgentMaxWaitInSeconds | Maximum wait time for transferred conversation to wait in queue for the assigned agent | Integer | Optional ||
 | fallbackSkill | Allowed fallback skill for this skill | Long | Optional ||
 | fallbackWhenAllAgentsAreAway | Setting per skill whether or not to use fallback skill when all agents are away | Boolean | Optional | Default: true |
+| agentSurveyForMsgTimeoutInMinutes | The time between the end of the conversation and until the agent survey is expired | Integer | Optional || 
+| agentSurveyForMsgId | The agent survey for messaging id this skill is assigned to | Long | Optional || 
 
 ### Entity Example
 
