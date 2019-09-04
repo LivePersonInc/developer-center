@@ -294,6 +294,7 @@
         - subpagename: Client Properties
         - subpagename: Avoid Websocket Headers
         - subpagename: CoBrowse
+        - subpagename: Voice and Video Calls
         - subpagename: File Sharing
       - pagename: Samples
         subpages:
@@ -542,6 +543,7 @@
       - pagename: Monitoring
         subpages:
           - subpagename: Logs
+          - subpagename: Metrics
       - pagename: Scheduled Invocations
       - pagename: External Invocations
         subpages:
@@ -553,6 +555,7 @@
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
+          - subpagename: Conversational Commands
 
 
 - categoryname: Historical Data
