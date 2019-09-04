@@ -18,7 +18,7 @@ This API returns the metadata related to the deletion requests that were submitt
 
  |Method|      URL|
  |:--------  |:---  |
- |GET|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{site_id}/personal-data-deletion(/{request_id}) |
+ |GET|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{site_id}/personal-data-deletion/{request_id} |
 
 **Request Headers**
 

@@ -88,7 +88,7 @@ To route to skills, you will need the SkillIds used by LiveEngage. To retrieve a
 1. Login to LiveEngage and then go to Users tab and then Skills
 2. Then click on Actions and then export all
 
-    <img class="fancyimage" width="600" src="img/maven/Get SkillID From LiveEngage.png">
+    <img class="fancyimage" width="600" src="img/maven/Get SkillID from LiveEngage.png">
 
 3. Save the zip file and then open Skills.csv 
 4. All Skill IDs with associated skill name should be in this file. Copy and paste the skill IDs into your policy to transfer to a skill.

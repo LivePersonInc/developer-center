@@ -197,7 +197,7 @@ Type: long number</td>
   </tr>
   <tr>
     <td>ac-revision</td>
-    <td>Account config object type collection revision</td>
+    <td>This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.</td>
   </tr>
   <tr>
     <td>location</td>

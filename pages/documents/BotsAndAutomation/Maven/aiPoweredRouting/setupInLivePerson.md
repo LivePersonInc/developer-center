@@ -23,7 +23,7 @@ A bot needs to be created in LiveEngage for Maven to receive conversations and t
 
 1. Login to LiveEngage, and go to the Users tab, click Action and select Add
 
-    <img class="fancyimage" width="600" src="img/maven/Maven bot 1.png">
+    <img class="fancyimage" width="600" src="img/maven/Maven Bot 1.png">
 
 2. Select bot type and type in a name (e.g. mavenBot)
 

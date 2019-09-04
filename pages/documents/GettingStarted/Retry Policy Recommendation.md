@@ -1,22 +1,23 @@
 ---
-pagename: Overview
+pagename: Retry Policy Recommendations
 redirect_from:
   - guides-retry-policy.html
+  - retry-and-keepalive-best-practices-overview.html
 Keywords:
 sitesection: Documents
-categoryname: "Getting Started"
+categoryname: "Essential Resources"
 documentname: Retry and KeepAlive Best Practices
 
 level-order: 11
 order: 10
-permalink: retry-and-keepalive-best-practices-overview.html
+permalink: essential-resources-retry-policy-recommendations.html
 root-link: true
-indicator: both
+indicator: both  
 ---
 
 Each component in a network can return an error; whether it’s your local environment or in the cloud, applications can fail. These failures can result from a maintenance activity, a service incident, or a random network hiccup on the server or client side.
 
-For increased reliability and stability of an application, add a retry mechanism for API calls.  If an error returns, the mechanism makes sure that the application makes another attempt to retrieve the relevant information. 
+For increased reliability and stability of an application, add a retry mechanism for API calls.  If an error returns, the mechanism makes sure that the application makes another attempt to retrieve the relevant information.
 
 Below you can find LivePerson best practices to handle errors:
 
