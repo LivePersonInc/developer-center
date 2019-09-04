@@ -3,7 +3,7 @@ pagename: 4 - Connect to LiveEngage
 redirect_from: conversation-builder-getting-started-getting-started-part-4.html
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Getting Started
 permalink: conversation-builder-getting-started-4-connect-to-liveengage.html
@@ -14,7 +14,7 @@ Now we will walk through how to link your automation to LiveEngage, ending with 
 
 ### Step 10: Configure LiveEngage
 
-To connect an automation to LiveEngage, we first need leave the Conversation Builder platform to configure a LiveEngage Agent. 
+To connect an automation to LiveEngage, we first need leave the Conversation Builder platform to configure a LiveEngage Agent.
 
 #### Setup a New LiveEngage Account:
 
@@ -130,65 +130,25 @@ Let's now set up an Integration to transfer the user to a human agent in LiveEng
 
 Return to your automation in Conversation Builder. Navigate to the Integrations area.
 
-Click the **+** icon in the bottom-left corner to create a new API with the following parameters. 
+Click the **+** icon in the bottom-left corner to create a new API with the following parameters.
 
-* **Integration Name**: Escalation
+* **Integration Name**: Escalation (or similar)
 
-* **Response Data Variable Name**: Escalation
+* **Response Data Variable Name**: Escalation (or similar)
 
-* **Method**: POST
+* **Integration Type**: LivePerson Agent Escalation
 
-* **URL**: 
+* **Agent Skill Name**: The Name of Your Human Skill
 
-  | Server Environment | URL endpoint |
-  | --- | --- |
-  | US | `https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
-  | US (If accessing from LiveEngage automation tab) | `https://va.bc-bot.liveperson.net/botservice-0.1/botcentral/livePersonAgent` |
-  | Europe | `https://platformservice-eu.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
-  | APAC | `https://platformservice-ap.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
+* **Agent Skill Id**: The ID Number of Your Human Skill
 
-
-* **Request Headers**:
-
-  <table>
-    <thead>
-    <tr>
-      <th>Key</th>
-      <th>Value</th>
-    </tr>
-    </thead><tbody>
-    <tr>
-      <td>Authorization</td>
-      <td>YOUR PERMANENT API ACCESS KEY<br>
-        This is found under your user account settings here:<br>
-        <img style="width:300px" src="img/ConvoBuilder/helloworld/apiaccess.png"><br>
-        Then tap on the API tab and copy the API Access Key<br>
-        <img style="width:300px" src="img/ConvoBuilder/helloworld/permapikey.png">
-      </td>
-    </tr>
-    </tbody>
-  </table>
-
-
-* **Post Body**:
-
-  ```json
-  {
-  "userPlatformId" : "{$chatBotUserPlatformId}",
-  "chatBotId": "{$chatBotId}",
-  "message": "{$botContext.transferMessage}",
-  "conversationId": "{$botContext.convId}",
-    "agentSkillName": "<<ENTER SKILL NAME HERE>>",
-    "agentSkillId": "<<ENTER SKILL ID HERE>>"
-  }
-  ```
-	
+* **Message to User**: A Message to be Displayed to User Prior to Escalation
 
 **Save** the API settings.
 
-The `agentSkillName` and `agentSkillID` should be set to the Human skill that you created [at the beginning of this tutorial](#step-10-configure-liveengage).
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/bestPractices/LivePersonAgentEscalationFields.png">
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/createescalationapi.png">
+The `Agent Skill Name` and `Agent Skill Id` should be set to the Human skill that you created [at the beginning of this tutorial](#step-10-configure-liveengage) or could be set using varibles for a more dynamic experience.
 
 Now we can return to the Dialog editor by tapping on Dialogs on the top of the workspace.
 
@@ -198,11 +158,11 @@ To handle the flow for the Agent Handoff we need to create a new regular dialog 
 
 In the User Says interaction, type "I want to speak to an agent". In the Interaction Details > Settings we can create a pattern with alternates for keywords like `*(agent|representative|help|human)*`.
 
-Next, we need to add our Integration interaction and select "Escalation" from the drop down. 
+Next, we need to add our Integration interaction and select "Escalation" from the drop down.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_345.png">
 
-For this next part, we will need to leverage some JavaScript code to set some variables. While selected on the Integration interaction, tap on the CODE tab in the interaction details and then tap on the **+** icon next to Pre-Process Code. This will launch a JavaScript code window. 
+For this next part, we will need to leverage some JavaScript code to set some variables. While selected on the Integration interaction, tap on the CODE tab in the interaction details and then tap on the **+** icon next to Pre-Process Code. This will launch a JavaScript code window.
 
 <!--<img style="width:300px" src="img/ConvoBuilder/helloworld/selectescalation.png">-->
 

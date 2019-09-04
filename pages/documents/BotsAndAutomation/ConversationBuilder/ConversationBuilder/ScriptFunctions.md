@@ -3,14 +3,16 @@ pagename: Scripting Functions
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
 permalink: conversation-builder-conversation-builder-scripting-functions.html
 indicator: both
 ---
 
-Functions are modules of code that are used for accomplishing a certain task programatically. With few exceptions, functions can be used in any of the preProcess Code, postProcess Code or the processUser Response JavaScript code panels.
+Functions are modules of code that are used for accomplishing a certain task programatically. 
+
+With few exceptions, functions can be used in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interaction-details.html#process-user-response) JavaScript code panels.
 
 **Please note:**
 
@@ -63,6 +65,81 @@ if (count > 10) {
   botContext.sendMessage('Sorry, you dont have any items with you... ');
 }
 ```
+
+### Get Conversation ID
+
+The Get Conversation ID function will retrieve the conversation ID for the current conversation.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getConversationId()` | None | Conversation ID (string) |
+
+#### Example
+
+The following example will store the conversation ID in a variable inside your current pre/post process code call "convId". It will then save this value in a bot session variable.
+
+```javascript
+// store the conversation id in a variable inside your current pre/post process code
+var convId = botContext.getConversationId();
+
+// save this in a bot session variable 
+botContext.setBotVariable("conversationId", convId, true, false);
+```
+
+The bot session variable can then be accessed inside subsequent interactions or integrations using the following syntax:
+
+`{$botContext.conversationId}`
+
+<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_0.png">
+
+### Get Current and Previous Skills
+
+Used to add previous and current skillIds to the botContext. If the conversation was transferred to the bot, you can track the previous skill Id that the consumer came from.
+
+{: .important}
+Previous Skill Id only works for Messaging. If used in a Chat conversation, it will be set to the same ID as the current Skill ID.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getLPEngagementAttribute()` | `"currentSkillId"`, `"previousSkillId"` | skillID (string) |
+
+#### Example
+
+The following example shows how to access current skill and previous skill IDs and set them to a botContext variable.
+
+```javascript
+var currentSkill = botContext.getLPEngagementAttribute("currentSkillId");
+var previousSkill = botContext.getLPEngagementAttribute("previousSkillId");
+
+botContext.setBotVariable("currentSkill", currentSkill, true, false);
+botContext.setBotVariable("previousSkill", previousSkill, true, false);
+```
+
+**Messaging Connector Requirements:**
+- Ensure that the bot is set up with API OAuth login rather than password login
+- Ensure that the OAuth keys have permission to Engagement History
+
+<img class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
+
+### Get Authenticated Customer Info
+
+There are two built in methods to return authenticated customer information. You can attempt to see if either of these 2 methods return true or not.  If the visitor is authenticated, (typically they would set personal or customer info being logged in) you can access the Personal Info or Customer Info object array.
+
+Each function refers to its corresponding [authenticated engagement attribute object](essential-resources-authentication.html#messaging-consumer-authentication-and-identification).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getLPUserPersonalInfo()` | `"currentSkillId"`, `"previousSkillId"` | [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) object or nothing |
+| `getLPCustomerInfo()` | `"currentSkillId"`, `"previousSkillId"` | [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) object or nothing |
+
+#### Example
+
+```javascript
+botContext.getLPUserPersonalInfo();
+
+botContext.getLPCustomerInfo();
+```
+
 
 ### Get Environment Variable
 
@@ -222,6 +299,9 @@ botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just
 
 Delivers a message to the user immediately and stops the message flow and any other subsequent code within this message.
 
+{: .important}
+[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
+
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `sendImmediateReply(message)` | message – (string or array) – A string to be added to output. Or an array of strings, each to be added to output in succession. | None |
@@ -238,6 +318,9 @@ botContext.sendImmediateReply('I think you said, ' + response);
 ### Send Message
 
 Used to send a single message to user. Using this function we can send messages to the user at any place of the code, without stopping the message flow.
+
+{: .important}
+[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
 
 {: .important}
 To send multiple messages use the [sendMessages()](#send-messages) function.
@@ -258,6 +341,9 @@ if(count > 10){
 ### Send Messages
 
 Used to send array of the messages to the user. In most cases we use message delay for the send messages function.
+
+{: .important}
+[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
 
 {: .important}
 To send a single message use the [sendMessage()](#send-message) function.
@@ -503,4 +589,23 @@ var userId = botContext.getUserPlatformId();
 var platformType = botContext.getUserPlatformType();
 // display the results...
 botContext.printDebugMessage('The userPlatformId = ' + userId + 'and the userPlatformType = ' + platformType);
+```
+
+### Get Disambiguated Intent
+
+These functions can be used in preProcess/postProcess/processUserResponse code to get the relevant disambiguated intent data.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getDisambiguatedIntentName()` | None | selected intent name from the disambiguation interaction (string) |
+| `getDisambiguatedIntentId()` | None | selected intent ID from the disambiguation interaction (string) |
+
+#### Example
+```javascript
+// get the disambiguated intent name
+var intentName = botContext.getDisambiguatedIntentName() ;
+// get the disambiguated intent ID
+var intentID = botContext.getDisambiguatedIntentId();
+// display the results...
+botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent ID = ' + intentID);
 ```

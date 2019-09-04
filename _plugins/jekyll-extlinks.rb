@@ -64,6 +64,7 @@ module Jekyll
           if attr.downcase == 'onclick'
           next unless a.get_attribute('href') !~ /assets\/schema\/.*/
           next unless a.get_attribute('href') !~ /assets\/content\/.*/
+          next unless a.get_attribute('href') !~ /assets\/.*/
           next unless a.get_attribute('href') !~ /\Ahttp/i
           end
           a.set_attribute(attr, value)

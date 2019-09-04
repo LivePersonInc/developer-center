@@ -3,7 +3,7 @@ pagename: Transfer to an Agent or Bot
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Best Practices
 permalink: conversation-builder-best-practices-transfer-to-an-agent-or-bot.html
@@ -22,14 +22,13 @@ There are a number of reasons why your transfer may be failing. Here are a few o
 
 #### Your transfer API URL may be incorrect for your server environment
 
-There are a few different server environments where you may be working with Conversation Builder. Depending on your region and whether you’re using LP Cloud, you may need to change the URL for your escalation.
+There are a few different server environments where you may be working with Conversation Builder. Depending on your region and whether you’re using LP Cloud, the URL used to connect to LiveEngage changes.
 
-| Server Environment | URL endpoint |
-| --- | --- |
-| US | `https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
-| US (If accessing from LiveEngage automation tab) | `https://va.bc-bot.liveperson.net/botservice-0.1/botcentral/livePersonAgent` |
-| Europe | `https://platformservice-eu.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
-| APAC | `https://platformservice-ap.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
+In order to make your automations more flexible and dynamic, for this type of integration, you should switch to the LivePerson Agent Escalation integration type, which will handle the variable URL automatically.
+
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/bestPractices/LivePersonAgentEscalationType.png">
+
+
 
 #### Your Authorization ID may be incorrect
 

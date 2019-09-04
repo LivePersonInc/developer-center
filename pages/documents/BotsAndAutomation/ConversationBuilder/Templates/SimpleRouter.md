@@ -3,7 +3,7 @@ pagename: Simple Router
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Templates
 permalink: conversation-builder-templates-simple-router.html

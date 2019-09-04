@@ -122,6 +122,10 @@ Please follow these steps in order to get SSO unified login working with LivePer
 
 <div class="important">Make sure to be logged into LiveEngage before accessing LivePerson Functions from your account.</div>
 
+### Configure your firewall
+
+Please follow [this](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) document to whitelist LivePerson IP ranges for any APIs that will be used within `lambdas`.
+
 ### Accessing the LivePerson Functions User Interface
 
 Our Functions UI allows developers to directly develop, deploy and test new functions.

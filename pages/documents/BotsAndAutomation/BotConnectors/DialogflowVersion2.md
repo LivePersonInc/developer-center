@@ -2,7 +2,7 @@
 pagename: Google Dialogflow Version 2
 redirect_from:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Bot Connectors
 permalink: bot-connectors-google-dialogflow-version-2.html
 indicator:
@@ -243,11 +243,11 @@ Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (cas
 
 Figure 4.1
 
-### Send Rich Content (Structured Content)
+### Sending Rich Content (Structured Content)
 
-Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
+Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
-To send structured content via Dialogflow V2, send a _custom payload_ option via an intent.
+To send Structured Content via Dialogflow V2, send a _custom payload_ option via an intent.
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_11.png">
 
@@ -299,9 +299,10 @@ Example Metadata
 
 Figure 5.2 Dialogflow Example Custom Payload
 
-### Send quickReplies (Structured Content)
+### Sending Quick Replies (Structured Content)
 
- Quick Replies is a special type of Structured Content. Is is a message sent with along with predefined answers. The documentation can be found [here](quick-replies-introduction-to-quick-replies.html)
+Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
+For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
  ```json
 {

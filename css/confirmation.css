@@ -170,6 +170,12 @@ body {
   width: 50px;
 }
 
+@-moz-document url-prefix() {
+    .cardImage {
+        height: 80px;
+    }
+}
+
 .cardContent {
   display: flex;
   margin-left: 24px;
@@ -500,4 +506,20 @@ body {
     margin-right: 10px;
     margin-left: 10px;
   }
+}
+
+.login-button-text {
+  text-decoration: inherit;
+  color: inherit;
+  width: inherit;
+  height: inherit;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-button {
+  width: 100%;
+  height: 100%;
 }

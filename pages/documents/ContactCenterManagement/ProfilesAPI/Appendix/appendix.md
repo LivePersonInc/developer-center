@@ -129,6 +129,9 @@ This section contains API details that are common to every API’s resource and 
 | 10017      | View Connection Area Content    | View relevant content from the Connection Area per journey.      |
 | 10018      | Configure shift status       | For brands who have enabled the Messaging feature, this permission allows an admin to configure the shift status.                          |
 | 10027      | Configure skill workdays       | View a list of skills and assign and edit Schedule and Special Occasion items associated with them.                          |
+| 10030      | FaaS Invocation  | Allows to invoke LivePerson Functions (FaaS)|
+| 10031      | FaaS Admin       | Allows to administrate LivePerson Functions (FaaS) Settings |
+| 10032      | FaaS Developer   | Allows to develop LivePerson Functions (FaaS) |
 | 20000      | Agent core permissions  | Core permissions that are included with the Agent role and cannot be disabled.              |
 | 20001      | Join Agents' conversations  | Join a conversation handled by another Agent within their Group  |
 | 20002      | View Agents' conversations | View conversations handled by other Agents within their Group    |

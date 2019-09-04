@@ -3,7 +3,7 @@ pagename: Getting Started Tutorial2
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Templates
 permalink: conversation-builder-conversation-templates-getting-started-tutorial2.html

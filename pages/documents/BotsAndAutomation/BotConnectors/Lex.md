@@ -2,7 +2,7 @@
 pagename: Amazon Lex
 redirect_from:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Bot Connectors
 permalink: bot-connectors-amazon-lex.html
 indicator:
@@ -213,9 +213,9 @@ Fig.4.2 - Example in Lex console
 
 fig.4.2
 
-### Send Rich Content (Structured Content)
+### Sending Rich Content (Structured Content)
 
-Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
+Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
 To send structured content via Lex, send a _custom payload_ option via an intent.
 
@@ -279,9 +279,10 @@ This should contain valid structured content, along with any optional metadata r
 
 **NOTE:** Lex supports 1000 characters per custom payload. Structured content will need to be broken down into smaller individual responses smaller if the payload is large.
 
-### Send quickReplies (Structured Content)
+### Sending Quick Replies (Structured Content)
 
- Quick Replies is a special type of Structured Content. Is is a message sent with along with predefined answers. The documentation can be found [here](quick-replies-introduction-to-quick-replies.html)
+Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
+For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
  ```json
 {

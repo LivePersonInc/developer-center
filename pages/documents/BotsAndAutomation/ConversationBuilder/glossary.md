@@ -3,7 +3,7 @@ pagename: Glossary
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername:
 permalink: conversation-builder-glossary.md

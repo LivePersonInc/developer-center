@@ -2,10 +2,10 @@
 pagename: Salesforce
 redirect_from:
   - salesforce.html
-permalink: crm-integrations-salesforce.html
 sitesection: Solutions
 documentname: CRM Integrations
-order: 10
+permalink: crm-integrations-salesforce.html
+indicator: both
 ---
 
 <div class="important">Please see our <a href="https://knowledge.liveperson.com/agent-manager-workspace-workspace-configuration-salesforce-integration-guide.html">Knowledge Center</a> for more updated information on our Salesforce integration and how to use it.</div>

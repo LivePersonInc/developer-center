@@ -55,71 +55,7 @@ The **Input** item contains the parameters with which your function will be call
 
 The **Output** renders whatever your function produces during an invocation, be it a string, JSON or an exception. Like the Input, the Output is not permanently saved.
 
-The **Logs** display any logging you have included in your function. It can display messages and their importance (error versus info for example), as well as additional information declared by the user. Once a function has been invoked, any logs will be displayed corresponding to their log-level declared inside the function's source code.
+The **Logs** display any logging you have included in your function. It can display messages and their importance (error versus info for example), as well as additional information declared by the user. Once a function has been invoked, any logs will be displayed corresponding to their log-level declared inside the function's source code. (To learn more about logging visit [LivePerson Functions Monitoring Logs](liveperson-functions-monitoring-logs.html))
 
 ![](img/faas-invoke.png)
 
-### Logging Function behavior
-
-[Missing Screenshot]: <> (Let's add a screenshot of the IyF log result screen here.)
-
-The different log-levels are: debug, info, warn and error. All functions take a string as a log message and, as an optional parameter, objects which can be displayed when inspecting an individual log item. An example for a function which is logged can be found in the [LivePerson Functions Templates](function-as-a-service-templates.html) (under "*Logging Template*").
-
-<div class="important">This function allows you to log sensitive information since there's no sanitation or limitations on the string you pass to the method! Please be considerate with what is logged and don't pass any sensitive information to this function, e.g a token or password.
-
-In addition, logs are currently not persistent and are therefore only for debugging purposes in the Functions UI. We're planning on adding log-storage with an analysis screen in the near future.</div>
-
-The template for the logging functions is as follows:
-
-```javascript
-console.<info/debug/warn/error>(<message> [, extras])
-```
-
-<table>
-<thead>
-	<tr>
-		<th>Component</th>
-		<th>Type</th>
-		<th>Notes</th>
-	</tr>
-</thead>
-<tbody>
-  <tr>
-    <td>log-level</td>
-    <td>Method</td>
-    <td>Method names correspond to the different log-levels and influence in which way the logs are displayed within LivePerson Functions. Current levels are:
-console.debug(), console.info(), console.warn() and console.error()</td>
-  </tr>
-  <tr>
-    <td>message</td>
-    <td>String</td>
-    <td>Message defines the message to be displayed in the logs.</td>
-  </tr>
-  <tr>
-    <td>extras</td>
-    <td>Any</td>
-    <td>An object which will then be wrapped in an Array and displayed in the log for additional information.</td>
-  </tr>
-</tbody>
-</table>
-
-**Example code for logging a function**:
-
-```javascript
-function lambda(input, callback) {
-	console.debug('This is a simple debug message', {
-		'bugs': 'none!'
-	});
-
-	console.info('Informing you about important news', new Date(), Number.MAX_SAFE_INTEGER);
-
-	try {
-		console.warn('Starting a non-existent function');
-		nonExistentFunction();
-	} catch (e) {
-		console.error('You cannot call what you did not create');
-	}
-
-	callback(null, 'Function has finished...');
-}
-```

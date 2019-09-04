@@ -3,7 +3,7 @@ pagename: Retail Templates
 redirect_from:
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Templates
 permalink: conversation-builder-templates-retail-templates.html

@@ -26,11 +26,11 @@ This resource can be used to know to which other agents you can transfer chats. 
 
 **Request Headers**
 
-| Header                                   | Description      |
-|------------------------------------------|------------------|
-| Authorization Bearer {bearer-from-login} |                  |
-| Content-Type                             | application/json |
-| Accept                                   | application/json |
+| Header                                   | Description                |
+|------------------------------------------|----------------------------|
+| Authorization                            | Bearer {bearer-from-login} |
+| Content-Type                             | application/json           |
+| Accept                                   | application/json           |
 
 **Formats**
 
