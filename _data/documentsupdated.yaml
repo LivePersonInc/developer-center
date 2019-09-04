@@ -550,12 +550,13 @@
           - subpagename: Overview
           - subpagename: Client Credentials
           - subpagename: Authorization Code
-      - pagename: Use Cases
+      - pagename: LivePerson Integrations
         subpages:
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
           - subpagename: Conversational Commands
+          - subpagename: Conversation Builder
 
 
 - categoryname: Historical Data
