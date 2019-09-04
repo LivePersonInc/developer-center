@@ -2,7 +2,7 @@
 pagename: Taglet
 sitesection: Documents
 categoryname: "Client Side Configuration"
-documentname: WindowCustomizationApi
+documentname: Window Customization API
 permalink: window-customization-api-taglet.html
 indicator: both
 ---
