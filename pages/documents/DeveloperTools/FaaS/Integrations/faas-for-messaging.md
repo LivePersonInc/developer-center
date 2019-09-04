@@ -4,11 +4,11 @@ keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
-subfoldername: Use Cases
-permalink: liveperson-functions-liveperson-integrations-messaging-conversations.html
+subfoldername: Integrations
+permalink: liveperson-functions-integrations-messaging-conversations.html
 indicator: both
 redirect_from:
-  - function-as-a-service-use-cases-messaging-conversations.html
+  - iveperson-functions-liveperson-integrations-messaging-conversations.html
 ---
 
 This guide explains how to enable LivePerson Functions for messaging.

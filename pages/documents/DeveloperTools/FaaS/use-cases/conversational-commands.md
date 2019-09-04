@@ -4,8 +4,8 @@ keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
-subfoldername: Use Cases
-permalink: liveperson-functions-use-cases-conversational-commands.html
+subfoldername: Integrations
+permalink: liveperson-functions-integrations-conversational-commands.html
 indicator: both
 ---
 

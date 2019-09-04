@@ -4,11 +4,11 @@ keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
-subfoldername: Use Cases
-permalink: liveperson-functions-liveperson-integrations-messaging-conversation-survey.html
+subfoldername: Integrations
+permalink: liveperson-functions-integrations-messaging-conversation-survey.html
 indicator: both
 redirect_from:
-  - function-as-a-service-use-cases-messaging-survey.html
+  - liveperson-functions-liveperson-integrations-messaging-conversation-survey.html
 ---
 
 This guide explains how to enable LivePerson Functions for post conversation survey events.
