@@ -29,7 +29,7 @@ The template for the logging functions is as follows:
 console.<info/debug/warn/error>(<message> [, extra])
 ```
 
-<table>
+<table  style="width: 100%;">
 <thead>
 	<tr>
 		<th>Component</th>
@@ -78,9 +78,9 @@ function lambda(input, callback) {
 }
 ```
 
-After [deployment](liveperson-functions-deployment.html), you should be able to [manually invoke](liveperson-functions-deployment.html#testing-your-function) your `lambda` and see the logs written in the `Logs` section. 
+After [deployment](liveperson-functions-deployment.html), you should be able to [manually invoke](liveperson-functions-deployment.html#testing-your-function) your `lambda` and see the logs written in the `Logs` section.
 
-![](img/faas-invoke.png)
+<img src="img/faas-invoke.png" alt="LivePerson Functions Invoke a Function" style="width:100%;"/>
 
 {: .notice}
 Be aware that logs written during manual test invocations will not be written into the storage. Logs with a <b>Debug</b> level will only be shown on manual test invocations and not written into the storage.
@@ -98,11 +98,12 @@ LivePerson Functions allows developers to investigate `lambda` logs.
 
 Logs of a certain function can be accessed during development & deployment via the button on the right side. Moreover, our left-hand sidebar allows to also directly navigate to the `Investigate Function Logs` screen.
 
-![](img/faas-functions.png)
+<img src="img/faas-functions.png" alt="LivePerson Functions accessing logs action" style="width:100%;"/>
+
 
 When navigating to the `Investigate Function Logs` screen from a selected function, the search parameters should be pre-defined. In case the left-hand sidebar is used, the relevant `lambda` needs to be selected from the dropdown.
 
-![](img/faas-logs.png)
+<img src="img/faas-logs.png" alt="LivePerson Functions logs" style="width:100%;"/>
 
 To fine-tune the selected `lambda` logs, the following search parameters can be adjusted:
 

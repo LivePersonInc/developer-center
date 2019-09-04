@@ -15,7 +15,7 @@ Now that you have created and edited the function, let's talk about how you can 
 
 2. The shortcut alternative to this process is to deploy from the context menu in the `lambda` itself, in the **Functions** section (more info on this menu can be found [here](function-as-a-service-developing-with-faas-overview.html#code-completion--context-menu)). The `lambda` will directly forward you to the deployment menu.
 
-![](img/faas-deploy.png)
+<img src="img/faas-deploy.png" alt="LivePerson Functions Deployment Overview" style="width:100%;"/>
 
 After choosing a function for deployment, you will have a final chance to review the code which will be deployed and also see information on Environment Variables and Runtime. If the displayed information is correct, you can start the deployment by pressing the button "Approve & Deploy".
 
@@ -43,7 +43,8 @@ If an error occurs, you can hover over the Build State to receive insight on the
 
 To the right of the "Deployment state" field, you will find the “Actions” field. You will be able to invoke your `lambda` function by pressing “Invoke” and then pressing “Invoke” again in the newly opened tab. Invoking your function allows you to test its payload and behavior and make sure it works as expected.
 
-![](img/faas-actions.png)
+<img src="img/faas-actions.png" alt="LivePerson Functions Invoke Actions" style="width:100%;"/>
+
 
 **Please note** that you can only invoke functions that have been successfully deployed. When you’re in the "Develop" tab, this is indicated by the status of the function displaying as “Productive”. When in the “Deploy” tab, this will be indicated by the deployment state showing “Deployment successful”.
 
@@ -57,5 +58,5 @@ The **Output** renders whatever your function produces during an invocation, be 
 
 The **Logs** display any logging you have included in your function. It can display messages and their importance (error versus info for example), as well as additional information declared by the user. Once a function has been invoked, any logs will be displayed corresponding to their log-level declared inside the function's source code. (To learn more about logging visit [LivePerson Functions Monitoring Logs](liveperson-functions-monitoring-logs.html))
 
-![](img/faas-invoke.png)
+<img src="img/faas-invoke.png" alt="LivePerson Functions Invoke a Function" style="width:100%;"/>
 

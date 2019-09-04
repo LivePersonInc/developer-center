@@ -27,7 +27,7 @@ This section contains API details that are common to every API’s resource and 
 
 | Header | Description |
 | :-------- | :------------ |
-| eTag | Account config object type collection revision. |
+| eTag | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. |
 | location | URI Location of the newly created resource. This header is included only when the request created single object. |
 
 **Query Parameters**
@@ -79,6 +79,8 @@ This section contains API details that are common to every API’s resource and 
 | transferToAgentMaxWaitInSeconds | Maximum wait time for transferred conversation to wait in queue for the assigned agent | Integer | Optional ||
 | fallbackSkill | Allowed fallback skill for this skill | Long | Optional ||
 | fallbackWhenAllAgentsAreAway | Setting per skill whether or not to use fallback skill when all agents are away | Boolean | Optional | Default: true |
+| agentSurveyForMsgTimeoutInMinutes | The time which elapsed between the end of the conversation and the agent survey expiring | Integer | Optional || 
+| agentSurveyForMsgId | The agent survey for messaging id this skill is assigned to | Long | Optional || 
 
 ### Entity Example
 
