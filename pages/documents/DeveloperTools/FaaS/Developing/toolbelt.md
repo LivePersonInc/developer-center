@@ -173,7 +173,7 @@ Searches the secret that belongs to the provided key. Will raise an error if the
 <table style="width: 100%;">
 <thead>
 <tr>
-<th >Parameter</td>
+<th >Parameter</th>
 <th >Description</th>
 </tr>
 </thead>
@@ -260,7 +260,7 @@ secretClient
   });
 ```
 
-### SMTP Client:
+### SMTP Client
 
 SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
 
@@ -293,11 +293,11 @@ SMTP Client allows the sending of emails via the SMTP Protocol. It is configured
     subject: "Awesome Email !",
     text: "You can also send directly a html body by passing it as html."
   })
-  .then(response => //TODO: react on the response)
-  .catch(err => //TODO: React to error);
+  .then(response => //react on the response)
+  .catch(err => //React to error);
 ```
 
-### Conversation Util:
+### Conversation Util
 
 The Conversation Util allows to perform conversation related methods, which are listed below. Authorization is configured during instance creation.
 
@@ -368,7 +368,7 @@ const scannerResult = conversationUtil.scanConversationForKeywords(
 
 The method collects every message which contains a keyword in an array. It retrieves a timestamp, information on who sent the message and adds a tag detailing the keyword for which the message has been selected. If one message contains more than one keyword it will appear as often in the array. (see example underneath)
 
-<table  style="width: 100%;">
+<table style="width: 100%;">
 <thead>
 <tr>
 <th>Attribute</th>
@@ -392,6 +392,8 @@ The method collects every message which contains a keyword in an array. It retri
 <td>Who the conversation was sent by</td>
 <td>string</td>
 </tr>
+</tbody>
+</table>
 
 ```javascript
 [
@@ -416,7 +418,7 @@ The method collects every message which contains a keyword in an array. It retri
 ];
 ```
 
-### GDPR Util:
+### GDPR Util
 
 This method provides GDPR related functionality, such as deleting transcripts of a conversation.
 
