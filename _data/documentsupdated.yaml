@@ -186,6 +186,7 @@
           - subpagename: Intent & Context Policies
           - subpagename: Set Up Maven in LivePerson
           - subpagename: Use Maven with Your Bot
+          - subpagename: Tutorial
       - pagename: AskMaven
         subpages:
           - subpagename: Overview
@@ -294,6 +295,7 @@
         - subpagename: Client Properties
         - subpagename: Avoid Websocket Headers
         - subpagename: CoBrowse
+        - subpagename: Voice and Video Calls
         - subpagename: File Sharing
       - pagename: Samples
         subpages:
@@ -542,17 +544,20 @@
       - pagename: Monitoring
         subpages:
           - subpagename: Logs
+          - subpagename: Metrics
       - pagename: Scheduled Invocations
       - pagename: External Invocations
         subpages:
           - subpagename: Overview
           - subpagename: Client Credentials
           - subpagename: Authorization Code
-      - pagename: Use Cases
+      - pagename: LivePerson Integrations
         subpages:
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
+          - subpagename: Conversational Commands
+          - subpagename: Conversation Builder
 
 
 - categoryname: Historical Data

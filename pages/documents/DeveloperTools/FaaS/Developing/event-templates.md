@@ -13,10 +13,9 @@ redirect_from:
 
 LivePerson Functions' `lambdas` can be connected to LiveEngage events at the time of [creation](function-as-a-service-getting-started.html#step-1-choose-a-template). Once those `lambdas` are deployed, they will be executed whenever these events are triggered. Each event comes with a set of connected templates that can be used as an initial scaffolding for the developing the `lambda`. **Note** that the amount of lambdas connected to a specific event is restricted and can be seen in the table below.
 
-
 Currently the following events are supported:
 
-<table>
+<table style="width: 100%;">
 <thead>
   <tr>
     <th>Event Name</th>
@@ -29,6 +28,11 @@ Currently the following events are supported:
     <td>Chat Post Survey E-Mail Transcript</td>
     <td>Triggered after a chat conversation is finished and CSAT survey has been submitted.</td>
     <td>10</td>
+  </tr>
+  <tr>
+    <td>Conversational Command</td>
+    <td>Use this event to implement a Conversational Command that can be invoked from within the agent workspace in LiveEngage by typing "/".</td>
+    <td>30</td>
   </tr>
   <tr>
     <td>Messaging New Conversation</td>
@@ -82,7 +86,7 @@ Each of these events also has an event specific input (payload) associated with 
 
 Additionally, Functions offers a number of templates that are not connected to events and can be used as a sample to kick-start the development of custom scenarios:
 
-<table>
+<table style="width: 100%;">
 <thead>
   <tr>
     <th>Template Name</th>

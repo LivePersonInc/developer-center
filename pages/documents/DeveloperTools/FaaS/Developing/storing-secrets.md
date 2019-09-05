@@ -21,12 +21,13 @@ Internally, LivePerson Functions uses [HashiCorp Vault](https://www.hashicorp.co
 
 Secrets can be maintained via the **Settings** tab as a key/value storage. Each value can be of type number, string or JSON.
 
-![](img/faas-secret.png)
+<img src="img/faas-secret.png" alt="LivePerson Functions Secret Store" style="width:100%;"/>
+
 
 Based on the [permission concept](function-as-a-service-getting-started.html#set-faas-permissions) for Functions, the following permissions for managing and using secrets can be configured across different users.
 
 
-<table>
+<table style="width: 100%;">
 <thead>
   <tr>
     <th>User Role</th>
