@@ -279,7 +279,7 @@ For information on how to take the data that's retrieved by an integration call 
 
 When a consumer exits a conversation flow to enter an external system (for example, a generic web view form or Apply Pay for making a payment), the Web View API makes it possible for the external system to post data back into the bot runtime.
 
-<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/web_view_api_flow.png">
+<img style="width:550px" src="img/ConvoBuilder/web_view_api_flow.png">
 
 The Web View API can be used by the external system to:
 
