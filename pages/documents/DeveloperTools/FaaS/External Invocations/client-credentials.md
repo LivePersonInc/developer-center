@@ -83,7 +83,11 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
   2. **Grant Type**: Select grant type **Client Credentials**.
 
-  3. **Access Token URL**: The endpoint for the server, which exchanges the authorization code for an access token. For example: https://{{domain}}/sentinel/api/account/{{accountId}}/app/token?v=2.0.
+  3. **Access Token URL**: The endpoint for the server, which exchanges the authorization code for an access token. For example:
+  
+      {% raw %}
+      `https://{{domain}}/sentinel/api/account/{{accountId}}/app/token?v=2.0`
+      {% endraw %}
 
   4. **Client ID**: the generated `client_id` you received from the [App Installation](https://developers.liveperson.com/guides-le-applications-installing.html) (provided by your LivePerson account team).
 
