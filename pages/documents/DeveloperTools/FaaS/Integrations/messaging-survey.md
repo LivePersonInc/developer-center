@@ -6,7 +6,7 @@ categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
 subfoldername: Integrations
 permalink: liveperson-functions-integrations-messaging-conversation-survey.html
-indicator: both
+indicator: messaging
 redirect_from:
   - liveperson-functions-liveperson-integrations-messaging-conversation-survey.html
 ---
