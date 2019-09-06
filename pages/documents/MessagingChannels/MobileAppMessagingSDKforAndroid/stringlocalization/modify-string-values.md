@@ -29,6 +29,8 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_accessibility\_attachment\_menu** | Used on the attachment menu | Attachment menu |
 | **lp\_accessibility\_attachment\_menu\_button\_collapsed** | The attachment menu button name when collapsed | Attachment menu button collapsed |
 | **lp\_accessibility\_attachment\_menu\_button\_expanded** | The attachment menu button name when expanded | Attachment menu button expanded |
+| **lp\_accessibility\_audio\_pause\_button** | Spoken aloud when a user focuses on the pause button for a voice clip in chat history. | Pause |
+| **lp\_accessibility\_audio\_play\_button** | Spoken aloud when a user focuses on the play button for a voice clip in chat history. | Play |
 | **lp\_accessibility\_camera** | Used on the camera button (on the attachment menu) | Camera |
 | **lp\_accessibility\_chat\_message** | Used as a label on the 'Enter message' EditText control | Chat message |
 | **lp\_accessibility\_full\_image** | Used on the image in the full image screen | Full image |
@@ -36,6 +38,7 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_accessibility\_image** | Used on the thumbnail image on the conversation screen | Image |
 | **lp\_accessibility\_image\_caption** | A label string for the Enter Message EditText in the image preview screen | Image caption |
 | **lp\_accessibility\_is\_typing** | Announced when an agent with nickname is typing (applicable only in Activity mode) | %1$s is typing |
+| **lp\_accessibility\_mic\_button** | Spoken aloud when a user focuses on the record-voice button. | Record voice clip |
 | **lp\_accessibility\_new\_agent\_message** | Used when receive an incoming message from agent | New agent message: |
 | **lp\_accessibility\_new\_system\_message** | Used when receive an incoming system message | New system message: |
 | **lp\_accessibility\_photo** | Used on an image on the conversation screen | Photo |
@@ -48,13 +51,15 @@ You can change strings appearing on the SDK interface by overriding the respecti
 | **lp\_accessibility\_sc\_map** | Used on the map element in a structured content message | Map |
 | **lp\_accessibility\_sc\_text** | Used on the text element in a structured content message | Text |
 | **lp\_accessibility\_selected** | Used to indicate the selected star on the feedback screen | selected |
+| **lp\_accessibility\_voice\_replay\_button** | Spoken aloud when a user focuses on the replay-voice-recording button. | Replay voice clip |
+| **lp\_accessibility\_voice\_stop\_button** | Spoken aloud when a user focuses on the stop-recording-voice button. | Stop recording |
+| **lp\_accessibility\_voice\_trash\_button** | Spoken aloud when a user focuses on the delete-voice-clip button. | Delete voice clip |
 | **lp\_accessibility\_you** | Used as a message prefix on the message from the consumer | You |
 
 ### Audio Messaging
 
 | **String name** | **Used in** | **Default value** |
 | --- | --- | --- |
-| **lp\_accessibility\_voice** | Accessibility on the mic button | Voice |
 | **lp\_mic\_tooltip\_long\_press** | Tooltip shown when short tapping the mic button. | Long tap to record |
 | **lp\_mic\_tooltip\_max\_recording** | Tooltip shown when the maximum recording time reached. | Long tap to record |
 | **lp\_mic\_tooltip\_release** | Tooltip shown when keeping mic tapped. | Release for recording |
