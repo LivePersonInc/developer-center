@@ -8,7 +8,7 @@ subfoldername: Integrations
 permalink: liveperson-functions-integrations-messaging-conversations.html
 indicator: messaging
 redirect_from:
-  - iveperson-functions-liveperson-integrations-messaging-conversations.html
+  - liveperson-functions-liveperson-integrations-messaging-conversations.html
 ---
 
 This guide explains how to enable LivePerson Functions for messaging.
