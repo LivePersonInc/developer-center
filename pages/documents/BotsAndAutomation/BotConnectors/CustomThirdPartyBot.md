@@ -41,7 +41,11 @@ redirect_from:
 {:start="4"}
 4. Fallback SkillId is optional. You can set it as a backup option; when the connector does not receive any messages due to backend systems failure, it will escalate to this skill.
 
-5. Configure the following URL `https://external.botcentralapi.com/connector/{{consumerId}}`  on the customer bot implementation side to post bot responses to LiveEngage.
+5. Configure the following URL on the customer bot implementation side to post bot responses to LiveEngage:
+    {% raw %}
+    `https://external.botcentralapi.com/connector/{{consumerId}}`
+    {% endraw %}
+    
 
 ### Custom Bot Connectors
 
