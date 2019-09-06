@@ -264,7 +264,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
     ```bash
     curl --request PATCH \
 
-    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/**100**/properties \
+    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/100/properties \
 
     --header 'content-type: application/json' \
 
@@ -272,7 +272,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
 
     --data '{
 
-        "phoneNumber": **55501**
+        "phoneNumber": 55501
 
     }'
     ```
@@ -284,7 +284,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
     ```bash
     curl --request PATCH \
 
-    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/**200**/properties \
+    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/200/properties \
 
     --header 'content-type: application/json' \
 
@@ -292,7 +292,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
 
     --data '{
 
-        "phoneNumber": **55507**
+        "phoneNumber": 55507
 
     }'
     ```
@@ -368,7 +368,7 @@ Use the following CURL command in Bash to call AskMaven
 ```bash
 curl --request GET \
 
- --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=**100** \
+ --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=100 \
 
  --header 'maven-api-key:  <API Key>'
 ```
@@ -405,7 +405,7 @@ Use the following CURL command in Bash to call AskMaven
 ```bash
 curl --request GET \
 
- --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=**200** \
+ --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=200 \
 
  --header 'maven-api-key:  <API Key>'
 ```
