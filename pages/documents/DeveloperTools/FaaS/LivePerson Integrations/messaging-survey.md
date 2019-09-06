@@ -6,7 +6,7 @@ categoryname: "Client Side Configuration"
 documentname: LivePerson Functions
 subfoldername: Use Cases
 permalink: liveperson-functions-liveperson-integrations-messaging-conversation-survey.html
-indicator: both
+indicator: messaging
 redirect_from:
   - function-as-a-service-use-cases-messaging-survey.html
 ---
