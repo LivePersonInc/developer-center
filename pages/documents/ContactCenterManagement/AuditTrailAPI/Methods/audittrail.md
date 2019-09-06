@@ -42,7 +42,7 @@ N/A
 Contains a json object with a single "query" field which defines the requested GraphQL query for the auditData API and the fields sub-select. For details see [graphql website](http://graphql.org/).
 
 ```json
-{"query" : "{auditData  
+{"query" : "{auditData (fromDate:'2019-07-16' toDate:'2019-07-17')
               {accountId
               objectType
               objectName

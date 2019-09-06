@@ -264,11 +264,14 @@ Custom deployment of a pre-built connector.  LivePerson technical services team 
 ![image alt text](img/bot-guide-niche0.png)
 
 {:start="5"}
-  5. Fallback SkillId is optional. You can set it as a backup option; when the connector does not receive any messages due to backend systems failure, it will escalate to this skill.
+5. Fallback SkillId is optional. You can set it as a backup option; when the connector does not receive any messages due to backend systems failure, it will escalate to this skill.
 
-  6. Configure the following URL `https://external.botcentralapi.com/connector/{{consumerId}}`  on the customer bot implementation side to post bot responses to LiveEngage.
+6. Configure the following URL on the customer bot implementation side to post bot responses to LiveEngage:
+    {% raw %}
+    `https://external.botcentralapi.com/connector/{{consumerId}}`
+    {% endraw %}
 
-  7. Example of the post body:
+
 
 ### Custom Connectors
 

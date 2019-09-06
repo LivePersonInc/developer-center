@@ -25,7 +25,7 @@ This API creates a certificate for a specific account ID.
 
 **Request Body**
 
-```JSON
+```json
 [
   {
   	"name":"myCert1",
@@ -53,13 +53,11 @@ This API creates a certificate for a specific account ID.
 | 500  | Internal Server Error |
 
 
-**Response Headers**
-
 **Response Body**
 
 For example:
 
-```
+```json
 {  
    "successfulySavedCertificates":[  
       {  

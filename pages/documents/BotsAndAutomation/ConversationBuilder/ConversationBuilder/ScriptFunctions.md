@@ -609,3 +609,19 @@ var intentID = botContext.getDisambiguatedIntentId();
 // display the results...
 botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent ID = ' + intentID);
 ```
+
+### Get Web View Variables
+
+These functions retrieve session-scoped variables that were set via the [Web View API](conversation-builder-conversation-builder-integrations.html#web-view-integration-api).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getWebViewVariable(variableName)` | _variableName_ - the name of the variable to retrieve | string |
+| `getWebViewVariables()` | none | object:list of strings |
+
+#### Example
+```javascript
+    botContext.getWebViewVariable('name'); // This returns the value as PaymentId
+    botContext.getWebViewVariable('PaymentStatus'); // This returns the value as PROCESSED
+```
+For the corresponding curl example, see the [Web View API](conversation-builder-conversation-builder-integrations.html#web-view-integration-api) documentation.

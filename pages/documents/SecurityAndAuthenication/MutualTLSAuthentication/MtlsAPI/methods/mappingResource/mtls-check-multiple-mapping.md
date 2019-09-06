@@ -48,7 +48,6 @@ Contains list of `CertificateMappingParamters` objects:
 | 500  | Internal Server Error |
 
 
-**Response Headers**
 
 **Response Body**
 
