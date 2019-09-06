@@ -263,7 +263,7 @@ Conversation Builder allows you to attach credentials to bot API integrations. W
 ### Delete an integration
 If the bot is no longer using a particular integration, you might want to delete the integration. Before doing so, make sure there are no integration interactions that reference the specific integration.
 
-Deleting an integration affects only the bot for which it was been added.
+Deleting an integration affects only the bot for which it was added.
 
 **To delete an integration**
 
