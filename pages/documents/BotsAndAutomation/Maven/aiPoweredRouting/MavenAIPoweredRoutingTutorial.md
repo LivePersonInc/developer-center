@@ -88,6 +88,7 @@ In this example we will create and use static attributes. To check if a customer
 
 2. Click Add Policy, and then Copy and Paste this JSON and then click save. This policy checks if customer phone number is in the list of VIP customer phone numbers, and if true sends then to a VIP Skill (12345).
 
+    {% raw %}
     ```json
     {
         "name": "VipRule_Static",
@@ -108,9 +109,11 @@ In this example we will create and use static attributes. To check if a customer
         ]
     }
     ```
+    {% endraw %}
 
 3. Click Add Policy, and then Copy and Paste this JSON and then click save. This policy checks if customer phone number is in the list of regular customer phone numbers, and if true sends then to a regular Skill (67890).
 
+{% raw %}
 ```json
 {
     "name": "RegularCustomerRule_Static",
@@ -131,6 +134,7 @@ In this example we will create and use static attributes. To check if a customer
     ]
 }
 ```
+{% endraw %}
 
 As you may have noticed, we have created two policies, one for VIP customer, and one for a regular customer. In this example we evaluate both using static variables. In later sections we will retrieve the customer phone number from a session.  
 
@@ -264,7 +268,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
     ```bash
     curl --request PATCH \
 
-    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/**100**/properties \
+    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/100/properties \
 
     --header 'content-type: application/json' \
 
@@ -272,7 +276,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
 
     --data '{
 
-        "phoneNumber": **55501**
+        "phoneNumber": 55501
 
     }'
     ```
@@ -284,7 +288,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
     ```bash
     curl --request PATCH \
 
-    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/**200**/properties \
+    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/200/properties \
 
     --header 'content-type: application/json' \
 
@@ -292,7 +296,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
 
     --data '{
 
-        "phoneNumber": **55507**
+        "phoneNumber": 55507
 
     }'
     ```
@@ -305,6 +309,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
 
     1. This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, we are retrieving this value from a session attribute (myNameSpace.phoneNumber), that we created earlier. 
 
+    {% raw %}
     ```json
     {
         "name": "VipRule_Session",
@@ -325,9 +330,11 @@ Here, we will go ahead and store the phone numbers for both types of customers (
         ]
     }
     ```
+    {% endraw %}
 
 3. Create a new regular customer policy by clicking add policy and then copy paste this JSON
 
+    {% raw %}
     ```json
     {
         "name": "RegularCustomerRule_Session",
@@ -348,6 +355,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
         ]
     }
     ```
+    {% endraw %}
 
 4. Enable both policies by clicking on the toggle switches. 
 
@@ -368,7 +376,7 @@ Use the following CURL command in Bash to call AskMaven
 ```bash
 curl --request GET \
 
- --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=**100** \
+ --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=100 \
 
  --header 'maven-api-key:  <API Key>'
 ```
@@ -405,7 +413,7 @@ Use the following CURL command in Bash to call AskMaven
 ```bash
 curl --request GET \
 
- --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=**200** \
+ --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=200 \
 
  --header 'maven-api-key:  <API Key>'
 ```
@@ -448,6 +456,7 @@ In the previous example we checked for the phone number in a static list. Mainta
 
     4. Please provide the appropriate keys as described in [documentation](maven-context-warehouse-custom-static-or-function.html#create-a-liveperson-function-variable)
 
+    {% raw %}
     ```json
     {
         "name": "isVipFaaS",
@@ -467,6 +476,7 @@ In the previous example we checked for the phone number in a static list. Mainta
         }
     }
     ```
+    {% endraw %}
 
 ##### Create Policy to use the FaaS Function
 

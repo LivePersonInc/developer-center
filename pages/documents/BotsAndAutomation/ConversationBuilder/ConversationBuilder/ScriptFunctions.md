@@ -620,3 +620,8 @@ These functions retrieve session-scoped variables that were set via the [Web Vie
 | `getWebViewVariables()` | none | object:list of strings |
 
 #### Example
+```javascript
+    botContext.getWebViewVariable('name'); // This returns the value as PaymentId
+    botContext.getWebViewVariable('PaymentStatus'); // This returns the value as PROCESSED
+```
+For the corresponding curl example, see the [Web View API](conversation-builder-conversation-builder-integrations.html#web-view-integration-api) documentation.
