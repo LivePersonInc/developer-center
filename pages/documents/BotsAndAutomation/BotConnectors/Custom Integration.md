@@ -123,7 +123,7 @@ Below is an example of an payload, which changes the TTR.
 
 ```json
 {
-  "messages": ["This conversation has been marked urgent"], //Mandatory
+  "messages": ["This conversation has been marked urgent"],
   "context": {
     "action": "CHANGE_TTR", //Mandatory
     "actionParameters": {
@@ -148,7 +148,7 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 
 ```json
 {
-   "messages": ["Please wait will I check if we have any live agents online that can attend to you"], //Mandatory
+   "messages": ["Please wait will I check if we have any live agents online that can attend to you"], 
    "context": {
     "action": "TRANSFER", // Mandatory
     "actionParameters": {
@@ -280,7 +280,7 @@ Below is an example of what the response JSON from Dialogflow will look like, an
 
 ```json
 {
-  "messages":["Unfortunately I am unable to help you with this query. Have a nice day."], //Mandatory
+  "messages":["Unfortunately I am unable to help you with this query. Have a nice day."], 
   "context": {
     "action": "CLOSE_CONVERSATION", // Close action
     }
