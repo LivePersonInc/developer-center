@@ -10,7 +10,9 @@ permalink: conversation-builder-conversation-builder-scripting-functions.html
 indicator: both
 ---
 
-Functions are modules of code that are used for accomplishing a certain task programatically. With few exceptions, functions can be used in any of the preProcess Code, postProcess Code or the processUser Response JavaScript code panels.
+Functions are modules of code that are used for accomplishing a certain task programatically. 
+
+With few exceptions, functions can be used in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interaction-details.html#process-user-response) JavaScript code panels.
 
 **Please note:**
 
@@ -64,6 +66,32 @@ if (count > 10) {
 }
 ```
 
+### Get Conversation ID
+
+The Get Conversation ID function will retrieve the conversation ID for the current conversation.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getConversationId()` | None | Conversation ID (string) |
+
+#### Example
+
+The following example will store the conversation ID in a variable inside your current pre/post process code call "convId". It will then save this value in a bot session variable.
+
+```javascript
+// store the conversation id in a variable inside your current pre/post process code
+var convId = botContext.getConversationId();
+
+// save this in a bot session variable 
+botContext.setBotVariable("conversationId", convId, true, false);
+```
+
+The bot session variable can then be accessed inside subsequent interactions or integrations using the following syntax:
+
+`{$botContext.conversationId}`
+
+<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_0.png">
+
 ### Get Current and Previous Skills
 
 Used to add previous and current skillIds to the botContext. If the conversation was transferred to the bot, you can track the previous skill Id that the consumer came from.
@@ -93,6 +121,103 @@ botContext.setBotVariable("previousSkill", previousSkill, true, false);
 
 <img class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
 
+### Get Authenticated Customer Info
+
+There are two built in methods to return authenticated customer information. You can attempt to see if either of these 2 methods return true or not.  If the visitor is authenticated, (typically they would set personal or customer info being logged in) you can access the Personal Info or Customer Info object array.
+
+Each function refers to its corresponding [authenticated engagement attribute object](essential-resources-authentication.html#messaging-consumer-authentication-and-identification).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getLPUserPersonalInfo()` | See below for accessing attributes | [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) object or nothing |
+| `getLPCustomerInfo()` | See below for accessing attributes | [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) object or nothing |
+
+#### Personal Info Example
+
+This is an example JSON object for the Personal Info. Keep in mind that not all fields may be available for your conversation. In addition, one of the following fields (firstname, lastname, company) must be populated for this object to return, otherwise it will be null.
+
+```json
+{
+    "type": "personal",
+    "personal": {
+        "firstname": "John",
+        "lastname": "Doe",
+        "age": {
+            "age": 34,
+            "year": 1980,
+            "month": 4,
+            "day": 1
+        },
+        "contacts": [
+            {
+                "email": "myname@example.com",
+                "phone": "+1 555-333-7777"
+            }
+        ],
+        "gender": "MALE",
+        "language": "en-US",
+        "company": "company"
+    }
+}
+```
+
+Here is how you might use the `getLPUserPersonalInfo()` method in JavaScript to check for a user’s first and last name.
+
+```javascript
+var personalInfo = botContext.getLPUserPersonalInfo();
+botContext.printDebugMessage('PERSONAL INFO:'+personalInfo);
+if(personalInfo){
+    var fullName = personalInfo.firstname+" "+personalInfo.lastname;
+    botContext.printDebugMessage('Full Name: '+fullName);
+    botContext.setBotVariable("fullName",fullName,true,false);
+}
+```
+
+#### Customer Info Example
+
+Here is an example JSON object for the Customer Information.
+
+```json
+{
+    "type": "ctmrinfo",
+    "info": {
+        "companyBranch": "test",
+        "ctype": "vip",
+        "customerId": "138766AC",
+        "balance": -400.99,
+        "currency": "USD",
+        "socialId": "11256324780",
+        "imei": "99887766554433",
+        "userName": "user000",
+        "companySize": 500,
+        "accountName": "bank corp",
+        "role": "broker",
+        "lastPaymentDate": {
+            "day": 15,
+            "month": 10,
+            "year": 2014
+        },
+        "registrationDate": {
+            "day": 23,
+            "month": 5,
+            "year": 2013
+        },
+        "storeNumber": "123865",
+        "storeZipCode": "20505"
+    }
+}
+```
+
+Here is how you might use the `getLPCustomerInfo()` method in JavaScript to check for a user’s customerId.
+
+```javascript
+var customerInfo = botContext.getLPCustomerInfo();
+if(customerInfo){
+    var customerId = customerInfo.customerId;
+    botContext.printDebugMessage('customerId: '+customerId);
+    botContext.setBotVariable("customerId",customerId,true,false);
+}
+```
 
 ### Get Environment Variable
 
@@ -543,3 +668,38 @@ var platformType = botContext.getUserPlatformType();
 // display the results...
 botContext.printDebugMessage('The userPlatformId = ' + userId + 'and the userPlatformType = ' + platformType);
 ```
+
+### Get Disambiguated Intent
+
+These functions can be used in preProcess/postProcess/processUserResponse code to get the relevant disambiguated intent data.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getDisambiguatedIntentName()` | None | selected intent name from the disambiguation interaction (string) |
+| `getDisambiguatedIntentId()` | None | selected intent ID from the disambiguation interaction (string) |
+
+#### Example
+```javascript
+// get the disambiguated intent name
+var intentName = botContext.getDisambiguatedIntentName() ;
+// get the disambiguated intent ID
+var intentID = botContext.getDisambiguatedIntentId();
+// display the results...
+botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent ID = ' + intentID);
+```
+
+### Get Web View Variables
+
+These functions retrieve session-scoped variables that were set via the [Web View API](conversation-builder-conversation-builder-integrations.html#web-view-integration-api).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getWebViewVariable(variableName)` | _variableName_ - the name of the variable to retrieve | string |
+| `getWebViewVariables()` | none | object:list of strings |
+
+#### Example
+```javascript
+    botContext.getWebViewVariable('name'); // This returns the value as PaymentId
+    botContext.getWebViewVariable('PaymentStatus'); // This returns the value as PROCESSED
+```
+For the corresponding curl example, see the [Web View API](conversation-builder-conversation-builder-integrations.html#web-view-integration-api) documentation.

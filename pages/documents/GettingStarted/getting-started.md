@@ -18,7 +18,7 @@ Most user actions within LiveEngage can be performed programmatically using the 
 Also, if you have not already done so:
 
 1. Read the [API Terms of Use](https://www.liveperson.com/policies/apitou).
-2. Read the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
+2. Read the [Systems Requirements and Language Support](https://knowledge.liveperson.com/admin-settings-system-requirements.html) guide.
 
 And before you can do anything, you must do a few things first. By the end of this Getting Started guide, you will be ready to customize and implement features in LiveEngage.
 
@@ -28,7 +28,10 @@ And before you can do anything, you must do a few things first. By the end of th
 
 ### Step 1. Create a LiveEngage account
 
-Before you can use LiveEngage, you must first sign up for a [developer's account](http://register.liveperson.com/developer/signup) and then contact your account team or LivePerson support to have features enabled.
+Before you can use LiveEngage, you must first have a working account. If you don't already have one, you can sign up for a [free trial account](https://developers.liveperson.com/register.html). to get started with messaging, Conversation Builder, and LivePerson Functions.  To add more seats or access features not included in the trial, you will need to upgrade to a paid subscription.  You can chat with LivePerson sales on [liveperson.com](www.liveperson.com) or from the connection area within LiveEngage to get help from a specialist to find the right package for your business.
+
+{: .notice}
+If you already have a LiveEngage account, you can use that account instead of a creating a free trial account. However, we recommend creating a new account to make sure that any changes and customizations you make do not affect your site visitors until you are ready to launch them.
 
 Some features to get started with include:
 
@@ -39,114 +42,11 @@ Some features to get started with include:
 - Vibrate on new incoming message
 - Photo sharing
 
-<p style="text-align: right">
-<a href="http://register.liveperson.com/developer/signup" center><img src="../../img/btn-create-dev-account.png" style="height: 30px; width: auto;"></a><br></p>
-<p></p>
----
-<p></p>
-
 ### Step 2. Retrieve your domain
 
-Before you get started with any LivePerson API, you must retrieve the base domain of LivePerson using the **Domain API** (a read-only API).
+Before you get started with any LivePerson API, you must retrieve the base domain of LivePerson using the **Domain API** (a read-only API). [More information on using the Domain API can be found here](essential-resources-domain-api.html).
 
-{:.important}
-The different service names can be found in the relevant documentation for the API you're looking to use.
-
-#### Request
-
-The GET method used returns an array of services and base URI for the specified account ID.
-
-| **Method** | **URL** |
-| --- | --- |
-| GET | http://api.liveperson.net/api/account/{accountId}/service/baseURI.json?version=1.0 |
-
-URL Parameters
-
-| **Name** | **Description** | **Type/Value** | **Required** |
-| --- | --- | --- | --- |
-| account | LivePerson account ID | string | Yes |
-
-#### Response
-
-```json
-{
-    "baseURIs": [
-        {
-            "service": "liveEngageUI",
-            "account": "EXAMPLE123",
-            "baseURI": "lo.le1.liveperson.net"
-        },
-        {
-            "service": "visitorFeed",
-            "account": "EXAMPLE123",
-            "baseURI": "lo.v-feed.liveperson.net"
-        },
-        {
-            "service": "etool",
-            "account": "EXAMPLE123",
-            "baseURI": "z2.etool.liveperson.net"
-        },
-```
-
-
-#### Optional Response Status Codes
-
-| **Status** | **Description** |
-| --- | --- |
-| 200 OK | Successfully retrieved the data. |
-| 400 Bad Request | Problem with body or query parameters. |
-| 401 Unauthorized | Bad Authentication (invalid site or agent). |
-
-<p><br></p>
----
-<p></p>
-
-### Step 3. Add Retry and KeepAlive mechanisms
-
-In this step, you add a mechanism to your API call to increase reliability and stability. Each component in a network can return an error, which can cause your application to fail.  If an error returns, the mechanism makes sure that your application attempts to retrieve the relevant information.
-
-1. Reconnect, in case there is an error coming from the WebSocket that causes the connection to be closed, an exponential reconnect needs to be performed.
-
-2. KeepAlive (WebSocket): if the WebSocket is not getting messages, is advice to ping it, so it doesn't get close due inactivity.
-
-3. KeepAlive (API): refresh, some APIs require the bearer token to be refreshed, this helps to have a valid token for each request being made.
-
-#### API error codes and retry recommendations
-
-| **Error code** | **Description** | **Recommendation** |
-| --- | --- | --- |
-| 4xx | Client-side error | Do not retry, need to fix the problem in the code |
-| 5xx | Error on the server side | Retry 3 times with 5, 10, 15-second pause between retries |
-
-To make sure your application recovers from more than 3 consecutive failed requests, you must introduce another retry for login/socket close/etc. Keep the following best practices in mind when you introduce retries:
-
-- The retry must be a longer interval than the previous one, for example, every 2 minutes or you can use [Exponential Backoff](https://jsfiddle.net/orenkatz/xqhxy8x4/).
-- Make sure you do NOT define intervals that are too short because you want to give the application time to recover and retry.  Too short intervals or too many retries have an adverse effect on the target source or service, preventing the resource or service from recovering from its overloaded state, and continues to block or refuse requests. This vicious cycle reduces its ability to recover from its overloaded state.
-- Once you've implemented a retry mechanism, make sure it works as expected.
-- Make sure your application logs the details of faults and failing operations.  It is useful for troubleshooting the cause of a failure.
-
-#### KeepAlive
-Keep alive connections allow the client and server to use the same connection to send and receive multiple HTTP requests and responses, which helps avoid:
-
-- 3-way handshake for new connections— a full roundtrip of latency
-- slow-start
-
-Keep-alive connections are enabled by default in HTTP/1.1 while not in HTTP/1.0, which was designed to close the connection after every request between the client and the server.
-
-Some of our services require you to send periodic requests to keep your session alive. We've provided the recommended intervals per product:
-
-| **Product** | **Method name** | **KeepAlive interval** |
-| --- | --- | --- |
-| Chat Agent API | [refresh](https://developers.liveperson.com/agent-refresh.html) | Every 5 minutes |
-| Messaging Agent SDK | getClock | Every 30 seconds |
-| Messaging Window API | getClock | Every 30 seconds |
-| Server Chat API | [Retrieve Chat Information](https://developers.liveperson.com/consumer-experience-server-chat-retrieve-chat-information.html) | Every 30 seconds |
-
-<p><br></p>
----
-<p></p>
-
-### Step 4. Select the login method
+### Step 3. Select the login method
 
 In this step, you choose whether to access LiveEngage sessions with the **User Login** or **Application Login** method.
 
@@ -171,7 +71,7 @@ To log in as an application, you must have the _User Type - Bot_ feature activat
 ---
 <p></p>
 
-### Step 5. Authorize API Calls
+### Step 4. Authorize API Calls
 
 In this step, now that you’ve chosen your login method.  Some of our APIs require authorization before you can use them.  Every API uses either user login credentials or an API key, or both, which you can find in the overview of the API itself.
 
@@ -189,56 +89,8 @@ In this step, now that you’ve chosen your login method.  Some of our APIs requ
 ---
 <p></p>
 
-### Step 6. Authenticate with LiveEngage
 
-All authenticated information is encrypted and transferred over Secure Sockets Layer (SSL), using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token (JWT).  Authentication occurs when the brand's Identity Provider (IDP) provides unique information on each customer to LiveEngage via the standard OpenID Connect JWT method. The advantage is that LiveEngage displays the customer information to the brand's agent under OAuth 2.0 and OpenID Connect protocols, providing a high degree of security and certainty regarding the consumer's identity.
-
-{:.notice}
-For more details on what information is available from the IDP, refer to the [personalInfo](messaging-interactions-api-engagement-attributes.html#personalinfo) engagement attribute and the [customerInfo](messaging-interactions-api-engagement-attributes.html#customerinfo) engagement attribute.
-
-#### Unauthenticated engagements
-
-For unauthenticated engagements to work, contact your LivePerson account team who can enable the Unauthenticated Messaging feature on your account.
-
-#### Authenticated engagements
-
-1. Log into LiveEngage as Administrator and along the top open the **Campaigns** area.
-
-2. In the footnote, click **Data Sources**.
-
-3. In the Connectors area, and next to the authentication server, click **Configure**.
-
-   The Authentication Server page opens.
-
-4. In the **Define the authentication service URLs** drop-down menu, select your authentication method.
-
-    ![Authentication Server](img/authserver.png)
-
-5.  Configure the following parameters:
-
-   {:.important}
-   You can only have one authentication type for both web and in-app messaging. For example, if you use the implicit flow for web messaging, then you must also use implicit flow for in-app message.
-
-   - Implicit or Code Flow
-
-   - OAuth 2.0 Authentication Endpoint (when using a separate browser window)
-
-   - OAuth 2.0 Token Endpoint (when using Code Flow)
-
-   - OAuth 2.0 JWT Public Key
-
-   - OAuth 2.0 Client ID
-
-   - OAuth 2.0 Client Secret (when using Code Flow)
-
-   - JS method name and context (when using LiveEngage embedded window in Web)
-
-
-<p><br></p>
----
-<p></p>
-
-### Step 7. Create an API key
+### Step 5. Create an API key
 
 Application keys are security tokens that you use to log into LiveEngage. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
 
@@ -298,3 +150,5 @@ Congratulations!  You are now ready to customize and implement features in LiveE
 - **Integrate a messaging bot into LiveEngage** to send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation. You use the [Agent Messaging SDK](messaging-agent-sdk-overview.html) to connect a bot, but your account must be enabled to support bot users. To check the enabled features for your account, contact your account team or LivePerson Support.
 
 - **Manage users in LiveEngage** to update user lists that may need updating on a regular basis. You use the [Users API](users-api-overview.html) to make updates such as profile pictures, login names, passwords, or user assignments. You can also synchronize any HR or staffing system with LiveEngage.
+
+- **Implement a retry policy**. We recommend that you add a mechanism to your API call to increase reliability and stability. Each component in a network can return an error, which can cause your application to fail.  If an error returns, the mechanism makes sure that your application attempts to retrieve the relevant information. [More information on our retry policy best practices can be found here](retry-and-keepalive-best-practices-overview.html).

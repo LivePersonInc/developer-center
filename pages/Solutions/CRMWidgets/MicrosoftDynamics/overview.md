@@ -2,17 +2,15 @@
 pagename: Microsoft Dynamics
 redirect_from:
   - microsoftdynamics.html
-permalink: crm-integrations-microsoft-dynamics.html
 sitesection: Solutions
-
 documentname: CRM Integrations
-order: 20
+permalink: crm-integrations-microsoft-dynamics.html
+indicator: chat
 ---
 
 This integration will allow you to see and create your Microsoft Dynamics Contact, Lead, Account record data right from within LiveEngage. It will also allow you to view your LiveEngage transcripts from within Microsoft Dynamics.
 
-<div class="inntertext configlink"><a href="https://s3-eu-west-1.amazonaws.com/ce-sr/CA/CRM+Integration+Guides/Microsoft+Dynamics+Integration+Guide.pdf" target="_blank">Click here</a> for the Microsoft Dynamics Widget Integration Guide!</div>
-
+<div class="inntertext configlink"><a href="assets/CRM_Widget_Microsoft_Dynamics_Admin_Guide_2019_v2.pdf" target="_blank">Click here</a> for the Microsoft Dynamics Widget Integration Guide!</div>
 <hr class="solutionshr" />
 
 

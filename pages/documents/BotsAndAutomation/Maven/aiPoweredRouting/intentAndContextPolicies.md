@@ -24,6 +24,7 @@ Conditions can be applied to each Attribute in Context Warehouse. A condition bl
 
 **Example 1**: Use a list to check if an email address is in that list. 
 
+{% raw %}
 ```json
 "conditions": [
     {
@@ -33,6 +34,7 @@ Conditions can be applied to each Attribute in Context Warehouse. A condition bl
     }
 ] 
 ```
+{% endraw %}
 
 **Example 2**: Check if customer is returning within 24 hours. 
 
@@ -68,6 +70,7 @@ Actions define what to do next if the conditions are valid. An action block may 
 
 **Example**: Route a conversation to a specific VIP skill. 
 
+{% raw %}
 ```json
 "actions": [
     {
@@ -78,6 +81,7 @@ Actions define what to do next if the conditions are valid. An action block may 
     }
 ]
 ```
+{% endraw %}
 
 Similar to conditions an action such as transferring to a skill can use either a variable or a constant value.
 
@@ -88,7 +92,7 @@ To route to skills, you will need the SkillIds used by LiveEngage. To retrieve a
 1. Login to LiveEngage and then go to Users tab and then Skills
 2. Then click on Actions and then export all
 
-    <img class="fancyimage" width="600" src="img/maven/Get SkillID From LiveEngage.png">
+    <img class="fancyimage" width="600" src="img/maven/Get SkillID from LiveEngage.png">
 
 3. Save the zip file and then open Skills.csv 
 4. All Skill IDs with associated skill name should be in this file. Copy and paste the skill IDs into your policy to transfer to a skill.

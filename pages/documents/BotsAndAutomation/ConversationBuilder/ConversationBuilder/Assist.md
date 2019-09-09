@@ -28,4 +28,4 @@ Once you choose an intent, the Assistant will set it for the user's message and 
 
 When you create a **automation interaction**, such as a multiple choice question, the Assistant will listen to the different answers you create for this interaction. It will attempt to find an [entity](conversation-builder-intent-builder-entities.html) which contains these different answers and suggest that you set it for this interaction. If no entity is found, it will prompt you to create one and populate it with the different answers you've configured.
 
-Once you've chosen an entity, the Assistant will also prompt you to assign or create a [slot](conversation-builder-conversation-builder-conditions.html#slots) for this interaction. This will allow you to store the specific answer which the user will choose from out of the members of the assigned entity.
+Once you've chosen an entity, the Assistant will also prompt you to assign or create a [slot](conversation-builder-conversation-builder-variables-slots.html#slots) for this interaction. This will allow you to store the specific answer which the user will choose from out of the members of the assigned entity.

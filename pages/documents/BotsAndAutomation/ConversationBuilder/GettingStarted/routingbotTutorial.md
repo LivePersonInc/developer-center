@@ -68,7 +68,7 @@ This bot is setup to **route to 4 different skills** based on certain options (B
 
     ![](img/conversationimages/image_8.png)
 
-    1. This dialog is set to respond to various greeting [patterns](conversation-builder-overview-conditions.html#pattern-matching). Once one of these patterns is recognized, the bot will send out the welcome dialog. We recommend leaving the patterns as is. At the very least, leave a "hi" pattern which we use as a default trigger (otherwise, no pattern will be matched and the bot won't trigger).
+    1. This dialog is set to respond to various greeting [patterns](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching). Once one of these patterns is recognized, the bot will send out the welcome dialog. We recommend leaving the patterns as is. At the very least, leave a "hi" pattern which we use as a default trigger (otherwise, no pattern will be matched and the bot won't trigger).
 
         ![](img/conversationimages/image_9.png)
 
@@ -80,7 +80,7 @@ This bot is setup to **route to 4 different skills** based on certain options (B
 
         ![](img/conversationimages/image_11.png)
 
-    4. Click on this interaction and on the top of the right panel, make sure "USER RESPONSE" is selected. This panel allows you to determine how you want this interaction to react to the user’s next response. For the moment we are using a simple [pattern](conversation-builder-overview-conditions.html#pattern-matching) to match the word “billing” (by using the pattern “billing”) which will navigate to the Option 1 dialog and, within it, to the "billing text" interaction which appears in the dropdown. Ultimately, this will trigger the escalation to the Billing skill.
+    4. Click on this interaction and on the top of the right panel, make sure "USER RESPONSE" is selected. This panel allows you to determine how you want this interaction to react to the user’s next response. For the moment we are using a simple [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) to match the word “billing” (by using the pattern “billing”) which will navigate to the Option 1 dialog and, within it, to the "billing text" interaction which appears in the dropdown. Ultimately, this will trigger the escalation to the Billing skill.
 
         <img src="img/conversationimages/image_12.png" style="height:500px">
 

@@ -15,40 +15,15 @@ As mentioned in the [Getting Started document](function-as-a-service-getting-sta
 
 Currently, the Toolbelt offers the following methods:
 
-<table style="width: 100%;">
-<thead>
-<tr>
-<th>Method</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Toolbelt.SFClient()</td>
-<td>Returns a Salesforce Client, that is configured to work with the FaaS Proxy.</td>
-</tr>
-<tr>
-<td>Toolbelt.HTTPClient()</td>
-<td>Returns a HTTP Client, that is configured to work with the FaaS Proxy.</td>
-</tr>
-<tr>
-<td>Toolbelt.SecretClient()</td>
-<td>Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage.</td>
-</tr>
-<tr>
-<td>Toolbelt.SMTPClient(config)</td>
-<td>Returns an SMTP Client instance, which is configured using the provided config.</td>
-</tr>
-<tr>
-<td>Toolbelt.ConversationUtil(apiCredentials)</td>
-<td>Returns a Conversation Util instance, which is configured using the provided API credentials (<a href="https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html">API Key</a>).</td>
-</tr>
-<tr>
-<td>Toolbelt.GDPRUtil()</td>
-<td>Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation.</td>
-</tr>
-</tbody>
-</table>
+| Method | Description |
+| :------- | :----- |
+| Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
+| Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
+| Toolbelt.LpClient() | Returnts the LivePerson (LP) Client. This is a wrapper for the [HTTP Client](https://developers.liveperson.com/liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
+| Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
+| Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
+| Toolbelt.ConversationUtil(apiCredentials) | Returns a Conversation Util instance, which is configured using the provided API credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
+| Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 
 Here are usage example, which are taken out of the official templates:
 
@@ -97,29 +72,25 @@ httpClient(URL, {
 
 The LivePerson (LP) Client is a wrapper for the [HTTP Client](https://developers.liveperson.com/liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization.
 
-Every LivePerson API has a service name. This is documented in the respective page on [developers.liveperson.com](https://developers.liveperson.com). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance has the service name `msgHist`. The LP Client expects the LpService name as the first argument. This can be done by using our `LpServices` enum or by manually providing the service name as a string.
-
-Additionally, most of the LivePerson API calls need authorization. The LP Client also takes care of that by automatically creating the respective HTTP headers. Currently, only APIs that use [API Key](https://developers.liveperson.com/guides-gettingstarted.html) authorization are supported. In order to perform this authorization, the API reads credentials from a [secret](https://developers.liveperson.com/liveperson-functions-development-storing-secrets.html). By default, the secret name is `lp-faas-default-app-key`, but it can be overriden by setting `options.appKeySecretName`.
+ Every LivePerson API has a service name. This is documented in the respective page on [developers.liveperson.com](https://developers.liveperson.com). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance has the service name `msgHist`. The LP Client expects the LpService name as the first argument. This can be done by using our `LpServices` enum or by manually providing the service name as a string.
+ 
+Additionally, most of the LivePerson API calls need authorization. The LP Client also takes care of that by automatically creating the respective HTTP headers. Currently, only APIs that use [API Key](https://developers.liveperson.com/guides-gettingstarted.html) authorization are supported. In order to perform this authorization, the API reads credentials from a [secret](https://developers.liveperson.com/liveperson-functions-development-storing-secrets.html). By default, the secret name is `lp-faas-default-app-key`, but it can be overriden by setting `options.appKeySecretName`. 
 
 **Using the LP Client**
 In order to use the LP Client you have to execute the following steps:
-
-1.  Create and maintain API Key credentials (see below).
-2.  Whitelist `api.liveperson.net`
-
-- Go to `Settings -> Domain Whitelist`
-- Add `api.liveperson.net`
-
-3.  Whitelist the API you want to use
-
-- Retrieve the domain for the service you want to use as described [here](https://developers.liveperson.com/agent-domain-domain-api.html).
-- Go to `Settings -> Domain Whitelist`
-- Add the domain
+ 1. Create and maintain API Key credentials (see below).
+ 2. Whitelist `api.liveperson.net`
+  * Go to `Settings -> Domain Whitelist`
+  * Add `api.liveperson.net`
+ 3. Whitelist the API you want to use
+  * Retrieve the domain for the service you want to use as described [here](https://developers.liveperson.com/agent-domain-domain-api.html).
+  * Go to `Settings -> Domain Whitelist`
+  * Add the domain
 
 **Create and maintain an API Key**
+* Create an API Key as described [here](https://developers.liveperson.com/guides-gettingstarted.html). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance needs the permission `Data -> Engagement History / Messaging Interactions`
+* Create a new secret of the JSON to save the API Key credentials created before. The JSON has the following structure:
 
-- Create an API Key as described [here](https://developers.liveperson.com/guides-gettingstarted.html). The [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html) for instance needs the permission `Data -> Engagement History / Messaging Interactions`
-- Create a new secret of the JSON to save the API Key credentials created before. The JSON has the following structure:
 
 ```javascript
 {
@@ -173,7 +144,7 @@ Searches the secret that belongs to the provided key. Will raise an error if the
 <table style="width: 100%;">
 <thead>
 <tr>
-<th >Parameter</td>
+<th >Parameter</th>
 <th >Description</th>
 </tr>
 </thead>
@@ -260,7 +231,7 @@ secretClient
   });
 ```
 
-### SMTP Client:
+### SMTP Client
 
 SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
 
@@ -293,11 +264,11 @@ SMTP Client allows the sending of emails via the SMTP Protocol. It is configured
     subject: "Awesome Email !",
     text: "You can also send directly a html body by passing it as html."
   })
-  .then(response => //TODO: react on the response)
-  .catch(err => //TODO: React to error);
+  .then(response => //react on the response)
+  .catch(err => //React to error);
 ```
 
-### Conversation Util:
+### Conversation Util
 
 The Conversation Util allows to perform conversation related methods, which are listed below. Authorization is configured during instance creation.
 
@@ -368,7 +339,7 @@ const scannerResult = conversationUtil.scanConversationForKeywords(
 
 The method collects every message which contains a keyword in an array. It retrieves a timestamp, information on who sent the message and adds a tag detailing the keyword for which the message has been selected. If one message contains more than one keyword it will appear as often in the array. (see example underneath)
 
-<table  style="width: 100%;">
+<table style="width: 100%;">
 <thead>
 <tr>
 <th>Attribute</th>
@@ -392,6 +363,8 @@ The method collects every message which contains a keyword in an array. It retri
 <td>Who the conversation was sent by</td>
 <td>string</td>
 </tr>
+</tbody>
+</table>
 
 ```javascript
 [
@@ -416,7 +389,7 @@ The method collects every message which contains a keyword in an array. It retri
 ];
 ```
 
-### GDPR Util:
+### GDPR Util
 
 This method provides GDPR related functionality, such as deleting transcripts of a conversation.
 
