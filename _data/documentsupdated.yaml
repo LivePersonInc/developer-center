@@ -205,6 +205,7 @@
       - pagename: IBM Watson Assistant
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
+      - pagename: Custom Integration
   - documentname: Custom Third Party Bots
 
 - categoryname: Client Side Configuration
