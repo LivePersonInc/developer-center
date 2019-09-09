@@ -129,6 +129,7 @@
           - subpagename: 2 - Intents
           - subpagename: 3 - Integrations
           - subpagename: 4 - Connect to LiveEngage
+      - pagename: Automations
       - pagename: Templates
         subpages:
           - subpagename: Overview
@@ -138,8 +139,6 @@
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
       - pagename: Automation Workspace Overview
-      - pagename: Enterprise Integrations
-      - pagename: Automations
       - pagename: Dialogs
       - pagename: Interactions
       - pagename: Assist
@@ -150,6 +149,7 @@
       - pagename: Scripting Functions
       - pagename: Keyword Triggers
       - pagename: Operations
+      - pagename: Enterprise Integrations
       - pagename: Best Practices
         subpages:
           - subpagename: Transfer to an Agent or Bot
