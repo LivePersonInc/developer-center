@@ -89,56 +89,8 @@ In this step, now that you’ve chosen your login method.  Some of our APIs requ
 ---
 <p></p>
 
-### Step 5. Authenticate with LiveEngage
 
-All authenticated information is encrypted and transferred over Secure Sockets Layer (SSL), using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token (JWT).  Authentication occurs when the brand's Identity Provider (IDP) provides unique information on each customer to LiveEngage via the standard OpenID Connect JWT method. The advantage is that LiveEngage displays the customer information to the brand's agent under OAuth 2.0 and OpenID Connect protocols, providing a high degree of security and certainty regarding the consumer's identity.
-
-{:.notice}
-For more details on what information is available from the IDP, refer to the [personalInfo](messaging-interactions-api-engagement-attributes.html#personalinfo) engagement attribute and the [customerInfo](messaging-interactions-api-engagement-attributes.html#customerinfo) engagement attribute.
-
-#### Unauthenticated engagements
-
-For unauthenticated engagements to work, contact your LivePerson account team who can enable the Unauthenticated Messaging feature on your account.
-
-#### Authenticated engagements
-
-1. Log into LiveEngage as Administrator and along the top open the **Campaigns** area.
-
-2. In the footnote, click **Data Sources**.
-
-3. In the Connectors area, and next to the authentication server, click **Configure**.
-
-   The Authentication Server page opens.
-
-4. In the **Define the authentication service URLs** drop-down menu, select your authentication method.
-
-    ![Authentication Server](img/authserver.png)
-
-5.  Configure the following parameters:
-
-   {:.important}
-   You can only have one authentication type for both web and in-app messaging. For example, if you use the implicit flow for web messaging, then you must also use implicit flow for in-app message.
-
-   - Implicit or Code Flow
-
-   - OAuth 2.0 Authentication Endpoint (when using a separate browser window)
-
-   - OAuth 2.0 Token Endpoint (when using Code Flow)
-
-   - OAuth 2.0 JWT Public Key
-
-   - OAuth 2.0 Client ID
-
-   - OAuth 2.0 Client Secret (when using Code Flow)
-
-   - JS method name and context (when using LiveEngage embedded window in Web)
-
-
-<p><br></p>
----
-<p></p>
-
-### Step 6. Create an API key
+### Step 5. Create an API key
 
 Application keys are security tokens that you use to log into LiveEngage. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
 

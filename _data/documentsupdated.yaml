@@ -914,6 +914,7 @@
     - documentname: MTLS
       pages:
         - pagename: Overview
+        - pagename: Onboarding
         - pagename: Methods
           subpages:
             - subpagename: Create certificate for account
