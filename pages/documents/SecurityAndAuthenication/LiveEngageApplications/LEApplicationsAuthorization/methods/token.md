@@ -73,6 +73,19 @@ client_id=xyz&client_secret=yqr&grant_type=authorization_code&code=SplxlOBeZQQYb
 
 *Note: The `token_type` is an attribute of the `access_token` and its value is always "Bearer"*
 
+**ID Token structure**
+
+| Attribute name | Description |
+| :--- | :--- |
+| sub | user ID  |
+| aud | ID of the application asking for authorization  |
+| iss | Always "Sentinel: |
+| iat | JWT creation time. value is seconds since EPOC |
+| exp | JWT expiration time. value is seconds since EPOC |
+| is_admin| boolean, true if user has admin role |
+| is_lpa| boolean, true if user is LPA ||
+
+
 Example:
 
 ```json
