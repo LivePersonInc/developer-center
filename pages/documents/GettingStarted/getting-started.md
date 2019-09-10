@@ -4,6 +4,8 @@ sitesection: Documents
 categoryname: "Getting Started"
 documentname: Before You Get Started
 permalink: before-you-get-started-let-s-get-started.html
+redirect_from:
+  - retrieve-api-keys-create-a-new-api-key.html
 indicator: both
 ---
 
