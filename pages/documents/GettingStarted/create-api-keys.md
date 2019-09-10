@@ -13,7 +13,7 @@ indicator: both
 Application keys are security tokens that you use to access LiveEngage services. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
 
 {:.notice}
-You use the API key when you create bots.
+You use the API key when you create bots, access our APIs programatically and authorize LiveEngage applications.
 
 1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaigns** area.
 
