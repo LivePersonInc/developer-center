@@ -131,10 +131,10 @@ Below is an example of an payload, which changes the TTR:
 {
   "messages": ["This conversation has been marked urgent"],
   "context": {
-    "action": "CHANGE_TTR", //Mandatory
+    "action": "CHANGE_TTR",
     "actionParameters": {
-      "ttrType": "CUSTOM", //Mandatory
-      "value": "120" //Mandatory for CUSTOM only
+      "ttrType": "CUSTOM",
+      "value": "120"
     }
   }
 }
@@ -148,7 +148,7 @@ Transfers and escalations rely on the `action` key in the response object and it
 
 |key|value|notes|
 |---|-----|-----|
-|action| TRANSFER| case sensitive|
+|action| TRANSFER| case sensitive, mandatory|
 |skill|a skill name which exists in your account account|case sensitive|
 
 Below is an example of what the response JSON from the LivePerson Function should look like to complete a transfer action.
@@ -157,7 +157,7 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 {
    "messages": ["Please wait will I check if we have any live agents online that can attend to you"], 
    "context": {
-    "action": "TRANSFER", // Mandatory
+    "action": "TRANSFER",
     "actionParameters": {
       "skill": "bot-escalation"
     },
