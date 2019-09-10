@@ -40,6 +40,9 @@ You use the API key when you create bots.
    - Access token secret
 
    ![](../../../img/apikeycreation1.png)
+   
+   {:.notice}
+   The maximum number of keys that can be created per aacount is currently 100.
 
 7. If the window does not close automatically, click the **X** in the top right to close the window.
 
