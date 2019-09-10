@@ -53,6 +53,9 @@ You use the API key when you create bots.
 
 8. Using the authentication details, generate an OAuth header according to the [OAuth Specification Section 9](https://oauth.net/core/1.0/#signing_process).
 
+{:.notice}
+The API key best practices is basically oAuth1 best practices. The developer can use the API keys as he wants. usually, the API key is per application. 
+
 **Example:**
 
 | **Header Name** | **Authorization** |
