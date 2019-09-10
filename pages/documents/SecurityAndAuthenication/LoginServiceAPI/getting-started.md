@@ -50,4 +50,4 @@ http://api.liveperson.net/api/account/12345678/service/agentVep/baseURI.json?ver
 
 ### Step 3. Create an API key and new Bot
 
-[Refer to our Getting Started guide for more information on creating API keys](https://developers.liveperson.com/before-you-get-started-let-s-get-started.html#step-5-create-an-api-key). You'll need the details (like username or app secert) to use the methods of this API mentioned above so make sure to note them.
+[Refer to our Getting Started guide for more information on creating API keys](essential-resources-create-api-keys.html). You'll need the details (like username or app secert) to use the methods of this API mentioned above so make sure to note them.

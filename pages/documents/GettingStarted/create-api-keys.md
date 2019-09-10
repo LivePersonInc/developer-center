@@ -3,14 +3,14 @@ pagename: Create API keys
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: Before You Get Started
-permalink: before-you-get-started-let-s-get-started.html
+permalink: essential-resources-create-api-keys.html
 indicator: both
 ---
 
 
 ### Create an API key
 
-Application keys are security tokens that you use to access LiveEngage services. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
+API keys are security tokens that you use to access LiveEngage services. The API key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
 
 {:.notice}
 You use the API key when you create bots, access our APIs programatically and authorize LiveEngage applications.
@@ -21,14 +21,17 @@ You use the API key when you create bots, access our APIs programatically and au
 
 3. Open the API tab and click **Add new**.
 
-   **TIP:** Alternatively, you can click on an existing key to edit its privileges.
+{:.notice}
+Alternatively, you can click on an existing key to edit its privileges.
 
+{:start="4"}
 4. Provide the name of the application and the developer name. Optionally you can provide a description of the app by clicking the **Add description** link below the Application name field.
 
 5. Select the **Agent Interactions** category, click the **User Login** checkbox to select it, and then click **Save**.
 
    ![](../../../img/APIKeyCreation.png)
 
+{:start="6"}
 6. Once the API key has been successfully created, the authentication details display for four AUTH request values, which you use in the request body of this API:
 
    - App key
@@ -40,21 +43,21 @@ You use the API key when you create bots, access our APIs programatically and au
    - Access token secret
 
    ![](../../../img/apikeycreation1.png)
-   
-   {:.notice}
-   The maximum number of API keys that can be generated per aacount is currently 100.
 
+   {:.notice}
+   The maximum number of API keys that can be generated per account is currently 100.
+{:start="7"}
 7. If the window does not close automatically, click the **X** in the top right to close the window.
 
    ![](../../../img/close-window.png)
-   
+
    {:.important}
-   Currently we do not support DELETE an API key.
+   Currently, we do not support deleting an API key.
 
 8. Using the authentication details, generate an OAuth header according to the [OAuth Specification Section 9](https://oauth.net/core/1.0/#signing_process).
 
 {:.notice}
-The API key best practices is basically oAuth1 best practices. The developer can use the API keys as he wants. usually, the API key is per application. 
+The API key best practices correspond to general oAuth1 best practices. For example, usually, the API key is generated per application/implementation, to make sure that environments have their own unique key.
 
 **Example:**
 
@@ -65,4 +68,3 @@ The API key best practices is basically oAuth1 best practices. The developer can
 <p><br></p>
 ---
 <p></p>
-

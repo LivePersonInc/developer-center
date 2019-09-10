@@ -96,7 +96,7 @@ In this step, now that you’ve chosen your login method.  Some of our APIs requ
 
 Application keys are security tokens that you use to log into LiveEngage. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
 
-[More information on using the API key can be found here](create-api-keys.html).
+[More information on using the API key can be found here](essential-resources-create-api-keys.html).
 
 
 <p><br></p>
