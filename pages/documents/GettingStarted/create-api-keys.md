@@ -42,7 +42,7 @@ You use the API key when you create bots.
    ![](../../../img/apikeycreation1.png)
    
    {:.notice}
-   The maximum number of keys that can be created per aacount is currently 100.
+   The maximum number of API keys that can be generated per aacount is currently 100.
 
 7. If the window does not close automatically, click the **X** in the top right to close the window.
 
