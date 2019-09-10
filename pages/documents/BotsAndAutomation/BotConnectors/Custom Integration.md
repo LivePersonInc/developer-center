@@ -119,7 +119,13 @@ To define messages the bot should send, you need to place the messages property 
 
 Change the TTR of a conversation based on the **action** value in the response object. LivePerson uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value progrmatically. The unit of the value is seconds. The other three values ("URGENT" for example) are defined in LiveEngage's Agent Workspace. These values determine how much time, in seconds, a conversation can wait in queue before it is deemed "overdue". For example, if the `ttrtype` is set to "CUSTOM" and the `value` is set to "120", the conversation will be considred "overdue" if it has waited in the queue for an agent response for more than 120 seconds. 
 
-Below is an example of an payload, which changes the TTR.
+Below is an example of an payload, which changes the TTR:
+
+|key|value|notes|
+|---|-----|-----|
+|action| CHANGE_TTR| Mandatory|
+|ttrtype|"URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”|Mandatory|
+|value|Seconds, string|Mandatory if "CUSTOM" is set|
 
 ```json
 {
