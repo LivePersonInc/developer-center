@@ -10,7 +10,7 @@ indicator: both
 
 ### Create an API key
 
-Application keys are security tokens that you use to log into LiveEngage. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
+Application keys are security tokens that you use to access LiveEngage services. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
 
 {:.notice}
 You use the API key when you create bots.
