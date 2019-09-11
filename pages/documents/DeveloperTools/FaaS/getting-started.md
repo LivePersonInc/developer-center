@@ -10,9 +10,19 @@ redirect_from:
   - function-as-a-service-getting-started.html
 ---
 
-<div class="important">Over the next few months we'll be gradually rolling out LivePerson Functions and can't let everyone in at the same time - <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6zcY6pkIjE-_7Eh0P15Vg6VCnt2N0LmAfQ8wS1eJ9yQQnQg/viewform">join the waitlist now</a> to secure your spot!</div>
 
 ### Before getting started
+
+#### Provisioning
+In order to easily integrate LivePerson Functions we will provision your account with the required information. Provisioning will be triggered once you agree to our terms of use:
+
+<img src="img/faas-terms-of-use.png" alt="FaaS Terms of Use" style="width:100%;"/>
+
+Once agreed, we will automatically set up your account to easily integrate with the rest of the LivePerson ecosystem including:
+
+* Activating the LivePerson Functions feature on your account
+* [Installing secrets](liveperson-functions-development-storing-secrets.html) you will need to interact with other LivePerson APIs
+* [Whitelisting domains](liveperson-functions-development-whitelisting-domains.html) of internal LivePerson APIs
 
 #### Set User Permissions
 
