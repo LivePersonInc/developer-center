@@ -53,8 +53,6 @@ This API creates a certificate for a specific account ID.
 | 500  | Internal Server Error |
 
 
-**Response Headers**
-
 **Response Body**
 
 For example:

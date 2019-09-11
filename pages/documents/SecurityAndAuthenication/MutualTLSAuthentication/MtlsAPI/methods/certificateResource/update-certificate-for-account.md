@@ -54,7 +54,6 @@ This API updates a certificate for a specific account id.
 | 500  | Internal Server Error |
 
 
-**Response Headers**
 
 **Response Body**
 

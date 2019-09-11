@@ -54,14 +54,6 @@ The following image illustrates two Response Match & Actions sets, where the fir
 
 See [Response Match & Actions](conversation-builder-conversation-builder-response-match-actions.html) for more information on configuring matches and their subsequent actions.
 
-#### Advanced Responses
-
-##### Fallback Response
-
-If a user is currently within an interaction flow (eg. Answering a Question), this fallback response will trigger if the user response has no [conditions](conversation-builder-conversation-builder-response-match-actions.html#conditions) that are met.
-
-If you do **not** set this fallback response within the interaction, and no conditions or intents are matched, the automation will defer to a [Fallback **Dialog**](conversation-builder-conversation-builder-dialogs.html#fallback).
-
 #### Process User Response
 
 This enables you to add JavaScript code for processing user input _upon receiving the input_, which can be useful for cleaning or normalizing user input, or even passing the data to an API.

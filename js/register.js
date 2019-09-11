@@ -135,8 +135,16 @@ function validateInfo (){
   } else {
     $('#allFields').show();
   }
+
+  const isValidForm = (firstName && lastName && region && emailAddress && isValidEmail && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword);
+
+  // current acceptance criteria as of 9/3/19 for hotjar form submit metrics are to tally an error for
+  //  "Anything that would cause a submit to fail (i.e. both invalid form values and network errors)."
+  if (!isValidForm && window.hj) {
+    window.hj('formSubmitFailed');
+  }
   //if all fields were filled and the passwords match, call the request to create an account
-  if ((firstName && lastName && region && emailAddress && isValidEmail && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword)) {
+  if (isValidForm) {
 
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
@@ -162,21 +170,26 @@ function postRequest () {
   axios({
     method: 'post',
     url: URL,
-    headers: {'x-api-key': 'GaFtPrUlIE9KusPOWUzSu4DQTG0BHz264ep4RqKo', 'Content-Type': 'application/json', 'Accept': 'application/json'},
+    headers: {'x-api-key': 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW', 'Content-Type': 'application/json', 'Accept': 'application/json'},
     data: user
   })
   .then(function (response) {
-    console.log(response.data);
     //save the account number received from the service so we can display it on the confirmation page
     localStorage.setItem ('accountNumber', response.data.accountId );
     //load the confirmation page
+    if (window.hj) {
+      window.hj('formSubmitSuccessful');
+    }
     window.location = '/confirmation.html';
   })
-  .catch(function(err){
+  .catch(function(err) {
     console.log(err);
+    if (window.hj) {
+      window.hj('formSubmitFailed');
+    }
     localStorage.setItem ('errorHappened', 'true');
     location.reload();
-  })
+  });
 }
 
 //simple function to detect if the page was refreshed because of an error call and display a corresponding error message if so
