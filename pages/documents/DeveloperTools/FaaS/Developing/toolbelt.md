@@ -21,7 +21,7 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 | Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
-| Toolbelt.ConversationUtil(apiCredentials) | Returns a Conversation Util instance, which is configured using the provided API credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
+| Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
 | Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 
 Here are usage example, which are taken out of the official templates:
@@ -174,7 +174,7 @@ This method retrieves a conversation from the [Messaging Interactions API](https
   // import FaaS Toolbelt
   const { Toolbelt } = require("lp-faas-toolbelt");
 
-  // Create instance, uses credentials of secret "lp-faas-default-app-key"
+  // Create instance
   const conversationUtil = Toolbelt.ConversationUtil();
 
   // Get conversation
@@ -193,7 +193,7 @@ This method scans a conversation that has been retrieved with `getConversationBy
 // import FaaS Toolbelt
 const { Toolbelt } = require("lp-faas-toolbelt");
 
-// Create instance, uses credentials of secret "lp-faas-default-app-key"
+// Create instance
 const conversationUtil = Toolbelt.ConversationUtil();
 
 // Get conversation
@@ -265,7 +265,7 @@ const fileStorageCredentials = {
   password: '...'
 }
 
-// Create instance, uses credentials of secret "lp-faas-default-app-key"
+// Create instance
 const conversationUtil = Toolbelt.ConversationUtil();
 
 // Create GDPR Util instance
