@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: mTLS API
 indicator: both
-permalink: mTLS-overview.html
+permalink: mtls-overview.html
 ---
 
 mTLS or Mutual Transport Layer Security (also known as Mutual TLS), is a new solution from LivePerson. The purpose of this solution is to centralize certificate management and to store certificates in a secured location over Hashicorp’s vault. This solution is intended to be self-served. This will allow users to manage their own certificates, without the need to reach out to a LivePerson representative or to the support team.
