@@ -85,6 +85,15 @@ Available modifiers:
 .lpc_maximized-header__icon-asset {
     
  }
+ 
+ 
+.lpc_maximized-header__menu-button {
+    
+}
+
+.lpc_maximized-header__menu-button-asset {
+    
+}
 ```
 
 ### Minimized Header
@@ -337,6 +346,14 @@ Area in which the user composes their messages.
 }
 
 .lpc_composer__file-attachment-button-asset {
+    
+}
+
+.lpc_composer__emoji-button {
+            
+}
+
+.lpc_composer__emoji-button-asset {
     
 }
 ```
