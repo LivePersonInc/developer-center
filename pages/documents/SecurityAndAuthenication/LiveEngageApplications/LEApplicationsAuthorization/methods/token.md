@@ -79,7 +79,7 @@ client_id=xyz&client_secret=yqr&grant_type=authorization_code&code=SplxlOBeZQQYb
 | :--- | :--- |
 | sub | user ID  |
 | aud | ID of the application asking for authorization  |
-| iss | Always "Sentinel: |
+| iss | Always "Sentinel" |
 | iat | JWT creation time. value is seconds since EPOC |
 | exp | JWT expiration time. value is seconds since EPOC |
 | is_admin| boolean, true if user has admin role |
