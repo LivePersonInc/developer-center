@@ -68,7 +68,7 @@ The Customer web page method name can be either the default LivePerson method na
 ```javascript
     var lpMethods = {
         lpGetAuthenticationToken: function(callback) {
-            log("LP asked for id_token");
+            log("LP asked for id_token or auth code in Code Flow");
             // Do your magic...
             // On Success
             callback(id_token);
@@ -77,7 +77,7 @@ The Customer web page method name can be either the default LivePerson method na
         },
         // Or, if you want to provide a redirect_uri as well (instead of the default "https://liveperson.net")
         lpGetAuthenticationTokenWithRedirectURI: function(callback) {
-            log("LP asked for id_token");
+            log("LP asked for id_token auth code in Code Flow");
             // Do your magic...
             // On Success
             callback({ssoKey: id_token, redirect_uri: uri});
