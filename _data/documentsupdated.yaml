@@ -148,8 +148,8 @@
       - pagename: Variables & Slots
       - pagename: Integrations
       - pagename: Scripting Functions
-      - pagename: Keyword Triggers
-      - pagename: Operations
+      #- pagename: Keyword Triggers
+      #- pagename: Operations
       - pagename: Enterprise Integrations
       - pagename: Best Practices
         subpages:
