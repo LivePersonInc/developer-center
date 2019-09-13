@@ -180,6 +180,15 @@ func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, comp
 | failure | called once the operation of retrieving unread messages count failed for the provided conversation query. | -- |
 
 
+### getUnreadMessagesCount(Updated)
+**This method is available since SDK version 4.1.0.**
+This api will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
+This api will be improved in future to show the count of unread messages in the closed conversation as well and the doc will be updated accordingly.
+
+```swift
+func getUnreadMessagesCount(brandID: String, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:Error)->())
+```
+
 ### handlePush
 
 To receive all incoming push notifications in a single function and handle them, add the following method. This method cooperates with two other API methods:
