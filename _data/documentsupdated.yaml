@@ -114,9 +114,15 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-  - documentname: Conversation Builder
+  - documentname: Conversational AI Platform
     pages:
       - pagename: Platform Overview
+      - pagename: Natural Language Understanding
+        subpages:
+          - subpagename: NLU Engines
+          - subpagename: Training and Tuning Your Intents and FAQs
+  - documentname: Conversation Builder
+    pages:
       - pagename: Getting Started
         subpages:
           - subpagename: 0 - Video Tutorials
@@ -124,9 +130,7 @@
           - subpagename: 2 - Intents
           - subpagename: 3 - Integrations
           - subpagename: 4 - Connect to LiveEngage
-          #- subpagename: 5 - Releases and Versioning
-          #- subpagename: Basic - FAQ Bot Tutorial
-          #- subpagename: Basic - Routing Bot Tutorial
+      - pagename: Automations
       - pagename: Templates
         subpages:
           - subpagename: Overview
@@ -135,38 +139,41 @@
           - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
-      - pagename: Conversation Builder
-        subpages:
-            - subpagename: Overview
-            - subpagename: Enterprise Integrations
-            - subpagename: Automations
-            - subpagename: Dialogs
-            - subpagename: Interactions
-            - subpagename: Assist
-            - subpagename: Interaction Details
-            - subpagename: Response Match & Actions
-            - subpagename: Variables & Slots
-            - subpagename: Integrations
-            - subpagename: Scripting Functions
-            #- subpagename: Keyword Triggers
-      - pagename: Intent Builder
-        subpages:
-          - subpagename: Overview
-          - subpagename: Entities
-          - subpagename: NLU Engines
-      - pagename: Knowledge Base
-      - pagename: Analytics
-      - pagename: Accounts
-        subpages:
-          - subpagename: User Role Permissions
-      #- pagename: Operations
+      - pagename: Automation Workspace Overview
+      - pagename: Dialogs
+      - pagename: Interactions
+      - pagename: Assist
+      - pagename: Interaction Details
+      - pagename: Response Match & Actions
+      - pagename: Variables & Slots
+      - pagename: Integrations
+      - pagename: Scripting Functions
+      - pagename: Keyword Triggers
+      - pagename: Operations
+      - pagename: Enterprise Integrations
       - pagename: Best Practices
         subpages:
           - subpagename: Transfer to an Agent or Bot
           - subpagename: Using Environment Variables
           #- subpagename: Common Conversation Patterns
-          - subpagename: Training and Tuning Your Intents and FAQs
           - subpagename: Versions, Releases, & Change Management
+  - documentname: Intent Builder
+    pages:
+      - pagename: Overview
+      - pagename: Entities
+  - documentname: Knowledge Base
+    pages:
+      - pagename: Overview
+  - documentname: Bot Analytics
+    pages:
+      - pagename: Overview
+#  - documentname: LiveIntent
+#    pages:
+#	  - pagename: Overview
+#	  - pagename: Dashboard
+  - documentname: Bot Accounts
+    pages:
+      - pagename: User Role Permissions
   - documentname: Maven
     pages:
       - pagename: Overview
@@ -187,18 +194,11 @@
           - subpagename: Intent & Context Policies
           - subpagename: Set Up Maven in LivePerson
           - subpagename: Use Maven with Your Bot
-          - subpagename: Tutorial
       - pagename: AskMaven
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-  - documentname: Messaging Agent SDK
-    pages:
-      - pagename: Overview
-      - pagename: Examples
-      - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
-  - documentname: Bot Connectors
+  - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
       - pagename: Bot Status Dashboard
@@ -207,7 +207,13 @@
       - pagename: IBM Watson Assistant
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
-  - documentname: Custom Third Party Bots
+      - pagename: Custom Third Party Bots
+  - documentname: Messaging Agent SDK
+    pages:
+      - pagename: Overview
+      - pagename: Examples
+      - pagename: Conversation Metadata Guide
+      - pagename: Release Notes
 
 - categoryname: Client Side Configuration
   image: client-side
