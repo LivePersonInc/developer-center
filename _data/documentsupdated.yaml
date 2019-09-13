@@ -8,6 +8,7 @@
     pages:
     - pagename: API Data Metrics
     - pagename: Authentication
+    - pagename: Create API keys
     - pagename: Data APIs
     - pagename: Domain API
     - pagename: Engagement Attributes

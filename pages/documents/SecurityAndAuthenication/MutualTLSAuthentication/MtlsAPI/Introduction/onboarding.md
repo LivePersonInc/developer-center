@@ -37,7 +37,8 @@ In order to create the mapping object, you will need to use the following method
 You can authenticate with this endpoint with oAuth1 or a Bearer.
 
 Service options:
-```
+
+```java
 public enum Services {
     TEST_SERVICE("0"),
     IDP ("1"),
@@ -46,13 +47,14 @@ public enum Services {
 ```
 
 Example body (Certificate array):
-```
+
+```json
 [
     {
         "certificationId": "{idFromPreviousCreation}",
         "serviceId": "0", //From service options
         "enable": true,   //Must be true to work (can be disabled)
-        "url": "{urlToAccessTo}", //The Url protected by the certificate (as will be submitted by runtime, it must match               (parameters exluded))
+        "url": "{urlToAccessTo}", //The Url protected by the certificate (as will be submitted by runtime, it must match
         "siteId": "{siteId}",
         "name": "{CertificateMappingName}",
         "deleted": false

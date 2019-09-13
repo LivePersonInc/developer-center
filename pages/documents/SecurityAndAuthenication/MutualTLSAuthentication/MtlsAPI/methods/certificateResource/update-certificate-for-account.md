@@ -6,6 +6,8 @@ categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
 permalink: mtls-methods-update-certificate-from-file.html
+redirect_from:
+  - mtls-methods-update-certificate-for-account.html
 ---
 
 This API updates a certificate for a specific account id.
