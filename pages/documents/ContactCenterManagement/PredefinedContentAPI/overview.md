@@ -120,7 +120,11 @@ Issue a REST request to create a new predefined content entry (this example uses
 
 * Create a new POST request on POSTMAN.
 
-* URL: https://{{accountConfigReadWriteDomain}}/api/account/{{accountId}}/configuration/engagement-window/canned-responses?v=2.0&lang=en-US
+* URL: 
+
+	{% raw %}
+	`https://{{accountConfigReadWriteDomain}}/api/account/{{accountId}}/configuration/engagement-window/canned-responses?v=2.0&lang=en-US`
+	{% endraw %}
 
 _Note: To get the `accountConfigReadWriteDomain` for your account, see the [Getting Started with LiveEngage APIs](guides-gettingstarted.html) document._
 

@@ -8,6 +8,9 @@ subfoldername: Methods
 permalink: mtls-methods-create-certificate-from-file.html
 ---
 
+{: .important}
+Currently, these methods cannot be used to create certificates. To get started with a certificate, please contact LivePerson Support.
+
 This API creates a certificate by uploading a file, for a specific account ID.
 
 ### Request
@@ -26,15 +29,12 @@ This API creates a certificate by uploading a file, for a specific account ID.
 
 **Request Body**
 
-form-data body
+This end-point receives information formatted as `form-data`. The below is an example of the body in this format.
 
-KEY: file  (File field type)
-
-VALUE: p12 file
-
-KEY: certificate  (Text field type)
-
-VALUE: {"name":"myCertificate", "password":"1234"}
+|Key         |Value  |
+|:------|        :--------  |
+|file  (File field type)|    p12 file   |
+|certificate  (Text field type)|    {"name":"myCertificate", "password":"1234"}   |
 
 
 **Path Parameters**
@@ -54,8 +54,6 @@ VALUE: {"name":"myCertificate", "password":"1234"}
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
 
-
-**Response Headers**
 
 **Response Body**
 

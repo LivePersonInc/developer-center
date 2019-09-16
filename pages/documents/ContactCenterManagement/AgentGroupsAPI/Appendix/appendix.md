@@ -26,7 +26,7 @@ This section contains API details that are common to every API’s resource and 
 
 | Header | Description |
 | :-------- | :------------ |
-| eTag | Account config object type collection revision |
+| eTag | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value. |
 | location | URI Location of the newly created resource. This header is included only when the request created single object. |
 
 ### Query Parameters
