@@ -6,6 +6,8 @@ categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
 permalink: mtls-methods-p12-key-tester.html
+redirect_from:
+  - p12-key-tester.html
 ---
 
 This method will allow you to test your P12 Key before uploading a certificate and test whether the corresponding endpoint is correct and working.
@@ -37,11 +39,11 @@ Value: The file containing the p12
 
 Key: password (Text field)
 
-Value: The password matching this specific p12 
+Value: The password matching this specific p12
 
-Key: body (Text field)| 
+Key: body (Text field)|
 
-Value: Contains the same body as the client sends for the original endpoint. Not required. 
+Value: Contains the same body as the client sends for the original endpoint. Not required.
 
 **Path Parameters**
 
@@ -62,7 +64,6 @@ Value: Contains the same body as the client sends for the original endpoint. Not
 | 500  | Internal Server Error |
 
 
-**Response Headers**
 
 **Response Body**
 
