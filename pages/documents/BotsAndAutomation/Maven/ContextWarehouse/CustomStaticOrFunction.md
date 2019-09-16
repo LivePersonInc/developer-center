@@ -78,7 +78,7 @@ Once you have created a Function, you can now use that as an attribute in Contex
     2. Keys: Retrieve the username, secret, accessToken, and accessTokenSecret from the API key you created before, and copy and paste them in the JSON. 
         <img class="fancyimage" width="500" src="img/maven/Faas keys.png">
 
-
+{% raw %}
 ```javascript	
 {
     name: "isVIP"
@@ -101,5 +101,6 @@ Once you have created a Function, you can now use that as an attribute in Contex
     }
 }
 ```
+{% endraw %}
 
 Click Save button to save the new attribute. 

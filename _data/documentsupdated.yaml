@@ -8,6 +8,7 @@
     pages:
     - pagename: API Data Metrics
     - pagename: Authentication
+    - pagename: Create API keys
     - pagename: Data APIs
     - pagename: Domain API
     - pagename: Engagement Attributes
@@ -186,6 +187,7 @@
           - subpagename: Intent & Context Policies
           - subpagename: Set Up Maven in LivePerson
           - subpagename: Use Maven with Your Bot
+          - subpagename: Tutorial
       - pagename: AskMaven
         subpages:
           - subpagename: Overview
@@ -550,12 +552,12 @@
           - subpagename: Overview
           - subpagename: Client Credentials
           - subpagename: Authorization Code
-      - pagename: Use Cases
+      - pagename: Integrations
         subpages:
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
-          - subpagename: Conversational Commands
+          - subpagename: Conversation Builder
 
 
 - categoryname: Historical Data
@@ -913,6 +915,7 @@
     - documentname: MTLS
       pages:
         - pagename: Overview
+        - pagename: Onboarding
         - pagename: Methods
           subpages:
             - subpagename: Create certificate for account

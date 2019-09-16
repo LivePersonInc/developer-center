@@ -129,17 +129,95 @@ Each function refers to its corresponding [authenticated engagement attribute ob
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getLPUserPersonalInfo()` | `"currentSkillId"`, `"previousSkillId"` | [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) object or nothing |
-| `getLPCustomerInfo()` | `"currentSkillId"`, `"previousSkillId"` | [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) object or nothing |
+| `getLPUserPersonalInfo()` | See below for accessing attributes | [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) object or nothing |
+| `getLPCustomerInfo()` | See below for accessing attributes | [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) object or nothing |
 
-#### Example
+#### Personal Info Example
 
-```javascript
-botContext.getLPUserPersonalInfo();
+This is an example JSON object for the Personal Info. Keep in mind that not all fields may be available for your conversation. In addition, one of the following fields (firstname, lastname, company) must be populated for this object to return, otherwise it will be null.
 
-botContext.getLPCustomerInfo();
+```json
+{
+    "type": "personal",
+    "personal": {
+        "firstname": "John",
+        "lastname": "Doe",
+        "age": {
+            "age": 34,
+            "year": 1980,
+            "month": 4,
+            "day": 1
+        },
+        "contacts": [
+            {
+                "email": "myname@example.com",
+                "phone": "+1 555-333-7777"
+            }
+        ],
+        "gender": "MALE",
+        "language": "en-US",
+        "company": "company"
+    }
+}
 ```
 
+Here is how you might use the `getLPUserPersonalInfo()` method in JavaScript to check for a user’s first and last name.
+
+```javascript
+var personalInfo = botContext.getLPUserPersonalInfo();
+botContext.printDebugMessage('PERSONAL INFO:'+personalInfo);
+if(personalInfo){
+    var fullName = personalInfo.firstname+" "+personalInfo.lastname;
+    botContext.printDebugMessage('Full Name: '+fullName);
+    botContext.setBotVariable("fullName",fullName,true,false);
+}
+```
+
+#### Customer Info Example
+
+Here is an example JSON object for the Customer Information.
+
+```json
+{
+    "type": "ctmrinfo",
+    "info": {
+        "companyBranch": "test",
+        "ctype": "vip",
+        "customerId": "138766AC",
+        "balance": -400.99,
+        "currency": "USD",
+        "socialId": "11256324780",
+        "imei": "99887766554433",
+        "userName": "user000",
+        "companySize": 500,
+        "accountName": "bank corp",
+        "role": "broker",
+        "lastPaymentDate": {
+            "day": 15,
+            "month": 10,
+            "year": 2014
+        },
+        "registrationDate": {
+            "day": 23,
+            "month": 5,
+            "year": 2013
+        },
+        "storeNumber": "123865",
+        "storeZipCode": "20505"
+    }
+}
+```
+
+Here is how you might use the `getLPCustomerInfo()` method in JavaScript to check for a user’s customerId.
+
+```javascript
+var customerInfo = botContext.getLPCustomerInfo();
+if(customerInfo){
+    var customerId = customerInfo.customerId;
+    botContext.printDebugMessage('customerId: '+customerId);
+    botContext.setBotVariable("customerId",customerId,true,false);
+}
+```
 
 ### Get Environment Variable
 
@@ -609,3 +687,19 @@ var intentID = botContext.getDisambiguatedIntentId();
 // display the results...
 botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent ID = ' + intentID);
 ```
+
+### Get Web View Variables
+
+These functions retrieve session-scoped variables that were set via the [Web View API](conversation-builder-conversation-builder-integrations.html#web-view-integration-api).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getWebViewVariable(variableName)` | _variableName_ - the name of the variable to retrieve | string |
+| `getWebViewVariables()` | none | object:list of strings |
+
+#### Example
+```javascript
+    botContext.getWebViewVariable('name'); // This returns the value as PaymentId
+    botContext.getWebViewVariable('PaymentStatus'); // This returns the value as PROCESSED
+```
+For the corresponding curl example, see the [Web View API](conversation-builder-conversation-builder-integrations.html#web-view-integration-api) documentation.

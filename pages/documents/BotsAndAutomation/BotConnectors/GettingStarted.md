@@ -88,9 +88,11 @@ Due to limitations within LiveEngage's permission system, it is not possible for
 If you want to enable creating and starting bots for the Agent and Agent Manager profiles, you need to create a new custom Profile, which will derive its base permissions from the Campaign Manager or Admin profiles. Then, make sure to enable the needed permissions for creating and starting bots only while disabling any other permissions. Afterwards, you will need to assign this new Profile to the Agent/Agent Manager who should be able to start/create bots.
 
 <img style="width:600px" src="img/botconnectordashboard/campaign_manager_bot_permissions.png">
+
 Minimal set of permissions for creating and starting bots for Campaign Manager Profile
 
 <img style="width:600px" src="img/botconnectordashboard/administrator_bot_permissions.png">
+
 Minimal set of permissions for creating and starting bots for Administrator Profile
 
 #### Intent and actions evaluation
@@ -101,20 +103,24 @@ Please note that your bot setup should always return an intent or an action as a
 
 1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, contact your LivePerson account manager to enable the feature.
 
-   <img style="width:600px" src="img/dialogflowversion2/image_0.png">
+  <img style="width:600px" src="img/dialogflowversion2/image_0.png">
 
+{:start="2"}  
 2. Add login method as "API key" and generate new API key for the new user
 
    <img style="width:600px" src="img/dialogflowversion2/image_1.png">
 
+{:start="3"}
 3. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
 
+{:start="4"}
 4. Set Max No of Live Chats
 
    - If Chat in the drop down select - Value > 1.
 
    - If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Conversations to Custom Setting and enter a value greater than 0**
 
+{:start="5"}
 5. Find api key name in bot user profile
 
    <img style="width:400px" src="img/dialogflowversion2/image_2.png">
@@ -133,13 +139,13 @@ Follow the steps below to add a new bot connector.
 
 1. Navigate to the Automation Area Dashboard and click "Connect Bots" on the side menu.
 
-1. Navigate to the Config page and click “+ADD NEW BOT”
+2. Navigate to the Config page and click “+ADD NEW BOT”
 
    <img style="width:800px" src="img/botconnectordashboard/add_new_bot.png">
+{:start="3"}
+3. Assign agent: Assign the bot agent that you just created
 
-1. Assign agent: Assign the bot agent that you just created
-
-1. Choose conversation type: Chat or Messaging
+4. Choose conversation type: Chat or Messaging
 
 Settings for Chat:
 <img style="width:900px" src="img/botconnectordashboard/chat_settings.png">
@@ -156,8 +162,8 @@ Settings for Messaging:
 <img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
 
 - No special settings are needed for messaging bots
-
-4. Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service
+{:start="5"}
+5. Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service
 
   <img style="width:900px" src="img/botconnectordashboard/error_handling.png">
 
@@ -171,7 +177,7 @@ Settings for Messaging:
 
 **Note**: if no other skills are configured, it might be that the bot will escalate the conversation to itself. However in this case only new messages will be processed.
 
-5. Connect to A.I.: Choose an AI engine from a list. Add the configuration of AI. See [Next Steps](#next-steps).
+6. Connect to A.I.: Choose an AI engine from a list. Add the configuration of AI. See [Next Steps](#next-steps).
 
 ### Next Steps
 

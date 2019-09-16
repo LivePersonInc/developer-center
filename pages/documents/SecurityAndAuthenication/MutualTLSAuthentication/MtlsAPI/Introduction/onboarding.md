@@ -30,7 +30,6 @@ Now that we have validated and uploaded our certificate, we must map it to the c
 
 In order to create the mapping object, you will need to use the following method.
 
-
 |Method|      URL|  
 |:--------  |:---  |
 |POST|  https://{domain}/api/account/{accountId}/configuration/ac-common/mtls?v=3.0 |
