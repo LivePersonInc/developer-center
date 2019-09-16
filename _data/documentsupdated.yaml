@@ -167,10 +167,10 @@
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
-#  - documentname: LiveIntent
-#    pages:
-#	  - pagename: Overview
-#	  - pagename: Dashboard
+  - documentname: LiveIntent
+    pages:
+    - pagename: Overview
+    - pagename: Dashboard
   - documentname: Bot Accounts
     pages:
       - pagename: User Role Permissions

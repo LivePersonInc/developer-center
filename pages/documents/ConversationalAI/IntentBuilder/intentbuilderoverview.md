@@ -50,6 +50,10 @@ The default panel of the Domain View is the Add Intent panel. It will be the pan
 
 Once you've selected a name for your Intent, you should add as many training phrases as possible by using the bottom input area. To add another training phrase after your first one, click on the blue **+** sign to the right of the input area.
 
+### Enabling LiveIntent
+
+TODO
+
 #### Training Phrases
 
 The NLU engine uses training phrases in order to match a user input with an intent. The more training phrases you include, the more likely the NLU engine will be to accurately match the user's intent with what they were actually looking for. Generally speaking, the phrases should be complete sentences (rather than keywords like pattern matching or very long paragraphs).
