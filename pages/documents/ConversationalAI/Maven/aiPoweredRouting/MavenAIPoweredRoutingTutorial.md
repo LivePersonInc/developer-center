@@ -276,7 +276,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
 
     --data '{
 
-        "phoneNumber": 55501
+        "phoneNumber": "55501"
 
     }'
     ```
@@ -296,7 +296,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
 
     --data '{
 
-        "phoneNumber": 55507
+        "phoneNumber": "55507"
 
     }'
     ```
@@ -315,7 +315,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
         "name": "VipRule_Session",
         "conditions": [
             {
-                "property": "myNameSpace.phoneNumber",
+                "property": "myNamespace.phoneNumber",
                 "type": "IS_IN",
                 "value": "{{custom.vipPhoneNumberList}}"
             }
@@ -340,7 +340,7 @@ Here, we will go ahead and store the phone numbers for both types of customers (
         "name": "RegularCustomerRule_Session",
         "conditions": [
             {
-                "property": "myNameSpace.phoneNumber",
+                "property": "myNamespace.phoneNumber",
                 "type": "IS_IN",
                 "value": "{{custom.regularCustomerList}}"
             }
@@ -471,7 +471,7 @@ In the previous example we checked for the phone number in a static list. Mainta
             },
             "body": {
                 "headers": [],
-                "payload": "{{myNameSpace.phoneNumber}}"
+                "payload": "{{myNamespace.phoneNumber}}"
             }
         }
     }

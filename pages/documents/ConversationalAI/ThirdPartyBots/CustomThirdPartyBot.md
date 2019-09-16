@@ -7,7 +7,7 @@ redirect_from:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
-permalink: third-party-bots-custom-bots.html
+permalink: third-party-bots-custom-third-party-bots.html
 indicator: both
 ---
 
@@ -46,7 +46,7 @@ indicator: both
     {% raw %}
     `https://external.botcentralapi.com/connector/{{consumerId}}`
     {% endraw %}
-    
+
 
 ### Custom Bot Connectors
 

@@ -1,6 +1,7 @@
 ---
 pagename: Platform Overview
 redirect_from:
+    - conversation-builder-platform-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
