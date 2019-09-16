@@ -173,7 +173,8 @@
 #	  - pagename: Dashboard
   - documentname: Bot Accounts
     pages:
-      - pagename: User Role Permissions
+      - pagename: Permissions per Role
+      - pagename: Roles
   - documentname: Maven
     pages:
       - pagename: Overview

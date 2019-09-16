@@ -1,12 +1,13 @@
 ---
-pagename: User Role Permissions
+pagename: Permissions per Role
 redirect_from:
     - conversation-builder-accounts-user-role-permissions.html
+    - bot-accounts-user-role-permissions.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Accounts
-permalink: bot-accounts-user-role-permissions.html
+permalink: bot-accounts-permissions-per-role.html
 indicator: both
 ---
 
