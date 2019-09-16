@@ -3,15 +3,14 @@ pagename: Custom Integration
 redirect_from:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Bot Connectors
-permalink: bot-connectors-custom-integration.html
+documentname: Third-Party Bots
+permalink: third-party-bots-custom-integration.html
 indicator: both
 ---
 
 The following documentation outlines the configuration for a bot connector using LivePerson Functions. Instead of a vendor, like IBM Watson for example, LivePerson Functions allows you to write your own custom bot and connect it to LiveEngage. In order to achieve this, we will implement a LivePerson Functions **Custom Integration**.
 
-### Set Permissions
-
+{: .important}
 As the Custom Integration feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](function-as-a-service-getting-started.html) for more information on setting uo LivePerson Functions and its permissions.
 
 ### Bot Configuration
@@ -25,21 +24,30 @@ Once you have completed the guide above, you will be presented with following sc
 
 Click on the "Create LivePerson Function" button. This will allow you to implement a LivePerson Function. Once you click on the button, you will be redirected to the LivePerson Functions main page. From here, you will need to develop and then deploy a LivePerson Function which will act as the bot connector.
 
-### Step-by-Step function creation and deployment guide
+#### Step-by-Step function creation and deployment guide
 
-#### Step 1 - Create a function
+##### Step 1 - Create a function
 
 Create a new function using the ***Bot Connectors Custom Integration*** event.
 
-#### Step 2 - Edit the Function
+##### Step 2 - Edit the Function
 
 Adjust the default code from the function template according to your needs by modifying the function (see below for more information on relevant considerations and code examples). On the right side you can see an example of the payload (in the sidebar, which you might need to open). Please see this document for more information on [developing functions](liveperson-functions-development-overview.html).
 
-#### Step 3 - Deploy the function
+##### Step 3 - Deploy the function
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
 
 <div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
+
+#### Last Steps in Third Party Bots
+
+After you successfully implemented and deployed a LivePerson Function, press the refresh button next to the function selection menu and select your function. 
+
+{: .important}
+You have to agree to Data Disclaimer in order to use the services of the bot connector. To do that, click on the checkbox "I agree to the Data Disclaimer" checkbox.
+
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. If it has suceeded, you're done!
 
 
 ### Payload Information
@@ -69,7 +77,7 @@ The following payload content will be recieved from the Function during a conver
 </table>
 
 
-#### Welcome Event
+### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat or for messaging. This divergence comes down to the way that each individual LivePerson product works and the conversation with the consumer is framed.
 
@@ -101,11 +109,7 @@ The following documents cover where to configure the initial message on a given 
 
 A Chat interaction, on the other hand, is considered "started" when the chat is routed to an agent and best practice is for the agent to provide the first response. In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilised as a start point for the bot to prompt the user to provide input and progress the conversation.
 
-### Implementation Guide
-
-The response payload needs to have certain formated properties in order to make use of various additional features, like structured content and intents.
-
-#### Sending messages
+### Sending messages
 
 To define messages the bot should send, you need to place the messages property into the callback. This property should include an array of strings, in which every string will be sent as a single messsage to the conversation.
 
@@ -115,7 +119,7 @@ To define messages the bot should send, you need to place the messages property 
 }
 ```
 
-#### Change Time To Response of Conversation
+### Change Time To Response of Conversation
 
 Change the TTR of a conversation based on the **action** value in the response object. LivePerson uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value progrmatically. The unit of the value is seconds. The other three values ("URGENT" for example) are defined in LiveEngage's Agent Workspace. These values determine how much time, in seconds, a conversation can wait in queue before it is deemed "overdue". For example, if the `ttrtype` is set to "CUSTOM" and the `value` is set to "120", the conversation will be considred "overdue" if it has waited in the queue for an agent response for more than 120 seconds. 
 
@@ -140,7 +144,7 @@ Below is an example of an payload, which changes the TTR:
 }
 ```
 
-#### Transfer / Escalations
+### Transfer / Escalations
 
 If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to instruct the connector to transfer the conversation to a given skill.
 
@@ -164,7 +168,7 @@ Below is an example of what the response JSON from the LivePerson Function shoul
   }
 ```
 
-#### Sending Rich Content (Structured content)
+### Sending Rich Content (Structured content)
 
 {: .important}
 Structured Content will be added into messages property after LivePerson Functions version 2.9 to support multiple structured content messages
@@ -211,7 +215,7 @@ Structured Content/Rich Content is supported by the core LivePerson platform. Do
 }
 ```
 
-#### Sending Quick Replies (Structured Content)
+### Sending Quick Replies (Structured Content)
 
 Quick Replies is a special type of Structured Content. It is a message sent alongside with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel: ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), or [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
@@ -275,7 +279,7 @@ For detailed information on Quick Replies check out the documentation for the sp
 ```
 
 
-#### Close Chat/Conversation
+### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation with the consumer without escalating to a live agent. If a query has been answered, or the brand has determined that no escalation is available for a given query, then you will need to have the bot end the conversation.
 
@@ -291,9 +295,10 @@ Below is an example of what the response JSON from the LivePerson Function shoul
   "context": {
     "action": "CLOSE_CONVERSATION", // Close action
     }
+}
 ```
 
-#### Use Intents
+### Use Intents
 
 You also have to possibility to add intent information to your messages. They will appear inside the Agent Workspace and have to be added inside the context property.
 
@@ -304,15 +309,7 @@ You also have to possibility to add intent information to your messages. They wi
     "intenId": "some-intent-id",
     "intentName": "some-intent-name",
     "confidenceScore": 7
-    }
+  }
+}
 ```
-
-### Last Steps
-
-After you successfully implemented and deployed a LivePerson Function, press the refresh button next to the function selection menu and select your function. 
-
-{: .important}
-You have to agree to Data Disclaimer in order to use the services of the bot connector. To do that, click on the checkbox "I agree to the Data Disclaimer" checkbox.
-
-For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. If it has suceeded, you're done!
 

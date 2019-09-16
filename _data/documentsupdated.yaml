@@ -208,6 +208,7 @@
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
       - pagename: Custom Integration
+  - documentname: Custom Bots
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
