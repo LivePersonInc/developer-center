@@ -157,23 +157,6 @@
           - subpagename: Using Environment Variables
           #- subpagename: Common Conversation Patterns
           - subpagename: Versions, Releases, & Change Management
-  - documentname: Intent Builder
-    pages:
-      - pagename: Overview
-      - pagename: Entities
-  - documentname: Knowledge Base
-    pages:
-      - pagename: Overview
-  - documentname: Bot Analytics
-    pages:
-      - pagename: Overview
-#  - documentname: LiveIntent
-#    pages:
-#	  - pagename: Overview
-#	  - pagename: Dashboard
-  - documentname: Bot Accounts
-    pages:
-      - pagename: User Role Permissions
   - documentname: Maven
     pages:
       - pagename: Overview
@@ -198,6 +181,23 @@
         subpages:
           - subpagename: Overview
           - subpagename: Methods
+#  - documentname: LiveIntent
+#    pages:
+#	  - pagename: Overview
+#	  - pagename: Dashboard
+  - documentname: Intent Builder
+    pages:
+      - pagename: Overview
+      - pagename: Entities
+  - documentname: Knowledge Base
+    pages:
+      - pagename: Overview
+  - documentname: Bot Analytics
+    pages:
+      - pagename: Overview
+  - documentname: Bot Accounts
+    pages:
+      - pagename: User Role Permissions
   - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
