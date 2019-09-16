@@ -5,8 +5,8 @@ redirect_from:
   - custom-third-party-bots.html
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Others
-permalink: conversational-ai-custom-bots.html
+documentname:
+permalink: custom-bots.html
 indicator: both
 ---
 

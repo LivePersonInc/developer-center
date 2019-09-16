@@ -208,14 +208,13 @@
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
       - pagename: Custom Integration
-  - documentname: Custom Bots
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
       - pagename: Examples
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
-
+  - documentname: Custom Bots
 - categoryname: Client Side Configuration
   image: client-side
   documents:
