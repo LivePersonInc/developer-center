@@ -15,7 +15,7 @@ indicator: both
 
 The Conversation Builder app is the primary workspace for designing an automation. It is what ties together all of the other aspects of the Platform.
 
-An automation consists of one or more Dialogs that each have one or more [interactions](conversation-builder-conversation-builder-interactions.html) within them.
+An automation consists of one or more Dialogs that each have one or more [interactions](conversation-builder-interactions-interaction-basics.html) within them.
 
 At the top of the screen, you will see:
 
@@ -58,7 +58,7 @@ The Interactions Toolbar is divided into four parts:
 
 * **Integration** - Activates an integration that you've configured in the Integrations tab.
 
-Using the Interactions Toolbar is simple; simply select the interaction you'd like to add to the Dialog Workspace. It will be then added and you can start configuring it (for example, if you choose a simple, text based question, you'll now be able to type in the question you'd like the automation to ask the user). For more information on the different interactions available to you, see [this guide](conversation-builder-conversation-builder-interactions.html).
+Using the Interactions Toolbar is simple; simply select the interaction you'd like to add to the Dialog Workspace. It will be then added and you can start configuring it (for example, if you choose a simple, text based question, you'll now be able to type in the question you'd like the automation to ask the user). For more information on the different interactions available to you, see [this guide](conversation-builder-interactions-interaction-basics.html).
 
 ### Settings and Other
 

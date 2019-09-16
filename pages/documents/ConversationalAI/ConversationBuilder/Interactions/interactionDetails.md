@@ -2,12 +2,13 @@
 pagename: Interaction Details
 redirect_from:
     - conversation-builder-conversation-builder-interaction-details.html
+    - conversation-builder-interaction-details.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
-permalink: conversation-builder-interaction-details.html
+permalink: conversation-builder-interactions-interaction-details.html
 indicator: both
 ---
 
@@ -31,7 +32,7 @@ The Settings panel contains essential data about the selected interaction:
 
 * **ID**: This is useful for debugging.
 * **Interaction Name**: Change the name to something memorable and useful to reference in the [Next Step](conversation-builder-conversation-builder-response-match-actions.html#next-step) selector.
-* **Interaction Type**: Shows the [Interaction Type](conversation-builder-conversation-builder-interactions.html). Be aware that it is possible to change the type from this dropdown.
+* **Interaction Type**: Shows the [Interaction Type](conversation-builder-interactions-interaction-basics.html). Be aware that it is possible to change the type from this dropdown.
 * **Interaction Delay**: Set the millisecond time delay before sending this message.
 
     {: .important}

@@ -50,7 +50,7 @@ Currently our automation only has one dialog called **Welcome**. The first inter
 
 The statement interactions (Text, Image, Audio, Video) are for displaying content to the user, without listening for a user response. Once the statement is displayed, it will move on to whatever is next in the dialog.
 
-Learn more about interactions [here](conversation-builder-conversation-builder-interactions.html).
+Learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).
 
 Let’s see them in action! Tap on the Preview icon <img style="width:40px" src="img/ConvoBuilder/helloworld/messaging_client_icon.png"> floating in the bottom-right and you should now see the Welcome dialog display.
 

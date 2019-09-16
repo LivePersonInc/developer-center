@@ -13,7 +13,7 @@ indicator: both
 
 Functions are modules of code that are used for accomplishing a certain task programatically. 
 
-With few exceptions, functions can be used in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interaction-details.html#process-user-response) JavaScript code panels.
+With few exceptions, functions can be used in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interactions-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interactions-interaction-details.html#process-user-response) JavaScript code panels.
 
 **Please note:**
 
@@ -379,7 +379,7 @@ botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just
 Delivers a message to the user immediately and stops the message flow and any other subsequent code within this message.
 
 {: .important}
-[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
+[See here](conversation-builder-interactions-interaction-basics.html#limitations) for limitations on types of text that you can send.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -399,7 +399,7 @@ botContext.sendImmediateReply('I think you said, ' + response);
 Used to send a single message to user. Using this function we can send messages to the user at any place of the code, without stopping the message flow.
 
 {: .important}
-[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
+[See here](conversation-builder-interactions-interaction-basics.html#limitations) for limitations on types of text that you can send.
 
 {: .important}
 To send multiple messages use the [sendMessages()](#send-messages) function.
@@ -422,7 +422,7 @@ if(count > 10){
 Used to send array of the messages to the user. In most cases we use message delay for the send messages function.
 
 {: .important}
-[See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
+[See here](conversation-builder-interactions-interaction-basics.html#limitations) for limitations on types of text that you can send.
 
 {: .important}
 To send a single message use the [sendMessage()](#send-message) function.

@@ -31,7 +31,7 @@ LivePerson recommends that—before you create an automation—you set up the [d
 
     There are also many, industry-specific, English-language templates available. If you select one of these, all settings are configured for you. We recommend that you change the automation’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure automation settings](#configure-automation-settings) below.
 
-4. Build out the automation, completing and adding the necessary [dialogs](conversation-builder-conversation-builder-dialogs.html) and [interactions](conversation-builder-conversation-builder-interactions.html). As you work, test the automation using the Preview tool.
+4. Build out the automation, completing and adding the necessary [dialogs](conversation-builder-conversation-builder-dialogs.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the automation using the Preview tool.
 5. [Save versions](conversation-builder-best-practices-versions-releases-change-management.html#saving-versions) of the automation at important points in its development. This allows you to restore a version if you need.
 6. [Train and tune](conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html) things as you do more testing.
 7. [Save a version](conversation-builder-best-practices-versions-releases-change-management.html#saving-versions) of the final “Development” automation.

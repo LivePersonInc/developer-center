@@ -15,7 +15,7 @@ In the Interaction Details [Response Match & Actions](conversation-builder-conve
 
 ### Displaying Data to the User
 
-[See here](conversation-builder-conversation-builder-interactions.html#display-variables-in-interactions) for how to display variables and slots in interactions.
+[See here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions) for how to display variables and slots in interactions.
 
 ### Variables
 
@@ -23,7 +23,7 @@ Variables are the default way to store and access important data points througho
 
 #### Storing User Responses
 
-The most common use case for variables is storing user responses to [questions](conversation-builder-conversation-builder-interactions.html#questions).
+The most common use case for variables is storing user responses to [questions](conversation-builder-interactions-questions.html).
 
 Frequently you will want to capture what was just said by the user as the value of your variable. You can use `{$query}` to do this.
 
@@ -33,7 +33,7 @@ For example:
 
 #### Storing and Accessing Variables with Code
 
-The [Get and Set Bot Variables functions](conversation-builder-conversation-builder-scripting-functions.html#get-and-set-bot-variable) can be used to store and access variables in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interaction-details.html#process-user-response) JavaScript code panels.
+The [Get and Set Bot Variables functions](conversation-builder-conversation-builder-scripting-functions.html#get-and-set-bot-variable) can be used to store and access variables in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interactions-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interactions-interaction-details.html#process-user-response) JavaScript code panels.
 
 ### Slots
 

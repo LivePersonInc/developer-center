@@ -44,6 +44,30 @@ Some but not all changes are automatically saved after you make them. As a gener
 1. Select the interaction.
 2. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> in its upper-right corner, and select **Save** from the menu that appears.
 
+### Display variables in interactions
+
+* `{}` is used for inserting dynamic values inside of interactions
+
+  * [Bot Variable](conversation-builder-conversation-builder-variables-slots.html#variables): `{$botContext.botVariableName}`
+
+  * [Slot Variable](conversation-builder-conversation-builder-variables-slots.html#slots): `{$botContext.slot.slotName}`
+
+  * [Environment Variable](conversation-builder-best-practices-using-environment-variables.html): `{$env.envVariableName}`
+
+  * [API Integration](conversation-builder-conversation-builder-integrations.html) custom data values: `{apiName.variableName}`
+
+### Limitations
+
+The types of text that you can send in a Conversation Builder interaction vary depending if you are building an automation for **chat** or for **messaging**.
+
+**Messaging** only allows plain text to be sent.
+
+**Chat** allows for plain text as well as a subset of HTML limited to the anchor, paragraph and linebreak tags.
+
+* `<a href=""></a>`
+* `<p></p>`
+* `<br>`
+
 ### Format text
 #### Line Breaks
 CTRL+ENTER - Hold control and hit enter/return.

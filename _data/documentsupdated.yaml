@@ -142,9 +142,15 @@
       - pagename: Automation Workspace Overview
       - pagename: Dialogs
       - pagename: Interactions
+        subpages:
+          - subpagename: Interaction Basics
+          - subpagename: User Says
+          - subpagename: Statements
+          - subpagename: Questions
+          - subpagename: Integrations
+          - subpagename: Interaction Details
+          - subpagename: Response Match & Actions
       - pagename: Assist
-      - pagename: Interaction Details
-      - pagename: Response Match & Actions
       - pagename: Variables & Slots
       - pagename: Integrations
       - pagename: Scripting Functions

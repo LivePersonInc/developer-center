@@ -8,3 +8,6 @@ subfoldername: Interactions
 permalink: conversation-builder-interactions-questions.html
 indicator: both
 ---
+
+![Carousel](img/carousel.gif)
+
