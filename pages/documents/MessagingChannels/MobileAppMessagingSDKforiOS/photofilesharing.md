@@ -13,7 +13,7 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-and-file-sha
 
 indicator: messaging
 ---
-
+Mobile Messaging SDK v4.1 introduces a feature for consumer to share supported type of files to agents.
 Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.    
 
 Agents can share:
@@ -46,8 +46,10 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ### Notes and limitations
 
-- Photo sharing is two way (agent-to-consumer and consumer-to-agent), but file sharing is one way only (agent-to-consumer) for now.
+- Both photo sharing and file sharing are two way (agent-to-consumer and consumer-to-agent)
 
+   **For SDKs previous to 4.1:** File sharing is one-way only (from agent-to-consumer, but not vice versa) and available for the Mobile Message SDK only.
+ 
    **For SDKs previous to 3.8:** Photo sharing is one-way only (from consumer-to-agent, but not vice versa) and available for the Mobile Message SDK only.
 
 - If an attempt to view a photo or file is unsuccessful, an error icon covers the thumbnail. Upon retry, the file attempts to download again. Retry can be attempted as many times as possible (in case of a poor network) until the file is downloaded successfully.

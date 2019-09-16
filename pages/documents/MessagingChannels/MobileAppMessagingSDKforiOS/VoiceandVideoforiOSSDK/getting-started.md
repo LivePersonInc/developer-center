@@ -55,7 +55,7 @@ Cross-platform apps using native wrappers (e.g. Cordova) can be made to integrat
 
 | Feature | Support | Comment |
 | ------------- |:-------------:|:-------------|
-| **Bitcode** | (currently) **not** supported | Set **Enable Bitcode** in your Build Settings to **NO** |
+| **Bitcode** | **is** supported as of iOS SDK 4.1 | If you wish to use bitcode, set **Enable Bitcode** = **YES** in build settings |
 
 ### Installing the SDK with CocoaPods
 

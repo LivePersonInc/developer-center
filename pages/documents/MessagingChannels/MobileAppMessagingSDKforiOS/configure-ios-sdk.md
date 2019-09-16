@@ -457,7 +457,12 @@ You can customize the messaging screen by adding more options to the LPMessaging
 For more details on the different attributes you are able to customize, refer to [Customizing and Branding](consumer-experience-ios-sdk-attributes.html).
 
 
+### Push Notifications
+Currently our default flow for the process of loading the Conversation View Controller (such as registering with several of our internal domains) also register the consumer with our Push Notification service. If this is not desired, you can now opt out of this process by setting the following flag to "false".  The default is set to "true", and in order for the changes to take effect the consumer must log out of the LPMessagingSDK:
 
+```swift
+configuration.enableLpPusherService: Bool = true
+```
 
 ### UI
 
