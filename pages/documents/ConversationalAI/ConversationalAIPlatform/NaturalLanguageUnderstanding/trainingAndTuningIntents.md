@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversational AI Platform
 subfoldername: Natural Language Understanding
-permalink: conversational-ai-conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
+permalink: conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
 indicator: both
 ---
 

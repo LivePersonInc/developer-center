@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversational AI Platform
 subfoldername: Natural Language Understanding
-permalink: conversational-ai-conversational-ai-platform-natural-language-understanding-nlu-engines.html
+permalink: conversational-ai-platform-natural-language-understanding-nlu-engines.html
 indicator: both
 ---
 
