@@ -24,9 +24,14 @@ Once agreed, we will automatically set up your account to easily integrate with 
 * [Installing secrets](liveperson-functions-development-storing-secrets.html) you will need to interact with other LivePerson APIs
 * [Whitelisting domains](liveperson-functions-development-whitelisting-domains.html) of internal LivePerson APIs
 
+<div class="notice">
+If you have provisioned your account as mentioned in the previous section you will be able to use LP Functions. If the UI prompts you to enable the required AC feature then please contact your LivePerson Account Team to have Functions <strong>enabled</strong>.
+</div>
+
+
 #### Set User Permissions
 
-Access to the LivePerson Functions platform on your account requires that it has been <strong>enabled</strong> as a feature. Please contact your LivePerson Account Team to have Functions <strong>enabled</strong> on your account. Once <strong>enabled</strong>, access to the interface is restricted to users with the right permission.
+After provisioning your account with LP Functions your user will still require <strong>permissions</strong> to be able to access the UI.
 
 There are 3 user permissions pertaining to Functions:
 
