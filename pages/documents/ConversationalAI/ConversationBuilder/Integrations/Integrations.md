@@ -1,13 +1,14 @@
 ---
-pagename: Integrations
+pagename: Integration Basics
 redirect_from:
     - conversation-builder-conversation-builder-integrations.html
+    - conversation-builder-integrations.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Conversation Builder
-permalink: conversation-builder-integrations.html
+subfoldername: Integrations
+permalink: conversation-builder-integrations-integration-basics.html
 indicator: both
 ---
 
@@ -25,34 +26,6 @@ An integration can be one of the following types:
 - **Knowledge Base**: Use this type to search a knowledge base for articles.
 - **LivePerson Agent Escalation**: Use this type to transfer the conversation to a human agent or another bot. For best practices when working with this integration type, see [here](conversation-builder-best-practices-transfer-to-an-agent-or-bot.html).
 - **FaaS**: Use this type to invoke a function (`lambda`) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with a [FaaS integration](#add-a-faas-integration).
-
-### Add a LivePerson Agent Escalation integration
-
-{: .important}
-The **Message To User** field is required, but if you don't want to send a message, you can enter "BLANK_MESSAGE". This satisfies the underlying, system requirement for a message, but it doesn't actually send one.
-
-For best practices when working with this integration type, see [here](conversation-builder-best-practices-transfer-to-an-agent-or-bot.html).
-
-### Add a FaaS integration
-Use a FaaS integration to invoke a function (`lambda`) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform.
-
-Before you add a FaaS integration in Conversation Builder, you must create and deploy the function using the LivePerson Functions UI. For help with this, see [here](liveperson-functions-getting-started.html).
-
-**To add a FaaS integration**
-
-1. Open the automation, and click **Integrations** in the upper-left corner.
-2. Configure the integration settings:
-    - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
-    - **Response Data Variable Name**: Enter the name of the response data variable.
-    - **Integration Type**: Select **FaaS**.
-    - **Function**: Select the function (`lambda`) to invoke via this integration. You can select from all functions added under your LivePerson account. Each is listed with its status.
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/integrations_faaSFunctionList.png">
-    The Function list provides an easy pass-through to the Functions UI in case you still need to create or modify the relevant function. Clicking **Create New Function** or <img style="width:25px" src="img/ConvoBuilder/icon_pencilModify.png"> (pencil icon) beside a function name opens a new browser window and prompt you to log into the Functions UI where you can do the work. Once done, return here and click <img style="width:25px" src="img/ConvoBuilder/icon_functionReload.png"> (reload icon) to refresh the Function list if needed.
-    - **Function Headers**: Add the necessary data in key/value pairs to pass into the request via the header.
-    - **Function Payload**: Enter the payload to pass into the function.
-    - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result into JSON format, so you can use the information in the automation's dialogs. For more on this, see [Transform an API result](#transform-an-api-result) farther below.
-    - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating automations can use and display this data in interactions by referencing these fields as described [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
-3. Click **Save**.
 
 ### Transform an API result
 
@@ -275,68 +248,3 @@ Deleting an integration affects only the bot for which it was added.
 ### Display integration data in an interaction
 
 For information on how to take the data that's retrieved by an integration call and stored in custom data fields, and display it in a bot interaction, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
-
-### Web View integration API
-
-When a consumer exits a conversation flow to enter an external system (for example, a generic web view form or Apply Pay for making a payment), the Web View API makes it possible for the external system to post data back into the bot runtime.
-
-<img style="width:550px" src="img/ConvoBuilder/web_view_api_flow.png">
-
-The Web View API can be used by the external system to:
-
-- Set session-scoped variables in the bot runtime
-- Post a message to the chat client
-- Invoke a dialog starter to trigger a dialog flow
-
-{: .important}
-Don’t use this API to post Personally Identifiable Information (PII) or Payment Card Industry (PCI) data because the data is not masked.
-
-The API requires three fields that the external system must obtain from the conversation:
-- **userId**: The user ID can be retrieved using the [getUserPlatformId](conversation-builder-conversation-builder-scripting-functions.html#get-user-platform-id-and-platform-type) function.
-- **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-conversation-builder-automations.html#configure-automation-settings); see the **Automation ID** field. 
-- **conversationId**: The conversation ID can be retrieved using the [getConversationId](conversation-builder-conversation-builder-scripting-functions.html#get-conversation-id) function.
-
-#### Request
-
-Use the POST method to set session-scoped variables in the bot runtime.
-
-| Method | URL |
-|---|---|
-| POST  | https://{domain}/thirdparty-services-0.1/webview |
-
-##### Headers
-
-| Name | Value | Notes |
-|---|---|---|
-| Content-Type | application/json | |
-| Authorization | The API access key  that you need to pass; originally retrieved from the conversation | This is an SHA authorization token that is a combination of the conversationId and the botId. It should be generated by creating a sha256 hash: <br/><br/>`auth = sha256hex(conversationId + “ || “ + botId)` <br/><br/>For example: `sha256hex(“abcd || xyz”)` <br/><br/>Note the space, two pipe characters, and space after the conversationId. |
-
-##### BODY/POST parameters
-
-| Name | Description | Type/Value | Required | Notes |
-|---|---|---|--|--|
-| botId | The bot ID | string | Required | |
-| conversationId | The conversation ID | string | Required | |
-| userId | The consumer's user ID | string | Required | |
-| message | The message to send to the bot runtime | string | Optional | If set, this message is posted to the chat client. <br/><br/>To also trigger a dialog starter, this message must match to a User Says interaction in one of the bot’s dialogs. <br/><br/>If unset, the Web View service only posts the variables. |
-| contextVariables | The key/value pairs that can be passed to the bot platform | object:list of strings | Optional | These key/value pairs can be used in the bot runtime using the [Get Web View Variables](conversation-builder-conversation-builder-scripting-functions.html#get-web-view-variables) JavaScript functions. |
-
-##### Example
-
-```bash
-curl -X POST \
-  https://{domain}/thirdparty-services-0.1/webview \
-  -H 'Authorization: F8488E6143818BB0364717A91F235F7F7F0FE91C464EC6FAC7ECF0D3393EBBAF' \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "botId": "795bb1534e34fc89050304e6f6827c41c50410d7",
-    "conversationId": "a845678d-fe5a-429e-bc46-b25d524b9fa7",
-    "message":"webrequest",
-    "userId": "b849678d-fe4a-439e-bc46-b25d524b9fa7",
-    "contextVariables": [{"name": "PaymentId","value": "534e34fc89050304e6f6827c41c50410d7"}, {"name": "PaymentStatus","value": "PROCESSED"}]}'
-```
-
-#### Retrieve the Web View variables from the bot runtime
-Use the [Get Web View Variables](conversation-builder-conversation-builder-scripting-functions.html#get-web-view-variables) JavaScript functions to retrieve the variables set via the Web View API.
-
-

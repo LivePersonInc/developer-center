@@ -153,6 +153,14 @@
       - pagename: Assist
       - pagename: Variables & Slots
       - pagename: Integrations
+        subpages:
+          - subpagename: Integration Basics
+          - subpagename: API Integrations
+          - subpagename: Email Integrations
+          - subpagename: Knowledge Base Integrations
+          - subpagename: LivePerson Agent Escalation Integrations
+          - subpagename: FaaS Integrations
+          - subpagename: Web View Integration API
       - pagename: Scripting Functions
       #- pagename: Keyword Triggers
       #- pagename: Operations

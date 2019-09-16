@@ -54,7 +54,7 @@ Some but not all changes are automatically saved after you make them. As a gener
 
   * [Environment Variable](conversation-builder-best-practices-using-environment-variables.html): `{$env.envVariableName}`
 
-  * [API Integration](conversation-builder-conversation-builder-integrations.html) custom data values: `{apiName.variableName}`
+  * [API Integration](conversation-builder-integrations-api-integrations.html) custom data values: `{apiName.variableName}`
 
 ### Limitations
 

@@ -691,7 +691,7 @@ botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent
 
 ### Get Web View Variables
 
-These functions retrieve session-scoped variables that were set via the [Web View API](conversation-builder-conversation-builder-integrations.html#web-view-integration-api).
+These functions retrieve session-scoped variables that were set via the [Web View API](conversation-builder-integrations-web-view-integration-api.html).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -703,4 +703,4 @@ These functions retrieve session-scoped variables that were set via the [Web Vie
     botContext.getWebViewVariable('name'); // This returns the value as PaymentId
     botContext.getWebViewVariable('PaymentStatus'); // This returns the value as PROCESSED
 ```
-For the corresponding curl example, see the [Web View API](conversation-builder-conversation-builder-integrations.html#web-view-integration-api) documentation.
+For the corresponding curl example, see the [Web View API](conversation-builder-integrations-web-view-integration-api.html) documentation.

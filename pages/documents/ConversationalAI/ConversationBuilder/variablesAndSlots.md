@@ -11,7 +11,7 @@ permalink: conversation-builder-variables-slots.html
 indicator: both
 ---
 
-In the Interaction Details [Response Match & Actions](conversation-builder-conversation-builder-response-match-actions.html) settings, you can assign various data points to either Slots or Variables. Both are useful in [API Integrations](conversation-builder-conversation-builder-integrations.html).
+In the Interaction Details [Response Match & Actions](conversation-builder-conversation-builder-response-match-actions.html) settings, you can assign various data points to either Slots or Variables. Both are useful in [API Integrations](conversation-builder-integrations-api-integrations.html).
 
 ### Displaying Data to the User
 
