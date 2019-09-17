@@ -25,15 +25,11 @@ Once agreed, we will automatically set up your account to easily integrate with 
 * [Whitelisting domains](liveperson-functions-development-whitelisting-domains.html) of internal LivePerson APIs
 
 <div class="notice">
-It is important to note that after we successfully provisioned your account, the permissions still need to be customized as described in the section below.
-
-Please contact your LivePerson Account Team in case the provisioning did not finish successfully.
+After provisioning your account with LP Functions, your user will still require <strong>permissions</strong> to be able to access the UI. Please follow the section below to customize your user permissions. Moreover, please contact your LivePerson Account Team in case the provisioning did not finish successfully.
 </div>
 
 
 #### Set User Permissions
-
-After provisioning your account with LP Functions your user will still require <strong>permissions</strong> to be able to access the UI.
 
 There are 3 user permissions pertaining to Functions:
 
