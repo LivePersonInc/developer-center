@@ -28,7 +28,7 @@ Click on the "Create LivePerson Function" button. This will allow you to impleme
 
 ##### Step 1 - Create a function
 
-Create a new function using the ***Bot Connectors Custom Integration*** event.
+Create a new function using the ***Third-Party Bots Custom Integration*** event.
 
 ##### Step 2 - Edit the Function
 
@@ -45,7 +45,7 @@ Just like any other function, this function must be deployed before it can be us
 After you successfully implemented and deployed a LivePerson Function, press the refresh button next to the function selection menu and select your function. 
 
 {: .important}
-You have to agree to Data Disclaimer in order to use the services of the bot connector. To do that, click on the checkbox "I agree to the Data Disclaimer" checkbox.
+You have to agree to Data Disclaimer in order to use the services of third-party bots. To do that, click on the checkbox "I agree to the Data Disclaimer" checkbox.
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. If it has suceeded, you're done!
 
@@ -308,7 +308,7 @@ You also have to possibility to add intent information to your messages. They wi
   "context": {
     "intenId": "some-intent-id",
     "intentName": "some-intent-name",
-    "confidenceScore": 7
+    "confidenceScore": 1
   }
 }
 ```
