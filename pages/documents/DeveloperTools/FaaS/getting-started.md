@@ -25,7 +25,9 @@ Once agreed, we will automatically set up your account to easily integrate with 
 * [Whitelisting domains](liveperson-functions-development-whitelisting-domains.html) of internal LivePerson APIs
 
 <div class="notice">
-If you have provisioned your account as mentioned in the previous section you will be able to use LP Functions. If the UI prompts you to enable the required AC feature then please contact your LivePerson Account Team to have Functions <strong>enabled</strong>.
+It is important to note that after we successfully provisioned your account, the permissions still need to be customized as described in the section below.
+
+Please contact your LivePerson Account Team in case the provisioning did not finish successfully.
 </div>
 
 
@@ -119,7 +121,7 @@ There are 3 user permissions pertaining to Functions:
 </table>
 
 
-You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-customize-permissions.html), but the process is simple:
+You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html), but the process is simple:
 
 * Click on the users tab at the top of the LiveEngage UI and then click profiles
 
