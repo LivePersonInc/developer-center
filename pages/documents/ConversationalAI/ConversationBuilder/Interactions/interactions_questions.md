@@ -9,11 +9,11 @@ permalink: conversation-builder-interactions-questions.html
 indicator: both
 ---
 
-Questions present information to the user--a question that expects a reply of some kind, a list of things to pick from, etc.--and they expect and wait for a user response before executing the next action.
+Questions present information to the user---a question that expects a reply of some kind, a list of things to pick from, etc.---and they expect and wait for a user response before executing the next action.
 
-With a question, you can take the user’s response, evaluate it against a condition (i.e., does it match a pattern, an intent, a regular expression, or an exact value?), and then act accordingly. For example, if you ask the user for a 7-digit account number, you’ll likely want to perform a check that the user entered exactly 7 numbers. If the user did, you can then safely pass that value into an API call or perform some other action with it. For some practice at this, try tutorial #2. (You’ll need to complete tutorial #1 first, as they build on one another.)
+With a question, you can take the user’s response, evaluate it against a condition (i.e., does it match a pattern, an intent, a regular expression, or an exact value?), and then act accordingly. For example, if you ask the user for a 7-digit account number, you’ll likely want to perform a check that the user entered exactly 7 numbers. If the user did, you can then safely pass that value into an API call or perform some other action with it. For some practice at this, try [tutorial #2](conversation-builder-getting-started-2-intents.html). (You’ll need to complete [tutorial #1](conversation-builder-getting-started-1-dialogs-and-patterns.html) first, as they build on one another.)
 
-Question text and answers can display dynamic values through the use of variables; for help with using variables, see here.
+Question text and answers can display dynamic values through the use of variables; for help with using variables, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
 
 {: .important}
 See [Interaction Basics](conversation-builder-interactions-interaction-basics.html) for important information on whitelisting, guidelines on how to approach channel-specific limitations, and more.
@@ -99,7 +99,7 @@ Like with any question, a structured question expect and waits for the user resp
 - The tiles can be populated with static information, or they can be dynamically populated.
 - You can include a maximum of 10 tiles.
 - For the number of buttons that you can add, check the limitations for the channels in use. (For example, while LiveEngage doesn't have a limitation here, Facebook's limit is 3 buttons.)
-- The carousel scrolls horizontally, although be aware that not all channels support the carousel. (For example, Facebook supports the carousel, but Apple Business Chat doesn't. Apple Business Chat offers its [list picker[(conversation-builder-interactions-questions.html#apple-list-picker-questions)] instead.) Check the limitations for the channels in use.
+- The carousel scrolls horizontally, although be aware that not all channels support the carousel. (For example, Facebook supports the carousel, but Apple Business Chat doesn't. Apple Business Chat offers its [list picker](conversation-builder-interactions-questions.html#apple-list-picker-questions) instead.) Check the limitations for the channels in use.
 - Formatting of text (bold, italics, etc.) isn't supported.
 
 ### Button questions

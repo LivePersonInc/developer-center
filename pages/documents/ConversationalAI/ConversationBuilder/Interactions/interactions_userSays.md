@@ -23,7 +23,7 @@ In contrast, the Billing dialog below is triggered when the bot matches the user
 
 What’s an intent? An intent is something a user wants to do. In our example, the intent is to ask a billing question. You create intents in Intent Builder.
 
-<img style="width:800px" src="img/ConvoBuilder/interactions_userSays3.png">
+<img style="width:600px" src="img/ConvoBuilder/interactions_userSays3.png">
 
 When you add a User Says interaction, you provide an example of a message or question that the user might ask at the start of a conversation. If that were all you did, and if the bot looked for just that phrase, the bot would not recognize many of your users’ inputs. So, in the User Says interaction details, you specify the patterns that the bot should look for (a method called pattern matching), or the intent that the bot should find in order to trigger to the dialog.
 

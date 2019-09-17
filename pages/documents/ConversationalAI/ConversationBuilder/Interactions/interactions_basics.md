@@ -28,9 +28,9 @@ The domains in all URLs for images, videos, audio files, and button links used i
 For Facebook in particular, whitelisting must be done in two places: on the LivePerson side and within Facebook itself. The latter must be performed by the owner of the Facebook page.
 
 ### General guidelines and best practices
-One of the goals and challenges in developing interactions is creating a unified implementation and consumer experience *across channels*. When working with structured content in particular, LivePerson recommends that you find the "common denominator" across mobile messaging, web messaging, and Facebook Messenger with respect to a given element's attributes. For example, in a [Structured question](conversation-builder-interactions-questions.html#structured-questions), LiveEngage allows up to 128 characters for the button label, but Facebook does not allow more than 20 characters. Depending on your implementation, constraints like this might play a role.
+One of the goals and challenges in developing interactions is creating a unified implementation and consumer experience across channels. When working with structured content in particular, LivePerson recommends that you find the "common denominator" across mobile messaging, web messaging, and Facebook Messenger with respect to a given element's attributes. For example, in a [Structured question](conversation-builder-interactions-questions.html#structured-questions), LiveEngage allows up to 128 characters for the button label, but Facebook does not allow more than 20 characters. Depending on your implementation, constraints like this might play a role.
 
-*For details on constraints like this*, see the best practices information that's found [here](https://developers.liveperson.com/facebook-messenger-templates-best-practices.html) on this LivePerson developers' site, and refer to the [Messaging channels](https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html) section in the LivePerson Knowledge Center.
+*For details on constraints like this*, see the best practices information that's found [here](https://developers.liveperson.com/facebook-messenger-templates-best-practices.html) in the Rich Messaging section of this LivePerson developers' site, and refer to the [Messaging channels](https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html) section in the LivePerson Knowledge Center.
 
 {: .important}
 Your implementation should meet LiveEngage requirements and those of the specific channels in use.
@@ -70,9 +70,9 @@ The types of text that you can send in a Conversation Builder interaction vary d
 
 * `{}` is used for inserting dynamic values inside of interactions
 
-  * [Bot Variable](conversation-builder-conversation-builder-variables-slots.html#variables): `{$botContext.botVariableName}`
+  * [Bot Variable](conversation-builder-variables-slots.html#variables): `{$botContext.botVariableName}`
 
-  * [Slot Variable](conversation-builder-conversation-builder-variables-slots.html#slots): `{$botContext.slot.slotName}`
+  * [Slot Variable](conversation-builder-variables-slots.html#slots): `{$botContext.slot.slotName}`
 
   * [Environment Variable](conversation-builder-best-practices-using-environment-variables.html): `{$env.envVariableName}`
 
