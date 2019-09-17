@@ -3,11 +3,10 @@ pagename: Custom Bots
 redirect_from:
   - bot-connectors-custom-third-party-bots.html
   - custom-third-party-bots.html
-redirect_from:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Third-Party Bots
-permalink: third-party-bots-custom-third-party-bots.html
+documentname:
+permalink: custom-bots.html
 indicator: both
 ---
 
