@@ -141,6 +141,11 @@
           - subpagename: Simple FAQ
       - pagename: Automation Workspace Overview
       - pagename: Dialogs
+        subpages:
+          - subpagename: Dialog Basics
+          - subpagename: Standard Dialogs
+          - subpagename: Fallback Dialogs
+          - subpagename: Disambiguation Dialogs
       - pagename: Interactions
         subpages:
           - subpagename: Interaction Basics
