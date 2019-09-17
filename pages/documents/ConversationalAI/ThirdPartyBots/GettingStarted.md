@@ -132,19 +132,19 @@ Please note that your bot setup should always return an intent or an action as a
 
 To access the Bot Connector dashboard, contact your Account Manager to enable the Bot Connectors in LiveEngage for your account.
 
-Upon logging in to LiveEngage, you will see the Automation Tab:
+Upon logging in to LiveEngage, you will see the Conversation AI Tab:
 
-<img class="fancyimage" style="width:750px" src="img/botconnectordashboard/automation_tab.png">
+<img class="fancyimage" style="width:750px" src="img/botconnectordashboard/conversational_ai_app.png">
 
-Follow the steps below to add a new bot connector.
+Follow the steps below to add a new bot.
 
-1. Navigate to the Automation Area Dashboard and click "Connect Bots" on the side menu.
+1. Click on the "Third-Party Bots" App.
 
-2. Navigate to the Config page and click “+ADD NEW BOT”
+2. Click “+ Add Bot” in the bot table
 
    <img style="width:800px" src="img/botconnectordashboard/add_new_bot.png">
 {:start="3"}
-3. Assign agent: Assign the bot agent that you just created
+3. Assign agent: Create a new Bot Agent or select an existing one
 
 4. Choose conversation type: Chat or Messaging
 
