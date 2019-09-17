@@ -44,7 +44,7 @@ At the bottom of the Dialog Viewer, you'll find a view listing all your differen
 
 You can use the hamburger icon right next to the **+** icon to see a list of your different dialogs. Otherwise, they are displayed horizontally, in chronological order.
 
-Learn more about [dialogs here](conversation-builder-conversation-builder-dialogs.html).
+Learn more about [dialogs here](conversation-builder-dialogs-dialog-basics.html).
 
 ### The Interactions Toolbar
 

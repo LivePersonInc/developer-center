@@ -9,7 +9,7 @@ permalink: conversation-builder-interactions-user-says.html
 indicator: both
 ---
 
-User Says interactions are how dialogs are initially triggered, so most dialogs start with a User Says interaction. ([Fallback dialogs](conversation-builder-dialogs.html#dialog-types) work differently.) A dialog can have only one User Says interaction, and it must start the dialog. Because User Says interactions are always positioned at the start of a dialog flow, and because they’re used to trigger dialogs, they are sometimes called “dialog starters.”
+User Says interactions are how dialogs are initially triggered, so most dialogs start with a User Says interaction. ([Fallback dialogs](conversation-builder-dialogs-fallback-dialogs.html) work differently.) A dialog can have only one User Says interaction, and it must start the dialog. Because User Says interactions are always positioned at the start of a dialog flow, and because they’re used to trigger dialogs, they are sometimes called “dialog starters.”
 
 It’s the user that starts things off by supplying some user input: a message or a question. In response, the bot tries to match the user input with either a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) or an [intent](conversation-builder-intent-builder-overview.html) in a User Says interaction in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins.
 
