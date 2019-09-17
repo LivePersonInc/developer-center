@@ -14,7 +14,7 @@ redirect_from:
 ### Before getting started
 
 #### Provisioning
-In order to easily integrate LivePerson Functions we will provision your account with the required information. Provisioning will be triggered once you agree to our terms of use:
+In order to easily integrate LivePerson Functions we will allow LiveEngage Admins to provision your account when entering LivePerson Functions. Provisioning will be triggered after you agree to our terms of use:
 
 <img src="img/faas-terms-of-use.png" alt="FaaS Terms of Use" style="width:100%;"/>
 
