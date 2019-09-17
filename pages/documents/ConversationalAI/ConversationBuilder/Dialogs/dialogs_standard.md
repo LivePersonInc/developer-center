@@ -9,12 +9,13 @@ permalink: conversation-builder-dialogs-standard-dialogs.html
 indicator: both
 ---
 
-#### Dialog (Standard)
+### How a Bot Triggers a Dialog
 
-The default choice is a standard dialog.
+A dialog can be triggered by either of the following:
 
-### How an Automation Triggers a Dialog
+- Simple [pattern matching](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching).
+- [Intent matches](conversation-builder-intent-builder-overview.html) within the intent domain that you have linked to the bot.
 
-A Dialog may be triggered by either simple [pattern matching](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) or [intent matches](conversation-builder-intent-builder-overview.html) within the Intent Domain that you have linked to the automation. It may also be triggered by an Interaction via a Next Step action. 
+Once the bot recognizes the user statement via either of these methods, it triggers the corresponding dialog, listening to user answers and responding as configured by the dialog.
 
-Once the automation recognizes the user statement via either of these methods, it triggers the corresponding Dialog, listening to user answers and responding as configured by the Dialog.
+A dialog can also be triggered by an interaction via its Next Step action.
