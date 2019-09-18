@@ -16,7 +16,7 @@ As the Custom Integration feature uses [LivePerson Functions](https://developers
 ### Bot Configuration
 
 {: .important}
-See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide. 
+See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
 
 Once you have completed the guide above, you will be presented with following screen to complete the Vendor Settings in order to add a bot.
 
@@ -42,7 +42,7 @@ Just like any other function, this function must be deployed before it can be us
 
 #### Last Steps in Third Party Bots
 
-After you successfully implemented and deployed a LivePerson Function, press the refresh button next to the function selection menu and select your function. 
+After you successfully implemented and deployed a LivePerson Function, press the refresh button next to the function selection menu and select your function.
 
 {: .important}
 You have to agree to Data Disclaimer in order to use the services of the bot connector. To do that, click on the checkbox "I agree to the Data Disclaimer" checkbox.
@@ -121,7 +121,7 @@ To define messages the bot should send, you need to place the messages property 
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the **action** value in the response object. LivePerson uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value progrmatically. The unit of the value is seconds. The other three values ("URGENT" for example) are defined in LiveEngage's Agent Workspace. These values determine how much time, in seconds, a conversation can wait in queue before it is deemed "overdue". For example, if the `ttrtype` is set to "CUSTOM" and the `value` is set to "120", the conversation will be considred "overdue" if it has waited in the queue for an agent response for more than 120 seconds. 
+Change the TTR of a conversation based on the **action** value in the response object. LivePerson uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value progrmatically. The unit of the value is seconds. The other three values ("URGENT" for example) are defined in LiveEngage's Agent Workspace. These values determine how much time, in seconds, a conversation can wait in queue before it is deemed "overdue". For example, if the `ttrtype` is set to "CUSTOM" and the `value` is set to "120", the conversation will be considred "overdue" if it has waited in the queue for an agent response for more than 120 seconds.
 
 Below is an example of an payload, which changes the TTR:
 
@@ -159,13 +159,14 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 
 ```json
 {
-   "messages": ["Please wait will I check if we have any live agents online that can attend to you"], 
+   "messages": ["Please wait will I check if we have any live agents online that can attend to you"],
    "context": {
     "action": "TRANSFER",
     "actionParameters": {
       "skill": "bot-escalation"
-    },
+    }
   }
+}
 ```
 
 ### Sending Rich Content (Structured content)
@@ -291,7 +292,7 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 
 ```json
 {
-  "messages":["Unfortunately I am unable to help you with this query. Have a nice day."], 
+  "messages":["Unfortunately I am unable to help you with this query. Have a nice day."],
   "context": {
     "action": "CLOSE_CONVERSATION", // Close action
     }
@@ -304,7 +305,7 @@ You also have to possibility to add intent information to your messages. They wi
 
 ```json
 {
-  "messages":["This message also includes the intent information"], 
+  "messages":["This message also includes the intent information"],
   "context": {
     "intenId": "some-intent-id",
     "intentName": "some-intent-name",
@@ -312,4 +313,3 @@ You also have to possibility to add intent information to your messages. They wi
   }
 }
 ```
-
