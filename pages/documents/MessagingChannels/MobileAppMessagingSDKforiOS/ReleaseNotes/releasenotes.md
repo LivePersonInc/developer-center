@@ -66,19 +66,19 @@ Any file larger than 5 MB selected from document picker will trigger an alert vi
 
 - Both photo sharing and file sharing are two way in SDK version 4.1 (agent-to-consumer and consumer-to-agent)
 
-- If an attempt to view a photo or file is unsuccessful, an error icon covers the thumbnail. Upon retry, the file attempts to download again. Retry can be attempted as many times as possible (in case of a poor network) until the file is downloaded successfully.
+- If an attempt to view a photo or file is unsuccessful, an error icon covers the thumbnail. Upon retry, the file attempts to download again. Retry can be attempted as many times as needed (in case of a poor network, for example) until the file is downloaded successfully.
 
 - The consumer can return to a resolved conversation to view the photos, as long as the photos are part of the conversation history.
 
-- For authenticated users, backgrounding the app while uploading the photo does not get interrupted.
+- For authenticated users, backgrounding the app while uploading the photo does not interrupt the upload.
 
-- For unauthenticated sessions, consumers must tap the photo again with each visit because the history gets cleared when a session expires or logs the consumer out.
+- For unauthenticated sessions, consumers must tap the photo again with each visit because the history gets cleared when a session expires or the consumer logs out.
 
-- For app running on iOS version 10.3 or lower with iCloud capability, file sharing from iOS SDK will use iCloud folder as file provider.
+- For apps running on iOS version 10.3 or lower **with** iCloud capability, file sharing from iOS SDK will use the iCloud folder as file provider.
 
-- For app running on iOS version 10.3 or lower without iCloud capability, file sharing from iOS SDK will be disabled (The entry point of file sharing will be hidden.)
+- For apps running on iOS version 10.3 or lower **without** iCloud capability, file sharing from iOS SDK will be disabled (The entry point for file sharing will be hidden.)
 
-- For app running on iOS version 11 or higher, file sharing from iOS SDK will use native Files app as file provider.
+- For apps running on iOS version 11 or higher, file sharing from iOS SDK will use the native Files app as file provider.
 
 ### How photo and file sharing works
 
