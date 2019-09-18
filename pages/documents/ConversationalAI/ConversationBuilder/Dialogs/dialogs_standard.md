@@ -9,7 +9,7 @@ permalink: conversation-builder-dialogs-standard-dialogs.html
 indicator: both
 ---
 
-### How a Bot Triggers a Dialog
+### How a bot triggers a (standard) dialog
 
 A dialog can be triggered by either of the following:
 
