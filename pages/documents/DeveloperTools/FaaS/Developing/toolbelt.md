@@ -21,7 +21,6 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.LpClient() | Returnts the LivePerson (LP) Client. This is a wrapper for the [HTTP Client](https://developers.liveperson.com/liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
-| Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
 | Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
 | Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 
@@ -229,43 +228,6 @@ secretClient
     console.error(`Failed during secret operation with ${err.message}`);
     callback(err, null);
   });
-```
-
-### SMTP Client
-
-SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
-
-<div class="important">The client will use a unique connection for every email sent. It will close each connection after sending.</div>
-
-**Sample Usage**
-
-```javascript
-  // import FaaS Toolbelt
-  const { Toolbelt } = require("lp-faas-toolbelt");
-  // Create Instance based on providec config
-  const client = Toolbelt.SMTPClient({
-    host: "your-host",
-    port: "1337",
-    secure: true, // Use SSL for conection true/false
-    auth: {
-      user: "user",
-      pass: "pass"
-    }
-  });
-  // Validate provided config
-  client.verify().then(isValid => {
-    /** if isValid === true, then connection could be established */
-  });
-  // Send email
-  client.send({
-    sender: "Sender@mail.org",
-    to: "receiver@mailier.org",
-    bcc: "hidden@mail.org",
-    subject: "Awesome Email !",
-    text: "You can also send directly a html body by passing it as html."
-  })
-  .then(response => //react on the response)
-  .catch(err => //React to error);
 ```
 
 ### Conversation Util
