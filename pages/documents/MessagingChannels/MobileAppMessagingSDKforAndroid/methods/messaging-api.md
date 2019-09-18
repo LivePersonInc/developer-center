@@ -154,7 +154,6 @@ There are 2 authenticated connection methods:
    | LPAuthenticationParams | authentication params |
    | ConversationViewParams | view params |
 
-* 
 
 ### getNumUnreadMessages
 
@@ -165,7 +164,10 @@ When there are unread messages waiting for the consumer within the brand app, th
 This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise,it will be fetched again with new data.
 
 
-**Note:** the SDK needs to be initialized before calling this API.
+**Note:** The SDK needs to be initialized before calling this API.
+
+{:.important}
+To get count of unread messages using this function, all devices must be registered to receive push notifications using [registerLPPusher](android-registerlppusher.html) function.
 
 
 ```java
@@ -177,6 +179,30 @@ public static void getNumUnreadMessages(String appId, final ICallback<Integer, E
 | appId | The host app ID |
 | callback | An [ICallback](android-callbacks-index.html) implementation |
 
+
+### getUnreadMessagesCount
+
+Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.
+
+When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
+
+This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache otherwise, it will be fetched again with new data.
+
+**Note:** The SDK needs to be initialized before calling this API.
+
+{:.important}
+This api will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
+
+This api will be improved in future to show the count of unread messages in the closed conversation as well and the doc will be updated accordingly.
+
+```java
+public static void getUnreadMessagesCount(String appId, final ICallback<Integer, Exception> callback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| appId | The host app ID |
+| callback | An [ICallback](android-callbacks-index.html) implementation |
 
 
 ### getSDKVersion
