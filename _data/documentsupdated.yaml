@@ -167,6 +167,10 @@
           - subpagename: FaaS Integrations
           - subpagename: Web View Integration API
       - pagename: Scripting Functions
+      - pagename: Testing & Deployment
+        subpages:
+          - subpagename: Debugging
+          - subpagename: Deploying to LiveEngage
       #- pagename: Keyword Triggers
       #- pagename: Operations
       - pagename: Enterprise Integrations
