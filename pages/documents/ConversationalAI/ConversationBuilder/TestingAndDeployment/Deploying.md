@@ -3,8 +3,8 @@ pagename: Deploying to LiveEngage
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversation Builder
-permalink: conversation-builder-deploying-to-liveengage.html
+documentname: Testing & Deployment
+permalink: conversation-builder-testing-deployment-deploying-to-liveengage.html
 indicator: both
 ---
 
