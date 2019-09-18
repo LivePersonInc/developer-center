@@ -11,7 +11,7 @@ indicator: both
 
 ### What's disambiguation?
 
-[Standard dialogs](conversation-builder-dialogs-standard-dialogs.html) are triggered when the bot recognizes the consumer's message via a pattern match or an intent match. [Fallback dialogs](conversation-builder-dialogs-fallback-dialogs.html) are triggered when the bot doesn't recognize the consumer's message at all. But what happens when the bot recognizes the consumer's message and can match it to *multiple intents*? This is where disambiguation can be used.
+[Standard dialogs](conversation-builder-dialogs-standard-dialogs.html) are triggered when the bot recognizes the consumer's message via an intent match or a pattern match. [Fallback dialogs](conversation-builder-dialogs-fallback-dialogs.html) are triggered when the bot doesn't recognize the consumer's message at all. But what happens when the bot recognizes the consumer's message and can match it to *multiple intents*? This is where disambiguation can be used.
 
 Disambiguation is the process whereby the bot gets clarification from the consumer on what is meant by the consumer's message.
 
