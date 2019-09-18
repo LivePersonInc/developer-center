@@ -41,7 +41,7 @@ Once the disambiguation dialog is triggered, it presents the consumer with the b
 
 <img style="width:325px" src="img/ConvoBuilder/dialogs_disambiguation4.png">
 
-And once the user selects the correct intent, if that intent is associated with a User Says interaction in one of the bot's dialogs, that dialog's flow begins.
+Once the user selects the correct intent, if that intent is associated with a User Says interaction in one of the bot's dialogs, that dialog's flow begins.
 
 Keep in mind that only intents can be disambiguated, not patterns.
 
