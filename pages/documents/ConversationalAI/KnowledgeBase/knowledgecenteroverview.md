@@ -9,7 +9,7 @@ documentname: Knowledge Base
 permalink: knowledge-base-overview.html
 indicator: both
 ---
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/knowledgebase_main.png">
+<img class="fancyimage" style="width:750px" src="img/beaut_kb_2.png">
 
 
 The Conversation Builder Platform's Knowledge Base tool allows you to export an existing Knowledge Base or create new Knowledge Base articles which will then be processed by our NLU engine. This allows your automation to leverage [intents](conversation-builder-intent-builder-overview.html) and [entities](conversation-builder-intent-builder-entities.html) in order to recommend the most accurate Knowledge Base articles to an inquiring user. FAQ automations and Agent Advisor widgets are driven by a Knowledge Base full of these articles, intelligently delivering the right content to the user at the right time.
