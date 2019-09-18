@@ -25,7 +25,7 @@ By right-clicking inside the editor area, you're able to open the context menu, 
 
 ### Code Validation
 
-The code of each lambda is parsed and syntax validated to reduce the amount of possible errors. These checks ensure that not only compliancy with technical requirements (e.g. ECMAScript compliance) are met but also restrictions mandated by the Functions platform (e.g. <100.000 characters per lambda) are upheld.   
+The code of each lambda is parsed and syntax validated to reduce the amount of possible errors. These checks ensure that not only compliance with technical requirements (e.g. ECMAScript compliance) are met, but also restrictions mandated by the Functions platform (e.g. <100.000 characters per lambda) are upheld.   
 
 ### Editor Sidebar
 
