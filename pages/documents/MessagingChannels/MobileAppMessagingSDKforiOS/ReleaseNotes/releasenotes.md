@@ -46,6 +46,8 @@ Consumers can now share information via files with agents such as documents, tra
 
 The iOS SDK supports previewing all the supported file types on the device as per the iOS operating system by tapping on the thumbnail image.
 
+### Support for Bitcode is Enabled 
+The Liveperson SDK no longer requires Bitcode to be 'Disabled'.  
 
 ### Supported document formats from consumer to agent:
 
