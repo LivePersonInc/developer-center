@@ -51,7 +51,7 @@ Once the user selects the correct intent, if that intent is associated with a Us
 2. In the dialog that appears, specify the following:
     - **Dialog Name**: Enter a descriptive name.
     - **Dialog Type**: Select "Disambiguation Dialog."
-    - **Match Threshold**: Select the minimum ranking that an intent match must have to be considered for disambiguation. For example, if you select FAIR_PLUS, then all intents that match with a rank of FAIR_PLUS and higher are included.
+    - **Match Threshold**: Select the minimum ranking that an intent match must have to be considered for disambiguation. For example, if you select FAIR_PLUS, then all intents that match with a rank of FAIR_PLUS and higher are considered for disambiguation.
     - **Disambiguate only selected domains**: If you only want the bot to include matches to intents in specific domains, select this check box, and then select those domains. You can select from all domains associated with dialogs in the bot.
 3. Click **Save**.
 4. Open the **Interaction Details** for the disambiguation interaction, click **Settings**, and specify the following:
@@ -75,7 +75,7 @@ If you don't use a disambiguation dialog, here's how things work:
 
 - If the user's message matches multiple intents that have the same rank (several matches are VERY GOOD, or several are GOOD), the bot picks one at random and processes the associated dialog.
 
-- The bot considers only intents that evaluate to VERY_GOOD or GOOD rank; intents that evaluate to FAIR_PLUS and FAIR are not considered.
+- The bot considers only intents that evaluate to a VERY_GOOD or GOOD rank; intents that evaluate to FAIR_PLUS and FAIR are not considered.
 
 **How many disambiguation dialogs can I create?**
 
