@@ -67,8 +67,8 @@ Example body (Certificate array):
 
 If all previous steps were successful, you can now start using the runtime. The runtime includes two methods:
 
-* [Mapping method](mtls-methods-check-mapping-configuration.html)
+* [Mapping method](mtls-methods-check-mapping-configuration.html) - This method gets triplets of serviceName/url/siteid and return for each if a certification is configured for them.
 
-* [Forward method](mtls-methods-forward-get-request.html)
+* [Forward method](mtls-methods-forward-get-request.html) - the request will be mTLS wrapped using the certificate fetched by the given parameters and forwarded to the forwardUrl, Response will return as if contacting the remote endpoint directly.
 
 You can use the first method, to check that the certificate exists and is valid. You can then use the second method to forward the request.
