@@ -177,14 +177,15 @@
           - subpagename: Intent & Context Policies
           - subpagename: Set Up Maven in LivePerson
           - subpagename: Use Maven with Your Bot
+          - subpagename: Tutorial
       - pagename: AskMaven
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-  - documentname: LiveIntent
-    pages:
-      - pagename: Overview
-      - pagename: Dashboard
+#  - documentname: LiveIntent
+#    pages:
+#	  - pagename: Overview
+#	  - pagename: Dashboard
   - documentname: Intent Builder
     pages:
       - pagename: Overview
@@ -214,7 +215,7 @@
       - pagename: Examples
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
-
+#  - documentname: Custom Bots
 - categoryname: Client Side Configuration
   image: client-side
   documents:
