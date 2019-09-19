@@ -42,7 +42,7 @@ The mTLS "happy flow" includes configuring the service and then invoking it in r
 #### Run time
 
   * Run the [check mapping method](mtls-methods-check-mapping-configuration.html) for the configured service name/url/siteId, this will indicate that all the data is saved successfully and can be used.
-  * [Forward](mtls-methods-forward-post-request.html) the request using the preconfigured parameters (if all previous step passed then this step should not fail).
+  * [Forward](mtls-methods-forward-post-request.html) the request using the preconfigured parameters (if all previous step passed then this step should not fail). This request will now be authenticated with mTLS.
 
 ### Prerequisites
 
