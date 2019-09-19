@@ -198,6 +198,7 @@
     pages:
       - pagename: Permissions per Role
       - pagename: Roles
+      - pagename: Credentials
   - documentname: Maven
     pages:
       - pagename: Overview
