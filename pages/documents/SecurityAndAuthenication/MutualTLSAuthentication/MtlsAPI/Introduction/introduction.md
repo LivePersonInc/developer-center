@@ -30,16 +30,19 @@ As any kind of business, you would use the mTLS API to upload a certificate, map
 
 ### Happy flow example
 
-mTLS happy flow includes configuring the service and then invoking it in runtime:
+The mTLS "happy flow" includes configuring the service and then invoking it in runtime:
 
-* Configuration Time:
-  - Create compliant P12 file (Java compliant public + private)
-  - Run the p12tester resource, this will check that the P12 is valid, decipherable and can be used to reach the remote endpoint.
-  - Upload the P12.
-  - Create mapping for the service name/url/sitedId that uses the created certificate.
-* Run time
-  - Run the mapping API for the configured service name/url/siteId, this will indicate that all the data is saved successfully and can be used.
-  - Forward the request using the preconfigured parameters (if all previous step passed then this step should not fail).
+#### Configuration
+
+  * [Create a compliant P12 file](mtls-creating-a-p12-file.html) (Java compliant public + private keys)
+  * Run the [p12tester resource](p12-key-tester.html), this will check that the P12 is valid, decipherable and can be used to reach the remote endpoint.
+  * Upload the P12 file.
+  * Create mapping for the service name/url/sitedId that uses the created certificate.
+
+#### Run time
+
+  * Run the [check mapping method](mtls-methods-check-mapping-configuration.html) for the configured service name/url/siteId, this will indicate that all the data is saved successfully and can be used.
+  * [Forward](mtls-methods-forward-post-request.html) the request using the preconfigured parameters (if all previous step passed then this step should not fail). This request will now be authenticated with mTLS.
 
 ### Prerequisites
 
