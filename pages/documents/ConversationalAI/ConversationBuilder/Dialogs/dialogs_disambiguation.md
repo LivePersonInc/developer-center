@@ -75,7 +75,7 @@ If you don't use a disambiguation dialog, here's how things work:
 
 - If the user's message matches multiple intents that have the same rank (several matches are VERY GOOD, or several are GOOD), the bot picks one at random and processes the associated dialog.
 
-- The bot considers only intents that evaluate to a VERY_GOOD or GOOD rank; intents that evaluate to FAIR_PLUS and FAIR are not considered.
+- During matching, the bot considers only intents that evaluate to a VERY_GOOD or GOOD rank; intents that evaluate to FAIR_PLUS and FAIR are not considered.
 
 **How many disambiguation dialogs can I create?**
 
