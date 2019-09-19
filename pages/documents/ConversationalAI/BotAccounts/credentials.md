@@ -10,12 +10,12 @@ indicator: both
 
 Resource owners can use Conversation Builder to define credentials for accessing resources. Once a credential is defined, you can attach it to a bot API integration. When the bot is processing a dialog and needs to call the API integration as a part of the dialog flow, the bot will use the associated credentials to authenticate and perform the necessary actions.
 
-You can define credentials per organization.
+You define credentials per organization.
 
 ### Authorization types
 A credential that you define can use one of the following types of authorization:
 
-- **Oauth 2.0**: Use this when you require an access token that's obtained via the OAuth 2.0 protocol.
+- **Oauth 2.0**: Use this when you require the use of an access token that's obtained via the OAuth 2.0 protocol.
 - **Mutual Authentication**:
 - **Basic Authentication**:
 - **Access Token**:
@@ -28,7 +28,7 @@ A credential that you define can use one of the following types of authorization
 2. Click **Credentials** in the upper-right corner.
 3. Click **Add Credentials** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
-    - **Name**: 
+    - **Name**: Enter a descriptive name.
     - **Authentication Type**: Select "OAuth 2.0."
 5. Click **Next**.
 6. Set the callback/redirect URI in the resource:
@@ -44,7 +44,7 @@ A credential that you define can use one of the following types of authorization
     - **Resource URL**:
 9. Click **Authorize**.
 
-    This adds the credentials and proceeds to authorize them with the resource. You are redirected to the resource (for example, Salesforce) for authentication. If a session is already cached, you might be redirected immediately back to Conversation Builder; otherwise, you'll have to allow authorization.
+    This adds the credentials and proceeds to authorize them with the resource. You are redirected to the resource for authentication. If a session is already cached, you might be redirected immediately back to Conversation Builder; otherwise, you'll have to allow authorization.
 
     If the credentials are valid, you are redirected back to Conversation Builder, and you'll see a confirmation message indicated that authorization passed successfully. At this point, the token is persisted in Conversation Builder and can be used freely by bots.
 
