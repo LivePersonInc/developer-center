@@ -2,7 +2,7 @@
 pagename: Scheduled Invocations
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 permalink: liveperson-functions-scheduled-invocations.html
 indicator: both
