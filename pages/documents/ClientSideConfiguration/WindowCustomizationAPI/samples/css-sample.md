@@ -68,7 +68,6 @@ The below is an example of a full CSS file making use of the CSS classes reserve
     background-position: 2px 1px !important;
     background-size: 20px !important;
     height: 20px !important;
-    margin-left: -25px !important;
     width: 25px !important;
 }
 
