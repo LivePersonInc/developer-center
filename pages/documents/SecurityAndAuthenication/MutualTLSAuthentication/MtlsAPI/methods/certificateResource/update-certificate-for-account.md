@@ -6,6 +6,8 @@ categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
 permalink: mtls-methods-update-certificate-from-file.html
+redirect_from:
+  - mtls-methods-update-certificate-for-account.html
 ---
 
 This API updates a certificate for a specific account id.
@@ -31,10 +33,12 @@ This API updates a certificate for a specific account id.
   	"name":"myCert1",
   	"p12":[98,121,116,101,115],
   	"password":"paw1",
-          "id":2628739923
+        "id":2628739923
   }
 ]
 ```
+{:.notice}
+The body is a byte array input of the p12 file.
 
 **Path Parameters**
 

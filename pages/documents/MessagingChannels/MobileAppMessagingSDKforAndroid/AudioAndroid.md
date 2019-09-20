@@ -15,7 +15,7 @@ indicator: messaging
 ---
 
 
-Audio Messaging allows a consumer to send audio messages to agents. 
+Audio Messaging allows a consumer to record, preview, and send audio messages to agents. 
 
 1. Contact your Account Team to activate the feature on the LivePerson server side.
 
@@ -58,25 +58,30 @@ Audio Messaging allows a consumer to send audio messages to agents.
 
    * **Short tap tooltip**
 
-     Presented when the consumer used a short tap instead of a long tap. 
+     Presented when the consumer used a short tap instead of a long tap.
      
-     **Key:** `lp_mic_tooltip_long_press` 
-     
-     The default text is *Long tap to record*.
+     **Key:** `lp_mic_tooltip_long_press`  - default value: *Long tap to record* 
 
    * **Release microphone tooltip**
 
      Presented when the consumer doesn't release the microphone icon. 
      
-     **Key:** `lp_mic_tooltip_release`
-     
-     The default text is *Release for recording*.
+     **Key:** `lp_mic_tooltip_release` - default value: *Release for recording*
 
    * **Maximum length reached tooltip**
 
      Presented when the message length reached to the maximum length. 
      
-     **Key:** `lp_mic_tooltip_max_recording`
+     **Key:** `lp_mic_tooltip_max_recording` - default value: *Recording limit has been reached, click to send*
      
-     The default text is *Recording limit has been reached, click to send*.
-
+   * **Accessibility Strings**
+    
+     Spoken aloud by the device when the user has TalkBack or similar accessibility tools enabled, when the user touches one of the four recording control buttons.
+     
+     **Record Button Key:** `lp_accessibility_mic_button` - default value *Record voice clip*
+     
+     **Play Back Recording Key:** `lp_accessibility_voice_replay_button` - default value *Replay voice clip*
+     
+     **Stop Recording Key:** `lp_accessibility_voice_stop_button` - default value *Stop recording*
+     
+     **Delete Recording Key:** `lp_accessibility_voice_trash_button` - default value *Delete voice clip*

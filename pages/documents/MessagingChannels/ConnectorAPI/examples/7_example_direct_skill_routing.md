@@ -71,7 +71,7 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
       "id":"1,",
       "type":"cm.ConsumerRequestConversation",
       "body":{  
-         "ttrDefName":"CUSTOM",
+         "ttrDefName":"NORMAL",
          "channelType":"MESSAGING",
          "brandId":"{accountid}",
          "skillId":"2736637412"
@@ -83,7 +83,7 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 
 | Property  | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / "CUSTOM" / null | string | false |
+| ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / null | string | false |
 | channelType | Which channel type is used | "MESSAGING" | string | false | Always use MESSAGING |
 | brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
 | skillId | Skill ID you would like to route the conversation | string | false | use -1 as default to target all skills available |
