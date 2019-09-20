@@ -362,20 +362,20 @@ A very simple, basic structured content template for Apple Pay would be an image
 #### Apple Pay Signature Flow
 
 {: .important}
-In order to use the Signature enhanced security flow, you must contact your account manager.
 
 The Apple Pay Signature Flow is an extra layer of validation for Apple Pay transactions. In the Request Metadata payload, there is a "signature" property that you can include. This signature is set on the account level. The Apple Business Chat connector takes the signature value that you sent and validates that with the signature attached to your account. If the validation fails, agents will see a red warning icon in the conversation window next to the message.
 
-The signature flow provides an extra layer of security before sending the payment request to Apple, but it is optional. 
+The signature flow is optional, and provides an extra layer of security before sending the payment request to Apple.
 
-If you would like to opt in for this additional verification, contact your LivePerson account manager. 
+If you would like to opt in for this additional verification internal account configurations are required, please contact your LivePerson representative for help and further infomartoin. 
 
 **How to generate the signed payload to include in the Apple Pay payload for verification:**
 
 1. Generate signature value
     1. Generate the Apple Pay payload
-    2. Generate SHA1 Hash of the payload from step A
-    3. Generate the signature, sign the generated hash from step B using the secret key & preferred algorithm required during onboarding to opt in with this verification flow
+    2. Generate SHA1 Hash of the payload from step 1
+    3. Generate the signature, sign the generated hash from step 2 using the secret key & preferred algorithm required during onboarding to opt in to the verification flow
+
 2. Add signature to payload
     1. Add “signature” property and the value generated from step 1C to [the original payload](#connectorpaymentrequest-object-properties)
 
@@ -383,9 +383,9 @@ If you would like to opt in for this additional verification, contact your LiveP
 
 After the consumer submits their Apple Pay details in the form, the Apple Pay response is delivered back to LiveEngage.
 
-If you are sending a payment request with a **bot**, you can listen for the payment response via [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html). Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html). Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Pay response structure.
+If you are looking to receive the payment response using a **bot**, you can listen for the payment response via [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html). Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html). Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Pay response structure.
 
-If you are sending a payment request with a **human agent**, you can listen for the auth response in an [Agent Widget](agent-workspace-widget-sdk-overview.html). See the [bind](agent-workspace-widget-sdk-methods.html#bind) method for how to listen for incoming data. Instead of `visitorInfo.visitorName` in the example, the `pathToData` that you will bind to is [metadata.connectorPaymentResponse](agent-workspace-widget-sdk-public-model-structure.html#metadataconnectorpaymentresponse).
+If you are looking to receive and share the payment response with a **human agent**, you can listen for the auth response in an [Agent Widget](agent-workspace-widget-sdk-overview.html). See the [bind](agent-workspace-widget-sdk-methods.html#bind) method for how to listen for incoming data. Instead of `visitorInfo.visitorName` in the example, the `pathToData` that you will bind to is [metadata.connectorPaymentResponse](agent-workspace-widget-sdk-public-model-structure.html#metadataconnectorpaymentresponse).
 
 #### Response Metadata
 
