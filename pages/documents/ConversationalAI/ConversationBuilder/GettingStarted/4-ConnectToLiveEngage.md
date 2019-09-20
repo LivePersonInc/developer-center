@@ -97,34 +97,37 @@ Click **Save** once everything is entered.
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_12.png">
 
 #### Deploy the Bot Agent
-To finally connect your Bot User Agent with your LiveEngage account, you need to deploy your Bot Agent.
+To finally connect your bot user agent with your LiveEngage account, you need to deploy your bot agent.
 
 {: .important}
 LivePerson recommends that, when you connect your bot to LiveEngage, you deploy at least two LiveEngage bot agents for a single bot. This is so the second bot agent can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more bot agents.
 
-To deploy to the Demo server environment (for testing), just hit the green play button to start. Skip to [testing](#step-13-testing-the-connection) if you do this.
+**To deploy to the Demo server environment (for testing)**
+- Click the green play button to start. Skip to [testing](conversation-builder-getting-started-4-connect-to-liveengage.html#step-13-testing-the-connection) if you do this.
 
-To deploy to Production, you will need Operations role access.
+**To deploy to the Production environment**
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_13.png">
+Your account must have the Operations role, which gives you access to the [Bots Status](conversational-ai-platform-platform-overview.html) application.
 
-1. From the drop down menu, select Operations. If you do not see the Operations module, contact your Administrator to provide access or to assist you with this.
+1. In the Conversational AI dashboard, select **Bots Status**. If you don't see the application in the dashboard, contact your administrator for help.
 
-2. In the Operations module, find your bot agent. The filter defaults to bots in the "Production" environment. Switch it to “All”.
-    <!--<img style="width:800px" src="img/ConvoBuilder/helloworld/confLE_14.png">-->
+2. In the Bots Status application, find your bot agent. The filter defaults to bots in the "Production" environment. Switch it to “All” to view your bot agent in the list.
 
-3. Tap on the menu (three dots) to the left of your bot’s name and select Deploy Agent.
-    <img style="width:300px" src="img/ConvoBuilder/helloworld/confLE_15.png">
+3. Select your bot agent, and move your mouse over the area to the left of the bot name.
 
-4. For an official client bot, select Production.
+    An ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> )appears.
+
+4. Select the ellipsis icon, and then select **Deploy Agent** from the menu that appears.
+    <img style="width:250px" src="img/ConvoBuilder/helloworld/confLE_15.png">
+
+5. In the Bot Agent Deployment Settings, for **Environment**, select "Production" for an official client bot.
     <img style="width:700px" src="img/ConvoBuilder/helloworld/confLE_16.png">
 
-5. Tap on the menu again and select Start Agent.
-    <img style="width:300px" src="img/ConvoBuilder/helloworld/confLE_17.png">
+6. Select the ellipsis menu again, and select **Start Agent**.
 
-6. Reload your browser or wait a few moments and your bot agent should now show as online and connected.
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_18.png">
+7. Reload your browser or wait a few moments, and your bot agent should now show as online and connected.
 
+    <img style="width:950px" src="img/ConvoBuilder/helloworld/confLE_18.png">
 
 ### Step 12: Transfer from Bot to Human
 
