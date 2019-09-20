@@ -21,7 +21,8 @@ indicator:
 
 External Bot frameworks and Bot builders can be enabled and managed through LiveEngage just like a normal human agent.
 
-Using the Bot Connector dashboard, you can provision a bot connector for IBM Watson, Google Dialogflow, and Amazon Lex.
+Using Third-Party Bots, you can provision a connector for IBM Watson, Google Dialogflow, Amazon Lex, Microsoft Bot
+ Framework or leverage LivePerson Functions with the Custom Integrations Option.
 
 {: .important}
 If you need to connect a external bot that does not have a pre-built connector, see [this document](bot-connectors-custom-third-party-bots.html) for instructions.
@@ -39,12 +40,6 @@ Each connector provides the functionality to
 - close a conversation
 
 Some connectors may provide more or less functionality depending on the specifics of the product to which it is connecting.
-
-There are two steps to setting up a new bot connector.
-
-1. Create Bot user in LiveEngage
-
-2. Provision connector in the Bot Connector dashboard
 
 ### Bot Lifecycle
 
@@ -73,7 +68,7 @@ In this state the bot will try to restart automatically once every minute until 
 
 #### Supported customer content
 
-Currently the Bot Connector only supports text input from the customer. If the customer sends an image or a file to the Bot, the Bot will replace it with a special identifier so the Bot can handle this special use-case with custom code.
+Currently the connectors only support text input from the customer. If the customer sends an image or a file to the Bot, the Bot will replace it with a special identifier so the Bot can handle this special use-case with custom code.
 
 The send identifier is **com.liveperson.bot-connectors.consumer.send-file**
 
@@ -128,9 +123,9 @@ Please note that your bot setup should always return an intent or an action as a
 
 ---
 
-### Provision connector in the Bot Connector dashboard
+### Provision a connector 
 
-To access the Bot Connector dashboard, contact your Account Manager to enable the Bot Connectors in LiveEngage for your account.
+To access Third-Party Bots, contact your Account Manager to enable the the feature in LiveEngage for your account.
 
 Upon logging in to LiveEngage, you will see the Conversation AI Tab:
 
