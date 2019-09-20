@@ -20,7 +20,7 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/vendor.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/wizard.png">
 
 Figure 1.1 Showing the configuration that needed to be filled
 
@@ -120,11 +120,11 @@ You have to agree to Data Disclaimer from now onward in order to use the service
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.4 and 1.5 respectively.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/wizard_success.png">
 
 Figure 1.4 Showing the success case of the valid credentials
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/wizard_failed.png">
 
 Figure 1.5 Showing the fail case of the invalid credentials
 
