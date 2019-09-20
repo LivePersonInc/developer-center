@@ -10,6 +10,7 @@ let radioValue;
 let passwordStrength;
 let passwordLength;
 let passwordPassed;
+let recaptchaResponseToken;
 
 $(document).ready(function () {
   dynamicUserDetails();
@@ -49,7 +50,8 @@ function disableBtn () {
 }
 
 //enable the free trial button
-function enableBtn () {
+function enableBtn (token) {
+  recaptchaResponseToken = token;
   trialButton.disabled = false;
   $(trialButton).addClass('activeButton');
 }
@@ -156,21 +158,25 @@ function validateInfo (){
 
 function postRequest () {
 //defining the endpoint for account creation
-  const URL = 'https://d0j6xh4g99.execute-api.us-east-2.amazonaws.com/prod/devaccount';
+  const URL = 'https://d0j6xh4g99.execute-api.us-east-2.amazonaws.com/prod/web/account';
 //filling in request body with variables from the form
   const user = {
     firstName: firstName,
     lastName: lastName,
     region: region,
     email: emailAddress,
-    password: password
+    password: password,
+    recaptchaResponseToken: recaptchaResponseToken || ''
   }
 
   //using the axios module to make the request
   axios({
     method: 'post',
     url: URL,
-    headers: {'x-api-key': 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW', 'Content-Type': 'application/json', 'Accept': 'application/json'},
+    headers: {
+      'x-api-key': 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW', 
+      'Content-Type': 'application/json', 
+      'Accept': 'application/json'},
     data: user
   })
   .then(function (response) {

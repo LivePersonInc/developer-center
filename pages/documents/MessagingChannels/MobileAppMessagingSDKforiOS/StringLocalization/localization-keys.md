@@ -32,6 +32,7 @@ Localized keys with the English localization string.
 | accessibilityFileSyncedState | "Double tap to open" |
 | accessibilityFileUploadAnnouncement | "Uploading photo" |
 | accessibilityFileUploadingState | "Uploading" |
+| accessibilityHintScrollToBottomButton | "Scrolls the user to newest messages." |
 | accessibilityMessageError | "Error" |
 | accessibilityMessageErrorHint | "Tap to resend message" |
 | accessibilityMessageFromAgentWithName | "Agent %@: %@" |
@@ -79,6 +80,11 @@ Localized keys with the English localization string.
 | facetimeAudio | "FaceTime Audio" |
 | feedbackNoButtonTitle | "No" |
 | feedbackYesButtonTitle | "Yes" |
+| fileSharingDocument | "Document" |
+| fileSharingFileSizeLimitation | "File size exceeds the %d MB limitation" |
+| fileSharingSendFile | "Send File" |
+| fileSharingSendPhoto | "Send Photo" |
+| fileSharingUnsupportedFileSize | "Unsupported file size" |
 | hiMessage | "How can I help you today?" |
 | invalidHyperLinkError | "Link is not valid" |
 | isTyping | "typing…" |
@@ -103,6 +109,7 @@ Localized keys with the English localization string.
 | olderMessages | "Older messages" |
 | oneHour | "1 hour" |
 | oneMinute | "1 minute" |
+| oneUnreadMessage | "1 unread message" |
 | outOf | "out of" |
 | quickReplyButton | "Quick reply button" |
 | rateConnectionWithAgent | "How would you rate your\nconnection with our agent?" |
@@ -143,8 +150,12 @@ Localized keys with the English localization string.
 | systemMessageRealTimeMasked | "Your personal data has been masked to protect your security and cannot be read by the agent." |
 | tapToAddACaption | "Tap to add a caption" |
 | today | "Today" |
+| toolTipDeleteVoiceClip | "Delete voice clip" |
 | toolTipLongTapToRecord | "Long tap to record" |
 | toolTipRecordLimitReached | "Recording limit has been reached, click to send" |
+| toolTipRecordVoiceClip | "Recording limit has been reached, click to send" |
+| toolTipReplayVoice | "Replay voice" |
+| toolTipStopRecording | "Stop recording" |
 | toolTipReleaseButtonForRecording | "Release for recording" |
 | ttrOffHoursResponseMessageDate | "Thanks for your message. We will be back online %@" |
 | ttrOffHoursResponseMessageToday | "Thanks for your message. We will be back online Today at %@" |
