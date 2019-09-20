@@ -118,7 +118,7 @@ Your account must have the Operations role, which gives you access to the [Bots 
     An ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> )appears.
 
 4. Select the ellipsis icon, and then select **Deploy Agent** from the menu that appears.
-    <img style="width:250px" src="img/ConvoBuilder/helloworld/confLE_15.png">
+    <img style="width:200px" src="img/ConvoBuilder/helloworld/confLE_15.png">
 
 5. In the Bot Agent Deployment Settings, for **Environment**, select "Production" for an official client bot.
     <img style="width:700px" src="img/ConvoBuilder/helloworld/confLE_16.png">
