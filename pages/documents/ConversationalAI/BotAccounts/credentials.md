@@ -106,7 +106,7 @@ Whenever you need to authorize with existing credentials, in the Credentials vie
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
     - **NLU Provider**: Select the NLU provider.
-    - **Credentials**: 
+    - **Credentials**: Enter the credentials in JSON format.
 7. Click **Save**.
 
 ### Delete a credential

@@ -109,7 +109,7 @@ LivePerson recommends that, when you connect your bot to LiveEngage, you deploy 
 
 Your account must have the Operations role, which gives you access to the [Bots Status](conversational-ai-platform-platform-overview.html) application.
 
-1. In the Conversational AI dashboard, select **Bots Status**. If you don't see the application in the dashboard, contact your administrator for help.
+1. In the the application drop-down menu, select **Bots Status**. If you don't see the application in the list, contact your administrator for help.
 
 2. In the Bots Status application, find your bot agent. The filter defaults to bots in the "Production" environment. Switch it to “All” to view your bot agent in the list.
 
