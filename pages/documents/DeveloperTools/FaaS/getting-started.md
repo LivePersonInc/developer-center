@@ -2,7 +2,7 @@
 pagename: Getting Started
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 permalink: liveperson-functions-getting-started.html
 indicator: both
@@ -14,7 +14,7 @@ redirect_from:
 ### Before getting started
 
 #### Provisioning
-In order to easily integrate LivePerson Functions we will provision your account with the required information. Provisioning will be triggered once you agree to our terms of use:
+In order to easily integrate LivePerson Functions we will allow LiveEngage Admins to provision your account when entering LivePerson Functions. Provisioning will be triggered after you agree to our terms of use:
 
 <img src="img/faas-terms-of-use.png" alt="FaaS Terms of Use" style="width:100%;"/>
 
@@ -25,13 +25,11 @@ Once agreed, we will automatically set up your account to easily integrate with 
 * [Whitelisting domains](liveperson-functions-development-whitelisting-domains.html) of internal LivePerson APIs
 
 <div class="notice">
-If you have provisioned your account as mentioned in the previous section you will be able to use LP Functions. If the UI prompts you to enable the required AC feature then please contact your LivePerson Account Team to have Functions <strong>enabled</strong>.
+After provisioning your account with LP Functions, your user will still require <strong>permissions</strong> to be able to access the UI. Please follow the section below to customize your user permissions. Moreover, please contact your LivePerson Account Team in case the provisioning did not finish successfully.
 </div>
 
 
 #### Set User Permissions
-
-After provisioning your account with LP Functions your user will still require <strong>permissions</strong> to be able to access the UI.
 
 There are 3 user permissions pertaining to Functions:
 
@@ -119,7 +117,7 @@ There are 3 user permissions pertaining to Functions:
 </table>
 
 
-You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-customize-permissions.html), but the process is simple:
+You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html), but the process is simple:
 
 * Click on the users tab at the top of the LiveEngage UI and then click profiles
 

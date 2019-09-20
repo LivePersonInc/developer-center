@@ -2,7 +2,7 @@
 pagename: Storing secrets
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
 permalink: liveperson-functions-development-storing-secrets.html
