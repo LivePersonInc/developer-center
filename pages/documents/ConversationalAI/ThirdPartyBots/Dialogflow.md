@@ -21,7 +21,7 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflow/vendor_1.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflow/wizard_start.png">
 
 Figure 1.1 Showing the configuration that needed to be filled
 
