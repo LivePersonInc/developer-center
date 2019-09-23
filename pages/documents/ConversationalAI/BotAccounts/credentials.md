@@ -12,14 +12,17 @@ Resource owners can use Conversation Builder to define credentials for accessing
 
 You define credentials per organization.
 
-### Authorization types
-A credential that you define can use one of the following types of authorization:
+### Credential types (authentication types)
+There are several types of credentials that you can define to support [API integrations](conversation-builder-integrations-api-integrations.html):
 
-- **Oauth 2.0**: Use this when you require the use of an access token that's obtained via the OAuth 2.0 protocol.
-- **Mutual Authentication**:
-- **Basic Authentication**:
-- **Access Token**:
-- **Fire API**:
+- **Oauth 2.0**: Use this when you require the use of an access token that's obtained via the OAuth 2.0 protocol. This is a more secure choice than others in this list.
+- **Mutual Authentication**: Use this when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. This is a more secure choice than others in this list.
+- **Basic Authentication**: Use this when the API has a permanent token that you always want to use. The token is created by the system using the user name and password that you specify. This is a simpler, less secure choice than others in this list.
+- **Access Token**: Use this when the API has a permanent token that you always want to use. You specify the token to use. This is a simpler, less secure choice than others in this list.
+
+Additionally, if you're using a third-party NLU engine to match intents, use the **Fire API** to authenticate with that third-party engine.
+
+All of these credential types are discussed in more detail below.
 
 
 ### Add an OAuth 2.0 credential
@@ -43,13 +46,13 @@ As an example, the images in this section illustrate creating an OAuth 2.0 crede
     b. Go to the resource (for example, Salesforce), paste in/set the redirect URI there, and save.
         <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img2.png">
 7. Click **Next**.
-8. In the Add Credentials dialog box, specify the following based on the OAuth 2.0 configuration in the resource:
-    - **Client ID**:
-    - **Client Secret**:
+8. In the Add Credentials dialog box, specify the following based on the OAuth 2.0 configuration in the resource application (where you pasted the redirect URI):
+    - **Client ID**: Enter the client ID.
+    - **Client Secret**: Enter the client secret.
     - **Grant Type**: Always select "Authorization Code." This is the only grant type that's supported.
     - **Scope**: (Optional)
-    - **Auth URL**: 
-    - **Resource URL**:
+    - **Auth URL**: Enter the auth URL (the auth end point).
+    - **Resource URL**: Enter the resource URL (the token end point).
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/creds_oauth2_img3.png">
 9. Click **Authorize**.
 
@@ -57,15 +60,23 @@ As an example, the images in this section illustrate creating an OAuth 2.0 crede
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/creds_oauth2_img4.png">
 
-    If the credentials are valid, you are redirected back to Conversation Builder, and you'll see a confirmation message indicated that authorization passed successfully. At this point, the token is persisted in Conversation Builder and can be used freely by bots.
+    If the credentials are valid, you are then redirected back to Conversation Builder, and you'll see a confirmation message indicated that authorization passed successfully. At this point, the token is persisted in Conversation Builder and can be used freely by bots.
 
      <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/creds_oauth2_img5.png">
 
-#### Authorize an existing OAuth 2.0 credential
+#### Reauthorize an existing OAuth 2.0 credential
 
-Whenever you need to authorize with existing credentials, in the Credentials view, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon for the credential, and then click **Authorize** from the menu that appears.
+Depending on the configuration of the resource, you might need to manually reauthorize an existing credential. For example, if you've defined the expiry of the access token, but you haven't defined a refresh token (to refresh the access token when needed), you'll need to manually reauthorize the credential when the access token expires. In general, a configuration like that isn't recommended so that things can be automated as much as possible. However, you can manually reauthorize whenever you need:
+
+- To reauthorize, in the Credentials view, just click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon for the credential, and then click **Authorize** from the menu that appears.
 
 ### Add a Mutual Authentication credential
+
+You can create and use a Mutual Authentication credential in [API integrations](conversation-builder-integrations-api-integrations.html) when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other.
+
+A Mutual Authentication credential is more secure than those described later in this topic.
+
+**To add a Mutual Authentication credential**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-right corner.
@@ -82,6 +93,12 @@ Whenever you need to authorize with existing credentials, in the Credentials vie
 
 ### Add a Basic Authentication credential
 
+You can create and use a Basic Authentication credential in [API integrations](conversation-builder-integrations-api-integrations.html) when the API has a permanent token that you always want to use. The token is created by the system using the user name and password that you specify, and it's valid as long as the password isn't changed.
+
+Like the Access Token credential (below), this type of credential isn't very secure, so it isn't used very often.
+
+**To add a Basic Authentication credential**
+
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-right corner.
 3. Click **Add Credentials** in the upper-right corner.
@@ -90,11 +107,17 @@ Whenever you need to authorize with existing credentials, in the Credentials vie
     - **Authentication Type**: Select "Basic Authentication."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
-    - **User Name**: Enter the user name.
-    - **User Password**: Enter the password.
+    - **User Name**: Enter the user name for the system to use to create the token.
+    - **User Password**: Enter the password for the system to use to create the token.
 7. Click **Save**.
 
 ### Add an Access Token credential
+
+You can create and use an Access Token credential in [API integrations](conversation-builder-integrations-api-integrations.html) when the API has a permanent token that you always want to use. You specify the token to use.
+
+Like the Basic Authentication credential (above), this type of credential isn't very secure, so it isn't used very often.
+
+**To add an Access Token credential**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-right corner.
@@ -104,11 +127,17 @@ Whenever you need to authorize with existing credentials, in the Credentials vie
     - **Authentication Type**: Select "Access Token."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
-    - **Access Token**: TBA
-    - **Token Type**: TBA
+    - **Access Token**: Enter the token.
+    - **Token Type**: Enter the type of token; typically, this value is "Bearer" or "Basic," but this field allows for free text to let you specify another third-party type that isn't supported by any protocol.
 7. Click **Save**.
 
 ### Add a Fire API credential
+
+While the credential types described above support [API integrations](conversation-builder-integrations-api-integrations.html), a Fire API credential is different in that it's used during *domain creation* in [Intent Builder](intent-builder-overview.html).
+
+If you're using a third-party NLU engine to match intents (e.g., IBM's Watson NLU), when you create the domain that will contain the intents and you specify the NLU to use to match intents, you can also specify the credential to use to authenticate with that third-party NLU engine.
+
+**To add a Fire API credential**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-right corner.
@@ -119,10 +148,12 @@ Whenever you need to authorize with existing credentials, in the Credentials vie
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
     - **NLU Provider**: Select the NLU provider.
-    - **Credentials**: Enter the credentials in JSON format.
+    - **Credentials**: Paste here the credentials that you received from the NLU provider when you set up the service. The credentials must be in JSON format.
 7. Click **Save**.
 
 ### Delete a credential
+
+Before deleting a credential, manually verify that it isn't in use by a bot or, in the case of Fire API credentials, by a domain. If this is the case, you'll need to reconfigure the bots or domains as appropriate.
 
 **To delete a credential**
 
