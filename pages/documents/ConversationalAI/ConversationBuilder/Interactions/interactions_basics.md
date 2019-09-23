@@ -43,7 +43,7 @@ The Apple developers' site provides some good, general guidelines regarding reso
 
 ### Limitations
 
-The types of text that you can send in a Conversation Builder interaction vary depending if you are building an automation for **chat** or for **messaging**.
+The types of text that you can send in a Conversation Builder interaction vary depending if you are building a bot for **chat** or for **messaging**.
 
 **Messaging** only allows plain text to be sent.
 
