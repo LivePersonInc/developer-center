@@ -67,6 +67,9 @@ The Bot Connector utilizes the **channelData** property for anything besides pla
 It is expected that a bot responds to every message sent by the consumer.
 If no response is detected in a certain time frame, the Bot Connector assumes something is wrong and tries to transfer the conversation to an agent.
 
+Only the the first message with which a bot responds to a customer request will be processed.
+If a bot sends more messages with the same *ReplyToId*, these messages will be ignored.
+
 ### Sending Rich Content (Structured Content)
 
 Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
