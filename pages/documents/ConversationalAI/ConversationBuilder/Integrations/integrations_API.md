@@ -22,7 +22,7 @@ For practice at using an API integration, try [tutorial #3](conversation-builder
     - **Integration Type**: Select **API**.
     - **Method**: Select the type of HTTP request method.
     - **URL**: Enter the request target, the URL.
-    - **Credential**: Select the credential to use for authentication if applicable.
+    - **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable. The bot will automatically enhance the request based on the credential's type and data.
     - **Request Headers**: Add any message headers to include in the request.
     - **Request Parameters**: Add the request parameters to pass in the URL’s query string.
     - **Post Body**: Enter the payload to send.

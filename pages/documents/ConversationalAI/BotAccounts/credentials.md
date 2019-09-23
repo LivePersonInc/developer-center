@@ -24,6 +24,11 @@ A credential that you define can use one of the following types of authorization
 
 ### Add an OAuth 2.0 credential
 
+{: .important}
+As an example, the images in this section illustrate creating an OAuth 2.0 credential to support integration with Salesforce.
+
+**To add an OAuth 2.0 credential**
+
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-right corner.
 3. Click **Add Credentials** in the upper-right corner.
@@ -32,21 +37,29 @@ A credential that you define can use one of the following types of authorization
     - **Authentication Type**: Select "OAuth 2.0."
 5. Click **Next**.
 6. Set the callback/redirect URI in the resource:
+
     a. Click **Copy** to copy the redirect URI to your clipboard.
+        <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/creds_oauth2_img1.png">
     b. Go to the resource (for example, Salesforce), paste in/set the redirect URI there, and save.
+        <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img2.png">
 7. Click **Next**.
-8. In the Add Credentials dialog box, specify the following:
+8. In the Add Credentials dialog box, specify the following based on the OAuth 2.0 configuration in the resource:
     - **Client ID**:
     - **Client Secret**:
     - **Grant Type**: Always select "Authorization Code." This is the only grant type that's supported.
     - **Scope**: (Optional)
     - **Auth URL**: 
     - **Resource URL**:
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/creds_oauth2_img3.png">
 9. Click **Authorize**.
 
     This adds the credentials and proceeds to authorize them with the resource. You are redirected to the resource for authentication. If a session is already cached, you might be redirected immediately back to Conversation Builder; otherwise, you'll have to allow authorization.
 
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/creds_oauth2_img4.png">
+
     If the credentials are valid, you are redirected back to Conversation Builder, and you'll see a confirmation message indicated that authorization passed successfully. At this point, the token is persisted in Conversation Builder and can be used freely by bots.
+
+     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/creds_oauth2_img5.png">
 
 #### Authorize an existing OAuth 2.0 credential
 
