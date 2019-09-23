@@ -874,6 +874,13 @@
         - pagename: Quick Replies Template
         - pagename: Google Pay Template
         - pagename: Limitations
+    - documentname: LINE Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Limitations
     #- documentname: Quick Replies
     #  pages:
     #    - pagename: Introduction to Quick Replies

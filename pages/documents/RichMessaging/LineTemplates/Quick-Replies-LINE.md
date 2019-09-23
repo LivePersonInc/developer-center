@@ -23,17 +23,7 @@ Quick reply example image:
 
 <img class="fancyimage" style="width:350px" src="img/line_sc_quickreplies.png">
 
-
-
-
-
-
-
-
-
 ### JSON Template Properties
-
-#### Quick Reply JSON Properties
 
 <table>
 <thead>
@@ -84,7 +74,7 @@ Quick reply example image:
  </tbody>
 </table>
 
-### Quick Reply template code example
+### Code Example
 
 ```json
 {
