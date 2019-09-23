@@ -20,7 +20,7 @@ There are several types of credentials that you can define to support [API integ
 - **Basic Authentication**: Use this when the API has a permanent token that you always want to use. The token is created by the system using the user name and password that you specify. This is a simpler, less secure choice than others in this list.
 - **Access Token**: Use this when the API has a permanent token that you always want to use. You specify the token to use. This is a simpler, less secure choice than others in this list.
 
-Additionally, if you're using a third-party NLU engine to match intents, use the **Fire API** to authenticate with that third-party engine.
+Additionally, if you're using a third-party NLU engine to match intents, use the **Fire API authentication type** to authenticate with that third-party engine.
 
 All of these credential types are discussed in more detail below.
 
