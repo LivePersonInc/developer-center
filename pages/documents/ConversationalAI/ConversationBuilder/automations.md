@@ -28,9 +28,9 @@ LivePerson recommends that—-before you create a bot—-you set up the [domains
 
     <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/templates_dialog.png">
     
-    The Basic Bot template (which is the default) uses English and includes just a Welcome dialog, so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. For help, see [Configure automation settings](conversation-builder-bots.html#configure-bot-settings) below. 
+    The Basic Bot template (which is the default) uses English and includes just a Welcome dialog, so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below. 
 
-    There are also many, industry-specific, English-language templates available. If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure automation settings](conversation-builder-bots.html#configure-bot-settings) below.
+    There are also many, industry-specific, English-language templates available. If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below.
 
 4. Build out the bot, completing and adding the necessary [dialogs](conversation-builder-dialogs-dialog-basics.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the bot using the Preview tool.
 5. [Save versions](conversation-builder-best-practices-versions-releases-change-management.html#saving-versions) of the bot at important points in its development. This allows you to restore a version if you need.
@@ -46,14 +46,14 @@ You can add an bot by importing a bot JSON file that was previously exported. Th
 Before you import a bot from a different environment (that is, from one region or hosting platform to another), check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
 
 **To import a bot**
-1. If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the automation should exist is displayed. If it isn’t displayed, select it from the **Org** Name dropdown list.
+1. If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If it isn’t displayed, select it from the **Org** Name dropdown list.
 
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 
 2. In the Dashboard, click **Import Bot** in the upper-right corner.
 3. In the dialog box that appears, navigate to and select the JSON file, and click **Open**.
     The bot is imported and given a name that includes a date and time stamp.
-4. Change the name of the bot and any other configuration as needed. For help, see [Configure automation settings](conversation-builder-bots.html#configure-bot-settings) below.
+4. Change the name of the bot and any other configuration as needed. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below.
 
 ### Configure bot settings
 **To configure bot settings**
