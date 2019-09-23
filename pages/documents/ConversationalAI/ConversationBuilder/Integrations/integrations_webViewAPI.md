@@ -26,7 +26,7 @@ Don’t use this API to post Personally Identifiable Information (PII) or Paymen
 
 The API requires three fields that the external system must obtain from the conversation:
 - **userId**: The user ID can be retrieved using the [getUserPlatformId](conversation-builder-conversation-builder-scripting-functions.html#get-user-platform-id-and-platform-type) function.
-- **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-conversation-builder-automations.html#configure-automation-settings); see the **Automation ID** field. 
+- **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-bots.html#configure-automation-settings); see the **Automation ID** field. 
 - **conversationId**: The conversation ID can be retrieved using the [getConversationId](conversation-builder-conversation-builder-scripting-functions.html#get-conversation-id) function.
 
 #### Request

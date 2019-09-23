@@ -130,7 +130,7 @@
           - subpagename: 2 - Intents
           - subpagename: 3 - Integrations
           - subpagename: 4 - Connect to LiveEngage
-      - pagename: Automations
+      - pagename: Bots
       - pagename: Templates
         subpages:
           - subpagename: Overview

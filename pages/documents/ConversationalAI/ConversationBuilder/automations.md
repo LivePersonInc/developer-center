@@ -1,12 +1,13 @@
 ---
-pagename: Automations
+pagename: Bots
 redirect_from:
     - conversation-builder-conversation-builder-automations.html
+    - conversation-builder-automations.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-permalink: conversation-builder-automations.html
+permalink: conversation-builder-bots.html
 indicator: both
 ---
 
