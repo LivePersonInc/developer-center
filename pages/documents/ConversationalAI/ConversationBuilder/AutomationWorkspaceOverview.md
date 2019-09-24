@@ -23,7 +23,7 @@ At the top of the screen, you will see:
 
 * **Integrations** - Create and edit Integrations.
 
-* **Global Functions** - Write code snippets for use within dialogs. See [scripting functions](conversation-builder-conversation-builder-scripting-functions.html) for built-in methods.
+* **Global Functions** - Write code snippets for use within dialogs. See [scripting functions](conversation-builder-scripting-functions-introduction.html) for built-in methods.
 
 * **Visualize** - View each dialog at a high level.
 

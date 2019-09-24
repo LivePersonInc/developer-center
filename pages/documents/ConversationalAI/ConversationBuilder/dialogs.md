@@ -57,4 +57,4 @@ The dialog presents a tile of choices that includes:
 
 You can add any number of interactions to the dialog, such as Agent Escalation.
 
-Use [built in functions](conversation-builder-conversation-builder-scripting-functions.html#get-disambiguated-intent) to debug or access disambiguation intent data.
+Use [built in functions](conversation-builder-scripting-functions-get-and-set-conversation-flow-data.html#get-disambiguated-intent) to debug or access disambiguation intent data.
