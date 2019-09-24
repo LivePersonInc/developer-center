@@ -21,8 +21,7 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.LpClient() | Returnts the LivePerson (LP) Client. This is a wrapper for the [HTTP Client](https://developers.liveperson.com/liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
-| Toolbelt.SMTPClient(config) | Returns an SMTP Client instance, which is configured using the provided config. |
-| Toolbelt.ConversationUtil(apiCredentials) | Returns a Conversation Util instance, which is configured using the provided API credentials ([API Key](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html)). |
+| Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
 | Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 
 Here are usage example, which are taken out of the official templates:
@@ -231,43 +230,6 @@ secretClient
   });
 ```
 
-### SMTP Client
-
-SMTP Client allows the sending of emails via the SMTP Protocol. It is configured during instance creation. The Client is based on [nodemailer](https://github.com/nodemailer/nodemailer) and shares its interface.
-
-<div class="important">The client will use a unique connection for every email sent. It will close each connection after sending.</div>
-
-**Sample Usage**
-
-```javascript
-  // import FaaS Toolbelt
-  const { Toolbelt } = require("lp-faas-toolbelt");
-  // Create Instance based on providec config
-  const client = Toolbelt.SMTPClient({
-    host: "your-host",
-    port: "1337",
-    secure: true, // Use SSL for conection true/false
-    auth: {
-      user: "user",
-      pass: "pass"
-    }
-  });
-  // Validate provided config
-  client.verify().then(isValid => {
-    /** if isValid === true, then connection could be established */
-  });
-  // Send email
-  client.send({
-    sender: "Sender@mail.org",
-    to: "receiver@mailier.org",
-    bcc: "hidden@mail.org",
-    subject: "Awesome Email !",
-    text: "You can also send directly a html body by passing it as html."
-  })
-  .then(response => //react on the response)
-  .catch(err => //React to error);
-```
-
 ### Conversation Util
 
 The Conversation Util allows to perform conversation related methods, which are listed below. Authorization is configured during instance creation.
@@ -282,18 +244,8 @@ This method retrieves a conversation from the [Messaging Interactions API](https
   // import FaaS Toolbelt
   const { Toolbelt } = require("lp-faas-toolbelt");
 
-  // set API Key credentials
-  const apiCredentials = {
-    oauthConsumerKey: '...',
-    oauthConsumerSecret: '...',
-    oauthAccessToken: '...',
-    oauthAccessTokenKey: '...',
-  }
-
-  // Create instance with API credentials
-  const conversationUtil = Toolbelt.ConversationUtil(
-    apiCredentials
-  );
+  // Create instance
+  const conversationUtil = Toolbelt.ConversationUtil();
 
   // Get conversation
   conversationUtil.getConversationById(conversationId)
@@ -311,16 +263,8 @@ This method scans a conversation that has been retrieved with `getConversationBy
 // import FaaS Toolbelt
 const { Toolbelt } = require("lp-faas-toolbelt");
 
-// set API Key credentials
-const apiCredentials = {
-  oauthConsumerKey: "...",
-  oauthConsumerSecret: "...",
-  oauthAccessToken: "...",
-  oauthAccessTokenKey: "..."
-};
-
-// Create instance with API credentials
-const conversationUtil = Toolbelt.ConversationUtil(apiCredentials);
+// Create instance
+const conversationUtil = Toolbelt.ConversationUtil();
 
 // Get conversation
 const conversation = await conversationUtil.getConversationById(conversationId);
@@ -402,44 +346,34 @@ This method replaces all files of a conversation from LivePerson's [file storage
 **Sample Usage**
 
 ```javascript
-  // import FaaS Toolbelt
-  const { Toolbelt } = require("lp-faas-toolbelt");
+// import FaaS Toolbelt
+const { Toolbelt } = require("lp-faas-toolbelt");
 
-  // set API Key credentials
-  const apiCredentials = {
-    oauthConsumerKey: '...',
-    oauthConsumerSecret: '...',
-    oauthAccessToken: '...',
-    oauthAccessTokenKey: '...',
-  }
+// set file storage credentials (get from Account Manager)
+const fileStorageCredentials = {
+  username: '...',
+  password: '...'
+}
 
-  // set file storage credentials (get from Account Manager)
-  const fileStorageCredentials = {
-    username: '...',
-    password: '...'
-  }
+// Create instance
+const conversationUtil = Toolbelt.ConversationUtil();
 
-  // Create Conversation Util instance with API credentials
-  const conversationUtil = Toolbelt.ConversationUtil(
-    apiCredentials
-  );
+// Create GDPR Util instance
+const gdprUtil = Toolbelt.GDPRUtil();
+const shouldReplace = (filePath) => ... // filter here by returning boolean
+const replacementFile = {
+  body: Buffer.from('...', 'base64'), // create file from base64
+  contentType: 'image/png',
+};
 
-  // Create GDPR Util instance
-  const gdprUtil = Toolbelt.GDPRUtil();
-  const shouldReplace = (filePath) => ... // filter here by returning boolean
-  const replacementFile = {
-    body: Buffer.from('...', 'base64'), // create file from base64
-    contentType: 'image/png',
-  };
-
-  // Get conversation and replace files
-  conversationUtil.getConversationById(conversationId)
-    .then(conversation => gdprUtil.replaceConversationFiles(
-          conversation,
-          fileStorageCredentials,
-          shouldReplace, //(optional) defaults to (path) => true
-          replacementFile, //(optional) defaults to a black 1px*1px png
-    ))
-    .then(replacedFiles => //TODO: react on the response)
-    .catch(err => //TODO: React to error);
+// Get conversation and replace files
+conversationUtil.getConversationById(conversationId)
+  .then(conversation => gdprUtil.replaceConversationFiles(
+        conversation,
+        fileStorageCredentials,
+        shouldReplace, //(optional) defaults to (path) => true
+        replacementFile, //(optional) defaults to a black 1px*1px png
+  ))
+  .then(replacedFiles => //TODO: react on the response)
+  .catch(err => //TODO: React to error);
 ```
