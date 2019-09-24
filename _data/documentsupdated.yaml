@@ -153,7 +153,8 @@
           - subpagename: Debugging and Logging
           - subpagename: Get and Set User Data and Variables
           - subpagename: Get and Set Conversation Flow Data 
-          - subpagename: Sending Messages 
+          - subpagename: Sending Messages
+          - subpagename: Context Session Store Wrapper
       #- pagename: Keyword Triggers
       #- pagename: Operations
       - pagename: Enterprise Integrations
