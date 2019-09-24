@@ -20,7 +20,9 @@ There are several types of credentials that you can define to support [API integ
 - **Basic Authentication**: Use this when the API has a permanent token that you always want to use. The token is created by the system using the user name and password that you specify. This is a simpler but less secure choice than others in this list.
 - **Access Token**: Use this when the API has a permanent token that you always want to use. You specify the token to use. This is a simpler but less secure choice than others in this list.
 
-Additionally, if you're using a third-party NLU engine to match intents, you can use the [Fire API credential type](bot-accounts-credentials.html#add-a-fire-api-credential) to authenticate with the third-party engine.
+There's also a credential type that supports the use of third-party NLU engines:
+
+- **Fire API**: If you're using a supported third-party NLU engine to match intents (for example, IBM's Watson), you can use this to authenticate with that engine.
 
 ### Add an OAuth 2.0 credential
 
@@ -134,7 +136,7 @@ Like the Basic Authentication credential (discussed above), this type of credent
 
 While the credential types discussed above support [API integrations](conversation-builder-integrations-api-integrations.html), a Fire API credential is different in that it's used during *domain creation* in [Intent Builder](intent-builder-overview.html).
 
-If you're using a third-party NLU engine to match intents (e.g., IBM's Watson NLU), when you create the domain that will contain the intents and you specify the NLU to use to match intents, you can also specify the credential to use to authenticate with that third-party NLU engine.
+If you're using a supported third-party NLU engine to match intents (for example, IBM's Watson), when you create the domain that will contain the intents and you specify the NLU to use to match intents, you can also specify the credential to use to authenticate with that third-party NLU engine.
 
 **To add a Fire API credential**
 
