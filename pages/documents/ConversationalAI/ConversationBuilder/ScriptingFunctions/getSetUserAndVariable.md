@@ -1,12 +1,12 @@
 ---
-pagename: Get and Set User and Variable Data
+pagename: Get and Set User Data and Variables
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Scripting Functions
-permalink: conversation-builder-scripting-functions-get-and-set-user-and-variable-data.html
+permalink: conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html
 indicator: both
 ---
 

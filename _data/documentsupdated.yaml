@@ -148,6 +148,12 @@
       - pagename: Variables & Slots
       - pagename: Integrations
       - pagename: Scripting Functions
+        subpages:
+          - subpagename: Introduction
+          - subpagename: Debugging and Logging
+          - subpagename: Get and Set User Data and Variables
+          - subpagename: Get and Set Conversation Flow Data 
+          - subpagename: Sending Messages 
       #- pagename: Keyword Triggers
       #- pagename: Operations
       - pagename: Enterprise Integrations
