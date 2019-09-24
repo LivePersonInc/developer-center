@@ -25,7 +25,7 @@ To enable the Context Session Store API on your account, go to the Edit Account 
 
 LiveEngage Site Id or Organization Id can be used to get the Maven credentials.
 
-#### Data Scopes
+#### Conversation Builder Data Scopes
 
 This wrapper supports setting data in the following Conversation Builder scopes:
 
@@ -57,8 +57,8 @@ If the namespace already exists, this method will not create an additional one. 
 ##### Example
 
 ```javascript
-var success = botContext.registerContextNamespace(‘airlineTicketingBot’);
-botContext.printDebugMessage('Register Namespace: ' + success);
+var success = botContext.registerContextNamespace("airlineTicketingBot");
+botContext.printDebugMessage("Register Namespace: " + success);
 ```
 
 #### Delete Context Namespace
@@ -75,8 +75,8 @@ It is not mandatory to delete a previously registered namespace.
 ##### Example
 
 ```javascript
-var success = botContext.deleteContextNamespace(‘airlineTicketingBot’);
-botContext.printDebugMessage('Delete Namespace: ' + success);
+var success = botContext.deleteContextNamespace("airlineTicketingBot");
+botContext.printDebugMessage("Delete Namespace: " + success);
 ```
 
 ### Set Variable
@@ -92,14 +92,14 @@ The following methods will [set a variable in the Context Session Store](maven-c
 #### Examples
 
 ```javascript
-var success = botContext.setContextDataForUser(‘airlineTicketingBot’, ‘intentThreshold’, 2);
-botContext.printDebugMessage('set context data for user scope: ' + success);
+var success = botContext.setContextDataForUser("airlineTicketingBot", "intentThreshold", 2);
+botContext.printDebugMessage("set context data for user scope: " + success);
 
-var success = botContext.setContextDataForConversation(‘airlineTicketingBot’, ‘intentThreshold’, 2);
-botContext.printDebugMessage('set context data for conversation scope: ' + success);
+var success = botContext.setContextDataForConversation("airlineTicketingBot", "intentThreshold", 2);
+botContext.printDebugMessage("set context data for conversation scope: " + success);
 
-var success = botContext.setGlobalContextData(‘airlineTicketingBot’, ‘intentThreshold’, 2);
-botContext.printDebugMessage('set context data for global scope: ' + success);
+var success = botContext.setGlobalContextData("airlineTicketingBot", "intentThreshold", 2);
+botContext.printDebugMessage("set context data for global scope: " + success);
 ```
 
 ### Get Variable
@@ -115,14 +115,14 @@ The following methods will [get a variable from the Context Session Store](maven
 #### Examples
 
 ```javascript
-var value = botContext.getContextDataForUser(‘airlineTicketingBot’, ‘intentThreshold’);
-botContext.printDebugMessage('get context data for user scope: ' + value);
+var value = botContext.getContextDataForUser("airlineTicketingBot", "intentThreshold");
+botContext.printDebugMessage("get context data for user scope: " + value);
 
-var value = botContext.setContextDataForConversation(‘airlineTicketingBot’, ‘intentThreshold’);
-botContext.printDebugMessage('get context data for conversation scope: ' + value);
+var value = botContext.getContextDataForConversation("airlineTicketingBot", "intentThreshold");
+botContext.printDebugMessage("get context data for conversation scope: " + value);
 
-var value = botContext.getGlobalContextData(‘airlineTicketingBot’, ‘intentThreshold’);
-botContext.printDebugMessage('get context data for global scope: ' + value);
+var value = botContext.getGlobalContextData("airlineTicketingBot", "intentThreshold");
+botContext.printDebugMessage("get context data for conversation scope: " + value);
 ```
 
 ### Get All Variables
@@ -137,11 +137,11 @@ The following methods will [get all variables from the Context Session Store](ma
 #### Examples
 
 ```javascript
-var valuesMap = botContext.getContextDataForUser(‘airlineTicketingBot’);
-botContext.printDebugMessage('get context data for user scope: ' + valuesMap);
+var valuesMap = botContext.getContextDataForUser("airlineTicketingBot");
+botContext.printDebugMessage("get context data for user scope: " + valuesMap);
 
-var valuesMap = botContext.setContextDataForConversation(‘airlineTicketingBot’, ‘intentThreshold’, 2);
-botContext.printDebugMessage('get context data for conversation scope: ' + valuesMap);
+var valuesMap = botContext.getContextDataForConversation("airlineTicketingBot");
+botContext.printDebugMessage("get context data for conversation scope: " + valuesMap);
 ```
 
 ### Delete Variable
@@ -157,12 +157,12 @@ The following methods will [delete a variable from the Context Session Store](ma
 #### Examples
 
 ```javascript
-var success = botContext.deleteContextDataForUser(‘airlineTicketingBot’, ‘intentThreshold’);
-botContext.printDebugMessage('set context data for user scope: ' + success);
+var success = botContext.deleteContextDataForUser("airlineTicketingBot", "intentThreshold");
+botContext.printDebugMessage("delete context data for user scope: " + success);
 
-var success = botContext.deleteContextDataForConversation(‘airlineTicketingBot’, ‘intentThreshold’);
-botContext.printDebugMessage('set context data for conversation scope: ' + success);
+var success = botContext.deleteContextDataForConversation("airlineTicketingBot", "intentThreshold");
+botContext.printDebugMessage("delete context data for user scope: " + success);
 
-var success = botContext.deleteGlobalContextData(‘airlineTicketingBot’, ‘intentThreshold’);
-botContext.printDebugMessage('set context data for global scope: ' + success);
+var success = botContext.deleteGlobalContextData("airlineTicketingBot", "intentThreshold");
+botContext.printDebugMessage("delete context data for user scope: " + success);
 ```
