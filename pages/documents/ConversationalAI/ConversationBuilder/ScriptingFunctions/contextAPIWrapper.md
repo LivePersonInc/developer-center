@@ -81,7 +81,7 @@ botContext.printDebugMessage("Delete Namespace: " + success);
 
 ### Set Variable
 
-The following methods will [set a variable in the Context Session Store](maven-context-warehouse-context-session-store.html#set-custom-namespace-properties) at three different [Conversation Builder scopes](conversation-builder-scripting-functions-context-session-store-wrapper.html#data-scopes).
+The following methods will [set a variable in the Context Session Store](maven-context-warehouse-context-session-store.html#set-custom-namespace-properties) at three different [Conversation Builder scopes](conversation-builder-scripting-functions-context-session-store-wrapper.html#conversation-builder-data-scopes).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -104,7 +104,7 @@ botContext.printDebugMessage("set context data for global scope: " + success);
 
 ### Get Variable
 
-The following methods will [get a variable from the Context Session Store](maven-context-warehouse-context-session-store.html#get-one-property) at three different [Conversation Builder scopes](conversation-builder-scripting-functions-context-session-store-wrapper.html#data-scopes).
+The following methods will [get a variable from the Context Session Store](maven-context-warehouse-context-session-store.html#get-one-property) at three different [Conversation Builder scopes](conversation-builder-scripting-functions-context-session-store-wrapper.html#conversation-builder-data-scopes).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -127,7 +127,7 @@ botContext.printDebugMessage("get context data for conversation scope: " + value
 
 ### Get All Variables
 
-The following methods will [get all variables from the Context Session Store](maven-context-warehouse-context-session-store.html#get-all-namespace-variables-or-properties) at two different [Conversation Builder scopes](conversation-builder-scripting-functions-context-session-store-wrapper.html#data-scopes).
+The following methods will [get all variables from the Context Session Store](maven-context-warehouse-context-session-store.html#get-all-namespace-variables-or-properties) at two different [Conversation Builder scopes](conversation-builder-scripting-functions-context-session-store-wrapper.html#conversation-builder-data-scopes).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -146,7 +146,7 @@ botContext.printDebugMessage("get context data for conversation scope: " + value
 
 ### Delete Variable
 
-The following methods will [delete a variable from the Context Session Store](maven-context-warehouse-context-session-store.html#delete-a-property) at three different [Conversation Builder scopes](conversation-builder-scripting-functions-context-session-store-wrapper.html#data-scopes).
+The following methods will [delete a variable from the Context Session Store](maven-context-warehouse-context-session-store.html#delete-a-property) at three different [Conversation Builder scopes](conversation-builder-scripting-functions-context-session-store-wrapper.html#conversation-builder-data-scopes).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
