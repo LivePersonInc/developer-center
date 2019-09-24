@@ -81,7 +81,7 @@ Currently the following events are supported:
   </tr>
   <tr>
     <td>Third-Party Bots Custom Integration</td>
-    <td>Triggered when a bot, using the Third-Party Bots' Custom Integration, receives a message</td>
+    <td>Triggered when a bot, which is using the Third-Party Bots' Custom Integration, receives a message</td>
     <td>15</td>
   </tr>
 </tbody>
