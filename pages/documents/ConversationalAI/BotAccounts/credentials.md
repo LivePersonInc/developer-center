@@ -51,7 +51,7 @@ The images in this section illustrate creating an OAuth 2.0 credential to suppor
     - **Client ID**: Enter the client ID.
     - **Client Secret**: Enter the client secret.
     - **Grant Type**: Always select "Authorization Code." This is the only grant type that's supported.
-    - **Scope**: (Optional) Enter the allowed scopes.
+    - **Scope**: (Optional) Enter the scope of the access request. This value is passed as is; it should conform to the OAuth 2.0 specification.
     - **Auth URL**: Enter the auth URL (the auth end point).
     - **Resource URL**: Enter the resource URL (the token end point).
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/creds_oauth2_img3.png">
@@ -87,7 +87,7 @@ You can create a Mutual Authentication credential and use it in [API integration
     - **Authentication Type**: Select "Mutual Authentication."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
-    - **Keys Certificate**: Click **Upload**, and upload the file that contains the private and public keys.
+    - **Keys Certificate**: Click **Upload**, and upload the file that contains the private and public keys. The file format must be .pfx, .p12, or .jks.
     - **Trust Certificate**: Click **Upload**, and upload the file that contains the trusted resources. The file format must be .crt, .cer, or .pem.
     - **Cryptographic Protocols**: Select the encryption/decryption protocols that are supported by the trusted resources. If you leave this blank, the default value of TLS 1.2 and TLS1.1 is used.
 7. Click **Save**.
