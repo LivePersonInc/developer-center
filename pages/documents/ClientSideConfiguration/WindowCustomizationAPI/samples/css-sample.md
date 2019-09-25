@@ -160,7 +160,8 @@ The below is an example of a full CSS file making use of the CSS classes reserve
 .lpc_desktop.lpc_window_maximized {
     height: 650px !important;
     border-radius: 6px !important;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
+    max-height: calc(100% - 15px) !important;
 }
 
 .lpc_desktop.lpc_layout {
@@ -184,6 +185,7 @@ The below is an example of a full CSS file making use of the CSS classes reserve
     height: 650px !important;
     width: 1000px !important;
     right: 350px !important;
+    max-height: calc(100% - 15px) !important;
 }
 
 .lpc_desktop.lpc_slider__body {
