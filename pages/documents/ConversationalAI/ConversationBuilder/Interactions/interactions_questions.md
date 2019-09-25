@@ -18,9 +18,6 @@ Question text and answers can display dynamic values through the use of variable
 {: .important}
 See [Interaction Basics](conversation-builder-interactions-interaction-basics.html) for important information on whitelisting, guidelines on how to approach channel-specific limitations, and more.
 
-### Required questions
-TBD
-
 ### Sample user answers
 Many question types provide a field for entering an example of a user's answer to the question.
 
