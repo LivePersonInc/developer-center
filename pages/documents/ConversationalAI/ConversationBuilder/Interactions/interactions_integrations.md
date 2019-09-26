@@ -17,4 +17,4 @@ Integrations are similar to questions in that you can define conditions that eac
 
 When you add an integration interaction, you need to select the API integration that the interaction should invoke. And then you can configure the rest of the interaction details the way you do for any interaction.
 
-<img style="width:550px" src="img/ConvoBuilder/integrations_api.png">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/integrations_api.png">
