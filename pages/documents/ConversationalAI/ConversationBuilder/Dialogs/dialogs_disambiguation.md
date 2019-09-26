@@ -55,8 +55,8 @@ Once the user selects the correct intent, if that intent is associated with a Us
     - **Disambiguate only selected domains**: If you only want the bot to include matches to intents in specific domains, select this check box, and then select those domains. You can select from all domains associated with dialogs in the bot.
 3. Click **Save**.
 4. Open the **Interaction Details** for the disambiguation interaction, click **Settings**, and specify the following:
-    - **\# of intents to show**: Select whether to show the top 2 or top 3 choices to the consumer.
-    - **None of the above**: Select this if you want to add a "None of the above" choice. If you select this, you must enter a label for this choice.
+    - **\# of intents to show**: Select whether to show 2 or 3 intent choices to the consumer. The intents are selected based on the match results that are in the same category.
+    - **None of the above**: Select this if you want to add a "None of the above" choice to the clarification question. If you select this, you must enter a label for this choice (see below) in order for this option to appear. By default, this option returns a reply of, *"That's not what I was expecting, Please select from one of these options."* However, you can add a response condition to the disambiguation interaction and use pattern matching to direct the conversation flow in a different way.
     - **Enter label**: Enter a label for the "None of the above" option (for example, enter "None of the above" or "I need something else").
 5. Click **Save**.
 6. In the Disambiguation interaction, enter the question text to send to the consumer.
@@ -73,7 +73,7 @@ Once the user selects the correct intent, if that intent is associated with a Us
 
 If you don't use a disambiguation dialog, here's how things work:
 
-- If the user's message matches multiple intents that have the same rank (several matches are VERY GOOD, or several are GOOD), the bot picks one at random and processes the associated dialog.
+- If the user's message matches multiple intents that have the same rank (several matches are VERY GOOD, or several are GOOD), the bot picks the one with the highest raw match score, and then it processes the associated dialog.
 
 - During matching, the bot considers only intents that evaluate to a VERY_GOOD or GOOD rank; intents that evaluate to FAIR_PLUS and FAIR are not considered.
 
