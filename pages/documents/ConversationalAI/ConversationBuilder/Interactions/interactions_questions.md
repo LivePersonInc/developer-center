@@ -172,7 +172,7 @@ Response Message settings also provide the text in the header of the actual list
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
 | ADD IMAGE > Image URL | The HTTPS URL of the image file to display. | Optional | https://www.mysite.com/images/flowers.jpg | 
-| ADD IMAGE > Image Style | The size of the message, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon | 
+| ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon | 
 | Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters. | Required | Beautiful bouquets |
 | Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters. | Optional | Select your favorite |
 
