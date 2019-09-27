@@ -2,7 +2,7 @@
 pagename: Deployment
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 permalink: liveperson-functions-deployment.html
 indicator: both

@@ -2,7 +2,7 @@
 pagename: Messaging Conversation Survey
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Integrations
 permalink: liveperson-functions-integrations-messaging-conversation-survey.html
