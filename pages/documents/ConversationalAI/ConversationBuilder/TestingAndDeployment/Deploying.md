@@ -10,8 +10,9 @@ indicator: both
 
 As a bot developer, you can use the same application, Conversation Builder, that you use to create your bots to also quickly deploy them to a LiveEngage environment. Typically, you'll want to do this for testing purposes.
 
-### The High-Level Deployment Process
+### The high-level deployment process
 
+#### Prerequisite steps
 Before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
 
 1. Create at least one skill to assign to your bot agent.
@@ -20,7 +21,8 @@ Before you can deploy a bot, you must complete the following, pre-requisite step
 
 For help with these steps, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
 
-Deployment is then a two-step process:
+#### The deployment process
+After the pre-requisite steps are performed, at a high-level deployment is a two-step process:
 
 1. **[Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector)**. This creates the connection between the bot and a bot agent in the target LiveEngage environment.
 2. **[Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent)**. This gets the agent connector running in the target environment.
@@ -44,10 +46,10 @@ Adding an agent connector creates a connection between the bot and a bot agent i
 2. Click **Agent Connectors** in the upper-right corner.
 3. Click **New Bot Connector** in the upper-right corner.
 4. In the Add Agent Connector dialog, specify the following:
-    - **Agent User ID**:
-    - **Role (Agent or Manager)**: 
-    - **Conversation Type**: Select either "Messaging" or "Chat."
-    - **Deploy to**: Select either "Demo" (for testing) or "Production." To deploy to Production, you must have the necessary privileges.
+    - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps).
+    - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps).
+    - **Conversation Type**: Select either "Messaging" or "Chat." This should match the conversation type of the engagement you created in LiveEngage.
+    - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges. As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
 5. If desired, click **Advanced Options** and specify the optional, advanced settings:
     - **External Webhook URL**: 
     - **Fallback Skill ID**: 
@@ -65,7 +67,7 @@ You can edit an agent connector as long as it isn't running.
 
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-right corner.
-3. Locate the connector in the table, click its  icon, and select **Edit** from the menu that appears.
+3. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Edit** from the menu that appears.
 4. Edit the information and click **Save**.
 5. *Restart the connector*.
 
@@ -76,7 +78,7 @@ You can delete an agent connector as long as it isn't running.
 
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-right corner.
-3. Locate the connector in the table, click its  icon, and select **Delete** from the menu that appears.
+3. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Delete** from the menu that appears.
 4. Click **TBD** to confirm the deletion. 
 
 ### Start an Agent Connector
