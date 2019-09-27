@@ -22,7 +22,7 @@ For help with these steps, see the [LivePerson Knowledge Center](https://knowled
 
 Deployment is then a two-step process:
 
-1. **[Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector)**. This creates the connection between the bot and the agent in the target LiveEngage environment.
+1. **[Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector)**. This creates the connection between the bot and the bot agent in the target LiveEngage environment.
 2. **[Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent)**. This starts the agent connector so it runs in the target environment.
 
 {: .important}
@@ -36,29 +36,27 @@ The Agent Connectors page makes it fast and easy to understand the status (1) of
 *add annotated screen here*
 
 ### Add an Agent Connector
-Adding a agent connector creates a connection between the bot and the agent in the target LiveEngage environment.
+Adding an agent connector creates a connection between the bot and the bot agent in the target LiveEngage environment.
 
 **To add an agent connector**
 
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-right corner.
 3. Click **New Bot Connector** in the upper-right corner.
-4. In the Add New Agent Connector dialog, specify the following:
+4. In the Add Agent Connector dialog, specify the following:
     - **Agent User ID**:
     - **Role (Agent or Manager)**: 
-    - **Conversation Type**: 
+    - **Conversation Type**: Select either "Messaging" or "Chat."
     - **Deploy to**: Select either "Demo" (for testing) or "Production." To deploy to Production, you must have the necessary privileges.
-5. If desired, click **Advanced Options** and specify the advanced settings, which are optional:
+5. If desired, click **Advanced Options** and specify the optional, advanced settings:
     - **External Webhook URL**: 
     - **Fallback Skill ID**: 
     - **Accessibility**: 
-
     Custom configuration flags are key/value pairs that alter the behavior of the bot. They allow for fundamental changes in bot behavior *outside* of the design of the bot, and they're injected at the point of connecting the bot to an agent on a 1:1 basis. For a list of custom configuration flags that you can set, see [below](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-flags) in this topic.
-
-6. If desired, click " + " beside Custom Configurations, and enter the key/value pairs.
+6. If desired, click " + " beside **Custom Configurations**, and enter the key/value pairs.
 7. Click **Save**.
 
-    This creates the connection between the bot and the agent in the target LiveEngage environment. Now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
+    This creates the connection between the bot and the bot agent in the target LiveEngage environment. Now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
 
 ### Edit an Agent Connector
 You can edit an agent connector as long as the bot isn't running.
