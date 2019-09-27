@@ -52,21 +52,23 @@ Once you've selected a name for your Intent, you should add as many training phr
 
 ### LiveIntent
 
-#### Enabling LiveIntent
+When you enter Intent Builder, you will notice a column that tells you if a domain "Has LiveIntent" or not.
 
-When you enter Intent Builder, click on a domain of your choice. 
+{: .important}
+It is a best practice to only have one domain enabled for LiveIntent at a time. This is to minimize intent overlap.
 
-On the left side of the screen, you will see your list of intents. Select the intent(s) that you want to enable. 
+<img class="fancyimage" style="width:750px" src="img/liveintent_has.png">
 
-On the intent view, click on the "Enable LiveIntent" slider.
+Click on a domain of your choice. On the left side of the screen, you will see your list of intents. If an intent is enabled for LiveIntent, it will have a green dot to its left.
 
-You can now view the intent in the [LiveIntent dashboard](https://knowledge.liveperson.com/liveintent-dashboard.html).
+Under the Intents left-side dropdown, select "Enable LiveIntent" and select the intents in bulk.
 
-#### Disabling LiveIntent
+{: .important}
+It is a best practice to enable all intents within a domain for the best analysis.
 
-When you enter Intent Builder, click on a domain of your choice. 
+<img class="fancyimage" style="width:750px" src="img/liveintent_enable.png">
 
-On the left side of the screen, you will see your list of intents. Hover over the intent(s) that you want to disable. In the three-dot menu that appears to the right of the Intent name, select "Disable LiveIntent".
+You can view the enabled intents in the [LiveIntent dashboard](liveintent-dashboard.html).
 
 ### Training Phrases
 

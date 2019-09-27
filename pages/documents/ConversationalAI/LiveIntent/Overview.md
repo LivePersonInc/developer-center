@@ -9,23 +9,15 @@ permalink: liveintent-overview.html
 indicator: messaging
 ---
 
-LiveIntent allows you to 
+### Introduction
 
-LiveIntent is the engine for tracking intent performance in real-time.
+LivePerson's [Conversational AI platform](conversational-ai-platform-platform-overview.html) now includes a one-stop hub for [discovering](liveintent-best-practices.html#use-search-to-discover-new-intents), [tracking, and maintaining](liveintent-dashboard.html) intents in real-time.
 
-### Getting Started
+<img class="fancyimage" style="width:750px" src="img/liveintent_dashboard_home.png">
 
-If you do **not** already have intents created in Intent Builder, there are starter packs available to get up to speed quickly. 
+LiveIntent leverages the [NLU engine](conversational-ai-platform-natural-language-understanding-nlu-engines.html) of your choice to analyze and track the performance of your intent libraries created in [Intent Builder](intent-builder-overview.html).
 
-If you **do** have intents already created, [see here](https://developers.liveperson.com/intent-builder-overview.html#enabling-liveintent) for how to link them to LiveIntent.
-
-### Using LiveIntent
-
-When you have intents and they are enabled for LiveIntent, you can view your data in the [LiveIntent dashboard](https://knowledge.liveperson.com/liveintent-dashboard.html).
-
-See [LiveIntent playbooks](https://knowledge.liveperson.com/liveintent-playbooks.html) for some common usage flows and best practices.
-
-### Example User Flows
+### Example Use Cases
 
 #### Business Analyst
 
@@ -46,7 +38,7 @@ The analyst enables detailed real-time insight into the problem by defining inte
 #### Agent Manager
 
 **Challenge**:
-There is Influx in account cancellations related to the policy changes
+There is influx in account cancellations related to the policy changes
 
 **How LiveIntent Helps**: 
 The Agent Manager uses the LiveIntent dashboard to explore conversations with the intent “Cancel my account.” 
@@ -68,3 +60,26 @@ She creates a bot in Conversation Builder for handling these requests and create
 
 **Outcome**: 
 The company is able to greatly reduce the volume of agent conversations related to the policy change.
+
+### Getting Started
+
+#### Starter Pack Quick Start
+
+If you do **not** already have intents created in Intent Builder, and if you would like to **get up to speed quickly**, LiveIntent offers starter packs filled with common intents for various different business verticals. These starter packs leverage your historical transcript data to automatically create a model for your brand.
+
+To get started with starter packs, please contact your account representative.
+
+#### Manual Setup
+
+If you do **not** already have intents created in Intent Builder, but you'd like to set these up **manually**, [follow the steps in Intent Builder](intent-builder-overview.html) to create a domain, intents, [enable liveintent](intent-builder-overview.html#liveintent), and add training phrases.
+
+If you have **intents in an external system**, you can [import](intent-builder-overview.html#adding-a-domain) those into Intent Builder to get started quickly.
+
+If you have **intents in Intent Builder** already, [see here](intent-builder-overview.html#liveintent) for how to enable them in LiveIntent.
+
+### Using LiveIntent
+
+When you have intents and they are enabled for LiveIntent, you can view your data in the [LiveIntent dashboard](liveintent-dashboard.html).
+
+See [LiveIntent Best Practices](liveintent-best-practices.html) for some common usage flows and best practices.
+
