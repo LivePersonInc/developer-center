@@ -24,6 +24,9 @@ There's also a credential type that supports the use of third-party NLU engines:
 
 - **Fire API**: If you're using a supported third-party NLU engine to match intents (for example, IBM's Watson), you can use this to authenticate with that engine.
 
+{: .important}
+When working with API integrations, keep in mind that the authentication type that you select for a credential must be supported by the API that you intend to call. For example, don't use Basic Authentication if the API doesn't support it.
+
 ### Add an OAuth 2.0 credential
 
 You can create an OAuth 2.0 credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require the use of an access token that's obtained via the OAuth 2.0 protocol.
@@ -48,12 +51,12 @@ The images in this section illustrate creating an OAuth 2.0 credential to suppor
         <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/creds_oauth2_img2.png">
 7. Click **Next**.
 8. In the Add Credentials dialog box, specify the following based on the OAuth 2.0 configuration in the resource application (where you earlier pasted the redirect URI):
-    - **Client ID**: Enter the client ID.
-    - **Client Secret**: Enter the client secret.
+    - **Client ID**: A public ID that identifies the API client to the respective entity. Also called the consumer key/ID.
+    - **Client Secret**: A private secret that only the client should have. Used for verifying the client's identity before providing an access token to the API. Also called the consumer secret.
     - **Grant Type**: Always select "Authorization Code." This is the only grant type that's supported.
-    - **Scope**: (Optional) Enter the scope of the access request. This value is passed as is; it should conform to the OAuth 2.0 specification.
-    - **Auth URL**: Enter the auth URL (the auth end point).
-    - **Resource URL**: Enter the resource URL (the token end point).
+    - **Scope**: (Optional) Used to define the scope of the access granted by the token. For example, read_only in some resource providers would mean that the token will only grant access to read APIs. This value is passed as is; it should conform to the OAuth 2.0 specification.
+    - **Auth URL**: Enter the auth URL (the auth end point). Used to exchange the OAuth2 credentials for a code that is later exchanged for an access token. Used only during the authorization process, which usually happens once.
+    - **Resource URL**: Enter the resource URL (the token end point). Used to exchange the OAuth2 credentials plus the code the was received from the Auth URL for an access token that will be used for making the secured API calls. Also used for refreshing the token when it expires.
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/creds_oauth2_img3.png">
 9. Click **Authorize**.
 
