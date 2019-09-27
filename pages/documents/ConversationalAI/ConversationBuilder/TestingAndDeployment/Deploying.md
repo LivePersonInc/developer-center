@@ -51,7 +51,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps).
     - **Conversation Type**: Select either "Messaging" or "Chat." This should match the type of LiveEngage account, which is either one or the other.
     - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Operations or Admin). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
-5. If desired, click **Advanced Options** and specify the optional, advanced settings:
+5. If desired, click **Advanced Options** and specify any optional, advanced settings:
     - **External Webhook URL**: 
     - **Fallback Skill ID**: If the skill (that you assigned to the bot agent) has a defined fallback skill, you can enter the fallback skill's ID here. The fallback skill is the skill to which to route the conversation as a fallback if no agents with the primary skill have free capacity. Fallback skills have several uses, but they're often used to escalate (transfer) a conversation from a bot agent to a live agent. You define fallback skills for skills in LiveEngage. For more on this, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
     - **Accessibility**: 
@@ -79,7 +79,7 @@ You can delete an agent connector as long as it isn't running.
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-right corner.
 3. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Delete** from the menu that appears.
-4. Click **TBD** to confirm the deletion. 
+4. Click **Yes** to confirm the deletion. 
 
 ### Start an agent connector
 1. Open the bot.
@@ -106,7 +106,7 @@ An agent connector can have one of the following statuses:
 Custom configuration flags are key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
 
 {: .important}
-Use of custom configuration flags potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for 1 of your duplicate bot agents all running the same bot, you'll get different behavior between the bots within an account.
+Use of custom configuration flags potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for one of your duplicate bot agents all running the same bot (per guidance [above](conversation-builder-testing-deployment-deploying-to-liveengage.html#the-deployment-process)), you'll get different behavior between the bots within an account.
 
 #### Flags
 
