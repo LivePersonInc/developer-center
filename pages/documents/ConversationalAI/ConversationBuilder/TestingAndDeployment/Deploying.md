@@ -22,8 +22,8 @@ For help with these steps, see the [LivePerson Knowledge Center](https://knowled
 
 Deployment is then a two-step process:
 
-1. **[Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector)**. This creates the connection between the bot and the bot agent in the target LiveEngage environment.
-2. **[Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent)**. This starts the agent connector so it runs in the target environment.
+1. **[Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector)**. This creates the connection between the bot and a bot agent in the target LiveEngage environment.
+2. **[Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent)**. This gets the agent connector running in the target environment.
 
 {: .important}
 LivePerson recommends that, when you connect your bot to LiveEngage, you deploy at least two LiveEngage bot agents for a single bot. This is so the second bot agent can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more bot agents.
@@ -31,12 +31,12 @@ LivePerson recommends that, when you connect your bot to LiveEngage, you deploy 
 For some practice at deployment, try [tutorial #4](conversation-builder-getting-started-4-connect-to-liveengage.html). 
 
 ### The Agent Connectors Page
-The Agent Connectors page makes it fast and easy to understand the status (1) of all your deployed bots. Unless you're troubleshooting a connector, typically, you won't need to dive into the details (2) on the individual components that support the end-to-end connection.
+The Agent Connectors page makes it fast and easy to understand the status (1) of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically, you won't need to dive into the details (2) on the individual components that support the end-to-end connection.
 
 *add annotated screen here*
 
 ### Add an Agent Connector
-Adding an agent connector creates a connection between the bot and the bot agent in the target LiveEngage environment.
+Adding an agent connector creates a connection between the bot and a bot agent in the target LiveEngage environment.
 
 **To add an agent connector**
 
@@ -59,7 +59,7 @@ Adding an agent connector creates a connection between the bot and the bot agent
     This creates the connection between the bot and the bot agent in the target LiveEngage environment. Now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
 
 ### Edit an Agent Connector
-You can edit an agent connector as long as the bot isn't running.
+You can edit an agent connector as long as it isn't running.
 
 **To edit an agent connector**
 
@@ -96,7 +96,7 @@ TBA
 An agent connector can have one of the following statuses:
 
 - **Connected**: The connector is running, and all end-to-end connections are working well.
-- **Not Connected**: At least one component isn't working, causing end-to-end connections not to function. For help with this status, see [Troubleshoot a deployment](conversation-builder-testing-deployment-deploying-to-liveengage.html#troubleshoot-a-deployment), farther above.
+- **Not Connected**: At least one component isn't working, causing end-to-end connections not to function. For help with this status, see [Troubleshoot a deployment](conversation-builder-testing-deployment-deploying-to-liveengage.html#troubleshoot-a-deployment), which is above.
 - **Stopped**: All end-to-end connections are working well, but the connector isn't running.
 
 ### Custom configuration flags
