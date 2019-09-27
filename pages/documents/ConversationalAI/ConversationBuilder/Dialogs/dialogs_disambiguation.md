@@ -56,7 +56,7 @@ Once the user selects the correct intent, if that intent is associated with a Us
 3. Click **Save**.
 4. Open the **Interaction Details** for the disambiguation interaction, click **Settings**, and specify the following:
     - **\# of intents to show**: Select whether to show 2 or 3 intent choices to the consumer. The intents are selected based on the match results that are in the same category.
-    - **Something Else**: Select this if you want to add a "None of the above" type of choice to the clarification question. If you select this, you must enter a label for this choice (see below) in order for this option to appear. By default, this option returns a reply of, *"That's not what I was expecting, Please select from one of these options."* However, you can add a response condition to the disambiguation interaction and use pattern matching to direct the conversation flow in a different way.
+    - **Something else**: Select this if you want to add a "None of the above" type of choice to the clarification question. If you select this, you must enter a label for this choice (see below) in order for this option to appear. By default, this option returns a reply of, *"That's not what I was expecting, Please select from one of these options."* However, you can add a response condition to the disambiguation interaction and use pattern matching to direct the conversation flow in a different way.
     - **Enter label**: Enter a label for the "Something Else" option, for example, enter "None of the above" or "Something else."
 5. Click **Save**.
 6. In the Disambiguation interaction, enter the question text to send to the consumer.
