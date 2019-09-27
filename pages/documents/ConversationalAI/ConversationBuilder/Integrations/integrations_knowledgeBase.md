@@ -20,8 +20,8 @@ Use a Knowledge Base integration when you want to search one of your knowledge b
     - **Integration Type**: Select **Knowledge Base**.
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Methods**:
-        - *Phrase Search*: Select this method to search for the phrase defined in the request parameter (see "phrases" below) against only the title and summary fields in the articles.
-        - *Special Tag Search*: Articles in a knowledge base can have assigned tags, which highlight key words or phrases in the article. Select this method to search for the phrase defined in the request parameter (see "phrases" below) against only the tags in the articles.
+        - *Phrase Search*: Select this method to search for the phrase defined in the request parameter (see "phrases" below) against the articles.
+        - *Special Tag Search*: Articles in a knowledge base can have assigned tags, which highlight keywords or relevant terms. Select this method to search for the phrase defined in the request parameter (see "phrases" below) against only the tags in the articles.
     - **Request Parameters**:
         - *mode*: 
             - *Intents*: 
