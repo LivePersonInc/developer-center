@@ -18,97 +18,95 @@ Before you can deploy a bot, you must complete the following, pre-requisite step
 2. Create the bot agent (user type = Bot), and assign the skill to the bot agent.
 3. Create a campaign and engagement that routes to the skill that you assigned to the bot agent.
 
+For help with these steps, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
+
 Deployment is then a two-step process:
 
-1. **[Add the bot connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector)**. This creates the connection between the bot and the target LiveEngage environment, but it doesn't *fully* deploy the bot.
-2. **[Start the bot agent](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent)**. This fully deploys the bot, which is now running in the target environment.
+1. **[Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector)**. This creates the connection between the bot and the agent in the target LiveEngage environment.
+2. **[Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent)**. This starts the agent connector so it runs in the target environment.
 
 {: .important}
 LivePerson recommends that, when you connect your bot to LiveEngage, you deploy at least two LiveEngage bot agents for a single bot. This is so the second bot agent can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more bot agents.
 
 For some practice at deployment, try [tutorial #4](conversation-builder-getting-started-4-connect-to-liveengage.html). 
 
-### The Deploy Page
-The Deploy page makes it fast and easy to understand the status (1) of all your deployed bots. Unless you're troubleshooting a connector, typically, you won't need to dive into the details (2) on the individual components that support the end-to-end connection.
+### The Agent Connectors Page
+The Agent Connectors page makes it fast and easy to understand the status (1) of all your deployed bots. Unless you're troubleshooting a connector, typically, you won't need to dive into the details (2) on the individual components that support the end-to-end connection.
 
 *add annotated screen here*
 
-### Add a Bot Connector
-Adding a bot connector creates a connection between the bot and the target LiveEngage environment.
+### Add an Agent Connector
+Adding a agent connector creates a connection between the bot and the agent in the target LiveEngage environment.
 
-**To add a bot connector**
+**To add an agent connector**
 
 1. Open the bot.
-2. Click **DEPLOY** in the upper-right corner.
-3. Click **Add Bot Connector**.
-4. In the Add New Bot Connector dialog, specify the following:
-    - **Username**:
-    - **Conversation type**: 
-    - **Role**: 
-    - **Target environment** (deploy to where): Select either "Demo" (for Test) or "Production." To deploy to Production, you must have the necessary privileges.
-5. If desired, click Configurations and specify the advanced settings, which are optional:
+2. Click **Agent Connectors** in the upper-right corner.
+3. Click **New Bot Connector** in the upper-right corner.
+4. In the Add New Agent Connector dialog, specify the following:
+    - **Agent User ID**:
+    - **Role (Agent or Manager)**: 
+    - **Conversation Type**: 
+    - **Deploy to**: Select either "Demo" (for testing) or "Production." To deploy to Production, you must have the necessary privileges.
+5. If desired, click **Advanced Options** and specify the advanced settings, which are optional:
     - **External Webhook URL**: 
     - **Fallback Skill ID**: 
-    - **Custom Configurations**:
     - **Accessibility**: 
-6. Click **Add**.
 
-    This creates the connection between the bot and the target LiveEngage environment, but it doesn't fully deploy the bot. To do the latter, you must [start the bot agent](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
+    Custom configuration flags are key/value pairs that alter the behavior of the bot. They allow for fundamental changes in bot behavior *outside* of the design of the bot, and they're injected at the point of connecting the bot to an agent on a 1:1 basis. For a list of custom configuration flags that you can set, see [below](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-flags) in this topic.
 
-### Edit a Bot Connector
-You can edit a bot connector as long as the bot isn't running.
+6. If desired, click " + " beside Custom Configurations, and enter the key/value pairs.
+7. Click **Save**.
 
-**To edit a bot connector**
+    This creates the connection between the bot and the agent in the target LiveEngage environment. Now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
+
+### Edit an Agent Connector
+You can edit an agent connector as long as the bot isn't running.
+
+**To edit an agent connector**
 
 1. Open the bot.
-2. Click **DEPLOY** in the upper-right corner.
-3. Locate the bot connector in the table, click its  icon, and select **Edit** from the menu that appears.
+2. Click **Agent Connectors** in the upper-right corner.
+3. Locate the connector in the table, click its  icon, and select **Edit** from the menu that appears.
 4. Edit the information and click **Save**.
+5. *Restart the connector*.
 
-### Delete a Bot Connector
-You can delete a bot connector as long as the bot isn't running.
+### Delete an Agent Connector
+You can delete an agent connector as long as it isn't running.
 
-**To delete a bot connector**
+**To delete an agent connector**
 
 1. Open the bot.
-2. Click **DEPLOY** in the upper-right corner.
-3. Locate the bot connector in the table, click its  icon, and select **Delete** from the menu that appears.
+2. Click **Agent Connectors** in the upper-right corner.
+3. Locate the connector in the table, click its  icon, and select **Delete** from the menu that appears.
 4. Click **TBD** to confirm the deletion. 
 
-### Start a Bot Agent
+### Start an Agent Connector
 1. Open the bot.
-2. Click **DEPLOY** in the upper-right corner.
-3. Locate the bot connector in the table, and click its **Start** button.
+2. Click **Agent Connectors** in the upper-right corner.
+3. Locate the connector in the table, and click its **Start** button.
 
-### Stop an Bot Agent
+### Stop an Agent Connector
 1. Open the bot.
-2. Click **DEPLOY** in the upper-right corner.
-3. Locate the bot connector in the table, and click its **Stop** button.
+2. Click **Agent Connectors** in the upper-right corner.
+3. Locate the connector in the table, and click its **Stop** button.
 
 ### Troubleshoot a deployment
 TBA
 
 ### Deployment statuses
-A bot connector can have one of the following statuses:
+An agent connector can have one of the following statuses:
 
-- **Connected**: The bot is running, and all end-to-end connections are working well.
+- **Connected**: The connector is running, and all end-to-end connections are working well.
 - **Not Connected**: At least one component isn't working, causing end-to-end connections not to function. For help with this status, see [Troubleshoot a deployment](conversation-builder-testing-deployment-deploying-to-liveengage.html#troubleshoot-a-deployment), farther above.
-- **Stopped**: All end-to-end connections are working well, but the bot isn't running.
+- **Stopped**: All end-to-end connections are working well, but the connector isn't running.
 
 ### Custom configuration flags
 
-When adding an Enterprise Integration to connect your automation to an LE bot agent user, there is a UI section at the bottom of the screen where feature flags are entered called **_Custom Configurations_**.
-
-This section allows you to add key/value pairs that alter the behavior of your bot. 
-
-These custom flags allow for fundamental changes in bot behaviour *outside* of the design of the automation and are injected at the point of connecting a bot automation to an agent on a 1:1 basis.
+Custom configuration flags are key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
 
 {: .important}
-This can potentially cause many issues because it allows for human error when connecting the bot "brain" to an agent “body”. For example, if you forget/mis-configure these settings for 1 of your 3 duplicate bot agents all running the same automation you will get different behaviour between the bots within an account.
-
-#### Applying these settings
-
-When making additions/edits/deletions of these properties to your existing bot agent connections, you **must restart** the bot for the changes to take effect. This means stopping and then starting the bot again via the Operations role in Conversation Builder or via the Enterprise integrations section of an individual bot automation.
+Use of custom configuration flags potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for 1 of your 3 duplicate bot agents all running the same bot, you'll get different behavior between the bots within an account.
 
 #### Flags
 
