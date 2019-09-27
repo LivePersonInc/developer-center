@@ -33,12 +33,12 @@ LivePerson recommends that, when you connect your bot to LiveEngage, you deploy 
 
 For some practice at deployment, try [tutorial #4](conversation-builder-getting-started-4-connect-to-liveengage.html). 
 
-### The Agent Connectors Page
+### The Agent Connectors page
 The Agent Connectors page makes it fast and easy to understand the status (1) of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically, you won't need to dive into the details (2) on the individual components that support the end-to-end connection.
 
 *add annotated screen here*
 
-### Add an Agent Connector
+### Add an agent connector
 Adding an agent connector creates a connection between the bot and a bot agent in the target LiveEngage environment.
 
 **To add an agent connector**
@@ -60,7 +60,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
 
     This creates the connection between the bot and the bot agent in the target LiveEngage environment. Now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
 
-### Edit an Agent Connector
+### Edit an agent connector
 You can edit an agent connector as long as the connector isn't running.
 
 **To edit an agent connector**
@@ -71,7 +71,7 @@ You can edit an agent connector as long as the connector isn't running.
 4. Edit the information and click **Save**.
 5. *Restart the connector*.
 
-### Delete an Agent Connector
+### Delete an agent connector
 You can delete an agent connector as long as it isn't running.
 
 **To delete an agent connector**
@@ -81,12 +81,12 @@ You can delete an agent connector as long as it isn't running.
 3. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Delete** from the menu that appears.
 4. Click **TBD** to confirm the deletion. 
 
-### Start an Agent Connector
+### Start an agent connector
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-right corner.
 3. Locate the connector in the table, and click its **Start** button.
 
-### Stop an Agent Connector
+### Stop an agent connector
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-right corner.
 3. Locate the connector in the table, and click its **Stop** button.
@@ -106,7 +106,7 @@ An agent connector can have one of the following statuses:
 Custom configuration flags are key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
 
 {: .important}
-Use of custom configuration flags potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for 1 of your 3 duplicate bot agents all running the same bot, you'll get different behavior between the bots within an account.
+Use of custom configuration flags potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for 1 of your duplicate bot agents all running the same bot, you'll get different behavior between the bots within an account.
 
 #### Flags
 
