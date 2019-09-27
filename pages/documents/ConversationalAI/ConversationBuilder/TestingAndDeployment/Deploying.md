@@ -16,16 +16,17 @@ As a bot developer, you can use the same application, Conversation Builder, that
 Before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
 
 1. Create at least one skill to assign to your bot agent.
-2. Create the bot agent (user type = Bot), and assign the skill to the bot agent.
-3. Create a campaign and engagement that routes to the skill that you assigned to the bot agent.
+2. Create the bot agent (user type = Bot) and enable it.
+3. Assign the skill to the bot agent.
+4. Create a campaign and engagement that routes to the skill that you assigned to the bot agent.
 
 For help with these steps, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
 
 #### The deployment process
-After the pre-requisite steps are performed, at a high-level deployment is a two-step process:
+After the pre-requisite steps are performed, at a high level, deployment is a two-step process:
 
-1. **[Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector)**. This creates the connection between the bot and a bot agent in the target LiveEngage environment.
-2. **[Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent)**. This gets the agent connector running in the target environment.
+1. [Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector). This creates the connection between the bot and a bot agent in the target LiveEngage environment.
+2. [Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). This gets the agent connector running in the target environment.
 
 {: .important}
 LivePerson recommends that, when you connect your bot to LiveEngage, you deploy at least two LiveEngage bot agents for a single bot. This is so the second bot agent can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more bot agents.
@@ -46,22 +47,21 @@ Adding an agent connector creates a connection between the bot and a bot agent i
 2. Click **Agent Connectors** in the upper-right corner.
 3. Click **New Bot Connector** in the upper-right corner.
 4. In the Add Agent Connector dialog, specify the following:
-    - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps).
+    - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents appear in this list.
     - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps).
-    - **Conversation Type**: Select either "Messaging" or "Chat." This should match the conversation type of the engagement you created in LiveEngage.
-    - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges. As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
+    - **Conversation Type**: Select either "Messaging" or "Chat." This should match the type of LiveEngage account, which is either one or the other.
+    - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Operations or Admin). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
 5. If desired, click **Advanced Options** and specify the optional, advanced settings:
     - **External Webhook URL**: 
-    - **Fallback Skill ID**: 
+    - **Fallback Skill ID**: If the skill (that you assigned to the bot agent) has a defined fallback skill, you can enter the fallback skill's ID here. The fallback skill is the skill to which to route the conversation as a fallback if no agents with the primary skill have free capacity. Fallback skills have several uses, but they're often used to escalate (transfer) a conversation from a bot agent to a live agent. You define fallback skills for skills in LiveEngage. For more on this, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
     - **Accessibility**: 
-    Custom configuration flags are key/value pairs that alter the behavior of the bot. They allow for fundamental changes in bot behavior *outside* of the design of the bot, and they're injected at the point of connecting the bot to an agent on a 1:1 basis. For a list of custom configuration flags that you can set, see [below](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-flags) in this topic.
-6. If desired, click " + " beside **Custom Configurations**, and enter the key/value pairs.
+6. If desired, click " + " beside **Custom Configurations**, and enter the custom configuration flags to set. These are key/value pairs that alter the behavior of the bot. They allow for fundamental changes in bot behavior *outside* of the design of the bot, and they're injected at the point of connecting the bot to a bot agent on a 1:1 basis. For the list of custom configuration flags you can set, see [below](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-flags) in this topic.
 7. Click **Save**.
 
     This creates the connection between the bot and the bot agent in the target LiveEngage environment. Now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
 
 ### Edit an Agent Connector
-You can edit an agent connector as long as it isn't running.
+You can edit an agent connector as long as the connector isn't running.
 
 **To edit an agent connector**
 
@@ -92,13 +92,13 @@ You can delete an agent connector as long as it isn't running.
 3. Locate the connector in the table, and click its **Stop** button.
 
 ### Troubleshoot a deployment
-TBA
+If you encounter errors with one or more underlying components such that the status of the connector is Not Connected, try waiting some time, and then stop and restart the connector. If you need assistance, please contact your LivePerson representative.
 
 ### Deployment statuses
 An agent connector can have one of the following statuses:
 
 - **Connected**: The connector is running, and all end-to-end connections are working well.
-- **Not Connected**: At least one component isn't working, causing end-to-end connections not to function. For help with this status, see [Troubleshoot a deployment](conversation-builder-testing-deployment-deploying-to-liveengage.html#troubleshoot-a-deployment), which is above.
+- **Not Connected**: At least one component isn't working, causing end-to-end connections not to function.
 - **Stopped**: All end-to-end connections are working well, but the connector isn't running.
 
 ### Custom configuration flags
