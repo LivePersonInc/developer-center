@@ -64,7 +64,7 @@ The images in this section illustrate creating an OAuth 2.0 credential to suppor
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/creds_oauth2_img4.png">
 
-    If the credentials are valid, you are then redirected back to Conversation Builder, and you'll see a confirmation message indicated that authorization passed successfully. At this point, the token is persisted in Conversation Builder and can be used freely by bots.
+    If the credentials are valid, you are then redirected back to Conversation Builder, and you'll see a confirmation message indicating that authorization passed successfully. At this point, the token is persisted in Conversation Builder and can be used freely by bots.
 
      <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/creds_oauth2_img5.png">
 
