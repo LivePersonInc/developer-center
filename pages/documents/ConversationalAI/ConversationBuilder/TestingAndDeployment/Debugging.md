@@ -36,7 +36,7 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 
 1. In the channel (Facebook Messenger, Apple iMessage, etc.), enter "display userid."
     
-    <img style="width:400px" src="img/ConvoBuilder/debug_displayId.png">
+    <img style="width:400px" src="img/ConvoBuilder/debug_displayID.png">
 
 2. Copy the ID to your clipboard.
 3. Return to Conversation Builder, open a bot, and click <img style="width:30px" src="img/ConvoBuilder/icon_debug.png"> in the lower-right corner to open the Debug window.
