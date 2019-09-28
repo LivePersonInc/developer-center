@@ -28,7 +28,7 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 
 1. Click <img style="width:30px" src="img/ConvoBuilder/icon_debug.png"> in the lower-right corner to open the Debug window.
     
-    For ease of use, by default, the user ID for the consumer in the conversation in the Preview window is entered in the User Id input box.
+    For ease of use during bot development, by default, the user ID for the consumer in the conversation in the Preview window is entered in the User Id input box.
 
 2. Click **Refresh**.
 
