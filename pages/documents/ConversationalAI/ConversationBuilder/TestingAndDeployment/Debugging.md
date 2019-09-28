@@ -24,6 +24,8 @@ Here's a visual overview of the Debug window:
 
 Errors and failures are displayed <font color="red">in red</font>, so you can spot them quickly.
 
+### Debugging during bot development
+
 **To display the log for the conversation that occurred in the Preview window**
 
 1. Click <img style="width:30px" src="img/ConvoBuilder/icon_debug.png"> in the lower-right corner to open the Debug window.
@@ -31,6 +33,8 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
     For ease of use during bot development, by default, the user ID for the consumer in the conversation in the Preview window is entered in the User Id input box.
 
 2. Click **Refresh**.
+
+### Debugging end-to-end interactions
 
 **To display the log for a conversation that occurred in a demo or production environment**
 
