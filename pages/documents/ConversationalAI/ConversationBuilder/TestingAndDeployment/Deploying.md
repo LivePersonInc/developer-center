@@ -46,7 +46,9 @@ Adding an agent connector creates a connection between the bot and a bot agent i
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-right corner.
 3. Click **New Bot Connector** in the upper-right corner.
+    
     The Add Agent Connector dialog appears.
+
 4. If you're on the AWS platform,  the first thing you'll need to do in the dialog is manually enter your LiveEngage account number, and click <img style="width:45px" src="img/ConvoBuilder/icon_chevron_orange.png">. If you're on the LivePerson platform, skip this step; the account number is identified by the system for you.
 5. Specify the following in the dialog:
     - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents appear in this list.
@@ -101,7 +103,7 @@ Establishing the connection can take a few minutes.
 ### Troubleshoot a deployment
 While the system is establishing a connection to the bot agent, the Details icon for the connector will appear in yellow. If there is an error with an underlying component that supports the connection, the icon will change to red.
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/deploy_detailsMsgs.png">
+<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/deploy_detailsMsgs.png">
 
 If the connection attempt fails, such that the status of the connector remains Not Connected, try waiting some time, and then stop and restart the connector. If you still need assistance, please contact your LivePerson representative.
 
