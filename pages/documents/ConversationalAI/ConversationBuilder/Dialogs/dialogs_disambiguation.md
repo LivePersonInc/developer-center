@@ -28,7 +28,7 @@ When a disambiguation dialog is used, the bot presents the best matches to the c
 
 #### An example use case
 
-One example use case for disambiguation is clarifying the consumer's intent when the word "lost" is used. It's common for this word to be used in both a lost card and a bereavement scenario, so it could yield multiple, close matches--and therefore potentially an incorrect flow--at what could be a sensitive time for the consumer. Using a disambiguation dialog to clarify the intent means you can quickly address the correct issue, either efficiently automating the card-closing activity or compassionately passing the bereaved consumer to a live agent with whom to speak.
+As an example, suppose the consumer enters "I lost my" and presses enter by mistake. The intent in this case isn't clear and might yield multiple, close matches. For example, it might mean a lost card or even a bereavement situation. Using a disambiguation dialog to clarify the consumer's intent means you can quickly address the correct issue.
 
 ### How a bot triggers a disambiguation dialog
 
