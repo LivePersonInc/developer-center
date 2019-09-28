@@ -55,7 +55,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Operations or Admin). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
 6. If desired, click **Advanced Options** and specify any optional, advanced settings:
     - **Fallback Skill ID**: If the skill (that you assigned to the bot agent) has a defined fallback skill, you can enter the fallback skill's ID here. The fallback skill is the skill to which to route the conversation as a fallback if no agents with the primary skill have free capacity. Fallback skills have several uses, but they're often used to escalate (transfer) a conversation from a bot agent to a live agent. You define fallback skills for skills in LiveEngage. For more on this, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
-    - **External Webhook URL**: TBA
+    - **External Webhook URL**: Enter the URL used for the HTTP connector to post a message to external endpoints.
     - **Accessibility**: TBA
 7. If desired, click " + " beside **Custom Configurations**, and enter the custom configuration flags to set. These are key/value pairs that alter the behavior of the bot. They allow for fundamental changes in bot behavior *outside* of the design of the bot, and they're injected at the point of connecting the bot to a bot agent on a 1:1 basis. For the list of custom configuration flags you can set, see [below](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-flags) in this topic.
 8. Click **Save**.
