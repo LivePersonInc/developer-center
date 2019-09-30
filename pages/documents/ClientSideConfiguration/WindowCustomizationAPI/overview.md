@@ -19,4 +19,12 @@ The API added classes to most of the window UI elements and supports both chat a
 
 * Customize the engagement window for the web in a standardized way.
 
+### CSS Playground
+
+{:.notice}
+The CSS playground allows those using the API to try it out with any account and any environment.
+It provides several templates to get inspiration and ideas for your own customizations.
+Test the API live [here](/assets/css-playground/).
+
+
 
