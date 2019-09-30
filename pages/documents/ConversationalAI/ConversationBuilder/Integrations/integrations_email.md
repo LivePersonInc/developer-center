@@ -9,7 +9,7 @@ permalink: conversation-builder-integrations-email-integrations.html
 indicator: both
 ---
 
-Use an Email integration when you want the bot to send an email in a dialog flow. For example, if a consumer completes a survey, you might want to follow that up with a thank you email that includes a coupon for a future purchase.
+Use an Email integration when you want Conversation Builder to send an email as the result of a bot's dialog flow. For example, if the consumer completes a survey, you might want to send a thank you email to the consumer or send the survey results to a moderator or administrator for collection.
 
 **To add an email integration**
 

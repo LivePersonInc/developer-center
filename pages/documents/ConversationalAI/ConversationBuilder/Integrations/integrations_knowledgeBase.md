@@ -11,6 +11,8 @@ indicator: both
 
 Use a Knowledge Base integration when you want to search one of your knowledge bases for articles. You’ll need to create the knowledge base first; for help with that, see [this page](knowledge-base-overview.html).
 
+One use case for this type of integration is within a fallback dialog to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or [escalate the conversation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) to a human agent.
+
 **To add a Knowledge Base integration**
 
 1. Open the bot, and click **Integrations** in the upper-right corner.
@@ -18,10 +20,13 @@ Use a Knowledge Base integration when you want to search one of your knowledge b
     - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **Knowledge Base**.
+    
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_kb.png">
+    
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Methods**:
-        - *Phrase Search*: Select this method to search for the phrase defined in the request parameter (see "phrases" below) against the articles.
-        - *Special Tag Search*: Articles in a knowledge base can have assigned tags, which highlight keywords or relevant terms. Select this method to search for the phrase defined in the request parameter (see "phrases" below) against only the tags in the articles.
+        - *Phrase Search*: Select this method to use NLU to search for the phrase defined in the request parameter (see "phrases" below) against the articles and their associated "standard" tags. You can define "standard" tags via the Knowledge Base UI or a CSV file import.
+        - *Special Tag Search*: Select this method to search for the phrase defined in the request parameter (see "phrases" below) against only the "special" tags associated with the articles. Special tags are different from standard tags. Special tags have a prescribed format; they don't support NLU searches, and they function more like attributes. Typically, special tags are used for returning products or items. You can only define special tags via a CSV file import.
     - **Request Parameters**:
         - *mode*: 
             - *Intents*: 

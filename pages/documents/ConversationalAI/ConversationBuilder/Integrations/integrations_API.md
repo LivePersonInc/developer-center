@@ -9,7 +9,7 @@ permalink: conversation-builder-integrations-api-integrations.html
 indicator: both
 ---
 
-Use an API integration to perform some action via an external system. It’s common to use an API integration to retrieve or post data to an external system. For example, you might want to retrieve information on specific items in your product catalog, so you can use that information in interactions in a dialog.
+API Integrations allow Conversation Builder to perform some action or access the features or data of an external service. For example, you might want to retrieve information on specific items in your product catalog, so you can use that information in interactions in a dialog.
 
 For practice at using an API integration, try [tutorial #3](conversation-builder-getting-started-3-integrations.html). (You’ll need to complete [tutorial #1](conversation-builder-getting-started-1-dialogs-and-patterns.html) and [tutorial #2](conversation-builder-getting-started-2-intents.html) first, as the tutorials build on each other.)
 

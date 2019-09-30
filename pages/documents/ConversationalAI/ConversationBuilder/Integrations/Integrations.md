@@ -21,11 +21,11 @@ Want some practice with integrations? [Tutorial #3](conversation-builder-getting
 ### Integration types
 An integration can be one of the following types:
 
-- **API**: Use this type to invoke an API that performs some action. For example, you might want to fetch data from a Customer Relationship Management (CRM) system or Content Management System (CMS). Or, you might want to query a brand internal API to get information needed to answer a question or to look up a customer's history.
-- **Email**: Use this type to send an email.
-- **Knowledge Base**: Use this type to search a knowledge base for articles.
-- **LivePerson Agent Escalation**: Use this type to transfer the conversation to a human agent or another bot. For best practices when working with this integration type, see [here](conversation-builder-best-practices-transfer-to-an-agent-or-bot.html).
-- **FaaS**: Use this type to invoke a function (`lambda`) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with a [FaaS integration](#add-a-faas-integration).
+- **API**: API integrations allow Conversation Builder to perform some action or access the features or data of an external service. For example, you might want to retrieve information on specific items in your product catalog, so you can use that information in interactions in a dialog.
+- **Email**: Use an Email integration when you want Conversation Builder to send an email as the result of a bot's dialog flow. For example, if the consumer completes a survey, you might want to send a thank you email to the consumer or send the survey results to a moderator or administrator for collection.
+- **Knowledge Base**: Use this type to search a knowledge base for articles. One use case for this type of integration is within a [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or escalate the conversation to a human agent. 
+- **LivePerson Agent Escalation**: This type of integration transfers the conversation to a human agent or another bot. For best practices when working with this integration type, see [here](conversation-builder-best-practices-transfer-to-an-agent-or-bot.html).
+- **FaaS**: Use a FaaS integration to invoke a function (`lambda`) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with a [FaaS integration](#add-a-faas-integration).
 
 ### Transform an API result
 
