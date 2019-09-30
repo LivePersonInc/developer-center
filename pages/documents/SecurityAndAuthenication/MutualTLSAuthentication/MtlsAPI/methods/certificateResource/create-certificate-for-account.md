@@ -8,6 +8,9 @@ subfoldername: Methods
 permalink: mtls-methods-create-certificate-for-account.html
 ---
 
+{: .important}
+Currently, these methods cannot be used to create certificates. To get started with a certificate, please contact LivePerson Support.
+
 This API creates a certificate for a specific account ID.
 
 ### Request
@@ -25,7 +28,7 @@ This API creates a certificate for a specific account ID.
 
 **Request Body**
 
-```JSON
+```json
 [
   {
   	"name":"myCert1",
@@ -53,13 +56,11 @@ This API creates a certificate for a specific account ID.
 | 500  | Internal Server Error |
 
 
-**Response Headers**
-
 **Response Body**
 
 For example:
 
-```
+```json
 {  
    "successfulySavedCertificates":[  
       {  

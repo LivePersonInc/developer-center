@@ -55,7 +55,6 @@ VALUE: {"name":"myCertificate", "password":"1234", "id":937706832}
 | 500  | Internal Server Error |
 
 
-**Response Headers**
 
 **Response Body**
 

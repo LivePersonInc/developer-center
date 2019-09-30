@@ -1,43 +1,44 @@
-## General explanation
-The following is a step by step walkthrough on how to use lp-MTLS service
+---
+pagename: Onboarding
+keywords:
+sitesection: Documents
+categoryname: "Security & Authenication"
+documentname: MTLS API
+indicator: both
+permalink: mtls-onboarding.html
+---
 
-## 1. Certificate creation
-First thing needed to start the onboarding process is a p12 file (and its corresponding password):
-[P12 creation](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/Introduction/p12-creation.md)
+The following is a step by step walkthrough on how to use LivePerson MTLS services. This guide assumes that you already have a valid/assigned certificate.
 
-## 2. Run the created certificate through the tester 
-Wiki: [Tester API wiki](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/methods/p12TesterResource/mtls-check-p12.md)
+### Step 1 - Test Your Certificate
 
-What the Api does is to submit a request to the MTLS protected endpoint (at this stage without storing certificate in Hashicorp Vault)
+The first thing we need to do in order to get started, is create a p12 file (and its corresponding password). Please refer to [this document](mtls-creating-a-p12-file.html) for in-depth instructions on how to do that.
 
-**This is an important step, this is actually a test that Java API supports and is able to process the p12 file and forward the request**
+As part of our MTLS service, we offer a p12 file tester. You can find it [here](mtls-methods-p12-key-tester.html). What this tool does is to submit a request to the MTLS protected endpoint (at this stage without storing the certificate in the Hashicorp Vault). It then tests that the p12 file is correct and authenticated. If the p12 file is correct this also validates the certificate.
 
-## 3. Upload certificate 
+### Step 2 - Upload certificate
 
-**Will be available through UI in phase 3**
+Now that your ceritifcate if validated, you can upload it. Once it is uploaded, it can be mapped.
 
-Before mapping the certificate it needs to be uploaded.
+You can upload your certificate by using the following method: [Create Certificate from File](mtls-methods-create-certificate-from-file.html). This method creates both the MySql entities and the Hashicorp Vault entry.
 
-Done by the following API: [Certificate Resource](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/tree/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/methods/certificateResource)
+The `id` parameter returned is needed to further configuration. Please note it before moving to the next step.
 
-The Api creates both the MySql entities (non secure parts) and the Hashicorp Vault entry (secured parts)
+### Step 3 - Create MTLS Mapping object
 
-The Id returned is needed to further configuration.
+Now that we have validated and uploaded our certificate, we must map it to the corresponding objects. This mapping must correspond with runtime submitted parameters to identify the context (will be explained below).
 
-## 4. Create MTLS Mapping object
+In order to create the mapping object, you will need to use the following method.
 
-**Will be available through UI in phase 3**
+|Method|      URL|  
+|:--------  |:---  |
+|POST|  https://{domain}/api/account/{accountId}/configuration/ac-common/mtls?v=3.0 |
 
-This must correspond with runtime submitted parameters to identify the context (will be explained below).
-
-Api endpoint (this is a Rest Api, support all CRUD operations)
-```
-https://{domain}/api/account/{accountId}/configuration/ac-common/mtls?v=3.0
-```
-Api can be oAuth1 or Bearer protected (either is fine, can use Bearer or App Key).
+You can authenticate with this endpoint with oAuth1 or a Bearer.
 
 Service options:
-```
+
+```java
 public enum Services {
     TEST_SERVICE("0"),
     IDP ("1"),
@@ -46,24 +47,26 @@ public enum Services {
 ```
 
 Example body (Certificate array):
-```
+
+```json
 [
     {
         "certificationId": "{idFromPreviousCreation}",
         "serviceId": "0", //From service options
         "enable": true,   //Must be true to work (can be disabled)
-        "url": "{urlToAccessTo}", //The Url protected by the certificate (as will be submitted by runtime, it must match               (parameters exluded))
+        "url": "{urlToAccessTo}", //The Url protected by the certificate (as will be submitted by runtime, it must match
         "siteId": "{siteId}",
         "name": "{CertificateMappingName}",
         "deleted": false
     }
 ]
+
 ```
 
-## 5. Use the runtime
+### Step 4 - Use the runtime
 
-If all successful can now start using the runtime: [Mapping Resource](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/methods/mappingResource/mtls-check-multiple-mapping.md) , [Forward resource](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/tree/master/pages/documents/SecurityAndAuthenication/MutualTLSAuthentication/MtlsAPI/methods/forwardResource)
+If all previous steps were successful, you can now start using the runtime. The runtime includes two methods:
 
-Can check mapping that certificate exist and supported, then can forward the request. (Both of those Api are runtime Apis),
+* [Mapping method](mtls-methods-check-mapping-configuration.html) - This method receives triplets of serviceName/url/siteid and returns for each triplet whether a certificate is configured for them. Use this method to make sure your certificate are configured properly.
 
-
+* [Forward method](mtls-methods-forward-get-request.html) - the request will be mTLS wrapped using the certificate fetched using the provided parameters. The request is then forwarded to the `forwardUrl` specified. The response will return as if contacting the remote endpoint directly.

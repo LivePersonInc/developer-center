@@ -14,6 +14,128 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-ios-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+### iOS Messaging SDK - Version 4.1.0
+
+**Release date:** September 16, 2019
+
+### Environmental Requirements
+
+The iOS Mobile Messaging SDK version 4.1.0 is compatible with Xcode 10.3, Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5), and supported on iOS versions 10 through 12.
+
+
+### Bug fixed
+
+- Fixed issue with missing unread message banner when agent send only one message
+- Fixed issue with no option to disable push registration when calling showConversation.
+- Fixed issue with missing survey bot question in the surveyData object in messaging interactions API.
+- Fixed issue with accessibility large font breaks timestamp constraints
+- Fixed issue with missing animation for typing after scroll to the bottom while agent is typing.
+- Fixed issue with customized image for send button "sendButtonDisabledColor" is not working.
+- Fixed issue with LinkPreviewBorderWidth changes is not reflected on SDK.
+- Fixed issue with voice over failing to read message author or time.  Additionally voice over failing to read message time for structure content.
+- Fixed issue with crash on conversation screen.
+- Updated public headers from the umbrella header format to have both simulator and device headers in a single file. 
+
+### New Feature
+
+#### File sharing from consumer to agent
+
+Mobile Messaging SDK v4.1 improves upon the current consumer photo sharing feature.
+
+Consumers can now share information via files with agents such as documents, transaction details and others helping agent to help the consumer better. Consumers can download files from resolved conversations.
+
+The iOS SDK supports previewing all the supported file types on the device as per the iOS operating system by tapping on the thumbnail image.
+
+### Support for Bitcode is Enabled 
+The Liveperson SDK no longer requires Bitcode to be 'Disabled'.  
+
+### Supported document formats from consumer to agent:
+
+- PDF
+- DOCX
+- PPTX
+- XLSX
+
+### Photo and file sizes
+
+- Thumbnail - 30 KB (base64-encoded)
+- Max upload size allowed - 5 MB uncompressed
+
+Any file larger than 5 MB selected from document picker will trigger an alert view:
+<img src="../../../../img/ios-fs-size-limit-alert-view-screen-shot.png" alt="File limit alert view" style="width: 600px;padding: 20px;">
+
+### Notes and limitations
+
+- Both photo sharing and file sharing are two way in SDK version 4.1 (agent-to-consumer and consumer-to-agent)
+
+- If an attempt to view a photo or file is unsuccessful, an error icon covers the thumbnail. Upon retry, the file attempts to download again. Retry can be attempted as many times as needed (in case of a poor network, for example) until the file is downloaded successfully.
+
+- The consumer can return to a resolved conversation to view the photos, as long as the photos are part of the conversation history.
+
+- For authenticated users, backgrounding the app while uploading the photo does not interrupt the upload.
+
+- For unauthenticated sessions, consumers must tap the photo again with each visit because the history gets cleared when a session expires or the consumer logs out.
+
+- For apps running on iOS version 10.3 or lower **with** iCloud capability, file sharing from iOS SDK will use the iCloud folder as file provider.
+
+- For apps running on iOS version 10.3 or lower **without** iCloud capability, file sharing from iOS SDK will be disabled (The entry point for file sharing will be hidden.)
+
+- For apps running on iOS version 11 or higher, file sharing from iOS SDK will use the native Files app as file provider.
+
+### How photo and file sharing works
+
+For more details about how photo and file sharing feature, see [Photo and File Sharing](/mobile-app-messaging-sdk-for-ios-advanced-features-photo-and-file-sharing.html)
+
+### Entry point:
+1. paperclip button for presenting the file sharing menu :
+<img src="../../../../img/ios-fs-entry-point-screen-shot.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+
+2. Document button in the file sharing menu for presenting the native document picker:
+<img src="../../../../img/ios-fs-entry-point-menu-screen-shot.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+
+### New configuration introduced:
+
+```swift
+/// Custom file image in the file Sharing Menu.
+public var fileSharingMenuFileImage: UIImage?
+```
+
+```swift
+/// Custom file image in the file Sharing Menu.
+public var fileSharingMenuFileImage: UIImage?
+```
+
+```swift
+/// Image for custom the thumbnail of unsupported files in file sharing
+public var fileSharingUniversalFileThumbnailimage: UIImage? = nil
+```
+
+```swift
+/// Image for custom the thumbnail of PDF files in file sharing
+public var fileSharingPDFFileThumbnailimage: UIImage? = nil
+```
+
+```swift
+/// Image for custom the thumbnail of PPTX files in file sharing
+public var fileSharingPPTXFileThumbnailimage: UIImage? = nil
+```
+
+```swift
+/// Image for custom the thumbnail of DOCX files in file sharing
+public var fileSharingDOCXFileThumbnailimage: UIImage? = nil
+```
+
+```swift
+/// Image for custom the thumbnail of XLSX files in file sharing
+public var fileSharingXLSXFileThumbnailimage: UIImage? = nil
+```
+For more details about new configuration see [Attributes](/mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html)
+
+### Known issue:
+
+1. When the files number exceed the maxNumberOfSavedDocumentsOnDisk. The SDK will deletes random files to keep the document number within maxNumberOfSavedDocumentsOnDisk (Expected behavior is to delete the oldest ones.)
+2. Attachment button accessbilityLabel is not updated accordingly.
+
 ### iOS Messaging SDK - Version 4.0.0
 
 **Release date:** July 24, 2019

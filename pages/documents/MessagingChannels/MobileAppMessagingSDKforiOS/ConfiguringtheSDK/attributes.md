@@ -1365,6 +1365,53 @@ Radial loader progress background color.
 </div>
 <div class="important">The disabled/enabled color of the Camera button, which is in the input text view, changes according to the <code>sendButtonDisabledTextColor</code> and <code>sendButtonEnabledTextColor</code> parameters.</div>
 
+
+#### photoSharingOpenMenuImageButton
+Photo sharing open menu custom button.
+
+<div style="float: left; width: 50%;height: 80px;">
+<ul>
+<li><b>Type:</b> UIImage 
+</li>
+<li><b>Default value:</b>  </li>
+</ul>
+</div>
+
+<div style="float: right; width: 50%;">
+<figure>
+<figcaption>Default image:</figcaption>
+<img src="img/ios_fs_attach_button.png" style="width: 64px;">
+</figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### photoSharingCloseMenuImageButton
+Photo sharing close menu custom button.
+
+<div style="float: left; width: 50%;height: 80px;">
+<ul>
+<li><b>Type:</b> UIImage 
+</li>
+<li><b>Default value:</b>  </li>
+</ul>
+</div>
+
+<div style="float: right; width: 50%;">
+<figure>
+<figcaption>Default image:</figcaption>
+<img src="img/ios_ps_close_button.png" style="width: 64px;">
+</figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
 #### photoSharingMenuCameraImage  
 Custom camera image in the photo sharing menu.
 
@@ -1379,7 +1426,7 @@ Custom camera image in the photo sharing menu.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption>Default image:</figcaption>
-   <img src="img/ios_camera_button.png" style="width: 64px;">
+   <img src="img/ios_fs_camera_button.png" style="width: 45px;">
    </figure>
 </div>
 
@@ -1402,7 +1449,7 @@ Custom Library image in the photo sharing menu.
 <div style="float: right; width: 50%;">
    <figure>
    <figcaption>Default image:</figcaption>
-   <img src="img/ios_gallery_button.png" style="width: 64px;">
+   <img src="img/ios_fs_library_button.png" style="width: 45px;">
    </figure>
 </div>
 
@@ -1410,51 +1457,139 @@ Custom Library image in the photo sharing menu.
 &nbsp;
 </div>
 
-#### photoSharingOpenMenuImageButton
-Photo sharing open menu custom button.
+#### fileSharingMenuFileImage
+Custom file image in the file Sharing Menu.
 
 <div style="float: left; width: 50%;height: 80px;">
-   <ul>
-      <li><b>Type:</b> UIImage 
+<ul>
+<li><b>Type:</b> UIImage 
 </li>
-      <li><b>Default value:</b>  </li>
-   </ul>
+<li><b>Default value:</b>  </li>
+</ul>
 </div>
 
 <div style="float: right; width: 50%;">
-   <figure>
-   <figcaption>Default image:</figcaption>
-   <img src="img/ios_attach_button.png" style="width: 64px;">
-   </figure>
+<figure>
+<figcaption>Default image:</figcaption>
+<img src="img/ios_fs_document_button.png" style="width: 45px;">
+</figure>
 </div>
 
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
 
-
-#### photoSharingCloseMenuImageButton
-Photo sharing close menu custom button.
+#### fileSharingUniversalFileThumbnailimage
+Image for custom the thumbnail of unsupported files in file sharing.
 
 <div style="float: left; width: 50%;height: 80px;">
-   <ul>
-      <li><b>Type:</b> UIImage 
+<ul>
+<li><b>Type:</b> UIImage 
 </li>
-      <li><b>Default value:</b>  </li>
-   </ul>
+<li><b>Default value:</b>  </li>
+</ul>
 </div>
 
 <div style="float: right; width: 50%;">
-   <figure>
-   <figcaption>Default image:</figcaption>
-   <img src="img/ios_ps_close_button.png" style="width: 64px;">
-   </figure>
+<figure>
+<figcaption>Default image:</figcaption>
+<img src="img/ios_fs_universal_thumbnail.png" style="width: 60px;">
+</figure>
 </div>
 
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
 
+#### fileSharingPDFFileThumbnailimage
+Image for custom the thumbnail of PDF files in file sharing.
+
+<div style="float: left; width: 50%;height: 80px;">
+<ul>
+<li><b>Type:</b> UIImage 
+</li>
+<li><b>Default value:</b>  </li>
+</ul>
+</div>
+
+<div style="float: right; width: 50%;">
+<figure>
+<figcaption>Default image:</figcaption>
+<img src="img/ios_fs_pdf_thumbnail.png" style="width: 60px;">
+</figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### fileSharingPPTXFileThumbnailimage
+ Image for custom the thumbnail of PPTX files in file sharing
+
+<div style="float: left; width: 50%;height: 80px;">
+<ul>
+<li><b>Type:</b> UIImage 
+</li>
+<li><b>Default value:</b>  </li>
+</ul>
+</div>
+
+<div style="float: right; width: 50%;">
+<figure>
+<figcaption>Default image:</figcaption>
+<img src="img/ios_fs_pptx_thumbnail.png" style="width: 60px;">
+</figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### fileSharingDOCXFileThumbnailimage
+Image for custom the thumbnail of DOCX files in file sharing
+
+<div style="float: left; width: 50%;height: 80px;">
+<ul>
+<li><b>Type:</b> UIImage 
+</li>
+<li><b>Default value:</b>  </li>
+</ul>
+</div>
+
+<div style="float: right; width: 50%;">
+<figure>
+<figcaption>Default image:</figcaption>
+<img src="img/ios_fs_docx_thumbnail.png" style="width: 60px;">
+</figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
+#### fileSharingXLSXFileThumbnailimage
+Image for custom the thumbnail of XLSX files in file sharing
+
+<div style="float: left; width: 50%;height: 80px;">
+<ul>
+<li><b>Type:</b> UIImage 
+</li>
+<li><b>Default value:</b>  </li>
+</ul>
+</div>
+
+<div style="float: right; width: 50%;">
+<figure>
+<figcaption>Default image:</figcaption>
+<img src="img/ios_fs_xlsx_thumbnail.png" style="width: 60px;">
+</figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
 
 #### conversationEmptyStateTextColor
 Color code for the empty state label.
@@ -1750,7 +1885,7 @@ Structured Content bubble border width in pixels.
 Structured Content bubble border color.
 
    - **Type:** UIColor
-   - **Default value:** nil 
+   - **Default value:** #004DC9 
 
 
 

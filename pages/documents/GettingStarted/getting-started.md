@@ -4,6 +4,8 @@ sitesection: Documents
 categoryname: "Getting Started"
 documentname: Before You Get Started
 permalink: before-you-get-started-let-s-get-started.html
+redirect_from:
+  - retrieve-api-keys-create-a-new-api-key.html
 indicator: both
 ---
 
@@ -18,7 +20,7 @@ Most user actions within LiveEngage can be performed programmatically using the 
 Also, if you have not already done so:
 
 1. Read the [API Terms of Use](https://www.liveperson.com/policies/apitou).
-2. Read the [Systems Requirements and Language Support](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) guide.
+2. Read the [Systems Requirements and Language Support](https://knowledge.liveperson.com/admin-settings-system-requirements.html) guide.
 
 And before you can do anything, you must do a few things first. By the end of this Getting Started guide, you will be ready to customize and implement features in LiveEngage.
 
@@ -28,10 +30,10 @@ And before you can do anything, you must do a few things first. By the end of th
 
 ### Step 1. Create a LiveEngage account
 
-Before you can use LiveEngage, you must first have a working account. If you don't already have one, you can sign up for a [developer's account](http://register.liveperson.com/developer/signup) and then contact your account team or LivePerson support to have features enabled. For example, if you know you are going to build a customized messaging window, you will need to make sure that messaging is enabled on your account.
+Before you can use LiveEngage, you must first have a working account. If you don't already have one, you can sign up for a [free trial account](https://developers.liveperson.com/register.html). to get started with messaging, Conversation Builder, and LivePerson Functions.  To add more seats or access features not included in the trial, you will need to upgrade to a paid subscription.  You can chat with LivePerson sales on [liveperson.com](www.liveperson.com) or from the connection area within LiveEngage to get help from a specialist to find the right package for your business.
 
-{:.note}
-If you already have a LiveEngage account, you can use that account instead of a creating a developer's account. However, we recommend creating a new account to make sure that any changes and customizations you make do not affect your site visitors until you are ready to launch them.
+{: .notice}
+If you already have a LiveEngage account, you can use that account instead of a creating a free trial account. However, we recommend creating a new account to make sure that any changes and customizations you make do not affect your site visitors until you are ready to launch them.
 
 Some features to get started with include:
 
@@ -41,12 +43,6 @@ Some features to get started with include:
 - Audio messaging
 - Vibrate on new incoming message
 - Photo sharing
-
-<p style="text-align: right">
-<a href="http://register.liveperson.com/developer/signup" center><img src="../../img/btn-create-dev-account.png" style="height: 30px; width: auto;"></a><br></p>
-<p></p>
----
-<p></p>
 
 ### Step 2. Retrieve your domain
 
@@ -95,99 +91,13 @@ In this step, now that you’ve chosen your login method.  Some of our APIs requ
 ---
 <p></p>
 
-### Step 5. Authenticate with LiveEngage
 
-All authenticated information is encrypted and transferred over Secure Sockets Layer (SSL), using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token (JWT).  Authentication occurs when the brand's Identity Provider (IDP) provides unique information on each customer to LiveEngage via the standard OpenID Connect JWT method. The advantage is that LiveEngage displays the customer information to the brand's agent under OAuth 2.0 and OpenID Connect protocols, providing a high degree of security and certainty regarding the consumer's identity.
-
-{:.notice}
-For more details on what information is available from the IDP, refer to the [personalInfo](messaging-interactions-api-engagement-attributes.html#personalinfo) engagement attribute and the [customerInfo](messaging-interactions-api-engagement-attributes.html#customerinfo) engagement attribute.
-
-#### Unauthenticated engagements
-
-For unauthenticated engagements to work, contact your LivePerson account team who can enable the Unauthenticated Messaging feature on your account.
-
-#### Authenticated engagements
-
-1. Log into LiveEngage as Administrator and along the top open the **Campaigns** area.
-
-2. In the footnote, click **Data Sources**.
-
-3. In the Connectors area, and next to the authentication server, click **Configure**.
-
-   The Authentication Server page opens.
-
-4. In the **Define the authentication service URLs** drop-down menu, select your authentication method.
-
-    ![Authentication Server](img/authserver.png)
-
-5.  Configure the following parameters:
-
-   {:.important}
-   You can only have one authentication type for both web and in-app messaging. For example, if you use the implicit flow for web messaging, then you must also use implicit flow for in-app message.
-
-   - Implicit or Code Flow
-
-   - OAuth 2.0 Authentication Endpoint (when using a separate browser window)
-
-   - OAuth 2.0 Token Endpoint (when using Code Flow)
-
-   - OAuth 2.0 JWT Public Key
-
-   - OAuth 2.0 Client ID
-
-   - OAuth 2.0 Client Secret (when using Code Flow)
-
-   - JS method name and context (when using LiveEngage embedded window in Web)
-
-
-<p><br></p>
----
-<p></p>
-
-### Step 6. Create an API key
+### Step 5. Create an API key
 
 Application keys are security tokens that you use to log into LiveEngage. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
 
-{:.notice}
-You use the API key when you create bots.
+[More information on using the API key can be found here](essential-resources-create-api-keys.html).
 
-1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaigns** area.
-
-2. In the footnote click **Data Sources**.
-
-3. Open the API tab and click **Add new**.
-
-   **TIP:** Alternatively, you can click on an existing key to edit its privileges.
-
-4. Provide the name of the application and the developer name. Optionally you can provide a description of the app by clicking the **Add description** link below the Application name field.
-
-5. Select the **Agent Interactions** category, click the **User Login** checkbox to select it, and then click **Save**.
-
-   ![](../../../img/APIKeyCreation.png)
-
-6. Once the API key has been successfully created, the authentication details display for four AUTH request values, which you use in the request body of this API:
-
-   - App key
-
-   - Secret
-
-   - Access token
-
-   - Access token secret
-
-   ![](../../../img/apikeycreation1.png)
-
-7. If the window does not close automatically, click the **X** in the top right to close the window.
-
-   ![](../../../img/close-window.png)
-
-8. Using the authentication details, generate an OAuth header according to the [OAuth Specification Section 9](https://oauth.net/core/1.0/#signing_process).
-
-**Example:**
-
-| **Header Name** | **Authorization** |
-| --- | --- |
-| Header Value | OAuth<br>oauth_signature="JA0PvBbTAxmtLmzIWINpSVLshrY%3D", <br>oauth_version="1.0",<br>oauth_nonce="c1c04ec4-3125-44cf-9c39-cccb9343541b", <br>oauth_consumer_key="d392e7ff2e204d6c802e38fd775563d1", <br>oauth_signature_method="HMAC-SHA1", <br>oauth_token="61adad31204a4e6fab68d560f1ffb594", <br>oauth_timestamp="1261039670" <br><br>**Note:** The authorization should be contained on a single line. New lines have been inserted for clarity. |
 
 <p><br></p>
 ---
