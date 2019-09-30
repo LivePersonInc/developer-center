@@ -36,7 +36,7 @@ If you create a disambiguation dialog, and if the bot matches the user's message
 
 A disambiguation dialog is triggered when the bot matches the message to *multiple intents*. Once the disambiguation dialog is triggered, it presents the consumer with the best intent matches.
 
-<img style="width:325px" src="img/ConvoBuilder/dialogs_disambiguation4.png">
+<img style="width:350px" src="img/ConvoBuilder/dialogs_disambiguation4.png">
 
 Once the user selects the correct intent, if that intent is associated with a User Says interaction in one of the bot's dialogs, that dialog's flow begins. Or, in the Disambiguation interaction, you can configure response match conditions to direct the flow as desired.
 
@@ -56,6 +56,11 @@ Once the user selects the correct intent, if that intent is associated with a Us
 5. Click **Save**.
 6. In the Disambiguation interaction, enter the question text to send to the consumer.
     <img style="width:800px" src="img/ConvoBuilder/dialogs_disambiguation5.png">
+
+    The intents will be dynamically populated, and their labels will be drawn from their intent display names as configured in [Intent Builder](intent-builder-overview.html).
+
+    <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation6.png">
+
 7. Build out the Disambiguation dialog as desired.
     
     You can add any number of interactions to the dialog. For example, you might want to add a LivePerson Agent Escalation integration.
@@ -71,6 +76,10 @@ If you don't use a disambiguation dialog, here's how things work:
 - If the user's message matches multiple intents that have the same rank (several matches are VERY GOOD, or several are GOOD), the bot picks the one with the highest raw match score, and then it processes the associated dialog.
 
 - During matching, the bot considers only intents that evaluate to a VERY_GOOD or GOOD rank; intents that evaluate to FAIR_PLUS and FAIR are not considered.
+
+**What happens if I use a disambiguation dialog, but no intents at or above the specified threshold are matched?**
+
+When this happens, the fallback dialog is triggered is one exists. Otherwise, the default fallback message is sent to the consumer. For more on fallback, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 
 **How many disambiguation dialogs can I create?**
 
