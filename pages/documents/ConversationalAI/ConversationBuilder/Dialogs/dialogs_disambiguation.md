@@ -79,7 +79,7 @@ If you don't use a disambiguation dialog, here's how things work:
 
 **What happens if I use a disambiguation dialog, but no intents at or above the specified threshold are matched?**
 
-When this happens, the fallback dialog is triggered is one exists. Otherwise, the default fallback message is sent to the consumer. For more on fallback, see [here](conversation-builder-dialogs-fallback-dialogs.html).
+When this happens, the fallback dialog is triggered if one exists. Otherwise, the default fallback message is sent to the consumer. For more on fallback, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 
 **How many disambiguation dialogs can I create?**
 
