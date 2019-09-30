@@ -367,7 +367,7 @@ The Apple Pay Signature Flow is an extra layer of validation for Apple Pay trans
 
 The signature flow is optional, and provides an extra layer of security before sending the payment request to Apple.
 
-If you would like to opt in for this additional verification internal account configurations are required, please contact your LivePerson representative for help and further infomartoin. 
+If you would like to opt in for this additional verification, internal account configurations are required. Please contact your LivePerson representative for help and further information on setting up this additional flow. 
 
 **How to generate the signed payload to include in the Apple Pay payload for verification:**
 
