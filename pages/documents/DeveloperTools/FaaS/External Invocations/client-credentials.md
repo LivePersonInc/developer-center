@@ -117,7 +117,7 @@ Retrieved data:
 
   * **Authorization-Server + Functions - domain** is available.
 
-After making sure you have set the access token correctly you can use the following URI to invoke the function using your parameters. Note that the userId is the only parameter that can be chosen arbitrarily. 
+After making sure you have set the access token correctly you can use the following URI to invoke the function using your parameters. Note that the `userId` is the only parameter that can be chosen arbitrarily, all other parameters are derived from LivePerson configurations.
 
   {% raw %}
       `https://{{faasGW_domain}}/api/account/{{accountId}}/lambdas/{{lambdaUUID}}/invoke?v=1&userId={{userId}}`
