@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
   </head>
   <body>
   <script>
@@ -96,6 +97,37 @@
       identities: lpTag.identities || [],
       ev: lpTag.ev || []
     }, lpTag.init()) : window.lpTag._tagCount += 1;
+  </script>
+  <style>
+    .no-account {
+      width: auto;
+      height: 28px;
+      opacity: 0.7;
+      font-family: Roboto;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #848586;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  </style>
+  <div id="no-account" class="no-account">
+    No account selected
+  </div>
+  <script>
+    if (params.siteId) {
+      document.getElementById('no-account').style.display = 'none';
+    }
   </script>
 
   </body>
