@@ -23,9 +23,13 @@ extlinks:
   attributes: {alt: "LivePerson Knowledge Center", target: _blank, onclick: "linkclick(event, this)"}
 # This tells the extlinks plugin which attribute to add to links
 
+url: https://developers.liveperson.com
+# needed for the sitemap plugin
+
 plugins:
   # - algoliasearch-jekyll
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 
 # algolia:
@@ -71,8 +75,7 @@ description: "LivePerson Developers is the main repository for documentation of 
 # the description is used in the feed.xml file
 
 
-url: https://developers.liveperson.com
-# needed for sitemap.xml file only
+
 
 
 Copyright: "https://www.liveperson.com/policies/copyright"

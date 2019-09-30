@@ -14,4 +14,5 @@ group :jekyll_plugins do
    gem 'rack', '>= 2.0.6'
    gem 'nokogiri', '>= 1.10.4'
    gem 'html-proofer'
+   gem 'jekyll-sitemap'
 end
