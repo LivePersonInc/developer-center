@@ -117,4 +117,10 @@ Retrieved data:
 
   * **Authorization-Server + Functions - domain** is available.
 
+After making sure you have set the access token correctly you can use the following URI to invoke the function using your parameters. Note that the `userId` is the only parameter that can be chosen arbitrarily, all other parameters are derived from LivePerson configurations.
+
+  {% raw %}
+      `https://{{faasGW_domain}}/api/account/{{accountId}}/lambdas/{{lambdaUUID}}/invoke?v=1&userId={{userId}}`
+ {% endraw %}
+
 While calling Functions with the access-token, you should also make sure to request a new token before it expires. You can find out if a token is expired by checking the `exp` field of the JWT. You can enter your access-token into the [JWT debugger](https://jwt.io/#debugger) in order to see how the JWT looks like.
