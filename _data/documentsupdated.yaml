@@ -148,6 +148,13 @@
       - pagename: Variables & Slots
       - pagename: Integrations
       - pagename: Scripting Functions
+        subpages:
+          - subpagename: Introduction
+          - subpagename: Debugging and Logging
+          - subpagename: Get and Set User Data and Variables
+          - subpagename: Get and Set Conversation Flow Data 
+          - subpagename: Sending Messages
+          - subpagename: Context Session Store Wrapper
       #- pagename: Keyword Triggers
       #- pagename: Operations
       - pagename: Enterprise Integrations
@@ -564,7 +571,7 @@
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
-          - subpagename: Conversation Builder
+          - subpagename: Conversational AI
           - subpagename: Conversational Commands
 
 
@@ -873,6 +880,13 @@
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Google Pay Template
+        - pagename: Limitations
+    - documentname: LINE Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
         - pagename: Limitations
     #- documentname: Quick Replies
     #  pages:
