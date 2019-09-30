@@ -34,12 +34,7 @@ As an example, suppose the consumer enters "I lost my" and presses enter by mist
 
 If you create a disambiguation dialog, and if the bot matches the user's message to a single intent with a high confidence level (VERY_GOOD or GOOD), then the dialog that's associated with the matched intent is triggered directly. The disambiguation dialog isn't triggered. Also, the disambiguation dialog isn't triggered if the user's message matches a pattern. Only intents can be disambiguated.
 
-Disambiguation dialogs are triggered under two circumstances:
-
-- The bot matches the message to a single intent but with a low confidence level (FAIR_PLUS or FAIR).
-- The bot matches the message to multiple intents.
-
-Once the disambiguation dialog is triggered, it presents the consumer with the best intent matches.
+A disambiguation dialog is triggered when the bot matches the message to *multiple intents*. Once the disambiguation dialog is triggered, it presents the consumer with the best intent matches.
 
 <img style="width:325px" src="img/ConvoBuilder/dialogs_disambiguation4.png">
 
