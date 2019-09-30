@@ -16,7 +16,7 @@ Second, because the log provides a more technical view of the underlying process
 
 Here's a visual overview of the Debug window:
 
-
+<img style="width:400px" src="img/ConvoBuilder/debug_window.png">
 
 - 1 = Use the **User Id** input box to specify the log you want to view.
 - 2 = Click **Refresh** to initially display or to refresh the log.
