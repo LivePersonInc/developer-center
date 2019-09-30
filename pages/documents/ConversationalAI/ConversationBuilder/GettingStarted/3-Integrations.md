@@ -15,7 +15,7 @@ Many use cases will require an integration with an API to send and receive data.
 {: .important}
 This is an example API that will return random balance data for a given account and email address. 
 
-### Step 8: Create Billing API Integration
+### Step 8 Create Account Balance API Integration
 
 Go back to the automation you created in Conversation Builder. Along the top of the workspace, click on Integrations.
 
@@ -29,7 +29,7 @@ From here we will create a new API with the following parameters.
 
 * **URL**: 
 
-  * For US: https://platformservice.botcentralapi.com/thirdparty-services-0.1/accountBalance
+  * For US: https://va.bc-intg.liveperson.net/thirdparty-services-0.1/accountBalance
   * For Europe: https://platformservice-eu.botcentralapi.com/thirdparty-services-0.1/accountBalance
   * For APAC: https://platformservice-ap.botcentralapi.com/thirdparty-services-0.1/accountBalance 
 
