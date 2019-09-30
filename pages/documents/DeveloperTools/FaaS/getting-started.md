@@ -2,7 +2,7 @@
 pagename: Getting Started
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 permalink: liveperson-functions-getting-started.html
 indicator: both

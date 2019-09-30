@@ -2,7 +2,7 @@
 pagename: Templates
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 permalink: liveperson-functions-templates.html
 indicator: both

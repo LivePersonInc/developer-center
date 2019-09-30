@@ -183,7 +183,7 @@ if(channel == "web"){
 
 When you set the "transferMessage" bot variable, you are filling the `{$botContext.transferMessage}` slot that the integration sends for you.
 
-See [scripting functions](conversation-builder-conversation-builder-scripting-functions.html) learn about all of the available functions.
+See [scripting functions](conversation-builder-scripting-functions-introduction.html) learn about all of the available functions.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/preprocesscode.png">
 
