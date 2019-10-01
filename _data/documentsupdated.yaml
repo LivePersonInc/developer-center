@@ -992,6 +992,7 @@
           subpages:
             - subpagename: Event Binding
             - subpagename: Events
+        - pagename: New Page Refresh
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
