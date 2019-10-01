@@ -23,7 +23,7 @@ The card contains the following elements:
 
 LINE card example: 
 
-<img class="fancyimage" style="width:350px" src="img/line_sc_card.jpg">
+<img  style="width:350px" src="img/line_sc_card.jpg">
 
 ### JSON Template Properties
 
