@@ -224,3 +224,74 @@ If you’re hard-coding the sections and items, their display order is as you co
 Once a user makes their selection in the list picker, the reply is sent back to the bot as "User Selected: " plus the item title. If the user has selected multiple items, they are concatenated with "and."
 
 <img style="width:350px" src="img/ConvoBuilder/questions_listPicker4.png">
+
+### Apple Time Picker questions
+**For Apple Business Chat only.** 
+
+If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the Time Picker question interaction to display an interactive time picker, so the consumer can schedule a meeting or an appointment.
+
+You can create a time picker that displays a static (fixed) list of time slots that you specify when you create the picker. Or, you can configure the picker so that it gets populated with time slots dynamically at runtime (passing in values from an earlier API integration call to an external system).
+
+<img style="width:300px" src="img/ConvoBuilder/questions_timepicker1.png">
+
+**Response Message settings**
+
+The Response Message settings define how to display the time picker that’s initially presented to the consumer.
+
+<img style="width:450px" src="img/ConvoBuilder/questions_timepicker2.png">
+
+Response Message settings also provide the text in the header of the actual time picker.
+
+| Setting | Description | Required or Optional | Example |
+|---|---|---|---|
+| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
+| ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest\, Small, or Large. The default value is Icon. | Optional | Icon |
+| Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters.  | Required  | Meet with our technician |
+| Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | Please select your preferred time |
+
+**Event settings**
+
+| Setting  | Description  | Required or Optional | Example  |
+|---|---|---|---|
+| Event Title  | The title of the calendar meeting.   | Required  | Technician Visit |
+| Event Identifier   | An ID for the event; if you don’t set this, it’s set by the system.             | Optional |    |
+| Timezone offset (minutes from GMT) | Represents the number of minutes from GMT, while specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location. | Optional  | 120  |
+
+
+**Location settings**
+
+Location settings support features that play a role after the consumer has selected a time slot and sent the reply. The consumer can tap the reply message bubble to view location information, if available. The consumer can also tap *Add to Calendar* or *Get Directions*. The location name supports the former, and the latitude, longitude, and radius support the latter.
+
+| Setting  | Description  | Required or Optional | Example  |
+|---|---|---|---|
+| Location Name | The location’s name; this is shown in the consumer’s calendar after the appointment is added. | Optional | Building One |
+| Latitude | The location’s latitude (a numeric double value). | Optional | 49.4872955 |
+| Longitude | The location’s longitude (a numeric double value). | Optional | 8.4682869 |
+| Radius | The location’s radius in meters (a numeric double value). This setting is ignored if Latitude and Longitude are missing or empty. | Optional | 10 |
+
+**Timeslot settings**
+
+| Setting  | Description  | Required or Optional | Example  |
+|---|---|---|---|
+| Start Dat  | The date on which the event starts based on the location’s time zone. | Required        | 09/05/2019 |
+| Start Time  | The time at which the event starts based on the location’s time zone. | Required       | 4:00 PM |
+| Duration | The duration in minutes of the event. | Required  | 30 |
+| Timeslot ID | An ID for the event; if you don’t set this, it’s set by the system. | Optional         |   |
+
+**Reply Message settings**
+
+These settings are read-only and unused; you can skip over them.
+
+**Dynamically populating a time picker**
+
+You can dynamically populate the time picker using data received from an API integration. For example, you might set the Start Time field with something like:
+
+`{$.api_myScheduler.interactiveData.data.event.timeslots[i].startTime}`
+
+**The user response to a time picker**
+
+Once a user makes their selection in the time picker, the reply is sent back to the bot as....
+
+{ image }
+
+You might want to use an API integration to pass that data back to a scheduling application.
