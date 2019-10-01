@@ -2,12 +2,13 @@
 pagename: Training and Tuning Your Intents and FAQs
 redirect_from:
     - conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html
+    - conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversational AI Platform
+documentname: Conversational AI
 subfoldername: Natural Language Understanding
-permalink: conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
+permalink: conversational-ai-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
 indicator: both
 ---
 

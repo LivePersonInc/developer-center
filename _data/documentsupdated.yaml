@@ -114,9 +114,9 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-  - documentname: Conversational AI Platform
+  - documentname: Conversational AI
     pages:
-      - pagename: Platform Overview
+      - pagename: Overview
       - pagename: Natural Language Understanding
         subpages:
           - subpagename: NLU Engines
