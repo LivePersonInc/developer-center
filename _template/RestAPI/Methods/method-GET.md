@@ -1,5 +1,5 @@
 ---
-pagename: Rest API Method Two Template
+pagename: Rest API Method GET Template
 redirect_from:
   - a-link-which-will-redirect-to-this-page.html
 sitesection: Documents
@@ -19,7 +19,7 @@ Perhaps note that the developer should see the [introduction](introduction-to-th
 
 | Method | URL |
 | --- | --- |
-| POST | https://base/product/api/account/accountID/methodname?param1=value&param2=value |
+| GET | https://base/product/api/account/accountID/methodname?param1=value&param2=value |
 
 #### Request Query Parameters
 
@@ -28,32 +28,11 @@ Perhaps note that the developer should see the [introduction](introduction-to-th
 | param1 | This parameter specifies something | number | Yes |
 | param2 | This specifies something else | string | No |
 
-#### Request Body
-
-Explain what the POST body payload is for.
-
-| Property Name | Description | Type / Value | Required |
-| --- | --- | --- | --- |
-| filter | filters something | boolean | No |
-| start | specifies a timerange | object | Yes |
-| from | timerange starting point | number | Yes |
-| to | timerange ending point | number | No |
-
-##### Request Body Example 
-
-```json
-{
-    "filter": true,
-    "start": {
-        "from": 1437054059354,
-        "to": 1437661693023
-    }
-}
-```
-
 ### Response
 
 Explain generally what you will get back from this method.
+
+Link to the [appendix](appendixStuff.html) if you'd like to define the response just once and link to it from every method.
 
 | Property Name | Description | Type / Value | Optional |
 | --- | --- | --- |
@@ -73,3 +52,5 @@ Explain generally what you will get back from this method.
     }
 }
 ```
+
+
