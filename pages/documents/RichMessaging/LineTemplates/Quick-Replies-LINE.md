@@ -21,7 +21,7 @@ A LINE quick reply button consists of the question/statement text and a set of u
 
 Quick reply example image:
 
-<img class="fancyimage" style="width:350px" src="img/line_sc_quickreplies.png">
+<img  style="width:350px" src="img/line_sc_quickreplies.png">
 
 ### JSON Template Properties
 
