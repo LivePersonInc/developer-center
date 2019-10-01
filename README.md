@@ -6,10 +6,13 @@ This repository generates LivePerson's Developers' Community, which can be found
 
 **Table of Contents**
 
-:satellite:[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)<br>
-:hammer:[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)<br>
-:clipboard:[Template](https://github.com/LivePersonInc/developers-community#template)<br>
-:scroll:[Licensing](https://github.com/LivePersonInc/developers-community#licensing)<br>
+* :satellite:[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
+
+* :hammer:[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+
+* :clipboard:[Template](https://github.com/LivePersonInc/developers-community#template)
+
+* :scroll:[Licensing](https://github.com/LivePersonInc/developers-community#licensing)
 
 ### Updating the Documentation
 
