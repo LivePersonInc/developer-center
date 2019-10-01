@@ -167,7 +167,7 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 **Note:** The SDK needs to be initialized before calling this API.
 
 {:.important}
-To get count of unread messages using this function, all devices must be registered to receive push notifications using [registerLPPusher](android-registerlppusher.html) function.
+To get count of unread messages using this function, all devices must be registered to receive push notifications using the [registerLPPusher](android-registerlppusher.html) function.
 
 
 ```java
@@ -191,9 +191,9 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 **Note:** The SDK needs to be initialized before calling this API.
 
 {:.important}
-This api will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
+This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
 
-This api will be improved in future to show the count of unread messages in the closed conversation as well and the doc will be updated accordingly.
+This api will be improved in future to show the count of unread messages in the closed conversation as well and the documentation will be updated accordingly.
 
 ```java
 public static void getUnreadMessagesCount(String appId, final ICallback<Integer, Exception> callback)
