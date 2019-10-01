@@ -26,7 +26,7 @@ Use this method to add a line.
 
  |Header  |Description |
  |:---|  :---|
- |Authorization Bearer| {bearer-from-login} |
+ |Authorization |Bearer {bearer-from-login} |
  |Content-Type  |application/json |
  |Accept|  application/json|
 

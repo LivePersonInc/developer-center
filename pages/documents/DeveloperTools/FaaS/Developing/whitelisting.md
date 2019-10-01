@@ -2,7 +2,7 @@
 pagename: Whitelisting Domains
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
 permalink: liveperson-functions-development-whitelisting-domains.html
@@ -12,7 +12,8 @@ redirect_from:
 ---
 In order to leverage external domains inside your function(s), you'll need to whitelist them. This can also be done in the **Settings** section. We have a proxy in place which will check incoming requests from functions and see if the requested URL is whitelisted.
 
-![](img/faas-whitelisting.png)
+
+<img src="img/faas-whitelisting.png" alt="LivePerson Functions Domain Whitelisting" style="width:100%;"/>
 
 Within the `lp-faas-toolbelt`, we provide a method that generates the required headers for communication with the proxy. A detailed explanation on how to use this feature is shown [here](function-as-a-service-deploying-functions.html#toolbelt).
 

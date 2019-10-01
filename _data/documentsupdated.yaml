@@ -3,16 +3,17 @@
   documents:
   - documentname: Before You Get Started
     pages:
-    - pagename: Considerations and Requirements
     - pagename: Let's Get Started
   - documentname: Essential Resources
     pages:
     - pagename: API Data Metrics
     - pagename: Authentication
+    - pagename: Create API keys
     - pagename: Data APIs
     - pagename: Domain API
     - pagename: Engagement Attributes
     - pagename: Report Builder Data Metrics
+    - pagename: Retry Policy Recommendations
 
 - categoryname: Agent Experience
   image: agent-experience-new
@@ -113,22 +114,15 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-  - documentname: Messaging Agent SDK
-    pages:
-      - pagename: Overview
-      - pagename: Examples
-      - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
-  - documentname: Bot Connectors
-    pages:
-      - pagename: Getting Started
-      - pagename: Google Dialogflow
-      - pagename: Google Dialogflow Version 2
-      - pagename: IBM Watson Assistant
-      - pagename: Amazon Lex
-  - documentname: Conversation Builder
+  - documentname: Conversational AI Platform
     pages:
       - pagename: Platform Overview
+      - pagename: Natural Language Understanding
+        subpages:
+          - subpagename: NLU Engines
+          - subpagename: Training and Tuning Your Intents and FAQs
+  - documentname: Conversation Builder
+    pages:
       - pagename: Getting Started
         subpages:
           - subpagename: 0 - Video Tutorials
@@ -136,9 +130,7 @@
           - subpagename: 2 - Intents
           - subpagename: 3 - Integrations
           - subpagename: 4 - Connect to LiveEngage
-          #- subpagename: 5 - Releases and Versioning
-          #- subpagename: Basic - FAQ Bot Tutorial
-          #- subpagename: Basic - Routing Bot Tutorial
+      - pagename: Automations
       - pagename: Templates
         subpages:
           - subpagename: Overview
@@ -147,42 +139,90 @@
           - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
-      - pagename: Conversation Builder
+      - pagename: Automation Workspace Overview
+      - pagename: Dialogs
+      - pagename: Interactions
+      - pagename: Assist
+      - pagename: Interaction Details
+      - pagename: Response Match & Actions
+      - pagename: Variables & Slots
+      - pagename: Integrations
+      - pagename: Scripting Functions
         subpages:
-            - subpagename: Overview
-            - subpagename: Interactions
-            - subpagename: Conditions
-            - subpagename: Assist
-            - subpagename: Integrations
-            - subpagename: Scripting Functions
-      - pagename: Intent Builder
-        subpages:
-          - subpagename: Overview
-          - subpagename: Entities
-          - subpagename: NLU Engines
-      - pagename: Knowledge Base
-      - pagename: Analytics
+          - subpagename: Introduction
+          - subpagename: Debugging and Logging
+          - subpagename: Get and Set User Data and Variables
+          - subpagename: Get and Set Conversation Flow Data 
+          - subpagename: Sending Messages
+          - subpagename: Context Session Store Wrapper
+      #- pagename: Keyword Triggers
+      #- pagename: Operations
+      - pagename: Enterprise Integrations
       - pagename: Best Practices
         subpages:
           - subpagename: Transfer to an Agent or Bot
           - subpagename: Using Environment Variables
-          - subpagename: Training and Tuning Your Intents and FAQs
-      #- pagename: Operations
+          #- subpagename: Common Conversation Patterns
+          - subpagename: Versions, Releases, & Change Management
   - documentname: Maven
     pages:
-      #- pagename: Overview
-      #- pagename: Getting Started
-      - pagename: Context API
+      - pagename: Overview
+      - pagename: Maven Assist
+        subpages:
+          - subpagename: Overview
+          - subpagename: Recommended Actions for Automations
+          - subpagename: Recommended Actions for Knowledge Base
+      - pagename: Context Warehouse
+        subpages:
+          - subpagename: Overview
+          - subpagename: Inbox System Attributes
+          - subpagename: Custom Static or Function
+          - subpagename: Context Session Store
+      - pagename: AI Powered Routing
+        subpages:
+          - subpagename: Overview
+          - subpagename: Intent & Context Policies
+          - subpagename: Set Up Maven in LivePerson
+          - subpagename: Use Maven with Your Bot
+          - subpagename: Tutorial
+      - pagename: AskMaven
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-      #- pagename: AskMaven API
-        #subpages:
-          #- subpagename: Overview
-          #- subpagename: Methods
-
-  - documentname: Custom Third Party Bots
-
+#  - documentname: LiveIntent
+#    pages:
+#	  - pagename: Overview
+#	  - pagename: Dashboard
+  - documentname: Intent Builder
+    pages:
+      - pagename: Overview
+      - pagename: Entities
+  - documentname: Knowledge Base
+    pages:
+      - pagename: Overview
+  - documentname: Bot Analytics
+    pages:
+      - pagename: Overview
+  - documentname: Bot Accounts
+    pages:
+      - pagename: User Role Permissions
+  - documentname: Third-Party Bots
+    pages:
+      - pagename: Getting Started
+      - pagename: Bot Status Dashboard
+      - pagename: Google Dialogflow
+      - pagename: Google Dialogflow Version 2
+      - pagename: IBM Watson Assistant
+      - pagename: Amazon Lex
+      - pagename: Microsoft Bot Framework
+      - pagename: Custom Integration
+  - documentname: Messaging Agent SDK
+    pages:
+      - pagename: Overview
+      - pagename: Examples
+      - pagename: Conversation Metadata Guide
+      - pagename: Release Notes
+#  - documentname: Custom Bots
 - categoryname: Client Side Configuration
   image: client-side
   documents:
@@ -270,6 +310,7 @@
         - subpagename: Client Properties
         - subpagename: Avoid Websocket Headers
         - subpagename: CoBrowse
+        - subpagename: Voice and Video Calls
         - subpagename: File Sharing
       - pagename: Samples
         subpages:
@@ -515,17 +556,23 @@
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
       - pagename: Deployment
+      - pagename: Monitoring
+        subpages:
+          - subpagename: Logs
+          - subpagename: Metrics
       - pagename: Scheduled Invocations
       - pagename: External Invocations
         subpages:
           - subpagename: Overview
           - subpagename: Client Credentials
           - subpagename: Authorization Code
-      - pagename: Use Cases
+      - pagename: Integrations
         subpages:
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
+          - subpagename: Conversational AI
+          - subpagename: Conversational Commands
 
 
 - categoryname: Historical Data
@@ -834,6 +881,13 @@
         - pagename: Quick Replies Template
         - pagename: Google Pay Template
         - pagename: Limitations
+    - documentname: LINE Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Limitations
     #- documentname: Quick Replies
     #  pages:
     #    - pagename: Introduction to Quick Replies
@@ -880,6 +934,26 @@
             - subpagename: Application Login
             - subpagename: Refresh
             - subpagename: Logout
+    - documentname: MTLS
+      pages:
+        - pagename: Overview
+        - pagename: Onboarding
+        - pagename: Methods
+          subpages:
+            - subpagename: Create certificate for account
+            - subpagename: Create certificate from file
+            - subpagename: Delete certificate by ID
+            - subpagename: Get all certificates by account
+            - subpagename: Get certificate by ID
+            - subpagename: Update certificate for account
+            - subpagename: Update certificate from file
+            - subpagename: Forward delete request
+            - subpagename: Forward get request
+            - subpagename: Forward post request
+            - subpagename: Forward put request
+            - subpagename: Check mapping configuration
+            - subpagename: P12 Key Tester
+
 
 - categoryname: Website Monitoring
   image: website-monitoring
@@ -914,13 +988,7 @@
             - subpagename: getEngagementState
     - documentname: LE-Tag
       pages:
-        - pagename: Overview
-        - pagename: How to Use LiveEngage Tag Events
         - pagename: Events
-          subpages:
-            - subpagename: Visitor Flow Events
-            - subpagename: Engagement Events
-            - subpagename: Engagement Window Events
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:

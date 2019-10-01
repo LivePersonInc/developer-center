@@ -24,11 +24,11 @@ This method retrieves information regarding the current status of the chat. The 
 
 **Request Headers**
 
-| Header                                   | Description      |
-|------------------------------------------|------------------|
-| Authorization Bearer {bearer-from-login} |                  |
-| Content-Type                             | application/json |
-| Accept                                   | application/json | 
+| Header                                   | Description                |
+|------------------------------------------|----------------------------|
+| Authorization                            | Bearer {bearer-from-login} |
+| Content-Type                             | application/json           |
+| Accept                                   | application/json           |
 
 **Formats**
 

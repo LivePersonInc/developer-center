@@ -26,7 +26,7 @@ $(document).ready(function () {
 			//if there's no refresh, this is a load and linkload will be called
 			linkload();
 		}
-		//if refresh events can't be detected just call the function (enjoy explorer)
+		//refresh events can't be detected just call the function (enjoy explorer)
 	} else {
 		linkload();
 	};
@@ -284,7 +284,7 @@ function mobileHamburger() {
 }
 
 $.fn.isInViewport = function() {
-  var elementTop = $(this).offset().top;
+  var elementTop = $(this).offset().top - 150;
   var elementBottom = elementTop + $(this).outerHeight();
 
   var viewportTop = $(window).scrollTop();
@@ -293,7 +293,6 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-	let scrollOnce;
 //Refactored this a bit from its original nightmare-state. Needs improvement.
 function sidebarCollapse(url) {
 	var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
@@ -323,18 +322,11 @@ function sidebarCollapse(url) {
 		$(".innerfolder > .active > button").addClass("clicked");
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
-		$(".post-content").on("click", "a", function () {
-			$(".sidebarbutton").removeClass("clicked");
-			$(".topfolder > a").next().slideUp(400);
-			$(".topfolder > a").data("expanded", "false");
-			$(".homeitem > a").removeClass("active");
-			$(".topfolder > a").removeClass("active");
-		});
-		if (currentPage.isInViewport() && !scrollOnce) {
-		scrollOnce = true;
+		if (!currentPage.isInViewport()) {
 		$('#mysidebar').animate({
 			scrollTop: currentPage.offset().top - 200
 		}, 2000);
+			$(currentPage).parents('.highlightlink').trigger('click');
 	};
 	};
 };

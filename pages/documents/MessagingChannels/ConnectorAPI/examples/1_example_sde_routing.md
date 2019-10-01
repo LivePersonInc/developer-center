@@ -87,7 +87,7 @@ See below a few examples of how to do so.
       "id":"1,",
       "type":"cm.ConsumerRequestConversation",
       "body":{  
-         "ttrDefName":"CUSTOM",
+         "ttrDefName":"NORMAL",
          "channelType":"MESSAGING",
          "brandId":"{accountid}"
       }

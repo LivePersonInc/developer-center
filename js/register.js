@@ -2,18 +2,25 @@
 let firstName;
 let lastName;
 let region;
-let country;
 let emailAddress;
 let password;
 let confirmPassword;
 let trialButtton;
 let radioValue;
+let passwordStrength;
+let passwordLength;
+let passwordPassed;
+let recaptchaResponseToken;
 
 $(document).ready(function () {
   dynamicUserDetails();
   createAccount();
+  //if you're working locally, comment out the next function to bypass captcha
   disableBtn();
   radioListener();
+  setTimeout(function () {
+    showError();
+  }, 2000);
 });
 
 function dynamicUserDetails () {
@@ -43,7 +50,8 @@ function disableBtn () {
 }
 
 //enable the free trial button
-function enableBtn () {
+function enableBtn (token) {
+  recaptchaResponseToken = token;
   trialButton.disabled = false;
   $(trialButton).addClass('activeButton');
 }
@@ -59,73 +67,146 @@ function validateInfo (){
   //filling variables from the form
   firstName = $('#firstName').val();
   lastName = $('#lastName').val();
-  region = $('#country').val();
-  //set the country variable, which gets sent to the endpoint, according to the region selected
-  if (region == 'The Americas') {
-      country = 'z1';
-  }
-  if (region == 'Europe, Middle Easy, and Africa') {
-      country = 'z2';
-  }
-  if (region == 'Asia Pacific') {
-      country = 'z3';
-  }
+  region = $('#region').val();
   emailAddress = $('#emailAddress').val();
   password = $('#createPassword').val();
   confirmPassword = $("#confirmPassword").val();
+  //make sure the radio button was clicked
   if (radioValue != "on") {
     $('#agreeButton').show();
   } else {
     $('#agreeButton').hide();
   }
+  //check if email is valid
+  var emailRegexPtn = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  var isValidEmail = emailRegexPtn.test(emailAddress);
+  if (!isValidEmail) {
+      $('#invalidEmail').show();
+  } else {
+        $('#invalidEmail').hide();
+  }
+  //check password length
+  if(password.length < 8) {
+    $('#passwordTooShort').show();
+    passwordLength = false;
+  } else {
+    $('#passwordTooShort').hide();
+    passwordLength = true;
+  }
+  //check that passwords match
   if(password != confirmPassword) {
     $('#passwordErrorMatch').show();
   } else {
       $('#passwordErrorMatch').hide();
-    }
+  }
+
+  const includesSpecialCharacter = /.*[~!@#$%^&*()<>,.;:/?=]/;
+  const includesUppercase = /[A-Z]/;
+  const includesNumber = /\d/;
+
+  if(!includesSpecialCharacter.test(password)) {
+    $('#passwordSpecialCharacterNeeded').show();
+  } else {
+    $('#passwordSpecialCharacterNeeded').hide();
+  }
+
+  if(!includesUppercase.test(password)) {
+    $('#passwordUppercaseNeeded').show();
+  } else {
+    $('#passwordUppercaseNeeded').hide();
+  }
+
+  if(!includesNumber.test(password)) {
+    $('#passwordNumberNeeded').show();
+  } else {
+    $('#passwordNumberNeeded').hide();
+  }
+
+  //check that password meets requirements
+  passwordStrength = new RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()<>,.;:/?=])');
+  if (password.match(passwordStrength)){
+    $('#passwordErrorStrength').hide();
+    passwordPassed = true;
+  } else {
+    $('#passwordErrorStrength').show();
+    passwordPassed = false;
+  }
     //make sure all fields are filled
-  if (firstName && lastName && country && emailAddress && password && confirmPassword) {
+  if (firstName && lastName && region && emailAddress && password && confirmPassword) {
     $('#allFields').hide();
   } else {
     $('#allFields').show();
   }
+
+  const isValidForm = (firstName && lastName && region && emailAddress && isValidEmail && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword);
+
+  // current acceptance criteria as of 9/3/19 for hotjar form submit metrics are to tally an error for
+  //  "Anything that would cause a submit to fail (i.e. both invalid form values and network errors)."
+  if (!isValidForm && window.hj) {
+    window.hj('formSubmitFailed');
+  }
   //if all fields were filled and the passwords match, call the request to create an account
-  if ((firstName && lastName && country && emailAddress && password && confirmPassword) && (radioValue == "on") && (password == confirmPassword)) {
+  if (isValidForm) {
+
     postRequest();
     //we're going to need the email for the confirmation page so let's save it
     localStorage.setItem ('userEmail', emailAddress );
+    $('#loader').css('display', 'block');
+    $('#successMessage').css('display', 'block');
   }
 }
 
 function postRequest () {
 //defining the endpoint for account creation
-  const URL = 'https://uohcduank4.execute-api.us-east-2.amazonaws.com/dev/devaccount';
+  const URL = 'https://d0j6xh4g99.execute-api.us-east-2.amazonaws.com/prod/web/account';
 //filling in request body with variables from the form
-  const user = [
-    firstName,
-    lastName,
-    country,
-    emailAddress,
-    password
-  ]
-  let userFlat = [...user]
+  const user = {
+    firstName: firstName,
+    lastName: lastName,
+    region: region,
+    email: emailAddress,
+    password: password,
+    recaptchaResponseToken: recaptchaResponseToken || ''
+  }
+
   //using the axios module to make the request
   axios({
     method: 'post',
     url: URL,
-    headers: {'x-api-key': 'gUi91Xlj5lWOJdOiYttA0jA6EqUTxS626YJ0zW20', 'Content-Type': 'application/json', 'Accept': 'application/json'},
-    data: {
-      userFlat
-    }
+    headers: {
+      'x-api-key': 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW', 
+      'Content-Type': 'application/json', 
+      'Accept': 'application/json'},
+    data: user
   })
   .then(function (response) {
-    console.log(response.data);
     //save the account number received from the service so we can display it on the confirmation page
     localStorage.setItem ('accountNumber', response.data.accountId );
     //load the confirmation page
+    if (window.hj) {
+      window.hj('formSubmitSuccessful');
+    }
     window.location = '/confirmation.html';
   })
-  .catch(err=>console.log(err))
+  .catch(function(err) {
+    console.log(err);
+    if (window.hj) {
+      window.hj('formSubmitFailed');
+    }
+    localStorage.setItem ('errorHappened', 'true');
+    location.reload();
+  });
+}
+
+//simple function to detect if the page was refreshed because of an error call and display a corresponding error message if so
+function showError() {
+let errorHappened = localStorage.getItem ('errorHappened');
+if (errorHappened == 'true') {
+    $('#requestError').show();
+    localStorage.setItem ('errorHappened', 'false');
+} else {
+    $('#requestError').hide();
+  }
 }
 
 //a simple fuction to hide typed passwords and show them when the relevant checkbox is filled

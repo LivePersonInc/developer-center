@@ -4,5 +4,4 @@ _site/
 _pdf
 .idea/
 .DS_Store
-vendor*
 .bundle
