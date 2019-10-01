@@ -110,9 +110,11 @@ If the connection attempt fails, such that the status of the connector remains N
 ### Deployment statuses
 An agent connector can have one of the following statuses:
 
-- **Connected**: The connector is running, and all end-to-end connections are working well.
-- **Not Connected**: At least one component isn't working, causing end-to-end connections not to function.
+- **Ready to Start**: 
+- **Online**: The connector is running, and all end-to-end connections are working well.
+- **Offline**: 
 - **Stopped**: All end-to-end connections are working well, but the connector isn't running.
+- **Error**: At least one component isn't working, causing end-to-end connections not to function.
 
 ### Custom configuration flags
 
