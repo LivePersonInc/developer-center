@@ -36,13 +36,13 @@ If your business uses Apple’s Business Chat service to chat with consumers via
 
 You can create a time picker that displays a static (fixed) list of time slots that you specify when you create the picker. Or, you can configure the picker so that it gets populated with time slots dynamically at runtime, passing in values from an earlier API integration call to an external system.
 
-<img style="width:300px" src="img/ConvoBuilder/questions_timepicker1.png">
+<img style="width:300px" src="img/ConvoBuilder/questions_timePicker1.png">
 
 **Response Message settings**
 
 The Response Message settings define how to display the time picker that’s initially presented to the consumer.
 
-<img style="width:450px" src="img/ConvoBuilder/questions_timepicker2.png">
+<img style="width:450px" src="img/ConvoBuilder/questions_timePicker2.png">
 
 Response Message settings also provide the text in the header of the actual time picker.
 
@@ -64,7 +64,7 @@ Response Message settings also provide the text in the header of the actual time
 
 **Location settings**
 
-Location settings support features that play a role after the consumer has selected a time slot and sent the reply. The consumer can tap the reply message bubble to view location information, if available. The consumer can also tap *Add to Calendar* or *Get Directions*. The location name supports ; the latitude, the longitude, and the radius support the latter.
+Location settings support features that play a role after the consumer has selected a time slot and sent the reply. The consumer can tap the reply message bubble to view location information, if available. The consumer can also tap *Add to Calendar* or *Get Directions*. The location name supports the former; the latitude, the longitude, and the radius support the latter.
 
 | Setting  | Description  | Required or Optional | Example  |
 |---|---|---|---|
