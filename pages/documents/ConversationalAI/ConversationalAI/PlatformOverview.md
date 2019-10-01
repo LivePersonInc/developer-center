@@ -1,16 +1,17 @@
 ---
-pagename: Platform Overview
+pagename: Overview
 redirect_from:
     - conversation-builder-platform-overview.html
+    - conversational-ai-platform-platform-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversational AI Platform
-permalink: conversational-ai-platform-platform-overview.html
+documentname: Conversational AI
+permalink: conversational-ai-overview.html
 indicator: both
 ---
 
-LivePerson's Conversational AI platform is a suite of integrated apps that work together to provide an all-in-one automation and AI solution.
+LivePerson's Conversational AI is a suite of integrated apps that work together to provide an all-in-one automation and AI solution.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/platform_main.png">
 
@@ -30,7 +31,7 @@ LivePerson's Conversational AI platform is a suite of integrated apps that work 
 
 - [Bot Accounts](bot-accounts-user-role-permissions.html) is the administration area for managing permissions of Conversation Builder users.
 
-- [Maven](maven-overview.html) is the Artificial Intelligence engine that runs under the entire platform.
+- [Maven](maven-overview.html) is the Artificial Intelligence engine that runs across the entire Conversational AI suite.
 
 - [Third-Party Bots](third-party-bots-getting-started.html) explains how to connect external bot builders and frameworks to LivePerson.
 
