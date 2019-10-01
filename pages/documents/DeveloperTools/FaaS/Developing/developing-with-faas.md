@@ -23,6 +23,10 @@ While typing, the editor will offer you suggestions based on types, if inferable
 
 By right-clicking inside the editor area, you're able to open the context menu, which provides you access to additional functionality, the most notable being the **Format Document** feature, which will reformat your code.
 
+### Code Validation
+
+The code of each lambda is parsed and syntax validated to reduce the amount of possible errors. These checks ensure that not only compliance with technical requirements (e.g. ECMAScript compliance) are met, but also restrictions mandated by the Functions platform (e.g. <100.000 characters per lambda) are upheld.   
+
 ### Editor Sidebar
 
 By pressing the marked button you are able to hide or show the sidebar. This sidebar offers you access to two tabs (Settings and Payload, see below for more information). On smaller screens it will be hidden by default. On larger screens, it is shown by default.
@@ -49,6 +53,7 @@ Using the relevant button from the Settings tab, you are able to add new Environ
 You can access the variable during runtime by using `process.env['YOUR_ENV']`. **Please be aware** that the value will be available in the form of a string. If the value is a number, you will have to parse it prior to using it. By using the trash icon, you can delete unwanted variables.
 
 **Developer discretion is advised**, please be sure not to use confidential data such as credentials or secrets in the environment variables as these are saved and available in text form to anyone with access to the account. Functions has a secret storage service that can be leveraged for this purpose.
+
 
 ### Next steps
 
