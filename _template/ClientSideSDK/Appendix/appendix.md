@@ -1,5 +1,5 @@
 ---
-pagename: Rest API Methods Template
+pagename: Rest API Method Appendix
 redirect_from:
   - a-link-which-will-redirect-to-this-page.html
 sitesection: Documents
@@ -10,27 +10,11 @@ permalink: documentname-subfoldername-pagename.html
 indicator: accepts "messaging" "chat" or "both"
 ---
 
-Explain what this method does.
+Optionally place any huge response payloads here so you don't have to repeat yourself. 
 
-{: .important}
-Perhaps note that the developer should see the [introduction](introduction-to-this-product.html) to this product if they have not yet?
+### Response Body
 
-### Request
-
-| Method | URL |
-| --- | --- |
-| GET | https://base/product/api/account/accountID/methodname?param1=value&param2=value |
-
-#### Request Query Parameters
-
-| Name | Description | Type / Value | Required |
-| --- | --- | --- | --- |
-| param1 | This parameter specifies something | number | Yes |
-| param2 | This specifies something else | string | No |
-
-### Response
-
-Explain generally what you will get back from this method.
+#### Properties
 
 | Property Name | Description | Type / Value | Optional |
 | --- | --- | --- |
@@ -39,7 +23,7 @@ Explain generally what you will get back from this method.
 | info1 | Tells you stuff | string | No |
 | info2 | Tells you things | string | Yes |
 
-#### Response Example
+#### Example
 
 ```json
 {
@@ -50,5 +34,3 @@ Explain generally what you will get back from this method.
     }
 }
 ```
-
-
