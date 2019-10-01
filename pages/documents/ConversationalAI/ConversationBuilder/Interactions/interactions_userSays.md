@@ -13,6 +13,6 @@ The User Says interaction is how the bot matches user input and triggers dialogs
 
 When you add a "User Says" interaction, you give an example of a question the user might ask at the start of a conversation.
 
-Instead of just looking for the specific phrase you originally defined (which would result in the bot not recognizing many of your users' inputs), you can direct the bot to look for a specific pattern (a method called pattern matching) or to look for more broad and flexible intents in the user's input, by using our NLU engine.
+Instead of just looking for the specific phrase you originally defined (which would result in the bot not recognizing many of your users' inputs), you can direct the bot to look for a specific pattern--a method called [pattern matching](conversation-builder-interactions-response-match-actions.html#pattern-matching)--or to look for more broad and flexible [intents](intent-builder-overview.html) in the user's input, by using our NLU engine.
 
-For more information on setting up and using intents, see either part 2 of the Getting Started tutorial or a more in-depth breakdown of the Intent Builder.
+For more information on setting up and using intents, see either [part 2](conversation-builder-getting-started-2-intents.html) of the Getting Started tutorial or a more [in-depth breakdown of Intent Builder](intent-builder-overview.html).

@@ -9,6 +9,6 @@ permalink: conversation-builder-interactions-integrations.html
 indicator: both
 ---
 
-This type of interaction involves the automation querying an outside API or service and retrieving information from it.
+Integration interactions often involve the bot querying an outside API or service and retrieving information from it.
 
-See Integrations for more information.
+See [Integration Basics](conversation-builder-integrations-integration-basics.html) for more information.

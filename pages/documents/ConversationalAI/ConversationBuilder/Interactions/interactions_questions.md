@@ -9,33 +9,32 @@ permalink: conversation-builder-interactions-questions.html
 indicator: both
 ---
 
-This type of interaction is interactive and meant to be answered by the user. The different types of question interactions available to you are:
+A question interaction is interactive and meant to be answered by the user. The different types of question interactions available are:
 
-Multiple Choice. A simple and standard multiple choice question allowing the user to select from a list of predefined answers (although the automation can be configured to respond to answers not appearing in the list through the use of entities).
+- **Multiple Choice**. A simple and standard multiple choice question allowing the user to select from a list of predefined answers (although the automation can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html)).
 
-Text. A simple textual question.
+- **Text**. A simple textual question.
 
-Structured Content. Most conversations involve plain text like what you are reading now. However, sometimes you may want to send content (images, buttons, maps, quick replies, etc) to a consumer in a more rich, interactive, and structured format. You can show up to 10 of these items in a horizontally scrolling carousel.
+- **Structured Content**. Most conversations involve plain text like what you are reading now. However, sometimes you might want to send content (images, buttons, maps, quick replies, etc) to a consumer in a richer, more interactive, and more structured format. *You can show up to 10 of these items in a horizontally scrolling carousel.*
 
 ![Carousel](img/carousel.gif)
 
-Button. An object that allows you to show a simple text question with an associated button action. A click on the button would result in an action pre-configured by you (like navigation to a link, for example).
+- **Button**. An object that allows you to show a simple text question with an associated button action. A click of the button results in an action pre-configured by you (like navigation to a link, for example).
 
-Quick Reply. A question with a series of pre-configured replies that appear as a list of chips at the bottom of the interaction and disappear once the user has selected one.
+- **Quick Reply**. A question with a series of pre-configured replies that appear as a list of chips at the bottom of the interaction and disappear once the user has selected one.
 
-Listpicker. Note: list picker is relevant specifically to Apple Business Chat only. This allows the user to make a selection in response to a simple text question from a list of items.
+- **Listpicker**. **For Apple Business Chat only.** This allows the user to make a selection in response to a simple text question from a list of items.
 
-Time Picker. Note: time picker is relevant specifically to Apple Business Chat only. This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment.
+- **Time Picker**. **For Apple Business Chat only.** This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment. See below for more details.
 
-User responses to question interactions can be saved in variables, making it available for future use.
-
+User responses to question interactions can be saved in [variables](conversation-builder-variables-slots.html), making them available for future use.
 
 ### Apple Time Picker questions
 **For Apple Business Chat only.** 
 
 If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the Time Picker question interaction to display an interactive time picker, so the consumer can schedule a meeting or an appointment.
 
-You can create a time picker that displays a static (fixed) list of time slots that you specify when you create the picker. Or, you can configure the picker so that it gets populated with time slots dynamically at runtime (passing in values from an earlier API integration call to an external system).
+You can create a time picker that displays a static (fixed) list of time slots that you specify when you create the picker. Or, you can configure the picker so that it gets populated with time slots dynamically at runtime, passing in values from an earlier API integration call to an external system.
 
 <img style="width:300px" src="img/ConvoBuilder/questions_timepicker1.png">
 
@@ -65,7 +64,7 @@ Response Message settings also provide the text in the header of the actual time
 
 **Location settings**
 
-Location settings support features that play a role after the consumer has selected a time slot and sent the reply. The consumer can tap the reply message bubble to view location information, if available. The consumer can also tap *Add to Calendar* or *Get Directions*. The location name supports the former, and the latitude, longitude, and radius support the latter.
+Location settings support features that play a role after the consumer has selected a time slot and sent the reply. The consumer can tap the reply message bubble to view location information, if available. The consumer can also tap *Add to Calendar* or *Get Directions*. The location name supports ; the latitude, the longitude, and the radius support the latter.
 
 | Setting  | Description  | Required or Optional | Example  |
 |---|---|---|---|
@@ -74,14 +73,14 @@ Location settings support features that play a role after the consumer has selec
 | Longitude | The location’s longitude (a numeric double value). | Optional | 8.4682869 |
 | Radius | The location’s radius in meters (a numeric double value). This setting is ignored if Latitude and Longitude are missing or empty. | Optional | 10 |
 
-**Timeslot settings**
+**Time slot settings**
 
 | Setting  | Description  | Required or Optional | Example  |
 |---|---|---|---|
-| Start Dat  | The date on which the event starts based on the location’s time zone. | Required        | 09/05/2019 |
+| Start Date  | The date on which the event starts based on the location’s time zone. | Required        | 09/05/2019 |
 | Start Time  | The time at which the event starts based on the location’s time zone. | Required       | 4:00 PM |
 | Duration | The duration in minutes of the event. | Required  | 30 |
-| Timeslot ID | An ID for the event; if you don’t set this, it’s set by the system. | Optional         |   |
+| Timeslot ID | An ID for the time slot; if you don’t set this, it’s set by the system. | Optional         |   |
 
 **Reply Message settings**
 
