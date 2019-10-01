@@ -7,91 +7,28 @@ redirect_from:
   - le-tag-events-engagement-window-events.html
   - lp-tag-engagement.html
   - le-tag-events-engagement-events.html
-  - lp-tag-tag-events-how.html
-  - le-tag-how-to-use-liveengage-tag-events.html
-  - lp-tag-tag-events-overview.html
-  - le-tag-overview.html
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: LE-Tag
-permalink: le-tag-events.html
+subfoldername: Events
+permalink: le-tag-events-events.html
 
 indicator: both
 ---
 
-This document outlines all the events published on a web page by the LiveEngage Tag. 
+The `lpTag` handles the communication of many events that occur on the vistor's webpage.
 
-These events provide transparency into the engagement and engagement window display flow, as well as a way to customize and act upon the obtained data. 
+These tag events provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and cobrowse sessions, among others. 
 
-For example, a brand can hide an embedded div content only if the embedded engagement is displayed.
+Below you can find a list of events published on a web page by the LiveEngage Tag, each organized under an `appName` and given an `eventName`.
 
-### How to Use LiveEngage Tag Events
-
-To listen to an event you can either:
-
-- Call lpTag.events.bind method with the appName, eventName and your callback function.
-	
-    Code sample: 
-    
-    ```javascript
-    lpTag.events.bind(appName, eventName, callbackFunction);
-    ```
-
-- Call lpTag.events.bind method with an object configuration. This option includes more options.
-
-    Code sample:
-
-    ```javascript
-    lpTag.events.bind({
-        eventName : "EVENTNAME",
-        appName : "APPNAME",
-        func: callbackFunction,
-        context: callbackFunctionExecutionContext,  
-        async: true, //default is false,
-        triggerOnce : true //default is false
-    });
-    ```
-
-**Properties**
-
-| Name | Description | Type  | Required | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| eventName | The name of the event. | string | Required | |
-| appName | The name of the app triggering the event. | string | Optional | Default: "*". |
-|func | The callback function when the event is triggered. | Function | Required | |
-| context | The object which is the execution context of the function. Useful if you rely on context ("this") in your code. | Object | Optional | Default: null. |
-| async | When set to yes, the callback will be triggered when there is free CPU time. This option is recommended when there is heavy procession to run, in order to avoid freezing the UI. | Boolean | Optional | Default: false.|
-| triggerOnce  | When set to yes, your callback will unbind after it is called once.  | Boolean | Required | Default: false.|
-
-**Event Information structure:**
-
-```javascript
-{
-  "eventName": "MYEVENT",
-  "appName": "TRIGGERINGAPP"
-}
-```
-**Callback Function example:**
-
-The example below prints the event data and event info:
-
-
-```javascript
-function processThis(data, eventInfo){
-    if(window.console && window.JSON){
-        console.log(JSON.stringify(data) + " triggered by: " +  JSON.stringify(eventInfo));
-    }
-}
-```
-
+[See here to learn how to bind to events](le-tag-events-event-binding.html)
 
 ### Visitor Flow Events
 
-These events include monitoring and [Engagement Attribute (SDE)](engagement-attributes-overview.html) events.
-
 #### VAR_ADDED
 
-This event is triggered when an SDE is reported.
+This event is triggered when an [Engagement Attribute (SDE)](engagement-attributes-overview.html) is reported.
 
 **Event Information**
 
@@ -100,7 +37,7 @@ This event is triggered when an SDE is reported.
 | eventName | "VAR_ADDED" |
 | appName | "lp_sdes" |
 
-**Event Properties**
+**Event Data**
 
 | Name | Description | Type / Value |
 | :--- | :--- | :--- |
@@ -126,7 +63,7 @@ This event is triggered when an SDE is reported.
 
 #### MONITORING_STATE
 
-This event is triggered when monitoring starts and/or when its state is changed.
+This event is triggered when vistor monitoring starts and/or when its state is changed.
 
 **Event Information**
 
@@ -135,7 +72,7 @@ This event is triggered when monitoring starts and/or when its state is changed.
 | eventName | "MONITORING_STATE" |
 | appName | "lp_SMT" |
 
-**Event Properties**
+**Event Data**
 
 | Name | Description | Type / Value |
 | :--- | :--- | :--- |
@@ -168,7 +105,7 @@ This event triggers when the chat state is changed.
 | eventName | "state" |
 | appName | "lpUnifiedWindow" |
 
-**Event Properties**
+**Event Data**
 
 | Name | Description | Type | Notes |
 | :-- | :--- | :--- | :--- |
@@ -191,7 +128,7 @@ This event triggers when the conversation data was changed, for example the conv
 | eventName | "conversationInfo" |
 | appName | "lpUnifiedWindow" |
 
-**Event Properties**
+**Event Data**
 
 | Name | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
@@ -236,7 +173,7 @@ This event triggers when the state changes to "chatting" to show the engagement 
 | eventName | "engagementData" |
 | appName | "lpUnifiedWindow" |
 
-**Event Properties**
+**Event Data**
 
 | Name | Description | Type |
 | :--- | :--- | :--- |
@@ -300,7 +237,7 @@ This event is triggered when the flow to display the engagement has started.
 | eventName | "START" |
 | appName | "LP_OFFERS" |
 
-**Event Properties**
+**Event Data**
 
 | Name | Description | Type / Value | Notes |
 | :--- | :--- | :--- | :--- |
@@ -356,7 +293,7 @@ This event is triggered when the engagement has been rendered and is going to be
 | eventName | "OFFER_DISPLAY" |
 | appName | "LP_OFFERS" |
 
-**Event Properties**
+**Event Data**
 
 See [START](#start) event.
 
@@ -393,7 +330,7 @@ This event is triggered when the engagement has been displayed on the page.
 | eventName | "OFFER_IMPRESSION" |
 | appName | "LP_OFFERS" |
 
-**Event Properties**
+**Event Data**
 
 See [START](#start) event.
 
@@ -419,7 +356,7 @@ This event is triggered when an engagement duration has timed out.
 | eventName | "OFFER_TIMEOUT" |
 | appName | "LP_OFFERS" |
 
-**Event Properties**
+**Event Data**
 
 See [START](#start) event.
 
@@ -434,7 +371,7 @@ This event is triggered when an engagement is closed by a user.
 | eventName | "OFFER_DECLINED" |
 | appName | "LP_OFFERS" |
 
-**Event Properties**
+**Event Data**
 
 See [START](#start) event.
 
@@ -449,6 +386,60 @@ This event is triggered when an engagement is removed from the DOM (auto or user
 | eventName | "OFFER_REMOVE" |
 | appName | "LP_OFFERS" |
 
-**Event Properties**
+**Event Data**
 
 See [START](#start) event.
+
+<!--
+### Cobrowse Events
+
+These are cobrowse-related events, including rendering, display and interactions with the engagement.
+
+#### cobrowseOffered
+
+This event is triggered when ...
+
+**Event Information**
+
+| Name | Value |
+| :--- | :--- |
+| eventName | "cobrowseOffered" |
+| appName | "lpCoBrowse" |
+
+**Event Data**
+
+| Name | Description | Type / Value | Required |
+| :--- | :--- | :--- | :--- |
+| serviceId | ServiceId from the dialog | string | Yes |
+| agentId | Agent ID | string | Yes |
+| visitorName | Name of the Visitor | string | Yes |
+| mode | Mode from the dialog | string | Yes |
+| ssid | Monitoring Session ID | string | No |
+| svid | Monitoring Visitor ID | string | No |
+| scid | Monitoring Context ID | string | No |
+| cid | Engagement Context ID | string | No |
+| eid | Engagement ID | string | No |
+
+*Example:*
+
+```javascript
+{
+    serviceId: "<ServiceId from the dialog>",
+ 	agentId: "<Agent ID>",
+ 	visitorName: "<Name of the Visitor>",
+ 	mode: "<Mode from the dialog>",
+ 	//optional parameters:
+ 	ssid: "<Monitoring Session ID>",
+ 	svid: "<Monitoring Visitor ID>",
+ 	scid: "<Monitoring Context ID>",
+ 	cid: "<Engagement Context ID>",
+ 	eid: "<Engagement ID>"
+}
+```
+
+#### cobrowseAccepted
+
+#### cobrowseDeclined
+
+#### sliderOpened
+-->

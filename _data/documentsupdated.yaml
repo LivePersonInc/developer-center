@@ -989,6 +989,9 @@
     - documentname: LE-Tag
       pages:
         - pagename: Events
+          subpages:
+            - subpagename: Event Binding
+            - subpagename: Events
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
