@@ -27,6 +27,42 @@ An integration can be one of the following types:
 - **LivePerson Agent Escalation**: This type of integration transfers the conversation to a human agent or another bot. For best practices when working with this integration type, see [here](conversation-builder-best-practices-transfer-to-an-agent-or-bot.html).
 - **FaaS**: Use a FaaS integration to invoke a function (`lambda`) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with a [FaaS integration](#add-a-faas-integration).
 
+### Check the API response status
+
+You can obtain the HTTP status code of the API response using this special variable syntax:
+
+```javascript
+var statusCode = botContext.getBotVariable("api_<RESPONSE DATA VARIABLE NAME OF INTEGRATION>Status");
+```
+
+So, for an API Integration with the following settings:
+* Integration Name = `RegisterNamespace`
+* Response Data Variable Name = `RegisterNamespace`
+
+You would get the response status code by using the following:
+
+```javascript
+var statusCode = botContext.getBotVariable("api_RegisterNamespaceStatus");
+
+botContext.printDebugMessage(">>> api_RegisterNamespaceStatus statusCode:" + statusCode);
+```
+
+You can then check if the value matches the desired HTTP response code for successful operation and then proceed to trigger the next desired message interaction within your dialog.
+
+```javascript
+if (statusCode === 204 || statusCode === 201) {
+    botContext.printDebugMessage(">>> api_RegisterNamespaceStatus API success");
+    botContext.setTriggerNextMessage("saveContext");
+} else {
+    botContext.printDebugMessage("!!! api_RegisterNamespaceStatus API failure");
+    botContext.setTriggerNextMessage("sdeSender_FAILED");
+}
+```
+
+Typically, this block of code is placed in the POST PROCESS section attached to calling an API integration within a dialog.
+
+<img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/tips_image_41.png">
+
 ### Transform an API result
 
 You can invoke non-LivePerson APIs from Conversation Builder. With JavaScript code, you can process the responses (typically in a JSON format) and use the information within the dialogs of your bot.
@@ -127,43 +163,11 @@ botContext.setBotVariable("email", email, true, false);
 botContext.printDebugMessage("*** checking values were set: " + guid + age + email);
 ```
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_40.png">
+<img class="fancyimage" width="300" src="img/ConvoBuilder/bestPractices/tips_image_40.png">
 
-### Check the API response status
+### Display integration data in an interaction
 
-You can obtain the HTTP status code of the API response using this special variable syntax:
-
-```javascript
-var statusCode = botContext.getBotVariable("api_<RESPONSE DATA VARIABLE NAME OF INTEGRATION>Status");
-```
-
-So, for an API Integration with the following settings:
-* Integration Name = `RegisterNamespace`
-* Response Data Variable Name = `RegisterNamespace`
-
-You would get the response status code by using the following:
-
-```javascript
-var statusCode = botContext.getBotVariable("api_RegisterNamespaceStatus");
-
-botContext.printDebugMessage(">>> api_RegisterNamespaceStatus statusCode:" + statusCode);
-```
-
-You can then check if the value matches the desired HTTP response code for successful operation and then proceed to trigger the next desired message interaction within your dialog.
-
-```javascript
-if (statusCode === 204 || statusCode === 201) {
-    botContext.printDebugMessage(">>> api_RegisterNamespaceStatus API success");
-    botContext.setTriggerNextMessage("saveContext");
-} else {
-    botContext.printDebugMessage("!!! api_RegisterNamespaceStatus API failure");
-    botContext.setTriggerNextMessage("sdeSender_FAILED");
-}
-```
-
-Typically, this block of code is placed in the POST PROCESS section attached to calling an API integration within a dialog.
-
-<img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/tips_image_41.png">
+For information on how to take the data that's retrieved by an integration call and stored in custom data fields, and display it in a bot interaction, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
 
 ### Delete an integration
 If the bot is no longer using a particular integration, you might want to delete the integration. Before doing so, make sure there are no integration interactions that reference the specific integration.
@@ -175,7 +179,3 @@ Deleting an integration affects only the bot for which it was added.
 1. In the bot, click **Integrations**.
 2. In the left panel, move your mouse over the integration name, and click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
 3. Click **Delete Integration**, and then click **Yes** in the confirmation dialog that appears.
-
-### Display integration data in an interaction
-
-For information on how to take the data that's retrieved by an integration call and stored in custom data fields, and display it in a bot interaction, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
