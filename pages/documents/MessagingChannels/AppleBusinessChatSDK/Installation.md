@@ -30,6 +30,12 @@ See the [SDK code on GitHub](https://github.com/LivePersonInc/lpabcsdk).
 
 1. Copy the `LPABCSDK.framework` to your XCode project, make sure it is included in the **Embedded Binaries** section, under the **project settings/General** tab in the main app target, and in the **Linked Frameworks and Libraries** in the iMessageApp Target, as well as in **Linked Binary With Libraries** under **Build Phases** of each implementing target.
 
+2. In project settings of host app target, navigate to the Build Phases tab, and click the + button to paste the following:
+
+   `bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPABCSDK.framework/framework-strip.sh"`
+
+   This script removes unused architectures from the binary. This is pointing to the actual script available in the SDK framework.
+
 ## CocoaPods installation
 
 1. Install CocoaPods:
@@ -62,21 +68,15 @@ end
 
 ### SDK Integration
 
-1. In project settings of host app target, navigate to the Build Phases tab, and click the + button to paste the following:
+1. For each implementing target, make sure to enable **App groups** in the capabilities section in XCODE.
 
-   `bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/LPABCSDK.framework/framework-strip.sh"`
-
-   This script removes unused architectures from the binary. This is pointing to the actual script available in the SDK framework.
-
-2. For each implementing target, make sure to enable **App groups** in the capabilities section in XCODE.
-
-3. In the `info.plist` file of each implementing target, create a dictionary with the key `LPABC_PARAMS` and add a key-value pair of `lpabc_appgroup : <your_app_group_id>`
+2. In the `info.plist` file of each implementing target, create a dictionary with the key `LPABC_PARAMS` and add a key-value pair of `lpabc_appgroup : <your_app_group_id>`
 
    - Your app group id should be the same across all implementing targets.
 
-4. Add `import LPABCSDK` to the relevant class files and [initialize the SDK](apple-business-chat-sdk-implementation.html#initializing-the-sdk).
+3. Add `import LPABCSDK` to the relevant class files and [initialize the SDK](apple-business-chat-sdk-implementation.html#initializing-the-sdk).
 
-5. In the iMessage app/extension's `MessagesViewController` class, please make sure to override the following two methods:
+4. In the iMessage app/extension's `MessagesViewController` class, please make sure to override the following two methods:
 
    - `override func didBecomeActive(with conversation: MSConversation)`
    - `override func didSelect(_ message: MSMessage, conversation: MSConversation)`
