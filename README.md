@@ -16,7 +16,7 @@ This repository generates LivePerson's Developers' Community, which can be found
 
 ### Updating the Documentation
 
-All pages on the site correspond to a Markdown file (.md) which can be found inside the "pages" folder, under the "documents" folder. To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. There's no need for the old Development branch, so please don't create pull requests to it.
+All pages on the site correspond to a Markdown file (.md) which can be found inside `/documents/pages`. To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. There's no need for the old Development branch, so please don't create pull requests to it.
 
 #### Updating/Creating Headers
 
@@ -26,7 +26,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `keywords`: This replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
 
-* `documentname`: This key can have either "Documents" or "Solutions". This designates which part of the site the document is under.
+* `documentname`: This key accepts either `Documents` or `Solutions`. This designates which part of the site the document is under.
 
 * `categoryname`: This is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management. Therefore, its level2 is "Contact Center Management".
 
