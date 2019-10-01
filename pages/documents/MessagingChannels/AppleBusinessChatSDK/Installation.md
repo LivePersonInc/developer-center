@@ -124,5 +124,7 @@ end
 
    }
    ```
+   In order to enable SDE reporting, The SDK will need to recieve an initial CIM, per each new conversation.   
+   You can use `lpabcsdk.isCacheLoaded` to get a reference to the SDK's cache state.
 
-   This will enable the SDK to send SDEs ([Engagement Attributes](engagement-attributes-types-of-engagement-attributes.html)) to LiveEngage.
+   This will enable the SDK to send SDEs ([Engagement Attributes](engagement-attributes-types-of-engagement-attributes.html)) to LiveEngage, once a cache payload is available.
