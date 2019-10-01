@@ -113,6 +113,13 @@ There are 3 user permissions pertaining to Functions:
     <td>✅</td>
     <td>-</td>
   </tr>
+    <tr>
+    <td>schedule</td>
+    <td>create/edit/delete</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
 </tbody>
 </table>
 
