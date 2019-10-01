@@ -46,3 +46,7 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 3. Return to Conversation Builder, open a bot, and click <img style="width:30px" src="img/ConvoBuilder/icon_debug.png"> in the lower-right corner to open the Debug window.
 4. Paste the ID into the **User ID** input box.
 5. Click **Refresh**.
+
+### Printing the most recent user message
+
+To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print the consumer's most recent message to the Debug window. For more on this function, see [here](conversation-builder-scripting-functions.html#print-debug-message).
