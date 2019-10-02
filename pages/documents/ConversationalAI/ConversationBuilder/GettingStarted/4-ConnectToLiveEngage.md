@@ -48,7 +48,7 @@ Make sure that the User Type is set to Bot and fill out the Login name, Email, N
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_2.png">
 
-For the login method, choose API key and choose **Generate API Key** as the new keys will be filled in automatically. **Copy this information down as you will need it shortly.** If you do not see the API Key option, contact your LivePerson representative to enable this for you.
+For the login method, choose API key and choose **Generate API Key** as the new keys will be filled in automatically. If you do not see the API Key option, contact your LivePerson representative to enable this for you.
 
 Assign the bot user as an Agent, set the Max number of live chats to Unlimited, add the default Bot skill and click Save. **Do NOT add the other skills.**
 
@@ -73,7 +73,7 @@ Go back to Conversation Builder to link your bot to the bot user you just create
 {: .important}
 LivePerson recommends that, when you connect your bot to LiveEngage, you deploy at least two LiveEngage bot agents for a single bot. This is so the second bot agent can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more bot agents.
 
-#### Add the Bot Connector
+#### Add the agent connector
 
 1. Open the bot, and click **Agent Connectors** on the menu bar in the upper-right corner.
 2. Click **New Bot Connector** in the upper-right corner, just under the menu bar.
@@ -84,12 +84,10 @@ LivePerson recommends that, when you connect your bot to LiveEngage, you deploy 
     - **Deploy to**: Select either "Demo" or "Production."
 4. Click **Save**.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_12.png">
-
-#### Deploy the Bot Agent
+#### Start the agent connector
 
 **To deploy to the Demo environment (for testing)**
-- Click the green play button to start to start it. Skip to [testing](conversation-builder-getting-started-4-connect-to-liveengage.html#step-13-testing-the-connection) if you do this.
+- Click the **Start** button to start the agent connector. Skip to [testing](conversation-builder-getting-started-4-connect-to-liveengage.html#step-13-testing-the-connection) if you do this.
 
 **To deploy to the Production environment**
 
