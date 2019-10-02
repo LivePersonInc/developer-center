@@ -6,7 +6,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: Appendix
+subfoldername: Resources
 
 order: 245
 permalink: mobile-app-messaging-sdk-for-ios-appendix-os-certificate-creation.html

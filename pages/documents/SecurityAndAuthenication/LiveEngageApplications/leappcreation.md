@@ -20,7 +20,7 @@ Once the application has been installed, the LivePerson resource will send you y
 ### LiveEngage Application Manifest Schema - Parameters
 
 | Property | Description | Type | Required| Notes|
-|--- | --- | ---|
+|--- | --- | ---| ---| ---|
 |client_name | Choose the name for your Connector application | string| Yes | Can be internationalized by adding 5646 language tag after hash chararcter. <br /> Max length: 128|
 |description | App description | string | No| max length: 256|
 |grant_types | Authorization grant according to OAuth 2.0 | array | No | supported values: "client_credentials"<br />"authorization_code"<br />"refresh_token"|
@@ -30,11 +30,14 @@ Once the application has been installed, the LivePerson resource will send you y
 |logo_uri | URL string that references a logo for the client | string | No | logo size is must be exactly 70x70 pixels <br /> max length: 1024|
 |capabilities| LiveEngage capabilities utilized by this app. This array defines the various LiveEngage services or applications that can interface with this application| object (See supported values structure in the tables below)| No | supported values: "webhooks", "engagement". <br /> <br /> webhooks: Contains the endpoints where UMS (Messaging Service) will send notifications <br /> <br />  engagement: This determines how the application interfaces with LiveEngage engagements and their creation |
 |enabled | Whether the application is enabled or not | boolean | No | default value: true |
+|quick_launch_enabled | Whether the application should be displayed in the quicklaunch menu | boolean | No | default value: false |
+|entry_uri | The URI to start the application | string | No | max length: 1024 |
+|enabled_for_profiles | A list of profiles to which this application should be available | array of integers | No |  |
 
 #### webhooks (optional object within capabilities object)
 
 | Property | Description | Type | Required| Notes|
-|--- | --- | ---|
+|--- | --- | ---| ---| ---|
 |ms.MessagingEventNotification .ContentEvent | Indicates the HTTPS configuration endpoint of your server to receive notifications of type ContentEvent. | webhook | No | |
 |ms.MessagingEventNotification .RichContentEvent |  Indicates the HTTPS configuration endpoint of your server to receive notifications of type RichContentEvent. | webhook | No | |
 |ms.MessagingEventNotification .AcceptStatusEvent |Indicates the HTTPS configuration endpoint of your server to receive notifications of type AcceptStatusEvent. |  webhook | No | |
@@ -44,7 +47,7 @@ Once the application has been installed, the LivePerson resource will send you y
 #### webhook (optional object within webhooks object)
 
 | Property | Description | Type | Required| Notes|
-|--- | --- | ---|
+|--- | --- | ---| --- | ---|
 |endpoint | The url to send the notification to, including query parameters | string| Yes |Starts by "https://"|
 |max_retries | The max number of retry attempts to send the notification if it fails | integer| No| minimum value: 0, maximum value: 5|
 |headers | List of http headers to add to the notification request | array of headers | No| Example value:  [{"header_name": "NAME1", "header_value": "VALUE1"},{"header_name": "NAME2", "header_value": "VALUE2"}]|
@@ -52,7 +55,7 @@ Once the application has been installed, the LivePerson resource will send you y
 #### engagements
 
 | Property | Description | Type | Required| Notes|
-|--- | --- | ---|
+|--- | --- | ---| ---| ---|
 |design_engagement |Toggles the ability to design the engagement button and apparence | boolean |Yes | |
 |design_window | Toggles the ability to add an engagement window | boolean | Yes | |
 |entry_point |  Indicates where to display the engagement which invites consumers to engage with you | array| Yes | supported values: section, url|
@@ -71,10 +74,13 @@ Once the application has been installed, the LivePerson resource will send you y
   "grant_types": [
     "client_credentials"
   ],
-  "response_types": "code",
+  "response_types": ["code"],
   "redirect_uris": ["https://www.myredirecturi.com"],
   "scope": "msg.consumer",
   "logo_uri": "/src/modules/campaigns/assets/img/software/Mobile-App.png",
+  "quick_launch_enabled": true,
+  "entry_uri": "https://myservice.mydomain.com/appentry",
+  "enabled_for_profiles": [42, 43],
   "capabilities": {
     "webhooks": {
       "ms.MessagingEventNotification.ContentEvent": {

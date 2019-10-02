@@ -37,7 +37,7 @@ Transporter 2.0 solves this problem by providing the connection to the Data APIs
 
 **Send files to the following destinations**:
 
-* LE Store (internal storage on LP production servers, encrypted at rest, deleted after 15 days)
+* LE Store (internal storage on LP production servers, encrypted at rest, deleted after 28 days)
 
 * Amazon S3
 

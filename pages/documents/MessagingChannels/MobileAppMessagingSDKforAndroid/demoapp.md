@@ -6,10 +6,10 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-subfoldername: Appendix
+subfoldername: Resources
 
 order: 330
-permalink: mobile-app-messaging-sdk-for-android-appendix-sample-app.html
+permalink: mobile-app-messaging-sdk-for-android-resources-sample-app.html
 
 indicator: messaging
 ---
@@ -28,21 +28,20 @@ The Language and Region controls are used to test localization.
 
 ![sampleapplication](img/sampleapplication.png)
 
-**setCallBack method**
-Sets the host app implementation of [LivePersonCallback](android-callbacks-index.html) to the SDK. This implementation simply display a toast message on every callback received.
+**setCallBack method** 
+Sets the SDK callback listener. The host app gets updates from the SDK using this callback listener. For more details about this method, see [Message API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#setcallback).
 
-**initActivityConversation method**
-Opens the conversation view in Activity mode (see [Quick Start](android-quickstart.html#step-3-code-integration-for-basic-deployment))
+**initActivityConversation method** 
+Opens the conversation view in Activity mode.
 
-**openFragmentContainer method**
-Opens the conversation view in Fragment mode (see [Quick Start](android-quickstart.html#step-3-code-integration-for-basic-deployment)).
-This method starts the FragmentContainerActivity that is simply the fragment container for the conversation fragment obtained from the SDK.
+**openFragmentContainer method** 
+Opens the conversation view in Fragment mode. This method starts the FragmentContainerActivity that is simply the fragment container for the conversation fragment obtained from the SDK.
 
-**FragmentContainerActivity class**
-This is an activity class that has a fragment container. It gets the conversation fragment from the SDK (LivePerson.getConversationFragment()) and attach it to the container.
+**FragmentContainerActivity class** 
+This is an activity class that has a fragment container. It gets the conversation fragment from the SDK (`LivePerson.getConversationFragment()`) and attach it to the container.
 
 **Push package**
-The push package contains sample code for implementing push notification in both [Google GCM](https://developers.google.com/cloud-messaging/gcm) or [Google FCM](https://firebase.google.com/docs/cloud-messaging/). This is a simple code taken from Google documentation and integrated to be used in SampleApp and the Messaging SDK.
+The push package contains sample code for implementing push notification in [Google FCM](https://firebase.google.com/docs/cloud-messaging/). This is a simple code taken from Google documentation and integrated to be used in SampleApp and the Messaging SDK.
 
 **branding.xml**
 Demonstrate the overriding of parameters (e.g. colors, dimensions etc.) used by the SDK. Please refer to the [Configuring the SDK](android-initialization.html) section for more details.

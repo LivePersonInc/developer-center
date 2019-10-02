@@ -92,7 +92,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"Botik2\",\n    \"appKey\": \"2eb301708aa140d4822c67b45b7a035f\",\n\t\"secret\": \"76d861d806870360\",\n\t\"accessToken\": \"e6f422d9b707421d83cef92465482a98\",\n\t\"accessTokenSecret\": \"1bcb03dced29f8ef\"\n}"
+					"raw": "{\n    \"username\": \"BotUser\",\n    \"appKey\": \"********************************\",\n\t\"secret\": \"****************\",\n\t\"accessToken\": \"********************************\",\n\t\"accessTokenSecret\": \"****************\"\n}"
 				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/login??v=1&NC=true",

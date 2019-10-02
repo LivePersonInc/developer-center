@@ -14,60 +14,63 @@ permalink: mobile-app-messaging-sdk-for-ios-string-localization-string-localizat
 indicator: messaging
 ---
 
-The SDK contains language folders for each language supported. For a list of supported languages, see [LiveEngage System Requirements and Language Support](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf). Each folder contains LPLocalizable.strings file, where all strings are located for a specific language.
+The SDK contains language folders for each language supported. For a list of supported languages, see [LiveEngage System Requirements and Language Support](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf). Each folder contains LPLocalizable.strings file for a specific language.
 
 The example below contains four language folders:
 
-* **en.lproj**: strings in English. Used in case the host app/device language is not supported by us.
-* **fr.lproj**: strings in French.
-* **pt.lproj**: strings in Portuguese.
-* **pt-PT.lproj**: strings in Portuguese (Portugal).
+* **en.lproj**: English strings (used in case we do not support the host app/device language)
+* **fr.lproj**: French strings
+* **pt.lproj**: Portuguese strings
+* **pt-PT.lproj**: Portuguese (Portugal) strings
 
-The SDK allows you to override the string localization of any supported language in LiveEngage.
+You can override the string localization of any supported language in LiveEngage. Create **LPLocalizable.strings** files for relevant languages inside your app, which includes the keys to override.  
 
-To apply a custom localization files with your own strings, create **LPLocalizable.strings** files for relevant languages inside your app, which will include the keys you would like to override.
+### Create and localize a strings file and add languages
 
-**Example**: Overriding the SDK string of 'send’ in English:
+1. In your app, go to **New file > Strings file > Create**.
 
-1. Create in your app a new localization Base file called LPLocalizable.strings which will include your supported language: 'New file…’ -> 'Strings file’ -> 'Create’
-2. Add new key: "send" = "<ANY NEW VALUE>";
-3. Mark this _LPLocalizable.strings_ file as localized: Tap on _LPLocalizable.strings_ file -> Open the file inspector -> Go to 'Localization’ section -> Tap 'Localize…’
+2. Create a file called **LPLocalizable.strings**.  
 
-4. **Adding a new supported language**
-* Open project settings
-* Info tab
-* Under Localizations, press '+’ sign
-* Choose the new language you would like to support.
+3. Add a new key, for example, if you want to override the SDK English string of `send`:  
+   
+   ```swift
+   "send" = "<ANY NEW VALUE>";
+   ```
 
-5.  **Attaching a Strings file to existing supported languages**:
-* Choose the desired strings file
-* Open the file inspector
-* Under localizations, choose the relevant languages.
+4. Tap the **LPLocalizable.string** file and open the file inspector.
 
-Your 'send’ string implementation will override the localization in English in the SDK
+5. Go to the **Localization** section and Tap **Localize**.
 
+6. Open project settings, on the **Info** tab, under Localizations, press the **plus (+)**.
 
-In order to print all localized keys with a default English value in the SDK, call the following:
+7. Choose the new language you want to support.
 
-```swift
-LPMessagingSDK.instance.printAllLocalizedKeys()
-```
+### Attach a strings file to existing languages
 
 
+1. Choose the desired strings file.
 
-In order to get or print all localized supported languages in the SDK, call the following:
+2. Open the file inspector.
 
-```swift
-LPMessagingSDK.instance.printSupportedLanguages()
-```
-
+3. Under **Localizations**, choose the relevant languages.
 
 
-In order to get all supported languages by key-value (key is locale key and value is language description), call the following:
+### Print or get localized keys or supported languages
 
-```swift
-LPMessagingSDK.instance.getAllSupportedLanguages()
-```
+* Print all localized keys with a default English value in the SDK:
 
+   ```swift
+   LPMessagingSDK.instance.printAllLocalizedKeys()
+   ```
 
-_Note: The SDK uses native iOS control for the Copy/Paste menu. The language of the menu control is defined by the current device language if the host app is localized for this language. If the host app does not have this language, the last menu control language will be used._
+* Get or print all localized supported languages in the SDK:
+
+   ```swift
+   LPMessagingSDK.instance.printSupportedLanguages()
+   ```
+
+* Get all supported languages by key-value (the key is locale key and value is language description):
+
+   ```swift
+   LPMessagingSDK.instance.getAllSupportedLanguages()
+   ```

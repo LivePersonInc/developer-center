@@ -13,7 +13,7 @@ indicator: messaging
 
 ### Overview
 
-[Business Chat List Picker](https://developer.apple.com/documentation/businesschat/enhancing_the_customer_s_user_experience/sending_a_list_picker) enables human or automated agents to share a list of items and information about them while allowing the consumer to select multiple items and reply back with the selection. The following capabilities are supported:
+[Business Chat List Picker](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/list_picker) enables human or automated agents to share a list of items and information about them while allowing the consumer to select multiple items and reply back with the selection. The following capabilities are supported:
 
 * Define items information - item name, description, image.
 * Item sections - divide your list of items into sections based on the product categories.
@@ -533,4 +533,3 @@ Based on the [Structured Content Basic Element Button](structured-content-introd
   ]
 }
 ```
-

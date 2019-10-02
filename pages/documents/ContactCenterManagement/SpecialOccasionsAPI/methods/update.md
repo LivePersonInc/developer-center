@@ -17,7 +17,7 @@ Update existing special occasions.
 
 | Method | URL |
 | :-------- | :------ |
-| PUT  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
+| PUT  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/specialoccasion |
 
 
 
@@ -40,11 +40,11 @@ Update existing special occasions.
         },
         "start": {
           "dateTime": "2017-03-27T06:00:00",
-          "timeZone": "Europe/Zurich"
+          "timeZone": "Europe/Warsaw"
         },
         "end": {
           "dateTime": "2018-03-27T13:00:00",
-          "timeZone": "Europe/Zurich"
+          "timeZone": "Europe/Warsaw"
         },
         "recurrence": [
 
@@ -97,7 +97,7 @@ The `isDefault` field determines whether a special occasions object is the defau
 
  |Header|  Description|
  |:-------|   :-----  |
- |ac-revision|  Account config object type collection revision.|  
+ |ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
 
  **Response example**
 
@@ -112,11 +112,11 @@ The `isDefault` field determines whether a special occasions object is the defau
       {
           "start": {
               "dateTime": "2018-03-27T06:00:00",
-              "timeZone": "Europe/Zurich"
+              "timeZone": "Europe/Warsaw"
           },
           "end": {
               "dateTime": "2018-03-27T13:00:00",
-              "timeZone": "Europe/Zurich"
+              "timeZone": "Europe/Warsaw"
           },
           "recurrence": [
               "RRULE:FREQ=WEEKLY;BYDAY=SU"
@@ -125,11 +125,11 @@ The `isDefault` field determines whether a special occasions object is the defau
       {
           "start": {
               "dateTime": "2018-03-27T15:00:00",
-              "timeZone": "Europe/Zurich"
+              "timeZone": "Europe/Warsaw"
           },
           "end": {
               "dateTime": "2018-03-27T18:00:00",
-              "timeZone": "Europe/Zurich"
+              "timeZone": "Europe/Warsaw"
           },
           "recurrence": [
               "RRULE:FREQ=WEEKLY;BYDAY=SU"

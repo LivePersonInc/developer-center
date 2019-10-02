@@ -1,12 +1,12 @@
 ---
-pagename: Getting Started with Engagement Attributes
+pagename: Engagement Attributes
 redirect_from:
   - engagment-attributes-overview.html
   - engagement-attributes-overview.html
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: Essential Resources
-permalink: essential-resources-getting-started-with-engagement-attributes.html
+permalink: essential-resources-engagement-attributes.html
 order: 20
 indicator: both
 ---

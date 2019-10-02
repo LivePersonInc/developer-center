@@ -24,7 +24,7 @@ Retrieves engagement activity-related metrics at the account, skill, or agent le
 
 | Method | URL |
 | :-------- | :----- |
-| GET | `https://<domain>/operations/api/account/{accountID}/engactivity?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&interval=<interval size in minutes>&v=<version>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/engactivity?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&agentIds=<agentIDs>&interval=<interval size in minutes>&v=<version>` |
 
 **URL Parameters**
 

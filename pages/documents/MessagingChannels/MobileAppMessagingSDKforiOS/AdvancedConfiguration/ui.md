@@ -8,7 +8,7 @@ categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Configuration
 
-order: 6
+order: 7
 permalink: mobile-app-messaging-sdk-for-ios-configuration-ui.html
 
 indicator: messaging

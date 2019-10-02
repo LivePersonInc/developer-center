@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21">
-    <g fill="none" fill-rule="nonzero" stroke="#F2F1F2" stroke-linejoin="round" transform="translate(0 1)">
-        <circle cx="13" cy="9" r="3"/>
-        <path d="M15 11l4.614 4.754M11.923 12l-1.486 3.044"/>
-        <circle cx="21" cy="17" r="2"/>
-        <path d="M15 7.56L19.54 4M4.949 9.01l5.16-.01"/>
-        <circle cx="21.102" cy="3.102" r="2" transform="rotate(-93 21.102 3.102)"/>
-        <circle cx="3.051" cy="9.102" r="2" transform="rotate(-93 3.051 9.102)"/>
-        <circle cx="9.5" cy="16.5" r="1.5"/>
-        <path d="M11.768 2.747l.82 3.554"/>
-        <circle cx="11.5" cy="1.5" r="1.5"/>
-    </g>
-</svg>
+<svg height="21" viewBox="0 0 24 21" width="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#f2f1f2" stroke-linejoin="round" transform="translate(0 1)"><circle cx="13" cy="9" r="3"/><path d="m15 11 4.614 4.754m-7.691-3.754-1.486 3.044"/><circle cx="21" cy="17" r="2"/><path d="m15 7.56 4.54-3.56m-14.591 5.01 5.16-.01"/><circle cx="21.102" cy="3.102" r="2" transform="matrix(-.05233596 -.99862953 .99862953 -.05233596 19.108645 24.337427)"/><circle cx="3.051" cy="9.102" r="2" transform="matrix(-.05233596 -.99862953 .99862953 -.05233596 -5.878849 12.625181)"/><circle cx="9.5" cy="16.5" r="1.5"/><path d="m11.768 2.747.82 3.554"/><circle cx="11.5" cy="1.5" r="1.5"/></g></svg>

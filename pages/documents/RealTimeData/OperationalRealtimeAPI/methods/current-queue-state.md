@@ -23,7 +23,7 @@ Retrieves the current queue state related metrics at the skill level:
 
 | Method | URL |
 | :------- | :----- |
-| GET | `https://<domain>/operations/api/account/{accountID}/queuestate?skillIds=<skillIDs>&v=<version>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/queuestate?skillIds=<skillIDs>&v=<version>` |
 
 **Query Parameters**
 
@@ -131,7 +131,7 @@ Request by skills=1,100 and v=2 (skill 100 has no queue state data)
                 "currentAvailableSlots":5,
                 "currentQueueSize":5,
                 "currentMaxWaitTimeInQueue": 65203
-                
+
             },
             "100":{  
                 "currentAvailableSlots":-1,
@@ -155,7 +155,7 @@ Request by skills=1,100 and v=2 (skill 100 has no queue state data)
 | totals | An object that represents the total values of all queue sizes and available slots listed under 'skills’. Note that in any case that for a certain skill there is no queue state data (hence a -1 value), it will not be aggregated to totals, meaning only valid (non -1) skill queue state values are summed up. The currentMaxWaitTimeInQueue nested under this element represents the max wait time in queue out of all available skills. | Element |
 | currentAvailableSlots | The current queue number of available slots. <br> Note: If the agent concurrency set to 'Unlimited', the number of current available slots for the associated skill will always be 1. | long |
 | currentQueueSize | The current queue size | long |
-| currentMaxWaitTimeInQueue | The current max wait time in the queue in milliseconds. If no one is waiting in queue returns -1 | long 
+| currentMaxWaitTimeInQueue | The current max wait time in the queue in milliseconds. If no one is waiting in queue returns -1 | long
 
 Optional Response Status Codes
 

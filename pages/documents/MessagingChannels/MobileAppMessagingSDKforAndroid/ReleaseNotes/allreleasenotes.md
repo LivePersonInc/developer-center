@@ -7,8 +7,10 @@ documentname: Mobile App Messaging SDK for Android
 permalink: mobile-app-messaging-sdk-for-android-all-release-notes.html
 indicator: messaging
 ---
+<br>
 
-Listed below are all of the Release Notes for previous versions of our Mobile App Messaging SDK for Android. To learn more about the SDK and how to get started, please visit [this page](/mobile-app-messaging-sdk-for-android-quick-start.html).
+Listed below are all of the Release Notes for previous versions of our Mobile App Messaging SDK for Android. To learn more about the SDK and how to get started, see the [MobileSDK Android Quick Start guide](/mobile-app-messaging-sdk-for-android-quick-start.html).
+
 
 <a href="mobile-app-messaging-sdk-for-android-release-notes.html">View all release notes</a>
 {% for operatingsystem in site.data.releasenotesandroid %}

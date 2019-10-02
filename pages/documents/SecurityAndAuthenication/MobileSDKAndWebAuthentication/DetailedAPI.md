@@ -17,7 +17,7 @@ indicator: both
 
 In order to enable targeting for messaging engagements (authenticated _and_ unauthenticated web messaging), the identity of the consumer must be passed to the API using the identities array and identity function. The information in this array should match the values assigned to the user when they authenticate on your site; this information is _not_ used for visitor authentication, but as a trigger to LivePerson monitoring services to start targeting and sending relevant engagements and/or notifications to the visitor. In essence, this information _identifies_ rather than _authenticates_ a user; it passes unique information to LiveEngage, allowing for targeted engagements and continuity between conversations to apply according to the information passed.
 
-The identity function should be implemented on every authenticated page (the LivePerson tag will set the identity of unauthenticated visitors).
+The identity function should be implemented on every authenticated page (the LivePerson tag will set the identity of unauthenticated visitors, however, you can implement the function but return 'null' in the callback if you wish).
 
 **Code Example**
 
@@ -68,7 +68,7 @@ The Customer web page method name can be either the default LivePerson method na
 ```javascript
     var lpMethods = {
         lpGetAuthenticationToken: function(callback) {
-            log("LP asked for id_token");
+            log("LP asked for id_token or auth code in Code Flow");
             // Do your magic...
             // On Success
             callback(id_token);
@@ -77,7 +77,7 @@ The Customer web page method name can be either the default LivePerson method na
         },
         // Or, if you want to provide a redirect_uri as well (instead of the default "https://liveperson.net")
         lpGetAuthenticationTokenWithRedirectURI: function(callback) {
-            log("LP asked for id_token");
+            log("LP asked for id_token auth code in Code Flow");
             // Do your magic...
             // On Success
             callback({ssoKey: id_token, redirect_uri: uri});
@@ -154,12 +154,12 @@ The id_token is a standard JSON web token (see http://jwt.io) [RFC 7519], with t
 ```
 The following table describes the response fields:
 
-|    Field    |    Description                                                                                                                             |
-|-------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-|    sub      |    The consumer ID of the authenticated subscriber.                                                                                      |
-|    iss      |    The name of the Authorization   Service as configured in LivePerson.                                                                    |
-|    exp      |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds   from 1970, UTC. see [RFC3339]     |
-|    iat      |    When this JWT was   issued. Seconds from 1970, UTC. see [RFC3339]                                                                       |
+|    Field    |    Description   |
+|-------------|------------------|
+|    sub      |    The consumer ID of the authenticated subscriber.       |
+|    iss      |    The name of the Authorization   Service as configured in LivePerson.      |
+|    exp      |    When LivePerson should   ask for a new token (validating that the user is still logged in). Seconds from 1970, UTC. see [RFC3339]     |
+|    iat      |    When this JWT was   issued. Seconds from 1970, UTC. see [RFC3339]      |
 
 The id_token will be signed using RS256 ALG (see http://jwt.io) [RFC 7519], and the public key for verifying it will be supplied to LivePerson during the configuration stage.
 
@@ -168,7 +168,7 @@ The id_token will be signed using RS256 ALG (see http://jwt.io) [RFC 7519], and 
 If an error is encountered during processing, an error message will be returned:
 
 ```
-HTTP/1.1 
+HTTP/1.1
 Status: 400 - Bad Request
 Content-Type: application/json   
 Cache-Control: no-store   
@@ -203,7 +203,7 @@ LivePerson supports the following claims set, which will be displayed to the age
 
 
 |    Name    |    Description | type   |    Appearance in LiveEngage   |    Mapping in SDEs    |
-|------------|-------------------|-------------------------------|-----------------------|
+|------------|----------------|--------|-------------------------------|-----------------------|
 |sub         |Subject - Identifier for the end-user at the Issuer.|string| Consumer info (including Customer ID)| ConsumerInfo.customerID|
 |given_name      |Given name(s) or first name(s) of the end-user. Note that some people may have multiple given names; all can be present, with the names being separated by space characters.|string| Personal info (including Name) | Personalinfo.firstname|
 |family_name        |Surname(s) or last name(s) of the end-user. Note that some people may have multiple family names or no family name; all can be present, with the names being separated by space characters.|string| Personal info (including Name)| Personalinfo.lastname|

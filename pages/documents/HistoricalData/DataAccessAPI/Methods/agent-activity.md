@@ -19,7 +19,7 @@ Agent Activity retrieves the agent’s session data in .zip format files. The ag
 
 | Method | URL |
 | :----- | :------ |
-| GET | `https://<domain>/data_access_le/account/{accountID}/le/agentActivity?startTime=<startTime>&endTime=<endTime>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/data_access_le/account/{accountID}/le/agentActivity?startTime=<startTime>&endTime=<endTime> |
 
 **URL Parameters**
 

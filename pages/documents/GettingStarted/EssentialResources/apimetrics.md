@@ -1,7 +1,7 @@
 ---
 pagename: API Data Metrics
 sitesection: Documents
-categoryname: "Getting Started"
+categoryname: "Welcome"
 documentname: Essential Resources
 permalink: essential-resources-api-data-metrics.html
 indicator: both

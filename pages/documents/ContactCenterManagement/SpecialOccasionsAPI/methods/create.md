@@ -17,7 +17,7 @@ Create new special occasion(s) for an account. It is possible to create several 
 
 | Method | URL |
 | :-------- | :------ |
-| POST  |/api/account/{accountId}/configuration/ac-common/specialoccasion |
+| POST  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/specialoccasion |
 
 **Request Headers**
 
@@ -44,11 +44,11 @@ Create new special occasion(s) for an account. It is possible to create several 
       },
       "start": {
         "dateTime": "2017-03-27T06:00:00",
-        "timeZone": "Europe/Zurich"
+        "timeZone": "Europe/Warsaw"
       },
       "end": {
         "dateTime": "2018-03-27T13:00:00",
-        "timeZone": "Europe/Zurich"
+        "timeZone": "Europe/Warsaw"
       },
       "recurrence": [
 
@@ -92,7 +92,7 @@ The `isDefault` field determines whether a special occasions object is the defau
 
  |Header|  Description|
  |:-------|   :-----  |
- |ac-revision|  Account config object type collection revision.|  
+ |ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
 
 **Response example**
 
@@ -111,11 +111,11 @@ The `isDefault` field determines whether a special occasions object is the defau
           },
           "start": {
               "dateTime": "2017-03-27T06:00:00",
-              "timeZone": "Europe/Zurich"
+              "timeZone": "Europe/Warsaw"
           },
           "end": {
               "dateTime": "2018-03-27T13:00:00",
-              "timeZone": "Europe/Zurich"
+              "timeZone": "Europe/Warsaw"
           },
           "recurrence": [
 

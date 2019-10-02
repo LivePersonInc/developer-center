@@ -1,6 +1,8 @@
 https://developers.liveperson.com:
   type: upstream
   upstream: jekyll_app:http
+  tls:
+    min_version: TLSv1.2
   cache:
     enabled: true
     default_ttl: 0

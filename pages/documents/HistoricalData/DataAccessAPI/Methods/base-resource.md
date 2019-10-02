@@ -19,7 +19,7 @@ This is the base resource that retrieves the list of available Data Access Unifo
 
 | Method | URL |
 | :------- | :----- |
-| GET | `https://<domain>/data_access_le/account/{accountID}/le` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/data_access_le/account/{accountID}/le |
 
 ### Response
 

@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	var url = window.location.href;
 	//add anchor links to all h3 titles. See respective functions below for what they do.
-	anchors.add('h3');
+	anchors.add('h3, h4');
 	linkload();
 	sidebarClick();
 	populateAnchors();
@@ -11,8 +11,10 @@ $(document).ready(function () {
 	isExplorer();
 	searchFunction();
 	capabilitiesSearch();
-	searchHighlight();
-	allArticlesClick()
+	allArticlesClick();
+	scrollToHash();
+	domainTool();
+	searchClick(event);
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -24,7 +26,7 @@ $(document).ready(function () {
 			//if there's no refresh, this is a load and linkload will be called
 			linkload();
 		}
-		//if refresh events can't be detected just call the function (enjoy explorer)
+		//refresh events can't be detected just call the function (enjoy explorer)
 	} else {
 		linkload();
 	};
@@ -75,14 +77,17 @@ function navigateContent(url) {
 			}
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
-			anchors.add('h3');
+			anchors.add('h3, h4');
 			populateAnchors();
 			codeButtons();
 			replaceTitle();
 			searchFunction();
 			capabilitiesSearch();
 			searchHighlight();
-			allArticlesClick()
+			allArticlesClick();
+			scrollToHash();
+			domainTool();
+			searchClick ();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -104,7 +109,10 @@ function navigateContent(url) {
 				$('.innerpageitem').removeClass("activeitem");
 			}
 			//jump to top when page loads
-			window.scrollTo(0, 0);
+			if (window.location.hash == "") {
+				console.log(window.location.hash);
+				window.scrollTo(0, 0);
+			}
 			if (/Mobi|Android/i.test(navigator.userAgent) == true) {
 				$('#mysidebar').slideUp(400);
 				$('#mysidebar').data("expanded", "false");
@@ -238,17 +246,20 @@ function populateAnchors() {
 	$(".anchoritem").remove();
 	//find all h3 titles on the page
 	var anchorlinks = document.getElementsByTagName("h3");
-	var anchorlist = $('.anchorlist ul');
+	var anchorlist = document.getElementById('inneranchors');
+	let html;
 	//if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
 	if (anchorlinks.length == 0) {
 		$('.anchorlist').css('visibility', 'hidden');
 		//if there are anchorlinks, display the box
 	} else {
+		html = '';
 		$('.anchorlist').css('visibility', 'visible');
 		//for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
 		$.each(anchorlinks, function () {
-			$(anchorlist).append('<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>');
+			html += '<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>'
 		});
+		anchorlist.innerHTML = html;
 	};
 };
 
@@ -272,7 +283,17 @@ function mobileHamburger() {
 	});
 }
 
-//Inherited this function in all its nightmarish qualities. Will refactor at some point, maybe.
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top - 150;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+//Refactored this a bit from its original nightmare-state. Needs improvement.
 function sidebarCollapse(url) {
 	var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
 	var currentPage = $('a[href="' + modifiedURL + '"]');
@@ -290,40 +311,22 @@ function sidebarCollapse(url) {
 	$('.homeitem').removeClass("activepage");
 	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
-	var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder");
-	var toOpenHigher = $(".activepage").parent().parent().parent().parent().parent().hasClass("folder");
-	if (toOpen || toOpenHigher) {
-		$(".activepage").parent().parent().show();
-		$(".activepage").parent().parent().parent().show();
-		$(".activepage").parent().parent().parent().parent().show();
-		$(".activepage").parent().parent().parent().parent().parent().show();
-		$(".activepage").parent().parent().parent().parent().parent().parent().show();
-		$(".activepage").parent().show();
-		$(".activepage").parent().parent().prev().data("expanded", "true");
-		$(".activepage").parent().parent().parent().parent().prev().data("expanded", "true");
-		$(".activepage").parent().parent().parent().parent().parent().parent().prev().data("expanded", "true");
+	var toOpen = $(".activepage").parents("folder");
+	if (toOpen) {
+		$(".activepage").parents().show();
+		$(".activepage").parents('ul').prev('.highlightlink').addClass('active');
+		$("a.active").data("expanded", "true");
 		if ($(".activepage").parent().hasClass("innerpageitem")) {
 			$(".activepage").parent().addClass("activeitem");
 		}
-		$(".activepage").parent().parent().prev().addClass("active");
-		$(".activepage").parent().parent().parent().parent().prev().addClass("active");
-		$(".activepage").parent().parent().parent().parent().parent().parent().prev().addClass("active");
-		$(".activepage").parent().prev().data("expanded", "true");
-		$("ul#mysidebar").css("visibility", "visible");
 		$(".innerfolder > .active > button").addClass("clicked");
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
-		$(".post-content").on("click", "a", function () {
-			$(".sidebarbutton").removeClass("clicked");
-			$(".topfolder > a").next().slideUp(400);
-			$(".topfolder > a").data("expanded", "false");
-			$(".homeitem > a").removeClass("active");
-			$(".topfolder > a").removeClass("active");
-		});
-		if (currentPage.offset().top > 700) {
+		if (!currentPage.isInViewport()) {
 		$('#mysidebar').animate({
 			scrollTop: currentPage.offset().top - 200
-		}, 1000);
+		}, 2000);
+			$(currentPage).parents('.highlightlink').trigger('click');
 	};
 	};
 };
@@ -474,8 +477,9 @@ function searchFunction() {
 //very similar to the search function above, just for the capabilities comparison table
 function capabilitiesSearch() {
 	var $title = $('.h1').text();
-	if ($title.indexOf('Messaging Channels Capabilities Comparison') > -1) {
+	if ($title.indexOf('Rich Messaging Channel Capabilities') > -1) {
 		// Declare variables
+		console.log('run');
 		var input, filter, table, tr, categorytr, td, i;
 		input = document.getElementById("capabilitiesSearch");
 		table = document.getElementById("featurestable");
@@ -526,6 +530,75 @@ function searchHighlight() {
 	localStorage.setItem('filter', '');
 }
 
+function scrollToHash () {
+	setTimeout(function () {
+		if (window.location.hash && window.location.hash != "#top") {
+		var hash = window.location.hash;
+		var linkScroll = $('a[href*="' + hash + '"]');
+		if (linkScroll.length > 1) {
+			var linkOffset = $(linkScroll[1]).offset().top;
+		} else {
+			var linkOffset = $(linkScroll).offset().top;
+		}
+		$("body, html").animate(
+			{
+				scrollTop: linkOffset,
+			},
+			1000,
+			"swing"
+		);
+		}
+	}, 1000);
+}
+
+function domainTool() {
+	var $title = $('.h1').text();
+	if ($title == "Domain API") {
+	let input;
+	let accountInput;
+	const csdsButton = document.getElementById("csds-button");
+	const csdsResult = document.getElementById("csds-result");
+	let csdsUrl;
+	let html = "";
+	csdsButton.addEventListener("click", event => {
+			input = document.getElementById("account");
+			accountInput = input.value;
+			csdsUrl = 'https://api.liveperson.net/api/account/' + accountInput + '/service/baseURI?version=1.0';
+	    retrieveDomains(accountInput);
+	});
+	const retrieveDomains = (account) => {
+	      $.ajax({
+	          url: csdsUrl,
+	          headers: {
+	            'Accept': 'application/json'
+	          },
+	          dataType: "json",
+	          success: function(data) {
+							html = '';
+							$(csdsResult).css('display', 'table');
+	              if (data.baseURIs.length > 0) {
+										html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
+										data.baseURIs.sort(function(a, b){
+							        var m1 = a.service.toLowerCase();
+							        var m2 = b.service.toLowerCase();
+							        if(m1< m2) return -1;
+							        if(m1> m2) return 1;
+							        return 0;
+							    	})
+	                  data.baseURIs.forEach((entry) => {
+	                          html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
+	                      });
+										html += '</tbody>'
+	                  csdsResult.innerHTML = html;
+	              } else {
+	                  csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
+	              }
+	          }
+	      });
+	  }
+		}
+}
+
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {
 	var ua = window.navigator.userAgent;
@@ -538,13 +611,32 @@ function isExplorer() {
 		var documenttitlecontainer = document.getElementById('documenttitlecontainer');
 		var footer = document.getElementById('defaultfooter');
 		var content = document.getElementById('defaultcontent')
+		var heroPanel = document.getElementById('heroPanel')
+		var cardInnerText = document.getElementsByClassName('cardInnerText');
+		var secondConfirmCardImg = document.getElementsByClassName('secondConfirmCardImg');
+		var thirdPanel = document.getElementById('thirdPanel');
+		var confirmationFooter = document.getElementById('confirmationFooter');
+		var formContainer = document.getElementById('formContainer');
 		wrapper.classList.add('defaultwrapperexplorer');
 		header.classList.add('defaultheaderexplorer');
 		sidebar.classList.add('defaultsidebarexplorer');
 		documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
 		footer.classList.add('defaultfooterexplorer');
 		content.classList.add('defaultcontentexplorer');
+		heroPanel.classList.add('heroPanelExplorer');
+		cardInnerText.classList.add('cardInnerTextExplorer');
+		secondConfirmCardImg.classList.add('secondConfirmCardImgExplorer');
+		thirdPanel.classList.add('thirdPanelExplorer');
+		confirmationFooter.classList.add('confirmationFooterExplorer');
+		formContainer.classList.add('formContainerExplorer');
 	}
+};
+
+function searchClick (event) {
+	$('.ds-dropdown-menu').on('click', 'a', function (event) {
+	event.preventDefault();
+	linkclick(event, this);
+})
 };
 
 $('#mysidebar').height($(".nav").height());

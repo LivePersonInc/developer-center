@@ -11,7 +11,7 @@ body {
 }
 
 b, strong {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 a:hover, a:focus {
@@ -93,7 +93,6 @@ code pre {
   margin-bottom: 50px;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
-  margin-top: 16px;
 }
 
 .defaultfooter {
@@ -160,7 +159,8 @@ code pre {
 
   .sidebartop {
     display: flex;
-    height: 90px;
+    flex-direction: column;
+    height: 150px;
     width: 100%;
     background-color: #162036;
     position: -webkit-sticky;
@@ -182,7 +182,7 @@ code pre {
     margin-bottom: 50px;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
-    margin-top: 16px;
+    margin-top: 35px;
   }
 
   #post-content {
@@ -607,11 +607,39 @@ table tbody td img {
 }
 
 .sidebarbuttons {
-  display: none;
   flex: 1;
-  align-self: flex-end;
-  margin-bottom: 10px;
-  margin-left: 20px;
+  align-self: flex-start;
+  margin-top: 24px;
+  margin-left: 30px;
+  color: #fff;
+  display: flex;
+}
+
+.sidebarbuttons div {
+  border-radius: 25px;
+  padding: 7px 25px;
+  font-size: 12px;
+  height: 30px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.sidebarbuttons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.loginText {
+  margin-right: 12px;
+}
+
+.loginButton {
+  background-color: #5879DA;
+}
+
+.trialButton {
+  background-color: #ff720b;
 }
 
 .documentsbutton {
@@ -773,6 +801,11 @@ table tbody td img {
   margin-right: 10px;
 }
 
+.lowerimage img {
+  width: 25px;
+  height: 47px;
+}
+
 .sidebarimage {
   align-self: center;
 }
@@ -814,12 +847,12 @@ table tbody td img {
 
 /* Sidebar Styling Ends */
 
-.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml, .language-bash, .language-http, .language-gradle, .language-css {
+.language-json, .language-swift, .language-html, .language-java, .language-javascript, .language-sh, .language-ruby, .language-xml, .language-bash, .language-http, .language-gradle, .language-css, .language-objc {
   display: flex;
   flex-direction: column;
 }
 
-.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before, .language-bash:before, .language-http:before, .language-gradle:before, .language-css:before {
+.language-json:before, .language-swift:before, .language-html:before, .language-java:before, .language-javascript:before, .language-sh:before, .language-ruby:before, .language-xml:before, .language-bash:before, .language-http:before, .language-gradle:before, .language-css:before, .language-objc:before {
   color: #a2a2a2;
   text-align: right;
   font-size: 14px;
@@ -836,6 +869,10 @@ table tbody td img {
   display: flex;
   margin-bottom: 20px;
   align-items: center;
+}
+
+.language-objc:before{
+  content: "OBJECTIVE-C";
 }
 
 .language-swift:before{
@@ -983,9 +1020,12 @@ table tbody td img {
   padding-left: 0;
   background-color: #f2f1f2;
   margin-left: -10px;
-  padding: 10px;
-  margin-bottom: 0px;
+  padding: 10px 0px 10px 7px;
+  margin-bottom: 0;
+  max-height: 360px;
+  overflow-y: auto;
 }
+
 
 .anchorlist a {
   color: #a2a2a2;
@@ -1000,10 +1040,12 @@ table tbody td img {
   align-self: flex-end;
   flex: 1;
   text-align: right;
+  margin-right: 3px;
 }
 
 .anchorlist li {
   margin-bottom: 10px;
+  display: flex;
 }
 
 .anchorlist li:last-of-type {
@@ -1012,6 +1054,16 @@ table tbody td img {
 
 .anchorlist li a {
   color: #5879DA !important;
+}
+
+.anchorlist li:before {
+  content: "\f0c1";
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  font-weight: 900;
+  margin-right: 10px;
+  font-size: 13px;
+  opacity: 0.25;
 }
 
 a.anchoritem {
@@ -1071,6 +1123,8 @@ a.anchoritem {
   background-color: #f5f5f5;
   margin-bottom: 20px;
   margin-top: 20px;
+  font-family: "Roboto Mono", Monaco, courier, monospace;
+  color: #2973b7;
 }
 
 .mysidebar::-webkit-scrollbar-track {
@@ -1162,6 +1216,31 @@ a.anchoritem {
 
 .defaultfooterexplorer span {
  margin-left: 400px;
+}
+
+.heroPanelExplorer {
+  margin-bottom: 50px;
+}
+
+.cardInnerTextExplorer {
+  width: 40%;
+}
+
+.secondConfirmCardImgExplorer {
+  display: none;
+}
+
+.thirdPanelExplorer {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.confirmationFooterExplorer {
+  height: 50px;
+}
+
+.formContainerExplorer {
+  margin-left: 150px;
 }
 
 #apiList {
@@ -1267,6 +1346,31 @@ a.anchoritem {
   width: 80%;
 }
 
+#account {
+  width: 35%;
+  background-color: #f2f1f2;
+  color: #666;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 5px;
+}
+
+input#csds-button {
+  border-radius: 15px;
+  color: #fff;
+  background-color: #5879DA;
+  border: 0;
+  height: 32px;
+  padding: 0 10px 0 10px;
+}
+
+#csds-result {
+  display: none;
+}
+
+.sidebarSVG {
+  width: 24px;
+}
 
 /* Media Queries Begin */
 
@@ -1275,6 +1379,25 @@ a.anchoritem {
   .anchorlist {
     margin-right: initial;
   }
+}
+
+@media screen and (max-width: 1555px) {
+  .sidebarbuttons {
+    flex-direction: column;
+  }
+
+  .sitelogo {
+    margin-top: 8px;
+  }
+
+  .sidebarbuttons {
+    margin-top: 15px;
+  }
+
+  .loginButton {
+    margin-bottom: 10px;
+  }
+}
 
 @media screen and (max-width:1440px){
   .defaultwrapper {
@@ -1467,6 +1590,10 @@ a.anchoritem {
   #capabilitiesSearch {
     display: none;
   }
+
+  .sidebarbuttons div {
+    padding: 7px 10px;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -1502,6 +1629,10 @@ a.anchoritem {
 
   .defaultsidebar {
     width: 125%;
+  }
+
+  .sidebarbuttons div {
+    display: none;
   }
 
   /*.daybtn {

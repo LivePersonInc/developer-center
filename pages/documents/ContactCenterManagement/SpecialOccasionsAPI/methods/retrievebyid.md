@@ -17,7 +17,7 @@ Get a single special occasion by id
 
 | Method | URL |
 | :-------- | :------ |
-| GET  |/api/account/{accountId}/configuration/ac-common/specialoccasion/{specialOccasionId} |
+| GET  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/specialoccasion/{specialOccasionId} |
 
 **Path Parameters**
 
@@ -52,7 +52,7 @@ Get a single special occasion by id
 
  |Header|  Description|
  |:-------|   :-----  |
- |ac-revision|  Account config object type collection revision.|  
+ |ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
 
  **Response example**
 
@@ -71,11 +71,11 @@ Get a single special occasion by id
           },
           "start": {
               "dateTime": "2017-03-27T06:00:00",
-              "timeZone": "Europe/Zurich"
+              "timeZone": "Europe/Warsaw"
           },
           "end": {
               "dateTime": "2018-03-27T13:00:00",
-              "timeZone": "Europe/Zurich"
+              "timeZone": "Europe/Warsaw"
           },
           "recurrence": []
       }

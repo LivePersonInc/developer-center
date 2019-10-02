@@ -13,7 +13,7 @@ Outlined below is a sample reporting API call that is used to retrieve transacti
 
 | Method  |URL |
 | :-------- | :-----|
-| GET | https://[{domain}](/agent-domain-domain-api.html).ivrdeflect.liveperson.net/api/getLiveDeflectData/v2  |
+| POST | https://[{domain}](/agent-domain-domain-api.html).ivrdeflect.liveperson.net/api/getLiveDeflectData/v2  |
 
 #### Request Headers
 
@@ -58,7 +58,7 @@ The following information should be provided to LivePerson.
 
 ```json
 {
-  "siteid": "25508804",
+  "siteId": "25508804",
   "startTime": "1428934391000",
   "endTime":  "1428934401000"
 }

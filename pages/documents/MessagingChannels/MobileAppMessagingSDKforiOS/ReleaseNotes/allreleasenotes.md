@@ -8,7 +8,9 @@ permalink: mobile-app-messaging-sdk-for-ios-all-release-notes.html
 indicator: messaging
 ---
 
-Listed below are all of the Release Notes for previous versions of our Mobile App Messaging SDK for iOS. To learn more about the SDK and how to get started, please visit [this page](/mobile-app-messaging-sdk-for-ios-quick-start.html).
+<br>
+
+Listed below are all of the Release Notes for previous versions of our Mobile App Messaging SDK for iOS. To learn more about the SDK and how to get started, see the [MobileSDK iOS Quick Start guide](/mobile-app-messaging-sdk-for-ios-quick-start.html).
 
 <a href="mobile-app-messaging-sdk-for-ios-release-notes.html">View all release notes</a>
 {% for operatingsystem in site.data.releasenotesios %}

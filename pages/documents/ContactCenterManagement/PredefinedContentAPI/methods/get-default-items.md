@@ -20,7 +20,7 @@ Retrieves default Predefined Content items from a specific account.
 
 | Method|  URL|
  |:--------|  :-----|
- |GET|  /api/configuration/defaults/engagement-window/canned-responses/ |
+ |GET|  https://[{domain}](/agent-domain-domain-api.html)/api/configuration/defaults/engagement-window/canned-responses/ |
 
 ### Response
 

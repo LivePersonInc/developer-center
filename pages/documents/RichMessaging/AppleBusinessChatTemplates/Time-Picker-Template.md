@@ -13,7 +13,7 @@ indicator: messaging
 
 ### Overview
 
-[Business Chat Time Picker](https://developer.apple.com/documentation/businesschat/enhancing_the_customer_s_user_experience/sending_a_time_picker) enables human or automated agents to send available time slots when consumers are looking to schedule an appointment with the brand’s various services. Time picker allows the consumer to select the relevant time slot, and reply back with the time selected.
+[Business Chat Time Picker](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/time_picker) enables human or automated agents to send available time slots when consumers are looking to schedule an appointment with the brand’s various services. Time picker allows the consumer to select the relevant time slot, and reply back with the time selected.
 
 The following capabilities are supported:
 

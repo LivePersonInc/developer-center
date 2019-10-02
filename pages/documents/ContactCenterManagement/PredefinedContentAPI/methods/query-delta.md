@@ -20,7 +20,7 @@ Changes Queries in Predefined Content data.
 
  |Method | URL |
  |:--------|  :----------|
- |POST|  /api/account/configuration/engagement-window/canned-responses/query |
+ |POST|  https://[{domain}](/agent-domain-domain-api.html)/api/account/configuration/engagement-window/canned-responses/query |
 
 **Query Parameters**
 

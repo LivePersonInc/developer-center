@@ -19,6 +19,7 @@ The SDK uses 2 delegates:
 1. **LPMessagingSDKDelegate** - for lifecycle and connectivity events
 2. **LPMessagingSDKNotificationDelegate** - for handling push and in app notifications
 
+
 ### LPMessagingSDKDelegate
 
 ```swift
@@ -54,7 +55,7 @@ The SDK uses 2 delegates:
 }
 ```
 
-To use the **LPMessagingSDKDelegate**, you'll need to instantiate it, and conform the protocol with the required methods:
+To use the **LPMessagingSDKDelegate**, you'll need to initiate it, and conform the protocol with the required methods:
 
 ```swift
 LPMessagingSDK.instance.delegate = self
@@ -64,7 +65,7 @@ LPMessagingSDK.instance.delegate = self
 
 In [window mode only](consumer-experience-ios-sdk-showconversation.html), the app can place a custom button in the SDK UI. When the button is tapped, the following delegate method is invoked:
 
-When this button is pressed, it will call the following delegate:
+When pressed, it calls the following delegate:
 
 ```swift
 func LPMessagingSDKCustomButtonTapped() {
