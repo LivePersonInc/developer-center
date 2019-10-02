@@ -613,7 +613,7 @@ The method extracts the SDEs from a conversation that has been retrieved fromt t
 
 **Sample Result**
 
-If there were no errors, the result is an object which allways contains an array of SDE-Events for authenticated SDEs. (`sdes`) If the conversation which was handed to the method also contained unauthenticated SDEs, the result also contains such an array for those. (`unAuthSdes`) Those arrays are sorted in ascending order, meaning the last event is the most current one.
+If there were no errors, the result is an object which allways contains an array of SDE-Events for authenticated SDEs (`sdes`) and an array for unauthanticated SDEs. (`unAuthSdes`) Those arrays are sorted in ascending order, meaning the last event is the most current one.
 
 ```javascript
 {
