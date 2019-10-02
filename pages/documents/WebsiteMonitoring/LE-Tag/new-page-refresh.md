@@ -16,8 +16,8 @@ When a new page is triggered call the following method:
 
 ```javascript
 lpTag.newPage(url, {
-  section : [], 
-  sdes: [], 
+  section : [],
+  sdes: [],
   taglets: {
 	  rendererStub:{
 		divIdsToKeep: {
@@ -39,14 +39,6 @@ lpTag.newPage(url, {
 | taglets | object | configuration that will be passed to the specific taglet names | No |
 | rendererStub | object | `{ divIdsToKeep: {  “DIVID” :  true } }` where “DIVID” should be replaced with the ID of the div who’s button you want to keep during the page refresh. | No |
 | YOURTAGLETNAME | object | add your own specific configuration for your taglet here | No |
-
-* url - the new url that is the result of the page. Mandatory
-* Object with the following properties: Optional
-	* section - an array of string sections which are active (can be one)
-	* sdes - an array of sdes in the new page context
-	* taglets - Object with configuration that will be passed to the specific taglet names
-		* rendererStub - { divIdsToKeep: {  “DIVID” :  true } } - “DIVID” should be replaced with the ID of the div who’s button you want to keep.
-		    * YOURTAGLETNAME - you can add your own specific configuration for your taglet here.
 
 #### Example Call
 
@@ -76,7 +68,7 @@ lpTag.newPage('https://x.com/newUrl/', {
 });
 ```
 <!--
-### newPage API flow
+### newPage API Lifecycle
 
 The following will explain the steps that the newPage method takes when it is called:
 
@@ -87,9 +79,10 @@ The following will explain the steps that the newPage method takes when it is ca
     1. 1st for loop - stop (removed taglets)
     2. 2nd for loop - init (new taglets)
     3. 3rd for loop - start / restart (new /existing)
-5. merge and update taglets state list 
+5. merge and update taglets state list
 -->
-### Example HTML page 
+
+### Example HTML page
 
 ```html
 <!-- lpTag with your site ID goes here -->
