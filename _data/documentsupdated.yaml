@@ -162,7 +162,7 @@
           - subpagename: Integration Basics
           - subpagename: API Integrations
           - subpagename: Email Integrations
-          - subpagename: Knowledge Base Integrations
+          #- subpagename: Knowledge Base Integrations
           - subpagename: LivePerson Agent Escalation Integrations
           - subpagename: FaaS Integrations
           - subpagename: Web View Integration API
