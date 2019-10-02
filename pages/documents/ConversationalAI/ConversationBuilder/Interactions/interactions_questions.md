@@ -49,7 +49,7 @@ Response Message settings also provide the text in the header of the actual time
 | Setting | Description | Required or Optional | Example |
 |---|---|---|---|
 | ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
-| ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest\, Small, or Large. The default value is Icon. | Optional | Icon |
+| ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest, Small, or Large. The default value is Icon. | Optional | Icon |
 | Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters.  | Required  | Meet with our technician |
 | Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | Please select your preferred time |
 
@@ -57,14 +57,14 @@ Response Message settings also provide the text in the header of the actual time
 
 | Setting  | Description  | Required or Optional | Example  |
 |---|---|---|---|
-| Event Title  | The title of the calendar meeting.   | Required  | Technician Visit |
-| Event Identifier   | An ID for the event; if you don’t set this, it’s set by the system.             | Optional |    |
-| Timezone offset (minutes from GMT) | Represents the number of minutes from GMT, while specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location. | Optional  | 120  |
+| Event Title  | The title of the calendar meeting.   | Optional  | Technician Visit |
+| Event Identifier   | An ID for the event. If you don’t set this, it’s set by the system since it's required by Apple. LivePerson recommends that you set this. If you're populating the time picker with data received from an API call, you can set this with an ID provided in that API result. | Required |   event123 |
+| Timezone offset (minutes from GMT) | The number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.<br><br> **The offset must be expressed in positive numbers.** | Optional  | 120 (for Mannheim, Germany, which is GMT+2) <br><br>1200 (for New York, New York, which is GMT-4 in Daylight Savings Time) |
 
 
 **Location settings**
 
-Location settings support features that play a role after the consumer has selected a time slot and sent the reply. The consumer can tap the reply message bubble to view location information, if available. The consumer can also tap *Add to Calendar* or *Get Directions*. The location name supports the former; the latitude, the longitude, and the radius support the latter.
+Location settings support features that play a role after the consumer has selected a time slot and sent the reply. The consumer can tap the reply message bubble to view location information, if available. The consumer can also tap *Add to Calendar* or *Get Directions*. The location name supports the former (*Add to Calendar*); the latitude, the longitude, and the radius support the latter (*Get Directions*).
 
 | Setting  | Description  | Required or Optional | Example  |
 |---|---|---|---|
@@ -75,27 +75,41 @@ Location settings support features that play a role after the consumer has selec
 
 **Time slot settings**
 
+<img style="width:250px" src="img/ConvoBuilder/questions_timePicker3.png">
+
 | Setting  | Description  | Required or Optional | Example  |
 |---|---|---|---|
-| Start Date  | The date on which the event starts based on the location’s time zone. | Required        | 09/05/2019 |
-| Start Time  | The time at which the event starts based on the location’s time zone. | Required       | 4:00 PM |
-| Duration | The duration in minutes of the event. | Required  | 30 |
-| Timeslot ID | An ID for the time slot; if you don’t set this, it’s set by the system. | Optional         |   |
+| Start Date  | The date **in GMT** on which the event starts. | Required | 09/05/2019 |
+| Start Time  | The time **in GMT** on which the event starts. (The timezone offset determines whether the start time is in a specific time zone or in the customer's time zone.) | Required | 1:00 PM |
+| Duration | The duration in minutes of the event. | Required | 30 |
+| Timeslot ID | An ID for the time slot. If you don’t set this, it’s set by the system since it's required by Apple. LivePerson recommends that you set this. If you're populating the time picker with data received from an API call, you can set this with an ID provided in that API result. | Required |   time123 |
+
+<img style="width:600px" src="img/ConvoBuilder/questions_timePicker7.png">
 
 **Reply Message settings**
 
-These settings are read-only and unused; you can skip over them.
+The Reply Message settings define how to display the consumer’s reply after the consumer picks a time slot.
+
+<img style="width:400px" src="img/ConvoBuilder/questions_timePicker4.png">
+
+| Setting | Description | Required or Optional | Example |
+|---|---|---|---|
+| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
+| ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest, Small, or Large. The default value is Icon. | Optional | Icon |
+| Reply Message Title | Not used; this is replaced with the selected time.  | Not applicable  | Not applicable |
+| Reply Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | See you then! |
 
 **Dynamically populating a time picker**
 
-You can dynamically populate the time picker using data received from an API integration. For example, you might set the Start Time field with something like:
+You can dynamically populate the time picker using data received from an [API integration](conversation-builder-integrations-api-integrations.html). For example, you might set the Start Time field to something like this:
 
 `{$.api_myScheduler.interactiveData.data.event.timeslots[i].startTime}`
 
+{: .important}
+As indicated above, start dates and times must be **in GMT**, so depending on the data received from the API call, you might need to do some preprocessing to convert the times. Also note that the Duration field can't be populated dynamically; you must manually specify this value.
+
 **The user response to a time picker**
 
-Once a user makes their selection in the time picker, the reply is sent back to the bot as....
+Once a user makes their selection in the time picker, the reply is sent back to the bot as "For" plus the event title, followed by "User Selected: " plus the date and time expressed in GMT.
 
-{ image }
-
-You might want to use an API integration to pass that data back to a scheduling application.
+<img style="width:350px" src="img/ConvoBuilder/questions_timePicker5.png">
