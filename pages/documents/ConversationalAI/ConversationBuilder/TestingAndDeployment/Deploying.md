@@ -29,7 +29,7 @@ After the pre-requisite steps are performed, at a high level, deployment is a tw
 2. [Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). This gets the agent connector running in the target environment.
 
 {: .important}
-LivePerson recommends that, when you connect your bot to LiveEngage, you deploy at least two LiveEngage bot agents for a single bot. This is so the second bot agent can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more bot agents per bot.
+LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage bot agents for a single bot. This is so the second bot agent can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more bot agents per bot.
 
 For some practice at deployment, try [tutorial #4](conversation-builder-getting-started-4-connect-to-liveengage.html). 
 
@@ -101,20 +101,19 @@ Establishing the connection can take a few minutes.
 3. Locate the connector in the table, and click its **Stop** button.
 
 ### Troubleshoot a deployment
-While the system is establishing a connection to the bot agent, the Details icon for the connector will appear in yellow. If there is an error with an underlying component that supports the connection, the icon will change to red.
+If a connector enters an Offline status, which is an error status, click **Details** to view the statuses of the individual, underlying components that support the end-to-end connection.
 
 <img class="fancyimage" style="width:450px" src="img/ConvoBuilder/deploy_detailsMsgs.png">
 
-If the connection attempt fails, such that the status of the connector remains Not Connected, try waiting some time, and then stop and restart the connector. If you still need assistance, please contact your LivePerson representative.
+In the event of a failed connection, wait some time, and then try to stop and restart the connector. If you still need assistance, please contact your LivePerson representative.
 
 ### Deployment statuses
 An agent connector can have one of the following statuses:
 
-- **Ready to Start**: 
+- **Ready to Start**: The connector was added successfully, but it hasn't been started for the first time.
 - **Online**: The connector is running, and all end-to-end connections are working well.
-- **Offline**: 
-- **Stopped**: All end-to-end connections are working well, but the connector isn't running.
-- **Error**: At least one component isn't working, causing end-to-end connections not to function.
+- **Offline**: At least one underlying component isn't working, causing end-to-end connections not to function. The connector is in an error state and isn't running.
+- **Stopped**: The connector isn't running because it was manually stopped. 
 
 ### Custom configuration flags
 
