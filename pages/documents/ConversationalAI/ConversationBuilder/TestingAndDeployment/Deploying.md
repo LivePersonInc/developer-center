@@ -8,7 +8,7 @@ permalink: conversation-builder-testing-deployment-deploying-to-liveengage.html
 indicator: both
 ---
 
-As a bot developer, you can use the same application, Conversation Builder, that you use to create your bots to also quickly deploy them to a LiveEngage environment. Typically, you'll want to do this for testing purposes.
+As a bot developer, you can use Conversation Builder to quickly deploy bots to a LiveEngage environment.
 
 ### The high-level deployment process
 
@@ -25,18 +25,18 @@ For help with these steps, see the [LivePerson Knowledge Center](https://knowled
 #### The deployment process
 After the pre-requisite steps are performed, at a high level, deployment is a two-step process:
 
-1. [Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector). This creates the connection between the bot and a bot agent in the target LiveEngage environment.
+1. [Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector). This establishes the necessary connections to make the bot operational.
 2. [Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). This gets the agent connector running in the target environment.
 
 {: .important}
-LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage bot agents for a single bot. This is so the second bot agent can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more bot agents per bot.
+LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more.
 
 For some practice at deployment, try [tutorial #4](conversation-builder-getting-started-4-connect-to-liveengage.html). 
 
 ### The Agent Connectors page
-The Agent Connectors page makes it fast and easy to understand the status **(1)** of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically, you won't need to dive into the details **(2)** on the individual components that support the end-to-end connection.
+The Agent Connectors page makes it fast and easy to understand the status **(1)** of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically you won't need to dive into the details **(2)** on the individual components that support the end-to-end connection.
 
-<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/deploy_agntCntrPg.png">
+<img class="fancyimage" style="width:1100px" src="img/ConvoBuilder/deploy_agntCntrPg.png">
 
 ### Add an agent connector
 Adding an agent connector creates a connection between the bot and a bot agent in the target LiveEngage environment.
@@ -49,7 +49,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     
     The Add Agent Connector dialog appears.
 
-4. If you're on the AWS platform,  the first thing you'll need to do in the dialog is manually enter your LiveEngage account number, and click <img style="width:45px" src="img/ConvoBuilder/icon_chevron_orange.png">. If you're on the LivePerson platform, skip this step; the account number is identified by the system for you.
+4. If you're on the LivePerson platform, proceed directly to the next step. *If you're on the AWS platform,  the first thing you'll need to do in the dialog is manually enter your LiveEngage account number, and click <img style="width:45px" src="img/ConvoBuilder/icon_chevron_orange.png">.*
 5. Specify the following in the dialog:
     - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents appear in this list.
     - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps).
@@ -59,10 +59,10 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     - **Fallback Skill ID**: If the skill (that you assigned to the bot agent) has a defined fallback skill, you can enter the fallback skill's ID here. The fallback skill is the skill to which to route the conversation as a fallback if no agents with the primary skill have free capacity. Fallback skills have several uses, but they're often used to escalate (transfer) a conversation from a bot agent to a live agent. You define fallback skills for skills in LiveEngage. For more on this, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
     - **External Webhook URL**: This option is for brands that want to use HTTP instead of WebSocket for connection to LiveEngage. Enter the URL to which the HTTP connector will post user messages to external endpoints.
     - **Accessibility**: Select this if you want the bot messages to support Accessibility. If you select this, the fields sent in the JSON object have the tooltip attribute.
-7. If desired, click " + " beside **Custom Configurations**, and enter the custom configuration flags to set. These are key/value pairs that alter the behavior of the bot. They allow for fundamental changes in bot behavior *outside* of the design of the bot, and they're injected at the point of connecting the bot to a bot agent on a 1:1 basis. For the list of custom configuration flags you can set, see [below](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-flags) in this topic.
+7. If desired, click " + " beside **Custom Configurations**, and enter any custom configuration fields to set. For more on these, see [below](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-flags) in this topic.
 8. Click **Save**.
 
-    This creates the connection between the bot and the bot agent in the target LiveEngage environment.
+    This establishes the connection between the bot and the bot agent in the target LiveEngage environment.
     
     To fully deploy the bot, now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
 
@@ -75,7 +75,6 @@ You can edit an agent connector as long as the connector isn't running.
 2. Click **Agent Connectors** in the upper-right corner.
 3. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Edit** from the menu that appears.
 4. Edit the information, and click **Save**.
-5. *Restart the connector*.
 
 ### Delete an agent connector
 You can delete an agent connector as long as it isn't running.
@@ -103,7 +102,7 @@ Establishing the connection can take a few minutes.
 ### Troubleshoot a deployment
 If a connector enters an Offline status, which is an error status, click **Details** to view the statuses of the individual, underlying components that support the end-to-end connection.
 
-<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/deploy_detailsMsgs.png">
+<img class="fancyimage" style="width:375px" src="img/ConvoBuilder/deploy_detailsMsgs.png">
 
 In the event of a failed connection, wait some time, and then try to stop and restart the connector. If you still need assistance, please contact your LivePerson representative.
 
@@ -115,16 +114,16 @@ An agent connector can have one of the following statuses:
 - **Offline**: At least one underlying component isn't working, causing end-to-end connections not to function. The connector is in an error state and isn't running.
 - **Stopped**: The connector isn't running because it was manually stopped. 
 
-### Custom configuration flags
+### Custom configuration fields
 
-Custom configuration flags are key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
+Custom configuration fields are key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
 
 {: .important}
-Use of custom configuration flags potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for one of your duplicate bot agents all running the same bot (per guidance [above](conversation-builder-testing-deployment-deploying-to-liveengage.html#the-deployment-process)), you'll get different behavior between the bots within an account.
+Use of custom configuration fields potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for one of your duplicate bot connectors all running the same bot (per guidance [above](conversation-builder-testing-deployment-deploying-to-liveengage.html#the-deployment-process)), you'll get different behavior between the bots within an account.
 
-#### Flags
+#### Fields
 
-| FieldName   | Default Value      | Description    | Messaging | Chat | Required |
+| Field Name   | Default Value      | Description    | Messaging | Chat | Required |
 |-------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|------|----------|
 | lpAccountId             | null                                            | LE Account Id                                                                                                                                                                                                                                                                                                                                                                                                    | Y         | Y    | Y        |
 | lpAccountUser           | null                                          | LE Account Username                                                                                                                                                                                                                                                                                                                                                                                              | Y         | Y    | Y        |

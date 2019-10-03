@@ -70,9 +70,6 @@ Create a campaign and engagement that routes to the new Bot skill. Tap Publish w
 
 Go back to Conversation Builder to link your bot to the bot user you just created.
 
-{: .important}
-LivePerson recommends that, when you connect your bot to LiveEngage, you deploy at least two LiveEngage bot agents for a single bot. This is so the second bot agent can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more bot agents.
-
 #### Add the agent connector
 
 1. Open the bot, and click **Agent Connectors** on the menu bar in the upper-right corner.
@@ -83,6 +80,9 @@ LivePerson recommends that, when you connect your bot to LiveEngage, you deploy 
     - **Conversation Type**: Select "Chat."
     - **Deploy to**: Select either "Demo" or "Production."
 4. Click **Save**.
+
+{: .important}
+LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more.
 
 #### Start the agent connector
 
