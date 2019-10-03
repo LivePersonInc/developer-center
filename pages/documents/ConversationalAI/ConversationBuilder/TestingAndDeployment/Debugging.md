@@ -8,7 +8,11 @@ permalink: conversation-builder-testing-deployment-debugging.html
 indicator: both
 ---
 
-The Bot Logs window can display the log of the conversation that occurred in the Preview window or the log of any conversation that occurred in a supported channel. This makes it a useful tool in a few ways. First, if you're encountering unexpected behavior, always check the Bot Logs window. Errors and failures are displayed in red, so you'll know at a glance if and where they occurred. Second, because a log provides a more technical view of the underlying process flow that occurred during the conversation, it can deepen your understanding of how that processing works and support research. For example, you can use the log to identify the patterns or intents that were matched in the conversation.
+The Bot Logs window can display the log of the conversation that occurred in the Preview window or the log of any conversation that occurred in a supported channel. This makes it a useful tool in a few ways. 
+
+First, if you're encountering unexpected behavior, always check the Bot Logs window. Errors and failures are displayed in red, so you'll know at a glance if and where they occurred.
+
+Second, because a log provides a more technical view of the underlying process flow that occurred during the conversation, it can deepen your understanding of how that processing works and support research. For example, you can use the log to identify the patterns or intents that were matched in the conversation.
 
 Here's a visual overview of the Bot Logs window:
 
@@ -34,11 +38,11 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 
 1. In the channel (Facebook Messenger, Apple iMessage, etc.), enter "display userid."
     
-    <img style="width:400px" src="img/ConvoBuilder/debug_displayID.png">
+    <img style="width:250px" src="img/ConvoBuilder/debug_displayID.png">
 
-2. Copy the ID to your clipboard.
+2. Copy the ID.
 3. Return to Conversation Builder, open a bot, and click <img style="width:30px" src="img/ConvoBuilder/icon_debug.png"> in the lower-right corner to open the Bot Logs window.
-4. Paste the ID into the **User ID** input box.
+4. Enter or paste the ID into the **User ID** input box.
 5. Click <img style="width:30px" src="img/ConvoBuilder/icon_refresh.png">.
 
 ### Printing the most recent user message
