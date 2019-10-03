@@ -6,9 +6,8 @@ documentname: Window Customization API
 permalink: window-customization-api-quick-start.html
 indicator: both
 ---
-# Window Customization
 
-You can easily customize the unified window yourself by using these classes and examples. Classes are broken up into "blocks" and "elements".
+You can easily customize the unified window yourself by using these classes and examples. Classes are broken up into "blocks" and "elements". Below, you can find a definitive list of all the classes available for use to customize the window.
 
 
 ### Naming convention
@@ -21,9 +20,9 @@ You can easily customize the unified window yourself by using these classes and 
 
 `modifier` - defines the appearance, state, or behavior of a block or element (for example, `maximized` vs. `minimized`)
 
-    lpc_block__element_modifier
+    * `lpc_block__element_modifier`
     
-    lpc_block_modifier
+    * `lpc_block_modifier`
     
 ### Window
 
