@@ -8,11 +8,7 @@ permalink: conversation-builder-testing-deployment-debugging.html
 indicator: both
 ---
 
-The Bot Logs window can display the log of the conversation that occurred in the Preview window or the log of any conversation that occurred in a supported channel. This makes it a useful tool during bot development in a few ways.
-
-First, if you're encountering unexpected behavior, always check the Bot Logs window. Errors and failures are displayed in red, so you'll know at a glance if and where they occurred. 
-
-Second, because a log provides a more technical view of the underlying process flow that occurred during the conversation, it can deepen your understanding of how that processing works and support research. For example, you can use the log to identify the patterns or intents that were matched in the conversation.
+The Bot Logs window can display the log of the conversation that occurred in the Preview window or the log of any conversation that occurred in a supported channel. This makes it a useful tool in a few ways. First, if you're encountering unexpected behavior, always check the Bot Logs window. Errors and failures are displayed in red, so you'll know at a glance if and where they occurred. Second, because a log provides a more technical view of the underlying process flow that occurred during the conversation, it can deepen your understanding of how that processing works and support research. For example, you can use the log to identify the patterns or intents that were matched in the conversation.
 
 Here's a visual overview of the Bot Logs window:
 
