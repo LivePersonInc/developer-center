@@ -15,10 +15,9 @@ As a bot developer, you can use Conversation Builder to quickly deploy bots to a
 #### Prerequisite steps
 Before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
 
-1. Create at least one skill to assign to your bot agent.
-2. Create the bot agent (user type = Bot) and enable it.
-3. Assign the skill to the bot agent.
-4. Create a campaign and engagement that routes to the skill that you assigned to the bot agent.
+1. Create a bot agent. This is a user where the type = "Bot." Make sure to enable the agent.
+2. Create a skill and assign it to the bot agent.
+3. Create a campaign and engagement that routes to the skill you assigned to the bot agent.
 
 For help with these steps, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
 
@@ -31,10 +30,10 @@ After the pre-requisite steps are performed, at a high level, deployment is a tw
 {: .important}
 LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more.
 
-For some practice at deployment, try [tutorial #4 - Connect to Live Engage](conversation-builder-getting-started-4-connect-to-liveengage.html). 
+For some practice at deployment, complete the [Connect to Live Engage](conversation-builder-getting-started-4-connect-to-liveengage.html) tutorial. 
 
 ### The Agent Connectors page
-The Agent Connectors page makes it fast and easy to understand the status **(1)** of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically you won't need to dive into the details **(2)** on the individual components that support the end-to-end connection.
+The Agent Connectors page makes it fast and easy to understand the status **(1)** of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically you won't need to dive into the details **(2)** on the individual components that support the end-to-end connection. Use the Start/Stop toggle button **(3)**, respectively, to start and stop an agent connector.
 
 <img class="fancyimage" style="width:1100px" src="img/ConvoBuilder/deploy_agntCntrPg.png">
 
@@ -67,14 +66,15 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     To fully deploy the bot, now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
 
 ### Edit an agent connector
-You can edit an agent connector as long as the connector isn't running.
+You can edit an agent connector as long as it isn't running.
 
 **To edit an agent connector**
 
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-right corner.
-3. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Edit** from the menu that appears.
-4. Edit the information, and click **Save**.
+3. If the connector is running, click **Stop**.
+4. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Edit** from the menu that appears.
+5. Edit the information, and click **Save**.
 
 ### Delete an agent connector
 You can delete an agent connector as long as it isn't running.
@@ -83,8 +83,9 @@ You can delete an agent connector as long as it isn't running.
 
 1. Open the bot.
 2. Click **Agent Connectors** in the upper-right corner.
-3. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Delete** from the menu that appears.
-4. Click **Yes** to confirm the deletion. 
+3. If the connector is running, click **Stop**.
+4. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Delete** from the menu that appears.
+5. Click **Yes** to confirm the deletion. 
 
 ### Start an agent connector
 1. Open the bot.
