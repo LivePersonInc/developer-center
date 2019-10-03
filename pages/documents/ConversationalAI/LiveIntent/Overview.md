@@ -11,7 +11,7 @@ indicator: messaging
 
 ### Introduction
 
-LivePerson's [Conversational AI platform](conversational-ai-platform-platform-overview.html) now includes a one-stop hub for [discovering](liveintent-best-practices.html#use-search-to-discover-new-intents), [tracking, and maintaining](liveintent-dashboard.html) intents in real-time.
+LivePerson's [Conversational AI](conversational-ai-platform-platform-overview.html) now includes a one-stop hub for [discovering](liveintent-best-practices.html#use-search-to-discover-new-intents), [tracking, and maintaining](liveintent-dashboard.html) intents in real-time.
 
 <img class="fancyimage" style="width:750px" src="img/liveintent_dashboard_home.png">
 
