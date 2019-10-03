@@ -78,7 +78,7 @@ Go back to Conversation Builder to link your bot to the bot user you just create
     - **Agent User ID**: Select the user ID for the bot user agent.
     - **Role**: Select "Agent."
     - **Conversation Type**: Select "Chat."
-    - **Deploy to**: Select either "Demo" or "Production."
+    - **Deploy to**: Select either "Demo" or "Production." If this is the first time running your bot, you might want to deploy to the demo environment to validate that everything is functioning properly.
 4. Click **Save**.
 
 {: .important}
@@ -87,7 +87,7 @@ LivePerson recommends that, when you connect your bot to LiveEngage in a product
 #### Start the agent connector
 
 **To deploy to the Demo environment (for testing)**
-- Click the **Start** button to start the agent connector. Skip to [testing](conversation-builder-getting-started-4-connect-to-liveengage.html#step-13-testing-the-connection) if you do this.
+- If you decided to deploy to the Demo environment, click the **Start** button to start the agent connector. Skip to [testing](conversation-builder-getting-started-4-connect-to-liveengage.html#step-13-testing-the-connection) if you do this.
 
 **To deploy to the Production environment**
 
