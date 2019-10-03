@@ -19,7 +19,7 @@ Here's a visual overview of the Bot Logs window:
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/debuggingWindow.png">
 
 - 1 = Use the **User ID** input box to specify the log you want to view.
-- 2 = Click **Refresh** to initially display or to refresh the log.
+- 2 = Click <img style="width:30px" src="img/ConvoBuilder/icon_refresh.png"> (Refresh) to display or refresh the log.
 - 3 = Click the circle beside a logged event to display its timestamp.
 
 Errors and failures are displayed <font color="red">in red</font>, so you can spot them quickly.
@@ -43,7 +43,7 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 2. Copy the ID to your clipboard.
 3. Return to Conversation Builder, open a bot, and click <img style="width:30px" src="img/ConvoBuilder/icon_debug.png"> in the lower-right corner to open the Bot Logs window.
 4. Paste the ID into the **User ID** input box.
-5. Click **Refresh**.
+5. Click <img style="width:30px" src="img/ConvoBuilder/icon_refresh.png">.
 
 ### Printing the most recent user message
 
