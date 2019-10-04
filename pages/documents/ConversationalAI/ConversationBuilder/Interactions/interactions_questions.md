@@ -88,7 +88,7 @@ Response Message settings also provide the text in the header of the actual time
 
 | Setting | Description | Required or Optional | Example |
 |---|---|---|---|
-| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
+| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
 | ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon |
 | Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters.  | Required  | Meet with our technician |
 | Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | Please select your preferred time |
@@ -134,7 +134,7 @@ The Reply Message settings define how to display the consumer’s reply after th
 
 | Setting | Description | Required or Optional | Example |
 |---|---|---|---|
-| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
+| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
 | ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon |
 | Reply Message Title | Not used; this is replaced with the selected time.  | Not applicable  | Not applicable |
 | Reply Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | See you then! |
