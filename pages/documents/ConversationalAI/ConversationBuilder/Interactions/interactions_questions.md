@@ -39,6 +39,8 @@ Like with any question, a structured question expect and waits for the user resp
 {: .important}
 Structured questions aren't supported on all channels; be sure to verify the channel's support before designing your bot. For example, Facebook supports the carousel, but Apple Business Chat doesn't. Apple Business Chat offers its list picker instead.
 
+<img style="width:400px" src="img/ConvoBuilder/questions_structured2.png">
+
 **Tile settings**
 
 <img style="width:400px" src="img/ConvoBuilder/questions_structured.png">
