@@ -32,6 +32,6 @@ When do you use patterns versus intents?
 - Use a pattern when the user’s input must fit the pattern exactly. Otherwise, it isn’t considered a match, and the dialog isn’t triggered.
 - Use an intent when the match criteria needs to be more flexible, which means the bot can respond to a wider variety of input. Intents are broader and more flexible because the bot makes use of LivePerson’s Natural Language Understanding (NLU) engine when determining if there is a match. Matches are scored based on the confidence level: VERY GOOD, GOOD, FAIR PLUS, and so on.
 
-For information on pattern matching, see [here](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching). There's a hands-on [tutorial](conversation-builder-getting-started-1-dialogs-and-patterns.html) as well.
+For information on pattern matching, see [here](conversation-builder-interactions-response-match-actions.html#pattern-matching). There's a hands-on [tutorial](conversation-builder-getting-started-1-dialogs-and-patterns.html) as well.
 
 For an overview of intents and Intent Builder, see [here](intent-builder-overview.html). There's a hands-on [tutorial](conversation-builder-getting-started-2-intents.html) on this too. 
