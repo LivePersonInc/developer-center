@@ -11,6 +11,25 @@ permalink: conversation-builder-interactions-interaction-basics.html
 indicator: both
 ---
 
+### Interaction categories
+There are four, general categories of interactions: 
+
+- **User Says**: User Says interactions are how dialogs are initially triggered, so most dialogs start with a User Says interaction (fallback dialogs work differently). The user starts things off by supplying some user input - a message or a question. In response, the bot tries to match the user input with a pattern or intent that’s specified in a User Says interaction in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins. User Says interactions are sometimes called “dialog starters.” For more on User Says, see [here](conversation-builder-interactions-user-says.html).
+
+- **Statements**: Statements simply display information and then execute the next action. They don’t expect or wait for a user response. For more on statements, see [here](conversation-builder-interactions-statements.html). 
+
+- **Questions**: Questions present information to the user (a text-based question, a list of things to pick from, etc.), and they expect and wait for a user response before executing the next action. In a question interaction, you can define conditions that evaluate the user’s response against a set of criteria. If a condition is met, its next action is then performed. For example, if the user enters a valid email address, then an email could be sent. For more on questions, see [here](conversation-builder-interactions-questions.html).
+
+- **Integrations**: Integrations make programmatic (API) calls to retrieve or post data to external systems and/or to perform actions. Integrations simply perform their work and then execute the next action. However, if the integration retrieves data, that data can be stored in custom fields, so you can use it in subsequent interactions. Integrations are similar to questions in that you can define conditions that each perform different next actions (based on which condition is met). One common use for this is to check whether the integration call was a success or failure and then to execute a next action that’s appropriate. For more on integrations, see [here](conversation-builder-interactions-integrations.html).
+
+### General guidelines and best practices
+One of the goals and challenges in developing interactions is creating a unified implementation and consumer experience across channels. When working with structured content in particular, LivePerson recommends that you find the "common denominator" across mobile messaging, web messaging, and Facebook Messenger with respect to a given element's attributes. For example, in a structured question, LiveEngage allows up to 128 characters for the button label, but Facebook does not allow more than 20 characters. Depending on your implementation, constraints like this might play a role.
+
+*For details on constraints like this*, see the best practices information that's found [here](https://developers.liveperson.com/facebook-messenger-templates-best-practices.html) in the Rich Messaging section of this LivePerson developers' site, and refer to the [Messaging channels](https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html) section in the LivePerson Knowledge Center.
+
+{: .important}
+Your bot implementation should meet LiveEngage requirements and those of the specific channels in use.
+
 ### Limitations
 
 The types of text that you can send in a Conversation Builder interaction vary depending if you are building a bot for **chat** or for **messaging**.
@@ -22,6 +41,20 @@ The types of text that you can send in a Conversation Builder interaction vary d
 * `<a href=""></a>`
 * `<p></p>`
 * `<br>`
+
+### Whitelisting
+The domains in all URLs for images, videos, audio files, and button links used in interactions must be whitelisted. Contact your LivePerson representative to assist with this.
+
+For Facebook in particular, whitelisting must be done in two places: Images must be whitelisted on the LivePerson side, and web URLs must be whitelisted within Facebook page settings. The latter must be performed by the owner of the Facebook page.
+
+{: .important}
+Conversation Builder shortens lengthy web links using the following abbreviated domain: https://s.bcbot.io, which must be whitelisted in the Facebook page settings.
+
+### Images
+
+As long as the image is [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting), it will be sent to the consumer. Provide high-resolution images in the appropriate format: JPEG for photos, PNG for bitmap/raster artwork. Make sure the images are interesting and aesthetically pleasing, and verify their quality before use. Keep the images as small in size as possible, so they load quickly.
+
+The Apple developers' site provides some good, general guidelines regarding resolution, size, optimization, and more; you can find this [here](https://developer.apple.com/design/human-interface-guidelines/business-chat/interactive-messages/about-interactive-messages/#images).
 
 ### Add an interaction
 **To add a new interaction to the end of the dialog**

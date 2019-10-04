@@ -15,9 +15,7 @@ A question interaction is interactive and meant to be answered by the user. The 
 
 - **Text**. A simple textual question.
 
-- **Structured Content**. Most conversations involve plain text like what you are reading now. However, sometimes you might want to send content (images, buttons, maps, quick replies, etc) to a consumer in a richer, more interactive, and more structured format. *You can show up to 10 of these items in a horizontally scrolling carousel.*
-
-![Carousel](img/carousel.gif)
+- **Structured Content**. Most conversations involve plain text like what you are reading now. However, sometimes you might want to send content (images, buttons, maps, quick replies, etc) to a consumer in a richer, more interactive, and more structured format.
 
 - **Button**. An object that allows you to show a simple text question with an associated button action. A click of the button results in an action pre-configured by you (like navigation to a link, for example).
 
@@ -28,6 +26,46 @@ A question interaction is interactive and meant to be answered by the user. The 
 - **Time Picker**. **For Apple Business Chat only.** This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment. See below for more details.
 
 User responses to question interactions can be saved in [variables](conversation-builder-variables-slots.html), making them available for future use.
+
+
+### Structured questions
+
+Most conversations involve plain text like what you are reading now. However, a structured question lets you send content (images, buttons, maps, quick replies, etc.) to a consumer in a richer, interactive, and structured format.
+
+![Carousel](img/carousel.gif)
+
+Like with any question, a structured question expect and waits for the user response before executing the next action.
+
+{: .important}
+Structured questions aren't supported on all channels; be sure to verify the channel's support before designing your bot. For example, Facebook supports the carousel, but Apple Business Chat doesn't. Apple Business Chat offers its list picker instead.
+
+**Tile settings**
+
+<img style="width:400px" src="img/ConvoBuilder/questions_structured.png">
+
+| Setting | Description | Required or Optional | Example |
+| --- | --- | --- | --- |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). | Optional | https://www.mysite.com/images/headphones.jpg |
+| ADD IMAGE > Item URL  | The URL of the resource to load when the image is clicked. | Optional | https://www.mysite.com | 
+| Title | The title of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Required | It’s our annual, fall sale! |
+| Subtitle | The subtitle of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Optional | And we hope that’s music to your ears. |
+
+**Button settings**
+
+| Setting | Description | Required or Optional | Example |
+| --- | --- | --- | --- |
+| Button Label | The button text to be displayed. LiveEngage allows for up to 128 characters, but channel-specific restrictions do exist, so the actual maximum could be shorter. (For example, Facebook only allows for up to 20 characters.) | Required | 10% off all headphones |
+| Action Type  | If you want the button to be a link that takes the consumer somewhere else, select **Web URL**.<br><br>If you want to use the button to post back a different value other than the button label's value (for example, to post back the number "5" instead of the word "excellent"), select **Postback** (and then enter the data to post (the payload) in the **Callback** field).<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer in use. | Required  | Web URL |
+| Webview | This is a legacy feature that's no longer in use. | Not applicable | Not applicable |
+| Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in the current window or a new window. | Required | New Window |
+| Callback | Enter the data to send back to the bot.<br><br>If you specify a postback value here, in most channels it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Entering the same value for both the button label and the postback value will always work. | Optional | https://www.mysite.com/coupons/headphonesCoupon.html |
+
+**Notes**
+- The tiles can be populated with static information, or they can be dynamically populated.
+- You can include a maximum of 10 tiles.
+- For the number of buttons that you can add, check the limitations for the channels in use. (For example, while LiveEngage doesn't have a limitation here, Facebook's limit is 3 buttons.)
+- When multiple items are present in the interaction, they can be displayed vertically--which is the default--or horizontally. To add support for horizontal display, add the "tileDisplay" [custom configuration field](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-fields) when you [deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) your bot. For a horizontally-scrolling carousel to appear correctly, you must have **at least** 3 tiles.
+- Formatting of text (bold, italics, etc.) isn't supported.
 
 ### Apple Time Picker questions
 **For Apple Business Chat only.** 
