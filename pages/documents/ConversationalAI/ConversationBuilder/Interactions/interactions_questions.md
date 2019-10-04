@@ -49,7 +49,7 @@ Response Message settings also provide the text in the header of the actual time
 | Setting | Description | Required or Optional | Example |
 |---|---|---|---|
 | ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
-| ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest, Small, or Large. The default value is Icon. | Optional | Icon |
+| ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon |
 | Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters.  | Required  | Meet with our technician |
 | Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | Please select your preferred time |
 
@@ -59,7 +59,7 @@ Response Message settings also provide the text in the header of the actual time
 |---|---|---|---|
 | Event Title  | The title of the calendar meeting.   | Optional  | Technician Visit |
 | Event Identifier   | An ID for the event. If you don’t set this, it’s set by the system since it's required by Apple. LivePerson recommends that you set this. If you're populating the time picker with data received from an API call, you can set this with an ID provided in that API result. | Required |   event123 |
-| Timezone offset (minutes from GMT) | The number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.<br><br> **The offset must be expressed in positive numbers.** | Optional  | 120 (for Mannheim, Germany, which is GMT+2) <br><br>1200 (for New York, New York, which is GMT-4 in Daylight Savings Time) |
+| Timezone offset (minutes from GMT) | The number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.<br><br>**The offset must be expressed in positive numbers.**<br><br>If the offset is positive, use the formula: (offset in hours * 60).<br><br>If the offset is negative, use the formula: ((24 - offset in hours) * 60).| Optional  | Mannheim, Germany is GMT+2 in Central European Summer Time, which is a *positive* offset, so 2 * 60 = **120**. <br><br> New York, New York is GMT-4 in Daylight Savings Time, which is a *negative* offset, so ((24 - 4) * 60) = **1200**. |
 
 
 **Location settings**
