@@ -58,7 +58,7 @@ Absolute lets you use LiveIntent as historical reporting.
 
 The Intent trends view gives a high level view of which intents are happening in your contact center
 
-<img class="fancyimage" style="width:750px" src="img/liveintent_dashboard_home.png">
+<img class="fancyimage" style="width:750px" src="img/liveintent_dashboard-section-1.png">
 
 #### Topline Metrics
 
@@ -89,7 +89,7 @@ Tabular view of all data above, not limited to top or lowest 5 intents.
 
 The converation details view is where you go to dig in to explore the messages and conversations with intent
 
-<img class="fancyimage" style="width:750px" src="img/liveintent_dashboard_convo_details.png">
+<img class="fancyimage" style="width:750px" src="img/liveintent_conversation-overview.png">
 
 #### Topline Metrics
 

@@ -13,7 +13,7 @@ indicator: messaging
 
 LivePerson's [Conversational AI](conversational-ai-platform-platform-overview.html) now includes a one-stop hub for [discovering](liveintent-best-practices.html#use-search-to-discover-new-intents), [tracking, and maintaining](liveintent-dashboard.html) intents in real-time.
 
-<img class="fancyimage" style="width:750px" src="img/liveintent_dashboard_home.png">
+<img class="fancyimage" style="width:750px" src="img/liveintent_dashboard-section-1.png">
 
 LiveIntent leverages the [NLU engine](conversational-ai-platform-natural-language-understanding-nlu-engines.html) of your choice to analyze and track the performance of your intent libraries created in [Intent Builder](intent-builder-overview.html).
 
