@@ -30,7 +30,7 @@ You can install the Mobile App Messaging SDK using a couple of different methods
 
 * [Automatically add the SDK files using Gradle](#option-1-automatically-add-the-sdk-files-using-gradle)
 
-* [Manually copy the SDK files to your project](#option-2-manually-copy-the-sdk-files-to-your-project)
+* [Manually copy the SDK files to your project](#option-2-manually-copying-the-sdk-files-to-your-project)
 
 <br/>
 #### Option 1: Automatically add the SDK files using Gradle
@@ -44,7 +44,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 2. In the **dependencies** section, add:
    ```java
    dependencies {
-       implementation  "com.liveperson.android:lp_messaging_sdk:4.0.0"
+       implementation  "com.liveperson.android:lp_messaging_sdk:4.2.1"
    }
    ```
 
@@ -84,19 +84,14 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 
 #### Option 2: Manually copying the SDK files to your project
 
-1. [Download](https://github.com/LP-Messaging/Android-Messaging-SDK) the latest SDK package.
-2. Extract the file to a folder on your computer. The package contains all of the files you need to add to your project. Also in the package, you get a sample app that demonstrates how to use the SDK.
-3. In your Android Studio project, go to **File > New > Import module**.
-4. Navigate to the folder where you extracted the SDK, select the **lp_messaging_sdk module**, and then click **Finish**. 
+1. [Download](https://bintray.com/liveperson-mobile/maven) the latest SDK libraries.
+2. You can get a sample app that demonstrates how to use the SDK [here](https://github.com/LP-Messaging/Android-Messaging-SDK).
+3. In your Android Studio project, go to **File->New->New Module->Import .JAR/>AAR Package** and select .aars to add.
+4. Navigate to the folder where you extracted the SDK libraries, and add all libraries one by one.
 5. In your build.gradle of your app, and in the android section, make sure the *compileSdkVersion* is at least version **28**:
    ```java
    android {
        compileSdkVersion 28
-       repositories {
-           flatDir {
-               dirs project(":lp_messaging_sdk").file("aars")
-           }
-       }
    }
    ```
 6. In the **defaultConfig** section, make sure the *minSDKVersion* is set **19**:
@@ -112,7 +107,12 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
    ```
 7. In the **dependencies** section, add:
    ```java
-   implementation project(":lp_messaging_sdk")
+    implementation project(path: ":lp_messaging_sdk")
+    implementation project(path: ":messaging_ui")
+    implementation project(path: ":infra")
+    implementation project(path: ":messaging")
+    implementation project(path: ":ui")
+    implementation project(path: ":monitoring")
    ```
 
    **Build.gradle file example:**
@@ -120,11 +120,6 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
    apply plugin: "com.android.application"
 
    android {
-       repositories {
-           flatDir {
-               dirs project(":lp_messaging_sdk").file("aars")
-           }
-       }
        compileSdkVersion 28
        defaultConfig {
            applicationId "com.mybrand.app"
@@ -155,6 +150,11 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
        testImplementation "junit:junit:4.12"
        //Liveperson SDK
        implementation project(path: ":lp_messaging_sdk")
+       implementation project(path: ":messaging_ui")
+       implementation project(path: ":infra")
+       implementation project(path: ":messaging")
+       implementation project(path: ":ui")
+       implementation project(path: ":monitoring")
    }
 
    apply plugin: "com.google.gms.google-services"

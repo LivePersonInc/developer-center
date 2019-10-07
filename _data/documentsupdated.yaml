@@ -114,9 +114,9 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-  - documentname: Conversational AI Platform
+  - documentname: Conversational AI
     pages:
-      - pagename: Platform Overview
+      - pagename: Overview
       - pagename: Natural Language Understanding
         subpages:
           - subpagename: NLU Engines
@@ -361,7 +361,14 @@
         - subpagename: Submit Survey Data
         - subpagename: Send a Transcript
       - pagename: Sample Postman Collection
-
+    #- documentname: Window Customization API
+      #pages:
+      #- pagename: Overview
+      #- pagename: Quick Start
+      #- pagename: Samples
+        #subpages:
+        #- subpagename: CSS Sample
+      #- pagename: Taglet
 - categoryname: Contact Center Management
   image: contact-center
   documents:
@@ -989,6 +996,10 @@
     - documentname: LE-Tag
       pages:
         - pagename: Events
+          subpages:
+            - subpagename: Event Binding
+            - subpagename: Events
+        - pagename: New Page Refresh
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
