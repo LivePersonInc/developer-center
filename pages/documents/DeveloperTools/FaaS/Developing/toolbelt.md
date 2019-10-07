@@ -529,7 +529,7 @@ This method adds/ updates SDEs to an Engagement via the [Engagement Attributes A
 <tr>
 <td>sdes</td>
 <td>yes</td>
-<td>Array of SDEs which should be added to an engagement. For more information about the available Engagement Attributes, refer to the <a href="https://developers.liveperson.com/engagement-attributes-overview.html">Engagement Attributes Overview</a>.</td>
+<td>Array of SDEs which should be added to an engagement. For more information about the available Engagement Attributes, refer to the <a href="https://developers.liveperson.com/engagement-attributes-overview.html">Engagement Attributes Overview</a>. Also use the <b>SDETypes</b> for suggestions which types of engagement attributes can be added. (s. sample usage below)</td>
 <td>array</td>
 </tr>
 <tr>
@@ -553,7 +553,7 @@ This method adds/ updates SDEs to an Engagement via the [Engagement Attributes A
 
 ```javascript
   // import FaaS Toolbelt
-  const { Toolbelt } = require("lp-faas-toolbelt");
+  const { Toolbelt, SDETypes } = require("lp-faas-toolbelt");
 
   // Create instance
   const sdeUtil = Toolbelt.SDEUtil();
@@ -563,7 +563,7 @@ This method adds/ updates SDEs to an Engagement via the [Engagement Attributes A
   const sessionId = "XXXXXX";
   const sdes = [
     {
-        type: "personal",
+        type: SDETypes.PERSONAL_INFO,
         personal: {
             contacts: [
                 {
