@@ -41,7 +41,7 @@ Structured questions aren't supported on all channels; be sure to verify the cha
 
 <img style="width:400px" src="img/ConvoBuilder/questions_structured2.png">
 
-**Tile settings**
+#### Tile settings
 
 <img style="width:400px" src="img/ConvoBuilder/questions_structured.png">
 
@@ -52,7 +52,7 @@ Structured questions aren't supported on all channels; be sure to verify the cha
 | Title | The title of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Required | Headphones - It’s our annual, fall sale! |
 | Subtitle | The subtitle of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Optional | And we hope that’s music to your ears. |
 
-**Button settings**
+#### Button settings
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
@@ -60,10 +60,16 @@ Structured questions aren't supported on all channels; be sure to verify the cha
 | Action Type  | If you want the button to be a link that takes the consumer somewhere else, select **Web URL**.<br><br>If you want to use the button to post back a different value other than the button label's value (for example, to post back the number "5" instead of the word "excellent"), select **Postback** (and then enter the data to post (the payload) in the **Callback** field.<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer in use. | Required  | Web URL |
 | Webview | This is a legacy feature that's no longer in use. | Not applicable | Not applicable |
 | Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in the current window or a new window. | Required | New Window |
-| Callback | Enter the data to send back to the bot.<br><br>If you specify a postback value here, in most channels it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Entering the same value for both the button label and the postback value will always work. | Optional | https://www.mysite.com/coupons/headphonesCoupon.html |
+| Callback | Enter the data to send back to the bot. <br><br>If you select "Web URL" for the **Action Type**, this value should be a URL. If you selected "Postback" for the **Action Type**, this value  should be whatever value you want to send to the bot. <br><br>If you specify a postback value here, in most channels it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Entering the same value for both the button label and the postback value will always work. | Optional | https://www.mysite.com/coupons/headphonesCoupon.html |
 
-**Notes**
-- The tiles can be populated with static information, or they can be dynamically populated.
+#### Populating a Structured question dynamically
+
+You can populate the tiles with static information, or they can be dynamically populated during run time, for example, using data received from an [API integration](conversation-builder-integrations-api-integrations.html).
+
+<img style="width:250px" src="img/ConvoBuilder/questions_structured3.png">
+
+#### Notes on Structured questions
+
 - You can include a maximum of 10 tiles.
 - For the number of buttons that you can add, check the limitations for the channels in use. (For example, while LiveEngage doesn't have a limitation here, Facebook's limit is 3 buttons.)
 - When multiple items are present in the interaction, they can be displayed vertically--which is the default--or horizontally. To add support for horizontal display, add the "tileDisplay" [custom configuration field](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-fields) with a value of "horizontal" when you [deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) your bot. For a horizontally-scrolling carousel to appear correctly, you must have **at least** 3 tiles.
@@ -78,7 +84,7 @@ You can create a time picker that displays a static (fixed) list of time slots t
 
 <img style="width:300px" src="img/ConvoBuilder/questions_timePicker1.png">
 
-**Response Message settings**
+#### Response Message settings
 
 The Response Message settings define how to display the time picker that’s initially presented to the consumer.
 
@@ -93,7 +99,7 @@ Response Message settings also provide the text in the header of the actual time
 | Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters.  | Required  | Meet with our technician |
 | Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | Please select your preferred time |
 
-**Event settings**
+#### Event settings
 
 | Setting  | Description  | Required or Optional | Example  |
 |---|---|---|---|
@@ -102,7 +108,7 @@ Response Message settings also provide the text in the header of the actual time
 | Timezone offset (minutes from GMT) | The number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.<br><br>**The offset must be expressed in positive numbers.**<br><br>If the offset is positive, use the formula: (offset in hours * 60).<br><br>If the offset is negative, use the formula: ((24 - offset in hours) * 60).| Optional  | In Central European Summer Time, Mannheim, Germany is GMT+2, which is a positive offset, so 2 * 60 = **120**. <br><br> In Eastern Daylight Time, New York, New York is GMT-4, which is a negative offset, so ((24 - 4) * 60) = **1200**. |
 
 
-**Location settings**
+#### Location settings
 
 Location settings support features that play a role after the consumer has selected a time slot and sent the reply. The consumer can tap the reply message bubble to view location information, if available. The consumer can also tap *Add to Calendar* or *Get Directions*. The location name supports the former (*Add to Calendar*); the latitude, the longitude, and the radius support the latter (*Get Directions*).
 
@@ -113,7 +119,7 @@ Location settings support features that play a role after the consumer has selec
 | Longitude | The location’s longitude (a numeric double value). | Optional | 8.4682869 |
 | Radius | The location’s radius in meters (a numeric double value). This setting is ignored if Latitude and Longitude are missing or empty. | Optional | 10 |
 
-**Time slot settings**
+#### Time slot settings
 
 <img style="width:250px" src="img/ConvoBuilder/questions_timePicker3.png">
 
@@ -126,7 +132,7 @@ Location settings support features that play a role after the consumer has selec
 
 <img style="width:600px" src="img/ConvoBuilder/questions_timePicker7.png">
 
-**Reply Message settings**
+#### Reply Message settings
 
 The Reply Message settings define how to display the consumer’s reply after the consumer picks a time slot.
 
@@ -139,16 +145,17 @@ The Reply Message settings define how to display the consumer’s reply after th
 | Reply Message Title | Not used; this is replaced with the selected time.  | Not applicable  | Not applicable |
 | Reply Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | See you then! |
 
-**Dynamically populating a time picker**
+#### Populating a Time Picker question dynamically
 
-You can dynamically populate the time picker using data received from an [API integration](conversation-builder-integrations-api-integrations.html). For example, you might set the Start Time field to something like this:
+You can populate the Time Picker fields with static information, or they can be dynamically populated during run time using data received from an [API integration](conversation-builder-integrations-api-integrations.html).
 
-`{$.api_myScheduler.interactiveData.data.event.timeslots[i].startTime}`
+<img style="width:400px" src="img/ConvoBuilder/questions_timePicker8.png">
 
-{: .important}
-As indicated above, start dates and times must be **in GMT**, so depending on the data received from the API call, you might need to do some preprocessing to convert the times. Also note that the Duration field can't be populated dynamically; you must manually specify this value.
+As indicated earlier in this topic, start dates and times must be **in GMT**, so depending on the data received from the API call, you might need to do some preprocessing to convert the times.
 
-**The user response to a time picker**
+The Duration field can't be populated dynamically; you must manually specify this value.
+
+#### The user response to a time picker
 
 Once a user makes their selection in the time picker, the reply is sent back to the bot as "For" plus the event title, followed by "User Selected: " plus the date and time expressed in GMT.
 
