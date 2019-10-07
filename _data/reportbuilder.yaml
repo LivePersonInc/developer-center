@@ -315,7 +315,7 @@
   Metric: MCS
   analysisType: Consumer Experience
   Channel: Messaging
-  formulaOptional: “AVERAGE OF 3 POSSIBLE MCS VALUES: 1) POSITIVE = 100 2) NEUTRAL = 0 3) NEGATIVE = -100“
+  formulaOptional: “AVERAGE OF 3 POSSIBLE MCS VALUES - 1) POSITIVE = 100 2) NEUTRAL = 0 3) NEGATIVE = -100“
   Description: Meaningful Connection Score (MCS - an automated, real time measurement of consumer sentiment) for closed conversations, including unassigned conversations
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point (“Source Type“)
@@ -532,7 +532,7 @@
   analysisType: Agent Productivity
   Channel: Messaging
   formulaOptional:
-  Description: “The number of times another agent (user) takes over conversations from a given agent. Used to analyse how many time conversations were taken over FROM a bot or human agent (Example: How many conversations were taken over from 'Concierge-Bot' agent/user?).“
+  Description: “The number of times another agent (user) takes over conversations from a given agent. Used to analyse how many time conversations were taken over FROM a bot or human agent (Example - How many conversations were taken over from 'Concierge-Bot' agent/user?).“
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point (“Source Type“)
 - metricitem:
@@ -588,7 +588,7 @@
   analysisType: Consumer Experience
   Channel: Messaging
   formulaOptional: COUNT DISTINCT CONSUMERS
-  Description: “The number of consumers who were active during a selected timeframe. A consumer is marked as active if at least one of the following occurred: 1) Consumer opened a conversation 2) Consumer sent a message in a conversation 3) Consumer closed the conversation“
+  Description: “The number of consumers who were active during a selected timeframe. A consumer is marked as active if at least one of the following occurred - 1) Consumer opened a conversation 2) Consumer sent a message in a conversation 3) Consumer closed the conversation“
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point (“Source Type“)
 - metricitem:
@@ -1620,7 +1620,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional: EXPOSURES (CAMP) / EXPOSED (CAMP)
-  Description: “Average number of times consumers were exposed to each Engagement in the selected campaign. Example: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement in the selected campaign. (Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)“
+  Description: “Average number of times consumers were exposed to each Engagement in the selected campaign. Example - Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement in the selected campaign. (Pre-aggregated by Campaign. Summarizing this metric across different campaigns may not equal a total of distinct objects)“
   Dashboard: Business Activity
   filteredBy: Campaign,End-Point (“Source Type“)
 - metricitem:
@@ -1756,7 +1756,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional: EXPOSURES (LOB) / EXPOSED (LOB)
-  Description: “Average number of times consumers were exposed to each Engagement in any of the campaigns assigned to the selected Line of Business. Example: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement in the selected LoB. (Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)“
+  Description: “Average number of times consumers were exposed to each Engagement in any of the campaigns assigned to the selected Line of Business. Example - Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement in the selected LoB. (Pre-aggregated by LoB. Summarizing this metric across different campaigns may not equal a total of distinct objects)“
   Dashboard: Business Activity
   filteredBy: LoB,End-Point (“Source Type“)
 - metricitem:
@@ -1844,7 +1844,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional: EXPOSURES (BRAND) / EXPOSED (BRAND)
-  Description: “Average number of times consumers were exposed to each Engagement (setup in the campaigns the consumer was targeted by). Example: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement.“
+  Description: “Average number of times consumers were exposed to each Engagement (setup in the campaigns the consumer was targeted by). Example - Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement.“
   Dashboard: Business Activity
   filteredBy: End-Point (“Source Type“)
 - metricitem:
@@ -1924,7 +1924,7 @@
   analysisType: Campaign Funnel
   Channel: Messaging,Chat
   formulaOptional: EXPOSURES (ENTRY POINT) / EXPOSED (ENTRY POINT)
-  Description: “Average number of times a consumer was exposed to each Engagement assigned to a specific entry point. Example: Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement. (Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)“
+  Description: “Average number of times a consumer was exposed to each Engagement assigned to a specific entry point. Example - Consumer was exposed to EngagementA and EngagementB during the same session. This session will contribute +2 to the numerator, and +1 to the denominator. The denominator counts sessions during which the consumer was exposed at least once to any engagement. (Pre-aggregated by Entry Point. Summarizing this metric across different entry points may not equal a total of distinct objects)“
   Dashboard: Business Activity
   filteredBy: End-Point (“Source Type“)
 - metricitem:
@@ -2700,7 +2700,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: “The average time a survey is available to the consumer. During this time, the consumer may respond to presented questions. Measured from the time the survey is offered by the Survey Bot till the time the survey is closed. Attributed to the Date/Hour during which the survey was offered (not close time of the survey). Format: [h]:mm:ss“
+  Description: “The average time a survey is available to the consumer. During this time, the consumer may respond to presented questions. Measured from the time the survey is offered by the Survey Bot till the time the survey is closed. Attributed to the Date/Hour during which the survey was offered (not close time of the survey). Format - [h]:mm:ss“
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point (“Source Type“)
 - metricitem:
@@ -2724,7 +2724,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional: '[Answered Question] / [Offered Question]'
-  Description: “Formula: [Answered Question] / [Offered Question]. The percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot.“
+  Description: “Formula - [Answered Question] / [Offered Question]. The percentage (%) of questions answered with a valid response by the consumer out of the total questions offered to the consumer by the bot.“
   Dashboard: Messaging Performance
   filteredBy: Skill,End-Point (“Source Type“)
 - metricitem:
@@ -2732,7 +2732,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: “The time on average taken by the consumer to respond to a question. Measured from the time the Bot presented a question, to the time the consumer submitted a response to that question (recognized or unrecognized by the Bot). Attributed to the time the question was offered (not response time). If no response was given to the question, the metric will be associated with an empty cell in the dashboard (Null). Format: [h]:mm:ss“
+  Description: “The time on average taken by the consumer to respond to a question. Measured from the time the Bot presented a question, to the time the consumer submitted a response to that question (recognized or unrecognized by the Bot). Attributed to the time the question was offered (not response time). If no response was given to the question, the metric will be associated with an empty cell in the dashboard (Null). Format - [h]:mm:ss“
   Dashboard: Messaging Performance
   filteredBy: Skill,End-Point (“Source Type“)
 - metricitem:
@@ -2764,7 +2764,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: “The number of times consumers responded with a valid answer, recognized by the bot as a pre-configured answer. Additional buckets include: “Skipped” for questions with configured Skip option “Unrecognized by bot” for counting how many invalid answers were submitted for a question  Attributed to the time the survey was offered (not close time). Calculated at the Brand level.“
+  Description: “The number of times consumers responded with a valid answer, recognized by the bot as a pre-configured answer. Additional buckets include - “Skipped” for questions with configured Skip option “Unrecognized by bot” for counting how many invalid answers were submitted for a question  Attributed to the time the survey was offered (not close time). Calculated at the Brand level.“
   Dashboard: Messaging Performance
   filteredBy: Skill,Engagement,Campaign,LoB,End-Point (“Source Type“)
 - metricitem:
@@ -2804,7 +2804,7 @@
   analysisType: Surveys
   Channel: Messaging
   formulaOptional:
-  Description: “The number of times consumers responded with a valid answer, recognized by the bot as a pre-configured answer. Additional buckets include: “Skipped” for questions with configured Skip option “Unrecognized by bot” for counting how many invalid answers were submitted for a question  Attributed to the time the survey was offered (not close time). Calculated at the Agent and Skill level.“
+  Description: “The number of times consumers responded with a valid answer, recognized by the bot as a pre-configured answer. Additional buckets include - “Skipped” for questions with configured Skip option “Unrecognized by bot” for counting how many invalid answers were submitted for a question  Attributed to the time the survey was offered (not close time). Calculated at the Agent and Skill level.“
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point (“Source Type“)
 - metricitem:
@@ -3011,7 +3011,7 @@
   Metric: INCREMENTAL CONVERSIONS (ENG)
   analysisType: Campaign Conversions
   Channel: Messaging
-  formulaOptional: -
+  formulaOptional:
   Description: The number  of total Conversions that may not have otherwise occurred (Incremental Conversion) (calculated at the Engagement level)
   Dashboard: Business Activity for Messaging
   filteredBy: <null>
@@ -3019,7 +3019,7 @@
   Metric: MESSAGING ENGAGEMENT VIEWS
   analysisType: Campaign Conversions
   Channel: Messaging
-  formulaOptional: -
+  formulaOptional:
   Description: Number of time san engagement offer was presented to a consumer
   Dashboard: Business Activity for Messaging
   filteredBy: Date, Initial Device, Goal Type, Group , Source Type
@@ -3171,7 +3171,7 @@
   Metric: HANDLED CONVERSATIONS BY HUMAN
   analysisType: Agent Productivity
   Channel: Messaging
-  formulaOptional: -
+  formulaOptional:
   Description: The number of conversations in which the agent sent at least one message during the selected timeframe.
   Dashboard: Performance for Messaging
   filteredBy: Agent, Group, Skill, Engagement, Campaign, LoB, End-Point (Source Type)
@@ -3211,7 +3211,7 @@
   Metric: MAX. AGENT LOAD
   analysisType: Agent Utilization
   Channel: Messaging
-  formulaOptional: -
+  formulaOptional:
   Description: The maximum conversation load on an agent. The load is determined by the weights assigned to conversations by Smart Capacity. A conversation can have a maximum weight of 1 and a minimum of 0.1.
   Dashboard: Performance for Messaging
   filteredBy: Agent, Group
