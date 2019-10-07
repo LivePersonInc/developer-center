@@ -34,7 +34,7 @@ Most conversations involve plain text like what you are reading now. However, a 
 
 ![Carousel](img/carousel.gif)
 
-Like with any question, a structured question expect and waits for the user response before executing the next action.
+Like with any question, a structured question expects and waits for the user response before executing the next action.
 
 {: .important}
 Structured questions aren't supported on all channels; be sure to verify the channel's support before designing your bot. For example, Facebook supports the carousel, but Apple Business Chat doesn't. Apple Business Chat offers its list picker instead.
