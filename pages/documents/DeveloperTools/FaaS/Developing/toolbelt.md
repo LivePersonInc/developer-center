@@ -69,7 +69,7 @@ httpClient(URL, {
 
 ### LivePerson Client:
 
-The LivePerson (LP) Client is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization.
+The LivePerson (LP) Client is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. To use the LP Client you need to [whitelist](liveperson-functions-development-whitelisting-domains.html) `api.liveperson.net`.
 
  Every LivePerson API has a service name. This is documented in the respective page on [developers.liveperson.com](https://developers.liveperson.com). The [Messaging Interactions API](messaging-interactions-api-overview.html) for instance has the service name `msgHist`. The LP Client expects the LpService name as the first argument. This can be done by using our `LpServices` enum or by manually providing the service name as a string. Each of the API-domains related to the `LpServices` enum is whitelisted in LivePerson Functions by default. (s. [Whitelisted Domains](liveperson-functions-development-whitelisting-domains.html#domains-whitelisted-by-default) for more information)
  
@@ -407,13 +407,13 @@ The method collects every message which contains a keyword in an array. It retri
     tag: "keywordRef:Keyword"
   },
   {
-    message: "We definetely will, because keywords are awesome!",
+    message: "We definitely will, because keywords are awesome!",
     sentTimestamp: 1560764734592,
     sentBy: "Agent",
     tag: "keywordRef:Keyword"
   },
   {
-    message: "We definetely will, because keywords are awesome!",
+    message: "We definitely will, because keywords are awesome!",
     sentTimestamp: 1560764734592,
     sentBy: "Agent",
     tag: "keywordRef:awesome"
