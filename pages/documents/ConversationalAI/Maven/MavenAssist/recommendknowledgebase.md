@@ -1,12 +1,13 @@
 ---
 pagename: Recommended Actions for Knowledge Base
 redirect_from:
+  - maven-maven-assist-recommended-actions-for-knowledge-base.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven AI
 subfoldername: Maven Assist
-permalink: maven-maven-assist-recommended-actions-for-knowledge-base.html
+permalink: maven-ai-maven-assist-recommended-actions-for-knowledge-base.html
 indicator: messaging
 ---
 

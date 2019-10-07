@@ -7,7 +7,7 @@ sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven AI
 subfoldername: Maven Assist
-permalink: maven-maven-assist-recommended-actions-for-automations.html
+permalink: maven-ai-maven-assist-recommended-actions-for-automations.html
 indicator: messaging
 ---
 
