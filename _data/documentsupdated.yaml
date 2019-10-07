@@ -164,7 +164,7 @@
           - subpagename: Using Environment Variables
           #- subpagename: Common Conversation Patterns
           - subpagename: Versions, Releases, & Change Management
-  - documentname: Maven
+  - documentname: Maven AI
     pages:
       - pagename: Overview
       - pagename: Maven Assist

@@ -1,12 +1,13 @@
 ---
 pagename: Overview
 redirect_from:
+  - maven-askmaven-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven
+documentname: Maven AI
 subfoldername: AskMaven
-permalink: maven-askmaven-overview.html
+permalink: maven-ai-askmaven-overview.html
 indicator: messaging
 ---
 
