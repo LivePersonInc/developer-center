@@ -265,15 +265,20 @@ Figure 8.1 Activity excerpt for a close conversation request
 
 ### Engagement attributes as context
 
-Third-Party bot allows the user to collect engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step. These attributes are **only** collected at the start of a conversation. Moreover, these are not updated throughout the life cycle of a conversation and only passed along with each message request. In Microsoft Bot these engagement attributes are added to the property `lpSdes` which is part of another custom property of `context`. This context information within a conversation is preserved/passed in `channelData` property. More information about `channelData` can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)). An example of the request body can be seen below:
+Third-Party bot allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 9.1.
+
+<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+Figure 9.1 Conversation Type step in creation/modification of bot configuration.
+
+These attributes are **only** collected at the start of a conversation. Moreover, these are not updated throughout the life cycle of a conversation and only passed along with each message request. In Microsoft Bot these engagement attributes are added to the property `lpSdes` which is part of another custom property of `context`. This context information within a conversation is preserved/passed in `channelData` property (further information about `channelData` can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)). An example of the request body can be seen below:
 
 ```json
 {
-  "text": "",
+  "text": "Some Conversation Text",
   "channelData": {
     "context": {
-      "lpEvent": {},
-      "lpSdes": {} // Engagement Attributes will come here
+      "lpEvent": {}, // Holds LP Events
+      "lpSdes": {}
     }
   }
 }
@@ -281,11 +286,11 @@ Third-Party bot allows the user to collect engagement attributes (more informati
 
 ### Welcome Event
 
-The behaviour of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual Liveperson product works..
+The behavior of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual LivePerson product works..
 
 A Messaging conversation qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by the bot and an intent determined.
 
-A Chat conversation is considered started when the chat is routed to an agent. Best practice is for the agent to provide the first response. In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilised as a start point for the bot to prompt the user to provide input and progress the conversation.
+A Chat conversation is considered started when the chat is routed to an agent. Best practice is for the agent to provide the first response. In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilized as a start point for the bot to prompt the user to provide input and progress the conversation.
 
 Ensure you have an ‘entry point’ in your bot that responds to the default ‘WELCOME’ action send by a new chat customer.
 
@@ -301,4 +306,4 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
 }
 ```
 
-Figure 9.1 Customer activity excerpt on a new chat
+Figure 10.1 Customer activity excerpt on a new chat

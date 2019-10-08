@@ -154,22 +154,6 @@ To handle this gracefully, we recommend building a simple intent that handles a 
 
    Figure 2.2
 
-### Engagement attributes as context
-
-Third-Party bot allows user to collect engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if this option is check in the Conversation Type selection step. These attributes are **only** collected in the start of a conversation. These are not updated throughout the life cycle of a conversation and only passed along with each messages request. For DialogFlow V2 these engagement attributes are added to the property `lpSdes` that is sub-property of of the `payload` (more information about this parameter can be found [here](https://googleapis.dev/nodejs/dialogflow/latest/google.cloud.dialogflow.v2.html#.QueryParameters)). An example of the request body can be seen below:
-
-```json
-{
-  "session": ,
-  "queryParams": {
-    "payload": {
-      "lpEvent": {},
-      "lpSdes": {}
-    }
-  }
-}
-```
-
 ### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
@@ -393,3 +377,24 @@ The action field needs to be set to **CLOSE_CONVERSATION** to instruct the conne
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_12.png">
 
 Figure 7.1
+
+### Engagement attributes as context
+
+Third-Party bot allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.1.
+
+<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+Figure 8.1 Conversation Type step in creation/modification of bot configuration.
+
+These attributes are **only** collected in the start of a conversation. Moreover, engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow V2 these engagement attributes are added to the property `lpSdes` that is sub-property of of the `payload` (more information about `payload` parameter can be found [here](https://googleapis.dev/nodejs/dialogflow/latest/google.cloud.dialogflow.v2.html#.QueryParameters)). An example of the request body can be seen below:
+
+```json
+{
+  "session": "SomeSession",
+  "queryParams": {
+    "payload": {
+      "lpEvent": {}, // Holds LP Events
+      "lpSdes": {}
+    }
+  }
+}
+```
