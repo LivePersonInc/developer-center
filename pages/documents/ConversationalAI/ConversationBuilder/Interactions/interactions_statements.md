@@ -28,9 +28,9 @@ If your business uses Apple’s Business Chat service to chat with consumers via
 
 <img style="width:450px" src="img/ConvoBuilder/statements_richLink.png">
 
-Apple rich links let consumers directly preview an inline image or video. If you were to use a plain URL for an inline image or video sent through Apple Business Chat, the consumer would have to tap the “Tap to Load Preview” message to load the content. But with an Apple rich link, the content is displayed immediately.
+Apple rich links let consumers directly preview an inline image or video. If you were to use a plain URL for an inline image or video sent through Apple Business Chat, the consumer would have to tap the “Tap to Load Preview” message to load the content. But with an Apple rich link, the content is displayed immediately. (The interaction has been developed per Apple's Rich Link specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/sending_rich_link_messages).)
 
-<img style="width:450px" src="img/ConvoBuilder/statements_richLink2.png">
+<img style="width:500px" src="img/ConvoBuilder/statements_richLink2.png">
 
 #### Rich link settings
 
