@@ -152,7 +152,7 @@
           - subpagename: Introduction
           - subpagename: Debugging and Logging
           - subpagename: Get and Set User Data and Variables
-          - subpagename: Get and Set Conversation Flow Data 
+          - subpagename: Get and Set Conversation Flow Data
           - subpagename: Sending Messages
           - subpagename: Context Session Store Wrapper
       #- pagename: Keyword Triggers
@@ -720,6 +720,7 @@
     - pagename: SDK Attributes
       subpages:
       - subpagename: Attributes
+      - subpagename: Deprecated Attributes
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:
