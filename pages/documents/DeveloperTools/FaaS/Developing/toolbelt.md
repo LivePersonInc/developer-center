@@ -72,7 +72,7 @@ httpClient(URL, {
 The LivePerson (LP) Client is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. To use the LP Client you need to [whitelist](liveperson-functions-development-whitelisting-domains.html) `api.liveperson.net`.
 
  Every LivePerson API has a service name. This is documented in the respective page on [developers.liveperson.com](https://developers.liveperson.com). The [Messaging Interactions API](messaging-interactions-api-overview.html) for instance has the service name `msgHist`. The LP Client expects the LpService name as the first argument. This can be done by using our `LpServices` enum or by manually providing the service name as a string. Each of the API-domains related to the `LpServices` enum is whitelisted in LivePerson Functions by default. (s. [Whitelisted Domains](liveperson-functions-development-whitelisting-domains.html#domains-whitelisted-by-default) for more information)
- 
+
 Additionally, most of the LivePerson API calls need authorization. The LP Client takes care of that by automatically creating the respective HTTP headers. In order to perform this authorization, the LP Client uses credentials from an API-key. Each account using Liveperson Functions has an API-key called `lp-faas-default` by default, which is visible in Live Engage. This API-key is able to authenticate to the following APIs:
 
 <table style="width: 100%;">
@@ -165,7 +165,7 @@ Additionally, most of the LivePerson API calls need authorization. The LP Client
 
 Currently, only APIs that use [API Key](guides-gettingstarted.html) authorization are supported.
 
-**Using APIs not covered in default API-key/Whitelisting**
+#### Using APIs not covered in default API-key/Whitelisting
 
 If you need to access an API which is not covered by the default API-key/Whitelisting, you need to perform the following steps:
  1. Create and maintain the API Key credentials
@@ -204,7 +204,7 @@ const options = {
         conversationId
     },
     json: true,
-    /** insert the name of your custom authentication secret here - Use only 
+    /** insert the name of your custom authentication secret here - Use only
     *   if you want to bypass the default API-key and understand the ramifications.
     */
     appKeySecretName: 'my-custom-secret-name'
