@@ -219,6 +219,8 @@
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
+      - pagename: Methods
+      - pagename: Events
       - pagename: Examples
       - pagename: Conversation Metadata Guide
       - pagename: Release Notes
