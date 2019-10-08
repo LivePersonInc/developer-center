@@ -21,24 +21,6 @@ Audio statements currently aren't supported due to a limitation regarding the ch
 ### Video statements
 Video statements currently aren't supported, so use a text statement that includes the video URL as a link.
 
-### Apple rich link statements
-If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use this type of interaction to send a richer, more interactive and structured message, for example:
-
-<img style="width:450px" src="img/ConvoBuilder/statements_richLink.png">
-
-Apple rich links let consumers directly preview an inline image or video. If you were to use a plain URL for an inline image or video sent through Apple Business Chat, the consumer would have to tap the “Tap to Load Preview” message to load the content. But with an Apple rich link, the content is displayed immediately.
-
-**Rich link settings**
-
-| Setting | Description | Required or Optional | Example |
-| --- | --- | --- | --- | 
-| ADD IMAGE OR VIDEO > Image URL | For an image, this is the URL for the image file. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting).<br><br>Keep images fairly small in size \(MB\) and dimension, so they load quickly. For a video, this is the URL for the background image to display beneath the play button/link. Consider using a complementary image from the video itself. | Required | https://www\.mysite\.com/images/myImage\.jpg |
-| URL | For an image, this is the item/business URL to load when the image is clicked. For a video, this is the URL for the video file to play when clicked. | Required | https://www\.mysite\.com/videos/myVideo\.mp4 |
-| Title | The title of the rich link. | Required | Flower arranging 101 |
-
-**Notes**
-- While LiveEngage supports formatting in Apple rich links, Conversation Builder currently doesn't.
-
 QUESTIONS
 
 Questions present information to the user---a question that expects a reply of some kind, a list of things to pick from, etc.---and they expect and wait for a user response before executing the next action.
