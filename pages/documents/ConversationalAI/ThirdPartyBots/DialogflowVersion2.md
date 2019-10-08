@@ -154,6 +154,22 @@ To handle this gracefully, we recommend building a simple intent that handles a 
 
    Figure 2.2
 
+### Engagement attributes as context
+
+Third-Party bot allows user to collect engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if this option is check in the Conversation Type selection step. These attributes are **only** collected in the start of a conversation. These are not updated throughout the life cycle of a conversation and only passed along with each messages request. For DialogFlow V2 these engagement attributes are added to the property `lpSdes` that is sub-property of of the `payload` (more information about this parameter can be found [here](https://googleapis.dev/nodejs/dialogflow/latest/google.cloud.dialogflow.v2.html#.QueryParameters)). An example of the request body can be seen below:
+
+```json
+{
+  "session": ,
+  "queryParams": {
+    "payload": {
+      "lpEvent": {},
+      "lpSdes": {}
+    }
+  }
+}
+```
+
 ### Welcome Event
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
@@ -305,7 +321,7 @@ Figure 5.2 Dialogflow Example Custom Payload
 Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
- ```json
+```json
 {
   "structuredContent": {
     "quickReplies": {
@@ -354,14 +370,15 @@ For detailed information on Quick Replies check out the documentation for the sp
     },
     "message": "Do you like Bots?"
   },
-   "metadata": [
+  "metadata": [
     {
       "id": "1234",
       "type": "ExternalId"
     }
   ]
 }
- ```
+```
+
 Figure 6.1 QuickReplies Structured Content example
 
 ### Close Chat/Conversation
