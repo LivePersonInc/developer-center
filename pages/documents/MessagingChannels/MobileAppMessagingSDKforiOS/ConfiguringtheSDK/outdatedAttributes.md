@@ -1,5 +1,5 @@
 ---
-pagename: Outdated Attributes
+pagename: Historical Attributes
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"

@@ -722,7 +722,7 @@
       - subpagename: Attributes
       - subpagename: Attributes Design Sheet
       - subpagename: Deprecated Attributes
-      - subpagename: Outdated Attributes
+      - subpagename: Historical Attributes
     - pagename: String Localization
       subpages:
       - subpagename: Date and Time Formats
