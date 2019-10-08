@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: SDK Attributes
-permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-deprecated-attributes.html
+permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-historical-attributes.html
 indicator: messaging
 ---
 
