@@ -172,29 +172,7 @@ Settings for Messaging: <br />
 
 Settings for Engagement Attributes: <br />
 
-Third-Party bot allows user to collect engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) using this options. Once this option is checked, then on **_start_** of every conversation engagement attributes are selected and sent as context information. Information related ot Engagement Attributes usage per AI vendor can be found in relevant links below:
-
-<ul>
-  <li>
-    DialogFlow V1
-  </li>
-  <li>
-    DialogFlow V2
-  </li>
-  <li>
-    Amazon Lex
-  </li>
-  <li>
-    Microsoft Bot Framework
-  </li>
-  <li>
-    Watson Assistant V1
-  </li>
-  <li>
-     Watson Assistant V2
-  </li>
- 
-</ul>
+Third-Party bot allows the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is selected. These attributes are collected only on **_start_** of every conversation. These attributes are then passed along every message as context information.
 
 {:start="5"}
 
