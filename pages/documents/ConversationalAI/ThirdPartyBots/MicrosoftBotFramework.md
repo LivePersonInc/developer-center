@@ -57,7 +57,7 @@ The Direct Line Secret can be found in the Azure Portal if you select the corres
 Figure 1.2 The Direct Line Secret
 
 For validation of the credentials provided, you can perform a connection test to see if the messages can be sent to the channel with the provided secret by clicking on the button "Test Connection".
-For this test it is not necessary for the bot to respond with a message. 
+For this test it is not necessary for the bot to respond with a message.
 
 ### Limitations
 
@@ -77,41 +77,39 @@ To send structured content from a bot implemented with the Microsoft Bot Framewo
 
 This should contain a valid structured content body, along with an optional property containing metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before using it in a bot.
 
-
 ```json
 {
   "type": "message",
-  "text": "", 
- "channelData": {
-     "metadata": [
-       {
-         "type": "ExternalId",
-          "id": "ABCD1234"
-       }
-     ],
-     "structuredContent": {
-       "type": "vertical",
-       "elements": [
-         {
-           "type": "button",
-           "click": {
-             "actions": [
-               {
-                 "text": "Recommend me a movie",
-                 "type": "publishText"
-               }
-             ]
-           },
-           "title": "Recommend a movie"
-         }
-       ]
-     }
+  "text": "",
+  "channelData": {
+    "metadata": [
+      {
+        "type": "ExternalId",
+        "id": "ABCD1234"
+      }
+    ],
+    "structuredContent": {
+      "type": "vertical",
+      "elements": [
+        {
+          "type": "button",
+          "click": {
+            "actions": [
+              {
+                "text": "Recommend me a movie",
+                "type": "publishText"
+              }
+            ]
+          },
+          "title": "Recommend a movie"
+        }
+      ]
+    }
   }
 }
 ```
 
 Figure 4.1 Activity with Structured Content
-
 
 ### Sending Quick Replies (Structured Content)
 
@@ -122,67 +120,66 @@ For detailed information on Quick Replies check out the documentation for the sp
 ```json
 {
   "type": "message",
-  "text": "", 
- "channelData": {
-     "metadata": [
-       {
-         "type": "ExternalId",
-          "id": "ABCD1234"
-       }
-     ],
-     "structuredContent": {
-           "quickReplies": {
-             "type": "quickReplies",
-             "itemsPerRow": 8,
-             "replies": [
-               {
-                 "type": "button",
-                 "tooltip": "yes i do",
-                 "title": "yes",
-                 "click": {
-                   "actions": [
-                     {
-                       "type": "publishText",
-                       "text": "yep"
-                     }
-                   ],
-                   "metadata": [
-                     {
-                       "type": "ExternalId",
-                       "id": "Yes-1234"
-                     }
-                   ]
-                 }
-               },
-               {
-                 "type": "button",
-                 "tooltip": "No!",
-                 "title": "No!",
-                 "click": {
-                   "actions": [
-                     {
-                       "type": "publishText",
-                       "text": "No!"
-                     }
-                   ],
-                   "metadata": [
-                     {
-                       "type": "ExternalId",
-                       "id": "No-4321"
-                     }
-                   ]
-                 }
-               }
-             ]
-           },
-           "message": "Do you like Bots?"
-     }
+  "text": "",
+  "channelData": {
+    "metadata": [
+      {
+        "type": "ExternalId",
+        "id": "ABCD1234"
+      }
+    ],
+    "structuredContent": {
+      "quickReplies": {
+        "type": "quickReplies",
+        "itemsPerRow": 8,
+        "replies": [
+          {
+            "type": "button",
+            "tooltip": "yes i do",
+            "title": "yes",
+            "click": {
+              "actions": [
+                {
+                  "type": "publishText",
+                  "text": "yep"
+                }
+              ],
+              "metadata": [
+                {
+                  "type": "ExternalId",
+                  "id": "Yes-1234"
+                }
+              ]
+            }
+          },
+          {
+            "type": "button",
+            "tooltip": "No!",
+            "title": "No!",
+            "click": {
+              "actions": [
+                {
+                  "type": "publishText",
+                  "text": "No!"
+                }
+              ],
+              "metadata": [
+                {
+                  "type": "ExternalId",
+                  "id": "No-4321"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "message": "Do you like Bots?"
+    }
   }
 }
 ```
 
 Figure 5.1 Activity with Quick Replies
- 
 
 ### Change Time To Response of Conversation
 
@@ -190,10 +187,10 @@ By providing a specific **action** in the **channelData**, the bot can change th
 
 LivePerson Messaging uses 4 different types of priorities:
 
-* "URGENT"
-* “NORMAL”
-* “PRIORITIZED”
-* “CUSTOM”
+- "URGENT"
+- “NORMAL”
+- “PRIORITIZED”
+- “CUSTOM”
 
 Only “CUSTOM” can set a value. The unit of the value is in seconds. The values of the other types are defined in the Agent Workspace.
 
@@ -202,18 +199,19 @@ A text message can also be provided simultaneously in the activity json.
 ```json
 {
   "type": "message",
-  "text": "", 
+  "text": "",
   "channelData": {
     "action": {
-        "name": "CHANGE_TTR",
-        "parameters": {
-          "ttrType": "CUSTOM",
-          "value": "300"
-        }
+      "name": "CHANGE_TTR",
+      "parameters": {
+        "ttrType": "CUSTOM",
+        "value": "300"
+      }
     }
   }
 }
 ```
+
 Figure 6.1 Activity with TTR Change
 
 ### Transfer / Escalations
@@ -231,20 +229,22 @@ An additional text message can also be provided.
 ```json
 {
   "type": "message",
-  "text": "", 
+  "text": "",
   "channelData": {
     "action": {
-        "name": "TRANSFER",
-        "parameters": {
-          "skill": "CUSTOM"
-        }
+      "name": "TRANSFER",
+      "parameters": {
+        "skill": "CUSTOM"
+      }
     }
   }
 }
 ```
+
 Figure 7.1 Activity excerpt for a transfer Request
 
 ### Close Chat/Conversation
+
 To close a chat or messaging conversation, we provide the action object as we did for a transfer. The activity should contain the following action.
 
 An additional text message can also be provided.
@@ -252,15 +252,32 @@ An additional text message can also be provided.
 ```json
 {
   "type": "message",
-  "text": "", 
+  "text": "",
   "channelData": {
     "action": {
-        "name": "CLOSE_CONVERSATION"
+      "name": "CLOSE_CONVERSATION"
     }
   }
 }
 ```
+
 Figure 8.1 Activity excerpt for a close conversation request
+
+### Engagement attributes as context
+
+Third-Party bot allows the user to collect engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step. These attributes are **only** collected at the start of a conversation. Moreover, these are not updated throughout the life cycle of a conversation and only passed along with each message request. In Microsoft Bot these engagement attributes are added to the property `lpSdes` which is part of another custom property of `context`. This context information within a conversation is preserved/passed in `channelData` property. More information about `channelData` can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)). An example of the request body can be seen below:
+
+```json
+{
+  "text": "",
+  "channelData": {
+    "context": {
+      "lpEvent": {},
+      "lpSdes": {} // Engagement Attributes will come here
+    }
+  }
+}
+```
 
 ### Welcome Event
 
@@ -275,12 +292,13 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
 ```json
 {
   "type": "message",
-  "text": "", 
+  "text": "",
   "channelData": {
     "action": {
-        "name": "WELCOME"
+      "name": "WELCOME"
     }
   }
 }
 ```
+
 Figure 9.1 Customer activity excerpt on a new chat
