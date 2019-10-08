@@ -281,7 +281,7 @@ This should contain valid structured content, along with any optional metadata r
 Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
- ```json
+```json
 {
   "structuredContent": {
     "quickReplies": {
@@ -330,14 +330,15 @@ For detailed information on Quick Replies check out the documentation for the sp
     },
     "message": "Do you like Bots?"
   },
-   "metadata": [
+  "metadata": [
     {
       "id": "1234",
       "type": "ExternalId"
     }
   ]
 }
- ```
+```
+
 Figure 6.1 QuickReplies Structured Content example
 
 ### Close Chat/Conversation
@@ -363,3 +364,26 @@ Figure 7.1 Lex Example Close Conversation Payload
 <img class="fancyimage" style="width:500px" src="img/lex/image_11.png">
 
 Figure 7.2 - Example in Lex console
+
+### Engagement attributes as context
+
+Third-Party bot allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.1.
+
+<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+Figure 8.1 Conversation Type step in creation/modification of bot configuration.
+
+These attributes are **only** collected at the start of a conversation. These are not updated throughout the life cycle of a conversation and only passed along with each message request. For Lex, engagement attributes are added to the property `lpSdes` inside another custom sub-property `BC-LP-CONTEXT`. For the preservation of the state of engagement attributes across conversation `requestAttributes` property is used (more information about `requestAttributes` can be found [here](https://docs.aws.amazon.com/lex/latest/dg/API_runtime_PostText.html#API_runtime_PostText_RequestSyntax)). An example of the request body can be seen below:
+
+```json
+{
+  "inputText": "",
+  "userId": "",
+  "sessionAttributes": "",
+  "requestAttributes": {
+    "BC-LP-CONTEXT": {
+      "lpEvent": {}, // Holds LP Events
+      "lpSdes": {}
+    }
+  }
+}
+```
