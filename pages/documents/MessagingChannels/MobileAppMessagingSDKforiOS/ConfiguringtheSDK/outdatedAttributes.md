@@ -1,5 +1,5 @@
 ---
-pagename: Deprecated Attributes
+pagename: Outdated Attributes
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -10,7 +10,7 @@ indicator: messaging
 ---
 
 {: .notice}
-Please note: these attributes are relevant for **version 5.1 of the SDK and lower**. For the list of current attributes, please see [this](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html) document.
+Please note: these attributes are relevant for **version 5.0 of the SDK and lower**. For the list of current attributes, please see [this](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html) document.
 
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes-design-sheet.html).
 
