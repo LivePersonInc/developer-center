@@ -17,6 +17,8 @@ This API authorizes users for your application. This is needed so that your appl
 
 This API provides standard oauth 2.0 endpoints to receive and refresh access tokens. Please see the [oauth 2.0 rfc reference](https://tools.ietf.org/html/rfc6749) for more information.
 
+The API also provides the identity of the authenticated user for the purpose of personalization.
+
 ### Getting Started
 
 1. Install a LiveEngage application. Here is a [guide to installing LiveEngage applications](guides-le-applications-installing.html). The following two fields are mandatory for this flow, `grant_types` and `redirect_uris`. In addition, all normally mandatory fields, as detailed in the guide above, should be populated as well. Here is an example showing how to configure them:

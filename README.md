@@ -6,14 +6,17 @@ This repository generates LivePerson's Developers' Community, which can be found
 
 **Table of Contents**
 
-[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)<br>
-[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)<br>
-[Template](https://github.com/LivePersonInc/developers-community#template)<br>
-[Licensing](https://github.com/LivePersonInc/developers-community#licensing)<br>
+* :satellite:[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
+
+* :hammer:[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+
+* :clipboard:[Template](https://github.com/LivePersonInc/developers-community#template)
+
+* :scroll:[Licensing](https://github.com/LivePersonInc/developers-community#licensing)
 
 ### Updating the Documentation
 
-All pages on the site correspond to a Markdown file (.md) which can be found inside the "pages" folder, under the "documents" folder. To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. There's no need for the old Development branch, so please don't create pull requests to it.
+All pages on the site correspond to a Markdown file (.md) which can be found inside `/documents/pages`. To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. There's no need for the old Development branch, so please don't create pull requests to it.
 
 #### Updating/Creating Headers
 
@@ -23,19 +26,13 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `keywords`: This replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
 
-* `documentname`: This key can have either "Documents" or "Solutions". This designates which part of the site the document is under.
+* `documentname`: This key accepts either `Documents` or `Solutions`. This designates which part of the site the document is under.
 
 * `categoryname`: This is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management. Therefore, its level2 is "Contact Center Management".
 
 * `documentname`: This is the API to which the document belongs.
 
 * `subfoldername`: This is a sub-folder to which the document belongs, if there is one.
-
-* `root-link`: **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and displays all document links**. This key accepts a Boolean value. If set to `true`, the document will be the "top" document for the API and all links to the API from the navigation will lead to it.
-
-* `level-order`: **DEPRECATED. No longer needed as the sidebar is now alphabetically organized**. This key accepts an integer. If `root-link` is set to `true`, this key positions the parent API among its category. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Thus, if the Users API (which is under Contact Center Management) has an "Overview" page that has `root-link` set to `true` and `level-order` set to `1`, it will appear before the Skills API (which is also under Contact Center Management) which has an "Overview" page that has `root-link` set to `true` but a `level-order` set to `2`.
-
-* `order`:  **DEPRECATED. No longer needed as the sidebar is now alphabetically organized and the site hierarchy is determined by a manually updated YAML file. See below for more info**. This value accepts an integer. It arranges the documents inside the API. It is sequential, so 1 will display before 2 and 2 before 3 and so on. Note that it doesn't discriminate between folders, so even if you have `level4` defined for some documents, they are still placed on the same sequence as the rest of the documents.
 
 * `permalink`: this key defines the link at which the document can be found. The format of this value **MUST BE** as follows. Any other value format will cause the sidebar to malfunction:
 
@@ -45,10 +42,12 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `indicator`: this key sets the Chat or Messaging indicator (or both) on a document. It accepts `chat`, `messaging` or `both` as its value.
 
+**Any other parameters which are not documented here which you might find in the front-matter are deprecated and are only present for backwards compatibility purposes. These should not be used**.
+
 
 #### Adding New Documents to the Sidebar
 
-Once you've created a new document, you'll need to have it manually added. We chose a manual process for the side for a few reasons. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA). Secondly, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options). Lastly, it decreases site build times (since the `forloops` needed to build a sidebar in a site of our size and complexity are time and resource consuming).
+Once you've created a new document, you'll need to have it manually added. We chose a manual process for the sidebar for a few reasons. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA). Secondly, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options). Lastly, it decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time and resource consuming).
 
 The sidebar's YAML file can be found in the `_data` folder. It's called `documentsupdated.yaml`. **However, only the project's maintainer should edit this file directly. Please do not open Pull Requests with changes to this file but instead contact the project's maintainer directly. As of August 2018, this is Eden Kupermintz, the owner of this repository. You can reach him at edenk [at] liveperson [dot] com.**
 
@@ -74,9 +73,9 @@ Once you have installed Ruby, clone this repository to your machine. Once done, 
 
 **Serving the site after the first install**
 
-You have two options to run the site after the first install:
+You have two options to run the site locally after the first install:
 
-* **Using gulp.js**. [Gulp](https://gulpjs.com/) is a toolkit for automating painful or time-consuming tasks. By simply typing in `gulp` in your command line, it takes care of all the build commands needed to serve the site. It also watches the root directory and will automatically refresh your browser once any changes were built. Gulp and its dependencies is installed locally in the project, so there's no further installation needed from your end.
+* **Using gulp.js**. [Gulp](https://gulpjs.com/) is a toolkit for automating painful or time-consuming tasks. By simply typing in `gulp` in your command line, it takes care of all the build commands needed to serve the site. It also watches the root directory and will automatically refresh your browser once any changes were built. Gulp and its dependencies are installed locally in the project, so there's no further installation needed from your end.
 
 * **Using Jekyll's standard commands**. All you need to run in consequent builds of the site is `bundle exec jekyll serve`. You can add the suffix `--incremental` to enable incremental building of the site. This saves build times since the regeneration feature is enabled by default (the site rebuilds every time you hit "save"). When `--incremental` is used, Jekyll won't rebuild the entire site on every save, only the affected sections. If you'd like the project to automatically open in a new tab, you can add the `-o` flag to the end of the above command.
 
@@ -84,27 +83,7 @@ You have two options to run the site after the first install:
 
 ### Template
 
-Since LivePerson maintains a few types of developer products, this template only applies to REST APIs. Other documents' structure will be determined on a case by case basis. For REST based APIs, the following template **must** be followed while it is only recommended for non-REST based products (for example, you're probably going to include an overview with any document but your product might not have methods).
-
-#### Overview
-
-The overview will contain a textual summary of what the API is capable of, including at least three use cases for the API. It will also describe the authentication method needed for the API, if one exists, and list any known limitations, if they exist.
-
-[Here is a good example](https://github.com/LivePersonInc/developers-community/blob/master/pages/documents/ContactCenterManagement/AgentGroupsAPI/Introduction/overview.md) of an overview document which follows this template.
-
-#### Methods
-
-Each method for the API will have [its own page](https://github.com/LivePersonInc/developers-community/tree/master/pages/documents/ContactCenterManagement/AgentGroupsAPI/methods). Each page will contain a short description of what the method does.
-
-It will then list the request format, including the method, the endpoint URL for it, any requisite headers, and the query parameters of the URL, if they exist. It will the list the request body and its format, breaking down each element in the body in a table and explaining what it does, whether its mandatory and if any notes exist for it.
-
-It will then list an example of the response, breaking down its headers, body, and error codes, if they exist, in a table below the example.
-
-[See this page](https://github.com/LivePersonInc/developers-community/blob/master/pages/documents/ContactCenterManagement/AgentGroupsAPI/methods/create-agent-groups.md) for an example of a method page which follows this template (though note that since all methods in this API share very similar body and entity structures, they are referred to commonly in an appendix).
-
-#### Miscellaneous
-
-Any other considerations, like special security measures, considerations, further limitations, example apps, and the such will be included in their own sections following the methods.
+See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to Product Communications *before* starting to write your document so that we can advise on its structure.
 
 ### Licensing
 

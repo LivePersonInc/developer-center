@@ -30,7 +30,6 @@ Now that we have validated and uploaded our certificate, we must map it to the c
 
 In order to create the mapping object, you will need to use the following method.
 
-
 |Method|      URL|  
 |:--------  |:---  |
 |POST|  https://{domain}/api/account/{accountId}/configuration/ac-common/mtls?v=3.0 |
@@ -38,7 +37,8 @@ In order to create the mapping object, you will need to use the following method
 You can authenticate with this endpoint with oAuth1 or a Bearer.
 
 Service options:
-```
+
+```java
 public enum Services {
     TEST_SERVICE("0"),
     IDP ("1"),
@@ -47,13 +47,14 @@ public enum Services {
 ```
 
 Example body (Certificate array):
-```
+
+```json
 [
     {
         "certificationId": "{idFromPreviousCreation}",
         "serviceId": "0", //From service options
         "enable": true,   //Must be true to work (can be disabled)
-        "url": "{urlToAccessTo}", //The Url protected by the certificate (as will be submitted by runtime, it must match               (parameters exluded))
+        "url": "{urlToAccessTo}", //The Url protected by the certificate (as will be submitted by runtime, it must match
         "siteId": "{siteId}",
         "name": "{CertificateMappingName}",
         "deleted": false
@@ -66,8 +67,6 @@ Example body (Certificate array):
 
 If all previous steps were successful, you can now start using the runtime. The runtime includes two methods:
 
-* [Mapping method](mtls-methods-check-mapping-configuration.html)
+* [Mapping method](mtls-methods-check-mapping-configuration.html) - This method receives triplets of serviceName/url/siteid and returns for each triplet whether a certificate is configured for them. Use this method to make sure your certificate are configured properly.
 
-* [Forward method](mtls-methods-forward-get-request.html)
-
-You can use the first method, to check that the certificate exists and is valid. You can then use the second method to forward the request.
+* [Forward method](mtls-methods-forward-get-request.html) - the request will be mTLS wrapped using the certificate fetched using the provided parameters. The request is then forwarded to the `forwardUrl` specified. The response will return as if contacting the remote endpoint directly.

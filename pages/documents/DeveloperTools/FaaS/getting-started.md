@@ -2,7 +2,7 @@
 pagename: Getting Started
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 permalink: liveperson-functions-getting-started.html
 indicator: both
@@ -10,13 +10,26 @@ redirect_from:
   - function-as-a-service-getting-started.html
 ---
 
-<div class="important">Over the next few months we'll be gradually rolling out LivePerson Functions and can't let everyone in at the same time - <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6zcY6pkIjE-_7Eh0P15Vg6VCnt2N0LmAfQ8wS1eJ9yQQnQg/viewform">join the waitlist now</a> to secure your spot!</div>
 
 ### Before getting started
 
-#### Set User Permissions
+#### Provisioning
+In order to easily integrate LivePerson Functions we will allow LiveEngage Admins to provision your account when entering LivePerson Functions. Provisioning will be triggered after you agree to our terms of use:
 
-Access to the LivePerson Functions platform on your account requires that it has been <strong>enabled</strong> as a feature. Please contact your LivePerson Account Team to have Functions <strong>enabled</strong> on your account. Once <strong>enabled</strong>, access to the interface is restricted to users with the right permission.
+<img src="img/faas-terms-of-use.png" alt="FaaS Terms of Use" style="width:100%;"/>
+
+Once agreed, we will automatically set up your account to easily integrate with the rest of the LivePerson ecosystem including:
+
+* Activating the LivePerson Functions feature on your account
+* [Installing secrets](liveperson-functions-development-storing-secrets.html) you will need to interact with other LivePerson APIs
+* [Whitelisting domains](liveperson-functions-development-whitelisting-domains.html) of internal LivePerson APIs
+
+<div class="notice">
+After provisioning your account with LP Functions, your user will still require <strong>permissions</strong> to be able to access the UI. Please follow the section below to customize your user permissions. Moreover, please contact your LivePerson Account Team in case the provisioning did not finish successfully.
+</div>
+
+
+#### Set User Permissions
 
 There are 3 user permissions pertaining to Functions:
 
@@ -100,11 +113,18 @@ There are 3 user permissions pertaining to Functions:
     <td>✅</td>
     <td>-</td>
   </tr>
+    <tr>
+    <td>schedule</td>
+    <td>create/edit/delete</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
 </tbody>
 </table>
 
 
-You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-customize-permissions.html), but the process is simple:
+You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html), but the process is simple:
 
 * Click on the users tab at the top of the LiveEngage UI and then click profiles
 
@@ -118,7 +138,7 @@ Please follow these steps in order to get SSO unified login working with LivePer
 
 * Contact your LivePerson account representative to get SSO Unified Login feature enabled for your account.
 
-* Once SSO Unified Login is enabled for your account, you can use `https://faas.liveperson.net/api/sso/login?accountId=<accountId>` to login into LivePerson Functions.
+* Once SSO Unified Login is enabled for your account, you can use `https://faas.liveperson.net/api/sso/login?accountId=<accountId>` to login into LivePerson Functions for Production Environments. Please use `va-a.faasui.liveperson.net/api/sso/login?accountId=<accountId>` for Alpha Environments. Moreover you can also use the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain per environment, by providing the service `faasUI` to the Domain API.
 
 <div class="important">Make sure to be logged into LiveEngage before accessing LivePerson Functions from your account.</div>
 

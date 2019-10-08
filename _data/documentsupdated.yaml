@@ -8,6 +8,7 @@
     pages:
     - pagename: API Data Metrics
     - pagename: Authentication
+    - pagename: Create API keys
     - pagename: Data APIs
     - pagename: Domain API
     - pagename: Engagement Attributes
@@ -113,9 +114,15 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
+  - documentname: Conversational AI
+    pages:
+      - pagename: Overview
+      - pagename: Natural Language Understanding
+        subpages:
+          - subpagename: NLU Engines
+          - subpagename: Training and Tuning Your Intents and FAQs
   - documentname: Conversation Builder
     pages:
-      - pagename: Platform Overview
       - pagename: Getting Started
         subpages:
           - subpagename: 0 - Video Tutorials
@@ -123,9 +130,7 @@
           - subpagename: 2 - Intents
           - subpagename: 3 - Integrations
           - subpagename: 4 - Connect to LiveEngage
-          #- subpagename: 5 - Releases and Versioning
-          #- subpagename: Basic - FAQ Bot Tutorial
-          #- subpagename: Basic - Routing Bot Tutorial
+      - pagename: Automations
       - pagename: Templates
         subpages:
           - subpagename: Overview
@@ -134,39 +139,32 @@
           - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
-      - pagename: Conversation Builder
+      - pagename: Automation Workspace Overview
+      - pagename: Dialogs
+      - pagename: Interactions
+      - pagename: Assist
+      - pagename: Interaction Details
+      - pagename: Response Match & Actions
+      - pagename: Variables & Slots
+      - pagename: Integrations
+      - pagename: Scripting Functions
         subpages:
-            - subpagename: Overview
-            - subpagename: Enterprise Integrations
-            - subpagename: Automations
-            - subpagename: Dialogs
-            - subpagename: Interactions
-            - subpagename: Assist
-            - subpagename: Interaction Details
-            - subpagename: Response Match & Actions
-            - subpagename: Variables & Slots
-            - subpagename: Integrations
-            - subpagename: Scripting Functions
-            #- subpagename: Keyword Triggers
-      - pagename: Intent Builder
-        subpages:
-          - subpagename: Overview
-          - subpagename: Entities
-          - subpagename: NLU Engines
-      - pagename: Knowledge Base
-      - pagename: Analytics
-      - pagename: Accounts
-        subpages:
-          - subpagename: User Role Permissions
+          - subpagename: Introduction
+          - subpagename: Debugging and Logging
+          - subpagename: Get and Set User Data and Variables
+          - subpagename: Get and Set Conversation Flow Data 
+          - subpagename: Sending Messages
+          #- subpagename: Context Session Store Wrapper
+      #- pagename: Keyword Triggers
       #- pagename: Operations
+      - pagename: Enterprise Integrations
       - pagename: Best Practices
         subpages:
           - subpagename: Transfer to an Agent or Bot
           - subpagename: Using Environment Variables
           #- subpagename: Common Conversation Patterns
-          - subpagename: Training and Tuning Your Intents and FAQs
           - subpagename: Versions, Releases, & Change Management
-  - documentname: Maven
+  - documentname: Maven AI
     pages:
       - pagename: Overview
       - pagename: Maven Assist
@@ -191,13 +189,24 @@
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-  - documentname: Messaging Agent SDK
+#  - documentname: LiveIntent
+#    pages:
+#	  - pagename: Overview
+#	  - pagename: Dashboard
+  - documentname: Intent Builder
     pages:
       - pagename: Overview
-      - pagename: Examples
-      - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
-  - documentname: Bot Connectors
+      - pagename: Entities
+  - documentname: Knowledge Base
+    pages:
+      - pagename: Overview
+  - documentname: Bot Analytics
+    pages:
+      - pagename: Overview
+  - documentname: Bot Accounts
+    pages:
+      - pagename: User Role Permissions
+  - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
       - pagename: Bot Status Dashboard
@@ -206,8 +215,16 @@
       - pagename: IBM Watson Assistant
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
-  - documentname: Custom Third Party Bots
-
+      - pagename: Custom Integration
+  - documentname: Messaging Agent SDK
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+      - pagename: Events
+      - pagename: Examples
+      - pagename: Conversation Metadata Guide
+      - pagename: Release Notes
+#  - documentname: Custom Bots
 - categoryname: Client Side Configuration
   image: client-side
   documents:
@@ -346,7 +363,14 @@
         - subpagename: Submit Survey Data
         - subpagename: Send a Transcript
       - pagename: Sample Postman Collection
-
+    #- documentname: Window Customization API
+      #pages:
+      #- pagename: Overview
+      #- pagename: Quick Start
+      #- pagename: Samples
+        #subpages:
+        #- subpagename: CSS Sample
+      #- pagename: Taglet
 - categoryname: Contact Center Management
   image: contact-center
   documents:
@@ -556,7 +580,8 @@
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
-          - subpagename: Conversation Builder
+          - subpagename: Conversational AI
+          - subpagename: Conversational Commands
 
 
 - categoryname: Historical Data
@@ -865,6 +890,13 @@
         - pagename: Quick Replies Template
         - pagename: Google Pay Template
         - pagename: Limitations
+    - documentname: LINE Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Limitations
     #- documentname: Quick Replies
     #  pages:
     #    - pagename: Introduction to Quick Replies
@@ -914,6 +946,7 @@
     - documentname: MTLS
       pages:
         - pagename: Overview
+        - pagename: Onboarding
         - pagename: Methods
           subpages:
             - subpagename: Create certificate for account
@@ -965,6 +998,10 @@
     - documentname: LE-Tag
       pages:
         - pagename: Events
+          subpages:
+            - subpagename: Event Binding
+            - subpagename: Events
+        - pagename: New Page Refresh
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:

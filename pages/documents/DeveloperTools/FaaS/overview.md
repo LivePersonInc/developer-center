@@ -2,7 +2,7 @@
 pagename: Overview
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 permalink: liveperson-functions-overview.html
 indicator: both
