@@ -19,7 +19,7 @@ Currently, the Toolbelt offers the following methods:
 | :------- | :----- |
 | Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
-| Toolbelt.LpClient() | Returnts the LivePerson (LP) Client. This is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
+| Toolbelt.LpClient() | Returns the LivePerson (LP) Client. This is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 | Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
 | Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
