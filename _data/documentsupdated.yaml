@@ -189,10 +189,10 @@
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-#  - documentname: LiveIntent
-#    pages:
-#	  - pagename: Overview
-#	  - pagename: Dashboard
+  - documentname: LiveIntent
+    pages:
+      - pagename: Overview
+      - pagename: Dashboard
   - documentname: Intent Builder
     pages:
       - pagename: Overview

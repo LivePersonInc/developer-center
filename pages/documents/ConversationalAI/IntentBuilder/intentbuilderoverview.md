@@ -50,7 +50,27 @@ The default panel of the Domain View is the Add Intent panel. It will be the pan
 
 Once you've selected a name for your Intent, you should add as many training phrases as possible by using the bottom input area. To add another training phrase after your first one, click on the blue **+** sign to the right of the input area.
 
-#### Training Phrases
+### LiveIntent
+
+When you enter Intent Builder, you will notice a column that tells you if a domain "Has LiveIntent" or not.
+
+{: .important}
+It is a best practice to only have one domain enabled for LiveIntent at a time. This is to minimize intent overlap.
+
+<img class="fancyimage" style="width:750px" src="img/liveintent-domains1.png">
+
+Click on a domain of your choice. On the left side of the screen, you will see your list of intents. If an intent is enabled for LiveIntent, it will have a green dot to its left.
+
+Under the Intents left-side dropdown, select "Enable LiveIntent" and select the intents in bulk.
+
+{: .important}
+It is a best practice to enable all intents within a domain for the best analysis.
+
+<img class="fancyimage" style="width:750px" src="img/liveintent-domains3.png">
+
+You can view the enabled intents in the [LiveIntent dashboard](liveintent-dashboard.html).
+
+### Training Phrases
 
 The NLU engine uses training phrases in order to match a user input with an intent. The more training phrases you include, the more likely the NLU engine will be to accurately match the user's intent with what they were actually looking for. Generally speaking, the phrases should be complete sentences (rather than keywords like pattern matching or very long paragraphs).
 
