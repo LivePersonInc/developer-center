@@ -3508,7 +3508,6 @@ Regular expression for url hyperlinks in users messages (consumer and agent). Th
 
 
 
-
 #### bubblePhoneLinksRegex
 Regular expression for phone hyperlinks in users messages (consumer and agent). This attribute is optional - If not assigned, the default link detection will be enabled.
 
@@ -3519,94 +3518,32 @@ Regular expression for phone hyperlinks in users messages (consumer and agent). 
 #### bubbleTopPadding
 Define the bubble Top Padding.
 
-<div style="float: left; width: 35%;height: 75px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 10</li>
-   </ul>
-</div>
-
-<div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/bubbleTopPadding.png" alt="bubbleTopPadding">
-   </figure>
-</div>
-
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+- **Type:** Float  
+- **Default value:** 10 
 
 
 
 #### bubbleBottomPadding
 Define the bubble bottom Padding.
 
-<div style="float: left; width: 35%;height: 75px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 10</li>
-   </ul>
-</div>
 
-<div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/bubbleBottomPadding.png" alt="bubbleBottomPadding">
-   </figure>
-</div>
-
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+- **Type:** Float  
+- **Default value:** 10 
 
 
 #### bubbleLeadingPadding
 Define the bubble Leading Padding.
 
-<div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 10</li>
-   </ul>
-</div>
+- **Type:** Float  
+- **Default value:** 10 
 
-<div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/bubbleLeadingPadding.png" alt="bubbleLeadingPadding">
-   </figure>
-</div>
-
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
 
 
 #### bubbleTrailingPadding
 Define the bubble Trailing Padding.
 
-<div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 10</li>
-   </ul>
-</div>
-
-<div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/bubbleTrailingPadding.png" alt="bubbleTrailingPadding">
-   </figure>
-</div>
-
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+- **Type:** Float  
+- **Default value:** 10 
 
 
 #### bubbleTimestampBottomPadding
