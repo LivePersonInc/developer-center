@@ -11,7 +11,7 @@ indicator: messaging
 
 ### Introduction
 
-LivePerson's [Conversational AI](conversational-ai-platform-platform-overview.html) now includes a one-stop hub for [discovering](liveintent-best-practices.html#use-search-to-discover-new-intents), [tracking, and maintaining](liveintent-dashboard.html) intents in real-time.
+LivePerson's [Conversational AI](conversational-ai-platform-platform-overview.html) now includes a one-stop hub for discovering, [tracking, and maintaining](liveintent-dashboard.html) intents in real-time.
 
 <img class="fancyimage" style="width:750px" src="img/liveintent_dashboard-section-1.png">
 
@@ -88,6 +88,6 @@ If you have **intents in Intent Builder** already, [see here](intent-builder-ove
 ### Using LiveIntent
 
 When you have intents and they are enabled for LiveIntent, you can view your data in the [LiveIntent dashboard](liveintent-dashboard.html).
-
+<!--
 See [LiveIntent Best Practices](liveintent-best-practices.html) for some common usage flows and best practices.
-
+-->
