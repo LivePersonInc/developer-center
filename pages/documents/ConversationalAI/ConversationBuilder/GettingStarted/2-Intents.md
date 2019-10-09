@@ -18,7 +18,7 @@ Since you’re going to be using intents in this tutorial, you need to leave the
 
 1. In the upper-left corner, click **< Bots** beside the bot name to return to the list of bots.
 
-    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/helloworld/image_10.png">
+    <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/helloworld/image_10.png">
 
 2. Again in the upper-left corner, click **< Apps** to return to the Conversational AI dashboard.
 3. Click **Intent Builder**.
