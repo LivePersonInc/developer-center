@@ -24,26 +24,58 @@ With the addition of Dark Mode support in iOS 13, we now utilize Apple’s UIUse
 If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed.  Likely only the colors have been updated.  If you wish to support Dark Mode and you are using our default color configurations you have nothing to do, we have handled the support for you by updating the SDK color scheme to utilize iOS system colors where possible.  This appearance is different than the previous implementation but is intended to be more in line with what iOS users expect.  We have worked hard on its implementation and hope you enjoy it! 
 
 #### What this means for our customers who use custom attribute configurations? 
-If you have customized the appearance of the iOS SDK by setting your own UIColor for attributes within the LPConfig object, note that unless you pass a UIColor that has colors set specifically for at minimum UIUserInterface values “dark” and “light” your custom configuartion will not support dark mode and the UI may not appear as expected. This implementation is intended to mirror how you might support Dark Mode within your own application.  We recommend using the following UIColor Extension pattern we found laid our in this article from NSHipster which we have modeled for our own default colors (publicly available as LPColor objects described below).  
+If you have customized the appearance of the iOS SDK by setting your own UIColor for attributes within the LPConfig object, note that unless you pass a UIColor that has colors set specifically for at minimum UIUserInterface values “dark” and “light” your custom configuartion will not support dark mode and the UI may not appear as expected. This implementation is intended to mirror how you might support Dark Mode within your own application.  We recommend using the following UIColor Extension pattern we found laid our in [this](https://nshipster.com/dark-mode/ "Dark Mode on iOS 13 - NSHipster") article from NSHipster.   We have modeled our own default color objects in this manner (as public LPColor struct objects described below).  
 
 #### What this means for consumers on iOS 12 and below? 
 As is indicated by the code sample below we have mirrored the implementation for our “light” scheme for iOS devices operating on iOS 11 and 12 using non semantic colors that closely resemble the light iOS system colors. 
 
 #### How to implement custom color configurations within the LPMessaging iOS SDK that support DarkMode?
-For color attributes that accept UIColor, simply pass a UIColor object created which has values based on the current “traitCollection.userInterfaceStyle” as implemented below.
+For color attributes that accept UIColor, simply pass a UIColor object created which has values based on the current “traitCollection.userInterfaceStyle” as implemented in the example below.
 
-```
-Insert Swift Snippet here.  
+```Swift
+import UIKit
+
+extension UIColor
+    static var customAccent: UIColor {
+        if #available(iOS 13, *) {
+            return UIColor { (traitCollection: UITraitCollection) -> UIColor in
+                if traitCollection.userInterfaceStyle == .dark {
+                    return UIColor.black
+                } else {
+                    return UIColor.white
+                }
+            }
+        } else {
+            return UIColor.white
+        }
+    }
+Nothing 
 ```  
 
+#### **LPColor Types**
 
+| Semantic Color Name  | iOS 13 color source | iOS 11-12 color source |
+| :--- | :--- | :--- |
+| lpBackground |UIColor.systemBackground | UIColor.white |
+| lpLabel | UIColor.label | UIColor.black |
+| lpLink | UIColor.link | UIColor.blue |
+| lpSecondaryLabel | UIColor.secondaryLabel | UIColor.darkGray |
 
-
-#### retrieveAssignedAgentFromLastClosedConversation  
-When using `getAssignedAgent` method, lets you get assigned agents from active conversations only, or from the last closed conversation in case there is no active conversation. If no assigned agent is available, this method returns nil. 
-
-   - **Type:** Bool
-   - **Default value:** true 
+| Visible Color Name  | iOS 13 color source | iOS 11-12 color source |
+| :--- | :--- | :--- |
+| lpBlue | UIColor.systemBlue | r: 0, g: 122, b: 255 |
+| lpClear | UIColor.clear | UIColor.clear |
+| lpGray | UIColor.systemGray | r: 142, g: 142, b: 147 |
+| lpGray2 | UIColor.systemGray2 | r: 174, g: 174, b: 178 |
+| lpGray3 | UIColor.systemGray3 | r: 199, g: 199, b: 204 |
+| lpGray4 | UIColor.systemGray4 | r: 209, g: 209, b: 214 |
+| lpGray5 | UIColor.systemGray5 | r: 229, g: 229, b: 234 |
+| lpGreen | UIColor.systemGreen | r: 52, g: 199, b: 89 |
+| lpIndigo | UIColor.systemIndigo | r: 88, g: 86, b: 214 |
+| lpLightBlue | UIColor.systemTeal | r: 90, g: 200, b: 250 |
+| lpOrange | UIColor.systemOrange | r: 255, g: 149, b: 0 |
+| lpPink | UIColor.systemPink | r: 255, g: 45, b: 85 |
+| lpRed | UIColor.systemRed | r: 255, g: 59, b: 48 |
 
 --- 
 
