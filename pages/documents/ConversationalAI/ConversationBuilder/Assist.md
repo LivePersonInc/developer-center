@@ -13,6 +13,8 @@ indicator: both
 
 The Assistant tool is a helper tool which "listens" to your dialog as you build it, interaction by interaction, and suggests intents, entities, patterns, and more which can be added to each interaction.
 
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_suggestion.png">
+
 ### Adding a Domain
 
 When you create your first interaction, the Assistant helper tool will automatically pop up on the right hand side of the Conversation Builder. You'll be prompted to add a domain from the list of domains you have set up (to learn more about setting up domains, please see [this link](conversation-builder-intent-builder-overview.html)). If you have not configured a domain yet, you will not be prompted to add one.

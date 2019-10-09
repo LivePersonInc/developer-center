@@ -165,3 +165,17 @@ In this step, you add the dev-cert.pem and hostkey.pem to LiveEngage.
    **Tip:** You have a **50** character limit for your Bundle ID.
 
 7. Click **Close**.
+
+
+
+### Unregister from push notifications
+
+This method should be called before calling 'logout' on the SDK.
+
+```swift
+    LPMessagingSDK.instance.unregisterPusher(brandId: "ACCOUNT_NUM", completion: {
+
+    }) { error in
+        
+    }
+```

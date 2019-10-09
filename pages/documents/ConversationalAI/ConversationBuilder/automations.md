@@ -13,9 +13,7 @@ indicator: both
 ### Create an automation
 
 {: .important}
-LivePerson recommends that—before you create an automation—you set up the [domains](conversation-builder-intent-builder-overview.html), [intents](conversation-builder-intent-builder-overview.html), and [entities](conversation-builder-intent-builder-entities.html) that the automation will need. This makes creation of the automation much faster and easier because the Assist tool can use that information along the way to suggest suitable intents and entities to use.
-
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_suggestion.png">
+LivePerson recommends that—before you create an automation—you set up the [domains](conversation-builder-intent-builder-overview.html), [intents](conversation-builder-intent-builder-overview.html), and [entities](conversation-builder-intent-builder-entities.html) that the automation will need. This makes creation of the automation much faster and easier because the [Assist tool](conversation-builder-assist.html) can use that information along the way to suggest suitable intents and entities to use.
 
 **To create an automation**
 1. If you logged into Conversation Builder directly (that is, _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the automation should exist is displayed. If the correct organization isn’t displayed, select it from the **Org Name** dropdown list.

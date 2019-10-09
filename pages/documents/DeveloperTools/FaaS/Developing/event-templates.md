@@ -2,7 +2,7 @@
 pagename: "Events & Templates"
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
 permalink: liveperson-functions-development-events-templates.html
@@ -78,6 +78,11 @@ Currently the following events are supported:
     <td>Messaging Survey Ended</td>
     <td>Triggered when a messaging post survey ended.</td>
     <td>1</td>
+  </tr>
+  <tr>
+    <td>Third-Party Bots Custom Integration</td>
+    <td>Triggered when a bot, which is using the Third-Party Bots' Custom Integration receives a message</td>
+    <td>15</td>
   </tr>
 </tbody>
 </table>

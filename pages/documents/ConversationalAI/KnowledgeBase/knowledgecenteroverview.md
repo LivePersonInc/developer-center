@@ -9,7 +9,7 @@ documentname: Knowledge Base
 permalink: knowledge-base-overview.html
 indicator: both
 ---
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/knowledgebase_main.png">
+<img class="fancyimage" style="width:750px" src="img/beaut_kb_2.png">
 
 
 The Conversation Builder Platform's Knowledge Base tool allows you to export an existing Knowledge Base or create new Knowledge Base articles which will then be processed by our NLU engine. This allows your automation to leverage [intents](conversation-builder-intent-builder-overview.html) and [entities](conversation-builder-intent-builder-entities.html) in order to recommend the most accurate Knowledge Base articles to an inquiring user. FAQ automations and Agent Advisor widgets are driven by a Knowledge Base full of these articles, intelligently delivering the right content to the user at the right time.
@@ -81,6 +81,8 @@ If we try a different user input, like “my password is not letting me into my 
 <div class="important">Keep in mind that when you are training your articles, it is <em>very</em> easy to use the thumbs up button. So easy, that you might <em>over</em> train the automation using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one and use the training feature sparingly.</div>
 
 What about thumbs-down? This should be used sparingly to differentiate between two articles that may have intents that are close in meaning. NLU is not a specific pattern match, but more fuzzy, so having articles with similar intents but different content should be discouraged. That said, using thumbs down can help when that does occur, to indicate which of the two articles you'd like the NLU engine to match. Simply use the thumbs-down button on the article you'd like to de-prioritize, and the NLU engine will "prefer" the other one over it.
+
+For more best practices, see [Training and Tuning your Intents and FAQs](conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html).
 
 ### Using Entities With Your Knowledge Base
 

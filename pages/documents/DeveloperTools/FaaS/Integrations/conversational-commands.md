@@ -15,7 +15,7 @@ With **Conversational Commands**, agents are able to invoke `lambdas` from the A
 
 ![Conversational Commands](img/conversational_commands.png)
 
-Along with the invocation, the function is sent a payload containing the conversation ID and the arguments provided by the agent. This payload can then be used in the function for further processing and referencing. The result of the function has to either be a string or a number and will be shown in the Agent Workspace as a message in the transcript. 
+Along with the invocation, the function is sent a payload containing the conversation ID and the arguments provided by the agent. This payload can then be used in the function for further processing and referencing. The result of the function has to either be a string or a number and will be shown in the Agent Workspace as a message in the transcript.
 
 **Note** The response is not actually stored in the conversation transcript, it will only be stored temporarily in the browser and is only visible to the agent.
 
@@ -35,7 +35,7 @@ Every function is triggerd (or "invoked") via an event. **Conversational Command
 
 #### Conversational Command
 
-All deployed `lambdas` with this event assigned to them as their triggering event will be available as Conversational Commands in the Agent Workspace. 
+All deployed `lambdas` with this event assigned to them as their triggering event will be available as Conversational Commands in the Agent Workspace.
 
 ### Step-by-Step implementation guide
 
@@ -43,9 +43,9 @@ All deployed `lambdas` with this event assigned to them as their triggering even
 
 Create a new function using the Conversational Command event as the triggering event. The `name` of the function will be displayed as the name of the Conversational Command in the Agent Workspace.
 
-The `description` will also be shown in the Agent Workspace. To give the Agent a hint on how to use the function, we recommend providing the available arguments for the function in square brackets in the description. 
+The `description` will also be shown in the Agent Workspace. To give the Agent a hint on how to use the function, we recommend providing the available arguments for the function in square brackets in the description.
 
-Here is an example for the description of a Conversational Command that sends the transcript of the conversation via email: 
+Here is an example for the description of a Conversational Command that sends the transcript of the conversation via email:
 
 `[email, subject:optional] - Sends the transcript of the conversation to the provided email address.`
 
@@ -55,7 +55,7 @@ Adjust the code in the template according to your needs by modifying the functio
 
 As mentioned above, the function must return either a string or a number. This response will be displayed in the Agent Workspace as a message. If the function returns anything else, the Agent will only be shown a generic success message. If the `lambda` returns an `Error`, this will be presented to the Agent as an error message.
 
-#### Step 4 - Deploy the function
+#### Step 3 - Deploy the function
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
 

@@ -9,7 +9,7 @@ documentname: Intent Builder
 permalink: intent-builder-overview.html
 indicator: both
 ---
-<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/intentbuilder_main.png">
+<img  class="fancyimage" style="width:750px" src="img/beaut_ib_2.png">
 
 The Conversation Builder Platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you will be able to use the [Conversation Builder](conversation-builder-conversation-builder-overview.html) to associate one domain to each dialog.
 
@@ -83,3 +83,5 @@ Let's say that I have an intent which I label "check_bill". I could associate it
 * I need to look into what's going with my bill
 
 The NLU engine will take the user input and compare it to your training phrases. If it finds a match to a degree of certainty exceeding "GOOD", it will send the intent configured to the automation. All of these phrases and similar sentences would result in the "check_bill" intent being sent to the automation and the corresponding action (configured by you in the Conversation Builder) to be triggered.
+
+For more best practices, see [Training and Tuning your Intents and FAQs](conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html).

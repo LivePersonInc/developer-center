@@ -11,7 +11,7 @@ permalink: conversation-builder-automation-workspace-overview.html
 indicator: both
 ---
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/convobuilder_main.png">
+<img class="fancyimage" style="width:750px" src="img/beaut_cb_2.png">
 
 The Conversation Builder app is the primary workspace for designing an automation. It is what ties together all of the other aspects of the Platform.
 
@@ -23,7 +23,7 @@ At the top of the screen, you will see:
 
 * **Integrations** - Create and edit Integrations.
 
-* **Global Functions** - Write code snippets for use within dialogs. See [scripting functions](conversation-builder-conversation-builder-scripting-functions.html) for built-in methods.
+* **Global Functions** - Write code snippets for use within dialogs. See [scripting functions](conversation-builder-scripting-functions-introduction.html) for built-in methods.
 
 * **Visualize** - View each dialog at a high level.
 

@@ -71,7 +71,7 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
       "id":"1,",
       "type":"cm.ConsumerRequestConversation",
       "body":{  
-         "ttrDefName":"CUSTOM",
+         "ttrDefName":"NORMAL",
          "campaignInfo":{  
             "campaignId":"2739101812",
             "engagementId":"2739121912"
