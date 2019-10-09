@@ -172,7 +172,7 @@ Settings for Messaging: <br />
 
 Settings for Engagement Attributes: <br />
 
-Third-Party bot allows the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is selected. These attributes are collected only on **_start_** of every conversation. These attributes are then passed along every message as context information.
+Third-Party bots allows the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is selected. These attributes are collected only at the **_start_** of every conversation. These attributes are then passed along every message as context information. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html).
 
 {:start="5"}
 

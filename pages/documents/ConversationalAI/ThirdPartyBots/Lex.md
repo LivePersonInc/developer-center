@@ -367,12 +367,12 @@ Figure 7.2 - Example in Lex console
 
 ### Engagement attributes as context
 
-Third-Party bot allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.1.
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.1.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
 Figure 8.1 Conversation Type step in creation/modification of bot configuration.
 
-These attributes are **only** collected at the start of a conversation. These are not updated throughout the life cycle of a conversation and only passed along with each message request. For Lex, engagement attributes are added to the property `lpSdes` inside another custom sub-property `BC-LP-CONTEXT`. For the preservation of the state of engagement attributes across conversation `requestAttributes` property is used (more information about `requestAttributes` can be found [here](https://docs.aws.amazon.com/lex/latest/dg/API_runtime_PostText.html#API_runtime_PostText_RequestSyntax)). An example of the request body can be seen below:
+These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For Lex, engagement attributes are added to the property `lpSdes` inside another custom sub-property `BC-LP-CONTEXT`. For the preservation of the state of engagement attributes across conversation `requestAttributes` property is used (more information about `requestAttributes` can be found [here](https://docs.aws.amazon.com/lex/latest/dg/API_runtime_PostText.html#API_runtime_PostText_RequestSyntax)). An example of the request body can be seen below:
 
 ```json
 {
