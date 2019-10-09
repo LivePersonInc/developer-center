@@ -10,76 +10,88 @@ permalink: conversation-builder-getting-started-4-connect-to-liveengage.html
 indicator: both
 ---
 
-Now we will walk through how to link your bot to LiveEngage, ending with an integration that transfers to a human.
+In this tutorial, you walk through how to link your bot to LiveEngage, ending with an integration that transfers to a human.
 
 ### Step 10: Configure LiveEngage
 
-To connect a bot to LiveEngage, we first need leave the Conversation Builder platform to configure a LiveEngage Agent.
+To connect a bot to LiveEngage, first you need to leave the Conversation Builder platform to configure a LiveEngage agent. You must create a bot user and the necessary skills that you'd like the bot to route to.
 
-#### Setup a New LiveEngage Account:
+#### Pre-requisite steps
 
-If you DO NOT have a LiveEngage account set up, please work with your Liveperson team before continuing further.
+If you **don't** have a LiveEngage account, please work with your Liveperson team to set one up before continuing this tutorial.
 
-In order to connect your bot to LiveEngage, we will need to create a Bot User and the necessary skills we’d like our bot to route to.
+#### Create the skills
 
-#### Create the Skills
+1. [Login to your LiveEngage account](https://authentication.liveperson.net/login.html). 
+2. Click the Users and Skills icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png"> , and then click the **Skills** tab.
+    Next you'll create a new skill, one that will be the default skill connected to the bot.
+3. In the upper-right corner, click **Action > Add**.
+4. On the Add Skill page, specify the following:
+    * **Name**: Enter "Bot."
+    * **Description**: Enter "Bot skill."
+5. Click **Save**.
+6. Repeat steps 3 - 5 to create another skill named "Human." To enable the Save button, you'll need to provide a description too; anything is suitable.
 
-[Login to your LiveEngage account](https://authentication.liveperson.net/login.html) and create a new skill. This will be the default skill connected to the bot.
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_1.png">
+In this tutorial, the bot will live in the Bot skill, and later you will implement a transfer to the Human skill.
+7. In the list of skills, select the Bot skill, and then note the URL that's displayed in the browser window. Write down the skill ID in the URL, as this will be important later. The skill ID is the number at the end of the URL: https://z1.le.liveperson.net/a/accountNumber/#um!skills/**skillID**.
+8. Repeat the preceding step to copy down the skill ID for the Human skill.
 
-Go to Users -> Skills and create a new skill for the Routing Bot called "Bot".
+#### Create the LiveEngage agents
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_0.png">
+In addition to the skills, you also need user agents, one for the bot and one for the agent that will be receiving the inbound transfers (for human escalation).
 
-Create at least one other skill called "Human" to route to now. If you make others, be sure to name them appropriately for your intents (e.g., billing, account, offers).
+1. Still in LiveEngage, click the **Users** tab.
+    Next you create the user agent for the bot.
+2. In the upper-right corner, click **Action > Add**.
+3. On the Add User page, specify the following:
+    * **User type**: Set this to "Bot." If you don't see this field, contact your LivePerson representative to enable this for you.
+    * **Login name**: Enter any value, e.g., "bot_user."
+    * **Email**: Enter any value, such as your own email address.
+    * **Nickname**: Enter any value, e.g., "bot_user."
+    * **Name**: Enter any value, e.g., "bot_user."
+    * **Choose login method**: Select "API key," and then, for **Api key**, select "Generate API key." This fills in the keys automatically. If you don't see the "API key" option, contact your LivePerson representative to enable this for you.
+    * **Assignment**: Click this field, and select "Agent" from the list that appears.
+    * **Max no. live chats**: Select "Unlimited."
+    * **Skills**: Click this field, and select "Bot" from the list that appears. This is the default bot skill. **Do NOT add additional skills.**
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/confLE_2.png">
+4. Click **Save**.
+5. Repeat steps 2 and 3 to create a human agent, and assign the Human skill to the human agent. Alternatively, assign the Human skill to your own user account, and make sure you can take chats as an agent.
 
-In this tutorial, the bot will live in the Bot skill, and we will later implement a transfer to the Human skill.
+#### Assign the bot skill to an engagement
 
-Click on the Bot and Human skills you just created and copy down the skill IDs from the URLs. This will be important later. The skill ID will be the number at the end of the URL: https://z1.le.liveperson.net/a/accountNumber/#um!skills/**skillID**
+You will test this connection with a standard web chat engagement, so now you create a campaign and an engagement that routes to the new Bot skill.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_1.png">
+1. Click the Campaigns and Engagements icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_campaigns.png">.
+2. In the upper-right corner, click **Action > Add**.
+3. On the page that appears, specify the following:
+    * **Campaign name**: Bot test
+    * **Campaign goal**: Click this, select "Interact with consumers" on the page that appears, and click **Done**.
+    * **Engagement**: Click **+ Add engagement**. For the **engagement source**, select "Web." In the gallery that appears next, select a chat template, and click **Next**. In the Engagement Settings that appear next, select "Live chat" for the **Conversation type**. For **Routing**, select "Specific skill," and then select the "Bot" skill.
 
-#### Create LiveEngage Agents
+    <img style="width:400px" src="img/ConvoBuilder/helloworld/confLE_5.png">
+4. Click **Next**. 
+5. In the Engagement Studio, click **Next**. And in the Engagement Window Library, click **Done**.
 
-In addition to the skills, you also need User Agents as well. One for the bott and one for the agent that will be receiving the inbound transfers (for human escalation).
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_6.png">
+6. Click **Publish**.
 
-In LiveEngage, go to Users and create the bot user.
+### Step 11: Connect the bot to LiveEngage
 
-Make sure that the User Type is set to Bot and fill out the Login name, Email, Nickname and Name fields. If you do not see the User Type field, contact your LivePerson representative to enable this for you.
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_2.png">
-
-For the login method, choose API key and choose **Generate API Key** as the new keys will be filled in automatically. If you do not see the API Key option, contact your LivePerson representative to enable this for you.
-
-Assign the bot user as an Agent, set the Max number of live chats to Unlimited, add the default Bot skill and click Save. **Do NOT add the other skills.**
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_4.png">
-
-Create a new human agent and assign it to the Human skill, or assign yourself to the Human skill and make sure that you can take chats as an agent.
-
-#### Assign Bot Skill to an Engagement
-
-We will test this connection with a standard web chat engagement.
-
-Create a campaign and engagement that routes to the new Bot skill. Tap Publish when done.
-
-<img style="width:400px" src="img/ConvoBuilder/helloworld/confLE_5.png">
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_6.png">
-
-### Step 11: Connect the Bot to LiveEngage
-
-Go back to Conversation Builder to link your bot to the bot user you just created.
+In this step, you use Conversation Builder to link your bot to the bot user you just created.
 
 #### Add the agent connector
 
-1. Open the bot, and click **Agent Connectors** on the menu bar in the upper-right corner.
-2. Click **New Bot Connector** in the upper-right corner, just under the menu bar.
-3. In the Add Agent Connector dialog box, specify the following, based on the bot user you created.
+1. Return to Conversation Builder, and open the bot.
+2. Click **Agent Connectors** on the menu bar in the upper-right corner.
+3. Click **New Bot Connector** in the upper-right corner, just under the menu bar.
+4. In the Add Agent Connector dialog box, specify the following based on the bot user you created.
     - **Agent User ID**: Select the user ID for the bot user agent.
     - **Role**: Select "Agent."
     - **Conversation Type**: Select "Chat."
     - **Deploy to**: Select either "Demo" or "Production." If this is the first time running your bot, you might want to deploy to the demo environment to validate that everything is functioning properly.
-4. Click **Save**.
+5. Click **Save**.
+    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/helloworld/agentConnectorsPage.png">
 
 {: .important}
 LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more.
