@@ -30,18 +30,11 @@ This tutorial assumes you have a user account for the Conversation Builder platf
     
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/createAutomation.png">
 
-    This takes you to the new bot in Conversation Builder. (You can learn about the different parts of Conversation Builder [here](conversation-builder-conversation-builder-overview.html).)
+    This takes you to the new bot in Conversation Builder.
+
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/image_3.png">
 
-    **Before you do anything else**, we need to "publish" the bot (make it publicly accessible) to your organization. For those with multiple Org access, the bot will default to Private, which is why we want to change it.
-
-6. Click the ellipsis icon <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_ellipsis_horizontal.png"> in the upper-right corner, and then select **Bot Settings** from the menu that appears.
-7. On the Bot Settings page, scroll down, and select **More Settings**.
-8. Make sure **Bot Account** is set to the appropriate org.
-9. Click the **Public** slider to enable it.
-10. Scroll down, and click **Save**.
-
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_5.png">
+    You can learn about the different parts of Conversation Builder [here](conversation-builder-conversation-builder-overview.html).
 
 ### Step 2: Test the Welcome dialog
 

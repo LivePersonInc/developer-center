@@ -10,12 +10,12 @@ permalink: conversation-builder-getting-started-3-integrations.html
 indicator: both
 ---
 
-Many use cases will require an integration with an API to send and receive data. Following the "billing" use case, we are going to add an integration to check a user’s account balance. 
+Many use cases require integration with an API to send and receive data. Following the "billing" use case, in this tutorial you add an integration to check a user’s account balance. 
 
 {: .important}
-This is an example API that will return random balance data for a given account and email address. 
+This tutorial uses an example API that returns random balance data when given an account number and email address. 
 
-### Step 8: Create Billing API Integration
+### Step 8: Create a Billing API integration
 
 Go back to the automation you created in Conversation Builder. Along the top of the workspace, click on Integrations.
 
@@ -75,7 +75,7 @@ From here we will create a new API with the following parameters.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_15.png">
 
-### Step 9: Use Integration in Dialog
+### Step 9: Use the integration in a dialog
 
 Now we can return to the Dialog editor by tapping on Dialogs on the top of the workspace.
 
