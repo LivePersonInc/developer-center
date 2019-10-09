@@ -17,6 +17,37 @@ indicator: messaging
 
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes-design-sheet.html).
 
+### iOS 13 UIColors and DarkMode support 
+With the addition of Dark Mode support in iOS 13, we now utilize Apple’s UIUserInterface enum values observed by UIColor objects to update colors based on the selection provided by the OS.  We believe this is the easiest implementation for our customers who use our default configurations as well as those customers who desire custom attribute configurations.  
+
+#### What this means for our customers who use our default Attribute configurations? 
+If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed.  Likely only the colors have been updated.  If you wish to support Dark Mode and you are using our default color configurations you have nothing to do, we have handled the support for you by updating the SDK color scheme to utilize iOS system colors where possible.  This appearance is different than the previous implementation but is intended to be more in line with what iOS users expect.  We have worked hard on its implementation and hope you enjoy it! 
+
+#### What this means for our customers who use custom attribute configurations? 
+If you have customized the appearance of the iOS SDK by setting your own UIColor for attributes within the LPConfig object, note that unless you pass a UIColor that has colors set specifically for at minimum UIUserInterface values “dark” and “light” your custom configuartion will not support dark mode and the UI may not appear as expected. This implementation is intended to mirror how you might support Dark Mode within your own application.  We recommend using the following UIColor Extension pattern we found laid our in this article from NSHipster which we have modeled for our own default colors (publicly available as LPColor objects described below).  
+
+#### What this means for consumers on iOS 12 and below? 
+As is indicated by the code sample below we have mirrored the implementation for our “light” scheme for iOS devices operating on iOS 11 and 12 using non semantic colors that closely resemble the light iOS system colors. 
+
+#### How to implement custom color configurations within the LPMessaging iOS SDK that support DarkMode?
+For color attributes that accept UIColor, simply pass a UIColor object created which has values based on the current “traitCollection.userInterfaceStyle” as implemented below.
+
+```
+Insert Swift Snippet here.  
+```  
+
+
+
+
+#### retrieveAssignedAgentFromLastClosedConversation  
+When using `getAssignedAgent` method, lets you get assigned agents from active conversations only, or from the last closed conversation in case there is no active conversation. If no assigned agent is available, this method returns nil. 
+
+   - **Type:** Bool
+   - **Default value:** true 
+
+--- 
+
+
 ### Agent Assignment
 
 #### retrieveAssignedAgentFromLastClosedConversation  
