@@ -223,8 +223,6 @@
       - pagename: Events
       - pagename: Examples
       - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
-#  - documentname: Custom Bots
 - categoryname: Client Side Configuration
   image: client-side
   documents:
