@@ -139,11 +139,9 @@ There can be only one dialog of type Fallback per bot.
 
 2. In the dialog box that appears, enter a name of "Fallback", and select "Fallback Dialog" for **Dialog Type**.
 
-    You don't need to add a User Says interaction to the Fallback dialog, because the Fallback dialog has special properties that cause it to display when there are no other matches available.
+    You don't need to add a User Says interaction to the Fallback dialog, because the Fallback dialog has special properties that cause it to display when there are no other matches available. However, you do need to add some type of message to tell the user that the bot didn’t understand their query.
 
-    However, you do need to add some type of message to tell the user that the bot didn’t understand their query.
-
-3. Add a new text statement. In the interaction, enter  a message like `Sorry, I only know ‘hello’ and ‘goodbye’.` or something similar, and press Enter.
+3. Add a new Text Statement interaction. In the interaction, enter  a message like `Sorry, I only know ‘hello’ and ‘goodbye’.` or something similar, and press Enter.
 
 4. Open the Preview window, enter “reset” and press Enter.
 
