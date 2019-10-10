@@ -1,12 +1,13 @@
 ---
 pagename: Tutorial
 redirect_from:
+  - maven-ai-powered-routing-tutorial.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven
+documentname: Maven AI
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-tutorial.html
+permalink: maven-ai-ai-powered-routing-tutorial.html
 indicator: messaging
 ---
 
@@ -556,7 +557,7 @@ The steps are as follows:
 
 #### Get Conversation id 
 
-[See here](conversation-builder-conversation-builder-scripting-functions.html#get-conversation-id) for how to get and store a conversation ID in a bot session variable.
+[See here](conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html#get-conversation-id) for how to get and store a conversation ID in a bot session variable.
 
 Please use the variable `{$botContext.conversationId}` while calling the Context Session Store API (SessionID) and AskMaven API (ConversationID). 
 

@@ -1,12 +1,13 @@
 ---
 pagename: Use Maven with Your Bot
 redirect_from:
+  - maven-ai-powered-routing-use-maven-with-your-bot.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven
+documentname: Maven AI
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-use-maven-with-your-bot.html
+permalink: maven-ai-ai-powered-routing-use-maven-with-your-bot.html
 indicator: messaging
 ---
 

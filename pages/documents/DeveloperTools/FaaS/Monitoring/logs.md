@@ -2,7 +2,7 @@
 pagename: Logs
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Monitoring
 permalink: liveperson-functions-monitoring-logs.html

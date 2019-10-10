@@ -28,6 +28,22 @@ As a bank, use this if you would like to be aligned with open banking standards 
 
 As any kind of business, you would use the mTLS API to upload a certificate, map an existing certificate, wrap and forward mTLS requests etc.
 
+### Happy flow example
+
+The mTLS "happy flow" includes configuring the service and then invoking it in runtime:
+
+#### Configuration
+
+  * [Create a compliant P12 file](mtls-creating-a-p12-file.html) (Java compliant public + private keys)
+  * Run the [p12tester resource](p12-key-tester.html), this will check that the P12 is valid, decipherable and can be used to reach the remote endpoint.
+  * Upload the P12 file.
+  * Create mapping for the service name/url/sitedId that uses the created certificate.
+
+#### Run time
+
+  * Run the [check mapping method](mtls-methods-check-mapping-configuration.html) for the configured service name/url/siteId, this will indicate that all the data is saved successfully and can be used.
+  * [Forward](mtls-methods-forward-post-request.html) the request using the preconfigured parameters (if all previous step passed then this step should not fail). This request will now be authenticated with mTLS.
+
 ### Prerequisites
 
 In order for mTLS to work, you'll need to generate a specific mTLS certificate. You can accomplish this by receiving a CSR from our support team, filling out the CSR with the required details and signing the certificate with a 3rd party provider.

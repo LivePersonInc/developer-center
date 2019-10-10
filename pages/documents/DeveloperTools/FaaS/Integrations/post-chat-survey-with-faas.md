@@ -2,7 +2,7 @@
 pagename: Post Chat Survey Transcripts
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Integrations
 permalink: liveperson-functions-integrations-post-chat-survey-transcripts.html

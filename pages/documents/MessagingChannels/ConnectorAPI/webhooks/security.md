@@ -13,7 +13,7 @@ permalink: connector-api-webhooks-notification-protocol.html
 
 ### Protocol and Security
 
-* Webhooks notifications are sent as POST requests over TLS. Every endpoint is required to be set up with a valid server side SSL certificate supporting at least TLS version 1.3.
+* Webhooks notifications are sent as POST requests over TLS. Every endpoint is required to be set up with a valid server side SSL certificate supporting at least TLS version 1.2.
 
 * Each Webhooks notification request contains LivePerson standard headers which have the header name prefix of “**x-liveperson-**”.
 

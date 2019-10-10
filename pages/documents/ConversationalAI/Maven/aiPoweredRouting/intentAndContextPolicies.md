@@ -1,12 +1,13 @@
 ---
 pagename: Intent & Context Policies
 redirect_from:
+  - maven-ai-powered-routing-intent-context-policies.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven
+documentname: Maven AI
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-intent-context-policies.html
+permalink: maven-ai-ai-powered-routing-intent-context-policies.html
 indicator: messaging
 ---
 

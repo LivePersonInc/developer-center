@@ -175,7 +175,7 @@ The connector can then use the above properties in the CONVERSATION request body
     "id": "2,",
     "type": "cm.ConsumerRequestConversation",
     "body": {
-      "ttrDefName": "CUSTOM",
+      "ttrDefName": "NORMAL",
       "campaignInfo": {
         "campaignId": "99999",
         "engagementId": "888888"
@@ -212,7 +212,7 @@ The connector can then use the above properties in the CONVERSATION request body
 
 | Property | Description | Value/Example | Type | Mandatory | Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / "CUSTOM" / null | string | false |
+| ttrDefName | Defines the urgency of the conversation | "NORMAL" / "URGENT" / "PRIORITIZED" / null | string | false |
 | conversationContext | Describes the conversation environment, like from where it was created and by whom | {"visitorId": "A3ZTY3Zjk1MDExZTczYTU4", "sessionId": "ys2wSqaSRSOJGki7VhEDKQ"...}| strings | false | conversationContext is of type SharkContext and all the attributes passed in this example are part of this conversationContext. See more details in the next table below |
 | campaignInfo | Contains the campaignId and engagementId | {"campaignId": "99999", "engagementId": "888888"} | strings | false | Used in conjunction with [campaigns for messaging](https://www.liveperson.com/services/technical-support/about-campaigns) for conversation routing to the right skill |
 | campaignId | The campaignId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint  | "99999" | false |

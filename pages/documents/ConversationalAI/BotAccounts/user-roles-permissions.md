@@ -11,6 +11,8 @@ permalink: bot-accounts-permissions-per-role.html
 indicator: both
 ---
 
+In order to view or edit user permissions, you must click on the Organization, then click on Users in the top nav bar.
+
 ### Super Admin
 
 A user should have this role if they own the entire brand's automation project.

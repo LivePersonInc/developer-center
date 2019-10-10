@@ -114,9 +114,9 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-  - documentname: Conversational AI Platform
+  - documentname: Conversational AI
     pages:
-      - pagename: Platform Overview
+      - pagename: Overview
       - pagename: Natural Language Understanding
         subpages:
           - subpagename: NLU Engines
@@ -167,6 +167,13 @@
           - subpagename: FaaS Integrations
           - subpagename: Web View Integration API
       - pagename: Scripting Functions
+        subpages:
+          - subpagename: Introduction
+          - subpagename: Debugging and Logging
+          - subpagename: Get and Set User Data and Variables
+          - subpagename: Get and Set Conversation Flow Data 
+          - subpagename: Sending Messages
+          #- subpagename: Context Session Store Wrapper
       - pagename: Testing & Deployment
         subpages:
           - subpagename: Debugging
@@ -180,26 +187,7 @@
           - subpagename: Using Environment Variables
           #- subpagename: Common Conversation Patterns
           - subpagename: Versions, Releases, & Change Management
-  - documentname: Intent Builder
-    pages:
-      - pagename: Overview
-      - pagename: Entities
-  - documentname: Knowledge Base
-    pages:
-      - pagename: Overview
-  - documentname: Bot Analytics
-    pages:
-      - pagename: Overview
-#  - documentname: LiveIntent
-#    pages:
-#	  - pagename: Overview
-#	  - pagename: Dashboard
-  - documentname: Bot Accounts
-    pages:
-      - pagename: Permissions per Role
-     # - pagename: Roles
-      - pagename: Credentials
-  - documentname: Maven
+  - documentname: Maven AI
     pages:
       - pagename: Overview
       - pagename: Maven Assist
@@ -219,10 +207,30 @@
           - subpagename: Intent & Context Policies
           - subpagename: Set Up Maven in LivePerson
           - subpagename: Use Maven with Your Bot
+          - subpagename: Tutorial
       - pagename: AskMaven
         subpages:
           - subpagename: Overview
           - subpagename: Methods
+  - documentname: LiveIntent
+    pages:
+      - pagename: Overview
+      - pagename: Dashboard
+  - documentname: Intent Builder
+    pages:
+      - pagename: Overview
+      - pagename: Entities
+  - documentname: Knowledge Base
+    pages:
+      - pagename: Overview
+  - documentname: Bot Analytics
+    pages:
+      - pagename: Overview
+  - documentname: Bot Accounts
+    pages:
+      - pagename: Permissions per Role
+     # - pagename: Roles
+      - pagename: Credentials
   - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
@@ -230,16 +238,17 @@
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
+      - pagename: IBM Watson Assistant Version 2
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
-      - pagename: Custom Third Party Bots
+      - pagename: Custom Integration
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
+      - pagename: Methods
+      - pagename: Events
       - pagename: Examples
       - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
-
 - categoryname: Client Side Configuration
   image: client-side
   documents:
@@ -378,7 +387,14 @@
         - subpagename: Submit Survey Data
         - subpagename: Send a Transcript
       - pagename: Sample Postman Collection
-
+    #- documentname: Window Customization API
+      #pages:
+      #- pagename: Overview
+      #- pagename: Quick Start
+      #- pagename: Samples
+        #subpages:
+        #- subpagename: CSS Sample
+      #- pagename: Taglet
 - categoryname: Contact Center Management
   image: contact-center
   documents:
@@ -588,7 +604,8 @@
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
-          - subpagename: Conversation Builder
+          - subpagename: Conversational AI
+          - subpagename: Conversational Commands
 
 
 - categoryname: Historical Data
@@ -897,6 +914,13 @@
         - pagename: Quick Replies Template
         - pagename: Google Pay Template
         - pagename: Limitations
+    - documentname: LINE Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
+        - pagename: Limitations
     #- documentname: Quick Replies
     #  pages:
     #    - pagename: Introduction to Quick Replies
@@ -998,6 +1022,10 @@
     - documentname: LE-Tag
       pages:
         - pagename: Events
+          subpages:
+            - subpagename: Event Binding
+            - subpagename: Events
+        - pagename: New Page Refresh
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:

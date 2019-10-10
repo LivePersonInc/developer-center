@@ -166,7 +166,7 @@ In this step, you set up an integration to transfer the user to a human agent in
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/preprocesscode.png">
 
-    See [scripting functions](conversation-builder-conversation-builder-scripting-functions.html) to learn about all the available functions.
+    See [scripting functions](conversation-builder-scripting-functions-introduction.html) to learn about all the available functions.
 
 ### Step 13: Test the bot
 

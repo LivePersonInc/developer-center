@@ -11,7 +11,7 @@ permalink: conversation-builder-automation-workspace-overview.html
 indicator: both
 ---
 
-<img class="fancyimage" style="width:900px" src="img/ConvoBuilder/convobuilder_main.png">
+<img class="fancyimage" style="width:750px" src="img/beaut_cb_2.png">
 
 The Conversation Builder application is the primary workspace for designing a bot. It is what ties together all the other aspects of the platform.
 
@@ -26,7 +26,7 @@ In the upper-right corner on the menu bar, you will find:
 
 * **Integrations** - Create and edit integrations.
 
-* **Global Functions** - Write code snippets for use within dialogs. See [scripting functions](conversation-builder-conversation-builder-scripting-functions.html) for built-in methods.
+* **Global Functions** - Write code snippets for use within dialogs. See [scripting functions](conversation-builder-scripting-functions-introduction.html) for built-in methods.
 
 * **Agent Connectors** - [Deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) the bot to a LiveEngage environment.
 

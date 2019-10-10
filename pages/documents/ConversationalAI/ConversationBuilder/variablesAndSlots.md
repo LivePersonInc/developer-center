@@ -33,7 +33,7 @@ For example:
 
 #### Storing and Accessing Variables with Code
 
-The [Get and Set Bot Variables functions](conversation-builder-conversation-builder-scripting-functions.html#get-and-set-bot-variable) can be used to store and access variables in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interactions-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interactions-interaction-details.html#process-user-response) JavaScript code panels.
+The [Get and Set Bot Variables functions](conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html#get-and-set-bot-variable) can be used to store and access variables in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interaction-details.html#process-user-response) JavaScript code panels.
 
 ### Slots
 

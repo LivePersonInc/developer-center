@@ -2,11 +2,11 @@
 pagename: Conversation Builder
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Integrations
 permalink: liveperson-functions-integrations-conversation-builder.html
-indicator: both
+indicator: messaging
 ---
 
 Users who are tasked with creating bots in Conversation Builder can easily integrate function calls within their dialog flows. Adding this kind of [integration interaction](conversation-builder-interactions-integrations.html) to a dialog in a bot works just like adding any other type of integration interaction.

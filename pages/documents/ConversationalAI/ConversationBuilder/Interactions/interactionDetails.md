@@ -60,7 +60,7 @@ See [Response Match & Actions](conversation-builder-conversation-builder-respons
 
 This enables you to add JavaScript code for processing user input _upon receiving the input_, which can be useful for cleaning or normalizing user input, or even passing the data to an API.
 
-Use the built-in [scripting functions](conversation-builder-conversation-builder-scripting-functions.html) to access variables and manipulate data.
+Use the built-in [scripting functions](conversation-builder-scripting-functions-introduction.html) to access variables and manipulate data.
 
 ### Code
 
@@ -73,4 +73,4 @@ This enables you to add JavaScript code that executes _before or after_ the inte
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/interactionDetails_code.png">
 
-Use the built-in [scripting functions](conversation-builder-conversation-builder-scripting-functions.html) to access variables and manipulate data.
+Use the built-in [scripting functions](conversation-builder-scripting-functions-introduction.html) to access variables and manipulate data.

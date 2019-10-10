@@ -1,12 +1,13 @@
 ---
 pagename: Set Up Maven in LivePerson
 redirect_from:
+  - maven-ai-powered-routing-set-up-maven-in-liveperson.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven
+documentname: Maven AI
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-set-up-maven-in-liveperson.html
+permalink: maven-ai-ai-powered-routing-set-up-maven-in-liveperson.html
 indicator: messaging
 ---
 
