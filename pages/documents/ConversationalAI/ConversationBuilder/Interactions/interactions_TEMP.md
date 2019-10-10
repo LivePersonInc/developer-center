@@ -1,3 +1,29 @@
+**To deploy to the Production environment**
+
+Your account must have the Operations role, which gives you access to the [Bots Status](conversational-ai-platform-platform-overview.html) application.
+
+1. In the the application drop-down menu, select **Bots Status**. If you don't see the application in the list, contact your administrator for help.
+
+2. In the Bots Status application, find your bot agent. The filter defaults to bots in the "Production" environment. Switch it to “All” to view your bot agent in the list.
+
+3. Select your bot agent, and move your mouse over the area to the left of the bot name.
+
+    An ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> )appears.
+
+4. Select the ellipsis icon, and then select **Deploy Agent** from the menu that appears.
+    <img style="width:200px" src="img/ConvoBuilder/helloworld/confLE_15.png">
+
+5. In the Bot Agent Deployment Settings, for **Environment**, select "Production" for an official client bot.
+    <img style="width:700px" src="img/ConvoBuilder/helloworld/confLE_16.png">
+
+6. Select the ellipsis menu again, and select **Start Agent**.
+
+7. Reload your browser or wait a few moments, and your bot agent should now show as online and connected.
+
+    <img style="width:950px" src="img/ConvoBuilder/helloworld/confLE_18.png">
+
+
+
 STATEMENTS
 
 Statement interactions simply display information and then execute the next action. They don’t expect or wait for a user response.
