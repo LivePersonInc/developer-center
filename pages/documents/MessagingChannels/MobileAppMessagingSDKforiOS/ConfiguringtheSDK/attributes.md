@@ -2488,7 +2488,7 @@ Scroll to bottom button background color of the whole button.
 
 
 - **Type:** UIColor
-- **Default value:** LPColor.lpGray2
+- **Default value:** [`LPColor.lpGray2`](#lpColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2507,7 +2507,7 @@ Scroll to bottom button text color of the last unread message preview.
 
 
 - **Type:** UIColor
-- **Default value:** LPColor.lpBackground
+- **Default value:** [`LPColor.lpBackground`](#lpColor)
 
 
 
@@ -2527,7 +2527,7 @@ Scroll to bottom button unread message badge background color.
 
 
 - **Type:** UIColor
-- **Default value:** LPColor.lpRed
+- **Default value:** [`LPColor.lpRed`](#lpColor)
 
 
 
@@ -2548,7 +2548,7 @@ Scroll to bottom button unread message badge text color.
 
 
 - **Type:** UIColor
-- **Default value:** LPColor.lpLabel
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
 
@@ -2570,7 +2570,7 @@ Scroll to bottom button arrow tint color.
 
 
 - **Type:** UIColor
-- **Default value:** LPColor.lpBackground
+- **Default value:** [`LPColor.lpBackground`](#lpColor)
 
 
 
@@ -2592,7 +2592,7 @@ Unread Messages divider background color.
 
 
 - **Type:** UIColor
-- **Default value:** LPColor.lpGray5
+- **Default value:** [`LPColor.lpGray5`](#lpColor)
 
 
 
@@ -2613,7 +2613,7 @@ Unread Messages divider text color.
 
 
 - **Type:** UIColor
-- **Default value:** LPColor.lpBlue
+- **Default value:** [`LPColor.lpBlue`](#lpColor)
 
 
 
@@ -2727,7 +2727,7 @@ Define the corners radius of the unread messages counter inside the scroll down 
 Background color of the remote user’s avatar. 
 
    - **Type:** UIColor
-   - **Default value:** LPColor.lpGray4 
+   - **Default value:** [`LPColor.lpGray4`](#lpColor) 
 
 
 
@@ -2776,7 +2776,7 @@ Define the remote avatar Trailing padding (Avatar to bubble).
 Icon color of default remoteUser avatar.  
 
    - **Type:** UIColor
-   - **Default value:**  LPColor.lpBackground
+   - **Default value:**  [`LPColor.lpBackground`](#lpColor)
 
 
 
@@ -2830,7 +2830,7 @@ Background color of agent's default avatar in CSAT.
 
 
 - **Type:** UIColor  
-- **Default value:** LPColor.lpGray4
+- **Default value:** [`LPColor.lpGray4`](#lpColor)
 
 
 
@@ -2851,7 +2851,7 @@ Icon color of agent's default avatar in CSAT.
 
 
 - **Type:** UIColor  
-- **Default value:** LPColor.lpBackground
+- **Default value:** [`LPColor.lpBackground`](#lpColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2875,7 +2875,7 @@ User Input TextView container background color.
 
 
 - **Type:** UIColor  
-- **Default value:** LPColor.lpGray3
+- **Default value:** [`LPColor.lpGray3`](#lpColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2915,7 +2915,7 @@ Input TextView top border color default clear color.
 
 
 - **Type:** UIColor  
-- **Default value:** LPColor.lpClear
+- **Default value:** [`LPColor.lpClear`](#lpColor)
 
 
 --- 
@@ -2927,7 +2927,7 @@ Color code for the background of the remote user's bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpGray4
+- **Default value:** [`LPColor.lpGray4`](#lpColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2946,7 +2946,7 @@ Color code for the outline color.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpGray4
+- **Default value:** [`LPColor.lpGray4`](#lpColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2965,7 +2965,7 @@ Color code for links in the text of the remote user's bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpLabel
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
 
@@ -2984,7 +2984,7 @@ Color code for the text of the remote user's bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpLabel
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
 
@@ -3027,7 +3027,7 @@ Color code for the timestamp of the remote user's bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpSecondaryLabel
+- **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor)
 
 
 
@@ -3049,7 +3049,7 @@ Color of the remote user typing bubbles animation.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpBackground
+- **Default value:** [`LPColor.lpBackground`](#lpColor)
 
 
 
@@ -3071,7 +3071,7 @@ Color of the remote user's bubble overlay when user uses a long press gesture on
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpLabel
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -3197,7 +3197,7 @@ Bottom right Radius corner on the Remote bubble. Setting the radius to a value g
 Color code for the background of the visitor bubble.
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpBlue
+- **Default value:** [`LPColor.lpBlue`](#lpColor)
 
 
 
@@ -3219,7 +3219,7 @@ Color code for the outline color.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpBlue
+- **Default value:** [`LPColor.lpBlue`](#lpColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -3239,7 +3239,7 @@ Color code for links in the text of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpWhite
+- **Default value:** [`LPColor.lpWhite`](#lpColor)
 
 
 
@@ -3300,7 +3300,7 @@ Color code for the timestamp of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpSecondaryLabel
+- **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -3320,7 +3320,7 @@ Color code for the send status text of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpSecondaryLabel
+- **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor)
 
 
 
@@ -3342,7 +3342,7 @@ Color code for the error view text of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpRed
+- **Default value:** [`LPColor.lpRed`](#lpColor)
 
 
 
@@ -3364,7 +3364,7 @@ Color code for the error view border of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpRed
+- **Default value:** [`LPColor.lpRed`](#lpColor)
 
 
 
@@ -3393,7 +3393,7 @@ Color of the user's bubble overlay when user uses a long press gesture on the bu
 
 
 - **Type:** UIColor    
-- **Default value:** LPColor.lpLabel
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
 <!--    <div style="float: right; width: 100%;">
