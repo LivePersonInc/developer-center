@@ -2229,15 +2229,12 @@ Expiration of CSAT in minutes from the moment the conversation was ended. If Sur
 #### systemBubbleTextColor  
 Color code for the text of the system messages. 
 
-<!--    <div style="float: left; width: 45%;height: 50px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.black</li>
-   </ul>
-  
-</div> -->
 
-<!--    <div style="float: right; width: 55%;">
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/DefaultSendButton.png" alt="DefaultSendButton">
@@ -2277,16 +2274,15 @@ Number of seconds before the first Time to Respond (TTR) notification appears.
 
 
 #### ttrShouldShowTimestamp  
-When set to **true**, the timestamp of the TTR notification displays. Otherwise, the "An agent will respond shortly" message displays.   
+When set to **true**, the timestamp of the TTR notification displays. 
+Otherwise, the "An agent will respond shortly" message displays.   
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> false</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** Bool
+- **Default value:** false 
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/ttrshouldshowtimestamp.png" alt="ttrShouldShowTimestamp">
@@ -2304,41 +2300,14 @@ Controls the TTR frequency, for example, don’t show the TTR more than once in 
    - **Type:** UInt
    - **Default value:** 8 
 
-
-
-#### showUrgentButtonInTTRNotification  
-When set to **true**, the Urgent button shows in the TTR notification.
-
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> false</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/showurgentbuttoninttrnotification.png" alt="showUrgentButtonInTTRNotification">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### showOffHoursBanner  
 Enable or disable the off-hours toaster. 
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> true</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** Bool
+- **Default value:** true 
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/showoffhoursbanner.png" alt="showoffhoursbanner">
@@ -2351,16 +2320,14 @@ Enable or disable the off-hours toaster.
 </div> -->
 
 #### ttrBannerBackgroundColor  
-Background color for banner. 
+Background color of TTR notification banner view. 
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #52A742</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBlack`](#lpColor)
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/ttrbannerbackgroundcolor.png" alt="ttrBannerBackgroundColor"> 
@@ -2373,16 +2340,15 @@ Background color for banner.
 </div> -->
 
 #### ttrBannerTextColor  
-Text color of the banner. 
+Text color of TTR notification banner view. 
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #52A742</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpWhite`](#lpColor)
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/ttrbannertextcolor.png" alt="ttrbannertextcolor"> 
@@ -2395,44 +2361,29 @@ Text color of the banner.
 </div> -->
 
 
-#### ttrBannerOpacityAlpha  
-Opacity level of the banner background (values: 0.0 - 1.0). 
-
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> Double</li>
-      <li><b>Default value:</b> 0.8</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/ttrbanneropacityalpha.png" alt="ttrBannerOpacityAlpha"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### offHoursTimeZoneName  
 Off Hours time zone name string based on [NSTimeZone knownTimeZoneNames]. If sending empty string, the local timezone will be used (Server sends UTC time). 
 
    - **Type:** String
    - **Default value:** "" (Empty String) 
 
+#### toastNotificationsEnabled  
+Enable toast notifications such as offline and TTR notifications. 
+
+   - **Type:** Bool
+   - **Default value:** true 
+
+
 --- 
 
 ### Unread Messages
 
 #### scrollToBottomButtonBackgroundColor  
-Scroll to bottom button background color of the whole button.
-
-
+Scroll to bottom button background color of the whole b
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray2`](#lpColor)
+- **Default value:** [`LPColor.lpGray2`](#lpColor)utton.
+
+
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2574,7 +2525,7 @@ Unread Messages divider text color.
 
 
 #### scrollToBottomButtonEnabled
-Toggle the mode of the Scroll to bottom button. 
+Toggle the mode of the scroll to bottom button. 
 
    - **Type:** Bool
    - **Default value:** true 
@@ -2583,7 +2534,7 @@ Toggle the mode of the Scroll to bottom button.
 
 
 #### scrollToBottomButtonMessagePreviewEnabled  
-Toggle the mode of the Scroll to bottom unread message text preview. 
+Toggle the mode of the scroll to bottom unread message text preview. 
 
 
    - **Type:** Bool
@@ -2593,9 +2544,7 @@ Toggle the mode of the Scroll to bottom unread message text preview.
 
 #### unreadMessagesDividerEnabled 
 Toggle the mode of the Unread Messages divider. 
-If **unreadMessagesDividerEnabled**  is disabled, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed".
-
-Note: Regardless of **unreadMessagesDividerEnabled** value, the conversation screen will always scrolls to the last position where the user left off. 
+If  disabled, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed. Regardless of **unreadMessagesDividerEnabled** value, the conversation screen will always scrolls to the last position where the user left off. 
 
    - **Type:** Bool
    - **Default value:** true 
@@ -2603,7 +2552,7 @@ Note: Regardless of **unreadMessagesDividerEnabled** value, the conversation scr
 
 
 #### unreadMessagesCornersRadius 
-Define the corners radius of the unread messages bubble.  
+Define the corners radius of the unread messages.  
 
 
 - **Type:** Float
@@ -2624,7 +2573,7 @@ Define the corners radius of the unread messages bubble.
 
 
 #### scrollToBottomButtonCornerRadius  
-Define the corner radius for the left top and left bottom of the scroll down indicator. 
+Define the top left and bottom left corners radius. 
 
 
 - **Type:** Float
@@ -2644,7 +2593,7 @@ Define the corner radius for the left top and left bottom of the scroll down ind
 </div> -->
 
 #### scrollToBottomButtonBadgeCornerRadius  
-Define the corners radius of the unread messages counter inside the scroll down indicator.  
+Define the scroll to bottom badge corners radius.  
 
 
 - **Type:** Float
@@ -2725,8 +2674,10 @@ Icon color of default remoteUser avatar.
 
 
 #### remoteUserDefaultAvatarImage  
-Default Avatar image of the remote user. When assigned, image disables the `remoteUserAvatarBackgroundColor` and `remoteUserAvatarIconColor` configurations.  If remote user has an avatar image in his profile, this attribute gets ignored. 
-
+ Default Avatar image of the remote user.
+ When assigned, this image will disable `remoteUserAvatarBackgroundColor` and `remoteUserAvatarIconColor` configurations.
+ If remote user has an avatar image in his profile, this attribute will be ignored.
+ 
 
 - **Type:** UIImage?
 - **Default value:** nil 
@@ -2762,7 +2713,8 @@ Default Avatar image of the remote user. When assigned, image disables the `remo
   
   
 #### brandAvatarImage  
-Set avatar image for the brand, and is an optional UIImage that if set to **nil** a default avatar displays.  
+Default avatar image for Brand.
+If setting nil - default avatar image will be used
 
    - **Type:** UIImage?
    - **Default value:** nil 
@@ -2989,7 +2941,7 @@ Color code for the timestamp of the remote user's bubble.
 
 
 #### remoteUserTypingTintColor
-Color of the remote user typing bubbles animation.  
+Color of the typing indicator for when the remote user is typing. 
 
 
 - **Type:** UIColor    
@@ -3052,7 +3004,8 @@ Alpha of the remote user's bubble overlay when user uses a long press gesture on
 </div> -->
 
 #### remoteUserBubbleTopLeftCornerRadius  
-Top left Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Top left Radius corner on the Remote bubble. 
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
 
 - **Type:** Float    
@@ -3074,7 +3027,8 @@ Top left Radius corner on the Remote bubble. Setting the radius to a value great
 
 
 #### remoteUserBubbleTopRightCornerRadius
-Top right Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Top right Radius corner on the Remote bubble. 
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
 
 - **Type:** Float    
@@ -3096,7 +3050,8 @@ Top right Radius corner on the Remote bubble. Setting the radius to a value grea
 
 
 #### remoteUserBubbleBottomLeftCornerRadius
-Bottom left Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Bottom left Radius corner on the Remote bubble. 
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
 
 - **Type:** Float    
@@ -3117,7 +3072,8 @@ Bottom left Radius corner on the Remote bubble. Setting the radius to a value gr
 
 
 #### remoteUserBubbleBottomRightCornerRadius
-Bottom right Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Bottom right Radius corner on the Remote bubble. 
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
 
 - **Type:** Float    
@@ -3373,10 +3329,11 @@ Alpha of the user's bubble overlay when user use long press gesture on the bubbl
 
 
 #### userBubbleTopLeftCornerRadius
-Top left Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.
+Top left Radius corner on the user's bubble. 
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.
 
 - **Type:** Float    
-- **Default value:** 8
+- **Default value:** 8.0
 
 <!--    <div style="float: right; width: 100%;">
    <figure>
@@ -3392,10 +3349,11 @@ Top left Radius corner on the user's bubble. Setting the radius to a value great
 
 
 #### userBubbleTopRightCornerRadius
-Top right Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Top right Radius corner on the user's bubble. 
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
 - **Type:** Float    
-- **Default value:** 8
+- **Default value:** 8.0
 
 <!--    <div style="float: right; width: 100%;">
    <figure>
@@ -3410,11 +3368,12 @@ Top right Radius corner on the user's bubble. Setting the radius to a value grea
 </div> -->
 
 #### userBubbleBottomLeftCornerRadius
-Bottom left Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Bottom left Radius corner on the user's bubble. 
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
 
 - **Type:** Float    
-- **Default value:** 8
+- **Default value:** 8.0
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -3431,10 +3390,11 @@ Bottom left Radius corner on the user's bubble. Setting the radius to a value gr
 
 
 #### userBubbleBottomRightCornerRadius
-Bottom right Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Bottom right Radius corner on the user's bubble. 
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
 - **Type:** Float    
-- **Default value:** 0
+- **Default value:** 0.0
 
 <!--    <div style="float: right; width: 100%;">
    <figure>
