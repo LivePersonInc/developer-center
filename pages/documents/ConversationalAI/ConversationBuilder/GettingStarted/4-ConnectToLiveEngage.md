@@ -112,13 +112,9 @@ In this step, you set up an integration to transfer the user to a human agent in
 2. On the Add Integration page, create a new API integration with the following parameters.
 
     * **Integration Name**: Escalation (or similar)
-
     * **Response Data Variable Name**: Escalation (or similar)
-
     * **Integration Type**: LivePerson Agent Escalation
-
     * **Agent Skill Name**: Enter the name of the human skill that you created; this should be "Human" unless you used a different name.
-
     * **Agent Skill Id**: Enter the ID number of the human skill that you created; you wrote this down earlier.
 
         (While you set the skill name and ID to that for a specific skill, you could also set these values using variables for a more dynamic experience.)
@@ -181,11 +177,11 @@ In this step, you'll be testing with Chat, so you'll be using [this test page](h
 
 2. In a browser, navigate to [this test page](https://livepersoninc.github.io/visitor-page/?siteid=[your account number]). Note the URL.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/testpage1.png">
+    <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/helloworld/testpage1.png">
 
 3. In the URL, replace the placeholder with your site ID, i.e., your account number.
 
-   <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/testpage2.png">
+   <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/helloworld/testpage2.png">
 
 4. On the test page, click the Live Chat button.
 
@@ -205,12 +201,10 @@ In this step, you'll be testing with Chat, so you'll be using [this test page](h
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/messageindicator.png">
 
-7. Click the icon to enter the agent workspace in LiveEngage, and then select the connection in the table.
-
-8. Click **Accept** in the lower-left corner.
+7. Click the icon to enter the agent workspace in LiveEngage, and then select the connection in the table. Click **Accept** in the lower-left corner.
 
    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/webvisitors_accept.png">
 
-    As an agent, when you accept the inbound transfer, you should see something like this in your LiveEngage dashboard. You can now take part in live chat.
+    As an agent, when you accept the inbound transfer, you should see something like this below in your LiveEngage dashboard. You can now take part in live chat.
 
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/confLE_19.png">
