@@ -48,14 +48,14 @@ The variable can be used anywhere in conversation builder using the following va
 
 The session store is useful in storing any context information gathered in a bot that you may want to use in a routing policy. For instance you may want to set the intent detected by a bot and then use it for any routing policy.
 
-You can call the session store API by setting up an [Integration](conversation-builder-conversation-builder-integrations.html) with the [Context Session Store API](maven-context-warehouse-context-session-store.html) details. You may use the conversation id to store the session state, and pass the conversation id in the AskMaven call. 
+You can call the session store API by setting up an [Integration](conversation-builder-integrations-api-integrations.html) with the [Context Session Store API](maven-context-warehouse-context-session-store.html) details. You may use the conversation id to store the session state, and pass the conversation id in the AskMaven call. 
 
 <img class="fancyimage" width="500" src="img/maven/Call Session Store APIs from CB.png">
 
 
 #### Call AskMaven APIs
 
-AskMaven APIs can be used in a Conversation Builder bot using [Integrations](conversation-builder-conversation-builder-integrations.html).
+AskMaven APIs can be used in a Conversation Builder bot using [Integrations](conversation-builder-integrations-integration-basics.html).
 
 1. Add API Integration to Conversation Builder
 

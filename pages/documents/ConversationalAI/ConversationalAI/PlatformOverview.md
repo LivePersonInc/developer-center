@@ -29,7 +29,7 @@ LivePerson's Conversational AI is a suite of integrated apps that work together 
 
 - [Bot Analytics](bot-analytics.html) holds all of the operational and usage data for your automations.
 
-- [Bot Accounts](bot-accounts-user-role-permissions.html) is the administration area for managing permissions of Conversation Builder users.
+- [Bot Accounts](bot-accounts-permissions-per-role.html) is the administration area for managing permissions of Conversation Builder users.
 
 - [Maven](maven-overview.html) is the Artificial Intelligence engine that runs across the entire Conversational AI suite.
 
