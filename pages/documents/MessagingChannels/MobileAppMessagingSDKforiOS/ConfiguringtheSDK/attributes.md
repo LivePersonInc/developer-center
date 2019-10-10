@@ -52,8 +52,8 @@ extension UIColor {
 }
 ```  
 
-#### **LPColor Types**
-
+<a style="font-weight:bold" href='#lpColor' id='lpColor' class='anchor' aria-hidden='true'>#### lpColor</a>
+   
 | Semantic Color Name  | iOS 13 color source | iOS 11-12 color source |
 | :--- | :--- | :--- |
 | lpBackground |UIColor.systemBackground | UIColor.white |
@@ -92,7 +92,7 @@ When using `getAssignedAgent` method, lets you get assigned agents from active c
 
 --- 
 
-### Audio support
+### Audio Support
 
 #### recordingDurationLimit  
 Maximum time frame for recording audio message (in seconds). 
@@ -103,8 +103,7 @@ Maximum time frame for recording audio message (in seconds).
 
 
 #### enableAudioSharing 
-When set to **true**, the audio sharing features gets enabled. 
-
+Enable or disable audio sharing feature. True is enabled. 
 
    - **Type:** Bool
    - **Default value:** false (disabled)
@@ -112,10 +111,10 @@ When set to **true**, the audio sharing features gets enabled.
 
 
 #### maxNumberOfSavedAudioFilesOnDisk  
-Number representing how many audio files saved on the disk. Exceeding the max value of files get deleted when the app closes. 
+Max number of allowed saved audio files on disk. This refers only to audio files.
+The validation of allowed max number of documents will be when showing and removing conversation.
 
-
-   - **Type:** Int
+   - **Type:** UInt
    - **Default value:** 20
 
 ---  
@@ -135,20 +134,14 @@ The brand name will be shown as a title on toolbar when there is no active conve
 Color code for the entire view background. 
 
    - **Type:** UIColor
-   - **Default value:** UIColor.white 
+   - **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
-
- 
 
 #### customFontNameConversationFeed  
-Custom font name for conversation feed, which affects all messages, timestamps and separators. If the fonts are not part of the iOS families, you must define them in App's Info.plist. 
+Custom font name for conversation feed, which affects all messages, timestamps and separators. Fonts that are not part of the iOS families, must be defined in host app's Info.plist.
 
-<!--    <div style="float: left; width: 35%;height: 140px;">
-   <ul>
-      <li><b>Type:</b> String?</li>
-      <li><b>Default value:</b> nil</li>
-   </ul>
-</div> -->
+- **Type:** String
+- **Default value:** nil
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -162,7 +155,8 @@ Custom font name for conversation feed, which affects all messages, timestamps a
 </div> -->
 
 #### customFontNameNonConversationFeed  
-Custom font name for all non conversation feed controls. Such as: Buttons, Alerts, Banners, Menu and External Windows. If the fonts are not part of the iOS families, you must define them in App's Info.plist. 
+Custom font name for all non conversation feed controls. Such as: buttons, alerts, banners, menu and external windows.
+Fonts that are not part of the iOS families, must be defined in App's Info.plist.
 
 <!--    <div style="float: left; width: 35%;height: 69px;">
    <ul>
@@ -184,7 +178,8 @@ Custom font name for all non conversation feed controls. Such as: Buttons, Alert
  
 
 #### customRefreshControllerImagesArray  
-Array of images for creating the custom refresh controller that loops the images from the array.  You must have two or more images in the array for it to work properly.
+Array of images for creating the custom refresh controller. The custom refresh controller will loop the images from the array. 
+It will need two or more images in the array for loop to take effect.
 
 <!--    <div style="float: left; width: 35%;height: 136px;">
    <ul>
@@ -205,7 +200,7 @@ Array of images for creating the custom refresh controller that loops the images
 </div> -->
 
 #### customRefreshControllerAnimationSpeed  
-Custom refresh controller speed animation define the full images loop time. Smaller values create high speed animation.
+Custom refresh controller speed animation define the full images loop time. The smaller the value the faster the animation.
 
    - **Type:** Float<UIImage>
    - **Default value:** 2 
@@ -214,7 +209,7 @@ Custom refresh controller speed animation define the full images loop time. Smal
 #### conversationBackgroundPortraitImage  
 When not nil, use this attribute as the conversation portrait background image. When an image is shown, it is recommended to set [`dateSeparatorBackgroundColor`](#dateseparatorbackgroundcolor) config to **clear**. 
 
-   - **Type:** UIImage;
+   - **Type:** UIImage
    - **Default value:**  nil
 
 
@@ -222,14 +217,14 @@ When not nil, use this attribute as the conversation portrait background image. 
 #### conversationBackgroundLandscapeImage  
 When not nil, use this attibute as the conversation landscape background image. When an image is shown, it is recommended to set [`dateSeparatorBackgroundColor`](#dateseparatorbackgroundcolor) config to **clear**. 
 
-   - **Type:** UIImage;
-   - **Default value:**  nil
+   - **Type:** UIImage
+   - **Default value:** nil
 
 
 #### conversationBackgroundImageContentMode  
 Defines the content mode of the conversation background image.  
 
-   - **Type:** UIViewContentMode;
+   - **Type:** UIView.ContentMode
    - **Default value:** scaleToFill 
 
 
@@ -241,12 +236,8 @@ Defines the content mode of the conversation background image.
 #### connectionStatusConnectingBackgroundColor  
 Color code for the background of the connection status bar while connecting.
 
-<!--    <div style="float: left; width: 35%;height: 34px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #f5f5f5f2</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBackground`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
