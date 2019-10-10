@@ -4,7 +4,7 @@ redirect_from:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Connectors
-permalink: bot-connectors-ibm-watson-assistant-version-2.html
+permalink: third-party-bots-ibm-watson-assistant-version-2.html
 indicator:
 ---
 
