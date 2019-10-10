@@ -237,7 +237,7 @@ Defines the content mode of the conversation background image.
 Color code for the background of the connection status bar while connecting.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#LPColor) 
+- **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -253,14 +253,10 @@ Color code for the background of the connection status bar while connecting.
 
 
 #### connectionStatusConnectingTextColor 
-Color code for the text of the connection status bar while connecting. 
+Color code for the text of the connection status bar while connecting.
 
-<!--    <div style="float: left; width: 35%;height: 34px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #46474a</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpWhite`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -276,14 +272,10 @@ Color code for the text of the connection status bar while connecting.
  
 
 #### connectionStatusFailedToConnectBackgroundColor  
-Color code for the background of the connection status bar when connection failed.
+Connection status toast (failed to connect) background color.
 
-<!--    <div style="float: left; width: 35%;height: 37px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #000000cc</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBlack`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -298,14 +290,10 @@ Color code for the background of the connection status bar when connection faile
 </div> -->
 
 #### connectionStatusFailedToConnectTextColor  
-Color code for the text of the connection status bar when connection failed. 
+Connection status toast (failed to connect) text color.
 
-<!--    <div style="float: left; width: 35%;height: 37px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpWhite`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -321,17 +309,13 @@ Color code for the text of the connection status bar when connection failed.
 
 --- 
 
-### Controller message
+### Controller bubble
 
 #### controllerBubbleTextColor  
 Color code for the text of the controller bubble. 
 
-<!--    <div style="float: left; width: 35%;height: 90px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #5b5c5e</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray2`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -360,7 +344,7 @@ Number of conversations to show in advance.
 
 
 #### deleteClosedConversationOlderThanMonths  
-Upon SDK initialization, all closed conversations with an end date older than X months get deleted from the database. Setting 0 deletes all closed conversations. 
+Upon SDK initialization, all closed conversations with an end date older than X months will be deleted from the database. Setting 0 deletes all closed conversations. 
 
    - **Type:** UInt
    - **Default value:** 13 
@@ -380,12 +364,8 @@ Maximum number of minutes to send the message.
 #### conversationSeparatorTextColor  
 Conversation separator text and line color.
 
-<!--    <div style="float: left; width: 35%;height: 52px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.black</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -485,12 +465,12 @@ Define the conversation Closed label to separator line padding.
 </div> -->
 
 #### conversationSeparatorFontName 
-Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in App's Info.plist.
+Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in host app's Info.plist.
 
 <!--    <div style="float: left; width: 35%;height: 79px;">
    <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 7</li>
+      <li><b>Type:</b> String</li>
+      <li><b>Default value:</b> nil</li>
    </ul>
 </div> -->
 
@@ -511,8 +491,8 @@ Define the conversation separator view bottom padding.
 
 <!--    <div style="float: left; width: 35%;height: 62px;">
    <ul>
-      <li><b>Type:</b> String</li>
-      <li><b>Default value:</b> nil</li>
+      <li><b>Type:</b> Float</li>
+      <li><b>Default value:</b> 7</li>
    </ul>
 </div> -->
 
@@ -551,7 +531,7 @@ Define the conversation Closed Separator Top padding.
 
 
 #### enableVibrationOnMessageFromRemoteUser 
-Toggle vibration sound when a remote user sends a new message.
+Toggle device vibration when a remote user sends a new message.
 
    - **Type:** Bool
    - **Default value:** false 
@@ -560,7 +540,8 @@ Toggle vibration sound when a remote user sends a new message.
 
 
 #### announceAgentTyping  
-If true, show agent is typing indicator in selected position and accessibility will announce when agent is typing a message to the consumer. If false, will not show any indication, and will not announce when agent is typing a message. 
+If true, show agent is typing indicator. In accessibility mode, announce when agent is typing. 
+When false will not show any indication that the agent is typing, and will not announce when agent is typing in accessibility.
 
    - **Type:** Bool
    - **Default value:**  true 
@@ -569,7 +550,8 @@ If true, show agent is typing indicator in selected position and accessibility w
 
 
 #### showAgentTypingInMessageBubble  
-If true, shows agent is typing indicator in a message bubble. If false, show indicator under Agent label in navigator bar. if announceAgentTyping is false, will not show any "is typing" indicator regardless of current value. 
+When true, shows agent  is typing indicator in a message bubble. When false, show indicator under Agent label in navigator bar.
+When announceAgentTyping is false, will not show any "is typing" indicator regardless of current value.
 
    - **Type:** Bool
    - **Default value:** true 
