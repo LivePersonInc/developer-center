@@ -2267,15 +2267,12 @@ Expiration of CSAT in minutes from the moment the conversation was ended. If Sur
 #### systemBubbleTextColor  
 Color code for the text of the system messages. 
 
-<!--    <div style="float: left; width: 45%;height: 50px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.black</li>
-   </ul>
-  
-</div> -->
 
-<!--    <div style="float: right; width: 55%;">
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/DefaultSendButton.png" alt="DefaultSendButton">
@@ -2315,16 +2312,15 @@ Number of seconds before the first Time to Respond (TTR) notification appears.
 
 
 #### ttrShouldShowTimestamp  
-When set to **true**, the timestamp of the TTR notification displays. Otherwise, the "An agent will respond shortly" message displays.   
+When set to **true**, the timestamp of the TTR notification displays. 
+Otherwise, the "An agent will respond shortly" message displays.   
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> false</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** Bool
+- **Default value:** false 
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/ttrshouldshowtimestamp.png" alt="ttrShouldShowTimestamp">
@@ -2342,41 +2338,14 @@ Controls the TTR frequency, for example, don’t show the TTR more than once in 
    - **Type:** UInt
    - **Default value:** 8 
 
-
-
-#### showUrgentButtonInTTRNotification  
-When set to **true**, the Urgent button shows in the TTR notification.
-
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> false</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/showurgentbuttoninttrnotification.png" alt="showUrgentButtonInTTRNotification">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### showOffHoursBanner  
 Enable or disable the off-hours toaster. 
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> true</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** Bool
+- **Default value:** true 
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/showoffhoursbanner.png" alt="showoffhoursbanner">
@@ -2389,16 +2358,14 @@ Enable or disable the off-hours toaster.
 </div> -->
 
 #### ttrBannerBackgroundColor  
-Background color for banner. 
+Background color of TTR notification banner view. 
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #52A742</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBlack`](#lpColor)
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/ttrbannerbackgroundcolor.png" alt="ttrBannerBackgroundColor"> 
@@ -2411,16 +2378,15 @@ Background color for banner.
 </div> -->
 
 #### ttrBannerTextColor  
-Text color of the banner. 
+Text color of TTR notification banner view. 
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #52A742</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpWhite`](#lpColor)
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/ttrbannertextcolor.png" alt="ttrbannertextcolor"> 
@@ -2433,44 +2399,29 @@ Text color of the banner.
 </div> -->
 
 
-#### ttrBannerOpacityAlpha  
-Opacity level of the banner background (values: 0.0 - 1.0). 
-
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> Double</li>
-      <li><b>Default value:</b> 0.8</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/ttrbanneropacityalpha.png" alt="ttrBannerOpacityAlpha"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### offHoursTimeZoneName  
 Off Hours time zone name string based on [NSTimeZone knownTimeZoneNames]. If sending empty string, the local timezone will be used (Server sends UTC time). 
 
    - **Type:** String
    - **Default value:** "" (Empty String) 
 
+#### toastNotificationsEnabled  
+Enable toast notifications such as offline and TTR notifications. 
+
+   - **Type:** Bool
+   - **Default value:** true 
+
+
 --- 
 
 ### Unread Messages
 
 #### scrollToBottomButtonBackgroundColor  
-Scroll to bottom button background color of the whole button.
-
-
+Scroll to bottom button background color of the whole b
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray2`](#lpColor)
+- **Default value:** [`LPColor.lpGray2`](#lpColor)utton.
+
+
 
 
 <!--    <div style="float: right; width: 100%;">
