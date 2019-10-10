@@ -2884,14 +2884,12 @@ Icon color of agent's default avatar in CSAT.
 #### inputTextViewContainerBackgroundColor  
 User Input TextView container background color.  
 
-<!--    <div style="float: left; width: 35%;height: 43px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #F5F5F5</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor  
+- **Default value:** LPColor.lpGray3
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor">
@@ -2905,14 +2903,12 @@ User Input TextView container background color.
 #### inputTextViewCornerRadius  
 User Input TextView corner radius.  
 
-<!--    <div style="float: left; width: 35%;height: 43px;">
-   <ul>
-      <li><b>Type:</b> Double</li>
-      <li><b>Default value:</b> 20.0</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** Double  
+- **Default value:** 20.0 
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/inputtextviewcornerradius.png" alt="inputtextviewcornerradius">
@@ -2924,6 +2920,15 @@ User Input TextView corner radius.
 &nbsp;
 </div> -->
 
+
+#### inputTextViewTopBorderColor  
+Input TextView top border color default clear color.  
+
+
+- **Type:** UIColor  
+- **Default value:** LPColor.lpClear
+
+
 --- 
 
 ### User's Bubble
@@ -2931,14 +2936,12 @@ User Input TextView corner radius.
 #### remoteUserBubbleBackgroundColor
 Color code for the background of the remote user's bubble.
 
-<!--    <div style="float: left; width: 35%;padding-bottom: 15px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #004DC9</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpGray4
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteuserbubblebackgroundcolor.png" alt="remoteuserbubblebackgroundcolor">
@@ -2952,14 +2955,12 @@ Color code for the background of the remote user's bubble.
 #### remoteUserBubbleBorderColor
 Color code for the outline color.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #004DC9</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpGray4
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteuserbubblebordercolor.png" alt="remoteuserbubblebordercolor">
@@ -2973,14 +2974,13 @@ Color code for the outline color.
 #### remoteUserBubbleLinkColor
 Color code for links in the text of the remote user's bubble.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpLabel
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteuserbubblelinkcolor.png" alt="remoteuserbubblelinkcolor">
@@ -2993,14 +2993,13 @@ Color code for links in the text of the remote user's bubble.
 #### remoteUserBubbleTextColor
 Color code for the text of the remote user's bubble.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpLabel
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteuserbubbletextcolor.png" alt="remoteuserbubbletextcolor">
@@ -3020,14 +3019,8 @@ Double number for the outline width.
 - **Default value:** 1
 
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> Double</li>
-      <li><b>Default value:</b> 2</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteuserbubbleborderwidth.png" alt="remoteuserbubbleborderwidth">
@@ -3043,14 +3036,13 @@ Double number for the outline width.
 #### remoteUserBubbleTimestampColor
 Color code for the timestamp of the remote user's bubble. 
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #5B5C5E</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpSecondaryLabel
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteuserbubbletimestampcolor.png" alt="remoteuserbubbletimestampcolor">
@@ -3062,17 +3054,17 @@ Color code for the timestamp of the remote user's bubble.
 &nbsp;
 </div> -->
 
+
 #### remoteUserTypingTintColor
 Color of the remote user typing bubbles animation.  
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpBackground
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteusertypingtintcolor.png" alt="remoteusertypingtintcolor">
@@ -3088,14 +3080,12 @@ Color of the remote user typing bubbles animation.
 #### remoteUserBubbleLongPressOverlayColor
 Color of the remote user's bubble overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.
 
-<!--    <div style="float: left; width: 35%;height: 150px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.black</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpLabel
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
@@ -3116,14 +3106,7 @@ Alpha of the remote user's bubble overlay when user uses a long press gesture on
 
 
 
-<!--    <div style="float: left; width: 35%;height: 150px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 0.3</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
@@ -3140,17 +3123,11 @@ Top left Radius corner on the Remote bubble. Setting the radius to a value great
 
 
 - **Type:** Float    
-- **Default value:** 8
+- **Default value:** 8.0
 
 
-<!--    <div style="float: left; width: 35%;height: 125px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteTopLeft.png" alt="remoteTopLeft">
@@ -3168,17 +3145,11 @@ Top right Radius corner on the Remote bubble. Setting the radius to a value grea
 
 
 - **Type:** Float    
-- **Default value:** 8
+- **Default value:** 8.0
 
 
-<!--    <div style="float: left; width: 35%;height: 125px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteTopRight.png" alt="remoteTopRight">
@@ -3196,16 +3167,10 @@ Bottom left Radius corner on the Remote bubble. Setting the radius to a value gr
 
 
 - **Type:** Float    
-- **Default value:** 0
+- **Default value:** 0.0
 
-<!--    <div style="float: left; width: 35%;height: 125px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 0</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteBottomLeft.png" alt="remoteBottomLeft">
@@ -3223,17 +3188,11 @@ Bottom right Radius corner on the Remote bubble. Setting the radius to a value g
 
 
 - **Type:** Float    
-- **Default value:** 8
+- **Default value:** 8.0
 
 
-<!--    <div style="float: left; width: 35%;height: 125px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteBottomRight.png" alt="remoteBottomRight">
@@ -3248,14 +3207,12 @@ Bottom right Radius corner on the Remote bubble. Setting the radius to a value g
 #### userBubbleBackgroundColor
 Color code for the background of the visitor bubble.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #EDEDED</li>
-   </ul>
-</div> -->
+- **Type:** UIColor    
+- **Default value:** LPColor.lpBlue
 
-<!--    <div style="float: right; width: 65%;">
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userbubblebackgroundcolor.png" alt="userbubblebackgroundcolor">
@@ -3271,14 +3228,12 @@ Color code for the background of the visitor bubble.
 #### userBubbleBorderColor
 Color code for the outline color.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #EDEDED</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpBlue
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
   <img src="img/userbubblebordercolor.png" alt="userbubblebordercolor">
@@ -3293,14 +3248,13 @@ Color code for the outline color.
 #### userBubbleLinkColor
 Color code for links in the text of the visitor bubble.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #0000ee</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpWhite
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userbubblelinkcolor.png" alt="userbubblelinkcolor">
@@ -3315,14 +3269,11 @@ Color code for links in the text of the visitor bubble.
 #### userBubbleTextColor
 Color code for the text of the visitor bubble.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.black</li>
-   </ul>
-</div> -->
+- **Type:** UIColor    
+- **Default value:** UIColor.white
 
-<!--    <div style="float: right; width: 65%;">
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userbubbletextcolor.png" alt="userbubbletextcolor">
@@ -3343,14 +3294,7 @@ Double number for the outline width.
 - **Default value:** 1.0
 
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> Double</li>
-      <li><b>Default value:</b> 1</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userbubbleborderwidth.png" alt="userbubbleborderwidth">
@@ -3365,14 +3309,12 @@ Double number for the outline width.
 #### userBubbleTimestampColor
 Color code for the timestamp of the visitor bubble.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #5B5C5E</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpSecondaryLabel
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userbubbletimestampcolor.png" alt="userbubbletimestampcolor">
@@ -3387,14 +3329,13 @@ Color code for the timestamp of the visitor bubble.
 #### userBubbleSendStatusTextColor
 Color code for the send status text of the visitor bubble.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #5B5C5E</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpSecondaryLabel
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userbubblesendstatustextcolor.png" alt="userbubblesendstatustextcolor">
@@ -3410,14 +3351,13 @@ Color code for the send status text of the visitor bubble.
 #### userBubbleErrorTextColor
 Color code for the error view text of the visitor bubble. 
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #DE0A23</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpRed
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userbubbleerrortextcolor.png" alt="userbubbleerrortextcolor">
@@ -3433,14 +3373,13 @@ Color code for the error view text of the visitor bubble.
 #### userBubbleErrorBorderColor
 Color code for the error view border of the visitor bubble.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #DE0A23</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor    
+- **Default value:** LPColor.lpRed
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userbubbleerrorbordercolor.png" alt="userbubbleerrorbordercolor">
@@ -3464,14 +3403,11 @@ Enable bubbles overlay when user performing a long press gesture on messaging bu
 Color of the user's bubble overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.  
 
 
-<!--    <div style="float: left; width: 35%;height: 150px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.black</li>
-   </ul>
-</div> -->
+- **Type:** UIColor    
+- **Default value:** LPColor.lpLabel
 
-<!--    <div style="float: right; width: 65%;">
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
@@ -3490,14 +3426,7 @@ Alpha of the user's bubble overlay when user use long press gesture on the bubbl
 - **Default value:** 0.3
 
 
-<!--    <div style="float: left; width: 35%;height: 150px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 0.3</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
@@ -3516,14 +3445,7 @@ Top left Radius corner on the user's bubble. Setting the radius to a value great
 - **Type:** Float    
 - **Default value:** 8
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userTopLeft.png" alt="userTopLeft">
@@ -3542,14 +3464,7 @@ Top right Radius corner on the user's bubble. Setting the radius to a value grea
 - **Type:** Float    
 - **Default value:** 8
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userTopRight.png" alt="userTopRight">
@@ -3568,14 +3483,8 @@ Bottom left Radius corner on the user's bubble. Setting the radius to a value gr
 - **Type:** Float    
 - **Default value:** 8
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userBottomLeft.png" alt="userBottomLeft">
@@ -3594,15 +3503,7 @@ Bottom right Radius corner on the user's bubble. Setting the radius to a value g
 - **Type:** Float    
 - **Default value:** 0
 
-
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 0</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/userBottomRight.png" alt="userBottomRight">
@@ -3689,14 +3590,7 @@ When true, user and remote user messages containing one or two emojis will be en
 - **Default value:** false
 
 
-<!--    <div style="float: left; width: 35%;height: 300px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> false</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/enableEnlargeEmojis.png" alt="enableEnlargeEmojis" style="width: auto; height: 300px;">
@@ -3718,14 +3612,7 @@ When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-fo
 - **Type:** UIImage?    
 - **Default value:** nil
 
-<!--    <div style="float: left; width: 35%;height: 70px;">
-   <ul>
-      <li><b>Type:</b> UIImage</li>
-      <li><b>Default value:</b> nil </li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/custombuttonimage.png" alt="custombuttonimage">
