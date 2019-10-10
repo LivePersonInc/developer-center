@@ -154,7 +154,7 @@
           - subpagename: Get and Set User Data and Variables
           - subpagename: Get and Set Conversation Flow Data 
           - subpagename: Sending Messages
-          - subpagename: Context Session Store Wrapper
+          #- subpagename: Context Session Store Wrapper
       #- pagename: Keyword Triggers
       #- pagename: Operations
       - pagename: Enterprise Integrations
@@ -164,7 +164,7 @@
           - subpagename: Using Environment Variables
           #- subpagename: Common Conversation Patterns
           - subpagename: Versions, Releases, & Change Management
-  - documentname: Maven
+  - documentname: Maven AI
     pages:
       - pagename: Overview
       - pagename: Maven Assist
@@ -189,10 +189,10 @@
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-#  - documentname: LiveIntent
-#    pages:
-#	  - pagename: Overview
-#	  - pagename: Dashboard
+  - documentname: LiveIntent
+    pages:
+      - pagename: Overview
+      - pagename: Dashboard
   - documentname: Intent Builder
     pages:
       - pagename: Overview
@@ -213,16 +213,17 @@
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
+      - pagename: IBM Watson Assistant Version 2
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
       - pagename: Custom Integration
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
+      - pagename: Methods
+      - pagename: Events
       - pagename: Examples
       - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
-#  - documentname: Custom Bots
 - categoryname: Client Side Configuration
   image: client-side
   documents:
