@@ -3016,6 +3016,10 @@ Color code for the text of the remote user's bubble.
 #### remoteUserBubbleBorderWidth
 Double number for the outline width. 
 
+- **Type:** Double    
+- **Default value:** 1
+
+
 <!--    <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Double</li>
@@ -3106,6 +3110,12 @@ Color of the remote user's bubble overlay when user uses a long press gesture on
 #### remoteUserBubbleLongPressOverlayAlpha
 Alpha of the remote user's bubble overlay when user uses a long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.  
 
+
+- **Type:** Float    
+- **Default value:** 0.3
+
+
+
 <!--    <div style="float: left; width: 35%;height: 150px;">
    <ul>
       <li><b>Type:</b> Float</li>
@@ -3127,6 +3137,10 @@ Alpha of the remote user's bubble overlay when user uses a long press gesture on
 
 #### remoteUserBubbleTopLeftCornerRadius  
 Top left Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+
+
+- **Type:** Float    
+- **Default value:** 8
 
 
 <!--    <div style="float: left; width: 35%;height: 125px;">
@@ -3152,6 +3166,11 @@ Top left Radius corner on the Remote bubble. Setting the radius to a value great
 #### remoteUserBubbleTopRightCornerRadius
 Top right Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
+
+- **Type:** Float    
+- **Default value:** 8
+
+
 <!--    <div style="float: left; width: 35%;height: 125px;">
    <ul>
       <li><b>Type:</b> Float</li>
@@ -3175,6 +3194,10 @@ Top right Radius corner on the Remote bubble. Setting the radius to a value grea
 #### remoteUserBubbleBottomLeftCornerRadius
 Bottom left Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
+
+- **Type:** Float    
+- **Default value:** 0
+
 <!--    <div style="float: left; width: 35%;height: 125px;">
    <ul>
       <li><b>Type:</b> Float</li>
@@ -3197,6 +3220,11 @@ Bottom left Radius corner on the Remote bubble. Setting the radius to a value gr
 
 #### remoteUserBubbleBottomRightCornerRadius
 Bottom right Radius corner on the Remote bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+
+
+- **Type:** Float    
+- **Default value:** 8
+
 
 <!--    <div style="float: left; width: 35%;height: 125px;">
    <ul>
@@ -3311,6 +3339,10 @@ Color code for the text of the visitor bubble.
 #### userBubbleBorderWidth
 Double number for the outline width.
 
+- **Type:** Double    
+- **Default value:** 1.0
+
+
 <!--    <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Double</li>
@@ -3420,6 +3452,14 @@ Color code for the error view border of the visitor bubble.
 &nbsp;
 </div> -->
 
+
+#### enableBubblesOverlayOnLongPress
+Enable bubbles overlay when user performing a long press gesture on messaging bubbles.  
+
+- **Type:** Bool    
+- **Default value:** true
+
+
 #### userBubbleLongPressOverlayColor
 Color of the user's bubble overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.  
 
@@ -3446,6 +3486,10 @@ Color of the user's bubble overlay when user uses a long press gesture on the bu
 #### userBubbleLongPressOverlayAlpha
 Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.  
 
+- **Type:** Float    
+- **Default value:** 0.3
+
+
 <!--    <div style="float: left; width: 35%;height: 150px;">
    <ul>
       <li><b>Type:</b> Float</li>
@@ -3468,6 +3512,9 @@ Alpha of the user's bubble overlay when user use long press gesture on the bubbl
 
 #### userBubbleTopLeftCornerRadius
 Top left Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.
+
+- **Type:** Float    
+- **Default value:** 8
 
 <!--    <div style="float: left; width: 35%;">
    <ul>
@@ -3492,6 +3539,9 @@ Top left Radius corner on the user's bubble. Setting the radius to a value great
 #### userBubbleTopRightCornerRadius
 Top right Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
 
+- **Type:** Float    
+- **Default value:** 8
+
 <!--    <div style="float: left; width: 35%;">
    <ul>
       <li><b>Type:</b> Float</li>
@@ -3513,6 +3563,10 @@ Top right Radius corner on the user's bubble. Setting the radius to a value grea
 
 #### userBubbleBottomLeftCornerRadius
 Bottom left Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+
+
+- **Type:** Float    
+- **Default value:** 8
 
 <!--    <div style="float: left; width: 35%;">
    <ul>
@@ -3536,6 +3590,10 @@ Bottom left Radius corner on the user's bubble. Setting the radius to a value gr
 
 #### userBubbleBottomRightCornerRadius
 Bottom right Radius corner on the user's bubble. Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+
+- **Type:** Float    
+- **Default value:** 0
+
 
 <!--    <div style="float: left; width: 35%;">
    <ul>
@@ -3603,7 +3661,6 @@ Define the bubble Leading Padding.
 - **Default value:** 10 
 
 
-
 #### bubbleTrailingPadding
 Define the bubble Trailing Padding.
 
@@ -3614,50 +3671,23 @@ Define the bubble Trailing Padding.
 #### bubbleTimestampBottomPadding
 Define the bubble Trailing Padding.
 
-<!--    <div style="float: left; width: 35%;height: 75px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 5</li>
-   </ul>
-</div> -->
+- **Type:** Float    
+- **Default value:** 5
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/bubbleTimestampBottomPadding.png" alt="bubbleTimestampBottomPadding">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### bubbleTimestampTopPadding
 Define the bubble Timestamp Top Padding.
 
-<!--    <div style="float: left; width: 35%;height: 75px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 5</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/bubbleTimestampTopPadding.png" alt="bubbleTimestampTopPadding">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
+- **Type:** Float    
+- **Default value:** 5
 
 
 #### enableEnlargeEmojis
 When true, user and remote user messages containing one or two emojis will be enlarged in chat. Messages with one emoji will be the largest, two emojis will be large, and 3 or more will be displayed as normal text.
+
+- **Type:** Bool    
+- **Default value:** false
+
 
 <!--    <div style="float: left; width: 35%;height: 300px;">
    <ul>
@@ -3684,6 +3714,9 @@ When true, user and remote user messages containing one or two emojis will be en
 #### customButtonImage 
 *(Window mode only)* Custom button icon image that displays on the navigation bar.
 When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-for-ios-sdk-apis-callbacks-index.html#lpmessagingsdkcustombuttontapped) callback gets invoked.
+
+- **Type:** UIImage?    
+- **Default value:** nil
 
 <!--    <div style="float: left; width: 35%;height: 70px;">
    <ul>
