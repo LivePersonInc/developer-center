@@ -1079,7 +1079,7 @@ Country code: When it is not nil, it will be combined with 'language' ("language
 
 
 
-#### language  
+#### Language  
 Language used instead of default device language.
 
 The LPLanguage enum contains all languages supported by the MessagingSDK, and affects the following areas:
