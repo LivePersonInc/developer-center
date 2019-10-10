@@ -2495,14 +2495,12 @@ Off Hours time zone name string based on [NSTimeZone knownTimeZoneNames]. If sen
 #### scrollToBottomButtonBackgroundColor  
 Scroll to bottom button background color of the whole button.
 
-<!--    <div style="float: left; width: 35%;height: 71px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.black</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** LPColor.lpGray2
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/scrolltobottombuttonbackgroundcolor.png" alt="scrolltobottombuttonarrowcolor">
@@ -2516,14 +2514,13 @@ Scroll to bottom button background color of the whole button.
 #### scrollToBottomButtonMessagePreviewTextColor 
 Scroll to bottom button text color of the last unread message preview.
 
-<!--    <div style="float: left; width: 35%;height: 71px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** LPColor.lpBackground
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/scrolltobottombuttonmessagepreviewtextcolor.png" alt="scrolltobottombuttonmessagepreviewtextcolor">
@@ -2537,14 +2534,13 @@ Scroll to bottom button text color of the last unread message preview.
 #### scrollToBottomButtonBadgeBackgroundColor  
 Scroll to bottom button unread message badge background color.
 
-<!--    <div style="float: left; width: 35%;height: 71px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #E7242D</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** LPColor.lpRed
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/scrolltobottombuttonbadgebackgroundcolor.png" alt="scrolltobottombuttonbadgebackgroundcolor">
@@ -2559,14 +2555,13 @@ Scroll to bottom button unread message badge background color.
 #### scrollToBottomButtonBadgeTextColor 
 Scroll to bottom button unread message badge text color.
 
-<!--    <div style="float: left; width: 35%;height: 71px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** LPColor.lpLabel
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/scrolltobottombuttonbadgetextcolor.png" alt="scrolltobottombuttonbadgetextcolor">
@@ -2582,14 +2577,13 @@ Scroll to bottom button unread message badge text color.
 #### scrollToBottomButtonArrowColor 
 Scroll to bottom button arrow tint color.
 
-<!--    <div style="float: left; width: 35%;height: 71px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** LPColor.lpBackground
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/scrolltobottombuttonarrowcolor.png" alt="scrolltobottombuttonarrowcolor">
@@ -2605,14 +2599,13 @@ Scroll to bottom button arrow tint color.
 #### unreadMessagesDividerBackgroundColor 
 Unread Messages divider background color.
 
-<!--    <div style="float: left; width: 35%;height: 71px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #F5F5F5</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** LPColor.lpGray5
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/unreadmessagesdividerbackgroundcolor.png" alt="unreadmessagesdividerbackgroundcolor">
@@ -2627,14 +2620,13 @@ Unread Messages divider background color.
 #### unreadMessagesDividerTextColor 
 Unread Messages divider text color.
 
-<!--    <div style="float: left; width: 35%;height: 71px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #004DC9</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** LPColor.lpBlue
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/unreadmessagesdividertextcolor.png" alt="unreadmessagesdividertextcolor">
@@ -2678,14 +2670,13 @@ Note: Regardless of **unreadMessagesDividerEnabled** value, the conversation scr
 #### unreadMessagesCornersRadius 
 Define the corners radius of the unread messages bubble.  
 
-<!--    <div style="float: left; width: 35%;height: 120px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8 for all the corners</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** Float
+- **Default value:** 8.0 
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/unreadBubbleRadius.png" alt="unreadBubbleRadius">
@@ -2700,14 +2691,13 @@ Define the corners radius of the unread messages bubble.
 #### scrollToBottomButtonCornerRadius  
 Define the corner radius for the left top and left bottom of the scroll down indicator. 
 
-<!--    <div style="float: left; width: 35%;height: 120px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 20 for left top and the left bottom corners</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** Float
+- **Default value:** 20.0 
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius">
@@ -2721,14 +2711,13 @@ Define the corner radius for the left top and left bottom of the scroll down ind
 #### scrollToBottomButtonBadgeCornerRadius  
 Define the corners radius of the unread messages counter inside the scroll down indicator.  
 
-<!--    <div style="float: left; width: 35%;height: 69px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 12 for all the corners</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** Float
+- **Default value:** 12.0 
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius">
