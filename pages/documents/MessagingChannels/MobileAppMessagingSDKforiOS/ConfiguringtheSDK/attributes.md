@@ -2747,21 +2747,19 @@ Define the corners radius of the unread messages counter inside the scroll down 
 Background color of the remote user’s avatar. 
 
    - **Type:** UIColor
-   - **Default value:** #004DC9 
+   - **Default value:** LPColor.lpGray4 
 
 
 
-#### remoteUserAvatarLeading  
+#### remoteUserAvatarLeadingPadding  
 Define the remote avatar Leading padding (left edge to avatar). 
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
-   </ul>
-</div> -->
+- **Type:** Float
+- **Default value:**  8.0
 
-<!--    <div style="float: right; width: 65%;">
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding"> 
@@ -2776,14 +2774,13 @@ Define the remote avatar Leading padding (left edge to avatar).
 #### remoteUserAvatarTrailingPadding  
 Define the remote avatar Trailing padding (Avatar to bubble). 
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 8</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** Float
+- **Default value:**  8.0
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding"> 
@@ -2799,21 +2796,19 @@ Define the remote avatar Trailing padding (Avatar to bubble).
 Icon color of default remoteUser avatar.  
 
    - **Type:** UIColor
-   - **Default value:**  #FFFFFF
+   - **Default value:**  LPColor.lpBackground
 
 
 
 #### remoteUserDefaultAvatarImage  
 Default Avatar image of the remote user. When assigned, image disables the `remoteUserAvatarBackgroundColor` and `remoteUserAvatarIconColor` configurations.  If remote user has an avatar image in his profile, this attribute gets ignored. 
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> UIImage?</li>
-      <li><b>Default value:</b> nil</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIImage?
+- **Default value:** nil 
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/remoteUserDefaultAvatarImage.png" alt="remoteUserDefaultAvatarImage"> 
@@ -2825,8 +2820,25 @@ Default Avatar image of the remote user. When assigned, image disables the `remo
 &nbsp;
 </div> -->
 
+
+  #### remoteUserAvatarIconBorderWidth  
+  Define the remote avatar icon border width.
+
+
+  - **Type:** CGFloat
+  - **Default value:** 0.0
+
+
+  #### remoteUserAvatarIconBorderColor  
+  Define the remote avatar icon border color.
+
+
+  - **Type:** UIColor?
+  - **Default value:** nil
+  
+  
 #### brandAvatarImage  
-Set avatar image for the brand, and is an optional UIImage that if set to **nil** a default avatar displays. Image ratio must be 1:1 (square) and at least 50x50 pixels. 
+Set avatar image for the brand, and is an optional UIImage that if set to **nil** a default avatar displays.  
 
    - **Type:** UIImage?
    - **Default value:** nil 
@@ -2836,14 +2848,13 @@ Set avatar image for the brand, and is an optional UIImage that if set to **nil*
 #### csatAgentAvatarBackgroundColor 
 Background color of agent's default avatar in CSAT. 
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #004DC9</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor  
+- **Default value:** LPColor.lpGray4
+
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatagentavatarbackgroundcolor.png" alt="csatAgentAvatarBackgroundColor"> 
@@ -2858,14 +2869,12 @@ Background color of agent's default avatar in CSAT.
 #### csatAgentAvatarIconColor  
 Icon color of agent's default avatar in CSAT.
 
-<!--    <div style="float: left; width: 35%;height: 51px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #FFFFFF</li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor  
+- **Default value:** LPColor.lpBackground
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatagentavatariconcolor.png" alt="csatAgentAvatarIconColor"> 
