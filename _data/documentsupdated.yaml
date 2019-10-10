@@ -180,7 +180,6 @@
           - subpagename: Deploying to LiveEngage
       #- pagename: Keyword Triggers
       #- pagename: Operations
-      - pagename: Enterprise Integrations
       - pagename: Best Practices
         subpages:
           - subpagename: Transfer to an Agent or Bot
