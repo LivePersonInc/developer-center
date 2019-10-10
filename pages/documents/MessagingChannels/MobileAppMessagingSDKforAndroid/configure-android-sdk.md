@@ -276,26 +276,25 @@ To get the App key or appInstallationId, a new Conversation Source needs to be a
    <div class="notice">The entry points and engagement attributes used here are dummies.</div>
 
    ```java
-   // Create Entry Points JSON
-   JSONArray entryPoints = null;
-   try {
-     // Try to Create JSON Array
-     jsonArray = new JSONArray("[tel://972737004000, http://www.liveperson.com, sec://sport, lang://Eng]");
-   } catch (JSONException e) {
-     // Log Error
-     Log.d(TAG, "Error Creating Entry Points :: " + e.getLocalizedMessage());
-   }
-   // Create Engagement Attributes
-   JSONArray engagementAttributes = null;
-   try {
-     // Try to Create JSON Array
-   jsonArray = new JSONArray("[{"type": "purchase", "total": "20.0"},{"type": "lead","lead": {"topic": "luxury car test drive 2015","value": "22.22","leadId": "xyz123"}}]")
-   } catch (JSONException e) {
-     // Log Error
-     Log.d(TAG, "Error Creating Engagement Attr :: " + e.getLocalizedMessage());
-   }
-   // Create Monitoring Params
-   MonitoringParams params = new MonitoringParams(null, entryPoints, engagementAttributes);
+    // Create Entry Points JSON
+    JSONArray entryPoints = null;
+    try {
+        entryPoints = new JSONArray("[tel://972737004000, http://www.liveperson.com, sec://sport, lang://Eng]");
+    } catch (JSONException e) {
+        Log.e(TAG, "Error Creating Entry Points :: " + e);
+    }
+    
+    // Create Engagement Attributes
+    JSONArray engagementAttributes = null;
+    try {
+        engagementAttributes = new JSONArray("[{\"type\": " + purchaseType + ", \"total\": " + purchaseTotal + "}, " +
+            "{\"type\": \"lead\", \"lead\": {\"topic\": " + leadTopic + ", \"value\": " + leadValue + ",\"leadId\": " + leadId + "}}]");
+    } catch (JSONException e) {
+        Log.e(TAG, "Error Creating Engagement Attr :: " + e);
+    }
+    
+    // Create Monitoring Params
+    MonitoringParams params = new MonitoringParams(null, entryPoints, engagementAttributes);
    ```
 
 3. Using **LivepersonMonitoring**, get the Engagement for the User, which is needed to start a new conversation with a specific campaign. This call uses the MonitoringParams created in the previous step.
