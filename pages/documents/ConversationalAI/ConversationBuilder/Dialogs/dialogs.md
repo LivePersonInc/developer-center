@@ -32,4 +32,4 @@ There are three types of dialogs:
 4. Click **Save**.
 5. Build out the dialog as per your requirements.
     
-    Dialogs are displayed in the order in which they were created.
+    In the editor, dialogs are displayed in the order in which they were created.

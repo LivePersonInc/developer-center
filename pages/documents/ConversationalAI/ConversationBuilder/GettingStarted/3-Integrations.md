@@ -15,7 +15,7 @@ Many use cases require integration with an API to send and receive data. Followi
 {: .important}
 This tutorial uses an example API that returns random balance data when given an account number and email address. 
 
-### Step 8 Create Account Balance API Integration
+### Step 8: Create an account balance API integration
 
 1. Open the bot in Conversation Builder.
 2. In the upper-right corner, click **Integrations**.
@@ -25,22 +25,11 @@ This tutorial uses an example API that returns random balance data when given an
   * **Response Data Variable Name**: Balance
   * **Method**: GET
   * **URL**: 
-    * For US: https://platformservice.botcentralapi.com/thirdparty-services-0.1/accountBalance
+    * For US: https://va.bc-intg.liveperson.net/thirdparty-services-0.1/accountBalance
     * For Europe: https://platformservice-eu.botcentralapi.com/thirdparty-services-0.1/accountBalance
     * For APAC: https://platformservice-ap.botcentralapi.com/thirdparty-services-0.1/accountBalance 
 
-
-* **Response Data Variable Name**: Balance
-
-* **Method**: GET
-
-* **URL**: 
-
-  * For US: https://va.bc-intg.liveperson.net/thirdparty-services-0.1/accountBalance
-  * For Europe: https://platformservice-eu.botcentralapi.com/thirdparty-services-0.1/accountBalance
-  * For APAC: https://platformservice-ap.botcentralapi.com/thirdparty-services-0.1/accountBalance 
-
-* **Request Parameters**: Be sure to add to Parameters, **NOT** Headers
+  * **Request Parameters**: Be sure to add parameters, **not** headers.
 
   <table>
     <thead>

@@ -14,7 +14,7 @@ This guide will help step you through setting up a Knowledge Base (KB), and an F
 
 A good place to start with Conversation Builder is the [getting started tutorial](conversation-builder-getting-started-create-a-new-bot.html) and [conversation libraries tutorial](conversation-builder-conversation-libraries-getting-started-tutorial.html).
 
-For more in-depth information on the various parts of the product covered here see the Conversation Builder [component breakdown](conversation-builder-conversation-builder-overview.html).
+For more in-depth information on the various parts of the product covered here see the Conversation Builder [component breakdown](conversation-builder-getting-started-bot-workspace-overview.html).
 
 ### What is an FAQ Bot?
 

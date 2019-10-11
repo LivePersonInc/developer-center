@@ -12,9 +12,9 @@ indicator: both
 
 This tutorial guides you through creating a simple "Hello World" bot.
 
-### Pre-requisite steps
+### Prerequisite steps
 
-This tutorial assumes you have a user account for the Conversation Builder platform. If you don't, your team should have an administrator assigned who can create one for you.
+This tutorial assumes you have a user account for the LiveEngage and Conversation Builder platforms. If you don't, your team should have an administrator assigned who can create one for you.
 
 ### Step 1: Create a new bot
 
@@ -31,7 +31,7 @@ This tutorial assumes you have a user account for the Conversation Builder platf
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/image_3.png">
 
-    You can learn about the different parts of Conversation Builder [here](conversation-builder-conversation-builder-overview.html).
+    You can learn about the different parts of Conversation Builder [here](conversation-builder-getting-started-bot-workspace-overview.html).
 
 ### Step 2: Test the Welcome dialog
 
