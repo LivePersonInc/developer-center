@@ -1,29 +1,3 @@
-**To deploy to the Production environment**
-
-Your account must have the Operations role, which gives you access to the [Bots Status](conversational-ai-platform-platform-overview.html) application.
-
-1. In the the application drop-down menu, select **Bots Status**. If you don't see the application in the list, contact your administrator for help.
-
-2. In the Bots Status application, find your bot agent. The filter defaults to bots in the "Production" environment. Switch it to “All” to view your bot agent in the list.
-
-3. Select your bot agent, and move your mouse over the area to the left of the bot name.
-
-    An ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> )appears.
-
-4. Select the ellipsis icon, and then select **Deploy Agent** from the menu that appears.
-    <img style="width:200px" src="img/ConvoBuilder/helloworld/confLE_15.png">
-
-5. In the Bot Agent Deployment Settings, for **Environment**, select "Production" for an official client bot.
-    <img style="width:700px" src="img/ConvoBuilder/helloworld/confLE_16.png">
-
-6. Select the ellipsis menu again, and select **Start Agent**.
-
-7. Reload your browser or wait a few moments, and your bot agent should now show as online and connected.
-
-    <img style="width:950px" src="img/ConvoBuilder/helloworld/confLE_18.png">
-
-
-
 STATEMENTS
 
 Statement interactions simply display information and then execute the next action. They don’t expect or wait for a user response.
@@ -46,6 +20,34 @@ Audio statements currently aren't supported due to a limitation regarding the ch
 
 ### Video statements
 Video statements currently aren't supported, so use a text statement that includes the video URL as a link.
+
+### Apple Rich Link statements
+**For Apple Business Chat only.**
+
+If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use this type of interaction to send a richer, more interactive and structured message, for example:
+
+<img style="width:450px" src="img/ConvoBuilder/statements_richLink.png">
+
+Apple rich links let consumers directly preview an inline image or video. If you were to use a plain URL for an inline image or video sent through Apple Business Chat, the consumer would have to tap the “Tap to Load Preview” message to load the content. But with an Apple rich link, the content is displayed immediately. (The interaction has been developed per Apple's Rich Link specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/sending_rich_link_messages).)
+
+<img style="width:375px" src="img/ConvoBuilder/statements_richLink2.png">
+
+#### Rich link settings
+
+| Setting | Description | Required or Optional | Example |
+| --- | --- | --- | --- | 
+| ADD IMAGE OR VIDEO > Image URL | For an image, this is the URL for the image file. <br><br>For a video, this is the URL for the background image to display beneath the play button/link. Consider using a complementary image from the video itself. <br><br>The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting).<br><br>Keep images fairly small in size \(MB\) and dimension, so they load quickly. | Required | https://www\.mysite\.com/images/myImage\.jpg |
+| ADD IMAGE OR VIDEO > URL | For an image, this is the item/business URL to load when the image is clicked. For a video, this is the URL for the video file to play when clicked. | Required | https://www\.mysite\.com/videos/myVideo\.mp4 |
+| Title | The title of the rich link. | Required | Flower arranging 101 |
+
+#### Populating an Apple Rich Link statement dynamically
+
+You can populate the statement with static information, or it can be populated dynamically during run time, for example, using data received from an [API integration](conversation-builder-integrations-api-integrations.html).
+
+<img style="width:600px" src="img/ConvoBuilder/statements_richLink3.png">
+
+#### Notes on Apple Rich Link statements
+- While LiveEngage supports formatting in Apple rich links, Conversation Builder currently doesn't.
 
 QUESTIONS
 

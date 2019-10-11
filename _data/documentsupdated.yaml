@@ -130,6 +130,7 @@
           - subpagename: 2 - Intents
           - subpagename: 3 - Integrations
           - subpagename: 4 - Connect to LiveEngage
+          - subpagename: Bot Workspace Overview
       - pagename: Bots
       - pagename: Templates
         subpages:
@@ -139,7 +140,6 @@
           - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
-      - pagename: Automation Workspace Overview
       - pagename: Dialogs
         subpages:
           - subpagename: Dialog Basics
