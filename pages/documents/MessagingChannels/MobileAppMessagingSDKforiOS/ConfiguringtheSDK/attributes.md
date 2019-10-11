@@ -381,12 +381,8 @@ Conversation separator text and line color.
 #### enableConversationSeparatorTextMessage 
 Toggle conversation separator text message when conversation resolved from agent or consumer.
 
-<!--    <div style="float: left; width: 35%;height: 62px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> true</li>
-   </ul>
-</div> -->
+- **Type:** Bool
+- **Default value:** true
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -403,12 +399,8 @@ Toggle conversation separator text message when conversation resolved from agent
 #### enableConversationSeparatorLine  
 Toggle conversation separator line when conversation resolved from agent or consumer.
 
-<!--    <div style="float: left; width: 35%;height: 62px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> true</li>
-   </ul>
-</div> -->
+- **Type:** Bool
+- **Default value:** true 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -424,12 +416,8 @@ Toggle conversation separator line when conversation resolved from agent or cons
 #### conversationSeparatorFontSize 
 Define the conversation closed separator font size.
 
-<!--    <div style="float: left; width: 35%;height: 79px;">
-   <ul>
-      <li><b>Type:</b> UIFontTextStyle</li>
-      <li><b>Default value:</b> UIFontTextStyle.caption1</li>
-   </ul>
-</div> -->
+- **Type:** UIFontTextStyle
+- **Default value:** UIFontTextStyle.caption1
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -446,12 +434,8 @@ Define the conversation closed separator font size.
 #### conversationSeparatorBottomPadding 
 Define the conversation Closed label to separator line padding.
 
-<!--    <div style="float: left; width: 35%;height: 109px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 7</li>
-   </ul>
-</div> -->
+- **Type:** Float
+- **Default value:** 7
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -467,12 +451,8 @@ Define the conversation Closed label to separator line padding.
 #### conversationSeparatorFontName 
 Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in host app's Info.plist.
 
-<!--    <div style="float: left; width: 35%;height: 79px;">
-   <ul>
-      <li><b>Type:</b> String</li>
-      <li><b>Default value:</b> nil</li>
-   </ul>
-</div> -->
+- **Type:** String
+- **Default value:** nil
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -489,12 +469,8 @@ Custom font name for conversation closed separator. Fonts that are not part of t
 #### conversationSeparatorViewBottomPadding  
 Define the conversation separator view bottom padding.
 
-<!--    <div style="float: left; width: 35%;height: 62px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 7</li>
-   </ul>
-</div> -->
+- **Type:** Float
+- **Default value:** 7
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -511,12 +487,8 @@ Define the conversation separator view bottom padding.
 #### conversationClosedSeparatorTopPadding 
 Define the conversation Closed Separator Top padding.
 
-<!--    <div style="float: left; width: 35%;height: 108px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 5</li>
-   </ul>
-</div> -->
+- **Type:** Float
+- **Default value:** 5
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -547,8 +519,6 @@ When false will not show any indication that the agent is typing, and will not a
    - **Default value:**  true 
 
 
-
-
 #### showAgentTypingInMessageBubble  
 When true, shows agent  is typing indicator in a message bubble. When false, show indicator under Agent label in navigator bar.
 When announceAgentTyping is false, will not show any "is typing" indicator regardless of current value.
@@ -561,7 +531,8 @@ When announceAgentTyping is false, will not show any "is typing" indicator regar
 ### Data Masking
 
 #### enableClientOnlyMasking  
-When set to **true**, you can control which part of the text to mask. All masked data appear as asterisks and gets saved to the local DB masked and sent to the server unmasked.
+Enabling this flag, SDK will use regular expression defined in 'clientOnlyMaskingRegex' to mask text on the consumer device.  This is client only masking because it is both set and executed within the consumers device. 
+All masked data will appear as asterisks, will be saved to local db masked and will be sent to the server unmasked. This feature is only available for Unauthenticated conversations. 
 
    - **Type:** Bool
    - **Default value:** false 
@@ -569,7 +540,7 @@ When set to **true**, you can control which part of the text to mask. All masked
  
 
 #### enableRealTimeMasking  
-When set to **true**, you can control which part of the text to mask. All masked data appear as asterisks and gets saved to the local DB masked and sent to the server unmasked.
+Enabling this flag, SDK will use regular expression defined in 'realTimeMaskingRegex' to mask text originated on the consumer device.  This masking is applied to messages both on the consumer device and sent to the agent. All masked data will appear as asterisks, will be saved to local db masked and will be sent to the server masked. This feature is only available for Unauthenticated conversations.
 
    - **Type:** Bool
    - **Default value:** false 
@@ -577,7 +548,7 @@ When set to **true**, you can control which part of the text to mask. All masked
  
 
 #### clientOnlyMaskingRegex  
-A regular expression string that lets you can control which part of the text to mask. All masked data appear as asterisks and gets saved to the local DB masked and sent to the server unmasked.
+Regular expression string applied to the 'enableClientOnlyMasking' flag.
 
 The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference. 
 
@@ -587,9 +558,9 @@ The regular expression patterns and behavior are based on Perl's regular express
 
 
 #### realTimeMaskingRegex  
-A regular expression string that lets you can control which part of the text to mask. All masked data appear as asterisks and gets saved to the local DB masked and sent to the server unmasked.
+Regular expression string applied to the 'enableRealTimeMasking' flag.
 
-The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference.  
+The regular expression patterns and behavior are based on Perl's regular expressions. See Apple Reference.
 
    - **Type:** String
    - **Default value:** "" (Empty String) - no regex
@@ -609,7 +580,7 @@ Custom formatting for date string (day, year..), for example, 'd MMM'. If not de
 
 
 #### lpTimeFormat  
-Custom formatting for time string (hours, lpDateTimeFormat minutes..), for example, 'hh:mm a'. If not defined, one of the default styles will be used (see timestamps formatting). 
+Custom formatting for time string (hours,  minutes..), for example, 'hh:mm a'. If not defined, one of the default styles will be used (see timestamps formatting). 
 
    - **Type:** String?
    - **Default value:** nil 
@@ -631,12 +602,8 @@ Custom formatting for date and time string, for example, 'EEEE MM/dd/YY hh:mm a'
 #### dateSeparatorTitleBackgroundColor  
 Color code for date separator title background color. 
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
@@ -652,12 +619,8 @@ Color code for date separator title background color.
 #### dateSeparatorTextColor  
 Color code for date separator text color. 
  
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #46474A</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
@@ -673,12 +636,8 @@ Color code for date separator text color.
 #### dateSeparatorLineBackgroundColor 
 Color code for date separator line background color. 
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.clear</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpClear`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
@@ -694,12 +653,8 @@ Color code for date separator line background color.
 #### dateSeparatorBackgroundColor  
 Color code for date separator background color. 
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #FFFFFF</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
@@ -715,12 +670,8 @@ Color code for date separator background color.
 #### dateSeparatorFontSize  
 Define the Date Separator font text style. 
 
- <!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIFontTextStyle</li>
-      <li><b>Default value:</b> UIFontTextStyle.footnote</li>
-   </ul>
-</div> -->
+- **Type:** UIFontTextStyle
+- **Default value:** UIFontTextStyle.footnote
 
 <!--    <div style="float: right; width: 65%;height: 36px;">
    <figure>
@@ -736,12 +687,8 @@ Define the Date Separator font text style.
 #### customFontNameDateSeparator  
 Custom font name for Timestamp. Fonts that are not part of the iOS families, must be defined in App's Info.plist. 
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> String</li>
-      <li><b>Default value:</b> nil</li>
-   </ul>
-</div> -->
+- **Type:** String
+- **Default value:** nil
 
 <!--    <div style="float: right; width: 65%;height: 39px;">
    <figure>
@@ -757,12 +704,8 @@ Custom font name for Timestamp. Fonts that are not part of the iOS families, mus
 #### dateSeparatorTopPadding  
 Define the Date Separator Top padding. 
 
-<!--    <div style="float: left; width: 35%;height: 78px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 0</li>
-   </ul>
-</div> -->
+- **Type:** Float
+- **Default value:** 0.0
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -778,12 +721,8 @@ Define the Date Separator Top padding.
 #### dateSeparatorBottomPadding  
 Define the Date Separator bottom padding.  
 
-<!--    <div style="float: left; width: 35%;height: 78px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 0</li>
-   </ul>
-</div> -->
+- **Type:** Float
+- **Default value:** 0.0
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -810,12 +749,8 @@ Checkmark visibility of the following options (type CheckmarksState): SentOnly -
 #### checkmarkReadColor  
 Color of checkmark indication signs of Read messages. 
 
-<!--    <div style="float: left; width: 35%;height: 75px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #004DC9 </li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBlue`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -832,12 +767,8 @@ Color of checkmark indication signs of Read messages.
 #### checkmarkDistributedColor  
 Color of checkmark indication signs of Distributed messages.  
 
-<!--    <div style="float: left; width: 35%;height: 70px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #5B5C5E </li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -854,12 +785,8 @@ Color of checkmark indication signs of Distributed messages.
 ####  checkmarkSentColor  
 Color of checkmark indication signs of Sent messages. 
 
-<!--    <div style="float: left; width: 35%;height: 70px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #5B5C5E </li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -874,14 +801,12 @@ Color of checkmark indication signs of Sent messages.
 
 
 #### isReadReceiptTextMode  
-Two options for read indication: Read Receipt with Text Mode Read. Receipt with Icon Mode. If the parameter set as true the mode will be Text. If the parameter set as false the mode will be Icon. 
+Two options for read indication:     
+If true = Read receipt “text mode”.
+If false = Read receipt “icon mode”.
 
-<!--    <div style="float: left; width: 35%;height: 156px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> true </li>
-   </ul>
-</div> -->
+- **Type:** Bool
+- **Default value:** true
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -898,12 +823,8 @@ Two options for read indication: Read Receipt with Text Mode Read. Receipt with 
 #### messageStatusNumericTimestampOnly  
 When false (default), time stamps displays information relative to when sent/distributed/read, for example, 'sent 5 minutes ago'. When true, shows as numeric only, for example, '11:32.'   
 
-<!--    <div style="float: left; width: 35%;height: 515px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> false </li>
-   </ul>
-</div> -->
+- **Type:** Bool
+- **Default value:** false
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -944,14 +865,14 @@ Enable or disable link preview feature. If disabled, user will not see site's li
 Color code for the background of the link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default value:** UIColor.white 
+   - **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
 
 #### linkPreviewTitleTextColor
 Color code for the title text inside link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default value:** UIColor.black  
+   - **Default value:** [`LPColor.lpLabel`](#lpColor) 
 
 
 
@@ -959,7 +880,7 @@ Color code for the title text inside link preview area inside cell.
 Color code for the description text inside link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default value:** #5B5C5E  
+   - **Default value:** [`LPColor.lpGray2`](#lpColor) 
 
 
 
@@ -967,7 +888,7 @@ Color code for the description text inside link preview area inside cell.
 Color code for the description site name link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default value:** #E2E3E3
+   - **Default value:** [`LPColor.lpGray2`](#lpColor) 
 
 
 
@@ -1009,12 +930,8 @@ Refers to the style in which the link preview cell will be displayed.
 #### urlRealTimePreviewBackgroundColor 
 The background color of the url real time preview.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1032,12 +949,8 @@ The background color of the url real time preview.
 #### urlRealTimePreviewBorderColor 
 The border color of the url real time preview.
 
-<!--    <div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> </li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray3`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1054,12 +967,8 @@ The border color of the url real time preview.
 #### urlRealTimePreviewBorderWidth
 The border width of the url real time preview.
  
-<!--    <div style="float: left; width: 35%;height: 50px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 1.0 </li>
-   </ul>
-</div> -->
+- **Type:** CGFloat
+- **Default value:** 1.0  
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1077,12 +986,8 @@ The border width of the url real time preview.
 #### urlRealTimePreviewTitleTextColor  
 The title text color of the url real time preview.
 
-<!--    <div style="float: left; width: 35%;height: 50px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.Black</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBlack`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1099,12 +1004,8 @@ The title text color of the url real time preview.
 #### urlRealTimePreviewDescriptionTextColor  
 The description text color of the url real time preview.
 
-<!--    <div style="float: left; width: 35%;height: 50px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #5b5c5e</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray4`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1120,12 +1021,53 @@ The description text color of the url real time preview.
 
 
 #### useNonOGTagsForLinkPreview  
-The urlPreview attribute also uses non-OG tags to parse urls instead of using only OG tags if useNonOGTagsForLinkPreview is true.
+"urlPreview" will also use non-OG tags to parse urls instead of using only OG tags if useNonOGTagsForLinkPreview is true.
 
    - **Type:** Bool
    - **Default value:**  true
 
 ---   
+
+### Loading View 
+
+#### loadingViewBlurEffect
+The type of effect on the loading view.
+
+   - **Type:** UIBlurEffect 
+   - **Default value:**  LPBlurEffects.lpLoadingViewEffect
+   
+   
+#### loadingViewBackgroundColor
+The type of effect on the loading view.
+
+- **Type:** UIColor 
+- **Default value:**  [`LPColor.lpClear`](#lpColor)  
+
+
+
+#### loadingViewTextColor
+The text color for the label on the loading view.
+
+   - **Type:** UIColor 
+   - **Default value:**  [`LPColor.lpGray2`](#lpColor) 
+   
+#### loadingViewProgressBackgroundColor
+The background color for the progress view on the loading view.
+
+   - **Type:** UIColor 
+   - **Default value:**  [`LPColor.lpGray2`](#lpColor)  
+
+
+#### loadingViewProgressTintColor
+The tint color for the progress view on the loading view.
+
+
+  - **Type:** UIColor 
+  - **Default value:**  [`LPColor.lpBlue`](#lpColor) 
+
+
+
+--- 
 
 ### Localization
 
@@ -1137,7 +1079,7 @@ Country code: When it is not nil, it will be combined with 'language' ("language
 
 
 
-#### language  
+#### Language  
 Language used instead of default device language.
 
 The LPLanguage enum contains all languages supported by the MessagingSDK, and affects the following areas:
@@ -1151,13 +1093,21 @@ The LPLanguage enum contains all languages supported by the MessagingSDK, and af
 
 --- 
 
+### LPPusher 
+
+#### enableLpPusherService 
+Bool used to allow manual configuration for enabling the SDK to register to LP Pusher service. Requires user logout to change current configuration. 
+
+   - **Type:** Bool
+   - **Default value:**  true
+
 ### Navigation
 
 #### conversationNavigationBackgroundColor  
 Background color of navigation bar in conversation screen. 
 
    - **Type:** UIColor
-   - **Default value:** #0362AC 
+   - **Default value:** [`LPColor.lpGray4`](#lpColor) 
 
 
 
@@ -1165,7 +1115,7 @@ Background color of navigation bar in conversation screen.
 Navigation title color in conversation screen. 
 
    - **Type:** UIColor
-   - **Default value:** #FFFFFF  
+   - **Default value:** [`LPColor.lpLabel`](#lpColor) 
 
 
 
@@ -1174,7 +1124,19 @@ Status bar style in conversation screen.
 
 
    - **Type:** UIStatusBarStyle
-   - **Default value:** .LightContent 
+   - **Default value:** .default
+   
+#### lpNavigationBarLeftItemImageButton  
+LivePerson Navigation Bar Left Item custom button.  
+
+  - **Type:** UIImage?
+  - **Default value:** LPConstants.LP_LEFT_NAV_ICON   
+ 
+ #### lpNavigationBarRightItemImageButton  
+ LivePerson Navigation Bar Right Item custom button. 
+
+   - **Type:** UIImage?
+   - **Default value:** LPConstants.LP_RIGHT_NAV_MORE_ICON  
 
 ---  
 
