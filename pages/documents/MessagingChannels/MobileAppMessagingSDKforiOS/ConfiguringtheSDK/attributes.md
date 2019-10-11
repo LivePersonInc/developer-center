@@ -1329,8 +1329,6 @@ Color of the loader progress line background.
 
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpGray5`](#lpColor) 
-   
-</div> -->
 
 <!--    <div style="float: right; width: 65%;height: 70px;">
    <figure>
@@ -1783,7 +1781,9 @@ The image must conforms Apple's [Custom Icon guidelines](https://developer.apple
 * **Type:** UIImage
 * **Default value:** SDK bundle sendMessageIcon Icon
 
-<--! <img src="img/DefaultSendButton.png" alt="DefaultSendButton"> -->
+<--! 
+<img src="img/DefaultSendButton.png" alt="DefaultSendButton"> 
+-->
  
  
 
@@ -2277,9 +2277,9 @@ Enable toast notifications such as offline and TTR notifications.
 ### Unread Messages
 
 #### scrollToBottomButtonBackgroundColor  
-Scroll to bottom button background color of the whole b
+Scroll to bottom button background color of the whole button.
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray2`](#lpColor)utton.
+- **Default value:** [`LPColor.lpGray2`](#lpColor)
 
 
 
