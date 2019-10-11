@@ -123,9 +123,11 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |intentConfidenceScore | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["messageRecords","intents"],"intentConfidenceScore":0.65} |
 |conversationsWithStepUpOnly | {"start":{"from":1541578792011,"to":1541578895020},,"contentToRetrieve":["messageRecords"],"conversationsWithStepUpOnly":true}|**Note: search by keywords, summary or engagement attributes**
 
-In order to search for a specific phrase within the messages, summary or engagement attributes of the conversation, you will need to wrap the phrase in quotation marks. This will make sure that the search will run according to all specified characaters in the phrase and in the same position relative to each other. (For example: searching for "tester@liveperson.com", will search for the characters “tester” and “liveperson.com” in that order.)### Response
+In order to search for a specific phrase within the messages, summary or engagement attributes of the conversation, you will need to wrap the phrase in quotation marks. This will make sure that the search will run according to all specified characaters in the phrase and in the same position relative to each other. (For example: searching for "tester@liveperson.com", will search for the characters “tester” and “liveperson.com” in that order.)
 
-**General Characterizations**
+### Response
+
+#### General Characterizations
 
 _Field Types - Max number of digits possible
 
@@ -134,7 +136,9 @@ Long| 64 bit |19 digits
 Double | 64 bit |16 digits
 Integer| 32 bit |10 digits_Decimal fractions_
 
-The max length for double fields is **16 digits**. For Decimal fractions, the max possible length to the right of the decimal is **11 digits**, whereas the max length to the left of the decimal is **16 digits**.**Elements in the Response**
+The max length for double fields is **16 digits**. For Decimal fractions, the max possible length to the right of the decimal is **11 digits**, whereas the max length to the left of the decimal is **16 digits**.
+
+#### Elements in the Response
 
 _Metadata info_
 
@@ -395,7 +399,9 @@ messageRawScore | Score of message.  | int
 | duration| Duration of the CoBrowse session| numeric| |
 | type| Type| alphanumeric| Valid values: "inApp", "web"|
 |capabilities|Capabilities|Array `<alphanumeric>`||
-| agentId| Agent id| alphanumeric| |_Participating Agent info_
+| agentId| Agent id| alphanumeric| |
+
+_Participating Agent info_
 
 Name  | Description  | Type/Value | Notes
 :------------- | :----------------------------------------------------------------- | :--------- | :---------------------------------
@@ -429,7 +435,9 @@ lastName| Consumer's last name (provided by consumer in their profile). | string
 phone| Consumer's phone number (provided by consumer in their profile). | string
 email| Consumer's email (provided by consumer in their profile).  | string
 token| Private identifier of the user. | string
-dialogId| The ID of the dialog the agent is participating in.  | string_Transfer info_
+dialogId| The ID of the dialog the agent is participating in.  | string
+
+_Transfer info_
 
 Name | Description| Type/Value
 :--------------------- | :------------------------------------------------------------ | :---------
@@ -485,6 +493,7 @@ questionId | Survey question ID  | string  |
 answerId| Survey answer ID,| string  | The answer ID from the survey definition, or 'InvalidAnswer', if the answer was invalid
 questionType | Survey question type | string  |
 questionFormat | Survey question format | string |
+
 _Summary info_
 
 Name| Description| Type/Value
@@ -496,12 +505,14 @@ _Sdes info_
 
 Name| Description| Type/Value  | Notes
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------| :---------------------------
-events | The SDEs that were received from the brand. | Container (see [Appendix](/data-messaging-interactions-appendix.html))  |
+events | The SDEs that were received from the brand. | Container (see [Appendix](messaging-interactions-api-engagement-attributes.html))  |
 originalTimeStamp | Event creation time stamp. | long – epoch time in milliseconds|
 serverTimeStamp | Event processing time stamp. | long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 sdeType| Type of SDE.  | enum  |
 
-[Here](/data-messaging-interactions-appendix.html) you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.*Response Time Info*
+[Here](messaging-interactions-api-engagement-attributes.html) you can find detailed information on the different attributes that are exposed for the engagement attributes via the API.
+
+*Response Time Info*
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------------ | :---------
@@ -523,7 +534,9 @@ endTimeL  | The dialog end time, epoch time in milliseconds.| long – epoch tim
 closeReason  | The dialog close reason.| string  |
 closeReasonDescription | The dialog close reason description.  | string  |
 skillId| The skill ID associated with the dialog.  | string  | Default value is "-1"
-skillName | The name of the skill associated with the dialog.| string  |_Intents info_
+skillName | The name of the skill associated with the dialog.| string  |
+
+_Intents info_
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
@@ -547,7 +560,558 @@ modelName | The name of the model. | string
 modelVersion | The version of the model. | string**JSON Example**
 
 ```json
-
-{"_metadata": {  "count": 1,  "self": { "rel": "self", "href": "https://localhost:8082/messaging_history/api/account/qa51680169/conversations/search?limit=50&offset=0"  },  "shardsStatusResult": { "partialResult": false  }},"conversationHistoryRecords": [  { "info": {"startTime": "2016-08-29 14:30:24.565+0000","startTimeL": 1472481024565,"endTime": "undefined","endTimeL": -1,"duration": 78970,"conversationId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630","brandId": "qa26409991","latestAgentId": "3677470410","latestAgentNickname": "michal@lp.com","latestAgentFullName": "michal@lp.com","latestAgentLoginName": "michal@lp.com","agentDeleted": false,"latestSkillId": -1,"latestSkillName": "Unassigned","source": "APP","closeReason": "AGENT","closeReasonDescription": "MANUAL_CLOSE","mcs": 67,"alertedMCS": 1,"status": "OPEN","fullDialogStatus": "OPEN","firstConversation": false,"csatRate": 5,"device": "undefined","browser": "chrome","operatingSystem": "NA","latestAgentGroupId": -1,"latestAgentGroupName": "Unassigned","latestQueueState": "ACTIVE","isPartial": false }, "campaign": {"campaignEngagementId": "2330596212","campaignEngagementName": "Engagement-123","campaignId": "2266771712","campaignName": "Live_Chat_on_your_site","goalId": "2266719412","goalName": "Interact with visitors","engagementAgentNote": "agent-note-test-messaging","engagementSource": "WEB_SITE","visitorBehaviorId": "2379540212","visitorBehaviorName": "someVisitorBehavior","engagementApplicationId": "28879660-84fd-4cd8-a1d7-ba3247bdb252","engagementApplicationName": "Some Mobile App Test","engagementApplicationTypeId": "92274cfd-29e7-4d94-a013-0646212d8075","engagementApplicationTypeName": "Mobile App","visitorProfileId": "2286779312","visitorProfileName": "All visitors","lobId": 2389848512,"lobName": "lob_123","locationId": "2266779612","locationName": "Entire site","profileSystemDefault": true,"behaviorSystemDefault": false }, "monitoring": {"country": "United States","countryCode": "US","state": "Michigan","city": "Michigan","isp": "AT&T U-verse","org": "AT&T U-verse","device": "DESKTOP","ipAddress": "192.000.12.240","browser": "Chrome 66.0.3359.181","operatingSystem": "WINDOWS","conversationStartPage": "https://testPage","conversationStartPageTitle": "LivePerson Page" }, "messageRecords": [{  "type": "TEXT_PLAIN",  "messageData": { "msg": {"text": "Hi there #4" }  },  "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",  "seq": 0,  "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",  "participantId": "f92c9890-2c95-428b-8a32-083528620d31",  "source": "APP",  "time": "2016-08-29 15:14:19.564+0000",  "timeL": 1472483659564,  "device": "undefined",  "sentBy": "Consumer"},{  "type": "TEXT_PLAIN",  "messageData": { "msg": {"text": "Hi there, dear consumer!" }, "quickReplies": {"content": "{\"type\":\"quickReplies\",\"itemsPerRow\":8,\"replies\":[{\"type\":\"button\",\"tooltip\":\"Hello\",\"title\":\"Hello\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Hello\"}]}},{\"type\":\"button\",\"tooltip\":\"Howdy\",\"title\":\"Howdy\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Howdy\"}]}}]}" }  },  "messageId": "ms::conv:e5c58e49-e4a5-4038-8b18-d6580d1d5630::msg:0",  "seq": 1,  "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",  "participantId": "3677470410",  "source": "APP",  "time": "2016-08-29 15:14:20.569+0000",  "timeL": 1472483659564,  "device": "undefined",  "sentBy": "Agent",  "contextData": { "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some reason\",\"reasonId\":\"some reason ID\"}]", "structuredMetadata": [{  "botResponse": { "externalConversationId": "conversation identifier", "businessCases": ["business case name" ], "intents": [{  "id": "some intent identifier",  "confidence": "MEDIUM",  "confidenceScore": 0.753} ]  }},{  "actionReason": { "reason": "some reason"  }} ]  }},{  "type": "TEXT_PLAIN",  "messageData": { "msg": {"text": "I love your service" }  },  "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:2",  "seq": 2,  "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",  "participantId": "f92c9890-2c95-428b-8a32-083528620d31",  "source": "APP",  "time": "2016-08-29 15:15:42.568+0000",  "timeL": 1472483742568,  "device": "undefined",  "sentBy": "Consumer"},{  "type": "RICH_CONTENT",  "messageData": { "quickReplies": {"content": "{\"type\":\"quickReplies\",\"itemsPerRow\":8,\"replies\":[{\"type\":\"button\",\"tooltip\":\"Yes\",\"title\":\"Yes\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Yes\"}]}},{\"type\":\"button\",\"tooltip\":\"No\",\"title\":\"No\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"No\"}]}}]}" }, "richContent": {"content": "{\"type\":\"vertical\",\"elements\":[{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/3oKGzayyPJGE7xuytO/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}},{\"type\":\"text\",\"text\":\"Now on sale!\"},{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/xT9IgsjDkpectclUI0/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}}]}" }  },  "messageId": "ms::conv:cd5926e0-5b57-4c82-85c5-9c95f88263a1::msg:8",  "seq": 3,  "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",  "participantId": "2198186612",  "source": "APP",  "time": "2017-10-24 10:24:52.962+0000",  "timeL": 1508840692962,  "device": "undefined",  "sentBy": "Agent"} ], "agentParticipants": [{  "agentFullName": "michal@lp.com",  "agentNickname": "michal@lp.com",  "agentLoginName": "michal@lp.com",  "agentId": "3677470410",  "userType": "1",  "userTypeName": "Human",  "role": "AGENT",  "agentGroupName": "Unassigned",  "agentGroupId": -1,  "time": "2016-08-29 15:14:05.005+0000",  "timeL": 1472483645005,  "permission": "ASSIGNED_AGENT",  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",  "contextData": { "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent  identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversationidentifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some reason\",\"reasonId\":\"some reason ID\"}]", "structuredMetadata": [{  "botResponse": { "externalConversationId": "conversation identifier", "businessCases": ["business case name" ], "intents": [{  "id": "some intent identifier",  "confidence": "MEDIUM",  "confidenceScore": 0.753} ]  }},{  "actionReason": { "reason": "some reason"  }} ]  }} ], "consumerParticipant": [{  "participantId": "f92c9890-2c95-428b-8a32-083528620d31",  "firstName": "Visitor",  "lastName": "Test",  "token": "undefined",  "email": "undefined",  "phone": "0",  "avatarURL": "undefined",  "time": "2016-08-29 14:30:24.573+0000",  "timeL": 1472481024573,  "consumerName": "Visitor",  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"} ], "transfers": [{  "timeL": 1498127364726,  "time": "2017-06-22 10:29:24.726+0000",  "assignedAgentId": "null",  "targetSkillId": 2,  "targetSkillName": "cats",  "reason": "Skill",  "by": "196875613",  "sourceSkillId": -1,  "sourceSkillName": "Unassigned",  "sourceAgentId": "196875613",  "sourceAgentFullName": "michal1",  "sourceAgentLoginName": "michal1",  "sourceAgentNickname": "michal1",  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"},{  "timeL": 1498127562332,  "time": "2017-06-22 10:32:42.332+0000",  "assignedAgentId": "null",  "targetSkillId": 3,  "targetSkillName": "lpsocial",  "reason": "Skill",  "by": "7",  "sourceSkillId": 2,  "sourceSkillName": "cats",  "sourceAgentId": "7",  "sourceAgentFullName": "michal",  "sourceAgentLoginName": "michal@lp.com",  "sourceAgentNickname": "michal",  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"} ], "interactions": [{  "assignedAgentId": "3677470410",  "assignedAgentFullName": "michal@lp.com",  "assignedAgentLoginName": "michal@lp.com",  "assignedAgentNickname": "michal@lp.com",  "interactionTimeL": 1472483644999,  "interactionTime": "2016-08-29 15:14:04.999+0000",  "interactiveSequence": 1,  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"} ], "dialogs": [{  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",  "status": "OPEN",  "dialogType": "MAIN",  "dialogChannelType": "MESSAGING",  "startTime": "2017-09-25 07:55:58.000+0000",  "startTimeL": 1506326158000,  "endTime": "2017-09-25 07:56:53.422+0000",  "endTimeL": 1506326213422,  "closeReason": "AGENT",  "closeReasonDescription": "MANUAL_CLOSE",  "skillId": 1234,  "skillName": "skill3"} ], "messageScore": [{  "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",  "messageRawScore": 0,  "mcs": 0,  "time": "2016-08-29 15:14:26.314+0000",  "timeL": 1472483666314},{  "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:2",  "messageRawScore": 0,  "mcs": 0,  "time": "2016-08-29 15:15:49.225+0000",  "timeL": 1472483749225} ], "messageStatuses": [{  "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",  "seq": 0,  "time": "2016-08-29 15:14:19.626+0000",  "timeL": 1472483659626,  "participantId": "3677470410",  "participantType": "Agent",  "messageDeliveryStatus": "ACCEPT",  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"},{  "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:2",  "seq": 2,  "time": "2016-08-29 15:15:42.609+0000",  "timeL": 1472483742609,  "participantId": "3677470410",  "participantType": "Agent",  "messageDeliveryStatus": "ACCEPT",  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"},{  "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",  "seq": 0,  "time": "2016-08-29 15:15:58.272+0000",  "timeL": 1472483758272,  "participantId": "3677470410",  "participantType": "Agent",  "messageDeliveryStatus": "READ",  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"} ], "conversationSurveys": [{  "surveyType": "Satisfaction",  "surveyStatus": "FILLED",  "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",  "surveyData": [ {"question": "Confirm Resolution","answer": "Yes" }  ]} ], "coBrowseSessions": {"coBrowseSessionsList": [  { "sessionId": "22207277:37084513__1d165aa8-9d37-4e40-baf8-06f5e80f6cd2_1506325721990", "startTime": "2017-09-25 07:48:42.000+0000", "startTimeL": 1506325722000, "endTime": "2017-09-25 07:50:01.789+0000", "endTimeL": 1506325801789, "endReason": "AGENT", "duration": 79789, "type": "inApp", "agentId": "37084513", "interactive": true  },  { "sessionId": "22207277:37084513__1d165aa8-9d37-4e40-baf8-06f5e80f6cd2_1506326147649", "startTime": "2017-09-25 07:55:58.000+0000", "startTimeL": 1506326158000, "endTime": "2017-09-25 07:56:53.422+0000", "endTimeL": 1506326213422, "endReason": "VISITOR", "duration": 55422, "type": "inApp", "capabilities": ["CONSUMER_VIDEO_CONNECTION","CONSUMER_VOICE_CONNECTION","AGENT_APP_CONTROL" ], "agentId": "37084513", "interactive": true  }] }, "sdes": {"events": [  { "customerInfo": {"serverTimeStamp": "1497871291351", "originalTimeStamp": "1497871291351","customerInfo": {  "customerId": "12345678",  "companyBranch": "dummyCompanyBranch"} }, "sdeType": "CUSTOMER_INFO", "serverTimeStamp": "1497871291351"  },  { "personalInfo": {"serverTimeStamp": "1497871291351", "originalTimeStamp": "1497871291351","personalInfo": {  "name": "dummyName",  "surname": "dummySurename",  "contacts": [ {"personalContact": {  "email": "dummy@mail.com",  "phone": "12345678"} }  ]} }, "sdeType": "PERSONAL_INFO", "serverTimeStamp": "1497871291351"  }] }, "responseTime": {"latestEffectiveResponseDueTime": 1527174367230,"configuredResponseTime": 3000 }, "summary": {"text": "summary","lastUpdatedTime": 1482333795318 }, "intents": [{  "selectedClassification": { "intentName": "other--other--n_a", "confidenceScore": 1, "versions": [{  "modelName": "sic",  "modelVersion": "1.0"},{  "modelName": "tmo_classifier",  "modelVersion": "1.0"} ]  },  "allClassifications": [ {"intentName": "other--other--n_a","confidenceScore": 1,"versions": [  { "modelName": "sic", "modelVersion": "1.0"  },  { "modelName": "tmo_classifier", "modelVersion": "1.0"  }] }, {"intentName": "billing_and_payment--payment_arrangement--set-up_payment_arrangement","confidenceScore": 0,"versions": [  { "modelName": "sic", "modelVersion": "1.0"  },  { "modelName": "tmo_classifier", "modelVersion": "1.0"  }] }  ],  "messageId": "ms::dialog:13ea17a3-57c7-4814-9d3f-120784f6628c::msg:12"},{  "selectedClassification": { "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information", "confidenceScore": 0.908, "versions": [{  "modelName": "sic",  "modelVersion": "1.0"},{  "modelName": "tmo_classifier",  "modelVersion": "1.0"} ]  },  "allClassifications": [ {"intentName": "billing_and_payment--billing_and_payment_support--request_bill_information","confidenceScore": 0.908,"versions": [  { "modelName": "sic", "modelVersion": "1.0"  },  { "modelName": "tmo_classifier", "modelVersion": "1.0"  }] }, {"intentName": "other--other--n_a","confidenceScore": 0.265,"versions": [  { "modelName": "sic", "modelVersion": "1.0"  },  { "modelName": "tmo_classifier", "modelVersion": "1.0"  }] }, {"intentName": "billing_and_payment--billing_and_payment_support--dispute_or_fix_a_bill","confidenceScore": 0.224,"versions": [  { "modelName": "sic", "modelVersion": "1.0"  },  { "modelName": "tmo_classifier", "modelVersion": "1.0"  }] }  ],  "messageId": "ms::dialog:13ea17a3-57c7-4814-9d3f-120784f6628c::msg:16"} ]  }]
+{
+  "_metadata": {
+    "count": 1,
+    "self": {
+      "rel": "self",
+      "href": "https://localhost:8082/messaging_history/api/account/qa51680169/conversations/search?limit=50&offset=0"
+    },
+    "shardsStatusResult": {
+      "partialResult": false
+    }
+  },
+  "conversationHistoryRecords": [
+    {
+      "info": {
+        "startTime": "2016-08-29 14:30:24.565+0000",
+        "startTimeL": 1472481024565,
+        "endTime": "undefined",
+        "endTimeL": -1,
+        "duration": 78970,
+        "conversationId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
+        "brandId": "qa26409991",
+        "latestAgentId": "3677470410",
+        "latestAgentNickname": "michal@lp.com",
+        "latestAgentFullName": "michal@lp.com",
+        "latestAgentLoginName": "michal@lp.com",
+        "agentDeleted": false,
+        "latestSkillId": -1,
+        "latestSkillName": "Unassigned",
+        "source": "APP",
+        "closeReason": "AGENT",
+        "closeReasonDescription": "MANUAL_CLOSE",
+        "mcs": 67,
+        "alertedMCS": 1,
+        "status": "OPEN",
+        "fullDialogStatus": "OPEN",
+        "firstConversation": false,
+        "csatRate": 5,
+        "device": "undefined",
+        "browser": "chrome",
+        "operatingSystem": "NA",
+        "latestAgentGroupId": -1,
+        "latestAgentGroupName": "Unassigned",
+        "latestQueueState": "ACTIVE",
+        "isPartial": false
+      },
+      "campaign": {
+        "campaignEngagementId": "2330596212",
+        "campaignEngagementName": "Engagement-123",
+        "campaignId": "2266771712",
+        "campaignName": "Live_Chat_on_your_site",
+        "goalId": "2266719412",
+        "goalName": "Interact with visitors",
+        "engagementAgentNote": "agent-note-test-messaging",
+        "engagementSource": "WEB_SITE",
+        "visitorBehaviorId": "2379540212",
+        "visitorBehaviorName": "someVisitorBehavior",
+        "engagementApplicationId": "28879660-84fd-4cd8-a1d7-ba3247bdb252",
+        "engagementApplicationName": "Some Mobile App Test",
+        "engagementApplicationTypeId": "92274cfd-29e7-4d94-a013-0646212d8075",
+        "engagementApplicationTypeName": "Mobile App",
+        "visitorProfileId": "2286779312",
+        "visitorProfileName": "All visitors",
+        "lobId": 2389848512,
+        "lobName": "lob_123",
+        "locationId": "2266779612",
+        "locationName": "Entire site",
+        "profileSystemDefault": true,
+        "behaviorSystemDefault": false
+      },
+      "monitoring": {
+        "country": "United States",
+        "countryCode": "US",
+        "state": "Michigan",
+        "city": "Michigan",
+        "isp": "AT&T U-verse",
+        "org": "AT&T U-verse",
+        "device": "DESKTOP",
+        "ipAddress": "192.000.12.240",
+        "browser": "Chrome 66.0.3359.181",
+        "operatingSystem": "WINDOWS",
+        "conversationStartPage": "https://testPage",
+        "conversationStartPageTitle": "LivePerson Page"
+      },
+      "messageRecords": [
+        {
+          "type": "TEXT_PLAIN",
+          "messageData": {
+            "msg": {
+              "text": "Hi there #4"
+            }
+          },
+          "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
+          "seq": 0,
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
+          "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
+          "source": "APP",
+          "time": "2016-08-29 15:14:19.564+0000",
+          "timeL": 1472483659564,
+          "device": "undefined",
+          "sentBy": "Consumer"
+        },
+        {
+          "type": "TEXT_PLAIN",
+          "messageData": {
+            "msg": {
+              "text": "Hi there, dear consumer!"
+            },
+            "quickReplies": {
+              "content": "{\"type\":\"quickReplies\",\"itemsPerRow\":8,\"replies\":[{\"type\":\"button\",\"tooltip\":\"Hello\",\"title\":\"Hello\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Hello\"}]}},{\"type\":\"button\",\"tooltip\":\"Howdy\",\"title\":\"Howdy\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Howdy\"}]}}]}"
+            }
+          },
+          "messageId": "ms::conv:e5c58e49-e4a5-4038-8b18-d6580d1d5630::msg:0",
+          "seq": 1,
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
+          "participantId": "3677470410",
+          "source": "APP",
+          "time": "2016-08-29 15:14:20.569+0000",
+          "timeL": 1472483659564,
+          "device": "undefined",
+          "sentBy": "Agent",
+          "contextData": {
+            "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some reason\",\"reasonId\":\"some reason ID\"}]",
+            "structuredMetadata": [
+              {
+                "botResponse": {
+                  "externalConversationId": "conversation identifier",
+                  "businessCases": [
+                    "business case name"
+                  ],
+                  "intents": [
+                    {
+                      "id": "some intent identifier",
+                      "confidence": "MEDIUM",
+                      "confidenceScore": 0.753
+                    }
+                  ]
+                }
+              },
+              {
+                "actionReason": {
+                  "reason": "some reason"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "TEXT_PLAIN",
+          "messageData": {
+            "msg": {
+              "text": "I love your service"
+            }
+          },
+          "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:2",
+          "seq": 2,
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
+          "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
+          "source": "APP",
+          "time": "2016-08-29 15:15:42.568+0000",
+          "timeL": 1472483742568,
+          "device": "undefined",
+          "sentBy": "Consumer"
+        },
+        {
+          "type": "RICH_CONTENT",
+          "messageData": {
+            "quickReplies": {
+              "content": "{\"type\":\"quickReplies\",\"itemsPerRow\":8,\"replies\":[{\"type\":\"button\",\"tooltip\":\"Yes\",\"title\":\"Yes\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"Yes\"}]}},{\"type\":\"button\",\"tooltip\":\"No\",\"title\":\"No\",\"click\":{\"actions\":[{\"type\":\"publishText\",\"text\":\"No\"}]}}]}"
+            },
+            "richContent": {
+              "content": "{\"type\":\"vertical\",\"elements\":[{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/3oKGzayyPJGE7xuytO/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}},{\"type\":\"text\",\"text\":\"Now on sale!\"},{\"type\":\"image\",\"url\":\"https://media.giphy.com/media/xT9IgsjDkpectclUI0/giphy.gif\",\"tooltip\":\"image tooltip\",\"click\":{\"metadata\":[{\"type\":\"ExternalId\",\"id\":\"123\"}],\"actions\":[{\"type\":\"navigate\",\"lo\":-73.9654,\"la\":40.7829},{\"type\":\"publishText\",\"text\":\"Manhaten\"}]}}]}"
+            }
+          },
+          "messageId": "ms::conv:cd5926e0-5b57-4c82-85c5-9c95f88263a1::msg:8",
+          "seq": 3,
+          "dialogId": "e5c58e49-e4a5-40a8-8a18-d6580d1d5630",
+          "participantId": "2198186612",
+          "source": "APP",
+          "time": "2017-10-24 10:24:52.962+0000",
+          "timeL": 1508840692962,
+          "device": "undefined",
+          "sentBy": "Agent"
+        }
+      ],
+      "agentParticipants": [
+        {
+          "agentFullName": "michal@lp.com",
+          "agentNickname": "michal@lp.com",
+          "agentLoginName": "michal@lp.com",
+          "agentId": "3677470410",
+          "userType": "1",
+          "userTypeName": "Human",
+          "role": "AGENT",
+          "agentGroupName": "Unassigned",
+          "agentGroupId": -1,
+          "time": "2016-08-29 15:14:05.005+0000",
+          "timeL": 1472483645005,
+          "permission": "ASSIGNED_AGENT",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
+          "contextData": {
+            "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent  identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversationidentifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some reason\",\"reasonId\":\"some reason ID\"}]",
+            "structuredMetadata": [
+              {
+                "botResponse": {
+                  "externalConversationId": "conversation identifier",
+                  "businessCases": [
+                    "business case name"
+                  ],
+                  "intents": [
+                    {
+                      "id": "some intent identifier",
+                      "confidence": "MEDIUM",
+                      "confidenceScore": 0.753
+                    }
+                  ]
+                }
+              },
+              {
+                "actionReason": {
+                  "reason": "some reason"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "consumerParticipant": [
+        {
+          "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
+          "firstName": "Visitor",
+          "lastName": "Test",
+          "token": "undefined",
+          "email": "undefined",
+          "phone": "0",
+          "avatarURL": "undefined",
+          "time": "2016-08-29 14:30:24.573+0000",
+          "timeL": 1472481024573,
+          "consumerName": "Visitor",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+        }
+      ],
+      "transfers": [
+        {
+          "timeL": 1498127364726,
+          "time": "2017-06-22 10:29:24.726+0000",
+          "assignedAgentId": "null",
+          "targetSkillId": 2,
+          "targetSkillName": "cats",
+          "reason": "Skill",
+          "by": "196875613",
+          "sourceSkillId": -1,
+          "sourceSkillName": "Unassigned",
+          "sourceAgentId": "196875613",
+          "sourceAgentFullName": "michal1",
+          "sourceAgentLoginName": "michal1",
+          "sourceAgentNickname": "michal1",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+        },
+        {
+          "timeL": 1498127562332,
+          "time": "2017-06-22 10:32:42.332+0000",
+          "assignedAgentId": "null",
+          "targetSkillId": 3,
+          "targetSkillName": "lpsocial",
+          "reason": "Skill",
+          "by": "7",
+          "sourceSkillId": 2,
+          "sourceSkillName": "cats",
+          "sourceAgentId": "7",
+          "sourceAgentFullName": "michal",
+          "sourceAgentLoginName": "michal@lp.com",
+          "sourceAgentNickname": "michal",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+        }
+      ],
+      "interactions": [
+        {
+          "assignedAgentId": "3677470410",
+          "assignedAgentFullName": "michal@lp.com",
+          "assignedAgentLoginName": "michal@lp.com",
+          "assignedAgentNickname": "michal@lp.com",
+          "interactionTimeL": 1472483644999,
+          "interactionTime": "2016-08-29 15:14:04.999+0000",
+          "interactiveSequence": 1,
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+        }
+      ],
+      "dialogs": [
+        {
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
+          "status": "OPEN",
+          "dialogType": "MAIN",
+          "dialogChannelType": "MESSAGING",
+          "startTime": "2017-09-25 07:55:58.000+0000",
+          "startTimeL": 1506326158000,
+          "endTime": "2017-09-25 07:56:53.422+0000",
+          "endTimeL": 1506326213422,
+          "closeReason": "AGENT",
+          "closeReasonDescription": "MANUAL_CLOSE",
+          "skillId": 1234,
+          "skillName": "skill3"
+        }
+      ],
+      "messageScore": [
+        {
+          "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
+          "messageRawScore": 0,
+          "mcs": 0,
+          "time": "2016-08-29 15:14:26.314+0000",
+          "timeL": 1472483666314
+        },
+        {
+          "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:2",
+          "messageRawScore": 0,
+          "mcs": 0,
+          "time": "2016-08-29 15:15:49.225+0000",
+          "timeL": 1472483749225
+        }
+      ],
+      "messageStatuses": [
+        {
+          "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
+          "seq": 0,
+          "time": "2016-08-29 15:14:19.626+0000",
+          "timeL": 1472483659626,
+          "participantId": "3677470410",
+          "participantType": "Agent",
+          "messageDeliveryStatus": "ACCEPT",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+        },
+        {
+          "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:2",
+          "seq": 2,
+          "time": "2016-08-29 15:15:42.609+0000",
+          "timeL": 1472483742609,
+          "participantId": "3677470410",
+          "participantType": "Agent",
+          "messageDeliveryStatus": "ACCEPT",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+        },
+        {
+          "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
+          "seq": 0,
+          "time": "2016-08-29 15:15:58.272+0000",
+          "timeL": 1472483758272,
+          "participantId": "3677470410",
+          "participantType": "Agent",
+          "messageDeliveryStatus": "READ",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1"
+        }
+      ],
+      "conversationSurveys": [
+        {
+          "surveyType": "Satisfaction",
+          "surveyStatus": "FILLED",
+          "dialogId": "cd5926e0-5b57-4c82-85c5-9c95f88263a1",
+          "surveyData": [
+            {
+              "question": "Confirm Resolution",
+              "answer": "Yes"
+            }
+          ]
+        }
+      ],
+      "coBrowseSessions": {
+        "coBrowseSessionsList": [
+          {
+            "sessionId": "22207277:37084513__1d165aa8-9d37-4e40-baf8-06f5e80f6cd2_1506325721990",
+            "startTime": "2017-09-25 07:48:42.000+0000",
+            "startTimeL": 1506325722000,
+            "endTime": "2017-09-25 07:50:01.789+0000",
+            "endTimeL": 1506325801789,
+            "endReason": "AGENT",
+            "duration": 79789,
+            "type": "inApp",
+            "agentId": "37084513",
+            "interactive": true
+          },
+          {
+            "sessionId": "22207277:37084513__1d165aa8-9d37-4e40-baf8-06f5e80f6cd2_1506326147649",
+            "startTime": "2017-09-25 07:55:58.000+0000",
+            "startTimeL": 1506326158000,
+            "endTime": "2017-09-25 07:56:53.422+0000",
+            "endTimeL": 1506326213422,
+            "endReason": "VISITOR",
+            "duration": 55422,
+            "type": "inApp",
+            "capabilities": [
+              "CONSUMER_VIDEO_CONNECTION",
+              "CONSUMER_VOICE_CONNECTION",
+              "AGENT_APP_CONTROL"
+            ],
+            "agentId": "37084513",
+            "interactive": true
+          }
+        ]
+      },
+      "sdes": {
+        "events": [
+          {
+            "customerInfo": {
+              "serverTimeStamp": "1497871291351",
+              "originalTimeStamp": "1497871291351",
+              "customerInfo": {
+                "customerId": "12345678",
+                "companyBranch": "dummyCompanyBranch"
+              }
+            },
+            "sdeType": "CUSTOMER_INFO",
+            "serverTimeStamp": "1497871291351"
+          },
+          {
+            "personalInfo": {
+              "serverTimeStamp": "1497871291351",
+              "originalTimeStamp": "1497871291351",
+              "personalInfo": {
+                "name": "dummyName",
+                "surname": "dummySurename",
+                "contacts": [
+                  {
+                    "personalContact": {
+                      "email": "dummy@mail.com",
+                      "phone": "12345678"
+                    }
+                  }
+                ]
+              }
+            },
+            "sdeType": "PERSONAL_INFO",
+            "serverTimeStamp": "1497871291351"
+          }
+        ]
+      },
+      "responseTime": {
+        "latestEffectiveResponseDueTime": 1527174367230,
+        "configuredResponseTime": 3000
+      },
+      "summary": {
+        "text": "summary",
+        "lastUpdatedTime": 1482333795318
+      },
+      "intents": [
+        {
+          "selectedClassification": {
+            "intentName": "other--other--n_a",
+            "confidenceScore": 1,
+            "versions": [
+              {
+                "modelName": "sic",
+                "modelVersion": "1.0"
+              },
+              {
+                "modelName": "tmo_classifier",
+                "modelVersion": "1.0"
+              }
+            ]
+          },
+          "allClassifications": [
+            {
+              "intentName": "other--other--n_a",
+              "confidenceScore": 1,
+              "versions": [
+                {
+                  "modelName": "sic",
+                  "modelVersion": "1.0"
+                },
+                {
+                  "modelName": "tmo_classifier",
+                  "modelVersion": "1.0"
+                }
+              ]
+            },
+            {
+              "intentName": "billing_and_payment--payment_arrangement--set-up_payment_arrangement",
+              "confidenceScore": 0,
+              "versions": [
+                {
+                  "modelName": "sic",
+                  "modelVersion": "1.0"
+                },
+                {
+                  "modelName": "tmo_classifier",
+                  "modelVersion": "1.0"
+                }
+              ]
+            }
+          ],
+          "messageId": "ms::dialog:13ea17a3-57c7-4814-9d3f-120784f6628c::msg:12"
+        },
+        {
+          "selectedClassification": {
+            "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information",
+            "confidenceScore": 0.908,
+            "versions": [
+              {
+                "modelName": "sic",
+                "modelVersion": "1.0"
+              },
+              {
+                "modelName": "tmo_classifier",
+                "modelVersion": "1.0"
+              }
+            ]
+          },
+          "allClassifications": [
+            {
+              "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information",
+              "confidenceScore": 0.908,
+              "versions": [
+                {
+                  "modelName": "sic",
+                  "modelVersion": "1.0"
+                },
+                {
+                  "modelName": "tmo_classifier",
+                  "modelVersion": "1.0"
+                }
+              ]
+            },
+            {
+              "intentName": "other--other--n_a",
+              "confidenceScore": 0.265,
+              "versions": [
+                {
+                  "modelName": "sic",
+                  "modelVersion": "1.0"
+                },
+                {
+                  "modelName": "tmo_classifier",
+                  "modelVersion": "1.0"
+                }
+              ]
+            },
+            {
+              "intentName": "billing_and_payment--billing_and_payment_support--dispute_or_fix_a_bill",
+              "confidenceScore": 0.224,
+              "versions": [
+                {
+                  "modelName": "sic",
+                  "modelVersion": "1.0"
+                },
+                {
+                  "modelName": "tmo_classifier",
+                  "modelVersion": "1.0"
+                }
+              ]
+            }
+          ],
+          "messageId": "ms::dialog:13ea17a3-57c7-4814-9d3f-120784f6628c::msg:16"
+        }
+      ]
+    }
+  ]
 }
 ```
