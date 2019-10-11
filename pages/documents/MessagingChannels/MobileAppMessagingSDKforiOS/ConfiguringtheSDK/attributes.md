@@ -52,7 +52,7 @@ extension UIColor {
 }
 ```  
 
-<a style="font-weight:bold" href='#lpColor' id='lpColor' class='anchor' aria-hidden='true'>#### lpColor</a>
+<a style="font-weight:bold" href='#LPColor' id='LPColor' class='anchor' aria-hidden='true'>LPColor</a>
    
 | Semantic Color Name  | iOS 13 color source | iOS 11-12 color source |
 | :--- | :--- | :--- |
@@ -134,7 +134,7 @@ The brand name will be shown as a title on toolbar when there is no active conve
 Color code for the entire view background. 
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpBackground`](#lpColor) 
+   - **Default value:** [`LPColor.lpBackground`](#LPColor) 
 
 
 #### customFontNameConversationFeed  
@@ -237,7 +237,7 @@ Defines the content mode of the conversation background image.
 Color code for the background of the connection status bar while connecting.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#lpColor) 
+- **Default value:** [`LPColor.lpBackground`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -256,7 +256,7 @@ Color code for the background of the connection status bar while connecting.
 Color code for the text of the connection status bar while connecting.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpWhite`](#lpColor) 
+- **Default value:** [`LPColor.lpWhite`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -275,7 +275,7 @@ Color code for the text of the connection status bar while connecting.
 Connection status toast (failed to connect) background color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBlack`](#lpColor) 
+- **Default value:** [`LPColor.lpBlack`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -293,7 +293,7 @@ Connection status toast (failed to connect) background color.
 Connection status toast (failed to connect) text color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpWhite`](#lpColor) 
+- **Default value:** [`LPColor.lpWhite`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -315,7 +315,7 @@ Connection status toast (failed to connect) text color.
 Color code for the text of the controller bubble. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray2`](#lpColor) 
+- **Default value:** [`LPColor.lpGray2`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -365,7 +365,7 @@ Maximum number of minutes to send the message.
 Conversation separator text and line color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor) 
+- **Default value:** [`LPColor.lpLabel`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -603,7 +603,7 @@ Custom formatting for date and time string, for example, 'EEEE MM/dd/YY hh:mm a'
 Color code for date separator title background color. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#lpColor) 
+- **Default value:** [`LPColor.lpBackground`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
@@ -620,7 +620,7 @@ Color code for date separator title background color.
 Color code for date separator text color. 
  
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor) 
+- **Default value:** [`LPColor.lpLabel`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
@@ -637,7 +637,7 @@ Color code for date separator text color.
 Color code for date separator line background color. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpClear`](#lpColor) 
+- **Default value:** [`LPColor.lpClear`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
@@ -654,7 +654,7 @@ Color code for date separator line background color.
 Color code for date separator background color. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#lpColor) 
+- **Default value:** [`LPColor.lpBackground`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;height: 42px;">
    <figure>
@@ -750,7 +750,7 @@ Checkmark visibility of the following options (type CheckmarksState): SentOnly -
 Color of checkmark indication signs of Read messages. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBlue`](#lpColor) 
+- **Default value:** [`LPColor.lpBlue`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -768,7 +768,7 @@ Color of checkmark indication signs of Read messages.
 Color of checkmark indication signs of Distributed messages.  
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor) 
+- **Default value:** [`LPColor.lpSecondaryLabel`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -786,7 +786,7 @@ Color of checkmark indication signs of Distributed messages.
 Color of checkmark indication signs of Sent messages. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor) 
+- **Default value:** [`LPColor.lpSecondaryLabel`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -865,14 +865,14 @@ Enable or disable link preview feature. If disabled, user will not see site's li
 Color code for the background of the link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpBackground`](#lpColor) 
+   - **Default value:** [`LPColor.lpBackground`](#LPColor) 
 
 
 #### linkPreviewTitleTextColor
 Color code for the title text inside link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpLabel`](#lpColor) 
+   - **Default value:** [`LPColor.lpLabel`](#LPColor) 
 
 
 
@@ -880,7 +880,7 @@ Color code for the title text inside link preview area inside cell.
 Color code for the description text inside link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpGray2`](#lpColor) 
+   - **Default value:** [`LPColor.lpGray2`](#LPColor) 
 
 
 
@@ -888,7 +888,7 @@ Color code for the description text inside link preview area inside cell.
 Color code for the description site name link preview area inside cell.
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpGray2`](#lpColor) 
+   - **Default value:** [`LPColor.lpGray2`](#LPColor) 
 
 
 
@@ -931,7 +931,7 @@ Refers to the style in which the link preview cell will be displayed.
 The background color of the url real time preview.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#lpColor) 
+- **Default value:** [`LPColor.lpBackground`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -950,7 +950,7 @@ The background color of the url real time preview.
 The border color of the url real time preview.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray3`](#lpColor) 
+- **Default value:** [`LPColor.lpGray3`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -987,7 +987,7 @@ The border width of the url real time preview.
 The title text color of the url real time preview.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBlack`](#lpColor) 
+- **Default value:** [`LPColor.lpBlack`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1005,7 +1005,7 @@ The title text color of the url real time preview.
 The description text color of the url real time preview.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray4`](#lpColor) 
+- **Default value:** [`LPColor.lpGray4`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1041,7 +1041,7 @@ The type of effect on the loading view.
 The type of effect on the loading view.
 
 - **Type:** UIColor 
-- **Default value:**  [`LPColor.lpClear`](#lpColor)  
+- **Default value:**  [`LPColor.lpClear`](#LPColor)  
 
 
 
@@ -1049,13 +1049,13 @@ The type of effect on the loading view.
 The text color for the label on the loading view.
 
    - **Type:** UIColor 
-   - **Default value:**  [`LPColor.lpGray2`](#lpColor) 
+   - **Default value:**  [`LPColor.lpGray2`](#LPColor) 
    
 #### loadingViewProgressBackgroundColor
 The background color for the progress view on the loading view.
 
    - **Type:** UIColor 
-   - **Default value:**  [`LPColor.lpGray2`](#lpColor)  
+   - **Default value:**  [`LPColor.lpGray2`](#LPColor)  
 
 
 #### loadingViewProgressTintColor
@@ -1063,7 +1063,7 @@ The tint color for the progress view on the loading view.
 
 
   - **Type:** UIColor 
-  - **Default value:**  [`LPColor.lpBlue`](#lpColor) 
+  - **Default value:**  [`LPColor.lpBlue`](#LPColor) 
 
 
 
@@ -1107,7 +1107,7 @@ Bool used to allow manual configuration for enabling the SDK to register to LP P
 Background color of navigation bar in conversation screen. 
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpGray4`](#lpColor) 
+   - **Default value:** [`LPColor.lpGray4`](#LPColor) 
 
 
 
@@ -1115,7 +1115,7 @@ Background color of navigation bar in conversation screen.
 Navigation title color in conversation screen. 
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpLabel`](#lpColor) 
+   - **Default value:** [`LPColor.lpLabel`](#LPColor) 
 
 
 
@@ -1176,7 +1176,7 @@ Photo Sharing menu background color.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBlue`](#lpColor) 
+- **Default value:** [`LPColor.lpBlue`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1196,7 +1196,7 @@ Photo Sharing menu buttons background color.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#lpColor) 
+- **Default value:** [`LPColor.lpBackground`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1215,7 +1215,7 @@ Photo Sharing menu buttons background color.
 Photo Sharing menu buttons tint color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBlue`](#lpColor) 
+- **Default value:** [`LPColor.lpBlue`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1234,7 +1234,7 @@ Photo Sharing menu buttons tint color.
 Photo Sharing menu buttons text color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#lpColor) 
+- **Default value:** [`LPColor.lpBackground`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1253,7 +1253,7 @@ Photo Sharing menu buttons text color.
 Photo Sharing Camera button color in enabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBlue`](#lpColor) 
+- **Default value:** [`LPColor.lpBlue`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1272,7 +1272,7 @@ Photo Sharing Camera button color in enabled mode in the conversation screen. Wi
 Photo Sharing Camera button color in disabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray`](#lpColor) 
+- **Default value:** [`LPColor.lpGray`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1291,7 +1291,7 @@ Photo Sharing Camera button color in disabled mode in the conversation screen. W
 Radial loader fill color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray3`](#lpColor) 
+- **Default value:** [`LPColor.lpGray3`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1310,7 +1310,7 @@ Radial loader fill color.
 Color of the loader progress line.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#lpColor) 
+- **Default value:** [`LPColor.lpBackground`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1328,7 +1328,7 @@ Color of the loader progress line.
 Color of the loader progress line background.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray5`](#lpColor) 
+- **Default value:** [`LPColor.lpGray5`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;height: 70px;">
    <figure>
@@ -1522,7 +1522,7 @@ Image for custom the thumbnail of XLSX files in file sharing
 Color code for the empty state label.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor) 
+- **Default value:** [`LPColor.lpLabel`](#LPColor) 
 
 <!--    <div style="float: right; width: 50%;">
    <figure>
@@ -1540,21 +1540,21 @@ Color code for the empty state label.
 Tint color for the state of files (and photos) received from agents.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray3`](#lpColor) 
+- **Default value:** [`LPColor.lpGray3`](#LPColor) 
 
 
 #### userFileStateTint
 Tint color for the state of files send by user.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray3`](#lpColor) 
+- **Default value:** [`LPColor.lpGray3`](#LPColor) 
 
 
 #### userPhotoStateTint
 Tint color for the state of photos send by user.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray3`](#lpColor) 
+- **Default value:** [`LPColor.lpGray3`](#LPColor) 
 
 
 --- 
@@ -1607,7 +1607,7 @@ Border size of Quick Reply buttons.
 Back button color in secure form screen. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
  
 
@@ -1623,7 +1623,7 @@ The style (UIStatusBarStyle) for the secure form screen.
 Background color of navigation bar in secure form screen. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray4`](#lpColor)
+- **Default value:** [`LPColor.lpGray4`](#LPColor)
 
    
    
@@ -1631,7 +1631,7 @@ Background color of navigation bar in secure form screen.
 Navigation title color in secure form screen.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 
@@ -1639,7 +1639,7 @@ Navigation title color in secure form screen.
 Secure form bubble background color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#lpColor)
+- **Default value:** [`LPColor.lpBackground`](#LPColor)
 
 
 
@@ -1647,7 +1647,7 @@ Secure form bubble background color.
 Secure form bubble border color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray4`](#lpColor)
+- **Default value:** [`LPColor.lpGray4`](#LPColor)
 
 
 #### secureFormBubbleBorderWidth  
@@ -1662,7 +1662,7 @@ Secure form bubble border width in pixels.
 Secure form bubble form title color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 
@@ -1670,7 +1670,7 @@ Secure form bubble form title color.
 Secure form bubble form description color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 
@@ -1678,14 +1678,14 @@ Secure form bubble form description color.
 Secure form bubble fill form text button color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBlue`](#lpColor)
+- **Default value:** [`LPColor.lpBlue`](#LPColor)
 
 
 #### secureFormBubbleFillFormButtonBackgroundColor  
 Secure form bubble fill form button background color.
    
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpClear`](#lpColor)
+   - **Default value:** [`LPColor.lpClear`](#LPColor)
 
 
 
@@ -1693,7 +1693,7 @@ Secure form bubble fill form button background color.
 Secure form bubble form image tint color.
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpBlue`](#lpColor)
+   - **Default value:** [`LPColor.lpBlue`](#LPColor)
 
 
 
@@ -1738,7 +1738,7 @@ Secure form flag for hiding the secure form logo in the top of the form.
 Secure form loading indicator color while loading form before opening. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray5`](#lpColor)
+- **Default value:** [`LPColor.lpGray5`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -1762,7 +1762,7 @@ Secure form loading indicator color while loading form before opening.
 Send button color in disabled mode in the conversation screen. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray`](#lpColor)
+- **Default value:** [`LPColor.lpGray`](#LPColor)
 
 
 
@@ -1771,7 +1771,7 @@ Send button color in disabled mode in the conversation screen.
 Send button color in enabled mode in the conversation screen. 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBlue`](#lpColor)
+- **Default value:** [`LPColor.lpBlue`](#LPColor)
 
 
 ####  sendButtonImage  
@@ -1819,7 +1819,7 @@ Structured Content bubble border width in pixels.
 Structured Content bubble border color.
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpGray4`](#lpColor)
+   - **Default value:** [`LPColor.lpGray4`](#LPColor)
 
 
 
@@ -1912,7 +1912,7 @@ Corner radius for (Yes/No) buttons.
 Background color of the Submit button.  
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGreen`](#lpColor)
+- **Default value:** [`LPColor.lpGreen`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -1930,7 +1930,7 @@ Background color of the Submit button.
 Text color of the Submit button.  
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 
@@ -1951,7 +1951,7 @@ Background Color of the rating buttons.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGreen`](#lpColor)
+- **Default value:** [`LPColor.lpGreen`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -1969,7 +1969,7 @@ Background Color of the rating buttons.
 Color for the resolution confirmation buttons (Yes/No) when selected
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGreen`](#lpColor)
+- **Default value:** [`LPColor.lpGreen`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -1988,7 +1988,7 @@ Color for the resolution confirmation buttons (Yes/No) when selected
 Title text color for all labels.  
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2063,7 +2063,7 @@ Hides the Thanks You screen after tapping 'Submit' button.
 Background color of navigation bar in survey screen.  
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGreen`](#lpColor)
+- **Default value:** [`LPColor.lpGreen`](#LPColor)
 
 <!--    <div style="float: right; width: 100%;">
    <figure>
@@ -2080,7 +2080,7 @@ Background color of navigation bar in survey screen.
 Text color of the title in the survey screen.  
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpBackground`](#lpColor)
+   - **Default value:** [`LPColor.lpBackground`](#LPColor)
 
 
 
@@ -2089,7 +2089,7 @@ Text color of the title in the survey screen.
 Skip button color in survey screen. 
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpLabel`](#lpColor)
+   - **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 
@@ -2129,7 +2129,7 @@ Color code for the text of the system messages.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2222,7 +2222,7 @@ Background color of TTR notification banner view.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBlack`](#lpColor)
+- **Default value:** [`LPColor.lpBlack`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2242,7 +2242,7 @@ Text color of TTR notification banner view.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpWhite`](#lpColor)
+- **Default value:** [`LPColor.lpWhite`](#LPColor)
 
 
 
@@ -2279,7 +2279,7 @@ Enable toast notifications such as offline and TTR notifications.
 #### scrollToBottomButtonBackgroundColor  
 Scroll to bottom button background color of the whole button.
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray2`](#lpColor)
+- **Default value:** [`LPColor.lpGray2`](#LPColor)
 
 
 
@@ -2300,7 +2300,7 @@ Scroll to bottom button text color of the last unread message preview.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#lpColor)
+- **Default value:** [`LPColor.lpBackground`](#LPColor)
 
 
 
@@ -2320,7 +2320,7 @@ Scroll to bottom button unread message badge background color.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpRed`](#lpColor)
+- **Default value:** [`LPColor.lpRed`](#LPColor)
 
 
 
@@ -2341,7 +2341,7 @@ Scroll to bottom button unread message badge text color.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 
@@ -2363,7 +2363,7 @@ Scroll to bottom button arrow tint color.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBackground`](#lpColor)
+- **Default value:** [`LPColor.lpBackground`](#LPColor)
 
 
 
@@ -2385,7 +2385,7 @@ Unread Messages divider background color.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpGray5`](#lpColor)
+- **Default value:** [`LPColor.lpGray5`](#LPColor)
 
 
 
@@ -2406,7 +2406,7 @@ Unread Messages divider text color.
 
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpBlue`](#lpColor)
+- **Default value:** [`LPColor.lpBlue`](#LPColor)
 
 
 
@@ -2518,7 +2518,7 @@ Define the scroll to bottom badge corners radius.
 Background color of the remote user’s avatar. 
 
    - **Type:** UIColor
-   - **Default value:** [`LPColor.lpGray4`](#lpColor) 
+   - **Default value:** [`LPColor.lpGray4`](#LPColor) 
 
 
 
@@ -2567,7 +2567,7 @@ Define the remote avatar Trailing padding (Avatar to bubble).
 Icon color of default remoteUser avatar.  
 
    - **Type:** UIColor
-   - **Default value:**  [`LPColor.lpBackground`](#lpColor)
+   - **Default value:**  [`LPColor.lpBackground`](#LPColor)
 
 
 
@@ -2624,7 +2624,7 @@ Background color of agent's default avatar in CSAT.
 
 
 - **Type:** UIColor  
-- **Default value:** [`LPColor.lpGray4`](#lpColor)
+- **Default value:** [`LPColor.lpGray4`](#LPColor)
 
 
 
@@ -2645,7 +2645,7 @@ Icon color of agent's default avatar in CSAT.
 
 
 - **Type:** UIColor  
-- **Default value:** [`LPColor.lpBackground`](#lpColor)
+- **Default value:** [`LPColor.lpBackground`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2669,7 +2669,7 @@ User Input TextView container background color.
 
 
 - **Type:** UIColor  
-- **Default value:** [`LPColor.lpGray3`](#lpColor)
+- **Default value:** [`LPColor.lpGray3`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2709,7 +2709,7 @@ Input TextView top border color default clear color.
 
 
 - **Type:** UIColor  
-- **Default value:** [`LPColor.lpClear`](#lpColor)
+- **Default value:** [`LPColor.lpClear`](#LPColor)
 
 
 --- 
@@ -2721,7 +2721,7 @@ Color code for the background of the remote user's bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpGray4`](#lpColor)
+- **Default value:** [`LPColor.lpGray4`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2740,7 +2740,7 @@ Color code for the outline color.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpGray4`](#lpColor)
+- **Default value:** [`LPColor.lpGray4`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2759,7 +2759,7 @@ Color code for links in the text of the remote user's bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 
@@ -2778,7 +2778,7 @@ Color code for the text of the remote user's bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 
@@ -2821,7 +2821,7 @@ Color code for the timestamp of the remote user's bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor)
+- **Default value:** [`LPColor.lpSecondaryLabel`](#LPColor)
 
 
 
@@ -2843,7 +2843,7 @@ Color of the typing indicator for when the remote user is typing.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpBackground`](#lpColor)
+- **Default value:** [`LPColor.lpBackground`](#LPColor)
 
 
 
@@ -2865,7 +2865,7 @@ Color of the remote user's bubble overlay when user uses a long press gesture on
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -2995,7 +2995,7 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 Color code for the background of the visitor bubble.
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpBlue`](#lpColor)
+- **Default value:** [`LPColor.lpBlue`](#LPColor)
 
 
 
@@ -3017,7 +3017,7 @@ Color code for the outline color.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpBlue`](#lpColor)
+- **Default value:** [`LPColor.lpBlue`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -3037,7 +3037,7 @@ Color code for links in the text of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpWhite`](#lpColor)
+- **Default value:** [`LPColor.lpWhite`](#LPColor)
 
 
 
@@ -3098,7 +3098,7 @@ Color code for the timestamp of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor)
+- **Default value:** [`LPColor.lpSecondaryLabel`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
@@ -3118,7 +3118,7 @@ Color code for the send status text of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor)
+- **Default value:** [`LPColor.lpSecondaryLabel`](#LPColor)
 
 
 
@@ -3140,7 +3140,7 @@ Color code for the error view text of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpRed`](#lpColor)
+- **Default value:** [`LPColor.lpRed`](#LPColor)
 
 
 
@@ -3162,7 +3162,7 @@ Color code for the error view border of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpRed`](#lpColor)
+- **Default value:** [`LPColor.lpRed`](#LPColor)
 
 
 
@@ -3191,7 +3191,7 @@ Color of the user's bubble overlay when user uses a long press gesture on the bu
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpLabel`](#lpColor)
+- **Default value:** [`LPColor.lpLabel`](#LPColor)
 
 
 <!--    <div style="float: right; width: 100%;">
