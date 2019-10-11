@@ -1701,88 +1701,86 @@ Border size of Quick Reply buttons.
 #### secureFormBackButtonColor  
 Back button color in secure form screen. 
 
-   - **Type:** UIColor
-   - **Default value:** UIColor.black 
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
  
 
-#### secureFormUIStatusBarStyleLightContent  
-Should display status bar of the secure form screen in Light Content Mode (UIStatusBarStyle).
+#### secureFormUIStatusBarStyle  
+The style (UIStatusBarStyle) for the secure form screen.
 
-   - **Type:** Bool
-   - **Default value:** true 
+   - **Type:** UIStatusBarStyle
+   - **Default value:** UIStatusBarStyle.default 
 
 
 
 #### secureFormNavigationBackgroundColor  
 Background color of navigation bar in secure form screen. 
 
-   - **Type:** UIColor
-   - **Default value:** #229A49
-   
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray4`](#lpColor)
+
    
    
 #### secureFormNavigationTitleColor  
 Navigation title color in secure form screen.
 
-   - **Type:** UIColor
-   - **Default value:** UIColor.white 
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
 
 #### secureFormBubbleBackgroundColor  
 Secure form bubble background color.
 
-   - **Type:** UIColor
-   - **Default value:** UIColor.white 
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBackground`](#lpColor)
 
 
 
 #### secureFormBubbleBorderColor  
 Secure form bubble border color.
 
-   - **Type:** UIColor
-   - **Default value:** #d4d4d5 
-
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray4`](#lpColor)
 
 
 #### secureFormBubbleBorderWidth  
 Secure form bubble border width in pixels.
 
    - **Type:** Double
-   - **Default value:**  2.0
+   - **Default value:**  1.0
 
 
 
 #### secureFormBubbleTitleColor  
 Secure form bubble form title color.
 
-   - **Type:** UIColor
-   - **Default value:** UIColor.black 
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
 
 #### secureFormBubbleDescriptionColor 
-Secure form bubble fill form text button color.
+Secure form bubble form description color.
 
-   - **Type:** UIColor
-   - **Default value:** #5b5c5e  
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
 
 #### secureFormBubbleFillFormButtonTextColor  
 Secure form bubble fill form text button color.
 
-   - **Type:** UIColor
-   - **Default value:** #004dc9 
-
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBlue`](#lpColor)
 
 
 #### secureFormBubbleFillFormButtonBackgroundColor  
 Secure form bubble fill form button background color.
-
+   
    - **Type:** UIColor
-   - **Default value:**  UIColor.clear
+   - **Default value:** [`LPColor.lpClear`](#lpColor)
 
 
 
@@ -1790,21 +1788,17 @@ Secure form bubble fill form button background color.
 Secure form bubble form image tint color.
 
    - **Type:** UIColor
-   - **Default value:** #004dc9 
+   - **Default value:** [`LPColor.lpBlue`](#lpColor)
 
 
 
 #### secureFormCustomFontName 
- Secure form custom font name to be used while user is filling the secure form. If not set, the default font will be Helvetica. 
+ Secure form custom font name to be used while user filling the secure form. If not set, the default font will be used. 
  
-<!--    <div style="float: left; width: 35%;height: 264px;">
-   <ul>
-      <li><b>Type:</b> String</li>
-      <li><b>Default value:</b> Helvetica</li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
+ - **Type:** String
+ - **Default value:** Helvetica
+ 
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName"> 
@@ -1819,12 +1813,9 @@ Secure form bubble form image tint color.
 #### secureFormHideLogo  
 Secure form flag for hiding the secure form logo in the top of the form.  
 
-<!--    <div style="float: left; width: 35%;height: 240px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> false</li>
-   </ul>
-</div> -->
+- **Type:** Bool
+- **Default value:** false
+
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1841,14 +1832,11 @@ Secure form flag for hiding the secure form logo in the top of the form.
 #### secureFormBubbleLoadingIndicatorColor  
 Secure form loading indicator color while loading form before opening. 
 
-<!--    <div style="float: left; width: 35%;height: 155px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #46474a</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray5`](#lpColor)
 
-<!--    <div style="float: right; width: 65%;">
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/secureFormBubbleLoadingIndicatorColor.png" alt="secureFormBubbleLoadingIndicatorColor"> 
@@ -1866,25 +1854,24 @@ Secure form loading indicator color while loading form before opening.
 ### Send Button
 
 #### sendButtonDisabledColor 
-Color code for Send and Camera (of Photo Sharing) buttons in disabled mode. 
+Send button color in disabled mode in the conversation screen. 
 
-   - **Type:** UIColor
-   - **Default value:** #AAAAAA 
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray`](#lpColor)
 
 
 
 
 #### sendButtonEnabledColor  
-Color code for Send and Camera (of Photo Sharing) buttons in disabled mode. 
+Send button color in enabled mode in the conversation screen. 
 
-   - **Type:** UIColor
-   - **Default value:** #0362AC 
-
-
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBlue`](#lpColor)
 
 
 ####  sendButtonImage  
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
+The image must conforms Apple's [Custom Icon guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
 
 * **Type:** UIImage
 * **Default value:** SDK bundle sendMessageIcon Icon
@@ -1894,7 +1881,9 @@ Send button Image in the conversation screen. The custom image changes only if `
  
 
 #### isSendMessageButtonInTextMode  
-You have two options for the send message button mode: **text mode** (taken from localized resources) and **icon mode**.  
+Two options for the send message button mode: 
+1. **text mode** (taken from localized resources) 
+2. **icon mode**.  
  
    - **Type:** Bool
    - **Default value:** text mode 
@@ -1903,11 +1892,11 @@ You have two options for the send message button mode: **text mode** (taken from
 
 ### Structured Content
 
-#### enableStrucutredContent  
+#### enableStructuredContent  
 Enable or Disable toggle for Structured Content feature in conversations.
 
    - **Type:** Bool
-   - **Default value:** false 
+   - **Default value:** true 
 
 
 
@@ -1923,7 +1912,7 @@ Structured Content bubble border width in pixels.
 Structured Content bubble border color.
 
    - **Type:** UIColor
-   - **Default value:** #004DC9 
+   - **Default value:** [`LPColor.lpGray4`](#lpColor)
 
 
 
@@ -1978,16 +1967,12 @@ Structured Content Longitude Delta Span. Used to determine which area of the map
 ### Surveys Buttons (CSAT and FCR)
 
 #### csatSubmitButtonCornerRadius   
-Corner radius of the Submit button.  
+Corner radius for submit button.  
  
-<!--    <div style="float: left; width: 35%;height: 73px;">
-   <ul>
-      <li><b>Type:</b> Double</li>
-      <li><b>Default value:</b> 30 </li>
-   </ul>
-</div> -->
+- **Type:** Double
+- **Default value:** 30.0
 
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius">
@@ -1999,18 +1984,12 @@ Corner radius of the Submit button.
 </div> -->
 
 #### csatYesNoButtonsCornerRadius  
-Corner radius of the resolution Yes/No buttons.  
+Corner radius for (Yes/No) buttons.  
 
- 
+- **Type:** Double
+- **Default value:** 25.0
 
-<!--    <div style="float: left; width: 35%;height: 80px;">
-   <ul>
-      <li><b>Type:</b> Double</li>
-      <li><b>Default value:</b> 25 </li>
-   </ul>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatYesNoResolutionButtonsCornerRadius.png" alt="csatYesNoButtonsCornerRadius">
@@ -2023,16 +2002,13 @@ Corner radius of the resolution Yes/No buttons.
 
 
 ####  csatSubmitButtonBackgroundColor  
-Background color code of the Submit button.  
+Background color of the Submit button.  
 
-<!--    <div style="float: left; width: 35%;height: 73px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #229A49 </li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGreen`](#lpColor)
 
-<!--    <div style="float: right; width: 65%;">
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatsubmitbuttonbackgroundcolor.png" alt="csatsubmitbuttonbackgroundcolor"> 
@@ -2044,16 +2020,14 @@ Background color code of the Submit button.
 </div> -->
 
 #### csatSubmitButtonTextColor  
-Text color code of the Submit button.  
+Text color of the Submit button.  
 
-<!--    <div style="float: left; width: 35%;height: 73px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white </li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
-<!--    <div style="float: right; width: 65%;">
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatsubmitbuttontextcolor.png" alt="csatSubmitButtonTextColor"> 
@@ -2066,16 +2040,14 @@ Text color code of the Submit button.
 
 
 #### csatRatingButtonSelectedColor  
-Background Color code of the rating buttons.  
+Background Color of the rating buttons.  
 
-<!--    <div style="float: left; width: 35%;height: 64px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #229A49 </li>
-   </ul>
-</div> -->
 
-<!--    <div style="float: right; width: 65%;">
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGreen`](#lpColor)
+
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatratingbuttonselectedcolor.png" alt="csatRatingButtonSelectedColor"> 
@@ -2087,16 +2059,13 @@ Background Color code of the rating buttons.
 </div> -->
 
 #### csatResolutionButtonSelectedColor  
-Color code for the FCR survey buttons (YES/NO) when selected.  
+Color for the resolution confirmation buttons (Yes/No) when selected
 
-<!--    <div style="float: left; width: 35%;height: 69px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #229A49 </li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGreen`](#lpColor)
 
-<!--    <div style="float: right; width: 65%;">
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatresolutionbuttonselectedcolor.png" alt="csatresolutionbuttonselectedcolor"> 
@@ -2111,14 +2080,11 @@ Color code for the FCR survey buttons (YES/NO) when selected.
 #### csatAllTitlesTextColor  
 Title text color for all labels.  
 
-<!--    <div style="float: left; width: 35%;height: 473px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.black </li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor)
 
-<!--    <div style="float: right; width: 65%;">
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatalltitlestextcolor.png" alt="csatAllTitlesTextColor">  
@@ -2131,16 +2097,13 @@ Title text color for all labels.
 
 
 #### csatResolutionHidden  
-Hides the FCR survey (YES/NO) question.  
+Hides the survey (Yes/No) question.  
 
-<!--    <div style="float: left; width: 35%;height: 69px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> false</li>
-   </ul>
-</div> -->
+- **Type:** Bool
+- **Default value:** false
 
-<!--    <div style="float: right; width: 65%;">
+
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatresolutionhidden.png" alt="csatResolutionHidden">  
@@ -2155,14 +2118,10 @@ Hides the FCR survey (YES/NO) question.
 #### csatAgentViewHidden  
 Hides the view of agent avatar and name. 
 
-<!--    <div style="float: left; width: 35%;height: 115px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> true</li>
-   </ul>
-</div> -->
+- **Type:** Bool
+- **Default value:** false
 
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatagentviewhidden.png" alt="csatagentviewhidden"> 
@@ -2175,16 +2134,14 @@ Hides the view of agent avatar and name.
 
 
 #### csatThankYouScreenHidden 
-Hides the Thank You screen after tapping Submit button.   
+Hides the Thanks You screen after tapping 'Submit' button.
+1. If true, CSAT view will disappear immediately after tapping 'Submit'.
+2. If false, Thank You screen will appear for 2 seconds after tapping 'Submit' and then all the CSAT view will disappear.
 
-<!--    <div style="float: left; width: 35%;height: 157px;">
-   <ul>
-      <li><b>Type:</b> Bool</li>
-      <li><b>Default value:</b> false</li>
-   </ul>
-</div> -->
+- **Type:** Bool
+- **Default value:** false
 
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatthankyouscreenhidden.png" alt="csatthankyouscreenhidden"> 
@@ -2196,16 +2153,12 @@ Hides the Thank You screen after tapping Submit button.
 </div> -->
 
 #### csatNavigationBackgroundColor 
-Background color of the navigation of the survey.  
+Background color of navigation bar in survey screen.  
 
-<!--    <div style="float: left; width: 35%;height: 57px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #229A49</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGreen`](#lpColor)
 
-<!--    <div style="float: right; width: 65%;">
+<!--    <div style="float: right; width: 100%;">
    <figure>
    <figcaption></figcaption>
    <img src="img/csatnavigationbackgroundcolor.png" alt="csatnavigationbackgroundcolor"> 
@@ -2217,28 +2170,28 @@ Background color of the navigation of the survey.
 </div> -->
 
 #### csatNavigationTitleColor  
-Text color of the title in the survey navigation.  
+Text color of the title in the survey screen.  
 
    - **Type:** UIColor
-   - **Default value:** UIColor.white 
+   - **Default value:** [`LPColor.lpBackground`](#lpColor)
 
 
 
 
 #### csatSkipButtonColor  
-Skip survey button color. 
+Skip button color in survey screen. 
 
    - **Type:** UIColor
-   - **Default value:** UIColor.black 
+   - **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
 
 
-#### csatUIStatusBarStyleLightContent  
-Allow the UI status bar to take the color of the survey navigation bar color. 
+#### csatUIStatusBarStyle  
+The style (UIStatusBarStyle) for the survey screen. 
 
-   - **Type:** Bool
-   - **Default value:** true 
+   - **Type:** UIStatusBarStyle
+   - **Default value:** UIStatusBarStyle.default 
 
 
 
@@ -2253,7 +2206,7 @@ Hides the whole survey view and disables it.
 
 
 #### csatSurveyExpirationInMinutes  
-Expiration of CSAT in minutes from the moment the conversation was ended. If Survey exceeded the expiration, it does not get presented to the user.  
+Expiration of CSAT in minutes from the moment the conversation was ended. If Survey exceeded the expiration, it will not be presented to the user..  
 
    - **Type:** UInt
    - **Default value:** 1440 
