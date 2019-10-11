@@ -24,7 +24,7 @@ With the addition of Dark Mode support in iOS 13, we now utilize Apple’s UIUse
 If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed.  Likely only the colors have been updated.  If you wish to support Dark Mode and you are using our default color configurations you have nothing to do, we have handled the support for you by updating the SDK color scheme to utilize iOS system colors where possible.  This appearance is different than the previous implementation but is intended to be more in line with what iOS users expect.  We have worked hard on its implementation and hope you enjoy it! 
 
 #### What this means for our customers who use custom attribute configurations? 
-If you have customized the appearance of the iOS SDK by setting your own UIColor for attributes within the LPConfig object, note that unless you pass a UIColor that has colors set specifically for at minimum UIUserInterface values “dark” and “light” your custom configuartion will not support dark mode and the UI may not appear as expected. This implementation is intended to mirror how you might support Dark Mode within your own application.  We recommend using the following UIColor Extension pattern we found laid our in this article from NSHipster which we have modeled for our own default colors (publicly available as LPColor objects described below).  
+If you have customized the appearance of the iOS SDK by setting your own UIColor for attributes within the LPConfig object, note that unless you pass a UIColor that has colors set specifically for at minimum UIUserInterface values “dark” and “light” your custom configuartion will not support dark mode and the UI may not appear as expected. This implementation is intended to mirror how you might support Dark Mode within your own application.  We recommend using the following UIColor Extension pattern we found laid our in [this](https://nshipster.com/dark-mode/ "Dark Mode on iOS 13 - NSHipster") article from NSHipster.   We have modeled our own default color objects in this manner (as public LPColor struct objects described below).  
 
 #### What this means for consumers on iOS 12 and below? 
 As is indicated by the code sample below we have mirrored the implementation for our “light” scheme for iOS devices operating on iOS 11 and 12 using non semantic colors that closely resemble the light iOS system colors. 
@@ -1142,33 +1142,41 @@ LivePerson Navigation Bar Left Item custom button.
 
 ### Photo and file sharing
 
-#### enablePhotoSharing 
-True - Enables Photo Sharing feature, False - Disables Photo Sharing. 
+#### fileSharingFromAgent
+Enable or disable file/photo sharing feature from agents.
 
    - **Type:** Bool
-   - **Default value:**  false
+   - **Default value:**  true
+   
+#### fileSharingFromConsumer
+Enable or disable file/photo sharing feature from consumer.
 
-
+   - **Type:** Bool
+   - **Default value:**  false    
 
 
 #### maxNumberOfSavedFilesOnDisk 
-This number represents how many files will be saved on the disk. Exceeding files are deleted when the app closes. 
+Max number of allowed saved files on disk. This refers only to full photo files.
+Note: The validation of allowed max number of files will be when showing and removing conversation.
 
    - **Type:** Int
    - **Default value:** 20 
 
 
+#### maxNumberOfSavedDocumentsOnDisk 
+Max number of allowed saved documents on disk. This refers only to document files
+The validation of allowed max number of documents will be when showing and removing conversation.
+
+   - **Type:** Int
+   - **Default value:** 20 
 
 
 #### photosharingMenuBackgroundColor  
 Photo Sharing menu background color.
 
-<!--    <div style="float: left; width: 35%;height: 165px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #0362AC</li>
-   </ul>
-</div> -->
+
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBlue`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1186,12 +1194,9 @@ Photo Sharing menu background color.
 #### photosharingMenuButtonsBackgroundColor  
 Photo Sharing menu buttons background color. 
 
-<!--    <div style="float: left; width: 35%;height: 165px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
+
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1209,12 +1214,8 @@ Photo Sharing menu buttons background color.
 #### photosharingMenuButtonsTintColor  
 Photo Sharing menu buttons tint color.
 
-<!--    <div style="float: left; width: 35%;height: 165px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #0362AC</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBlue`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1232,12 +1233,8 @@ Photo Sharing menu buttons tint color.
 #### photosharingMenuButtonsTextColor  
 Photo Sharing menu buttons text color.
 
-<!--    <div style="float: left; width: 35%;height: 165px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1255,12 +1252,8 @@ Photo Sharing menu buttons text color.
 #### cameraButtonEnabledColor  
 Photo Sharing Camera button color in enabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled.
 
-<!--    <div style="float: left; width: 35%;height: 75px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #0362AC</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBlue`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1278,12 +1271,8 @@ Photo Sharing Camera button color in enabled mode in the conversation screen. Wi
 ####  cameraButtonDisabledColor  
 Photo Sharing Camera button color in disabled mode in the conversation screen. Will be presented only if photo sharing feature is enabled. 
 
-<!--    <div style="float: left; width: 35%;height: 75px">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> #8B8A8F</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1301,12 +1290,8 @@ Photo Sharing Camera button color in disabled mode in the conversation screen. W
 #### fileCellLoaderFillColor 
 Radial loader fill color.
 
-<!--    <div style="float: left; width: 35%;height: 70px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor(white: 0.0, alpha: 0.5)</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray3`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1322,14 +1307,10 @@ Radial loader fill color.
 
 
 #### fileCellLoaderRingProgressColor  
-Radial loader progress color.
+Color of the loader progress line.
 
-<!--    <div style="float: left; width: 35%;height: 70px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.white </li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1344,13 +1325,10 @@ Radial loader progress color.
 
 
 #### fileCellLoaderRingBackgroundColor  
-Radial loader progress background color.
+Color of the loader progress line background.
 
-<!--    <div style="float: left; width: 35%;height: 85px;padding-bottom: 10px;">
-   <ul>
-      <li><b>Type:</b> UIColor</li>
-      <li><b>Default value:</b> UIColor.lightGray </li>
-   </ul>
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray5`](#lpColor) 
    
 </div> -->
 
@@ -1369,13 +1347,8 @@ Radial loader progress background color.
 #### photoSharingOpenMenuImageButton
 Photo sharing open menu custom button.
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-<ul>
-<li><b>Type:</b> UIImage 
-</li>
-<li><b>Default value:</b>  </li>
-</ul>
-</div> -->
+- **Type:** UIImage?
+- **Default value:** LPConstants.SHARING_MENU_ATTACHMENT_IMAGE_ID
 
 <!--    <div style="float: right; width: 50%;">
 <figure>
@@ -1392,13 +1365,8 @@ Photo sharing open menu custom button.
 #### photoSharingCloseMenuImageButton
 Photo sharing close menu custom button.
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-<ul>
-<li><b>Type:</b> UIImage 
-</li>
-<li><b>Default value:</b>  </li>
-</ul>
-</div> -->
+- **Type:** UIImage?
+- **Default value:** LPConstants.SHARING_MENU_CLOSE_IMAGE_ID
 
 <!--    <div style="float: right; width: 50%;">
 <figure>
@@ -1415,13 +1383,8 @@ Photo sharing close menu custom button.
 #### photoSharingMenuCameraImage  
 Custom camera image in the photo sharing menu.
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-   <ul>
-      <li><b>Type:</b> UIImage 
-</li>
-      <li><b>Default value:</b>  </li>
-   </ul>
-</div> -->
+- **Type:** UIImage?
+- **Default value:** LPConstants.SHARING_MENU_CAMERA_IMAGE_ID
 
 <!--    <div style="float: right; width: 50%;">
    <figure>
@@ -1438,13 +1401,8 @@ Custom camera image in the photo sharing menu.
 #### photoSharingMenuLibraryImage
 Custom Library image in the photo sharing menu.
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-   <ul>
-      <li><b>Type:</b> UIImage 
-</li>
-      <li><b>Default value:</b>  </li>
-   </ul>
-</div> -->
+- **Type:** UIImage?
+- **Default value:** LPConstants.SHARING_MENU_LIBRARY_IMAGE_ID
 
 <!--    <div style="float: right; width: 50%;">
    <figure>
@@ -1458,15 +1416,10 @@ Custom Library image in the photo sharing menu.
 </div> -->
 
 #### fileSharingMenuFileImage
-Custom file image in the file Sharing Menu.
+Custom file image in the file sharing menu.
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-<ul>
-<li><b>Type:</b> UIImage 
-</li>
-<li><b>Default value:</b>  </li>
-</ul>
-</div> -->
+- **Type:** UIImage?
+- **Default value:** LPConstants.SHARING_MENU_DOCUMENT_IMAGE_ID
 
 <!--    <div style="float: right; width: 50%;">
 <figure>
@@ -1482,13 +1435,8 @@ Custom file image in the file Sharing Menu.
 #### fileSharingUniversalFileThumbnailimage
 Image for custom the thumbnail of unsupported files in file sharing.
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-<ul>
-<li><b>Type:</b> UIImage 
-</li>
-<li><b>Default value:</b>  </li>
-</ul>
-</div> -->
+- **Type:** UIImage?
+- **Default value:** nil
 
 <!--    <div style="float: right; width: 50%;">
 <figure>
@@ -1504,13 +1452,8 @@ Image for custom the thumbnail of unsupported files in file sharing.
 #### fileSharingPDFFileThumbnailimage
 Image for custom the thumbnail of PDF files in file sharing.
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-<ul>
-<li><b>Type:</b> UIImage 
-</li>
-<li><b>Default value:</b>  </li>
-</ul>
-</div> -->
+- **Type:** UIImage?
+- **Default value:** nil
 
 <!--    <div style="float: right; width: 50%;">
 <figure>
@@ -1526,13 +1469,8 @@ Image for custom the thumbnail of PDF files in file sharing.
 #### fileSharingPPTXFileThumbnailimage
  Image for custom the thumbnail of PPTX files in file sharing
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-<ul>
-<li><b>Type:</b> UIImage 
-</li>
-<li><b>Default value:</b>  </li>
-</ul>
-</div> -->
+- **Type:** UIImage?
+- **Default value:** nil
 
 <!--    <div style="float: right; width: 50%;">
 <figure>
@@ -1549,13 +1487,8 @@ Image for custom the thumbnail of PDF files in file sharing.
 #### fileSharingDOCXFileThumbnailimage
 Image for custom the thumbnail of DOCX files in file sharing
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-<ul>
-<li><b>Type:</b> UIImage 
-</li>
-<li><b>Default value:</b>  </li>
-</ul>
-</div> -->
+- **Type:** UIImage?
+- **Default value:** nil
 
 <!--    <div style="float: right; width: 50%;">
 <figure>
@@ -1572,13 +1505,8 @@ Image for custom the thumbnail of DOCX files in file sharing
 #### fileSharingXLSXFileThumbnailimage
 Image for custom the thumbnail of XLSX files in file sharing
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-<ul>
-<li><b>Type:</b> UIImage 
-</li>
-<li><b>Default value:</b>  </li>
-</ul>
-</div> -->
+- **Type:** UIImage?
+- **Default value:** nil
 
 <!--    <div style="float: right; width: 50%;">
 <figure>
@@ -1591,16 +1519,12 @@ Image for custom the thumbnail of XLSX files in file sharing
 &nbsp;
 </div> -->
 
+
 #### conversationEmptyStateTextColor
 Color code for the empty state label.
 
-<!--    <div style="float: left; width: 50%;height: 80px;">
-   <ul>
-      <li><b>Type:</b> UIColor() 
-</li>
-      <li><b>Default value:</b>  black</li>
-   </ul>
-</div> -->
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpLabel`](#lpColor) 
 
 <!--    <div style="float: right; width: 50%;">
    <figure>
@@ -1612,6 +1536,27 @@ Color code for the empty state label.
 <!--    <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div> -->
+
+
+#### remoteFileStateTint
+Tint color for the state of files (and photos) received from agents.
+
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray3`](#lpColor) 
+
+
+#### userFileStateTint
+Tint color for the state of files send by user.
+
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray3`](#lpColor) 
+
+
+#### userPhotoStateTint
+Tint color for the state of photos send by user.
+
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpGray3`](#lpColor) 
 
 
 --- 
