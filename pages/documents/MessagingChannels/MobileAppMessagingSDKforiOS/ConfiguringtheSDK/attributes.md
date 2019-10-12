@@ -1452,9 +1452,6 @@ The image must conforms Apple's [Custom Icon guidelines](https://developer.apple
  <div style="width: 50%;padding: 5px;">
  &nbsp;
  </div>
-
- 
->>>>>>> 92694eac973e1085a88a27bf58fac07ba3aa5ea2
  
 
 #### isSendMessageButtonInTextMode  
