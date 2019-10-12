@@ -975,11 +975,11 @@ LivePerson Navigation Bar Left Item custom button.
  </div>
  
  
- #### lpNavigationBarRightItemImageButton  
- LivePerson Navigation Bar Right Item custom button. 
+ 
+#### lpNavigationBarRightItemImageButton  
+LivePerson Navigation Bar Right Item custom button. 
 
 **Type:** UIImage?
-
 
 **Default value:** 
 
@@ -1943,26 +1943,25 @@ Icon color of default remoteUser avatar.
  When assigned, this image will disable `remoteUserAvatarBackgroundColor` and `remoteUserAvatarIconColor` configurations.
  If remote user has an avatar image in his profile, this attribute will be ignored.
  
-
 - **Type:** UIImage?
 - **Default value:** nil 
 
 
 
-  #### remoteUserAvatarIconBorderWidth  
-  Define the remote avatar icon border width.
+#### remoteUserAvatarIconBorderWidth  
+Define the remote avatar icon border width.
 
 
-  - **Type:** CGFloat
-  - **Default value:** 0.0
+- **Type:** CGFloat
+- **Default value:** 0.0
 
 
-  #### remoteUserAvatarIconBorderColor  
-  Define the remote avatar icon border color.
+#### remoteUserAvatarIconBorderColor  
+Define the remote avatar icon border color.
 
 
-  - **Type:** UIColor?
-  - **Default value:** nil
+- **Type:** UIColor?
+- **Default value:** nil
   
   
 #### brandAvatarImage  
