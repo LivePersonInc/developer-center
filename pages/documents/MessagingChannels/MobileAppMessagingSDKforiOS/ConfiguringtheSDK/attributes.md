@@ -656,16 +656,7 @@ Color code for date separator background color.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;height: 42px;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/dateseparatorbackgroundcolor.png" alt="dateSeparatorBackgroundColor">
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> --> 
 
 #### dateSeparatorFontSize  
 Define the Date Separator font text style. 
@@ -673,16 +664,7 @@ Define the Date Separator font text style.
 - **Type:** UIFontTextStyle
 - **Default value:** UIFontTextStyle.footnote
 
-<!--    <div style="float: right; width: 65%;height: 36px;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/dateSeparatorFontSize.png" alt="dateSeparatorFontSize">
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> --> 
 
 #### customFontNameDateSeparator  
 Custom font name for Timestamp. Fonts that are not part of the iOS families, must be defined in App's Info.plist. 
@@ -690,16 +672,7 @@ Custom font name for Timestamp. Fonts that are not part of the iOS families, mus
 - **Type:** String
 - **Default value:** nil
 
-<!--    <div style="float: right; width: 65%;height: 39px;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/customFontNameSeparatorTimestampFeed.png" alt="customFontNameSeparatorTimestampFeed">
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> --> 
 
 #### dateSeparatorTopPadding  
 Define the Date Separator Top padding. 
@@ -707,16 +680,7 @@ Define the Date Separator Top padding.
 - **Type:** Float
 - **Default value:** 0.0
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/dateSeparatorTopPadding.png" alt="dateSeparatorTopPadding">
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->  
 
 #### dateSeparatorBottomPadding  
 Define the Date Separator bottom padding.  
@@ -724,16 +688,7 @@ Define the Date Separator bottom padding.
 - **Type:** Float
 - **Default value:** 0.0
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/dateSeparatorBottomPadding.png" alt="dateSeparatorBottomPadding">
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 --- 
@@ -752,16 +707,7 @@ Color of checkmark indication signs of Read messages.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBlue`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/checkmarkreadcolor.png" alt="checkmarkreadcolor">
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
  
 
 #### checkmarkDistributedColor  
@@ -770,16 +716,7 @@ Color of checkmark indication signs of Distributed messages.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/checkmarkdistributedcolor.png" alt="checkmarkdistributedcolor">
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 ####  checkmarkSentColor  
@@ -788,16 +725,7 @@ Color of checkmark indication signs of Sent messages.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/checkmarksentcolor.png" alt="checkmarksentcolor">
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### isReadReceiptTextMode  
@@ -808,16 +736,7 @@ If false = Read receipt “icon mode”.
 - **Type:** Bool
 - **Default value:** true
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/isreadreceipttextmode.png" alt="isReadReceiptTextMode">
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### messageStatusNumericTimestampOnly  
@@ -826,16 +745,6 @@ When false (default), time stamps displays information relative to when sent/dis
 - **Type:** Bool
 - **Default value:** false
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/messageStatusNumericTimestampOnly.png" alt="messageStatusNumericTimestampOnly">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 --- 
 
@@ -907,25 +816,6 @@ Refers to the style in which the link preview cell will be displayed.
    - **Default value:** LPUrlPreviewStyle.slim  
 
 
-<!--    <div style="float: left; width: 35%;height: 250px;">
-   <figure>
-   <figcaption>Slim</figcaption>
-   <img src="img/linkpreviewstyleslim.png" alt="linkpreviewslim">
-   </figure>
-</div> -->
-
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption>Large</figcaption>
-   <img src="img/linkpreviewstylelarge.png" alt="linkpreviewlarge">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
-
 
 #### urlRealTimePreviewBackgroundColor 
 The background color of the url real time preview.
@@ -933,17 +823,6 @@ The background color of the url real time preview.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/realtimepreviewbackgroundcolor.png" alt="realtimepreviewbackgroundcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### urlRealTimePreviewBorderColor 
@@ -952,17 +831,6 @@ The border color of the url real time preview.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpGray3`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/realtimepreviewbordercolor.png" alt="realtimepreviewbordercolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### urlRealTimePreviewBorderWidth
 The border width of the url real time preview.
@@ -970,17 +838,6 @@ The border width of the url real time preview.
 - **Type:** CGFloat
 - **Default value:** 1.0  
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/urlrealtimepreviewborderwidth.png" alt="urlRealTimePreviewBorderWidth">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### urlRealTimePreviewTitleTextColor  
@@ -989,17 +846,6 @@ The title text color of the url real time preview.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBlack`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/urlrealtimepreviewtitletextcolor.png" alt="urlRealTimePreviewTitleTextColor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### urlRealTimePreviewDescriptionTextColor  
 The description text color of the url real time preview.
@@ -1007,17 +853,6 @@ The description text color of the url real time preview.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpGray4`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/urlrealtimepreviewdescriptiontextcolor.png" alt="urlrealtimepreviewdescriptiontextcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### useNonOGTagsForLinkPreview  
@@ -1129,14 +964,30 @@ Status bar style in conversation screen.
 #### lpNavigationBarLeftItemImageButton  
 LivePerson Navigation Bar Left Item custom button.  
 
-  - **Type:** UIImage?
-  - **Default value:** LPConstants.LP_LEFT_NAV_ICON   
+  **Type:** UIImage?
+ 
+ **Default value:** 
+
+ <embed src="img/iosSDK/lpNavigationBarLeftItemImageButton_lpClose.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
+
+ <div style="width: 50%;padding: 5px;">
+ &nbsp;
+ </div>
+ 
  
  #### lpNavigationBarRightItemImageButton  
  LivePerson Navigation Bar Right Item custom button. 
 
-   - **Type:** UIImage?
-   - **Default value:** LPConstants.LP_RIGHT_NAV_MORE_ICON  
+**Type:** UIImage?
+
+
+**Default value:** 
+
+<embed src="img/iosSDK/lpNavigationBarRightItemImageButton_lpMore.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
+
+<div style="width: 50%;padding: 5px;">
+&nbsp;
+</div>
 
 ---  
 
@@ -1217,17 +1068,6 @@ Photo Sharing menu buttons tint color.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBlue`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/photosharingmenubuttonstintcolor.png" alt="photosharingmenubuttonstintcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### photosharingMenuButtonsTextColor  
@@ -1236,17 +1076,6 @@ Photo Sharing menu buttons text color.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/photosharingmenubuttonstextcolor.png" alt="photosharingmenubuttonstextcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### cameraButtonEnabledColor  
@@ -1255,17 +1084,6 @@ Photo Sharing Camera button color in enabled mode in the conversation screen. Wi
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBlue`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/cameraButtonColor.png" alt="cameraButtonColor" style="width: 400px;height: auto;"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 ####  cameraButtonDisabledColor  
@@ -1274,17 +1092,6 @@ Photo Sharing Camera button color in disabled mode in the conversation screen. W
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpGray`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-  <img src="img/cameraButtonColor.png" alt="cameraButtonColor" style="width: 400px;height: auto;">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### fileCellLoaderFillColor 
@@ -1293,17 +1100,6 @@ Radial loader fill color.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpGray3`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/filecellloaderfillcolor.png" alt="fileCellLoaderFillColor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### fileCellLoaderRingProgressColor  
@@ -1312,16 +1108,6 @@ Color of the loader progress line.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpBackground`](#lpColor) 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/filecellloaderringprogresscolor.png" alt="filecellloaderringprogresscolor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### fileCellLoaderRingBackgroundColor  
@@ -1330,107 +1116,77 @@ Color of the loader progress line background.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpGray5`](#lpColor) 
    
-</div> -->
-
-<!--    <div style="float: right; width: 65%;height: 70px;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/filecellloaderringbackgroundcolor.png" alt="filecellloaderringprogresscolor">
-   </figure>
-</div> -->
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 <div class="important">The disabled/enabled color of the Camera button, which is in the input text view, changes according to the <code>sendButtonDisabledTextColor</code> and <code>sendButtonEnabledTextColor</code> parameters.</div>
 
 
 #### photoSharingOpenMenuImageButton
 Photo sharing open menu custom button.
 
-- **Type:** UIImage?
-- **Default value:** LPConstants.SHARING_MENU_ATTACHMENT_IMAGE_ID
+**Type:** UIImage?
 
-<!--    <div style="float: right; width: 50%;">
-<figure>
-<figcaption>Default image:</figcaption>
-<img src="img/ios_fs_attach_button.png" style="width: 64px;">
-</figure>
-</div> -->
+**Default value:** 
+<embed src="img/iosSDK/photoSharingOpenMenuImageButton_attachment.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
 
-<!--    <div style="width: 85%;padding: 5px;">
+<div style="width: 50%;padding: 5px;">
 &nbsp;
-</div> -->
+</div>
+
 
 
 #### photoSharingCloseMenuImageButton
 Photo sharing close menu custom button.
 
-- **Type:** UIImage?
-- **Default value:** LPConstants.SHARING_MENU_CLOSE_IMAGE_ID
+**Type:** UIImage?
 
-<!--    <div style="float: right; width: 50%;">
-<figure>
-<figcaption>Default image:</figcaption>
-<img src="img/ios_ps_close_button.png" style="width: 64px;">
-</figure>
-</div> -->
+**Default value:** 
+<embed src="img/iosSDK/photoSharingCloseMenuImageButton_menuClose.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
 
-<!--    <div style="width: 85%;padding: 5px;">
+
+<div style="width: 50%;padding: 5px;">
 &nbsp;
-</div> -->
+</div>
 
 
 #### photoSharingMenuCameraImage  
 Custom camera image in the photo sharing menu.
 
-- **Type:** UIImage?
-- **Default value:** LPConstants.SHARING_MENU_CAMERA_IMAGE_ID
+**Type:** UIImage?
 
-<!--    <div style="float: right; width: 50%;">
-   <figure>
-   <figcaption>Default image:</figcaption>
-   <img src="img/ios_fs_camera_button.png" style="width: 45px;">
-   </figure>
-</div> -->
+**Default value:** 
 
-<!--    <div style="width: 85%;padding: 5px;">
+<embed src="img/iosSDK/photoSharingMenuCameraImage_Camera.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
+
+
+<div style="width: 50%;padding: 5px;">
 &nbsp;
-</div> -->
+</div>
 
 
 #### photoSharingMenuLibraryImage
 Custom Library image in the photo sharing menu.
 
 - **Type:** UIImage?
-- **Default value:** LPConstants.SHARING_MENU_LIBRARY_IMAGE_ID
 
-<!--    <div style="float: right; width: 50%;">
-   <figure>
-   <figcaption>Default image:</figcaption>
-   <img src="img/ios_fs_library_button.png" style="width: 45px;">
-   </figure>
-</div> -->
+**Default value:** 
 
-<!--    <div style="width: 85%;padding: 5px;">
+<embed src="img/iosSDK/photoSharingMenuLibraryImage_gallery_menu.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
+
+<div style="width: 50%;padding: 5px;">
 &nbsp;
-</div> -->
+</div>
 
 #### fileSharingMenuFileImage
 Custom file image in the file sharing menu.
 
-- **Type:** UIImage?
-- **Default value:** LPConstants.SHARING_MENU_DOCUMENT_IMAGE_ID
+**Type:** UIImage?
 
-<!--    <div style="float: right; width: 50%;">
-<figure>
-<figcaption>Default image:</figcaption>
-<img src="img/ios_fs_document_button.png" style="width: 45px;">
-</figure>
-</div> -->
+**Default value:** 
 
-<!--    <div style="width: 85%;padding: 5px;">
+<embed src="img/iosSDK/fileSharingMenuFileImage_document.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
+
+<div style="width: 50%;padding: 5px;">
 &nbsp;
-</div> -->
+</div>
 
 #### fileSharingUniversalFileThumbnailimage
 Image for custom the thumbnail of unsupported files in file sharing.
@@ -1438,16 +1194,6 @@ Image for custom the thumbnail of unsupported files in file sharing.
 - **Type:** UIImage?
 - **Default value:** nil
 
-<!--    <div style="float: right; width: 50%;">
-<figure>
-<figcaption>Default image:</figcaption>
-<img src="img/ios_fs_universal_thumbnail.png" style="width: 60px;">
-</figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### fileSharingPDFFileThumbnailimage
 Image for custom the thumbnail of PDF files in file sharing.
@@ -1455,16 +1201,6 @@ Image for custom the thumbnail of PDF files in file sharing.
 - **Type:** UIImage?
 - **Default value:** nil
 
-<!--    <div style="float: right; width: 50%;">
-<figure>
-<figcaption>Default image:</figcaption>
-<img src="img/ios_fs_pdf_thumbnail.png" style="width: 60px;">
-</figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### fileSharingPPTXFileThumbnailimage
  Image for custom the thumbnail of PPTX files in file sharing
@@ -1472,16 +1208,6 @@ Image for custom the thumbnail of PDF files in file sharing.
 - **Type:** UIImage?
 - **Default value:** nil
 
-<!--    <div style="float: right; width: 50%;">
-<figure>
-<figcaption>Default image:</figcaption>
-<img src="img/ios_fs_pptx_thumbnail.png" style="width: 60px;">
-</figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### fileSharingDOCXFileThumbnailimage
@@ -1490,16 +1216,6 @@ Image for custom the thumbnail of DOCX files in file sharing
 - **Type:** UIImage?
 - **Default value:** nil
 
-<!--    <div style="float: right; width: 50%;">
-<figure>
-<figcaption>Default image:</figcaption>
-<img src="img/ios_fs_docx_thumbnail.png" style="width: 60px;">
-</figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### fileSharingXLSXFileThumbnailimage
@@ -1508,16 +1224,6 @@ Image for custom the thumbnail of XLSX files in file sharing
 - **Type:** UIImage?
 - **Default value:** nil
 
-<!--    <div style="float: right; width: 50%;">
-<figure>
-<figcaption>Default image:</figcaption>
-<img src="img/ios_fs_xlsx_thumbnail.png" style="width: 60px;">
-</figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### conversationEmptyStateTextColor
@@ -1526,16 +1232,6 @@ Color code for the empty state label.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpLabel`](#lpColor) 
 
-<!--    <div style="float: right; width: 50%;">
-   <figure>
-   <figcaption>Default image:</figcaption>
-   <img src="img/ios_empty_state_no_conversations.png" style="width: 64px;">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### remoteFileStateTint
@@ -1705,17 +1401,6 @@ Secure form bubble form image tint color.
  - **Type:** String
  - **Default value:** Helvetica
  
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/secureFormCustomFontName.png" alt="secureFormCustomFontName"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### secureFormHideLogo  
 Secure form flag for hiding the secure form logo in the top of the form.  
@@ -1724,17 +1409,6 @@ Secure form flag for hiding the secure form logo in the top of the form.
 - **Default value:** false
 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/secureFormHideLogo.png" alt="secureFormHideLogo"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### secureFormBubbleLoadingIndicatorColor  
 Secure form loading indicator color while loading form before opening. 
@@ -1743,17 +1417,6 @@ Secure form loading indicator color while loading form before opening.
 - **Default value:** [`LPColor.lpGray5`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/secureFormBubbleLoadingIndicatorColor.png" alt="secureFormBubbleLoadingIndicatorColor"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 --- 
@@ -1780,11 +1443,15 @@ Send button color in enabled mode in the conversation screen.
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
 The image must conforms Apple's [Custom Icon guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
 
-* **Type:** UIImage
-* **Default value:** SDK bundle sendMessageIcon Icon
+**Type:** UIImage
 
-<--! <img src="img/DefaultSendButton.png" alt="DefaultSendButton"> -->
- 
+ **Default value:** 
+
+ <embed src="img/iosSDK/sendButtonImage_sendMessageIcon.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="50px" height="50px" />
+
+ <div style="width: 50%;padding: 5px;">
+ &nbsp;
+ </div>
  
 
 #### isSendMessageButtonInTextMode  
@@ -1879,16 +1546,6 @@ Corner radius for submit button.
 - **Type:** Double
 - **Default value:** 30.0
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatsubmitbuttoncornerradius.png" alt="csatSubmitButtonCornerRadius">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### csatYesNoButtonsCornerRadius  
 Corner radius for (Yes/No) buttons.  
@@ -1896,16 +1553,6 @@ Corner radius for (Yes/No) buttons.
 - **Type:** Double
 - **Default value:** 25.0
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatYesNoResolutionButtonsCornerRadius.png" alt="csatYesNoButtonsCornerRadius">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 ####  csatSubmitButtonBackgroundColor  
@@ -1915,16 +1562,6 @@ Background color of the Submit button.
 - **Default value:** [`LPColor.lpGreen`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatsubmitbuttonbackgroundcolor.png" alt="csatsubmitbuttonbackgroundcolor"> 
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### csatSubmitButtonTextColor  
 Text color of the Submit button.  
@@ -1933,17 +1570,6 @@ Text color of the Submit button.
 - **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatsubmitbuttontextcolor.png" alt="csatSubmitButtonTextColor"> 
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### csatRatingButtonSelectedColor  
@@ -1954,16 +1580,6 @@ Background Color of the rating buttons.
 - **Default value:** [`LPColor.lpGreen`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatratingbuttonselectedcolor.png" alt="csatRatingButtonSelectedColor"> 
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### csatResolutionButtonSelectedColor  
 Color for the resolution confirmation buttons (Yes/No) when selected
@@ -1972,16 +1588,6 @@ Color for the resolution confirmation buttons (Yes/No) when selected
 - **Default value:** [`LPColor.lpGreen`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatresolutionbuttonselectedcolor.png" alt="csatresolutionbuttonselectedcolor"> 
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### csatAllTitlesTextColor  
@@ -1991,16 +1597,6 @@ Title text color for all labels.
 - **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatalltitlestextcolor.png" alt="csatAllTitlesTextColor">  
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### csatResolutionHidden  
@@ -2010,16 +1606,6 @@ Hides the survey (Yes/No) question.
 - **Default value:** false
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatresolutionhidden.png" alt="csatResolutionHidden">  
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### csatAgentViewHidden  
@@ -2028,16 +1614,6 @@ Hides the view of agent avatar and name.
 - **Type:** Bool
 - **Default value:** false
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatagentviewhidden.png" alt="csatagentviewhidden"> 
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### csatThankYouScreenHidden 
@@ -2048,16 +1624,6 @@ Hides the Thanks You screen after tapping 'Submit' button.
 - **Type:** Bool
 - **Default value:** false
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatthankyouscreenhidden.png" alt="csatthankyouscreenhidden"> 
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### csatNavigationBackgroundColor 
 Background color of navigation bar in survey screen.  
@@ -2065,16 +1631,6 @@ Background color of navigation bar in survey screen.
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpGreen`](#lpColor)
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatnavigationbackgroundcolor.png" alt="csatnavigationbackgroundcolor"> 
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### csatNavigationTitleColor  
 Text color of the title in the survey screen.  
@@ -2132,16 +1688,6 @@ Color code for the text of the system messages.
 - **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/DefaultSendButton.png" alt="DefaultSendButton">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 --- 
 
@@ -2180,17 +1726,6 @@ Otherwise, the "An agent will respond shortly" message displays.
 - **Default value:** false 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/ttrshouldshowtimestamp.png" alt="ttrShouldShowTimestamp">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### ttrShowFrequencyInSeconds  
 Controls the TTR frequency, for example, don’t show the TTR more than once in 8 seconds. 
@@ -2205,17 +1740,7 @@ Enable or disable the off-hours toaster.
 - **Type:** Bool
 - **Default value:** true 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/showoffhoursbanner.png" alt="showoffhoursbanner">
-   </figure>
-</div> -->
 
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### ttrBannerBackgroundColor  
 Background color of TTR notification banner view. 
@@ -2225,17 +1750,6 @@ Background color of TTR notification banner view.
 - **Default value:** [`LPColor.lpBlack`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/ttrbannerbackgroundcolor.png" alt="ttrBannerBackgroundColor"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### ttrBannerTextColor  
 Text color of TTR notification banner view. 
@@ -2245,18 +1759,6 @@ Text color of TTR notification banner view.
 - **Default value:** [`LPColor.lpWhite`](#lpColor)
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/ttrbannertextcolor.png" alt="ttrbannertextcolor"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### offHoursTimeZoneName  
@@ -2278,22 +1780,12 @@ Enable toast notifications such as offline and TTR notifications.
 
 #### scrollToBottomButtonBackgroundColor  
 Scroll to bottom button background color of the whole b
+
 - **Type:** UIColor
 - **Default value:** [`LPColor.lpGray2`](#lpColor)utton.
 
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/scrolltobottombuttonbackgroundcolor.png" alt="scrolltobottombuttonarrowcolor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### scrollToBottomButtonMessagePreviewTextColor 
 Scroll to bottom button text color of the last unread message preview.
@@ -2304,17 +1796,6 @@ Scroll to bottom button text color of the last unread message preview.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/scrolltobottombuttonmessagepreviewtextcolor.png" alt="scrolltobottombuttonmessagepreviewtextcolor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### scrollToBottomButtonBadgeBackgroundColor  
 Scroll to bottom button unread message badge background color.
 
@@ -2323,17 +1804,6 @@ Scroll to bottom button unread message badge background color.
 - **Default value:** [`LPColor.lpRed`](#lpColor)
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/scrolltobottombuttonbadgebackgroundcolor.png" alt="scrolltobottombuttonbadgebackgroundcolor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### scrollToBottomButtonBadgeTextColor 
@@ -2344,17 +1814,6 @@ Scroll to bottom button unread message badge text color.
 - **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/scrolltobottombuttonbadgetextcolor.png" alt="scrolltobottombuttonbadgetextcolor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 
@@ -2367,17 +1826,6 @@ Scroll to bottom button arrow tint color.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/scrolltobottombuttonarrowcolor.png" alt="scrolltobottombuttonarrowcolor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 
 
 #### unreadMessagesDividerBackgroundColor 
@@ -2389,18 +1837,6 @@ Unread Messages divider background color.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/unreadmessagesdividerbackgroundcolor.png" alt="unreadmessagesdividerbackgroundcolor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
-
 #### unreadMessagesDividerTextColor 
 Unread Messages divider text color.
 
@@ -2409,17 +1845,6 @@ Unread Messages divider text color.
 - **Default value:** [`LPColor.lpBlue`](#lpColor)
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/unreadmessagesdividertextcolor.png" alt="unreadmessagesdividertextcolor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### scrollToBottomButtonEnabled
@@ -2458,17 +1883,6 @@ Define the corners radius of the unread messages.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/unreadBubbleRadius.png" alt="unreadBubbleRadius">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 
 #### scrollToBottomButtonCornerRadius  
 Define the top left and bottom left corners radius. 
@@ -2479,17 +1893,6 @@ Define the top left and bottom left corners radius.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/scrollToBottomButtonCornerRadius.png" alt="scrollToBottomButtonCornerRadius">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### scrollToBottomButtonBadgeCornerRadius  
 Define the scroll to bottom badge corners radius.  
 
@@ -2498,17 +1901,6 @@ Define the scroll to bottom badge corners radius.
 - **Default value:** 12.0 
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/scrollToBottomButtonBadgeCornerRadius.png" alt="scrollToBottomButtonBadgeCornerRadius">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 ---  
 
@@ -2530,18 +1922,6 @@ Define the remote avatar Leading padding (left edge to avatar).
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteUserAvatarLeadingPadding.png" alt="remoteUserAvatarLeadingPadding"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### remoteUserAvatarTrailingPadding  
 Define the remote avatar Trailing padding (Avatar to bubble). 
 
@@ -2550,18 +1930,6 @@ Define the remote avatar Trailing padding (Avatar to bubble).
 - **Default value:**  8.0
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteUserAvatarTrailingPadding.png" alt="remoteUserAvatarTrailingPadding"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### remoteUserAvatarIconColor  
 Icon color of default remoteUser avatar.  
@@ -2580,18 +1948,6 @@ Icon color of default remoteUser avatar.
 - **Type:** UIImage?
 - **Default value:** nil 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteUserDefaultAvatarImage.png" alt="remoteUserDefaultAvatarImage"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
   #### remoteUserAvatarIconBorderWidth  
@@ -2627,19 +1983,6 @@ Background color of agent's default avatar in CSAT.
 - **Default value:** [`LPColor.lpGray4`](#lpColor)
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatagentavatarbackgroundcolor.png" alt="csatAgentAvatarBackgroundColor"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### csatAgentAvatarIconColor  
 Icon color of agent's default avatar in CSAT.
 
@@ -2648,17 +1991,6 @@ Icon color of agent's default avatar in CSAT.
 - **Default value:** [`LPColor.lpBackground`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/csatagentavatariconcolor.png" alt="csatAgentAvatarIconColor"> 
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 --- 
 
@@ -2672,16 +2004,6 @@ User Input TextView container background color.
 - **Default value:** [`LPColor.lpGray3`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/inputtextviewcontainerbackgroundcolor.png" alt="inputTextViewContainerBackgroundColor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### inputTextViewCornerRadius  
 User Input TextView corner radius.  
@@ -2691,17 +2013,6 @@ User Input TextView corner radius.
 - **Default value:** 20.0 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/inputtextviewcornerradius.png" alt="inputtextviewcornerradius">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### inputTextViewTopBorderColor  
@@ -2724,16 +2035,6 @@ Color code for the background of the remote user's bubble.
 - **Default value:** [`LPColor.lpGray4`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteuserbubblebackgroundcolor.png" alt="remoteuserbubblebackgroundcolor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### remoteUserBubbleBorderColor
 Color code for the outline color.
@@ -2743,16 +2044,6 @@ Color code for the outline color.
 - **Default value:** [`LPColor.lpGray4`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteuserbubblebordercolor.png" alt="remoteuserbubblebordercolor">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### remoteUserBubbleLinkColor
 Color code for links in the text of the remote user's bubble.
@@ -2763,15 +2054,6 @@ Color code for links in the text of the remote user's bubble.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteuserbubblelinkcolor.png" alt="remoteuserbubblelinkcolor">
-   </figure>
-</div> -->
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### remoteUserBubbleTextColor
 Color code for the text of the remote user's bubble.
@@ -2782,18 +2064,6 @@ Color code for the text of the remote user's bubble.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteuserbubbletextcolor.png" alt="remoteuserbubbletextcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 
 #### remoteUserBubbleBorderWidth
 Double number for the outline width. 
@@ -2802,18 +2072,6 @@ Double number for the outline width.
 - **Default value:** 1
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteuserbubbleborderwidth.png" alt="remoteuserbubbleborderwidth">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### remoteUserBubbleTimestampColor
@@ -2825,18 +2083,6 @@ Color code for the timestamp of the remote user's bubble.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteuserbubbletimestampcolor.png" alt="remoteuserbubbletimestampcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 
 #### remoteUserTypingTintColor
 Color of the typing indicator for when the remote user is typing. 
@@ -2847,18 +2093,6 @@ Color of the typing indicator for when the remote user is typing.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteusertypingtintcolor.png" alt="remoteusertypingtintcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 
 #### remoteUserBubbleLongPressOverlayColor
 Color of the remote user's bubble overlay when user uses a long press gesture on the bubble. Overlay will appear as long as the menu controller appears on the bubble. When the menu dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.
@@ -2868,17 +2102,6 @@ Color of the remote user's bubble overlay when user uses a long press gesture on
 - **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### remoteUserBubbleLongPressOverlayAlpha
 Alpha of the remote user's bubble overlay when user uses a long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble. When the menu is dismissed, overlay will disappear too. In order to show overlay, enableBubblesOverlayOnLongPress should be true.  
@@ -2889,18 +2112,6 @@ Alpha of the remote user's bubble overlay when user uses a long press gesture on
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteUserBubbleOverlay.png" alt="remoteUserBubbleOverlay">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### remoteUserBubbleTopLeftCornerRadius  
 Top left Radius corner on the Remote bubble. 
 Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
@@ -2909,19 +2120,6 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 - **Type:** Float    
 - **Default value:** 8.0
 
-
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteTopLeft.png" alt="remoteTopLeft">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### remoteUserBubbleTopRightCornerRadius
@@ -2934,18 +2132,6 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteTopRight.png" alt="remoteTopRight">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 
 #### remoteUserBubbleBottomLeftCornerRadius
 Bottom left Radius corner on the Remote bubble. 
@@ -2955,18 +2141,6 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 - **Type:** Float    
 - **Default value:** 0.0
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteBottomLeft.png" alt="remoteBottomLeft">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### remoteUserBubbleBottomRightCornerRadius
@@ -2979,37 +2153,12 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/remoteBottomRight.png" alt="remoteBottomRight">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### userBubbleBackgroundColor
 Color code for the background of the visitor bubble.
 
 - **Type:** UIColor    
 - **Default value:** [`LPColor.lpBlue`](#lpColor)
 
-
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userbubblebackgroundcolor.png" alt="userbubblebackgroundcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### userBubbleBorderColor
@@ -3020,17 +2169,6 @@ Color code for the outline color.
 - **Default value:** [`LPColor.lpBlue`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-  <img src="img/userbubblebordercolor.png" alt="userbubblebordercolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### userBubbleLinkColor
 Color code for links in the text of the visitor bubble.
@@ -3041,18 +2179,6 @@ Color code for links in the text of the visitor bubble.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userbubblelinkcolor.png" alt="userbubblelinkcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 #### userBubbleTextColor
 Color code for the text of the visitor bubble.
 
@@ -3060,17 +2186,6 @@ Color code for the text of the visitor bubble.
 - **Default value:** UIColor.white
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userbubbletextcolor.png" alt="userbubbletextcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 
@@ -3081,17 +2196,6 @@ Double number for the outline width.
 - **Default value:** 1.0
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userbubbleborderwidth.png" alt="userbubbleborderwidth">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### userBubbleTimestampColor
 Color code for the timestamp of the visitor bubble.
@@ -3101,17 +2205,6 @@ Color code for the timestamp of the visitor bubble.
 - **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userbubbletimestampcolor.png" alt="userbubbletimestampcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### userBubbleSendStatusTextColor
 Color code for the send status text of the visitor bubble.
@@ -3121,18 +2214,6 @@ Color code for the send status text of the visitor bubble.
 - **Default value:** [`LPColor.lpSecondaryLabel`](#lpColor)
 
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userbubblesendstatustextcolor.png" alt="userbubblesendstatustextcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### userBubbleErrorTextColor
@@ -3144,18 +2225,6 @@ Color code for the error view text of the visitor bubble.
 
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userbubbleerrortextcolor.png" alt="userbubbleerrortextcolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
-
 
 #### userBubbleErrorBorderColor
 Color code for the error view border of the visitor bubble.
@@ -3164,19 +2233,6 @@ Color code for the error view border of the visitor bubble.
 - **Type:** UIColor    
 - **Default value:** [`LPColor.lpRed`](#lpColor)
 
-
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userbubbleerrorbordercolor.png" alt="userbubbleerrorbordercolor">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### enableBubblesOverlayOnLongPress
@@ -3194,17 +2250,6 @@ Color of the user's bubble overlay when user uses a long press gesture on the bu
 - **Default value:** [`LPColor.lpLabel`](#lpColor)
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### userBubbleLongPressOverlayAlpha
 Alpha of the user's bubble overlay when user use long press gesture on the bubble. Value can be 0.0 - 1.0. Overlay will appear as long as the menu controller appears on the bubble, when the menu dismissed, overlay will disappear too. In order to show overlay enableBubblesOverlayOnLongPress should be true.  
@@ -3212,18 +2257,6 @@ Alpha of the user's bubble overlay when user use long press gesture on the bubbl
 - **Type:** Float    
 - **Default value:** 0.3
 
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userBubbleOverlay.png" alt="userBubbleOverlay">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### userBubbleTopLeftCornerRadius
@@ -3233,17 +2266,6 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 - **Type:** Float    
 - **Default value:** 8.0
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userTopLeft.png" alt="userTopLeft">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### userBubbleTopRightCornerRadius
@@ -3253,17 +2275,6 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 - **Type:** Float    
 - **Default value:** 8.0
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userTopRight.png" alt="userTopRight">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 #### userBubbleBottomLeftCornerRadius
 Bottom left Radius corner on the user's bubble. 
@@ -3274,17 +2285,6 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 - **Default value:** 8.0
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userBottomLeft.png" alt="userBottomLeft">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### userBubbleBottomRightCornerRadius
@@ -3294,17 +2294,6 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 - **Type:** Float    
 - **Default value:** 0.0
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/userBottomRight.png" alt="userBottomRight">
-   </figure>
-</div> -->
-
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### bubbleEmailLinksRegex
@@ -3381,16 +2370,6 @@ When true, user and remote user messages containing one or two emojis will be en
 - **Default value:** false
 
 
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/enableEnlargeEmojis.png" alt="enableEnlargeEmojis" style="width: auto; height: 300px;">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 ---   
 
@@ -3402,16 +2381,5 @@ When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-fo
 
 - **Type:** UIImage?    
 - **Default value:** nil
-
-<!--    <div style="float: right; width: 100%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/custombuttonimage.png" alt="custombuttonimage">
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
  
