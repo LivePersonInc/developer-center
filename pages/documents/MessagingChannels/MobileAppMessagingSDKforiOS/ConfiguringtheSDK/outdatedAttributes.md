@@ -1,11 +1,11 @@
 ---
-pagename: Historical Attributes
+pagename: SDK 4.1 and below
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: SDK Attributes
-permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-deprecated-attributes.html
+permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-sdk-4-1-and-below.html
 indicator: messaging
 ---
 
