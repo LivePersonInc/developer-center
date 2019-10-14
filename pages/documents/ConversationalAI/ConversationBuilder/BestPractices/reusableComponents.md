@@ -10,6 +10,8 @@ permalink: conversation-builder-best-practices-reusable-components.html
 indicator: both
 ---
 
+Consider adopting the reuse techniques below to avoid building the same components over and over again.
+
 ### Create reusable “yes” and “no” intents
 
 One way to handle the responses to yes/no questions is to use pattern matching in the response conditions:
