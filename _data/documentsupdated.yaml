@@ -185,6 +185,7 @@
           - subpagename: Using Environment Variables
           #- subpagename: Common Conversation Patterns
           - subpagename: Versions, Releases, & Change Management
+          - subpagename: Reusable Components
       - pagename: Troubleshooting
         subpages:
           - subpagename: Interactions
