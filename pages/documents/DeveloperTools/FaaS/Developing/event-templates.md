@@ -31,22 +31,12 @@ Currently the following events are supported:
   </tr>
   <tr>
     <td>Conversational Command</td>
-    <td>Use this event to implement a Conversational Command that can be invoked from within the agent workspace in LiveEngage by typing "/".</td>
+    <td>Use this event to implement a <a href="liveperson-functions-integrations-conversational-commands.html">Conversational Command</a> that can be invoked from within the agent workspace in LiveEngage by typing "/".</td>
     <td>30</td>
   </tr>
   <tr>
-    <td>Messaging New Conversation</td>
-    <td>Triggered for every new messaging conversation.</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>Messaging Participants Change</td>
-    <td>Triggered on every participant change (joins/leaves) of a messaging conversation.</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>Messaging TTR</td>
-    <td>Triggered when the consumer marks a response as an urgent response, unmarks a response as urgent, or the agent manually updates the response time</td>
+    <td>Messaging Conversation End</td>
+    <td>Triggered when the conversation is closed by agent/consumer.</td>
     <td>1</td>
   </tr>
   <tr>
@@ -65,8 +55,18 @@ Currently the following events are supported:
     <td>1</td>
   </tr>
   <tr>
-    <td>Messaging Conversation End</td>
-    <td>Triggered when the conversation is closed by agent/consumer.</td>
+    <td>Messaging New Conversation</td>
+    <td>Triggered for every new messaging conversation.</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Messaging Participants Change</td>
+    <td>Triggered on every participant change (joins/leaves) of a messaging conversation.</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Messaging Survey Ended</td>
+    <td>Triggered when a messaging post survey ended.</td>
     <td>1</td>
   </tr>
   <tr>
@@ -75,8 +75,8 @@ Currently the following events are supported:
     <td>1</td>
   </tr>
   <tr>
-    <td>Messaging Survey Ended</td>
-    <td>Triggered when a messaging post survey ended.</td>
+    <td>Messaging TTR</td>
+    <td>Triggered when the consumer marks a response as an urgent response, unmarks a response as urgent, or the agent manually updates the response time</td>
     <td>1</td>
   </tr>
   <tr>
