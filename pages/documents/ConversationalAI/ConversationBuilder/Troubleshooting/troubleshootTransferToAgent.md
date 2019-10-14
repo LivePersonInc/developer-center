@@ -1,0 +1,45 @@
+---
+pagename: Transfer to an Agent or Bot
+redirect_from:
+Keywords:
+sitesection: Documents
+categoryname: "Conversational AI"
+documentname: Conversation Builder
+subfoldername: Troubleshooting
+permalink: conversation-builder-troubleshooting-transfer-to-an-agent-or-bot.html
+indicator: both
+---
+
+If you're trying to transfer the conversation to a live agent or another bot, but it isn't working, the reason could be one of several. Use this page to help you troubleshoot the issue.
+
+For some practice with transfers, complete the [Connect to LiveEngage](conversation-builder-getting-started-4-connect-to-liveengage.html) tutorial.
+
+### The transfer isn't working
+
+#### The transfer API URL is incorrect for your server environment
+
+There are a few different server environments where you might be working with Conversation Builder. Depending on your region and whether you’re using LP Cloud, the URL used to connect to LiveEngage changes.
+
+To make your bots more flexible and dynamic, for this type of integration, you should switch to the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration type, which handles the variable URL automatically.
+
+#### The authorization ID is incorrect
+
+Each Conversation Builder user has a unique API Access Key that is used in a number of different platform APIs. Make sure that your ID is correct. Your API Access Key can be found under your user profile, under the API tab.
+
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/bestPractices/1.png">
+
+#### The skillId is incorrect
+
+Take a moment to double check the skillId you're attempting to transfer to. This is often the cause of a failed transfer.
+
+#### You aren't sending a transfer message
+
+When transferring, it is customary to send some form of message to the user like, "Hold on while I connect you with an agent." You might want to have this as a Text statement in the dialog, but this transfer message is sent as part of the Transfer API Post Body as a way to guarantee that it is the last message the user sees prior to transfer.
+
+This can be handled by a variable or hard-coded if you do not require it to change.
+
+If you do **not** want to send a message in the API, set the message value to `BLANK_MESSAGE`.
+
+### After a failed transfer, the bot is acting weird
+
+Most often in Chat, but occasionally with Messaging, an attempt at transferring to a skill will fail. When this happens, the platform will send the message `__agent_escalation_failed__` to the bot. If you don’t have a dialog/message set up to catch this pattern, your bot will treat it like any other user message. In most cases, it will go to the Fallback dialog.

@@ -186,6 +186,10 @@
           - subpagename: Using Environment Variables
           #- subpagename: Common Conversation Patterns
           - subpagename: Versions, Releases, & Change Management
+      - pagename: Troubleshooting
+        subpages:
+          - subpagename: Interactions
+          - subpagename: Transfer to an Agent or Bot
   - documentname: Maven AI
     pages:
       - pagename: Overview
@@ -225,6 +229,7 @@
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
+      - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
       - pagename: Permissions per Role
