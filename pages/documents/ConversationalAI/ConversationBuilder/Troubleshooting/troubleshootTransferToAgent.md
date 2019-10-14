@@ -20,7 +20,7 @@ For some practice with transfers, complete the [Connect to LiveEngage](conversat
 
 In the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration, verify that the **Agent Skill ID** you're attempting to transfer to is correct. This is often the cause of a failed transfer.
 
-#### Errors in a manual implementation
+#### Common errors in a manual implementation
 
 {: .important}
 This section describes common errors when implementing a transfer via code instead of using the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration type. To make your bots more flexible and dynamic, LivePerson recommends that you switch to the LivePerson Agent Escalation integration type. It handles several, variable aspects (like the Transfer API URL) automatically.
