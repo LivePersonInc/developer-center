@@ -11,11 +11,11 @@ permalink: conversation-builder-variables-slots.html
 indicator: both
 ---
 
-In the Interaction Details [Response Match & Actions](conversation-builder-conversation-builder-response-match-actions.html) settings, you can assign various data points to either Slots or Variables. Both are useful in [API Integrations](conversation-builder-conversation-builder-integrations.html).
+In the Interaction Details [Response Match & Actions](conversation-builder-conversation-builder-response-match-actions.html) settings, you can assign various data points to either Slots or Variables. Both are useful in [API Integrations](conversation-builder-integrations-api-integrations.html).
 
 ### Displaying Data to the User
 
-[See here](conversation-builder-conversation-builder-interactions.html#display-variables-in-interactions) for how to display variables and slots in interactions.
+[See here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions) for how to display variables and slots in interactions.
 
 ### Variables
 
@@ -23,7 +23,7 @@ Variables are the default way to store and access important data points througho
 
 #### Storing User Responses
 
-The most common use case for variables is storing user responses to [questions](conversation-builder-conversation-builder-interactions.html#questions).
+The most common use case for variables is storing user responses to [questions](conversation-builder-interactions-questions.html).
 
 Frequently you will want to capture what was just said by the user as the value of your variable. You can use `{$query}` to do this.
 

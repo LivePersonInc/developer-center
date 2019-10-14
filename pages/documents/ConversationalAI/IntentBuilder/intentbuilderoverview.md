@@ -11,7 +11,7 @@ indicator: both
 ---
 <img  class="fancyimage" style="width:750px" src="img/beaut_ib_2.png">
 
-The Conversation Builder Platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you will be able to use the [Conversation Builder](conversation-builder-conversation-builder-overview.html) to associate one domain to each dialog.
+The Conversation Builder Platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you will be able to use the [Conversation Builder](conversation-builder-getting-started-bot-workspace-overview.html) to associate one domain to each dialog.
 
 An example might be a "shipping" domain that contains intents for "delivery status", "update address", etc. This "shipping" intent domain could be linked to automation dialogs that do various shipping tasks.
 
