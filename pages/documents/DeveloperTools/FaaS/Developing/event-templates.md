@@ -10,7 +10,7 @@ indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-events-templates.html
 ---
-
+### Events
 LivePerson Functions' `lambdas` can be connected to LiveEngage events at the time of [creation](function-as-a-service-getting-started.html#step-1-choose-a-template). Once those `lambdas` are deployed, they will be executed whenever these events are triggered. Each event comes with a set of connected templates that can be used as an initial scaffolding for the developing the `lambda`. **Note** that the amount of lambdas connected to a specific event is restricted and can be seen in the table below.
 
 Currently the following events are supported:
@@ -89,8 +89,10 @@ Currently the following events are supported:
 
 Each of these events also has an event specific input (payload) associated with it, that the triggering system will provide at runtime. When using the [Invoke](function-as-a-service-deploying-functions.html#testing-your-function) screen, this payload is shown on the left-hand side. During development, the event payload of the `lambda` is visible on the right-hand side at the sidebar-tab. See the [Payload](function-as-a-service-developing-with-faas-overview.html#editor-sidebar) section for more information.
 
-Additionally, Functions offers a number of templates that are not connected to events and can be used as a sample to kick-start the development of custom scenarios:
+### Templates
+Additionally, Functions offers a number of templates. They can be used as a sample to kick-start the development of custom scenarios. Some of them are connected to events which the template list below is grouped by. Templates which have the same name as the related event are to be considered the default template for an event.
 
+## Event: -
 <table style="width: 100%;">
 <thead>
   <tr>
@@ -118,6 +120,206 @@ Additionally, Functions offers a number of templates that are not connected to e
   <tr>
     <td>Secret Storage Template</td>
     <td>An example of how to use the Secret Storage.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Chat Post Survey E-Mail Transcript"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Chat Post Survey E-Mail Transcript</td>
+    <td>A template displaying some basic ways how the "Chat Post Survey E-Mail Transcript"-Event can be used.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Conversational Command"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Conversational Command</td>
+    <td>A template displaying some basic ways how the "Conversational Command"-Event can be used.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Messaging Conversation End"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Keyword Scanner</td>
+    <td>A template displaying how to use the <a href="liveperson-functions-development-toolbelt.html#conversation-util">Conversation Util</a> to get a conversation and scan it for keywords.</td>
+  </tr>
+  <tr>
+    <td>Messaging Conversation End</td>
+    <td>A template displaying some basic ways how the "Messaging Conversation End"-Event can be used.</td>
+  </tr>
+  <tr>
+    <td>Replace Files for Conversation</td>
+    <td>A template displaying how to use the <a href="liveperson-functions-development-toolbelt.html#gdpr-util">GDPR Util</a> to replace all files of a conversation.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Messaging Conversation Idle"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Messaging Conversation Idle</td>
+    <td>A template displaying some basic ways how the "Messaging Conversation Idle"-Event can be used.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Messaging Conversation Routing"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Messaging Conversation Routing</td>
+    <td>A template displaying some basic ways how the "Messaging Conversation Routing"-Event can be used.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Messaging Line in Off-Hours"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Messaging Line in Off-Hours</td>
+    <td>A template displaying some basic ways how the "Messaging Line in Off-Hours"-Event can be used.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Messaging New Conversation"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Messaging New Conversation</td>
+    <td>A template displaying some basic ways how the "Messaging New Conversation"-Event can be used.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Messaging Participants Change"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Messaging Participants Change</td>
+    <td>A template displaying some basic ways how the "Messaging Participants Change"-Event can be used.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Messaging Survey Ended"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Messaging Survey Ended</td>
+    <td>A template displaying some basic ways how the "Messaging Survey Ended"-Event can be used.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Messaging Survey Started"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Messaging Survey Started</td>
+    <td>A template displaying some basic ways how the "Messaging Survey Started"-Event can be used.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Messaging TTR"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Messaging TTR</td>
+    <td>A template displaying some basic ways how the "Messaging TTR"-Event can be used.</td>
+  </tr>
+</tbody>
+</table>
+
+## Event: "Third-Party Bots Custom Integration"
+<table style="width: 100%;">
+<thead>
+  <tr>
+    <th>Template Name</th>
+    <th>Template Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Default Template</td>
+    <td>A template displaying some basic ways how the "Third-Party Bots Custom Integration"-Event can be used.</td>
   </tr>
 </tbody>
 </table>
