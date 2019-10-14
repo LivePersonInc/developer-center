@@ -182,7 +182,6 @@
       #- pagename: Operations
       - pagename: Best Practices
         subpages:
-          - subpagename: Transfer to an Agent or Bot
           - subpagename: Using Environment Variables
           #- subpagename: Common Conversation Patterns
           - subpagename: Versions, Releases, & Change Management
