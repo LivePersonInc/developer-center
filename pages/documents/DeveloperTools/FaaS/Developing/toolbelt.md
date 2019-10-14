@@ -367,7 +367,7 @@ This method retrieves a conversation from the [Messaging Interactions API](https
   const conversationUtil = Toolbelt.ConversationUtil();
 
   // Define Parameters
-  const conversationId = "XXXXXX"
+  const conversationId = "c911f008-4761-4f43-95445-6948017eace5"
   const contentToRetrieve = [
     ConversationContentTypes.SDES,
     ConversationContentTypes.UNAUTH_SDES
@@ -505,7 +505,7 @@ conversationUtil.getConversationById(conversationId)
 ```
 ### SDE Util
 
-The SDE Util allows to perform SDE related methods, which are listed below. This Util works for **Messaging-Use Cases only**!
+The SDE Util allows to perform SDE related methods, which are listed below.
 
 #### Add SDEs
 This method adds/ updates SDEs to an Engagement via the [Engagement Attributes API](https://developers.liveperson.com/engagement-attributes-api-overview.html). It requires the session ID and the visitor ID where the SDEs should be added and the SDEs themselves. It returns a `Promise` that resolves when the SDEs have been successfuly set/ updated.
@@ -529,19 +529,19 @@ This method adds/ updates SDEs to an Engagement via the [Engagement Attributes A
 <tr>
 <td>sdes</td>
 <td>yes</td>
-<td>Array of SDEs which should be added to an engagement. For more information about the available Engagement Attributes, refer to the <a href="https://developers.liveperson.com/engagement-attributes-overview.html">Engagement Attributes Overview</a>. Also use the <b>SDETypes</b> for suggestions which types of engagement attributes can be added. (s. sample usage below)</td>
+<td>Array of SDEs which should be added to an engagement. For more information about the available Engagement Attributes, refer to the <a href="engagement-attributes-overview.html">Engagement Attributes Overview</a>. Also use the <b>SDETypes</b> for suggestions which types of engagement attributes can be added. (s. sample usage below)</td>
 <td>array</td>
 </tr>
 <tr>
 <td>visitorId</td>
 <td>yes</td>
-<td>The ID of the Visitor you want to add the SDEs to</td>
+<td>The ID of the Visitor you want to add the SDEs to. (Sometimes is included in the faas-event payload, if not use e.g. the conversation ID with the <a href="liveperson-functions-development-toolbelt.html#get-conversation-by-id">Conversation Util</a> to retrieve)</td>
 <td>string</td>
 </tr>
 <tr>
 <td>sessionId</td>
 <td>yes</td>
-<td>The ID of the Session you want to add the SDEs to</td>
+<td>The ID of the Session you want to add the SDEs to. (Sometimes is included in the faas-event payload, if not use e.g. the conversation ID with the <a href="liveperson-functions-development-toolbelt.html#get-conversation-by-id">Conversation Util</a> to retrieve)</td>
 <td>string</td>
 </tr>
 </tbody>
@@ -559,8 +559,8 @@ This method adds/ updates SDEs to an Engagement via the [Engagement Attributes A
   const sdeUtil = Toolbelt.SDEUtil();
 
   // Define parameters
-  const visitorId = "XXXXXX";
-  const sessionId = "XXXXXX";
+  const visitorId = "YyY2RlZGY3NzZjYoJhZGQx";
+  const sessionId = "bjfYkPt-SYCqqZWDHNwSKQ";
   const sdes = [
     {
         type: SDETypes.PERSONAL_INFO,
@@ -596,7 +596,7 @@ The method extracts the SDEs from a conversation that has been retrieved fromt t
   const sdeUtil = Toolbelt.SDEUtil();
 
   // Define parameters
-  const conversationId = "XXXXXXXXX";
+  const conversationId = "c944f008-4761-4f43-9536-6948017eace5";
   const contentToRetrieve = [
     ConversationContentTypes.SDES,
     ConversationContentTypes.UNAUTH_SDES
