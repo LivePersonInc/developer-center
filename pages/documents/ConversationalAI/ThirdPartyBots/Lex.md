@@ -216,6 +216,9 @@ Structured Content/Rich Content is supported by the core LivePerson platform. Do
 
 To send structured content via Lex, send a _custom payload_ option via an intent.
 
+{: .important}
+If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover,All domains must be HTTPS secure.
+
 ```json
 {
   "metadata": [

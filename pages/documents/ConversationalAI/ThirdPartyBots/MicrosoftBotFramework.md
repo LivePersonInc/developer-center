@@ -77,6 +77,9 @@ To send structured content from a bot implemented with the Microsoft Bot Framewo
 
 This should contain a valid structured content body, along with an optional property containing metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before using it in a bot.
 
+{: .important}
+If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover,All domains must be HTTPS secure.
+
 ```json
 {
   "type": "message",
