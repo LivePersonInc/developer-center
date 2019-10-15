@@ -77,7 +77,7 @@ The Apple developers' site provides some good, general guidelines regarding reso
 
   * [Slot Variable](conversation-builder-variables-slots.html#slots): `{$botContext.slot.slotName}`
 
-  * [Environment Variable](conversation-builder-best-practices-using-environment-variables.html): `{$env.envVariableName}`
+  * [Environment Variable](conversation-builder-best-practices-environment-variables.html): `{$env.envVariableName}`
 
   * [API Integration](conversation-builder-integrations-api-integrations.html) custom data values: `{apiName.variableName}`
 

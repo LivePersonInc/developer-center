@@ -183,9 +183,9 @@
       - pagename: Common Use Cases
       - pagename: Best Practices
         subpages:
-          - subpagename: Using Environment Variables
+          - subpagename: Environment Variables
           #- subpagename: Common Conversation Patterns
-          - subpagename: Versions, Releases, & Change Management
+          - subpagename: Versions & Releases
           - subpagename: Reusable Components
       - pagename: Troubleshooting
         subpages:

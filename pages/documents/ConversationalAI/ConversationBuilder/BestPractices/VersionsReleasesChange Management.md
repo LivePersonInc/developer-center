@@ -1,70 +1,90 @@
 ---
-pagename: Versions, Releases, & Change Management
-redirect_from: conversation-builder-getting-started-getting-started-part-4.html
+pagename: Versions & Releases
+redirect_from: 
+    - conversation-builder-getting-started-getting-started-part-4.html
+    - conversation-builder-best-practices-versions-releases-change-management.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Best Practices
-permalink: conversation-builder-best-practices-versions-releases-change-management.html
+permalink: conversation-builder-best-practices-versions-releases.html
 indicator: both
 ---
 
-Throughout the automation creation lifecycle, it is important to follow good change management practices. Conversation Builder uses two features that enable this. 
+Throughout the bot creation lifecycle, it's important to follow good change management practices. Conversation Builder has two features that support this: 
 
-**Versions** are ways of saving your progress at crucial moments during development. When you save a new version, it takes a snapshot of your automation at that moment and saves it. You can then recover your automation to the state of a previous version. This is helpful if you ever make mistakes or break something and need to go back.
+* **Versions** let you save your progress at crucial moments during bot development. When you save a new version, the system takes a snapshot of the bot at that moment and saves it. You can then recover the bot to the state of a previous version. This is helpful if you ever make mistakes or break something and need to go back.
 
-**Releases** are similar to Versions, in that they create a snapshot of your automation. However, Releases are used to push the snapshot to a different automation, updating it with the new automation code.
-
-Use *versions* during the development cycle to take snapshots for different milestones. Use *releases* to push snapshots to different automations, like a Development vs a Production automation.
-
-### Saving Versions
-
-In the lower right corner of the Conversation Builder interface, there are a couple icons that are extremely important. 
-
-Farthest to the right is the Versions icon. Tapping this icon will display a list of your currently saved versions. By tapping the link to "Save Current Version", you will get a dialog that allows you to name a saved version. If you do not provide a name, it will simply use the current date and time.
-
-Any time you might be making large changes to the functionality of your automation, there is the possibility that you may need a way to roll back. It is highly recommended that you save a version at various points in that process to ensure you do not lose any work you’ve done.
-
-<img class="fancyimage" width="750" src="img/ConvoBuilder/bestPractices/vrcm_image_0.png">
-
-If you ever need to roll back to a previous version, simply hover over the version you’d like and tap the "Restore" button. 
+* **Releases** are similar to versions in that they also involve creation of a snapshot of the bot. However, releases are used to push the snapshot to a different bot, updating it with the new bot code.
 
 {: .important}
-"Restore" will completely overwrite your existing automation with the previous version, so use wisely.
+Use *versions* during the development cycle to take snapshots at different milestones. Use *releases* to push snapshots to different bots, e.g., to push a snapshot from a Development bot to a Production bot.
 
-### Creating Releases
+### Save a version
 
-Once your automation has been deployed, it is live and available to your customers. Because of this, you would not want to make changes to the live bot code. Rather you should be working in a "Development" or “Sandbox” version of the automation and only push this to a “Production” version when it is finished and tested. 
+Any time you might be making large changes to the functionality of a bot, there is the possibility that you might need a way to roll back those changes. It is highly recommended that you save a version at periodic and significant points in the development process to ensure you don't lose any work.
 
-This can be accomplished by using “Releases” (3rd button from the left, next to "Versions").
+**To save a version**
 
-<img class="fancyimage" width="750" src="img/ConvoBuilder/bestPractices/vrcm_image_1.png">
+1. In the lower-right corner, click <img style="width:35px" src="img/ConvoBuilder/icon_versions.png"> (Versions icon).
 
-First, go back to the Dashboard and create a New, Basic Automation. You will be pushing your production version to this automation. You may wish to be specific with your naming and add "Production" or “Prod” to the title to differentiate it with your Dev bot.
+    This displays the list of versions of the bot, if any.
+    <img class="fancyimage" width="400" src="img/ConvoBuilder/bestPractices/versions1.png">
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/vrcm_image_2.png">
+2. In the Versions window, click **Save Current Version**.
+3. In the dialog that appears, enter a version name if desired, and click **Proceed**. If you don't enter a name, the current date and time is used.
 
-Once you’re done creating the new bot, return back to your Dev automation. Click on the "Releases" button on the lower right (3rd button from the left) and select “New Releases”.
-
-<img class="fancyimage" width="750" src="img/ConvoBuilder/bestPractices/vrcm_image_3.png">
-
-Find and select the newly created bot Production bot in the "Release to Automation" drop down. Insert a Version number and a Description, as seen in the example below. Click on the “Create Release” button once you’re done.
-
-<img class="fancyimage" width="750" src="img/ConvoBuilder/bestPractices/vrcm_image_4.png">
-
-You will see that a release "snapshot" has been created on the following screen. To complete the push, the new bot must accept the release. Click on the link to new bot, which will direct you to that automation.
-
-<img class="fancyimage" width="750" src="img/ConvoBuilder/bestPractices/vrcm_image_5.png">
-
-To accept the upgrade, within the Production automation, tap the Releases icon, select "Upgrade" and your transaction is complete.
-
-<img class="fancyimage" width="750" src="img/ConvoBuilder/bestPractices/vrcm_image_6.png">
-
-The functionality of the production automation should be identical to the development’s at the time of the push.
+### Restore a previous version 
 
 {: .important}
-The Bot User Agents attached to the Dev automation are **not** pushed to Production. You will need to create and attach new Bot User Agents to this production automation, if they do not already exist.
+A "restore" completely overwrites your existing bot with the selected, previous version, so use caution when restoring versions.
 
-If you have certain hard coded values (eg. skills) that may differ from one bot to another, you could use Environment Variables to maintain these values externally. [See here for more](conversation-builder-best-practices-using-environment-variables.html).
+**To restore a previous version**
 
+1. Move your mouse over the version you want to restore, and click the **Restore** button that appears.
+2. In the dialog box that appears, verify the name and version of the bot you want to restore, and then click **Proceed**.
+
+### Create a release
+
+Once your bot has been deployed, it is live and available to your customers. Because of this, you would not want to make changes to the live bot code. Rather, you should be working in a "Development" or “Sandbox” version of the bot and only push this to a “Production” version when it is finished and tested. You do this by creating a release. The procedure that follows describes the process.
+
+**To create a release**
+
+1. From the Conversation Builder dashboard, click **New Bot** and create a new bot. You will be pushing your production version to this bot. You might want to be specific with the naming and append "Production" or "PROD" to the bot name to differentiate it from your Development/Sandbox bot.
+
+    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases1.png">
+
+    You only need to create the Production bot; you don't need to build out its dialogs and interactions.
+
+2. Return to your Development bot.
+2. In the lower-right corner, click <img style="width:35px" src="img/ConvoBuilder/icon_releases.png"> (Releases icon).
+3. In the Releases window, click **New Release**.
+4. In the dialog box that appears, specify the following:
+
+    * **Release to Bot**: Select your newly createad Production bot.
+    * **Version**: Enter a version number.
+    * **Description**: Enter a meaningful description of any changes from the previous version.
+
+5. Click **Create Release**.
+
+    This creates a release "snapshot," which you can see on the next screen. To complete the push, the new bot must accept the release.
+
+6. Click the link to the new bot that's provided. 
+
+    <img class="fancyimage" width="900" src="img/ConvoBuilder/bestPractices/releases2.png">
+
+    This takes you to the new bot.
+
+7. In the new Production bot, click <img style="width:35px" src="img/ConvoBuilder/icon_releases.png"> (Releases icon) in the lower-right corner.
+
+    <img class="fancyimage" width="400" src="img/ConvoBuilder/bestPractices/releases3.png">
+
+8. Click **Upgrade**.
+
+    At this point, the functionality of the Production bot should be identical to the Development bot’s at the time of the push.
+
+{: .important}
+The bot user agents attached to the Development bot are **not** pushed to Production. You will need to create new bot user agents and attach them to the Production bot, if they do not already exist.
+
+**Tip**: If you have certain hard-coded values (e.g., skills) that might differ from one bot to another, you could use [environment variables](conversation-builder-best-practices-environment-variables.html) to maintain the values externally.
