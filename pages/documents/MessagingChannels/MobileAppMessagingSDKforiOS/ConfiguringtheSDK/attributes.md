@@ -24,13 +24,13 @@ With the addition of Dark Mode support in iOS 13, we now utilize Apple’s UIUse
 If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed.  Likely only the colors have been updated.  If you wish to support Dark Mode and you are using our default color configurations you have nothing to do, we have handled the support for you by updating the SDK color scheme to utilize iOS system colors where possible.  This appearance is different than the previous implementation but is intended to be more in line with what iOS users expect.  We have worked hard on its implementation and hope you enjoy it! 
 
 #### What this means for our customers who use custom attribute configurations? 
-If you have customized the appearance of the iOS SDK by setting your own UIColor for attributes within the LPConfig object, note that unless you pass a UIColor that has colors set specifically for at minimum UIUserInterface values “dark” and “light” your custom configuartion will not support dark mode and the UI may not appear as expected. This implementation is intended to mirror how you might support Dark Mode within your own application.  We recommend using the following UIColor Extension pattern we found laid our in [this](https://nshipster.com/dark-mode/ "Dark Mode on iOS 13 - NSHipster") article from NSHipster.   We have modeled our own default color objects in this manner (as public LPColor struct objects described below).  
+If you have customized the appearance of the iOS SDK by setting your own UIColor for attributes within the LPConfig object, note that unless you pass a UIColor that has colors set specifically for at minimum UIUserInterface values “dark” and “light” your custom configuration will not support dark mode and the UI may not appear as expected. This implementation is intended to mirror how you might support Dark Mode within your own application.  We recommend using the following UIColor Extension pattern we found laid out in [this](https://nshipster.com/dark-mode/ "Dark Mode on iOS 13 - NSHipster") article from NSHipster.   We have modeled our own default color objects in this manner (as public LPColor struct objects described below).  
 
 #### What this means for consumers on iOS 12 and below? 
-As is indicated by the code sample below we have mirrored the implementation for our “light” scheme for iOS devices operating on iOS 11 and 12 using non semantic colors that closely resemble the light iOS system colors. 
+As is indicated by the code sample below, we have mirrored the implementation for our “light” scheme for iOS devices operating on iOS 11 and 12 using non semantic colors that closely resemble the light iOS system colors. 
 
 #### How to implement custom color configurations within the LPMessaging iOS SDK that support DarkMode?
-For color attributes that accept UIColor, simply pass a UIColor object created which has values based on the current “traitCollection.userInterfaceStyle” as implemented below.
+For color attributes that accept UIColor, simply pass a UIColor object which has values based on the current “traitCollection.userInterfaceStyle” as implemented below.
 
 ```Swift
 import UIKit
@@ -112,7 +112,7 @@ Enable or disable audio sharing feature. True is enabled.
 
 #### maxNumberOfSavedAudioFilesOnDisk  
 Max number of allowed saved audio files on disk. This refers only to audio files.
-The validation of allowed max number of documents will be when showing and removing conversation.
+The validation of allowed max number of documents will be when showing and removing conversations.
 
    - **Type:** UInt
    - **Default value:** 20
@@ -138,7 +138,7 @@ Color code for the entire view background.
 
 
 #### customFontNameConversationFeed  
-Custom font name for conversation feed, which affects all messages, timestamps and separators. Fonts that are not part of the iOS families, must be defined in host app's Info.plist.
+Custom font name for conversation feed, which affects all messages, timestamps and separators. Fonts that are not part of the iOS families, must be defined in the host app's Info.plist.
 
 - **Type:** String
 - **Default value:** nil
@@ -179,7 +179,7 @@ Fonts that are not part of the iOS families, must be defined in App's Info.plist
 
 #### customRefreshControllerImagesArray  
 Array of images for creating the custom refresh controller. The custom refresh controller will loop the images from the array. 
-It will need two or more images in the array for loop to take effect.
+It will need two or more images in the array for the loop to take effect.
 
 <!--    <div style="float: left; width: 35%;height: 136px;">
    <ul>
@@ -200,7 +200,7 @@ It will need two or more images in the array for loop to take effect.
 </div> -->
 
 #### customRefreshControllerAnimationSpeed  
-Custom refresh controller speed animation define the full images loop time. The smaller the value the faster the animation.
+Custom refresh controller speed animation define the full images loop time. The smaller the value, the faster the animation.
 
    - **Type:** Float<UIImage>
    - **Default value:** 2 
@@ -449,7 +449,7 @@ Define the conversation Closed label to separator line padding.
 </div> -->
 
 #### conversationSeparatorFontName 
-Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in host app's Info.plist.
+Custom font name for conversation closed separator. Fonts that are not part of the iOS families, must be defined in the host app's Info.plist.
 
 - **Type:** String
 - **Default value:** nil
@@ -540,7 +540,7 @@ All masked data will appear as asterisks, will be saved to local db masked and w
  
 
 #### enableRealTimeMasking  
-Enabling this flag, SDK will use regular expression defined in 'realTimeMaskingRegex' to mask text originated on the consumer device.  This masking is applied to messages both on the consumer device and sent to the agent. All masked data will appear as asterisks, will be saved to local db masked and will be sent to the server masked. This feature is only available for Unauthenticated conversations.
+When this flag is enabled, the SDK will use regular expression defined in 'realTimeMaskingRegex' to mask text originated on the consumer device.  This masking is applied to messages both on the consumer device and sent to the agent. All masked data will appear as asterisks, will be saved to local databases masked and will be sent to the server masked. This feature is only available for Unauthenticated conversations.
 
    - **Type:** Bool
    - **Default value:** false 
@@ -1008,7 +1008,7 @@ Enable or disable file/photo sharing feature from consumer.
 
 #### maxNumberOfSavedFilesOnDisk 
 Max number of allowed saved files on disk. This refers only to full photo files.
-Note: The validation of allowed max number of files will be when showing and removing conversation.
+Note: The validation of allowed max number of files will be when showing and removing conversations.
 
    - **Type:** Int
    - **Default value:** 20 
@@ -1016,7 +1016,7 @@ Note: The validation of allowed max number of files will be when showing and rem
 
 #### maxNumberOfSavedDocumentsOnDisk 
 Max number of allowed saved documents on disk. This refers only to document files
-The validation of allowed max number of documents will be when showing and removing conversation.
+The validation of allowed max number of documents will be when showing and removing conversations.
 
    - **Type:** Int
    - **Default value:** 20 
@@ -1396,7 +1396,7 @@ Secure form bubble form image tint color.
 
 
 #### secureFormCustomFontName 
- Secure form custom font name to be used while user filling the secure form. If not set, the default font will be used. 
+ Secure form custom font name to be used while user is filling out the secure form. If not set, the default font will be used. 
  
  - **Type:** String
  - **Default value:** Helvetica
@@ -1441,7 +1441,7 @@ Send button color in enabled mode in the conversation screen.
 
 ####  sendButtonImage  
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
-The image must conforms Apple's [Custom Icon guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
+The image must conform to Apple's [Custom Icon guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
 
 **Type:** UIImage
 
@@ -1617,8 +1617,10 @@ Hides the view of agent avatar and name.
 
 
 #### csatThankYouScreenHidden 
-Hides the Thanks You screen after tapping 'Submit' button.
+Hides the Thank You screen after tapping the 'Submit' button.
+
 1. If true, CSAT view will disappear immediately after tapping 'Submit'.
+
 2. If false, Thank You screen will appear for 2 seconds after tapping 'Submit' and then all the CSAT view will disappear.
 
 - **Type:** Bool
@@ -2112,7 +2114,7 @@ Alpha of the remote user's bubble overlay when user uses a long press gesture on
 
 #### remoteUserBubbleTopLeftCornerRadius  
 Top left Radius corner on the Remote bubble. 
-Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to be clipped.
 
 
 - **Type:** Float    
@@ -2122,7 +2124,7 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 
 #### remoteUserBubbleTopRightCornerRadius
 Top right Radius corner on the Remote bubble. 
-Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to be clipped.
 
 
 - **Type:** Float    
@@ -2133,7 +2135,7 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 
 #### remoteUserBubbleBottomLeftCornerRadius
 Bottom left Radius corner on the Remote bubble. 
-Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to be clipped.
 
 
 - **Type:** Float    
@@ -2143,7 +2145,7 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 
 #### remoteUserBubbleBottomRightCornerRadius
 Bottom right Radius corner on the Remote bubble. 
-Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to be clipped.
 
 
 - **Type:** Float    
@@ -2234,7 +2236,7 @@ Color code for the error view border of the visitor bubble.
 
 
 #### enableBubblesOverlayOnLongPress
-Enable bubbles overlay when user performing a long press gesture on messaging bubbles.  
+Enable bubbles overlay when user performs a long press gesture on messaging bubbles.  
 
 - **Type:** Bool    
 - **Default value:** true
@@ -2259,7 +2261,7 @@ Alpha of the user's bubble overlay when user use long press gesture on the bubbl
 
 #### userBubbleTopLeftCornerRadius
 Top left Radius corner on the user's bubble. 
-Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to be clipped.
 
 - **Type:** Float    
 - **Default value:** 8.0
@@ -2268,7 +2270,7 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 
 #### userBubbleTopRightCornerRadius
 Top right Radius corner on the user's bubble. 
-Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to be clipped.  
 
 - **Type:** Float    
 - **Default value:** 8.0
@@ -2276,7 +2278,7 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 
 #### userBubbleBottomLeftCornerRadius
 Bottom left Radius corner on the user's bubble. 
-Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to be clipped.
 
 
 - **Type:** Float    
@@ -2287,7 +2289,7 @@ Setting the radius to a value greater than 0.0 causes the bubble's layer to begi
 
 #### userBubbleBottomRightCornerRadius
 Bottom right Radius corner on the user's bubble. 
-Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which is at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to cut visually.  
+Setting the radius to a value greater than 0.0 causes the bubble's layer to begin drawing rounded corners on its background. This attribute affects the bubble's masking and it's recommended to use a corner radius which at max equals to half of the bubble's height. Setting a corner radius larger than half of the bubble's height will cause text to be clipped.
 
 - **Type:** Float    
 - **Default value:** 0.0
