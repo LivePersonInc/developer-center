@@ -10,7 +10,7 @@ permalink: conversation-builder-getting-started-4-connect-to-liveengage.html
 indicator: both
 ---
 
-In this tutorial, you walk through how to link your bot to LiveEngage, ending with an integration that transfers to a human.
+In this tutorial, you walk through how to link your bot to LiveEngage, ending with an integration that transfers to a human agent.
 
 ### Step 10: Configure LiveEngage
 
