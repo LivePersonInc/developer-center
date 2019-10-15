@@ -1,10 +1,11 @@
 ---
-pagename: Overview
-sitesection: Documents
-categoryname: "Website Monitoring"
-documentname: LE-Tag
-permalink: le-tag-overview.html
-indicator: both
+pagename: Overview
+redirect_from:
+sitesection: Documents
+categoryname: "Website Monitoring"
+documentname: LE-Tag
+permalink: le-tag-overview.html
+indicator: both
 ---
 
 The `lpTag` object is available on your website when you add the le-tag script to your website.

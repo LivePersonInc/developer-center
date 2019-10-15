@@ -1,10 +1,11 @@
 ---
-pagename: SDEs
-sitesection: Documents
-categoryname: "Website Monitoring"
-documentname: LE-Tag
-permalink: le-tag-sdes.html
-indicator: both
+pagename: SDEs
+redirect_from:
+sitesection: Documents
+categoryname: "Website Monitoring"
+documentname: LE-Tag
+permalink: le-tag-sdes.html
+indicator: both
 ---
 
 The `lpTag.sdes` object is useful for testing and troubleshooting behavior with [Engagement Attributes (SDEs)](engagement-attributes-overview.html).
