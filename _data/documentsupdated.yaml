@@ -174,11 +174,11 @@
           - subpagename: Get and Set Conversation Flow Data 
           - subpagename: Sending Messages
           #- subpagename: Context Session Store Wrapper
+      - pagename: Keywords
       - pagename: Testing & Deployment
         subpages:
           - subpagename: Debugging
           - subpagename: Deploying to LiveEngage
-      #- pagename: Keyword Triggers
       #- pagename: Operations
       - pagename: Common Use Cases
       - pagename: Best Practices

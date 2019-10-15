@@ -22,19 +22,11 @@ For example, in a [Fallback dialog](conversation-builder-dialogs-fallback-dialog
 It's common to use this special syntax in the response conditions of questions because often you want to store the consumer's response to a question in a variable. For more on this, see [here](conversation-builder-variables-slots.html).
 
 ### Access authenticated customer information
-
 Use the [Get Authenticated Customer Info](conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html#get-authenticated-customer-info) scripting functions.
 
 ### Get the bot to close the dialog
+Use the [LP_CLOSEDIALOG](conversation-builder-keywords.html#lp_closedialog) keyword in a Text statement.
 
-Create a text interaction that contains the special string “LP_CLOSEDIALOG”.
-
- <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/useCases_lpCloseDialog.png">
 
 ### Get the bot to close the conversation
-
-Create a text interaction that contains the special string “LP_CLOSECONVERSATION”.
-
- <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/useCases_lpCloseConversation.png">
-
-
+Use the [LP_CLOSECONVERSATION](conversation-builder-keywords.html#lp_closeconversation) keyword in a Text statement.

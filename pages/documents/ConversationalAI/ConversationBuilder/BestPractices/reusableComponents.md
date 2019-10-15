@@ -59,7 +59,7 @@ To avoid repeatedly having to build this set of interactions within every dialog
 
     <img style="width:800px" src="img/ConvoBuilder/reusableResolveAndCloseDialog5.png">
 
-    In the case of a "no" answer, the LP_CLOSECONVERSATION statement will cause the bot to end the conversation.
+    In the case of a "no" answer, the [LP_CLOSECONVERSATION](conversation-builder-keywords.html#lp_closeconversation) statement will cause the bot to end the conversation.
 
 4. Go to another dialog in your bot, and, where it reaches its logical end and you want to confirm resolution with the consumer, explicitly set the **next step** to be this Confirm Resolution and Close dialog's "Is there anything else I can help you with?" question. 
 
