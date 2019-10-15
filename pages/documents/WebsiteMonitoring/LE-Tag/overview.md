@@ -14,9 +14,12 @@ This object allows you to access many different functionalities that r
 
 Some of these functionalities include:
 
-* Triggered Events
-* Page refreshes
-* LivePerson variables
-* Visitor SDEs
+- Triggered Events
+
+- Page refreshes
+
+- LivePerson variables
+
+- Visitor SDEs
 
 
