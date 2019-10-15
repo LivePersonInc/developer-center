@@ -159,8 +159,7 @@ v2 - will allow to retrieve both authenticated & unauthenticated engagement attr
 
 **JSON Example (including engagement attributes)**
 
-```
-
+```json
  {
 	"_metadata": {
 		"count": 1,
