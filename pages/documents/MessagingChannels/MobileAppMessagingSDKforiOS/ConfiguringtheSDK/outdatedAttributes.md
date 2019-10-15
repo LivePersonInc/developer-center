@@ -10,7 +10,7 @@ indicator: messaging
 ---
 
 {: .notice}
-Please note: these attributes are relevant for **version 5.0 of the SDK and lower**. For the list of current attributes, please see [this](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html) document.
+Please note: these attributes are relevant for **version 4.1 of the SDK and lower**. For the list of current attributes, please see [this](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html) document.
 
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, please utilize the [Attributes Design Sheet](mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes-design-sheet.html).
 
@@ -3513,97 +3513,36 @@ Regular expression for phone hyperlinks in users messages (consumer and agent). 
    - **Default value:** nil
 
 
+
 #### bubbleTopPadding
 Define the bubble Top Padding.
 
-<div style="float: left; width: 35%;height: 75px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 10</li>
-   </ul>
-</div>
-
-<div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/bubbleTopPadding.png" alt="bubbleTopPadding">
-   </figure>
-</div>
-
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+- **Type:** Float  
+- **Default value:** 10 
 
 
 
 #### bubbleBottomPadding
 Define the bubble bottom Padding.
 
-<div style="float: left; width: 35%;height: 75px;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 10</li>
-   </ul>
-</div>
 
-<div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/bubbleBottomPadding.png" alt="bubbleBottomPadding">
-   </figure>
-</div>
-
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+- **Type:** Float  
+- **Default value:** 10 
 
 
 #### bubbleLeadingPadding
 Define the bubble Leading Padding.
 
-<div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 10</li>
-   </ul>
-</div>
+- **Type:** Float  
+- **Default value:** 10 
 
-<div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/bubbleLeadingPadding.png" alt="bubbleLeadingPadding">
-   </figure>
-</div>
-
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
 
 
 #### bubbleTrailingPadding
 Define the bubble Trailing Padding.
 
-<div style="float: left; width: 35%;">
-   <ul>
-      <li><b>Type:</b> Float</li>
-      <li><b>Default value:</b> 10</li>
-   </ul>
-</div>
-
-<div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/bubbleTrailingPadding.png" alt="bubbleTrailingPadding">
-   </figure>
-</div>
-
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
+- **Type:** Float  
+- **Default value:** 10 
 
 
 #### bubbleTimestampBottomPadding
