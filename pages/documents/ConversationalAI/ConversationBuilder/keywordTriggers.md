@@ -16,13 +16,13 @@ Conversation Builder reserves a set of keywords that trigger special functionali
 
 ### LP_CLOSEDIALOG
 
-To close the current dialog, create a text interaction that contains the special string “LP_CLOSEDIALOG”.
+To close the current dialog, create a Text statement that contains the special string “LP_CLOSEDIALOG”.
 
  <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keywords_lpCloseDialog.png">
 
 ### LP_CLOSECONVERSATION
 
-To close the current conversation, create a text interaction that contains the special string “LP_CLOSECONVERSATION”.
+To close the current conversation, create a Text statement that contains the special string “LP_CLOSECONVERSATION”.
 
  <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keywords_lpCloseConversation.png">
 
