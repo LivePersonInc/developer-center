@@ -3,16 +3,17 @@ pagename: Response Match & Actions
 redirect_from:
     - conversation-builder-conversation-builder-conditions.html
     - conversation-builder-conversation-builder-response-match-actions.html
+    - conversation-builder-response-match-actions.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
-permalink: conversation-builder-response-match-actions.html
+permalink: conversation-builder-interactions-response-match-actions.html
 indicator: both
 ---
 
-Each [Next Actions panel](conversation-builder-conversation-builder-interaction-details.html#next-actions) can contain one or many **Response Match & Action sets**, and each set contains instructions for how to respond to the user input. For example, if you ask the user what their favorite color is, you might create a Response Match & Action set for each possible primary color.
+Each [Next Actions panel](conversation-builder-conversation-builder-interactions-interaction-details.html#next-actions) can contain one or many **Response Match & Action sets**, and each set contains instructions for how to respond to the user input. For example, if you ask the user what their favorite color is, you might create a Response Match & Action set for each possible primary color.
 
 The following image illustrates two Response Match & Actions sets, where the first is displayed.
 
@@ -23,7 +24,7 @@ The following image illustrates two Response Match & Actions sets, where the fir
 
 ### Conditions
 
-When adding a question or integration [interaction](conversation-builder-conversation-builder-interactions.html) to the dialog, you can configure conditional logic based on the user's response. These are basically "if..., then..." type decisions, but, when combined with pattern matching, intents, and entities, they can deliver a powerful flow control engine for the automation.
+When adding a question or integration [interaction](conversation-builder-interactions-interaction-basics.html) to the dialog, you can configure conditional logic based on the user's response. These are basically "if..., then..." type decisions, but, when combined with pattern matching, intents, and entities, they can deliver a powerful flow control engine for the automation.
 
 In the first dropdown within Conditions, you can set how you want to match the user input: 
 

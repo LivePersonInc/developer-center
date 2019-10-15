@@ -130,7 +130,8 @@
           - subpagename: 2 - Intents
           - subpagename: 3 - Integrations
           - subpagename: 4 - Connect to LiveEngage
-      - pagename: Automations
+          - subpagename: Bot Workspace Overview
+      - pagename: Bots
       - pagename: Templates
         subpages:
           - subpagename: Overview
@@ -139,14 +140,32 @@
           - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
-      - pagename: Automation Workspace Overview
       - pagename: Dialogs
+        subpages:
+          - subpagename: Dialog Basics
+          - subpagename: Standard Dialogs
+          - subpagename: Fallback Dialogs
+          - subpagename: Disambiguation Dialogs
       - pagename: Interactions
+        subpages:
+          - subpagename: Interaction Basics
+          - subpagename: User Says
+          - subpagename: Statements
+          - subpagename: Questions
+          - subpagename: Integrations
+          - subpagename: Interaction Details
+          - subpagename: Response Match & Actions
       - pagename: Assist
-      - pagename: Interaction Details
-      - pagename: Response Match & Actions
       - pagename: Variables & Slots
       - pagename: Integrations
+        subpages:
+          - subpagename: Integration Basics
+          - subpagename: API Integrations
+          - subpagename: Email Integrations
+          #- subpagename: Knowledge Base Integrations
+          - subpagename: LivePerson Agent Escalation Integrations
+          - subpagename: FaaS Integrations
+          - subpagename: Web View Integration API
       - pagename: Scripting Functions
         subpages:
           - subpagename: Introduction
@@ -154,10 +173,13 @@
           - subpagename: Get and Set User Data and Variables
           - subpagename: Get and Set Conversation Flow Data
           - subpagename: Sending Messages
-          - subpagename: Context Session Store Wrapper
+          #- subpagename: Context Session Store Wrapper
+      - pagename: Testing & Deployment
+        subpages:
+          - subpagename: Debugging
+          - subpagename: Deploying to LiveEngage
       #- pagename: Keyword Triggers
       #- pagename: Operations
-      - pagename: Enterprise Integrations
       - pagename: Best Practices
         subpages:
           - subpagename: Transfer to an Agent or Bot
@@ -189,10 +211,10 @@
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-#  - documentname: LiveIntent
-#    pages:
-#	  - pagename: Overview
-#	  - pagename: Dashboard
+  - documentname: LiveIntent
+    pages:
+      - pagename: Overview
+      - pagename: Dashboard
   - documentname: Intent Builder
     pages:
       - pagename: Overview
@@ -205,7 +227,9 @@
       - pagename: Overview
   - documentname: Bot Accounts
     pages:
-      - pagename: User Role Permissions
+      - pagename: Permissions per Role
+     # - pagename: Roles
+      - pagename: Credentials
   - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
@@ -213,16 +237,17 @@
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
+      - pagename: IBM Watson Assistant Version 2
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
       - pagename: Custom Integration
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
+      - pagename: Methods
+      - pagename: Events
       - pagename: Examples
       - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
-#  - documentname: Custom Bots
 - categoryname: Client Side Configuration
   image: client-side
   documents:
