@@ -12,37 +12,45 @@ indicator: both
 
 ### Introduction
 
-When creating your automation, there may be instances where you need to externalize certain values or constants. Environment Variables allow you to create a set of values that are connected to a particular automation instance.
+When creating a bot, there might be instances where you need to externalize certain values or constants. Environment variables allow you to create a set of values that are connected to a particular bot instance.
 
-For example, if you have an automation that has both a Sandbox and Production version, 99% of the functionality will be the same, but certain values (like skillIds for instance) may be different. Having these values resident outside the automation makes them easier to manage.
+For example, if you have a bot that has both a Sandbox and Production version, 99% of the functionality will be the same, but certain values (like skill IDs for instance) might be different. Defining and storing these values outside of the bot makes them easier to manage.
 
-### How do I create Environment Variables?
+### Create environment variables
 
-Because Environment Variables are specific to a bot, we access them from the Conversation Builder dashboard. Tap on the Manage Automation Environments link.
+If you are using multiple bot instances (e.g., a Sandbox version and a Production version), you would create a Sandbox environment *and* a Production environment and then associate the specific environment with the specific bot.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/bestPractices/env_0.png">
+**To create environment variables**
 
-Give your environment a name, in this case we’ll apply our environment variables to a router bot, so we’ll call ours "Router Bot". Add key/value pairs for your variables and hit save.
+1. From the Conversation Builder dashboard, click **Manage Bot Environments** in the upper-right corner.
+2. On the Add Environment page, specify the following:
 
-If you are using multiple bot instances (eg: Sandbox and Production) you would create a Sandbox environment AND a Production environment and associate the specific environment with the specific bot.
+    * **Environment Name**: Enter a descriptive name. For example, you might have Sandbox and Production instances  (e.g., "Router Bot Sandbox").
+    * **Environment Values**: Enter the key/value pairs for each variable. Variables *cannot* have spaces or special characters in their names, only letters and numbers.
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/bestPractices/env_1.png">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/bestPractices/env_1.png">
 
-Keep in mind, these variables **cannot** have spaces or special characters in their names, only letters and numbers.
+3. Click **Save**.
 
-Once you’ve created your environment, you need to connect it to your bot. Open your bot and go to your Automation Settings. Tap More Settings and under Automation Environment, select the environment you created and hit Save.
+### Link environment variables to a bot 
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bestPractices/env_2.png">
+Once you’ve created an environment, you need to connect it to your bot.
 
-You’re all set to use your variables!
+**To link environment variables to a bot**
 
-### How do I use Environment Variables?
+1. Open the bot, and click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> (ellipsis icon) in the upper-right corner.
+2. Click **Bot Settings** from the menu that appears.
+3. Scroll down, and click **More Settings**.
+4. For **Bot Environment**, select the name of the environment.
+5. Click **Save**.
+ 
+### Use environment variables
 
-There are 2 ways you can call them.
+There are two ways you can call environment variables.
 
 For JavaScript, use the following notation: `botContext.getEnvVariable(variableName);`
 
-Here’s how we’re calling the variables we set up:
+For example:
 
 ```javascript
 switch(intent) {
@@ -64,8 +72,8 @@ switch(intent) {
 }
 ```
 
-If you want to display the environment variable directly in text, use the following notation: `{$env.variableName}`
+To display an environment variable directly in text, use the following notation: `{$env.variableName}`
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/bestPractices/env_4.png">
+For example:
 
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/bestPractices/env_5.png">
+<img style="width:700px" src="img/ConvoBuilder/bestPractices/env_6.png">
