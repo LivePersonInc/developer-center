@@ -23,18 +23,22 @@ _**Note:** There are 2 ways to register to LivePerson events. For more informati
 
 Called whenever either the consumer or the agent starts a new conversation.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_CONVERSATION_STARTED_INTENT_ACTION</p>
-<ul><li>To get the convData param from the Intent, use LivePersonIntents.getLPConversationData(intent).</li></ul>
-<p><b>Callback:</b> </p>
-<p>onConversationStarted(LPConversationData convData)</p>
-<p><i>- Deprecated since April 26, 2017 -</i> <br/> onConversationStarted()</p>
-</div>
+> **Intent Action:**
+>
+> ILivePersonIntentAction.LP_ON_CONVERSATION_STARTED_INTENT_ACTION
+>
+> - To get the convData param from the Intent, use LivePersonIntents.getLPConversationData(intent).
+>
+> **Callback:**
+>
+> onConversationStarted(LPConversationData convData)
+>
+> *Deprecated since April 26, 2017* <br/>
+> onConversationStarted()
 
 | Parameter | Type | Description  |
 |----|----|----|
-| convData | <a href="android-interface-definitions.html#lpconversationdata">LPConversationData</a> | Contains the ID of the new Conversation, and a null CloseReason. |
+| convData | [LPConversationData](android-interface-definitions.html#lpconversationdata) | Contains the ID of the new Conversation, and a null CloseReason. |
 
 
 
@@ -42,19 +46,25 @@ Called whenever either the consumer or the agent starts a new conversation.
 
 Called when the current conversation is marked as resolved by either the consumer or the agent.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION</p>
-<ul><li>To get the convData param from the Intent, use LivePersonIntents.getLPConversationData(intent).</li></ul>
-<p><b>Callback:</b> </p>
-<p>onConversationResolved(LPConversationData convData)</p>
-<p><i>- Deprecated since February 13, 2017 -</i> <br/> onConversationResolved()</p>
-<p><i>- Deprecated since April 26, 2017 -</i> <br/> onConversationResolved(CloseReason reason)</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_CONVERSATION_RESOLVED_INTENT_ACTION
+>
+> - To get the convData param from the Intent, use LivePersonIntents.getLPConversationData(intent).
+>
+> **Callback:** 
+>
+> onConversationResolved(LPConversationData convData)
+>
+> *Deprecated since February 13, 2017* <br/>
+> onConversationResolved()
+>
+> *Deprecated since April 26, 2017* <br/>
+> onConversationResolved(CloseReason reason)
 
 | Parameter | Type | Description  |
 |----|----|----|
-| convData | <a href="android-interface-definitions.html#lpconversationdata">LPConversationData</a> | Contains the ID of the resolved Conversation, and a CloseReason describing why the conversation ended. |
+| convData | [LPConversationData](android-interface-definitions.html#lpconversationdata) | Contains the ID of the resolved Conversation, and a CloseReason describing why the conversation ended. |
 
 
 
@@ -62,12 +72,14 @@ Called when the current conversation is marked as resolved by either the consume
 
 Called when the Conversation Fragment is closed (only called when using Fragment Mode).
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_CONVERSATION_FRAGMENT_CLOSED_INTENT_ACTION</p>
-<p><b>Callback:</b> </p>
-<p>onConversationFragmentClosed() </p>
-</div>
+
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_CONVERSATION_FRAGMENT_CLOSED_INTENT_ACTION
+>
+> **Callback:** 
+>
+> onConversationFragmentClosed() 
 
 
 
@@ -75,12 +87,14 @@ Called when the Conversation Fragment is closed (only called when using Fragment
 
 Called when the current conversation gets marked as urgent by either the consumer or the agent.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION</p>
-<p><b>Callback:</b> </p>
-<p>onConversationMarkedAsUrgent()</p>
-</div>
+
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_CONVERSATION_MARKED_AS_URGENT_INTENT_ACTION
+>
+> **Callback:** 
+>
+> onConversationMarkedAsUrgent()
 
 
 
@@ -88,12 +102,14 @@ Called when the current conversation gets marked as urgent by either the consume
 
 Called when the current conversation gets marked as normal by either the consumer or the agent.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION</p>
-<p><b>Callback:</b> </p>
-<p>onConversationMarkedAsNormal()</p>
-</div>
+
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_CONVERSATION_MARKED_AS_NORMAL_INTENT_ACTION
+>
+> **Callback:** 
+>
+> onConversationMarkedAsNormal()
 
 
 
@@ -104,18 +120,20 @@ Called when the assigned agent of the current conversation has changed, or their
 
 **Note:** You must check for null value before using the agentData object.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION</p>
-<ul><li>To get the agentData param from the Intent, use LivePersonIntents.getAgentData(intent).</li></ul>
-<p><b>Callback:</b> </p>
-<p>onAgentDetailsChanged(AgentData agentData)</p>
-</div>
+
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION
+>
+> - To get the agentData param from the Intent, use LivePersonIntents.getAgentData(intent).
+>
+> **Callback:** 
+>
+> onAgentDetailsChanged(AgentData agentData)
 
 | Parameter | Type | Description  |
 |----|----|----|
-| agentData | <a href="android-interface-definitions.html#agentdata">AgentData</a> | Contains the first and last names, avatar url, and employee ID of the new (or updated) currently-assigned Agent. |
-
+| agentData | [AgentData](android-interface-definitions.html#agentdata) | Contains the first and last names, avatar url, and employee ID of the new (or updated) currently-assigned Agent. |
 
 
 
@@ -123,13 +141,15 @@ Called when the assigned agent of the current conversation has changed, or their
 
 Called when the assigned agent is typing a message. When there are 2 seconds of idle time, the callback returns false to indicate that the agent stopped typing.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_AGENT_TYPING_INTENT_ACTION</p>
-<ul><li>To get the isTyping param from the Intent, use LivePersonIntents.getAgentTypingValue(intent).</li></ul>
-<p><b>Callback:</b> </p>
-<p>onAgentTyping(boolean isTyping)</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_AGENT_TYPING_INTENT_ACTION
+>
+> - To get the isTyping param from the Intent, use LivePersonIntents.getAgentTypingValue(intent).
+>
+> **Callback:** 
+>
+> onAgentTyping(boolean isTyping)
 
 | Parameter | Type | Description  |
 |----|----|----|
@@ -141,13 +161,15 @@ Called when the assigned agent is typing a message. When there are 2 seconds of 
 
 Called when there is a change in agent availability. 
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION</p>
-<ul><li>To get the isOfflineHoursOn param from the Intent, use LivePersonIntents.getOfflineHoursOn(intent).</li></ul>
-<p><b>Callback:</b> </p>
-<p>onOfflineHoursChanges(boolean isOfflineHoursOn)</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_OFFLINE_HOURS_CHANGES_INTENT_ACTION
+>
+> - To get the isOfflineHoursOn param from the Intent, use LivePersonIntents.getOfflineHoursOn(intent).
+>
+> **Callback:** 
+>
+> onOfflineHoursChanges(boolean isOfflineHoursOn)
 
 | Parameter | Type | Description  |
 |----|----|----|
@@ -162,20 +184,20 @@ Called when there is a change in agent availability.
 
 Called if the user denied a necessary system permission for the action they tried to perform. For example, when the user clicks on the camera/gallery button to add an image, the permission system dialog was displayed, and the user denied permission. 
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_USER_DENIED_PERMISSION</p>
-<ul>
-<li>To get the permissionType param from the Intent, use LivePersonIntents.getPermissionType(intent).</li>
-<li>To get the doNotShowAgainMarked param from the Intent, use LivePersonIntents.getPermissionDoNotShowAgainMarked(intent).</li>
-</ul>
-<p><b>Callbacks:</b> </p>
-<p>onUserDeniedPermission(PermissionType permissionType, boolean doNotShowAgainMarked);</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_USER_DENIED_PERMISSION
+>
+> - To get the permissionType param from the Intent, use LivePersonIntents.getPermissionType(intent).
+> - To get the doNotShowAgainMarked param from the Intent, use LivePersonIntents.getPermissionDoNotShowAgainMarked(intent).
+>
+> **Callbacks:** 
+>
+> onUserDeniedPermission(PermissionType permissionType, boolean doNotShowAgainMarked);
 
 | Parameter | Type | Description  |
 |----|----|----|
-| permissionType | <a href="android-interface-definitions.html#permissiontype">PermissionType</a> | The type of permission required for the action the user was attempting to perform. |
+| permissionType | [PermissionType](android-interface-definitions.html#permissiontype) | The type of permission required for the action the user was attempting to perform. |
 | doNotShowAgainMarked | boolean | **true** if the user directed the Permissions system to never ask again for this permissionType; **false** otherwise. |
 
 
@@ -186,17 +208,19 @@ Called if the user denied a necessary system permission for the action they trie
 
 Called before requiring a permission that the user has not yet accepted. For example, when the user clicks the camera or gallery buttons to add an image, this callback gets called just before the permission dialog is displayed. If the user already allowed permission, this callback does not get called.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_USER_ACTION_ON_PREVENTED_PERMISSION</p>
-<ul><li>To get the permissionType param from the Intent, use LivePersonIntents.getPermissionType(intent).</li></ul>
-<p><b>Callback:</b> </p>
-<p>onUserActionOnPreventedPermission(PermissionType permissionType)</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_USER_ACTION_ON_PREVENTED_PERMISSION
+>
+> - To get the permissionType param from the Intent, use LivePersonIntents.getPermissionType(intent).
+>
+> **Callback:** 
+>
+> onUserActionOnPreventedPermission(PermissionType permissionType)
 
 | Parameter | Type | Description  |
 |----|----|----|
-| permissionType | <a href="android-interface-definitions.html#permissiontype">PermissionType</a> | The type of permission required for the action the user is attempting to perform. |
+| permissionType | [PermissionType](android-interface-definitions.html#permissiontype) | The type of permission required for the action the user is attempting to perform. |
 
 
 
@@ -206,17 +230,20 @@ Called when the user taps on the agent avatar.
 
 The icon is available next to the agent message bubble or on the top of the toolbar (if using activity mode).
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION</p>
-<ul><li>To get the agentData param from the Intent, use LivePersonIntents.getAgentData(intent).</li></ul>
-<p><b>Callback:</b> </p>
-<p>onAgentAvatarTapped (AgentData agentData) </p>
-</div>
+
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION
+>
+> - To get the agentData param from the Intent, use LivePersonIntents.getAgentData(intent).
+>
+> **Callback:** 
+>
+> onAgentAvatarTapped (AgentData agentData) 
 
 | Parameter | Type | Description  |
 |----|----|----|
-| agentData | <a href="android-interface-definitions.html#agentdata">AgentData</a> | Contains the first and last names, avatar url, and employee ID of the Agent the user tapped on. |
+| agentData | [AgentData](android-interface-definitions.html#agentdata) | Contains the first and last names, avatar url, and employee ID of the Agent the user tapped on. |
 
 
 
@@ -227,13 +254,15 @@ Called when a structured content control with Link action gets clicked.
 {:.important}
 This callback only gets called if the [structured_content_link_as_callback](android-attributes.html#structured-content) parameter in the branding.xml is set to **true**.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_STRUCTURED_CONTENT_LINK_CLICKED</p>
-<ul><li>To get the uri param from the Intent, use LivePersonIntents.getLinkUri(intent).</li></ul>
-<p><b>Callback:</b> </p>
-<p>onStructuredContentLinkClicked(String uri)</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_STRUCTURED_CONTENT_LINK_CLICKED
+>
+> - To get the uri param from the Intent, use LivePersonIntents.getLinkUri(intent).
+>
+> **Callback:** 
+>
+> onStructuredContentLinkClicked(String uri)
 
 | Parameter | Type | Description  |
 |----|----|----|
@@ -246,12 +275,13 @@ This callback only gets called if the [structured_content_link_as_callback](andr
 
 Called when the feedback screen launches.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_CSAT_LAUNCHED_INTENT_ACTION</p>
-<p><b>Callback:</b> </p>
-<p>onCsatLaunched()</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_CSAT_LAUNCHED_INTENT_ACTION
+>
+> **Callback:** 
+>
+> onCsatLaunched()
 
 
 
@@ -259,12 +289,13 @@ Called when the feedback screen launches.
 
 Called when the feedback screen gets dismissed with any result, positive or negative. (The user taps the **Submit**, **Skip**, or **Back** buttons.) 
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_CSAT_DISMISSED_INTENT_ACTION</p>
-<p><b>Callback:</b> </p>
-<p>onCsatDismissed()</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_CSAT_DISMISSED_INTENT_ACTION
+>
+> **Callback:** 
+>
+> onCsatDismissed()
 
 
 
@@ -272,17 +303,19 @@ Called when the feedback screen gets dismissed with any result, positive or nega
 
 Called when the user taps the **Submit** button on the feedback screen. The onCsatDismissed callback is called as well.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_CSAT_SUBMITTED_INTENT_ACTION</p>
-<ul>
-<li>To get the conversationID param from the Intent, use LivePersonIntents.getConversationID(intent).</li>
-<li>To get the starRating param from the Intent, use LivePersonIntents.getCsatStarRating(intent).</li>
-</ul>
-<p><b>Callback:</b> </p>
-<p>onCsatSubmitted(String conversationId, int starRating)</p>
-<p><i>- Deprecated since August 19, 2019 -</i> <br/> onCsatSubmitted(String conversationId)</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_CSAT_SUBMITTED_INTENT_ACTION
+>
+> - To get the conversationID param from the Intent, use LivePersonIntents.getConversationID(intent).
+> - To get the starRating param from the Intent, use LivePersonIntents.getCsatStarRating(intent).
+>
+> **Callback:** 
+>
+> onCsatSubmitted(String conversationId, int starRating)
+>
+> *Deprecated since August 19, 2019* <br/>
+> onCsatSubmitted(String conversationId)
 
 | Parameter | Type | Description  |
 |----|----|----|
@@ -295,26 +328,28 @@ Called when the user taps the **Submit** button on the feedback screen. The onCs
 
 Called when the user taps the **Skip** or **Back** buttons. The onCsatDismissed callback is called as well.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_CSAT_SKIPPED_INTENT_ACTION</p>
-<p><b>Callback:</b> </p>
-<p>onCsatSkipped()</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_CSAT_SKIPPED_INTENT_ACTION
+>
+> **Callback:** 
+>
+> onCsatSkipped()
 
 
 
 ### Authentication Events
 #### Token Expired
 
-Called if the token used in the session has expired and is no longer valid. The host app needs to <a href="android-methods.html#reconnect">reconnect</a> with a new authentication key.
+Called if the token used in the session has expired and is no longer valid. The host app needs to [reconnect](android-methods.html#reconnect) with a new authentication key.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_TOKEN_EXPIRED_INTENT_ACTION</p>
-<p><b>Callback:</b> </p>
-<p>onTokenExpired()</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_TOKEN_EXPIRED_INTENT_ACTION
+>
+> **Callback:** 
+>
+> onTokenExpired()
 
 
 
@@ -322,12 +357,14 @@ Called if the token used in the session has expired and is no longer valid. The 
 
 Called if the temporary user authentication used specifically in an Unauthenticated type flow expires.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_UNAUTHENTICATED_USER_EXPIRED_INTENT_ACTION</p>
-<p><b>Callback:</b> </p>
-<p>onUnauthenticatedUserExpired()</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_UNAUTHENTICATED_USER_EXPIRED_INTENT_ACTION
+>
+> **Callback:** 
+>
+> onUnauthenticatedUserExpired()
+
 
 
 ### Connection Events
@@ -335,13 +372,15 @@ Called if the temporary user authentication used specifically in an Unauthentica
 
 Called when the connection to the conversation server has been established or disconnected.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_CONNECTION_CHANGED_INTENT_ACTION</p>
-<ul><li>To get the isConnected param from the Intent, use LivePersonIntents.getConnectedValue(intent).</li></ul>
-<p><b>Callback:</b> </p>
-<p>onConnectionChanged(boolean isConnected)</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_CONNECTION_CHANGED_INTENT_ACTION
+>
+> - To get the isConnected param from the Intent, use LivePersonIntents.getConnectedValue(intent).
+> 
+> **Callback:** 
+>
+> onConnectionChanged(boolean isConnected)
 
 | Parameter | Type | Description  |
 |----|----|----|
@@ -354,16 +393,16 @@ Called when the connection to the conversation server has been established or di
 
 Called to indicate that an internal SDK error occurred.
 
-<div style="margin-left: 20px;">
-<p><b>Intent Action:</b> </p>
-<p>ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION</p>
-<ul>
-<li>To get the type param from the Intent, use LivePersonIntents.getOnErrorTaskType(intent)</li>
-<li>To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent)</li>
-</ul>
-<p><b>Callback:</b> </p>
-<p>onError(TaskType type, String message)</p>
-</div>
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION
+>
+> - To get the type param from the Intent, use LivePersonIntents.getOnErrorTaskType(intent).
+> - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
+>
+> **Callback:** 
+>
+> onError(TaskType type, String message)
 
 | Parameter | Type | Description |
 |----|----|----|
