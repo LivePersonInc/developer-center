@@ -1,5 +1,5 @@
 ---
-pagename: Attributes
+pagename: SDK 5.0 and above
 redirect_from:
   - consumer-experience-ios-sdk-attributes.html
   - mobile-app-messaging-sdk-for-ios-customization-and-branding-attributes.html
@@ -10,7 +10,7 @@ documentname: Mobile App Messaging SDK for iOS
 subfoldername: SDK Attributes
 
 order: 224
-permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html
+permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-sdk-5-0-and-above.html
 
 indicator: messaging
 ---
@@ -2381,5 +2381,3 @@ When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-fo
 
 - **Type:** UIImage?    
 - **Default value:** nil
-
- 
