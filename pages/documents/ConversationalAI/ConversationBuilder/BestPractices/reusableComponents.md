@@ -29,7 +29,7 @@ For example:
 
 <img style="width:350px" src="img/ConvoBuilder/reusableYesNo2.png">
 
-Once you create the "yes" and "no" intents, you can create response conditions that evaluate the consumer’s response against them. In a condition, simply select “Response Intent” and then select the appropriate intent.
+Once you create the "yes" and "no" intents, you can create response conditions that evaluate the consumer’s response against them. In a condition, simply select “Response Intent,” and then select the appropriate intent.
 
 <img style="width:800px" src="img/ConvoBuilder/reusableYesNo3.png">
 
@@ -39,7 +39,7 @@ Many dialogs require the following sequence of interactions within their flow:
 
 *Did that resolve your question? Yes or No*
 
-*where:*
+*Where:*
 * *"Yes" sends a good-bye message and closes the conversation.*
 * *"No" asks the user for input and matches the user's intent.*
 
@@ -47,23 +47,27 @@ To avoid repeatedly having to build this set of interactions within every dialog
 
 **To create the "resolve and close" dialog**
 
-1. Create a new dialog named "Confirm Resolution and Close".
+1. Create a new dialog named something like, "Confirm Resolution and Close".
 2. Add the series of interactions shown in the following image (one Multiple Choice question, followed by three Text statements). Name the interactions with easily identifiable names. And configure the question's response conditions to direct the flow as indicated.
     
     <img style="width:600px" src="img/ConvoBuilder/reusableResolveAndCloseDialog1.png">
     
     
-    To configure the response conditions, consider using reusable "yes" and "no" intents, as described in the first section on this page.
+    To configure the response conditions, consider using reusable "yes" and "no" intents, as described in the [first section](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents) on this page.
+
+3. In the LP_CLOSECONVERSATION statement's interaction details, set the **Next Step** to "End Interaction."
+
+    <img style="width:800px" src="img/ConvoBuilder/reusableResolveAndCloseDialog5.png">
 
     In the case of a "no" answer, the LP_CLOSECONVERSATION statement will cause the bot to end the conversation.
 
-3.  Go to another dialog in your bot, and, where it reaches its logical end and you want to confirm resolution with the consumer, explicitly set the **next step** to be this dialog's "Is there anything else I can help you with?" question. 
+4. Go to another dialog in your bot, and, where it reaches its logical end and you want to confirm resolution with the consumer, explicitly set the **next step** to be this Confirm Resolution and Close dialog's "Is there anything else I can help you with?" question. 
 
     The following serves as an example:
-    <img style="width:600px" src="img/ConvoBuilder/reusableResolveAndCloseDialog2.png">
+    <img style="width:800px" src="img/ConvoBuilder/reusableResolveAndCloseDialog2.png">
 
-4. Repeat the preceding step for all other applicable dialogs.
-5. Test the dialog affirmatively and negatively.
+5. Repeat the preceding step for all other applicable dialogs.
+6. Test the dialog affirmatively and negatively.
 
     Below is an example flow for an affirmative (yes) answer.
     <img style="width:500px" src="img/ConvoBuilder/reusableResolveAndCloseDialog3.png">

@@ -180,6 +180,7 @@
           - subpagename: Deploying to LiveEngage
       #- pagename: Keyword Triggers
       #- pagename: Operations
+      - pagename: Common Use Cases
       - pagename: Best Practices
         subpages:
           - subpagename: Using Environment Variables
