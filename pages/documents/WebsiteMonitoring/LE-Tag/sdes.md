@@ -1,6 +1,5 @@
 ---
 pagename: SDEs
-redirect_from:
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: LE-Tag
