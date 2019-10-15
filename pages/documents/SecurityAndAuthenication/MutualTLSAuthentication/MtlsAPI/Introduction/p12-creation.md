@@ -26,7 +26,7 @@ openssl genrsa -des3 -out {caKeyName}.key 4096
 
 ## Create a CA certificate (QA related)
 
-365 days till expiration, can be changed.
+365 days till expiration, can be changed by modifying `-days`.
 
 ```
 openssl req -new -x509 -days 365 -key {caKeyName}.key -out {caCertName}.crt
