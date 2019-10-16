@@ -33,10 +33,24 @@ permalink: connector-api-webhooks-notification-protocol.html
 
 ```java
 {
-   Mac mac = Mac.getInstance("HmacSHAl"); 
-   mac.init(new SecretKeySpec( "THE_CLIENT_SECRET".getBytes("MUTF-8"), "HmacSHAl"));
-   byte[] signature = Base64.getEncoder().encode(mac.doFinal("payload".getBytes("UTF-8")));
-   System.out.println(signature);
+    String payload = {
+       "kind":"req",
+       "id":"1",
+       "type":"ms.PublishEvent",
+       "body":{
+          "dialogId":"123a4567-b89c-12d3-e456-789123456789",
+          "event":{
+             "type":"ContentEvent",
+             "contentType":"text/plain",
+             "message": "Example of message to be sent"
+          }
+       }
+    }
+
+    Mac mac = Mac.getInstance("HmacSHA1");
+    mac.init(new SecretKeySpec("THE_CLIENT_SECRET".getBytes("MUTF-8"), "HmacSHA1"));
+    byte[] signature = Base64.getEncoder().encode(mac.doFinal(payload.getBytes("UTF-8")));
+    System.out.println(signature);
 }
 ```
 
