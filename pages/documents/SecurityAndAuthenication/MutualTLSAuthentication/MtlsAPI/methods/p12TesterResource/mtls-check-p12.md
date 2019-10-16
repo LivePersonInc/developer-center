@@ -41,7 +41,7 @@ Key: password (Text field)
 
 Value: The password matching this specific p12
 
-Key: body (Text field)|
+Key: body (Text field)
 
 Value: Contains the same body as the client sends for the original endpoint. Not required.
 

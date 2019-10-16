@@ -54,7 +54,7 @@ To track Engagement Attributes, follow the steps described below.
 
 1. Insert the Engagement Attribute declaration in a script tag, either at the end of the LiveEngage tag script, or in a separate script tag just after.
 
-2. Insert the push function below the declaration and add the type of Engagement Attribute, for example, “prodView”.
+2. Insert [the push function](le-tag-sdes.html#push-sdes) below the declaration and add the type of Engagement Attribute, for example, “prodView”.
 
 _Notes_:
 
@@ -64,25 +64,5 @@ _Notes_:
 
 {:start="3"}
 3. Validate the code by going to the visitor page and simulating the visitor actions that trigger an event.
-
-Example for data that is sent when a visitor views “Asics Women's GT 2000 4”:
-
-```javascript
-window.lpTag = window.lpTag || {};
-lpTag.sdes = lpTag.sdes||[];
-lpTag.sdes.push(
-  {
-    "type": "prodView", //MANDATORY
-    "products": [{ //ARRAY OF PRODUCTS
-      "product": {
-        "name": "Asics Women's GT 2000 4", //PRODUCT NAME
-        "category": "Women running shoes", //PRODUCT CATEGORY NAME
-        "sku": "10305020", //PRODUCT SKU OR UNIQUE IDENTIFIER
-        "price": 119.95 //PRODUCT PRICE
-      }
-    }]
-  }
-);
-```
 
 _Note: When LiveEngage gets a list, the system never calculates totals nor numbers of items. LiveEngage relies on the event to send that information._

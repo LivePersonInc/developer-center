@@ -34,3 +34,4 @@ Some changes need to be made for certain Button actions:
     * To whitelist URLs go to your Facebook page→ Settings→ Messenger Platform→ Whitelisted Domains. 
   * The height ratio for webview display of the Facebook URL buttons will always be set as ["full"](https://developers.facebook.com/docs/messenger-platform/send-messages/buttons) and cannot be changed
   * Facebook Messenger desktop clients use an iframe to display the web links. Your brands website will need to support iframes in order for the consumer to be able to view it from FB desktop. 
+    * If the website that you are adding does not support iframes, the content will not display either (eg. Google Maps)

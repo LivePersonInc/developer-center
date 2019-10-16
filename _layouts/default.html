@@ -74,14 +74,26 @@ algoliaOptions: {
 autocompleteOptions: {
   openOnFocus: true,
   templates: {
-     //'suggestion' templating function used to render a single suggestion
-     suggestion: function(suggestion) {
-       if (suggestion._highlightResult.content && suggestion._highlightResult.title) {
-         return '<span>' + '<a  onclick="linkclick(event, this)" class="searchlink" href="' + suggestion.permalink +'">' + suggestion._highlightResult.title.value + '</a> </span>' + '<br />' + '<span>' + '<a onclick="linkclick(event, this)" class="searchlinktext" href="' + suggestion.permalink +'">' +  suggestion._highlightResult.content.value + '</a> </span>';
-       };
-     }
- }
-}
+    suggestion: function(suggestion) {
+      let value = suggestion.pagename;
+      let content = suggestion.content;
+      let link = suggestion.permalink;
+      if (suggestion._highlightResult.pagename) {
+        value = suggestion._highlightResult.pagename.value;
+      }
+      if (suggestion._highlightResult.content) {
+        content = suggestion._highlightResult.content.value;
+      }
+      if (suggestion._highlightResult.permalink) {
+        suggestion._highlightResult.permalink.value;
+      }
+      return (
+        '<span class="searchtitlecontainer">' + '<a  onclick="linkclick(event, this)" class="searchtitle" href="' + link +'">' + value + '</a> </span>' + '<br />' + '<a onclick="linkclick(event, this)" class="searchlinktext" href="' + link +'">' + '<span class="searchcontentcontainer">' + content + '</span> </a> '
+      )
+      }
+    },
+    empty: '<div class="aa-empty">No results found! Duh</div>',
+  },
 });
 
 search.autocomplete.on({
