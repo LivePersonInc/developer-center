@@ -65,7 +65,7 @@ In this example we will create and use static attributes. To check if a customer
     {
         "name": "vipCustomer",
         "type": "static",
-        "payload": ["55501"]
+        "payload": "55501"
     }
     ```
 
@@ -75,7 +75,7 @@ In this example we will create and use static attributes. To check if a customer
     {
         "name": "regularCustomer",
         "type": "static",
-        "payload": ["55506"]
+        "payload": "55506"
     }
     ```
 
