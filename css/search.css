@@ -1,5 +1,6 @@
 .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {
   border: none !important;
+  height: 100%;
 }
 
 .algolia-autocomplete .ds-dropdown-menu {

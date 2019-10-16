@@ -171,7 +171,7 @@
           - subpagename: Introduction
           - subpagename: Debugging and Logging
           - subpagename: Get and Set User Data and Variables
-          - subpagename: Get and Set Conversation Flow Data 
+          - subpagename: Get and Set Conversation Flow Data
           - subpagename: Sending Messages
           #- subpagename: Context Session Store Wrapper
       - pagename: Keywords
@@ -216,10 +216,10 @@
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-  - documentname: LiveIntent
-    pages:
-      - pagename: Overview
-      - pagename: Dashboard
+  # - documentname: LiveIntent
+  #   pages:
+  #     - pagename: Overview
+  #     - pagename: Dashboard
   - documentname: Intent Builder
     pages:
       - pagename: Overview
@@ -1026,6 +1026,8 @@
             - subpagename: getEngagementState
     - documentname: LE-Tag
       pages:
+        - pagename: Overview
+        - pagename: SDEs
         - pagename: Events
           subpages:
             - subpagename: Event Binding

@@ -4,7 +4,6 @@ redirect_from:
   - lp-tag-tag-events-how.html
   - le-tag-how-to-use-liveengage-tag-events.html
   - lp-tag-tag-events-overview.html
-  - le-tag-overview.html
   - le-tag-events.html
 sitesection: Documents
 categoryname: "Website Monitoring"
