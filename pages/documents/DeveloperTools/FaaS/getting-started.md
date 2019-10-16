@@ -113,6 +113,13 @@ There are 3 user permissions pertaining to Functions:
     <td>✅</td>
     <td>-</td>
   </tr>
+    <tr>
+    <td>schedule</td>
+    <td>create/edit/delete</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
 </tbody>
 </table>
 
@@ -131,7 +138,7 @@ Please follow these steps in order to get SSO unified login working with LivePer
 
 * Contact your LivePerson account representative to get SSO Unified Login feature enabled for your account.
 
-* Once SSO Unified Login is enabled for your account, you can use `https://faas.liveperson.net/api/sso/login?accountId=<accountId>` to login into LivePerson Functions for Production Environments. Please use `va-a.faasui.liveperson.net/api/sso/login?accountId=<accountId>` for Alpha Environments. Moreover you can also use the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain per environment, by providing the service `faasUI` to the Domain API.
+* Once SSO Unified Login is enabled for your account, you can use `https://faas.liveperson.net/api/sso/login?accountId=<accountId>` to login into LivePerson Functions for Production Environments. Please use `https://va-a.faasui.liveperson.net/api/sso/login?accountId=<accountId>` for Alpha Environments. Moreover you can also use the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain per environment, by providing the service `faasUI` to the Domain API.
 
 <div class="important">Make sure to be logged into LiveEngage before accessing LivePerson Functions from your account.</div>
 

@@ -1,12 +1,13 @@
 ---
 pagename: Methods
 redirect_from:
+  - maven-askmaven-methods.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven
+documentname: Maven AI
 subfoldername: AskMaven
-permalink: maven-askmaven-methods.html
+permalink: maven-ai-askmaven-methods.html
 indicator: messaging
 ---
 

@@ -17,7 +17,7 @@ To track the efficiency of the bot, the dashboard features an overview for the n
 
 The dashboard can be accessed by clicking on the bot's name.
 
-<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot-status-select.png">
+<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_select.png">
 
 Figure 1.1 How to access the bot status dashboard
 
@@ -29,32 +29,27 @@ For a running bot, conversation data is limited to a maximum of 7 days of past d
 
 ### Dashboard Views
 
-#### Main View
-
 The user will see the following screen after clicking on the bot's name. 
 
-<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot-status-overview.png">
+<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_online_state.png">
 
 Figure 2.1 Dashboard Main View
 
 In Section 1 of *Figure 2.1*, the dashboard provides a short configuration overview for the selected bot. The user can see the following:
 
 * connection type to LiveEngage (either Chat or Messaging)
-* configured A.I. Vendor
 * failover skill
+* the profile the bot user has been assigned to
+* configured A.I. Vendor
 * skills which are assigned to the bot
 
 #### Status
 
 In section 2 of *Figure 2.1*, the dashboard provides a chronological history of bot state events and an overview of the bot's overall uptime. 
 
-<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot-status-online-state.png">
+In section 2 of *Figure 2.1* the user can see the overall calculated uptime, the bot's start time and online runtime.
 
-Figure 3.1 Bot Status overview
-
-In section 1 of *Figure 3.1* the user can see the overall calculated uptime, the bot's start time and online runtime.
-
-In section 2 of *Figure 3.1* the user can see different bot states events. The bot can have 4 different states: Online, Vendor Interruption, Service Interruption, and Offline.
+In section 3 of *Figure 2.1* the user can see different bot states events. The bot can have 4 different states: Online, Vendor Interruption, Service Interruption, and Offline.
 
 The Vendor Interruption state indicates that there is an error reaching the configured AI vendor. In this case the bot will escalate each conversation to the configured failover skill.
 
@@ -66,13 +61,13 @@ The error details contain a human readable error message, the error code and an 
 
 #### Conversation Metrics
 
-In section 3 of *Figure 2.1*, the bot status dashboard provides an overview of specific bot conversation metrics. 
+When selecting the Conversation Metrics tab the bot status dashboard provides an overview of specific bot conversation metrics. 
 
-<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot-status-metrics.png">
+<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_metrics.png">
 
-Figure 4.1 Bot conversation metrics
+Figure 3.1 Bot conversation metrics
 
-On the left side, in section 1 of *Figure 4.1*, the user can see the accumulated metrics over the last 7 days. There are currently 4 KPIs:
+On the left side, in section 1 of *Figure 3.1*, the user can see the accumulated metrics since the last start. There are currently 4 KPIs:
 
 | Metric | Description |
 | --- | --- |
@@ -81,4 +76,4 @@ On the left side, in section 1 of *Figure 4.1*, the user can see the accumulated
 | Transferred Conversations | Percentage of total conversations that were transferred to a different skill |
 | Escalated Conversations | Percentage of total conversations that were escalated due to an error with the bot |
 
-On The right side, in section 2 of *Figure 4.1*, the user can see a timeline representation of the conversation metrics. The user can select between various time scales, the smallest is last ten minutes and the biggest is last week.
+On The right side, in section 2 of *Figure 3.1*, the user can see a timeline representation of the conversation metrics. The user can select between various time scales, the smallest is last ten minutes and the biggest is last week.

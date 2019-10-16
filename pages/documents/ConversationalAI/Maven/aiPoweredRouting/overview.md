@@ -1,12 +1,13 @@
 ---
 pagename: Overview
 redirect_from:
+  - maven-ai-powered-routing-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven
+documentname: Maven AI
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-overview.html
+permalink: maven-ai-ai-powered-routing-overview.html
 indicator: messaging
 ---
 
