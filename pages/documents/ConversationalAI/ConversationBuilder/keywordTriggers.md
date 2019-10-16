@@ -22,7 +22,7 @@ To close the current dialog, create a Text statement that contains the special s
 
 This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
 
-If this Text statement isn't the last in the dialog, set the **Next Step** to "End Interaction" in the interaction before this Text statement.
+If this Text statement isn't the last in the dialog, set this statement's **Next Step** to "End Interaction" (not "Next Interaction").
 
  {: .important}
 LP_CLOSEDIALOG triggers a post-conversation survey.
@@ -35,7 +35,7 @@ To close the current conversation, create a Text statement that contains the spe
 
 This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
 
-If this Text statement isn't the last in the dialog, set the **Next Step** to "End Interaction" in the interaction before this Text statement.
+If this Text statement isn't the last in the dialog, set this statement's **Next Step** to "End Interaction" (not "Next Interaction").
 
 {: .important}
 LP_CLOSECONVERSATION does **not** trigger a post-conversation survey.
