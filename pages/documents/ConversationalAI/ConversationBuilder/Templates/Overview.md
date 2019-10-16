@@ -12,7 +12,7 @@ indicator: both
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_selection3.png">
 
-All Conversation Builder Automations are based upon **templates**. The Basic Automation Template is the best choice if you want to create a completely custom automation from scratch.
+All Conversation Builder Automations are based upon **templates**. The Basic Bot template is the best choice if you want to create a completely custom bot from scratch.
 
 For other, more common use cases, Conversation Builder has a set of predefined, industry vertical templates that enable rapid adoption of automation.
 
@@ -20,21 +20,21 @@ Each conversational template consists of the following capabilities:
 
 * Intents associated with the use case
 
-* Conversational dialogs with appropriate interactions for the respective channels or end points (e.g. Web, Apple Business Chat, SMS etc.)
+* Conversational dialogs with appropriate interactions for the respective channels or end points (Web, Apple Business Chat, SMS etc.)
 
-* API integrations with industry leading services (e.g. Shopify in Retail) as well as brand-specific services
+* API integrations with industry-leading services (e.g., Shopify in Retail) and brand-specific services
 
 ### Template Use Cases
 
-The following Use Cases will be provided for multiple different industry verticals.
+The following use cases will be provided for multiple different industry verticals.
 
 | Template | Capabilities | Integrations |
 | --- | --- | --- |
-| Simple Router | Welcome message with choices to route to bots or agents | Route to Bots, Agents |
-| Simple FAQ | Offer detailed responses for frequently asked questions via a knowledge base of questions and answers | Knowledge Base |
-| Simple Lead Generation | Capture lead’s basic contact info. Sends the captured info to email | Email |
-| Full Lead Generation | Capture lead’s contact info, interest in product/service and related details. Sends the captured info to email or SMS | Email, Twilio number |
-| Order Status | Shoppers can check the status of their orders with authentication via order number and name etc. | Shopify |
+| Simple Router | Welcome message with choices to route to bots or agents. | Route to Bots, Agents |
+| Simple FAQ | Offer detailed responses for frequently asked questions via a knowledge base of questions and answers. | Knowledge Base |
+| Simple Lead Generation | Capture lead’s basic contact info. Sends the captured information to email. | Email |
+| Full Lead Generation | Capture lead’s contact info, interest in product/service and related details. Sends the captured info to email or SMS. | Email, Twilio number |
+| Order Status | Shoppers can check the status of their orders with authentication via order number and name, etc. | Shopify |
 
 
 <!--
@@ -114,12 +114,12 @@ The following Use Cases will be provided for multiple different industry vertica
 </table>
 -->
 
-### How to Create an Automation from a Template
+### Create a bot from a template
 
-1. Select New Automation from Conversation Builder
+1. On the Bots dashboard, click **New Bot** in the upper-right corner.
 
-2. Choose the industry vertical and template use case
+2. Select the template.
 
-3. Review what the template includes (dialogs, intents/entities, integrations, etc.)
+3. Review what the template includes (dialogs, intents/entities, integrations, etc.), and click **Create Bot**.
 
-4. Configure the parts that need to be customized (API Integration details, brand voice in dialog interactions, etc.)
+4. Configure the parts that need to be customized (API integration details, brand voice in dialog interactions, etc.).
