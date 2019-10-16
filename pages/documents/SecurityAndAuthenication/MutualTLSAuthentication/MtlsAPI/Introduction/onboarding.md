@@ -18,15 +18,15 @@ As part of our MTLS service, we offer a p12 file tester. You can find it [here](
 
 ### Step 2 - Upload certificate
 
-Now that your ceritifcate if validated, you can upload it. Once it is uploaded, it can be mapped.
+Now that your certificate is validated, you can upload it. Once it is uploaded, it can be mapped.
 
 You can upload your certificate by using the following method: [Create Certificate from File](mtls-methods-create-certificate-from-file.html). This method creates both the MySql entities and the Hashicorp Vault entry.
 
-The `id` parameter returned is needed to further configuration. Please note it before moving to the next step.
+The `id` parameter returned by this method is needed for further configuration. Please note it before moving to the next step.
 
 ### Step 3 - Create MTLS Mapping object
 
-Now that we have validated and uploaded our certificate, we must map it to the corresponding objects. This mapping must correspond with runtime submitted parameters to identify the context (will be explained below).
+Now that we have validated and uploaded our certificate, we must map it to the corresponding objects. This mapping must correspond with runtime submitted parameters to identify the context (this will be explained further below).
 
 In order to create the mapping object, you will need to use the following method.
 
@@ -67,8 +67,6 @@ Example body (Certificate array):
 
 If all previous steps were successful, you can now start using the runtime. The runtime includes two methods:
 
-* [Mapping method](mtls-methods-check-mapping-configuration.html)
+* [Mapping method](mtls-methods-check-mapping-configuration.html) - This method receives triplets of serviceName/url/siteid and returns for each triplet whether a certificate is configured for them. Use this method to make sure your certificates are configured properly.
 
-* [Forward method](mtls-methods-forward-get-request.html)
-
-You can use the first method, to check that the certificate exists and is valid. You can then use the second method to forward the request.
+* [Forward method](mtls-methods-forward-get-request.html) - the request will be mTLS wrapped using the certificate fetched. The certificate is fetched using the provided parameters. The request is then forwarded to the `forwardUrl` specified. The response will return as if contacting the remote endpoint directly but will be authenticated, its identity confirmed via the certificate.

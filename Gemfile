@@ -4,7 +4,7 @@ gem 'jekyll', '~> 3.8.6'
 
 group :jekyll_plugins do
    gem 'jekyll-feed', '~> 0.6'
-   # gem 'algoliasearch-jekyll', '~> 0.8.0'
+   gem 'jekyll-algolia', :git => 'https://github.com/algolia/jekyll-algolia', :branch => 'feat/SETTINGS'
    gem 'jekyll-redirect-from'
    gem 'jekyll-gzip'
    gem 'autoprefixer-rails'
@@ -14,4 +14,5 @@ group :jekyll_plugins do
    gem 'rack', '>= 2.0.6'
    gem 'nokogiri', '>= 1.10.4'
    gem 'html-proofer'
+   gem 'jekyll-sitemap'
 end

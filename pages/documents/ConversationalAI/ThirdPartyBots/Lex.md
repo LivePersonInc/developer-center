@@ -15,6 +15,7 @@ The following documentation outlines the configuration for the connector and how
 
 {: .important}
 At this time, Lex response cards & audio messages are not supported.
+The Connector uses Lex ApiVersion 2016-11-28.
 
 ### Bot Configuration
 
@@ -39,11 +40,6 @@ The following Amazon Lex information should be provided to LivePerson:
   </thead>
   <tbody>
   <tr>
-    <td>API Version</td>
-    <td>Lex API version</td>
-    <td>2016-11-28</td>
-  </tr>
-  <tr>
     <td>AWS Region</td>
     <td>AWS region of the lex bot</td>
     <td>us-east-1</td>
@@ -59,15 +55,15 @@ The following Amazon Lex information should be provided to LivePerson:
     <td>lwRQJUxxxxxxxxxxxxRQFpoxxxxxxxdE6JR</td>
   </tr>
   <tr>
-    <td>Bot alias</td>
-    <td>Bots alias of the IAM role</td>
-    <td>botConnectors</td>
-  </tr>
-  <tr>
     <td>Bot name</td>
     <td>The bots name in the IAM role</td>
     <td>botConnectors</td>
   </tr>
+    <tr>
+      <td>Bot alias</td>
+      <td>Bots alias of the IAM role</td>
+      <td>botConnectors</td>
+    </tr>
  </tbody>
 </table>
 

@@ -1,12 +1,13 @@
 ---
 pagename: Overview
 redirect_from:
+  - maven-context-warehouse-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven
+documentname: Maven AI
 subfoldername: Context Warehouse
-permalink: maven-context-warehouse-overview.html
+permalink: maven-ai-context-warehouse-overview.html
 indicator: messaging
 ---
 

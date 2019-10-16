@@ -10,30 +10,26 @@ permalink: conversation-builder-getting-started-3-integrations.html
 indicator: both
 ---
 
-Many use cases will require an integration with an API to send and receive data. Following the "billing" use case, we are going to add an integration to check a user’s account balance. 
+Many use cases require integration with an API to send and receive data. Following the "billing" use case, in this tutorial you add an integration to check a user’s account balance. 
 
 {: .important}
-This is an example API that will return random balance data for a given account and email address. 
+This tutorial uses an example API that returns random balance data when given an account number and email address. 
 
-### Step 8: Create Billing API Integration
+### Step 8: Create an account balance API integration
 
-Go back to the automation you created in Conversation Builder. Along the top of the workspace, click on Integrations.
+1. Open the bot in Conversation Builder.
+2. In the upper-right corner, click **Integrations**.
+3. On the Add Integration page, configure the integration as follows, and then click **Save**.
 
-From here we will create a new API with the following parameters. 
+  * **Integration Name**: Balance
+  * **Response Data Variable Name**: Balance
+  * **Method**: GET
+  * **URL**: 
+    * For US: https://va.bc-intg.liveperson.net/thirdparty-services-0.1/accountBalance
+    * For Europe: https://platformservice-eu.botcentralapi.com/thirdparty-services-0.1/accountBalance
+    * For APAC: https://platformservice-ap.botcentralapi.com/thirdparty-services-0.1/accountBalance 
 
-* **Integration Name**: Balance
-
-* **Response Data Variable Name**: Balance
-
-* **Method**: GET
-
-* **URL**: 
-
-  * For US: https://platformservice.botcentralapi.com/thirdparty-services-0.1/accountBalance
-  * For Europe: https://platformservice-eu.botcentralapi.com/thirdparty-services-0.1/accountBalance
-  * For APAC: https://platformservice-ap.botcentralapi.com/thirdparty-services-0.1/accountBalance 
-
-* **Request Parameters**: Be sure to add to Parameters, NOT Headers
+  * **Request Parameters**: Be sure to add parameters, **not** headers.
 
   <table>
     <thead>
@@ -54,8 +50,7 @@ From here we will create a new API with the following parameters.
     </tbody>
   </table>
 
-
-* **Custom Data Fields**: these provide a simple method of displaying the results in your dialog interactions. The return data is stored here.
+  * **Custom Data Fields**: These provide a simple method of displaying the results in interactions in dialogs. The return data is stored here.
 
   <table>
     <thead>
@@ -71,57 +66,41 @@ From here we will create a new API with the following parameters.
     </tbody>
   </table>
 
-**Save** the API settings.
+### Step 9: Use the integration in a dialog
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_15.png">
+1. Return to the dialog editor by clicking the bot name in the upper-left corner.
+  
+    <img style="width:200px" src="img/ConvoBuilder/helloworld/navfromintegrations.png">
+2. Add a regular dialog named "Account Balance."
+3. In the dialog, add a User Says interaction, and enter, "I want to see my account balance" for the sample user statement.
+4. Open the interaction's **Interaction Details**, and click **Settings**. Here you can add a simple pattern to detect the word “balance” (or you can create an intent if you want to get fancy). You can use the wildcards (`*balance*`) to match all instances.
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/accountbalancedialog.png">
+5. Add a Text statement <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_textStatement.png"> that says, "I can get your latest balance."
 
-### Step 9: Use Integration in Dialog
+    To get the user's account balance, you need to ask for their account number.
+6. Add a Text question <img style="width:20px" src="img/ConvoBuilder/helloworld/icon_textQuestion.png">. For the question text, enter, "Please enter your 6-digit account number (e.g., 123456)."
+7. Still in the Text question, open the Interaction Details, and add a condition on the **Next Actions** tab. To do so, select "Regular Expression," and add the following regular expression (regex) to match 6-digit numbers: `^\b\d{6}\b`. Next, capture the user’s account number as a slot variable. Under Slot, enter a **Slot Name** of "accountNumber"; for **Slot Value**, enter `{$query}`, and for **Duration**, make sure it's set to "Dialog." 
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/askaccountnumber.png">
+  You also need to ask for and capture the user's email address.
+8. Add another Text question. For the question text, enter, "Please enter your email address (e.g., fred@home.com)."
+9. Still in the Text question, open the Interaction Details, and add a condition on the **Next Actions** tab. To do so, select "Regular Expression," and add the following regex to match email addresses: `^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$`. Under Slot, enter a **Slot Name** of "userEmail"; for **Slot Value**, enter `{$query}`, and for **Duration**, make sure it’s set to "Dialog."
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/askemail.png">
+  When you created the Balance integration, you told it to use the following slots in the request:
 
-Now we can return to the Dialog editor by tapping on Dialogs on the top of the workspace.
+    * `{$botContext.slot.accountNumber}`
+    * `{$botContext.slot.userEmail}`
 
-Let’s add a new regular dialog and name it "Account Balance". For the first User Says interaction, enter the text "I want to see my account balance".
-
-Go to the Interaction Details and select Settings. Here we can add a simple pattern to detect the word “balance” (or if you want to get fancy, you can create an intent). You can use the wildcards (`*balance*`) to match all instances.
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/accountbalancedialog.png">
-
-<!--<img style="width:400px" src="img/ConvoBuilder/helloworld/balancepattern.png">-->
-
-Now we can add a text interaction <img style="width:40px" src="img/ConvoBuilder/helloworld/image_16.png"> to tell people we can help them with their account balance. Make one that says "I can get your latest balance.".
-
-In order to get the user’s account balance, we need to ask for their account number. Add a Text Question <img style="width:40px" src="img/ConvoBuilder/helloworld/image_17.png"> interaction and enter the following text "Please enter your 6-digit account number? (eg: 123456)". Then tap on the Interaction Details and under the User Response tab, add a Condition, select Regular Expression and add the following regex to match 6-digit numbers: `^\b\d{6}\b`.
-
-Next, we want to capture the user’s account number as a slot variable. Under Slot, enter a Slot Name of "accountNumber", for Value, enter `{$query}` and for Scope, make sure its set to Dialog. 
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/askaccountnumber.png">
-
-<!--<img style="width:400px" src="img/ConvoBuilder/helloworld/accountnumberpattern.png">
-
-<img style="width:400px" src="img/ConvoBuilder/helloworld/accountnumberstarvar.png">
-
-<img style="width:400px" src="img/ConvoBuilder/helloworld/emailpattern.png">
-
-<img style="width:400px" src="img/ConvoBuilder/helloworld/emailstarvar.png">-->
-
-We want to capture the user’s email address as well. Add another Text Question interaction and add the following copy: “Please give me your email address (eg: fred@home.com)”. Then tap on the Interaction Details and under the User Response add a Condition and the following Regular Expression to match email addresses: `^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$`
-
-Under Slot, enter a Slot Name of “userEmail”, for Value, enter `{$query}` and for Scope, make sure it’s set to Dialog. 
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/askemail.png">
-
-When we created the Balance integration, we told it to use the following slots in the requests:
-
-  * `{$botContext.slot.accountNumber}`
-  * `{$botContext.slot.userEmail}`
-
-When we created the Question interactions, we stored the user responses in those same slots via the Slot Name field. Now when we call the Balance API, it will use the values in those Slots to make the request.
-
-Add an Integration <img style="width:40px" src="img/ConvoBuilder/helloworld/image_18.png"> interaction to your dialog. Tap on the interaction and select "Balance" from the drop down selector.
-
-To finish, we just need to display the user’s balance results. Add a Text statement interaction and enter the following copy: "Your current balance is {Balance.balance}". When the integration interaction runs, it stores the response data in the Custom Data Field that you configured. `Balance.balance` is the integration name followed by the Custom Data Field “balance” that you configured in the Integration.
-
-Go to the Preview, type "reset" and type “account balance” or similar to start your dialog. *Any* 6 digit account number and *any* email address will work for this API.
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/integrationtest.png">
-
-You now understand the basics of integrations and slots.
+    So here, in the Question interactions, you have configured things so that the user's responses are stored in slots with those slot names. Now, when you call the Balance API, it will use the values in those slots to make the request.
+10. Add an API Integration interaction <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_integration.png">.  In the drop-down list in the interaction, select "Balance." This is the name of the integration that you created earlier.
+    
+    To finish, you just need to display the user's balance results.
+11. Add a Text statement that says, "Your current balance is {Balance.balance}." 
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/helloworld/dialogflow_accountbalance.png">
+  When the integration interaction runs, it stores the response data in the custom data field that you configured in the integration. `Balance.balance` is the name of the integration name followed by the name of that custom data field, which is “balance”.
+  
+    Now let's test all this out.
+12. Open the Preview window, and start a new session by entering "reset" and pressing Enter.
+13. Trigger the Account Balance dialog by entering, "I want to see my account balance," or something else with the word "balance."
+14. Follow the two prompts for an account number and email address. *Any* 6-digit account number and *any* email address will work for this API.
+  <img class="fancyimage" style="width:250px" src="img/ConvoBuilder/helloworld/integrationtest.png">
+  You now understand the basics of integrations and slots.

@@ -13,12 +13,14 @@ indicator: messaging
 
 ### How much diskspace does the SDK need?
 
-* Universal build: **+40MB**
-* Architecture-specific builds
-    * smallest: **+7MB** (armeabi)
-    * biggest: **+14MB** (arm64-v8a)
+* A universal build of the SDK is around **350kb**.
 
-**Note:** the SDK for Android comes packaged with prebuilt libraries for all supported architectures. Since we use native code, the SDK `aar` already contains precompiled binaries for all architectures. The size of the `aar` is *21.6 MB*. Note that when adding the `aar` dependency, the Android build system only binds the binaries for the desired architecture.
+**Note:** Note that when adding the `aar` dependency, the Android build system only binds the binaries for the desired architecture.
+
+### Does the SDK rely on native code?
+
+Since version 0.2.0 the SDK does not rely directly on native code. However the SDK relies on WebRTC which
+is implemented with native code (C++) together with JNI bindings for Java.
 
 ### Which ABIs/architectures are supported?
 
@@ -30,4 +32,3 @@ Currently, we support the following architectures/ABIs:
 * armeabi-v7a
 * arm64-v8a
 
-**Note:** we do not support MIPS architectures at the moment!

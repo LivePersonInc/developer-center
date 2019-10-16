@@ -13,7 +13,7 @@ indicator: both
 
 The Assistant tool is a helper tool which "listens" to your dialog as you build it, interaction by interaction, and suggests intents, entities, patterns, and more which can be added to each interaction.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_suggestion.png">
+<img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_suggestion.png">
 
 ### Adding a Domain
 

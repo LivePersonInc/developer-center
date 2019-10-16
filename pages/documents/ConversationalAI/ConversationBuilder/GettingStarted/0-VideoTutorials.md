@@ -1,6 +1,7 @@
 ---
 pagename: 0 - Video Tutorials
 redirect_from:
+  - conversation-builder-best-practices-tips-tricks.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
