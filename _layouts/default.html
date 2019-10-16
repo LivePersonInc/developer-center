@@ -60,9 +60,81 @@
   </div>
 <!-- /.container -->
 </div>
-<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-<script  src="{{ "js/algolia.js" }}"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script type="text/javascript">
+const search = docsearch({
+apiKey: 'e386ebed16c8f70de3c914b3ace55ae6',
+indexName: 'liveperson',
+inputSelector: '.aa-input-search',
+debug: false,
+algoliaOptions: {
+  hitsPerPage: 50
+},
+autocompleteOptions: {
+  openOnFocus: true,
+  templates: {
+    suggestion: function(suggestion) {
+      let value = suggestion.pagename;
+      let content = suggestion.content;
+      let link = suggestion.permalink;
+      if (suggestion._highlightResult.pagename) {
+        value = suggestion._highlightResult.pagename.value;
+      }
+      if (suggestion._highlightResult.content) {
+        content = suggestion._highlightResult.content.value;
+      }
+      if (suggestion._highlightResult.permalink) {
+        suggestion._highlightResult.permalink.value;
+      }
+      return (
+        '<span class="searchtitlecontainer">' + '<a  onclick="linkclick(event, this)" class="searchtitle" href="' + link +'">' + value + '</a> </span>' + '<br />' + '<a onclick="linkclick(event, this)" class="searchlinktext" href="' + link +'">' + '<span class="searchcontentcontainer">' + content + '</span> </a> '
+      )
+      }
+    },
+    empty: '<div class="aa-empty">No results found! Duh</div>',
+  },
+});
+
+search.autocomplete.on({
+  'autocomplete:shown': function() {
+    var content = document.getElementById('defaultcontent');
+    var sidebar = document.getElementById('defaultsidebar');
+    var footer = document.getElementById('defaultfooter');
+    content.classList.add('overlayvisible');
+    sidebar.classList.add('overlayvisible');
+    footer.classList.add('overlayvisible');
+},
+  'autocomplete:closed': function () {
+    var content = document.getElementById('defaultcontent');
+    var sidebar = document.getElementById('defaultsidebar');
+    var footer = document.getElementById('defaultfooter');
+    content.classList.remove('overlayvisible');
+    sidebar.classList.remove('overlayvisible');
+    footer.classList.remove('overlayvisible');
+},
+  'autocomplete:empty': function () {
+    var content = document.getElementById('defaultcontent');
+    var sidebar = document.getElementById('defaultsidebar');
+    var footer = document.getElementById('defaultfooter');
+    content.classList.add('overlayvisible');
+    sidebar.classList.add('overlayvisible');
+    footer.classList.add('overlayvisible');
+},
+  'autocomplete:updated': function () {
+    if (this.value != '') {
+    var input = document.getElementById('aa-search-input');
+    var filter = input.value.toUpperCase();
+    localStorage.setItem('filter', filter);
+    }else {
+      var content = document.getElementById('defaultcontent');
+      var sidebar = document.getElementById('defaultsidebar');
+      var footer = document.getElementById('defaultfooter');
+      content.classList.remove('overlayvisible');
+      sidebar.classList.remove('overlayvisible');
+      footer.classList.remove('overlayvisible');
+}}});
+</script>
 </body>
 {% if site.google_analytics %}
 {% include google_analytics.html %}
