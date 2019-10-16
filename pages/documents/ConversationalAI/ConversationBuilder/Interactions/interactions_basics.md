@@ -100,7 +100,7 @@ Add the following special tag inline inside your text interaction to force a bre
 
 <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_8.png">
 
-<img class="fancyimage" width="200" src="img/ConvoBuilder/breakWithDelay.png">
+<img class="fancyimage" width="350" src="img/ConvoBuilder/breakWithDelay.png">
 
 {: .important}
 The delay value is in milliseconds. 1000 = 1 second.
