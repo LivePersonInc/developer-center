@@ -77,7 +77,7 @@ The Apple developers' site provides some good, general guidelines regarding reso
 
   * [Slot Variable](conversation-builder-variables-slots.html#slots): `{$botContext.slot.slotName}`
 
-  * [Environment Variable](conversation-builder-best-practices-using-environment-variables.html): `{$env.envVariableName}`
+  * [Environment Variable](conversation-builder-best-practices-environment-variables.html): `{$env.envVariableName}`
 
   * [API Integration](conversation-builder-integrations-api-integrations.html) custom data values: `{apiName.variableName}`
 
@@ -94,11 +94,13 @@ One single text interaction has a limit of 320 characters on word boundary befor
 
 #### Break point within a large block of text
 
-Add the following special tag inline inside your text interaction to force a break into 2 separate blocks of text.
+Add the following special tag inline inside your text interaction to force a break into 2 separate blocks of text:
 
-`tag::breakWithDelay=1000`
+    `tag::breakWithDelay=1000`
 
 <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_8.png">
+
+<img class="fancyimage" width="200" src="img/ConvoBuilder/breakWithDelay.png">
 
 {: .important}
 The delay value is in milliseconds. 1000 = 1 second.

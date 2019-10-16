@@ -1,29 +1,41 @@
 ---
-pagename: Keyword Triggers
+pagename: Keywords
 redirect_from:
     - conversation-builder-conversation-builder-keyword-triggers.html
+    - conversation-builder-keyword-triggers.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
-permalink: conversation-builder-keyword-triggers.html
+permalink: conversation-builder-keywords.html
 indicator: both
 ---
 
-Conversation Builder reserves a set of keywords that each trigger special functionality. These keywords are sent via text interactions.
+Conversation Builder reserves a set of keywords that trigger special functionality. These keywords are sent via Text statements.
 
-### Close Conversation
+### LP_CLOSEDIALOG
 
-Create text interaction with the special string "LP_CLOSECONVERSATION". This will close the conversation.
+To close the current dialog, create a Text statement that contains the special string “LP_CLOSEDIALOG”.
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_2.png">
+ <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keywords_lpCloseDialog.png">
 
-This is useful for [creating a "resolve and close" dialog](conversation-builder-best-practices-common-conversation-patterns.html#create-resolve-and-close-dialog).
+This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
+
+If this Text statement isn't the last in the dialog, set this statement's **Next Step** to "End Interaction" (not "Next Interaction").
+
+ {: .important}
+LP_CLOSEDIALOG triggers a post-conversation survey.
+
+### LP_CLOSECONVERSATION
+
+To close the current conversation, create a Text statement that contains the special string “LP_CLOSECONVERSATION”.
+
+ <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keywords_lpCloseConversation.png">
+
+This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
+
+If this Text statement isn't the last in the dialog, set this statement's **Next Step** to "End Interaction" (not "Next Interaction").
 
 {: .important}
-Close Conversation will not trigger a post-conversation survey.
-
-### Close Dialog
-
-Create text interaction with the special string "LP_CLOSEDIALOG". This will close the current dialog.
+LP_CLOSECONVERSATION does **not** trigger a post-conversation survey.

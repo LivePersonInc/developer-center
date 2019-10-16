@@ -563,5 +563,5 @@ Please use the variable `{$botContext.conversationId}` while calling the Context
 
 #### Transfer to an Agent or Bot
 
-Once you have retrieved the JSON response for a routing decision using AskMaven, you will need to parse the JSON to extract the skill to transfer to. To learn how to enable this please see documentation [Transfer to Agent or Bot](conversation-builder-best-practices-transfer-to-an-agent-or-bot.html). 
+Once you have retrieved the JSON response for a routing decision using AskMaven, you will need to parse the JSON to extract the skill to transfer to. To learn how to enable this, please see [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). 
 
