@@ -32,9 +32,10 @@ plugins:
   - jekyll-sitemap
 
 
-algolia:
-  application_id: "EICOREWTRW"
-  index_name: "devMain"
+# algolia:
+#   application_id: "1ITT6KY19C"
+#   index_name: "dev_BASE"
+# #values for the Algolia plugin
 
 
 github: [metadata]
