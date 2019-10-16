@@ -19,16 +19,7 @@ There are 10 supported Engagement Attributes, organized into 3 categories:
 
 * Visitor journey
 
-Each Engagement Attribute has its own data structure and can be sent to LivePerson using JavaScript code, or extracted from your page using LivePerson’s scraping tool.
-
-**Code example**:
-
-```javascript
-lpTag.sdes = lpTag.sdes||[];
-lpTag.sdes.push(
-// SDEs located here
-);
-```
+Each Engagement Attribute has its own data structure and can be sent to LivePerson [using JavaScript code](le-tag-sdes.html), or extracted from your page using LivePerson’s scraping tool.
 
 ### Supported Sources
 
