@@ -33,9 +33,27 @@ LivePerson NLU supports intent detection for English and Spanish.
 
 [Google Dialogflow supports](https://cloud.google.com/dialogflow/docs/reference/language) Cantonese, Chinese, Danish, Dutch, English, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Ukranian.
 
-### Connecting a 3rd party NLU Engine
+### Limitations
 
-#### Step 1: Enable 3rd Party NLU Support
+#### LivePerson NLU limitations
+
+LivePerson's NLU v2 has the following limitations:
+
+* There must be at least 5 training sentences per intent.
+* There must be at least 2 intents in order to train.
+
+#### 3rd-party NLU limitations
+
+- Third Party NLU Domain length should not exceed 64 characters. (Watson limitation)
+- Each domain can only support one language and it is available in the settings page.
+
+#### NLU engine API limitations:
+- Knowledge Base does not support 3rd-party NLU right now
+- LivePerson does not support pulling existing models from IBM Watson and Google Dialogflow into Intent Builder, only model push is supported.
+
+### Connecting a 3rd-party NLU engine
+
+#### Step 1: Enable 3rd Party NLU support
 
 Contact your account administrator to enable your account for 3rd party NLU support.
 
@@ -65,7 +83,7 @@ Once 3rd party NLU support is enabled, you can start creating domains (with 3rd 
 
 5. View and copy the created key. This will be used in your dialogflow config data
 
-#### Step 3: Create NLU Provider Credentials in Intent Builder
+#### Step 3: Create NLU provider credentials in Intent Builder
 
 1. Click on ‘NLU Provider Credentials’ on domain dashboard
 
@@ -79,11 +97,9 @@ Once 3rd party NLU support is enabled, you can start creating domains (with 3rd 
 
 <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_1.png">
 
-#### Step 4: Add a domain for your NLU Provider
-
+#### Step 4: Add a domain for your NLU provider
 
 Import your intents and entities or add them later manually before Step 5.
-
 
 <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_2.png">
 
@@ -102,16 +118,3 @@ Import your intents and entities or add them later manually before Step 5.
     <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_5.png">
 
 4. Once training is completed, you can start testing with the modal version in the intent tester.
-
-
-
-### Limitations
-
-#### 3rd Party NLU limitations
-
-- Third Party NLU Domain length should not exceed 64 characters. (Watson limitation)
-- Each domain can only support one language and it is available in the settings page.
-
-#### NLU engine API limitations:
-- Knowledge Base does not support 3rd party NLU right now
-- LivePerson does not support pulling existing models from IBM Watson and Google Dialogflow into Intent Builder, only model push is supported.
