@@ -33,7 +33,10 @@ permalink: connector-api-webhooks-notification-protocol.html
 
 ```java
 {
-    String payload = {
+    /* See below the example of a JSON payload. Its content is the body
+       of the HTTP notification that comes from Webhooks service. */
+
+    String examplePayload = {
        "kind":"req",
        "id":"1",
        "type":"ms.PublishEvent",
@@ -47,9 +50,12 @@ permalink: connector-api-webhooks-notification-protocol.html
        }
     }
 
+    /* This is an example of how the payload can be signed by using
+       the client secret and the HmacSHA1 algorithm. */
+
     Mac mac = Mac.getInstance("HmacSHA1");
     mac.init(new SecretKeySpec("THE_CLIENT_SECRET".getBytes("MUTF-8"), "HmacSHA1"));
-    byte[] signature = Base64.getEncoder().encode(mac.doFinal(payload.getBytes("UTF-8")));
+    byte[] signature = Base64.getEncoder().encode(mac.doFinal(examplePayload.getBytes("UTF-8")));
     System.out.println(signature);
 }
 ```
