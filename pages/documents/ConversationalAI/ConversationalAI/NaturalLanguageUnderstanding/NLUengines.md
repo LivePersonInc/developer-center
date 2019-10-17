@@ -53,47 +53,47 @@ LivePerson's NLU v2 has the following limitations:
 
 ### Connecting a 3rd-party NLU engine
 
-#### Step 1: Enable 3rd Party NLU support
+#### Step 1: Enable 3rd-party NLU support
 
-Contact your account administrator to enable your account for 3rd party NLU support.
+Contact your account administrator to enable your account for 3rd-party NLU support.
 
-Once 3rd party NLU support is enabled, you can start creating domains (with 3rd party NLU).
+Once 3rd-party NLU support is enabled, you can start creating domains (with 3rd-party NLU).
 
 #### Step 2: Sign up and get the API keys
 
 ##### IBM Watson
 
-1. Register for or log in to an IBM Cloud account
+1. Register for or log in to an IBM Cloud account.
 
-2. Create or access a Watson Assistant resource
+2. Create or access a Watson Assistant resource.
 
-3. Generate Service Credentials with the role of Manager and an Auto Generated Service ID
+3. Generate Service Credentials with the role of Manager and an Auto Generated Service ID.
 
-4. View and copy the newly created credentials
+4. View and copy the newly created credentials.
 
 ##### Google Dialogflow
 
-1. Log in to the Dialogflow console
+1. Log in to the Dialogflow console.
 
-2. Create a new Dialogflow agent (which will create a new Google project)
+2. Create a new Dialogflow agent (which will create a new Google project).
 
-3. Create a new Service Account for the newly created Google project with the role of Dialogflow API Admin
+3. Create a new Service Account for the newly created Google project with the role of Dialogflow API Admin.
 
-4. Create a JSON formatted private key for the service account by clicking Create key
+4. Create a JSON-formatted private key for the service account by clicking Create key.
 
-5. View and copy the created key. This will be used in your dialogflow config data
+5. View and copy the created key. This will be used in your dialogflow config data.
 
 #### Step 3: Create NLU provider credentials in Intent Builder
 
-1. Click on ‘NLU Provider Credentials’ on domain dashboard
+1. Click on ‘NLU Provider Credentials’ on the domain dashboard.
 
 <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_0.png">
 
-2. Create a new NLU provider credential
+2. Create a new NLU provider credential.
 
-* Give a name for the credential
-* Select the NLU Provider that you want to set the credential for
-* Copy the credentials downloaded from Watson / Google Dialog Flow
+* Give a name for the credential.
+* Select the NLU Provider that you want to set the credential for.
+* Copy the credentials downloaded from Watson / Google Dialog Flow.
 
 <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_1.png">
 
