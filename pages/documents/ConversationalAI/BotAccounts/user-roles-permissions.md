@@ -11,20 +11,7 @@ permalink: bot-accounts-permissions-per-role.html
 indicator: both
 ---
 
-Users are granted privileges in Conversation Builder by way of assignment of a role. The application includes the following, predefined roles:
-
-* Bot Builder
-* Bot Builder Lite
-* Content User
-* API Developer
-* API Credentials Manager
-* Template Manager
-* Import/Export Manager
-* Business User
-* Operations
-* Super Admin
-* Admin
-* Admin (Read Only)
+Users are granted privileges in Conversation Builder by way of assignment of a role. The application includes the following, predefined roles.
 
 ### Bot Builder
 
