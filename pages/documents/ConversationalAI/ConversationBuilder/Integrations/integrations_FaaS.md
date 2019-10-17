@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Integrations
-permalink: conversation-builder-integrations-faas-integrations.html
+permalink: conversation-builder-integrations-liveperson-functions-integrations.html
 indicator: both
 ---
 
