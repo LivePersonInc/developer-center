@@ -19,7 +19,3 @@ Messages sometimes can be delivered out of order because, behind the scenes, the
 #### Long messages are broken into smaller ones
 
 A single text interaction has a limit of 320 characters on the word boundary before it gets split into 2 parts. This means that large blocks of text that exceed the limit are broken into smaller messages. However, if desired, you can control exactly where the break occurs using a special tag. For more information, see the section on formatting text in interactions, which is [here](conversation-builder-interactions-interaction-basics.html#format-text).
-
-#### Quick Reply options don’t appear in Facebook Messenger
-
-In Facebook Messenger, a Quick Reply question can have a maximum of 13 reply options, so additional options beyond the first three defined aren’t shown.

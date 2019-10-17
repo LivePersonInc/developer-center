@@ -21,7 +21,7 @@ One use case for this type of integration is within a fallback dialog to funnel 
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **Knowledge Base**.
     
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_kb.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/integrations_kb.png">
     
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Methods**:

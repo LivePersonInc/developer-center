@@ -164,6 +164,7 @@
           - subpagename: Email Integrations
           - subpagename: Knowledge Base Integrations
           - subpagename: LivePerson Agent Escalation Integrations
+          - subpagename: File Integrations
           - subpagename: FaaS Integrations
           - subpagename: Web View Integration API
       - pagename: Scripting Functions
