@@ -77,5 +77,88 @@ Quick reply example image:
 ### Code Example
 
 ```json
-{"type":"quickReplies","itemsPerRow":4,"replies":[{"type":"button","tooltip":"yes I do","title":"yes","click":{"actions":[{"type":"publishText","text":"yep"}]}},{"type":"button","tooltip":"hmmm maybe?","title":"hmmm maybe?","click":{"actions":[{"type":"publishText","text":"hmmm maybe?"}]}},{"type":"button","tooltip":"what is that?","title":"what is that?","click":{"actions":[{"type":"publishText","text":"what is that?"}]}},{"type":"button","tooltip":"whattttttt","title":"whatttttt","click":{"actions":[{"type":"publishText","text":"whatttttt"}]}},{"type":"button","tooltip":"no","title":"nope","click":{"actions":[{"type":"publishText","text":"nope"}]}},{"type":"button","tooltip":"no way!","title":"no way!","click":{"actions":[{"type":"publishText","text":"no way!"}]}}]}
+{
+  "type": "quickReplies",
+  "itemsPerRow": 4,
+  "replies": [
+    {
+      "type": "button",
+      "tooltip": "yes I do",
+      "title": "yes",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "yep"
+          }
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "tooltip": "hmmm maybe?",
+      "title": "hmmm maybe?",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "hmmm maybe?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "tooltip": "what is that?",
+      "title": "what is that?",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "what is that?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "tooltip": "whattttttt",
+      "title": "whatttttt",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "whatttttt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "tooltip": "no",
+      "title": "nope",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "nope"
+          }
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "tooltip": "no way!",
+      "title": "no way!",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "no way!"
+          }
+        ]
+      }
+    }
+  ]
+}
 ```
