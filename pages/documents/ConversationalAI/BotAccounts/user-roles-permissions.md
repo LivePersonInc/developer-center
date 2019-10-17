@@ -11,11 +11,24 @@ permalink: bot-accounts-permissions-per-role.html
 indicator: both
 ---
 
-In order to view or edit user permissions, you must click on the Organization, then click on Users in the top nav bar.
+Users are granted privileges in Conversation Builder by way of assignment of a role. The application includes the following, predefined roles:
+
+* Bot Builder
+* Bot Builder Lite
+* Content User
+* API Developer
+* API Credentials Manager
+* Template Manager
+* Import/Export Manager
+* Business User
+* Operations
+* Super Admin
+* Admin
+* Admin (Read Only)
 
 ### Bot Builder
 
-As its name suggests, this role provides full privileges for creating bots and related resources like intents and entities. More specifically, users with this role can create and work with:
+This role provides full privileges for creating bots and related resources. More specifically, users with this role can create and work with:
 
 * Bots
 * Bot versions and releases
@@ -42,104 +55,84 @@ This "lite" role is intended for less technical bot builders. As such, it's just
 * No ability to create and work with integrations
 * No ability to create and work with credentials
 
-### Super Admin
-
-A user should have this role if they own the entire brand's automation project.
-
-#### Included Permissions
-
-The Super Admin has the following permissions **in addition to all permissions that the [Admin](#admin) role has.**
-
-* Bot Builder (Read All Bots In All Accounts)
-* Bot Builder (Write All Bots In All Accounts)
-* Knowledge base (Read All KBs In All Accounts)
-* Knowledge base (Write All KBs In All Accounts)
-* Intent Builder (Read All Domains In All Accounts)
-* Intent Builder (Write All Domains in All Accounts)
-* Analytics (Read All Bots In All Accounts)
-* Accounts (Read All Accounts)
-* Accounts (Write All Accounts)
-* Operations (Read Own & Account Bot Agents)
-* Operations (Write Own & Account Bot Agents)
-* Operations (Read All Bot Agents In Account)
-* Operations (Write All Bot Agents In Account)
-* Operations (Read All Bot Agents In All Accounts)
-* Operations (Write All Bot Agents In All Accounts)
-* Operations (Read All Servers)
-* Operations (Write All Servers)
-* Template (Write & Read)
-
-### Admin
-
-A user should have this role if they own a segment of the brand's automation project.
-
-#### Included Permissions
-
-* Bot Builder (Read Own & Account Bot)
-* Bot Builder (Write Own & Account Bot)
-* Bot Builder (Read All Bots In Account)
-* Bot Builder (Write All Bots In Account)
-* Knowledge base (Read Own & Account KBs)
-* Knowledge base (Write Own & Account KBs)
-* Knowledge base (Read All KBs In Account)
-* Knowledge base (Write All KBs In Account)
-* Intent Builder (Read Own & Account Domains)
-* Intent Builder (Write Own & Account Domains)
-* Intent Builder (Read All Domains In Account)
-* Intent Builder (Write All Domains in Account)
-* Analytics (Read Own & Account Bots)
-* Analytics (Read All Bots In Account)
-* Accounts (Read Own Accounts)
-* Accounts (Write Own Accounts)
-
-### Bot Builder
-
-A user should have this role if they are responsible for creating or maintaining an automation.
-
-#### Included Permissions
-
-* Bot Builder (Read Own & Account Bot)
-* Bot Builder (Write Own & Account Bot)
-* Knowledge base (Read Own & Account KBs)
-* Knowledge base (Write Own & Account KBs)
-* Intent Builder (Read Own & Account Domains)
-* Intent Builder (Write Own & Account Domains)
-* Analytics (Read Own & Account Bots)
-
 ### Content User
 
-A user should have this role if they are responsible for maintaining the business logic and use cases that are relevant to automations. 
+This role is for users who create content. More specifically, users with this role can create and work with:
 
-#### Included Permissions
+* Knowledge bases and articles
+* Domains, intents, and entities
 
-* Bot Builder (Read Own & Account Bot)
-* Knowledge base (Read Own & Account KBs)
-* Knowledge base (Write Own & Account KBs)
-* Intent Builder (Read Own & Account Domains)
-* Intent Builder (Write Own & Account Domains)
-* Analytics (Read Own & Account Bots)
+Users with this role can also:
 
-### Operations
+* Activate and train models
+* View and download analytics data
+* Purge analytics data
 
-A user should have this role if they are a system admin that is responsible for maintaining long running processes like bots.
+### API Developer
 
-#### Included Permissions
+This is a technical but limited role. Users with this role can only create and work with:
 
-* Operations (Read Own & Account Bot Agents)
-* Operations (Write Own & Account Bot Agents)
+* Integrations
+* Credentials
 
-### Business User
+### API Credentials Manager
 
-A user should have this role if they are a business analyst that is responsible for reporting on success of an automation.
+This is a technical but limited role. Users with this role can only create and work with:
 
-#### Included Permissions
-
-* Analytics (Read Own & Account Bots)
+* Credentials
 
 ### Template Manager
 
-A user should have this role if they want to create and maintain bot templates that are useful for their business domain.
+Users with this role can only create and work with:
 
-#### Included Permissions
+* (Bot) templates
 
-* Template (Write & Read)
+### Import/Export Manager
+
+Users with this role can only do the following:
+
+* Export/import bots
+* Export/import knowledge bases
+
+### Business User
+
+Users with this role can only do the following:
+
+* View analytics data
+* Download analytics data
+
+### Operations
+
+Users with this role can only do the following:
+
+* Create and deploy agent connectors
+
+### Super Admin
+
+Users with this role have full privileges without exception. A user should have this role if they own the entire brand's automation project.
+
+### Admin
+
+This is a more limited administrator role than Super Admin. Users with this role can do everything a Super Admin can do with the following exceptions:
+
+* No ability to deploy agent connectors
+* No ability to create and work with servers, view and work with jobs, or view logs.
+* No ability to create and work with (bot) templates.
+
+### Admin (Read Only)
+
+This is a read-only/view-only role. Users with this role can only view the following:
+
+* Bots
+* Integrations
+* Global functions
+* Knowledge bases
+* Domains, intents, and entities
+* Accounts
+* Users
+
+Users with this role can also:
+
+* Start and stop agent connectors
+* View analytics data
+* Download analytics data

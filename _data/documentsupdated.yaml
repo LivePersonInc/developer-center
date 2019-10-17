@@ -235,7 +235,6 @@
   - documentname: Bot Accounts
     pages:
       - pagename: Permissions per Role
-     # - pagename: Roles
       - pagename: Credentials
   - documentname: Third-Party Bots
     pages:
