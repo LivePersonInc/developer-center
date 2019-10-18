@@ -61,6 +61,8 @@ Once 3rd-party NLU support is enabled, you can start creating domains (with 3rd-
 
 #### Step 2: Sign up and get the API keys
 
+Within your IBM Watson or Google Dialogflow account, you must create two service credentials. When you train the intents in a domain, you'll use one credential. When it's done, you'll then activate and use the second, alternating back and forth between them (because only one credential can be active at a given time).
+
 ##### IBM Watson
 
 1. Register for or log in to an IBM Cloud account.
