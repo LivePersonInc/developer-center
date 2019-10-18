@@ -9,7 +9,7 @@ permalink: conversation-builder-integrations-file-integrations.html
 indicator: both
 ---
 
-File integrations support the ability of consumers to upload files to your external file share or system.
+File integrations support the ability of consumers to upload files that you require.
 
 In the dialog, first, you add a [File Upload](conversation-builder-interactions-integrations.html#file-upload-integration-interactions) interaction; it handles upload of the file to LiveEngage. Second, you immediately follow the File Upload interaction with an Integration interaction that invokes a *File integration* in particular. It's this second interaction that performs the work of taking the file in the LiveEngage environment and uploading it to your external file share or system.
 
@@ -23,7 +23,7 @@ In the dialog, first, you add a [File Upload](conversation-builder-interactions-
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **File**.
     - **Method**: Select the type of HTTP request method. PUT and POST are industry standards and commonly used.
-    - **URL**: Enter the request target, i.e., the URL for your external upload service that accepts the file stream.
+    - **URL**: Enter the request target, i.e., the URL for your external upload service that can accept the file stream.
     - **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable. The bot will automatically enhance the request based on the credential's type and data.
     - **Request Headers**: Add any message headers to include in the request.
     - **Request Parameters**: Add the request parameters to pass in the URL’s query string.

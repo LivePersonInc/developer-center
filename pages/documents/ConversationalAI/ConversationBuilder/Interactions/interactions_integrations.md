@@ -33,15 +33,15 @@ Before you can add an Integration interaction, you need to create the integratio
 
 Use a File Upload integration in a dialog when you need the consumer to upload a file that you require. As examples, you might want to do this when the consumer needs to provide an ID card or a document demonstrating proof of a good credit score.
 
-In the chat window, the consumer can upload the file by dragging and dropping it into the window.
+In the chat window, the consumer can upload the file by dragging and dropping it onto the window.
 
 The following are important notes:
 
 - The uploaded file can’t be over 5 MB.
-- While LivePerson temporarily stores exchanged files for the duration of the conversation, it does not store them permanently. More on this below.
+- While LivePerson temporarily stores exchanged files for the duration of the conversation, it does not store them permanently.
 - Exchanged content must obey LivePerson’s Terms & Conditions, and the brand itself is responsible for checking exchanged files for malicious content.
 
-**To add a File Upload integration interaction**
+**To add a File Upload integration**
 
 1. Select the interaction just above where you want to add the File Upload interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_fileUpload.png"> (File Upload) on the interactions toolbar.
 2. In the File Upload interaction, enter the message to send to the consumer.
@@ -59,7 +59,7 @@ The following are important notes:
     *These two interactions work together.* Every File Upload interaction *must* be followed by an Integration interaction, where the selected integration is of type "File."
 
 4. Return to the File Upload interaction, open the **Interaction Details**, click **Settings**, and specify the following in the **File Upload Settings**:
-    - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, and so on). If the consumer attempts to upload a file of any other type, the upload will fail, and the interaction's fallback message will be sent to the consumer. You might want to include mention of the acceptable file types in the message that's sent to the consumer, as we've done in the image above.
+    - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, and so on). If the consumer attempts to upload a file of any other type, the upload will fail, and the interaction's fallback message will be sent. You might want to include mention of the acceptable file types in the initial message that's sent to the consumer, as we've done in the image above.
     - **Success message**: Enter the message that’s sent to the consumer if the upload *to your external system* is successful. In other words, this is the message that is sent if the subsequent *Integration interaction* is successful.
     - **In progress message**: Enter the message that’s sent to the consumer if upload *to the LiveEngage environment* is successful. You might want to set this to something like, "Just a moment while we upload your file..." because what follows is the actual upload to your external system.
 5. In the **Interaction Details** of both the File Upload and Integration interactions, click the **Next Actions** tab and enter a fallback message under **Advanced Responses**. If the upload fails in either interaction, the interaction's fallback message will be sent.
