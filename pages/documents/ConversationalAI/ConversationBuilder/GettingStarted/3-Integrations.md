@@ -72,9 +72,9 @@ This tutorial uses an example API that returns random balance data when given an
   
     <img style="width:200px" src="img/ConvoBuilder/helloworld/navfromintegrations.png">
 2. Add a regular dialog named "Account Balance."
-3. In the dialog, add a User Says interaction, and enter, "I want to see my account balance" for the sample user statement.
+3. In the dialog, in the User Says interaction, enter, "I want to see my account balance" for the sample user statement.
 4. Open the interaction's **Interaction Details**, and click **Settings**. Here you can add a simple pattern to detect the word “balance” (or you can create an intent if you want to get fancy). You can use the wildcards (`*balance*`) to match all instances.
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/accountbalancedialog.png">
+<img class="fancyimage" style="width:850px" src="img/ConvoBuilder/helloworld/accountbalancedialog.png">
 5. Add a Text statement <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_textStatement.png"> that says, "I can get your latest balance."
 
     To get the user's account balance, you need to ask for their account number.
@@ -102,5 +102,5 @@ This tutorial uses an example API that returns random balance data when given an
 12. Open the Preview window, and start a new session by entering "reset" and pressing Enter.
 13. Trigger the Account Balance dialog by entering, "I want to see my account balance," or something else with the word "balance."
 14. Follow the two prompts for an account number and email address. *Any* 6-digit account number and *any* email address will work for this API.
-  <img class="fancyimage" style="width:250px" src="img/ConvoBuilder/helloworld/integrationtest.png">
+  <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/integrationtest.png">
   You now understand the basics of integrations and slots.
