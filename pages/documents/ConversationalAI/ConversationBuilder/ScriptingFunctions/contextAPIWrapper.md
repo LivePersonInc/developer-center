@@ -29,17 +29,9 @@ LiveEngage Site Id or Organization Id can be used to get the Maven credentials.
 
 This wrapper supports setting data in the following Conversation Builder scopes:
 
-- Conversation
-
-    - Data set in this scope is only available in the current conversation.
-
-- User
-
-    - Data set in this scope is available to the User. Once it is set, it is available in all the same user's conversations.
-
-- Global
-
-    - Data set in this scope is available to the bot in all conversations.
+- **Conversation**: Data set in this scope is only available in the current conversation.
+- **User**: Data set in this scope is available to the User. Once it is set, it is available in all the same user's conversations.
+- **Global**: Data set in this scope is available to the bot in all conversations.
 
 ### Namespaces
 
