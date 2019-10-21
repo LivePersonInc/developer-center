@@ -94,32 +94,9 @@ Users with this role can only do the following:
 
 * Create and deploy agent connectors
 
-### Super Admin
-
-Users with this role have full privileges without exception. A user should have this role if they own the entire brand's automation project.
-
 ### Admin
 
-This is a more limited administrator role than Super Admin. Users with this role can do everything a Super Admin can do with the following exceptions:
+This is an administrator role. Users with this role have full privileges with the following exceptions:
 
 * No ability to deploy agent connectors
-* No ability to create and work with servers, view and work with jobs, or view logs.
-* No ability to create and work with (bot) templates.
-
-### Admin (Read Only)
-
-This is a read-only/view-only role. Users with this role can only view the following:
-
-* Bots
-* Integrations
-* Global functions
-* Knowledge bases
-* Domains, intents, and entities
-* Accounts
-* Users
-
-Users with this role can also:
-
-* Start and stop agent connectors
-* View analytics data
-* Download analytics data
+* No ability to create and work with (bot) templates
