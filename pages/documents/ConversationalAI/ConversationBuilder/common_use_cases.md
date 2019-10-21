@@ -9,7 +9,7 @@ permalink: conversation-builder-common-use-cases.html
 indicator: both
 ---
 
-Trying to accomplish a specific goal? Check this list of common use cases.
+Trying to accomplish a specific goal, but you don't know where to find the information? Check this list of common use cases.
 
 ### Use and capture the consumer's last response
 
@@ -23,10 +23,3 @@ It's common to use this special syntax in the response conditions of questions b
 
 ### Access authenticated customer information
 Use the [Get Authenticated Customer Info](conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html#get-authenticated-customer-info) scripting functions.
-
-### Get the bot to close the dialog
-Use the [LP_CLOSEDIALOG](conversation-builder-keywords.html#lp_closedialog) keyword in a Text statement.
-
-
-### Get the bot to close the conversation
-Use the [LP_CLOSECONVERSATION](conversation-builder-keywords.html#lp_closeconversation) keyword in a Text statement.

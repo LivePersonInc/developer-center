@@ -2,12 +2,12 @@
 pagename: Environment Variables
 redirect_from:  
     - conversation-builder-best-practices-using-environment-variables.html
+    - conversation-builder-best-practices-environment-variables.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Best Practices
-permalink: conversation-builder-best-practices-environment-variables.html
+permalink: conversation-builder-environment-variables.html
 indicator: both
 ---
 

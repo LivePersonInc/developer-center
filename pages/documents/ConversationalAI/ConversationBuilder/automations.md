@@ -32,11 +32,11 @@ LivePerson recommends that—-before you create a bot—-you set up the [domains
     There are also many, industry-specific, English-language templates available. If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below.
 
 4. Build out the bot, completing and adding the necessary [dialogs](conversation-builder-dialogs-dialog-basics.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the bot using the Preview tool.
-5. [Save versions](conversation-builder-best-practices-versions-releases.html#save-a-version) of the bot at important points in its development. This allows you to restore a version if you need.
+5. [Save versions](conversation-builder-versions-releases.html#save-a-version) of the bot at important points in its development. This allows you to restore a version if you need.
 6. [Train and tune](conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html) things as you do more testing.
-7. [Save a version](conversation-builder-best-practices-versions-releases.html#save-a-version) of the final “Development” bot.
+7. [Save a version](conversation-builder-versions-releases.html#save-a-version) of the final “Development” bot.
 
-    At this point, you could deploy the Development bot, but LivePerson recommends that you [create a release](conversation-builder-best-practices-versions-releases.html#create-a-release) copy of the bot that you deploy instead. This allows you to take live the release copy (the Production copy). Later, you can make fine-tuning changes to the Development copy as needed, without affecting the Production copy. You can then “upgrade” the Production copy accordingly.
+    At this point, you could deploy the Development bot, but LivePerson recommends that you [create a release](conversation-builder-versions-releases.html#create-a-release) copy of the bot that you deploy instead. This allows you to take live the release copy (the Production copy). Later, you can make fine-tuning changes to the Development copy as needed, without affecting the Production copy. You can then “upgrade” the Production copy accordingly.
 
 ### Import a bot
 You can add an bot by importing a bot JSON file that was previously exported. This is useful when you need to make a copy of a bot (just export and then import back into the same environment), or you need to copy or move a bot from one environment to another.
@@ -82,7 +82,7 @@ Bot settings include:
 
 - **Public**: When you want other users in your LiveEngage account to be able to view and edit the bot, click the slider to On. The default value is Off. 
 
-- **Bot Environment**: If desired, select the set of [environment variables](conversation-builder-best-practices-environment-variables.html) that you want to associate with the bot. Environment variables allow you to manage certain values and constants outside of the bot, and use of them when appropriate is considered a best practice.
+- **Bot Environment**: If desired, select the set of [environment variables](conversation-builder-environment-variables.html) that you want to associate with the bot. Environment variables allow you to manage certain values and constants outside of the bot, and use of them when appropriate is considered a best practice.
 
 - **Session Length**: Select the length of the bot session, that is, how long the context of a conversation is maintained after the conversation becomes idle. If this is unset, the default of one hour is used. Be aware that there also exists a LivePerson conversation session; it is this setting, not the LivePerson setting, that determines the session length.
 
@@ -97,7 +97,7 @@ You might need to export a bot for a few reasons:
 
 - You want to create a variation of the bot, so you plan to copy the bot by exporting it and then importing it back into the same environment.
 - You want to move or copy a bot to another environment, so you plan to export it and import it into a different environment.
-- You want an extra measure of back-up—above and beyond [saving versions](conversation-builder-best-practices-versions-releases.html#save-a-version) of bots that you can restore—so you plan to archive the JSON file for safekeeping.
+- You want an extra measure of back-up—above and beyond [saving versions](conversation-builder-versions-releases.html#save-a-version) of bots that you can restore—so you plan to archive the JSON file for safekeeping.
 
 {: .important}
 In case 2 above—-moving or copying a bot to a different environment (that is, from one region or hosting platform to another)—-check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.

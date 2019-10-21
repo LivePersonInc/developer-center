@@ -120,7 +120,6 @@
       - pagename: Natural Language Understanding
         subpages:
           - subpagename: NLU Engines
-          - subpagename: Training and Tuning Your Intents and FAQs
   - documentname: Conversation Builder
     pages:
       - pagename: Getting Started
@@ -167,6 +166,8 @@
           - subpagename: File Integrations
           - subpagename: FaaS Integrations
           - subpagename: Web View Integration API
+      - pagename: Environment Variables
+      - pagename: Versions & Releases
       - pagename: Scripting Functions
         subpages:
           - subpagename: Introduction
@@ -175,7 +176,7 @@
           - subpagename: Get and Set Conversation Flow Data
           - subpagename: Sending Messages
           - subpagename: Context Session Store Wrapper
-      - pagename: Keywords
+          - subpagename: Function List
       - pagename: Testing & Deployment
         subpages:
           - subpagename: Debugging
@@ -184,9 +185,7 @@
       - pagename: Common Use Cases
       - pagename: Best Practices
         subpages:
-          - subpagename: Environment Variables
-          #- subpagename: Common Conversation Patterns
-          - subpagename: Versions & Releases
+          - subpagename: Train & Tune NLU
           - subpagename: Reusable Components
       - pagename: Troubleshooting
         subpages:
