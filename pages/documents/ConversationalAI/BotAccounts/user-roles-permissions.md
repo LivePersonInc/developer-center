@@ -32,7 +32,7 @@ Users with this role can also:
 * View and download analytics data
 * Purge analytics data
 
-Notably, this role doesn't allow the user to deploy agent connectors, nor does it let the user create and work with templates, accounts, users, servers, jobs, or logs.
+Notably, this role doesn't allow the user to deploy agent connectors, nor does it let the user create and work with templates, accounts, or users.
 
 ### Bot Builder Lite
 
@@ -55,6 +55,13 @@ Users with this role can also:
 * View and download analytics data
 * Purge analytics data
 
+### Business User
+
+Users with this role can only do the following:
+
+* View analytics data
+* Download analytics data
+
 ### API Developer
 
 This is a technical but limited role. Users with this role can only create and work with:
@@ -68,12 +75,6 @@ This is a technical but limited role. Users with this role can only create and w
 
 * Credentials
 
-### Template Manager
-
-Users with this role can only create and work with:
-
-* (Bot) templates
-
 ### Import/Export Manager
 
 Users with this role can only do the following:
@@ -81,12 +82,11 @@ Users with this role can only do the following:
 * Export/import bots
 * Export/import knowledge bases
 
-### Business User
+### Template Manager
 
-Users with this role can only do the following:
+Users with this role can only create and work with:
 
-* View analytics data
-* Download analytics data
+* (Bot) templates
 
 ### Operations
 
@@ -98,5 +98,5 @@ Users with this role can only do the following:
 
 This is an administrator role. Users with this role have full privileges with the following exceptions:
 
-* No ability to deploy agent connectors
 * No ability to create and work with (bot) templates
+* No ability to deploy agent connectors
