@@ -28,7 +28,7 @@ Click on the "Create LivePerson Function" button. This will allow you to impleme
 
 ##### Step 1 - Create a function
 
-Create a new function using the ***Third-Party Bots Custom Integration*** event.
+Create a new function using the **_Third-Party Bots Custom Integration_** event.
 
 ##### Step 2 - Edit the Function
 
@@ -48,7 +48,6 @@ After you successfully implemented and deployed a LivePerson Function, press the
 You have to agree to Data Disclaimer in order to use the services of the bot connector. To do that, click on the checkbox "I agree to the Data Disclaimer" checkbox.
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. If it has suceeded, you're done!
-
 
 ### Payload Information
 
@@ -75,7 +74,6 @@ The following payload content will be recieved from the Function during a conver
   </tr>
   </tbody>
 </table>
-
 
 ### Welcome Event
 
@@ -125,11 +123,11 @@ Change the TTR of a conversation based on the **action** value in the response o
 
 Below is an example of an payload, which changes the TTR:
 
-|key|value|notes|
-|---|-----|-----|
-|action| CHANGE_TTR| Mandatory|
-|ttrtype|"URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”|Mandatory|
-|value|Seconds, string|Mandatory if "CUSTOM" is set|
+| key     | value                                       | notes                        |
+| ------- | ------------------------------------------- | ---------------------------- |
+| action  | CHANGE_TTR                                  | Mandatory                    |
+| ttrtype | "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM” | Mandatory                    |
+| value   | Seconds, string                             | Mandatory if "CUSTOM" is set |
 
 ```json
 {
@@ -150,17 +148,19 @@ If the bot needs to transfer the conversation to a human agent, or the conversat
 
 Transfers and escalations rely on the `action` key in the response object and its value.
 
-|key|value|notes|
-|---|-----|-----|
-|action| TRANSFER| case sensitive, mandatory|
-|skill|a skill name which exists in your account account|case sensitive|
+| key    | value                                             | notes                     |
+| ------ | ------------------------------------------------- | ------------------------- |
+| action | TRANSFER                                          | case sensitive, mandatory |
+| skill  | a skill name which exists in your account account | case sensitive            |
 
 Below is an example of what the response JSON from the LivePerson Function should look like to complete a transfer action.
 
 ```json
 {
-   "messages": ["Please wait will I check if we have any live agents online that can attend to you"],
-   "context": {
+  "messages": [
+    "Please wait will I check if we have any live agents online that can attend to you"
+  ],
+  "context": {
     "action": "TRANSFER",
     "actionParameters": {
       "skill": "bot-escalation"
@@ -176,8 +176,12 @@ Structured Content will be added into messages property after LivePerson Functio
 
 Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via LivePerson Functions, use the _structuredContent_ property containing valid structured content, along with metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) to check your formatting.
 
+{: .important}
+If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
+
 ```json
-{ "messages": ["Just some structured Content"], //Mandatory
+{
+  "messages": ["Just some structured Content"], //Mandatory
   "context": {
     "metadata": [
       {
@@ -222,63 +226,64 @@ Quick Replies is a special type of Structured Content. It is a message sent alon
 For detailed information on Quick Replies check out the documentation for the specific channel: ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), or [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
 ```json
-{ "messages": [ "Do you like Bots?"], //Mandatory
+{
+  "messages": ["Do you like Bots?"], //Mandatory
   "context": {
-  "structuredContent": {
-    "quickReplies": {
-      "type": "quickReplies",
-      "itemsPerRow": 8,
-      "replies": [
-        {
-          "type": "button",
-          "tooltip": "yes i do",
-          "title": "yes",
-          "click": {
-            "actions": [
-              {
-                "type": "publishText",
-                "text": "yep"
-              }
-            ],
-            "metadata": [
-              {
-                "type": "ExternalId",
-                "id": "Yes-1234"
-              }
-            ]
+    "structuredContent": {
+      "quickReplies": {
+        "type": "quickReplies",
+        "itemsPerRow": 8,
+        "replies": [
+          {
+            "type": "button",
+            "tooltip": "yes i do",
+            "title": "yes",
+            "click": {
+              "actions": [
+                {
+                  "type": "publishText",
+                  "text": "yep"
+                }
+              ],
+              "metadata": [
+                {
+                  "type": "ExternalId",
+                  "id": "Yes-1234"
+                }
+              ]
+            }
+          },
+          {
+            "type": "button",
+            "tooltip": "No!",
+            "title": "No!",
+            "click": {
+              "actions": [
+                {
+                  "type": "publishText",
+                  "text": "No!"
+                }
+              ],
+              "metadata": [
+                {
+                  "type": "ExternalId",
+                  "id": "No-4321"
+                }
+              ]
+            }
           }
-        },
-        {
-          "type": "button",
-          "tooltip": "No!",
-          "title": "No!",
-          "click": {
-            "actions": [
-              {
-                "type": "publishText",
-                "text": "No!"
-              }
-            ],
-            "metadata": [
-              {
-                "type": "ExternalId",
-                "id": "No-4321"
-              }
-            ]
-          }
-        }
-      ]
+        ]
+      }
     },
-  },
-  "metadata": [
-    {
-      "id": "1234",
-      "type": "ExternalId"
-    }
-  ]
-}}
+    "metadata": [
+      {
+        "id": "1234",
+        "type": "ExternalId"
+      }
+    ]
+  }
+}
 ```
-
 
 ### Close Chat/Conversation
 
@@ -292,10 +297,12 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 
 ```json
 {
-  "messages":["Unfortunately I am unable to help you with this query. Have a nice day."],
+  "messages": [
+    "Unfortunately I am unable to help you with this query. Have a nice day."
+  ],
   "context": {
-    "action": "CLOSE_CONVERSATION", // Close action
-    }
+    "action": "CLOSE_CONVERSATION" // Close action
+  }
 }
 ```
 
@@ -305,11 +312,31 @@ You also have to possibility to add intent information to your messages. They wi
 
 ```json
 {
-  "messages":["This message also includes the intent information"],
+  "messages": ["This message also includes the intent information"],
   "context": {
     "intenId": "some-intent-id",
     "intentName": "some-intent-name",
     "confidenceScore": 1
+  }
+}
+```
+
+### Engagement attributes as context
+
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure below.
+
+<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+Figure showing Conversation Type step in creation/modification of bot configuration.
+
+These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Custom Bots integration these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation `context` property is used. An example of the request body can be seen below:
+
+```json
+{
+  "messages": ["Some Message"],
+  "context": {
+    // ... contains other information as well
+    "lpEvent": {}, // Holds LP Events
+    "lpSdes": {}
   }
 }
 ```
