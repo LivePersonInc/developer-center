@@ -11,28 +11,31 @@ permalink: mtls-creating-a-p12-file.html
 
 ## General explanation
 
-The following is a step by step walkthrough on how to create a certificate to work with MTLS Api.
+The following is a step by step walkthrough on how to create a certificate to work with the mTLS API.
 
-**This refers to certificate creation by Mac-OS.**
+**This refers to certificate creation on Mac-OS.**
 
 **Some of the steps to QA environment (those steps will be marked).**
 
 ## Create Certificate authority (QA relevant, in production the CA is external)
+
 Code creates a Des3 4Mb encryption.
 ```
 openssl genrsa -des3 -out {caKeyName}.key 4096
 ```
 
 ## Create a CA certificate (QA related)
-365 days till expiration, can be changed.
+
+365 days till expiration, can be changed by modifying `-days`.
 
 ```
 openssl req -new -x509 -days 365 -key {caKeyName}.key -out {caCertName}.crt
 ```
 
-Answer the question popping the screen, Notice that domain name must match the domain it is defending, this can be left empty (or matching domain).
+Answer the question which pops up on the screen. Notice that the domain name must match the domain it is defending, this can be left empty (or matching domain).
 
 ## Create client certificate (all environments)
+
 Create key (Des3, 4Mb)
 ```
 openssl genrsa -des3 -out {keyName}.key 4096
@@ -44,6 +47,7 @@ openssl req -new -key {keyName}.key -out {csrName}.csr
 ```
 
 ## Sign the CSR (QA related)
+
 **In production environment this will be done by the customer, submitted to an external Certificate Authority.**
 
 ```
@@ -51,6 +55,7 @@ openssl x509 -req -days 365 -in {csrName}.csr -CA {caCertName}.crt -CAkey {caKey
 ```
 
 ## Creating a p12 file (All environments)
+
 **This is the final product uploaded into our system**
 
 ```

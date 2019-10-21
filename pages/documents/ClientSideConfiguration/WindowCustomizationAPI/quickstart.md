@@ -449,6 +449,8 @@ Available modifiers: `horizontal` `vertical`.
 }
 ```
 
+For information on formatting, see the notes on structured content in the Conversation Builder documentation [here](conversation-builder-interactions-questions.html#notes-on-structured-questions).
+
 ### Survey Area Wrapper
 
 Used to define survey common styles. Primarily background for the survey.
