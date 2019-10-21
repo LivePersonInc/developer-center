@@ -161,7 +161,7 @@ Please note that Watson assistant API version of `2018-09-20` is used to support
 
 If you use **JSON Editor** then the usual body of the native content is as follows:
 
-```json
+```javascript
 {
   "output": {
     "generic": [
@@ -221,7 +221,7 @@ Figure 2.4 List fields filled example
 
 If you are using **JSON Editor** then you have following structure of List. Note that **"options"** property is array of objects which holds the items for choosing are presented to user.
 
-```json
+```javascript
 {
   "output": {
     "generic": [
@@ -661,7 +661,7 @@ Figure 7.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V1 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/apidocs/assistant-v1#get-response-to-user-input)). An example of the request body can be seen below:
 
-```json
+```javascript
 {
   "message": "Some Message",
   "context": {

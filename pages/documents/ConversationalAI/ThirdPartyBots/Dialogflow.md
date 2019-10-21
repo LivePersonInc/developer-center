@@ -161,7 +161,7 @@ Change the TTR of a conversation based on the **action** value in the response o
 
 Figure 3.1
 
-```json
+```javascript
 {
   "id": "e599031e-cd19-4c77-a497-cfc6b1f9ec8c",
   "timestamp": "2018-10-16T08:48:35.821Z",
@@ -239,7 +239,7 @@ Figure 4.1
 
 Below is an example of what the response JSON from Dialogflow will look like, and what the connector expects in order to complete a transfer action.
 
-```json
+```javascript
 {
   "id": "745cca4d-64f2-4008-9bbb-ccd5b0f23bec",
   "timestamp": "2018-06-25T23:51:01.774Z",
@@ -286,7 +286,7 @@ Structured Content/Rich Content is supported by the core LivePerson platform. Do
 
 Figure 5.1
 
-```json
+```javascript
 {
   "metadata": [
     {
@@ -331,7 +331,7 @@ Figure 5.2 Dialogflow Example Custom Payload
 Quick Replies is a special type of Structured Content. Is is a message sent with along with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
- ```json
+```json
 {
   "structuredContent": {
     "quickReplies": {
@@ -380,14 +380,15 @@ For detailed information on Quick Replies check out the documentation for the sp
     },
     "message": "Do you like Bots?"
   },
-   "metadata": [
+  "metadata": [
     {
       "id": "1234",
       "type": "ExternalId"
     }
   ]
 }
- ```
+```
+
 Figure 6.1 QuickReplies Structured Content example
 
 ### Close Chat/Conversation
@@ -404,7 +405,7 @@ Figure 7.1
 
 Below is an example of what the response JSON from Dialogflow will look like, and what the connector expects in order to complete a closeConversation action.
 
-```json
+```javascript
 {
   "id": "c55c8b3f-70c7-4ab3-857f-881c6c7ece82",
   "timestamp": "2018-06-26T00:19:02.249Z",

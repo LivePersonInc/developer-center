@@ -263,7 +263,7 @@ This should contain valid structured content, along with any optional metadata r
 
 Example Metadata
 
-```json
+```javascript
 {
   "metadata": [
     {
@@ -390,7 +390,7 @@ Figure 8.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow V2 these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload` (more information about `payload` parameter can be found [here](https://googleapis.dev/nodejs/dialogflow/latest/google.cloud.dialogflow.v2.html#.QueryParameters)). An example of the request body can be seen below:
 
-```json
+```javascript
 {
   "session": "SomeSession",
   "queryParams": {

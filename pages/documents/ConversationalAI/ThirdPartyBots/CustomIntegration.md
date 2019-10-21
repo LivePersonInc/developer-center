@@ -179,7 +179,7 @@ Structured Content/Rich Content is supported by the core LivePerson platform. Do
 {: .important}
 If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
 
-```json
+```javascript
 {
   "messages": ["Just some structured Content"], //Mandatory
   "context": {
@@ -225,7 +225,7 @@ If Images are sent in Rich content, then their URLs must be added to a whitelist
 Quick Replies is a special type of Structured Content. It is a message sent alongside with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel: ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), or [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
-```json
+```javascript
 {
   "messages": ["Do you like Bots?"], //Mandatory
   "context": {
@@ -295,7 +295,7 @@ The `action` key needs to be set to **CLOSE_CONVERSATION** to instruct the conne
 
 Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a closeConversation action.
 
-```json
+```javascript
 {
   "messages": [
     "Unfortunately I am unable to help you with this query. Have a nice day."
@@ -330,7 +330,7 @@ Figure showing Conversation Type step in creation/modification of bot configurat
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Custom Bots integration these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation `context` property is used. An example of the request body can be seen below:
 
-```json
+```javascript
 {
   "messages": ["Some Message"],
   "context": {
