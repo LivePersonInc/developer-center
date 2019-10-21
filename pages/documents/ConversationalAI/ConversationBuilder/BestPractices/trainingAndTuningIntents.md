@@ -1,5 +1,5 @@
 ---
-pagename: Training and Tuning Your Intents and FAQs
+pagename: Train & Tune NLU
 redirect_from:
     - conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html
     - conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
