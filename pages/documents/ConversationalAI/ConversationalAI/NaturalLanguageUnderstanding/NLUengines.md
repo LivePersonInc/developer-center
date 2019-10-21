@@ -44,11 +44,9 @@ LivePerson's NLU v2 has the following limitations:
 
 #### 3rd-party NLU limitations
 
-- Third Party NLU Domain length should not exceed 64 characters. (Watson limitation)
-- Each domain can only support one language and it is available in the settings page.
-
-#### NLU engine API limitations:
-- Knowledge Base does not support 3rd-party NLU right now
+- 3rd-party NLU domain length should not exceed 64 characters. (Watson limitation).
+- Each domain can only support one language, and it is available in the settings page.
+- Knowledge Base does not support 3rd-party NLU.
 - LivePerson does not support pulling existing models from IBM Watson and Google Dialogflow into Intent Builder, only model push is supported.
 
 ### Connecting a 3rd-party NLU engine
