@@ -176,7 +176,7 @@
           - subpagename: Get and Set Conversation Flow Data
           - subpagename: Sending Messages
           - subpagename: Context Session Store Wrapper
-          - subpagename: Function List
+          - subpagename: Functions List
       - pagename: Testing & Deployment
         subpages:
           - subpagename: Debugging

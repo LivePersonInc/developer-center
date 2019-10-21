@@ -1,12 +1,12 @@
 ---
-pagename: Function List
+pagename: Functions List
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Scripting Functions
-permalink: conversation-builder-scripting-functions-function-list.html
+permalink: conversation-builder-scripting-functions-functions-list.html
 indicator: both
 ---
 
