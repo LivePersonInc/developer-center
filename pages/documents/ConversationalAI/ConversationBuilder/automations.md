@@ -27,13 +27,13 @@ LivePerson recommends that—-before you create a bot—-you set up the [domains
 
     <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/templates_dialog.png">
     
-    The Basic Bot template (which is the default) uses English and includes just a Welcome dialog, so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below. 
+    The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below. 
 
     There are also many, industry-specific, English-language templates available. If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below.
 
 4. Build out the bot, completing and adding the necessary [dialogs](conversation-builder-dialogs-dialog-basics.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the bot using the Preview tool.
 5. [Save versions](conversation-builder-versions-releases.html#save-a-version) of the bot at important points in its development. This allows you to restore a version if you need.
-6. [Train and tune](conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html) things as you do more testing.
+6. [Train and tune](conversation-builder-best-practices-train-tune-nlu.html) things as you do more testing.
 7. [Save a version](conversation-builder-versions-releases.html#save-a-version) of the final “Development” bot.
 
     At this point, you could deploy the Development bot, but LivePerson recommends that you [create a release](conversation-builder-versions-releases.html#create-a-release) copy of the bot that you deploy instead. This allows you to take live the release copy (the Production copy). Later, you can make fine-tuning changes to the Development copy as needed, without affecting the Production copy. You can then “upgrade” the Production copy accordingly.
@@ -68,7 +68,7 @@ Bot settings include:
 
 - **Bot Type**: Read-only. This is either Consumer Facing Bot or Agent Advisor. A Consumer Facing bot is one that engages with the consumer in the front end. An Agent Advisor bot is one that engages with the contact center agent in LiveEngage in the back end. You specify the bot type when you create the bot, and it can’t be changed afterward.
 
-- **Bot Language**: Read-only. This setting only has an impact when you select Hebrew as the value. In this case, characters are displayed right-to-left, not left-to-right, to support right-to-left reading. You specify the bot language when you create the bot, and it can’t be changed afterward.
+- **Bot Language**: Read-only. This setting determines the language-specific model for LivePerson NLU; it also supports the proper rendering of left-to-right and right-to-left languages. You specify the bot language when you create the bot, and it can’t be changed afterward.
 
 - **Bot Template**: Read-only. To facilitate the rapid creation of bots, all bots are based on [templates](conversation-builder-templates-overview.html). The default template is Basic, which uses English and includes just a Welcome dialog. You select the template when you create the bot, and it can’t be changed afterward.
 
@@ -87,8 +87,6 @@ Bot settings include:
 - **Session Length**: Select the length of the bot session, that is, how long the context of a conversation is maintained after the conversation becomes idle. If this is unset, the default of one hour is used. Be aware that there also exists a LivePerson conversation session; it is this setting, not the LivePerson setting, that determines the session length.
 
 - **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons. If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t.
-
-- **Enable Bot**: Typically, you don’t need to set this since you start a bot in LiveEngage after you deploy it.
 
 ### Export a bot
 Export of an bot creates a JSON file.
