@@ -25,7 +25,7 @@ For an introduction to scripting functions, see the [Introduction](conversation-
 * getEmail
 * getEnvVariable
 * getLPCustomerInfo
-* getLPEngagementAttribute (current skill, previous skill)
+* getLPEngagementAttribute (current skill, previous skill, etc.)
 * getLPUserPersonalInfo
 * getNamedEntities
 * getNlpResponse
@@ -44,6 +44,7 @@ For an introduction to scripting functions, see the [Introduction](conversation-
 * sendMessage
 * sendMessages
 * sendMessageWithQuickReplies
+* setBotVariable
 * setEmail
 * setMessageDelay
 * setTriggerNextMessage

@@ -154,7 +154,7 @@
           - subpagename: Integrations
           - subpagename: Interaction Details
           - subpagename: Response Match & Actions
-      - pagename: Assist
+      - pagename: NLU Assist
       - pagename: Variables & Slots
       - pagename: Integrations
         subpages:

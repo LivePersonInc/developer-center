@@ -43,7 +43,7 @@ Slots are a *special type* of variable. Most of the time, you will use [variable
 
 When combined with [entities](conversation-builder-intent-builder-entities.html), slots bring dynamic, fluid behavior to storing user input data.
 
-For example, if you add a question interaction "what type of shoes are you looking for?", the [Assist](conversation-builder-conversation-builder-assist.html#assigning-an-entity-and-slots-to-an-interaction) tool will suggest appropriate entities and slots for that interaction. As long as the user stays within the bounds of entities that you have created, slots will automatically adjust and update based upon user input throughout the conversation.
+For example, if you add a question interaction "what type of shoes are you looking for?", the [NLU Assist](conversation-builder-nlu-assist.html#assigning-an-entity-and-slots-to-an-interaction) tool will suggest appropriate entities and slots for that interaction. As long as the user stays within the bounds of entities that you have created, slots will automatically adjust and update based upon user input throughout the conversation.
 
 #### Adding a Slot
 
@@ -71,4 +71,4 @@ If your automation asked the user "which animal do you like?" and the user answe
 
 Variables are the default storage unit of Conversation Builder, while slots are a special type of variable. The only reason to favor Slots is if you need extra functionality that is linked to entities or if entities will be used in an API Integration catalog search, for example.
 
-When in doubt, it is best to use variables. The [Assist](conversation-builder-conversation-builder-assist.html) tool will help to display when slots are most useful.
+When in doubt, it is best to use variables. The [NLU Assist](conversation-builder-nlu-assist.html) tool will help to display when slots are most useful.

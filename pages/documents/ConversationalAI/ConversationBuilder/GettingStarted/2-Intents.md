@@ -89,7 +89,7 @@ With the "Billing question" intent configured, let’s return to Conversation Bu
 5. Create a new regular dialog named "Billing".
 6. Add a User Says interaction.
     
-    The [Assist tool](conversation-builder-conversation-builder-assist.html) that automatically appears helps you to link the domain and intent to the User Says interaction.
+    The [NLU Assist tool](conversation-builder-nlu-assist.html) that automatically appears helps you to link the domain and intent to the User Says interaction.
     
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selectdomain.png">
 

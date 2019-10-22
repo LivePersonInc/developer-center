@@ -38,8 +38,7 @@ The Settings panel contains essential data about the selected interaction:
     {: .important}
     If you see messages out of order, add a 1000-2000 millisecond (1-2 second) delay. A 2-second delay is recommended to ensure a consistent message order.
 
-* **Enabled**: On/Off selector for enabling or disabling.
-* **Required**: Available for Question interactions only. On/Off selector for required or not required.
+* **Interaction Enabled**: Set this On/Off slider to Off to disable the interaction, i.e., to exclude it from being executed as a part of the dialog flow. The default value is On (Enabled).
 
 ### Next Actions
 

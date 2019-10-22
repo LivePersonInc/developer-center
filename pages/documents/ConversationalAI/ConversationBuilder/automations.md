@@ -14,7 +14,7 @@ indicator: both
 ### Create a bot
 
 {: .important}
-LivePerson recommends that—-before you create a bot—-you set up the [domains](conversation-builder-intent-builder-overview.html), [intents](conversation-builder-intent-builder-overview.html), and [entities](conversation-builder-intent-builder-entities.html) that the bot will need. This makes creation of the bot much faster and easier because the [Assist tool](conversation-builder-assist.html) can use that information along the way to suggest suitable intents and entities to use.
+LivePerson recommends that —before you create a bot— you set up the [domains](conversation-builder-intent-builder-overview.html), [intents](conversation-builder-intent-builder-overview.html), and [entities](conversation-builder-intent-builder-entities.html) that the bot will need. This makes creation of the bot much faster and easier because the [NLU Assist tool](conversation-builder-nlu-assist.html) can use that information along the way to suggest suitable intents and entities to use.
 
 
 **To create a bot**
@@ -76,7 +76,7 @@ Bot settings include:
 
 - **Conversation Builder Platform Version**: Read-only. This identifies the platform version of the bot. Typically, you don’t need this information, but here’s where you can find it if asked for it (for example, in a support scenario).
 
-- **Entity**: You can use this option to associate _a domain_ with the bot. However, the Assist tool provides you with help in associating domains with dialogs, so typically you don’t need to specify a domain here.
+- **Entity**: You can use this option to associate _a domain_ with the bot. However, the [NLU Assist](conversation-builder-nlu-assist.html) tool provides you with help in associating domains with dialogs, so typically you don’t need to specify a domain here.
 
 - **Bot Account**: If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, you can use this setting to change the organization under which this bot exists. If you logged into Conversation Builder via single sign-on from LiveEngage, the organization you were using in LiveEngage is active and can't be changed, and nothing appears in this list.
 
