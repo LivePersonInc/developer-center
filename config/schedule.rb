@@ -23,7 +23,7 @@
 set :output, "/config/cron_log.log"
 
 # this command will update the search index every 6 hours and notify you
-every 6.hours do
+every 1.hours do
   command "ALGOLIA_API_KEY='56c038bbf2a7d22b11b52a832620c662' bundle exec jekyll algolia"
   command "echo 'Index updated!'"
 end
