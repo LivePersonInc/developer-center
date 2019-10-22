@@ -34,7 +34,7 @@ const searchInstance = autocomplete(
             documentName = suggestion._highlightResult.documentname.value;
           }
           return (
-            '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + documentName + '</span> <br /> <span class="searchcontentcontainer">' + content + '</span> </div> </a>'
+            '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + ' - ' + documentName + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
           )
         },
         empty: '<div class="aa-empty">No results found!</div>',

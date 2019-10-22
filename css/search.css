@@ -43,6 +43,7 @@
 span.documentContainer {
   color: #888888;
   font-size: 12px;
+  display: flex;
 }
 
 span.searchcontentcontainer {
