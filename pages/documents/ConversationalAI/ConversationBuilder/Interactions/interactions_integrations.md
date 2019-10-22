@@ -31,7 +31,7 @@ Before you can add an Integration interaction, you need to create the integratio
 
 ### File Upload interactions
 
-Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. As examples, you might want to do this when the consumer needs to provide an ID card or a document demonstrating proof of a good credit score.
+Use a File Upload (integration) interaction in a dialog when you need the consumer to upload a file that you require. As examples, you might want to do this when the consumer needs to provide an ID card or a document demonstrating proof of a good credit score.
 
 In the chat window, the consumer can upload the file by dragging and dropping it onto the window.
 
@@ -50,7 +50,7 @@ In the chat window, the consumer can upload the file by dragging and dropping it
 
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
 
-    *These two interactions work together.* Every File Upload interaction must be followed by an Integration interaction, where the selected integration is of type "File."
+    *These two interactions work together.* Every File Upload interaction must be followed by an Integration interaction whose selected integration is of type "File."
 
 4. Return to the File Upload interaction, open the **Interaction Details**, click **Settings**, and specify the following in the **File Upload Settings**:
     - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, and so on). If the consumer attempts to upload a file of any other type, the upload will fail, and the interaction's fallback message will be sent. You might want to include mention of the acceptable file types in the initial message that's sent to the consumer, as we've done in the image above.
@@ -64,6 +64,6 @@ In the chat window, the consumer can upload the file by dragging and dropping it
 - The uploaded file can’t be over 5 MB.
 - While LivePerson temporarily stores exchanged files for the duration of the conversation, it does not store them permanently.
 - Exchanged content must obey LivePerson’s Terms & Conditions, and the brand itself is responsible for checking exchanged files for malicious content.
-- If the dialog flow requires that the consumer upload *multiple* files, each File Upload interaction must be followed by an Integration interaction, although you can reuse the File integration that gets called.
+- If the dialog flow requires that the consumer upload *multiple* files, you'll need to add a File Upload interaction for every file, and each interaction must be followed by an Integration interaction. You can certainly reuse the File integration that gets called.
 
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload3.png">
