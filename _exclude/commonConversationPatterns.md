@@ -99,7 +99,7 @@ In this situation, an utterance would be processed for any matching intents/patt
 
 #### Solution
 
-By setting the following Automation [Environment Variables](conversation-builder-best-practices-using-environment-variables.html) at Bot Automation level, the bot can be set to "ignore" utterances sent by the consumer within a dialog until the next logical branching option is reached - e.g. a question with conditions that allow you jump out to other dialogs.
+By setting the following Automation [Environment Variables](conversation-builder-best-practices-environment-variables.html) at Bot Automation level, the bot can be set to "ignore" utterances sent by the consumer within a dialog until the next logical branching option is reached - e.g. a question with conditions that allow you jump out to other dialogs.
 
 <table>
 <thead>

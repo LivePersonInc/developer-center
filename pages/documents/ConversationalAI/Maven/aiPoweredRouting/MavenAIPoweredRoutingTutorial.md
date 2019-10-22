@@ -65,7 +65,7 @@ In this example we will create and use static attributes. To check if a customer
     {
         "name": "vipCustomer",
         "type": "static",
-        "payload": ["55501"]
+        "payload": "55501"
     }
     ```
 
@@ -75,7 +75,7 @@ In this example we will create and use static attributes. To check if a customer
     {
         "name": "regularCustomer",
         "type": "static",
-        "payload": ["55506"]
+        "payload": "55506"
     }
     ```
 
@@ -156,11 +156,9 @@ AskMaven is a REST interface that allows you to get a policy outcome programmati
     2. Replace the Maven API key you previously copied from the Developer Key section
 
     ```bash
-    curl --request GET \
-
-    --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions \
-
-    --header 'maven-api-key:  <API Key>'
+curl --request GET \
+--url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions \
+--header 'maven-api-key:  <API Key>'
     ```
 
 4. Here is the sample JSON output you should see
@@ -196,11 +194,9 @@ AskMaven is a REST interface that allows you to get a policy outcome programmati
     2. Replace the Maven API key you previously copied from the Developer Key section
 
     ```bash
-    curl --request GET \
-
-    --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions \
-
-    --header 'maven-api-key:  <API Key>'
+curl --request GET \
+--url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions \
+--header 'maven-api-key:  <API Key>'
     ```
 
 8. Here is the sample JSON output you should see
@@ -241,19 +237,13 @@ First you need to create a new NameSpace in the session store to store the phone
 2. Copy and paste this CURL command in Bash to create this namespace. Replace the account id, and API key fields
 
     ```bash
-    curl --request POST \
-
-    --url https://z1.context.liveperson.net/v1/account/<accountid> \
-
-    --header 'content-type: application/json' \
-
-    --header 'maven-api-key: <API Key>' \
-
-    --data '{
-
+curl --request POST \
+--url https://z1.context.liveperson.net/v1/account/<accountid> \
+--header 'content-type: application/json' \
+--header 'maven-api-key: <API Key>' \
+--data '{
         "name": "myNamespace"
-
-    }'
+}'
     ```
 
 ##### Store customer phone numbers in a session state
@@ -267,19 +257,13 @@ Here, we will go ahead and store the phone numbers for both types of customers (
     2. This command stores the phone number for a session (100). Any value for the session is accepted. In a production implementation, we recommend using the conversation ID, for this example, this value is fine
 
     ```bash
-    curl --request PATCH \
-
-    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/100/properties \
-
-    --header 'content-type: application/json' \
-
-    --header 'maven-api-key: <API Key>' \
-
-    --data '{
-
+curl --request PATCH \
+--url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/100/properties \
+--header 'content-type: application/json' \
+--header 'maven-api-key: <API Key>' \
+--data '{
         "phoneNumber": "55501"
-
-    }'
+}'
     ```
 
 2. Copy and paste the following CURL command - This is for the Regular customer
@@ -287,19 +271,13 @@ Here, we will go ahead and store the phone numbers for both types of customers (
     1. This command stores the phone number (55507) for a session (200). 
 
     ```bash
-    curl --request PATCH \
-
-    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/200/properties \
-
-    --header 'content-type: application/json' \
-
-    --header 'maven-api-key: <API Key>' \
-
-    --data '{
-
+curl --request PATCH \
+--url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/200/properties \
+--header 'content-type: application/json' \
+--header 'maven-api-key: <API Key>' \
+--data '{
         "phoneNumber": "55507"
-
-    }'
+}'
     ```
 
 #### Create Policies
@@ -376,10 +354,8 @@ Use the following CURL command in Bash to call AskMaven
 
 ```bash
 curl --request GET \
-
- --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=100 \
-
- --header 'maven-api-key:  <API Key>'
+--url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=100 \
+--header 'maven-api-key:  <API Key>'
 ```
 
 Here is the sample JSON output you should see
@@ -413,10 +389,8 @@ Use the following CURL command in Bash to call AskMaven
 
 ```bash
 curl --request GET \
-
- --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=200 \
-
- --header 'maven-api-key:  <API Key>'
+--url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=200 \
+--header 'maven-api-key:  <API Key>'
 ```
 
 Here is the sample JSON output you should see
@@ -563,5 +537,5 @@ Please use the variable `{$botContext.conversationId}` while calling the Context
 
 #### Transfer to an Agent or Bot
 
-Once you have retrieved the JSON response for a routing decision using AskMaven, you will need to parse the JSON to extract the skill to transfer to. To learn how to enable this please see documentation [Transfer to Agent or Bot](conversation-builder-best-practices-transfer-to-an-agent-or-bot.html). 
+Once you have retrieved the JSON response for a routing decision using AskMaven, you will need to parse the JSON to extract the skill to transfer to. To learn how to enable this, please see [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). 
 

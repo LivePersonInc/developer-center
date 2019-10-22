@@ -3,7 +3,7 @@ pagename: IBM Watson Assistant Version 2
 redirect_from:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Bot Connectors
+documentname: Third-Party Bots
 permalink: third-party-bots-ibm-watson-assistant-version-2.html
 indicator:
 ---
@@ -150,7 +150,7 @@ Please note that Watson assistant API version of `2018-09-20` is used to support
 
 If you use **JSON Editor** then the usual body of the native content is as follows:
 
-```json
+```javascript
 {
   "output": {
     "generic": [
@@ -170,7 +170,8 @@ Figure 2.1 Response type of Image is highlighted
 
 Once image is selected you will be asked to fill the information. "Image Source" url must be provided. You can also describe the image title and description (example filled form is shown in the Figure 2.2).
 
-**Note**: Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.
+{: .important}
+If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Image-Fields-Response.png">
 
@@ -209,7 +210,7 @@ Figure 2.4 List fields filled example
 
 If you are using **JSON Editor** then you have following structure of List. Note that **"options"** property is array of objects which holds the items for choosing are presented to user.
 
-```json
+```javascript
 {
   "output": {
     "generic": [
@@ -484,7 +485,7 @@ For using [quickReplies](quick-replies-introduction-to-quick-replies.html), we r
 The quick replies rich content should be added to the quickReplies property of the structuredContent object, and also a message should be included.
 This message will be sent to the customer along with the quick replies. **Figure 3.7** **Figure 3.8**
 
-```json
+```javascript
 {
   "structuredContent": {
     "quickReplies": {
@@ -669,6 +670,26 @@ To close a chat or messaging conversation, we utilize the action object as we di
 ```
 
 Figure 6.1 Watson Assistant JSON response for closing chat/conversation
+
+### Engagement attributes as context
+
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 7.1.
+
+<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+Figure 7.1 Conversation Type step in creation/modification of bot configuration.
+
+These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V2 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/apidocs/assistant-v1#get-response-to-user-input)). An example of the request body can be seen below:
+
+```javascript
+{
+  "message": "Some Message",
+  "context": {
+    // ... contains some more information about conversation as well
+    "lpEvent": {}, // Holds LP Events
+    "lpSdes": {}
+  }
+}
+```
 
 ### Limitations
 

@@ -22,7 +22,7 @@ indicator:
 External Bot frameworks and Bot builders can be enabled and managed through LiveEngage just like a normal human agent.
 
 Using Third-Party Bots, you can provision a connector for IBM Watson, Google Dialogflow, Amazon Lex, Microsoft Bot
- Framework or leverage LivePerson Functions with the Custom Integrations Option.
+Framework or leverage LivePerson Functions with the Custom Integrations Option.
 
 {: .important}
 If you need to connect a external bot that does not have a pre-built connector, see [this document](bot-connectors-custom-third-party-bots.html) for instructions.
@@ -63,7 +63,6 @@ The Bot is in the delayed state and will not accept new conversation or process 
 
 In this state the bot will try to restart automatically once every minute until the interruption is resolved.
 
-
 ### Limitations
 
 #### Supported customer content
@@ -75,7 +74,6 @@ The send identifier is **com.liveperson.bot-connectors.consumer.send-file**
 #### Support for different messaging channels and the corresponding rich content
 
 The Bot Connector system is designed to support [all relevant rich content](getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html), since it only forwards the received structured content and metadata to LivePerson's messaging and chat service. We have verified and tested the support for **Web Messaging**, **Facebook** and **Apple Business Chat**. All other channels are not verified, but should work if you send the right structured content for the channel. If you experience any issues, please contact LivePerson support or your account team.
-
 
 #### Creating and starting Bots
 
@@ -101,15 +99,18 @@ Please note that your bot setup should always return an intent or an action as a
 
   <img style="width:600px" src="img/dialogflowversion2/image_0.png">
 
-{:start="2"}  
+{:start="2"}
+
 2. Add login method as "API key" and generate new API key for the new user
 
    <img style="width:600px" src="img/dialogflowversion2/image_1.png">
 
 {:start="3"}
+
 3. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
 
 {:start="4"}
+
 4. Set Max No of Live Chats
 
    - If Chat in the drop down select - Value > 1.
@@ -117,13 +118,14 @@ Please note that your bot setup should always return an intent or an action as a
    - If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Conversations to Custom Setting and enter a value greater than 0**
 
 {:start="5"}
+
 5. Find api key name in bot user profile
 
    <img style="width:400px" src="img/dialogflowversion2/image_2.png">
 
 ---
 
-### Provision a connector 
+### Provision a connector
 
 To access Third-Party Bots, contact your Account Manager to enable the the feature in LiveEngage for your account.
 
@@ -138,38 +140,61 @@ Follow the steps below to add a new bot.
 2. Click “+ Add Bot” in the bot table
 
    <img style="width:800px" src="img/botconnectordashboard/add_new_bot.png">
+
 {:start="3"}
+
 3. Assign agent: Create a new Bot Agent or select an existing one
 
 4. Choose conversation type: Chat or Messaging
 
-Settings for Chat:
+Settings for Chat: <br />
 <img style="width:900px" src="img/botconnectordashboard/chat_settings.png">
 
-- Time until warning: Set up the time span after which the consumer will get an inactivity warning.
+<ul>
+  <li>
+  Time until warning: Set up the time span after which the consumer will get an inactivity warning.
+  </li>
+  <li>
+  Warning message: The warning message the chat consumer gets if he reaches the threshold.
+  </li>
+  <li>
+  Time until conversation close: Set up the time duration after which the consumer chat conversation will be closed if the customer is inactive
+  </li>
+  <li>
+  Close message: The message which the consumer will receive prior to closing the conversation
+  </li>
+</ul>
 
-- Warning message: The warning message the chat consumer gets if he reaches the threshold.
-
-- Time until conversation close: Set up the time duration after which the consumer chat conversation will be closed if the customer is inactive
-
-- Close message: The message which the consumer will receive prior to closing the conversation
-
-Settings for Messaging:
+Settings for Messaging: <br />
 <img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
 
 - No special settings are needed for messaging bots
+
+Settings for Engagement Attributes: <br />
+
+Third-Party bots allows the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is selected. These attributes are collected only at the **_start_** of every conversation. These attributes are then passed along every message as context information. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html).
+
 {:start="5"}
+
 5. Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service
 
   <img style="width:900px" src="img/botconnectordashboard/error_handling.png">
 
-- Transfer message to Customer: Default escalation message to the consumer in case the bot encounters an error
-
-- Transfer message to Agent: Message to the Agent from the escalating bot which will be provided together with the conversation when it is transferred
-
-- Transfer failure message: Message to the customer in case the escalation to the default escalation skill did not work.
-
-- Transfer to skill: Default escalation skill the bot should escalate to in case of any error.
+<ul>
+  <li>
+    Transfer message to Customer: Default escalation message to the consumer in case the bot encounters an error
+  </li>
+  <li>
+    Transfer message to Agent: Message to the Agent from the escalating bot which will be provided together with the conversation when it is transferred
+  </li>
+  <li>
+    Transfer failure message: Message to the customer in case the escalation to the default escalation skill did not work.
+  </li>
+  <li>
+    Transfer to skill: Default escalation skill the bot should escalate to in case of any error.
+  </li>
+ 
+</ul>
 
 **Note**: if no other skills are configured, it might be that the bot will escalate the conversation to itself. However in this case only new messages will be processed.
 
