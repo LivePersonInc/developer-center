@@ -14,7 +14,7 @@ For quick reference, below is an alphabetically-ordered list of all built-in fun
 
 For an introduction to scripting functions, see the [Introduction](conversation-builder-scripting-functions-introduction.html) to this section.
 
-* addQuickReples
+* addQuickReplies
 * evaluateOptions
 * getBotVariable
 * getChannel
