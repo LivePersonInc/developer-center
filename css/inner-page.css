@@ -327,6 +327,7 @@ ul.mysidebar.nav {
   top: 150px;
   height: 78vh;
   overflow-y: auto;
+  overflow-x: hidden;
   list-style: none;
 
 }
