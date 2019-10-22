@@ -44,13 +44,13 @@ In the chat window, the consumer can upload the file by dragging and dropping it
 
     The File Upload interaction only handles upload of the file to LiveEngage. 
     
-    Next you need to immediately follow the interaction with an [Integration interaction](conversation-builder-interactions-integrations.html#integration-interactions) that takes the file from the LiveEngage environment and uploads it to your external file share or system.
+    Next you need to add an interaction that takes the file from LiveEngage and uploads it to your external file share or system.
 
-3. Immediately after the File Upload interaction, add an Integration interaction, and select the [File integration](conversation-builder-integrations-file-integrations.html) to invoke.
+3. Immediately after the File Upload interaction, add an Integration interaction ( <img style="width:30px" src="img/ConvoBuilder/icon_integration.png"> ). In the interaction, select the *File integration* to invoke. (If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.)
 
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
 
-    *These two interactions work together.* Every File Upload interaction must be followed by an Integration interaction whose selected integration is of type "File."
+    *The File Upload and Integration interactions work together.* Every File Upload interaction must be followed by an Integration interaction whose selected integration is of type "File."
 
 4. Return to the File Upload interaction, open the **Interaction Details**, click **Settings**, and specify the following in the **File Upload Settings**:
     - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, and so on). If the consumer attempts to upload a file of any other type, the upload will fail, and the interaction's fallback message will be sent. You might want to include mention of the acceptable file types in the initial message that's sent to the consumer, as we've done in the image above.
