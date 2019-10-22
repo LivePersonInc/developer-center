@@ -334,8 +334,8 @@ ul.mysidebar.nav {
 ul.mysidebar > li.folder ul {
   display: none;
   list-style: none;
-  line-height: 2.3;
   width: 100%;
+  line-height: 1.5;
 }
 ul.mysidebar > li.folder ul.folderactive{
    display: block;
@@ -377,8 +377,6 @@ ul#mysiderbar li{
 
 .innerpageitem {
   padding-left: 15px !important;
-  border-left: 4px solid #646a79;
-  margin-left: 31px;
 }
 
 .activeitem {
@@ -400,6 +398,7 @@ ul.mysidebar.nav > li > a{
 }
 ul.mysidebar li ul li{
   margin-right: 0px;
+  margin-top: 10px;
 }
 
 ul.mysidebar.nav li a.active{
@@ -452,10 +451,15 @@ ul.mysidebar.nav li ul li {
  ul.mysidebar.nav ul li a {
   border-top: none;
   padding-left: 0px;
-
+  margin-top: 10px !important;
+  margin-bottom: 10px;
 }
 
-
+.innerList {
+  display: block;
+  border-left: 4px solid rgb(100, 106, 121);
+  margin-left: 30px;
+}
 
 div.sidebarTitle {
   display: none;
