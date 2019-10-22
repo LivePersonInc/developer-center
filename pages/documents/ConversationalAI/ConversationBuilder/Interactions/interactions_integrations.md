@@ -15,7 +15,7 @@ If an integration retrieves data, that data can be stored in custom fields, so y
 
 Integrations are similar to questions in that you can define conditions that each perform different next actions (based on which condition is met). One common use for this is to check whether the integration call was a success or failure and then to execute a next action that’s appropriate.
 
-### Integrations
+### Integration interactions
 
 {: .important}
 Before you can add an Integration interaction, you need to create the integration itself. For details on this, see [here](conversation-builder-integrations-integration-basics.html#integration-types).
@@ -29,19 +29,13 @@ Before you can add an Integration interaction, you need to create the integratio
 
 3. Finish configuring the interaction as desired, and click **Save**.
 
-### File Upload integrations
+### File Upload interactions
 
-Use a File Upload integration in a dialog when you need the consumer to upload a file that you require. As examples, you might want to do this when the consumer needs to provide an ID card or a document demonstrating proof of a good credit score.
+Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. As examples, you might want to do this when the consumer needs to provide an ID card or a document demonstrating proof of a good credit score.
 
 In the chat window, the consumer can upload the file by dragging and dropping it onto the window.
 
-The following are important notes:
-
-- The uploaded file can’t be over 5 MB.
-- While LivePerson temporarily stores exchanged files for the duration of the conversation, it does not store them permanently.
-- Exchanged content must obey LivePerson’s Terms & Conditions, and the brand itself is responsible for checking exchanged files for malicious content.
-
-**To add a File Upload integration**
+**To add a File Upload interaction**
 
 1. Select the interaction just above where you want to add the File Upload interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_fileUpload.png"> (File Upload) on the interactions toolbar.
 2. In the File Upload interaction, enter the message to send to the consumer.
@@ -50,13 +44,13 @@ The following are important notes:
 
     The File Upload interaction only handles upload of the file to LiveEngage. 
     
-    Now you need to immediately follow the interaction with an Integration interaction that takes the file from the LiveEngage environment and uploads it to your external file share or system.
+    Next you need to immediately follow the interaction with an [Integration interaction](conversation-builder-interactions-integrations.html#integration-interactions) that takes the file from the LiveEngage environment and uploads it to your external file share or system.
 
 3. Immediately after the File Upload interaction, add an Integration interaction, and select the [File integration](conversation-builder-integrations-file-integrations.html) to invoke.
 
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
 
-    *These two interactions work together.* Every File Upload interaction *must* be followed by an Integration interaction, where the selected integration is of type "File."
+    *These two interactions work together.* Every File Upload interaction must be followed by an Integration interaction, where the selected integration is of type "File."
 
 4. Return to the File Upload interaction, open the **Interaction Details**, click **Settings**, and specify the following in the **File Upload Settings**:
     - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, and so on). If the consumer attempts to upload a file of any other type, the upload will fail, and the interaction's fallback message will be sent. You might want to include mention of the acceptable file types in the initial message that's sent to the consumer, as we've done in the image above.
@@ -65,7 +59,11 @@ The following are important notes:
 5. In the **Interaction Details** of both the File Upload and Integration interactions, click the **Next Actions** tab and enter a fallback message under **Advanced Responses**. If the upload fails in either interaction, the interaction's fallback message will be sent.
 6. Finish configuring the interactions as desired, and save your changes.
     
-{: .important}
-If the dialog flow requires that the consumer upload *multiple* files, each File Upload interaction must be followed by an Integration interaction, although you can reuse the File integration that gets called.
+#### Notes on File Upload interactions
 
-<img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload3.png">
+- The uploaded file can’t be over 5 MB.
+- While LivePerson temporarily stores exchanged files for the duration of the conversation, it does not store them permanently.
+- Exchanged content must obey LivePerson’s Terms & Conditions, and the brand itself is responsible for checking exchanged files for malicious content.
+- If the dialog flow requires that the consumer upload *multiple* files, each File Upload interaction must be followed by an Integration interaction, although you can reuse the File integration that gets called.
+
+    <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload3.png">
