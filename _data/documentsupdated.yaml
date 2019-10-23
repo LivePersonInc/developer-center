@@ -171,12 +171,14 @@
       - pagename: Scripting Functions
         subpages:
           - subpagename: Introduction
-          - subpagename: Debugging and Logging
-          - subpagename: Get and Set User Data and Variables
-          - subpagename: Get and Set Conversation Flow Data
-          - subpagename: Sending Messages
-          - subpagename: Context Session Store Wrapper
           - subpagename: Functions List
+          - subpagename: Get & Set Contextual Data
+          - subpagename: Get User Data
+          - subpagename: Get Integration Data
+          - subpagename: Send Messages
+          - subpagename: Manage Conversation Flow
+          - subpagename: Context Session Store Wrapper
+          - subpagename: Log & Debug
       - pagename: Testing & Deployment
         subpages:
           - subpagename: Debugging

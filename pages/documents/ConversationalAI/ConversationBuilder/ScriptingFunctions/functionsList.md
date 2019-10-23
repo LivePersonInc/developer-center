@@ -12,7 +12,8 @@ indicator: both
 
 For quick reference, below is an alphabetically-ordered list of all built-in functions in Conversation Builder.
 
-For an introduction to scripting functions, see the [Introduction](conversation-builder-scripting-functions-introduction.html) to this section.
+{: .important}
+New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
 
 * addQuickReplies
 * evaluateOptions
@@ -22,7 +23,6 @@ For an introduction to scripting functions, see the [Introduction](conversation-
 * getCurrentUserMessage
 * getDisambiguatedIntentId
 * getDisambiguatedIntentName
-* getEmail
 * getEnvVariable
 * getLPCustomerInfo
 * getLPEngagementAttribute (current skill, previous skill, etc.)
@@ -31,10 +31,6 @@ For an introduction to scripting functions, see the [Introduction](conversation-
 * getNlpResponse
 * getQuickReplyPayload
 * getSentiment
-* getUserLocation
-* getUserName
-* getUserPlatformId
-* getUserPlatformType
 * getWebViewVariable
 * getWebViewVariables
 * logCustomEvent
@@ -45,7 +41,5 @@ For an introduction to scripting functions, see the [Introduction](conversation-
 * sendMessages
 * sendMessageWithQuickReplies
 * setBotVariable
-* setEmail
 * setMessageDelay
 * setTriggerNextMessage
-* setUserName

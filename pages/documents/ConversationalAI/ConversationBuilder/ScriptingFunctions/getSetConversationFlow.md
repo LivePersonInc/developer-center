@@ -1,21 +1,22 @@
 ---
-pagename: Get and Set Conversation Flow Data
+pagename: Manage Conversation Flow
 redirect_from:
+    - conversation-builder-scripting-functions-get-and-set-conversation-flow-data.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Scripting Functions
-permalink: conversation-builder-scripting-functions-get-and-set-conversation-flow-data.html
+permalink: conversation-builder-scripting-functions-manage-conversation-flow.html
 indicator: both
 ---
 
-The following built-in functions, can be used to get/set data that is related to or affects the flow of a conversation.
+Use the following built-in functions to affect the flow of a conversation.
 
 {: .important}
-Please see the [Scripting Functions Introduction](conversation-builder-scripting-functions-introduction.html) for more information on Conversation Builder's built-in functions.
+New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
 
-### Set Message Delay Value
+### Set message delay value
 
 Used to set a delay for a group of messages such that they appear like a real conversation.
 
@@ -37,44 +38,28 @@ botContext.setMessageDelay(2000);
 botContext.sendMessages(['Sorry to hear that you lost your credit card.','I just put the stop on your credit card', 'If you find any unauthorized transaction please let us know as soon as possible so we can remove them from your bill']);
 ```
 
-### Get Current User Message
+### Set trigger next message
 
-Used for getting the most recent message from the user, whether typed or tapped (buttons or quick replies).
-
-| Function Name | Arguments | Return Payload |
-| --- | --- | --- |
-| `getCurrentUserMessage()` | None | string: The full text of the most recent message from the user. |
-
-#### Example
-
-```javascript
-// get what the user just said
-var response = botContext.getCurrentUserMessage();
-// use the response in a variable
-botContext.setBotVariable('newsSource',response,true,false);
-```
-
-### Get Disambiguated Intent
-
-These functions can be used in preProcess/postProcess/processUserResponse code to get the relevant disambiguated intent data.
+Used for triggering the message flow to selected segment of the bot.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getDisambiguatedIntentName()` | None | selected intent name from the disambiguation interaction (string) |
-| `getDisambiguatedIntentId()` | None | selected intent ID from the disambiguation interaction (string) |
+| `setTriggerNextMessage(messagename)` | messagename (string) – The message to trigger, as identified by the Name of the message. | None |
 
 #### Example
 
+In the below example, we test for which company the user selected, and if ‘BotCentral’ we trigger the message "Welcome BotCentral", otherwise we trigger "Welcome Other".
+
 ```javascript
-// get the disambiguated intent name
-var intentName = botContext.getDisambiguatedIntentName() ;
-// get the disambiguated intent ID
-var intentID = botContext.getDisambiguatedIntentId();
-// display the results...
-botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent ID = ' + intentID);
+var company = botContext.getCurrentUserMessage();
+if (company == 'BotCentral') {
+      botContext.setTriggerNextMessage('Welcome BotCentral');
+}else{
+      botContext.setTriggerNextMessage('Welcome Other');
+}
 ```
 
-### Evaluating Options
+### Evaluate options
 
 Used for matching the user’s input against an array of options.
 
@@ -95,70 +80,19 @@ var result = botContext.evaluateOptions(userResponse, options);
 botContext.printDebugMessage('====> User Said: ' + userResponse + ' and MATCH result = '+ result);
 ```
 
-### Get Named Entities
+### Add quick replies
 
-Used to access user utterances that are recognized as entities.
-
-To access the actual phrases used, call `getPhrase()` on the entity objects.
+The Add Quick Replies function is used for adding quick replies to a message in JavaScript rather than defining in Bot creation. This allows for the dynamic addition of the buttons to accommodate various scenarios.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getNamedEntities(entity_name)` | entity_name (string) | array of `namedEntity()` objects |
+| `addQuickReples()` | array | None |
 
 #### Example
 
-```javascript
-var toppingObjects = botContext.getNamedEntities('toppings');
-var toppings = [];
-if (toppingObjects != null && toppingObjects.length > 0) {
-    for (j = 0; j < toppingObjects.length; j++) {
-        toppings.push(toppingObjects[j].getPhrase)
-    }
-}
-```
-
-### Get NLP Responses
-
-Used to get an array of results derived from BotCentral’s Natural Language Processing algorithms.
-
-For instance, the sentence, “The quick brown fox jumped over the lazy dog” returns the following nouns [dog, fox], the verb [jumped], the phrases [the quick brown Fox, the lazy Dog] and tokens: [the, over, quick, lazy, jumped, brown, Dog, Fox].
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `getNlpResponse()` | None | array of NLP results (nouns, verbs, phrases, sentences, tokens) |
-
-#### Example
+The example below shows how quick replies can be added easily to your message.
 
 ```javascript
-// get the results
-var nlpResponse = botContext.getNlpResponse();
-var nlpNouns = nlpResponse.nouns;
-var nlpVerbs = nlpResponse.verbs;
-var nlpPhrases = nlpResponse.phrases;
-var nlpTokens = nlpResponse.tokens;
-
-botContext.sendMessage('I found the following nouns: '+ nlpNouns + ' and verbs: '+ nlpVerbs + ' and phrases: ' + nlpPhrases + ' and tokens: ' + nlpTokens);
+// Add these quick replies to an existing message
+botContext.addQuickReples(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03','Hot~sauce04']);
 ```
-
-### Get Sentiment
-
-Used for having the sentiment conversation chatbox messages with the user. Instead of using the sentiments in the intents of the bot, this function relies on programmably checking the sentiment of the user.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `getSentiment()` | None | returns a string (Positive, Neutral, Negative) based on the most recent user message |
-
-#### Example
-
-```javascript
-// get the sentiment results
-var sentiment =  botContext.getSentiment();
-if(sentiment == "Positive"){
-    botContext.sendMessage('Excellent!');
-} else if(sentiment == "Neutral"){
-    botContext.sendMessage('Hmmmm, not too sure about that…');
-} else {
-    botContext.sendMessage('Well that’s not good.');
-}
-```
-

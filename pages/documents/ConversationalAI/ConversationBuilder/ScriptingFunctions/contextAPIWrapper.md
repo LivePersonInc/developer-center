@@ -13,7 +13,7 @@ indicator: both
 The following built-in functions are a convenient wrapper on top of the Maven [Context Session Store](maven-context-warehouse-context-session-store.html) API.
 
 {: .important}
-Please see the [Scripting Functions Introduction](conversation-builder-scripting-functions-introduction.html) for more information on Conversation Builder's built-in functions.
+New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
 
 ### Getting Started
 
