@@ -19,12 +19,12 @@ The following Conversation Builder roles are available:
 
 ### Admin
 
-This is an administrator role. Users with this role have full privileges, including the ability to create, deploy and manage agent connectors within Conversation Builder.
+This is an administrator role. Users with this role have full privileges, including the ability to create, deploy and manage agent connectors at the bot level within Conversation Builder.
 
 Users with this role do have the following limitations:
 
 * No ability to create and manage (bot) templates
-* No access to the Bots Status application, which is an operations area where bot deployments can also be managed
+* No access to the Bots Status application, which is the operations area where bot deployments for the entire organization can be managed
 
 ### Bot Builder
 
@@ -41,12 +41,10 @@ This role provides full privileges for creating bots and related resources. More
 Users with this role can also:
 
 * Activate and train models
-* Create, deploy and manage agent connectors within Conversation Builder
-* View, download and purge analytics data
+* Create, deploy and manage agent connectors at the bot level within Conversation Builder
+* View and download analytics data
 
-This role doesn't allow the user to create and manage templates, accounts or users.
-
-Also, this role doesn't allow the user to access the Bots Status application, which is an operations area where bot deployments can also be managed.
+This role doesn't allow the user to create and manage templates, accounts or users. Also, this role doesn't allow the user to access the Bots Status application, which is the operations area where bot deployments for the entire organization can be managed.
 
 ### Bot Builder Lite
 
@@ -66,14 +64,13 @@ This role is for users who create content. More specifically, users with this ro
 Users with this role can also:
 
 * Activate and train models
-* View, download and purge analytics data
+* View and download analytics data
 
 ### API Developer
 
 This is a technical but limited role. Users with this role can only create and manage:
 
 * Integrations
-* Credentials
 
 ### API Credentials Manager
 
@@ -98,7 +95,7 @@ Users with this role can only create and manage:
 
 Users with this role can only do the following:
 
-* Create, deploy and manage agent connectors in the Bots Status application
+* Create, deploy and manage agent connectors for the entire organization in the Bots Status application
 
 ### Business User
 
