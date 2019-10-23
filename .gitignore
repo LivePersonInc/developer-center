@@ -5,4 +5,4 @@ _pdf
 .idea/
 .DS_Store
 .bundle
-_algolia_api_key
+.platform.app.yaml
