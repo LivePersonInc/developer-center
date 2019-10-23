@@ -174,200 +174,505 @@ Settings for Engagement Attributes: <br />
 
 Third-Party bots allows the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is selected. These attributes are collected only at the **_start_** of every conversation. These attributes are then passed along every message as context information. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Additionally the original Liveperson event from the chat or messaging api is sent along with each request to allow further customization and information.
 
-##### Example lpSdes Object
+##### Example lpSdes object for Chat conversations
+
+The authenticated SDEs for Chat conversations have the same format as described [here](chat-agent-api-methods-retrieve-participant-info.html).
 
 ```js
 const lpSdes = {
-  customerInfo: {
-    serverTimeStamp: 1571770965040,
+  unauthenticatedSdes: {
     customerInfo: {
-      customerStatus: 'cancelled',
-      customerType: 'vip',
-      balance: -400.99,
-      currency: 'USD',
-      customerId: '138766AC',
-      lastPaymentDate: {
-        year: 2014,
-        month: 10,
-        day: 15
+      serverTimeStamp: 1571770965040,
+      customerInfo: {
+        customerStatus: 'cancelled',
+        customerType: 'vip',
+        balance: -400.99,
+        currency: 'USD',
+        customerId: '138766AC',
+        lastPaymentDate: {
+          year: 2014,
+          month: 10,
+          day: 15
+        },
+        registrationDate: {
+          year: 2013,
+          month: 5,
+          day: 23
+        },
+        loginStatus: null,
+        companyBranch: null,
+        socialId: '11256324780',
+        imei: '3543546543545688',
+        userName: 'user000',
+        companySize: 500,
+        accountName: 'bank corp',
+        role: 'broker',
+        storeZipCode: '20505',
+        storeNumber: '123865'
       },
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      }
+    },
+    cartStatus: {
+      serverTimeStamp: 1571770965040,
+      total: 11.7,
+      currency: 'USD',
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      numItems: 6,
+      products: [
+        {
+          product: {
+            name: 'prod1',
+            category: 'category',
+            sku: 'sku',
+            price: 7.8
+          },
+          quantity: 1
+        }
+      ]
+    },
+    purchase: {
+      serverTimeStamp: 1571770965040,
+      total: 11.7,
+      orderId: 'DRV1534XC',
+      currency: 'USD',
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      cart: {
+        serverTimeStamp: 0,
+        total: null,
+        currency: null,
+        contexts: {},
+        numItems: null,
+        products: [
+          {
+            product: {
+              name: 'antivirus pro plan',
+              category: 'software',
+              sku: 'xyz001',
+              price: 7.8
+            },
+            quantity: 3
+          }
+        ]
+      }
+    },
+    viewedProduct: {
+      serverTimeStamp: 1571770965040,
+      currency: 'USD',
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      products: [
+        {
+          product: {
+            name: 'red high heel shoe',
+            category: 'women shoes',
+            sku: 'xyz567',
+            price: 77.8
+          }
+        }
+      ]
+    },
+    marketingCampaignInfo: {
+      serverTimeStamp: 1571770965040,
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      marketingCampaignInfo: {
+        originatingChannel: 1,
+        affiliate: 'Yahoo',
+        campaignId: 'US coupon campaign'
+      }
+    },
+    personalInfo: {
+      serverTimeStamp: 1571770965040,
+      personalInfo: {
+        name: 'John',
+        surname: 'Doe',
+        customerAge: {
+          customerAgeInYears: 34,
+          customerYearOfBirth: 1980,
+          customerMonthOfBirth: 4,
+          customerDateOfBirth: 15
+        },
+        contacts: [
+          {
+            email: 'myname@example.com',
+            phone: '+1 212-788-8877',
+            phoneType: null,
+            address: null,
+            preferredContactMethod: null
+          }
+        ],
+        gender: 'MALE',
+        company: 'company',
+        language: 'en-US'
+      },
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      }
+    },
+    lead: {
+      serverTimeStamp: 1571770965040,
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      lead: {
+        topic: 'luxury car test drive 2015',
+        value: 22.22,
+        ticketId: null,
+        leadId: 'xyz123',
+        currency: 'USD'
+      }
+    },
+    serviceActivity: {
+      serverTimeStamp: 1571770965040,
+      serviceActivity: {
+        topic: 'order checkbook',
+        status: 0,
+        category: 'finance',
+        serviceId: 'service12'
+      },
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      }
+    },
+    visitorError: {
+      serverTimeStamp: 1571770965040,
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      visitorError: {
+        contextId: null,
+        message: 'Expiration date missing',
+        code: 'er100004',
+        level: null,
+        resolved: null
+      }
+    }
+  },
+  authenticatedSdes: {
+    authenticatedParticipantInfo: {
+      isUserAuthenticated: true,
+      participantId: '55fc1779-83b0-4e8b-8eea-503a8eaf8822',
+      balance: -400.99,
       registrationDate: {
         year: 2013,
         month: 5,
         day: 23
       },
-      loginStatus: null,
-      companyBranch: null,
+      lastPaymentDate: {
+        year: 2014,
+        month: 10,
+        day: 15
+      },
+      customerId: '57ac-072a-5d10-4506-721f-9ebf',
+      customerStatus: 'cancelled',
+      customerType: 'vip',
       socialId: '11256324780',
       imei: '3543546543545688',
-      userName: 'user000',
+      userName: 'testuser',
       companySize: 500,
       accountName: 'bank corp',
-      role: 'broker',
-      storeZipCode: '20505',
-      storeNumber: '123865'
+      role: 'broker'
     },
-    contexts: {
-      page: {
-        id: '561554049'
-      }
-    }
-  },
-  cartStatus: {
-    serverTimeStamp: 1571770965040,
-    total: 11.7,
-    currency: 'USD',
-    contexts: {
-      page: {
-        id: '561554049'
-      }
-    },
-    numItems: 6,
-    products: [
-      {
-        product: {
-          name: 'prod1',
-          category: 'category',
-          sku: 'sku',
-          price: 7.8
-        },
-        quantity: 1
-      }
-    ]
-  },
-  purchase: {
-    serverTimeStamp: 1571770965040,
-    total: 11.7,
-    orderId: 'DRV1534XC',
-    currency: 'USD',
-    contexts: {
-      page: {
-        id: '561554049'
-      }
-    },
-    cart: {
-      serverTimeStamp: 0,
-      total: null,
-      currency: null,
-      contexts: {},
-      numItems: null,
-      products: [
+    authenticatedPersonalInfo: {
+      name: 'Test',
+      surname: 'User',
+      contacts: [
         {
-          product: {
-            name: 'antivirus pro plan',
-            category: 'software',
-            sku: 'xyz001',
-            price: 7.8
-          },
-          quantity: 3
+          email: 'testuser@liveperson.com',
+          phone: '+1-10-344-3765333'
         }
       ]
     }
-  },
-  viewedProduct: {
-    serverTimeStamp: 1571770965040,
-    currency: 'USD',
-    contexts: {
-      page: {
-        id: '561554049'
-      }
-    },
-    products: [
-      {
-        product: {
-          name: 'red high heel shoe',
-          category: 'women shoes',
-          sku: 'xyz567',
-          price: 77.8
+  }
+};
+
+```
+
+##### Example lpSdes object for Messaging conversations
+
+```js
+const lpSdes = {
+  unauthenticatedSdes: {
+    customerInfo: {
+      serverTimeStamp: 1571770965040,
+      customerInfo: {
+        customerStatus: 'cancelled',
+        customerType: 'vip',
+        balance: -400.99,
+        currency: 'USD',
+        customerId: '138766AC',
+        lastPaymentDate: {
+          year: 2014,
+          month: 10,
+          day: 15
+        },
+        registrationDate: {
+          year: 2013,
+          month: 5,
+          day: 23
+        },
+        loginStatus: null,
+        companyBranch: null,
+        socialId: '11256324780',
+        imei: '3543546543545688',
+        userName: 'user000',
+        companySize: 500,
+        accountName: 'bank corp',
+        role: 'broker',
+        storeZipCode: '20505',
+        storeNumber: '123865'
+      },
+      contexts: {
+        page: {
+          id: '561554049'
         }
       }
-    ]
-  },
-  marketingCampaignInfo: {
-    serverTimeStamp: 1571770965040,
-    contexts: {
-      page: {
-        id: '561554049'
+    },
+    cartStatus: {
+      serverTimeStamp: 1571770965040,
+      total: 11.7,
+      currency: 'USD',
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      numItems: 6,
+      products: [
+        {
+          product: {
+            name: 'prod1',
+            category: 'category',
+            sku: 'sku',
+            price: 7.8
+          },
+          quantity: 1
+        }
+      ]
+    },
+    purchase: {
+      serverTimeStamp: 1571770965040,
+      total: 11.7,
+      orderId: 'DRV1534XC',
+      currency: 'USD',
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      cart: {
+        serverTimeStamp: 0,
+        total: null,
+        currency: null,
+        contexts: {},
+        numItems: null,
+        products: [
+          {
+            product: {
+              name: 'antivirus pro plan',
+              category: 'software',
+              sku: 'xyz001',
+              price: 7.8
+            },
+            quantity: 3
+          }
+        ]
       }
+    },
+    viewedProduct: {
+      serverTimeStamp: 1571770965040,
+      currency: 'USD',
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      products: [
+        {
+          product: {
+            name: 'red high heel shoe',
+            category: 'women shoes',
+            sku: 'xyz567',
+            price: 77.8
+          }
+        }
+      ]
     },
     marketingCampaignInfo: {
-      originatingChannel: 1,
-      affiliate: 'Yahoo',
-      campaignId: 'US coupon campaign'
-    }
-  },
-  personalInfo: {
-    serverTimeStamp: 1571770965040,
-    personalInfo: {
-      name: 'John',
-      surname: 'Doe',
-      customerAge: {
-        customerAgeInYears: 34,
-        customerYearOfBirth: 1980,
-        customerMonthOfBirth: 4,
-        customerDateOfBirth: 15
-      },
-      contacts: [
-        {
-          email: 'myname@example.com',
-          phone: '+1 212-788-8877',
-          phoneType: null,
-          address: null,
-          preferredContactMethod: null
+      serverTimeStamp: 1571770965040,
+      contexts: {
+        page: {
+          id: '561554049'
         }
-      ],
-      gender: 'MALE',
-      company: 'company',
-      language: 'en-US'
-    },
-    contexts: {
-      page: {
-        id: '561554049'
+      },
+      marketingCampaignInfo: {
+        originatingChannel: 1,
+        affiliate: 'Yahoo',
+        campaignId: 'US coupon campaign'
       }
-    }
-  },
-  lead: {
-    serverTimeStamp: 1571770965040,
-    contexts: {
-      page: {
-        id: '561554049'
+    },
+    personalInfo: {
+      serverTimeStamp: 1571770965040,
+      personalInfo: {
+        name: 'John',
+        surname: 'Doe',
+        customerAge: {
+          customerAgeInYears: 34,
+          customerYearOfBirth: 1980,
+          customerMonthOfBirth: 4,
+          customerDateOfBirth: 15
+        },
+        contacts: [
+          {
+            email: 'myname@example.com',
+            phone: '+1 212-788-8877',
+            phoneType: null,
+            address: null,
+            preferredContactMethod: null
+          }
+        ],
+        gender: 'MALE',
+        company: 'company',
+        language: 'en-US'
+      },
+      contexts: {
+        page: {
+          id: '561554049'
+        }
       }
     },
     lead: {
-      topic: 'luxury car test drive 2015',
-      value: 22.22,
-      ticketId: null,
-      leadId: 'xyz123',
-      currency: 'USD'
-    }
-  },
-  serviceActivity: {
-    serverTimeStamp: 1571770965040,
-    serviceActivity: {
-      topic: 'order checkbook',
-      status: 0,
-      category: 'finance',
-      serviceId: 'service12'
-    },
-    contexts: {
-      page: {
-        id: '561554049'
+      serverTimeStamp: 1571770965040,
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      lead: {
+        topic: 'luxury car test drive 2015',
+        value: 22.22,
+        ticketId: null,
+        leadId: 'xyz123',
+        currency: 'USD'
       }
-    }
-  },
-  visitorError: {
-    serverTimeStamp: 1571770965040,
-    contexts: {
-      page: {
-        id: '561554049'
+    },
+    serviceActivity: {
+      serverTimeStamp: 1571770965040,
+      serviceActivity: {
+        topic: 'order checkbook',
+        status: 0,
+        category: 'finance',
+        serviceId: 'service12'
+      },
+      contexts: {
+        page: {
+          id: '561554049'
+        }
       }
     },
     visitorError: {
-      contextId: null,
-      message: 'Expiration date missing',
-      code: 'er100004',
-      level: null,
-      resolved: null
+      serverTimeStamp: 1571770965040,
+      contexts: {
+        page: {
+          id: '561554049'
+        }
+      },
+      visitorError: {
+        contextId: null,
+        message: 'Expiration date missing',
+        code: 'er100004',
+        level: null,
+        resolved: null
+      }
+    }
+  },
+  authenticatedSdes: {
+    customerInfo: {
+      type: 'ctmrinfo',
+      acr: 'loa1',
+      iss: 'https://customerWebSite.com',
+      customerInfo: {
+        customerStatus: 'cancelled',
+        customerType: 'vip',
+        balance: -400.99,
+        currency: 'USD',
+        customerId: '138766AC',
+        lastPaymentDate: {
+          year: 2014,
+          month: 10,
+          day: 15
+        },
+        registrationDate: {
+          year: 2013,
+          month: 5,
+          day: 23
+        },
+        loginStatus: null,
+        companyBranch: null,
+        socialId: '11256324780',
+        imei: '3543546543545688',
+        userName: 'user000',
+        companySize: 500,
+        accountName: 'bank corp',
+        role: 'broker',
+        storeZipCode: '20505',
+        storeNumber: '123865'
+      },
+      auth: {}
+    },
+    personalInfo: {
+      type: 'personal',
+      acr: 'loa1',
+      iss: 'https://customerWebSite.com',
+      personalInfo: {
+        name: 'John',
+        surname: 'Doe',
+        customerAge: {
+          customerAgeInYears: 34,
+          customerYearOfBirth: 1980,
+          customerMonthOfBirth: 4,
+          customerDateOfBirth: 15
+        },
+        contacts: [
+          {
+            email: 'myname@example.com',
+            phone: '+1 212-788-8877',
+            phoneType: null,
+            address: null,
+            preferredContactMethod: null
+          }
+        ],
+        gender: 'MALE',
+        company: 'company',
+        language: 'en-US'
+      },
+      auth: {}
     }
   }
 };
@@ -462,7 +767,8 @@ const lpSdes = {
         ],
         deviceFamily: 'DESKTOP'
       }
-    }
+    },
+
   };
 ```
 
