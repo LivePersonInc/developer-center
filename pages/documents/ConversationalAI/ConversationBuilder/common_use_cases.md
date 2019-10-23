@@ -22,4 +22,4 @@ For example, in a [Fallback dialog](conversation-builder-dialogs-fallback-dialog
 It's common to use this special syntax in the response conditions of questions because often you want to store the consumer's response to a question in a variable. For more on this, see [here](conversation-builder-variables-slots.html).
 
 ### Access authenticated customer information
-Use the [Get Authenticated Customer Info](conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html#get-authenticated-customer-info) scripting functions.
+Use the [Get Authenticated Customer Info](conversation-builder-scripting-functions-get-user-data.html#get-authenticated-customer-info) scripting functions.

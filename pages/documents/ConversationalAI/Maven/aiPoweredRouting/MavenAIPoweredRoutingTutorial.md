@@ -557,7 +557,7 @@ The steps are as follows:
 
 #### Get Conversation id 
 
-[See here](conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html#get-conversation-id) for how to get and store a conversation ID in a bot session variable.
+[See here](conversation-builder-scripting-functions-get-set-contextual-data.html#get-conversation-id) for how to get and store a conversation ID in a bot session variable.
 
 Please use the variable `{$botContext.conversationId}` while calling the Context Session Store API (SessionID) and AskMaven API (ConversationID). 
 
