@@ -20,8 +20,7 @@
 # Learn more: http://github.com/javan/whenever
 
 # this command will update the search index every 6 hours and notify you
-every 1.day, at: '13:16 pm' do
-  command "cd documents/product/repositories/developers-community"
-  command "ALGOLIA_API_KEY='56c038bbf2a7d22b11b52a832620c662' bundle exec jekyll algolia"
+every 1.day, at: '14:10 pm' do
+  command "cd documents/product/repositories/developers-community && ALGOLIA_API_KEY='56c038bbf2a7d22b11b52a832620c662' bundle exec jekyll algolia"
   command "echo 'Index updated!'"
 end
