@@ -76,22 +76,3 @@ if (email != null) {
 }
 ```
 
-### Get user Platform ID and platform Type
-
-The Get User Platform Id and Get User Platform Type are the functions that are used to get the user’s unique platform ID and their platform type (eg: FACEBOOK, HTMLCLIENT, etc).
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `getUserPlatformId()` | None | string: unique User platform ID |
-| `getUserPlatformType()` | None | string: User platform type |
-
-#### Example
-
-```javascript
-// get the user’s platform ID
-var userId = botContext.getUserPlatformId();
-// gets the user’s platform type
-var platformType = botContext.getUserPlatformType();
-// display the results...
-botContext.printDebugMessage('The userPlatformId = ' + userId + 'and the userPlatformType = ' + platformType);
-```

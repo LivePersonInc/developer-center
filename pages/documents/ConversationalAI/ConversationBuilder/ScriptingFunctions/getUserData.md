@@ -16,6 +16,26 @@ Use the following built-in functions to get user data.
 {: .important}
 New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
 
+### Get user platform ID and platform type
+
+Get User Platform Id and Get User Platform Type are the functions that are used to get the user’s unique platform ID and their platform type (FACEBOOK, HTMLCLIENT, etc.).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getUserPlatformId()` | None | string: unique User platform ID |
+| `getUserPlatformType()` | None | string: User platform type |
+
+#### Example
+
+```javascript
+// get the user’s platform ID
+var userId = botContext.getUserPlatformId();
+// gets the user’s platform type
+var platformType = botContext.getUserPlatformType();
+// display the results...
+botContext.printDebugMessage('The userPlatformId = ' + userId + 'and the userPlatformType = ' + platformType);
+```
+
 ### Get authenticated customer info
 
 There are two built in methods to return authenticated customer information. You can attempt to see if either of these 2 methods return true or not.  If the visitor is authenticated, (typically they would set personal or customer info being logged in) you can access the Personal Info or Customer Info object array.
