@@ -365,7 +365,7 @@ Maximum number of minutes to send the message.
 Conversation separator text and line color.
 
 - **Type:** UIColor
-- **Default value:** [`LPColor.lpLabel`](#LPColor) 
+- **Default value:** [`LPColor.lpGray2`](#LPColor) 
 
 <!--    <div style="float: right; width: 65%;">
    <figure>
@@ -1601,6 +1601,7 @@ Title text color for all labels.
 
 #### csatResolutionHidden  
 Hides the survey (Yes/No) question.  
+To show CSAT resolution, 'csatAgentViewHidden' must be set to True.
 
 - **Type:** Bool
 - **Default value:** false
@@ -2175,7 +2176,7 @@ Color code for links in the text of the visitor bubble.
 
 
 - **Type:** UIColor    
-- **Default value:** [`LPColor.lpWhite`](#LPColor)
+- **Default value:** UIColor.white
 
 
 
