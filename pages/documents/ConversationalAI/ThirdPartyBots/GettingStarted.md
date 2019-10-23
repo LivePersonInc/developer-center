@@ -172,7 +172,392 @@ Settings for Messaging: <br />
 
 Settings for Engagement Attributes: <br />
 
-Third-Party bots allows the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is selected. These attributes are collected only at the **_start_** of every conversation. These attributes are then passed along every message as context information. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html).
+Third-Party bots allows the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is selected. These attributes are collected only at the **_start_** of every conversation. These attributes are then passed along every message as context information. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Additionally the original Liveperson event from the chat or messaging api is sent along with each request to allow further customization and information.
+
+##### Example lpSdes Object
+
+```js
+const lpSdes = {
+  customerInfo: {
+    serverTimeStamp: 1571770965040,
+    customerInfo: {
+      customerStatus: 'cancelled',
+      customerType: 'vip',
+      balance: -400.99,
+      currency: 'USD',
+      customerId: '138766AC',
+      lastPaymentDate: {
+        year: 2014,
+        month: 10,
+        day: 15
+      },
+      registrationDate: {
+        year: 2013,
+        month: 5,
+        day: 23
+      },
+      loginStatus: null,
+      companyBranch: null,
+      socialId: '11256324780',
+      imei: '3543546543545688',
+      userName: 'user000',
+      companySize: 500,
+      accountName: 'bank corp',
+      role: 'broker',
+      storeZipCode: '20505',
+      storeNumber: '123865'
+    },
+    contexts: {
+      page: {
+        id: '561554049'
+      }
+    }
+  },
+  cartStatus: {
+    serverTimeStamp: 1571770965040,
+    total: 11.7,
+    currency: 'USD',
+    contexts: {
+      page: {
+        id: '561554049'
+      }
+    },
+    numItems: 6,
+    products: [
+      {
+        product: {
+          name: 'prod1',
+          category: 'category',
+          sku: 'sku',
+          price: 7.8
+        },
+        quantity: 1
+      }
+    ]
+  },
+  purchase: {
+    serverTimeStamp: 1571770965040,
+    total: 11.7,
+    orderId: 'DRV1534XC',
+    currency: 'USD',
+    contexts: {
+      page: {
+        id: '561554049'
+      }
+    },
+    cart: {
+      serverTimeStamp: 0,
+      total: null,
+      currency: null,
+      contexts: {},
+      numItems: null,
+      products: [
+        {
+          product: {
+            name: 'antivirus pro plan',
+            category: 'software',
+            sku: 'xyz001',
+            price: 7.8
+          },
+          quantity: 3
+        }
+      ]
+    }
+  },
+  viewedProduct: {
+    serverTimeStamp: 1571770965040,
+    currency: 'USD',
+    contexts: {
+      page: {
+        id: '561554049'
+      }
+    },
+    products: [
+      {
+        product: {
+          name: 'red high heel shoe',
+          category: 'women shoes',
+          sku: 'xyz567',
+          price: 77.8
+        }
+      }
+    ]
+  },
+  marketingCampaignInfo: {
+    serverTimeStamp: 1571770965040,
+    contexts: {
+      page: {
+        id: '561554049'
+      }
+    },
+    marketingCampaignInfo: {
+      originatingChannel: 1,
+      affiliate: 'Yahoo',
+      campaignId: 'US coupon campaign'
+    }
+  },
+  personalInfo: {
+    serverTimeStamp: 1571770965040,
+    personalInfo: {
+      name: 'John',
+      surname: 'Doe',
+      customerAge: {
+        customerAgeInYears: 34,
+        customerYearOfBirth: 1980,
+        customerMonthOfBirth: 4,
+        customerDateOfBirth: 15
+      },
+      contacts: [
+        {
+          email: 'myname@example.com',
+          phone: '+1 212-788-8877',
+          phoneType: null,
+          address: null,
+          preferredContactMethod: null
+        }
+      ],
+      gender: 'MALE',
+      company: 'company',
+      language: 'en-US'
+    },
+    contexts: {
+      page: {
+        id: '561554049'
+      }
+    }
+  },
+  lead: {
+    serverTimeStamp: 1571770965040,
+    contexts: {
+      page: {
+        id: '561554049'
+      }
+    },
+    lead: {
+      topic: 'luxury car test drive 2015',
+      value: 22.22,
+      ticketId: null,
+      leadId: 'xyz123',
+      currency: 'USD'
+    }
+  },
+  serviceActivity: {
+    serverTimeStamp: 1571770965040,
+    serviceActivity: {
+      topic: 'order checkbook',
+      status: 0,
+      category: 'finance',
+      serviceId: 'service12'
+    },
+    contexts: {
+      page: {
+        id: '561554049'
+      }
+    }
+  },
+  visitorError: {
+    serverTimeStamp: 1571770965040,
+    contexts: {
+      page: {
+        id: '561554049'
+      }
+    },
+    visitorError: {
+      contextId: null,
+      message: 'Expiration date missing',
+      code: 'er100004',
+      level: null,
+      resolved: null
+    }
+  }
+};
+
+```
+
+##### Example lpEvent object of Messaging API
+
+```js
+  const lpEvent = {
+    sequence: 0,
+    originatorClientProperties: {
+      type: '.ClientProperties',
+      appId: 'webAsync',
+      ipAddress: '192.168.226.81',
+      deviceFamily: 'DESKTOP',
+      os: 'OSX',
+      osVersion: '10.14.6',
+      integration: 'WEB_SDK',
+      integrationVersion: '3.0.29',
+      browser: 'CHROME',
+      browserVersion: '72.0.3626.121',
+      features: [
+        'PHOTO_SHARING',
+        'CO_BROWSE',
+        'QUICK_REPLIES',
+        'AUTO_MESSAGES',
+        'MULTI_DIALOG',
+        'FILE_SHARING',
+        'RICH_CONTENT'
+      ]
+    },
+    originatorId:
+      '32f23bf295b1420b3a2f3f2f96c54bb2d8455699e5b6edc8add6c27b7b0b50fb',
+    originatorMetadata: {
+      id: '32f23bf295b1420b3a2f3f2f96c54bb2d8455699e5b6edc8add6c27b7b0b50fb',
+      role: 'CONSUMER',
+      clientProperties: {
+        type: '.ClientProperties',
+        appId: 'webAsync',
+        ipAddress: '192.168.226.81',
+        deviceFamily: 'DESKTOP',
+        os: 'OSX',
+        osVersion: '10.14.6',
+        integration: 'WEB_SDK',
+        integrationVersion: '3.0.29',
+        browser: 'CHROME',
+        browserVersion: '72.0.3626.121',
+        features: [
+          'PHOTO_SHARING',
+          'CO_BROWSE',
+          'QUICK_REPLIES',
+          'AUTO_MESSAGES',
+          'MULTI_DIALOG',
+          'FILE_SHARING',
+          'RICH_CONTENT'
+        ]
+      }
+    },
+    serverTimestamp: 1571816583661,
+    event: {
+      type: 'ContentEvent',
+      message: 'hi',
+      contentType: 'text/plain'
+    },
+    dialogId: '93d1b226-da30-48ca-a04b-dbe071ebd23c',
+    __isMe: false,
+    conversationContext: {
+      skillId: '3417641010',
+      campaignId: 3417641610,
+      engagementId: 3417642010,
+      type: 'MESSAGING',
+      visitor: {
+        sharkVisitorId: 'Y4NWRmZTYwZmQ1MjM3YTA2',
+        sharkSessionId: 'FstLzrE6SvC5NrseUHi48g',
+        ipAddress: '192.168.226.81',
+        browser: 'CHROME',
+        os: 'OSX',
+        osVersion: '10.14.6',
+        integration: 'WEB_SDK',
+        integrationVersion: '3.0.29',
+        browserVersion: '72.0.3626.121',
+        language: 'en-US',
+        features: [
+          'PHOTO_SHARING',
+          'CO_BROWSE',
+          'QUICK_REPLIES',
+          'AUTO_MESSAGES',
+          'MULTI_DIALOG',
+          'FILE_SHARING',
+          'RICH_CONTENT'
+        ],
+        deviceFamily: 'DESKTOP'
+      }
+    }
+  };
+```
+
+##### Example lpEvent object of the Chat API
+
+```js
+  const lpEvent = {
+    '@id': '3',
+    '@type': 'line',
+    time: '2019-10-23T03:46:00.062-04:00',
+    textType: 'plain',
+    text: 'You are now chatting with dialogflow_v2_chat.',
+    by: 'info',
+    source: 'system',
+    systemMessageId: '3',
+    subType: 'REGULAR',
+    sequenceId: '2',
+    state: 'chatting',
+    chatSessionKey:
+      'H4127499448709883677-2ea2cecce74a45218dc3e911d25361f2K8404910',
+    skillName: 'dialogflow_v2_chat',
+    skillId: '3417640810',
+    agentName: 'dialogflow_v2_chat',
+    agentId: '3417640910',
+    startTime: '2019-10-23T03:45:58.344-04:00',
+    duration: '0',
+    lastUpdate: '2019-10-23T03:45:59.978-04:00',
+    chatTimeout: '40',
+    visitorId: '2611108340074',
+    agentTyping: 'not-typing',
+    visitorTyping: 'not-typing',
+    visitorName: 'visitor',
+    rtSessionId: '4294983598',
+    sharkVisitorId: 'Y4NWRmZTYwZmQ1MjM3YTA2',
+    sharkSessionId: 'FstLzrE6SvC5NrseUHi48g',
+    sharkContextId: '4',
+    engagementId: '3417641910',
+    campaignId: '3417641610',
+    language: 'en-US',
+    participantId: 'a2fe6e1e-ab38-47a6-b8b3-f38d573d3603',
+    link: [
+      {
+        '@href':
+          'https://XXXXX/api/account/le61911979/agentSession/593497449/chat/H4127499448709883677-2ea2cecce74a45218dc3e911d25361f2K8404910/info',
+        '@rel': 'self'
+      },
+      {
+        '@href':
+          'https://XXXXX/api/account/le61911979/agentSession/593497449/chat/H4127499448709883677-2ea2cecce74a45218dc3e911d25361f2K8404910/info/visitorName',
+        '@rel': 'visitor-name'
+      },
+      {
+        '@href':
+          'https://XXXXX/api/account/le61911979/agentSession/593497449/chat/H4127499448709883677-2ea2cecce74a45218dc3e911d25361f2K8404910/info/visitorTyping',
+        '@rel': 'visitor-typing'
+      },
+      {
+        '@href':
+          'https://XXXXX/api/account/le61911979/agentSession/593497449/chat/H4127499448709883677-2ea2cecce74a45218dc3e911d25361f2K8404910/info/agentTyping',
+        '@rel': 'agent-typing'
+      },
+      {
+        '@href':
+          'https://XXXXX/api/account/le61911979/agentSession/593497449/participantInfo/a2fe6e1e-ab38-47a6-b8b3-f38d573d3603',
+        '@rel': 'participant-info'
+      },
+      {
+        '@href':
+          'https://XXXXX/api/account/le61911979/agentSession/593497449/participantExtendedInfo/a2fe6e1e-ab38-47a6-b8b3-f38d573d3603',
+        '@rel': 'participant-extended-info'
+      }
+    ],
+    isWelcomeEvent: true,
+    conversationContext: {
+      skillId: '3417640810',
+      campaignId: '3417641610',
+      engagementId: '3417641910',
+      type: 'CHAT',
+      visitor: {
+        sharkVisitorId: 'Y4NWRmZTYwZmQ1MjM3YTA2',
+        sharkSessionId: 'FstLzrE6SvC5NrseUHi48g',
+        ipAddress: null,
+        browser: null,
+        os: null,
+        osVersion: null,
+        integration: null,
+        integrationVersion: null,
+        browserVersion: null,
+        language: 'en-US',
+        features: null,
+        deviceFamily: null
+      }
+    }
+  };
+```
 
 {:start="5"}
 
