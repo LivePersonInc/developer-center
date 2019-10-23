@@ -11,11 +11,24 @@ permalink: bot-accounts-permissions-per-role.html
 indicator: both
 ---
 
-Users are granted privileges in Conversation Builder by way of assignment of a role. The application includes the following, predefined roles.
+Users are granted privileges in Conversation Builder by way of assignment of a Conversation Builder role.
+
+In LiveEngage, assign a Conversation Builder role to a user based on the user's type of participation in your automation project. As you assign roles, be mindful of the user's assigned LiveEngage role. For example, a LiveEngage administrator doesn't have to be a Conversation Builder administrator too, although this can be done.
+
+The following Conversation Builder roles are available:
+
+### Admin
+
+This is an administrator role. Users with this role have full privileges, including the ability to create, deploy and manage agent connectors within Conversation Builder.
+
+Users with this role do have the following limitations:
+
+* No ability to create and manage (bot) templates
+* No access to the Bots Status application, which is an operations area where bot deployments can also be managed
 
 ### Bot Builder
 
-This role provides full privileges for creating bots and related resources. More specifically, users with this role can create and work with:
+This role provides full privileges for creating bots and related resources. More specifically, users with this role can create and manage:
 
 * Bots
 * Bot versions and releases
@@ -23,20 +36,21 @@ This role provides full privileges for creating bots and related resources. More
 * Global functions
 * Credentials
 * Knowledge bases and articles
-* Domains, intents, and entities
+* Domains, intents and entities
 
 Users with this role can also:
 
 * Activate and train models
-* Start and stop agent connectors
-* View and download analytics data
-* Purge analytics data
+* Create, deploy and manage agent connectors within Conversation Builder
+* View, download and purge analytics data
 
-Notably, this role doesn't allow the user to deploy agent connectors, nor does it let the user create and work with templates, accounts, or users.
+This role doesn't allow the user to create and manage templates, accounts or users.
+
+Also, this role doesn't allow the user to access the Bots Status application, which is an operations area where bot deployments can also be managed.
 
 ### Bot Builder Lite
 
-This "lite" role is intended for less technical bot builders. As such, it's just like the Bot Builder role with the following exceptions:
+This "lite" role is intended for *less technical* bot builders. As such, it's just like the Bot Builder role with the following, additional limitations:
 
 * No ability to export and import bots
 * No ability to create and work with integrations
@@ -44,34 +58,26 @@ This "lite" role is intended for less technical bot builders. As such, it's just
 
 ### Content User
 
-This role is for users who create content. More specifically, users with this role can create and work with:
+This role is for users who create content. More specifically, users with this role can create and manage:
 
 * Knowledge bases and articles
-* Domains, intents, and entities
+* Domains, intents and entities
 
 Users with this role can also:
 
 * Activate and train models
-* View and download analytics data
-* Purge analytics data
-
-### Business User
-
-Users with this role can only do the following:
-
-* View analytics data
-* Download analytics data
+* View, download and purge analytics data
 
 ### API Developer
 
-This is a technical but limited role. Users with this role can only create and work with:
+This is a technical but limited role. Users with this role can only create and manage:
 
 * Integrations
 * Credentials
 
 ### API Credentials Manager
 
-This is a technical but limited role. Users with this role can only create and work with:
+This is a technical but limited role. Users with this role can only create and manage:
 
 * Credentials
 
@@ -84,7 +90,7 @@ Users with this role can only do the following:
 
 ### Template Manager
 
-Users with this role can only create and work with:
+Users with this role can only create and manage:
 
 * (Bot) templates
 
@@ -92,11 +98,10 @@ Users with this role can only create and work with:
 
 Users with this role can only do the following:
 
-* Create and deploy agent connectors
+* Create, deploy and manage agent connectors in the Bots Status application
 
-### Admin
+### Business User
 
-This is an administrator role. Users with this role have full privileges with the following exceptions:
+Users with this role can only do the following:
 
-* No ability to create and work with (bot) templates
-* No ability to deploy agent connectors
+* View and download analytics data
