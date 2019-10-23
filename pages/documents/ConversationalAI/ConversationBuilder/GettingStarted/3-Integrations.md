@@ -79,11 +79,11 @@ This tutorial uses an example API that returns random balance data when given an
 
     To get the user's account balance, you need to ask for their account number.
 6. Add a Text question <img style="width:20px" src="img/ConvoBuilder/helloworld/icon_textQuestion.png">. For the question text, enter, "Please enter your 6-digit account number (e.g., 123456)."
-7. Still in the Text question, open the Interaction Details, and add a condition on the **Next Actions** tab. To do so, select "Regular Expression," and add the following regular expression (regex) to match 6-digit numbers: `^\b\d{6}\b`. Next, capture the user’s account number as a slot variable. Under Slot, enter a **Slot Name** of "accountNumber"; for **Slot Value**, enter `{$query}` or leave the default value of `{$userMessage}` (either will work), and for **Duration**, make sure it's set to "Dialog." 
+7. Still in the Text question, open the Interaction Details, and add a condition on the **Next Actions** tab. To do so, select "Regular Expression," and add the following regular expression (regex) to match 6-digit numbers: `^\b\d{6}\b`. Next, capture the user’s account number as a slot variable. Under Slot, enter a **Slot Name** of "accountNumber"; for **Slot Value**, enter `{$userMessage}`; and for **Duration**, make sure it's set to "Dialog." 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/askaccountnumber.png">
   You also need to ask for and capture the user's email address.
 8. Add another Text question. For the question text, enter, "Please enter your email address (e.g., fred@home.com)."
-9. Still in the Text question, open the Interaction Details, and add a condition on the **Next Actions** tab. To do so, select "Regular Expression," and add the following regex to match email addresses: `^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$`. Under Slot, enter a **Slot Name** of "userEmail"; for **Slot Value**, enter `{$query}` or leave the default value of `{$userMessage}` (either will work), and for **Duration**, make sure it’s set to "Dialog."
+9. Still in the Text question, open the Interaction Details, and add a condition on the **Next Actions** tab. To do so, select "Regular Expression," and add the following regex to match email addresses: `^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$`. Under Slot, enter a **Slot Name** of "userEmail"; for **Slot Value**, enter `{$userMessage}`; and for **Duration**, make sure it’s set to "Dialog."
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/askemail.png">
   When you created the Balance integration, you told it to use the following slots in the request:
 
