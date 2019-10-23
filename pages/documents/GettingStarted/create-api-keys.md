@@ -16,7 +16,7 @@ API keys are security tokens that you use to access LiveEngage services. The API
 You use the API key when you create bots, access our APIs programatically and authorize LiveEngage applications.
 
 {:.notice}
-API key is on the behalf of the site and not on the user (server to server) which means you don't need a bearer (no need to be logged in). 
+The API key is issued on behalf of the site and not for the user (server to server) which means you don't need a bearer (no need to be logged in). 
 
 1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaigns** area.
 
