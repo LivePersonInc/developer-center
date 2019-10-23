@@ -12,4 +12,5 @@ hooks:
   build: |
     gem install bundler
     bundle install
+    ALGOLIA_API_KEY='56c038bbf2a7d22b11b52a832620c662' bundle exec jekyll algolia
     JEKYLL_ENV=production bundle exec jekyll build
