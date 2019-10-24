@@ -13,10 +13,10 @@ indicator: both
 API keys are security tokens that you use to access LiveEngage services. The API key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
 
 {:.notice}
-You use the API key when you create bots, access our APIs programatically and authorize LiveEngage applications.
+You use the API key when you create bots, access our APIs programmatically and authorize LiveEngage applications. You can create up to 100 keys per account.
 
 {:.notice}
-The API key is issued on behalf of the site and not for the user (server to server) which means you don't need a bearer (no need to be logged in).
+The API key is issued on behalf of the site and not for the user (server to server) which means you don't need a bearer (no need to be logged in) when using an API key.
 
 1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaigns** area.
 
@@ -47,8 +47,6 @@ Alternatively, you can click on an existing key to edit its privileges rather th
 
    ![](../../../img/apikeycreation1.png)
 
-   {:.notice}
-   The maximum number of API keys that can be generated per account is currently 100.
 {:start="7"}
 7. If the window does not close automatically, click the **X** in the top right to close the window.
 
