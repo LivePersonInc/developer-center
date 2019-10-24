@@ -20,10 +20,10 @@ The **Next Actions** tab in the **Interaction Details** widget is where you conf
 
 1. Select the interaction to configure, and click the <img style="width:25px" src="img/ConvoBuilder/icon_interactionDetails.png"> icon (Interaction Details) that's displayed to its right.
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_DetailsNextActions1.png">
+    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_detailsNextActions1.png">
 2. Click the **Next Actions** tab.
 
-    <img style="width:350px" class="fancyimage" src="img/ConvoBuilder/interactions_DetailsNextActions2.png">
+    <img style="width:350px" class="fancyimage" src="img/ConvoBuilder/interactions_detailsNextActions2.png">
 
 ### Response Match & Action
 

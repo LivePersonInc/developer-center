@@ -16,10 +16,10 @@ The **Code** tab in the **Interaction Details** widget is where you can add code
 
 1. Select the interaction to configure, and click the <img style="width:25px" src="img/ConvoBuilder/icon_interactionDetails.png"> icon (Interaction Details) that's displayed to its right.
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_DetailsCode1.png">
+    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_detailsCode1.png">
 2. Click the **Code** tab.
 
-    <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/interactions_DetailsCode2.png">
+    <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/interactions_detailsCode2.png">
 
 ### Pre-Process Code
 
