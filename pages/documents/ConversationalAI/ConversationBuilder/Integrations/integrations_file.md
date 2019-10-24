@@ -11,7 +11,7 @@ indicator: both
 
 File integrations support the ability of consumers to upload files that you require.
 
-In the dialog, first, you add a [File Upload](conversation-builder-interactions-integrations.html#file-upload-interactions) interaction; it handles upload of the file to LiveEngage. Second, you immediately follow with an [Integration](conversation-builder-interactions-integrations.html#integration-interactions) interaction that invokes a *File integration* in particular (Integration type = File). It's the File integration that takes the file in the LiveEngage environment and uploads it to your external file share or system.
+In a dialog, a [File Upload](conversation-builder-interactions-integrations.html#file-upload-interactions) interaction first handles upload of the file to LiveEngage. It's then immediately followed with an [Integration](conversation-builder-interactions-integrations.html#integration-interactions) interaction that invokes a *File integration* in particular (Integration type = File). It's the File integration that takes the file in the LiveEngage environment and uploads it to your external file share or system.
 
 **To add a File integration**
 
