@@ -23,9 +23,7 @@ LivePerson recommends that —before you create a bot— you set up the [domains
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 
 2. In the Dashboard, click **New Bot** in the upper-right corner.
-3. Select the [template](conversation-builder-templates-overview.html) on which to base the bot.
-
-    <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/templates_dialog.png">
+3. In the dialog box that appears, select the [template](conversation-builder-templates-overview.html) on which to base the bot.
     
     The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below. 
 

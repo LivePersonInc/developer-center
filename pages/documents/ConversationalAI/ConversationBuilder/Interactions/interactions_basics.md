@@ -120,7 +120,7 @@ You can move any type of interaction except a User Says interaction. User Says i
 
 1. Select the interaction.
 2. Move your mouse over its upper-left corner until <img style="width:20px" src="img/ConvoBuilder/icon_interactionMove.png"> (Move icon) appears.
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interaction_moveExample.png">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/interaction_moveExample.png">
 3. Click, drag, and drop the interaction in the desired location.
 
 **To move an interaction to a new dialog**

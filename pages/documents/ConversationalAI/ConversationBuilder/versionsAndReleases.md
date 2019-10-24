@@ -51,7 +51,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
 **To create a release**
 
-1. From the Conversation Builder dashboard, click **New Bot** and create a new bot. You will be pushing your production version to this bot. You might want to be specific with the naming and append "Production" or "PROD" to the bot name to differentiate it from your Development/Sandbox bot.
+1. From the Conversation Builder dashboard, click **New Bot** and create a new bot based on the *Custom Bot* template. You will be pushing your production version to this bot. You might want to be specific with the naming and append "Production" or "PROD" to the bot name to differentiate it from your Development/Sandbox bot.
 
     <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases1.png">
 

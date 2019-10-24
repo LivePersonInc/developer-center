@@ -24,14 +24,15 @@ If you are using multiple bot instances (e.g., a Sandbox version and a Productio
 **To create environment variables**
 
 1. From the Conversation Builder dashboard, click **Manage Bot Environments** in the upper-right corner.
-2. On the Add Environment page, specify the following:
+2. Click **Add Environment** in the lower-left corner.
+3. Specify the following:
 
     * **Environment Name**: Enter a descriptive name. For example, you might have Sandbox and Production instances  (e.g., "Router Bot Sandbox").
     * **Environment Values**: Enter the key/value pairs for each variable. Variables *cannot* have spaces or special characters in their names, only letters and numbers.
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/bestPractices/env_1.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bestPractices/env_1.png">
 
-3. Click **Save**.
+4. Click **Save**.
 
 ### Link environment variables to a bot 
 
