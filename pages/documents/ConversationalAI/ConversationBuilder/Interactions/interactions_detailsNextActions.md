@@ -69,7 +69,7 @@ Select the next step if the displayed condition is satisfied. You have three typ
 
 ### Fallback Response
 
-In the **Fallback Response** field, enter the text to be sent to the user if none of the conditions are met.
+In the **Fallback Response** field, enter the text to be sent to the user if none of the defined conditions are met.
 
 ### Process User Response
 

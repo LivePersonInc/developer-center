@@ -38,7 +38,7 @@ The **Settings** tab in the **Interaction Details** widget is where you configur
 
 ### Settings in User Says interactions
 
-The following are additional settings in User Says interactions:
+The following are additional settings in [User Says](conversation-builder-interactions-user-says.html) interactions:
 
 * **Patterns**: A pattern is a text string that is matched against user input in order to trigger a bot message. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
 * **Exclude Keywords**: An "exclude keyword" is a text string that is matched against user input in order to *not* trigger a bot message.
