@@ -1,12 +1,13 @@
 ---
-pagename: Context Session Store Wrapper
+pagename: Manage the Context Session Store
 redirect_from:
+    - conversation-builder-scripting-functions-context-session-store-wrapper.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Scripting Functions
-permalink: conversation-builder-scripting-functions-context-session-store-wrapper.html
+permalink: conversation-builder-scripting-functions-manage-the-context-session-store.html
 indicator: both
 ---
 

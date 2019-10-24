@@ -31,6 +31,8 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 * [getNlpResponse](conversation-builder-scripting-functions-get-set-contextual-data.html#get-nlp-responses)
 * [getQuickReplyPayload](conversation-builder-scripting-functions-get-set-contextual-data.html#get-quick-reply-payload)
 * [getSentiment](conversation-builder-scripting-functions-get-set-contextual-data.html#get-sentiment)
+* [getUserPlatformId](conversation-builder-scripting-functions-get-user-data.html#get-user-platform-id-and-platform-type)
+* [getUserPlatformType](conversation-builder-scripting-functions-get-user-data.html#get-user-platform-id-and-platform-type)
 * [getWebViewVariable](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables)
 * [getWebViewVariables](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables)
 * [logCustomEvent](conversation-builder-scripting-functions-log-debug.html#log-custom-event)

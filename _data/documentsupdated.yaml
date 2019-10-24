@@ -177,8 +177,8 @@
           - subpagename: Get Integration Data
           - subpagename: Send Messages
           - subpagename: Manage Conversation Flow
-          - subpagename: Context Session Store Wrapper
           - subpagename: Log & Debug
+          - subpagename: Manage the Context Session Store
       - pagename: Testing & Deployment
         subpages:
           - subpagename: Debugging
