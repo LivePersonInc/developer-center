@@ -152,8 +152,9 @@
           - subpagename: Statements
           - subpagename: Questions
           - subpagename: Integrations
-          - subpagename: Interaction Details
-          - subpagename: Response Match & Actions
+          - subpagename: Details - Next Actions
+          - subpagename: Details - Code
+          - subpagename: Details - Settings
       - pagename: NLU Assist
       - pagename: Variables & Slots
       - pagename: Integrations
