@@ -44,7 +44,7 @@ Users with this role can also:
 * Create, deploy and manage agent connectors at the bot level within Conversation Builder
 * View and download analytics data
 
-This role doesn't allow the user to create and manage templates, accounts or users. Also, this role doesn't allow the user to access the Bots Status application, which is the operations area where bot deployments for the entire organization can be managed.
+This role doesn't allow the user to create and manage (bot) templates, accounts or users. Also, this role doesn't allow the user access to the Bots Status application, which is the operations area where bot deployments for the entire organization can be managed.
 
 ### Bot Builder Lite
 
@@ -78,18 +78,18 @@ This is a technical but limited role. Users with this role can only create and m
 
 * Credentials
 
+### Template Manager
+
+Users with this role can only create and manage:
+
+* (Bot) templates
+
 ### Import/Export Manager
 
 Users with this role can only do the following:
 
 * Export/import bots
 * Export/import knowledge bases
-
-### Template Manager
-
-Users with this role can only create and manage:
-
-* (Bot) templates
 
 ### Operations
 
