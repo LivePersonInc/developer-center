@@ -184,16 +184,15 @@
         subpages:
           - subpagename: Debugging
           - subpagename: Deploying to LiveEngage
-      #- pagename: Operations
+      - pagename: Troubleshooting
+        subpages:
+          - subpagename: Interactions
+          - subpagename: Transfer to an Agent or Bot
       - pagename: Common Use Cases
       - pagename: Best Practices
         subpages:
           - subpagename: Train & Tune NLU
           - subpagename: Reusable Components
-      - pagename: Troubleshooting
-        subpages:
-          - subpagename: Interactions
-          - subpagename: Transfer to an Agent or Bot
   - documentname: Maven AI
     pages:
       - pagename: Overview
