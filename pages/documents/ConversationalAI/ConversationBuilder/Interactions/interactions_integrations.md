@@ -64,6 +64,6 @@ In the chat window, the consumer can upload the file by dragging and dropping it
 - The uploaded file can’t be over 5 MB.
 - While LivePerson temporarily stores exchanged files for the duration of the conversation, it does not store them permanently.
 - Exchanged content must obey LivePerson’s Terms & Conditions, and the brand itself is responsible for checking exchanged files for malicious content.
-- If the dialog flow requires that the consumer upload *multiple* files, you'll need to add a File Upload interaction for every file, and each interaction must be followed by an Integration interaction. You can certainly reuse the File integration that gets called.
+- If the dialog flow requires that the consumer upload *multiple* files, you'll need to add a File Upload interaction for every file, and each interaction must be followed by an Integration interaction. You can certainly reuse the [File integration](conversation-builder-integrations-file-integrations.html) that gets called.
 
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload3.png">
