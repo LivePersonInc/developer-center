@@ -44,7 +44,7 @@ After you successfully implemented and deployed a LivePerson Function, press the
 
 #### Error Hook
 
-The following payload content will be recieved from the Function during a conversation with the assigned bot.
+The following payload content will be recieved from the Function when an error is thrown by the bot. You can set the Error Hook Fucntion at the error handling step, while creating a bot.
 
 <table>
   <thead>
@@ -246,7 +246,7 @@ Example Payloads:
 
 #### Post Hook
 
-The Posthook Lambda gets invoked on every message the customer sends. It allows to modify or expand the response of the payload Please also refer to the existing vendor documentation, to get additional information in terms of addtition context properties and more.
+The Posthook Lambda gets invoked on every message the customer sends. It allows to modify or expand the response of the payload. Please also refer to the existing vendor documentation, to get additional information in terms of addtition context properties and more.
 
 Example Responses:
 
