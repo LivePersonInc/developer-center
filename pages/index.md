@@ -1,12 +1,12 @@
 ---
 pagename: Welcome Developers!
+documentname: Welcome
 sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
 redirect_from:
   - get-started-LE-APIs.html
 ---
-
 {: .notice}
 LivePerson Functions is a Function as a Service (FaaS) platform which enables brands to develop custom behaviors within LivePerson’s conversational platform to better tailor the system to their specific needs. Get started with a hosted function in less than 60 seconds. [check out the Functions documentation to get acquainted with this powerful new feature](function-as-a-service-overview.html).
 
