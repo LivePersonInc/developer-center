@@ -10,4 +10,4 @@ indicator:
 ---
 
 {: .important}
-Google Dialogflow V1 is out of service since 23 October 2019. We no longer support Dialogflow V1, please migrate to [Dialogflow V2](bot-connectors-google-dialogflow-version-2.html).
+Support for the Google Dialogflow API v1 has been deprecated on 23 October 2019. Please migrate to [Dialogflow V2](bot-connectors-google-dialogflow-version-2.html).
