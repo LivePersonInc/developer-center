@@ -21,11 +21,11 @@ For example, if you have a bot that has both a Sandbox and Production version, 9
 
 Conversation Builder includes several environment variables that you can use to take advantage of associated bot behaviors.
 
-| Environment variable name | Value | Description | 
-|----|----|----|
-| system_handleIntermediateUserMessage | true | Enables the behavior to catch and ignore "interrupt" messages by the consumer. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for when and why to use this variable. | 
-| system_intermediateBotMessage | string | Optionally used in conjunction with `system_handleIntermediateUserMessage`. This is the message to send to the consumer if they send an utterance while their messages are blocked, e.g., "Please wait...we are still responding to your last message." See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for when and why to use this variable. |
-| system_intermediateBotResponseTimeout | string | Used in conjunction with `system_handleIntermediateUserMessage`. This is the timeout period in milliseconds (e.g., 15000 = 15 seconds). This value determines how long the bot will wait to send a message before moving on to sending the next message. In other words, if the wait for a message is too long, this instructs the bot to skip it after the specified amount of time. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for when and why to use this variable. |
+| Environment variable name | Value | Example | Description | 
+|----|----|----|----|
+| system_handleIntermediateUserMessage | true | true | Enables the behavior to catch and ignore "interrupt" messages by the consumer. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for when and why to use this variable. | 
+| system_intermediateBotMessage | string | Please wait...we are still responding to your last message. | Optionally used in conjunction with `system_handleIntermediateUserMessage`. This is the message to send to the consumer if they send an utterance while their messages are blocked. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for when and why to use this variable. |
+| system_intermediateBotResponseTimeout | string | 15000 | Used in conjunction with `system_handleIntermediateUserMessage`. This is the timeout period in milliseconds (e.g., 15000 = 15 seconds). This value determines how long the bot will wait to send a message before moving on to sending the next message. In other words, if the wait for a message is too long, this instructs the bot to skip it after the specified amount of time. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for when and why to use this variable. |
 
 ### Add environment variables
 
