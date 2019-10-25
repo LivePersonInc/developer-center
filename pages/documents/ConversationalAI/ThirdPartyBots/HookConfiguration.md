@@ -11,18 +11,12 @@ indicator: both
 The following documentation outlines the configuration for a bot connector using LivePerson Functions to modify vendor payloads, repsonses and read out errors.
 
 {: .important}
-As the Custom Integration feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](function-as-a-service-getting-started.html) for more information on setting uo LivePerson Functions and its permissions.
+As the Hook feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](function-as-a-service-getting-started.html) for more information on setting uo LivePerson Functions and its permissions.
 
 ### Bot Configuration
 
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps. This guide assumes you have completed this guide.
-
-Once you have completed the guide above, you will be presented with following screen to complete the Vendor Settings in order to add a bot.
-
-<img class="fancyimage" style="width:600px" src="img/faas/vendor.png">
-
-Click on the "Create LivePerson Function" button. This will allow you to implement a LivePerson Function. Once you click on the button, you will be redirected to the LivePerson Functions main page. From here, you will need to develop and then deploy a LivePerson Function which will act as the bot connector.
 
 #### Step-by-Step Hook creation and deployment guide
 
@@ -151,7 +145,7 @@ The following payload content will be recieved from the Function during a conver
 
 #### Pre Hook
 
-The Prehook Lambda gets invoked on every message the customer sends. It allows to modify or expand the payload, the Vendor receives. Please also refer to the existing vendor documentation, to get additional information in terms of addtition context properties and more.
+The Prehook Lambda gets invoked on every message the customer sends. It allows to modify or expand the payload, the vendor receives. Please also refer to the existing vendor documentation, to get additional information in terms of addtition context properties and more.
 
 Example Payloads:
 
