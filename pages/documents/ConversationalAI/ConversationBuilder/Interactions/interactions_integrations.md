@@ -31,33 +31,50 @@ Before you can add an Integration interaction, you need to create the integratio
 
 ### File Upload interactions
 
-Use a File Upload (integration) interaction in a dialog when you need the consumer to upload a file that you require. As examples, you might want to do this when the consumer needs to provide an ID card or a document demonstrating proof of a good credit score.
+Use a File Upload (integration) interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
-In the chat window, the consumer can upload the file by dragging and dropping it onto the window.
+When you use a File Upload interaction, on the consumer side in the chat window, the consumer can upload the file by dragging and dropping it onto the window.
 
-**To add a File Upload interaction**
+**To add a File Upload interaction - high-level process**
+
+1.  Add a *File Upload* interaction. This handles upload of the file to LiveEngage.
+2. Add an *Integration* interaction beneath the File Upload interaction. This interaction must invoke a *File* integration that handles upload of the file from LiveEngage to your brand's external file share or system.
+3. Create a *dialog* that a) gets triggered when the upload succeeds, and b) handles the "success" flow.
+4. Create a *dialog* that a) gets triggered when the upload fails, and b) handles the "failure" flow.
+
+**To add a File Upload interaction - detailed process**
 
 1. Select the interaction just above where you want to add the File Upload interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_fileUpload.png"> (File Upload) on the interactions toolbar.
 2. In the File Upload interaction, enter the message to send to the consumer.
 
     <img style="width:550px" src="img/ConvoBuilder/integrations_fileUpload2.png">
 
-    The File Upload interaction only handles upload of the file to LiveEngage. 
-    
-    Next you need to add an interaction that takes the file from LiveEngage and uploads it to your external file share or system.
+    The File Upload interaction handles upload of the file to LiveEngage. 
 
-3. Immediately after the File Upload interaction, add an Integration interaction ( <img style="width:30px" src="img/ConvoBuilder/icon_integration.png"> ). In the interaction, select the *File integration* to invoke. (If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.)
+3. Immediately after the File Upload interaction, add an Integration interaction ( <img style="width:30px" src="img/ConvoBuilder/icon_integration.png"> ). In the interaction, select the File integration to invoke (Integration type = File). The File integration handles upload of the file from LiveEngage to your brand's external file share or system. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
 
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
 
-    *The File Upload and Integration interactions work together.* Every File Upload interaction must be followed by an Integration interaction whose selected integration is of type "File."
-
 4. Return to the File Upload interaction, open the **Interaction Details**, click **Settings**, and specify the following in the **File Upload Settings**:
     - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, and so on). If the consumer attempts to upload a file of any other type, the upload will fail, and the interaction's fallback message will be sent. You might want to include mention of the acceptable file types in the initial message that's sent to the consumer, as we've done in the image above.
-    - **Success message**: Enter the message that’s sent to the consumer if the upload *to your external system* is successful. In other words, this is the message that is sent if the subsequent *Integration interaction* is successful.
-    - **In progress message**: Enter the message that’s sent to the consumer if upload *to the LiveEngage environment* is successful. You might want to set this to something like, "Just a moment while we upload your file..." because what follows is the actual upload to your external system.
-5. In the **Interaction Details** of both the File Upload and Integration interactions, click the **Next Actions** tab and enter a fallback message under **Advanced Responses**. If the upload fails in either interaction, the interaction's fallback message will be sent.
+    - **Upload Success Message**: Enter the message that will trigger the dialog that handles the conversation flow when the upload to your external system is successful. This message will be sent by the system to the bot if the *Integration interaction* is successful. As an example, you might enter, "File Upload Successful."
+    - **Upload Failure Handler**: Enter the message that will trigger the dialog that handles the conversation flow when the upload to your external system has failed. This message will be sent by the system to the bot if the *Integration interaction* fails. As an example, you might enter, "File Upload Failed."
+    - **In progress message**: Enter the message that will be sent to the consumer if upload *to the LiveEngage environment* is successful. This message will be sent by the bot to the consumer if the *File Upload interaction* is successful. As an example, you might enter, "Just a moment while we upload your file..." because what follows next is the actual upload to your external system.
 6. Finish configuring the interactions as desired, and save your changes.
+7. Create a dialog that gets triggered when the upload succeeds. You can accomplish this with a User Says interaction that matches the pattern for the message you specified in the **Upload Success Message**. That message is sent from the system to the bot, and it will trigger this dialog just like a consumer response does.
+
+    <img style="width:800px" src="img/ConvoBuilder/integrations_fileUpload6.png">
+8. Build out the "success" dialog (as little or as much) as needed to handle the "success" flow.
+
+    In our image below, we've simply set the Next Step in the User Says interaction to be a Text interaction in the original dialog.
+
+    <img style="width:800px" src="img/ConvoBuilder/integrations_fileUpload7.png">
+
+    Here's that Text interaction in the original dialog:
+
+    <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload8.png">
+
+9. Create a "failure" dialog along the same lines as the "success" dialog. It should be triggered when the upload fails, and it should handle the "failure" flow as per your requirements.
     
 #### Notes on File Upload interactions
 
