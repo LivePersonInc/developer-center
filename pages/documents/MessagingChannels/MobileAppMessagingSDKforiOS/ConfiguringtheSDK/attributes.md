@@ -907,7 +907,10 @@ The tint color for the progress view on the loading view.
 ### Localization
 
 #### country  
-Country code: When it is not nil, it will be combined with 'language' ("language_country", for example: en_US) and used instead of device default locale when formatting date and time. If no value is provided, the SDK will use the country according to the device's locale.  
+Country code - when it is not nil, it will be combined with 'language' ("<language>_<country>", for example: en_US) and used instead of device default locale when formatting date and time.
+The combined value have to be a part of iOS available Locale identifiers (use Locale.availableIdentifiers to validate). Otherwise, default locale will be used.
+NOTE: the 24/12 Hours time style also will be affected by using the specific Locale when formatting times.
+If no value is provided, the SDK will use the country according to the device's locale.
 
    - **Type:** String?
    - **Default value:** nil 
@@ -962,7 +965,8 @@ Status bar style in conversation screen.
    - **Default value:** .default
    
 #### lpNavigationBarLeftItemImageButton  
-LivePerson Navigation Bar Left Item custom button.  
+LivePerson Navigation Bar Left Item custom button. 
+NOTE: this property gets it tintColor from `conversationNavigationTitleColor`
 
   **Type:** UIImage?
  
@@ -978,6 +982,7 @@ LivePerson Navigation Bar Left Item custom button.
  
 #### lpNavigationBarRightItemImageButton  
 LivePerson Navigation Bar Right Item custom button. 
+NOTE: this property gets it tintColor from `conversationNavigationTitleColor`
 
 **Type:** UIImage?
 
@@ -1008,7 +1013,7 @@ Enable or disable file/photo sharing feature from consumer.
 
 #### maxNumberOfSavedFilesOnDisk 
 Max number of allowed saved files on disk. This refers only to full photo files.
-Note: The validation of allowed max number of files will be when showing and removing conversations.
+NOTE: The validation of allowed max number of files will be when showing and removing conversations.
 
    - **Type:** Int
    - **Default value:** 20 
@@ -1121,6 +1126,7 @@ Color of the loader progress line background.
 
 #### photoSharingOpenMenuImageButton
 Photo sharing open menu custom button.
+NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` - depending on button state
 
 **Type:** UIImage?
 
@@ -1135,6 +1141,7 @@ Photo sharing open menu custom button.
 
 #### photoSharingCloseMenuImageButton
 Photo sharing close menu custom button.
+NOTE: this property gets its tint color from `cameraButtonEnabledColor` or `cameraButtonDisabledColor` - depending on button state
 
 **Type:** UIImage?
 
@@ -1149,6 +1156,7 @@ Photo sharing close menu custom button.
 
 #### photoSharingMenuCameraImage  
 Custom camera image in the photo sharing menu.
+NOTE: this property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`
 
 **Type:** UIImage?
 
@@ -1164,6 +1172,7 @@ Custom camera image in the photo sharing menu.
 
 #### photoSharingMenuLibraryImage
 Custom Library image in the photo sharing menu.
+NOTE: this property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`
 
 - **Type:** UIImage?
 
@@ -1177,6 +1186,7 @@ Custom Library image in the photo sharing menu.
 
 #### fileSharingMenuFileImage
 Custom file image in the file sharing menu.
+NOTE: this property gets its tint color from `photosharingMenuButtonsTintColor` and background color from `photosharingMenuButtonsBackgroundColor`
 
 **Type:** UIImage?
 
@@ -1442,6 +1452,7 @@ Send button color in enabled mode in the conversation screen.
 ####  sendButtonImage  
 Send button Image in the conversation screen. The custom image changes only if `isSendMessageButtonInTextMode` = **false**. 
 The image must conform to Apple's [Custom Icon guidelines](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/).
+NOTE: this property gets its tintColor from `sendButtonDisabledColor` or `sendButtonEnabledColor` - depending on state
 
 **Type:** UIImage
 
@@ -1969,7 +1980,7 @@ Define the remote avatar icon border color.
   
 #### brandAvatarImage  
 Default avatar image for Brand.
-If setting nil - default avatar image will be used
+If setting nil - default avatar image will be used with `remoteUserAvatarBackgroundColor` and `remoteUserAvatarIconColor`
 
    - **Type:** UIImage?
    - **Default value:** nil 
@@ -2377,8 +2388,9 @@ When true, user and remote user messages containing one or two emojis will be en
 ### Window Mode
 
 #### customButtonImage 
-*(Window mode only)* Custom button icon image that displays on the navigation bar.
+Custom button icon image that displays on the navigation bar.
+NOTE: this property gets its tintColor from `conversationNavigationTitleColor`
 When pressed, the [LPMessagingSDKCustomButtonTapped](mobile-app-messaging-sdk-for-ios-sdk-apis-callbacks-index.html#lpmessagingsdkcustombuttontapped) callback gets invoked.
-
+   
 - **Type:** UIImage?    
 - **Default value:** nil
