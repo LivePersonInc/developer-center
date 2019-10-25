@@ -311,6 +311,21 @@ Additionally, Functions offers a number of templates. They can be used
     <td>Triggered when a bot, which is using the Third-Party Bots' Custom Integration receives a message</td>
     <td>15</td>
   </tr>
+    <tr>
+    <td>Third-Party Bots Error Hook</td>
+    <td>Triggered when a bot, which is using the Third-Party Bots' Error Hook throws an error</td>
+    <td>15</td>
+  </tr>
+    <tr>
+    <td>Third-Party Bots Pre Hook</td>
+    <td>Triggered when a bot, which is using the Third-Party Bots' Pre Hook receives a message. The function will be invoked before the vendor receives the payload</td>
+    <td>15</td>
+  </tr>
+    <tr>
+    <td>Third-Party Bots Post Hook</td>
+    <td>Triggered when a bot, which is using the Third-Party Bots' Post Hook. The function will be invoked after the vendor receives the payload</td>
+    <td>15</td>
+  </tr>
 </tbody>
 </table>
 
