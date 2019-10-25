@@ -43,7 +43,7 @@ When adding a question or integration interaction to the dialog, you can configu
 In the first drop-down in the Conditions section, you specify how you want to match the user input. Methods include: 
 
 * **Response [Intent](conversation-builder-intent-builder-overview.html)**: The bot will trigger the Next Step action (discussed below) when the intent that you select is sent to it by the NLU engine. Make sure to connect your domain and populate it with intents, so they'll be available for conditions.
-* **Regular Expression**: The bot will trigger the Next Step action (discussed below) when the user input matches the RegEx that you specify. All standard RegEx rules apply.
+* **Regular Expression**: The bot will trigger the Next Step action (discussed below) when the user input matches the RegEx that you specify. All standard [RegEx rules](http://www.rexegg.com/regex-quickstart.html) apply.
 * **Pattern**: The bot will trigger the Next Step action (discussed below) when the user input matches the pattern that you specify. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
 * **Exact Value**: The bot will trigger the Next Step action (discussed below) when the user input matches an exact value that you specify. This is useful for questions where you present the user a set of predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
 
