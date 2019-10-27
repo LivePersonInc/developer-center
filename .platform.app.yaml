@@ -12,5 +12,5 @@ hooks:
   build: |
     gem install bundler
     bundle install
-    ALGOLIA_API_KEY=$ALGOLIA_API_KEY bundle exec jekyll algolia
+    ALGOLIA_API_KEY = ENV["ALGOLIA_API_KEY"] || nil bundle exec jekyll algolia
     JEKYLL_ENV=production bundle exec jekyll build
