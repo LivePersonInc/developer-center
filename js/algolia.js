@@ -17,6 +17,7 @@ const searchInstance = autocomplete(
           let value = suggestion.pagename;
           let content = suggestion.content;
           let link = suggestion.permalink;
+          let headings = suggestion.headings;
           let documentName = suggestion.documentname;
           let category = suggestion.categoryname;
           let title = $('h1');
@@ -33,9 +34,15 @@ const searchInstance = autocomplete(
           if (suggestion._highlightResult.documentname) {
             documentName = suggestion._highlightResult.documentname.value;
           }
+          if (documentName) {
           return (
             '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + ' - ' + documentName + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
           )
+        } else {
+          return (
+            '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + '</span><span class="searchContentHeading">' + headings + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
+          )
+        }
         },
         empty: '<div class="aa-empty">No results found!</div>',
         },
