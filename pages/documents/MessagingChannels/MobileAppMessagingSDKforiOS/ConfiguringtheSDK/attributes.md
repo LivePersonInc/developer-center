@@ -968,7 +968,7 @@ Status bar style in conversation screen.
    
 #### lpNavigationBarLeftItemImageButton  
 LivePerson Navigation Bar Left Item custom button. 
-NOTE: this property gets it tintColor from `conversationNavigationTitleColor`
+NOTE: this property gets its tintColor from `conversationNavigationTitleColor`
 
   **Type:** UIImage?
  
@@ -984,7 +984,7 @@ NOTE: this property gets it tintColor from `conversationNavigationTitleColor`
  
 #### lpNavigationBarRightItemImageButton  
 LivePerson Navigation Bar Right Item custom button. 
-NOTE: this property gets it tintColor from `conversationNavigationTitleColor`
+NOTE: this property gets its tintColor from `conversationNavigationTitleColor`
 
 **Type:** UIImage?
 
@@ -1015,7 +1015,7 @@ Enable or disable file/photo sharing feature from consumer.
 
 #### maxNumberOfSavedFilesOnDisk 
 Max number of allowed saved files on disk. This refers only to full photo files.
-NOTE: The validation of allowed max number of files will be when showing and removing conversations.
+NOTE: The validation of allowed max number of files will take place when showing and removing conversations.
 
    - **Type:** Int
    - **Default value:** 20 
