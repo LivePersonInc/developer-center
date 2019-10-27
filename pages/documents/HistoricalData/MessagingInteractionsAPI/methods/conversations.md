@@ -337,12 +337,13 @@ caption | Description of the file. | string   |
 
 _Message Secure Form_
 
-Name | Description  | Type/Value | Notes
-:--------------- | :----------------------- | :--------- | :----------------------------------------------
-formId  | The ID of the form.| string  | Returns in case agent sends form invitation.
-formName| The name of the form. | string  | Returns in case agent sends form invitation.
-submissionId  | The ID of the submission.| string  | Returns in case agent sends form invitation.
-invitationId  | The ID of the invitation.| string  |
+|Name | Description  | Type/Value | Notes|
+|:--------------- | :----------------------- | :--------- | :----------------------------------------------|
+|formId  | The ID of the form.| string  | Returns in case agent sends form invitation.|
+|formName| The name of the form. | string  | Returns in case agent sends form invitation.|
+|submissionId  | The ID of the submission.| string  | Returns in case agent sends form invitation.|
+|invitationId  | The ID of the invitation.| string  |
+
 _Message Rich Content_
 
 Name  | Description  | Type/Value
