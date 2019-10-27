@@ -908,7 +908,9 @@ The tint color for the progress view on the loading view.
 
 #### country  
 Country code - when it is not nil, it will be combined with 'language' ("<language>_<country>", for example: en_US) and used instead of device default locale when formatting date and time.
-The combined value have to be a part of iOS available Locale identifiers (use Locale.availableIdentifiers to validate). Otherwise, default locale will be used.
+  
+The combined value has to be a part of iOS available Locale identifiers (use Locale.availableIdentifiers to validate). Otherwise, default locale will be used.
+
 NOTE: the 24/12 Hours time style also will be affected by using the specific Locale when formatting times.
 If no value is provided, the SDK will use the country according to the device's locale.
 
