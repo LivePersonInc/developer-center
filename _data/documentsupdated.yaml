@@ -193,7 +193,7 @@
         subpages:
           - subpagename: Train & Tune NLU
           - subpagename: Reusable Components
-          - subpagename: Useful Techniques
+          - subpagename: Useful Solutions
   - documentname: Maven AI
     pages:
       - pagename: Overview
