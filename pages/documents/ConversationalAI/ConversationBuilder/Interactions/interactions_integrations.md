@@ -37,8 +37,8 @@ When you use a File Upload interaction, on the consumer side in the chat window,
 
 **To add a File Upload interaction - high-level process**
 
-1.  Add a *File Upload* interaction. This handles upload of the file to LiveEngage.
-2. Add an *Integration* interaction beneath the File Upload interaction. This interaction must invoke a *File* integration that handles upload of the file from LiveEngage to your brand's external file share or system.
+1.  Add a *File Upload interaction*. This handles upload of the file to LiveEngage.
+2. Add an *Integration interaction* beneath the File Upload interaction. This interaction must invoke a [File integration](conversation-builder-integrations-file-integrations.html) that handles upload of the file from LiveEngage to your brand's external file share or system.
 3. Create a *dialog* that a) gets triggered when the upload succeeds, and b) handles the "success" flow.
 4. Create a *dialog* that a) gets triggered when the upload fails, and b) handles the "failure" flow.
 
