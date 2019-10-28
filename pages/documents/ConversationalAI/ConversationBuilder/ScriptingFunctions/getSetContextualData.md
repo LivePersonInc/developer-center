@@ -194,7 +194,7 @@ if (toppingObjects != null && toppingObjects.length > 0) {
 
 ### Get NLP responses
 
-Used to get an array of results derived from BotCentral’s Natural Language Processing algorithms.
+Used to get an array of results derived from Conversation Builder’s Natural Language Processing algorithms.
 
 For instance, the sentence, “The quick brown fox jumped over the lazy dog” returns the following nouns [dog, fox], the verb [jumped], the phrases [the quick brown Fox, the lazy Dog] and tokens: [the, over, quick, lazy, jumped, brown, Dog, Fox].
 
