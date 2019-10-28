@@ -57,7 +57,7 @@ Because the first interaction, our "paybill_flow_start" interaction, sets the `t
 
 <img style="width:600px" src="img/ConvoBuilder/bp_consistentGreeting3.png">
 
-In other words, *redirection only happens once (at transfer) and never again.*
+In other words, *redirection only happens once.*
 
 #### Transfer example 2: Consumer's last utterance is matched
 
