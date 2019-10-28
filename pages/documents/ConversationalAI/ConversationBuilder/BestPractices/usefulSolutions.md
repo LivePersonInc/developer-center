@@ -10,7 +10,7 @@ permalink: conversation-builder-best-practices-useful-solutions.html
 indicator: both
 ---
 
-The techniques discussed below provide solutions to common conversation issues.
+The techniques discussed below provide solutions to common conversation challenges.
 
 ### Transfer to bot and offer consistent greeting
 
