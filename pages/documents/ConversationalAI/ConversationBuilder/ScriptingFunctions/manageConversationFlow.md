@@ -48,12 +48,12 @@ Used for triggering the message flow to selected segment of the bot.
 
 #### Example
 
-In the below example, we test for which company the user selected, and if ‘BotCentral’ we trigger the message "Welcome BotCentral", otherwise we trigger "Welcome Other".
+In the below example, we test for which company the user selected, and if ‘LivePerson’ we trigger the message "Welcome LivePerson", otherwise we trigger "Welcome Other".
 
 ```javascript
 var company = botContext.getCurrentUserMessage();
-if (company == 'BotCentral') {
-      botContext.setTriggerNextMessage('Welcome BotCentral');
+if (company == 'LivePerson') {
+      botContext.setTriggerNextMessage('Welcome LivePerson');
 }else{
       botContext.setTriggerNextMessage('Welcome Other');
 }
