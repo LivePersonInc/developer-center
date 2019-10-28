@@ -18,7 +18,7 @@ There are times when an agent hands off a conversation to a bot to perform an au
 
 The problem that can occur in this scenario is that there's no guarantee  that the hand-off is always consistent. The agent might adhere to best practices and send a predefined message to let the consumer know they are about to be transferred to a bot. But this might not always be the case. Moreover, there's nothing that prevents the consumer from acknowledging the imminent transfer with something like, "Ok," before the agent completes the transfer. If that were to happen, the first message that the bot would receive would be "Ok," which would likely trigger the Fallback dialog. As a result, the consumer's first experience conversing with the bot begins poorly.
 
-To solve this problem, you can offer a consistent greeting when the bot receives a transfer from a human agent but the last utterance doesn't match a known intent or pattern in a dialog. You do this by adding some custom logic as "pre-process code" in the bot's fallback dialog and the "business" dialog.
+To solve this problem, you can offer a consistent greeting when the bot receives a transfer from a human agent, but the last utterance doesn't match a known intent or pattern in a dialog. You do this by adding some custom logic as pre-process code in the bot's fallback dialog and the "business" dialog.
 
 **To implement this solution**
 
