@@ -15,7 +15,7 @@ The Context Session Store is a cloud-based repository for storing and retrieving
 
 Within the Context Session Store, you can have multiple namespaces for different business use cases. Typically, a namespace groups together related attributes. For example, a namespace might contain customer information like name, email, phone number, and so on.
 
-In Conversation Builder, the following built-in functions for managing the Context Session Store are available. These functions conveniently wrap the APIs in Maven, LivePerson's AI engine.
+In Conversation Builder, the following built-in functions for managing the Context Session Store are available. These functions are synchronous, server-side, JavaScript calls that conveniently wrap the APIs in Maven, LivePerson's AI engine.
 
 {: .important}
 All update operations return a Boolean status. It is the bot developer's responsibility to ensure the operation was executed successfully.
