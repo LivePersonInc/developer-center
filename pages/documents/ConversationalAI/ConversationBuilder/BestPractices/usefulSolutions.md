@@ -51,11 +51,13 @@ Examine the following conversation flow where the consumer's last utterance to t
 
 <img style="width:600px" src="img/ConvoBuilder/bp_consistentGreeting2.png">
 
-In the conversation above, the Fallback dialog is triggered due to the consumer's last utterance. Before the dialog is processed, it first checks the `transferAcknowledged` bot variable. Since the variable is set to "no", it immediately redirects the consumer to the VIP dialog, which begins. 
+In the conversation above, the Fallback dialog is triggered due to the consumer's last utterance to the human agent, which is checked by the bot. Before the Fallback dialog is processed, it first checks the `transferAcknowledged` bot variable. Since the variable is set to "no", it immediately redirects the consumer to the VIP dialog, which begins. 
 
-Because the first interaction, our "paybill_flow_start" interaction, sets the `transferAcknowledged` bot variable to "yes", subsequent, unmatched utterances likewise trigger the Fallback dialog. However, the fallback message is sent instead.
+Because the first interaction, our "paybill_flow_start" interaction, sets the `transferAcknowledged` bot variable to "yes", subsequent, unmatched utterances likewise trigger the Fallback dialog. However, the Fallback dialog flow begins instead.
 
 <img style="width:600px" src="img/ConvoBuilder/bp_consistentGreeting3.png">
+
+The conversation flow never gets stuck in the redirect loop from the Fallback dialog to the VIP dialog.
 
 #### Transfer example 2: Consumer's last utterance is matched
 
@@ -63,8 +65,11 @@ Examine the following conversation flow where the consumer's last utterance to t
 
 <img style="width:600px" src="img/ConvoBuilder/bp_consistentGreeting1.png">
 
-It's important to note that the unmatched utterance *doesn't* return the consumer to the start of VIP dialog flow. Instead, the Fallback dialog begins. This is because the `transferAcknowledged` bot variable was set by the VIP dialog, then checked by the Fallback dialog.
+The matched utterance takes the flow straight to the VIP dialog, which begins.
 
+The subsequent, unmatched utterance above doesn't return the consumer to the start of VIP dialog flow. Instead, the Fallback dialog begins.
+
+Here again, the conversation flow never gets stuck in the redirect loop from the Fallback dialog to the VIP dialog.
 
 ### Block consumer interruptions
 
