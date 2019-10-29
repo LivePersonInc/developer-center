@@ -22,7 +22,7 @@ To solve this problem, you can offer a consistent greeting when the bot receives
 
 **To implement this solution**
 
-1. In the *first* interaction in the Fallback dialog, access the **[Pre-Process Code](conversation-builder-interactions-details-code.html)** section, and add the following code.
+1. In the *first* interaction in the Fallback dialog, access the **[Pre-Process Code](conversation-builder-interactions-details-code.html)** section of the **Interaction Details**, and add the following code.
 
     ```javascript
     var transferAcknowledged = botContext.getBotVariable("transferAcknowledged");
@@ -35,7 +35,7 @@ To solve this problem, you can offer a consistent greeting when the bot receives
 
     This code checks for a `transferAcknowledged` bot variable. If the variable doesn't exist or isn't set to "yes," it redirects the conversation flow to whatever is your substitute for the "paybill_flow_start" interaction.
 
-2. Go to your substitute for the "paybill_flow_start" interaction, and, in the **[Pre-Process Code](conversation-builder-interactions-details-code.html)** section, add the following code:
+2. Go to your substitute for the "paybill_flow_start" interaction, and, in the **[Pre-Process Code](conversation-builder-interactions-details-code.html)** section of the **Interaction Details**, add the following code:
 
     ```javascript
     botContext.setBotVariable('transferAcknowledged','yes',true,false);
@@ -89,6 +89,6 @@ To solve this problem where the consumer interrupts the bot with "intermediate" 
     * `system_intermediateBotMessage`
     * `system_intermediateBotResponseTimeout`
  
-    For details on these environment variables, see [here](conversation-builder-environment-variables.html#system-environment-variables). 
+    For details on configuring these environment variables, see [here](conversation-builder-environment-variables.html#system-environment-variables). 
 
 3. [Link the environment to the bot](conversation-builder-environment-variables.html#link-environment-variables-to-a-bot) if it isn't already linked.
