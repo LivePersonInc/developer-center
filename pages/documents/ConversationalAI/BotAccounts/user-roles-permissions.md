@@ -15,7 +15,10 @@ Users are granted privileges in Conversation Builder by way of assignment of a C
 
 In LiveEngage, assign a Conversation Builder role to a user based on the user's type of participation in your automation project. As you assign roles, be mindful of the user's assigned LiveEngage role. For example, a LiveEngage administrator doesn't have to be a Conversation Builder administrator too, although this can be done.
 
-The following Conversation Builder roles are available:
+The following Conversation Builder roles are available.
+
+{: .important}
+The API Developer, API Credentials Manager, and Import/Export Manager roles are *add-on* roles. That is, they're intended to be assigned in conjunction with the Bot Builder Lite role as per your requirements.
 
 ### Admin
 
@@ -50,9 +53,34 @@ This role doesn't allow the user to create and manage (bot) templates, accounts 
 
 This "lite" role is intended for *less technical* bot builders. As such, it's just like the Bot Builder role with the following, additional limitations:
 
-* No ability to export and import bots
 * No ability to create and work with integrations
 * No ability to create and work with credentials
+* No ability to export and import bots
+
+### API Developer
+
+Users with this role can only create and manage:
+
+* Integrations
+
+This is a technical but limited, *add-on* role. It's intended to be assigned in conjunction with the Bot Builder Lite role as per your requirements.
+
+### API Credentials Manager
+
+Users with this role can only create and manage:
+
+* Credentials
+
+This is a technical but limited, *add-on* role. It's intended to be assigned in conjunction with the Bot Builder Lite role as per your requirements.
+
+### Import/Export Manager
+
+Users with this role can only do the following:
+
+* Export/import bots
+* Export/import knowledge bases
+
+This is a limited, *add-on* role. It's intended to be assigned in conjunction with the Bot Builder Lite role as per your requirements.
 
 ### Content User
 
@@ -66,30 +94,11 @@ Users with this role can also:
 * Activate and train models
 * View and download analytics data
 
-### API Developer
-
-This is a technical but limited role. Users with this role can only create and manage:
-
-* Integrations
-
-### API Credentials Manager
-
-This is a technical but limited role. Users with this role can only create and manage:
-
-* Credentials
-
 ### Template Manager
 
 Users with this role can only create and manage:
 
 * (Bot) templates
-
-### Import/Export Manager
-
-Users with this role can only do the following:
-
-* Export/import bots
-* Export/import knowledge bases
 
 ### Operations
 
