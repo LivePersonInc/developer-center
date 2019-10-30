@@ -11,7 +11,7 @@ indicator: both
 
 ### Web View integration API
 
-When a consumer exits a conversation flow to enter an external system (for example, a generic web view form or Apply Pay for making a payment), the Web View API makes it possible for the external system to post data back into the bot runtime.
+When a consumer exits a conversation flow to enter an external system (for example, a generic web view form or Apple Pay for making a payment), the Web View API makes it possible for the external system to post data back into the bot runtime.
 
 <img style="width:550px" src="img/ConvoBuilder/web_view_api_flow.png">
 
@@ -26,7 +26,7 @@ Don’t use this API to post Personally Identifiable Information (PII) or Paymen
 
 The API requires three fields that the external system must obtain from the conversation:
 - **userId**: The user ID can be retrieved using the [getUserPlatformId](conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html#get-user-platform-id-and-platform-type) function.
-- **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-bots.html#configure-bot-settings); see the **Bot ID** field. 
+- **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-bots.html#configure-bot-settings); see the **Bot ID** field.
 - **conversationId**: The conversation ID can be retrieved using the [getConversationId](conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html#get-conversation-id) function.
 
 #### Request
