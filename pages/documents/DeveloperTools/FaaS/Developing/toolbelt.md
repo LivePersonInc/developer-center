@@ -321,7 +321,7 @@ secretClient
 
 ### Conversation Util
 
-The Conversation Util allows to perform conversation related methods, which are listed below.
+The Conversation Util allows conversation related methods to be performed, which are listed below.
 
 #### Get Conversation By ID
 
@@ -350,7 +350,7 @@ This method retrieves a conversation from the [Messaging Interactions API](https
 <tr>
 <td>contentToRetrieve</td>
 <td>no</td>
-<td>An array which can be used to define the content that should be retrieved. Use the <b>ConversationContentTypes</b> for overview which content types can be retrieved (s. Sample Usage bellow)</td>
+<td>An array which can be used to define the content that should be retrieved. Use the <b>ConversationContentTypes</b> for an overview of which content types can be retrieved (s. Sample Usage below)</td>
 <td>array</td>
 </tr>
 </tbody>
@@ -505,7 +505,7 @@ conversationUtil.getConversationById(conversationId)
 ```
 ### SDE Util
 
-The SDE Util allows to perform SDE related methods, which are listed below.
+The SDE Util allows SDE related methods to be performed, which are listed below.
 
 #### Add SDEs
 This method adds/ updates SDEs to an Engagement via the [Engagement Attributes API](https://developers.liveperson.com/engagement-attributes-api-overview.html). It requires the session ID and the visitor ID where the SDEs should be added and the SDEs themselves. It returns a `Promise` that resolves when the SDEs have been successfuly set/ updated.
@@ -529,13 +529,13 @@ This method adds/ updates SDEs to an Engagement via the [Engagement Attributes A
 <tr>
 <td>sdes</td>
 <td>yes</td>
-<td>Array of SDEs which should be added to an engagement. For more information about the available Engagement Attributes, refer to the <a href="engagement-attributes-overview.html">Engagement Attributes Overview</a>. Also use the <b>SDETypes</b> for suggestions which types of engagement attributes can be added. (s. sample usage below)</td>
+<td>Array of SDEs which should be added to an engagement. For more information about the available Engagement Attributes, refer to the <a href="engagement-attributes-overview.html">Engagement Attributes Overview</a>. Also use the <b>SDETypes</b> for suggestions for which types of engagement attributes can be added. (s. sample usage below)</td>
 <td>array</td>
 </tr>
 <tr>
 <td>visitorId</td>
 <td>yes</td>
-<td>The ID of the Visitor you want to add the SDEs to. (Sometimes is included in the faas-event payload, if not use e.g. the conversation ID with the <a href="liveperson-functions-development-toolbelt.html#get-conversation-by-id">Conversation Util</a> to retrieve)</td>
+<td>The ID of the Visitor you want to add the SDEs to. (Sometimes is included in the faas-event payload, if not use the conversation ID with the <a href="liveperson-functions-development-toolbelt.html#get-conversation-by-id">Conversation Util</a> to retrieve)</td>
 <td>string</td>
 </tr>
 <tr>
