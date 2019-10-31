@@ -1,5 +1,5 @@
 ---
-pagename: 4.1 and below
+pagename: 5.0 and below
 redirect_from:
   - android-attributes.html
   - mobile-app-messaging-sdk-for-android-customization-and-branding-attributes.html
