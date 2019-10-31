@@ -1,17 +1,13 @@
 ---
-pagename: SDK 5.0 and above
+pagename: 5.0 and below
 redirect_from:
-  - android-attributes.html
-  - mobile-app-messaging-sdk-for-android-customization-and-branding-attributes.html
+  - mobile-app-messaging-sdk-for-android-sdk-attributes-4-1-and-below.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: SDK Attributes
-
-order: 160
-permalink: mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html
-
+permalink: mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html
 indicator: messaging
 ---
 The goal of the following document is to enumerate the different fields controlling design attributes in the SDK. If a clearer view of which attribute corresponds with a design element is needed, refer to the [Attributes Design Sheet](android-attributes-designsheet.html).
@@ -19,55 +15,8 @@ The goal of the following document is to enumerate the different fields controll
 {:.important}
 For things like Brand name, which is a string, refer to [string Localization](android-modifying-string.html).
 
----
-
-### DarkTheme support
-With the addition of Dark Theme support in Android 10, we now created LP Semantic color attributes to update colors based on the selection provided by the OS. We believe this is the easiest implementation for our customers who use our default configurations as well as those customers who desire custom attribute configurations. We support only System-wide setting for black theme.
-
-#### What does this mean for our customers who use our default Attribute configurations?
-If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed. It is likely that existing colors have been updated and new color attribute configurations are added. You must support Dark Theme for Android 10 and you can use default color configurations or you can customize them, as we have handled the support for you by updating the SDK color theme where possible. This appearance is different than the previous implementation but is intended to be more in line with what Android users expect. We have worked hard on its implementation and hope you enjoy it!
-
-#### What this means for our customers who use custom attribute configurations? 
-If you have customized the appearance of the Android SDK by setting your own values for lp color attributes, note that unless you have custom colors set for lp color attribute values in `values-night` folder your custom configuration will not support dark mode and the UI may not appear as expected.
-
-#### What this means for consumers on Android 9 and below?
-we have mirrored the implementation for our Light theme for Android devices operating on <= android 9 using non semantic colors that closely resemble the light android system colors.
-
-#### How to implement custom color configurations within the LPMessaging Android SDK that support Dark Theme?
-For all your custom color and style configurations, you are able to use specific resource folders like `values-night` and `drawable-night` in your application to override LP Android SDK Attributes. In this way, you can perfectly fit the design to your company's color theme and your users wishes.
-
-<a style="font-weight:bold" href='#LPColor' id='LPColor' class='anchor' aria-hidden='true'>Default LP Semantic colors based on themes</a>
-
-| LP Semantic Color Name  | Light Theme color | Dark Theme color |
-| :--- | :--- | :--- |
-| lp_colorPrimary | #f5f5f5 | #272727 |
-| lp_colorPrimaryDark | #000000 | #000000 |
-| lp_colorOnPrimary | #000000 | #FFFFFF |
-| lp_textColorSecondary | #000000 | #FFFFFF |
-| lp_colorBackground | #000000 | #121212 |
-| lp_colorOnBackground0 | #2e2e2e | #949596 |
-| lp_colorOnBackground1 | #46474a | #787878 |
-| lp_colorOnBackground2 | #5b5c5e | #5b5c5e |
-| lp_colorSurface | #f5f5f5 | #272727 |
-| lp_colorOnSurface | #000000 | #FFFFFF |
-| lp_agent_message_bubble_color | #D6D6D6 | #3B3B3B |
-| lp_onAgentMessage_bubble_color | #000000 | #DEDEDE |
-| lp_consumer_message_bubble_color | #004dc9 | #448AFF |
-| lp_onConsumerMessage_bubble_color | #FFFFFF | #DEDEDE |
-| lp_colorSecondary | #f5f5f5 | #272727 |
-| lp_colorOnSecondary | #000000 | #FFFFFF |
-| lp_colorError | #de0a23 | #CF6679 |
-| lp_colorCorrectly | 229a49 | #30d158 |
-| lp_consumer_action_highLight_color | #004dc9 | #448AFF |
-| lp_linkPreviewColor | #f5f5f5 | #272727 |
-| lp_progress_bar_color | #018786 | #03DAC6 |
-| lp_brand_color | #EF6C00 | #FF6F00 |
-| lp_unread_messages_count_highLight_color | #EB3B2F | #F5786F |
-| lp_feedback_option_selectedColor | #229a49 | #30d158 |
-| lp_disabledColor | #b7b8b9 | #46474a |
 
 ---
-
 
 ### Accessibility
 
@@ -118,7 +67,7 @@ Maximum voice recording time in seconds.
 Maximum number of voice files stored on the device.
 
 * **Type:** int  
-* **Default value:** 20
+* **Default value:** 120
 
 ---  
 
@@ -180,7 +129,7 @@ The configuration to change the Brand name / Agent name text color in the header
 <div style="float: left; width: 50%;height: 50px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnPrimary</li>
+      <li><b>Default value:</b> black</li>
    </ul>
 </div>
 
@@ -223,7 +172,7 @@ Color code for the outline color.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_brand_color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
    </ul>
 </div>
 
@@ -245,7 +194,7 @@ Color code for the text of the brand bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_onAgentMessage_bubble_color</li>
+      <li><b>Default value:</b> @android:color/white</li>
    </ul>
 </div>
 
@@ -266,7 +215,7 @@ Color code for links in the text of the brand bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_consumer_action_highLight_color</li>
+      <li><b>Default value:</b> @android:color/white</li>
    </ul>
 </div>
 
@@ -289,7 +238,7 @@ Color code for the timestamp of the brand bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+      <li><b>Default value:</b> #46474A (dark gray)</li>
    </ul>
 </div>
 
@@ -311,7 +260,7 @@ Color code for the background of the brand bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_brand_color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
    </ul>
 </div>
 
@@ -332,7 +281,7 @@ Color code for the background of the default brand logo next to the bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_brand_color</li>
+      <li><b>Default value:</b> #007AFF (light blue)</li>
    </ul>
 </div>
 
@@ -459,8 +408,7 @@ Define the color of status bar background color while trying to connect.
 <div style="float: left; width: 50%;height: 40px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>(Light Theme) Default value:</b> #F2F5F5F5</li>
-      <li><b>(Dark Theme) Default value:</b> #46474A</li>
+      <li><b>Default value:</b> #F2F5F5F5</li>
    </ul>
 </div>
 
@@ -482,8 +430,7 @@ Define the color of status bar background color when connection is unavailable.
 <div style="float: left; width: 50%;height: 40px;">
    <ul>
       <li><b>Type:</b> color</li>
-       <li><b>(Light Theme) Default value:</b> #CC000000</li>
-       <li><b>(Dark Theme) Default value:</b> #CC000000</li>
+      <li><b>Default value:</b> #CC000000</li>
    </ul>
 </div>
 
@@ -505,8 +452,7 @@ Define the color of status bar text color while trying to connect.
 <div style="float: left; width: 50%;height: 40px;">
    <ul>
       <li><b>Type:</b> color</li>
-       <li><b>(Light Theme) Default value:</b> #46474A</li>
-       <li><b>(Dark Theme) Default value:</b> #CC000000</li>
+      <li><b>Default value:</b> #46474A</li>
    </ul>
 </div>
 
@@ -528,8 +474,7 @@ Define the color of status bar text color when connection is unavailable.
 <div style="float: left; width: 50%;height: 40px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>(Light Theme) Default value:</b> #FFFFFF</li>
-      <li><b>(Dark Theme) Default value:</b> #FFFFFF</li>
+      <li><b>Default value:</b> @android:color/black</li>
    </ul>
 </div>
 
@@ -555,7 +500,7 @@ Color code for the text of the automatic messages.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+      <li><b>Default value:</b> #5b5c5e (dark gray)</li>
    </ul>
 </div>
 
@@ -613,88 +558,6 @@ Define the color of menu button and back arrow on toolbar.
 &nbsp;
 </div>
 
-#### conversation_toolbar_color
-Define the toolbar color of conversation screen.
-
-* **Type:** color
-* **Default value:** @color/lp_colorPrimary
-
-
-#### conversation_toolbar_isTyping_color
-Define the color of agent typing indicator on conversation toolbar.
-
-* **Type:** color
-* **Default value:** #9B9B9B
-
-
-#### feedback_toolbar_background
-Define the toolbar color of feedback screen.
-* **Type:** color
-* **Default value:** @color/lp_colorPrimary
-
-
-#### feedback_toolbar_textColor
-Define the text color on feedback toolbar.
-
-* **Type:** color
-* **Default value:** @color/lp_colorOnPrimary
-
-
-#### captionPreview_toolbar_textColor
-Define the text color on caption preview toolbar.
-
-* **Type:** color
-* **Default value:** @color/lp_colorOnPrimary
-
-
-#### captionPreview_toolbar_background
-Define the tool bar color of caption preview screen.
-
-* **Type:** color
-* **Default value:** @color/lp_colorPrimary
-
-
-#### pci_form_toolbar_background
-Define the toolbar color of PCI form screen.
-
-* **Type:** color
-* **Default value:** @color/lp_colorPrimary
-
-
-#### pci_form_toolbar_textColor
-Define the text color on PCI form toolbar.
-
-* **Type:** color
-* **Default value:** @color/lp_colorOnPrimary
-
-
-#### lp_menu_item_background
-Define the background color of toolbar menu.
-
-* **Type:** color
-* **Default value:** @color/lp_colorPrimary
-
-
-#### lp_menu_item_enabled_textColor
-Define the menu item color when enabled.
-
-* **Type:** color
-* **Default value:** @color/lp_colorOnPrimary
-
-
-#### lp_menu_item_disabled_textColor
-Define the menu item color when disabled.
-
-* **Type:** color
-* **Default value:** @color/lp_disabledColor
-
-
-#### clear_history_menu_item_visible
-Define the visibility of clear history menu item.
-
-* **Type:** bool
-* **Default value:** true
-
 ---  
 
 ### Conversations
@@ -705,7 +568,7 @@ Define the color code for the entire view background.
 In activity mode - Also the color of android:windowBackground.
 
 * **Type:** color
-* **Default value:** @color/lp_colorBackground
+* **Default value:** white
 
 
 #### conversation_background (image)
@@ -829,7 +692,7 @@ Color code for the conversation resolved message and separator.
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+      <li><b>Default value:</b> #555555 (gray)</li>
    </ul>
 </div>
 
@@ -917,23 +780,6 @@ The character used to mask the real time message.
 
 ---  
 
-### Dark Mode configurations
-
-#### darkMode_force_enable_for_webView
-If true, force dark mode is applied to webView when system dark mode is enabled.
-
-* **Type:** bool
-* **Default value:** true
-
-
-#### darkMode_SC_QR_override_colors_from_LE
-If true , colors for structured content elements and Quick replies are override from LE in dark theme.
-
-* **Type:** bool
-* **Default value:** false
-
----
-
 ### Date and Time
 
 #### lp_date_format
@@ -973,7 +819,7 @@ Text color for the Day/date header.
 <div style="float: left; width: 50%;height: 75px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnSurface</li>
+      <li><b>Default value:</b> #46474a (Dark gray)</li>
    </ul>
 </div>
 
@@ -994,7 +840,7 @@ Background color for the Day/date header.
 <div style="float: left; width: 50%;height: 78px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorSurface</li>
+      <li><b>Default value:</b> @android:color/white</li>
    </ul>
 </div>
 
@@ -1194,7 +1040,7 @@ Defines the Progress bar image. If empty, the default Progress bar appears.
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> drawable</li>
-      <li><b>Default value:</b> @drawable/lp_load_more_progress_bar_image</li>
+      <li><b>Default value:</b> </li>
    </ul>
 </div>
 
@@ -1208,12 +1054,6 @@ Defines the Progress bar image. If empty, the default Progress bar appears.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-#### lp_progress_bar_image_color
-Defines the color of default progress bar image.
-
-* **Type:** color
-* **Default value:** @color/lp_progress_bar_color
 
 
 #### lpmessaging_ui_image_progress_bar.xml
@@ -1489,13 +1329,6 @@ You can replace the existing Close image. Create a drawable file named **lpinfra
 
 ### Link Preview
 
-#### link_preview_enable_feature
-Enable or disable link preview feature
-
-* **Type:** bool
-* **Default value:** true
-
-
 #### link_preview_use_big_picture
 Define which configuration to show when sending / receiving s link (big / small picture).
 
@@ -1521,11 +1354,6 @@ false - use &lt;og:title&gt; tags only.true - use &lt;og:title&gt; and &lt;title
 
 ### Message Edit Text
 
-#### enter_message_background_color
-Background color of enter message view.
-
-* **Type:** color
-* **Default value:** @color/lp_colorSurface
 
 #### edit_text_underline_color
 Color code for the Enter Message control underline color.
@@ -1555,7 +1383,7 @@ Define the input message text color.
 <div style="float: left; width: 50%;height: 40px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_textColorSecondary</li>
+      <li><b>Default value:</b> @android:color/black</li>
    </ul>
 </div>
 
@@ -1597,7 +1425,7 @@ Define the input message hint color.
 Define the color of the send button when it’s enabled.
 
 * **Type:** color
-* **Default value:** @color/lp_consumer_action_highLight_color
+* **Default value:** #004DC9 (blue)
 
 <div style="float: left; width: 50%;height: 40px;">
    <figure>
@@ -1622,7 +1450,7 @@ Define the color of the send button when it’s enabled.
 Define the color of the send button when it’s disabled.
 
 * **Type:** color
-* **Default value:** @color/lp_disabledColor
+* **Default value:** #B7B8B9
 
 <div style="float: left; width: 50%;height: 40px;">
    <figure>
@@ -1664,82 +1492,6 @@ Use an icon for the send button instead of "Send" text.
 &nbsp;
 </div>
 
-#### lp_voice_record_button_color
-Defines the color of record button on enter message view.
-
-* **Type:** color
-* **Default value:** @android:color/darker_gray
-
-
-#### lp_voice_stop_button_color
-Defines the color of stop recording button on enter message view.
-
-* **Type:** color
-* **Default value:** @android:color/darker_gray
-
-
-#### lp_voice_replay_button_color
-Defines the color of replay button on enter message view.
-
-* **Type:** color
-* **Default value:** @android:color/darker_gray
-
-
-#### lp_voice_trash_button_color
-Defines the color of trash button on enter message view.
-
-* **Type:** color
-* **Default value:** @android:color/darker_gray
-
-
-#### enter_message_url_preview_bubble
-Defines the background color url preview on top of enter message view.
-
-* **Type:** color
-* **Default value:** @color/lp_linkPreviewColor
-
-#### enter_message_url_preview_bubble_stroke_color
-Defines the stroke color of url preview on top of enter message view.
-
-* **Type:** color
-* **Default value:** @color/lp_linkPreviewColor
-
-
-#### enter_msg_url_preview_close_icon_color
-Defines the color of close url preview icon color.
-
-* **Type:** color
-* **Default value:** @color/lp_textColorSecondary
-
-
-#### enter_msg_url_preview_title
-Defines the color of url preview title.
-
-* **Type:** color
-* **Default value:** @color/lp_colorOnSurface
-
-
-#### enter_msg_url_preview_description
-Defines the color of url preview description.
-
-* **Type:** color
-* **Default value:** @color/lp_colorOnSurface
-
-
-#### lp_file_attach_icon_clip_color
-Defines the color of attach icon on enter message view.
-
-* **Type:** color
-* **(Light Theme)Default value:** #FF767678
-* **(Dark Theme)Default value:** @android:color/darker_gray
-
-
-#### lp_file_close_icon_clip_color
-Defines the color of close icon on enter message view.
-
-* **Type:** color
-* **(Light Theme)Default value:** #FF767678
-* **(Dark Theme)Default value:** @android:color/darker_gray
 
 
 
@@ -1800,7 +1552,7 @@ Color of the unread messages counter text color.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnSecondarye</li>
+      <li><b>Default value:</b> @android:color/white</li>
    </ul>
 </div>
 
@@ -1822,7 +1574,7 @@ Color of the unread message summary (preview) text color.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b>@color/lp_colorOnSecondary</li>
+      <li><b>Default value:</b> @android:color/white</li>
    </ul>
 </div>
 
@@ -1844,7 +1596,7 @@ Color of the unread messages counter stroke color.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_unread_messages_count_highLight_color</li>
+      <li><b>Default value:</b> #CC000000</li>
    </ul>
 </div>
 
@@ -1888,7 +1640,7 @@ Color of the unread messages counter solid color.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_unread_messages_count_highLight_color</li>
+      <li><b>Default value:</b> #FF0000 (red)</li>
    </ul>
 </div>
 
@@ -1908,7 +1660,7 @@ Color of the unread messages counter solid color.
 Color of the scroll down background color.
 
 * **Type:** color  
-* **Default value:** @color/lp_colorSecondary
+* **Default value:** #CC000000
 
 <div style="float: left; width: 50%;height: 75px;">
    <figure>
@@ -1933,7 +1685,7 @@ Color of the scroll down background color.
 Color of the image arrow scrolling down.
 
 * **Type:** color  
-* **Default value:** @color/lp_colorOnSecondary
+* **Default value:** @android:color/white
 
 <div style="float: left; width: 50%;height: 73px;">
    <figure>
@@ -2051,7 +1803,7 @@ Define the background color of the items in the attachment menu.
 <div style="float: left; width: 50%;height: 210px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_consumer_action_highLight_color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
    </ul>
 </div>
 
@@ -2095,8 +1847,7 @@ Define the items’ text color in the attachment menu.
 <div style="float: left; width: 50%;height: 210px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>(Light Theme)Default value:</b> #46474A (gray)</li>
-      <li><b>(Dark Theme)Default value:</b> #f5f5f5 (light gray)</li>
+      <li><b>Default value:</b> #46474A (gray)</li>
    </ul>
 </div>
 
@@ -2118,8 +1869,7 @@ Define the items’ icon color in the attachment menu.
 <div style="float: left; width: 50%;height: 210px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>(Light Theme)Default value:</b> #ededed (light gray)</li>
-      <li><b>(Dark Theme)Default value:</b> #ededed (light gray)</li>
+      <li><b>Default value:</b> #F5F5F5 (light gray)</li>
    </ul>
 </div>
 
@@ -2133,13 +1883,6 @@ Define the items’ icon color in the attachment menu.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
-
-#### lp_attachment_menu_background_color
-Define the color of attachment menu background
-
-* **Type:** color
-* **Default value:** @color/lp_colorSurface
-
 
 ---   
 
@@ -2174,36 +1917,6 @@ Quick Replies button border width.
 
 * **Type:** dimen
 * **Default value:** 1dp
-
-#### quick_reply_button_radius
-Quick Replies button radius.
-
-* **Type:** dimen
-* **Default value:** 24dp
-
-#### lp_quick_replies_button_text_limit
-Quick Replies button text limit.
-* **Type:** integer
-* **Default value:** 25
-
-#### quick_reply_button_text_color
-Quick Replies button text color.
-
-* **Type:** color
-* **Default value:** @color/lp_consumer_action_highLight_color
-
-#### quick_reply_button_background_color
-Quick Replies button background color.
-
-* **Type:** color
-* **Default value:** @color/lp_colorSurface
-
-#### quick_reply_button_stroke_color
-Quick Replies button stroke color.
-
-* **Type:** color
-* **Default value:** @color/lp_agent_message_bubble_color
-
 
 
 ---  
@@ -2241,12 +1954,6 @@ Expiration of CSAT in minutes from the moment the conversation was ended. If Sur
 * **Default value:** 1440
 
 
-#### secureForm_fragment_background_color
-Background color of the full screen PCI form.
-
-* **Type:** color
-* **Default value:** @color/lp_colorBackground
-
 
 #### feedback_fragment_background_color
 Background color for the feedback dialog.
@@ -2254,7 +1961,7 @@ Background color for the feedback dialog.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorBackground</li>
+      <li><b>Default value:</b> @android:color/white</li>
    </ul>
 </div>
 
@@ -2276,7 +1983,7 @@ Title color for the feedback dialog.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnSurface</li>
+      <li><b>Default value:</b> @android:color/black</li>
    </ul>
 </div>
 
@@ -2299,7 +2006,7 @@ Start color for the feedback dialog.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_feedback_option_selectedColor</li>
+      <li><b>Default value:</b> #229A49 (green)</li>
    </ul>
 </div>
 
@@ -2322,7 +2029,7 @@ Rating title color for the feedback dialog.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground0</li>
+      <li><b>Default value:</b> #5b5c5e (dark grey)</li>
    </ul>
 </div>
 
@@ -2346,7 +2053,7 @@ Yes and no color for the feedback dialog.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b>@color/lp_colorOnBackground0</li>
+      <li><b>Default value:</b> #5b5c5e (dark grey)</li>
    </ul>
 </div>
 
@@ -2369,7 +2076,7 @@ Background color of the yes or no selected in the feedback dialog.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_feedback_option_selectedColor</li>
+      <li><b>Default value:</b> #229A49</li>
    </ul>
 </div>
 
@@ -2392,7 +2099,7 @@ Default background of the yes and no of the feedback dialog.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorSurface</li>
+      <li><b>Default value:</b> @android:color/white</li>
    </ul>
 </div>
 
@@ -2414,7 +2121,7 @@ Text color for the yes/no buttons when selected in the feedback dialog.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnSurface</li>
+      <li><b>Default value:</b> @android:color/white</li>
    </ul>
 </div>
 
@@ -2437,7 +2144,7 @@ Feedback dialog yes/no text color when in default.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_consumer_action_highLight_color</li>
+      <li><b>Default value:</b> #5B5C5E</li>
    </ul>
 </div>
 
@@ -2460,7 +2167,7 @@ Feedback dialog yes/no stroke color when in default.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorSurface</li>
+      <li><b>Default value:</b> #E2E2E3</li>
    </ul>
 </div>
 
@@ -2482,7 +2189,7 @@ Feedback dialog yes/no stroke color when selected.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_feedback_option_selectedColor</li>
+      <li><b>Default value:</b> #229A49</li>
    </ul>
 </div>
 
@@ -2549,7 +2256,7 @@ Feedback dialog submit message text color.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground0</li>
+      <li><b>Default value:</b> #565656</li>
    </ul>
 </div>
 
@@ -2572,7 +2279,7 @@ Feedback dialog submit button color when enabled.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_feedback_option_selectedColor</li>
+      <li><b>Default value:</b> #229A49</li>
    </ul>
 </div>
 
@@ -2594,7 +2301,7 @@ Feedback dialog submit button text color when enabled.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnSurface</li>
+      <li><b>Default value:</b> @android:color/white</li>
    </ul>
 </div>
 
@@ -2617,7 +2324,7 @@ Feedback dialog submit button color when disabled.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorSurface</li>
+      <li><b>Default value:</b> @android:color/white</li>
    </ul>
 </div>
 
@@ -2640,7 +2347,7 @@ Feedback dialog submit button text color when disabled.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_consumer_action_highLight_color</li>
+      <li><b>Default value:</b> #BDBDBD</li>
    </ul>
 </div>
 
@@ -2662,7 +2369,7 @@ Feedback dialog submit button stroke color when enabled.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_feedback_option_selectedColor</li>
+      <li><b>Default value:</b> #229A49</li>
    </ul>
 </div>
 
@@ -2684,7 +2391,7 @@ Feedback dialog submit button stroke color when disabled.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorSurface</li>
+      <li><b>Default value:</b> #E2E2E3</li>
    </ul>
 </div>
 
@@ -2750,29 +2457,7 @@ Define the color of the agent name on agent details section in feedback dialog.V
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnSurface</li>
-   </ul>
-</div>
-
-<div style="float: right; width: 50%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/fragmentagentdetailnames.png" alt="fragmentagentdetailnames">
-   </figure>
-</div>
-
-<div style="width: 85%;padding: 5px;">
-&nbsp;
-</div>
-
-
-#### feedback_fragment_submitted_thank_you_text_color
-Feedback dialog thank you message text color when when feedback is submitted
-
-<div style="float: left; width: 50%;height: 400px;">
-   <ul>
-      <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnSurface</li>
+      <li><b>Default value:</b> @android:color/black</li>
    </ul>
 </div>
 
@@ -2900,7 +2585,7 @@ Enable or disable structured content feature.
 Color code for the structured content bubble outline color.
 
 * **Type:** color
-* **Default value:** @color/lp_agent_message_bubble_color
+* **Default value:** #EDEDED (light gray)
 
 
 #### structured_content_border_width
@@ -2935,69 +2620,35 @@ Set the host app's Google Map key to enable map views in Structured Content.
 The color of the background of structured content elements.
 
 * **Type:** color
-* **Default value:** @color/lp_transparent
+* **Default value:** #FFFFFF
 
 
 #### structured_content_bottom_right_radius
 Configuration for bottom right corner radius of structured content card.
 
 * **Type:** dimen
-* **Default value:** 5dp
+* **Default value:** 0dp
 
 
 #### structured_content_bottom_left_radius
 Configuration for top left corner radius of structured content card.
 
 * **Type:** dimen
-* **Default value:** 5dp
+* **Default value:** 0dp
 
 
 #### structured_content_top_right_radius
 Configuration for top right corner radius of structured content card.
 
 * **Type:** dimen
-* **Default value:** 5dp
+* **Default value:** 0dp
 
 
 #### structured_content_bottom_left_radius
 Configuration for bottom left corner radius of structured content card.
 
 * **Type:** dimen
-* **Default value:** 5dp
-
-
-#### structured_content_button_no_text_lines
-Configuration to fit number of text lines in sc button element.
-
-* **Type:** integer
-* **Default value:** 1
-
-
-#### sc_buttonElement_text_color
-The color of text elements in structured content.
-* **Type:** color
-* **Default value:** @color/lp_consumer_action_highLight_color
-
-
-#### sc_buttonElement_background_color
-The color of button in button elements in structured content.
-
-* **Type:** color
-* **Default value:** @color/lp_colorSurface
-
-
-#### sc_textElement_text_color
-The color of text in text elements in structured content.
-
-* **Type:** color
-* **Default value:** @color/lp_onAgentMessage_bubble_color
-
-
-#### sc_textElement_background_color
-The color of the background of structured content text elements.
-
-* **Type:** color
-* **Default value:** @color/lp_transparent
+* **Default value:** 0dp
 
 
 ---  
@@ -3010,7 +2661,7 @@ Color code for the text of the system messages.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground0</li>
+      <li><b>Default value:</b> #46474A (dark gray)</li>
    </ul>
 </div>
 
@@ -3087,7 +2738,7 @@ Enable or disable the unread message indicator (shown or invisible) - true by de
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_unread_messages_count_highLight_color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
    </ul>
 </div>
 
@@ -3109,7 +2760,7 @@ Color code for the background of the unread messages bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorSurface</li>
+      <li><b>Default value:</b> #EDEDED (light gray)</li>
    </ul>
 </div>
 
@@ -3156,7 +2807,7 @@ Color code for the outline color.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_agent_message_bubble_color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
    </ul>
 </div>
 
@@ -3178,7 +2829,7 @@ Color code for the text of the agent bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_onAgentMessage_bubble_color</li>
+      <li><b>Default value:</b> white</li>
    </ul>
 </div>
 
@@ -3200,7 +2851,7 @@ Color code for links in the text of the agent bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_consumer_action_highLight_color</li>
+      <li><b>Default value:</b> white</li>
    </ul>
 </div>
 
@@ -3222,7 +2873,7 @@ Color code for the timestamp of the agent bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+      <li><b>Default value:</b> #46474A (dark gray)</li>
    </ul>
 </div>
 
@@ -3244,7 +2895,7 @@ Color code for the background of the agent bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_agent_message_bubble_color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
    </ul>
 </div>
 
@@ -3266,7 +2917,7 @@ Color code for the background of the agent default avatar next to the bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> #949596</li>
+      <li><b>Default value:</b> #949596 (gray)</li>
    </ul>
 </div>
 
@@ -3288,7 +2939,7 @@ Color code for the agent default icon in the avatar next to the bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @android:color/white</li>
+      <li><b>Default value:</b> #ffffffff</li>
    </ul>
 </div>
 
@@ -3324,7 +2975,7 @@ Color code for the background of the agent bubble when url is presented.
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_transparent</li>
+      <li><b>Default value:</b> #ffffffff</li>
    </ul>
 </div>
 
@@ -3346,7 +2997,7 @@ Color code for the background of the agent title text color when url is presente
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground0</li>
+      <li><b>Default value:</b> #ffffffff</li>
    </ul>
 </div>
 
@@ -3368,7 +3019,7 @@ Color code for the background of the agent description text color when url is pr
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+      <li><b>Default value:</b> #555555 (gray)</li>
    </ul>
 </div>
 
@@ -3384,13 +3035,14 @@ Color code for the background of the agent description text color when url is pr
 </div>
 
 
+
 #### agent_bubble_pci_form_invitation_background_color
 background color of the form invitation bubble
 
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorSurface</li>
+      <li><b>Default value:</b> #ffffffff</li>
    </ul>
 </div>
 
@@ -3412,7 +3064,7 @@ background color of the form invitation button only
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorSurface</li>
+      <li><b>Default value:</b> #ffffffff</li>
    </ul>
 </div>
 
@@ -3427,14 +3079,13 @@ background color of the form invitation button only
 &nbsp;
 </div>
 
-
 #### agent_bubble_pci_form_invitation_stroke_color
 color of the stroke (border) of the form invitation bubble.
 
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_agent_message_bubble_color</li>
+      <li><b>Default value:</b> #949596 (gray)</li>
    </ul>
 </div>
 
@@ -3451,12 +3102,12 @@ color of the stroke (border) of the form invitation bubble.
 
 
 #### agent_bubble_pci_form_invitation_button_text_color
-color of the text on PCI form invitation bubble button
+color of the text on the button  
 
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_consumer_action_highLight_color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
    </ul>
 </div>
 
@@ -3473,12 +3124,12 @@ color of the text on PCI form invitation bubble button
 
 
 #### agent_bubble_pci_form_invitation_description_text_color
-Text color on the description in the PCI form invitation bubble.
+Text color on the description in the form invitation bubble.
 
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+      <li><b>Default value:</b> #949596 (gray)</li>
    </ul>
 </div>
 
@@ -3493,14 +3144,13 @@ Text color on the description in the PCI form invitation bubble.
 &nbsp;
 </div>
 
-
 #### agent_bubble_pci_form_invitation_title_text_color
-text color on the title in the PCI form invitation bubble.
+text color on the title in the form invitation bubble.
 
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnSurface</li>
+      <li><b>Default value:</b> #ff000000</li>
    </ul>
 </div>
 
@@ -3517,12 +3167,12 @@ text color on the title in the PCI form invitation bubble.
 
 
 #### agent_bubble_pci_form_invitation_icon_tint_color
-color of the icon in the PCI form invitation bubble.
+color of the icon in the form invitation bubble.
 
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_consumer_action_highLight_color</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
    </ul>
 </div>
 
@@ -3537,12 +3187,6 @@ color of the icon in the PCI form invitation bubble.
 &nbsp;
 </div>
 
-
-#### agent_bubble_pci_form_invitation_progressBar_color
-color of progress bar
-
-* **Type:** color
-* **Default value:** @color/lp_progress_bar_color
 
 
 #### chat_bubble_padding_right
@@ -3668,7 +3312,7 @@ If you want to present a different animation or image, create a file and name it
 The border color of the link preview bubble sent by the agent.
 
 * **Type:** color
-* **Default value:** @color/lp_transparent
+* **Default value:** #EDEDED
 
 #### agent_bubble_link_preview_background_stroke_width
 The border width of the link preview bubble sent by the agent.
@@ -3704,7 +3348,7 @@ Color code for the text of the consumer bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_onConsumerMessage_bubble_color</li>
+      <li><b>Default value:</b> @android:color/black</li>
    </ul>
 </div>
 
@@ -3726,7 +3370,7 @@ Color code for links in the text of the consumer bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @android:color/white</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
    </ul>
 </div>
 
@@ -3748,7 +3392,7 @@ Color code for the timestamp of the consumer bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+      <li><b>Default value:</b> #46474A (dark gray)</li>
    </ul>
 </div>
 
@@ -3770,7 +3414,7 @@ Color code for the background of the consumer bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_consumer_message_bubble_color</li>
+      <li><b>Default value:</b> #EDEDED (light gray)</li>
    </ul>
 </div>
 
@@ -3792,7 +3436,7 @@ Color code for state text next to the consumer bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+      <li><b>Default value:</b> #46474A (dark gray)</li>
    </ul>
 </div>
 
@@ -3814,7 +3458,7 @@ Color code for the stroke of the consumer bubble.
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_consumer_message_bubble_color</li>
+      <li><b>Default value:</b> #EDEDED (light gray)</li>
    </ul>
 </div>
 
@@ -3836,7 +3480,7 @@ Color code for the background of the consumer bubble when url is presented.
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b>@color/lp_transparent</li>
+      <li><b>Default value:</b> white</li>
    </ul>
 </div>
 
@@ -3858,7 +3502,7 @@ Color code for the background of the consumer title text color when url is prese
 <div style="float: left; width: 50%;height: 125px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground0</li>
+      <li><b>Default value:</b> black</li>
    </ul>
 </div>
 
@@ -3880,7 +3524,7 @@ Color code for the background of the consumer description text color when url is
 <div style="float: left; width: 50%;height: 140px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+      <li><b>Default value:</b> #555555 (gray)</li>
    </ul>
 </div>
 
@@ -3902,8 +3546,7 @@ Color code for the read status icon (if enable).
 <div style="float: left; width: 50%;height: 73px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>(Light Theme)Default value:</b> #df78ef (purple dark)</li>
-      <li><b>(Dark Theme)Default value:</b> #df78ef (purple light)</li>
+      <li><b>Default value:</b> #004DC9 (blue)</li>
    </ul>
 </div>
 
@@ -3984,12 +3627,12 @@ Color code for the sending status icon (if enable).
 &nbsp;
 </div>
 
-
 #### consumer_bubble_link_preview_background_stroke_color
 The border color of the link preview bubble sent by the consumer.
 
 * **Type:** color
-* **Default value:** @color/lp_linkPreviewColor
+* **Default value:** #EDEDED
+
 
 
 #### consumer_bubble_link_preview_background_stroke_width
@@ -3997,48 +3640,6 @@ The border width of the link preview bubble sent by the consumer.
 
 * **Type:** dimen
 * **Default value:** 1dp
-
-
-#### consumer_bubble_voice_play_button_color
-Color code for audio play button icon.
-
-* **Type:** color
-* **Default value:** #EDEDED
-
-
-#### consumer_bubble_voice_pause_button_color
-Color code for audio pause button.
-
-* **Type:** color
-* **Default value:** #EDEDED
-
-
-#### consumer_bubble_voice_download_button_color
-Color code for audio download button.
-
-* **Type:** color
-* **Default value:** #EDEDED
-
-
-#### consumer_bubble_voice_progressBar_tint
-Color code for playing audio progress tint.
-
-* **Type:** color
-* **Default value:** @color/lp_progress_bar_color
-
-
-#### consumer_bubble_voice_downloading_progress
-Color code for audio download progress spinner.
-
-* **Type:** color
-* **Default value:** @color/lp_progress_bar_color
-
-
-#### consumer_bubble_voice_duration_textView_color
-Color of audio limit in text view.
-
-* **Type:** color
-* **Default value:** #FFFFFF
 
 #### end_bubble_bottom_left_radius
 Corner radius of bottom left consumer bubbles (on the right side).
@@ -4240,51 +3841,8 @@ Corner radius of the unread messages bubble.
 &nbsp;
 </div>
 
----
-
-### Alert dialog
-
-#### lp_alert_dialog_background_color
-Background color of alert dialog.
-
-* **Type:** color
-* **Default value:** @color/lp_colorSurface
 
 
-#### lp_alert_dialog_accentColor
-Color of alert dialog buttons.
-
-* **Type:** color
-* **(Light Theme)Default value:** #3B8471
-* **(Dark Theme)Default value:** #20BF9F
-
-#### lp_alert_dialog_title_description_color
-Color of title and description of alert dialog.
-
-* **Type:** color
-* **Default value:** @color/lp_colorOnSurface
-
----
-
-### Action Mode
-
-#### lp_action_mode_background_color
-Action mode background color.
-
-* **Type:** color
-* **Default value:** @color/lp_colorOnSurface
-
-
-#### lp_action_mode_menuText_color
-
-* **Type:** color
-* **Default value:** @color/lp_textColorSecondary
-
-
-#### lp_action_mode_closeBtn_color
-
-* **Type:** color
-* **Default value:** @color/lp_textColorSecondary
 
 ---
 

@@ -7,9 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfolder: Resources
-
 permalink: mobile-app-messaging-sdk-for-android-resources-authentication.html
-
 indicator: messaging
 ---
 

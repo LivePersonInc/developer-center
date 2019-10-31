@@ -7,10 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Resources
-
-order: 340
 permalink: mobile-app-messaging-sdk-for-android-resources-open-source-list-and-dependencies.html
-
 indicator: messaging
 ---
 

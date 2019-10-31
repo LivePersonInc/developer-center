@@ -7,10 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: String Localization
-
-order: 270
 permalink: mobile-app-messaging-sdk-for-android-string-localization-override-sdk-strings.html
-
 indicator: messaging
 ---
 

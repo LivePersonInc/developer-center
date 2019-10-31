@@ -7,7 +7,6 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Resources
-order: 342
 permalink: mobile-app-messaging-sdk-for-android-resources-upgrade-guide-android.html
 indicator: messaging
 ---

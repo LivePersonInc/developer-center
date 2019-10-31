@@ -7,10 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Advanced Features
-
-order: 285
 permalink: mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html
-
 indicator: messaging
 ---
 

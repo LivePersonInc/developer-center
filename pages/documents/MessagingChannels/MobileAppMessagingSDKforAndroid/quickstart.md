@@ -6,10 +6,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-
-order: 11
 permalink: mobile-app-messaging-sdk-for-android-quick-start.html
-
+indicator: messaging
 ---
 
 The LivePerson SDK provides brands with a secure way to foster connections with their customers and increase app engagement and retention.

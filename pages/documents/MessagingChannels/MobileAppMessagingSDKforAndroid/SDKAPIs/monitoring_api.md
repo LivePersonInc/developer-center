@@ -7,10 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: SDK APIs
-
-order: 104
 permalink: mobile-app-messaging-sdk-for-android-sdk-apis-monitoring-api.html
-
 indicator: messaging
 ---
 **(LivepersonMonitoring.java class)**

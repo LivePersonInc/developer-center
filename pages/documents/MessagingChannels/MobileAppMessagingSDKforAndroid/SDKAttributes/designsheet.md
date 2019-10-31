@@ -8,7 +8,6 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: SDK Attributes
-order: 170
 permalink: mobile-app-messaging-sdk-for-android-sdk-attributes-attributes-design-sheet.html
 indicator: messaging
 ---

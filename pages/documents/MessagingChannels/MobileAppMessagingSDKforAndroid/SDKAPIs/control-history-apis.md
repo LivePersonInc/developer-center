@@ -8,11 +8,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: SDK APIs
-
-order: 292
-
 permalink: mobile-app-messaging-sdk-for-android-sdk-apis-control-history-apis.html
-
 indicator: messaging
 ---
 
