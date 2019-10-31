@@ -2390,7 +2390,7 @@ Text color for the yes/no buttons when selected in the feedback dialog.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnSurface/li>
+      <li><b>Default value:</b> @color/lp_colorOnSurface</li>
    </ul>
 </div>
 
