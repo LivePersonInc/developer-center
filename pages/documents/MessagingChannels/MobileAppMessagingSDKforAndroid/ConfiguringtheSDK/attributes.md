@@ -21,15 +21,20 @@ For things like Brand name, which is a string, refer to [string Localization](an
 
 ---
 
+### DarkTheme support
+With the addition of Dark Theme support in Android 10, we now created LP Semantic color attributes to update colors based on the selection provided by the OS. We believe this is the easiest implementation for our customers who use our default configurations as well as those customers who desire custom attribute configurations. We support only System-wide setting for black theme.
+
 #### What does this mean for our customers who use our default Attribute configurations?
+If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed. It is likely that existing colors have been updated and new color attribute configurations are added. You must support Dark Theme for Android 10 and you can use default color configurations or you can customize them, as we have handled the support for you by updating the SDK color theme where possible. This appearance is different than the previous implementation but is intended to be more in line with what Android users expect. We have worked hard on its implementation and hope you enjoy it!
 
-If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed. It is likely that only existing colors have been updated and new color attribute configurations are added. You must support Dark Theme for Android 10 and you can use default color configurations or you can customize them, as we have handled the support for you by updating the SDK color scheme where possible. This appearance is different than the previous implementation but is intended to be more in line with what Android users expect. We have worked hard on its implementation and hope you enjoy it!
-
+#### What this means for our customers who use custom attribute configurations? 
+If you have customized the appearance of the Android SDK by setting your own values for lp color attributes, note that unless you have custom colors set for lp color attribute values in `values-night` folder your custom configuration will not support dark mode and the UI may not appear as expected.
 
 #### What this means for consumers on Android 9 and below?
+we have mirrored the implementation for our Light theme for Android devices operating on <= android 9 using non semantic colors that closely resemble the light android system colors.
 
-Light theme works as usual as before but there is no support for dark theme.
-
+#### How to implement custom color configurations within the LPMessaging Android SDK that support Dark Theme?
+For all your custom color and style configurations, you are able to use specific resource folders like `values-night` and `drawable-night` in your application to override LP Android SDK Attributes. In this way, you can perfectly fit the design to your company's color theme and your users wishes.
 
 <a style="font-weight:bold" href='#LPColor' id='LPColor' class='anchor' aria-hidden='true'>Default LP Semantic colors based on themes</a>
 
@@ -48,7 +53,7 @@ Light theme works as usual as before but there is no support for dark theme.
 | lp_agent_message_bubble_color | #D6D6D6 | #3B3B3B |
 | lp_onAgentMessage_bubble_color | #000000 | #DEDEDE |
 | lp_consumer_message_bubble_color | #004dc9 | #448AFF |
-| lp_onConsumerMessage_bubble_color | #FFFFFF| #DEDEDE |
+| lp_onConsumerMessage_bubble_color | #FFFFFF | #DEDEDE |
 | lp_colorSecondary | #f5f5f5 | #272727 |
 | lp_colorOnSecondary | #000000 | #FFFFFF |
 | lp_colorError | #de0a23 | #CF6679 |
@@ -911,6 +916,23 @@ The character used to mask the real time message.
 </div>
 
 ---  
+
+### Dark Mode configurations
+
+#### darkMode_force_enable_for_webView
+If true, force dark mode is applied to webView when system dark mode is enabled.
+
+* **Type:** bool
+* **Default value:** true
+
+
+#### darkMode_SC_QR_override_colors_from_LE
+If true , colors for structured content elements and Quick replies are override from LE in dark theme.
+
+* **Type:** bool
+* **Default value:** false
+
+---
 
 ### Date and Time
 
@@ -2392,7 +2414,7 @@ Text color for the yes/no buttons when selected in the feedback dialog.
 <div style="float: left; width: 50%;height: 400px;">
    <ul>
       <li><b>Type:</b> color</li>
-      <li><b>Default value:</b> @color/lp_colorOnSurface/li>
+      <li><b>Default value:</b> @color/lp_colorOnSurface</li>
    </ul>
 </div>
 
