@@ -33,21 +33,19 @@ LivePerson NLU supports intent detection for English and Spanish.
 
 [Google Dialogflow supports](https://cloud.google.com/dialogflow/docs/reference/language) Cantonese, Chinese, Danish, Dutch, English, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Ukranian.
 
-### Limitations
+### LivePerson NLU guidance
 
-#### LivePerson NLU limitations
+When using LivePerson's NLU v2:
 
-LivePerson's NLU v2 has the following limitations:
+* There must be at least 10 intents in order to train.
+* There must be at least 20 training phrases per intent.
 
-* There must be at least 5 training sentences per intent.
-* There must be at least 2 intents in order to train.
-
-#### 3rd-party NLU limitations
+### 3rd-party NLU limitations
 
 - 3rd-party NLU domain length should not exceed 64 characters. (Watson limitation).
 - Each domain can only support one language, and it is available in the settings page.
 - Knowledge Base does not support 3rd-party NLU.
-- LivePerson does not support pulling existing models from IBM Watson and Google Dialogflow into Intent Builder, only model push is supported.
+- LivePerson does not support pulling existing models from IBM Watson and Google Dialogflow into Intent Builder; only model push is supported.
 
 ### Connecting a 3rd-party NLU engine
 
