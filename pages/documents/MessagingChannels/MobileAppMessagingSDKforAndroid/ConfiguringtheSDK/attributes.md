@@ -21,11 +21,13 @@ For things like Brand name, which is a string, refer to [string Localization](an
 
 --- 
 
-#### What this means for our customers who use our default Attribute configurations?
-If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed.  Likely only existing colors have been updated and new color attribute configurations are added. you must support Dark Theme for android 10 and you can use default color configurations or you can customize them, we have handled the support for you by updating the SDK color scheme where possible.  This appearance is different than the previous implementation but is intended to be more in line with what Android users expect.  We have worked hard on its implementation and hope you enjoy it!
+#### What does this mean for our customers who use our default Attribute configurations?
+
+If you are currently using our default attribute configurations, do a quick check below to see if the default value has changed. It is likely that only existing colors have been updated and new color attribute configurations are added. You must support Dark Theme for Android 10 and you can use default color configurations or you can customize them, as we have handled the support for you by updating the SDK color scheme where possible. This appearance is different than the previous implementation but is intended to be more in line with what Android users expect. We have worked hard on its implementation and hope you enjoy it!
  
 
 #### What this means for consumers on Android 9 and below? 
+
 Light theme works as usual as before but there is no support for dark theme.
 
 
