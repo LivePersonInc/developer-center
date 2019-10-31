@@ -99,10 +99,12 @@ For more best practices, see [Training and Tuning your Intents and FAQs](convers
 
 ### Train an NLU v2-based model
 
+**To train an NLU v2-based model**
+
 1. Add *at least* 10 intents. For each intent, add *at least* 20 training phrases.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intents_trainingPhrases.png">
 
 2. Click <img style="width:35px" src="img/ConvoBuilder/icon_train.png"> (Train icon) in the lower-right corner.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intents_trainingPhrases.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intents_trainingStatus.png">
