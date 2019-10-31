@@ -32,10 +32,6 @@ Your bot implementation should meet LiveEngage requirements and those of the spe
 
 ### Limitations
 
-#### Limitations regarding types of interactions
-
-In order to process a number of APIs or handle a series of JavaScript conditions, you might "daisy chain" a series of interactions. In a dialog, you can add a maximum of 10 consecutive statement or integration interactions before you must stop and ask for user input via a question interaction. However, there's no limit to the total number you can include in a dialog.
-
 #### Limitations regarding types of text
 
 The types of text that you can send in a Conversation Builder interaction vary depending if you are building a bot for **chat** or for **messaging**.
