@@ -7,7 +7,6 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Resources
-order: 247
 permalink: mobile-app-messaging-sdk-for-ios-resources-upgrade-guide-ios.html
 indicator: messaging
 ---

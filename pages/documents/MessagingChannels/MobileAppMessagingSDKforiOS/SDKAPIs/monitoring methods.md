@@ -7,10 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: SDK APIs
-
-order: 11
 permalink: mobile-app-messaging-sdk-for-ios-sdk-apis-monitoring-api.html
-
 indicator: messaging
 ---
 

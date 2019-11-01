@@ -6,9 +6,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Advanced Features
-
 permalink: mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html
-
 indicator: messaging
 ---
 

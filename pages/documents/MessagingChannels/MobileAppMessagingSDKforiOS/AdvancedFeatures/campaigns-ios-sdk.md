@@ -8,10 +8,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Advanced Features
-
-order: 235
 permalink: mobile-app-messaging-sdk-for-ios-advanced-features-campaigns.html
-
 indicator: messaging
 ---
 

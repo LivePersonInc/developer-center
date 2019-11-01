@@ -7,7 +7,6 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Advanced Features
-order: 237
 permalink: mobile-app-messaging-sdk-for-ios-advanced-features-unauthenticated-in-app-messaging.html
 indicator: messaging
 ---

@@ -7,10 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Advanced Features
-
-order: 233
 permalink: mobile-app-messaging-sdk-for-ios-advanced-features-csat-behavior.html
-
 indicator: messaging
 ---
 

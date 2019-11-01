@@ -7,9 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfolder: Resources
-
 permalink: mobile-app-messaging-sdk-for-ios-resources-authentication.html
-
 indicator: messaging
 ---
 For users of OAuth 2.0 for customer authentication, the following functions apply:

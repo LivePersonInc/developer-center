@@ -8,10 +8,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: SDK Attributes
-
-order: 224
 permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-sdk-5-0-and-above.html
-
 indicator: messaging
 ---
 

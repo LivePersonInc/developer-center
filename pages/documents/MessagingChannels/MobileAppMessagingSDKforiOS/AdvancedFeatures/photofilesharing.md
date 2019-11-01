@@ -7,10 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Advanced Features
-
-order: 234
 permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-and-file-sharing.html
-
 indicator: messaging
 ---
 Mobile Messaging SDK v4.1 introduces a feature for consumer to share supported type of files to agents.
