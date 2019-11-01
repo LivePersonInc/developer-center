@@ -13,36 +13,9 @@ indicator: both
 
 In order to view or edit user permissions, you must click on the Organization, then click on Users in the top nav bar.
 
-### Super Admin
-
-A user should have this role if they own the entire brand's automation project.
-
-#### Included Permissions
-
-The Super Admin has the following permissions **in addition to all permissions that the [Admin](#admin) role has.**
-
-* Bot Builder (Read All Bots In All Accounts)
-* Bot Builder (Write All Bots In All Accounts)
-* Knowledge base (Read All KBs In All Accounts)
-* Knowledge base (Write All KBs In All Accounts)
-* Intent Builder (Read All Domains In All Accounts)
-* Intent Builder (Write All Domains in All Accounts)
-* Analytics (Read All Bots In All Accounts)
-* Accounts (Read All Accounts)
-* Accounts (Write All Accounts)
-* Operations (Read Own & Account Bot Agents)
-* Operations (Write Own & Account Bot Agents)
-* Operations (Read All Bot Agents In Account)
-* Operations (Write All Bot Agents In Account)
-* Operations (Read All Bot Agents In All Accounts)
-* Operations (Write All Bot Agents In All Accounts)
-* Operations (Read All Servers)
-* Operations (Write All Servers)
-* Template (Write & Read)
-
 ### Admin
 
-A user should have this role if they own a segment of the brand's automation project.
+A user should have this role if they own the brand's automation project.
 
 #### Included Permissions
 
@@ -114,43 +87,3 @@ A user should have this role if they want to create and maintain bot templates t
 #### Included Permissions
 
 * Template (Write & Read)
-
-### Role Permissions Comparison
-
-| Policy                                               | Content User | Bot Builder | Business User  | Operations | Admin | Super Admin | Template Manager |
-|------------------------------------------------------|--------------|-------------|----------------|------------|-------|-------------|------------------|
-| Bot Builder \(Read Own & Account Bot\)               | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
-| Bot Builder \(Write Own & Account Bot\)              | No           | Yes         | No             | No         | Yes   | Yes         | No               |
-| Bot Builder \(Read All Bots In Account\)             | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Bot Builder \(Write All Bots In Account\)            | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Bot Builder \(Read All Bots In All Accounts\)        | No           | No          | No             | No         | No    | Yes         | No               |
-| Bot Builder \(Write All Bots In All Accounts\)       | No           | No          | No             | No         | No    | Yes         | No               |
-| Knowledge base \(Read Own & Account KBs\)            | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
-| Knowledge base \(Write Own & Account KBs\)           | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
-| Knowledge base \(Read All KBs In Account\)           | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Knowledge base \(Write All KBs In Account\)          | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Knowledge base \(Read All KBs In All Accounts\)      | No           | No          | No             | No         | No    | Yes         | No               |
-| Knowledge base \(Write All KBs In All Accounts\)     | No           | No          | No             | No         | No    | Yes         | No               |
-| Intent Builder \(Read Own & Account Domains\)        | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
-| Intent Builder \(Write Own & Account Domains\)       | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
-| Intent Builder \(Read All Domains In Account\)       | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Intent Builder \(Write All Domains in Account\)      | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Intent Builder \(Read All Domains In All Accounts\)  | No           | No          | No             | No         | No    | Yes         | No               |
-| Intent Builder \(Write All Domains in All Accounts\) | No           | No          | No             | No         | No    | Yes         | No               |
-| Analytics \(Read Own & Account Bots\)                | Yes          | Yes         | Yes            | No         | Yes   | Yes         | No               |
-| Analytics \(Read All Bots In Account\)               | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Analytics \(Read All Bots In All Accounts\)          | No           | No          | No             | No         | No    | Yes         | No               |
-| Accounts \(Read Own Accounts\)                       | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Accounts \(Write Own Accounts\)                      | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Accounts \(Read All Accounts\)                       | No           | No          | No             | No         | No    | Yes         | No               |
-| Accounts \(Write All Accounts\)                      | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Read Own & Account Bot Agents\)         | No           | No          | No             | Yes        | No    | Yes         | No               |
-| Operations \(Write Own & Account Bot Agents\)        | No           | No          | No             | Yes        | No    | Yes         | No               |
-| Operations \(Read All Bot Agents In Account\)        | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Write All Bot Agents In Account\)       | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Read All Bot Agents In All Accounts\)   | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Write All Bot Agents In All Accounts\)  | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Read All Servers\)                      | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Write All Servers\)                     | No           | No          | No             | No         | No    | Yes         | No               |
-| Download Data \- Bulk                                | No           | No          | No             | No         | No    | No          | No               |
-| Template \(Write & Read\)                            | No           | No          | No             | No         | No    | Yes         | Yes              |
