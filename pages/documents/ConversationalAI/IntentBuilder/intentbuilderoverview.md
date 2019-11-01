@@ -22,7 +22,20 @@ See [NLU Engines](conversation-builder-intent-builder-nlu-engines.html) to learn
 
 ### Adding a Domain
 
-The first step to using the intent builder is to add a domain by clicking the **ADD DOMAIN** panel on the left side of the Intent Builder. You will then be prompted to choose a name for the domain and select whether you'd like to manually add intents or import a pre-configured list of intents. **We recommend using standard naming conventions when creating domains, to make sure they are easy to sort and find**.
+**To add a domain**
+
+1. Click **New domain** in the upper-right corner.
+2. On the Add Domain page, specify the following: 
+    * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
+    * **Manual** or **Import**: If you want to manually add intents and entities to the domain, select "Manual." If you want to import a pre-configured list in from a file, select "Import."
+    * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files.
+    * **NLU Provider**: Select the NLU engine to use. For help in making this selection, see the discussion on NLU engines [here](conversational-ai-natural-language-understanding-nlu-engines.html).
+    * **Language**: Select the language.
+3. Click **Add Domain**.
+    
+    If you didn't import them, you can now add intents and entities to the domain.
+    
+    If the domain's NLU provider is LivePerson's NLU v2 (not v1), you'll also need to [train the model](intent-builder-overview.html#train-an-nlu-v2-based-model).
 
 ### The Domain View
 
@@ -50,6 +63,34 @@ The default panel of the Domain View is the Add Intent panel. It will be the pan
 
 Once you've selected a name for your Intent, you should add as many training phrases as possible by using the bottom input area. To add another training phrase after your first one, click on the blue **+** sign to the right of the input area.
 
+### Training Phrases
+
+The NLU engine uses training phrases in order to match a user input with an intent. The more training phrases you include, the more likely the NLU engine will be to accurately match the user's intent with what they were actually looking for. Generally speaking, the phrases should be complete sentences (rather than keywords like pattern matching or very long paragraphs).
+
+Let's say that I have an intent which I label "check_bill". I could associate it with the following training phrases:
+
+* I want to check the status of my bill
+
+* Tell me what my bill is
+
+* I need to look into what's going with my bill
+
+The NLU engine will take the user input and compare it to your training phrases. If it finds a match to a degree of certainty exceeding "GOOD", it will send the intent configured to the automation. All of these phrases and similar sentences would result in the "check_bill" intent being sent to the automation and the corresponding action (configured by you in the Conversation Builder) to be triggered.
+
+For more best practices, see [Training and Tuning your Intents and FAQs](conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html).
+
+### Train an NLU v2-based model
+
+**To train an NLU v2-based model**
+
+1. Add *at least* 10 intents. For each intent, add *at least* 20 training phrases.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intents_trainingPhrases.png">
+
+2. Click <img style="width:35px" src="img/ConvoBuilder/icon_train.png"> (Train icon) in the lower-right corner to start the training.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intents_trainingStatus.png">
+
 ### LiveIntent
 
 When you enter Intent Builder, you will notice a column that tells you if a domain "Has LiveIntent" or not.
@@ -69,19 +110,3 @@ It is a best practice to enable all intents within a domain for the best analysi
 <img class="fancyimage" style="width:750px" src="img/liveintent-domains3.png">
 
 You can view the enabled intents in the [LiveIntent dashboard](liveintent-dashboard.html).
-
-### Training Phrases
-
-The NLU engine uses training phrases in order to match a user input with an intent. The more training phrases you include, the more likely the NLU engine will be to accurately match the user's intent with what they were actually looking for. Generally speaking, the phrases should be complete sentences (rather than keywords like pattern matching or very long paragraphs).
-
-Let's say that I have an intent which I label "check_bill". I could associate it with the following training phrases:
-
-* I want to check the status of my bill
-
-* Tell me what my bill is
-
-* I need to look into what's going with my bill
-
-The NLU engine will take the user input and compare it to your training phrases. If it finds a match to a degree of certainty exceeding "GOOD", it will send the intent configured to the automation. All of these phrases and similar sentences would result in the "check_bill" intent being sent to the automation and the corresponding action (configured by you in the Conversation Builder) to be triggered.
-
-For more best practices, see [Training and Tuning your Intents and FAQs](conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html).
