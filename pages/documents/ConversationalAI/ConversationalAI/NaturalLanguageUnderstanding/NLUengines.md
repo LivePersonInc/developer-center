@@ -48,7 +48,7 @@ NLU v1 doesn't require the model to be trained.
 
 This version is a classifier model based on Convolutional Neural Network (CNN) using Fasttext embeddings. The primary feature of NLU v2 is enabling a separate brand-specific model, built and *trained* for each domain. NLU v2 is a scalable solution that can handle a greater volume of requests, providing faster response times and accuracy.
 
-NLU v2 is primarily intended for use with LiveIntent since LiveIntent operates on a large volume of intents. However, you can also use NLU v2 with Conversation Builder provided that there are:
+NLU v2 expects large sets of data (both intents and training phrases) to perform effectively. When you create a domain with NLU v2 and use it in LiveIntent or in Conversation Builder, the following is recommended:
 
 * At least 10 intents in order to train
 * At least 20 training phrases per intent
