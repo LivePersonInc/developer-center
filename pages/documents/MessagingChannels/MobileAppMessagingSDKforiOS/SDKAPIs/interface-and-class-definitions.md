@@ -55,7 +55,7 @@ class LPAuthenticationParams: NSObject {
 ### LPAuthenticationType
 ```javascript
 enum LPAuthenticationType: Int {
-    case signup // Old unauthenticated method
+    case signup // Old unauthenticated method. is deprecated as of July 2019.
     case unauthenticated // New unauthenticated method for users without identity
     case authenticated // Authenticated users
 }

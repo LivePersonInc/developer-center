@@ -25,7 +25,7 @@ Unauthenticated In-App Messaging allows brands to communicate with consumers in 
 
 ### Related Classes, Parameters & APIs
 
-LPAuthenticationParams contains an authentication type, you can either set it or pass it in the object initialization (```init()```). When not passing an authentication type in init() the default value is LPAuthenticationType.signup (will deprecated on July 2019)
+LPAuthenticationParams contains an authentication type, you can either set it or pass it in the object initialization (```init()```). When not passing an authentication type in init() the default value is LPAuthenticationType.signup (is deprecated as of July 2019)
 
 _Note: if you pass **authenticationCode** or **jwt** on LPAuthenticationParams init() - it will automatically set the authentication type to LPAuthenticationType.authenticated_
 
@@ -82,4 +82,4 @@ LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationP
 
 * In order to change SDK modes, Logout must be called first.
 
-* LPAuthenticationType signup will be deprecated at the end June 2019.
+* LPAuthenticationType signup is deprecated as of July 2019.
