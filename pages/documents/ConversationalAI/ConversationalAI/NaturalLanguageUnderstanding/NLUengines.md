@@ -33,12 +33,28 @@ LivePerson NLU supports intent detection for English and Spanish.
 
 [Google Dialogflow supports](https://cloud.google.com/dialogflow/docs/reference/language) Cantonese, Chinese, Danish, Dutch, English, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish, Thai, Turkish, and Ukranian.
 
-### LivePerson NLU guidance
+### LivePerson's NLU engine
 
-When using LivePerson's NLU v2:
+There are two versions of LivePerson's NLU engine: version 1 (v1) and version 2 (v2).
 
-* There must be at least 10 intents in order to train.
-* There must be at least 20 training phrases per intent.
+#### LivePerson NLU v1
+
+This version is a recommender model based on Word Mover's Distance (WMD) algorithms. It's intended to be used if you have fewer than 10 intents and fewer than 20 training phrases per intent.
+
+{: .important}
+NLU v1 doesn't require the model to be trained.
+
+#### LivePerson NLU v2
+
+This version is a classifier model based on Convolutional Neural Network (CNN) using Fasttext embeddings. The primary feature of NLU v2 is enabling a separate brand-specific model, built and *trained* for each domain. NLU v2 is a scalable solution that can handle a greater volume of requests, providing faster response times and accuracy.
+
+NLU v2 is primarily intended for use with LiveIntent since LiveIntent operates on a large volume of intents. However, you can also use NLU v2 with Conversation Builder provided that there are:
+
+* At least 10 intents in order to train
+* At least 20 training phrases per intent
+
+{: .important}
+NLU v2 requires the model to be trained.
 
 ### 3rd-party NLU limitations
 
