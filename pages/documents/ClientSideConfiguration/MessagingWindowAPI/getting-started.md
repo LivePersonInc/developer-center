@@ -16,7 +16,7 @@ In this tutorial you will create a new conversation with your contact center, pu
 
 ### Prerequisites
 * [Docker](https://docs.docker.com/engine/installation)
-* LivePerson account enabled with two features: ``Async_Messaging`` and ``Authenticated_Chat``. If you are not sure that your account is enabled with these two features, please contact [LivePerson Support](consumer-int-account-provision.html).
+* LivePerson account enabled with two features: ``Async_Messaging`` and ``Authenticated_Chat``. If you are not sure that your account is enabled with these two features, please contact LivePerson Support.
 
 ### Step 1 - Launch your Shell
 
