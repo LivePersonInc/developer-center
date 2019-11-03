@@ -234,7 +234,6 @@
   - documentname: Bot Accounts
     pages:
       - pagename: Permissions per Role
-     # - pagename: Roles
       - pagename: Credentials
   - documentname: Third-Party Bots
     pages:
@@ -752,7 +751,7 @@
     - pagename: SDK Attributes
       subpages:
       - subpagename: 5.0 and above
-      - subpagename: 4.1 and below
+      - subpagename: 5.0 and below
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:

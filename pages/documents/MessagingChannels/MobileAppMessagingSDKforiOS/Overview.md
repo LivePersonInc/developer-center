@@ -6,11 +6,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-
-level-order: 1
-order: 0
 permalink: mobile-app-messaging-sdk-for-ios-overview.html
-root-link: true
 indicator: messaging
 ---
 
