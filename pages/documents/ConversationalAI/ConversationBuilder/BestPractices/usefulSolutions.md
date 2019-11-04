@@ -31,7 +31,7 @@ To solve this problem, you can offer a consistent greeting when the bot receives
     }
     ```
 
-    "paybill_flow_start" is the starter interaction that we want to jump to in our example VIP dialog. Replace it with the name of the interaction in your intent flow that you want to consistently jump to. Ensure the interaction name is specified *exactly*.
+    "paybill_flow_start" is our example starter interaction that we want to jump to in our example VIP dialog. Replace it with the name of the interaction in your intent flow that you want to consistently jump to. Ensure the interaction name is specified *exactly*.
 
     This code checks for a `transferAcknowledged` bot variable. If the variable doesn't exist or isn't set to "yes," it redirects the conversation flow to whatever is your substitute for the "paybill_flow_start" interaction.
 
@@ -51,7 +51,7 @@ Examine the following conversation flow where the consumer's last utterance to t
 
 <img style="width:600px" src="img/ConvoBuilder/bp_consistentGreeting2.png">
 
-In the conversation above, the Fallback dialog is triggered due to the consumer's last utterance to the human agent, which is checked by the bot. Before the Fallback dialog is processed, it first checks the `transferAcknowledged` bot variable. Since the variable is set to "no", it immediately redirects the consumer to the VIP dialog, which begins. 
+In the conversation above, the Fallback dialog is triggered due to the consumer's last utterance to the human agent, which is checked by the bot. Before the Fallback dialog is processed, it first checks the `transferAcknowledged` bot variable. Since the variable is set to "no", it immediately redirects the consumer to the VIP dialog, which begins with the paybill_flow_start interaction. 
 
 Because the first interaction, our "paybill_flow_start" interaction, sets the `transferAcknowledged` bot variable to "yes", subsequent, unmatched utterances likewise trigger the Fallback dialog. However, the Fallback dialog flow begins instead.
 
