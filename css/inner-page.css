@@ -383,6 +383,7 @@ ul#mysiderbar li{
 
 .activeitem {
   border-left: 4px solid #b1b5bc !important;
+  margin-left: -4px;
 }
 
 ul.mysidebar.nav .topfolder >  a {
