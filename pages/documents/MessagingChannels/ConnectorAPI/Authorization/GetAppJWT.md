@@ -20,11 +20,7 @@ search: include
 
 ### Authorization with AppJWT
 
-Before sending any request with the Send API, you must first obtain an **AppJWT** authorization token using the brand’s `Installation id` and `Secret` which you acquired as described on the [Getting Started](connectorapi-getting-started.html) chapter.
-
-The **AppJWT** is an access token obtained from **Sentinel**, which is a LivePerson Application Identity Broker. The **AppJWT** allows the client (i.e connector) to access the LiveEngage platform.
-
-**Note:** An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (Java Web Signature). Please see [this page](Create_ConsumerJWS.html) in order to retrieve a **ConsumerJWS**.
+Before sending any request with the Send API, you must first obtain an AppJWT authorization token using the brand’s `Installation id` and `Secret` which you acquired as described on the [Getting Started](connectorapi-getting-started.html) chapter. The AppJWT is an access token obtained from Sentinel, which is a LivePerson Application Identity Broker. The AppJWT allows the client (i.e connector) to access the LiveEngage platform. An AppJWT is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT you can obtain a ConsumerJWS (Java Web Signature). Please see [this page](Create_ConsumerJWS.html) in order to retrieve a ConsumerJWS.
 
 An **AppJWT** can be obtained with the following HTTPS request:
 
