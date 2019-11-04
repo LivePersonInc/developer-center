@@ -29,7 +29,7 @@ This resource helps you check if a certificate exists to some serviceName + acco
 
 Contains list of `CertificateMappingParamters` objects:
 
-```JSON
+```json
 [
    {"serviceName":"IDP","accountId":"52653865","url":"https://lp-idp-qa.dev.lprnd.net/mock/auth/token"},
    {"serviceName":"TEST_SERVICE","accountId":"52653865","url":"https://lp-mtls-qa.dev.lprnd.net/test"}

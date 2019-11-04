@@ -246,6 +246,7 @@
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
       - pagename: Custom Integration
+      - pagename: Hook Configuration
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
@@ -749,7 +750,8 @@
       - subpagename: Interface and Class Definitions
     - pagename: SDK Attributes
       subpages:
-      - subpagename: Attributes
+      - subpagename: 5.0 and above
+      - subpagename: 5.0 and below
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:
@@ -797,9 +799,9 @@
       - subpagename: Callbacks Index
     - pagename: SDK Attributes
       subpages:
-      - subpagename: Attributes
+      - subpagename: SDK 5.0 and above
+      - subpagename: SDK 4.1 and below
       - subpagename: Attributes Design Sheet
-      - subpagename: Deprecated Attributes
     - pagename: String Localization
       subpages:
       - subpagename: Localization Keys

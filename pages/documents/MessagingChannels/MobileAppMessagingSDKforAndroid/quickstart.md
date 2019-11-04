@@ -6,10 +6,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-
-order: 11
 permalink: mobile-app-messaging-sdk-for-android-quick-start.html
-
+indicator: messaging
 ---
 
 The LivePerson SDK provides brands with a secure way to foster connections with their customers and increase app engagement and retention.
@@ -24,6 +22,8 @@ Use this Quick Start guide to get you up and running with a project powered by L
 - [Latest version](https://developer.android.com/studio) of **Android Studio**. 
 - [Latest version](https://gradle.org/install/) of **Gradle**.
 
+{:.important}
+The Mobile SDK currently supports only Native Android (Java / Kotlin) implementations. If you use other core frameworks, languages, or development setups, please check with LivePerson support for advice before attempting these steps. 
 
 ### Step 1: Install the Messaging SDK into your project
 You can install the Mobile App Messaging SDK using a couple of different methods:
@@ -243,11 +243,16 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
       String appInstallID = "46bcf782-feee-490d-861d-2b5feb4437c8";
      ```
 
-   - **Signup Flow**  
+   - **Signup Flow**
 
-     ```java
-     String brandID = "62219232";
-     ```
+
+      {:.important}
+      **Signup Flow has been deprecated** as of June 2019. All customers are advised to move to Auth Code, Implicit Auth, or Unauth flows to continue using the SDK without issues.
+
+
+      ```java
+      String brandID = "62219232";
+      ```
 
 
 3. **Show the conversation view.** If your system implementation involves an authentication step, you must call the `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 

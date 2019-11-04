@@ -27,9 +27,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-
 permalink: mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html
-
+indicator: messaging
 ---
 
 You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore. 

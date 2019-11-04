@@ -2,7 +2,7 @@
 pagename: Conversational Commands
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Integrations
 permalink: liveperson-functions-integrations-conversational-commands.html

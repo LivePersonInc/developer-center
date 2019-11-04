@@ -8,10 +8,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-
-order: 15
 permalink: mobile-app-messaging-sdk-for-ios-push-notifications.html
-
 indicator: messaging
 ---
 
