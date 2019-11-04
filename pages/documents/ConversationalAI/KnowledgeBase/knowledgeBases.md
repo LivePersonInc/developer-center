@@ -20,7 +20,7 @@ This topic provides information on managing a knowledge base. For an introductio
     * **Data source name**: 
     * **Data source type**: Select "Knowledge Base."
     * **Language**: 
-    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file.
+    * **Import articles from**: You can certainly add articles manually, but if you have them in an external file, you can import them when you add the knowledge base. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents.
     * **Intent Association**: Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears.
 3. Click **Add**.
 
@@ -35,7 +35,7 @@ This topic provides information on managing a knowledge base. For an introductio
     * **Language**: 
     * **Import articles from**:
     * **Knowledge Base ID**: 
-    * **Intent Association**: This field is read only, but you can convert Knowledge Base intents to Domain intents; for help with this, see [below](knowledge-base-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents).
+    * **Intent Association**: This field is read only. However, if the knowledge base uses Knowledge Base intents, you can convert them to Domain intents; for help with this, see [below](knowledge-base-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents).
     * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses Knowledge Base intents.
     * **Associated Domain**: This field is only displayed if the knowledge base uses Domain intents. 
     * **Account**: 
