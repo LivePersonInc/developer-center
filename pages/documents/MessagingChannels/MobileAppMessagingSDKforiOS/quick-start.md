@@ -156,7 +156,6 @@ Before you can show a conversation, you must initialize the Messaging SDK.
  We have provided an example to use for this quick start process:   
    - [Authenticated](#authenticated)
    - [Unauthenticated](#unauthenticated)
-   - [Signup](#signup)
 
 #### Authenticated 
 
