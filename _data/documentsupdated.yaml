@@ -188,12 +188,11 @@
         subpages:
           - subpagename: Interactions
           - subpagename: Transfer to an Agent or Bot
-      - pagename: Common Use Cases
+      - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
           - subpagename: Train & Tune NLU
           - subpagename: Reusable Components
-          - subpagename: Useful Solutions
   - documentname: Maven AI
     pages:
       - pagename: Overview

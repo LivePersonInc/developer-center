@@ -1,16 +1,15 @@
 ---
-pagename: Useful Solutions
+pagename: Advanced Use Cases
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Best Practices
-permalink: conversation-builder-best-practices-useful-solutions.html
+permalink: conversation-builder-advanced-use-cases.html
 indicator: both
 ---
 
-The techniques discussed below provide solutions to common conversation challenges.
+The techniques discussed below provide solutions to common use cases and conversation challenges.
 
 ### Transfer to bot and offer consistent greeting
 
