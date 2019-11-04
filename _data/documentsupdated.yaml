@@ -230,6 +230,7 @@
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
+      - pagename: Knowledge Bases
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
