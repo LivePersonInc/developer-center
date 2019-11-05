@@ -119,11 +119,11 @@ Import your intents and entities or add them later manually before Step 5.
 
 #### Step 5: Train the domain
 
-1. Click on the train button in the right icon menu
+1. Click on the train button in the right icon menu.
 
     <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_3.png">
 
-2. Select the NLU provider credential from the list in the train modal
+2. Select the NLU provider credential from the list in the train model.
 
     <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_4.png">
 
@@ -131,4 +131,4 @@ Import your intents and entities or add them later manually before Step 5.
 
     <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_5.png">
 
-4. Once training is completed, you can start testing with the modal version in the intent tester.
+4. Once training is completed, you can start testing with the model version in the intent tester.
