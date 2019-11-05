@@ -90,17 +90,29 @@ For more best practices, see [Training and Tuning your Intents and FAQs](convers
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intents_trainingStatus.png">
 
+### Create a 3rd-party NLU provider credential
+
+1. Click on ‘NLU Provider Credentials’ on the domain dashboard.
+
+<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_0.png">
+
+2. Create a new NLU provider credential.
+
+* Give a name for the credential.
+* Select the NLU Provider that you want to set the credential for.
+* Copy the credentials downloaded from Watson / Google Dialog Flow.
+
+<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_1.png">
+
 ### Train a 3rd-party NLU domain
 
 1. Open the domain.
 2. Click <img style="width:35px" src="img/ConvoBuilder/icon_train.png"> (Train icon) in the lower-right corner to start the training.
 3. Select the NLU provider credential from the list in the train model.
 
-    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_4.png">
+    <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/NLU_image_4.png">
 
-3. Wait till the training is completed. Click the refresh button to see the latest training status for the version.
-
-    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_5.png">
+3. Wait until the training is completed. You can click the Refresh button to see the latest training status for the version.
 
     Once training is completed, you can start testing with the model version in the intent tester.
 

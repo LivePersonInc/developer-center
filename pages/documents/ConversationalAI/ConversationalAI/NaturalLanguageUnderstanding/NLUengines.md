@@ -25,7 +25,7 @@ This API layer of abstraction allows you to choose from the following NLU engine
 {: .important}
 If you choose LivePerson's native NLU, no changes need to be made. This engine is already configured and set up by default.
 
-### Language Support
+### Language support
 
 LivePerson NLU supports intent detection for English and Spanish.
 
@@ -63,7 +63,7 @@ NLU v2 requires the model to be trained.
 - Knowledge Base does not support 3rd-party NLU.
 - LivePerson does not support pulling existing models from IBM Watson and Google Dialogflow into Intent Builder; only model push is supported.
 
-### Connecting a 3rd-party NLU engine
+### Connect a 3rd-party NLU engine
 
 #### Step 1: Enable 3rd-party NLU support
 
@@ -97,38 +97,16 @@ In order to train IBM Watson or Google DialogFlow from within Conversation Build
 
 5. View and copy the created key. This will be used in your dialogflow config data.
 
-#### Step 3: Create NLU provider credentials in Intent Builder
+#### Step 3: Add a domain for the 3rd-party NLU provider
 
-1. Click on ‘NLU Provider Credentials’ on the domain dashboard.
+In Intent Builder, add a domain *that uses the 3rd-party NLU engine as its NLU provider*. For help with this step, see [here](intent-builder-overview.html#adding-a-domain). You can import the intents and entities, or manually add them later but before proceeding to step 5.
 
-<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_0.png">
+#### Step 4: Create NLU provider credentials
 
-2. Create a new NLU provider credential.
-
-* Give a name for the credential.
-* Select the NLU Provider that you want to set the credential for.
-* Copy the credentials downloaded from Watson / Google Dialog Flow.
-
-<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_1.png">
-
-#### Step 4: Add a domain for your NLU provider
-
-Import your intents and entities or add them later manually before Step 5.
-
-<img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_2.png">
+In Intent Builder, in the domain that you created in the previous step, create NLU provider credentials for the 3rd-party NLU engine. For help with this step, see [here](intent-builder-overview.html#create-a-3rd-party-nlu-provider-credential). This is when you'll copy and paste in the credentials that you downloaded from IBM Watson or Google Dialog flow (step 2 above).
 
 #### Step 5: Train the domain
 
-1. Click on the train button in the right icon menu.
+In Intent Builder, train the domain. For help with this step, see [here](intent-builder-overview.html#train-a-3rd-party-nlu-domain).
 
-    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_3.png">
-
-2. Select the NLU provider credential from the list in the train model.
-
-    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_4.png">
-
-3. Wait till the training is completed. Click on the refresh button to see the latest training status for the version.
-
-    <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/NLU_image_5.png">
-
-4. Once training is completed, you can start testing with the model version in the intent tester.
+Once training is completed, you can use the intent tester to start testing with the model version.
