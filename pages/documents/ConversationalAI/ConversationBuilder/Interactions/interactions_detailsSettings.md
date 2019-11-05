@@ -40,6 +40,6 @@ The **Settings** tab in the **Interaction Details** widget is where you configur
 
 The following are additional settings in [User Says](conversation-builder-interactions-user-says.html) interactions:
 
-* **Patterns**: A pattern is a text string that is matched against user input in order to trigger a bot message. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
+* **Patterns**: A pattern is a text string that is matched against user input in order to trigger a bot message. Enter the pattern against which to match the input. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
 * **Exclude Keywords**: An "exclude keyword" is a text string that is matched against user input in order to *not* trigger a bot message.
-* **Intent**: 
+* **Intent**: Intents are another way (in addition to patterns, above) for the bot to understand the user's meaning. Intents can be matched against user input in order to trigger a bot message. Select the intent against which to match the input.
