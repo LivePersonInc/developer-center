@@ -578,7 +578,7 @@ This method adds/ updates SDEs to an Engagement via the [Engagement Attributes A
   sdeUtil.addSDEs(sdes, visitorId, sessionId)
   .then(response => {}) //TODO: react to the response
   .catch(err => {}); //TODO: React to error
-  
+
 ```
 
 #### Get SDEs from Conversation
@@ -621,7 +621,7 @@ If there were no errors, the result is an object which allways contains an array
             events: [
                 {
                     customerInfo: {
-                      ... 
+                      ...
                     },
                     serverTimeStamp: 1569572377158,
                     sdeType: 'CUSTOMER_INFO',
@@ -662,4 +662,3 @@ If there were no errors, the result is an object which allways contains an array
         },
     }
 ```
-
