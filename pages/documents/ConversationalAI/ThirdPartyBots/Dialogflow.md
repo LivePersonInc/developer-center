@@ -1,5 +1,5 @@
 ---
-pagename: Google Dialogflow (No longer supported)
+pagename: Google Dialogflow
 redirect_from:
   - bot-connectors-google-dialogflow.html
 sitesection: Documents
