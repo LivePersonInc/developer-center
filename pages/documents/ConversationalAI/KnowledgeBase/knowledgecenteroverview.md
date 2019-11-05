@@ -40,7 +40,7 @@ The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR an
     * **Data source name**: 
     * **Data source type**: Select "Knowledge Base."
     * **Language**: 
-    * **Import articles from**: You can certainly add articles manually, but if you have them in an external file, you can import them when you add the knowledge base. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents.
+    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them when you add the knowledge base. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents.
     * **Intent Association**: Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears.
 3. Click **Add**.
     
