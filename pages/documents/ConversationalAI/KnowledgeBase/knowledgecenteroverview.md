@@ -27,6 +27,8 @@ The key article attributes that the NLU uses for matching are:
 * Summary
 * Any positive or negative learnings that the article has acquired
 
+The title and the intent qualifiers are [intents](conversation-builder-intent-builder-overview.html).
+
 Tags are used to highlight the key nouns in the intent and title. For instance “How do I reset my password?” would have a tag of “password” and perhaps “reset”.
 
 The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR.
