@@ -49,4 +49,4 @@ Setting up a dialog to catch the `__agent_escalation_failed__` pattern allows yo
 
 ### Troubleshooting
 
-For troubleshooting help when working with this integration type, see [here](conversation-builder-troubleshooting-conversation-transfers.html).
+For troubleshooting help when working with this integration type, see [here](conversation-builder-integrations-troubleshooting.html).

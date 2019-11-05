@@ -187,3 +187,7 @@ Deleting an interaction is a non-recoverable action, so consider disabling the i
 1. Select the interaction.
 2. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> in its upper-right corner, and select **Delete** from the menu that appears.
 3. Click **Continue** to confirm the deletion.
+
+### Troubleshooting
+
+For troubleshooting help when working with interactions, see [here](conversation-builder-interactions-troubleshooting.html).
