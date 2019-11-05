@@ -1,12 +1,13 @@
 ---
-pagename: Interactions
+pagename: Troubleshooting
 redirect_from:
+    - conversation-builder-troubleshooting-interactions.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Troubleshooting
-permalink: conversation-builder-troubleshooting-interactions.html
+subfoldername: Interactions
+permalink: conversation-builder-interactions-troubleshooting.html
 indicator: both
 ---
 

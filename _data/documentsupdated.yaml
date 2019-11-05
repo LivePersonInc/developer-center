@@ -155,6 +155,7 @@
           - subpagename: Details - Next Actions
           - subpagename: Details - Code
           - subpagename: Details - Settings
+          - subpagename: Troubleshooting
       - pagename: NLU Assist
       - pagename: Variables & Slots
       - pagename: Integrations
@@ -167,6 +168,7 @@
           - subpagename: File Integrations
           - subpagename: FaaS Integrations
           - subpagename: Web View Integration API
+          - subpagename: Troubleshooting
       - pagename: Environment Variables
       - pagename: Versions & Releases
       - pagename: Scripting Functions
@@ -184,10 +186,6 @@
         subpages:
           - subpagename: Debugging
           - subpagename: Deploying to LiveEngage
-      - pagename: Troubleshooting
-        subpages:
-          - subpagename: Interactions
-          - subpagename: Transfer to an Agent or Bot
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
