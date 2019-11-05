@@ -50,11 +50,11 @@ This version is a classifier model based on Convolutional Neural Network (CNN) u
 
 NLU v2 expects large sets of data (both intents and training phrases) to perform effectively. When you create a domain with NLU v2 and use it in LiveIntent or in Conversation Builder, the following is recommended:
 
-* At least 10 intents in order to train
+* At least 10 intents in order to [train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain)
 * At least 20 training phrases per intent
 
 {: .important}
-NLU v2 requires the model to be trained.
+NLU v2 requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
 
 ### 3rd-party NLU limitations
 
@@ -99,14 +99,14 @@ In order to train IBM Watson or Google DialogFlow from within Conversation Build
 
 #### Step 3: Add a domain for the 3rd-party NLU provider
 
-In Intent Builder, add a domain *that uses the 3rd-party NLU engine as its NLU provider*. For help with this step, see [here](intent-builder-overview.html#adding-a-domain). You can import the intents and entities, or manually add them later but before proceeding to step 5.
+In Intent Builder, add a domain *that uses the 3rd-party NLU engine as its NLU provider*. For help with this step, see [here](intent-builder-domains.html#add-a-domain). You can import the intents and entities, or manually add them later but before proceeding to step 5.
 
 #### Step 4: Create NLU provider credentials
 
-In Intent Builder, in the domain that you created in the previous step, create NLU provider credentials for the 3rd-party NLU engine. For help with this step, see [here](intent-builder-overview.html#create-a-3rd-party-nlu-provider-credential). This is when you'll copy and paste in the credentials that you downloaded from IBM Watson or Google Dialog flow (step 2 above).
+In Intent Builder, in the domain that you created in the previous step, create NLU provider credentials for the 3rd-party NLU engine. For help with this step, see [here](intent-builder-domains.html#create-a-3rd-party-nlu-provider-credential). This is when you'll copy and paste in the credentials that you downloaded from IBM Watson or Google Dialog flow (step 2 above).
 
 #### Step 5: Train the domain
 
-In Intent Builder, train the domain. For help with this step, see [here](intent-builder-overview.html#train-a-3rd-party-nlu-domain).
+In Intent Builder, train the domain. For help with this step, see [here](intent-builder-domains.html#train-a-3rd-party-nlu-domain).
 
 Once training is completed, you can use the intent tester to start testing with the model version.

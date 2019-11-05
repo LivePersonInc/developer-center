@@ -223,6 +223,8 @@
   - documentname: Intent Builder
     pages:
       - pagename: Overview
+      - pagename: Domains
+      - pagename: Intents
       - pagename: Entities
   - documentname: Knowledge Base
     pages:
