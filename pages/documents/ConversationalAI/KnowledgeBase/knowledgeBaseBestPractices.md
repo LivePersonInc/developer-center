@@ -11,7 +11,7 @@ indicator: both
 
 To increase the quality of your content matches, follow these best practices:
 
-* The title and the intent qualifiers, which are [intents](conversation-builder-intent-builder-overview.html), should be full sentences, e.g., “How do I reset my password?”
+* The title and the intent qualifiers, which are [intents](intent-builder-intents.html), should be full sentences, e.g., “How do I reset my password?”
 
 * As a rule, per article, you should have *AT LEAST* 5 to 8 intent qualifiers that provide different ways people ask for the article.
 

@@ -37,4 +37,4 @@ Let's say that I have an intent which I label "check_bill". I could associate it
 
 The NLU engine will take the user input and compare it to your training phrases. If it finds a match to a degree of certainty exceeding "GOOD", it will send the intent configured to the automation. All of these phrases and similar sentences would result in the "check_bill" intent being sent to the automation and the corresponding action (configured by you in the Conversation Builder) to be triggered.
 
-For more best practices, see [Training and Tuning your Intents and FAQs](conversation-builder-best-practices-train-tune-nlu.html).
+For more best practices, see [Train & Tune NLU](conversation-builder-best-practices-train-tune-nlu.html).

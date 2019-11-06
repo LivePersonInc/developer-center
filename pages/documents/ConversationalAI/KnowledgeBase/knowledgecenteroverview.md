@@ -12,7 +12,7 @@ indicator: both
 
 A bot is a great way to provide help and information. Consumers can ask questions to your bot conversationally, and the bot can respond with answers and links to relevant content. Information like this is provided to the bot using a knowledge base.
 
-The Knowledge Base application in the Conversation Builder platform allows you to create and manage knowledge bases and articles, which are then processed by our NLU engine. This allows your bot to leverage [intents](conversation-builder-intent-builder-overview.html) and [entities](conversation-builder-intent-builder-entities.html) to recommend the most accurate articles to an inquiring consumer. FAQ bots and Agent Advisor widgets are both driven by a knowledge base full of articles, intelligently delivering the right content to the consumer at the right time.
+The Knowledge Base application in the Conversation Builder platform allows you to create and manage knowledge bases and articles, which are then processed by our NLU engine. This allows your bot to leverage [intents](intent-builder-intents.html) and [entities](intent-builder-entities.html) to recommend the most accurate articles to an inquiring consumer. FAQ bots and Agent Advisor widgets are both driven by a knowledge base full of articles, intelligently delivering the right content to the consumer at the right time.
 
 <img class="fancyimage" style="width:750px" src="img/beaut_kb_2.png">
 
@@ -27,7 +27,7 @@ The key article attributes that the NLU uses for matching are:
 * Summary
 * Any positive or negative learnings that the article has acquired
 
-The title and the intent qualifiers are [intents](conversation-builder-intent-builder-overview.html).
+The title and the intent qualifiers are [intents](intent-builder-intents.html).
 
 Tags are used to highlight the key nouns in the intent and title. For instance “How do I reset my password?” would have a tag of “password” and perhaps “reset”.
 
@@ -37,9 +37,9 @@ The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR an
 
 1. In the Dashboard, click **Add Knowledge Base** in the upper-right corner.
 2. Specify the following:
-    * **Data source name**: 
+    * **Data source name**: Enter a name for the knowledge base.
     * **Data source type**: Select "Knowledge Base."
-    * **Language**: 
+    * **Language**: Select a language.
     * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them when you add the knowledge base. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents.
     * **Intent Association**: Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears.
 3. Click **Add**.
