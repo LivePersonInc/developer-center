@@ -1,10 +1,8 @@
 {
-	"variables": [],
 	"info": {
-		"name": "Chat API (REST)",
-		"_postman_id": "883aeadb-f8fd-f3ed-da9e-6ce0e44e8ae8",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"_postman_id": "bf9d466c-4e18-4ebd-b708-e63cfb80121b",
+		"name": "Server Chat API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -30,25 +28,41 @@
 				}
 			],
 			"request": {
-				"url": "http://{{csdsDomain}}/csdr/account/{{accountId}}/service/baseURI.json?version=1.0",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					},
 					{
 						"key": "Accept",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "http://{{csdsDomain}}/csdr/account/{{accountId}}/service/baseURI.json?version=1.0",
+					"protocol": "http",
+					"host": [
+						"{{csdsDomain}}"
+					],
+					"path": [
+						"csdr",
+						"account",
+						"{{accountId}}",
+						"service",
+						"baseURI.json"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "1.0"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -73,48 +87,111 @@
 				}
 			],
 			"request": {
-				"url": "https://{{domain_smt}}/api/account/{{accountId}}/app/engagement/visitors/?v=1.0",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n \"appType\": \"EXTERNAL\",\n \"appDetails\":{\n   \"os\": \"MAC_OSX\",\n   \"osVersion\": \"1.2\",\n   \"appVersion\": \"1.0\",\n   \"deviceFamily\": \"MOBILE\",\n   \"ipAddress\": \"192.168.5.2\"\n },\n \"consumerSections\":[\n   \"Support\",\n   \"English\",\n   \"other\"\n ],\n \"engagementAttributes\": [\n   {\n     \"type\": \"personal\",\n     \"personal\": {\n       \"contacts\": [{\"email\":\"test.com\",\"phone\":\"12345678\"},{\"email\":\"test2.co.il\",\"phone\":\"98765430\"}],\n       \"age\": {\n         \"age\":30.0,\n         \"year\":1985,\n         \"month\":7,\n         \"day\":22\n       },\n       \"firstname\": \"test\",\n       \"lastname\": \"test2\",\n       \"gender\": \"FEMALE\",\n       \"company\": \"liveperson\"\n     }\n   }\n ]\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "https://{{domain_smt}}/api/account/{{accountId}}/app/engagement/visitors/?v=1.0",
+					"protocol": "https",
+					"host": [
+						"{{domain_smt}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{accountId}}",
+						"app",
+						"engagement",
+						"visitors",
+						""
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1.0"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "c. Chat Availability",
 			"request": {
-				"url": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/availability.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/availability.json?v=1&appKey={{appKey}}",
+					"protocol": "https",
+					"host": [
+						"{{domain_conversationVep}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{accountId}}",
+						"chat",
+						"availability.json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "c. Estimated Wait Time",
 			"request": {
-				"url": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/estimatedWaitTime.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/estimatedWaitTime.json?v=1&appKey={{appKey}}",
+					"protocol": "https",
+					"host": [
+						"{{domain_conversationVep}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{accountId}}",
+						"chat",
+						"estimatedWaitTime.json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -132,42 +209,108 @@
 				}
 			],
 			"request": {
-				"url": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/request.json?v=1&appKey={{appKey}}",
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"request\": {\n\t\t\"LETagVisitorId\": \"{{visitorId}}\",\n\t\t\"LETagSessionId\": \"{{sessionId}}\",\n\t\t\"LETagContextId\": \"{{contextId}}\",\n\t\t\"engagementId\": \"{{engagementId}}\",\n\t\t\"campaignId\": \"{{campaignId}}\",\n\t\t\"skillId\": \"{{skillId}}\"\n\t}\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/request.json?v=1&appKey={{appKey}}",
+					"protocol": "https",
+					"host": [
+						"{{domain_conversationVep}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{accountId}}",
+						"chat",
+						"request.json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "c. Pre-Chat Survey",
 			"request": {
-				"url": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/preSurvey.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/preSurvey.json?v=1&appKey={{appKey}}",
+					"protocol": "https",
+					"host": [
+						"{{domain_conversationVep}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{accountId}}",
+						"chat",
+						"preSurvey.json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "c. Offline Survey",
 			"request": {
-				"url": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/offlineSurvey.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/offlineSurvey.json?v=1&appKey={{appKey}}",
+					"protocol": "https",
+					"host": [
+						"{{domain_conversationVep}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{accountId}}",
+						"chat",
+						"offlineSurvey.json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -193,56 +336,116 @@
 				}
 			],
 			"request": {
-				"url": "{{chat_session_uri}}.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "{{chat_session_uri}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{chat_session_uri}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "d. Chat Events",
 			"request": {
-				"url": "{{rel_events}}.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_events}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_events}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "d. Add Line",
 			"request": {
-				"url": "{{rel_events}}.json?v=1&appKey={{appKey}}",
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"event\": {\n\t\t\"@type\":\"line\",\n\t\t\"text\":\"hi\"\n\t}\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_events}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_events}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "d. End Chat",
 			"request": {
-				"url": "{{rel_events}}.json?v=1&appKey={{appKey}}",
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"event\": {\n\t\t\"@type\":\"state\",\n\t\t\"state\":\"ended\"\n\t}\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_events}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_events}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -264,96 +467,184 @@
 				}
 			],
 			"request": {
-				"url": "{{rel_info}}.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_info}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_info}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "e. Retrieve Visitor Name",
 			"request": {
-				"url": "{{rel_visitor-name}}.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"visitorName\": \"visitor1\"\n}"
+					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_visitor-name}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_visitor-name}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "e. Set Visitor Name",
 			"request": {
-				"url": "{{rel_visitor-name}}.json?v=1&appKey={{appKey}}",
 				"method": "POST",
 				"header": [
 					{
 						"key": "X-HTTP-Method-Override",
-						"value": "PUT",
-						"description": ""
+						"value": "PUT"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"visitorName\": \"visitor1\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_visitor-name}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_visitor-name}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "e. Retrieve Agent's Typing Status",
 			"request": {
-				"url": "{{rel_agent-typing}}.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_agent-typing}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_agent-typing}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "e. Retrieve Visitor's Typing Status",
 			"request": {
-				"url": "{{rel_visitor-typing}}.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_visitor-typing}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_visitor-typing}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "e. Set Visitor's Typing Status",
 			"request": {
-				"url": "{{rel_visitor-typing}}.json?v=1&appKey={{appKey}}",
 				"method": "POST",
 				"header": [
 					{
 						"key": "X-HTTP-Method-Override",
-						"value": "PUT",
-						"description": ""
+						"value": "PUT"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"visitorTyping\": \"typing\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_visitor-typing}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_visitor-typing}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
@@ -373,54 +664,191 @@
 				}
 			],
 			"request": {
-				"url": "{{rel_exit-survey}}.json?v=1&appKey={{appKey}}",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_exit-survey}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_exit-survey}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "e. Submit Survey Data",
 			"request": {
-				"url": "{{rel_exit-survey}}.json?v=1&appKey={{appKey}}",
 				"method": "POST",
 				"header": [
 					{
 						"key": "X-HTTP-Method-Override",
-						"value": "PUT",
-						"description": ""
+						"value": "PUT"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"survey\": {\n\t\t\"id\": {{exit_survey_id}},\n\t\t\"question\": {\n\t\t\t\"id\": \"123\",\n\t\t\t\"answer\": \"answer1\"\n\t\t}\n\t}\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_exit-survey}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_exit-survey}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "e. Send Transcript",
 			"request": {
-				"url": "{{rel_transcript-request}}.json?v=1&appKey={{appKey}}",
 				"method": "POST",
 				"header": [
 					{
 						"key": "X-HTTP-Method-Override",
-						"value": "PUT",
-						"description": ""
+						"value": "PUT"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n   \"email\": \"email@domain\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "{{rel_transcript-request}}.json?v=1&appKey={{appKey}}",
+					"host": [
+						"{{rel_transcript-request}}",
+						"json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://{{domain_conversationVep}}.liveperson.net/api/account/{{accountId}}/conversation.json?v=1&appKey={{appKey}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{appKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"authChatConnId\":{{connector.confiuration.id}},\n\t\"ssoKey\":\"{{JWT/authKey}}\",\n\t\"engagementId\":{{engagementId}},\n\t\"LETagContextId\":\"{{contextId}}\",\n\t\"LETagSessionId\":\"{{visitorSessionId}}\",\n\t\"LETagVisitorId\":\"{{visitorId}}}\"\n}"
+				},
+				"url": {
+					"raw": "https://{{domain_conversationVep}}.liveperson.net/api/account/{{accountId}}/conversation.json?v=1&appKey={{appKey}}",
+					"protocol": "https",
+					"host": [
+						"{{domain_conversationVep}}",
+						"liveperson",
+						"net"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{accountId}}",
+						"conversation.json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "c. Authenticated Chat Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "28aacbfd-954e-4f7a-b0fc-917427408efd",
+						"exec": [
+							"postman.setEnvironmentVariable(\"chat_session_uri\", postman.getResponseHeader('Location'));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"request\": {\n\t\t\"LETagVisitorId\": \"{{visitorId}}\",\n\t\t\"LETagSessionId\": \"{{sessionId}}\",\n\t\t\"LETagContextId\": \"{{contextId}}\",\n\t\t\"engagementId\": \"{{engagementId}}\",\n\t\t\"campaignId\": \"{{campaignId}}\",\n\t\t\"skillId\": \"{{skillId}}\",\n\t\t\"participantId\": {{participantId}},\n\t\t\"conversationId\": {{conversationId}}\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://{{domain_conversationVep}}/api/account/{{accountId}}/chat/request.json?v=1&appKey={{appKey}}",
+					"protocol": "https",
+					"host": [
+						"{{domain_conversationVep}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{accountId}}",
+						"chat",
+						"request.json"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "appKey",
+							"value": "{{appKey}}"
+						}
+					]
+				}
 			},
 			"response": []
 		}

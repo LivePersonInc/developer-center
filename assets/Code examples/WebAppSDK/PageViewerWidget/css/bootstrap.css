@@ -55,7 +55,7 @@ template {
 }
 
 a {
-    background-color: #F0F0F0
+    background-color: #f2f1f2
 }
 
 a:active,
@@ -5806,7 +5806,7 @@ button.close {
     padding: 8px 14px;
     margin: 0;
     font-size: 1rem;
-    background-color: #f7f7f7;
+    background-color: #f8f8f8;
     border-bottom: 1px solid #ebebeb;
     border-radius: .2375rem .2375rem 0 0
 }

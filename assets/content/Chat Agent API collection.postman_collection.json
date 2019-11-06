@@ -1,8 +1,7 @@
 {
 	"info": {
+		"_postman_id": "64cd4790-6451-4fa7-9496-2c407e3eec67",
 		"name": "Chat Agent API collection",
-		"_postman_id": "85464aab-91a3-402b-139d-d0de4f31ffc5",
-		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -56,8 +55,7 @@
 					"query": [
 						{
 							"key": "version",
-							"value": "1.0",
-							"equals": true
+							"value": "1.0"
 						}
 					]
 				}
@@ -94,7 +92,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"Botik2\",\n    \"appKey\": \"2eb301708aa140d4822c67b45b7a035f\",\n\t\"secret\": \"76d861d806870360\",\n\t\"accessToken\": \"e6f422d9b707421d83cef92465482a98\",\n\t\"accessTokenSecret\": \"1bcb03dced29f8ef\"\n}"
+					"raw": "{\n    \"username\": \"BotUser\",\n    \"appKey\": \"********************************\",\n\t\"secret\": \"****************\",\n\t\"accessToken\": \"********************************\",\n\t\"accessTokenSecret\": \"****************\"\n}"
 				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/login??v=1&NC=true",
@@ -111,13 +109,11 @@
 					"query": [
 						{
 							"key": "?v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						}
 					]
 				}
@@ -254,13 +250,11 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						}
 					]
 				}
@@ -285,7 +279,10 @@
 						"value": "Bearer {{Bearer}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}?v=1&NC=true&cs=1",
 					"protocol": "https",
@@ -302,18 +299,15 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						},
 						{
 							"key": "cs",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						}
 					]
 				}
@@ -334,7 +328,10 @@
 						"value": "Bearer {{Bearer}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/incomingRequests?v=1&NC=true&__d=67376",
 					"protocol": "https",
@@ -352,18 +349,15 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						},
 						{
 							"key": "__d",
-							"value": "67376",
-							"equals": true
+							"value": "67376"
 						}
 					]
 				}
@@ -424,18 +418,15 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						},
 						{
 							"key": "__d",
-							"value": "67576",
-							"equals": true
+							"value": "67576"
 						}
 					]
 				}
@@ -456,7 +447,10 @@
 						"value": "Bearer {{Bearer}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/chatSessions?v=1&NC=true",
 					"protocol": "https",
@@ -474,13 +468,11 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						}
 					]
 				}
@@ -528,13 +520,11 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						}
 					]
 				}
@@ -559,7 +549,10 @@
 						"value": "Bearer {{Bearer}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/chat/{{chatId}}/survey?v=1&NC=true",
 					"protocol": "https",
@@ -579,17 +572,14 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -611,7 +601,10 @@
 						"value": "Bearer {{Bearer}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/availability?v=1&NC=true",
 					"protocol": "https",
@@ -629,17 +622,14 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -686,17 +676,14 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -720,7 +707,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"event\": {\n\t\t\"@type\": \"line\",\n\t\t\"text\": \"this is a plain line\",\n\t\t\"textType\": \"plain\"\n\t}\n}"
+					"raw": ""
 				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/chat/{{chatId}}?v=1&NC=true",
@@ -740,17 +727,14 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -759,7 +743,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/visits/visit/{{visitId}}?v=1&NC=tru",
 					"protocol": "https",
@@ -779,17 +766,14 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "tru",
-							"equals": true
+							"value": "tru"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -811,7 +795,10 @@
 						"value": "application/json"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}/visits/visit/{{visitId}}/customVariables?v=1&NC=true",
 					"protocol": "https",
@@ -832,17 +819,14 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "NC",
-							"value": "true",
-							"equals": true
+							"value": "true"
 						}
 					]
-				},
-				"description": ""
+				}
 			},
 			"response": []
 		},
@@ -860,7 +844,10 @@
 						"value": "Bearer {{Bearer}}"
 					}
 				],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/monitoring/visitors/H4680275734113466588/visits/current/state?v=1&filter=agent&sid={{AgentSession}}",
 					"protocol": "https",
@@ -881,18 +868,61 @@
 					"query": [
 						{
 							"key": "v",
-							"value": "1",
-							"equals": true
+							"value": "1"
 						},
 						{
 							"key": "filter",
-							"value": "agent",
-							"equals": true
+							"value": "agent"
 						},
 						{
 							"key": "sid",
-							"value": "{{AgentSession}}",
-							"equals": true
+							"value": "{{AgentSession}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}participantExtendedInfo/398bd28f-4317-4cb3-b025-6c33d4887d8a?v=1&NC=true",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{Bearer}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{agentVepDomain}}/api/account/{{account}}/agentSession/{{AgentSession}}participantExtendedInfo/398bd28f-4317-4cb3-b025-6c33d4887d8a?v=1&NC=true",
+					"protocol": "https",
+					"host": [
+						"{{agentVepDomain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{account}}",
+						"agentSession",
+						"{{AgentSession}}participantExtendedInfo",
+						"398bd28f-4317-4cb3-b025-6c33d4887d8a"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "NC",
+							"value": "true"
 						}
 					]
 				}

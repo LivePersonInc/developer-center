@@ -14,10 +14,6 @@ h4 {color: #808080; }
 }
 
 /*my changes */
-.nav > li.active > a {
-    background-color: white;
-    color:black;
-}
 
 .nav > li > a:hover {
     /*background-color: #248ec2;*/
