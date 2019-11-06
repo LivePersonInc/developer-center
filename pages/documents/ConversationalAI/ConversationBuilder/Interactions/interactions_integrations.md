@@ -58,9 +58,9 @@ Some setup of your LiveEngage environment is required before using this feature.
 
 4. Return to the File Upload interaction, open the **Interaction Details**, click **Settings**, and specify the following in the **File Upload Settings**:
     - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, and so on). If the consumer attempts to upload a file of any other type, the upload will fail, and the following default error message is sent to the consumer: "The file type is invalid. Upload one of these types: {A}, {B}, {C}." To help to avoid this, you might want to include mention of the acceptable file types in the message to the consumer, as we've done in the image above.
-    - **Success Message**: Enter the message to send to the consumer if the file upload is successful, e.g., "Receipt of ID was successful." If you don't enter a message, the following default message is sent, "ABC."
-    - **Failure Message**: Enter the message to send to the consumer if the file upload is unsuccessful due to an error, e.g., "Receipt of ID was unsuccessful." If you don't enter a message, the following default message is sent, "DEF."
-    - **In Progress Message**: Enter the message to send to the consumer if upload *to the LiveEngage environment* is successful. As an example, you might enter, "Just a moment while we upload your file..." because what follows next is the actual upload to your external file share.
+    - **Success Message**: Enter the message to send to the consumer if the file upload is successful, e.g., "Receipt of the file was successful." If you don't enter a message, the following default message is sent, "ABC."
+    - **Failure Message**: Enter the message to send to the consumer if the file upload is unsuccessful due to an error, e.g., "Receipt of the file was unsuccessful." If you don't enter a message, the following default message is sent, "DEF."
+    - **In Progress Message**: Enter the message to send to the consumer if upload *to the LiveEngage environment* is successful. As an example, you might enter, "Just a moment while we upload your file..." because what follows next is the integration interaction that uploads the file to your external file share.
 6. Finish configuring the interactions as desired, and save your changes.
 
 #### Customization
@@ -69,7 +69,7 @@ There are a few customization points to highlight:
 
 * You can change the error message sent to the consumer when they upload an invalid type of file. To do this, create a context variable. ....MORE TO COME....
 
-* You can route the conversation to a flow that's dependent on the success or failure of the upload. To do this, create a dialog that begins with a User Says interaction that matches the pattern `__FileShare_Success_*`, where the * equals the success message you're using. Then build out the dialog per your requirements. You can route to a failure flow similarly, by creating a dialog that matches the pattern `__FileShare_Fail_*`, where the * equals the failure message you're using. *Spaces in the message are permitted.*
+* You can route the conversation to a flow that's dependent on the success or failure of the upload. To do this, create a dialog that begins with a User Says interaction that matches the pattern `__FileShare_Success_*`, where the * is the success message you're using. Then build out the dialog per your requirements. You can route to a failure flow similarly, by creating a dialog that matches the pattern `__FileShare_Fail_*`, where the * is the failure message you're using. *Spaces in the message are permitted.*
 
 #### Notes on File Upload interactions
 
