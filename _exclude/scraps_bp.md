@@ -21,7 +21,7 @@ To solve this problem, you can offer a consistent greeting when the bot receives
 
     "paybill_flow_start" is our example starter interaction that we want to jump to in our example VIP dialog. Replace it with the name of the interaction in your intent flow that you want to consistently jump to. Ensure the interaction name is specified *exactly*.
 
-    This code checks for a `transferAcknowledged` bot variable. If the variable doesn't exist or isn't set to "yes," it redirects the conversation flow to whatever is your substitute for the "paybill_flow_start" interaction.
+    This code checks for a `transferAcknowledged` bot variable. If the variable isn't found or isn't set to "yes," it redirects the conversation flow to whatever is your substitute for the "paybill_flow_start" interaction.
 
 2. Go to your substitute for the "paybill_flow_start" interaction, and, in the **[Pre-Process Code](conversation-builder-interactions-details-code.html)** section of the **Interaction Details**, add the following code:
 

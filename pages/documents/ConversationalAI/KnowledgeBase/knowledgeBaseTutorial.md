@@ -54,7 +54,7 @@ Before we add more articles, let’s test our knowledge base and see how our NLU
 
 3. Go ahead and click **thumbs up** now.
     
-    This addd the utterance to a set of “positive learnings” that are used in the matching.
+    This adds the utterance to a set of “positive learnings” that are used in the matching.
 
 4. Resubmit the search.
 
