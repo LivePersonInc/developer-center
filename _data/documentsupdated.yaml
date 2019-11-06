@@ -238,7 +238,7 @@
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
-      - pagename: Permissions per Role
+      - pagename: Permissions
       - pagename: Credentials
   - documentname: Third-Party Bots
     pages:
