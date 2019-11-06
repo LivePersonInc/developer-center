@@ -48,35 +48,52 @@ Some setup of your LiveEngage environment is required before using this feature.
 
     <img style="width:550px" src="img/ConvoBuilder/integrations_fileUpload2.png">
 
-    The File Upload interaction handles upload of the file to LiveEngage. 
+    The File Upload interaction handles upload of the file to LiveEngage. In step 4, you'll follow this with an integration interaction that handles upload of the file from LiveEngage to your brand's external file share.
 
-3. Immediately after the File Upload interaction, add an Integration interaction ( <img style="width:30px" src="img/ConvoBuilder/icon_integration.png"> ). In the interaction, select the File integration to invoke (Integration type = File).
+3. In the File Upload interaction, open the **Interaction Details**, click **[Settings]((conversation-builder-interactions-details-settings.html))**, and specify the following under **File Upload Settings**:
+    - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
+    - **Success message**: Enter the message to send to the consumer if the file upload to your external file share is successful. If you don't supply a message, the following message is sent, "Successfully processed the file."
+    - **Failure message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. If you don't supply a message, the following message is sent, "Failed to process the file. Please try again."
+    - **Validation Failure message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
+    - **In progress message**: Enter the message to send to the consumer when the upload begins. If you don't supply a message, the following message is sent, "Processing the file..."
+
+4. Immediately after the File Upload interaction, add an Integration interaction ( <img style="width:30px" src="img/ConvoBuilder/icon_integration.png"> ). In the interaction, select the File integration to invoke (Integration type = File).
     
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
 
-    The File integration handles upload of the file from LiveEngage to your brand's external file share or system. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
+    The File integration handles upload of the file from LiveEngage to your brand's external file share. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
 
-4. Return to the File Upload interaction, open the **Interaction Details**, click **Settings**, and specify the following in the **File Upload Settings**:
-    - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, and so on). If the consumer attempts to upload a file of any other type, the upload will fail, and the following default error message is sent to the consumer: "The file type is invalid. Upload one of these types: {A}, {B}, {C}." To help to avoid this, you might want to include mention of the acceptable file types in the message to the consumer, as we've done in the image above.
-    - **Success Message**: Enter the message to send to the consumer if the file upload is successful, e.g., "Receipt of the file was successful." If you don't enter a message, the following default message is sent, "ABC."
-    - **Failure Message**: Enter the message to send to the consumer if the file upload is unsuccessful due to an error, e.g., "Receipt of the file was unsuccessful." If you don't enter a message, the following default message is sent, "DEF."
-    - **In Progress Message**: Enter the message to send to the consumer if upload *to the LiveEngage environment* is successful. As an example, you might enter, "Just a moment while we upload your file..." because what follows next is the integration interaction that uploads the file to your external file share.
-6. Finish configuring the interactions as desired, and save your changes.
-
-#### Customization
-
-There are a few customization points to highlight:
-
-* You can change the error message sent to the consumer when they upload an invalid type of file. To do this, create a context variable. ....MORE TO COME....
-
-* You can route the conversation to a flow that's dependent on the success or failure of the upload. To do this, create a dialog that begins with a User Says interaction that matches the pattern `__FileShare_Success_*`, where the * is the success message you're using. Then build out the dialog per your requirements. You can route to a failure flow similarly, by creating a dialog that matches the pattern `__FileShare_Fail_*`, where the * is the failure message you're using. *Spaces in the message are permitted.*
+5. Finish configuring the interactions and overall dialog as per your requirements. For information on potential customization points, see the customization section farther below.
 
 #### Notes on File Upload interactions
 
 - The uploaded file can’t be over 5 MB.
-- File upload is an asynchronous process, so the bot's conversation with the consumer will continue while the upload is in progress. The consumer will be advised of success or failure, respectively, once the process is completed or has failed.
+- File upload is an asynchronous process, so the bot's conversation with the consumer will continue while the upload is in progress. The consumer will only be advised of success or failure, respectively, once the process is completed or has failed.
 - While LivePerson temporarily stores exchanged files for the duration of the conversation, it does not store them permanently.
 - Exchanged content must obey LivePerson’s Terms & Conditions, and the brand itself is responsible for checking exchanged files for malicious content.
-- If the dialog flow requires that the consumer upload *multiple* files, you'll need to add a File Upload interaction for every file, and each interaction must be followed by an Integration interaction. You can certainly reuse the [File integration](conversation-builder-integrations-file-integrations.html) that gets called, as we've done below.
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload3.png">
+#### Customization points
+
+##### Uploading multiple files
+
+If the dialog flow requires that the consumer upload *multiple* files, you'll need to add a File Upload interaction for every file, and each interaction must be followed by an Integration interaction. You can certainly reuse the [File integration](conversation-builder-integrations-file-integrations.html) that gets called, as we've done below.
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload3.png">
+
+##### Routing the conversation based on success or failure
+
+If desired, you can route the conversation to a different dialog flow *based on whether the upload succeeded or failed*.
+
+To do this for the success flow, create a dialog that begins with a User Says interaction that matches the pattern `file_upload_success:{your success message}`, for example:
+
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/integrations_fileUpload7.png">
+
+*Spaces in the message are permitted.*
+
+Then build out the success dialog flow as desired.
+
+You can create a failure dialog similarly. In this case, the User Says interaction must match the pattern: `file_upload_failed:{your message}`.
+
+If your original dialog involves *multiple* uploads--with different success and failure messages for each upload--but you want to handle the uploads with a *single* success dialog (or failure dialog), use the * wildcard to match all messages like this:
+
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/integrations_fileUpload8.png">

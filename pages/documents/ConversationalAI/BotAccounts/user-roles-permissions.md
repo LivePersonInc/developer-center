@@ -71,7 +71,10 @@ Users with this role can only create and manage:
 
 * Credentials
 
-This is a technical but limited, *add-on* role. It's intended to be assigned in conjunction with the Bot Builder Lite role as per your requirements.
+This is a technical but limited, *add-on* role. It's intended to be assigned in conjunction with the Bot Builder Lite and API Developer roles as per your requirements.
+
+{: .important}
+Whenever you assign this role, also assign Bot Builder Lite *and* API Developer.
 
 ### Import/Export Manager
 
@@ -81,6 +84,9 @@ Users with this role can only do the following:
 * Export/import knowledge bases
 
 This is a limited, *add-on* role. It's intended to be assigned in conjunction with the Bot Builder Lite role as per your requirements.
+
+{: .important}
+Users with this role can't export/import domains.
 
 ### Content User
 
