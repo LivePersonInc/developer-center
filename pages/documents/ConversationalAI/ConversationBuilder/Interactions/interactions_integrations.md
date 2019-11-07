@@ -48,7 +48,7 @@ Some setup of your LiveEngage environment is required before using this feature.
 
     <img style="width:550px" src="img/ConvoBuilder/integrations_fileUpload2.png">
 
-    The File Upload interaction handles upload of the file to LiveEngage. In step 4, you'll follow this with an integration interaction that handles upload of the file from LiveEngage to your brand's external file share.
+    For the file to be uploaded, in step 4, you'll follow this with an integration interaction that invokes a File integration.
 
 3. In the File Upload interaction, open the **Interaction Details**, click **[Settings]((conversation-builder-interactions-details-settings.html))**, and specify the following under **File Upload Settings**:
     - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
