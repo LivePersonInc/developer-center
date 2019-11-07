@@ -36,7 +36,7 @@ File Upload interactions is available for Web Messaging, Apple Business Chat, an
 
 Use a File Upload (integration) interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
-When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window.
+When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in LiveEngage, see [here](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html).)
 
 {: .important}
 Some setup of your LiveEngage environment is required before using this feature. Please contact your LivePerson account representative to enable this feature.
