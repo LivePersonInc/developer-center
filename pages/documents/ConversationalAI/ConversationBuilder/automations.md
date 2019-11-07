@@ -14,7 +14,7 @@ indicator: both
 ### Create a bot
 
 {: .important}
-LivePerson recommends that —before you create a bot— you set up the [domains](conversation-builder-intent-builder-overview.html), [intents](conversation-builder-intent-builder-overview.html), and [entities](conversation-builder-intent-builder-entities.html) that the bot will need. This makes creation of the bot much faster and easier because the [NLU Assist tool](conversation-builder-nlu-assist.html) can use that information along the way to suggest suitable intents and entities to use.
+LivePerson recommends that —before you create a bot— you set up the [domains](intent-builder-domains.html), [intents](intent-builder-intents.html), and [entities](intent-builder-entities.html) that the bot will need. This makes creation of the bot much faster and easier because the [NLU Assist tool](conversation-builder-nlu-assist.html) can use that information along the way to suggest suitable intents and entities to use.
 
 
 **To create a bot**

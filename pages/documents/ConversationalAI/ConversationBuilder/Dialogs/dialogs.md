@@ -18,7 +18,7 @@ A dialog is a group or flow of interactions that are triggered based upon consum
 
 There are three types of dialogs:
 
-- **Dialog (Standard)**: Standard dialogs are triggered when the bot recognizes the consumer's message via an [intent](conversation-builder-intent-builder-overview.html) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match. For more on this, see [here](conversation-builder-dialogs-standard-dialogs.html).
+- **Dialog (Standard)**: Standard dialogs are triggered when the bot recognizes the consumer's message via an [intent](intent-builder-intents.html) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match. For more on this, see [here](conversation-builder-dialogs-standard-dialogs.html).
 - **Fallback**: The fallback dialog is triggered when the bot doesn't recognize the consumer's message. For more on this, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 - **Disambiguation**: The disambiguation dialog is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed. For more on this, see [here](conversation-builder-dialogs-disambiguation-dialogs.html).
 
