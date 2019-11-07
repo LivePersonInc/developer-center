@@ -26,6 +26,12 @@ Tags are used to highlight the key nouns in the intent and title. For instance â
 
 The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR.
 
+### Best practices
+
+To increase the quality of your content matches, follow these best practices:
+
+* The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR. Generally, we set the responder to return results that are GOOD or better. You can downgrade the threshold to FAIR PLUS, but be sure to test to make sure the quality of the returned results meets your expectations.
+
 ### Add a knowledge base
 
 1. In the Dashboard, click **Add Knowledge Base** in the upper-right corner.
@@ -41,10 +47,12 @@ The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR an
 
 ### Prepare an import file
 
+If you want to import a set of articles into a knowledge base, you can do that by preparing an import file, either a CSV file or a Google sheet.
 
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_importFile.png">
 
-### Best practices
-
-To increase the quality of your content matches, follow these best practices:
-
-* The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR. Generally, we set the responder to return results that are GOOD or better. You can downgrade the threshold to FAIR PLUS, but be sure to test to make sure the quality of the returned results meets your expectations.
+**To download a knowledge base**
+1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
+2. In the Settings panel, click **KB Settings**.
+3. Click **More Options**, scroll down to the **Download Knowledge Base** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_download.png"> (Download icon).
+4. Follow the browser prompts to access and save the CSV file to a location of your choice.

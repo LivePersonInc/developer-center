@@ -83,13 +83,6 @@ You might need to download a knowledge base for a few reasons:
 * b
 * c
 
-**To download a knowledge base**
-1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
-2. In the Settings panel, click **KB Settings**.
-3. Click **More Options**, scroll down to the **Download Knowledge Base** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_download.png"> (Download icon).
-4. Follow the browser prompts to access and save the CSV file to a location of your choice.
-
-
 ### Delete a knowledge base
 
 Deleting a knowledge base is a non-recoverable action, so be certain about doing so before taking this action.
