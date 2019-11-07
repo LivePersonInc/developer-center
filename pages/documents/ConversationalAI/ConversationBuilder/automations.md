@@ -14,7 +14,7 @@ indicator: both
 ### Create a bot
 
 {: .important}
-LivePerson recommends that—-before you create a bot—-you set up the [domains](conversation-builder-intent-builder-overview.html), [intents](conversation-builder-intent-builder-overview.html), and [entities](conversation-builder-intent-builder-entities.html) that the bot will need. This makes creation of the bot much faster and easier because the [Assist tool](conversation-builder-assist.html) can use that information along the way to suggest suitable intents and entities to use.
+LivePerson recommends that —before you create a bot— you set up the [domains](conversation-builder-intent-builder-overview.html), [intents](conversation-builder-intent-builder-overview.html), and [entities](conversation-builder-intent-builder-entities.html) that the bot will need. This makes creation of the bot much faster and easier because the [NLU Assist tool](conversation-builder-nlu-assist.html) can use that information along the way to suggest suitable intents and entities to use.
 
 
 **To create a bot**
@@ -23,20 +23,18 @@ LivePerson recommends that—-before you create a bot—-you set up the [domains
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 
 2. In the Dashboard, click **New Bot** in the upper-right corner.
-3. Select the [template](conversation-builder-templates-overview.html) on which to base the bot.
-
-    <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/templates_dialog.png">
+3. In the dialog box that appears, select the [template](conversation-builder-templates-overview.html) on which to base the bot.
     
-    The Basic Bot template (which is the default) uses English and includes just a Welcome dialog, so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below. 
+    The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below. 
 
     There are also many, industry-specific, English-language templates available. If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below.
 
 4. Build out the bot, completing and adding the necessary [dialogs](conversation-builder-dialogs-dialog-basics.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the bot using the Preview tool.
-5. [Save versions](conversation-builder-best-practices-versions-releases.html#save-a-version) of the bot at important points in its development. This allows you to restore a version if you need.
-6. [Train and tune](conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html) things as you do more testing.
-7. [Save a version](conversation-builder-best-practices-versions-releases.html#save-a-version) of the final “Development” bot.
+5. [Save versions](conversation-builder-versions-releases.html#save-a-version) of the bot at important points in its development. This allows you to restore a version if you need.
+6. [Train and tune](conversation-builder-best-practices-train-tune-nlu.html) things as you do more testing.
+7. [Save a version](conversation-builder-versions-releases.html#save-a-version) of the final “Development” bot.
 
-    At this point, you could deploy the Development bot, but LivePerson recommends that you [create a release](conversation-builder-best-practices-versions-releases.html#create-a-release) copy of the bot that you deploy instead. This allows you to take live the release copy (the Production copy). Later, you can make fine-tuning changes to the Development copy as needed, without affecting the Production copy. You can then “upgrade” the Production copy accordingly.
+    At this point, you could deploy the Development bot, but LivePerson recommends that you [create a release](conversation-builder-versions-releases.html#create-a-release) copy of the bot that you deploy instead. This allows you to take live the release copy (the Production copy). Later, you can make fine-tuning changes to the Development copy as needed, without affecting the Production copy. You can then “upgrade” the Production copy accordingly.
 
 ### Import a bot
 You can add an bot by importing a bot JSON file that was previously exported. This is useful when you need to make a copy of a bot (just export and then import back into the same environment), or you need to copy or move a bot from one environment to another.
@@ -68,7 +66,7 @@ Bot settings include:
 
 - **Bot Type**: Read-only. This is either Consumer Facing Bot or Agent Advisor. A Consumer Facing bot is one that engages with the consumer in the front end. An Agent Advisor bot is one that engages with the contact center agent in LiveEngage in the back end. You specify the bot type when you create the bot, and it can’t be changed afterward.
 
-- **Bot Language**: Read-only. This setting only has an impact when you select Hebrew as the value. In this case, characters are displayed right-to-left, not left-to-right, to support right-to-left reading. You specify the bot language when you create the bot, and it can’t be changed afterward.
+- **Bot Language**: Read-only. This setting determines the language-specific model for LivePerson NLU; it also supports the proper rendering of left-to-right and right-to-left languages. You specify the bot language when you create the bot, and it can’t be changed afterward.
 
 - **Bot Template**: Read-only. To facilitate the rapid creation of bots, all bots are based on [templates](conversation-builder-templates-overview.html). The default template is Basic, which uses English and includes just a Welcome dialog. You select the template when you create the bot, and it can’t be changed afterward.
 
@@ -76,19 +74,17 @@ Bot settings include:
 
 - **Conversation Builder Platform Version**: Read-only. This identifies the platform version of the bot. Typically, you don’t need this information, but here’s where you can find it if asked for it (for example, in a support scenario).
 
-- **Entity**: You can use this option to associate _a domain_ with the bot. However, the Assist tool provides you with help in associating domains with dialogs, so typically you don’t need to specify a domain here.
+- **Entity**: You can use this option to associate _a domain_ with the bot. However, the [NLU Assist](conversation-builder-nlu-assist.html) tool provides you with help in associating domains with dialogs, so typically you don’t need to specify a domain here.
 
 - **Bot Account**: If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, you can use this setting to change the organization under which this bot exists. If you logged into Conversation Builder via single sign-on from LiveEngage, the organization you were using in LiveEngage is active and can't be changed, and nothing appears in this list.
 
 - **Public**: When you want other users in your LiveEngage account to be able to view and edit the bot, click the slider to On. The default value is Off. 
 
-- **Bot Environment**: If desired, select the set of [environment variables](conversation-builder-best-practices-environment-variables.html) that you want to associate with the bot. Environment variables allow you to manage certain values and constants outside of the bot, and use of them when appropriate is considered a best practice.
+- **Bot Environment**: If desired, select the set of [environment variables](conversation-builder-environment-variables.html) that you want to associate with the bot. Environment variables allow you to manage certain values and constants outside of the bot, and use of them when appropriate is considered a best practice.
 
 - **Session Length**: Select the length of the bot session, that is, how long the context of a conversation is maintained after the conversation becomes idle. If this is unset, the default of one hour is used. Be aware that there also exists a LivePerson conversation session; it is this setting, not the LivePerson setting, that determines the session length.
 
 - **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons. If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t.
-
-- **Enable Bot**: Typically, you don’t need to set this since you start a bot in LiveEngage after you deploy it.
 
 ### Export a bot
 Export of an bot creates a JSON file.
@@ -97,7 +93,7 @@ You might need to export a bot for a few reasons:
 
 - You want to create a variation of the bot, so you plan to copy the bot by exporting it and then importing it back into the same environment.
 - You want to move or copy a bot to another environment, so you plan to export it and import it into a different environment.
-- You want an extra measure of back-up—above and beyond [saving versions](conversation-builder-best-practices-versions-releases.html#save-a-version) of bots that you can restore—so you plan to archive the JSON file for safekeeping.
+- You want an extra measure of back-up—above and beyond [saving versions](conversation-builder-versions-releases.html#save-a-version) of bots that you can restore—so you plan to archive the JSON file for safekeeping.
 
 {: .important}
 In case 2 above—-moving or copying a bot to a different environment (that is, from one region or hosting platform to another)—-check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.

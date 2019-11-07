@@ -32,6 +32,8 @@ Your bot implementation should meet LiveEngage requirements and those of the spe
 
 ### Limitations
 
+#### Limitations regarding types of text
+
 The types of text that you can send in a Conversation Builder interaction vary depending if you are building a bot for **chat** or for **messaging**.
 
 **Messaging** only allows plain text to be sent.
@@ -69,6 +71,34 @@ The Apple developers' site provides some good, general guidelines regarding reso
 
     This inserts the interaction after the one you selected unless you inserted a User Says interaction, which is always inserted at the start of the dialog.
 
+### Specify patterns in interactions
+
+Patterns are combinations of keywords, wildcards and alternates that are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". 
+
+However, patterns can use alternates for specific variations, e.g., `I want a pair of (headphones|head phones|earbuds|earphones)` will match "I want a pair of headphones" or "I want a pair of earphones", etc. 
+
+Patterns can also include wildcards for looser matches, e.g., `*home*` will match "homes", "home run", "home is where the heart is".
+
+You can use wildcards and alternates together like this:
+
+* `* (some|a pair of) (headphones|earbuds)*`
+
+* `(thank(|s)|thank you)*`
+
+* `*headphones*`
+
+Once the bot detects a match to the pattern that you defined, the dialog configured with that pattern is triggered, and the conversation begins. If the pattern is configured for a user input in the middle of the conversation (like an answer to a question), the appropriate response will be triggered.
+
+The basic operators available for use with pattern matching are:
+
+* Asterisk, otherwise known as a "wildcard," which matches any character.
+
+* Parentheses, which enclose a group of alternates.
+
+* Pipe, which denotes alternates.
+
+If you need more advanced operators, you can use [regular expressions](http://www.rexegg.com/regex-quickstart.html) with pattern matching.
+
 ### Display variables in interactions
 
 * `{}` is used for inserting dynamic values inside of interactions
@@ -77,7 +107,7 @@ The Apple developers' site provides some good, general guidelines regarding reso
 
   * [Slot Variable](conversation-builder-variables-slots.html#slots): `{$botContext.slot.slotName}`
 
-  * [Environment Variable](conversation-builder-best-practices-environment-variables.html): `{$env.envVariableName}`
+  * [Environment Variable](conversation-builder-environment-variables.html): `{$env.envVariableName}`
 
   * [API Integration](conversation-builder-integrations-api-integrations.html) custom data values: `{apiName.variableName}`
 
@@ -100,7 +130,7 @@ Add the following special tag inline inside your text interaction to force a bre
 
 <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_8.png">
 
-<img class="fancyimage" width="200" src="img/ConvoBuilder/breakWithDelay.png">
+<img class="fancyimage" width="350" src="img/ConvoBuilder/breakWithDelay.png">
 
 {: .important}
 The delay value is in milliseconds. 1000 = 1 second.
@@ -120,7 +150,7 @@ You can move any type of interaction except a User Says interaction. User Says i
 
 1. Select the interaction.
 2. Move your mouse over its upper-left corner until <img style="width:20px" src="img/ConvoBuilder/icon_interactionMove.png"> (Move icon) appears.
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/interaction_moveExample.png">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/interaction_moveExample.png">
 3. Click, drag, and drop the interaction in the desired location.
 
 **To move an interaction to a new dialog**
@@ -157,3 +187,7 @@ Deleting an interaction is a non-recoverable action, so consider disabling the i
 1. Select the interaction.
 2. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> in its upper-right corner, and select **Delete** from the menu that appears.
 3. Click **Continue** to confirm the deletion.
+
+### Troubleshooting
+
+For troubleshooting help when working with interactions, see [here](conversation-builder-interactions-troubleshooting.html).

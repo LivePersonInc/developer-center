@@ -31,4 +31,33 @@ There are three types of dialogs:
     - **Dialog Type**: Select either Dialog (for a [standard](conversation-builder-dialogs-standard-dialogs.html) dialog), [Fallback](conversation-builder-dialogs-fallback-dialogs.html) Dialog, or [Disambiguation](conversation-builder-dialogs-disambiguation-dialogs.html) Dialog.
 4. Click **Save**.
 5. Build out the dialog as per your requirements.
-    
+
+### Close the dialog or conversation
+
+Use the following operators to close the current dialog or conversation.
+
+#### LP_CLOSEDIALOG
+
+To close the current dialog, create a Text statement that contains the special string “LP_CLOSEDIALOG”.
+
+ <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keywords_lpCloseDialog.png">
+
+This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
+
+If this Text statement isn't the last in the dialog, set this statement's **Next Step** to "End Interaction" (not "Next Interaction").
+
+ {: .important}
+LP_CLOSEDIALOG triggers a post-conversation survey.
+
+#### LP_CLOSECONVERSATION
+
+To close the current conversation, create a Text statement that contains the special string “LP_CLOSECONVERSATION”.
+
+ <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keywords_lpCloseConversation.png">
+
+This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
+
+If this Text statement isn't the last in the dialog, set this statement's **Next Step** to "End Interaction" (not "Next Interaction").
+
+{: .important}
+LP_CLOSECONVERSATION does **not** trigger a post-conversation survey.

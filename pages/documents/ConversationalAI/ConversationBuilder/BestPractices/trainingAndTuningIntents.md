@@ -1,14 +1,15 @@
 ---
-pagename: Training and Tuning Your Intents and FAQs
+pagename: Train & Tune NLU
 redirect_from:
     - conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html
     - conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
+    - conversational-ai-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversational AI
-subfoldername: Natural Language Understanding
-permalink: conversational-ai-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
+subfoldername: Best Practices
+permalink: conversation-builder-best-practices-train-tune-nlu.html
 indicator: both
 ---
 
@@ -144,7 +145,7 @@ To refresh on using entities with intents, check out [this tutorial](https://dev
 
 #### Can I detect entities using JavaScript?
 
-There is a JS method to detect which entities have been picked up by the NLU called [getNamedEntities();](https://developers.liveperson.com/conversation-builder-scripting-functions-get-and-set-conversation-flow-data.html#get-named-entities) This will return an array of entities for a particular entity name. For example, the following will return an array of toppings found. So in an utterance like "I would like a pizza with pepperoni, sausage and peppers" it would return [pepperoni, sausage, peppers]:
+There is a JS method to detect which entities have been picked up by the NLU called [getNamedEntities();](conversation-builder-scripting-functions-get-set-contextual-data.html#get-named-entities) This will return an array of entities for a particular entity name. For example, the following will return an array of toppings found. So in an utterance like "I would like a pizza with pepperoni, sausage and peppers" it would return [pepperoni, sausage, peppers]:
 
 
 ```javascript
