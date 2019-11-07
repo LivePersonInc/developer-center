@@ -18,7 +18,7 @@ NLU Assist is a helper tool that "listens" to your dialog as you build it, inter
 
 ### Adding a domain
 
-When you create your first interaction, NLU Assist will automatically pop up on the right hand side of an interaction. You'll be prompted to add a domain from the list of domains you have set up (to learn more about setting up domains, please see [this link](conversation-builder-intent-builder-overview.html)). If you have not configured a domain yet, you will not be prompted to add one.
+When you create your first interaction, NLU Assist will automatically pop up on the right hand side of an interaction. You'll be prompted to add a domain from the list of domains you have set up (to learn more about setting up domains, please see [here](intent-builder-domains.html)). If you have not configured a domain yet, you will not be prompted to add one.
 
 Select one of your domains from the list and click on it. From then on, for this dialog, NLU Assist will recommend using intents and entities from this domain, using NLU to identify areas where they might be relevant. In essence, it recognizes keywords that you use in an interaction *and* an intent or entity, offering you to link between the two.
 
