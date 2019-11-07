@@ -32,7 +32,7 @@ Before you can add an Integration interaction, you need to create the integratio
 ### File Upload interactions
 
 {: .important}
-File Upload interactions is available for Web Messaging, Apple Business Chat, and WhatsApp Business.
+File Upload interactions are available for Web Messaging, Apple Business Chat, and WhatsApp Business.
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
