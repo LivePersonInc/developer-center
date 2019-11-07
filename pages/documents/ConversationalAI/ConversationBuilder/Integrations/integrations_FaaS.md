@@ -1,5 +1,5 @@
 ---
-pagename: LivePerson Functions integrations
+pagename: LivePerson Functions Integrations
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
