@@ -6,7 +6,6 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-
 permalink: mobile-app-messaging-sdk-for-android-push-notifications.html
 indicator: messaging
 ---

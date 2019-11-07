@@ -72,7 +72,7 @@ Since you’re going to be using intents in this tutorial, you need to leave the
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/billentity.png">
 
-15. *Now see how adding an entity can improve the NLU matching*: Return to the Intents tab, select the "Billing question" intent, and use the debugger again. This time re-enter the phrase, "I have a billing question".
+15. *Now see how adding an entity can improve the NLU matching*: Click **Intents** in the upper-right corner to return to the Intents tab, select the "Billing question" intent, and use the debugger again. This time re-enter the phrase, "I have a billing question".
 
     Now the result is VERY GOOD, and you can see that the entity @bill was detected as well.
 
@@ -83,11 +83,10 @@ Since you’re going to be using intents in this tutorial, you need to leave the
 With the "Billing question" intent configured, let’s return to Conversation Builder and use the intent to trigger a new dialog.
 
 1. In the upper-left corner, click **< Domains** to return to the list of domains.
-2. Again in the upper-left corner, click **< Apps>** to return to the Conversational AI dashboard.
+2. Again in the upper-left corner, click **< Apps** to return to the Conversational AI dashboard.
 3. Click **Conversation Builder**.
 4. Select the bot you previously created.
 5. Create a new regular dialog named "Billing".
-6. Add a User Says interaction.
     
     The [NLU Assist tool](conversation-builder-nlu-assist.html) that automatically appears helps you to link the domain and intent to the User Says interaction.
     
@@ -123,9 +122,9 @@ Now you can begin to build out the Billing dialog.
     
     You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next step should be to end.
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/yesstatement.png">
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/yesstatement_end.png">
 
-4. Add a Text statement to respond to a reply of "no". For the statement's text, enter, “OK. How else can I help you today?” Change this interaction's name to “No statement”. Click **Save**.
+4. Add a Text statement to respond to a reply of "no". For the statement's text, enter, “OK. How else can I help you today?” In the Interaction Details, change this interaction's name to “No statement”. Click **Save**.
 
     You've got the dialog fleshed out; now you need to add [conditions](conversation-builder-conversation-builder-conditions.html) to detect when a user says "yes" or “no” and direct them to the correct text statement.
 
@@ -135,7 +134,7 @@ Now you can begin to build out the Billing dialog.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/userresponseyes.png">
 
-7. Add a condition to handle a "no" response: Click the **+** beside **Response Match & Actions** to add a second condition set. Select "Pattern" here too, but this time enter `(no|nope|nah)` for the pattern. And for the **Next Step**, select the "No statement."
+7. Add a condition to handle a "no" response: Click the **+** beside **Response Match & Actions** (at the top of the window) to add a second condition set. Add a condition. Select "Pattern" here too, but this time enter `(no|nope|nah)` for the pattern. And for the **Next Step**, select the "No statement."
 
     Now let's see the dialog in action.
 
@@ -143,6 +142,6 @@ Now you can begin to build out the Billing dialog.
 
 9. Enter an utterance that should match the billing intent, like, "I have a question about my bill". You should see the billing dialog and multiple choice question. Tap or enter “yes” or “no” and see what response you get.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/yestest.png">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/yestest.png">
 
 You now understand the basics of intents, entities, and branching dialog flows.

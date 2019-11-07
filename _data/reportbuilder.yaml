@@ -472,7 +472,7 @@
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point (“Source Type“)
 - metricitem:
-  Metric: NON - INTERACTIVE CONVERSATIONS
+  Metric: NON-INTERACTIVE CONVERSATIONS
   analysisType: Consumer Experience
   Channel: Messaging
   formulaOptional:
@@ -480,10 +480,10 @@
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point (“Source Type“)
 - metricitem:
-  Metric: NON - INTERACTIVE RATE
+  Metric: NON-INTERACTIVE RATE
   analysisType: Consumer Experience
   Channel: Messaging
-  formulaOptional: NON - INTERACTIVE CONVERSATIONS / CLOSED CONVERSATIONS
+  formulaOptional: NON-INTERACTIVE CONVERSATIONS / CLOSED CONVERSATIONS
   Description: Percentage of non-interactive conversations out of the total number of closed conversations
   Dashboard: Messaging Performance
   filteredBy: Agent,Group,Skill,Engagement,Campaign,LoB,End-Point (“Source Type“)
@@ -2522,7 +2522,7 @@
 - metricitem:
   Metric: ACCEPTED RATE (ENG)
   analysisType: Campaign Funnel
-  Channel: Messaging,Chat  
+  Channel: Messaging,Chat
   formulaOptional: '[ONLINE OFFERS ACCEPTED]/[ONLINE EXPOSURES (ENG)]'
   Description: The percentage (%) of online exposures that resulted in a click (Accept)
   Dashboard: Business Activity
@@ -3279,4 +3279,3 @@
   Description: The 90th percentile of time (mm:ss) a conversation remains in queue until assigned to an agent. Measured from the time the conversation was opened until the time was assigned to an agent.
   Dashboard: Performance for Messaging
   filteredBy: Skill, Skill Segment Start Reason, Skill Segment End Reason, Engagement, Campaign, End-Point (Source Type), Source, Consumer Device
-

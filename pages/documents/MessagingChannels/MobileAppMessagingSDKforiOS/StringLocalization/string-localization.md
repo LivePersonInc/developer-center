@@ -7,10 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: String Localization
-
-order: 227
 permalink: mobile-app-messaging-sdk-for-ios-string-localization-string-localization.html
-
 indicator: messaging
 ---
 

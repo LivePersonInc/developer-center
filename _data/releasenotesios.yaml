@@ -1,6 +1,7 @@
 - operatingsystem: iOS
   releases:
-  - releasename: 4.1.0
+  - releasename: 5.0.0
+  - releasename: Mobile App Messaging SDK for iOS Release Notes 4.1.0
   - releasename: Mobile App Messaging SDK for iOS Release Notes 4.0.0
   - releasename: Mobile App Messaging SDK for iOS Release Notes 3.9.5
   - releasename: Mobile App Messaging SDK for iOS Release Notes 3.9.4
