@@ -9,7 +9,7 @@ permalink: conversation-builder-integrations-knowledge-base-integrations.html
 indicator: both
 ---
 
-Use a Knowledge Base integration when you want to search one of your knowledge bases for articles. You’ll need to create the knowledge base first; for help with that, see [this page](knowledge-base-overview.html).
+Use a Knowledge Base integration when you want to search one of your knowledge bases for articles. You’ll need to create the knowledge base first; for help with that, see [here](knowledge-base-knowledge-bases.html#add-a-knowledge-base).
 
 One use case for this type of integration is within a fallback dialog to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or [escalate the conversation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) to a human agent.
 

@@ -1,28 +1,4 @@
----
-pagename: Knowledge Bases
-redirect_from:
-Keywords:
-sitesection: Documents
-categoryname: "Conversational AI"
-documentname: Knowledge Base
-permalink: knowledge-base-knowledge-bases.html
-indicator: both
----
 
-This topic provides information on managing a knowledge base. For an introduction to knowledge bases, see [here](knowledge-base-overview.html).
-
-### Add a knowledge base
-
-**To add a knowledge base**
-
-1. In the Dashboard, click **Add Knowledge Base** in the upper-right corner.
-2. Specify the following:
-    * **Data source name**: 
-    * **Data source type**: Select "Knowledge Base."
-    * **Language**: 
-    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them when you add the knowledge base. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents.
-    * **Intent Association**: Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears.
-3. Click **Add**.
 
 ### Configure knowledge base settings
 
@@ -123,3 +99,15 @@ Deleting a knowledge base is a non-recoverable action, so be certain about doing
 2. In the Settings panel, click **KB Settings**.
 3. Click **More Options**, scroll down to the **Delete Knowledge Base** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_delete.png"> (Delete icon).
 4. In the confirmation dialog, click **Yes**.
+
+
+### Delete an article
+
+intro to be added
+
+**To delete an article from a knowledge base**
+
+1. Open the knowledge base.
+2. Use the search and filter controls to find the article, and select it.
+3. Click **Delete**.
+4. In the confirmation dialog, click **Confirm**.

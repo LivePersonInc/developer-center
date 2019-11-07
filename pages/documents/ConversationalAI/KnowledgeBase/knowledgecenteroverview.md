@@ -16,36 +16,6 @@ The Knowledge Base application in the Conversation Builder platform allows you t
 
 <img class="fancyimage" style="width:750px" src="img/beaut_kb_2.png">
 
-### How a knowledge base works
-
-The Knowledge Base uses our Natural Language Understanding (NLU) algorithms to match articles to consumer input. Each article has a title and a series of intent qualifiers, against which the NLU engine compares the consumer's input. If it finds a match to a reasonable degree of certainty, it will "serve" the appropriate article to the consumer.
-
-The key article attributes that the NLU uses for matching are:
-
-* Title
-* Intent qualifiers
-* Summary
-* Any positive or negative learnings that the article has acquired
-
-The title and the intent qualifiers are [intents](intent-builder-intents.html).
-
-Tags are used to highlight the key nouns in the intent and title. For instance “How do I reset my password?” would have a tag of “password” and perhaps “reset”.
-
-The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR.
-
-### Adding a knowledge base
-
-1. In the Dashboard, click **Add Knowledge Base** in the upper-right corner.
-2. Specify the following:
-    * **Data source name**: Enter a name for the knowledge base.
-    * **Data source type**: Select "Knowledge Base."
-    * **Language**: Select a language.
-    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them when you add the knowledge base. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents.
-    * **Intent Association**: Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears.
-3. Click **Add**.
-    
-    Once you've created a Knowledge Base, select it to enter its search view. In this default view, you can search the title, intent qualifiers and content of your different articles. 
-
 ### Settings toolbar
 
 Inside a knowledge base, in the lower-right corner, you'll find a toolbar that provides access to the following panels:
