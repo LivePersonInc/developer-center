@@ -13,6 +13,8 @@ redirect_from:
 
 To give brands the option to call their functions from outside of LivePerson's platform, we provide an API for External Invocation. With this API they can call their functions externally, secured by OAuth 2.0.
 
+<div class="important">Since the triggering source of the External Invocation is not a LivePerson system, the event connected to the function will not have any effect. In contrast to a function's response that is connected to an event, the response is just returned to the external system without triggering any behaviour at LivePerson systems.</div>
+
 Here is a short OAuth 2.0 introduction video: [link](https://www.youtube.com/watch?v=CPbvxxslDTU)
 
 ### Grant Types

@@ -21,7 +21,7 @@ One use case for this type of integration is within a fallback dialog to funnel 
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select **Knowledge Base**.
     
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_kb.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/integrations_kb.png">
     
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Methods**:
@@ -33,11 +33,11 @@ One use case for this type of integration is within a fallback dialog to funnel 
             - *Intents Only*: Select this to perform only an NLU-based search (no text-based search).
             - *All*: Select this to perform only a text-based search (no NLU).
         - *threshold*: The knowledge base uses Natural Language Understanding (NLU) algorithms to match articles to the input phrases, and it assigns a score based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, and POOR. Use this field to specify the minimum score that a result must have in order to be returned. You can select from VERY GOOD, GOOD, or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations.
-        - *phrases*:   Enter the phrase for which to search. The default value is {$query}, which represents/stores the last, complete response sent by the consumer.
+        - *phrases*:   Enter the phrase for which to search. The default value is [{$query}](conversation-builder-variables-slots.html#storing-user-responses), which represents/stores the last, complete response sent by the consumer.
         - *multipleResults*: Select the number of results to return from the knowledge base, anywhere from one to five. The default value is 1.
     - **Request Parameters for a Special Tag search**:
         - *mode*: Indicates whether to perform an "and" or "or" search using the special tags.
-        - *specialTags*: The comma-delimited list of tags for which to search. The default value is {$query}, which represents/stores the last, complete response sent by the consumer.
+        - *specialTags*: The comma-delimited list of tags for which to search. The default value is [{$query}](conversation-builder-variables-slots.html#storing-user-responses), which represents/stores the last, complete response sent by the consumer.
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
     - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields as described [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
 3. Click Save.

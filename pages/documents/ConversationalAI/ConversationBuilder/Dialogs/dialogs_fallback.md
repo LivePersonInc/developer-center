@@ -15,6 +15,6 @@ By default, whenever a bot doesn't recognize the user's input in a conversation,
 
 ### Why use a Fallback dialog?
 
-Use the Fallback dialog type to _override_ the default behavior with a different fallback response and flow. For example, you might want to send, “I'm sorry. I didn't quite understand you,” or, “I'm not sure what '{$query}' means.” ({$query} plays back to the user what they just said. Once the Fallback dialog flow is completed, the user is returned to their previous dialog and interaction position.
+Use the Fallback dialog type to _override_ the default behavior with a different fallback response and flow. For example, you might want to send, “I'm sorry. I didn't quite understand you,” or, “I'm not sure what '{$userMessage}' means.” [{$userMessage}](conversation-builder-variables-slots.html#storing-user-responses) plays back to the user what they just said. Once the Fallback dialog flow is completed, the user is returned to their previous dialog and interaction position.
 
 Since the Fallback dialog is triggered after failing to match any other dialog starter, it’s also useful for funneling user utterances into a Knowledge Base (or similar integration) search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or escalate the conversation to a human agent.

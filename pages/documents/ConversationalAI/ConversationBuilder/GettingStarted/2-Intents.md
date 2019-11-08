@@ -88,23 +88,23 @@ With the "Billing question" intent configured, let’s return to Conversation Bu
 4. Select the bot you previously created.
 5. Create a new regular dialog named "Billing".
     
-    By default, a standard dialog includes a User Says interaction, but it isn't configured.
-    
-    The [NLU Assist tool](conversation-builder-conversation-builder-assist.html) that automatically appears helps you to link the domain and intent to the User Says interaction.
+    By default, a regular dialog includes a User Says interaction, but it isn't configured yet.
+
+    The [NLU Assist tool](conversation-builder-nlu-assist.html) that automatically appears helps you to link the domain and intent to the User Says interaction.
     
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selectdomain.png">
 
-7. In the Assist tool <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_assist.png"> , select the domain you created. This enables Assist to use the platform’s NLU to match your User Says interaction against any available intents. 
+7. In the NLU Assist tool <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_assist.png"> , select the domain you created. This enables NLU Assist to use the platform’s NLU to match your User Says interaction against any available intents. 
     
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selecteddomain.png">
     
 8. Select the User Says interaction, enter the phrase "I have a question about my bill" as the sample text, and press Enter.
 
-    Assist automatically finds appropriate intents to link to the User Says interaction.
+    NLU Assist automatically finds appropriate intents to link to the User Says interaction.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/usersaysbilling.png">
 
-9. In the Assist tool, select the "Billing question" intent that you created to associate it with the Billing dialog and the User Says interaction.
+9. In the NLU Assist tool, select the "Billing question" intent that you created to associate it with the Billing dialog and the User Says interaction.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/usersaysbilling2.png">
 

@@ -243,17 +243,6 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
       String appInstallID = "46bcf782-feee-490d-861d-2b5feb4437c8";
      ```
 
-   - **Signup Flow**
-
-
-      {:.important}
-      **Signup Flow has been deprecated** as of June 2019. All customers are advised to move to Auth Code, Implicit Auth, or Unauth flows to continue using the SDK without issues.
-
-
-      ```java
-      String brandID = "62219232";
-      ```
-
 
 3. **Show the conversation view.** If your system implementation involves an authentication step, you must call the `showConversation` method provided by the LPMessagingSDK instance. It pushes a new navigation stack containing the conversation view. 
 
@@ -403,26 +392,6 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
          }));
      }
      ```
-
-   - **Signup Flow**
-
-     ```java
-     public void startSignupFlow(View v) {
-         String brandID = "62219232";
-         LivePerson.initialize(this, new InitLivePersonProperties(brandID, APP_ID, new InitLivePersonCallBack() {
-             @Override
-             public void onInitSucceed() {
-                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.SIGN_UP);
-                 LivePerson.showConversation(MainActivity.this, lpAuthenticationParams, new ConversationViewParams());
-             }
-
-             @Override
-             public void onInitFailed(Exception e) {
-             }
-         }));
-     }
-     ```
-
 
    |Element  |Description  |
    |---------|---------|

@@ -897,7 +897,7 @@ Move on to the product guides to learn how to connect and configure your specifi
 
 - [Watson Assistant](bot-connectors-ibm-watson-assistant.html)
 
-- [Dialogflow V1](bot-connectors-google-dialogflow.html)
+- [Dialogflow V1 (No longer supported)](bot-connectors-google-dialogflow.html)
 
 - [Dialogflow V2](bot-connectors-google-dialogflow-version-2.html)
 

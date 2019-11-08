@@ -2,12 +2,12 @@
 pagename: Environment Variables
 redirect_from:  
     - conversation-builder-best-practices-using-environment-variables.html
+    - conversation-builder-best-practices-environment-variables.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Best Practices
-permalink: conversation-builder-best-practices-environment-variables.html
+permalink: conversation-builder-environment-variables.html
 indicator: both
 ---
 
@@ -17,21 +17,32 @@ When creating a bot, there might be instances where you need to externalize cert
 
 For example, if you have a bot that has both a Sandbox and Production version, 99% of the functionality will be the same, but certain values (like skill IDs for instance) might be different. Defining and storing these values outside of the bot makes them easier to manage.
 
-### Create environment variables
+### System environment variables
+
+Conversation Builder includes several environment variables that you can use to take advantage of associated bot behaviors.
+
+| Environment variable name | Value | Example | Description | 
+|----|----|----|----|
+| system_handleIntermediateUserMessage | true | true | Enables the behavior to catch and ignore "interrupt" messages by the consumer. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for a use case that takes advantage of this variable. | 
+| system_intermediateBotMessage | string | Please wait...we are still responding to your last message. | Optionally used in conjunction with `system_handleIntermediateUserMessage`. This is the message to send to the consumer if they send an utterance while their messages are blocked. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for a use case that takes advantage of this variable. |
+| system_intermediateBotResponseTimeout | string | 15000 | Used in conjunction with `system_handleIntermediateUserMessage`. This is the timeout period in milliseconds (e.g., 15000 = 15 seconds). This value determines how long the bot will wait to send a message before moving on to sending the next message. In other words, if the wait for a message is too long, this instructs the bot to skip it after the specified amount of time. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for a use case that takes advantage of this variable. |
+
+### Add environment variables
 
 If you are using multiple bot instances (e.g., a Sandbox version and a Production version), you would create a Sandbox environment *and* a Production environment and then associate the specific environment with the specific bot.
 
-**To create environment variables**
+**To add environment variables**
 
 1. From the Conversation Builder dashboard, click **Manage Bot Environments** in the upper-right corner.
-2. On the Add Environment page, specify the following:
+2. Click **Add Environment** in the lower-left corner.
+3. Specify the following:
 
     * **Environment Name**: Enter a descriptive name. For example, you might have Sandbox and Production instances  (e.g., "Router Bot Sandbox").
     * **Environment Values**: Enter the key/value pairs for each variable. Variables *cannot* have spaces or special characters in their names, only letters and numbers.
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/bestPractices/env_1.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bestPractices/env_1.png">
 
-3. Click **Save**.
+4. Click **Save**.
 
 ### Link environment variables to a bot 
 
