@@ -1,4 +1,9 @@
 
+### Best practices
+
+To increase the quality of your content matches, follow these best practices:
+
+* The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR. Generally, we set the responder to return results that are GOOD or better. You can downgrade the threshold to FAIR PLUS, but be sure to test to make sure the quality of the returned results meets your expectations.
 
 ### Configure knowledge base settings
 
@@ -52,55 +57,3 @@ Intro to be added
 2. In the Settings panel, click **KB Settings**.
 3. Click **More Options**, and scroll down to the **Keyword Patterns** section.
 4. Enter the pattern, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_add.png"> (Refresh icon).
-
-### Sync with a Google sheet
-
-Intro to be added
-
-**To sync a knowledge base with a Google sheet**
-1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
-2. In the Settings panel, click **KB Settings**.
-3. Click **More Options**, scroll down to the **Sync Google Sheet Data Source** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_syncGoogleSheet.png"> (Refresh icon).
-
-
-### Refresh the intents
-
-Intro to be added
-
-**To refresh the intents in a knowledge base**
-1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
-2. In the Settings panel, click **KB Settings**.
-3. Click **More Options**, scroll down to the **Refresh Intents** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_refresh.png"> (Refresh icon).
-
-
-### Download a knowledge base
-
-Export of a knowledge base creates a CSV file.
-
-You might need to download a knowledge base for a few reasons:
-
-* a
-* b
-* c
-
-### Delete a knowledge base
-
-Deleting a knowledge base is a non-recoverable action, so be certain about doing so before taking this action.
-
-**To delete a knowledge base**
-1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
-2. In the Settings panel, click **KB Settings**.
-3. Click **More Options**, scroll down to the **Delete Knowledge Base** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_delete.png"> (Delete icon).
-4. In the confirmation dialog, click **Yes**.
-
-
-### Delete an article
-
-intro to be added
-
-**To delete an article from a knowledge base**
-
-1. Open the knowledge base.
-2. Use the search and filter controls to find the article, and select it.
-3. Click **Delete**.
-4. In the confirmation dialog, click **Confirm**.

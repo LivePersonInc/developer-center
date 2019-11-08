@@ -13,6 +13,9 @@ indicator: both
 
 An article is a focused piece of information that you want to serve to your consumers.
 
+
+
+
 **To add an article to a knowledge base**
 
 1. Open the knowledge base, and click **Add New** in the upper-right corner.
