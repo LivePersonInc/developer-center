@@ -338,10 +338,8 @@ next message is send or contain structured content in the same format that could
         "type": "structured-content",
         "value": {
           "metadata": [
-            ...
           ],
           "structuredContent": {
-            ...
           }
         }
       }
