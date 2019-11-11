@@ -67,7 +67,7 @@ The Bot Connector utilizes the **channelData** property for anything besides pla
 It is expected that a bot responds to every message sent by the consumer.
 If no response is detected in a certain time frame, the Bot Connector assumes something is wrong and tries to transfer the conversation to an agent.
 
-Only the first message with which a bot responds to a consumer request will be processed. If a bot sends multiple messages with the same `ReplyToId`, these messages will be ignored.
+Only the first activity with which a bot responds to a consumer request will be processed. If a bot sends further activities with the same `ReplyToId`, these activities will be ignored.
 
 ### Sending Rich Content (Structured Content)
 
@@ -310,3 +310,42 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
 ```
 
 Figure 10.1 Customer activity excerpt on a new chat
+
+
+### Sending multiple responses
+As stated under Limitations we only process the first activity that is send in response to a customer message.
+If your bot should reply with more than one message, you need to send a multiMessage property inside the channelData.
+
+You can define any number of messages in this array. This messages can be plain text, define a delay before the
+next message is send or contain structured content in the same format that could also be be send directly as a channel data object.
+
+
+```json
+{
+  "type": "message",
+  "text": "",
+  "channelData": {
+    "multiMessage": [
+      {
+        "type": "text",
+        "value": "this is a text"
+      },
+      {
+        "type": "delay",
+        "value": 1
+      },
+      {
+        "type": "structured-content",
+        "value": {
+          "metadata": [
+            ...
+          ],
+          "structuredContent": {
+            ...
+          }
+        }
+      }
+    ]
+  }
+}
+```
