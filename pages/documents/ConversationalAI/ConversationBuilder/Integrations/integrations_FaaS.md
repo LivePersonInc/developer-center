@@ -11,6 +11,9 @@ indicator: both
 
 Use the LivePerson Functions integration to invoke a function (lambda) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with a LivePerson Functions integration.
 
+{: .important}
+Enabling the use of LivePerson's Function (FaaS) integrations requires a configuration change made by LivePerson. Contact your LivePerson account representative for assistance.
+
 ### To add a LivePerson Functions integration
 
 1. Open the automation, and click **Integrations** in the upper-left corner.
