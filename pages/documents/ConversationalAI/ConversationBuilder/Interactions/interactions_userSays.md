@@ -11,7 +11,7 @@ indicator: both
 
 User Says interactions are how dialogs are initially triggered, so most dialogs start with a User Says interaction. ([Fallback dialogs](conversation-builder-dialogs-fallback-dialogs.html) work differently.) A dialog can have only one User Says interaction, and it must start the dialog. Because User Says interactions are always positioned at the start of a dialog flow, and because they’re used to trigger dialogs, they are sometimes called “dialog starters.”
 
-It’s the user that starts things off by supplying some user input: a message or a question. In response, the bot tries to match the user input with either a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) or an [intent](conversation-builder-intent-builder-overview.html) in a User Says interaction in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins.
+It’s the user that starts things off by supplying some user input: a message or a question. In response, the bot tries to match the user input with either a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) or an [intent](intent-builder-intents.html) in a User Says interaction in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins.
 
 As an example, the Goodbye dialog below is triggered when the bot matches the user’s message to some form (pattern) of “good-bye.”
 
@@ -34,4 +34,4 @@ When do you use patterns versus intents?
 
 For information on pattern matching, see [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions). There's a hands-on [tutorial](conversation-builder-getting-started-1-dialogs-and-patterns.html) as well.
 
-For an overview of intents and Intent Builder, see [here](intent-builder-overview.html). There's a hands-on [tutorial](conversation-builder-getting-started-2-intents.html) on this too. 
+For an overview of Intent Builder and intents, begin [here](intent-builder-overview.html). There's a hands-on [tutorial](conversation-builder-getting-started-2-intents.html) on this too. 
