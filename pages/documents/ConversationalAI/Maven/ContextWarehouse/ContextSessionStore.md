@@ -1,12 +1,13 @@
 ---
 pagename: Context Session Store
 redirect_from:
+  - maven-context-warehouse-context-session-store.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven
+documentname: Maven AI
 subfoldername: Context Warehouse
-permalink: maven-context-warehouse-context-session-store.html
+permalink: maven-ai-context-warehouse-context-session-store.html
 indicator: messaging
 ---
 
@@ -24,6 +25,10 @@ The Context APIs are part of Maven, LivePerson’s AI engine, that allows brands
 
 Each brand can have multiple **namespaces** for different business use cases. Typically a namespace may group together related attributes, for example customer information such as name, email, phone number etc. which are stored as **Key-Value Pairs.** Brands can define as many attributes they need per namespace. To group together the attributes in a namespace for example a conversation session brands can use the **Session ID**. Each object in the hierarchical structure (Namespace, Session ID, KVPs) comes with CRUD (Create, Read, Update, Delete) operations using the REST APIs. 
 
+<!--
+{: .important}
+If you want to use the Context Session Store with Conversation Builder, please use the convenient [API wrapper functions](conversation-builder-scripting-functions-context-session-store-wrapper.html).
+-->
 ### Example Use Cases
 
 * Passing context (intent, customer info) and customer routing / escalation path between bots.
@@ -49,8 +54,6 @@ To use Context Session store APIs you will need to create and use an API key. To
 3. To generate a new key, click on the **Regenerate Key **button. Please note that this will invalidate the previous key. The key is shared for all Maven APIs and therefore you will have to use the new key wherever the APIs are being called.  
 
 <img class="fancyimage" width="750" src="img/maven/devkey.png">
-
-
 
 ### Methods
 

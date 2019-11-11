@@ -2,7 +2,7 @@
 pagename: Messaging Conversations
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Integrations
 permalink: liveperson-functions-integrations-messaging-conversations.html

@@ -20,7 +20,7 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/vendor.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/wizard.png">
 
 Figure 1.1 Showing the configuration that needed to be filled
 
@@ -120,11 +120,11 @@ You have to agree to Data Disclaimer from now onward in order to use the service
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.4 and 1.5 respectively.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/connection-success.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/wizard_success.png">
 
 Figure 1.4 Showing the success case of the valid credentials
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/connection-failed.png">
+<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/wizard_failed.png">
 
 Figure 1.5 Showing the fail case of the invalid credentials
 
@@ -254,13 +254,16 @@ To send Structured Content via Dialogflow V2, send a _custom payload_ option via
 
 Figure 5.1
 
+{: .important}
+If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
+
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 5.1). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
 **NOTE:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not LiveEngage will receive a blank text response followed by rich content payload.
 
 Example Metadata
 
-```json
+```javascript
 {
   "metadata": [
     {
@@ -305,7 +308,7 @@ Figure 5.2 Dialogflow Example Custom Payload
 Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
- ```json
+```json
 {
   "structuredContent": {
     "quickReplies": {
@@ -354,14 +357,15 @@ For detailed information on Quick Replies check out the documentation for the sp
     },
     "message": "Do you like Bots?"
   },
-   "metadata": [
+  "metadata": [
     {
       "id": "1234",
       "type": "ExternalId"
     }
   ]
 }
- ```
+```
+
 Figure 6.1 QuickReplies Structured Content example
 
 ### Close Chat/Conversation
@@ -376,3 +380,24 @@ The action field needs to be set to **CLOSE_CONVERSATION** to instruct the conne
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_12.png">
 
 Figure 7.1
+
+### Engagement attributes as context
+
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.1.
+
+<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+Figure 8.1 Conversation Type step in creation/modification of bot configuration.
+
+These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow V2 these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload` (more information about `payload` parameter can be found [here](https://googleapis.dev/nodejs/dialogflow/latest/google.cloud.dialogflow.v2.html#.QueryParameters)). An example of the request body can be seen below:
+
+```javascript
+{
+  "session": "SomeSession",
+  "queryParams": {
+    "payload": {
+      "lpEvent": {}, // Holds LP Events
+      "lpSdes": {}
+    }
+  }
+}
+```

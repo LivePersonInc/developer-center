@@ -23,24 +23,9 @@ The card contains the following elements:
 
 LINE card example: 
 
-<img class="fancyimage" style="width:350px" src="img/line_sc_card.png">
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img  style="width:350px" src="img/line_sc_card.jpg">
 
 ### JSON Template Properties
-
-#### Card and Carousel templates in Structured Content JSON Properties
 
 <table>
 <thead>
@@ -141,9 +126,7 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
  </tbody>
 </table>
 
-### Code Examples
-
-#### Vertical Card
+### Code Example
 
 ```json
 {

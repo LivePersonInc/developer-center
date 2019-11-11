@@ -32,7 +32,7 @@
           {% if page.subpages %}
           <li class="folder innerfolder subfolder">
             <a href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
-            <ul>
+            <ul class="innerList">
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
                 <a  onclick="linkclick(event,this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
@@ -70,7 +70,7 @@
           {% if page.subpages %}
           <li class="folder innerfolder subfolder">
             <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
-            <ul>
+            <ul class="innerList">
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
                 <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>

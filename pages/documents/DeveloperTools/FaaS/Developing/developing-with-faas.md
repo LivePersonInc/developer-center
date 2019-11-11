@@ -2,7 +2,7 @@
 pagename: Overview
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
 permalink: liveperson-functions-development-overview.html
@@ -22,6 +22,10 @@ After successfully creating a `lambda` (using the [Getting Started guide](functi
 While typing, the editor will offer you suggestions based on types, if inferable. You can also utilize this feature when using `require` to import dependencies to your `lambda`. Requiring `lp-faas-toolbelt`, for example, will give you type suggestions for the FaaS Toolbelt. This works for all dependencies which are listed in the “environment” section of the editor sidebar (see below for more information).
 
 By right-clicking inside the editor area, you're able to open the context menu, which provides you access to additional functionality, the most notable being the **Format Document** feature, which will reformat your code.
+
+### Code Validation
+
+The code of each lambda is parsed and syntax validated to reduce the amount of possible errors. These checks ensure that not only compliance with technical requirements (e.g. ECMAScript compliance) are met, but also restrictions mandated by the Functions platform (e.g. <100.000 characters per lambda) are upheld.   
 
 ### Editor Sidebar
 
@@ -49,6 +53,7 @@ Using the relevant button from the Settings tab, you are able to add new Environ
 You can access the variable during runtime by using `process.env['YOUR_ENV']`. **Please be aware** that the value will be available in the form of a string. If the value is a number, you will have to parse it prior to using it. By using the trash icon, you can delete unwanted variables.
 
 **Developer discretion is advised**, please be sure not to use confidential data such as credentials or secrets in the environment variables as these are saved and available in text form to anyone with access to the account. Functions has a secret storage service that can be leveraged for this purpose.
+
 
 ### Next steps
 

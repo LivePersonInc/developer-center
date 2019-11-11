@@ -4,5 +4,5 @@ _site/
 _pdf
 .idea/
 .DS_Store
-vendor*
 .bundle
+_algolia_api_key

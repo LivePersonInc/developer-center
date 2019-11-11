@@ -32,4 +32,4 @@ Required:
 
 ### Response
 
-See Response in the  [Conversations](data-messaging-interactions-conversations.html) method.
+See Response in the  [Conversations](messaging-interactions-api-methods-conversations.html#response) method.

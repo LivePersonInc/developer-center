@@ -2,7 +2,7 @@
 pagename: Getting Started
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 permalink: liveperson-functions-getting-started.html
 indicator: both
@@ -24,12 +24,12 @@ Once agreed, we will automatically set up your account to easily integrate with 
 * [Installing secrets](liveperson-functions-development-storing-secrets.html) you will need to interact with other LivePerson APIs
 * [Whitelisting domains](liveperson-functions-development-whitelisting-domains.html) of internal LivePerson APIs
 
+
+#### Set User Permissions
+
 <div class="notice">
 After provisioning your account with LP Functions, your user will still require <strong>permissions</strong> to be able to access the UI. Please follow the section below to customize your user permissions. Moreover, please contact your LivePerson Account Team in case the provisioning did not finish successfully.
 </div>
-
-
-#### Set User Permissions
 
 There are 3 user permissions pertaining to Functions:
 
@@ -113,6 +113,13 @@ There are 3 user permissions pertaining to Functions:
     <td>✅</td>
     <td>-</td>
   </tr>
+    <tr>
+    <td>schedule</td>
+    <td>create/edit/delete</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
 </tbody>
 </table>
 
@@ -131,7 +138,7 @@ Please follow these steps in order to get SSO unified login working with LivePer
 
 * Contact your LivePerson account representative to get SSO Unified Login feature enabled for your account.
 
-* Once SSO Unified Login is enabled for your account, you can use `https://faas.liveperson.net/api/sso/login?accountId=<accountId>` to login into LivePerson Functions for Production Environments. Please use `va-a.faasui.liveperson.net/api/sso/login?accountId=<accountId>` for Alpha Environments. Moreover you can also use the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain per environment, by providing the service `faasUI` to the Domain API.
+* Once SSO Unified Login is enabled for your account, you can use `https://faas.liveperson.net/api/sso/login?accountId=<accountId>` to login into LivePerson Functions for Production Environments. Please use `https://va-a.faasui.liveperson.net/api/sso/login?accountId=<accountId>` for Alpha Environments. Moreover you can also use the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain per environment, by providing the service `faasUI` to the Domain API.
 
 <div class="important">Make sure to be logged into LiveEngage before accessing LivePerson Functions from your account.</div>
 

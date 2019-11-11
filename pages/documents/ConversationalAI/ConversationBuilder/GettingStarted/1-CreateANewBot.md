@@ -10,110 +10,132 @@ permalink: conversation-builder-getting-started-1-dialogs-and-patterns.html
 indicator: both
 ---
 
-This guide will help step you through setting up a simple Hello World automation with Conversation Builder.
+This tutorial guides you through creating a simple "Hello World" bot.
 
-### Step 1: Create a New Bot
+### Prerequisite steps
 
-This step requires that you have a user account for the Conversation Builder platform. If you do not, your team should have an Administrator assigned who can create one for you.
+This tutorial assumes you have a user account for the LiveEngage and Conversation Builder platforms. If you don't, your team should have an administrator who can create one for you.
 
-1. Once provided a Conversation Builder account, navigate to [https://platform.botcentralai.com](https://platform.botcentralai.com), enter your credentials, select your region, and log in.
+### Step 1: Create a new bot
 
-    <!--<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_1.png">-->
+1. Navigate to [https://authentication.liveperson.net/login.html](https://authentication.liveperson.net/login.html), enter your credentials, and log in.
+2. In the left sidebar in LiveEngage, click the Conversational AI and Bots <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_convers_ai.png"> icon.
+3. In the Conversational AI dashboard, click **Conversation Builder**.
+4. Click **New Bot** in the upper-right corner, and select the **Custom Bot** generic [template](conversation-builder-templates-overview.html).
+5. Give the bot a unique name and description, and select "Consumer Facing Bot" for the **Bot Type**.
+6. Click **Create Bot**.
+    
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/createAutomation.png">
 
-2. From the list of app icons, click on Conversation Builder in the upper left.
+    This takes you to the new bot in Conversation Builder. Since you selected the Custom Bot template, by default this creates a bot with a “Welcome” dialog that matches and responds to simple forms (patterns) of “hello”. The bot also has a Fallback dialog with some fallback text.
 
-    <!--<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_2.png">-->
+7. Click the **Welcome** tab in the lower-left corner to open the Welcome dialog, so you can examine it.
 
-3. Click **New Automation**, select the Basic Automation [template](conversation-builder-templates-overview.html), give your automation a unique name and description, and be sure to select Consumer Facing Bot.
-    <!--<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/newAutomation.png">-->
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/image_3.png">
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/createAutomation.png">
+    (You can learn about the different parts of Conversation Builder [here](conversation-builder-getting-started-bot-workspace-overview.html).)
 
-4. You will be taken to your new automation in the Conversation Builder.
+### Step 2: Test the Welcome dialog
 
-    Learn about the different parts of the Conversation Builder app [here](conversation-builder-conversation-builder-overview.html).
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_3.png">
+With the bot created, let’s see how to make it respond to user utterances.
 
-5. **Before you do anything else**, we need to "Publish" the automation (make it Publicly accessible) to your Organization. (For those with multiple Org access, the automation will default to Private, which is why we want to change it.)
-  * Click the gear <img style="width:40px" src="img/ConvoBuilder/helloworld/gearicon.png"> icon in the upper-left and then Automation Settings. Scroll down and tap "More Settings".
-  * Make sure the Automation Account is set to the appropriate Org.
-  * Set the Public slider to on.
-  * Scroll down and hit Save.
+The first interaction in the Welcome dialog is a *User Says* interaction that allows us to match a user’s utterance using patterns or intents. Following that is a *Text Statement* interaction that displays some text ("Hi there! Thanks for coming!") to the user.
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_5.png">
+Statement interactions (Text, Image, Audio, and Video) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (You can learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).)
 
-### Step 2: Hello World
+Let’s see the interactions in action!
 
-Now that we’ve got our bot automation prepared, let’s see how we can make our automation respond to user utterances.
+1. Click the Preview icon <img style="width:35px" src="img/ConvoBuilder/helloworld/messaging_client_icon.png"> in the lower-right corner.
 
-Currently our automation only has one dialog called **Welcome**. The first interaction in the Welcome dialog is a **User Says** interaction that allows us to match a user’s utterance using patterns or intents. Following that is a simple **Text Statement** interaction that displays some text ("Hi there! Thanks for coming!") to the user.
+2. In the Preview window, enter “hello” or “hello there.” You should see the welcome response.
 
-The statement interactions (Text, Image, Audio, Video) are for displaying content to the user, without listening for a user response. Once the statement is displayed, it will move on to whatever is next in the dialog.
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/testConvo.png">
 
-Learn more about interactions [here](conversation-builder-conversation-builder-interactions.html).
+    So how is the Welcome dialog triggered?
 
-Let’s see them in action! Tap on the Preview icon <img style="width:40px" src="img/ConvoBuilder/helloworld/messaging_client_icon.png"> floating in the bottom-right and you should now see the Welcome dialog display.
+4. Click the *User Says* interaction (the top interaction) to select it. There are two small icons to the right of it.
 
-Type "reset" in the Preview to start fresh and then type “hello” or “hello there” and you should get the welcome again.
+5. Click the top **Interaction Details** icon <img style="width:40px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> to display the window, and then click the **Settings** tab inside.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/testConvo.png">
+6. Under **Patterns**, note the different *patterns* used to match this particular dialog. You can also use *intents* to trigger a dialog, but for this exercise we focus on patterns.
 
-So how does the Welcome dialog get triggered?
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/helloworld/interactiondetails.png">
 
-Click on the topmost **User Says** interaction if you haven't already done so. There are two small icons to the right of it. Click on the top Interaction Details icon <img style="width:40px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> and then tap Settings.  Under Patterns you should see the different patterns used to match this particular dialog. You can *also* use Intents to trigger a dialog, but for this exercise, we’ll focus on patterns.
+    Since this is a "welcome" dialog, it uses patterns like “hi”, “hello” and “howdy” to match those phrases exactly and display a response.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/interactiondetails.png">
+    By adding wildcards (e.g., `hi *` or `hello *`) you can allow for broader matches like “hi there” or “hello my friend”. Using parentheses and pipes allow you to specify a series of alternates. For instance, `(hi|hello|hey)*` will match “hi”, “hello there”, and “hey you”.
 
-Since this is a "welcome" dialog, it uses patterns like “hi”, “hello” and “howdy” to match those phrases exactly and display a response. Add another couple patterns (eg: “hiya”, “ciao”, “hola”) and test them in the previewer.
+7. Add some more patterns (e.g., “hiya”, “ciao”, “hola”), and then click **Save** in the window.
 
-By adding wildcards (eg: `hi *` or `hello *`) you can allow for broader matches like “hi there” or “hello my friend”. Using parentheses and pipes allow you to specify a series of alternates. For instance, `(hi|hello|hey)*` will match “hi” as well as “hello there” and “hey you”.
+8. In the Preview window, enter "reset", and press Enter. This starts a new session, so you can "pick up" your changes.
+9. Test the new patterns in the Preview window like you did before.
 
-Now that you’ve seen how a dialog is triggered, let’s change the welcome **response** by editing the Text Statement interaction.
+    Now that you’ve seen how a dialog is triggered, let’s change the welcome *response* by editing the Text Statement interaction.
 
-Click on the Text interaction below the User Says interaction. Change the text from `Hi there! Thanks for coming!` to just `Hello World!` and hit enter. There is no need to open the Interaction Details panel to change simple output text.
+9. Select (click) the Text Statement interaction below the User Says interaction.
 
-To see your change, open the Preview in the bottom-right, type “reset” and then “hi”. You should now be seeing your “Hello World!” response.
+10. Change the text from `Hi there! Thanks for coming!` to `Hello World!`, and press Enter. (There is no need to open the Interaction Details panel to change simple output text.)
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/helloworld.png">
+11. To see your change, open the Preview window again, enter “reset” and press Enter. Then enter “hi”. You should see the “Hello World!” response.
+
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/helloworld.png">
 
 
-### Step 3: New Dialog (Goodbye)
+### Step 3: Add a Goodbye dialog
 
-Let’s create another dialog to put these concepts into practice.
+Let’s create another dialog to put these concepts into more practice. Since there is a "Welcome" dialog, let’s now create a “Goodbye” dialog.
 
-Since we have a "Welcome" dialog, let’s create a “Goodbye” dialog. Click on **+ Dialog** in the bottom-left to create a new dialog, name it "Goodbye" and select Dialog for the Dialog Type.
+1. Click **+ Dialog** in the lower-left corner.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/goodbyedialog.png">
+2. In the dialog box that appears, name the dialog "Goodbye", and select Dialog for **Dialog Type**.
 
-Your new Goodbye dialog will be completely empty. To allow your dialog to be triggered by patterns and intents, add a User Says interaction and name it "Goodbye".
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/goodbyedialog.png">
 
-For this User Says interaction to match on user input, we need to add some patterns.
+    By default, the new Goodbye dialog has a User Says interaction; this allows the dialog to be triggered by patterns and intents. But the interaction isn't configured by default, so let's do that now.
+    
+3. Select the interaction, enter "Goodbye" as the sample user statement, and press Enter.
 
-To add the patterns for our Goodbye dialog, tap on the Interaction Details icon <img style="width:40px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> and then Settings.  Now add patterns like `goodbye`, `bye`, `see ya`, etc.
+    For this User Says interaction to match user input, you need to add some patterns.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/addnewpattern.png">
+4. Click the Interaction Details icon <img style="width:35px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> , and then click **Settings**.
 
-Before we test in the Preview, we need to add some content to display once we’ve matched our patterns.
+5. Scroll down to the Patterns section, and add a few patterns like `goodbye`, `bye`, `see ya`, etc.
 
-Add a Text interaction after the User Says interaction, type your goodbye message (eg: "Bye, thanks for coming!") and hit enter.
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/addnewpattern.png">
 
-Now go to the Preview, type “reset” and then type “hi” to see the Welcome dialog and then type “bye” to trigger the Goodbye dialog and to see your goodbye message.
+6. Click **Save** in the window.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/byetest.png">
+    Before you test things in the Preview window, you need to add some content to be displayed when the bot matches a pattern. Let's a Text Statement interaction.
 
-### Step 4: The Fallback Dialog
+6. In the Interactions toolbar, click the Text Statement icon <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_textStatement.png">. This inserts the interaction.
 
-So we’ve seen how to create a new dialog and trigger it by using patterns. But what happens when you enter an utterance that has not been accounted for? We need to provide a "Fallback Dialog" to catch these when they occur.
+7. In the interaction, enter a goodbye message (e.g., "Bye, thanks for coming!"), and press Enter.
 
-Click on **+ Dialog** to add another dialog, name it "Fallback", and this time, be sure to select Fallback Dialog as the type.
+    Let's test the changes.
 
-We do not need to add a User Says interaction to a Fallback dialog, because it has special properties that will cause it to display when there are no other matches available.
+8. Open the Preview again, enter “reset”, and press Enter.
+
+9. Enter “hi” to trigger the Welcome dialog and see the welcome message. Then enter “bye” to trigger the Goodbye dialog and see the goodbye message.
+
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/byetest.png">
+
+### Step 4: Test the Fallback dialog
+
+You’ve seen how to create a new dialog and trigger it using patterns. But what happens when you enter an utterance that has not been accounted for? To catch these when they occur, you need to provide a "fallback dialog." By default, when you create a bot using the Custom Bot template, one is included. Let's examine and test it now.
 
 {: .important}
-There can only be one Fallback Dialog Type per automation.
+There can be only one dialog of type Fallback per bot.
 
-We do, however, need to add some type of message to tell the user that we didn’t understand their query. Add a new Text statement and provide a message like `Sorry, I only know ‘hello’ and ‘goodbye’...` or similar and hit enter.
+1. Click the **Fallback** tab in the lower-left corner to open the Fallback dialog.
 
-Go to the Preview, type “reset” and then type something other than your hello and goodbye patterns. You should now be getting your fallback message.
+2. Note that there isn't a User Says interaction.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/fallbacktext.png">
+    You don't need a User Says interaction in the Fallback dialog because the Fallback dialog has special properties that cause it to display when there are no other matches available. However, you do need to add some type of message to tell the user that the bot didn’t understand their query. A default message is provided for you.
+
+3. Select the Text Statement interaction, and change the message to, `Sorry, I only know ‘hello’ and ‘goodbye’.` Press Enter.
+
+4. Open the Preview window, enter “reset” and press Enter.
+
+5. Enter something other than your hello and goodbye patterns. You should see your fallback message.
+
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/fallbacktext.png">

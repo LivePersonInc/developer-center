@@ -21,22 +21,9 @@ The LINE carousel is a horizontally scrollable carousel of up to 10 rich cards. 
 
 Carousel example image: 
 
-<img class="fancyimage" style="width:350px" src="img/line_sc_carousel.png">
-
-
-
-
-
-
-
-
-
-
-
+<img  style="width:350px" src="img/line_sc_carousel.jpg">
 
 ### JSON Template Properties
-
-#### Card and Carousel templates in Structured Content JSON Properties
 
 <table>
 <thead>
@@ -137,7 +124,7 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
  </tbody>
 </table>
 
-### Carousel template code example
+### Code Example
 
 ```json
 {
