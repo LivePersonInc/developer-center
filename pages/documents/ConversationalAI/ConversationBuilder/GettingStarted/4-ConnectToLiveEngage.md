@@ -75,7 +75,7 @@ You will test this connection with a standard web chat engagement, so now you cr
 
 ### Step 11: Set up the transfer from bot to human
 
-In this step, you set up an integration to transfer the user to a human agent in LiveEngage. This is called an "escalation."
+In this step, you set up an [integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#add-a-liveperson-agent-escalation) to transfer the user to a human agent in LiveEngage. This is called an "escalation."
 
 1. Return to Conversation Builder, and open the bot.
 2. Click **Integrations** on the menu bar in the upper-right corner.
