@@ -64,15 +64,15 @@ NLU v2 requires the model to be [trained](intent-builder-domains.html#train-a-li
 
 - Length of the 3rd-party NLU domain name should not exceed 64 characters. (Watson limitation)
 - Each domain can only support one language, which is specified on the Domain Settings page.
-- LivePerson does not support pulling existing models from IBM Watson and Google Dialogflow into Intent Builder; only model push is supported.
+- LivePerson does not support "pulling" into Intent Builder existing models that have been trained in IBM Watson and Google Dialogflow. Only model "push" is supported; this is accomplished by training the model in Intent Builder.
 
 ### Connect a 3rd-party NLU engine
 
 #### Step 1: Enable 3rd-party NLU support
 
-Contact your account administrator to enable your account for 3rd-party NLU support.
+Contact your LivePerson account administrator to enable your account for 3rd-party NLU support.
 
-Once 3rd-party NLU support is enabled, you can start creating domains (with 3rd-party NLU).
+Once this is done, you can start creating domains with 3rd-party NLU.
 
 #### Step 2: Sign up and get the API keys
 
@@ -96,17 +96,21 @@ In order to train IBM Watson or Google DialogFlow from within Conversation Build
 
 3. Create a new Service Account for the newly created Google project with the role of Dialogflow API Admin.
 
-4. Create a JSON-formatted private key for the service account by clicking Create key.
+4. Create a JSON-formatted private key for the service account by clicking the Create key.
 
-5. View and copy the created key. This will be used in your dialogflow config data.
+5. View and copy the created key. This will be used in your Dialogflow config data.
 
 #### Step 3: Add a domain for the 3rd-party NLU provider
 
-In Intent Builder, add a domain *that uses the 3rd-party NLU engine as its NLU provider*. For help with this step, see [here](intent-builder-domains.html#add-a-domain). You can import the intents and entities, or manually add them later but before proceeding to step 5.
+In Intent Builder, add a domain *that uses the 3rd-party NLU engine as its NLU provider*. For help with this step, see [here](intent-builder-domains.html#add-a-domain).
+
+You can import the intents and entities, or manually add them later but before proceeding to step 5.
 
 #### Step 4: Create NLU provider credentials
 
-In Intent Builder, in the domain that you created in the previous step, create NLU provider credentials for the 3rd-party NLU engine. For help with this step, see [here](intent-builder-domains.html#create-a-3rd-party-nlu-provider-credential). This is when you'll copy and paste in the credentials that you downloaded from IBM Watson or Google Dialog flow (step 2 above).
+In Intent Builder, in the domain that you created in the previous step, create NLU provider credentials for the 3rd-party NLU engine. For help with this step, see [here](intent-builder-domains.html#create-a-3rd-party-nlu-provider-credential).
+
+This is when you'll copy and paste in the credentials that you downloaded from IBM Watson or Google Dialog flow (step 2 above).
 
 #### Step 5: Train the domain
 
