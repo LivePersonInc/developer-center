@@ -8,7 +8,7 @@ indicator: both
 ---
 
 {:.notice}
-To help you use the Window Customization, we've built a playground where you can use the API in a runtime setting. The CSS playground allows those using the API to try it out with any account and any environment. It also provides several templates to get inspiration and ideas for your own customizations. You can access the playground [here](/assets/css-playground/).
+To help you use the Window Customization API, we've built a playground where you can use the API in a runtime setting. The CSS playground allows those using the API to try it out with any account and any environment. It also provides several templates to get inspiration and ideas for your own customizations. You can access the playground [here](/assets/css-playground/).
 
 ### Introduction
 
