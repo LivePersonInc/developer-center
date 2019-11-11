@@ -29,6 +29,9 @@ This method will allow you to test your P12 Key before uploading a certificate a
 
 form-data body (content-type : multipart/form-data)
 
+File: The p12 file we want to test.
+
+Password: the password that matches the supllied file.
 
 ```
 {
