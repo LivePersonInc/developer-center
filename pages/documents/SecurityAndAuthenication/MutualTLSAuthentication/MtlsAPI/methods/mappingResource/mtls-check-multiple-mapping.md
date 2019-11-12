@@ -8,9 +8,11 @@ subfoldername: Methods
 permalink: mtls-methods-check-mapping-configuration.html
 ---
 
-This method checks for mapping configuration existence for a specific tuple: serviceName, accountId and url.
+This method checks for mapping configuration existence for a specific triplet: serviceName, accountId and url.
 
 This resource helps you check if a certificate exists to some serviceName + accountId + url in order to send MTLS request (with certificate).
+
+Since mTLS service is throttle protected the idea is not to send TLS only requests through the service, this API allows the consuming service to know if mTLS is configured for specific parameters.
 
 ### Request
 
@@ -18,12 +20,19 @@ This resource helps you check if a certificate exists to some serviceName + acco
  |:--------  |:---  |
  |POST|  https://[{domain}]/mtls/mapping |
 
+**Query Parameters**
+
+| Parameter | Description | Type | Required | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| v | API version number | number| Not Required | Default Value: 1 | Options: 1, 2 |
+
+* **Versions only differ by the response type (see below)**.
 
 **Request Headers**
 
  |Header         |Description  |
  |:------|        :--------  |
- |Authorization|    Contains token string to allow request authentication and authorization.|
+ |Authorization|    Contains token string to allow request authentication and authorization. **AppKey only API**|
 
 **Request Body**
 
@@ -51,11 +60,33 @@ Contains list of `CertificateMappingParamters` objects:
 
 **Response Body**
 
+**V1 response (default)**
 ```
 {
  "CertificateMappingParamters{serviceName='TEST_SERVICE', accountId='52653865', url='https://lp-mtls-qa.dev.lprnd.net/test'}": true,
  "CertificateMappingParamters{serviceName='IDP', accountId='52653865', url='https://lp-idp-qa.dev.lprnd.net/mock/auth/token'}": false
 }
+```
+
+**V2 response** 
+
+* The "doExist" status is added to the submitted parameters.
+
+```
+[
+    {
+        "serviceName": "IDP",
+        "accountId": "52653865",
+        "url": "https://lp-mtls-qa.dev.lprnd.net/test",
+        "doExist": true
+    },
+    {
+        "serviceName": "TEST_SERVICE",
+        "accountId": "52653865",
+        "url": "https://lp-mtls-qa.dev.lprnd.net/test",
+        "doExist": false
+    }
+]
 ```
 
 **Entity Structure:**
