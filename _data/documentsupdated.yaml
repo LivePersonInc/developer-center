@@ -397,14 +397,14 @@
         - subpagename: Submit Survey Data
         - subpagename: Send a Transcript
       - pagename: Sample Postman Collection
-    #- documentname: Window Customization API
-      #pages:
-      #- pagename: Overview
-      #- pagename: Quick Start
-      #- pagename: Samples
-        #subpages:
-        #- subpagename: CSS Sample
-      #- pagename: Taglet
+    - documentname: Window Customization API
+      pages:
+      - pagename: Overview
+      - pagename: Quick Start
+      - pagename: Samples
+        subpages:
+        - subpagename: CSS Sample
+      - pagename: Taglet
 - categoryname: Contact Center Management
   image: contact-center
   documents:

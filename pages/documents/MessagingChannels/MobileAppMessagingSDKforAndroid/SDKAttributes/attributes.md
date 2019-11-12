@@ -3,6 +3,7 @@ pagename: 5.0 and above
 redirect_from:
   - android-attributes.html
   - mobile-app-messaging-sdk-for-android-customization-and-branding-attributes.html
+  - mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
