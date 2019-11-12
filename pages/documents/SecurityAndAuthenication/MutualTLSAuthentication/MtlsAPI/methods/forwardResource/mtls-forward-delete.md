@@ -9,7 +9,7 @@ documentname: MTLS API
 subfoldername: Methods
 ---
 
-The Forward API proxies request to the **LP-forward-url** supplied parameter, The proxied http method is **DELETE** (corresponds with current endpoint method), Proxied request is mTLS wrapped according to configuration parameters (accountId/servicName/Url which act as a unique key), if no configuration exist request will be proxied with regular TLS (not mTLS).
+The Forward API methods proxies incoming requesst to the `LP-forward-url` supplied parameter. Proxied requests are wrapped with the certificate provided according to the configuration parameters (accountId/servicName/Url which act as a unique key). If no configuration exists, the request will be proxied using regular TLS (rather than mTLS). The proxied http method in this method is `DELETE` (this corresponds to the method you'd like to use with the endpoint configured with `LP-forward-url`), 
 
 ### Request
 
@@ -29,7 +29,7 @@ The Forward API proxies request to the **LP-forward-url** supplied parameter, Th
 
 **Request Body**
 
-Body will be proxied as is to the remote  endpoint (LP-forward-url), so the body submitted will be as if contacting the LP-forward-url value directly.
+Body will be proxied as is to the remote  endpoint (`LP-forward-url`), so the body submitted will be as if contacting the `LP-forward-url` value directly.
 
 **Path Parameters**
 
@@ -53,7 +53,7 @@ Body will be proxied as is to the remote  endpoint (LP-forward-url), so the body
 
 **Response Body**
 
-Response will be returned from the LP-forward-url as if contacted directly.
+Response will be returned from the `LP-forward-url` as if contacted directly.
 
 
 
