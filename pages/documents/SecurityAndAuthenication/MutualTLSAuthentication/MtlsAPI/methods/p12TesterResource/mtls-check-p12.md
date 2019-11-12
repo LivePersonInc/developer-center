@@ -24,6 +24,8 @@ This method will allow you to test your P12 Key before uploading a certificate a
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
+ |Content-Type|     Since endpoint is multipart than should be a variation of multipart request (for example: **multipart/form-data**).  |
+ 
 
 **Request Body**
 
