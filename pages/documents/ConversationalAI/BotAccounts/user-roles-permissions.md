@@ -33,9 +33,9 @@ As shown above, a profile contains a set of permissions. Conversation Builder su
 
 ### Primary permissions
 
-#### Admin
+#### Administrator
 
-Users with this permission have full privileges, including the ability to create, deploy and manage agent connectors at the bot level within Conversation Builder.
+Users with this permission have full privileges (with exceptions noted below), including the ability to create, deploy and manage agent connectors at the bot level within Conversation Builder.
 
 Users with this permission do have the following limitations:
 
@@ -86,7 +86,7 @@ Users with this permission can only do the following:
 
 * View and download analytics data
 
-#### Operations
+#### Bot Status Access
 
 Users with this permission can only do the following:
 
@@ -110,11 +110,11 @@ Use one or more add-on permissions (below) along with this permission, as per yo
 
 #### Add-on permissions
 
-##### API Developer
+##### Api Developer
 
 Users with this permission can only create and manage *integrations*.
 
-##### API Credentials Manager
+##### Api Credentials Manager
 
 Users with this permission can only create and manage *credentials*.
 

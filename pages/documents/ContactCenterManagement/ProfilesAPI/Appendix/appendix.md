@@ -132,7 +132,16 @@ This section contains API details that are common to every API’s resource and 
 | 10030      | FaaS Invocation  | Allows to invoke LivePerson Functions (FaaS)|
 | 10031      | FaaS Admin       | Allows to administrate LivePerson Functions (FaaS) Settings |
 | 10032      | FaaS Developer   | Allows to develop LivePerson Functions (FaaS) |
+| 10033 | Conversation Builder: Administrator | Grants the user full privileges in Conversation Builder with a few exceptions: Users can't create and manage (bot) templates or access the Bot Status application. |
+| 10034 | Conversation Builder: Content User | Grants the user privileges in Conversation Builder to create and manage knowledge bases, articles, domains, intents and entities; to activate and train models; and to view and download analytics data. |
+| 10035 | Conversation Builder: Business User | Grants the user privileges in Conversation Builder to view and download analytics data. |
+| 10036 | Conversation Builder: Bot Status Access | Grants the user access to the Bot Status application, where the user can create, deploy, and manage connectors for the entire organization. |
+| 10037 | Conversation Builder: Bot Builder | Grants the user full privileges in Conversation Builder for creating bots and related resources (versions, releases, integrations, global functions, etc.). For more details, see [here](bot-accounts-permissions.html). |
 | 10038      | Configure messaging agent survey on skill   | Allow admins to assign skills to agent survey, as well as override agent survey timeout |
+| 10040 | Conversation Builder: Api Credentials Manager | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only create and manage credentials. If you grant this, also grant Bot Builder Lite (10041) and Api Developer (10043). |
+| 10041 | Conversation Builder: Bot Builder Lite | Grants the user privileges in Conversation Builder to create and manage bots, but with no ability to create and work with integrations or credentials,and with no ability to export or import bots. For more details, see [here](bot-accounts-permissions.html). |
+| 10042 | Conversation Builder: Import/Export Manager | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only export and import bots and knowledge bases. Grant this along with Bot Builder Lite (10041) as per your requirements. |
+| 10043 | Conversation Builder: Api Developer | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only create and manage integrations. Grant this along with Bot Builder Lite (10041) as per your requirements. |
 | 20000      | Agent core permissions  | Core permissions that are included with the Agent role and cannot be disabled.              |
 | 20001      | Join Agents' conversations  | Join a conversation handled by another Agent within their Group  |
 | 20002      | View Agents' conversations | View conversations handled by other Agents within their Group    |
