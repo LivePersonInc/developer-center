@@ -29,7 +29,7 @@ The Forward API proxies request to the **LP-forward-url** supplied parameter, Th
 
 **Request Body**
 
-same body as the client sends to the original endpoint.
+Body will be proxied as is to the remote  endpoint (LP-forward-url), so the body submitted will be as if contacting the LP-forward-url value directly.
 
 **Path Parameters**
 
@@ -53,7 +53,7 @@ same body as the client sends to the original endpoint.
 
 **Response Body**
 
-Body will be proxied as is to the remote  endpoint (LP-forward-url), so the body submitted will be as if contacting the LP-forward-url value directly.
+Response will be returned from the LP-forward-url as if contacted directly.
 
 
 
