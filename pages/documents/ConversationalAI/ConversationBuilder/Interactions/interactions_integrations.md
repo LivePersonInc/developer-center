@@ -32,7 +32,7 @@ Before you can add an Integration interaction, you need to create the integratio
 ### File Upload interactions
 
 {: .important}
-File Upload interactions are available for Web Messaging, Apple Business Chat, and WhatsApp Business.
+File Upload interactions are available for Web Messaging, Apple Business Chat, and WhatsApp Business. Additionally, the interactions are only available on the LivePerson cloud platform.
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
@@ -69,6 +69,7 @@ Some setup of your LiveEngage environment is required before using this feature.
 
 - The uploaded file can’t be over 5 MB.
 - File upload is an asynchronous process, so the bot's conversation with the consumer will continue while the upload is in progress. The consumer will only be advised of success or failure, respectively, once the process is completed or has failed.
+- The File Upload interaction can't be tested using the Preview window.
 
 #### Customization points
 
