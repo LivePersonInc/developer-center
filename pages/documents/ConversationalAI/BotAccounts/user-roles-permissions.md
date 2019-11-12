@@ -33,7 +33,7 @@ As shown above, a profile contains a set of permissions. Conversation Builder su
 
 ### Primary permissions
 
-#### Administrator
+#### Conversation Builder: Administrator
 
 Users with this permission have full privileges (with exceptions noted below), including the ability to create, deploy and manage agent connectors at the bot level within Conversation Builder.
 
@@ -42,7 +42,7 @@ Users with this permission do have the following limitations:
 * No ability to create and manage (bot) templates
 * No access to the Bot Status application, which is the operations area where bot deployments for the entire organization can be managed
 
-#### Bot Builder
+#### Conversation Builder: Bot Builder
 
 This permission provides full privileges for creating bots and related resources. More specifically, users with this permission can create and manage:
 
@@ -62,7 +62,7 @@ Users with this permission can also:
 
 This permission doesn't allow the user to create and manage (bot) templates, accounts or users. Also, this permission doesn't allow the user access to the Bot Status application, which is the operations area where bot deployments for the entire organization can be managed.
 
-#### Content User
+#### Conversation Builder: Content User
 
 This permission is for users who create content. More specifically, users with this permission can create and manage:
 
@@ -74,19 +74,13 @@ Users with this permission can also:
 * Activate and train models
 * View and download analytics data
 
-#### Template Manager
-
-Users with this permission can only create and manage:
-
-* (Bot) templates
-
-#### Business User
+#### Conversation Builder: Business User
 
 Users with this permission can only do the following:
 
 * View and download analytics data
 
-#### Bot Status Access
+#### Conversation Builder: Bot Status Access
 
 Users with this permission can only do the following:
 
@@ -96,7 +90,7 @@ Users with this permission can only do the following:
 
 As a business, you might want to provide basic Conversation Builder development capabilities to some users, with restrictions regarding certain capabilities like access to API integrations, update of credentials, and the import and export of bots. You can achieve this using combinations of the roles discussed below.
 
-#### Bot Builder Lite
+#### Conversation Builder: Bot Builder Lite
 
 This "lite" permission is just like the Bot Builder permission with the following, additional limitations:
 
@@ -110,18 +104,18 @@ Use one or more add-on permissions (below) along with this permission, as per yo
 
 #### Add-on permissions
 
-##### Api Developer
+##### Conversation Builder: API Developer
 
 Users with this permission can only create and manage *integrations*.
 
-##### Api Credentials Manager
+##### Conversation Builder: API Credentials Manager
 
 Users with this permission can only create and manage *credentials*.
 
 {: .important}
 Whenever you assign this permission, also assign Bot Builder Lite *and* API Developer.
 
-##### Import/Export Manager
+##### Conversation Builder: Import/Export Manager
 
 Users with this permission can only do the following:
 
