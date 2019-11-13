@@ -59,7 +59,8 @@ Contains list of `CertificateMappingParamters` objects:
 **Response Body**
 
 **V1 response (default)**
-```
+
+```json
 {
  "CertificateMappingParamters{serviceName='TEST_SERVICE', accountId='52653865', url='https://lp-mtls-qa.dev.lprnd.net/test'}": true,
  "CertificateMappingParamters{serviceName='IDP', accountId='52653865', url='https://lp-idp-qa.dev.lprnd.net/mock/auth/token'}": false
@@ -70,7 +71,7 @@ Contains list of `CertificateMappingParamters` objects:
 
 * The "doExist" status is added to the submitted parameters.
 
-```
+```json
 [
     {
         "serviceName": "IDP",
