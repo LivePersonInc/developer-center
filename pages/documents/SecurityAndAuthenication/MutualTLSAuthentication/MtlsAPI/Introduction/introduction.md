@@ -1,57 +1,73 @@
 ---
-pagename: introduction
-redirect_from:
-  - xxx.html
+pagename: Overview
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
-documentname: MTLS API
-
+documentname: mTLS API
 indicator: both
+permalink: mtls-overview.html
 ---
 
-MTLS - Mutual Transport Layer Security (Mutual TLS), is a new solution from LivePerson, to centralize certificate management and to store the certificates in a secured location over Hashicorp’s vault. The service will be self-serve, which will allow users to manage their own certificates, without the need to reach out to a CSM or to the support team.
+mTLS or Mutual Transport Layer Security (also known as Mutual TLS), is a new solution from LivePerson. The purpose of this solution is to centralize certificate management and to store certificates in a secured location over Hashicorp’s vault. This solution is intended to be self-served but currently it requires communication with LivePerson support teams. In the future, self-service features will allow users to manage their own certificates, without the need to reach out to a LivePerson representative or to the support team.
 
+### What is mTLS?
 
-MTLS  - While TLS means that only one side needs to authenticate the connection, with MTLS, the more widespread and common for the business to business solution, both parties need to authenticate it. This solution is safer and becoming a standard, especially among the banking industry. The process is: the client authenticates the server (TLS wise) then server authenticates back to the client. Traffic will flow only after mutual (back and forth) authentication success. 
+Transport Layer Security is a protocol for verifying the identity of a service over the Internet. While TLS meant that only one side needs to authenticate the connection, with mTLS, the more widespread and common protocol in the industry today, both parties need to authenticate their identity. This protocol is safer, since both sides verify their identity, and fast becoming an industry standard, especially in the banking industry.
 
+By adopting mTLS, LivePerson is looking to adhere to industry standards and offer more secure connections between brands and their consumers. By verifying both the identity of the LivePerson server and the identity of the brand, we can make sure that there's no man in the middle attacks, fraud, phishing or other security risks.
 
-What is Hashicorp vault
+The optimal flow looks like this: the client authenticates the server (just like in TLS) then the server authenticates back to the client. Traffic will flow only after mutual (back and forth) authentication has been achieved.
+
+### What is Hashicorp vault?
 
 HashiCorp provides a suite of open-source tools intended to support development and deployment of large-scale service-oriented software installations. Vault, first released on April 2015, provides secrets management, identity-based access, and encrypting application data for auditing of secrets for applications, systems, users.
 
+### Use cases - Why should I use mTLS?
 
+Our mTLS methods allow you to add an additional layer of security to all communications between yourself, LivePerson, and your customers. You should use these methods to create mTLS certified conversations which provide this added layer of security.
 
-Use cases - Why should I use this
+### Happy flow example
 
-As a bank, I would like to use MTLS in order for me to be able to be aligned with open banking standards and because I would like my connection to be more secure.
+The mTLS "happy flow" includes configuring the service and then invoking it in runtime:
 
-As a brand, I would use the MTLS API to upload a certificate, map an existing certificate, wrap and forward mtls requeses etc’.
+#### Configuration
 
-Prerequisites - 
+  * [Create a compliant P12 file](mtls-creating-a-p12-file.html) (Java compliant public + private keys)
+  * Run the [p12tester resource](p12-key-tester.html). This will check that the P12 is valid, decipherable and can be used to reach the remote endpoint.
+  * Upload the P12 file.
+  * Create mapping for the service name/url/sitedId that uses the created certificate.
 
-In order for MTLS to work, the brand needs to generate a specific MTLS certificate. The brand is doing it by receiving a CSR from the support, filling the CSR with the required details and signing the certificate with a 3rd party provider.
+#### Run time
 
-Once the certificate is ready, support needs to upload the new certificate, map the service that will support the MTLS and tie it to a specific URL. The upcoming future solution will allow customers to self-serve the entire process, including uploading the new certificate to store it on Hashicorp vault.
+  * Run the [check mapping method](mtls-methods-check-mapping-configuration.html) for the configured service name/url/siteId, this will indicate that all the data is saved successfully and can be used.
+  * [Forward](mtls-methods-forward-post-request.html) the request using the preconfigured parameters (if all previous step passed then this step should not fail). This request will now be authenticated with mTLS.
 
+### Prerequisites
 
-Limitations
+In order for mTLS to work, you'll need to generate a specific mTLS certificate. You can accomplish this by receiving a CSR from our support team, filling out the CSR with the required details and signing the certificate with a 3rd party provider.
 
-A. Technical limitations:
+Once the certificate is ready, our support team needs to upload the new certificate, map the service that will support the mTLS and tie it to a specific URL. The upcoming future solution will allow our customers to self-serve the entire process, including uploading the new certificate to store it on HashiCorp vault.
 
-P12 (private + public) must be Java compliant, created key must use supported algorithm and key strength, the p12 tester resource exist to make sure that created P12 is fully supported.
+Check out the [on-boarding guide](/mtls-onboarding.html) for next steps.
 
-Resources support oAuth1 (app key + app secret) and Bearer as described in Wiki, with a few limitations:
-- Mapping Resource is oAuth1 (not account related operation)
-- Certificate Resource "by-file" operations are Bearer only operations.
-- P12Tester Resource is Bearer authorized only resource.
-- Forwarding resource supports both oAuth1 (app key + app secret) and Bearer.
+### Limitations
 
-MTLS service is throttling protected, allowing only 10 requests per second (for incoming IP), this is used to limit traffic through the service, as MTLS service proxies both MTLS and TLS traffic this limits the 'bandwidth' for each service.
+#### Technical limitations:
 
-Uploaded certificates/mappings will reflect to runtime after 5 minutes, this is due to caching mechanism embedded in the runtime resources, Configration (certificate CRUD) resource is not cached.
+* The P12 key (private + public) must be Java compliant. The created key must use supported algorithms and key strength. To test your P12 key, please use the [P12 Key Tester](p12-key-tester.html) resource included in this API.
 
-B. Product limitations:
+* Resources support the oAuth1 (app key + app secret) and Bearer authentication methods with a few limitations:
 
-MTLS will not act as a feature that we can enable or disable for an account at this phase. In the upcoming future releases, it will be acting as an AC- Feature.
+  - The Check Mapping Configuration method supports oAuth1 only.
 
+  - Any methods which create certificates "by-file" support Bearer authentication only.
+
+  - The P12 Key Tester supports Bearer authentication only.
+
+  - The Forwarding methods support both oAuth1 (app key + app secret) and Bearer.
+
+* The mTLS service is throttling protected, allowing only 10 requests per second (per incoming IP).
+
+* Uploaded certificates/mappings will be updated to runtime after 5 minutes. This is due to caching mechanisms embedded in the runtime resources. The Configration (certificate CRUD) resource is not cached.
+
+* It is possible to use the same certificate for different services but for each mapping of accountId + serviceName + url it will be only one certificate and the certificate name is unique.

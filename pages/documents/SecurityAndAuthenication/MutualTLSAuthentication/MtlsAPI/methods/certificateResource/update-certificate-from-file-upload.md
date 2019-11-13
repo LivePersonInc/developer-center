@@ -1,15 +1,14 @@
 ---
-pagename: Update certificate for account from file upload
-redirect_from:
-  - xxx.html
+pagename: Update certificate from file
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
+permalink: mtls-methods-update-certificate-from-file.html
 ---
 
-This API updates certificate by uploading file for specific account id.
+This API updates a certificate by uploading a file for specific account ID.
 
 ### Request
 
@@ -28,7 +27,15 @@ This API updates certificate by uploading file for specific account id.
 
 **Request Body**
 
-see print screen 2.
+form-data body
+
+KEY: file  (File field type)
+
+VALUE: select p12 file
+
+KEY: certificate  (Text field type)
+
+VALUE: {"name":"myCertificate", "password":"1234", "id":937706832}
 
 **Path Parameters**
 
@@ -38,7 +45,7 @@ see print screen 2.
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -48,12 +55,12 @@ see print screen 2.
 | 500  | Internal Server Error |
 
 
-**Response Headers**
 
 **Response Body**
 
 for example:
-```
+
+```JSON
 {  
    "successfulySavedCertificates":[  
       {  
@@ -77,13 +84,10 @@ for example:
 
 | Attribute | Description  | Type/Value | Required | Notes |
 | :------   | :--------    | :-------- | :--- | :--- |
-| id | A certificate's unique object ID in account config table. | long number | Read only | |
+| id | A certificate's unique object ID in the account config table. | long number | Read only | |
 | deleted   | Indicates whether the certificate is deleted or not. | Boolean | Read only | |
 | name | A certificate's unique name. | unique string | Required | |
 | displayName    | A certificate's display name.  | string | Required | |
-| siteId | A site ID of the certificate. | string | Required | |
-| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both Hashicorp Vault and DB and if isn't expired)|
-| expirationDate | certificate's expiration date. | string | Required | |
-
-
-
+| siteId | The account ID the certificate is associated with. | string | Required | |
+| status | Indicates if the certificate is available/not available/expired | string | Required | (the certificate is available if it exists at both Hashicorp Vault and LivePerson's Data Base and if isn't expired)|
+| expirationDate | certificate's expiration date. | string | Not Required | |

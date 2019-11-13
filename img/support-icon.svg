@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-    <defs>
-        <circle id="a" cx="12" cy="12" r="12"/>
-    </defs>
-    <g fill="none" fill-rule="evenodd">
-        <mask id="b" fill="#fff">
-            <use xlink:href="#a"/>
-        </mask>
-        <use fill="#637190" fill-rule="nonzero" xlink:href="#a"/>
-        <path fill="#7A8DB7" fill-rule="nonzero" d="M15.923-9.466l14.5 29h-29z" mask="url(#b)" transform="rotate(-45 15.923 5.034)"/>
-        <text fill="#F8AB7A" font-family="Roboto-Black, Roboto" font-size="16" font-weight="700">
-            <tspan x="8" y="18">?</tspan>
-        </text>
-    </g>
-</svg>
+<svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><circle id="a" cx="12" cy="12" r="12"/><mask id="b" fill="#fff"><use fill="#fff" fill-rule="evenodd" xlink:href="#a"/></mask></defs><g fill="none" fill-rule="evenodd"><use fill="#637190" fill-rule="nonzero" xlink:href="#a"/><path d="m15.923-9.466 14.5 29h-29z" fill="#7a8db7" fill-rule="nonzero" mask="url(#b)" transform="matrix(.70710678 -.70710678 .70710678 .70710678 1.104163 12.733686)"/><text fill="#f8ab7a" font-family="Roboto-Black, Roboto" font-size="16" font-weight="700"><tspan x="8" y="18">?</tspan></text></g></svg>

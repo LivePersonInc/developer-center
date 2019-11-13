@@ -26,7 +26,7 @@ Your agents will be using LiveEngage from a supported web browser to make calls 
 
 | Browser | Version |  Desktop OS |
 | ------------- |:-------------:|:-------------|
-| Chrome | latest (>= v54)  | Windows, MacOSX, Linux |
+| Chrome |  >= v54)  | Windows, MacOSX, Linux |
 
 **Note:** Only web browsers listed here are supported. When using LiveEngage from an unsupported browser the feature is automatically disabled from the agent workspace.
 

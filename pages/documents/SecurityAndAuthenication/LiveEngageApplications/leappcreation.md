@@ -30,6 +30,9 @@ Once the application has been installed, the LivePerson resource will send you y
 |logo_uri | URL string that references a logo for the client | string | No | logo size is must be exactly 70x70 pixels <br /> max length: 1024|
 |capabilities| LiveEngage capabilities utilized by this app. This array defines the various LiveEngage services or applications that can interface with this application| object (See supported values structure in the tables below)| No | supported values: "webhooks", "engagement". <br /> <br /> webhooks: Contains the endpoints where UMS (Messaging Service) will send notifications <br /> <br />  engagement: This determines how the application interfaces with LiveEngage engagements and their creation |
 |enabled | Whether the application is enabled or not | boolean | No | default value: true |
+|quick_launch_enabled | Whether the application should be displayed in the quicklaunch menu | boolean | No | default value: false |
+|entry_uri | The URI to start the application | string | No | max length: 1024 |
+|enabled_for_profiles | A list of profiles to which this application should be available | array of integers | No |  |
 
 #### webhooks (optional object within capabilities object)
 
@@ -71,10 +74,13 @@ Once the application has been installed, the LivePerson resource will send you y
   "grant_types": [
     "client_credentials"
   ],
-  "response_types": "code",
+  "response_types": ["code"],
   "redirect_uris": ["https://www.myredirecturi.com"],
   "scope": "msg.consumer",
   "logo_uri": "/src/modules/campaigns/assets/img/software/Mobile-App.png",
+  "quick_launch_enabled": true,
+  "entry_uri": "https://myservice.mydomain.com/appentry",
+  "enabled_for_profiles": [42, 43],
   "capabilities": {
     "webhooks": {
       "ms.MessagingEventNotification.ContentEvent": {

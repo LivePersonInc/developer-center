@@ -30,7 +30,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 | Method | URL |
 | :--- | :--- |
-|POST|https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}/engagement?v={api-version}&vid={visitor-id}&sid={session-id} |
+|POST|https://[{domain}](/agent-domain-domain-api.html)/api/account/{account-id}/app/{app-installation-id}/engagement?v={api-version}&vid={visitor-id}&sid={session-id} |
 
 ### Path Parameters
 

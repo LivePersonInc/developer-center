@@ -1,5 +1,5 @@
 ---
-pagename: Latest Release Notes
+pagename: Latest Android Messaging SDK Release Notes
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -8,12 +8,12 @@ permalink: mobile-app-messaging-sdk-for-android-latest-release-notes.html
 indicator: messaging
 ---
 
-<br>
 {% for operatingsystem in site.data.releasenotesandroid %}
 {% for release in operatingsystem.releases %}
 {% if forloop.first == true %}
-<h3>Latest Android Messaging SDK version - {{ release.releasename }}</h3>
-This is the latest version of the Android Messaging SDK release notes. If you want to view all release notes for previous versions, see <a href="/mobile-app-messaging-sdk-for-android-all-release-notes.html">All Android Messaging SDK Release Notes</a>.
+<div class="notice">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/mobile-app-messaging-sdk-for-android-latest-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
+<h4>SDK version {{ release.releasename }}</h4>
+For all previous release notes versions, see <a href="/mobile-app-messaging-sdk-for-android-all-release-notes.html">All Release Notes</a>.
 {% capture my_include %}{% include_relative {{ release.releasename }}.md %}{% endcapture %}
 {{ my_include | markdownify }}
 {% endif %}

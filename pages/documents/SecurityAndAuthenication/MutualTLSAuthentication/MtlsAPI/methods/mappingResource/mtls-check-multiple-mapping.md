@@ -1,16 +1,16 @@
 ---
-pagename: MTLS check mappings
-redirect_from:
-  - xxx.html
+pagename: Check mapping configuration
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
+permalink: mtls-methods-check-mapping-configuration.html
 ---
 
-This API checks for mapping configuration existence for specific tupple: serviceName, accountId and url.
+This method checks if a mapping configuration exists for a specific triplet of parameters: serviceName, accountId and url. If it exists, am mTLS request can be used with the relevant certificate.
 
+The aim of this method is to minimize sending TLS only requests through the service, since the mTLS service is throttle protected. This API allows the consuming service to know if mTLS is configured for the specified parameters.
 
 ### Request
 
@@ -18,26 +18,34 @@ This API checks for mapping configuration existence for specific tupple: service
  |:--------  |:---  |
  |POST|  https://[{domain}]/mtls/mapping |
 
+**Query Parameters**
+
+| Parameter | Description | Type | Required | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| v | API version number | number| Not Required | Default Value: 1 | Options: 1, 2 |
+
+* **Versions only differ by the response type (see below)**.
 
 **Request Headers**
 
  |Header         |Description  |
  |:------|        :--------  |
- |Authorization|    Contains token string to allow request authentication and authorization.|
+ |Authorization|    Contains token string to allow request authentication and authorization. **AppKey only API**|
 
 **Request Body**
 
-Contains list of CertificateMappingParamters objects:
-```
-[ 
-   {"serviceName":"IDP","accountId":"52653865","url":"https://lp-idp-qa.dev.lprnd.net/mock/auth/token"}, 
+Contains list of `CertificateMappingParamters` objects:
+
+```json
+[
+   {"serviceName":"IDP","accountId":"52653865","url":"https://lp-idp-qa.dev.lprnd.net/mock/auth/token"},
    {"serviceName":"TEST_SERVICE","accountId":"52653865","url":"https://lp-mtls-qa.dev.lprnd.net/test"}
 ]
 ```
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -47,14 +55,37 @@ Contains list of CertificateMappingParamters objects:
 | 500  | Internal Server Error |
 
 
-**Response Headers**
 
 **Response Body**
-```
+
+**V1 response (default)**
+
+```json
 {
  "CertificateMappingParamters{serviceName='TEST_SERVICE', accountId='52653865', url='https://lp-mtls-qa.dev.lprnd.net/test'}": true,
  "CertificateMappingParamters{serviceName='IDP', accountId='52653865', url='https://lp-idp-qa.dev.lprnd.net/mock/auth/token'}": false
 }
+```
+
+**V2 response** 
+
+* The "doExist" status is added to the submitted parameters.
+
+```json
+[
+    {
+        "serviceName": "IDP",
+        "accountId": "52653865",
+        "url": "https://lp-mtls-qa.dev.lprnd.net/test",
+        "doExist": true
+    },
+    {
+        "serviceName": "TEST_SERVICE",
+        "accountId": "52653865",
+        "url": "https://lp-mtls-qa.dev.lprnd.net/test",
+        "doExist": false
+    }
+]
 ```
 
 **Entity Structure:**
@@ -63,8 +94,6 @@ CertificateMappingParameters object which contains:
 
 | Attribute | Description  | Type/Value | Required | Notes |
 | :------   | :--------    | :-------- | :--- | :--- |
-| serviceName | Contains the service name which has corresponding certificate in Hashicorp-Vault. | string |  | |
-| accountId | Account ID which has corresponding certificate in Hashicorp-Vault. | string |  | |
-| url | Contains the URL which has corresponding certificate in Hashicorp-Vault. | string |  | |
-
-
+| serviceName | Contains the service name which has a corresponding certificate in Hashicorp-Vault. | string |  | |
+| accountId | Account ID which has a corresponding certificate in Hashicorp-Vault. | string |  | |
+| url | Contains the URL which has a corresponding certificate in Hashicorp-Vault. | string |  | |

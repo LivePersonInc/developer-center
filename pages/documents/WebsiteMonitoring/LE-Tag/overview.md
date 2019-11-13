@@ -1,16 +1,20 @@
 ---
 pagename: Overview
 redirect_from:
-  - lp-tag-tag-events-overview.html
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: LE-Tag
-
-level-order: 3
-order: 1
 permalink: le-tag-overview.html
-root-link: true
 indicator: both
 ---
 
-This document outlines all the events published on the brand’s page by the LiveEngage Tag. These events provide customers transparency into the engagement and engagement window display flow, as well as a way to customize and act upon the obtained data. For example, a brand can hide an embedded div content only if the embedded engagement is displayed.
+The `lpTag` object is available on your website when you add the le-tag script to your website.
+
+This object allows you to access many different functionalities that relate to the visitor experience on your website.
+
+Some of these functionalities include:
+
+- Triggered Events
+- Page refreshes
+- LivePerson variables
+- Visitor SDEs

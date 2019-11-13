@@ -54,6 +54,7 @@ If your account is set up correctly, you should see the following button inside 
 Once the agent sends an invitation, you should see a new event of type ``cqm.ExConversationChangeNotification``. Inside the event, there is a ``conversationDetails`` object containing two dialogs. The first one is the existing messaging dialog, the second one is a new dialog with ``channelType=COBROWSE``:
 
 ```json
+...
 {
     "dialogId": "c26b9d3b-e943-42af-8047-aba830de64ea",
     "participants": [
@@ -78,6 +79,8 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
     "creationTs": 1502893041905,
     "metaDataLastUpdateTs": 1502893041905
 }
+...
+
 ```
 
 The relevant fields in this dialog are ``channelType`` and inside ``metaData`` the ``serviceId``, ``mode`` and ``sessionState`` fields. ``channelType`` always equals ``COBROWSE`` and can be used to check if the new dialog is a CoBrowse dialog. The ``serviceId`` is used to match Consumer and Agent and needs to be passed to the CoBrowse API on the website. ``mode`` is equal to the CoBrowse mode the Agent selected. For CoBrowse, the possible values are ``shared`` for shared CoBrowse, ``view`` for view-only CoBrowse where the agent is able to scroll the visitor's view and ``follow`` for view-only without scroll permissions for the agent.

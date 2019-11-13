@@ -26,7 +26,7 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
 | Method | URL |
 | :--- | :--- |
-|PUT|https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}/report?v={api-version}&vid={visitor-id}&sid={session-id} |
+|PUT|https://[{domain}](/agent-domain-domain-api.html)/api/account/{account-id}/app/{app-installation-id}/report?v={api-version}&vid={visitor-id}&sid={session-id} |
 
 ### Path Parameters
 

@@ -20,17 +20,21 @@ google_analytics: UA-96175782-1
 
 
 extlinks:
-  attributes: {target: _blank, onclick: "linkclick(event, this)"}
+  attributes: {alt: "LivePerson Knowledge Center", target: _blank, onclick: "linkclick(event, this)"}
 # This tells the extlinks plugin which attribute to add to links
+
+url: https://developers.liveperson.com
+# needed for the sitemap plugin
 
 plugins:
   # - algoliasearch-jekyll
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 
-# algolia:
-#   application_id: "1ITT6KY19C"
-#   index_name: "dev_BASE"
+algolia:
+  application_id: "EICOREWTRW"
+  index_name: "devMain"
 # #values for the Algolia plugin
 
 
@@ -40,6 +44,8 @@ github: [metadata]
 exclude:
   - .idea/
   - .gitignore
+  - node_modules
+  - gulpfile.js
 # these are the files and directories that jekyll will exclude from the build
 
 highlighter: rouge
@@ -69,8 +75,7 @@ description: "LivePerson Developers is the main repository for documentation of 
 # the description is used in the feed.xml file
 
 
-url: https://developers.liveperson.com
-# needed for sitemap.xml file only
+
 
 
 Copyright: "https://www.liveperson.com/policies/copyright"

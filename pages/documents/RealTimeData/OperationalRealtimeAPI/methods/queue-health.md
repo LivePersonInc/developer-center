@@ -24,7 +24,7 @@ Retrieves queue-related metrics at the account or skill level.
 
 | Method | URL |
 | :------- | :------ |
-| GET | `https://<domain>/operations/api/account/{accountID}/queuehealth?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&interval=<interval size in minutes>&v=<version>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/queuehealth?timeframe=<timeframe in minutes>&skillIds=<skillIDs>&interval=<interval size in minutes>&v=<version>` |
 
 **URL Parameters**
 

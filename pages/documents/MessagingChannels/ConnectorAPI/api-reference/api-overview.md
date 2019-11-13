@@ -12,6 +12,14 @@ permalink: connector-api-api-reference-overview.html
 search: exclude
 ---
 
+<div class="alert alert-warning" role="alert">
+  <h2>New developer resources available</h2>
+  <p>In addition to the following API reference, we have published a new how-to guide and a demo tool. The how-to guide provides step-by-step instructions for your first connector application. The demo tool enables you to experience the API on your developer account. You can open the resources in a new tab by clicking on the buttons below.</p>
+  <hr>
+  <a class="btn btn-primary btn-m active" href="https://livepersoninc.github.io/lp-devassist-connectors/" target="_blank" role="button">Go to How-to Guide</a>
+  <a class="btn btn-primary btn-m active" href="https://connector-api.dev.liveperson.net/" target="_blank"  role="button">Go to Demo Tool</a>
+</div>
+
 ### API Endpoints test change
 
 The API consists of two types of calls:

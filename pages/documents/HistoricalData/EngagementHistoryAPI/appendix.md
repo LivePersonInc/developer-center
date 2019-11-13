@@ -16,9 +16,10 @@ Engagement Attributes allow a brand to communicate events, for example, purchase
 
 ###  CartStatus
 
-| Name |  Description | Type / Value |
-| :----- | :------- | :------ |
-| serverTimeStamp | Event time stamp. | long – epoch time in milliseconds |
+| Name |  Description | Type / Value | Notes |
+| :----- | :------- | :------ | :------ |
+|originalTimeStamp | Event creation time stamp.| long – epoch time in milliseconds|
+|serverTimeStamp | Event processing time stamp.| long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 | total | Total cart value. | alphanumeric |
 | numItems | Number of items. | alphanumeric |
 | quantity | Quantity of the product. | alphanumeric |
@@ -37,6 +38,7 @@ Example:
         {
           "cartStatus": {
             "serverTimeStamp": "1440412721832",
+            "originalTimeStamp": "1440413291351",
             "total": "11.7",
             "currency" : "USD",
             "numItems": "6",
@@ -60,9 +62,10 @@ Example:
 
 ###  customerInfo
 
-| Name | Description | Type / Value | Notes |
-| :---- | :--------- | :---------- | :--- |
-| serverTimeStamp | Event time stamp. | long – epoch time in milliseconds | |
+| Name |  Description | Type / Value | Notes |
+| :----- | :------- | :------ | :------ |
+|originalTimeStamp | Event creation time stamp.| long – epoch time in milliseconds|
+|serverTimeStamp | Event processing time stamp.| long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 | customerStatus | Customer status- will be matched against customer status entity name. | alphanumeric | Case insensitive.  |
 | customerType | Customer type - will be matched against customer type entity name.  | alphanumeric | Case insensitive. |
 | balance | The current balance of the customer. | | |
@@ -89,6 +92,7 @@ Example:
         {
           "customerInfo": {
             "serverTimeStamp": "1440412721833",
+            "originalTimeStamp": "1440413291351",
             "customerInfo": {
               "customerStatus": "cancelled",
               "customerType": "vip",
@@ -125,9 +129,10 @@ Example:
 
 ###  Lead
 
-| Name | Description | Type / Value |
-| :---- | :----------- | :-------- |
-| serverTimeStamp | Event time stamp. | long – epoch time in milliseconds |
+| Name |  Description | Type / Value | Notes |
+| :----- | :------- | :------ | :------ |
+|originalTimeStamp | Event creation time stamp.| long – epoch time in milliseconds|
+|serverTimeStamp | Event processing time stamp.| long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 | topic | Topic lead. | alphanumeric |
 | value | Value lead. | alphanumeric |
 | leadId | Lead ID. | alphanumeric |
@@ -147,7 +152,8 @@ Example:
               "currency": "USD",
               "leadId": "xyz123"
             },
-            "serverTimeStamp": "1440412721836"
+            "serverTimeStamp": "1440412721836",
+            "originalTimeStamp": "1440413291351"
           }
         }
       ]
@@ -157,9 +163,10 @@ Example:
 
 ###  marketingCampaignInfo
 
-| Name | Description | Type / Value | Notes |
-| :---- | :-------- | :---------- | :--- |
-| serverTimeStamp | Event time stamp. | long – epoch time in milliseconds | |
+| Name |  Description | Type / Value | Notes |
+| :----- | :------- | :------ | :------ |
+|originalTimeStamp | Event creation time stamp.| long – epoch time in milliseconds|
+|serverTimeStamp | Event processing time stamp.| long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 | originatingChannel | Marketing channel. | alphanumeric | 0-Direct, 1-Search, 2-Social, 3-Email, 4-Referral, 5-Paid Search, 6-Display |
 | affiliate | Affiliate name. | alphanumeric | |
 | campaignId | Campaign ID. | alphanumeric | |
@@ -173,6 +180,7 @@ Example:
         {
           "marketingCampaignInfo": {
             "serverTimeStamp": "1440412721833",
+            "originalTimeStamp": "1440413291351",
             "marketingCampaignInfo": {
               "originatingChannel": "1",
               "affiliate": "Yahoo",
@@ -187,9 +195,10 @@ Example:
 
 ###  personalInfo
 
-| Name | Description | Type / Value |
-| :----- | :--------- | :-------- |
-| serverTimeStamp | Event time stamp. | long – epoch time in milliseconds |
+| Name |  Description | Type / Value | Notes |
+| :----- | :------- | :------ | :------ |
+|originalTimeStamp | Event creation time stamp.| long – epoch time in milliseconds|
+|serverTimeStamp | Event processing time stamp.| long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 | name | Personal name. | alphanumeric  |
 | surname | Surname. | alphanumeric |
 | gender | Visitor’s gender. | alphanumeric |
@@ -208,6 +217,7 @@ Example:
         {
           "personalInfo": {
             "serverTimeStamp": "1440412721833",
+            "originalTimeStamp": "1440413291351",
             "personalInfo": {
               "name": "John",
               "surname": "Doe",
@@ -238,9 +248,10 @@ Example:
 
 ###  Purchase
 
-| Name | Description | Type / Value |
-| :----- | :------- | :------- |
-| serverTimeStamp | Event time stamp. | long – epoch time in milliseconds |
+| Name |  Description | Type / Value | Notes |
+| :----- | :------- | :------ | :------ |
+|originalTimeStamp | Event creation time stamp.| long – epoch time in milliseconds|
+|serverTimeStamp | Event processing time stamp.| long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 | total | Total purchase value. | alphanumeric |
 | orderId | Unique order ID. | alphanumeric |
 | quantity | Quantity of this product. | alphanumeric |
@@ -260,6 +271,7 @@ Example:
     "purchase": {
       "total": "11.7",
       "serverTimeStamp": "1434394476705",
+      "originalTimeStamp": "1440413291351",
       "cart": {
         "total": "17.8",
         "currency" : "USD",
@@ -283,9 +295,10 @@ Example:
 
 ###  serviceActivity
 
-| Name | Description | Type / Value | Notes |
-| :------- | :---------- | :-------- | :--- |
-| serverTimeStamp | Event time stamp. | long – epoch time in milliseconds | |
+| Name |  Description | Type / Value | Notes |
+| :----- | :------- | :------ | :------ |
+|originalTimeStamp | Event creation time stamp.| long – epoch time in milliseconds|
+|serverTimeStamp | Event processing time stamp.| long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 | topic | The service topic. | alphanumeric | |
 | status | Activity status | alphanumeric | 0-Complete, 1-In Progress, 2-Approved, 3-cancelled, 4-Not Approved, 5-Reviewed, 6-Missing Details, 7-Closed, 8-Removed, 9-Assigned, 10-Waiting for Customer Response, 11-Waiting for Response, 12-Pending, 13-Resolved |
 | category | Category name. | alphanumeric | |
@@ -300,6 +313,7 @@ Example:
         {
           "serviceActivity": {
             "serverTimeStamp": "1440412721836",
+            "originalTimeStamp": "1440413291351",
             "serviceActivity": {
               "topic": "order checkbook",
               "status": "0",
@@ -315,9 +329,10 @@ Example:
 
 ###  VisitorError
 
-| Name | Description | Type / Value |
-| :----- | :------- | :------ |
-| serverTimeStamp | Event time stamp. | long – epoch time in milliseconds |
+| Name |  Description | Type / Value | Notes |
+| :----- | :------- | :------ | :------ |
+|originalTimeStamp | Event creation time stamp.| long – epoch time in milliseconds|
+|serverTimeStamp | Event processing time stamp.| long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 | contextId | Error context. | alphanumeric |
 | message | Error message. | alphanumeric |
 | code | Error code. | alphanumeric |
@@ -333,6 +348,7 @@ Example:
         {
           "visitorError": {
             "serverTimeStamp": "1440412721834",
+            "originalTimeStamp": "1440413291351",
             "visitorError": {
               "contextId": null,
               "message": "Expiration date missing",
@@ -349,9 +365,10 @@ Example:
 
 ###  viewedProduct
 
-| Name | Description | Type / Value |
-| :----- | :------- | :--------- |
-| serverTimeStamp | Event timestamp. | long – epoch time in milliseconds |
+| Name |  Description | Type / Value | Notes |
+| :----- | :------- | :------ | :------ |
+|originalTimeStamp | Event creation time stamp.| long – epoch time in milliseconds|
+|serverTimeStamp | Event processing time stamp.| long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 | name | Product name. | alphanumeric |
 | category | Product category. | alphanumeric |
 | sku | Product SKU. | alphanumeric |
@@ -367,6 +384,7 @@ Example:
         {
           "viewedProduct": {
             "serverTimeStamp": "1434394466093",
+            "originalTimeStamp": "1440413291351",
             "currency" : "RUB",
             "products": [
               {
@@ -387,9 +405,10 @@ Example:
 
 ###  searchContent
 
-| Name | Description | Type / Value |
-| :----- | :------- | :--------- |
-| serverTimeStamp | Event timestamp. | long - epoch time in milliseconds |
+| Name |  Description | Type / Value | Notes |
+| :----- | :------- | :------ | :------ |
+|originalTimeStamp | Event creation time stamp.| long – epoch time in milliseconds|
+|serverTimeStamp | Event processing time stamp.| long – epoch time in milliseconds| Default value - event creation time. If processing occurred, the value is updated to the processing time.
 | keywords | Array of keywords searched by the visitor. | `array<alphanumeric>` |
 
 Example:
@@ -401,6 +420,7 @@ Example:
               {
                 "searchContent": {
                   "serverTimeStamp": "1481111429931",
+                  "originalTimeStamp": "1440413291351",
                   "keywords": [
                     "apple",
                     "banana"

@@ -1,9 +1,9 @@
 ---
-pagename: All Pages
+pagename: All Documents
 sitesection: Documents
 categoryname: "Getting Started"
 documentname:
-permalink: all-pages.html
+permalink: all-documents.html
 indicator: both
 ---
 

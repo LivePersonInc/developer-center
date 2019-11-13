@@ -1,15 +1,14 @@
 ---
-pagename: MTLS forawrd delete request
-redirect_from:
-  - xxx.html
+pagename: Forward delete request
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
+permalink: mtls-methods-forward-delete-request.html
 ---
 
-The Forward API methods proxies incoming requesst to the `LP-forward-url` supplied parameter. Proxied requests are wrapped with the certificate provided according to the configuration parameters (accountId/servicName/Url which act as a unique key). If no configuration exists, the request will be proxied using regular TLS (rather than mTLS). The proxied http method in this method is `DELETE` (this corresponds to the method you'd like to use with the endpoint configured with `LP-forward-url`), 
+The Forward API methods proxies incoming requesst to the `LP-forward-url` supplied parameter. Proxied requests are wrapped with the certificate provided according to the configuration parameters (accountId/servicName/Url which act as a unique key). If no configuration exists, the request will be proxied using regular TLS (rather than mTLS). The proxied http method in this method is `DELETE` (this corresponds to the method you'd like to use with the endpoint configured with `LP-forward-url`).
 
 ### Request
 
@@ -39,7 +38,7 @@ Body will be proxied as is to the remote  endpoint (`LP-forward-url`), so the bo
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -49,11 +48,8 @@ Body will be proxied as is to the remote  endpoint (`LP-forward-url`), so the bo
 | 500  | Internal Server Error |
 
 
-**Response Headers**
 
 **Response Body**
 
 Response will be returned from the `LP-forward-url` as if contacted directly.
-
-
 

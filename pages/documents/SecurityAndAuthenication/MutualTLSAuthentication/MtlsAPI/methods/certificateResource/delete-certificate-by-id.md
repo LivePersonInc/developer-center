@@ -1,21 +1,20 @@
 ---
 pagename: Delete certificate by ID
-redirect_from:
-  - xxx.html
 keywords:
 sitesection: Documents
 categoryname: "Security & Authenication"
 documentname: MTLS API
 subfoldername: Methods
+permalink: mtls-methods-delete-certificate-by-id.html
 ---
 
-This API deletes certificate by account id.
+This API deletes a certificate by account ID and certificate ID.
 
 ### Request
 
- |Method|      URL|  
- |:--------  |:---  |
- |DELETE|  https://[{domain}]/mtls/account/{accountId}/certificates/{certificateId} |
+|Method|      URL|  
+|:--------  |:---  |
+|DELETE|  https://[{domain}]/mtls/account/{accountId}/certificates/{certificateId} |
 
 
 **Request Headers**
@@ -24,19 +23,17 @@ This API deletes certificate by account id.
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
 
-**Request Body**
-
 
 **Path Parameters**
 
  |Parameter|  Description|  Type/Value |
  |:------    |:--------    |:--------|
  |accountId|  LP site ID |   String |
- |certificateId|  generated certificate ID  |  String |
+ |certificateId|  generated certificate ID for the certificate to be deleted  |  String |
 
 ### Response
 
-**Response Codes** 
+**Response Codes**
 
 | Code | Description           |
 |------|-----------------------|
@@ -44,11 +41,4 @@ This API deletes certificate by account id.
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-
-
-**Response Headers**
-
-**Response Body**
-
-
 

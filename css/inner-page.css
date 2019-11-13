@@ -324,9 +324,11 @@ ul.mysidebar.nav {
   text-decoration: none;
   position: -webkit-sticky;
   position: sticky;
-  top: 90px;
-  height: 88vh;
+  top: 150px;
+  height: 78vh;
   overflow-y: auto;
+  overflow-x: hidden;
+  overflow-x: hidden;
   list-style: none;
 
 }
@@ -334,8 +336,8 @@ ul.mysidebar.nav {
 ul.mysidebar > li.folder ul {
   display: none;
   list-style: none;
-  line-height: 2.3;
   width: 100%;
+  line-height: 1.5;
 }
 ul.mysidebar > li.folder ul.folderactive{
    display: block;
@@ -377,12 +379,11 @@ ul#mysiderbar li{
 
 .innerpageitem {
   padding-left: 15px !important;
-  border-left: 4px solid #646a79;
-  margin-left: 31px;
 }
 
 .activeitem {
   border-left: 4px solid #b1b5bc !important;
+  margin-left: -4px;
 }
 
 ul.mysidebar.nav .topfolder >  a {
@@ -400,6 +401,7 @@ ul.mysidebar.nav > li > a{
 }
 ul.mysidebar li ul li{
   margin-right: 0px;
+  margin-top: 10px;
 }
 
 ul.mysidebar.nav li a.active{
@@ -452,10 +454,15 @@ ul.mysidebar.nav li ul li {
  ul.mysidebar.nav ul li a {
   border-top: none;
   padding-left: 0px;
-
+  margin-top: 10px !important;
+  margin-bottom: 10px;
 }
 
-
+.innerList {
+  display: block;
+  border-left: 4px solid rgb(100, 106, 121);
+  margin-left: 30px;
+}
 
 div.sidebarTitle {
   display: none;
@@ -605,6 +612,25 @@ div.sidebarTitle-holder {
   overflow-wrap: break-word;
 }
 
+.alert-warning {
+  background-color: #f8f8f8;
+  border-color: #5879DA;
+  color: #4a4a4a;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.alert-warning hr {
+  border-top-color: #5879DA;
+}
+
+.alert-warning h2 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.btn-primary.active {
+  background-color: #162036;
+  border-color: #fff;
+}
 
 pre {
   border: none;
@@ -754,6 +780,10 @@ pre code {
 @media screen and (max-width: 1440px) {
   .post-content table {
     width: 130%;
+  }
+
+  .post-content table.thinner {
+    width: 100%;
   }
 }
 

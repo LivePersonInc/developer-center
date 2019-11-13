@@ -25,7 +25,7 @@ This data contains information about the vistor’s web journey. The web session
 
 | Method | URL |
 | :------ | :------- |
-| GET | `https://<domain>/data_access_le/account/{accountID}/le/webSession?startTime=<startTime>&endTime=<endTime>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/data_access_le/account/{accountID}/le/webSession?startTime=<startTime>&endTime=<endTime> |
 
 Required:
 

@@ -32,7 +32,7 @@ It is possible to leverage the Operational Real-Time API to build your own real-
 
 * Monitor performance at account level, skill level or agent level.
 
-_Note: LiveEngage and our report builder functionality provide you with a slew of reports and dashboards. Before you invest time in developing your own dashboards, we recommend that you first review what’s available to ensure your needs are not already met out of the box. For more info on our report builder, please [click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/AM/Report+Builder+User+Guide.pdf)._
+_Note: LiveEngage and our report builder functionality provide you with a slew of reports and dashboards. Before you invest time in developing your own dashboards, we recommend that you first review what’s available to ensure your needs are not already met out of the box._
 
 ### Getting Started
 
