@@ -8,11 +8,9 @@ subfoldername: Methods
 permalink: mtls-methods-check-mapping-configuration.html
 ---
 
-This method checks for mapping configuration existence for a specific triplet: serviceName, accountId and url.
+This method checks if a mapping configuration exists for a specific triplet of parameters: serviceName, accountId and url. If it exists, am mTLS request can be used with the relevant certificate.
 
-This resource helps you check if a certificate exists to some serviceName + accountId + url in order to send MTLS request (with certificate).
-
-Since mTLS service is throttle protected the idea is not to send TLS only requests through the service, this API allows the consuming service to know if mTLS is configured for specific parameters.
+The aim of this method is to minimize sending TLS only requests through the service, since the mTLS service is throttle protected. This API allows the consuming service to know if mTLS is configured for the specified parameters.
 
 ### Request
 
