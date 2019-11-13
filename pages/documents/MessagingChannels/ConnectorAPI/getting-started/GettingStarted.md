@@ -42,20 +42,13 @@ permalink: connector-api-first-steps-getting-started.html
 
 	After filling in the [JSON Template](app-install-manifest-connectors.html) with the required data, please contact your Account Management team to register your connector application.
 
-
 2. **Getting an application JWT** - After successfully registering your connector, you will be given two important parameter values which will serve to authorize your connector application prior to using the Connector API:
 
-	* `App Installation id`:  e.g., 75588e18-0213-4e33-8174-883acac7e3c4
+	* An app installation id (`client_id`; for example 75588e18-0213-4e33-8174-883acac7e3c4), and
 
-	* `Secret`:  e.g kgvbkk7glku72jgtmpi6l4a872
+	* A secret (`client_secret`; for example kgvbkk7glku72jgtmpi6l4a872)
 
-	These will be used for the first authorization request to LiveEngage in order to identify your connector and provide it with an **AppJWT**.
-
-	**Request Example**
-
-	 https://[{domain}](/agent-domain-domain-api.html)/sentinel/api/account/{accountid}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret} |
-
-	Refer to [Getting an AppJWT](Create_AppJWT.html) for more information.
+	These will be used for the first authorization request to LiveEngage in order to identify your connector and provide it with an **AppJWT**. Refer to [Getting an AppJWT](Create_AppJWT.html) for more information.
 
 3. **Getting a consumer JWS** - An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT, you can obtain a consumer JWS (Java Web Signature) to identify the consumer in LiveEngage:
 

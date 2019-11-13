@@ -11,60 +11,46 @@ indicator: messaging
 permalink: connector-api-authorization-and-authentication-get-appjwt.html
 search: include
 ---
+LivePerson uses OAuth 2.0 grant type [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) in order to allow apps to access the Send API. Sentinel, the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any follow-up request to the Send API. However, the AppJWT alone is not sufficient to identify a consumer to LiveEngage. This means, one has to obtain a [ConsumerJWS](Create_ConsumerJWS.html), too. The following HTTPS request exemplifies how to get an AppJWT:
 
-### Getting Started
+```http
+POST /sentinel/api/account/{accId}/app/token?v=1.0&grant_type=client_credentials HTTP/1.1
+Host: {sentinel_service_domain}
+Content-Type: application/x-www-form-urlencoded
 
-1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
+client_id={client_id}&client_secret={client_secret}
+```
 
-	* sentinel
+The `sentinel_service_domain` can be retrieved using the [LivePerson Domain API](agent-domain-domain-api.html) searching for `sentinel`. The `accId` is your LivePerson site id. `client_id` and `client_secret` are given to you after [application registration](connectorapi-getting-started.html). The content type is always `application/x-www-form-urlencoded`. Sentinel will answer in accordance with [OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/). For example, a successful response looks as follows:  
 
-### Authorization with AppJWT
+```http
+HTTP/1.1 200 OK
+Date: Mon, 04 Nov 2019 16:00:47 GMT
+Content-Type: application/json;charset=utf-8
 
-Before sending any request with the Send API, you must first obtain an AppJWT authorization token using the brand’s `Installation id` and `Secret` which you acquired as described on the [Getting Started](connectorapi-getting-started.html) chapter. The AppJWT is an access token obtained from Sentinel, which is a LivePerson Application Identity Broker. The AppJWT allows the client (i.e connector) to access the LiveEngage platform. An AppJWT is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT you can obtain a ConsumerJWS (Java Web Signature). Please see [this page](Create_ConsumerJWS.html) in order to retrieve a ConsumerJWS.
+{ "access_token": "eyJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM", "token_type": "Bearer" }
+```
 
-An **AppJWT** can be obtained with the following HTTPS request:
-
-
-| Method | URI  |
-| :--- | :--- |
-| POST | https://[{domain}](/agent-domain-domain-api.html)/sentinel/api/account/{accountid}/app/token?v=1.0&grant_type=client_credentials&client_id={Installation id}&client_secret={Secret} |
-
-
-**Path Parameters**
-
-| Name  | Description | Type/Value | Mandatory |
-| :--- | :--- | :--- | :--- |
-| accountid | LivePerson site ID | string | true |
-| domain | Sentinel Hostname | string | true |
-
-**Query Parameter**
-
-| Name  | Description | Type/Value | Example | Mandatory |
-| :--- | :--- | :--- | :--- | :--- |
-| v | The API version | numeric | 1.0 | true |
-| grant_type | authorization grant according to OAuth 2.0. Use only client_credentials for connector API | string | client_credentials | true |
-| client_id | **Installation id** provided after application registration | string | 75588e18-0213-4e33-8174-883acac7e3c4 |true |
-| client_secret | **Secret** provided after application registration | string | kgvbkk7glku72jgtmpi6l4a872 | true |
-
-**Request Headers**
-
-| Header | Description |
-| :--- | :--- |
-| Content-Type | application/x-www-form-urlencoded |
-
-### Response
-
-**Response Codes**
-
-| Code | Description |
-| :--- | :--- |
-| 200 | access_token is received |
-
-
-**Response Example**
+Decoding the `access_token`, using the [Auth0 Debugger](https://jwt.io/), reveals the following header and payload:
 
 ```json
 {
-  "access_token": "eyJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM", "token_type": "Bearer"
+  "kid": "appjwt-13-05-17",
+  "typ": "JWT",
+  "alg": "RS256"
 }
 ```
+
+The `kid` (key id) is composed of `appjwt` and the date when it was issued. `typ` defines the type of the token. The type describes the content that is being signed or encrypted. The `alg` property defines the algorithm used to sign or encrypt the content. Here, the content is of type JWT which enforces the content to be structured according to the [JWT standard](https://tools.ietf.org/html/rfc7519). RS256 is a signing algorithm which ensures the data is not tampered. The payload looks as follows:
+
+```json
+{
+  "aud": "le81823118",
+  "azp": "75588e18-0213-4e33-8174-883acac7e3c4",
+  "scope": "msg.consumer",
+  "iss": "Sentinel",
+  "exp": 1524646270,
+  "iat": 1524642670
+}
+```
+Property `aud` defines the audience for whom or what the token is intended for. `azp` is the authorized party to which the AppJWT was issued. `scope` defines the part of application the authorized party has access to. `iss` defines the issuer of the token. `exp` is the expiration date and `iat` is the date when the token was issued. `aud` is always the account id, `azp` contains the app install id, `scope` is restricted to consumer, `iss` is Sentinel and `exp` and `iat` contain the corresponding dates. An AppJWT is valid for one hour. For more information about JWTs, please also see this [blog post](https://auth0.com/blog/json-web-token-signing-algorithms-overview/). 
