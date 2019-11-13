@@ -2,7 +2,7 @@
 pagename: Forward put request
 keywords:
 sitesection: Documents
-categoryname: "Security & Authenication"
+categoryname: "Security & Authentication"
 documentname: MTLS API
 subfoldername: Methods
 permalink: mtls-methods-forward-put-request.html

@@ -2,7 +2,7 @@
 pagename: Onboarding
 keywords:
 sitesection: Documents
-categoryname: "Security & Authenication"
+categoryname: "Security & Authentication"
 documentname: MTLS API
 indicator: both
 permalink: mtls-onboarding.html
