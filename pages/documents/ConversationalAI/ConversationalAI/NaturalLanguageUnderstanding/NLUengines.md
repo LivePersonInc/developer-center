@@ -74,7 +74,7 @@ Once this is done, you can start creating domains with 3rd-party NLU.
 
 #### Step 2: Sign up and get the API keys
 
-In order to train IBM Watson or Google DialogFlow from within Conversation Builder, you need to create two sets of service credentials. When you train the intents in a domain, you'll use one credential. When it's done, you'll then activate and use the second, alternating back and forth between them (because only one credential can be active at a given time).
+Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow service credentials. When you [train](intent-builder-domains.html#train-a-3rd-party-nlu-domain) the intents in a domain for the first time in Intent Builder, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
 
 ##### IBM Watson
 
