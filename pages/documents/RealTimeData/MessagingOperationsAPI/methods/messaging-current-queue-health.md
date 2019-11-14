@@ -38,6 +38,9 @@ Retrieves the information about the current messaging queue state (and all its r
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, defaults to 'all' skills. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all or do not specify this parameter at all. | numeric, comma separated | optional |
 | overdueConversations | When set to true, metrics in the response will also contain overdue conversations metrics. Defaults to false. For example: overdueConversations=true | boolean | optional |
+| breakdown | When set to false, metrics in the response will not contain skills breakdown, only total values. Defaults to true. For example: breakdown=false | boolean | optional |
+| metrics | When provided, response metrics will be filtered only by the requested metric. Possible values: queue,waittimes,overdue,all. example: metrics=queue,overdue. Default if not specified will return only queue and waittimes metrics. | string, comma separated | optional |
+| groupIds | When provided, the overdueConversationsAssigned metric on the response will be filtered by the list provided. You can provide one or more agent group IDs. <br> Example: groupIds=123,124. To filter by all group IDs (which are allowed depending on the requesting user's permission), use groupIds=all. Default value is null and no filtering will occur.| numeric, comma separated | optional |
 
 ### Response
 
