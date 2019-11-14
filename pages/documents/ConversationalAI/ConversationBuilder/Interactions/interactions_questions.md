@@ -75,6 +75,90 @@ You can populate the tiles with static information, or they can be dynamically p
 - When multiple items are present in the interaction, they can be displayed vertically--which is the default--or horizontally. To add support for horizontal display, add the "tileDisplay" [custom configuration field](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-fields) with a value of "horizontal" when you [deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) your bot. For a horizontally-scrolling carousel to appear correctly, you must have **at least** 3 tiles. Setting tileDisplay to horizontal can be useful for resolving formatting issues that can occur on specific channels.
 - Formatting of text (bold, italics, etc.) isn't supported.
 
+
+### Apple List Picker questions
+
+**For Apple Business Chat only.**
+
+If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the List Picker question interaction to display a list of items (along with information about those items), so the consumer can reply by selecting one or more. Like with any question interaction, a list picker expect and waits for the user response before executing the next action.
+
+You might want to include a list picker so consumers can select from a list of:
+
+- Products in your catalog
+- Food items on your menu
+- Navigational menu items
+- And more
+
+You can create a list picker that displays a static (fixed) list of items that you specify when you create the picker. Or, you can configure the picker so that it gets populated with items dynamically at runtime, passing in values from an earlier API integration call to an external system.
+
+(The interaction has been developed per Apple's List Picker specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/list_picker).)
+
+#### Response Message settings
+
+The Response Message settings define how to initially display the list picker to the consumer:
+
+<img style="width:400px" src="img/ConvoBuilder/questions_listPicker1.png">
+
+Response Message settings also provide the text in the header of the actual list picker.
+
+| Setting | Description | Required or Optional | Example |
+| --- | --- | --- | --- |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). | Optional | https://www.mysite.com/images/flowers.jpg |
+| ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon | 
+| Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters. | Required | Beautiful bouquets |
+| Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters. | Optional | Select your favorite |
+
+#### Item settings
+
+Section and item settings define how to display the sections and individual items in the list picker.
+
+<img style="width:400px" src="img/ConvoBuilder/questions_listPicker2.png">
+
+| Setting | Description | Required or Optional | Example |
+| --- | --- | --- | --- |
+| Section Title | The title of the section. | Required | Birthdays |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). | Optional | https://www.mysite.com/images/dahlias.jpg |
+| ADD IMAGE > Image Style | The style of the image, one of Default, Small, or Large. | Optional | Small |
+| ADD IMAGE > Identifier  | A unique identifier for the item; this is system-generated. | Not applicable | 32957836-2f95-1e8d-ce4e-aa95e8f844a2 |
+| Item Title | The item’s title. | Required | Mixed dahlias |
+| Item Subtitle | The item’s subtitle. | Optional | Bright and cheery! |
+
+#### Reply Message settings
+
+The Reply Message settings define how to display the consumer’s reply after the consumer picks one or more items from the list.
+
+<img style="width:300px" src="img/ConvoBuilder/questions_listPicker3.png">
+
+| Setting | Description | Required or Optional | Example |
+| --- | --- | --- | --- |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). | Optional | https://www.mysite.com/images/flowers.jpg |
+| ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Large |
+| Reply Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters. |  Required. Although required, this field is replaced at run time with the title of the user's selection. | Your selection |
+| Reply Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters. | Optional | A great choice! |
+
+#### Interaction Details - Settings
+
+| Setting | Description | Required or Optional | Example |
+| --- | --- | --- | --- |
+| Enable Multiple Selection | Enable this setting to let the consumer select multiple items in the list picker. This field is disabled by default. | Optional | \[On\] |
+
+#### Populating a list picker dynamically
+
+Values for many of the settings above can be static, but they can also be populated dynamically at runtime. For example, if the list picker is for selecting items from a product catalog, you’ll likely want to retrieve and use the item information from the catalog.
+
+#### Scrolling and sorting
+
+List pickers scroll vertically, and this can’t be changed.
+
+If you’re hard-coding the sections and items, their display order is as you configure it. Alternatively, if they are populated dynamically at runtime, sorting could be done at the API level.
+
+#### The user response to a list picker
+
+Once a user makes their selection in the list picker, the reply is sent back to the bot as "User Selected: " plus the item title. If the user has selected multiple items, they are concatenated with "and."
+
+<img style="width:350px" src="img/ConvoBuilder/questions_listPicker4.png">
+
+
 ### Apple Time Picker questions
 **For Apple Business Chat only.** 
 
@@ -106,7 +190,6 @@ Response Message settings also provide the text in the header of the actual time
 | Event Title  | The title of the calendar meeting.   | Optional  | Technician Visit |
 | Event Identifier   | An ID for the event. If you don’t set this, it’s set by the system since it's required by Apple. LivePerson recommends that you set this. If you're populating the time picker with data received from an API call, you can set this with an ID provided in that API result. | Required |   event123 |
 | Timezone offset (minutes from GMT) | The number of minutes from GMT, specifying the timezone of the event’s location. If not set, times are shown according to the customer’s current time zone. If set, the times are shown according to the event’s time zone, regardless of the customer’s location.<br><br>**The offset must be expressed in positive numbers.**<br><br>If the offset is positive, use the formula: (offset in hours * 60).<br><br>If the offset is negative, use the formula: ((24 - offset in hours) * 60).| Optional  | In Central European Summer Time, Mannheim, Germany is GMT+2, which is a positive offset, so 2 * 60 = **120**. <br><br> In Eastern Daylight Time, New York, New York is GMT-4, which is a negative offset, so ((24 - 4) * 60) = **1200**. |
-
 
 #### Location settings
 
@@ -145,7 +228,7 @@ The Reply Message settings define how to display the consumer’s reply after th
 | Reply Message Title | Not used; this is replaced with the selected time.  | Not applicable  | Not applicable |
 | Reply Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | See you then! |
 
-#### Populating a Time Picker question dynamically
+#### Populating a time picker dynamically
 
 You can populate the Time Picker fields with static information, or they can be dynamically populated during run time using data received from an [API integration](conversation-builder-integrations-api-integrations.html).
 
