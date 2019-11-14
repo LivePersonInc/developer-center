@@ -15,20 +15,20 @@ indicator: both
 2. Specify the following:
     * **Data source name**: Enter a name for the knowledge base.
     * **Data source type**: Select "Knowledge Base."
-    * **Language**: Select the language of the knowledge base. The default value is English. For details, see [here](knowledge-base-knowledge-bases.html#language) in the overview.
-    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. For details on creating an import file, see [here](knowledge-base-knowledge-bases.html#prepare-an-import-file) below.
-    * **Intent Association**: Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears. For an explain of these, see [here](knowledge-base-knowledge-bases.html#knowlege-base-intents-versus-domain-intents) in the overview.
+    * **Language**: Select the language of the knowledge base. The default value is English. For details, see [here](knowledge-base-overview.html#languages) in the overview.
+    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. For details on creating an import file, see [here](knowledge-base-knowledge-bases.html#create-an-import-file) below.
+    * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears. For a more in-depth explanation of these, see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) in the overview.
 3. Click **Add**.
 
     This creates the knowledge base, and takes you to its search view. In this default view, you can search the title, intent qualifiers and content of articles.
 
-### Prepare an import file
+### Create an import file
 
-If you want to import a set of articles into a knowledge base when you add the knowledge base, you'll need to prepare the import file.
+If you want to import a set of articles into a knowledge base when you add the knowledge base, you'll need to create the import file.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_importFile.png">
 
-**To prepare an import file**
+**To create an import file**
 
 1. Create a new CSV file or Google sheet.
 2. Add the column headers listed below; use the order listed.
