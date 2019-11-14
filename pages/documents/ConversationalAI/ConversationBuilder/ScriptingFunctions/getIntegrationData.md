@@ -15,6 +15,34 @@ Use the following built-in functions to get information on the results of an int
 {: .important}
 New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
 
+### Is API integration execution successful?
+
+Used to determine whether execution of the API integration was successful.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `isApiExecutionSuccessful()` | None | Boolean (true or false) |
+
+#### Example
+
+```javascript
+to be added
+```
+
+### Get API integration status code
+
+Used to retrieve the HTTP status (response) code from execution of the API integration.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getApiStatusCode()` | None | string: 200, 201, 400, 440, 450, etc. |
+
+#### Example
+
+```javascript
+to be added
+```
+
 ### Get API integration results count
 
 Most commonly used to check whether an API integration returned any results at all, and how many. If no results are returned, you should display an error message or redirect to a failover message.
