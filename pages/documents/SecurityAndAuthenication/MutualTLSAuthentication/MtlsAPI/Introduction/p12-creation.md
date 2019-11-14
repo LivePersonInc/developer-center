@@ -2,7 +2,7 @@
 pagename: Creating a P12 File
 keywords:
 sitesection: Documents
-categoryname: "Security & Authenication"
+categoryname: "Security & Authentication"
 documentname: MTLS API
 indicator: both
 permalink: mtls-creating-a-p12-file.html

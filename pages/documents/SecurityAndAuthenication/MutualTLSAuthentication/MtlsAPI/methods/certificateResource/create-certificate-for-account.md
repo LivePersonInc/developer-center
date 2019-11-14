@@ -2,7 +2,7 @@
 pagename: Create certificate for account
 keywords:
 sitesection: Documents
-categoryname: "Security & Authenication"
+categoryname: "Security & Authentication"
 documentname: MTLS API
 subfoldername: Methods
 permalink: mtls-methods-create-certificate-for-account.html

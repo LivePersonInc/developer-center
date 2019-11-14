@@ -1,156 +1,123 @@
 ---
-pagename: Permissions per Role
+pagename: Permissions
 redirect_from:
     - conversation-builder-accounts-user-role-permissions.html
     - bot-accounts-user-role-permissions.html
+    - bot-accounts-permissions-per-role.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bot Accounts
-permalink: bot-accounts-permissions-per-role.html
+permalink: bot-accounts-permissions.html
 indicator: both
 ---
 
-In order to view or edit user permissions, you must click on the Organization, then click on Users in the top nav bar.
+Users are granted privileges in Conversation Builder by way of assignment of Conversation Builder permissions.
 
-### Super Admin
+Conversation Builder's permission model is built on LiveEngage’s. You can use LiveEngage’s four roles (Agent, Agent manager, Campaign manager, Admin) as the basis from which to create custom profiles to suit your organization's needs. You can then assign those [profiles](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html) to users.
 
-A user should have this role if they own the entire brand's automation project.
+As an example, in LiveEngage, you might want to create a profile that grants (turns on) all Conversation Builder permissions, naming it something like, "CB - All Permissions," as we've done below.
 
-#### Included Permissions
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/permissions2.png">
 
-The Super Admin has the following permissions **in addition to all permissions that the [Admin](#admin) role has.**
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/permissions3.png">
 
-* Bot Builder (Read All Bots In All Accounts)
-* Bot Builder (Write All Bots In All Accounts)
-* Knowledge base (Read All KBs In All Accounts)
-* Knowledge base (Write All KBs In All Accounts)
-* Intent Builder (Read All Domains In All Accounts)
-* Intent Builder (Write All Domains in All Accounts)
-* Analytics (Read All Bots In All Accounts)
-* Accounts (Read All Accounts)
-* Accounts (Write All Accounts)
-* Operations (Read Own & Account Bot Agents)
-* Operations (Write Own & Account Bot Agents)
-* Operations (Read All Bot Agents In Account)
-* Operations (Write All Bot Agents In Account)
-* Operations (Read All Bot Agents In All Accounts)
-* Operations (Write All Bot Agents In All Accounts)
-* Operations (Read All Servers)
-* Operations (Write All Servers)
-* Template (Write & Read)
+You can then assign this profile to users like so:
 
-### Admin
+<img class="fancyimage" style="width:650px" src="img/ConvoBuilder/permissions4.png">
 
-A user should have this role if they own a segment of the brand's automation project.
+As shown above, a profile contains a set of permissions. Conversation Builder supports two categories of permissions:
 
-#### Included Permissions
+* **Primary permissions**: These are stand-alone permissions that govern the primary functionality of Conversation Builder. "Stand-alone" means you could assign just one of these to a Conversation Builder user.
+* **Granular Permissions**: These are designed to give you more flexibility regarding the restrictions that you want to put into place. This is achieved through the use of "add-on" roles.
 
-* Bot Builder (Read Own & Account Bot)
-* Bot Builder (Write Own & Account Bot)
-* Bot Builder (Read All Bots In Account)
-* Bot Builder (Write All Bots In Account)
-* Knowledge base (Read Own & Account KBs)
-* Knowledge base (Write Own & Account KBs)
-* Knowledge base (Read All KBs In Account)
-* Knowledge base (Write All KBs In Account)
-* Intent Builder (Read Own & Account Domains)
-* Intent Builder (Write Own & Account Domains)
-* Intent Builder (Read All Domains In Account)
-* Intent Builder (Write All Domains in Account)
-* Analytics (Read Own & Account Bots)
-* Analytics (Read All Bots In Account)
-* Accounts (Read Own Accounts)
-* Accounts (Write Own Accounts)
+### Primary permissions
 
-### Bot Builder
+#### Conversation Builder: Administrator
 
-A user should have this role if they are responsible for creating or maintaining an automation.
+Users with this permission have full privileges (with exceptions noted below), including the ability to create, deploy and manage agent connectors at the bot level within Conversation Builder.
 
-#### Included Permissions
+Users with this permission do have the following limitations:
 
-* Bot Builder (Read Own & Account Bot)
-* Bot Builder (Write Own & Account Bot)
-* Knowledge base (Read Own & Account KBs)
-* Knowledge base (Write Own & Account KBs)
-* Intent Builder (Read Own & Account Domains)
-* Intent Builder (Write Own & Account Domains)
-* Analytics (Read Own & Account Bots)
+* No ability to create and manage (bot) templates
+* No access to the Bot Status application, which is the operations area where bot deployments for the entire organization can be managed
 
-### Content User
+#### Conversation Builder: Bot Builder
 
-A user should have this role if they are responsible for maintaining the business logic and use cases that are relevant to automations. 
+This permission provides full privileges for creating bots and related resources. More specifically, users with this permission can create and manage:
 
-#### Included Permissions
+* Bots
+* Bot versions and releases
+* Integrations
+* Global functions
+* Credentials
+* Knowledge bases and articles
+* Domains, intents and entities
 
-* Bot Builder (Read Own & Account Bot)
-* Knowledge base (Read Own & Account KBs)
-* Knowledge base (Write Own & Account KBs)
-* Intent Builder (Read Own & Account Domains)
-* Intent Builder (Write Own & Account Domains)
-* Analytics (Read Own & Account Bots)
+Users with this permission can also:
 
-### Operations
+* Activate and train models
+* Create, deploy and manage agent connectors at the bot level within Conversation Builder
+* View and download analytics data
 
-A user should have this role if they are a system admin that is responsible for maintaining long running processes like bots.
+This permission doesn't allow the user to create and manage (bot) templates, accounts or users. Also, this permission doesn't allow the user access to the Bot Status application, which is the operations area where bot deployments for the entire organization can be managed.
 
-#### Included Permissions
+#### Conversation Builder: Content User
 
-* Operations (Read Own & Account Bot Agents)
-* Operations (Write Own & Account Bot Agents)
+This permission is for users who create content. More specifically, users with this permission can create and manage:
 
-### Business User
+* Knowledge bases and articles
+* Domains, intents and entities
 
-A user should have this role if they are a business analyst that is responsible for reporting on success of an automation.
+Users with this permission can also:
 
-#### Included Permissions
+* Activate and train models
+* View and download analytics data
 
-* Analytics (Read Own & Account Bots)
+#### Conversation Builder: Business User
 
-### Template Manager
+Users with this permission can only do the following:
 
-A user should have this role if they want to create and maintain bot templates that are useful for their business domain.
+* View and download analytics data
 
-#### Included Permissions
+#### Conversation Builder: Bot Status Access
 
-* Template (Write & Read)
+Users with this permission can only do the following:
 
-### Role Permissions Comparison
+* Create, deploy and manage agent connectors for the entire organization in the Bot Status application
 
-| Policy                                               | Content User | Bot Builder | Business User  | Operations | Admin | Super Admin | Template Manager |
-|------------------------------------------------------|--------------|-------------|----------------|------------|-------|-------------|------------------|
-| Bot Builder \(Read Own & Account Bot\)               | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
-| Bot Builder \(Write Own & Account Bot\)              | No           | Yes         | No             | No         | Yes   | Yes         | No               |
-| Bot Builder \(Read All Bots In Account\)             | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Bot Builder \(Write All Bots In Account\)            | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Bot Builder \(Read All Bots In All Accounts\)        | No           | No          | No             | No         | No    | Yes         | No               |
-| Bot Builder \(Write All Bots In All Accounts\)       | No           | No          | No             | No         | No    | Yes         | No               |
-| Knowledge base \(Read Own & Account KBs\)            | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
-| Knowledge base \(Write Own & Account KBs\)           | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
-| Knowledge base \(Read All KBs In Account\)           | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Knowledge base \(Write All KBs In Account\)          | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Knowledge base \(Read All KBs In All Accounts\)      | No           | No          | No             | No         | No    | Yes         | No               |
-| Knowledge base \(Write All KBs In All Accounts\)     | No           | No          | No             | No         | No    | Yes         | No               |
-| Intent Builder \(Read Own & Account Domains\)        | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
-| Intent Builder \(Write Own & Account Domains\)       | Yes          | Yes         | No             | No         | Yes   | Yes         | No               |
-| Intent Builder \(Read All Domains In Account\)       | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Intent Builder \(Write All Domains in Account\)      | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Intent Builder \(Read All Domains In All Accounts\)  | No           | No          | No             | No         | No    | Yes         | No               |
-| Intent Builder \(Write All Domains in All Accounts\) | No           | No          | No             | No         | No    | Yes         | No               |
-| Analytics \(Read Own & Account Bots\)                | Yes          | Yes         | Yes            | No         | Yes   | Yes         | No               |
-| Analytics \(Read All Bots In Account\)               | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Analytics \(Read All Bots In All Accounts\)          | No           | No          | No             | No         | No    | Yes         | No               |
-| Accounts \(Read Own Accounts\)                       | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Accounts \(Write Own Accounts\)                      | No           | No          | No             | No         | Yes   | Yes         | No               |
-| Accounts \(Read All Accounts\)                       | No           | No          | No             | No         | No    | Yes         | No               |
-| Accounts \(Write All Accounts\)                      | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Read Own & Account Bot Agents\)         | No           | No          | No             | Yes        | No    | Yes         | No               |
-| Operations \(Write Own & Account Bot Agents\)        | No           | No          | No             | Yes        | No    | Yes         | No               |
-| Operations \(Read All Bot Agents In Account\)        | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Write All Bot Agents In Account\)       | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Read All Bot Agents In All Accounts\)   | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Write All Bot Agents In All Accounts\)  | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Read All Servers\)                      | No           | No          | No             | No         | No    | Yes         | No               |
-| Operations \(Write All Servers\)                     | No           | No          | No             | No         | No    | Yes         | No               |
-| Download Data \- Bulk                                | No           | No          | No             | No         | No    | No          | No               |
-| Template \(Write & Read\)                            | No           | No          | No             | No         | No    | Yes         | Yes              |
+### Granular permissions
+
+As a business, you might want to provide basic Conversation Builder development capabilities to some users, with restrictions regarding certain capabilities like access to API integrations, update of credentials, and the import and export of bots. You can achieve this using combinations of the roles discussed below.
+
+#### Conversation Builder: Bot Builder Lite
+
+This "lite" permission is just like the Bot Builder permission with the following, additional limitations:
+
+* No ability to create and work with integrations
+* No ability to create and work with credentials
+* No ability to export and import bots
+
+Use one or more add-on permissions (below) along with this permission, as per your requirements. This allows you to selectively enable access to specific functions. For example, if you want to provide a bot developer with access to API integrations, grant the Bot Builder Lite and API Developer permissions, as shown below.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/permissions1.png">
+
+#### Add-on permissions
+
+##### Conversation Builder: API Developer
+
+Users with this permission can only create and manage *integrations*.
+
+##### Conversation Builder: API Credentials Manager
+
+Users with this permission can only create and manage *credentials*.
+
+{: .important}
+Whenever you assign this permission, also assign Bot Builder Lite *and* API Developer.
+
+##### Conversation Builder: Import/Export Manager
+
+Users with this permission can only do the following:
+
+* Export/import bots
+* Export/import knowledge bases

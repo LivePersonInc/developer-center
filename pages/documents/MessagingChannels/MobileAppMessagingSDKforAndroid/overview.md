@@ -6,11 +6,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-
-level-order: 2
-order: 0
 permalink: mobile-app-messaging-sdk-for-android-overview.html
-root-link: true
 indicator: messaging
 ---
 Messaging and conversational experiences have transformed how businesses engage with their customers. When you add Mobile App Messaging directly within your app, you get:

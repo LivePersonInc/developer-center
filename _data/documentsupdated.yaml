@@ -120,7 +120,6 @@
       - pagename: Natural Language Understanding
         subpages:
           - subpagename: NLU Engines
-          - subpagename: Training and Tuning Your Intents and FAQs
   - documentname: Conversation Builder
     pages:
       - pagename: Getting Started
@@ -153,44 +152,45 @@
           - subpagename: Statements
           - subpagename: Questions
           - subpagename: Integrations
-          - subpagename: Interaction Details
-          - subpagename: Response Match & Actions
-      - pagename: Assist
+          - subpagename: Details - Next Actions
+          - subpagename: Details - Code
+          - subpagename: Details - Settings
+          - subpagename: Troubleshooting
+      - pagename: NLU Assist
       - pagename: Variables & Slots
       - pagename: Integrations
         subpages:
           - subpagename: Integration Basics
           - subpagename: API Integrations
           - subpagename: Email Integrations
-          #- subpagename: Knowledge Base Integrations
+    #      - subpagename: Knowledge Base Integrations
           - subpagename: LivePerson Agent Escalation Integrations
-          - subpagename: LivePerson Functions integrations
+          - subpagename: File Integrations
+          - subpagename: LivePerson Functions Integrations
           - subpagename: Web View Integration API
+          - subpagename: Troubleshooting
+      - pagename: Environment Variables
+      - pagename: Versions & Releases
       - pagename: Scripting Functions
         subpages:
           - subpagename: Introduction
-          - subpagename: Debugging and Logging
-          - subpagename: Get and Set User Data and Variables
-          - subpagename: Get and Set Conversation Flow Data
-          - subpagename: Sending Messages
-          #- subpagename: Context Session Store Wrapper
-      - pagename: Keywords
+          - subpagename: Functions List
+          - subpagename: Get & Set Contextual Data
+          - subpagename: Get User Data
+          - subpagename: Get Integration Data
+          - subpagename: Send Messages
+          - subpagename: Manage Conversation Flow
+          - subpagename: Log & Debug
+          - subpagename: Manage the Context Session Store
       - pagename: Testing & Deployment
         subpages:
           - subpagename: Debugging
           - subpagename: Deploying to LiveEngage
-      #- pagename: Operations
-      - pagename: Common Use Cases
+      - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
-          - subpagename: Environment Variables
-          #- subpagename: Common Conversation Patterns
-          - subpagename: Versions & Releases
+          - subpagename: Train & Tune NLU
           - subpagename: Reusable Components
-      - pagename: Troubleshooting
-        subpages:
-          - subpagename: Interactions
-          - subpagename: Transfer to an Agent or Bot
   - documentname: Maven AI
     pages:
       - pagename: Overview
@@ -223,18 +223,22 @@
   - documentname: Intent Builder
     pages:
       - pagename: Overview
+      - pagename: Domains
+      - pagename: Intents
       - pagename: Entities
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
+  #    - pagename: Knowledge Bases
+      - pagename: Best Practices
+      - pagename: Tutorial
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
-      - pagename: Permissions per Role
-     # - pagename: Roles
+      - pagename: Permissions
       - pagename: Credentials
   - documentname: Third-Party Bots
     pages:
@@ -247,6 +251,7 @@
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
       - pagename: Custom Integration
+      - pagename: Hook Configuration
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
@@ -392,14 +397,14 @@
         - subpagename: Submit Survey Data
         - subpagename: Send a Transcript
       - pagename: Sample Postman Collection
-    #- documentname: Window Customization API
-      #pages:
-      #- pagename: Overview
-      #- pagename: Quick Start
-      #- pagename: Samples
-        #subpages:
-        #- subpagename: CSS Sample
-      #- pagename: Taglet
+    - documentname: Window Customization API
+      pages:
+      - pagename: Overview
+      - pagename: Quick Start
+      - pagename: Samples
+        subpages:
+        - subpagename: CSS Sample
+      - pagename: Taglet
 - categoryname: Contact Center Management
   image: contact-center
   documents:
@@ -750,7 +755,8 @@
       - subpagename: Interface and Class Definitions
     - pagename: SDK Attributes
       subpages:
-      - subpagename: Attributes
+      - subpagename: 5.0 and above
+      - subpagename: 5.0 and below
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:
@@ -798,9 +804,9 @@
       - subpagename: Callbacks Index
     - pagename: SDK Attributes
       subpages:
-      - subpagename: Attributes
+      - subpagename: SDK 5.0 and above
+      - subpagename: SDK 4.1 and below
       - subpagename: Attributes Design Sheet
-      - subpagename: Deprecated Attributes
     - pagename: String Localization
       subpages:
       - subpagename: Localization Keys
@@ -983,7 +989,7 @@
             - subpagename: Delete certificate by ID
             - subpagename: Get all certificates by account
             - subpagename: Get certificate by ID
-            - subpagename: Update certificate for account
+            - subpagename: Create certificate for account
             - subpagename: Update certificate from file
             - subpagename: Forward delete request
             - subpagename: Forward get request

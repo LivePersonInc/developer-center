@@ -23,6 +23,7 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 | Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
 | Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
+| Toolbelt.SDEUtil() | Returns a SDE Util instance. Provides SDE related functionality, such as setting/ updating SDEs for an Engagement. |
 
 Here are usage example, which are taken out of the official templates:
 
@@ -69,7 +70,7 @@ httpClient(URL, {
 
 ### LivePerson Client:
 
-The LivePerson (LP) Client is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. To use the LP Client you need to [whitelist](liveperson-functions-development-whitelisting-domains.html) `api.liveperson.net`.
+The LivePerson (LP) Client is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization.
 
  Every LivePerson API has a service name. This is documented in the respective page on [developers.liveperson.com](https://developers.liveperson.com). The [Messaging Interactions API](messaging-interactions-api-overview.html) for instance has the service name `msgHist`. The LP Client expects the LpService name as the first argument. This can be done by using our `LpServices` enum or by manually providing the service name as a string. Each of the API-domains related to the `LpServices` enum is whitelisted in LivePerson Functions by default. (s. [Whitelisted Domains](liveperson-functions-development-whitelisting-domains.html#domains-whitelisted-by-default) for more information)
 
@@ -320,25 +321,62 @@ secretClient
 
 ### Conversation Util
 
-The Conversation Util allows to perform conversation related methods, which are listed below. Authorization is configured during instance creation. This Util works for **Messaging-Use Cases only**!
+The Conversation Util allows conversation related methods to be performed, which are listed below.
 
 #### Get Conversation By ID
 
-This method retrieves a conversation from the [Messaging Interactions API](messaging-interactions-api-methods-get-conversation-by-conversation-id.html). It expects a conversation ID and returns a `Promise` that resolves to a conversation object.
+This method retrieves a conversation from the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-methods-get-conversation-by-conversation-id.html). It requires a conversation ID and accepts an optional Array to define which contents should be retrieved. It returns a `Promise` that resolves to a conversation object.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required?</th>
+<th>Description</th>
+<th>Type/Value</th>
+</tr>
+</thead>
+<col width="20%">
+<col width="15%">
+<col width="50%">
+<col width="15%">
+<tbody>
+<tr>
+<td>conversationId</td>
+<td>yes</td>
+<td>The ID of the conversation that should be retrieved</td>
+<td>string</td>
+</tr>
+<tr>
+<td>contentToRetrieve</td>
+<td>no</td>
+<td>An array which can be used to define the content that should be retrieved. Use the <b>ConversationContentTypes</b> for an overview of which content types can be retrieved (s. Sample Usage below)</td>
+<td>array</td>
+</tr>
+</tbody>
+</table>
+
 
 **Sample Usage**
 
 ```javascript
   // import FaaS Toolbelt
-  const { Toolbelt } = require("lp-faas-toolbelt");
+  const { Toolbelt, ConversationContentTypes } = require("lp-faas-toolbelt");
 
   // Create instance
   const conversationUtil = Toolbelt.ConversationUtil();
 
+  // Define Parameters
+  const conversationId = "c911f008-4761-4f43-95445-6948017eace5"
+  const contentToRetrieve = [
+    ConversationContentTypes.SDES,
+    ConversationContentTypes.UNAUTH_SDES
+  ]
+
   // Get conversation
-  conversationUtil.getConversationById(conversationId)
-  .then(conversation => //TODO: react on the response)
-  .catch(err => //TODO: React to error);
+  conversationUtil.getConversationById(conversationId, contentToRetrieve)
+  .then(conversation => {}) //TODO: react to the response
+  .catch(err => {}); //TODO: React to error
 ```
 
 #### Scan Conversation For Keywords
@@ -464,4 +502,163 @@ conversationUtil.getConversationById(conversationId)
   ))
   .then(replacedFiles => //TODO: react on the response)
   .catch(err => //TODO: React to error);
+```
+### SDE Util
+
+The SDE Util allows SDE related methods to be performed, which are listed below.
+
+#### Add SDEs
+This method adds/ updates SDEs to an Engagement via the [Engagement Attributes API](https://developers.liveperson.com/engagement-attributes-api-overview.html). It requires the session ID and the visitor ID where the SDEs should be added and the SDEs themselves. It returns a `Promise` that resolves when the SDEs have been successfuly set/ updated.
+
+**Parameters**
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required?</th>
+<th>Description</th>
+<th>Type/Value</th>
+</tr>
+</thead>
+<col width="20%">
+<col width="15%">
+<col width="50%">
+<col width="15%">
+<tbody>
+<tr>
+<td>sdes</td>
+<td>yes</td>
+<td>Array of SDEs which should be added to an engagement. For more information about the available Engagement Attributes, refer to the <a href="engagement-attributes-overview.html">Engagement Attributes Overview</a>. Also use the <b>SDETypes</b> for suggestions for which types of engagement attributes can be added. (s. sample usage below)</td>
+<td>array</td>
+</tr>
+<tr>
+<td>visitorId</td>
+<td>yes</td>
+<td>The ID of the Visitor you want to add the SDEs to. (Sometimes is included in the faas-event payload, if not use the conversation ID with the <a href="liveperson-functions-development-toolbelt.html#get-conversation-by-id">Conversation Util</a> to retrieve)</td>
+<td>string</td>
+</tr>
+<tr>
+<td>sessionId</td>
+<td>yes</td>
+<td>The ID of the Session you want to add the SDEs to. (Sometimes is included in the faas-event payload, if not use e.g. the conversation ID with the <a href="liveperson-functions-development-toolbelt.html#get-conversation-by-id">Conversation Util</a> to retrieve)</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+
+
+
+**Sample Usage**
+
+```javascript
+  // import FaaS Toolbelt
+  const { Toolbelt, SDETypes } = require("lp-faas-toolbelt");
+
+  // Create instance
+  const sdeUtil = Toolbelt.SDEUtil();
+
+  // Define parameters
+  const visitorId = "YyY2RlZGY3NzZjYoJhZGQx";
+  const sessionId = "bjfYkPt-SYCqqZWDHNwSKQ";
+  const sdes = [
+    {
+        type: SDETypes.PERSONAL_INFO,
+        personal: {
+            contacts: [
+                {
+                    email: "john.doe@example.com"
+                }
+            ]
+        }
+    }
+  ];
+
+  // Add SDEs
+  sdeUtil.addSDEs(sdes, visitorId, sessionId)
+  .then(response => {}) //TODO: react to the response
+  .catch(err => {}); //TODO: React to error
+
+```
+
+#### Get SDEs from Conversation
+
+The method extracts the SDEs from a conversation that has been retrieved fromt the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html). (e.g via the [ConversationUtil](http://localhost:3000/liveperson-functions-development-toolbelt.html#conversation-util)) Before returning them, it sorts the contained SDE-Events in ascending order.
+
+**Sample Usage**
+
+```javascript
+  // import FaaS Toolbelt
+  const { Toolbelt, ConversationContentTypes } = require("lp-faas-toolbelt");
+
+  // Create SDE/Conversation-Util instance
+  const conversationUtil = Toolbelt.ConversationUtil()
+  const sdeUtil = Toolbelt.SDEUtil();
+
+  // Define parameters
+  const conversationId = "c944f008-4761-4f43-9536-6948017eace5";
+  const contentToRetrieve = [
+    ConversationContentTypes.SDES,
+    ConversationContentTypes.UNAUTH_SDES
+  ]
+
+  // Get Conversation and extract SDEs
+  conversationUtil.getConversationById(conversationId, contentToRetrieve)
+  .then(conversation => {
+    // TODO: define how to procede with the SDEs
+    const sdes = sdeUtil.getSDEsFromConv(conversation);
+  })
+  .catch(err => {}); //TODO: React to error
+```
+
+**Sample Result**
+
+If there were no errors, the result is an object which allways contains an array of SDE-Events for authenticated SDEs (`sdes`) and an array for unauthanticated SDEs. (`unAuthSdes`) Those arrays are sorted in ascending order, meaning the last event is the most current one.
+
+```javascript
+{
+        sdes: {
+            events: [
+                {
+                    customerInfo: {
+                      ...
+                    },
+                    serverTimeStamp: 1569572377158,
+                    sdeType: 'CUSTOMER_INFO',
+                },
+                {
+                    personalInfo: {
+                      ...
+                    },
+                    serverTimeStamp: 1569572377270,
+                    sdeType: 'PERSONAL_INFO',
+                },
+            ],
+        },
+        unAuthSdes: {
+            events: [
+                {
+                    customerInfo: {
+                        ...
+                    },
+                    serverTimeStamp: 1569574433640,
+                    sdeType: 'CUSTOMER_INFO',
+                },
+                {
+                    customerInfo: {
+                        ...
+                    },
+                    serverTimeStamp: 1569574433640,
+                    sdeType: 'CUSTOMER_INFO',
+                },
+                {
+                    personalInfo: {
+                        ...
+                    },
+                    serverTimeStamp: 1569574433865,
+                    sdeType: 'PERSONAL_INFO',
+                },
+            ],
+        },
+    }
 ```

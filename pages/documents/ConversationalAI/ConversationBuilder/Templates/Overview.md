@@ -10,9 +10,9 @@ permalink: conversation-builder-templates-overview.html
 indicator: both
 ---
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_selection3.png">
+All Conversation Builder bots are based on **templates**.
 
-All Conversation Builder Automations are based upon **templates**. The Basic Bot template is the best choice if you want to create a completely custom bot from scratch.
+The Custom Bot template is the best choice if you want to create a completely custom bot from scratch.
 
 For other, more common use cases, Conversation Builder has a set of predefined, industry vertical templates that enable rapid adoption of automation.
 
@@ -20,11 +20,11 @@ Each conversational template consists of the following capabilities:
 
 * Intents associated with the use case
 
-* Conversational dialogs with appropriate interactions for the respective channels or end points (Web, Apple Business Chat, SMS etc.)
+* Conversational dialogs with appropriate interactions for the respective channels or end points (Web, Apple Business Chat, SMS, etc.)
 
 * API integrations with industry-leading services (e.g., Shopify in Retail) and brand-specific services
 
-### Template Use Cases
+### Template use cases
 
 The following use cases will be provided for multiple different industry verticals.
 
