@@ -118,7 +118,7 @@ Section and item settings define how to display the sections and individual item
 | --- | --- | --- | --- |
 | Section Title | The title of the section. | Required | Birthdays |
 | ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). | Optional | https://www.mysite.com/images/dahlias.jpg |
-| ADD IMAGE > Image Style | The style of the image, one of Default, Small, or Large. | Optional | Small |
+| ADD IMAGE > Image Style | Select "Default." Only this value is supported. | Optional | Default |
 | ADD IMAGE > Identifier  | A unique identifier for the item; this is system-generated. | Not applicable | 32957836-2f95-1e8d-ce4e-aa95e8f844a2 |
 | Item Title | The item’s title. | Required | Mixed dahlias |
 | Item Subtitle | The item’s subtitle. | Optional | Bright and cheery! |
