@@ -39,7 +39,7 @@ When calling the API **without** sending **'contentToRetrieve'** parameter at al
 
 **Default types:**
 
-```json
+```
 campaign, messageRecords, agentParticipants, agentParticipantsLeave,
 agentParticipantsActive, consumerParticipants, transfers, interactions,
 messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, SDEs.
@@ -72,7 +72,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |latestConversationQueueState | The queue state of the conversation  | String| Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
 responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
-|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, latestAgentSurvey, previouslySubmittedAgentSurveys||latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, latestAgentSurvey, previouslySubmittedAgentSurveys|
+|latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to} | Range of NPS assigned to the conversation. | numeric, numeric| Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
 |questionBrick | Match a specific word within a PCS question name or brick ID | alphanumeric  | Optional |
 |invalidFreeTextAnswer | Search only for conversations that contain invalid free text answer. | String  | Optional | Valid values: INVALID_FREE_TEXT_ANSWER. |
@@ -568,7 +569,7 @@ Name         | Description                                     | Type/Value | No
 :----------- | :---------------------------------------------- | :--------- | :----------------------------
 surveyStatus | Status of the survey.                           | string     | Valid values: "OPEN", "SUBMITTED", "DISMISSED", "CLOSED".
 statusReason | Status Reason.                                  | string     | Valid values: "skillChanged", "timeout", "OPEN", "SUBMITTED", "DISMISSED".
-dialogId     | The ID of the dialog.                           | string     | 
+dialogId     | The ID of the dialog.                           | string     |
 surveyId     | The runtime survey ID.                          | string     |
 acSurveyId   | The AC form ID.                                 | string     |
 acSurveyName | The AC form name.                               | string     |
@@ -591,7 +592,7 @@ Name         | Description                                     | Type/Value | No
 :----------- | :---------------------------------------------- | :--------- | :----------------------------
 surveyStatus | Status of the survey.                           | string     | Valid values: "OPEN", "SUBMITTED", "DISMISSED", "CLOSED".
 statusReason | Status Reason.                                  | string     | Valid values: "skillChanged", "timeout", "OPEN", "SUBMITTED", "DISMISSED".
-dialogId     | The ID of the dialog.                           | string     | 
+dialogId     | The ID of the dialog.                           | string     |
 surveyId     | The runtime survey ID.                          | string     |
 acSurveyId   | The AC form ID.                                 | string     |
 acSurveyName | The AC form name.                               | string     |
