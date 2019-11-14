@@ -86,6 +86,8 @@ Bot settings include:
 
 - **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons. If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t.
 
+- **Default User-Friendly Response**: When the bot encounters errors or throws exceptions, many times a default, English-language message to that effect is sent to the user. Use this field to replace that message with a user-friendly, meaningful one that satisfies your requirements in terms of substance and language (e.g., you might want to send a Spanish response). Note that this message doesn't replace a Fallback dialog, as they serve different purposes. A Fallback dialog handles when the user's utterance doesn't match a pattern or intent. In contrast, this message is sent when the bot encounters an error or throws an exception.
+
 ### Export a bot
 Export of an bot creates a JSON file.
 
