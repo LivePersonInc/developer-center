@@ -50,9 +50,9 @@ Once the user selects the correct intent, if that intent is associated with a Us
     - **Disambiguate only selected domains**: If you only want the bot to include matches to intents in specific domains, select this check box, and then select those domains. You can select from all domains associated with dialogs in the bot.
 3. Click **Save**.
 4. Open the **Interaction Details** for the disambiguation interaction, click **Settings**, and specify the following:
-    - **\# of intents to show**: Select whether to show 2 or 3 intent choices to the consumer. The intents are selected based on the match results that are in the same category.
-    - **Something else** (checkbox): Select this if you want to add a "none of the above" type of choice to the clarification question. By default, in the conversation, this option returns a reply of, *"That's not what I was expecting, Please select from one of these options."* However, you can add a response condition to the disambiguation interaction and use pattern matching to direct the conversation flow in a different way.
-    - **Something else** (label): This is the label for the "Something else" choice. The default value is, "Something else," but you can change this if desired.
+    - **\# of intents to show**: Select whether to show 2 or 3 intent choices to the consumer.
+    - **Additional option to show* (checkbox): Select this if you want to add a "none of the above" type of choice to the clarification question. By default, in the conversation, this option returns a reply of, *"That's not what I was expecting, Please select from one of these options."* However, you can add a response condition to the disambiguation interaction and use pattern matching to direct the conversation flow in a different way.
+    - **Additional option to show** (label): This is the label for the "Additional option to show" choice. Enter a value, for example, "None of the above."
 5. Click **Save**.
 6. In the Disambiguation interaction, enter the question text to send to the consumer.
     <img style="width:800px" src="img/ConvoBuilder/dialogs_disambiguation5.png">
@@ -66,6 +66,28 @@ Once the user selects the correct intent, if that intent is associated with a Us
     You can add any number of interactions to the dialog. For example, you might want to add a LivePerson Agent Escalation integration.
     
     To debug or access disambiguation intent data, use the built-in [disambiguation functions](conversation-builder-scripting-functions-get-set-contextual-data.html#get-disambiguated-intent).
+
+### Customization points
+
+**Showing the best-ranked matches or consecutively ranked matches**
+
+| Environment variable name | Value | Example | Description |
+| ---- | ---- | ---- | ---- |
+| system_groupConsecutiveIntentRanksInDisambiguation | Boolean | true | If true, the best matches across consecutive ranks (VERY GOOD, GOOD, etc.) are shown to the user. If false, only matches in the highest rank are shown. The default value is true.
+
+**Example 1** - Assume you set things to show 2 intents for disambiguation. The system then matches 3 intents, 2 in VERY GOOD status and 1 in GOOD status. If this variable is *true*, 1 VERY GOOD and 1 GOOD intent (consecutively ranked) are shown to the user. If this variable is *false*, the 2 VERY GOOD intents are shown.
+
+**Example 2** - Assume you set things to show 2 intents for disambiguation. The system then matches 3 intents, one each in VERY GOOD, GOOD, and FAIR PLUS status. If this variable is *true*, the VERY GOOD and GOOD intents (consecutively ranked) are shown to the user. If this variable is *false*, only the VERY GOOD intent would be considered for disambiguation. But since disambiguation only occurs when *multiple* intents must be clarified by the user, the user is simply directed to the associated dialog.
+
+**Including/excluding intents that don't have dialog starters**
+
+| Environment variable name | Value | Example | Description |
+| ---- | ---- | ---- | ---- |
+| system_useIntentsOnlyWithDialogStartersInDisambiguation | Boolean | true | If true, only intents linked to dialog starters (User Says interactions) are considered for disambiguation. If false, intents that aren't linked to dialog starters are also considered. The default value is false. |
+
+**Example 1** - Assume you set things to show 2 intents for disambiguation, and you set this variable to *true*. The system then matches 2 intents; 1 has a dialog starter, but the other doesn't. In this case, disambiguation does not occur. The user is directed to the only dialog that has a dialog starter. This is because disambiguation only occurs when *multiple* intents must be clarified by the user.
+
+**Example 2** - Assume you set things to show 3 intents for disambigution, and you set this variable to *true*. The system then matches 2 intents that have dialog starters but 1 that doesn't. In this case, disambiguation occurs because multiple intents (2) still must be clarified by the user. But if 2 of the 3 matched intents didn't have dialog starters, disambiguation would not occur. The user would be directed to the only dialog that has a dialog starter.
 
 ### FAQs about disambiguation
 
