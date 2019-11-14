@@ -76,7 +76,7 @@ You can populate the tiles with static information, or they can be dynamically p
 - Formatting of text (bold, italics, etc.) isn't supported.
 
 
-### Apple List Picker questions
+### Apple List Picker
 
 **For Apple Business Chat only.**
 
@@ -159,7 +159,7 @@ Once a user makes their selection in the list picker, the reply is sent back to 
 <img style="width:350px" src="img/ConvoBuilder/questions_listPicker4.png">
 
 
-### Apple Time Picker questions
+### Apple Time Picker
 **For Apple Business Chat only.** 
 
 If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the Time Picker question interaction to display an interactive time picker, so the consumer can schedule a meeting or an appointment. (The interaction has been developed per Apple's Time Picker specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/time_picker).)
