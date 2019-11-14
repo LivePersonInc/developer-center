@@ -989,7 +989,7 @@
             - subpagename: Delete certificate by ID
             - subpagename: Get all certificates by account
             - subpagename: Get certificate by ID
-            - subpagename: Update certificate for account
+            - subpagename: Create certificate for account
             - subpagename: Update certificate from file
             - subpagename: Forward delete request
             - subpagename: Forward get request
