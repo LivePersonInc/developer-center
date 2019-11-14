@@ -28,7 +28,7 @@ After the pre-requisite steps are performed, at a high level, deployment is a tw
 2. [Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). This gets the agent connector running in the target environment.
 
 {: .important}
-LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more.
+LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 For some practice at deployment, complete the [Connect to Live Engage](conversation-builder-getting-started-4-connect-to-liveengage.html) tutorial. 
 
