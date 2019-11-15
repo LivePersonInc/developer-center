@@ -11,6 +11,26 @@ indicator: both
 
 The techniques discussed below provide solutions to common use cases and conversation challenges.
 
+### Keep the consumer in the current dialog
+
+In a bot, at branching points within a dialog, the consumer is asked to answer questions or make choices about how to proceed. Depending on the goal of the bot, you might need to ensure that the consumer's next utterance doesn't jump the consumer out into another dialog due to the NLU matching the utterance to another intent. Sometimes jumping to another dialog is desirable, but other times it isn't. For example, you might need the consumer to answer a specific question, so you need a way to keep the consumer in the current dialog until that's done.
+
+You can help to keep the consumer in the current dialog by offering predefined options in a menu of buttons or predefined choices to a multiple-choice question. However, there's no guarantee that the consumer won't ignore these and type a response of their own. This means you need a way to handle any other response.
+
+To solve this problem, you can create a "catch all other utterances" condition that directs the flow as you need, either to repeat the same question or to redirect the flow to somewhere else within the bot.
+
+**To implement this solution**
+
+1. In the interaction, create a *final* (last) **Response Match & Actions** set.
+2. Under **Conditions**, add the pattern " * ", which is the asterisk wildcard character. This will catch all utterances other than those caught by earlier conditions.
+3. Under **Next Step**, select the next step. In our example below, we've chosen to repeat the same email question.
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/keepUserInDialog1.png">
+
+This yields a conversation that looks like this:
+
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png">
+
 ### Block consumer interruptions
 
 One bot scenario that is typical is to have the bot present several text interactions containing information, with small delays between each interaction (to aid accessibility issues). After the interactions are sent in sequence, the bot then asks the consumer a question to decide the next step in the conversation flow.
