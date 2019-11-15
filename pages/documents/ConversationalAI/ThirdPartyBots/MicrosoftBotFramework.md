@@ -311,14 +311,13 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
 
 Figure 10.1 Customer activity excerpt on a new chat
 
+### Sending Multiple Responses
 
-### Sending multiple responses
 As stated under Limitations we only process the first activity that is send in response to a customer message.
 If your bot should reply with more than one message, you need to send a multiMessage property inside the channelData.
 
 You can define any number of messages in this array. This messages can be plain text, define a delay before the
 next message is send or contain structured content in the same format that could also be be send directly as a channel data object.
-
 
 ```json
 {
@@ -337,9 +336,112 @@ next message is send or contain structured content in the same format that could
       {
         "type": "structured-content",
         "value": {
+          "metadata": [],
+          "structuredContent": {}
+        }
+      }
+    ]
+  }
+}
+```
+
+### Sending Encoded Metadata
+
+LiveEngage Messaging (not available for chat) provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+
+<ul>
+  <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
+  <li>Content is base64 encoded</li>
+  <li> Metadata size is limited to 5k</li>
+  <li>It can be sent with simple Text, Rich Content (structured content) and Multiple responses</li>
+  <li>(In case metadata was sent with a message) a text message is passed along with the metadata</li> 
+</ul>
+
+{: .important}
+Failing to comply with the above validation points will cause the message to be dropped.
+
+#### Sending Text Message with Encoded Metadata
+
+For sending `encodedMetadata` with a text message you need to provide this property in `channelData` object. Be careful with the camel-case characters you must provide it exactly the same. An example of the simple text message response is below:
+
+```json
+{
+  "type": "message",
+  "text": "Hi i am sending a text with encoded metadata!!",
+  "channelData": {
+    "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=="
+  }
+}
+```
+
+#### Sending Rich Content (structured content) with Encoded Metadata
+
+For sending [structured content](getting-started-with-rich-messaging-introduction.html). You need to add additional property of `encodedMetadata` with your rich content object that you have defined within `channelData` property. An example of the simple Rich Content `JSON` can be seen below:
+
+```json
+{
+  "type": "message",
+  "text": "Hi i am sending a structured content with encoded metadata!!",
+  "channelData": {
+    "metadata": [
+      {
+        "id": "1234",
+        "type": "ExternalId"
+      }
+    ],
+    "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ==",
+    "structuredContent": {
+      "type": "vertical",
+      "elements": [
+        {
+          "type": "button",
+          "click": {
+            "actions": [
+              {
+                "text": "Recommend a movie",
+                "type": "publishText"
+              }
+            ]
+          },
+          "title": "Recommend a movie"
+        }
+      ]
+    }
+  }
+}
+```
+
+#### Sending Multiple Responses with Encoded Metadata
+
+For sending Encoded Metadata with multiple responses one must provide an additional property of `encodedMetadata` with the already existing `type` and `value` properties under `multiMessage` array object. Sending encoded metadata is supported for the `text` and `structure-content` types only. An example of sending encoded metadata with both types can be found below.
+
+{: .important}
+Please note if you will send `encodedMetadata` within the `value` property of type `structure-content` then it will not be passed. This kind of format is only acceptable if you are sending a single Rich Content as a response.
+
+```javascript
+{
+  "type": "message",
+  "text": "",
+  "channelData": {
+    "multiMessage": [
+      {
+        "type": "text",
+        "value": "this is a text",
+        "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=="
+      },
+      {
+        "type": "delay",
+        "value": 5
+      },
+      {
+        "type": "structured-content",
+        "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ==",
+        "value": {
           "metadata": [
+            // ... Some structured content metadata
           ],
           "structuredContent": {
+            // ... Some structured content object
           }
         }
       }
