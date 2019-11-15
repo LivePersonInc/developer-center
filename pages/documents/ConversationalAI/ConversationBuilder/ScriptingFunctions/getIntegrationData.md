@@ -26,7 +26,7 @@ Used to determine whether execution of the API integration was successful.
 #### Example
 
 ```javascript
-to be added
+var isApiExecutionSuccessful = botContext.isApiExecutionSuccessful();
 ```
 
 ### Get API integration status code
@@ -40,7 +40,7 @@ Used to retrieve the HTTP status (response) code from execution of the API integ
 #### Example
 
 ```javascript
-to be added
+var apiStatusCode = botContext.getApiStatusCode();
 ```
 
 ### Get API integration results count
