@@ -340,3 +340,70 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
   }
 }
 ```
+
+### Sending Encoded Metadata
+
+LiveEngage Messaging (not available for chat) provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+
+<ul>
+  <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
+  <li>Content is base64 encoded</li>
+  <li> Metadata size is limited to 5k</li>
+  <li>It can be sent with simple Text, Rich Content (structured content) and Multiple responses</li>
+  <li>(In case metadata was sent with a message) a text message is passed along with the metadata</li> 
+</ul>
+
+{: .important}
+Failing to comply with the above validation points will cause the message to be dropped.
+
+#### Sending Text Message with Encoded Metadata
+
+For sending `encodedMetadata` with the response of your callback this property must be included in the `context` object. Be careful with the camel-case characters you must provide it exactly the same. An example of the simple two text message response is below:
+
+{: .important}
+`encodedMetadata` will be supplied to all the messages defined in `messages` property.
+
+```json
+{
+  "context": {
+    "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=="
+  },
+  "messages": [
+    "I am a text response with encoded metadata",
+    "I am another text response with encoded metadata"
+  ]
+}
+```
+
+#### Sending Rich Content (structured content) with Encoded Metadata
+
+For sending `encodedMetadata` with the response of your callback this property must be included in the `context` object. Be careful with the camel-case characters you must provide it exactly the same. An example of the a simple text message and a rich content response is below:
+
+{: .important}
+`encodedMetadata` will be supplied to all the messages defined in `messages` property and also to rich content.
+
+```json
+{
+  "context": {
+    "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ==",
+    "structuredContent": {
+      "type": "vertical",
+      "elements": [
+        {
+          "type": "button",
+          "click": {
+            "actions": [
+              {
+                "text": "Recommend me a movie, please",
+                "type": "publishText"
+              }
+            ]
+          },
+          "title": "Recommend a movie"
+        }
+      ]
+    }
+  },
+  "messages": ["I am a text response with encoded metadata"]
+}
+```
