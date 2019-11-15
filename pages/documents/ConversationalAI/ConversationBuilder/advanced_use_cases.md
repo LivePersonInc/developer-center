@@ -27,7 +27,7 @@ To solve this problem, you can create a "catch all other utterances" condition t
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/keepUserInDialog1.png">
 
-This yields a conversation that looks like this:
+When the user enters anything but a well-formed email address, this yields a conversation that looks like this:
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png">
 
