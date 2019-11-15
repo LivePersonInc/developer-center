@@ -25,14 +25,14 @@ To solve this problem where the consumer interrupts the bot with "intermediate" 
 
 1. [Add an environment](conversation-builder-environment-variables.html#add-environment-variables) that stores a set of environment variables for the bot. If the bot is already linked to an existing environment, skip this step and append the variables to the existing environment.
 2. In the environment, add the following system [environment variables](conversation-builder-environment-variables.html):
-    * `system_handleIntermediateUserMessage`
-    * `system_intermediateBotMessage`
-    * `system_intermediateBotResponseTimeout`
+    * `system_handleIntermediateUserMessage` - Set this to true.
+    * `system_intermediateBotMessage` - Specify a value.
+    * `system_intermediateBotResponseTimeout` - Specify a value.
     
-    | Environment variable name | Value | Example | Description | 
+    | Environment variable name | Description | Type | Example | 
     |----|----|----|----|
-    | system_handleIntermediateUserMessage | true | true | Enables the behavior to catch and ignore "interrupt" messages by the consumer. | 
-    | system_intermediateBotMessage | string | Please wait...we are still responding to your last message. | Optionally used in conjunction with `system_handleIntermediateUserMessage`. This is the message to send to the consumer if they send an utterance while their messages are blocked. |
-    | system_intermediateBotResponseTimeout | string | 15000 | Used in conjunction with `system_handleIntermediateUserMessage`. This is the timeout period in milliseconds (e.g., 15000 = 15 seconds). This value determines how long the bot will wait to send a message before moving on to sending the next message. In other words, if the wait for a message is too long, this instructs the bot to skip it after the specified amount of time. |
+    | system_handleIntermediateUserMessage | Enables the behavior to catch and ignore "interrupt" messages by the consumer. | Boolean | true |
+    | system_intermediateBotMessage | Optionally used in conjunction with `system_handleIntermediateUserMessage`. This is the message to send to the consumer if they send an utterance while their messages are blocked. | string | Please wait...we are still responding to your last message. |
+    | system_intermediateBotResponseTimeout | Used in conjunction with `system_handleIntermediateUserMessage`. This is the timeout period in milliseconds (e.g., 15000 = 15 seconds). This value determines how long the bot will wait to send a message before moving on to sending the next message. In other words, if the wait for a message is too long, this instructs the bot to skip it after the specified amount of time. | string | 15000 |
 
 3. [Link the environment to the bot](conversation-builder-environment-variables.html#link-environment-variables-to-a-bot) if it isn't already linked.
