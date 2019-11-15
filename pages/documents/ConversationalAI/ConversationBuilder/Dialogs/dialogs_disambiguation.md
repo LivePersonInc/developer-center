@@ -69,25 +69,31 @@ Once the user selects the correct intent, if that intent is associated with a Us
 
 ### Customization points
 
-**Showing the best-ranked matches or consecutively ranked matches**
+#### Showing the matches in the best rank or in consecutive ranks
 
-| Environment variable name | Value | Example | Description |
+Not all intents will be matched with a status in the same rank. For example, two intents might match with a status of VERY GOOD and GOOD, and you might or might not want to show both for disambiguation. Use the [environment variable](conversation-builder-environment-variables.html) below to control this.
+
+| Environment variable name | Description | Value | Example |
 | ---- | ---- | ---- | ---- |
-| system_groupConsecutiveIntentRanksInDisambiguation | Boolean | true | If true, the best matches across consecutive ranks (VERY GOOD, GOOD, etc.) are shown to the user. If false, only matches in the highest rank are shown. The default value is true.
+| system_groupConsecutiveIntentRanksInDisambiguation | If true, the best matches across consecutive ranks (VERY GOOD, GOOD, etc.) are shown to the user. If false, only the best matches in the same, highest rank are shown. The default value is true. | Boolean | true |
 
-**Example 1** - Assume you set things to show 2 intents for disambiguation. The system then matches 3 intents, 2 in VERY GOOD status and 1 in GOOD status. If this variable is *true*, 1 VERY GOOD and 1 GOOD intent (consecutively ranked) are shown to the user. If this variable is *false*, the 2 VERY GOOD intents are shown.
+**Example 1** - Assume you set things to show 2 intents for disambiguation. The system then matches 3 intents, 2 in VERY GOOD status and 1 in GOOD status. If this variable is *true*, 1 VERY GOOD and 1 GOOD intent (which are consecutively ranked) are shown to the user. If this variable is *false*, the 2 VERY GOOD intents (which are in the same rank) are shown.
 
-**Example 2** - Assume you set things to show 2 intents for disambiguation. The system then matches 3 intents, one each in VERY GOOD, GOOD, and FAIR PLUS status. If this variable is *true*, the VERY GOOD and GOOD intents (consecutively ranked) are shown to the user. If this variable is *false*, only the VERY GOOD intent would be considered for disambiguation. But since disambiguation only occurs when *multiple* intents must be clarified by the user, the user is simply directed to the associated dialog.
+**Example 2** - Assume you set things to show 2 intents for disambiguation. The system then matches 3 intents, one each in VERY GOOD, GOOD, and FAIR PLUS status. If this variable is *true*, the VERY GOOD and GOOD intents are shown to the user. If this variable is *false*, only the VERY GOOD intent would be considered for disambiguation. But since disambiguation only occurs when *multiple* intents must be clarified by the user, the user is simply directed to the associated dialog.
 
-**Including/excluding intents that don't have dialog starters**
+#### Including/excluding intents that don't have dialog starters
 
-| Environment variable name | Value | Example | Description |
+In your bot, you might have some dialogs that start with dialog starters (User Says interactions) and others that don't. During disambiguation, when a user clarifies their intent and selects an intent with a dialog starter, matching occurs, and the user is taken to the dialog. But when the user selects an intent *without* a dialog starter, no matching occurs, so the fallback message is displayed. This is because there is no context switching during disambiguation. You can solve this and avoid the fallback message by adding a Response Match condition inside the Disambiguation dialog--to handle the user's selection and direct the flow as you need. Or, you can configure things so that intents without dialog starters aren't considered for disambiguation. Use the [environment variable](conversation-builder-environment-variables.html) below to control this.
+
+| Environment variable name | Description | Value | Example |
 | ---- | ---- | ---- | ---- |
-| system_useIntentsOnlyWithDialogStartersInDisambiguation | Boolean | true | If true, only intents linked to dialog starters (User Says interactions) are considered for disambiguation. If false, intents that aren't linked to dialog starters are also considered. The default value is false. |
+| system_useIntentsOnlyWithDialogStartersInDisambiguation | If true, only intents linked to dialog starters (User Says interactions) are considered for disambiguation. If false, intents that aren't linked to dialog starters are also considered. The default value is false. | Boolean | true |
 
 **Example 1** - Assume you set things to show 2 intents for disambiguation, and you set this variable to *true*. The system then matches 2 intents; 1 has a dialog starter, but the other doesn't. In this case, disambiguation does not occur. The user is directed to the only dialog that has a dialog starter. This is because disambiguation only occurs when *multiple* intents must be clarified by the user.
 
 **Example 2** - Assume you set things to show 3 intents for disambigution, and you set this variable to *true*. The system then matches 2 intents that have dialog starters but 1 that doesn't. In this case, disambiguation occurs because multiple intents (2) still must be clarified by the user. But if 2 of the 3 matched intents didn't have dialog starters, disambiguation would not occur. The user would be directed to the only dialog that has a dialog starter.
+
+**Notes** - This variable is set to false by default to provide you with a full view into all the intents that are being evaluated, matched, and shown to the user. Decide whether to keep or change the default value: If you keep this set to false, as mentioned earlier, you should handle an intent without a dialog starter by adding a Response Match condition inside the Disambiguation dialog. Otherwise, set this variable to true to exclude intents without dialog starters.
 
 ### FAQs about disambiguation
 
