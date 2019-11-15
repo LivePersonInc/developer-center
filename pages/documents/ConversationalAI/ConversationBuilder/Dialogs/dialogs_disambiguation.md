@@ -73,7 +73,7 @@ Once the user selects the correct intent, if that intent is associated with a Us
 
 Not all intents will be matched with a status in the same rank. For example, two intents might match with a status of VERY GOOD and GOOD, and you might or might not want to show both for disambiguation. Use the [environment variable](conversation-builder-environment-variables.html) below to control this.
 
-| Environment variable name | Description | Value | Example |
+| Environment variable name | Description | Type | Example |
 | ---- | ---- | ---- | ---- |
 | system_groupConsecutiveIntentRanksInDisambiguation | If true, the best matches across consecutive ranks (VERY GOOD, GOOD, etc.) are shown to the user. If false, only the best matches in the same, highest rank are shown. The default value is true. | Boolean | true |
 
@@ -85,7 +85,7 @@ Not all intents will be matched with a status in the same rank. For example, two
 
 In your bot, you might have some dialogs that start with dialog starters (User Says interactions) and others that don't. During disambiguation, when a user clarifies their intent and selects an intent with a dialog starter, matching occurs, and the user is taken to the dialog. But when the user selects an intent *without* a dialog starter, no matching occurs, so the fallback message is displayed. This is because there is no context switching during disambiguation. You can solve this and avoid the fallback message by adding a Response Match condition inside the Disambiguation dialog--to handle the user's selection and direct the flow as you need. Or, you can configure things so that intents without dialog starters aren't considered for disambiguation. Use the [environment variable](conversation-builder-environment-variables.html) below to control this.
 
-| Environment variable name | Description | Value | Example |
+| Environment variable name | Description | Type | Example |
 | ---- | ---- | ---- | ---- |
 | system_useIntentsOnlyWithDialogStartersInDisambiguation | If true, only intents linked to dialog starters (User Says interactions) are considered for disambiguation. If false, intents that aren't linked to dialog starters are also considered. The default value is false. | Boolean | true |
 
