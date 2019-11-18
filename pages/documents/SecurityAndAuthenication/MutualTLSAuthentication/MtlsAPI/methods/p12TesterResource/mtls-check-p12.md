@@ -2,7 +2,7 @@
 pagename: P12 Key Tester
 keywords:
 sitesection: Documents
-categoryname: "Security & Authenication"
+categoryname: "Security & Authentication"
 documentname: MTLS API
 subfoldername: Methods
 permalink: mtls-methods-p12-key-tester.html
@@ -10,7 +10,7 @@ redirect_from:
   - p12-key-tester.html
 ---
 
-This method will allow you to test your P12 Key before uploading a certificate and test whether the corresponding endpoint is correct and working.
+This method will allow you to test your P12 Key before uploading a certificate and test that it is valid.
 
 ### Request
 
@@ -24,26 +24,23 @@ This method will allow you to test your P12 Key before uploading a certificate a
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
- |LP-forward-url|   Contains the desired endpoint url of the client.  |
- |LP-authorization-override|  Contains the authorization for the desired endpoint url of the client. Not required. |
- |LP-content-type-override|  Contains the content type for the desired endpoint url of the client. Not required. |
- |LP-method-override|  Contains the method for the desired endpoint url of the client. Not required. |
+ |Content-Type|     Since the endpoint is multipart, this header should be a variation of the multipart request content-type (for example: **multipart/form-data**).  |
+ 
 
 **Request Body**
 
-form-data body
+form-data body (content-type : multipart/form-data)
 
-Key: file (File field)
+File: The p12 file we want to test.
 
-Value: The file containing the p12
+Password: the password that matches the supllied file.
 
-Key: password (Text field)
-
-Value: The password matching this specific p12
-
-Key: body (Text field)|
-
-Value: Contains the same body as the client sends for the original endpoint. Not required.
+```
+{
+  "file":"....."
+  "password":"45697"
+}
+```
 
 **Path Parameters**
 
@@ -58,7 +55,6 @@ Value: Contains the same body as the client sends for the original endpoint. Not
 | Code | Description           |
 |------|-----------------------|
 | 200  | OK                    |
-| 201  | Created               |
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
@@ -67,4 +63,4 @@ Value: Contains the same body as the client sends for the original endpoint. Not
 
 **Response Body**
 
-The API will return the body as is (as if contacted the forward URL directly).
+The API will return 200 (OK) if p12 corresponds to password and is useable and 500 (Internal Server Error) otherwise.

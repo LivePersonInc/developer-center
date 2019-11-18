@@ -18,19 +18,19 @@ You can easily customize the unified window yourself by using these classes and 
 
 `element` - a specific item within a block   
 
-`modifier` - defines the appearance, state, or behavior of a block or element (for example, `maximized` vs. `minimized`)
+`modifier` - defines the appearance, state, or behavior of a block or element (for example, `maximized` vs. `minimized`):
 
-    * `lpc_block__element_modifier`
-    
-    * `lpc_block_modifier`
-    
+`lpc_block_modifier` or `lpc_block__element_modifier`
+
+
+
 ### Window
 
 The primary container for all elements.
 
 Available modifiers:
 
-`maximized` `minimized` `slider-open` 
+`maximized` `minimized` `slider-open`
 
 ```css
 .lpc_window {
@@ -50,7 +50,7 @@ Available modifiers:
 }
 
 .lpc_maximized-header__close-button-asset {
-    
+
 }
 
 .lpc_maximized-header__minimize-button {
@@ -58,7 +58,7 @@ Available modifiers:
 }
 
 .lpc_maximized-header__minimize-button-asset {
-    
+
 }
 
 .lpc_maximized-header__slider-button {
@@ -66,11 +66,11 @@ Available modifiers:
 }
 
 .lpc_maximized-header__slider-button-asset {
-    
+
 }
 
 .lpc_maximized-header__text-wrapper {
-     
+
 }
 
 .lpc_maximized-header__text {
@@ -82,16 +82,16 @@ Available modifiers:
 }
 
 .lpc_maximized-header__icon-asset {
-    
+
  }
- 
- 
+
+
 .lpc_maximized-header__menu-button {
-    
+
 }
 
 .lpc_maximized-header__menu-button-asset {
-    
+
 }
 ```
 
@@ -107,11 +107,11 @@ Available modifiers:
 }
 
 .lpc_minimized-header__close-button-asset {
-    
+
 }
 
 .lpc_minimized-header__text-wrapper {
-    
+
 }
 
 .lpc_minimized-header__text {
@@ -123,7 +123,7 @@ Available modifiers:
 }
 
 .lpc_minimized-header__icon-asset {
-    
+
 }
 
 .lpc_minimized-header__maximize-button {
@@ -131,7 +131,7 @@ Available modifiers:
 }
 
 .lpc_minimized-header__maximize-button-asset {
-    
+
 }
 
 .lpc_minimized-header__notification-counter {
@@ -171,11 +171,11 @@ Top banner logo.
 }
 
 .lpc_banner-image-area__image-wrapper {
-     
+
 }
 
 .lpc_banner-image-area__image {
- 
+
 }
 
 .lpc_banner-image-area__link {
@@ -189,11 +189,11 @@ Hero image of the window.
 
 ```css
 .lpc_hero-image-area {
-    
+
 }
 
 .lpc_hero-image-area__image-wrapper {
-   
+
 }
 
 .lpc_hero-image-area__image {
@@ -242,11 +242,11 @@ Available modifiers: `agent` `visitor` `system` `visitor-fs` `avatar-shown` `ava
 }
 
 .lpc_message-area__indicator {
-        
+
 }
 ```
 
- 
+
 ### Message
 
 A received message in the window, whether agent or visitor (see modifiers).
@@ -255,11 +255,11 @@ Available modifiers: `agent` `visitor` `system` `card` `visitor-fs` `avatar-show
 
 ```css
 .lpc_message {
-    
+
 }
 
 .lpc_message__text {
-        
+
  }
 ```
 
@@ -269,11 +269,11 @@ Available modifiers: `agent` `visitor` `system` `visitor-fs`.
 
 ```css
 .lpc_message-tail {
-    
+
 }
 
 .lpc_message-tail__border {
-    
+
 }
 ```
 
@@ -329,7 +329,7 @@ Area in which the user composes their messages.
 }
 
 .lpc_composer__menu-button-asset {
-     
+
 }
 
 .lpc_composer__send-button {
@@ -337,27 +337,27 @@ Area in which the user composes their messages.
 }
 
 .lpc_composer__send-button-asset {
-    
+
 }
 
 .lpc_composer__file-attachment-button {
-    
+
 }
 
 .lpc_composer__file-attachment-button-asset {
-    
+
 }
 
 .lpc_composer__emoji-button {
-            
+
 }
 
 .lpc_composer__emoji-button-asset {
-    
+
 }
 ```
 
-### Slider 
+### Slider
 
 Area where a widget is loaded when opened, including its header.
 
@@ -383,7 +383,7 @@ Area where a widget is loaded when opened, including its header.
 }
 
 .lpc_slider-header__minimize-button-asset {
-    
+
 }
 
 .lpc_slider-header__refresh-button {
@@ -391,7 +391,7 @@ Area where a widget is loaded when opened, including its header.
 }
 
 .lpc_slider-header__refresh-button-asset {
-    
+
 }
 
 .lpc_slider-header__text {
@@ -441,13 +441,15 @@ Available modifiers: `horizontal` `vertical`.
 }
 
 .lpc_card__map {
-    
+
 }
 
 .lpc_card__text {
-        
+
 }
 ```
+
+For information on formatting, see the notes on structured content in the Conversation Builder documentation [here](conversation-builder-interactions-questions.html#notes-on-structured-questions).
 
 ### Survey Area Wrapper
 
@@ -495,19 +497,19 @@ Available modifiers: `logo`.
 }
 
 .lpc_survey-area__cancel-button {
-    
+
 }
 
 .lpc_survey-area__next-button {
-    
+
 }
 
 .lpc_survey-area__submit-button {
-    
+
 }
 
 .lpc_survey-area__close-button {
-    
+
 }
 ```
 
@@ -541,4 +543,4 @@ In the unlikely case that `!important` does not override the style, we suggest u
 #lpChat .lpc_desktop.lpc_window_maximized {
     width: 400px !important;
 }
-``` 
+```
