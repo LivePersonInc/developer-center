@@ -17,10 +17,10 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 
 ### Is API integration execution successful?
 
-Used to determine whether execution of the API integration was successful.
+Used to determine whether execution of an API integration was successful. Returns "true" if execution was successful; returns "false" if execution was unsuccessful.
 
 {: .important}
-This method always returns the status of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
+This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -34,7 +34,7 @@ var isApiExecutionSuccessful = botContext.isApiExecutionSuccessful();
 
 ### Get API integration status code
 
-Used to retrieve the HTTP status (response) code returned from execution of the API integration.
+Used to retrieve the HTTP status (response) code returned from execution of an API integration.
 
 {: .important}
 This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
