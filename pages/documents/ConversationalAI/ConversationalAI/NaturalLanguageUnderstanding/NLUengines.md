@@ -58,13 +58,13 @@ When you create a domain with NLU v2 and use it in LiveIntent or in Conversation
 {: .important}
 NLU v2 supports only English. Also, NLU v2 requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
 
-### 3rd-party NLU limitations
+### Connect a 3rd-party NLU engine
+
+#### 3rd-party NLU limitations
 
 - Length of the 3rd-party NLU domain name should not exceed 64 characters. (Watson limitation)
 - Each domain can only support one language, which is specified on the Domain Settings page.
 - LivePerson does not support "pulling" into Intent Builder existing models that have been trained in IBM Watson or Google Dialogflow. Only model "push" is supported; this is accomplished by training the model in Intent Builder.
-
-### Connect a 3rd-party NLU engine
 
 #### Step 1: Enable 3rd-party NLU support
 
