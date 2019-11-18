@@ -17,6 +17,7 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 
 * [addQuickReplies](conversation-builder-scripting-functions-manage-conversation-flow.html#add-quick-replies)
 * [evaluateOptions](conversation-builder-scripting-functions-manage-conversation-flow.html#evaluate-options)
+* [getApiStatusCode](conversation-builder-scripting-functions-get-integration-data.html#get-api-integration-status-code)
 * [getBotVariable](conversation-builder-scripting-functions-get-set-contextual-data.html#get-and-set-bot-variable)
 * [getChannel](conversation-builder-scripting-functions-get-set-contextual-data.html#get-channel)
 * [getConversationId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-conversation-id)
@@ -35,6 +36,7 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 * [getUserPlatformType](conversation-builder-scripting-functions-get-user-data.html#get-user-platform-id-and-platform-type)
 * [getWebViewVariable](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables)
 * [getWebViewVariables](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables)
+* [isApiExecutionSuccessful](conversation-builder-scripting-functions-get-integration-data.html#is-api-integration-execution-successful)
 * [logCustomEvent](conversation-builder-scripting-functions-log-debug.html#log-custom-event)
 * [logEscalationEvent](conversation-builder-scripting-functions-log-debug.html#log-escalation-event)
 * [printDebugMessage](conversation-builder-scripting-functions-log-debug.html#print-debug-message)
