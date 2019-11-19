@@ -61,7 +61,10 @@ If you want to import a set of articles into a knowledge base when you add the k
 
 ### Sync with a Google sheet
 
-Intro to be added
+After you've made changes to the Google sheet that's linked to the knowledge base, sync the knowledge base to update it with the content.
+
+{: .important}
+This action overwrites the content in the knowledge base with the content in the Google sheet, so use caution when performing this.
 
 **To sync a knowledge base with a Google sheet**
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
@@ -70,7 +73,7 @@ Intro to be added
 
 ### Refresh the intents
 
-Intro to be added
+The intents for every article are stored in a cache that is updated automatically every 5 minutes. But if you've made a recent change to intents--either [Knowledge Base intents or Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents)--and you want to immediately see the result of the changes, you can manually refresh the cache.
 
 **To refresh the intents in a knowledge base**
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
@@ -79,13 +82,14 @@ Intro to be added
 
 ### Download a knowledge base 
 
-Export of a knowledge base creates a CSV file.
+Download of a knowledge base creates a CSV file.
 
 You might need to download a knowledge base for a few reasons:
 
-* a
-* b
-* c
+* You added the initial set of articles to the knowledge base by importing a CSV file, and now you want to add more articles using an import file too. *The only way to do this is with a Google sheet*, so you plan to download the knowledge base to a CSV file, convert the CSV file to a Google sheet, add the new articles alongside the existing articles (**don't remove the existing articles**), and reimport/link the Google sheet to the knowledge base.
+* You want to create a copy of the knowledge base by dowloading it and then adding a new knowledge base using the CSV as the import file.
+* You want to move or copy the knowledge base to another environment.
+* You want an extra measure of back-up, so you plan to archive the CSV file for safekeeping.
 
 **To download a knowledge base**
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
@@ -96,6 +100,9 @@ You might need to download a knowledge base for a few reasons:
 ### Delete a knowledge base
 
 Deleting a knowledge base is a non-recoverable action, so be certain about doing so before taking this action.
+
+{: .important}
+Ensure the knowledge base isn't being used in any [Knowledge Base integrations](conversation-builder-integrations-knowledge-base-integrations.html) before you delete it.
 
 **To delete a knowledge base**
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
