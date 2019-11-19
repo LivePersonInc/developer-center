@@ -14,7 +14,7 @@ As a bot developer, you can use Conversation Builder to quickly deploy bots to a
 
 #### Prerequisite steps
 
-**Brands on the Amazon Web Services (AWS) platform**: If you're on our AWS platform, you must whitelist LivePerson's AWS IP addresses. Please contact LivePerson Support to obtain the IP addresses.
+**Brands on the Amazon Web Services (AWS) platform**: If you're on our AWS platform and your LiveEngage account has [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you must whitelist LivePerson's AWS IP addresses. Please contact LivePerson Support to obtain the IP addresses.
 
 **All brands**: Before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
 
