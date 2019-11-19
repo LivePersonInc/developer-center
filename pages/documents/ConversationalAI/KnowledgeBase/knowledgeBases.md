@@ -16,7 +16,10 @@ indicator: both
     * **Data source name**: Enter a name for the knowledge base.
     * **Data source type**: Select "Knowledge Base."
     * **Language**: Select the language of the knowledge base. The default value is English. For details, see [here](knowledge-base-overview.html#languages) in the overview.
-    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. For details on creating an import file, see [here](knowledge-base-knowledge-bases.html#create-an-import-file) below.
+    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. For details on creating an import file, see [here](knowledge-base-knowledge-bases.html#create-an-import-file) below. 
+        
+        If you select "Google Sheet" and you provide the URL to the sheet, be aware that this establishes a link between the knowledge base and the sheet. If you later sync the knowledge base, it is updated with the current contents in the sheet. 
+
     * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears. For a more in-depth explanation of these, see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) in the overview.
 3. Click **Add**.
 
@@ -86,7 +89,7 @@ Download of a knowledge base creates a CSV file.
 
 You might need to download a knowledge base for a few reasons:
 
-* You added the initial set of articles to the knowledge base by importing a CSV file, and now you want to add more articles using an import file too. *The only way to do this is with a Google sheet*, so you plan to download the knowledge base to a CSV file, convert the CSV file to a Google sheet, add the new articles alongside the existing articles (**don't remove the existing articles**), and reimport/link the Google sheet to the knowledge base.
+* You added the initial set of articles to the knowledge base by importing a CSV file, and now you want to add more articles using an import file too. *The only way to do this is with a Google sheet*, so you plan to download the knowledge base to a CSV file, convert the CSV file to a Google sheet, add the new articles alongside the existing articles (**don't remove the existing articles**), and link the Google sheet to the knowledge base.
 * You want to create a copy of the knowledge base by dowloading it and then adding a new knowledge base using the CSV as the import file.
 * You want to move or copy the knowledge base to another environment.
 * You want an extra measure of back-up, so you plan to archive the CSV file for safekeeping.
