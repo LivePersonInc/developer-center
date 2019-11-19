@@ -11,19 +11,27 @@ indicator: both
 
 This type of interaction is a straight-forward declaration by the bot that does not expect a response from the user.
 
-### Types of statements
+Statement interactions simply display information and then execute the next action. They don’t expect or wait for a user response.
 
-These are the types of statements available:
+### Text
+Text statements display the text provided, for example:
 
-- **Text**. For example, "Thank you for taking our survey!"
+<img style="width:300px" src="img/ConvoBuilder/statements_text.png">
 
-- **Image**. A simple, static image files.
+Text statements can display dynamic values through the use of variables; for help with using variables, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
 
-- **Audio**. A pre-recorded audio file.
+### Image
+Image statements display a single image.
 
-- **Video**. A pre-recorded video file.
+<img style="width:300px" src="img/ConvoBuilder/statements_image.png">
 
-- **Apple Rich Link**. **For Apple Business Chat only.** A rich, interactive, and structured message.
+The domain in the image URL must be [whitelisted]((conversation-builder-interactions-interaction-basics.html#whitelisting)).
+
+### Audio
+Audio statements currently aren't supported.
+
+### Video
+Video statements currently aren't supported. Use a text statement that includes the video URL as a link.
 
 ### Apple Rich Links
 **For Apple Business Chat only.**

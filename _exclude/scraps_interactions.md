@@ -1,26 +1,3 @@
-STATEMENTS
-
-Statement interactions simply display information and then execute the next action. They don’t expect or wait for a user response.
-
-{: .important}
-See [Interaction Basics](conversation-builder-interactions-interaction-basics.html) for important information on whitelisting, guidelines on how to approach channel-specific limitations, and more.
-
-### Text statements
-Text statements display the text provided, for example:
-
-<img style="width:300px" src="img/ConvoBuilder/statements_text.png">
-
-Text statements can display dynamic values through the use of variables; for help with using variables, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
-
-### Image statements
-Image statements display a single image. A thumbnail is initially presented, which can be clicked to view the larger image.
-
-### Audio statements
-Audio statements currently aren't supported due to a limitation regarding the chat window.
-
-### Video statements
-Video statements currently aren't supported, so use a text statement that includes the video URL as a link.
-
 QUESTIONS
 
 Questions present information to the user---a question that expects a reply of some kind, a list of things to pick from, etc.---and they expect and wait for a user response before executing the next action.
