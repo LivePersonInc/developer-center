@@ -9,7 +9,11 @@ permalink: conversation-builder-interactions-questions.html
 indicator: both
 ---
 
-A question interaction is interactive and meant to be answered by the user. The different types of question interactions available are:
+A question interaction is interactive and meant to be answered by the user.
+
+### Types of questions
+
+The different types of question interactions available are:
 
 - **Multiple Choice**. A simple and standard multiple choice question allowing the user to select from a list of predefined answers (although the automation can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html)).
 

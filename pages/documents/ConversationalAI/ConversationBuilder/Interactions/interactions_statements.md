@@ -9,7 +9,11 @@ permalink: conversation-builder-interactions-statements.html
 indicator: both
 ---
 
-This type of interaction is a straight-forward declaration by the bot that does not expect a response from the user. These are the types of statements available:
+This type of interaction is a straight-forward declaration by the bot that does not expect a response from the user.
+
+### Types of statements
+
+These are the types of statements available:
 
 - **Text**. For example, "Thank you for taking our survey!"
 
