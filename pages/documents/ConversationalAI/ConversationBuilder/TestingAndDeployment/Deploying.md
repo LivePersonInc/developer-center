@@ -14,7 +14,7 @@ As a bot developer, you can use Conversation Builder to quickly deploy bots to a
 
 #### Prerequisite steps
 
-If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you must whitelist LivePerson's IP addresses in your firewall settings in LiveEngage. If you're running Conversation Builder on AWS Cloud, please contact LivePerson Support to obtain the AWS IP addresses to whitelist. If you're running Conversation Builder on LivePerson Cloud, you can find the IP addresses [here](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center.
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you must whitelist LivePerson's IP addresses in LiveEngage. If you're running Conversation Builder on AWS Cloud, please contact LivePerson Support to obtain the AWS IP addresses to whitelist. If you're running Conversation Builder on LivePerson Cloud, you can find the IP addresses [here](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center.
 
 Also, before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
 
