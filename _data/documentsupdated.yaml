@@ -216,16 +216,13 @@
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-  # - documentname: LiveIntent
-  #   pages:
-  #     - pagename: Overview
-  #     - pagename: Dashboard
   - documentname: Intent Builder
     pages:
       - pagename: Overview
       - pagename: Domains
       - pagename: Intents
       - pagename: Entities
+      - pagename: LiveIntent Tips
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
