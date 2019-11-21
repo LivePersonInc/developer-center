@@ -23,7 +23,7 @@ Text statements can display dynamic values through the use of variables; for hel
 ### Image
 Image statements display a single image.
 
-<img style="width:300px" src="img/ConvoBuilder/statements_image.png">
+<img style="width:250px" src="img/ConvoBuilder/statements_image.png">
 
 The domain in the image URL must be [whitelisted]((conversation-builder-interactions-interaction-basics.html#whitelisting)).
 
