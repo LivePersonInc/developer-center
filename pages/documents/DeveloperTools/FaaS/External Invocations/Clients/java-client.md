@@ -11,7 +11,7 @@ redirect_from:
 
 This section describes how to set up the Java Client so it is ready to be used for calling LivePerson functions from outside LivePerson's platform.
 
-##Setting up the client
+## Setting up the client
 ### Step 1: Generate necessary keys for OAuth 2.0 authentication
 
 For our default implementation we use OAuth 2.0 with Client Credentials. Thus you will have to generate a client ID and client secret using [this](https://developers.liveperson.com/liveperson-functions-external-invocations-client-credentials.html) guide.
