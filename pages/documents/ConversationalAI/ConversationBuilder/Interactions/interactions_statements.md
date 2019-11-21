@@ -9,8 +9,6 @@ permalink: conversation-builder-interactions-statements.html
 indicator: both
 ---
 
-This type of interaction is a straight-forward declaration by the bot that does not expect a response from the user.
-
 Statement interactions simply display information and then execute the next action. They don’t expect or wait for a user response.
 
 ### Text
