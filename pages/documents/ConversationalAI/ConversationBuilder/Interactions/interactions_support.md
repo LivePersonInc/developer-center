@@ -11,23 +11,88 @@ permalink: conversation-builder-interactions-interaction-support.html
 indicator: both
 ---
 
-Use the table below to identify which interactions are supported in which channels.
+Use this page to understand whether an interaction is supported in a channel of interest.
 
-| | Mobile App Messaging | Web Messaging | Apple Business Chat | SMS | Facebook | WhatsApp | Google RCS | Line | Messaging Window API | Connector API |
-|--------------------------|---------------|---------------------|-----|----------|------------------------------------|------------|------|----------------------|---------------|
-| CB interaction type:     |
-| User Says                | Yes           | Yes                 | Yes | Yes      | Yes                                | Yes        | Yes  | Yes                  | Yes           | Yes |
-| Text statement           | Yes           | Yes                 | Yes | Yes      | Yes                                | Yes        | Yes  | Yes                  | Yes           | Yes |
-| Image statement          | N/A           | Yes                 | N/A | N/A      | Should be, but not supported by LE | N/A        | Yes  | N/A                  | N/A           | N/A |
-| Audio statement          | N/A           | N/A                 | N/A | N/A      | Should be, but not supported by LE | N/A        | N/A  | N/A                  | N/A           | N/A |
-| Video statement          | N/A           | N/A                 | N/A | N/A      | Should be, but not supported by LE | N/A        | N/A  | N/A                  | N/A           | N/A |
-| Apple Richlink statement | N/A           | N/A                 | Yes | N/A      | N/A                                | N/A        | N/A  | N/A                  | N/A           | ?   |
-| Multiple Choice question | Yes           | Yes                 | N/A | N/A      | Yes                                | N/A        | Yes  | N/A                  | Yes           | ?   |
-| Text question            | Yes           | Yes                 | Yes | Yes      | Yes                                | Yes        | Yes  | Yes                  | Yes           | Yes |
-| Structured question      | Yes           | Yes                 | N/A | N/A      | Yes                                | N/A        | Yes  | ?                    | Yes           | Yes |
-| Button question          | Yes           | Yes                 | N/A | N/A      | Yes                                | N/A        | Yes  | ?                    | Yes           | Yes |
-| Quick Reply question     | Yes           | Yes                 | N/A | N/A      | Yes                                | N/A        | Yes  | N/A                  | Yes           | Yes |
-| List Picker question     | N/A           | N/A                 | Yes | N/A      | N/A                                | N/A        | N/A  | N/A                  | N/A           | N/A |
-| Time Picker question     | N/A           | N/A                 | Yes | N/A      | N/A                                | N/A        | N/A  | N/A                  | N/A           | N/A |
-| Integration              | Yes           | Yes                 | Yes | Yes      | Yes                                | Yes        | Yes  | Yes                  | Yes           | Yes |
-| Apple Pay                | N/A           | N/A                 | Yes | N/A      | N/A                                | N/A        | N/A  | N/A                  | N/A           | N/A |
+### Messaging applications
+
+| | Mobile App Messaging | Web Messaging |
+| ---- | ---- | ---- |
+| Interaction type: | ---- | ---- |
+| User Says | Yes | Yes |
+| Text statement | Yes | Yes |
+| Image statement | N/A | Yes |
+| Audio statement | N/A | N/A |
+| Video statement | N/A | N/A |
+| Apple rich link | N/A | N/A |
+| Multiple choice question | Yes | Yes |
+| Text question | Yes | Yes |
+| Structured question | Yes | Yes |
+| Button question | Yes | Yes |
+| Quick Reply question | Yes | Yes |
+| List Picker question | N/A | N/A |
+| Time Picker question | N/A | N/A |
+| Integration | Yes | Yes |
+| Apple Pay integration | N/A | N/A |
+
+### SMS-related applications
+
+| | Apple Business Chat | SMS | Google RCS |
+| ---- | ---- | ---- | ---- |
+| Interaction type: | ---- | ---- | ---- |
+| User Says | 
+| Text statement | 
+| Image statement | 
+| Audio statement | 
+| Video statement | 
+| Apple rich link |
+| Multiple choice question | 
+| Text question |
+| Structured question | 
+| Button question | 
+| Quick Reply question | 
+| List Picker question | 
+| Time Picker question |
+| Integration | 
+| Apple Pay integration |
+
+### Instant messaging applications
+
+| | Facebook | WhatsApp | LINE |
+| ---- | ---- | ---- | ---- |
+| Interaction type: | ---- | ---- | ---- |
+| User Says | 
+| Text statement | 
+| Image statement | 
+| Audio statement | 
+| Video statement | 
+| Apple rich link |
+| Multiple choice question | 
+| Text question |
+| Structured question | 
+| Button question | 
+| Quick Reply question | 
+| List Picker question | 
+| Time Picker question |
+| Integration | 
+| Apple Pay integration |
+
+### APIs
+
+| | Messaging Window API | Connector API |
+| ---- | ---- | ---- |
+| Interaction type: | ---- | ---- |
+| User Says | Yes | Yes |
+| Text statement | Yes | Yes |
+| Image statement | N/A | N/A |
+| Audio statement | N/A | N/A |
+| Video statement | N/A | N/A |
+| Apple rich link | N/A | N/A |
+| Multiple choice question | Yes | N/A |
+| Text question | Yes | Yes |
+| Structured question | Yes | Yes |
+| Button question | Yes | Yes |
+| Quick Reply question | Yes | Yes |
+| List Picker question | N/A | N/A |
+| Time Picker question | N/A | N/A |
+| Integration | Yes | Yes |
+| Apple Pay integration | N/A | N/A |
