@@ -319,7 +319,7 @@ If your bot should reply with more than one message, you need to send a multiMes
 You can define any number of messages in this array. This messages can be plain text, define a delay before the
 next message is send or contain structured content in the same format that could also be be send directly as a channel data object.
 
-```json
+```javascript
 {
   "type": "message",
   "text": "",
@@ -331,7 +331,7 @@ next message is send or contain structured content in the same format that could
       },
       {
         "type": "delay",
-        "value": 1
+        "value": 1 // value is considered as seconds
       },
       {
         "type": "structured-content",
