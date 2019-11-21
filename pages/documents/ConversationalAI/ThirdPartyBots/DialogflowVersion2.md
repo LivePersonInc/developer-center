@@ -370,20 +370,18 @@ Figure 6.1 QuickReplies Structured Content example
 
 ### Sending Encoded Metadata
 
-LiveEngage Messaging (not available for chat) provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+LiveEngage Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
 
 <ul>
   <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
   <li>Content is base64 encoded</li>
   <li> Metadata size is limited to 5k</li>
-  <li>It can be sent with simple Text and Rich Content (structured content)</li>
-  <li>(In case metadata was sent with a message) a text message is passed along with the metadata</li> 
 </ul>
 
 {: .important}
-Failing to comply with the above validation points will cause the message to be dropped.
+Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
-For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 7.1 below
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 7.1 below
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_encoded_metadata.png">
 Figure 7.1

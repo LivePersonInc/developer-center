@@ -696,20 +696,18 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 
 ### Sending Encoded Metadata
 
-LiveEngage Messaging (not available for chat) provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+LiveEngage Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
 
 <ul>
   <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
   <li>Content is base64 encoded</li>
   <li> Metadata size is limited to 5k</li>
-  <li>It can be sent with simple Text and Rich Content (structured content)</li>
-  <li>(In case metadata was sent with a message) a text message is passed along with the metadata</li> 
 </ul>
 
 {: .important}
-Failing to comply with the above validation points will cause the message to be dropped.
+Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
-The `encodedMetadata` can be defined with context editor or using the JSON editor(Figure 8.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. The `encodedMetadata` can be defined with context editor or using the JSON editor(Figure 8.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
 
   <img class="fancyimage" style="width:800px" src="img/watsonassistantv2/context_adding_choices.png">
   Figure 8.1 Showing context editor with the encoded metadata.
