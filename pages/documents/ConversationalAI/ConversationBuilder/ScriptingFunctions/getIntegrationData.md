@@ -69,6 +69,8 @@ This method always returns the result of the most recent API integration that wa
 var apiStatusCode = botContext.getApiStatusCode();
 ```
 
+This method is commonly used together with [isApiExecutionSuccessful](conversation-builder-scripting-functions-get-integration-data.html#is-api-integration-execution-successful); see that entry above for an example.
+
 ### Get API integration results count
 
 Most commonly used to check whether an API integration returned any results at all, and how many. If no results are returned, you should display an error message or redirect to a failover message.
