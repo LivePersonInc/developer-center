@@ -32,6 +32,26 @@ This method always returns the result of the most recent API integration that wa
 var isApiExecutionSuccessful = botContext.isApiExecutionSuccessful();
 ```
 
+This method is commonly used together with [getApiStatusCode](conversation-builder-scripting-functions-get-integration-data.html#get-api-integration-status-code) (discussed below), for example:
+
+```javascript
+// check to see if API was executed
+var isApiExecutionSuccessful = botContext.isApiExecutionSuccessful();
+if(isApiExecutionSuccessful){
+  var apiStatusCode = botContext.getApiStatusCode();
+  botContext.printDebugMessage("API Execution Successful with Status Code: "+apiStatusCode);
+ 
+  if(apiStatusCode == "200"|apiStatusCode == "201"|apiStatusCode == "203"){
+    // request was successful
+    botContext.printDebugMessage("All is well.");
+  }else{
+    // request was not successful
+    botContext.printDebugMessage("Something went wrong!");
+  }  
+     
+}
+```
+
 ### Get API integration status code
 
 Used to retrieve the HTTP status (response) code returned from execution of an API integration.
@@ -48,6 +68,8 @@ This method always returns the result of the most recent API integration that wa
 ```javascript
 var apiStatusCode = botContext.getApiStatusCode();
 ```
+
+This method is commonly used together with [isApiExecutionSuccessful](conversation-builder-scripting-functions-get-integration-data.html#is-api-integration-execution-successful); see that entry above for an example.
 
 ### Get API integration results count
 
