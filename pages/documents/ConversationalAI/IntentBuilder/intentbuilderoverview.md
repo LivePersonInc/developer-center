@@ -22,6 +22,8 @@ See [NLU Engines](conversation-builder-intent-builder-nlu-engines.html) to learn
 
 ### LiveIntent
 
+The below instructions will enable [LiveIntent](https://knowledge.liveperson.com/ai-bots-automation-liveintent-overview.html) for your intents.
+
 When you enter Intent Builder, you will notice a column that tells you if a domain "Has LiveIntent" or not.
 
 {: .important}
@@ -38,4 +40,4 @@ It is a best practice to enable all intents within a domain for the best analysi
 
 <img class="fancyimage" style="width:750px" src="img/liveintent-domains3.png">
 
-You can view the enabled intents in the [LiveIntent dashboard](liveintent-dashboard.html).
+You can view the enabled intents in the [LiveIntent dashboard](https://knowledge.liveperson.com/ai-bots-automation-liveintent-dashboard.html).
