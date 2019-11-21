@@ -15,6 +15,40 @@ Use the following built-in functions to get information on the results of an int
 {: .important}
 New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
 
+### Is API integration execution successful?
+
+Used to determine whether execution of an API integration was successful. Returns "true" if execution was successful; returns "false" if execution was unsuccessful.
+
+{: .important}
+This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `isApiExecutionSuccessful()` | None | Boolean (true or false) |
+
+#### Example
+
+```javascript
+var isApiExecutionSuccessful = botContext.isApiExecutionSuccessful();
+```
+
+### Get API integration status code
+
+Used to retrieve the HTTP status (response) code returned from execution of an API integration.
+
+{: .important}
+This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getApiStatusCode()` | None | string: 200, 201, 400, 440, 450, etc. |
+
+#### Example
+
+```javascript
+var apiStatusCode = botContext.getApiStatusCode();
+```
+
 ### Get API integration results count
 
 Most commonly used to check whether an API integration returned any results at all, and how many. If no results are returned, you should display an error message or redirect to a failover message.
