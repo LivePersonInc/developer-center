@@ -147,8 +147,8 @@
           - subpagename: Disambiguation Dialogs
       - pagename: Interactions
         subpages:
-          - subpagename: Interaction Support
           - subpagename: Interaction Basics
+          - subpagename: Interaction Support
           - subpagename: User Says
           - subpagename: Statements
           - subpagename: Questions
