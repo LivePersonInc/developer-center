@@ -565,9 +565,12 @@ There are 2 authenticated connection methods:
    }
    ```
 
-* **Unauthenticated** - Pass null or an empty LPAuthenticationParams.
+* **Unauthenticated** - Pass in LPAuthenticationParams with type UN_AUTH
 
+* **Signup**
 
+{:.important}
+Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections. 
 
 
 
