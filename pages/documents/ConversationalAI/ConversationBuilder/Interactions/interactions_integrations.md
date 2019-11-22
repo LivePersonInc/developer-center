@@ -51,11 +51,11 @@ Some setup of your LiveEngage environment is required before using this feature.
     For the file to be uploaded, in step 4, you'll follow this with an integration interaction that invokes a File integration.
 
 3. In the File Upload interaction, open the **Interaction Details**, click **[Settings]((conversation-builder-interactions-details-settings.html))**, and specify the following under **File Upload Settings**:
-    - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
-    - **Success message**: Enter the message to send to the consumer if the file upload to your external file share is successful. If you don't supply a message, the following message is sent, "Successfully processed the file."
-    - **Failure message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. If you don't supply a message, the following message is sent, "Failed to process the file. Please try again."
+    - **Accepted File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
+    - **Success message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
+    - **Failure message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
     - **Validation Failure message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
-    - **In progress message**: Enter the message to send to the consumer when the upload begins. If you don't supply a message, the following message is sent, "Processing the file..."
+    - **In progress message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file..."
 
 4. Immediately after the File Upload interaction, add an Integration interaction ( <img style="width:30px" src="img/ConvoBuilder/icon_integration.png"> ). In the interaction, select the File integration to invoke (Integration type = File).
     
