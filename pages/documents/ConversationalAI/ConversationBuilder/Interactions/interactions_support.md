@@ -11,7 +11,7 @@ permalink: conversation-builder-interactions-interaction-support.html
 indicator: both
 ---
 
-Use this page to understand whether an interaction is supported in a channel of interest.
+Interaction support varies by channel. Use this page to understand whether an interaction is supported in a channel of interest.
 
 ### Messaging applications
 
