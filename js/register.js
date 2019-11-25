@@ -169,7 +169,7 @@ function getCookie(name) {
 
 function postRequest () {
 //defining the endpoint for account creation
-  const URL = 'https://d0j6xh4g99.execute-api.us-east-2.amazonaws.com/prod/web/account';
+  const URL = 'https://iqcfare8g3.execute-api.us-east-2.amazonaws.com/alpha/web/account';
 //filling in request body with variables from the form
   const user = {
     firstName: firstName,
@@ -194,7 +194,7 @@ function postRequest () {
     method: 'post',
     url: URL,
     headers: {
-      'x-api-key': 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW', 
+      'x-api-key': 'nxsp2SbxDl4QaMQGiDgZG65c1E9D19Kj84ZzrxIV',
       'Content-Type': 'application/json', 
       'Accept': 'application/json'},
     data: user

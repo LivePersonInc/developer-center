@@ -12,5 +12,7 @@ hooks:
   build: |
     gem install bundler
     bundle install
+    if [ "$PLATFORM_BRANCH" = master ]; then
     bundle exec jekyll algolia
+    fi
     JEKYLL_ENV=production bundle exec jekyll build

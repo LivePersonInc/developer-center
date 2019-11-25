@@ -15,6 +15,62 @@ Use the following built-in functions to get information on the results of an int
 {: .important}
 New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
 
+### Is API integration execution successful?
+
+Used to determine whether execution of an API integration was successful. Returns "true" if execution was successful; returns "false" if execution was unsuccessful.
+
+{: .important}
+This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `isApiExecutionSuccessful()` | None | Boolean (true or false) |
+
+#### Example
+
+```javascript
+var isApiExecutionSuccessful = botContext.isApiExecutionSuccessful();
+```
+
+This method is commonly used together with [getApiStatusCode](conversation-builder-scripting-functions-get-integration-data.html#get-api-integration-status-code) (discussed below), for example:
+
+```javascript
+// check to see if API was executed
+var isApiExecutionSuccessful = botContext.isApiExecutionSuccessful();
+if(isApiExecutionSuccessful){
+  var apiStatusCode = botContext.getApiStatusCode();
+  botContext.printDebugMessage("API Execution Successful with Status Code: "+apiStatusCode);
+ 
+  if(apiStatusCode == "200"|apiStatusCode == "201"|apiStatusCode == "203"){
+    // request was successful
+    botContext.printDebugMessage("All is well.");
+  }else{
+    // request was not successful
+    botContext.printDebugMessage("Something went wrong!");
+  }  
+     
+}
+```
+
+### Get API integration status code
+
+Used to retrieve the HTTP status (response) code returned from execution of an API integration.
+
+{: .important}
+This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getApiStatusCode()` | None | string: 200, 201, 400, 440, 450, etc. |
+
+#### Example
+
+```javascript
+var apiStatusCode = botContext.getApiStatusCode();
+```
+
+This method is commonly used together with [isApiExecutionSuccessful](conversation-builder-scripting-functions-get-integration-data.html#is-api-integration-execution-successful); see that entry above for an example.
+
 ### Get API integration results count
 
 Most commonly used to check whether an API integration returned any results at all, and how many. If no results are returned, you should display an error message or redirect to a failover message.
