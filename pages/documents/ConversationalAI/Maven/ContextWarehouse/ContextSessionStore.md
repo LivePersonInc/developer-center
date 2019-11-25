@@ -285,6 +285,97 @@ curl --request GET \
 
 ```
 
+#### Get all sessionIds
+
+Customer can generate multiple sessionIds under one namespace. The APIs described here are to show a list of sessionIds generated under one namespace. We provide two APIs, the first is to return the SessionIds, and the other is to return the properties with SessionIds.
+
+Because the number of sessions can be quite large, the API supports pagination. There are two optional parameters for this:
+
+* page
+  * This sets the index of the page to be returned. Index starts at 0. 
+  * Type: int
+  * Default value: 0
+  * Range: A number greater than or equal to zero.
+* perPage
+  * This sets the number of rows returned per page
+  * Type: int
+  * Default value : 100
+  * Range: A number between 1 and 1000
+
+##### Pagination examples
+
+```
+http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?perPage=1000
+http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-ids?page=1&perPage=200
+http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=0
+http://url.liveperson.net/v1/account/{accountId}​/{namespace}/session-properties?page=1&perPage=300
+```
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Method</th>
+            <th>Path</th>
+            <th>Description</th>
+            <th>Request Payload Example</th>
+            <th>Response Payload Example</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>GET</td>
+            <td>/v1​/account​/{accountId}​/{customNamespace}​/session-ids</td>
+            <td>Get all sessionIds under a namespace</td>
+            <td></td>
+            <td>
+            [
+            "testSessionId01",
+            "testSessionId02"
+            ]
+            </td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>​/v1​/account​/{accountId}​/{customNamespace}​/session-properties</td>
+            <td>Get all sessionIds with properties under a namespace</td>
+            <td></td>
+            <td>
+                [
+                    {
+                        "sessionId": "testSessionId01",
+                        "properties": {
+                        "testProperty01": "testValue01",
+                        "testProperty02": "testValue02",
+                        "testProperty03": "testValue03"
+                        }
+                    },
+                    {
+                        "sessionId": "testSessionId02",
+                        "properties": {
+                        "testProperty11": "testValue11",
+                        "testProperty12": "testValue12"
+                        }
+                    }
+                ]
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+##### Examples
+
+```bash
+curl --request GET \
+  --url http://lo.mavencontext.int.liveperson.net/v1/account/44078251/testNamespace/session-ids?perPage=100 \
+  --header 'maven-api-key: hD2kGFmLPwNDQwNzgyNTE='
+```
+
+```bash
+curl --request GET \
+  --url http://lo.mavencontext.int.liveperson.net/v1/account/44078251/testNamespace/session-properties?perPage=100 \
+  --header 'maven-api-key: hD2kGFmLPwNDQwNzgyNTE='
+```
 
 
 #### Get all properties within a session
