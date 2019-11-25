@@ -25,9 +25,24 @@ An audit trail is available for the following elements:
 
 * Agent Groups
 
-* Permissions
+* Profiles
 
 * LOBs
+
+* Campaigns
+
+* Predefined content
+ 
+* Post conversation survey
+
+* Content Categories
+
+* Shift scheduler
+
+* Schedule items
+
+* Special occasions
+
 
 ### Getting Started
 
