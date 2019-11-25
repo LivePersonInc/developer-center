@@ -5,7 +5,7 @@ var search = document.getElementById('aa-search-input');
 const searchInstance = autocomplete(
   '#aa-search-input',
   {
-    debug: true
+    debug: false
   },
   [
     {
@@ -17,6 +17,7 @@ const searchInstance = autocomplete(
           let value = suggestion.pagename;
           let content = suggestion.content;
           let link = suggestion.permalink;
+          let headings = suggestion.headings;
           let documentName = suggestion.documentname;
           let category = suggestion.categoryname;
           let title = $('h1');
@@ -33,9 +34,15 @@ const searchInstance = autocomplete(
           if (suggestion._highlightResult.documentname) {
             documentName = suggestion._highlightResult.documentname.value;
           }
+          if (documentName) {
           return (
             '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + ' - ' + documentName + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
           )
+        } else {
+          return (
+            '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + '</span><span class="searchContentHeading">' + headings + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
+          )
+        }
         },
         empty: '<div class="aa-empty">No results found!</div>',
         },
@@ -69,8 +76,7 @@ searchInstance.on({
     footer.classList.add('overlayvisible');
 },
   'autocomplete:selected': function (event, suggestion, dataset, context) {
-    var target = suggestion.url;
-    navigateContent(target);
+    window.location = suggestion.permalink;
 },
   'autocomplete:updated': function () {
     if (this.value != '') {

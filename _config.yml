@@ -35,6 +35,7 @@ plugins:
 algolia:
   application_id: "EICOREWTRW"
   index_name: "devMain"
+# #values for the Algolia plugin
 
 
 github: [metadata]

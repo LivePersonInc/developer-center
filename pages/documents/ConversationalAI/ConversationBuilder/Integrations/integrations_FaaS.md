@@ -1,17 +1,17 @@
 ---
-pagename: FaaS integrations
+pagename: LivePerson Functions Integrations
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Integrations
-permalink: conversation-builder-integrations-faas-integrations.html
+permalink: conversation-builder-integrations-liveperson-functions-integrations.html
 indicator: both
 ---
 
-Use tha FaaS integration to invoke a function (lambda) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with a FaaS integration.
+Use the LivePerson Functions integration to invoke a function (lambda) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with a LivePerson Functions integration.
 
-### To add a FaaS integration
+### To add a LivePerson Functions integration
 
 1. Open the automation, and click **Integrations** in the upper-left corner.
 2. Configure the integration settings:

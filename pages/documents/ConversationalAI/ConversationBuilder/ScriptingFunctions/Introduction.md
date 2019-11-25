@@ -16,9 +16,8 @@ Functions are modules of code that are used for accomplishing a certain task pro
 
 With few exceptions, functions can be used in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interaction-details.html#process-user-response) JavaScript code panels.
 
-**Please note:**
+**Note**
 
-* Function names are case-sensitive in the JavaScript
-* Functions require the `botContext.` prefix
-* Functions are scoped ONLY for the JavaScript panel in which they appear
-
+* Function names are case-sensitive in the JavaScript.
+* Functions require the `botContext.` prefix.
+* Functions are scoped ONLY for the JavaScript panel in which they appear.

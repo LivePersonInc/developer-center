@@ -39,7 +39,7 @@ When calling the API **without** sending **'contentToRetrieve'** parameter at al
 
 **Default types:**
 
-```json
+```
 campaign, messageRecords, agentParticipants, agentParticipantsLeave,
 agentParticipantsActive, consumerParticipants, transfers, interactions,
 messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, SDEs.
@@ -72,7 +72,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |latestConversationQueueState | The queue state of the conversation  | String| Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
 responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
-|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, intents|
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, latestAgentSurvey, previouslySubmittedAgentSurveys|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to} | Range of NPS assigned to the conversation. | numeric, numeric| Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
 |questionBrick | Match a specific word within a PCS question name or brick ID | alphanumeric  | Optional |
@@ -86,6 +86,7 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |intentConfidenceScore | The intentConfidenceScore field is greater or equal to the confidenceScore parameter of any detected intent. | double - up to 3 decimal digits. | Optional | Get only conversations that have at least one intent with a confidenceScore field that is greater or equal to confidenceScore parameter. When using this filter together with the 'intentName' filter above, the score refers to the intents that were specified as part of the 'intentName' list. |
 |selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
 |conversationsWithStepUpOnly | This parameter will return TRUE if a step up took place during the conversation. | boolean. | Optional | Get only conversations that had a step up  |Filters examples:
+|agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional , with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|   
 
 |Name | Description |
 |:------------------ |:------------------------------------------------|
@@ -109,7 +110,7 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
 |responseTime |{"start":{"from":1529566882153,"to":1530171697782},"status":["OPEN"],"responseTime":{"from":1530013618000,to":1530153993000},"contentToRetrieve":["responseTime"]}|
-|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime", "intents"]}|
+|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime", "intents", "latestAgentSurvey", "previouslySubmittedAgentSurveys"]}|
 |latestUpdateTime | {"start":{"from":1541578792011,"to":1541578895020},"status":["OPEN","CLOSE"],"latestUpdateTime":{"from":1541578792011}} |
 |nps  | {"start":{"from":1470037448000,"to":1472543048000}, "nps":{"from":0,"to":7}}|
 |questionBrick | {"start":{"from":1470037448000,"to":1472543048000},"questionBrick":"Improvement suggestion"}|
@@ -122,6 +123,7 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |intentName | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["campaign","intents"],"intentName":["Plan_inquiry_46","Remove_Plan_46"]}|
 |intentConfidenceScore | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["messageRecords","intents"],"intentConfidenceScore":0.65} |
 |conversationsWithStepUpOnly | {"start":{"from":1541578792011,"to":1541578895020},,"contentToRetrieve":["messageRecords"],"conversationsWithStepUpOnly":true}|**Note: search by keywords, summary or engagement attributes**
+|agentSurveySearch   | {"start":{"from":1470037448000,"to":1472543048000},"agentSurveySearch":{"pendingAgentSurvey":[true], "questionId":["id1","id2"], "questionName":["id1","id2"], "questionKeywords":["keyword1","keyword2"],"answerKeywords":["keyword1","keyword2"],"surveyId":[3592872510]}}
 
 In order to search for a specific phrase within the messages, summary or engagement attributes of the conversation, you will need to wrap the phrase in quotation marks. This will make sure that the search will run according to all specified characaters in the phrase and in the same position relative to each other. (For example: searching for "tester@liveperson.com", will search for the characters “tester” and “liveperson.com” in that order.)
 
@@ -217,6 +219,7 @@ appVersion | The hosted application version. | string |
 ipAddress | Current connection user IP | string |
 isPartial | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean |
 wasStepUp | Indicates if the conversation had a step up | Boolean |
+pendingAgentSurvey | Indicate if the conversation has a pending agent survey. | Boolean |
 
 _Campaign info_
 
@@ -337,12 +340,13 @@ caption | Description of the file. | string   |
 
 _Message Secure Form_
 
-Name | Description  | Type/Value | Notes
-:--------------- | :----------------------- | :--------- | :----------------------------------------------
-formId  | The ID of the form.| string  | Returns in case agent sends form invitation.
-formName| The name of the form. | string  | Returns in case agent sends form invitation.
-submissionId  | The ID of the submission.| string  | Returns in case agent sends form invitation.
-invitationId  | The ID of the invitation.| string  |
+|Name | Description  | Type/Value | Notes|
+|:--------------- | :----------------------- | :--------- | :----------------------------------------------|
+|formId  | The ID of the form.| string  | Returns in case agent sends form invitation.|
+|formName| The name of the form. | string  | Returns in case agent sends form invitation.|
+|submissionId  | The ID of the submission.| string  | Returns in case agent sends form invitation.|
+|invitationId  | The ID of the invitation.| string  |
+
 _Message Rich Content_
 
 Name  | Description  | Type/Value
@@ -559,6 +563,52 @@ Name| Description| Type/Value
 modelName | The name of the model. | string
 modelVersion | The version of the model. | string**JSON Example**
 
+_Latest Agent Survey_
+
+Name         | Description                                     | Type/Value | Notes
+:----------- | :---------------------------------------------- | :--------- | :----------------------------
+surveyStatus | Status of the survey.                           | string     | Valid values: "OPEN", "SUBMITTED", "DISMISSED", "CLOSED".
+statusReason | Status Reason.                                  | string     | Valid values: "skillChanged", "timeout", "OPEN", "SUBMITTED", "DISMISSED".
+dialogId     | The ID of the dialog.                           | string     |
+surveyId     | The runtime survey ID.                          | string     |
+acSurveyId   | The AC form ID.                                 | string     |
+acSurveyName | The AC form name.                               | string     |
+acSurveyRevision| The AC form revision.                        | string     |
+surveySkillId| The skill ID of the skill associated with the survey.| long   |
+surveySkillName| The skill name.                               | string     |
+assignedAgentId| The ID of the agent assigned to the survey.   | string     |
+assignedAgentNickName| The nick name of the agent assigned to the survey.|string|
+assignedAgentName| The name of the agent assigned to the survey.| string     |
+performedByAgentId| The ID of the agent that performed the operation.|string|
+performedByAgentNickName| The nick name of the performing agent| string     |
+performedByAgentName| The name of the performing agent         | string     |
+lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |    
+acSurveyRevision| The AC form revision.                        | string     |
+acSurveyRevision| The AC form revision.                        | string     |
+
+_Previously Submitted Agent Surveys_
+
+Name         | Description                                     | Type/Value | Notes
+:----------- | :---------------------------------------------- | :--------- | :----------------------------
+surveyStatus | Status of the survey.                           | string     | Valid values: "OPEN", "SUBMITTED", "DISMISSED", "CLOSED".
+statusReason | Status Reason.                                  | string     | Valid values: "skillChanged", "timeout", "OPEN", "SUBMITTED", "DISMISSED".
+dialogId     | The ID of the dialog.                           | string     |
+surveyId     | The runtime survey ID.                          | string     |
+acSurveyId   | The AC form ID.                                 | string     |
+acSurveyName | The AC form name.                               | string     |
+acSurveyRevision| The AC form revision.                        | string     |
+surveySkillId| The skill ID of the skill associated with the survey.| long   |
+surveySkillName| The skill name.                               | string     |
+assignedAgentId| The ID of the agent assigned to the survey.   | string     |
+assignedAgentNickName| The nick name of the agent assigned to the survey.|string|
+assignedAgentName| The name of the agent assigned to the survey.| string     |
+performedByAgentId| The ID of the agent that performed the operation.|string|
+performedByAgentNickName| The nick name of the performing agent| string     |
+performedByAgentName| The name of the performing agent         | string     |
+lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |    
+acSurveyRevision| The AC form revision.                        | string     |
+acSurveyRevision| The AC form revision.                        | string     |
+
 ```json
 {
   "_metadata": {
@@ -603,7 +653,8 @@ modelVersion | The version of the model. | string**JSON Example**
         "latestAgentGroupId": -1,
         "latestAgentGroupName": "Unassigned",
         "latestQueueState": "ACTIVE",
-        "isPartial": false
+        "isPartial": false,
+        "pendingAgentSurvey": false
       },
       "campaign": {
         "campaignEngagementId": "2330596212",
@@ -1110,7 +1161,173 @@ modelVersion | The version of the model. | string**JSON Example**
           ],
           "messageId": "ms::dialog:13ea17a3-57c7-4814-9d3f-120784f6628c::msg:16"
         }
-      ]
+      ],
+      "latestAgentSurvey": {
+                "surveyStatus": "CLOSED",
+                "statusReason": "timeout",
+                "dialogId": "37990ff2-e65f-4709-907b-0a98dc46eeed",
+                "surveyId": "2f053612-8fb4-4899-84a5-69590b245ff4",
+                "acSurveyId": "3592872510",
+                "acSurveyName": "Non mandatory",
+                "acSurveyRevision": 24,
+                "surveySkillId": 3592991110,
+                "surveySkillName": "skill C",
+                "assignedAgentId": "3610037310",
+                "assignedAgentNickName": "superuser",
+                "assignedAgentName": "superuser",
+                "lastUpdateTime": 1572390190715,
+                "submittedAnswers": []
+             },
+            "previouslySubmittedAgentSurveys": [
+                {
+                    "surveyStatus": "SUBMITTED",
+                    "statusReason": "PARTIALLY_SUBMITTED",
+                    "dialogId": "37990ff2-e65f-4709-907b-0a98dc46eeed",
+                    "surveyId": "2f053612-8fb4-4899-84a5-69590b245ff4",
+                    "acSurveyId": "3592872510",
+                    "acSurveyName": "Non mandatory",
+                    "acSurveyRevision": 24,
+                    "surveySkillId": 3592991110,
+                    "surveySkillName": "skill C",
+                    "assignedAgentId": "3637142910",
+                    "assignedAgentNickName": "idanAgent",
+                    "assignedAgentName": "idanAgent",
+                    "performedByAgentId": "3637142910",
+                    "performedByAgentNickName": "idanAgent",
+                    "performedByAgentName": "idanAgent",
+                    "lastUpdateTime": 1571750754623,
+                    "submittedAnswers": [
+                        {
+                            "questionText": "aa",
+                            "questionId": "1568781637139",
+                            "questionDefinition": "REGULAR_QUESTION",
+                            "questionCategory": "FREE_TEXT",
+                            "answers": [
+                                {
+                                    "answer": "IdanAgent",
+                                    "answerId": "1568781637139"
+                                }
+                            ]
+                        },
+                        {
+                            "questionText": "num-10",
+                            "questionId": "1566107405292",
+                            "questionDefinition": "REGULAR_QUESTION",
+                            "questionCategory": "NUMBER",
+                            "answers": [
+                                {
+                                    "answer": "2",
+                                    "answerId": "1566107405292"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "surveyStatus": "SUBMITTED",
+                    "statusReason": "PARTIALLY_SUBMITTED",
+                    "dialogId": "37990ff2-e65f-4709-907b-0a98dc46eeed",
+                    "surveyId": "2f053612-8fb4-4899-84a5-69590b245ff4",
+                    "acSurveyId": "3592872510",
+                    "acSurveyName": "Non mandatory",
+                    "acSurveyRevision": 24,
+                    "surveySkillId": 3592991110,
+                    "surveySkillName": "skill C",
+                    "assignedAgentId": "3637142910",
+                    "assignedAgentNickName": "idanAgent",
+                    "assignedAgentName": "idanAgent",
+                    "performedByAgentId": "3673156810",
+                    "performedByAgentNickName": "idanAM",
+                    "performedByAgentName": "idanAM",
+                    "lastUpdateTime": 1571750779628,
+                    "submittedAnswers": [
+                        {
+                            "questionText": "aa",
+                            "questionId": "1568781637139",
+                            "questionDefinition": "REGULAR_QUESTION",
+                            "questionCategory": "FREE_TEXT",
+                            "answers": [
+                                {
+                                    "answer": "AM",
+                                    "answerId": "1568781637139"
+                                }
+                            ]
+                        },
+                        {
+                            "questionText": "num-10",
+                            "questionId": "1566107405292",
+                            "questionDefinition": "REGULAR_QUESTION",
+                            "questionCategory": "NUMBER",
+                            "answers": [
+                                {
+                                    "answer": "2",
+                                    "answerId": "1566107405292"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "surveyStatus": "SUBMITTED",
+                    "statusReason": "PARTIALLY_SUBMITTED",
+                    "dialogId": "37990ff2-e65f-4709-907b-0a98dc46eeed",
+                    "surveyId": "2f053612-8fb4-4899-84a5-69590b245ff4",
+                    "acSurveyId": "3592872510",
+                    "acSurveyName": "Non mandatory",
+                    "acSurveyRevision": 24,
+                    "surveySkillId": 3592991110,
+                    "surveySkillName": "skill C",
+                    "assignedAgentId": "3637142910",
+                    "assignedAgentNickName": "idanAgent",
+                    "assignedAgentName": "idanAgent",
+                    "performedByAgentId": "3673156810",
+                    "performedByAgentNickName": "idanAM",
+                    "performedByAgentName": "idanAM",
+                    "lastUpdateTime": 1571750810246,
+                    "submittedAnswers": [
+                        {
+                            "questionText": "aa",
+                            "questionId": "1568781637139",
+                            "questionDefinition": "REGULAR_QUESTION",
+                            "questionCategory": "FREE_TEXT",
+                            "answers": [
+                                {
+                                    "answer": "AM2",
+                                    "answerId": "1568781637139"
+                                }
+                            ]
+                        },
+                        {
+                            "questionText": "num-10",
+                            "questionId": "1566107405292",
+                            "questionDefinition": "REGULAR_QUESTION",
+                            "questionCategory": "NUMBER",
+                            "answers": [
+                                {
+                                    "answer": "2",
+                                    "answerId": "1566107405292"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "surveyStatus": "CLOSED",
+                    "statusReason": "timeout",
+                    "dialogId": "37990ff2-e65f-4709-907b-0a98dc46eeed",
+                    "surveyId": "2f053612-8fb4-4899-84a5-69590b245ff4",
+                    "acSurveyId": "3592872510",
+                    "acSurveyName": "Non mandatory",
+                    "acSurveyRevision": 24,
+                    "surveySkillId": 3592991110,
+                    "surveySkillName": "skill C",
+                    "assignedAgentId": "3610037310",
+                    "assignedAgentNickName": "superuser",
+                    "assignedAgentName": "superuser",
+                    "lastUpdateTime": 1572390190715,
+                    "submittedAnswers": []
+                }
+            ]
     }
   ]
 }

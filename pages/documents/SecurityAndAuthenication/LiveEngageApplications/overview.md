@@ -29,9 +29,9 @@ This type of LiveEngage Application will be installed manually by uploading a JS
 
 ### Quicklaunch menu
 
-Applications can be added to the QuickLaunch menu in the LiveEmgage UI. For applications to be available in the QuickLaunch menu, some criteria hav to be met.
+Applications can be added to the QuickLaunch menu in the LiveEngage UI. For applications to be available in the QuickLaunch menu, some criteria have to be met.
 
-In case of a Private LiveEngage Application the JSON Manifest should contain the following properties: 
-* `"quick_launch_enabled" : true`, 
-* non-empty `entry_uri`, 
-* the user profile should match one of the profiles listed in `enabled_for_profiles`. 
+In case of a Private LiveEngage Application the JSON Manifest should contain the following properties:
+* `"quick_launch_enabled" : true`,
+* non-empty `entry_uri`,
+* the user profile should match one of the profiles listed in `enabled_for_profiles`.

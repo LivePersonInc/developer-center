@@ -13,6 +13,40 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+### Android Messaging SDK - Version 5.0.0
+**Release Date**: Oct 31, 2019 
+
+### Overview
+Android Mobile Messaging SDK version 5.0.0 release provides Android Q support and fixing bugs
+
+### Environmental Requirements
+The Android Mobile Messaging SDK version 5.0.0 uses:
+- Minimum API version 19
+- Compile API version 29
+- Target API version 29
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+### Bugs fixed 
+* Fixed issue where crash could occur while loading conversation.
+
+### New Features 
+* **Dark Theme Support** - The Android Mobile Messaging SDK Supports Dark Theme for Android 10.  
+For More information see: [Attributes Page](https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html)
+ 
+### Known Issues 
+* **Android 10, Structured Content and Quick reply messages**: Currently, structured content message colors are sent from the LiveEngage Agent Dashboard as hexadecimal colors and we cannot be certain of the appearance setting the consumer will have enabled as the structured content message arrives. Currently the Android Mobile Messaging SDK does not support converting these colors to an alternate appearance for Dark Theme. Therefore we ask our customers to ensure that colors selected for the structured content JSON are visually legible for both appearance modes for backgrounds and text within the Android Mobile Messaging SDK. As an alternative, from SDK 5.0.0 you can also set Dark Mode configuration `darkMode_SC_QR_override_colors_from_LE` in SDk not to override colors from LE and use Quick Replies, Structured Content color attributes in SDK. 
+
+* **Android 10 and Secure Form web view**: We support Dark Theme for Secure Form by force enabling it with attribute `darkMode_force_enable_for_webView`(enabled by default).
+
+#### LivePerson Obsoleted functions
+
+* **initialize(final Context context, final String brandId, final InitLivePersonCallBack initCallBack)** , use *initialize(Context context, final InitLivePersonProperties initProperties)* instead
+* **showConversation(Activity activity)** and showConversation(Activity activity, String authenticationKey) use *showConversation(Activity activity, LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params)* instead
+* **getConversationFragment(String authKey)** , use *getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params)* instead
+* **handlePush(Context context, Bundle data, String brandId, boolean showNotification)** , use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
+* **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
+* **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
+
 ### Android Messaging SDK - Version 4.2.1
 
 **Release date:** September 24, 2019
@@ -851,7 +885,7 @@ New registrationCompletedCallback callback parameter will be called back when re
   <tr>
     <td>LPAuthenticationType → Added new enum instance to LPAuthenticationParams</td>
     <td>This enum is used for determine the authentication type with the following options:
-SIGN_UP (default) // old unauthenticated method. Will be deprecated on Jun 2019
+SIGN_UP (default) // old unauthenticated method. Is deprecated as of July 2019
 UN_AUTH
 AUTH</td>
   </tr>

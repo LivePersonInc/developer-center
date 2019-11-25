@@ -2,7 +2,7 @@
 pagename: Overview
 keywords:
 sitesection: Documents
-categoryname: "Security & Authenication"
+categoryname: "Security & Authentication"
 documentname: mTLS API
 indicator: both
 permalink: mtls-overview.html

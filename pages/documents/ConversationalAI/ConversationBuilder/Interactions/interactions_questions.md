@@ -72,7 +72,7 @@ You can populate the tiles with static information, or they can be dynamically p
 
 - You can include a maximum of 10 tiles.
 - For the number of buttons that you can add, check the limitations for the channels in use. (For example, while LiveEngage doesn't have a limitation here, Facebook's limit is 3 buttons.)
-- When multiple items are present in the interaction, they can be displayed vertically--which is the default--or horizontally. To add support for horizontal display, add the "tileDisplay" [custom configuration field](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-fields) with a value of "horizontal" when you [deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) your bot. For a horizontally-scrolling carousel to appear correctly, you must have **at least** 3 tiles.
+- When multiple items are present in the interaction, they can be displayed vertically--which is the default--or horizontally. To add support for horizontal display, add the "tileDisplay" [custom configuration field](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-fields) with a value of "horizontal" when you [deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) your bot. For a horizontally-scrolling carousel to appear correctly, you must have **at least** 3 tiles. Setting tileDisplay to horizontal can be useful for resolving formatting issues that can occur on specific channels.
 - Formatting of text (bold, italics, etc.) isn't supported.
 
 ### Apple Time Picker questions

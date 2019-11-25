@@ -1,14 +1,14 @@
 ---
 pagename: Welcome Developers!
+documentname: Welcome
 sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
 redirect_from:
   - get-started-LE-APIs.html
 ---
-
 {: .notice}
-LivePerson Functions is a Function as a Service (FaaS) platform which enables brands to develop custom behaviors within LivePerson’s conversational platform to better tailor the system to their specific needs. Get started with a hosted function in less than 60 seconds. [check out the Functions documentation to get acquainted with this powerful new feature](function-as-a-service-overview.html).
+LivePerson Functions is a Function as a Service (FaaS) platform which enables brands to develop custom behaviors within LivePerson’s conversational platform to better tailor the system to their specific needs. Get started with a hosted function in less than 60 seconds. [Check out the Functions documentation to get acquainted with this powerful new feature](function-as-a-service-overview.html).
 
 The LiveEngage platform offers a messaging solution that you can harness and enhance by integrating LiveEngage with your native app, customizing LiveEngage reports or creating new reports, and building or integrating workspace widgets. This can be achieved using our various APIs and SDKs.
 

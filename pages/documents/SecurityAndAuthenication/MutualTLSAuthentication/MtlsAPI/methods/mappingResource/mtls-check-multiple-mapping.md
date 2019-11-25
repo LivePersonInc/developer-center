@@ -2,15 +2,15 @@
 pagename: Check mapping configuration
 keywords:
 sitesection: Documents
-categoryname: "Security & Authenication"
+categoryname: "Security & Authentication"
 documentname: MTLS API
 subfoldername: Methods
 permalink: mtls-methods-check-mapping-configuration.html
 ---
 
-This method checks for mapping configuration existence for a specific tuple: serviceName, accountId and url.
+This method checks if a mapping configuration exists for a specific triplet of parameters: serviceName, accountId and url. If it exists, am mTLS request can be used with the relevant certificate.
 
-This resource helps you check if a certificate exists to some serviceName + accountId + url in order to send MTLS request (with certificate).
+The aim of this method is to minimize sending TLS only requests through the service, since the mTLS service is throttle protected. This API allows the consuming service to know if mTLS is configured for the specified parameters.
 
 ### Request
 
@@ -18,18 +18,25 @@ This resource helps you check if a certificate exists to some serviceName + acco
  |:--------  |:---  |
  |POST|  https://[{domain}]/mtls/mapping |
 
+**Query Parameters**
+
+| Parameter | Description | Type | Required | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| v | API version number | number| Not Required | Default Value: 1 | Options: 1, 2 |
+
+* **Versions only differ by the response type (see below)**.
 
 **Request Headers**
 
  |Header         |Description  |
  |:------|        :--------  |
- |Authorization|    Contains token string to allow request authentication and authorization.|
+ |Authorization|    Contains token string to allow request authentication and authorization. **AppKey only API**|
 
 **Request Body**
 
 Contains list of `CertificateMappingParamters` objects:
 
-```JSON
+```json
 [
    {"serviceName":"IDP","accountId":"52653865","url":"https://lp-idp-qa.dev.lprnd.net/mock/auth/token"},
    {"serviceName":"TEST_SERVICE","accountId":"52653865","url":"https://lp-mtls-qa.dev.lprnd.net/test"}
@@ -51,11 +58,34 @@ Contains list of `CertificateMappingParamters` objects:
 
 **Response Body**
 
-```
+**V1 response (default)**
+
+```json
 {
  "CertificateMappingParamters{serviceName='TEST_SERVICE', accountId='52653865', url='https://lp-mtls-qa.dev.lprnd.net/test'}": true,
  "CertificateMappingParamters{serviceName='IDP', accountId='52653865', url='https://lp-idp-qa.dev.lprnd.net/mock/auth/token'}": false
 }
+```
+
+**V2 response** 
+
+* The "doExist" status is added to the submitted parameters.
+
+```json
+[
+    {
+        "serviceName": "IDP",
+        "accountId": "52653865",
+        "url": "https://lp-mtls-qa.dev.lprnd.net/test",
+        "doExist": true
+    },
+    {
+        "serviceName": "TEST_SERVICE",
+        "accountId": "52653865",
+        "url": "https://lp-mtls-qa.dev.lprnd.net/test",
+        "doExist": false
+    }
+]
 ```
 
 **Entity Structure:**

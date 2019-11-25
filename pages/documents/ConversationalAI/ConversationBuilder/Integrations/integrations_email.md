@@ -24,7 +24,7 @@ Use an Email integration when you want Conversation Builder to send an email as 
     - **Body**: Enter the body of the email. If you also select the **Html Email** check box (discussed below), you can enter HTML formatting in the body.
 
         {: .important}
-        In the Subject and Body fields, you can use data that's available in the bot runtime if it's stored in botContext variables. For help with setting and getting values in bot variables, see [here](conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html#get-and-set-bot-variable).
+        In the Subject and Body fields, you can use data that's available in the bot runtime if it's stored in botContext variables. For help with setting and getting values in bot variables, see [here](conversation-builder-scripting-functions-get-set-contextual-data.html#get-and-set-bot-variable).
 
     - **Html Email**: Select this to send the email in HTML format. Otherwise, it will be sent in plain text format.
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).

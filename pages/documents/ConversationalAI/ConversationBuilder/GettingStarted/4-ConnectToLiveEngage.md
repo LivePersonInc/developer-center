@@ -10,7 +10,7 @@ permalink: conversation-builder-getting-started-4-connect-to-liveengage.html
 indicator: both
 ---
 
-In this tutorial, you walk through how to link your bot to LiveEngage, ending with an integration that transfers to a human.
+In this tutorial, you walk through how to link your bot to LiveEngage, ending with an integration that transfers to a human agent.
 
 ### Step 10: Configure LiveEngage
 
@@ -79,7 +79,8 @@ In this step, you set up an integration to transfer the user to a human agent in
 
 1. Return to Conversation Builder, and open the bot.
 2. Click **Integrations** on the menu bar in the upper-right corner.
-3. On the Add Integration page, create a new API integration with the following parameters.
+3. Click **+ Add Integration** in the lower-left corner.
+4. On the Add Integration page, create a new API integration with the following parameters.
 
     * **Integration Name**: Escalation (or similar)
     * **Response Data Variable Name**: Escalation (or similar)
@@ -91,22 +92,22 @@ In this step, you set up an integration to transfer the user to a human agent in
 
     * **Message to User**: Enter a message to be sent to the user prior to escalation, something like, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
-4. Click **Save**.
+5. Click **Save**.
 
-5. Return to the dialog editor by clicking **Dialogs** on the menu bar in the upper-right corner.
+6. Return to the dialog editor by clicking **Dialogs** on the menu bar in the upper-right corner.
 
-6. Create a new regular dialog named "Agent Handoff" (or similar).
+7. Create a new regular dialog named "Agent Handoff" (or similar).
 
-7. Add a User Says interaction, and enter "I want to speak to an agent" as the sample user statement.
+8. In the default User Says interaction that's provided, enter "I want to speak to an agent" as the sample user statement.
 
-8. Open the User Says interaction's **Interaction Details**, and click the **Settings** tab.
+9. Open the User Says interaction's **Interaction Details**, and click the **Settings** tab.
 
-9. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
+10. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
 
-10. Add an Integration interaction, and select "Escalation" from the drop-down list.
+11. Add an Integration interaction, and select "Escalation" from the drop-down list.
 
     <img style="width:500px" src="img/ConvoBuilder/helloworld/selectescalation.png">
-11. Still in the interaction, click the vertical ellipsis icon <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_ellipsis_vertical.png">, and then click **Save**.
+12. Still in the interaction, click the vertical ellipsis icon <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_ellipsis_vertical.png">, and then click **Save**.
 
 ### Step 12: Deploy the bot to LiveEngage
 
@@ -126,7 +127,7 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/helloworld/agentConnectorsPage1.png">
 
 {: .important}
-LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more.
+LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 #### Start the agent connector
 
