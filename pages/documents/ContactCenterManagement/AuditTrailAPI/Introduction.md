@@ -35,13 +35,19 @@ An audit trail is available for the following elements:
  
 * Post conversation survey
 
-* Content Categories
+* Agent conversation survey
+
+* Content categories
 
 * Shift scheduler
 
-* Schedule items
+* Schedule
 
 * Special occasions
+
+* MTLS account mapping
+
+* MTLS certification
 
 
 ### Getting Started
