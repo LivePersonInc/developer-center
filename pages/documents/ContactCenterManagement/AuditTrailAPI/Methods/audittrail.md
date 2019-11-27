@@ -47,6 +47,8 @@ Contains a json object with a single "query" field which defines the requested G
 }
 
 ```
+**Required parameters**
+It requires at least one field from above in order to retirve audit data.
 
 **Optional graphql parameters**
 
@@ -64,6 +66,14 @@ Contains a json object with a single "query" field which defines the requested G
 |timezone|Time zone to use in results|Default: US/Eastern|
 |lpa|Boolean, include changes done by LPAs in the results|Default: false|
 |automaticUpdates|Boolean, include automatic updates in the results|Default: false|
+
+Example:
+```json
+{"query" : 
+"{auditData (lpa:true) { accountId objectType element oldValue newValue originatorIsLpa changeDate}}"
+}
+
+```
 
 ### Response
 
