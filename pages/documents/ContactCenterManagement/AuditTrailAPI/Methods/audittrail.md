@@ -43,9 +43,21 @@ Contains a json object with a single "query" field which defines the requested G
 
 ```json
 {"query" : 
-"{auditData { accountId objectType element oldValue newValue originatorIsLpa changeDate}}"
-}
-
+"{auditData { 
+        accountId 
+        objectType 
+        objectName 
+        element 
+        oldValue 
+        newValue 
+        originator 
+        originatorLoginName
+        originatorUserId
+        originatorUserAgent
+        originatorAuthType 
+        originatorIsLpa 
+        changeDate}}"
+ } 
 ```
 **Required parameters**
 It requires at least one field from above in order to retirve audit data.
