@@ -59,6 +59,7 @@ Contains a json object with a single "query" field which defines the requested G
         changeDate}}"
  } 
 ```
+
 **Required parameters**
 It requires at least one field from above in order to retirve audit data.
 
