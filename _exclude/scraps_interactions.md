@@ -1,3 +1,19 @@
+STATEMENTS
+
+### Image
+Image statements display a single image.
+
+<img style="width:250px" src="img/ConvoBuilder/statements_image.png">
+
+The domain in the image URL must be [whitelisted]((conversation-builder-interactions-interaction-basics.html#whitelisting)).
+
+### Audio
+Audio statements currently aren't supported.
+
+### Video
+Video statements currently aren't supported. Use a text statement that includes the video URL as a link.
+
+
 QUESTIONS
 
 Questions present information to the user---a question that expects a reply of some kind, a list of things to pick from, etc.---and they expect and wait for a user response before executing the next action.
