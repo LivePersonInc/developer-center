@@ -20,6 +20,9 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 {: .important}
 Please note, that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
+{: .important}
+**IMPORTANT**: In the case of inactivity, the Watson Assistant session only last 5 minutes for the Lite/Standard plans and up to 60 minutes for Plus/Premium plans. Because of the nature of the async messaging feature, provided by LivePerson it could take longer until the user replies to the Bot-Agent. In case the Watson session expires Third-Party Bots connector will create a new conversation session on the Watson side [More Info](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context)
+
 With Watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
 
 #### UserPass authentication
@@ -691,8 +694,111 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 }
 ```
 
+### Sending Encoded Metadata
+
+LiveEngage Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+
+<ul>
+  <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
+  <li>Content is base64 encoded</li>
+  <li> Metadata size is limited to 5k</li>
+</ul>
+
+{: .important}
+Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
+
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. The `encodedMetadata` can be defined with context editor or using the JSON editor(Figure 8.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
+
+  <img class="fancyimage" style="width:800px" src="img/watsonassistantv2/context_adding_choices.png">
+  Figure 8.1 Showing context editor with the encoded metadata.
+
+{: .important}
+Be careful with the camel-case characters `encodedMetadata` you must provide it exactly the same.
+
+#### Sending Watson Native Content with Encoded Metadata
+
+Sending encoded metadata with the Native Content (Text, Image and Options) is possible using Watson `context editor` or also through the `JSON editor`. An example response definition for both ways can be seen below:
+
+  <img class="fancyimage" style="width:800px" src="img/watsonassistantv2/watson_encoded_metadata_context_editor.png">
+  Figure 8.2 Showing context editor with the encoded metadata.
+
+<br />
+
+Example response body for `JSON editor`:
+
+```json
+{
+  "output": {
+    "generic": [
+      {
+        "values": [
+          {
+            "text": "This is text with encoded metadata"
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  },
+  "context": {
+    "encodedMetadata": "ewoiaWQiOiAidGV4dCIKfQ=="
+  }
+}
+```
+
+#### Sending Rich Content (structured content) with Encoded Metadata
+
+Sending encoded metadata with the Native Content is possible using Watson `context editor` or also through the `JSON editor`. An example response definition for both ways can be seen below:
+
+  <img class="fancyimage" style="width:800px" src="img/watsonassistantv2/watson_encoded_metadata_with_structured_content.png">
+  Figure 8.3 Showing context editor with the encoded metadata.
+
+<br />
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        {
+          "metadata": [
+            {
+              "id": "1234",
+              "type": "ExternalId"
+            }
+          ],
+          "structuredContent": {
+            "type": "vertical",
+            "elements": [
+              {
+                "type": "button",
+                "click": {
+                  "actions": [
+                    {
+                      "text": "Recommend me a movie, please",
+                      "type": "publishText"
+                    }
+                  ]
+                },
+                "title": "Recommend a movie"
+              }
+            ]
+          }
+        }
+      ],
+      "selection_policy": "sequential"
+    }
+  },
+  "context": {
+    "encodedMetadata": "ewoiaWQiOiAic2MiCn0="
+  }
+}
+```
+
 ### Limitations
 
 <ul>
+  <li>Currently IBM Watson Assistant retains sessions only for 5 minutes for Free and 60 minutes for Plus or premium members. For more information <a href='https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context' target='_blank'> read here</a></li>
   <li>Currently IBM Watson allows <b>only 5</b> response types per node.</li>
 </ul>
