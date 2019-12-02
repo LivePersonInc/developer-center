@@ -18,19 +18,6 @@ Text statements display the text provided, for example:
 
 Text statements can display dynamic values through the use of variables; for help with using variables, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
 
-### Image
-Image statements display a single image.
-
-<img style="width:250px" src="img/ConvoBuilder/statements_image.png">
-
-The domain in the image URL must be [whitelisted]((conversation-builder-interactions-interaction-basics.html#whitelisting)).
-
-### Audio
-Audio statements currently aren't supported.
-
-### Video
-Video statements currently aren't supported. Use a text statement that includes the video URL as a link.
-
 ### Apple Rich Links
 **For Apple Business Chat only.**
 
