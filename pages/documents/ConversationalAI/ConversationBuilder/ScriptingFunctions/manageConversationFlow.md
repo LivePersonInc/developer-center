@@ -86,7 +86,7 @@ The Add Quick Replies function is used for adding quick replies to a message in 
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `addQuickReples()` | array | None |
+| `addQuickReplies()` | array | None |
 
 #### Example
 
@@ -94,5 +94,8 @@ The example below shows how quick replies can be added easily to your message.
 
 ```javascript
 // Add these quick replies to an existing message
-botContext.addQuickReples(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03','Hot~sauce04']);
+botContext.addQuickReplies(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03','Hot~sauce04']);
 ```
+
+#### Deprecated
+`addQuickReples` is deprecated but supported. Bot developers are encouraged to use `addQuickReplies`.
