@@ -41,7 +41,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 
 | Column header name | Notes |
 |--------------------|-------|
-| id | An integer; usually just the row index, e.g., 1, 2, 3. **Note**: This column isn't required when you initially create the knowledge base. However, if you're using a Google sheet that you plan to sync periodically, it does play a role then. Before performing a sync, update the Google sheet to include the "id" column and enter the IDs for all existing articles. |
+| id | An integer; usually just the row index, e.g., 1, 2, 3. <br><br>**Note**: This column isn't required when you initially create the knowledge base. However, if you're using a Google sheet that you plan to sync periodically, it does play a role then. Before performing a sync, update the Google sheet to include the "id" column and enter the IDs for all existing articles. |
 | tags | A comma-separated list of relevant terms. |
 | title | The article title. This should be a complete sentence or question that the user might ask. |
 | summary | A short answer that's 80 characters or less. |
