@@ -41,7 +41,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 
 | Column header name | Notes |
 |--------------------|-------|
-| id | An integer; usually just the row index, e.g., 1, 2, 3. |
+| id | An integer; usually just the row index, e.g., 1, 2, 3. **Note**: This column isn't required when you initially create the knowledge base. However, if you're using a Google sheet that you plan to sync periodically, it does play a role then. Before performing a sync, update the Google sheet to include the "id" column and enter the IDs for all existing articles. |
 | tags | A comma-separated list of relevant terms. |
 | title | The article title. This should be a complete sentence or question that the user might ask. |
 | summary | A short answer that's 80 characters or less. |
@@ -68,6 +68,8 @@ After you've made changes to the Google sheet that's linked to the knowledge bas
 
 {: .important}
 This action overwrites the content in the knowledge base with the content in the Google sheet, so use caution when performing this.
+
+Before performing a sync, make sure the Google sheet includes the "id" column that contains the IDs for all existing articles. If it doesn't, update the sheet accordingly before syncing.
 
 **To sync a knowledge base with a Google sheet**
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.

@@ -20,7 +20,7 @@ The Knowledge Base application in the Conversation Builder platform lets you to 
 
 The Knowledge Base uses two types of algorithms to match a consumer's input to articles and return an appropriate article.
 
-First, an *exact match* search is performed. This checks the consumer's input against the titles, intent qualifiers (if used), and tags in the articles. If an exact match is found, the article is returned. Tags play an important role here; when an utterance contains one of these keywords, the match is scored higher.
+First, an *exact match* search is performed. This checks the consumer's input against the titles, intent qualifiers (if used), and tags in the articles. If an exact match is found, the article is returned.
 
 If an exact match isn't found, the Knowledge Base then uses *Natural Language Understanding (NLU)* algorithms to match the consumer input to articles. If it finds a match to a reasonable degree of certainty, it returns the article. The article attributes against which the NLU engine compares the consumer's input include:
 
