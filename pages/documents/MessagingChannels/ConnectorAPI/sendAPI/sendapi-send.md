@@ -5,10 +5,10 @@ redirect_from:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: API Reference
+subfoldername: Send API 
 order: 12
 indicator: messaging
-permalink: connector-api-api-reference-send.html
+permalink: connector-api-send-api-send.html
 search: exclude
 ---
 

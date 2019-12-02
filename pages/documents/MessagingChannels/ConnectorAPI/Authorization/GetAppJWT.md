@@ -6,9 +6,11 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Authorization and Authentication
-order: 4
+order: 14
 indicator: messaging
-permalink: connector-api-authorization-and-authentication-get-appjwt.html
+permalink: connector-api
+
+-authorization-and-authentication-get-appjwt.html
 search: include
 ---
 LivePerson uses OAuth 2.0 grant type [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) in order to allow apps to access the Send API. Sentinel, the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any follow-up request to the Send API. However, the AppJWT alone is not sufficient to identify a consumer to LiveEngage. This means, one has to obtain a [ConsumerJWS](Create_ConsumerJWS.html), too. The following HTTPS request exemplifies how to get an AppJWT:
