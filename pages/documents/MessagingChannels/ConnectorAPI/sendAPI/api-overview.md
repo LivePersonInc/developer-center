@@ -32,7 +32,7 @@ The API consists of two types of calls:
 
 ####  Authentication & Authorization
 
-Refer to the [Getting Started](connectorapi-getting-started.html) section to see how you can authorize your connector ([AppJWT](Create_AppJWT.html)) application and identify the consumer ([ConsumerJWS](Create_ConsumerJWS.html)) before you can use the API.
+Refer to the [Authorizaztion and Authentication](connector-api-send-api-authorization-and-authentication.html) section to see how you can authorize your connector ([AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) application and identify the consumer ([ConsumerJWS](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) before you can use the API.
 
 
 ####  Authorization Tokens expiration times
