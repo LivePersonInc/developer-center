@@ -241,7 +241,7 @@
     pages:
       - pagename: Permissions
       - pagename: Credentials
-      - pagename: Subscriptions
+  #    - pagename: Subscriptions
   - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
