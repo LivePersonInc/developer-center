@@ -10,7 +10,7 @@ permalink: knowledge-base-overview.html
 indicator: both
 ---
 
-A bot is a great way to provide help and information, and it's common for a bot to use a knowledge base as a fallback to answer a question that the bot itself can't answer.
+In Conversation Builder, a knowledge base is a great tool to answer questions about a variety of topics specific to your bot's area of expertise. One would typically add a knowledge base integration in a fallback dialog to provide simple answers to topics not covered elsewhere in the bot.
 
 The Knowledge Base application in the Conversation Builder platform lets you to create and manage knowledge bases and articles, which are then processed by an NLU engine. This allows the bot to leverage [intents](intent-builder-intents.html) and [entities](intent-builder-entities.html) to recommend the most accurate articles to an inquiring consumer. FAQ bots and Agent Advisor widgets are both driven by a knowledge base full of articles, intelligently delivering the right content to the consumer at the right time.
 
@@ -25,7 +25,7 @@ First, an *exact match* search is performed. This checks the consumer's input ag
 If an exact match isn't found, the Knowledge Base then uses *Natural Language Understanding (NLU)* algorithms to match the consumer input to articles. If it finds a match to a reasonable degree of certainty, it returns the article. The article attributes against which the NLU engine compares the consumer's input include:
 
 * Title
-* Intents (either knowledge base intents or domain intents)
+* Intents (either the knowledge base's built-in intents or domain intents that are linked to the relevant article)
 * Positive and negative learnings that the article has acquired
 
 The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR.
