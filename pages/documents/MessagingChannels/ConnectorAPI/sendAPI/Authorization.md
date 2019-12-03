@@ -14,7 +14,7 @@ search: include
 
 ### Get AppJWT
 
-LivePerson uses OAuth 2.0 grant type [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) in order to allow apps to access the Send API. Sentinel, the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any follow-up request to the Send API. However, the AppJWT alone is not sufficient to identify a consumer to LiveEngage. This means, one has to obtain a [ConsumerJWS](Create_ConsumerJWS.html), too. The following HTTPS request exemplifies how to get an AppJWT:
+LivePerson uses OAuth 2.0 grant type [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) in order to allow apps to access the Send API. Sentinel, the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any follow-up request to the Send API. However, the AppJWT alone is not sufficient to identify a consumer to LiveEngage. This means, one has to obtain a [ConsumerJWS](#get-consumerjwt), too. The following HTTPS request exemplifies how to get an AppJWT:
 
 ```http
 POST /sentinel/api/account/{accId}/app/token?v=1.0&grant_type=client_credentials HTTP/1.1
@@ -109,7 +109,7 @@ A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](Create_AppJWT.html) | ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM |
+| Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](#get-appjwt) | ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM |
 
 
 #### Response

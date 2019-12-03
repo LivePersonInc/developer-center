@@ -40,8 +40,8 @@ This API endpoint expects a set of JSON payloads, each representing a different 
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Request Body - JSON payload**
 
@@ -108,7 +108,7 @@ See below a few examples of how to do so.
 
 **Note**
 
-* We advise against using this method for conversation targeting/routing. The best practice is to setup a campaign for messaging on your account and send the Campaign Info when creating a conversation. See example [here](cmp-routing-example.html).
+* We advise against using this method for conversation targeting/routing. The best practice is to setup a campaign for messaging on your account and send the Campaign Info when creating a conversation. See example [here](#campaign-for-messaging-routing).
 
 * The supported SDEs for sending are the [Customer Info](engagement-attributes-types.html#customer-info) and [Personal Info](engagement-attributes-types.html#personal-info) SDEs.
 
@@ -127,8 +127,8 @@ See below a few examples of how to do so.
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Example Request Body - JSON Payload**
 
@@ -249,8 +249,8 @@ This is an example of how to send a message to LiveEngage to an open conversatio
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Request Body - JSON Payload**
 
@@ -294,8 +294,8 @@ In order to close a conversation you simply use the same SEND API endpoint you u
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Example Request Body - JSON Payload**
 
@@ -340,8 +340,8 @@ In order to send an indication that the consumer is typing, the connector will s
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Example Request Body - JSON Payload**
 
@@ -372,9 +372,9 @@ The following example illustrates how to enable the auto messages feature upon c
 
 1. Contact your account team to enable this feature on your account.
 
-2. Upon creating a new conversation (via the CONVERSATION endpoint), make sure you also pass the additional **Client-Properties** request header. See [Example](enable-feature-example.html#create-a-new-conversation--enable-the-auto-messages-feature) below.
+2. Upon creating a new conversation (via the CONVERSATION endpoint), make sure you also pass the additional **Client-Properties** request header. See [Example](#create-a-new-conversation--enable-the-auto-messages-feature) below.
 
-3. Every following request (via the SEND endpoint) must also include the additional **Client-Properties** request header. See [Example](enable-feature-example.html#send-a-message--enable-the-auto-messages-feature) below.
+3. Every following request (via the SEND endpoint) must also include the additional **Client-Properties** request header. See [Example](#send-a-message--enable-the-auto-messages-feature) below.
 
 
 #### Getting Started
@@ -400,8 +400,8 @@ The following example illustrates how to enable the auto messages feature upon c
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Additional Request Header**
 
@@ -472,8 +472,8 @@ The following example illustrates how to enable the auto messages feature upon c
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Additional Request Header**
 
@@ -526,8 +526,8 @@ In this example we create a conversation and pass the **Engagement ID** and **Ca
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Example Request Body - JSON Payload**
 
@@ -604,8 +604,8 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Example Request Body - JSON Payload**
 
@@ -728,8 +728,8 @@ See full documentation for generating temporary upload URL [here](consumer-int-m
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Request Body Example - JSON Payload**
 

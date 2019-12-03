@@ -47,7 +47,7 @@ permalink: connector-api-getting-started.html
 
 	* A secret (`client_secret`; for example kgvbkk7glku72jgtmpi6l4a872)
 
-	These will be used for the first authorization request to LiveEngage in order to identify your connector and provide it with an **AppJWT**. Refer to [Getting an AppJWT](Create_AppJWT.html) for more information.
+	These will be used for the first authorization request to LiveEngage in order to identify your connector and provide it with an **AppJWT**. Refer to [Getting an AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt) for more information.
 
 3. **Getting a consumer JWS** - An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT, you can obtain a consumer JWS (Java Web Signature) to identify the consumer in LiveEngage:
 
@@ -55,7 +55,7 @@ permalink: connector-api-getting-started.html
 
 	 https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountid}/consumer?v=1.0|
 
-	Refer to [Getting a ConsumerJWS](Create_ConsumerJWS.html) for more information.
+	Refer to [Getting a ConsumerJWS](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt) for more information.
 
 4. **Develop and run your connector** - refer to the [API Overview](connector-api-overview.html) to get started.
 
