@@ -168,6 +168,14 @@ botContext.setBotVariable("previousSkill", previousSkill, true, false);
 
 <img class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
 
+### Get matched intent
+Used to retrieve the intent (associated with a User Says interaction) that was matched to the most recent user utterance.
+
+#### Example
+
+```javascript
+var intentName = botContext.getDialogStarterIntent();
+```
 
 ### Get named entities
 

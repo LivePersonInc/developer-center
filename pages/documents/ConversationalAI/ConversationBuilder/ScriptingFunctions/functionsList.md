@@ -22,6 +22,7 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 * [getChannel](conversation-builder-scripting-functions-get-set-contextual-data.html#get-channel)
 * [getConversationId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-conversation-id)
 * [getCurrentUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-user-message)
+* [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent)
 * [getDisambiguatedIntentId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-disambiguated-intent)
 * [getDisambiguatedIntentName](conversation-builder-scripting-functions-get-set-contextual-data.html#get-disambiguated-intent)
 * [getEnvVariable](conversation-builder-scripting-functions-get-set-contextual-data.html#get-environment-variable)
