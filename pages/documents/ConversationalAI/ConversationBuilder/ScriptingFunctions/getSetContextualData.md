@@ -171,6 +171,8 @@ botContext.setBotVariable("previousSkill", previousSkill, true, false);
 ### Get matched intent
 Used to retrieve the intent (associated with a User Says interaction) that was matched to the most recent user utterance.
 
+This method returns the name of the intent. If you are using a meta intent, it returns the name of the child or sub-intent.
+
 #### Example
 
 ```javascript
