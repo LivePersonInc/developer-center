@@ -43,7 +43,7 @@ Refer to the [Getting Started](connectorapi-getting-started.html) section to see
 
 ####  Authorization and authentication Error Handling
 
-* **401 Unauthorized** - Expired/Missing/Invalid ``AppJWT`` Token or Missing/Invalid ``CosnumerJWS``. A fresh AppJWT token is required from the client/connector. This code states that the request does not contain the required authorization token, or contains an expired token. This response asks the client to supply a new token from the client/connector. In case the AppJWT Token is valid and not expired, one can get the same status code if the ConsumerJWS is missing or invalid (e.g, consumer A is trying to access a conversation ID of consumer B).
+* **401 Unauthorized** - Expired/Missing/Invalid ``AppJWT`` Token or Missing/Invalid ``ConsumerJWS``. A fresh AppJWT token is required from the client/connector. This code states that the request does not contain the required authorization token, or contains an expired token. This response asks the client to supply a new token from the client/connector. In case the AppJWT Token is valid and not expired, one can get the same status code if the ConsumerJWS is missing or invalid (e.g, consumer A is trying to access a conversation ID of consumer B).
 
 
 ### Message Format
