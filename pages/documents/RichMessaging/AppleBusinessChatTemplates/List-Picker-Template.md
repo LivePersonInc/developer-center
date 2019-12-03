@@ -17,7 +17,7 @@ indicator: messaging
 
 * Define items information - item name, description, image.
 * Item sections - divide your list of items into sections based on the product categories.
-* Multi-selection - Allow the consumer to select multiple items on multiple sectiion (brands can decide to turn multi-selction on some or all of the sections). 
+* Multi-selection - Allow the consumer to select multiple items under multiple sections (brands can decide to turn multi-selction on some or all of the sections). 
 * receivedMessage and replyMessage bubbles style structures - define the templates for the bubbles that are received by the consumer on the Business Chat thread, and replied to.
 
 Using metadata properties, brands can define the received and reply bubble structures and enable multi-selection capabilities.
