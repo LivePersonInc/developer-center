@@ -169,12 +169,12 @@ The List Picker Metadata JSON is based on [this JSON template](#metadata-json-te
 
 #### List Picker Metadata JSON Properties
 
-Muliple selection property allows the brand to configure which sections will allow for multiple selection and which sections will not. The property is an array of bolleans which will be set to true or false in the order that the sections are configured in the body. If the multi selections property is not set in the property, defult will be set ("false". 
+The muliple selection property allows the brand to configure which sections will allow for multiple selection and which sections will not. The property is an array of bolleans which will be set to true or false in the order that the sections are configured in the body. If the multi selections property is not set in the property, the default is "false". 
 
 | Property Name     | Description                                                                                 | Type    | Required | Size Limit |
 | :---------------- | :------------------------------------------------------------------------------------------ | :------ | :------- | :--------- |
 | type              | Type of metadata. </br> Must be BusinessChatMessage                                         | Enum    | Y        |            |
-| multipleSelection | Value that indicates if the customer can make multiple selections on spesific sections. Defaults to false. | Boolean Array | N        |            |
+| multipleSelection | Value that indicates if the customer can make multiple selections on specific sections. Defaults to false. | Boolean Array | N        |            |
 | receivedMessage   | Defines how the bubble template will be displayed when a message is received.                 | Object  | Y        |            |
 | replyMessage      | Defines how the bubble will be displayed when a message is sent back by the consumer.       | Object  | Y        |            |
 
