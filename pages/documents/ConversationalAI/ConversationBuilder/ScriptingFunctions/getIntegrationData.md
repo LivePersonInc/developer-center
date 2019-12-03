@@ -54,7 +54,7 @@ if(isApiExecutionSuccessful){
 
 ### Get API integration status code
 
-Used to retrieve the HTTP status (response) code returned from execution of an API integration.
+Used to retrieve the HTTP status (response) code returned from execution of an API integration. The code returned might indicate success or failure, and, in the case of a failure, it can provide insight into the type of error that occurred.
 
 {: .important}
 This method always returns the result of the most recent API integration that was executed. Keep this in mind when you have a dialog that contains multiple API integrations.
