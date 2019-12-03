@@ -61,7 +61,7 @@ Contains a json object with a single "query" field which defines the requested G
 ```
 
 **Required parameters**
-It requires at least one field from above in order to retirve audit data.
+At least one parameter from the above parameters is required in order to retirve audit data.
 
 **Optional graphql parameters**
 
