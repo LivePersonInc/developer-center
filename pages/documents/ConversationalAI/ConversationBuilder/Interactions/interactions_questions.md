@@ -210,6 +210,18 @@ Location settings support features that play a role after the consumer has selec
 
 <img style="width:250px" src="img/ConvoBuilder/questions_timePicker3.png">
 
+Use the fields below to specify a *static* start date and start time:
+
+<img style="width:350px" src="img/ConvoBuilder/questions_timePicker9.png">
+
+Or, use the field below to specify a *variable* start date and start time:
+
+<img style="width:250px" src="img/ConvoBuilder/questions_timePicker10.png">
+
+Variable dates and times are discussed in more detail below. 
+
+You can switch between the two options using the blue link (shown above) beneath the controls.
+
 | Setting  | Description  | Required or Optional | Example  |
 |---|---|---|---|
 | Start Date  | The date **in GMT** on which the event starts. | Required | 09/05/2019 |
@@ -234,11 +246,13 @@ The Reply Message settings define how to display the consumer’s reply after th
 
 #### Populating a time picker dynamically
 
-You can populate the Time Picker fields with static information, or they can be dynamically populated during run time using data received from an [API integration](conversation-builder-integrations-api-integrations.html).
+As mentioned above, the Time Picker can be dynamically populated during run time using variable data received from an [API integration](conversation-builder-integrations-api-integrations.html).
 
-<img style="width:400px" src="img/ConvoBuilder/questions_timePicker8.png">
+<img style="width:275px" src="img/ConvoBuilder/questions_timePicker10.png">
 
-As indicated earlier in this topic, start dates and times must be **in GMT**, so depending on the data received from the API call, you might need to do some preprocessing to convert the times.
+Since the API response has the date *and* time together in the received payload, you don't need to specify them separately in two fields.
+
+Remember that, as discussed above, start dates and times must be **in GMT**, so depending on the data received from the API call, you might need to do some preprocessing to convert the times.
 
 The Duration field can't be populated dynamically; you must manually specify this value.
 
