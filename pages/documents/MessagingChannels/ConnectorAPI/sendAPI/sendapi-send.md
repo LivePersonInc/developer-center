@@ -5,10 +5,10 @@ redirect_from:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: API Reference
+subfoldername: Send API 
 order: 12
 indicator: messaging
-permalink: connector-api-api-reference-send.html
+permalink: connector-api-send-api-send.html
 search: exclude
 ---
 
@@ -44,8 +44,8 @@ The SEND method allows you to send a JSON payload to LiveEngage. This method is 
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Body**
 
@@ -81,8 +81,8 @@ For the JSON payload, please have a look at the [Messaging Window API](consumer-
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | dialogId | The **conversationId** created by CONVERSATION request | "8602832d-dce1-446b-8445-0d51f5926a42" | string | true | Can be found in the response of [CONVERSATION endpoint](sendapi-create.html#response) |
 | type | The messaging event type | ContentEvent | string | true | ContentEvent will be used for sending a text message or a file |
-| contentType | Which content is sent | "text/plain" for text message | string | true | For sending a file use "hosted/file" value. Refer [here](share-image-example.html) for more details. |
-| message | Text message | "Hello, I need your support" | string | true | In case of sending a file the message would be an Array of properties (caption, relative path, file type and preview data) describing the file - Refer [here](share-image-example.html) for more details. |
+| contentType | Which content is sent | "text/plain" for text message | string | true | For sending a file use "hosted/file" value. Refer [here](connector-api-send-api-examples.html#file-sharing) for more details. |
+| message | Text message | "Hello, I need your support" | string | true | In case of sending a file the message would be an Array of properties (caption, relative path, file type and preview data) describing the file - Refer [here](connector-api-send-api-examples.html#file-sharing) for more details. |
 
 
 **Example Request Body - Consumer is Typing - JSON Payload**

@@ -5,10 +5,10 @@ redirect_from:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: API Reference
+subfoldername: Send API
 order: 11
 indicator: messaging
-permalink: connector-api-api-reference-conversation.html
+permalink: connector-api-send-api-conversation.html
 search: exclude
 ---
 
@@ -44,8 +44,8 @@ The CONVERSATION method is a batch-endpoint (this means that one payload can con
 
 | Header | Description |
 | :--- | :--- |
-| Authorization | The AppJWT token (see details [here](Create_AppJWT.html)) |
-| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](Create_ConsumerJWS.html)) |
+| Authorization | The AppJWT token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) |
+| X-LP-ON-BEHALF | The ConsumerJWS token (see details [here](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) |
 
 **Request Body**
 
@@ -130,7 +130,7 @@ The next request body example illustrates how to create a conversation and send 
 ]
 ```
 
-The above request is much better as it also includes the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](sdes-routing-example.html){:target="blank"}. **Note**: Not best practice, please avoid this method if possible.
+The above request is much better as it also includes the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](connector-api-send-api-examples.html#create-a-new-conversation-and-report-sdes){:target="blank"}. **Note**: Not best practice, please avoid this method if possible.
 
 The best practice to target conversations to skills when using messaging is to setup campaigns for messaging.
 If you have set up Campaigns for Messaging on your account, you can send the **Campaign ID** and **Enagagement ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Manager. This will also allow the Agent to see the name of your connector as the **source** of the conversation in the Consumer info widget:
