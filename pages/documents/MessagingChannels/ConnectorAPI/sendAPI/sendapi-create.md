@@ -2,7 +2,6 @@
 pagename: CONVERSATION
 redirect_from:
   - sendapi-create.html
-  - connector-api-api-reference-conversation.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API

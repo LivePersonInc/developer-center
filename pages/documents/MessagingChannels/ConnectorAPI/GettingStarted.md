@@ -2,8 +2,6 @@
 pagename: Getting Started
 redirect_from:
   - connectorapi-getting-started.html
-  - connector-api-first-steps-getting-started.html
-  - connector-api-first-steps-app-install-manifest-for-connectors.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API

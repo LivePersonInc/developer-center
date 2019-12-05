@@ -685,16 +685,21 @@
   - documentname: Connector API
     basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
-    - pagename: Overview
-    - pagename: Getting Started
-    - pagename: Connector Sample App
-    - pagename: Send API
+    - pagename: First Steps
       subpages:
       - subpagename: Overview
-      - subpagename: Authorization and Authentication
+      - subpagename: App Install Manifest for Connectors
+      - subpagename: Getting Started
+    - pagename: Authorization and Authentication
+      subpages:
+      - subpagename: Get AppJWT
+      - subpagename: Get ConsumerJWS
+      - subpagename: Authorization Error Responses
+    - pagename: API Reference
+      subpages:
+      - subpagename: Overview
       - subpagename: CONVERSATION
       - subpagename: SEND
-      - subpagename: Examples
     - pagename: Webhooks
       subpages:
       - subpagename: Overview
@@ -705,6 +710,19 @@
       - subpagename: Disclaimers
       - subpagename: Troubleshooting
       - subpagename: Webhooks Examples
+    - pagename: Examples
+      subpages:
+      - subpagename: Create a New Conversation
+      - subpagename: Create a New Conversation and Report SDEs
+      - subpagename: Send a Message
+      - subpagename: Close a Conversation
+      - subpagename: Send Chat State Events
+      - subpagename: How to Enable a Feature
+      - subpagename: Campaign for Messaging Routing
+      - subpagename: File Sharing
+    - pagename: Sample Code
+      subpages:
+      - subpagename: Connector Sample App
   - documentname: IVR Engagement API
     basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
     pages:

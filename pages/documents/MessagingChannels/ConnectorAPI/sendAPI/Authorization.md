@@ -2,9 +2,6 @@
 pagename: Authorization and authentication
 redirect_from:
   - Authorization.html
-  - connector-api-authorization-and-authentication-get-appjwt.html
-  - connector-api-authorization-and-authentication-get-consumerjws.html
-  - connector-api-authorization-and-authentication-authorization-error-responses.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API

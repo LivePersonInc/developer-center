@@ -2,7 +2,6 @@
 pagename: SEND
 redirect_from:
   - sendapi-send.html
-  - connector-api-api-reference-send.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API

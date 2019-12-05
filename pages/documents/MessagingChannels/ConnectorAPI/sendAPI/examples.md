@@ -2,14 +2,6 @@
 pagename: Examples
 redirect_from:
   - examples.html
-  - connector-api-examples-create-a-new-conversation.html
-  - connector-api-examples-create-a-new-conversation-and-report-sdes.html
-  - connector-api-examples-send-a-message.html
-  - connector-api-examples-close-a-conversation.html
-  - connector-api-examples-send-chat-state-events.html
-  - connector-api-examples-how-to-enable-a-feature.html
-  - connector-api-examples-campaign-for-messaging-routing.html
-  - connector-api-examples-file-sharing.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
