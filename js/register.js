@@ -156,6 +156,17 @@ function validateInfo (){
   }
 }
 
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+  if (match) {
+    const result = match[2];
+    if (result !== "null" && result !== "NULL") {
+      return result;
+    }
+  }
+  return undefined;
+}
+
 function postRequest () {
 //defining the endpoint for account creation
   const URL = 'https://d0j6xh4g99.execute-api.us-east-2.amazonaws.com/prod/web/account';
@@ -166,7 +177,16 @@ function postRequest () {
     region: region,
     email: emailAddress,
     password: password,
-    recaptchaResponseToken: recaptchaResponseToken || ''
+    recaptchaResponseToken: recaptchaResponseToken || '',
+    marketingData: {
+      leadSource: getCookie('lp-leadSource'),
+      referringUrl: getCookie('lp-lsRef'),
+      utmCampaignId: getCookie('lp-lsCampaign'),
+      utmCampaignMedium: getCookie('lp-lsMedium'),
+      utmCampaignSearchKeywords: getCookie('lp-lsTerms'),
+      utmCampaignSource: getCookie('lp-lsSource'),
+      utmContent: getCookie('lp-lsContent')
+    }
   }
 
   //using the axios module to make the request
