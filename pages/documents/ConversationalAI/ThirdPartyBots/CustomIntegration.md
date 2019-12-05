@@ -285,6 +285,29 @@ For detailed information on Quick Replies check out the documentation for the sp
 }
 ```
 
+### Sending Pause/Delay Message
+
+In the bot's flow, there can be a time when it is required to pause/delay the conversation for some time. This is supported in Custom Integration as well through Third-Party Bots. There are two properties `delay` and `typing` need to be added in with the response body of the function.
+
+<ul>
+  <li> <b>delay</b>: This is the number of seconds for delay</li>
+  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional if not provided then the value will be considered as true</li>
+</ul>
+
+An example of the function response with a simple text message and delay properties is below:
+
+```javascript
+{
+  "delay": 8,
+  "typing": false,
+  "messages": ["This message also includes the intent information"],
+  "context": {
+    // Here Comes your context information
+  }
+  }
+}
+```
+
 ### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation with the consumer without escalating to a live agent. If a query has been answered, or the brand has determined that no escalation is available for a given query, then you will need to have the bot end the conversation.
