@@ -2,6 +2,7 @@
 pagename: Overview
 redirect_from:
   - connector-api-reference-overview.html
+  - connector-api-api-reference-overview.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
