@@ -90,7 +90,7 @@ Bot settings include:
 
     Use this field to replace the default error/exception message with a user-friendly, meaningful one that satisfies your requirements in terms of substance and language (e.g., you might want to send a response that communicates that an error has occurred and perhaps do so in Spanish). To specify a response, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.
     
-    Note that this message doesn't replace a Fallback dialog, as they serve different purposes. A Fallback dialog handles when the user's utterance doesn't match a pattern or intent. In contrast, this "default user-friendly response" is sent when the bot encounters an error or throws an exception.
+    Note that this message doesn't replace or affect the Fallback message or a Fallback dialog, as they serve different purposes. Fallback handles when the user's utterance doesn't match a pattern or intent. In contrast, this "default user-friendly response" is sent when the bot encounters an error or throws an exception.
 
 ### Export a bot
 Export of an bot creates a JSON file.
