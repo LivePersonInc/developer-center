@@ -29,6 +29,15 @@ Before you can add an Integration interaction, you need to create the integratio
 
 3. Finish configuring the interaction as desired, and click **Save**.
 
+{: .important}
+It's recommended that you take advantage of the ability to define conditions based on the *result* of the API integration. In our example below, we've added a condition that checks for a "success" result **(1)**, and we've configured the next step to continue to the next interaction **(2)**. So, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends).
+
+ <img style="width:800px" src="img/ConvoBuilder/integrations_api_success.png">
+
+We've likewise added a second condition that checks for a "failure" result **(1)**, and then we've configured the next step to continue to a "fail" interaction **(2)**. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
+
+ <img style="width:800px" src="img/ConvoBuilder/integrations_api_failure.png">
+
 ### File Upload interactions
 
 {: .important}
