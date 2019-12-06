@@ -129,11 +129,6 @@ Use of custom configuration fields potentially can cause many issues because it 
 
 | Field Name   | Default Value      | Description    | Messaging | Chat | Required |
 |--------|---------|-------------|-----------|------|----------|
-| lpAccountId  | null     | LE Account Id     | Y         | Y    | Y        |
-| lpAccountUser    | null     | LE Account Username   | Y     | Y    | Y     |
-| lpUserRole  | ASSIGNED\_AGENT    | Determines whether the user is Agent Manager or Agent\.Possible values: ASSIGNED\_AGENT, MANAGER    | Y      | N    | N    |
-| enableAccessibility  | TRUE   | Determines whether the fields sent have the tooltip attribute for accessibility\.   | Y     | Y    | N     |
-| fallbackSkillId   | null     | Skill Id for agent escalation if the bot does not respond to user message after a period of time set byfallbackEscalationTime   | Y    | Y    | N   |
 | fallbackEscalationTime  | 3 \* 1000 \* 60   | Value in milliseconds for the period of time to pass before invoking fallback Escalation    | Y   | N    | N    |
 | defaultGreetingMessage  | ‘hi’   | Greeting message sent to the bot when the user connects   | Y         | Y    | N  |
 | defaultStepupMessage  | ‘\_STEPUP\_  | StepUp message sent to the bot when Stepup Authentication happens   | Y  | N    | N   |
@@ -144,6 +139,3 @@ Use of custom configuration fields potentially can cause many issues because it 
 | retryMessageInterval  | 30000    | Tied with messageResendMaxRetries, will wait 30000 miliseconds before re\-sending the message   | Y   | N    | N    |
 | maxEscalationRetries    | 5     | When the agent escalation fails, we send an \_agent\_escalation\_failed\_ message, however this can end in infinitely loop if the escalation keep failing\. This will set the max number of failure messages sent                                               | Y    | N    | N   |
 | ringAcceptWait   | 100 milliseconds  | Amount of time to wait before the bot accepts the ring from UMS\.    | Y   | N    | N   |
-| useRedis  | “WEBSOCKET”    | If set to “REDIS”, will use redis Q connection instead of websocket connection   | N   | N    | N   |
-| externalWebhookUrl   | null  | URL used for HTTP Connector to post message to external endpoints            | Y   | Y    | N   |
-| externalWebhookAPIKey | null   | Auth header for external HTTP headers, api calls will be sent as: Bearer \{api\_key\}   | Y   | N    | N  |
