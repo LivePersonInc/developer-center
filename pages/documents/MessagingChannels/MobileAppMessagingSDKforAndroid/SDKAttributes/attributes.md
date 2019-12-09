@@ -29,7 +29,7 @@ If you are currently using our default attribute configurations, do a quick chec
 If you have customized the appearance of the Android SDK by setting your own values for lp color attributes, note that unless you have custom colors set for lp color attribute values in `values-night` folder your custom configuration will not support dark mode and the UI may not appear as expected.
 
 #### What this means for consumers on Android 9 and below?
-we have mirrored the implementation for our Light theme for Android devices operating on <= android 9 using non semantic colors that closely resemble the light android system colors.
+we have mirrored the implementation for our Light theme for Android devices operating on android 9 and below using non semantic colors that closely resemble the light android system colors.
 
 #### How to implement custom color configurations within the LPMessaging Android SDK that support Dark Theme?
 For all your custom color and style configurations, you are able to use specific resource folders like `values-night` and `drawable-night` in your application to override LP Android SDK Attributes. In this way, you can perfectly fit the design to your company's color theme and your users wishes.
@@ -925,7 +925,7 @@ If true, force dark mode is applied to webView when system dark mode is enabled.
 
 
 #### darkMode_SC_QR_override_colors_from_LE
-If true , colors for structured content elements and Quick replies are override from LE in dark theme.
+If false , colors for structured content elements and Quick replies are override from LE in dark theme.
 
 * **Type:** bool
 * **Default value:** false

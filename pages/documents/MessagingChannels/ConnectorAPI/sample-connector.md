@@ -2,13 +2,14 @@
 pagename: Connector Sample App
 redirect_from:
   - connector-sample-app.html
+  - connector-api-sample-code-connector-sample-app.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
 subfoldername: Sample Code
 order: 70
 indicator: messaging
-permalink: connector-api-sample-code-connector-sample-app.html
+permalink: connector-api-connector-sample-app.html
 ---
 
 ### Overview

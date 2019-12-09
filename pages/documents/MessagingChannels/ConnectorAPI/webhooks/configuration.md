@@ -11,7 +11,7 @@ indicator: messaging
 permalink: connector-api-webhooks-configuration.html
 ---
 
-Webhooks notifications are enbaled by adding the *webhooks* capability to an [application](app-install-manifest-connectors.html). For example, consider the following application configuration:
+Webhooks notifications are enbaled by adding the *webhooks* capability to an [application](connector-api-getting-started.html#app-install-manifest-for-connectors). For example, consider the following application configuration:
 
 ```json
 {
