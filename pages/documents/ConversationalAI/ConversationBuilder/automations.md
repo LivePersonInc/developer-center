@@ -92,7 +92,7 @@ Bot settings include:
 
     Note that this message doesn't replace or affect the Fallback message or a Fallback dialog, as they serve different purposes. Fallback handles when the user's utterance doesn't match a pattern or intent. In contrast, this "default user-friendly response" is sent when the bot encounters an error or throws an exception.
 
-    Finally, also be aware that, during a LivePerson agent escalation, if the escalation fails 4 times, the escalation then stops, and this "default user-friendly response" is sent to the user. For more information on escalation failures, see [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures).
+    Finally, also be aware that, during a LivePerson agent escalation, if the escalation fails 4 times, the escalation then stops, and a default failure message is sent to the user. However, if you supply a "default user-friendly response" here, it will be sent instead. For more information on handling escalation failures, see [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures).
 
 ### Export a bot
 Export of an bot creates a JSON file.
