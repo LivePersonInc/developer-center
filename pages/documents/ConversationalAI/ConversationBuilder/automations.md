@@ -89,8 +89,10 @@ Bot settings include:
 - **Default User-Friendly Response**: When the bot encounters errors or throws exceptions, many times a default, English-language message of, *"Not able to understand your question. Can you please re-phrase it?"* is sent to the user. This is also the built-in, default Fallback response, which might confuse the user.
 
     Use this field to replace the default error/exception message with a user-friendly, meaningful one that satisfies your requirements in terms of substance and language (e.g., you might want to send a response that communicates that an error has occurred and perhaps do so in Spanish). To specify a response, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.
-    
+
     Note that this message doesn't replace or affect the Fallback message or a Fallback dialog, as they serve different purposes. Fallback handles when the user's utterance doesn't match a pattern or intent. In contrast, this "default user-friendly response" is sent when the bot encounters an error or throws an exception.
+
+    Finally, also be aware that, during a LivePerson agent escalation, if the escalation fails 4 times, the escalation then stops, and this "default user-friendly response" is sent to the user. For more information on escalation failures, see [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures).
 
 ### Export a bot
 Export of an bot creates a JSON file.

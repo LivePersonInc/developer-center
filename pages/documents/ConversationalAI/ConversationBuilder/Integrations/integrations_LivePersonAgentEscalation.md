@@ -47,7 +47,7 @@ Most often in Chat, but occasionally with Messaging, an attempt at transferring 
 
 Setting up a dialog to catch the `__agent_escalation_failed__` pattern allows you to send an appropriate message to the consumer, e.g., "Sorry, no agents are currently available."
 
-If the `__agent_escalation_failed__` message is sent 3 times to the bot, and the 4th attempt also fails, the escalation stops, and the customizable "default user-friendly response" specified in [Bot Settings](https://developers.liveperson.com/conversation-builder-bots.html#configure-bot-settings) is sent to the consumer.
+If the `__agent_escalation_failed__` message is sent 3 times to the bot, and the 4th attempt also fails, the escalation stops, and the customizable "default user-friendly response" specified in [Bot Settings](conversation-builder-bots.html#configure-bot-settings) is sent to the consumer.
 
 ### Troubleshooting
 
