@@ -21,6 +21,9 @@ Text statements can display dynamic values through the use of variables; for hel
 ### Apple Rich Links
 **For Apple Business Chat only.**
 
+{: .important}
+Use of Apple rich links for video is not supported at this time.
+
 If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use this type of interaction to send a richer, more interactive and structured message, for example:
 
 <img style="width:450px" src="img/ConvoBuilder/statements_richLink.png">
@@ -30,6 +33,9 @@ Apple rich links let consumers directly preview an inline image or video. If you
 <img style="width:375px" src="img/ConvoBuilder/statements_richLink2.png">
 
 #### Rich Link settings
+
+{: .important}
+Use of Apple rich links for video is not supported at this time.
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- | 
