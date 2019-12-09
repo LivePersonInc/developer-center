@@ -483,7 +483,6 @@
         - pagename: Introduction
         - pagename: Methods
           subpages:
-            - subpagename: General
             - subpagename: Categories List
             - subpagename: Categories List by Revision
             - subpagename: Category by ID
@@ -495,6 +494,7 @@
             - subpagename: Delete Multiple Categories
             - subpagename: Import Account Categories
             - subpagename: Import Categories Pre Validation
+        - pagename: Appendix
     - documentname: Profiles API
       basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/profiles
       pages:
