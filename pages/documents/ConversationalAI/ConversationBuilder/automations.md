@@ -88,13 +88,11 @@ Bot settings include:
 
 - **Default User-Friendly Response**: This is an *error* response that gets sent to the user. Because you can supply the response, you can customize it in terms of substance and language (Spanish, Italian, etc.). If you enter a value here, it's used in two circumstances.
     
-    First, when the bot encounters errors or throws exceptions, many times a default message of, "Not able to understand your question. Can you please re-phrase it?" is sent to the user. Since this is also the built-in, default Fallback response, it might confuse the user. To send a different message, enter a value here.
+    First, when the bot encounters errors or throws exceptions, many times a default error response of, "Not able to understand your question. Can you please re-phrase it?" is sent to the user. Since this message is the same as the built-in, default Fallback message, it might confuse the user. To send a different response when errors occur, enter a value here. It won't replace or affect the Fallback message or a Fallback dialog, as they serve different purposes. Fallback handles when the user's utterance doesn't match a pattern or intent. In contrast, this error response is sent when the bot encounters an error or throws an exception.
     
-    Note that this "default user-friendly response" doesn't replace or affect the Fallback message or a Fallback dialog, as they serve different purposes. Fallback handles when the user's utterance doesn't match a pattern or intent. In contrast, this "default user-friendly response" is sent when the bot encounters an error or throws an exception.
-    
-    Second, during a LivePerson agent escalation, if the [escalation fails]((conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures)) 4 times, the escalation then stops, and a default message of, "Not able to transfer to Agent at this time. Please try later." is sent to the user. To send a different message, enter a value here.
+    Second, during a LivePerson agent escalation, if the [escalation fails]((conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures)) four times, the escalation then stops, and a default failure response of, "Not able to transfer to Agent at this time. Please try later." is sent to the user. To send a different response, enter a value here.
 
-    To specify a response, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.   
+    To enter a value, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.   
 
 ### Export a bot
 Export of an bot creates a JSON file.
