@@ -86,13 +86,15 @@ Bot settings include:
 
 - **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons. If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t.
 
-- **Default User-Friendly Response**: When the bot encounters errors or throws exceptions, many times a default, English-language message of, *"Not able to understand your question. Can you please re-phrase it?"* is sent to the user. This is also the built-in, default Fallback response, which might confuse the user.
+- **Default User-Friendly Response**: This is an *error* response that gets sent to the user. Because you can supply the response, you can customize it in terms of substance and language (Spanish, Italian, etc.). If you enter a value here, it's used in two circumstances.
+    
+    First, when the bot encounters errors or throws exceptions, many times a default message of, "Not able to understand your question. Can you please re-phrase it?" is sent to the user. Since this is also the built-in, default Fallback response, it might confuse the user. To send a different message, enter a value here.
+    
+    Note that this "default user-friendly response" doesn't replace or affect the Fallback message or a Fallback dialog, as they serve different purposes. Fallback handles when the user's utterance doesn't match a pattern or intent. In contrast, this "default user-friendly response" is sent when the bot encounters an error or throws an exception.
+    
+    Second, during a LivePerson agent escalation, if the [escalation fails]((conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures)) 4 times, the escalation then stops, and a default message of, "Not able to transfer to Agent at this time. Please try later." is sent to the user. To send a different message, enter a value here.
 
-    Use this field to replace the default error/exception message with a user-friendly, meaningful one that satisfies your requirements in terms of substance and language (e.g., you might want to send a response that communicates that an error has occurred and perhaps do so in Spanish). To specify a response, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.
-
-    Note that this message doesn't replace or affect the Fallback message or a Fallback dialog, as they serve different purposes. Fallback handles when the user's utterance doesn't match a pattern or intent. In contrast, this "default user-friendly response" is sent when the bot encounters an error or throws an exception.
-
-    Finally, also be aware that, during a LivePerson agent escalation, if the escalation fails 4 times, the escalation then stops, and a default failure message is sent to the user. However, if you supply a "default user-friendly response" here, it will be sent instead. For more information on handling escalation failures, see [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures).
+    To specify a response, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.   
 
 ### Export a bot
 Export of an bot creates a JSON file.
