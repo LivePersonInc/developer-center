@@ -80,11 +80,11 @@ case "help":
 
 
 ### Get user channel
-Returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, sms, web, inapp. The "lp_" prefix indicates the LivePerson platform.
+Returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, lp_whatsapp, lp_rcs, lp_abc, twilio_sms, and lp_fb. The "lp_" prefix indicates the LivePerson platform.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getUserChannel()` | None | lp_sms, lp_web, lp_inapp, sms, web, inapp |
+| `getUserChannel()` | None | lp_sms, lp_web, lp_inapp, lp_whatsapp, lp_rcs, lp_abc, twilio_sms, lp_fb |
 
 #### Example
 
