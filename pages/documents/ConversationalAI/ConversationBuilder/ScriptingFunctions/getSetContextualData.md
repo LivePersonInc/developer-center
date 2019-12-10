@@ -79,7 +79,25 @@ case "help":
 ```
 
 
+### Get user channel
+Returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, sms, web, inapp. The "lp_" prefix indicates the LivePerson platform.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getUserChannel()` | None | lp_sms, lp_web, lp_inapp, sms, web, inapp |
+
+#### Example
+
+```javascript
+var channel = botContext.getUserChannel();
+botContext.printDebugMessage("channel used by the user is: " + channel);
+```
+
+
 ### Get channel
+
+{: .important}
+getChannel is deprecated but supported. Bot developers are encouraged to use getUserChannel instead, which is listed above.
 
 Returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, sms, web, inapp. lp_ prefix indicates the LivePerson platform.
 
