@@ -105,25 +105,6 @@ botContext.printDebugMessage("channel used by the user is: " + channel);
 ```
 
 
-### Get channel
-
-{: .important}
-getChannel is deprecated but supported. Bot developers are encouraged to use getUserChannel instead, which is listed above.
-
-Returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, sms, web, inapp. lp_ prefix indicates the LivePerson platform.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `getChannel()` | None | lp_sms, lp_web, lp_inapp, sms, web, inapp |
-
-#### Example
-
-```javascript
-var channel = botContext.getChannel();
-botContext.printDebugMessage("channel used by the user is: " + channel);
-```
-
-
 ### Get conversation ID
 
 The Get Conversation ID function will retrieve the conversation ID for the current conversation.

@@ -96,6 +96,3 @@ The example below shows how quick replies can be added easily to your message.
 // Add these quick replies to an existing message
 botContext.addQuickReplies(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03','Hot~sauce04']);
 ```
-
-#### Deprecated
-`addQuickReples` is deprecated but supported. Bot developers are encouraged to use `addQuickReplies`.

@@ -19,7 +19,6 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 * [evaluateOptions](conversation-builder-scripting-functions-manage-conversation-flow.html#evaluate-options)
 * [getApiStatusCode](conversation-builder-scripting-functions-get-integration-data.html#get-api-integration-status-code)
 * [getBotVariable](conversation-builder-scripting-functions-get-set-contextual-data.html#get-and-set-bot-variable)
-* [getChannel](conversation-builder-scripting-functions-get-set-contextual-data.html#get-channel)
 * [getConversationId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-conversation-id)
 * [getCurrentUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-user-message)
 * [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent)
