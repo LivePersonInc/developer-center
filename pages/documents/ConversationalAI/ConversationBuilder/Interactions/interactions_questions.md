@@ -224,7 +224,7 @@ You can switch between the two options using the blue link (shown above) beneath
 |---|---|---|---|
 | Start Date  | The date **in GMT** on which the event starts. Used when specifying a static date. | Required | 09/05/2019 |
 | Start Time  | The time **in GMT** on which the event starts. Used when specifying a static time. (The timezone offset determines whether the start time is in a specific time zone or in the customer's time zone.) | Required | 1:00 PM |
-| Variable Date & Time | The date&time **in GMT** on which the event starts. Used when specifying a variable date and time. For more details, see the discussion below on populating the time picker dynamically. | Required | {Appointment.start} |
+| Variable Date & Time | The date&time **in GMT** on which the event starts. Used when specifying a variable date and time. For more on this, see [Populating a time picker dynamically](conversation-builder-interactions-questions.html#populating-a-time-picker-dynamically) below. | Required | {Appointment.start} |
 | Duration | The duration in minutes of the event. | Required | 30 |
 | Timeslot ID | An ID for the time slot. If you don’t set this, it’s set by the system since it's required by Apple. LivePerson recommends that you set this. If you're populating the time picker with data received from an API call, you can set this with an ID provided in that API result. | Required |   time123 |
 
