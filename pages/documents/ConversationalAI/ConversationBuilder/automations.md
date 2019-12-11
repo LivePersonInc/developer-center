@@ -95,7 +95,7 @@ Bot settings include:
     To enter a value, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.   
 
 ### Export a bot
-Export of an bot creates a JSON file.
+Export of a bot creates a JSON file.
 
 You might need to export a bot for a few reasons:
 
