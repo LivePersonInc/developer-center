@@ -222,9 +222,9 @@ You can switch between the two options using the blue link (shown above) beneath
 
 | Setting  | Description  | Required or Optional | Example  |
 |---|---|---|---|
-| Start Date  | The date **in GMT** on which the event starts. | Required | 09/05/2019 |
-| Start Time  | The time **in GMT** on which the event starts. (The timezone offset determines whether the start time is in a specific time zone or in the customer's time zone.) | Required | 1:00 PM |
-| Variable Date & Time | The date and time **in GMT** on which the event starts. For more details, see the discussion below on populating the time picker dynamically. | Required | {Appointment.start} |
+| Start Date  | The date **in GMT** on which the event starts. Used when specifying a static date. | Required | 09/05/2019 |
+| Start Time  | The time **in GMT** on which the event starts. Used when specifying a static time. (The timezone offset determines whether the start time is in a specific time zone or in the customer's time zone.) | Required | 1:00 PM |
+| Variable Date & Time | The date&time **in GMT** on which the event starts. Used when specifying a variable date and time. For more details, see the discussion below on populating the time picker dynamically. | Required | {Appointment.start} |
 | Duration | The duration in minutes of the event. | Required | 30 |
 | Timeslot ID | An ID for the time slot. If you don’t set this, it’s set by the system since it's required by Apple. LivePerson recommends that you set this. If you're populating the time picker with data received from an API call, you can set this with an ID provided in that API result. | Required |   time123 |
 
@@ -236,9 +236,11 @@ As mentioned above, a time picker can be dynamically populated during run time u
 
 <img style="width:275px" src="img/ConvoBuilder/questions_timePicker10.png">
 
-Since the API response has the date *and* time together in the received payload, you don't need to specify them separately in two fields.
+Since the API response has the date *and* time together in the received payload, you don't need to specify them separately in two fields. However, the data must be in the following format:
 
-Remember that, as discussed above, start dates and times must be **in GMT**, so depending on the data received from the API call, you might need to do some preprocessing to convert the times.
+`2020-04-28T08:45+0000`
+
+Remember that, as discussed farther above, all start dates and times must be defined **in GMT**, so depending on the data received from the API call, you might need to do some preprocessing to convert the times.
 
 The Duration field can't be populated dynamically; you must manually specify this value.
 
