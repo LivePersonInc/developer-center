@@ -238,7 +238,7 @@ As mentioned above, a time picker can be dynamically populated during run time u
 
 Since the API response has the date *and* time together in the received payload, you don't need to specify them separately in two fields. However, the data must be in the following format:
 
-`2020-04-28T08:45+0000`
+`2020-04-30T13:30+0000`
 
 Remember that, as discussed farther above, all start dates and times must be defined **in GMT**, so depending on the data received from the API call, you might need to do some preprocessing to convert the times.
 
