@@ -69,7 +69,7 @@ With the controller bot as the invoker, as is the case for messaging events, you
 
 * Transfer Conversation to a different Skill
 
-* Transfer Conversation to a different Agent
+* Transfer Conversation to a different Agent (to configure this feature see [here](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html))
 
 * Close the Conversation
 
