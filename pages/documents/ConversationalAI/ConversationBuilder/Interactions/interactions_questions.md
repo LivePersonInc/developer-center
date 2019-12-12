@@ -232,7 +232,7 @@ You can switch between the two options using the blue link (shown above) beneath
 
 #### Populating a time picker dynamically
 
-As mentioned earlier, a time picker can be dynamically populated during run time using variable data received from an [API integration](conversation-builder-integrations-api-integrations.html).
+As mentioned earlier, a time picker can be dynamically populated during run time using variable data received from an [API integration](conversation-builder-integrations-api-integrations.html). In our example below, we're retrieving a list of start date and times returned from an API integration named "Appointment". In the integration, that returned data is stored in a custom data field named "start".
 
 <img style="width:275px" src="img/ConvoBuilder/questions_timePicker10.png">
 
