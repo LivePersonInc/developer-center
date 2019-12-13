@@ -470,6 +470,11 @@ An example of the custom payload for delay response is below:
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/delay_response_custom_payload.png">
 Figure 8.1 showing the Custom Markup message for delay message
 
+If you want to put the delay in between multiple messages it is also possible. An example of a Message - Delay - Message can be seen in Figure 8.2.
+
+<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_message_delay_message.png">
+Figure 8.2 An example of Message - Delay - Message  configuration in the Dialogflow console's intent editor
+
 ### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation without escalating to a live agent.
