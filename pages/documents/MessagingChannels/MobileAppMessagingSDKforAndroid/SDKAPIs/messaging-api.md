@@ -674,7 +674,15 @@ public static void unregisterLPPusher(String brandId, String appId, ICallback<Vo
 
 
 
+### setPushNotificationTapped
 
+Notify SDK that push notification is tapped when scroll behavior for push notification is configured. 
+
+Call this method before `LivePerson.showConversation(getActivity(), LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params)` or `LivePerson.getConversationFragment(LPAuthenticationParams lpAuthenticationParams, ConversationViewParams params‎)`;
+
+```java
+public static void setPushNotificationTapped()
+```
 
 
 
