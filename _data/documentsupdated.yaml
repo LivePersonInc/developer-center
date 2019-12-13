@@ -148,6 +148,7 @@
       - pagename: Interactions
         subpages:
           - subpagename: Interaction Basics
+          - subpagename: Interaction Support
           - subpagename: User Says
           - subpagename: Statements
           - subpagename: Questions
@@ -163,7 +164,7 @@
           - subpagename: Integration Basics
           - subpagename: API Integrations
           - subpagename: Email Integrations
-    #      - subpagename: Knowledge Base Integrations
+          - subpagename: Knowledge Base Integrations
           - subpagename: LivePerson Agent Escalation Integrations
           - subpagename: File Integrations
           - subpagename: LivePerson Functions Integrations
@@ -182,6 +183,7 @@
           - subpagename: Manage Conversation Flow
           - subpagename: Log & Debug
           - subpagename: Manage the Context Session Store
+          - subpagename: Deprecated Functions
       - pagename: Testing & Deployment
         subpages:
           - subpagename: Debugging
@@ -226,8 +228,8 @@
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
-  #    - pagename: Knowledge Bases
-      - pagename: Best Practices
+      - pagename: Knowledge Bases
+  #    - pagename: Articles
       - pagename: Tutorial
   - documentname: Bot Analytics
     pages:
@@ -237,6 +239,7 @@
     pages:
       - pagename: Permissions
       - pagename: Credentials
+  #    - pagename: Subscriptions
   - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started

@@ -13,7 +13,7 @@ indicator: both
 
 The Context Session Store is a cloud-based repository for storing and retrieving session state attributes, so they can be used throughout the conversational journey. This allows for continuity in conversations as context can be transferred between agents and bots, enabling a warm hand-off. The attributes are stored as key/value pairs.
 
-Within the Context Session Store, you can have multiple namespaces for different business use cases. Typically, a namespace groups together related attributes. For example, a namespace might contain customer information like name, email, phone number, and so on.
+Within the Context Session Store, you can have multiple namespaces for different business use cases. Typically, a namespace groups together related attributes. For example, a namespace might contain customer information like name, email, phone number, and so on. Namespaces are per account.
 
 In Conversation Builder, the following built-in functions for managing the Context Session Store are available. These functions are synchronous, server-side, JavaScript calls that conveniently wrap the APIs in Maven, LivePerson's AI engine.
 
@@ -43,7 +43,7 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 
 #### Conversation Builder data scopes
 
-The built-in methods support setting data in the Context Session Store in the following Conversation Builder scopes:
+The built-in methods support setting data in the Context Session Store in the following Conversation Builder scopes within a namespace:
 
 - **Global**: Data set in this scope is available to the bot in all conversations.
 - **User**: Data set in this scope is available to the user. Once it is set, it is available in all conversations for the same user.

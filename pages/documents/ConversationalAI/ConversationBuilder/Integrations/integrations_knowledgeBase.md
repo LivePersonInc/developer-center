@@ -9,7 +9,7 @@ permalink: conversation-builder-integrations-knowledge-base-integrations.html
 indicator: both
 ---
 
-Use a Knowledge Base integration when you want to search one of your knowledge bases for articles. You’ll need to create the knowledge base first; for help with that, see [this page](knowledge-base-overview.html).
+Use a Knowledge Base integration when you want to search one of your knowledge bases for articles. You’ll need to create the knowledge base first; for help with that, see [here](knowledge-base-knowledge-bases.html#add-a-knowledge-base).
 
 One use case for this type of integration is within a fallback dialog to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or [escalate the conversation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) to a human agent.
 
@@ -26,7 +26,7 @@ One use case for this type of integration is within a fallback dialog to funnel 
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Methods**:
         - *Phrase Search*: Select this method to use NLU to search for the phrase defined in the request parameter against the articles and their associated "standard" tags. You can define "standard" tags via the Knowledge Base UI or a CSV file import.
-        - *Special Tag Search*: Select this method to search for the special tags defined in the request parameter against the special tags associated with the articles. Special tags are different from standard tags. Special tags have a prescribed format; they don't support NLU searches, and they function more like attributes. Typically, special tags are used for returning products or items. You can only define special tags via a CSV file import.
+        - *Special Tag Search*: Select this method to search for the special tags defined in the request parameter against the special tags associated with the articles. Special tags are different from standard tags. Special tags have a prescribed format; they don't support NLU searches, and they function more like attributes. Typically, special tags are used for returning products or items. You can define special tags via a CSV file or Google sheet import.
     - **Request Parameters for a Phrase search**:
         - *mode*: 
             - *Intents*: Select this to perform an NLU-based search first, and, *if no results are found*, to perform a text-based search second.
