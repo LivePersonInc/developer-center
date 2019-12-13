@@ -35,35 +35,35 @@ Here we’re looking at the Matched Intents for this bot. Most are coming from t
 
 Tapping on Unmatched Phrases will show you user utterances that did not return any result from the bot Patterns, Intents or KBs.
 
-If you see utterances in your Unmatched Phrases that should be matching a particular intent or KB articles, you can add it to the training phrases for these items. Keeping in mind the aforementioned best practices for creating training phrases, of course.
+If you see utterances in your Unmatched Phrases that should be matching a particular intent or KB articles, you can add it to the training phrases for these items. Keep in mind the best practices for creating training phrases.
 
 ### Training Phrases
 
-There are a number of reasons why your intent or Knowledge Base may be failing to return a result as you would expect. One of the most common causes is a lack of adequate training phrases. The following sections lists best practices that should be used when creating training phrases which can help make sure your intents and Knowledge Base are well trained and return the results you expect.
+There are a number of reasons why your intent or knowledge base might be failing to return a result as you would expect. One of the most common causes is a lack of adequate training phrases. The following are best practices that should be used when creating training phrases; these help to ensure your intents and knowledge bases are well-trained and return the results you expect.
 
 #### One sentence, not multiple.
 
-When creating training phrases for an Intent or KB article, keep them to one sentence. For example, "How do I activate my card?" is much better training phrase than “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences will increase your risk of false positives.
+When creating training phrases for an Intent or KB article, keep them to one sentence. For example, "How do I activate my card?" is a much better training phrase than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
 
 #### How many training phrases do I need?
 
-It really depends upon your use case and type of intents. Generally, for intents, it is recommended that you have between 10 - 25 good training phrases.
+The number of training phrases that you need really depends upon your use case and type of intents.
 
-For Knowledge Base articles, it is recommended that you have around 10 training phrases.
+Generally, for intents, it is recommended that you have between 10 - 25 good training phrases. For Knowledge Base articles, it is recommended that you have around 10 training phrases.
 
-When you have more than 25 - 50 training phrases on an intent (or 10 - 15 on a KB article) it is likely that you have over trained the intent which may lead to false positives.
+When you have more than 25 - 50 training phrases on an intent (or 10 - 15 on a KB article), it's likely that you have overtrained the intent, which might lead to false positives.
 
 #### Tags in KB articles
 
-Tags play a very important role in returning accurate results in your Knowledge Base. Where the training phrases should be intents (eg: complete sentences), the tags should highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. When an utterance contains these keywords, it will be scored higher. Remember, these should be **words**, not sentences!
+Tags play a very important role in returning accurate results in your knowledge base. Where the training phrases should be intents (e.g., complete sentences), the tags should highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. When an utterance contains these keywords, it will be scored higher. Remember, these should be **words**, not sentences!
 
-Also, if you find yourself needed a large number of tags, you most likely should be using an entity.
+Also, if you find yourself needing a large number of tags, you most likely should be using an entity.
 
 <img class="fancyimage" style="width:700px" src="img/tags.png">
 
 ### Testing, Training and Tuning
 
-Training your intents or KB is generally done by testing utterances against it, reviewing the results and adding more training as needed if the returned responses are returning with lower than desired scores.
+Training your intents or KB is generally done by testing utterances against it, reviewing the results, and adding more training phrases as needed if the returned responses are returning with lower than desired scores.
 
 #### Training Intents
 
@@ -81,9 +81,9 @@ Tapping on each of the intent results will give you a more detailed results brea
 
 If the score is not where you’d like it, you can add more training phrases. In addition, using [entities](conversation-builder-intent-builder-entities.html) will help to increase the accuracy of your intents, as well as giving their score a boost. In the example above you can see that entities are used for ITEM_COLOR, PRODUCT_CATEGORY, etc.
 
-#### Training a KB
+#### Training a knowledge base
 
-For training your Knowledge Base, the process is similar. Select your KB, enter an utterance, and review the results. If you do not get any results for a particular utterance, you can adjust the filters by tapping on the advanced search icon.
+For training a knowledge base, the process is similar. Select the knowledge base, enter an utterance, and review the results. If you don't get any results for a particular utterance, you can adjust the filters by tapping the advanced search icon.
 
 <img class="fancyimage" style="width:700px" src="img/hrfaqdemo.png">
 
@@ -97,7 +97,7 @@ To add more training phrases (or Intent Qualifiers), you can manually add them t
 
 <img class="fancyimage" style="width:700px" src="img/qualifiers.png">
 
-You can also use the Thumb Up and Down icons displayed in a search. Here we have an example where the utterance returned some results. The preferred result was only a FAIR match. By tapping on the Thumbs Up icon, we automatically add the current utterance to a Positive Learning set for this article. Tapping on the Thumbs Down will do the opposite.
+You can also use the Thumb Up and Down icons displayed in a search. Here we have an example where the utterance returned some results. The preferred result was only a FAIR match. By tapping the Thumbs Up icon, we automatically add the current utterance to a Positive Learning set for this article. Tapping the Thumbs Down will do the opposite.
 
 <img class="fancyimage" style="width:700px" src="img/thumbsup.png">
 
@@ -107,9 +107,9 @@ If we look at the article details, in the Advanced Settings, we can see that the
 
 #### Beware of Over Training
 
-Something to keep in mind when training in general, and using the Thumbs Up/Down icons specifically, is that because they are so easy to use, they are often mis-used. Often we see people using Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down.
+Something to keep in mind when training in general, and using the Thumbs Up/Down icons specifically, is that because they are so easy to use, they are often misused. Often we see people using Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down.
 
-As mentioned earlier: anything over about 10 - 15 training phrases may begin to return false positives.
+As mentioned earlier: anything over about 10 - 15 training phrases might begin to return false positives.
 
 #### What is the intent score/threshold?
 
@@ -189,15 +189,15 @@ if (color != null && color.length > 0) {
 
 #### How do I use multiple entities to map to a single value?
 
-Sometimes you need a number of entities to map to a single value. For instance, multiple mis-spellings or alternative utterances that all mean the same thing. Let’s take this Airport example where we want to detect different ways people might enter names of airports. We can use the data value to be the unifier for these different possible utterances.
+Sometimes you need a number of entities to map to a single value. For instance, multiple misspellings or alternative utterances that all mean the same thing. Let’s take this Airport example where we want to detect different ways people might enter names of airports. We can use the data value to be the unifier for these different possible utterances.
 
 Using a similar script to the above color example, which returns the data value, would get you the "LAX" or “DFW” you need.
 
 #### How do entities affect the NLU score?
 
-The more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if over used, can lead to a lot of false positives.
+The more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
 
-You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the really key elements of your intent, but don’t over use.
+You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the really key elements of your intent, but don’t overuse.
 
 <img class="fancyimage" style="width:400px" src="img/testuserinput.png">
 
