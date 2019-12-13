@@ -67,7 +67,7 @@ The Android Mobile Messaging SDK version 4.3.0 uses:
 **(unchanged from version 4.2.1)**
 
 ### New Features:
-- Agents can now send Consumers Word, Excel, PowerPoint, and PDF documents. 
+- Agents can now send Word (.docx), Excel (.xlsx), PowerPoint (.pptx), and PDF (.pdf) documents to Consumers.
 - Photo Upload Preview window is now a child fragment of the SDK, rather than a new Activity that must push and pop on the Activity Stack.
 - Scroll Behavior Configuration - clients can now use flags in our branding.xml config file to set the messaging window scroll behavior in various cases.
     - `lp_scroll_show_conversation` sets the scrolling behavior for when the SDK window is shown via a call to `showConversation` or `getConversationFragment`.
