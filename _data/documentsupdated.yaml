@@ -218,16 +218,13 @@
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-  # - documentname: LiveIntent
-  #   pages:
-  #     - pagename: Overview
-  #     - pagename: Dashboard
   - documentname: Intent Builder
     pages:
       - pagename: Overview
       - pagename: Domains
       - pagename: Intents
       - pagename: Entities
+      - pagename: LiveIntent Tips
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
@@ -400,14 +397,14 @@
         - subpagename: Submit Survey Data
         - subpagename: Send a Transcript
       - pagename: Sample Postman Collection
-    #- documentname: Window Customization API
-      #pages:
-      #- pagename: Overview
-      #- pagename: Quick Start
-      #- pagename: Samples
-        #subpages:
-        #- subpagename: CSS Sample
-      #- pagename: Taglet
+    - documentname: Window Customization API
+      pages:
+      - pagename: Overview
+      - pagename: Quick Start
+      - pagename: Samples
+        subpages:
+        - subpagename: CSS Sample
+      - pagename: Taglet
 - categoryname: Contact Center Management
   image: contact-center
   documents:
@@ -489,7 +486,6 @@
         - pagename: Introduction
         - pagename: Methods
           subpages:
-            - subpagename: General
             - subpagename: Categories List
             - subpagename: Categories List by Revision
             - subpagename: Category by ID
@@ -501,6 +497,7 @@
             - subpagename: Delete Multiple Categories
             - subpagename: Import Account Categories
             - subpagename: Import Categories Pre Validation
+        - pagename: Appendix
     - documentname: Profiles API
       basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/profiles
       pages:
@@ -691,44 +688,26 @@
   - documentname: Connector API
     basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
-    - pagename: First Steps
-      subpages:
-      - subpagename: Overview
-      - subpagename: App Install Manifest for Connectors
-      - subpagename: Getting Started
-    - pagename: Authorization and Authentication
-      subpages:
-      - subpagename: Get AppJWT
-      - subpagename: Get ConsumerJWS
-      - subpagename: Authorization Error Responses
-    - pagename: API Reference
-      subpages:
-      - subpagename: Overview
-      - subpagename: CONVERSATION
-      - subpagename: SEND
-    - pagename: Webhooks
-      subpages:
-      - subpagename: Overview
-      - subpagename: Events
-      - subpagename: Configuration
-      - subpagename: Notification Protocol
-      - subpagename: Retry Policy
-      - subpagename: Disclaimers
-      - subpagename: Troubleshooting
-      - subpagename: Webhooks Examples
-    - pagename: Examples
-      subpages:
-      - subpagename: Create a New Conversation
-      - subpagename: Create a New Conversation and Report SDEs
-      - subpagename: Send a Message
-      - subpagename: Close a Conversation
-      - subpagename: Send Chat State Events
-      - subpagename: How to Enable a Feature
-      - subpagename: Campaign for Messaging Routing
-      - subpagename: File Sharing
-    - pagename: Sample Code
-      subpages:
-      - subpagename: Connector Sample App
+      - pagename: Overview
+      - pagename: Getting Started
+      - pagename: Connector Sample App
+      - pagename: Send API
+        subpages:
+          - subpagename: Overview
+          - subpagename: Authorization and Authentication
+          - subpagename: CONVERSATION
+          - subpagename: SEND
+          - subpagename: Examples
+      - pagename: Webhooks
+        subpages:
+          - subpagename: Overview
+          - subpagename: Events
+          - subpagename: Configuration
+          - subpagename: Notification Protocol
+          - subpagename: Retry Policy
+          - subpagename: Disclaimers
+          - subpagename: Troubleshooting
+          - subpagename: Webhooks Examples
   - documentname: IVR Engagement API
     basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
     pages:
@@ -992,7 +971,7 @@
             - subpagename: Delete certificate by ID
             - subpagename: Get all certificates by account
             - subpagename: Get certificate by ID
-            - subpagename: Update certificate for account
+            - subpagename: Create certificate for account
             - subpagename: Update certificate from file
             - subpagename: Forward delete request
             - subpagename: Forward get request

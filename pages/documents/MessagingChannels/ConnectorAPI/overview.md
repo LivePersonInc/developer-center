@@ -1,16 +1,14 @@
 ---
 pagename: Overview
 redirect_from:
-  - connectorapioverview.html
+  - connector-api-api-reference-overview.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: First Steps
-order: 1
-level-order: 8
-root-link: true
 indicator: messaging
-permalink: connector-api-first-steps-overview.html
+permalink: connector-api-overview.html
+order: 1
+
 ---
 
 <div class="alert alert-warning" role="alert">
@@ -25,7 +23,7 @@ permalink: connector-api-first-steps-overview.html
 
 The Connector API enables you to build applications that connect common messaging channels (such as Facebook Messenger, WeChat, Viber, Slack and so on) with LiveEngage. This gives you the ability to build your own connector application which can, as an example, open/close conversations and send messages to LiveEngage on behalf of your consumers.
 
-A connector is a broker between LiveEngage data and a messaging channel's (e.g. Facebook Messenger, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the [Send API](connector-api-overview.html). The connector can also create/open and close conversations and set the consumer profile upon conversation creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using [Webhooks](webhooks-overview.html) notifications (for example, if the agent/consumer is typing, sent a message, read the message etc.).
+A connector is a broker between LiveEngage data and a messaging channel's (e.g. Facebook Messenger, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the [Send API](connector-api-reference-overview.html). The connector can also create/open and close conversations and set the consumer profile upon conversation creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using [Webhooks](webhooks-overview.html) notifications (for example, if the agent/consumer is typing, sent a message, read the message etc.).
 
 **Why do we need the Connector API?**
 

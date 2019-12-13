@@ -1,14 +1,15 @@
 ---
 pagename: Overview
 redirect_from:
-  - connector-api-overview.html
+  - connector-api-reference-overview.html
+  - connector-api-api-reference-overview.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: API Reference
+subfoldername: Send API
 order: 10
 indicator: messaging
-permalink: connector-api-api-reference-overview.html
+permalink: connector-api-send-api-overview.html
 search: exclude
 ---
 
@@ -32,7 +33,7 @@ The API consists of two types of calls:
 
 ####  Authentication & Authorization
 
-Refer to the [Getting Started](connectorapi-getting-started.html) section to see how you can authorize your connector ([AppJWT](Create_AppJWT.html)) application and identify the consumer ([ConsumerJWS](Create_ConsumerJWS.html)) before you can use the API.
+Refer to the [Authorizaztion and Authentication](connector-api-send-api-authorization-and-authentication.html) section to see how you can authorize your connector ([AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt)) application and identify the consumer ([ConsumerJWS](connector-api-send-api-authorization-and-authentication.html#get-consumerjwt)) before you can use the API.
 
 
 ####  Authorization Tokens expiration times
@@ -43,7 +44,7 @@ Refer to the [Getting Started](connectorapi-getting-started.html) section to see
 
 ####  Authorization and authentication Error Handling
 
-* **401 Unauthorized** - Expired/Missing/Invalid ``AppJWT`` Token or Missing/Invalid ``CosnumerJWS``. A fresh AppJWT token is required from the client/connector. This code states that the request does not contain the required authorization token, or contains an expired token. This response asks the client to supply a new token from the client/connector. In case the AppJWT Token is valid and not expired, one can get the same status code if the ConsumerJWS is missing or invalid (e.g, consumer A is trying to access a conversation ID of consumer B).
+* **401 Unauthorized** - Expired/Missing/Invalid ``AppJWT`` Token or Missing/Invalid ``ConsumerJWS``. A fresh AppJWT token is required from the client/connector. This code states that the request does not contain the required authorization token, or contains an expired token. This response asks the client to supply a new token from the client/connector. In case the AppJWT Token is valid and not expired, one can get the same status code if the ConsumerJWS is missing or invalid (e.g, consumer A is trying to access a conversation ID of consumer B).
 
 
 ### Message Format

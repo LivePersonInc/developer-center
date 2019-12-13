@@ -25,9 +25,30 @@ An audit trail is available for the following elements:
 
 * Agent Groups
 
-* Permissions
+* Profiles (Permissions)
 
 * LOBs
+
+* Campaigns
+
+* Predefined content
+ 
+* Post conversation survey
+
+* Agent conversation survey
+
+* Content categories
+
+* Shift scheduler (Working hours)
+
+* Campaign schedule
+
+* Special occasions
+
+* MTLS account mapping
+
+* MTLS certification
+
 
 ### Getting Started
 

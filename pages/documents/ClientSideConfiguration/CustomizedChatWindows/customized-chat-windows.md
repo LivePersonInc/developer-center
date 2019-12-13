@@ -13,6 +13,9 @@ order: 1
 indicator: chat
 ---
 
+{: .notice}
+If you're looking to simply customize the default LiveEngage window, check out [our Window Customization API](window-customization-api-overview.html). The Customized Chat Windows API should be used for more involved projects where a custom window is built from scratch.
+
 ### Introduction
 
 As part of our open platform, LiveEngage gives brands the ability to modify consumer interaction windows using APIs. These APIs allow brands to develop and deploy a unique chat experience for their consumers.

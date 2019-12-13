@@ -202,13 +202,16 @@ You can set the desired SDEs to express your custom reporting for the event trig
 Example:
 
 ```swift
-lpabcsdk.implicitEventClosure = { implicitType in
-    switch implicitType {
+lpabcsdk.abcEventCallback = { eventType in
+    switch eventType {
         case .newConversation:
             // Create and send desired SDE
              break
         case .secureForm(.submitted):
             // Create and send desired SDE
+            break
+         case .custom:
+            //Accsess your custom payload embedded in CIM URL.
             break
     }
 }

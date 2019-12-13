@@ -2,7 +2,7 @@
 pagename: Get all certificates by account
 keywords:
 sitesection: Documents
-categoryname: "Security & Authenication"
+categoryname: "Security & Authentication"
 documentname: MTLS API
 subfoldername: Methods
 permalink: mtls-methods-get-all-certificates-by-account.html
