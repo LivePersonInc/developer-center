@@ -10,18 +10,24 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-scroll-behavio
 indicator: messaging
 ---
 
+### Requirements
 
-**Supported versions:** 4.3 and higher(less than 5.0), 5.1 and higher
+**Supported versions:** 
+ - 4.3 and higher
+ - (AndroidX) 5.1 and higher
+
+**Authentication**
+ - Only support authentication mode: Code flow and JWT flow.
 
 ### How to configure
 
 Simply set the attributes in branding.xml file. Please follow the instructions of each attributes below. If the configuration is missing in branding.xml file or configure to wrong value, the SDK will take the default scroll behavior. 
 
-| Scroll Option | Description |
-| :--- | :--- |
-| Bottom | Conversation will scroll to the bottom regardless if there are new messages or not. |
-| LastPosition | Conversation will scroll to the previous position regardless if there are unread messages or not. <br /> <br />(Support scroll to the position within latest 100 messages for `lp_scroll_show_conversation` and `lp_scroll_when_push_notification`. Conversation will scroll to bottom if more than 100 messages are loaded. No restrictions for `lp_scroll_when_foreground`.) |
-| FirstUnreadMessage | Conversation will scroll to first unread message. If no unread messages exist, conversation will scroll to the bottom. |
+| Scroll Option | Description | Limitation |
+| :--- | :--- | :--- |
+| Bottom | Conversation will scroll to the bottom regardless if there are new messages or not. | N/A |
+| LastPosition | Conversation will scroll to the previous position regardless if there are unread messages or not. | Support scroll to the position within about latest 100 messages for `lp_scroll_show_conversation` and `lp_scroll_when_push_notification`. Conversation will scroll to bottom if more than about 100 messages are loaded. No restrictions for `lp_scroll_when_foreground`. |
+| FirstUnreadMessage | Conversation will scroll to first unread message. If no unread messages exist, conversation will scroll to the bottom. | N/A |
 
 ### In-App navigation
 

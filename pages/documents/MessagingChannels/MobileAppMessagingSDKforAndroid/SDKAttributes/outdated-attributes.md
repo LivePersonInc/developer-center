@@ -1815,7 +1815,7 @@ Define the max number of images that will be stored locally.
 
 
 #### max_number_stored_documents
-Define the max number of files that will be stored locally.
+Define the max number of documents that will be stored locally.
 
 * **Type:** integer
 * **Default value:** 20
