@@ -14,7 +14,7 @@ The Simple Lead Gen template is designed to capture contact information from a c
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_simple_lead_image_0.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/template_simple_lead_image_0.png">
 
 ### Included Items
 
