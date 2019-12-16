@@ -45,7 +45,7 @@ The FAQ Search dialog handles calling the Knowledge Base integration and display
 #### FAQ integration
 
 {: .important}
-You will need to [create a knowledge base](conversation-builder-knowledge-base.html#adding-a-knowledge-base) **before** setting up this integration.
+You will need to [create a knowledge base](knowledge-base-knowledge-bases.html#add-a-knowledge-base) **before** setting up this integration.
 
 In the Integrations area, there will be a pre-configured integration named "FAQs". "Knowledge Base" should be selected in the Integration Type menu.
 
@@ -58,6 +58,9 @@ Select your particular knowledge base from the drop-down list and make sure the 
 All of the additional parameters are configured for you.
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_faq_simple_image_3.png">
+
+{: .important}
+For detailed information on adding a Knowledge Base integration, see [here](conversation-builder-integrations-knowledge-base-integrations.html).
 
 #### Test your bot
 
