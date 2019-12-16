@@ -18,7 +18,7 @@ Test whether you are catching unexpected answers to questions, and, if needed, u
 
 ### Avoid mismatched intents for unhandled use cases
 
-If there are known phrases or patterns for sensitive consumer intents that you aren't handling in the bot on Day 1, it's recommended that you create "placeholder" dialogs that catch these specific patterns and immediately transfer to a human agent (i.e., a [LivePerson agent escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html)).  Doing this prevents the fallback response or a mismatched intent tied to another dialog.
+If there are known phrases or patterns for sensitive consumer intents that you aren't handling in the bot on launch day, it's recommended that you create "placeholder" dialogs that catch these specific patterns and immediately transfer to a human agent (i.e., a [LivePerson agent escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html)).  Doing this prevents the fallback response or a mismatched intent tied to another dialog.
 
 For example, "my partner has passed away" relates to bereavement, and in this case the consumer should be transferred to a live agent immediately. For this, create a dialog with a User Says interaction that listens for the pattern `*passed away*` and other variations, and have this immediately transfer to a human agent.
 
