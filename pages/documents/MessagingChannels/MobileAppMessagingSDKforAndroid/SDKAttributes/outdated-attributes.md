@@ -1493,7 +1493,52 @@ Use an icon for the send button instead of "Send" text.
 </div>
 
 
+---
 
+### Navigation - Scroll Behavior Configuration
+
+#### lp_scroll_show_conversation
+Configures the scroll behavior when open conversation screen from another screen of the app.
+
+- **Type:** string
+- **Default value:** Bottom
+
+Available options:
+1. Bottom
+2. LastPosition
+3. FirstUnreadMessage
+
+#### lp_scroll_when_foreground
+Configures the scroll behavior when bring conversaton screen to foreground from background.
+
+- **Type:** string
+- **Default value:** LastPosition
+
+Available options:
+1. Bottom
+2. LastPosition
+3. FirstUnreadMessage
+
+#### lp_scroll_when_push_notification
+Configures the scroll behavior when open conversaton screen by tapping on push notification.
+
+- **Type:** string
+- **Default value:** Bottom
+
+Available options:
+1. Bottom
+2. LastPosition
+3. FirstUnreadMessage
+
+#### lp_scroll_when_scroll_down
+Configures the scroll behavior when tapping on the scroll down indicator.
+
+- **Type:** string
+- **Default value:** Bottom
+
+Available options:
+1. Bottom
+2. LastPosition
 
 ---  
 
@@ -1764,6 +1809,13 @@ Enable or disable the photo sharing feature.
 
 #### max_number_stored_images
 Define the max number of images that will be stored locally.
+
+* **Type:** integer
+* **Default value:** 20
+
+
+#### max_number_stored_documents
+Define the max number of documents that will be stored locally.
 
 * **Type:** integer
 * **Default value:** 20
