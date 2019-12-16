@@ -34,4 +34,4 @@ Consider adding one or more dialogs that refer to incidents regarding specific s
 
 If an incident occurs, you can then quickly enable these dialogs on-the-fly to help deflect/contain the consumers who flood the channel during outages.
 
-This can be built before Day 1 and tested based on the knowledge you have about how you communicate service outages when consumers reach agents in those moments.
+This can be built before launch day and tested based on the knowledge you have about how you communicate service outages when consumers reach agents in those moments.
