@@ -40,7 +40,7 @@ In the Welcome dialog, you can customize your Welcome message to greet the user 
 
 The FAQ Search dialog handles calling the Knowledge Base integration and displaying the result. If no result is found, it will display the "No Article" interaction. You can customize that message as you like.
 
-<img class="fancyimage" style="width:650px" src="img/ConvoBuilder/template_faq_simple_image_4.png">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/template_faq_simple_image_4.png">
 
 #### FAQ integration
 
@@ -49,7 +49,7 @@ You will need to [create a knowledge base](knowledge-base-knowledge-bases.html#a
 
 In the Integrations area, there will be a pre-configured integration named "FAQs". "Knowledge Base" should be selected in the Integration Type menu.
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/template_faq_simple_image_1.png">
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/template_faq_simple_image_1.png">
 
 Select your particular knowledge base from the drop-down list and make sure the Method is set to Phrase Search.
 
@@ -57,7 +57,7 @@ Select your particular knowledge base from the drop-down list and make sure the 
 
 All of the additional parameters are configured for you.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_faq_simple_image_3.png">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/template_faq_simple_image_3.png">
 
 {: .important}
 For detailed information on adding a Knowledge Base integration, see [here](conversation-builder-integrations-knowledge-base-integrations.html).
@@ -72,5 +72,4 @@ To connect your bot to LiveEngage, follow [these instructions](conversation-buil
 
 Now you can test your FAQ bot and see how it answers your questions.
 
-Here are some best practices on [training and tuning your knowledge base](conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html).
-
+[Here](conversation-builder-best-practices-train-tune-nlu.html) are some best practices on training and tuning your knowledge base.
