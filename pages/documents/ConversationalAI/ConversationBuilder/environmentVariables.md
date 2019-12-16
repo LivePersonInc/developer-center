@@ -99,7 +99,7 @@ For example:
 
 ### Export environment variables to a CSV file
 
-Exporting a set of environment variables is very useful when you need to "move" the values from one environment to another, e.g., from Development to Staging, or from Staging to Production. You can export the variables and then use the Bulk Add feature (and copy/paste) to add them to the new environment.
+Exporting a set of environment variables is useful when you need to "move" the values from one environment to another, e.g., from Development to Staging, or from Staging to Production. You can export the variables and then use the Bulk Add feature (and copy/paste) to add them to the new environment.
 
 **To export environment variables to a CSV file**
 
