@@ -14,7 +14,7 @@ indicator: both
 
 Try and break the flows you have built. Be as disruptive as possible. 
 From within each dialog, enter gibberish messages to see how fallback occurs.
-Test whether you are catching unexpected answers to questions. If needed, use the * pattern to [keep the consumer in the current dialog](conversation-builder-advanced-use-cases.html#keep-the-consumer-in-the-current-dialog).
+Test whether you are catching unexpected answers to questions, and, if needed, use the * pattern to [keep the consumer in the current dialog](conversation-builder-advanced-use-cases.html#keep-the-consumer-in-the-current-dialog).
 
 ### Avoid mismatched intents for unhandled use cases
 
