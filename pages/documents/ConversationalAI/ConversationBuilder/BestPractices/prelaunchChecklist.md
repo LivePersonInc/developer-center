@@ -22,16 +22,10 @@ If there are known phrases or patterns for sensitive consumer intents that you a
 
 For example, "my partner has passed away" relates to bereavement, and in this case the consumer should be transferred to a live agent immediately. For this, create a dialog with a User Says interaction that listens for the pattern `*passed away*` and other variations, and have this immediately transfer to a human agent.
 
-### Prepare for unmatched intents
+### Prepare your incident mitigation strategy
 
-Add a dialog that recognizes that the consumer wants help with a popular intent or question that the bot currently can't handle. Build out the dialog steps to explain this and gracefully bring in an agent via transfer, i.e., a [LivePerson agent escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html).
+Consider adding one or more dialogs that refer to incidents or brand outages that might occur while the bot is live. Hook these up to common phrases that consumers might ask at these times.
 
-Later, during the retraining downtime of the bot on Day 1, create a new intent from the unmatched intents data, and connect the new intent to this new dialog. You can then quickly go live with this change in round 2 of the bot on Day 1.
+If an incident occurs, you can quickly enable these dialogs on-the-fly to help deflect/contain the consumers who flood the channel during these times.
 
-### Prepare for service outages
-
-Consider adding one or more dialogs that refer to incidents regarding specific service outages that might occur while the bot is live. Hook these up to common phrases that consumers might ask in the event of an outage.
-
-If an incident occurs, you can then quickly enable these dialogs on-the-fly to help deflect/contain the consumers who flood the channel during outages.
-
-This can be built before launch day and tested based on the knowledge you have about how you communicate service outages when consumers reach agents in those moments.
+This can be built before launch day and tested based on the knowledge you have about how you communicate incidents and outages when consumers reach agents in those moments.
