@@ -112,11 +112,10 @@ For each of your skill options:
 
 - The `skillName` is being set to the name of the intent, but if you want to customize it you can.
 
-
-You may add or remove `case` branches as needed for the number of your skills.
+You might add or remove `case` branches as needed for the number of your skills.
 
 #### Deploy Your Bot
 
-[Follow these instructions](conversation-builder-getting-started-4-connect-to-liveengage.html) for connecting your bot to LiveEnage.
+[To connect your bot to LiveEngage, follow [these instructions](conversation-builder-testing-deployment-deploying-to-liveengage.html). You can also try [this tutorial](conversation-builder-getting-started-4-connect-to-liveengage.html).
 
 Now you can test your routing bot and see how it routes to your skills.
