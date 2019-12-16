@@ -26,7 +26,7 @@ For example, "my partner has passed away" relates to bereavement, and in this ca
 
 Add a dialog that recognizes that the consumer wants help with a popular intent or question that the bot currently can't handle. Build out the dialog steps to explain this and gracefully bring in an agent via transfer, i.e., a [LivePerson agent escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html).
 
-Later, during the retraining downtime of the bot on Day 1, create a new intent from the unmatched intents data, and connect the new intent to this new dialog. You can then quickly go live with this change in round 2 of the bot on Day 1. 
+Later, during the retraining downtime of the bot on Day 1, create a new intent from the unmatched intents data, and connect the new intent to this new dialog. You can then quickly go live with this change in round 2 of the bot on Day 1.
 
 ### Prepare for service outages
 
