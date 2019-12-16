@@ -12,7 +12,7 @@ indicator: both
 
 The Order Status template is designed to show a customer their order status based on either an order number or email address. This template is integrated with Shopify and a fake Shopify store for demonstration purposes. You can enter the order numbers 1162 or 1163 to return order status results from the test Shopify integration.
 
-<img class="fancyimage" style="width:750px" src="/img/ConvoBuilder/template_orderstatus_0.png">
+<img class="fancyimage" style="width:800px" src="/img/ConvoBuilder/template_orderstatus_0.png">
 
 {: .important}
 Your app can access the last 60 days of orders for a store. You can request access to a store’s full order history in your Shopify Store.
@@ -71,13 +71,13 @@ This is done simply by editing the text copy of the interactions and hitting Ent
 
 #### Global Functions Customization
 
-Click on the "Global Functions" button to access all the Global functions & variables to be configured.
+Click the **Global Functions** button to access all the global functions and variables to be configured.
 
 <img class="fancyimage" style="width:750px" src="/img/ConvoBuilder/template_orderstatus_1.png">
 
 #### LE Escalation Configuration
 
-To setup escalation to an Agent in LE, change the following values:
+To set up escalation to an agent in LiveEngage, change the following values:
 
 <table>
  <thead>
