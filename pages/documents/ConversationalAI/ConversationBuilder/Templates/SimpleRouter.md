@@ -63,19 +63,6 @@ Customize the text response to match your brand voice.
 
 Customize the text response to match your brand voice.
 
-#### Escalation Integration
-
-Click on Integrations at the top of Conversation Builder and click on Escalation.
-
-Confirm that the POST url endpoint is using the right url for your server environment.
-
-| Server Environment | URL endpoint |
-| --- | --- |
-| US | `https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
-| US (If accessing from LiveEngage automation tab) | `https://va.bc-bot.liveperson.net/botservice-0.1/botcentral/livePersonAgent` |
-| Europe | `https://platformservice-eu.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
-| APAC | `https://platformservice-ap.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
-
 #### Global Functions
 
 The last thing to do is customize some important variables in the Global Functions.
