@@ -11,6 +11,9 @@ indicator: both
 
 Statement interactions simply display information and then execute the next action. They don’t expect or wait for a user response.
 
+{: .important}
+For information on which statement interactions are supported in which channels, please see [here](conversation-builder-interactions-interaction-support.html).
+
 ### Text
 Text statements display the text provided, for example:
 
@@ -33,7 +36,7 @@ Image statements display a single image.
 Audio statements currently aren't supported by LiveEngage.
 
 ### Video
-Video statements currently aren't supported by LiveEngage. As an alternative, use a text statement that includes the video URL as a link.
+Video statements currently aren't supported by LiveEngage. As an alternative, use a Text statement that includes the video URL as a link.
 
 ### Apple Rich Links
 **For Apple Business Chat only.**
