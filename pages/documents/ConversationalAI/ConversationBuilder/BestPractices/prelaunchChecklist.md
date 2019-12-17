@@ -24,8 +24,8 @@ For example, "my partner has passed away" relates to bereavement, and in this ca
 
 ### Prepare your incident mitigation strategy
 
-Consider adding one or more dialogs that refer to incidents or brand outages that might occur while the bot is live. Hook these up to common phrases that consumers might ask at these times.
+Consider adding one or more dialogs that refer to incidents or your brand's outages that might occur while the bot is live. Hook these up to common phrases that consumers might ask at these times.
 
 If an incident occurs, you can quickly enable these dialogs on-the-fly to help deflect/contain the consumers who flood the channel during these times.
 
-This can be built before launch day and tested based on the knowledge you have about how you communicate incidents and your outages when consumers reach agents in those moments.
+This can be built before launch day and tested based on the knowledge you have about how you communicate about these types of situations when consumers reach agents in these moments.
