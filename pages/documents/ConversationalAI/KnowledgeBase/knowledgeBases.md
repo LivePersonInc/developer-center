@@ -51,11 +51,11 @@ If you want to import a set of articles into a knowledge base when you add the k
 | image_url | |
 | audio_url | |
 | video_url | |
-| followupQuestion | |
-| quickReplies | |
-| inputContext | |
-| contextAlternates | |
-| outputContext | |
+| followupQuestion | Deprecated. |
+| quickReplies | Deprecated. |
+| inputContext | Deprecated. |
+| contextAlternates | Deprecated. |
+| outputContext | Deprecated. |
 | category | Assigning a category lets you filter articles based on categories in the application. |
 | section | |
 | positiveLearnings | These are phrases for which you want a match to the article to occur. A comma-separated list. |
