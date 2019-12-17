@@ -54,12 +54,12 @@ If you want to import a set of articles into a knowledge base when you add the k
 | followupQuestion | |
 | quickReplies | |
 | inputContext | |
-| contextAlternates | In the UI, these are called "context intents." |
+| contextAlternates | |
 | outputContext | |
-| category | |
+| category | Assigning a category lets you filter articles based on categories in the application. |
 | section | |
-| positiveLearnings | |
-| negativeLearnings | |
+| positiveLearnings | These are phrases for which you want a match to the article to occur. A comma-separated list. |
+| negativeLearnings | These are phrases for which you don't want the article to appear in the result even if it is matached to the consumer's intent. A comma-separated list. |
 | intentName | |
 
 ### Sync with a Google sheet
