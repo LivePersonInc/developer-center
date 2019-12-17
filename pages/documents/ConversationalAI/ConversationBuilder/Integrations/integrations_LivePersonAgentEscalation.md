@@ -49,14 +49,6 @@ Setting up a dialog to catch the `__agent_escalation_failed__` pattern allows yo
 
 If the `__agent_escalation_failed__` message is sent 3 times to the bot, and the 4th attempt also fails, the escalation stops, and the following default response is sent to the consumer, "Not able to transfer to Agent at this time. Please try later." Alternatively, if you've specified a "default user-friendly response" (for when errors and exceptions occur) in [Bot Settings](conversation-builder-bots.html#configure-bot-settings), that response is sent instead.
 
-#### Disable context switching
-
-Consider disabling [context switching](conversation-builder-dialogs-dialog-basics.html#context-switching) by adding the following as Pre-process code in the integration interaction that escalates (transfers) the conversation to a live agent:
-
-`botContext.setBotVariable('skipPreviousDialog', 'true', true, false);`
-
-This sets the variable to "true" and helps to ensure the consumer is never returned to an earlier dialog due to an utterance.
-
 ### Troubleshooting
 
 For troubleshooting help when working with this integration type, see [here](conversation-builder-integrations-troubleshooting.html).

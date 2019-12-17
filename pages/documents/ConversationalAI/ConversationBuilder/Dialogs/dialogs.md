@@ -48,7 +48,7 @@ If the context switching behavior isn't desirable for your use case, you can dis
 
 This code disables the behavior until the variable is set to "false" once again.
 
-To disable context switching *completely*, you can add this code to Global Functions. To disable it *in a specific situation*, you can add the code to any interaction. For example, as a [best practice](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#best-practices), you might want to add this as Pre-process code in an integration interaction that escalates (transfers) the conversation to a live agent, to help to ensure that the consumer is never returned to an earlier dialog due to an utterance.
+To disable context switching *completely*, you can add this code to Global Functions. To disable it *in a specific situation*, you can add the code to any interaction.
 
 ### Create a new dialog
 
