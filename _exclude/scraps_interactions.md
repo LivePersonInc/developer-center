@@ -24,17 +24,17 @@ Multiple choice questions let the consumer select an answer from a list of choic
 
 One powerful feature of multiple choice questions is that the bot can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html).
 
-**Question text**
+#### Question text
 
 Enter the question to send. The maximum character length is 255.
 
-**Choices**
+#### Choices
 
 Enter the answer choices. The number of choices depends on the channel, so check the limitations for the channels in use. (For example, Facebook restricts this to three options.) For each choice, 20 characters or less is recommended.
 
 The user can either enter or select the answers. 
 
-**Interaction details - settings**
+#### Interaction Details settings
 
 Configure the following settings in the Interaction Details dialog box:
 - **Display choice as**: Select whether you want to display the choices as buttons (shown above) or quick reply “chips” (shown below).
@@ -51,7 +51,7 @@ Text questions expect and wait for a text-based response from the consumer.
 
 With text questions, it’s recommended that you include an example of an expected response, like is done in our example above. This helps to increase the likelihood of a valid response.
 
-**Question text**
+#### Question text
 
 Enter the question to send. The maximum character length is 255.
 
@@ -63,11 +63,11 @@ A button question lets you ask a question that expects a simple, short reply and
 
 Clicking a button can perform an action. For example, if the consumer were to click “Sure!” above, they could be taken to the URL for your feedback form.
 
-**Question text**
+#### Question text
 
 Enter the question to send.
 
-**Button settings**
+#### Button settings
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
@@ -89,11 +89,11 @@ And the chips disappear once the consumer selects one:
 
 Details vary by channel. For example, Apple Business Chat does not support Quick Reply, but other channels do, and each behaves slightly differently. As one example, in Facebook Messenger, a Quick Reply question can have a maximum of 13 options. Consult the channel-specific documentation that's discussed [here](conversation-builder-interactions-interaction-basics.html#general-guidelines-and-best-practices).
 
-**Question settings**
+#### Question settings
 
 Enter the question to send. 
 
-**Quick Reply settings**
+#### Quick Reply settings
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
