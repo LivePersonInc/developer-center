@@ -12,7 +12,7 @@ indicator: both
 Statement interactions simply display information and then execute the next action. They don’t expect or wait for a user response.
 
 {: .important}
-For information on which statement interactions are supported in which channels, please see [here](conversation-builder-interactions-interaction-support.html).
+For information on which statement interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
 
 ### Text
 Text statements display the text provided, for example:
@@ -22,6 +22,10 @@ Text statements display the text provided, for example:
 Text statements can display dynamic values through the use of variables; for help with using variables, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
 
 ### Image
+
+{: .important}
+For information on which channels support image statements, see [here](conversation-builder-interactions-interaction-support.html).
+
 Image statements display a single image.
 
 <img style="width:250px" src="img/ConvoBuilder/statements_image.png">

@@ -32,7 +32,7 @@ The different types of question interactions available are:
 User responses to question interactions can be saved in [variables](conversation-builder-variables-slots.html), making them available for future use.
 
 {: .important}
-For information on which question interactions are supported in which channels, please see [here](conversation-builder-interactions-interaction-support.html).
+For information on which question interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
 
 ### Structured questions
 
