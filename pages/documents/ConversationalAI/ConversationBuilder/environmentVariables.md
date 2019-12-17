@@ -47,7 +47,7 @@ If you are using multiple bot instances (e.g., a Sandbox version and a Productio
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bestPractices/env_1.png">
 
-    You can add the key/value pairs one by one using the fields provided. Alternatively, click the **Bulk Add** link and enter them in key=value format in the text box provided. This lets you copy the values from another source and paste them here.
+    You can add the key/value pairs one by one using the fields provided. Alternatively, click the **Bulk Add** link and enter them in key=value format in the text box provided. The text box also lets you copy the values from another source and paste them in.
 
 4. Click **Save**.
 
