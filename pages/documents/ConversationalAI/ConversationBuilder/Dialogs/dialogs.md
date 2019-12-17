@@ -48,7 +48,7 @@ If the context switching behavior isn't desirable for your use case, you can dis
 
 This code disables the behavior until the variable is set to "false" once again.
 
-To disable context switching *completely*, you can add this code to Global Functions. To disable it *in a specific situation*, you can add the code to any interaction.
+To disable context switching completely, you can add this code to Global Functions. To disable it at the point of a specific situation, you can add the code to any interaction.
 
 ### Create a new dialog
 
