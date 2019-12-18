@@ -9,30 +9,64 @@ permalink: conversation-builder-interactions-questions.html
 indicator: both
 ---
 
-A question interaction is interactive and meant to be answered by the user.
+Questions present information to the user (a question that expects a reply of some kind, a list of things to pick from, etc.), and they expect and wait for a user response before executing the next action.
 
-### Types of questions
-
-The different types of question interactions available are:
-
-- **Multiple Choice**. A simple and standard multiple choice question allowing the user to select from a list of predefined answers (although the automation can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html)).
-
-- **Text**. A simple textual question.
-
-- **Structured Content**. Most conversations involve plain text like what you are reading now. However, sometimes you might want to send content (images, buttons, maps, quick replies, etc) to a consumer in a richer, more interactive, and more structured format.
-
-- **Button**. An object that allows you to show a simple text question with an associated button action. A click of the button results in an action pre-configured by you (like navigation to a link, for example).
-
-- **Quick Reply**. A question with a series of pre-configured replies that appear as a list of chips at the bottom of the interaction and disappear once the user has selected one.
-
-- **Listpicker**. **For Apple Business Chat only.** This allows the user to make a selection in response to a simple text question from a list of items.
-
-- **Time Picker**. **For Apple Business Chat only.** This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment. See below for more details.
+With a question, you can take the user’s response, evaluate it against a condition (i.e., does it match a pattern, an intent, a regular expression, or an exact value?), and then act accordingly. For example, if you ask the user for a 7-digit account number, you’ll likely want to perform a check that the user entered exactly 7 numbers. If the user did, you can then safely pass that value into an API call or perform some other action with it. For some practice at this, try the [Intents tutorial](conversation-builder-getting-started-2-intents.html). (You’ll need to complete [Dialogs and Patterns tutorial](conversation-builder-getting-started-1-dialogs-and-patterns.html) first, as they build on one another.)
 
 User responses to question interactions can be saved in [variables](conversation-builder-variables-slots.html), making them available for future use.
 
 {: .important}
 For information on which question interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
+
+### Sample user answers
+Many question types provide a field for entering an example of a user's answer to the question.
+
+<img style="width:600px" src="img/ConvoBuilder/questions_sampleUserAnswer.png">
+
+There is no functionality tied to this field. It's meant to serve as a display-only aid to the bot developer during bot development within Conversation Builder.
+
+### Multiple choice questions
+Multiple choice questions let the consumer select an answer from a list of choices.
+
+<img style="width:400px" src="img/ConvoBuilder/questions_mcq1.png">
+
+One powerful feature of multiple choice questions is that the bot can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html).
+
+<img style="width:600px" src="img/ConvoBuilder/questions_mcq3.png">
+
+#### Question text
+
+Enter the question to send. The maximum character length is 255.
+
+#### Choices
+
+Enter the answer choices. The number of choices depends on the channel, so check the limitations for the channels in use. (For example, Facebook restricts this to three options.) For each choice, 20 characters or less is recommended.
+
+The user can either enter or select the answers. 
+
+#### Interaction Details settings
+
+Configure the following settings in the [Interaction Details - Settings tab](conversation-builder-interactions-details-settings.html):
+
+- **Display choice as**: Select whether you want to display the choices as buttons (shown above) or quick reply “chips” (shown below).
+
+<img style="width:350px" src="img/ConvoBuilder/questions_mcq2.png">
+
+- **Text Only Fallback > List Style**: Select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
+
+### Text questions
+
+Text questions expect and wait for a text-based response from the consumer.
+
+<img style="width:375px" src="img/ConvoBuilder/questions_text1.png">
+
+With text questions, it’s recommended that you include an example of an expected response, like is done in our example above. This helps to increase the likelihood of a valid response.
+
+<img style="width:600px" src="img/ConvoBuilder/questions_text2.png">
+
+#### Question text
+
+Enter the question to send. The maximum character length is 255.
 
 ### Structured questions
 

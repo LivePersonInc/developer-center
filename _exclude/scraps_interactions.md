@@ -1,60 +1,6 @@
 
 QUESTIONS
 
-Questions present information to the user---a question that expects a reply of some kind, a list of things to pick from, etc.---and they expect and wait for a user response before executing the next action.
-
-With a question, you can take the user’s response, evaluate it against a condition (i.e., does it match a pattern, an intent, a regular expression, or an exact value?), and then act accordingly. For example, if you ask the user for a 7-digit account number, you’ll likely want to perform a check that the user entered exactly 7 numbers. If the user did, you can then safely pass that value into an API call or perform some other action with it. For some practice at this, try the [Intents tutorial](conversation-builder-getting-started-2-intents.html). (You’ll need to complete [Dialogs and Patterns tutorial](conversation-builder-getting-started-1-dialogs-and-patterns.html) first, as they build on one another.)
-
-Question text and answers can display dynamic values through the use of variables; for help with using variables, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
-
-{: .important}
-See [Interaction Basics](conversation-builder-interactions-interaction-basics.html) for important information on whitelisting, guidelines on how to approach channel-specific limitations, and more.
-
-### Sample user answers
-Many question types provide a field for entering an example of a user's answer to the question.
-
-<img style="width:700px" src="img/ConvoBuilder/questions_sampleUserAnswer.png">
-
-There is no functionality tied to this field. It's meant to serve as a display-only aid to the bot developer during bot development within Conversation Builder.
-
-### Multiple choice questions
-Multiple choice questions let the consumer select an answer from a list of choices.
-
-<img style="width:400px" src="img/ConvoBuilder/questions_mcq1.png">
-
-One powerful feature of multiple choice questions is that the bot can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html).
-
-#### Question text
-
-Enter the question to send. The maximum character length is 255.
-
-#### Choices
-
-Enter the answer choices. The number of choices depends on the channel, so check the limitations for the channels in use. (For example, Facebook restricts this to three options.) For each choice, 20 characters or less is recommended.
-
-The user can either enter or select the answers. 
-
-#### Interaction Details settings
-
-Configure the following settings in the Interaction Details dialog box:
-- **Display choice as**: Select whether you want to display the choices as buttons (shown above) or quick reply “chips” (shown below).
-
-<img style="width:300px" src="img/ConvoBuilder/questions_mcq2.png">
-
-- **Text Only Fallback > List Style**: Select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text. In our example, the user can select "Sandals," enter "Sandals," or enter "1."
-
-### Text questions
-
-Text questions expect and wait for a text-based response from the consumer.
-
-<img style="width:325px" src="img/ConvoBuilder/questions_text.png">
-
-With text questions, it’s recommended that you include an example of an expected response, like is done in our example above. This helps to increase the likelihood of a valid response.
-
-#### Question text
-
-Enter the question to send. The maximum character length is 255.
-
 ### Button questions
 
 A button question lets you ask a question that expects a simple, short reply and present the consumer with button choices.
