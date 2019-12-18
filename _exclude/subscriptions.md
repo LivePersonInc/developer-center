@@ -9,7 +9,7 @@ indicator: both
 ---
 
 
-BB - dropdown should show public and own, for those bots that don't have alerts
+Bot Builder - dropdown should show public and own, for those bots that don't have alerts
 Admin - dropdown should show all bots (???), for those bots that don't have alerts
 
 **To subscribe to a bot**

@@ -13,6 +13,9 @@ Use a Knowledge Base integration when you want to search one of your knowledge b
 
 One use case for this type of integration is within a fallback dialog to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or [escalate the conversation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) to a human agent.
 
+{: .important}
+The Simple FAQ bot template provides a bot that answers users' questions by connecting to a knowledge base. For details, see [here](conversation-builder-templates-simple-faq.html).
+
 **To add a Knowledge Base integration**
 
 1. Open the bot, and click **Integrations** in the upper-right corner.

@@ -47,6 +47,8 @@ If you are using multiple bot instances (e.g., a Sandbox version and a Productio
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bestPractices/env_1.png">
 
+    You can add the key/value pairs one by one using the fields provided. Alternatively, click the **Bulk Add** link and enter them in key=value format in the text box provided. The text box also lets you copy the values from another source and paste them in.
+
 4. Click **Save**.
 
 ### Link environment variables to a bot 
@@ -94,3 +96,14 @@ To display an environment variable directly in text, use the following notation:
 For example:
 
 <img style="width:700px" src="img/ConvoBuilder/bestPractices/env_6.png">
+
+### Export environment variables to a CSV file
+
+Exporting a set of environment variables is useful when you need to "move" the values from one environment to another, e.g., from Development to Staging, or from Staging to Production. You can export the variables and then use the Bulk Add feature (and copy/paste) to add them to the new environment.
+
+**To export environment variables to a CSV file**
+
+1. From the Conversation Builder dashboard, click **Manage Bot Environments** in the upper-right corner.
+2. In the left panel, select the environment.
+3. In the right panel, under **More Options**, click <img style="width:25px" src="img/ConvoBuilder/icon_envVariables_download.png"> (Download icon) beside **Export Environment Variables**.
+4. Follow the browser prompts to access and save the CSV file to a location of your choice.

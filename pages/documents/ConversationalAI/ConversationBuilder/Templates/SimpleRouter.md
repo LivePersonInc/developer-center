@@ -33,11 +33,11 @@ The Simple Router template provides an easy framework for the creation of a rout
     - This integration posts a configuration payload to a LivePerson hosted service that will route the customer to a different skill.
     - In the Integrations area, there should be a pre-configured integration named “Transfer” and “Liveperson Agent Escalation” should be selected in the Integration Type menu.
     
-    <img style="width:400px" src="img/ConvoBuilder/template_simplerouter_3.png">
+    <img style="width:450px" src="img/ConvoBuilder/template_simplerouter_3.png">
 
     - The “skillName”, “skillId” and “transferMessage” variables will be populated via our Global Function. You do not need to change anything here.
     
-    <img style="width:450px" src="img/ConvoBuilder/template_simplerouter_4.png">
+    <img style="width:550px" src="img/ConvoBuilder/template_simplerouter_4.png">
 
 
 
@@ -62,19 +62,6 @@ Customize the text response to match your brand voice.
 #### No Agents Available dialog
 
 Customize the text response to match your brand voice.
-
-#### Escalation Integration
-
-Click on Integrations at the top of Conversation Builder and click on Escalation.
-
-Confirm that the POST url endpoint is using the right url for your server environment.
-
-| Server Environment | URL endpoint |
-| --- | --- |
-| US | `https://platformservice.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
-| US (If accessing from LiveEngage automation tab) | `https://va.bc-bot.liveperson.net/botservice-0.1/botcentral/livePersonAgent` |
-| Europe | `https://platformservice-eu.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
-| APAC | `https://platformservice-ap.botcentralapi.com/botservice-0.1/botcentral/livePersonAgent` |
 
 #### Global Functions
 
@@ -112,11 +99,10 @@ For each of your skill options:
 
 - The `skillName` is being set to the name of the intent, but if you want to customize it you can.
 
-
-You may add or remove `case` branches as needed for the number of your skills.
+You might add or remove `case` branches as needed for the number of your skills.
 
 #### Deploy Your Bot
 
-[Follow these instructions](conversation-builder-getting-started-4-connect-to-liveengage.html) for connecting your bot to LiveEnage.
+To connect your bot to LiveEngage, follow [these instructions](conversation-builder-testing-deployment-deploying-to-liveengage.html). You can also try [this tutorial](conversation-builder-getting-started-4-connect-to-liveengage.html).
 
 Now you can test your routing bot and see how it routes to your skills.
