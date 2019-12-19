@@ -456,7 +456,14 @@ In the bot's flow, there can be a time when it is required to pause/delay the co
   <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional if not provided then the value will be considered as true</li>
 </ul>
 
-An example of the custom payload for delay response is below:
+<br />
+
+If you want to put the delay in between multiple messages then it is possible and an example of such a case (Message - Delay - Message) can be seen in Figure 8.1.
+
+<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_message_delay_message.png">
+Figure 8.1 An example of Message - Delay - Message  configuration in the Dialogflow console's intent editor
+
+It is possible to send only a single delay response. The example payload of such response is below:
 
 ```json
 {
@@ -465,15 +472,8 @@ An example of the custom payload for delay response is below:
 }
 ```
 
-<br />
-
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/delay_response_custom_payload.png">
-Figure 8.1 showing the Custom Markup message for delay message
-
-If you want to put the delay in between multiple messages it is also possible. An example of a Message - Delay - Message can be seen in Figure 8.2.
-
-<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_message_delay_message.png">
-Figure 8.2 An example of Message - Delay - Message  configuration in the Dialogflow console's intent editor
+Figure 8.2 showing the Custom Markup message for delay message
 
 ### Close Chat/Conversation
 
