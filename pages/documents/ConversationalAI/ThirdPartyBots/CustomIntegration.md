@@ -287,7 +287,7 @@ For detailed information on Quick Replies check out the documentation for the sp
 
 ### Sending Pause/Delay Message
 
-In the bot's flow, there can be a time when it is required to pause/delay the conversation for some time. This is supported in Custom Integration as well through Third-Party Bots. There are two properties `delay` and `typing` need to be added in with the response body of the function.
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message.
 
 <ul>
   <li> <b>delay</b>: This is the number of seconds for delay</li>
