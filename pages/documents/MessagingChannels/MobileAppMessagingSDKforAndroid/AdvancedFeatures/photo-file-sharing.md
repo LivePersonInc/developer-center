@@ -11,19 +11,29 @@ permalink: mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file
 indicator: messaging
 ---
 
-Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.    
+
+### File Sharing from Agent to Consumer:
+Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.
 
 Agents can share:
 
-- **Photos:** Reference photos or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. The agent can also share photos in a resolved conversation to resume the conversation with the consumer.  Consumers can tap on the photo to view it full screen or share it through the default app on their device.   
+- **Photos:** Reference photos or photos of any product to visually guide consumers with product awareness, steps on how to use the product, or review comments of a product. The agent can also share photos in a resolved conversation to resume the conversation with the consumer.  Consumers can tap on the photo to view it full screen or share it through the default app on their device.
 
 - **Files:** Agents can also share files to provide consumers with information such as mortgage documents, product catalog, or transaction details as requested by consumers. They can also share files in a resolved conversation to resume the conversation with the consumer. Consumers can download files through the picker application to a location on their device (internal or external).
 
-   {:.important}
-   The Android SDK supports opening any file types other than images through the picker application. The consumer can either long click on the thumbnail or open the file through picker application to share and save the file.
-
-
 When the agent shares any supported file type from the LE, if the consumer isn't within the conversation view, they get a notification from the customer app only if the push notification is enabled. Otherwise, when the consumer returns to the conversation screen, a thumbnail for the photo or file appears in the conversation window.
+
+### File Sharing from Consumer to Agent:
+Mobile Messaging SDK v4.3 introduces a feature for consumers to share supported types of files to agents.
+
+Consumers can share:
+
+- **Photos:** Consumers can choose photos from gallery, internal storage, external storage as well as Google drives. They can also share photos in a resolved conversation to resume the conversation with the agents. Consumers can tap on the photo to view it full screen or share it through the default app on their device.
+
+- **Files:** Consumers can also share files with agents, chosen from internal storage, external storage or Google drives. They can also share files in a resolved conversation to resume the conversation with the agent. Consumers can download files through the picker application to a location on their device (internal or external).
+
+{:.important}
+   The Android SDK supports opening any supported file types other than images through the picker application. The consumer can either long click on the thumbnail or open the file through picker application to share and save the file.
 
 
 ### Supported formats
@@ -45,9 +55,10 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ### Notes and limitations
 
-- Photo sharing is two way (agent-to-consumer and consumer-to-agent), but file sharing is one way only (agent-to-consumer) for now.
+- Both photo sharing and file sharing are two way (agent-to-consumer and consumer-to-agent) starting from SDK version 4.3.
 
-   **For SDKs previous to 3.8:** Photo sharing is one-way only (from consumer-to-agent, but not vice versa) and available for the Mobile Message SDK only.
+   **For SDKs previous to 4.3:** File sharing is one-way only (from agent-to-consumer, but not vice versa).
+   **For SDKs previous to 3.8:** Photo sharing is one-way only (from consumer-to-agent, but not vice versa) and available for the Mobile Messaging SDK only.
 
 - If an attempt to view a photo or file is unsuccessful, an error icon covers the thumbnail. Upon retry, the file attempts to download again. Retry can be attempted as many times as possible (in case of a poor network) until the file is downloaded successfully.
 
@@ -61,24 +72,24 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 - **For Android SDK 3.0 on an Oreo Device (8.0 &amp; 8.1).** Add support for Notification Channel.
 
-### How photo and file sharing works
+### How photo and file sharing works from agent to consumer
 
 <img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 
----   
+---
 
-### Step 1. Enable or disable 
+### Step 1. Enable or disable the feature
 
 1. Change the boolean value:
 
-   ```java
+   ```xml
    <bool name="enable_photo_sharing">
    ```
-   
+  
    By default, this value is set to **false**.
 
-   ```java
+   ```xml
    <bool name="enable_file_sharing">
    ```
 
@@ -90,7 +101,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 1. Set the max number of photos or files to save on disk:
 
-   ```java
+   ```xml
    <integer name="max_number_stored_images">
 
    <integer name="max_number_stored_documents">
@@ -102,8 +113,8 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 2. Set the max image size:
 
-   ```java
-   <integername="max_image_size_kb">
+   ```xml
+   <integer name="max_image_size_kb">
    ```
 
    The default max image is 3000kb.
@@ -112,50 +123,58 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 3. Change the color of the attachment menu:
 
-   ```java
-   <colorname="attachment_menu_item_background_color">
+   ```xml
+   <color name="attachment_menu_item_background_color">
 
-   <colorname="lp_attachment_menu_background_color">
+   <color name="lp_attachment_menu_background_color">
 
-   <colorname="lp_attachment_menu_item_text_color">
+   <color name="lp_attachment_menu_item_text_color">
 
-   <colorname="lp_attachment_menu_item_icon_color">
+   <color name="lp_attachment_menu_item_icon_color">
    ```
 
 4. Change the text of buttons:
 
-   ```java
-   <stringname="lp_accessibility_gallery">
+   ```xml
+   <string name="lp_accessibility_gallery">
 
-   <stringname="lp_accessibility_camera">
+   <string name="lp_accessibility_camera">
    ```
 
 5. Define the max number of stored images allowed locally.
 
-   ```java
-   <integername="max_number_stored_images">
+   ```xml
+   <integer name="max_number_stored_images">
    ```
 
    The default max number is 20.
 
-6. Define the resize dimensions:
+6. Define the max number of stored documents allowed locally.
 
-   ```java
-   <integername="thumbnail_longer_dimension_resize">
+   ```xml
+   <integer name="max_number_stored_documents">
+   ```
+
+   The default max number is 20.
+
+7. Define the resize dimensions:
+
+   ```xml
+   <integer name="thumbnail_longer_dimension_resize">
    ```
 
    The default thumbnail dimension is 100.
 
-   ```java
-   <integername="full_image_longer_dimension_resize">
+   ```xml
+   <integer name="full_image_longer_dimension_resize">
    ```
 
    The default full image dimension is 800.
 
-7. Set the compression rate (percentage) for full images:
+8. Set the compression rate (percentage) for full images:
 
-   ```java
-   <integername="full_image_compression_rate">
+   ```xml
+   <integer name="full_image_compression_rate">
    ```
 
    The default compression rate is 50.

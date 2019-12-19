@@ -2,6 +2,7 @@
 pagename: Connector Sample App
 redirect_from:
   - connector-sample-app.html
+  - connector-api-sample-code-connector-sample-app.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
