@@ -10,7 +10,7 @@ permalink: knowledge-base-overview.html
 indicator: both
 ---
 
-In Conversation Builder, a knowledge base is a great tool to answer questions about a variety of topics specific to your bot's area of expertise. One would typically add a knowledge base integration in a fallback dialog to provide simple answers to topics not covered elsewhere in the bot.
+In Conversation Builder, a knowledge base is a great tool to answer questions about a variety of topics specific to your bot's area of expertise. One would typically add a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a fallback dialog to provide simple answers to topics not covered elsewhere in the bot.
 
 The Knowledge Base application in the Conversation Builder platform lets you to create and manage knowledge bases and articles, which are then processed by an NLU engine. This allows the bot to leverage [intents](intent-builder-intents.html) and [entities](intent-builder-entities.html) to recommend the most accurate articles to an inquiring consumer. FAQ bots and Agent Advisor widgets are both driven by a knowledge base full of articles, intelligently delivering the right content to the consumer at the right time.
 
@@ -67,9 +67,9 @@ As you work on the articles in a knowledge base, you'll often access the toolbar
 
 * <img style="width:30px" src="img/ConvoBuilder/icon_kb_chat.png"> **Chat**: Use this to select a bot you've previously created and linked to the knowledge base, and feed it test user input to see if it matches content as you'd expect.
 
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_tags.png"> **Tags**: This panel displays all tags you've previously used, so you can review them all in one place and reuse them in future articles.
+* <img style="width:30px" src="img/ConvoBuilder/icon_kb_tags.png"> **Tags**: This panel displays all tags you've previously used, so you can review them all in one place and reuse them in future articles. For help with using this panel, see [here](knowledge-base-articles.html#find-articles-assigned-a-specific-tag).
 
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_categories.png"> **Categories**: This panel displays all categories you've previously used, so you can review them all in one place and reuse them in future articles.
+* <img style="width:30px" src="img/ConvoBuilder/icon_kb_categories.png"> **Categories**: This panel displays all categories you've previously used, so you can review them all in one place and reuse them in future articles. For help with using this panel, see [here](knowledge-base-articles.html#find-articles-assigned-to-a-specific-category).
 
 * <img style="width:30px" src="img/ConvoBuilder/icon_kb_test.png"> **Test User Input**: This panel is similar to the Chat panel but is divorced from a specific bot. Use it to feed user input directly into a knowledge base and test your content matching without the context of an actual dialog.
 

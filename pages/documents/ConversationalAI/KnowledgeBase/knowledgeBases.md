@@ -15,12 +15,15 @@ indicator: both
 2. Specify the following:
     * **Data source name**: Enter a name for the knowledge base.
     * **Data source type**: Select "Knowledge Base."
-    * **Language**: Select the language of the knowledge base. The default value is English. For details, see [here](knowledge-base-overview.html#languages) in the overview.
+    * **Language**: Select the language of the knowledge base. The default value is English. For details on how the language is used, see [here](knowledge-base-overview.html#languages) in the overview.
     * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. For details on creating an import file, see [here](knowledge-base-knowledge-bases.html#create-an-import-file) below. 
         
         If you select "Google Sheet" and you provide the URL to the sheet, be aware that this establishes a link between the knowledge base and the sheet. If you later sync the knowledge base, it is updated with the current contents in the sheet. 
 
     * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears. For a more in-depth explanation of these, see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) in the overview.
+
+        If and when you are selecting the domain, be aware that it can't be changed after the knowledge base is created.
+
 3. Click **Add**.
 
     This creates the knowledge base, and takes you to its search view. In this default view, you can search the title, intent qualifiers and content of articles.
@@ -42,10 +45,10 @@ If you want to import a set of articles into a knowledge base when you add the k
 | Column header name | Notes |
 |--------------------|-------|
 | id | An integer; usually just the row index, e.g., 1, 2, 3. <br><br>**Note**: This column isn't required when you initially create the knowledge base. However, if you're using a Google sheet that you plan to sync periodically, it does play a role then. Before performing a sync, update the Google sheet to include the "id" column and enter the IDs for all existing articles. |
-| tags | A comma-separated list of relevant terms. |
+| tags | A comma-separated list of relevant keywords. |
 | title | The article title. This should be a complete sentence or question that the user might ask. |
 | summary | A short answer that's 80 characters or less. |
-| alternates | In the UI, these are called "intent qualifiers." |
+| alternates | In the UI, these are called "intent qualifiers" (see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents)). |
 | detail | A long answer that's 350 characters or less. |
 | content_url | |
 | image_url | |
@@ -56,7 +59,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 | inputContext | Deprecated. |
 | contextAlternates | Deprecated. |
 | outputContext | Deprecated. |
-| category | Assigning a category lets you filter articles based on categories in the application. |
+| category | Assigning a category lets you [filter and find articles based on categories](knowledge-base-articles.html#find-articles-assigned-to-a-specific-category) in the Knowledge Base application. |
 | section | |
 | positiveLearnings | These are phrases for which you want a match to the article to occur. A comma-separated list. |
 | negativeLearnings | These are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent. A comma-separated list. |
@@ -69,21 +72,22 @@ If you want to import a set of articles into a knowledge base when you add the k
 2. In the Settings panel, click **KB Settings**.
 3. Specify the following:
     * **Data source name**: Enter a new name for the knowledge base if desired.
-    * **Data source type**: This field is read only.
+    * **Data source type**: Read-only.
     * **Language**: Change the language if desired.
-    * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base though, but be aware that, once you sync with the sheet, the contents of the knowledge base are overwritten with what's in the sheet.
+    * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base though, but be aware that, once you [sync with the sheet](knowledge-base-knowledge-bases.html#sync-with-a-google-sheet), the contents of the knowledge base are overwritten with what's in the sheet.
     * **Knowledge Base ID**: Read-only. This is a unique identifier that’s generated by the system. In some scenarios, you might need to reference the knowledge base ID. Here’s where you can find it.
-    * **Intent Association**: This field is read only. However, if the knowledge base uses Knowledge Base intents, you can convert them to Domain intents; for help with this, see [below](knowledge-base-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents).
-    * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses Knowledge Base intents. If desired, you can change the domain where the entities used in the knowledge base are defined.
-    * **Associated Domain**: This field is only displayed if the knowledge base uses Domain intents. If desired, you can change the domain where the intents and entities used in the knowledge base are defined.
-    * **Account**: 
+    * **Intent Association**: Read-only. If the knowledge base uses Knowledge Base intents, you can convert them to Domain intents.
+    * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
+    * **Associated Domain**: Read-only. This field is only displayed if the knowledge base uses [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). The domain can't be changed after the knowledge base is created.
+    * **Account**: If you logged into Conversation Builder directly (i.e., not via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, you can use this setting to change the organization under which this knowledge base exists. If you logged into Conversation Builder via single sign-on from LiveEngage, the organization you were using in LiveEngage is active and can't be changed, and nothing appears in this list.
     * **Public**: If you don't want other users in your LiveEngage account to be able to view and edit the knowledge base, click the slider to Off. The default value is On.
 4. Click **Update**.
 
 ### Convert Knowledge Base intents to Domain intents
 
-When you convert Knowledge Base intents to Domain intents, the system takes each article title and creates an intent in the domain that you select, and it takes each associated intent qualifier and creates a training phrase for that intent.
+When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Builder in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases in Intent Builder for their respective intents.
 
+{: .important}
 Before taking this action, be certain about doing so. Once you convert the intents, you can no longer use Knowledge Base intents in the knowledge base. Also, this action irreversibly modifies the domain that you select.
 
 **To convert from Knowledge Base intents to Domain intents**
@@ -105,13 +109,14 @@ Stop words are words that aren't used by the NLU engine to score an utterance. T
 You can add stop words to a knowledge base. Typically, this is done for words or phrases like your company name or brand name, as these words typically aren't needed for and don't help the scoring of an utterance.
 
 {: .important}
-There is a list of stop words that are applied by default; you can view that list here. You don't need to add these words.
+There is a list of stop words that are applied by default; you can view that list [here](conversation-builder-best-practices-train-tune-nlu.html#nlu-stop-words). You don't need to add these words.
 
 **To add a stop word to a knowledge base**
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
 2. In the Settings panel, click **KB Settings**.
 3. Click **More Options**, and scroll down to the **Stop Words** section.
-4. Enter the word, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_add.png"> (Refresh icon).
+4. Enter the word, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_add.png"> (Add).
+5. Click **Update**.
 
 ### Sync with a Google sheet
 

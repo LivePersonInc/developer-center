@@ -230,7 +230,7 @@
     pages:
       - pagename: Overview
       - pagename: Knowledge Bases
-  #    - pagename: Articles
+      - pagename: Articles
       - pagename: Tutorial
   - documentname: Bot Analytics
     pages:
