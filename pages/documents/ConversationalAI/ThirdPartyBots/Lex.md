@@ -451,6 +451,8 @@ it is also possible to send only a single delay response. The example payload of
 <img class="fancyimage" src="img/lex/delay_response_custom_payload.png">
 Figure 8.2 showing the Custom Markup message for delay message
 
+**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this, allows the bot to receive a consumer message without responding to the consumer.
+
 ### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation without escalating to a live agent.

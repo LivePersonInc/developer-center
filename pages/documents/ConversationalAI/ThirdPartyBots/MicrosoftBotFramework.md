@@ -248,7 +248,7 @@ Figure 7.1 Activity excerpt for a transfer Request
 
 ### Sending Pause/Delay Message
 
-In the bot's flow, there can be a time when it is required to pause/delay the conversation for some time. This is supported in Microsoft Bot Framework as well through Third-Party Bots. The delay message can be added via the `channelData` property. There are two properties `delay` and `typing` need to be added in `channelData` object response.
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. The delay message can be added via the `channelData` property. There are two properties `delay` and `typing` need to be added in `channelData` object response.
 
 <ul>
   <li> <b>delay</b>: This is the number of seconds for delay</li>
@@ -267,6 +267,8 @@ An example of the delay response with a simple text message is below:
   }
 }
 ```
+
+**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this, allows the bot to receive a consumer message without responding to the consumer.
 
 ### Close Chat/Conversation
 
