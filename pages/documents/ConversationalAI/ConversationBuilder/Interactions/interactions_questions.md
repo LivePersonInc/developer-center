@@ -172,7 +172,7 @@ Enter the question to send.
 
 **For Apple Business Chat only.**
 
-If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the List Picker question interaction to display a list of items (along with information about those items), so the consumer can reply by selecting one or more. Like with any question interaction, a list picker expect and waits for the user response before executing the next action.
+If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the List Picker question interaction to display a list of items (along with information about those items), so the consumer can reply by selecting one or more. Like with any question interaction, a list picker expects and waits for the user response before executing the next action.
 
 You might want to include a list picker so consumers can select from a list of:
 
