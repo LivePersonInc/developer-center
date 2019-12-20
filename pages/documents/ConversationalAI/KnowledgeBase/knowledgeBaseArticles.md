@@ -66,7 +66,7 @@ To increase the quality of your content matches, follow these best practices:
 
 * Use one sentence, not multiple sentences. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
 
-* When adding intent qualifiers to an article, add around 10 per article. When adding training phrases to an intent, add 10 - 25 per intent. If you exceed these numbers, it's likely that you have overtrained, which might lead to false positives.
+* When adding intent qualifiers or training phrases, add 10 - 15 per article. Exceeding this likely means that you have overtrained, which might lead to false positives.
 
 * The intent qualifiers or training phrases should be relatively generic. If they are too specific, the likelihood they will match a consumer’s utterance will be slim. Since consumers can phrase their questions in many ways, make sure your intents are broad to allow the NLU a chance to match as many possible versions of the sentence as possible.
 
