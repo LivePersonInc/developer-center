@@ -246,6 +246,30 @@ An additional text message can also be provided.
 
 Figure 7.1 Activity excerpt for a transfer Request
 
+### Sending Pause/Delay Message
+
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. The delay message can be added via the `channelData` property. There are two properties `delay` and `typing` need to be added in `channelData` object response.
+
+<ul>
+  <li> <b>delay</b>: This is the number of seconds for delay</li>
+  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional if not provided then the value will be considered as true</li>
+</ul>
+
+An example of the delay response with a simple text message is below:
+
+```json
+{
+  "type": "message",
+  "text": "Hi i am sending a text with delay!!",
+  "channelData": {
+    "delay": 8,
+    "typing": false
+  }
+}
+```
+
+**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this, allows the bot to receive a consumer message without responding to the consumer.
+
 ### Close Chat/Conversation
 
 To close a chat or messaging conversation, we provide the action object as we did for a transfer. The activity should contain the following action.
@@ -264,14 +288,14 @@ An additional text message can also be provided.
 }
 ```
 
-Figure 8.1 Activity excerpt for a close conversation request
+Figure 9.1 Activity excerpt for a close conversation request
 
 ### Engagement attributes as context
 
-Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 9.1.
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 10.1.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
-Figure 9.1 Conversation Type step in creation/modification of bot configuration.
+Figure 10.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Microsoft Bot these engagement attributes are added to the property `lpSdes` which is part of another custom property of `context`. This context information within a conversation is preserved/passed in `channelData` property (further information about `channelData` can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)). An example of the request body can be seen below:
 
@@ -309,7 +333,7 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
 }
 ```
 
-Figure 10.1 Customer activity excerpt on a new chat
+Figure 11.1 Customer activity excerpt on a new chat
 
 ### Sending Multiple Responses
 

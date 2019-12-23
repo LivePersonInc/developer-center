@@ -423,6 +423,36 @@ You need to add another property of `encodedMetadata` with your rich content obj
 <img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_structured_content.png">
 Figure 7.3
 
+### Sending Pause/Delay Message
+
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. The delay message can be added via Custom Markup response in intent definition (as shown in Figure 8.1). There are two properties `delay` and `typing` are part of the Custom Payload response.
+
+<ul>
+  <li> <b>delay</b>: This is the number of seconds for delay</li>
+  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional if not provided then the value will be considered as true</li>
+</ul>
+
+<br />
+
+If you want to put the delay in between multiple messages then it is possible and an example of such a case (Message - Delay - Message) can be seen in Figure 8.1.
+
+<img class="fancyimage"  src="img/lex/lex_message_delay_message.png">
+Figure 8.1 An example of Message - Delay - Message  configuration in the Amazon lex console's intent editor
+
+it is also possible to send only a single delay response. The example payload of such response is below:
+
+```json
+{
+  "delay": 8,
+  "typing": false
+}
+```
+
+<img class="fancyimage" src="img/lex/delay_response_custom_payload.png">
+Figure 8.2 showing the Custom Markup message for delay message
+
+**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this, allows the bot to receive a consumer message without responding to the consumer.
+
 ### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation without escalating to a live agent.
@@ -441,18 +471,18 @@ The action field needs to be set to **CLOSE_CONVERSATION **to instruct the conne
 }
 ```
 
-Figure 8.1 Lex Example Close Conversation Payload
+Figure 9.1 Lex Example Close Conversation Payload
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_11.png">
 
-Figure 8.2 - Example in Lex console
+Figure 9.2 - Example in Lex console
 
 ### Engagement attributes as context
 
-Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 9.1.
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 10.1.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
-Figure 9.1 Conversation Type step in creation/modification of bot configuration.
+Figure 10.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For Lex, engagement attributes are added to the property `lpSdes` inside another custom sub-property `BC-LP-CONTEXT`. For the preservation of the state of engagement attributes across conversation `requestAttributes` property is used (more information about `requestAttributes` can be found [here](https://docs.aws.amazon.com/lex/latest/dg/API_runtime_PostText.html#API_runtime_PostText_RequestSyntax)). An example of the request body can be seen below:
 
