@@ -425,16 +425,16 @@ Figure 7.3
 
 ### Sending Pause/Delay Message
 
-It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. The delay message can be added via Custom Markup response in intent definition (as shown in Figure 8.1). There are two properties `delay` and `typing` are part of the Custom Payload response.
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. The delay message can be added via Custom Markup response in intent definition (as shown in Figure 8.1). There are two properties, `delay` and `typing`, which are a part of the Custom Payload response.
 
 <ul>
-  <li> <b>delay</b>: This is the number of seconds for delay</li>
-  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional if not provided then the value will be considered as true</li>
+  <li> <b>delay</b>: This is the number of seconds the bot will wait.</li>
+  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
 </ul>
 
 <br />
 
-If you want to put the delay in between multiple messages then it is possible and an example of such a case (Message - Delay - Message) can be seen in Figure 8.1.
+Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Message) can be seen in Figure 8.1.
 
 <img class="fancyimage"  src="img/lex/lex_message_delay_message.png">
 Figure 8.1 An example of Message - Delay - Message  configuration in the Amazon lex console's intent editor
@@ -451,7 +451,7 @@ it is also possible to send only a single delay response. The example payload of
 <img class="fancyimage" src="img/lex/delay_response_custom_payload.png">
 Figure 8.2 showing the Custom Markup message for delay message
 
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this, allows the bot to receive a consumer message without responding to the consumer.
+**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 ### Close Chat/Conversation
 
