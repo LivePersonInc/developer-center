@@ -248,11 +248,11 @@ Figure 7.1 Activity excerpt for a transfer Request
 
 ### Sending Pause/Delay Message
 
-It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. The delay message can be added via the `channelData` property. There are two properties `delay` and `typing` need to be added in `channelData` object response.
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. The delay message can be added via the `channelData` property. There are two properties, `delay` and `typing`, which need to be added in `channelData` object response.
 
 <ul>
-  <li> <b>delay</b>: This is the number of seconds for delay</li>
-  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional if not provided then the value will be considered as true</li>
+  <li> <b>delay</b>: This is the number of seconds the bot will wait.</li>
+  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
 </ul>
 
 An example of the delay response with a simple text message is below:
@@ -268,7 +268,7 @@ An example of the delay response with a simple text message is below:
 }
 ```
 
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this, allows the bot to receive a consumer message without responding to the consumer.
+**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 ### Close Chat/Conversation
 
