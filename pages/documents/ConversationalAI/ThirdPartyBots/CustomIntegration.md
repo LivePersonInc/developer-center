@@ -287,11 +287,11 @@ For detailed information on Quick Replies check out the documentation for the sp
 
 ### Sending Pause/Delay Message
 
-It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. There are two properties `delay` and `typing` need to be added in with the response body of the function.
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. There are two properties, `delay` and `typing`, which need to be added in with the response body of the function.
 
 <ul>
-  <li> <b>delay</b>: This is the number of seconds for delay</li>
-  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional if not provided then the value will be considered as true</li>
+  <li> <b>delay</b>: The number of seconds which the bot will wait</li>
+  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true</li>
 </ul>
 
 An example of the function response with a simple text message and delay properties is below:
@@ -308,7 +308,7 @@ An example of the function response with a simple text message and delay propert
 }
 ```
 
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this, allows the bot to receive a consumer message without responding to the consumer.
+**Note:** using the delay as a single/sole response from the bot to the consumer is effectively a ‘no response’ action. This allows the bot to receive a consumer message without responding to the consumer.
 
 ### Close Chat/Conversation
 
