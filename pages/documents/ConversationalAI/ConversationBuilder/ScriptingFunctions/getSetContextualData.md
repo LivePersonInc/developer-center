@@ -79,18 +79,28 @@ case "help":
 ```
 
 
-### Get channel
+### Get user channel
+Returns the platform channel the user is currently communicating on. This function returns:
 
-Returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, sms, web, inapp. lp_ prefix indicates the LivePerson platform.
+* lp_sms (for SMS)
+* lp_web (for Web)
+* lp_inapp (for In-app SDK)
+* lp_whatsapp (for WhatsApp)
+* lp_rcs (for RCS)
+* lp_abc (for Apple Business Chat)
+* twilio_sms (for Twilio SMS)
+* lp_fb (for Facebook)
+
+The "lp_" prefix indicates the LivePerson platform.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getChannel()` | None | lp_sms, lp_web, lp_inapp, sms, web, inapp |
+| `getUserChannel()` | None | lp_sms, lp_web, lp_inapp, lp_whatsapp, lp_rcs, lp_abc, twilio_sms, lp_fb |
 
 #### Example
 
 ```javascript
-var channel = botContext.getChannel();
+var channel = botContext.getUserChannel();
 botContext.printDebugMessage("channel used by the user is: " + channel);
 ```
 
@@ -168,6 +178,16 @@ botContext.setBotVariable("previousSkill", previousSkill, true, false);
 
 <img class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
 
+### Get matched intent
+Used to retrieve the intent (associated with a User Says interaction) that was matched to the most recent user utterance.
+
+This method returns the name of the intent. If you are using a meta intent, it returns the name of the child or sub-intent.
+
+#### Example
+
+```javascript
+var intentName = botContext.getDialogStarterIntent();
+```
 
 ### Get named entities
 

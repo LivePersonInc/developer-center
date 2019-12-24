@@ -28,7 +28,7 @@ This tutorial is designed to familiarize you with Knowledge Base.
 5. Under **Tags**, add some tags that highlight the key nouns in your intent qualifiers and title. These tags assist the NLU engine in matching intents, your content, and the user input by highlighting the key sections of the user's message in regards to the intents that you created.
 6. Click **Save**.
 
-<div class="important">The **Detail** field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible.</div>
+<div class="important">The Detail field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible.</div>
 
 Back in the search view, you should now see your new article, which should look something like this:
 

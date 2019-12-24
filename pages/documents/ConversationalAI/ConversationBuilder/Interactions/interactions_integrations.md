@@ -29,10 +29,21 @@ Before you can add an Integration interaction, you need to create the integratio
 
 3. Finish configuring the interaction as desired, and click **Save**.
 
+{: .important}
+It's recommended that you take advantage of the ability to define conditions based on the *result* of the API integration.
+
+In our example below, we've added a condition that checks for a "success" result **(1)**, and we've configured the next step to continue to the next interaction **(2)**. So, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends).
+
+ <img style="width:800px" src="img/ConvoBuilder/integrations_api_success.png">
+
+We've likewise added a second condition that checks for a "failure" result **(1)**, and then we've configured the next step to continue to a "fail" interaction **(2)**. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
+
+ <img style="width:800px" src="img/ConvoBuilder/integrations_api_failure.png">
+
 ### File Upload interactions
 
 {: .important}
-File Upload interactions are available for Web Messaging, Apple Business Chat, and WhatsApp Business.
+File Upload interactions are available for Web Messaging, Apple Business Chat, and WhatsApp Business. Additionally, the interactions are only available on the LivePerson cloud platform.
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
@@ -51,11 +62,11 @@ Some setup of your LiveEngage environment is required before using this feature.
     For the file to be uploaded, in step 4, you'll follow this with an integration interaction that invokes a File integration.
 
 3. In the File Upload interaction, open the **Interaction Details**, click **[Settings]((conversation-builder-interactions-details-settings.html))**, and specify the following under **File Upload Settings**:
-    - **Accept File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
-    - **Success message**: Enter the message to send to the consumer if the file upload to your external file share is successful. If you don't supply a message, the following message is sent, "Successfully processed the file."
-    - **Failure message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. If you don't supply a message, the following message is sent, "Failed to process the file. Please try again."
+    - **Accepted File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
+    - **Success message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
+    - **Failure message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
     - **Validation Failure message**: Enter the message to send to the consumer if the upload fails because the consumer has attempted to upload a file of an invalid type. If you don't supply a message, the following message is sent, "The file type is invalid. Upload one of these types: {a}, {b}, {c}." To help to avoid validation failures, consider mentioning the acceptable file types in the File Upload message, as we've done in the image above.
-    - **In progress message**: Enter the message to send to the consumer when the upload begins. If you don't supply a message, the following message is sent, "Processing the file..."
+    - **In progress message**: Enter the message to send to the consumer when the upload begins. The default value is, "Processing the file..."
 
 4. Immediately after the File Upload interaction, add an Integration interaction ( <img style="width:30px" src="img/ConvoBuilder/icon_integration.png"> ). In the interaction, select the File integration to invoke (Integration type = File).
     
@@ -69,6 +80,7 @@ Some setup of your LiveEngage environment is required before using this feature.
 
 - The uploaded file can’t be over 5 MB.
 - File upload is an asynchronous process, so the bot's conversation with the consumer will continue while the upload is in progress. The consumer will only be advised of success or failure, respectively, once the process is completed or has failed.
+- The File Upload interaction can't be tested using the Preview window.
 
 #### Customization points
 

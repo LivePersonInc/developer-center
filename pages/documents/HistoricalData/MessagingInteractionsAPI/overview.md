@@ -14,6 +14,9 @@ indicator: messaging
 ---
 ### Introduction
 
+{: .notice}
+Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/essential-resources-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+
 The LiveEngage Messaging Interactions API retrieves the most up to date information available about contact center messaging interactions. This API makes it possible to search, filter and analyze data and transcripts of open and closed conversations.
 
 The API returns the conversation’s transcripts and all of its related metadata such as start time, end time, MCS, CSAT, summary, participated agents, the reason the conversation was closed etc.

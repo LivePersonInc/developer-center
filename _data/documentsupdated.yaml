@@ -148,6 +148,7 @@
       - pagename: Interactions
         subpages:
           - subpagename: Interaction Basics
+          - subpagename: Interaction Support
           - subpagename: User Says
           - subpagename: Statements
           - subpagename: Questions
@@ -163,7 +164,7 @@
           - subpagename: Integration Basics
           - subpagename: API Integrations
           - subpagename: Email Integrations
-    #      - subpagename: Knowledge Base Integrations
+          - subpagename: Knowledge Base Integrations
           - subpagename: LivePerson Agent Escalation Integrations
           - subpagename: File Integrations
           - subpagename: LivePerson Functions Integrations
@@ -182,6 +183,7 @@
           - subpagename: Manage Conversation Flow
           - subpagename: Log & Debug
           - subpagename: Manage the Context Session Store
+          - subpagename: Deprecated Functions
       - pagename: Testing & Deployment
         subpages:
           - subpagename: Debugging
@@ -191,6 +193,7 @@
         subpages:
           - subpagename: Train & Tune NLU
           - subpagename: Reusable Components
+          - subpagename: A Pre-Launch Checklist
   - documentname: Maven AI
     pages:
       - pagename: Overview
@@ -226,8 +229,8 @@
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
-  #    - pagename: Knowledge Bases
-      - pagename: Best Practices
+      - pagename: Knowledge Bases
+  #    - pagename: Articles
       - pagename: Tutorial
   - documentname: Bot Analytics
     pages:
@@ -237,6 +240,7 @@
     pages:
       - pagename: Permissions
       - pagename: Credentials
+  #    - pagename: Subscriptions
   - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
@@ -483,7 +487,6 @@
         - pagename: Introduction
         - pagename: Methods
           subpages:
-            - subpagename: General
             - subpagename: Categories List
             - subpagename: Categories List by Revision
             - subpagename: Category by ID
@@ -495,6 +498,7 @@
             - subpagename: Delete Multiple Categories
             - subpagename: Import Account Categories
             - subpagename: Import Categories Pre Validation
+        - pagename: Appendix
     - documentname: Profiles API
       basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/profiles
       pages:
@@ -595,6 +599,7 @@
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
+          - subpagename: Debugger
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
@@ -685,44 +690,26 @@
   - documentname: Connector API
     basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
-    - pagename: First Steps
-      subpages:
-      - subpagename: Overview
-      - subpagename: App Install Manifest for Connectors
-      - subpagename: Getting Started
-    - pagename: Authorization and Authentication
-      subpages:
-      - subpagename: Get AppJWT
-      - subpagename: Get ConsumerJWS
-      - subpagename: Authorization Error Responses
-    - pagename: API Reference
-      subpages:
-      - subpagename: Overview
-      - subpagename: CONVERSATION
-      - subpagename: SEND
-    - pagename: Webhooks
-      subpages:
-      - subpagename: Overview
-      - subpagename: Events
-      - subpagename: Configuration
-      - subpagename: Notification Protocol
-      - subpagename: Retry Policy
-      - subpagename: Disclaimers
-      - subpagename: Troubleshooting
-      - subpagename: Webhooks Examples
-    - pagename: Examples
-      subpages:
-      - subpagename: Create a New Conversation
-      - subpagename: Create a New Conversation and Report SDEs
-      - subpagename: Send a Message
-      - subpagename: Close a Conversation
-      - subpagename: Send Chat State Events
-      - subpagename: How to Enable a Feature
-      - subpagename: Campaign for Messaging Routing
-      - subpagename: File Sharing
-    - pagename: Sample Code
-      subpages:
-      - subpagename: Connector Sample App
+      - pagename: Overview
+      - pagename: Getting Started
+      - pagename: Connector Sample App
+      - pagename: Send API
+        subpages:
+          - subpagename: Overview
+          - subpagename: Authorization and Authentication
+          - subpagename: CONVERSATION
+          - subpagename: SEND
+          - subpagename: Examples
+      - pagename: Webhooks
+        subpages:
+          - subpagename: Overview
+          - subpagename: Events
+          - subpagename: Configuration
+          - subpagename: Notification Protocol
+          - subpagename: Retry Policy
+          - subpagename: Disclaimers
+          - subpagename: Troubleshooting
+          - subpagename: Webhooks Examples
   - documentname: IVR Engagement API
     basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
     pages:
@@ -743,6 +730,7 @@
       - subpagename: CSAT Behavior
       - subpagename: Photo and File Sharing
       - subpagename: Welcome Message with Quick Replies
+      - subpagename: Scroll Behavior Configuration
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API

@@ -174,7 +174,7 @@ In this page you can refer to some examples of the events notifications received
 }
 ```
 
-**Note**: In order to get also "Consumer is typing" events notifications the Connector must send LiceEngage using the SEND enpoint a message that contains the `COMPOSING` ChatStateEvent. See more information in [here](send-chat-state-example.html)
+**Note**: In order to get also "Consumer is typing" events notifications the Connector must send LiceEngage using the SEND enpoint a message that contains the `COMPOSING` ChatStateEvent. See more information in [here](connector-api-send-api-examples.html#send-chat-state-events)
 
 
 ### Agent has stopped typing but still on the chat window - ACTIVE

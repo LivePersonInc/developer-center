@@ -368,6 +368,85 @@ For detailed information on Quick Replies check out the documentation for the sp
 
 Figure 6.1 QuickReplies Structured Content example
 
+### Sending Encoded Metadata
+
+LiveEngage Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+
+<ul>
+  <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
+  <li>Content is base64 encoded</li>
+  <li> Metadata size is limited to 5k</li>
+</ul>
+
+{: .important}
+Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
+
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 7.1 below
+
+<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_encoded_metadata.png">
+Figure 7.1
+
+#### Sending Text Message with Encoded Metadata
+
+Please note that the default `Text Response` option in Dialogflow will not work with encoded metadata feature. You have to use Custom Response with the properties `textResponse` and `encodedMetadata`. Be careful with the camel-case characters you must provide it exactly the same.
+
+<ul>
+  <li> <b>textResponse</b>: This is the text that will be sent to the user.</li>
+  <li><b>encodedMetadata</b>: this is the property that will contain encoded metadata</li>
+</ul>
+
+An example of the custom payload text message response is below:
+
+```json
+{
+  "textResponse": "Hello I am a text response with encoded metadata!",
+  "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=="
+}
+```
+
+<br />
+
+<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_encodedmetadata_text.png">
+Figure 7.2 
+ 
+#### Sending Rich Content (structured content) with Encoded Metadata
+
+You need to add another property of `encodedMetadata` with your rich content object that you have created. An example of the simple Rich Content `JSON` can be seen below:
+
+```json
+{
+  "metadata": [
+    {
+      "id": "1234",
+      "type": "ExternalId"
+    }
+  ],
+  "structuredContent": {
+    "type": "vertical",
+    "elements": [
+      {
+        "type": "button",
+        "click": {
+          "actions": [
+            {
+              "text": "Recommend me a movie, please",
+              "type": "publishText"
+            }
+          ]
+        },
+        "title": "Recommend a movie"
+      }
+    ]
+  },
+  "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=="
+}
+```
+
+<br />
+
+<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_encodedmetadata_structuredcontent.png">
+Figure 7.3
+
 ### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation without escalating to a live agent.
@@ -378,15 +457,14 @@ The method for closing a conversation is similar to the transfer action in that 
 The action field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to to close the conversation.
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_12.png">
-
-Figure 7.1
+Figure 8.1
 
 ### Engagement attributes as context
 
-Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.1.
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 9.1.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
-Figure 8.1 Conversation Type step in creation/modification of bot configuration.
+Figure 9.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow V2 these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload` (more information about `payload` parameter can be found [here](https://googleapis.dev/nodejs/dialogflow/latest/google.cloud.dialogflow.v2.html#.QueryParameters)). An example of the request body can be seen below:
 

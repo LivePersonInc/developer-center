@@ -101,6 +101,7 @@ h4 code.highlighter-rouge {
 
 pre code {
   font-size: 12px !important;
+  font-family: "Roboto Mono";
 }
 
 .bigtable {
