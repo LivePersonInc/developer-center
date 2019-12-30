@@ -76,17 +76,24 @@ Once this is done, you can start creating domains with 3rd-party NLU.
 
 Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow service credentials. When you [train](intent-builder-domains.html#train-a-3rd-party-nlu-domain) the intents in a domain for the first time in Intent Builder, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/serviceCreds.png">
 
 ##### IBM Watson
 
 1. Register for or log in to an IBM Cloud account.
 
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_login_ibmcloud.png">
+
 2. Create or access a Watson Assistant resource.
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_resource_list.png">
+
 
 3. Generate Service Credentials with the role of Manager and an Auto Generated Service ID.
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/TBD.png">
 
 4. View and copy the newly created credentials.
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_api_keys.png">
+
 
 ##### Google Dialogflow
 
