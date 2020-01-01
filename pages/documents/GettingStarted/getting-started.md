@@ -44,18 +44,64 @@ Some features to get started with include:
 - Vibrate on new incoming message
 - Photo sharing
 
-### Step 2. accessing LivePerson APIs
+### Step 2. Retrieve your domain
 
-Some of our APIs require authorization before you can use them. Authorization refers to the process of verifying what a user has access to. In authorization, a user or application is granted access to an API after the API determines the extent of the permissions that it should assign.
+Before you get started with any LivePerson API, you must retrieve the base domain of LivePerson using the **Domain API** (a read-only API). [More information on using the Domain API can be found here](essential-resources-domain-api.html).
 
-You will be able to read and learn how to work with LivePerson APIs using the following methodolodgies:
+### Step 3. Select the login method
 
-- Authorizing web server applications
-- Authorizing server to server interactions
-- OAuth 1.0 App Keys
-- OAuth 2.0 (App-JWT)
+In this step, you choose whether to access LiveEngage sessions with the **User Login** or **Application Login** method.
 
-Read the [accessing LivePerson APIs](/essential-resources-accessing-liveperson-apis.html)
+#### User Login
+
+The **User Login** method provides a way for _users_ to access and manage a LiveEngage session. A session could be a customized workspace or hosting a LiveEngage user in an external app. Use the LiveEngage username and password.
+
+{:.notice}
+Logged in users are managed under the same restrictions as regular users in LiveEngage, including password expiration, concurrent conversation limits, skill groups and so on. If your account has SSO enabled, this method is not standalone, and you must register the relevant user through your hub to provide LiveEngage with an SSO SAML assertion.
+
+#### Application Login
+
+The **Application Login** method provides a way for _applications_ to access and manage LiveEngage sessions, such as bots, virtual agents, or other apps that need to act as an agent. The Application Login method overcomes both issues detailed in the User Login method (above), such as password expiration or SSO integration.
+
+{:.important}
+To log in as an application, you must have the _User Type - Bot_ feature activated. If you do not, contact your account team before proceeding.  
+
+<p style="text-align: right">
+<a href="essential-resources-authentication.html" center><img src="../../img/btn-view-auth-docs.png"></a></p>
+
+<p><br></p>
+---
+<p></p>
+
+### Step 4. Authorize API Calls
+
+In this step, now that you’ve chosen your login method.  Some of our APIs require authorization before you can use them.  Every API uses either user login credentials or an API key, or both, which you can find in the overview of the API itself.
+
+1. Use the [Login Service API](login-service-api-overview.html) to log into LiveEngage to get a session token (Bearer) to use for other related API calls.  You can log in as a *user* with credentials or an *application* with an API key.
+
+2. Use this token in your authentication header in the following API calls:
+
+   - [Users API](users-api-overview.html) - updates the LiveEngage user list on regular intervals
+
+   - [Login Service API](login-service-api-overview.html) - provides endpoints to manage the user session in LiveEngage
+
+   - [Domain API](retrieve-api-domains-using-the-domain-api.html) - retrieves the base domain of LivePerson
+
+<p><br></p>
+---
+<p></p>
+
+
+### Step 5. Create an API key
+
+Application keys are security tokens that you use to log into LiveEngage. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
+
+[More information on using the API key can be found here](essential-resources-create-api-keys.html).
+
+
+<p><br></p>
+---
+<p></p>
 
 ### Next steps
 
