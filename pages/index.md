@@ -83,21 +83,12 @@ These "flows" demonstrate how specific APIs work with and inform other APIs. The
 
 These are just some of the uses for these APIs. Since they provide entry points into our platform or the ability to more closely track and maintain visitor information, they have numerous use cases when used in conjunction with our other APIs.
 
-#### Login
+#### Accessing LivePerson APIs
 
-The Login Service API provides endpoints to manage the User Session in LiveEngage, such as User Login, Application Login, Logout and Refresh. Use this API to log into LiveEngage as a user with credentials or an application with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
-
-<p style="text-align: right">
-<a href="login-service-api-overview.html" center><img src="../img/btn-view-login-service-api.png" class="center"></a></p>
-
-<p><br></p>
-
-#### Authentication
-
-All authenticated information is encrypted and transferred over SSL, using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token.  Encryption ensures that your customer's data stays safe and unable to be manipulated.
+Some of our APIs require authorization before you can use them. This is done via either of the following methods: 1) common oAuth2.0 scenarios for web server applications. 2) server to server authrization via either a) API Key which uses the OAuth 1.0 methodology or b) oAuth2.0 for server to server interations. Every API uses either of the two methods (or both), as listed in its overview
 
 <p style="text-align: right">
-<a href="essential-resources-authentication.html" center><img src="../img/btn-view-auth-docs.png"></a></p>
+<a href="essential-resources-accessing-liveperson-apis.html" center><img src="../img/btn-view-auth-docs.png"></a></p>
 
 <p><br></p>
 

@@ -14,13 +14,13 @@ indicator: both
 
 This API allows a the brand to submit a deletion request via one of the following methods:
 
-By Chat Engagement - deletion of the personal data that is related to specific chat engagement(s) (including transcripts, Personally identifiable information (PII), etc.).
+1. Chat Engagement - deletion of the personal data that is related to specific chat engagement(s) (including transcripts, personally identifiable information (PII), etc.).
 
-By Messaging Conversation - deletion of personal data that is related to specific messaging conversation(s) (including transcripts, PII, etc.).
+2. Messaging Conversation - deletion of personal data that is related to specific messaging conversation(s) (including transcripts, PII, etc.).
 
-By consumerId - deletion of personal data that is related to a specific consumer (does not include the consumer's conversations; those must be deleted in a separate request). **Note**: in other APIs, the `consumerId` is referred to as `visitorId` (for example, the [Engagement History API](engagement-history-api-methods.html)). You can use that `visitorId` as part of this request to identify the specific visitor for which you'd like to request data deletion.
+3. consumerId - deletion of personal data that is related to a specific consumer (does not include the consumer's conversations; those must be deleted in a separate request). **Note**: in other APIs, the `consumerId` is referred to as `visitorId` (for example, the [Engagement History API](engagement-history-api-methods.html)). You can use that `visitorId` as part of this request to identify the specific visitor for which you'd like to request data deletion.
 
-By ticketId - deletion of personal data that is related to a specific consumer's ticket and all related interactions to that ticket (this does not include the consumer's chats; those must be deleted in a separate request).
+4. ticketId - deletion of personal data that is related to a specific consumer's ticket and all related interactions to that ticket (this does not include the consumer's chats; those must be deleted in a separate request).
 
 ### Request
 
@@ -51,8 +51,8 @@ All fields are sent in a JSON format
  | Name | Description | Type / Value | Required | Notes |
  | :---- | :------- | :--------- | :--- | :--- |
  | engagement| Engagement ids for deletion (chat) | array of strings | Optional | The format should be the account id + chat id (same as the engagementId returned in the Engagement History API response).  |
- | conversation| Conversation ids for deletion (messaging) | array of strings | Optional | |
- | consumer| Consumer ids for deletion | array of strings | Optional |  |
+ | conversation| Conversation ids for deletion (messaging) | array of strings | Optional | The format should be the account id + conversation id. |
+ | consumer| Consumer ids for deletion | array of strings | Optional | The format should be the account id + consumer id. |
  | ticketing| Ticket ids for deletion | array of strings | Optional | Valid to use only in Legacy accounts with a ticketing system |
 
 BODY Examples:
