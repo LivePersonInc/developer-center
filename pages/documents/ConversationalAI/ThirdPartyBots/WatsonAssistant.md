@@ -272,7 +272,7 @@ An example list filled with two options can be seen below. Please note that with
 }
 ```
 
-#### Pause
+#### Pause/Delay
 
 Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node will need to select that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.5
 
@@ -281,6 +281,8 @@ Users can define Pause type if they want to send some delay in responding. For a
 Figure 2.5 Response type of Pause is highlighted
 
 Once the "Pause" is selected the form will ask you to provide the duration (unit is in milliseconds). This allows the conversation to be paused for the amount of time defined in "Duration" field. Moreover, If you want to show user a indication of typing you can select choose that with Typing Indicator radio box. (example filled form is shown in Figure 2.6). This will show a indication like "Agent is typing..." for the amount of time of delay that is set in "Duration".
+
+**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Fields-Response.png">
 
