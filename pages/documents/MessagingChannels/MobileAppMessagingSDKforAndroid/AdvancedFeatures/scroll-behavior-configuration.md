@@ -29,7 +29,7 @@ Simply set the attributes in branding.xml file. Please follow the instructions o
 | LastPosition | Conversation will scroll to the previous position regardless if there are unread messages or not. | Support scroll to the position within about latest 100 messages for `lp_scroll_show_conversation` and `lp_scroll_when_push_notification`. Conversation will scroll to bottom if more than about 100 messages are loaded. No restrictions for `lp_scroll_when_foreground`. |
 | FirstUnreadMessage | Conversation will scroll to first unread message. If no unread messages exist, conversation will scroll to the bottom. | N/A |
 
-### In-App navigation
+### Show Conversation
 
 `lp_scroll_show_conversation` configures the scroll behavior when open conversation screen from another screen of the app. 
 
@@ -41,7 +41,7 @@ Available options: **Bottom(Default), LastPosition, FirstUnreadMessage**
 
 ### Move to foreground from background
 
-`lp_scroll_when_foreground` configures the scroll behavior when bring conversaton screen to foreground from background. 
+`lp_scroll_when_foreground` configures the scroll behavior when bring conversation screen to foreground from background. 
 
 Available options: **Bottom, LastPosition(Default), FirstUnreadMessage**
 
@@ -51,7 +51,7 @@ Available options: **Bottom, LastPosition(Default), FirstUnreadMessage**
 
 ### Tapped on push notification
 
-`lp_scroll_when_push_notification` configures the scroll behavior when open conversaton screen by tapping on push notification. 
+`lp_scroll_when_push_notification` configures the scroll behavior when open conversation screen by tapping on push notification. 
 
 `LivePerson.setPushNotificationTapped();` before show the conversation screen. Otherwise, the scroll behavior will follow the configuration of `lp_scroll_show_conversation`. `LivePerson.setPushNotificationTapped();` must be called after SDK is initialized. 
 
