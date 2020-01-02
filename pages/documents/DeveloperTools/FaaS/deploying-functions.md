@@ -10,7 +10,7 @@ redirect_from:
   - function-as-a-service-deploying-functions.html
 ---
 
-<div class="important">Please note that deployed functions which are not invoked within the last 3 days, will be automatically stopped. However, during the first invocation the function will be started on-demand with a **delay of 8 seconds**. In order to prevent those functions to be stopped a [schedule](https://developers.liveperson.com/liveperson-functions-scheduled-invocations.html) can be created.</div>
+<div class="important">Please note that deployed functions which were not invoked within the last 3 days, will be automatically stopped. In order to prevent those functions from being stopped a <a href="/liveperson-functions-scheduled-invocations.html">schedule</a> can be created. In addition, during the first invocation the function will be started on-demand with a <b>delay of 8 seconds</b>.</div>
 
 Now that you have created and edited the function, let's talk about how you can deploy it. We offer two deployment methods, although the second is simply a shortcut for the first.
 
