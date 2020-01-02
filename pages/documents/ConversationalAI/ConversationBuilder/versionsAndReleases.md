@@ -62,7 +62,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 3. In the Releases window, click **New Release**.
 4. In the dialog box that appears, specify the following:
 
-    * **Release to Bot**: Select your newly createad Production bot.
+    * **Release to Bot**: Select your newly created Production bot.
     * **Version**: Enter a version number.
     * **Description**: Enter a meaningful description of any changes from the previous version.
 
