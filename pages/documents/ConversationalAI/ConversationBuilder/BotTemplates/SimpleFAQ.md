@@ -1,12 +1,13 @@
 ---
 pagename: Simple FAQ
 redirect_from:
+    - conversation-builder-templates-simple-faq.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Templates
-permalink: conversation-builder-templates-simple-faq.html
+permalink: conversation-builder-bot-templates-simple-faq.html
 indicator: both
 ---
 

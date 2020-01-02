@@ -1,58 +1,34 @@
 ---
-pagename: Bots
+pagename: Bot Basics
 redirect_from:
     - conversation-builder-conversation-builder-automations.html
     - conversation-builder-automations.html
+    - conversation-builder-bots.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-permalink: conversation-builder-bots.html
+subfoldername: Bots
+permalink: conversation-builder-bots-bot-basics.html
 indicator: both
 ---
 
+### Types of bots
+
+There are two, general types of bots:
+
+* **Custom bots**: A [custom bot](conversation-builder-bots-custom-bots.html) is one that you design to accomplish a specific business goal, such as fetching a consumer's order status or creating an account for the consumer. You can create a custom bot from scratch, or you can start from a predefined, industry-specific template. Either method allows you to fully customize the bot to meet your needs.
+* **Survey bots**: A [survey bot](conversation-builder-bots-survey-bots.html) lets you collect feedback from consumers at the end of a conversation, without using the time of a human agent. The bot can ask specialized questions that are designed to provide CSAT (Customer Satisfaction), FCR (First Contact Resolution), or NPS (Net Promoter Score) metrics; questions that reflect your brand's key performance indicators; or free text questions. Use a survey bot to measure agent and skill performance and to identify opportunities to improve on your quality targets.
+
 ### Create a bot
 
-{: .important}
-LivePerson recommends that —before you create a bot— you set up the [domains](intent-builder-domains.html), [intents](intent-builder-intents.html), and [entities](intent-builder-entities.html) that the bot will need. This makes creation of the bot much faster and easier because the [NLU Assist tool](conversation-builder-nlu-assist.html) can use that information along the way to suggest suitable intents and entities to use.
-
-
-**To create a bot**
-1. If you logged into Conversation Builder directly (that is, _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If the correct organization isn’t displayed, select it from the **Org Name** dropdown list.
-
-    <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
-
-2. In the Dashboard, click **New Bot** in the upper-right corner.
-3. In the dialog box that appears, select the [template](conversation-builder-templates-overview.html) on which to base the bot.
-    
-    The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below. 
-
-    There are also many, industry-specific, English-language templates available. If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below.
-
-4. Build out the bot, completing and adding the necessary [dialogs](conversation-builder-dialogs-dialog-basics.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the bot using the Preview tool.
-5. [Save versions](conversation-builder-versions-releases.html#save-a-version) of the bot at important points in its development. This allows you to restore a version if you need.
-6. [Train and tune](conversation-builder-best-practices-train-tune-nlu.html) things as you do more testing.
-7. [Save a version](conversation-builder-versions-releases.html#save-a-version) of the final “Development” bot.
-
-    At this point, you could deploy the Development bot, but LivePerson recommends that you [create a release](conversation-builder-versions-releases.html#create-a-release) copy of the bot that you deploy instead. This allows you to take live the release copy (the Production copy). Later, you can make fine-tuning changes to the Development copy as needed, without affecting the Production copy. You can then “upgrade” the Production copy accordingly.
-
-### Import a bot
-You can add an bot by importing a bot JSON file that was previously exported. This is useful when you need to make a copy of a bot (just export and then import back into the same environment), or you need to copy or move a bot from one environment to another.
-
-{: .important}
-Before you import a bot from a different environment (that is, from one region or hosting platform to another), check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
-
-**To import a bot**
-1. If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If it isn’t displayed, select it from the **Org** Name dropdown list.
-
-    <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
-
-2. In the Dashboard, click **Import Bot** in the upper-right corner.
-3. In the dialog box that appears, navigate to and select the JSON file, and click **Open**.
-    The bot is imported and given a name that includes a date and time stamp.
-4. Change the name of the bot and any other configuration as needed. For help, see [Configure bot settings](conversation-builder-bots.html#configure-bot-settings) below.
+For details on creating a custom bot, see [here](conversation-builder-bots-custom-bots.html). For details on creating a survey bot, see [here](conversation-builder-bots-survey-bots.html).
 
 ### Configure bot settings
+
+{: .important}
+Survey bots have some additional settings that custom bots don't have. For information on these survey-related settings, see [here](conversation-builder-bots-survey-bots.html#step-3---configure-the-survey-bot-settings).
+
 **To configure bot settings**
 1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
 2. Select **Bot Settings** from the menu that appears.
@@ -92,7 +68,23 @@ Bot settings include:
     
     Second, during a LivePerson agent escalation, if the [escalation fails](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures) four times, the escalation then stops, and a default failure response of, "Not able to transfer to Agent at this time. Please try later." is sent to the user. To send a different response, enter a value here.
 
-    To enter a value, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.   
+    To enter a value, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.
+
+### Import a bot
+You can add an bot by importing a bot JSON file that was previously exported. This is useful when you need to make a copy of a bot (just export and then import back into the same environment), or you need to copy or move a bot from one environment to another.
+
+{: .important}
+Before you import a bot from a different environment (that is, from one region or hosting platform to another), check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
+
+**To import a bot**
+1. If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If it isn’t displayed, select it from the **Org** Name dropdown list.
+
+    <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
+
+2. In the Dashboard, click **Import Bot** in the upper-right corner.
+3. In the dialog box that appears, navigate to and select the JSON file, and click **Open**.
+    The bot is imported and given a name that includes a date and time stamp.
+4. Change the name of the bot and any other configuration as needed. For help, see [Configure bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) above.
 
 ### Export a bot
 Export of a bot creates a JSON file.

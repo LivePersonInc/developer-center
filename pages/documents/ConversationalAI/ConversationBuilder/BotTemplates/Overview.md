@@ -1,12 +1,13 @@
 ---
 pagename: Overview
 redirect_from:
+    - conversation-builder-templates-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Templates
-permalink: conversation-builder-templates-overview.html
+permalink: conversation-builder-bot-templates-overview.html
 indicator: both
 ---
 

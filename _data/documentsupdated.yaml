@@ -131,7 +131,11 @@
           - subpagename: 4 - Connect to LiveEngage
           - subpagename: Bot Workspace Overview
       - pagename: Bots
-      - pagename: Templates
+        subpages:
+          - subpagename: Bot Basics
+          - subpagename: Custom Bots
+          - subpagename: Survey Bots
+      - pagename: Bot Templates
         subpages:
           - subpagename: Overview
           - subpagename: Simple Router

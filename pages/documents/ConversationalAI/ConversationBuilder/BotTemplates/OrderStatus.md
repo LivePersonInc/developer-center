@@ -1,12 +1,13 @@
 ---
 pagename: Order Status
 redirect_from:
+    - conversation-builder-templates-order-status.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Templates
-permalink: conversation-builder-templates-order-status.html
+permalink: conversation-builder-bot-templates-order-status.html
 indicator: both
 ---
 
