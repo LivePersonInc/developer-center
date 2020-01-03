@@ -48,11 +48,11 @@ NLU v1 supports English and Spanish. Also, NLU v1 doesn't require the model to b
 
 This version is a classifier model based on Convolutional Neural Network (CNN) using Fasttext embeddings. The primary feature of NLU v2 is enabling a separate brand-specific model, built and *trained* for each domain. NLU v2 is a scalable solution that can handle a greater volume of requests, providing faster response times and accuracy.
 
-To perform effectively, NLU v2 expects large sets of data (both intents and training phrases). Additionally, it's preferable to have only *one* entity per sample sentence. For example, assume you have two entities: COLOR and SIZE. You might have sample sentences like, "I want a COLOR shirt," or "I want a SIZE shirt," but not one that says, "I want a COLOR SIZE shirt."
+To perform effectively, NLU v2 expects large sets of data (both intents and training phrases). Additionally, it's preferable to have a maximum of *two* entities per sample sentence, for example, "I want a COLOR SIZE shirt."
 
 When you create a domain with NLU v2 and use it in LiveIntent or in Conversation Builder, the following is recommended:
 
-* At least 10 intents in order to [train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain)
+* At least 5 intents in order to [train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain)
 * At least 20 training phrases per intent
 
 {: .important}
