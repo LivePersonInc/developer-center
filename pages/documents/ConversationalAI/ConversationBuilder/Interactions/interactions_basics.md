@@ -30,6 +30,8 @@ One of the goals and challenges in developing interactions is creating a unified
 {: .important}
 Your bot implementation should meet LiveEngage requirements and those of the specific channels in use.
 
+For information on which interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
+
 ### Limitations
 
 #### Limitations regarding types of text

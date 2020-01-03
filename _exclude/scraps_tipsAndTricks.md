@@ -1,5 +1,7 @@
 
 
+THIS BELOW IS ANOTHER ADVANCED USE CASE - ON HOLD - JON IS THINKING MORE ON THIS ONE
+
 ### Transfer to bot and offer consistent greeting
 
 There are times when an agent hands off a conversation to a bot to perform an automated process. When the conversation reaches the bot, the bot attempts to match the most recent message in the conversation with an intent in one of its dialogs.
@@ -58,16 +60,3 @@ The matched utterance takes the flow straight to the VIP dialog, which begins.
 The subsequent, unmatched utterance above doesn't return the consumer to the start of VIP dialog flow. Instead, the Fallback dialog begins.
 
 Here again, the conversation flow never gets stuck in the redirect loop from the Fallback dialog to the VIP dialog.
-
-
-
-### Keep the consumer in the current dialog
-
-In a bot, at branching points within a dialog, the consumer is asked to answer questions or make choices about how to proceed. Depending on the goal of the bot, you might need to ensure that the consumer's next utterance doesn't jump the consumer out into another dialog due to the NLU matching the utterance to another intent. Sometimes jumping to another dialog is desirable, but other times it isn't. For example, you might need the consumer to answer a specific question, so you need a way to keep the consumer in the current dialog until that's done.
-
-You can help to keep the consumer in the current dialog by offering predefined options in a menu of buttons or predefined choices to a multiple-choice question. However, there's no guarantee that the consumer won't ignore these and type a response of their own. This means you need a way to handle any other response.
-
-To solve this problem, you can create a second Response Match & Actions set....
-
-
-

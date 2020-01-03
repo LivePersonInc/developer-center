@@ -23,7 +23,7 @@ Get User Platform Id and Get User Platform Type are the functions that are used 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `getUserPlatformId()` | None | string: unique User platform ID |
-| `getUserPlatformType()` | None | string: User platform type |
+| `getUserPlatformType()` | None | HTMLCLIENT, SMS, INAPP, WHATSAPP, RCS, ABC, FACEBOOK |
 
 #### Example
 

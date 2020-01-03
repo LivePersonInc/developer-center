@@ -1,3 +1,0 @@
-For Integration Basics topic:
-
-- **Knowledge Base**: Use this type to search a knowledge base for articles. One use case for this type of integration is within a [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or escalate the conversation to a human agent. See [here](conversation-builder-integrations-knowledge-base-integrations.html) for more. 

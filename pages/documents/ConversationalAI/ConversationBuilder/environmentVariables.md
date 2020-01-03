@@ -19,13 +19,18 @@ For example, if you have a bot that has both a Sandbox and Production version, 9
 
 ### System environment variables
 
-Conversation Builder includes several environment variables that you can use to take advantage of associated bot behaviors.
+Conversation Builder includes a number of environment variables that you can use to take advantage of associated bot behaviors:
 
-| Environment variable name | Value | Example | Description | 
-|----|----|----|----|
-| system_handleIntermediateUserMessage | true | true | Enables the behavior to catch and ignore "interrupt" messages by the consumer. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for a use case that takes advantage of this variable. | 
-| system_intermediateBotMessage | string | Please wait...we are still responding to your last message. | Optionally used in conjunction with `system_handleIntermediateUserMessage`. This is the message to send to the consumer if they send an utterance while their messages are blocked. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for a use case that takes advantage of this variable. |
-| system_intermediateBotResponseTimeout | string | 15000 | Used in conjunction with `system_handleIntermediateUserMessage`. This is the timeout period in milliseconds (e.g., 15000 = 15 seconds). This value determines how long the bot will wait to send a message before moving on to sending the next message. In other words, if the wait for a message is too long, this instructs the bot to skip it after the specified amount of time. See [here](conversation-builder-best-practices-useful-techniques.html#block-consumer-interruptions) for a use case that takes advantage of this variable. |
+#### Variables for customizing disambiguation
+You can use these environment variables to customize how disambiguation works; for details, see [here](conversation-builder-dialogs-disambiguation-dialogs.html#customization-points).
+- `system_groupConsecutiveIntentRanksInDisambiguation`
+- `system_useIntentsOnlyWithDialogStartersInDisambiguation`
+
+#### Variables for blocking consumer interruptions
+These environment variables work together to block consumer interruptions while the bot is responding to the consumer; for details, see [here](conversation-builder-advanced-use-cases.html#block-consumer-interruptions).
+- `system_handleIntermediateUserMessage`
+- `system_intermediateBotMessage`
+- `system_intermediateBotResponseTimeout`
 
 ### Add environment variables
 
@@ -41,6 +46,8 @@ If you are using multiple bot instances (e.g., a Sandbox version and a Productio
     * **Environment Values**: Enter the key/value pairs for each variable. Variables *cannot* have spaces or special characters in their names, only letters and numbers.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bestPractices/env_1.png">
+
+    You can add the key/value pairs one by one using the fields provided. Alternatively, click the **Bulk Add** link and enter them in key=value format in the text box provided. The text box also lets you copy the values from another source and paste them in.
 
 4. Click **Save**.
 
@@ -89,3 +96,14 @@ To display an environment variable directly in text, use the following notation:
 For example:
 
 <img style="width:700px" src="img/ConvoBuilder/bestPractices/env_6.png">
+
+### Export environment variables to a CSV file
+
+Exporting a set of environment variables is useful when you need to "move" the values from one environment to another, e.g., from Development to Staging, or from Staging to Production. You can export the variables and then use the Bulk Add feature (and copy/paste) to add them to the new environment.
+
+**To export environment variables to a CSV file**
+
+1. From the Conversation Builder dashboard, click **Manage Bot Environments** in the upper-right corner.
+2. In the left panel, select the environment.
+3. In the right panel, under **More Options**, click <img style="width:25px" src="img/ConvoBuilder/icon_envVariables_download.png"> (Download icon) beside **Export Environment Variables**.
+4. Follow the browser prompts to access and save the CSV file to a location of your choice.
