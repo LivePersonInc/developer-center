@@ -72,6 +72,8 @@ To increase the quality of your content matches, follow these best practices:
 
 #### Tags
 
-Tags play an important role in returning accurate results in your knowledge base. As mentioned farther above, tags assist the NLU engine in matching intents, your content, and the user input by highlighting the key sections of the user's message in regards to the intents that you created. They tags should highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. Remember, these should be words, not sentences.
+Tags play an important role in returning accurate results in your knowledge base. As mentioned farther above, tags assist the NLU engine in matching intents, your content, and the user input by highlighting the key sections of the user's message in regards to the intents that you created.
+
+Tags should highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences.
 
 If you find yourself needing a large number of tags, you most likely should be using an [entity](intent-builder-entities.html).
