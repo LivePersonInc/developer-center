@@ -27,7 +27,7 @@ For details on creating a custom bot, see [here](conversation-builder-bots-custo
 ### Configure bot settings
 
 {: .important}
-Survey bots have some additional settings that custom bots don't have. For information on these survey-related settings, see [here](conversation-builder-bots-survey-bots.html#step-3---configure-the-survey-bot-settings).
+Survey bots have some additional, survey-related settings that custom bots don't have. For information on these settings, see [here](conversation-builder-bots-survey-bots.html#step-3---configure-the-survey-bot-settings).
 
 **To configure bot settings**
 1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
