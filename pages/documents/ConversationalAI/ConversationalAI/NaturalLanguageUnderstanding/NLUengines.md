@@ -39,7 +39,7 @@ There are two versions of LivePerson's NLU engine: version 1 (v1) and version 2 
 
 #### LivePerson NLU v1
 
-This version is a recommender model based on Word Mover's Distance (WMD) algorithms. It's intended to be used if you have fewer than 10 intents and fewer than 20 training phrases per intent. Additionally, performance is enhanced when you have a lot of custom entities.
+This version is a recommender model based on Word Mover's Distance (WMD) algorithms. It's intended to be used if you have fewer than 5 intents and fewer than 20 training phrases per intent. Additionally, performance is enhanced when you have a lot of custom entities.
 
 {: .important}
 NLU v1 supports English and Spanish. Also, NLU v1 doesn't require the model to be trained.
