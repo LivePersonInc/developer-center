@@ -99,6 +99,9 @@ Remember to add a closing message at the end of the flow to thank the consumer f
 
 1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
 2. Select **Bot Settings** from the menu that appears.
+3. Configure the survey bot settings as needed; these are described below.
+4. Configured other bot settings as needed; these are described [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).
+5. Click **Save**.
 
 Survey bot settings include:
 - **Skill**: If desired, change the skill(s) that will trigger this survey bot.
@@ -109,7 +112,7 @@ Survey bot settings include:
 
 ### Step 4 - Publish the bot
 
-Publishing a survey bot loads it to your LiveEngage account. You **don't** need to deploy a survey bot like you do a custom bot. The Publish process performs all deployment steps behind the scenes.
+Publishing a survey bot loads it to your LiveEngage account. You *don't* need to deploy a survey bot like you do a custom bot. The Publish process performs all deployment steps behind the scenes.
 
 **To publish a survey bot**
 
