@@ -31,7 +31,7 @@ Simply set the attributes in branding.xml file. Please follow the instructions o
 
 ### Show Conversation
 
-`lp_scroll_show_conversation` configures the scroll behavior when open conversation screen from another screen of the app. 
+`lp_scroll_show_conversation` configures the scroll behavior when opening the conversation screen from another screen of the app. 
 
 Available options: **Bottom(Default), LastPosition, FirstUnreadMessage**
 
@@ -41,7 +41,7 @@ Available options: **Bottom(Default), LastPosition, FirstUnreadMessage**
 
 ### Move to foreground from background
 
-`lp_scroll_when_foreground` configures the scroll behavior when bring conversation screen to foreground from background. 
+`lp_scroll_when_foreground` configures the scroll behavior when bringing the conversation screen to the foreground from the background. 
 
 Available options: **Bottom, LastPosition(Default), FirstUnreadMessage**
 
