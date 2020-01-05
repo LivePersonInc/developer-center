@@ -21,7 +21,7 @@ indicator: messaging
 
 
 ### How to configure
-Simply set the attributes for `conversationScrollConfiguration` in the lpconfig class. Please follow the instructions of each attributes below. 
+Simply set the attributes for `conversationScrollConfiguration` in the `lpconfig` class. Please follow the instructions for each attributes below. 
 
 
 #### Scroll Options
@@ -69,7 +69,7 @@ configurations.conversationScrollConfiguration.backgroundToForeground = ScrollPo
 ### scroll to the bottom button pressed
 
 `scrollToBottomButtonPressed`
-scenario when the SDK scroll to bottom button is pressed.
+scenario when the SDK "scroll to bottom" button is pressed.
 
 Default option: **Bottom**
 
@@ -87,7 +87,8 @@ configurations.conversationScrollConfiguration.scrollToBottomButtonPressed = Scr
 
 `pushNotificationTapped`
 scenario when a push notification is tapped.
-- NOTE: This requires the call `LPMessagingSDK.instance.setPushNotificationTapped()` immediately after it is determined that a push notification was tapped.
+
+**NOTE**: This requires the call `LPMessagingSDK.instance.setPushNotificationTapped()` immediately after it is determined that a push notification was tapped.
 
 Default option: **Bottom**
 
