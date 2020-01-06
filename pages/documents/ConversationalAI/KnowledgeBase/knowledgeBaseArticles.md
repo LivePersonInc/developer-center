@@ -40,7 +40,7 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 4. Click **Save**.
 
-### Find articles assigned a specific tag
+### Find articles with a specific tag
 
 1. In the knowledge base, click <img style="width:30px" src="img/ConvoBuilder/icon_kb_tags.png"> (Tags) in the lower-right corner.
 2. In the Tags panel, select the tag to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple tags.

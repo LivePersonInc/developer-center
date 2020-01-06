@@ -60,10 +60,10 @@ If you want to import a set of articles into a knowledge base when you add the k
 | contextAlternates | Deprecated. |
 | outputContext | Deprecated. |
 | category | Assigning a category lets you [filter and find articles based on categories](knowledge-base-articles.html#find-articles-assigned-to-a-specific-category) in the Knowledge Base application. |
-| section | |
+| section | Deprecated. |
 | positiveLearnings | These are phrases for which you want a match to the article to occur. A comma-separated list. |
 | negativeLearnings | These are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent. A comma-separated list. |
-| intentName | |
+| intentName | Applicable if you're using Domain intents, not Knowledge Base intents (see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) for an understanding of the two). This is the intent associated with the article. |
 
 ### Configure knowledge base settings
 
@@ -71,7 +71,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
 2. In the Settings panel, click **KB Settings**.
 3. Specify the following:
-    * **Data source name**: Enter a new name for the knowledge base if desired.
+    * **Data source name**: Enter a new name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's primary key, not its name. 
     * **Data source type**: Read-only.
     * **Language**: Change the language if desired.
     * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base though, but be aware that, once you [sync with the sheet](knowledge-base-knowledge-bases.html#sync-with-a-google-sheet), the contents of the knowledge base are overwritten with what's in the sheet.
@@ -80,15 +80,17 @@ If you want to import a set of articles into a knowledge base when you add the k
     * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
     * **Associated Domain**: Read-only. This field is only displayed if the knowledge base uses [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). The domain can't be changed after the knowledge base is created.
     * **Account**: If you logged into Conversation Builder directly (i.e., not via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, you can use this setting to change the organization under which this knowledge base exists. If you logged into Conversation Builder via single sign-on from LiveEngage, the organization you were using in LiveEngage is active and can't be changed, and nothing appears in this list.
-    * **Public**: If you don't want other users in your LiveEngage account to be able to view and edit the knowledge base, click the slider to Off. The default value is On.
+    * **Public**: If you don't want other users in your LiveEngage account to be able to view and edit the knowledge base, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
 4. Click **Update**.
 
 ### Convert Knowledge Base intents to Domain intents
 
 When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Builder in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases in Intent Builder for their respective intents.
 
+From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the Knowledge Base application to the Intent Builder application.
+
 {: .important}
-Before taking this action, be certain about doing so. Once you convert the intents, you can no longer use Knowledge Base intents in the knowledge base. Also, this action irreversibly modifies the domain that you select.
+Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the knowledge base. Also, this action irreversibly modifies the domain that you select.
 
 **To convert from Knowledge Base intents to Domain intents**
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
@@ -104,19 +106,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
 
 ### Add stop words
 
-Stop words are words that aren't used by the NLU engine to score an utterance. These words are removed or ignored in the matching process.
-
-You can add stop words to a knowledge base. Typically, this is done for words or phrases like your company name or brand name, as these words typically aren't needed for and don't help the scoring of an utterance.
-
-{: .important}
-There is a list of stop words that are applied by default; you can view that list [here](conversation-builder-best-practices-train-tune-nlu.html#nlu-stop-words). You don't need to add these words.
-
-**To add a stop word to a knowledge base**
-1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
-2. In the Settings panel, click **KB Settings**.
-3. Click **More Options**, and scroll down to the **Stop Words** section.
-4. Enter the word, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_add.png"> (Add).
-5. Click **Update**.
+This feature is deprecated.
 
 ### Sync with a Google sheet
 
