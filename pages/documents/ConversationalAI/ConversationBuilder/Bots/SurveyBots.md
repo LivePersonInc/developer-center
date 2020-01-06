@@ -14,11 +14,13 @@ indicator: both
 
 A survey bot lets you collect feedback from consumers at the end of a conversation, without using the time of a human agent. The bot can ask:
 
-* Specialized questions designed to provide CSAT (Customer Satisfaction), FCR (First Contact Resolution), or NPS (Net Promoter Score) metrics
+* Specialized questions designed to provide CSAT (Customer Satisfaction), NPS (Net Promoter Score), or FCR (First Contact Resolution) metrics. (For a primer on these survey metrics, please consult the Web.)
 * Questions that reflect your brand's key performance indicators
 * Free-text questions
 
 Use a survey bot to measure agent and skill performance and to identify opportunities to improve on your quality targets.
+
+INSERT SCREEN CAP OF PREVIEW OF SURVEY
 
 ### Survey bots vs. custom bots
 
@@ -27,9 +29,9 @@ Survey bots are like custom bots in many ways, most notably:
 * You create a survey bot in the Conversation Builder application in the same way that you create a custom bot. Create the bot and build out its dialog flow, adding the interactions that meet your survey requirements.
 * You can create [versions and releases](conversation-builder-versions-releases.html) of survey bots.
 
-However, there are a few important ways that survey bots differ from custom bots:
+However, there are a few, important ways that survey bots differ from custom bots:
 
-* You can only use a subset of the standard interaction types in survey bots; unavailable interactions are disabled to enforce this constraint. Also, survey bots have a few interactions that are unique, namely, the CSAT, FCR, and NPS interactions.
+* You can only use a subset of the standard interaction types in survey bots; unavailable interactions are hidden from view. Also, survey bots have a few interactions that are unique, namely, the CSAT, NPS, and FCR interactions.
 * Survey bots have a few, additional bot settings that are unique.
 * You *don't* deploy survey bots by creating agent connectors and starting them. Instead, survey bots use a simpler "Publish" process.
 
@@ -86,9 +88,40 @@ You can configure a closing message that is sent to the consumer for each of the
 
 ### Step 2 - Build out the dialog flow
 
+In this step, you 1) add a greeting message, 2) build out the dialog flow using the available interactions to define the survey and its logic, and 3) finish with a closing message to send after the survey is completed.
+
+#### Adding standard interactions
+
+You can only use a subset of the standard interaction types in survey bots; unavailable interactions are hidden from view.
+
+<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/surveyBot_interactions.png">
+
+Use the standard interactions available to you to ask questions that reflect your brand's custom key performance indicators (KPIs) and/or free-text questions. For example, you might want to obtain the consumer's age.
+
+#### Adding predefined interactions
+
+Predefined interactions include those that are unique to survey bots, namely, the CSAT, NPS, and FCR interactions. They're called predefined interactions because you can't edit their structure (for example, the number of quick replies); you can only edit their content (for example, the question text or quick reply names).
+
+{: important}
+You can include only one interaction of each predefined interaction type in a single survey bot.
+
+##### CSAT interaction
+
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_csat.png">
+
+##### NPS interaction
+
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_nps.png">
+
+##### FCR interaction
+
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_fcr.png">
+
 #### Marking questions as optional
 
-For each question the brand can add a ‘skip’ button to make it optional
+To add a Skip button and thereby make a predefined question optional, click the **Skip** slider to turn it on.
+
+SCREEN CAPTURE
 
 #### Handling free text answers
 
@@ -156,7 +189,7 @@ While the survey is active the agent won’t be able to write in the conversatio
 
 ### Reporting
 
-The messaging performance dashboard in Report Builder includes a dedicated “survey data export” sheet containing an in-depth analysis of the messaging post conversation survey flows. The flows included in Report Builder are based on the ones configured in the LiveEngage Bot Studio.
+The messaging performance dashboard in Report Builder includes a dedicated “survey data export” sheet containing an in-depth analysis of messaging "post conversation survey" flows. The flows included in Report Builder are based on the ones configured in Conversation Builder.
 
 The sheet contains an additional set of metrics and attributes that support the following analysis:
 
