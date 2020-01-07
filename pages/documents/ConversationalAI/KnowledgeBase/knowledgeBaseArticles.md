@@ -58,7 +58,10 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 ### Best practices
 
-To increase the quality of your content matches, follow these best practices:
+To increase the quality of your content matches, follow the best practices below.
+
+{: .important}
+For more best practices when training and tuning NLU, see [here](conversation-builder-best-practices-train-tune-nlu.html).
 
 #### Titles, intent qualifiers, and training phrases
 
