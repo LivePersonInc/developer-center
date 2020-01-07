@@ -42,13 +42,13 @@ If you want to import a set of articles into a knowledge base when you add the k
 
 #### Column headers
 
-| Column header name | Notes |
-|--------------------|-------|
+| Column header name | Description |
+|-----|-----|
 | id | An integer; usually just the row index, e.g., 1, 2, 3. <br><br>**Note**: This column isn't required when you initially create the knowledge base. However, if you're using a Google sheet that you plan to sync periodically, it does play a role then. Before performing a sync, update the Google sheet to include the "id" column and enter the IDs for all existing articles. |
 | tags | A comma-separated list of relevant keywords. |
 | title | The article title. This should be a complete sentence or question that the user might ask. |
 | summary | A short answer that's 80 characters or less. |
-| alternates | In the UI, these are called "intent qualifiers" (see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents)). |
+| alternates | Applicable if you're using Knowledge Base intents, not Domain intents (see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) for an understanding of the two). In the UI, these are called "intent qualifiers." Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. |
 | detail | A long answer that's 350 characters or less. |
 | content_url | |
 | image_url | |

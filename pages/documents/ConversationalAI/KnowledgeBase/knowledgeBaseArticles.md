@@ -40,6 +40,30 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 4. Click **Save**.
 
+### Test user input
+
+You can feed user input directly into a knowledge base to test the content matching.
+
+**To test user input**
+
+1. Open the knowledge base, and click <img style="width:30px" src="img/ConvoBuilder/icon_kb_test.png"> in the lower-right corner.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_testUserInput1.png">
+
+2. Specify the following:
+
+    * **Phrase**: Enter the phrase to search for.
+    * **Search Modes**: Select one of the following:
+        * *Intents*: Select this to perform an NLU-based search first, and, if no results are found, to perform a text-based search second.
+        * *Intents Only*: Select this to perform only an NLU-based search (no text-based search).
+        * *All*: Select this to perform only a text-based search (no NLU).
+
+    * **Threshold**: The knowledge base uses Natural Language Understanding (NLU) algorithms to match articles to the input phrases, and it assigns a score based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, and POOR. Use this field to specify the minimum score that a result must have in order to be returned. You can select from VERY GOOD, GOOD, or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations.
+
+3. Click **test**.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_testUserInput2.png">
+
 ### Find articles with a specific tag
 
 1. In the knowledge base, click <img style="width:30px" src="img/ConvoBuilder/icon_kb_tags.png"> (Tags) in the lower-right corner.
