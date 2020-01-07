@@ -122,7 +122,7 @@ A button question lets you ask a question that expects a simple, short reply and
 
 <img style="width:400px" src="img/ConvoBuilder/questions_button1.png">
 
-Clicking a button can perform an action. For example, if the consumer were to click “Sure!” above, they could be taken to the URL for your feedback form.
+Clicking a button can perform an action defined by you as the bot developer. For example, if the consumer were to click “Sure!” above, they could be taken to the URL for your feedback form.
 
 <img style="width:600px" src="img/ConvoBuilder/questions_button2.png">
 
