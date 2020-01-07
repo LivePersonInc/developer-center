@@ -12,13 +12,13 @@ indicator: both
 
 ### What's a survey bot?
 
-A survey bot lets you collect feedback from consumers at the end of a conversation, without using the time of a human agent. The bot can ask:
+A survey bot lets you collect feedback from consumers at the end of a conversation with a custom bot. The survey bot can ask:
 
 * Specialized questions designed to provide Customer Satisfaction (CSAT), Net Promoter Score (NPS), or First Contact Resolution (FCR) metrics. (For a primer on these survey metrics, please consult the Web.)
 * Questions that reflect your brand's key performance indicators
 * Free-text questions
 
-Use a survey bot to measure agent and skill performance and to identify opportunities to improve on your quality targets.
+Use a survey bot to measure custom bot performance and to identify opportunities to improve on your quality targets.
 
 INSERT SCREEN CAP OF PREVIEW OF SURVEY
 
@@ -26,7 +26,7 @@ INSERT SCREEN CAP OF PREVIEW OF SURVEY
 
 Survey bots are like custom bots in many ways, most notably:
 
-* You create a survey bot in the Conversation Builder application in much the same way that you create a custom bot. Create the bot and build out its dialog flow, adding the interactions that meet your survey requirements.
+* You work in Conversation Builder in much the same way that you do for a custom bot. Create the survey bot and define its dialog flow, adding the interactions that meet your survey requirements.
 * You can preview survey bots.
 * You can create [versions and releases](conversation-builder-versions-releases.html) of survey bots.
 
@@ -43,18 +43,18 @@ There isn't a one-to-one correspondence between survey bots and custom bots. Sur
 
 ### Survey flow
 
-When a messaging conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey, and the bot sends the greeting message.
+When a bot conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey, and the bot sends the greeting message.
 
 The bot then sends the survey questions one by one based on the survey bot's dialog flow. Upon each consumer response, the bot sends the next question based on the defined logic. 
 
-When the dialog flow ends, the survey is closed. Any message sent by the consumer after the survey is closed opens a new messaging conversation.
+When the dialog flow ends, the survey is closed. Any message sent by the consumer after the survey is closed opens a new messaging conversation. ??? FIX ???
 
 #### Survey triggering
 
-- When the messaging conversation has ended (either by the consumer or the agent), the survey is automatically triggered; there is no need to "transfer" to the survey.
+- When the conversation with the custom bot has ended, the survey is automatically triggered; there is no need to "transfer" to the survey.
 - A survey is triggered based on the last skill of the conversation.
 - Only conversations with a skill assigned to them are capable of triggering a survey. If a conversation is “unassigned,” it can't trigger a survey.
-- A survey is not triggered upon auto close.
+- A survey is not triggered upon auto close. ??? FIX ???
 
 #### Survey skip or timeout
 
@@ -93,7 +93,7 @@ Some setup of your LiveEngage environment is required before using this feature.
 
 ### Step 3 - Build out the dialog flow
 
-In this step, you 1) add a greeting message, 2) build out the dialog flow using the available interactions to define the survey and its logic, and 3) finish with a closing message to send after the survey is completed.
+In this step, you 1) add a greeting message, 2) build out the dialog flow using the available interactions to define the survey and its logic, and 3) finish with a closing message to send at the end of the survey.
 
 #### Adding standard interactions
 
