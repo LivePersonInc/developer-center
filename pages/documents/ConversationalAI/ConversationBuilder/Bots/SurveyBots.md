@@ -14,7 +14,7 @@ indicator: both
 
 A survey bot lets you collect feedback from consumers at the end of a conversation, without using the time of a human agent. The bot can ask:
 
-* Specialized questions designed to provide CSAT (Customer Satisfaction), NPS (Net Promoter Score), or FCR (First Contact Resolution) metrics. (For a primer on these survey metrics, please consult the Web.)
+* Specialized questions designed to provide Customer Satisfaction (CSAT), Net Promoter Score (NPS), or First Contact Resolution (FCR) metrics. (For a primer on these survey metrics, please consult the Web.)
 * Questions that reflect your brand's key performance indicators
 * Free-text questions
 
@@ -26,14 +26,15 @@ INSERT SCREEN CAP OF PREVIEW OF SURVEY
 
 Survey bots are like custom bots in many ways, most notably:
 
-* You create a survey bot in the Conversation Builder application in the same way that you create a custom bot. Create the bot and build out its dialog flow, adding the interactions that meet your survey requirements.
+* You create a survey bot in the Conversation Builder application in much the same way that you create a custom bot. Create the bot and build out its dialog flow, adding the interactions that meet your survey requirements.
+* You can preview survey bots.
 * You can create [versions and releases](conversation-builder-versions-releases.html) of survey bots.
 
 However, there are a few, important ways that survey bots differ from custom bots:
 
 * You can only use a subset of the standard interaction types in survey bots; unavailable interactions are hidden from view. Also, survey bots have a few interactions that are unique, namely, the CSAT, NPS, and FCR interactions.
 * Survey bots have a few, additional bot settings that are unique.
-* You *don't* deploy survey bots by creating agent connectors and starting them. Instead, survey bots use a simpler "Publish" process.
+* You *don't* deploy survey bots by creating agent connectors and starting them. Instead, survey bots use a simpler and quicker "Publish" process.
 
 All of these differences are discussed in more detail farther below.
 
@@ -42,11 +43,11 @@ There isn't a one-to-one correspondence between survey bots and custom bots. Sur
 
 ### Survey flow
 
-When a conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatially begins the survey, and the bot sends the greeting message.
+When a messaging conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey, and the bot sends the greeting message.
 
 The bot then sends the survey questions one by one based on the survey bot's dialog flow. Upon each consumer response, the bot sends the next question based on the defined logic. 
 
-When the consumer finishes answering the questions or if the survey times out, the survey is closed with a closing message. Any message sent by the consumer after the survey is closed opens a new messaging conversation.
+When the dialog flow ends, the survey is closed. Any message sent by the consumer after the survey is closed opens a new messaging conversation.
 
 #### Survey triggering
 
@@ -74,7 +75,11 @@ Each outcome is tracked and reported on as part of the Report Builder, so you ca
 
 You can configure a closing message that is sent to the consumer for each of the above survey scenarios.
 
-### Step 1 - Create the bot
+### Step 1 - Prequisite steps
+
+Some setup of your LiveEngage environment is required before using this feature. Please contact your LivePerson account representative to enable this feature. 
+
+### Step 2 - Create the bot
 
 1. Log into Conversation Builder.
 2. From the Bots dashboard, click **New Bot** in the upper-right corner.
@@ -86,7 +91,7 @@ You can configure a closing message that is sent to the consumer for each of the
     * **Skill**: Select the skill(s) that will trigger this survey bot.
 5. Click **Create**.
 
-### Step 2 - Build out the dialog flow
+### Step 3 - Build out the dialog flow
 
 In this step, you 1) add a greeting message, 2) build out the dialog flow using the available interactions to define the survey and its logic, and 3) finish with a closing message to send after the survey is completed.
 
@@ -100,9 +105,9 @@ Use the standard interactions available to you to ask questions that reflect you
 
 #### Adding predefined interactions
 
-Predefined interactions include those that are unique to survey bots, namely, the CSAT, NPS, and FCR interactions. They're called predefined interactions because you can't edit their structure (for example, the number of quick replies); you can only edit their content (for example, the question text or quick reply names).
+Predefined interactions include those that are unique to survey bots, namely, the CSAT, NPS, and FCR interactions. They're called predefined interactions because you can't edit their structure; you can only edit their content. For example, you can't change the number of quick replies, but you can change the question text or quick reply names.
 
-{: important}
+{: .important}
 You can include only one interaction of each predefined interaction type in a single survey bot.
 
 ##### CSAT interaction
@@ -153,7 +158,7 @@ Remember to add a closing message at the end of the flow to thank the consumer f
 
 (In the bot's settings, you'll define the closing messages for when the survey is skipped or times out.)
 
-### Step 3 - Configure the bot settings
+### Step 4 - Configure the bot settings
 
 1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
 2. Select **Bot Settings** from the menu that appears.
@@ -168,7 +173,7 @@ Survey bot settings include:
 - **Survey Timeout**: Specify the amount of time that the survey will remain active before it is closed, and the closing message is displayed. The survey timout is calculated from the moment the survey starts until it reaches the timeout.
 - **Closing message when survey timeout reached**: Enter the closing message to display when the survey times out.
 
-### Step 4 - Publish the bot
+### Step 5 - Publish the bot
 
 Publishing a survey bot loads it to your LiveEngage account. You *don't* need to deploy a survey bot like you do a custom bot. The Publish process performs all deployment steps behind the scenes.
 
@@ -179,7 +184,7 @@ Publishing a survey bot loads it to your LiveEngage account. You *don't* need to
     Once the status changes to Published, the survey bot is live.
 
 
-### Step 5 - Trigger the bot
+### Step 6 - Trigger the bot
 
 In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes the survey will be triggered and the agent workspace will show the caption - “Survey in progress”
 
