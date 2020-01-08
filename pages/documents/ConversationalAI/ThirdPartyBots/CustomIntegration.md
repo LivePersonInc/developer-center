@@ -109,7 +109,7 @@ A Chat interaction, on the other hand, is considered "started" when the chat is 
 
 ### Sending messages
 
-To define messages the bot should send, you need to place the messages property into the callback. This property should include an array of strings, in which every string will be sent as a single messsage to the conversation.
+To define messages the bot should send, you need to place the messages property into the callback. This property should include an array of messages, every entry of array will be sent as a single message to the conversation.
 
 ```json
 {
@@ -174,18 +174,21 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 {: .important}
 Structured Content will be added into messages property after LivePerson Functions version 2.9 to support multiple structured content messages
 
-Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via LivePerson Functions, use the _structuredContent_ property containing valid structured content, along with metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) to check your formatting.
+Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via LivePerson Functions, use the _structuredContent_ property containing valid structured content, along with metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) to check your formatting. There are two ways you can send structured content.
 
 {: .important}
 If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
 
+#### Sending (single) Structured content via 'context' property (Legacy)
+
+You can send a single structured content by adding it to `context` variable (Legacy support). Example can be seen below
+
 ```javascript
 {
-  "messages": ["Just some structured Content"], //Mandatory
+  "messages": ["Just some structured Content"],
   "context": {
     "metadata": [
       {
-        //Mandatory
         "type": "ExternalId", //Mandatory
         "id": "ABCD1234" //Mandatory
       }
@@ -217,6 +220,45 @@ If Images are sent in Rich content, then their URLs must be added to a whitelist
       ]
     }
   }
+}
+```
+
+{: .important}
+Please note that `messages` defined in array (in above example) are sent first and structured content sent via `context` will be sent as a last message.
+
+#### Sending Structured content via 'messages' property
+
+Structured content can be the part of the `messages` array property and can be sent with other messages (if defined). an example of string message and structure content can be seen below:
+
+```json
+{
+  "messages": [
+    "Hi How are you doing?",
+    {
+      "structuredContent": {
+        "type": "vertical",
+        "elements": [
+          {
+            "type": "button",
+            "click": {
+              "actions": [
+                {
+                  "text": "Recommend me a movie, please",
+                  "type": "publishText"
+                }
+              ]
+            },
+            "title": "Recommend a movie"
+          }
+        ]
+      },
+      "metadata": {
+        "type": "ExternalId",
+        "id": "12345"
+      }
+    }
+  ],
+  "context": {}
 }
 ```
 
@@ -285,6 +327,8 @@ For detailed information on Quick Replies check out the documentation for the sp
 }
 ```
 
+**Please note**: that quick replies can be sent in via `context` and `messages` both ways like any other structured content. for more information check [send rich content section](third-party-bots-custom-integration.html#sending-rich-content-structured-content)
+
 ### Sending Pause/Delay Message
 
 It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. There are two properties, `delay` and `typing`, which need to be added in with the response body of the function.
@@ -294,16 +338,42 @@ It is possible to send an event of type "delay" before regular content events an
   <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true</li>
 </ul>
 
-An example of the function response with a simple text message and delay properties is below:
+Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Structured Content) can be seen below:
 
 ```javascript
 {
-  "delay": 8,
-  "typing": false,
-  "messages": ["This message also includes the intent information"],
+  "messages": [
+    "Hi i am a message before delay",
+    {
+      "delay": 5,
+      "typing": true
+    },
+    {
+      "structuredContent": {
+        "type": "vertical",
+        "elements": [
+          {
+            "type": "button",
+            "click": {
+              "actions": [
+                {
+                  "text": "Recommend me a movie, please",
+                  "type": "publishText"
+                }
+              ]
+            },
+            "title": "Recommend a movie"
+          }
+        ]
+      },
+      "metadata": {
+        "type": "ExternalId",
+        "id": "12345"
+      }
+    }
+  ],
   "context": {
-    // Here Comes your context information
-  }
+    // Here comes context information you will need
   }
 }
 ```
@@ -430,5 +500,42 @@ For sending `encodedMetadata` with the response of your callback this property m
     }
   },
   "messages": ["I am a text response with encoded metadata"]
+}
+```
+
+If you want to apply `encodedMetadata` specific to a structured content then you can find below example where `encodedMetadata` with value `ZGlmZmVyZW50IGVuY29kZWQgbWV0YWRhdGE=` will be applied to the structured content message only. For the other messages `encodedMetadata` defined in the `context` will be applied.
+
+```javascript
+{
+  "messages": [
+    "Hi How are you doing?",
+    {
+      "encodedMetadata": "ZGlmZmVyZW50IGVuY29kZWQgbWV0YWRhdGE=",
+      "structuredContent": {
+        "type": "vertical",
+        "elements": [
+          {
+            "type": "button",
+            "click": {
+              "actions": [
+                {
+                  "text": "Recommend me a movie, please",
+                  "type": "publishText"
+                }
+              ]
+            },
+            "title": "Recommend a movie"
+          }
+        ]
+      },
+      "metadata": {
+        "type": "ExternalId",
+        "id": "12345"
+      }
+    }
+  ],
+  "context": {
+    "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=="
+  }
 }
 ```
