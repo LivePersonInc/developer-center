@@ -33,3 +33,7 @@ There is a list of stop words that are applied by default; you can view that lis
 3. Click **More Options**, and scroll down to the **Stop Words** section.
 4. Enter the word, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_add.png"> (Add).
 5. Click **Update**.
+
+### Settings toolbar
+
+* <img style="width:30px" src="img/ConvoBuilder/icon_kb_intentAnalytics.png"> **Intents Analytics**: Use this to see historical information on the intents that were and weren't matched by bots to the knowledge base's articles.

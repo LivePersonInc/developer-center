@@ -24,8 +24,8 @@ An article is a focused piece of content (a message) on a single topic that you 
     * **Intent**: This field is only shown if the knowledge base is using [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). Select the intent to associate with the article. See farther below on this page for best practices. If needed, you can use the **Create intent** option in the drop-down list to create the intent in Intent Builder from this location. Similarly, there's an **Update training phrases** link for updating the training phrases in Intent Builder from here.
     * **Summary**: Enter a brief response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels.
     * **Detail**: This field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible.
-    * **Category**: To assign the article to a category, enter the category name. This lets you subsequently filter and find articles based on category.
-    * **Tags**: Tags are keywords (*not* sentences) that highlight the key noun(s) or word(s) in the title and intent qualifiers. Tags assist the NLU engine in matching intents, your content, and the user input by highlighting the key sections of the user's message in regards to the intents that you created.
+    * **Category**: To assign the article to a category, enter the category name. This lets you subsequently filter and find articles based on category in the Knowledge Base application.
+    * **Tags**: Tags are keywords (*not* sentences) that highlight the key noun(s) or word(s) in the title and intent qualifiers/training phrases. Tags assist the NLU engine in matching intents, your content, and the user input by highlighting the key sections of the user's message in regards to the intents that you created.
 
 3. If desired, click **Advanced Settings**, and specify the following:
 
@@ -42,7 +42,7 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 ### Test user input
 
-You can feed user input directly into a knowledge base to test the content matching.
+To test the NLU processing and content matching, you can feed user input directly into a knowledge base.
 
 **To test user input**
 
@@ -63,6 +63,28 @@ You can feed user input directly into a knowledge base to test the content match
 3. Click **test**.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_testUserInput2.png">
+
+### Chat with a bot linked to a knowledge base
+
+If you have a bot linked to your knowledge base via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), in the Knowledge Base application, you can feed test user input to the bot to see if it matches and returns content as you'd expect.
+
+{: .important}
+If you're just getting started with knowledge bases and want to try this feature, we recommend you create a bot using the [Simple FAQ bot template](conversation-builder-bot-templates-simple-faq.html) and connect it to your knowledge base. Most of the bot development work is already done. You only need to update the integration in the bot so that it uses your knowledge base, as shown in the image below.
+
+   <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/kb_chat3.png">
+
+**To chat with a bot linked to a knowledge base**
+
+1. If you haven't already done so, in Conversation Builder, create a bot that includes a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base you want to test.
+2. Return to the Knowledge Base application, and open the knowledge base.
+3. Click <img style="width:30px" src="img/ConvoBuilder/icon_kb_chat.png"> (Chat) in the lower-right corner.
+4. In the Preview panel, select the bot to use.
+
+   <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_chat1.png">
+
+5. Begin to feed test user input to the bot to see how it responds.
+
+   <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_chat2.png">  
 
 ### Find articles with a specific tag
 

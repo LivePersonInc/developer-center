@@ -60,19 +60,3 @@ If no exact match is found, and therefore NLU is used to return a result, the kn
 * If the knowledge base uses *knowledge base* intents, the knowledge base's language is used. In this case, only English and Spanish are supported.
 
 * If the knowledge base uses *domain intents*, the domain's language is used instead. In this case, the languages supported depend on the domain's NLU provider.
-
-### Settings toolbar
-
-As you work on the articles in a knowledge base, you'll often access the toolbar in the lower-right corner. It provides access to the following panels:
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_chat.png"> **Chat**: Use this to select a bot you've previously created and linked to the knowledge base, and feed it test user input to see if it matches content as you'd expect.
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_tags.png"> **Tags**: This panel displays all tags you've previously used, so you can review them all in one place and reuse them in future articles. For help with using this panel, see [here](knowledge-base-articles.html#find-articles-assigned-a-specific-tag).
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_categories.png"> **Categories**: This panel displays all categories you've previously used, so you can review them all in one place and reuse them in future articles. For help with using this panel, see [here](knowledge-base-articles.html#find-articles-assigned-to-a-specific-category).
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_test.png"> **Test User Input**: This panel is similar to the Chat panel but is divorced from a specific bot. Use it to feed user input directly into a knowledge base and test your content matching without the context of an actual dialog.
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_settings.png"> **Knowledge Base Menu**: Use this to access various knowledge base settings and features.
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_intentAnalytics.png"> **Intents Analytics**: Use this to see historical information on the intents that were and weren't matched by bots to the knowledge base's articles.
