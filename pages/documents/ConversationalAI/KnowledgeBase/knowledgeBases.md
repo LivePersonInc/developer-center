@@ -47,7 +47,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 | id | An integer; usually just the row index, e.g., 1, 2, 3. <br><br>**Note**: This column isn't required when you initially create the knowledge base. However, if you're using a Google sheet that you plan to sync periodically, it does play a role then. Before performing a sync, update the Google sheet to include the "id" column and enter the IDs for all existing articles. |
 | tags | A comma-separated list of relevant keywords. |
 | title | The article title. This should be a complete sentence or question that the user might ask. |
-| summary | A short answer that's 80 characters or less. |
+| summary | A short response or message that's 80 characters or less. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. |
 | alternates | Applicable if you're using Knowledge Base intents, not Domain intents (see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) for an understanding of the two). In the UI, these are called "intent qualifiers." Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. |
 | detail | A long answer that's 350 characters or less. |
 | content_url | |
@@ -90,7 +90,7 @@ When you convert Knowledge Base intents to Domain intents, the system takes each
 From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the Knowledge Base application to the Intent Builder application.
 
 {: .important}
-Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the knowledge base. Also, this action irreversibly modifies the domain that you select.
+Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in that specific knowledge base. Also, this action irreversibly modifies the domain that you select.
 
 **To convert from Knowledge Base intents to Domain intents**
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.

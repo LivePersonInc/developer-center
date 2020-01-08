@@ -14,7 +14,7 @@ In Conversation Builder, a knowledge base is a great tool to answer questions ab
 
 The Knowledge Base application in the Conversation Builder platform lets you to create and manage knowledge bases and articles, which are then processed by an NLU engine. This allows the bot to leverage [intents](intent-builder-intents.html) and [entities](intent-builder-entities.html) to recommend the most accurate articles to an inquiring consumer. FAQ bots and Agent Advisor widgets are both driven by a knowledge base full of articles, intelligently delivering the right content to the consumer at the right time.
 
-<img class="fancyimage" style="width:750px" src="img/beaut_kb_2.png">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_overview.png">
 
 ### How a knowledge base works
 
