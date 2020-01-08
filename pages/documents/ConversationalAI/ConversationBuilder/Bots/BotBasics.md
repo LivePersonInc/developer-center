@@ -62,7 +62,7 @@ Bot settings include:
 
 - **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons.
 
-    If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t. If you keep this on, you can access the logged transcripts in the Bot Analytics application: Select the bot, click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner, and then select **Transcripts** from the menu that appears.
+    If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t. If you keep this on, you can access the logged transcripts in the Bot Analytics application: Select the bot and then access the **Transcripts** page.
 
 - **Default User-Friendly Response**: This is an *error* response that gets sent to the user. Because you can supply the response, you can customize it in terms of substance and language (Spanish, Italian, etc.). If you enter a value here, it's used in two circumstances.
     
