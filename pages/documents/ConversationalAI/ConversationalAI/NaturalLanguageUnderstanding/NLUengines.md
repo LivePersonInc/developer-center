@@ -89,7 +89,7 @@ Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow s
 
 
 3. Generate Service Credentials with the role of Manager and an Auto Generated Service ID.
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/TBD.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_create_resource.png">
 
 4. View and copy the newly created credentials.
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_api_keys.png">
