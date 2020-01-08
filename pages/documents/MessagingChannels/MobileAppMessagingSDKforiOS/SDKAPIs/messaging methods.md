@@ -484,3 +484,13 @@ func logout() (Deprecated)
 ```
 
 *This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](consumer-experience-ios-sdk-messaging-methods.html#logout) instead*
+
+
+### setPushNotificationTapped
+Notifies the SDK that a push notification was tapped.
+This method should be called immediately after the host app has determined that a notification was tapped.
+For scroll behavior on push notification tapped, see LPConfig.conversationScrollConfiguration
+
+```swift
+public func setPushNotificationTapped()
+```

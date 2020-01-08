@@ -599,6 +599,7 @@
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
+          - subpagename: Debugger
       - pagename: Deployment
       - pagename: Monitoring
         subpages:

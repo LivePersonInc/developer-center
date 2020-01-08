@@ -884,6 +884,9 @@ const lpSdes = {
   <li>
     Transfer to skill: Default escalation skill the bot should escalate to in case of any error.
   </li>
+    <li>
+    Enable error-hook: Liveperson Function which gets triggered when a bot is having an issue 
+  </li>
 
 </ul>
 
