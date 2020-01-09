@@ -78,7 +78,7 @@ function validateInfo (){
     $('#agreeButton').hide();
   }
   //check if email is valid
-  var emailRegexPtn = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  var emailRegexPtn = /^([a-zA-Z0-9_.-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   var isValidEmail = emailRegexPtn.test(emailAddress);
   if (!isValidEmail) {
       $('#invalidEmail').show();
