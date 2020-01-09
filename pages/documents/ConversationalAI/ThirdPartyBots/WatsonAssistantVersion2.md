@@ -490,6 +490,9 @@ For using [quickReplies](quick-replies-introduction-to-quick-replies.html), we r
 The quick replies rich content should be added to the quickReplies property of the structuredContent object, and also a message should be included.
 This message will be sent to the customer along with the quick replies. **Figure 3.7** **Figure 3.8**
 
+{: .important}
+Please note Quick Replies are only supported in Messaging Conversations.
+
 ```javascript
 {
   "structuredContent": {
@@ -795,6 +798,47 @@ Sending encoded metadata with the Native Content is possible using Watson `conte
   "context": {
     "encodedMetadata": "ewoiaWQiOiAic2MiCn0="
   }
+}
+```
+
+If you have a different context for multiple dialogs in a conversation that are responding with structure content, then you can define the `encodedMetadata` for each of the dialog separately. In that case, you will not define `encodedMetadata` via context editor or inside `context` property if using JSON editor. Below example shows where `encodedMetadata` property should be placed in structured content for such cases. Please note you will have to use JSON editor for defining such case:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        {
+          "encodedMetadata": "ewoiaWQiOiAic2MiCn0=",
+          "metadata": [
+            {
+              "id": "1234",
+              "type": "ExternalId"
+            }
+          ],
+          "structuredContent": {
+            "type": "vertical",
+            "elements": [
+              {
+                "type": "button",
+                "click": {
+                  "actions": [
+                    {
+                      "text": "Recommend me a movie, please",
+                      "type": "publishText"
+                    }
+                  ]
+                },
+                "title": "Recommend a movie"
+              }
+            ]
+          }
+        }
+      ],
+      "selection_policy": "sequential"
+    }
+  },
+  "context": {}
 }
 ```
 
