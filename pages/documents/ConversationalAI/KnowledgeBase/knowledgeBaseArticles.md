@@ -33,16 +33,58 @@ An article is a focused piece of content (a message) on a single topic that you 
     * **Context Intents**: Deprecated.
     * **Output Context**: Deprecated.
     * **Followup Question**: Deprecated.
-    * **Content link**:
-    * **Audio link**: 
-    * **Image link**:
-    * **Video link**:
+    * **Content link**: Use this field to send a *hyperlink*. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
+    * **Audio link**:  Use this field to send an *audio* file. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
+    * **Image link**: Use this field to send an *image*. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
+    * **Video link**: Use this field to send a *video*. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
 
 4. Click **Save**.
 
+### Add content links
+
+You can use the content links in the **Advanced Settings** of an article to send rich content (hyperlink, audio, image, and/or video) along with an article. 
+
+<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/kb_advSettings0.png">
+
+Details on how to set this up follow below.
+
+#### Configure the article
+
+First, in the **Advanced Settings** of the article, enter the URLs to send **(1)**.
+
+<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/kb_advSettings1.png">
+
+#### Configure the Knowledge Base integration in the bot
+
+Next, open Conversation Builder and navigate to the [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) inside the bot that uses the knowledge base.
+
+Verify that the appropriate knowledge base is selected **(2)**, and then add custom data fields for the content links that you're using **(3)**.
+
+The "article" custom data field is added automatically when you add the Knowledge Base integration, but in this step you need to manually add additional custom data fields for the content links. For the values, specify the paths to the URL nodes in the JSON, like we've done in the image below.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings2.png">
+
+#### Configure the dialog in the bot
+
+Next, still in Conversation Builder, build out the applicable dialog to make use of the additional content **(4)**, i.e., use the custom data fields as you require. (For help on displaying variables in interactions, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).)
+
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3.png">
+
+#### Test the input
+
+With your implementation completed, use the Debugger tool in the Knowledge Base to test the input to verify the content is returning as you expect. You should be able to see the JSON for the content URLs, which lets you know that your content is being returned in the JSON.
+
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_advSettings4.png">
+
+#### Preview the conversation
+
+Still in Knowledge Base, use the Chat tool to preview the conversation to verify the content is returned and rendering as you expect.
+
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_advSettings5.png">
+
 ### Test user input
 
-To test the NLU processing and content matching, you can feed user input directly into a knowledge base.
+To test the NLU processing and content matching, you can feed user input directly into a knowledge base using the Debugger tool.
 
 **To test user input**
 
