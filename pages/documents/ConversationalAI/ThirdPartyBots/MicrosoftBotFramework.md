@@ -117,7 +117,7 @@ Figure 4.1 Activity with Structured Content
 ### Sending Quick Replies (Structured Content)
 
 {: .important}
-Please note Quick Replies are only supported in Messaging Conversations.
+**Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies is a special type of Structured Content. Is is a message sent along with predefined answers. The documentation can be found [here](quick-replies-introduction-to-quick-replies.html).
 The message property in the Structured Content is mandatory.
@@ -502,7 +502,7 @@ For sending [structured content](getting-started-with-rich-messaging-introductio
 For sending Encoded Metadata with multiple responses one must provide an additional property of `encodedMetadata` with the already existing `type` and `value` properties under `multiMessage` array object. Sending encoded metadata is supported for the `text` and `structure-content` types only. An example of sending encoded metadata with both types can be found below.
 
 {: .important}
-Please note if you will send `encodedMetadata` within the `value` property of type `structure-content`, then it will not be passed. This kind of format is only acceptable if you are sending a single Rich Content as a response. Furthermore, for each message, you can see different `encodedMetadata` are defined so both of the messages will be sent with different encoded metadata.
+**Please note** if you will send `encodedMetadata` within the `value` property of type `structure-content`, then it will not be passed. This kind of format is only acceptable if you are sending a single Rich Content as a response. Furthermore, for each message, you can see different `encodedMetadata` are defined so both of the messages will be sent with different encoded metadata.
 
 ```javascript
 {
