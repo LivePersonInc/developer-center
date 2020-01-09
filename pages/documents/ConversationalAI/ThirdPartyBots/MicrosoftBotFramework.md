@@ -254,7 +254,7 @@ Figure 7.1 Activity excerpt for a transfer Request
 It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. There are two properties, `delay` and `typing`.
 
 <ul>
-  <li> <b>delay</b>: This is the number of seconds the bot will wait.</li>
+  <li> <b>delay</b>: This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
   <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
 </ul>
 

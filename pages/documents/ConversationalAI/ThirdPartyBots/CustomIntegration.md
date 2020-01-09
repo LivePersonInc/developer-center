@@ -337,7 +337,7 @@ For detailed information on Quick Replies check out the documentation for the sp
 It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. There are two properties, `delay` and `typing`, which need to be added in with the response body of the function.
 
 <ul>
-  <li> <b>delay</b>: The number of seconds which the bot will wait</li>
+  <li> <b>delay</b>: The number of seconds which the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
   <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true</li>
 </ul>
 
