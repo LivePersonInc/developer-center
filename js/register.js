@@ -80,11 +80,20 @@ function validateInfo (){
   //check if email is valid
   var emailRegexPtn = /^([a-zA-Z0-9_.-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   var isValidEmail = emailRegexPtn.test(emailAddress);
+  var containsPlus = emailAddress.includes('+');
+
   if (!isValidEmail) {
       $('#invalidEmail').show();
+      if (containsPlus) {
+        $('#invalidEmailWithPlus').show();
+      }
   } else {
         $('#invalidEmail').hide();
+        // hide has no effect if already hidden so not necessary to track if it was previously visible or not
+        $('#invalidEmailWithPlus').hide();
   }
+
+
   //check password length
   if(password.length < 8) {
     $('#passwordTooShort').show();
