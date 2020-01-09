@@ -179,6 +179,42 @@ Structured Content/Rich Content is supported by the core LivePerson platform. Do
 {: .important}
 If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
 
+#### Sending Structured content via 'messages' property
+
+Structured content can be the part of the `messages` array property and can be sent with other messages (if defined). an example of string message and structure content can be seen below:
+
+```json
+{
+  "messages": [
+    "Hi How are you doing?",
+    {
+      "structuredContent": {
+        "type": "vertical",
+        "elements": [
+          {
+            "type": "button",
+            "click": {
+              "actions": [
+                {
+                  "text": "Recommend me a movie, please",
+                  "type": "publishText"
+                }
+              ]
+            },
+            "title": "Recommend a movie"
+          }
+        ]
+      },
+      "metadata": {
+        "type": "ExternalId",
+        "id": "12345"
+      }
+    }
+  ],
+  "context": {}
+}
+```
+
 #### Sending (single) Structured content via 'context' property (Legacy)
 
 You can send a single structured content by adding it to `context` variable (Legacy support). Example can be seen below
@@ -226,46 +262,10 @@ You can send a single structured content by adding it to `context` variable (Leg
 {: .important}
 Please note that `messages` defined in array (in above example) are sent first and structured content sent via `context` will be sent as a last message.
 
-#### Sending Structured content via 'messages' property
-
-Structured content can be the part of the `messages` array property and can be sent with other messages (if defined). an example of string message and structure content can be seen below:
-
-```json
-{
-  "messages": [
-    "Hi How are you doing?",
-    {
-      "structuredContent": {
-        "type": "vertical",
-        "elements": [
-          {
-            "type": "button",
-            "click": {
-              "actions": [
-                {
-                  "text": "Recommend me a movie, please",
-                  "type": "publishText"
-                }
-              ]
-            },
-            "title": "Recommend a movie"
-          }
-        ]
-      },
-      "metadata": {
-        "type": "ExternalId",
-        "id": "12345"
-      }
-    }
-  ],
-  "context": {}
-}
-```
-
 ### Sending Quick Replies (Structured Content)
 
 {: .important}
-Please note Quick Replies are only supported in Messaging Conversations.
+**Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies is a special type of Structured Content. It is a message sent alongside with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel: ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), or [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).

@@ -258,21 +258,6 @@ It is possible to send an event of type "delay" before regular content events an
   <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
 </ul>
 
-#### Sending a single delay message (Legacy)
-
-A single delay message can be send by adding `delay` and `typing` properties to `channelData`. An example of single text message that comes after delay can be seen below:
-
-```json
-{
-  "type": "message",
-  "text": "Hi i am sending a text coming after the delay!!",
-  "channelData": {
-    "delay": 8,
-    "typing": false
-  }
-}
-```
-
 #### Sending delay between multiple messages
 
 Setting a delay in between multiple messages (for more information on multiple message [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Message - Delay - Structured Content - Delay - Message) can be seen below:
@@ -329,6 +314,21 @@ Setting a delay in between multiple messages (for more information on multiple m
 ```
 
 Please note the different ways of writing delay message in above example. In the first delay message Agent typing indicator will always be shown. In the second delay message user has ability to set the typing indicator as well.
+
+#### Sending a single delay message (Legacy)
+
+A single delay message can be send by adding `delay` and `typing` properties to `channelData`. An example of single text message that comes after delay can be seen below:
+
+```json
+{
+  "type": "message",
+  "text": "Hi i am sending a text coming after the delay!!",
+  "channelData": {
+    "delay": 8,
+    "typing": false
+  }
+}
+```
 
 **Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
