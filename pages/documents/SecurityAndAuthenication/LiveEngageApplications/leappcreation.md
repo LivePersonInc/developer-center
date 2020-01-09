@@ -76,12 +76,12 @@ Once the application has been installed, the LivePerson resource will send you y
   ],
   "response_types": ["code"],
   "redirect_uris": [    
-      "http://{YOUR-APPLICATION-DOMAIN}/{CALLBACK_PATH}"
+      "http://{YOUR_APPLICATION_DOMAIN}/{CALLBACK_PATH}"
     ],
   "scope": "msg.consumer",
   "logo_uri": "https://img.icons8.com/cotton/64/000000/domain.png",
   "quick_launch_enabled": true,
-  "entry_uri": "https://{YOUR-APPLICATION-DOMAIN}/appentry",
+  "entry_uri": "https://{YOUR_APPLICATION_DOMAIN}/appentry",
   "capabilities": {
     "webhooks": {
       "ms.MessagingEventNotification.ContentEvent": {
@@ -165,13 +165,13 @@ Once the application has been installed, the LivePerson resource will send you y
   "display_name": "Web application example",
   "response_types": ["code"],
   "scope": "msg.consumer",
-  "entry_uri": "https://{YOUR-APPLICATION-DOMAIN}/appentry",
+  "entry_uri": "https://{YOUR_APPLICATION_DOMAIN}/appentry",
   "grant_types": [
     "authorization_code",
     "refresh_token"
   ],
   "redirect_uris": [
-    "http://{YOUR-APPLICATION-DOMAIN}/{CALLBACK_PATH}"
+    "http://{YOUR_APPLICATION_DOMAIN}/{CALLBACK_PATH}"
   ]
 }
 ```
