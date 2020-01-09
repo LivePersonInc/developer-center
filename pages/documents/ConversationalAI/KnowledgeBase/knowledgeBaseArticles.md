@@ -92,7 +92,9 @@ To accomplish this, in the interaction that displays the article, we've configur
 
 ### Test user input
 
-To test the NLU processing and content matching, you can feed user input directly into a knowledge base using the Debugger tool.
+Use the Debugger tool to feed user input directly into a knowledge base to test the NLU processing and content matching.
+
+The Debugger tool works exactly like a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot, so the results you see with it will be the same as those returned in a bot conversation. If you don't yet have a bot linked to your knowledge base, this tool is a great way to test how the bot will behave once it is.
 
 **To test user input**
 
@@ -112,7 +114,8 @@ To test the NLU processing and content matching, you can feed user input directl
 
 3. Click **test**.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_testUserInput2.png">
+    In the results, you can examine the "title" in the JSON to see which article has been matched.
+    <img style="width:500px" src="img/ConvoBuilder/kb_testUserInput2.png">
 
 ### Chat with a bot linked to a knowledge base
 

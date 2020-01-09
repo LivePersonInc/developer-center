@@ -50,10 +50,10 @@ If you want to import a set of articles into a knowledge base when you add the k
 | summary | A short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. |
 | alternates | Applicable if you're using Knowledge Base intents, not Domain intents (see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) for an understanding of the two). In the UI, these are called "intent qualifiers." Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. |
 | detail | A longer message to the user. For messaging, it's recommended that you keep the responses as brief as possible. |
-| content_url | |
-| image_url | |
-| audio_url | |
-| video_url | |
+| content_url | The URL of the hyperlink to send to the user. For more, see [here](knowledge-base-articles.html#add-content-links). |
+| image_url | The URL of the image to send to the user. For more, see [here](knowledge-base-articles.html#add-content-links). |
+| audio_url | The URL of the audio file to send to the user. For more, see [here](knowledge-base-articles.html#add-content-links). |
+| video_url | The URL of the video file to send to the user. For more, see [here](knowledge-base-articles.html#add-content-links). |
 | followupQuestion | Deprecated. |
 | quickReplies | Deprecated. |
 | inputContext | Deprecated. |
