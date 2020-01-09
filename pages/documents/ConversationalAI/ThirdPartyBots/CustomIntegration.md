@@ -260,7 +260,7 @@ You can send a single structured content by adding it to `context` variable (Leg
 ```
 
 {: .important}
-Please note that `messages` defined in array (in above example) are sent first and structured content sent via `context` will be sent as a last message.
+**Please note** that `messages` defined in array (in above example) are sent first and structured content sent via `context` will be sent as a last message.
 
 ### Sending Quick Replies (Structured Content)
 

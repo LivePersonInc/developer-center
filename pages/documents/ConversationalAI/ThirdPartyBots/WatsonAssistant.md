@@ -19,7 +19,7 @@ The following documentation outlines the configuration for the connector and how
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
 {: .important}
-Please note, that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
+**Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
 With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
 
@@ -157,7 +157,7 @@ Watson Assistant allows the user to define native response types to the dialog n
 Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
 {: .important}
-Please note that Watson assistant API version of `2018-09-20` is used to support the native content response in Third-Party Bots.
+**Please note** that Watson assistant API version of `2018-09-20` is used to support the native content response in Third-Party Bots.
 
 If you use **JSON Editor** then the usual body of the native content is as follows:
 
@@ -380,7 +380,7 @@ Users can define a response with various content types. The following example sh
 ### Sending Rich Content (Structured Content)
 
 {: .important}
-Please note that Watson assistant API version of `2018-09-20` is used to support the rich content response in Third-Party Bots.
+**Please note** that Watson assistant API version of `2018-09-20` is used to support the rich content response in Third-Party Bots.
 
 The core LiveEngage platform supports the use of rich/structured content. For more information on the format and functionality available, please refer to the documentation found [here](getting-started-with-rich-messaging-introduction.html). As a result, the Bot Connector also supports this.
 
@@ -497,7 +497,7 @@ Figure 3.6 Structured Content Watson JSON Example (IAM)
 ### Sending Quick Replies (Structured Content)
 
 {: .important}
-Please note Quick Replies are only supported in Messaging Conversations.
+**Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies are a special kind of the Structured Content.
 The content should be added to the quickReplies property of the structuredContent object and there also a message be included in the structuredContent object.
