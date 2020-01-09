@@ -275,7 +275,7 @@ A single delay message can be send by adding `delay` and `typing` properties to 
 
 #### Sending delay between multiple messages
 
-Setting a delay in between multiple messages (for more information on multiple message [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Message - Delay - Structured Content) can be seen below:
+Setting a delay in between multiple messages (for more information on multiple message [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Message - Delay - Structured Content - Delay - Message) can be seen below:
 
 ```javascript
 {
@@ -287,8 +287,7 @@ Setting a delay in between multiple messages (for more information on multiple m
       },
       {
         "type": "delay",
-        "value": 5,
-        "typing": true
+        "value": 5
       },
       {
         "type": "structured-content",
@@ -312,11 +311,24 @@ Setting a delay in between multiple messages (for more information on multiple m
             ]
           }
         }
-      }
+      },
+      {
+        "type": "delay",
+        "value": {
+          "delay": 3
+          "typing": false
+        }
+      },
+      {
+        "type": "text",
+        "value": "this is last message after a delay"
+      },
     ]
   }
 }
 ```
+
+Please note the different ways of writing delay message in above example. In the first delay message Agent typing indicator will always be shown. In the second delay message user has ability to set the typing indicator as well.
 
 **Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
