@@ -305,6 +305,9 @@ Figure 5.2 Dialogflow Example Custom Payload
 
 ### Sending Quick Replies (Structured Content)
 
+{: .important}
+Please note Quick Replies are only supported in Messaging Conversations.
+
 Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 

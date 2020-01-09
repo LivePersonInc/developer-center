@@ -116,6 +116,9 @@ Figure 4.1 Activity with Structured Content
 
 ### Sending Quick Replies (Structured Content)
 
+{: .important}
+Please note Quick Replies are only supported in Messaging Conversations.
+
 Quick Replies is a special type of Structured Content. Is is a message sent along with predefined answers. The documentation can be found [here](quick-replies-introduction-to-quick-replies.html).
 The message property in the Structured Content is mandatory.
 For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html))
