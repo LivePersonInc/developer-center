@@ -72,7 +72,7 @@ The debugging interface consists of three main parts:
     <td>The Debugger is currently executing the code. After a while the Debugger should either enter the <b>Paused</b> state or - if reached the end of the lambda code - back to its <b>Ready</b> state</td>
   </tr>
   <tr>
-  <td style="width:100px">Paued</td>
+  <td style="width:100px">Paused</td>
     <td><img style="width:221px" src="img/faas-debugger-state-paused.png" alt="LivePerson Functions Debugger State Paused"></td>
     <td>The Debugger is paused. In this state you can inspect variables via the <b>Variable Inspector</b>.</td>
   </tr>
