@@ -14,25 +14,38 @@ This tutorial is designed to familiarize you with Knowledge Base.
 ### Step 1: Add a knowledge base
 
 1. In the Dashboard, click **Add Knowledge Base** in the upper-right corner.
-2. Choose a name for the knowledge base, and select whether you'd like to import a pre-configured knowledge base from a CSV file or a Google spreadsheet. **Importing a knowledge base from a file isn't mandatory. Simply click "Add" without selecting a file if you'd like to start with a blank one**.
+2. For **Data source name**, enter a name for the knowledge base, e.g., "Tutorial KB."
 3. Click **Add**.
-
-    The search view appears. In this default view, you can search the title, intent qualifiers and content of articles.
 
 ### Step 2: Add an article
 
 1. Click **Add New** in the upper-right corner.
-2. In the **Title** field, enter a title that is a complete sentence, e.g., "I can't remember my password."
-3.  Under **Intent Qualifiers**, try to add at least 5 intent qualifiers that our NLU engine will use to match the article to user input.
-4. In the **Summary** field, enter a brief message to be sent to the user. You can include web links in the summary, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels.
-5. Under **Tags**, add some tags that highlight the key nouns in your intent qualifiers and title. These tags assist the NLU engine in matching intents, your content, and the user input by highlighting the key sections of the user's message in regards to the intents that you created.
-6. Click **Save**.
 
-<div class="important">The Detail field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible.</div>
+    The Add Article page appears.
+
+2. Specify the following:
+    * **Title**: Enter a title that is a complete sentence, e.g., "I can't log in to my account."
+    * **Intent Qualifiers**: Add the following intent qualifiers (training phrases) that the NLU engine will use to match the article to user input:
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_tutorial3.png">
+
+    * **Summary**: Enter the following brief message to be sent to the user:
+
+        <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial1.png">
+
+        You can include web links in the summary, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels.
+
+    * **Tags**: Add the following tags that highlight the key nouns in your intent qualifiers and title.
+
+        <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/kb_tutorial2.png">
+
+        The tags assist the NLU engine in matching intents, your content, and the user input by highlighting the key sections of the user's message in regards to the intents that you created.
+
+6. Click **Save**.
 
 Back in the search view, you should now see your new article, which should look something like this:
 
-![](img/jonkb.png)
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial4.png">
 
 Note that the article has a “Pending” notation on it. We add this for new articles and for articles created by agents using the Agent Advisor widget, so that a manager or supervisor can approve them before they are included in the results.
 
@@ -40,19 +53,21 @@ Click **Approve** to continue.
 
 ### Step 3: Train and tune
 
-Before we add more articles, let’s test our knowledge base and see how our NLU will return results.
+Let’s test our knowledge base and see how the NLU will return results.
 
-1. In the search view, type something close to your article’s title or intent qualifiers. In the example we gave above, we'll type something like “my username isn’t working”.
+1. In the search view, type something close to your article’s title or intent qualifiers. In the example we gave above, we'll type something like “my login doesn't work."
 
-    ![](img/trainingkb.png)
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial5.png">
 
     Even though this utterance was not exactly the same as what was added, it still matched the article with a VERY GOOD confidence.
 
 2. Try a different user input, like, “my password is not letting me into my account”.
     
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial6.png">
+
     This is different enough that the NLU engine will return as FAIR PLUS. Generally, we set the threshold to GOOD, so, in this new example, the article won't be shown to a user. However, we can easily “train” the article to respond to this input regardless by clicking the thumbs-up icon right beneath the result.
 
-3. Go ahead and click **thumbs up** now.
+3. Click **thumbs up**.
     
     This adds the utterance to a set of “positive learnings” that are used in the matching.
 
@@ -72,36 +87,46 @@ For more best practices, see [Training and Tuning your Intents and FAQs](convers
 
 Leveraging entities within a knowledge base provides the same benefits that doing so affords you elsewhere: They are a great way to make intents even broader, allowing the NLU to associate a group of words (like similar products, different misspellings of common words, and so on) with an entity instead of pattern matching to every single item in the group.
 
+#### Create the domain
+
+1. Exit Knowledge Base, and open Intent Builder.
+2. Click **New domain** in the upper-right corner.
+3. Enter a name for the domain, e.g., "Tutorial Domain."
+4. Click **Add Domain**.
+
+#### Create the entity
+
+1. Inside the domain you just created, click **Entities** in the upper-right corner.
+2. Specify the following:
+    
+    * **Entity name**: Enter "credentials."
+    * **Entity values**: Add the values below.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial7.png">
+
+3. Click **Add Entity**.
+
 #### Connect the domain to the knowledge base
 
-To use entities within a knowledge base, you'll need to connect the domain. Let's assume you've completed this step (created a domain and connected it to the knowledge base), but for reference you can do it as follows:
+To use entities within a knowledge base, you'll need to connect the domain to the knowledge base.
 
-1. Click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> in the lower-right corner.
-2. Click **KB Settings**.
-3. Scroll down, and click **More Options**.
-4. In the **Associated Domain for Entity** field, select the domain.
-5. Click **Update**.
-
-Let's further assume that the domain includes an entity called `credentials`. It contains the following values:
-
-* log in
-
-* login
-
-* pass word
-
-* password
-
-* user name
-
-* username
+1. Exit Intent Builder, and return to Knowledge Base.
+2. Open the knowledge base.
+3. Click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> in the lower-right corner.
+4. Click **KB Settings**.
+5. Scroll down, and click **More Options**.
+6. In the **Associated Domain for Entity** field, select the name of the domain you just created.
+7. Click **Update**.
 
 #### Use the entities in the knowledge base
 
-In your article, go ahead and replace any word where you want the credentials entity to be substituted in, **including** the tags. Things should look like this:
+In your article, go ahead and replace any word where you want the "credentials" entity to be substituted in, **including** the tags. This might make some intent qualifiers and tags redundant, which means you can (and should) delete them. Things should look like this:
 
-![](img/kbentities.png)
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial8.png">
 
-Now, when someone says an utterance that includes any of the entity synonyms, they should match.
+{: .important}
+You don't need to enter entities using all capital letters like we've done here, but it helps to identify the words that are entities.
+
+Now, when someone says an utterance that includes any of the entity synonyms, they should match. Try entering, "My login doesn't work." This should return with a score of VERY GOOD.
 
 <div class="important">The entity values are cached, so if you add a number of entities but they aren't matching your articles right away, wait a minute or two. The cache should update.</div>
