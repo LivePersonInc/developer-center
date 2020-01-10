@@ -38,7 +38,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 
 1. Create a new CSV file or Google sheet.
 2. Add the column headers listed below; use the order listed.
-3. Fill out the rows with your article data. It's recommended that you complete at least these columns: tags, title, summary, alternates, and detail.
+3. Fill out the rows with your article data. It's recommended that you complete at least these columns: tags, title, summary, detail, and alternates (if using Knowledge Base intents) or intentName (if using Domain intents).
 
 #### Column headers
 
