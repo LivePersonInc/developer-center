@@ -11,7 +11,7 @@ indicator: both
 
 ### Add an article
 
-An article is a focused piece of content (a message) on a single topic that you want to serve to your consumers.
+An article is a focused piece of content (a message) on a single topic that you want to serve to consumers.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_articles.png">
 
@@ -109,7 +109,7 @@ The Debugger tool works exactly like a [Knowledge Base integration](conversation
 3. Click **test**.
 
     In the results, you can examine the "title" in the JSON to see which article has been matched.
-    <img style="width:500px" src="img/ConvoBuilder/kb_testUserInput2.png">
+    <img style="width:450px" src="img/ConvoBuilder/kb_testUserInput2.png">
 
 ### Chat with a bot linked to a knowledge base
 

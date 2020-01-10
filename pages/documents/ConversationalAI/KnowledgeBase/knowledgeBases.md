@@ -37,23 +37,23 @@ If you want to import a set of articles into a knowledge base when you add the k
 **To create an import file**
 
 1. Create a new CSV file or Google sheet.
-2. Add the column headers listed below; use the order listed.
-3. Fill out the rows with your article data. It's recommended that you complete at least these columns: tags, title, summary, detail, and alternates (if using Knowledge Base intents) or intentName (if using Domain intents).
+2. Add the column headers listed below; use the order listed in the table below.
+3. Fill out the rows with your article data. It's recommended that you complete at least these columns: title, summary, detail, tags, and alternates (if using Knowledge Base intents) or intentName (if using Domain intents).
 
 #### Column headers
 
 | Column header name | Description |
 |-----|-----|
 | id | An integer; usually just the row index, e.g., 1, 2, 3. <br><br>**Note**: This column isn't required when you initially create the knowledge base. However, if you're using a Google sheet that you plan to sync periodically, it does play a role then. Before performing a sync, update the Google sheet to include the "id" column and enter the IDs for all existing articles. |
-| tags | A comma-separated list of relevant keywords. |
-| title | The article title. This should be a complete sentence or question that the user might ask. |
+| tags | A comma-separated list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. |
+| title | The article title. This should be a complete sentence or question that the user might ask. See [here](knowledge-base-articles.html#best-practices) for best practices. |
 | summary | A short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. |
-| alternates | Applicable if you're using Knowledge Base intents, not Domain intents (see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) for an understanding of the two). In the UI, these are called "intent qualifiers." Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. |
+| alternates | Applicable if you're using Knowledge Base intents, not Domain intents (see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) for an understanding of the two). In the UI, these are called "intent qualifiers." Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See [here](knowledge-base-articles.html#best-practices) for best practices. |
 | detail | A longer message to the user. For messaging, it's recommended that you keep the responses as brief as possible. |
-| content_url | The URL of the hyperlink to send to the user. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
-| image_url | The URL of the image to send to the user. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
-| audio_url | The URL of the audio file to send to the user. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
-| video_url | The URL of the video file to send to the user. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
+| content_url | The URL of a hyperlink. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
+| image_url | The URL of an image. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
+| audio_url | The URL of an audio file. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
+| video_url | The URL of a video file. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
 | followupQuestion | Deprecated. |
 | quickReplies | Deprecated. |
 | inputContext | Deprecated. |
@@ -71,26 +71,26 @@ If you want to import a set of articles into a knowledge base when you add the k
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
 2. In the Settings panel, click **KB Settings**.
 3. Specify the following:
-    * **Data source name**: Enter a new name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's primary key, not its name. 
+    * **Data source name**: Enter a new name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
     * **Data source type**: Read-only.
     * **Language**: Change the language if desired.
-    * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base though, but be aware that, once you [sync with the sheet](knowledge-base-knowledge-bases.html#sync-with-a-google-sheet), the contents of the knowledge base are overwritten with what's in the sheet.
+    * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base, but be aware that, once you [sync with the sheet](knowledge-base-knowledge-bases.html#sync-with-a-google-sheet), the contents of the knowledge base are overwritten with what's in the sheet.
     * **Knowledge Base ID**: Read-only. This is a unique identifier that’s generated by the system. In some scenarios, you might need to reference the knowledge base ID. Here’s where you can find it.
     * **Intent Association**: Read-only. If the knowledge base uses Knowledge Base intents, you can convert them to Domain intents.
     * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
-    * **Associated Domain**: Read-only. This field is only displayed if the knowledge base uses [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). The domain can't be changed after the knowledge base is created.
+    * **Associated Domain**: Read-only. This field is displayed only if the knowledge base uses [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). The domain can't be changed after the knowledge base is created.
     * **Account**: If you logged into Conversation Builder directly (i.e., not via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, you can use this setting to change the organization under which this knowledge base exists. If you logged into Conversation Builder via single sign-on from LiveEngage, the organization you were using in LiveEngage is active and can't be changed, and nothing appears in this list.
     * **Public**: If you don't want other users in your LiveEngage account to be able to view and edit the knowledge base, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
 4. Click **Update**.
 
 ### Convert Knowledge Base intents to Domain intents
 
-When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Builder in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases in Intent Builder for their respective intents.
+When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Builder in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Builder.
 
 From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the Knowledge Base application to the Intent Builder application.
 
 {: .important}
-Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in that specific knowledge base. Also, this action irreversibly modifies the domain that you select.
+Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the affected knowledge base. Also, this action irreversibly modifies the domain that you select.
 
 **To convert from Knowledge Base intents to Domain intents**
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
@@ -103,10 +103,6 @@ Before taking this action, be certain about doing so. Once you convert the inten
     This converts the intents and associates the selected domain.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_convertIntents.png">
-
-### Add stop words
-
-This feature is deprecated.
 
 ### Sync with a Google sheet
 
