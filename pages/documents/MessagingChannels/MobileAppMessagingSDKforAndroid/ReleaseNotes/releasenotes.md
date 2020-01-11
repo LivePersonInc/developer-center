@@ -50,6 +50,20 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
 
 
+# Android Messaging SDK - Version 4.3.1
+
+**Release date:** January 10, 2020
+
+### Overview
+Android Mobile Messaging SDK version 4.3.1 release focuses on internal bug fixes.
+
+### Environmental Requirements
+The Android Mobile Messaging SDK version 4.3.1 uses:
+- Minimum API version 19
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
 
 # Android Messaging SDK - Version 4.3.0
 **Release date:** December 16, 2019
