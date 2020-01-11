@@ -55,7 +55,7 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 **Release date:** January 10, 2020
 
 ### Overview
-Android Mobile Messaging SDK version 4.3.1 release focuses on internal bug fixes.
+Android Mobile Messaging SDK version 4.3.1 release focuses on bug fixes around file sharing in UnAuth mode.
 
 ### Environmental Requirements
 The Android Mobile Messaging SDK version 4.3.1 uses:
