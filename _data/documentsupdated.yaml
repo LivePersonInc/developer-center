@@ -4,11 +4,11 @@
   - documentname: First Steps
   - documentname: Common Resources
     pages:
-    - pagename: API Data Metrics
     - pagename: Accessing LivePerson APIs
     - pagename: Create API keys
-    - pagename: Data APIs
     - pagename: Domain API
+    - pagename: Data APIs
+    - pagename: API Data Metrics
     - pagename: Engagement Attributes
     - pagename: Report Builder Data Metrics
     - pagename: Retry Policy Recommendations
