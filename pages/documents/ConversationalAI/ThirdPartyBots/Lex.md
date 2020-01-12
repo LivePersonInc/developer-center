@@ -281,6 +281,9 @@ This should contain valid structured content, along with any optional metadata r
 
 ### Sending Quick Replies (Structured Content)
 
+{: .important}
+**Please note** Quick Replies are only supported in Messaging Conversations.
+
 Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
@@ -428,7 +431,7 @@ Figure 7.3
 It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. The delay message can be added via Custom Markup response in intent definition (as shown in Figure 8.1). There are two properties, `delay` and `typing`, which are a part of the Custom Payload response.
 
 <ul>
-  <li> <b>delay</b>: This is the number of seconds the bot will wait.</li>
+  <li> <b>delay</b>: This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
   <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
 </ul>
 

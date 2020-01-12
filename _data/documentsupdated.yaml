@@ -7,7 +7,7 @@
   - documentname: Essential Resources
     pages:
     - pagename: API Data Metrics
-    - pagename: Accessing LivePerson APIs
+    - pagename: Authentication
     - pagename: Create API keys
     - pagename: Data APIs
     - pagename: Domain API

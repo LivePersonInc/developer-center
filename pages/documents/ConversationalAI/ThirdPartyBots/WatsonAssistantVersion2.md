@@ -18,7 +18,7 @@ The following documentation outlines the configuration for the connector and how
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
 {: .important}
-Please note, that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
+**Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
 {: .important}
 **IMPORTANT**: In the case of inactivity, the Watson Assistant session only last 5 minutes for the Lite/Standard plans and up to 60 minutes for Plus/Premium plans. Because of the nature of the async messaging feature, provided by LivePerson it could take longer until the user replies to the Bot-Agent. In case the Watson session expires Third-Party Bots connector will create a new conversation session on the Watson side [More Info](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context)
@@ -149,7 +149,7 @@ Watson Assistant allows the user to define native response types to the dialog n
 Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
 {: .important}
-Please note that Watson assistant API version of `2018-09-20` is used to support the native content response in Bot Connectors.
+**Please note** that Watson assistant API version of `2018-09-20` is used to support the native content response in Bot Connectors.
 
 If you use **JSON Editor** then the usual body of the native content is as follows:
 
@@ -372,7 +372,7 @@ Users can define a response with various content types. The following example sh
 ### Sending Rich Content (Structured Content)
 
 {: .important}
-Please note that Watson assistant API version of `2018-09-20` is used to support the rich content response in Bot Connectors.
+**Please note** that Watson assistant API version of `2018-09-20` is used to support the rich content response in Bot Connectors.
 
 The core LiveEngage platform supports the use of rich/structured content. For more information on the format and functionality available, please refer to the documentation found [here](getting-started-with-rich-messaging-introduction.html). As a result, the Bot Connector also supports this.
 
@@ -489,6 +489,9 @@ Figure 3.6 Structured Content Watson JSON Example (IAM)
 For using [quickReplies](quick-replies-introduction-to-quick-replies.html), we require a special formatting of the structured content.
 The quick replies rich content should be added to the quickReplies property of the structuredContent object, and also a message should be included.
 This message will be sent to the customer along with the quick replies. **Figure 3.7** **Figure 3.8**
+
+{: .important}
+**Please note** Quick Replies are only supported in Messaging Conversations.
 
 ```javascript
 {
@@ -795,6 +798,47 @@ Sending encoded metadata with the Native Content is possible using Watson `conte
   "context": {
     "encodedMetadata": "ewoiaWQiOiAic2MiCn0="
   }
+}
+```
+
+If you have a different context for multiple dialogs in a conversation that are responding with structure content, then you can define the `encodedMetadata` for each of the dialog separately. In that case, you will not define `encodedMetadata` via context editor or inside `context` property if using JSON editor. Below example shows where `encodedMetadata` property should be placed in structured content for such cases. Please note you will have to use JSON editor for defining such case:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        {
+          "encodedMetadata": "ewoiaWQiOiAic2MiCn0=",
+          "metadata": [
+            {
+              "id": "1234",
+              "type": "ExternalId"
+            }
+          ],
+          "structuredContent": {
+            "type": "vertical",
+            "elements": [
+              {
+                "type": "button",
+                "click": {
+                  "actions": [
+                    {
+                      "text": "Recommend me a movie, please",
+                      "type": "publishText"
+                    }
+                  ]
+                },
+                "title": "Recommend a movie"
+              }
+            ]
+          }
+        }
+      ],
+      "selection_policy": "sequential"
+    }
+  },
+  "context": {}
 }
 ```
 
