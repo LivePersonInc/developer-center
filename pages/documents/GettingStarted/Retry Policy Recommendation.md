@@ -5,12 +5,12 @@ redirect_from:
   - retry-and-keepalive-best-practices-overview.html
 Keywords:
 sitesection: Documents
-categoryname: "Essential Resources"
+categoryname: "Common Resources"
 documentname: Retry and KeepAlive Best Practices
 
 level-order: 11
 order: 10
-permalink: essential-resources-retry-policy-recommendations.html
+permalink: common-resources-retry-policy-recommendations.html
 root-link: true
 indicator: both  
 ---

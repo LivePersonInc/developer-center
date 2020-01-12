@@ -2,8 +2,8 @@
 pagename: Report Builder Data Metrics
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Essential Resources
-permalink: essential-resources-report-builder-data-metrics.html
+documentname: Common Resources
+permalink: common-resources-report-builder-data-metrics.html
 indicator: both
 ---
 
