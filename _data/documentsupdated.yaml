@@ -1,10 +1,8 @@
 - categoryname: Getting Started
   image: getting-started
   documents:
-  - documentname: Before You Get Started
-    pages:
-    - pagename: Let's Get Started
-  - documentname: Essential Resources
+  - documentname: First Steps
+  - documentname: Common Resources
     pages:
     - pagename: API Data Metrics
     - pagename: Accessing LivePerson APIs

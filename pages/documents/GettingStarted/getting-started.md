@@ -1,65 +1,69 @@
 ---
-pagename: Let's Get Started
+pagename: First Steps
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Before You Get Started
-permalink: before-you-get-started-let-s-get-started.html
-redirect_from:
-  - retrieve-api-keys-create-a-new-api-key.html
+documentname: First Steps
+permalink: first-steps.html
 indicator: both
 ---
 
+### Introduction and required reading
 
 Most user actions within LiveEngage can be performed programmatically using the REST API. Since we use a REST model, we recommend you be fluent in:
 
-- JavaScript, and its iterations like Node.JS, as well as JSON. Although most JSON payloads tend to be simple, there are exceptions to this rule, like with Structured Content.
-- Swift and Java, respectively, for Mobile App Messaging SDKs for iOS and Android.
-- HTTP calls and responses, REST APIs, server to server communication and web applications.
-- Retrieving information and data analysis/research for the Data APIs.
+* JavaScript, and its iterations like Node.JS, as well as JSON. Although most JSON payloads tend to be simple, there are exceptions to this rule, like with Structured Content.
+
+* Swift and Java, respectively, for Mobile App Messaging SDKs for iOS and Android.
+
+* HTTP calls and responses, REST APIs, server to server communication and web applications.
+
+* Retrieving information and data analysis/research for the Data APIs.
 
 Also, if you have not already done so:
 
 1. Read the [API Terms of Use](https://www.liveperson.com/policies/apitou).
+
 2. Read the [Systems Requirements and Language Support](https://knowledge.liveperson.com/admin-settings-system-requirements.html) guide.
 
-And before you can do anything, you must do a few things first. By the end of this Getting Started guide, you will be ready to customize and implement features in LiveEngage.
-
-<p><br></p>
----
-<p></p>
+Before you can do anything, you must configure and understand a few things first. By the end of this Getting Started guide, you will be ready to customize and implement features in LiveEngage.
 
 ### Step 1. Create a LiveEngage account
 
 Before you can use LiveEngage, you must first have a working account. If you don't already have one, you can sign up for a [free trial account](https://developers.liveperson.com/register.html). to get started with messaging, Conversation Builder, and LivePerson Functions.  To add more seats or access features not included in the trial, you will need to upgrade to a paid subscription.  You can chat with LivePerson sales on [liveperson.com](https://www.liveperson.com) or from the connection area within LiveEngage to get help from a specialist to find the right package for your business.
 
+Some features you might want to enable are:
+
+* Messaging and push notifications
+
+* Bot for User type
+
+* Authenticated chat
+
+* Audio messaging
+
+* Vibrate on new incoming message
+
+* Photo sharing
+
 {: .notice}
 If you already have a LiveEngage account, you can use that account instead of a creating a free trial account. However, we recommend creating a new account to make sure that any changes and customizations you make do not affect your site visitors until you are ready to launch them.
 
-Some features to get started with include:
-
-- Messaging and push notifications
-- Bot for User type
-- Authenticated chat
-- Audio messaging
-- Vibrate on new incoming message
-- Photo sharing
-
-### Step 2. accessing LivePerson APIs
+### Step 2. Accessing LivePerson APIs
 
 Some of our APIs require authorization before you can use them. Authorization refers to the process of verifying what a user has access to. In authorization, a user or application is granted access to an API after the API determines the extent of the permissions that it should assign.
 
-You will be able to read and learn how to work with LivePerson APIs using the following methodolodgies:
+You will be able to read and learn how to work with LivePerson APIs using the following methodologies:
 
 - Authorizing web server applications
 - Authorizing server to server interactions
 - OAuth 1.0 App Keys
 - OAuth 2.0 (App-JWT)
 
-Read the [accessing LivePerson APIs](/essential-resources-accessing-liveperson-apis.html)
+Read the [accessing LivePerson APIs](/common-resources-accessing-liveperson-apis.html) document for more information on the various authorization methods.
 
 ### Next steps
 
-Congratulations!  You are now ready to customize and implement features in LiveEngage.
+Congratulations! You are now ready to customize and implement features in LiveEngage.
 
 - **Integrate LiveEngage with iOS and Android apps** to create and manage digital engagements.  Additionally, customers can communicate with the brand's agents through their channel of choice. For more information, refer to the Mobile Messaging SDK for [Android](mobile-app-messaging-sdk-for-android-overview.html) or [iOS](mobile-app-messaging-sdk-for-ios-overview.html).
 
