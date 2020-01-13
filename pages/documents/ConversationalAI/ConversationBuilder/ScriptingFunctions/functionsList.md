@@ -34,7 +34,6 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 * [getSentiment](conversation-builder-scripting-functions-get-set-contextual-data.html#get-sentiment)
 * [getUserChannel](conversation-builder-scripting-functions-get-set-contextual-data.html#get-user-channel)
 * [getUserPlatformId](conversation-builder-scripting-functions-get-user-data.html#get-user-platform-id-and-platform-type)
-* [getUserPlatformType](conversation-builder-scripting-functions-get-user-data.html#get-user-platform-id-and-platform-type)
 * [getWebViewVariable](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables)
 * [getWebViewVariables](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables)
 * [isApiExecutionSuccessful](conversation-builder-scripting-functions-get-integration-data.html#is-api-integration-execution-successful)
