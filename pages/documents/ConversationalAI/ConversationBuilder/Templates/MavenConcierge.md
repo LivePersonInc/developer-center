@@ -69,7 +69,7 @@ Open the bot. On the top navigation click on Global Functions and edit the follo
 
 8. `CB_API_KEY`: On the top right click on the Key Icon, and then copy and paste the key in "Your API Access Key"
 
-  <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_5.png">
+   <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_5.png">
 
 9. Click save
 
@@ -83,11 +83,11 @@ The [Maven Context Session Store](https://developers.liveperson.com/maven-ai-con
 
 2. Click on the interaction - AskMaven, and then on the right inside Interaction details, **Code**
 
-  <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_6.png">
+   <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_6.png">
 
 3. The following code stores the phoneNumber in the Context Session Store. Similarly other attributes for example, NLU intent can also be stored in the session store.  
 
-  <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_7.png">
+   <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_7.png">
 
 4. The phoneNumber can then be used to determine customer attributes for example if the customer is a VIP or not and then route them to a specific skill or agent defined inside Maven Policy editor. To run an end to end example of such a feature, please refer to the [AI Powered Routing Tutorial](https://developers.liveperson.com/maven-ai-ai-powered-routing-tutorial.html#using-a-policy-with-conversation-builder) 
 
