@@ -19,7 +19,7 @@ The following documentation outlines the configuration for the connector and how
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
 {: .important}
-Please note, that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
+**Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
 With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
 
@@ -157,7 +157,7 @@ Watson Assistant allows the user to define native response types to the dialog n
 Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
 {: .important}
-Please note that Watson assistant API version of `2018-09-20` is used to support the native content response in Third-Party Bots.
+**Please note** that Watson assistant API version of `2018-09-20` is used to support the native content response in Third-Party Bots.
 
 If you use **JSON Editor** then the usual body of the native content is as follows:
 
@@ -272,7 +272,7 @@ An example list filled with two options can be seen below. Please note that with
 }
 ```
 
-#### Pause
+#### Pause/Delay
 
 Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node will need to select that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.5
 
@@ -281,6 +281,8 @@ Users can define Pause type if they want to send some delay in responding. For a
 Figure 2.5 Response type of Pause is highlighted
 
 Once the "Pause" is selected the form will ask you to provide the duration (unit is in milliseconds). This allows the conversation to be paused for the amount of time defined in "Duration" field. Moreover, If you want to show user a indication of typing you can select choose that with Typing Indicator radio box. (example filled form is shown in Figure 2.6). This will show a indication like "Agent is typing..." for the amount of time of delay that is set in "Duration".
+
+**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Fields-Response.png">
 
@@ -378,7 +380,7 @@ Users can define a response with various content types. The following example sh
 ### Sending Rich Content (Structured Content)
 
 {: .important}
-Please note that Watson assistant API version of `2018-09-20` is used to support the rich content response in Third-Party Bots.
+**Please note** that Watson assistant API version of `2018-09-20` is used to support the rich content response in Third-Party Bots.
 
 The core LiveEngage platform supports the use of rich/structured content. For more information on the format and functionality available, please refer to the documentation found [here](getting-started-with-rich-messaging-introduction.html). As a result, the Bot Connector also supports this.
 
@@ -493,6 +495,9 @@ Put the structured content objects that is shown in Figure 3.6 with the metadata
 Figure 3.6 Structured Content Watson JSON Example (IAM)
 
 ### Sending Quick Replies (Structured Content)
+
+{: .important}
+**Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies are a special kind of the Structured Content.
 The content should be added to the quickReplies property of the structuredContent object and there also a message be included in the structuredContent object.
@@ -777,5 +782,46 @@ Sending encoded metadata with the Native Content is possible using Watson `conte
   "context": {
     "encodedMetadata": "ewoiaWQiOiAic2MiCn0="
   }
+}
+```
+
+If you have a different context for multiple dialogs in a conversation that are responding with structure content, then you can define the `encodedMetadata` for each of the dialog separately. In that case, you will not define `encodedMetadata` via context editor or inside `context` property if using JSON editor. Below example shows where `encodedMetadata` property should be placed in structured content. Please note you will have to use JSON editor for defining such case:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        {
+          "encodedMetadata": "ewoiaWQiOiAic2MiCn0=",
+          "metadata": [
+            {
+              "id": "1234",
+              "type": "ExternalId"
+            }
+          ],
+          "structuredContent": {
+            "type": "vertical",
+            "elements": [
+              {
+                "type": "button",
+                "click": {
+                  "actions": [
+                    {
+                      "text": "Recommend me a movie, please",
+                      "type": "publishText"
+                    }
+                  ]
+                },
+                "title": "Recommend a movie"
+              }
+            ]
+          }
+        }
+      ],
+      "selection_policy": "sequential"
+    }
+  },
+  "context": {}
 }
 ```

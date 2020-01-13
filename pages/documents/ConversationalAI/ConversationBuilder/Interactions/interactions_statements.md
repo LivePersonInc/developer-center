@@ -11,12 +11,36 @@ indicator: both
 
 Statement interactions simply display information and then execute the next action. They don’t expect or wait for a user response.
 
+{: .important}
+For information on which statement interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
+
 ### Text
 Text statements display the text provided, for example:
 
 <img style="width:300px" src="img/ConvoBuilder/statements_text.png">
 
 Text statements can display dynamic values through the use of variables; for help with using variables, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
+
+### Image
+
+{: .important}
+For information on which channels support image statements, see [here](conversation-builder-interactions-interaction-support.html).
+
+Image statements display a single image.
+
+<img style="width:250px" src="img/ConvoBuilder/statements_image.png">
+
+#### Image settings
+
+| Setting | Description | Required or Optional | Example |
+| --- | --- | --- | --- | 
+| Image URL | The URL for the image file. The URL must start with HTTP or HTTPS and use a valid format, be a bot environment variable, be a bot context variable, or be a combination thereof.<br><br>When specifying a URL, the domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting).<br><br>Keep images fairly small in size \(MB\) and dimension, so they load quickly. | Required | https://www\.mysite\.com/images/bikes\.jpg |
+
+### Audio
+Audio statements currently aren't supported by LiveEngage.
+
+### Video
+Video statements currently aren't supported by LiveEngage. As an alternative, use a Text statement that includes the video URL as a link.
 
 ### Apple Rich Links
 **For Apple Business Chat only.**

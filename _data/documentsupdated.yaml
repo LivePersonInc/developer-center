@@ -1,16 +1,14 @@
 - categoryname: Getting Started
   image: getting-started
   documents:
-  - documentname: Before You Get Started
+  - documentname: First Steps
+  - documentname: Common Resources
     pages:
-    - pagename: Let's Get Started
-  - documentname: Essential Resources
-    pages:
-    - pagename: API Data Metrics
-    - pagename: Authentication
+    - pagename: Accessing LivePerson APIs
     - pagename: Create API keys
-    - pagename: Data APIs
     - pagename: Domain API
+    - pagename: Data APIs
+    - pagename: API Data Metrics
     - pagename: Engagement Attributes
     - pagename: Report Builder Data Metrics
     - pagename: Retry Policy Recommendations
@@ -139,6 +137,7 @@
           - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
+          - subpagename: Maven Concierge
       - pagename: Dialogs
         subpages:
           - subpagename: Dialog Basics
@@ -193,6 +192,7 @@
         subpages:
           - subpagename: Train & Tune NLU
           - subpagename: Reusable Components
+          - subpagename: A Pre-Launch Checklist
   - documentname: Maven AI
     pages:
       - pagename: Overview
@@ -598,6 +598,7 @@
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
+          - subpagename: Debugger
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
@@ -906,7 +907,6 @@
         - pagename: Card Template
         - pagename: Carousel Template
         - pagename: Quick Replies Template
-        - pagename: Google Pay Template
         - pagename: Limitations
     - documentname: LINE Templates
       pages:

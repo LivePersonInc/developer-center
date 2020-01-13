@@ -29,9 +29,9 @@ If you choose LivePerson's native NLU, no changes need to be made. This engine i
 
 LivePerson NLU supports intent detection for English and Spanish.
 
-[IBM Watson supports](https://cloud.ibm.com/docs/services/assistant?topic=assistant-language-support#language-support) Arabic, Simplified and Traditional Chinese (China), Czech (Czech), Dutch (Netherlands), English (United States), French (France), German (Germany), Italian (Italy), Japanese (Japan), Korean (Korea), Portuguese (Brazil), Spanish (Spain)
+[IBM Watson supports](https://cloud.ibm.com/docs/services/assistant?topic=assistant-language-support#language-support) Arabic, Simplified and Traditional Chinese (China), Czech (Czech), Dutch (Netherlands), English (United States), French (France), German (Germany), Italian (Italy), Japanese (Japan), Korean (Korea), Portuguese (Brazil), and Spanish (Spain).
 
-[Google Dialogflow supports](https://cloud.google.com/dialogflow/docs/reference/language) English (India, United States), French (Canada, France), German (Germany), Hindi (India), Indonesian (Indonesia), Italian (Italy), Japanese (Japan), Korean (Korea), Norwegian (Norway), Polish (Poland), Portuguese (Brazil, Portugal), Russian (Russia), Spanish (Latin America, Spain), Swedish (Sweden), Thai (Thailand), Turkish (Turkey), Ukranian (Ukraine)
+[Google Dialogflow supports](https://cloud.google.com/dialogflow/docs/reference/language) English (India, United States), French (Canada, France), German (Germany), Hindi (India), Indonesian (Indonesia), Italian (Italy), Japanese (Japan), Korean (Korea), Norwegian (Norway), Polish (Poland), Portuguese (Brazil, Portugal), Russian (Russia), Spanish (Latin America, Spain), Swedish (Sweden), Thai (Thailand), Turkish (Turkey), and Ukranian (Ukraine).
 
 ### LivePerson's NLU engine
 
@@ -39,7 +39,7 @@ There are two versions of LivePerson's NLU engine: version 1 (v1) and version 2 
 
 #### LivePerson NLU v1
 
-This version is a recommender model based on Word Mover's Distance (WMD) algorithms. It's intended to be used if you have fewer than 10 intents and fewer than 20 training phrases per intent. Additionally, performance is enhanced when you have a lot of custom entities.
+This version is a recommender model based on Word Mover's Distance (WMD) algorithms. It's intended to be used if you have fewer than 5 intents and fewer than 20 training phrases per intent. Additionally, performance is enhanced when you have a lot of custom entities.
 
 {: .important}
 NLU v1 supports English and Spanish. Also, NLU v1 doesn't require the model to be trained.
@@ -48,11 +48,11 @@ NLU v1 supports English and Spanish. Also, NLU v1 doesn't require the model to b
 
 This version is a classifier model based on Convolutional Neural Network (CNN) using Fasttext embeddings. The primary feature of NLU v2 is enabling a separate brand-specific model, built and *trained* for each domain. NLU v2 is a scalable solution that can handle a greater volume of requests, providing faster response times and accuracy.
 
-To perform effectively, NLU v2 expects large sets of data (both intents and training phrases). Additionally, it's preferable to have only *one* entity per sample sentence. For example, assume you have two entities: COLOR and SIZE. You might have sample sentences like, "I want a COLOR shirt," or "I want a SIZE shirt," but not one that says, "I want a COLOR SIZE shirt."
+To perform effectively, NLU v2 expects large sets of data (both intents and training phrases). Additionally, it's preferable to have a maximum of *two* entities per sample sentence, for example, "I want a COLOR SIZE shirt."
 
 When you create a domain with NLU v2 and use it in LiveIntent or in Conversation Builder, the following is recommended:
 
-* At least 10 intents in order to [train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain)
+* At least 5 intents in order to [train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain)
 * At least 20 training phrases per intent
 
 {: .important}
@@ -76,17 +76,24 @@ Once this is done, you can start creating domains with 3rd-party NLU.
 
 Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow service credentials. When you [train](intent-builder-domains.html#train-a-3rd-party-nlu-domain) the intents in a domain for the first time in Intent Builder, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/serviceCreds.png">
 
 ##### IBM Watson
 
 1. Register for or log in to an IBM Cloud account.
 
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_login_ibmcloud.png">
+
 2. Create or access a Watson Assistant resource.
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_resource_list.png">
+
 
 3. Generate Service Credentials with the role of Manager and an Auto Generated Service ID.
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_create_resource.png">
 
 4. View and copy the newly created credentials.
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_api_keys.png">
+
 
 ##### Google Dialogflow
 

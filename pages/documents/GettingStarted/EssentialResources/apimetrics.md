@@ -2,8 +2,8 @@
 pagename: API Data Metrics
 sitesection: Documents
 categoryname: "Welcome"
-documentname: Essential Resources
-permalink: essential-resources-api-data-metrics.html
+documentname: Common Resources
+permalink: common-resources-api-data-metrics.html
 indicator: both
 ---
 
