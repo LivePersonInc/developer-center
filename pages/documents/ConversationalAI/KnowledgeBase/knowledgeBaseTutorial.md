@@ -41,7 +41,7 @@ This tutorial is designed to familiarize you with Knowledge Base.
         * `username`
         * `password`
 
-        Tags help to increase the accuracy of Knowledge Base search results by highlighting the key sections of the user's message in regard to the intents that you created.
+        Tags help to increase the accuracy of Knowledge Base search results by highlighting the key sections of the user's message.
 
 6. Click **Save**.
 
