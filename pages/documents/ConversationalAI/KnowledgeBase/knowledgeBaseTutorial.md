@@ -24,22 +24,19 @@ This tutorial is designed to familiarize you with Knowledge Base.
     The Add Article page appears.
 
 2. Specify the following:
-    * **Title**: Enter a title that is a complete sentence, for example, "I can't log in to my account."
+    * **Title**: Enter a title that is a complete sentence, e.g., "I can't log in to my account."
     * **Intent Qualifiers**: Add the following intent qualifiers (training phrases) that the NLU engine will use to match the article to user input:
-
         * `My username doesn't work`
         * `My password doesn't work`
         * `I can't remember my username`
         * `I can't remember my password`
         * `I am locked out of my account`
 
-
     * **Summary**: Enter the following brief message to be sent to the user: `Try the steps in the "Forgot Account ID" section of the <a href="http://www.mycompany.com/username">Sign-in troubleshooting</a> article to recover your account credentials.`
 
         You can include web links in the summary, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels.
 
     * **Tags**: Add the following tags that highlight the key nouns in your intent qualifiers and title:
-
         * `account`
         * `username`
         * `password`
@@ -70,7 +67,7 @@ Let’s test our knowledge base and see how the NLU will return results.
     
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial6.png">
 
-    This is different enough that the NLU engine will return as FAIR PLUS. Generally,in a Knowledge Base integration in a bot, we set the threshold to GOOD, so, in this new example, the article won't be shown to a user. However, we can easily “train” the article to respond to this input by clicking the thumbs-up icon that's beneath the result.
+    This is different enough that the NLU engine will return as FAIR PLUS. Generally, in a Knowledge Base integration in a bot, we set the threshold to GOOD, so, in this new example, the article wouldn't be shown to a user. However, we can easily “train” the article to respond to this input by clicking the thumbs-up icon that's beneath the result.
 
 3. Click **thumbs up**.
     
@@ -80,7 +77,7 @@ Let’s test our knowledge base and see how the NLU will return results.
 
     The article should now come back as VERY GOOD.
 
-<div class="important">Keep in mind that when you are training articles, it's <em>very</em> easy to use the thumbs-up button. It's so easy that you might <em>over</em> train the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one. Overall, use the training feature sparingly.</div>
+<div class="important">Keep in mind that when you are training articles, it's very easy to use the thumbs-up button. It's so easy that you might *overtrain* the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one. Overall, use the training feature sparingly.</div>
 
 What about **thumbs down**? This should be used sparingly to differentiate two articles that might have intents that are close in meaning. NLU is not a specific pattern match, but more fuzzy, so having articles with similar intents but different content should be discouraged. That said, using thumbs down can help when that does occur, to indicate which of the two articles you'd like the NLU engine to match. Simply use the thumbs-down button on the article you'd like to de-prioritize, and the NLU engine will "prefer" the other one over it.
 
@@ -103,10 +100,8 @@ Leveraging entities within a knowledge base provides the same benefits that doin
 
 1. Inside the domain you just created, click **Entities** in the upper-right corner.
 2. Specify the following:
-    
     * **Entity name**: Enter "credentials."
     * **Entity values**: Add the values below:
-
         * `log in`
         * `login`
         * `pass word`
