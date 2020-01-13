@@ -27,7 +27,7 @@ This tutorial is designed to familiarize you with Knowledge Base.
     * **Title**: Enter a title that is a complete sentence, e.g., "I can't log in to my account."
     * **Intent Qualifiers**: Add the following intent qualifiers (training phrases) that the NLU engine will use to match the article to user input:
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_tutorial3.png">
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_tutorial3.png">
 
     * **Summary**: Enter the following brief message to be sent to the user:
 
@@ -39,7 +39,7 @@ This tutorial is designed to familiarize you with Knowledge Base.
 
         <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/kb_tutorial2.png">
 
-        The tags assist the NLU engine in matching intents, your content, and the user input by highlighting the key sections of the user's message in regards to the intents that you created.
+        Tags help to increase the accuracy of Knowledge Base search results by highlighting the key sections of the user's message in regard to the intents that you created.
 
 6. Click **Save**.
 
@@ -49,13 +49,13 @@ Back in the search view, you should now see your new article, which should look 
 
 Note that the article has a “Pending” notation on it. We add this for new articles and for articles created by agents using the Agent Advisor widget, so that a manager or supervisor can approve them before they are included in the results.
 
-Click **Approve** to continue.
+To continue with this tutorial, click the **Approve** link over on the right.
 
 ### Step 3: Train and tune
 
 Let’s test our knowledge base and see how the NLU will return results.
 
-1. In the search view, type something close to your article’s title or intent qualifiers. In the example we gave above, we'll type something like “my login doesn't work."
+1. In the search view, type something close to your article’s title or intent qualifiers, e.g., “my login doesn't work."
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial5.png">
 
@@ -65,7 +65,7 @@ Let’s test our knowledge base and see how the NLU will return results.
     
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial6.png">
 
-    This is different enough that the NLU engine will return as FAIR PLUS. Generally, we set the threshold to GOOD, so, in this new example, the article won't be shown to a user. However, we can easily “train” the article to respond to this input regardless by clicking the thumbs-up icon right beneath the result.
+    This is different enough that the NLU engine will return as FAIR PLUS. Generally,in a Knowledge Base integration in a bot, we set the threshold to GOOD, so, in this new example, the article won't be shown to a user. However, we can easily “train” the article to respond to this input by clicking the thumbs-up icon that's beneath the result.
 
 3. Click **thumbs up**.
     
@@ -125,8 +125,8 @@ In your article, go ahead and replace any word where you want the "credentials" 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial8.png">
 
 {: .important}
-You don't need to enter entities using all capital letters like we've done here, but it helps to identify the words that are entities.
+You don't need to enter entities using all capital letters like we've done here, but it does help you to identify the words that are entities.
 
-Now, when someone says an utterance that includes any of the entity synonyms, they should match. Try entering, "My login doesn't work." This should return with a score of VERY GOOD.
+Now, when someone says an utterance that includes any of the entity synonyms, they should match. Try entering, "My pin doesn't work." This should return with a score of GOOD.
 
 <div class="important">The entity values are cached, so if you add a number of entities but they aren't matching your articles right away, wait a minute or two. The cache should update.</div>
