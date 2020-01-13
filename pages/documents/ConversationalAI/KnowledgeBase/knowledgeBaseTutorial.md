@@ -24,20 +24,25 @@ This tutorial is designed to familiarize you with Knowledge Base.
     The Add Article page appears.
 
 2. Specify the following:
-    * **Title**: Enter a title that is a complete sentence, e.g., "I can't log in to my account."
+    * **Title**: Enter a title that is a complete sentence, for example, "I can't log in to my account."
     * **Intent Qualifiers**: Add the following intent qualifiers (training phrases) that the NLU engine will use to match the article to user input:
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_tutorial3.png">
+        * `My username doesn't work`
+        * `My password doesn't work`
+        * `I can't remember my username`
+        * `I can't remember my password`
+        * `I am locked out of my account`
 
-    * **Summary**: Enter the following brief message to be sent to the user:
 
-        <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial1.png">
+    * **Summary**: Enter the following brief message to be sent to the user: `Try the steps in the "Forgot Account ID" section of the <a href="http://www.mycompany.com/username">Sign-in troubleshooting</a> article to recover your account credentials.`
 
         You can include web links in the summary, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels.
 
-    * **Tags**: Add the following tags that highlight the key nouns in your intent qualifiers and title.
+    * **Tags**: Add the following tags that highlight the key nouns in your intent qualifiers and title:
 
-        <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/kb_tutorial2.png">
+        * `account`
+        * `username`
+        * `password`
 
         Tags help to increase the accuracy of Knowledge Base search results by highlighting the key sections of the user's message in regard to the intents that you created.
 
@@ -100,9 +105,15 @@ Leveraging entities within a knowledge base provides the same benefits that doin
 2. Specify the following:
     
     * **Entity name**: Enter "credentials."
-    * **Entity values**: Add the values below.
+    * **Entity values**: Add the values below:
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial7.png">
+        * `log in`
+        * `login`
+        * `pass word`
+        * `password`
+        * `user name`
+        * `username`
+        * `pin`
 
 3. Click **Add Entity**.
 
