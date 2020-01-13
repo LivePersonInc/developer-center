@@ -19,7 +19,7 @@ Within your Conversation Builder bot, you may be using intents and entities to t
 
 Below we outline some best practices to keep in mind while using intents, entities, and knowledge bases, and while troubleshooting any issues that might occur.
 
-### Leveraging Bot Analytics
+### Leveraging bot analytics
 
 The Analytics portal will help you understand which of your intents are matching (or not) and give you the information you need to train and tune your intents.
 
@@ -37,7 +37,7 @@ Tapping on Unmatched Phrases will show you user utterances that did not return a
 
 If you see utterances in your Unmatched Phrases that should be matching a particular intent or KB articles, you can add it to the training phrases for these items. Keep in mind the best practices for creating training phrases.
 
-### Training Phrases
+### Training phrases
 
 There are a number of reasons why your intent or knowledge base might be failing to return a result as you would expect. One of the most common causes is a lack of adequate training phrases. The following are best practices that should be used when creating training phrases; these help to ensure your intents and knowledge bases are well-trained and return the results you expect.
 
@@ -53,19 +53,11 @@ Generally, for intents, it is recommended that you have between 10 - 25 good tra
 
 When you have more than 25 - 50 training phrases on an intent (or 10 - 15 on a KB article), it's likely that you have overtrained the intent, which might lead to false positives.
 
-#### Tags in KB articles
-
-Tags play a very important role in returning accurate results in your knowledge base. Where the training phrases should be intents (e.g., complete sentences), the tags should highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. When an utterance contains these keywords, it will be scored higher. Remember, these should be **words**, not sentences!
-
-Also, if you find yourself needing a large number of tags, you most likely should be using an entity.
-
-<img class="fancyimage" style="width:700px" src="img/tags.png">
-
-### Testing, Training and Tuning
+### Testing, training and tuning
 
 Training your intents or KB is generally done by testing utterances against it, reviewing the results, and adding more training phrases as needed if the returned responses are returning with lower than desired scores.
 
-#### Training Intents
+#### Training intents
 
 To test your intents, go to the Intent Builder, select the appropriate domain, tap on the tester icon (which looks like a bug) and enter an utterance into the tester. If you select a particular intent, then the tester will be testing against that specific intent. If you’d like to test across ALL intents in the domain, check the "Search in domain" box.
 
@@ -105,7 +97,7 @@ If we rerun the search, now the article will return with a higher score. Here it
 
 If we look at the article details, in the Advanced Settings, we can see that the utterance has been added.
 
-#### Beware of Over Training
+#### Beware of over training
 
 Something to keep in mind when training in general, and using the Thumbs Up/Down icons specifically, is that because they are so easy to use, they are often misused. Often we see people using Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down.
 
@@ -137,13 +129,13 @@ Use the following values for the threshold:
 
 * FAIR: f
 
-### Using Entities
+### Using entities
 
 [Entities](intent-builder-entities.html) are keywords that refer to a number of synonyms or values. For example, the entity "sports" might have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intents or articles, you can leverage the power of entities as well. This dramatically increases the accuracy and flexibility of your responses.
 
 To refresh on using entities with intents, check out [this tutorial](conversation-builder-getting-started-2-intents.html). For using entities with Knowledge Base articles, review [this tutorial](knowledge-base-tutorial.html).
 
-### NLU Stop Words
+### NLU stop words
 
 Stop Words are words that are not used in the NLU to score an utterance. These words are essentially removed or ignored in the matching process.
 
