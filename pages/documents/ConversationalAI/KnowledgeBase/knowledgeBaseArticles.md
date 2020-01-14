@@ -29,10 +29,6 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 3. If desired, click **Advanced Settings**, and specify the following:
 
-    * **Input Context**: Deprecated.
-    * **Context Intents**: Deprecated.
-    * **Output Context**: Deprecated.
-    * **Followup Question**: Deprecated.
     * **Content**: Use this field to send a *hyperlink*. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
     * **Audio**:  Use this field to send an *audio* file. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
     * **Image**: Use this field to send an *image*. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
@@ -91,9 +87,9 @@ To accomplish this, in the interaction that displays the article, we've configur
 
 Use the Debugger tool to feed user input directly into a knowledge base to test the NLU processing and content matching.
 
-The Debugger tool works exactly like a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot. So, if your search selections in the tool match how you've configured the bot, the results you see with the tool will be the same as those returned in a bot conversation.
+The Debugger tool works exactly like a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot. So, if your search selections in the tool match how you've configured the bot, the results you see with the tool will be the same as those returned in a bot conversation. If you don't yet have a bot integrated with your knowledge base, the Debugger tool is also a way to test how the bot will behave once it is.
 
-If you don't yet have a bot integrated with your knowledge base, the Debugger tool is a great way to test how the bot will behave once it is.
+The Debugger tool is also *the* way to see the JSON that's returned by the search.
 
 **To test user input**
 

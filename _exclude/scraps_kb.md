@@ -1,3 +1,7 @@
+Don't doc:
+Add Stop Words - will be removed as deprecated
+Approve Pending Articles - will be changed to enable/disable (BA-3704)
+Search feature - will be changed
 
 ### Add keyword patterns
 
@@ -8,35 +12,6 @@ INTRO TO BE ADDED
 2. In the Settings panel, click **KB Settings**.
 3. Click **More Options**, and scroll down to the **Keyword Patterns** section.
 4. Enter the pattern, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_add.png"> (Refresh icon).
-
-### Add stop words
-
-Stop words are words that aren't used by the NLU engine to score an utterance. These words are removed or ignored in the matching process.
-
-You can add stop words to a knowledge base. Typically, this is done for words or phrases like your company name or brand name, as these words typically aren't needed for and don't help the scoring of an utterance.
-
-{: .important}
-There is a list of stop words that are applied by default; you can view that list [here](conversation-builder-best-practices-train-tune-nlu.html#nlu-stop-words). You don't need to add these words.
-
-**To add a stop word to a knowledge base**
-1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
-2. In the Settings panel, click **KB Settings**.
-3. Click **More Options**, and scroll down to the **Stop Words** section.
-4. Enter the word, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_add.png"> (Add).
-5. Click **Update**.
-
-### Approve a pending article
-
-ADD INTRO/BACKSTORY HERE
-
-**To approve a pending article**
-
-1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_advSearch.png"> (Advanced Search) beside the Search box.
-    This displays the advanced search controls.
-2. For **Status**, select "Pending." *Don't* enter anything in the Search box, as a search for a phrase is only performed against *active* (approved) articles.
-    This displays all articles in Pending status. 
-3. Locate the article in the list, and review the article's contents. Make any changes necessary.
-4. If the article is ready to be activated, click **Approve**.
 
 ### Settings toolbar
 

@@ -54,13 +54,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 | image_url | The URL of an image. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
 | audio_url | The URL of an audio file. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
 | video_url | The URL of a video file. For more on this, see [here](knowledge-base-articles.html#add-content-links). |
-| followupQuestion | Deprecated. |
-| quickReplies | Deprecated. |
-| inputContext | Deprecated. |
-| contextAlternates | Deprecated. |
-| outputContext | Deprecated. |
 | category | Assigning a category lets you [filter and find articles based on categories](knowledge-base-articles.html#find-articles-assigned-to-a-specific-category) in the Knowledge Base application. |
-| section | Deprecated. |
 | positiveLearnings | These are phrases for which you want a match to the article to occur. A comma-separated list. |
 | negativeLearnings | These are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent. A comma-separated list. |
 | intentName | Applicable if you're using Domain intents, not Knowledge Base intents (see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) for an understanding of the two). This is the intent associated with the article. |
