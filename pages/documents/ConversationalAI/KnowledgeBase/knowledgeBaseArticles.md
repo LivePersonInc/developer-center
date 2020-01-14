@@ -91,7 +91,9 @@ To accomplish this, in the interaction that displays the article, we've configur
 
 Use the Debugger tool to feed user input directly into a knowledge base to test the NLU processing and content matching.
 
-The Debugger tool works exactly like a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot, so the results you see with it will be the same as those returned in a bot conversation. If you don't yet have a bot linked to your knowledge base, this tool is a great way to test how the bot will behave once it is.
+The Debugger tool works exactly like a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot. So, if your search selections in the tool match how you've configured the bot, the results you see with the tool will be the same as those returned in a bot conversation.
+
+If you don't yet have a bot integrated with your knowledge base, the Debugger tool is a great way to test how the bot will behave once it is.
 
 **To test user input**
 
@@ -111,12 +113,12 @@ The Debugger tool works exactly like a [Knowledge Base integration](conversation
 
 3. Click **test**.
 
-    In the results, you can examine the "title" in the JSON to see which article has been matched.
+    In the results, the JSON of the matched article is displayed. You can examine the "title" to see which article has been matched.
     <img style="width:450px" src="img/ConvoBuilder/kb_testUserInput2.png">
 
 ### Chat with a bot linked to a knowledge base
 
-If you have a bot linked to your knowledge base via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), in the Knowledge Base application, you can feed test user input to the bot to see if it matches and returns content as you'd expect.
+If you have a bot linked to your knowledge base via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), in the Knowledge Base application, you can feed test user input to the bot to see if it matches, returns and renders content as you'd expect.
 
 {: .important}
 If you're just getting started with knowledge bases and want to try this feature, we recommend you create a bot using the [Simple FAQ bot template](conversation-builder-bot-templates-simple-faq.html) and connect it to your knowledge base. Most of the bot development work is already done. You only need to update the integration in the bot so that it uses your knowledge base, as shown in the image below.
