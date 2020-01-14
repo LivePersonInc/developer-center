@@ -117,9 +117,6 @@
   - documentname: Conversational AI
     pages:
       - pagename: Overview
-      - pagename: Natural Language Understanding
-        subpages:
-          - subpagename: NLU Engines
   - documentname: Conversation Builder
     pages:
       - pagename: Getting Started
@@ -226,6 +223,7 @@
   - documentname: Intent Builder
     pages:
       - pagename: Overview
+      - pagename: Natural Language Understanding
       - pagename: Domains
       - pagename: Intents
       - pagename: Entities

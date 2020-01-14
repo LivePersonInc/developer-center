@@ -3,12 +3,13 @@ pagename: NLU Engines
 redirect_from:
     - conversation-builder-intent-builder-nlu-engines.html
     - conversational-ai-platform-natural-language-understanding-nlu-engines.html
+    - conversational-ai-natural-language-understanding-nlu-engines.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversational AI
+documentname: Intent Builder
 subfoldername: Natural Language Understanding
-permalink: conversational-ai-natural-language-understanding-nlu-engines.html
+permalink: intent-builder-natural-language-understanding.html
 indicator: both
 ---
 

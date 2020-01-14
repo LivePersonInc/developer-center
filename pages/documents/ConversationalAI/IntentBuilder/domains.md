@@ -16,7 +16,7 @@ indicator: both
     * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
     * **Manual** or **Import**: If you want to manually add intents and entities to the domain, select "Manual." If you want to import a pre-configured list in from a file, select "Import."
     * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files.
-    * **NLU Provider**: Select the NLU engine to use. For help in making this selection, see the discussion on NLU engines [here](conversational-ai-natural-language-understanding-nlu-engines.html).
+    * **NLU Provider**: Select the NLU engine to use. For help in making this selection, see the discussion on NLU engines [here](intent-builder-natural-language-understanding.htmll).
     * **Language**: Select the language.
 3. Click **Add Domain**.
     
@@ -73,7 +73,7 @@ Once you've added a domain, you will be automatically navigated to the Domain Vi
 
 1. Open the domain.
 2. Click <img style="width:35px" src="img/ConvoBuilder/icon_train.png"> (Train icon) in the lower-right corner to start the training.
-3. Select the [NLU provider credential](conversational-ai-natural-language-understanding-nlu-engines.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
+3. Select the [NLU provider credential](intent-builder-natural-language-understanding.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
 
     <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/NLU_image_4.png">
 
