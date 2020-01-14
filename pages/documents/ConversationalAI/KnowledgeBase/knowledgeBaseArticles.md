@@ -64,6 +64,9 @@ The "article" custom data field is added automatically when you add the Knowledg
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings2.png">
 
+{: .important}
+For the names of the JSON nodes for the content links, see [here](knowledge-base-articles.html#json-reference).
+
 #### Configure the dialog in the bot
 
 Next, still in Conversation Builder, build out the applicable dialog to make use of the additional content **(4)**, i.e., use the custom data fields as you require. (For help on displaying variables in interactions, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).)
