@@ -137,6 +137,7 @@
           - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
+          - subpagename: Maven Concierge
       - pagename: Dialogs
         subpages:
           - subpagename: Dialog Basics
@@ -906,7 +907,6 @@
         - pagename: Card Template
         - pagename: Carousel Template
         - pagename: Quick Replies Template
-        - pagename: Google Pay Template
         - pagename: Limitations
     - documentname: LINE Templates
       pages:
