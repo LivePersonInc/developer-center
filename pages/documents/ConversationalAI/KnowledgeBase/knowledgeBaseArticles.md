@@ -153,7 +153,7 @@ If you're just getting started with knowledge bases and want to try this feature
 
 The following table identifies the JSON node for article information that's often needed when you're integrating the knowledge base with a bot. If you're looking for the name of a node not listed here, you can use the Knowledge Base's [Debugger tool](knowledge-base-articles.html#test-user-input) to identify it.
 
-| UI field | JSON node |
+| Name of UI field | Name of JSON node |
 |-----|-----|
 | Title | title |
 | Summary | summary |
