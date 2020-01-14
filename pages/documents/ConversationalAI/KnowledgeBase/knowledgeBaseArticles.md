@@ -110,6 +110,7 @@ The Debugger tool is also *the* way to see the JSON that's returned by the searc
 3. Click **test**.
 
     In the results, the JSON of the matched article is displayed. You can examine the "title" to see which article has been matched.
+
     <img style="width:450px" src="img/ConvoBuilder/kb_testUserInput2.png">
 
 ### Chat with a bot linked to a knowledge base
@@ -117,7 +118,7 @@ The Debugger tool is also *the* way to see the JSON that's returned by the searc
 If you have a bot linked to your knowledge base via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), in the Knowledge Base application, you can feed test user input to the bot to see if it matches, returns and renders content as you'd expect.
 
 {: .important}
-If you're just getting started with knowledge bases and want to try this feature, we recommend you create a bot using the [Simple FAQ bot template](conversation-builder-bot-templates-simple-faq.html) and connect it to your knowledge base. Most of the bot development work is already done. You only need to update the integration in the bot so that it uses your knowledge base, as shown in the image below.
+If you're just getting started with knowledge bases and want to try using this tool, we recommend you create a bot using the [Simple FAQ bot template](conversation-builder-bot-templates-simple-faq.html) and connect it to your knowledge base. Most of the bot development work is already done. You only need to update the integration in the bot so that it uses your knowledge base, as shown in the image below.
 
    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/kb_chat3.png">
 
