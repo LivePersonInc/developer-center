@@ -65,7 +65,7 @@ The "article" custom data field is added automatically when you add the Knowledg
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings2.png">
 
 {: .important}
-For the names of the JSON nodes for the content links, see [here](knowledge-base-articles.html#json-reference).
+For the names of the JSON nodes for the content links, see farther below in this topic.
 
 #### Configure the dialog in the bot
 
