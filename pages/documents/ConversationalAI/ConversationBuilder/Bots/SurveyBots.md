@@ -12,13 +12,13 @@ indicator: both
 
 ### What's a survey bot?
 
-A survey bot lets you collect feedback from consumers at the end of a conversation with a custom bot. The survey bot can ask:
+A survey bot lets you collect feedback from consumers at the end of a conversation with a custom bot or human agent. The survey bot can ask:
 
-* Specialized questions designed to provide Customer Satisfaction (CSAT), Net Promoter Score (NPS), and First Contact Resolution (FCR) metrics. (For a primer on these survey metrics, please consult the Web.)
+* Specialized questions designed to provide Customer Satisfaction (CSAT), Net Promoter Score (NPS), and First Contact Resolution (FCR) survey metrics.
 * Questions that reflect your brand's key performance indicators
 * Free-text questions
 
-Use a survey bot to measure bot and skill performance and to identify opportunities to improve on your quality targets.
+Use a survey bot to measure bot/agent and skill performance and to identify opportunities to improve on your quality targets.
 
 INSERT SCREEN CAP OF PREVIEW OF SURVEY
 
@@ -26,24 +26,26 @@ INSERT SCREEN CAP OF PREVIEW OF SURVEY
 
 Survey bots are like custom bots in many ways, most notably:
 
-* You work in Conversation Builder in much the same way that you do with a custom bot. Create the survey bot and define its dialog flow, adding the interactions that meet your survey requirements.
+* You work in Conversation Builder in the same, general way that you do with a custom bot. Create the survey bot and define its dialog flow, adding the interactions that meet your survey requirements.
 * You can preview survey bots.
 * You can create [versions and releases](conversation-builder-versions-releases.html) of survey bots.
+* Bot transcripts can be logged.
 
-There are a few, important ways that survey bots differ from custom bots:
+However, there are a few, important ways that survey bots differ from custom bots:
 
-* You can use only a subset of the standard interaction types in survey bots; unavailable interactions are hidden from view. Also, there are a few interactions that are only available to survey bots, namely, the CSAT, NPS, and FCR interactions.
+* There are a few interactions that are available only to survey bots, namely, the CSAT, NPS, and FCR interactions.
+* You can use only a subset of the standard interaction types in survey bots.
 * Survey bots have a few, additional bot settings that are specific to surveys.
-* You *don't* deploy survey bots by creating agent connectors and starting them. Instead, survey bots use a simpler and quicker "Publish" process.
+* You *don't* deploy survey bots by creating agent connectors and starting them. Instead, survey bots use a simpler and quicker "Publish" process, and the rest happens behind the scenes.
 
 All of these differences are discussed in more detail farther below.
 
 {: .important}
-There isn't a one-to-one correspondence between survey bots and custom bots. Survey bots are more like "manager" bots. You assign a skill or set of skills to a survey bot. When a conversation with a custom bot ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey. In this way, a *single* survey bot is responsible for triggering surveys for *many* custom bots, all based on skill.
+There isn't a one-to-one correspondence between survey bots and custom bots. Survey bots are more like "manager" bots. You assign a skill or set of skills to a survey bot. When a conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey. In this way, a *single* survey bot is responsible for triggering surveys for *many* custom bots, all based on skill.
 
 ### Survey flow
 
-When a conversation with a custom bot ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey, and the bot sends the greeting message.
+When a conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey, and the bot sends the greeting message.
 
 The bot then sends the survey questions one by one based on the survey bot's dialog flow. Upon each consumer response, the bot sends the next question based on the defined logic. 
 
@@ -51,7 +53,7 @@ When the dialog flow ends, the survey is closed. Any message sent by the consume
 
 #### Survey triggering
 
-- When the conversation with the custom bot has ended, the survey is automatically triggered; there is no need to "transfer" to the survey.
+- When the conversation has ended, the survey is automatically triggered; there is no need to "transfer" to the survey.
 - A survey is triggered based on the last skill of the conversation.
 - Only conversations with a skill assigned to them are capable of triggering a survey. If a conversation is “unassigned,” it can't trigger a survey.
 - A survey is not triggered upon auto close. ??? FIX ???
@@ -103,7 +105,7 @@ You can use only a subset of the standard interaction types in survey bots; unav
 
 Use the standard interactions to ask questions that reflect your brand's custom key performance indicators (KPIs) and/or other free-text questions. For example, you might want to obtain the consumer's age.
 
-#### Adding survey interactions
+#### Adding survey-specific interactions
 
 There are a few, predefined interactions that are available only to survey bots, namely, the CSAT, NPS, and FCR interactions. They're predefined in the sense that you can't edit their structure; you can only edit their content. For example, you can't change the number of quick replies, but you can change the question text or quick reply names.
 
@@ -117,6 +119,9 @@ In a single survey bot, you can include only one of each survey interaction type
 ##### NPS interaction
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_nps.png">
+
+{: .important}
+In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question and skip is 12 quick replies. Using Skip will cause the conversation to end abruptly.
 
 ##### FCR interaction
 
