@@ -10,7 +10,7 @@ permalink: conversation-builder-scripting-functions-deprecated-functions.html
 indicator: both
 ---
 
-Deprecated functions are still supported; however, bot developers are encouraged to use stated alternatives instead.
+Deprecated functions are still supported but not recommended. Bot developers are encouraged to use stated alternatives instead.
 
 ### Get channel
 
