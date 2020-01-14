@@ -31,10 +31,10 @@ Survey bots are like custom bots in many ways, most notably:
 * You can create [versions and releases](conversation-builder-versions-releases.html) of survey bots.
 * Bot transcripts can be logged.
 
-However, there are a few, important ways that survey bots differ from custom bots:
+However, there are some important ways that survey bots differ from custom bots:
 
 * There are a few interactions that are available only to survey bots, namely, the CSAT, NPS, and FCR interactions.
-* You can use only a subset of the standard interaction types in survey bots.
+* You can use only a subset of the standard interactions in survey bots.
 * Survey bots have a few, additional bot settings that are specific to surveys.
 * You *don't* deploy survey bots by creating agent connectors and starting them. Instead, survey bots use a simpler and quicker "Publish" process, and the rest happens behind the scenes.
 
@@ -97,14 +97,6 @@ Some setup of your LiveEngage environment is required before using this feature.
 
 In this step, you 1) add a greeting message, 2) build out the dialog flow using the available interactions to define the survey and its logic, and 3) finish with a closing message to send at the end of the survey.
 
-#### Adding standard interactions
-
-You can use only a subset of the standard interaction types in survey bots; unavailable interactions are hidden from view.
-
-<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/surveyBot_interactions.png">
-
-Use the standard interactions to ask questions that reflect your brand's custom key performance indicators (KPIs) and/or other free-text questions. For example, you might want to obtain the consumer's age.
-
 #### Adding survey-specific interactions
 
 There are a few, predefined interactions that are available only to survey bots, namely, the CSAT, NPS, and FCR interactions. They're predefined in the sense that you can't edit their structure; you can only edit their content. For example, you can't change the number of quick replies, but you can change the question text or quick reply names.
@@ -126,6 +118,14 @@ In an NPS interaction, don't enable Skip if your targeted channel is Facebook. F
 ##### FCR interaction
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_fcr.png">
+
+#### Adding standard interactions
+
+You can use only a subset of the standard interaction types in survey bots; unavailable interactions are hidden from view.
+
+<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/surveyBot_interactions.png">
+
+Use the standard interactions to ask questions that reflect your brand's custom key performance indicators (KPIs) and/or other free-text questions. For example, you might want to obtain the consumer's age.
 
 #### Marking questions as optional
 
