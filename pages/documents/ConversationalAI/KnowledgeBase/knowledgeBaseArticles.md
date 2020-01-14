@@ -149,6 +149,20 @@ If you're just getting started with knowledge bases and want to try this feature
     The result list is updated to include only the articles assigned to the selected categories.
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_findInCategory.png">
 
+### JSON reference
+
+The following table identifies the JSON node for article information that's often needed when you're integrating the knowledge base with a bot. If you're looking for the name of a node not listed here, you can use the Knowledge Base's [Debugger tool](knowledge-base-articles.html#test-user-input) to identify it.
+
+| UI field | JSON node |
+|-----|-----|
+| Title | title |
+| Summary | summary |
+| Detail | detail |
+| Content Links > Content | contentURL |
+| Content Links > Image | imageURL |
+| Content Links > Video | videoURL |
+| Content Links > Audio | audioURL |
+
 ### Best practices
 
 To increase the quality of your content matches, follow the best practices below.
