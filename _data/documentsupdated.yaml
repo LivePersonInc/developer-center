@@ -132,6 +132,7 @@
           - subpagename: Bot Basics
           - subpagename: Custom Bots
           - subpagename: Survey Bots
+          - subpagename: Multi-Bot Collaboration
       - pagename: Bot Templates
         subpages:
           - subpagename: Overview
