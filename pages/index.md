@@ -16,13 +16,13 @@ Our APIs configure and manipulate LiveEngage features and capabilities. To use t
 
 Most user actions within LiveEngage can be performed programmatically using the REST API. Some of the key categories are:
 
-- **[Domain API](essential-resources-domain-api.html)** for returning the base domain for your LivePerson account, which is used in conjunction with the other APIs outlined in the documentation.
+- **[Domain API](common-resources-domain-api.html)** for returning the base domain for your LivePerson account, which is used in conjunction with the other APIs outlined in the documentation.
 
 - **[Login Service API](login-service-api-overview.html)** for logging into LiveEngage as a user with credentials or as an application with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
 
-- **[Engagement attributes](essential-resources-engagement-attributes.html)** for collecting specific information about the visitor such as product viewed, purchase information, errors the visitor encountered, and search results. LiveEngage provides out-of-the-box information for the visitor’s geolocation, the amount of time spent on a page, and the pages they viewed, among other parameters.
+- **[Engagement attributes](common-resources-engagement-attributes.html)** for collecting specific information about the visitor such as product viewed, purchase information, errors the visitor encountered, and search results. LiveEngage provides out-of-the-box information for the visitor’s geolocation, the amount of time spent on a page, and the pages they viewed, among other parameters.
 
-- **[Data APIs](essential-resources-data-apis.html)** for retrieving your contact center’s information such as types of conversations, load, and messaging transcripts.
+- **[Data APIs](common-resources-data-apis.html)** for retrieving your contact center’s information such as types of conversations, load, and messaging transcripts.
 
 - **[Bot connectors](bot-connectors-getting-started.html)** for integrating third-party messaging platforms and LiveEngage.  Bot connectors send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation.
 
@@ -88,7 +88,7 @@ These are just some of the uses for these APIs. Since they provide entry points 
 Some of our APIs require authorization before you can use them. This is done via either of the following methods: 1) common oAuth2.0 scenarios for web server applications. 2) server to server authrization via either a) API Key which uses the OAuth 1.0 methodology or b) oAuth2.0 for server to server interations. Every API uses either of the two methods (or both), as listed in its overview
 
 <p style="text-align: right">
-<a href="essential-resources-accessing-liveperson-apis.html" center><img src="../img/btn-view-auth-docs.png"></a></p>
+<a href="common-resources-accessing-liveperson-apis.html" center><img src="../img/btn-view-auth-docs.png"></a></p>
 
 <p><br></p>
 
