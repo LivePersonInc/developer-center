@@ -9,7 +9,6 @@ documentname: Intent Builder
 permalink: intent-builder-overview.html
 indicator: both
 ---
-<img  class="fancyimage" style="width:750px" src="img/beaut_ib_2.png">
 
 The Conversation Builder Platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you can use the [Conversation Builder](conversation-builder-getting-started-bot-workspace-overview.html) to associate one domain to each dialog.
 
@@ -19,6 +18,8 @@ This directs your bot to be more flexible and respond to a wider variety of user
 
 {: .important}
 See [NLU Engines](conversation-builder-intent-builder-nlu-engines.html) to learn more about the different NLU options that are compatible with Conversation Builder.
+
+<img  class="fancyimage" style="width:750px" src="img/beaut_ib_2.png">
 
 ### LiveIntent
 
