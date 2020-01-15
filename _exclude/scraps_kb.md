@@ -1,5 +1,6 @@
-Don't doc:
-Add Stop Words - will be removed as deprecated
+Don't doc, at least not yet:
+Add Stop Words - might be removed as deprecated
+Add Keyword Patterns - might be removed as deprecated
 Approve Pending Articles - will be changed to enable/disable (BA-3704)
 Search feature - will be changed
 
