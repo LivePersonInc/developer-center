@@ -41,7 +41,7 @@ Bot settings include:
 
 - **Description**: Enter a description that’s meaningful to you and others. Consider including language that identifies the bot's goal and key behaviors.
 
-- **Bot Type**: Read-only. This is either Consumer Facing Bot or Agent Advisor. A Consumer Facing bot is one that engages with the consumer in the front end. An Agent Advisor bot is one that engages with the contact center agent in LiveEngage in the back end. You specify the bot type when you create the bot, and it can’t be changed afterward.
+- **Bot Type**: Read-only. This is always Consumer Facing Bot.
 
 - **Bot Language**: Read-only. This setting determines the language-specific model for LivePerson NLU; it also supports the proper rendering of left-to-right and right-to-left languages. You specify the bot language when you create the bot, and it can’t be changed afterward.
 
