@@ -53,7 +53,7 @@ The domains in all URLs for images, videos, audio files, and button links used i
 
 For Facebook, the owner of the Facebook page must whitelist all web URLs within the Facebook page settings.
 
-If you're using Conversation Builder's URL shortening feature to shorten lengthy web links, the abbreviated domain that's used must also be whitelisted in the Facebook page settings. To obtain the specific, abbreviated domain to whitelist (which varies by region), go to the bot's [Bot Settings](conversation-builder-bots.html#configure-bot-settings) and refer to the **Shorten URLs** setting.
+If you're using URL shortening to shorten lengthy web links, the abbreviated domain that's used must also be whitelisted in the Facebook page settings. To obtain the specific, abbreviated domain to whitelist (which varies by region), go to the bot's [Bot Settings](conversation-builder-bots.html#configure-bot-settings) and refer to the **Shorten URLs** setting.
 
 ### URL shortening
 
@@ -65,7 +65,7 @@ http://www.myexample.com/folder1/folder2/veryverylongstringhere.html
 
 ...is shortened to something like this:
 
-http://{abbreviated domain}/x34xerwwe
+http://{abbreviated domain}/{unique code}
 
 URL shortening is applied in all interactions where applicable. However, note the following:
 
