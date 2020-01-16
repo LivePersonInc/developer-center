@@ -31,11 +31,8 @@ The Simple FAQ bot template provides a bot that answers users' questions by conn
         - *Phrase Search*: Select this method to use NLU to search for the phrase defined in the request parameter against the articles and their associated "standard" tags. You can define "standard" tags via the Knowledge Base UI or a CSV file import.
         - *Special Tag Search*: Select this method to search for the special tags defined in the request parameter against the special tags associated with the articles. Special tags are different from standard tags. Special tags have a prescribed format; they don't support NLU searches, and they function more like attributes. Typically, special tags are used for returning products or items. You can define special tags via a CSV file or Google sheet import.
     - **Request Parameters for a Phrase search**:
-        - *mode*: 
-            - *Intents*: Select this to perform an NLU-based search first, and, *if no results are found*, to perform a text-based search second.
-            - *Intents Only*: Select this to perform only an NLU-based search (no text-based search).
-            - *All*: Select this to perform only a text-based search (no NLU).
-        - *threshold*: The knowledge base uses Natural Language Understanding (NLU) algorithms to match articles to the input phrases, and it assigns a score based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, and POOR. Use this field to specify the minimum score that a result must have in order to be returned. You can select from VERY GOOD, GOOD, or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations.
+        - *mode*: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-overview.html#search-modes).
+        - *threshold*: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledge-base-overview.html#thresholds).
         - *phrases*:   Enter the phrase for which to search. The default value is [{$query}](conversation-builder-variables-slots.html#storing-user-responses), which represents/stores the last, complete response sent by the consumer.
         - *multipleResults*: Select the number of results to return from the knowledge base, anywhere from one to five. The default value is 1.
     - **Request Parameters for a Special Tag search**:

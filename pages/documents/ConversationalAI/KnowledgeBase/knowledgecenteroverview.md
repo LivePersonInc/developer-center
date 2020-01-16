@@ -18,17 +18,24 @@ The Knowledge Base application in the Conversation Builder platform lets you to 
 
 ### How a knowledge base works
 
-The Knowledge Base uses two types of algorithms to match a consumer's input to articles and return an appropriate article.
+#### Search modes
+When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify a "mode" for the search; this determines the type of search that is performed. Possible modes include:
 
-First, a text-to-text search is performed. The search algorithm checks the consumer's input against the title, summary, detail, intent qualifiers (if used), and tags in the articles. If a match is found, the article is returned.
+* **Intents**: First, a text-to-text search is performed; the search algorithm checks the consumer's input against the title and intent qualifiers (if used; intent qualifiers are applicable only when using Knowledge Base intents, not Domain intents).
 
-If a match isn't found using the text-to-text search, the Knowledge Base then uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. If it finds a match to a reasonable degree of certainty, it returns the article. The article attributes against which the NLU engine compares the consumer's input include:
+    If a match isn't found by the first search, the Knowledge Base next uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. If it finds a match to a reasonable degree of certainty, it returns the article. The article attributes against which the NLU engine compares the consumer's input include the title, intents (either Knowledge Base intents or Domain intents), and the positive and negative learnings that the article has acquired.
 
-* Title
-* Intents (either the knowledge base's built-in intents or domain intents that are linked to the relevant article)
-* Positive and negative learnings that the article has acquired
+    If a match isn't found by the NLU search, as a fallback, a final text-to-text search is performed. The search algorithm checks the consumer's input against the title, summary, detail, intent qualifiers (if used; intent qualifiers are applicable only when using Knowledge Base intents, not Domain intents), and tags in the articles.
 
-The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR. The default quality setting is GOOD, but you can change the score threshold within your [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html). That said, it's generally recommended to keep the quality above FAIR PLUS.
+* **Intents Only**: This mode is like the Intents mode except that the final text-to-text search isn't performed as a fallback.
+
+* **All**: A text-to-text search is performed. The search algorithm checks the consumer's input against the title, summary, detail, intent qualifiers (if used; applicable to Knowledge Base intents only), and tags in the articles. 
+
+#### Thresholds
+
+For some searches, Knowledge Base uses Natural Language Understanding (NLU) algorithms to match articles to a consumer's input, and it assigns a score based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, or POOR.
+
+When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify the minimum score that a result must have in order to be returned. You can select from VERY GOOD, GOOD, or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
 
 ### Knowlege Base intents versus Domain intents
 

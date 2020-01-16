@@ -100,12 +100,8 @@ The Debugger tool is also *the* way to see the JSON that's returned by the searc
 2. Specify the following:
 
     * **Phrase**: Enter the phrase to search for.
-    * **Search Modes**: Select one of the following:
-        * *Intents*: Select this to perform an exact match search against the following article attributes: title, intent qualifiers. (Intent qualifiers are not applicable when using [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents).) If an exact match isn't found, an NLU-based search is performed. If no results are found by the NLU search, a text-based search is performed against the following article attributes: title, summary, detail, tags, and intent qualifiers.
-        * *Intents Only*: Select this to perform an exact match search against the following article attributes: title, intent qualifiers. (Intent qualifiers are not applicable when using [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents).) If an exact match isn't found, an NLU-based search is performed.
-        * *All*: Select this to perform a text-based search against the following article attributes: title, summary, detail, tags, and intent qualifiers. (Intent qualifiers are not applicable when using [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents).)
-
-    * **Threshold**: The knowledge base uses Natural Language Understanding (NLU) algorithms to match articles to the input phrases, and it assigns a score based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, and POOR. Use this field to specify the minimum score that a result must have in order to be returned. You can select from VERY GOOD, GOOD, or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations.
+    * **Search Modes**: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-overview.html#search-modes).
+    * **Threshold**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledge-base-overview.html#thresholds).
 
 3. Click **test**.
 
