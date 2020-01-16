@@ -65,6 +65,10 @@ Bot settings include:
 
     If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t. If you keep this on, you can access the logged transcripts in the Bot Analytics application: Select the bot and then access the **Transcripts** page.
 
+- **Shorten URLs**: Enable this if you want to shorten the URLs sent in interactions, which can be desirable if you have lengthy web links. Disable this to keep URLs as is. The default value is Disabled (Off). For more information on URL shortening, including how to disable this behavior for an individual web link, see [here](conversation-builder-interactions-interaction-basics.html#url-shortening).
+
+    *Facebook only*: If you enable this setting, the owner of the Facebook page must go into the Facebook page settings and [whitelist](conversation-builder-interactions-interaction-basics.html#whitelisting) the abbreviated domain that will be used. That abbreviated domain, which varies by region, is displayed here, next to this setting.
+
 - **Default User-Friendly Response**: This is an *error* response that gets sent to the user. Because you can supply the response, you can customize it in terms of substance and language (Spanish, Italian, etc.). If you enter a value here, it's used in two circumstances.
     
     First, when the bot encounters errors or throws exceptions, many times a default error response of, "Not able to understand your question. Can you please re-phrase it?" is sent to the user. Since this message is the same as the built-in, default Fallback message, it might confuse the user. To send a different response when errors occur, enter a value here. It won't replace or affect the Fallback message or a Fallback dialog, as they serve different purposes. Fallback handles when the user's utterance doesn't match a pattern or intent. In contrast, this error response is sent when the bot encounters an error or throws an exception.

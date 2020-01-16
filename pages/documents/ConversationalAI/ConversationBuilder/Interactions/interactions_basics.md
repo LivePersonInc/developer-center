@@ -49,10 +49,32 @@ The types of text that you can send in a Conversation Builder interaction vary d
 ### Whitelisting
 The domains in all URLs for images, videos, audio files, and button links used in interactions must be whitelisted. Contact your LivePerson representative to assist with this.
 
-For Facebook in particular, whitelisting must be done in two places: Images must be whitelisted on the LivePerson side, and web URLs must be whitelisted within Facebook page settings. The latter must be performed by the owner of the Facebook page.
+#### Whitelisting in Facebook
 
-{: .important}
-Conversation Builder shortens lengthy web links using the following abbreviated domain: https://s.bcbot.io, which must be whitelisted in the Facebook page settings.
+For Facebook, the owner of the Facebook page must whitelist all web URLs within the Facebook page settings.
+
+If you're using Conversation Builder's URL shortening feature to shorten lengthy web links, the abbreviated domain that's used must also be whitelisted in the Facebook page settings. To obtain the specific, abbreviated domain to whitelist (which varies by region), go to the bot's [Bot Settings](conversation-builder-bots.html#configure-bot-settings) and refer to the **Shorten URLs** setting.
+
+### URL shortening
+
+If you have lengthy web links, you might want to enable the shortening of URLs. You can enable this at the bot level using the **Shorten URLs** setting in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
+
+As an example, if you enable URL shortening, a web link like this...
+
+http://www.myexample.com/folder1/folder2/veryverylongstringhere.html
+
+...is shortened to something like this:
+
+http://{abbreviated domain}/x34xerwwe
+
+URL shortening is applied in all interactions where applicable. However, note the following:
+
+* If shortening is enabled, but the URL contains only the domain (e.g., http://www.mysite.com), the URL *isn't* shortened.
+* If shortening is enabled, you can still disable it for *individual* URLs by prepending the following hashtag:
+
+    #do_not_shorten:
+
+    For example: #do_not_shorten:http://www.myexample.com/folder1/folder2/veryverylongstringhere.html
 
 ### Images
 
