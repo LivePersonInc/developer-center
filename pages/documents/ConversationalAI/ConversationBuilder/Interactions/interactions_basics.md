@@ -125,7 +125,11 @@ The basic operators available for use with pattern matching are:
 
 * Pipe, which denotes alternates.
 
-If you need more advanced operators, you can use [regular expressions](http://www.rexegg.com/regex-quickstart.html) with pattern matching.
+If you need more advanced operators, you can use [regular expressions](http://www.regexlib.com) with pattern matching.
+
+When defining a condition using a regular expression, click **Hint** to view and quickly copy commonly used regular expressions.
+
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/regex_hint.png">
 
 ### Display variables in interactions
 
