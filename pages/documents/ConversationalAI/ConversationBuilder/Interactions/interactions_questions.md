@@ -320,9 +320,15 @@ You can switch between the two options using the blue link (shown above) beneath
 
 #### Populating a time picker dynamically
 
-As mentioned earlier, a time picker can be dynamically populated during run time using variable data received from an [API integration](conversation-builder-integrations-api-integrations.html). In our example below, we're retrieving a list of start date and times returned from an API integration named "Appointment". In the integration, that returned data is stored in a custom data field named "start". During run time, it populates the list of start times.
+As mentioned earlier, a time picker can be populated dynamically during run time using variable data received from an [API integration](conversation-builder-integrations-api-integrations.html). As an example, in the image below, we're retrieving a list of appointment dates and times that are returned from an API integration named "Appointment." In the integration, the returned data is stored in a custom data field named "start."
 
-<img style="width:275px" src="img/ConvoBuilder/questions_timePicker10.png">
+<img style="width:600px" src="img/ConvoBuilder/questions_timePicker11.png">
+
+We can then reference this custom data field in the **Variable Date & Time** field in the time picker, using the following notation (i.e., with `{apiName.variableName}` as discussed [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions)):
+
+<img style="width:300px" src="img/ConvoBuilder/questions_timePicker10.png">
+
+During run time, the time picker iterates over the list and populates the list of start times.
 
 Since the API response defines the date and time together in the received payload, you don't need to specify them separately in two fields in the time picker. However, the data must be in the following format:
 
