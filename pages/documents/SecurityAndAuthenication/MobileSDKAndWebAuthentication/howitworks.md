@@ -37,7 +37,7 @@ Implicit Flow is very similar to Code Flow, but with the following two differenc
 
 *	When the LivePerson Service receives this token, instead of validating it with the Brand Service, it verifies the signature and decrypts its content.
 
-*	For external widnow, when the Authorization Endpoint redirects to the external window it passes the token as a query/hash param "code", "token" or "id_token".
+*	For external window, when the Authorization Endpoint redirects to the external window it passes the token as a query/hash param "code", "token" or "id_token".
 
 _Note: Consumers who are not currently logged in are unable to start a conversation with the designated agent. Instead, they are redirected to the Offline survey_.
 
