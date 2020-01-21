@@ -214,6 +214,9 @@ A disabled interaction is ignored in a dialog flow. Consider disabling an intera
 ### Delete an interaction
 Deleting an interaction is a non-recoverable action, so consider disabling the interaction as an alternative.
 
+{: .important}
+After you delete an interaction, verify that the interaction flow isn't broken as a result. You might need to modify the Next Step field in the remaining interactions so that the conversation flow works as expected.
+
 **To delete an interaction**
 
 1. Select the interaction.
