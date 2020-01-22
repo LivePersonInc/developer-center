@@ -67,7 +67,16 @@ http://www.myexample.com/folder1/folder2/veryverylongstringhere.html
 
 http://{abbreviated domain}/{unique code}
 
-URL shortening is applied in all interactions where applicable. However, note the following:
+URL shortening is applied where applicable in the following types of interactions:
+
+* Text statements
+* Image statements
+* Audio statements
+* Video statements
+* Apple rich links (statements)
+* Button questions
+
+However, note the following:
 
 * If shortening is enabled, but the URL contains only the domain (e.g., http://www.mysite.com), the URL *isn't* shortened.
 * If shortening is enabled, you can still disable it for *individual* URLs by prepending the following hashtag:
