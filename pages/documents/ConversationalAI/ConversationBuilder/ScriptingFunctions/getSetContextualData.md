@@ -46,6 +46,32 @@ if (count > 10) {
 ```
 
 
+### Get and set bot Tango Context variable
+
+The Tango Context is an object that is sent from the sender bot to the receiver bot during a bot-to-bot transfer (escalation). You can set an intent ID or user message in this object so that it gets passed to the receiver bot. In this way, the receiver bot can know the appropriate dialog to start after the transfer.
+
+The **Set** Bot Tango Context Variable function is used for setting an intent ID or user message in the Tango Context object.
+
+The **Get** Bot Tango Context Variable function is used for getting the intent ID or user message in the Tango Context object. If the variable isn't set, this method returns Null.
+
+{: .important}
+For more details on bot-to-bot transfers, see [here](conversation-builder-bots-bot-to-bot-transfers.html).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getBotTangoContextVariable(name)` | *name (string)* – The name of the variable to retrieve, either "bot_tango_intent_id" or "bot_tango_user_text" | The string defined by `name` |
+| `setBotTangoContextVariable(name, value)` | *name (string)* – The name of the variable to set, either "bot_tango_intent_id" or "bot_tango_user_text"<br><br> *value (object)* – The value to be stored<br><br> | None |
+
+#### Example
+
+In the examples below, we're using `setBotTangoContextVariable` to set an intent ID and a user message, respectively.
+
+```javascript
+botContext.setBotTangoContextVariable("bot_tango_intent_id","d46688d7-7ec2-44a4-a09c-b500f728ee05");
+botContext.setBotTangoContextVariable("bot_tango_user_text","order status");
+```
+
+
 ### Get environment variable
 
 Used for getting an environment variable. Environment Variables that are not set will return NULL.
