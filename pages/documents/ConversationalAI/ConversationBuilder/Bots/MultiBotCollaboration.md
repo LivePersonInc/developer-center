@@ -24,7 +24,7 @@ A bot-to-bot transfer is a [LivePerson agent escalation](conversation-builder-in
 
 To pass the conversational context to the receiver bot, you need to do two things:
 
-1. In the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration, check the **Tango Context** checkbox.
+1. In the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration, select the **Tango Context** checkbox.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab1.png">
 
