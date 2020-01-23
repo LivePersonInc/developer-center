@@ -27,6 +27,8 @@ When you integrate a knowledge base with a bot via a [Knowledge Base integration
 
     If a match isn't found by the NLU search, as a fallback, a final text-to-text search is performed. The search algorithm checks the consumer's input against the title, summary, detail, intent qualifiers (if used; intent qualifiers are applicable only when using Knowledge Base intents, not Domain intents), and tags in the articles.
 
+    <img style="width:750px" src="img/ConvoBuilder/kb_intents_search.png">
+
 * **Intents Only**: This mode is like the Intents mode except that the final text-to-text search isn't performed as a fallback.
 
 * **All**: A text-to-text search is performed. The search algorithm checks the consumer's input against the title, summary, detail, intent qualifiers (if used; applicable to Knowledge Base intents only), and tags in the articles. 
