@@ -28,7 +28,7 @@ To pass the conversational context to the receiver bot, you need to do two thing
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab1.png">
 
-    This enables the use of the Tango Context object that is sent from the sender bot to the receiver bot during the transfer.
+    This enables your use of the Tango Context object that is sent from the sender bot to the receiver bot during the transfer. Now you can set an intent ID or user message in the object.
 
 2. In the Pre-Process Code in the integration interaction, use the `setBotTangoContextVariable` scripting function to set either an intent ID or a user message in the Tango Context object. In our example below, we've set an intent ID.
 
@@ -53,7 +53,7 @@ If you set the user message instead, the receiver bot must match the user messag
 
 #### What happens if I enable the Transfer Context object, but I don't set an intent ID or user message?
 
-If the receiver bot doesn't find an intent ID or user message in the Tango Context object, or if there isn't a Tango Context object available, the receiver bot looks at the last user message in the LiveEngage queue and uses that to try to determine the appropriate dialog to start.
+If the receiver bot doesn't find an intent ID or user message in the Tango Context object, or if there isn't a Tango Context object available, the receiver bot looks at the last user message in conversation and uses that to try to determine the appropriate dialog to start.
 
 #### How do I transfer other data from the sender bot to the receiver bot?
 
