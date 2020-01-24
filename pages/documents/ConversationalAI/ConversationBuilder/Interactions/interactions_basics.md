@@ -59,7 +59,7 @@ If you're using URL shortening to shorten lengthy web links, the abbreviated dom
 
 If you have lengthy web links, you might want to enable the shortening of URLs. You can enable this at the bot level using the **Shorten URLs** setting in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
-As an example, if you enable URL shortening, a web link like this...
+As an example, if you enable URL shortening, a URL like this...
 
 http://www.myexample.com/folder1/folder2/veryverylongstringhere.html
 
@@ -67,14 +67,14 @@ http://www.myexample.com/folder1/folder2/veryverylongstringhere.html
 
 http://{abbreviated domain}/{unique code}
 
-URL shortening is applied to all URLs in the following types of interactions:
+If you enable URL shortening, it's applied to *all* URLs in the following types of interactions:
 
-* Text statements
-* Image statements
-* Audio statements
-* Video statements
-* Apple rich links (statements)
-* Button questions
+* Text
+* Image
+* Audio
+* Video
+* Apple rich links
+* Button
 
 However, note the following:
 
