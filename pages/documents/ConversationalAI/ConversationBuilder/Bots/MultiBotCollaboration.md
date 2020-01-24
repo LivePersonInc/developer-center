@@ -20,7 +20,7 @@ This type of collaboration and hand-off between bots is sometimes called the "bo
 
 ### Seamless transfers
 
-A bot-to-bot transfer is a [LivePerson agent escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) where you transfer the conversation to a skill that's assigned to a bot agent in specific. What makes the transfer *seamless* to the consumer is passing the conversational context (the user intent or user message) from the sender bot to the receiver bot. Because the receiver bot understands the conversational context, after the transfer it can immediately start the appropriate dialog. The result is a graceful hand-off.
+A bot-to-bot transfer is a [LivePerson agent escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) where you transfer the conversation to a skill that's assigned to a bot agent in specific. What makes the transfer *seamless* to the consumer is passing the conversational context--an intent or user message--from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful hand-off.
 
 To pass the conversational context to the receiver bot, you need to do two things:
 
