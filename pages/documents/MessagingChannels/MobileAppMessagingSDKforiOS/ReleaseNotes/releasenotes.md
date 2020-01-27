@@ -27,7 +27,7 @@ The iOS Mobile Messaging SDK version 5.1.1 is compatible with Xcode 11.3.1, Swif
 
 ### New Features 
 * If the user has denied access before for Audio, Photos, or Camera, the SDK now shows an alert upon usage informing the user that access can be enabled in the settings app.
-The message, title, and options buttons for this alert can be customize by updating the values of the LPLocalizable.strings for the keys matching below.
+The message, title, and options buttons for this alert can be customized by updating the values of the LPLocalizable.strings for the keys matching below.
 
 "permissionPopUpDeniedOptionNotNow"
 "permissionPopUpDeniedOptionGoToSettings"
