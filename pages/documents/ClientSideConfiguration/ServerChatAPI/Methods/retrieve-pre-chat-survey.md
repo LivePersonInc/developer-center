@@ -40,11 +40,12 @@ Returns an XML or JSON response with the Pre-Chat survey.
 
 | Name  | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| skill | Requests a survey for a specific skill. | alphanumeric | |
-| visitorProfile | Requests a survey for a specific visitor profile.  | alphanumeric | If both the skill and visitor profile parameters are provided, only the visitor profile parameter will be considered. |
+| surveyName | Requests a specific survey by name.  | alphanumeric | If the surveyName is provided, this will override all of the other parameters. |
+| surveyApiId | Requests a specific survey by API ID. | alphanumeric | If the surveyName is provided, this parameter will be ignored. To retrieve the surveyApiId, you will require a campaignId and an engagementId from
 | visitorIp | This parameter can be used by the LivePerson Rules Engine to decide which survey to return. | alphanumeric (IP) | The visitor's host name is found using this IP address. If no IP address is specified, the visitor's IP  will be taken from the request's IP. |
 | userAgent | This parameter can be used by the LivePerson Rules Engine to decide which survey to return.  | alphanumeric | If no user agent is specified, it will be  taken from the HTTP "User-Agent" header. |
-| surveyName | Requests a specific survey.  | alphanumeric | If visitorprofile or skill parameters are provided, and a survey with this name exists, the requested survey will be returned unless there is a rule that overrides this name. |
+| visitorId | The current visitor ID. | alphanumeric | This parameter can be used to associate the survey to the current visitor.
+| skill | Set a skill to the current visitor. | alphanumeric | |
 
 ### Response
 
