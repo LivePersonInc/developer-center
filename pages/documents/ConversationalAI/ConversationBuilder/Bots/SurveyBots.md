@@ -91,7 +91,7 @@ Some setup of your LiveEngage environment is required before using this feature.
     * **Description**: Enter a description that's meaningful to you and others. 
     * **Bot Language**: Select a language.
     * **Skill**: Select the skill(s) that will trigger this survey bot.
-5. Click **Create**.
+5. Click **Create Bot**.
 
 ### Step 3 - Build out the dialog flow
 
