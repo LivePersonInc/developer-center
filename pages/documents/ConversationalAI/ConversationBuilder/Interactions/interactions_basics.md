@@ -67,14 +67,7 @@ http://www.myexample.com/folder1/folder2/veryverylongstringhere.html
 
 http://{abbreviated domain}/{unique code}
 
-If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. However, note the following:
-
-* If shortening is enabled, but the URL contains only the domain (e.g., http://www.mysite.com), the URL *isn't* shortened.
-* If shortening is enabled, you can still disable it for *individual* URLs by prepending the following hashtag:
-
-    #do_not_shorten:
-
-    For example: #do_not_shorten:http://www.myexample.com/folder1/folder2/veryverylongstringhere.html
+If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., http://www.mysite.com), the URL isn't shortened.
 
 ### Images
 
