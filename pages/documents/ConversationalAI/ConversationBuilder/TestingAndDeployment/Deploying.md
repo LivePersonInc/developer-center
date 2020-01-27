@@ -18,7 +18,7 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
 
 Also, before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
 
-1. Create a bot agent. This is a user where the type = "Bot." Make sure to enable the agent.
+1. Create a bot agent. This is a user where the type = "Bot." Make sure to enable the agent. Also make sure to create the agent with API-based authentication, not password-based authentication, as this is now required. (The OAuth 1.0 keys are retrieved behind the scenes.) *Existing* bot agents that use password-based authentication don't need to be migrated; they continue work.
 2. Create a skill and assign it to the bot agent.
 3. Create a campaign and engagement that routes to the skill you assigned to the bot agent.
 
