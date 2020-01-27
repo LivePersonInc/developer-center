@@ -13,7 +13,7 @@ indicator: both
 
 1. In the Dashboard, click **Add Knowledge Base** in the upper-right corner.
 2. Specify the following:
-    * **Data source name**: Enter a name for the knowledge base.
+    * **Data source name**: Enter a display name for the knowledge base.
     * **Data source type**: Select "Knowledge Base."
     * **Language**: Select the language of the knowledge base. The default value is English. For details on how the language is used, see [here](knowledge-base-overview.html#languages) in the overview.
     * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. For details on creating an import file, see [here](knowledge-base-knowledge-bases.html#create-an-import-file) below. 
@@ -65,7 +65,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 1. Open the knowledge base, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> (Knowledge Base Menu icon) in the lower-right corner.
 2. In the Settings panel, click **KB Settings**.
 3. Specify the following:
-    * **Data source name**: Enter a new name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
+    * **Data source name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
     * **Data source type**: Read-only.
     * **Language**: Change the language if desired. For information on the role that the language plays, see [here](knowledge-base-overview.html#languages).
     * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base, but be aware that, once you [sync with the sheet](knowledge-base-knowledge-bases.html#sync-with-a-google-sheet), the contents of the knowledge base are overwritten with what's in the sheet.

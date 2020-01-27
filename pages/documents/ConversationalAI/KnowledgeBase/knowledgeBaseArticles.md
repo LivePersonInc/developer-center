@@ -174,7 +174,7 @@ For more best practices when training and tuning NLU, see [here](conversation-bu
 
 * Use full sentences, e.g., “How do I reset my password?”
 
-* Use one sentence, not multiple sentences. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
+* Use a simple, concise sentence, not multiple sentences. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
 
 * When adding intent qualifiers or training phrases, add 10 - 15 per article. Exceeding this likely means that you have overtrained, which might lead to false positives.
 
