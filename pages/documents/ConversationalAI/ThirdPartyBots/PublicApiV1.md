@@ -113,7 +113,7 @@ This API allows The user to send The message(s) to an ongoing conversation. We s
 
 | Method | URL                                                                                                                                                 |
 | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}/messages?ttl={ttl} |
+| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/messages?ttl={ttl} |
 
 **Path Parameters**
 
@@ -121,7 +121,7 @@ This API allows The user to send The message(s) to an ongoing conversation. We s
 | :------------- | :-------------------------- | :----- | :------- | :------------------------------------------------------------------------- |
 | botDomain      | Third-Party Bots API domain | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
 | accountId      | LP site ID                  | string | Required |                                                                            |
-| conversationID | LP Conversation ID          | string | Required |                                                                            |
+| conversationId | LP Conversation ID          | string | Required |                                                                            |
 
 **Query Parameters**
 
@@ -267,7 +267,7 @@ This API allows an ongoing conversation to be transferred to another skill. User
 
 | Method | URL                                                                                                                                                 |
 | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}/transfer?ttl={ttl} |
+| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/transfer?ttl={ttl} |
 
 **Path Parameters**
 
@@ -275,7 +275,7 @@ This API allows an ongoing conversation to be transferred to another skill. User
 | :------------- | :-------------------------- | :----- | :------- | :------------------------------------------------------------------------- |
 | botDomain      | Third-Party Bots API domain | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
 | accountId      | LP site ID                  | string | Required |                                                                            |
-| conversationID | LP Conversation ID          | string | Required |                                                                            |
+| conversationId | LP Conversation ID          | string | Required |                                                                            |
 
 **Query Parameters**
 
@@ -326,7 +326,7 @@ This API allows an ongoing conversation to be ended.
 
 | Method | URL                                                                                                                                              |
 | :----- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}/close?ttl={ttl} |
+| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/close?ttl={ttl} |
 
 **Path Parameters**
 
@@ -334,7 +334,7 @@ This API allows an ongoing conversation to be ended.
 | :------------- | :-------------------------- | :----- | :------- | :------------------------------------------------------------------------- |
 | botDomain      | Third-Party Bots API domain | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
 | accountId      | LP site ID                  | string | Required |                                                                            |
-| conversationID | LP Conversation ID          | string | Required |                                                                            |
+| conversationId | LP Conversation ID          | string | Required |                                                                            |
 
 **Query Parameters**
 
@@ -374,7 +374,7 @@ This API allows setting SDES of an ongoing conversation. More information about 
 
 | Method | URL                                                                                                                                             |
 | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}/sdes?ttl={ttl} |
+| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/sdes?ttl={ttl} |
 
 **Path Parameters**
 
@@ -382,7 +382,7 @@ This API allows setting SDES of an ongoing conversation. More information about 
 | :------------- | :-------------------------- | :----- | :------- | :------------------------------------------------------------------------- |
 | botDomain      | Third-Party Bots API domain | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
 | accountId      | LP site ID                  | string | Required |                                                                            |
-| conversationID | LP Conversation ID          | string | Required |                                                                            |
+| conversationId | LP Conversation ID          | string | Required |                                                                            |
 
 **Query Parameters**
 
@@ -461,7 +461,7 @@ LivePerson Messaging uses 4 different types of priorities: `URGENT`, `NORMAL`, `
 
 | Method | URL                                                                                                                                            |
 | :----- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}/ttr?ttl={ttl} |
+| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/ttr?ttl={ttl} |
 
 **Path Parameters**
 
@@ -469,7 +469,7 @@ LivePerson Messaging uses 4 different types of priorities: `URGENT`, `NORMAL`, `
 | :------------- | :-------------------------- | :----- | :------- | :------------------------------------------------------------------------- |
 | botDomain      | Third-Party Bots API domain | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
 | accountId      | LP site ID                  | string | Required |                                                                            |
-| conversationID | LP Conversation ID          | string | Required |                                                                            |
+| conversationId | LP Conversation ID          | string | Required |                                                                            |
 
 **Query Parameters**
 
@@ -526,7 +526,8 @@ curl -X POST \
 | :--- | :--------------------------------------------------------------------------- |
 | 200  | OK - request for the given API succeeded.                                    |
 | 400  | Bad request - Problem with body or query parameters or invalid bearer token. |
-| 404  | Not Found - If the provided conversation id is invalid.                      |
+| 401  | Unauthorized - Invalid bearer token.                                         |
+| 404  | Not Found - If the provided conversation Id is invalid.                      |
 | 500  | Internal server error.                                                       |
 
 **Response Body**
