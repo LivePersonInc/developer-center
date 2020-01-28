@@ -35,7 +35,15 @@ When you integrate a knowledge base with a bot via a [Knowledge Base integration
 
 #### Thresholds
 
-When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, or POOR.
+When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, or POOR. The confidence score breakdown looks like this:
+
+* VERY GOOD: 85-100% match
+
+* GOOD: 70-85% match
+
+* FAIR PLUS: 65-70% match
+
+* FAIR: 50-65% match
 
 When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify the minimum score that a result must have in order to be returned. (The highest performing article with that threshold is returned.) You can select from VERY GOOD, GOOD, or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
 

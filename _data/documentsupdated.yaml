@@ -238,6 +238,7 @@
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
+      - pagename: Leveraging Analytics
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:

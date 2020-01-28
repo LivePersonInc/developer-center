@@ -23,7 +23,7 @@ The default panel of the Domain View is the Add Intent panel. It will be the pan
 
 Once you've selected a name for your intent, you should add as many training phrases as possible by using the bottom input area. To add another training phrase after your first one, click the blue **+** sign to the right of the input area.
 
-### Training phrases
+### Adding training phrases
 
 The NLU engine uses training phrases in order to match a user input with an intent. The more training phrases you include, the more likely the NLU engine will be to accurately match the user's intent with what they were actually looking for. Generally speaking, the phrases should be complete sentences (rather than keywords like pattern matching or very long paragraphs).
 
@@ -37,4 +37,45 @@ Let's say that I have an intent which I label "check_bill". I could associate it
 
 The NLU engine will take the user input and compare it to your training phrases. If it finds a match to a degree of certainty exceeding "GOOD", it will send the intent configured to the bot. All of these phrases and similar sentences would result in the "check_bill" intent being sent to the bot and the corresponding action (configured by you in the Conversation Builder) to be triggered.
 
+#### Best practices
+
+The following are best practices to follow when creating training phrases; these help to ensure your intents are well-trained and return the results you expect.
+
+##### One sentence, not multiple.
+Use a simple, concise sentence. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
+
+##### 10-25 training phrases
+The number of training phrases that you need really depends upon your use case and type of intents. Generally, for intents, it is recommended that you have between 10 - 25 good training phrases. When you have more than that, it's likely that you have overtrained the intent, which might lead to false positives.
+
+{: .important}
 For more best practices, see [Train & Tune NLU](conversation-builder-best-practices-train-tune-nlu.html).
+
+### Training intents
+
+To test your intents, go to the Intent Builder, select the appropriate domain, tap on the tester icon (which looks like a bug) and enter an utterance into the tester. If you select a particular intent, then the tester will be testing against that specific intent. If you’d like to test across ALL intents in the domain, check the "Search in domain" box.
+
+This is what a specific intent search looks like:
+
+<img class="fancyimage" style="width:700px" src="img/retaildemo.png">
+
+Here’s the results of a "domain" search:
+
+<img class="fancyimage" style="width:700px" src="img/retaildemo1.png">
+
+Tapping on each of the intent results will give you a more detailed results breakdown.
+
+If the score is not where you’d like it, you can add more training phrases. In addition, using [entities](conversation-builder-intent-builder-entities.html) will help to increase the accuracy of your intents, as well as giving their score a boost. In the example above you can see that entities are used for ITEM_COLOR, PRODUCT_CATEGORY, etc.
+
+#### What is the intent score/threshold?
+
+Because we want to return the best response to users, our NLU has a threshold for which anything below this threshold will not be shown to the user. For intents, this threshold is set to GOOD. This is based on our NLU’s level of confidence in the match. The confidence score breakdown looks like this:
+
+* VERY GOOD: 85-100% match
+
+* GOOD: 70-85% match
+
+* FAIR PLUS: 65-70% match
+
+* FAIR: 50-65% match
+
+You cannot change the threshold when using intents (although you can do [this](knowledge-base-overview.html#thresholds) with knowledge bases).
