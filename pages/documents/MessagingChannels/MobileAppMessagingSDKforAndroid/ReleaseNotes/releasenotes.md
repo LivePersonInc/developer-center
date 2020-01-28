@@ -102,6 +102,20 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
 
+# Android Messaging SDK - Version 4.3.2
+
+**Release date:** January 29, 2020
+
+### Overview
+Android Mobile Messaging SDK version 4.3.2 release fixes a crash on Android 4.4.
+
+### Environmental Requirements
+The Android Mobile Messaging SDK version 4.3.2 uses:
+- Minimum API version 19
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
 
 # Android Messaging SDK - Version 4.3.1
 
