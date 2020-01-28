@@ -17,13 +17,81 @@ The following documentation outlines the Public API feature. This enhancement al
 Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>, if you haven't already done so.<br>
 </div>
 
-### Calling Flow for Public API
+### Flow for using Public API
 
-#### Step 1. Identify the Domain via Domain API
+#### Step 1. Identify the Third-Party Bots API Domain
 
-#### Step 1. Get Bearer Token
+To identify Third-Party Bots API endpoint user first need to get domain information via [Domain Retrieval Tool](/agent-domain-domain-api.html). Enter Account Id/Site Id in the Domain Retrieval Tool and user will be able to see the Service Names and their Base URIs attached to account. Search for `botConnectorsDomain` and then map service base URI to corresponding Third-Party Bots API Domain from the table below.
 
-Before using the our Public APIs user must get a valid bearer token otherwise the request will be rejected. For this reason you need to perform an authorization Request which in return will give you valid access token that will be used with the calling
+| Service Domain                   | Bot Connectors API Endpoint                      |
+| :------------------------------- | :----------------------------------------------- |
+| z1.bot-connectors.liveperson.net | https://bot-platform-api.fs.liveperson.com/      |
+| z2.bot-connectors.liveperson.net | https://bot-platform-api.emea.fs.liveperson.com/ |
+| z3.bot-connectors.liveperson.net | https://bot-platform-api.apac.fs.liveperson.com/ |
+
+#### Step 2. Get Bearer Token
+
+To get bearer token you must perform a login request to Third-Party Bots API Domain
+
+#### Request
+
+| Method | URL                                                                                                                                            |
+| :----- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
+| POST   | https://[{botDomain}](third-party-bots-public-api-v1.html#step-1-identify-the-third-party-bots-api-domain)/api/account/{accountId}/login?v=1.3 |
+
+**Path Parameters**
+
+| Parameter | Description            | Type   | Required | Notes                                                                      |
+| :-------- | :--------------------- | :----- | :------- | :------------------------------------------------------------------------- |
+| botDomain | Third-Party Bot domain | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
+| accountId | LP site ID             | string | Required |                                                                            |
+
+**Query Parameters**
+
+| Parameter | Description    | Type   | Required | Notes      |
+| :-------- | :------------- | :----- | :------- | :--------- |
+| v         | version of API | number | Required | value: 1.3 |
+
+**Headers**
+
+| Header       | Description      |
+| :----------- | :--------------- |
+| Content-Type | application/json |
+
+**Body**
+
+Example payload of the request
+
+```javascript
+{
+    "username": "someusername",
+    "password": "123456"
+}
+```
+
+**Example cURL**:
+
+{: .important}
+**Please note** Make sure to replace `{botDomain}`, `{accountId}`, `{userName}` and `{password}` from the below command with your information.
+
+```bash
+curl -X POST \
+  'https://{botDomain}/api/account/{accountId}/login?v=1.3' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "username": "{userName}",
+    "password": "{password}"
+}'
+
+```
+
+**Response**:
+
+```json
+{
+  "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
 
 #### Step 2. Call API
 
@@ -41,9 +109,9 @@ Currently user is allowed to carry out following actions using our Public API
 
 #### Request
 
-| Method | URL                                                                                              |
-| :----- | :----------------------------------------------------------------------------------------------- |
-| PUT    | https://{botDomain}/api/v1/account/{accountId}/conversation/{conversationID}>/messages?ttl={ttl} |
+| Method | URL                                                                                                                                                                                     |
+| :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUT    | https://[{botDomain}](third-party-bots-public-api-v1.html#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}>/messages?ttl={ttl} |
 
 **Path Parameters**
 
@@ -190,9 +258,9 @@ curl -X POST \
 
 #### Request
 
-| Method | URL                                                                                              |
-| :----- | :----------------------------------------------------------------------------------------------- |
-| PUT    | https://{botDomain}/api/v1/account/{accountId}/conversation/{conversationID}>/transfer?ttl={ttl} |
+| Method | URL                                                                                                                                                                                     |
+| :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUT    | https://[{botDomain}](third-party-bots-public-api-v1.html#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}>/transfer?ttl={ttl} |
 
 **Path Parameters**
 
@@ -247,9 +315,9 @@ curl -X POST \
 
 #### Request
 
-| Method | URL                                                                                           |
-| :----- | :-------------------------------------------------------------------------------------------- |
-| PUT    | https://{botDomain}/api/v1/account/{accountId}/conversation/{conversationID}>/close?ttl={ttl} |
+| Method | URL                                                                                                                                                                                  |
+| :----- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUT    | https://[{botDomain}](third-party-bots-public-api-v1.html#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}>/close?ttl={ttl} |
 
 **Path Parameters**
 
@@ -293,9 +361,9 @@ curl -X POST \
 
 #### Request
 
-| Method | URL                                                                                          |
-| :----- | :------------------------------------------------------------------------------------------- |
-| PUT    | https://{botDomain}/api/v1/account/{accountId}/conversation/{conversationID}>/sdes?ttl={ttl} |
+| Method | URL                                                                                                                                                                                 |
+| :----- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUT    | https://[{botDomain}](third-party-bots-public-api-v1.html#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}>/sdes?ttl={ttl} |
 
 **Path Parameters**
 
@@ -375,9 +443,9 @@ curl -X POST \
 
 #### Request
 
-| Method | URL                                                                                         |
-| :----- | :------------------------------------------------------------------------------------------ |
-| PUT    | https://{botDomain}/api/v1/account/{accountId}/conversation/{conversationID}>/ttr?ttl={ttl} |
+| Method | URL                                                                                                                                                                                |
+| :----- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUT    | https://[{botDomain}](third-party-bots-public-api-v1.html#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}>/ttr?ttl={ttl} |
 
 **Path Parameters**
 
@@ -432,7 +500,7 @@ curl -X POST \
 | Code | Response                                                                               |
 | :--- | :------------------------------------------------------------------------------------- |
 | 200  | OK - request for the given API succeeded.                                              |
-| 400  | Bad request - Problem with body or query parameters.                                   |
+| 400  | Bad request - Problem with body or query parameters or invalid bearer token.           |
 | 404  | Not Found - If the conversation provided with the request not found or active anymore. |
 | 500  | Internal server error.                                                                 |
 
