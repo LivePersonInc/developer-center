@@ -52,9 +52,9 @@ Bot settings include:
 
     If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t. If you keep this on, you can access the logged transcripts in the Bot Analytics application: Select the bot and then access the **Transcripts** page.
 
-- **Shorten URLs**: Enable this if you want to shorten the URLs sent in interactions, which can be desirable if you have lengthy web links. Disable this to keep URLs as they are. The default value is Disabled (Off). For more information on URL shortening, see [here](conversation-builder-interactions-interaction-basics.html#url-shortening).
+- **Shorten URLs**: Enable this if you want to shorten the URLs sent in interactions, which can be desirable if you have lengthy web links. Disable this to keep URLs as they are. The default value is Disabled (Off). For more on URL shortening, see [here](conversation-builder-interactions-interaction-basics.html#url-shortening).
 
-    *Facebook only*: If you enable this setting, the owner of the Facebook page must go into the Facebook page settings and [whitelist](conversation-builder-interactions-interaction-basics.html#whitelisting) the abbreviated domain that will be used. That abbreviated domain, which varies by region, is displayed here, next to this setting.
+    If you enable this setting, the shortened domain must be whitelisted. For more on whitelisting, see [here](conversation-builder-interactions-interaction-basics.html#whitelisting).
 
 - **Default User-Friendly Response**: This is an *error* response that gets sent to the user. Because you can supply the response, you can customize it in terms of substance and language (Spanish, Italian, etc.). If you enter a value here, it's used in two circumstances.
     

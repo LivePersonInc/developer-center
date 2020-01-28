@@ -47,13 +47,15 @@ The types of text that you can send in a Conversation Builder interaction vary d
 * `<br>`
 
 ### Whitelisting
-The domains in all URLs for images, videos, audio files, and button links used in interactions must be whitelisted. Contact your LivePerson representative to assist with this.
+You must whitelist the domains in all URLs for images, videos, audio files, and button links used in interactions. Contact your LivePerson representative to assist with this.
+
+If you've enabled the **Shorten URLs** setting in a bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) to shorten lengthy web links, the shortened domain must also be whitelisted. The shortened domain varies by region, and the domain for your region appears below the setting. An example is below.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bot_shortenURLs.png">
 
 #### Whitelisting in Facebook
 
-For Facebook, the owner of the Facebook page must whitelist all web URLs within the Facebook page settings.
-
-If you're using URL shortening to shorten lengthy web links, the abbreviated domain that's used must also be whitelisted in the Facebook page settings. To obtain the specific, abbreviated domain to whitelist (which varies by region), go to the bot's **Bot Settings** page and refer to the **Shorten URLs** setting.
+For Facebook, the owner of the Facebook page must also whitelist all web URLs within the Facebook page settings.
 
 ### URL shortening
 
@@ -68,6 +70,8 @@ http://www.myexample.com/folder1/folder2/veryverylongstringhere.html
 http://{abbreviated domain}/{unique code}
 
 If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., http://www.mysite.com), the URL isn't shortened.
+
+If you enable URL shortening, the shortened domain must be whitelisted; for more information, see *Whitelisting* above.
 
 ### Images
 
