@@ -95,7 +95,7 @@ curl -X POST \
 
 #### Step 2. Call API
 
-Currently, thee user is allowed to carry out following actions using our Public API
+Currently, the user is allowed to carry out following actions using our Public API
 
 <ul>
     <li><a href='#send-messages'>Sending Messages</a></li>
@@ -398,11 +398,11 @@ This API allows setting SDES of an ongoing conversation. More information about 
 
 **Body**
 
-| Parameter      | Description   | Type   | Required | Notes                                              |
-| :------------- | :------------ | :----- | :------- | :------------------------------------------------- |
-| sdes           | SDES          | array  | Required | Valid SDES defined in the developers documentation |
-| sharkVisitorId | LP Visitor ID | string | Required |                                                    |
-| sharkSessionId | LP Session ID | string | Required |                                                    |
+| Parameter      | Description   | Type   | Required | Notes                                                                                                           |
+| :------------- | :------------ | :----- | :------- | :-------------------------------------------------------------------------------------------------------------- |
+| sdes           | SDES          | array  | Required | Valid SDES defined in the [developers documentation](engagement-attributes-types-of-engagement-attributes.html) |
+| sharkVisitorId | LP Visitor ID | string | Required |                                                                                                                 |
+| sharkSessionId | LP Session ID | string | Required |                                                                                                                 |
 
 Example payload of the request with setting visitors name and gender
 
