@@ -17,8 +17,6 @@ The LivePerson Functions' Secrets Storage allows you to centrally store, access 
 
 **Note:** Secrets should be created before deploying functions. In case you want to create a secret for a function that is already deployed, please redeploy the function.
 
-**Note:** After the creation/update of a secret, it is no longer readable by users (admins). It may only be read by lambdas, which can also update it if required.
-
 Internally, LivePerson Functions uses [HashiCorp Vault](https://www.hashicorp.com/products/vault/) to encrypt your secrets using a 256-bit AES cipher in GCM mode with a randomly generated 96-bit nonce before writing them to its persistent storage.
 
 Secrets can be maintained via the **Settings** tab as a key/value storage. Each value can be of type number, string or JSON.
@@ -39,7 +37,7 @@ Based on the [permission concept](function-as-a-service-getting-started.html#set
 <tbody>
   <tr>
     <td>FaaS-Admin</td>
-    <td>Use this permission sparsely to keep the management of the secrets more restrictive and dedicated to a single user. Only the FaaS Admin can create, edit & delete secrets.</td>
+    <td>Use this permission sparsely in order to keep the management of the secrets more restrictive and dedicated to a single user. Only the FaaS Admin is able to create, edit, delete & read a secret.</td>
   </tr>
   <tr>
     <td>FaaS-Developer</td>
