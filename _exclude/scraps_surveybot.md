@@ -1,3 +1,7 @@
+### Field in Bot Settings
+
+- **Enable Bot**: This Online/Offline setting is displayed for survey bots only, not for custom bots. Use it to turn a survey bot on and off, respectively. When the bot is online, it responds to user messages. When it is offline, it doesn't. Taking a published survey bot offline can be useful if you need to temporarily remove it from your customer traffic flow. The default value is Online.
+
 ### Types of bots
 
 There are two, general types of bots:
