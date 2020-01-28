@@ -111,9 +111,9 @@ This API allows The user to send The message(s) to an ongoing conversation. We s
 
 #### Request
 
-| Method | URL                                                                                                                                                  |
-| :----- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}>/messages?ttl={ttl} |
+| Method | URL                                                                                                                                                 |
+| :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}/messages?ttl={ttl} |
 
 **Path Parameters**
 
@@ -265,9 +265,9 @@ This API allows an ongoing conversation to be transferred to another skill. User
 
 #### Request
 
-| Method | URL                                                                                                                                                  |
-| :----- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}>/transfer?ttl={ttl} |
+| Method | URL                                                                                                                                                 |
+| :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}/transfer?ttl={ttl} |
 
 **Path Parameters**
 
@@ -324,9 +324,9 @@ This API allows an ongoing conversation to be ended.
 
 #### Request
 
-| Method | URL                                                                                                                                               |
-| :----- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}>/close?ttl={ttl} |
+| Method | URL                                                                                                                                              |
+| :----- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}/close?ttl={ttl} |
 
 **Path Parameters**
 
@@ -372,9 +372,9 @@ This API allows setting SDES of an ongoing conversation. More information about 
 
 #### Request
 
-| Method | URL                                                                                                                                              |
-| :----- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}>/sdes?ttl={ttl} |
+| Method | URL                                                                                                                                             |
+| :----- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}/sdes?ttl={ttl} |
 
 **Path Parameters**
 
@@ -459,9 +459,9 @@ LivePerson Messaging uses 4 different types of priorities: `URGENT`, `NORMAL`, `
 
 #### Request
 
-| Method | URL                                                                                                                                             |
-| :----- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}>/ttr?ttl={ttl} |
+| Method | URL                                                                                                                                            |
+| :----- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
+| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationID}/ttr?ttl={ttl} |
 
 **Path Parameters**
 
