@@ -779,6 +779,7 @@
       - subpagename: Photo and File Sharing
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
+      - subpagename: Scroll Behavior Configuration
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -877,6 +878,7 @@
         - pagename: Card Template
         - pagename: Carousel Template
         - pagename: Quick Replies Template
+        - pagename: Multiple Checklist Template
         - pagename: Best Practices
         - pagename: Complex Layout
         - pagename: Limitations
