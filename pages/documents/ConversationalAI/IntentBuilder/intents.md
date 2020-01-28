@@ -39,7 +39,7 @@ The NLU engine will take the user input and compare it to your training phrases.
 
 #### Best practices
 
-The following are best practices to follow when creating training phrases; these help to ensure your intents are well-trained and return the results you expect.
+The following are best practices when creating training phrases; these help to ensure your intents are well-trained and return the results you expect.
 
 ##### One sentence, not multiple.
 Use a simple, concise sentence. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
