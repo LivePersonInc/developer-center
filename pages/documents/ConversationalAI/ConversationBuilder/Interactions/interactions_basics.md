@@ -47,9 +47,14 @@ The types of text that you can send in a Conversation Builder interaction vary d
 * `<br>`
 
 ### Whitelisting
-You must whitelist the domains in all URLs for images, videos, audio files, and button links used in interactions. Contact your LivePerson representative to assist with this.
 
-If you've enabled the **Shorten URLs** setting in a bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) to shorten lengthy web links, the shortened domain must also be whitelisted. The shortened domain varies by region, and the domain for your region appears below the setting. An example is below.
+#### IP whitelisting
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place and you're accessing Conversation Builder from within LiveEngage (i.e., your browser is pointing to the "liveperson.net" domain), you must whitelist LivePerson's IP addresses within LiveEngage. You can find these details [here](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center. However, if you're accessing Conversation Builder directly (i.e., your browser is pointing to the "livepersonai.com" domain), please contact LivePerson Support to obtain the AWS IP addresses to whitelist.
+
+#### Domain whitelisting
+You must whitelist the domains in all URLs for images, videos, audio files, and button links used in interactions. This must be done both [within LiveEngage](https://knowledge.liveperson.com/security-regulations-security-whitelist-your-domains-for-lp-monitoring.html) and within your network. Contact your LivePerson Support to assist with this.
+
+If you've enabled the **Shorten URLs** setting in a bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) to shorten lengthy web links, the shortened domain must also be whitelisted [within LiveEngage](https://knowledge.liveperson.com/security-regulations-security-whitelist-your-domains-for-lp-monitoring.html) and within your network. The shortened domain varies by region, and the domain for your region appears below the setting. An example is below.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bot_shortenURLs.png">
 
