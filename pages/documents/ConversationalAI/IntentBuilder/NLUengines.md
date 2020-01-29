@@ -47,6 +47,7 @@ Key characteristics include:
 * From an NLU processing perspective, performs well regardless of the number of intents and training phrases involved. However, if you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed.
 * Recommended over NLU v2 if a domain has a lot of entities due to better processing of the entities.
 * Doesn't require the model to be trained, which can save time.
+* Doesn't work with LiveIntent.
 * Supports English and Spanish.
 
 #### LivePerson NLU v2
