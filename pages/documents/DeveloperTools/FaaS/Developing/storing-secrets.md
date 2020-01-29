@@ -19,10 +19,10 @@ Based on the below roles and permission users can interact with the Secret Stora
 
 {: .notice}
 <br />
-Try to avoid storing **user-credentials** within the Functions' Secrets Storage. <br />
-Secrets need to be created **before** deploying the lambda. <br />
-Deleting a used secret will **directly** impact lambdas using it. <br />
-Created secrets can **not be viewed** in cleartext via the LivePerson Functions UI. 
+Try to avoid storing <b>user-credentials</b> within the Functions' Secrets Storage. <br />
+Secrets need to be created <b>before</b> deploying the lambda. <br />
+Deleting a used secret will <b>directly</b> impact lambdas using it. <br />
+Created secrets can <b>not be viewed</b> in cleartext via the LivePerson Functions UI. 
 
 
 <img src="img/faas-secret.png" alt="LivePerson Functions Secret Store" style="width:100%;"/>
