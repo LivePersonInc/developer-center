@@ -1,11 +1,11 @@
 ---
-pagename: Public API (V1)
+pagename: Public API
 redirect_from:
-  - bot-connectors-public-api-v1.html
+  - bot-connectors-public-api.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
-permalink: third-party-bots-public-api-v1.html
+permalink: third-party-bots-public-api.html
 indicator:
 ---
 
