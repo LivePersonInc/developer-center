@@ -48,16 +48,16 @@ The types of text that you can send in a Conversation Builder interaction vary d
 
 ### Whitelisting
 
-#### Domain whitelisting
-You must whitelist the domains *in all URLs for images, videos, and audio files* used in interactions. Contact LivePerson Support to assist with this.
+#### Images and other media
+You must whitelist the domains in all URLs for images, videos, and audio files used in interactions. Contact LivePerson Support to assist with this.
 
-If you've enabled the **Shorten URLs** setting in a bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) to shorten lengthy web links, the shortened domain must also be whitelisted. The shortened domain varies by region, and the domain for your region appears below the setting. An example is below.
+If you've enabled the **Shorten URLs** setting in a bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) to shorten lengthy web links, the shortened domain that's applied to all URLs must also be whitelisted. The shortened domain varies by region, and the domain for your region appears below the setting. An example is below.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bot_shortenURLs.png">
 
-#### Whitelisting in Facebook
+#### Web link URLs (Facebook only)
 
-For Facebook, the owner of the Facebook page must whitelist the domains (shortened or otherwise) *in all web link URLs*, *including button links*, within the Facebook page settings.
+For Facebook, the owner of the Facebook page must whitelist the domains (shortened or otherwise) in all web link URLs, including button links, within the Facebook page settings.
 
 ### URL shortening
 
