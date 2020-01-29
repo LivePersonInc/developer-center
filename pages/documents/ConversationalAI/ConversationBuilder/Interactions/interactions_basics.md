@@ -48,19 +48,16 @@ The types of text that you can send in a Conversation Builder interaction vary d
 
 ### Whitelisting
 
-#### IP whitelisting
-If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place and you're accessing Conversation Builder from within LiveEngage (i.e., your browser is pointing to the "liveperson.net" domain), you must whitelist LivePerson's IP addresses within LiveEngage. You can find these details [here](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center. However, if you're accessing Conversation Builder directly (i.e., your browser is pointing to the "livepersonai.com" domain), please contact LivePerson Support to obtain the AWS IP addresses to whitelist.
-
 #### Domain whitelisting
-You must whitelist the domains in all URLs for images, videos, audio files, and button links used in interactions. This must be done both [within LiveEngage](https://knowledge.liveperson.com/security-regulations-security-whitelist-your-domains-for-lp-monitoring.html) and within your network. Contact your LivePerson Support to assist with this.
+You must whitelist the domains in all URLs for images, videos, and audio files used in interactions. Contact LivePerson Support to assist with this.
 
-If you've enabled the **Shorten URLs** setting in a bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) to shorten lengthy web links, the shortened domain must also be whitelisted [within LiveEngage](https://knowledge.liveperson.com/security-regulations-security-whitelist-your-domains-for-lp-monitoring.html) and within your network. The shortened domain varies by region, and the domain for your region appears below the setting. An example is below.
+If you've enabled the **Shorten URLs** setting in a bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) to shorten lengthy web links, the shortened domain must also be whitelisted. The shortened domain varies by region, and the domain for your region appears below the setting. An example is below.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bot_shortenURLs.png">
 
 #### Whitelisting in Facebook
 
-For Facebook, the owner of the Facebook page must also whitelist all web URLs within the Facebook page settings.
+For Facebook, the owner of the Facebook page must whitelist the domains (shortened or otherwise) in all web link URLs, including button links, within the Facebook page settings.
 
 ### URL shortening
 
@@ -80,7 +77,7 @@ If you enable URL shortening, the shortened domain must be whitelisted; for more
 
 ### Images
 
-As long as the image is [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting), it will be sent to the consumer. Provide high-resolution images in the appropriate format: JPEG for photos, PNG for bitmap/raster artwork. Make sure the images are interesting and aesthetically pleasing, and verify their quality before use. Keep the images as small in size as possible, so they load quickly.
+As long as the image is whitelisted (discussed above), it will be sent to the consumer. Provide high-resolution images in the appropriate format: JPEG for photos, PNG for bitmap/raster artwork. Make sure the images are interesting and aesthetically pleasing, and verify their quality before use. Keep the images as small in size as possible, so they load quickly.
 
 The Apple developers' site provides some good, general guidelines regarding resolution, size, optimization, and more; you can find this [here](https://developer.apple.com/design/human-interface-guidelines/business-chat/interactive-messages/about-interactive-messages/#images).
 
