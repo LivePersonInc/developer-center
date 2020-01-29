@@ -50,10 +50,11 @@ If you set the user message instead, the receiver bot must match the user messag
 
 #### Can I set both the intent ID and the user message?
 
+Yes, this is possible.
 
 #### What happens if I enable the Transfer Context object, but I don't set an intent ID or user message?
 
-If the receiver bot doesn't find an intent ID or user message in the Tango Context object, or if there isn't a Tango Context object available, the receiver bot looks at the last user message in conversation and uses that to try to determine the appropriate dialog to start.
+The purpose of enabling the Transfer Context object is to be able to set an intent ID or user message, so typically this scenario shouldn't happen. However, if the receiver bot doesn't find an intent ID or user message in the Tango Context object, the old escalation flow continues.
 
 #### How do I transfer other data from the sender bot to the receiver bot?
 
