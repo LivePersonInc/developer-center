@@ -30,7 +30,7 @@ To pass the conversational context to the receiver bot, you need to do two thing
 
     This enables your use of the Tango Context object that is sent from the sender bot to the receiver bot during the transfer. Now you can set an intent ID or user message in the object.
 
-2. In the Pre-Process Code in the integration interaction, use the `setBotTangoContextVariable` scripting function to set either an intent ID or a user message in the Tango Context object. In our example below, we've set an intent ID.
+2. Somewhere in the dialog *before* calling the escalation, use the `setBotTangoContextVariable` scripting function to set either an intent ID or a user message in the Tango Context object. In our example below, we've set an intent ID, and we've done this in the Pre-Process Code in the integration interaction.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab2.png">
 
