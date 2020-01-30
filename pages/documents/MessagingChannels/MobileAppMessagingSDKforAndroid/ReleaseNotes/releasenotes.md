@@ -18,7 +18,7 @@ indicator: messaging
 **Release date:** January 29, 2020
 
 ### Overview
-Android Mobile Messaging SDK version 5.1.1 release fixes a bug that might lead to crash of messaging on Android KitKat(4.4).
+Android Mobile Messaging SDK version 5.1.1 release fixes a bug that might lead to a crash of the messaging service on Android KitKat(4.4).
 
 ### Environmental Requirements
 The Android Mobile Messaging SDK version 5.1.1 uses:
@@ -120,7 +120,7 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 **Release date:** January 29, 2020
 
 ### Overview
-Android Mobile Messaging SDK version 4.3.2 release fixes a bug that might lead to crash of messaging on Android KitKat(4.4).
+Android Mobile Messaging SDK version 4.3.2 release fixes a bug that might lead to a crash of the messaging service on Android KitKat(4.4).
 
 ### Environmental Requirements
 The Android Mobile Messaging SDK version 4.3.2 uses:
