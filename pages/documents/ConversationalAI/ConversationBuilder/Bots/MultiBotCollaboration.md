@@ -45,7 +45,7 @@ To pass the conversational context to the receiver bot, you need to do two thing
 During the escalation (transfer), the receiver bot checks for the availability of a Tango Context object. If the object is available, the bot then checks whether it contains an intent ID. If an intent ID isn't available, it then checks whether the object contains a user message. Based on these findings, after the transfer is completed, the receiver bot starts the  appropriate dialog, one that's tied to the intent or that's matched to the user message.
 
 ### The default transfer flow
-If you don't enable the Transfer Context object in the LivePerson agent escalation, the default transfer (escalation) flow is used. This works as follows:
+You don't have to enable the Transfer Context object in the LivePerson agent escalation and set an intent ID or user message in the object, although this does make the transfer more seamless. If you don't do this, the default transfer (escalation) flow is used. This works as follows:
 
 NEED TO INTEGRATE THIS INFO:
 
@@ -68,6 +68,10 @@ If you set the user message instead, the receiver bot must match the user messag
 
 Yes, this is possible.
 
+#### How do I obtain the intent ID?
+
+NEED TO ADD
+
 #### How do I transfer other data from the sender bot to the receiver bot?
 
 You can only set an intent ID or user message in the Tango Context object. To transfer other data between the sender bot and receiver bot, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
@@ -75,3 +79,5 @@ You can only set an intent ID or user message in the Tango Context object. To tr
 #### What happens if I enable the Transfer Context object, but I don't set an intent ID or user message?
 
 The purpose of enabling the Transfer Context object is to be able to set an intent ID or user message, so typically this scenario shouldn't happen. However, if the receiver bot doesn't find an intent ID or user message in the Tango Context object, the default transfer (escalation) flow is used.
+
+Conversely, if you set an intent ID or user message, but you don't enable the Tango Context object, the intent ID or user message is not evaluated. Here again, the default transfer (escalation) flow is used.
