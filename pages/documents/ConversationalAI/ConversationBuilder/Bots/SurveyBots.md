@@ -14,7 +14,7 @@ indicator: both
 
 A survey bot lets you collect feedback from consumers at the end of a conversation with a custom bot or human agent. The survey bot can ask:
 
-* Specialized questions designed to provide Customer Satisfaction (CSAT), Net Promoter Score (NPS), and First Contact Resolution (FCR) survey metrics.
+* Specialized questions designed to provide Customer Satisfaction (CSAT), Net Promoter Score (NPS), and First Contact Resolution (FCR) survey metrics
 * Questions that reflect your brand's key performance indicators
 * Free-text questions
 
@@ -24,21 +24,17 @@ INSERT SCREEN CAP OF PREVIEW OF SURVEY
 
 ### Survey bots vs. custom bots
 
-Survey bots are like custom bots in many ways, most notably:
+When creating a survey bot, you work in Conversation Builder in the same, general way that you do with a custom bot. Create the bot and define its dialog flow, adding the interactions that meet your survey requirements.
 
-* You work in Conversation Builder in the same, general way that you do with a custom bot. Create the survey bot and define its dialog flow, adding the interactions that meet your survey requirements.
-* You can preview survey bots.
-* You can create [versions and releases](conversation-builder-versions-releases.html) of survey bots.
-* Bot transcripts can be logged.
+The following are key similarities and differences between survey bots and custom bots.
 
-However, there are some important ways that survey bots differ from custom bots:
-
-* There are a few interactions that are available only to survey bots, namely, the CSAT, NPS, and FCR interactions.
-* You can use only a subset of the standard interactions in survey bots.
-* Survey bots have a few, additional bot settings that are specific to surveys.
-* You *don't* deploy survey bots by creating agent connectors and starting them. Instead, survey bots use a simpler and quicker "Publish" process, and the rest happens behind the scenes.
-
-All of these differences are discussed in more detail farther below.
+| | Survey bots | Custom bots |
+| --- | --- | --- |
+| Import and export bot | | Yes |
+| Create versions and releases | | Yes |
+| Preview | Yes | Yes |
+| Deploy bot | Yes, via a Publish mechanism | Yes, via deployment of an agent connector |
+| Log transcripts | Yes | Yes |
 
 {: .important}
 There isn't a one-to-one correspondence between survey bots and custom bots. Survey bots are more like "manager" bots. You assign a skill or set of skills to a survey bot. When a conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey. In this way, a *single* survey bot is responsible for triggering surveys for *many* custom bots, all based on skill.
@@ -90,16 +86,16 @@ Some setup of your LiveEngage environment is required before using this feature.
     * **Name**: Enter a name for the bot that's concise and clear.
     * **Description**: Enter a description that's meaningful to you and others. 
     * **Bot Language**: Select a language.
-    * **Skill**: Select the skill(s) that will trigger this survey bot.
+    * **Skill**: Select the skill(s) that will trigger this survey bot. A skill can't be assigned to more than one survey bot.
 5. Click **Create Bot**.
 
 ### Step 3 - Build out the dialog flow
 
 In this step, you 1) add a greeting message, 2) build out the dialog flow using the available interactions to define the survey and its logic, and 3) finish with a closing message to send at the end of the survey.
 
-#### Adding survey-specific interactions
+#### Adding survey interactions
 
-There are a few, predefined interactions that are available only to survey bots, namely, the CSAT, NPS, and FCR interactions. They're predefined in the sense that you can't edit their structure; you can only edit their content. For example, you can't change the number of quick replies, but you can change the question text or quick reply names.
+There are a few, predefined interactions that are available only to survey bots, namely, the CSAT, NPS, and FCR interactions. They're predefined in the sense that you can't edit their structure; you can only edit their content. For example, you can't change the number of responses, but you can change the question text and response text.
 
 {: .important}
 In a single survey bot, you can include only one of each survey interaction type.
@@ -119,19 +115,25 @@ In an NPS interaction, don't enable Skip if your targeted channel is Facebook. F
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_fcr.png">
 
-#### Adding standard interactions
-
-You can use only a subset of the standard interaction types in survey bots; unavailable interactions are hidden from view.
-
-<img class="fancyimage" style="width:200px" src="img/ConvoBuilder/surveyBot_interactions.png">
-
-Use the standard interactions to ask questions that reflect your brand's custom key performance indicators (KPIs) and/or other free-text questions. For example, you might want to obtain the consumer's age.
-
 #### Marking questions as optional
 
-To add a Skip button and thereby make a survey question optional, click the **Skip** slider to turn it on.
+To add a Skip option and thereby make a survey question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
 
-SCREEN CAPTURE
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_skip.png">
+
+#### Making display decisions
+
+Use the **Display choices as** setting on the **Settings** tab in the **Interaction Details** of a survey interaction to select whether to display the response choices as quick replies (the default) or buttons.
+
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/surveyBot_displayChoices.png">
+
+#### Adding standard interactions
+
+You can use only a subset of the standard interaction types in survey bots; unavailable interactions are hidden from view on the toolbar.
+
+<img class="fancyimage" style="width:100px" src="img/ConvoBuilder/surveyBot_interactions.png">
+
+Use the standard interactions to ask questions that reflect your brand's custom key performance indicators (KPIs) and/or other free-text questions. For example, you might want to obtain the consumer's age.
 
 #### Handling free text answers
 
