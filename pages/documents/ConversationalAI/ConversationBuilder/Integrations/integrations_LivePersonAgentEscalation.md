@@ -11,9 +11,10 @@ indicator: both
 
 Use a LivePerson Agent Escalation integration when you want to transfer a conversation to either a live agent or another bot.
 
-Transferring to another bot is the same as transferring to a live agent. The bot must be set up as a user agent, assigned a skill, and deployed, as you would normally do to connect a bot to LiveEngage. Keep in mind that this is a different bot from the original bot, so it will not have all the same context (variables, etc.) that you might have collected in the original bot. Sharing information between bots is fairly complex and sometimes requires the use of SDEs.
-
 For some practice with this integration type, complete the [Connect to LiveEngage](conversation-builder-getting-started-4-connect-to-liveengage.html) tutorial.
+
+{: .important}
+For information on performing bot-to-bot transfers in specific, see [here](conversation-builder-bots-bot-to-bot-transfers.html).
 
 ### Add a LivePerson Agent Escalation
 

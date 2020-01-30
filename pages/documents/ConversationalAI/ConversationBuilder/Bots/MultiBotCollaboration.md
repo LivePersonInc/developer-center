@@ -18,9 +18,15 @@ However, while it's advantageous to have multiple--even many--bots that automate
 
 This type of collaboration and hand-off between bots is sometimes called the "bot tango."
 
-### Seamless transfers
+### About bot-to-bot transfers
 
-A bot-to-bot transfer is a [LivePerson agent escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) where you transfer the conversation to a skill that's assigned to a bot agent in specific. What makes the transfer *seamless* to the consumer is passing the conversational context--an intent or user message--from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful hand-off.
+A bot-to-bot transfer is a [LivePerson agent escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) where you transfer the conversation to a skill that's assigned to a bot agent in specific. In this way, it's very similar to transferring a conversation to a live agent. The bot must be set up as a user agent; the user agent must be assigned a skill; and the bot must be deployed, as you would normally do to connect a bot to LiveEngage.
+
+Keep in mind that receiver bot is different from the sender bot, so the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. You can share this information between bots using the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
+
+### Making transfers "seamless" with the Tango Context
+
+In a bot-to-bot transfer, what makes the transfer *seamless* to the consumer is passing the conversational context--an intent or user message--from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful hand-off.
 
 To pass the conversational context to the receiver bot, you need to do two things:
 
@@ -38,6 +44,16 @@ To pass the conversational context to the receiver bot, you need to do two thing
 
 During the escalation (transfer), the receiver bot checks for the availability of a Tango Context object. If the object is available, the bot then checks whether it contains an intent ID. If an intent ID isn't available, it then checks whether the object contains a user message. Based on these findings, after the transfer is completed, the receiver bot starts the  appropriate dialog, one that's tied to the intent or that's matched to the user message.
 
+### The default transfer flow
+If you don't enable the Transfer Context object in the LivePerson agent escalation, the default transfer (escalation) flow is used. This works as follows:
+
+NEED TO INTEGRATE THIS INFO:
+
+there’s 2 cases from transferring from bot A to bot B:
+
+* if bot A responded to the last user message as a part of the agent escalation, “hi” will be sent to bot B
+* if bot A did not respond to the last user message but only escalated, the last user message will be sent to bot B
+
 ### FAQs
 
 #### Which do I set - the intent ID or the user message?
@@ -52,10 +68,10 @@ If you set the user message instead, the receiver bot must match the user messag
 
 Yes, this is possible.
 
-#### What happens if I enable the Transfer Context object, but I don't set an intent ID or user message?
-
-The purpose of enabling the Transfer Context object is to be able to set an intent ID or user message, so typically this scenario shouldn't happen. However, if the receiver bot doesn't find an intent ID or user message in the Tango Context object, the old escalation flow continues.
-
 #### How do I transfer other data from the sender bot to the receiver bot?
 
 You can only set an intent ID or user message in the Tango Context object. To transfer other data between the sender bot and receiver bot, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
+
+#### What happens if I enable the Transfer Context object, but I don't set an intent ID or user message?
+
+The purpose of enabling the Transfer Context object is to be able to set an intent ID or user message, so typically this scenario shouldn't happen. However, if the receiver bot doesn't find an intent ID or user message in the Tango Context object, the default transfer (escalation) flow is used.
