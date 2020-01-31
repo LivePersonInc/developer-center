@@ -54,6 +54,8 @@ Bot settings include:
 
     If you enable this setting, the shortened domain must be whitelisted. For more on whitelisting, see [here](conversation-builder-interactions-interaction-basics.html#whitelisting).
 
+    To support backwards compatibility, button interactions in specific use URL shortening even though the new Shorten URLs setting is set initially to Off. If you want to disable URL shortening for buttons, you need to change the underlying value in the database for buttons from Null to Off. To do this, enable the setting, save the change, disable the setting, and then save the change again. From this point forward, button interactions will respect the value of the setting and work like all other interactions.
+
 - **Default User-Friendly Response**: This is an *error* response that gets sent to the user. Because you can supply the response, you can customize it in terms of substance and language (Spanish, Italian, etc.). If you enter a value here, it's used in two circumstances.
     
     First, when the bot encounters errors or throws exceptions, many times a default error response of, "Not able to understand your question. Can you please re-phrase it?" is sent to the user. Since this message is the same as the built-in, default Fallback message, it might confuse the user. To send a different response when errors occur, enter a value here. It won't replace or affect the Fallback message or a Fallback dialog, as they serve different purposes. Fallback handles when the user's utterance doesn't match a pattern or intent. In contrast, this error response is sent when the bot encounters an error or throws an exception.
