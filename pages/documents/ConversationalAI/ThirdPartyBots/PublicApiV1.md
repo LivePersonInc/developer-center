@@ -113,7 +113,7 @@ This API allows The user to send The message(s) to an ongoing conversation. We s
 
 | Method | URL                                                                                                                                                 |
 | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/messages?ttl={ttl} |
+| POST   | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/messages?ttl={ttl} |
 
 **Path Parameters**
 
@@ -131,9 +131,10 @@ This API allows The user to send The message(s) to an ongoing conversation. We s
 
 **Headers**
 
-| Header       | Description      |
-| :----------- | :--------------- |
-| Content-Type | application/json |
+| Header        | Description          |
+| :------------ | :------------------- |
+| Content-Type  | application/json     |
+| Authorization | Bearer {bearerToken} |
 
 **Body**
 
@@ -238,7 +239,7 @@ Example payload of the request with Simple Text, Pause/Delay, [Structured Conten
 **Example cURL**:
 
 {: .important}
-**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and `{bearerToken}` from the below command with your information
+**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and [`{bearerToken}`](#step-2-get-bearer-token) from the below command with your information
 
 ```bash
 curl -X POST \
@@ -259,6 +260,12 @@ curl -X POST \
 
 ```
 
+**Response Body**
+
+| Attribute name | Description                         |
+| :------------- | :---------------------------------- |
+| commandId      | Identifier of the requested command |
+
 ### Transfer Conversation
 
 This API allows an ongoing conversation to be transferred to another skill. User has to provide a skill name that is created previously. The skill name is case-sensitive.
@@ -267,7 +274,7 @@ This API allows an ongoing conversation to be transferred to another skill. User
 
 | Method | URL                                                                                                                                                 |
 | :----- | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/transfer?ttl={ttl} |
+| POST   | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/transfer?ttl={ttl} |
 
 **Path Parameters**
 
@@ -285,9 +292,10 @@ This API allows an ongoing conversation to be transferred to another skill. User
 
 **Headers**
 
-| Header       | Description      |
-| :----------- | :--------------- |
-| Content-Type | application/json |
+| Header        | Description          |
+| :------------ | :------------------- |
+| Content-Type  | application/json     |
+| Authorization | Bearer {bearerToken} |
 
 **Body**
 
@@ -305,7 +313,7 @@ Example payload of the request with skill name `human_skill`.
 **Example cURL**:
 
 {: .important}
-**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}`, `{bearerToken}` and `{skillName}` from the below command with your information
+**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}`, [`{bearerToken}`](#step-2-get-bearer-token) and `{skillName}` from the below command with your information
 
 ```bash
 curl -X POST \
@@ -318,6 +326,12 @@ curl -X POST \
 
 ```
 
+**Response Body**
+
+| Attribute name | Description                         |
+| :------------- | :---------------------------------- |
+| commandId      | Identifier of the requested command |
+
 ### Close Conversation
 
 This API allows an ongoing conversation to be ended.
@@ -326,7 +340,7 @@ This API allows an ongoing conversation to be ended.
 
 | Method | URL                                                                                                                                              |
 | :----- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/close?ttl={ttl} |
+| POST   | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/close?ttl={ttl} |
 
 **Path Parameters**
 
@@ -344,9 +358,10 @@ This API allows an ongoing conversation to be ended.
 
 **Headers**
 
-| Header       | Description      |
-| :----------- | :--------------- |
-| Content-Type | application/json |
+| Header        | Description          |
+| :------------ | :------------------- |
+| Content-Type  | application/json     |
+| Authorization | Bearer {bearerToken} |
 
 **Body**
 
@@ -355,7 +370,7 @@ There is no request body for this API.
 **Example cURL**:
 
 {: .important}
-**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and `{bearerToken}` from the below command with your information
+**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and [`{bearerToken}`](#step-2-get-bearer-token) from the below command with your information
 
 ```bash
 curl -X POST \
@@ -366,6 +381,12 @@ curl -X POST \
 
 ```
 
+**Response Body**
+
+| Attribute name | Description                         |
+| :------------- | :---------------------------------- |
+| commandId      | Identifier of the requested command |
+
 ### Set SDES
 
 This API allows setting SDES of an ongoing conversation. More information about available SDES can be [found here](engagement-attributes-types-of-engagement-attributes.html).
@@ -374,7 +395,7 @@ This API allows setting SDES of an ongoing conversation. More information about 
 
 | Method | URL                                                                                                                                             |
 | :----- | :---------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/sdes?ttl={ttl} |
+| POST   | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/sdes?ttl={ttl} |
 
 **Path Parameters**
 
@@ -392,9 +413,10 @@ This API allows setting SDES of an ongoing conversation. More information about 
 
 **Headers**
 
-| Header       | Description      |
-| :----------- | :--------------- |
-| Content-Type | application/json |
+| Header        | Description          |
+| :------------ | :------------------- |
+| Content-Type  | application/json     |
+| Authorization | Bearer {bearerToken} |
 
 **Body**
 
@@ -426,7 +448,7 @@ Example payload of the request with setting visitors name and gender
 **Example cURL**:
 
 {: .important}
-**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}`, `{bearerToken}`, `{visitorId}` and `{sessionId}` from the below command with your information
+**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}`, [`{bearerToken}`](#step-2-get-bearer-token), `{visitorId}` and `{sessionId}` from the below command with your information
 
 ```bash
 curl -X POST \
@@ -450,6 +472,12 @@ curl -X POST \
 
 ```
 
+**Response Body**
+
+| Attribute name | Description                         |
+| :------------- | :---------------------------------- |
+| commandId      | Identifier of the requested command |
+
 ### Set Time to Response (TTR)
 
 LivePerson Messaging uses 4 different types of priorities: `URGENT`, `NORMAL`, `PRIORITIZED` and `CUSTOM`. This API allows setting TTR for the ongoing conversation.
@@ -461,7 +489,7 @@ LivePerson Messaging uses 4 different types of priorities: `URGENT`, `NORMAL`, `
 
 | Method | URL                                                                                                                                            |
 | :----- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| PUT    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/ttr?ttl={ttl} |
+| POST   | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/ttr?ttl={ttl} |
 
 **Path Parameters**
 
@@ -479,9 +507,10 @@ LivePerson Messaging uses 4 different types of priorities: `URGENT`, `NORMAL`, `
 
 **Headers**
 
-| Header       | Description      |
-| :----------- | :--------------- |
-| Content-Type | application/json |
+| Header        | Description          |
+| :------------ | :------------------- |
+| Content-Type  | application/json     |
+| Authorization | Bearer {bearerToken} |
 
 **Body**
 
@@ -505,7 +534,7 @@ In case of `CUSTOM` as `ttrType` user must provide a value. The unit of value is
 **Example cURL**:
 
 {: .important}
-**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and `{bearerToken}` from the below command with your information.
+**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and [`{bearerToken}`](#step-2-get-bearer-token) from the below command with your information.
 
 ```bash
 curl -X POST \
@@ -518,20 +547,228 @@ curl -X POST \
 
 ```
 
-### Response
-
-**Response Codes**
-
-| Code | Response                                                                     |
-| :--- | :--------------------------------------------------------------------------- |
-| 200  | OK - request for the given API succeeded.                                    |
-| 400  | Bad request - Problem with body or query parameters or invalid bearer token. |
-| 401  | Unauthorized - Invalid bearer token.                                         |
-| 404  | Not Found - If the provided conversation Id is invalid.                      |
-| 500  | Internal server error.                                                       |
-
 **Response Body**
 
-| Attribute name | Description                        |
-| :------------- | :--------------------------------- |
-| jobId          | Identifier of the requested action |
+| Attribute name | Description                         |
+| :------------- | :---------------------------------- |
+| commandId      | Identifier of the requested command |
+
+### Get Conversation Commands
+
+This API allows returning of the commands that were sent to a conversation via Public API.
+
+{: .important}
+**Please note** Only commands of on-going conversation will be returned. If conversation is closed/ended commands will not be returned
+
+#### Request
+
+| Method | URL                                                                                                                                      |
+| :----- | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/command |
+
+**Path Parameters**
+
+| Parameter      | Description                 | Type   | Required | Notes                                                                      |
+| :------------- | :-------------------------- | :----- | :------- | :------------------------------------------------------------------------- |
+| botDomain      | Third-Party Bots API domain | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
+| accountId      | LP site ID                  | string | Required |                                                                            |
+| conversationId | LP Conversation ID          | string | Required |                                                                            |
+
+**Headers**
+
+| Header        | Description          |
+| :------------ | :------------------- |
+| Content-Type  | application/json     |
+| Authorization | Bearer {bearerToken} |
+
+**Example cURL**:
+
+{: .important}
+**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}` and [`{bearerToken}`](#step-2-get-bearer-token) from the below command with your information.
+
+```bash
+curl -X GET \
+  https://{botDomain}/api/v1/account/{accountId}/conversation/{conversationId}/command \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {bearerToken}' \
+
+```
+
+#### Example Response
+
+Example response of an request with `Array` of commands returned.
+
+{: .important}
+**Please note** there could be three states of a command: `waiting` (command execution pending), `failed` (command execution caused an error) and `completed` (command executed successfully)
+
+```json
+[
+  {
+    "id": "24",
+    "data": {
+      "type": "sdes",
+      "payload": {
+        "sdes": [
+          {
+            "type": "personal",
+            "personal": {
+              "gender": "Male"
+            }
+          }
+        ],
+        "sharkSessionId": "sadjkasdhi23D-P6BbaFRsBkA",
+        "sharkVisitorId": "dladji38dsda"
+      },
+      "conversationId": "2312ed0e-662e-4c94-9022-f0991058b4a4",
+      "isInternal": true,
+      "timeoutTime": 1580396820804
+    },
+    "result": null,
+    "state": "waiting"
+  },
+  {
+    "id": "23",
+    "data": {
+      "type": "messages",
+      "payload": [
+        {
+          "payload": "Hi i am text Message",
+          "metadata": [],
+          "type": "text"
+        }
+      ],
+      "conversationId": "2312ed0e-662e-4c94-9022-f0991058b4a4",
+      "isInternal": true,
+      "timeoutTime": 1580474718054
+    },
+    "result": {
+      "error": {
+        "trace": [],
+        "name": "com.liveperson.bot-connectors-worker.error.public-api.execution-failed"
+      },
+      "startTime": 1580637839412,
+      "endTime": 1580637839412,
+      "executionTime": 0
+    },
+    "state": "failed"
+  },
+  {
+    "id": "21",
+    "data": {
+      "type": "sdes",
+      "payload": {
+        "sdes": [
+          {
+            "type": "personal",
+            "personal": {
+              "firstname": "Muster",
+              "lastname": "Frau"
+            }
+          }
+        ],
+        "sharkSessionId": "sadjkasdhi23D-P6BbaFRsBkA",
+        "sharkVisitorId": "dladji38dsda"
+      },
+      "conversationId": "2312ed0e-662e-4c94-9022-f0991058b4a4",
+      "isInternal": true,
+      "timeoutTime": 1580396820804
+    },
+    "result": {
+      "executionTime": 405,
+      "startTime": 1580396700808,
+      "endTime": 1580396701213
+    },
+    "state": "completed"
+  }
+]
+```
+
+### Get Conversation Command
+
+This API allows returning of a single command that was sent to a conversation via Public API.
+
+{: .important}
+**Please note** Only command of on-going conversation will be returned. If conversation is closed/ended command will not be returned
+
+#### Request
+
+| Method | URL                                                                                                                                                  |
+| :----- | :--------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/conversation/{conversationId}/command/{commandId} |
+
+**Path Parameters**
+
+| Parameter      | Description                                 | Type   | Required | Notes                                                                      |
+| :------------- | :------------------------------------------ | :----- | :------- | :------------------------------------------------------------------------- |
+| botDomain      | Third-Party Bots API domain                 | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
+| accountId      | LP site ID                                  | string | Required |                                                                            |
+| conversationId | LP Conversation ID                          | string | Required |                                                                            |
+| commandId      | Command ID that was sent via the Public API | string | Required |                                                                            |
+
+**Headers**
+
+| Header        | Description          |
+| :------------ | :------------------- |
+| Content-Type  | application/json     |
+| Authorization | Bearer {bearerToken} |
+
+**Example cURL**:
+
+{: .important}
+**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}`, [`{bearerToken}`](#step-2-get-bearer-token) and `{commandId}` from the below command with your information.
+
+```bash
+curl -X GET \
+  https://{botDomain}/api/v1/account/{accountId}/conversation/{conversationId}/command/{commandId} \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {bearerToken}' \
+
+```
+
+#### Example Response
+
+Example response of a command returned by the API will look like this with state `completed`
+
+{: .important}
+**Please note** there could be three states of a command: `waiting` (command execution pending), `failed` (command execution caused an error) and `completed` (command executed successfully). See [example response](#example-response) of GET Commands API to see other examples of different states.
+
+```json
+{
+  "id": "21",
+  "data": {
+    "type": "sdes",
+    "payload": {
+      "sdes": [
+        {
+          "type": "personal",
+          "personal": {
+            "firstname": "Muster",
+            "lastname": "Frau"
+          }
+        }
+      ],
+      "sharkSessionId": "sadjkasdhi23D-P6BbaFRsBkA",
+      "sharkVisitorId": "dladji38dsda"
+    },
+    "conversationId": "2312ed0e-662e-4c94-9022-f0991058b4a4",
+    "isInternal": true,
+    "timeoutTime": 1580396820804
+  },
+  "result": {
+    "executionTime": 405,
+    "startTime": 1580396700808,
+    "endTime": 1580396701213
+  },
+  "state": "completed"
+}
+```
+
+### Response Codes
+
+| Code | Response                                                             |
+| :--- | :------------------------------------------------------------------- |
+| 200  | OK - request for the given API succeeded.                            |
+| 400  | Bad request - Problem with body or query parameters.                 |
+| 401  | Unauthorized - Invalid bearer token.                                 |
+| 404  | Not Found - If the provided conversation Id is invalid or not found. |
+| 500  | Internal server error.                                               |
