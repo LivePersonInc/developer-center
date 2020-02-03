@@ -14,7 +14,7 @@ indicator: both
 
 When developing bots, it's considered a best practice to develop specialized bots that automate specific business tasks. If you're a large, enterprise company with well-demarcated functional areas, this practice also makes practical sense and lets you scale your automation footprint more easily. Within a business function, bot developers can specialize, and they can implement, maintain, and extend bots efficiently.
 
-However, while it's advantageous to have multiple--even many--bots that automate business tasks, this also means that a single bot might not be able to handle all of a consumer's requests. The consumer's requests might require the support of multiple bots, which means that a bot-to-bot transfer of the conversation is required.
+However, while it's advantageous to have multiple--even many--bots that automate business tasks, this also means that a single bot might not be able to handle all of a consumer's requests. The consumer's requests might require the support of multiple bots, and this means that a bot-to-bot transfer of the conversation is required.
 
 ### About bot-to-bot transfers
 
@@ -22,7 +22,7 @@ A bot-to-bot transfer is a [LivePerson agent escalation](conversation-builder-in
 
 Keep in mind that receiver bot is different from the sender bot, so the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. You can share this information between bots using the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
 
-### Making transfers "seamless" with the Bot Transfer Context
+### Seamless transfers with the Bot Transfer Context
 
 In a bot-to-bot transfer, what makes the transfer *seamless* to the consumer is passing the conversational context--an intent or user message--from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful hand-off.
 
@@ -42,7 +42,7 @@ During the escalation (transfer), the receiver bot checks for the availability o
 
 ### Transfers without the Bot Transfer Context
 
-You don't have to enable the Bot Transfer Context object in the LivePerson agent escalation and set an intent ID or user message in the object, although this does make the transfer more seamless. If you don't do this, the default transfer (escalation) flow is used. This works as follows:
+You don't have to enable the Bot Transfer Context object in the LivePerson agent escalation and set an intent ID or user message in the object, although this does make the transfer more seamless. If you don't do this, the flow is as follows:
 
 NEED TO INTEGRATE THIS INFO:
 
@@ -65,12 +65,12 @@ Yes, this is possible.
 
 NEED TO ADD
 
+#### What happens if I enable the Transfer Context object, but I don't set an intent ID or user message?
+
+The purpose of enabling the Bot Transfer Context object is to be able to set an intent ID or user message, so typically this scenario shouldn't happen. However, if the receiver bot doesn't find an intent ID or user message in the Bot Transfer Context object, the object isn't used during the transfer; see *Transfers without the Bot Transfer Context object* above.
+
+Conversely, if you set an intent ID or user message, but you don't enable the Bot Transfer Context object, the intent ID or user message is not evaluated. Here again, the object isn't used during the transfer.
+
 #### How do I transfer other data from the sender bot to the receiver bot?
 
 You can only set an intent ID or user message in the Bot Transfer Context object. To transfer other data between the sender bot and receiver bot, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
-
-#### What happens if I enable the Transfer Context object, but I don't set an intent ID or user message?
-
-The purpose of enabling the Bot Transfer Context object is to be able to set an intent ID or user message, so typically this scenario shouldn't happen. However, if the receiver bot doesn't find an intent ID or user message in the Bot Transfer Context object, the default transfer (escalation) flow is used.
-
-Conversely, if you set an intent ID or user message, but you don't enable the Bot Transfer Context object, the intent ID or user message is not evaluated. Here again, the default transfer (escalation) flow is used.
