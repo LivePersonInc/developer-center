@@ -806,8 +806,7 @@
       - subpagename: LiveEngage Configuration
       - subpagename: Sample App
       - subpagename: Appendix
-    - pagename: Latest Release Notes
-    - pagename: All Release Notes
+    - pagename: All Releases
     - pagename: Resources
       subpages:
       - subpagename: Authentication
