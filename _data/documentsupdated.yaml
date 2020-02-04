@@ -121,11 +121,7 @@
     pages:
       - pagename: Tutorials & Guides
         subpages:
-          - subpagename: 0 - Video Tutorials
-          - subpagename: 1 - Dialogs and Patterns
-          - subpagename: 2 - Intents
-          - subpagename: 3 - Integrations
-          - subpagename: 4 - Connect to LiveEngage
+          - subpagename: Getting Started
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
