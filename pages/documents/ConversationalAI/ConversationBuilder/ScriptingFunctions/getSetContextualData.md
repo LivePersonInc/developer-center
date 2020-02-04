@@ -45,9 +45,38 @@ if (count > 10) {
 }
 ```
 
+### Set bot transfer domain name
+
+Use the `setBotTransferDomainName` function to set a domain name in the Bot Transfer Context object that can be sent from the sender bot to the receiver bot during a bot-to-bot transfer (escalation). This function is intended to be used in conjunction with `setBotTransferIntentName`. For more information, see the discussion on bot-to-bot transfers [here](conversation-builder-bots-bot-to-bot-transfers.html).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `setBotTransferIntentId(value)` | *value (String)* – The intent ID to set in the Bot Transfer Context object | None |
+
+#### Example
+
+```javascript
+botContext.setBotTransferIntentId("d46688d7-7ec2-44a4-a09c-b500f728ee05");
+```
+
+### Set bot transfer intent name
+
+Use the `setBotTransferIntentName` function to set an intent name in the Bot Transfer Context object that can be sent from the sender bot to the receiver bot during a bot-to-bot transfer (escalation). This function is intended to be used in conjunction with `setBotTransferDomainName`. For more information, see the discussion on bot-to-bot transfers [here](conversation-builder-bots-bot-to-bot-transfers.html).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `setBotTransferIntentId(value)` | *value (String)* – The intent ID to set in the Bot Transfer Context object | None |
+
+#### Example
+
+```javascript
+botContext.setBotTransferIntentId("d46688d7-7ec2-44a4-a09c-b500f728ee05");
+```
+
+
 ### Set bot transfer intent ID
 
-Use the `setBotTransferIntentId` function to set an intent ID in the Bot Transfer Context object that is sent from the sender bot to the receiver bot during a bot-to-bot transfer (escalation). For more on using this context object and bot-to-bot transfers in general, see [here](conversation-builder-bots-bot-to-bot-transfers.html).
+Use the `setBotTransferIntentId` function to set an intent ID in the Bot Transfer Context object that can be sent from the sender bot to the receiver bot during a bot-to-bot transfer (escalation). For more information, see the discussion on bot-to-bot transfers [here](conversation-builder-bots-bot-to-bot-transfers.html).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -61,7 +90,7 @@ botContext.setBotTransferIntentId("d46688d7-7ec2-44a4-a09c-b500f728ee05");
 
 ### Set bot transfer user message
 
-Use the `setBotTransferUserMessage` function to set a user message in the Bot Transfer Context object that is sent from the sender bot to the receiver bot during a bot-to-bot transfer (escalation). For more on this context object and bot-to-bot transfers in general, see [here](conversation-builder-bots-bot-to-bot-transfers.html).
+Use the `setBotTransferUserMessage` function to set a user message in the Bot Transfer Context object that can be sent from the sender bot to the receiver bot during a bot-to-bot transfer (escalation). For more information, see the discussion on bot-to-bot transfers [here](conversation-builder-bots-bot-to-bot-transfers.html).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
