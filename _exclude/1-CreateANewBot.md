@@ -33,7 +33,7 @@ This tutorial assumes you have a user account for the LiveEngage and Conversatio
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/image_3.png">
 
-    (You can learn about the different parts of Conversation Builder [here](conversation-builder-getting-started-bot-workspace-overview.html).)
+    (You can learn about the different parts of Conversation Builder [here](conversation-builder-bot-workspace.html).)
 
 ### Step 2: Test the Welcome dialog
 

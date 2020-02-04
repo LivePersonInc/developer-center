@@ -17,7 +17,7 @@ LivePerson's Conversational AI is a suite of integrated apps that work together 
 
 ### Modules
 
-- [Conversation Builder](conversation-builder-getting-started-bot-workspace-overview.html) is the primary application that allows you to design new bots / automations. Leveraging all of the other apps, this is where the user configures and designs conversational flows, API integrations, etc.
+- [Conversation Builder](conversation-builder-bot-workspace.html) is the primary application that allows you to design new bots / automations. Leveraging all of the other apps, this is where the user configures and designs conversational flows, API integrations, etc.
 
 - [Intent Builder](conversation-builder-intent-builder-overview.html) is for building intents and entities that Conversation Builder uses to more accurately match consumer responses.
 

@@ -23,19 +23,20 @@ indicator: both
 
 The Getting Started tutorials include four tutorials that build on one another:
 
-* **Dialogs & Patterns**: In this tutorial, you learn how to get started with a basic bot. The tutorial explores the concept of dialogs (the different conversation flows a bot can have) and patterns, which allow the bot to match user input and respond intelligently! You are guided through the creation of a simple "Hello World" bot.
+* **Dialogs & Patterns**: Learn how to get started with a basic bot. This tutorial explores the concept of dialogs (the different conversation flows a bot can have) and patterns, which allow the bot to match user input and respond intelligently. You are guided through the creation of a simple "Hello World" bot.
 
-* **Intents**: In this tutorial, you dive deeper into user input matching and look at the more advanced concepts of intents and entities. Intents allow you to use our powerful Natural Language Understanding (NLU) engine to enable your bot to more accurately match user input, while entities help with storing variable-like parameters for quick and easy data access!
+* **Intents**: Dive deeper into user input matching and look at the more advanced concepts of intents and entities. Intents allow you to use our Natural Language Understanding (NLU) engine to enable your bot to more accurately match user input, while entities help with storing variable-like parameters for quick and easy data access.
 
-* **Integrations**: In this tutorial, you explore integrations, which allow your bot to query external APIs, bringing powerful new options to your conversations. Use integrations to programmatically access catalogs, databases, and other web services to super power your bot responses!
+* **Integrations**: Explore integrations, which allow your bot to query external APIs, bringing powerful new options to your conversations. Use integrations to programmatically access catalogs, databases, and other web services to super power your bot responses.
 
-* **Connect to LiveEngage**: In this tutorial, you bring it all together by deploying your bot to the LiveEngage environment and testing it out!
+* **Connect to LiveEngage**: Bring it all together by deploying your bot to the LiveEngage environment and testing it out.
 
 ### Dialogs & Patterns tutorial
 
 #### Watch the video
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321978379" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
 
 #### Prerequisite steps
 
@@ -47,18 +48,17 @@ This tutorial assumes you have a user account for the LiveEngage and Conversatio
 2. In the left sidebar in LiveEngage, click the Conversational AI and Bots <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_convers_ai.png"> icon.
 3. In the Conversational AI dashboard, click **Conversation Builder**.
 4. Click **New Bot** in the upper-right corner, and select the **Custom Bot** generic [template](conversation-builder-templates-overview.html).
-5. Give the bot a unique name and description, and select "Consumer Facing Bot" for the **Bot Type**.
-6. Click **Create Bot**.
+5. Give the bot a unique name and description, and click **Create Bot**.
     
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/createAutomation.png">
 
     This takes you to the new bot in Conversation Builder. Since you selected the Custom Bot template, by default this creates a bot with a “Welcome” dialog that matches and responds to simple forms (patterns) of “hello”. The bot also has a Fallback dialog with some fallback text.
 
-7. Click the **Welcome** tab in the lower-left corner to open the Welcome dialog, so you can examine it.
+6. Click the **Welcome** tab in the lower-left corner to open the Welcome dialog, so you can examine it.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/image_3.png">
 
-    (You can learn about the different parts of Conversation Builder [here](conversation-builder-getting-started-bot-workspace-overview.html).)
+    (You can learn about the different parts of Conversation Builder [here](conversation-builder-bot-workspace.html).)
 
 #### Step 2: Test the Welcome dialog
 
@@ -104,7 +104,6 @@ Let’s see the interactions in action!
 11. To see your change, open the Preview window again, enter “reset” and press Enter. Then enter “hi”. You should see the “Hello World!” response.
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/helloworld.png">
-
 
 #### Step 3: Add a Goodbye dialog
 
@@ -173,10 +172,12 @@ In this tutorial, you take things to the next level. Instead of using patterns t
 #### Watch the video - intents & entities
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979334" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
 
 #### Watch the video - advanced interactions
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979606" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
 
 #### Step 5: Create a Billing intent
 
@@ -325,6 +326,7 @@ This tutorial uses an example API that returns random balance data when given an
 #### Watch the video
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/321979952" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
 
 #### Step 8: Create an account balance API integration
 
