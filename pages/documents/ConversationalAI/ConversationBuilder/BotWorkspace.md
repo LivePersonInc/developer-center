@@ -1,14 +1,15 @@
 ---
-pagename: Bot Workspace Overview
+pagename: Bot Workspace
 redirect_from:
     - conversation-builder-conversation-builder-overview.html
     - conversation-builder-automation-workspace-overview.html
+    - conversation-builder-getting-started-bot-workspace-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
-permalink: conversation-builder-getting-started-bot-workspace-overview.html
+permalink: conversation-builder-getting-started-bot-workspace.html
 indicator: both
 ---
 
