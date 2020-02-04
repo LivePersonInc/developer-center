@@ -38,6 +38,11 @@ To pass the conversational context to the receiver bot, you need to do two thing
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab2.png">
 
+Use the following functions to retrieve the intent ID or user message:
+
+* NEED TO ADD
+* [getCurrentUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-user-message)
+
 During the escalation (transfer), the receiver bot checks for the availability of a Bot Transfer Context object. If the object is available, the bot then checks whether it contains an intent ID. If an intent ID isn't available, it then checks whether the object contains a user message. Based on these findings, after the transfer is completed, the receiver bot starts the  appropriate dialog, one that's tied to the intent or that's matched to the user message.
 
 ### Transfers without the Bot Transfer Context
@@ -59,10 +64,6 @@ You can set either the intent ID or the user message in the Bot Transfer Context
 #### Can I set both the intent ID and the user message?
 
 Yes, this is possible.
-
-#### How do I obtain the intent ID?
-
-NEED TO ADD
 
 #### What happens if I enable the Transfer Context object, but I don't set an intent ID or user message?
 
