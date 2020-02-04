@@ -42,14 +42,13 @@ During the escalation (transfer), the receiver bot checks for the availability o
 
 ### Transfers without the Bot Transfer Context
 
-You don't have to enable the Bot Transfer Context object in the LivePerson agent escalation and set an intent ID or user message in the object, although this does make the transfer more seamless. If you don't do this, the flow is as follows:
+You don't have to enable the Bot Transfer Context object in the LivePerson agent escalation and set an intent ID or user message in the object, although this does make the transfer more seamless.
 
-NEED TO INTEGRATE THIS INFO:
+If you don't enable and use the Bot Transfer Context, the transfer flow depends on whether the sender bot responds to the last user message with a message of its own as a part of the transfer. In other words, in the configuration of the escalation, how is the **Message to User** field configured? As discussed [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html), this field is used to send a message to the user prior to being transferred (e.g., "Hold on while I transfer you...").
 
-there’s 2 cases from transferring from bot A to bot B:
+* If **Message to User** is set to a specific message, during the transfer, the sender bot looks at the message history, sees that response from the bot as the last message, and sends a "hi" message to the receiver bot. This triggers the receiver bot's greetings flow.
 
-* if bot A responded to the last user message as a part of the agent escalation, “hi” will be sent to bot B
-* if bot A did not respond to the last user message but only escalated, the last user message will be sent to bot B
+* If **Message to User** is set to "BLANK_MESSAGE," during the transfer, the sender bot looks at the message history, sees the user's message as the last message, and sends the user's message to the receiver bot. This triggers a flow based on the user's intent.
 
 ### FAQs
 
