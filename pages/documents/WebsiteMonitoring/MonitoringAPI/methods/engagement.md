@@ -30,7 +30,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 
 | Method | URL |
 | :--- | :--- |
-|POST|https://[{domain}](/agent-domain-domain-api.html)/api/account/{account-id}/app/{app-installation-id}/engagement?v={api-version}&vid={visitor-id}&sid={session-id} |
+|POST|https://[{domain}](/agent-domain-domain-api.html)/api/account/{account-id}/app/{app-installation-id}/engagement?v={api-version}&vid={visitor-id}&sid={session-id}&obh=false |
 
 ### Path Parameters
 
@@ -46,6 +46,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 | v | API version number | double | Required | Supported Value: 1.0, 1.1  |
 | vid | Visitor Id | String | Optional | Must be saved in order to reuse for future requests in the same visit |
 | sid | Session Id | String | Optional on first request, otherwise required | Will be provided by the server-side in a 201 (CREATED) response for this specific consumer and device and should be set by the client-side on all the subsequent requests to the server |
+| obh | is On Behalf | Boolean | Optional | possible values: true/ false (default=false). This param can be used (with value=true) to let shark know that this request is on behalf of the visitor (and not coming from the visitor himself), so shark should NOT update the visitor GEO data according to this request IP |
 
 ### Body Parameters
 
