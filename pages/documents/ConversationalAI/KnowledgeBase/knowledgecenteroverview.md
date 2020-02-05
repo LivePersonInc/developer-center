@@ -16,7 +16,7 @@ The Knowledge Base application in the Conversation Builder platform lets you to 
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_overview.png">
 
-### Access the Knowledge Base
+### Access Knowledge Base
 
 **To access the Knowledge Base application**
 

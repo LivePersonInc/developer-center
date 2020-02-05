@@ -13,6 +13,15 @@ permalink: conversation-builder-bot-workspace.html
 indicator: both
 ---
 
+### Access Conversation Builder
+
+**To access the Conversation Builder application**
+
+1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+2. In the Conversational AI dashboard, click **Conversation Builder**.
+
+### The Bot Workspace
+
 <img class="fancyimage" style="width:750px" src="img/beaut_cb_2.png">
 
 The Conversation Builder application is the primary workspace for designing a bot. It is what ties together all the other aspects of the platform.
