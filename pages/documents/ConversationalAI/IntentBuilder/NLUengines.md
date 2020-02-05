@@ -30,9 +30,35 @@ If you choose LivePerson's native NLU, no changes need to be made. This engine i
 
 LivePerson NLU supports intent detection for English and Spanish.
 
-[IBM Watson supports](https://cloud.ibm.com/docs/services/assistant?topic=assistant-language-support#language-support) Arabic, Simplified and Traditional Chinese (China), Czech (Czech), Dutch (Netherlands), English (United States), French (France), German (Germany), Italian (Italy), Japanese (Japan), Korean (Korea), Portuguese (Brazil), and Spanish (Spain).
+IBM Watson supports:
 
-[Google Dialogflow supports](https://cloud.google.com/dialogflow/docs/reference/language) English (India, United States), French (Canada, France), German (Germany), Hindi (India), Indonesian (Indonesia), Italian (Italy), Japanese (Japan), Korean (Korea), Norwegian (Norway), Polish (Poland), Portuguese (Brazil, Portugal), Russian (Russia), Spanish (Latin America, Spain), Swedish (Sweden), Thai (Thailand), Turkish (Turkey), and Ukranian (Ukraine).
+* Arabic
+* Chinese, Simplified (China)
+* Chinese, Traditional (Taiwan)
+* Dutch (Netherlands)
+* English
+* French (France)
+* German (Germany)
+* Italian (Italy)
+* Japanese (Japan)
+* Korean (Korea)
+* Portuguese (Brazil)
+* Spanish (Spain)
+
+Google Dialogflow supports:
+
+* Chinese, Simplified (China)
+* Chinese, Traditional (Taiwan)
+* Dutch (Netherlands)
+* English (Australia, Canada, Great Britain, India, United States)
+* French (Canada, France)
+* German (Germany)
+* Italian (Italy)
+* Japanese (Japan)
+* Korean (Korea)
+* Portuguese (Brazil)
+* Spanish (Mexico, Spain)
+* Turkish (Turkey)
 
 ### LivePerson's NLU engine
 
