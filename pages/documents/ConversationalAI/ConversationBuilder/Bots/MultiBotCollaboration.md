@@ -50,7 +50,7 @@ During the escalation (transfer), the receiver bot checks for the availability o
 
 ### Transfers without the Bot Transfer Context
 
-It's recommended that you enable and use the Bot Transfer Context object to pass an intent or user message in a transfer, as this helps to ensure the transfer occurs seamlessly. As mentioned earlier, this is optional.
+It's recommended that you enable and use the Bot Transfer Context object to pass an intent or user message in a transfer, as this helps to ensure the transfer occurs seamlessly. But as mentioned earlier, this is optional.
 
 If you don't use the Bot Transfer Context object, the transfer flow works differently, and it depends on whether the sender bot responds to the last user message with a message of its own as a part of the transfer. In other words, in the configuration of the escalation, how is the **Message to User** field configured? As discussed [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html), this field is used to send a message to the user prior to being transferred (e.g., "Hold on while I transfer you...").
 
