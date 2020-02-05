@@ -51,12 +51,12 @@ Use the `setBotTransferDomainName` function to set a domain name in the Bot Tran
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setBotTransferIntentId(value)` | *value (String)* – The intent ID to set in the Bot Transfer Context object | None |
+| `setBotTransferDomainName(value)` | *value (String)* – The name of the domain | None |
 
 #### Example
 
 ```javascript
-botContext.setBotTransferIntentId("d46688d7-7ec2-44a4-a09c-b500f728ee05");
+botContext.setBotTransferDomainName("Billing");
 ```
 
 ### Set bot transfer intent name
@@ -65,12 +65,12 @@ Use the `setBotTransferIntentName` function to set an intent name in the Bot Tra
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setBotTransferIntentId(value)` | *value (String)* – The intent ID to set in the Bot Transfer Context object | None |
+| `setBotTransferIntentName(value)` | *value (String)* – The name of the intent | None |
 
 #### Example
 
 ```javascript
-botContext.setBotTransferIntentId("d46688d7-7ec2-44a4-a09c-b500f728ee05");
+botContext.setBotTransferIntentName("billing question");
 ```
 
 
@@ -80,7 +80,7 @@ Use the `setBotTransferIntentId` function to set an intent ID in the Bot Transfe
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setBotTransferIntentId(value)` | *value (String)* – The intent ID to set in the Bot Transfer Context object | None |
+| `setBotTransferIntentId(value)` | *value (String)* – The intent ID | None |
 
 #### Example
 
@@ -94,7 +94,7 @@ Use the `setBotTransferUserMessage` function to set a user message in the Bot Tr
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setBotTransferUserMessage(value)` | *value (String)* – The user message to set in the Bot Transfer Context object | None |
+| `setBotTransferUserMessage(value)` | *value (String)* – The user message | None |
 
 #### Example
 

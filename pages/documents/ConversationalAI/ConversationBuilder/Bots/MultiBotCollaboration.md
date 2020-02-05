@@ -24,9 +24,9 @@ Keep in mind that receiver bot is different from the sender bot, so the receiver
 
 ### Seamless transfers with the Bot Transfer Context
 
-In a bot-to-bot transfer, what makes the transfer *seamless* to the consumer is passing the conversational context--an intent or user message--from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful hand-off.
+In a bot-to-bot transfer, what makes the transfer *seamless* to the consumer is passing the conversational context--an intent or user message--from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful hand-off. 
 
-To pass the conversational context to the receiver bot, you need to do two things:
+It's optional to pass the conversational context to the receiver bot, and you can do this on a case-by-case basis as you require. To do so, do the following in the bot:
 
 1. In the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration, select the **Bot Transfer Context** checkbox.
 
@@ -38,19 +38,21 @@ To pass the conversational context to the receiver bot, you need to do two thing
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab2.png">
 
-| If you want to set... | Then... | Set the value(s) in the Bot Transfer Context object via...
+You have a few options for setting the intent or user message in the Bot Transfer Context object:
+
+| You can set... | If you do,... | Set the value(s) via...
 | ---- | ---- | ---- |
-| a domain name and an intent name | you can retrieve these from the UI. You can also retrieve the intent name via [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent). The system will ascertain and pass the intent ID based on this information. | setBotTransferDomainName and setBotTransferIntentName |
-| an intent ID | you can retrieve this from the application URL if you're logged into Conversation Builder directly. Otherwise, set the intent name and dialog name instead. | setBotTransferIntentID |
-| a user message | specify the hard-coded string | setBotTransferUserMessage |
+| a domain name and an intent name | you can retrieve the domain name and intent name from the UI. You can also retrieve the intent name via [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent). The system will ascertain and pass the intent ID based on this information. | [setBotTransferDomainName](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-domain-name) and [setBotTransferIntentName](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-name) |
+| an intent ID | you can retrieve the intent ID from the application URL if you're logged into Conversation Builder directly and know how. Otherwise, set the intent name and dialog name instead. | [setBotTransferIntentID](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-id) |
+| a user message | specify the string. | [setBotTransferUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-user-message) |
 
 During the escalation (transfer), the receiver bot checks for the availability of a Bot Transfer Context object. If the object is available, the bot then checks whether it contains an intent. If an intent isn't available, it then checks whether the object contains a user message. Based on these findings, after the transfer is completed, the receiver bot starts the  appropriate dialog, one that's tied to the intent or that's matched to the user message.
 
 ### Transfers without the Bot Transfer Context
 
-You don't have to enable the Bot Transfer Context object in the LivePerson agent escalation and set an intent or user message in the object, although this does make the transfer more seamless.
+It's recommended that you enable and use the Bot Transfer Context object to pass an intent or user message in a transfer, as this helps to ensure the transfer occurs seamlessly. As mentioned earlier, this is optional.
 
-If you don't enable and use the Bot Transfer Context, the transfer flow depends on whether the sender bot responds to the last user message with a message of its own as a part of the transfer. In other words, in the configuration of the escalation, how is the **Message to User** field configured? As discussed [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html), this field is used to send a message to the user prior to being transferred (e.g., "Hold on while I transfer you...").
+If you don't use the Bot Transfer Context object, the transfer flow works differently, and it depends on whether the sender bot responds to the last user message with a message of its own as a part of the transfer. In other words, in the configuration of the escalation, how is the **Message to User** field configured? As discussed [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html), this field is used to send a message to the user prior to being transferred (e.g., "Hold on while I transfer you...").
 
 * If **Message to User** is set to a specific message, during the transfer, the sender bot looks at the message history, sees that response from the bot as the last message, and sends a "hi" message to the receiver bot. This triggers the receiver bot's greetings flow.
 
@@ -58,9 +60,9 @@ If you don't enable and use the Bot Transfer Context, the transfer flow depends 
 
 ### FAQs
 
-#### Which do I set - an intent or a user message?
+#### When using the Bot Transfer Context, which do I set - an intent or a user message?
 
-You can set either, but setting the intent ID effectively lets you specify the dialog to start. No processing of a user message is required. If you set the user message instead, the receiver bot must match the user message with an intent to determine the appropriate dialog to start.
+You can optionally set either, but setting the intent effectively lets you specify the dialog to start. No processing of a user message is required. If you set the user message instead, the receiver bot must match the user message with an intent to determine the appropriate dialog to start.
 
 #### Can I set both an intent and a user message?
 
