@@ -225,6 +225,10 @@
       - pagename: Intents
       - pagename: Entities
       - pagename: LiveIntent Tips
+  - documentname: LiveIntent
+    pages:
+      - pagename: Enabling LiveIntent for Intents
+      - pagename: Tips
   - documentname: Knowledge Base
     pages:
       - pagename: Overview

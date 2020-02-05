@@ -1,11 +1,12 @@
 ---
-pagename: LiveIntent Tips
+pagename: Tips
 redirect_from:
+    - intent-builder-liveintent-tips.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Intent Builder
-permalink: intent-builder-liveintent-tips.html
+documentname: LiveIntent
+permalink: liveintent-tips.html
 indicator: both
 ---
 
