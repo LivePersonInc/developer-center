@@ -104,6 +104,6 @@ You might add or remove `case` branches as needed for the number of your skills.
 
 #### Deploy Your Bot
 
-To connect your bot to LiveEngage, follow [these instructions](conversation-builder-testing-deployment-deploying-to-liveengage.html). You can also try [this tutorial](conversation-builder-getting-started-4-connect-to-liveengage.html).
+To connect your bot to LiveEngage, follow [these instructions](conversation-builder-testing-deployment-deploying-to-liveengage.html). You can also try the [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html).
 
 Now you can test your routing bot and see how it routes to your skills.

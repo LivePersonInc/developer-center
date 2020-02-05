@@ -19,7 +19,7 @@ Follow along with this guide to set up the feature.
 
 ### Create a bot
 
-Maven currently supports bots created in [Conversation Builder](conversation-builder-getting-started-0-video-tutorials.html), [Google DialogFlow](bot-connectors-google-dialogflow-version-2.html), and [IBM Watson](bot-connectors-ibm-watson-assistant.html).
+Maven currently supports bots created in [Conversation Builder](conversation-builder-tutorials-guides-getting-started.html), [Google DialogFlow](bot-connectors-google-dialogflow-version-2.html), and [IBM Watson](bot-connectors-ibm-watson-assistant.html).
 
 ### Enable Recommended Actions Widget
 
@@ -29,7 +29,7 @@ You will first need to enable the feature in LiveEngage. Please contact LivePers
 
 Before adding automations to Maven, you must first properly configure LiveEngage by creating a skill and a bot user.
 
-The [Conversation Builder Getting Started](conversation-builder-getting-started-4-connect-to-liveengage.html#step-10-configure-liveengage) guide explains how to create a skill and a bot user for each of your automations.
+The Conversation Builder [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html) guide explains how to create a skill and a bot user for each of your automations.
 
 {: .important}
 * Create the skill names and bot user names that make sense for your use case
@@ -46,7 +46,7 @@ For third party (Watson, DialogFlow) bots, see the section [Configuring Third Pa
 
 #### Configuring Conversation Builder Bots
 
-Follow the steps in the [Conversation Builder Getting Started](conversation-builder-getting-started-4-connect-to-liveengage.html#step-11-connect-automation-to-liveengage) guide to connect your bot.
+Follow the steps in the Conversation Builder [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html) to connect your bot.
 
 {: .important}
 Be sure to select allow **Messaging** conversations when you add the Agent for the automation.

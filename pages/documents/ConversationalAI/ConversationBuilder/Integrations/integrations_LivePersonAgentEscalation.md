@@ -11,7 +11,7 @@ indicator: both
 
 Use a LivePerson Agent Escalation integration when you want to transfer a conversation to either a live agent or another bot.
 
-For some practice with this integration type, complete the [Connect to LiveEngage](conversation-builder-getting-started-4-connect-to-liveengage.html) tutorial.
+For some practice with this integration type, complete the [Connect to LiveEngage](conversation-builder-tutorials-guides-getting-started.html) tutorial.
 
 {: .important}
 For information on performing bot-to-bot transfers in specific, see [here](conversation-builder-bots-bot-to-bot-transfers.html).
