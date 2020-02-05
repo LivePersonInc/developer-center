@@ -1,11 +1,11 @@
 ---
-pagename: Enabling LiveIntent for Intents
+pagename: Enabling LiveIntent
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: LiveIntent
-permalink: liveintent-enabling-liveintent-for-intents.html
+permalink: liveintent-enabling-liveintent.html
 indicator: both
 ---
 
