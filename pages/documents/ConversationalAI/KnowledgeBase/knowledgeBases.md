@@ -11,7 +11,8 @@ indicator: both
 
 ### Add a knowledge base
 
-1. In the Dashboard, click **Add Knowledge Base** in the upper-right corner.
+1. Access the Knowledge Base application as described [here](knowledge-base-overview.html#access-the-knowledge-base).
+2. In the dashboard that lists your knowledge bases, click **Add Knowledge Base** in the upper-right corner.
 2. Specify the following:
     * **Data source name**: Enter a display name for the knowledge base.
     * **Data source type**: Select "Knowledge Base."

@@ -16,6 +16,13 @@ The Knowledge Base application in the Conversation Builder platform lets you to 
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_overview.png">
 
+### Access the Knowledge Base
+
+**To access the Knowledge Base application**
+
+1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+2. In the Conversational AI dashboard that appears, click **Knowledge Base**.
+
 ### How a knowledge base works
 
 #### Search modes
