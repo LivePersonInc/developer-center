@@ -27,7 +27,7 @@ The Getting Started tutorials include four tutorials that build on one another:
 
 * **Intents**: Dive deeper into user input matching and look at the more advanced concepts of intents and entities. Intents allow you to use our Natural Language Understanding (NLU) engine to enable your bot to more accurately match user input, while entities help with storing variable-like parameters for quick and easy data access.
 
-* **Integrations**: Explore integrations, which allow your bot to query external APIs, bringing powerful new options to your conversations. Use integrations to programmatically access catalogs, databases, and other web services to super power your bot responses.
+* **Integrations**: Explore integrations, which allow your bot to query external APIs, bringing powerful new options to your conversations. Integrations let you programmatically access catalogs, databases, and other web services to super power your bot responses.
 
 * **Connect to LiveEngage**: Bring it all together by deploying your bot to the LiveEngage environment and testing it out.
 
