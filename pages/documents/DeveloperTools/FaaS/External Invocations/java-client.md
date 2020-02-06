@@ -34,11 +34,11 @@ Alternatively, you can provide your own method of authentication. This is needed
 
 ### Provided Methods
 
-The following methods functionality is provided:
+The following methods are provided:
 
 * `invokeByUUID` which allows calling a function by its specific UUID
 * `invokeByEvent` which allows calling all functions implementing a given event
-* `isImplemented` which allows testing of whether a method, that implements a given event, exists
+* `isImplemented` which allows testing of whether a method, which implements a given event, exists
 * `getLambdas` which returns all lambdas belonging to the user account specified in the client
 
 More detailed documentation can be found [here](https://github.com/LivePersonInc/faas-client-jdk).
