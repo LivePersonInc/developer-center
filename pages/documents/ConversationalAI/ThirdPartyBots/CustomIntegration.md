@@ -421,7 +421,6 @@ const payload = {
     action: 'CLOSE_CONVERSATION' // Close action
   }
 };
-
 ```
 
 ### Engagement attributes as context
