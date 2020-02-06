@@ -35,12 +35,12 @@ To remove a recipient from the list, just click on the trashcan beside the recip
   </tr>
   <tr>
     <td style="width:120px">Daily</td>
-    <td>Every day at 2am UTC</td>
+    <td>Every day at 1am UTC</td>
     <td>The report will include the statistics for the day before</td>
   </tr>
   <tr>
     <td style="width:120px">Weekly</td>
-    <td>Every monday at 2am UTC</td>
+    <td>Every monday at 1am UTC</td>
     <td>The report will include the statistics for the week before (Monday to Sunday)</td>
   </tr>
 </tbody>
