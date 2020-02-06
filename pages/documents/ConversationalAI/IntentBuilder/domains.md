@@ -40,7 +40,7 @@ Once you've added a domain, you will be automatically navigated to the Domain Vi
 ### Train a LivePerson NLU v2 domain
 
 1. Open the domain.
-2. Ensure the domain has *at least* 10 intents. For each intent, ensure it has *at least* 20 training phrases.
+2. Ensure the domain has *at least* 5 intents. For each intent, ensure it has *at least* 20 training phrases.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intents_trainingPhrases.png">
 
