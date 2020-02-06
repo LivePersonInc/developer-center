@@ -120,6 +120,30 @@ There are 3 user permissions pertaining to Functions:
     <td>✅</td>
     <td>-</td>
   </tr>
+  </tr>
+    <tr>
+    <td>emailReport settings</td>
+    <td>create/edit/delete</td>
+    <td>✅</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  </tr>
+    <tr>
+    <td>emailReport recipients</td>
+    <td>create/delete</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
+  </tr>
+    <tr>
+    <td>emailReport</td>
+    <td>read</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
 </tbody>
 </table>
 
