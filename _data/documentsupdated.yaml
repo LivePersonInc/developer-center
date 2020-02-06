@@ -604,7 +604,7 @@
         subpages:
           - subpagename: Logs
           - subpagename: Metrics
-          - subpagename: EMail Reporting
+          - subpagename: Email Reporting
       - pagename: Scheduled Invocations
       - pagename: External Invocations
         subpages:
