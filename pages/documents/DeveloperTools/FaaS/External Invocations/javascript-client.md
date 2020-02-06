@@ -1,5 +1,5 @@
 ---
-pagename: Javascript Client
+pagename: JavaScript Client
 keywords:
 sitesection: Documents
 categoryname: "Developer Tools"
@@ -10,7 +10,7 @@ redirect_from:
     -
 ---
 
-This section give you a first insight on the functionality of the Javascript functions Client. It offers functionality to retrieve all lambdas and to invoke them via lambda UUID or event ID. The main documentation can be found in its github repository [here.](https://github.com/LivePersonInc/faas-client-node)
+This section give you an overview of the functionality of the JavaScript functions client. The client includes functionality to retrieve all lambdas and to invoke them via a `lambda UUID` or `event ID`. The full documentation can be found in its GitHub repository [here](https://github.com/LivePersonInc/faas-client-node).
 
 ## Setting up the client
 
@@ -32,10 +32,10 @@ npm install liveperson-functions-client
 
 ### Provided Methods
 
-The following methods functionality is provided:
+The following methods are provided:
 
-* invoke which allows to call a function by its specific UUID or invoke all functions that implement a specific event
-* isImplemented which allows to test whether a method, that implements a given event, exists
-* getLambdas which returns all lambdas belonging to the user account specified in the client
+* `invoke`, which allows calling a function by its specific `UUID` or to invoke all functions that implement a specific event
+* `isImplemented` which allows to test whether a method, which implements a given event, exists
+* `getLambdas` which returns all lambdas belonging to the user account specified in the client
 
-More detailed documentation can be found [here.](https://github.com/LivePersonInc/faas-client-node)
+More detailed documentation can be found [here](https://github.com/LivePersonInc/faas-client-node).
