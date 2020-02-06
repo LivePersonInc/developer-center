@@ -170,6 +170,28 @@ Settings for Messaging: <br />
 
 - No special settings are needed for messaging bots
 
+Settings for Combine Messages: <br />
+
+By enabling the Combine Messages settings, it's possible to connect a certain amount of messages to one, before sending it to the bot. In that case, the bot only responds once to them, instead of handling every message as a single intent. Below is a gif that clarifies the difference between enabled and disabled Combined Messages Feature.
+
+<ul>
+  <li>
+  Max messages to combine: The maximum amount of messaged that will be connected to one message.
+  </li>
+  <li>
+  Time frame to combine: The time in seconds, the system waits for another message to add, before sending it to the bot. If the user types something into that time frame the timebe replaced by the "Time frame after typing"
+  </li>
+  <li>
+  Time frame after typing: The time in seconds, the system waits for another message to add, after the visitor typed somehting in his text box.
+  </li>
+</ul>
+
+<figure>
+<img style="width:900px" src="img/botconnectordashboard/combine_messages.gif">
+    <figcaption>Left: Enabled Combined Messages,  Right: Disabled Combined Messages</figcaption>
+</figure>
+<br />
+
 Settings for Engagement Attributes: <br />
 
 Third-Party bots allows the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is selected. These attributes are collected only at the **_start_** of every conversation. These attributes are then passed along every message as context information. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Additionally the original Liveperson event from the chat or messaging api is sent along with each request to allow further customization and information.
