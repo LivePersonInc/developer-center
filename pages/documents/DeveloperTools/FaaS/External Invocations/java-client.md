@@ -17,7 +17,7 @@ The main documentation can be found in its github repository [here.](https://git
 
 ### Step 1: Set authentication method
 
-For our default implementation we use OAuth 2.0 with Client Credentials. Thus you will have to generate a client ID and client secret using [this](https://developers.liveperson.com/liveperson-functions-external-invocations-client-credentials.html) guide. Alternatively you can provide your own method of authentication. This is needed if you want to use the client to get all lambdas as it still relies on OAuth 1.0.
+For our default implementation we use OAuth 2.0 with Client Credentials. Thus you will have to generate a client ID and client secret using [this](https://developers.liveperson.com/liveperson-functions-external-invocations-client-credentials.html) guide. Alternatively you can provide your own method of authentication. This could come in handy if you want to use the method getLambdas as it does not support our default authentication(OAuth 2.0) yet but still relies on OAuth 1.0. By passing your own implementation to the client you can still generate headers valid for OAuth 1.0.
 
 ### Step 2: Add the client as depedency in maven
 
