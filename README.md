@@ -20,9 +20,9 @@ All pages on the site correspond to a Markdown file (.md) which can be found ins
 
 #### Environments
 
-* Production (built from the `master` branch): (https://developers.liveperson.com/)[https://developers.liveperson.com/]
+* Production (built from the `master` branch): [https://developers.liveperson.com/](https://developers.liveperson.com/)
 
-* Staging (built from the `Staging` branch): (https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/)[https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/]
+* Staging (built from the `Staging` branch): [https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/](https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/)
 
 
 #### Updating/Creating Headers
