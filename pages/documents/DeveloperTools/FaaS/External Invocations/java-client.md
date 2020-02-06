@@ -10,16 +10,19 @@ redirect_from:
     -
 ---
 
-This section gives you a first insight on the functionality of the Java functions client. It offers functionality to retrieve all lambdas and to invoke them via lambda UUID or event ID.
-The main documentation can be found in its github repository [here.](https://github.com/LivePersonInc/faas-client-jdk)
+This section gives you an overview of the functionality of the Java functions client. This client offers functionality to retrieve all lambdas and to invoke them via a `lambda UUID` or `event ID`.
+
+The full documentation for the client can be found in its GitHub repository [here](https://github.com/LivePersonInc/faas-client-jdk).
 
 ## Setting up the client
 
 ### Step 1: Set authentication method
 
-For our default implementation we use OAuth 2.0 with Client Credentials. Thus you will have to generate a client ID and client secret using [this](https://developers.liveperson.com/liveperson-functions-external-invocations-client-credentials.html) guide. Alternatively you can provide your own method of authentication. This is needed if you want to use the client to get all lambdas as it still relies on OAuth 1.0.
+For our default implementation, we use OAuth 2.0 with Client Credentials. Thus, you will have to generate a client ID and client secret using [this](https://developers.liveperson.com/liveperson-functions-external-invocations-client-credentials.html) guide. 
 
-### Step 2: Add the client as depedency in maven
+Alternatively, you can provide your own method of authentication. This is needed if you want to use the client to get all lambdas as it still relies on OAuth 1.0.
+
+### Step 2: Add the client as depedency in Maven
 
 ```xml
 <dependency>
@@ -33,9 +36,9 @@ For our default implementation we use OAuth 2.0 with Client Credentials. Thus yo
 
 The following methods functionality is provided:
 
-* invokeByUUID which allows to call a function by its specific UUID
-* invokeByEvent which allows to call all functions implementing a given event
-* isImplemented which allows to test whether a method, that implements a given event, exists
-* getLambdas which returns all lambdas belonging to the user account specified in the client
+* `invokeByUUID` which allows calling a function by its specific UUID
+* `invokeByEvent` which allows calling all functions implementing a given event
+* `isImplemented` which allows testing of whether a method, that implements a given event, exists
+* `getLambdas` which returns all lambdas belonging to the user account specified in the client
 
-More detailed documentation can be found [here.](https://github.com/LivePersonInc/faas-client-jdk)
+More detailed documentation can be found [here](https://github.com/LivePersonInc/faas-client-jdk).
