@@ -33,7 +33,7 @@ The debugging interface consists of three main parts:
 
 <img src="img/faas-debugger-button-restart.png" alt="LivePerson Functions Debugger Button Restart"> Stop and Restart debug execution<br/>
 
-<img src="img/faas-debugger-button-stop.png" alt="LivePerson Functions Debugger Button Stop">Stop the debug execution<br/>
+<img src="img/faas-debugger-button-stop.png" alt="LivePerson Functions Debugger Button Stop"> Stop the debug execution<br/>
 
 ### Debugger States
 
