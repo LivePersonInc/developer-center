@@ -26,7 +26,7 @@ Keep in mind that receiver bot is different from the sender bot, so the receiver
 
 In a bot-to-bot transfer, what makes the transfer *seamless* to the consumer is passing the conversational context--an intent or user message--from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful, "warm" hand-off.
 
-As an example, examine the illustration below of a routing bot and a savings bot  engaged in a transfer. The routing bot converses with the user and determines the user's intent. It then sends the user's intent to the savings bot. As a result, the savings bot can immediately pick up and handle the user's query. 
+As an example, examine the illustration below of a routing bot and a savings bot  engaged in a transfer. The routing bot converses with the user and determines the user's intent. It then passes the user's intent to the savings bot. As a result, the savings bot can immediately pick up and handle the user's query. 
 
    <img style="width:600px" src="img/ConvoBuilder/bots_collab3.png">
 
