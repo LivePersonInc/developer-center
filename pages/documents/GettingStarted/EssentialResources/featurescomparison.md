@@ -2,8 +2,8 @@
 pagename: Messaging features Capabilities Comparison
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Essential Resources
-permalink: essential-resources-messaging-features-capabilities-comparison.html
+documentname: Common Resources
+permalink: common-resources-messaging-features-capabilities-comparison.html
 indicator: messaging
 ---
 

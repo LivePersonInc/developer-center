@@ -83,6 +83,6 @@ Authorization: OAuth <...>
 }
 ```
 
-The value for `mtlsGateway` is taken from the [Domain API](/essential-resources-domain-api.html). The request is sent to the [forward endpoint](/mtls-methods-forward-post-request.html) with account 125634. `LP-service-name` is always set to WEBHOOKS and `LP-forward-url` is the endpoint url `https://liveperson.com/endpoint`. The `Authorization` header is computed using an OAuth1 key and secret with rights for communicating with the MTLS service. 
+The value for `mtlsGateway` is taken from the [Domain API](/common-resources-domain-api.html). The request is sent to the [forward endpoint](/mtls-methods-forward-post-request.html) with account 125634. `LP-service-name` is always set to WEBHOOKS and `LP-forward-url` is the endpoint url `https://liveperson.com/endpoint`. The `Authorization` header is computed using an OAuth1 key and secret with rights for communicating with the MTLS service. 
 
 In the example request above, a `ContentEvent` is sent to MTLS. MTLS receives the request, creates a new TLS context, maps the service, endpoint and account to a certificate, retrieves the certificate from VAULT and attaches it to the TLS context. Then, it forwards the newly constructed request to the endpoint. The response of the endpoint is given back to Webhooks. Failed requests are handled as described in [Protocol and Security](#protocol-and-security). MTLS acts as a proxy between Webhooks and the endpoint.
