@@ -610,6 +610,9 @@
           - subpagename: Overview
           - subpagename: Client Credentials
           - subpagename: Authorization Code
+          - subpagename: Error Codes
+          - subpagename: Java Client
+          - subpagename: Javascript Client
       - pagename: Integrations
         subpages:
           - subpagename: Post Chat Survey Transcripts
