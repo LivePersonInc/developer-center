@@ -1,5 +1,5 @@
 ---
-pagename: EMail Reporting
+pagename: Email Reporting
 keywords:
 sitesection: Documents
 categoryname: "Developer Tools"
@@ -9,9 +9,9 @@ permalink: liveperson-functions-monitoring-email-reporting.html
 indicator: both
 ---
 
-**EMail Reporting** gives brands the option to schedule and maintain an automatic report for Functions. The Scheduler will then periodically send the generated report to the list of the configured recipients. The report will contain statistics about the amounts of (un)successful invocations of your current lambdas. The statistics will reflect the period of time you set the frequency to, i.e. daily or weekly.
+**Email Reporting** gives brands the option to schedule and maintain an automatic report for Functions. The Scheduler will then periodically send the generated report to the list of the configured recipients. The report will contain statistics about the amounts of (un)successful invocations of your current functions. The statistics will reflect the period of time you set the frequency to, i.e. daily or weekly.
 
-<img src="img/faas-email-reporting.png" alt="LivePerson Functions - EMail Reporting" style="width:100%;"/>
+<img src="img/faas-email-reporting.png" alt="LivePerson Functions - Email Reporting" style="width:100%;"/>
 
 After selecting the **Frequency of the report** you can add recipients for this report by entering the email address of the recipients and clicking on **add**.
 To remove a recipient from the list, just click on the trashcan beside the recipient.
@@ -48,18 +48,18 @@ To remove a recipient from the list, just click on the trashcan beside the recip
 ### The Report
 If you scheduled a report, you will receive a report like this:
 
-<img src="img/faas-email-reporting-email.png" alt="LivePerson Functions - EMail Reporting - Report" style="width:100%;"/>
+<img src="img/faas-email-reporting-email.png" alt="LivePerson Functions - Email Reporting - Report" style="width:100%;"/>
 
 In the subject of the email you can see your account number. Also it shows you the timerange for the data of this report.
 The statistics you can see are:
-- **Total Lambdas** displays the current number of functions on the account. This number includes *draft* and *productive* functions and also shows the maximum allowed functions of the account.
+- **Total Functions** displays the current number of functions on the account. This number includes *draft* and *productive* functions and also shows the maximum allowed functions of the account.
 
-- **Deployed Lambdas** shows the current number of functions with a *productive* state alongside the maximum allowed *productive* lambdas for the account.
+- **Deployed Functions** shows the current number of functions with a *productive* state alongside the maximum allowed *productive* functions for the account.
 
-- **Successful Invocations** represents the total number of *successful* invocations for the current lambdas of the account since the beginning of the current month. 
+- **Successful Invocations** represents the total number of *successful* invocations for the current functions of the account since the beginning of the current month. 
 
-- **Failed Invocations** represents the total number of *failed* invocations for the current lambdas of the account since the beginning of the current month.
+- **Failed Invocations** represents the total number of *failed* invocations for the current functions of the account since the beginning of the current month.
 
-Additional to the total you can see **Individual Lambda Statistics** for each lambda currently in your account as a table.
-The table includes the name and the UUID and also **Successful Invocations** and **Failed Invocations** for the lambda.
-<div class="important">You will not see any statistics of lambdas, that are deleted at the time of the report creation</div>
+Additional to the total you can see **Individual Function Statistics** for each function currently in your account as a table.
+The table includes the name and the UUID and also **Successful Invocations** and **Failed Invocations** for the function.
+<div class="important">You will not see any statistics of functions, that are deleted at the time of the report creation</div>
