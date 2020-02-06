@@ -109,7 +109,7 @@ A Chat interaction, on the other hand, is considered "started" when the chat is 
 
 ### Sending intent information
 
-To provide some information along the messages to the consumer, you can define intent information via the context property, which will be displayed in the Agent Escalation Summary Widget.
+To provide some more information and context alongside the messages to the consumer, you can define intent information via the context property. The defined intent will then be displayed in the Agent Escalation Summary Widget.
 
 | key              | value                                       | notes                        |
 | ---------------- | ------------------------------------------- | ---------------------------- |
