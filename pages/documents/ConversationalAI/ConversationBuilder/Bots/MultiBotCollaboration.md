@@ -26,9 +26,9 @@ Keep in mind that receiver bot is different from the sender bot, so the receiver
 
 In a bot-to-bot transfer, what makes the transfer *seamless* to the consumer is passing the conversational context--an intent or user message--from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful, "warm" hand-off.
 
-As an example, examine the illustration below of a routing bot and a savings bot  engaged in a transfer. The routing bot determines and sends the user's intent to the savings bot. As a result, the savings bot can immediately pick up and handle the user's query. 
+As an example, examine the illustration below of a routing bot and a savings bot  engaged in a transfer. The routing bot converses with the user and determines the user's intent. It then sends the user's intent to the savings bot. As a result, the savings bot can immediately pick up and handle the user's query. 
 
-   <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab3.png">
+   <img style="width:600px" src="img/ConvoBuilder/bots_collab3.png">
 
 To pass an intent or user message from the sender bot to the receiver bot in a transfer, do the following in the sender bot:
 
@@ -46,11 +46,11 @@ You have a few options for setting the intent or user message in the Bot Transfe
 
 | You can set... | If you do,... | Set the value via...
 | ---- | ---- | ---- |
-| a domain name and an intent name | you can retrieve the domain name and intent name that you need from the UI. You can also retrieve the intent name via [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent). The system will ascertain and pass the intent ID based on this information. | [setBotTransferDomainName](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-domain-name) and [setBotTransferIntentName](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-name) |
-| an intent ID | you can retrieve the intent ID that you need from the application URL if you're logged into Conversation Builder directly and know how. Otherwise, set the intent name and dialog name instead. | [setBotTransferIntentID](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-id) |
+| a domain name plus an intent name | you can retrieve the domain name and intent name that you need from the UI. You can also retrieve the intent name via [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent). The system will ascertain and pass the intent ID based on this information. | [setBotTransferDomainName](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-domain-name) and [setBotTransferIntentName](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-name) |
+| an intent ID | you can retrieve the intent ID that you need from the application URL if you're logged into Conversation Builder directly and know how. Otherwise, set the domain name and intent name instead. | [setBotTransferIntentID](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-id) |
 | a user message | specify the string. | [setBotTransferUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-user-message) |
 
-During the escalation (transfer), the receiver bot checks for the availability of a Bot Transfer Context object. If the object is available, the bot then checks whether it contains an intent. If an intent isn't available, it then checks whether the object contains a user message. Based on these findings, after the transfer is completed, the receiver bot starts the  appropriate dialog, one that's tied to the intent or that's matched to the user message.
+During the escalation (transfer), the receiver bot checks for the availability of a Bot Transfer Context object. If the object is available, the bot then checks whether it contains an intent. If an intent isn't available, it then checks whether the object contains a user message. Based on these findings, after the transfer is completed, the receiver bot starts the appropriate dialog, one that's tied to the intent or that's matched to the user message.
 
 ### FAQs
 
