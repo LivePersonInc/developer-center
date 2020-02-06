@@ -3,7 +3,7 @@ pagename: Create API keys
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: Before You Get Started
-permalink: essential-resources-create-api-keys.html
+permalink: common-resources-create-api-keys.html
 indicator: both
 ---
 

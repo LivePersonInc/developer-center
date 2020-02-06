@@ -6,8 +6,8 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Essential Resources
-permalink: essential-resources-domain-api.html
+documentname: Common Resources
+permalink: common-resources-domain-api.html
 root-link: true
 indicator:
 ---
