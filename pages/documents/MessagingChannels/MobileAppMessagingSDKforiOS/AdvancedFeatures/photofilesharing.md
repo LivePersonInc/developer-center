@@ -59,14 +59,14 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 - For unauthenticated sessions, consumers must tap the photo again with each visit because the history gets cleared when a session expires or logs the consumer out.
 
-### How photo and file sharing works
+#### How photo and file sharing works
 
 <img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 
----   
+  
 
-### Step 1. Set app permissions
+#### Step 1. Set app permissions
 
 1. Set the photo library privacy settings:
 

@@ -1,16 +1,14 @@
 - categoryname: Getting Started
   image: getting-started
   documents:
-  - documentname: Before You Get Started
+  - documentname: First Steps
+  - documentname: Common Resources
     pages:
-    - pagename: Let's Get Started
-  - documentname: Essential Resources
-    pages:
-    - pagename: API Data Metrics
-    - pagename: Authentication
+    - pagename: Accessing LivePerson APIs
     - pagename: Create API keys
-    - pagename: Data APIs
     - pagename: Domain API
+    - pagename: Data APIs
+    - pagename: API Data Metrics
     - pagename: Engagement Attributes
     - pagename: Report Builder Data Metrics
     - pagename: Retry Policy Recommendations
@@ -139,6 +137,7 @@
           - subpagename: Order Status
           - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
+          - subpagename: Maven Concierge
       - pagename: Dialogs
         subpages:
           - subpagename: Dialog Basics
@@ -599,6 +598,7 @@
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
+          - subpagename: Debugger
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
@@ -779,6 +779,7 @@
       - subpagename: Photo and File Sharing
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
+      - subpagename: Scroll Behavior Configuration
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -805,8 +806,7 @@
       - subpagename: LiveEngage Configuration
       - subpagename: Sample App
       - subpagename: Appendix
-    - pagename: Latest Release Notes
-    - pagename: All Release Notes
+    - pagename: All Releases
     - pagename: Resources
       subpages:
       - subpagename: Authentication
@@ -877,6 +877,7 @@
         - pagename: Card Template
         - pagename: Carousel Template
         - pagename: Quick Replies Template
+        - pagename: Multiple Checklist Template
         - pagename: Best Practices
         - pagename: Complex Layout
         - pagename: Limitations
@@ -907,7 +908,6 @@
         - pagename: Card Template
         - pagename: Carousel Template
         - pagename: Quick Replies Template
-        - pagename: Google Pay Template
         - pagename: Limitations
     - documentname: LINE Templates
       pages:

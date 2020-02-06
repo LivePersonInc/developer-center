@@ -2,8 +2,8 @@
 pagename: Data APIs
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Essential Resources
-permalink: essential-resources-data-apis.html
+documentname: Common Resources
+permalink: common-resources-data-apis.html
 order: 30
 indicator: both
 ---

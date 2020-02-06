@@ -522,7 +522,7 @@ agent.on('notification', body => {});
 
 This event fires when the socket is closed.  If the reason is code 4401 or 4407 this indicates an authentication issue, so when you call [reconnect()](messaging-agent-sdk-methods.html#reconnect-skiptokengeneration) you should make sure not to pass the `skipTokenGeneration` argument.
 
-This event will only occur once, so if you want to attempt to reconnect repeatedly you should initiate a periodic reconnect attempt here. **LivePerson recommends that you make periodic reconnect attempts at increasing intervals up to a finite number of attempts in order to prevent flooding our service and being blocked as a potentially abusive client**. See [LivePerson's retry policy guidelines](essential-resources-retry-policy-recommendations.html) for more information.
+This event will only occur once, so if you want to attempt to reconnect repeatedly you should initiate a periodic reconnect attempt here. **LivePerson recommends that you make periodic reconnect attempts at increasing intervals up to a finite number of attempts in order to prevent flooding our service and being blocked as a potentially abusive client**. See [LivePerson's retry policy guidelines](common-resources-retry-policy-recommendations.html) for more information.
 
 In the sample below we attempt to reconnect 35 times, waiting 5 seconds the first time and increasing the interval by a factor of 1.25 between each attempt.
 
@@ -557,7 +557,7 @@ Example payload:
 
 ### error
 
-This event fires when the SDK receives an error from the messaging service. If you receive a `401` error you should [reconnect()](messaging-agent-sdk-methods.html#reconnect) according to the [retry policy guidelines](essential-resources-retry-policy-recommendations.html) mentioned above, in the [closed](messaging-agent-sdk-methods.html#closed) section. 
+This event fires when the SDK receives an error from the messaging service. If you receive a `401` error you should [reconnect()](messaging-agent-sdk-methods.html#reconnect) according to the [retry policy guidelines](common-resources-retry-policy-recommendations.html) mentioned above, in the [closed](messaging-agent-sdk-methods.html#closed) section. 
 
 Sample code:
 ```javascript

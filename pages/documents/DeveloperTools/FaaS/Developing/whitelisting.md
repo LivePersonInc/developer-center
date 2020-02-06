@@ -42,4 +42,4 @@ To ease the usage of Liveperson APIs, the domains of the following services are 
 * `smt`
 * `swift`
 
-If you have to whitelist a service that is not covered by default, get its domain by using the [Domain API](essential-resources-domain-api.html).
+If you have to whitelist a service that is not covered by default, get its domain by using the [Domain API](common-resources-domain-api.html).

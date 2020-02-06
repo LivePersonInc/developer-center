@@ -15,7 +15,7 @@ indicator: both
 ### Introduction
 
 {: .notice}
-Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/essential-resources-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/common-resources-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 Personal Data Deletion API allows brands to comply with the European Union's Right to be Forgotten requirement (a part of the GDPR). This API will permanently delete any personal data that the consumer requests to be deleted. Once the data has been deleted there is no way to restore it.
 
