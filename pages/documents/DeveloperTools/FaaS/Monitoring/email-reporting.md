@@ -45,7 +45,7 @@ To remove a recipient from the list, just click on the trashcan beside the recip
   </tr>
 </tbody>
 </table>
-<div class="important">During first time setup, it will be sent to you on the next full hour (e.g. 10:00 am)</div>
+<div class="important">After the initial setup, it will be sent to you on the next full hour (e.g. 10:00 am)</div>
 
 ### The Report
 If you scheduled a report, you will receive a report like this:
