@@ -38,7 +38,7 @@ Selecting the **Bot Transfer Context** checkbox enables the use of a Bot Transfe
 
    <img style="width:500px" src="img/ConvoBuilder/bots_collab4.png">
 
-During the transfer, the receiver bot checks for the availability of a Bot Transfer Context object. If the object is found, the bot then checks whether it contains an intent. If an intent is found, the dialog tied to that intent is triggered if available. If an intent isn't found, the bot then checks whether the object contains a user message and triggers the dialog that's matched to the message. If neither the intent or user message that are passed can be matched, the fallback message is sent in the receiver bot.
+During the transfer, the receiver bot checks for the availability of a Bot Transfer Context object. If the object is found, the bot then checks whether it contains an intent. If an intent is found, the dialog tied to that intent is triggered if available. If an intent isn't found, the bot then checks whether the object contains a user message and triggers the dialog that's matched to the message. If neither the intent nor user message that are passed can be matched, the fallback message is sent in the receiver bot.
 
 ### Overriding the intent or user message
 
