@@ -40,12 +40,12 @@ Selecting the **Bot Transfer Context** checkbox enables the use of a Bot Transfe
 
 During the transfer, the receiver bot checks for the availability of a Bot Transfer Context object. If the object is found, the bot then checks whether it contains an intent. If an intent is found, the dialog tied to that intent is triggered if available. If an intent isn't found, the bot then checks whether the object contains a user message and triggers the dialog that's matched to the message. If neither the intent nor the user message that are passed can be matched, the fallback message is sent in the receiver bot.
 
-### Overriding the intent or user message
+### Overwriting the intent or user message
 
-Occasionally, you might want to override the intent or user message that is passed in the Bot Transfer Context object during a transfer. To do this, somewhere in the dialog *before* calling the escalation, use a "bot transfer" function:
+Occasionally, you might want to overwrite the intent or user message that is passed in the Bot Transfer Context object during a transfer. To do this, somewhere in the dialog *before* calling the escalation, use a "bot transfer" function:
 
-* To override the user message, use [setBotTransferUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-user-message).
-* To override the intent, you can use [setBotTransferDomainName](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-domain-name) with [setBotTransferIntentName](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-name). The system will ascertain and pass the intent ID based on this information. Alternatively, you can use [setBotTransferIntentID](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-id).
+* To overwrite the user message, use [setBotTransferUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-user-message).
+* To overwrite the intent, you can use [setBotTransferDomainName](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-domain-name) with [setBotTransferIntentName](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-name). The system will ascertain and pass the intent ID based on this information. Alternatively, you can use [setBotTransferIntentID](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-id).
 
 In our example below, we've overridden the user message, and we've done this in the Pre-Process Code in the integration interaction.
 
