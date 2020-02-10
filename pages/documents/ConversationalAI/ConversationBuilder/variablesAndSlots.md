@@ -79,19 +79,20 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 
 If your automation asked the user "which animal do you like?" and the user answered "dogs" or something similar, the slot for the entity `animal` would be populated with their answer. The automation would then respond with "You answered: dogs!" populating the code above with the user's reply.
 
-#### Populating a dialog using slot filling
-Slot-filling becomes especially useful when mining the entities from a user's intent to populate a list of questions, and streamline the data collection process. 
+#### Slot filling with multi-entity extraction
+Slot-filling becomes especially useful when mining the entities that make up a user's intent to pre-populate your list of questions, and streamline the data collection process. 
 
-1. Create a [new dialog](https://developers.liveperson.com/conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](https://developers.liveperson.com/conversation-builder-intent-builder-overview.html)as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`
-2. Now, author a few [entities] that will be captured in our intent. For this example, we are going to create a number of entities for `color` with the values `blue, white, and red`, `items` with `pants, shoes, shirt, underwear`. and `sizes` with the values `small, medium, and large`. Before moving on, update and train the `ordering` intent with some representative training phrases that contain these entities.
-3. Next we will create the [questions](https://developers.liveperson.com/conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add an question interaction per slot that you are looking to fill. Once completed you will have a list of questions that looks like the following:
+1. Create a [new dialog](https://developers.liveperson.com/conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](https://developers.liveperson.com/conversation-builder-intent-builder-overview.html)as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
+
+2. Now, devise a few [entities] that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `items` with `pants, shoes, shirt, underwear`. and finally, one for `sizes` with the values `small, medium, and large`. Before moving on, [update and train](https://developers.liveperson.com/intent-builder-domains.html#train-a-liveperson-nlu-v2-domain) the `ordering` intent with some representative training phrases that contain these entities.
+
+3. Next we will create the [questions](https://developers.liveperson.com/conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Once completed you will have a list of questions that looks like the following:
 
 ![alt text](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/pswimm/img/variables_and_slots/slot_questions.png "A list of questions in Conversation builder")
 
-4. In the [Interaction Details - Next Actions](https://developers.liveperson.com/conversation-builder-interactions-details-next-actions.html) for each question, we will create a [slot variable](https://developers.liveperson.com/conversation-builder-interactions-details-next-actions.html#slots) that contains our desired slot variable (`item`) whose value is the entity value `@items`. Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
+4. In the [Interaction Details - Next Actions](https://developers.liveperson.com/conversation-builder-interactions-details-next-actions.html) for each question, we will create a [slot variable](https://developers.liveperson.com/conversation-builder-interactions-details-next-actions.html#slots) that contains our slot variable (`item`) and whose value is the entity value `@items`. Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
 
 ![alt text](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/pswimm/img/variables_and_slots/slot_fill.png "Filling the slot")
-
 
 5. Now you can test the bot using an intent with slot choices as part of the query. When you enter the dialog, if a user has supplied an entity that is known to the domain, it will automatically populate the slot and skip the interaction and move on to the next interaction's question. If a user manages to express all the slots as part of their intent query, it will skip to our confirmation step.
 
