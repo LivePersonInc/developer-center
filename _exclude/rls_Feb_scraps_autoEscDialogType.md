@@ -11,12 +11,51 @@ FOR THE EXISTING DIALOG BASICS PAGE
 
 * **Auto Escalation**: ADD DESCRIPTION....For more on this, see here.
 
+
+### Configure dialog settings
+
+**To configure dialog settings**
+1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/dialogs_menu.png">
+
+2. Select **Dialog Settings**.
+3. Click **More Settings** to display all the settings.
+4. Configure the settings as needed, and click **Save**.
+
+Dialog settings include:
+
+* **Dialog Name**: Enter a name that's concise and clear.
+* **Dialog Type**: This is read only.
+* **Domain**: Select a domain to associate it with the dialog.
+
+### Disable or enable a dialog
+
+1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/dialogs_menu.png">
+
+2. Select **Dialog Settings**.
+3. Click **More Settings** to display all the settings.
+4. For **Enable Dialog**, click the slider. Enable (turn on) the slider to enable the dialog; disable (turn off) the slider to disable the dialog.
+5. Click **Save**.
+
+### Delete a dialog
+
+Deleting a dialog is a non-recoverable action, so be certain about doing so before taking this action. As an alternative, consider disabling the dialog instead; you can do this in the dialog's settings.
+
+**To delete a dialog**
+
+1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/dialogs_menu.png">
+
+2. Select **Delete Dialog**.
+3. In the confirmation dialog, click **Yes**. 
+
 FOR THE EXISTING BOT SETTINGS PAGE
 
 * **Auto Escalation Threshold**: Select the maximum number of times the fallback message should be sent in a stuck conversation before triggering the Auto Escalation dialog. For an introduction to Auto Escalation dialogs, see here.
-
-FOR THE EXISTING LP AGENT ESCALATION PAGE
-???
 
 FOR THE NEW AUTO ESCALATION DIALOGS PAGE
 
