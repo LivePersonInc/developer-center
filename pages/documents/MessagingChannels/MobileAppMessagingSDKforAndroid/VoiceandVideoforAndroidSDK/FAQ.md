@@ -11,6 +11,12 @@ permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-
 indicator: messaging
 ---
 
+<div class="important">
+<h2>Deprecation Notice</h2>
+
+the CoApp product is deprecated and will be discontinued from February 28th, 2020 on.
+</div>
+
 ### How much diskspace does the SDK need?
 
 * A universal build of the SDK is around **350kb**.

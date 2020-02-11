@@ -14,6 +14,12 @@ permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-
 indicator: messaging
 ---
 
+<div class="important">
+<h2>Deprecation Notice</h2>
+
+the CoApp product is deprecated and will be discontinued from February 28th, 2020 on.
+</div>
+
 ### Appearance and Behavior
 
 **Note**: Full white-labeling is currently not supported. If you are missing an important customization feature, please don't hesitate to contact your LivePerson account manager for help.
