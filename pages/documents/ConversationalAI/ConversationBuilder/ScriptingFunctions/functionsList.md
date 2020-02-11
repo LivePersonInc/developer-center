@@ -25,6 +25,7 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 * [getDisambiguatedIntentId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-disambiguated-intent)
 * [getDisambiguatedIntentName](conversation-builder-scripting-functions-get-set-contextual-data.html#get-disambiguated-intent)
 * [getEnvVariable](conversation-builder-scripting-functions-get-set-contextual-data.html#get-environment-variable)
+* [getHoursType](conversation-builder-scripting-functions-get-set-contextual-data.html#get-type-of-hours)
 * [getLPCustomerInfo](conversation-builder-scripting-functions-get-user-data.html#get-authenticated-customer-info)
 * [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-and-previous-skills) (current skill, previous skill, etc.)
 * [getLPUserPersonalInfo](conversation-builder-scripting-functions-get-user-data.html#get-authenticated-customer-info)

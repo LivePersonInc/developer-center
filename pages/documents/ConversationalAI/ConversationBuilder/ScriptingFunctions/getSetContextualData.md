@@ -383,3 +383,59 @@ These functions retrieve session-scoped variables that were set via the [Web Vie
     botContext.getWebViewVariable('PaymentStatus'); // This returns the value as PROCESSED
 ```
 For the corresponding curl example, see the [Web View API](conversation-builder-integrations-web-view-integration-api.html) documentation.
+
+### Get type of hours
+
+Given an array of hours classified by type and a time zone, this method returns the type of hours.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| getHoursType(hoursSpec, zoneIdStr) | *hoursSpec (String array)* – The hours classified by type <br><br> *zoneIdStr (String)* – The time zone, e.g., “America/Los_Angeles” | The String that defines the type of hours, e.g., “AFTER_HOURS” | 
+
+#### Example
+
+```javascript
+var hoursSpec = [
+    "REG_HOURS~8:00~20:00",
+    "AFTER_HOURS~20:00~8:00",
+    "FRIDAY|WKEND_REG_HOURS~8:00~17:00",
+    "FRIDAY|WKEND_AFTER_HOURS~17:00~08:00",
+    "SATURDAY|WKEND_REG_HOURS~8:00~17:00",
+    "SATURDAY|WKEND_AFTER_HOURS~17:00~08:00",
+    "SUNDAY|WKEND_REG_HOURS~8:00~17:00",
+    "SUNDAY|WKEND_AFTER_HOURS~17:00~08:00",
+    "11.22.2018|HOLIDAY_THANKS~0:00~23:59",
+    "12.25.2018|HOLIDAY_XMAS~0:00~23:59"
+];
+
+var type = botContext.getHoursType(hoursSpec, "America/Los_Angeles");
+
+// TEST FOR type and set the transferMessage to result
+switch(type){
+  case "REG_HOURS":
+  case "WKEND_REG_HOURS":
+    msg = "Let me connect you to an Agent who can help you.";
+    botContext.setBotVariable('transferMessage',msg,true,false);
+    botContext.setTriggerNextMessge('Liveperson Transfer');
+    break;
+
+  case "AFTER_HOURS":
+  case "WKEND_AFTER_HOURS":
+    msg = "You have reached us after our business hours. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
+    botContext.setBotVariable('noTransferMessage',msg,true,false);
+    botContext.setTriggerNextMessge('No Transfer');
+    break;
+
+  case "HOLIDAY_THANKS":
+    msg = "We are closed for the Thanksgiving holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
+    botContext.setBotVariable('noTransferMessage',msg,true,false);
+    botContext.setTriggerNextMessge('No Transfer');
+    break;
+
+  case "HOLIDAY_XMAS":
+    msg = "We are closed for the Christmas holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
+    botContext.setBotVariable('noTransferMessage',msg,true,false);
+    botContext.setTriggerNextMessge('No Transfer');
+    break;
+}
+```
