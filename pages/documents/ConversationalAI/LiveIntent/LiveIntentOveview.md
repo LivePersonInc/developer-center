@@ -9,9 +9,11 @@ permalink: liveintent-overview.html
 indicator: both
 ---
 
-LiveIntent is LivePerson's one-stop hub for discovering, tracking, and maintaining intents in real time. It provides real-time intent identification to help businesses optimize operations and enable data-driven automation programs. For more on how LiveIntent can help your business, see [here](https://knowledge.liveperson.com/ai-bots-automation-liveintent-overview.html).
+[LiveIntent](https://knowledge.liveperson.com/ai-bots-automation-liveintent-overview.html) is LivePerson's one-stop hub for discovering, tracking, and maintaining intents in real time.
 
-<img class="fancyimage" style="width:750px" src="img/liveintent_dashboard.png">
+Live Intent provides real-time intent identification to help businesses optimize operations and enable data-driven automation programs. For a deeper explanation of how LiveIntent can help your business, see [here](https://knowledge.liveperson.com/ai-bots-automation-liveintent-the-power-of-an-intent-driven-contact-center.html).
+
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/liveintent_dashboard.png">
 
 ### Getting Started
 
@@ -19,9 +21,9 @@ To enable LiveIntent on your account, please contact your LivePerson account rep
 
 #### Permissions
 
-LiveIntent inherits its permission structure from Conversation Builder, as the primary administration/configuration work is related to setting up intents and training models in Intent Builder. Therefore, LiveIntent also requires Conversation Builder permissions to be turned on in the LiveEngage Administrator Profile, if not already done so.
+LiveIntent inherits its permission structure from Conversation Builder, as the primary administration/configuration work is related to setting up intents and training models in [Intent Builder](intent-builder-overview.html). Therefore, LiveIntent also requires Conversation Builder permissions to be turned on in the LiveEngage Administrator Profile, if not already done so.
 
-Access to LiveIntent dashboard is currently granted to the following roles:
+Access to the [LiveIntent dashboard](https://knowledge.liveperson.com/ai-bots-automation-liveintent-dashboard.html) is granted to users with the following permissions:
 
 * CB_VIEW_ANALYTICS
 * BOT_BUILDER_ADMIN
@@ -32,18 +34,18 @@ Access to LiveIntent dashboard is currently granted to the following roles:
 
 #### Starter Pack Quick Start
 
-If you don't already have intents created in Intent Builder, and you want to get up to speed quickly, LiveIntent offers starter packs filled with common intents different business verticals. These starter packs leverage your historical transcript data to automatically create a model for your brand.
+If you don't already have intents created in Intent Builder, and you want to get up to speed quickly, LiveIntent offers starter packs filled with common intents for different business verticals. These starter packs leverage your historical transcript data to automatically create a model for your brand.
 
 To get started with starter packs, please contact your LivePerson account representative.
 
 #### Manual Setup
 
-* If you already have intents in Intent Builder, see [here](liveintent-enabling-liveintent.html) for how to enable them in LiveIntent.
+* If you already have intents in Intent Builder, see [here](liveintent-enabling-liveintent.html) for information on how to enable them in LiveIntent.
 
-* If you don't have intents in Intent Builder, but you want to set them up manually, use [Intent Builder](intent-builder-overview.html) to create a domain and the intents, [enable liveintent](liveintent-enabling-liveintent.html), and add training phrases.
+* If you don't have intents in Intent Builder, but you want to set them up manually, use [Intent Builder](intent-builder-overview.html) to create a domain and the intents, add training phrases, and [enable liveintent](liveintent-enabling-liveintent.html).
 
 * If you have intents in an external system, you can import them into Intent Builder.
 
 ### Using LiveIntent
 
-When you have intents and they are enabled for LiveIntent, you can view the data in the [LiveIntent dashboard](https://knowledge.liveperson.com/ai-bots-automation-liveintent-dashboard.html).
+When you have intents, and they are enabled for LiveIntent, you can view the data in the [LiveIntent dashboard](https://knowledge.liveperson.com/ai-bots-automation-liveintent-dashboard.html).
