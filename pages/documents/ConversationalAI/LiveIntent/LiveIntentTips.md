@@ -118,7 +118,7 @@ Here are some steps you can take to evaluate how well your model is doing.
 
 2. If you see a large number of patterns in unlabeled data, consider creating more intents.  
 
-### Step 3. Improve the model (Optional)
+### Step 3. Improve the model
 
 You may want to fine tune your model to increase the accuracy of message classifications. There are several ways you can do so: 
 
