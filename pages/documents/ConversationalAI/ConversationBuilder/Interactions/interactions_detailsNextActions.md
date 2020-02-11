@@ -46,7 +46,7 @@ In the first drop-down in the Conditions section, you specify how you want to ma
 * **Regular Expression**: The bot will trigger the Next Step action (discussed below) when the user input matches the RegEx that you specify. All standard [Regex rules](http://www.regexlib.com) apply.
 * **Pattern**: The bot will trigger the Next Step action (discussed below) when the user input matches the pattern that you specify. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
 * **Exact Value**: The bot will trigger the Next Step action (discussed below) when the user input matches an exact value that you specify. This is useful for questions where you present the user a set of predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
-* **Evaluate Options**: Available for multiple choice questions only. The bot will trigger the Next Step action (discussed below) when the user's choice matches the choice that you select. For a match to be found, the consumer must select the option, enter the choice exactly, or, in text-only channels, enter the corresponding letter or number (configured in the Interaction Details).
+* **Evaluate Options**: Available for multiple choice questions only. The bot will trigger the Next Step action (discussed below) when the user's choice matches the choice that you select here. For a match to be found, the consumer must select the option, enter the choice exactly, or, in text-only channels, enter the corresponding letter or number (configured in the Interaction Details).
 
     <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/interactionDetails_listStyle.png">
 
