@@ -69,8 +69,14 @@ There are two versions of LivePerson's NLU engine: version 1 (v1) and version 2 
 Key characteristics include:
 
 * A recommender model based on Word Mover's Distance (WMD) algorithms. 
-* Considered an "entry level" NLU engine because it's more specific, i.e., you have to *tailor* the data set to perform the intent matching. In contrast, NLU v2 is more generalized; it can handle a general set of user questions and still perform well. 
-* From an NLU processing perspective, performs well regardless of the number of intents and training phrases involved. However, if you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed.
+* Considered an "entry level" NLU engine because it's more specific. In other words, for the v1 algorithm to work well, the sample sentences should be close to the expected user input and have only small differences in wording, for example:
+
+    User input: *I want to buy a brown Michael Kors bag*
+    <br>Tailored sample sentence (with entities): *I want to buy COLOR PRODUCT_BRAND bag*
+
+    In contrast, NLU v2 is more generalized; it can handle a general set of user questions and still perform well. 
+
+* From an NLU processing perspective, performs well regardless of the number of intents and training phrases involved. However, if you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
 * Recommended over NLU v2 if a domain has a lot of entities due to better processing of the entities.
 * Doesn't require the model to be trained, which can save time.
 * Can't be used with LiveIntent.
