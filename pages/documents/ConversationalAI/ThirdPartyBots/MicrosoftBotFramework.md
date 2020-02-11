@@ -72,7 +72,7 @@ The Bot Connector utilizes the **channelData** property for anything besides pla
 It is expected that a bot responds to every message sent by the consumer.
 If no response is detected in a certain time frame, the Bot Connector assumes something is wrong and tries to transfer the conversation to an agent.
 
-If you want to want to reply with more than one message, you need to use the [multiMessage](#sending-multiple-responses) feature or configure the `Multiple Activities` option.
+If you want the bot to reply with more than one message, you need to use the [multiMessage](#sending-multiple-responses) feature or configure the `Multiple Activities` option.
 
 ### Sending Rich Content (Structured Content)
 
