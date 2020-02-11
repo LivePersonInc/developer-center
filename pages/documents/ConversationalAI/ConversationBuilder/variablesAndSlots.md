@@ -82,7 +82,7 @@ If your automation asked the user "which animal do you like?" and the user answe
 #### Slot filling with multi-entity extraction
 Slot-filling becomes especially useful when mining the entities that make up a user's intent to pre-populate your list of questions, and streamline the data collection process. 
 
-1. Create a [new dialog](https://developers.liveperson.com/conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](https://developers.liveperson.com/conversation-builder-intent-builder-overview.html)as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
+1. Create a [new dialog](https://developers.liveperson.com/conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](https://developers.liveperson.com/conversation-builder-intent-builder-overview.html) as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
 
 2. Now, devise a few [entities] that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `items` with `pants, shoes, shirt, underwear`. and finally, one for `sizes` with the values `small, medium, and large`. Before moving on, [update and train](https://developers.liveperson.com/intent-builder-domains.html#train-a-liveperson-nlu-v2-domain) the `ordering` intent with some representative training phrases that contain these entities.
 
