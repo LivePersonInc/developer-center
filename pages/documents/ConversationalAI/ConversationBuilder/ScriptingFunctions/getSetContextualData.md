@@ -388,6 +388,10 @@ For the corresponding curl example, see the [Web View API](conversation-builder-
 
 Given an array of hours classified by type and a time zone, this method returns the type of hours.
 
+This method is commonly used to provide a different experience or messaging to the consumer during regular or after hours. Additionally, the method is able to handle generalized hours (e.g., REG_HOURS, AFTER_HOURS), hours for specific days of the week (FRIDAY, SATURDAY, etc.), and even specific dates (e.g., 12.25.2018 for Christmas).
+
+The time zone value should be the time zone of the agent call center, not the user. You can find the appropriate format for all time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | getHoursType(hoursSpec, zoneIdStr) | *hoursSpec (String array)* – The hours classified by type <br><br> *zoneIdStr (String)* – The time zone, e.g., “America/Los_Angeles” | The String that defines the type of hours, e.g., “AFTER_HOURS” | 
