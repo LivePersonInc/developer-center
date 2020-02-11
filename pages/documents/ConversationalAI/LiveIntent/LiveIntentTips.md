@@ -120,7 +120,7 @@ Here are some steps you can take to evaluate how well your model is doing.
 
 ### Step 3. Improve the model
 
-You may want to fine tune your model to increase the accuracy of message classifications. There are several ways you can do so: 
+You should fine tune your model to increase the accuracy of message classifications. There are several ways you can do so: 
 
 1. Add more training utterances and re-train the NLU model. 
 
