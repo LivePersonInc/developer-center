@@ -71,7 +71,7 @@ Key characteristics include:
 * A recommender model based on Word Mover's Distance (WMD) algorithms. 
 * Considered an "entry level" NLU engine because it's more specific. In other words, for the v1 algorithm to work well, the sample sentences should be close to the expected user input and have only small differences in wording, for example:
 
-    User input: *I want to buy a brown Michael Kors bag*
+    Expected user input: *I want to buy a brown Michael Kors bag*
     <br>Tailored sample sentence (with entities): *I want to buy COLOR PRODUCT_BRAND bag*
 
     In contrast, NLU v2 is more generalized; it can handle a general set of user questions and still perform well. 
