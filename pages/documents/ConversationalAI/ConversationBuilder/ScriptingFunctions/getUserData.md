@@ -23,7 +23,7 @@ Get User Platform Id and Get User Platform Type are the functions that are used 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `getUserPlatformId()` | None | string: unique User platform ID |
-| `getUserPlatformType()` | None | string: User platform type |
+| `getUserPlatformType()` | None | HTMLCLIENT, SMS, INAPP, WHATSAPP, RCS, ABC, FACEBOOK |
 
 #### Example
 
@@ -40,7 +40,6 @@ botContext.printDebugMessage('The userPlatformId = ' + userId + 'and the userPla
 
 There are two built in methods to return authenticated customer information. You can attempt to see if either of these 2 methods return true or not.  If the visitor is authenticated, (typically they would set personal or customer info being logged in) you can access the Personal Info or Customer Info object array.
 
-Each function refers to its corresponding [authenticated engagement attribute object](essential-resources-authentication.html#messaging-consumer-authentication-and-identification).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |

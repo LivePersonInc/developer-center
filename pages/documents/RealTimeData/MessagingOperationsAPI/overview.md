@@ -14,6 +14,9 @@ indicator: messaging
 ---
 ### Introduction
 
+{: .notice}
+Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/common-resources-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+
 The Messaging Operations API extracts data according to the search query. The API allows agent managers to extract information about their call center on the account, skill, and agent level. The data includes closed conversations and their associated attributes, such as customer satisfaction, average conversation length, resolved status and so on.
 
 This API is based on the REST architecture style, which allows clients to send HTTP requests to view LiveEngage operational data. This API supports the HTTP GET functionality (data retrieval), and all data is returned in JSON format.

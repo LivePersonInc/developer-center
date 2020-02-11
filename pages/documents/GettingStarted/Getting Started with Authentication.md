@@ -1,14 +1,16 @@
 ---
-pagename: Authentication
+pagename: Getting Started with Authentication
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: Essential Resources
-permalink: essential-resources-authentication.html
+permalink: essential-resources-getting-started-with-authentication.html
 order: 10
 indicator: both
+redirect_from:
+  - essential-resources-authentication.html
 ---
 
-Some of our APIs require authorization before you can use them. This is done via either of two methods: user authentication via login (using your regular account credentials) that generates an access token using the OAuth 2.0 methodology or a server authorization via an API key (created and retrieved beforehand via the LiveEngage UI) which uses the OAuth 1.0 methodology. Every API uses either of the two methods (or both), as listed in its overview (for example, the [Login Service API](../SecurityAndAuthenication/LoginServiceAPI/getting-started.md)
+Some of our APIs require authorization before you can use them. This is done via either of two methods: user authentication via login (using your regular account credentials) that generates an access token using the OAuth 2.0 methodology or a server authorization via an API key (created and retrieved beforehand via the LiveEngage UI) which uses the OAuth 1.0 methodology. Every API uses either of the two methods (or both), as listed in its overview (for example, the [Users API](/users-api-overview.html#getting-started)).
 
 What follows is a general overview of these two authorization methods and how they work, alongside other methods of authentication/authorization which occur in the LiveEngage platform (like consumer authentication for identification purposes and messaging conversation continuity).
 
@@ -18,7 +20,7 @@ What follows is a general overview of these two authorization methods and how th
 
 LiveEngage users can be agents, agent managers, campaign managers, and administrators. Using the Login Service API, you can log in one of these users to LiveEngage. Once you've logged in a user, you will receive back an authorization token (bearer). Use this token in your authorization header in all following API requests.
 
-**Note**: To use the Login Service API, you must first retrieve the service API domain that corresponds with the server where your account resides. For example, for the [Users API](/users-api-overview.html), you'll need to make a GET request to the following endpoint:
+**Note**: that in order to use the Login Service API, you must first retrieve the service API domain which corresponds with the server that your account is on. For example, for the [Users API](/users-api-overview.html), you'll need to make a GET request to the following endpoint:
 
 `http://api.liveperson.net/api/account/{accountId}/service/{serviceName}/baseURI.json?version=1.0`
 

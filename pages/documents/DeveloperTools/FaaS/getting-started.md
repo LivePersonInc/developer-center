@@ -28,7 +28,7 @@ Once agreed, we will automatically set up your account to easily integrate with 
 #### Set User Permissions
 
 <div class="notice">
-After provisioning your account with LP Functions, your user will still require <strong>permissions</strong> to be able to access the UI. Please follow the section below to customize your user permissions. Moreover, please contact your LivePerson Account Team in case the provisioning did not finish successfully.
+Users with an Administrator profile automatically have all the relevant Function Permissions as is described below. If users who do not have an Administrator based role require any of the Functions related permissions below, please manage the user profile permission from the User Management tab in your LivePerson account. 
 </div>
 
 There are 3 user permissions pertaining to Functions:

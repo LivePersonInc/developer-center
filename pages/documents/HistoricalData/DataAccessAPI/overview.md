@@ -15,6 +15,9 @@ indicator: chat
 
 ### Introduction
 
+{: .notice}
+Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/common-resources-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+
 The LiveEngage Data Access API provides brands with the ability to address specific Goals and KPIs while also extending the reporting capabilities of their account by accessing their entire raw data. The data includes full information about their agents’ activities and visitors’ journeys.
 
 Brands can use this data in data warehouse systems as well as create customized reports from a combination of their own data, data provided by LiveEngage advanced analytics and other 3rd parties data system they are working with.
@@ -29,7 +32,7 @@ The four types of data supported and configurable in each account are as follows
 
 The Data Access API retrieves historical data. This API is based on the REST architecture style and supports the HTTPS GET protocol (data retrieval), all retrieved data is returned in JSON format.
 
-**Note** 
+**Note**
 
 Data Access retention will soon be reduced to a 30 days period in order to comply with the GDPR. The GDPR (General Data Protection Regulation) is a new European Union regulation that is aimed to protect personal data of individuals within the EU that will be enforced by May 25th 2018.
 
@@ -55,7 +58,7 @@ A few things you'll need to get started with this API:
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).  
 
-4. This API requires backend enablement, please contact your account manager to do so. 
+4. This API requires backend enablement, please contact your account manager to do so.
 
 
 ### Architecture

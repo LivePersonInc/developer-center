@@ -39,7 +39,7 @@ Once you've added a domain, you will be automatically navigated to the Domain Vi
 ### Train a LivePerson NLU v2 domain
 
 1. Open the domain.
-2. Ensure the domain has *at least* 10 intents. For each intent, ensure it has *at least* 20 training phrases.
+2. Ensure the domain has *at least* 5 intents. For each intent, ensure it has *at least* 20 training phrases.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intents_trainingPhrases.png">
 
@@ -73,7 +73,7 @@ Once you've added a domain, you will be automatically navigated to the Domain Vi
 
 1. Open the domain.
 2. Click <img style="width:35px" src="img/ConvoBuilder/icon_train.png"> (Train icon) in the lower-right corner to start the training.
-3. Select the NLU provider credential from the list, and click **Train**.
+3. Select the [NLU provider credential](conversational-ai-natural-language-understanding-nlu-engines.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
 
     <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/NLU_image_4.png">
 

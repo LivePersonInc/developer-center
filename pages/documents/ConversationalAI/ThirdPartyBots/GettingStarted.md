@@ -25,7 +25,7 @@ Using Third-Party Bots, you can provision a connector for IBM Watson, Google Dia
 Framework or leverage LivePerson Functions with the Custom Integrations Option.
 
 {: .important}
-If you need to connect a external bot that does not have a pre-built connector, see [this document](bot-connectors-custom-third-party-bots.html) for instructions.
+If you need to connect a external bot that does not have a pre-built connector, see [this document](third-party-bots-custom-integration.html) for instructions.
 
 Each connector provides the functionality to
 
@@ -884,7 +884,10 @@ const lpSdes = {
   <li>
     Transfer to skill: Default escalation skill the bot should escalate to in case of any error.
   </li>
- 
+    <li>
+    Enable error-hook: Liveperson Function which gets triggered when a bot is having an issue 
+  </li>
+
 </ul>
 
 **Note**: if no other skills are configured, it might be that the bot will escalate the conversation to itself. However in this case only new messages will be processed.

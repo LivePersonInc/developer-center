@@ -3,6 +3,7 @@ pagename: SDK 5.0 and above
 redirect_from:
   - consumer-experience-ios-sdk-attributes.html
   - mobile-app-messaging-sdk-for-ios-customization-and-branding-attributes.html
+  - mobile-app-messaging-sdk-for-ios-sdk-attributes-attributes.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -1879,6 +1880,10 @@ Toggle the mode of the scroll to bottom unread message text preview.
 
 #### unreadMessagesDividerEnabled 
 Toggle the mode of the Unread Messages divider. 
+
+- Important: As of SDK 5.1 & above, This configuration no longer impacts the scroll of the conversation or the scroll to bottom button (message preview or count indicator)
+
+- Note: Behavior for SDK version 5.0:
 If  disabled, the "scroll to bottom" button will scroll to bottom of the conversation but the count indicator and message preview  will not be displayed. Regardless of **unreadMessagesDividerEnabled** value, the conversation screen will always scrolls to the last position where the user left off. 
 
    - **Type:** Bool
@@ -1973,8 +1978,8 @@ Define the remote avatar icon border width.
 Define the remote avatar icon border color.
 
 
-- **Type:** UIColor?
-- **Default value:** nil
+- **Type:** UIColor
+- **Default value:** [`LPColor.lpClear`](#LPColor)
   
   
 #### brandAvatarImage  

@@ -75,7 +75,7 @@ You will test this connection with a standard web chat engagement, so now you cr
 
 ### Step 11: Set up the transfer from bot to human
 
-In this step, you set up an integration to transfer the user to a human agent in LiveEngage. This is called an "escalation."
+In this step, you set up an [integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#add-a-liveperson-agent-escalation) to transfer the user to a human agent in LiveEngage. This is called an "escalation."
 
 1. Return to Conversation Builder, and open the bot.
 2. Click **Integrations** on the menu bar in the upper-right corner.
@@ -127,7 +127,7 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/helloworld/agentConnectorsPage1.png">
 
 {: .important}
-LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more.
+LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 #### Start the agent connector
 

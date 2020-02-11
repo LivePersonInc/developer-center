@@ -76,8 +76,7 @@ searchInstance.on({
     footer.classList.add('overlayvisible');
 },
   'autocomplete:selected': function (event, suggestion, dataset, context) {
-    var target = suggestion.url;
-    navigateContent(target);
+    window.location = suggestion.permalink;
 },
   'autocomplete:updated': function () {
     if (this.value != '') {

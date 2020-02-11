@@ -13,7 +13,10 @@ As a bot developer, you can use Conversation Builder to quickly deploy bots to a
 ### The high-level deployment process
 
 #### Prerequisite steps
-Before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
+
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place and you're accessing Conversation Builder from within LiveEngage (i.e., your browser is pointing to the "liveperson.net" domain), you must whitelist LivePerson's IP addresses within LiveEngage. You can find these details [here](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center. However, if you're accessing Conversation Builder directly (i.e., your browser is pointing to the "livepersonai.com" domain), please contact LivePerson Support to obtain the AWS IP addresses to whitelist.
+
+Also, before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
 
 1. Create a bot agent. This is a user where the type = "Bot." Make sure to enable the agent.
 2. Create a skill and assign it to the bot agent.
@@ -28,7 +31,7 @@ After the pre-requisite steps are performed, at a high level, deployment is a tw
 2. [Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). This gets the agent connector running in the target environment.
 
 {: .important}
-LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover. Additionally, if you have traffic considerations, you might want to deploy three or more.
+LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 For some practice at deployment, complete the [Connect to Live Engage](conversation-builder-getting-started-4-connect-to-liveengage.html) tutorial. 
 
@@ -53,7 +56,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents appear in this list.
     - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps).
     - **Conversation Type**: Select either "Chat" or "Messaging." This should match the type of LiveEngage account, which is either one or the other.
-    - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Operations or Admin). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
+    - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Bot Status Access or Administrator). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
 6. If desired, click **Advanced Options** and specify any optional, advanced settings:
     - **Fallback Skill ID**: If the skill (that you assigned to the bot agent) has a defined fallback skill, you can enter the fallback skill's ID here. The fallback skill is the skill to which to route the conversation as a fallback if no agents with the primary skill have free capacity. Fallback skills have several uses, but they're often used to escalate (transfer) a conversation from a bot agent to a live agent. You define fallback skills for skills in LiveEngage. For more on this, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
     - **External Webhook URL**: This option is for brands that want to use HTTP instead of WebSocket for connection to LiveEngage. Enter the URL to which the HTTP connector will post user messages to external endpoints.
@@ -120,17 +123,12 @@ An agent connector can have one of the following statuses:
 Custom configuration fields are key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
 
 {: .important}
-Use of custom configuration fields potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for one of your duplicate bot connectors all running the same bot (per guidance [above](conversation-builder-testing-deployment-deploying-to-liveengage.html#the-deployment-process)), you'll get different behavior between the bots within an account.
+Use of custom configuration fields potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for one of your duplicate bot connectors all running the same bot, you'll get different behavior between the bots within an account.
 
 #### Fields
 
 | Field Name   | Default Value      | Description    | Messaging | Chat | Required |
 |--------|---------|-------------|-----------|------|----------|
-| lpAccountId  | null     | LE Account Id     | Y         | Y    | Y        |
-| lpAccountUser    | null     | LE Account Username   | Y     | Y    | Y     |
-| lpUserRole  | ASSIGNED\_AGENT    | Determines whether the user is Agent Manager or Agent\.Possible values: ASSIGNED\_AGENT, MANAGER    | Y      | N    | N    |
-| enableAccessibility  | TRUE   | Determines whether the fields sent have the tooltip attribute for accessibility\.   | Y     | Y    | N     |
-| fallbackSkillId   | null     | Skill Id for agent escalation if the bot does not respond to user message after a period of time set byfallbackEscalationTime   | Y    | Y    | N   |
 | fallbackEscalationTime  | 3 \* 1000 \* 60   | Value in milliseconds for the period of time to pass before invoking fallback Escalation    | Y   | N    | N    |
 | defaultGreetingMessage  | ‘hi’   | Greeting message sent to the bot when the user connects   | Y         | Y    | N  |
 | defaultStepupMessage  | ‘\_STEPUP\_  | StepUp message sent to the bot when Stepup Authentication happens   | Y  | N    | N   |
@@ -141,6 +139,3 @@ Use of custom configuration fields potentially can cause many issues because it 
 | retryMessageInterval  | 30000    | Tied with messageResendMaxRetries, will wait 30000 miliseconds before re\-sending the message   | Y   | N    | N    |
 | maxEscalationRetries    | 5     | When the agent escalation fails, we send an \_agent\_escalation\_failed\_ message, however this can end in infinitely loop if the escalation keep failing\. This will set the max number of failure messages sent                                               | Y    | N    | N   |
 | ringAcceptWait   | 100 milliseconds  | Amount of time to wait before the bot accepts the ring from UMS\.    | Y   | N    | N   |
-| useRedis  | “WEBSOCKET”    | If set to “REDIS”, will use redis Q connection instead of websocket connection   | N   | N    | N   |
-| externalWebhookUrl   | null  | URL used for HTTP Connector to post message to external endpoints            | Y   | Y    | N   |
-| externalWebhookAPIKey | null   | Auth header for external HTTP headers, api calls will be sent as: Bearer \{api\_key\}   | Y   | N    | N  |

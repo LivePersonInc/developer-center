@@ -10,54 +10,69 @@ permalink: knowledge-base-overview.html
 indicator: both
 ---
 
-A bot is a great way to provide help and information. Consumers can ask questions to your bot conversationally, and the bot can respond with answers and links to relevant content. Information like this is provided to the bot using a knowledge base.
+In Conversation Builder, a knowledge base is a great tool to answer questions about a variety of topics specific to your bot's area of expertise. One would typically add a knowledge base integration in a fallback dialog to provide simple answers to topics not covered elsewhere in the bot.
 
-The Knowledge Base application in the Conversation Builder platform allows you to create and manage knowledge bases and articles, which are then processed by our NLU engine. This allows your bot to leverage [intents](intent-builder-intents.html) and [entities](intent-builder-entities.html) to recommend the most accurate articles to an inquiring consumer. FAQ bots and Agent Advisor widgets are both driven by a knowledge base full of articles, intelligently delivering the right content to the consumer at the right time.
+The Knowledge Base application in the Conversation Builder platform lets you to create and manage knowledge bases and articles, which are then processed by an NLU engine. This allows the bot to leverage [intents](intent-builder-intents.html) and [entities](intent-builder-entities.html) to recommend the most accurate articles to an inquiring consumer. FAQ bots and Agent Advisor widgets are both driven by a knowledge base full of articles, intelligently delivering the right content to the consumer at the right time.
 
 <img class="fancyimage" style="width:750px" src="img/beaut_kb_2.png">
 
 ### How a knowledge base works
 
-The Knowledge Base uses our Natural Language Understanding (NLU) algorithms to match articles to consumer input. Each article has a title and a series of intent qualifiers, against which the NLU engine compares the consumer's input. If it finds a match to a reasonable degree of certainty, it will "serve" the appropriate article to the consumer.
+The Knowledge Base uses two types of algorithms to match a consumer's input to articles and return an appropriate article.
 
-The key article attributes that the NLU uses for matching are:
+First, an *exact match* search is performed. This checks the consumer's input against the title, summary, detail, intent qualifiers (if used), and tags in the articles. If an exact match is found, the article is returned.
+
+If an exact match isn't found, the Knowledge Base then uses *Natural Language Understanding (NLU)* algorithms to match the consumer input to articles. If it finds a match to a reasonable degree of certainty, it returns the article. The article attributes against which the NLU engine compares the consumer's input include:
 
 * Title
-* Intent qualifiers
-* Summary
-* Any positive or negative learnings that the article has acquired
+* Intents (either the knowledge base's built-in intents or domain intents that are linked to the relevant article)
+* Positive and negative learnings that the article has acquired
 
-The title and the intent qualifiers are [intents](intent-builder-intents.html).
+The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR. The default quality setting is GOOD, but you can change the score threshold within your [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html). That said, it's generally recommended to keep the quality above FAIR PLUS.
 
-Tags are used to highlight the key nouns in the intent and title. For instance “How do I reset my password?” would have a tag of “password” and perhaps “reset”.
+### Knowlege Base intents versus Domain intents
 
-The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR.
+When dealing with a knowledge base, an intent is the question that the consumer has ("What's your return policy?") or a problem the user needs to solve ("I can't remember my password."). 
 
-### Adding a knowledge base
+While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You can do this right inside the article by adding what are called "intent qualifiers":
 
-1. In the Dashboard, click **Add Knowledge Base** in the upper-right corner.
-2. Specify the following:
-    * **Data source name**: Enter a name for the knowledge base.
-    * **Data source type**: Select "Knowledge Base."
-    * **Language**: Select a language.
-    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them when you add the knowledge base. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents.
-    * **Intent Association**: Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears.
-3. Click **Add**.
-    
-    Once you've created a Knowledge Base, select it to enter its search view. In this default view, you can search the title, intent qualifiers and content of your different articles. 
+<img style="width:475px" src="img/ConvoBuilder/kb_intents_KB.png">
+
+Or, you can define these alternate formats in a domain in Intent Builder. Here, they're called "training phrases":
+
+<img style="width:525px" src="img/ConvoBuilder/kb_intents_IB.png">
+
+When you [add a knowledge base](knowledge-base-knowledge-bases.html#add-a-knowledge-base), you'll specify which configuration approach you're using for the knowlege base:
+
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_intentAssociation.png">
+
+* **Knowledge Base Intents**: Select if this if you're using intents (i.e., intent qualifiers) that reside in the article itself.
+* **Domain Intents**: Select this if you're using intents from a domain that's defined in Intent Builder.
+
+### Languages
+
+When you [add a knowledge base](knowledge-base-knowledge-bases.html#add-a-knowledge-base), you'll specify its language.
+
+When the exact match search is performed and an exact match is found, the knowledge base's language doesn't play a role. Whatever article is exactly matched is simply returned.
+
+If no exact match is found, and therefore NLU is used to return a result, the knowledge base's language works differently based on how you've defined the knowledge base:
+
+* If the knowledge base uses *knowledge base* intents, the knowledge base's language is used. In this case, only English and Spanish are supported.
+
+* If the knowledge base uses *domain intents*, the domain's language is used instead. In this case, the languages supported depend on the domain's NLU provider.
 
 ### Settings toolbar
 
-Inside a knowledge base, in the lower-right corner, you'll find a toolbar that provides access to the following panels:
+As you work on the articles in a knowledge base, you'll often access the toolbar in the lower-right corner. It provides access to the following panels:
 
-* **Chat**: This panel allows you to select a bot that you've previously created and linked to the knowledge base, and feed it test user input to see if it matches content as you'd expect.
+* <img style="width:30px" src="img/ConvoBuilder/icon_kb_chat.png"> **Chat**: Use this to select a bot you've previously created and linked to the knowledge base, and feed it test user input to see if it matches content as you'd expect.
 
-* **Tags**: This panel displays all tags that you've previously used, so you can review all of them in one place and reuse them in any future articles.
+* <img style="width:30px" src="img/ConvoBuilder/icon_kb_tags.png"> **Tags**: This panel displays all tags you've previously used, so you can review them all in one place and reuse them in future articles.
 
-* **Categories**: This panel displays all categories that you've previously used, so you can review all of them in one place and reuse them in any future articles.
+* <img style="width:30px" src="img/ConvoBuilder/icon_kb_categories.png"> **Categories**: This panel displays all categories you've previously used, so you can review them all in one place and reuse them in future articles.
 
-* **Test User Input**: This panel is similar to the first panel but is divorced from a specific bot. You can use it to feed user input directly into a knowledge base and test your content matching without the context of an actual dialog.
+* <img style="width:30px" src="img/ConvoBuilder/icon_kb_test.png"> **Test User Input**: This panel is similar to the Chat panel but is divorced from a specific bot. Use it to feed user input directly into a knowledge base and test your content matching without the context of an actual dialog.
 
-* **Knowledge Base Menu**: This panel provides access to various knowledge base settings and features.
+* <img style="width:30px" src="img/ConvoBuilder/icon_kb_settings.png"> **Knowledge Base Menu**: Use this to access various knowledge base settings and features.
 
-* **Intents Analytics**: This is a data panel that shows you historical information on the intents that were and weren't matched to your knowledge base articles by bots.
+* <img style="width:30px" src="img/ConvoBuilder/icon_kb_intentAnalytics.png"> **Intents Analytics**: Use this to see historical information on the intents that were and weren't matched by bots to the knowledge base's articles.

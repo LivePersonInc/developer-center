@@ -18,6 +18,13 @@ This repository generates LivePerson's Developers' Community, which can be found
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside `/documents/pages`. To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. There's no need for the old Development branch, so please don't create pull requests to it.
 
+#### Environments
+
+* Production (built from the `master` branch): [https://developers.liveperson.com/](https://developers.liveperson.com/)
+
+* Staging (built from the `Staging` branch): [https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/](https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/)
+
+
 #### Updating/Creating Headers
 
 Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange and define the various documents in the site. This is the text which appears in between the "---" at the top of each document. It's technically a YAML snippet, so all [YAML formatting](http://www.yamllint.com/) and rules apply to it. Our headers are usually comprised of the following key/value pairs:

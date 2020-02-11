@@ -107,14 +107,35 @@ The following documents cover where to configure the initial message on a given 
 
 A Chat interaction, on the other hand, is considered "started" when the chat is routed to an agent and best practice is for the agent to provide the first response. In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilised as a start point for the bot to prompt the user to provide input and progress the conversation.
 
+### Sending intent information
+
+To provide some more information and context alongside the messages to the consumer, you can define intent information via the context property. The defined intent will then be displayed in the Agent Escalation Summary Widget.
+
+| key              | value                                       | notes                        |
+| ---------------- | ------------------------------------------- | ---------------------------- |
+| intentId         | String, max len 256                         | Required                     |
+| intentName       | String, max len 256                         | Optional                     |
+| confidenceScore  | Number between 0 and 1                      | Required                     |
+
+```javascript
+const payload = {
+  messages: ['Hi i am an intent information example'],
+  context: {
+    intentId: 'intent-info-example', 
+    intentName: 'Intent information example.',
+    confidenceScore: 1
+  }
+};
+```
+
 ### Sending messages
 
-To define messages the bot should send, you need to place the messages property into the callback. This property should include an array of strings, in which every string will be sent as a single messsage to the conversation.
+To define messages the bot should send, you need to place the messages property into the callback. This property should include an array of messages, every entry of array will be sent as a single message to the conversation.
 
-```json
-{
-  "messages": ["messageOne", "MessageTwo", "MessageThree"]
-}
+```javascript
+const payload = {
+  messages: ['Message one', 'Message two', 'Message three']
+};
 ```
 
 ### Change Time To Response of Conversation
@@ -129,17 +150,17 @@ Below is an example of an payload, which changes the TTR:
 | ttrtype | "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM” | Mandatory                    |
 | value   | Seconds, string                             | Mandatory if "CUSTOM" is set |
 
-```json
-{
-  "messages": ["This conversation has been marked urgent"],
-  "context": {
-    "action": "CHANGE_TTR",
-    "actionParameters": {
-      "ttrType": "CUSTOM",
-      "value": "120"
+```javascript
+const payload = {
+  messages: ['This conversation has been marked urgent'],
+  context: {
+    action: 'CHANGE_TTR',
+    actionParameters: {
+      ttrType: 'CUSTOM',
+      value: '120'
     }
   }
-}
+};
 ```
 
 ### Transfer / Escalations
@@ -155,18 +176,18 @@ Transfers and escalations rely on the `action` key in the response object and it
 
 Below is an example of what the response JSON from the LivePerson Function should look like to complete a transfer action.
 
-```json
-{
-  "messages": [
-    "Please wait will I check if we have any live agents online that can attend to you"
+```javascript
+const payload = {
+  messages: [
+    'Please wait will I check if we have any live agents online that can attend to you'
   ],
-  "context": {
-    "action": "TRANSFER",
-    "actionParameters": {
-      "skill": "bot-escalation"
+  context: {
+    action: 'TRANSFER',
+    actionParameters: {
+      skill: 'bot-escalation'
     }
   }
-}
+};
 ```
 
 ### Sending Rich Content (Structured content)
@@ -174,116 +195,212 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 {: .important}
 Structured Content will be added into messages property after LivePerson Functions version 2.9 to support multiple structured content messages
 
-Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via LivePerson Functions, use the _structuredContent_ property containing valid structured content, along with metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) to check your formatting.
+Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html). To send structured content via LivePerson Functions, use the _structuredContent_ property containing valid structured content, along with metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) to check your formatting. There are two ways you can send structured content.
 
 {: .important}
 If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
 
+#### Sending Structured content via 'messages' property
+
+Structured content can be the part of the `messages` array property and can be sent with other messages (if defined). an example of string message and structure content can be seen below:
+
 ```javascript
-{
-  "messages": ["Just some structured Content"], //Mandatory
-  "context": {
-    "metadata": [
+const payload = {
+  messages: [
+    'Hi How are you doing?',
+    {
+      structuredContent: {
+        type: 'vertical',
+        elements: [
+          {
+            type: 'button',
+            click: {
+              actions: [
+                {
+                  text: 'Recommend me a movie, please',
+                  type: 'publishText'
+                }
+              ]
+            },
+            title: 'Recommend a movie'
+          }
+        ]
+      },
+      metadata: {
+        type: 'ExternalId',
+        id: '12345'
+      }
+    }
+  ]
+};
+```
+
+#### Sending (single) Structured content via 'context' property (Legacy)
+
+You can send a single structured content by adding it to `context` variable (Legacy support). Example can be seen below
+
+```javascript
+const payload = {
+  messages: ['Just some structured Content'],
+  context: {
+    metadata: [
       {
-        //Mandatory
-        "type": "ExternalId", //Mandatory
-        "id": "ABCD1234" //Mandatory
+        type: 'ExternalId',
+        id: 'ABCD1234'
       }
     ],
-    "structuredContent": {
-      //Mandatory
-      "type": "vertical",
-      "elements": [
+    structuredContent: {
+      type: 'vertical',
+      elements: [
         {
-          "type": "image",
-          "url": "https://i.ytimg.com/vi/zmeByDJ02mQ/hqdefault.jpg",
-          "tooltip": "image tooltip"
+          type: 'image',
+          url: 'https://i.ytimg.com/vi/zmeByDJ02mQ/hqdefault.jpg',
+          tooltip: 'image tooltip'
         },
         {
-          "type": "text",
-          "text": "product name (Title)",
-          "tooltip": "product name (Title)"
+          type: 'text',
+          text: 'product name (Title)',
+          tooltip: 'product name (Title)'
         },
         {
-          "type": "text",
-          "text": "product category (type)",
-          "tooltip": "product category (type)"
+          type: 'text',
+          text: 'product category (type)',
+          tooltip: 'product category (type)'
         },
         {
-          "type": "text",
-          "text": "$155.99",
-          "tooltip": "$155.99"
+          type: 'text',
+          text: '$155.99',
+          tooltip: '$155.99'
         }
       ]
     }
   }
-}
+};
 ```
 
+{: .important}
+**Please note** that `messages` defined in array (in above example) are sent first and structured content sent via `context` will be sent as a last message.
+
 ### Sending Quick Replies (Structured Content)
+
+{: .important}
+**Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies is a special type of Structured Content. It is a message sent alongside with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel: ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), or [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
 ```javascript
-{
-  "messages": ["Do you like Bots?"], //Mandatory
-  "context": {
-    "structuredContent": {
-      "quickReplies": {
-        "type": "quickReplies",
-        "itemsPerRow": 8,
-        "replies": [
+const payload = {
+  messages: [
+    {
+      structuredContent: {
+        // Mandatory, this will be send as text message together with quick replies
+        message: 'Do you like Bots?',
+        quickReplies: {
+          type: 'quickReplies',
+          itemsPerRow: 8,
+          replies: [
+            {
+              type: 'button',
+              tooltip: 'yes i do',
+              title: 'yes',
+              click: {
+                actions: [
+                  {
+                    type: 'publishText',
+                    text: 'yep'
+                  }
+                ],
+                metadata: [
+                  {
+                    type: 'ExternalId',
+                    id: 'Yes-1234'
+                  }
+                ]
+              }
+            },
+            {
+              type: 'button',
+              tooltip: 'No!',
+              title: 'No!',
+              click: {
+                actions: [
+                  {
+                    type: 'publishText',
+                    text: 'No!'
+                  }
+                ],
+                metadata: [
+                  {
+                    type: 'ExternalId',
+                    id: 'No-4321'
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      metadata: [
+        {
+          id: '1234',
+          type: 'ExternalId'
+        }
+      ]
+    }
+  ]
+};
+```
+
+**Please note**: that quick replies can be sent in via `context` and `messages` both ways like any other structured content. for more information check [send rich content section](third-party-bots-custom-integration.html#sending-rich-content-structured-content)
+
+### Sending Pause/Delay Message
+
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. There are two properties, `delay` and `typing`, which need to be added in with the response body of the function.
+
+<ul>
+  <li> <b>delay</b>: The number of seconds which the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
+  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true</li>
+</ul>
+
+Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Structured Content) can be seen below:
+
+```javascript
+const payload = {
+  messages: [
+    'Hi i am a message before delay',
+    {
+      delay: 5,
+      typing: true
+    },
+    {
+      structuredContent: {
+        type: 'vertical',
+        elements: [
           {
-            "type": "button",
-            "tooltip": "yes i do",
-            "title": "yes",
-            "click": {
-              "actions": [
+            type: 'button',
+            click: {
+              actions: [
                 {
-                  "type": "publishText",
-                  "text": "yep"
-                }
-              ],
-              "metadata": [
-                {
-                  "type": "ExternalId",
-                  "id": "Yes-1234"
+                  text: 'Recommend me a movie, please',
+                  type: 'publishText'
                 }
               ]
-            }
-          },
-          {
-            "type": "button",
-            "tooltip": "No!",
-            "title": "No!",
-            "click": {
-              "actions": [
-                {
-                  "type": "publishText",
-                  "text": "No!"
-                }
-              ],
-              "metadata": [
-                {
-                  "type": "ExternalId",
-                  "id": "No-4321"
-                }
-              ]
-            }
+            },
+            title: 'Recommend a movie'
           }
         ]
+      },
+      metadata: {
+        type: 'ExternalId',
+        id: '12345'
       }
-    },
-    "metadata": [
-      {
-        "id": "1234",
-        "type": "ExternalId"
-      }
-    ]
-  }
-}
+    }
+  ]
+};
 ```
+
+**Note:** using the delay as a single/sole response from the bot to the consumer is effectively a ‘no response’ action. This allows the bot to receive a consumer message without responding to the consumer.
 
 ### Close Chat/Conversation
 
@@ -296,29 +413,14 @@ The `action` key needs to be set to **CLOSE_CONVERSATION** to instruct the conne
 Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a closeConversation action.
 
 ```javascript
-{
-  "messages": [
-    "Unfortunately I am unable to help you with this query. Have a nice day."
+const payload = {
+  messages: [
+    'Unfortunately I am unable to help you with this query. Have a nice day.'
   ],
-  "context": {
-    "action": "CLOSE_CONVERSATION" // Close action
+  context: {
+    action: 'CLOSE_CONVERSATION' // Close action
   }
-}
-```
-
-### Use Intents
-
-You also have to possibility to add intent information to your messages. They will appear inside the Agent Workspace and have to be added inside the context property.
-
-```json
-{
-  "messages": ["This message also includes the intent information"],
-  "context": {
-    "intenId": "some-intent-id",
-    "intentName": "some-intent-name",
-    "confidenceScore": 1
-  }
-}
+};
 ```
 
 ### Engagement attributes as context
@@ -330,13 +432,122 @@ Figure showing Conversation Type step in creation/modification of bot configurat
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Custom Bots integration these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation `context` property is used. An example of the request body can be seen below:
 
-```javascript
-{
-  "messages": ["Some Message"],
-  "context": {
-    // ... contains other information as well
-    "lpEvent": {}, // Holds LP Events
-    "lpSdes": {}
+```javascript 1.8
+const {
+  message,
+  convId,
+  event: { name: eventName = '' } = {},
+  context: {
+    lpEvent, // contains the original received raw connector event
+    lpSdes: { unauthenticatedSdes, authenticatedSdes } // contains all collected lpSdes on conversation start if collecting is enabled
   }
-}
+} = input.payload;
+```
+
+### Sending Encoded Metadata
+
+LiveEngage Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+
+<ul>
+  <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
+  <li>Content is base64 encoded</li>
+  <li> Metadata size is limited to 5k</li>
+</ul>
+
+{: .important}
+Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
+
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses.
+
+#### Sending Text Message with Encoded Metadata
+
+For sending `encodedMetadata` with the response of your callback this property must be included in the `context` object. Be careful with the camel-case characters you must provide it exactly the same. An example of the simple two text message response is below:
+
+{: .important}
+`encodedMetadata` will be supplied to all the messages defined in `messages` property.
+
+```javascript
+const payload = {
+  context: {
+    encodedMetadata: 'ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=='
+  },
+  messages: [
+    'I am a text response with encoded metadata',
+    'I am another text response with encoded metadata'
+  ]
+};
+```
+
+#### Sending Rich Content (structured content) with Encoded Metadata
+
+For sending `encodedMetadata` with the response of your callback this property must be included in the `context` object. Be careful with the camel-case characters you must provide it exactly the same. An example of the a simple text message and a rich content response is below:
+
+{: .important}
+`encodedMetadata` will be supplied to all the messages defined in `messages` property and also to rich content.
+
+```javascript
+const payload = {
+  context: {
+    encodedMetadata: 'ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=='
+  },
+  messages: [
+    'I am a text response with encoded metadata',
+    {
+      structuredContent: {
+        type: 'vertical',
+        elements: [
+          {
+            type: 'button',
+            click: {
+              actions: [
+                {
+                  text: 'Recommend me a movie, please',
+                  type: 'publishText'
+                }
+              ]
+            },
+            title: 'Recommend a movie'
+          }
+        ]
+      }
+    }
+  ]
+};
+```
+
+If you want to apply `encodedMetadata` specific to a structured content then you can find below example where `encodedMetadata` with value `ZGlmZmVyZW50IGVuY29kZWQgbWV0YWRhdGE=` will be applied to the structured content message only. For the other messages `encodedMetadata` defined in the `context` will be applied.
+
+```javascript
+const payload = {
+  messages: [
+    'Hi How are you doing?',
+    {
+      encodedMetadata: 'ZGlmZmVyZW50IGVuY29kZWQgbWV0YWRhdGE=',
+      structuredContent: {
+        type: 'vertical',
+        elements: [
+          {
+            type: 'button',
+            click: {
+              actions: [
+                {
+                  text: 'Recommend me a movie, please',
+                  type: 'publishText'
+                }
+              ]
+            },
+            title: 'Recommend a movie'
+          }
+        ]
+      },
+      metadata: {
+        type: 'ExternalId',
+        id: '12345'
+      }
+    }
+  ],
+  context: {
+    encodedMetadata: 'ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=='
+  }
+};
 ```
