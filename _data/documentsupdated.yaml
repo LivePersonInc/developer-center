@@ -224,9 +224,9 @@
       - pagename: Domains
       - pagename: Intents
       - pagename: Entities
-      - pagename: LiveIntent Tips
   - documentname: LiveIntent
     pages:
+      - pagename: Overview
       - pagename: Enabling LiveIntent
       - pagename: Tips
   - documentname: Knowledge Base
