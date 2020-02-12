@@ -172,17 +172,17 @@ Settings for Messaging: <br />
 
 Settings for Combine Messages: <br />
 
-By enabling the Combine Messages settings, it's possible to connect a certain amount of messages to one, before sending it to the bot. In that case, the bot only responds once to them, instead of handling every message as a single intent. Below is a gif that clarifies the difference between enabled and disabled Combined Messages Feature.
+By enabling the Combine Messages settings, it's possible to connect a certain amount of messages to one, before sending it to the bot. In that case, the bot only responds once to them, instead of handling every message as a single intent. Below is a GIF that clarifies the difference between enabled and disabled Combined Messages Feature.
 
 <ul>
   <li>
   Max messages to combine: The maximum amount of messaged that will be connected to one message.
   </li>
   <li>
-  Time frame to combine: The time in seconds, the system waits for another message to add, before sending it to the bot. If the user types something into that time frame the timebe replaced by the "Time frame after typing"
+  Time frame to combine: The time in seconds the system will wait for another message to add before sending it to the bot. If the user types something into that time frame the time will be replaced by the "Time frame after typing", see below.
   </li>
   <li>
-  Time frame after typing: The time in seconds, the system waits for another message to add, after the visitor typed somehting in his text box.
+  Time frame after typing: The time in seconds the system will wait for another message to add, after the visitor typed something in the text box.
   </li>
 </ul>
 
