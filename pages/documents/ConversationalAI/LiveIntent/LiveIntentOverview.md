@@ -25,11 +25,10 @@ LiveIntent inherits its permission structure from Conversation Builder, as the p
 
 Access to the [LiveIntent dashboard](https://knowledge.liveperson.com/ai-bots-automation-liveintent-dashboard.html) is granted to users with the following permissions:
 
-* BOT_BUILDER_ADMIN
-* BOT_BUILDER_BOTS
-* BOT_BUILDER_CONTENT_USER
-* BOT_BUILDER_BUSINESS_USER
-* LPA
+* Conversation Builder: Administrator
+* Conversation Builder: Bot Builder
+* Conversation Builder: Content User
+* Conversation Builder: Business User
 
 #### Starter Pack Quick Start
 
