@@ -50,7 +50,7 @@ The following Microsoft information should be provided to LivePerson:
   </tr>
   <tr>
     <td>Multiple Activities (Optional)</td>
-    <td>The connector normally only waits on the first response activity send by the bot and pass it to the customer. If you intent to send multiple activities with the same `ReplyToId` you need to activate this feature. The value describes the maximum time in milliseconds that is allowed to pass between two activities before. After this time the connector regards the request as handled</td>
+    <td>The connector normally only waits on the first response activity send by the bot and pass it to the customer. If you intent to send multiple activities with the same `ReplyToId` you need to activate this feature. The value describes the maximum time in milliseconds that is allowed to pass between two activities. After this time has elapsed, the connector will regard the request as handled</td>
     <td>1000</td>
   </tr>
   </tbody>
