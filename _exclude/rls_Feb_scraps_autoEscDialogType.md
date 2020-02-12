@@ -2,11 +2,19 @@ FOR THE "INTERACTIONS > INTEGRATIONS" PAGE
 
 ### Escalation interactions
 
-Use an Escalation integration in a dialog when....
+Use an Escalation integration in a dialog when you want to transfer a conversation to either a live agent or another bot.
+
+For some practice with this, complete the Connect to LiveEngage tutorial.
+
+{: .important}
+For information on performing automatic, bot-to-bot transfers, see here. For information on performing manual, bot-to-bot transfers, see here.
 
 **To add an Escalation interaction**
 
-1. 
+1. Select the interaction just above where you want to add the escalation, and click (Escalation) on the interactions toolbar.
+3. In the interaction, 
+
+MOVE THE BP AND TROUBLESHOOTING DOC HERE TOO!
 
 FOR THE NEW AUTO ESCALATION DIALOGS PAGE
 
