@@ -69,7 +69,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     To fully deploy the bot, now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
 
 ### Edit an agent connector
-You can edit an agent connector as long as it isn't running.
+You can edit an agent connector as long as 1) the agent connector isn't running, and 2) the specified bot agent is active in LiveEngage.
 
 **To edit an agent connector**
 
