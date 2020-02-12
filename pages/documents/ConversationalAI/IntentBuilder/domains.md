@@ -88,4 +88,4 @@ Once you've added a domain, you will be automatically navigated to the Domain Vi
 
 When you created your 3rd-party service credentials, you created two sets, as discussed [here](intent-builder-natural-language-understanding.html#step-2-sign-up-and-get-the-api-keys). This is so you can alternate between them. When you train the intents in a domain for the first time in Intent Builder, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
+<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
