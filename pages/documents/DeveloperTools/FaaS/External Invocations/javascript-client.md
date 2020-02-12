@@ -1,5 +1,5 @@
 ---
-pagename: Javascript Client
+pagename: JavaScript Client
 keywords:
 sitesection: Documents
 categoryname: "Developer Tools"
@@ -9,6 +9,7 @@ indicator: both
 redirect_from:
     -
 ---
+
 
 This section describes how to set up the Javascript Client so it is ready to be used for calling LivePerson functions from outside LivePerson's platform. It offers functionality to retrieve all lambdas and to invoke them via lambda UUID or event ID.
 

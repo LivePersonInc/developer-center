@@ -113,7 +113,7 @@ let result = [
 callback(null, result);
 ```
 
-#### Step 4 - Deploy the function
+#### Step 3 - Deploy the function
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
 
