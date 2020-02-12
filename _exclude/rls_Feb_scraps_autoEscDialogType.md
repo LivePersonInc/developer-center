@@ -1,61 +1,12 @@
-FOR THE EXISTING CUSTOM BOT PAGE
+FOR THE "INTERACTIONS > INTEGRATIONS" PAGE
 
-#. **Create Auto Escalation Dialog**. The purpose of an Auto Escalation dialog is to take a conversation that is stuck in a question and transfer it to a live agent or another bot. If you want to create an Auto Escalation dialog in the new bot, select **Create Auto Escalation Dialog**, and then specify the following:
-    * **LE Account ID**: Enter your account number.
-    * **Auto Escalation Skill**: Specify the ID of the skill to which to escalate (transfer) the conversation. You can select from the IDs of the skills configured for your account; alternatively, enter a [botContext variable](conversation-builder-variables-slots.html#variables) like `{$botContext.skillId}` or an [environment variable](conversation-builder-environment-variables.html). This information is used to configure the supporting [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration, which is created automatically. You can edit this information later in the integration itself. 
-    * **Auto Escalation Threshold**: Select the maximum number of times the fallback message should be sent during a question before triggering the Auto Escalation dialog. You can edit this information later in the bot's bot settings.
+### Escalation interactions
 
-    For more on Auto Escalation dialogs, see here.
+Use an Escalation integration in a dialog when....
 
-FOR THE EXISTING DIALOG BASICS PAGE
+**To add an Escalation interaction**
 
-* **Auto Escalation**: The auto escalation dialog is triggered after the fallback message is sent a specific (configurable) number of times during a question. The dialog is designed to take a conversation that is stuck in a question and transfer it to a live agent or another bot. For more on this, see here.
-
-### Configure dialog settings
-
-**To configure dialog settings**
-1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
-
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/dialogs_menu.png">
-
-2. Select **Dialog Settings**.
-3. Configure the settings as needed, and click **Save**.
-
-Dialog settings include:
-
-* **Dialog Name**: Enter a name that's concise and clear.
-* **Dialog Type**: This is read only.
-* **Domain**: Select a domain to associate it with the dialog.
-
-### Disable or enable a dialog
-
-**To disable or enable a dialog**
-
-1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
-
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/dialogs_menu.png">
-
-2. Select **Dialog Settings**.
-3. Click **More Settings** to display all the settings.
-4. For **Enable Dialog**, click the slider. Enable (turn on) the slider to enable the dialog; disable (turn off) the slider to disable the dialog.
-5. Click **Save**.
-
-### Delete a dialog
-
-Deleting a dialog is a non-recoverable action, so be certain about doing so before taking this action. As an alternative, consider disabling the dialog instead; you can do this in the dialog's settings.
-
-**To delete a dialog**
-
-1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
-
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/dialogs_menu.png">
-
-2. Select **Delete Dialog**.
-3. In the confirmation dialog, click **Yes**. 
-
-FOR THE EXISTING BOT SETTINGS PAGE
-
-* **Auto Escalation Threshold**: Select the maximum number of times the fallback message should be sent during a question before triggering the Auto Escalation dialog. For more on Auto Escalation dialogs, see here.
+1. 
 
 FOR THE NEW AUTO ESCALATION DIALOGS PAGE
 
@@ -108,3 +59,60 @@ By default, an Auto Escalation dialog includes a Yes/No multiple choice question
 SCREEN CAP
 
 If the default dialog implementation doesn't meet your requirements, build out and/or modify the dialog.
+
+FOR THE EXISTING CUSTOM BOT PAGE
+
+#. **Create Auto Escalation Dialog**. The purpose of an Auto Escalation dialog is to take a conversation that is stuck in a question and transfer it to a live agent or another bot. If you want to create an Auto Escalation dialog in the new bot, select **Create Auto Escalation Dialog**, and then specify the following:
+    * **LE Account ID**: Enter your account number.
+    * **Auto Escalation Skill**: Specify the ID of the skill to which to escalate (transfer) the conversation. You can select from the IDs of the skills configured for your account; alternatively, enter a [botContext variable](conversation-builder-variables-slots.html#variables) like `{$botContext.skillId}` or an [environment variable](conversation-builder-environment-variables.html). This information is used to configure the supporting [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration, which is created automatically. You can edit this information later in the integration itself. 
+    * **Auto Escalation Threshold**: Select the maximum number of times the fallback message should be sent during a question before triggering the Auto Escalation dialog. You can edit this information later in the bot's bot settings.
+
+    For more on Auto Escalation dialogs, see here.
+
+FOR THE EXISTING DIALOG BASICS PAGE > DIALOG TYPES
+
+* **Auto Escalation**: The auto escalation dialog is triggered after the fallback message is sent a specific (configurable) number of times during a question. The dialog is designed to take a conversation that is stuck in a question and transfer it to a live agent or another bot. For more on this, see here.
+
+### Configure dialog settings
+
+**To configure dialog settings**
+1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/dialogs_menu.png">
+
+2. Select **Dialog Settings**.
+3. Click **More Settings** to display all the settings.
+3. Configure the settings as needed, and click **Save**.
+
+Dialog settings include:
+
+* **Dialog Name**: Enter a name that's concise and clear.
+* **Dialog Type**: This is read only.
+* **Domain**: Select a domain to associate it with the dialog.
+* **Auto Escalation Threshold**: Applicable for Auto Escalation dialogs only. Select the maximum number of times the fallback message should be sent during a question before triggering the Auto Escalation dialog. For more on Auto Escalation dialogs, see here.
+
+### Disable or enable a dialog
+
+**To disable or enable a dialog**
+
+1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/dialogs_menu.png">
+
+2. Select **Dialog Settings**.
+3. Click **More Settings** to display all the settings.
+4. For **Enable Dialog**, click the slider. Enable (turn on) the slider to enable the dialog; disable (turn off) the slider to disable the dialog.
+5. Click **Save**.
+
+### Delete a dialog
+
+Deleting a dialog is a non-recoverable action, so be certain about doing so before taking this action. As an alternative, consider disabling the dialog instead; you can do this in the dialog's settings.
+
+**To delete a dialog**
+
+1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/dialogs_menu.png">
+
+2. Select **Delete Dialog**.
+3. In the confirmation dialog, click **Yes**. 
