@@ -19,7 +19,7 @@ The following documentation outlines the configuration for the connector and how
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
 {: .important}
-Please note, that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
+**Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
 With watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
 
@@ -157,11 +157,11 @@ Watson Assistant allows the user to define native response types to the dialog n
 Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
 {: .important}
-Please note that Watson assistant API version of `2018-09-20` is used to support the native content response in Third-Party Bots.
+**Please note** that Watson assistant API version of `2018-09-20` is used to support the native content response in Third-Party Bots.
 
 If you use **JSON Editor** then the usual body of the native content is as follows:
 
-```json
+```javascript
 {
   "output": {
     "generic": [
@@ -181,7 +181,8 @@ Figure 2.1 Response type of Image is highlighted
 
 Once image is selected you will be asked to fill the information. "Image Source" url must be provided. You can also describe the image title and description (example filled form is shown in the Figure 2.2).
 
-**Note**: Image domains must be added to a whitelist via internal LivePerson configuration (Houston). Please note that you must add all domains to this list manually as wildcards are not supported. All domains must be HTTPS secure.
+{: .important}
+If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Image-Fields-Response.png">
 
@@ -220,7 +221,7 @@ Figure 2.4 List fields filled example
 
 If you are using **JSON Editor** then you have following structure of List. Note that **"options"** property is array of objects which holds the items for choosing are presented to user.
 
-```json
+```javascript
 {
   "output": {
     "generic": [
@@ -271,7 +272,7 @@ An example list filled with two options can be seen below. Please note that with
 }
 ```
 
-#### Pause
+#### Pause/Delay
 
 Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node will need to select that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.5
 
@@ -280,6 +281,8 @@ Users can define Pause type if they want to send some delay in responding. For a
 Figure 2.5 Response type of Pause is highlighted
 
 Once the "Pause" is selected the form will ask you to provide the duration (unit is in milliseconds). This allows the conversation to be paused for the amount of time defined in "Duration" field. Moreover, If you want to show user a indication of typing you can select choose that with Typing Indicator radio box. (example filled form is shown in Figure 2.6). This will show a indication like "Agent is typing..." for the amount of time of delay that is set in "Duration".
+
+**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Fields-Response.png">
 
@@ -377,7 +380,7 @@ Users can define a response with various content types. The following example sh
 ### Sending Rich Content (Structured Content)
 
 {: .important}
-Please note that Watson assistant API version of `2018-09-20` is used to support the rich content response in Third-Party Bots.
+**Please note** that Watson assistant API version of `2018-09-20` is used to support the rich content response in Third-Party Bots.
 
 The core LiveEngage platform supports the use of rich/structured content. For more information on the format and functionality available, please refer to the documentation found [here](getting-started-with-rich-messaging-introduction.html). As a result, the Bot Connector also supports this.
 
@@ -493,6 +496,9 @@ Figure 3.6 Structured Content Watson JSON Example (IAM)
 
 ### Sending Quick Replies (Structured Content)
 
+{: .important}
+**Please note** Quick Replies are only supported in Messaging Conversations.
+
 Quick Replies are a special kind of the Structured Content.
 The content should be added to the quickReplies property of the structuredContent object and there also a message be included in the structuredContent object.
 This message will be sent to the customer along with the Quick Replies.
@@ -502,49 +508,49 @@ For detailed information on Quick Replies check out the documentation for the sp
 {
   "structuredContent": {
     "quickReplies": {
-       "type": "quickReplies",
-       "itemsPerRow": 8,
-       "replies": [
-         {
-           "type": "button",
-           "tooltip": "yes i do",
-           "title": "yes",
-           "click": {
-             "actions": [
-               {
-                 "type": "publishText",
-                 "text": "yep"
-               }
-             ],
-             "metadata": [
-               {
-                 "type": "ExternalId",
-                 "id": "Yes-1234"
-               }
-             ]
-           }
-         },
-         {
-           "type": "button",
-           "tooltip": "No!",
-           "title": "No!",
-           "click": {
-             "actions": [
-               {
-                 "type": "publishText",
-                 "text": "No!"
-               }
-             ],
-             "metadata": [
-               {
-                 "type": "ExternalId",
-                 "id": "No-4321"
-               }
-             ]
-           }
-         }
-       ]
-     },
+      "type": "quickReplies",
+      "itemsPerRow": 8,
+      "replies": [
+        {
+          "type": "button",
+          "tooltip": "yes i do",
+          "title": "yes",
+          "click": {
+            "actions": [
+              {
+                "type": "publishText",
+                "text": "yep"
+              }
+            ],
+            "metadata": [
+              {
+                "type": "ExternalId",
+                "id": "Yes-1234"
+              }
+            ]
+          }
+        },
+        {
+          "type": "button",
+          "tooltip": "No!",
+          "title": "No!",
+          "click": {
+            "actions": [
+              {
+                "type": "publishText",
+                "text": "No!"
+              }
+            ],
+            "metadata": [
+              {
+                "type": "ExternalId",
+                "id": "No-4321"
+              }
+            ]
+          }
+        }
+      ]
+    },
     "message": "Message to send before sending QuickReplies content"
   },
   "metadata": [
@@ -557,7 +563,6 @@ For detailed information on Quick Replies check out the documentation for the sp
 ```
 
 Figure 3.7 Quick Replies StructuredContent example.
-
 
 ### Change Time To Response of Conversation
 
@@ -652,8 +657,171 @@ To close a chat or messaging conversation, we utilize the action object as we di
 
 Figure 6.1 Watson Assistant JSON response for closing chat/conversation
 
+### Engagement attributes as context
+
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 7.1.
+
+<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+Figure 7.1 Conversation Type step in creation/modification of bot configuration.
+
+These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V1 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/apidocs/assistant-v1#get-response-to-user-input)). An example of the request body can be seen below:
+
+```javascript
+{
+  "message": "Some Message",
+  "context": {
+    // ... contains some more information about conversation as well
+    "lpEvent": {}, // Holds LP Events
+    "lpSdes": {}
+  }
+}
+```
+
 ### Limitations
 
 <ul>
   <li>Currently IBM Watson allows <b>only 5</b> response types per node.</li>
 </ul>
+
+### Sending Encoded Metadata
+
+LiveEngage Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+
+<ul>
+  <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
+  <li>Content is base64 encoded</li>
+  <li> Metadata size is limited to 5k</li>
+</ul>
+
+{: .important}
+Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
+
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. The `encodedMetadata` can be defined with context editor or using the JSON editor(Figure 8.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
+
+  <img class="fancyimage" style="width:800px" src="img/watsonassistant/context_adding_choices.png">
+  Figure 8.1 Showing context editor with the encoded metadata.
+
+{: .important}
+Be careful with the camel-case characters `encodedMetadata` you must provide it exactly the same.
+
+#### Sending Watson Native Content with Encoded Metadata
+
+Sending encoded metadata with the Native Content (Text, Image and Options) is possible using Watson `context editor` or also through the `JSON editor`. An example response definition for both ways can be seen below:
+
+  <img class="fancyimage" style="width:800px" src="img/watsonassistant/watson_encoded_metadata_context_editor.png">
+  Figure 8.2 Showing context editor with the encoded metadata.
+
+<br />
+
+Example response body for `JSON editor`:
+
+```json
+{
+  "output": {
+    "generic": [
+      {
+        "values": [
+          {
+            "text": "This is text with encoded metadata"
+          }
+        ],
+        "response_type": "text",
+        "selection_policy": "sequential"
+      }
+    ]
+  },
+  "context": {
+    "encodedMetadata": "ewoiaWQiOiAidGV4dCIKfQ=="
+  }
+}
+```
+
+#### Sending Rich Content (structured content) with Encoded Metadata
+
+Sending encoded metadata with the Native Content is possible using Watson `context editor` or also through the `JSON editor`. An example response definition for both ways can be seen below:
+
+  <img class="fancyimage" style="width:800px" src="img/watsonassistant/watson_encoded_metadata_with_structured_content.png">
+  Figure 8.3 Showing context editor with the encoded metadata.
+
+<br />
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        {
+          "metadata": [
+            {
+              "id": "1234",
+              "type": "ExternalId"
+            }
+          ],
+          "structuredContent": {
+            "type": "vertical",
+            "elements": [
+              {
+                "type": "button",
+                "click": {
+                  "actions": [
+                    {
+                      "text": "Recommend me a movie, please",
+                      "type": "publishText"
+                    }
+                  ]
+                },
+                "title": "Recommend a movie"
+              }
+            ]
+          }
+        }
+      ],
+      "selection_policy": "sequential"
+    }
+  },
+  "context": {
+    "encodedMetadata": "ewoiaWQiOiAic2MiCn0="
+  }
+}
+```
+
+If you have a different context for multiple dialogs in a conversation that are responding with structure content, then you can define the `encodedMetadata` for each of the dialog separately. In that case, you will not define `encodedMetadata` via context editor or inside `context` property if using JSON editor. Below example shows where `encodedMetadata` property should be placed in structured content. Please note you will have to use JSON editor for defining such case:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        {
+          "encodedMetadata": "ewoiaWQiOiAic2MiCn0=",
+          "metadata": [
+            {
+              "id": "1234",
+              "type": "ExternalId"
+            }
+          ],
+          "structuredContent": {
+            "type": "vertical",
+            "elements": [
+              {
+                "type": "button",
+                "click": {
+                  "actions": [
+                    {
+                      "text": "Recommend me a movie, please",
+                      "type": "publishText"
+                    }
+                  ]
+                },
+                "title": "Recommend a movie"
+              }
+            ]
+          }
+        }
+      ],
+      "selection_policy": "sequential"
+    }
+  },
+  "context": {}
+}
+```

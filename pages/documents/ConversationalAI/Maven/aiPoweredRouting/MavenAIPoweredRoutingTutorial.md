@@ -1,12 +1,13 @@
 ---
 pagename: Tutorial
 redirect_from:
+  - maven-ai-powered-routing-tutorial.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven
+documentname: Maven AI
 subfoldername: AI Powered Routing
-permalink: maven-ai-powered-routing-tutorial.html
+permalink: maven-ai-ai-powered-routing-tutorial.html
 indicator: messaging
 ---
 
@@ -64,7 +65,7 @@ In this example we will create and use static attributes. To check if a customer
     {
         "name": "vipCustomer",
         "type": "static",
-        "payload": ["55501"]
+        "payload": "55501"
     }
     ```
 
@@ -74,7 +75,7 @@ In this example we will create and use static attributes. To check if a customer
     {
         "name": "regularCustomer",
         "type": "static",
-        "payload": ["55506"]
+        "payload": "55506"
     }
     ```
 
@@ -155,11 +156,9 @@ AskMaven is a REST interface that allows you to get a policy outcome programmati
     2. Replace the Maven API key you previously copied from the Developer Key section
 
     ```bash
-    curl --request GET \
-
-    --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions \
-
-    --header 'maven-api-key:  <API Key>'
+curl --request GET \
+--url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions \
+--header 'maven-api-key:  <API Key>'
     ```
 
 4. Here is the sample JSON output you should see
@@ -195,11 +194,9 @@ AskMaven is a REST interface that allows you to get a policy outcome programmati
     2. Replace the Maven API key you previously copied from the Developer Key section
 
     ```bash
-    curl --request GET \
-
-    --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions \
-
-    --header 'maven-api-key:  <API Key>'
+curl --request GET \
+--url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions \
+--header 'maven-api-key:  <API Key>'
     ```
 
 8. Here is the sample JSON output you should see
@@ -240,19 +237,13 @@ First you need to create a new NameSpace in the session store to store the phone
 2. Copy and paste this CURL command in Bash to create this namespace. Replace the account id, and API key fields
 
     ```bash
-    curl --request POST \
-
-    --url https://z1.context.liveperson.net/v1/account/<accountid> \
-
-    --header 'content-type: application/json' \
-
-    --header 'maven-api-key: <API Key>' \
-
-    --data '{
-
+curl --request POST \
+--url https://z1.context.liveperson.net/v1/account/<accountid> \
+--header 'content-type: application/json' \
+--header 'maven-api-key: <API Key>' \
+--data '{
         "name": "myNamespace"
-
-    }'
+}'
     ```
 
 ##### Store customer phone numbers in a session state
@@ -266,19 +257,13 @@ Here, we will go ahead and store the phone numbers for both types of customers (
     2. This command stores the phone number for a session (100). Any value for the session is accepted. In a production implementation, we recommend using the conversation ID, for this example, this value is fine
 
     ```bash
-    curl --request PATCH \
-
-    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/100/properties \
-
-    --header 'content-type: application/json' \
-
-    --header 'maven-api-key: <API Key>' \
-
-    --data '{
-
+curl --request PATCH \
+--url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/100/properties \
+--header 'content-type: application/json' \
+--header 'maven-api-key: <API Key>' \
+--data '{
         "phoneNumber": "55501"
-
-    }'
+}'
     ```
 
 2. Copy and paste the following CURL command - This is for the Regular customer
@@ -286,19 +271,13 @@ Here, we will go ahead and store the phone numbers for both types of customers (
     1. This command stores the phone number (55507) for a session (200). 
 
     ```bash
-    curl --request PATCH \
-
-    --url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/200/properties \
-
-    --header 'content-type: application/json' \
-
-    --header 'maven-api-key: <API Key>' \
-
-    --data '{
-
+curl --request PATCH \
+--url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/200/properties \
+--header 'content-type: application/json' \
+--header 'maven-api-key: <API Key>' \
+--data '{
         "phoneNumber": "55507"
-
-    }'
+}'
     ```
 
 #### Create Policies
@@ -375,10 +354,8 @@ Use the following CURL command in Bash to call AskMaven
 
 ```bash
 curl --request GET \
-
- --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=100 \
-
- --header 'maven-api-key:  <API Key>'
+--url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=100 \
+--header 'maven-api-key:  <API Key>'
 ```
 
 Here is the sample JSON output you should see
@@ -412,10 +389,8 @@ Use the following CURL command in Bash to call AskMaven
 
 ```bash
 curl --request GET \
-
- --url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=200 \
-
- --header 'maven-api-key:  <API Key>'
+--url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=200 \
+--header 'maven-api-key:  <API Key>'
 ```
 
 Here is the sample JSON output you should see
@@ -554,13 +529,71 @@ The steps are as follows:
 
 4. Parse the JSON that is returned from AskMaven (e.g. skillID to transfer to), and then Transfer to the specific skill. 
 
-#### Get Conversation id 
+#### Import and setup the Maven Bot Template
 
-[See here](conversation-builder-scripting-functions-get-and-set-user-data-and-variables.html#get-conversation-id) for how to get and store a conversation ID in a bot session variable.
+Follow the configuration steps to set up the [Maven Concierge Template for Conversation Builder](conversation-builder-templates-maven-concierge.html).
 
-Please use the variable `{$botContext.conversationId}` while calling the Context Session Store API (SessionID) and AskMaven API (ConversationID). 
+#### Setup LiveEngage
 
-#### Transfer to an Agent or Bot
+1. Create a skill for the conversation (e.g. Maven_Routing_Bot), and assign the bot user ID to this skill
 
-Once you have retrieved the JSON response for a routing decision using AskMaven, you will need to parse the JSON to extract the skill to transfer to. To learn how to enable this please see documentation [Transfer to Agent or Bot](conversation-builder-best-practices-transfer-to-an-agent-or-bot.html). 
+2. Setup a LiveEngage campaign to direct incoming conversations to this skill. All incoming conversation will now be picked up by the bot. 
 
+3. Setup a Vip Agent Skill (e.g. Vip Support) and a Regular Agent skill (e.g. Regular Support)
+
+4. Add any agents to these skills so you may receive a message when routed to the same
+
+5. Save the skill and agent ids to be used with policy
+
+#### Setup the Policies in Maven Workspace
+
+1. Open Maven Workspace and navigate to Intent & Context Policies
+
+2. Disable all policies you may have previously setup except the following two
+
+  1. VipRule_Session
+
+  2. RegularCustomerRule_Session
+
+3. Open and edit the policies
+
+  1. Copy and Paste the Skill IDs you copied in the previous steps in respective policies (VIP, or Regular customer) and then click Save.
+
+#### Test the policies
+
+##### VIP Routing
+
+1. Start a new web messaging conversation using the account ID
+
+2. Log in to LiveEngage using a VIP agent account
+
+3. Type “Hi” in the messaging window to engage the bot
+
+4. When asked for a phone number please type  55501
+
+5. This should trigger the VIP policy and the conversation should be transferred to a VIP skill
+
+6. If you are logged in to LiveEngage as a VIP Agent, you will now get a ring 
+
+##### Regular Customer Routing
+
+1. Logout of LiveEngage, and then log in back using a Regular Agent account
+
+2. Close the previous conversation, and then start a new one
+
+3. This time when asked for the phone number type 55506
+
+4. This should now trigger the VIP policy and the conversation should be transferred to a Regular skill
+
+5. If you are logged into LiveEngage as a Regular Agent, you will now get a ring
+
+Now that you have run a basic routing policy using a CB bot integrated with Maven, here are some other things you may want to try out:
+
+1. Add a Custom message before transferring: You can do this by adding the SEND_MESSAGE action in the policy 
+
+2. Transfer conversation to an agent using the TRANSFER_TO_AGENT action in a policy
+
+3. Use a FaaS function to check the VIP status
+
+  1. Disable the policies in the previous example, and then enable the policies that call a FaaS function
+  2. Run through the test again to check if it is working

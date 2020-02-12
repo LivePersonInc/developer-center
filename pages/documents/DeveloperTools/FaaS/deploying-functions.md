@@ -2,13 +2,16 @@
 pagename: Deployment
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 permalink: liveperson-functions-deployment.html
 indicator: both
 redirect_from:
   - function-as-a-service-deploying-functions.html
 ---
+
+<div class="important">Please note that deployed functions which were not invoked within the last 3 days, will be automatically stopped. In order to prevent those functions from being stopped a <a href="/liveperson-functions-scheduled-invocations.html">schedule</a> can be created. In addition, during the first invocation the function will be started on-demand with a <b>delay of 8 seconds</b>.</div>
+
 Now that you have created and edited the function, let's talk about how you can deploy it. We offer two deployment methods, although the second is simply a shortcut for the first.
 
 1. Using the "Create deployment" button in the **Deployments** section allows you to start deployment. Proceed by selecting a function you'd like to deploy. If you start typing the function's name, the filter functionality will automatically search the available functions and find the one you need.

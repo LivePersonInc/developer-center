@@ -2,7 +2,7 @@
 pagename: Delete certificate by ID
 keywords:
 sitesection: Documents
-categoryname: "Security & Authenication"
+categoryname: "Security & Authentication"
 documentname: MTLS API
 subfoldername: Methods
 permalink: mtls-methods-delete-certificate-by-id.html
@@ -41,4 +41,3 @@ This API deletes a certificate by account ID and certificate ID.
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
-

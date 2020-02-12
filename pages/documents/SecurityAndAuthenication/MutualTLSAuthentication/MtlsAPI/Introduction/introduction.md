@@ -2,21 +2,21 @@
 pagename: Overview
 keywords:
 sitesection: Documents
-categoryname: "Security & Authenication"
+categoryname: "Security & Authentication"
 documentname: mTLS API
 indicator: both
 permalink: mtls-overview.html
 ---
 
-mTLS or Mutual Transport Layer Security (also known as Mutual TLS), is a new solution from LivePerson. The purpose of this solution is to centralize certificate management and to store certificates in a secured location over Hashicorp’s vault. This solution is intended to be self-served. This will allow users to manage their own certificates, without the need to reach out to a LivePerson representative or to the support team.
+mTLS or Mutual Transport Layer Security (also known as Mutual TLS), is a new solution from LivePerson. The purpose of this solution is to centralize certificate management and to store certificates in a secured location over Hashicorp’s vault. This solution is intended to be self-served but currently it requires communication with LivePerson support teams. In the future, self-service features will allow users to manage their own certificates, without the need to reach out to a LivePerson representative or to the support team.
 
 ### What is mTLS?
 
 Transport Layer Security is a protocol for verifying the identity of a service over the Internet. While TLS meant that only one side needs to authenticate the connection, with mTLS, the more widespread and common protocol in the industry today, both parties need to authenticate their identity. This protocol is safer, since both sides verify their identity, and fast becoming an industry standard, especially in the banking industry.
 
-By adopting mTLS, LivePerson is looking to adhere to industry standards and offer more secure connections between brands and their consumers. By verifying both the identity of the LivePerson and the identity of the brand, we can make sure that there's no man in the middle attacks, fraud, phishing or other security risks.
+By adopting mTLS, LivePerson is looking to adhere to industry standards and offer more secure connections between brands and their consumers. By verifying both the identity of the LivePerson server and the identity of the brand, we can make sure that there's no man in the middle attacks, fraud, phishing or other security risks.
 
-The optimal flow looks like this: the client authenticates the server (just like in TLS) then the server authenticates back to the client. Traffic will flow only after mutual (back and forth) authentication was achieved.
+The optimal flow looks like this: the client authenticates the server (just like in TLS) then the server authenticates back to the client. Traffic will flow only after mutual (back and forth) authentication has been achieved.
 
 ### What is Hashicorp vault?
 
@@ -24,9 +24,7 @@ HashiCorp provides a suite of open-source tools intended to support development 
 
 ### Use cases - Why should I use mTLS?
 
-As a bank, use this if you would like to be aligned with open banking standards and because you would like your connection to be more secure.
-
-As any kind of business, you would use the mTLS API to upload a certificate, map an existing certificate, wrap and forward mTLS requests etc.
+Our mTLS methods allow you to add an additional layer of security to all communications between yourself, LivePerson, and your customers. You should use these methods to create mTLS certified conversations which provide this added layer of security.
 
 ### Happy flow example
 
@@ -35,7 +33,7 @@ The mTLS "happy flow" includes configuring the service and then invoking it in r
 #### Configuration
 
   * [Create a compliant P12 file](mtls-creating-a-p12-file.html) (Java compliant public + private keys)
-  * Run the [p12tester resource](p12-key-tester.html), this will check that the P12 is valid, decipherable and can be used to reach the remote endpoint.
+  * Run the [p12tester resource](p12-key-tester.html). This will check that the P12 is valid, decipherable and can be used to reach the remote endpoint.
   * Upload the P12 file.
   * Create mapping for the service name/url/sitedId that uses the created certificate.
 
@@ -50,6 +48,7 @@ In order for mTLS to work, you'll need to generate a specific mTLS certificate. 
 
 Once the certificate is ready, our support team needs to upload the new certificate, map the service that will support the mTLS and tie it to a specific URL. The upcoming future solution will allow our customers to self-serve the entire process, including uploading the new certificate to store it on HashiCorp vault.
 
+Check out the [on-boarding guide](/mtls-onboarding.html) for next steps.
 
 ### Limitations
 

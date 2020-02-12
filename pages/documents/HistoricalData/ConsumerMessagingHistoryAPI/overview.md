@@ -13,6 +13,9 @@ indicator: messaging
 ---
 ### Introduction
 
+{: .notice}
+Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/common-resources-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+
 The LiveEngage Consumer Messaging History API allows retrieval of up to 13 months of historical conversations data, both metadata and content, for a specific consumer. This includes both archived and closed conversations.
 
 This API is based on the REST architecture and supports the HTTPS GET protocol. All retrieved data is returned in JSON format. This API supports CORS which enables cross-domain data transfers.

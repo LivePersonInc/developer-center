@@ -55,75 +55,14 @@
     {{ content | extlinks }}
   </div>
   <div id="defaultfooter" class="defaultfooter">
-    <span>LivePerson Inc 2019 | <a href="https://www.liveperson.com/policies/copyright">Copyright Control</a> | <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>
+    <span>LivePerson Inc {{ "now" | date: "%Y" }} | <a href="https://www.liveperson.com/policies/copyright">Copyright Control</a> | <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>
     </span>
   </div>
 <!-- /.container -->
 </div>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript">
-const search = docsearch({
-apiKey: 'e386ebed16c8f70de3c914b3ace55ae6',
-indexName: 'liveperson',
-inputSelector: '.aa-input-search',
-debug: false,
-algoliaOptions: {
-  hitsPerPage: 50
-},
-autocompleteOptions: {
-  openOnFocus: true,
-  templates: {
-     //'suggestion' templating function used to render a single suggestion
-     suggestion: function(suggestion) {
-       if (suggestion._highlightResult.content && suggestion._highlightResult.title) {
-         return '<span>' + '<a  onclick="linkclick(event, this)" class="searchlink" href="' + suggestion.permalink +'">' + suggestion._highlightResult.title.value + '</a> </span>' + '<br />' + '<span>' + '<a onclick="linkclick(event, this)" class="searchlinktext" href="' + suggestion.permalink +'">' +  suggestion._highlightResult.content.value + '</a> </span>';
-       };
-     }
- }
-}
-});
-
-search.autocomplete.on({
-  'autocomplete:shown': function() {
-    var content = document.getElementById('defaultcontent');
-    var sidebar = document.getElementById('defaultsidebar');
-    var footer = document.getElementById('defaultfooter');
-    content.classList.add('overlayvisible');
-    sidebar.classList.add('overlayvisible');
-    footer.classList.add('overlayvisible');
-},
-  'autocomplete:closed': function () {
-    var content = document.getElementById('defaultcontent');
-    var sidebar = document.getElementById('defaultsidebar');
-    var footer = document.getElementById('defaultfooter');
-    content.classList.remove('overlayvisible');
-    sidebar.classList.remove('overlayvisible');
-    footer.classList.remove('overlayvisible');
-},
-  'autocomplete:empty': function () {
-    var content = document.getElementById('defaultcontent');
-    var sidebar = document.getElementById('defaultsidebar');
-    var footer = document.getElementById('defaultfooter');
-    content.classList.add('overlayvisible');
-    sidebar.classList.add('overlayvisible');
-    footer.classList.add('overlayvisible');
-},
-  'autocomplete:updated': function () {
-    if (this.value != '') {
-    var input = document.getElementById('aa-search-input');
-    var filter = input.value.toUpperCase();
-    localStorage.setItem('filter', filter);
-    }else {
-      var content = document.getElementById('defaultcontent');
-      var sidebar = document.getElementById('defaultsidebar');
-      var footer = document.getElementById('defaultfooter');
-      content.classList.remove('overlayvisible');
-      sidebar.classList.remove('overlayvisible');
-      footer.classList.remove('overlayvisible');
-}}});
-</script>
-{% include tag.html %}
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script  src="{{ "js/algolia.js" }}"></script>
 </body>
 {% if site.google_analytics %}
 {% include google_analytics.html %}

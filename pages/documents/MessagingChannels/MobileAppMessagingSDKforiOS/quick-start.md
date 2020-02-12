@@ -9,10 +9,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-
-order: 1
 permalink: mobile-app-messaging-sdk-for-ios-quick-start.html
-
 indicator: messaging
 ---
 <br>
@@ -159,7 +156,6 @@ Before you can show a conversation, you must initialize the Messaging SDK.
  We have provided an example to use for this quick start process:   
    - [Authenticated](#authenticated)
    - [Unauthenticated](#unauthenticated)
-   - [Signup](#signup)
 
 #### Authenticated 
 

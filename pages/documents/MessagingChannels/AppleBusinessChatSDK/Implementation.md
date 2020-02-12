@@ -159,6 +159,8 @@ lpabcsdk.sendSDEStack(onSuccess: { (success) in
 }
 ```
 
+You can use `isCacheLoaded` in order to get the SDK's cache state, which is retrieveable via CIM (per each new conversation), and is required for enabling SDE reporting.
+
 ### Aggregated SDE Stack Timeout
 
 This will setup a timeout interval for auto sending the aggregated SDE stack (optional). Default is 5 seconds and Max is 15.
@@ -200,13 +202,16 @@ You can set the desired SDEs to express your custom reporting for the event trig
 Example:
 
 ```swift
-lpabcsdk.implicitEventClosure = { implicitType in
-    switch implicitType {
+lpabcsdk.abcEventCallback = { eventType in
+    switch eventType {
         case .newConversation:
             // Create and send desired SDE
              break
         case .secureForm(.submitted):
             // Create and send desired SDE
+            break
+         case .custom:
+            //Accsess your custom payload embedded in CIM URL.
             break
     }
 }

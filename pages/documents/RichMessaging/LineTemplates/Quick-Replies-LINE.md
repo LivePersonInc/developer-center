@@ -21,7 +21,7 @@ A LINE quick reply button consists of the question/statement text and a set of u
 
 Quick reply example image:
 
-<img class="fancyimage" style="width:350px" src="img/line_sc_quickreplies.png">
+<img  style="width:350px" src="img/line_sc_quickreplies.png">
 
 ### JSON Template Properties
 
@@ -78,119 +78,86 @@ Quick reply example image:
 
 ```json
 {
-  "type": "carousel",
-  "padding": 10,
-  "alt": "Check these out!",
-  "elements": [
+  "type": "quickReplies",
+  "itemsPerRow": 4,
+  "replies": [
     {
-      "type": "vertical",
-      "tag": "generic",
-      "elements": [
-        {
-          "type": "vertical",
-          "elements": [
-            {
-              "type": "image",
-              "url": "https://i.pinimg.com/474x/8e/8e/ee/8e8eee8a4865d8b297048e661a1d6821--pottery-clay-pottery-bowls.jpg",
-              "tooltip": "pottery clay bowl"
-            },
-            {
-              "type": "text",
-              "tag": "title",
-              "text": "Pottery Clay - $39.99",
-              "tooltip": "Pottery Clay"
-            },
-            {
-              "type": "text",
-              "tag": "subtitle",
-              "text": "Bowl-Cut yellow ash glaze ",
-              "tooltip": "Bowl-Cut yellow ash glaze"
-            },
-            {
-              "type": "button",
-              "tooltip": "Order now",
-              "title": "Order now",
-              "click": {
-                "actions": [
-                  {
-                    "type": "publishText",
-                    "text": "Order bowl-cut yellow ash glaze - $39.99"
-                  }
-                ]
-              }
-            },
-            {
-              "type": "button",
-              "tooltip": "More details",
-              "title": "More details",
-              "click": {
-                "actions": [
-                  {
-                    "type": "link",
-                    "name": "Bowl-cut yellow ash",
-                    "uri": "https://www.pinterest.com/pin/454089574912899360"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      ]
+      "type": "button",
+      "tooltip": "yes I do",
+      "title": "yes",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "yep"
+          }
+        ]
+      }
     },
     {
-      "type": "vertical",
-      "tag": "generic",
-      "elements": [
-        {
-          "type": "vertical",
-          "elements": [
-            {
-              "type": "image",
-              "url": "https://i.pinimg.com/474x/a4/eb/c9/a4ebc948ccf4b2f63cc35088193af63d--ceramic-studio-pinch-pots.jpg",
-              "tooltip": "Ceramic Studio - $49.99"
-            },
-            {
-              "type": "text",
-              "tag": "title",
-              "text": "Ceramic Studio - $49.99",
-              "tooltip": "Ceramic Studio - $49.99"
-            },
-            {
-              "type": "text",
-              "tag": "subtitle",
-              "text": "Pinch pot",
-              "tooltip": "Pinch pot"
-            },
-            {
-              "type": "button",
-              "tooltip": "Order now",
-              "title": "Order now",
-              "click": {
-                "actions": [
-                  {
-                    "type": "publishText",
-                    "text": "Order Pinch pot - $49.99"
-                  }
-                ]
-              }
-            },
-            {
-              "type": "button",
-              "tooltip": "More details",
-              "title": "More details",
-              "click": {
-                "actions": [
-                  {
-                    "type": "link",
-                    "name": "Pinch pot",
-                    "uri": "https://www.pinterest.com/pin/496381190157394080/"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      ]
+      "type": "button",
+      "tooltip": "hmmm maybe?",
+      "title": "hmmm maybe?",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "hmmm maybe?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "tooltip": "what is that?",
+      "title": "what is that?",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "what is that?"
+          }
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "tooltip": "whattttttt",
+      "title": "whatttttt",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "whatttttt"
+          }
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "tooltip": "no",
+      "title": "nope",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "nope"
+          }
+        ]
+      }
+    },
+    {
+      "type": "button",
+      "tooltip": "no way!",
+      "title": "no way!",
+      "click": {
+        "actions": [
+          {
+            "type": "publishText",
+            "text": "no way!"
+          }
+        ]
+      }
     }
   ]
 }

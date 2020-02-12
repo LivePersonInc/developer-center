@@ -23,21 +23,44 @@ For our default implementation we use OAuth 2.0 with Client Credentials. Thus yo
 ### Step 2: Install the client
 
 ```bash
-yarn add liveperson-functions-client
+yarn add @liveperson/functions-client
 ```
 
 or
 
 ```bash
-npm install liveperson-functions-client
+npm install @liveperson/functions-client
 ```
 
 ### Provided Methods
 
-The following methods are provided:
+The following methods functionality is provided:
 
-* `invoke`, which allows calling a function by its specific `UUID` or to invoke all functions that implement a specific event
-* `isImplemented` which allows to test whether a method, which implements a given event, exists
-* `getLambdas` which returns all lambdas belonging to the user account specified in the client
+* invoke which allows to call a function by its specific UUID or invoke all functions that implement a specific event
+* isImplemented which allows to test whether a method, that implements a given event, exists
+* getLambdas which returns all lambdas belonging to the user account specified in the client
 
-More detailed documentation can be found [here](https://github.com/LivePersonInc/faas-client-node).
+More detailed documentation can be found [here.](https://lpgithub.dev.lprnd.net/RnD-Mannheim/faas-client-js/tree/develop)
+
+### Error handling
+
+Errors with the name `FaaSLambdaError` are raised when the invocation fails due to a custom implementation error. The client internally uses [verror](https://github.com/joyent/node-verror). We recommend to log the `stack` in order to get detailed information about the root cause.
+
+```javascript
+try {
+  // invoke here
+  ...
+} catch (error) {
+  /**
+   * LivePerson FunctionsLambdaErrors occur when the lambda fails due to the implementation.
+   * These exceptions are not relevant for alerting, because there are no issues with the service itself.
+   */
+  if (error.name === "FaaSLambdaError") {
+    console.info(error.stack, "Error caused by implementation of lambda.");
+  } else {
+    console.error(error.stack, "Something unexpected happened.");
+  }
+}
+```
+
+More detailed information on errors that can occur can be found [here.](https://lpgithub.dev.lprnd.net/RnD-Mannheim/faas-error-codes/blob/master/index.ts)

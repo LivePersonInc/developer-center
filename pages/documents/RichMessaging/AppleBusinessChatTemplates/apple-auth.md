@@ -110,20 +110,20 @@ Please use the metadata template with the relevant fields, as presented in the e
 ##### Metadata Template Example:
 
 ```json
-[  
-  {  
-    "type":"BusinessChatMessage",
-    "receivedMessage":{  
-      "title":"Sign In to LivePerson",
-      "subtitle":"Thank you",
- "imageURL":"https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
-      "style":"small"
+[
+  {
+    "type": "BusinessChatMessage",
+    "receivedMessage": {
+      "title": "Sign In to LivePerson",
+      "subtitle": "Thank you",
+      "imageURL": "https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
+      "style": "small"
     },
-    "replyMessage":{  
-      "title":"You Signed in",
-      "subtitle":"Thank you",
-"imageURL":"https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
-      "style":"small"
+    "replyMessage": {
+      "title": "You Signed in",
+      "subtitle": "Thank you",
+      "imageURL": "https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
+      "style": "small"
     }
   },
   {
@@ -282,6 +282,7 @@ A very simple, basic structured content template for Apple Auth would be just an
 
 ```json
 {
+  "tag": "authentication", // required
   "type": "horizontal",
   "elements": [
     {

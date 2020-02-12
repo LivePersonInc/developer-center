@@ -74,6 +74,7 @@ Structure example:
         "browser": "",
         "operatingSystem": "",
         "country": "",
+        "countryCode": "",
         "state": "",
         "city": "",
         "isp": "",
@@ -185,6 +186,7 @@ Structure example:
 | visitorInfo.browser                         | The browser used by the visitor                                                                      | The browser used by the consumer                                                         | string  | Messaging: Not always available                            |
 | visitorInfo.operatingSystem                 | The operating system used by the visitor                                                             | The operating system used by the consumer                                                | string  | Messaging: Not always available                            |
 | visitorInfo.country                         | The country of the visitor                                                                           | N/A                                                                                      | string  |                                                            |
+| visitorInfo.countryCode                     | The country Code of the visitor                                                                      | N/A                                                                                      | string  | The value is 2 letter code in ISO3166-1 Alpha-2. **Supported only in the New Agent Workspace.**            |
 | visitorInfo.state                           | The geographic state of the visitor                                                                  | N/A                                                                                      | string  |                                                            |
 | visitorInfo.city                            | The city of the visitor                                                                              | N/A                                                                                      | string  |                                                            |
 | visitorInfo.isp                             | The internet service provider of the visitor                                                         | N/A                                                                                      | string  |                                                            |

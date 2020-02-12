@@ -216,6 +216,9 @@ Structured Content/Rich Content is supported by the core LivePerson platform. Do
 
 To send structured content via Lex, send a _custom payload_ option via an intent.
 
+{: .important}
+If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
+
 ```json
 {
   "metadata": [
@@ -278,10 +281,13 @@ This should contain valid structured content, along with any optional metadata r
 
 ### Sending Quick Replies (Structured Content)
 
+{: .important}
+**Please note** Quick Replies are only supported in Messaging Conversations.
+
 Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers.
 For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html)).
 
- ```json
+```json
 {
   "structuredContent": {
     "quickReplies": {
@@ -330,15 +336,125 @@ For detailed information on Quick Replies check out the documentation for the sp
     },
     "message": "Do you like Bots?"
   },
-   "metadata": [
+  "metadata": [
     {
       "id": "1234",
       "type": "ExternalId"
     }
   ]
 }
- ```
+```
+
 Figure 6.1 QuickReplies Structured Content example
+
+### Sending Encoded Metadata
+
+LiveEngage Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+
+<ul>
+  <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
+  <li>Content is base64 encoded</li>
+  <li> Metadata size is limited to 5k</li>
+</ul>
+
+{: .important}
+Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
+
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Markup` type for your relevant intent as shown in Figure 7.1 below
+
+<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_custom_markup.png">
+Figure 7.1
+
+#### Sending Text Message with Encoded Metadata
+
+Please note that the default `Message` option in Lex will not work with encoded metadata feature. You have to use Custom Markup with the properties `textResponse` and `encodedMetadata`. Be careful with the camel-case characters you must provide it exactly the same.
+
+<ul>
+  <li> <b>textResponse</b>: This is the text that will be sent to the user.</li>
+  <li><b>encodedMetadata</b>: this is the property that will contain encoded metadata</li>
+</ul>
+
+An example of the custom payload text message response is below:
+
+```json
+{
+  "textResponse": "Hello I am a text response with encoded metadata!",
+  "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=="
+}
+```
+
+<br />
+
+<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_text.png">
+Figure 7.2 
+ 
+#### Sending Rich Content (structured content) with Encoded Metadata
+
+You need to add another property of `encodedMetadata` with your rich content object that you have created. An example of the simple Rich Content `JSON` can be seen below:
+
+```json
+{
+  "metadata": [
+    {
+      "id": "1234",
+      "type": "ExternalId"
+    }
+  ],
+  "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ==",
+  "structuredContent": {
+    "type": "vertical",
+    "elements": [
+      {
+        "type": "button",
+        "click": {
+          "actions": [
+            {
+              "text": "Recommend me a movie, please",
+              "type": "publishText"
+            }
+          ]
+        },
+        "title": "Recommend a movie"
+      }
+    ]
+  }
+}
+```
+
+<br />
+
+<img class="fancyimage" style="width:800px" src="img/lex/lex_encoded_metadata_structured_content.png">
+Figure 7.3
+
+### Sending Pause/Delay Message
+
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. The delay message can be added via Custom Markup response in intent definition (as shown in Figure 8.1). There are two properties, `delay` and `typing`, which are a part of the Custom Payload response.
+
+<ul>
+  <li> <b>delay</b>: This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
+  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
+</ul>
+
+<br />
+
+Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Message) can be seen in Figure 8.1.
+
+<img class="fancyimage"  src="img/lex/lex_message_delay_message.png">
+Figure 8.1 An example of Message - Delay - Message  configuration in the Amazon lex console's intent editor
+
+it is also possible to send only a single delay response. The example payload of such response is below:
+
+```json
+{
+  "delay": 8,
+  "typing": false
+}
+```
+
+<img class="fancyimage" src="img/lex/delay_response_custom_payload.png">
+Figure 8.2 showing the Custom Markup message for delay message
+
+**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 ### Close Chat/Conversation
 
@@ -358,8 +474,31 @@ The action field needs to be set to **CLOSE_CONVERSATION **to instruct the conne
 }
 ```
 
-Figure 7.1 Lex Example Close Conversation Payload
+Figure 9.1 Lex Example Close Conversation Payload
 
 <img class="fancyimage" style="width:500px" src="img/lex/image_11.png">
 
-Figure 7.2 - Example in Lex console
+Figure 9.2 - Example in Lex console
+
+### Engagement attributes as context
+
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 10.1.
+
+<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+Figure 10.1 Conversation Type step in creation/modification of bot configuration.
+
+These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For Lex, engagement attributes are added to the property `lpSdes` inside another custom sub-property `BC-LP-CONTEXT`. For the preservation of the state of engagement attributes across conversation `requestAttributes` property is used (more information about `requestAttributes` can be found [here](https://docs.aws.amazon.com/lex/latest/dg/API_runtime_PostText.html#API_runtime_PostText_RequestSyntax)). An example of the request body can be seen below:
+
+```javascript
+{
+  "inputText": "",
+  "userId": "",
+  "sessionAttributes": "",
+  "requestAttributes": {
+    "BC-LP-CONTEXT": {
+      "lpEvent": {}, // Holds LP Events
+      "lpSdes": {}
+    }
+  }
+}
+```

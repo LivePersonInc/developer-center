@@ -10,122 +10,140 @@ permalink: conversation-builder-getting-started-2-intents.html
 indicator: both
 ---
 
-Now let’s take what we’ve learned to the next level and instead of using patterns to trigger a dialog, we’ll use intents.
+In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use intents.
 
-### Step 5: Create Billing Intent
+### Step 5: Create a Billing intent
 
-Since we’re going to be using intents for this example, we need to leave the Conversation Builder app for a moment. 
+Since you’re going to be using intents in this tutorial, you need to leave the Conversation Builder application for a moment. 
 
-Tap on the bot library <img style="width:40px" src="img/ConvoBuilder/helloworld/bot_library.png"> icon on the top-left to return to your bot library. Then, from the drop down menu in the header, select Intent Builder.
+1. In the upper-left corner, click **< Bots** beside the bot name to return to the list of bots.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_10.png">
+    <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/helloworld/image_10.png">
 
-The Intent Builder is where we create Domains, which are collections of Intents and Entities. Learn about the different parts of the Intent Builder app [here](conversation-builder-intent-builder-overview.html).
+2. Again in the upper-left corner, click **< Apps** to return to the Conversational AI dashboard.
+3. Click **Intent Builder**.
 
-Let’s create our own domain by tapping on the Add Domain button. Name the Domain after your Org (eg. "ACME Co"), select Manual and click Add Domain. NOTE: You can import a CSV of Intents and Entities also.
+    Intent Builder is where you create *domains*, which are collections of *intents* and *entities*. You can learn about the different parts of the Intent Builder application [here](conversation-builder-intent-builder-overview.html).
 
-<!--<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/adddomain.png">-->
+    Now let’s create a domain.
 
-Now we can begin to create our first Intent. Name it "Billing Question".
+4. In the upper-right corner, click **New domain**.
 
-Click on Training and add the following training phrases, hitting enter to add them:
+5. On the Add Domain page, name the domain after your org (e.g., "ACME Co"), select "Manual", and click **Add Domain**. (While you will manually add intents and entities, they can be imported from a CSV file too.)
 
-* i have a question about my bill
-* can you help me with my bill
-* i have a bill related question
-* my bill is past due
+    This displays the Add Intent page. Now you can begin to create an intent.
 
-{: .important}
-Using the word “bill” throughout your training phrases is important because we will create an entity named "bill" that the phrases will recognize. 
+6. Enter "Billing question" for **Intent Name**.
 
-Tap Add Intent when you’re finished.
+7. In the **Training** section, add the following training phrases, pressing Enter to add each one:
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_11.png">
+    * i have a question about my bill
+    * can you help me with my bill
+    * i have a bill related question
+    * my bill is past due
 
-We can use the debugger to help us see how our training phrases would return. Tap on the Debugger icon <img style="width:40px" src="img/ConvoBuilder/helloworld/debugger_icon.png"> on the right and enter an utterance that is close to one of your sentences, like "I need help with my bill". Next try another phrase but use “billing” instead of “bill”.
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addIntent1.png">
 
-<!--<img style="width:400px" src="img/ConvoBuilder/helloworld/matchverygood.png">-->
+    Using the word “bill” in the training phrases is important because you will create an entity named "bill" that the phrases will recognize. 
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/matchfair.png">
+8. Scroll down, and click **Add Intent**.
 
-The result when using "billing" is only FAIR because it is not recognized as a synonym for “bill”. We can remedy this by creating an [Entity](conversation-builder-intent-builder-entities.html). 
+    Now you can use the debugger to test how the training phrases match against a user's utterance.
 
-Tap on the Entities tab on the left sidebar. Create a new entity called "bill" and add a number of synonyms like `bill`, `billing`, `payment`, `statement`, etc and then hit Add Entity.
+9. In the left panel, select the *Billing question* intent, and then click the Debug icon <img style="width:35px" src="img/ConvoBuilder/helloworld/debugger_icon.png"> in the lower-right corner.
 
-<!--<img style="width:200px" src="img/ConvoBuilder/helloworld/domainentities.png">-->
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_11.png">
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/billentity.png">
+10. Enter an utterance that is close to one of your sentences, like, "I need help with my bill". Then click **Test**.
 
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/matchverygood.png">
 
-To see how adding an entity can improve your NLU matching:
+11. Enter another utterance but use “billing” instead of “bill”, e.g., "I have a billing question".
 
-* Go back to the Intents tab
-* Select the Billing Question intent
-* Select the debugger from the right sidebar
-* Re-enter the "billing" phrase: “I need help with my billing”. 
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/matchfair.png">
 
-Your results should now be VERY GOOD and you can see that the entity @bill was detected as well.
+    The result when using "billing" is only FAIR because it is not recognized as a synonym for “bill”. You can remedy this by creating an [entity](conversation-builder-intent-builder-entities.html). You do this next.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_12.png">
+12. In the upper-right corner, click **Entities**.
 
-### Step 6: Link Intent in Conversation Builder
+13. On the Add Entity page, create a new entity named "bill" and add a number of entity values (synonyms) like `bill`, `billing`, `payment`, and `statement`. Click the **+** sign to add each one.
 
-Now that our Billing intent is configured, let’s return to the Conversation Builder and use it to trigger a new dialog. 
+14. Click **Add Entity**.
 
-Navigate to the Conversation Builder by clicking on the top-left dropdown menu. Select the automation that you previously created.
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/billentity.png">
 
-Once opened, create a new regular dialog and name it "Billing".
+15. *Now see how adding an entity can improve the NLU matching*: Click **Intents** in the upper-right corner to return to the Intents tab, select the "Billing question" intent, and use the debugger again. This time re-enter the phrase, "I have a billing question".
 
-The [Assist tool](conversation-builder-conversation-builder-assist.html) that automatically displays will help us to link the domain and intent to this User Says interaction.
+    Now the result is VERY GOOD, and you can see that the entity @bill was detected as well.
 
-From the Assist <img style="width:40px" src="img/ConvoBuilder/helloworld/image_13.png"> tool select the domain you created. This will enable the Assistant to use the platform’s NLU to match your User Says interaction against any available intents. 
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/image_12.png">
 
-<!--<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selectdomain.png">-->
+### Step 6: Link the intent to a Billing dialog
 
-Next, tap on the User Says interaction and enter the phrase "I have a question about my bill" as the sample text and hit enter.
+With the "Billing question" intent configured, let’s return to Conversation Builder and use the intent to trigger a new dialog.
 
-<!--<img style="width:300px" src="img/ConvoBuilder/helloworld/usersaysbilling.png">
+1. In the upper-left corner, click **< Domains** to return to the list of domains.
+2. Again in the upper-left corner, click **< Apps** to return to the Conversational AI dashboard.
+3. Click **Conversation Builder**.
+4. Select the bot you previously created.
+5. Create a new regular dialog named "Billing".
+    
+    By default, a regular dialog includes a User Says interaction, but it isn't configured yet.
 
-<img style="width:300px" src="img/ConvoBuilder/helloworld/billinginteraction.png">-->
+    The [NLU Assist tool](conversation-builder-nlu-assist.html) that automatically appears helps you to link the domain and intent to the User Says interaction.
+    
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selectdomain.png">
 
-The Assistant will automatically find appropriate Intents to link to this User Says interaction.
+7. In the NLU Assist tool <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_assist.png"> , select the domain you created. This enables NLU Assist to use the platform’s NLU to match your User Says interaction against any available intents. 
+    
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selecteddomain.png">
+    
+8. Select the User Says interaction, enter the phrase "I have a question about my bill" as the sample text, and press Enter.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selectintents.png">
+    NLU Assist automatically finds appropriate intents to link to the User Says interaction.
 
-Select the Billing Question intent that you created to associate it with the Billing dialog and the User Says interaction.
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/usersaysbilling.png">
 
-### Step 7: Add Conditions
+9. In the NLU Assist tool, select the "Billing question" intent that you created to associate it with the Billing dialog and the User Says interaction.
 
-Now we can begin to build out our dialog. Let’s add a text statement to tell users that we can help them.
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/usersaysbilling2.png">
 
-Next, we can add a multiple choice question to ask them if they want a copy of their most recent bill. Add the options "Yes" and “No” as choices. 
+### Step 7: Add response conditions
 
-Now, when someone says "yes" or “no” we’ll want to show them a particular message. Add a text statement for “yes” and enter the following statement “If you’d like a copy of your most recent bill, please go to http://example.com”. 
+Now you can begin to build out the Billing dialog.
 
-To better differentiate this statement, change its name to "Yes Statement" in the Settings of the Interaction Details. In addition, the behavior for statements is to display the next interaction. We want to stop after we show the Yes Statement, so in the Next Step dropdown, select End Interaction.
+1. Add a Text statement that says, "I can help you with your bill."
 
-Now let’s add a text statement for "no" and enter the following statement “OK. How else can I help you today?” We also should change the name of this interaction to “No Statement”.
+2. Add a Multiple Choice question that asks, "Do you want a copy of your most recent bill?" Enter "Yes" and "No" as the choices.
 
-<!--<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/yesnoprompt.png">-->
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/billing_mcq.png">
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/yesstatement.png">
+    When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
 
-We’ve got our dialog fleshed out, now we need to add [conditions](conversation-builder-conversation-builder-conditions.html) to detect when a user says "yes" or “no” and direct them to the correct text statement. Select the multiple choice interaction, then select the Interaction Details icon. Under User Response, you’ll see the Conditions panel.
+3. Add a Text statement to respond to a reply of "yes". For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to http://example.com”. In the **Interaction Details**, on the **Settings** tab, change the interaction's name to "Yes statement" to better differentiate the statement from others. And on the **Next Actions** tab, for **Next Step**, select, "End Interaction." Click **Save**.
+    
+    You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next step should be to end.
 
-Add a condition using the **+** icon, select Pattern from the drop down menu. For "yes" add a pattern like `(yes|yah|yup)`. Then for the Next Step select the Yes Statement.
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/yesstatement_end.png">
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/userresponseyes.png">
+4. Add a Text statement to respond to a reply of "no". For the statement's text, enter, “OK. How else can I help you today?” In the Interaction Details, change this interaction's name to “No statement”. Click **Save**.
 
-Scroll up to Response Match & Actions and tap on the **+** to add another condition for "no". Add a pattern like `(no|nope|nah)`. Then for Next Step select the No Statement.
+    You've got the dialog fleshed out; now you need to add [conditions](conversation-builder-conversation-builder-conditions.html) to detect when a user says "yes" or “no” and direct them to the correct text statement.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/userresponseno.png">
+5. Select the multiple choice question, and open its Interaction Details. On the **Next Actions** tab, under **Response Match & Actions**, find the Conditions panel.
 
-Select the Preview icon and lets see the complete dialog in action.
+6. Add a condition to handle a "yes" response: Click the **+** icon beside **Conditions**. Select "Pattern" from the drop-down list, and enter `(yes|yah|yup)` for the pattern. Then, for **Next Step**, select the "Yes statement."
 
-Type in an utterance that should match for your billing intent like "I have a question about my bill". You should see the billing dialog and multiple choice question. Tap or type “yes” or “no” and see what response you get.
+    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/userresponseyes.png">
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/yestest.png">
+7. Add a condition to handle a "no" response: Click the **+** beside **Response Match & Actions** (at the top of the window) to add a second condition set. Add a condition. Select "Pattern" here too, but this time enter `(no|nope|nah)` for the pattern. And for the **Next Step**, select the "No statement."
 
-<!--<img style="width:300px" src="img/ConvoBuilder/helloworld/notest.png">-->
+    Now let's see the dialog in action.
+
+8. Open the Preview window, and start a new session by entering "reset" and pressing Enter.
+
+9. Enter an utterance that should match the billing intent, like, "I have a question about my bill". You should see the billing dialog and multiple choice question. Tap or enter “yes” or “no” and see what response you get.
+
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/yestest.png">
 
 You now understand the basics of intents, entities, and branching dialog flows.

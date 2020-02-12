@@ -42,22 +42,26 @@ N/A
 Contains a json object with a single "query" field which defines the requested GraphQL query for the auditData API and the fields sub-select. For details see [graphql website](http://graphql.org/).
 
 ```json
-{"query" : "{auditData (fromDate:'2019-07-16' toDate:'2019-07-17')
-              {accountId
-              objectType
-              objectName
-              actionType
-              element
-              oldValue
-              newValue
-              changeDate
-              originator
-              originatorLoginName
-              originatorUserId
-              originatorUserAgent
-              originatorAuthType
-              originatorIsLpa}}"}
+{"query" : 
+"{auditData { 
+        accountId 
+        objectType 
+        objectName 
+        element 
+        oldValue 
+        newValue 
+        originator 
+        originatorLoginName
+        originatorUserId
+        originatorUserAgent
+        originatorAuthType 
+        originatorIsLpa 
+        changeDate}}"
+ } 
 ```
+
+**Required parameters**
+At least one parameter from the above parameters is required in order to retirve audit data.
 
 **Optional graphql parameters**
 
@@ -75,6 +79,14 @@ Contains a json object with a single "query" field which defines the requested G
 |timezone|Time zone to use in results|Default: US/Eastern|
 |lpa|Boolean, include changes done by LPAs in the results|Default: false|
 |automaticUpdates|Boolean, include automatic updates in the results|Default: false|
+
+Example:
+```json
+{"query" : 
+"{auditData (lpa:true) { accountId objectType element oldValue newValue originatorIsLpa changeDate}}"
+}
+
+```
 
 ### Response
 
@@ -103,24 +115,63 @@ JSON
 
 ```json
 {
-  "data": {
-    "auditData": [
-        {
-        "accountId": "le33192344",
-        "objectType": "Users",
-        "objectName": "objectName1",
-        "actionType": "Edit",
-        "element": "property",
-        "oldValue": "oldValue",
-        "newValue": "newValue",
-        "changeDate": "2017-12-04 08:13:34.0",
-        "originator": "user name",
-        "originatorLoginName": "loginName",
-        "originatorUserId": "userId_1",
-        "originatorUserAgent": "userAgent",
-        "originatorAuthType": "auth1",
-        "originatorIsLpa": false
-      }
-    ]
+    "data": {
+        "auditData": [
+            {
+                "accountId": "le52642741",
+                "objectType": "Profiles",
+                "element": "Generate secure form token",
+                "oldValue": "false",
+                "newValue": "true",
+                "originatorIsLpa": false,
+                "changeDate": "2019-11-12 06:10:46.0"
+            },
+            {
+                "accountId": "le52642741",
+                "objectType": "Campaigns",
+                "element": "N/A",
+                "oldValue": "",
+                "newValue": "",
+                "originatorIsLpa": false,
+                "changeDate": "2019-10-31 10:35:37.0"
+            },
+            {
+                "accountId": "le52642741",
+                "objectType": "Users",
+                "element": "N/A",
+                "oldValue": "",
+                "newValue": "",
+                "originatorIsLpa": false,
+                "changeDate": "2019-10-30 08:56:59.0"
+            },
+            {
+                "accountId": "le52642741",
+                "objectType": "Predefined Content",
+                "element": "N/A",
+                "oldValue": "",
+                "newValue": "",
+                "originatorIsLpa": false,
+                "changeDate": "2019-10-30 08:56:55.0"
+            },
+            {
+                "accountId": "le52642741",
+                "objectType": "Content Categories",
+                "element": "N/A",
+                "oldValue": "",
+                "newValue": "",
+                "originatorIsLpa": false,
+                "changeDate": "2019-10-30 08:56:55.0"
+            },
+            {
+                "accountId": "le52642741",
+                "objectType": "Agent Groups",
+                "element": "N/A",
+                "oldValue": "",
+                "newValue": "",
+                "originatorIsLpa": false,
+                "changeDate": "2019-10-30 08:56:54.0"
+            }
+        ]
+    }
 }
 ```
