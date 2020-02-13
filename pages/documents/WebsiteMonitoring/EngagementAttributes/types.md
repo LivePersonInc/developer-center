@@ -294,6 +294,8 @@ Contact object:
 
 Address object:
 
+| Name | Description  | Type  | Value/Example | Mandatory  | Supported in Authenticated Flow? |
+|------|--------------|-------|---------------|------------|--------|
 | country | Visitor's country | string | "Russia" | false |yes |
 | region | Visitor's region | string  | "Moscow" | false |yes |
 
