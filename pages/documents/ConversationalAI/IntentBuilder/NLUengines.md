@@ -36,7 +36,7 @@ IBM Watson supports:
 * Chinese, Simplified (China)
 * Chinese, Traditional (Taiwan)
 * Dutch (Netherlands)
-* English
+* English (Australia, Canada, Great Britain, India, United States)
 * French (France)
 * German (Germany)
 * Italian (Italy)
