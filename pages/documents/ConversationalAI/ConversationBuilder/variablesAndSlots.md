@@ -82,13 +82,13 @@ If your automation asked the user "which animal do you like?" and the user answe
 #### Slot filling with multi-entity extraction
 Slot-filling becomes especially useful when mining the entities that make up a user's intent to pre-populate your list of questions, and streamline the data collection process. 
 
-1. Create a [new dialog](https://developers.liveperson.com/conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](https://developers.liveperson.com/conversation-builder-intent-builder-overview.html) as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
+1. Create a [new dialog](https://developers.liveperson.com/conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](https://developers.liveperson.com/conversation-builder-intent-builder-overview.html)as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
 
 2. Now, devise a few [entities] that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `items` with `pants, shoes, shirt, underwear`. and finally, one for `sizes` with the values `small, medium, and large`. Before moving on, [update and train](https://developers.liveperson.com/intent-builder-domains.html#train-a-liveperson-nlu-v2-domain) the `ordering` intent with some representative training phrases that contain these entities.
 
 3. Next we will create the [questions](https://developers.liveperson.com/conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Using [NLU Assist](https://developers.liveperson.com/conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction) assign your entities to the relevant questions.
 
-![alt text](https://developers.liveperson.com/img/ConvoBuilder/variables_and_slots/slot_nluassist.png "NLU Assist screenshot")
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_nluassist.png">
 
 Once completed you will have a list of questions that looks like the following:
 
@@ -96,15 +96,16 @@ Once completed you will have a list of questions that looks like the following:
 
 4. In the [Interaction Details - Next Actions](https://developers.liveperson.com/conversation-builder-interactions-details-next-actions.html) for each question, we will create a [slot variable](https://developers.liveperson.com/conversation-builder-interactions-details-next-actions.html#slots) that contains our slot variable (`item`) and whose value is the entity value `@items`. Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
 
-![alt text](https://developers.liveperson.com/img/ConvoBuilder/variables_and_slots/slot_fill.png "Filling the slot")
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill.png">
 
 5. Now you can test the bot using an intent with slot choices as part of the query. When you enter the dialog, if a user has supplied an entity that is known to the domain, it will automatically populate the slot and skip the interaction and move on to the next interaction's question. 
 
-![alt text](https://developers.liveperson.com/img/ConvoBuilder/variables_and_slots/slot_fill_prompt "A vauge intent is clarified")
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill_prompt.png">
 
 If a user manages to express all the slots as part of their intent query, it will skip to our confirmation step.
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_in_action.png">
 
-![alt text](https://developers.liveperson.com/img/ConvoBuilder/variables_and_slots/slot_in_action.png "How it looks in chat")
+t_in_action.png "How it looks in chat")
 
 ### When to use variables vs slots
 
