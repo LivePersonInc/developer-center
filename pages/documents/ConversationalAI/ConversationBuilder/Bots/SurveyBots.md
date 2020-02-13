@@ -14,13 +14,13 @@ indicator: both
 
 A survey bot lets you collect feedback from consumers at the end of a conversation with a custom bot or human agent. The survey bot can ask:
 
-* Specialized questions designed to provide Customer Satisfaction (CSAT), Net Promoter Score (NPS), and First Contact Resolution (FCR) survey metrics
+* Specialized questions designed to provide First Contact Resolution (FCR), Customer Satisfaction (CSAT), and Net Promoter Score (NPS) survey metrics
 * Questions that reflect your brand's key performance indicators
 * Free-text questions
 
 Use a survey bot to measure bot/agent and skill performance and to identify opportunities to improve on your quality targets.
 
-INSERT SCREEN CAP OF PREVIEW OF SURVEY
+<img style="width:400px" src="img/ConvoBuilder/surveyBot_example.png">
 
 ### Survey bots vs. custom bots
 
@@ -91,47 +91,43 @@ Some setup of your LiveEngage environment is required before using this feature.
 
 ### Step 3 - Build out the dialog flow
 
-In this step, you 1) add a greeting message, 2) build out the dialog flow using the available interactions to define the survey and its logic, and 3) finish with a closing message to send at the end of the survey.
+In this step, you build out the dialog flow using the available interactions to define the survey and its logic.
 
 #### Adding survey interactions
 
-There are a few, predefined interactions that are available only to survey bots, namely, the CSAT, NPS, and FCR interactions. They're predefined in the sense that you can't edit their structure; you can only edit their content. For example, you can't change the number of responses, but you can change the question text and response text.
+There are a few, predefined interactions that are available only to survey bots, namely, the FCR, CSAT, and NPS interactions. They're predefined in the sense that you can't edit their structure, i.e., add or remove answer choices. However, you can change the question and answer text.
 
 {: .important}
 In a single survey bot, you can include only one of each survey interaction type.
 
+##### FCR interaction
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_fcr.png">
+
 ##### CSAT interaction
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_csat.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_csat.png">
 
 ##### NPS interaction
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_nps.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_nps.png">
 
 {: .important}
 In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question and skip is 12 quick replies. Using Skip will cause the conversation to end abruptly.
-
-##### FCR interaction
-
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_fcr.png">
 
 #### Marking questions as optional
 
 To add a Skip option and thereby make a survey question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/surveyBot_skip.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_skip.png">
 
 #### Making display decisions
 
 Use the **Display choices as** setting on the **Settings** tab in the **Interaction Details** of a survey interaction to select whether to display the response choices as quick replies (the default) or buttons.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/surveyBot_displayChoices.png">
-
 #### Adding standard interactions
 
 You can use only a subset of the standard interaction types in survey bots; unavailable interactions are hidden from view on the toolbar.
-
-<img class="fancyimage" style="width:100px" src="img/ConvoBuilder/surveyBot_interactions.png">
 
 Use the standard interactions to ask questions that reflect your brand's custom key performance indicators (KPIs) and/or other free-text questions. For example, you might want to obtain the consumer's age.
 
