@@ -105,8 +105,6 @@ Once completed you will have a list of questions that looks like the following:
 If a user manages to express all the slots as part of their intent query, it will skip to our confirmation step.
 <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_in_action.png">
 
-t_in_action.png "How it looks in chat")
-
 ### When to use variables vs slots
 
 Variables are the default storage unit of Conversation Builder, while slots are a special type of variable. The only reason to favor Slots is if you need extra functionality that is linked to entities or if entities will be used in an API Integration catalog search, for example.
