@@ -39,20 +39,17 @@ The following are key similarities and differences between survey bots and custo
 {: .important}
 There isn't a one-to-one correspondence between survey bots and custom bots. Survey bots are more like "manager" bots. You assign a skill or set of skills to a survey bot. When a conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey. In this way, a *single* survey bot is responsible for triggering surveys for *many* custom bots, all based on skill.
 
-### Survey flow
-
-When a conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey, and the bot sends the greeting message.
-
-The bot then sends the survey questions one by one based on the survey bot's dialog flow. Upon each consumer response, the bot sends the next question based on the defined logic. 
-
-When the dialog flow ends, the survey is closed. Any message sent by the consumer after the survey is closed opens a new messaging conversation. ??? FIX ???
+### The survey flow
 
 #### Survey triggering
+When a conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey, and the bot sends the greeting message. The bot then sends the survey questions one by one based on the survey bot's dialog flow.
 
-- When the conversation has ended, the survey is automatically triggered; there is no need to "transfer" to the survey.
-- A survey is triggered based on the last skill of the conversation.
-- Only conversations with a skill assigned to them are capable of triggering a survey. If a conversation is “unassigned,” it can't trigger a survey.
-- A survey is not triggered upon auto close. ??? FIX ???
+The above also means that:
+
+* There is no need to "transfer" to the survey.
+* A conversation that doesn't have an assigned skill can't trigger a survey.
+
+Additionally, if a conversation is closed automatically (for example, it times out), a survey isn't triggered since a survey doesn't make sense in this context.
 
 #### Survey skip or timeout
 
@@ -194,6 +191,16 @@ In order to trigger the survey, start a conversation on the account and skill on
 -add screen here-
 
 While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey or when the survey timeout is reached. In cases of an error with the survey flow or the survey bot, LiveEngage will close the survey after 48 hours as part of a conversation cleanup process.
+
+### The agent experience
+
+Once a conversation ends and a survey begins, the conversation no longer appears in the Open Connections list in LiveEngage. Instead, it appears in the All Connections list with a status that indicates the survey is in progress:
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_agent1.png">
+
+If an agent has permissions to view survey results, the agent can see the survey transcript.
+
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/surveyBot_agent2.png">
 
 ### Reporting
 
