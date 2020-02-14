@@ -1,50 +1,61 @@
-### OLD DOC ABOUT PHASE 2
+3 Introduction
+3 Automatic transfers via discovery
+    4 What's an automatic transfer?
+    4 The value of automatic transfers
+    4 Managing bot transfer groups
+    4 Disabling automatic transfers
+3 Manual transfers to specific bots
+    4 What's a manual transfer?
+    4 Making manual transfers seamless
+    4 The value of manual transfers
+    4 Overwriting the intent or user message
+3 Sharing information between bots
+3 FAQs
 
-What's multi-bot collaboration?
+### Automatic transfers via discovery
 
-When developing bots, it's considered a best practice to develop specialized bots that automate specific business tasks. If you're a large, enterprise company with well-demarcated functional areas, this practice also makes practical sense and lets you scale your automation footprint more easily. Within a business function, bot developers can specialize, and they can implement, maintain, and extend bots efficiently.
+#### What's an automatic transfer?
 
-However, while you might have multiple–even many–bots that automate business tasks, a single bot might not be able to handle all of a consumer's requests. The consumer's requests might require the support of multiple bots. And to the consumer, this should not only be possible, it should happen seamlessly. For example, if a consumer is conversing with a personal banking bot about personal banking matters but suddenly asks a question about professional banking, the personal banking bot should understand the question (not send a fallback response), know if there's a bot that's qualified to handle it (the professional banking bot), and gracefully hand over the conversation. These capabilities can be achieved with multi-bot collaboration.
+Automatic transfers use a construct called "bot transfer groups" to support the discovery of bots that are qualified to handle requests and accept transfers. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, the transfer happens automatically.
 
-Multi-bot collaboration is an implementation design whereby participating bots deployed in the same environment are aware of each others' runtime contexts. This awareness means that if one bot receives a request that it can't handle itself, the bot can determine if another bot is capable of doing so. If one can, the first bot can transfer the request to the second. This collaboration among bots is sometimes called the "bot tango."
+<img style="width:500px" src="img/ConvoBuilder/bots_collab5.png">
 
-How multi-bot collaboration works
-Participating = ???
+During an automatic transfer, the conversational context information is automatically sent from the sender bot to the receiver bot. This ensures a seamless, "warm" hand-off, allowing the receiver bot to immediately start the appropriate dialog.
 
-Workflow 1
+<img style="width:500px" src="img/ConvoBuilder/bots_collab4.png">
 
-1. Bot A receives a request that it can't handle. That is, Bot A doesn't have a dialog with an intent that matches the consumer's utterance.
-2. Bot A checks whether a participating bot is capable of handling the request. It identifies Bot B as having a matching intent.
-3. Bot A transfers the conversation to Bot B and sends to Bot B the following:
+#### The value of automatic transfers
 
-    * The user message that triggered the intent match
-    * The intent that was matched
+Automatic transfers are designed to simplify your automation model and make it more robust. Because all bots within a bot transfer group can talk to one another--automatically transferring requests when needed and possible--you don't need a "router" bot for routing user interactions between bots. What's more, you don't need agent escalations within your dialogs to support transfers. The discovery and transfer all happens automatically and seamlessly within a bot transfer group.
 
-4. Bot B examines the received intent and triggers its associated dialog. Or, if the intent is null, Bot B examines the user message and handles it as designed.
+There are still some times when you'll need to implement agent escalations:
 
-Workflow 2
+* You need to transfer a conversation from a bot in one bot transfer group to a bot in a *different* bot transfer group.
+* You need to transfer a conversation to a live agent.
 
-1. Bot A receives a request that it can't handle. That is, Bot A doesn't have a dialog with an intent that matches the consumer's utterance.
-2. Bot A checks whether a participating bot is capable of handling the request. It doesn't identify one.
-3. Bot A sends a fallback response.
+#### Managing bot transfer groups
 
-FOR NEW BOTS > AUTOMATIC BOT-TO-BOT TRANSFERS PAGE
+Automatic transfers rely on bot transfer groups to determine which bots can talk to one another and transfer conversations automatically. When you create a custom bot, you have the option of assigning a bot transfer group.
 
-{: .important}
-Use of automatic, bot-to-bot transfers is only available to customers who log into Conversation Builder via single sign-on from LiveEngage.
+For information on creating and managing groups, see here.
 
-### Introduction
+#### Disabling automatic transfers
 
-When developing bots, it's considered a best practice to develop specialized bots that automate specific business tasks. If you're a large, enterprise company with well-demarcated functional areas, this practice also makes practical sense and lets you scale your automation footprint more easily. Within a business function, bot developers can specialize, and they can implement, maintain, and extend bots efficiently.
+You can disable automatic transfers on a group-by-group basis. To do this, inactivate the bot transfer group as described here.
 
-However, while it's advantageous to have multiple–even many–bots that automate business tasks, this also means that a single bot might not be able to handle all of a consumer's requests. The consumer's requests might require the support of multiple bots, and this means that a bot-to-bot transfer of the conversation is required.
+### Sharing information between bots
 
-### About automatic transfers
+In a transfer from one bot to another, the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. To share this information between bots, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
 
-Automatic transfers use "bot transfer groups" to support the discovery of bots that are qualified to handle requests. A bot can be a member of a single group. As a member, when the bot receives a request that it can't handle, it checks within the group for a bot that can. If it finds one, the transfer happens automatically.
+### FAQs
+
+#### Can you explain more about the discovery process that's used in automatic transfers?
+
+If a consumer's utterance can't be handled in some way by a bot, i.e., there are no dialog starters that match nor a Knowledge Base integration in the fallback dialog that returns a response, the bot checks whether there is another bot within the same group that can handle the request. If there is one, and if it has an active LiveEngage connection, the conversation is transferred automatically to the receiver bot. The receiver bot then takes care of processing the request. If there isn't another bot that can handle the request, the default, built-in fallback response is sent to the consumer.
 
 
-### Automatic versus manual transfers
+TO CHANGE IN THE MANUAL DOC
+Manual transfer - for if you are already using a LP agent escalation type of integration
 
 
 ### Create a bot transfer group
