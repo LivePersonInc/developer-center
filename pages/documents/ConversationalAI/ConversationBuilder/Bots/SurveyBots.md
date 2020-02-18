@@ -46,10 +46,10 @@ When a conversation ends, if the conversation's last skill matches one assigned 
 
 The above also means that:
 
-* There is no need to "transfer" to the survey.
+* There is no need to "transfer" to the survey. This happens automatically.
 * A conversation that doesn't have an assigned skill can't trigger a survey.
 
-Additionally, if a conversation is closed automatically (for example, it times out), a survey isn't triggered since a survey doesn't make sense in this context.
+Additionally, if a conversation is closed automatically because it's been idle for a time, a survey isn't triggered.
 
 #### Survey skip or timeout
 
