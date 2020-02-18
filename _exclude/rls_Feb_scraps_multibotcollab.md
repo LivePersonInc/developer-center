@@ -1,13 +1,14 @@
 3 Introduction
+3 Seamless transfers
 3 Automatic transfers via discovery
     4 What's an automatic transfer?
-    4 The value of automatic transfers
+    4 Why use automatic transfers?
     4 Managing bot transfer groups
     4 Disabling automatic transfers
-3 Manual transfers to specific bots
+3 Manual transfers
     4 What's a manual transfer?
+    4 Why use a manual transfer?
     4 Making manual transfers seamless
-    4 The value of manual transfers
     4 Overwriting the intent or user message
 3 Sharing information between bots
 3 FAQs
@@ -16,7 +17,7 @@
 
 #### What's an automatic transfer?
 
-Automatic transfers use a construct called "bot transfer groups" to support the discovery of bots that are qualified to handle requests and accept transfers. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, the transfer happens automatically.
+Automatic transfers use "bot transfer groups" to support the discovery of bots that are qualified to handle requests and accept transfers. You create the groups and assign bots to them. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, the transfer happens automatically.
 
 <img style="width:500px" src="img/ConvoBuilder/bots_collab5.png">
 
@@ -24,11 +25,11 @@ During an automatic transfer, the conversational context information is automati
 
 <img style="width:500px" src="img/ConvoBuilder/bots_collab4.png">
 
-#### The value of automatic transfers
+#### Why use automatic transfers?
 
-Automatic transfers are designed to simplify your automation model and make it more robust. Because all bots within a bot transfer group can talk to one another--automatically transferring requests when needed and possible--you don't need a "router" bot for routing user interactions between bots. What's more, you don't need agent escalations within your dialogs to support transfers. The discovery and transfer all happens automatically and seamlessly within a bot transfer group.
+Automatic transfers are designed to simplify your automation model and make it more robust. Because all bots within a bot transfer group can talk to one another--automatically transferring requests when needed and possible--you don't need a "router" bot for routing user interactions between bots. What's more, you don't need LivePerson agent escalations within your dialogs to support transfers. When needed, discovery and transfer happen automatically and seamlessly within a bot transfer group.
 
-There are still some times when you'll need to implement agent escalations:
+There are still some times when you'll need to implement LivePerson agent escalations to perform transfers:
 
 * You need to transfer a conversation from a bot in one bot transfer group to a bot in a *different* bot transfer group.
 * You need to transfer a conversation to a live agent.
