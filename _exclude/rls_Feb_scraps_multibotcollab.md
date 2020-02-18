@@ -52,7 +52,7 @@ In a transfer from one bot to another, the receiver bot won't have all the conte
 
 #### Can you explain more about the discovery process that's used in automatic transfers?
 
-If a consumer's utterance can't be handled in some way by a bot, i.e., there are no dialog starters that match nor a Knowledge Base integration in the fallback dialog that returns a response, the bot checks whether there is another bot within the same group that can handle the request. If there is one, and if it has an active LiveEngage connection, the conversation is transferred automatically to the receiver bot. The receiver bot then takes care of processing the request. If there isn't another bot that can handle the request, the default, built-in fallback response is sent to the consumer.
+If a consumer's utterance can't be handled in some way by a bot, i.e., there are no dialog starters that match nor a Knowledge Base integration in the fallback dialog that returns a response (a matching article), the bot checks whether there is another bot within the same group that can handle the request. If there is one, and if it has an active LiveEngage connection, the conversation is transferred automatically to the receiver bot. The receiver bot then takes care of processing the request. If there isn't another bot that can handle the request, the default, built-in fallback response is sent to the consumer.
 
 
 TO CHANGE IN THE MANUAL DOC
