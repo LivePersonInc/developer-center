@@ -51,7 +51,10 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     
     The Add Agent Connector dialog appears.
 
-4. Enter your account number in the field provided, and click <img style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png">. You can specify the account number of any account you have access to (e.g., you might have Development and Production accounts). If you're on the LivePerson platform, this field is pre-populated with the number of your current account (i.e., the one you're logged into), but you can change it.
+4. Enter your account number in the field provided, and click <img style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
+
+    **Note:** If you've logged into Conversation Builder directly (i.e., you're on the AWS platform), you can specify any account, and the **Agent User ID** list will be populated accordingly. However, if you've logged into Conversation Builder via single sign-on through LiveEngage (i.e., you're on the LivePerson platform), this field behaves differently due to some built-in validation. In the latter case, the field is pre-populated with the number of your current account (i.e., the one you're logged into), but you can change it. If you change the account number, you must have a user account in whatever LiveEngage account you specify in order for the **Agent User ID** list to be populated accordingly. If you don't have a user account in the LiveEngage account, an error is displayed.
+
 5. Specify the following in the dialog:
     - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in LiveEngage as a prerequisite step (discussed above). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents for the account that you specified appear in this list.
     - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps).
