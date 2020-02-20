@@ -11,9 +11,9 @@ indicator: both
 
 ### Why use an Auto Escalation dialog?
 
-The purpose of the Auto Escalation dialog is to free the consumer from being stuck within a question. This can happen when the bot doesn't recognize the consumer's input. Because the bot can't determine the next step that should happen, the [fallback response]((conversation-builder-dialogs-fallback-dialogs.html)) is sent, and the consumer is returned to the place where the failure occurred. The fallback response is repeated for each unrecognizable input, resulting in a stuck conversation. The consumer's predicament is illustrated in the example below.
+The purpose of the Auto Escalation dialog is to free the consumer from being stuck within a question. This can happen when the bot doesn't recognize the consumer's input. Because the bot can't determine the next step that should happen, the [fallback response]((conversation-builder-dialogs-fallback-dialogs.html)) is sent, and the consumer is returned to the place where the failure occurred. The fallback response is then repeated after each unrecognizable input, resulting in a stuck conversation. The consumer's predicament is illustrated in the example below.
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/dialogs_autoEscalate1.png">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_autoEscalate1.png">
 
 The Auto Escalation dialog solves this problem by offering the consumer the option of being transferred to a live agent (or another bot). You configure the number of times that the fallback response should be sent within a question. Once that threshold is reached, the Auto Escalation dialog is triggered automatically.
 
@@ -53,5 +53,5 @@ If the default dialog implementation doesn't meet your requirements, build out a
 The counter is incremented if any of the following occurs:
 
 * The built-in, default fallback response is sent to the consumer. (A fallback dialog doesn't exist.)
-* A fallback dialog that contains only text interactions is triggered.
-* A fallback dialog that contains an API integration (e.g., a Knowledge Base integration) is triggered, but the integration call failed, and the failure condition was not handled, triggering a system error message.
+* A fallback dialog that contains only text interactions exists and is triggered.
+* A fallback dialog that contains an API integration (e.g., a Knowledge Base integration) exists and is triggered. But the integration call failed, and the failure condition was not handled, triggering a system error message.

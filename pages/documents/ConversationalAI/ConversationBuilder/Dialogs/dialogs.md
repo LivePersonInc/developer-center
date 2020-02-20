@@ -16,11 +16,12 @@ A dialog is a group or flow of interactions that are triggered based upon consum
 
 ### Dialog types
 
-There are three types of dialogs:
+There are several types of dialogs:
 
 - **Dialog (Standard)**: Standard dialogs are triggered when the bot recognizes the consumer's message via an [intent](intent-builder-intents.html) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match. For more on this, see [here](conversation-builder-dialogs-standard-dialogs.html).
 - **Fallback**: The fallback dialog is triggered when the bot doesn't recognize the consumer's message. For more on this, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 - **Disambiguation**: The disambiguation dialog is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed. For more on this, see [here](conversation-builder-dialogs-disambiguation-dialogs.html).
+- **Auto Escalation**: This type of dialog frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold is reached; it gives the consumer the option to be transferred. For more on this, see [here](conversation-builder-dialogs-auto-escalation-dialogs.html).
 
 ### Context switching
 
@@ -56,7 +57,7 @@ To disable context switching at the conversation start, you can add this code to
 2. Click **+ DIALOG** in the lower-left corner.
 3. In the dialog that appears, do the following:
     - **Dialog Name**: Enter a descriptive name for the dialog. Use a standard naming convention to make your dialogs more sortable and easier to find.
-    - **Dialog Type**: Select either Dialog (for a [standard](conversation-builder-dialogs-standard-dialogs.html) dialog), [Fallback](conversation-builder-dialogs-fallback-dialogs.html) Dialog, or [Disambiguation](conversation-builder-dialogs-disambiguation-dialogs.html) Dialog.
+    - **Dialog Type**: Select the type of dialog; for help with this, see *Dialog types* farther above on this page.
 4. Click **Save**.
 5. Build out the dialog as per your requirements.
 
@@ -89,3 +90,47 @@ If this Text statement isn't the last in the dialog, set this statement's **Next
 
 {: .important}
 LP_CLOSECONVERSATION does **not** trigger a post-conversation survey.
+
+### Configure dialog settings
+
+**To configure dialog settings**
+1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
+
+2. Select **Dialog Settings**.
+3. Click **More Settings** to display all the settings.
+3. Configure the settings as needed, and click **Save**.
+
+Dialog settings include:
+
+* **Dialog Name**: Enter a name that's concise and clear.
+* **Dialog Type**: This is read only.
+* **Domain**: Select a domain to associate it with the dialog.
+* **Auto Escalation Threshold**: Applicable for [Auto Escalation dialogs](conversation-builder-dialogs-auto-escalation-dialogs.html) only. Select the maximum number of times the fallback message should be sent within a question before triggering the Auto Escalation dialog.
+
+### Disable or enable a dialog
+
+**To disable or enable a dialog**
+
+1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
+
+2. Select **Dialog Settings**.
+3. Click **More Settings** to display all the settings.
+4. For **Enable Dialog**, click the slider. Enable (turn on) the slider to enable the dialog; disable (turn off) the slider to disable the dialog.
+5. Click **Save**.
+
+### Delete a dialog
+
+Deleting a dialog is a non-recoverable action, so be certain about doing so before taking this action. As an alternative, consider disabling the dialog instead; you can do this in the dialog's settings.
+
+**To delete a dialog**
+
+1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
+
+2. Select **Delete Dialog**.
+3. In the confirmation dialog, click **Yes**. 
