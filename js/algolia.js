@@ -1,3 +1,4 @@
+//https://github.com/algolia/autocomplete.js/blob/master/README.md
 var client = algoliasearch("EICOREWTRW", "d9c4823582269a3f4f16e79105acc1d2")
 var devIndex = client.initIndex('devMain');
 var search = document.getElementById('aa-search-input');
