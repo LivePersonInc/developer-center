@@ -35,7 +35,7 @@ Importantly, both approaches allow for the transfer of the user's intent and/or 
 
 #### What's an automatic transfer?
 
-Automatic transfers use "bot transfer groups" to support the discovery of bots that are qualified to handle requests and accept transfers. You create the groups and assign bots to them. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, the transfer happens automatically.
+Automatic transfers use "bot transfer groups" to support the discovery of bots that are qualified to handle requests and accept transfers. You create the groups and assign bots to them. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, transfer of the conversation happens automatically.
 
 <img style="width:650px" src="img/ConvoBuilder/bots_collab5.png">
 
