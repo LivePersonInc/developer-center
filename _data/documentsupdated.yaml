@@ -143,6 +143,7 @@
           - subpagename: Standard Dialogs
           - subpagename: Fallback Dialogs
           - subpagename: Disambiguation Dialogs
+          - subpagename: Auto Escalation Dialogs
       - pagename: Interactions
         subpages:
           - subpagename: Interaction Basics
