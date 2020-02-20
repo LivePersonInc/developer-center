@@ -79,6 +79,32 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 
 If your automation asked the user "which animal do you like?" and the user answered "dogs" or something similar, the slot for the entity `animal` would be populated with their answer. The automation would then respond with "You answered: dogs!" populating the code above with the user's reply.
 
+#### Slot filling with multi-entity extraction
+Slot-filling becomes especially useful when mining the entities that make up a user's intent to pre-populate your list of questions, and streamline the data collection process. 
+
+1. Create a [new dialog](conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](conversation-builder-intent-builder-overview.html)as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
+
+2. Now, devise a few [entities] that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `items` with `pants, shoes, shirt, underwear`. and finally, one for `sizes` with the values `small, medium, and large`. Before moving on, [update and train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain) the `ordering` intent with some representative training phrases that contain these entities.
+
+3. Next we will create the [questions](conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Using [NLU Assist](conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction) assign your entities to the relevant questions.
+
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_nluassist.png">
+
+Once completed you will have a list of questions that looks like the following:
+
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions.png">
+
+4. In the [Interaction Details - Next Actions](conversation-builder-interactions-details-next-actions.html) for each question, we will create a [slot variable](conversation-builder-interactions-details-next-actions.html#slots) that contains our slot variable (`item`) and whose value is the entity value `@items`. Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
+
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill.png">
+
+5. Now you can test the bot using an intent with slot choices as part of the query. When you enter the dialog, if a user has supplied an entity that is known to the domain, it will automatically populate the slot and skip the interaction and move on to the next interaction's question. 
+
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill_prompt.png">
+
+If a user manages to express all the slots as part of their intent query, it will skip to our confirmation step.
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_in_action.png">
+
 ### When to use variables vs slots
 
 Variables are the default storage unit of Conversation Builder, while slots are a special type of variable. The only reason to favor Slots is if you need extra functionality that is linked to entities or if entities will be used in an API Integration catalog search, for example.
