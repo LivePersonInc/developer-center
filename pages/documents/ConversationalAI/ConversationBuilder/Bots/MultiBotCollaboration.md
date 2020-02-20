@@ -49,7 +49,7 @@ If there isn't another bot within the group that can handle the request, no auto
 
 #### Why use automatic transfers?
 
-Automatic transfers are designed to simplify your automation model and make it more robust. Because all bots within a bot transfer group can talk to one another--automatically transferring requests when needed and possible--you don't need a "router" bot for routing user interactions between bots. What's more, you don't need LivePerson agent escalations within your dialogs to perform transfers. With automatic transfers, the discovery and actual transfer both happen automatically and seamlessly within a bot transfer group.
+Automatic transfers are designed to simplify your automation model and make it more robust. Because all bots within a bot transfer group can talk to one another--automatically transferring requests when needed and possible--you don't need a "router" bot for routing user interactions between bots. With automatic transfers, the discovery and actual transfer both happen automatically and seamlessly within a bot transfer group whenever needed.
 
 There are still some times when you'll need to use a manual transfer instead:
 
@@ -104,7 +104,7 @@ You'll need to use a manual transfer in two situations:
 
 #### Making manual transfers seamless
 
-In a manual transfer, you can *automatically* pass the intent and/or user message from the sender bot to the receiver bot in a manual transfer by selecting the **Bot Transfer Context** checkbox in the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration. No coding by you is required.
+In a manual transfer, you can *automatically* pass the intent and/or user message from the sender bot to the receiver bot by selecting the **Bot Transfer Context** checkbox in the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration. No coding is required.
    
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab1.png">
 

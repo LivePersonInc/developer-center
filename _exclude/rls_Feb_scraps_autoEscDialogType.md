@@ -5,7 +5,7 @@ FOR THE "INTERACTIONS > INTEGRATIONS" PAGE
 Use an Escalation interaction in a dialog when you want to escalate (transfer) a conversation to either a live agent or another bot.
 
 {: .important}
-Implementing a bot-to-bot transfer? See here for information on automatic transfers and here for information on manual transfers.
+Implementing a bot-to-bot transfer? See here for more information.
 
 **To add an Escalation interaction**
 
