@@ -42,7 +42,7 @@ We've likewise added a second condition that checks for a "failure" result **(1)
 
 ### Escalation interactions
 
-Use an Escalation interaction in a dialog when you want to escalate (transfer) a conversation to either a live agent or to a bot in different bot transfer group.
+Use an Escalation interaction in a dialog when you want to escalate (transfer) a conversation from a bot to a live agent or from a bot in one bot transfer group to a bot in a *different* group.
 
 {: .important}
 An Escalation interaction *doesn't* require a supporting LivePerson Agent Escalation integration. You specify all necessary information in the interaction itself. The [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) is a deprecated but supported feature; we recommend you use an Escalation interaction instead.
