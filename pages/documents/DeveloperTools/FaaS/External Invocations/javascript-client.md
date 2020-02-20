@@ -36,9 +36,9 @@ npm install @liveperson/functions-client
 
 The following methods functionality is provided:
 
-* invoke which allows to call a function by its specific UUID or invoke all functions that implement a specific event
-* isImplemented which allows to test whether a method, that implements a given event, exists
-* getLambdas which returns all lambdas belonging to the user account specified in the client
+* `invoke` which allows to call a function by its specific UUID or invoke all functions that implement a specific event
+* `isImplemented` which allows to test whether a method, that implements a given event, exists
+* `getLambdas` which returns all lambdas belonging to the user account specified in the client
 
 More detailed documentation can be found [here.](https://lpgithub.dev.lprnd.net/RnD-Mannheim/faas-client-js/tree/develop)
 

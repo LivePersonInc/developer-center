@@ -32,10 +32,10 @@ For our default implementation we use OAuth 2.0 with Client Credentials. Thus yo
 
 The following methods functionality is provided:
 
-* invokeByUUID which allows to call a function by its specific UUID
-* invokeByEvent which allows to call all functions implementing a given event
-* isImplemented which allows to test whether a method, that implements a given event, exists
-* getLambdas which returns all lambdas belonging to the user account specified in the client
+* `invokeByUUID` which allows to call a function by its specific UUID
+* `invokeByEvent` which allows to call all functions implementing a given event
+* `isImplemented` which allows to test whether a method, that implements a given event, exists
+* `getLambdas` which returns all lambdas belonging to the user account specified in the client
 
 More detailed documentation can be found [here.](https://lpgithub.dev.lprnd.net/RnD-Mannheim/faas-client/tree/develop)
 
