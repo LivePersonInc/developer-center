@@ -61,14 +61,15 @@ There are still some times when you'll need to use a manual transfer instead:
 Automatic transfers rely on bot transfer groups to determine which bots can talk to one another and transfer conversations automatically. When you [create a custom bot](conversation-builder-bots-custom-bots.html), you have the option of assigning a bot transfer group to it.
 
 **To create a bot transfer group**
-1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-left corner.
+1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-right corner.
 2. Click **New Group**.
 3. Specify the following:
 
     * **Group name**: Enter a group name that's concise and clear.
+    * **Transfer message**: Enter the message to send to the consumer prior to the transfer, something like, "Hold on while I transfer you to a chatbot that can assist you..."
     * **Bots**: Select each bot to add it to the group. 
 
-4. Click **Save**.
+4. Click **Add**.
 
 #### Inactivate or activate a bot transfer group
 
@@ -76,7 +77,7 @@ To disable automatic transfers on a group-by-group basis, inactivate the bot tra
 
 **To inactivate or activate a bot transfer group**
 
-1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-left corner.
+1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-right corner.
 2. In the left panel, select the group.
 3. In the right panel, click the **Status** slider. To activate the group, turn it on; to inactivate the group, turn it off.
 4. Click **Save**.
@@ -85,7 +86,7 @@ To disable automatic transfers on a group-by-group basis, inactivate the bot tra
 
 **To delete a bot transfer group**
 
-1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-left corner.
+1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-right corner.
 2. In the left panel, click the icon and select **Delete**.
 3. confirm step.
 
