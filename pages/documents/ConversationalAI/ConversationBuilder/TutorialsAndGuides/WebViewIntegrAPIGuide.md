@@ -1,12 +1,12 @@
 ---
-pagename: Implementing the Web View Integration API
+pagename: Implementing a Web View Integration
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Tutorials & Guides
-permalink: conversation-builder-tutorials-guides-implementing-the-web-view-integration-api.html
+permalink: conversation-builder-tutorials-guides-implementing-a-web-view-integration.html
 indicator: both
 ---
 
@@ -49,7 +49,7 @@ function __initConversation() {
  var userId = botContext.getUserPlatformId();
  var convId = botContext.getConversationId();
  var botId = '7a4e10287a6b90cee1de9910f0b5010985eef16a';
- botContext.setBotVariable('formURL', https://static-assets.dev.fs.liveperson.com/cb_test/web_view_test/web_view/index.html?userId=' + userId + '&convId=' + convId + '&botId=' + botId, true, false);
+ botContext.setBotVariable('formURL', 'https://static-assets.dev.fs.liveperson.com/cb_test/web_view_test/web_view/index.html?userId=' + userId + '&convId=' + convId + '&botId=' + botId, true, false);
 }
 ```
 
@@ -61,7 +61,7 @@ In the bot, we have a simple dialog to present the form link to the visitor. The
 
 The dialog has a single Button Question interaction with a single button. This button uses the **formURL** bot variable that was created in the Global Functions as the **Callback**. This way, when the visitor clicks the button, they will be directed to the form URL.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/guideWebView_buttonConfig.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/guideWebView_buttonConfig.png">
 
 ### Call the API from the browser
 
