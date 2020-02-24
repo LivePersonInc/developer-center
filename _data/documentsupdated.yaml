@@ -122,6 +122,7 @@
       - pagename: Tutorials & Guides
         subpages:
           - subpagename: Getting Started
+          - subpagename: Implementing the Web View Integration API
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
