@@ -430,8 +430,11 @@ In this step, you create two user agents, one for the bot and one for the human 
 ##### Create the skills
 
 1. [Log in](https://authentication.liveperson.net/login.html) to your LiveEngage account. 
-2. Click the Users and Skills icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png"> , and then click the **Skills** tab.
-3. In the upper-right corner, click **Action > Add**.
+2. Click the **Manage users and skills** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png"> , and then click the **Skills** tab.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/manageUsersAndSkillsIcon.png">
+
+3. Click the **Add skill** button at the bottom of the page.
 4. On the Add Skill page, specify the following:
     * **Name**: Enter "Bot."
     * **Description**: Enter "Bot skill."
@@ -450,7 +453,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 In addition to the skills, you also need user agents, one for the bot and one for the agent that will be receiving the inbound transfers (for human escalation).
 
 1. Still in LiveEngage, click the **Users** tab.
-2. In the upper-right corner, click **Action > Add**.
+2. Click the **Add user** button at the bottom of the page.
 3. On the Add User page, specify the following:
     * **User type**: Set this to "Bot." If you don't see this field, contact your LivePerson representative to enable this for you.
     * **Login name**: Enter any value, e.g., "bot_user."
@@ -469,7 +472,7 @@ In addition to the skills, you also need user agents, one for the bot and one fo
 
 You will test this connection with a standard web chat engagement, so now you create a campaign and an engagement that routes to the new Bot skill.
 
-1. Click the Campaigns and Engagements icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_campaigns.png">.
+1. Click the **Manage campaigns and engagements** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_campaigns.png">.
 2. In the upper-right corner, click **Action > Add**.
 3. On the page that appears, specify the following:
     * **Campaign name**: Enter "Bot test."
