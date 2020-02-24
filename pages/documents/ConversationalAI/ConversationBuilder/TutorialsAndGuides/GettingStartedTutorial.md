@@ -435,6 +435,9 @@ In this step, you create two user agents, one for the bot and one for the human 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/manageUsersAndSkillsIcon.png">
 
 3. Click the **Add skill** button at the bottom of the page.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addSkillButton.png">
+
 4. On the Add Skill page, specify the following:
     * **Name**: Enter "Bot."
     * **Description**: Enter "Bot skill."
