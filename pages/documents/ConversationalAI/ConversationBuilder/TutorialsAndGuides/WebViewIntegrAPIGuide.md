@@ -26,7 +26,7 @@ In order to call the Web View Integration API, the following data is needed:
 
 The Bot ID can be found in Conversation Builder in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) (expand **More Settings**).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_botId.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_botID.png">
 
 The conversation ID can be retrieved with the [botContext.getConversationId()](conversation-builder-scripting-functions-get-set-contextual-data.html#get-conversation-id) method in bot code.
 
