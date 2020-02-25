@@ -76,7 +76,7 @@ This is a system message; even though it appears in the Preview window, it is no
 If this Text statement isn't the last in the dialog, set this statement's **Next Step** to "End Interaction" (not "Next Interaction").
 
  {: .important}
-LP_CLOSEDIALOG triggers a post-conversation survey.
+LP_CLOSEDIALOG triggers a post-conversation survey. The specific survey that is triggered is based on the conversation's last skill.
 
 #### LP_CLOSECONVERSATION
 

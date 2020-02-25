@@ -22,18 +22,21 @@ Use a survey bot to measure bot/agent and skill performance and to identify oppo
 
 <img style="width:400px" src="img/ConvoBuilder/surveyBot_example.png">
 
+{: .important}
+This feature isn't supported on the AWS platform, i.e., if you're logging into Conversation Builder directly. This feature is only supported on the LivePerson platform where you log into Conversation Builder via single sign-on through LiveEngage.
+
 ### Survey bots vs. custom bots
 
 When creating a survey bot, you work in Conversation Builder in the same, general way that you do with a custom bot. Create the bot and define its dialog flow, adding the interactions that meet your survey requirements.
 
 The following are key similarities and differences between survey bots and custom bots.
 
-| | Survey bots | Custom bots |
+| | Custom bots | Survey bots |
 | --- | --- | --- |
-| Import and export bot | | Yes |
-| Create versions and releases | | Yes |
-| Preview | Yes | Yes |
-| Deploy bot | Yes, via a Publish mechanism | Yes, via deployment of an agent connector |
+| Export and import bot | Yes | Yes, except the bot's assigned skills are not exported. |
+| Create versions and releases | Yes | Yes |
+| Preview | Yes |  Yes |
+| Deploy bot | Yes, you manually deploy an agent connector. | No, deployment happens behind the scenes. The bot can receive conversations as soon as you assign it a skill. |
 | Log transcripts | Yes | Yes |
 
 {: .important}
@@ -72,7 +75,12 @@ You can provide a closing message that is sent to the consumer for each of the a
 
 ### Step 1 - Prequisite steps
 
-Some setup of your LiveEngage environment is required before using this feature. Please contact your LivePerson account representative to enable this feature. 
+Some setup of your LiveEngage environment is required before using this feature. Please contact your LivePerson account representative to enable this feature; this is done by LivePerson enabling the following AC feature flags:
+
+* Common.Async_Messaging
+* Common.Messaging_Survey
+* Common.RichContent
+* Common.API_User_Login
 
 ### Step 2 - Create the bot
 
@@ -109,14 +117,14 @@ In a single survey bot, you can include only one of each survey interaction type
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_nps.png">
 
-{: .important}
-In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question and skip is 12 quick replies. Using Skip will cause the conversation to end abruptly.
-
 #### Marking questions as optional
 
 To add a Skip option and thereby make a survey question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_skip.png">
+
+{: .important}
+In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question and skip is 12 quick replies. Using Skip will cause the conversation to end abruptly.
 
 #### Making display decisions
 
@@ -152,11 +160,11 @@ When the setting is enabled, every brick within the survey receives a “Text Fa
 
 Once enabled, make sure to fill in the desired text in the Text Fallback Tab. This tab will appear next to the Action and Design tabs of the Settings window once enabled.
 
-#### Adding a closing message for survey completion
+#### Closing the conversation
 
-Remember to add a closing message at the end of the flow to thank the consumer for completing the survey.
+End the dialog flow with a text statement that contains the special string [LP_CLOSECONVERSATION](conversation-builder-dialogs-dialog-basics.html#lp_closeconversation). This is necessary to close the conversation.
 
-(In the bot's settings, you'll define the closing messages for when the survey is skipped or times out.)
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
 
 ### Step 4 - Configure the bot settings
 
@@ -173,18 +181,7 @@ Survey bot settings include:
 - **Survey Timeout**: Specify the amount of time that the survey will remain active before it is closed, and the closing message is displayed. The survey timout is calculated from the moment the survey starts until it reaches the timeout.
 - **Closing message when survey timeout reached**: Enter the closing message to display when the survey times out.
 
-### Step 5 - Publish the bot
-
-Publishing a survey bot loads it to your LiveEngage account. You *don't* need to deploy a survey bot like you do a custom bot. The Publish process performs all deployment steps behind the scenes.
-
-**To publish a survey bot**
-
-- Click **Publish** in the upper-right corner.
-
-    Once the status changes to Published, the survey bot is live.
-
-
-### Step 6 - Trigger the bot
+### Step 5 - Trigger the bot
 
 In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes the survey will be triggered and the agent workspace will show the caption - “Survey in progress”
 
@@ -204,50 +201,26 @@ If an agent has permissions to view survey results, the agent can see the survey
 
 ### Reporting
 
-The messaging performance dashboard in Report Builder includes a dedicated “survey data export” sheet containing an in-depth analysis of messaging "post conversation survey" flows. The flows included in Report Builder are based on the ones configured in Conversation Builder.
+#### Report Builder
+Metrics from the FCR, CSAT, and NPS questions in surveys are captured in LiveEngage and exposed via the Report Builder application. You'll find this information in the survey dashboards for messaging and live chat.
 
-The sheet contains an additional set of metrics and attributes that support the following analysis:
-
-* Predefined key performance indicators (KPIs) at the agent and skill level: CSAT, NPS, and FCR (pre-calculated)
-* Detailed, brand-level answer distribution per each configured question and answer
-* Detailed, agent-level and skill-level answer distribution per each question and answer
-* Survey activity and performance, so you can do things like monitor the response rates
-* Question-level performance, so you can do things like monitor the average time to respond
-
-In a single messaging conversation followed by the submission of a survey by the consumer, multiple agents and skills might be assigned. To eliminate double counting, and to prepare for our phase 2 development (which expands the attribution model to not just the last agent assigned), the data model has been prepared accordingly. Please see the post conversation survey messaging dashboards for more information.
+#### Bot Analytics
+In the Bot Analytics application, you'll see survey bots reported in the same way as custom bots. There is no differentiation.
 
 ### FAQs
 
-#### Q: Does this survey work with the older Post Conversation Survey (PCS) created in Bot Studio and/or the even older CSAT survey?
+#### Q: How do I deploy a survey bot?
 
-On channels such as Web Messaging and In-app Messaging, there is already an existing survey solution where a single CSAT question can be presented to the consumer when the conversation ends. If you choose to shift from the old CSAT survey to the new post conversation survey, it is possible to keep both types of surveys working simultaneously with the following logic:
+You don't need to manually deploy a survey bot. When LivePerson enables this feature for your brand, this enables the underlying agent connector that is used. **As soon as you create the survey bot and assign it a skill, it is active and can receive conversations.**
 
-- If both the PCS and old CSAT survey are enabled, the PCS gets the priority, and the old CSAT question won’t be displayed.
-- If the conversation ends on a device that doesn’t support the PCS (for example, an app running SDK v3.2 or lower), then the old CSAT question might appear, assuming it was configured to appear.
-- If the conversation ends with a skill on which there isn't a PCS defined, the old CSAT question might appear, if it was enabled.
+Typically, brands don't develop in their Production environments, but if you do, for this reason, it's recommended that you assign to the survey bot a "test" skill that isn't used in a production campaign and use that to validate the bot before assigning to it a production skill.
 
-#### Q: I configured and published a survey bot, but, when the conversation ends, I get the old CSAT question survey? Why?
+#### Q: How do I disable a survey bot?
 
-Make sure that the conversation ends with a skill that is mapped to the survey bot you’ve created. The skill mapping is done when you create the survey bot, and you can change it in the survey bot's Bot Settings.
+If you need to temporarily remove a survey bot from your customer traffic flow, you can disable the bot. To do this, set the **Enable Bot** slider to Off in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
-#### Q: When I end a messaging conversation and begin my survey, I don't see my latest changes. Why?
+#### Q: I'm using the older Post Conversation Survey created in Bot Studio, but I want to migrate to using survey bots created in Conversation Builder. What do I need to do?
 
-For the changes you make in Conversation Builder to take effect, you need to publish them. Click the "Publish" button in the upper-right corner, and then start a new messaging conversation.
+If you want to move completely to using Conversation Builder to create survey bots, ask your LivePerson account representative to 1) enable this feature as described earlier in this topic and 2) disable Bot Studio. That's all that's required. You can then use Conversation Builder to create the survey bots that you require and assign them to the skills that will trigger them.
 
-#### Q: I created a bot that was assigned with the “Survey bot” profile using the LiveEngage user creation UI. Why can’t I add it in Conversation Builder?
-
-The survey bot user is added automatically by Conversation Builder when you press “Add survey bot” in the Conversation Builder UI. This means that the Admin doesn’t need to create a bot user before going to Conversation Builder.
-
-To resolve the issue, delete any bot user that was assigned with the “Survey bot” profile, and try to add the bot again using Conversation Builder.
-
-#### Q: I added a survey bot using Conversation Builder, but I can’t see its user in the LiveEngage UI. Why?
-
-When Conversation Builder creates the survey bot user, it is created as a system user. This means that the survey bot user doesn’t appear as an agent in LiveEngage.
-
-#### Q: On Facebook, when I send out an NPS question with the skip button, the conversation ends abruptly. Why?
-
-Unfortunately, Facebook doesn’t support sending structured content that has more than 11 quick replies. The NPS question and skip is 12 quick replies.
-
-#### Q: Something has changed in my survey, and I’m not sure who made the change. How can I find this out?
-
-Like for all bots, changes to a survey bot are tracked in the bot's change history. You can access this by clicking the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner and then selecting **Bot Change History** from the menu that appears.
+You can also run the older Post Conversation Survey alongside survey bots created in Conversation Builder. In this case, you'll still need to enable this feature, but Bot Studio should be kept enabled. This means that you'll have some skills that trigger the old Post Conversation Survey and other skills that trigger the survey bots you've created in Conversation Builder.
