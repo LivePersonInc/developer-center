@@ -62,10 +62,11 @@ Automatic transfers rely on bot transfer groups to determine which bots can talk
 
 **To create a bot transfer group**
 1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-right corner.
-2. Click **New Group**.
+2. Click **New Group** in the lower-left corner.
 3. Specify the following:
 
-    * **Group name**: Enter a group name that's concise and clear.
+    * **Bot transfer group name**: Enter a group name that's concise and clear.
+    * **Status**: The default value is Active. This setting lets you disable automatic transfers on a group-by-group basis.
     * **Transfer message**: Enter the message to send to the consumer prior to the transfer, something like, "Hold on while I transfer you to a chatbot that can assist you..."
     * **Bots**: Select each bot to add it to the group. 
 
