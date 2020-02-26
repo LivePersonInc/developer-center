@@ -43,9 +43,9 @@ During an automatic transfer, the conversational context information is automati
 
 <img style="width:500px" src="img/ConvoBuilder/bots_collab4.png">
 
-How does the automatic transfer happen? If the consumer's utterance can't be handled in some way by the bot, i.e., there are no dialog starters that match nor a Knowledge Base integration in the fallback dialog that returns a response (a matching article), the bot checks whether there is another bot *within the same group* that can handle the request. If there is one, and if it has an active LiveEngage connection, the conversation is transferred automatically to the receiver bot. The receiver bot then takes care of processing the request.
+How does the automatic transfer happen? If the consumer's utterance can't be handled in some way by the bot, i.e., there are no dialog starters that match, the bot checks whether there is another bot *within the same group* that can handle the request. If there is one, and if it has an active LiveEngage connection, the conversation is transferred automatically to the receiver bot. The receiver bot then takes care of processing the request.
 
-If there isn't another bot within the group that can handle the request, no automatic transfer occurs. Instead, the bot sends the default, built-in fallback response to the consumer.
+If there isn't another bot within the group that can handle the request, no automatic transfer occurs. Instead, the bot sends its fallback response to the consumer.
 
 #### Why use automatic transfers?
 
@@ -67,20 +67,30 @@ Automatic transfers rely on bot transfer groups to determine which bots can talk
 
     * **Bot transfer group name**: Enter a group name that's concise and clear.
     * **Status**: The default value is Active. This setting lets you disable automatic transfers on a group-by-group basis.
-    * **Transfer message**: Enter the message to send to the consumer prior to the transfer, something like, "Hold on while I transfer you to a chatbot that can assist you..."
-    * **Bots**: Select each bot to add it to the group. 
+    * **Transfer message**: Enter the message to send to the consumer prior to the transfer, something like, "Hold on while I transfer you to a chatbot that can assist you..." You can use bot context variables in the message. You can also leave this field blank if desired.
+    * **Bots**: Select each bot to add it to the group. A bot can be a member of only one group. You can select from the bots that are not yet assigned to a group.
 
 4. Click **Add**.
 
-#### Inactivate or activate a bot transfer group
+#### Test a bot transfer group
+
+
+for testing which user text matches to which bot
+match = INTENT or PATTERN
+match status = very good, good, etc.
+bot - the one it will lead to if i type the user text
+if we find a very good match with one bot, we won't look for another option
+
+
+#### Inactivate a bot transfer group
 
 To disable automatic transfers on a group-by-group basis, inactivate the bot transfer group.
 
-**To inactivate or activate a bot transfer group**
+**To inactivate a bot transfer group**
 
 1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-right corner.
 2. In the left panel, select the group.
-3. In the right panel, click the **Status** slider. To activate the group, turn it on; to inactivate the group, turn it off.
+3. In the right panel, click the **Status** slider to turn it off (Inactive).
 4. Click **Save**.
 
 #### Delete a bot transfer group
@@ -125,7 +135,9 @@ Occasionally, you might want to overwrite the intent or user message that is pas
 
 In our example below, we've overridden the user message, and we've done this in the Pre-Process Code in the integration interaction.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab2.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bots_collab2.png">
+
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/bots_collab6.png">
 
 ### Sharing information between bots
 
