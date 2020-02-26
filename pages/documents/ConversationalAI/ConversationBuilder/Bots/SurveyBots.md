@@ -211,9 +211,9 @@ In the Bot Analytics application, you'll see survey bots reported in the same wa
 
 #### Q: How do I deploy a survey bot?
 
-You don't need to manually deploy a survey bot. When LivePerson enables this feature for your brand, this enables the underlying agent connector that is used. **As soon as you create the survey bot and assign it a skill, it is active and can receive conversations.**
+You don't need to manually deploy a survey bot. When LivePerson enables this feature for your brand, this deploys the underlying system connector that is used. Therefore, **as soon as you create the survey bot and assign it a skill, the bot is active and can receive conversations.**
 
-Typically, brands don't develop in their Production environments, but if you do, for this reason, it's recommended that you assign to the survey bot a "test" skill that isn't used in a production campaign and use that to validate the bot before assigning to it a production skill.
+Typically, brands don't develop in their Production environments, but if you do, for this reason, it's recommended that you assign to the survey bot a "test" skill that isn't used in a production campaign and use that to validate the bot before assigning a production skill.
 
 #### Q: How do I disable a survey bot?
 
