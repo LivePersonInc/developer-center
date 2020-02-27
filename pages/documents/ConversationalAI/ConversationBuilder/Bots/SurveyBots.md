@@ -45,7 +45,7 @@ There isn't a one-to-one correspondence between survey bots and custom bots. Sur
 ### The survey flow
 
 #### Survey triggering
-When a conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey, and the bot sends the greeting message. The bot then sends the survey questions one by one based on the survey bot's dialog flow.
+When a conversation is ended (either by the consumer or the agent), if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey, and the bot sends the greeting message. The bot then sends the survey questions one by one based on the survey bot's dialog flow.
 
 The above also means that:
 
@@ -198,6 +198,10 @@ Once a conversation ends and a survey begins, the conversation no longer appears
 If an agent has permissions to view survey results, the agent can see the survey transcript.
 
 <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/surveyBot_agent2.png">
+
+## The manager experience
+
+Can see the current results of all agents in the Conversations dashboard
 
 ### Reporting
 
