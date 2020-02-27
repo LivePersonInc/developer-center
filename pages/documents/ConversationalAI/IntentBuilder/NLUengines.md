@@ -90,7 +90,7 @@ Key characteristics include:
 * A classifier model based on Convolutional Neural Network (CNN) using Fasttext embeddings.
 * Its primary feature is the enabling of a separate brand-specific model, built and *trained* for each domain.
 * A scalable solution that can handle a greater volume of requests, providing faster response times and accuracy.
-* To perform effectively, expects large sets of data (both intents and training phrases). Additionally, it's preferable to have a maximum of two entities per sample sentence, for example, "I want a COLOR SIZE shirt."
+* To perform effectively, expects large sets of data (both intents and training phrases).
 * When you create a domain with NLU v2 and use it in LiveIntent or in Conversation Builder, the following is recommended:
     * At least 5 intents in order to [train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
     * At least 20 training phrases per intent.
