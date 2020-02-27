@@ -162,7 +162,7 @@ Once enabled, make sure to fill in the desired text in the Text Fallback Tab. Th
 
 #### Closing the conversation
 
-End the dialog flow with a text statement that contains the special string [LP_CLOSECONVERSATION](conversation-builder-dialogs-dialog-basics.html#lp_closeconversation). This is necessary to close the conversation.
+End the dialog flow with an interaction whose next step is "Close conversation." This closes the conversation so that the survey results can be reported.
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
 

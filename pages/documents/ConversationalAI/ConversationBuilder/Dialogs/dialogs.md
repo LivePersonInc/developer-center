@@ -61,11 +61,7 @@ To disable context switching at the conversation start, you can add this code to
 4. Click **Save**.
 5. Build out the dialog as per your requirements.
 
-### Close the dialog or conversation
-
-Use the following operators to close the current dialog or conversation.
-
-#### LP_CLOSEDIALOG
+### Close the dialog
 
 To close the current dialog, create a Text statement that contains the special string “LP_CLOSEDIALOG”.
 
@@ -78,9 +74,13 @@ If this Text statement isn't the last in the dialog, set this statement's **Next
  {: .important}
 LP_CLOSEDIALOG triggers a post-conversation survey. The specific survey that is triggered is based on the conversation's last skill.
 
-#### LP_CLOSECONVERSATION
+### Close the conversation
 
-To close the current conversation, create a Text statement that contains the special string “LP_CLOSECONVERSATION”.
+To close the current conversation, set the final interaction's next step to "Close conversation" like so:
+
+
+
+Alternatively, you can create a Text statement that contains the special string “LP_CLOSECONVERSATION”.
 
  <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keywords_lpCloseConversation.png">
 
