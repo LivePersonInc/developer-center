@@ -119,7 +119,7 @@ To disable automatic transfers on a group-by-group basis, inactivate the bot tra
 2. In the left panel, click the icon and select **Delete**.
 3. confirm step.
 
-### Manual transfers
+### Manual transfers via escalations
 
 #### What's a manual transfer?
 
