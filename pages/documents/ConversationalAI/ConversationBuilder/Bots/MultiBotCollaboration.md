@@ -151,7 +151,7 @@ Occasionally, you might want to overwrite the intent or user message that is pas
 * To overwrite the user message, use [setBotTransferUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-user-message).
 * To overwrite the intent, you can use [setBotTransferIntentbyDomain](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-by-domain). The system will ascertain and pass the intent ID based on the provided domain name and intent name. Alternatively, you can use [setBotTransferIntentID](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-id).
 
-In our example below, we've overridden the user message, and we've done this in the Pre-Process Code in the integration interaction.
+In our example below, we've overwritten the user message, and we've done this in the Pre-Process Code in the integration interaction.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab2.png">
 
