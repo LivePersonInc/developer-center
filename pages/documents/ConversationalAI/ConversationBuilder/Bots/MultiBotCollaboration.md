@@ -27,7 +27,7 @@ As an example, examine the illustration below of a Customer Service bot and a Sa
 You can transfer a conversation from one bot to another in two general ways:
 
 * Automatic transfer via discovery
-* Manual transfer
+* Manual transfer via escalations
 
 Importantly, both approaches allow for the transfer of the user's intent and/or message, which ensures a seamless hand-off.
 
