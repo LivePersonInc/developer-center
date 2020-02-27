@@ -153,9 +153,7 @@ Occasionally, you might want to overwrite the intent or user message that is pas
 
 In our example below, we've overridden the user message, and we've done this in the Pre-Process Code in the integration interaction.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bots_collab2.png">
-
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/bots_collab6.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab2.png">
 
 ### Sharing information between bots
 
