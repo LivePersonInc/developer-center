@@ -16,7 +16,7 @@ When developing bots, it's considered a best practice to develop specialized bot
 
 However, while it's advantageous to have multiple--even many--bots that automate business tasks, this also means that a single bot might not be able to handle all of a consumer's requests. The consumer's requests might require the support of multiple bots, and this means that a bot-to-bot transfer of the conversation is required.
 
-### Seamless transfers
+### The importance of seamless transfers
 
 Generally speaking, in a bot-to-bot transfer, what makes the transfer *seamless* to the consumer is passing the user's intent and/or message from the sender bot to the receiver bot. With this information in hand, after the transfer the receiver bot can immediately start the appropriate dialog. The result is a graceful, "warm" hand-off. 
 
@@ -66,7 +66,7 @@ Automatic transfers rely on bot transfer groups to determine which bots can talk
 3. Specify the following:
 
     * **Bot transfer group name**: Enter a group name that's concise and clear.
-    * **Status**: The default value is Active. This setting lets you disable automatic transfers on a group-by-group basis.
+    * **Status**: The default value is On (Active). This setting lets you disable automatic transfers on a group-by-group basis. Turn the slider on or off.
     * **Transfer message**: Enter the message to send to the consumer prior to the transfer, something like, "Hold on while I transfer you to a chatbot that can assist you..." You can use bot context variables in the message. You can also leave this field blank if desired.
     * **Bots**: Select each bot to add it to the group. A bot can be a member of only one group. You can select from the bots that are not yet assigned to a group.
 
@@ -74,11 +74,29 @@ Automatic transfers rely on bot transfer groups to determine which bots can talk
 
 #### Test a bot transfer group
 
+Once you've created a bot transfer group and assigned bots to the group, you can test how they will behave. Use the **Transfer group test** tool to feed to the group a single user message and see which bot would be selected to handle the request.
 
-for testing which user text matches to which bot
+**To test a bot transfer group**
+
+1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-right corner.
+2. In the left panel, select the group.
+3. In the lower-right corner, click <img style="width:25px" src="img/ConvoBuilder/bots_collab_debugIcon.png">.
+
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/bots_collab7.png">
+
+4. In the **Transfer group test** tool, specify the following:
+
+    * **User text**: Enter the user message to use to search against the bots in the group.
+    * **Search with bot**: If you want to search against only a specific bot, select it here.
+    * **Only search bots with live connector**: If you want to search against only bots with active agent connectors, select this. This option lets you simulate a runtime experience by excluding bots in the bot transfer group that aren't deployed yet.
+
+5. Click **Test**.
+
+   <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/bots_collab8.png">
+
+
 match = INTENT or PATTERN
 match status = very good, good, etc.
-bot - the one it will lead to if i type the user text
 if we find a very good match with one bot, we won't look for another option
 
 
