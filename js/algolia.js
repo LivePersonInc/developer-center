@@ -37,11 +37,11 @@ const searchInstance = autocomplete(
           if (suggestion._highlightResult.documentname) {
             documentName = suggestion._highlightResult.documentname.value;
           }
-          if (documentName) {
+          if (documentName && category) {
           return (
             '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + ' - ' + documentName + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
           )
-        } else {
+        } else if (category) {
           return (
             '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + '</span><span class="searchContentHeading">' + headings + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
           )
