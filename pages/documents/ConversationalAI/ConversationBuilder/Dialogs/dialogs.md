@@ -65,7 +65,7 @@ To disable context switching at the conversation start, you can add this code to
 
 To close the current dialog, create a Text statement that contains the special string “LP_CLOSEDIALOG”.
 
- <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keywords_lpCloseDialog.png">
+ <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keywords_lpCloseDialog.png">
 
 This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
 
@@ -78,11 +78,11 @@ LP_CLOSEDIALOG triggers a post-conversation survey. The specific survey that is 
 
 To close the current conversation, set the final interaction's next step to "Close conversation" like so:
 
-
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/interactions_closeConversation.png">
 
 Alternatively, you can create a Text statement that contains the special string “LP_CLOSECONVERSATION”.
 
- <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keywords_lpCloseConversation.png">
+ <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keywords_lpCloseConversation.png">
 
 This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
 

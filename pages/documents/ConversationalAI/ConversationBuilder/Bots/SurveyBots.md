@@ -164,7 +164,7 @@ Once enabled, make sure to fill in the desired text in the Text Fallback Tab. Th
 
 End the dialog flow with an interaction whose next step is "Close conversation." This closes the conversation so that the survey results can be reported.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
 
 ### Step 4 - Configure the bot settings
 
@@ -199,9 +199,11 @@ If an agent has permissions to view survey results, the agent can see the survey
 
 <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/surveyBot_agent2.png">
 
-## The manager experience
+### The manager experience
 
-Can see the current results of all agents in the Conversations dashboard
+In the **Conversations panel** of the **Manager Workspace**, managers can view the survey scores for all conversations shown.
+
+<img class="fancyimage" style="width:950px" src="img/ConvoBuilder/surveyBot_manager1.png">
 
 ### Reporting
 
