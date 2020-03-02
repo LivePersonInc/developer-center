@@ -23,7 +23,7 @@ Use a survey bot to measure bot/agent and skill performance and to identify oppo
 <img style="width:400px" src="img/ConvoBuilder/surveyBot_example.png">
 
 {: .important}
-This feature isn't supported on the AWS platform, i.e., if you're logging into Conversation Builder directly. This feature is only supported on the LivePerson platform where you log into Conversation Builder via single sign-on through LiveEngage.
+To use survey bots created in Conversation Builder, you must be on the LivePerson platform where you log into Conversation Builder via single sign-on through LiveEngage. This feature isn't supported on the AWS platform, i.e., if you're logging into Conversation Builder directly.
 
 ### Survey bots vs. custom bots
 
@@ -77,10 +77,10 @@ You can provide a closing message that is sent to the consumer for each of the a
 
 Some setup of your LiveEngage environment is required before using this feature. Please contact your LivePerson account representative to enable this feature; this is done by LivePerson enabling the following AC feature flags:
 
+* Common.API_User_Login
 * Common.Async_Messaging
 * Common.Messaging_Survey
 * Common.RichContent
-* Common.API_User_Login
 
 ### Step 2 - Create the bot
 
@@ -146,23 +146,9 @@ For questions that are not ‘free text’ questions, the consumer will be asked
 
 For each button or quick reply, the brand can also configure phrases which if typed by the consumer would be recognized by the bot as a valid answer.
 
-#### Handling unrecognizable responses
-
-When the bot does not recognize user text, a warning message will appear prompting the user to select one of the quick replies or buttons presented. After a configurable amount of time, the bot will automatically end the survey. The response to unrecognized user text as well as the number of unrecognizable errors allowed can be configured in the survey settings.
-
-In case the consumer types in free text that is not recognized as a valid answer, the bot will send an error message and resend the last question again
-
-After X times which the user received an error, the bot will automatically close the dialog.
-
-#### Supporting textual channels
-
-When the setting is enabled, every brick within the survey receives a “Text Fallback” field that is sent instead of the structured content whenever the survey is served on a skill associated with a textual channel or a channel that is not compatible with the LivePerson rich content framework.
-
-Once enabled, make sure to fill in the desired text in the Text Fallback Tab. This tab will appear next to the Action and Design tabs of the Settings window once enabled.
-
 #### Closing the conversation
 
-End the dialog flow with an interaction whose next step is "Close conversation." This closes the conversation so that the survey results can be reported.
+As a best practice, end the dialog flow with an interaction whose next step is "Close conversation." This closes the conversation promptly.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
 
@@ -205,6 +191,8 @@ In the **Conversations panel** of the **Manager Workspace**, managers can view t
 
 <img class="fancyimage" style="width:950px" src="img/ConvoBuilder/surveyBot_manager1.png">
 
+Notet that the Meaningful Connection Score (MCS) represents the First Contact Resolution (FCR) score.
+
 ### Reporting
 
 #### Report Builder
@@ -214,6 +202,12 @@ Metrics from the FCR, CSAT, and NPS questions in surveys are captured in LiveEng
 In the Bot Analytics application, you'll see survey bots reported in the same way as custom bots. There is no differentiation.
 
 ### FAQs
+
+#### Q: I'm using the older Post Conversation Survey created in Bot Studio, but I want to migrate to using survey bots created in Conversation Builder. What do I need to do?
+
+If you want to move completely to using Conversation Builder to create survey bots, ask your LivePerson account representative to 1) enable this feature as described earlier in this topic and 2) disable Bot Studio. That's all that's required. You can then use Conversation Builder to create the survey bots that you require and assign them to the skills that will trigger them.
+
+You can also run the older Post Conversation Survey alongside survey bots created in Conversation Builder. In this case, you'll still need to enable this feature, but Bot Studio should be kept enabled. This means that you'll have some skills that trigger the old Post Conversation Survey and other skills that trigger the survey bots you've created in Conversation Builder.
 
 #### Q: How do I deploy a survey bot?
 
@@ -225,8 +219,10 @@ Typically, brands don't develop in their Production environments, but if you do,
 
 If you need to temporarily remove a survey bot from your customer traffic flow, you can disable the bot. To do this, set the **Enable Bot** slider to Off in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
-#### Q: I'm using the older Post Conversation Survey created in Bot Studio, but I want to migrate to using survey bots created in Conversation Builder. What do I need to do?
+#### Q: How does the bot handle unrecognizable responses?
 
-If you want to move completely to using Conversation Builder to create survey bots, ask your LivePerson account representative to 1) enable this feature as described earlier in this topic and 2) disable Bot Studio. That's all that's required. You can then use Conversation Builder to create the survey bots that you require and assign them to the skills that will trigger them.
+When you create a survey bot, a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) is created automatically. This works just like for a custom bot. You can change the dialog to customize the fallback response.
 
-You can also run the older Post Conversation Survey alongside survey bots created in Conversation Builder. In this case, you'll still need to enable this feature, but Bot Studio should be kept enabled. This means that you'll have some skills that trigger the old Post Conversation Survey and other skills that trigger the survey bots you've created in Conversation Builder.
+#### Q: Are survey bots supported in text-only channels?
+
+Yes, this works just like for a custom bot. The survey questions are displayed as plain text.
