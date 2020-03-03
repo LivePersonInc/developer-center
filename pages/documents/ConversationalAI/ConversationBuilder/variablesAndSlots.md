@@ -85,14 +85,16 @@ Slot-filling becomes especially useful when mining the entities that make up a u
 2. Now, devise a few [entities] that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `items` with `pants, shoes, shirt, underwear`. and finally, one for `sizes` with the values `small, medium, and large`. Before moving on, [update and train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain) the `ordering` intent with some representative training phrases that contain these entities.
 3. Next we will create the [questions](conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Using [NLU Assist](conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction) assign your entities to the relevant questions.
 
-<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_nluassist.png">
+    <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_nluassist.png">
 
-Once completed you will have a list of questions that looks like the following:
+    Once completed you will have a list of questions that looks like the following:
 
-<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions.png">
+    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions.png">
+
 4. In the [Interaction Details - Next Actions](conversation-builder-interactions-details-next-actions.html) for each question, we will create a [slot variable](conversation-builder-interactions-details-next-actions.html#slots) that contains our slot variable (`item`) and whose value is the entity value `@items`. Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
 
-<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill.png">
+    <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill.png">
+
 5. Now you can test the bot using an intent with slot choices as part of the query. When you enter the dialog, if a user has supplied an entity that is known to the domain, it will automatically populate the slot and skip the interaction and move on to the next interaction's question. 
 
 <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill_prompt.png">
