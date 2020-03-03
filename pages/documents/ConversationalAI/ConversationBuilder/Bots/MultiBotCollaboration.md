@@ -87,18 +87,13 @@ Once you've created a bot transfer group and assigned bots to the group, you can
 4. In the **Transfer group test** tool, specify the following:
 
     * **User text**: Enter the user message to use to search against the bots in the group.
-    * **Search with bot**: If you want to search against only a specific bot, select it here.
     * **Only search bots with live connector**: If you want to search against only bots with active agent connectors, select this. This option lets you simulate a runtime experience by excluding bots in the bot transfer group that aren't deployed yet.
 
 5. Click **Test**.
 
    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/bots_collab8.png">
 
-
-match = INTENT or PATTERN
-match status = very good, good, etc.
-if we find a very good match with one bot, we won't look for another option
-
+    If a bot is matched to the user text, the results indicate whether it was a pattern match or an intent match, and they identify the details: the strength of the match, the name of the bot, the name of the dialog, and the name of the interaction.
 
 #### Inactivate a bot transfer group
 
