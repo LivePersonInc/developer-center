@@ -126,8 +126,8 @@ Users with this permission can only do the following:
 
 ##### Conversation Builder: Release Creator
 
-Users with this permission can only create releases.
+Users with this permission can only create and delete releases.
 
 ##### Conversation Builder: Release Acceptor
 
-Users with this permission can only accept releases, i.e., upgrade bots.
+Users with this permission can only create releases and accept releases, i.e., upgrade bots.
