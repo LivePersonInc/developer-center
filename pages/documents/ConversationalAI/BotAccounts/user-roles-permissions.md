@@ -48,7 +48,6 @@ This permission provides full privileges for creating bots and related resources
 
 * Bots
 * Bot transfer groups
-* Bot versions and releases
 * Integrations
 * Global functions
 * Credentials
@@ -59,7 +58,7 @@ Users with this permission can also:
 
 * Activate and train models
 * Create, deploy and manage agent connectors at the bot level within Conversation Builder
-* View releases (For privileges to create and/or accept releases, add on the "Release Creator" and/or "Release Acceptor" granular permissions, discussed farther below.)
+* View versions and releases (For privileges to create and manage these, add on the "Release Creator" and/or "Release Acceptor" granular permissions, discussed farther below.)
 * View and download analytics data
 
 This permission doesn't allow the user to create and manage (bot) templates, accounts or users. Also, this permission doesn't allow the user access to the Bot Status application, which is the operations area where bot deployments for the entire organization can be managed.
@@ -126,12 +125,18 @@ Users with this permission can only do the following:
 
 ##### Conversation Builder: Release Creator
 
-Users with this permission can only create and delete releases.
+Users with this permission can only do the following:
 
-Use this permission with the Bot Builder or Bot Builder Lite permission.
+* Create and delete versions
+* Create releases
+
+Add this permission with the Bot Builder or Bot Builder Lite permission as you require.
 
 ##### Conversation Builder: Release Acceptor
 
-Users with this permission can only create releases and accept releases, i.e., upgrade bots.
+Users with this permission can only do the following:
 
-Use this permission with the Bot Builder or Bot Builder Lite permission.
+* Create versions
+* Accept releases, i.e., upgrade bots
+
+Add this permission with the Bot Builder or Bot Builder Lite permission as you require.
