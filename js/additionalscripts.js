@@ -13,7 +13,6 @@ $(document).ready(function () {
 	capabilitiesSearch();
 	allArticlesClick();
 	scrollToHash();
-	domainTool();
 	searchClick(event);
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
@@ -647,6 +646,8 @@ function isExplorer() {
 		thirdPanel.classList.add('thirdPanelExplorer');
 		confirmationFooter.classList.add('confirmationFooterExplorer');
 		formContainer.classList.add('formContainerExplorer');
+	} else {
+		domainTool();
 	}
 };
 
