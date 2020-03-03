@@ -595,7 +595,7 @@ function domainTool() {
 								  if(m1> m2) return 1;
 								  return 0;
 								  })
-					data.baseURIs.forEach((entry) => {
+					data.baseURIs.forEach(function (entry) {
 							html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
 						});
 									  html += '</tbody>'
@@ -648,8 +648,6 @@ function isExplorer() {
 		thirdPanel.classList.add('thirdPanelExplorer');
 		confirmationFooter.classList.add('confirmationFooterExplorer');
 		formContainer.classList.add('formContainerExplorer');
-	} else {
-		
 	}
 };
 
