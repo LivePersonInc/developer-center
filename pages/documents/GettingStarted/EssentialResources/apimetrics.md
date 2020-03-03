@@ -2,9 +2,11 @@
 pagename: API Data Metrics
 sitesection: Documents
 categoryname: "Welcome"
-documentname: Essential Resources
-permalink: essential-resources-api-data-metrics.html
+documentname: Common Resources
+permalink: common-resources-api-data-metrics.html
 indicator: both
+redirect_from:
+  - essential-resources-api-data-metrics.html
 ---
 
 The table below outlines all of the data metrics available when using our Data APIs. These represent the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.

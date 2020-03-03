@@ -45,8 +45,13 @@ The following Microsoft information should be provided to LivePerson:
   </tr>
   <tr>
     <td>Direct Line Endpoint</td>
-    <td>The endpoint the connector should use to reach the bot. Apart from the default you can also choose an endpoint that is close to the region that your account is configured for or use a custom endoint (experimental)</td>
+    <td>The endpoint the connector should use to reach the bot. Apart from the default you can also choose an endpoint that is close to the region that your account is configured for</td>
     <td>https://directline.botframework.com/v3/directline</td>
+  </tr>
+  <tr>
+    <td>Multiple Activities (Optional)</td>
+    <td>The connector normally only waits on the first response activity send by the bot and pass it to the customer. If you intent to send multiple activities with the same `ReplyToId` you need to activate this feature. The value describes the maximum time in milliseconds that is allowed to pass between two activities. After this time has elapsed, the connector will regard the request as handled</td>
+    <td>1000</td>
   </tr>
   </tbody>
 </table>
@@ -67,7 +72,7 @@ The Bot Connector utilizes the **channelData** property for anything besides pla
 It is expected that a bot responds to every message sent by the consumer.
 If no response is detected in a certain time frame, the Bot Connector assumes something is wrong and tries to transfer the conversation to an agent.
 
-Only the first activity with which a bot responds to a consumer request will be processed. If a bot sends further activities with the same `ReplyToId`, these activities will be ignored.
+If you want the bot to reply with more than one message, you need to use the [multiMessage](#sending-multiple-responses) feature or configure the `Multiple Activities` option.
 
 ### Sending Rich Content (Structured Content)
 
@@ -115,6 +120,9 @@ If Images are sent in Rich content, then their URLs must be added to a whitelist
 Figure 4.1 Activity with Structured Content
 
 ### Sending Quick Replies (Structured Content)
+
+{: .important}
+**Please note** Quick Replies are only supported in Messaging Conversations.
 
 Quick Replies is a special type of Structured Content. Is is a message sent along with predefined answers. The documentation can be found [here](quick-replies-introduction-to-quick-replies.html).
 The message property in the Structured Content is mandatory.
@@ -248,19 +256,78 @@ Figure 7.1 Activity excerpt for a transfer Request
 
 ### Sending Pause/Delay Message
 
-It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. The delay message can be added via the `channelData` property. There are two properties, `delay` and `typing`, which need to be added in `channelData` object response.
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. There are two properties, `delay` and `typing`.
 
 <ul>
-  <li> <b>delay</b>: This is the number of seconds the bot will wait.</li>
+  <li> <b>delay</b>: This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
   <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
 </ul>
 
-An example of the delay response with a simple text message is below:
+#### Sending delay between multiple messages
+
+Setting a delay in between multiple messages (for more information on multiple message [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Message - Delay - Structured Content - Delay - Message) can be seen below:
+
+```javascript
+{
+  "channelData": {
+    "multiMessage": [
+      {
+        "type": "text",
+        "value": "this is a text"
+      },
+      {
+        "type": "delay",
+        "value": 5
+      },
+      {
+        "type": "structured-content",
+        "value": {
+          "metadata": [],
+          "structuredContent": {
+            "type": "vertical",
+            "elements": [
+              {
+                "type": "button",
+                "click": {
+                  "actions": [
+                    {
+                      "text": "Recommend me a movie, please",
+                      "type": "publishText"
+                    }
+                  ]
+                },
+                "title": "Recommend a movie"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "delay",
+        "value": {
+          "delay": 3
+          "typing": false
+        }
+      },
+      {
+        "type": "text",
+        "value": "this is last message after a delay"
+      },
+    ]
+  }
+}
+```
+
+Please note the different ways of writing delay message in above example. In the first delay message Agent typing indicator will always be shown. In the second delay message user has ability to set the typing indicator as well.
+
+#### Sending a single delay message (Legacy)
+
+A single delay message can be send by adding `delay` and `typing` properties to `channelData`. An example of single text message that comes after delay can be seen below:
 
 ```json
 {
   "type": "message",
-  "text": "Hi i am sending a text with delay!!",
+  "text": "Hi i am sending a text coming after the delay!!",
   "channelData": {
     "delay": 8,
     "typing": false
@@ -440,7 +507,7 @@ For sending [structured content](getting-started-with-rich-messaging-introductio
 For sending Encoded Metadata with multiple responses one must provide an additional property of `encodedMetadata` with the already existing `type` and `value` properties under `multiMessage` array object. Sending encoded metadata is supported for the `text` and `structure-content` types only. An example of sending encoded metadata with both types can be found below.
 
 {: .important}
-Please note if you will send `encodedMetadata` within the `value` property of type `structure-content` then it will not be passed. This kind of format is only acceptable if you are sending a single Rich Content as a response.
+**Please note** if you will send `encodedMetadata` within the `value` property of type `structure-content`, then it will not be passed. This kind of format is only acceptable if you are sending a single Rich Content as a response. Furthermore, for each message, you can see different `encodedMetadata` are defined so both of the messages will be sent with different encoded metadata.
 
 ```javascript
 {
@@ -454,12 +521,8 @@ Please note if you will send `encodedMetadata` within the `value` property of ty
         "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=="
       },
       {
-        "type": "delay",
-        "value": 5
-      },
-      {
         "type": "structured-content",
-        "encodedMetadata": "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ==",
+        "encodedMetadata": "ZGlmZmVyZW50IGVuY29kZWQgbWV0YWRhdGE=",
         "value": {
           "metadata": [
             // ... Some structured content metadata

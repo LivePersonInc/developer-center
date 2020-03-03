@@ -282,7 +282,7 @@ function mobileHamburger() {
 		}
 	});
 }
-
+//a function to scroll the sidebar item into view, works somewhat well
 $.fn.isInViewport = function() {
   var elementTop = $(this).offset().top - 150;
   var elementBottom = elementTop + $(this).outerHeight();
@@ -293,25 +293,28 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-//Refactored this a bit from its original nightmare-state. Needs improvement.
+//Refactored this a bit from its original nightmare-state. Needs improvement. This controls the auto-collapse of the sidebar when a page opens
 function sidebarCollapse(url) {
 	var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
 	var currentPage = $('a[href="' + modifiedURL + '"]');
 	var currentPageTitle = $(currentPage).html();
-	//if this isn't the homepage
+	//if this is the homepage
 	if (currentPageTitle == "WELCOME"){
-		//make sure no other links are set to active
+		//make sure no other links are set to active and collapse any open folders before highlighting the current page
 		$(".innerfolder > .active > button").removeClass("clicked");
 		$(".folder ul").slideUp(400, null);
 		$(".folder > a").data("expanded", "false");
 		$('a').removeClass("active");
 		currentPage = currentPage.parent().addClass("active");
 	};
+	//get rid of any currently open items and then highlight the current page
 	$('a').removeClass("activepage");
 	$('.homeitem').removeClass("activepage");
 	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
+	//grab any parent elements of the active page that has the folder class
 	var toOpen = $(".activepage").parents("folder");
+	//manipulate the active page's parents to open them, hightlight them, etc.
 	if (toOpen) {
 		$(".activepage").parents().show();
 		$(".activepage").parents('ul').prev('.highlightlink').addClass('active');
@@ -346,16 +349,20 @@ function allArticlesClick() {
 }
 
 //control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
+//this function is triggered on click not when the page loads.
 function sidebarClick() {
 	$(".topfolder").on("click", ".highlightlink", function () {
+		//if the clicked element is not one of the buttons at the bottom of the sidebar, e.g "status page"
 		if (!$(this).hasClass("bottombuttons")) {
 		var hasExpanded = $(this).data("expanded") == "true";
+		//if it's expanded, close it
 		if (hasExpanded) {
 			$(this).next().slideUp(400);
 			$(this).data("expanded", "false");
 			$(this).removeClass("active");
 			$(this).parent().removeClass("active");
 			$(".innerfolder > .active > button").removeClass("clicked");
+		//otherwise, open it
 		} else {
 			$(".innerfolder > .active > button").removeClass("clicked");
 			$(".folder ul").slideUp(400, null);
@@ -368,7 +375,7 @@ function sidebarClick() {
 		return false;
 	};
 	});
-
+	//same as above, just one level down
 	$(".innerfolder").on("click", ".highlightlink", function (event) {
 		event.preventDefault();
 		var hasExpanded = $(this).data("expanded") == "true";
@@ -442,15 +449,18 @@ function searchFunction() {
 			//if this is the API metrics page
 			table = document.getElementById("apimetricstable");
 			tr = table.getElementsByTagName("tr");
+			//for each row, check if the input is present in the row, but only in the metric name and api column
 			for (i = 0; i < tr.length; i++) {
 				tdMetric = tr[i].getElementsByTagName("td")[0];
 				tdApi = tr[i].getElementsByTagName("td")[2];
 				if (tdMetric || tdApi) {
+					//if it's present, show it and highlight it
 					if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdApi.innerHTML.toUpperCase().indexOf(filter) > -1) {
 						tr[i].style.display = "";
 						$('td').highlight(filter.toString(), {
 							className: 'metricHighlight'
 						});
+					//otherwise, hide it
 					} else {
 						tr[i].style.display = "none";
 					}
@@ -530,6 +540,7 @@ function searchHighlight() {
 	localStorage.setItem('filter', '');
 }
 
+//this function fixes chrome not scroll to anchor links
 function scrollToHash () {
 	setTimeout(function () {
 		if (window.location.hash && window.location.hash != "#top") {
@@ -551,8 +562,10 @@ function scrollToHash () {
 	}, 1000);
 }
 
+//this function is used on the domain API page. You give it an account number, and it gives you all its domains back, per service
 function domainTool() {
 	var $title = $('.h1').text();
+	//if we're on the Domain API page
 	if ($title == "Domain API") {
 	let input;
 	let accountInput;
@@ -560,42 +573,48 @@ function domainTool() {
 	const csdsResult = document.getElementById("csds-result");
 	let csdsUrl;
 	let html = "";
-	csdsButton.addEventListener("click", event => {
-			input = document.getElementById("account");
-			accountInput = input.value;
-			csdsUrl = 'https://api.liveperson.net/api/account/' + accountInput + '/service/baseURI?version=1.0';
-	    retrieveDomains(accountInput);
-	});
-	const retrieveDomains = (account) => {
-	      $.ajax({
-	          url: csdsUrl,
-	          headers: {
-	            'Accept': 'application/json'
-	          },
-	          dataType: "json",
-	          success: function(data) {
-							html = '';
-							$(csdsResult).css('display', 'table');
-	              if (data.baseURIs.length > 0) {
-										html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
-										data.baseURIs.sort(function(a, b){
-							        var m1 = a.service.toLowerCase();
-							        var m2 = b.service.toLowerCase();
-							        if(m1< m2) return -1;
-							        if(m1> m2) return 1;
-							        return 0;
-							    	})
-	                  data.baseURIs.forEach((entry) => {
-	                          html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
-	                      });
-										html += '</tbody>'
-	                  csdsResult.innerHTML = html;
-	              } else {
-	                  csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
-	              }
-	          }
-	      });
-	  }
+	//when  a user clicks submit
+	function retrieveDomains(account) {
+		$.ajax({
+			url: csdsUrl,
+			headers: {
+			  'Accept': 'application/json'
+			},
+			dataType: "json",
+			//on success, grab the results from CSDS and display them in a table
+			success: function(data) {
+						  html = '';
+						  $(csdsResult).css('display', 'table');
+				if (data.baseURIs.length > 0) {
+									  html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
+									  //sort results alphabetically
+									  data.baseURIs.sort(function(a, b){
+								  var m1 = a.service.toLowerCase();
+								  var m2 = b.service.toLowerCase();
+								  if(m1< m2) return -1;
+								  if(m1> m2) return 1;
+								  return 0;
+								  })
+					data.baseURIs.forEach((entry) => {
+							html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
+						});
+									  html += '</tbody>'
+					csdsResult.innerHTML = html;
+				} else {
+					csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
+				}
+			}
+		});
+	}
+	function retrieveUrl () {
+		input = document.getElementById("account");
+		accountInput = input.value;
+		//take the account number and populate the CSDS URL
+		csdsUrl = 'https://api.liveperson.net/api/account/' + accountInput + '/service/baseURI?version=1.0';
+		//take the account we just retrieved and call ajax using the URL we just created above
+		retrieveDomains(accountInput);
+	}
+	  csdsButton.addEventListener("click", retrieveUrl);
 		}
 }
 
@@ -629,9 +648,12 @@ function isExplorer() {
 		thirdPanel.classList.add('thirdPanelExplorer');
 		confirmationFooter.classList.add('confirmationFooterExplorer');
 		formContainer.classList.add('formContainerExplorer');
+	} else {
+		
 	}
 };
 
+//clicks on the search dropdown should also use the "pseudo SPA" method
 function searchClick (event) {
 	$('.ds-dropdown-menu').on('click', 'a', function (event) {
 	event.preventDefault();
@@ -639,4 +661,5 @@ function searchClick (event) {
 })
 };
 
+//legacy function, probably not needed
 $('#mysidebar').height($(".nav").height());
