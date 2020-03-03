@@ -13,6 +13,7 @@ $(document).ready(function () {
 	capabilitiesSearch();
 	allArticlesClick();
 	scrollToHash();
+	domainTool();
 	searchClick(event);
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
@@ -573,46 +574,47 @@ function domainTool() {
 	let csdsUrl;
 	let html = "";
 	//when  a user clicks submit
-	csdsButton.addEventListener("click", event => {
-			input = document.getElementById("account");
-			accountInput = input.value;
-			//take the account number and populate the CSDS URL
-			csdsUrl = 'https://api.liveperson.net/api/account/' + accountInput + '/service/baseURI?version=1.0';
+	function retrieveDomains(account) {
+		$.ajax({
+			url: csdsUrl,
+			headers: {
+			  'Accept': 'application/json'
+			},
+			dataType: "json",
+			//on success, grab the results from CSDS and display them in a table
+			success: function(data) {
+						  html = '';
+						  $(csdsResult).css('display', 'table');
+				if (data.baseURIs.length > 0) {
+									  html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
+									  //sort results alphabetically
+									  data.baseURIs.sort(function(a, b){
+								  var m1 = a.service.toLowerCase();
+								  var m2 = b.service.toLowerCase();
+								  if(m1< m2) return -1;
+								  if(m1> m2) return 1;
+								  return 0;
+								  })
+					data.baseURIs.forEach((entry) => {
+							html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
+						});
+									  html += '</tbody>'
+					csdsResult.innerHTML = html;
+				} else {
+					csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
+				}
+			}
+		});
+	}
+	function retrieveUrl () {
+		input = document.getElementById("account");
+		accountInput = input.value;
+		//take the account number and populate the CSDS URL
+		csdsUrl = 'https://api.liveperson.net/api/account/' + accountInput + '/service/baseURI?version=1.0';
 		//take the account we just retrieved and call ajax using the URL we just created above
-	    retrieveDomains(accountInput);
-	});
-	const retrieveDomains = (account) => {
-	      $.ajax({
-	          url: csdsUrl,
-	          headers: {
-	            'Accept': 'application/json'
-	          },
-			  dataType: "json",
-			  //on success, grab the results from CSDS and display them in a table
-	          success: function(data) {
-							html = '';
-							$(csdsResult).css('display', 'table');
-	              if (data.baseURIs.length > 0) {
-										html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
-										//sort results alphabetically
-										data.baseURIs.sort(function(a, b){
-							        var m1 = a.service.toLowerCase();
-							        var m2 = b.service.toLowerCase();
-							        if(m1< m2) return -1;
-							        if(m1> m2) return 1;
-							        return 0;
-							    	})
-	                  data.baseURIs.forEach((entry) => {
-	                          html += `<tr><td>${entry.service}</td><td>${entry.baseURI}</td></tr>`;
-	                      });
-										html += '</tbody>'
-	                  csdsResult.innerHTML = html;
-	              } else {
-	                  csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
-	              }
-	          }
-	      });
-	  }
+		retrieveDomains(accountInput);
+	}
+	  csdsButton.addEventListener("click", retrieveUrl);
 		}
 }
 
@@ -647,7 +649,7 @@ function isExplorer() {
 		confirmationFooter.classList.add('confirmationFooterExplorer');
 		formContainer.classList.add('formContainerExplorer');
 	} else {
-		domainTool();
+		
 	}
 };
 
