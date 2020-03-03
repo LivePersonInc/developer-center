@@ -130,7 +130,7 @@ Users with this permission can only do the following:
 * Create and delete versions
 * Create releases
 
-Add this permission with the Bot Builder or Bot Builder Lite permission as you require.
+Use this permission with the Bot Builder or Bot Builder Lite permission as you require.
 
 ##### Conversation Builder: Release Acceptor
 
@@ -139,4 +139,4 @@ Users with this permission can only do the following:
 * Create versions
 * Accept releases, i.e., upgrade bots
 
-Add this permission with the Bot Builder or Bot Builder Lite permission as you require.
+Use this permission with the Bot Builder or Bot Builder Lite permission as you require.
