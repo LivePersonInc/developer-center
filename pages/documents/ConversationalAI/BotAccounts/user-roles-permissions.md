@@ -128,6 +128,10 @@ Users with this permission can only do the following:
 
 Users with this permission can only create and delete releases.
 
+Use this permission with the Bot Builder or Bot Builder Lite permission.
+
 ##### Conversation Builder: Release Acceptor
 
 Users with this permission can only create releases and accept releases, i.e., upgrade bots.
+
+Use this permission with the Bot Builder or Bot Builder Lite permission.
