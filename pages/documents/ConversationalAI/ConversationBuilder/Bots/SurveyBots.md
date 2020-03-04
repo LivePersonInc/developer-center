@@ -203,26 +203,26 @@ In the Bot Analytics application, you'll see survey bots reported in the same wa
 
 ### FAQs
 
-#### Q: I'm using the older Post Conversation Survey created in Bot Studio, but I want to migrate to using survey bots created in Conversation Builder. What do I need to do?
+#### I'm using the older Post Conversation Survey created in Bot Studio, but I want to migrate to using survey bots created in Conversation Builder. What do I need to do?
 
 If you want to move completely to using Conversation Builder to create survey bots, ask your LivePerson account representative to 1) enable this feature as described earlier in this topic and 2) disable Bot Studio. That's all that's required. You can then use Conversation Builder to create the survey bots that you require and assign them to the skills that will trigger them.
 
 You can also run the older Post Conversation Survey alongside survey bots created in Conversation Builder. In this case, you'll still need to enable this feature, but Bot Studio should be kept enabled. This means that you'll have some skills that trigger the old Post Conversation Survey and other skills that trigger the survey bots you've created in Conversation Builder.
 
-#### Q: How do I deploy a survey bot?
+#### How do I deploy a survey bot?
 
 You don't need to manually deploy a survey bot. When LivePerson enables this feature for your brand, this deploys the underlying system connector that is used. Therefore, **as soon as you create the survey bot and assign it a skill, the bot is active and can receive conversations.**
 
 Typically, brands don't develop in their Production environments, but if you do, for this reason, it's recommended that you assign to the survey bot a "test" skill that isn't used in a production campaign and use that to validate the bot before assigning a production skill.
 
-#### Q: How do I disable a survey bot?
+#### How do I disable a survey bot?
 
 If you need to temporarily remove a survey bot from your customer traffic flow, you can disable the bot. To do this, set the **Enable Bot** slider to Off in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
-#### Q: How does the bot handle unrecognizable responses?
+#### How does the bot handle unrecognizable responses?
 
 When you create a survey bot, a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) is created automatically. This works just like for a custom bot. You can change the dialog to customize the fallback response.
 
-#### Q: Are survey bots supported in text-only channels?
+#### Are survey bots supported in text-only channels?
 
 Yes, this works just like for a custom bot. The survey questions are displayed as plain text.
