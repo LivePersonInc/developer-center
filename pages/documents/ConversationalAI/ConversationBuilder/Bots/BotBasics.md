@@ -44,7 +44,7 @@ Bot settings include:
 
 - **Bot Template**: Read-only. To facilitate the rapid creation of bots, all bots are based on [templates](conversation-builder-templates-overview.html). The default template is Basic, which uses English and includes just a Welcome dialog. You select the template when you create the bot, and it can’t be changed afterward.
 
-- **Transfer Group**: Optionally select the bot transfer group for the bot. A bot can be a member of exactly one group. As a member, if it can't handle a received request, it automatically determines if another bot within its group can do so, and, if so, transfers the conversation. For more information on how bot transfer groups work, see [here](conversation-builder-bots-bot-to-bot-transfers.html).
+- **Bot Group**: Optionally select the bot group for the bot. A bot can be a member of exactly one group. As a member, if it can't handle a received request, it automatically determines if another bot within its group can do so, and, if so, transfers the conversation. For more information on how bot groups work, see [here](conversation-builder-bots-bot-to-bot-transfers.html).
 
 - **Enable Bot**: This Online/Offline setting is only displayed for [survey bots](conversation-builder-bots-survey-bots.html), not for custom bots. Use it to turn a survey bot on and off. When the bot is online, it responds to user messages. When it is offline, it doesn't. Taking a published survey bot offline can be useful if you need to temporarily remove it from your customer traffic flow. The default value is Online.
 

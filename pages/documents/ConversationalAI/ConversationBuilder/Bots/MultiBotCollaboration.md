@@ -35,7 +35,7 @@ Importantly, both approaches allow for the transfer of the user's intent and/or 
 
 #### What's an automatic transfer?
 
-Automatic transfers use "bot transfer groups" to support the discovery of bots that are qualified to handle requests and accept transfers. You create the groups and assign bots to them. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, transfer of the conversation happens automatically.
+Automatic transfers use "bot groups" to support the discovery of bots that are qualified to handle requests and accept transfers. You create the groups and assign bots to them. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, transfer of the conversation happens automatically.
 
 <img style="width:650px" src="img/ConvoBuilder/bots_collab5.png">
 
@@ -49,45 +49,45 @@ If there isn't another bot within the group that can handle the request, no auto
 
 #### Why use automatic transfers?
 
-Automatic transfers are designed to simplify your automation model and make it more robust. Because all bots within a bot transfer group can talk to one another--automatically transferring requests when needed and possible--you don't need a "router" bot for routing user interactions between bots. With automatic transfers, the discovery and actual transfer both happen automatically and seamlessly within a bot transfer group whenever needed.
+Automatic transfers are designed to simplify your automation model and make it more robust. Because all bots within a bot group can talk to one another--automatically transferring requests when needed and possible--you don't need a "router" bot for routing user interactions between bots. With automatic transfers, the discovery and actual transfer both happen automatically and seamlessly within a bot group whenever needed.
 
 There are still some times when you'll need to use a manual transfer instead:
 
-* You want to transfer the conversation from a bot in one bot transfer group to a bot in a *different* bot transfer group.
+* You want to transfer the conversation from a bot in one bot group to a bot in a *different* bot group.
 * You want to transfer the conversation from a bot to a live agent.
 
-#### Create a bot transfer group
+#### Create a bot group
 
-Automatic transfers rely on bot transfer groups to determine which bots can talk to one another and transfer conversations automatically. When you [create a custom bot](conversation-builder-bots-custom-bots.html), you have the option of assigning a bot transfer group to it.
+Automatic transfers rely on bot groups to determine which bots can talk to one another and transfer conversations automatically. When you [create a custom bot](conversation-builder-bots-custom-bots.html), you have the option of assigning a bot group to it.
 
-**To create a bot transfer group**
-1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-right corner.
+**To create a bot group**
+1. From the bots dashboard that lists your bots, click **Bot Groups** in the upper-right corner.
 2. Click **New Group** in the lower-left corner.
 3. Specify the following:
 
-    * **Bot transfer group name**: Enter a group name that's concise and clear.
-    * **Status**: The default value is On (Active). This setting lets you disable automatic transfers on a group-by-group basis. Turn the slider on or off.
+    * **Bot group name**: Enter a group name that's concise and clear.
+    * **Collaboration**: The default value is On (Enabled). This setting lets you disable automatic transfers on a group-by-group basis. Turn the slider on or off, respectively, to enable or disable collaboration.
     * **Transfer message**: Enter the message to send to the consumer prior to the transfer, something like, "Hold on while I transfer you to a chatbot that can assist you..." You can use bot context variables in the message. You can also leave this field blank if desired.
     * **Bots**: Select each bot to add it to the group. A bot can be a member of only one group. You can select from the bots that are not yet assigned to a group.
 
 4. Click **Add**.
 
-#### Test a bot transfer group
+#### Test a bot group
 
-Once you've created a bot transfer group and assigned bots to the group, you can test how they will behave. Use the **Transfer group test** tool to feed to the group a single user message and see which bot would be selected to handle the request.
+Once you've created a bot group and assigned bots to the group, you can test the collaboration. Use the **Bot group test** tool to feed to the group a single user message and see which bot would be selected to handle the request.
 
-**To test a bot transfer group**
+**To test a bot group**
 
-1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-right corner.
+1. From the bots dashboard that lists your bots, click **Bot Groups** in the upper-right corner.
 2. In the left panel, select the group.
 3. In the lower-right corner, click <img style="width:25px" src="img/ConvoBuilder/bots_collab_debugIcon.png">.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/bots_collab7.png">
 
-4. In the **Transfer group test** tool, specify the following:
+4. In the **Bot group test** tool, specify the following:
 
     * **User text**: Enter the user message to use to search against the bots in the group.
-    * **Only search bots with live connector**: If you want to search against only bots with active agent connectors, select this. This option lets you simulate a runtime experience by excluding bots in the bot transfer group that aren't deployed yet.
+    * **Only search bots with live connector**: If you want to search against only bots with active agent connectors, select this. This option lets you simulate a runtime experience by excluding bots in the bot group that aren't deployed.
 
 5. Click **Test**.
 
@@ -95,24 +95,24 @@ Once you've created a bot transfer group and assigned bots to the group, you can
 
     If a bot is matched to the user text, the results indicate whether it was a pattern match or an intent match, and they identify the details: the strength of the match, the name of the bot, the name of the dialog, and the name of the interaction.
 
-#### Inactivate a bot transfer group
+#### Disable collaboration for a bot group
 
-To disable automatic transfers on a group-by-group basis, inactivate the bot transfer group.
+To disable automatic transfers on a group-by-group basis, disable collaboration for the bot group.
 
-**To inactivate a bot transfer group**
+**To disable collaboration for a bot group**
 
-1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-right corner.
+1. From the bots dashboard that lists your bots, click **Bot Groups** in the upper-right corner.
 2. In the left panel, select the group.
-3. In the right panel, click the **Status** slider to turn it off (Inactive).
-4. Click **Save**.
+3. In the right panel, click the **Collaboration** slider to turn it off (Disabled).
+4. Click **Update**.
 
-#### Delete a bot transfer group
+#### Delete a bot group
 
-**To delete a bot transfer group**
+**To delete a bot group**
 
-1. From the bots dashboard that lists your bots, click **Bot Transfer Groups** in the upper-right corner.
-2. In the left panel, click the icon and select **Delete**.
-3. confirm step.
+1. From the bots dashboard that lists your bots, click **Bot Groups** in the upper-right corner.
+2. In the left panel, move the mouse over the bot group name, and then click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> icon that appears.
+3. Select **Delete**, and then click **Yes** to confirm the action.
 
 ### Manual transfers via escalations
 
@@ -124,7 +124,7 @@ A manual, bot-to-bot transfer is a [LivePerson agent escalation](conversation-bu
 
 You'll need to use a manual transfer in two situations:
 
-* You want to transfer the conversation from a bot in one bot transfer group to a bot in a *different* group.
+* You want to transfer the conversation from a bot in one bot group to a bot in a *different* group.
 * You want to transfer the conversation from a bot to a live agent.
 
 #### Making manual transfers seamless

@@ -47,7 +47,7 @@ Users with this permission do have the following limitations:
 This permission provides full privileges for creating bots and related resources. More specifically, users with this permission can create and manage:
 
 * Bots
-* Bot transfer groups
+* Bot groups
 * Integrations
 * Global functions
 * Credentials
