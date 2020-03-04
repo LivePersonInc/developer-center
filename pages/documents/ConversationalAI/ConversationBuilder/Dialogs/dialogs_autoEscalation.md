@@ -40,7 +40,7 @@ When you [create a custom bot](conversation-builder-bots-custom-bots.html), you 
 
 #### Step 2: Build out the dialog
 
-By default, an Auto Escalation dialog includes a Yes/No multiple choice question that asks the consumer if they want to speak to a live agent. If the consumer says Yes, the escalation (transfer) occurs. If the consumer says No, the previous interaction is executed; in other words, the question is repeated again.
+By default, an Auto Escalation dialog includes a Yes/No multiple choice question that asks the consumer if they want to speak to a live agent. If the consumer says Yes, the escalation (transfer) occurs. If the consumer says No, the interaction ends.
 
 ADD SCREEN CAP
 
