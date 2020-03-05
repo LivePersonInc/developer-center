@@ -24,7 +24,7 @@ The Auto Escalation dialog solves this problem by offering the consumer the opti
 #### Step 1: Create the dialog
 
 {: .important}
-A dialog can have only one Auto Escalation dialog.
+A bot can have only one Auto Escalation dialog.
 
 When you [create a custom bot](conversation-builder-bots-custom-bots.html), you can choose to create an Auto Escalation dialog at that time. However, it's also possible to create one afterward using the procedure below.
 
@@ -46,8 +46,10 @@ By default, an Auto Escalation dialog includes a Yes/No multiple choice question
 
 If the default dialog implementation doesn't meet your requirements, build out and/or modify the dialog. For information on configuring Escalation Integration interactions, see [here](conversation-builder-interactions-integrations.html#escalation-integration-interactions).
 
-{: .important}
-You can change the **Auto Escalation Threshold** in the dialog's settings.
+When you create the dialog, you configure two important settings that you might want to change afterward:
+
+* **Auto Escalation Threshold**: Change this in the [dialog's settings](conversation-builder-dialogs-dialog-basics.html#configure-dialog-settings).
+* **Agent Skill Id**: Change this in the [interaction's settings](conversation-builder-interactions-details-settings.html#access-the-settings-tab).
 
 ### FAQs
 
