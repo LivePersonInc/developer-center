@@ -26,12 +26,12 @@ As an example, examine the illustration below of a Customer Service bot and a Sa
 
 You can transfer a conversation from one bot to another in two general ways:
 
-* Automatic transfer via discovery
-* Manual transfer via escalations
+* Automatic transfer via bot group
+* Manual transfer via escalation
 
 Importantly, both approaches allow for the transfer of the user's intent and/or message, which ensures a seamless hand-off.
 
-### Automatic transfers via discovery
+### Automatic transfers via bot group
 
 #### What's an automatic transfer?
 
@@ -114,7 +114,7 @@ To disable automatic transfers on a group-by-group basis, disable collaboration 
 2. In the left panel, move the mouse over the bot group name, and then click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> icon that appears.
 3. Select **Delete**, and then click **Yes** to confirm the action.
 
-### Manual transfers via escalations
+### Manual transfers via escalation
 
 #### What's a manual transfer?
 
