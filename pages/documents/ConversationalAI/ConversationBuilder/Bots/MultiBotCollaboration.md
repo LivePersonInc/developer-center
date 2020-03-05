@@ -35,13 +35,13 @@ Importantly, both approaches allow for the transfer of the user's intent and/or 
 
 #### What's an automatic transfer?
 
-Automatic transfers use "bot groups" to support the discovery of bots that are qualified to handle requests and accept transfers. You create the groups and assign bots to them. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, transfer of the conversation happens automatically.
+Automatic transfers use "bot groups" to support the discovery of bots that are qualified to handle requests and can accept transfers. You create the groups and assign bots to them. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, transfer of the conversation happens automatically.
 
 <img style="width:650px" src="img/ConvoBuilder/bots_collab5.png">
 
 During an automatic transfer, the conversational context information is automatically sent from the sender bot to the receiver bot. This ensures a seamless hand-off, allowing the receiver bot to immediately start the appropriate dialog.
 
-<img style="width:500px" src="img/ConvoBuilder/bots_collab4.png">
+<img style="width:500px" src="img/ConvoBuilder/bots_collab10.png">
 
 How does the automatic transfer happen? If the consumer's utterance can't be handled in some way by the bot, i.e., there are no dialog starters that match, the bot checks whether there is another bot *within the same group* that can handle the request. If there is one, and if it has an active LiveEngage connection, the conversation is transferred automatically to the receiver bot. The receiver bot then takes care of processing the request.
 
@@ -118,7 +118,7 @@ To disable automatic transfers on a group-by-group basis, disable collaboration 
 
 #### What's a manual transfer?
 
-A manual, bot-to-bot transfer is a [LivePerson agent escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) where you transfer the conversation to a skill that's assigned to a bot user agent in specific. In this way, it's very similar to transferring a conversation to a live agent.
+A manual, bot-to-bot transfer is an escalation where you transfer the conversation to a skill that's assigned to a *bot user agent* in specific. In this way, it's very similar to transferring a conversation to a live agent.
 
 #### Why use a manual transfer?
 

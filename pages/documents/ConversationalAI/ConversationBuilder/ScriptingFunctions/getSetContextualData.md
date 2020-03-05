@@ -47,7 +47,7 @@ if (count > 10) {
 
 ### Set bot transfer intent by domain
 
-Use the `setBotTransferIntentbyDomain` function to set a domain name and an intent name in the Bot Transfer Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html). You can retrieve the domain name that you need from the UI. And you can retrieve the intent name that you need from the UI or via [getDialogStarterIntent](conversation-builder-scripting-functions-functions-list.html). During the transfer, the system uses the domain name and the intent name to ascertain and pass an intent ID.
+Use the `setBotTransferIntentbyDomain` function to set an intent ID in the Bot Transfer Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html). The intent ID is derived from the supplied domain name and intent name. You can retrieve the domain name that you need from the UI. And you can retrieve the intent name that you need from the UI or via [getDialogStarterIntent](conversation-builder-scripting-functions-functions-list.html). During the transfer, the system uses the domain name and the intent name to ascertain and pass the intent ID.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
