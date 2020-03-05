@@ -40,12 +40,12 @@ We've likewise added a second condition that checks for a "failure" result **(1)
 
  <img style="width:800px" src="img/ConvoBuilder/integrations_api_failure.png">
 
-### Escalation interactions
+### Escalation Integration interactions
 
-Use an Escalation interaction in a dialog when you want to escalate (transfer) a conversation from a bot to a live agent or from a bot in one bot transfer group to a bot in a *different* group.
+Use an Escalation Integration interaction in a dialog when you want to escalate (transfer) a conversation from a bot to a live agent or from a bot in one bot group to a bot in a *different* group.
 
 {: .important}
-An Escalation interaction *doesn't* require a supporting LivePerson Agent Escalation integration. You specify all necessary information in the interaction itself. The [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) is a deprecated but supported feature; we recommend you use an Escalation interaction instead.
+There are two ways to implement an escalation: You can add an Escalation Integration interaction, *as discussed here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Escalation Integration interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Escalation Integration interaction, you *don't* need to create a supporting integration.
 
 {: .important}
 Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.
@@ -54,12 +54,13 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 
 **To add an Escalation interaction**
 
-1. Select the interaction just above where you want to add the escalation, and click (Escalation) on the interactions toolbar.
-2. In the interaction, enter the message to send to the user prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. The system will send this message as a part of the transfer API post body. This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one.
+1. Select the interaction just above where you want to add the escalation, and click <img style="width:30px" src="img/ConvoBuilder/icon_escalation_integr.png"> (Escalation Integration) on the interactions toolbar.
+2. In the interaction, enter the message to send to the user prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Escalating to agent..."
 
-    ADD SCREEN
+    <img style="width:600px" src="img/ConvoBuilder/interactions_esc1.png">
 
-3. DOC HOW TO ACCESS INTERACTION SETTINGS, specify the following:
+3. Click <img style="width:30px" src="img/ConvoBuilder/icon_interactionDetails.png"> to open the **Interaction Details**, and click the **Settings** tab.
+4. Specify the following:
 
     * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in LiveEngage. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 

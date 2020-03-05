@@ -129,11 +129,17 @@ You'll need to use a manual transfer in two situations:
 
 #### Making manual transfers seamless
 
-In a manual transfer, you can *automatically* pass the intent and/or user message from the sender bot to the receiver bot by selecting the **Bot Transfer Context** checkbox in the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration. No coding is required.
+In a manual transfer, you can *automatically* pass the intent and/or user message from the sender bot to the receiver bot by selecting the **Bot Transfer Context** checkbox in the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration:
    
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab1.png">
 
-Selecting the **Bot Transfer Context** checkbox enables the use of a Bot Transfer Context object behind the scenes. This object contains the conversational context information that is sent from the sender bot to the receiver bot.
+Or, if you've used an [Escalation Integration interaction](conversation-builder-interactions-integrations.html#escalation-integration-interactions) instead, you can do this in the interaction's settings:
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab9.png">
+
+No coding is required.
+
+Enabling the **Bot Transfer Context** setting enables the use of a Bot Transfer Context object behind the scenes. This object contains the conversational context information that is sent from the sender bot to the receiver bot.
 
    <img style="width:500px" src="img/ConvoBuilder/bots_collab4.png">
 
@@ -146,7 +152,7 @@ Occasionally, you might want to overwrite the intent or user message that is pas
 * To overwrite the user message, use [setBotTransferUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-user-message).
 * To overwrite the intent, you can use [setBotTransferIntentbyDomain](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-by-domain). The system will ascertain and pass the intent ID based on the provided domain name and intent name. Alternatively, you can use [setBotTransferIntentID](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-id).
 
-In our example below, we've overwritten the user message, and we've done this in the Pre-Process Code in the integration interaction.
+In our example below, we've overwritten the user message, and we've done this in the Pre-Process Code in the Escalation Integration interaction.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab2.png">
 

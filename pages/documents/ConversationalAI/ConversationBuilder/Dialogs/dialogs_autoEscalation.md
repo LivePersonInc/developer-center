@@ -11,13 +11,13 @@ indicator: both
 
 ### Why use an Auto Escalation dialog?
 
-The purpose of the Auto Escalation dialog is to free the consumer from being stuck within a question. This can happen when the bot doesn't recognize the consumer's input. Because the bot can't determine the next step that should happen, the [fallback response]((conversation-builder-dialogs-fallback-dialogs.html)) is sent, and the consumer is returned to the place where the failure occurred. The fallback response is then repeated after each unrecognizable input, resulting in a stuck conversation. The consumer's predicament is illustrated in the example below.
+The purpose of the Auto Escalation dialog is to free the consumer from being stuck within a question. This can happen when the bot doesn't recognize the consumer's input. Because the bot can't determine the next step that should happen, the [fallback response]((conversation-builder-dialogs-fallback-dialogs.html)) is sent, and the consumer is returned to the place where the failure occurred. The fallback response is repeated after each unrecognizable input, resulting in a stuck conversation. The consumer's predicament is illustrated in the example below.
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_autoEscalate1.png">
+<img style="width:350px" src="img/ConvoBuilder/dialogs_autoEscalate1.png">
 
 The Auto Escalation dialog solves this problem by offering the consumer the option of being transferred to a live agent (or another bot). You configure the number of times that the fallback response should be sent within a question. Once that threshold is reached, the Auto Escalation dialog is triggered automatically.
 
-ADD SCREEN SHOWING THIS
+<img style="width:450px" src="img/ConvoBuilder/dialogs_autoEscalate2.png">
 
 ### Implement an Auto Escalation dialog
 
@@ -34,7 +34,7 @@ When you [create a custom bot](conversation-builder-bots-custom-bots.html), you 
 2. In the dialog that appears, specify the following:
     * **Dialog Name**: Enter a descriptive name.
     * **Dialog Type**: Select "Auto Escalation Dialog."
-    * **Auto Escalation Skill**: Specify the ID of the skill to which to escalate (transfer) the conversation. You can select from the IDs of the skills configured for your account; alternatively, enter a [botContext variable](conversation-builder-variables-slots.html#variables) like `{$botContext.skillId}` or an [environment variable](conversation-builder-environment-variables.html). You can edit this information later in the Escalation interaction's settings.
+    * **Auto Escalation Skill**: Specify the ID of the skill to which to escalate (transfer) the conversation. You can select from the IDs of the skills configured for your account; alternatively, enter a [botContext variable](conversation-builder-variables-slots.html#variables) like `{$botContext.skillId}` or an [environment variable](conversation-builder-environment-variables.html). You can edit this information later in the Escalation Integration interaction's settings.
     * **Auto Escalation Threshold**: Select the maximum number of times the fallback message should be sent within a question before triggering the Auto Escalation dialog. You can edit this information later in the dialog's settings.
 3. Click **Save**.
 
@@ -42,9 +42,12 @@ When you [create a custom bot](conversation-builder-bots-custom-bots.html), you 
 
 By default, an Auto Escalation dialog includes a Yes/No multiple choice question that asks the consumer if they want to speak to a live agent. If the consumer says Yes, the escalation (transfer) occurs. If the consumer says No, the interaction ends.
 
-ADD SCREEN CAP
+<img style="width:800px" src="img/ConvoBuilder/dialogs_autoEscalate3.png">
 
-If the default dialog implementation doesn't meet your requirements, build out and/or modify the dialog. For information on configuring Escalation interactions, see here.
+If the default dialog implementation doesn't meet your requirements, build out and/or modify the dialog. For information on configuring Escalation Integration interactions, see [here](conversation-builder-interactions-integrations.html#escalation-integration-interactions).
+
+{: .important}
+You can change the **Auto Escalation Threshold** in the dialog's settings.
 
 ### FAQs
 

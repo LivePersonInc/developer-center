@@ -14,7 +14,10 @@ Use a LivePerson Agent Escalation integration when you want to transfer a conver
 For some practice with this integration type, complete the [Connect to LiveEngage](conversation-builder-tutorials-guides-getting-started.html) tutorial.
 
 {: .important}
-For information on performing bot-to-bot transfers in specific, see [here](conversation-builder-bots-bot-to-bot-transfers.html).
+There are two ways to implement an escalation: You can add an [Escalation Integration interaction](conversation-builder-interactions-integrations.html#escalation-integration-interactions). Or, you can add an Integration interaction that uses a supporting LivePerson Agent Escalation integration, *which is discussed here*. There is no difference between the two approaches when it comes to performance. However, use of the Escalation Integration interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Escalation Integration interaction, you *don't* need to create a supporting integration.
+
+{: .important}
+Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.
 
 ### Add a LivePerson Agent Escalation
 
