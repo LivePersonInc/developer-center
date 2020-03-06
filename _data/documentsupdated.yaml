@@ -123,6 +123,7 @@
         subpages:
           - subpagename: Getting Started
           - subpagename: Implementing a Web View Integration
+          - subpagename: Using LivePerson Functions with a Bot
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
