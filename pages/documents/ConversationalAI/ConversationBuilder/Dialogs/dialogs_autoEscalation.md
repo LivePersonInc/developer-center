@@ -19,6 +19,9 @@ The Auto Escalation dialog solves this problem by offering the consumer the opti
 
 <img style="width:450px" src="img/ConvoBuilder/dialogs_autoEscalate2.png">
 
+{: .important}
+This feature relies upon the existence of a [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) in the bot. If the bot doesn't have a fallback dialog, don't create an Auto Escalation dialog. An Auto Escalation dialog won't be triggered after the built-in, default fallback response is sent repeatedly.
+
 ### Implement an Auto Escalation dialog
 
 #### Step 1: Create the dialog
@@ -55,8 +58,10 @@ When you create the dialog, you configure two important settings that you might 
 
 #### Can you explain how the Auto Escalation Threshold counter works?
 
-The counter is incremented if any of the following occurs:
+The counter is incremented if either of the following occurs:
 
-* The built-in, default fallback response is sent to the consumer. (A fallback dialog doesn't exist.)
 * A fallback dialog that contains only text interactions exists and is triggered.
 * A fallback dialog that contains an API integration (e.g., a Knowledge Base integration) exists and is triggered. But the integration call failed, and the failure condition was not handled, triggering a system error message.
+
+{: .important}
+As the above suggests, this feature relies upon the existence of a [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) in the bot. If the bot doesn't have a fallback dialog, don't create an Auto Escalation dialog. An Auto Escalation dialog won't be triggered after the built-in, default fallback response is sent repeatedly.
