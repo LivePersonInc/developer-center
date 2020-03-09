@@ -73,9 +73,6 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 
 * Forever - the slot's data will be saved on our servers forever. It will be accessible via the Conversation Builder for as long as you need it.
 
-{: .important}
-The "Forever" option for **Duration** will be removed in a future release. As an alternative for storing data, bot developers should use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html), which allows for setting data in Global, User, and Conversation scopes.
-
 `{$botContext.slot.slotName}` is how you can access values in slots and use them in other ways. For example, to have the bot respond with a user's previously stored answer under the assigned entity `animal`, you'd set up a text interaction like so:
 
 "You answered: {$botContext.slot.animal}!"
