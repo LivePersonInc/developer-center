@@ -492,39 +492,31 @@ You will test this connection with a standard web chat engagement, so now you cr
 
 #### Step 11: Set up the transfer from bot to human
 
-In this step, you set up an [integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#add-a-liveperson-agent-escalation) to transfer the user to a human agent in LiveEngage. This is called an "escalation."
+In this step, you set up an [Escalation integration](conversation-builder-interactions-integrations.html#escalation-integration-interactions) to transfer the user to a human agent in LiveEngage. This is called an "escalation."
 
 1. Return to Conversation Builder, and open the bot.
-2. Click **Integrations** on the menu bar in the upper-right corner.
-3. Click **+ Add Integration** in the lower-left corner.
-4. On the Add Integration page, create a new API integration with the following parameters.
 
-    * **Integration Name**: Escalation (or similar)
-    * **Response Data Variable Name**: Escalation (or similar)
-    * **Integration Type**: LivePerson Agent Escalation
-    * **Agent Skill Name**: Enter the name of the human skill that you created; this should be "Human" unless you used a different name.
-    * **Agent Skill Id**: Enter the ID number of the human skill that you created; you wrote this down earlier.
+2. Create a new regular dialog named "Agent Handoff" (or similar).
 
-        (While you set the skill name and ID to that for a specific skill, you could also set these values using variables for a more dynamic experience.)
+3. In the default User Says interaction that's provided, enter "I want to speak to an agent" as the sample user statement.
 
-    * **Message to User**: Enter a message to be sent to the user prior to escalation, something like, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
+4. Open the User Says interaction's **Interaction Details**, and click the **Settings** tab.
 
-5. Click **Save**.
+5. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
 
-6. Return to the dialog editor by clicking **Dialogs** on the menu bar in the upper-right corner.
+6. Add an Escalation Integration interaction beneath the User Says interaction.
 
-7. Create a new regular dialog named "Agent Handoff" (or similar).
+7. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
-8. In the default User Says interaction that's provided, enter "I want to speak to an agent" as the sample user statement.
+8. Still in the Escalation Integration interaction, open the **Interaction Details**, and display the **Settings** tab.
 
-9. Open the User Says interaction's **Interaction Details**, and click the **Settings** tab.
+9. In the **Agent Skill Id** field, enter the ID number of the human skill that you created; you wrote this down earlier.
 
-10. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
+    <img style="width:800px" src="img/ConvoBuilder/helloworld/escalation_skillId.png">
 
-11. Add an Integration interaction, and select "Escalation" from the drop-down list.
+    (While you set the skill name and ID to that for a specific skill, you could also set these values using variables for a more dynamic experience.)
 
-    <img style="width:500px" src="img/ConvoBuilder/helloworld/selectescalation.png">
-12. Still in the interaction, click the vertical ellipsis icon <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_ellipsis_vertical.png">, and then click **Save**.
+10. Click **Save**.
 
 #### Step 12: Deploy the bot to LiveEngage
 
