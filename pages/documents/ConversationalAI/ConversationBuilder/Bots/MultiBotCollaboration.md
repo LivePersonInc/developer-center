@@ -69,9 +69,9 @@ Automatic transfers rely on bot groups to determine which bots can talk to one a
 2. In the Create Bot Group dialog, specify the following:
 
     * **Bot group name**: Enter a group name that's concise and clear.
-    * **Bot collaboration**: The default value is On (Enabled). This setting lets you disable automatic transfers on a group-by-group basis. Turn the slider on or off, respectively, to enable or disable the group's collaboration.
+    * **Bot collaboration**: The default value is Off (Disabled). This setting lets you enable/disable automatic transfers on a group-by-group basis. Turn the slider on or off, respectively, to enable or disable the group's collaboration.
     * **Transfer message**: Enter the message to send to the consumer prior to the transfer, something like, "Hold on while I transfer you to a chatbot that can assist you..." You can use bot context variables in the message. You can also leave this field blank if desired.
-    * **Bots**: Select each bot to add it to the group. A bot can be a member of only one group. You can select from the bots that are not yet assigned to a group.
+    * **Add Bots**: Select each bot to add it to the group. A bot can be a member of only one group. You can select from the bots that are not yet assigned to a group.
 
 4. Click **Create**.
 
@@ -79,18 +79,18 @@ Automatic transfers rely on bot groups to determine which bots can talk to one a
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab12.png">
 
-#### Disable collaboration for a bot group
+#### Enable or disable collaboration for a bot group
 
-To disable automatic transfers on a group-by-group basis, disable collaboration for the bot group.
+To enable or disable automatic transfers on a group-by-group basis, respectively, enable or disable collaboration for the bot group.
 
-**To disable collaboration for a bot group**
+**To enable or disable collaboration for a bot group**
 
 1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> icon that corresponds to the bot group name.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab11.png">
 
 2. Select **Edit Group** from the menu that appears.
-3. In the Edit Bot Group dialog, click the **Bot collaboration** slider to turn it off (Disabled).
+3. In the Edit Bot Group dialog, click the **Bot collaboration** slider to turn it on (Enabled) or off (Disabled).
 4. Click **Update**.
 
 #### Delete a bot group
