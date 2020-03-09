@@ -56,6 +56,10 @@ There are still some times when you'll need to use a manual transfer instead:
 * You want to transfer the conversation from a bot in one bot group to a bot in a *different* bot group.
 * You want to transfer the conversation from a bot to a live agent.
 
+#### How many bot groups do I need?
+
+There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, create a bot group whenever you want to divide the bots into groups, such that collaboration occurs only within the group. One common use case is putting all Production bots into one group, all Staging bots into another, and all Development bots into still another. Within a given bot group then, you might have bots for the various business modules that are covered, e.g., an Accounting bot, a Customer Service bot, and so on.
+
 #### Create a bot group
 
 Automatic transfers rely on bot groups to determine which bots can talk to one another and transfer conversations automatically. When you [create a custom bot](conversation-builder-bots-custom-bots.html), you have the option of assigning a bot group to it.
