@@ -107,7 +107,7 @@ Dialog settings include:
 * **Dialog Name**: Enter a name that's concise and clear.
 * **Dialog Type**: This is read only.
 * **Domain**: Select a domain to associate it with the dialog.
-* **Auto Escalation Threshold**: Applicable for [Auto Escalation dialogs](conversation-builder-dialogs-auto-escalation-dialogs.html) only. Select the maximum number of times the fallback message should be sent within a question before triggering the Auto Escalation dialog.
+* **Auto Escalation Threshold**: Applicable for [Auto Escalation dialogs](conversation-builder-dialogs-auto-escalation-dialogs.html) only. Select the maximum number of times the fallback message should be sent within a question before triggering the Auto Escalation dialog. LivePerson recommends setting this to "3," but you can set this to a different value as well.
 
 ### Disable or enable a dialog
 
