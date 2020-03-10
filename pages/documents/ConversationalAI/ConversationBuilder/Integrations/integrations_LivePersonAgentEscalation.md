@@ -9,12 +9,10 @@ permalink: conversation-builder-integrations-liveperson-agent-escalation-integra
 indicator: both
 ---
 
-Use a LivePerson Agent Escalation integration when you want to transfer a conversation to either a live agent or another bot.
-
-For some practice with this integration type, complete the [Connect to LiveEngage](conversation-builder-tutorials-guides-getting-started.html) tutorial.
+You can use a LivePerson Agent Escalation integration when you want to transfer a conversation to either a live agent or another bot.
 
 {: .important}
-There are two ways to implement an escalation: You can add an [Escalation Integration interaction](conversation-builder-interactions-integrations.html#escalation-integration-interactions). Or, you can add an Integration interaction that uses a supporting LivePerson Agent Escalation integration, *which is discussed here*. There is no difference between the two approaches when it comes to performance. However, use of the Escalation Integration interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Escalation Integration interaction, you *don't* need to create a supporting integration.
+There are two ways to implement an escalation: You can add an [Escalation Integration interaction](conversation-builder-interactions-integrations.html#escalation-integration-interactions). Or, you can add an Integration interaction that uses a supporting LivePerson Agent Escalation integration, *which is discussed here*. There is no difference between the two approaches when it comes to performance. However, use of the [Escalation Integration interaction](conversation-builder-interactions-integrations.html#escalation-integration-interactions) is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Escalation Integration interaction, you *don't* need to create a supporting integration.
 
 {: .important}
 Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.

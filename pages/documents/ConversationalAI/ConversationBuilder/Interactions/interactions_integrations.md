@@ -44,6 +44,8 @@ We've likewise added a second condition that checks for a "failure" result **(1)
 
 Use an Escalation Integration interaction in a dialog when you want to escalate (transfer) a conversation from a bot to a live agent or from a bot in one bot group to a bot in a *different* group.
 
+For some practice with this interaction type, complete the [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html).
+
 {: .important}
 There are two ways to implement an escalation: You can add an Escalation Integration interaction, *as discussed here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Escalation Integration interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Escalation Integration interaction, you *don't* need to create a supporting integration.
 
