@@ -39,7 +39,7 @@ Automatic transfers use "bot groups" to support the discovery of bots that are q
 
 <img style="width:650px" src="img/ConvoBuilder/bots_collab5.png">
 
-During an automatic transfer, the conversational context information is automatically sent from the sender bot to the receiver bot. This ensures a seamless hand-off, allowing the receiver bot to immediately start the appropriate dialog.
+During an automatic transfer, information about the conversation is automatically sent from the sender bot to the receiver bot. This ensures a seamless hand-off, allowing the receiver bot to immediately start the appropriate dialog.
 
 <img style="width:500px" src="img/ConvoBuilder/bots_collab10.png">
 
@@ -55,10 +55,6 @@ There are still some times when you'll need to use a manual transfer instead:
 
 * You want to transfer the conversation from a bot in one bot group to a bot in a *different* bot group.
 * You want to transfer the conversation from a bot to a live agent.
-
-#### How many bot groups do I need?
-
-There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, create a bot group whenever you want to divide the bots into groups, such that collaboration occurs only within the group. One common use case is putting all Production bots into one group, all Staging bots into another, and all Development bots into still another. Within a given bot group then, you might have bots for the various business modules that are covered, e.g., an Accounting bot, a Customer Service bot, and so on.
 
 #### Create a bot group
 
@@ -131,7 +127,7 @@ Or, if you've used an [Escalation Integration interaction](conversation-builder-
 
 No coding is required.
 
-Enabling the **Bot Transfer Context** setting enables the use of a Bot Transfer Context object behind the scenes. This object contains the conversational context information that is sent from the sender bot to the receiver bot.
+Enabling the **Bot Transfer Context** setting enables the use of a Bot Transfer Context object behind the scenes. This object contains the information about the conversation that is sent from the sender bot to the receiver bot.
 
    <img style="width:500px" src="img/ConvoBuilder/bots_collab4.png">
 
@@ -151,3 +147,13 @@ In our example below, we've overwritten the user message, and we've done this in
 ### Sharing information between bots
 
 In a transfer from one bot to another--whether automatic or manual--the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. To share this information between bots, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
+
+### FAQs
+
+#### How many bot groups do I need?
+
+There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, create a bot group whenever you want to divide the bots into groups, such that collaboration occurs only within the group. One common use case is putting all Production bots into one group, all Staging bots into another, and all Development bots into still another. Within a given bot group then, you might have bots for the various business modules that are covered, e.g., an Accounting bot, a Customer Service bot, and so on.
+
+#### Can I keep bot collaboration disabled and simply use bot groups as a mechanism for grouping my bots?
+
+Yes, this is perfectly fine for modularizing the bots.
