@@ -154,6 +154,6 @@ In a transfer from one bot to another--whether automatic or manual--the receiver
 
 There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, create a bot group whenever you want to divide the bots into groups, such that collaboration occurs only within the group. One common use case is putting all Production bots into one group, all Staging bots into another, and all Development bots into still another. Within a given bot group then, you might have bots for the various business modules that are covered, e.g., an Accounting bot, a Customer Service bot, and so on.
 
-#### Can I keep bot collaboration disabled and use bot groups just as a mechanism for grouping my bots?
+#### Can I keep bot collaboration disabled and use bot groups only as a mechanism for grouping my bots?
 
-Yes, this is perfectly fine for modularizing the bots.
+Yes, this is perfectly fine.
