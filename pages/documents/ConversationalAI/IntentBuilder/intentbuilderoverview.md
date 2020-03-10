@@ -22,7 +22,7 @@ See [NLU Engines](conversation-builder-intent-builder-nlu-engines.html) to learn
 
 ### Intent Analyzer
 
-The below instructions will enable [Intent Analyzer](https://knowledge.liveperson.com/ai-bots-automation-liveintent-overview.html) for your intents.
+The below instructions will enable [Intent Analyzer](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-overview.html) for your intents.
 
 When you enter Intent Builder, you will notice a column that tells you if a domain "Has Intent Analyzer" or not.
 
@@ -40,4 +40,4 @@ It is a best practice to enable all intents within a domain for the best analysi
 
 <img class="fancyimage" style="width:750px" src="img/intentanalyzer-domains3.png">
 
-You can view the enabled intents in the [Intent Analyzer dashboard](https://knowledge.liveperson.com/ai-bots-automation-liveintent-dashboard.html).
+You can view the enabled intents in the [Intent Analyzer dashboard](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-dashboard.html).
