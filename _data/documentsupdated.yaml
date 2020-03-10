@@ -227,11 +227,6 @@
       - pagename: Domains
       - pagename: Intents
       - pagename: Entities
-  - documentname: LiveIntent
-    pages:
-      - pagename: Overview
-      - pagename: Enabling LiveIntent
-      - pagename: Tips
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
