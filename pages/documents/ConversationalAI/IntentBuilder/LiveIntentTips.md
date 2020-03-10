@@ -51,18 +51,18 @@ There are two ways to classify messages:
 
 * Option 1: Read the messages directly from the [Conversation Details dashboard](https://knowledge.liveperson.com/ai-bots-automation-liveintent-dashboard.html#conversation-details) on Intent Analyzer. You may want to take notes to record your patterns.
  
-    <img  class="fancyimage" style="width:750px" src="img/liveintent_tips_image_0.png">
+    <img  class="fancyimage" style="width:750px" src="img/intentanalyzer_tips_image_0.png">
 
 * Option 2: Export them as a spreadsheet and create a dropdown menu in the intent column to manually label the messages. 
 
     The export button is circled in red in the upper right corner of the Conversation Details.   
 
-    <img  class="fancyimage" style="width:750px" src="img/liveintent_tips_image_1.png">
+    <img  class="fancyimage" style="width:750px" src="img/intentanalyzer_tips_image_1.png">
 
 
 Here’s a sample spreadsheet of the messages extracted from the Intent Analyzer dashboard. They are all initially labeled as "undefined." Manually go through each message and change the label to the name of your intent. 
 
-<img  class="fancyimage" style="width:750px" src="img/liveintent_tips_image_2.png">
+<img  class="fancyimage" style="width:750px" src="img/intentanalyzer_tips_image_2.png">
 
 #### Guidelines for classifying your messages with your intent
 
@@ -107,7 +107,7 @@ After creating your intents and adding in training utterances on IntentBuilder, 
 
 This is how your data will look if you export it to evaluate your model. 
 
-<img  class="fancyimage" style="width:750px" src="img/liveintent_tips_image_3.png">
+<img  class="fancyimage" style="width:750px" src="img/intentanalyzer_tips_image_3.png">
 
 Here are some steps you can take to evaluate how well your model is doing. 
 
