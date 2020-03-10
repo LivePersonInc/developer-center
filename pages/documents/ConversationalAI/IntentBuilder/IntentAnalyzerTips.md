@@ -1,12 +1,13 @@
 ---
-pagename: LiveIntent Tips
+pagename: Intent Analyzer Tips
 redirect_from:
+    - intent-builder-liveintent-tips.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Builder
-permalink: intent-builder-liveintent-tips.html
-indicator: both
+permalink: intent-builder-intent-analyzer-tips.html
+indicator: messaging
 ---
 
 Below are instructions for adding and improving intents and training utterances for [Intent Analyzer](https://knowledge.liveperson.com/ai-bots-automation-liveintent-overview.html) via the Intent Builder interface. Intents and training utterances for Starter Packs and Custom Intent Modeling are produced via processes outside Intent Builder but are ultimately input into Intent Builder via the same interface.
