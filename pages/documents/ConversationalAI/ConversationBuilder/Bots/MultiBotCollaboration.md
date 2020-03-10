@@ -41,7 +41,7 @@ Automatic transfers use "bot groups" to support the discovery of bots that are q
 
 During an automatic transfer, information about the conversation is automatically sent from the sender bot to the receiver bot. This ensures a seamless hand-off, allowing the receiver bot to immediately start the appropriate dialog.
 
-<img style="width:500px" src="img/ConvoBuilder/bots_collab10.png">
+<img style="width:575px" src="img/ConvoBuilder/bots_collab10.png">
 
 How does the automatic transfer happen? If the consumer's utterance can't be handled in some way by the bot, i.e., there are no dialog starters that match, the bot checks whether there is another bot *within the same group* that can handle the request. If there is one, and if it has an active LiveEngage connection, the conversation is transferred automatically to the receiver bot. The receiver bot then takes care of processing the request.
 
@@ -129,7 +129,7 @@ No coding is required.
 
 Enabling the **Bot Transfer Context** setting enables the use of a Bot Transfer Context object behind the scenes. This object contains the information about the conversation that is sent from the sender bot to the receiver bot.
 
-   <img style="width:500px" src="img/ConvoBuilder/bots_collab4.png">
+   <img style="width:575px" src="img/ConvoBuilder/bots_collab4.png">
 
 During the transfer, the receiver bot checks for the availability of a Bot Transfer Context object. If the object is found, the bot then checks whether it contains an intent. If an intent is found, the dialog tied to that intent is triggered if available. If an intent isn't found, the bot then checks whether the object contains a user message and triggers the dialog that's matched to the message. If neither the intent nor the user message that are passed can be matched, the fallback message is sent in the receiver bot.
 
