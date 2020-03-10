@@ -492,7 +492,7 @@ You will test this connection with a standard web chat engagement, so now you cr
 
 #### Step 11: Set up the transfer from bot to human
 
-In this step, you set up an [Escalation integration](conversation-builder-interactions-integrations.html#escalation-integration-interactions) to transfer the user to a human agent in LiveEngage. This is called an "escalation."
+In this step, you set up an "escalation" to transfer the user to a human agent in LiveEngage.
 
 1. Return to Conversation Builder, and open the bot.
 
@@ -504,7 +504,7 @@ In this step, you set up an [Escalation integration](conversation-builder-intera
 
 5. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
 
-6. Add an Escalation Integration interaction beneath the User Says interaction.
+6. Add an [Escalation Integration interaction](conversation-builder-interactions-integrations.html#escalation-integration-interactions) beneath the User Says interaction.
 
 7. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
