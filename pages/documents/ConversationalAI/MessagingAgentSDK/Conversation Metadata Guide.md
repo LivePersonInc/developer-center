@@ -47,7 +47,7 @@ Bot response metadata is context information / the bot analysis of the last cons
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
 | externalConversationId | External platform conversation identifier                                                                             | String(maxLength=64)                |
 | businessCases          | The topics / business cases of the conversation. In Watson Virtual Agent, this data is stored in the capability field | Array &lt;String(maxLength=256)&gt; |
-| intents                | List of intents identified for a consumer message                                                                     | Array<Intent>                       |
+| intents                | List of intents identified for a consumer message                                                                     | Array&lt;Intent&gt;(maxLength=16 intents)                      |
 
 **Intent**
 
