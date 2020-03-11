@@ -178,7 +178,7 @@ function getCookie(name) {
 
 function postRequest () {
 //defining the endpoint for account creation
-  const URL = 'https://d0j6xh4g99.execute-api.us-east-2.amazonaws.com/prod/web/account';
+  const URL = 'https://self-service.liveperson.com/api/free-trial/account';
 //filling in request body with variables from the form
   const user = {
     firstName: firstName,
@@ -203,7 +203,6 @@ function postRequest () {
     method: 'post',
     url: URL,
     headers: {
-      'x-api-key': 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW', 
       'Content-Type': 'application/json', 
       'Accept': 'application/json'},
     data: user
