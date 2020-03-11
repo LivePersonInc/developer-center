@@ -60,6 +60,8 @@ There are still some times when you'll need to use a manual transfer instead:
 
 To set up automatic transfers for a group of bots, [create the bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers) and enable collaboration when you do. Then add the bots to the group.
 
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/bots_collab13.png">
+
 #### Testing automatic transfers
 
 Once you've set up a bot group and enabled collaboration for the group, you can use the Preview feature to test things out. The automatic transfer from one bot to another should happen as you enter user messages.
