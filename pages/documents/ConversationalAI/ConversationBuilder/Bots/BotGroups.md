@@ -18,6 +18,8 @@ You can create bot groups and add bots to them for two purposes:
 
 * You want to enable [automatic, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group) for the bots within a given bot group.
 
+One common use case for creating bot groups is to put all Production bots into one group, all Staging bots into another, and all Development bots into still another. Within a given bot group then, you might have bots for the various business modules that are covered, e.g., an Accounting bot, a Customer Service bot, and so on.
+
 ### Create a bot group only to group bots
 
 You can create a bot group soley for the purpose of making it easier to access and work with your bots on the bots dashboard.
@@ -58,7 +60,7 @@ You can create a bot group soley for the purpose of making it easier to access a
 
 ### Enable or disable collaboration for a bot group
 
-To enable or disable automatic transfers on a group-by-group basis, respectively, enable or disable collaboration for the bot group.
+You can enable or disable collaboration for a bot group, respectively, to enable or disable [automatic transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group) within the group.
 
 **To enable or disable collaboration for a bot group**
 

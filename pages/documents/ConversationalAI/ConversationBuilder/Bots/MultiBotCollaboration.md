@@ -118,4 +118,4 @@ There's no limit to the number of bot groups that you can create, but it's likel
 
 #### Can I keep bot collaboration disabled and use bot groups only as a mechanism for grouping my bots?
 
-Yes, this is perfectly fine.
+Yes, this is perfectly fine. For information on creating a group for this purpose, see [here](conversation-builder-bots-bot-groups.html#create-a-bot-group-only-to-group-bots).
