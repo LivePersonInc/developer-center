@@ -55,9 +55,7 @@ When you create the dialog, you configure two important settings that you might 
 
 #### Can you explain how the Auto Escalation Threshold counter works?
 
-In general, the counter is incremented each time a failure response is sent.
-
-More specifically, this happens if any of the following occurs:
+In general, the counter is incremented each time a failure response is sent for a question interaction. More specifically, this happens if any of the following occurs:
 
 * The built-in, default fallback response is triggered. This can be the one that's specific to the question or the [built-in, default fallback response](conversation-builder-dialogs-fallback-dialogs.html).
 * A [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) that contains only text interactions exists and is triggered.
