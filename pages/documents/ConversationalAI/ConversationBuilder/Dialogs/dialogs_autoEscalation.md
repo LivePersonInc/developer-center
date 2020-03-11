@@ -19,9 +19,6 @@ The Auto Escalation dialog solves this problem by offering the consumer the opti
 
 <img style="width:450px" src="img/ConvoBuilder/dialogs_autoEscalate2.png">
 
-{: .important}
-This feature relies upon the existence of a [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) in the bot. If the bot doesn't have a fallback dialog, don't create an Auto Escalation dialog. An Auto Escalation dialog won't be triggered after the built-in, default fallback response is sent repeatedly.
-
 ### Implement an Auto Escalation dialog
 
 #### Step 1: Create the dialog
@@ -58,10 +55,10 @@ When you create the dialog, you configure two important settings that you might 
 
 #### Can you explain how the Auto Escalation Threshold counter works?
 
-The counter is incremented if either of the following occurs:
+In general, the counter is incremented each time a failure response is sent.
 
-* A fallback dialog that contains only text interactions exists and is triggered.
-* A fallback dialog that contains an API integration (e.g., a Knowledge Base integration) exists and is triggered. But the integration call failed, and the failure condition was not handled, triggering a system error message.
+More specifically, this happens if any of the following occurs:
 
-{: .important}
-As the above suggests, this feature relies upon the existence of a [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) in the bot. If the bot doesn't have a fallback dialog, don't create an Auto Escalation dialog. An Auto Escalation dialog won't be triggered after the built-in, default fallback response is sent repeatedly.
+* The built-in, default fallback response is triggered. This can be the one that's specific to the question or the [built-in, default fallback response](conversation-builder-dialogs-fallback-dialogs.html).
+* A [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) that contains only text interactions exists and is triggered.
+* A fallback dialog that contains an API integration (e.g., a Knowledge Base integration) exists and is triggered. The integration call fails due to either zero results being returned or some other failure. The failure condition isn't handled via an [API failure match condition](conversation-builder-interactions-integrations.html#defining-conditions-based-on-the-result-of-the-api-integration), which triggers a system error message. It's the system error message that results in incrementing the counter.

@@ -29,6 +29,8 @@ Before you can add an Integration interaction, you need to create the integratio
 
 3. Finish configuring the interaction as desired, and click **Save**.
 
+#### Defining conditions based on the result of the API integration
+
 {: .important}
 It's recommended that you take advantage of the ability to define conditions based on the *result* of the API integration.
 
