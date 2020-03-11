@@ -56,51 +56,13 @@ There are still some times when you'll need to use a manual transfer instead:
 * You want to transfer the conversation from a bot in one bot group to a bot in a *different* bot group.
 * You want to transfer the conversation from a bot to a live agent.
 
-#### Create a bot group
+#### Setting up automatic transfers
 
-Automatic transfers rely on bot groups to determine which bots can talk to one another and transfer conversations automatically. When you [create a custom bot](conversation-builder-bots-custom-bots.html), you have the option of assigning a bot group to it.
+To set up automatic transfers for a group of bots, [create the bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers) and enable collaboration when you do. Then add the bots to the group.
 
-**To create a bot group**
-1. From the bots dashboard that lists your bots, click **Create Group** in the upper-right corner.
-2. In the Create Bot Group dialog, specify the following:
+#### Testing automatic transfers
 
-    * **Bot group name**: Enter a group name that's concise and clear.
-    * **Bot collaboration**: The default value is Off (Disabled). This setting lets you enable/disable automatic transfers on a group-by-group basis. Turn the slider on or off, respectively, to enable or disable the group's collaboration.
-    * **Transfer message**: Enter the message to send to the consumer prior to the transfer, something like, "Hold on while I transfer you to a chatbot that can assist you..." You can use bot context variables in the message. You can also leave this field blank if desired.
-    * **Add Bots**: Select each bot to add it to the group. A bot can be a member of only one group. You can select from the bots that are not yet assigned to a group.
-
-4. Click **Create**.
-
-    This creates the bot group, which groups together the bots on the bot dashboard.
-
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab12.png">
-
-#### Enable or disable collaboration for a bot group
-
-To enable or disable automatic transfers on a group-by-group basis, respectively, enable or disable collaboration for the bot group.
-
-**To enable or disable collaboration for a bot group**
-
-1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> icon that corresponds to the bot group name.
-
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab11.png">
-
-2. Select **Edit Group** from the menu that appears.
-3. In the Edit Bot Group dialog, click the **Bot collaboration** slider to turn it on (Enabled) or off (Disabled).
-4. Click **Update**.
-
-#### Delete a bot group
-
-You can delete a bot group at any time; this *doesn't* delete the bots therein. If you delete a bot group that contains bots, the bots simply no longer have an assigned bot group.
-
-**To delete a bot group**
-
-1. From the bots dashboard that lists your bots, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> icon that corresponds to the bot group name.
-
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab11.png">
-
-2. Select **Delete Group** from the menu that appears.
-3. Click **Yes** to confirm the action.
+Once you've set up a bot group and enabled collaboration for the group, you can use the Preview feature to test things out. The automatic transfer from one bot to another should happen as you enter user messages.
 
 ### Manual transfers via escalation
 
