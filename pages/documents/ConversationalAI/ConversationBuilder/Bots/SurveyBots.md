@@ -14,7 +14,7 @@ indicator: both
 
 A survey bot lets you collect feedback from consumers at the end of a conversation with a custom bot or human agent. The survey bot can ask:
 
-* Specialized questions designed to provide First Contact Resolution (FCR), Customer Satisfaction (CSAT), and Net Promoter Score (NPS) survey metrics
+* Specialized questions designed to provide First Call Resolution (FCR), Customer Satisfaction (CSAT), and Net Promoter Score (NPS) survey metrics
 * Questions that reflect your brand's key performance indicators
 * Free-text questions
 
@@ -126,15 +126,15 @@ To add a Skip option and thereby make a survey question optional, click the **+S
 {: .important}
 In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question and skip is 12 quick replies. Using Skip will cause the conversation to end abruptly.
 
-#### Making display decisions
-
-Use the **Display choices as** setting on the **Settings** tab in the **Interaction Details** of a survey interaction to select whether to display the response choices as quick replies (the default) or buttons.
-
 #### Adding standard interactions
 
 You can use only a subset of the standard interaction types in survey bots; unavailable interactions are hidden from view on the toolbar.
 
 Use the standard interactions to ask questions that reflect your brand's custom key performance indicators (KPIs) and/or other free-text questions. For example, you might want to obtain the consumer's age.
+
+#### Making display decisions
+
+Use the **Display choices as** setting on the **Settings** tab in the **Interaction Details** of a survey interaction to select whether to display the response choices as quick replies (the default) or buttons.
 
 #### Handling free text answers
 
@@ -152,6 +152,8 @@ As a best practice, end the dialog flow with an interaction whose next step is "
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
 
+You don't need to include a Text interaction that thanks the consumer for their participation; you can define the Thank You message in the survey bot's settings (discusssed below).
+
 ### Step 4 - Configure the bot settings
 
 1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
@@ -161,7 +163,13 @@ As a best practice, end the dialog flow with an interaction whose next step is "
 5. Click **Save**.
 
 Survey bot settings include:
+- **Enable Bot**: If you need to temporarily remove a survey bot from your customer traffic flow, you can disable the bot using this setting.
 - **Skill**: If desired, change the skill(s) that will trigger this survey bot.
+- **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. Then enter the message to send.
+- **Session Expired Message**: Enable this to send a Session Expired message when the user enters text after the session has expired. Then enter the message to send.
+
+
+
 - **Skip Survey**: Enter the words or phrases that will allow the consumer to skip the survey. If the consumer enters one of these (the exact phrase, not case sensitive), the closing message will be displayed to the consumer, and the bot will end the survey.
 - **Closing message when survey is skipped by user**: Enter the closing message to dislay when the survey is skipped by the user.
 - **Survey Timeout**: Specify the amount of time that the survey will remain active before it is closed, and the closing message is displayed. The survey timout is calculated from the moment the survey starts until it reaches the timeout.
