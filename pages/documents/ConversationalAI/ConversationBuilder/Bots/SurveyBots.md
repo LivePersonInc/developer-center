@@ -75,7 +75,21 @@ You can provide a closing message that is sent to the consumer for each of the a
 
 ### Step 1 - Prequisite steps
 
-Some setup of your LiveEngage environment is required before using this feature. Please contact your LivePerson account representative to enable this feature; this is done by LivePerson enabling the following AC feature flags:
+Before you can dive into creating survey bots in Conversation Builder, there are a few, prerequisite setup steps that must be performed.
+
+#### Step 1A - Disable Bot Studio
+
+If you're an existing Bot Studio user, you'll need to disable Bot Studio before beginning with survey bots in Conversation Builder. The two *cannot* be run side by side, which also means you'll need to recreate your existing Bot Studio survey bots in Conversation Builder.
+
+**To disable Bot Studio**
+
+1. a
+2. b
+3. c
+
+#### Step 1B - Enable survey bots in Conversation Builder
+
+Please contact your LivePerson account representative to enable survey bots in Conversation Builder. This is done by LivePerson enabling the following AC feature flags:
 
 * Common.API_User_Login
 * Common.Async_Messaging
@@ -210,12 +224,6 @@ Metrics from the FCR, CSAT, and NPS questions in surveys are captured in LiveEng
 In the Bot Analytics application, you'll see survey bots reported in the same way as custom bots. There is no differentiation.
 
 ### FAQs
-
-#### I'm using the older Post Conversation Survey created in Bot Studio, but I want to migrate to using survey bots created in Conversation Builder. What do I need to do?
-
-If you want to move completely to using Conversation Builder to create survey bots, ask your LivePerson account representative to 1) enable this feature as described earlier in this topic and 2) disable Bot Studio. That's all that's required. You can then use Conversation Builder to create the survey bots that you require and assign them to the skills that will trigger them.
-
-You can also run the older Post Conversation Survey alongside survey bots created in Conversation Builder. In this case, you'll still need to enable this feature, but Bot Studio should be kept enabled. This means that you'll have some skills that trigger the old Post Conversation Survey and other skills that trigger the survey bots you've created in Conversation Builder.
 
 #### How do I deploy a survey bot?
 
