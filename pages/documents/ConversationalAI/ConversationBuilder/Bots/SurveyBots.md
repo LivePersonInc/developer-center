@@ -131,6 +131,9 @@ In a single survey bot, you can include only one of each survey interaction type
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_nps.png">
 
+{: .important}
+If you change the answer choices for a survey question, remember to update the defined conditions accordingly in the **Interaction Details**.
+
 #### Marking questions as optional
 
 To add a Skip option and thereby make a survey question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
