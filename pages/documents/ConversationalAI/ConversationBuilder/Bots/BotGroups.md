@@ -39,7 +39,7 @@ You can create a bot group solely for the purpose of making it easier to access 
 2. In the Create Bot Group dialog, specify the following:
 
     * **Bot group name**: Enter a group name that's concise and clear.
-    * **Collaboration**: This setting lets you enable/disable automatic transfers on a group-by-group basis. Keep this Off (Disabled), which is the default value.
+    * **Collaboration**: This setting lets you enable/disable automatic transfers on a group-by-group basis. Keep this set to Off (Disabled), which is the default value.
     * **Transfer message**: Skip this field.
     * **Add Bots**: Select each bot to add it to the group. A bot can be a member of only one group. You can select from the bots that are not yet assigned to a group.
 
@@ -91,4 +91,4 @@ If you created a new bot group within a bot's **Bot Settings** when you were ass
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/botGroups_createGroup.png">
 
-...but you didn't end up assigning the new bot group to the bot at that time, the new bot group won't be displayed on the bots dashboard because it doesn't have any bots within it. To resolve this, go into a bot's **Bot Settings** and assign the bot group to the bot. You'll see the bot group displayed in the pick list of available bot groups.
+...but you didn't end up assigning the new bot group to the bot at that time, the new bot group won't be displayed on the bots dashboard because it doesn't have any bots within it. To resolve this, go into a bot's **Bot Settings** and assign the bot group to the bot. You'll see the bot group displayed in the pick list of available bot groups (shown above).
