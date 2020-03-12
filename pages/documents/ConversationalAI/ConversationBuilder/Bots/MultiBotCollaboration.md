@@ -58,7 +58,7 @@ There are still some times when you'll need to use a manual transfer instead:
 
 #### Setting up automatic transfers
 
-To set up automatic transfers for a group of bots, [create the bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers). During creation of the group, enable collaboration for the group and add the bots to the group.
+To set up automatic transfers for a group of bots, [create the bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers). During creation of the group, enable collaboration for the group, and add the bots to the group.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/bots_collab13.png">
 

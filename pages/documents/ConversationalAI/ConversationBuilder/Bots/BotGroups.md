@@ -40,7 +40,6 @@ You can create a bot group solely for the purpose of making it easier to access 
 
     * **Bot group name**: Enter a group name that's concise and clear.
     * **Collaboration**: This setting lets you enable/disable automatic transfers on a group-by-group basis. Keep this set to Off (Disabled), which is the default value.
-    * **Transfer message**: Skip this field.
     * **Add Bots**: Select each bot to add it to the group. A bot can be a member of only one group. You can select from the bots that are not yet assigned to a group.
 
 4. Click **Create**.
