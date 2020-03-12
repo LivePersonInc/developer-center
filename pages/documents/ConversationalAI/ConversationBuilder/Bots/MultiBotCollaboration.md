@@ -64,7 +64,7 @@ To set up automatic transfers for a group of bots, [create the bot group](conver
 
 #### Testing automatic transfers
 
-Once you've set up a bot group and enabled collaboration for the group, you can use the Preview feature to test things out. The automatic transfer from one bot to another should happen as you enter user messages.
+Once you've set up a bot group and enabled collaboration for the group, you can use the Preview tool to test things out. The automatic transfer from one bot to another should happen as you enter user messages.
 
 ### Manual transfers via escalation
 
