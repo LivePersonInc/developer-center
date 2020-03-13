@@ -62,10 +62,6 @@ To set up automatic transfers for a group of bots, [create the bot group](conver
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/bots_collab13.png">
 
-#### Testing automatic transfers
-
-Once you've set up a bot group and enabled collaboration for the group, you can use the Preview tool to test things out. The automatic transfer from one bot to another should happen as you enter user messages.
-
 ### Manual transfers via escalation
 
 #### What's a manual transfer?
@@ -113,6 +109,14 @@ In our example below, we've overwritten the user message, and we've done this in
 In a transfer from one bot to another--whether automatic or manual--the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. To share this information between bots, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
 
 ### FAQs
+
+#### During an automatic transfer, if multiple bots are capable of handling a request, how is one chosen?
+
+Based on the user's request, the bot that matches with the highest score is selected.
+
+#### If I have collaboration enabled for a bot group, do I have any control over whether and when automatic transfers occur?
+
+No, apart from configuring the transfer message in the [bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers), you don't have any control over how automatic transfers are performed.
 
 #### How many bot groups do I need?
 There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, create a bot group whenever you want to divide the bots into groups, such that collaboration occurs only within the group. One common use case is putting all Production bots into one group, all Staging bots into another, and all Development bots into still another. Within a given bot group then, you might have bots for the various business modules that are covered, e.g., an Accounting bot, a Customer Service bot, and so on.
