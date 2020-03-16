@@ -80,17 +80,6 @@ To close the current conversation, set the final interaction's next step to "Clo
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/interactions_closeConversation.png">
 
-Alternatively, you can create a Text statement that contains the special string “LP_CLOSECONVERSATION”.
-
- <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keywords_lpCloseConversation.png">
-
-This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
-
-If this Text statement isn't the last in the dialog, set this statement's **Next Step** to "End Interaction" (not "Next Interaction").
-
-{: .important}
-LP_CLOSECONVERSATION does **not** trigger a post-conversation survey.
-
 ### Configure dialog settings
 
 **To configure dialog settings**
