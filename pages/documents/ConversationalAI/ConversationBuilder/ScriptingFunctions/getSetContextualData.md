@@ -156,21 +156,12 @@ The Get Conversation ID function will retrieve the conversation ID for the curre
 
 #### Example
 
-The following example will store the conversation ID in a variable inside your current pre/post process code call "convId". It will then save this value in a bot session variable.
-
 ```javascript
 // store the conversation id in a variable inside your current pre/post process code
 var convId = botContext.getConversationId();
-
-// save this in a bot session variable 
-botContext.setBotVariable("conversationId", convId, true, false);
 ```
 
-The bot session variable can then be accessed inside subsequent interactions or integrations using the following syntax:
-
-`{$botContext.conversationId}`
-
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_0.png">
+You can also use the `{$conversationId}` [system variable](conversation-builder-variables-slots.html#system-variables) to display the conversation ID as text in interactions or post bodies.
 
 
 ### Get LP account ID
