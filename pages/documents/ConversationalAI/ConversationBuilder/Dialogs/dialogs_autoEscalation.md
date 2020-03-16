@@ -26,8 +26,6 @@ The Auto Escalation dialog solves this problem by offering the consumer the opti
 {: .important}
 A bot can have only one Auto Escalation dialog.
 
-When you [create a custom bot](conversation-builder-bots-custom-bots.html), you can choose to create an Auto Escalation dialog at that time. However, it's also possible to create one afterward using the procedure below.
-
 **To create an Auto Escalation dialog**
 
 1. Open the bot, and click **+ DIALOG** in the lower-left corner.

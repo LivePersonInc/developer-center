@@ -34,13 +34,6 @@ LivePerson recommends that —before you create a bot— you set up the [domains
     * **Description**: Enter a description that’s meaningful to you and others. Consider including language that identifies the bot's goal and key behaviors
     * **Bot Language**: This setting determines the language-specific model for LivePerson NLU; it also supports the proper rendering of left-to-right and right-to-left languages. You specify the bot language when you create the bot, and it can’t be changed afterward.
     * **Bot Group**: Optionally select the [bot group](conversation-builder-bots-bot-groups.html) for the bot. A bot can be a member of exactly one group.
-    * **Create Auto Escalation Dialog**: An Auto Escalation dialog is designed to free the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred. For more on this, see [here](conversation-builder-dialogs-auto-escalation-dialogs.html).
-
-        If you opt to create an Auto Escalation dialog, there are two more settings to specify:
-        
-        In **Auto Escalation Skill**, specify the ID of the skill to which to escalate (transfer) the conversation. You can select from the IDs of the skills configured for your account; alternatively, enter a [botContext variable](conversation-builder-variables-slots.html#variables) like `{$botContext.skillId}` or an [environment variable](conversation-builder-environment-variables.html). (You can edit this information later in the Escalation Integration interaction's settings.) 
-        
-        In **Auto Escalation Threshold**, select the maximum number of consecutive times the fallback message should be sent within a question before triggering the Auto Escalation dialog. Example: You set the threshold to 3. The consumer enters an incorrect answer three times, receiving the fallback response each time. After the fourth incorrect answer, the Auto Escalation dialog is triggered. LivePerson recommends setting this to "3," but you can set this to a different value based on your confidence that the fallback response will resolve the user's issue. (You can edit this information later in the dialog's settings.)
 
 5. Build out the bot, completing and adding the necessary [dialogs](conversation-builder-dialogs-dialog-basics.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the bot using the Preview tool.
 6. [Save versions](conversation-builder-versions-releases.html#save-a-version) of the bot at important points in its development. This allows you to restore a version if you need.
