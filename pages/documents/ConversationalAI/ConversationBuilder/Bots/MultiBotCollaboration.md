@@ -110,13 +110,13 @@ In a transfer from one bot to another--whether automatic or manual--the receiver
 
 ### FAQs
 
-#### During an automatic transfer, if multiple bots are capable of handling a request, how is one chosen?
-
-Based on the user's request, the bot that matches with the highest score is selected.
-
 #### If I have collaboration enabled for a bot group, do I have any control over whether and when automatic transfers occur?
 
 No, apart from configuring the transfer message in the [bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers), you don't have any control over how automatic transfers are performed.
+
+#### During an automatic transfer, how is a bot within a bot group chosen to handle a request?
+
+The system first looks for a bot with a matching pattern. If one is found, that bot is selected. Otherwise, it then looks for a bot with a matching intent. If one is found, that bot is selected. And if multiple matching intents are found, the bot with the highest match score is selected.
 
 #### How many bot groups do I need?
 There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, create a bot group whenever you want to divide the bots into groups, such that collaboration occurs only within the group. One common use case is putting all Production bots into one group, all Staging bots into another, and all Development bots into still another. Within a given bot group then, you might have bots for the various business modules that are covered, e.g., an Accounting bot, a Customer Service bot, and so on.
