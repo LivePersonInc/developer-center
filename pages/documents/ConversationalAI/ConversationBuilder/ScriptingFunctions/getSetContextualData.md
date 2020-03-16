@@ -172,6 +172,24 @@ The bot session variable can then be accessed inside subsequent interactions or 
 
 <img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_0.png">
 
+
+### Get LP account ID
+
+The Get LP Account ID function retrieves the LiveEngage account ID for the current conversation.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getLPAccountId()` | None | LP account ID (string) |
+
+#### Example
+
+```javascript
+// store the LP account ID in a variable inside your current pre/post process code
+var acctId = botContext.getLPAccountId();
+
+```
+
+
 ### Get current user message
 
 Used for getting the most recent message from the user, whether typed or tapped (buttons or quick replies).

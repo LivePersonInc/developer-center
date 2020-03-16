@@ -151,7 +151,7 @@ This does not render when using the the Preview tool inside Conversation Builder
 
 #### Character Limit
 
-One single text interaction has a limit of 320 characters on word boundary before it gets split into 2 parts.
+One single text interaction has a limit of 320 characters on the word boundary before it gets split into 2 parts. However, you can override this behavior with the [setAllowMaxTextResponse](conversation-builder-scripting-functions-manage-conversation-flow.html#set-allow-max-text-response) scripting function.
 
 #### Break point within a large block of text
 
