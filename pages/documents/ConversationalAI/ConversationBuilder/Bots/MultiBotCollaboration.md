@@ -27,7 +27,7 @@ As an example, examine the illustration below of a Customer Service bot and a Sa
 You can transfer a conversation from one bot to another in two general ways:
 
 * Automatic transfer via bot group
-* Manual transfer via escalation
+* Manual transfer via an Agent Transfer interaction or a LP Agent Escalation integration
 
 Importantly, both approaches allow for the transfer of the user's intent and/or message, which ensures a seamless hand-off.
 
@@ -62,11 +62,16 @@ To set up automatic transfers for a group of bots, [create the bot group](conver
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/bots_collab13.png">
 
-### Manual transfers via escalation
+### Manual transfers
 
 #### What's a manual transfer?
 
-A manual, bot-to-bot transfer is an escalation where you transfer the conversation to a skill that's assigned to a *bot user agent* in specific. In this way, it's very similar to transferring a conversation to a live agent.
+A manual, bot-to-bot transfer is one where you transfer the conversation to a specific skill that's assigned to a bot user agent. (In this way, it's very similar to transferring a conversation to a live agent.)
+
+Manual transfers are done via:
+
+* An Agent Transfer interaction (simpler) 
+* A LP Agent Escalation integration (more complex)
 
 #### Why use a manual transfer?
 
@@ -77,25 +82,25 @@ You'll need to use a manual transfer in two situations:
 
 #### Making manual transfers seamless
 
-In a manual transfer, you can *automatically* pass the intent and/or user message from the sender bot to the receiver bot by selecting the **Bot Transfer Context** checkbox in the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration:
+In a manual transfer, you can *automatically* pass the intent and/or user message from the sender bot to the receiver bot by selecting the **Transfer Bot Context** checkbox in the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration:
    
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab1.png">
 
-Or, if you've used an [Escalation Integration interaction](conversation-builder-interactions-integrations.html#escalation-integration-interactions) instead, you can do this in the interaction's settings:
+Or, if you've used an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) instead, you can do this in the interaction's settings:
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab9.png">
 
 No coding is required.
 
-Enabling the **Bot Transfer Context** setting enables the use of a Bot Transfer Context object behind the scenes. This object contains the information about the conversation that is sent from the sender bot to the receiver bot.
+Enabling the **Transfer Bot Context** setting enables the use of a Transfer Bot Context object behind the scenes. This object contains the information about the conversation that is sent from the sender bot to the receiver bot.
 
    <img style="width:575px" src="img/ConvoBuilder/bots_collab4.png">
 
-During the transfer, the receiver bot checks for the availability of a Bot Transfer Context object. If the object is found, the bot then checks whether it contains an intent. If an intent is found, the dialog tied to that intent is triggered if available. If an intent isn't found, the bot then checks whether the object contains a user message and triggers the dialog that's matched to the message. If neither the intent nor the user message that are passed can be matched, the fallback message is sent in the receiver bot.
+During the transfer, the receiver bot checks for the availability of a Transfer Bot Context object. If the object is found, the bot then checks whether it contains an intent. If an intent is found, the dialog tied to that intent is triggered if available. If an intent isn't found, the bot then checks whether the object contains a user message and triggers the dialog that's matched to the message. If neither the intent nor the user message that are passed can be matched, the fallback message is sent in the receiver bot.
 
 #### Overwriting the intent or user message
 
-Occasionally, you might want to overwrite the intent or user message that is passed in the Bot Transfer Context object during a manual transfer. To do this, somewhere in the dialog *before* calling the escalation, use a "bot transfer" function:
+Occasionally, you might want to overwrite the intent or user message that is passed in the Transfer Bot Context object during a manual transfer. To do this, somewhere in the dialog *before* calling the escalation, use a "bot transfer" function:
 
 * To overwrite the user message, use [setBotTransferUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-user-message).
 * To overwrite the intent, you can use [setBotTransferIntentbyDomain](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-by-domain). The system will ascertain and pass the intent ID based on the provided domain name and intent name. Alternatively, you can use [setBotTransferIntentID](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-id).

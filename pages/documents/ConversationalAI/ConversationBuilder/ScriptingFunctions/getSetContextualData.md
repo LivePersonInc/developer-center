@@ -47,7 +47,7 @@ if (count > 10) {
 
 ### Set bot transfer intent by domain
 
-Use the `setBotTransferIntentbyDomain` function to set an intent ID in the Bot Transfer Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html). The intent ID is derived from the supplied domain name and intent name. You can retrieve the domain name that you need from the UI. And you can retrieve the intent name that you need from the UI or via [getDialogStarterIntent](conversation-builder-scripting-functions-functions-list.html). During the transfer, the system uses the domain name and the intent name to ascertain and pass the intent ID.
+Use the `setBotTransferIntentbyDomain` function to set an intent ID in the Transfer Bot Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html). The intent ID is derived from the supplied domain name and intent name. You can retrieve the domain name that you need from the UI. And you can retrieve the intent name that you need from the UI or via [getDialogStarterIntent](conversation-builder-scripting-functions-functions-list.html). During the transfer, the system uses the domain name and the intent name to ascertain and pass the intent ID.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -61,7 +61,7 @@ botContext.setBotTransferIntentbyDomain("billing question", "Billing");
 
 ### Set bot transfer intent ID
 
-Use the `setBotTransferIntentId` function to set an intent ID in the Bot Transfer Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html). You can retrieve the intent ID that you need from the application URL if you're logged into Conversation Builder directly and know how. Otherwise, use [setBotTransferIntentbyDomain](conversation-builder-scripting-functions-functions-list.html) instead.
+Use the `setBotTransferIntentId` function to set an intent ID in the Transfer Bot Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html). You can retrieve the intent ID that you need from the application URL if you're logged into Conversation Builder directly and know how. Otherwise, use [setBotTransferIntentbyDomain](conversation-builder-scripting-functions-functions-list.html) instead.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -75,7 +75,7 @@ botContext.setBotTransferIntentId("d46688d7-7ec2-44a4-a09c-b500f728ee05");
 
 ### Set bot transfer user message
 
-Use the `setBotTransferUserMessage` function to set a user message in the Bot Transfer Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html).
+Use the `setBotTransferUserMessage` function to set a user message in the Transfer Bot Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |

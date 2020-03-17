@@ -504,11 +504,11 @@ In this step, you set up an "escalation" to transfer the user to a human agent i
 
 5. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
 
-6. Add an [Escalation Integration interaction](conversation-builder-interactions-integrations.html#escalation-integration-interactions) beneath the User Says interaction.
+6. Add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) beneath the User Says interaction.
 
 7. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
-8. Still in the Escalation Integration interaction, open the **Interaction Details**, and click the **Settings** tab.
+8. Still in the Agent Transfer interaction, open the **Interaction Details**, and click the **Settings** tab.
 
 9. In the **Agent Skill Id** field, enter the ID number of the human skill that you created; you wrote this down earlier.
 

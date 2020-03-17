@@ -42,23 +42,23 @@ We've likewise added a second condition that checks for a "failure" result **(1)
 
  <img style="width:800px" src="img/ConvoBuilder/integrations_api_failure.png">
 
-### Escalation Integration interactions
+### Agent Transfer interactions
 
-Use an Escalation Integration interaction in a dialog when you want to escalate (transfer) a conversation from a bot to a live agent or from a bot in one bot group to a bot in a *different* group.
+Use an Agent Transfer interaction in a dialog when you want to transfer a conversation from a bot to a live agent, or from a bot in one bot group to a bot in a *different* group.
 
 For some practice with this interaction type, complete the [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html).
 
 {: .important}
-There are two ways to implement an escalation: You can add an Escalation Integration interaction, *as discussed here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Escalation Integration interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Escalation Integration interaction, you *don't* need to create a supporting integration.
+There are two ways to implement a transfer: You can add an Agent Transfer interaction, *as discussed here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Agent Transfer interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.
 
 {: .important}
 Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.
 
-#### Add an Escalation interaction
+#### Add an Agent Transfer interaction
 
-**To add an Escalation interaction**
+**To add an Agent Transfer interaction**
 
-1. Select the interaction just above where you want to add the escalation, and click <img style="width:30px" src="img/ConvoBuilder/icon_escalation_integr.png"> (Escalation Integration) on the interactions toolbar.
+1. Select the interaction just above where you want to add the transfer, and click <img style="width:30px" src="img/ConvoBuilder/icon_escalation_integr.png"> (Agent Transfer) on the interactions toolbar.
 2. In the interaction, enter the message to send to the user prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Escalating to agent..."
 
     <img style="width:600px" src="img/ConvoBuilder/interactions_esc1.png">
@@ -68,9 +68,9 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 
     * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in LiveEngage. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 
-        When the escalation is attempted, the Agent Skill Id is evaluated first; if it isn't numeric, the fallback message is sent to the user. If the value is numeric, but the bot doesn't respond for more than 3 minutes, an attempt is made to transfer the escalation to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-an-agent-connector)*. Otherwise, the escalation fails. For information on handling failures, see below here.
+        When the transfer is attempted, the Agent Skill Id is evaluated first; if it isn't numeric, the fallback message is sent to the user. If the value is numeric, but the bot doesn't respond for more than 3 minutes, an attempt is made to transfer to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-an-agent-connector)*. Otherwise, the transfer fails. For information on handling failures, see below here.
 
-    * **Bot Transfer Context**: Used for [manual, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) only. Select this to *automatically* pass the user's intent and/or message from the sender bot to the receiver bot. This lets the receiver bot know the appropriate dialog to start after the transfer.
+    * **Transfer Bot Context**: Used for [manual, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) only. Select this to *automatically* pass the user's intent and/or message from the sender bot to the receiver bot. This lets the receiver bot know the appropriate dialog to start after the transfer.
 
 4. Click **Save**.
 
