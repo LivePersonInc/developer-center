@@ -26,8 +26,8 @@ As an example, examine the illustration below of a Customer Service bot and a Sa
 
 You can transfer a conversation from one bot to another in two general ways:
 
-* Automatic transfer via bot group
-* Manual transfer via an Agent Transfer interaction or a LP Agent Escalation integration
+* Automatic transfer via [bot group](conversation-builder-bots-bot-groups.html)
+* Manual transfer via an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) or a [LP Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html)
 
 Importantly, both approaches allow for the transfer of the user's intent and/or message, which ensures a seamless hand-off.
 
@@ -35,7 +35,7 @@ Importantly, both approaches allow for the transfer of the user's intent and/or 
 
 #### What's an automatic transfer?
 
-Automatic transfers use [bot groups](conversation-builder-bots-bot-groups.html) to support the discovery of bots that are qualified to handle requests and can accept transfers. You create the groups, assign bots to them, and enable collaboration. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, transfer of the conversation happens automatically.
+Automatic transfers use [bot groups](conversation-builder-bots-bot-groups.html) to support the discovery of bots that are qualified to handle requests and can accept transfers. You create the groups, assign bots to them, and [enable collaboration](conversation-builder-bots-bot-groups.html#enable-or-disable-collaboration-for-a-bot-group). A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, transfer of the conversation happens automatically.
 
 <img style="width:650px" src="img/ConvoBuilder/bots_collab5.png">
 
@@ -70,8 +70,8 @@ A manual, bot-to-bot transfer is one where you transfer the conversation to a sp
 
 Manual transfers are done via:
 
-* An Agent Transfer interaction (simpler) 
-* A LP Agent Escalation integration (more complex)
+* An [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) (simpler, more convenient) 
+* A [LP Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) (more complex)
 
 #### Why use a manual transfer?
 
@@ -82,13 +82,13 @@ You'll need to use a manual transfer in two situations:
 
 #### Making manual transfers seamless
 
-In a manual transfer, you can *automatically* pass the intent and/or user message from the sender bot to the receiver bot by selecting the **Transfer Bot Context** checkbox in the [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration:
-   
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab1.png">
-
-Or, if you've used an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) instead, you can do this in the interaction's settings:
+In a manual transfer, you can *automatically* pass the intent and/or user message from the sender bot to the receiver bot by selecting the **Transfer Bot Context** checkbox in the [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions):
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab9.png">
+
+Or, if you've used a [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration instead, you can do this in the integration:
+   
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab1.png">
 
 No coding is required.
 
