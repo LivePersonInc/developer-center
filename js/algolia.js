@@ -13,6 +13,7 @@ const searchInstance = autocomplete(
       source: autocomplete.sources.hits(devIndex, {hitsPerPage: 100}),
       displayKey: '',
       name: 'dev', /* class aa-dataset-dev */
+      //how a result will be returned in the search dropdown
       templates: {
         suggestion: function(suggestion) {
           let value = suggestion.pagename;
@@ -23,6 +24,7 @@ const searchInstance = autocomplete(
           let category = suggestion.categoryname;
           let title = $('h1');
           let titletext = title.text();
+          //if the result has highlighting, populate var with it instead of the non-highlighted text
           if (suggestion._highlightResult.pagename) {
             value = suggestion._highlightResult.pagename.value;
           }
@@ -35,11 +37,11 @@ const searchInstance = autocomplete(
           if (suggestion._highlightResult.documentname) {
             documentName = suggestion._highlightResult.documentname.value;
           }
-          if (documentName) {
+          if (documentName && category) {
           return (
             '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + ' - ' + documentName + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
           )
-        } else {
+        } else if (category) {
           return (
             '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + '</span><span class="searchContentHeading">' + headings + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
           )
@@ -51,6 +53,7 @@ const searchInstance = autocomplete(
     ]
 );
 
+//control the blur when dropdown is shown
 searchInstance.on({
   'autocomplete:shown': function() {
     var content = document.getElementById('defaultcontent');
