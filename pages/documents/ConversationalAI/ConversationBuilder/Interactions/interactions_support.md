@@ -34,7 +34,7 @@ N/A = Not Available
 | List Picker question | N/A | N/A |
 | Time Picker question | N/A | N/A |
 | Integration | Yes | Yes |
-| Escalation integration | Yes | Yes|
+| Agent Transfer integration | Yes | Yes|
 | Apple Pay integration | N/A | N/A |
 
 ### SMS-related applications
@@ -58,7 +58,7 @@ N/A = Not Available
 | List Picker question | Yes | N/A | N/A |
 | Time Picker question | Yes | N/A | N/A |
 | Integration | Yes | Yes | Yes |
-| Escalation integration | Yes | Yes | Yes |
+| Agent Transfer integration | Yes | Yes | Yes |
 | Apple Pay integration | Yes | N/A | N/A |
 
 ### Instant messaging applications
@@ -82,7 +82,7 @@ N/A = Not Available
 | List Picker question | N/A | N/A | N/A |
 | Time Picker question | N/A | N/A | N/A |
 | Integration | Yes | Yes | Yes |
-| Escalation integration | Yes | Yes | Yes |
+| Agent Transfer integration | Yes | Yes | Yes |
 | Apple Pay integration | N/A | N/A | N/A |
 
 ### APIs
@@ -106,5 +106,5 @@ N/A = Not Available
 | List Picker question | N/A | N/A |
 | Time Picker question | N/A | N/A |
 | Integration | Yes | Yes |
-| Escalation integration | Yes | Yes |
+| Agent Transfer integration | Yes | Yes |
 | Apple Pay integration | N/A | N/A |
