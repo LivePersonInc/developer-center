@@ -71,7 +71,7 @@ A manual, bot-to-bot transfer is one where you transfer the conversation to a sp
 Manual transfers are done via:
 
 * An [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) (simpler, more convenient) 
-* An [LP Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) (more complex)
+* A [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) (more complex)
 
 #### Why use a manual transfer?
 
