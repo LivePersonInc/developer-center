@@ -111,7 +111,9 @@ If a connector enters an Offline status, which is an error status, click **Detai
 
 <img class="fancyimage" style="width:375px" src="img/ConvoBuilder/deploy_detailsMsgs.png">
 
-In the event of a failed connection, wait some time, and then try to stop and restart the connector. If you still need assistance, please contact your LivePerson representative.
+* **Failed connection**: In the event of a failed connection, wait some time, and then try to stop and restart the connector. If you still need assistance, please contact your LivePerson representative.
+
+* **401 "unauthorized" error**: This error can occur if you try to add an agent connector for a bot user that wasn't created by you. Either add the agent connector for a different bot user, or have the creator of the bot user add the agent connector.
 
 ### Deployment statuses
 An agent connector can have one of the following statuses:
