@@ -134,7 +134,7 @@ By default, the value is set to **true**.
    LPConfig.defaultConfiguration.maxNumberOfSavedDocumentsOnDisk 
    ```
 
-   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
+   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest downloaded file.
 
 2. Change the background color of attachment menu:
 
