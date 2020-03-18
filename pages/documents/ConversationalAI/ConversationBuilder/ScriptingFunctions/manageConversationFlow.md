@@ -46,7 +46,7 @@ By default, a single text interaction has a limit of 320 characters on the word 
 To accomplish this, use this function in the pre-process code of the interaction (i.e., before the interaction is rendered). You can then revert it if desired in a subsequent interaction.
 
 {: .important}
-Keep in mind the limits of the targeted channel(s), and limit the amount of text per interaction if warranted.
+Keep in mind the limits of the targeted channel(s), which might take precedence over this setting.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
