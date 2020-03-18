@@ -18,7 +18,12 @@ You can create bot groups and add bots to them for two purposes:
 
 * You want to enable [automatic, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group) for the bots within a given bot group.
 
-It's common to organize bots into groups based on business function, e.g., Checking group/Savings group, Home Loan group/Auto Loan group, and so on. Alternatively, you could organize all your Development bots into one group, your Staging bots into another, and your Production bots into still another.
+It's common to organize bots into groups based on business function. You could then further organize them based on environment. For example, you might have bot groups for:
+
+* Checking - Dev
+* Checking - Prod
+* Savings - Dev
+* Savings - Prod
 
 Note the following about the bots dashboard when bot groups exist:
 

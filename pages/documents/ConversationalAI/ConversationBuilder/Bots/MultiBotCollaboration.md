@@ -124,7 +124,12 @@ No, apart from configuring the transfer message in the [bot group](conversation-
 The system first looks for a bot with a matching pattern. If one is found, that bot is selected. Otherwise, it then looks for a bot with a matching intent. If one is found, that bot is selected. And if multiple matching intents are found, the bot with the highest match score is selected.
 
 #### How many bot groups do I need?
-There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, create a bot group whenever you want to divide the bots into groups, such that collaboration occurs only within the group. It's common to organize bots into groups based on business function, e.g., Checking group/Savings group, Home Loan group/Auto Loan group, and so on. Alternatively, you could organize all your Development bots into one group, your Staging bots into another, and your Production bots into still another.
+There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, create a bot group whenever you want to divide the bots into groups, such that collaboration occurs only within the group. It's common to organize bots into groups based on business function. You could then further organize them based on environment. For example, you might have bot groups for:
+
+* Checking - Dev
+* Checking - Prod
+* Savings - Dev
+* Savings - Prod
 
 #### Can I keep bot collaboration disabled and use bot groups only as a mechanism for grouping my bots?
 Yes, this is perfectly fine. For information on creating a group for this purpose, see [here](conversation-builder-bots-bot-groups.html#create-a-bot-group-only-to-group-bots).
