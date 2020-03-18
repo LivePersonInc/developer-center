@@ -13,11 +13,6 @@ permalink: conversation-builder-bots-bot-basics.html
 indicator: both
 ---
 
-### Create a bot
-
-* For details on creating a custom bot, see [here](conversation-builder-bots-custom-bots.html).
-* For details on creating a survey bot, see [here](conversation-builder-bots-survey-bots.html).
-
 ### Configure bot settings
 
 **To configure bot settings**
