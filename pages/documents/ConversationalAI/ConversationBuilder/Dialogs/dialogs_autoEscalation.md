@@ -11,7 +11,7 @@ indicator: both
 
 ### Why use an Auto Escalation dialog?
 
-The purpose of the Auto Escalation dialog is to free the consumer from being stuck within a question. This can happen when the bot doesn't recognize the consumer's input. Because the bot can't determine the next step that should happen, the [fallback response]((conversation-builder-dialogs-fallback-dialogs.html)) is sent, and the consumer is returned to the place where the failure occurred. The fallback response is repeated after each unrecognizable input, resulting in a stuck conversation. The consumer's predicament is illustrated in the example below.
+The purpose of the Auto Escalation dialog is to free the consumer from being stuck within a question. This can happen when the bot doesn't recognize the consumer's input. Because the bot can't determine the next step that should happen, the [fallback response](conversation-builder-dialogs-fallback-dialogs.html) is sent, and the consumer is returned to the place where the failure occurred. The fallback response is repeated after each unrecognizable input, resulting in a stuck conversation. The consumer's predicament is illustrated in the example below.
 
 <img style="width:350px" src="img/ConvoBuilder/dialogs_autoEscalate1.png">
 
@@ -49,7 +49,7 @@ If the default dialog implementation doesn't meet your requirements, build out a
 When you create the dialog, you configure two important settings that you might want to change afterward:
 
 * **Auto Escalation Threshold**: Change this in the [dialog's settings](conversation-builder-dialogs-dialog-basics.html#configure-dialog-settings).
-* **Agent Skill Id**: Change this in the [interaction's settings](conversation-builder-interactions-details-settings.html#access-the-settings-tab).
+* **Agent Skill Id**: Change this in the settings of the [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
 
 ### FAQs
 
