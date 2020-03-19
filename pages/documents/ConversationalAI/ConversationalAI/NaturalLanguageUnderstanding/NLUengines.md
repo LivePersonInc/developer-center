@@ -50,7 +50,7 @@ This version is a classifier model based on Convolutional Neural Network (CNN) u
 
 To perform effectively, NLU v2 expects large sets of data (both intents and training phrases). Additionally, it's preferable to have a maximum of *two* entities per sample sentence, for example, "I want a COLOR SIZE shirt."
 
-When you create a domain with NLU v2 and use it in LiveIntent or in Conversation Builder, the following is recommended:
+When you create a domain with NLU v2 and use it in Intent Analyzer or in Conversation Builder, the following is recommended:
 
 * At least 5 intents in order to [train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain)
 * At least 20 training phrases per intent
