@@ -6,3 +6,4 @@ _pdf
 .DS_Store
 .bundle
 _algolia_api_key
+.vscode

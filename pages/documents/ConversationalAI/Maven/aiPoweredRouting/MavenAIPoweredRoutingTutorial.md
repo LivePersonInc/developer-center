@@ -41,13 +41,13 @@ A CB bot will handle the incoming consumer message, and then use Maven AI routin
 
 1. In LiveEngage navigate to Conversation Builder and then click New Bot
 
-<img class="fancyimage" width="750" src="img/maven/cb-page.png">
+    <img class="fancyimage" width="750" src="img/maven/cb-page.png">
 
-<img class="fancyimage" width="750" src="img/maven/cb-buttons.png">
+    <img class="fancyimage" width="750" src="img/maven/cb-buttons.png">
 
 2. Chose the Maven CB Bot template from the Bot Template Menu
 
-<img class="fancyimage" width="750" src="img/maven/cb-choose-bot.png">
+    <img class="fancyimage" width="750" src="img/maven/cb-choose-bot.png">
 
 3. The template is pre-wired with the following integrations
 
@@ -77,35 +77,35 @@ A CB bot will handle the incoming consumer message, and then use Maven AI routin
 
 1. Open the bot. On the top navigation click on Global Functions and edit the following fields. Use the following values based on which zone your account is hosted:
 
-<img class="fancyimage" width="750" src="img/maven/cb-global-fns.png">
+    <img class="fancyimage" width="750" src="img/maven/cb-global-fns.png">
 
-  a. deploymentZone: 
-  
-    i. z1 - Americas
-    
-    ii. z2 - EMEA
-    
-    iii. z3 - APAC
+    a. deploymentZone: 
 
-  b. accountId: Your LiveEngage account ID
+      i. z1 - Americas
 
-  c. mavenNamespace: The Maven namespace is used for organizing a set of attributes you may want to use in a policy. See [Context Warehouse Session Store](maven-ai-context-warehouse-context-session-store.html) for more information on how this works. 
+      ii. z2 - EMEA
 
-    i. Please enter myNameSpace. You will use this name in a routing policy. 
+      iii. z3 - APAC
 
-    ii. Note: Conversation builder is already integrated with the Context Session store. You can manage the session store from inside Conversation builder using [scripting functions](conversation-builder-scripting-functions-manage-the-context-session-store.html). 
+    b. accountId: Your LiveEngage account ID
 
-  d. mavenApiKey: copy and paste the Developer Key from Maven Workspace
+    c. mavenNamespace: The Maven namespace is used for organizing a set of attributes you may want to use in a policy. See [Context Warehouse Session Store](maven-ai-context-warehouse-context-session-store.html) for more information on how this works. 
 
-  e. Click save
+      i. Please enter myNameSpace. You will use this name in a routing policy. 
 
-  f. CB_API_KEY: On the top right click on the Key Icon, and then copy and paste the key in “Your API Access Key”
+      ii. Note: Conversation builder is already integrated with the Context Session store. You can manage the session store from inside Conversation builder using [scripting functions](conversation-builder-scripting-functions-manage-the-context-session-store.html). 
 
-<img class="fancyimage" width="750" src="img/maven/cb-keys.png">
+    d. mavenApiKey: copy and paste the Developer Key from Maven Workspace
+
+    e. Click save
+
+    f. CB_API_KEY: On the top right click on the Key Icon, and then copy and paste the key in “Your API Access Key”
+
+    <img class="fancyimage" width="750" src="img/maven/cb-keys.png">
 
 2. [Deploy the bot in LiveEngage](conversation-builder-testing-deployment-deploying-to-liveengage.html)
 
-  a. See next step for how to setup a skill in LiveEngage to accent the incoming conversations.
+    a. See next step for how to setup a skill in LiveEngage to accent the incoming conversations.
 
 
 ### Setup LiveEngage
@@ -137,7 +137,7 @@ In this example we will create and use static attributes. To check if a customer
 
 1. Login to Maven Workspace using your LPA or Admin Credentials, and then navigate to Context Warehouse/Custom. 
 
-<img class="fancyimage" width="750" src="img/maven/workspace-custom.png">
+    <img class="fancyimage" width="750" src="img/maven/workspace-custom.png">
 
 2. Click on Add New, 
 
@@ -148,7 +148,7 @@ In this example we will create and use static attributes. To check if a customer
     c. In the Value, select List type and then copy these values +155555501, +155555502, +155555503. Click Save. 
 
 
-<img class="fancyimage" width="750" src="img/maven/workspace-custom-values.png">
+    <img class="fancyimage" width="750" src="img/maven/workspace-custom-values.png">
 
 3. Click on Add New
 
@@ -192,7 +192,7 @@ In this example we will create and use static attributes. To check if a customer
     
     e. In the Actions block in the first drop-down box select Transfer to a skill, and then select the Vip Support skill from the drop-down (Skills must be created in LiveEngage prior to this step). 
     
-      i. Please note not to select the skill used for the Maven Bot since this would create a circular loop with the policy. 
+    i. Please note not to select the skill used for the Maven Bot since this would create a circular loop with the policy. 
     
     f. Click Save to save the policy
 
@@ -267,13 +267,13 @@ We will be using the Context Session store to store a phone number, and then use
     a. This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, we are retrieving this value from a session attribute (myNameSpace.phoneNumber), that we created earlier. 
 
 
-<img class="fancyimage" width="750" src="img/maven/workspace-viprule-session.png"/>
+    <img class="fancyimage" width="750" src="img/maven/workspace-viprule-session.png"/>
 
 3. Create a new regular customer policy by clicking add policy 
 
     a. This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, we are retrieving this value from a session attribute (myNameSpace.phoneNumber), that we created earlier.
 
-<img class="fancyimage" width="750" src="img/maven/workspace-regular-customer-rule-session.png"/>
+    <img class="fancyimage" width="750" src="img/maven/workspace-regular-customer-rule-session.png"/>
 
 4. Enable both policies by clicking on the toggle switches. 
 
@@ -317,7 +317,7 @@ In the previous example we checked for the phone number in a static list. Mainta
     
     b. Add parameters to this function by selecting Attribute and then typing myNameSpace.phoneNumber.
     
-        i. Please note that myNameSpace is the name you used in the Conversation Builder template setup step in the begining. 
+    i. Please note that myNameSpace is the name you used in the Conversation Builder template setup step in the begining. 
     
     c. Note: creating and deploying a FaaS function is beyond the scope of this document and hence not covered.
 
@@ -351,7 +351,7 @@ To add additional context:
 
 2. Edit the code to add more contextual information. The following shows how the phone number is added
 
-    ```js
+    ```javascript
     var phoneNumber = getVar("phoneNumber");
 
     botContext.setContextDataForConversation(mavenNamespace, "phoneNumber", phoneNumber);
@@ -360,26 +360,13 @@ To add additional context:
     a. Similarly you can add other attribute for example an intent
 
 
-    ```js
+    ```javascript
     botContext.setContextDataForConversation(mavenNamespace, "intent", intent);
     ```
 
 3. You can now use this in a policy by using a condition on <mavenNamespace>.intent. In the following example the namespace is “myNameSpace”
 
     <img class="fancyimage" width="750" src="img/maven/workspace-conditions.png"/>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- To learn more about policies and how to create/manage them, see [Intent & Context Policies](maven-ai-powered-routing-intent-context-policies.html). -->
