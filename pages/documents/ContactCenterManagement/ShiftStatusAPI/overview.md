@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Shift Status API
 permalink: shift-status-api-overview.html
-indicator: messaging
+indicator: both
 ---
 
 This API allows clients to check whether the requested skill, or all skills of the account, are currently in an active shift - based on the skill's configuration (whether defined on the account level via the account shift scheduler or overriden by the skill's configuration).

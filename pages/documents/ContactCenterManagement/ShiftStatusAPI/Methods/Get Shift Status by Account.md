@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Shift Status API
 subfoldername: Methods
-indicator: messaging
+indicator: both
 permalink: shift-status-api-methods-get-shift-status-by-account.html
 ---
 

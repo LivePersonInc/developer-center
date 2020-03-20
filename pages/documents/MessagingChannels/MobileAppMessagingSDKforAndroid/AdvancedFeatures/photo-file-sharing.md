@@ -109,7 +109,7 @@ Consumers can share:
    <integer name="max_number_stored_voice_files">
    ```
 
-   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
+   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest downloaded file.
 
 2. Set the max image size:
 

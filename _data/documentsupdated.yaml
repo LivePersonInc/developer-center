@@ -613,7 +613,7 @@
           - subpagename: Authorization Code
           - subpagename: Error Codes
           - subpagename: Java Client
-          - subpagename: Javascript Client
+          - subpagename: JavaScript Client
       - pagename: Integrations
         subpages:
           - subpagename: Post Chat Survey Transcripts
