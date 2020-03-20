@@ -88,7 +88,7 @@ In a manual transfer, you can *automatically* pass the intent and/or user messag
 
 Or, if you've used a [LivePerson Agent Escalation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) integration instead, you can do this in the integration:
    
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab1.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bots_collab1.png">
 
 No coding is required.
 
@@ -100,12 +100,12 @@ During the transfer, the receiver bot checks for the availability of a Transfer 
 
 #### Overwriting the intent or user message
 
-Occasionally, you might want to overwrite the intent or user message that is passed in the Transfer Bot Context object during a manual transfer. To do this, somewhere in the dialog *before* calling the escalation, use a "bot transfer" function:
+Occasionally, you might want to overwrite the intent or user message that is passed in the Transfer Bot Context object during a manual transfer. To do this, somewhere in the dialog *before* calling the transfer, use a "bot transfer" function:
 
 * To overwrite the user message, use [setBotTransferUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-user-message).
 * To overwrite the intent, you can use [setBotTransferIntentbyDomain](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-by-domain). The system will ascertain and pass the intent ID based on the provided domain name and intent name. Alternatively, you can use [setBotTransferIntentID](conversation-builder-scripting-functions-get-set-contextual-data.html#set-bot-transfer-intent-id).
 
-In our example below, we've overwritten the user message, and we've done this in the Pre-Process Code in the Escalation Integration interaction.
+In our example below, we've overwritten the user message, and we've done this in the Pre-Process Code in the Agent Transfer interaction.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/bots_collab2.png">
 

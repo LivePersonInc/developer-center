@@ -42,7 +42,7 @@ A bot can have only one Auto Escalation dialog.
 
 By default, an Auto Escalation dialog includes a Yes/No multiple choice question that asks the consumer if they want to speak to a live agent. If the consumer says Yes, the escalation (transfer) occurs. If the consumer says No, the interaction ends.
 
-<img style="width:800px" src="img/ConvoBuilder/dialogs_autoEscalate3.png">
+<img style="width:900px" src="img/ConvoBuilder/dialogs_autoEscalate3.png">
 
 If the default dialog implementation doesn't meet your requirements, build out and/or modify the dialog. For information on configuring Agent Transfer interactions, see [here](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
 

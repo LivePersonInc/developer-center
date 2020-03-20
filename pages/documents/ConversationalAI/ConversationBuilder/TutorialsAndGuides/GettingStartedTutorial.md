@@ -504,7 +504,7 @@ In this step, you set up an "escalation" to transfer the user to a human agent i
 
 5. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
 
-6. Add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) beneath the User Says interaction.
+6. Add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) ( <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png"> ) beneath the User Says interaction.
 
 7. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
