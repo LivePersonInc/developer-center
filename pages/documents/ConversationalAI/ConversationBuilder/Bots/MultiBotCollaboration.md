@@ -117,7 +117,7 @@ In a transfer from one bot to another--whether automatic or manual--the receiver
 
 #### If I have collaboration enabled for a bot group, do I have any control over whether and when automatic transfers occur?
 
-No, apart from configuring the transfer message in the [bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers), you don't have any control over how automatic transfers are performed.
+No, apart from [configuring the transfer message](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers) in the bot group, you don't have any control over how automatic transfers are performed.
 
 #### During an automatic transfer, how is a bot within a bot group chosen to handle a request?
 
