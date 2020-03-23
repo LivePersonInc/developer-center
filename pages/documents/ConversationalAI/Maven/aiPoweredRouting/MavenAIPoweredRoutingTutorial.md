@@ -81,19 +81,19 @@ A CB bot will handle the incoming consumer message, and then use Maven AI routin
 
     a. deploymentZone: 
 
-      i. z1 - Americas
+        i. z1 - Americas
 
-      ii. z2 - EMEA
+        ii. z2 - EMEA
 
-      iii. z3 - APAC
+        iii. z3 - APAC
 
     b. accountId: Your LiveEngage account ID
 
     c. mavenNamespace: The Maven namespace is used for organizing a set of attributes you may want to use in a policy. See [Context Warehouse Session Store](maven-ai-context-warehouse-context-session-store.html) for more information on how this works. 
 
-      i. Please enter myNameSpace. You will use this name in a routing policy. 
+        i. Please enter myNameSpace. You will use this name in a routing policy. 
 
-      ii. Note: Conversation builder is already integrated with the Context Session store. You can manage the session store from inside Conversation builder using [scripting functions](conversation-builder-scripting-functions-manage-the-context-session-store.html). 
+        ii. Note: Conversation builder is already integrated with the Context Session store. You can manage the session store from inside Conversation builder using [scripting functions](conversation-builder-scripting-functions-manage-the-context-session-store.html). 
 
     d. mavenApiKey: copy and paste the Developer Key from Maven Workspace
 
@@ -192,7 +192,7 @@ In this example we will create and use static attributes. To check if a customer
     
     e. In the Actions block in the first drop-down box select Transfer to a skill, and then select the Vip Support skill from the drop-down (Skills must be created in LiveEngage prior to this step). 
     
-    i. Please note not to select the skill used for the Maven Bot since this would create a circular loop with the policy. 
+        i. Please note not to select the skill used for the Maven Bot since this would create a circular loop with the policy. 
     
     f. Click Save to save the policy
 
@@ -317,7 +317,7 @@ In the previous example we checked for the phone number in a static list. Mainta
     
     b. Add parameters to this function by selecting Attribute and then typing myNameSpace.phoneNumber.
     
-    i. Please note that myNameSpace is the name you used in the Conversation Builder template setup step in the begining. 
+        i. Please note that myNameSpace is the name you used in the Conversation Builder template setup step in the begining. 
     
     c. Note: creating and deploying a FaaS function is beyond the scope of this document and hence not covered.
 
