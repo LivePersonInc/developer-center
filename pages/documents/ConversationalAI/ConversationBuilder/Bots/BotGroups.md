@@ -87,13 +87,3 @@ You can delete a bot group at any time; this *doesn't* delete the bots therein. 
 No, this isn't required. Bots that aren't assigned to a bot group are listed below the bot groups.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botGroups_unassigned.png">
-
-#### I created a bot group, but I don't see it listed on the bots dashboard. What happened?
-
-The bots dashboard only displays the bot groups that contain bots (as well as all unassigned bots); a bot group with no bots within it isn't displayed there.
-
-If you created a new bot group within a bot's **Bot Settings** when you were assigning the bot to a group...
-
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/botGroups_createGroup.png">
-
-...but you didn't end up assigning the new bot group to the bot at that time, the new bot group won't be displayed on the bots dashboard because it doesn't have any bots within it. To resolve this, go into a bot's **Bot Settings** and assign the bot group to the bot. You'll see the bot group displayed in the pick list of available bot groups (shown above).

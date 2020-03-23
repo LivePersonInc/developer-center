@@ -42,7 +42,6 @@ Available with IBM Watson or Google Dialogflow:
 * Japanese (Japan)
 * Korean (Korea)
 * Portuguese (Brazil)
-* Russian
 * Spanish (Mexico, Spain)
 * Turkish (Turkey)
 
