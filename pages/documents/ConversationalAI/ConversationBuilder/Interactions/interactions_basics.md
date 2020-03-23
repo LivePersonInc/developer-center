@@ -20,7 +20,7 @@ There are four, general categories of interactions:
 
 - **Questions**: Questions present information to the user (a text-based question, a list of things to pick from, etc.), and they expect and wait for a user response before executing the next action. In a question interaction, you can define conditions that evaluate the user’s response against a set of criteria. If a condition is met, its next action is then performed. For example, if the user enters a valid email address, then an email could be sent. For more on questions, see [here](conversation-builder-interactions-questions.html).
 
-- **Integrations**: Integrations make programmatic (API) calls to retrieve or post data to external systems and/or to perform actions. Integrations simply perform their work and then execute the next action. However, if the integration retrieves data, that data can be stored in custom fields, so you can use it in subsequent interactions. Integrations are similar to questions in that you can define conditions that each perform different next actions (based on which condition is met). One common use for this is to check whether the integration call was a success or failure and then to execute a next action that’s appropriate. For more on integrations, see [here](conversation-builder-interactions-integrations.html).
+- **Integrations**: Integrations make programmatic (API) calls to retrieve or post data to external systems and/or to perform actions. Integrations simply perform their work and then execute the next action. However, if the integration retrieves data, that data can be stored in custom fields, so you can use it in subsequent interactions. Integrations are similar to questions in that you can define conditions that each perform different next actions (based on which condition is met). Common uses for this include checking whether the integration call was a success or failure, having a condition triggered by the value of an API response, and having these events direct the flow of the conversation in a desired manner. For more on integrations, see [here](conversation-builder-interactions-integrations.html).
 
 ### General guidelines and best practices
 One of the goals and challenges in developing interactions is creating a unified implementation and consumer experience across channels. When working with structured content in particular, LivePerson recommends that you find the "common denominator" across mobile messaging, web messaging, and Facebook Messenger with respect to a given element's attributes. For example, in a structured question, LiveEngage allows up to 128 characters for the button label, but Facebook does not allow more than 20 characters. Depending on your implementation, constraints like this might play a role.
@@ -47,20 +47,45 @@ The types of text that you can send in a Conversation Builder interaction vary d
 * `<br>`
 
 ### Whitelisting
-The domains in all URLs for images, videos, audio files, and button links used in interactions must be whitelisted. Contact your LivePerson representative to assist with this.
 
-For Facebook in particular, whitelisting must be done in two places: Images must be whitelisted on the LivePerson side, and web URLs must be whitelisted within Facebook page settings. The latter must be performed by the owner of the Facebook page.
+#### Images and other media
+You must whitelist the domains in all URLs for images, videos, and audio files used in interactions. Contact LivePerson Support to assist with this.
 
-{: .important}
-Conversation Builder shortens lengthy web links using the following abbreviated domain: https://s.bcbot.io, which must be whitelisted in the Facebook page settings.
+If you've enabled the **Shorten URLs** setting in a bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) to shorten lengthy web links, the shortened domain that's applied to all URLs must also be whitelisted. The shortened domain varies by region, and the domain for your region appears below the setting. An example is below.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bot_shortenURLs.png">
+
+#### Web link URLs (Facebook only)
+
+For Facebook, the owner of the Facebook page must whitelist the domains (shortened or otherwise) in all web link URLs, including button links, within the Facebook page settings.
+
+### URL shortening
+
+If you have lengthy web links, you might want to enable the shortening of URLs. You can enable this at the bot level using the **Shorten URLs** setting in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
+
+As an example, if you enable URL shortening, a URL like this...
+
+http://www.myexample.com/folder1/folder2/veryverylongstringhere.html
+
+...is shortened to this:
+
+http://{abbreviated domain}/{unique code}
+
+If you enable URL shortening, it's applied to *all* URLs (for websites, images, etc.) in all types of interactions. There is one exception: If shortening is enabled, but the URL contains only the domain (e.g., http://www.mysite.com), the URL isn't shortened.
+
+If you enable URL shortening, the shortened domain must be whitelisted; for more information, see *Whitelisting* above.
 
 ### Images
 
-As long as the image is [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting), it will be sent to the consumer. Provide high-resolution images in the appropriate format: JPEG for photos, PNG for bitmap/raster artwork. Make sure the images are interesting and aesthetically pleasing, and verify their quality before use. Keep the images as small in size as possible, so they load quickly.
+As long as the image is whitelisted (discussed above), it will be sent to the consumer. Provide high-resolution images in the appropriate format: JPEG for photos, PNG for bitmap/raster artwork. Make sure the images are interesting and aesthetically pleasing, and verify their quality before use. Keep the images as small in size as possible, so they load quickly.
 
 The Apple developers' site provides some good, general guidelines regarding resolution, size, optimization, and more; you can find this [here](https://developer.apple.com/design/human-interface-guidelines/business-chat/interactive-messages/about-interactive-messages/#images).
 
 ### Add an interaction
+
+{: .important}
+When selecting an interaction to add, make sure it's supported by the channel you will be using. For a listing of which channels support which interactions, see [here](conversation-builder-interactions-interaction-support.html).
+
 **To add a new interaction to the end of the dialog**
 
 - Click <img style="width:100px" src="img/ConvoBuilder/btn_newInteraction.png"> , which appears below the last interaction, and then select the interaction icon from the toolbar that appears.
@@ -99,7 +124,11 @@ The basic operators available for use with pattern matching are:
 
 * Pipe, which denotes alternates.
 
-If you need more advanced operators, you can use [regular expressions](http://www.rexegg.com/regex-quickstart.html) with pattern matching.
+If you need more advanced operators, you can use [regular expressions](http://www.regexlib.com) with pattern matching.
+
+When defining a condition using a regular expression, click **Hint** to view and quickly copy commonly used regular expressions.
+
+<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/regex_hint.png">
 
 ### Display variables in interactions
 
@@ -122,7 +151,7 @@ This does not render when using the the Preview tool inside Conversation Builder
 
 #### Character Limit
 
-One single text interaction has a limit of 320 characters on word boundary before it gets split into 2 parts.
+One single text interaction has a limit of 320 characters on the word boundary before it gets split into 2 parts. However, you can override this behavior with the [setAllowMaxTextResponse](conversation-builder-scripting-functions-manage-conversation-flow.html#set-allow-max-text-response) scripting function.
 
 #### Break point within a large block of text
 
@@ -183,6 +212,9 @@ A disabled interaction is ignored in a dialog flow. Consider disabling an intera
 
 ### Delete an interaction
 Deleting an interaction is a non-recoverable action, so consider disabling the interaction as an alternative.
+
+{: .important}
+After you delete an interaction, verify that the interaction flow isn't broken as a result. You might need to modify the Next Step field in the remaining interactions so that the conversation flow works as expected.
 
 **To delete an interaction**
 

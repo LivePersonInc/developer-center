@@ -50,7 +50,7 @@ You can see from the example below, that having 2 entities match the training ph
 
 ### Using entities
 
-To refresh on using entities with intents, check out [this tutorial](conversation-builder-getting-started-2-intents.html). For using entities with Knowledge Base articles, review [this tutorial](knowledge-base-tutorial.html).
+To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, review [Knowledge Base tutorial](knowledge-base-tutorial.html).
 
 #### Can I detect entities using JavaScript?
 
