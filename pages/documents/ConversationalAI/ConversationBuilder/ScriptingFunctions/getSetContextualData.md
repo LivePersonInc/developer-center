@@ -45,6 +45,47 @@ if (count > 10) {
 }
 ```
 
+### Set bot transfer intent by domain
+
+Use the `setBotTransferIntentbyDomain` function to set an intent ID in the Transfer Bot Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html). The intent ID is derived from the supplied domain name and intent name. You can retrieve the domain name that you need from the UI. And you can retrieve the intent name that you need from the UI or via [getDialogStarterIntent](conversation-builder-scripting-functions-functions-list.html). During the transfer, the system uses the domain name and the intent name to ascertain and pass the intent ID.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `setBotTransferIntentbyDomain(intentName, domainName)` | *intentName (String)* – The name of the intent <br>*domainName (String)* - The name of the domain | None |
+
+#### Example
+
+```javascript
+botContext.setBotTransferIntentbyDomain("billing question", "Billing");
+```
+
+### Set bot transfer intent ID
+
+Use the `setBotTransferIntentId` function to set an intent ID in the Transfer Bot Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html). You can retrieve the intent ID that you need from the application URL if you're logged into Conversation Builder directly and know how. Otherwise, use [setBotTransferIntentbyDomain](conversation-builder-scripting-functions-functions-list.html) instead.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `setBotTransferIntentId(value)` | *value (String)* – The intent ID | None |
+
+#### Example
+
+```javascript
+botContext.setBotTransferIntentId("d46688d7-7ec2-44a4-a09c-b500f728ee05");
+```
+
+### Set bot transfer user message
+
+Use the `setBotTransferUserMessage` function to set a user message in the Transfer Bot Context object that can be sent from the sender bot to the receiver bot during a manual, [bot-to-bot transfer](conversation-builder-bots-bot-to-bot-transfers.html).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `setBotTransferUserMessage(value)` | *value (String)* – The user message | None |
+
+#### Example
+
+```javascript
+botContext.setBotTransferUserMessage("order status");
+```
 
 ### Get environment variable
 
@@ -115,21 +156,30 @@ The Get Conversation ID function will retrieve the conversation ID for the curre
 
 #### Example
 
-The following example will store the conversation ID in a variable inside your current pre/post process code call "convId". It will then save this value in a bot session variable.
-
 ```javascript
 // store the conversation id in a variable inside your current pre/post process code
 var convId = botContext.getConversationId();
-
-// save this in a bot session variable 
-botContext.setBotVariable("conversationId", convId, true, false);
 ```
 
-The bot session variable can then be accessed inside subsequent interactions or integrations using the following syntax:
+You can also use the `{$conversationId}` [system variable](conversation-builder-variables-slots.html#system-variables) to display the conversation ID as text in interactions or post bodies.
 
-`{$botContext.conversationId}`
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_0.png">
+### Get LP account ID
+
+The Get LP Account ID function retrieves the LiveEngage account ID for the current conversation.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getLPAccountId()` | None | LP account ID (string) |
+
+#### Example
+
+```javascript
+// store the LP account ID in a variable inside your current pre/post process code
+var acctId = botContext.getLPAccountId();
+
+```
+
 
 ### Get current user message
 
@@ -317,3 +367,63 @@ These functions retrieve session-scoped variables that were set via the [Web Vie
     botContext.getWebViewVariable('PaymentStatus'); // This returns the value as PROCESSED
 ```
 For the corresponding curl example, see the [Web View API](conversation-builder-integrations-web-view-integration-api.html) documentation.
+
+### Get type of hours
+
+Given an array of hours classified by type and a time zone, this method returns the type of hours.
+
+This method is commonly used to provide a different experience or messaging to the consumer during regular or after hours. Additionally, the method is able to handle generalized hours (e.g., REG_HOURS, AFTER_HOURS), hours for specific days of the week (FRIDAY, SATURDAY, etc.), and even specific dates (e.g., 12.25.2018 for Christmas).
+
+The time zone value should be the time zone of the agent call center, not the user. You can find the appropriate format for all time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| getHoursType(hoursSpec, zoneIdStr) | *hoursSpec (String array)* – The hours classified by type <br><br> *zoneIdStr (String)* – The time zone, e.g., “America/Los_Angeles” | The String that defines the type of hours, e.g., “AFTER_HOURS” | 
+
+#### Example
+
+```javascript
+var hoursSpec = [
+    "REG_HOURS~8:00~20:00",
+    "AFTER_HOURS~20:00~8:00",
+    "FRIDAY|WKEND_REG_HOURS~8:00~17:00",
+    "FRIDAY|WKEND_AFTER_HOURS~17:00~08:00",
+    "SATURDAY|WKEND_REG_HOURS~8:00~17:00",
+    "SATURDAY|WKEND_AFTER_HOURS~17:00~08:00",
+    "SUNDAY|WKEND_REG_HOURS~8:00~17:00",
+    "SUNDAY|WKEND_AFTER_HOURS~17:00~08:00",
+    "11.22.2018|HOLIDAY_THANKS~0:00~23:59",
+    "12.25.2018|HOLIDAY_XMAS~0:00~23:59"
+];
+
+var type = botContext.getHoursType(hoursSpec, "America/Los_Angeles");
+
+// TEST FOR type and set the transferMessage to result
+switch(type){
+  case "REG_HOURS":
+  case "WKEND_REG_HOURS":
+    msg = "Let me connect you to an Agent who can help you.";
+    botContext.setBotVariable('transferMessage',msg,true,false);
+    botContext.setTriggerNextMessge('Liveperson Transfer');
+    break;
+
+  case "AFTER_HOURS":
+  case "WKEND_AFTER_HOURS":
+    msg = "You have reached us after our business hours. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
+    botContext.setBotVariable('noTransferMessage',msg,true,false);
+    botContext.setTriggerNextMessge('No Transfer');
+    break;
+
+  case "HOLIDAY_THANKS":
+    msg = "We are closed for the Thanksgiving holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
+    botContext.setBotVariable('noTransferMessage',msg,true,false);
+    botContext.setTriggerNextMessge('No Transfer');
+    break;
+
+  case "HOLIDAY_XMAS":
+    msg = "We are closed for the Christmas holiday today. We will resume regular hours tomorrow. We are open 7 days a week; 8AM - 8PM PST Monday through Thursday and 8AM - 5PM PST Friday through Sunday.";
+    botContext.setBotVariable('noTransferMessage',msg,true,false);
+    botContext.setTriggerNextMessge('No Transfer');
+    break;
+}
+```
