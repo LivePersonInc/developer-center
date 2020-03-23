@@ -2,7 +2,7 @@
 
 **As of August 2018, please open all Pull Requests DIRECTLY TO THE MASTER BRANCH**
 
-This repository generates LivePerson's Developers' Community, which can be found at https://developers.liveperson.com. The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we'll respond as soon as possible!
+This repository generates LivePerson's Developers' Community, which can be found at https://developers.liveperson.com. The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we'll respond as soon as possible.
 
 **Table of Contents**
 
@@ -17,6 +17,13 @@ This repository generates LivePerson's Developers' Community, which can be found
 ### Updating the Documentation
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside `/documents/pages`. To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. There's no need for the old Development branch, so please don't create pull requests to it.
+
+#### Environments
+
+* Production (built from the `master` branch): [https://developers.liveperson.com/](https://developers.liveperson.com/)
+
+* Staging (built from the `Staging` branch): [https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/](https://developers.liveperson.com.staging-vdt2zeq-jlynhjefjcpgg.us.platform.sh/)
+
 
 #### Updating/Creating Headers
 

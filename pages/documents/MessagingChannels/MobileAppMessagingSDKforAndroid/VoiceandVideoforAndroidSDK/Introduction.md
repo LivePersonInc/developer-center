@@ -12,6 +12,12 @@ root-link: true
 indicator: messaging
 ---
 
+<div class="important">
+<h2>Deprecation Notice</h2>
+
+the CoApp product is deprecated and will be discontinued from February 28th, 2020 on.
+</div>
+
 LivePerson's **Voice & Video SDK** allows you to communicate with your customers in realtime through your brand's app. The SDK enriches your app with realtime voice & video calling capabilities, built atop of our highly scalable **Messaging SDK** solution.
 
 ![screenshot_coapp](img/screenshot_coapp.png)

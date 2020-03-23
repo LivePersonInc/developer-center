@@ -106,11 +106,18 @@ Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow s
 
 1. Register for or log in to an IBM Cloud account.
 
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_login_ibmcloud.png">
+
 2. Create or access a Watson Assistant resource.
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_resource_list.png">
+
 
 3. Generate Service Credentials with the role of Manager and an Auto Generated Service ID.
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_create_resource.png">
 
 4. View and copy the newly created credentials.
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/3rdPartyNLU/watson_api_keys.png">
+
 
 ##### Google Dialogflow
 

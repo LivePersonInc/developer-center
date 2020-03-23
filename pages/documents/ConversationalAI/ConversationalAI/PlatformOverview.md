@@ -23,9 +23,9 @@ LivePerson's Conversational AI is a suite of integrated apps that work together 
 
 - [Knowledge Base](conversation-builder-knowledge-base.html) stores articles of information that can be accessed by automations in Conversation Builder.
 
-- [LiveIntent](https://knowledge.liveperson.com/ai-bots-automation-liveintent-overview.html) is your hub for tracking and maintaining intents in real-time.
+- [Intent Analyzer](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-overview.html) is your hub for tracking and maintaining intents in real-time.
 
-- [Bot Analytics](bot-analytics.html) holds all of the operational and usage data for your automations.
+- [Bot Analytics](bot-analytics-overview.html) holds all of the operational and usage data for your automations.
 
 - [Bot Accounts](bot-accounts-permissions-per-role.html) is the administration area for managing permissions of Conversation Builder users.
 

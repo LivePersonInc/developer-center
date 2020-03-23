@@ -2,9 +2,11 @@
 pagename: Report Builder Data Metrics
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Essential Resources
-permalink: essential-resources-report-builder-data-metrics.html
+documentname: Common Resources
+permalink: common-resources-report-builder-data-metrics.html
 indicator: both
+redirect_from:
+    - essential-resources-report-builder-data-metrics.html
 ---
 
 LiveEngage uses a large amount of metrics to provide insightful and detailed reporting.

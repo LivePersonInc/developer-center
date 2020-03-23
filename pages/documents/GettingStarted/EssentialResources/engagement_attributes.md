@@ -3,10 +3,11 @@ pagename: Engagement Attributes
 redirect_from:
   - engagment-attributes-overview.html
   - engagement-attributes-overview.html
+  - essential-resources-engagement-attributes.html
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Essential Resources
-permalink: essential-resources-engagement-attributes.html
+documentname: Common Resources
+permalink: common-resources-engagement-attributes.html
 order: 20
 indicator: both
 ---
