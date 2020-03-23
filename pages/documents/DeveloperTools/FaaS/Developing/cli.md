@@ -13,13 +13,19 @@ redirect_from:
 
 ### Overview
 
-The FaaS Command Line Interface (CLI) is an open-source command-line tool provided by LivePerson that enables developers to create, edit and process their functions on their local development machines, in their favorite IDE of their choice. That way it’s very easy to keep the source code under version control in any SCM.
+The FaaS Command Line Interface (CLI) is an open-source command-line tool provided by LivePerson that enables developers to create, edit and process their functions on their local development machines, in their favorite IDE of their choice. That way it’s very easy to keep the source code under version control in any Source Control Management (SCM).
 
 The CLI offers nearly all functionality from the platfrom (e.g. deploy, undeploy and invoke). 
 
 Besides that it offers many commands to support developers during the development of a function (e.g. pull, push and debug).
 
-#### Commands
+### Get started
+
+To start and get known to the usage of the CLI please visit [npmjs](https://www.npmjs.com/package/liveperson-functions-cli).
+
+If you have any suggestions or improvements please let us know under [Issues](https://github.com/LivePersonInc/liveperson-functions-cli/issues).
+
+### Commands
 
 <table style="width: 100%;">
 <thead>
@@ -92,12 +98,3 @@ Example with `login`
 Example with `pull`
 
 <img src="img/faas-cli-pull.gif" alt="LivePerson Functions CLI Pull"> 
-
-### Get started
-
-To start and get known to the usage of the CLI please visit [npmjs](https://www.npmjs.com/package/liveperson-functions-cli).
-
-If you have any suggestions or improvements please let us know under [Issues](https://github.com/LivePersonInc/liveperson-functions-cli/issues).
-
-
-
