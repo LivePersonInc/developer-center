@@ -18,12 +18,7 @@ You can create bot groups and add bots to them for two purposes:
 
 * You want to enable [automatic, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group) for the bots within a given bot group.
 
-It's common to organize bots into groups based on business function. You could then further organize them based on environment. For example, you might have bot groups for:
-
-* Checking - Dev
-* Checking - Prod
-* Savings - Dev
-* Savings - Prod
+It's common to organize bots into groups based on business function. You could then further organize them based on environment. In the image below, bots are grouped based on business function (Checking and Savings).
 
 Note the following about the bots dashboard when bot groups exist:
 
@@ -86,6 +81,12 @@ You can delete a bot group at any time; this *doesn't* delete the bots therein. 
 3. Click **Yes** to confirm the action.
 
 ### FAQs
+
+#### If I use bot groups, must I assign all bots to a bot group?
+
+No, this isn't required. Bots that aren't assigned to a bot group are listed below the bot groups.
+
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botGroups_unassigned.png">
 
 #### I created a bot group, but I don't see it listed on the bots dashboard. What happened?
 

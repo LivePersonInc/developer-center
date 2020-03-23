@@ -27,7 +27,7 @@ As an example, examine the illustration below of a Customer Service bot and a Sa
 You can transfer a conversation from one bot to another in two general ways:
 
 * Automatic transfer via [bot group](conversation-builder-bots-bot-groups.html)
-* Manual transfer via an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) or a [LP Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html)
+* Manual transfer via an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) or a [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html)
 
 Importantly, both approaches allow for the transfer of the user's intent and/or message, which ensures a seamless hand-off.
 
@@ -35,7 +35,7 @@ Importantly, both approaches allow for the transfer of the user's intent and/or 
 
 #### What's an automatic transfer?
 
-Automatic transfers use [bot groups](conversation-builder-bots-bot-groups.html) to support the discovery of bots that are qualified to handle requests and can accept transfers. You create the groups, assign bots to them, and [enable collaboration](conversation-builder-bots-bot-groups.html#enable-or-disable-collaboration-for-a-bot-group). A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, transfer of the conversation happens automatically.
+Automatic transfers use [bot groups](conversation-builder-bots-bot-groups.html) to support the discovery of bots that are qualified to handle requests and can accept transfers. You [create the groups](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers), assign bots to them, and enable collaboration. A bot can be a member of a single group. As a member, whenever the bot receives a request that it can't handle itself, it automatically checks *within its group* for a bot that can. If the bot discovers a capable bot, transfer of the conversation happens automatically.
 
 <img style="width:650px" src="img/ConvoBuilder/bots_collab5.png">
 
@@ -115,21 +115,40 @@ In a transfer from one bot to another--whether automatic or manual--the receiver
 
 ### FAQs
 
-#### If I have collaboration enabled for a bot group, do I have any control over whether and when automatic transfers occur?
+#### If I have collaboration enabled for a bot group, can I control how automatic transfers are performed?
 
-No, apart from [configuring the transfer message](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers) in the bot group, you don't have any control over how automatic transfers are performed.
+When collaboration is enabled for a bot group, transfers happen seamlessly and automatically. You can [configure the transfer message](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers) in the bot group, but this is the extent to which you can affect the behavior.
 
 #### During an automatic transfer, how is a bot within a bot group chosen to handle a request?
 
 The system first looks for a bot in the group with a [matching pattern](conversation-builder-tutorials-guides-getting-started.html#dialogs--patterns-tutorial). If one is found, that bot (for the first match that is found) is selected. Otherwise, it then looks for a bot in the group with a [matching intent](conversation-builder-tutorials-guides-getting-started.html#intents-tutorial). If one is found, that bot is selected. And if multiple matching intents are found, the bot with the highest match score is selected.
 
 #### How many bot groups do I need?
-There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, [create a bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers) whenever you want to divide the bots into groups, such that collaboration occurs only within the group. It's common to organize bots into groups based on business function. You could then further organize them based on environment. For example, you might have bot groups for:
-
-* Checking - Dev
-* Checking - Prod
-* Savings - Dev
-* Savings - Prod
+There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, [create a bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers) whenever you want to divide the bots into groups, such that collaboration occurs only within the group. It's common to organize bots into groups based on business function. You could then further organize them based on environment.
 
 #### Can I keep bot collaboration disabled and use bot groups only as a mechanism for grouping my bots?
 Yes, this is perfectly fine. For information on creating a group for this purpose, see [here](conversation-builder-bots-bot-groups.html#create-a-bot-group-only-to-group-bots).
+
+#### I currently have a routing bot that transfers control to other bots based on user intents. How will bot groups help in my case?
+
+Bot groups make it easier for a routing bot to automatically transfer control to another bot. As an example, suppose you are a retailer with the following bots:
+
+* A Routing bot
+* An Order Status bot
+* A Returns bot
+
+The Routing bot is designed to have an initial conversation with the consumer and route the conversation to one of the other two bots. The conversation might look like this:
+ 
+*Routing bot: Hello, I am routing bot. How can I help you?*
+
+*Consumer: I need to check the status of my order.*
+
+*Routing bot: Let me transfer you to a chatbot that can assist you with your request.*
+
+*Order Status bot: Can I have your order number please?*
+
+You can add all three bots to an "eCommerce Operations" bot group. When this is done, the Routing bot seamlessly and automatically transfers the control to the Order Status bot.
+
+<img style="width:450px" src="img/ConvoBuilder/bots_collab14.png">
+
+When the user enters, “I need to check the status of my order,” this maps to an "Order Status" intent that is handled by the Order Status bot. Because collaboration in the group is enabled, the routing bot *automatically* finds this association and transfers control to the Order Status bot. 
