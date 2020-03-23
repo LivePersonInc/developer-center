@@ -1,15 +1,16 @@
 ---
-pagename: LiveIntent Tips
+pagename: Intent Analyzer Tips
 redirect_from:
+    - intent-builder-liveintent-tips.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Builder
-permalink: intent-builder-liveintent-tips.html
-indicator: both
+permalink: intent-builder-intent-analyzer-tips.html
+indicator: messaging
 ---
 
-Below are instructions for adding and improving intents and training utterances for [LiveIntent](https://knowledge.liveperson.com/ai-bots-automation-liveintent-overview.html) via the Intent Builder interface. Intents and training utterances for Starter Packs and Custom Intent Modeling are produced via processes outside Intent Builder but are ultimately input into Intent Builder via the same interface.
+Below are instructions for adding and improving intents and training utterances for [Intent Analyzer](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-overview.html) via the Intent Builder interface. Intents and training utterances for Starter Packs and Custom Intent Modeling are produced via processes outside Intent Builder but are ultimately input into Intent Builder via the same interface.
 
 **Main points:**
 
@@ -23,7 +24,7 @@ Use **complete utterances** rather than phrases or parts of messages, as custome
 
 #### Identify a pattern or theme in the messages
 
-Go to the [LiveIntent dashboard](https://knowledge.liveperson.com/ai-bots-automation-liveintent-dashboard.html) and filter by undefined. Try to look at at least 30 messages.
+Go to the [Intent Analyzer dashboard](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-dashboard.html) and filter by undefined. Try to look at at least 30 messages.
 
 Here are some example messages:
 
@@ -49,20 +50,20 @@ After identifying a few patterns, see if you can group messages under a label. I
 
 There are two ways to classify messages: 
 
-* Option 1: Read the messages directly from the [Conversation Details dashboard](https://knowledge.liveperson.com/ai-bots-automation-liveintent-dashboard.html#conversation-details) on LiveIntent. You may want to take notes to record your patterns.
+* Option 1: Read the messages directly from the [Conversation Details dashboard](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-dashboard.html#conversation-details) on Intent Analyzer. You may want to take notes to record your patterns.
  
-    <img  class="fancyimage" style="width:750px" src="img/liveintent_tips_image_0.png">
+    <img  class="fancyimage" style="width:750px" src="img/intentanalyzer_tips_image_0.png">
 
 * Option 2: Export them as a spreadsheet and create a dropdown menu in the intent column to manually label the messages. 
 
     The export button is circled in red in the upper right corner of the Conversation Details.   
 
-    <img  class="fancyimage" style="width:750px" src="img/liveintent_tips_image_1.png">
+    <img  class="fancyimage" style="width:750px" src="img/intentanalyzer_tips_image_1.png">
 
 
-Here’s a sample spreadsheet of the messages extracted from the LiveIntent dashboard. They are all initially labeled as "undefined." Manually go through each message and change the label to the name of your intent. 
+Here’s a sample spreadsheet of the messages extracted from the Intent Analyzer dashboard. They are all initially labeled as "undefined." Manually go through each message and change the label to the name of your intent. 
 
-<img  class="fancyimage" style="width:750px" src="img/liveintent_tips_image_2.png">
+<img  class="fancyimage" style="width:750px" src="img/intentanalyzer_tips_image_2.png">
 
 #### Guidelines for classifying your messages with your intent
 
@@ -107,7 +108,7 @@ After creating your intents and adding in training utterances on IntentBuilder, 
 
 This is how your data will look if you export it to evaluate your model. 
 
-<img  class="fancyimage" style="width:750px" src="img/liveintent_tips_image_3.png">
+<img  class="fancyimage" style="width:750px" src="img/intentanalyzer_tips_image_3.png">
 
 Here are some steps you can take to evaluate how well your model is doing. 
 
