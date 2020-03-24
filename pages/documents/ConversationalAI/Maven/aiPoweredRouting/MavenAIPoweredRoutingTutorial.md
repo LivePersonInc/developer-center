@@ -1,5 +1,5 @@
 ---
-pagename: Tutorial
+pagename: Maven AI Powered Routing Tutorial
 redirect_from:
   - maven-ai-powered-routing-tutorial.html
 Keywords:
@@ -11,589 +11,362 @@ permalink: maven-ai-ai-powered-routing-tutorial.html
 indicator: messaging
 ---
 
-### Introduction
+## Introduction
 
 This document walks through an example to create a policy using Maven Workspace and using it for routing to a skill. 
 
 The examples provided here start with a simple implementation, using static attributes (hard coded values), and then add more complexity such as using the session store, LivePerson functions, and Conversation Builder integration. This tutorial will help you understand the high level concepts and create basic building blocks on which you will be able to create more complex solutions. 
 
-#### Example Policy
+
+
+### Example Policy
 
 Let’s start with a policy we want to build. 
 
-"Route a VIP customer to a VIP skill, and a regular customer to a general skill" 
-
-#### Context Attributes
-
-To build this policy you will need to use certain context attributes. The primary one used in this example is a customer identifier to detect whether a customer is a VIP or not. For this we will use customer phone number as the identifier to check for VIP status. 
-
-### Create a simple policy using Static Context Attributes
-
-When starting to build your first policy, it is often easy to use static attributes at first. This is much like hard coding some logic writing your first Hello World example. Once you have been able to execute this using hard coded values, then we will replace them with programmatically retrieved attributes. 
-
-In this example we will create and use static attributes. To check if a customer is a VIP we will use a list of phone numbers, and see if the customer’s number is in that list. 
-
-#### Create Context Attributes
-
-1. Login to Maven Workspace using your LPA or Admin Credentials, and then navigate to Context Warehouse/Custom. 
-
-    <img class="fancyimage" width="750" src="img/maven/maven_ai_routing_tut_image_0.png">
-
-2. Click on Add Static and copy paste the following JSON into the text field, and then hit save. This creates a static list of VIP phone numbers
-
-    ```json
-    {
-        "name": "vipPhoneNumberList",
-        "type": "static",
-        "payload": ["55501", "55502", "55503"]
-    }
-    ```
-
-3. Click on Add Static and copy paste the following JSON into the text field, and then hit save. This creates a static list regular customer phone numbers. 
-
-    ```json
-    {
-        "name": "regularCustomerList",
-        "type": "static",
-        "payload": ["55505", "55506", "55507"]
-    }
-    ```
-
-4. Click on Add Static and copy paste the following JSON into the text field and then hit save. This is an instance of a VIP customer phone number we will use in policy. 
-
-    ```json
-    {
-        "name": "vipCustomer",
-        "type": "static",
-        "payload": "55501"
-    }
-    ```
-
-5. Click on Add Static and copy paste the following JSON into the text field and then hit save. This is an instance of regular customer phone number we will use in policy. 
-
-    ```json
-    {
-        "name": "regularCustomer",
-        "type": "static",
-        "payload": "55506"
-    }
-    ```
-
-#### Create Routing Policy
-
-"If customer phone number is in the allow list, send them to vipSkill in LiveEngage".  
-
-1. Navigate to Intent and Context Policies 
-
-    <img class="fancyimage" width="750" src="img/maven/maven_ai_routing_tut_image_1.png">
-
-2. Click Add Policy, and then Copy and Paste this JSON and then click save. This policy checks if customer phone number is in the list of VIP customer phone numbers, and if true sends then to a VIP Skill (12345).
-
-    {% raw %}
-    ```json
-    {
-        "name": "VipRule_Static",
-        "conditions": [
-            {
-                "property": "custom.vipCustomer",
-                "type": "IS_IN",
-                "value": "{{custom.vipPhoneNumberList}}"
-            }
-        ],
-        "actions": [
-            {
-                "payload": {
-                    "skillId": "12345"
-                },
-                "type": "TRANSFER_TO_SKILL"
-            }
-        ]
-    }
-    ```
-    {% endraw %}
-
-3. Click Add Policy, and then Copy and Paste this JSON and then click save. This policy checks if customer phone number is in the list of regular customer phone numbers, and if true sends then to a regular Skill (67890).
-
-{% raw %}
-```json
-{
-    "name": "RegularCustomerRule_Static",
-    "conditions": [
-        {
-            "property": "custom.regularCustomer",
-            "type": "IS_IN",
-            "value": "{{custom.regularCustomerList}}"
-        }
-    ],
-    "actions": [
-        {
-            "payload": {
-                "skillId": "67890"
-            },
-            "type": "TRANSFER_TO_SKILL"
-        }
-    ]
-}
-```
-{% endraw %}
+“Route a VIP customer to a VIP skill, and a regular customer to a general skill” 
 
-As you may have noticed, we have created two policies, one for VIP customer, and one for a regular customer. In this example we evaluate both using static variables. In later sections we will retrieve the customer phone number from a session.  
+## Using a Policy with Conversation Builder
 
-#### Use AskMaven to test policy
+### Overview
 
-AskMaven is a REST interface that allows you to get a policy outcome programmatically. It is also a great way to independently test if policy is working. 
+In this tutorial we will use the Conversation Builder template. that is prewired with Maven and the Context Warehouse.
 
-##### Test VIP policy
+<img class="fancyimage" width="750" src="img/maven/cb-template.png">
 
-1. In the policy list in Maven Workspace, click on the toggle switch and enable the **VipRule_Static** policy. 
+A CB bot will handle the incoming consumer message, and then use Maven AI routing policies to route the customer to a VIP agent or Regular Customer Agent. Setting up the CB bot in the beginning will allow you to test the scenarios end to end. 
 
-2. Navigate to Developer Key in Maven workspace, create a new key, and copy the key to use later. 
+### Import Maven CB Bot template and setup
 
-3. Use the following CURL command in Bash to call AskMaven
+#### Import the CB Bot Template
 
-    1. Replace the account ID field with your Live Person account ID
+1. In LiveEngage navigate to Conversation Builder and then click New Bot
 
-    2. Replace the Maven API key you previously copied from the Developer Key section
+    <img class="fancyimage" width="750" src="img/maven/cb-page.png">
 
-    ```bash
-curl --request GET \
---url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions \
---header 'maven-api-key:  <API Key>'
-    ```
+    <img class="fancyimage" width="750" src="img/maven/cb-buttons.png">
 
-4. Here is the sample JSON output you should see
+2. Chose the Maven CB Bot template from the Bot Template Menu
 
-    ```json
-    {
-        "rule": {
-            "id": "<some UUID>",
-            "name": "VipRule_Static",
-            "actions": [
-                {
-                    "type": "TRANSFER_TO_SKILL",
-                    "payload": {
-                        "skillId": "12345"
-                    }
-                }
-            ]
-        }
-    }
-    ```
+    <img class="fancyimage" width="750" src="img/maven/cb-choose-bot.png">
 
-##### Test Regular policy
+3. The template is pre-wired with the following integrations
 
-{:start="5"}
-5. In the policy list in Maven Workspace, click on the toggle switch and now disable the **VipRule_Static** policy, and enable the **RegularCustomerRule_Static**
+    a. A simple welcome intent
+    
+    b. A question that asks basic customer information (e.g. a phone number)
 
-6. Navigate to Developer Key in Maven workspace, create a new key, and copy the key to use later. 
+    c. Integration to Maven Context Session Store
 
-7. Use the following CURL command in Bash to call AskMaven
+    d. Integration to AskMaven 
+    
+    e. Based on policy action the bot can then perform the following: transfer to an agent, transfer to a skill, or send a message 
 
-    1. Replace the account ID field with your Live Person account ID
+4. Once we have set this up with Maven and Context warehouse the following happens
+  
+    a. The conversation starts with a Welcome intent, for example “hi”
 
-    2. Replace the Maven API key you previously copied from the Developer Key section
+    b. The bot then asks the customer for a phone number
 
-    ```bash
-curl --request GET \
---url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions \
---header 'maven-api-key:  <API Key>'
-    ```
+    c. The phone number is stored in Maven Context Session Store
 
-8. Here is the sample JSON output you should see
+    d. Maven evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List)
 
-```json
-{
-    "rule": {
-        "id": "<some UUID>",
-        "name": "RegularCustomerRule_Static",
-        "actions": [
-            {
-                "type": "TRANSFER_TO_SKILL",
-                "payload": {
-                    "skillId": "67890"
-                }
-            }
-        ]
-    }
-}
-```
-
-Congratulations! You have just executed your first Policy. 
-
-### Create a simple policy using Session Store Attribute
-
-In the previous example we used Static attributes for everything. While this is a great way to test, in the real world, you will need to use attributes that are dynamically retrieved. In this example we will pass the phone number using the [context session store](maven-context-warehouse-context-session-store.html), and then check if the phone number is in a static list.
-
-#### Create Context Attributes
-
-We will be using the Context Session store to store a phone number, and then use it in a policy. To learn more about the session store please see [developer documentation](maven-context-warehouse-context-session-store.html). 
-
-##### Create a New NameSpace
-
-First you need to create a new NameSpace in the session store to store the phone number. 
-
-1. Copy the maven-api-key from the Developer Key section of Maven Workspace
-
-2. Copy and paste this CURL command in Bash to create this namespace. Replace the account id, and API key fields
-
-    ```bash
-curl --request POST \
---url https://z1.context.liveperson.net/v1/account/<accountid> \
---header 'content-type: application/json' \
---header 'maven-api-key: <API Key>' \
---data '{
-        "name": "myNamespace"
-}'
-    ```
-
-##### Store customer phone numbers in a session state
-
-Here, we will go ahead and store the phone numbers for both types of customers (Vip and regular) in two separate sessions. We will then use AskMaven to get the policy outcome for each session. 
-
-1. Copy and paste the following CURL command - This is for the VIP customer
-
-    1. Please replace with appropriate account id, and API Key values for your brand
-
-    2. This command stores the phone number for a session (100). Any value for the session is accepted. In a production implementation, we recommend using the conversation ID, for this example, this value is fine
-
-    ```bash
-curl --request PATCH \
---url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/100/properties \
---header 'content-type: application/json' \
---header 'maven-api-key: <API Key>' \
---data '{
-        "phoneNumber": "55501"
-}'
-    ```
-
-2. Copy and paste the following CURL command - This is for the Regular customer
-
-    1. This command stores the phone number (55507) for a session (200). 
-
-    ```bash
-curl --request PATCH \
---url https://z1.context.liveperson.net/v1/account/<account id>/myNamespace/200/properties \
---header 'content-type: application/json' \
---header 'maven-api-key: <API Key>' \
---data '{
-        "phoneNumber": "55507"
-}'
-    ```
-
-#### Create Policies
-
-1. Disable all policies you have previously created by switching off the toggle switch in Maven Workspace. 
-
-2. Create a new VIP policy by clicking Add Policy and then copy and paste this JSON. 
-
-    1. This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, we are retrieving this value from a session attribute (myNameSpace.phoneNumber), that we created earlier. 
-
-    {% raw %}
-    ```json
-    {
-        "name": "VipRule_Session",
-        "conditions": [
-            {
-                "property": "myNamespace.phoneNumber",
-                "type": "IS_IN",
-                "value": "{{custom.vipPhoneNumberList}}"
-            }
-        ],
-        "actions": [
-            {
-                "payload": {
-                    "skillId": "12345"
-                },
-                "type": "TRANSFER_TO_SKILL"
-            }
-        ]
-    }
-    ```
-    {% endraw %}
-
-3. Create a new regular customer policy by clicking add policy and then copy paste this JSON
-
-    {% raw %}
-    ```json
-    {
-        "name": "RegularCustomerRule_Session",
-        "conditions": [
-            {
-                "property": "myNamespace.phoneNumber",
-                "type": "IS_IN",
-                "value": "{{custom.regularCustomerList}}"
-            }
-        ],
-        "actions": [
-            {
-                "payload": {
-                    "skillId": "67890"
-                },
-                "type": "TRANSFER_TO_SKILL"
-            }
-        ]
-    }
-    ```
-    {% endraw %}
-
-4. Enable both policies by clicking on the toggle switches. 
-
-#### Use AskMaven to test policy
-
-We will now use AskMaven to check the policy in action
-
-##### Test VIP policy
-
-Use the following CURL command in Bash to call AskMaven 
-
-1. Replace with appropriate account ID and API - Key
-
-2. Note: we are using the conversation ID (100). We previously used this as the session ID in the Session Store for the VIP customer session
-
-3. In this session the phone number is 55501, so the VIP Policy (VipRule_Session) will execute, since it will satisfy the conditions in that policy
-
-```bash
-curl --request GET \
---url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=100 \
---header 'maven-api-key:  <API Key>'
-```
-
-Here is the sample JSON output you should see
-
-```json
-{
-    "rule": {
-        "id": "<some UUID>",
-        "name": "VipRule_Session",
-        "actions": [
-            {
-                "type": "TRANSFER_TO_SKILL",
-                "payload": {
-                    "skillId": "12345"
-                }
-            }
-        ]
-    }
-}
-```
-
-##### Test Regular policy
-
-Use the following CURL command in Bash to call AskMaven 
-
-1. Replace with appropriate account ID and API - Key
-
-2. Note: we are using the conversation ID (200). We previously used this as the session ID in the Session Store
-
-3. In this session the phone number is 55507, the Regular Policy (RegularCustomerRule_Session) will execute, since it will satisfy the conditions in that policy
-
-```bash
-curl --request GET \
---url https://z1.askmaven.liveperson.net/v1/account/<accountID>/next-actions?conversationId=200 \
---header 'maven-api-key:  <API Key>'
-```
-
-Here is the sample JSON output you should see
-
-```json
-{
-    "nextActionId": "some UUID", 
-    "rule": {
-        "id": "12345",
-        "name": "RegularCustomerRule_Session",
-        "actions": [
-            {
-                "type": "TRANSFER_TO_SKILL",
-                "payload": {
-                    "skillId": "67890"
-                }
-            }
-        ]
-    }
-}
-```
-
-### Using a LivePerson Functions to check VIP Status
-
-In the previous example we checked for the phone number in a static list. Maintaining such a list is obviously cumbersome. We could also use FaaS to check for VIP status - for example a function that calls a CRM backend to check the phone number at run time. 
-
-1. Create and deploy a new LivePerson function that takes a phone number as an input, and then returns true or false for whether the phone number is of a VIP customer. 
-
-    1. The Function may internally call a CRM backend to check this status. 
-
-    2. Note: creating and deploying a FaaS function is beyond the scope of this document and hence not covered.
-
-2. In Maven Workspace navigate to Context Warehouse/Static, and then click Add Function
-
-3. Copy and Paste the following JSON
-
-    3. Use the session attribute for phone number (myNameSpace.phoneNumber) as the input for the FaaS function. 
-
-    4. Please provide the appropriate keys as described in [documentation](maven-context-warehouse-custom-static-or-function.html#create-a-liveperson-function-variable)
-
-    {% raw %}
-    ```json
-    {
-        "name": "isVipFaaS",
-        "payload": {
-            "faasId": "",
-            "appKey": {
-                "username": "",
-                "appKey": "",
-                "secret": "",
-                "accessToken": "",
-                "accessTokenSecret": ""
-            },
-            "body": {
-                "headers": [],
-                "payload": "{{myNamespace.phoneNumber}}"
-            }
-        }
-    }
-    ```
-    {% endraw %}
-
-##### Create Policy to use the FaaS Function
-
-1. Create the VIP policy
-
-    ```json
-    {
-        "name": "VipRule_Session_FaaS",
-        "conditions": [
-            {
-                "property": "custom.isVipFaaS",
-                "type": "EQUALS",
-                "value": true
-            }
-        ],
-        "actions": [
-            {
-                "payload": {
-                    "skillId": "12345"
-                },
-                "type": "TRANSFER_TO_SKILL"
-            }
-        ]
-    }
-    ```
-
-2. Create the regular customer policy
-
-    ```json
-    {
-        "name": "RegularCustomerRule_Session_FaaS",
-        "conditions": [
-            {
-                "property": "custom.isVipFaaS",
-                "type": "EQUALS",
-                "value": false
-            }
-        ],
-        "actions": [
-            {
-                "payload": {
-                    "skillId": "67890"
-                },
-                "type": "TRANSFER_TO_SKILL"
-            }
-        ]
-    }
-    ```
-
-You can now test the policies using steps described [here](#use-askmaven-to-test-policy).
-
-### Using a Policy with Conversation Builder
-
-We have so far just used AskMaven and Context Session Store API calls in policies. This is still a great way to troubleshoot and investigate issues independently. 
-
-This section briefly describes how to use Maven policies with a routing bot. 
-
-<img class="fancyimage" width="750" src="img/maven/maven_ai_routing_tut_image_2.png">
-
-The basic flow of steps is similar to what we did with CURL commands, but this time all session attributes and actual transfer to skill is done inside the bot. 
-
-The steps are as follows:
-
-1. Gather all session attributes you need for policy, for example conversation ID, intent, or phone number as variables inside conversation builder
-
-    1. Phone number can be retrieved as a context variable inside Conversation builder if available (for example if the conversation starts in whatsapp, and phone number can be passed through the connector)
-
-2. Use an API integration inside conversation builder to store the session attributes 
-
-    1. Use the conversationID as the session attribute. 
-
-3. Use an API integration inside conversation builder to call AskMaven
-
-    1. Pass the same conversationID in the AskMaven call. This allows Maven to retrieve the session attributes stored in the previous step in a policy
-
-4. Parse the JSON that is returned from AskMaven (e.g. skillID to transfer to), and then Transfer to the specific skill. 
-
-#### Import and setup the Maven Bot Template
-
-Follow the configuration steps to set up the [Maven Concierge Template for Conversation Builder](conversation-builder-templates-maven-concierge.html).
-
-#### Setup LiveEngage
+    e. Bot transfers the conversation to a skill or agent based on the policy outcome 
+
+#### Setup the bot
+
+1. Open the bot. On the top navigation click on Global Functions and edit the following fields. Use the following values based on which zone your account is hosted:
+
+    <img class="fancyimage" width="750" src="img/maven/cb-global-fns.png">
+
+    a. deploymentZone: 
+
+        i. z1 - Americas
+
+        ii. z2 - EMEA
+
+        iii. z3 - APAC
+
+    b. accountId: Your LiveEngage account ID
+
+    c. mavenNamespace: The Maven namespace is used for organizing a set of attributes you may want to use in a policy. See [Context Warehouse Session Store](maven-ai-context-warehouse-context-session-store.html) for more information on how this works. 
+
+        i. Please enter myNameSpace. You will use this name in a routing policy. 
+
+        ii. Note: Conversation builder is already integrated with the Context Session store. You can manage the session store from inside Conversation builder using [scripting functions](conversation-builder-scripting-functions-manage-the-context-session-store.html). 
+
+    d. mavenApiKey: copy and paste the Developer Key from Maven Workspace
+
+    e. Click save
+
+    f. CB_API_KEY: On the top right click on the Key Icon, and then copy and paste the key in “Your API Access Key”
+
+    <img class="fancyimage" width="750" src="img/maven/cb-keys.png">
+
+2. [Deploy the bot in LiveEngage](conversation-builder-testing-deployment-deploying-to-liveengage.html)
+
+    a. See next step for how to setup a skill in LiveEngage to accent the incoming conversations.
+
+
+### Setup LiveEngage
 
 1. Create a skill for the conversation (e.g. Maven_Routing_Bot), and assign the bot user ID to this skill
 
 2. Setup a LiveEngage campaign to direct incoming conversations to this skill. All incoming conversation will now be picked up by the bot. 
 
-3. Setup a Vip Agent Skill (e.g. Vip Support) and a Regular Agent skill (e.g. Regular Support)
+3. Setup a Vip Agent Skill (e.g. Vip Support) 
 
-4. Add any agents to these skills so you may receive a message when routed to the same
+    a. Add agents (e.g. VIP Agent) and them assign to both Vip Support
+
+4. Setup a Regular Agent skill (e.g. Regular Support)
+
+    a. Add agents (e.g. Regular Agent) and them assign to Regular Support skill
 
 5. Save the skill and agent ids to be used with policy
 
-#### Setup the Policies in Maven Workspace
+6. See [documentation](admin-settings-skills-groups-set-the-agent-group-hierarchy.html) on further details on managing users and skills in LiveEngage
 
-1. Open Maven Workspace and navigate to Intent & Context Policies
 
-2. Disable all policies you may have previously setup except the following two
+## Create a simple policy using Static Context Attributes
 
-  1. VipRule_Session
+When starting to build your first policy, it is often easy to use static attributes at first. This is much like hard coding some logic writing your first Hello World example. Once you have been able to execute this using hard coded values, then we will replace them with programmatically retrieved attributes. 
 
-  2. RegularCustomerRule_Session
+In this example we will create and use static attributes. To check if a customer is a VIP we will use a list of phone numbers, and see if the customer’s number is in that list. 
 
-3. Open and edit the policies
+### Create Context Attributes
 
-  1. Copy and Paste the Skill IDs you copied in the previous steps in respective policies (VIP, or Regular customer) and then click Save.
+1. Login to Maven Workspace using your LPA or Admin Credentials, and then navigate to Context Warehouse/Custom. 
 
-#### Test the policies
+    <img class="fancyimage" width="750" src="img/maven/workspace-custom.png">
 
-##### VIP Routing
+2. Click on Add New, 
 
-1. Start a new web messaging conversation using the account ID
+    a. Select the type static
+    
+    b. Type a new name for the Attribute - vipPhoneNumberList
+    
+    c. In the Value, select List type and then copy these values +155555501, +155555502, +155555503. Click Save. 
+
+
+    <img class="fancyimage" width="750" src="img/maven/workspace-custom-values.png">
+
+3. Click on Add New
+
+    a. Select the type static
+    
+    b. Type a new name for the Attribute - regularCustomerList
+    
+    c. In the Value, select List type and then copy these values +155555505, +155555506, +155555507. Click Save. 
+
+4. Add another static attribute
+
+    a. Edit the name to be vipCustomer
+
+    b. And add the value +155555501
+
+    c. Click save
+
+5. Add another static attribute
+
+    a. Edit the name to be regularCustomer
+
+    b. And add the value +155555506
+
+    c. Click save
+
+### Create Routing Policy
+
+“If customer phone number is in the allow list, send them to vipSkill in LiveEngage”.  
+
+1. Navigate to Intent and Context Policies and then click Add Policy. 
+ 
+    <img class="fancyimage" width="750" src="img/maven/workspace-viprule-static.png"/>
+
+    a. Edit the name to VipRule_Static
+  
+    b. In Conditions select custom.vipCustomer from the drop down
+    
+    c. Select the Is In operator
+    
+    d. Then select attribute and custom.vipPhoneNumberList from the drop-down
+    
+    e. In the Actions block in the first drop-down box select Transfer to a skill, and then select the Vip Support skill from the drop-down (Skills must be created in LiveEngage prior to this step). 
+    
+        i. Please note not to select the skill used for the Maven Bot since this would create a circular loop with the policy. 
+    
+    f. Click Save to save the policy
+
+2. Navigate to Intent and Context Policies and then click Add Policy. 
+    
+    <img class="fancyimage" width="750" src="img/maven/workspace-regular-custom-rule-static.png"/>
+
+    a. Edit the name to RegularCustomerRule_Static
+    
+    b. In Conditions select custom.regularCustomer from the drop down
+    
+    c. Select the Is In operator
+    
+    d. Then select attribute and custom.regularCustomerList from the drop down
+    
+    e. In the Actions block in the first drop-down select Transfer to a skill, and then select the Regular Support skill from the drop down (Skills must be created in LiveEngage prior to this step)
+    
+    f. Click Save to save the policy
+
+
+As you may have noticed, we have created two policies, one for VIP customer, and one for a regular customer. In this example we evaluate both using static variables. In later sections we will retrieve the customer phone number from a session.  
+
+
+### Test the policies
+
+We will use a standard web entry point to initiate a conversation with the CB bot we created, which will use the Maven policies to route to the desired skill. 
+
+#### Test VIP policy
+
+In the policy list in Maven Workspace, click on the toggle switch and enable the VipRule_Static policy. 
+
+1. Start a new web messaging conversation using the account ID 
 
 2. Log in to LiveEngage using a VIP agent account
 
 3. Type “Hi” in the messaging window to engage the bot
 
-4. When asked for a phone number please type  55501
+4. When asked for a phone number please type  +155555501. Please note that at this stage, the policy is using Static variables, so you can actually type anything because the policy is not going to be using your input. 
 
 5. This should trigger the VIP policy and the conversation should be transferred to a VIP skill
 
 6. If you are logged in to LiveEngage as a VIP Agent, you will now get a ring 
 
-##### Regular Customer Routing
+#### Test Regular Customer Policy
 
-1. Logout of LiveEngage, and then log in back using a Regular Agent account
+1. In the policy list in Maven Workspace, click on the toggle switch and disable the VipRule_Static policy. Enable RegularCustomerRule_Static
 
-2. Close the previous conversation, and then start a new one
+2. Logout of LiveEngage, and then log in back using a Regular Agent account
 
-3. This time when asked for the phone number type 55506
+3. Close the previous conversation, and then start a new one
 
-4. This should now trigger the VIP policy and the conversation should be transferred to a Regular skill
+4. This time when asked for the phone number type +155555506. Note, that the policy uses static attributes, and at this stage is not going to use the phone number you have input. 
 
-5. If you are logged into LiveEngage as a Regular Agent, you will now get a ring
+5. This should now trigger the Regular Customer policy and the conversation should be transferred to a Regular skill
 
-Now that you have run a basic routing policy using a CB bot integrated with Maven, here are some other things you may want to try out:
+6. If you are logged into LiveEngage as a Regular Agent, you will now get a ring
 
-1. Add a Custom message before transferring: You can do this by adding the SEND_MESSAGE action in the policy 
+## Create a simple policy using Session Store Attribute
 
-2. Transfer conversation to an agent using the TRANSFER_TO_AGENT action in a policy
+In the previous example we used Static attributes for everything. While this is a great way to test, in the real world, you will need to use attributes that are dynamically retrieved. In this example we will pass the phone number using the context session store, and then check if the phone number is in a static list.
 
-3. Use a FaaS function to check the VIP status
+### Create Context Attributes
 
-  1. Disable the policies in the previous example, and then enable the policies that call a FaaS function
-  2. Run through the test again to check if it is working
+We will be using the Context Session store to store a phone number, and then use it in a policy. The CB template bot you setup earlier already sets up a new namespace, and stores the phone number in the Context Session Store. To learn more about the session store please see developer [documentation](maven-ai-context-warehouse-context-session-store.html).
+
+### Create Policies
+
+1. Disable all policies you have previously created by switching off the toggle switch in Maven Workspace. 
+
+2. Create a new policy by clicking Add Policy 
+  
+    a. This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, we are retrieving this value from a session attribute (myNameSpace.phoneNumber), that we created earlier. 
+
+
+    <img class="fancyimage" width="750" src="img/maven/workspace-viprule-session.png"/>
+
+3. Create a new regular customer policy by clicking add policy 
+
+    a. This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, we are retrieving this value from a session attribute (myNameSpace.phoneNumber), that we created earlier.
+
+    <img class="fancyimage" width="750" src="img/maven/workspace-regular-customer-rule-session.png"/>
+
+4. Enable both policies by clicking on the toggle switches. 
+
+#### Test the policies
+
+1. In the policy list in Maven Workspace, disable the RegularCustomerRule_Static and Vip_Static policies. 
+
+2. And enable the VipRule_Session and RegularCustomerRule_Static policy. 
+
+3. Start a new web messaging conversation using the account ID 
+
+4. Log in to LiveEngage using a VIP agent account
+
+5. Type “Hi” in the messaging window to engage the bot
+
+6. When asked for a phone number please type  +155555501. This time the policies will use the phone number to check the Vip List and route accordingly 
+
+7. This should trigger the VIP policy and the conversation should be transferred to a VIP skill
+
+8. If you are logged in to LiveEngage as a VIP Agent, you will now get a ring 
+
+9. Logout of LiveEngage, and then log in back using a Regular Agent account
+
+10. Close the previous conversation, and then start a new one
+
+11. This time when asked for the phone number type +155555506. 
+
+12. This should now trigger the Regular policy and the conversation should be transferred to a Regular skill
+
+13. If you are logged into LiveEngage as a Regular Agent, you will now get a ring
+
+## Using a LivePerson Function to check VIP Status
+
+In the previous example we checked for the phone number in a static list. Maintaining such a list is obviously cumbersome. We could also use FaaS to check for VIP status - for example a function that calls a CRM backend to check the phone number at run time. 
+
+1. Create and deploy a new [LivePerson function](liveperson-functions-overview.html) that takes a phone number as an input, and then returns true or false for whether the phone number is of a VIP customer 
+
+    <img class="fancyimage" width="750" src="img/maven/workspace-isvip-saleseforce.png"/>
+
+    a. The Function may internally call a CRM backend to check this status. 
+    
+    b. Add parameters to this function by selecting Attribute and then typing myNameSpace.phoneNumber.
+    
+        i. Please note that myNameSpace is the name you used in the Conversation Builder template setup step in the begining. 
+    
+    c. Note: creating and deploying a FaaS function is beyond the scope of this document and hence not covered.
+
+
+
+#### Create Policy to use the FaaS Function
+
+1. Create the VIP policy using the FaaS attribute we created in the previous step as shown below, and click save
+
+    <img class="fancyimage" width="750" src="img/maven/workspace-viprule-session-faas.png"/>
+
+2. Create the regular customer policy as shown below and click save
+
+    <img class="fancyimage" width="750" src="img/maven/workspace-regular-customer-rule-session-faas.png"/>
+
+3. Disable previous policies, and enable the ones you just created
+
+4. You can now test the policies similar to how you tested previously. 
+
+#### Adding more Context Attributes from a bot
+
+The bot template we used has one basic integration - It asks for a phone number and then stores it in the context warehouse. You can add more context from the bot to use in policies - for example additional information such as customer name, email, or the NLU intent. 
+
+Please see [Manage the Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html) learn about scripting functions inside Conversation Builder. 
+
+To add additional context:
+
+1. Select the AskMaven Interaction, and then on the right hand side in the Interaction details, Code
+
+    <img class="fancyimage" width="750" src="img/maven/cb-interaction-details.png"/>
+
+2. Edit the code to add more contextual information. The following shows how the phone number is added
+
+    ```javascript
+    var phoneNumber = getVar("phoneNumber");
+
+    botContext.setContextDataForConversation(mavenNamespace, "phoneNumber", phoneNumber);
+    ```
+
+    a. Similarly you can add other attribute for example an intent
+
+
+    ```javascript
+    botContext.setContextDataForConversation(mavenNamespace, "intent", intent);
+    ```
+
+3. You can now use this in a policy by using a condition on <mavenNamespace>.intent. In the following example the namespace is “myNameSpace”
+
+    <img class="fancyimage" width="750" src="img/maven/workspace-conditions.png"/>
+
+
+<!-- To learn more about policies and how to create/manage them, see [Intent & Context Policies](maven-ai-powered-routing-intent-context-policies.html). -->
