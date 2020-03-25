@@ -133,11 +133,14 @@
       - pagename: Bot Templates
         subpages:
           - subpagename: Overview
-          - subpagename: Simple Router
+          - subpagename: Apply for a Loan
           - subpagename: Full Lead Gen
+          - subpagename: Insurance Quote
           - subpagename: Order Status
-          - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
+          - subpagename: Simple Lead Gen
+          - subpagename: Simple Router
+          - subpagename: Travel Notification
           - subpagename: Maven Concierge
       - pagename: Dialogs
         subpages:
