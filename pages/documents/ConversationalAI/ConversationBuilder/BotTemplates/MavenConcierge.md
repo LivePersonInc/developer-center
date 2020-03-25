@@ -6,7 +6,7 @@ sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Templates
-permalink: conversation-builder-templates-maven-concierge.html
+permalink: conversation-builder-bot-templates-maven-concierge.html
 indicator: both
 ---
 
