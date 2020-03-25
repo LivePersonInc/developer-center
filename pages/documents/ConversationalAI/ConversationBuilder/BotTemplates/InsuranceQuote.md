@@ -20,9 +20,9 @@ The template uses text interactions only, so it can be deployed to any channel w
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/InsuranceQuote1.png">
 
 
-####Included Items
+#### Included Items
 
-#####Dialogs
+##### Dialogs
 - Welcome
  - The Welcome dialog greets the user and then asks the user to select an insurance type they would like to receive a quote for. After selection, the user is routed to that insurance type dialog.
 - Home
@@ -38,7 +38,7 @@ The template uses text interactions only, so it can be deployed to any channel w
 - Agent_Escalation
  - This will perform a transfer to a particular LiveEngage skill.
 
-####Integrations
+#### Integrations
 - Agent_Transfer
  - As you would expect, this will perform a transfer to a LiveEngage skill.
 You will need to configure the skill name, id, and transfer message in Global Functions
@@ -47,16 +47,16 @@ You will need to configure the skill name, id, and transfer message in Global Fu
  - This integration will send an email to a preconfigured address which contains all of the collected fields from the various dialogs.
 You will need to configure the agent and reply email addresses, email subject, and the body of the email in Global Functions
 
-###Configuration Needed
+### Configuration Needed
 
 To customize this template, you will need to do the following
 
-####General Dialog Customization
+#### General Dialog Customization
 You will want to review each of the dialogs, starting with Welcome and each insurance dialog, and customize the verbiage used to greet your customer and request their details.
 
 This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
 
-####Insurance (Home|Auto|Life) Dialogs
+#### Insurance (Home|Auto|Life) Dialogs
 Each interaction requiring user input is performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if you prefer.
 
 For each dialog of questions for our user, we allow a certain number of attempts before we escalate to an agent. These can be configured to your liking in the Global Functions.
@@ -72,10 +72,10 @@ For each dialog of questions for our user, we allow a certain number of attempts
 
 If you want to remove any capture interactions (eg: vehicle primary use), you will need to be sure to review the Next Step navigation so that the previous interaction will go to the next interaction in the dialog.
 
-####Quote Dialog
+#### Quote Dialog
 The name, email and phone number steps of the Quote dialog are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if you prefer.
 
-####Analytics
+#### Analytics
 Custom event logging for this template has been provided by default.
 
 For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction, ex:
@@ -94,7 +94,7 @@ botContext.logCustomEvent(response, ‘Interaction Name’, ‘’);
 
 For more information on custom events, please refer to [our developer documentation](https://developers.liveperson.com/conversation-builder-scripting-functions-log-debug.html#log-custom-event).
 
-####Global Function Customization
+#### Global Function Customization
 
 Click the Global Functions link to access all the global functions and variables to be configured.
 
@@ -104,7 +104,7 @@ You’ll want to customize the generateLoanTemplate and getEmailBody functions w
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/InsuranceQuote3.png">
 
-#####Send Email Integration
+##### Send Email Integration
 
 The Send Email integration is provided to forward the captured user information on to a lending agent. 
 
@@ -120,7 +120,7 @@ Modify the following values in Global Functions
 
 The bot captures relevant user information in several variables. These values are used in the `generateLoanTemplate` and `getEmailBody` Global Functions to dynamically generate your email body. 
 
-#####Agent Escalation
+##### Agent Escalation
 If the user requests an agent or if they reach the max invalid attempts to validate entered information, they will be escalated to a human agent.
 
 Modify the following values in Global Functions:
