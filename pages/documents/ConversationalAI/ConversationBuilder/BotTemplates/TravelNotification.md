@@ -91,7 +91,7 @@ For more information on custom events, please refer to [our developer documentat
 
 Click the Global Functions link to access all the global functions and variables to be configured.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/TravelNotification3.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/templates/TravelNotification3.png">
 
 You’ll want to customize the getEmailBody function within Global Functions to reflect your branding and voice.
 
