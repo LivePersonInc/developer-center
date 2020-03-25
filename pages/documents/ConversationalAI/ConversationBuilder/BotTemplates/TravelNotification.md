@@ -1,13 +1,13 @@
 ---
 pagename: Travel Notification
 redirect_from:
-    - conversation-builder-templates-Travel-Notification.html
+    - conversation-builder-templates-travel-notification.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Templates
-permalink: conversation-builder-bot-templates-Travel-Notification.html
+permalink: conversation-builder-bot-templates-travel-notification.html
 indicator: both
 ---
 
