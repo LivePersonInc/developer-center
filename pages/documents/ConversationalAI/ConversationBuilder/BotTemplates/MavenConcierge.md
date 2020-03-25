@@ -29,7 +29,7 @@ The following example flow can happen with this template:
 
 - A Question that asks basic customer information (e.g. a phone number)
 
-<img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_0.png">
+<img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_0.png">
 
 #### Integrations
 
@@ -37,19 +37,19 @@ The following example flow can happen with this template:
 
 - [AskMaven API](maven-ai-askmaven-overview.html) integration that allows a bot to consult Maven on routing decisions
 
-  <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_1.png">
+  <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_1.png">
 
   - Pre built code for Transfer to skill and Transfer to agent: Routing decisions provided by Maven are then dispatched to an agent, bot, or a skill using these integrations. 
 
-  <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_2.png">
+  <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_2.png">
 
-  <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_3.png">
+  <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_3.png">
 
 ### Configuration Needed
 
 The important environment related variables are stored in the Global Functions, and for most cases this is the only file you will likely edit. 
 
-<img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_4.png">
+<img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_4.png">
 
 Open the bot. On the top navigation click on Global Functions and edit the following fields:
 
@@ -69,7 +69,7 @@ Open the bot. On the top navigation click on Global Functions and edit the follo
 
 8. `CB_API_KEY`: On the top right click on the Key Icon, and then copy and paste the key in "Your API Access Key"
 
-   <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_5.png">
+   <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_5.png">
 
 9. Click save
 
@@ -83,11 +83,11 @@ The [Maven Context Session Store](https://developers.liveperson.com/maven-ai-con
 
 2. Click on the interaction - AskMaven, and then on the right inside Interaction details, **Code**
 
-   <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_6.png">
+   <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_6.png">
 
 3. The following code stores the phoneNumber in the Context Session Store. Similarly other attributes for example, NLU intent can also be stored in the session store.  
 
-   <img class="fancyimage" style="width:750px" src="img/maven/mave_bot_template_image_7.png">
+   <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_7.png">
 
 4. The phoneNumber can then be used to determine customer attributes for example if the customer is a VIP or not and then route them to a specific skill or agent defined inside Maven Policy editor. To run an end to end example of such a feature, please refer to the [AI Powered Routing Tutorial](https://developers.liveperson.com/maven-ai-ai-powered-routing-tutorial.html#using-a-policy-with-conversation-builder) 
 
