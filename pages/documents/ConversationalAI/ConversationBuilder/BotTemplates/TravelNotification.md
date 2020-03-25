@@ -1,109 +1,141 @@
 ---
-pagename: Simple Router
+pagename: Travel Notification
 redirect_from:
-    - conversation-builder-templates-simple-router.html
+    - conversation-builder-templates-Travel-Notification.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Templates
-permalink: conversation-builder-bot-templates-simple-router.html
+permalink: conversation-builder-bot-templates-Travel-Notification.html
 indicator: both
 ---
 
-The Simple Router template provides an easy framework for the creation of a routing bot.
+###Travel Notification
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_simplerouter.png">
+The Travel Notifications template allows an authenticated user to report their future travel to ensure that they have full access to their spending power with their debit/credit cards.
 
-### Included Items
+The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-#### Dialogs
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/TravelNotification1.png">
 
+
+
+####Included Items
+
+#####Dialogs
 - Welcome
-    - Presents the multiple choice interaction to the customer. Each multiple choice response represents a skill.
-- Reprompt
-    - The multiple choice interaction responses can be clicked or the customer can also type an answer. In the event that the bot does not understand the customer's response, this dialog will reprompt the welcome dialog.
-- No Agents Available
-    - In the event that the customer could not be transferred to a skill, this dialog will trigger.
-- Escalation
-    - When a user answers the Welcome dialog's multiple choice, this dialog will trigger and begin the transfer process.
+ - The Welcome dialog greets the user, introduces the bot functionality, and directs to the Travel Info dialog
+- Travel Info
+ - Directs the user through the collection of information, with special attention paid to ensuring that the dates are recorded correctly.
+- Fallback
+ - Will display when the user enters an utterance that is not recognized.
+- Agent_Escalation 
+ - This will perform a transfer to a particular LiveEngage skill.
 
-#### Integrations
+####Integrations
+- Agent_Transfer
+ - As you would expect, this will perform a transfer to a LiveEngage skill.
+You will need to configure the skill name, id, and transfer message in Global Functions
 
-- Escalation
-    - This integration posts a configuration payload to a LivePerson hosted service that will route the customer to a different skill.
-    - In the Integrations area, there should be a pre-configured integration named “Transfer” and “Liveperson Agent Escalation” should be selected in the Integration Type menu.
-    
-    <img style="width:450px" src="img/ConvoBuilder/template_simplerouter_3.png">
+- Send_Email
+ - This integration will send an email to a preconfigured address which contains all of the collected fields from the various dialogs.
+You will need to configure the agent and reply email addresses, email subject, and the body of the email in Global Functions
 
-    - The “skillName”, “skillId” and “transferMessage” variables will be populated via our Global Function. You do not need to change anything here.
-    
-    <img style="width:550px" src="img/ConvoBuilder/template_simplerouter_4.png">
+###Configuration Needed
 
+To customize this template, you will need to do the following
 
+####General Dialog Customization
+You will want to review each of the dialogs, starting with Welcome and each insurance dialog, and customize the verbiage used to greet your customer and request their details.
 
-### Configuration Needed
+This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
 
-To customize this template, you will need to do the following.
+####Travel Info Dialog
 
-#### Welcome dialog
+Travel dates, destinations, and the approved card steps of the Travel Info dialog are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if preferred. Additionally, dates are validated to ensure they are appropriate (eg: dates cannot occur in the past, return date on or after depart date). These can be customized with JavaScript as needed in the interaction “Process User Response” section.
 
-In the Welcome dialog, click on the first "hi" interaction. In the Interaction Details > Settings, edit the Patterns.
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/TravelNotification2.png">
 
-Now click on the multiple choice interaction and edit each option text for your skills.
-
-In the multiple choice Interaction Details > Next Actions, edit each Response Match & Action for the new skills. You will need to edit the Conditions patterns **and** and intent variable value for each. Of course, you should add or remove Response Match & Actions depending on how many skills you plan to route to.
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_simplerouter_2.png">
-
-#### Reprompt dialog
-
-Customize the text response to match your brand voice.
-
-#### No Agents Available dialog
-
-Customize the text response to match your brand voice.
-
-#### Global Functions
-
-The last thing to do is customize some important variables in the Global Functions.
-
-When you click on Global Functions at the top of Conversation Builder, you should see a block of code. Within this block of code, there is a `switch` statement like the below:
-
-```javascript
-switch(intent){
-case "billing":
-    transferMessage = "Hold on while I transfer you to someone who can help with your billing issue...";
-    skillId = '1234567890';
-    skillName = intent;
-    break;
-case "account":
-    transferMessage = "Hold on while I transfer you to someone who can help with your account issue...";
-    skillId = '2345678901';
-    skillName = intent;
-    break;
-case "help":
-    transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
-    skillId = '3456789012';
-    skillName = intent;
-    break;  
-}      
+For the date captures, we allow a certain number of attempts before we escalate to an agent. In addition, we apply the same logic to the information confirmation interactions.These can be configured to your liking in the Global Functions.
+ 
+```
+  // Max count of fail user inputs 
+  setVariable('maxAttempts', 2);
+  setVariable('departAttempts', 0);
+  setVariable('returnAttempts', 0);
+  setVariable('dateAttempts', 0);
+  setVariable('confirmationAttempts', 0);
 ```
 
-For each of your skill options:
+####Analytics
+Custom event logging for this template has been provided by default.
 
-- Edit the `case` to match the [intent variable values](#welcome-dialog) of your skill names.
+For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction, ex:
 
-- Edit the `transferMessage` to match the name of your skills. 
+```
+botContext.logCustomEvent(‘’, ‘Interaction Name’, ‘’);
+```
 
-- Edit the `skillId` to match that of your skills. The skill ID is displayed in the URL in LiveEngage when you click on an individual skill.
+For questions that a user must respond to, the code can be found under Process User Response, ex:
 
-- The `skillName` is being set to the name of the intent, but if you want to customize it you can.
+```
+var response = botContext.getCurrentUserMessage();
+botContext.logCustomEvent(response, ‘Interaction Name’, ‘’);
+```
+*Note: Personal information collection events are not logged by default in this template. Please consider privacy regulations before enabling this type of logging.*
 
-You might add or remove `case` branches as needed for the number of your skills.
+For more information on custom events, please refer to [our developer documentation](https://developers.liveperson.com/conversation-builder-scripting-functions-log-debug.html#log-custom-event).
 
-#### Deploy Your Bot
+####Global Function Customization
 
-To connect your bot to LiveEngage, follow [these instructions](conversation-builder-testing-deployment-deploying-to-liveengage.html). You can also try the [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html).
+Click the Global Functions link to access all the global functions and variables to be configured.
 
-Now you can test your routing bot and see how it routes to your skills.
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/TravelNotification3.png">
+
+You’ll want to customize the getEmailBody function within Global Functions to reflect your branding and voice.
+
+```
+// format email
+function getEmailBody(text) {
+  var message = '';
+  message = "<p>" + text + "</p><ul><li>Travel Dates: " + getVariable('departDate') + " - " + getVariable('returnDate') + "</li><li>Destinations: " + getVariable('destinations') + "</li><li>Approved Cards: " + getVariable('approvedCards') + "</li></ul>";
+  return message;
+}
+```
+
+#####Agent Escalation
+If the user requests an agent or if they reach the max invalid attempts to validate entered information, they will be escalated to a human agent.
+
+Modify the following values in Global Functions:
+
+|  Variable Name | Description  |
+|---|---|
+| escalationBotMessage | What the bot should say prior to hand off |
+| botAgentSkillId |The skill id you will transfer to  |
+| botAgentSkillName |The skill name you will transfer to
+
+#####Send Email Integration
+
+Users can request to have an email confirmation of their travel details sent to them at the conclusion of their conversation.
+
+Several variables are captured to populate the email body with the needed data. The `getEmailBody` function in Global Functions can be modified to reflect the voice and style desired for your company.
+
+Modify the following values in Global Functions
+
+
+|  Variable Name | Description  |
+|---|---|
+| ownerEmail | Email address to receive information collected by bot |
+| replyEmail |Reply To email address, displayed to the recipient in their email program|
+| emailSubject |Email subject line content
+| emailText | Initial mail text, dynamically recreated by `getEmailBody` function 
+
+The following variables are captured in the course of the dialog and used to create the email body.
+
+|  Variable Name | Description  |
+|---|---|
+| departDate | Travel departure date |
+| returnDate |Travel return date|
+| destinations |One or more countries that the user will be traveling to
+| approvedCards | One or more cards the user will be using
