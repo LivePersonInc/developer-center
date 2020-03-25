@@ -1,5 +1,5 @@
 ---
-pagename: Apply for a Loan
+pagename: Apply for a loan
 redirect_from:
     - conversation-builder-templates-apply-loan.html
 Keywords:
