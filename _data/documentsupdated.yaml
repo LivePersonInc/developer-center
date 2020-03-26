@@ -126,7 +126,7 @@
       - pagename: Bots
         subpages:
           - subpagename: Custom Bots
-         # - subpagename: Survey Bots
+          - subpagename: Survey Bots
           - subpagename: Bot Basics
           - subpagename: Bot Groups
           - subpagename: Bot-to-Bot Transfers

@@ -23,7 +23,7 @@ Use a survey bot to measure bot/agent and skill performance and to identify oppo
 <img style="width:400px" src="img/ConvoBuilder/surveyBot_example.png">
 
 {: .important}
-To use survey bots created in Conversation Builder, you must be on the LivePerson platform where you log into Conversation Builder via single sign-on through LiveEngage. This feature isn't supported on the AWS platform, i.e., if you're logging into Conversation Builder directly.
+To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through LiveEngage. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.
 
 ### Survey bots vs. custom bots
 
@@ -40,7 +40,7 @@ The following are key similarities and differences between survey bots and custo
 | Log transcripts | Yes | Yes |
 
 {: .important}
-There isn't a one-to-one correspondence between survey bots and custom bots. Survey bots are more like "manager" bots. You assign a skill or set of skills to a survey bot. When a conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey. In this way, a *single* survey bot is responsible for triggering surveys for *many* custom bots, all based on skill.
+There isn't a one-to-one correspondence between survey bots and custom bots. Survey bots are more like "manager" bots. You assign a skill or set of skills to a survey bot. When a conversation ends, if the conversation's last skill matches one assigned to the survey bot, the survey bot automatically begins the survey. In this way, a *single* survey bot can be responsible for triggering surveys for *multiple* custom bots, all based on skill.
 
 ### The survey flow
 
@@ -91,12 +91,16 @@ If you're an existing Bot Studio user, you'll need to disable Bot Studio before 
 
 #### Step 1B - Enable survey bots in Conversation Builder
 
-Please contact your LivePerson account representative to enable survey bots in Conversation Builder. This is done by LivePerson enabling the following AC feature flags:
+To enable survey bots in Conversation Builder, please contact your LivePerson account representative. This is done by LivePerson enabling the following AC feature flags:
 
 * Common.API_User_Login
 * Common.Async_Messaging
 * Common.Messaging_Survey
 * Common.RichContent
+
+#### Step 1C - Migrate your existing bots
+
+If you have 
 
 ### Step 2 - Create the survey bot
 
@@ -110,13 +114,25 @@ Please contact your LivePerson account representative to enable survey bots in C
     * **Skill**: Select the skill(s) that will trigger this survey bot. A skill can't be assigned to more than one survey bot.
 5. Click **Create Bot**.
 
-    This creates a survey bot that includes a single dialog of type "Survey." Define the survey in this dialog.
+    This creates a survey bot that includes a single dialog of type "Survey" (that's also named "survey" by default). Define the survey in this dialog.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_newSurvey.png">
+
+    For easy visibility, in the dashboard that lists your bots, the skill(s) assigned to a survey bot are listed beneath the bot name.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_dashboard.png">
 
 ### Step 3 - Build out the survey bot
 
 #### Adding survey interactions
 
-There are a few, predefined interactions that are available only to survey bots, namely, the FCR, CSAT, and NPS interactions. They're predefined in the sense that you can't edit their structure, i.e., add or remove answer choices. However, you can change the question and answer text.
+In the dialog that's of type "Survey," define the survey. This is the only dialog in which you can add survey interactions. There are three types:
+
+* First Call Resolution (FCR)
+* Customer Satisfaction (CSAT)
+* Net Promoter Score (NPS)
+
+The survey interactions are predefined in the sense that you can't edit their structure, i.e., add or remove answer choices. However, you can change the question and answer text.
 
 {: .important}
 In a single survey bot, you can include only one of each survey interaction type.
@@ -143,7 +159,7 @@ To add a Skip option and thereby make a survey question optional, click the **+S
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_skip.png">
 
 {: .important}
-In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question and skip is 12 quick replies. Using Skip will cause the conversation to end abruptly.
+In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question plus the Skip option is 12 quick replies. Using Skip will cause the conversation to end abruptly.
 
 #### Adding standard interactions
 
@@ -151,19 +167,17 @@ You can use only a subset of the standard interaction types in the Survey dialog
 
 Use the standard interactions to ask questions that reflect your brand's custom key performance indicators (KPIs) and/or other free-text questions. For example, you might want to obtain the consumer's age.
 
-#### Making display decisions
-
-Use the **Display choices as** setting on the **Settings** tab in the **Interaction Details** of a survey interaction to select whether to display the response choices as quick replies (the default) or buttons.
-
 #### Handling free text answers
 
-Free text answers work in a survey bot just like they do in a custom bot. For example, when presented with the the CSAT yes/no question, if the consumer types "yes" or "Yes" instead of selecting "Yes," the response is understood. If the consumer enters anything else, the fallback response is sent. You can use conditions to catch other patterns if desired.
+The handling of free text answers works in a survey bot just like it does in a custom bot. For example, when presented with the the CSAT yes/no question, if the consumer types "yes" or "Yes" instead of selecting "Yes," the response is understood. If the consumer enters anything else, the fallback response is sent. You can use conditions to catch other patterns if desired.
 
 #### Handling unrecognizable responses
 
-Fallback works in a survey bot just like it does in a custom bot; the only difference is that, in a survey bot, a Fallback dialog isn't created for you automatically.
+Fallback works in a survey bot just like it does in a custom bot. However, in the survey interactions in a survey bot, the fallback response is required, and there's a default value provided.
 
-If you'd like to override the default, built-in fallback response, create a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) and customize the response.
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_fallback.png">
+
+You can customize the default fallback responses in the survey interactions. You can also create a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) if desired.
 
 #### Closing the conversation
 
@@ -175,7 +189,7 @@ You don't need to include a Text interaction that thanks the consumer for their 
 
 ### Step 4 - Configure the bot settings
 
-1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
+1. Open the survey bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
 2. Select **Bot Settings** from the menu that appears.
 3. Configure the survey bot settings as needed; these are described below.
 4. Configured other bot settings as needed; these are described [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).
@@ -185,22 +199,15 @@ Survey bot settings include:
 - **Enable Bot**: If you need to temporarily remove a survey bot from your customer traffic flow, you can disable the bot using this setting.
 - **Skill**: If desired, change the skill(s) that will trigger this survey bot.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. Then enter the message to send.
-- **Session Expired Message**: Enable this to send a Session Expired message when the user enters text after the session has expired. Then enter the message to send.
-
-
-
-- **Skip Survey**: Enter the words or phrases that will allow the consumer to skip the survey. If the consumer enters one of these (the exact phrase, not case sensitive), the closing message will be displayed to the consumer, and the bot will end the survey.
-- **Closing message when survey is skipped by user**: Enter the closing message to dislay when the survey is skipped by the user.
-- **Survey Timeout**: Specify the amount of time that the survey will remain active before it is closed, and the closing message is displayed. The survey timout is calculated from the moment the survey starts until it reaches the timeout.
-- **Closing message when survey timeout reached**: Enter the closing message to display when the survey times out.
+- **Session Expired Message**: Enable this to send a Session Expired message when the user enters text after the session has timed out. Then enter the message to send.
 
 ### Step 5 - Trigger the bot
 
-In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes the survey will be triggered and the agent workspace will show the caption - “Survey in progress”
+In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes the survey will be triggered and the agent workspace will show the caption, “Survey in progress.”
 
 -add screen here-
 
-While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey or when the survey timeout is reached. In cases of an error with the survey flow or the survey bot, LiveEngage will close the survey after 48 hours as part of a conversation cleanup process.
+While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey or when the survey times out. In cases of an error with the survey flow or the survey bot, LiveEngage will close the survey after 48 hours as part of a conversation cleanup process.
 
 ### The agent experience
 
@@ -218,7 +225,7 @@ In the **Conversations panel** of the **Manager Workspace**, managers can view t
 
 <img class="fancyimage" style="width:950px" src="img/ConvoBuilder/surveyBot_manager1.png">
 
-Notet that the Meaningful Connection Score (MCS) represents the First Contact Resolution (FCR) score.
+Note that the Meaningful Connection Score (MCS) represents the First Contact Resolution (FCR) score.
 
 ### Reporting
 
@@ -234,7 +241,7 @@ In the Bot Analytics application, you'll see survey bots reported in the same wa
 
 You don't manually deploy a survey bot. When LivePerson enables this feature for your brand, this deploys the underlying system connector that is used. Therefore, **as soon as you create the survey bot and assign it a skill, the bot is active and can receive conversations.**
 
-Typically, brands don't develop in their Production environments, but if you do, for this reason, it's recommended that you assign to the survey bot a "test" skill that isn't used in a production campaign and use that to validate the bot before assigning a production skill.
+Typically, brands don't develop in their Production environments, but if you do, for this reason, it's recommended that you assign to the survey bot a "test" skill that isn't used in a production campaign and use that to validate the bot before assigning it a production skill.
 
 #### How do I disable a survey bot?
 
