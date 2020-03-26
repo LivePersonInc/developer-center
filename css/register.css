@@ -200,7 +200,7 @@ input:-moz-placeholder { /* Firefox 18- */
   display: flex;
 }
 
-#registerButton {
+#registerButton, #registerButtonTest  {
   border-radius: 5px;
   background-color: #ff720b;
   margin-top: 45px;
