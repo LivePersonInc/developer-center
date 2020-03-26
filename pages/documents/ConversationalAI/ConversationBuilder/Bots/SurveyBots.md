@@ -196,7 +196,8 @@ You don't need to include a Text interaction that thanks the consumer for their 
 5. Click **Save**.
 
 Survey bot settings include:
-- **Enable Bot**: If you need to temporarily remove a survey bot from your customer traffic flow, you can disable the bot using this setting.
+
+- **Enable Bot**: Use this to turn a survey bot on and off. When the bot is online, it responds to user messages. When it is offline, it doesn't. Taking a survey bot offline can be useful if you need to temporarily remove it from your customer traffic flow. The default value is Online.
 - **Skill**: If desired, change the skill(s) that will trigger this survey bot.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. Then enter the message to send.
 - **Session Expired Message**: Enable this to send a Session Expired message when the user enters text after the session has timed out. Then enter the message to send.

@@ -1,9 +1,7 @@
-
 PUT THIS BELOW IN BOT SETTINGS
 
-- **Enable Bot**: This Online/Offline setting is only displayed for [survey bots](conversation-builder-bots-survey-bots.html), not for custom bots. Use it to turn a survey bot on and off. When the bot is online, it responds to user messages. When it is offline, it doesn't. Taking a published survey bot offline can be useful if you need to temporarily remove it from your customer traffic flow. The default value is Online.
-
-DO WE DOUBLE DOC THE SURVEY BOT SETTINGS OR JUST PUT IN THE SURVEY BOT PAGE?
+{: .important}
+Survey bots have some additional, unique settings. For information on these, see [here](conversation-builder-bots-survey-bots.html#step-4---configure-the-bot-settings).
 
 PUT THIS BELOW IN BOT BASICS
 
@@ -20,3 +18,7 @@ PUT THIS BELOW IN BOT BASICS
 
 * For details on creating a custom bot, see [here](conversation-builder-bots-custom-bots.html).
 * For details on creating a survey bot, see [here](conversation-builder-bots-survey-bots.html).
+
+PUT THIS BELOW IN DIALOG BASICS
+
+* **Survey**: Survey dialogs can only be created in survey bots. Use a survey dialog to define a survey. For more information, see [here](conversation-builder-bots-survey-bots.html).
