@@ -246,7 +246,7 @@ Typically, brands don't develop in their Production environments, but if you do,
 
 #### How do I disable a survey bot?
 
-If you need to temporarily remove a survey bot from your customer traffic flow, you can disable the bot. To do this, set the **Enable Bot** slider to Off in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
+If you need to temporarily remove a survey bot from your customer traffic flow, you can disable the bot. To do this, set the **Enable Bot** slider to Off in the bot's **Bot Settings**.
 
 #### Are survey bots supported in text-only channels?
 
