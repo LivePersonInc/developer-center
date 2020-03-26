@@ -15,7 +15,7 @@ For practice at using an API integration, try the [Integrations tutorial](conver
 
 **To add an API integration**
 
-1. Open the bot, and click **Integrations** in the upper-right corner.
+1. Open the bot, and click **Integrations** in the upper-left corner.
 2. Configure the integration settings (required fields are marked with asterisks):
     - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
     - **Response Data Variable Name**: Enter the name of the response data variable.

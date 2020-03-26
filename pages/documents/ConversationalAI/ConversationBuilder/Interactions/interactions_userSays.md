@@ -15,11 +15,11 @@ It’s the user that starts things off by supplying some user input: a message o
 
 As an example, the Goodbye dialog below is triggered when the bot matches the user’s message to some form (pattern) of “good-bye.”
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/interactions_userSays1.png">
+<img style="width:700px" src="img/ConvoBuilder/interactions_userSays1.png">
 
 In contrast, the Billing dialog below is triggered when the bot matches the user’s message to a “Billing question” intent.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/interactions_userSays2.png">
+<img style="width:700px" src="img/ConvoBuilder/interactions_userSays2.png">
 
 What’s an intent? An intent is something a user wants to do. In our example, the intent is to ask a billing question. You create intents in Intent Builder.
 

@@ -27,7 +27,7 @@ Any time you might be making large changes to the functionality of a bot, there 
 
 **To save a version**
 
-1. In the lower-right corner, click <img style="width:35px" src="img/ConvoBuilder/icon_versions.png"> (Versions icon).
+1. In the upper-right corner, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Versions**.
 
     This displays the list of versions of the bot, if any.
     <img class="fancyimage" width="400" src="img/ConvoBuilder/bestPractices/versions1.png">
@@ -58,7 +58,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
     You only need to create the Production bot; you don't need to build out its dialogs and interactions.
 
 2. Return to your Development bot.
-2. In the lower-right corner, click <img style="width:35px" src="img/ConvoBuilder/icon_releases.png"> (Releases icon).
+2. In the upper-right corner, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Releases**.
 3. In the Releases window, click **New Release**.
 4. In the dialog box that appears, specify the following:
 
@@ -76,7 +76,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
     This takes you to the new bot.
 
-7. In the new Production bot, click <img style="width:35px" src="img/ConvoBuilder/icon_releases.png"> (Releases icon) in the lower-right corner.
+7. In the new Production bot, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> in the upper-right corner, and select **Releases**.
 
     <img class="fancyimage" width="400" src="img/ConvoBuilder/bestPractices/releases3.png">
 

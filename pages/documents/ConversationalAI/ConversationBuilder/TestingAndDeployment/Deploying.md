@@ -46,8 +46,8 @@ Adding an agent connector creates a connection between the bot and a bot agent i
 **To add an agent connector**
 
 1. Open the bot.
-2. Click **Agent Connectors** in the upper-right corner.
-3. Click **New Bot Connector** in the upper-right corner.
+2. Click **Agent Connectors** in the upper-left corner.
+3. Click **Add Agent Connector** in the upper-right corner.
     
     The Add Agent Connector dialog appears.
 
@@ -77,7 +77,7 @@ You can edit an agent connector as long as 1) the agent connector isn't running,
 **To edit an agent connector**
 
 1. Open the bot.
-2. Click **Agent Connectors** in the upper-right corner.
+2. Click **Agent Connectors** in the upper-left corner.
 3. If the connector is running, click **Stop**.
 4. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Edit** from the menu that appears.
 5. Edit the information, and click **Save**.
@@ -88,14 +88,14 @@ You can delete an agent connector as long as it isn't running.
 **To delete an agent connector**
 
 1. Open the bot.
-2. Click **Agent Connectors** in the upper-right corner.
+2. Click **Agent Connectors** in the upper-left corner.
 3. If the connector is running, click **Stop**.
 4. Move your mouse over the connector in the table, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> icon, and select **Delete** from the menu that appears.
 5. Click **Yes** to confirm the deletion. 
 
 ### Start an agent connector
 1. Open the bot.
-2. Click **Agent Connectors** in the upper-right corner.
+2. Click **Agent Connectors** in the upper-left corner.
 3. Locate the connector in the table, and click its **Start** button.
 
 {: .important}
@@ -103,7 +103,7 @@ Establishing the connection can take a few minutes.
 
 ### Stop an agent connector
 1. Open the bot.
-2. Click **Agent Connectors** in the upper-right corner.
+2. Click **Agent Connectors** in the upper-left corner.
 3. Locate the connector in the table, and click its **Stop** button.
 
 ### Troubleshoot a deployment
