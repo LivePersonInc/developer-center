@@ -171,6 +171,7 @@ function postRequest () {
 
   document.getElementById('videoWrapper').style.display = 'block'
   document.getElementById('registerWrapper').style.display = 'false'
+  if (player) player.play()
 
   // Get data from the form.
   const user = {
