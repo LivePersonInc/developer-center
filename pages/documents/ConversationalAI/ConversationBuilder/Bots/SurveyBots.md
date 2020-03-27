@@ -206,7 +206,7 @@ Survey bot settings include:
 
 In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes the survey will be triggered and the agent workspace will show the caption, “Survey in progress.”
 
--add screen here-
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/surveyBot_triggerSurvey.png">
 
 While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey or when the survey times out. In cases of an error with the survey flow or the survey bot, LiveEngage will close the survey after 48 hours as part of a conversation cleanup process.
 
@@ -214,11 +214,11 @@ While the survey is active the agent won’t be able to write in the conversatio
 
 Once a conversation ends and a survey begins, the conversation no longer appears in the Open Connections list in LiveEngage. Instead, it appears in the All Connections list with a status that indicates the survey is in progress:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_agent1.png">
+<img class="fancyimage" style="width:850px" src="img/ConvoBuilder/surveyBot_agent1.png">
 
 If an agent has permissions to view survey results, the agent can see the survey transcript.
 
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/surveyBot_agent2.png">
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/surveyBot_agent2.png">
 
 ### The manager experience
 
