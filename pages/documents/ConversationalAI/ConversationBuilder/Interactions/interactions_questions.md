@@ -180,6 +180,8 @@ You can create a list picker that displays a static (fixed) list of items that y
 
 <img style="width:600px" src="img/ConvoBuilder/questions_listPicker5.png">
 
+<img style="width:600px" src="img/ConvoBuilder/questions_listPicker6.png">
+
 #### Response Message settings
 
 The Response Message settings define how to initially display the list picker to the consumer:
