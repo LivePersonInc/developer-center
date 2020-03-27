@@ -30,11 +30,14 @@ Each conversational template consists of the following capabilities:
 The following use cases will be provided for multiple different industry verticals.
 
 | Template | Capabilities | Integrations |
-| --- | --- | --- |
+|------------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------|
 | Simple Router | Welcome message with choices to route to bots or agents. | Route to Bots, Agents |
 | Simple FAQ | Offer detailed responses for frequently asked questions via a knowledge base of questions and answers. | Knowledge Base |
 | Simple Lead Generation | Capture lead’s basic contact info. Sends the captured information to email. | Email |
 | Full Lead Generation | Capture lead’s contact info, interest in product/service and related details. Sends the captured info to email or SMS. | Email, Twilio number |
+| Apply for a Loan | Capture contact and financial information from a customer and send the results | Email, Agents |
+| Insurance Quote | Capture information related to insurance needs from a customer and send the results | Email, Agents |
+| Travel Notification | The Travel Notifications template allows an authenticated user to report their future travel |  |
 | Order Status | Shoppers can check the status of their orders with authentication via order number and name, etc. | Shopify |
 
 
