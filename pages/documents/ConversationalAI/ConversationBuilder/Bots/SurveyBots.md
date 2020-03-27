@@ -224,7 +224,7 @@ If an agent has permissions to view survey results, the agent can see the survey
 
 In the **Conversations panel** of the **Manager Workspace**, managers can view the survey scores for all conversations shown.
 
-<img class="fancyimage" style="width:950px" src="img/ConvoBuilder/surveyBot_manager1.png">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/surveyBot_manager1.png">
 
 Note that the Meaningful Connection Score (MCS) represents the First Contact Resolution (FCR) score.
 
