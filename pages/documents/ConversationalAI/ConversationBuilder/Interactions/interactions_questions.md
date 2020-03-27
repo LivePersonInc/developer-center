@@ -253,7 +253,9 @@ If your business uses Apple’s Business Chat service to chat with consumers via
 
 You can create a time picker that displays a static (fixed) list of time slots that you specify when you create the picker. Or, you can configure the picker so that it gets populated with time slots dynamically at runtime, passing in values from an earlier API integration call to an external system.
 
-<img style="width:300px" src="img/ConvoBuilder/questions_timePicker1.png">
+<img style="width:600px" src="img/ConvoBuilder/questions_timePicker1.png">
+
+<img style="width:600px" src="img/ConvoBuilder/questions_timePicker12.png">
 
 #### Response Message settings
 
