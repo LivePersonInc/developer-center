@@ -28,7 +28,9 @@ When you enter Intent Builder, you will notice a column that tells you if a doma
 {: .important}
 It is a best practice to only have one domain enabled for Intent Analyzer at a time. This is to minimize intent overlap.
 
+<!-- Need an updated image
 <img class="fancyimage" style="width:750px" src="img/intentanalyzer-domains1.png">
+-->
 
 Click on a domain of your choice. On the left side of the screen, you will see your list of intents. If an intent is enabled for Intent Analyzer, it will have a green dot to its left.
 
