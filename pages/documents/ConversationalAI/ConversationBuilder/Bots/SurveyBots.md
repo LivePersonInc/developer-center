@@ -226,8 +226,6 @@ In the **Conversations panel** of the **Manager Workspace**, managers can view t
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/surveyBot_manager1.png">
 
-Note that the Meaningful Connection Score (MCS) represents the First Contact Resolution (FCR) score.
-
 ### Reporting
 
 #### Report Builder
