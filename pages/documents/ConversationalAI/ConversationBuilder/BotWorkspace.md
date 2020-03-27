@@ -20,65 +20,63 @@ indicator: both
 1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Conversation Builder**.
 
-### The Bot Workspace
-
-<img class="fancyimage" style="width:750px" src="img/beaut_cb_2.png">
+### The bot workspace
 
 The Conversation Builder application is the primary workspace for designing a bot. It is what ties together all the other aspects of the platform.
+
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace.png">
+
+A bot consists of one or more [dialogs](conversation-builder-dialogs-dialog-basics.html) that each contain one or more [interactions](conversation-builder-interactions-interaction-basics.html). In the image above of the Dialogs view in Conversation Builder, note the following:
+
+* The open "hello world" bot has 6 dialogs. These are listed in the dialogs panel on the left.
+* The Account Balance dialog contains 6 interactions. These are also listed in the dialogs panel on the left.
+* The Account Balance dialog is currently displayed in the dialog editor in the center of the screen. As such, its name appears in bold in the dialogs panel.
 
 {: .important}
 Conversation Builder supports the creation of bots for all the LiveEngage channels. Because a bot simply listens to a piece of text sent from a user, any channel that provides text to LiveEngage can potentially trigger a bot. However, there are channel-specific formats, features and conventions that might not be available for all channels. Please contact your LivePerson account team for information on formats supported for specific channels.
 
-A bot consists of one or more dialogs that each have one or more [interactions](conversation-builder-interactions-interaction-basics.html) within them.
-
-In the upper-right corner on the menu bar, you will find:
-
-* **Dialogs** - Create and edit dialogs.
-
-* **Integrations** - Create and edit integrations.
-
-* **Global Functions** - Write code snippets for use within dialogs. See [scripting functions](conversation-builder-scripting-functions-introduction.html) for built-in methods.
-
-* **Agent Connectors** - [Deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) the bot to a LiveEngage environment.
-
-* The ellipsis icon makes available more options: **Bot Settings**, **Bot Change History**, **Bot Diff** and **Visualize**.
-
-In the lower-right corner, you will find:
-
-* **Preview** - Bot test conversation. Start a new session by sending "reset".
-
-* **Debugger** - View logs for a user ID.
-
-* **Releases** - Save or select between major releases of a bot.
-
-* **Versions** - Save or select between different versions of a bot.
-
 ### Dialogs
 
-When you first open a bot, you will be in the **Dialogs** view.
+When you first open a bot, you are taken to the **Dialogs** view. Use this view to make changes to the bot's [dialogs](conversation-builder-dialogs-dialog-basics.html) and the [interactions](conversation-builder-interactions-interaction-basics.html) within them.
 
-On the left side of the window, you can find the [Interactions Toolbar](#the-interactions-toolbar). This toolbar contains the different types of interactions that can be used in a dialog. Clicking an interaction in the dialog will allow you to configure it.
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace_dialogEditor.png">
 
-Learn more about dialogs [here](conversation-builder-dialogs-dialog-basics.html).
+#### The dialogs list
 
-#### The Dialog List
+In the left panel on the screen, there's an expandable list of the dialogs in the open bot. The dialogs are displayed vertically and in alphabetical order. You can use the search box to search by dialog or interaction name.
 
-At the bottom of the Dialog Viewer, you'll find a listing of all your different dialogs. They are displayed horizontally and in chronological order.
+<img class="fancyimage" style="width:250px" src="img/ConvoBuilder/botWorkspace_dialogsPanel.png">
 
-You can also use the hamburger icon next to the **+ Dialog** icon to see a list of your different dialogs. 
+### The interactions toolbar
 
-### The Interactions Toolbar
+The interactions toolbar is located on the right side in the Dialogs view.
 
-The Interactions toolbar is divided into four parts:
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace_interactionsToolbar.png">
 
-* **User Says** - Usually the starting point of any dialog. Contains the logic to match user input.
+The toolbar contains tools for adding different [types of interactions](conversation-builder-interactions-interaction-basics.html#interaction-categories) to the dialog that's currently open in the dialog editor in the center of the screen.
 
-* **Statements** - Displays information to the user.
+Select an interaction to add it to the open dialog. You can then start configuring the interaction. For example, if you add a simple, text-based question, you'll be able to enter the question that you want the bot to ask the user.
 
-* **Questions** - Prompts the user for a response. The user response is often stored in a variable or slot and referenced later in an integration.
+For more information on interactions, see [here](conversation-builder-interactions-interaction-basics.html).
 
-* **Integrations** - Activates an integration that you've configured in the Integrations tab.
+### The menu bar
 
-To use the Interactions toolbar, simply select the interaction you'd like to add to the dialog workspace. It will be then added, and you can start configuring it. For example, if you choose a simple, text-based question, you'll be able to enter the question you'd like the bot to ask the user. 
+The menu bar is displayed in the upper-left corner and contains the following options:
 
-For more information on interactions, see [this guide](conversation-builder-interactions-interaction-basics.html).
+* **Dialogs**: Create and edit [dialogs](conversation-builder-dialogs-dialog-basics.html) in this view.
+
+* **Integrations**: Create and edit [integrations](conversation-builder-integrations-integration-basics.html) in this view.
+
+* **Global Functions**: Write code snippets for use within dialogs here. See [scripting functions](conversation-builder-scripting-functions-introduction.html) for built-in methods.
+
+* **Agent Connectors**: [Deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) the bot to a LiveEngage environment.
+
+* The <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options: **Bot Settings**, **Bot Change History**, **Bot Diff**, **Visualize** and **Bot Analytics**.
+
+In the upper-right corner, there are a few more options:
+
+* **Preview**: Test the open bot by previewing a conversation. Start a new session by sending "reset".
+
+* **Add Dialog**: Add a dialog to the open bot.
+
+* The <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options: **Bot Logs** (for debugging), **Releases** and **Versions**.
