@@ -88,13 +88,13 @@ When selecting an interaction to add, make sure it's supported by the channel yo
 
 **To add a new interaction to the end of the dialog**
 
-- Click <img style="width:100px" src="img/ConvoBuilder/btn_newInteraction.png"> , which appears below the last interaction, and then select the interaction icon from the toolbar that appears.
+- Click **New Interaction**, which appears below the last interaction, and then select the interaction icon from the toolbar that appears. Alternatively, select the last interaction, and then select the interaction on the interactions toolbar on the right.
 
-    This adds the interaction as the last unless you added a User Says interaction, which is always inserted at the start of the dialog.
+    Either method adds the interaction as the last unless you added a User Says interaction, which is always inserted at the start of the dialog.
 
 **To add a new interaction between two interactions**
 
-- Select the interaction that should precede the one you want to add (to highlight it), and then select the appropriate icon in the Interactions panel on the left.
+- Select the interaction that should precede the one you want to add (to highlight it), and then select the interaction on the interactions toolbar.
 
     This inserts the interaction after the one you selected unless you inserted a User Says interaction, which is always inserted at the start of the dialog.
 
@@ -159,9 +159,9 @@ Add the following special tag inline inside your text interaction to force a bre
 
     `tag::breakWithDelay=1000`
 
-<img class="fancyimage" width="500" src="img/ConvoBuilder/bestPractices/tips_image_8.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/interactions_breakPoint1.png">
 
-<img class="fancyimage" width="350" src="img/ConvoBuilder/breakWithDelay.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/interactions_breakPoint2.png">
 
 {: .important}
 The delay value is in milliseconds. 1000 = 1 second.
