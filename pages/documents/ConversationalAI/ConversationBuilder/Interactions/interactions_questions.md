@@ -18,13 +18,6 @@ User responses to question interactions can be saved in [variables](conversation
 {: .important}
 For information on which question interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
 
-### Sample user answers
-Many question types provide a field for entering an example of a user's answer to the question.
-
-<img style="width:600px" src="img/ConvoBuilder/questions_sampleUserAnswer.png">
-
-There is no functionality tied to this field. It's meant to serve as a display-only aid to the bot developer during bot development within Conversation Builder.
-
 ### Multiple choice questions
 Multiple choice questions let the consumer select an answer from a list of choices.
 
@@ -32,7 +25,7 @@ Multiple choice questions let the consumer select an answer from a list of choic
 
 One powerful feature of multiple choice questions is that the bot can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html).
 
-<img style="width:600px" src="img/ConvoBuilder/questions_mcq3.png">
+<img style="width:650px" src="img/ConvoBuilder/questions_mcq3.png">
 
 #### Question text
 
@@ -62,7 +55,7 @@ Text questions expect and wait for a text-based response from the consumer.
 
 With text questions, it’s recommended that you include an example of an expected response, like is done in our example above. This helps to increase the likelihood of a valid response.
 
-<img style="width:600px" src="img/ConvoBuilder/questions_text2.png">
+<img style="width:650px" src="img/ConvoBuilder/questions_text2.png">
 
 #### Question text
 
@@ -79,7 +72,7 @@ Like with any question, a structured question expects and waits for the user res
 {: .important}
 Structured questions aren't supported on all channels; see [here](conversation-builder-interactions-interaction-support.html) for a listing of support. Be sure to verify the channel's support before designing your bot. For example, Facebook supports structured questions, but Apple Business Chat doesn't. Apple Business Chat offers its list picker instead.
 
-<img style="width:400px" src="img/ConvoBuilder/questions_structured2.png">
+<img style="width:750px" src="img/ConvoBuilder/questions_structured2.png">
 
 #### Tile settings
 
@@ -106,7 +99,7 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 
 You can populate the tiles with static information, or they can be dynamically populated during run time, for example, using data received from an [API integration](conversation-builder-integrations-api-integrations.html).
 
-<img style="width:250px" src="img/ConvoBuilder/questions_structured3.png">
+<img style="width:300px" src="img/ConvoBuilder/questions_structured3.png">
 
 #### Notes on Structured questions
 
@@ -184,6 +177,8 @@ You might want to include a list picker so consumers can select from a list of:
 You can create a list picker that displays a static (fixed) list of items that you specify when you create the picker. Or, you can configure the picker so that it gets populated with items dynamically at runtime, passing in values from an earlier API integration call to an external system.
 
 (The interaction has been developed per Apple's List Picker specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/list_picker).)
+
+<img style="width:600px" src="img/ConvoBuilder/questions_listPicker5.png">
 
 #### Response Message settings
 
