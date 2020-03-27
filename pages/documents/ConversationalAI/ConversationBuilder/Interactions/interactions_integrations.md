@@ -29,18 +29,18 @@ Before you can add an Integration interaction, you need to create the integratio
 
 3. Finish configuring the interaction as desired, and click **Save**.
 
-#### Defining conditions based on the result of the API integration
+#### Defining rules based on the result of the API integration
 
 {: .important}
-It's recommended that you take advantage of the ability to define conditions based on the *result* of the API integration.
+It's recommended that you take advantage of the ability to define rules based on the *result* of the API integration.
 
-In our example below, we've added a condition that checks for a "success" result **(1)**, and we've configured the next step to continue to the next interaction **(2)**. So, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends).
+In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction...
 
- <img style="width:800px" src="img/ConvoBuilder/integrations_api_success.png">
+ <img style="width:600px" src="img/ConvoBuilder/integrations_api_rule1.png">
 
-We've likewise added a second condition that checks for a "failure" result **(1)**, and then we've configured the next step to continue to a "fail" interaction **(2)**. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
+...so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
 
- <img style="width:800px" src="img/ConvoBuilder/integrations_api_failure.png">
+ <img style="width:600px" src="img/ConvoBuilder/integrations_api_rule2.png">
 
 ### Agent Transfer interactions
 
@@ -63,7 +63,7 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 
     <img style="width:600px" src="img/ConvoBuilder/interactions_agentTransfer.png">
 
-3. Click <img style="width:30px" src="img/ConvoBuilder/icon_interactionDetails.png"> to open the **Interaction Details**, and click the **Settings** tab.
+3. In the upper-right corner of the interaction, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> (3-dot icon), and select **Settings**.
 4. Specify the following:
 
     * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in LiveEngage. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
@@ -111,7 +111,7 @@ Some setup of your LiveEngage environment is required before using this feature.
 
     For the file to be uploaded, in step 4, you'll follow this with an integration interaction that invokes a File integration.
 
-3. In the File Upload interaction, open the **Interaction Details**, click **[Settings]((conversation-builder-interactions-details-settings.html))**, and specify the following under **File Upload Settings**:
+3. In the File Upload interaction, in the upper-right corner click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> (3-dot icon), and select **Settings**. Specify the following under **File Upload Settings**:
     - **Accepted File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
     - **Success message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
     - **Failure message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
@@ -139,6 +139,8 @@ Some setup of your LiveEngage environment is required before using this feature.
 If the dialog flow requires that the consumer upload *multiple* files, you'll need to add a File Upload interaction for every file, and each interaction must be followed by an Integration interaction. You can certainly reuse the [File integration](conversation-builder-integrations-file-integrations.html) that gets called, as we've done below.
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload3.png">
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload9.png">
 
 ##### Routing the conversation based on success or failure
 
