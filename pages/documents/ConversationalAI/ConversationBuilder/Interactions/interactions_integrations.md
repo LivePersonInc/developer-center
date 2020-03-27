@@ -148,14 +148,14 @@ If desired, you can route the conversation to a different dialog flow *based on 
 
 To do this for the success flow, create a dialog that begins with a User Says interaction that matches the pattern `file_upload_success:{your success message}`, for example:
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/integrations_fileUpload7.png">
+`file_upload_success:Receipt of file is successful`
 
 *Spaces in the message are permitted.*
 
 Then build out the success dialog flow as desired.
 
-You can create a failure dialog similarly. In this case, the User Says interaction must match the pattern: `file_upload_failed:{your message}`.
+You can create a failure dialog similarly. In this case, the User Says interaction must match the pattern: `file_upload_failed:{your failure message}`.
 
-If your original dialog involves *multiple* uploads--with different success and failure messages for each upload--but you want to handle the uploads with a *single* success dialog (or failure dialog), use the * wildcard to match all messages like this:
+If your original dialog involves *multiple* uploads--with different success and failure messages for each upload--but you want to handle the uploads with a *single* success dialog (or failure dialog), use the * wildcard character to match all messages like this:
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/integrations_fileUpload8.png">
+`file_upload_success:*`
