@@ -23,7 +23,9 @@ The API returns the conversation’s transcripts and all of its related metadata
 
 This API supports the HTTP POST functionality (data retrieval), and all data is returned in JSON format.
 
-<div class="important">Please note that when data is unavailable for a certain field, that field will <b>not be returned</b> as part of the JSON.</div>
+<div class="important">The Messaging Interaction API exposes Open and Closed conversations with near real-time data freshness. The API has an inherent delay due to its nature and architecture as a historical API. This means that it has a delay of up to 1 minute.
+<br><br>
+In addition, SDEs will be available in the response in near real-time, but the ability to search on SDEs is only available after 2 hours. The All Connections tab in LiveEngage is also built on top of this API.</div>
 
 ### Getting Started
 
