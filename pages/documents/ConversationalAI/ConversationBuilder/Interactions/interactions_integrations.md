@@ -36,11 +36,11 @@ It's recommended that you take advantage of the ability to define rules based on
 
 In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction...
 
- <img style="width:600px" src="img/ConvoBuilder/integrations_api_rule1.png">
+ <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule1.png">
 
 ...so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
 
- <img style="width:600px" src="img/ConvoBuilder/integrations_api_rule2.png">
+ <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png">
 
 ### Agent Transfer interactions
 

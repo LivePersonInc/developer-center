@@ -1,77 +1,92 @@
 ---
-pagename: Details - Next Actions
+pagename: Configuration - Next Step
 redirect_from:
     - conversation-builder-conversation-builder-conditions.html
     - conversation-builder-conversation-builder-response-match-actions.html
     - conversation-builder-response-match-actions.html
     - conversation-builder-interactions-response-match-actions.html
+    - conversation-builder-interactions-details-next-actions.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
-permalink: conversation-builder-interactions-details-next-actions.html
+permalink: conversation-builder-interactions-configuration-next-step.html
 indicator: both
 ---
 
-The **Next Actions** tab in the **Interaction Details** widget is where you configure most of the dialog and interaction logic.
+### Next Step
 
-### Access the Next Actions tab
+Every interaction has a specified next step. This determines the direction of the dialog flow after the interaction has been processed.
 
-1. Select the interaction to configure, and click the <img style="width:25px" src="img/ConvoBuilder/icon_interactionDetails.png"> icon (Interaction Details) that's displayed to its right.
+You specify an interaction's next step directly on the tile:
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_detailsNextActions1.png">
-2. Click the **Next Actions** tab.
+<img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_nextStep.png">
 
-    <img style="width:350px" class="fancyimage" src="img/ConvoBuilder/interactions_detailsNextActions2.png">
+When specifying the next step, you can select from the following options:
 
-### Response Match & Action
+* *Next Interaction*: This directs the flow to the next interaction in the dialog.
+* *Current Interaction*: This repeats the current interaction.
+* *End Interaction*: This closes the dialog.
+* *{interaction name}*: This directs the flow to the interaction with the specified name.
 
-#### Response Match & Action sets
+As shown in the image above, in question and integration interactions, you can create rules that determine the next step that occurs.
 
-A Response Match & Action set contains the instructions for how to respond to the user input. You can create one or many sets depending on how many responses you need to support. The following image illustrates two sets, where the first is displayed.
+### Rules
 
-<img style="width:300px" class="fancyimage" src="img/ConvoBuilder/interactionDetails_sets.png">
+A rule contains a set of instructions for how to respond to the user input or to the result of an integration call.
 
-**To add a Response Match & Action set**
-* Click the <img style="width:25px" src="img/ConvoBuilder/icon_addResponseMatchSet.png"> icon beside "Response Match & Actions."
+For example, the following rule says that if the user responds to a Yes/No question with the pattern "yes," "yah," or "yup," the dialog flow should continue to the Yes statement.
 
-#### Conditions
+<img style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_rule.png">
 
-When adding a question or integration interaction to the dialog, you can configure conditional logic based on the user's response in order to take the user through the desired next steps. These are essentially "if..., then..." conditional statements, but when combined with pattern matching, intents and entities, they can deliver a powerful flow control engine for the bot.
+In question and integration interactions, you can create one or multiple rules depending on how many responses you need to support.
 
-In the first drop-down in the Conditions section, you specify how you want to match the user input. Methods include: 
+Use the guided "Edit Rule" interface to:
 
-* **Response Intent**: The bot will trigger the Next Step action (discussed below) when the [intent](intent-builder-intents.html) that you select is sent to it by the NLU engine. Make sure to connect your domain and populate it with intents, so they'll be available for conditions.
-* **Regular Expression**: The bot will trigger the Next Step action (discussed below) when the user input matches the RegEx that you specify. All standard [Regex rules](http://www.regexlib.com) apply.
-* **Pattern**: The bot will trigger the Next Step action (discussed below) when the user input matches the pattern that you specify. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
-* **Exact Value**: The bot will trigger the Next Step action (discussed below) when the user input matches an exact value that you specify. This is useful for questions where you present the user a set of predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
-* **Evaluate Options**: Available for multiple choice questions only. The bot will trigger the Next Step action (discussed below) when the user's choice matches the choice that you select here. For a match to be found, the consumer must select the option, enter the choice exactly, or, in text-only channels, enter the corresponding letter or number (configured in the Interaction Details).
+1. Specify the rule name.
+2. Define the condition that must evaluate to true for the rule to be executed.
+3. Store data in a [variable or slot]((conversation-builder-variables-slots.html)). (Multiple variables are allowed in a rule; only a single slot is allowed in a rule.)
+4. Specify the next step.
 
-    <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/interactionDetails_listStyle.png">
+### Conditions
+
+Conditions are "if..., then..." statements that, when combined with pattern matching, intents and entities, deliver a powerful flow control engine for the bot.
+
+#### Conditions in question interactions
+
+Consider the following question that asks the user for their 6-digit account number.
+
+<img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions1.png">
+
+The question contains a single rule, which is this:
+
+<img style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions2.png">
+
+In the rule, there's a condition that determines if the user's response matches the RegEx for a 6-digit number. If it does, the user's response is stored in a slot, and the dialog flow continues to the next interaction.
+
+Like in the image above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following methods:
+
+* **Response Intent**: This triggers the Next Step action when the [intent](intent-builder-intents.html) that you select is sent to it by the NLU engine. Make sure to connect your domain and populate it with intents, so they'll be available for conditions.
+* **Regular Expression**: This triggers the Next Step action when the user input matches the RegEx that you specify. All standard [Regex rules](http://www.regexlib.com) apply.
+* **Pattern**: This triggers the Next Step action when the user input matches the pattern that you specify. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
+* **Exact Value**: This triggers the Next Step action when the user input matches an exact value that you specify. This is useful for questions where you present the user a set of predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
+* **Evaluate Options**: Available for multiple choice questions only. This triggers the Next Step action when the user's choice matches the choice that you select here. For a match to be found, the consumer must select the option, enter the choice exactly, or, in text-only channels, enter the corresponding letter or number (configured in the interaction's settings).
+
+    <img style="width:200px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions4.png">
 
     If you need more flexibility (e.g., you have a Yes/No question but you want to account for "Yeah" and "Yup" in the condition), use a different method instead.
 
     When defining a condition using Evaluate Options, make sure the choices in the question are defined *before* defining the condition. Otherwise, the choices won't be available for use in the condition.
 
-##### Adding multiple conditions
+* **No Match**: Use this option in a *final* condition to catch all utterances other than those caught by earlier conditions. This triggers the Next Step action when no match to earlier conditions is found.
 
-You can add more than one condition to an interaction for more complex flow control. To do so, click the <img style="width:25px" src="img/ConvoBuilder/icon_addCondition.png"> icon in the Conditions section.
+    For example, assume you have a Yes/No multiple choice question. You’ve defined a condition for “Yes,” with a next step that’s appropriate. You’ve also defined a condition for “No,” with a next step that’s appropriate. You can use the No Match option to define a 3rd and final condition to catch all responses other than “Yes” and “No,” and set the next step to “Current interaction.” This will repeat the question until the user responds with “Yes” or “No.”
 
-<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/interactionDetails_addCondition.png">
+#### Conditions in integration interactions
 
-#### Slots
+You can define a condition (in a rule) in an integration interaction to direct the dialog flow based on the result of the API integration call. This is a best practice that's recommended by LivePerson.
 
-A slot is a special type of variable that is automatically assigned an entity value when mapped to a specific entity. You can fetch the value of a slot variable in interactions or API integrations using`{$botContext.slot.SLOT_VARIABLE_NAME}`. For more on using slots, see [Variables & Slots](conversation-builder-variables-slots.html).
+<img style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions3.png">
 
-#### Variables
-
-Variables are the default way to store and access important data points through the flow of the bot. You can fetch the value of a variable in interactions or API integrations inline using `{$botContext.VARIABLE_NAME}`. For more on using variables, see [Variables & Slots](conversation-builder-variables-slots.html).
-
-#### Next Step
-
-Select the next step if the displayed condition is satisfied. You have three types of choices:
-
-* Continue to the next interaction (in the dialog)
-* "End interaction," which closes the dialog
-* Jump to a specific interaction that you select by name
+For more on doing this, see the discussion on integration interactions [here](conversation-builder-interactions-integrations.html#defining-rules-based-on-the-result-of-the-api-integration).
