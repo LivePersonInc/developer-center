@@ -1,28 +1,31 @@
 ---
-pagename: Details - Settings
+pagename: Configuration - Settings
 redirect_from:
     - conversation-builder-conversation-builder-interaction-details.html
     - conversation-builder-interaction-details.html
     - conversation-builder-interactions-interaction-details.html
+    - conversation-builder-interactions-details-settings.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Conversation Builder
-permalink: conversation-builder-interactions-details-settings.html
+permalink: conversation-builder-interactions-configuration-settings.html
 indicator: both
 ---
 
-The **Settings** tab in the **Interaction Details** widget is where you configure some key settings for the interaction.
+The **Settings** dialog is where you can configure some key settings for an interaction.
 
-### Access the Settings tab
+### Access the Settings dialog
 
-1. Select the interaction to configure, and click the <img style="width:25px" src="img/ConvoBuilder/icon_interactionDetails.png"> icon (Interaction Details) that's displayed to its right.
+1. Select the interaction.
+2. In the interaction's upper-right corner, click <img style="width:20px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> (3-dot icon), and select **Settings**.
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_detailsSettings1.png">
-2. Click the **Settings** tab.
+    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_settings1.png">
 
-    <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/interactions_detailsSettings2.png">
+    This displays the Settings dialog.
+
+    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_settings2.png">
 
 ### Settings
 
@@ -35,6 +38,7 @@ The **Settings** tab in the **Interaction Details** widget is where you configur
     If you see messages out of order, add a 1000-2000 millisecond (1-2 second) delay. A 2-second delay is recommended to ensure a consistent message order.
 
 * **Interaction Enabled**: Set this On/Off slider to Off to disable the interaction, i.e., to exclude it from being executed as a part of the dialog flow. The default value is On (Enabled).
+* **Fallback Response**: Enter the text to be sent to the user if none of the defined conditions are met.
 
 ### Settings in User Says interactions
 

@@ -15,7 +15,7 @@ Use this page to help you troubleshoot common issues when working with interacti
 
 #### Messages are delivered out of order
 
-Messages sometimes can be delivered out of order because, behind the scenes, the system processes them using a rolling, two-second loop. When multiple messages are added to the queue within a single, two-second interval, there’s no guarantee of the order in which those messages are sent. To help to ensure a consistent message order, you can set an interaction delay in the settings in the Interaction Details, as described [here](conversation-builder-interactions-details-settings.html#settings).
+Messages sometimes can be delivered out of order because, behind the scenes, the system processes them using a rolling, two-second loop. When multiple messages are added to the queue within a single, two-second interval, there’s no guarantee of the order in which those messages are sent. To help to ensure a consistent message order, you can set an interaction delay in the settings in the Interaction Details, as described [here](conversation-builder-interactions-configuration-settings.html#settings).
 
 #### Long messages are broken into smaller ones
 

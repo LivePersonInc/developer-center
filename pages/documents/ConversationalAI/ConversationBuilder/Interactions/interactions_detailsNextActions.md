@@ -75,13 +75,3 @@ Select the next step if the displayed condition is satisfied. You have three typ
 * Continue to the next interaction (in the dialog)
 * "End interaction," which closes the dialog
 * Jump to a specific interaction that you select by name
-
-### Fallback Response
-
-In the **Fallback Response** field, enter the text to be sent to the user if none of the defined conditions are met.
-
-### Process User Response
-
-Use the **Process User Response** section to add code that runs after the user has responded to this interaction. This code can be used in place of the response conditions, or in conjunction with them after a successful match.
-
-You can use the built-in [scripting functions](conversation-builder-scripting-functions-functions-list.html) to access variables and manipulate data.

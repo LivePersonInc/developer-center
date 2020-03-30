@@ -158,8 +158,8 @@
           - subpagename: Questions
           - subpagename: Integrations
           - subpagename: Details - Next Actions
-          - subpagename: Details - Code
-          - subpagename: Details - Settings
+          - subpagename: Configuration - Custom Code
+          - subpagename: Configuration - Settings
           - subpagename: Troubleshooting
       - pagename: NLU Assist
       - pagename: Variables & Slots
