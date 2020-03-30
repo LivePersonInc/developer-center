@@ -480,9 +480,9 @@ You will test this connection with a standard web chat engagement, so now you cr
 3. On the page that appears, specify the following:
     * **Campaign name**: Enter "Bot test."
     * **Campaign goal**: Click this, select "Interact with consumers" on the page that appears, and click **Done**.
-    * **Engagement**: Click **+ Add engagement**. For the **engagement source**, select "Web." In the gallery that appears next, select a chat template, and click **Next**. In the Engagement Settings that appear next, select "Live chat" for the **Conversation type**. For **Routing**, select "Specific skill," and then select the "Bot" skill.
+    * **Engagement**: Click **+ Add engagement**. For the **engagement source**, select "Web." In the gallery that appears next, select a messaging template, and click **Next**. In the Engagement Settings that appear next, select "Messaging" for the **Conversation type**. For **Routing**, select "Specific skill," and then select the "Bot" skill.
 
-    <img style="width:400px" src="img/ConvoBuilder/helloworld/confLE_5.png">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/confLE_5.png">
 4. Click **Next**. 
 5. In the Engagement Studio, click **Next**. 
 6. In the Engagement Window Library, click **Done**.
@@ -529,7 +529,7 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
 3. In the Add Agent Connector dialog box, specify the following based on the bot user you created.
     - **Agent User ID**: Select the user ID for the bot user agent.
     - **Role**: Select "Agent."
-    - **Conversation Type**: Select "Chat."
+    - **Conversation Type**: Select "Messaging."
     - **Deploy to**: Select "Demo." The Demo environment is a testing environment, and the Production environment is the live environment. It's always a best practice to test your bot in the Demo environment first, before deploying it to the Production environment.
 4. Click **Save**.
     
@@ -550,19 +550,17 @@ LivePerson recommends that, when you connect your bot to LiveEngage in a product
 #### Step 13: Test the bot
 
 {: .important}
-In this step, you'll be testing with Chat, so you'll be using [this test page](https://livepersoninc.github.io/visitor-page/?siteid=[your account number]), adding your account number to the URL. When you test with Messaging for Web, you can use [this test page](https://vx-lp.github.io/v2/lpwm/).
+In this step, you'll be testing with Messaging, so you'll be using [this test page](https://vx-lp.github.io/v2/lpwm/). When you test with Chat, you can use [this test page](https://livepersoninc.github.io/visitor-page/?siteid=%5Byour%20account%20number%5D), adding your account number to the URL.
 
 1. Be sure you are online as a Human agent in LiveEngage.
 
-2. In a browser, navigate to [this test page](https://livepersoninc.github.io/visitor-page/?siteid=[your account number]). Note the URL.
+2. In a browser, navigate to [this test page](https://vx-lp.github.io/v2/lpwm/).
 
-    <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/helloworld/testpage1.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/testpage1.png">
 
-3. In the URL, replace the placeholder with your site ID, i.e., your account number.
+3. Enter your account number and username (just your first name will do fine), and then click **Update**.
 
-   <img class="fancyimage" style="width:650px" src="img/ConvoBuilder/helloworld/testpage2.png">
-
-4. On the test page, click the Live Chat button.
+4. Click the Messaging call to action.
 
     This connects you with the bot in the Bot skill.
 
