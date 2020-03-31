@@ -49,6 +49,15 @@ Use the guided "Edit Rule" interface to:
 3. Store data in a [variable or slot]((conversation-builder-variables-slots.html)). (Multiple variables are allowed in a rule; only a single slot is allowed in a rule.)
 4. Specify the next step.
 
+#### Multiple rules
+
+If an interaction has multiple rules, they are executed in the order they are listed.
+
+To reorder rules, move the cursor over the area to the left of the rule, and click the Up or Down arrow that appears.
+
+<img style="width:500px" class="fancyimage" src="img/ConvoBuilder/interactions_rule2.png">
+
+
 ### Conditions
 
 Conditions are "if..., then..." statements that, when combined with pattern matching, intents and entities, deliver a powerful flow control engine for the bot.
