@@ -169,13 +169,19 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
         },
         {
           "type": "button",
-          "tooltip": "publish text example",
-          "title": "publish text example",
+          "tooltip": "postback example",
+          "title": "postback example",
           "click": {
+            "metadata": [
+              {
+                "type": "ExternalId",
+                "id": "456"
+              }
+            ],
             "actions": [
               {
                 "type": "publishText",
-                "text": "published text button tap"
+                "text": "postback button tapped"
               }
             ]
           }

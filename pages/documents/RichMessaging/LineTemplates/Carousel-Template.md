@@ -213,13 +213,19 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
             },
             {
               "type": "button",
-              "tooltip": "Add to cart",
-              "title": "Add to cart",
+              "tooltip": "Postback",
+              "title": "Postback",
               "click": {
+                "metadata": [
+                  {
+                    "type": "ExternalId",
+                    "id": "456"
+                  }
+                ],
                 "actions": [
                   {
                     "type": "publishText",
-                    "text": "Add to cart pressed"
+                    "text": "postback button tapped"
                   }
                 ]
               }
@@ -323,13 +329,19 @@ Within basic element objects, will be “title”/”subtitle”, which will ind
             },
             {
               "type": "button",
-              "tooltip": "Add to cart",
-              "title": "Add to cart",
+              "tooltip": "Postback",
+              "title": "Postback",
               "click": {
+                "metadata": [
+                  {
+                    "type": "ExternalId",
+                    "id": "890"
+                  }
+                ],
                 "actions": [
                   {
                     "type": "publishText",
-                    "text": "Add to cart pressed"
+                    "text": "postback button tapped"
                   }
                 ]
               }

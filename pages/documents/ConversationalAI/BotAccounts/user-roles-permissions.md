@@ -47,7 +47,7 @@ Users with this permission do have the following limitations:
 This permission provides full privileges for creating bots and related resources. More specifically, users with this permission can create and manage:
 
 * Bots
-* Bot versions and releases
+* Bot groups
 * Integrations
 * Global functions
 * Credentials
@@ -58,6 +58,7 @@ Users with this permission can also:
 
 * Activate and train models
 * Create, deploy and manage agent connectors at the bot level within Conversation Builder
+* View versions and releases (For privileges to create and manage these, add on the "Release Creator" and/or "Release Acceptor" granular permissions, discussed farther below.)
 * View and download analytics data
 
 This permission doesn't allow the user to create and manage (bot) templates, accounts or users. Also, this permission doesn't allow the user access to the Bot Status application, which is the operations area where bot deployments for the entire organization can be managed.
@@ -88,7 +89,7 @@ Users with this permission can only do the following:
 
 ### Granular permissions
 
-As a business, you might want to provide basic Conversation Builder development capabilities to some users, with restrictions regarding certain capabilities like access to API integrations, update of credentials, and the import and export of bots. You can achieve this using combinations of the roles discussed below.
+As a business, you might want to provide basic Conversation Builder development capabilities to some users, with restrictions regarding certain capabilities like access to API integrations, for example. You can achieve this using combinations of the roles discussed below.
 
 #### Conversation Builder: Bot Builder Lite
 
@@ -106,11 +107,11 @@ Use one or more add-on permissions (below) along with this permission, as per yo
 
 ##### Conversation Builder: API Developer
 
-Users with this permission can only create and manage *integrations*.
+Users with this permission can only create and manage integrations.
 
 ##### Conversation Builder: API Credentials Manager
 
-Users with this permission can only create and manage *credentials*.
+Users with this permission can only create and manage credentials.
 
 {: .important}
 Whenever you assign this permission, also assign Bot Builder Lite *and* API Developer.
@@ -121,3 +122,21 @@ Users with this permission can only do the following:
 
 * Export/import bots
 * Export/import knowledge bases
+
+##### Conversation Builder: Release Creator
+
+Users with this permission can only do the following:
+
+* Create and delete versions
+* Create releases
+
+Use this permission with the Bot Builder or Bot Builder Lite permission as you require.
+
+##### Conversation Builder: Release Acceptor
+
+Users with this permission can only do the following:
+
+* Create versions
+* Accept releases, i.e., upgrade bots
+
+Use this permission with the Bot Builder or Bot Builder Lite permission as you require.
