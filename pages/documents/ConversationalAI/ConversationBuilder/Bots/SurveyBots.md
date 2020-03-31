@@ -29,9 +29,9 @@ To use survey bots created in Conversation Builder, you must be on the LivePerso
 
 When creating a survey bot, you work in Conversation Builder in the same, general way that you do with a custom bot. Create the bot and define its dialog flow, adding the interactions that meet your survey requirements.
 
-The following are key similarities and differences between survey bots and custom bots.
+The following are key similarities and differences between building survey bots and custom bots in Conversation Builder.
 
-| | Custom bots | Survey bots |
+| Can I...? | Custom bots | Survey bots |
 | --- | --- | --- |
 | Export and import the bot | Yes | Yes, except the bot's assigned skills are not exported. |
 | Create versions and releases | Yes | Yes |
@@ -63,7 +63,7 @@ The consumer can skip a survey in two ways:
 
 #### Survey timeout
 
-A survey times out (expire) after XXXX. You can configure a "Session Expired" message to send to the consumer if they try to enter text after the session has expired.
+By default, a survey times out (expires) after one hour, but you can change this time period if desired. You can also configure a "Session Expired" message to send to the consumer if they try to enter text after the session has expired. Both of these settings are found in Bot Settings, discussed farther below.
 
 #### Survey outcomes
 
@@ -75,32 +75,17 @@ A survey can be closed in the following ways:
 
 Each outcome is tracked and reported on as part of the Report Builder, so you can fully analyze the results.
 
-### Step 1 - Prequisite steps
+### Step 1 - Enable the feature
 
-Before you can dive into creating survey bots in Conversation Builder, there are a few, prerequisite setup steps that must be performed.
-
-#### Step 1A - Disable Bot Studio
-
-If you're an existing Bot Studio user, you'll need to disable Bot Studio before beginning with survey bots in Conversation Builder. The two *cannot* be run side by side, which also means you'll need to recreate your existing Bot Studio survey bots in Conversation Builder.
-
-**To disable Bot Studio**
-
-1. a
-2. b
-3. c
-
-#### Step 1B - Enable survey bots in Conversation Builder
-
-To enable survey bots in Conversation Builder, please contact your LivePerson account representative. This is done by LivePerson enabling the following AC feature flags:
+Before you can dive into creating survey bots in Conversation Builder, contact your LivePerson account representative to have the feature enabled in Conversation Builder. This is done by LivePerson enabling the following AC feature flags behind the scenes:
 
 * Common.API_User_Login
 * Common.Async_Messaging
 * Common.Messaging_Survey
 * Common.RichContent
 
-#### Step 1C - Migrate your existing bots
-
-If you have 
+{: .important}
+If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. Afer enabling survey bots in Conversation Builder, you'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder.
 
 ### Step 2 - Create the survey bot
 
@@ -111,7 +96,7 @@ If you have
     * **Name**: Enter a name for the bot that's concise and clear.
     * **Description**: Enter a description that's meaningful to you and others. 
     * **Bot Language**: Select a language.
-    * **Skill**: Select the skill(s) that will trigger this survey bot. A skill can't be assigned to more than one survey bot.
+    * **Skill**: Select the skill(s) that will trigger this survey bot. A skill can be assigned to only one survey bot.
 5. Click **Create Bot**.
 
     This creates a survey bot that includes a single dialog of type "Survey" (that's also named "survey" by default). Define the survey in this dialog.
@@ -126,7 +111,7 @@ If you have
 
 #### Adding survey interactions
 
-In the dialog that's of type "Survey," define the survey. This is the only dialog in which you can add survey interactions. There are three types:
+In the dialog that's of type "Survey," define the survey. This is the only dialog in which you can add survey interactions. There are three types of survey interactions:
 
 * First Call Resolution (FCR)
 * Customer Satisfaction (CSAT)
@@ -185,7 +170,7 @@ As a best practice, end the dialog flow with an interaction whose next step is "
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
 
-You don't need to include a Text interaction that thanks the consumer for their participation; you can define the Thank You message in the survey bot's settings (discusssed below).
+You don't need to include a Text interaction that thanks the consumer for their participation; you can define the Thank You message in the survey bot's settings (discussed below).
 
 ### Step 4 - Configure the bot settings
 
@@ -199,6 +184,7 @@ Survey bot settings include:
 
 - **Enable Bot**: Use this to turn a survey bot on and off. When the bot is online, it responds to user messages. When it is offline, it doesn't. Taking a survey bot offline can be useful if you need to temporarily remove it from your customer traffic flow. The default value is Online.
 - **Skill**: If desired, change the skill(s) that will trigger this survey bot.
+- **Session Length**: By default, a survey will time out (expire) in one hour. If desired, you can set a custom session length.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. Then enter the message to send.
 - **Session Expired Message**: Enable this to send a Session Expired message when the user enters text after the session has timed out. Then enter the message to send.
 
@@ -208,7 +194,7 @@ In order to trigger the survey, start a conversation on the account and skill on
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/surveyBot_triggerSurvey.png">
 
-While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey or when the survey times out. In cases of an error with the survey flow or the survey bot, LiveEngage will close the survey after 48 hours as part of a conversation cleanup process.
+While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey (if you've specified "Close Conversation" as the next step) or when the survey times out. In cases of an error with the survey flow or the survey bot, LiveEngage will close the survey after 48 hours as part of a conversation cleanup process.
 
 ### The agent experience
 
@@ -232,7 +218,7 @@ In the **Conversations panel** of the **Manager Workspace**, managers can view t
 Metrics from the FCR, CSAT, and NPS questions in surveys are captured in LiveEngage and exposed via the Report Builder application. You'll find this information in the survey dashboards for messaging and live chat.
 
 #### Bot Analytics
-In the Bot Analytics application, you'll see survey bots reported in the same way as custom bots. There is no differentiation.
+In the Bot Analytics application, you'll see survey bots reported in the same way as custom bots. There is no difference between the two.
 
 ### FAQs
 
