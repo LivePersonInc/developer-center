@@ -21,22 +21,7 @@ Use this Quick Start guide to get you up and running with a project powered by L
 
 - Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a LiveEngage account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
 - Bundle ID registered in an Apple developer account.
-- **Version 3.9.3 or newer**
- - Xcode 10.2.1 or newer
- - Swift version 5.0.1, or Objective-C
-- **Version 3.7.1 - 3.9.2**
-  - Xcode 10.2 or newer
-  - Swift version 5, or Objective-C
-- **Version 3.3 and 3.7.0**
-    - Xcode 10 or newer
-    - Swift version 4.2, or Objective-C
-- **Version 3.1.1 - 3.3.0**
-    - Xcode 9.3 or newer
-    - Swift 4.1 or newer, or Objective-C
-- **Version 3.1 and older**
-    - Xcode 9.2 or older
-    - Swift 4.0 or older, or Objective-C
-
+- SDK Release version [here](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-all-releases.html)
 
 ### Step 1: Install the SDK into your project
 
