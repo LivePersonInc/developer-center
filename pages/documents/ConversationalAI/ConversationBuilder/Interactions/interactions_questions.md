@@ -37,9 +37,9 @@ Enter the answer choices. The number of choices depends on the channel, so check
 
 The user can either enter or select the answers. 
 
-#### Interaction Details settings
+#### Interaction settings
 
-Configure the following settings in the [Interaction Details - Settings tab](conversation-builder-interactions-details-settings.html):
+Configure the following settings in the [interaction's settings](conversation-builder-interactions-configuration-settings.html):
 
 - **Display choice as**: Select whether you want to display the choices as buttons (shown above) or quick reply “chips” (shown below).
 
@@ -72,7 +72,7 @@ Like with any question, a structured question expects and waits for the user res
 {: .important}
 Structured questions aren't supported on all channels; see [here](conversation-builder-interactions-interaction-support.html) for a listing of support. Be sure to verify the channel's support before designing your bot. For example, Facebook supports structured questions, but Apple Business Chat doesn't. Apple Business Chat offers its list picker instead.
 
-<img style="width:750px" src="img/ConvoBuilder/questions_structured2.png">
+<img style="width:600px" src="img/ConvoBuilder/questions_structured2.png">
 
 #### Tile settings
 
