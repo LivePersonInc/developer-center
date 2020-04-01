@@ -39,7 +39,7 @@ The most common use case for variables is storing user responses to [questions](
 
 Frequently you will want to capture what was just said by the user as the value of a variable. You can use `{$userMessage}` to do this, for example:
 
-<img class="fancyimage" width="600" src="img/ConvoBuilder/storeUserResponse.png">
+<img class="fancyimage" width="800" src="img/ConvoBuilder/storeUserResponse.png">
 
 You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 
@@ -83,17 +83,19 @@ If your bot asked the user "which animal do you like?" and the user answered "do
 Slot-filling becomes especially useful when mining the entities that make up a user's intent to pre-populate your list of questions, and streamline the data collection process. 
 1. Create a [new dialog](conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](conversation-builder-intent-builder-overview.html)as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
 2. Now, devise a few [entities] that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `items` with `pants, shoes, shirt, underwear`. and finally, one for `sizes` with the values `small, medium, and large`. Before moving on, [update and train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain) the `ordering` intent with some representative training phrases that contain these entities.
-3. Next we will create the [questions](conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Using [NLU Assist](conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction) assign your entities to the relevant questions.
+3. Next we will create the [questions](conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Using [NLU Assist](conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction), assign your entities to the relevant questions.
 
-    <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_nluassist.png">
+    <img style="width:900px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_nluassist.png">
 
     Once completed you will have a list of questions that looks like the following:
 
     <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions.png">
 
-4. In the [Interaction Details - Next Actions](conversation-builder-interactions-details-next-actions.html) for each question, we will create a [slot variable](conversation-builder-interactions-details-next-actions.html#slots) that contains our slot variable (`item`) and whose value is the entity value `@items`. Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
+    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions2.png">
 
-    <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill.png">
+4. In the [rule](conversation-builder-interactions-configuration-next-step.html#rules) for each question, we will create a slot variable that contains our slot variable (`item`) and whose value is the entity value `@item`. Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
+
+    <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill.png">
 
 5. Now you can test the bot using an intent with slot choices as part of the query. When you enter the dialog, if a user has supplied an entity that is known to the domain, it will automatically populate the slot and skip the interaction and move on to the next interaction's question. 
 
