@@ -72,7 +72,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |latestConversationQueueState | The queue state of the conversation  | String| Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
 responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
-|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, latestAgentSurvey, previouslySubmittedAgentSurveys|
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, latestAgentSurvey, previouslySubmittedAgentSurveys, pageView|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to} | Range of NPS assigned to the conversation. | numeric, numeric| Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
 |questionBrick | Match a specific word within a PCS question name or brick ID | alphanumeric  | Optional |
@@ -110,7 +110,7 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
 |responseTime |{"start":{"from":1529566882153,"to":1530171697782},"status":["OPEN"],"responseTime":{"from":1530013618000,to":1530153993000},"contentToRetrieve":["responseTime"]}|
-|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime", "intents", "latestAgentSurvey", "previouslySubmittedAgentSurveys"]}|
+|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime", "intents", "latestAgentSurvey", "previouslySubmittedAgentSurveys", "pageView"]}|
 |latestUpdateTime | {"start":{"from":1541578792011,"to":1541578895020},"status":["OPEN","CLOSE"],"latestUpdateTime":{"from":1541578792011}} |
 |nps  | {"start":{"from":1470037448000,"to":1472543048000}, "nps":{"from":0,"to":7}}|
 |questionBrick | {"start":{"from":1470037448000,"to":1472543048000},"questionBrick":"Improvement suggestion"}|
@@ -172,6 +172,7 @@ sdes  | List of Engagement Attributes. | container
 responseTime| Response time| container
 dialogs  | Contains information about the different dialogs for the current conversation. | container
 intents  | Contains information about the intents that relate to the current conversation. | container
+pageView  | Contains information about the web pages that the consumer visit in the time frame of 12 hours before the conversation started till 12 hours after the conversation ended. | container
 
 _Conversation info_
 
@@ -308,6 +309,17 @@ id | Intent id.| string|
 name | Intent name.| string|
 confidence | Normalized intent confidence level (low, medium, high).| string|
 confidenceScore | Intent confidence level value as calculated by the integrated platform.| double|
+
+*PageView*
+
+Name | Description| Type/Value |
+:----------| :------------------ | :----------|
+page | The page url.| string|
+referrer | The page url without query parameters.| string|
+sections | The sections the consumer visited in the page.| Array `<string>`|
+title | The title of the page.| string|
+pageId | The page id.| string|
+visitTime | The time the user entered to the page in milliseconds.| double|
 
 *Action Reason*
 
@@ -608,6 +620,17 @@ performedByAgentName| The name of the performing agent         | string     |
 lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |    
 acSurveyRevision| The AC form revision.                        | string     |
 acSurveyRevision| The AC form revision.                        | string     |
+
+_Page View_
+
+Name         | Description                                     | Type/Value | Notes
+:----------- | :---------------------------------------------- | :--------- | :----------------------------
+page         | The page url.                                   | string     | 
+referrer     | The page url without query parameters.          | string     | 
+sections     | The sections the consumer visited in the page.  | Array `<string>`     |
+title        | The title of the page.                          | string     |
+pageId       | The page id.                                    | string     |
+visitTime    | The time the user entered to the page in milliseconds.| double     |
 
 ```json
 {
