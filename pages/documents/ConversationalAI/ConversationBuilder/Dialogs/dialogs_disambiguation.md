@@ -55,7 +55,7 @@ Once the user selects the correct intent, if that intent is associated with a Us
     - **Additional option to show** (label): This is the label for the "Additional option to show" choice. Enter a value, for example, "None of the above."
 5. Click **Save**.
 6. In the Disambiguation interaction, enter the question text to send to the consumer.
-    <img style="width:800px" src="img/ConvoBuilder/dialogs_disambiguation5.png">
+    <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation5.png">
 
     The intents will be dynamically populated, and their labels will be drawn from their intent display names as configured in [Intent Builder](intent-builder-overview.html).
 

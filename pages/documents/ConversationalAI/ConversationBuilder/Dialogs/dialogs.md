@@ -54,7 +54,7 @@ To disable context switching at the conversation start, you can add this code to
 ### Create a new dialog
 
 1. Open the bot.
-2. Click **+ DIALOG** in the lower-left corner.
+2. Click **New Dialog** in the lower-left corner.
 3. In the dialog that appears, do the following:
     - **Dialog Name**: Enter a descriptive name for the dialog. Use a standard naming convention to make your dialogs more sortable and easier to find.
     - **Dialog Type**: Select the type of dialog; for help with this, see *Dialog types* farther above on this page.
@@ -90,9 +90,9 @@ LP_CLOSECONVERSATION does not trigger a post-conversation survey.
 ### Configure dialog settings
 
 **To configure dialog settings**
-1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png">
 
 2. Select **Dialog Settings**.
 3. Click **More Settings** to display all the settings.
@@ -111,7 +111,7 @@ Dialog settings include:
 
 **To disable or enable a dialog**
 
-1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
 
@@ -126,7 +126,7 @@ Deleting a dialog is a non-recoverable action, so be certain about doing so befo
 
 **To delete a dialog**
 
-1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
 
