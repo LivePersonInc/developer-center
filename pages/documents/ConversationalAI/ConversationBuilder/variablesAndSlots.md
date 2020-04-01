@@ -39,7 +39,7 @@ The most common use case for variables is storing user responses to [questions](
 
 Frequently you will want to capture what was just said by the user as the value of a variable. You can use `{$userMessage}` to do this, for example:
 
-<img class="fancyimage" width="350" src="img/ConvoBuilder/bestPractices/tips_image_7.png">
+<img class="fancyimage" width="600" src="img/ConvoBuilder/storeUserResponse.png">
 
 You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 

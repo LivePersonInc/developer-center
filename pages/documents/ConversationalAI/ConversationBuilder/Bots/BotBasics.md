@@ -16,8 +16,8 @@ indicator: both
 ### Configure bot settings
 
 **To configure bot settings**
-1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
-2. Select **Bot Settings** from the menu that appears.
+1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+2. Select **Bot Settings**.
 3. Click **More Settings** to display all the settings.
 4. Configure the settings as needed, and click **Save**.
 
@@ -77,7 +77,7 @@ Before you import a bot from a different environment (that is, from one region o
 
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 
-2. In the Dashboard, click **Import Bot** in the upper-right corner.
+2. In the dashboard that lists your bots, click **Import Bot** in the upper-right corner.
 3. In the dialog box that appears, navigate to and select the JSON file, and click **Open**.
     The bot is imported and given a name that includes a date and time stamp.
 4. Change the name of the bot and any other configuration as needed. For help, see [Configure bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) above.
@@ -95,8 +95,8 @@ You might need to export a bot for a few reasons:
 In case 2 above—-moving or copying a bot to a different environment (that is, from one region or hosting platform to another)—-check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
 
 **To export a bot**
-1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
-2. Select **Bot Settings** from the menu that appears.
+1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+2. Select **Bot Settings**.
 3. Click **More Settings**, and then click the **Export Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_export.png">.
 4. Follow the browser prompts to access and save the JSON file to a location of your choice.
 
@@ -107,8 +107,8 @@ Deleting a bot is a non-recoverable action, so be certain about doing so before 
 If you want to delete a bot that is deployed, first stop the bot, un-deploy it, and remove any enterprise integrations that are running. This helps to ensure there are no adverse effects.
 
 **To delete a bot**
-1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
-2. Select **Bot Settings** from the menu that appears.
+1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+2. Select **Bot Settings**.
 3. Click **More Settings**, and then click the **Delete Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_delete.png">.
 4. In the confirmation dialog:
     1. If you want to delete all the logs and analytics data for the bot, select the checkbox.
