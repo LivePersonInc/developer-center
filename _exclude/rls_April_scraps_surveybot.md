@@ -3,6 +3,10 @@ PUT THIS BELOW IN BOT SETTINGS
 {: .important}
 Survey bots have some additional, unique settings. For information on these, see [here](conversation-builder-bots-survey-bots.html#step-4---configure-the-bot-settings).
 
+PUT THIS BELOW IN BOT SETTINGS
+
+- **Session Length**: By default, a bot conversation will time out (expire) in one hour. If desired, you can set a custom session length.
+
 PUT THIS BELOW IN BOT BASICS
 
 ### Types of bots
