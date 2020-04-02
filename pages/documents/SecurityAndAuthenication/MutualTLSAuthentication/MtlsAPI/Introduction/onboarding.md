@@ -24,7 +24,7 @@ In this stage we upload a certificate to the our storage. At this point, the cer
 
 Now that your certificate is validated, you can upload it. Once it is uploaded, it can be mapped.
 
-You can upload your certificate by using the following method: [upload certificate](mtls-methods-create-certificate-for-account.html). This method creates both the MySql entities and the Hashicorp Vault entry.
+You can upload your certificate by using the following method: [upload certificate](mtls-methods-create-certificate-from-file.html). This method creates both the MySql entities and the Hashicorp Vault entry.
 
 The `id` parameter returned by this method is needed for further configuration. Please note it before moving to the next step (it can also be fetched later).
 
