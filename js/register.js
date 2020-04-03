@@ -21,7 +21,7 @@ $(document).ready(function () {
   player = new Vimeo.Player($('#vid-container iframe'))
   registerEvents()
   //if you're working locally, comment out the next function to bypass captcha
-  disableBtn()
+  //disableBtn()
 })
 
 // Register events that need to be handled in register.js.
@@ -168,10 +168,7 @@ function getCookie(name) {
 }
 
 function postRequest () {
-
-  document.getElementById('videoWrapper').style.display = 'block'
-  document.getElementById('registerWrapper').style.display = 'false'
-  if (player) player.play()
+  //videoTransition()
 
   // Get data from the form.
   const user = {
@@ -224,8 +221,7 @@ function postRequest () {
 }
 
 function postRequestTest () {
-  document.getElementById('videoWrapper').style.display = 'block'
-  document.getElementById('registerWrapper').style.display = 'false'
+  videoTransition()
   submitSucces = true
   attemptConfirmationTransition()
 }
@@ -242,6 +238,8 @@ function videoTransition() {
     document.getElementById('registerWrapper').style.display = 'none'
     document.getElementById('confirmationWrapper').style.display = 'none'
     document.getElementById('videoWrapper').style.display = 'block'
+    player.setCurrentTime(0)
+    player.play()
 }
 
 //a simple fuction to hide typed passwords and show them when the relevant checkbox is filled
