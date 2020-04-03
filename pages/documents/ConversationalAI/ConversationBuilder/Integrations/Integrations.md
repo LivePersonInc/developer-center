@@ -60,9 +60,7 @@ if (statusCode === 204 || statusCode === 201) {
 }
 ```
 
-Typically, this block of code is placed in the POST PROCESS section attached to calling an API integration within a dialog.
-
-<img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/tips_image_41.png">
+Typically, this block of code is placed in the *Post-Process Code* section attached to calling an API integration within a dialog.
 
 ### Transform an API result
 
@@ -70,7 +68,9 @@ You can invoke non-LivePerson APIs from Conversation Builder. With JavaScript co
 
 The following screen from the API integration setup shows that you must remember to use the "Response Data Variable Name" with the “api_” prefix when it comes to **_Transform Result Script_** (the place where you manipulate the API response as you want).
 
-<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration-setup.png">
+<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup1.png">
+
+<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup2.png">
 
 1. Get the raw API response and save it in a variable:
 
@@ -164,7 +164,7 @@ botContext.setBotVariable("email", email, true, false);
 botContext.printDebugMessage("*** checking values were set: " + guid + age + email);
 ```
 
-<img class="fancyimage" width="300" src="img/ConvoBuilder/bestPractices/tips_image_40.png">
+<img class="fancyimage" width="600" src="img/ConvoBuilder/bestPractices/tips_image_40.png">
 
 ### Display integration data in an interaction
 
@@ -177,6 +177,6 @@ Deleting an integration affects only the bot for which it was added.
 
 **To delete an integration**
 
-1. In the bot, click **Integrations**.
+1. Open the bot, and click **Integrations** in the upper-left corner.
 2. In the left panel, move your mouse over the integration name, and click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
-3. Click **Delete Integration**, and then click **Yes** in the confirmation dialog that appears.
+3. Click **Delete Integration**, and then click **Yes** in the confirmation dialog.
