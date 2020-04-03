@@ -1,7 +1,7 @@
 PUT THIS BELOW IN BOT SETTINGS
 
 {: .important}
-Survey bots have some additional, unique settings. For information on these, see [here](conversation-builder-bots-survey-bots.html#step-4---configure-the-bot-settings).
+Survey bots have some additional, unique settings. For information on these, see [here](conversation-builder-bots-survey-bots.html#step-3---configure-the-bot-settings).
 
 PUT THIS BELOW IN BOT SETTINGS
 

@@ -75,19 +75,7 @@ A survey can be closed in the following ways:
 
 Each outcome is tracked and reported on as part of the Report Builder, so you can fully analyze the results.
 
-### Step 1 - Enable the feature
-
-Before you can dive into creating survey bots in Conversation Builder, contact your LivePerson account representative to have the feature enabled in Conversation Builder. This is done by LivePerson enabling the following AC feature flags behind the scenes:
-
-* Common.API_User_Login
-* Common.Async_Messaging
-* Common.Messaging_Survey
-* Common.RichContent
-
-{: .important}
-If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. Afer enabling survey bots in Conversation Builder, you'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder.
-
-### Step 2 - Create the survey bot
+### Step 1 - Create the survey bot
 
 1. Log into Conversation Builder.
 2. From the Bots dashboard, click **New Bot** in the upper-right corner.
@@ -107,7 +95,7 @@ If you're an existing Bot Studio user with survey bots built in Bot Studio, be a
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_dashboard.png">
 
-### Step 3 - Build out the survey bot
+### Step 2 - Build out the survey bot
 
 #### Adding survey interactions
 
@@ -172,7 +160,7 @@ As a best practice, end the dialog flow with an interaction whose next step is "
 
 You don't need to include a Text interaction that thanks the consumer for their participation; you can define the Thank You message in the survey bot's settings (discussed below).
 
-### Step 4 - Configure the bot settings
+### Step 3 - Configure the bot settings
 
 1. Open the survey bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
 2. Select **Bot Settings** from the menu that appears.
@@ -187,7 +175,7 @@ Survey bot settings include:
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. Then enter the message to send.
 - **Session Expired Message**: Enable this to send a Session Expired message when the user enters text after the session has timed out. Then enter the message to send. (For information on the Session Length setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
 
-### Step 5 - Trigger the bot
+### Step 4 - Trigger the bot
 
 In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes the survey will be triggered and the agent workspace will show the caption, “Survey in progress.”
 
@@ -234,3 +222,7 @@ If you need to temporarily remove a survey bot from your customer traffic flow, 
 #### Are survey bots supported in text-only channels?
 
 Yes, this works just like for a custom bot. The survey questions are displayed as plain text.
+
+#### I'm an existing Bot Studio user. How do I migrate to using Conversation Builder to create and manage survey bots?
+
+If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. There are no steps that you need to take to disable Bot Studio and enable the feature in Conversation Builder. However, you'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder.
