@@ -53,10 +53,12 @@ To avoid repeatedly having to build this set of interactions within every dialog
     <img style="width:600px" src="img/ConvoBuilder/reusableResolveAndCloseDialog1a.png">
     
     <img style="width:600px" src="img/ConvoBuilder/reusableResolveAndCloseDialog1b.png">
-    
-    In the case of a "no" answer, the [Close conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) next step will cause the bot to end the conversation.
+     
+    In the case of a "no" answer, the [Close conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) next step causes the bot to end the conversation.
 
-    To configure the rules, consider using reusable "yes" and "no" intents, as described in the [first section](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents) on this page.
+    In the case of a "yes" answer, the "Please enter your question below" text statement elicits a user response that is caught by the NLU.
+
+    To configure the yes/no rules, consider using reusable "yes" and "no" intents, as described in the [first section](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents) on this page.
 
 3. Go to another dialog in your bot, and, where it reaches its logical end and you want to confirm resolution with the consumer, explicitly set the **Next Step** to be this Confirm Resolution and Close dialog's "Is there anything else?" question.
 
