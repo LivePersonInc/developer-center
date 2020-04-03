@@ -14,7 +14,7 @@ let passwordPassed
 let recaptchaResponseToken
 
 let player = null
-let submitSucces = false
+let submitSuccess = false
 let videoComplete = false
 
 $(document).ready(function () {
@@ -199,15 +199,15 @@ function postRequest () {
     },
     body: JSON.stringify(user)
   })
-  .then(function (response) {
-    const res = response.json()
+  .then(function(response) { return response.json() })
+  .then(function (res) {
     const accountId = res.data.accountId
     document.getElementById('accountIdOutput').innerText = accountId
     document.getElementById('emailOutput').innerText = emailAddress
     if (window.hj) {
       window.hj('formSubmitSuccessful')
     }
-    submitSucces = true
+    submitSuccess = true
     attemptConfirmationTransition()
   })
   .catch(function (err) {
@@ -218,19 +218,19 @@ function postRequest () {
     document.getElementById('confirmationWrapper').style.display = 'none'
     document.getElementById('videoWrapper').style.display = 'none'
     document.getElementById('registerWrapper').style.display = 'block'
-    submitSucces = false
+    submitSuccess = false
     videoComplete = false
   })
 }
 
 function postRequestTest () {
   videoTransition()
-  submitSucces = true
+  submitSuccess = true
   attemptConfirmationTransition()
 }
 
 function attemptConfirmationTransition() {
-  if (submitSucces === true && videoComplete === true) {
+  if (submitSuccess === true && videoComplete === true) {
     document.getElementById('registerWrapper').style.display = 'none'
     document.getElementById('videoWrapper').style.display = 'none'
     document.getElementById('confirmationWrapper').style.display = 'block'
