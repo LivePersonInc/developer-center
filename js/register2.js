@@ -201,20 +201,15 @@ function postRequest () {
   })
   .then(function(response) { return response.json() })
   .then(function (res) {
-    const accountId = res.data.accountId
-    document.getElementById('accountIdOutput').innerText = accountId
+    document.getElementById('accountIdOutput').innerText = res.accountId
     document.getElementById('emailOutput').innerText = emailAddress
-    if (window.hj) {
-      window.hj('formSubmitSuccessful')
-    }
     submitSuccess = true
     attemptConfirmationTransition()
+    if (window.hj) window.hj('formSubmitSuccessful')
   })
   .catch(function (err) {
     console.log(err)
-    if (window.hj) {
-      window.hj('formSubmitFailed')
-    }
+    if (window.hj) window.hj('formSubmitFailed')
     document.getElementById('confirmationWrapper').style.display = 'none'
     document.getElementById('videoWrapper').style.display = 'none'
     document.getElementById('registerWrapper').style.display = 'block'
