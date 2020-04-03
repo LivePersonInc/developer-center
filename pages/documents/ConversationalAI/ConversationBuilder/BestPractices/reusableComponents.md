@@ -48,7 +48,7 @@ To avoid repeatedly having to build this set of interactions within every dialog
 **To create the "resolve and close" dialog**
 
 1. Create a new dialog named something like, "Confirm Resolution and Close".
-2. Add the series of interactions shown in the following images. Name the interactions with easily identifiable names. And configure the question's rules to direct the flow as indicated.
+2. Add the series of interactions shown in the following images. Name the interactions with easily identifiable names. And configure the first question's rules to direct the flow as indicated.
     
     <img style="width:600px" src="img/ConvoBuilder/reusableResolveAndCloseDialog1a.png">
     
