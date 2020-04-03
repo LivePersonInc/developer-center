@@ -197,7 +197,7 @@ function postRequest () {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     },
-    body: user
+    body: JSON.stringify(user)
   })
   .then(function (response) {
     const res = response.json()
