@@ -217,7 +217,7 @@ function postRequest () {
     }
     document.getElementById('confirmationWrapper').style.display = 'none'
     document.getElementById('videoWrapper').style.display = 'none'
-    document.getElementById('registrationWrapper').style.display = 'block'
+    document.getElementById('registerWrapper').style.display = 'block'
     submitSucces = false
     videoComplete = false
   })
