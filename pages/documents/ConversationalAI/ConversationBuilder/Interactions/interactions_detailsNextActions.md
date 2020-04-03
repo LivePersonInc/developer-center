@@ -76,7 +76,7 @@ In the rule, there's a condition that determines if the user's response matches 
 
 Like in the image above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following methods:
 
-* **Response Intent**: This triggers the Next Step action when the [intent](intent-builder-intents.html) that you select is sent to it by the NLU engine. Make sure to connect your domain and populate it with intents, so they'll be available for conditions.
+* **Response Intent**: This triggers the Next Step action when the user input matches the selected [intent](intent-builder-intents.html). Make sure to connect your domain and populate it with intents, so they'll be available for conditions. For an example of usage, see [here](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents).
 * **Regular Expression**: This triggers the Next Step action when the user input matches the RegEx that you specify. All standard [Regex rules](http://www.regexlib.com) apply.
 * **Pattern**: This triggers the Next Step action when the user input matches the pattern that you specify. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
 * **Exact Value**: This triggers the Next Step action when the user input matches an exact value that you specify. This is useful for questions where you present the user a set of predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
