@@ -1,21 +1,21 @@
-#https://developers.liveperson.com:
-#  type: upstream
-#  upstream: jekyll_app:http
-#  tls:
-#    min_version: TLSv1.2
-#  cache:
-#    enabled: true
-#    default_ttl: 0
-#    cookies: ['*']
-#    headers: ['Accept', 'Accept-Language']
+https://developers.liveperson.com:
+  type: upstream
+  upstream: jekyll_app:http
+  tls:
+    min_version: TLSv1.2
+  cache:
+    enabled: true
+    default_ttl: 0
+    cookies: ['*']
+    headers: ['Accept', 'Accept-Language']
 
 
-"https://{default}/":
-    # Here the default route goes to an HTTP endpoint defined in our application.
-    # 'app' is the name of the application as defined in your .platform.app.yaml file.
-    type: upstream
-    upstream: "jekyll_app:http"
-"http://www.{default}/":
-    # set a redirect route from www to the naked domain
-    type: redirect
-    to: "https://{default}/"
+#"https://{default}/":
+#    # Here the default route goes to an HTTP endpoint defined in our application.
+#    # 'app' is the name of the application as defined in your .platform.app.yaml file.
+#    type: upstream
+#    upstream: "jekyll_app:http"
+#"http://www.{default}/":
+#    # set a redirect route from www to the naked domain
+#    type: redirect
+#    to: "https://{default}/"
