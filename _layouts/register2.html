@@ -70,7 +70,7 @@
         <div id="byClicking"><input type="checkbox"><span> By clicking "Start Free Trial", I agree to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a> and <a href="https://www.liveperson.com/policies/privacy">Privacy Policy</a></span></div>
 
         <div id="registerContainer"><div id="registerButton"><span>Start Free Trial</span></div><img id="loader" src="img/oval.svg"></div>
-        <div id="registerContainerTest"><div id="registerButtonTest"><span>Test Me!</span></div><img id="loader" src="img/oval.svg"></div>
+        <div id="registerContainerTest" style="display:none"><div id="registerButtonTest"><span>Test Me!</span></div><img id="loader" src="img/oval.svg"></div>
 
         <span class="conditionButton" id="invalidEmail">Please enter a valid email address!</span>
         <span class="conditionButton" id="invalidEmailWithPlus">Please enter an email address without a "+" character!</span>
@@ -110,8 +110,8 @@
   <div id="heroPanel">
     <span id="confirmationTitle">{{ page.pagename }}</span>
     <span id="confirmationSub">{{ page.subtitle }}:</span>
-    <span id="accountNumber">Account number: <b>[123456]</b></span>
-    <span id="userID">User ID/Email: <b>[mail@email.com]</b></span>
+    <span id="accountNumber">Account number: <b id="accountIdOuput">[123456]</b></span>
+    <span id="userID">User ID/Email: <b id="emailOuput">[mail@email.com]</b></span>
     <div id="loginButton"><span class="inner-button"><a target="_blank" class="login-button-text" href="https://authentication.liveperson.net/login.html">Login</a></span></div>
   </div>
   <div id="secondPanel">
