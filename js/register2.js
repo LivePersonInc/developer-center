@@ -21,7 +21,7 @@ $(document).ready(function () {
   player = new Vimeo.Player($('#vid-container iframe'))
   registerEvents()
   //if you're working locally, comment out the next function to bypass captcha
-  //disableBtn()
+  disableBtn()
 })
 
 // Register events that need to be handled in register.js.
