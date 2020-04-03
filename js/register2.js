@@ -201,8 +201,8 @@ function postRequest () {
   })
   .then(function(response) { return response.json() })
   .then(function (res) {
-    document.getElementById('accountIdOutput').innerText = res.accountId
-    document.getElementById('emailOutput').innerText = emailAddress
+    document.getElementById('accountIdOutput').textContent = res.accountId
+    document.getElementById('emailOutput').textContent = emailAddress
     submitSuccess = true
     attemptConfirmationTransition()
     if (window.hj) window.hj('formSubmitSuccessful')
