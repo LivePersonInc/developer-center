@@ -168,7 +168,7 @@ function getCookie(name) {
 }
 
 function postRequest () {
-  //videoTransition()
+  videoTransition()
 
   // Get data from the form.
   const user = {
@@ -202,6 +202,8 @@ function postRequest () {
   .then(function (response) {
     const res = response.json()
     const accountId = res.data.accountId
+    document.getElementById('accountIdOutput').innerText = accountId
+    document.getElementById('emailOutput').innerText = emailAddress
     if (window.hj) {
       window.hj('formSubmitSuccessful')
     }
@@ -215,6 +217,7 @@ function postRequest () {
     }
     document.getElementById('confirmationWrapper').style.display = 'none'
     document.getElementById('videoWrapper').style.display = 'none'
+    document.getElementById('registrationWrapper').style.display = 'block'
     submitSucces = false
     videoComplete = false
   })
