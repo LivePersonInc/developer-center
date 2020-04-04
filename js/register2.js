@@ -199,7 +199,13 @@ function postRequest () {
     },
     body: JSON.stringify(user)
   })
-  .then(function(response) { return response.json() })
+  .then(function(response) {
+    if (response.status > 400) {
+      console.log('Error response', response)
+      throw(response.status, response)
+    }
+    return response.json()
+  })
   .then(function (res) {
     document.getElementById('accountIdOutput').textContent = res.accountId
     document.getElementById('emailOutput').textContent = emailAddress
@@ -215,6 +221,7 @@ function postRequest () {
     document.getElementById('registerWrapper').style.display = 'block'
     submitSuccess = false
     videoComplete = false
+    $('#requestError').show()
   })
 }
 
