@@ -75,6 +75,15 @@ A survey can be closed in the following ways:
 
 Each outcome is tracked and reported on as part of the Report Builder, so you can fully analyze the results.
 
+### Prerequisite steps
+
+Before you can begin building survey bots, the feature must be enabled in Conversation Builder by LivePerson. This is accomplished by LivePerson enabling the following "AC feature flags" behind the scenes:
+
+* Common.Async_Messaging
+* Common.Messaging_Survey 
+* Common.RichContent
+* Common.API_User_Login
+
 ### Step 1 - Create the survey bot
 
 1. Log into Conversation Builder.
