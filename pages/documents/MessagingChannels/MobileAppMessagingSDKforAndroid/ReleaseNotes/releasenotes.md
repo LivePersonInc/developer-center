@@ -13,9 +13,75 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.1.1
+
+**Release date:** January 29, 2020
+
+### Overview
+Android Mobile Messaging SDK version 5.1.1 release fixes a bug that might lead to a crash of the messaging service on Android KitKat(4.4).
+
+### Environmental Requirements
+The Android Mobile Messaging SDK version 5.1.1 uses:
+- Minimum API version 19
+- Compile API version 29
+- Target API version 29
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+# Android Messaging SDK - Version 5.1.0
+**Release date:** January 21, 2020
+
+### Overview
+The Android Mobile Messaging SDK version 5.1.0 release offers a few powerful features, improvements on the TalkBack accessible experience for vision-impaired users and bug fixes.
+
+### Environmental Requirements
+The Android Mobile Messaging SDK version 5.1.0 uses:
+- Minimum API version 19
+- Compile API version 29
+- Target API version 29
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 5.0.0)**
+
+### New Features:
+- Consumers can now send Word (.docx), Excel (.xlsx), PowerPoint (.pptx), and PDF (.pdf) documents to Agents.
+- Photo Upload Preview window is now a child fragment of the SDK, rather than a new Activity that must push and pop on the Activity Stack.
+- Scroll Behavior Configuration - clients can now use flags in our branding.xml config file to set the messaging window scroll behavior in various cases.
+    - `lp_scroll_show_conversation` sets the scrolling behavior for when the SDK window is shown via a call to `showConversation` or `getConversationFragment`.
+    - `lp_scroll_when_foreground` sets the scrolling behavior for when the app and SDK are resumed from a background state.
+    - `lp_scroll_when_push_notification` sets the scrolling behavior for when the SDK is launched from a tap on a push notification.
+    - `lp_scroll_when_scroll_down` sets the scrolling behavior for when the "scroll to bottom" UI element is tapped within the SDK window.
+    - Each of these can be set to "Bottom" (auto-scrolls all the way down) or "FirstUnreadMessage" (auto-scrolls down to show the oldest unseen message).
+    - `lp_scroll_show_conversation`, `lp_scroll_when_foreground`, and `lp_scroll_when_push_notification` can also be set to "LastPosition" (does not auto-scroll at all).
+    - For more detailed information, see the [Scroll Behavior Configuration](mobile-app-messaging-sdk-for-android-advanced-features-scroll-behavior-configuration.html) page.
+- Also added `lp_scroll_to_bottom_after_resolve_conversation`, a setting to allow enabling or disabling the auto-scroll-to-bottom when `enable_conversation_resolved_message`, `enable_conversation_resolved_separator` are disabled and a conversation is resolved.
+
+### Bugs Fixed:
+- Conversation Resolved message should now always contain the Agent's name, rather than simply 'resolved by agent'.
+- Bot agents that do not send a done-typing notice between messages will no longer cause unnecessary whitespace in message history.
+- Link previews should now appear even if the link does not contain a protocol prefix (http:// or https://).
+- Long-tapping a link for a context menu will no longer also attempt to open the link.
+- Fixed a pair of crashes related to loading messages.
+- Metadata attached to Structured Content actions is now included in the retry, if connection is lost during the first attempt.
+- Corrected a typo in our Portuguese translations.
+
+##### Accessibility-Specific Bugs Fixed:
+- Links that generate Previews will now properly be described by TalkBack as links.
+- Structured Content Buttons that open hyperlinks will now be described as "links" instead of "buttons".
+- Links without protocol prefixes (http:// or https://) are now clickable using TalkBack.
+- Phone Number and Email Address "links" (tel: and mailto:) are now clickable using TalkBack.
+- Opening a photo attachment will no longer leave TalkBack focus on the screen behind it.
+- Removed an extra stop when using TalkBack swipe gestures to navigate between elements of a Structured Content Carousel.
+- Removed unnecessary TalkBack swipe gestures needed to navigate through Structured Content Map elements.
+- Structured Content now scales with system accessibility Text Size settings, preventing cramped content elements with scaled-up text.
+- Fullscreen photo view no longer erroneously suggests that the photo can be double-tapped, and will now only provide double-tap-and-hold instructions. 
+
+### Deprecation
+- 'Signup' auth flow is officially deprecated by the LivePerson Mobile SDK, and will reach **end-of-life on the 30th of June, 2020**. 
+- Please contact LivePerson through our client support channels to learn how to migrate your app to Authenticated or Unauthenticated auth flows.
 
 
 # Android Messaging SDK - Version 5.0.0
+
 **Release Date**: Oct 31, 2019 
 
 ### Overview
@@ -48,6 +114,20 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **handlePush(Context context, Bundle data, String brandId, boolean showNotification)** , use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
+
+# Android Messaging SDK - Version 4.3.2
+
+**Release date:** January 29, 2020
+
+### Overview
+Android Mobile Messaging SDK version 4.3.2 release fixes a bug that might lead to a crash of the messaging service on Android KitKat(4.4).
+
+### Environmental Requirements
+The Android Mobile Messaging SDK version 4.3.2 uses:
+- Minimum API version 19
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 
 
 # Android Messaging SDK - Version 4.3.1
@@ -325,7 +405,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
    <integer name="max_number_stored_voice_files">
    ```
 
-   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
+   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest downloaded file.
 
 2. Set the max image size:
 

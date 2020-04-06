@@ -17,6 +17,11 @@ subfoldername: Voice and Video for iOS SDK (BETA)
 permalink: mobile-app-messaging-sdk-for-ios-voice-and-video-for-ios-sdk-beta-liveengage-configuration.html
 indicator: messaging
 ---
+<div class="important">
+<h2>Deprecation Notice</h2>
+
+the CoApp product is deprecated and will be discontinued from February 28th, 2020 on.
+</div>
 
 ### Agent Workspace Requirements
 

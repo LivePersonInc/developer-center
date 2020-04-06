@@ -40,11 +40,16 @@ Returns an XML or JSON response with the Pre-Chat survey.
 
 | Name  | Description | Type | Notes |
 | :--- | :--- | :--- | :--- |
-| skill | Requests a survey for a specific skill. | alphanumeric | |
-| visitorProfile | Requests a survey for a specific visitor profile.  | alphanumeric | If both the skill and visitor profile parameters are provided, only the visitor profile parameter will be considered. |
+| surveyName | Requests a specific survey by name.  | alphanumeric | If the surveyName is provided, this will override all of the other parameters. |
+| surveyApiId | Requests a specific survey by API ID. | alphanumeric | If the surveyName is provided, this parameter will be ignored. To retrieve the `surveyApiId`, please follow the note below this table. |
 | visitorIp | This parameter can be used by the LivePerson Rules Engine to decide which survey to return. | alphanumeric (IP) | The visitor's host name is found using this IP address. If no IP address is specified, the visitor's IP  will be taken from the request's IP. |
 | userAgent | This parameter can be used by the LivePerson Rules Engine to decide which survey to return.  | alphanumeric | If no user agent is specified, it will be  taken from the HTTP "User-Agent" header. |
-| surveyName | Requests a specific survey.  | alphanumeric | If visitorprofile or skill parameters are provided, and a survey with this name exists, the requested survey will be returned unless there is a rule that overrides this name. |
+| visitorId | The current visitor ID. | alphanumeric | This parameter can be used to associate the survey to the current visitor.|
+| skill | Set a skill to the current visitor. | alphanumeric | |
+
+<div class="important">
+To retrieve the <code>surveyApiId</code>, you need to call the Engagement and Window API. The information to retrieve the <code>domain</code> name can be found <a href="/agent-domain-domain-api.html">here</a>. Make sure to set the service name as <code>acCdnDomain</code>. <br><br>Through the Engagement API, you need to call <code>GET https://{domain}/api/account/{accountId}/configuration/le-campaigns/campaigns/{campaignId}/engagements/{engagementId}/revision/{revisionId}?v=3.0</code> to get the <code>windowId</code>. <br><br>Next, through the Window API, you need to call <code>GET https://{domain}/api/account/{accountId}/configuration/engagement-window/window-confs/{windowId}</code> to get the <code>surveyPreChatId</code>. The <code>surveyPreChatId</code> is the value that needs to be passed through the <code>surveyApiId</code> parameter.
+</div>
 
 ### Response
 

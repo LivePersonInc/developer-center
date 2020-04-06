@@ -3,6 +3,7 @@ pagename: Retry Policy Recommendations
 redirect_from:
   - guides-retry-policy.html
   - retry-and-keepalive-best-practices-overview.html
+  - essential-resources-retry-policy-recommendations.html
 Keywords:
 sitesection: Documents
 categoryname: "Common Resources"

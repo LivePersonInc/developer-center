@@ -10,6 +10,23 @@ permalink: mtls-onboarding.html
 
 The following is a step by step walkthrough on how to use LivePerson MTLS services. This guide assumes that you already have a valid/assigned certificate (for our purposes, a valid certificate is a p12/pfx file which consists of the needed public/private certificates).
 
+### Before you start (initial introduction and terminology)
+
+{: .notice}
+**Authentication** - Unless specifically indicated, the Authentication mechanism used is a Bearer (oAuth2). Otherwise, it is an AppKey (oAuth1).
+
+
+1) **Log into LiveEngage** using the [Login Service API](login-service-api-methods-user-login.html). Provide a username and password (for an administrator user) and receive an authorization token (Bearer) in return. Use this token as your authorization header for any request requiring a bearer in the future.
+
+2) **Domain** - Unless mentioned otherwise, domain refers to the MTLS domain. To get the domain, you can make a simple call to the CSDS endpoint (GET method). For example: 
+
+`https://adminlogin.liveperson.net/api/account/{accountId}/service/baseURI.json?version=1.0`
+
+This returns a list of account domains, the `mtls domain` is under the 'mtlsGateway' value (for va-a, it is `va-a.mtls.liveperson.net` for example). The MTLS documentation might refer to `ac-common` or `Gen2 domain`. These values can be taken from the `accountConfigReadWrite` key in the above request.
+
+{: .notice}
+A note on Create/Read/Update/Delete usage - Following the REST protocol, `POST` is used for creating a new entity, `PUT` to update, `DELETE` to delete and `GET` (where applicable) to read.
+
 ### Step 1 - Test Your Certificate
 
 The first thing we need to do in order to get started, is create a p12 file (and its corresponding password). Please refer to [this document](mtls-creating-a-p12-file.html) for in-depth instructions on how to do that.
@@ -24,7 +41,7 @@ In this stage we upload a certificate to the our storage. At this point, the cer
 
 Now that your certificate is validated, you can upload it. Once it is uploaded, it can be mapped.
 
-You can upload your certificate by using the following method: [upload certificate](mtls-methods-update-certificate-from-file.html). This method creates both the MySql entities and the Hashicorp Vault entry.
+You can upload your certificate by using the following method: [upload certificate](mtls-methods-create-certificate-from-file.html). This method creates both the MySql entities and the Hashicorp Vault entry.
 
 The `id` parameter returned by this method is needed for further configuration. Please note it before moving to the next step (it can also be fetched later).
 
@@ -56,9 +73,11 @@ Now that we have validated and uploaded our certificate, we must map it to the c
 
 In order to create the mapping object, you will need to use the following method.
 
+**Note that this action is performed against ac-common domain, not the mtls service**
+
 |Method|      URL|  
 |:--------  |:---  |
-|POST|  https://{domain}/api/account/{accountId}/configuration/ac-common/mtls?v=3.0 |
+|POST|  https://{accountConfigReadWrite-domain}/api/account/{accountId}/configuration/ac-common/mtls?v=3.0 |
 
 You can authenticate with this endpoint with oAuth1 (AppKey) or a Bearer.
 

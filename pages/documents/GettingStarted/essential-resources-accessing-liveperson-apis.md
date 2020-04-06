@@ -6,6 +6,8 @@ documentname: Common Resources
 permalink: common-resources-accessing-liveperson-apis.html
 order: 11
 indicator: both
+redirect_from:
+    - essential-resources-accessing-liveperson-apis.html
 ---
 
 Some of our APIs require authorization before you can use them. This is done via either of the following methods:

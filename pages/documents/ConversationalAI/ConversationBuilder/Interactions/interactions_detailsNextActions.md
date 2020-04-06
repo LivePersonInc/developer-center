@@ -42,10 +42,19 @@ When adding a question or integration interaction to the dialog, you can configu
 
 In the first drop-down in the Conditions section, you specify how you want to match the user input. Methods include: 
 
-* **Response [Intent](intent-builder-intents.html)**: The bot will trigger the Next Step action (discussed below) when the intent that you select is sent to it by the NLU engine. Make sure to connect your domain and populate it with intents, so they'll be available for conditions.
-* **Regular Expression**: The bot will trigger the Next Step action (discussed below) when the user input matches the RegEx that you specify. All standard [RegEx rules](http://www.rexegg.com/regex-quickstart.html) apply.
+* **Response Intent**: The bot will trigger the Next Step action (discussed below) when the [intent](intent-builder-intents.html) that you select is sent to it by the NLU engine. Make sure to connect your domain and populate it with intents, so they'll be available for conditions.
+* **Regular Expression**: The bot will trigger the Next Step action (discussed below) when the user input matches the RegEx that you specify. All standard [Regex rules](http://www.regexlib.com) apply.
 * **Pattern**: The bot will trigger the Next Step action (discussed below) when the user input matches the pattern that you specify. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
 * **Exact Value**: The bot will trigger the Next Step action (discussed below) when the user input matches an exact value that you specify. This is useful for questions where you present the user a set of predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
+* **Evaluate Options**: Available for multiple choice questions only. The bot will trigger the Next Step action (discussed below) when the user's choice matches the choice that you select here. For a match to be found, the consumer must select the option, enter the choice exactly, or, in text-only channels, enter the corresponding letter or number (configured in the Interaction Details).
+
+    <img style="width:400px" class="fancyimage" src="img/ConvoBuilder/interactionDetails_listStyle.png">
+
+    If you need more flexibility (e.g., you have a Yes/No question but you want to account for "Yeah" and "Yup" in the condition), use a different method instead.
+
+    When defining a condition using Evaluate Options, make sure the choices in the question are defined *before* defining the condition. Otherwise, the choices won't be available for use in the condition.
+
+##### Adding multiple conditions
 
 You can add more than one condition to an interaction for more complex flow control. To do so, click the <img style="width:25px" src="img/ConvoBuilder/icon_addCondition.png"> icon in the Conditions section.
 

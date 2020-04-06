@@ -16,6 +16,12 @@ permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-
 indicator: messaging
 ---
 
+<div class="important">
+<h2>Deprecation Notice</h2>
+
+the CoApp product is deprecated and will be discontinued from February 28th, 2020 on.
+</div>
+
 ### Prerequisites
 
 LivePerson Voice & Video is an SDK (_Software Development Kit_) for the **Google Android** platform. In order to integrate with us, you need to have an app of your own to which you have full source code access. Basic programming knowledge is required.

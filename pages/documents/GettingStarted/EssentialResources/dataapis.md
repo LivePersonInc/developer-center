@@ -6,6 +6,8 @@ documentname: Common Resources
 permalink: common-resources-data-apis.html
 order: 30
 indicator: both
+redirect_from:
+    - essential-resources-data-apis.html
 ---
 <br>
 LivePerson offers a variety of Data APIs that are available for our customers to use in order to retrieve their contact center’s information. Each API has its own specific attributes and can be used for different use cases. The purpose of this document is to give an overview of the different APIs and when they should both be used; for more detailed information on how to use them, please see each API's documentation.
