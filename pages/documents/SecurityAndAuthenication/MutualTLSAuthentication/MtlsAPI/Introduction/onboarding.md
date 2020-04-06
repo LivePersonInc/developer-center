@@ -14,7 +14,7 @@ The following is a step by step walkthrough on how to use LivePerson MTLS servic
 
 **Authentication** - Unless specifically indicated, Authentication is Bearer (oAuth2) otherwise it is AppKey (oAuth1).
 
-To get a **Bearer token** using the browser you need to log in to UI (administrator) and take the Bearer from the authorization header (open development tools in browser before on network tab), Some requests (like skills) send Authrization header, the value should look like: Bearer 8bbc8e32f73f7a3b1daa7effca4d835a65a29459851701ecebd04ef6b4a9ba61 .
+**Log into LiveEngage** using the [Login Service API](login-service-api-methods-user-login.html), provide username and passowrd (Administrator user) and receive an authorization token (Bearer) use this token as your authorization header for bearer requests.
 
 **Domain**  - Unless mentioned otherwise, domain refer to the mtls domain, to get the domain you can make a call to CSDS (simple GET request), 
 
