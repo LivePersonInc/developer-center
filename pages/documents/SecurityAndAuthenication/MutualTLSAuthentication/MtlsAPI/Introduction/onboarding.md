@@ -10,6 +10,22 @@ permalink: mtls-onboarding.html
 
 The following is a step by step walkthrough on how to use LivePerson MTLS services. This guide assumes that you already have a valid/assigned certificate (for our purposes, a valid certificate is a p12/pfx file which consists of the needed public/private certificates).
 
+### Before you start (initial introduction and terminology)
+
+**Authentication** - Unless specifically indicated, Authentication is Bearer (oAuth2) otherwise it is AppKey (oAuth1).
+
+To get a **Bearer token** using the browser you need to log in to UI (administrator) and take the Bearer from the authorization header (open development tools in browser before on network tab), Some requests (like skills) send Authrization header, the value should look like: Bearer 8bbc8e32f73f7a3b1daa7effca4d835a65a29459851701ecebd04ef6b4a9ba61 .
+
+**Domain**  - Unless mentioned otherwise, domain refer to the mtls domain, to get the domain you can make a call to CSDS (simple GET request), 
+
+Example : https://adminlogin.liveperson.net/api/account/{accountId}/service/baseURI.json?version=1.0
+
+This return a list of account domains, **mtls domain** is under 'mtlsGateway' value (for va-a it is va-a.mtls.liveperson.net for example), 
+
+Sometimes there is a specific reference to **ac-common** or **Gen2 domain**, this value can be taken from 'accountConfigReadWrite' value.
+
+**Create/Read/Update/Delete** - Following REST protocol **POST** is used for creating a new entity, **PUT** to update, **DELETE** to delete and **GET** (where applicable) to read.
+
 ### Step 1 - Test Your Certificate
 
 The first thing we need to do in order to get started, is create a p12 file (and its corresponding password). Please refer to [this document](mtls-creating-a-p12-file.html) for in-depth instructions on how to do that.
