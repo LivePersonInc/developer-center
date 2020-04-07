@@ -12,7 +12,7 @@ The following is a step by step walkthrough on how to use LivePerson MTLS servic
 
 ### Before you start (initial introduction and terminology)
 
-**Authentication** - Unless specifically indicated, Authentication is Bearer (oAuth2) otherwise it is AppKey (oAuth1).
+**Authorization** - Unless specifically indicated, authorization is Bearer (oAuth2) otherwise it is AppKey (oAuth1).
 
 **Log into LiveEngage** using the [Login Service API](login-service-api-methods-user-login.html), provide username and passowrd (Administrator user) and receive an authorization token (Bearer) use this token as your authorization header for bearer requests.
 
