@@ -157,7 +157,7 @@ function validateInfo () {
 }
 
 function getCookie(name) {
-  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^]+)'))
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'))
   if (match) {
     const result = match[2]
     if (result !== "null" && result !== "NULL") {
