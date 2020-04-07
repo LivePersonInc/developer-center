@@ -84,6 +84,8 @@ Before you can begin building survey bots, the feature must be enabled in Conver
 * Common.RichContent
 * Common.API_User_Login
 
+Please contact your LivePerson account representative to have this done.
+
 ### Step 1 - Create the survey bot
 
 1. Log into Conversation Builder.
