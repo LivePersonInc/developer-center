@@ -55,7 +55,7 @@ There are 3 user permissions pertaining to Functions:
     <td>read</td>
     <td>✅</td>
     <td>✅</td>
-    <td>-</td>
+    <td>✅</td>
   </tr>
   <tr>
     <td>lambda</td>
