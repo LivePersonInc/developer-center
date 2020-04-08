@@ -248,7 +248,7 @@ function lambda(input, callback) {
 }
 ```
 
-Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJs 10. Therefore, you have access to all functionality offered by NodeJS.
+Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJs 12. Therefore, you have access to all functionality offered by NodeJS.
 
 As you can see from the example above, during an invocation the function receives an event-specific **input**. Furthermore, we provide a callback in the standard Node JS Signature.
 
