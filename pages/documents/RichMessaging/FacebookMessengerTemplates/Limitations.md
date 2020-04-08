@@ -14,8 +14,6 @@ indicator: messaging
 
 * Navigation action - when navigation action button is tapped on Facebook Messenger templates, Google Maps will be displayed in Facebook webview with the structured content coordinates **location** and **not the exact address**. Important to consider this when using the navigation action. (This is currently in planed to be resolved in the next versions of msg-gw-facebook).
 
-* List template - Top_element_style in the List Facebook template will not be supported (will always be set to "Compact").
-
 * Generic and Button templates - Facebook "Default action" will not be supported.
 
 * Default message size is limited to 15,000K. Keep this in mind when building large templates.
@@ -43,18 +41,3 @@ Agent or bot will receive an error when trying to send Structured Content elemen
 
   * If a "button" elements are placed **without** a “title” text in the structured content card template
 
-#### List template
-
-  * If number of list items is lower than 2 items.
-
-  * If number of buttons is larger than 1 in a list item object.
-
-  * If number of characters on button text title is larger than 20.
-
-  * If number of characters in "title" or “subtitle” text is more than 80.
-
-  * If a "title" text tag is placed **without** a “subtitle” text tag **OR** “Image” element in the structured content list item object.
-
-  * If Image element is placed without a title or subtitle in list item object.
-
-  * If map element is placed in a List template.
