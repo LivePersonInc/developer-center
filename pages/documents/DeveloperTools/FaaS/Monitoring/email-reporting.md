@@ -58,7 +58,7 @@ The statistics presented in the email are:
 
 - **Total Functions** displays the current number of functions available  in the account. This number includes both *draft* and *deployed* functions out of 50 which is the maximum number of functions permitted for each account. 
 
-- **Deployed Functions** shows the current number of functions with a *productive* state alongside the maximum allowed *productive* functions for the account.
+- **Deployed Functions** shows the current number of functions with a *productive*/*modified* state alongside the maximum allowed *productive* functions for the account.
 
 - **Successful Invocations** represents the total number of *successful* invocations for the functions of the account since the beginning of the current month. 
 
