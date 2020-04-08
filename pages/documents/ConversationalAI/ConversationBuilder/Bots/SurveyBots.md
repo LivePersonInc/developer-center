@@ -84,7 +84,7 @@ Before you can begin building survey bots, the feature must be enabled in Conver
 * Common.RichContent
 * Common.API_User_Login
 
-Please contact your LivePerson account representative to have this done.
+Please contact your LivePerson account representative to enable this feature.
 
 ### Step 1 - Create the survey bot
 
@@ -236,4 +236,4 @@ Yes, this works just like for a custom bot. The survey questions are displayed a
 
 #### I'm an existing Bot Studio user. How do I migrate to using Conversation Builder to create and manage survey bots?
 
-If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. There are no steps that you need to take to disable Bot Studio and enable the feature in Conversation Builder. However, you'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder.
+If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. You'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder.
