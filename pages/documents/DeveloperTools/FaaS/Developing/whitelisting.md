@@ -21,7 +21,7 @@ Please make sure to whitelist the **fully qualified domain name**. E.g. If you v
 
 Generally, we will prevent the double whitelisting of a domain. The UI will also indicate that this occurred using a dedicated error message. We also perform validation on the provided domain in order to ensure it is a valid domain name. For now, we do not support the whitelisting of subdomains such as **.example.com**.
 
-**Please be aware** that it might take up to **5 minutes** until the whitelisted domain becomes active on the proxy.
+**Please be aware** that it might take up to **10 minutes** until the whitelisted domain becomes active on the proxy.
 
 
 ### Domains Whitelisted by Default
