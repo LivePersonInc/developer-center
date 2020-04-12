@@ -12,19 +12,19 @@ The following is a step by step walkthrough on how to use LivePerson MTLS servic
 
 ### Before you start (initial introduction and terminology)
 
-**Authorization** - Unless specifically indicated, authorization is Bearer (oAuth2) otherwise it is AppKey (oAuth1).
+{: .notice}
+**Authorization** - Unless specifically indicated, the authorization mechanism used is a Bearer (oAuth2). Otherwise, it is an AppKey (oAuth1).
 
-**Log into LiveEngage** using the [Login Service API](login-service-api-methods-user-login.html), provide username and passowrd (Administrator user) and receive an authorization token (Bearer) use this token as your authorization header for bearer requests.
+1) **Log into LiveEngage** using the [Login Service API](login-service-api-methods-user-login.html). Provide a username and password (for an administrator user) and receive an authorization token (Bearer) in return. Use this token as your authorization header for any request requiring a bearer in the future.
 
-**Domain**  - Unless mentioned otherwise, domain refer to the mtls domain, to get the domain you can make a call to CSDS (simple GET request), 
+2) **Domain** - Unless mentioned otherwise, domain refers to the MTLS domain. To get the domain, you can make a simple call to the CSDS endpoint (GET method). For example: 
 
-Example : https://adminlogin.liveperson.net/api/account/{accountId}/service/baseURI.json?version=1.0
+`https://adminlogin.liveperson.net/api/account/{accountId}/service/baseURI.json?version=1.0`
 
-This return a list of account domains, **mtls domain** is under 'mtlsGateway' value (for va-a it is va-a.mtls.liveperson.net for example), 
+This returns a list of account domains, the `mtls domain` is under the 'mtlsGateway' value (for va-a, it is `va-a.mtls.liveperson.net` for example). The MTLS documentation might refer to `ac-common` or `Gen2 domain`. These values can be taken from the `accountConfigReadWrite` key in the above request.
 
-Sometimes there is a specific reference to **ac-common** or **Gen2 domain**, this value can be taken from 'accountConfigReadWrite' value.
-
-**Create/Read/Update/Delete** - Following REST protocol **POST** is used for creating a new entity, **PUT** to update, **DELETE** to delete and **GET** (where applicable) to read.
+{: .notice}
+A note on Create/Read/Update/Delete usage - Following the REST protocol, `POST` is used for creating a new entity, `PUT` to update, `DELETE` to delete and `GET` (where applicable) to read.
 
 ### Step 1 - Test Your Certificate
 
