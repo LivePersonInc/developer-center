@@ -1,4 +1,4 @@
-const ENDPOINT = 'https://d0j6xh4g99.execute-api.us-east-2.amazonaws.com/prod/web/account'
+const ENDPOINT = 'https://self-service.liveperson.com/api/free-trial/account'
 
 let firstName
 let lastName
@@ -157,7 +157,7 @@ function validateInfo () {
 }
 
 function getCookie(name) {
-  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^]+)'))
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'))
   if (match) {
     const result = match[2]
     if (result !== "null" && result !== "NULL") {
@@ -193,7 +193,6 @@ function postRequest () {
   fetch(ENDPOINT, {
     method: 'POST',
     headers: {
-      'x-api-key': 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW',
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     },
