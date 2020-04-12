@@ -217,6 +217,7 @@
           - subpagename: Overview
           - subpagename: Tutorial
           - subpagename: Use Maven with Your Bot
+          - subpagename: Using SDE attributes in Routing
       - pagename: AskMaven
         subpages:
           - subpagename: Overview
