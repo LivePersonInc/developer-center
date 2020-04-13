@@ -544,19 +544,19 @@ _Intents info_
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
-selectedClassification | The selected intent classification for a specific message. | LiveIntentClassification
-allClassifications | All intent classification results for the same message. | Array `<LiveIntentClassification>`
+selectedClassification | The selected intent classification for a specific message. | IntentAnalyzerClassification
+allClassifications | All intent classification results for the same message. | Array `<IntentAnalyzerClassification>`
 messageId | The id of the message that triggered this intent. | string
 
-_LiveIntentClassification DTO_
+_IntentAnalyzerClassification DTO_
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
 intentName | The name of this intent. | string
 confidenceScore | Intent confidence score. | double - up to 3 decimal digits
-versions| Model versions used to generate this intent. |  Array `<LiveIntentVersionDTO>`
+versions| Model versions used to generate this intent. |  Array `<IntentAnalyzerVersionDTO>`
 
-_LiveIntentVersion DTO_
+_IntentAnalyzerVersion DTO_
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
