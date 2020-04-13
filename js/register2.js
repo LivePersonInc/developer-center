@@ -1,4 +1,4 @@
-const ENDPOINT = 'https://self-service.liveperson.com/api/free-trial/account'
+const ENDPOINT = 'http://free-trial-backend-alpha-p-293618664.us-east-2.elb.amazonaws.com/api/free-trial/account'
 
 let firstName
 let lastName
