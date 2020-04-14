@@ -32,7 +32,7 @@ LivePerson recommends that —before you create a bot— you set up the [domains
 
     * **Name**: Enter a name that’s concise and clear. Make sure abbreviations can be understood, and consider adding a prefix or suffix to indicate the environment (Dev, Prod, etc.) or language (En, Sp, Fr, etc.) if applicable.
     * **Description**: Enter a description that’s meaningful to you and others. Consider including language that identifies the bot's goal and key behaviors
-    * **Bot Language**: This setting determines the language-specific model for LivePerson NLU; it also supports the proper rendering of left-to-right and right-to-left languages. You specify the bot language when you create the bot, and it can’t be changed afterward.
+    * **Bot Language**: Select the language of the bot. You can select from all languages that are available for all NLU providers. You *must* set this language to be the same language as that for the domain that will be associated with the bot. Otherwise, errors will occur during NLU processing. You specify the bot language when you create the bot, and it can’t be changed afterward.
     * **Bot Group**: Optionally select the [bot group](conversation-builder-bots-bot-groups.html) for the bot. A bot can be a member of exactly one group.
 
 5. Build out the bot, completing and adding the necessary [dialogs](conversation-builder-dialogs-dialog-basics.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the bot using the Preview tool.
