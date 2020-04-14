@@ -74,6 +74,9 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 
 4. Click **Save**.
 
+{: .important}
+If, given your use case, you need to prevent context switching from occurring during the transfer (e.g., messages are sent after the transfer that shouldn't be), you can do this as described [here](conversation-builder-dialogs-dialog-basics.html#preventing-context-switching).
+
 #### Best practices
 
 ##### Send a transfer message
