@@ -54,13 +54,6 @@ The above also means that:
 
 If a conversation is closed automatically because it's been idle for a time, a survey **isn't** triggered.
 
-#### Survey skip 
-
-The consumer can skip a survey in two ways:
-
-* Click the "Skip" button.
-* Enter the word "skip."
-
 #### Survey timeout
 
 By default, a survey times out (expires) after one hour, but you can change this time period if desired. You can also configure a "Session Expired" message to send to the consumer if they try to enter text after the session has expired. Both of these settings are found in Bot Settings, discussed farther below.
@@ -70,10 +63,9 @@ By default, a survey times out (expires) after one hour, but you can change this
 A survey can be closed in the following ways:
 
 * The survey is completed.
-* The survey is skipped.
 * The survey times out.
 
-Each outcome is tracked and reported on as part of the Report Builder, so you can fully analyze the results.
+Both outcomes are tracked and reported on as part of the Report Builder, so you can fully analyze the results.
 
 ### Prerequisite steps
 
@@ -234,6 +226,16 @@ If you need to temporarily remove a survey bot from your customer traffic flow, 
 
 Yes, this works just like for a custom bot. The survey questions are displayed as plain text.
 
+#### Can a consumer skip a survey entirely?
+
+There's no way for the consumer to indicate they want to skip the survey entirely (e.g., no Skip button). However, the consumer can close the window to leave the survey.
+
 #### I'm an existing Bot Studio user. How do I migrate to using Conversation Builder to create and manage survey bots?
 
-If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. You'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder.
+If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. You'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder. LivePerson recommends the following workflow:
+
+1. Request that LivePerson enable the Survey Bots feature in Conversation Builder, as discussed in Prerequisite Steps above.
+2. In Conversation Builder, manually recreate your survey bots. Assign them to "test" skills that aren't used in a production campaign, so you can test them before assigning them production skills.
+3. Test the new survey bots using the "test" skills.
+4. In Bot Studio, "unpublish" your survey bots.
+5. In Conversation Builder, assign production skills to the new survey bots.
