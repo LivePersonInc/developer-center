@@ -234,7 +234,7 @@ There's no way for the consumer to indicate they want to skip the survey entirel
 
 If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. You'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder. LivePerson recommends the following workflow:
 
-1. Request that LivePerson enable the Survey Bots feature in Conversation Builder, as discussed in Prerequisite Steps above.
+1. Request that LivePerson enable the Survey Bots feature in Conversation Builder, as discussed in *Prerequisite Steps* above.
 2. In Conversation Builder, manually recreate your survey bots. Assign them to "test" skills that aren't used in a production campaign, so you can test them before assigning them production skills.
 3. Test the new survey bots using the "test" skills.
 4. In Bot Studio, "unpublish" your survey bots.
