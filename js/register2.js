@@ -207,11 +207,24 @@ function postRequest () {
     return response.json()
   })
   .then(function (res) {
-    document.getElementById('accountIdOutput').textContent = res.accountId
-    document.getElementById('emailOutput').textContent = emailAddress
-    submitSuccess = true
-    attemptConfirmationTransition()
-    if (window.hj) window.hj('formSubmitSuccessful')
+    if (response['code'] && response['code'] === 'PROHIBITED_EMAIL_DOMAIN') {
+      if (response['description']) {
+        console.log(response['description'])
+      }
+      if (window.hj) window.hj('formSubmitFailed')
+      document.getElementById('confirmationWrapper').style.display = 'none'
+      document.getElementById('videoWrapper').style.display = 'none'
+      document.getElementById('registerWrapper').style.display = 'block'
+      submitSuccess = false
+      videoComplete = false
+      $('#useBusinessEmail').show()
+    } else {
+      document.getElementById('accountIdOutput').textContent = res.accountId
+      document.getElementById('emailOutput').textContent = emailAddress
+      submitSuccess = true
+      attemptConfirmationTransition()
+      if (window.hj) window.hj('formSubmitSuccessful')
+    }
   })
   .catch(function (err) {
     console.log(err)
