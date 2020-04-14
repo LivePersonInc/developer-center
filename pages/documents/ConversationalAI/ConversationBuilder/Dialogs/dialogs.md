@@ -34,9 +34,7 @@ You can see this context switching occurring in the following conversation:
 
 <img style="width:550px" src="img/ConvoBuilder/contextSwitching2.png">
 
-Your ability to redirect or restrict context switching depends on whether the consumer is responding to an open-ended statement **(1)** or a question **(2)**.
-
- <img style="width:550px" src="img/ConvoBuilder/contextSwitching1.png">
+Your ability to redirect or restrict context switching depends on whether the consumer is responding to an open-ended statement or a question.
 
 When a bot sends an open-ended statement, such as, "Please type your query below," it simply awaits the consumer's response. As a result, whatever the response is, it is processed by the NLU engine to try and find a matching intent and dialog. And if one is found, that dialog is "pushed" to the top of the dialog stack, and its flow immediately begins.
 
@@ -66,7 +64,7 @@ To disable context switching at the conversation start, you can add this code to
 
 To close the current dialog, set the interaction's Next Step to "Close Dialog."
 
- <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/nextStep_closeDialog.png">
+ <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeDialog.png">
 
 Note that the "Close dialog" option triggers a post-conversation [survey](conversation-builder-bots-survey-bots.html). Therefore, you can use this option when you want to explicitly trigger a survey directly from the bot. The specific survey that is triggered depends on the conversation's last skill, i.e., whether it matches one assigned to a survey bot.
 
@@ -74,7 +72,7 @@ Note that the "Close dialog" option triggers a post-conversation [survey](conver
 
 To close the current conversation, set the interaction's Next Step to "Close Conversation."
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/nextStep_closeConversation.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeConversation.png">
 
 Note that the "Close conversation" option does not explicitly trigger a post-conversation [survey](conversation-builder-bots-survey-bots.html). However, the act of closing a conversation in any manner does [trigger a survey](conversation-builder-bots-survey-bots.html#survey-triggering) if the conversation's last skill matches one assigned to a survey bot.
 
@@ -104,7 +102,7 @@ Dialog settings include:
 
 1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png">
 
 2. Select **Dialog Settings**.
 3. Click **More Settings** to display all the settings.
@@ -119,7 +117,7 @@ Deleting a dialog is a non-recoverable action, so be certain about doing so befo
 
 1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png">
 
 2. Select **Delete Dialog**.
 3. In the confirmation dialog, click **Yes**. 

@@ -17,11 +17,15 @@ Intents match an entire sentence against a set of training sentences or KB artic
 
 ### Adding an intent
 
-The default panel of the Domain View is the Add Intent panel. It will be the panel opened by default when you enter the Domain View. To add an intent, first use the uppermost input area to enter its name.
+The default panel of the Domain View is the Add Intent panel. It will be the panel opened by default when you enter the Domain View.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_addIntent.png">
+
+To add an intent, first use the uppermost input area to enter its name.
 
 <div class="important">Using standard naming conventions when creating intents is crucial. A domain can have dozens of intents and being able to easily sort and find intents is the key to making sure your bot runs efficiently and smoothly.</div>
 
-Once you've selected a name for your intent, you should add as many training phrases as possible by using the bottom input area. To add another training phrase after your first one, click the blue **+** sign to the right of the input area.
+Once you've selected a name for your intent, you should add as many training phrases as possible by using the bottom input area.
 
 ### Adding training phrases
 
@@ -52,13 +56,13 @@ For more best practices, see [Train & Tune NLU](conversation-builder-best-practi
 
 ### Training intents
 
-To test your intents, go to the Intent Builder, select the appropriate domain, tap on the tester icon (which looks like a bug) and enter an utterance into the tester. If you select a particular intent, then the tester will be testing against that specific intent. If you’d like to test across ALL intents in the domain, check the "Search in domain" box.
+To test your intents, go to the Intent Builder, select the appropriate domain, click **Debug** (in the upper-right corner), and enter an utterance into the tester. If you select a particular intent, then the tester will be testing against that specific intent. If you’d like to test across ALL intents in the domain, check the "Search in domain" box.
 
 This is what a specific intent search looks like:
 
 <img class="fancyimage" style="width:700px" src="img/retaildemo.png">
 
-Here’s the results of a "domain" search:
+Here are the results of a "domain" search:
 
 <img class="fancyimage" style="width:700px" src="img/retaildemo1.png">
 

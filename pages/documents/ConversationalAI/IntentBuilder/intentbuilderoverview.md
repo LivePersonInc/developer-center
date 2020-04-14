@@ -19,6 +19,13 @@ Intents directs your bot to be more flexible and respond to a wider variety of u
 {: .important}
 See [NLU Engines](conversation-builder-intent-builder-nlu-engines.html) to learn more about the different NLU options that are compatible with Conversation Builder.
 
+### Access Intent Builder
+
+**To access the Intent Builder application**
+
+1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+2. In the Conversational AI dashboard, click **Intent Builder**.
+
 ### Intent Analyzer
 
 The below instructions will enable [Intent Analyzer](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-overview.html) for your intents.
