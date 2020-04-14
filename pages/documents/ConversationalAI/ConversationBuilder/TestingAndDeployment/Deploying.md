@@ -57,7 +57,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
 
 5. Specify the following in the dialog:
     - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in LiveEngage as a prerequisite step (discussed above). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents for the account that you specified appear in this list.
-    - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps).
+    - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in LiveEngage as a prerequisite step (see farther above).
     - **Conversation Type**: Select either "Chat" or "Messaging." This should match the type of LiveEngage account, which is either one or the other.
     - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Bot Status Access or Administrator). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
 6. If desired, click **Advanced Options** and specify any optional, advanced settings:
