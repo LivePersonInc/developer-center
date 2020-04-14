@@ -206,7 +206,7 @@ function postRequest () {
     }
     return response.json()
   })
-  .then(function (res) {
+  .then(function (response) {
     if (response['code'] && response['code'] === 'PROHIBITED_EMAIL_DOMAIN') {
       if (response['description']) {
         console.log(response['description'])
@@ -219,7 +219,7 @@ function postRequest () {
       videoComplete = false
       $('#useBusinessEmail').show()
     } else {
-      document.getElementById('accountIdOutput').textContent = res.accountId
+      document.getElementById('accountIdOutput').textContent = response.accountId
       document.getElementById('emailOutput').textContent = emailAddress
       submitSuccess = true
       attemptConfirmationTransition()
