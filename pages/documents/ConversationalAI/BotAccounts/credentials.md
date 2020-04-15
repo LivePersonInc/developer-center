@@ -161,6 +161,8 @@ Before deleting a credential, manually verify that it isn't in use by a bot or, 
 
 **To delete a credential**
 
-1. In the Credentials view, select the credential, and then click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
-2. Select **Delete**.
-2. Click **Continue** in the confirmation dialog.
+1. In the Bot Accounts application, select the name of the organization for which to delete the credential.
+2. Click **Credentials** in the upper-left corner to display the list of credentials.
+3. Select the credential, and then click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
+4. Select **Delete**.
+5. Click **Continue** in the confirmation dialog.
