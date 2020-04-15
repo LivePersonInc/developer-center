@@ -86,7 +86,7 @@ Key characteristics include:
 
 #### 3rd-party NLU limitations
 
-- Length of the 3rd-party NLU domain name should not exceed 64 characters. (Watson limitation)
+- The length of the 3rd-party NLU domain name should not exceed 64 characters. (Watson limitation)
 - Each domain can only support one language, which is specified on the Domain Settings page.
 - LivePerson does not support "pulling" into Intent Builder existing models that have been trained in IBM Watson or Google Dialogflow. Only model "push" is supported; this is accomplished by training the model in Intent Builder.
 

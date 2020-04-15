@@ -27,9 +27,9 @@ indicator: both
 
 ### The domain view
 
-Once you've added a domain, you will be automatically navigated to the Domain View. On the left hand side, you can find a list of the intents a domain includes (which will originally be empty).
+Once you've added a domain, you will be automatically navigated to the Domain View. On the left hand side, you can find a list of the intents a domain includes.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_domainView.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_intentDetails.png">
 
 You can use the debugger (click **Debug** in the upper-right corner) to enter sample user input to test against your intents. The NLU engine will take the text you input and see if it can find matches in your intents. It will list these intents and the degree to which they matched the input text.
 

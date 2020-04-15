@@ -87,7 +87,7 @@ To accomplish this, in the interaction that displays the article, we've configur
 
 To train a knowledge base, select the knowledge base, enter an utterance, and review the results. If you don't get any results for a particular utterance, you can adjust the filters by tapping the advanced search icon.
 
-<img class="fancyimage" style="width:700px" src="img/hrfaqdemo.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test.png">
 
 By default, the Search Settings are set to **Intents** and **Fair Plus**. This means that the algorithm will first see if there are any matches using our NLU, with a threshold of Fair Plus. However, if it doesn’t find any, it will attempt a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." This means you should add some more training phrases to an article to improve your results.
 
@@ -99,9 +99,9 @@ To add more training phrases (or intent qualifiers), you can manually add them t
 
 <img class="fancyimage" style="width:700px" src="img/qualifiers.png">
 
-You can also use the Thumb Up and Down icons displayed in a search. Below is an example where the utterance returned some results. The preferred result was only a FAIR match. By tapping the **Thumbs Up** icon, you automatically add the current utterance to a Positive Learning set for this article. Tapping **Thumbs Down** does the opposite.
+You can also use the Thumb Up and Down icons displayed in a search. Below is an example where the utterance returned some results. The preferred result was only a FAIR PLUS match. By tapping the **Thumbs Up** icon, you automatically add the current utterance to a Positive Learning set for this article. Tapping **Thumbs Down** does the opposite.
 
-<img class="fancyimage" style="width:700px" src="img/thumbsup.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test_thumbsUp.png">
 
 If you were to rerun the search, the article would return with a higher score.
 
@@ -121,17 +121,18 @@ The Debugger tool is also *the* way to see the JSON that's returned by the searc
 
 **To test user input**
 
-1. Open the knowledge base, and click <img style="width:30px" src="img/ConvoBuilder/icon_kb_test.png"> in the lower-right corner.
+1. Open the knowledge base.
+2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Test User Input**.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_testUserInput1.png">
 
-2. Specify the following:
+3. Specify the following:
 
     * **Phrase**: Enter the phrase to search for.
     * **Search Modes**: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-overview.html#search-modes).
     * **Threshold**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledge-base-overview.html#thresholds).
 
-3. Click **test**.
+4. Click **test**.
 
     In the results, the JSON of the matched article is displayed. You can examine the "title" to see which article has been matched.
 
@@ -150,7 +151,7 @@ If you're just getting started with knowledge bases and want to try using this t
 
 1. If you haven't already done so, in Conversation Builder, create a bot that includes a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base you want to test.
 2. Return to the Knowledge Base application, and open the knowledge base.
-3. Click <img style="width:30px" src="img/ConvoBuilder/icon_kb_chat.png"> (Chat) in the lower-right corner.
+2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Chat**.
 4. In the Preview panel, select the bot to use.
 
    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_chat1.png">
@@ -161,16 +162,18 @@ If you're just getting started with knowledge bases and want to try using this t
 
 ### Find articles with a specific tag
 
-1. In the knowledge base, click <img style="width:30px" src="img/ConvoBuilder/icon_kb_tags.png"> (Tags) in the lower-right corner.
-2. In the Tags panel, select the tag to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple tags.
+1. Open the knowledge base.
+2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Tags**.
+3. In the Tags panel, select the tag to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple tags.
     
     The result list is updated to include only the articles with the selected tags.
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_findWithTag.png">
 
 ### Find articles assigned to a specific category
 
-1. In the knowledge base, click <img style="width:30px" src="img/ConvoBuilder/icon_kb_categories.png"> (Categories) in the lower-right corner.
-2. In the Categories panel, select the category to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple categories.
+1. Open the knowledge base.
+2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Categories**.
+3. In the Categories panel, select the category to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple categories.
     
     The result list is updated to include only the articles assigned to the selected categories.
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_findInCategory.png">

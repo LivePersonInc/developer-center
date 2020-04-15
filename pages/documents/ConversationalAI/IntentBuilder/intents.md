@@ -17,15 +17,21 @@ Intents match an entire sentence against a set of training sentences or KB artic
 
 ### Adding an intent
 
-The default panel of the Domain View is the Add Intent panel. It will be the panel opened by default when you enter the Domain View.
+**To add an intent**
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_addIntent.png">
+1. In the dashboard that lists your domains, select the domain.
+2. Click **Add Intent** in the upper-right corner.
 
-To add an intent, first use the uppermost input area to enter its name.
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_addIntent.png">
 
-<div class="important">Using standard naming conventions when creating intents is crucial. A domain can have dozens of intents and being able to easily sort and find intents is the key to making sure your bot runs efficiently and smoothly.</div>
+3. Specify the following:
 
-Once you've selected a name for your intent, you should add as many training phrases as possible by using the bottom input area.
+    * **Intent name**: Enter the intent name. Using standard naming conventions when creating intents is crucial. A domain can have dozens of intents and being able to easily sort and find intents is the key to making sure your bot runs efficiently and smoothly.
+    * **Intent display name**: Enter the display name.
+    * **Intent type**: Select either "Intent" or "Meta Intent."
+    * **Training**: Enter as many trainining phrases as possible. This is discussed in more detail below.
+
+6. Click **Add Intent**.
 
 ### Adding training phrases
 
@@ -60,11 +66,11 @@ To test your intents, go to the Intent Builder, select the appropriate domain, c
 
 This is what a specific intent search looks like:
 
-<img class="fancyimage" style="width:700px" src="img/retaildemo.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_intentSearch.png">
 
 Here are the results of a "domain" search:
 
-<img class="fancyimage" style="width:700px" src="img/retaildemo1.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_domainSearch.png">
 
 Tapping on each of the intent results will give you a more detailed results breakdown.
 
