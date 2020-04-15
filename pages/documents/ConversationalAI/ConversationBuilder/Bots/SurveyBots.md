@@ -102,7 +102,7 @@ Please contact your LivePerson account representative to enable this feature.
 
 #### Adding survey interactions
 
-In the dialog that's of type "Survey," define the survey. This is the only dialog in which you can add survey interactions. There are three types of survey interactions:
+In the dialog that's of type "Survey," define the survey. There are three types of survey interactions:
 
 * First Call Resolution (FCR)
 * Customer Satisfaction (CSAT)
@@ -149,11 +149,13 @@ The handling of free text answers works in a survey bot just like it does in a c
 
 #### Handling unrecognizable responses
 
-Fallback works in a survey bot just like it does in a custom bot. However, in the survey interactions in a survey bot, the fallback response is required, and there's a default value provided.
+In the survey interactions in a survey bot, the fallback response is required, and there's a default value provided.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_fallback.png">
 
-You can customize the default fallback responses in the survey interactions. You can also create a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) if desired.
+You can customize the default fallback responses in the survey interactions.
+
+You cannot create a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html).
 
 #### Closing the conversation
 
@@ -232,10 +234,12 @@ There's no way for the consumer to indicate they want to skip the survey entirel
 
 #### I'm an existing Bot Studio user. How do I migrate to using Conversation Builder to create and manage survey bots?
 
-If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. You'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder. LivePerson recommends the following workflow:
+If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. You'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder. 
+
+LivePerson recommends the following workflow:
 
 1. Request that LivePerson enable the Survey Bots feature in Conversation Builder, as discussed in *Prerequisite Steps* above.
-2. In Conversation Builder, manually recreate your survey bots. Assign them to "test" skills that aren't used in a production campaign, so you can test them before assigning them production skills.
-3. Test the new survey bots using the "test" skills.
+2. In Conversation Builder, manually recreate your survey bots. (If you're developing in your Production environment, which is not common and not recommended, assign the survey bots to "test" skills that aren't used in a production campaign, so you can test them before assigning production skills to them.)
+3. Test the survey bots.
 4. In Bot Studio, "unpublish" your survey bots.
-5. In Conversation Builder, assign production skills to the new survey bots.
+5. In Conversation Builder, release the new survey bots to your Production environment.
