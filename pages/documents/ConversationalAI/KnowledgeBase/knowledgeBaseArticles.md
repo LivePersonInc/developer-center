@@ -80,9 +80,9 @@ Use Conversation Builder's Preview tool or the Knowledge Base's Chat tool to pre
 
 Continuing our example, we've added some JavaScript so that, if there's a content link that is returned by the integration call, it is displayed. And if there isn't one, the conversation ends after the article is sent.
 
-To accomplish this, in the interaction that displays the article, we've configured the next action to be "end interaction" (not shown below). Then, we've added some post-process code to that same interaction. The code (shown below) checks whether the content link (URL) exists, and, if it does, it changes the interaction's next action to be the following interaction.
+To accomplish this, in the Display Article interaction, we've configured the next action to be "End Interaction." Then, we've added some Post-Process code to that same interaction. The code (shown below) checks whether the content link (URL) exists, and, if it does, it changes the interaction's next action to be the following interaction.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_advSettings6.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_advSettings6.png">
 
 ### Train a knowledge base
 
