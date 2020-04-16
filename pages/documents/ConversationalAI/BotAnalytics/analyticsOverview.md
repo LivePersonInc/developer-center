@@ -19,7 +19,7 @@ indicator: both
 
     The first screen that appears is a list of all your bots. Search or scroll through the list and select the bot for which you want to see data.
 
-    <img style="width:750px" src="img/beaut_ba_1.png">
+    <img style="width:750px" src="img/ConvoBuilder/analytics_dashboard.png">
 
 ### Views
 
