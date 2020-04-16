@@ -118,6 +118,7 @@ To get the token and the userId follow these steps:
   
 <img src="img/faas-cli-fetch-token.png" class="fancyimage" width="100%" alt="LivePerson Functions CLI token"> 
 
+{:start="6"}
 6. Run the login command as follows: `lpf login --token <bearer> --accountId <accountId> --userId <userId>`
 
 {: .notice}
