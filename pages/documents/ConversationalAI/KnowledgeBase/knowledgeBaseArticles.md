@@ -68,6 +68,7 @@ For the names of the JSON nodes for the content links, see the JSON reference fa
 Next, still in Conversation Builder, build out the applicable dialog to make use of the additional content **(4)**, i.e., use the custom data fields as you require. (For help on displaying variables in interactions, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).)
 
 <img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3.png">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3b.png">
 
 #### Preview the conversation
 
