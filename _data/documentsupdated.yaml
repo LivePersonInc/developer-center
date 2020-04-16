@@ -228,6 +228,9 @@
       - pagename: Domains
       - pagename: Intents
       - pagename: Entities
+  - documentname: Intent Analyzer
+    pages:
+      - pagename: Overview
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
