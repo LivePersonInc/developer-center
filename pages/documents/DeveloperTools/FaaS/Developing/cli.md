@@ -98,3 +98,27 @@ Example with `login`
 Example with `pull`
 
 <img src="img/faas-cli-pull.gif" alt="LivePerson Functions CLI Pull"> 
+
+### SSO Support
+
+Currently, the CLI login is restricted to the [user login](https://developers.liveperson.com/login-service-api-methods-user-login.html) method. To use the login with an SSO enabled account you have to fetch the token and userId from the FaaS UI.
+
+{: .notice}
+It is advisable to create a separate account for the CLI, because with each new login on a different page the token expires in the CLI (only one login per account is possible).
+
+To get the token and the userId follow these steps:
+
+1. Open the FaaS UI and log in.
+2. Open the developer tools of your browser.
+3. Go to the 'Application' tab.
+4. Open the session storage with the key 'houston.<accountId>'.
+5. Copy token and userId.
+   - Token: 'glob'
+   - UserId: 'config.userId'
+  
+<img src="img/faas-cli-fetch-token.png" class="fancyimage" width="100%" alt="LivePerson Functions CLI token"> 
+
+6. Run the login command as follows: `lpf login --token <bearer> --accountId <accountId> --userId <userId>`
+
+{: .notice}
+Note: If you get a message that the token is not valid anymore, you have to perform step 1 - 6 again.
