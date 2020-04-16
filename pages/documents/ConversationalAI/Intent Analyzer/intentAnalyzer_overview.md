@@ -23,7 +23,7 @@ You can leverage the consistent flow of data from Intent Analyzer to:
 
 Intent Analyzer integrates seamlessly with [Intent Builder](intent-builder-overview.html) to provide a powerful, unified system for intent modeling and management.
 
-### Getting started
+### Get started
 
 Before you begin, see [here](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-the-power-of-an-intent-driven-contact-center.html) for information on the benefits of an intent-driven contact center, the benefits of being an intent-centric management solution (ICMS), and common use cases.
 
@@ -32,7 +32,7 @@ Before you begin, see [here](https://knowledge.liveperson.com/ai-bots-automation
 {: .important}
 See [here](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-intent-analyzer-tips.html) for best practices and tips on working with Intent Analyzer.
 
-### Enabling Intent Analyzer for intents
+### Enable Intent Analyzer for intents
 
 {: .important}
 It's a best practice to have only one domain enabled for Intent Analyzer at a time; this minimizes intent overlap. Also, for the best analysis, it's a best practice to enable Intent Analyzer for all intents within a domain.
