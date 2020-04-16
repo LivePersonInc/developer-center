@@ -27,7 +27,7 @@ Intent Analyzer integrates seamlessly with [Intent Builder](intent-builder-overv
 
 Before you begin, see [here](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-the-power-of-an-intent-driven-contact-center.html) for information on the benefits of an intent-driven contact center, the benefits of being an intent-centric management solution (ICMS), and common use cases.
 
-**To get started**, see [here](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-overview.html#getting-started) for important information on enabling Intent Analyzer, getting permissions, and beginning with start packs versus manual setup.
+**To get started**, see [here](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-overview.html#getting-started) for important information on enabling Intent Analyzer, getting permissions, and beginning with starter packs versus manual setup.
 
 {: .important}
 See [here](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-intent-analyzer-tips.html) for best practices and tips on working with Intent Analyzer.
