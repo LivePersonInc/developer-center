@@ -29,6 +29,15 @@ Before you can add an Integration interaction, you need to create the integratio
 
 3. Finish configuring the interaction as desired, and click **Save**.
 
+#### Order of invocation
+
+When an integration interaction is processed, the order of invocation is as follows:
+
+1. Pre-process code
+2. Integration call, e.g., API call
+3. Post-process code
+4. Next step
+
 #### Defining rules based on the result of the API integration
 
 {: .important}
