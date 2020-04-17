@@ -22,11 +22,11 @@ LivePerson recommends that —before you create a bot— you set up the [domains
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 
 2. In the dashboard that lists your bots, click **New Bot** in the upper-right corner.
-3. In the dialog box that appears, select the [template](conversation-builder-templates-overview.html) on which to base the bot.
+3. In the dialog box that appears, select the template on which to base the bot.
     
     The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. 
 
-    There are also many, industry-specific, English-language templates available. If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
+    There are also many, industry-specific, English-language [templates available](conversation-builder-bot-templates-overview.html). If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
 4. If you selected the Custom Bot template, in the next dialog, specify the following:
 
@@ -40,4 +40,4 @@ LivePerson recommends that —before you create a bot— you set up the [domains
 7. [Train and tune](conversation-builder-best-practices-train-tune-nlu.html) things as you do more testing.
 8. [Save a version](conversation-builder-versions-releases.html#save-a-version) of the final “Development” bot.
 
-    At this point, you could deploy the Development bot, but LivePerson recommends that you [create a release](conversation-builder-versions-releases.html#create-a-release) copy of the bot that you deploy instead. This allows you to take live the release copy (the Production copy). Later, you can make fine-tuning changes to the Development copy as needed, without affecting the Production copy. You can then “upgrade” the Production copy accordingly.
+    For a Development-to-Production release workflow, see [here](conversation-builder-versions-releases.html).
