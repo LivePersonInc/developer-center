@@ -50,7 +50,7 @@ This section contains API details that are common to every API’s resource and 
 | root | The Agent Survey's first question | long | 
 | actualTimeInMinutes | Timeout of the Agent survey - defined in skill or in the survey configuration as fallback | Integer |
 | questions | list of Agent survey questions | List of AgentSurveyResponseQuestions |
-| agentSurveyContext | The status, last action time, survey expiration time and the survey revision | Object - [AgentSurveyContext](#AgentSurveyContext definition) |
+| agentSurveyContext | The status, last action time, survey expiration time and the survey revision | Object - [AgentSurveyContext](#AgentSurveyContext) |
 
 **AgentSurveyResponseQuestion definition**
 
