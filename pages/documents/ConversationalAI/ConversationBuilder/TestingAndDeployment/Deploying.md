@@ -27,8 +27,8 @@ For help with these steps, see the [LivePerson Knowledge Center](https://knowled
 #### The deployment process
 After the pre-requisite steps are performed, at a high level, deployment is a two-step process:
 
-1. [Add the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-a-bot-connector). This establishes the necessary connections to make the bot operational.
-2. [Start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). This gets the agent connector running in the target environment.
+1. Add the agent connector. This establishes the necessary connections to make the bot operational.
+2. Start the agent connector. This gets the agent connector running in the target environment.
 
 {: .important}
 LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
@@ -69,7 +69,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
 
     This establishes the connection between the bot and the bot agent in the target LiveEngage environment.
     
-    To fully deploy the bot, now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
+    To fully deploy the bot, now you must start the agent connector. 
 
 ### Edit an agent connector
 You can edit an agent connector as long as 1) the agent connector isn't running, and 2) the specified bot agent is active in LiveEngage.
