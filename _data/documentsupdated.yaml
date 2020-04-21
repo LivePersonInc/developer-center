@@ -598,7 +598,6 @@
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
           - subpagename: Debugger
-          - subpagename: Command Line Interface (CLI)
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
@@ -621,6 +620,7 @@
           - subpagename: Messaging Conversation Survey
           - subpagename: Conversational AI
           - subpagename: Conversational Commands
+      - pagename: Command Line Interface (CLI)
 
 
 - categoryname: Historical Data
