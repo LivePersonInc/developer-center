@@ -128,8 +128,7 @@ An agent connector can have one of the following statuses:
 Custom configuration fields are optional key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
 
 {: .important}
-Use of custom configuration fields potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for one of your duplicate bot connectors all running the same bot, you'll get different behavior between the bots within an account.
-
+If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.
 
 #### acceptStatusEventValue
 By default, a message from the consumer is shown to the consumer as "Read' once it is sent. Set this field to "SENT" if you want the message to be shown as "Sent" instead. Once the agent logs into LiveEngage and views the message, this status will change to "Read."
