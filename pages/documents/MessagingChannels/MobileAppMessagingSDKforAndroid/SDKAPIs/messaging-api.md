@@ -685,6 +685,21 @@ public static void setPushNotificationTapped()
 ```
 
 
+### isPusherRegistered
+
+Check if the device is registered to pusher.
+
+```java
+public static void isPusherRegistered(@NonNull String deviceToken, @NonNull String appId, @NonNull LPAuthenticationParams lpAuthenticationParams, @NonNull ICallback<Boolean, Exception> callback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| deviceToken | The FCM device token |
+| appId | The host app ID |
+| lpAuthenticationParams | Authentication params |
+| callback | An ICallback implementation |
+
 
 ### Deprecated
 
