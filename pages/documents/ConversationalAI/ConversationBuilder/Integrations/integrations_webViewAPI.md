@@ -24,6 +24,9 @@ The Web View API can be used by the external system to:
 {: .important}
 Don’t use this API to post Personally Identifiable Information (PII) or Payment Card Industry (PCI) data because the data is not masked.
 
+{: .important}
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before using this API. For details, see [here](conversation-builder-networking-security.html).
+
 The API requires three fields that the external system must obtain from the conversation:
 - **userId**: The user ID can be retrieved using the [getUserPlatformId](conversation-builder-scripting-functions-get-user-data.html#get-user-platform-id-and-platform-type) function.
 - **botId**: The bot ID can be retrieved from the [bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings); see the **Bot ID** field. 

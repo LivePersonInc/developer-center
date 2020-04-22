@@ -14,9 +14,10 @@ As a bot developer, you can use Conversation Builder to quickly deploy bots to a
 
 #### Prerequisite steps
 
-If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place and you're accessing Conversation Builder from within LiveEngage (i.e., your browser is pointing to the "liveperson.net" domain), you must whitelist LivePerson's IP addresses within LiveEngage. You can find these details [here](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center. However, if you're accessing Conversation Builder directly (i.e., your browser is pointing to the "livepersonai.com" domain), please contact LivePerson Support to obtain the AWS IP addresses to whitelist.
+{: .important}
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before adding agent connectors. For details, see [here](conversation-builder-networking-security.html).
 
-Also, before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
+Before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
 
 1. Create a bot agent. This is a user where the type = "Bot." Make sure to enable the agent. Also make sure to create the agent with API-based authentication, not password-based authentication. The API-based authentication is more secure and doesn't expire. If your bot agent is currently using password-based authentication, you should update immediately.
 2. Create a skill and assign it to the bot agent.
