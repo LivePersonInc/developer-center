@@ -29,7 +29,7 @@ More specifically, refer to Amazon’s **ip-ranges JSON file** that you can acce
 | To use this... | Whitelist this in the ip-ranges file... | Notes | 
 |----|----|----|
 | Conversation Builder's web portal | All IPs for the CLOUDFRONT service and the EC2 service | Whitelisting the domain is recommended over whitelisting the IPs. |
-| Web View Callback API | All IPs for the EC2 service | |
+| Web View integration API | All IPs for the EC2 service | |
 
 #### Conversation Builder calls to brand systems
 
