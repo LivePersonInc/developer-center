@@ -25,6 +25,8 @@ indicator: messaging
 Agent or bot will receive an error when trying to send Structured Content elements with the following configurations:
 
 #### Button and Generic Templates:
+  * If there are more than 3 button items
+  
   * If number of characters in text (on main card) larger than 640 (UTF-8-encoded)
 
   * If number of characters on button text title is larger than 20
