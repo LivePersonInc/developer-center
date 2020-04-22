@@ -198,6 +198,7 @@
           - subpagename: Train & Tune NLU
           - subpagename: Reusable Components
           - subpagename: A Pre-Launch Checklist
+      - pagename: Networking & Security
   - documentname: Maven AI
     pages:
       - pagename: Overview
