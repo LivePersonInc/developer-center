@@ -6,7 +6,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Advanced Features
-permalink: mobile-app-messaging-sdk-for-android-advanced-features-Logging.html
+permalink: mobile-app-messaging-sdk-for-android-advanced-features-logging.html
 indicator: messaging
 ---
 
