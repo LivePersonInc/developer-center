@@ -223,7 +223,7 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 **Note:** The SDK needs to be initialized before calling this API.
 
 {:.important}
-This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
+This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
 
 This api will be improved in future to show the count of unread messages in the closed conversation as well and the documentation will be updated accordingly.
 
@@ -722,7 +722,7 @@ public static void setPushNotificationTapped()
 
 ### isPusherRegistered
 
-Check if the device is registered to pusher.
+Check if the consumer's device is registered to receive push notification messages.
 
 ```java
 public static void isPusherRegistered(@NonNull String deviceToken, @NonNull String appId, @NonNull LPAuthenticationParams lpAuthenticationParams, @NonNull ICallback<Boolean, Exception> callback)
