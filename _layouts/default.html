@@ -12,25 +12,25 @@
 </head>
 
 <body>
-    <div class="header">
+    <div id="mainHeader">
       <div id ="logoHeader">  
         <a href="https://developers.liveperson.com/">
-          <img alt="LivePerson Knowledge Center" class="sitelogo" src="img/logo.svg" /> <span id="logoTxt">| Dev</span> 
+          <img alt="LivePerson Knowledge Center" class="sitelogo" src="img/logo.svg" />
         </a>
       </div>
       <div id="searchHeader">
         <div class="searchimage">
           <img alt="LivePerson Knowledge Center" src="img/searchicon.png" />
         </div>
-        <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search documentation" name="search"
+        <input type="search" id="aa-search-input" class="aa-input-search" placeholder="        What are you looking for?" name="search"
           autocomplete="on" />
       </div>
-      <div class="loginHeader">  
+      <div id="loginHeader">  
         <a target="_blank" href="https://authentication.liveperson.net/login.html" class="loginText">
-          <div class="loginButton">Login</div>
+          <button class="loginButton">Login</button>
         </a>
         <a target="_blank" href="register.html" class="trialText">
-          <div class="trialButton">Create Free Trial Account</div>
+          <button class="trialButton">Start Free Trial</button>
         </a>
       </div>
     </div>
@@ -47,12 +47,6 @@
         <div class="mobilelogo"><img alt="LivePerson Knowledge Center" src="img/desktop.png" /></div>
         <div class="placeholder"></div>
       </div>
-      
-      <div class="searchimage">
-        <img alt="LivePerson Knowledge Center" src="img/searchicon.png" />
-      </div>
-      <input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search documentation" name="search"
-        autocomplete="on" />
     </div>
     <div id="defaultsidebar" class="defaultsidebar">
       {% include sidebar.html %}

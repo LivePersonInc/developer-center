@@ -22,11 +22,31 @@ a:hover,a:focus {
     display: flex!important;
     flex-wrap: wrap
 }
-.header{
+
+#mainHeader{
     display: flex;
+    height: 90px;
+    padding-top: 22px;
 }
-span .header{
-    font-size: 22px;
+
+#logoHeader{
+    flex:1;
+    margin-left:22px;
+}
+
+#searchHeader{
+    flex:3;
+}
+
+#loginHeader{
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4%;
+
+}
+a #loginHeader{
+    flex:1
 }
 
 a:-webkit-any-link {
@@ -64,7 +84,7 @@ code pre {
 }
 
 .titlecontainer {
-    display: flex;
+    display: flex;   
     flex: 1
 }
 
@@ -122,7 +142,7 @@ code pre {
     .defaultwrapper {
         display:grid;
         grid-template-columns: 2fr .5fr .5fr 5fr 3fr 1fr .5fr;
-        grid-template-rows: 92px 92px 1fr 1fr auto
+        grid-template-rows: 0 92px 1fr 1fr auto
     }
 
     .defaultheader {
@@ -137,14 +157,16 @@ code pre {
     }
 
     .searchimage {
-        background-color: #f2f1f2;
         z-index: 1;
-        padding-left: 10px;
         display: flex;
         align-items: center;
         position: absolute;
     }
-
+    .searchimage img {
+        height: 24px;
+        margin-top: 7px;
+        padding-left: 25px;
+    }
     ul.mysidebar.nav {
         width: 100%
     }
@@ -210,14 +232,10 @@ code pre {
     font-weight: 500
 }
 
-.searchimage {
-    background-color: #f2f1f2;
-}
-
 .codebtn {
     user-select: none;
     order: 1;
-    align-self: flex-end;
+    align-self: flex-end;   
     width: 35px;
     padding-top: 9px;
     order: 1;
@@ -311,15 +329,13 @@ code pre {
 }
 
 #aa-search-input {
-    background-color: transparent!important;
-    border: 0;
+    border-radius: 18px;
+    border: 1px solid #ccc!important;
+    background-color: white;
     width: 100%;
     font-size: 18px;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
-    background-color: #f2f1f2!important;
-    padding-top: 14px;
-    padding-bottom: 13px;
-    padding-left: 25px
+    padding: 5px;
 }
 
 #aa-search-input:focus {
@@ -327,28 +343,24 @@ code pre {
 }
 
 #aa-search-input::-webkit-input-placeholder {
-    color: #a2a2a2!important;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
     font-weight: 300;
     font-size: 16px
 }
 
 #aa-search-input::-moz-placeholder {
-    color: #a2a2a2!important;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
     font-weight: 300;
     font-size: 16px
 }
 
 #aa-search-input:-ms-input-placeholder {
-    color: #a2a2a2!important;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
     font-weight: 300;
     font-size: 16px
 }
 
 #aa-search-input:-moz-placeholder {
-    color: #a2a2a2!important;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
     font-weight: 300;
     font-size: 16px
@@ -623,11 +635,22 @@ a.loginText {
 }
 
 .loginButton {
-    background-color: #5879da
+    color: #5879da;
+    border-radius: 18px;  
+    width: 110px;
+    text-align: center;
+    border: none;
+    padding: 5px;
+
 }
 
 .trialButton {
-    background-color: #ff720b
+    background-color: #5879da;
+    color:white;
+    border-radius: 18px;  
+    width: 110px;   
+    text-align: center;
+    padding: 5px;
 }
 
 .documentsbutton {
@@ -820,13 +843,6 @@ a.loginText {
 
 .homeitem>a:hover {
     color: #f2f1f2!important
-}
-
-.sitelogo {
-    margin-top: 21px;
-    margin-left: 32px;
-    position: sticky;
-    height: 47px
 }
 
 .language-json,.language-swift,.language-html,.language-java,.language-javascript,.language-sh,.language-ruby,.language-xml,.language-bash,.language-http,.language-gradle,.language-css,.language-objc {
@@ -1364,10 +1380,6 @@ input#csds-button {
         flex-direction:column
     }
 
-    .sitelogo {
-        margin-top: 8px
-    }
-
     .sidebarbuttons {
         margin-top: 15px
     }
@@ -1467,10 +1479,6 @@ input#csds-button {
 }
 
 @media screen and (max-width: 1260px) {
-    .sitelogo {
-        margin-top:15px;
-        margin-left: 18px
-    }
 
     .sidebarbuttons {
         flex-direction: column;
