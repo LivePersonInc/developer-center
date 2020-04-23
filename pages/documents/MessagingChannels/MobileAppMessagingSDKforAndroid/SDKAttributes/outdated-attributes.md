@@ -2704,6 +2704,13 @@ Configuration for bottom left corner radius of structured content card.
 * **Default value:** 0dp
 
 
+#### structured_content_button_background_enabled
+Enable or disable structured content button border.
+
+* **Type:** bool
+* **Default value:** true
+
+
 ---  
 
 ### System messages
