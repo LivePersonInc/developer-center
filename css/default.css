@@ -1,5 +1,5 @@
-:root{
-    --electric : #005EF4;
+:root {
+    --electric: #005EF4;
 }
 
 * {
@@ -39,7 +39,7 @@ a:focus {
     flex-wrap: wrap
 }
 
-#mainHeader{
+#mainHeader {
     top: 0;
     height: 90px;
     z-index: 100;
@@ -50,30 +50,32 @@ a:focus {
     border-bottom: 1px solid #DADBE6;
 }
 
-.scroll{
+.scroll {
     box-shadow: 0px 4px 8px #DADBE5;
 }
 
-#logoHeader{
-    flex:1;
+#logoHeader {
+    flex: 1;
 }
-#logoImg{
+
+#logoImg {
     padding-left: 22px;
 }
 
-#searchHeader{
-    flex:2;
+#searchHeader {
+    flex: 2;
 }
 
-#loginHeader{
-    flex:1;
+#loginHeader {
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     margin-right: 4%;
 
 }
-a #loginHeader{
-    flex:1
+
+a #loginHeader {
+    flex: 1
 }
 
 a:-webkit-any-link {
@@ -111,7 +113,7 @@ code pre {
 }
 
 .titlecontainer {
-    display: flex;   
+    display: flex;
     flex: 1
 }
 
@@ -189,11 +191,13 @@ code pre {
         align-items: center;
         position: absolute;
     }
+
     .searchimage img {
         height: 24px;
         margin-top: 10px;
         padding-left: 28px;
     }
+
     ul.mysidebar.nav {
         width: 100%
     }
@@ -235,12 +239,12 @@ code pre {
     }
 
     .defaultfooter {
-        /* grid-row: 8 / span 1;
-        grid-column: 1/ span 8; */
+
         display: flex;
         justify-content: center;
         background-color: #F8F5F3;
         color: #463E36;
+        margin-bottom: -25px;
     }
 }
 
@@ -265,7 +269,7 @@ code pre {
 .codebtn {
     user-select: none;
     order: 1;
-    align-self: flex-end;   
+    align-self: flex-end;
     width: 35px;
     padding-top: 9px;
     order: 1;
@@ -364,7 +368,7 @@ code pre {
     background-color: white;
     width: 100%;
     font-size: 18px;
-    font-family: "Roboto",Arial,Helvetica,sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding: 10px;
     border-bottom: 1px solid #DADBE6;
     padding-left: 30px;
@@ -375,25 +379,25 @@ code pre {
 }
 
 #aa-search-input::-webkit-input-placeholder {
-    font-family: "Roboto",Arial,Helvetica,sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 16px
 }
 
 #aa-search-input::-moz-placeholder {
-    font-family: "Roboto",Arial,Helvetica,sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 16px
 }
 
 #aa-search-input:-ms-input-placeholder {
-    font-family: "Roboto",Arial,Helvetica,sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 16px
 }
 
 #aa-search-input:-moz-placeholder {
-    font-family: "Roboto",Arial,Helvetica,sans-serif;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 16px
 }
@@ -670,25 +674,29 @@ a.loginText {
     color: var(--electric);
     border: none;
 }
-.loginButton:hover{
+
+.loginButton:hover {
     color: #003fa3;
 }
-.trialButton:hover{
+
+.trialButton:hover {
     background-color: #003fa3;
 }
 
 .trialButton {
     background-color: var(--electric);
-    color:white;
+    color: white;
 }
-.loginButton, .trialButton{
+
+.loginButton,
+.trialButton {
     border-radius: 25px;
     width: 120px;
     text-align: center;
     padding: 12px;
     font-weight: 500;
 }
-  
+
 
 
 .documentsbutton {
@@ -884,7 +892,19 @@ a.loginText {
     color: #f2f1f2 !important
 }
 
-.language-json,.language-swift,.language-html,.language-java,.language-javascript,.language-sh,.language-ruby,.language-xml,.language-bash,.language-http,.language-gradle,.language-css,.language-objc {
+.language-json,
+.language-swift,
+.language-html,
+.language-java,
+.language-javascript,
+.language-sh,
+.language-ruby,
+.language-xml,
+.language-bash,
+.language-http,
+.language-gradle,
+.language-css,
+.language-objc {
     display: flex;
     flex-direction: column
 }
@@ -1431,6 +1451,7 @@ input#csds-button {
     .sidebarbuttons {
         flex-direction: column
     }
+
     .sidebarbuttons {
         margin-top: 15px
     }
@@ -1670,9 +1691,10 @@ input#csds-button {
 }
 
 @media screen and (max-width: 450px) {
-    .header{
+    .header {
         display: none;
     }
+
     .defaultheader {
         grid-column: 1 / span 7;
         margin-left: 0;
