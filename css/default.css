@@ -367,6 +367,7 @@ code pre {
     font-family: "Roboto",Arial,Helvetica,sans-serif;
     padding: 10px;
     border-bottom: 1px solid #DADBE6;
+    padding-left: 30px;
 }
 
 #aa-search-input:focus {
@@ -669,8 +670,11 @@ a.loginText {
     color: var(--electric);
     border: none;
 }
-.loginButton:hover, .trialButton:hover{
+.loginButton:hover{
     color: #003fa3;
+}
+.trialButton:hover{
+    background-color: #003fa3;
 }
 
 .trialButton {
