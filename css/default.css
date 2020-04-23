@@ -22,6 +22,12 @@ a:hover,a:focus {
     display: flex!important;
     flex-wrap: wrap
 }
+.header{
+    display: flex;
+}
+span .header{
+    font-size: 22px;
+}
 
 a:-webkit-any-link {
     color: #5879da
@@ -48,7 +54,7 @@ code pre {
     padding: 0px 0 20px 0;
     height: 32px;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 90px;
 }
 
 .documenttitlecontainer {
@@ -1605,6 +1611,9 @@ input#csds-button {
 }
 
 @media screen and (max-width: 450px) {
+    .header{
+        display: none;
+    }
     .defaultheader {
         grid-column:1 / span 7;
         margin-left: 0;
