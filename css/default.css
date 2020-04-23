@@ -1,3 +1,7 @@
+:root{
+    --electric : #005EF4;
+}
+
 * {
     margin: 0
 }
@@ -24,18 +28,29 @@ a:hover,a:focus {
 }
 
 #mainHeader{
-    display: flex;
+    top: 0;
     height: 90px;
+    z-index: 100;
+    display: flex;
     padding-top: 22px;
+    position: sticky;
+    background-color: white;
+    border-bottom: 1px solid #DADBE6;
+}
+
+.scroll{
+    box-shadow: 0px 4px 8px #DADBE5;
 }
 
 #logoHeader{
     flex:1;
-    margin-left:22px;
+}
+#logoImg{
+    padding-left: 22px;
 }
 
 #searchHeader{
-    flex:3;
+    flex:2;
 }
 
 #loginHeader{
@@ -164,8 +179,8 @@ code pre {
     }
     .searchimage img {
         height: 24px;
-        margin-top: 7px;
-        padding-left: 25px;
+        margin-top: 10px;
+        padding-left: 28px;
     }
     ul.mysidebar.nav {
         width: 100%
@@ -329,13 +344,14 @@ code pre {
 }
 
 #aa-search-input {
-    border-radius: 18px;
-    border: 1px solid #ccc!important;
+    border-radius: 25px;
+    border: 1px solid #A39C96;
     background-color: white;
     width: 100%;
     font-size: 18px;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
-    padding: 5px;
+    padding: 10px;
+    border-bottom: 1px solid #DADBE6;
 }
 
 #aa-search-input:focus {
@@ -635,23 +651,26 @@ a.loginText {
 }
 
 .loginButton {
-    color: #5879da;
-    border-radius: 18px;  
-    width: 110px;
-    text-align: center;
+    color: var(--electric);
     border: none;
-    padding: 5px;
-
+}
+.loginButton:hover, .trialButton:hover{
+    color: #003fa3;
 }
 
 .trialButton {
-    background-color: #5879da;
+    background-color: var(--electric);
     color:white;
-    border-radius: 18px;  
-    width: 110px;   
-    text-align: center;
-    padding: 5px;
 }
+.loginButton, .trialButton{
+    border-radius: 25px;
+    width: 120px;
+    text-align: center;
+    padding: 12px;
+    font-weight: 500;
+}
+  
+
 
 .documentsbutton {
     flex: 1;
@@ -1379,7 +1398,6 @@ input#csds-button {
     .sidebarbuttons {
         flex-direction:column
     }
-
     .sidebarbuttons {
         margin-top: 15px
     }
