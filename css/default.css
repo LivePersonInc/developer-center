@@ -57,6 +57,7 @@ a:focus {
 #logoHeader {
     flex: 1;
     padding-top: 5px;
+    padding-left: 2rem;
 }
 
 #logoImg {
@@ -72,7 +73,6 @@ a:focus {
     display: flex;
     justify-content: flex-end;
     margin-right: 4%;
-
 }
 
 a #loginHeader {
