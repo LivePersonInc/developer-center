@@ -56,6 +56,7 @@ a:focus {
 
 #logoHeader {
     flex: 1;
+    padding-top: 5px;
 }
 
 #logoImg {
@@ -372,6 +373,7 @@ code pre {
     padding: 10px;
     border-bottom: 1px solid #DADBE6;
     padding-left: 30px;
+    line-height: 3px;   
 }
 
 #aa-search-input:focus {
