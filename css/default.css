@@ -52,7 +52,7 @@ code pre {
 }
 
 .defaultwrapper {
-    height: 100vh
+    /* height: 100vh */
 }
 
 .defaultheader {
@@ -192,8 +192,10 @@ code pre {
     }
 
     .defaultfooter {
-        grid-row: 8 / span 1;
-        grid-column: 1/ span 8;
+        /* grid-row: 8 / span 1;
+        grid-column: 1/ span 8; */
+        display: flex;
+        justify-content: center;
         background-color: #F8F5F3;
         color: #463E36;
     }
