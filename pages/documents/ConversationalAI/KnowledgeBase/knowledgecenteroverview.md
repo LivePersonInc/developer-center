@@ -10,25 +10,49 @@ permalink: knowledge-base-overview.html
 indicator: both
 ---
 
-In Conversation Builder, a knowledge base is a great tool to answer questions about a variety of topics specific to your bot's area of expertise. One would typically add a knowledge base integration in a fallback dialog to provide simple answers to topics not covered elsewhere in the bot.
+In Conversation Builder, a knowledge base is a great tool to answer questions about a variety of topics specific to your bot's area of expertise. One would typically add a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a fallback dialog to provide simple answers to topics not covered elsewhere in the bot.
 
 The Knowledge Base application in the Conversation Builder platform lets you to create and manage knowledge bases and articles, which are then processed by an NLU engine. This allows the bot to leverage [intents](intent-builder-intents.html) and [entities](intent-builder-entities.html) to recommend the most accurate articles to an inquiring consumer. FAQ bots and Agent Advisor widgets are both driven by a knowledge base full of articles, intelligently delivering the right content to the consumer at the right time.
 
-<img class="fancyimage" style="width:750px" src="img/beaut_kb_2.png">
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_overview.png">
+
+### Access Knowledge Base
+
+**To access the Knowledge Base application**
+
+1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+2. In the Conversational AI dashboard, click **Knowledge Base**.
 
 ### How a knowledge base works
 
-The Knowledge Base uses two types of algorithms to match a consumer's input to articles and return an appropriate article.
+#### Search modes
+When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify a "mode" for the search; this determines the type of search that is performed. Possible modes include:
 
-First, an *exact match* search is performed. This checks the consumer's input against the title, summary, detail, intent qualifiers (if used), and tags in the articles. If an exact match is found, the article is returned.
+* **Intents**: First, a text-to-text search is performed; the search algorithm checks the consumer's input against the title and intent qualifiers (if used; intent qualifiers are applicable only when using Knowledge Base intents, not Domain intents).
 
-If an exact match isn't found, the Knowledge Base then uses *Natural Language Understanding (NLU)* algorithms to match the consumer input to articles. If it finds a match to a reasonable degree of certainty, it returns the article. The article attributes against which the NLU engine compares the consumer's input include:
+    If a match isn't found by the first search, the Knowledge Base next uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. If it finds a match to a reasonable degree of certainty, it returns the article. The article attributes against which the NLU engine compares the consumer's input include the title, intents (either Knowledge Base intents or Domain intents), and the positive and negative learnings that the article has acquired.
 
-* Title
-* Intents (either the knowledge base's built-in intents or domain intents that are linked to the relevant article)
-* Positive and negative learnings that the article has acquired
+    If a match isn't found by the NLU search, as a fallback, a final text-to-text search is performed. The search algorithm checks the consumer's input against the title, summary, detail, intent qualifiers (if used; intent qualifiers are applicable only when using Knowledge Base intents, not Domain intents), and tags in the articles.
 
-The Knowledge Base returns results scored as VERY GOOD, GOOD, FAIR PLUS, FAIR and POOR. The default quality setting is GOOD, but you can change the score threshold within your [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html). That said, it's generally recommended to keep the quality above FAIR PLUS.
+    <img style="width:750px" src="img/ConvoBuilder/kb_intents_search.png">
+
+* **Intents Only**: This mode is like the Intents mode except that the final text-to-text search isn't performed as a fallback.
+
+* **All**: A text-to-text search is performed. The search algorithm checks the consumer's input against the title, summary, detail, intent qualifiers (if used; applicable to Knowledge Base intents only), and tags in the articles. 
+
+#### Thresholds
+
+When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, or POOR. The confidence score breakdown looks like this:
+
+* VERY GOOD: 85-100% match
+
+* GOOD: 70-85% match
+
+* FAIR PLUS: 65-70% match
+
+* FAIR: 50-65% match
+
+When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify the minimum score that a result must have in order to be returned. (The highest performing article with that threshold is returned.) You can select from VERY GOOD, GOOD, or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
 
 ### Knowlege Base intents versus Domain intents
 
@@ -53,26 +77,10 @@ When you [add a knowledge base](knowledge-base-knowledge-bases.html#add-a-knowle
 
 When you [add a knowledge base](knowledge-base-knowledge-bases.html#add-a-knowledge-base), you'll specify its language.
 
-When the exact match search is performed and an exact match is found, the knowledge base's language doesn't play a role. Whatever article is exactly matched is simply returned.
+When a text-to-text search is performed and a match is found, the knowledge base's language doesn't play a role. Whatever article is matched is simply returned.
 
-If no exact match is found, and therefore NLU is used to return a result, the knowledge base's language works differently based on how you've defined the knowledge base:
+When an NLU search is performed, the knowledge base's language works differently based on how you've defined the knowledge base:
 
-* If the knowledge base uses *knowledge base* intents, the knowledge base's language is used. In this case, only English and Spanish are supported.
+* If the knowledge base uses *Knowledge Base* intents, the knowledge base's language is used. In this case, only English and Spanish are supported.
 
-* If the knowledge base uses *domain intents*, the domain's language is used instead. In this case, the languages supported depend on the domain's NLU provider.
-
-### Settings toolbar
-
-As you work on the articles in a knowledge base, you'll often access the toolbar in the lower-right corner. It provides access to the following panels:
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_chat.png"> **Chat**: Use this to select a bot you've previously created and linked to the knowledge base, and feed it test user input to see if it matches content as you'd expect.
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_tags.png"> **Tags**: This panel displays all tags you've previously used, so you can review them all in one place and reuse them in future articles.
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_categories.png"> **Categories**: This panel displays all categories you've previously used, so you can review them all in one place and reuse them in future articles.
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_test.png"> **Test User Input**: This panel is similar to the Chat panel but is divorced from a specific bot. Use it to feed user input directly into a knowledge base and test your content matching without the context of an actual dialog.
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_settings.png"> **Knowledge Base Menu**: Use this to access various knowledge base settings and features.
-
-* <img style="width:30px" src="img/ConvoBuilder/icon_kb_intentAnalytics.png"> **Intents Analytics**: Use this to see historical information on the intents that were and weren't matched by bots to the knowledge base's articles.
+* If the knowledge base uses *Domain* intents, the domain's language is used instead. In this case, the languages supported depend on the domain's [NLU provider](intent-builder-natural-language-understanding.html).

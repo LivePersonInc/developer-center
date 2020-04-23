@@ -86,13 +86,13 @@ If using Carousel, type of header element will always be “carousel”</td>
   </tr>
   <tr>
     <td>bold</td>
-    <td>Defines if text will be bold or not. Will always be set to ‘true’ in Facebook generic, button or list templates </td>
+    <td>Defines if text will be bold or not. Will always be set to ‘true’ in Facebook generic and button. </td>
     <td>Boolean</td>
     <td>N</td>
   </tr>
   <tr>
     <td>size</td>
-    <td>Defines the element size. Will always be set to ‘large’ in Facebook generic, button or list templates</td>
+    <td>Defines the element size. Will always be set to ‘large’ in Facebook generic and button.</td>
     <td>Enum - small/medium/large</td>
     <td>N</td>
   </tr>
@@ -110,7 +110,7 @@ If using Carousel, type of header element will always be “carousel”</td>
   </tr>
   <tr>
     <td>action</td>
-    <td>Actions are a list of applicative user actions on buttons, that will run on the consumer side and will help them to achieve their operation. Button action for Facebook generic, button or list template can be set to Publish text, Link or Navigate</td>
+    <td>Actions are a list of applicative user actions on buttons, that will run on the consumer side and will help them to achieve their operation. Button action for Facebook generic or button can be set to Publish text, Link or Navigate</td>
     <td>Enum - “publishText”, “link”, “navigate”</td>
     <td>Y</td>
   </tr>

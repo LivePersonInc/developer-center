@@ -9,11 +9,13 @@ permalink: conversation-builder-integrations-liveperson-agent-escalation-integra
 indicator: both
 ---
 
-Use a LivePerson Agent Escalation integration when you want to transfer a conversation to either a live agent or another bot.
+You can use a LivePerson Agent Escalation integration when you want to transfer a conversation to either a live agent or another bot.
 
-Transferring to another bot is the same as transferring to a live agent. The bot must be set up as a user agent, assigned a skill, and deployed, as you would normally do to connect a bot to LiveEngage. Keep in mind that this is a different bot from the original bot, so it will not have all the same context (variables, etc.) that you might have collected in the original bot. Sharing information between bots is fairly complex and sometimes requires the use of SDEs.
+{: .important}
+There are two ways to implement an escalation: You can add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions). Or, you can add an Integration interaction that uses a supporting LivePerson Agent Escalation integration, *which is discussed here*. There is no difference between the two approaches when it comes to performance. However, use of the [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.
 
-For some practice with this integration type, complete the [Connect to LiveEngage](conversation-builder-getting-started-4-connect-to-liveengage.html) tutorial.
+{: .important}
+Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.
 
 ### Add a LivePerson Agent Escalation
 
@@ -28,6 +30,7 @@ For some practice with this integration type, complete the [Connect to LiveEngag
     - **Agent Skill Id**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in LiveEngage. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
         
         When the escalation is attempted, the Agent Skill Id is evaluated first; if it isn't numeric, the fallback message is sent to the user. If the value is numeric, but the bot doesn't respond for more than 3 minutes, an attempt is made to transfer the escalation to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-an-agent-connector)*. Otherwise, the escalation fails. For information on handling failures, see below [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures). 
+    - **Transfer Bot Context**: Used for [manual, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) only. Select this to *automatically* pass the user's intent and/or message from the sender bot to the receiver bot. This lets the receiver bot know the appropriate dialog to start after the transfer.
     - **Message to User**: Use this field to guarantee that the user will see a message prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. The system will send this message as a part of the transfer API post body. This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. 
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
     - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields as described [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
@@ -47,7 +50,7 @@ Most often in Chat, but occasionally with Messaging, an attempt at transferring 
 
 Setting up a dialog to catch the `__agent_escalation_failed__` pattern allows you to send an appropriate message to the consumer, e.g., "Sorry, we're unable to perform the transfer at this time. Please try again later."
 
-If the `__agent_escalation_failed__` message is sent 3 times to the bot, and the 4th attempt also fails, the escalation stops, and the following default response is sent to the consumer, "Not able to transfer to Agent at this time. Please try later." Alternatively, if you've specified a "default user-friendly response" (for when errors and exceptions occur) in [Bot Settings](conversation-builder-bots.html#configure-bot-settings), that response is sent instead.
+If the `__agent_escalation_failed__` message is sent 3 times to the bot, and the 4th attempt also fails, the escalation stops, and the following default response is sent to the consumer, "Not able to transfer to Agent at this time. Please try later." Alternatively, if you've specified a "default user-friendly response" (for when errors and exceptions occur) in [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings), that response is sent instead.
 
 ### Troubleshooting
 

@@ -18,7 +18,7 @@ If you have [IP restrictions](https://knowledge.liveperson.com/security-regulati
 
 Also, before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
 
-1. Create a bot agent. This is a user where the type = "Bot." Make sure to enable the agent.
+1. Create a bot agent. This is a user where the type = "Bot." Make sure to enable the agent. Also make sure to create the agent with API-based authentication, not password-based authentication. The API-based authentication is more secure and doesn't expire. If your bot agent is currently using password-based authentication, you should update immediately.
 2. Create a skill and assign it to the bot agent.
 3. Create a campaign and engagement that routes to the skill you assigned to the bot agent.
 
@@ -33,7 +33,7 @@ After the pre-requisite steps are performed, at a high level, deployment is a tw
 {: .important}
 LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
-For some practice at deployment, complete the [Connect to Live Engage](conversation-builder-getting-started-4-connect-to-liveengage.html) tutorial. 
+For some practice at deployment, complete the [Connect to Live Engage](conversation-builder-tutorials-guides-getting-started.html) tutorial. 
 
 ### The Agent Connectors page
 The Agent Connectors page makes it fast and easy to understand the status **(1)** of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically you won't need to dive into the details **(2)** on the individual components that support the end-to-end connection. Use the Start/Stop toggle button **(3)** to start and stop an agent connector.
@@ -51,9 +51,12 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     
     The Add Agent Connector dialog appears.
 
-4. If you're on the LivePerson platform, proceed directly to the next step. *If you're on the AWS platform,  the first thing you'll need to do in the dialog is manually enter your LiveEngage account number, and click <img style="width:45px" src="img/ConvoBuilder/icon_chevron_orange.png">.*
+4. Enter your account number in the field provided, and click <img style="width:40px" src="img/ConvoBuilder/icon_chevron_orange.png">. You can specify the account number of any account you have access to. For example, you might have Development and Production accounts.
+
+    **Note:** If you've logged into Conversation Builder directly (i.e., you're on the AWS platform), you can specify any account, and the **Agent User ID** list will be populated accordingly. However, if you've logged into Conversation Builder via single sign-on through LiveEngage (i.e., you're on the LivePerson platform), this field behaves differently due to some built-in validation. In the latter case, the field is pre-populated with the number of your current account (i.e., the one you're logged into), but you can change it. If you change the account number, you must have a user account in whatever LiveEngage account you specify in order for the **Agent User ID** list to be populated accordingly. If you don't have a user account in the LiveEngage account, an error is displayed.
+
 5. Specify the following in the dialog:
-    - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents appear in this list.
+    - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in LiveEngage as a prerequisite step (discussed above). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents for the account that you specified appear in this list.
     - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in LiveEngage as a [prerequisite step](conversation-builder-testing-deployment-deploying-to-liveengage.html#prerequisite-steps).
     - **Conversation Type**: Select either "Chat" or "Messaging." This should match the type of LiveEngage account, which is either one or the other.
     - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Bot Status Access or Administrator). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
@@ -69,7 +72,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     To fully deploy the bot, now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
 
 ### Edit an agent connector
-You can edit an agent connector as long as it isn't running.
+You can edit an agent connector as long as 1) the agent connector isn't running, and 2) the specified bot agent is active in LiveEngage.
 
 **To edit an agent connector**
 
@@ -108,7 +111,9 @@ If a connector enters an Offline status, which is an error status, click **Detai
 
 <img class="fancyimage" style="width:375px" src="img/ConvoBuilder/deploy_detailsMsgs.png">
 
-In the event of a failed connection, wait some time, and then try to stop and restart the connector. If you still need assistance, please contact your LivePerson representative.
+* **Failed connection**: In the event of a failed connection, wait some time, and then try to stop and restart the connector. If you still need assistance, please contact your LivePerson representative.
+
+* **401 "unauthorized" error**: This error can occur if you try to add an agent connector for a bot user that wasn't created by you. Either add the agent connector for a different bot user created by you, or have the creator of the bot user add the agent connector.
 
 ### Deployment statuses
 An agent connector can have one of the following statuses:

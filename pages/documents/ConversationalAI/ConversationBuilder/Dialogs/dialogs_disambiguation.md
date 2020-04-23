@@ -95,9 +95,9 @@ In your bot, you might have some dialogs that start with dialog starters (User S
 
 **Notes** - This variable is set to false by default to provide you with a full view into all the intents that are being evaluated, matched, and shown to the user. Decide whether to keep or change the default value: If you keep this set to false, as mentioned earlier, you should handle an intent without a dialog starter by adding a Response Match condition inside the Disambiguation dialog. Otherwise, set this variable to true to exclude intents without dialog starters.
 
-### FAQs about disambiguation
+### FAQs
 
-**What happens if I don't use a disambiguation dialog?**
+#### What happens if I don't use a disambiguation dialog?**
 
 If you don't use a disambiguation dialog, here's how things work:
 
@@ -105,10 +105,10 @@ If you don't use a disambiguation dialog, here's how things work:
 
 - During matching, the bot considers only intents that evaluate to a VERY_GOOD or GOOD rank; intents that evaluate to FAIR_PLUS and FAIR are not considered.
 
-**What happens if I use a disambiguation dialog, but no intents at or above the specified threshold are matched?**
+#### What happens if I use a disambiguation dialog, but no intents at or above the specified threshold are matched?**
 
 When this happens, the fallback dialog is triggered if one exists. Otherwise, the default fallback message is sent to the consumer. For more on fallback, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 
-**How many disambiguation dialogs can I create?**
+#### How many disambiguation dialogs can I create?**
 
 Like fallback dialogs, there can be only one disambiguation dialog in a bot.

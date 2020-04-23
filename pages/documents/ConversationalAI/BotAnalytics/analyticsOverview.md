@@ -10,9 +10,16 @@ permalink: bot-analytics-overview.html
 indicator: both
 ---
 
-<img style="width:750px" src="img/beaut_ba_1.png">
+### Access Bot Analytics
 
-The first screen that displays in the Analytics app is a list of all of your bots. Search or scroll through this list and click on the bot for which you want to see data.
+**To access the Bot Analytics application**
+
+1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+2. In the Conversational AI dashboard, click **Bot Analytics**.
+
+    The first screen that appears is a list of all your bots. Search or scroll through the list and select the bot for which you want to see data.
+
+    <img style="width:750px" src="img/beaut_ba_1.png">
 
 ### Views
 
@@ -41,8 +48,8 @@ What are custom events? [Here](conversation-builder-conversation-builder-scripti
 | Average Session Length (Deprecated) | Average of the time lapse between bot connection/disconnection to a conversation |
 | Escalations | Number of times a bot transfers a user to a different skill/agent |
 | Conversation Escalation Rate | Percentage of conversations that are transferred to a different skill/agent |
-| Messages | Number of messages sent or recieved by bot |
-| Questions Asked | Number of messages recieved by bot | 
+| Messages | Number of messages sent or received by bot |
+| Questions Asked | Number of messages received by bot | 
 | Matched Intents | Number of questions asked that are matched with intents or Knowledge Base articles |
 | Unmatched Phrases | Number of questions asked that are not matched with intents or Knowledge Base articles |
 | Intent Matched Rate | Percentage of questions asked that were matched | 

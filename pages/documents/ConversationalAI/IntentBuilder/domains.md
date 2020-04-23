@@ -11,14 +11,15 @@ indicator: both
 
 ### Add a domain
 
-1. Click **New domain** in the upper-right corner.
-2. On the Add Domain page, specify the following: 
+1. Access the Intent Builder application as described [here](intent-builder-overview.html#access-intent-builder).
+2. In the dashboard that lists your domains, click **New domain** in the upper-right corner.
+3. On the Add Domain page, specify the following: 
     * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
     * **Manual** or **Import**: If you want to manually add intents and entities to the domain, select "Manual." If you want to import a pre-configured list in from a file, select "Import."
     * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files.
-    * **NLU Provider**: Select the NLU engine to use. For help in making this selection, see the discussion on NLU engines [here](conversational-ai-natural-language-understanding-nlu-engines.html).
+    * **NLU Provider**: Select the NLU engine to use. For help in making this selection, see the discussion on NLU engines [here](intent-builder-natural-language-understanding.html).
     * **Language**: Select the language.
-3. Click **Add Domain**.
+4. Click **Add Domain**.
     
     If you didn't import them, you can now add intents and entities to the domain.
     
@@ -73,10 +74,18 @@ Once you've added a domain, you will be automatically navigated to the Domain Vi
 
 1. Open the domain.
 2. Click <img style="width:35px" src="img/ConvoBuilder/icon_train.png"> (Train icon) in the lower-right corner to start the training.
-3. Select the [NLU provider credential](conversational-ai-natural-language-understanding-nlu-engines.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
+3. Select the [NLU provider credential](intent-builder-natural-language-understanding.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
 
     <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/NLU_image_4.png">
 
-3. Wait until the training is completed. You can click the Refresh button to see the latest training status for the version.
+    Note that you'll need to alternate between using your two sets of credentials, as discussed farther below.
+
+4. Wait until the training is completed. You can click the Refresh button to see the latest training status for the version.
 
     Once training is completed, you can start testing with the model version in the intent tester.
+
+#### Alternating service credentials
+
+When you created your 3rd-party service credentials, you created two sets, as discussed [here](intent-builder-natural-language-understanding.html#step-2-sign-up-and-get-the-api-keys). This is so you can alternate between them. When you train the intents in a domain for the first time in Intent Builder, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
+
+<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">

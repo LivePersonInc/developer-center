@@ -115,28 +115,32 @@
   - documentname: Conversational AI
     pages:
       - pagename: Overview
-      - pagename: Natural Language Understanding
-        subpages:
-          - subpagename: NLU Engines
   - documentname: Conversation Builder
     pages:
-      - pagename: Getting Started
+      - pagename: Tutorials & Guides
         subpages:
-          - subpagename: 0 - Video Tutorials
-          - subpagename: 1 - Dialogs and Patterns
-          - subpagename: 2 - Intents
-          - subpagename: 3 - Integrations
-          - subpagename: 4 - Connect to LiveEngage
-          - subpagename: Bot Workspace Overview
+          - subpagename: Getting Started
+          - subpagename: Implementing a Web View Integration
+          - subpagename: Using LivePerson Functions with a Bot
+      - pagename: Bot Workspace
       - pagename: Bots
-      - pagename: Templates
+        subpages:
+          - subpagename: Custom Bots
+         # - subpagename: Survey Bots
+          - subpagename: Bot Basics
+          - subpagename: Bot Groups
+          - subpagename: Bot-to-Bot Transfers
+      - pagename: Bot Templates
         subpages:
           - subpagename: Overview
-          - subpagename: Simple Router
+          - subpagename: Apply for a Loan
           - subpagename: Full Lead Gen
+          - subpagename: Insurance Quote
           - subpagename: Order Status
-          - subpagename: Simple Lead Gen
           - subpagename: Simple FAQ
+          - subpagename: Simple Lead Gen
+          - subpagename: Simple Router
+          - subpagename: Travel Notification
           - subpagename: Maven Concierge
       - pagename: Dialogs
         subpages:
@@ -144,6 +148,7 @@
           - subpagename: Standard Dialogs
           - subpagename: Fallback Dialogs
           - subpagename: Disambiguation Dialogs
+          - subpagename: Auto Escalation Dialogs
       - pagename: Interactions
         subpages:
           - subpagename: Interaction Basics
@@ -220,19 +225,20 @@
   - documentname: Intent Builder
     pages:
       - pagename: Overview
+      - pagename: Natural Language Understanding
       - pagename: Domains
       - pagename: Intents
       - pagename: Entities
-      - pagename: Intent Analyzer Tips
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
       - pagename: Knowledge Bases
-  #    - pagename: Articles
+      - pagename: Articles
       - pagename: Tutorial
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
+      - pagename: Leveraging Analytics
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
@@ -901,7 +907,6 @@
         - pagename: Introduction
         - pagename: Generic Template
         - pagename: Button Template
-        - pagename: List Template
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Best Practices
