@@ -1,3 +1,7 @@
+:root{
+    --electric : #005EF4;
+}
+
 * {
     margin: 0
 }
@@ -21,6 +25,43 @@ a:hover,a:focus {
 .nav>li {
     display: flex!important;
     flex-wrap: wrap
+}
+
+#mainHeader{
+    top: 0;
+    height: 90px;
+    z-index: 100;
+    display: flex;
+    padding-top: 22px;
+    position: sticky;
+    background-color: white;
+    border-bottom: 1px solid #DADBE6;
+}
+
+.scroll{
+    box-shadow: 0px 4px 8px #DADBE5;
+}
+
+#logoHeader{
+    flex:1;
+}
+#logoImg{
+    padding-left: 22px;
+}
+
+#searchHeader{
+    flex:2;
+}
+
+#loginHeader{
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4%;
+
+}
+a #loginHeader{
+    flex:1
 }
 
 a:-webkit-any-link {
@@ -48,7 +89,7 @@ code pre {
     padding: 0px 0 20px 0;
     height: 32px;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 90px;
 }
 
 .documenttitlecontainer {
@@ -58,7 +99,7 @@ code pre {
 }
 
 .titlecontainer {
-    display: flex;
+    display: flex;   
     flex: 1
 }
 
@@ -116,7 +157,7 @@ code pre {
     .defaultwrapper {
         display:grid;
         grid-template-columns: 2fr .5fr .5fr 5fr 3fr 1fr .5fr;
-        grid-template-rows: 92px 92px 1fr 1fr auto
+        grid-template-rows: 0 92px 1fr 1fr auto
     }
 
     .defaultheader {
@@ -131,14 +172,16 @@ code pre {
     }
 
     .searchimage {
-        background-color: #f2f1f2;
         z-index: 1;
-        padding-left: 10px;
         display: flex;
         align-items: center;
         position: absolute;
     }
-
+    .searchimage img {
+        height: 24px;
+        margin-top: 10px;
+        padding-left: 28px;
+    }
     ul.mysidebar.nav {
         width: 100%
     }
@@ -204,14 +247,10 @@ code pre {
     font-weight: 500
 }
 
-.searchimage {
-    background-color: #f2f1f2;
-}
-
 .codebtn {
     user-select: none;
     order: 1;
-    align-self: flex-end;
+    align-self: flex-end;   
     width: 35px;
     padding-top: 9px;
     order: 1;
@@ -305,15 +344,14 @@ code pre {
 }
 
 #aa-search-input {
-    background-color: transparent!important;
-    border: 0;
+    border-radius: 25px;
+    border: 1px solid #A39C96;
+    background-color: white;
     width: 100%;
     font-size: 18px;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
-    background-color: #f2f1f2!important;
-    padding-top: 14px;
-    padding-bottom: 13px;
-    padding-left: 25px
+    padding: 10px;
+    border-bottom: 1px solid #DADBE6;
 }
 
 #aa-search-input:focus {
@@ -321,28 +359,24 @@ code pre {
 }
 
 #aa-search-input::-webkit-input-placeholder {
-    color: #a2a2a2!important;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
     font-weight: 300;
     font-size: 16px
 }
 
 #aa-search-input::-moz-placeholder {
-    color: #a2a2a2!important;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
     font-weight: 300;
     font-size: 16px
 }
 
 #aa-search-input:-ms-input-placeholder {
-    color: #a2a2a2!important;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
     font-weight: 300;
     font-size: 16px
 }
 
 #aa-search-input:-moz-placeholder {
-    color: #a2a2a2!important;
     font-family: "Roboto",Arial,Helvetica,sans-serif;
     font-weight: 300;
     font-size: 16px
@@ -617,12 +651,26 @@ a.loginText {
 }
 
 .loginButton {
-    background-color: #5879da
+    color: var(--electric);
+    border: none;
+}
+.loginButton:hover, .trialButton:hover{
+    color: #003fa3;
 }
 
 .trialButton {
-    background-color: #ff720b
+    background-color: var(--electric);
+    color:white;
 }
+.loginButton, .trialButton{
+    border-radius: 25px;
+    width: 120px;
+    text-align: center;
+    padding: 12px;
+    font-weight: 500;
+}
+  
+
 
 .documentsbutton {
     flex: 1;
@@ -814,13 +862,6 @@ a.loginText {
 
 .homeitem>a:hover {
     color: #f2f1f2!important
-}
-
-.sitelogo {
-    margin-top: 21px;
-    margin-left: 32px;
-    position: sticky;
-    height: 47px
 }
 
 .language-json,.language-swift,.language-html,.language-java,.language-javascript,.language-sh,.language-ruby,.language-xml,.language-bash,.language-http,.language-gradle,.language-css,.language-objc {
@@ -1357,11 +1398,6 @@ input#csds-button {
     .sidebarbuttons {
         flex-direction:column
     }
-
-    .sitelogo {
-        margin-top: 8px
-    }
-
     .sidebarbuttons {
         margin-top: 15px
     }
@@ -1461,10 +1497,6 @@ input#csds-button {
 }
 
 @media screen and (max-width: 1260px) {
-    .sitelogo {
-        margin-top:15px;
-        margin-left: 18px
-    }
 
     .sidebarbuttons {
         flex-direction: column;
@@ -1605,6 +1637,9 @@ input#csds-button {
 }
 
 @media screen and (max-width: 450px) {
+    .header{
+        display: none;
+    }
     .defaultheader {
         grid-column:1 / span 7;
         margin-left: 0;
