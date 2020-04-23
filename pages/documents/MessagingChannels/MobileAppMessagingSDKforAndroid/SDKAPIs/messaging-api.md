@@ -180,7 +180,8 @@ public static void getUnreadMessagesCount(String appId, LPAuthenticationParams a
 ### getNumUnreadMessages
 
 {:.important}
-This API is now deprecated and you should use [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive accurate count of unread messages.
+This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
+This API will reach end-of-life and be removed from the SDK by end of October 2020.
 
 Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.
 
@@ -208,7 +209,9 @@ public static void getNumUnreadMessages(String appId, final ICallback<Integer, E
 ### getUnreadMessagesCount
 
 {:.important}
-This API will be deprecated soon and you should start using [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive accurate count of unread messages.
+This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
+This API will reach end-of-life and be removed from the SDK by end of October 2020.
+
 
 
 Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.

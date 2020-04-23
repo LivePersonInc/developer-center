@@ -1813,7 +1813,8 @@ Enable or disable the scroll down indicator (shown or invisible).
 
 
 #### scroll_down_indicator_unread_summary_enabled
-Enable or disable the summary in scroll down indicator (shown or invisible). If [unread_indicator_bubble_enable](#unread_indicator_bubble_enable) is **false**, it's in minimized mode without a badge indicating number of unread message.  Tapping scrolls to the last message.
+- Enable or disable the summary in scroll down indicator (shown or invisible). If [unread_indicator_bubble_enable](#unread_indicator_bubble_enable) is **false**, it's in minimized mode without a badge indicating number of unread message.  Tapping scrolls to the last message.
+- The scroll to bottom button width is dynamic and will be auto adjusted based on length of the summary text.
 
 * **Type:** bool  
 * **Default value:** true
