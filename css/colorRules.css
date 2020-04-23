@@ -1,0 +1,23 @@
+:root {
+    --darker-gray: #463E36;
+    --dark-gray: #675D55;
+    --gray: #847970;
+    --mid-gray: #A39C96;
+    --light-gray: #D9D4D0;
+    --lighter-gray: #F8F5F3;
+
+    --orange: #FE5E00;
+    --hover-orange: #B84400;
+
+    --electric-blue: #005EF4;
+    --hover-electric-blue: #005EF4;
+
+    --navy: #090C43;
+    --dark-navy: #03041A;
+    --navy-lightest-gray: #F5F5FA;
+    --navy-lighter-gray: #DADBE6;
+    --navy-light-gray: #818299;
+    --navy-mid-gray: #5F617A;
+    --navy-gray: #2D2F52;
+
+}
