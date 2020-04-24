@@ -64,9 +64,16 @@ To disable context switching at the conversation start, you can add this code to
 
 To close the current dialog, set the interaction's Next Step to "Close Dialog."
 
- <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeDialog.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeDialog.png">
 
- Note that the "Close Dialog" option triggers a post-conversation [survey](conversation-builder-bots-survey-bots.html).
+Alternatively, add a Text statement that contains the special string "LP_CLOSEDIALOG." If the statement isn't the last interaction in the dialog, set its **Next Step** to "End Interaction" (not "Next Interaction").
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keyword_closeDialog.png">
+
+LP_CLOSEDIALOG is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
+
+{: .important}
+These methods for closing the dialog **do** trigger a post-conversation [survey](conversation-builder-bots-survey-bots.html).
 
 ### Close the conversation
 
@@ -74,7 +81,14 @@ To close the current conversation, set the interaction's Next Step to "Close Con
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeConversation.png">
 
-Note that the "Close Conversation" option **doesn't** trigger a post-conversation [survey](conversation-builder-bots-survey-bots.html).
+Alternatively, add a Text statement that contains the special string "LP_CLOSECONVERSATION." If the statement isn't the last interaction in the dialog, set its **Next Step** to "End Interaction" (not "Next Interaction").
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keyword_closeConversation.png">
+
+LP_CLOSECONVERSATION is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
+
+{: .important}
+These methods for closing the conversation **don't** trigger a post-conversation [survey](conversation-builder-bots-survey-bots.html).
 
 ### Configure dialog settings
 
