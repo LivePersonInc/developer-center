@@ -24,9 +24,7 @@ a:focus {
 .termsUseHighlight {
     font-weight: bold;
     color: var(--dark-gray) !important;
-
     cursor: pointer;
-
 }
 
 
@@ -61,7 +59,7 @@ a:focus {
 }
 
 #searchHeader {
-    flex: 2;
+    flex: 3;
 }
 
 #loginHeader {
@@ -75,9 +73,6 @@ a #loginHeader {
     flex: 1
 }
 
-a:-webkit-any-link {
-    color: var(--electric-blue)
-}
 
 code pre {
     font-family: "Roboto Mono", Monaco, courier, monospace !important
@@ -148,80 +143,64 @@ code pre {
     color: #8b8b8b
 }
 
-
 .defaultwrapper {
     display: flex;
 }
 
-@supports(display: grid) {
-
-    .documenttitlecontainer {
-        grid-column: 4 / span 3;
-        grid-row: 2 / span 1
-    }
-
-    .searchimage {
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        position: absolute;
-    }
-
-    .searchimage img {
-        height: 24px;
-        margin-top: 10px;
-        padding-left: 28px;
-    }
-
-    ul.mysidebar.nav {
-        width: 100%
-    }
-
-    ul.mysidebar.nav>li:first-of-type {
-        margin-top: 15px
-    }
-
-    .sidebartop {
-        display: flex;
-        flex-direction: column;
-        height: 150px;
-        width: 100%;
-        background-color: #162036;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0
-    }
-
-    .defaultsidebar {
-        grid-column: 1 / span 2;
-        grid-row: 1 / span 11;
-        background-color: var(--darker-gray);
-        display: flex;
-        flex-direction: column
-    }
-
-    .defaultcontent {
-        grid-column: 4 / span 3;
-        display: flex;
-        margin-bottom: 50px;
-        flex-direction: column;
-        -webkit-font-smoothing: antialiased;
-        margin-top: 35px
-    }
-
-    #post-content {
-        width: 60%
-    }
-
-    .defaultfooter {
-
-        display: flex;
-        justify-content: center;
-        background-color: var(--lighter-gray);
-        color: var(--darker-grey);
-        margin-bottom: -25px;
-    }
+.searchimage {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    position: absolute;
 }
+
+.searchimage img {
+    height: 24px;
+    margin-top: 10px;
+    padding-left: 28px;
+}
+
+ul.mysidebar.nav {
+    width: 100%
+}
+
+ul.mysidebar.nav>li:first-of-type {
+    margin-top: 15px
+}
+
+.sidebartop {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 100%;
+    background-color: #162036;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0
+}
+
+.defaultsidebar {
+    background-color: #3d4558;
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+
+.defaultcontent {
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    flex:3;
+}
+
+.defaultfooter {
+    display: flex;
+    justify-content: center;
+    background-color: var(--lighter-gray);
+    color: #463E36;
+    margin-bottom: -25px;
+}
+
 
 .searchHighlight {
     background: rgba(0, 119, 255, 0.1)
@@ -1054,35 +1033,30 @@ a.loginText {
 .defaultbutton div:hover {
     color: #fff
 }
-
+#jumpto{
+    flex:1
+}
 .anchorlist {
-    background-color: #f2f1f2;
-    padding: 6px 10px 6px 10px;
-    align-self: flex-end;
-    width: 20%;
-    z-index: 99;
-    position: -webkit-sticky;
-    position: sticky;
-    visibility: hidden
+    visibility: hidden;
+    padding: 0 20px;
 }
 
 .anchorlist ul {
     list-style: none;
     display: block;
-    padding-left: 0;
-    background-color: #f2f1f2;
-    margin-left: -10px;
-    padding: 10px 0 10px 7px;
-    margin-bottom: 0;
     max-height: 360px;
-    overflow-y: auto
+    overflow-y: auto;
+    padding-left: 0;
 }
 
 .anchorlist a {
     color: var(--secondary-black);
+
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 12px;
-    display: flex
+    display: flex;
+    color: #2D2F52;
+    text-align: right;
 }
 
 .anchorlist .fa {
@@ -1090,13 +1064,12 @@ a.loginText {
     margin-left: 10px;
     align-self: flex-end;
     flex: 1;
-    text-align: right;
     margin-right: 3px
 }
 
 .anchorlist li {
     margin-bottom: 10px;
-    display: flex
+    display: flex;
 }
 
 .anchorlist li:last-of-type {
@@ -1105,6 +1078,8 @@ a.loginText {
 
 .anchorlist li a {
     color: var(--electric-blue) !important
+    text-align: right;
+
 }
 
 .anchorlist li:before {
@@ -1408,397 +1383,4 @@ input#csds-button {
 
 .sidebarSVG {
     width: 24px
-}
-
-@media screen and (max-width: 1870px) {
-    .anchorlist {
-        margin-right: initial
-    }
-}
-
-@media screen and (max-width: 1555px) {
-    .sidebarbuttons {
-        flex-direction: column
-    }
-
-    .sidebarbuttons {
-        margin-top: 15px
-    }
-
-    .loginButton {
-        margin-bottom: 10px
-    }
-
-    a.loginText {
-        margin-right: 0;
-    }
-}
-
-@media screen and (max-width: 1440px) {
-
-    .defaultsidebar {
-        grid-column: 1 / span 3
-    }
-
-    .defaultfooter {
-        grid-column: 4 / span 6
-    }
-
-    #post-content {
-        width: 100%
-    }
-
-    ul.mysidebar {
-        margin-left: 0
-    }
-
-    .documenttitlecontainer {
-        margin-left: 70px;
-        grid-column: 4 / span 4;
-        margin-right: 10px
-    }
-
-    .defaultcontent {
-        margin-left: 70px;
-        grid-column: 4 / span 2
-    }
-
-    .sidebarbuttons {
-        left: 20px
-    }
-
-    .documentsbutton {
-        margin-right: 20px
-    }
-
-    .underline.lined:after {
-        width: 51%
-    }
-
-    .solutionsunderline.lined:after {
-        width: 45%;
-        left: 148px
-    }
-
-    .topfolder {
-        margin-right: 17px
-    }
-
-    .supportbutton {
-        padding: 10px 18px;
-        margin-bottom: 20px
-    }
-
-    .metricstable {
-        width: 104% !important
-    }
-
-    .metricstable {
-        table-layout: inherit !important
-    }
-
-    #featurestable {
-        width: 133%
-    }
-
-    #featurestable thead>tr>th {
-        font-size: 12px
-    }
-
-    #featurestable tr td {
-        padding: 21px 5.5px 21px 13.5px
-    }
-}
-
-@media screen and (max-width: 1260px) {
-
-    .sidebarbuttons {
-        flex-direction: column;
-        top: 85px;
-        left: 10px
-    }
-
-    .documentsbutton {
-        margin-bottom: 34px
-    }
-
-    .underline:after {
-        bottom: 52px
-    }
-
-    .underline.lined:after {
-        width: 91%
-    }
-
-    .solutionsunderline.lined:after {
-        width: 91%;
-        left: 0
-    }
-
-    .mysidebar.nav li.folder>a {
-        font-size: 11px !important
-    }
-
-    .innerfolder>a>span {
-        font-size: 11px !important
-    }
-
-    .innerlink {
-        font-size: 10px !important
-    }
-
-    .topfolder {
-        margin-left: 10px;
-        margin-right: 5px
-    }
-
-    .supportbutton {
-        padding: 10px 14px;
-        margin-right: 34px;
-        margin-left: 34px
-    }
-
-    .supportbutton span {
-        font-size: 12px
-    }
-
-    .anchorlist {
-        margin-right: -175px;
-        width: 25.7%
-    }
-}
-
-@media screen and (max-width: 1120px) {
-
-    .metricstable .formula {
-        display: none
-    }
-
-    #featurestable {
-        display: none
-    }
-
-    .mobilefeaturestable {
-        display: block
-    }
-
-    #capabilitiesSearch {
-        display: none
-    }
-
-    .sidebarbuttons div {
-        padding: 7px 10px
-    }
-}
-
-@media screen and (max-width: 960px) {
-    #featurestable {
-        display: none
-    }
-
-    .mobilefeaturestable {
-        display: block
-    }
-
-    #capabilitiesSearch {
-        display: none
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .anchorlist {
-        display: none !important
-    }
-
-    .defaultcontent {
-        margin-top: 40px
-    }
-
-    .pagehr {
-        margin-top: 28px
-    }
-
-    .defaultsidebar {
-        width: 125%
-    }
-
-    .sidebarbuttons div {
-        display: none
-    }
-
-    .suggestbutton {
-        display: none
-    }
-
-    #featurestable {
-        display: none
-    }
-
-    .mobilefeaturestable {
-        display: block
-    }
-
-    #capabilitiesSearch {
-        display: none
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .header {
-        display: none;
-    }
-
-    .mobilelogo {
-        flex: 1;
-        margin-top: 20px
-    }
-
-    .placeholder {
-        flex: 1
-    }
-
-    .searchimage {
-        display: none
-    }
-
-    .algolia-autocomplete {
-        display: none !important
-    }
-
-    .defaultsidebar {
-        grid-row: auto
-    }
-
-    .sidebartop {
-        display: none
-    }
-
-    #mysidebar {
-        display: none
-    }
-
-    ul.mysidebar.nav {
-        background-color: var(--darker-gray);
-        z-index: 100;
-        left: 0;
-        top: 82px !important;
-        position: absolute !important;
-        width: 100%
-    }
-
-    .mysidebar.nav li.folder>a {
-        font-size: 18px !important
-    }
-
-    .innerlink {
-        font-size: 18px !important
-    }
-
-    .innerfolder>a>span {
-        font-size: 18px !important
-    }
-
-    .sidebarhr {
-        display: none
-    }
-
-    .supportbutton {
-        display: none
-    }
-
-    .defaultcontent {
-        margin-left: 30px;
-        grid-column: 1 / span 6;
-        margin-top: 70px
-    }
-
-    .documenttitlecontainer {
-        margin-left: 30px;
-        grid-column: 1 / span 6
-    }
-
-    .documenttitle {
-        margin-top: 45px
-    }
-
-    .defaultfooter {
-        grid-column: 1 / span 7
-    }
-
-    .defaultfooter span {
-        margin: 19px 0 19px 30px
-    }
-
-    .h1 {
-        font-size: 17px
-    }
-
-    .codebtn {
-        display: none
-    }
-
-    .highlight {
-        padding-top: 22px;
-        padding-right: 20px
-    }
-
-    .breadcrumbs {
-        margin-bottom: 55px
-    }
-
-    .pagehr {
-        margin-top: 40px
-    }
-
-    .pagecontent {
-        margin-top: 80px
-    }
-
-    .nightbtn {
-        margin-left: 4%
-    }
-
-    .daybtn {
-        margin-left: 4%
-    }
-
-    #metricsSearch {
-        width: 90.5%
-    }
-
-    .metricstable .description {
-        display: none
-    }
-
-    .metricstable .analysis {
-        display: none
-    }
-
-    .metricstable .filtered {
-        display: none
-    }
-
-    .metricstable .formula {
-        display: none
-    }
-
-    .metricstable .dashboard {
-        display: none
-    }
-
-    #datametricstable .description {
-        display: table-cell !important
-    }
-
-    #featurestable {
-        display: none
-    }
-
-    .mobilefeaturestable {
-        display: block
-    }
-
-    #capabilitiesSearch {
-        display: none
-    }
 }
