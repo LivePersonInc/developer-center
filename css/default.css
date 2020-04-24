@@ -1,7 +1,3 @@
-:root {
-    --electric: #005EF4;
-}
-
 * {
     margin: 0
 }
@@ -220,7 +216,7 @@ code pre {
 
         display: flex;
         justify-content: center;
-        background-color: #F8F5F3;
+        background-color: var(--lighter-gray);
         color: #463E36;
         margin-bottom: -25px;
     }
@@ -345,7 +341,7 @@ code pre {
     padding: 10px;
     border-bottom: 1px solid #DADBE6;
     padding-left: 30px;
-    line-height: 3px;   
+    line-height: 3px;
 }
 
 #aa-search-input:focus {
@@ -658,7 +654,7 @@ a.loginText {
 }
 
 .trialButton {
-    background-color: var(--electric);
+    background-color: var(--electric-blue);
     color: white;
 }
 
