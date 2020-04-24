@@ -11,41 +11,12 @@ indicator: messaging
 permalink: connector-api-webhooks-configuration.html
 ---
 
-Webhooks notifications are enbaled by adding the *webhooks* capability to an [application](connector-api-getting-started.html#app-install-manifest-for-connectors). For example, consider the following application configuration:
+Webhooks notifications are enabled by installing an [application](connector-api-getting-started.html#app-install-manifest-for-connectors) containing endpoints for each event type. If you have an admin account for your brand, use the [connector app hub](https://connector-api.dev.liveperson.net) to create applications. In any other case, please use your LivePerson contact to help you set up Webhooks. The connector app hub provides the following overview:
 
-```json
-{
-    "client_name": "Example webhooks configuration",
-    "enabled": true,
-    "capabilities": {
-      "webhooks": {
-        "ms.MessagingEventNotification.ContentEvent": {
-          "endpoint": "https://www.application.endpoint.com/",
-          "max_retries": 1
-        },
-         "ms.MessagingEventNotification.RichContentEvent": {
-          "endpoint": "https://www.application.endpoint.com/"
-         },
-         "ms.MessagingEventNotification.ChatStateEvent": {
-          "endpoint": "https://www.application.endpoint.com/"
-        },
-        "cqm.ExConversationChangeNotification": {
-          "endpoint": "https://www.application.endpoint.com/",
-	  "max_retries": 3
-        }
-      }
-    }
-}
-```
+<img src="img/connectorapi/Connector-App-Hub-Overview.png" alt="Connector App Hub Overview" style="max-width:100%;mac-height:100%;">
 
-When this configuration is applied successfully, it is called an application installation, or app install. The terms *app install* and *app* are used interchangeable and refer to an application installation, if not stated otherwise. The `client_name` attribute is the name of the app. An app can be enabled or disabled using the flag `enabled`. The `capabilites` section describes what kind of capabilities are exposed by the app. The `webhooks` section contains a webhook for any [supported event type](connector-api-webhooks-events.html). The `endpoint` attribute contains the endpoint URL. The `max_retries` attribute describes [how often an event for the endpoint should be tried](connector-api-webhooks-retry-policy.html) to be resend until it is dropped. Per default there are no retries.
+Here you can see if an app is enabled, its creation data, name, id, secret and description. The id and secret are needed for using the [Send API](connector-api-send-api-overview.html). A new app can be added by clicking the *Create App* button in the upper right corner.
 
-In the example above, the app install is enabled and configures one webhook for each of the following events: `ms.MessagingEventNotification.ContentEvent`, `ms.MessagingEventNotification.RichContentEvent`, `ms.MessagingEventNotification.ChatStateEvent` and `cqm.ExConversationChangeNotification`. Events of type `ContentEnvent` and `ExConversationChangeNotification` are retried once or thrice, respectively. For example, if endpoint `https://www.application.endpoint.com/` fails to respond within 10 seconds or does not not return an HTTP code of `200` or `201`, the corresponding `ContentEvent` is sent a second time before it is dropped.  
+<img src="img/connectorapi/Connector-App-Hub-New-App.png" alt="Connector App Hub Overview" style="max-width:100%;mac-height:100%;">
 
-### Summary
-
-The `enabled` key expects a boolean value to enable or disable an app install. The `webhooks` key exects a map value. Each entry describes a webhook and consists of the following:
-* key (string) - the event type (for example, `ms.MessagingEventNotification.ContentEvent`)
-* value (object) - the attributes of the notification, including:
-  * endpoint (string - mandatory) - the TLS secured URL to which to send the notification
-  * max_retries (number - optional) - maximum number of retry attempts for a failed notification request (possible values: 0 - 5; default value: 0)
+Application name and description must be provided. Further, application name must be unique. If all event types should be sent to the same endpoint, you can add it after the description. Check the advanced configuration options to define an endpoint per event type and to add a retention time. After entering all the necessary information, install the app. Please note, it can take up to two minutes that your app was recognized by Webhooks. Further, make sure that your endpoints are reachable and respond within 2.5 seconds. Otherwise, they might be eligible for [disablement](connector-api-webhooks-disclaimers.html).  

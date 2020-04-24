@@ -9,30 +9,64 @@ permalink: conversation-builder-interactions-questions.html
 indicator: both
 ---
 
-A question interaction is interactive and meant to be answered by the user.
+Questions present information to the user (a question that expects a reply of some kind, a list of things to pick from, etc.), and they expect and wait for a user response before executing the next action.
 
-### Types of questions
-
-The different types of question interactions available are:
-
-- **Multiple Choice**. A simple and standard multiple choice question allowing the user to select from a list of predefined answers (although the automation can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html)).
-
-- **Text**. A simple textual question.
-
-- **Structured Content**. Most conversations involve plain text like what you are reading now. However, sometimes you might want to send content (images, buttons, maps, quick replies, etc) to a consumer in a richer, more interactive, and more structured format.
-
-- **Button**. An object that allows you to show a simple text question with an associated button action. A click of the button results in an action pre-configured by you (like navigation to a link, for example).
-
-- **Quick Reply**. A question with a series of pre-configured replies that appear as a list of chips at the bottom of the interaction and disappear once the user has selected one.
-
-- **Listpicker**. **For Apple Business Chat only.** This allows the user to make a selection in response to a simple text question from a list of items.
-
-- **Time Picker**. **For Apple Business Chat only.** This allows the user to make a selection in response to a simple text question from a list of event times, like an appointment. See below for more details.
+With a question, you can take the user’s response, evaluate it against a condition (i.e., does it match a pattern, an intent, a regular expression, or an exact value?), and then act accordingly. For example, if you ask the user for a 7-digit account number, you’ll likely want to perform a check that the user entered exactly 7 numbers. If the user did, you can then safely pass that value into an API call or perform some other action with it. For some practice at this, try the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). (You’ll need to complete [Dialogs and Patterns tutorial](conversation-builder-tutorials-guides-getting-started.html) first, as they build on one another.)
 
 User responses to question interactions can be saved in [variables](conversation-builder-variables-slots.html), making them available for future use.
 
 {: .important}
 For information on which question interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
+
+### Sample user answers
+Many question types provide a field for entering an example of a user's answer to the question.
+
+<img style="width:600px" src="img/ConvoBuilder/questions_sampleUserAnswer.png">
+
+There is no functionality tied to this field. It's meant to serve as a display-only aid to the bot developer during bot development within Conversation Builder.
+
+### Multiple choice questions
+Multiple choice questions let the consumer select an answer from a list of choices.
+
+<img style="width:400px" src="img/ConvoBuilder/questions_mcq1.png">
+
+One powerful feature of multiple choice questions is that the bot can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html).
+
+<img style="width:600px" src="img/ConvoBuilder/questions_mcq3.png">
+
+#### Question text
+
+Enter the question to send. The maximum character length is 255.
+
+#### Choices
+
+Enter the answer choices. The number of choices depends on the channel, so check the limitations for the channels in use. (For example, Facebook restricts this to three options.) For each choice, 20 characters or less is recommended.
+
+The user can either enter or select the answers. 
+
+#### Interaction Details settings
+
+Configure the following settings in the [Interaction Details - Settings tab](conversation-builder-interactions-details-settings.html):
+
+- **Display choice as**: Select whether you want to display the choices as buttons (shown above) or quick reply “chips” (shown below).
+
+<img style="width:350px" src="img/ConvoBuilder/questions_mcq2.png">
+
+- **Text Only Fallback > List Style**: Select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
+
+### Text questions
+
+Text questions expect and wait for a text-based response from the consumer.
+
+<img style="width:375px" src="img/ConvoBuilder/questions_text1.png">
+
+With text questions, it’s recommended that you include an example of an expected response, like is done in our example above. This helps to increase the likelihood of a valid response.
+
+<img style="width:600px" src="img/ConvoBuilder/questions_text2.png">
+
+#### Question text
+
+Enter the question to send. The maximum character length is 255.
 
 ### Structured questions
 
@@ -43,7 +77,7 @@ Most conversations involve plain text like what you are reading now. However, a 
 Like with any question, a structured question expects and waits for the user response before executing the next action.
 
 {: .important}
-Structured questions aren't supported on all channels; be sure to verify the channel's support before designing your bot. For example, Facebook supports the carousel, but Apple Business Chat doesn't. Apple Business Chat offers its list picker instead.
+Structured questions aren't supported on all channels; see [here](conversation-builder-interactions-interaction-support.html) for a listing of support. Be sure to verify the channel's support before designing your bot. For example, Facebook supports structured questions, but Apple Business Chat doesn't. Apple Business Chat offers its list picker instead.
 
 <img style="width:400px" src="img/ConvoBuilder/questions_structured2.png">
 
@@ -82,11 +116,63 @@ You can populate the tiles with static information, or they can be dynamically p
 - Formatting of text (bold, italics, etc.) isn't supported.
 
 
+### Button questions
+
+A button question lets you ask a question that expects a simple, short reply and present the consumer with button choices.
+
+<img style="width:400px" src="img/ConvoBuilder/questions_button1.png">
+
+Clicking a button can perform an action defined by you as the bot developer. For example, if the consumer were to click “Sure!” above, they could be taken to the URL for your feedback form.
+
+<img style="width:600px" src="img/ConvoBuilder/questions_button2.png">
+
+#### Question text
+
+Enter the question to send.
+
+#### Button settings
+
+| Setting | Description | Required or Optional | Example |
+| --- | --- | --- | --- |
+| Button Label | The button text to be displayed. LiveEngage allows for up to 128 characters, but channel-specific restrictions do exist, so the actual maximum could be shorter. (For example, Facebook only allows for up to 20 characters.) | Required | Sure! |
+| Action Type  | If you want the button to be a link that takes the consumer somewhere else, select **Web URL**.<br><br>If you want to use the button to post back a different value other than the button label's value (for example, to post back the number "5" instead of the word "excellent"), select **Postback** (and then enter the data to post (the payload) in the **Callback** field).<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer in use. | Required  | Web URL |
+| Webview | This is a legacy feature that's no longer in use. | Not applicable | Not applicable |
+| Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in the current window or a new window. | Required | New Window |
+| Callback | Enter the data to send back to the bot.<br><br>If you specify a postback value here, in most channels it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Entering the same value for both the button label and the postback value will always work. | Optional | https://www.surveymonkey.com/mysurvey.html |
+
+### Quick Reply questions
+
+A quick reply question lets you ask a question that expects a simple, short reply and present the consumer with choices from which to select. The response choices appear as “chips” beneath the question.
+
+<img style="width:400px" src="img/ConvoBuilder/questions_quickReply1.png">
+
+And the chips disappear once the consumer selects one:
+
+<img style="width:400px" src="img/ConvoBuilder/questions_quickReply2.png">
+
+Details vary by channel. For example, Apple Business Chat does not support Quick Reply, but other channels do, and each behaves slightly differently. As one example, in Facebook Messenger, a Quick Reply question can have a maximum of 13 options. Consult the channel-specific documentation that's discussed [here](conversation-builder-interactions-interaction-basics.html#general-guidelines-and-best-practices).
+
+<img style="width:600px" src="img/ConvoBuilder/questions_quickReply3.png">
+
+#### Question text
+
+Enter the question to send. 
+
+#### Quick Reply settings
+
+| Setting | Description | Required or Optional | Example |
+| --- | --- | --- | --- |
+| Title | The label to be displayed. | Required | Awesome! |
+| Type  | Always select "Text." <br><br>The "Location" value currently isn't supported. | Required  | Text |
+| Payload | Enter the data to send back to the bot.<br><br>If you specify a postback value here, in most channels it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Entering the same value for both the button label and the postback value will always work. | Optional | Awesome |
+| Image URL | Use this field to specify a small image to be displayed to the left of the Quick Reply title. Typically, this setting isn't used unless the image is an emoji or something of a similar nature. | Optional | https://www.mysite.com/images/emoji_smile.jpg |
+
+
 ### Apple List Picker
 
 **For Apple Business Chat only.**
 
-If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the List Picker question interaction to display a list of items (along with information about those items), so the consumer can reply by selecting one or more. Like with any question interaction, a list picker expect and waits for the user response before executing the next action.
+If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the List Picker question interaction to display a list of items (along with information about those items), so the consumer can reply by selecting one or more. Like with any question interaction, a list picker expects and waits for the user response before executing the next action.
 
 You might want to include a list picker so consumers can select from a list of:
 
@@ -234,9 +320,15 @@ You can switch between the two options using the blue link (shown above) beneath
 
 #### Populating a time picker dynamically
 
-As mentioned earlier, a time picker can be dynamically populated during run time using variable data received from an [API integration](conversation-builder-integrations-api-integrations.html). In our example below, we're retrieving a list of start date and times returned from an API integration named "Appointment". In the integration, that returned data is stored in a custom data field named "start". During run time, it populates the list of start times.
+As mentioned earlier, a time picker can be populated dynamically during run time using variable data received from an [API integration](conversation-builder-integrations-api-integrations.html). As an example, in the image below, we're retrieving a list of appointment dates and times that are returned from an API integration named "Appointment." In the integration, the returned data is stored in a custom data field named "start."
 
-<img style="width:275px" src="img/ConvoBuilder/questions_timePicker10.png">
+<img style="width:600px" src="img/ConvoBuilder/questions_timePicker11.png">
+
+We can then reference this custom data field in the **Variable Date & Time** field in the time picker, using the following notation (i.e., with `{apiName.variableName}` as discussed [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions)):
+
+<img style="width:300px" src="img/ConvoBuilder/questions_timePicker10.png">
+
+During run time, the time picker iterates over the list and populates the list of start times.
 
 Since the API response defines the date and time together in the received payload, you don't need to specify them separately in two fields in the time picker. However, the data must be in the following format:
 

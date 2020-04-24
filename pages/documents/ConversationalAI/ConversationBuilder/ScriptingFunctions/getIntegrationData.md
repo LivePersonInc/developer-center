@@ -82,7 +82,7 @@ For example, imagine you are using the KnowledgeBase feature to create an FAQ bo
 In the below example, `faqIntegration` is the name of the API integration, `title` is the custom data field mapping name, and `count` is the parameter that gives you the actual count.
 
 ```javascript
-var results = botContext.getBotVariable(faqIntegration.title.count);
+var results = botContext.getBotVariable('faqIntegration.title.count');
 if (results < 1) {
       botContext.sendMessage('Sorry, I was not able to find any notes for this contact.');
 }

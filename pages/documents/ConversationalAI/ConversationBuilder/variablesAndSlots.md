@@ -63,7 +63,7 @@ To configure a slot, simply click the interaction where you'd like to look for e
 
 In the menu which opens, first assign the slot a name by filling in the "Name" input field. **We recommend using standard naming conventions for slots. The slot name is later used to refer to and access the data which the slot contains**. Then, look for a pre-configured entity (which you should have set up for your domain previously) by typing in first the "@" character and then the name of your desired entity in the "Value" input field to the right of the Name input field.
 
-Lastly, decide how long you'd like the slot's data to be kept for. You can set this by using the "Scope" dropdown menu on the right hand side. The dropdown provides four options:
+Lastly, decide how long you'd like the slot's data to be kept for. You can set this by using the "Duration" dropdown menu on the right hand side. The dropdown provides four options:
 
 * Request - the slot's data will only be saved for that particular use of the slot. Only useful if the next question in the tree depends on the slot's data.
 
@@ -73,11 +73,11 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 
 * Forever - the slot's data will be saved on our servers forever. It will be accessible via the Conversation Builder for as long as you need it.
 
-`{$botContext.slot.slotName}` is how you can access values in slots and use them in other ways. For example, to have the automation respond with a user's previously stored answer under the assigned entity `animal`, you'd set up a text interaction like so:
+`{$botContext.slot.slotName}` is how you can access values in slots and use them in other ways. For example, to have the bot respond with a user's previously stored answer under the assigned entity `animal`, you'd set up a text interaction like so:
 
 "You answered: {$botContext.slot.animal}!"
 
-If your automation asked the user "which animal do you like?" and the user answered "dogs" or something similar, the slot for the entity `animal` would be populated with their answer. The automation would then respond with "You answered: dogs!" populating the code above with the user's reply.
+If your bot asked the user "which animal do you like?" and the user answered "dogs" or something similar, the slot for the entity `animal` would be populated with their answer. The bot would then respond with "You answered: dogs!" populating the code above with the user's reply.
 
 #### Slot filling with multi-entity extraction
 Slot-filling becomes especially useful when mining the entities that make up a user's intent to pre-populate your list of questions, and streamline the data collection process. 
