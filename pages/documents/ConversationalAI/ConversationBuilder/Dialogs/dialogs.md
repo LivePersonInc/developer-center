@@ -62,19 +62,15 @@ To disable context switching at the conversation start, you can add this code to
 
 ### Close the dialog
 
-To close the current dialog, set the interaction's Next Step to "Close Dialog."
+To close the current dialog, set the interaction's Next Step to "Close Dialog." This option triggers a post-conversation [survey](conversation-builder-bots-survey-bots.html).
 
  <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeDialog.png">
 
-Note that the "Close dialog" option triggers a post-conversation [survey](conversation-builder-bots-survey-bots.html).
-
 ### Close the conversation
 
-To close the current conversation, set the interaction's Next Step to "Close Conversation."
+To close the current conversation, set the interaction's Next Step to "Close Conversation." This option **doesn't** trigger a post-conversation [survey](conversation-builder-bots-survey-bots.html).
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeConversation.png">
-
-Note that the "Close conversation" option **doesn't** trigger a post-conversation [survey](conversation-builder-bots-survey-bots.html).
 
 ### Configure dialog settings
 
