@@ -91,22 +91,6 @@ code pre {
     font-size: 15px
 }
 
-.mobileheader {
-    display: none
-}
-
-.defaultwrapper {
-    /* height: 100vh */
-}
-
-.defaultheader {
-    background-color: #f2f1f2;
-    padding: 0px 0 20px 0;
-    height: 32px;
-    align-items: center;
-    margin-top: 90px;
-}
-
 .documenttitlecontainer {
     display: flex;
     flex-direction: column;
@@ -168,18 +152,11 @@ code pre {
     color: #8b8b8b
 }
 
-@supports(display: grid) {
-    .defaultwrapper {
-        display: grid;
-        grid-template-columns: 2fr .5fr .5fr 5fr 3fr 1fr .5fr;
-        grid-template-rows: 0 92px 1fr 1fr auto
-    }
 
-    .defaultheader {
-        display: flex;
-        grid-column: 4 / span 3;
-        grid-row: 1 / span 1;
-    }
+.defaultwrapper {
+    display: flex;
+}
+@supports(display: grid) {
 
     .documenttitlecontainer {
         grid-column: 4 / span 3;
@@ -255,11 +232,6 @@ code pre {
 
 .metricHighlight {
     background: rgba(0, 119, 255, 0.1)
-}
-
-.defaultheader img {
-    width: 22px;
-    min-width: 22px
 }
 
 .activepage {
@@ -1226,20 +1198,6 @@ a.anchoritem {
     flex-direction: column
 }
 
-.defaultheaderexplorer {
-    width: 75%;
-    margin: 0 auto;
-    margin-left: 440px;
-    display: flex;
-    margin-top: 20px
-}
-
-.defaultheaderexplorer .searchimage {
-    padding-top: 11.5px;
-    padding-bottom: 11.5px;
-    padding-left: 15px
-}
-
 .defaultsidebarexplorer {
     width: 20%;
     height: 100vh;
@@ -1468,15 +1426,6 @@ input#csds-button {
 }
 
 @media screen and (max-width: 1440px) {
-    .defaultwrapper {
-        grid-template-columns: 2fr .5fr .5fr 5fr 3fr 1fr 1.5fr
-    }
-
-    .defaultheader {
-        grid-column: 4 / span 4;
-        margin-left: 70px;
-        margin-right: 10px
-    }
 
     .defaultsidebar {
         grid-column: 1 / span 3
@@ -1611,9 +1560,6 @@ input#csds-button {
 }
 
 @media screen and (max-width: 1120px) {
-    .defaultwrapper {
-        grid-template-columns: 2fr .5fr .5fr 5fr 3fr 1fr 2fr
-    }
 
     .metricstable .formula {
         display: none
@@ -1637,10 +1583,6 @@ input#csds-button {
 }
 
 @media screen and (max-width: 960px) {
-    .defaultwrapper {
-        grid-template-columns: 3fr .5fr .5fr 5fr 3fr 1fr 2fr
-    }
-
     #featurestable {
         display: none
     }
@@ -1695,23 +1637,6 @@ input#csds-button {
 @media screen and (max-width: 450px) {
     .header {
         display: none;
-    }
-
-    .defaultheader {
-        grid-column: 1 / span 7;
-        margin-left: 0;
-        margin-right: 0;
-        background-color: #3d4558;
-        padding: 0
-    }
-
-    .defaultheader img {
-        width: auto
-    }
-
-    .mobileheader {
-        display: flex;
-        grid-column: 1 / span 2
     }
 
     .mobilelogo {
