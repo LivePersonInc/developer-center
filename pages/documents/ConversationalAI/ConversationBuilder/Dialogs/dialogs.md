@@ -66,7 +66,7 @@ To close the current dialog, set the interaction's Next Step to "Close Dialog."
 
  <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeDialog.png">
 
-Note that the "Close dialog" option triggers a post-conversation [survey](conversation-builder-bots-survey-bots.html). Therefore, you can use this option when you want to explicitly trigger a survey directly from the bot. The specific survey that is triggered depends on the conversation's last skill, i.e., whether it matches one assigned to a survey bot.
+Note that the "Close dialog" option triggers a post-conversation [survey](conversation-builder-bots-survey-bots.html).
 
 ### Close the conversation
 
@@ -74,7 +74,7 @@ To close the current conversation, set the interaction's Next Step to "Close Con
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeConversation.png">
 
-Note that the "Close conversation" option does not explicitly trigger a post-conversation [survey](conversation-builder-bots-survey-bots.html). However, the act of closing a conversation in any manner does [trigger a survey](conversation-builder-bots-survey-bots.html#survey-triggering) if the conversation's last skill matches one assigned to a survey bot.
+Note that the "Close conversation" option **doesn't** trigger a post-conversation [survey](conversation-builder-bots-survey-bots.html).
 
 ### Configure dialog settings
 
