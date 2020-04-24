@@ -90,7 +90,7 @@ Like in the example above, when you define a condition (in a rule) in a question
 
     When defining a condition using Evaluate Options, make sure the choices in the question are defined *before* defining the condition. Otherwise, the choices won't be available for use in the condition.
 
-* **No Match**: This triggers the Next Step action when no match to an earlier rule in the interaction is found. Use this option in a final rule to catch all utterances other than those caught by earlier rules. 
+* **No Match**: This triggers the Next Step action when a match to an earlier rule in the interaction isn't found. Use this option in a final rule to catch all utterances other than those caught by earlier rules. 
 
     The No Match option is a great way to repeat the same interaction until the consumer enters an expected utterance. This is done below.
 
@@ -101,7 +101,7 @@ Like in the example above, when you define a condition (in a rule) in a question
     Keep in mind the following when using the No Match option:
 
     * The No Match rule is always the *last* rule to be evaluated regardless of where you place it in the list of rules in the interaction. Therefore, as a best practice, place the No Match rule last in the rule list.
-    * [Context switching](conversation-builder-dialogs-dialog-basics.html#context-switching) based on the consumer's utterance doesn't happen when an interaction has a No Match rule. This is because a No Match rule is always executed when there isn't a match to an earlier rule in the interaction.
+    * [Context switching](conversation-builder-dialogs-dialog-basics.html#context-switching) based on the consumer's utterance doesn't happen when an interaction has a No Match rule. This is because a No Match rule is *always* executed when there isn't a match to an earlier rule in the interaction.
 
 #### Conditions in integration interactions
 
