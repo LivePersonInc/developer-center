@@ -98,6 +98,16 @@ When selecting an interaction to add, make sure it's supported by the channel yo
 
     This inserts the interaction after the one you selected unless you inserted a User Says interaction, which is always inserted at the start of the dialog.
 
+### Name an interaction
+
+If you name your interactions **(1)**, it's easier to see and understand a dialog's flow **(2)**.
+
+<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/interactionName1.png">
+
+* To name an interaction, replace the text in the upper-left corner of the interaction tile.
+
+    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactionName2.png">
+
 ### Specify patterns in interactions
 
 Patterns are combinations of keywords, wildcards and alternates that are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". 
@@ -128,7 +138,7 @@ If you need more advanced operators, you can use [regular expressions](http://ww
 
 When defining a condition using a regular expression, click **Hint** to view and quickly copy commonly used regular expressions.
 
-<img style="width:400px" class="fancyimage" src="img/ConvoBuilder/regex_hint.png">
+<img style="width:800px" class="fancyimage" src="img/ConvoBuilder/regex_hint.png">
 
 ### Display variables in interactions
 
