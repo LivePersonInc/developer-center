@@ -18,12 +18,12 @@ strong {
 a:hover,
 a:focus {
     text-decoration: none !important;
-    color: #463E36;
+    color: var(--darker-gray);
 }
 
 .termsUseHighlight {
     font-weight: bold;
-    color: #675d55 !important;
+    color: var(--dark-gray) !important;
 
     cursor: pointer;
 
@@ -152,6 +152,7 @@ code pre {
 .defaultwrapper {
     display: flex;
 }
+
 @supports(display: grid) {
 
     .documenttitlecontainer {
@@ -519,22 +520,22 @@ table tbody td img {
 }
 
 .important {
-    border-left-color: #f66;
+    border-left-color: var(--border-blue-important);
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
     border-left-width: 4px;
     border-left-style: solid;
-    background-color: #f8f8f8;
+    background-color: var(--light-blue-notification);
     font-size: 14px;
     line-height: 1.71;
-    color: #4a4a4a;
+    color: var(--navy);
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding-left: 15px
 }
 
 .important::before {
     content: "\f06a";
-    color: #f88181;
+    color: var(--border-blue-important);
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
@@ -549,22 +550,22 @@ table tbody td img {
 }
 
 .notice {
-    border-left-color: #5879da;
+    border-left-color: var(--notice-red);
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
     border-left-width: 4px;
     border-left-style: solid;
-    background-color: #f8f8f8;
+    background-color: var(--background-notice-red);
     font-size: 14px;
     line-height: 1.71;
-    color: #4a4a4a;
+    color: var(--navy);
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding-left: 15px
 }
 
 .notice::before {
     content: "\f06e";
-    color: #3d5498;
+    color: var(--notice-red);
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
