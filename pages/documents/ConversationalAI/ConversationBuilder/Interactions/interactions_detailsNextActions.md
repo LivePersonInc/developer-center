@@ -19,7 +19,7 @@ indicator: both
 
 Every interaction has a specified next step. This determines the direction of the dialog flow after the interaction has been processed.
 
-You specify an interaction's next step directly on the tile:
+You specify an interaction's next step directly on the interaction tile:
 
 <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_nextStep.png">
 
@@ -28,6 +28,8 @@ When specifying the next step, you can select from the following options:
 * *Next Interaction*: This directs the flow to the next interaction in the dialog.
 * *Current Interaction*: This repeats the current interaction.
 * *End Interaction*: This closes the dialog.
+* *Close Conversation*: This closes the conversation; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) for more.
+* *Close Dialog*: This closes the dialog; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) for more.
 * *{interaction name}*: This directs the flow to the interaction with the specified name.
 
 As shown in the image above, in question and integration interactions, you can create rules that determine the next step that occurs.
@@ -36,18 +38,18 @@ As shown in the image above, in question and integration interactions, you can c
 
 A rule contains a set of instructions for how to respond to the user input or to the result of an integration call.
 
-For example, the following rule says that if the user responds to a Yes/No question with the pattern "yes," "yah," or "yup," the dialog flow should continue to the Yes statement.
+As an example, the following rule says that if the user responds to a Yes/No question with the pattern "yes," "yah," or "yup," the dialog flow should continue to the Yes statement.
 
 <img style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_rule.png">
 
 In question and integration interactions, you can create one or multiple rules depending on how many responses you need to support.
 
-Use the guided "Edit Rule" interface to:
+Use the guided Add Rule/Edit Rule dialog to:
 
 1. Specify the rule name.
 2. Define the condition that must evaluate to true for the rule to be executed.
 3. Store data in a [variable or slot]((conversation-builder-variables-slots.html)). (Multiple variables are allowed in a rule; only a single slot is allowed in a rule.)
-4. Specify the next step.
+4. Specify the next step in the dialog flow.
 
 #### Multiple rules
 
@@ -74,7 +76,7 @@ The question contains a single rule, which is this:
 
 In the rule, there's a condition that determines if the user's response matches the RegEx for a 6-digit number. If it does, the user's response is stored in a slot, and the dialog flow continues to the next interaction.
 
-Like in the image above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following methods:
+Like in the example above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following methods:
 
 * **Response Intent**: This triggers the Next Step action when the user input matches the selected [intent](intent-builder-intents.html). Make sure to connect your domain and populate it with intents, so they'll be available for conditions. For an example of usage, see [here](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents).
 * **Regular Expression**: This triggers the Next Step action when the user input matches the RegEx that you specify. All standard [Regex rules](http://www.regexlib.com) apply.
@@ -88,9 +90,18 @@ Like in the image above, when you define a condition (in a rule) in a question i
 
     When defining a condition using Evaluate Options, make sure the choices in the question are defined *before* defining the condition. Otherwise, the choices won't be available for use in the condition.
 
-* **No Match**: Use this option in a *final* condition to catch all utterances other than those caught by earlier conditions. This triggers the Next Step action when no match to earlier conditions is found.
+* **No Match**: This triggers the Next Step action when no match to an earlier rule in the interaction is found. Use this option in a final rule to catch all utterances other than those caught by earlier rules. 
 
-    For example, assume you have a Yes/No multiple choice question. You’ve defined a condition for “Yes,” with a next step that’s appropriate. You’ve also defined a condition for “No,” with a next step that’s appropriate. You can use the No Match option to define a 3rd and final condition to catch all responses other than “Yes” and “No,” and set the next step to “Current interaction.” This will repeat the question until the user responds with “Yes” or “No.”
+    The No Match option is a great way to repeat the same interaction until the consumer enters an expected utterance. This is done below.
+
+    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactions_noMatch.png">
+
+    <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/interactions_noMatch2.png">
+
+    Keep in mind the following when using the No Match option:
+
+    * The No Match rule is always the *last* rule to be evaluated regardless of where you place it in the list of rules in the interaction. Therefore, as a best practice, place the No Match rule last in the rule list.
+    * [Context switching](conversation-builder-dialogs-dialog-basics.html#context-switching) based on the consumer's utterance doesn't happen when an interaction has a No Match rule. This is because a No Match rule is always executed when there isn't a match to an earlier rule in the interaction.
 
 #### Conditions in integration interactions
 
