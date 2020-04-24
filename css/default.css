@@ -76,7 +76,7 @@ a #loginHeader {
 }
 
 a:-webkit-any-link {
-    color: #5879da
+    color: var(--electric-blue)
 }
 
 code pre {
@@ -100,7 +100,7 @@ code pre {
 
 .fa-pencil-alt {
     margin-right: 5px;
-    color: #5879da
+    color: var(--electric-blue)
 }
 
 .suggestbutton {
@@ -108,11 +108,11 @@ code pre {
 }
 
 .suggestbutton a {
-    color: #5879da
+    color: var(--electric-blue)
 }
 
 .suggestbutton i {
-    color: #5879da;
+    color: var(--electric-blue);
     margin-right: 8px
 }
 
@@ -121,7 +121,7 @@ code pre {
 }
 
 .defaultsidebar {
-    background-color: #3d4558;
+    background-color: var(--darker-gray);
     display: flex;
     flex-direction: column
 }
@@ -134,7 +134,7 @@ code pre {
 
 .defaultfooter {
     padding: 19px 0;
-    background-color: #F8F5F3;
+    background-color: var(--lighter-gray);
 }
 
 .defaultfooter span {
@@ -195,7 +195,7 @@ code pre {
     .defaultsidebar {
         grid-column: 1 / span 2;
         grid-row: 1 / span 11;
-        background-color: #3d4558;
+        background-color: var(--darker-gray);
         display: flex;
         flex-direction: column
     }
@@ -218,7 +218,7 @@ code pre {
         display: flex;
         justify-content: center;
         background-color: var(--lighter-gray);
-        color: #463E36;
+        color: var(--darker-grey);
         margin-bottom: -25px;
     }
 }
@@ -244,6 +244,7 @@ code pre {
     padding-top: 9px;
     order: 1;
     border: 0;
+    color: var(--grey-button-icons);
     background-color: transparent;
     position: absolute;
     z-index: 10
@@ -256,22 +257,23 @@ code pre {
     width: 85px;
     padding-top: 10px;
     order: 1;
+    color: var(--grey-button-icons);
     border: 0;
     background-color: transparent;
     position: absolute
 }
 
 .darken {
-    background-color: #303643 !important
+    background-color: var(--primary-black) !important
 }
 
 .darken::before {
-    background-color: #3d4558 !important;
-    color: #f2f1f2 !important
+    background-color: var(--darker-gray) !important;
+    color: var(--lightest-gray) !important
 }
 
 .darken .highlight {
-    background-color: #303643 !important
+    background-color: var(--primary-black) !important
 }
 
 .darken button {
@@ -325,7 +327,7 @@ code pre {
 }
 
 .bluehighlight {
-    color: #5879da
+    color: var(--electric-blue)
 }
 
 .breadhidden {
@@ -647,11 +649,11 @@ a.loginText {
 }
 
 .loginButton:hover {
-    color: #003fa3;
+    color: var(--hover-electric-blue);
 }
 
 .trialButton:hover {
-    background-color: #003fa3;
+    background-color: var(--hover-electric-blue);
 }
 
 .trialButton {
@@ -893,7 +895,7 @@ a.loginText {
 .language-gradle:before,
 .language-css:before,
 .language-objc:before {
-    color: #a2a2a2;
+    color: var(--secondary-black);
     text-align: right;
     font-size: 14px;
     padding-right: 10px;
@@ -901,15 +903,25 @@ a.loginText {
     padding-left: 10px;
     line-height: 15px;
     height: 40px;
-    font-weight: 500;
+    font-weight: bold;
     align-self: flex-end;
     width: 100%;
     position: relative;
-    background-color: #e4e3e3;
+    background-color: var(--light-gray);
     display: flex;
     margin-bottom: 20px;
     align-items: center
 }
+
+/* .fa-moon:before {
+    content: "\f186";
+    color: var(--grey-button-icons);
+}
+
+.fa-copy:before {
+    content: "\f0c5";
+    color: var(--grey-button-icons);
+} */
 
 .language-objc:before {
     content: "OBJECTIVE-C"
@@ -1030,12 +1042,12 @@ a.loginText {
 }
 
 .defaultbutton a {
-    color: #5879da
+    color: var(--electric-blue)
 }
 
 .defaultbutton div {
     padding: 10px;
-    color: #3d4558;
+    color: var(--darker-gray);
     width: 100%
 }
 
@@ -1067,7 +1079,7 @@ a.loginText {
 }
 
 .anchorlist a {
-    color: #a2a2a2;
+    color: var(--secondary-black);
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 12px;
     display: flex
@@ -1092,7 +1104,7 @@ a.loginText {
 }
 
 .anchorlist li a {
-    color: #5879da !important
+    color: var(--electric-blue) !important
 }
 
 .anchorlist li:before {
@@ -1116,7 +1128,7 @@ a.anchoritem {
 
 .sidebarbutton {
     color: #f2f1f2;
-    background: #3d4558;
+    background: var(--darker-gray);
     width: 20px;
     height: 20px;
     border: 0;
@@ -1168,12 +1180,12 @@ a.anchoritem {
 }
 
 .mysidebar::-webkit-scrollbar-track {
-    background-color: #3d4558
+    background-color: var(--darker-gray)
 }
 
 .mysidebar::-webkit-scrollbar {
     width: 10px;
-    background-color: #3d4558
+    background-color: var(--darker-gray)
 }
 
 .mysidebar::-webkit-scrollbar-thumb {
@@ -1207,7 +1219,7 @@ a.anchoritem {
 }
 
 .defaultsidebarexplorer .nav>li>a:focus {
-    background-color: #3d4558 !important
+    background-color: var(--darker-gray) !important
 }
 
 .defaultsidebarexplorer .nav>li:first-of-type {
@@ -1384,7 +1396,7 @@ a.anchoritem {
 input#csds-button {
     border-radius: 15px;
     color: #fff;
-    background-color: #5879da;
+    background-color: var(--electric-blue);
     border: 0;
     height: 32px;
     padding: 0 10px 0 10px
@@ -1666,7 +1678,7 @@ input#csds-button {
     }
 
     ul.mysidebar.nav {
-        background-color: #3d4558;
+        background-color: var(--darker-gray);
         z-index: 100;
         left: 0;
         top: 82px !important;

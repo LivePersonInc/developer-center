@@ -1,10 +1,14 @@
 :root {
+    --primary-black: #15161f;
+    --secondary-black: #2a2c3d;
+
     --darker-gray: #463E36;
     --dark-gray: #675D55;
     --gray: #847970;
     --mid-gray: #A39C96;
     --light-gray: #D9D4D0;
     --lighter-gray: #F8F5F3;
+    --lightest-gray: #F5F5FA;
 
     --orange: #FE5E00;
     --hover-orange: #B84400;
@@ -16,6 +20,7 @@
     --hover-electric-blue: #003FA3;
     --light-blue-notification: #EDF5FA;
     --border-blue-important: #2D9CDB;
+    --grey-button-icons: #4e5066;
 
 
     --navy: #090C43;
