@@ -34,7 +34,7 @@ dt[id] {
 }
 
 h2[id] {
-  color: #162036;
+  color: var(--navy);
   font-family: "Roboto", Arial;
   font-size: 1.0666em;
   margin-bottom: 0;
@@ -43,14 +43,14 @@ h2[id] {
 
 h3[id] {
   font-family: "Roboto", Arial;
-  color: #4a4a4a;
-  font-size: 17px;
-  font-weight: 500;
+  color: var(--navy);
+  font-size: 20px;
+  font-weight: 600;
 }
 
 h4[id] {
   font-family: "Roboto", Arial;
-  color: #5879da;
+  color: var(--navy);
   font-size: 15px;
   font-weight: 600;
   font-style: inherit;
@@ -69,22 +69,23 @@ h4 code.highlighter-rouge {
 }
 
 .h1 {
-  color: #5879da;
+  color: var(--navy);
   font-family: "Roboto", Arial;
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 400;
 }
 
 .h2 {
-  color: #162036;
+  color: var(--navy);
   font-family: "Roboto", Arial;
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 30px;
 
 }
 
 .h3 {
-  color: #5879da;
+  color: var(--navy);
+  font-size: 20px;
   font-family: "Roboto", Arial;
   font-size: 0.9333em;
   margin-bottom: 8px;
@@ -92,7 +93,7 @@ h4 code.highlighter-rouge {
 }
 
 .h4 {
-  color: #5879da;
+  color: var(--navy);
   font-family: "Roboto", Arial;
   font-size: 0.86em;
   font-weight: 600;
@@ -129,9 +130,10 @@ pre code {
 }
 
 .post-content table tr td {
-  font-size: 12px;
+  font-size: 14px;
+  background-color: white;
   font-family: "Open Sans";
-  color: #666666;
+  color: var(--navy-gray);
   line-height: 1.8;
   max-width: 160px;
   height: 50px;
@@ -139,15 +141,19 @@ pre code {
   border-right: solid 1px #fff;
   padding: 21px 25.5px 21px 23px;
   vertical-align: inherit;
+  border-bottom: 1px solid var(--navy-light-gray);
 }
 
 .post-content table>thead>tr>th {
+  background-color: var(--lightest-gray);
   font-family: "Open Sans";
+  text-transform: uppercase;
   font-weight: 600;
-  color: #4a4a4a;
-  font-size: 14px;
+  color: var(--navy-mid-gray);
+  font-size: 12px;
   padding: 14px 22px;
-  border-bottom: 2.5px solid #5879DA;
+  border-bottom: 1px solid var(--navy-light-gray) !important;
+
 }
 
 
@@ -637,9 +643,10 @@ div.sidebarTitle-holder {
 }
 
 .post-content p strong {
-  color: #181818;
   font-family: "Roboto", "Open Sans", Arial, Helvetica, sans-serif;
-  /*font-weight: lighter;*/
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 20px;
 }
 
 .post-content,
