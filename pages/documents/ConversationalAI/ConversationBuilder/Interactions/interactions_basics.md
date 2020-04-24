@@ -108,6 +108,8 @@ If you name your interactions **(1)**, it's easier to see and understand a dialo
 
     <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/interactionName2.png">
 
+The name must be unique with respect to all interactions in the bot.
+
 ### Specify patterns in interactions
 
 Patterns are combinations of keywords, wildcards and alternates that are compared to user input. **A user input is considered a match to a pattern if it fits the pattern exactly**. Therefore, a pattern of "hello" will **only** match with a user input of "hello". 
