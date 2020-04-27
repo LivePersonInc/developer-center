@@ -69,14 +69,7 @@ Both outcomes are tracked and reported on as part of the Report Builder, so you 
 
 ### Prerequisite steps
 
-Before you can begin building survey bots, the feature must be enabled in Conversation Builder by LivePerson. This is accomplished by LivePerson enabling the following "AC feature flags" behind the scenes:
-
-* Common.Async_Messaging
-* Common.Messaging_Survey 
-* Common.RichContent
-* Common.API_User_Login
-
-Please contact your LivePerson account representative to enable this feature.
+Before you can begin building survey bots, the feature must be enabled in Conversation Builder by LivePerson. Please contact your LivePerson account representative to enable this feature.
 
 ### Step 1 - Create the survey bot
 
