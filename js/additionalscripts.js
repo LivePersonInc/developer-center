@@ -7,6 +7,8 @@ $(document).ready(function () {
 	populateAnchors();
 	menuDrop();
 	codeButtons();
+	setNoticeIcon();
+	setImportantIcon();
 	mobileHamburger();
 	isExplorer();
 	searchFunction();
@@ -47,6 +49,32 @@ $(document).ready(function () {
 	}
 });
 
+function setNoticeIcon() {
+	var allNoticeIcon = $('p[class^="notice"]');
+	console.log("SET NOTICE");
+	allNoticeIcon.each(function (i) {
+		var noticeIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>';
+		$(this).prepend(noticeIcon);
+	});
+	var allNoticeIconDiv = $('div[class^="notice"]');
+	allNoticeIconDiv.each(function (i) {
+		var noticeIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>';
+		$(this).prepend(noticeIcon);
+	});
+}
+function setImportantIcon() {
+	var allImportantIcon = $('p[class^="important"]');
+
+	allImportantIcon.each(function (i) {
+		var importantIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-info-circle beforeImportant"></i> </div>';
+		$(this).prepend(importantIcon);
+	});
+	var allImportantIconDiv = $('div[class^="important"]');
+	allImportantIconDiv.each(function (i) {
+		var importantIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-info-circle beforeImportant"></i> </div>';
+		$(this).prepend(importantIcon);
+	});
+}
 function navigateContent(url) {
 	//call ajax with the target url
 	$.ajax(url)
@@ -81,6 +109,8 @@ function navigateContent(url) {
 			populateAnchors();
 			codeButtons();
 			replaceTitle();
+			setNoticeIcon();
+			setImportantIcon();
 			searchFunction();
 			capabilitiesSearch();
 			searchHighlight();
@@ -553,8 +583,8 @@ function scrollToHash() {
 				var linkOffset = $(linkScroll).offset().top;
 			}
 			$("body, html").animate({
-					scrollTop: linkOffset,
-				},
+				scrollTop: linkOffset,
+			},
 				1000,
 				"swing"
 			);
@@ -620,45 +650,45 @@ function scrollToHash() {
 // 		csdsButton.addEventListener("click", retrieveUrl);
 // 	}
 // }
-	//detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
-	function isExplorer() {
-		var ua = window.navigator.userAgent;
-		var is_ie = /MSIE|Trident/.test(ua);
+//detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
+function isExplorer() {
+	var ua = window.navigator.userAgent;
+	var is_ie = /MSIE|Trident/.test(ua);
 
-		if (is_ie) {
-			var wrapper = document.getElementById('defaultwrapper');
-			var header = document.getElementById('defaultheader');
-			var sidebar = document.getElementById('defaultsidebar');
-			var documenttitlecontainer = document.getElementById('documenttitlecontainer');
-			var footer = document.getElementById('defaultfooter');
-			var content = document.getElementById('defaultcontent')
-			var heroPanel = document.getElementById('heroPanel')
-			var cardInnerText = document.getElementsByClassName('cardInnerText');
-			var secondConfirmCardImg = document.getElementsByClassName('secondConfirmCardImg');
-			var thirdPanel = document.getElementById('thirdPanel');
-			var confirmationFooter = document.getElementById('confirmationFooter');
-			var formContainer = document.getElementById('formContainer');
-			wrapper.classList.add('defaultwrapperexplorer');
-			header.classList.add('defaultheaderexplorer');
-			sidebar.classList.add('defaultsidebarexplorer');
-			documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
-			footer.classList.add('defaultfooterexplorer');
-			content.classList.add('defaultcontentexplorer');
-			heroPanel.classList.add('heroPanelExplorer');
-			cardInnerText.classList.add('cardInnerTextExplorer');
-			secondConfirmCardImg.classList.add('secondConfirmCardImgExplorer');
-			thirdPanel.classList.add('thirdPanelExplorer');
-			confirmationFooter.classList.add('confirmationFooterExplorer');
-			formContainer.classList.add('formContainerExplorer');
-		};
-	}
-		//clicks on the search dropdown should also use the "pseudo SPA" method
-		function searchClick(event) {
-			$('.ds-dropdown-menu').on('click', 'a', function (event) {
-				event.preventDefault();
-				linkclick(event, this);
-			})
-		};
+	if (is_ie) {
+		var wrapper = document.getElementById('defaultwrapper');
+		var header = document.getElementById('defaultheader');
+		var sidebar = document.getElementById('defaultsidebar');
+		var documenttitlecontainer = document.getElementById('documenttitlecontainer');
+		var footer = document.getElementById('defaultfooter');
+		var content = document.getElementById('defaultcontent')
+		var heroPanel = document.getElementById('heroPanel')
+		var cardInnerText = document.getElementsByClassName('cardInnerText');
+		var secondConfirmCardImg = document.getElementsByClassName('secondConfirmCardImg');
+		var thirdPanel = document.getElementById('thirdPanel');
+		var confirmationFooter = document.getElementById('confirmationFooter');
+		var formContainer = document.getElementById('formContainer');
+		wrapper.classList.add('defaultwrapperexplorer');
+		header.classList.add('defaultheaderexplorer');
+		sidebar.classList.add('defaultsidebarexplorer');
+		documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
+		footer.classList.add('defaultfooterexplorer');
+		content.classList.add('defaultcontentexplorer');
+		heroPanel.classList.add('heroPanelExplorer');
+		cardInnerText.classList.add('cardInnerTextExplorer');
+		secondConfirmCardImg.classList.add('secondConfirmCardImgExplorer');
+		thirdPanel.classList.add('thirdPanelExplorer');
+		confirmationFooter.classList.add('confirmationFooterExplorer');
+		formContainer.classList.add('formContainerExplorer');
+	};
+}
+//clicks on the search dropdown should also use the "pseudo SPA" method
+function searchClick(event) {
+	$('.ds-dropdown-menu').on('click', 'a', function (event) {
+		event.preventDefault();
+		linkclick(event, this);
+	})
+};
 
-		//legacy function, probably not needed
-		$('#mysidebar').height($(".nav").height());
+//legacy function, probably not needed
+$('#mysidebar').height($(".nav").height());
