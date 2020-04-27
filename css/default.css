@@ -183,14 +183,14 @@ ul.mysidebar.nav>li:first-of-type {
     background-color: #3d4558;
     display: flex;
     flex-direction: column;
-    flex:1;
+    flex: 1;
 }
 
 .defaultcontent {
     display: flex;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
-    flex:3;
+    flex: 3;
 }
 
 .defaultfooter {
@@ -504,6 +504,7 @@ table tbody td img {
     border-left-color: var(--border-blue-important);
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
+
     border-left-width: 4px;
     border-left-style: solid;
     background-color: var(--light-blue-notification);
@@ -514,16 +515,37 @@ table tbody td img {
     padding-left: 15px
 }
 
-.important::before {
-    content: "\f06a";
+.beforeImportant {
+    content: "\\f05a";
+    border-radius: 4px 0px 0px 4px;
     color: var(--border-blue-important);
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
     font-weight: 900;
-    margin-right: 5px;
+    margin: 0px 10px 10px 0px;
+
     position: relative;
-    top: 1px
+    top: 2px;
+}
+
+.innerWrapperAlertIcons {
+    float: left;
+    margin-bottom: 40px;
+}
+
+.beforeNotice {
+    content: "\\f06a";
+    border-radius: 4px 0px 0px 4px;
+
+    color: var(--notice-red) !important;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    font-weight: 900;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
 }
 
 .important p:not(:first-child) {
@@ -532,6 +554,7 @@ table tbody td img {
 
 .notice {
     border-left-color: var(--notice-red);
+    border-radius: 4px;
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
     border-left-width: 4px;
@@ -541,20 +564,9 @@ table tbody td img {
     line-height: 1.71;
     color: var(--navy);
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    padding-left: 15px
+    padding-left: 15px;
 }
 
-.notice::before {
-    content: "\f06e";
-    color: var(--notice-red);
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 18px;
-    font-weight: 900;
-    margin-right: 10px;
-    position: relative;
-    top: 2px
-}
 
 .notice p:not(:first-child) {
     margin-left: -25px
@@ -1033,9 +1045,11 @@ a.loginText {
 .defaultbutton div:hover {
     color: #fff
 }
-#jumpto{
-    flex:1
+
+#jumpto {
+    flex: 1
 }
+
 .anchorlist {
     visibility: hidden;
     padding: 0 20px;
@@ -1077,8 +1091,7 @@ a.loginText {
 }
 
 .anchorlist li a {
-    color: var(--electric-blue) !important
-    text-align: right;
+    color: var(--electric-blue) !important text-align: right;
 
 }
 
