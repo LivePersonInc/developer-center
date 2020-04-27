@@ -32,7 +32,7 @@ When specifying the next step, you can select from the following options:
 * *Close Dialog*: This closes the dialog; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) for more.
 * *{interaction name}*: This directs the flow to the interaction with the specified name.
 
-As shown in the image above, in question and integration interactions, you can create rules that determine the next step that occurs.
+As shown in the image above, in question and integration interactions, you can create *rules* that determine the next step that occurs. This is discussed next.
 
 ### Rules
 
@@ -74,7 +74,7 @@ The question contains a single rule, which is this:
 
 <img style="width:750px" class="fancyimage" src="img/ConvoBuilder/interactions_conditions2.png">
 
-In the rule, there's a condition that determines if the user's response matches the RegEx for a 6-digit number. If it does, the user's response is stored in a slot, and the dialog flow continues to the next interaction.
+In the rule, there's a condition that determines if the user's response matches the RegEx for a 6-digit number. If it does, the user's response is stored in a [slot](conversation-builder-variables-slots.html#slots), and the dialog flow continues to the next interaction.
 
 Like in the example above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following methods:
 
