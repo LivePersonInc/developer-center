@@ -80,7 +80,7 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). | Optional | https://www.mysite.com/images/headphones.jpg |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | https://www.mysite.com/images/headphones.jpg |
 | ADD IMAGE > Item URL  | The URL of the resource to load when the image is clicked. | Optional | https://www.mysite.com | 
 | Title | The title of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Required | Headphones - It’s our annual, fall sale! |
 | Subtitle | The subtitle of the message. Enter a maximum of 255 characters, but be aware that the actual maximum length depends on the channel and could be shorter. Check the limitations for the channels in use. | Optional | And we hope that’s music to your ears. |
@@ -192,7 +192,7 @@ Response Message settings also provide the text in the header of the actual list
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). | Optional | https://www.mysite.com/images/flowers.jpg |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | https://www.mysite.com/images/flowers.jpg |
 | ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon | 
 | Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters. | Required | Beautiful bouquets |
 | Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters. | Optional | Select your favorite |
@@ -206,7 +206,7 @@ Section and item settings define how to display the sections and individual item
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
 | Section Title | The title of the section. | Required | Birthdays |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). | Optional | https://www.mysite.com/images/dahlias.jpg |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | https://www.mysite.com/images/dahlias.jpg |
 | ADD IMAGE > Image Style | Select "Default." Only this value is supported. | Optional | Default |
 | ADD IMAGE > Identifier  | A unique identifier for the item; this is system-generated. | Not applicable | 32957836-2f95-1e8d-ce4e-aa95e8f844a2 |
 | Item Title | The item’s title. | Required | Mixed dahlias |
@@ -220,7 +220,7 @@ The Reply Message settings define how to display the consumer’s reply after th
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). | Optional | https://www.mysite.com/images/flowers.jpg |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). | Optional | https://www.mysite.com/images/flowers.jpg |
 | ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Large |
 | Reply Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters. |  Required. Although required, this field is replaced at run time with the title of the user's selection. | Your selection |
 | Reply Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters. | Optional | A great choice! |
@@ -269,7 +269,7 @@ Response Message settings also provide the text in the header of the actual time
 
 | Setting | Description | Required or Optional | Example |
 |---|---|---|---|
-| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
+| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
 | ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon |
 | Response Message Title | The title of the message. The maximum length is 85 characters; Apple recommends 30 characters.  | Required  | Meet with our technician |
 | Response Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | Please select your preferred time |
@@ -345,7 +345,7 @@ The Reply Message settings define how to display the consumer’s reply after th
 
 | Setting | Description | Required or Optional | Example |
 |---|---|---|---|
-| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting). The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
+| ADD IMAGE > Image URL | The HTTPS URL of the image file to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). The file format must be JPG or PNG. The image size is limited to 0.5 MB. | Optional | https://www.mysite/images/clock.jpg |
 | ADD IMAGE > Image Style | The size of the image to display, either Icon (smallest), Small, or Large. The default value is Icon. | Optional | Icon |
 | Reply Message Title | Not used; this is replaced with the selected time.  | Not applicable  | Not applicable |
 | Reply Message Subtitle | The subtitle of the message. The maximum length is 400 characters; Apple recommends 85 characters.  | Optional | See you then! |

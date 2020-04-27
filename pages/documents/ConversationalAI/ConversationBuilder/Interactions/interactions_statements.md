@@ -34,7 +34,7 @@ Image statements display a single image.
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- | 
-| Image URL | The URL for the image file. The URL must start with HTTP or HTTPS and use a valid format, be a bot environment variable, be a bot context variable, or be a combination thereof.<br><br>When specifying a URL, the domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting).<br><br>Keep images fairly small in size \(MB\) and dimension, so they load quickly. | Required | https://www\.mysite\.com/images/bikes\.jpg |
+| Image URL | The URL for the image file. The URL must start with HTTP or HTTPS and use a valid format, be a bot environment variable, be a bot context variable, or be a combination thereof.<br><br>When specifying a URL, the domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media).<br><br>Keep images fairly small in size \(MB\) and dimension, so they load quickly. | Required | https://www\.mysite\.com/images/bikes\.jpg |
 
 ### Audio
 Audio statements currently aren't supported by LiveEngage.
@@ -63,7 +63,7 @@ Use of Apple rich links for video is not supported at this time.
 
 | Setting | Description | Required or Optional | Example |
 | --- | --- | --- | --- | 
-| ADD IMAGE OR VIDEO > Image URL | For an image, this is the URL for the image file. <br><br>For a video, this is the URL for the background image to display beneath the play button/link. Consider using a complementary image or one from the video itself. <br><br>The domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting).<br><br>Keep images fairly small in size \(MB\) and dimension, so they load quickly. | Required | https://www\.mysite\.com/images/myImage\.jpg |
+| ADD IMAGE OR VIDEO > Image URL | For an image, this is the URL for the image file. <br><br>For a video, this is the URL for the background image to display beneath the play button/link. Consider using a complementary image or one from the video itself. <br><br>The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media).<br><br>Keep images fairly small in size \(MB\) and dimension, so they load quickly. | Required | https://www\.mysite\.com/images/myImage\.jpg |
 | ADD IMAGE OR VIDEO > URL | For an image, this is the item/business URL to load when the image is clicked. For a video, this is the URL for the video file to play when clicked. | Required | https://www\.mysite\.com/videos/myVideo\.mp4 |
 | Title | The title of the rich link. | Required | Flower arranging 101 |
 

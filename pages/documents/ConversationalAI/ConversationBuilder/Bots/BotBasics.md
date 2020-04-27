@@ -69,7 +69,7 @@ Bot settings include:
 
 - **Shorten URLs**: Enable this if you want to shorten the URLs sent in interactions, which can be desirable if you have lengthy web links. Disable this to keep URLs as they are. The default value is Disabled (Off). For more on URL shortening, see [here](conversation-builder-interactions-interaction-basics.html#url-shortening).
 
-    If you enable this setting, the shortened domain might need to be whitelisted. For more on whitelisting, see [here](conversation-builder-interactions-interaction-basics.html#whitelisting).
+    If you enable this setting, the shortened domain might need to be whitelisted. For more on whitelisting, see [here](conversation-builder-networking-security.html#whitelisting-rich-media).
 
     To support backwards compatibility, button interactions use URL shortening even though the new Shorten URLs setting is set initially to Off. To disable URL shortening for buttons, enable the setting, save the change, disable the setting, and then save the change again. From this point forward, button interactions will respect the value of the setting and work like all other interactions.
 
