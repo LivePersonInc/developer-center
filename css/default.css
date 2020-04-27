@@ -188,6 +188,7 @@ ul.mysidebar.nav>li:first-of-type {
 
 .defaultcontent {
     display: flex;
+    margin-left: 3.5rem;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
     flex: 3;
@@ -501,13 +502,13 @@ table tbody td img {
 }
 
 .important {
-    border-left-color: var(--border-blue-important);
+    border-left-color: var(--sky-blue);
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
 
     border-left-width: 4px;
     border-left-style: solid;
-    background-color: var(--light-blue-notification);
+    background-color: var(--lighter-sky-blue);
     font-size: 14px;
     line-height: 1.71;
     color: var(--navy);
@@ -518,7 +519,7 @@ table tbody td img {
 .beforeImportant {
     content: "\\f05a";
     border-radius: 4px 0px 0px 4px;
-    color: var(--border-blue-important);
+    color: var(--sky-blue);
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
@@ -538,7 +539,7 @@ table tbody td img {
     content: "\\f06a";
     border-radius: 4px 0px 0px 4px;
 
-    color: var(--notice-red) !important;
+    color: var(--red) !important;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
@@ -553,13 +554,13 @@ table tbody td img {
 }
 
 .notice {
-    border-left-color: var(--notice-red);
+    border-left-color: var(--red);
     border-radius: 4px;
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
     border-left-width: 4px;
     border-left-style: solid;
-    background-color: var(--background-notice-red);
+    background-color: var(--lighter-red);
     font-size: 14px;
     line-height: 1.71;
     color: var(--navy);
