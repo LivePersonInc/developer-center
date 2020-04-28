@@ -1,8 +1,7 @@
 var gulp = require('gulp');
 var shell = require('gulp-shell');
 var browserSync = require('browser-sync').create();
-// Task for building site when something changed:
-gulp.task('build', shell.task(['bundle exec jekyll serve --incremental']));
+gulp.task('build', shell.task(['bundle exec jekyll build']));
 // Task for serving blog with Browsersync
 gulp.task('serve', function () {
     browserSync.init({server: {baseDir: '_site/'}});
