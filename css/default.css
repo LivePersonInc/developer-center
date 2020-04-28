@@ -150,7 +150,7 @@ code pre {
 
 .defaultfooter span {
     display: flex;
-    justify-content: center;
+    margin: 0 auto;
     font-size: 14px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
@@ -208,7 +208,6 @@ ul.mysidebar.nav {
 
 .defaultfooter {
     display: flex;
-    justify-content: center;
     background-color: var(--lighter-gray);
     color: var(--darker-gray);
     margin-bottom: -25px;
@@ -1060,7 +1059,7 @@ a.loginText {
 }
 
 .anchorlist {
-    visibility: hidden;
+    position: fixed !important;
     padding: 0 20px;
 }
 
@@ -1073,12 +1072,14 @@ a.loginText {
 }
 
 .anchorlist a {
-    color: var(--secondary-black);
+    /* color: var(--secondary-black); */
 
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 12px;
     display: flex;
-    color: #2D2F52;
+    color: var(--navy);
+    font-weight: bold;
+
     text-align: right;
 }
 
@@ -1100,18 +1101,9 @@ a.loginText {
 }
 
 .anchorlist li a {
-    color: var(--electric-blue) !important text-align: right;
+    color: var(--dark-gray) !important;
+    text-align: right;
 
-}
-
-.anchorlist li:before {
-    content: "\f0c1";
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    font-weight: 900;
-    margin-right: 10px;
-    font-size: 13px;
-    opacity: .25
 }
 
 a.anchoritem {
