@@ -321,7 +321,7 @@ const submit = async () => {
     console.trace(err);
     submitSuccess = false;
     if (window.hj) window.hj('formSubmitFailed');
-    if (errorMessage !== '') errorMessage = 'Unknown error from server, please try again.';
+    if (errorMessage === '') errorMessage = 'Unknown error from server, please try again.';
     qs('#errorOutput').textContent = errorMessage;
     setView('form');
   }
