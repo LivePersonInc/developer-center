@@ -25,12 +25,12 @@ You specify an interaction's next step directly on the interaction tile:
 
 When specifying the next step, you can select from the following options:
 
-* *Next Interaction*: This directs the flow to the next interaction in the dialog.
-* *Current Interaction*: This repeats the current interaction.
-* *End Interaction*: This closes the dialog.
-* *Close Conversation*: This closes the conversation; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) for more.
-* *Close Dialog*: This closes the dialog; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) for more.
-* *{interaction name}*: This directs the flow to the interaction with the specified name.
+* *Next Interaction*: Directs the flow to the next interaction in the dialog.
+* *Current Interaction*: Repeats the current interaction.
+* *End Interaction*: Stops the flow within the dialog.
+* *Close Conversation*: Closes the conversation but doesn't trigger a post-conversation survey; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) for more.
+* *Close Dialog*: Closes the conversation and triggers a post-conversation survey; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) for more.
+* *{interaction name}*: Directs the flow to the interaction with the specified name.
 
 As shown in the image above, in question and integration interactions, you can create *rules* that determine the next step that occurs. This is discussed next.
 
@@ -48,7 +48,7 @@ Use the guided Add Rule/Edit Rule dialog to:
 
 1. Specify the rule name.
 2. Define the condition that must evaluate to true for the rule to be executed.
-3. Store data in a [variable or slot]((conversation-builder-variables-slots.html)). (Multiple variables are allowed in a rule; only a single slot is allowed in a rule.)
+3. Store data in a [variable or slot]((conversation-builder-variables-slots.html)). (Multiple variables can be added to a rule, but only a single slot can be added to a rule. A rule can fill only a single slot because it evaluates only a single element in the consumer's utterance against the defined condition.)
 4. Specify the next step in the dialog flow.
 
 #### Multiple rules
