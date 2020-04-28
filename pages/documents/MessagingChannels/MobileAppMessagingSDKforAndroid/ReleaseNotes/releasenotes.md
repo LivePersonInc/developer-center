@@ -115,9 +115,25 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
 
-# Android Messaging SDK - Version 4.4.0
+# Android Messaging SDK - Version 4.4.1
 
 **Release date:** April 27, 2020
+
+### Bug fixed
+MobileSDK version 4.4.1 contains a bug fix for a history-loading issue on Unauthenticated conversations.
+
+### Environmental Requirements
+The Android Mobile Messaging SDK version 4.4.1 uses:
+- Minimum API version 19
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.4.0)**
+
+# Android Messaging SDK - Version 4.4.0
+
+**Release date:** April 23, 2020
 
 ### Overview
 Android Mobile Messaging SDK version 4.4.0 release offers a few new features for devs and comes with a sizable side of bugfixes.
