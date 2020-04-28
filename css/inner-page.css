@@ -380,7 +380,6 @@ ul#mysiderbar li {
   color: #4a4a4a;
   font-size: 13px;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
-  font-weight: 300;
 }
 
 
@@ -391,6 +390,7 @@ ul#mysiderbar li {
 
 .pageitem>a {
   color: var(--dark-gray);
+  font-size: 12px;
 }
 
 .innerpageitem>a {
@@ -454,9 +454,12 @@ ul.mysidebar.nav li.activepage {
 }
 
 ul.mysidebar.nav li.activepage a {
-  background-color: inherit;
+  color: var(--orange) !important;
   font-weight: bold;
-  color: #162036;
+}
+
+ul.mysidebar.nav li.activepage a:hover {
+  color: var(--hover-orange) !important;
 }
 
 .mysidebar.nav li.folder>a {
@@ -467,12 +470,15 @@ ul.mysidebar.nav li.activepage a {
 
 .mysidebar.nav li.folder>a:hover {
   background-color: initial !important;
+  color: var(--darker-gray);
 }
+
 
 
 
 .defaultsidebarexplorer .mysidebar.nav li.folder>a:focus {
   background-color: #3d4558 !important;
+
 }
 
 .defaultsidebarexplorer .mysidebar.nav li.folder>a:hover {

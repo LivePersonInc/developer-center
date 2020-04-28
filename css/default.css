@@ -50,8 +50,28 @@ a:focus {
 
 #logoHeader {
     flex: 1;
+    display: flex;
     padding-top: 5px;
+    width: 20%;
+    margin-right: 2rem;
     padding-left: 2rem;
+    max-width: 36.5rem;
+    min-width: 16rem;
+}
+
+.sitelogo {
+    padding-bottom: 5px;
+}
+
+.devLabel {
+    flex-shrink: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.008em;
+    color: var(--navy);
 }
 
 #logoImg {
@@ -188,7 +208,7 @@ ul.mysidebar.nav>li:first-of-type {
 
 .defaultcontent {
     display: flex;
-    margin-left: 3.5rem;
+    margin-left: 6rem;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
     flex: 3;
@@ -212,8 +232,12 @@ ul.mysidebar.nav>li:first-of-type {
 }
 
 .activepage {
-    color: #90a6e6 !important;
+    color: var(--orange) !important;
     font-weight: 500
+}
+
+.activepage:hover {
+    color: var(--hover-orange) !important;
 }
 
 .codebtn {
@@ -769,7 +793,7 @@ a.loginText {
 }
 
 .innerfolder>a {
-    font-size: 13px !important;
+    font-size: 12px !important;
     font-family: "Roboto", Arial, Helvetica, sans-serif !important;
     display: flex;
     margin-left: -4px
@@ -838,7 +862,8 @@ a.loginText {
 
 .subfolder>a {
     color: var(--dark-gray) !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
+    font-weight: normal;
     font-family: "Roboto", Arial, Helvetica, sans-serif !important
 }
 
