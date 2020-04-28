@@ -68,7 +68,7 @@ Here’s a visual summary of what needs to be done within the Integrations tab:
 1. Create an interaction of type Integration, and select from the dropdown the function’s integration.
 2. Save the change.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/guideFunctions_dialog.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideFunctions_dialog.png">
 
 ### Conversation Builder - Preview
 
