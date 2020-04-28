@@ -41,11 +41,11 @@ a:focus {
     padding-top: 22px;
     position: sticky;
     background-color: white;
-    border-bottom: 1px solid #DADBE6;
+    border-bottom: 1px solid var(--navy-lighter-gray);
 }
 
 .scroll {
-    box-shadow: 0px 4px 8px #DADBE5;
+    box-shadow: 0px 4px 8px var(--navy-lighter-gray);
 }
 
 #logoHeader {
@@ -135,12 +135,6 @@ code pre {
     display: none
 }
 
-.defaultsidebar {
-    background-color: var(--darker-gray);
-    display: flex;
-    flex-direction: column
-}
-
 .defaultcontent {
     margin-bottom: 50px;
     flex-direction: column;
@@ -193,10 +187,7 @@ ul.mysidebar.nav>li:first-of-type {
     flex-direction: column;
     height: 150px;
     width: 100%;
-    background-color: #162036;
-    /* position: -webkit-sticky;
-    position: sticky; */
-
+    background-color: var(--white);
 }
 
 .defaultsidebar {
@@ -218,7 +209,7 @@ ul.mysidebar.nav>li:first-of-type {
     display: flex;
     justify-content: center;
     background-color: var(--lighter-gray);
-    color: #463E36;
+    color: var(--darker-gray);
     margin-bottom: -25px;
 }
 
@@ -290,7 +281,7 @@ ul.mysidebar.nav>li:first-of-type {
 }
 
 .darken code span::selection {
-    background-color: cornflowerblue
+    background-color: var(--sky-blue);
 }
 
 .darken .nightbtn {
@@ -340,13 +331,13 @@ ul.mysidebar.nav>li:first-of-type {
 
 #aa-search-input {
     border-radius: 25px;
-    border: 1px solid #A39C96;
+    border: 1px solid var(--mid-gray);
     background-color: white;
-    width: 100%;
+    width: 80%;
     font-size: 18px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding: 10px;
-    border-bottom: 1px solid #DADBE6;
+    border-bottom: 1px solid var(--navy-lighter-gray);
     padding-left: 30px;
     line-height: 3px;
 }
