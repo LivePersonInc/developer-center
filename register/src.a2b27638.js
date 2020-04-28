@@ -128,11 +128,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var getCookie = function getCookie(name) {
-  var match = document.cookie.match(new RegExp('(^| )' + name + '=([^]+)'));
+const getCookie = name => {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^]+)'));
 
   if (match) {
-    var result = match[2];
+    const result = match[2];
 
     if (result !== "null" && result !== "NULL") {
       return result;
@@ -144,12 +144,118 @@ var getCookie = function getCookie(name) {
 
 var _default = getCookie;
 exports.default = _default;
-},{}],"src/index.js":[function(require,module,exports) {
+},{}],"node_modules/joi-password-complexity/lib/index.js":[function(require,module,exports) {
+const Joi = require('@hapi/joi'); // pluralize
+
+
+const p = (word, num) => num === 1 ? word : "".concat(word, "s");
+
+const defaultOptions = {
+  min: 8,
+  max: 26,
+  lowerCase: 1,
+  upperCase: 1,
+  numeric: 1,
+  symbol: 1,
+  requirementCount: 4
+};
+
+module.exports = ({
+  min,
+  max,
+  lowerCase,
+  upperCase,
+  numeric,
+  symbol,
+  requirementCount
+} = defaultOptions, label) => {
+  const joiPasswordComplexity = {
+    type: 'passwordComplexity',
+    base: Joi.string(),
+    messages: {
+      'passwordComplexity.tooShort': "".concat(label || '{{#label}}', " should be at least ").concat(min, " ").concat(p('character', min), " long"),
+      'passwordComplexity.tooLong': "".concat(label || '{{#label}}', " should not be longer than ").concat(max, " ").concat(p('character', max)),
+      'passwordComplexity.lowercase': "".concat(label || '{{#label}}', " should contain at least ").concat(lowerCase, " lower-cased ").concat(p('letter', lowerCase)),
+      'passwordComplexity.uppercase': "".concat(label || '{{#label}}', " should contain at least ").concat(upperCase, " upper-cased ").concat(p('letter', upperCase)),
+      'passwordComplexity.numeric': "".concat(label || '{{#label}}', " should contain at least ").concat(numeric, " ").concat(p('number', numeric)),
+      'passwordComplexity.symbol': "".concat(label || '{{#label}}', " should contain at least ").concat(symbol, " ").concat(p('symbol', symbol)),
+      'passwordComplexity.requirementCount': "".concat(label || '{{#label}}', " must meet at least ").concat(requirementCount, " of the complexity requirements")
+    },
+    validate: (value, helpers) => {
+      const errors = [];
+
+      if (typeof value === 'string') {
+        const lowercaseCount = (value.match(/[a-z]/g) || []).length;
+        const upperCaseCount = (value.match(/[A-Z]/g) || []).length;
+        const numericCount = (value.match(/[0-9]/g) || []).length;
+        const symbolCount = (value.match(/[^a-zA-Z0-9]/g) || []).length;
+        const meetsMin = min && value.length >= min;
+        const meetsMax = max && value.length <= max;
+        const meetsLowercase = lowercaseCount >= lowerCase;
+        const meetsUppercase = upperCaseCount >= upperCase;
+        const meetsNumeric = numericCount >= numeric;
+        const meetsSymbol = symbolCount >= symbol;
+        const maxRequirement = (lowerCase > 0) + (upperCase > 0) + (numeric > 0) + (symbol > 0);
+        const requirement = Math.min(Math.max(parseInt(requirementCount, 10) || maxRequirement, 1), maxRequirement);
+        const requirementErrors = [];
+        if (!meetsMin) errors.push(helpers.error('passwordComplexity.tooShort', {
+          value
+        }));
+        if (!meetsMax) errors.push(helpers.error('passwordComplexity.tooLong', {
+          value
+        }));
+
+        if (!meetsLowercase) {
+          requirementErrors.push(helpers.error('passwordComplexity.lowercase', {
+            value
+          }));
+        }
+
+        if (!meetsUppercase) {
+          requirementErrors.push(helpers.error('passwordComplexity.uppercase', {
+            value
+          }));
+        }
+
+        if (!meetsNumeric) {
+          requirementErrors.push(helpers.error('passwordComplexity.numeric', {
+            value
+          }));
+        }
+
+        if (!meetsSymbol) {
+          requirementErrors.push(helpers.error('passwordComplexity.symbol', {
+            value
+          }));
+        }
+
+        if (maxRequirement - requirementErrors.length < requirement) {
+          errors.push(...requirementErrors);
+
+          if (requirement < maxRequirement) {
+            errors.push(helpers.error('passwordComplexity.requirementCount', {
+              value
+            }));
+          }
+        }
+      }
+
+      return {
+        value,
+        errors: errors.length ? errors : null
+      };
+    }
+  };
+  return Joi.extend(joiPasswordComplexity).passwordComplexity();
+};
+},{"@hapi/joi":"node_modules/@hapi/joi/dist/joi-browser.min.js"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _joi = _interopRequireDefault(require("@hapi/joi"));
 
 var _getCookie = _interopRequireDefault(require("./getCookie"));
+
+var _joiPasswordComplexity = _interopRequireDefault(require("joi-password-complexity"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -159,20 +265,15 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-var qs = document.querySelector.bind(document);
-var ENDPOINT = 'https://self-service.liveperson.com/api/free-trial/account';
-var ENDPOINT_ALPHA = 'https://free-trial.liveperson.com/api/free-trial/account';
-var API_KEY = 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW';
-var recaptchaResponseToken;
-var errorMessage = '';
-var player = new Vimeo.Player(qs('#vid-container iframe'));
-var submitSuccess = false;
-var videoComplete = false;
-var secretClicks = 0;
+const qs = document.querySelector.bind(document);
+const ENDPOINT = 'https://self-service.liveperson.com/api/free-trial/account';
+const ENDPOINT_ALPHA = 'https://free-trial.liveperson.com/api/free-trial/account';
+const API_KEY = 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW';
+let recaptchaResponseToken;
+let errorMessage = '';
+let player = new Vimeo.Player(qs('#vid-container iframe'));
+let submitSuccess = false;
+let videoComplete = false;
 /*$('#captchaContainer').on('click', 'input', function (event) {
   radioValue = $('input:checked').val()
 })*/
@@ -183,275 +284,166 @@ player.on('ended', function () {
   attemptConfirmationTransition();
 });
 
-var recaptchaCb = function recaptchaCb(token) {
+const recaptchaCb = token => {
   recaptchaResponseToken = token;
 };
 
-var recaptchaExpiredCb = function recaptchaExpiredCb() {};
+const recaptchaExpiredCb = () => {};
 
-var submit = /*#__PURE__*/function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-    var running, response;
-    return regeneratorRuntime.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            // Track "doneness" so that we only kick off the video flow if the API doesn't return right away with an error.
-            running = true;
-            _context.prev = 1;
-            // Validate input
-            //const input = await validate()
-            // Set up 400ms timer for kicking off video transition
-            setTimeout(function () {
-              if (submitSuccess) setView('confirm');
-              if (running) setView('video');
-            }, 500); // Post the request, and wait for it to return
+const submit = async () => {
+  // Track "doneness" so that we only kick off the video flow if the API doesn't return right away with an error.
+  let running = true;
 
-            _context.next = 5;
-            return postRequestMock(true, 12000);
+  try {
+    // Validate input
+    const input = await validate(); // Set up 400ms timer for kicking off video transition
 
-          case 5:
-            response = _context.sent;
-            //const response = await postRequest(input)
-            // Set the done state to true, which will prevent the video transition
-            running = false;
-            submitSuccess = true;
-            attemptConfirmationTransition();
-            if (window.hj) window.hj('formSubmitSuccessful');
-            qs('#accountIdOutput').textContent = response.accountId;
-            qs('#emailOutput').textContent = response.emailAddress;
-            _context.next = 22;
-            break;
+    setTimeout(() => {
+      if (submitSuccess) setView('confirm');
+      if (running) setView('video');
+    }, 500); // Post the request, and wait for it to return
 
-          case 14:
-            _context.prev = 14;
-            _context.t0 = _context["catch"](1);
-            running = false;
-            console.trace(_context.t0);
-            submitSuccess = false;
-            if (window.hj) window.hj('formSubmitFailed');
-            if (errorMessage !== '') qs('#errorOutput').textContent = errorMessage;
-            setView('form');
+    if (window.mock) {
+      const response = await postRequestMock(true, 12000);
+    } else {
+      const response = await postRequest(input);
+    } // Set the done state to true, which will prevent the video transition
 
-          case 22:
-          case "end":
-            return _context.stop();
-        }
+
+    running = false;
+    submitSuccess = true;
+    attemptConfirmationTransition();
+    if (window.hj) window.hj('formSubmitSuccessful');
+    qs('#accountIdOutput').textContent = response.accountId;
+    qs('#emailOutput').textContent = response.emailAddress;
+  } catch (err) {
+    running = false;
+    console.trace(err);
+    submitSuccess = false;
+    if (window.hj) window.hj('formSubmitFailed');
+    if (errorMessage !== '') qs('#errorOutput').textContent = errorMessage;
+    setView('form');
+  }
+};
+
+const validate = async () => {
+  const schema = _joi.default.object({
+    firstName: _joi.default.string().alphanum().required(),
+    lastName: _joi.default.string().alphanum().required(),
+    email: _joi.default.string().email({
+      tlds: {
+        allow: false
       }
-    }, _callee, null, [[1, 14]]);
-  }));
+    }).invalid('+'),
+    region: _joi.default.string().required(),
+    password: (0, _joiPasswordComplexity.default)()
+  });
 
-  return function submit() {
-    return _ref.apply(this, arguments);
+  const input = {
+    firstName: qs('#firstName').value,
+    lastName: qs('#lastName').value,
+    email: qs('#emailAddress').value,
+    region: qs('#region').value,
+    password: qs('#createPassword').value
   };
-}();
 
-var validate = /*#__PURE__*/function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-    var schema, input;
-    return regeneratorRuntime.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            schema = _joi.default.object({
-              firstName: _joi.default.string().alphanum().required(),
-              lastName: _joi.default.string().alphanum().required(),
-              email: _joi.default.string().email({
-                tlds: {
-                  allow: false
-                }
-              }).invalid('+'),
-              region: _joi.default.string().required(),
-              password: _joi.default.string()
-            });
-            input = {
-              firstName: qs('#firstName').value,
-              lastName: qs('#lastName').value,
-              email: qs('#emailAddress').value,
-              region: qs('#region').value,
-              password: qs('#createPassword').value
-            };
-            _context2.prev = 2;
-            _context2.next = 5;
-            return schema.validateAsync(input);
+  try {
+    return await schema.validateAsync(input);
+  } catch (err) {
+    errorMessage = err.message;
+    throw err;
+  }
+};
 
-          case 5:
-            return _context2.abrupt("return", _context2.sent);
+const postRequest = async input => {
+  const marketingData = {
+    leadSource: (0, _getCookie.default)('lp-leadSource'),
+    referringUrl: (0, _getCookie.default)('lp-lsRef'),
+    utmCampaignId: (0, _getCookie.default)('lp-lsCampaign'),
+    utmCampaignMedium: (0, _getCookie.default)('lp-lsMedium'),
+    utmCampaignSearchKeywords: (0, _getCookie.default)('lp-lsTerms'),
+    utmCampaignSource: (0, _getCookie.default)('lp-lsSource'),
+    utmContent: (0, _getCookie.default)('lp-lsContent')
+  };
 
-          case 8:
-            _context2.prev = 8;
-            _context2.t0 = _context2["catch"](2);
-            errorMessage = _context2.t0.message;
-            throw _context2.t0;
+  const user = _objectSpread({}, input, {
+    marketingData,
+    recaptchaResponseToken: recaptchaResponseToken || ''
+  });
 
-          case 12:
-          case "end":
-            return _context2.stop();
+  try {
+    const response = fetch(ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'x-api-key': API_KEY,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(user)
+    });
+
+    if (!response.ok) {
+      try {
+        const parsed = await response.json();
+
+        if (typeof parsed.code !== 'undefined' && parsed.code === 'PROHIBITED_EMAIL_DOMAIN') {
+          errorMessage = parsed.description;
         }
-      }
-    }, _callee2, null, [[2, 8]]);
-  }));
+      } catch (err) {}
 
-  return function validate() {
-    return _ref2.apply(this, arguments);
-  };
-}();
+      throw new Error('Fetch error:', response.statusText);
+    }
 
-var postRequest = /*#__PURE__*/function () {
-  var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(input) {
-    var marketingData, user, response, _parsed, parsed;
+    const parsed = await response.json();
+    parsed.emailAddress = input.emailAddress;
+    return parsed;
+  } catch (err) {
+    throw err;
+  }
+};
 
-    return regeneratorRuntime.wrap(function _callee3$(_context3) {
-      while (1) {
-        switch (_context3.prev = _context3.next) {
-          case 0:
-            marketingData = {
-              leadSource: (0, _getCookie.default)('lp-leadSource'),
-              referringUrl: (0, _getCookie.default)('lp-lsRef'),
-              utmCampaignId: (0, _getCookie.default)('lp-lsCampaign'),
-              utmCampaignMedium: (0, _getCookie.default)('lp-lsMedium'),
-              utmCampaignSearchKeywords: (0, _getCookie.default)('lp-lsTerms'),
-              utmCampaignSource: (0, _getCookie.default)('lp-lsSource'),
-              utmContent: (0, _getCookie.default)('lp-lsContent')
-            };
-            user = _objectSpread({}, input, {
-              marketingData: marketingData,
-              recaptchaResponseToken: recaptchaResponseToken || ''
-            });
-            _context3.prev = 2;
-            response = fetch(ENDPOINT, {
-              method: 'POST',
-              headers: {
-                'x-api-key': API_KEY,
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-              },
-              body: JSON.stringify(user)
-            });
+const postRequestMock = async (isSuccess, delay) => {
+  const sleep = m => new Promise(r => setTimeout(r, m));
 
-            if (response.ok) {
-              _context3.next = 15;
-              break;
-            }
+  await sleep(delay);
 
-            _context3.prev = 5;
-            _context3.next = 8;
-            return response.json();
+  if (isSuccess) {
+    return {
+      "accountId": "12345",
+      "zone": "z1",
+      "emailAddress": "mock@mock.com"
+    };
+  } else {
+    throw 'Mock Error';
+  }
+};
 
-          case 8:
-            _parsed = _context3.sent;
-
-            if (typeof _parsed.code !== 'undefined' && _parsed.code === 'PROHIBITED_EMAIL_DOMAIN') {
-              errorMessage = _parsed.description;
-            }
-
-            _context3.next = 14;
-            break;
-
-          case 12:
-            _context3.prev = 12;
-            _context3.t0 = _context3["catch"](5);
-
-          case 14:
-            throw new Error('Fetch error:', response.statusText);
-
-          case 15:
-            _context3.next = 17;
-            return response.json();
-
-          case 17:
-            parsed = _context3.sent;
-            parsed.emailAddress = input.emailAddress;
-            return _context3.abrupt("return", parsed);
-
-          case 22:
-            _context3.prev = 22;
-            _context3.t1 = _context3["catch"](2);
-            throw _context3.t1;
-
-          case 25:
-          case "end":
-            return _context3.stop();
-        }
-      }
-    }, _callee3, null, [[2, 22], [5, 12]]);
-  }));
-
-  return function postRequest(_x) {
-    return _ref3.apply(this, arguments);
-  };
-}();
-
-var postRequestMock = /*#__PURE__*/function () {
-  var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(isSuccess, delay) {
-    var sleep;
-    return regeneratorRuntime.wrap(function _callee4$(_context4) {
-      while (1) {
-        switch (_context4.prev = _context4.next) {
-          case 0:
-            sleep = function sleep(m) {
-              return new Promise(function (r) {
-                return setTimeout(r, m);
-              });
-            };
-
-            _context4.next = 3;
-            return sleep(delay);
-
-          case 3:
-            if (!isSuccess) {
-              _context4.next = 7;
-              break;
-            }
-
-            return _context4.abrupt("return", {
-              "accountId": "12345",
-              "zone": "z1",
-              "emailAddress": "mock@mock.com"
-            });
-
-          case 7:
-            throw 'Mock Error';
-
-          case 8:
-          case "end":
-            return _context4.stop();
-        }
-      }
-    }, _callee4);
-  }));
-
-  return function postRequestMock(_x2, _x3) {
-    return _ref4.apply(this, arguments);
-  };
-}();
-
-var setView = function setView(viewName) {
+const setView = viewName => {
   switch (viewName) {
     case 'form':
-      qs('#registerWrapper').style.display = 'block';
-      qs('#videoWrapper').style.display = 'none';
-      qs('#confirmationWrapper').style.display = 'none';
+      qs('#registerView').style.display = 'block';
+      qs('#videoView').style.display = 'none';
+      qs('#confirmationView').style.display = 'none';
       break;
 
     case 'video':
-      qs('#registerWrapper').style.display = 'none';
-      qs('#videoWrapper').style.display = 'block';
-      qs('#confirmationWrapper').style.display = 'none';
+      qs('#registerView').style.display = 'none';
+      qs('#videoView').style.display = 'block';
+      qs('#confirmationView').style.display = 'none';
       player.setCurrentTime(0);
       player.play();
       break;
 
     case 'confirm':
-      qs('#registerWrapper').style.display = 'none';
-      qs('#videoWrapper').style.display = 'none';
-      qs('#confirmationWrapper').style.display = 'block';
+      qs('#registerView').style.display = 'none';
+      qs('#videoView').style.display = 'none';
+      qs('#confirmationView').style.display = 'block';
       break;
 
     default:
-      qs('#registerWrapper').style.display = 'block';
-      qs('#videoWrapper').style.display = 'none';
-      qs('#confirmationWrapper').style.display = 'none';
+      qs('#registerView').style.display = 'block';
+      qs('#videoView').style.display = 'none';
+      qs('#confirmationView').style.display = 'none';
   }
 };
 
@@ -462,15 +454,15 @@ function attemptConfirmationTransition() {
 } // Hook up events
 
 
-qs('#registerButton').onclick = function () {
+qs('#registerButton').onclick = () => {
   submit();
 };
 
-qs('#super-secret').onclick = function () {
+qs('#super-secret').onclick = () => {
   secretClicks++;
   if (secretClicks >= 13) console.log('Activated!');
 };
-},{"@hapi/joi":"node_modules/@hapi/joi/dist/joi-browser.min.js","./getCookie":"src/getCookie.js"}],"../../.nvm/versions/node/v12.16.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"@hapi/joi":"node_modules/@hapi/joi/dist/joi-browser.min.js","./getCookie":"src/getCookie.js","joi-password-complexity":"node_modules/joi-password-complexity/lib/index.js"}],"../../.nvm/versions/node/v12.16.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -498,7 +490,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63337" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58692" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
