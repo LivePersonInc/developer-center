@@ -141,8 +141,10 @@ pre code {
   border-right: solid 1px #fff;
   padding: 21px 25.5px 21px 23px;
   vertical-align: inherit;
-  border-bottom: 1px solid var(--navy-light-gray);
+  border-bottom: 1px solid var(--navy-lighter-gray);
 }
+
+
 
 .post-content table>thead>tr>th {
   background-color: var(--lightest-gray);
@@ -153,9 +155,11 @@ pre code {
   font-size: 12px;
   padding: 14px 22px;
   border-bottom: 1px solid var(--navy-light-gray) !important;
-
 }
 
+table tbody tr:last-child {
+  border-bottom: 1px solid var(--navy-mid-gray) !important;
+}
 
 
 @media screen and (max-width:425px) {
