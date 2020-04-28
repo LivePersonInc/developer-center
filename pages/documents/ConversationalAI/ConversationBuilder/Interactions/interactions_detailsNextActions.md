@@ -55,9 +55,9 @@ Use the guided Add Rule/Edit Rule dialog to:
 
 If an interaction has multiple rules, they are evaluated in the following order:
 
-1. Rules with a "Response Intent" match type
-2. Rules with any other match type except "No Match"
-3. A rule with a "No Match" match type. This is always evaluated last.
+1. Rules with a "Response Intent" match type are evaluated first.
+2. Rules with any other match type except "No Match" are evaluated next.
+3. A rule with a "No Match" match type is always evaluated last.
 
 Within the above confines, the rules are then evaluated in the order they are listed.
 
