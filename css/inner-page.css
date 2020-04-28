@@ -377,8 +377,8 @@ ul#mysiderbar li {
 }
 
 .innerlink {
-  color: #4a4a4a;
-  font-size: 13px;
+  color: var(--dark-gray);
+  font-size: 12px;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
 
@@ -473,6 +473,10 @@ ul.mysidebar.nav li.activepage a:hover {
   color: var(--darker-gray);
 }
 
+.innerfolder>ul>.innerfolder>a {
+  font-weight: normal !important;
+  font-size: 12px;
+}
 
 
 
