@@ -358,13 +358,13 @@ const validate = async () => {
 
 const postRequest = async input => {
   const marketingData = {
-    leadSource: (0, _getCookie.default)('lp-leadSource'),
-    referringUrl: (0, _getCookie.default)('lp-lsRef'),
-    utmCampaignId: (0, _getCookie.default)('lp-lsCampaign'),
-    utmCampaignMedium: (0, _getCookie.default)('lp-lsMedium'),
-    utmCampaignSearchKeywords: (0, _getCookie.default)('lp-lsTerms'),
-    utmCampaignSource: (0, _getCookie.default)('lp-lsSource'),
-    utmContent: (0, _getCookie.default)('lp-lsContent')
+    leadSource: (0, _getCookie.default)('lp-leadSource') || '',
+    referringUrl: (0, _getCookie.default)('lp-lsRef') || '',
+    utmCampaignId: (0, _getCookie.default)('lp-lsCampaign') || '',
+    utmCampaignMedium: (0, _getCookie.default)('lp-lsMedium') || '',
+    utmCampaignSearchKeywords: (0, _getCookie.default)('lp-lsTerms') || '',
+    utmCampaignSource: (0, _getCookie.default)('lp-lsSource') || '',
+    utmContent: (0, _getCookie.default)('lp-lsContent') || ''
   };
 
   const user = _objectSpread({}, input, {
@@ -372,10 +372,11 @@ const postRequest = async input => {
     recaptchaResponseToken: recaptchaResponseToken || ''
   });
 
+  console.log(user);
+
   try {
     const response = fetch(ENDPOINT, {
       method: 'POST',
-      mode: 'no-cors',
       headers: {
         'x-api-key': API_KEY,
         'Content-Type': 'application/json',
