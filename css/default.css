@@ -39,19 +39,41 @@ a:focus {
     z-index: 100;
     display: flex;
     padding-top: 22px;
-    position: sticky;
     background-color: white;
-    border-bottom: 1px solid #DADBE6;
+    border-bottom: 1px solid var(--navy-lighter-gray);
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
 }
 
 .scroll {
-    box-shadow: 0px 4px 8px #DADBE5;
+    box-shadow: 0px 4px 8px var(--navy-lighter-gray);
 }
 
 #logoHeader {
     flex: 1;
+    display: flex;
     padding-top: 5px;
+    width: 20%;
+    margin-right: 2rem;
     padding-left: 2rem;
+    max-width: 36.5rem;
+    min-width: 16rem;
+}
+
+.sitelogo {
+    padding-bottom: 5px;
+}
+
+.devLabel {
+    flex-shrink: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.008em;
+    color: var(--navy);
 }
 
 #logoImg {
@@ -115,12 +137,6 @@ code pre {
     display: none
 }
 
-.defaultsidebar {
-    background-color: var(--darker-gray);
-    display: flex;
-    flex-direction: column
-}
-
 .defaultcontent {
     margin-bottom: 50px;
     flex-direction: column;
@@ -134,7 +150,7 @@ code pre {
 
 .defaultfooter span {
     display: flex;
-    justify-content: center;
+    margin: 0 auto;
     font-size: 14px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
@@ -144,6 +160,7 @@ code pre {
 }
 
 .defaultwrapper {
+    margin-top: 90px;
     display: flex;
 }
 
@@ -164,40 +181,35 @@ ul.mysidebar.nav {
     width: 100%
 }
 
-ul.mysidebar.nav>li:first-of-type {
-    margin-top: 15px
-}
 
 .sidebartop {
     display: flex;
     flex-direction: column;
     height: 150px;
     width: 100%;
-    background-color: #162036;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0
+    background-color: var(--white);
 }
 
 .defaultsidebar {
-    background-color: #3d4558;
+    background-color: var(--white);
     display: flex;
+    padding-top: 40px;
     flex-direction: column;
-    flex:1;
+    flex: 1;
 }
 
 .defaultcontent {
     display: flex;
+    margin-left: 6rem;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
-    flex:3;
+    flex: 3;
 }
 
 .defaultfooter {
     display: flex;
-    justify-content: center;
     background-color: var(--lighter-gray);
-    color: #463E36;
+    color: var(--darker-gray);
     margin-bottom: -25px;
 }
 
@@ -211,8 +223,12 @@ ul.mysidebar.nav>li:first-of-type {
 }
 
 .activepage {
-    color: #90a6e6 !important;
+    color: var(--orange) !important;
     font-weight: 500
+}
+
+.activepage:hover {
+    color: var(--hover-orange) !important;
 }
 
 .codebtn {
@@ -265,7 +281,7 @@ ul.mysidebar.nav>li:first-of-type {
 }
 
 .darken code span::selection {
-    background-color: cornflowerblue
+    background-color: var(--sky-blue);
 }
 
 .darken .nightbtn {
@@ -315,13 +331,13 @@ ul.mysidebar.nav>li:first-of-type {
 
 #aa-search-input {
     border-radius: 25px;
-    border: 1px solid #A39C96;
+    border: 1px solid var(--mid-gray);
     background-color: white;
-    width: 100%;
+    width: 80%;
     font-size: 18px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding: 10px;
-    border-bottom: 1px solid #DADBE6;
+    border-bottom: 1px solid var(--navy-lighter-gray);
     padding-left: 30px;
     line-height: 3px;
 }
@@ -501,12 +517,13 @@ table tbody td img {
 }
 
 .important {
-    border-left-color: var(--border-blue-important);
+    border-left-color: var(--sky-blue);
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
+
     border-left-width: 4px;
     border-left-style: solid;
-    background-color: var(--light-blue-notification);
+    background-color: var(--lighter-sky-blue);
     font-size: 14px;
     line-height: 1.71;
     color: var(--navy);
@@ -514,16 +531,37 @@ table tbody td img {
     padding-left: 15px
 }
 
-.important::before {
-    content: "\f06a";
-    color: var(--border-blue-important);
+.beforeImportant {
+    content: "\\f05a";
+    border-radius: 4px 0px 0px 4px;
+    color: var(--sky-blue);
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 18px;
     font-weight: 900;
-    margin-right: 5px;
+    margin: 0px 10px 10px 0px;
+
     position: relative;
-    top: 1px
+    top: 2px;
+}
+
+.innerWrapperAlertIcons {
+    float: left;
+    margin-bottom: 40px;
+}
+
+.beforeNotice {
+    content: "\\f06a";
+    border-radius: 4px 0px 0px 4px;
+
+    color: var(--red) !important;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+    font-weight: 900;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
 }
 
 .important p:not(:first-child) {
@@ -531,30 +569,20 @@ table tbody td img {
 }
 
 .notice {
-    border-left-color: var(--notice-red);
+    border-left-color: var(--red);
+    border-radius: 4px;
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
     border-left-width: 4px;
     border-left-style: solid;
-    background-color: var(--background-notice-red);
+    background-color: var(--lighter-red);
     font-size: 14px;
     line-height: 1.71;
     color: var(--navy);
     font-family: "Roboto", Arial, Helvetica, sans-serif;
-    padding-left: 15px
+    padding-left: 15px;
 }
 
-.notice::before {
-    content: "\f06e";
-    color: var(--notice-red);
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 18px;
-    font-weight: 900;
-    margin-right: 10px;
-    position: relative;
-    top: 2px
-}
 
 .notice p:not(:first-child) {
     margin-left: -25px
@@ -756,7 +784,7 @@ a.loginText {
 }
 
 .innerfolder>a {
-    font-size: 13px !important;
+    font-size: 12px !important;
     font-family: "Roboto", Arial, Helvetica, sans-serif !important;
     display: flex;
     margin-left: -4px
@@ -824,8 +852,9 @@ a.loginText {
 }
 
 .subfolder>a {
-    color: #f2f1f2 !important;
-    font-size: 13px !important;
+    color: var(--dark-gray) !important;
+    font-size: 12px !important;
+    font-weight: normal;
     font-family: "Roboto", Arial, Helvetica, sans-serif !important
 }
 
@@ -837,11 +866,11 @@ a.loginText {
 .homeitem>a {
     font-family: "Roboto";
     font-size: 16px;
-    color: #f2f1f2 !important
+    color: var(--dark-gray) !important
 }
 
 .homeitem>a:hover {
-    color: #f2f1f2 !important
+    color: var(--darker-gray) !important
 }
 
 .language-json,
@@ -892,15 +921,6 @@ a.loginText {
     align-items: center
 }
 
-/* .fa-moon:before {
-    content: "\f186";
-    color: var(--grey-button-icons);
-}
-
-.fa-copy:before {
-    content: "\f0c5";
-    color: var(--grey-button-icons);
-} */
 
 .language-objc:before {
     content: "OBJECTIVE-C"
@@ -1033,11 +1053,13 @@ a.loginText {
 .defaultbutton div:hover {
     color: #fff
 }
-#jumpto{
-    flex:1
+
+#jumpto {
+    flex: 1
 }
+
 .anchorlist {
-    visibility: hidden;
+    position: fixed !important;
     padding: 0 20px;
 }
 
@@ -1050,12 +1072,14 @@ a.loginText {
 }
 
 .anchorlist a {
-    color: var(--secondary-black);
+    /* color: var(--secondary-black); */
 
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 12px;
     display: flex;
-    color: #2D2F52;
+    color: var(--navy);
+    font-weight: bold;
+
     text-align: right;
 }
 
@@ -1077,19 +1101,9 @@ a.loginText {
 }
 
 .anchorlist li a {
-    color: var(--electric-blue) !important
+    color: var(--dark-gray) !important;
     text-align: right;
 
-}
-
-.anchorlist li:before {
-    content: "\f0c1";
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    font-weight: 900;
-    margin-right: 10px;
-    font-size: 13px;
-    opacity: .25
 }
 
 a.anchoritem {
@@ -1102,8 +1116,8 @@ a.anchoritem {
 }
 
 .sidebarbutton {
-    color: #f2f1f2;
-    background: var(--darker-gray);
+    color: var(--dark-gray);
+    /* background: var(--darker-gray); */
     width: 20px;
     height: 20px;
     border: 0;
@@ -1154,17 +1168,8 @@ a.anchoritem {
     color: #2973b7
 }
 
-.mysidebar::-webkit-scrollbar-track {
-    background-color: var(--darker-gray)
-}
-
-.mysidebar::-webkit-scrollbar {
-    width: 10px;
-    background-color: var(--darker-gray)
-}
-
 .mysidebar::-webkit-scrollbar-thumb {
-    background-color: #53576e
+    background-color: var(--darker-gray)
 }
 
 .lesstop {
