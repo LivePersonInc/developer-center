@@ -51,14 +51,19 @@ Use the guided Add Rule/Edit Rule dialog to:
 3. Store data in a [variable or slot]((conversation-builder-variables-slots.html)). (Multiple variables can be added to a rule, but only a single slot can be added to a rule. A rule can fill only a single slot because it evaluates only a single element in the consumer's utterance against the defined condition.)
 4. Specify the next step in the dialog flow.
 
-#### Multiple rules
+#### Multiple rules (order of execution)
 
-If an interaction has multiple rules, they are executed in the order they are listed.
+If an interaction has multiple rules, they are evaluated in the following order:
 
-To reorder rules, move the cursor over the area to the left of the rule, and click the Up or Down arrow that appears.
+1. Rules with a "Response Intent" match type
+2. Rules with any other match type except "No Match"
+3. A rule with a "No Match" match type. This is always evaluated last.
+
+Within the above confines, the rules are then evaluated in the order they are listed. To reorder rules, move the cursor over the area to the left of the rule, and click the Up or Down arrow that appears.
 
 <img style="width:500px" class="fancyimage" src="img/ConvoBuilder/interactions_rule2.png">
 
+For information on the match types mentioned above, see *Conditions*, which is discussed next.
 
 ### Conditions
 
@@ -76,7 +81,7 @@ The question contains a single rule, which is this:
 
 In the rule, there's a condition that determines if the user's response matches the RegEx for a 6-digit number. If it does, the user's response is stored in a [slot](conversation-builder-variables-slots.html#slots), and the dialog flow continues to the next interaction.
 
-Like in the example above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following methods:
+Like in the example above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following match types:
 
 * **Response Intent**: This triggers the Next Step action when the user input matches the selected [intent](intent-builder-intents.html). Make sure to connect your domain and populate it with intents, so they'll be available for conditions. For an example of usage, see [here](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents).
 * **Regular Expression**: This triggers the Next Step action when the user input matches the RegEx that you specify. All standard [Regex rules](http://www.regexlib.com) apply.
