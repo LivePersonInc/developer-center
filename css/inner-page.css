@@ -102,8 +102,8 @@ h4 code.highlighter-rouge {
 }
 
 .post-content table {
-  width: 130%;
-  max-width: 130%;
+  width: 100%;
+  max-width: 100%;
 }
 
 .post-content table tbody tr td ul {
@@ -141,8 +141,10 @@ pre code {
   border-right: solid 1px #fff;
   padding: 21px 25.5px 21px 23px;
   vertical-align: inherit;
-  border-bottom: 1px solid var(--navy-light-gray);
+  border-bottom: 1px solid var(--navy-lighter-gray);
 }
+
+
 
 .post-content table>thead>tr>th {
   background-color: var(--lightest-gray);
@@ -153,9 +155,11 @@ pre code {
   font-size: 12px;
   padding: 14px 22px;
   border-bottom: 1px solid var(--navy-light-gray) !important;
-
 }
 
+table tbody tr:last-child {
+  border-bottom: 1px solid var(--navy-mid-gray) !important;
+}
 
 
 @media screen and (max-width:425px) {
@@ -350,9 +354,8 @@ div#toc ul li ul li ul {
 /*left nav bar */
 ul.mysidebar.nav {
   text-decoration: none;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 150px;
+  width: 20%;
+  position: fixed;
   height: 68vh;
   overflow-y: auto;
   overflow-x: hidden;
@@ -377,13 +380,11 @@ ul#mysiderbar li {
 }
 
 .innerlink {
-  color: #4a4a4a;
-  font-size: 13px;
+  color: var(--dark-gray);
+  font-size: 12px;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
-  font-weight: 300;
 }
 
-}
 
 .mysidebar>li:not(.folder) {
   font-size: 1.1em;
@@ -391,16 +392,17 @@ ul#mysiderbar li {
 }
 
 .pageitem>a {
-  color: #f2f1f2;
+  color: var(--dark-gray);
+  font-size: 12px;
 }
 
 .innerpageitem>a {
-  color: #f2f1f2;
+  color: var(--dark-gray);
 
 }
 
 .innerfolder>a {
-  color: #f2f1f2;
+  color: var(--dark-gray);
 }
 
 .pageitem {
@@ -420,7 +422,8 @@ ul.mysidebar.nav .topfolder>a {
   display: inline-block;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: #f2f1f2;
+  color: var(--dark-gray);
+  font-weight: bold;
   overflow-wrap: break-word;
 }
 
@@ -436,7 +439,7 @@ ul.mysidebar li ul li {
 }
 
 ul.mysidebar.nav li a.active {
-  color: #f2f1f2;
+  color: var(--dark-gray);
   font-weight: 500;
 }
 
@@ -454,27 +457,35 @@ ul.mysidebar.nav li.activepage {
 }
 
 ul.mysidebar.nav li.activepage a {
-  background-color: inherit;
+  color: var(--orange) !important;
   font-weight: bold;
-  color: #162036;
+}
+
+ul.mysidebar.nav li.activepage a:hover {
+  color: var(--hover-orange) !important;
 }
 
 .mysidebar.nav li.folder>a {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: bold;
   margin-top: -1px;
 }
 
 .mysidebar.nav li.folder>a:hover {
   background-color: initial !important;
+  color: var(--darker-gray);
 }
 
-.mysidebar.nav li.folder>a:focus {
-  background-color: #3d4558 !important;
+.innerfolder>ul>.innerfolder>a {
+  font-weight: normal !important;
+  font-size: 12px;
 }
+
+
 
 .defaultsidebarexplorer .mysidebar.nav li.folder>a:focus {
   background-color: #3d4558 !important;
+
 }
 
 .defaultsidebarexplorer .mysidebar.nav li.folder>a:hover {

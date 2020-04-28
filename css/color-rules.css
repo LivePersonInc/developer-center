@@ -10,23 +10,25 @@
     --lighter-gray: #F8F5F3;
     --lightest-gray: #F5F5FA;
 
+    --white: #ffffff;
     --orange: #FE5E00;
     --hover-orange: #B84400;
-    --notice-red: #eb5757;
-    --background-notice-red: #fff5f5;
+    --red: #eb5757;
+    --lighter-red: #fff5f5;
 
 
     --electric-blue: #005EF4;
     --hover-electric-blue: #003FA3;
-    --light-blue-notification: #EDF5FA;
-    --border-blue-important: #2D9CDB;
+    --sky-blue: #2D9CDB;
+    --lighter-sky-blue: #EDF5FA;
+
     --grey-button-icons: #4e5066;
 
 
     --navy: #090C43;
     --dark-navy: #03041A;
     --navy-lightest-gray: #F5F5FA;
-    --navy-lighter-gray: #DADBE6;
+    --navy-lighter-gray: #DADBE5;
     --navy-light-gray: #818299;
     --navy-mid-gray: #5F617A;
     --navy-gray: #2D2F52;
