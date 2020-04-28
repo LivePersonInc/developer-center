@@ -331,12 +331,12 @@ const validate = async () => {
   const schema = _joi.default.object({
     firstName: _joi.default.string().alphanum().required(),
     lastName: _joi.default.string().alphanum().required(),
+    region: _joi.default.string().required(),
     email: _joi.default.string().email({
       tlds: {
         allow: false
       }
     }).invalid('+'),
-    region: _joi.default.string().required(),
     password: (0, _joiPasswordComplexity.default)()
   });
 
@@ -375,6 +375,7 @@ const postRequest = async input => {
   try {
     const response = fetch(ENDPOINT, {
       method: 'POST',
+      mode: 'no-cors',
       headers: {
         'x-api-key': API_KEY,
         'Content-Type': 'application/json',
