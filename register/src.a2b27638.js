@@ -172,21 +172,11 @@ var errorMessage = '';
 var player = new Vimeo.Player(qs('#vid-container iframe'));
 var submitSuccess = false;
 var videoComplete = false;
-var secretClicks = 0; // Hook up events
-
-qs('#registerButton').onclick = function () {
-  submit();
-};
-
-qs('#super-secret').onclick = function () {
-  secretClicks++;
-  if (secretClicks >= 13) console.log('Activated!');
-};
+var secretClicks = 0;
 /*$('#captchaContainer').on('click', 'input', function (event) {
   radioValue = $('input:checked').val()
 })*/
 // Detect when the Vimeo player has finished the video.
-
 
 player.on('ended', function () {
   videoComplete = true;
@@ -469,7 +459,17 @@ function attemptConfirmationTransition() {
   if (submitSuccess === true && videoComplete === true) {
     setView('confirm');
   }
-}
+} // Hook up events
+
+
+qs('#registerButton').onclick = function () {
+  submit();
+};
+
+qs('#super-secret').onclick = function () {
+  secretClicks++;
+  if (secretClicks >= 13) console.log('Activated!');
+};
 },{"@hapi/joi":"node_modules/@hapi/joi/dist/joi-browser.min.js","./getCookie":"src/getCookie.js"}],"../../.nvm/versions/node/v12.16.1/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
