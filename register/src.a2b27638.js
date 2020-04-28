@@ -284,11 +284,11 @@ player.on('ended', function () {
   attemptConfirmationTransition();
 });
 
-const recaptchaCb = token => {
+window.recaptchaCb = token => {
   recaptchaResponseToken = token;
 };
 
-const recaptchaExpiredCb = () => {};
+window.recaptchaExpiredCb = () => {};
 
 const submit = async () => {
   // Track "doneness" so that we only kick off the video flow if the API doesn't return right away with an error.
@@ -321,7 +321,8 @@ const submit = async () => {
     console.trace(err);
     submitSuccess = false;
     if (window.hj) window.hj('formSubmitFailed');
-    if (errorMessage !== '') qs('#errorOutput').textContent = errorMessage;
+    if (errorMessage !== '') errorMessage = 'Unknown error from server, please try again.';
+    qs('#errorOutput').textContent = errorMessage;
     setView('form');
   }
 };
@@ -490,7 +491,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58692" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50778" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
