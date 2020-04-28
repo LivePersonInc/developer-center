@@ -59,7 +59,9 @@ If an interaction has multiple rules, they are evaluated in the following order:
 2. Rules with any other match type except "No Match"
 3. A rule with a "No Match" match type. This is always evaluated last.
 
-Within the above confines, the rules are then evaluated in the order they are listed. To reorder rules, move the cursor over the area to the left of the rule, and click the Up or Down arrow that appears.
+Within the above confines, the rules are then evaluated in the order they are listed.
+
+To reorder rules, move the cursor over the area to the left of the rule, and click the Up or Down arrow that appears.
 
 <img style="width:500px" class="fancyimage" src="img/ConvoBuilder/interactions_rule2.png">
 
