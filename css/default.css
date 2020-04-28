@@ -39,9 +39,11 @@ a:focus {
     z-index: 100;
     display: flex;
     padding-top: 22px;
-    position: sticky;
     background-color: white;
     border-bottom: 1px solid var(--navy-lighter-gray);
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
 }
 
 .scroll {
@@ -158,6 +160,7 @@ code pre {
 }
 
 .defaultwrapper {
+    margin-top: 90px;
     display: flex;
 }
 
@@ -178,9 +181,6 @@ ul.mysidebar.nav {
     width: 100%
 }
 
-ul.mysidebar.nav>li:first-of-type {
-    margin-top: 15px
-}
 
 .sidebartop {
     display: flex;
@@ -193,6 +193,7 @@ ul.mysidebar.nav>li:first-of-type {
 .defaultsidebar {
     background-color: var(--white);
     display: flex;
+    padding-top: 40px;
     flex-direction: column;
     flex: 1;
 }
@@ -1175,17 +1176,8 @@ a.anchoritem {
     color: #2973b7
 }
 
-.mysidebar::-webkit-scrollbar-track {
-    background-color: var(--darker-gray)
-}
-
-.mysidebar::-webkit-scrollbar {
-    width: 10px;
-    background-color: var(--darker-gray)
-}
-
 .mysidebar::-webkit-scrollbar-thumb {
-    background-color: #53576e
+    background-color: var(--darker-gray)
 }
 
 .lesstop {

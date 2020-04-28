@@ -350,9 +350,8 @@ div#toc ul li ul li ul {
 /*left nav bar */
 ul.mysidebar.nav {
   text-decoration: none;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 150px;
+  width: 20%;
+  position: fixed;
   height: 68vh;
   overflow-y: auto;
   overflow-x: hidden;
