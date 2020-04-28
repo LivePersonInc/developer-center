@@ -174,13 +174,13 @@ ul.mysidebar.nav>li:first-of-type {
     height: 150px;
     width: 100%;
     background-color: #162036;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0
+    /* position: -webkit-sticky;
+    position: sticky; */
+
 }
 
 .defaultsidebar {
-    background-color: #3d4558;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -837,7 +837,7 @@ a.loginText {
 }
 
 .subfolder>a {
-    color: #f2f1f2 !important;
+    color: var(--dark-gray) !important;
     font-size: 13px !important;
     font-family: "Roboto", Arial, Helvetica, sans-serif !important
 }
@@ -850,11 +850,11 @@ a.loginText {
 .homeitem>a {
     font-family: "Roboto";
     font-size: 16px;
-    color: #f2f1f2 !important
+    color: var(--dark-gray) !important
 }
 
 .homeitem>a:hover {
-    color: #f2f1f2 !important
+    color: var(--darker-gray) !important
 }
 
 .language-json,
@@ -905,15 +905,6 @@ a.loginText {
     align-items: center
 }
 
-/* .fa-moon:before {
-    content: "\f186";
-    color: var(--grey-button-icons);
-}
-
-.fa-copy:before {
-    content: "\f0c5";
-    color: var(--grey-button-icons);
-} */
 
 .language-objc:before {
     content: "OBJECTIVE-C"
@@ -1116,8 +1107,8 @@ a.anchoritem {
 }
 
 .sidebarbutton {
-    color: #f2f1f2;
-    background: var(--darker-gray);
+    color: var(--dark-gray);
+    /* background: var(--darker-gray); */
     width: 20px;
     height: 20px;
     border: 0;

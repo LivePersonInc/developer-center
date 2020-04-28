@@ -383,7 +383,6 @@ ul#mysiderbar li {
   font-weight: 300;
 }
 
-}
 
 .mysidebar>li:not(.folder) {
   font-size: 1.1em;
@@ -391,16 +390,16 @@ ul#mysiderbar li {
 }
 
 .pageitem>a {
-  color: #f2f1f2;
+  color: var(--dark-gray);
 }
 
 .innerpageitem>a {
-  color: #f2f1f2;
+  color: var(--dark-gray);
 
 }
 
 .innerfolder>a {
-  color: #f2f1f2;
+  color: var(--dark-gray);
 }
 
 .pageitem {
@@ -420,7 +419,8 @@ ul.mysidebar.nav .topfolder>a {
   display: inline-block;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: #f2f1f2;
+  color: var(--dark-gray);
+  font-weight: bold;
   overflow-wrap: break-word;
 }
 
@@ -436,7 +436,7 @@ ul.mysidebar li ul li {
 }
 
 ul.mysidebar.nav li a.active {
-  color: #f2f1f2;
+  color: var(--dark-gray);
   font-weight: 500;
 }
 
@@ -461,7 +461,7 @@ ul.mysidebar.nav li.activepage a {
 
 .mysidebar.nav li.folder>a {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: bold;
   margin-top: -1px;
 }
 
@@ -469,9 +469,7 @@ ul.mysidebar.nav li.activepage a {
   background-color: initial !important;
 }
 
-.mysidebar.nav li.folder>a:focus {
-  background-color: #3d4558 !important;
-}
+
 
 .defaultsidebarexplorer .mysidebar.nav li.folder>a:focus {
   background-color: #3d4558 !important;
