@@ -29,8 +29,8 @@ The Conversation Builder application is the primary workspace for designing a bo
 A bot consists of one or more [dialogs](conversation-builder-dialogs-dialog-basics.html) that each contain one or more [interactions](conversation-builder-interactions-interaction-basics.html). In the image above of the Dialogs view in Conversation Builder, note the following:
 
 * The open "hello world" bot has 6 dialogs. These are listed in the dialogs panel on the left.
-* The Account Balance dialog contains 6 interactions. These are also listed in the dialogs panel on the left.
-* The Account Balance dialog is currently displayed in the dialog editor in the center of the screen. As such, its name appears in bold in the dialogs panel.
+* The Billing dialog contains 5 interactions. These are also listed in the dialogs panel on the left.
+* The Billing dialog is currently displayed in the dialog editor in the center of the screen. As such, its name appears in bold in the dialogs panel.
 
 {: .important}
 Conversation Builder supports the creation of bots for all the LiveEngage channels. Because a bot simply listens to a piece of text sent from a user, any channel that provides text to LiveEngage can potentially trigger a bot. However, there are channel-specific formats, features and conventions that might not be available for all channels. Please contact your LivePerson account team for information on formats supported for specific channels.
@@ -71,7 +71,13 @@ The menu bar is displayed in the upper-left corner and contains the following op
 
 * **Agent Connectors**: [Deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) the bot to a LiveEngage environment.
 
-* The <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options: **Bot Settings**, **Bot Change History**, **Bot Diff**, **Visualize** and **Bot Analytics**.
+* The <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options: 
+
+    * **Bot Settings**
+    * **Bot Change History**
+    * **Bot Diff**
+    * **Visualize**
+    * **Bot Analytics**
 
 In the upper-right corner, there are a few more options:
 
@@ -79,4 +85,8 @@ In the upper-right corner, there are a few more options:
 
 * **Add Dialog**: Add a dialog to the open bot.
 
-* The <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options: **Bot Logs** (for debugging), **Releases** and **Versions**.
+* The <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options:
+
+    * **Bot Logs** (for debugging)
+    * **Releases**
+    * **Versions**
