@@ -42,7 +42,6 @@ a:focus {
     background-color: white;
     border-bottom: 1px solid var(--navy-lighter-gray);
     position: fixed;
-    overflow: hidden;
     width: 100%;
 }
 
@@ -55,10 +54,10 @@ a:focus {
     display: flex;
     padding-top: 5px;
     width: 20%;
-    margin-right: 8rem;
+    margin-right: 8%;
     padding-left: 2rem;
     max-width: 36.5rem;
-    min-width: 16rem;
+    min-width: 270px;
 }
 
 .sitelogo {
@@ -194,6 +193,8 @@ ul.mysidebar.nav {
     background-color: var(--white);
     display: flex;
     padding-top: 40px;
+    min-width: 230px;
+    margin-right: 3%;
     flex-direction: column;
     flex: 1;
 }
@@ -333,8 +334,8 @@ ul.mysidebar.nav {
     border-radius: 25px;
     border: 1px solid var(--mid-gray);
     background-color: white;
-    width: 60%;
-    min-width: 500px;
+    width: 90%;
+    min-width: 250px;
     font-size: 18px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding: 10px;
