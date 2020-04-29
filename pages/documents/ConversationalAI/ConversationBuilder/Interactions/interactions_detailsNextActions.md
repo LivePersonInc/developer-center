@@ -105,7 +105,7 @@ Like in the example above, when you define a condition (in a rule) in a question
 
     <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/interactions_noMatch2.png">
 
-    Keep in mind the following when using the No Match option:
+    Keep in mind the following when using the "No Match" match type:
 
     * The No Match rule is always the *last* rule to be evaluated regardless of where you place it in the list of rules in the interaction. Therefore, as a best practice, place the No Match rule last in the rule list.
     * You have the option to define a message that is sent before the next step is executed. (See the example in the image above.)
