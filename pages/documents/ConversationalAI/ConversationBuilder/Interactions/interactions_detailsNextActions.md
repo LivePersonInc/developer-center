@@ -110,7 +110,6 @@ Like in the example above, when you define a condition (in a rule) in a question
     * The No Match rule is always the *last* rule to be evaluated regardless of where you place it in the list of rules in the interaction. Therefore, as a best practice, place the No Match rule last in the rule list.
     * You have the option to define a message that is sent before the next step is executed. (See the example in the image above.)
     * [Context switching](conversation-builder-dialogs-dialog-basics.html#context-switching) based on the consumer's utterance doesn't happen when an interaction has a No Match rule. This is because a No Match rule is *always* executed when there isn't a match to an earlier rule in the interaction.
-    * If you add a [slot](conversation-builder-variables-slots.html#slots) in a No Match rule, the conversation will not progress and the fallback response will be sent until that slot is filled.
 
 #### Conditions in integration interactions
 
