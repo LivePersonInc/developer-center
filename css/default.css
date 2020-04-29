@@ -194,7 +194,7 @@ ul.mysidebar.nav {
     display: flex;
     padding-top: 40px;
     min-width: 230px;
-    margin-right: 3%;
+    margin-right: 6%;
     flex-direction: column;
     flex: 1;
 }
