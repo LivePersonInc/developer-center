@@ -77,16 +77,11 @@ The menu bar is displayed in the upper-left corner and contains the following op
     * **Bot Change History**
     * **Bot Diff**
     * **Visualize**
-    * **Bot Analytics**
+    * **Releases**
+    * **Versions**
 
 In the upper-right corner, there are a few more options:
 
-* **Preview**: Test the open bot by previewing a conversation. Start a new session by sending "reset".
+* **Preview**: Test the open bot by previewing a conversation. Start a new session by sending "reset". From here you can also access the bot's logs for debugging purposes.
 
 * **Add Dialog**: Add a dialog to the open bot.
-
-* The <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options:
-
-    * **Bot Logs** (for debugging)
-    * **Releases**
-    * **Versions**
