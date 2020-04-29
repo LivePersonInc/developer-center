@@ -35,15 +35,13 @@ A bot consists of one or more [dialogs](conversation-builder-dialogs-dialog-basi
 {: .important}
 Conversation Builder supports the creation of bots for all the LiveEngage channels. Because a bot simply listens to a piece of text sent from a user, any channel that provides text to LiveEngage can potentially trigger a bot. However, there are channel-specific formats, features and conventions that might not be available for all channels. Please contact your LivePerson account team for information on formats supported for specific channels.
 
-### Dialogs
+### The Dialogs view
 
 When you first open a bot, you are taken to the **Dialogs** view. Use this view to make changes to the bot's [dialogs](conversation-builder-dialogs-dialog-basics.html) and the [interactions](conversation-builder-interactions-interaction-basics.html) within them.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace_dialogEditor.png">
 
-#### The dialogs list
-
-In the left panel on the screen, there's an expandable list of the dialogs in the open bot. The dialogs are displayed vertically and in alphabetical order. You can use the search box to search by dialog or interaction name.
+In the left panel in the Dialogs view, there's an expandable list of the dialogs in the open bot. The dialogs are displayed vertically and in alphabetical order. You can use the search box to search by dialog or interaction name.
 
 <img class="fancyimage" style="width:250px" src="img/ConvoBuilder/botWorkspace_dialogsPanel.png">
 
