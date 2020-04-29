@@ -33,7 +33,7 @@ The parameters in question are `conversationId`, `participantId`. You will need 
 | skill |   A specific skill requested for this chat. | string | |
 | serviceQueue | A ServiceQueue for this chat. | string | Will be ignored if a skill property is passed. Must be supplied with the maxWaitTime property. **LEGACY ONLY**|
 | maxWaitTime   | The number of seconds the visitor can wait for a chat. | number | Must be supplied in conjunction with the serviceQueue property. **LEGACY ONLY**|
-| referrer  | The referrer for this chat. | string | If not supplied, will default to the document.referrer property of the browser. |
+| chatReferrer  | The referrer for this chat. | string | If not supplied, will default to the document.referrer property of the browser. |
 | preChatLines  | An array of strings that should be received by the agent immediately when the chat starts. | array |  |
 | survey |  The result of the Pre-chat survey. | object | |
 | buttonName    | The name of the button clicked. This is used to create a pipeline report. **LEGACY ONLY**| string | Takes preference over invitation. |
@@ -87,7 +87,7 @@ var failedRequest = chat.requestChat({
     preChatLines : [
         "Hello I need support",
         "Can you help me?" ] ,
-    referrer : "https://liveperson.com",
+    chatReferrer : "https://liveperson.com",
     survey : {
         id :2 ,
         question: [
