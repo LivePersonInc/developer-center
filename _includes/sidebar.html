@@ -8,7 +8,7 @@
   {% if forloop.last == true %}
   <hr class="sidebarhr lessbottom" />
   <li class="folder topfolder lowerimage">
-    <a class="highlightlink" href="">{{ category.categoryname }}</a>
+    <a class="highlightlink" href="">  <button class="sidebarbutton"><span></span><span></span></button><span></span> {{ category.categoryname }}</span></a>
     <ul>
       {% for document in category.documents %}
       {% if document.pages %}
