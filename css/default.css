@@ -42,7 +42,6 @@ a:focus {
     background-color: white;
     border-bottom: 1px solid var(--navy-lighter-gray);
     position: fixed;
-    overflow: hidden;
     width: 100%;
 }
 
@@ -55,10 +54,10 @@ a:focus {
     display: flex;
     padding-top: 5px;
     width: 20%;
-    margin-right: 2rem;
+    margin-right: 8%;
     padding-left: 2rem;
     max-width: 36.5rem;
-    min-width: 16rem;
+    min-width: 270px;
 }
 
 .sitelogo {
@@ -88,7 +87,7 @@ a:focus {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    margin-right: 4%;
+    margin-right: 6%;
 }
 
 a #loginHeader {
@@ -194,6 +193,8 @@ ul.mysidebar.nav {
     background-color: var(--white);
     display: flex;
     padding-top: 40px;
+    min-width: 230px;
+    margin-right: 6%;
     flex-direction: column;
     flex: 1;
 }
@@ -333,7 +334,8 @@ ul.mysidebar.nav {
     border-radius: 25px;
     border: 1px solid var(--mid-gray);
     background-color: white;
-    width: 80%;
+    width: 90%;
+    min-width: 250px;
     font-size: 18px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding: 10px;
@@ -547,7 +549,7 @@ table tbody td img {
 
 .innerWrapperAlertIcons {
     float: left;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .beforeNotice {
@@ -628,7 +630,8 @@ table tbody td img {
     margin-top: 24px;
     margin-left: 30px;
     color: #fff;
-    display: flex
+    display: flex;
+
 }
 
 .sidebarbuttons div {
@@ -1061,6 +1064,7 @@ a.loginText {
 .anchorlist {
     position: fixed !important;
     padding: 0 20px;
+    text-align: right;
 }
 
 .anchorlist ul {
@@ -1073,14 +1077,11 @@ a.loginText {
 
 .anchorlist a {
     /* color: var(--secondary-black); */
-
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 12px;
     display: flex;
     color: var(--navy);
     font-weight: bold;
-
-    text-align: right;
 }
 
 .anchorlist .fa {
@@ -1094,6 +1095,7 @@ a.loginText {
 .anchorlist li {
     margin-bottom: 10px;
     display: flex;
+    float: right;
 }
 
 .anchorlist li:last-of-type {
@@ -1137,28 +1139,24 @@ a.anchoritem {
 }
 
 .sidebarbutton span:first-of-type {
-    top: 25%;
-    bottom: 25%;
-    width: 10%;
-    left: 45%
+    border-top: 10px solid transparent;
+    background: white;
+    border-left: 10px solid var(--dark-gray);
+    transform: rotate(-135deg);
+    top: 4px;
+
 }
 
-.sidebarbutton span:last-of-type {
-    left: 25%;
-    right: 25%;
-    height: 10%;
-    top: 45%
+
+
+.clicked span:first-of-type {
+    transform: rotate(-45deg);
+    border-top: 10px solid transparent;
+    background: white;
+    border-left: 10px solid var(--orange);
+    top: 2px;
 }
 
-.clicked span:first-of-type,
-.clicked span:last-of-type {
-    transform: rotate(90deg)
-}
-
-.clicked span:last-of-type {
-    left: 50%;
-    right: 50%
-}
 
 .highlighter-rouge {
     background-color: #f5f5f5;

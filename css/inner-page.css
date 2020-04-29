@@ -355,6 +355,7 @@ div#toc ul li ul li ul {
 ul.mysidebar.nav {
   text-decoration: none;
   width: 20%;
+  min-width: 230px;
   position: fixed;
   height: 68vh;
   overflow-y: auto;
