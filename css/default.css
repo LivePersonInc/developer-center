@@ -1061,6 +1061,7 @@ a.loginText {
 .anchorlist {
     position: fixed !important;
     padding: 0 20px;
+    text-align: right;
 }
 
 .anchorlist ul {
@@ -1073,14 +1074,11 @@ a.loginText {
 
 .anchorlist a {
     /* color: var(--secondary-black); */
-
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 12px;
     display: flex;
     color: var(--navy);
     font-weight: bold;
-
-    text-align: right;
 }
 
 .anchorlist .fa {
@@ -1094,6 +1092,7 @@ a.loginText {
 .anchorlist li {
     margin-bottom: 10px;
     display: flex;
+    float:right;
 }
 
 .anchorlist li:last-of-type {
