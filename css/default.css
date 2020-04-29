@@ -55,7 +55,7 @@ a:focus {
     display: flex;
     padding-top: 5px;
     width: 20%;
-    margin-right: 2rem;
+    margin-right: 8rem;
     padding-left: 2rem;
     max-width: 36.5rem;
     min-width: 16rem;
@@ -88,7 +88,7 @@ a:focus {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    margin-right: 4%;
+    margin-right: 6%;
 }
 
 a #loginHeader {
@@ -333,7 +333,8 @@ ul.mysidebar.nav {
     border-radius: 25px;
     border: 1px solid var(--mid-gray);
     background-color: white;
-    width: 80%;
+    width: 60%;
+    min-width: 500px;
     font-size: 18px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding: 10px;
@@ -547,7 +548,7 @@ table tbody td img {
 
 .innerWrapperAlertIcons {
     float: left;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .beforeNotice {
@@ -1092,7 +1093,7 @@ a.loginText {
 .anchorlist li {
     margin-bottom: 10px;
     display: flex;
-    float:right;
+    float: right;
 }
 
 .anchorlist li:last-of-type {
