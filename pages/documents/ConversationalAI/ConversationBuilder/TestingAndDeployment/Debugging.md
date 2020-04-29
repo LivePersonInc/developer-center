@@ -28,7 +28,7 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 
 **To display the log for the conversation that occurred in the Preview window**
 
-- In the upper-right corner, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Bot Logs**.
+* In the upper-right corner of the Preview window, click **Bot Logs**. This toggles the display to show the Bot Logs window.
     
     For ease of use during bot development, by default, the user ID for the consumer in the conversation in the Preview window is entered in the User Id input box, and the associated logs are automatically displayed.
 
@@ -41,9 +41,10 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
     <img style="width:250px" src="img/ConvoBuilder/debug_displayID.png">
 
 2. Copy the ID.
-3. Return to Conversation Builder, open a bot, and click <img style="width:30px" src="img/ConvoBuilder/icon_debug.png"> in the lower-right corner to open the Bot Logs window.
-4. Enter or paste the ID into the **User ID** input box.
-5. Click <img style="width:30px" src="img/ConvoBuilder/icon_refresh.png">.
+3. Return to Conversation Builder, open a bot, and click **Preview** in the upper-right corner.
+4. In the upper-right corner of the Preview window, click **Bot Logs**.
+5. Enter or paste the ID into the **User ID** input box.
+6. Click <img style="width:30px" src="img/ConvoBuilder/icon_refresh.png">.
 
 ### Printing the most recent user message
 
