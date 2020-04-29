@@ -630,7 +630,8 @@ table tbody td img {
     margin-top: 24px;
     margin-left: 30px;
     color: #fff;
-    display: flex
+    display: flex;
+
 }
 
 .sidebarbuttons div {
@@ -1138,28 +1139,24 @@ a.anchoritem {
 }
 
 .sidebarbutton span:first-of-type {
-    top: 25%;
-    bottom: 25%;
-    width: 10%;
-    left: 45%
+    border-top: 10px solid transparent;
+    background: white;
+    border-left: 10px solid var(--dark-gray);
+    transform: rotate(-135deg);
+    top: 4px;
+
 }
 
-.sidebarbutton span:last-of-type {
-    left: 25%;
-    right: 25%;
-    height: 10%;
-    top: 45%
+
+
+.clicked span:first-of-type {
+    transform: rotate(-45deg);
+    border-top: 10px solid transparent;
+    background: white;
+    border-left: 10px solid var(--orange);
+    top: 2px;
 }
 
-.clicked span:first-of-type,
-.clicked span:last-of-type {
-    transform: rotate(90deg)
-}
-
-.clicked span:last-of-type {
-    left: 50%;
-    right: 50%
-}
 
 .highlighter-rouge {
     background-color: #f5f5f5;
