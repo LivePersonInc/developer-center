@@ -394,6 +394,7 @@ function sidebarClick() {
 				$(".topfolder > .active > button").removeClass("clicked");
 				$(this).removeClass("active");
 				$(this).parent().removeClass("active");
+
 				//otherwise, open it
 			} else {
 				$(".innerfolder > .active > button").removeClass("clicked");
