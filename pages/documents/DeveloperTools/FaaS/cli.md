@@ -48,14 +48,6 @@ If you have any suggestions or improvements please let us know under [Issues](ht
     <td>Performs the logout.</td>
   </tr>
   <tr>
-    <td>Deploy</td>
-    <td>Deploys a function on the LivePerson functions platform. If the passed function is already deployed, it will be redeployed.</td>
-  </tr>
-  <tr>
-    <td>Undeploy</td>
-    <td>Undeploys a function on the LivePerson functions platform.</td>
-  </tr>
-  <tr>
     <td>Pull</td>
     <td>Pulls a function from the LivePerson functions platform.</td>
   </tr>
@@ -63,6 +55,14 @@ If you have any suggestions or improvements please let us know under [Issues](ht
     <td>Push</td>
     <td>Pushes a function to the LivePerson functions platform.</td>
   </tr>
+  <tr>
+    <td>Deploy</td>
+    <td>Deploys a function on the LivePerson functions platform. If the passed function is already deployed, it will be redeployed.</td>
+  </tr>
+  <tr>
+    <td>Undeploy</td>
+    <td>Undeploys a function on the LivePerson functions platform.</td>
+  </tr>  
   <tr>
     <td>Invoke</td>
     <td>Invokes a function (remote or local).</td>
