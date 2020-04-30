@@ -357,7 +357,7 @@ ul.mysidebar.nav {
   width: 20%;
   min-width: 230px;
   position: fixed;
-  height: 68vh;
+  height: 65vh;
   overflow-y: auto;
   overflow-x: hidden;
   overflow-x: hidden;
@@ -401,6 +401,10 @@ ul#mysiderbar li {
   color: var(--dark-gray);
 
 }
+
+/* .topfolder>a>span {
+  margin-left: 14px;
+} */
 
 .innerfolder>a {
   color: var(--dark-gray);
@@ -506,8 +510,7 @@ ul.mysidebar.nav ul li a {
 
 .innerList {
   display: block;
-  border-left: 4px solid rgb(100, 106, 121);
-  margin-left: 30px;
+  margin-left: 34px;
 }
 
 div.sidebarTitle {
