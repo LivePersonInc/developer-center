@@ -355,7 +355,7 @@ div#toc ul li ul li ul {
 ul.mysidebar.nav {
   text-decoration: none;
   width: 20%;
-  min-width: 230px;
+  min-width: 270px;
   position: fixed;
   height: 65vh;
   overflow-y: auto;
@@ -419,7 +419,7 @@ ul#mysiderbar li {
 }
 
 .activeitem {
-  border-left: 4px solid #b1b5bc !important;
+  border-left: 4px solid var(--orange) !important;
   margin-left: -4px;
 }
 
