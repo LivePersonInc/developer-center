@@ -37,7 +37,7 @@ This section contains API details that are common to every API’s resource, met
  |:----------|  :-------------- | :-------------- | :--- |
  | accountId |  LP site ID | string  |
 
-### Entity Structure
+**Entity Structure**
 
  | Attribute | Description | Type/Value | Notes |
  | :--------- | :-------------- | :----------- | :--- | 
@@ -51,7 +51,7 @@ This section contains API details that are common to every API’s resource, met
  | questions | Array of Agent survey questions | Array or questions |
 
 
-### Entity Example
+**Entity Example**
 
  ```json
 {
@@ -90,7 +90,7 @@ This section contains API details that are common to every API’s resource, met
 }
  ```
 
-### Question definition
+**Question definition**
 
 | Attribute | Description | Type/Value | Notes |
 | :--------- | :-------------- | :----------- | :--- |  
@@ -106,7 +106,7 @@ This section contains API details that are common to every API’s resource, met
 | engagementAttribute | Engagement attributes (SDEs) the agent can submit on behalf of the consumer | Object - [EngagementAttribute](/agentsurvey-runtime-api-definitions.html#engagementAttribute-structure) | Submitting an engagement attribute question will trigger PurchaseEvent/LeadEvent/ServiceActivity event - based on the engagement attribute's type.
 | replies | Array of replies associated with this question | Array or replies |
 
-### Reply definition
+**Reply definition**
 
 | Attribute | Description | Type/Value | Notes |
 | :--------- | :-------------- | :----------- | :--- |  
