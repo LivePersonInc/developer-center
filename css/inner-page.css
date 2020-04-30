@@ -402,6 +402,10 @@ ul#mysiderbar li {
 
 }
 
+/* .topfolder>a>span {
+  margin-left: 14px;
+} */
+
 .innerfolder>a {
   color: var(--dark-gray);
 }

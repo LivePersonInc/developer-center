@@ -353,6 +353,8 @@ function sidebarCollapse(url) {
 			$(".activepage").parent().addClass("activeitem");
 		}
 		$(".innerfolder > .active > button").addClass("clicked");
+
+
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
 		if (!currentPage.isInViewport()) {
@@ -389,9 +391,9 @@ function sidebarClick() {
 			if (hasExpanded) {
 				$(this).next().slideUp(400);
 				$(this).data("expanded", "false");
+				$(".topfolder > .active > button").removeClass("clicked");
 				$(this).removeClass("active");
 				$(this).parent().removeClass("active");
-				$(".innerfolder > .active > button").removeClass("clicked");
 				//otherwise, open it
 			} else {
 				$(".innerfolder > .active > button").removeClass("clicked");
@@ -401,6 +403,7 @@ function sidebarClick() {
 				$(this).data("expanded", "true");
 				$(".folder > a").removeClass("active");
 				$(this).addClass("active");
+				$(".topfolder > .active > button").addClass("clicked");
 			}
 			return false;
 		};
