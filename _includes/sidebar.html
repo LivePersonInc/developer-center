@@ -8,79 +8,42 @@
   </a>
 </div>
 </div>
-
 <ul id="mysidebar" class="mysidebar nav fixed sidebarmobileclosed documentslist" >
   <li class="homeitem folder topfolder active">
     <div class="sidebarimage">
-      <img alt="LivePerson Knowledge Center" src="img/getting-started.png" />
     </div>
-    <a  onclick="linkclick(event, this)" class="innerlink" href="/index.html">WELCOME</a>
+    <a onclick="linkclick(event, this)" class="innerlink" href="/index.html">WELCOME</a>
   </li>
-{% for category in site.data.documentsupdated %}
+  {% for category in site.data.documentsupdated %}
   {% if forloop.last == true %}
   <hr class="sidebarhr lessbottom" />
   <li class="folder topfolder lowerimage">
-    <img alt="LivePerson Knowledge Center" src="img/{{ category.image }}.svg" />
     <a class="highlightlink" href="">{{ category.categoryname }}</a>
     <ul>
       {% for document in category.documents %}
       {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
-        <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
+        <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span>
+            {{ document.documentname }}</span></a>
         <ul>
           {% for page in document.pages %}
           {% if page.subpages %}
           <li class="folder innerfolder subfolder">
-            <a href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
+            <a href=""><button
+                class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
             <ul class="innerList">
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
-                <a  onclick="linkclick(event,this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+                <a onclick="linkclick(event,this)" class="innerlink"
+                  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
               </li>
               {% endfor %}
             </ul>
           </li>
-            {% else %}
-            <li class="pageitem">
-              <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
-            </li>
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </li>
-      {% else %}
-    <li class="folder innerfolder sidebarcategory sololink">
-      <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
-    </li>
-    {% endif %}
-      {% endfor %}
-    </ul>
-  </li>
-  {% else %}
-  <li class="folder topfolder lowerimage">
-    <img alt="LivePerson Knowledge Center" src="img/{{ category.image }}.svg" />
-    <a class="highlightlink" href="">{{ category.categoryname }}</a>
-    <ul>
-      {% for document in category.documents %}
-      {% if document.pages %}
-      <li class="folder innerfolder sidebarcategory">
-        <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span> {{ document.documentname }}</span></a>
-        <ul>
-          {% for page in document.pages %}
-          {% if page.subpages %}
-          <li class="folder innerfolder subfolder">
-            <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
-            <ul class="innerList">
-              {% for subpage in page.subpages %}
-              <li class="innerpageitem">
-                <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
-              </li>
-              {% endfor %}
-            </ul>
-          </li>
-            {% else %}
+          {% else %}
           <li class="pageitem">
-            <a  onclick="linkclick(event, this)" class="innerlink"  href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+            <a onclick="linkclick(event, this)" class="innerlink"
+              href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
           </li>
           {% endif %}
           {% endfor %}
@@ -88,25 +51,66 @@
       </li>
       {% else %}
       <li class="folder innerfolder sidebarcategory sololink">
-        <a onclick="linkclick(event, this)" class="innerlink "  href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
+        <a onclick="linkclick(event, this)" class="innerlink"
+          href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
       </li>
       {% endif %}
       {% endfor %}
     </ul>
   </li>
-{% endif %}
-{% endfor %}
-    <hr class="sidebarhr lesstop" />
-    <div class="sidebarbuttoncontainer">
-      <li class="folder topfolder ">
-        <img alt="LivePerson Knowledge Center" src="img/support-icon.png" />
-        <a target="_blank" class="bottombuttons" href="http://knowledge.liveperson.com">Knowledge Center</a>
+  {% else %}
+  <li class="folder topfolder lowerimage">
+    <a class="highlightlink" href="">{{ category.categoryname }}</a>
+    <ul>
+      {% for document in category.documents %}
+      {% if document.pages %}
+      <li class="folder innerfolder sidebarcategory">
+        <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span>
+            {{ document.documentname }}</span></a>
+        <ul>
+          {% for page in document.pages %}
+          {% if page.subpages %}
+          <li class="folder innerfolder subfolder">
+            <a class="highlightlink" href=""><button
+                class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
+            <ul class="innerList">
+              {% for subpage in page.subpages %}
+              <li class="innerpageitem">
+                <a onclick="linkclick(event, this)" class="innerlink"
+                  href="/{{ document.documentname | append: '/' | append: page.pagename | append: '/' |append: subpage.subpagename | slugify }}.html">{{ subpage.subpagename }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+          <li class="pageitem">
+            <a onclick="linkclick(event, this)" class="innerlink"
+              href="/{{ document.documentname | append: '/' | append: page.pagename | slugify }}.html">{{ page.pagename }}</a>
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
       </li>
+      {% else %}
+      <li class="folder innerfolder sidebarcategory sololink">
+        <a onclick="linkclick(event, this)" class="innerlink "
+          href="/{{ document.documentname | slugify }}.html">{{ document.documentname }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </li>
+  {% endif %}
+  {% endfor %}
+  <hr class="sidebarhr lesstop" />
+  <div class="sidebarbuttoncontainer">
+    <li class="folder topfolder ">
+      <a target="_blank" class="bottombuttons" href="http://knowledge.liveperson.com">Knowledge Center</a>
+    </li>
   </div>
   <div class="sidebarbuttoncontainer">
     <li class="folder topfolder ">
-      <img alt="Service Status Dashboard" class="sidebarSVG" src="img/status-dashboard.svg" />
       <a target="_blank" class="bottombuttons" href="https://status.liveperson.com/">Service Status Dashboard</a>
     </li>
-</div>
+  </div>
 </ul>

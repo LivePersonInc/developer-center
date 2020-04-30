@@ -626,6 +626,7 @@
           - subpagename: Messaging Conversation Survey
           - subpagename: Conversational AI
           - subpagename: Conversational Commands
+      - pagename: Command Line Interface (CLI)
 
 
 - categoryname: Historical Data
