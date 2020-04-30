@@ -10,27 +10,28 @@
 </div>
 <ul id="mysidebar" class="mysidebar nav fixed sidebarmobileclosed documentslist" >
   <li class="homeitem folder topfolder active">
-    <div class="sidebarimage">
+    <div class="sidebarimage" style="margin-left:40px;">
     </div>
     <a onclick="linkclick(event, this)" class="innerlink" href="/index.html">WELCOME</a>
   </li>
   {% for category in site.data.documentsupdated %}
   {% if forloop.last == true %}
-  <hr class="sidebarhr lessbottom" />
   <li class="folder topfolder lowerimage">
-    <a class="highlightlink" href="">{{ category.categoryname }}</a>
+    <a class="highlightlink" href="">
+      <button class="sidebarbutton"><span></span></button><span>
+        {{ category.categoryname  }}</a>
     <ul>
       {% for document in category.documents %}
       {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
-        <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span>
+        <a class="highlightlink" href=""><button class="sidebarbutton innerArrowAdjust"><span></span></button><span>
             {{ document.documentname }}</span></a>
         <ul>
           {% for page in document.pages %}
           {% if page.subpages %}
           <li class="folder innerfolder subfolder">
             <a href=""><button
-                class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
+                class="sidebarbutton innerArrowAdjust"><span></span></button><span>{{ page.pagename }}</span></a>
             <ul class="innerList">
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
@@ -60,19 +61,20 @@
   </li>
   {% else %}
   <li class="folder topfolder lowerimage">
-    <a class="highlightlink" href="">{{ category.categoryname }}</a>
+    <a class="highlightlink" href=""><button class="sidebarbutton"><span></span></button><span>
+        {{ category.categoryname  }}</span></a>
     <ul>
       {% for document in category.documents %}
       {% if document.pages %}
       <li class="folder innerfolder sidebarcategory">
-        <a class="highlightlink" href=""><button class="sidebarbutton"><span></span><span></span></button><span>
+        <a class="highlightlink" href=""><button class="sidebarbutton innerArrowAdjust"><span></span></button><span>
             {{ document.documentname }}</span></a>
         <ul>
           {% for page in document.pages %}
           {% if page.subpages %}
           <li class="folder innerfolder subfolder">
             <a class="highlightlink" href=""><button
-                class="sidebarbutton"><span></span><span></span></button><span>{{ page.pagename }}</span></a>
+                class="sidebarbutton innerArrowAdjust"><span></span></button><span>{{ page.pagename }}</span></a>
             <ul class="innerList">
               {% for subpage in page.subpages %}
               <li class="innerpageitem">
@@ -102,13 +104,12 @@
   </li>
   {% endif %}
   {% endfor %}
-  <hr class="sidebarhr lesstop" />
-  <div class="sidebarbuttoncontainer">
+  <div class="sidebarbuttoncontainer" style="padding-left:32px;">
     <li class="folder topfolder ">
       <a target="_blank" class="bottombuttons" href="http://knowledge.liveperson.com">Knowledge Center</a>
     </li>
   </div>
-  <div class="sidebarbuttoncontainer">
+  <div class="sidebarbuttoncontainer" style="padding-left:32px;">
     <li class="folder topfolder ">
       <a target="_blank" class="bottombuttons" href="https://status.liveperson.com/">Service Status Dashboard</a>
     </li>

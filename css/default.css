@@ -55,7 +55,7 @@ a:focus {
     padding-top: 5px;
     width: 20%;
     margin-right: 8%;
-    padding-left: 2rem;
+    padding-left: 32px;
     max-width: 36.5rem;
     min-width: 270px;
 }
@@ -193,7 +193,7 @@ ul.mysidebar.nav {
     background-color: var(--white);
     display: flex;
     padding-top: 40px;
-    min-width: 230px;
+    min-width: 270px;
     margin-right: 6%;
     flex-direction: column;
     flex: 1;
@@ -755,7 +755,7 @@ a.loginText {
 
 .topfolder {
     line-height: 3.3;
-    margin-left: 34px
+    margin-left: 35px
 }
 
 .topfolder>ul {
@@ -797,6 +797,10 @@ a.loginText {
     margin-left: 14px
 }
 
+.topfolder>a>span {
+    margin-left: 14px
+}
+
 .innerfolder>a>.expand {
     float: none;
     margin-right: 20px;
@@ -833,7 +837,7 @@ a.loginText {
 }
 
 .sololink {
-    margin-left: 34px
+    margin-left: 36px
 }
 
 .topfolder img {
@@ -1123,13 +1127,20 @@ a.anchoritem {
     width: 20px;
     height: 20px;
     border: 0;
+    display: inline-flex;
     font-size: 1.5em;
     position: relative;
-    align-self: center
+    align-self: center;
+    top: 5px;
 }
 
 .sidebarbutton:focus {
     outline: 0
+}
+
+.innerArrowAdjust {
+    margin-left: 22px;
+    top: -1px;
 }
 
 .sidebarbutton span {
@@ -1144,7 +1155,6 @@ a.anchoritem {
     border-left: 10px solid var(--dark-gray);
     transform: rotate(-135deg);
     top: 4px;
-
 }
 
 
