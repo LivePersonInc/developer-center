@@ -193,7 +193,7 @@ ul.mysidebar.nav {
     background-color: var(--white);
     display: flex;
     padding-top: 40px;
-    min-width: 230px;
+    min-width: 270px;
     margin-right: 6%;
     flex-direction: column;
     flex: 1;
