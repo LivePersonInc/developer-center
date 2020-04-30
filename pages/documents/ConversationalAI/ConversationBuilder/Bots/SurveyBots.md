@@ -7,7 +7,7 @@ categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Bots
 permalink: conversation-builder-bots-survey-bots.html
-indicator: both
+indicator: messaging
 ---
 
 ### What's a survey bot?
@@ -23,7 +23,8 @@ Use a survey bot to measure bot/agent and skill performance and to identify oppo
 <img style="width:400px" src="img/ConvoBuilder/surveyBot_example.png">
 
 {: .important}
-To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through LiveEngage. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.
+To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through LiveEngage. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.<br><br>
+Survey bots are supported only in Messaging, not in Live Chat.
 
 ### Survey bots vs. custom bots
 
