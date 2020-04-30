@@ -763,7 +763,7 @@ The following table describes the information that is available in the geo data:
 
 ###  Navigation
 
-Information about the navigated pages by the visitor on the brand’s website. The navigation is mainly based on the pages being monitored by the Monitor Tag. If a customer has non-monitored pages it will not be reflected in the data displayed here.
+Information about the navigated pages by the visitor on the brand’s website. The navigation is mainly based on the pages being monitored by the Web Tag. If a customer has non-monitored pages it will not be reflected in the data displayed here.
 
 **Header**
 

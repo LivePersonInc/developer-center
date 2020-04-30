@@ -52,7 +52,7 @@ This option requires the use of JavaScript code. This method is required if the 
 
 To track Engagement Attributes, follow the steps described below.
 
-1. Insert the Engagement Attribute declaration in a script tag, either at the end of the LiveEngage tag script, or in a separate script tag just after.
+1. Insert the Engagement Attribute declaration in a script tag, either at the end of the Web Tag script, or in a separate script tag just after.
 
 2. Insert [the push function](le-tag-sdes.html#push-sdes) below the declaration and add the type of Engagement Attribute, for example, “prodView”.
 

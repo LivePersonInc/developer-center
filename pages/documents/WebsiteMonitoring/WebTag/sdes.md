@@ -1,10 +1,11 @@
 ---
 pagename: SDEs
 redirect_from:
+  - le-tag-sdes.html
 sitesection: Documents
 categoryname: "Website Monitoring"
-documentname: LE-Tag
-permalink: le-tag-sdes.html
+documentname: Web Tag
+permalink: web-tag-sdes.html
 indicator: both
 ---
 

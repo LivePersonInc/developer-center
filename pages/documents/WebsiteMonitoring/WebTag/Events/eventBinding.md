@@ -1,15 +1,16 @@
 ---
 pagename: Event Binding
 redirect_from:
+  - le-tag-events-event-binding.html
   - lp-tag-tag-events-how.html
   - le-tag-how-to-use-liveengage-tag-events.html
   - lp-tag-tag-events-overview.html
   - le-tag-events.html
 sitesection: Documents
 categoryname: "Website Monitoring"
-documentname: LE-Tag
+documentname: Web Tag
 subfoldername: Events
-permalink: le-tag-events-event-binding.html
+permalink: web-tag-events-event-binding.html
 
 indicator: both
 ---
@@ -18,7 +19,7 @@ The `lpTag` handles the communication of many events that occur on the vistor's 
 
 These tag events provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and more. 
 
-You can find a list of events published on a web page by the LiveEngage Tag, each organized under an `appName` and given an `eventName`, [in the Events document](le-tag-events-events.html).
+You can find a list of events published on a web page by the Web Tag, each organized under an `appName` and given an `eventName`, [in the Events document](le-tag-events-events.html).
 
 This document explains how to `bind` to events to help customize on-page behavior.
 

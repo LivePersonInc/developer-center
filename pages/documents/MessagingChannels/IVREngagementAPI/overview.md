@@ -32,7 +32,7 @@ Before getting started with the IVR API, set up a LiveEngage campaign with an IV
 
 2. Configure the landing page URL to which consumers will be redirected after clicking on the link attached to the SMS.
 
-	* The page must contain the LiveEngage tag.
+	* The page must contain the Web Tag.
 
 	* The page should be a simple page with limited content so that it loads quickly.
 

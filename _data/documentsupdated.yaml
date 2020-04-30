@@ -1023,7 +1023,7 @@
             - subpagename: Click
             - subpagename: getEngagementInfo
             - subpagename: getEngagementState
-    - documentname: LE-Tag
+    - documentname: Web Tag
       pages:
         - pagename: Overview
         - pagename: SDEs

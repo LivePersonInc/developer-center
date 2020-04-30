@@ -1,14 +1,15 @@
 ---
 pagename: Overview
 redirect_from:
+  - le-tag-overview.html
 sitesection: Documents
 categoryname: "Website Monitoring"
-documentname: LE-Tag
-permalink: le-tag-overview.html
+documentname: Web Tag
+permalink: web-tag-overview.html
 indicator: both
 ---
 
-The `lpTag` object is available on your website when you add the le-tag script to your website.
+The `lpTag` object is available on your website when you add the Web Tag script to your website.
 
 This object allows you to access many different functionalities that relate to the visitor experience on your website.
 

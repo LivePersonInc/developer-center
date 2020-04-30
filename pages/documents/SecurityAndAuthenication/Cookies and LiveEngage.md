@@ -26,9 +26,9 @@ In order to stay aligned with the latest regulations, LivePerson recommends that
 
 1. You should add a cookie consent functionality to your website.  It should contain a prominent banner or similar visual element when the page first loads to concisely inform the consumer about the use of cookies and what action the consumer should take to consent.
 
-  * If the consumer consents, you should remember their response so you can deploy the LiveEngage tag on all subsequent visits and pages.
+  * If the consumer consents, you should remember their response so you can deploy the Web Tag on all subsequent visits and pages.
 
-  * If the consumer declines, you should remember their response, so the LiveEngage tag is **not** deployed on subsequent pages and visits. Additionally you may choose to refresh the current page to apply the consumer’s choice so that the LiveEngage tag would not get deployed on that specific page.
+  * If the consumer declines, you should remember their response, so the Web Tag is **not** deployed on subsequent pages and visits. Additionally you may choose to refresh the current page to apply the consumer’s choice so that the Web Tag would not get deployed on that specific page.
 
 {:start="2"}
 2. You should include information about your use of third party cookies, such as LiveEngage cookies, and the purpose for their use, in your privacy policy or cookie notice.
@@ -239,11 +239,11 @@ The following issues should be considered when working with LiveEngage Cookies.
 
 #### Secure Cookies
 
-LiveEngage supports secure cookies, but requires the LiveEngage Tag to be deployed using HTTPS.
+LiveEngage supports secure cookies, but requires the Web Tag to be deployed using HTTPS.
 
 #### HttpOnly Attribute
 
-LiveEngage is unable to support the HttpOnly attribute because it does not operate through JavaScript, which enables the LiveEngage Tag to collect cookies.
+LiveEngage is unable to support the HttpOnly attribute because it does not operate through JavaScript, which enables the Web Tag to collect cookies.
 
 #### Third Party Cookies - Default
 

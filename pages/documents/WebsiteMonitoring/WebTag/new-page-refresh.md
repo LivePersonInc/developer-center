@@ -1,10 +1,11 @@
 ---
 pagename: New Page Refresh
 redirect_from:
+  - le-tag-new-page-refresh.html
 sitesection: Documents
 categoryname: "Website Monitoring"
-documentname: LE-Tag
-permalink: le-tag-new-page-refresh.html
+documentname: Web Tag
+permalink: web-tag-new-page-refresh.html
 indicator: both
 ---
 

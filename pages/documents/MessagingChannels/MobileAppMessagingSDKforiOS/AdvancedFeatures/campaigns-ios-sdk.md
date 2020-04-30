@@ -24,7 +24,7 @@ Use the Monitoring APIs to:
 
 * Route conversations to a specific skill (based on engagements)
 
-While web messaging allows automatic capturing of events (using the LE Tag), when using campaigns for In-App Messaging, it is up to the app to report the various events by using the In-App Monitoring APIs.
+While web messaging allows automatic capturing of events (using the Web Tag), when using campaigns for In-App Messaging, it is up to the app to report the various events by using the In-App Monitoring APIs.
 
 ### Prerequisites
 

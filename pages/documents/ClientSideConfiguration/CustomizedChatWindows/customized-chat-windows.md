@@ -28,14 +28,14 @@ Different types of engagements, funnel reporting, consumer authentication flow (
 
 #### Monitored
 
-On a monitored flow, once a consumer enters a web page tagged with the LiveEngage Tag, a consumer session is created and monitored by the LiveEngage monitoring system.
+On a monitored flow, once a consumer enters a web page tagged with the Web Tag, a consumer session is created and monitored by the LiveEngage monitoring system.
 
 In order to trigger a customized window, an engagement with a dedicated API-based window should be created. Currently, this kind of window can be created manually by a LivePerson Administrator.
 
 Once an engagement is presented and clicked on by the consumer, the engagement will trigger the corresponding chat window.
 
 #### Unmonitored
-When the LiveEngage Tag is not part of the flow, retrieving an engagement is the responsibility of the Chat API-based window service, using the App Engagement API.
+When the Web Tag is not part of the flow, retrieving an engagement is the responsibility of the Chat API-based window service, using the App Engagement API.
 
 **Engagement retrieval**
 

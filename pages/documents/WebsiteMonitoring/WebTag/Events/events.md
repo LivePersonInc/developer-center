@@ -1,6 +1,7 @@
 ---
 pagename: Events
 redirect_from:
+  - le-tag-events-events.html
   - lp-tag-visitor-flow.html
   - le-tag-events-visitor-flow-events.html
   - lp-tag-engagement-window.html
@@ -9,9 +10,9 @@ redirect_from:
   - le-tag-events-engagement-events.html
 sitesection: Documents
 categoryname: "Website Monitoring"
-documentname: LE-Tag
+documentname: Web Tag
 subfoldername: Events
-permalink: le-tag-events-events.html
+permalink: web-tag-events-events.html
 
 indicator: both
 ---
@@ -20,7 +21,7 @@ The `lpTag` handles the communication of many events that occur on the vistor's 
 
 These tag events provide transparency into the lifecycle flows of engagements, embeddeded chat windows, and cobrowse sessions, among others. 
 
-Below you can find a list of events published on a web page by the LiveEngage Tag, each organized under an `appName` and given an `eventName`.
+Below you can find a list of events published on a web page by the Web Tag, each organized under an `appName` and given an `eventName`.
 
 [See here to learn how to bind to events](le-tag-events-event-binding.html)
 
