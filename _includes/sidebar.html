@@ -8,8 +8,11 @@
   {% if forloop.last == true %}
   <li class="folder topfolder lowerimage">
     <a class="highlightlink" href="">
-      <button class="sidebarbutton"><span></span></button><span>
-        {{ category.categoryname  }}</a>
+      <button class="sidebarbutton"><span></span>
+      </button>
+      <span>
+        {{ category.categoryname  }}
+      </span></a>
     <ul>
       {% for document in category.documents %}
       {% if document.pages %}
