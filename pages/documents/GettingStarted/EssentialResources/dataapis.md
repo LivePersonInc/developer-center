@@ -30,7 +30,7 @@ This API exposes open and closed conversations, including their transcript and r
 
 * Extract types of conversations (e.g. low CSAT score, high MCS) and perform an action on them.
 
-* The **All Connections** tab in LiveEngage is also built on top of this API.
+* The **All Conversations** tab in LiveEngage is also built on top of this API.
 
 
 #### Limitations

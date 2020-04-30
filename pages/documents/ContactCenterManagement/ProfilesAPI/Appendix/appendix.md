@@ -153,7 +153,7 @@ This section contains API details that are common to every API’s resource and 
 | 20010      | View support cases in theConnection Area     | View open and closed support cases from the Connection Area.     |
 | 20011      | Create support cases from theConnection Area     | For brands who have enabled Support cases creation feature, this permission allows to create support cases from the Connection Area.       |
 | 20012      | Contact LivePersonsupport within the Connection Area  | Chat with the LivePerson support team.                           |
-| 20013      | Handle messaging conversations and access All Connections List | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations and view all resolved conversations handled by agents               |
+| 20013      | Handle messaging conversations and access All Conversations List | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations and view all resolved conversations handled by agents               |
 | 20014      | View Connection Area Content      | View relevant content from the Connection Area per journey.      |
 | 20015      | Handle messaging conversations  | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations                       |
 | 20017      | Set manual SLA  | Allows agents to manually configure the response time in a conversation.                    |
@@ -173,7 +173,7 @@ This section contains API details that are common to every API’s resource and 
 | 30011      | Night Vision (advanced configuration)                          | Make advanced configurations within Night Vision                 |
 | 30012      | View secure form responses in Engagement History               | For brands who have enabled the secure forms feature, this permission allows the Agent Manager to view all secure form responses in the Engagement History                               |
 | 30013      | Edit Skills     | Create, edit or delete Skills                                    |
-| 30015      | View All Connections List                                      | For brands who have enabled the Messaging feature, this permission allows viewing of all resolved conversations handled by Agents          |
+| 30015      | View All Conversations List                                      | For brands who have enabled the Messaging feature, this permission allows viewing of all resolved conversations handled by Agents          |
 | 30018      | View support cases in theConnection Area                       | View open and closed support cases from the Connection Area.     |
 | 30019      | Create support cases from theConnection Area                   | For brands who have enabled Support cases creation feature, this permission allows to create support cases from the Connection Area.       |
 | 30020      | Contact LivePersonsupport within the Connection Area           | Chat with the LivePerson support team.                           |

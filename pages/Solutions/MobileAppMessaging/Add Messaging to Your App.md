@@ -37,7 +37,7 @@ To begin, you need:
 
 * LiveEngage account with messaging enabled.
   
-  <div class="notice">Contact your LivePerson representative to enable messaging on your account.  Tip: If you see 'all connections’ when you log in, your account has messaging enabled.</div>
+  <div class="notice">Contact your LivePerson representative to enable messaging on your account.  Tip: If you see 'All Conversations’ when you log in, your account has messaging enabled.</div>
 
 * LivePerson only supports OAuth2.0 authentication. For more information, please see [Getting Started with Authentication](../../documents/GettingStarted/Getting Started with Authentication.md).
 

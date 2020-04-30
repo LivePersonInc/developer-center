@@ -16,7 +16,7 @@ indicator: messaging
 
 <div class="important">The Messaging Interaction API exposes Open and Closed conversations with <b>near real-time data freshness</b>. The API has an inherent delay due to its nature and architecture as a historical API. This means that it has a delay of up to 1 minute.
 <br><br>
-In addition, SDEs will be available in the response in near real-time, but the ability to search on SDEs is only available after 2 hours. The All Connections tab in LiveEngage is also built on top of this API.</div>
+In addition, SDEs will be available in the response in near real-time, but the ability to search on SDEs is only available after 2 hours. The All Conversations tab in LiveEngage is also built on top of this API.</div>
 
 The LiveEngage Messaging Interactions API retrieves the most up to date information available about contact center messaging interactions. This API makes it possible to search, filter and analyze data and transcripts of open and closed conversations.
 
