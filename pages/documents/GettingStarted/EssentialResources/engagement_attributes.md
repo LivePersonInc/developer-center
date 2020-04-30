@@ -22,7 +22,7 @@ Information collected using Engagement Attributes can be used to achieve the fol
 
 * Empower agents with relevant information during conversations with consumers.
 
-* Receive a comprehensive view of visitor Engagement History.
+* Receive a comprehensive view of visitor Conversation History.
 
 * Measure and track campaign goals.
 

@@ -18,7 +18,7 @@ The integration allows you to transfer information directly from the Visit Info 
 
 In addition, external web page fields can be pre-populated with visitor information, for example, you can pass the Visitor’s name and email parameters from the pre-chat survey into the application to pre-populate specific fields.
 
-The agent workspace default view has five equally-sized widgets, to the right of the chat pane (see a sample in the screenshot below) - Visit Info, Predefined Content, Page Navigation, Agent Survey, and Engagement History. In the example, three of the default widgets are selected and display with the default width. Two more default widgets are unselected and at the end, we can see two custom widgets that have been added. Users can scroll right and left to see all five of the default widgets.
+The agent workspace default view has five equally-sized widgets, to the right of the chat pane (see a sample in the screenshot below) - Visit Info, Predefined Content, Page Navigation, Agent Survey, and Conversation History. In the example, three of the default widgets are selected and display with the default width. Two more default widgets are unselected and at the end, we can see two custom widgets that have been added. Users can scroll right and left to see all five of the default widgets.
 
 ![AgentWorkspaceScreenshot](img/agentworkspacewidget1.png)
 

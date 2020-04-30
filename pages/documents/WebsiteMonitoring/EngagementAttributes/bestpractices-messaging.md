@@ -17,7 +17,7 @@ This feature will display unauthenticated EAs passed in a messaging conversation
 
 EAs will be presented in the Agent Workspace in several areas:
 
-1. **Consumer Info widget** - each EA will be presented in its own section, much like for chat conversations today. They will be available in both Open Conversations & All Conversations, as well as in the Engagement History widget.
+1. **Consumer Info widget** - each EA will be presented in its own section, much like for chat conversations today. They will be available in both Open Conversations & All Conversations, as well as in the Conversation History widget.
 
 2. **All Conversations view** - users will be able to search unauthenticated EAs in the All Conversations table, as part of the EAs search.
 

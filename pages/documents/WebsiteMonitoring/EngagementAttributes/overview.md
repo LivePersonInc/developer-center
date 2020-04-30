@@ -21,7 +21,7 @@ Information collected using Engagement Attributes can be used to achieve the fol
 
 * Create specific and advanced targeting of visitors.
 * Empower agents with relevant information during conversations with consumers.
-* Receive a comprehensive view of visitor Engagement History.
+* Receive a comprehensive view of visitor Conversation History.
 * Measure and track campaign goals.
 
 ### Uses of Engagement Attributes in LiveEngage
@@ -38,7 +38,7 @@ Described below are some of the uses of Engagement Attributes in LiveEngage.
 
 * **Tools for agents**: Provide agents with real-time information about the visitor in order to improve their efficiency and service quality. For example, provide agents with an order ID for when visitors inquire about the terms and conditions of their order, or provide agents with customer information during a conversation with a registered visitor.
 
-* **Engagement History**: Receive a comprehensive view of the visitor journey, behavior and attributes, as part of the Engagement History in order to better track agent performance and take corrective action should the need arise.
+* **Conversation History**: Receive a comprehensive view of the visitor journey, behavior and attributes, as part of the Conversation History in order to better track agent performance and take corrective action should the need arise.
 
 * **Authentication Service (OAuth 2.0)**: Authenticated Customer Information enables visitors that have logged into a brand’s website and initiated a chat to show up as being authenticated. The Agent Workspace then displays, in real-time, the correct and verified PII (Personally Identifiable Information) of the authenticated visitor.
 

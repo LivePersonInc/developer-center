@@ -168,10 +168,10 @@ This section contains API details that are common to every API’s resource and 
 | 30006      | Edit Agent Manager profile                                     | Create, edit or delete Agent Manager role profiles               |
 | 30007      | Agent Groups administration                                    | Create, edit, restructure or delete their Agent Groups or Sub-groups  |
 | 30008      | Export users    | Export the list of Agent or Agent Manager users in their groups or sub-groups; this will also export the list of skills, profiles and the groups and sub-groups managed by the Agent Managers |
-| 30009      | View Engagement History                                        | View all engagements handled by Agents within their Group(s) or Sub-group(s)                |
+| 30009      | View Conversation History                                        | View all engagements handled by Agents within their Group(s) or Sub-group(s)                |
 | 30010      | View Agent List | View full list of Agents within their Group                      |
 | 30011      | Night Vision (advanced configuration)                          | Make advanced configurations within Night Vision                 |
-| 30012      | View secure form responses in Engagement History               | For brands who have enabled the secure forms feature, this permission allows the Agent Manager to view all secure form responses in the Engagement History                               |
+| 30012      | View secure form responses in Conversation History               | For brands who have enabled the secure forms feature, this permission allows the Agent Manager to view all secure form responses in the Conversation History                               |
 | 30013      | Edit Skills     | Create, edit or delete Skills                                    |
 | 30015      | View All Conversations List                                      | For brands who have enabled the Messaging feature, this permission allows viewing of all resolved conversations handled by Agents          |
 | 30018      | View support cases in theConnection Area                       | View open and closed support cases from the Connection Area.     |
