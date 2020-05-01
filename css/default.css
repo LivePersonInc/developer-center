@@ -193,7 +193,7 @@ ul.mysidebar.nav {
 .defaultsidebar {
     background-color: var(--white);
     display: flex;
-    padding-top: 40px;
+    padding-top: 2%;
     min-width: 270px;
     margin-right: 6%;
     flex-direction: column;
@@ -1072,7 +1072,7 @@ a.loginText {
     display: block;
     max-height: 360px;
     overflow-y: auto;
-    width:200px;
+    width: 200px;
     margin-top: 154px;
     position: fixed;
 }
@@ -1083,7 +1083,8 @@ a.loginText {
     font-size: 12px;
     color: var(--navy);
 }
-.jumpToAnchor{
+
+.jumpToAnchor {
     text-align: right;
 }
 
