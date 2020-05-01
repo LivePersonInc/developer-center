@@ -321,6 +321,7 @@ function sidebarCollapse(url) {
 	};
 	//get rid of any currently open items and then highlight the current page
 	$('a').removeClass("activepage");
+
 	$('li').removeClass('activeleaf');
 	$('li').removeClass('activeleafSolo');
 	$('.homeitem').removeClass("activepage");
@@ -369,6 +370,8 @@ function allArticlesClick() {
 function sidebarClick() {
 	$(".topfolder").on("click", ".highlightlink", function () {
 		//if the clicked element is not one of the buttons at the bottom of the sidebar, e.g "status page"
+		$('button').removeClass("clicked");
+
 		if (!$(this).hasClass("bottombuttons")) {
 			var hasExpanded = $(this).data("expanded") == "true";
 			//if it's expanded, close it
@@ -376,6 +379,7 @@ function sidebarClick() {
 				$(this).next().slideUp(400);
 				$(this).data("expanded", "false");
 				$(".topfolder > .active > button").removeClass("clicked");
+
 				$(this).removeClass("active");
 				$(this).parent().removeClass("active");
 
@@ -395,6 +399,7 @@ function sidebarClick() {
 	});
 	//same as above, just one level down
 	$(".innerfolder").on("click", ".highlightlink", function (event) {
+
 		event.preventDefault();
 		var hasExpanded = $(this).data("expanded") == "true";
 		var button = $(this).find("button");
@@ -404,6 +409,7 @@ function sidebarClick() {
 			$(this).removeClass("active");
 			$(this).parent().removeClass("active");
 			$(button).removeClass("clicked");
+
 		} else {
 			$(this).next().slideDown(400);
 			$(this).data("expanded", "true");
