@@ -201,10 +201,10 @@ In the **Conversations panel** of the **Manager Workspace**, managers can view t
 ### Reporting
 
 #### Report Builder
-Metrics from the FCR, CSAT, and NPS questions in surveys are captured in LiveEngage and exposed via the Report Builder application. You'll find this information in the survey dashboard for messaging.
+Metrics from the FCR, CSAT, and NPS questions in surveys are captured in LiveEngage and exposed via the [Report Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html) application. You'll find this information in the [Survey Dashboard for Messaging](https://knowledge.liveperson.com/data-reporting-messaging-messaging-dashboards-survey-dashboard-for-messaging.html).
 
 #### Bot Analytics
-In the Bot Analytics application, you'll see survey bots reported in the same way as custom bots. There is no difference between the two.
+In the [Bot Analytics](https://developers.liveperson.com/bot-analytics-overview.html) application, you'll see survey bots reported in the same way as custom bots. There is no difference between the two.
 
 ### FAQs
 
