@@ -137,6 +137,11 @@ function navigateContent(url) {
 			}
 			if (selected.parent().hasClass('pageitem')) {
 				$('.innerpageitem').removeClass("activeitem");
+				selected.parent().addClass('activeleaf');
+			}
+			if (selected.parent().hasClass('sololink')) {
+				$('.innerpageitem').removeClass("activeitem");
+				selected.parent().addClass('activeleafSolo');
 			}
 			//jump to top when page loads
 			if (window.location.hash == "") {
@@ -339,6 +344,8 @@ function sidebarCollapse(url) {
 	};
 	//get rid of any currently open items and then highlight the current page
 	$('a').removeClass("activepage");
+	$('li').removeClass('activeleaf');
+	$('li').removeClass('activeleafSolo');
 	$('.homeitem').removeClass("activepage");
 	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
