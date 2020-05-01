@@ -16,16 +16,16 @@ indicator: both
 
 Retrieves a Predefined Content item by ID from a specific account.
 
-### Request 
+### Request
 
- |Method|  URL| 
- |:--------|  :---------| 
- |GET|  /api/account/{accountId}/configuration/engagement-window/canned-responses/{pre-defined-content-id} |
+ |Method|  URL|
+ |:--------|  :---------|
+ |GET|  https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/engagement-window/canned-responses/{pre-defined-content-id} |
 
 **Path Parameters**
 
- |Parameter|  Description|  Type| Notes| 
- |:-----------|  :------------|  :---------------|  :---| 
+ |Parameter|  Description|  Type| Notes|
+ |:-----------|  :------------|  :---------------|  :---|
  |accountId|  LP site ID|  string |  Validation fail error code: 400 |
  |pre-defined-content-id|  Account Config object’s unique ID|  Positive long number greater than zero  |
 
@@ -56,8 +56,8 @@ Retrieves a Predefined Content item by ID from a specific account.
 **Response Headers**
 
  |Header | Description |
- |:------- |  :----- | 
- |ac-revision | Account config object type collection revision.  |
+ |:------- |  :----- |
+ |ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..  |
 
 **Response Body**
 

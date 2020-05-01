@@ -18,7 +18,7 @@ Survey retrieves all the survey data in .zip format files. The survey data consi
 
 | Method | URL |
 | :----- | :------- |
-| GET | `https://<domain>/data_access_le/account/{accountID}/le/survey?startTime=<startTime>&endTime=<endTime>`|
+| GET | https://[{domain}](/agent-domain-domain-api.html)/data_access_le/account/{accountID}/le/survey?startTime=<startTime>&endTime=<endTime>|
 
 **URL Parameters**
 

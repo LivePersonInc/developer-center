@@ -34,7 +34,6 @@ https://API_REQUEST?v=4.0
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|  Contains token string to allow request authentication and authorization.  |
- |X-HTTP-Method-Override|  Overrides unsupported HTTP methods.  To be used with the DELETE value. |
  |If-Match|  Contains data revision as known by the client. Allows concurrent modification backend verification.  |
 
 **Request Body**
@@ -64,7 +63,7 @@ https://API_REQUEST?v=4.0
 
  |Header  |Description |
 | :-------  | :-----  |
-| ac-revision | Account config object type collection revision. | 
+| ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. | 
 
 **Response Body**
 

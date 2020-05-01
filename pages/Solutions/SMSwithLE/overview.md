@@ -49,4 +49,4 @@ For an even more in-depth look at messaging best practices please see:
 
 [Messaging - Best Practices Blended Accounts](https://docs.google.com/document/d/1L3xuUPw5Zz3bZNX-ymTRZTNsLwKEcWA6ZrdCusKXVHY/edit)
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5275421544001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/238913139" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>

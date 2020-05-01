@@ -19,7 +19,7 @@ Delete an existing status reason.
 
 | Method | URL |
 | :-------- | :------ |
-| DELETE | /api/account/{accountId}/configuration/le-agents/status-reasons/{statusReasonId} |
+| DELETE | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/le-agents/status-reasons/{statusReasonId} |
 
 ### Path Parameters
 
@@ -42,7 +42,7 @@ Delete an existing status reason.
 
 |Header | Description|
 |--- | ---|
-|ac-revision | Account config object type collection revision|
+|ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.|
 
 **Response Body**
 

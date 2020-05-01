@@ -19,7 +19,7 @@ Google AdWords Click-to-Message enables consumers to message a brand via SMS, di
 
 For brands, creating a presence on the channels used by their consumers is key to building connections and creating prospects. For brands that want to enable Google AdWords Click-to-message with LiveEngage, they must first onboard to Twilio to receive a number. For full onboarding instructions please contact your LivePerson representative.
 
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5275429400001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/238913607" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 
 ### Configuration
 

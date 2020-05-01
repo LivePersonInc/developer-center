@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	var url = window.location.href;
 	//add anchor links to all h3 titles. See respective functions below for what they do.
-	anchors.add('h3');
+	anchors.add('h3, h4');
 	linkload();
 	sidebarClick();
 	populateAnchors();
@@ -11,8 +11,10 @@ $(document).ready(function () {
 	isExplorer();
 	searchFunction();
 	capabilitiesSearch();
-	searchHighlight();
-	allArticlesClick()
+	allArticlesClick();
+	scrollToHash();
+	// domainTool();
+	searchClick(event);
 	//detect if mobile user
 	if (/Mobi|Android/i.test(navigator.userAgent) == false) {
 		sidebarCollapse(url);
@@ -24,7 +26,7 @@ $(document).ready(function () {
 			//if there's no refresh, this is a load and linkload will be called
 			linkload();
 		}
-		//if refresh events can't be detected just call the function (enjoy explorer)
+		//refresh events can't be detected just call the function (enjoy explorer)
 	} else {
 		linkload();
 	};
@@ -75,14 +77,17 @@ function navigateContent(url) {
 			}
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
-			anchors.add('h3');
+			anchors.add('h3, h4');
 			populateAnchors();
 			codeButtons();
 			replaceTitle();
 			searchFunction();
 			capabilitiesSearch();
 			searchHighlight();
-			allArticlesClick()
+			allArticlesClick();
+			scrollToHash();
+			// domainTool();
+			searchClick();
 			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
 			$('#anchorlist').scrollToFixed({
 				dontSetWidth: false
@@ -104,7 +109,10 @@ function navigateContent(url) {
 				$('.innerpageitem').removeClass("activeitem");
 			}
 			//jump to top when page loads
-			window.scrollTo(0, 0);
+			if (window.location.hash == "") {
+				console.log(window.location.hash);
+				window.scrollTo(0, 0);
+			}
 			if (/Mobi|Android/i.test(navigator.userAgent) == true) {
 				$('#mysidebar').slideUp(400);
 				$('#mysidebar').data("expanded", "false");
@@ -238,17 +246,20 @@ function populateAnchors() {
 	$(".anchoritem").remove();
 	//find all h3 titles on the page
 	var anchorlinks = document.getElementsByTagName("h3");
-	var anchorlist = $('.anchorlist ul');
+	var anchorlist = document.getElementById('inneranchors');
+	let html;
 	//if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
 	if (anchorlinks.length == 0) {
 		$('.anchorlist').css('visibility', 'hidden');
 		//if there are anchorlinks, display the box
 	} else {
+		html = '';
 		$('.anchorlist').css('visibility', 'visible');
 		//for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
 		$.each(anchorlinks, function () {
-			$(anchorlist).append('<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>');
+			html += '<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>'
 		});
+		anchorlist.innerHTML = html;
 	};
 };
 
@@ -271,66 +282,61 @@ function mobileHamburger() {
 		}
 	});
 }
+//a function to scroll the sidebar item into view, works somewhat well
+$.fn.isInViewport = function () {
+	var elementTop = $(this).offset().top - 150;
+	var elementBottom = elementTop + $(this).outerHeight();
 
-//Inherited this function in all its nightmarish qualities. Will refactor at some point, maybe.
+	var viewportTop = $(window).scrollTop();
+	var viewportBottom = viewportTop + $(window).height();
+
+	return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+//Refactored this a bit from its original nightmare-state. Needs improvement. This controls the auto-collapse of the sidebar when a page opens
 function sidebarCollapse(url) {
 	var modifiedURL = '/' + url.split('/').reverse()[0].replace(/\#.*/, '');
 	var currentPage = $('a[href="' + modifiedURL + '"]');
 	var currentPageTitle = $(currentPage).html();
-	//if this isn't the homepage
-	if (currentPageTitle == "WELCOME"){
-		//make sure no other links are set to active
+	//if this is the homepage
+	if (currentPageTitle == "WELCOME") {
+		//make sure no other links are set to active and collapse any open folders before highlighting the current page
 		$(".innerfolder > .active > button").removeClass("clicked");
 		$(".folder ul").slideUp(400, null);
 		$(".folder > a").data("expanded", "false");
 		$('a').removeClass("active");
 		currentPage = currentPage.parent().addClass("active");
 	};
+	//get rid of any currently open items and then highlight the current page
 	$('a').removeClass("activepage");
 	$('.homeitem').removeClass("activepage");
 	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
-	var toOpen = $(".activepage").parent().parent().parent().parent().parent().parent().parent().hasClass("folder");
-	var toOpenHigher = $(".activepage").parent().parent().parent().parent().parent().hasClass("folder");
-	if (toOpen || toOpenHigher) {
-		$(".activepage").parent().parent().show();
-		$(".activepage").parent().parent().parent().show();
-		$(".activepage").parent().parent().parent().parent().show();
-		$(".activepage").parent().parent().parent().parent().parent().show();
-		$(".activepage").parent().parent().parent().parent().parent().parent().show();
-		$(".activepage").parent().show();
-		$(".activepage").parent().parent().prev().data("expanded", "true");
-		$(".activepage").parent().parent().parent().parent().prev().data("expanded", "true");
-		$(".activepage").parent().parent().parent().parent().parent().parent().prev().data("expanded", "true");
+	//grab any parent elements of the active page that has the folder class
+	var toOpen = $(".activepage").parents("folder");
+	//manipulate the active page's parents to open them, hightlight them, etc.
+	if (toOpen) {
+		$(".activepage").parents().show();
+		$(".activepage").parents('ul').prev('.highlightlink').addClass('active');
+		$("a.active").data("expanded", "true");
 		if ($(".activepage").parent().hasClass("innerpageitem")) {
 			$(".activepage").parent().addClass("activeitem");
 		}
-		$(".activepage").parent().parent().prev().addClass("active");
-		$(".activepage").parent().parent().parent().parent().prev().addClass("active");
-		$(".activepage").parent().parent().parent().parent().parent().parent().prev().addClass("active");
-		$(".activepage").parent().prev().data("expanded", "true");
-		$("ul#mysidebar").css("visibility", "visible");
 		$(".innerfolder > .active > button").addClass("clicked");
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
-		$(".post-content").on("click", "a", function () {
-			$(".sidebarbutton").removeClass("clicked");
-			$(".topfolder > a").next().slideUp(400);
-			$(".topfolder > a").data("expanded", "false");
-			$(".homeitem > a").removeClass("active");
-			$(".topfolder > a").removeClass("active");
-		});
-		if (currentPage.offset().top > 700) {
-		$('#mysidebar').animate({
-			scrollTop: currentPage.offset().top - 200
-		}, 1000);
-	};
+		if (!currentPage.isInViewport()) {
+			$('#mysidebar').animate({
+				scrollTop: currentPage.offset().top - 200
+			}, 2000);
+			$(currentPage).parents('.highlightlink').trigger('click');
+		};
 	};
 };
 
 function allArticlesClick() {
 	$(".listheader").data("expanded", "true");
-	$(".alldocumentscontainer").on("click", ".listheader", function (){
+	$(".alldocumentscontainer").on("click", ".listheader", function () {
 		var hasExpanded = $(this).data("expanded") == "true";
 		if (hasExpanded) {
 			$(this).children('.alldocumentspagelist').slideUp(400);
@@ -343,29 +349,33 @@ function allArticlesClick() {
 }
 
 //control a click on the two types of sidebar menu items. See the above dropdown functions, they act the same with some CSS differences.
+//this function is triggered on click not when the page loads.
 function sidebarClick() {
 	$(".topfolder").on("click", ".highlightlink", function () {
+		//if the clicked element is not one of the buttons at the bottom of the sidebar, e.g "status page"
 		if (!$(this).hasClass("bottombuttons")) {
-		var hasExpanded = $(this).data("expanded") == "true";
-		if (hasExpanded) {
-			$(this).next().slideUp(400);
-			$(this).data("expanded", "false");
-			$(this).removeClass("active");
-			$(this).parent().removeClass("active");
-			$(".innerfolder > .active > button").removeClass("clicked");
-		} else {
-			$(".innerfolder > .active > button").removeClass("clicked");
-			$(".folder ul").slideUp(400, null);
-			$(".folder > a").data("expanded", "false");
-			$(this).next().slideDown(400);
-			$(this).data("expanded", "true");
-			$(".folder > a").removeClass("active");
-			$(this).addClass("active");
-		}
-		return false;
-	};
+			var hasExpanded = $(this).data("expanded") == "true";
+			//if it's expanded, close it
+			if (hasExpanded) {
+				$(this).next().slideUp(400);
+				$(this).data("expanded", "false");
+				$(this).removeClass("active");
+				$(this).parent().removeClass("active");
+				$(".innerfolder > .active > button").removeClass("clicked");
+				//otherwise, open it
+			} else {
+				$(".innerfolder > .active > button").removeClass("clicked");
+				$(".folder ul").slideUp(400, null);
+				$(".folder > a").data("expanded", "false");
+				$(this).next().slideDown(400);
+				$(this).data("expanded", "true");
+				$(".folder > a").removeClass("active");
+				$(this).addClass("active");
+			}
+			return false;
+		};
 	});
-
+	//same as above, just one level down
 	$(".innerfolder").on("click", ".highlightlink", function (event) {
 		event.preventDefault();
 		var hasExpanded = $(this).data("expanded") == "true";
@@ -435,19 +445,23 @@ function searchFunction() {
 				}
 			}
 		};
+
 		function metricsDisplay() {
 			//if this is the API metrics page
 			table = document.getElementById("apimetricstable");
 			tr = table.getElementsByTagName("tr");
+			//for each row, check if the input is present in the row, but only in the metric name and api column
 			for (i = 0; i < tr.length; i++) {
 				tdMetric = tr[i].getElementsByTagName("td")[0];
 				tdApi = tr[i].getElementsByTagName("td")[2];
 				if (tdMetric || tdApi) {
+					//if it's present, show it and highlight it
 					if (tdMetric.innerHTML.toUpperCase().indexOf(filter) > -1 || tdApi.innerHTML.toUpperCase().indexOf(filter) > -1) {
 						tr[i].style.display = "";
 						$('td').highlight(filter.toString(), {
 							className: 'metricHighlight'
 						});
+						//otherwise, hide it
 					} else {
 						tr[i].style.display = "none";
 					}
@@ -474,41 +488,42 @@ function searchFunction() {
 //very similar to the search function above, just for the capabilities comparison table
 function capabilitiesSearch() {
 	var $title = $('.h1').text();
-	if ($title.indexOf('Messaging Channels Capabilities Comparison') > -1) {
+	if ($title.indexOf('Rich Messaging Channel Capabilities') > -1) {
 		// Declare variables
+		console.log('run');
 		var input, filter, table, tr, categorytr, td, i;
 		input = document.getElementById("capabilitiesSearch");
 		table = document.getElementById("featurestable");
 		tr = table.getElementsByTagName("tr");
 		td = document.getElementsByTagName("td");
 		$(input).on('input', function () {
-		filter = input.value.toUpperCase();
-		$('td').unhighlight({
-			className: 'metricHighlight'
-		});
-		for (i = 0; i < tr.length; i++) {
-			capabilityName = tr[i].getElementsByTagName("td")[0];
-			if (capabilityName) {
-				if (capabilityName.innerHTML.toUpperCase().indexOf(filter) > -1) {
-					tr[i].style.display = "";
-					$(capabilityName).highlight(filter.toString(), {
-						className: 'metricHighlight'
-					});
-				} else {
-					tr[i].style.display = "none";
+			filter = input.value.toUpperCase();
+			$('td').unhighlight({
+				className: 'metricHighlight'
+			});
+			for (i = 0; i < tr.length; i++) {
+				capabilityName = tr[i].getElementsByTagName("td")[0];
+				if (capabilityName) {
+					if (capabilityName.innerHTML.toUpperCase().indexOf(filter) > -1) {
+						tr[i].style.display = "";
+						$(capabilityName).highlight(filter.toString(), {
+							className: 'metricHighlight'
+						});
+					} else {
+						tr[i].style.display = "none";
+					};
 				};
-			};
-			//if the tr being looped over is one of the blue categoryrows
-			if ($(tr[i]).hasClass("categoryrow")) {
-				//hide it always
+				//if the tr being looped over is one of the blue categoryrows
+				if ($(tr[i]).hasClass("categoryrow")) {
+					//hide it always
 					$(tr[i]).css("display", "none");
 					//except when user has deleted the input
-				if (input.value == "") {
-					$(tr[i]).css("display", "table-row");
+					if (input.value == "") {
+						$(tr[i]).css("display", "table-row");
+					};
 				};
 			};
-		};
-	});
+		});
 	};
 };
 
@@ -526,25 +541,124 @@ function searchHighlight() {
 	localStorage.setItem('filter', '');
 }
 
-//detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
-function isExplorer() {
-	var ua = window.navigator.userAgent;
-	var is_ie = /MSIE|Trident/.test(ua);
+//this function fixes chrome not scroll to anchor links
+function scrollToHash() {
+	setTimeout(function () {
+		if (window.location.hash && window.location.hash != "#top") {
+			var hash = window.location.hash;
+			var linkScroll = $('a[href*="' + hash + '"]');
+			if (linkScroll.length > 1) {
+				var linkOffset = $(linkScroll[1]).offset().top;
+			} else {
+				var linkOffset = $(linkScroll).offset().top;
+			}
+			$("body, html").animate({
+					scrollTop: linkOffset,
+				},
+				1000,
+				"swing"
+			);
+		}
+	}, 1000);
+}
 
-	if (is_ie) {
-		var wrapper = document.getElementById('defaultwrapper');
-		var header = document.getElementById('defaultheader');
-		var sidebar = document.getElementById('defaultsidebar');
-		var documenttitlecontainer = document.getElementById('documenttitlecontainer');
-		var footer = document.getElementById('defaultfooter');
-		var content = document.getElementById('defaultcontent')
-		wrapper.classList.add('defaultwrapperexplorer');
-		header.classList.add('defaultheaderexplorer');
-		sidebar.classList.add('defaultsidebarexplorer');
-		documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
-		footer.classList.add('defaultfooterexplorer');
-		content.classList.add('defaultcontentexplorer');
+//this function is used on the domain API page. You give it an account number, 
+//and it gives you all its domains back, per service
+// currently commented out because I don't have time to make this work for IE
+// function domainTool() {
+// 	var $title = $('.h1').text();
+// 	//if we're on the Domain API page
+// 	if ($title == "Domain API") {
+// 		let input;
+// 		let accountInput;
+// 		const csdsButton = document.getElementById("csds-button");
+// 		const csdsResult = document.getElementById("csds-result");
+// 		let csdsUrl;
+// 		let html = "";
+// 		//when  a user clicks submit
+// 		function retrieveDomains(account) {
+// 			$.ajax({
+// 				url: csdsUrl,
+// 				headers: {
+// 					'Accept': 'application/json'
+// 				},
+// 				dataType: "json",
+// 				//on success, grab the results from CSDS and display them in a table
+// 				success: function (data) {
+// 					html = '';
+// 					$(csdsResult).css('display', 'table');
+// 					if (data.baseURIs.length > 0) {
+// 						html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
+// 						//sort results alphabetically
+// 						data.baseURIs.sort(function (a, b) {
+// 							var m1 = a.service.toLowerCase();
+// 							var m2 = b.service.toLowerCase();
+// 							if (m1 < m2) return -1;
+// 							if (m1 > m2) return 1;
+// 							return 0;
+// 						})
+// 						$.each(data.baseURIs, function () {
+// 							html += `<tr><td>` + this.service + `</td><td>` + this.baseURI +`</td></tr>`;
+// 						});
+// 						html += '</tbody>'
+// 						csdsResult.innerHTML = html;
+// 					} else {
+// 						csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
+// 					}
+// 				}
+// 			});
+// 		}
+
+// 		function retrieveUrl() {
+// 			input = document.getElementById("account");
+// 			accountInput = input.value;
+// 			//take the account number and populate the CSDS URL
+// 			csdsUrl = 'https://api.liveperson.net/api/account/' + accountInput + '/service/baseURI?version=1.0';
+// 			//take the account we just retrieved and call ajax using the URL we just created above
+// 			retrieveDomains(accountInput);
+// 		}
+// 		csdsButton.addEventListener("click", retrieveUrl);
+// 	}
+// }
+	//detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
+	function isExplorer() {
+		var ua = window.navigator.userAgent;
+		var is_ie = /MSIE|Trident/.test(ua);
+
+		if (is_ie) {
+			var wrapper = document.getElementById('defaultwrapper');
+			var header = document.getElementById('defaultheader');
+			var sidebar = document.getElementById('defaultsidebar');
+			var documenttitlecontainer = document.getElementById('documenttitlecontainer');
+			var footer = document.getElementById('defaultfooter');
+			var content = document.getElementById('defaultcontent')
+			var heroPanel = document.getElementById('heroPanel')
+			var cardInnerText = document.getElementsByClassName('cardInnerText');
+			var secondConfirmCardImg = document.getElementsByClassName('secondConfirmCardImg');
+			var thirdPanel = document.getElementById('thirdPanel');
+			var confirmationFooter = document.getElementById('confirmationFooter');
+			var formContainer = document.getElementById('formContainer');
+			wrapper.classList.add('defaultwrapperexplorer');
+			header.classList.add('defaultheaderexplorer');
+			sidebar.classList.add('defaultsidebarexplorer');
+			documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
+			footer.classList.add('defaultfooterexplorer');
+			content.classList.add('defaultcontentexplorer');
+			heroPanel.classList.add('heroPanelExplorer');
+			cardInnerText.classList.add('cardInnerTextExplorer');
+			secondConfirmCardImg.classList.add('secondConfirmCardImgExplorer');
+			thirdPanel.classList.add('thirdPanelExplorer');
+			confirmationFooter.classList.add('confirmationFooterExplorer');
+			formContainer.classList.add('formContainerExplorer');
+		};
 	}
-};
+		//clicks on the search dropdown should also use the "pseudo SPA" method
+		function searchClick(event) {
+			$('.ds-dropdown-menu').on('click', 'a', function (event) {
+				event.preventDefault();
+				linkclick(event, this);
+			})
+		};
 
-$('#mysidebar').height($(".nav").height());
+		//legacy function, probably not needed
+		$('#mysidebar').height($(".nav").height());

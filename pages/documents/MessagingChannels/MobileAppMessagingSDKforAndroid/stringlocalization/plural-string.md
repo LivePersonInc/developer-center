@@ -7,10 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: String Localization
-
-order: 220
 permalink: mobile-app-messaging-sdk-for-android-string-localization-plural-string-resource-example.html
-
 indicator: messaging
 ---
 

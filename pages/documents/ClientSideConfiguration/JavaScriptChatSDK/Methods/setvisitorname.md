@@ -33,7 +33,7 @@ var failedRequest = myChat.setVisitorName({
     visitorName: "Phil",
     success: myChat.nameUpdated,
     error: myChat.nameUpdateFailed,
-    conext: myChat
+    context: myChat
 });
 
 if(failedRequest && failedRequest.error){

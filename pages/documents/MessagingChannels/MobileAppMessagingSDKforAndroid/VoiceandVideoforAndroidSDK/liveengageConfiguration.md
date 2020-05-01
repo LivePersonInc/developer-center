@@ -16,6 +16,12 @@ permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-
 indicator: messaging
 ---
 
+<div class="important">
+<h2>Deprecation Notice</h2>
+
+the CoApp product is deprecated and will be discontinued from February 28th, 2020 on.
+</div>
+
 ### Agent Workspace Requirements
 
 Your agents will be using LiveEngage from a supported web browser to make calls to your consumers. This section explains how to setup your LiveEngage account for voice & video support.
@@ -26,7 +32,7 @@ Your agents will be using LiveEngage from a supported web browser to make calls 
 
 | Browser | Version |  Desktop OS |
 | ------------- |:-------------:|:-------------|
-| Chrome | latest (>= v54)  | Windows, MacOSX, Linux |
+| Chrome |  >= v54)  | Windows, MacOSX, Linux |
 
 **Note:** Only web browsers listed here are supported. When using LiveEngage from an unsupported browser the feature is automatically disabled from the agent workspace.
 

@@ -25,7 +25,7 @@ function readFiles(dirname, onFileContent, onError) {
 var readdirp = require('readdirp');
 
 var settings = {
-    root: './pages/Products/Watson with LE',
+    root: './pages/documents/AgentExperienceAndBots/workspacewidget',
     entryType: 'files',
     depth: 3
 };
@@ -47,19 +47,19 @@ readdirp(settings)
           let permalink = lines.find(line => line.startsWith('permalink'));
           if (permalink) {
           lines.splice(2, 0, 'redirect_from:')
-          lines.splice(3, 0, `  - ${permalink.replace('permalink: ', '')}`);
+          lines.splice(4, 0, `  - ${permalink.replace('permalink: ', '')}`);
           }
-          let title = lines.find(line => line.startsWith('title'));
+          let title = lines.find(line => line.startsWith('pagename'));
           if(title) {
-            title = title.replace('title: ', '').toLowerCase().replace(/ /g, '-');
+            title = title.replace('pagename: ', '').toLowerCase().replace(/ /g, '-');
           }
-          let level3 = lines.find(line => line.startsWith('level3'));
+          let level3 = lines.find(line => line.startsWith('documentname'));
           if (level3) {
-            level3 = level3.replace('level3: ', '').toLowerCase().replace(/ /g, '-');
+            level3 = level3.replace('documentname: ', '').toLowerCase().replace(/ /g, '-');
           }
-          let level4 = lines.find(line => line.startsWith('level4'));
+          let level4 = lines.find(line => line.startsWith('subfoldername'));
           if(level4) {
-            level4 = level4.replace('level4: ', '').toLowerCase().replace(/ /g, '-');
+            level4 = level4.replace('subfoldername: ', '').toLowerCase().replace(/ /g, '-');
           };
           //console.log(lines.find(line => line.startsWith('title')))
           const lineOfLink = lines.findIndex(line => line.startsWith('perma'))

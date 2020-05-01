@@ -13,11 +13,11 @@ indicator: messaging
 
 ### Overview
 
-[Business Chat List Picker](https://developer.apple.com/documentation/businesschat/enhancing_the_customer_s_user_experience/sending_a_list_picker) enables human or automated agents to share a list of items and information about them while allowing the consumer to select multiple items and reply back with the selection. The following capabilities are supported:
+[Business Chat List Picker](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/list_picker) enables human or automated agents to share a list of items and information about them while allowing the consumer to select multiple items and reply back with the selection. The following capabilities are supported:
 
 * Define items information - item name, description, image.
 * Item sections - divide your list of items into sections based on the product categories.
-* Multi-selection - Allow the consumer to select multiple items.
+* Multi-selection - Allow the consumer to select multiple items under multiple sections (brands can decide to turn multi-selction on some or all of the sections). 
 * receivedMessage and replyMessage bubbles style structures - define the templates for the bubbles that are received by the consumer on the Business Chat thread, and replied to.
 
 Using metadata properties, brands can define the received and reply bubble structures and enable multi-selection capabilities.
@@ -169,10 +169,12 @@ The List Picker Metadata JSON is based on [this JSON template](#metadata-json-te
 
 #### List Picker Metadata JSON Properties
 
+The muliple selection property allows the brand to configure which sections will allow for multiple selection and which sections will not. The property is an array of bolleans which will be set to true or false in the order that the sections are configured in the body. If the multi selections property is not set in the property, the default is "false". 
+
 | Property Name     | Description                                                                                 | Type    | Required | Size Limit |
 | :---------------- | :------------------------------------------------------------------------------------------ | :------ | :------- | :--------- |
 | type              | Type of metadata. </br> Must be BusinessChatMessage                                         | Enum    | Y        |            |
-| multipleSelection | Value that indicates if the customer can make multiple selections. </br> Defaults to false. | Boolean | N        |            |
+| multipleSelection | Value that indicates if the customer can make multiple selections on specific sections. Defaults to false. | Boolean Array | N        |            |
 | receivedMessage   | Defines how the bubble template will be displayed when a message is received.                 | Object  | Y        |            |
 | replyMessage      | Defines how the bubble will be displayed when a message is sent back by the consumer.       | Object  | Y        |            |
 
@@ -204,7 +206,7 @@ The configuration of the Received and Reply Messages is done via a metadata JSON
 [
   {
     "type": "BusinessChatMessage",
-    "multipleSelection": true,
+    "multipleSelection":[true,false]
     "receivedMessage": {
       "style": "icon",
       "subtitle": "Select your favorite",
@@ -533,4 +535,3 @@ Based on the [Structured Content Basic Element Button](structured-content-introd
   ]
 }
 ```
-

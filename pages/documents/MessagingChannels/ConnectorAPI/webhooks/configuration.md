@@ -11,47 +11,12 @@ indicator: messaging
 permalink: connector-api-webhooks-configuration.html
 ---
 
-### Webhooks Capabilities Configuration
+Webhooks notifications are enabled by installing an [application](connector-api-getting-started.html#app-install-manifest-for-connectors) containing endpoints for each event type. If you have an admin account for your brand, use the [connector app hub](https://connector-api.dev.liveperson.net) to create applications. In any other case, please use your LivePerson contact to help you set up Webhooks. The connector app hub provides the following overview:
 
-A registration of an application to receive Webhooks (WH) notifications is achieved by enabling the “webhooks” capability of that application. This is done by adding the “webhooks” json attribute inside the “capabilities” section of the [**App Installation JSON**](app-install-manifest-connectors.html).
+<img src="img/connectorapi/Connector-App-Hub-Overview.png" alt="Connector App Hub Overview" style="max-width:100%;mac-height:100%;">
 
-Here is an example of such configuration:
+Here you can see if an app is enabled, its creation data, name, id, secret and description. The id and secret are needed for using the [Send API](connector-api-send-api-overview.html). A new app can be added by clicking the *Create App* button in the upper right corner.
 
-```json
-{
-    "client_name": "App name",
-    "enabled": true,
-    "logo_uri": "URL for your logo",
-    ...
-    "capabilities": {
-      "webhooks": {
-        "ms.MessagingEventNotification.ContentEvent": {
-          "endpoint": "https://www.application.endpoint.com/",
-          "max_retries": 1
-        },
-         "ms.MessagingEventNotification.RichContentEvent": {
-          "endpoint": "https://www.application.endpoint.com/"
-         },
-         "ms.MessagingEventNotification.ChatStateEvent": {
-          "endpoint": "https://www.application.endpoint.com/"
-        },
-        "cqm.ExConversationChangeNotification": {
-          "endpoint": "https://www.application.endpoint.com/",
-	       "max_retries": 3
-        }
-      }
-    }
-}
-```
+<img src="img/connectorapi/Connector-App-Hub-New-App.png" alt="Connector App Hub Overview" style="max-width:100%;mac-height:100%;">
 
-**Note**: the `enabled` key accepts a boolean value.
-
-The “webhooks” JSON key is a map, of which each entry is a single notification registration. Each entry consists of the following:
-
-* key (string) - the event type (for example, "ms.MessagingEventNotification.ContentEvent")
-
-* value (JSON) - the attributes of the notification, including:
-
-  * endpoint (mandatory) - the SSL secured HTTP url to which to send the notification.
-
-  * max_retries (optional) - maximum number of retry attempts for a failed notification request (possible values: 0 - 5; default value: 0).  
+Application name and description must be provided. Further, application name must be unique. If all event types should be sent to the same endpoint, you can add it after the description. Check the advanced configuration options to define an endpoint per event type and to add a retention time. After entering all the necessary information, install the app. Please note, it can take up to two minutes that your app was recognized by Webhooks. Further, make sure that your endpoints are reachable and respond within 2.5 seconds. Otherwise, they might be eligible for [disablement](connector-api-webhooks-disclaimers.html).  

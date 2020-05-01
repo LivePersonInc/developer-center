@@ -17,7 +17,7 @@ This method retrieves a list of a consumer's conversations' metadata. The retrie
 
 |Method| URL |
 |------|-----|
-|GET   | `https://<domain>/messaging_history/api/account/{accountID}/conversations/consumer/metadata/search?state=close&startFrom=1502628503961&startTo=1502628758614&offset=0&limit=50`|
+|GET   | https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/conversations/consumer/metadata/search?state=close&startFrom=1502628503961&startTo=1502628758614&offset=0&limit=50|
 
 **URL Parameters**
 

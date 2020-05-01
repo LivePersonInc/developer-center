@@ -129,6 +129,19 @@ This section contains API details that are common to every API’s resource and 
 | 10017      | View Connection Area Content    | View relevant content from the Connection Area per journey.      |
 | 10018      | Configure shift status       | For brands who have enabled the Messaging feature, this permission allows an admin to configure the shift status.                          |
 | 10027      | Configure skill workdays       | View a list of skills and assign and edit Schedule and Special Occasion items associated with them.                          |
+| 10030      | FaaS Invocation  | Allows to invoke LivePerson Functions (FaaS)|
+| 10031      | FaaS Admin       | Allows to administrate LivePerson Functions (FaaS) Settings |
+| 10032      | FaaS Developer   | Allows to develop LivePerson Functions (FaaS) |
+| 10033 | Conversation Builder: Administrator | Grants the user full privileges in Conversation Builder with a few exceptions: Users can't create and manage (bot) templates or access the Bot Status application. |
+| 10034 | Conversation Builder: Content User | Grants the user privileges in Conversation Builder to create and manage knowledge bases, articles, domains, intents and entities; to activate and train models; and to view and download analytics data. |
+| 10035 | Conversation Builder: Business User | Grants the user privileges in Conversation Builder to view and download analytics data. |
+| 10036 | Conversation Builder: Bot Status Access | Grants the user access to the Bot Status application, where the user can create, deploy, and manage connectors for the entire organization. |
+| 10037 | Conversation Builder: Bot Builder | Grants the user full privileges in Conversation Builder for creating bots and related resources (versions, releases, integrations, global functions, etc.). For more details, see [here](bot-accounts-permissions.html). |
+| 10038      | Configure messaging agent survey on skill   | Allow admins to assign skills to agent survey, as well as override agent survey timeout |
+| 10040 | Conversation Builder: API Credentials Manager | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only create and manage credentials. If you grant this, also grant Bot Builder Lite (10041) and API Developer (10043). |
+| 10041 | Conversation Builder: Bot Builder Lite | Grants the user privileges in Conversation Builder to create and manage bots, but with no ability to create and work with integrations or credentials,and with no ability to export or import bots. For more details, see [here](bot-accounts-permissions.html). |
+| 10042 | Conversation Builder: Import/Export Manager | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only export and import bots and knowledge bases. Grant this along with Bot Builder Lite (10041) as per your requirements. |
+| 10043 | Conversation Builder: API Developer | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only create and manage integrations. Grant this along with Bot Builder Lite (10041) as per your requirements. |
 | 20000      | Agent core permissions  | Core permissions that are included with the Agent role and cannot be disabled.              |
 | 20001      | Join Agents' conversations  | Join a conversation handled by another Agent within their Group  |
 | 20002      | View Agents' conversations | View conversations handled by other Agents within their Group    |
@@ -144,7 +157,8 @@ This section contains API details that are common to every API’s resource and 
 | 20014      | View Connection Area Content      | View relevant content from the Connection Area per journey.      |
 | 20015      | Handle messaging conversations  | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations                       |
 | 20017      | Set manual SLA  | Allows agents to manually configure the response time in a conversation.                    |
-|20020   |Update consumer profile via API. | Allow agent and agent managers to update consumer profile via API   |   
+| 20020      | Update consumer profile via API. | Allow agent and agent managers to update consumer profile via API   |
+| 20040      | View previously submitted messaging agent surveys | Allow agents to view all agent surveys submitted for the current conversation  |   
 | 30000      | Agent Manager core permissions     | Core permissions that are included with the Agent Manager role and cannot be disabled.      |
 | 30001      | Join Agents' conversations                                     | Join a conversation handled by any Agent within their Group(s) or Sub-group(s)              |
 | 30002      | View Agents' conversations                                     | View conversations handled by Agents within their Group(s) or Sub-group(s)                  |
@@ -167,6 +181,9 @@ This section contains API details that are common to every API’s resource and 
 | 30022      | View reports in Operational BI                                 | View reports in the Operational BI dashboard                     |
 | 30023      | Configure shift status                                         | For brands who have enabled the Messaging feature, this permission allows an agent manager to configure the shift status                   |
 | 30035      | Configure skill workdays                                       | Access users module, view a list of skills and assign and edit Schedule and Special Occasion items associated with them.    |
+| 30056      | Configure messaging agent survey                               | Allow agent managers to configure agent surveys and assign them to skills   |
+| 30057      | View previously submitted messaging agent surveys              | Allow agent managers to view all agent surveys submitted for the current conversation   |
+| 30058      | Submit messaging agent survey                                  | Allow agent managers to submit agent surveys on behalf of their agents   |
 | 40000      | Campaign Manager core permissions                              | Core permissions that are included with the Campaign Manager role and cannot be disabled.   |
 | 40001      | Edit campaigns  | Create and modify campaigns                                      |
 | 40002      | Publish campaigns    | Control the publishing of campaigns                              |

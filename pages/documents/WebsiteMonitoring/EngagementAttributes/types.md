@@ -19,16 +19,7 @@ There are 10 supported Engagement Attributes, organized into 3 categories:
 
 * Visitor journey
 
-Each Engagement Attribute has its own data structure and can be sent to LivePerson using JavaScript code, or extracted from your page using LivePerson’s scraping tool.
-
-**Code example**:
-
-```javascript
-lpTag.sdes = lpTag.sdes||[];
-lpTag.sdes.push(
-// SDEs located here
-);
-```
+Each Engagement Attribute has its own data structure and can be sent to LivePerson [using JavaScript code](le-tag-sdes.html), or extracted from your page using LivePerson’s scraping tool.
 
 ### Supported Sources
 
@@ -202,33 +193,31 @@ This information can be used to segment visitors and tailor an experience based 
 {
     "type": "ctmrinfo", //MANDATORY
     "info": {
-    10
-    ENGAGEMENT ATTRIBUTES OVERVIEW
-    "cstatus": "cancelled", //CUSTOMER LIFECYCLE STATUS. FROM PRE-DEFINED LIST
-    "ctype": "vip", //CUSTOMER TYPE OR TIER. FROM PRE-DEFINED LIST
-    "customerId": "138766AC", //UNIQUE CUSTOMER IDENTIFIER
-    "balance": -400.99, //THE CUSTOMER FINANCIAL BALANCE IN DECIMAL VALUE
-    "currency": "USD", //CURRENCY CODE
-    "socialId": "11256324780", //SOCIAL ID OF YOUR CHOICE: FACEBOOK, TWITTER
-    ETC...
-    "imei": "3543546543545688", //UNIQUE DEVICE OR PHONE IDENTIFIER
-    "userName": "user000", //CONSUMER NICKNAME OR USERNAME
-    "companySize": 500, //COMPANY SIZE MEASURED BY NUMBER OF EMPLOYEES
-    "accountName": "bank corp", //THE CUSTOMER'S COMPANY NAME
-    "role": "broker", //CONSUMER ROLE TITLE
-    "lastPaymentDate": {
-      "day": 15, //THE DAY OF THE LAST PAYMENT NUMERIC VALUE
-      "month": 10, //THE MONTH OF THE LAST PAYMENT NUMERIC VALUE
-      "year": 2014 //THE YEAR OF THE LAST PAYMENT NUMERIC VALUE
-    },
-    "registrationDate": {
-      "day": 23, //THE DAY OF THE REGISTRATION NUMERIC VALUE
-      "month": 5, //THE MONTH OF THE REGISTRATION NUMERIC VALUE
-      "year": 2013 //THE YEAR OF THE REGISTRATION NUMERIC VALUE
-    },
-    "storeNumber": "123865", //STORE NUMBER
-    "storeZipCode": "20505" //STORE ZIP CODE
-  }
+      "cstatus": "cancelled", //CUSTOMER LIFECYCLE STATUS. FROM PRE-DEFINED LIST
+      "ctype": "vip", //CUSTOMER TYPE OR TIER. FROM PRE-DEFINED LIST
+      "customerId": "138766AC", //UNIQUE CUSTOMER IDENTIFIER
+      "balance": -400.99, //THE CUSTOMER FINANCIAL BALANCE IN DECIMAL VALUE
+      "currency": "USD", //CURRENCY CODE
+      "socialId": "11256324780", //SOCIAL ID OF YOUR CHOICE: FACEBOOK, TWITTER
+      "imei": "3543546543545688", //UNIQUE DEVICE OR PHONE IDENTIFIER
+      "userName": "user000", //CONSUMER NICKNAME OR USERNAME
+      "companySize": 500, //COMPANY SIZE MEASURED BY NUMBER OF EMPLOYEES
+      "companyBranch": "East Village", //THE CUSTOMER'S COMPANY BRANCH NAME
+      "accountName": "bank corp", //THE CUSTOMER'S COMPANY NAME
+      "role": "broker", //CONSUMER ROLE TITLE
+      "lastPaymentDate": {
+        "day": 15, //THE DAY OF THE LAST PAYMENT NUMERIC VALUE
+        "month": 10, //THE MONTH OF THE LAST PAYMENT NUMERIC VALUE
+        "year": 2014 //THE YEAR OF THE LAST PAYMENT NUMERIC VALUE
+      },
+      "registrationDate": {
+        "day": 23, //THE DAY OF THE REGISTRATION NUMERIC VALUE
+        "month": 5, //THE MONTH OF THE REGISTRATION NUMERIC VALUE
+        "year": 2013 //THE YEAR OF THE REGISTRATION NUMERIC VALUE
+      },
+      "storeNumber": "123865", //STORE NUMBER
+      "storeZipCode": "20505" //STORE ZIP CODE
+    }
 }
 ```
 
@@ -301,9 +290,14 @@ Contact object:
 | email | Visitor's email address  | string | "john@doe.com" | false |yes |
 | phone | Visitor's phone number | string  | "5558982312" | false |yes |
 | phoneType |Phone type | string  | “HOME”,<br>“MOBILE”,<br>“WORK”,<br>“FAX”,<br>“MAIN”,<br>“HOME_FAX”,<br>“WORK_FAX”,<br>“PAGER”,<br>“OTHER” | false |yes |
-| address | Visitor's personal addresses | Address object  | {<br>"country":<br>STRING<br>,<br>"region": STRING<br>} | false |yes |
-| country | Visitor's country | string. The value is 2 letter code in uppser case ISO3166-1 Alpha-2  | "US" | false |yes |
-| region | Visitor's region | string  | "North America" | false |yes |
+| address | Visitor's personal addresses | Address object  | {<br>"country":<br>Russia<br>,<br>"region": Moscow<br>} | false |yes |
+
+Address object:
+
+| Name | Description  | Type  | Value/Example | Mandatory  | Supported in Authenticated Flow? |
+|------|--------------|-------|---------------|------------|--------|
+| country | Visitor's country | string | "Russia" | false |yes |
+| region | Visitor's region | string  | "Moscow" | false |yes |
 
 **Personal info SDE JSON example**:
 
@@ -313,20 +307,24 @@ Contact object:
       "personal": {
         "firstname": "John", // FIRST NAME
         "lastname": "Doe", // SURNAME
-      "age": {
-          "age": 34, // AGE AS INTEGER
-          "year": 1980, // BIRTH YEAR
-          "month": 4, // BIRTH MONTH
-          "day": 15 // BIRTH DAY
-        },
-      "contacts": [{
-        "email": "myname@example.com", // EMAIL
-        "phone": "+1 212-788-8877" // PHONE NUMBER
-      }],
-      "gender": "MALE", // MALE, FEMALE, OTHER
-      "language": "en-US", // LANGUAGE
-      "company": "company" // VISITOR COMPANY NAME
-    }
+        "age": {
+            "age": 34, // AGE AS INTEGER
+            "year": 1980, // BIRTH YEAR
+            "month": 4, // BIRTH MONTH
+            "day": 15 // BIRTH DAY
+          },
+        "contacts": [{
+          "email": "myname@example.com", // EMAIL
+          "phone": "+1 212-788-8877", // PHONE NUMBER
+          "address": {
+            "country": "Russia", // COUNTRY
+            "region": "Moscow" // REGION
+            }
+        }],
+        "gender": "MALE", // MALE, FEMALE, OTHER
+        "language": "en-US", // LANGUAGE
+        "company": "company" // VISITOR COMPANY NAME
+      }
 }
 ```
 

@@ -14,6 +14,9 @@ indicator: chat
 ---
 ### Introduction
 
+{: .notice}
+Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/common-resources-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+
 The LiveEngage Operational Real-Time API provides real-time information about contact center performance.
 
 Using this API, Agent Managers can measure contact center performance at account level, at skill level, or even drill down to agent level. Data is provided for the previous 24 hours, up to the last 5 minutes, with a refresh rate of 10 seconds.
@@ -32,7 +35,7 @@ It is possible to leverage the Operational Real-Time API to build your own real-
 
 * Monitor performance at account level, skill level or agent level.
 
-_Note: LiveEngage and our report builder functionality provide you with a slew of reports and dashboards. Before you invest time in developing your own dashboards, we recommend that you first review what’s available to ensure your needs are not already met out of the box. For more info on our report builder, please [click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/AM/Report+Builder+User+Guide.pdf)._
+_Note: LiveEngage and our report builder functionality provide you with a slew of reports and dashboards. Before you invest time in developing your own dashboards, we recommend that you first review what’s available to ensure your needs are not already met out of the box._
 
 ### Getting Started
 

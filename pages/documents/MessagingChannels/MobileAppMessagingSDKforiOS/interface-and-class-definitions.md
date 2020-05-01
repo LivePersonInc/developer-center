@@ -23,7 +23,8 @@ protocol ConversationParamProtocol {
     func getClosedConversations() -> [Conversation]?
     func getActiveConversation() -> Conversation?
     func getOpenConversation() -> Conversation?
-    func getLatestClosedConversation(_ conversationsCount: Int) -> [Conversation]?
+    func getOpenDialog() -> Dialog?
+    func getLatestClosedConversations(_ conversationsCount: Int) -> [Conversation]?
     func createNewConversation() -> Conversation
     func getQueryType() -> String
     func isConversationRelatedToQuery(_ conversation: Conversation) -> Bool
@@ -48,6 +49,7 @@ enum ConversationQueryType: String {
 class LPUser: NSObject {
     var firstName: String?
     var lastName: String?
+    var nickName: String?
     var profileImageURL: String?
     var phoneNumber: String?
     var employeeID: String?
@@ -71,10 +73,11 @@ class LPLog: NSObject {
 
 ```swift
 class LPConversationViewParams: NSObject {
-  var conversationQuery: ConversationParamProtocol!
+  var conversationQuery: ConversationParamProtocol
   var containerViewController: UIViewController? // nil = WindowMode
-  var isViewOnly = false
-  var conversationHistoryControlParam: LPConversationHistoryControlParam? // nil = no history control filter
+  var isViewOnly
+  var conversationHistoryControlParam: LPConversationHistoryControlParam
+  var welcomeMessage: LPWelcomeMessage = LPWelcomeMessage(message: nil)
 }
 ```
 
@@ -82,10 +85,10 @@ class LPConversationViewParams: NSObject {
 
 ```swift
 class LPConversationHistoryControlParam: NSObject {
-  var historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay? // control what kind of conversation to show (Open/Close)
-  var historyConversationsMaxDays: UInt? //get conversation that Closed/Opens in the last X days
-
-  historyConversationMaxDaysType: LPConversationHistoryMaxDaysDateType? //Control if filter the max days by conversation start date or by conversation close date
+  var historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay // control what kind of conversation to show (Open/Close)
+  var historyConversationsMaxDays: Int //get conversation that Closed/Opens in the last X days
+  var isEnable: Bool //whether filtering by open or close, or filtering by historyConversationsMaxDays
+  var historyConversationMaxDaysType: LPConversationHistoryMaxDaysDateType? //Control if filter the max days by conversation start date or by conversation close date
 }
 ```
 
@@ -95,6 +98,7 @@ class LPConversationHistoryControlParam: NSObject {
 enum LPConversationsHistoryStateToDisplay: Int {
     case open
     case close
+    case none
 }
 ```
 
@@ -135,12 +139,12 @@ class LPNotification: NSObject {
 
 ```swift
 enum LogLevel: Int {
-    case TRACE
-    case DEBUG
-    case INFO
-    case WARNING
-    case ERROR
-    case OFF
+    case trace = 0
+    case debug
+    case info
+    case warning
+    case error
+    case off
 }
 ```
 
@@ -168,7 +172,7 @@ class LPCampaignInfo: NSObject {
 
 ### LPMonitoringInitParams
 ```swift
-class : NSObject {
+class LPMonitoringInitParams: NSObject {
     var appInstallId: String // App Install ID of the Mobile Campaign of the Brand
 }
 ```
@@ -176,7 +180,7 @@ class : NSObject {
 
 ### LPMonitoringParams
 ```swift
-class : NSObject {
+class LPMonitoringParams: NSObject {
     var entryPoints: [String]? // Entry points array of the Mobile App
     var engagementAttributes: [[String:Any]]? // Array of Engagement Attributes.  SDE will not be sent to Agent if seesionID and visitorID are nil.
     var pageId: String? // PageID to send the SDEs for
@@ -185,7 +189,7 @@ class : NSObject {
 
 ### LPGetEngagementResponse
 ```swift
-class : NSObject {
+class LPGetEngagementResponse: NSObject {
     var engagementDetails: [LPEngagementDetails]? // Optional Engagement Details response in case received from the server, per the Engagement's request
     var sessionId: String?
     var visitorId: String?
@@ -195,7 +199,7 @@ class : NSObject {
 
 ### LPSendSDEResponse
 ```swift
-class : NSObject {
+class LPSendSDEResponse: NSObject {
     var sessionId: String?
     var visitorId: String?
     var pageId: String? // PageID of the Engagement. If not sending one in request, a new one will be generated from server in the response
@@ -204,7 +208,7 @@ class : NSObject {
 
 ### LPEngagementDetails
 ```swift
-class : NSObject {
+class LPEngagementDetails: NSObject {
     var campaignId: Int // CampaignID
     var engagementId: Int // EngagementID
     var connectorId: Int
@@ -216,7 +220,7 @@ class : NSObject {
 ```
 
 ### LPAuthenticationType
-```javascript
+```swift
 enum LPAuthenticationType: Int {
     case signup // Old unauthenticated method
     case unauthenticated // New unauthenticated method for users without identity

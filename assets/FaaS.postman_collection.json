@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "9ee2b548-6f66-4868-905e-f12ae7043034",
+		"name": "FaaS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "invoke lambda by lambdaUUID",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"timestamp\": 0,\n  \"headers\": [],\n  \"payload\": {}\n}"
+				},
+				"url": {
+					"raw": "https://{{faasGW_domain}}/api/account/{{accountId}}/lambdas/{{lambdaUUID}}/invoke?v=1&userId={{userId}}",
+					"protocol": "https",
+					"host": [
+						"{{faasGW_domain}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"{{accountId}}",
+						"lambdas",
+						"{{lambdaUUID}}",
+						"invoke"
+					],
+					"query": [
+						{
+							"key": "v",
+							"value": "1"
+						},
+						{
+							"key": "userId",
+							"value": "{{userId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

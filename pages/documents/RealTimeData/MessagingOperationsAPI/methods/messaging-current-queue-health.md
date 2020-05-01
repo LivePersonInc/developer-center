@@ -29,7 +29,7 @@ Retrieves the information about the current messaging queue state (and all its r
 
 | Method | URL |
 | :------- | :------ |
-| GET | `https://<domain>/operations/api/account/{accountID}/msgqueuehealth/current/?skillIds=<skillIDs>&v=<version>` |
+| GET | https://[{domain}](/agent-domain-domain-api.html)/operations/api/account/{accountID}/msgqueuehealth/current/?skillIds=<skillIDs>&v=<version> |
 
 **URL Parameters**
 
@@ -38,6 +38,9 @@ Retrieves the information about the current messaging queue state (and all its r
 | v | Version of API, for example, v=1. | numeric | required |
 | skillIds | When provided, metrics on the response will be grouped by the requested skills. When not provided, defaults to 'all' skills. You can provide one or more skillIDs. <br> Example: skillIds=4,153. To retrieve all skills active for the time period, use skillIds=all or do not specify this parameter at all. | numeric, comma separated | optional |
 | overdueConversations | When set to true, metrics in the response will also contain overdue conversations metrics. Defaults to false. For example: overdueConversations=true | boolean | optional |
+| breakdown | When set to false, metrics in the response will not contain skills breakdown, only total values. Defaults to true. For example: breakdown=false | boolean | optional |
+| metrics | When provided, response metrics will be filtered only by the requested metric. Possible values: queue,waittimes,overdue,all. example: metrics=queue,overdue. Default if not specified will return only queue and waittimes metrics. | string, comma separated | optional |
+| groupIds | When provided, the overdueConversationsAssigned metric on the response will be filtered by the list provided. You can provide one or more agent group IDs. <br> Example: groupIds=123,124. To filter by all group IDs (which are allowed depending on the requesting user's permission), use groupIds=all. Default value is null and no filtering will occur.| numeric, comma separated | optional |
 
 ### Response
 
@@ -131,11 +134,13 @@ Request by skillIds=12,13 and overdueConversations=true
 | actionableAndConsumerLastMessage | The number of actionable conversations in which the consumer wrote the last message. |long|
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. |long|
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. |long|
-| avgWaitTimeForAgentAssignment_NewConversation | The average number of milliseconds a new conversation is waiting in the queue (unassigned) for the first agent to be assigned to it.|long|
-| avgWaitTimeForAgentAssignment_AfterTransfer | The average number of milliseconds a transferred conversation is waiting in the queue (unassigned) for the next agent to be assigned to it. This metrics measures for transfers back-to-queue and skill-to-skill.|long|
-| maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation is waiting in the queue (unassigned) for an agent to be assigned to it.|long|
+| avgWaitTimeForAgentAssignment_NewConversation | The average number of milliseconds a new conversation waited in the queue (unassigned) for the first agent to be assigned to it.|long|
+| avgWaitTimeForAgentAssignment_AfterTransfer | The average number of milliseconds a transferred conversation waited in the queue (unassigned) for the next agent to be assigned to it. This metrics measures for transfers back-to-queue and skill-to-skill.|long|
+| maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation waited in the queue (unassigned) for an agent to be assigned to it.|long|
 | waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in the queue (unassigned) waited to be assigned for less time than this value, i.e. the median wait time in queue.|long|
 | waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in the queue (unassigned) waited to be assigned for less time than this value.|long|
 | overdueConversationsInQueue | The number of overdue conversations that are in the queue. | long |
 | overdueConversationsAssigned | The number of overdue conversations that are assigned to an agent. | long |
 | overdueConversationsTotal | The total number of conversations that are overdue (sum of inQueue + assigned). | long |
+|avgWaitTimeForAgentAssignment_AfterTransferFromAgent|The average number of milliseconds a transferred conversation waited in the queue (unassigned) for the next agent to be assigned to it after it was  sent back-to-queue , transferred to another skill or  transferred to specific agent.|long|
+|maxWaitTimeForAgentAssignment_AfterTransferFromAgent|The  maximum  number of milliseconds a conversation waited in the queue (unassigned) for the next agent to be assigned to it, after it was transferred to a specific agent. This includes cases when destination agent is not available and the conversation is picked up by a fallback agent.|long|

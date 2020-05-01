@@ -44,13 +44,15 @@ If you do not yet have an OAuth2 service or if you need a test service, follow t
 
 2. Create a new Application Machine to Machine
 
-3. Put [https://auth.businesschat.apple.com](https://auth.businesschat.apple.com) in Allowed Callback Urls
+3. Put `https://auth.businesschat.apple.com` in Allowed Callback Urls
 
-4. Put [https://auth.businesschat.apple.com](https://auth.businesschat.apple.com) in Allowed Origins & Allowed Web Origins
+4. Put `https://auth.businesschat.apple.com` in Allowed Origins & Allowed Web Origins
 
 5. On the same screen, go to the bottom and select advanced settings -> Endpoints
 
-6. Copy Auth URL, Token Url, Client Secret (it is at the top) and place them in your register.apple.com portal
+6. Copy Auth URL, Token Url, Client Id (it is at the top) and place them in your register.apple.com portal
+
+7. Go to Grant Types tab in advanced settings and check Authorization Code, Password and other features you want to use. 
 
 ### Checking for Apple Auth device compatibility
 
@@ -110,20 +112,20 @@ Please use the metadata template with the relevant fields, as presented in the e
 ##### Metadata Template Example:
 
 ```json
-[  
-  {  
-    "type":"BusinessChatMessage",
-    "receivedMessage":{  
-      "title":"Sign In to LivePerson",
-      "subtitle":"Thank you",
- "imageURL":"https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
-      "style":"small"
+[
+  {
+    "type": "BusinessChatMessage",
+    "receivedMessage": {
+      "title": "Sign In to LivePerson",
+      "subtitle": "Thank you",
+      "imageURL": "https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
+      "style": "small"
     },
-    "replyMessage":{  
-      "title":"You Signed in",
-      "subtitle":"Thank you",
-"imageURL":"https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
-      "style":"small"
+    "replyMessage": {
+      "title": "You Signed in",
+      "subtitle": "Thank you",
+      "imageURL": "https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
+      "style": "small"
     }
   },
   {
@@ -190,7 +192,7 @@ Please use the metadata template with the relevant fields, as presented in the e
   </tbody>
 </table>
 
-For more about Apple Authentication, see [this document](https://developer.apple.com/documentation/businesschat/enhancing_the_customer_s_user_experience/sending_an_authentication_message).
+For more about Apple Authentication, see [this document](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/authentication).
 
 
 ###### `receivedMessage` Object Properties  
@@ -282,6 +284,7 @@ A very simple, basic structured content template for Apple Auth would be just an
 
 ```json
 {
+  "tag": "authentication", // required
   "type": "horizontal",
   "elements": [
     {
@@ -329,7 +332,7 @@ The authentication response metadata is contextual information about the consume
 ```json
 {
     "encrypted"         : true,
-    "status"            : false, 
+    "status"            : false,
     "requestIdentifier" : "Request Identifier Unique Key",
     "errors"            : [{
         "message" : "Optional Error Message"    

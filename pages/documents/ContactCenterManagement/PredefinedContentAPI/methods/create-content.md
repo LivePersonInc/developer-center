@@ -16,10 +16,10 @@ indicator: both
 
 Creates new Predefined Content for an account.
 
-### Request 
+### Request
 
- |Method | Request |
- |:-------- | :--------- |
+|Method | Request |
+|:-------- | :--------- |
 | POST | /api/account/{accountId}/configuration/engagement-window/canned-responses |
 
 **Path Parameters**
@@ -54,9 +54,9 @@ The request body is able to accept a single JSON object, as shown below, or a JS
 
 **Response Codes**
 
- |Code | Description |
-| :----- | :-------------| 
- |200 | OK |
+|Code | Description |
+| :----- | :-------------|
+|200 | OK |
 | 401 | Not Authenticated |
 | 403 | Not Authorized |
 | 500 | Internal Server Error |
@@ -65,7 +65,7 @@ The request body is able to accept a single JSON object, as shown below, or a JS
 
 | Header | Description | Notes |
  |:-------  | :-----  |:--- |
- |ac-revision | Account config object type collection revision. | 
+ |ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. |
 | location | URI Location of the newly created resource. | Included only when the request creates a single object. |
 
 **Response Body**
