@@ -482,9 +482,15 @@ ul.mysidebar.nav li.activepage a:hover {
   color: var(--hover-orange) !important;
 }
 
+.spacebetweenHyperlink {
+  justify-content: space-between;
+  display: flex !important;
+}
+
 .mysidebar.nav li.folder>a {
   font-size: 14px;
   font-weight: bold;
+
   margin-top: -1px;
 }
 

@@ -1063,64 +1063,28 @@ a.loginText {
 }
 
 #jumpto {
-    padding-top: 73px;
     flex: 1
 }
 
-.anchorlist {
-    position: fixed !important;
-    padding: 0 20px;
+#anchorlist {
+    padding-left: 20px;
     text-align: right;
-}
-
-.anchorlist ul {
-    list-style: none;
     display: block;
     max-height: 360px;
     overflow-y: auto;
-    padding-left: 0;
+    width:200px;
+    margin-top: 154px;
+    position: fixed;
 }
 
-.anchorlist a {
+#anchorlist a {
     /* color: var(--secondary-black); */
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 12px;
-    display: flex;
     color: var(--navy);
-    font-weight: bold;
 }
-
-.anchorlist .fa {
-    font-size: 16px;
-    margin-left: 10px;
-    align-self: flex-end;
-    flex: 1;
-    margin-right: 3px
-}
-
-.anchorlist li {
-    margin-bottom: 10px;
-    display: flex;
-    float: right;
-}
-
-.anchorlist li:last-of-type {
-    margin-bottom: 0
-}
-
-.anchorlist li a {
-    color: var(--dark-gray) !important;
+.jumpToAnchor{
     text-align: right;
-
-}
-
-a.anchoritem {
-    width: 100%;
-    word-break: break-word
-}
-
-.anchordown {
-    top: auto !important
 }
 
 .sidebarbutton {
