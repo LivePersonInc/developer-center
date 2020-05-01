@@ -252,47 +252,24 @@ $(window).on('popstate', function (e) {
 	}
 });
 
-
-//a simple dropdown behavior for the anchorlinks box
-function menuDrop() {
-	//begin by setting the list's data to reflect that it's open
-	$(".anchorlist > a").data("expanded", "true");
-	//when a click on the list occurs
-	$(".anchorlist").on("click", ".anchormain", function (event) {
-		event.preventDefault();
-		//set data to true for toggle behavior
-		var hasExpanded = $(this).data("expanded") == "true";
-		if (hasExpanded) {
-			//if it is open, close it
-			$(this).next().slideUp(400);
-			$(this).data("expanded", "false");
-		} else {
-			//if it is closed, open it
-			$(this).next().slideDown(400);
-			$(this).data("expanded", "true");
-		}
-		return false;
-	});
-};
-
 //a function to loop over all anchor elements and create a dropdown menu from them
 function populateAnchors() {
 	//remove all previous anchoritems populated in the box
-	$(".anchoritem").remove();
+	$(".jumpToAnchor").remove();
 	//find all h3 titles on the page
 	var anchorlinks = document.getElementsByTagName("h3");
-	var anchorlist = document.getElementById('inneranchors');
+	var anchorlist = document.getElementById('anchorlist');
 	let html;
 	//if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
 	if (anchorlinks.length == 0) {
 		$('.anchorlist').css('visibility', 'hidden');
 		//if there are anchorlinks, display the box
 	} else {
-		html = '';
+		html = '<p class="jumpToAnchor">Jump to:</p>';
 		$('.anchorlist').css('visibility', 'visible');
 		//for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
 		$.each(anchorlinks, function () {
-			html += '<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>'
+			html += '<p><a class="jumpToAnchor" href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></p>'
 		});
 		anchorlist.innerHTML = html;
 	};
