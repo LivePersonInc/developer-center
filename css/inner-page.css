@@ -411,7 +411,7 @@ ul#mysiderbar li {
 }
 
 .pageitem {
-  padding-left: 48px !important;
+  padding-left: 53px !important;
 }
 
 .innerpageitem {
@@ -421,6 +421,18 @@ ul#mysiderbar li {
 .activeitem {
   border-left: 4px solid var(--orange) !important;
   margin-left: -4px;
+}
+
+.activeleaf {
+  margin-left: 30px;
+  border-left: 4px solid var(--orange);
+  padding-left: 20px !important;
+}
+
+.activeleafSolo {
+  margin-left: 16px;
+  border-left: 4px solid var(--orange);
+  padding-left: 20px !important;
 }
 
 ul.mysidebar.nav .topfolder>a {
