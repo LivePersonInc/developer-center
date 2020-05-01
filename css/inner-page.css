@@ -419,7 +419,7 @@ ul#mysiderbar li {
 }
 
 .activeitem {
-  border-left: 3px solid var(--orange) !important;
+  border-left: 4px solid var(--orange) !important;
   margin-left: -4px;
 }
 
