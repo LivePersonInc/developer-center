@@ -425,13 +425,13 @@ ul#mysiderbar li {
 
 .activeleaf {
   margin-left: 30px;
-  border-left: 3px solid var(--orange);
+  border-left: 4px solid var(--orange);
   padding-left: 20px !important;
 }
 
 .activeleafSolo {
   margin-left: 16px;
-  border-left: 3px solid var(--orange);
+  border-left: 4px solid var(--orange);
   padding-left: 20px !important;
 }
 
