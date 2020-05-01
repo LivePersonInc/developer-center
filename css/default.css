@@ -160,6 +160,7 @@ code pre {
 
 .defaultwrapper {
     margin-top: 90px;
+    min-height: calc(100vh - 58px);
     display: flex;
 }
 
@@ -855,7 +856,7 @@ a.loginText {
 
 .subfolder {
     margin-bottom: 0;
-    padding-left: 19px !important
+    padding-left: 24px !important
 }
 
 .subfolder>a {
@@ -1062,6 +1063,7 @@ a.loginText {
 }
 
 #jumpto {
+    padding-top: 73px;
     flex: 1
 }
 
