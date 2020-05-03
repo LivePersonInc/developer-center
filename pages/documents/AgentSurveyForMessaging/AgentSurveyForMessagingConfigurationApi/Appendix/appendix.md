@@ -103,7 +103,7 @@ This section contains API details that are common to every API’s resource, met
 | category | Question's category. Possible values: free_text, radio_button, checkbox, dropdown, number, date | enum |
 | questionDefinition | Question's definition. Possible values: regular_question, conversation_topic, conversation_outcome, engagement_attributes | enum |
 | maxCharacters |  Characters limit to an answer | Integer |
-| engagementAttribute | Engagement attributes (SDEs) the agent can submit on behalf of the consumer | Object - [EngagementAttribute](/agentsurvey-runtime-api-definitions.html#engagementAttribute-structure) | Submitting an engagement attribute question will trigger PurchaseEvent/LeadEvent/ServiceActivity event - based on the engagement attribute's type.
+| engagementAttribute | Engagement attributes (SDEs) the agent can submit on behalf of the consumer | Object - [EngagementAttribute](/agentsurvey-runtime-api-appendix.html#engagementAttribute-structure) | Submitting an engagement attribute question will trigger PurchaseEvent/LeadEvent/ServiceActivity event - based on the engagement attribute's type.
 | replies | Array of replies associated with this question | Array or replies |
 
 **Reply definition**

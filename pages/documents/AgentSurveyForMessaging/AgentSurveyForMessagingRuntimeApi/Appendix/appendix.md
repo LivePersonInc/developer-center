@@ -37,7 +37,7 @@ This section contains API details that are common to every API’s resource and 
 | Parameter | Description | Notes | Required |
 | :------------ | :------------ | :------- | :--- |
 | conv  | conversation id | String | Required | 
-| skill | skill id | long | Required |
+| skill | skill id (-1 in case of unassigned )| long | Required |
 | v | API version number | String | Required |
 
 ### Entity Structure
@@ -50,9 +50,9 @@ This section contains API details that are common to every API’s resource and 
 | root | The Agent Survey's first question | long | 
 | actualTimeInMinutes | Timeout of the Agent survey - defined in skill or in the survey configuration as fallback | Integer |
 | questions | list of Agent survey questions | List of AgentSurveyResponseQuestions |
-| agentSurveyContext | The status, last action time, survey expiration time and the survey revision | Object - [AgentSurveyContext](/agentsurvey-runtime-api-definitions.html#agentsurveycontext-structure) 
+| agentSurveyContext | The status, last action time, survey expiration time and the survey revision | Object - AgentSurveyContext |
 
-**AgentSurveyResponseQuestion definition**
+### AgentSurveyResponseQuestion definition
 
 | Attribute | Description | Type/Value | Notes |
 | :--------- | :-------------- | :----------- | :--- | 
@@ -65,10 +65,10 @@ This section contains API details that are common to every API’s resource and 
 | category | Question's category. Possible values: free_text, radio_button, checkbox, dropdown, number, date | enum |
 | questionDefinition | Question's definition. Possible values: regular_question, conversation_topic, conversation_outcome, engagement_attributes | enum | Submitting a question of type engagement_attributes will generate SDE event| 
 | maxCharacters | Characters limit to an answer | Integer |
-| replies | List of replies associated with this question | Object - [AgentSurveyResponseReply](/agentsurvey-runtime-api-definitions.html#agentsurveyresponse-structure)  |
+| replies | List of replies associated with this question | Object - AgentSurveyResponseReply  |
 | containsLogic | True if at least two answers directs the agent to different questions in the survey | Boolean |
-| engagementAttribute | Engagement attributes (SDEs) the agent can submit on behalf of the consumer | Object - [EngagementAttribute](/agentsurvey-runtime-api-definitions.html#engagementAttribute-structure)  | 
-| question State | The state of the question | Object - [QuestionState](/agentsurvey-runtime-api-definitions.html#questionstate-structure) |
+| engagementAttribute | Engagement attributes (SDEs) the agent can submit on behalf of the consumer | Object - EngagementAttribute  | 
+| question State | The state of the question | Object - QuestionState |
 
 ### Entity Example
 
@@ -139,3 +139,39 @@ This section contains API details that are common to every API’s resource and 
         }
     }
 ```
+
+
+### AgentSurveyContext definition
+
+| Attribute | Description | Type/Value | Notes |
+| :--------- | :-------------- | :----------- | :--- | 
+| agentSurveyStatus | The Agent survey's status. Possible values: open, submitted, dismissed | enum |
+| lastActionTimeInMillis | Timestamp of the last submit/dismiss action | Long |
+| autoCloseTimestamp | Agent survey's expiration timestamp | Long | available only after the conversation is closed | 
+| stateRevision | Agent survey's state revision | Long |
+
+### AgentSurveyResponseReply definition
+
+| Attribute | Description | Type/Value | Notes |
+| :--------- | :-------------- | :----------- | :--- | 
+| id | Reply ID | Long |
+| text | Reply's text | String |
+| next | The id of the next question in the survey | Long |
+| nextInOrder | Next question is the next in order question | Boolean | For example - question with orderId 2 followed by question with orderId 3 |
+
+### QuestionState definition
+
+| Attribute | Description | Type/Value | Notes |
+| :--------- | :-------------- | :----------- | :--- | 
+| id | Question ID | Long |
+| questionStatus | Question's status. Possible values: show, answer | enum |
+| replyIds | The reply IDs the agent chose | list of Long values | for questions of type radio_button, checkbox, dropdown |
+| freeTextReply | Answer to a free text question | String | for questions of type free_text, number, date |
+| engAttribute | Answer to a question of type engagement attribute | Object |
+
+### EngagementAttribute definition  {#engagementAttribute-structure}
+
+| Attribute | Description | Type/Value | 
+| :--------- | :-------------- | :----------- |  
+| type | The type of the SDE. Possible values: purchase, lead, service | enum |
+| attributes | list of values can be sent. Possible values: order_total, currency, order_id, topic, value, lead_id, status, category, service_id | enum |

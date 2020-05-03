@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Configuration API 
 
-permalink: agentsurvey-config-api-appendix.html
+permalink: agentsurvey-config-api-overview.html
 indicator: messaging
 ---
 ### Introduction
