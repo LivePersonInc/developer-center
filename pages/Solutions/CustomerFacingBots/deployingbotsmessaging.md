@@ -95,7 +95,7 @@ Once your bot is assigned to an engagement, you can begin to test the bot and se
 
 ### Step 6 - Monitor the performance of your bot
 
-The LivePerson report builder will have detailed data and analysis on the performance of your bot.
+The LivePerson Analytics Builder will have detailed data and analysis on the performance of your bot.
 
 Best practice - monitor the following statistics on your bot agents:
 
