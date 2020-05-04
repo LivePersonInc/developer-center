@@ -11,7 +11,7 @@ permalink: maven-ai-ai-powered-routing-use-maven-with-your-bot.html
 indicator: messaging
 ---
 
-If you want more control and customization on your conversational experience, you may use the [AskMaven APIs](maven-askmaven-overview.html) from a concierge bot or LOB app to ask Maven about the next best action for a set of conditions. This is appropriate if:
+If you want more control and customization on your conversational experience, you may use the [Recommendation APIs](maven-askmaven-overview.html) from a concierge bot or LOB app to ask Maven about the next best action for a set of conditions. This is appropriate if:
 
 - You already have a concierge bot that handles branded greetings, intents, and dialogs
 
@@ -23,21 +23,21 @@ This method is usually used alongside Context Session Store APIs to send intents
 
 **Example**:
 
-The following example shows how to use [AskMaven](maven-askmaven-overview.html) and [Context session store](maven-context-warehouse-context-session-store.html) APIs from a concierge bot.
+The following example shows how to use [Recommendation API](maven-askmaven-overview.html) and [Context session store](maven-context-warehouse-context-session-store.html) APIs from a concierge bot.
 
 1. A concierge bot handles branded greetings and intents. 
 
 2. It uses the Context Session Store APIs to store the value of the intent in the store
 
-3. The bot then calls AskMaven APIs to get a routing decision. Because the intent has been set, Maven can now use this information to evaluate a routing policy. 
+3. The bot then calls Recommendation APIs to get a routing decision. Because the intent has been set, Maven can now use this information to evaluate a routing policy. 
 
 <img class="fancyimage" width="750" src="img/maven/image_48.png">
 
-### AskMaven from Conversation Builder
+### Recommendation API from Conversation Builder
 
 #### Get The Conversation ID
 
-The conversation id is required for using the AskMaven APIs if your policies use Inbox System Attributes. 
+The conversation id is required for using the Recommendation APIs if your policies use Inbox System Attributes. 
 
 The variable can be used anywhere in conversation builder using the following variable name: 
 
@@ -48,20 +48,20 @@ The variable can be used anywhere in conversation builder using the following va
 
 The session store is useful in storing any context information gathered in a bot that you may want to use in a routing policy. For instance you may want to set the intent detected by a bot and then use it for any routing policy.
 
-You can call the session store API by setting up an [Integration](conversation-builder-integrations-api-integrations.html) with the [Context Session Store API](maven-context-warehouse-context-session-store.html) details. You may use the conversation id to store the session state, and pass the conversation id in the AskMaven call. 
+You can call the session store API by setting up an [Integration](conversation-builder-integrations-api-integrations.html) with the [Context Session Store API](maven-context-warehouse-context-session-store.html) details. You may use the conversation id to store the session state, and pass the conversation id in the Recommendation API call. 
 
 <img class="fancyimage" width="500" src="img/maven/Call Session Store APIs from CB.png">
 
 
-#### Call AskMaven APIs
+#### Call Recommendation APIs
 
-AskMaven APIs can be used in a Conversation Builder bot using [Integrations](conversation-builder-integrations-integration-basics.html).
+Recommendation APIs can be used in a Conversation Builder bot using [Integrations](conversation-builder-integrations-integration-basics.html).
 
 1. Add API Integration to Conversation Builder
 
    <img class="fancyimage" width="500" src="img/maven/image_49.png">
 
-2. Edit Integration Settings for AskMaven APIs. Use the appropriate URL based on your location
+2. Edit Integration Settings for Recommendation APIs. Use the appropriate URL based on your location
    1. Americas: https://z1.askmaven.liveperson.net
    2. EMEA: https://z2.askmaven.liveperson.net
    3. APAC: https://z3.askmaven.liveperson.net
@@ -75,13 +75,13 @@ AskMaven APIs can be used in a Conversation Builder bot using [Integrations](con
 
    <img class="fancyimage" width="700" src="img/maven/image_50.png">
 
-3. Use response from AskMaven API to execute a transfer to Skill task
+3. Use response from Recommendation API to execute a transfer to Skill task
 
-### AskMaven from Google DialogFlow
+### Recommendation API from Google DialogFlow
 
 #### Get The Conversation ID
 
-The conversation id is required for using the AskMaven APIs. This ID is used by the policy to retrieve conversation and session store parameters. 
+The conversation id is required for using the Recommendation APIs. This ID is used by the policy to retrieve conversation and session store parameters. 
 
 Inside **Dialogflow Fulfillment**, modify the sample code for the event handler for each request. 
 
@@ -121,9 +121,9 @@ axios.patch(
 );
 ```
 
-#### Call AskMaven API
+#### Call Recommendation API
 
-Now that you have the conversation id, use it to call the AskMaven API as follows. 
+Now that you have the conversation id, use it to call the Recommendation API as follows. 
  
 ```javascript 
 const askMavenUrl = 'https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions';

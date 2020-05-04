@@ -2,16 +2,17 @@
 pagename: Methods
 redirect_from:
   - maven-askmaven-methods.html
+  - maven-ai-askmaven-methods.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven AI
-subfoldername: AskMaven
-permalink: maven-ai-askmaven-methods.html
+subfoldername: Recommendation API
+permalink: maven-ai-recommendation-api-methods.html
 indicator: messaging
 ---
 
-Every API call to the AskMaven service requires the following Auth Headers to be accepted
+Every API call to the Recommendation API service requires the following Auth Headers to be accepted
 
 `Content-Type : application/json`
 

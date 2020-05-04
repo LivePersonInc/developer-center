@@ -35,7 +35,7 @@ The following example flow can happen with this template:
 
 - Maven [Context Session Store](maven-ai-context-warehouse-context-session-store.html) integration
 
-- [AskMaven API](maven-ai-askmaven-overview.html) integration that allows a bot to consult Maven on routing decisions
+- [Recommendation API](maven-ai-askmaven-overview.html) integration that allows a bot to consult Maven on routing decisions
 
   <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_1.png">
 
@@ -81,7 +81,7 @@ The [Maven Context Session Store](https://developers.liveperson.com/maven-ai-con
 
 1. Open the dialog in template called - "Start Here - Welcome"
 
-2. Click on the interaction - AskMaven, and then on the right inside Interaction details, **Code**
+2. Click on the interaction - Recommendation API, and then on the right inside Interaction details, **Code**
 
    <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_6.png">
 
