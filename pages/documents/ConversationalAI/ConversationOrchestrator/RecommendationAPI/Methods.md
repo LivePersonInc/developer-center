@@ -59,7 +59,7 @@ APAC: https://z3.askmaven.liveperson.net/
 
 ### Get Next Actions
 
-Get maven routing decision based on maven configured policies.
+Get Conversation Orchestrator routing decision based on Conversation Orchestrator configured policies.
 
 <table>
     <thead>
@@ -73,7 +73,7 @@ Get maven routing decision based on maven configured policies.
         <tr>
             <td>GET</td>
             <td>/v1/account/{accountId}/next-actions</td>
-            <td>Get Maven routing decision based on Maven configured policies</td>
+            <td>Get routing decision based on Conversation Orchestrator configured policies</td>
         </tr>
     </tbody>
 </table>

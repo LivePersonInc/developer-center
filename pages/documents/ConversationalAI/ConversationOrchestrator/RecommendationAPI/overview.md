@@ -15,7 +15,7 @@ indicator: messaging
 
 ### What is the Recommendation API
 
-The Recommendation API is a REST API that allows you and your bots, web sites, and apps to call Maven capabilities programmatically. You can use the API to ask Maven for the next best actions (route to skill, KB article, etc) for a concierge bot/app.
+The Recommendation API is a REST API that allows you and your bots, web sites, and apps to call Conversation Orchestrator capabilities programmatically. You can use the API to ask Conversation Orchestrator for the next best actions (route to skill, KB article, etc) for a concierge bot/app.
 
 <img class="fancyimage" width="750" src="img/maven/askmaven.png">
 
@@ -34,10 +34,10 @@ A typical use case for using Recommendation APIs is to get a routing decision to
 
 To use Recommendation APIs you will need to create and use an API key. To get your unique key:
 
-4. Login to Maven with your LiveEngage credentials and then navigate to **Developer Key**.
+4. Login to Conversation Orchestrator with your LiveEngage credentials and then navigate to **Developer Key**.
 
 5. Copy and paste the key you see in the experience and use it in your API headers. 
 
-6. To generate a new key, click on the **Regenerate Key** button. Please note that this will invalidate the previous key. The key is shared for all Maven APIs and therefore you will have to use the new key wherever the APIs are being called.  
+6. To generate a new key, click on the **Regenerate Key** button. Please note that this will invalidate the previous key. The key is shared for all Conversation Orchestrator APIs and therefore you will have to use the new key wherever the APIs are being called.  
 
 <img class="fancyimage" width="750" src="img/maven/devkey.png">

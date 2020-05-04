@@ -15,7 +15,7 @@ indicator: messaging
 
 ### What is Dynamic Routing
 
-Maven’s Dynamic Routing provides a centralized experience to create dynamic policies to achieve routing to the best human agent, skill, or bot. Routing policies are based on intent and/or context attributes such as consumer profile data, operational context (load, predicted wait times, KPIs), and conversation history. 
+Conversation Orchestrator’s Dynamic Routing provides a centralized experience to create dynamic policies to achieve routing to the best human agent, skill, or bot. Routing policies are based on intent and/or context attributes such as consumer profile data, operational context (load, predicted wait times, KPIs), and conversation history. 
 
 Below are some examples of policies you can create: 
 

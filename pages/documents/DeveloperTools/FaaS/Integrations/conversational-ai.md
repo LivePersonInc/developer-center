@@ -18,7 +18,7 @@ Before a function can be used in an interaction, users who are tasked with more 
 
 As part of the invocation, the bot can pass a payload into the function. This payload is specific to the triggered bot interaction. This means that, depending on the interaction, the function will have different data available as an input.
 
-### Maven Context Warehouse
-The [Maven context warehouse](maven-context-warehouse-overview.html) is a centralized repository of brand, customer, conversational, session, and custom attributes. Those attributes can be used by [Maven](maven-overview.html) throughout the customer’s conversation journey or for routing policies.
+### Conversation Orchestrator Context Warehouse
+The [Conversation Orchestrator context warehouse](maven-context-warehouse-overview.html) is a centralized repository of brand, customer, conversational, session, and custom attributes. Those attributes can be used by [Conversation Orchestrator](maven-overview.html) throughout the customer’s conversation journey or for routing policies.
 
-Whith LivePerson Functions it is possible to [connect a custom attribute with a function](maven-context-warehouse-custom-static-or-function.html#create-a-liveperson-function-variable), which fetches the value of the attribute from an external source at runtime. For example this empowers Maven to retrieve customer information from a Salesforce CRM database in real time. 
+Whith LivePerson Functions it is possible to [connect a custom attribute with a function](maven-context-warehouse-custom-static-or-function.html#create-a-liveperson-function-variable), which fetches the value of the attribute from an external source at runtime. For example this empowers Conversation Orchestrator to retrieve customer information from a Salesforce CRM database in real time. 

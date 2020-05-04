@@ -3,16 +3,17 @@ pagename: Recommended Actions for Automations
 redirect_from:
   - maven-maven-assist-recommended-actions-for-bots.html
   - maven-ai-maven-assist-recommended-actions-for-automations.html
+  - conversation-orchestrator-maven-assist-recommended-actions-for-automations.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
-subfoldername: Maven Assist
-permalink: conversation-orchestrator-maven-assist-recommended-actions-for-automations.html
+subfoldername: Agent Assist
+permalink: conversation-orchestrator-agent-assist-recommended-actions-for-automations.html
 indicator: messaging
 ---
 
-Maven can recommend bots that match customer intents in the Recommended Actions widget. 
+Conversation Orchestrator can recommend bots that match customer intents in the Recommended Actions widget. 
 
 <img class="fancyimage" width="750" src="img/maven/RA-bots.png">
 
@@ -20,7 +21,7 @@ Follow along with this guide to set up the feature.
 
 ### Create a bot
 
-Maven currently supports bots created in [Conversation Builder](conversation-builder-tutorials-guides-getting-started.html), [Google DialogFlow](bot-connectors-google-dialogflow-version-2.html), and [IBM Watson](bot-connectors-ibm-watson-assistant.html).
+Conversation Orchestrator currently supports bots created in [Conversation Builder](conversation-builder-tutorials-guides-getting-started.html), [Google DialogFlow](bot-connectors-google-dialogflow-version-2.html), and [IBM Watson](bot-connectors-ibm-watson-assistant.html).
 
 ### Enable Recommended Actions Widget
 
@@ -28,7 +29,7 @@ You will first need to enable the feature in LiveEngage. Please contact LivePers
 
 ### Create LiveEngage Skill and User For Bot
 
-Before adding automations to Maven, you must first properly configure LiveEngage by creating a skill and a bot user.
+Before adding automations to Conversation Orchestrator, you must first properly configure LiveEngage by creating a skill and a bot user.
 
 The Conversation Builder [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html) guide explains how to create a skill and a bot user for each of your automations.
 
@@ -57,7 +58,7 @@ Be sure to press the play button on the Bot in the bot dashboard to enable the b
 
 <img class="fancyimage" width="200" src="img/maven/image_14.png">
 
-For the next Configuring Maven step, you will need the **Bot ID**. For Conversation Builder, this is called the *Automation ID*.
+For the next Configuring Conversation Orchestrator step, you will need the **Bot ID**. For Conversation Builder, this is called the *Automation ID*.
 
 1. Click the cog icon at the top of the Conversation Builder bot editor
 
@@ -80,19 +81,19 @@ Be sure to press the play button in the bot dashboard to enable the bot.
 
 <img class="fancyimage" width="750" src="img/maven/image_16.png">
 
-For the next [Configuring Maven](#configure-maven) step, you will need the **Bot ID**. For DialogFlow, this is called the *projectId*. For Watson, this is called the *Workspace ID*.
+For the next [Configuring Conversation Orchestrator](#configure-maven) step, you will need the **Bot ID**. For DialogFlow, this is called the *projectId*. For Watson, this is called the *Workspace ID*.
 
-### Configure Maven
+### Configure Conversation Orchestrator
 
-Now that you have set up LiveEngage, and connected your bot(s), you need to link these bots to Maven so they can be suggested in the Recommended Actions Widget. 
+Now that you have set up LiveEngage, and connected your bot(s), you need to link these bots to Conversation Orchestrator so they can be suggested in the Recommended Actions Widget. 
 
-#### Log in to Maven
+#### Log in to Conversation Orchestrator
 
-Log in to Maven with your LiveEngage credentials and then navigate to Maven Assist > Recommended Actions - Automations. 
+Log in to Conversation Orchestrator with your LiveEngage credentials and then navigate to Agent Assist > Recommended Actions - Automations. 
 
 #### Add the bots 
 
-Now use the interface to add the bots to Maven. This enables Maven to suggest these bots based on customers’ utterances, and add them to the conversation. 
+Now use the interface to add the bots to Conversation Orchestrator. This enables Conversation Orchestrator to suggest these bots based on customers’ utterances, and add them to the conversation. 
 
 1. Click the Add bot button to add a new bot
 
@@ -102,7 +103,7 @@ Now use the interface to add the bots to Maven. This enables Maven to suggest th
 
 4. Enter the bot ID. The **Bot ID** is the value saved from the previous [Connect Bots to LiveEngage](#connect-bots-to-liveengage) section above and differs based on which bot platform you are using.
 
-Next you will need to add the credentials from your bot platform into the Maven Setup. If you are using a Conversation Builder bot, see [the next section](#add-credentials-for-conversation-builder). For [DialogFlow go here](#add-credentials-for-dialogflow), and [Watson go here](#add-credentials-for-watson).
+Next you will need to add the credentials from your bot platform into the Conversation Orchestrator Setup. If you are using a Conversation Builder bot, see [the next section](#add-credentials-for-conversation-builder). For [DialogFlow go here](#add-credentials-for-dialogflow), and [Watson go here](#add-credentials-for-watson).
 
 ##### Add credentials for Conversation Builder
 

@@ -12,7 +12,7 @@ permalink: conversation-orchestrator-context-warehouse-custom-static-or-function
 indicator: messaging
 ---
 
-Maven allows you to create custom static data, or use LivePerson Functions to connect to external data sources. 
+Conversation Orchestrator allows you to create custom static data, or use LivePerson Functions to connect to external data sources. 
 
 <img class="fancyimage" width="750" src="img/maven/contextWarehouse-custom.png">
 
@@ -20,7 +20,7 @@ Maven allows you to create custom static data, or use LivePerson Functions to co
 
 Static variables are useful for storing constant data or lists that can be used in policies. These are used throughout the lifecycle of the policy, and do not change at runtime. The common use case for this would be creating a list, for example a list of VIPs, and then using the condition (CONTAINS or IS_IN) in a policy. 
 
-1. To create a new static variable login to Maven using your LiveEngage credentials and then navigate to Context Warehouse/Custom
+1. To create a new static variable login to Conversation Orchestrator using your LiveEngage credentials and then navigate to Context Warehouse/Custom
 
 2. Click on the **Static +** button
 
@@ -65,11 +65,11 @@ Next you need to setup an API user to invoke the function.
     <img class="fancyimage" width="500" src="img/maven/Faas invocation permissions 2.png">
 
 
-#### Create a FaaS attribute in Maven
+#### Create a FaaS attribute in Conversation Orchestrator
 
 Once you have created a Function, you can now use that as an attribute in Context Warehouse to fetch external data at runtime. 
 
-1. To create a new FaaS attribute, login to Maven using your LiveEngage credentials and then navigate to Context Warehouse/Custom
+1. To create a new FaaS attribute, login to Conversation Orchestrator using your LiveEngage credentials and then navigate to Context Warehouse/Custom
 
 2. Click on the **FaaS +** button
 

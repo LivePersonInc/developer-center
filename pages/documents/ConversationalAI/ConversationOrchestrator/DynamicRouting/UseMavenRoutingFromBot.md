@@ -1,25 +1,26 @@
 ---
-pagename: Use Maven with Your Bot
+pagename: Use Conversation Orchestrator with Your Bot
 redirect_from:
   - maven-ai-powered-routing-use-maven-with-your-bot.html
   - maven-ai-ai-powered-routing-use-maven-with-your-bot.html
   - maven-ai-dynamic-routing-use-maven-with-your-bot.html
+  - conversation-orchestrator-dynamic-routing-use-maven-with-your-bot.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
 subfoldername: Dynamic Routing
-permalink: conversation-orchestrator-dynamic-routing-use-maven-with-your-bot.html
+permalink: conversation-orchestrator-dynamic-routing-use-conversation-orchestrator-with-your-bot.html
 indicator: messaging
 ---
 
-If you want more control and customization on your conversational experience, you may use the [Recommendation APIs](maven-askmaven-overview.html) from a concierge bot or LOB app to ask Maven about the next best action for a set of conditions. This is appropriate if:
+If you want more control and customization on your conversational experience, you may use the [Recommendation APIs](maven-askmaven-overview.html) from a concierge bot or LOB app to ask Conversation Orchestrator about the next best action for a set of conditions. This is appropriate if:
 
 - You already have a concierge bot that handles branded greetings, intents, and dialogs
 
 - You want to route by Intents, entities, and other attributes from a concierge bot
 
-- You have deeper customization needs to use Maven capabilities at runtime
+- You have deeper customization needs to use Conversation Orchestrator capabilities at runtime
 
 This method is usually used alongside Context Session Store APIs to send intents and attributes. 
 
@@ -31,7 +32,7 @@ The following example shows how to use [Recommendation API](maven-askmaven-overv
 
 2. It uses the Context Session Store APIs to store the value of the intent in the store
 
-3. The bot then calls Recommendation APIs to get a routing decision. Because the intent has been set, Maven can now use this information to evaluate a routing policy. 
+3. The bot then calls Recommendation APIs to get a routing decision. Because the intent has been set, Conversation Orchestrator can now use this information to evaluate a routing policy. 
 
 <img class="fancyimage" width="750" src="img/maven/image_48.png">
 
@@ -69,11 +70,11 @@ Recommendation APIs can be used in a Conversation Builder bot using [Integration
    3. APAC: https://z3.askmaven.liveperson.net
 
    
-   * **Maven API key** is retrieved from Conversation Orchestrator.
+   * **Conversation Orchestrator API key** is retrieved from Conversation Orchestrator.
 
    * **AccountID**: use your LiveEngage account ID. If you are not sure please contact support or your customer representative to get the account ID.
 
-   * **Conversation ID**: This allows Maven routing policy to retrieve conversation attributes to evaluate the policy. 
+   * **Conversation ID**: This allows Conversation Orchestrator routing policy to retrieve conversation attributes to evaluate the policy. 
 
    <img class="fancyimage" width="700" src="img/maven/image_50.png">
 

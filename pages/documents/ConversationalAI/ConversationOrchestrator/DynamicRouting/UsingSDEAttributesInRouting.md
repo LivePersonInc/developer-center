@@ -12,7 +12,7 @@ permalink: conversation-orchestrator-dynamic-routing-using-sde-attributes-in-rou
 indicator: messaging
 ---
 
-[SDEs](engagement-attributes-types-of-engagement-attributes.html) are Structured Data Entities, for brands to report/include business, user, and context data in campaigns when conversations are initiated. SDEs provide a valuable way for brands to include additional context information to the conversation when the conversation is initiated. This type of context can then allow brands to provide more personalized conversational journeys for the consumers. This document describes how to use SDEs with Maven Routing. 
+[SDEs](engagement-attributes-types-of-engagement-attributes.html) are Structured Data Entities, for brands to report/include business, user, and context data in campaigns when conversations are initiated. SDEs provide a valuable way for brands to include additional context information to the conversation when the conversation is initiated. This type of context can then allow brands to provide more personalized conversational journeys for the consumers. This document describes how to use SDEs with Conversation Orchestrator Routing. 
 
 SDEs will be supported as an attribute in the Context Warehouse in future. However, we can use a LivePerson function to get an SDE and then use it in a policy. In the following example we are going to use the Company Branch SDE variable. 
 

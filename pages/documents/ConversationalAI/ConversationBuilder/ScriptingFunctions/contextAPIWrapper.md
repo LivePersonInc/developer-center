@@ -15,12 +15,12 @@ The Context Session Store is a cloud-based repository for storing and retrieving
 
 Within the Context Session Store, you can have multiple namespaces for different business use cases. Typically, a namespace groups together related attributes. For example, a namespace might contain customer information like name, email, phone number, and so on. Namespaces are per account.
 
-In Conversation Builder, the following built-in functions for managing the Context Session Store are available. These functions are synchronous, server-side, JavaScript calls that conveniently wrap the APIs in Maven, LivePerson's AI engine.
+In Conversation Builder, the following built-in functions for managing the Context Session Store are available. These functions are synchronous, server-side, JavaScript calls that conveniently wrap the APIs in Conversation Orchestrator, LivePerson's AI engine.
 
 {: .important}
 All update operations return a Boolean status. It is the bot developer's responsibility to ensure the operation was executed successfully.
 
-For a more in-depth introducton to the Context Session Store and details on the Maven API, see [Context Session Store](maven-context-warehouse-context-session-store.html).
+For a more in-depth introducton to the Context Session Store and details on the Conversation Orchestrator API, see [Context Session Store](maven-context-warehouse-context-session-store.html).
 
 {: .important}
 New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
@@ -35,7 +35,7 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 2. Click **Edit Account** in the upper-right corner.
 3. If necessary, click **More Settings** to show additional settings.
 4. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
-5. Select one of the following for retrieving the necessary Maven credentials:
+5. Select one of the following for retrieving the necessary Conversation Orchestrator credentials:
     * **Use LiveEngage Site Id** (Only available for LivePerson accounts.)
     * **Use Conversation Builder Account Id** (This is your organization ID.)
 6. Enter the ID for your selection in step 5.

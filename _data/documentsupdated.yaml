@@ -201,7 +201,7 @@
   - documentname: Conversation Orchestrator
     pages:
       - pagename: Overview
-      - pagename: Maven Assist
+      - pagename: Agent Assist
         subpages:
           - subpagename: Overview
           - subpagename: Recommended Actions for Automations

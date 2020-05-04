@@ -1,23 +1,24 @@
 ---
-pagename: Maven Concierge
+pagename: Conversation Orchestrator Concierge
 redirect_from:
+  - conversation-builder-bot-templates-maven-concierge.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Templates
-permalink: conversation-builder-bot-templates-maven-concierge.html
+permalink: conversation-builder-bot-templates-conversation-orchestrator-concierge.html
 indicator: both
 ---
 
-The Maven Concierge Bot template in a Bot template in Conversation builder that comes pre-wired with integration to Maven Dynamic Routing and Context warehouse enabling you to setup and build personalized consumer journeys easily. 
+The Conversation Orchestrator Concierge Bot template in a Bot template in Conversation builder that comes pre-wired with integration to Conversation Orchestrator Dynamic Routing and Context warehouse enabling you to setup and build personalized consumer journeys easily. 
 
 The following example flow can happen with this template:
 
 - The conversation starts with a Welcome intent, for example “hi”
 - The bot then asks the customer for a phone number
-- The phone number is stored in Maven Context Session Store
-- Maven evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List)
+- The phone number is stored in Conversation Orchestrator Context Session Store
+- Conversation Orchestrator evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List)
 - Bot transfers the conversation to a skill or agent based on the policy outcome 
 
 
@@ -33,13 +34,13 @@ The following example flow can happen with this template:
 
 #### Integrations
 
-- Maven [Context Session Store](maven-ai-context-warehouse-context-session-store.html) integration
+- Conversation Orchestrator [Context Session Store](maven-ai-context-warehouse-context-session-store.html) integration
 
-- [Recommendation API](maven-ai-askmaven-overview.html) integration that allows a bot to consult Maven on routing decisions
+- [Recommendation API](maven-ai-askmaven-overview.html) integration that allows a bot to consult Conversation Orchestrator on routing decisions
 
   <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_1.png">
 
-  - Pre built code for Transfer to skill and Transfer to agent: Routing decisions provided by Maven are then dispatched to an agent, bot, or a skill using these integrations. 
+  - Pre built code for Transfer to skill and Transfer to agent: Routing decisions provided by Conversation Orchestrator are then dispatched to an agent, bot, or a skill using these integrations. 
 
   <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_2.png">
 
@@ -61,9 +62,9 @@ Open the bot. On the top navigation click on Global Functions and edit the follo
 
 4. `mavenApiKey`: copy and paste the Developer Key from Conversation Orchestrator
 
-5. `fallbackSkillName`: Please enter the skill name for the fall back skill. This skill is used by the bot if no policies are executed by Maven
+5. `fallbackSkillName`: Please enter the skill name for the fall back skill. This skill is used by the bot if no policies are executed by Conversation Orchestrator
 
-6. `fallbackSkillId`: Please enter the skill ID for the fall back skill. This skill is used by the bot if no policies are executed by Maven
+6. `fallbackSkillId`: Please enter the skill ID for the fall back skill. This skill is used by the bot if no policies are executed by Conversation Orchestrator
 
 7. `fallbackMessage`: Please enter a message to send to customer when the fallback route 
 
@@ -77,7 +78,7 @@ Open the bot. On the top navigation click on Global Functions and edit the follo
 
 ### Using the Context Session Store 
 
-The [Maven Context Session Store](https://developers.liveperson.com/maven-ai-context-warehouse-context-session-store.html) can be used inside Conversation Builder using [Scripting Functions](https://developers.liveperson.com/conversation-builder-scripting-functions-manage-the-context-session-store.html) to store and retrieve session attributes. These attributes can be carried through in a conversation or can then be used in defining routing policy. The template provides an example where a phone number retrieved from the Welcome dialog is stored in the session variable. To view: 
+The [Conversation Orchestrator Context Session Store](https://developers.liveperson.com/maven-ai-context-warehouse-context-session-store.html) can be used inside Conversation Builder using [Scripting Functions](https://developers.liveperson.com/conversation-builder-scripting-functions-manage-the-context-session-store.html) to store and retrieve session attributes. These attributes can be carried through in a conversation or can then be used in defining routing policy. The template provides an example where a phone number retrieved from the Welcome dialog is stored in the session variable. To view: 
 
 1. Open the dialog in template called - "Start Here - Welcome"
 
@@ -89,5 +90,5 @@ The [Maven Context Session Store](https://developers.liveperson.com/maven-ai-con
 
    <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_7.png">
 
-4. The phoneNumber can then be used to determine customer attributes for example if the customer is a VIP or not and then route them to a specific skill or agent defined inside Maven Policy editor. To run an end to end example of such a feature, please refer to the [Dynamic Routing Tutorial](https://developers.liveperson.com/maven-ai-ai-powered-routing-tutorial.html#using-a-policy-with-conversation-builder) 
+4. The phoneNumber can then be used to determine customer attributes for example if the customer is a VIP or not and then route them to a specific skill or agent defined inside Conversation Orchestrator Policy editor. To run an end to end example of such a feature, please refer to the [Dynamic Routing Tutorial](https://developers.liveperson.com/maven-ai-ai-powered-routing-tutorial.html#using-a-policy-with-conversation-builder) 
 

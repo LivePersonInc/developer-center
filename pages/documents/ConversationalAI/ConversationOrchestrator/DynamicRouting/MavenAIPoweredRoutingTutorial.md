@@ -1,9 +1,10 @@
 ---
-pagename: Maven Dynamic Routing Tutorial
+pagename: Tutorial
 redirect_from:
   - maven-ai-powered-routing-tutorial.html
   - maven-ai-ai-powered-routing-tutorial.html
   - maven-ai-dynamic-routing-tutorial.html
+  - conversation-orchestrator-dynamic-routing-tutorial.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
@@ -31,13 +32,13 @@ Let’s start with a policy we want to build.
 
 ### Overview
 
-In this tutorial we will use the Conversation Builder template. that is prewired with Maven and the Context Warehouse.
+In this tutorial we will use the Conversation Builder template that is prewired with Conversation Orchestrator and the Context Warehouse.
 
 <img class="fancyimage" width="750" src="img/maven/cb-template.png">
 
 A CB bot will handle the incoming consumer message, and then use Conversation Orchestrator routing policies to route the customer to a VIP agent or Regular Customer Agent. Setting up the CB bot in the beginning will allow you to test the scenarios end to end. 
 
-### Import Maven CB Bot template and setup
+### Import Conversation Orchestrator CB Bot template and setup
 
 #### Import the CB Bot Template
 
@@ -47,7 +48,7 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
 
     <img class="fancyimage" width="750" src="img/maven/cb-buttons.png">
 
-2. Chose the Maven CB Bot template from the Bot Template Menu
+2. Choose the Conversation Orchestrator CB Bot template from the Bot Template Menu
 
     <img class="fancyimage" width="750" src="img/maven/cb-choose-bot.png">
 
@@ -57,21 +58,21 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
     
     b. A question that asks basic customer information (e.g. a phone number)
 
-    c. Integration to Maven Context Session Store
+    c. Integration to Conversation Orchestrator Context Session Store
 
     d. Integration to Recommendation API 
     
     e. Based on policy action the bot can then perform the following: transfer to an agent, transfer to a skill, or send a message 
 
-4. Once we have set this up with Maven and Context warehouse the following happens
+4. Once we have set this up with Conversation Orchestrator and Context warehouse the following happens
   
     a. The conversation starts with a Welcome intent, for example “hi”
 
     b. The bot then asks the customer for a phone number
 
-    c. The phone number is stored in Maven Context Session Store
+    c. The phone number is stored in Conversation Orchestrator Context Session Store
 
-    d. Maven evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List)
+    d. Conversation Orchestrator evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List)
 
     e. Bot transfers the conversation to a skill or agent based on the policy outcome 
 
@@ -91,7 +92,7 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
 
     b. accountId: Your LiveEngage account ID
 
-    c. mavenNamespace: The Maven namespace is used for organizing a set of attributes you may want to use in a policy. See [Context Warehouse Session Store](maven-ai-context-warehouse-context-session-store.html) for more information on how this works. 
+    c. mavenNamespace: The Conversation Orchestrator namespace is used for organizing a set of attributes you may want to use in a policy. See [Context Warehouse Session Store](maven-ai-context-warehouse-context-session-store.html) for more information on how this works. 
 
         i. Please enter myNameSpace. You will use this name in a routing policy. 
 
@@ -112,7 +113,7 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
 
 ### Setup LiveEngage
 
-1. Create a skill for the conversation (e.g. Maven_Routing_Bot), and assign the bot user ID to this skill
+1. Create a skill for the conversation (e.g. Conversation_Orchestrator_Routing_Bot), and assign the bot user ID to this skill
 
 2. Setup a LiveEngage campaign to direct incoming conversations to this skill. All incoming conversation will now be picked up by the bot. 
 
@@ -194,7 +195,7 @@ In this example we will create and use static attributes. To check if a customer
     
     e. In the Actions block in the first drop-down box select Transfer to a skill, and then select the Vip Support skill from the drop-down (Skills must be created in LiveEngage prior to this step). 
     
-        i. Please note not to select the skill used for the Maven Bot since this would create a circular loop with the policy. 
+        i. Please note not to select the skill used for the Conversation Orchestrator Bot since this would create a circular loop with the policy. 
     
     f. Click Save to save the policy
 
@@ -220,7 +221,7 @@ As you may have noticed, we have created two policies, one for VIP customer, and
 
 ### Test the policies
 
-We will use a standard web entry point to initiate a conversation with the CB bot we created, which will use the Maven policies to route to the desired skill. 
+We will use a standard web entry point to initiate a conversation with the CB bot we created, which will use the Conversation Orchestrator policies to route to the desired skill. 
 
 #### Test VIP policy
 

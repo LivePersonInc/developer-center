@@ -20,7 +20,7 @@ The Context Services API is a REST interface to a cloud based repository for sto
 
 2. Save contextual attributes in a concierge bot (e.g. intents or customer information) and carry this context over to another bot or human skill. 
 
-The Context APIs are part of Maven, LivePerson’s AI engine, that allows brands to store, retrieve, and manage custom attributes programmatically. The context store provides a system of hierarchically organizing your data.
+The Context APIs are part of Conversation Orchestrator, LivePerson’s AI engine, that allows brands to store, retrieve, and manage custom attributes programmatically. The context store provides a system of hierarchically organizing your data.
 
 <img class="fancyimage" width="600" src="img/maven/image_37.png">
 
@@ -48,17 +48,17 @@ If you want to use the Context Session Store with Conversation Builder, please u
 
 To use Context Session store APIs you will need to create and use an API key. To get your unique key:
 
-1. Login to Maven with your LiveEngage credentials and then navigate to **Developer Key**.
+1. Login to Conversation Orchestrator with your LiveEngage credentials and then navigate to **Developer Key**.
 
 2. Copy and paste the key you see in the experience and use it in your API headers. 
 
-3. To generate a new key, click on the **Regenerate Key **button. Please note that this will invalidate the previous key. The key is shared for all Maven APIs and therefore you will have to use the new key wherever the APIs are being called.  
+3. To generate a new key, click on the **Regenerate Key** button. Please note that this will invalidate the previous key. The key is shared for all Conversation Orchestrator APIs and therefore you will have to use the new key wherever the APIs are being called.  
 
 <img class="fancyimage" width="750" src="img/maven/devkey.png">
 
 ### Methods
 
-Every API call to the Maven Context service requires the following Auth Headers to be accepted
+Every API call to the Conversation Orchestrator Context service requires the following Auth Headers to be accepted
 
 `Content-Type : application/json`
 
@@ -73,7 +73,7 @@ APAC: https://z3.context.liveperson.net
 
 #### Create a custom namespace
 
-To use the Maven Context API, you will first need to create a Namespace.
+To use the Conversation Orchestrator Context API, you will first need to create a Namespace.
 
 You will use the namespace value that is returned in the response in all other Context API methods.
 

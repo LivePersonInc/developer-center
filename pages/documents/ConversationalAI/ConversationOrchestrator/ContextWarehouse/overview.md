@@ -16,7 +16,7 @@ indicator: messaging
 
 The context warehouse is a centralized repository of brand, customer, conversational, session, and custom attributes that can be used to build customized conversation solutions. 
 
-Maven provides three types of Context Attributes:
+Conversation Orchestrator provides three types of Context Attributes:
 
 1. Inbox System Attributes (e.g. conversation history)
 2. Custom attributes with static data or external system integrations with [Functions](liveperson-functions-overview.html)
