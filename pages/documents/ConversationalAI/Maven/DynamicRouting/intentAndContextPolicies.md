@@ -2,12 +2,13 @@
 pagename: Intent & Context Policies
 redirect_from:
   - maven-ai-powered-routing-intent-context-policies.html
+  - maven-ai-ai-powered-routing-intent-context-policies.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven AI
-subfoldername: AI Powered Routing
-permalink: maven-ai-ai-powered-routing-intent-context-policies.html
+subfoldername: Dynamic Routing
+permalink: maven-ai-dynamic-routing-intent-context-policies.html
 indicator: messaging
 ---
 
@@ -139,7 +140,7 @@ Exceptions define conditions and actions when unusual situations may occur. For 
 
 #### Create a new policy
 
-1. Log in to Maven and navigate to **AI Powered Routing/Intent & Context Policies**
+1. Log in to Maven and navigate to **Dynamic Routing/Intent & Context Policies**
 
 2. Click on the button "New" 
 

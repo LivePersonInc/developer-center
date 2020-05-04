@@ -1,11 +1,13 @@
 ---
 pagename: Using SDE attributes in Routing
 Keywords:
+redirect_from:
+  - maven-ai-ai-powered-routing-using-sde-attributes-in-routing.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven AI
-subfoldername: AI Powered Routing
-permalink: maven-ai-ai-powered-routing-using-sde-attributes-in-routing.html
+subfoldername: Dynamic Routing
+permalink: maven-ai-dynamic-routing-using-sde-attributes-in-routing.html
 indicator: messaging
 ---
 

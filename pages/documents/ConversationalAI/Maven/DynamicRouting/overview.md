@@ -2,18 +2,19 @@
 pagename: Overview
 redirect_from:
   - maven-ai-powered-routing-overview.html
+  - maven-ai-ai-powered-routing-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Maven AI
-subfoldername: AI Powered Routing
-permalink: maven-ai-ai-powered-routing-overview.html
+subfoldername: Dynamic Routing
+permalink: maven-ai-dynamic-routing-overview.html
 indicator: messaging
 ---
 
-### What is AI Powered Routing
+### What is Dynamic Routing
 
-Maven’s AI Powered Routing provides a centralized experience to create dynamic policies to achieve routing to the best human agent, skill, or bot. Routing policies are based on intent and/or context attributes such as consumer profile data, operational context (load, predicted wait times, KPIs), and conversation history. 
+Maven’s Dynamic Routing provides a centralized experience to create dynamic policies to achieve routing to the best human agent, skill, or bot. Routing policies are based on intent and/or context attributes such as consumer profile data, operational context (load, predicted wait times, KPIs), and conversation history. 
 
 Below are some examples of policies you can create: 
 

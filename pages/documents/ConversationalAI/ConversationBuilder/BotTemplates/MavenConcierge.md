@@ -10,7 +10,7 @@ permalink: conversation-builder-bot-templates-maven-concierge.html
 indicator: both
 ---
 
-The Maven Concierge Bot template in a Bot template in Conversation builder that comes pre-wired with integration to Maven AI Powered Routing and Context warehouse enabling you to setup and build personalized consumer journeys easily. 
+The Maven Concierge Bot template in a Bot template in Conversation builder that comes pre-wired with integration to Maven Dynamic Routing and Context warehouse enabling you to setup and build personalized consumer journeys easily. 
 
 The following example flow can happen with this template:
 
@@ -89,5 +89,5 @@ The [Maven Context Session Store](https://developers.liveperson.com/maven-ai-con
 
    <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_7.png">
 
-4. The phoneNumber can then be used to determine customer attributes for example if the customer is a VIP or not and then route them to a specific skill or agent defined inside Maven Policy editor. To run an end to end example of such a feature, please refer to the [AI Powered Routing Tutorial](https://developers.liveperson.com/maven-ai-ai-powered-routing-tutorial.html#using-a-policy-with-conversation-builder) 
+4. The phoneNumber can then be used to determine customer attributes for example if the customer is a VIP or not and then route them to a specific skill or agent defined inside Maven Policy editor. To run an end to end example of such a feature, please refer to the [Dynamic Routing Tutorial](https://developers.liveperson.com/maven-ai-ai-powered-routing-tutorial.html#using-a-policy-with-conversation-builder) 
 

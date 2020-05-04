@@ -212,7 +212,7 @@
           - subpagename: Inbox System Attributes
           - subpagename: Custom Static or Function
           - subpagename: Context Session Store
-      - pagename: AI Powered Routing
+      - pagename: Dynamic Routing
         subpages:
           - subpagename: Overview
           - subpagename: Tutorial
