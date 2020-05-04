@@ -31,7 +31,7 @@ For each account, the following parameters should be defined:
 
 To define the OAuth 2.0 authentication:
 
-1.	In LiveEngage, select Campaigns. In the footnote, select Data sources.
+1.	In LiveEngage, select Campaign Builder. In the footnote, select Data sources.
 
 2.	In the Connectors area, next to the authentication server, click Configure. The Authentication Server page is displayed.
 

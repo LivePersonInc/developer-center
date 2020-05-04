@@ -11,7 +11,7 @@ permalink: engagement-attributes-setting-up-engagement-attributes.html
 indicator: both
 ---
 
-Engagement Attributes configuration is located in the Data Sources page, accessed from the Campaigns footnote.
+Engagement Attributes configuration is located in the Data Sources page, accessed from the Campaign Builder footnote.
 
 ![Data Sources](img/campaigns.png)
 
@@ -25,7 +25,7 @@ This option requires no code, and assumes the information exists on your webpage
 
 To track Engagement Attributes, follow the steps described below.
 
-1. Log into LiveEngage. At the top of the page, click **Campaigns**, and then, in the footnote, click **Data Sources**. The Data Sources page is displayed.
+1. Log into LiveEngage. At the top of the page, click Campaign Builder, and then, in the footnote, click **Data Sources**. The Data Sources page is displayed.
 
 ![Scraping Tool](img/scrapingtool.png)
 

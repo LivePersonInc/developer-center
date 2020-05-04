@@ -140,7 +140,7 @@ In this step, you add the dev-cert.pem and hostkey.pem to LiveEngage.
 
 1. Log into your [LiveEngage account](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
 
-2. In LiveEngage, click the **Campaigns** tab, and then **Data Sources**.
+2. In LiveEngage, click the **Campaign Builder** tab, and then **Data Sources**.
 
    ![Data Sources](img/androiddatasources.jpg)
 

@@ -17,7 +17,7 @@ API keys are security tokens that you use to access LiveEngage services. The API
 {:.notice}
 You use the API key when you create bots, access our APIs programmatically and authorize LiveEngage applications. You can create up to 100 keys per account. The API key is issued on behalf of the site and not for the user (server to server) which means you don't need a bearer (no need to be logged in) when using an API key.
 
-1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaigns** area.
+1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaign Builder** area.
 
 2. In the footnote click **Data Sources**.
 

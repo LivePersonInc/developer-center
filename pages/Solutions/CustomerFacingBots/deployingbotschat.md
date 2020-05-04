@@ -43,7 +43,7 @@ You can also use the chatbot simulator in order to learn how to implement the ma
 
 Once your bot is created, it must be assigned into a LiveEngage campaign in order to be assigned to the right engagements and skills.
 
-1. Create a new campaign within LiveEngage by navigating to the 'campaigns’ tab and click on new campaign.
+1. Create a new campaign within LiveEngage by navigating to Campaign Builder and click on new campaign.
 
 2. Create a new engagement - this is the button that invites visitors to begin a chat.  The engagement can be in any format, size, shape of even a simple link (Ensure that in the first step, you select 'conversation type - Live Chat’).
 

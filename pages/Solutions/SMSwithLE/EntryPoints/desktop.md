@@ -14,7 +14,7 @@ indicator:
 
 Below are the steps required to create a content campaign on desktop and tablet that advertises your brand’s SMS channel to consumers. Consumers will be exposed to this campaign on their desktop. While these campaigns are not clickable, they do direct the consumer to begin an SMS conversation with the number advertised in the campaign. See the example campaign below.
 
-* In LiveEngage navigate to the **Campaigns** tab. Then choose **"Add Campaign"** on the bottom left side of the screen
+* In LiveEngage navigate to the **Campaign Builder**. Then choose **"Add Campaign"** on the bottom left side of the screen
 
 * Name your campaign and create a **Campaign** Goal (choose "Interact With Visitors" if you are unsure)
 

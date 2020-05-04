@@ -25,7 +25,7 @@ In addition, an authentication server should be configured on the LiveEngage acc
 
 ### Step 2 - Login to your Account
 
-* Login to your account and go to campaigns → data sources → conversation sources tab.
+* Login to your account and go to Campaign Builder → data sources → conversation sources tab.
 
 ![Data Source](img/monitor_start1.png)
 

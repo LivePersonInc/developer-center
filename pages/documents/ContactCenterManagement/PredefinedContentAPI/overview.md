@@ -106,7 +106,7 @@ When you create predefined responses, take into consideration what kind of phras
 
 **Step 1: generate API key for predefined content API with write permissions.**
 
-1. Go to **Campaigns** > **Data Sources** > **API**
+1. Go to **Campaign Builder** > **Data Sources** > **API**
 
 2. Click **Manage** > **Add New**
 
@@ -169,6 +169,6 @@ Example:
 
 **View new entry in the predefined content library**
 
-Open the predefined content library from the link on the campaigns footnote to view the newly created content entry.
+Open the predefined content library from the link on the Campaign Builder footnote to view the newly created content entry.
 
 ![Predefined Content 5](img/predefinedcontent5.png)

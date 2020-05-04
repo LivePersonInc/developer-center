@@ -44,7 +44,7 @@ Authentication occurs when the brand's IDP provides unique information on each c
 
 The authentication process occurs when the consumer opens the conversation window by interacting with an engagement. Because of this, every engagement is defined as authenticated or unauthenticated (that is, anonymous) through the LiveEngage UI, when creating a campaign. In order for unauthenticated engagements to work, contact your LivePerson account team who will need to enable the feature on your account. In order for authenticated conversations to work, the following several parameters need to be defined in by the brand's administrator in the brand's LiveEngage account. In order to define these parameters, follow these steps:
 
-1. In LiveEngage, select **Campaigns**.
+1. In LiveEngage, select **Campaign Builder**.
 
 2. In the footnote, select **Data Sources**.
 

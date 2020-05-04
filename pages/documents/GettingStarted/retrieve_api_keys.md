@@ -21,7 +21,7 @@ If required by an API, create an Application Key and it will be installed automa
 {:.notice}
 You use the API key when you create bots.
 
-1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaigns** area.
+1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaign Builder** area.
 
 2. In the footnote click **Data Sources**.
 

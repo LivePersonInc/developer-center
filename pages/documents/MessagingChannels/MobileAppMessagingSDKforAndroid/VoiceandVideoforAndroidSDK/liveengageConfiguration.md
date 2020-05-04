@@ -90,7 +90,7 @@ In order to use your app with your LiveEngage account, you need to first registe
 #### Register your App ID
 
   * Login to your **LiveEngage** account as _Account Admin_
-  * Open **Campaigns** tab
+  * Open **Campaign Builder** tab
   * Select **Data Sources** label below the campaigns list
 
 ![Data Sources](img/le_campaigns_datasources.png)
