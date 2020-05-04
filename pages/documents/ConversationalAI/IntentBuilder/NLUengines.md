@@ -36,14 +36,14 @@ Available with IBM Watson:
 * Chinese, Simplified (China)
 * Chinese, Traditional (Taiwan)
 * Dutch (Netherlands)
-* English (Australia, Canada, Great Britain, India, United States)
-* French (Canada, France)
+* English (non-region-specific, Australia, Canada, Great Britain, India, United States)
+* French (non-region-specific, Canada, France)
 * German (Germany)
 * Italian (Italy)
 * Japanese (Japan)
 * Korean (Korea)
 * Portuguese (Brazil)
-* Spanish (Mexico, Spain)
+* Spanish (non-region-specific, Mexico, Spain)
 
 Available with Google Dialogflow:
 
@@ -52,8 +52,8 @@ Available with Google Dialogflow:
 * Chinese, Traditional (Taiwan)
 * Danish
 * Dutch (Netherlands)
-* English (Australia, Canada, Great Britain, India, United States)
-* French (Canada, France)
+* English (non-region-specific, Australia, Canada, Great Britain, India, United States)
+* French (non-region-specific, Canada, France)
 * German (Germany)
 * Hindi
 * Indonesian
@@ -64,7 +64,7 @@ Available with Google Dialogflow:
 * Polish
 * Portuguese (Brazil, Portugal)
 * Russian
-* Spanish (Latin America, Mexico, Spain)
+* Spanish (non-region-specific, Latin America, Mexico, Spain)
 * Swedish
 * Thai
 * Turkish (Turkey)
