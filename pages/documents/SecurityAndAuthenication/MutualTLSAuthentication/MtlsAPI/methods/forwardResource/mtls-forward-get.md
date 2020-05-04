@@ -28,6 +28,7 @@ When submitting the forward request, the certificate will be fetched according t
  |LP-service-name|    Contains the service name which has the certificate in Hashicorp-Vault. **Not Required**, Possible options : TEST_SERVICE/IDP/WEBHOOKS |
  |LP-forward-url|    Contains the desired endpoint url of the client, **Required**  |
  |LP-authorization-override|    Contains the authorizaion for the desired endpoint url of the client. **Not Required**. |
+ |LP-stop-if-certificate-not-found| If the service was unable to match the certificate to the supplied parameters, this parameter controls the behavior. If true, the service will not forward the request (instead will return INTERNAL_SERVER_ERROR with the reason). **Default value is false (proxy request even if certificate not found). Not Required**. |
 
 **Request Body**
 

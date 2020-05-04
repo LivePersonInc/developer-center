@@ -43,3 +43,9 @@ The following are additional settings in [User Says](conversation-builder-intera
 * **Patterns**: A pattern is a text string that is matched against user input in order to trigger a bot message. Enter the pattern against which to match the input. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
 * **Exclude Keywords**: An "exclude keyword" is a text string that is matched against user input in order to *not* trigger a bot message.
 * **Intent**: Intents are another way (in addition to patterns, above) for the bot to understand the user's meaning. Intents can be matched against user input in order to trigger a bot message. Select the intent against which to match the input.
+
+### Settings in Multiple Choice questions
+
+The following is an additional setting in Multiple Choice question interactions:
+
+* **Enable Indentation**: Affects the display of options in text-only channels. Enable this to indent (with one tab space) the multiple choice options under the question. Disable this to align them under the question without an indent. 

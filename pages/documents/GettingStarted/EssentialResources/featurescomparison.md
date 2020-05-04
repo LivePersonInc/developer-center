@@ -5,6 +5,8 @@ categoryname: "Getting Started"
 documentname: Common Resources
 permalink: common-resources-messaging-features-capabilities-comparison.html
 indicator: messaging
+redirect_from:
+  - essential-resources-messaging-features-capabilities-comparison.html
 ---
 
 <input id="capabilitiesSearch" placeholder="Search by Capability Name" />

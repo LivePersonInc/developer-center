@@ -11,8 +11,10 @@ indicator: messaging
 permalink: connector-api-webhooks-disclaimers.html
 ---
 
-* Applications should consider that **data (event) loss is possible**. For example, when a failed notification request is retried, once the retry policy is exhausted (e.g. all the retry attempts fail) the event will be dropped.    
+### Response times and disablements
 
-* Applications should consider that **events order is on best effort basis** - i.e. it is not guaranteed. For example, if a request notification of a certain event failed the first time and was only delivered successfully after one or more retries, then it is possible that a subsequent event will be delivered before.  
+Endpoints receiving notifications, should always respond within 2.5 seconds. That is the time the endpoint accepts the notification until Webhooks receives a response. If an endpoint does not comply for more than 2 minutes, the corresponding app install can be disabled at any time. Depending on the circumstances, you will be notified. This means, when you plan your implementation make sure to have the right capacity for the anticipated load. Further, consider an asynchronous design of your application where accepting and responding to a request are done separately from processing it. It is better to respond with a failure code instead of not responding at all.
 
-* Applications should consider that as long as the retry policy is not exhausted, then **events duplications are possible**. For example, if a notification request was received at the application endpoint but the response for that request was sent after more than 10 seconds, then in such a case the WH will consider that notification request as failed and will apply the configured retry policy on that notification - resulting in the same event being sent more than once.
+### Data loss, duplication and order  
+
+Notifications might get dropped. For example, when a notification fails to be delivered and the retry policy is exhausted, the event will be dropped. Depending on the [retry policy](connector-api-webhooks-retry-policy.html) the order of notifications is on best effort basis. For example, if a request fails for the first time and was only delivered successfully after one or more retries, then it is possible that a subsequent event will be delivered before. Applications should consider that as long as the retry policy is not exhausted, event duplications are possible. For example, if an endpoint responds with a failure code but still processes the notification Webhooks will retry the notification resulting in the same event being sent more than once.

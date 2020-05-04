@@ -59,14 +59,14 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 - For unauthenticated sessions, consumers must tap the photo again with each visit because the history gets cleared when a session expires or logs the consumer out.
 
-### How photo and file sharing works
+#### How photo and file sharing works
 
 <img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 
----   
+  
 
-### Step 1. Set app permissions
+#### Step 1. Set app permissions
 
 1. Set the photo library privacy settings:
 
@@ -102,23 +102,25 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
       **Warning:** If this functionality is important to your user flow, enable at the user's risk. If you enable this setting, the consumer can save documents or photos to a directory belonging to the host app.  However, we recommend not enabling this feature due to a current limitation within the LivePerson SDK, the SQL files are also made public if this setting is enabled.
 
-### Step 2. Enable or disable photo and file sharing within the SDK
+### Step 2. Enable or disable flags within the SDK's LPConfig.swift for file and photo sharing.
 
-1. Change the boolean value:
+#### Update the boolean value for file/photo sharing feature from agents to consumers to desired setting:
 
    ```swift
-   LPConfig.defaultConfiguration.enablePhotoSharing
+   LPConfig.defaultConfiguration.fileSharingFromAgent
+   ```
+
+By default, the value is set to **true**.
+
+#### Update the boolean value for file/photo sharing feature from consumers to agents to desired setting:
+
+   ```swift
+   LPConfig.defaultConfiguration.fileSharingFromConsumer
    ```
 
    By default, the value is set to **false**.
 
-   ```swift
-   LPConfig.defaultConfiguration.enableFileSharing
-   ```
-
-   By default, the value is set to **true**.
-
-2. Contact your Account Team to have the feature enabled on your account.
+#### Contact your Account Team to have the features enabled on your account.
 
 ### Step 3. Change the settings
 
@@ -132,7 +134,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
    LPConfig.defaultConfiguration.maxNumberOfSavedDocumentsOnDisk 
    ```
 
-   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest file.
+   The default is 20. If exceeding the max value of photos or files, the SDK deletes the oldest downloaded file.
 
 2. Change the background color of attachment menu:
 

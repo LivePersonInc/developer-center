@@ -44,7 +44,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 2. In the **dependencies** section, add:
    ```java
    dependencies {
-       implementation  "com.liveperson.android:lp_messaging_sdk:4.2.1"
+       implementation  "com.liveperson.android:lp_messaging_sdk:4.4.1"
    }
    ```
 
@@ -78,7 +78,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
        androidTestImplementation "com.android.support.test:runner:1.0.1"
        androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.1"
        // LivePerson SDK
-       implementation  "com.liveperson.android:lp_messaging_sdk:4.3.1"
+       implementation  "com.liveperson.android:lp_messaging_sdk:4.4.1"
    }
    ```
 

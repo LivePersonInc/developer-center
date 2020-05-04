@@ -28,7 +28,7 @@ Once agreed, we will automatically set up your account to easily integrate with 
 #### Set User Permissions
 
 <div class="notice">
-After provisioning your account with LP Functions, your user will still require <strong>permissions</strong> to be able to access the UI. Please follow the section below to customize your user permissions. Moreover, please contact your LivePerson Account Team in case the provisioning did not finish successfully.
+Users with an Administrator profile automatically have all the relevant Function Permissions as is described below. If users who do not have an Administrator based role require any of the Functions related permissions below, please manage the user profile permission from the User Management tab in your LivePerson account. 
 </div>
 
 There are 3 user permissions pertaining to Functions:
@@ -55,7 +55,7 @@ There are 3 user permissions pertaining to Functions:
     <td>read</td>
     <td>✅</td>
     <td>✅</td>
-    <td>-</td>
+    <td>✅</td>
   </tr>
   <tr>
     <td>lambda</td>
@@ -119,6 +119,30 @@ There are 3 user permissions pertaining to Functions:
     <td>✅</td>
     <td>✅</td>
     <td>-</td>
+  </tr>
+  </tr>
+    <tr>
+    <td>emailReport settings</td>
+    <td>create/edit/delete</td>
+    <td>✅</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  </tr>
+    <tr>
+    <td>emailReport recipients</td>
+    <td>create/delete</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>-</td>
+  </tr>
+  </tr>
+    <tr>
+    <td>emailReport</td>
+    <td>read</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
   </tr>
 </tbody>
 </table>
@@ -224,7 +248,7 @@ function lambda(input, callback) {
 }
 ```
 
-Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJs 10. Therefore, you have access to all functionality offered by NodeJS.
+Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJs 12. Therefore, you have access to all functionality offered by NodeJS.
 
 As you can see from the example above, during an invocation the function receives an event-specific **input**. Furthermore, we provide a callback in the standard Node JS Signature.
 

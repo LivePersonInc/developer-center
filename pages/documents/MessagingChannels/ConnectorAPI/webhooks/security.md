@@ -17,7 +17,7 @@ permalink: connector-api-webhooks-notification-protocol.html
 
 * Each Webhooks notification request contains LivePerson standard headers which have the header name prefix of “**x-liveperson-**”.
 
-* Each endpoint is expected to immediately respond to a request. A response delay of over 10 seconds will lead to a client-side read timeout. A read timeout is considered a failure which triggers the retry mechanism.
+* Each endpoint is expected to immediately respond to a request. Connection attempts time out after 5 seconds. A response delay of over 5 seconds will lead to a read timeout. Both timeouts are a failure triggering the retry mechanism. Apps with at least one endpoint responding slower than 2.5 seconds over 2 minutes may be disabled at any time without prior warning. 
 
 * An endpoint is expected to respond with either a 200 or 201 response code to a notification request. Any other response code will be considered as a notification request failure which triggers the retry mechanism.
 

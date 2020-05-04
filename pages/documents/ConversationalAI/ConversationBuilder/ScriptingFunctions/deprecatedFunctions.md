@@ -10,12 +10,12 @@ permalink: conversation-builder-scripting-functions-deprecated-functions.html
 indicator: both
 ---
 
-Deprecated functions are still supported; however, bot developers are encouraged to use stated alternatives instead.
+Deprecated functions are still supported but not recommended. Bot developers are encouraged to use stated alternatives instead.
 
 ### Get channel
 
 {: .important}
-getChannel is deprecated but supported. Bot developers are encouraged to use [getUserChannel](conversation-builder-scripting-functions-get-set-contextual-data.html#get-user-channel) instead.
+getChannel is supported but not recommended. Bot developers are encouraged to use [getUserChannel](conversation-builder-scripting-functions-get-set-contextual-data.html#get-user-channel) instead.
 
 Returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, sms, web, inapp. lp_ prefix indicates the LivePerson platform.
 
@@ -33,7 +33,7 @@ botContext.printDebugMessage("channel used by the user is: " + channel);
 ### Add quick reples
 
 {: .important}
-addQuickReples is deprecated but supported. Bot developers are encouraged to use [addQuickReplies](conversation-builder-scripting-functions-manage-conversation-flow.html#add-quick-replies) instead.
+addQuickReples is supported but not recommended. Bot developers are encouraged to use [addQuickReplies](conversation-builder-scripting-functions-manage-conversation-flow.html#add-quick-replies) instead.
 
 The Add Quick Reples function is used for adding quick replies to a message in JavaScript rather than defining in bot creation. This allows for the dynamic addition of the buttons to accommodate various scenarios.
 
