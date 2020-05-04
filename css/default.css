@@ -1072,9 +1072,9 @@ a.loginText {
     display: block;
     max-height: 360px;
     overflow-y: auto;
-    width: 200px;
     margin-top: 154px;
     position: fixed;
+    margin-right:6%;
 }
 
 #anchorlist a {
