@@ -29,7 +29,7 @@ The [Messaging Interaction (Messaging)](data-messaging-interactions-conversation
 
 These APIs were utilized in this project since they provide an excellent extract of raw engagement level data, which is what the MCS Toolkit is primarily concerned with, and with some transformational logic applied over the top, many additional metrics can be derived.
 
-* Engagement level data includes each message line, with timestamps and associated context such as message Meaningful Connection Score, agent / skill / group names, etc
+* Engagement level data includes each message line, with timestamps and associated context such as message Meaningful Conversation Score, agent / skill / group names, etc
 
 * Message lines can be traversed programmatically to summarize and aggregate additional data points, such as Consumer or Agent Response Times
 

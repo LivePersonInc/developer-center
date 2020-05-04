@@ -63,7 +63,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |keyword | Specific word or phrase found in the messages of the conversation. | alphanumeric  | Optional |
 |summary | Specific word or phrase found in the summary of the conversation.  | alphanumeric  | Optional |
 |duration {from, to} | Range of conversation length (in seconds). | numeric, numeric | Optional | If one parameter is filled out, the other parameter must be as well. Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to 0 or the retention time of conversations (13 months), respectively.
-|mcs {from,to} | Range of Meaningful Connection Score in a particular conversation (including the boundaries). | numeric, numeric | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
+|mcs {from,to} | Range of Meaningful Conversation Score in a particular conversation (including the boundaries). | numeric, numeric | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
 |alertedMcsValues | Alerted MCS of the conversation up until the most recent message.  | Array `<alertedMCS>`| Optional | Valid values: "-1", "0", "1"
 |csat {from,to}| Range of CSAT assigned to the conversation.| numeric, numeric | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively). For accounts that are using both the old CSAT method and the new PCS based CSAT, this field will return unified results.
 |source  | Source origin (Facebook, App etc.) from which the conversation was initially opened. | Array `<String>` | Optional | Possible values: APP, SHARK (WEB), AGENT, SMS, FACEBOOK, Apple Business Chat, WhatsApp Business
@@ -187,7 +187,7 @@ closeReason | Reason for closing the conversation - by agent / consumer.  | stri
 closeReasonDescription | Additional information regarding the conversation close reason| string  |
 firstConversation | Whether it is the consumer's first conversation.| Boolean |
 csat  | CSAT score of the conversation (as given in the answer). | int  | Range: 1 to 5.
-mcs| Meaningful Connection Score of the conversation.| int  | Range: 0-100\. If it is for an open conversation, the score is take from the conversation up until the most recent interaction.
+mcs| Meaningful Conversation Score of the conversation.| int  | Range: 0-100\. If it is for an open conversation, the score is take from the conversation up until the most recent interaction.
 alertedMCS  | Divides the MCS score into 3 groups: Positive, Neutral, Negative. | int  | Values: -1, 0, 1
 source| Source origin (Facebook, app, etc). | string  |
 device| Device origin (desktop, smartphone, etc.).| string  |
@@ -378,7 +378,7 @@ Name| Description  | Type/Value | Notes
 messageId | ID of message.  | string  |
 time| Time the MCS was calculated.| string  |
 timeL  | Time the MCS was calculated, in long format.  | long |
-mcs | Meaningful Connection Score of the conversation up to this message | int  | Range: 0 - 100.
+mcs | Meaningful Conversation Score of the conversation up to this message | int  | Range: 0 - 100.
 messageRawScore | Score of message.  | int
 
 *Conversation CoBrowse Sessions DTO*

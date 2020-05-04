@@ -49,7 +49,7 @@ Filter is sent in the POST data with the following JSON structure.
 | channel | Engagement channel ID. | Integer representing one of the following options: UNKNOWN(-1)WEB(1), VOICE(2); | Optional | |
 | engagementId | Engagement ID. | numeric | Optional | When used, all time limitations are ignored. The format should be the account id + chat id (same as the engagementId returned in the response). |
 | alertedMcsValues | Alerted MCS of the chat. | Array `<alertedMCS>` | Optional | Valid values: "-1", "0", "1" |
-| chatMCS {from,to} | Range of Meaningful Connection Score in a particular chat (including the boundaries).  | numeric, numeric| Optional | Either “from” or “to” fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively. |
+| chatMCS {from,to} | Range of Meaningful Conversation Score in a particular chat (including the boundaries).  | numeric, numeric| Optional | Either “from” or “to” fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively. |
 | hasInteractiveCoBrowse | Indication whether an interactive CoBrowse session occurred during the chat | Boolean | Optional |  |
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
 | lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT
@@ -1283,9 +1283,9 @@ Example:
 | endReason | Code indicates the reason the chat ended. | numeric | |
 | endReasonDesc | Description of reason the chat ended. | alphanumeric | |
 | End reason options | End reason options. | | 101 - Transfer - rep stopped chat (rep transferred chat to another rep), 106 - Transfer - Reassignment to skill (rep transferred chat to skill, 201 – Rep stopped chat, 202 - Rep disconnected, 205 - Visitor disconnected, 208 - Visitor was no longer in chat, 210 - Visitor closed chat |
-| mcs | Divides the Meaningful Connection Score into 3 groups: Positive, Neutral, Negative. This field is deprecated. Use alertedMCS instead| int | Values: -1, 0, 1 |
+| mcs | Divides the Meaningful Conversation Score into 3 groups: Positive, Neutral, Negative. This field is deprecated. Use alertedMCS instead| int | Values: -1, 0, 1 |
 | alertedMCS | Divides the chatMCS score into 3 groups: Positive, Neutral, Negative. | int | Values: -1, 0, 1 |
-| chatMCS | Meaningful Connection Score of the chat.  | int| Range: 0-100. |
+| chatMCS | Meaningful Conversation Score of the chat.  | int| Range: 0-100. |
 | chatDataEnriched | Indication whether chat was enriched with final data (including sdes data). | Boolean | If true, the enrichment process occurred. |
 | isPartial | Indicates whether the chat’s data is partial. | Boolean | In case isPartial is true - use the same method with EngagementId parameter in order to retrieve the full chat data. |
 | ended | Indicates whether the chat has ended | Boolean | The API returns only ended chats. |
@@ -1320,7 +1320,7 @@ Example:
 | lineScores | Contains information about the line's score, including line raw score and aggregated score up until this line. | container | |
 | lineSeq | Sequence of line in that chat  | alphanumeric | |
 | lineRawScore | Score of line (for internal use only) | numeric | |
-| mcs | Meaningful Connection Score of the chat up to this line | numeric | |
+| mcs | Meaningful Conversation Score of the chat up to this line | numeric | |
 | visitorInfo | Conatins inforamtion about the visitor who participated in the chat  | container |  |
 | country | The country indicated by the visitor’s IP address. | alphanumeric | |
 | countryCode | The country code indicated by the visitor’s IP address. | alphanumeric | |
