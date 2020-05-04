@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Configuration API 
 subfoldername: Methods
-permalink: agentsurvey-config-api-methods-delete-agentsurvey-object.html
+permalink: agent-survey-for-messaging-configuration-api-methods-delete-agent-survey-object.html
 indicator: messaging
 ---
 
@@ -67,4 +67,4 @@ In case trying to delete an already deleted agent surveys:
 ```
 **Entity structure**
 
-For details on the entity structure, please see the [appendix](/agentsurvey-config-api-appendix.html)
+For details on the entity structure, please see the [appendix](/agent-survey-for-messaging-configuration-api-appendix.html)

@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Runtime API 
 subfoldername: Methods
-permalink: agentsurvey-runtime-api-methods-dismiss-agentsurvey.html
+permalink: agent-survey-for-messaging-runtime-api-methods-dismiss-agent-survey.html
 indicator: messaging
 ---
 
@@ -74,4 +74,4 @@ doesn't have required questions and it was not submitted before.
 
 **Entity structure**
 
-For details on the entity structure, please see the [appendix](/agentsurvey-runtime-api-appendix.html)
+For details on the entity structure, please see the [appendix](/agent-survey-for-messaging-configuration-api-appendix.html)

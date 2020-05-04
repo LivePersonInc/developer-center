@@ -1,35 +1,36 @@
 ---
-pagename: Update Agent Survey Object
+pagename: Create Agent Survey Object
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
-documentname: Agent Survey For Messaging Configuration API 
+documentname: Agent Survey For Messaging Configuration API
 subfoldername: Methods
-permalink: agentsurvey-config-api-methods-update-agentsurvey-objects.html
+
+permalink: agent-survey-for-messaging-configuration-api-methods-create-agent-survey-object.html
 indicator: messaging
 ---
 
-Update existing agent survey object(s).
+Create new agent survey object(s) for an account. It is possible to create several items at a time.
 
 ### Request
 
 | Method | URL |
 | :-------- | :------ |
-| POST  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/agent_surveys |
+| POST  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/configuration/ac-common/agent_surveys|
 
 **Path Parameters**
 
 |Parameter  |Description |  Type / Value |
 |:----------- | :------------ | :--------------- |
-|accountId | LP site ID | String |
+|accountId | LP site ID | String  |
 
 **Request Headers**
 
-|Header | Description| Notes |
-|:------- | :-------------- | :--- |
-|Authorization | Contains token string to allow request authentication and authorization. |
-|if-match|Contains special agent survey's current revision number|
-|x-HTTP-Method-Override | PUT|
+| Header | Description |
+ |:-------- | :------------ |
+| Authentication | Contains token string to allow request authentication and authorization |
+
+
 
 **Request Body**
 
@@ -37,10 +38,9 @@ Update existing agent survey object(s).
 {
     "name": "survey_name",
     "root": 11,
-    "id": 3576140710,
-    "enabled": true,
     "isDefault": true,
     "defaultTimeoutInMinutes": 123,
+    "enabled": true,
     "questions": [
     {
       "id": 11,
@@ -71,12 +71,11 @@ Update existing agent survey object(s).
 
 **Entity structure**
 
-For details on the entity structure, please see the [appendix](/agentsurvey-config-api-appendix.html)
+For details on the entity structure, please see the [appendix](/agent-survey-for-messaging-configuration-api-appendix.html)
 
 **'isDefault' entity state**
 
-The `isDefault` field determines whether a agent survey object is the default for the entire account. Only one object can be set as the default for each account. 
-
+The `isDefault` field determines whether an agent survey object is the default for the entire account. Only one object can be set as the default for each account. 
 
 ### Response
 
@@ -97,18 +96,19 @@ The `isDefault` field determines whether a agent survey object is the default fo
 
 |Header|  Description|
 |:-------|   :-----  |
-|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
+|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specific version using this parameter's value..|  
 
 **Response example**
 
 ```json
+[
 {
     "name": "survey_name",
-    "root": 1,
-    "id": 454766,
+    "id":1212,
+    "root": 11,
     "isDefault": true,
-    "enabled": true,
     "defaultTimeoutInMinutes": 123,
+    "enabled": true,
     "questions": [
     {
       "id": 11,
@@ -121,7 +121,6 @@ The `isDefault` field determines whether a agent survey object is the default fo
     },
     {
       "id": 12,
-      "orderId": 2,
       "text": "questionText",
       "required": true,
       "category": "dropdown",
@@ -135,4 +134,5 @@ The `isDefault` field determines whether a agent survey object is the default fo
     }
   ]
 }
+]
 ```

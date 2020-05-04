@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Configuration API 
 subfoldername: Methods
-permalink: agentsurvey-config-api-methods-getall-agentsurvey-objects.html
+permalink: agent-survey-for-messaging-configuration-api-methods-get-all-agent-survey-objects.html
 indicator: messaging
 ---
 
@@ -78,4 +78,4 @@ Get a list of all agent survey objects of an account.
 
 **Entity structure**
 
-For details on the entity structure, please see the [appendix](/agentsurvey-config-api-appendix.html)
+For details on the entity structure, please see the [appendix](/agent-survey-for-messaging-configuration-api-appendix.html)

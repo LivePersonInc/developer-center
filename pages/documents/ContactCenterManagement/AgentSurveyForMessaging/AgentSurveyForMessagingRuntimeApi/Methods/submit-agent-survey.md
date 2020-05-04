@@ -1,23 +1,22 @@
 ---
-pagename: Save Agent Survey State
+pagename: Submit Agent Survey
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Runtime API 
 subfoldername: Methods
-permalink: agentsurvey-runtime-api-methods-save-agentsurvey-state.html
+permalink: /agent-survey-for-messaging-runtime-api-methods-submit-agent-survey.html
 indicator: messaging
 ---
 
-Save the agent survey state. This will save the state without producing FormSubmitEvent <br>
-Using this method, you can implement auto-save and assure that the survey display will not change upon page refresh. 
-
+Submit the agent survey and produce FormSubmitEvent and Purchase/Lead/ServiceActivity events in case of engagement attribute question.
+Submit is allowed if the agent survey was not dismissed before. 
 
 ### Request
 
 | Method | URL |
 | :-------- | :------ |
-| PUT  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/forms/agent_survey/state |
+| POST  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/forms/agent_survey/state |
 
 **Path Parameters**
 
@@ -31,7 +30,6 @@ Using this method, you can implement auto-save and assure that the survey displa
 |:----------- |  :------------ | :--------------- | :--- | :--- | 
 | conv | conversation id | String | Required | ^[a-zA-Z0-9_]{1,20}$ |
 | skill | skill id | long | Required |
-| seqRoot | questionId, describe the first question in the next sequence | Long | Optional | provides the ability to get the next sequence upon save |
 | v | API version number | String | Required |
 
 
@@ -122,7 +120,17 @@ Using this method, you can implement auto-save and assure that the survey displa
 |:-------|   :-----  |
 |x-lp-state-rev|  state revision - used in POST/PUT/DELETE requests to avoid data discrepancy |  
 
+**Response example**
+
+```json
+{
+    "agentSurveyStatus": "submitted",
+    "lastActionTimeInMillis": 1564378978227,
+    "autoCloseTimestamp": 0,
+    "stateRevision": 1564378978225684480
+}
+```
 
 **Entity structure**
 
-For details on the entity structure, please see the [appendix](/agentsurvey-runtime-api-appendix.html)
+For details on the entity structure, please see the [appendix](/agent-survey-for-messaging-configuration-api-appendix.html)

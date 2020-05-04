@@ -1,21 +1,22 @@
 ---
-pagename: Get Agent Survey State
+pagename: Get Agent Survey 
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Runtime API 
-subfoldername: Methods
-permalink: agentsurvey-runtime-api-methods-get-agentsurvey-state.html
+subfoldername: Methodsz
+permalink: agent-survey-for-messaging-runtime-api-methods-get-agent-survey.html
 indicator: messaging
 ---
 
-Get the survey state that has been saved in previous requests.
+Get the full agent survey configuration <br>
+Get the next sequence of the survey - sequence is a series of question starting from the root question and ending with a question that contains logic 
 
 ### Request
 
 | Method | URL |
 | :-------- | :------ |
-| GET  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/forms/agent_survey/state|
+| GET  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/forms/agent_survey/|
 
 **Path Parameters**
 
@@ -29,7 +30,8 @@ Get the survey state that has been saved in previous requests.
 |:----------- |  :------------ | :--------------- | :--- | :--- | 
 | conv | conversation id | String | Required | ^[a-zA-Z0-9_]{1,20}$ |
 | skill | skill id | long | Required |
-| seq | when seq=true and survey state is null the first sequence will be returned | Boolean | Optional | Default value is true |
+| seq | boolean to determine if the full survey will be returned or next sequence | Boolean | Optional | Default value is true |
+| seqRoot | questionId, describe the first question in the next sequence | Long | Optional | If seqRoot was not provided and seq=true, the first sequence of the survey will be returned |
 | v | API version number | String | Required |
 
 
@@ -66,11 +68,10 @@ Get the survey state that has been saved in previous requests.
 {
     "id": 3538577310,
     "name": "skillsurvey",
-    "root": 11,
-    "actualTimeoutInMinutes": 127,
+    "root": 1,
     "questions": [
         {
-            "id": 1565,
+            "id": 1787,
             "orderId": 1,
             "text": "questionText",
             "next": 3,
@@ -78,14 +79,11 @@ Get the survey state that has been saved in previous requests.
             "required": true,
             "category": "date",
             "questionDefinition": "regular_question",
-            "containsLogic": false,
-            "questionState": {
-                "id": 1565,
-                "questionStatus": "show"
-            }
+            "containsLogic": false
         },
+ 
         {
-            "id": 4456,
+            "id": 4565,
             "orderId": 4,
             "text": "question_text",
             "next": 5,
@@ -101,34 +99,6 @@ Get the survey state that has been saved in previous requests.
                     "topic",
                     "status"
                 ]
-            },
-            "questionState": {
-                "id": 4456,
-                "questionStatus": "answer",
-                "engAttribute": {
-                    "type": "service_activity",
-                    "service": {
-                        "topic": "my topic",
-                        "status": 3
-                    }
-                }
-            }
-        },
-        {
-            "id": 6334,
-            "orderId": 6,
-            "text": "question_text",
-            "next": 7,
-            "nextInOrder": false,
-            "required": true,
-            "category": "free_text",
-            "questionDefinition": "regular_question",
-            "maxCharacters": 1024,
-            "containsLogic": false,
-            "questionState": {
-                "id": 6334,
-                "questionStatus": "answer",
-                "freeTextReply": "my free text answer"
             }
         },
         {
@@ -142,33 +112,48 @@ Get the survey state that has been saved in previous requests.
             "questionDefinition": "regular_question",
             "replies": [
                 {
-                    "id": 11,
+                    "id": 1134,
                     "text": "questionText"
                 },
                 {
-                    "id": 12,
+                    "id": 1245,
                     "text": "questionText"
                 }
             ],
-            "containsLogic": false,
-            "questionState": {
-                "id": 8454,
-                "questionStatus": "answer",
-                "replyIds": [
-                    11
-                ]
-            }
+            "containsLogic": false
+        },
+ {
+            "id": 8454,
+            "orderId": 8,
+            "text": "question_text",
+            "next": 9,
+            "nextInOrder": false,
+            "required": true,
+            "category": "checkbox",
+            "questionDefinition": "regular_question",
+            "replies": [
+                {
+                    "id": 1399,
+                    "text": "questionText",
+                    "next": 7676
+                },
+                {
+                    "id": 1478,
+                    "text": "questionText"
+                }
+            ],
+            "containsLogic": true
         }
     ],
     "agentSurveyContext": {
         "agentSurveyStatus": "open",
         "lastActionTimeInMillis": 0,
         "autoCloseTimestamp": 0,
-        "stateRevision": 1564319724453625856
+        "stateRevision": 1564031641145901056
     }
 }
 ```
 
 **Entity structure**
 
-For details on the entity structure, please see the [appendix](/agentsurvey-runtime-api-appendix.html)
+For details on the entity structure, please see the [appendix](/agent-survey-for-messaging-configuration-api-appendix.html)

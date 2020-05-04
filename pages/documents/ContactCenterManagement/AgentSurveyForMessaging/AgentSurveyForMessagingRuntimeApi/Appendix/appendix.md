@@ -7,7 +7,7 @@ documentname: Agent Survey For Messaging Runtime API
 
 
 order: 100
-permalink: agentsurvey-runtime-api-appendix.html
+permalink: agent-survey-for-messaging-runtime-api-appendix.html
 
 indicator: messaging
 ---

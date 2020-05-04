@@ -1,22 +1,21 @@
 ---
-pagename: Get Agent Survey 
+pagename: Get Agent Survey State
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Runtime API 
 subfoldername: Methods
-permalink: agentsurvey-runtime-api-methods-get-agentsurvey.html
+permalink: agent-survey-for-messaging-runtime-api-methods-get-agent-survey-state.html
 indicator: messaging
 ---
 
-Get the full agent survey configuration <br>
-Get the next sequence of the survey - sequence is a series of question starting from the root question and ending with a question that contains logic 
+Get the survey state that has been saved in previous requests.
 
 ### Request
 
 | Method | URL |
 | :-------- | :------ |
-| GET  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/forms/agent_survey/|
+| GET  | https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/forms/agent_survey/state|
 
 **Path Parameters**
 
@@ -30,8 +29,7 @@ Get the next sequence of the survey - sequence is a series of question starting 
 |:----------- |  :------------ | :--------------- | :--- | :--- | 
 | conv | conversation id | String | Required | ^[a-zA-Z0-9_]{1,20}$ |
 | skill | skill id | long | Required |
-| seq | boolean to determine if the full survey will be returned or next sequence | Boolean | Optional | Default value is true |
-| seqRoot | questionId, describe the first question in the next sequence | Long | Optional | If seqRoot was not provided and seq=true, the first sequence of the survey will be returned |
+| seq | when seq=true and survey state is null the first sequence will be returned | Boolean | Optional | Default value is true |
 | v | API version number | String | Required |
 
 
@@ -68,10 +66,11 @@ Get the next sequence of the survey - sequence is a series of question starting 
 {
     "id": 3538577310,
     "name": "skillsurvey",
-    "root": 1,
+    "root": 11,
+    "actualTimeoutInMinutes": 127,
     "questions": [
         {
-            "id": 1787,
+            "id": 1565,
             "orderId": 1,
             "text": "questionText",
             "next": 3,
@@ -79,11 +78,14 @@ Get the next sequence of the survey - sequence is a series of question starting 
             "required": true,
             "category": "date",
             "questionDefinition": "regular_question",
-            "containsLogic": false
+            "containsLogic": false,
+            "questionState": {
+                "id": 1565,
+                "questionStatus": "show"
+            }
         },
- 
         {
-            "id": 4565,
+            "id": 4456,
             "orderId": 4,
             "text": "question_text",
             "next": 5,
@@ -99,6 +101,34 @@ Get the next sequence of the survey - sequence is a series of question starting 
                     "topic",
                     "status"
                 ]
+            },
+            "questionState": {
+                "id": 4456,
+                "questionStatus": "answer",
+                "engAttribute": {
+                    "type": "service_activity",
+                    "service": {
+                        "topic": "my topic",
+                        "status": 3
+                    }
+                }
+            }
+        },
+        {
+            "id": 6334,
+            "orderId": 6,
+            "text": "question_text",
+            "next": 7,
+            "nextInOrder": false,
+            "required": true,
+            "category": "free_text",
+            "questionDefinition": "regular_question",
+            "maxCharacters": 1024,
+            "containsLogic": false,
+            "questionState": {
+                "id": 6334,
+                "questionStatus": "answer",
+                "freeTextReply": "my free text answer"
             }
         },
         {
@@ -112,48 +142,33 @@ Get the next sequence of the survey - sequence is a series of question starting 
             "questionDefinition": "regular_question",
             "replies": [
                 {
-                    "id": 1134,
+                    "id": 11,
                     "text": "questionText"
                 },
                 {
-                    "id": 1245,
+                    "id": 12,
                     "text": "questionText"
                 }
             ],
-            "containsLogic": false
-        },
- {
-            "id": 8454,
-            "orderId": 8,
-            "text": "question_text",
-            "next": 9,
-            "nextInOrder": false,
-            "required": true,
-            "category": "checkbox",
-            "questionDefinition": "regular_question",
-            "replies": [
-                {
-                    "id": 1399,
-                    "text": "questionText",
-                    "next": 7676
-                },
-                {
-                    "id": 1478,
-                    "text": "questionText"
-                }
-            ],
-            "containsLogic": true
+            "containsLogic": false,
+            "questionState": {
+                "id": 8454,
+                "questionStatus": "answer",
+                "replyIds": [
+                    11
+                ]
+            }
         }
     ],
     "agentSurveyContext": {
         "agentSurveyStatus": "open",
         "lastActionTimeInMillis": 0,
         "autoCloseTimestamp": 0,
-        "stateRevision": 1564031641145901056
+        "stateRevision": 1564319724453625856
     }
 }
 ```
 
 **Entity structure**
 
-For details on the entity structure, please see the [appendix](/agentsurvey-runtime-api-appendix.html)
+For details on the entity structure, please see the [appendix](/agent-survey-for-messaging-configuration-api-appendix.html)
