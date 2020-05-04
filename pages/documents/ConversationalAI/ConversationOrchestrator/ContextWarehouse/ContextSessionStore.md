@@ -2,12 +2,13 @@
 pagename: Context Session Store
 redirect_from:
   - maven-context-warehouse-context-session-store.html
+  - maven-ai-context-warehouse-context-session-store.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
+documentname: Conversation Orchestrator
 subfoldername: Context Warehouse
-permalink: maven-ai-context-warehouse-context-session-store.html
+permalink: conversation-orchestrator-context-warehouse-context-session-store.html
 indicator: messaging
 ---
 

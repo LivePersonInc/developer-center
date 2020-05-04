@@ -2,11 +2,12 @@
 pagename: Overview
 redirect_from:
   - maven-overview.html
+  - maven-ai-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
-permalink: maven-ai-overview.html
+documentname: Conversation Orchestrator
+permalink: conversation-orchestrator-overview.html
 indicator: messaging
 ---
 
@@ -14,7 +15,7 @@ indicator: messaging
 
 Conversational Commerce has unlocked new channels for consumers to interact with brands on their terms. Consumer demand for messaging presents a challenge for brands to effectively handle high-volumes of messaging conversations while simultaneously delivering personalized and effective service to every consumer. 
 
-LivePerson’s Maven AI offers brands tools to enable efficient and personalized customer journeys at scale, while allowing brands control and transparency over how AI is used in their business. 
+LivePerson’s Conversation Orchestrator offers brands tools to enable efficient and personalized customer journeys at scale, while allowing brands control and transparency over how AI is used in their business. 
 
 Maven, part of LivePerson’s Conversational AI, empowers brands to create highly personalized conversational experiences for their customers. Maven provides the following key value to brands: 
 
@@ -30,14 +31,14 @@ Maven is introducing 4 new capabilities that enable brands to achieve conversati
 * [Dynamic Routing](maven-ai-powered-routing-overview.html)
 * [Recommendation API](maven-askmaven-overview.html)
 
-### Maven Workspace
+### Conversation Orchestrator
 
-The Maven Workspace is a self-service, low-code/no-code experience for brands to enable or tune Maven capabilities and features. With Maven brands can:
+The Conversation Orchestrator is a self-service, low-code/no-code experience for brands to enable or tune Maven capabilities and features. With Maven brands can:
 
 1. Setup **Maven Assist** recommended actions to increase agent productivity by suggesting bots or knowledgebase articles based on customer’s intents.
 2. Manage and use the **Maven Context Warehouse**, a repository for brand, session, or customer attributes, including the ability to connect to external data sources (CRM using a FaaS), and use these attributes throughout the customer’s conversation journey or in routing policies.
 3. Author **Dynamic Routing** policies based on attributes (intent, content, session, or AI based inferences) to route to the right human or bot - unlocking highly personalized consumer journeys.
-4. Access developer features such as **Recommendation API** for next action or **Context Session Store** to customize and integrate Maven AI orchestration into their decision processes.  
+4. Access developer features such as **Recommendation API** for next action or **Context Session Store** to customize and integrate Conversation Orchestrator into their decision processes.  
 
 <img class="fancyimage" width="750" src="img/maven/maven-workspace.png">
 

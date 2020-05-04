@@ -2,12 +2,13 @@
 pagename: Custom Static or Function
 redirect_from:
   - maven-context-warehouse-custom-static-or-function.html
+  - maven-ai-context-warehouse-custom-static-or-function.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
+documentname: Conversation Orchestrator
 subfoldername: Context Warehouse
-permalink: maven-ai-context-warehouse-custom-static-or-function.html
+permalink: conversation-orchestrator-context-warehouse-custom-static-or-function.html
 indicator: messaging
 ---
 

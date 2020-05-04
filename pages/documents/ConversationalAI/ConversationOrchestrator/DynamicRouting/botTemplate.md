@@ -2,12 +2,13 @@
 pagename: Conversation Builder Maven Template
 redirect_from:
   - maven-ai-ai-powered-routing-conversation-builder-maven-template.html
+  - maven-ai-dynamic-routing-conversation-builder-maven-template.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
+documentname: Conversation Orchestrator
 subfoldername: Dynamic Routing
-permalink: maven-ai-dynamic-routing-conversation-builder-maven-template.html
+permalink: conversation-orchestrator-dynamic-routing-conversation-builder-maven-template.html
 indicator: messaging
 ---
 

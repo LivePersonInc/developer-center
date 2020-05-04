@@ -3,12 +3,13 @@ pagename: Intent & Context Policies
 redirect_from:
   - maven-ai-powered-routing-intent-context-policies.html
   - maven-ai-ai-powered-routing-intent-context-policies.html
+  - maven-ai-dynamic-routing-intent-context-policies.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
+documentname: Conversation Orchestrator
 subfoldername: Dynamic Routing
-permalink: maven-ai-dynamic-routing-intent-context-policies.html
+permalink: conversation-orchestrator-dynamic-routing-intent-context-policies.html
 indicator: messaging
 ---
 

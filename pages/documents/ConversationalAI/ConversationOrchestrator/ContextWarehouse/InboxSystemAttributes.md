@@ -2,12 +2,13 @@
 pagename: Inbox System Attributes
 redirect_from:
   - maven-context-warehouse-inbox-system-attributes.html
+  - maven-ai-context-warehouse-inbox-system-attributes.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
+documentname: Conversation Orchestrator
 subfoldername: Context Warehouse
-permalink: maven-ai-context-warehouse-inbox-system-attributes.html
+permalink: conversation-orchestrator-context-warehouse-inbox-system-attributes.html
 indicator: messaging
 ---
 

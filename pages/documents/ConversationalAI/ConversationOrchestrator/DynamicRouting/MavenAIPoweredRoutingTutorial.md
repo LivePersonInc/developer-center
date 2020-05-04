@@ -3,18 +3,19 @@ pagename: Maven Dynamic Routing Tutorial
 redirect_from:
   - maven-ai-powered-routing-tutorial.html
   - maven-ai-ai-powered-routing-tutorial.html
+  - maven-ai-dynamic-routing-tutorial.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
+documentname: Conversation Orchestrator
 subfoldername: Dynamic Routing
-permalink: maven-ai-dynamic-routing-tutorial.html
+permalink: conversation-orchestrator-dynamic-routing-tutorial.html
 indicator: messaging
 ---
 
 ## Introduction
 
-This document walks through an example to create a policy using Maven Workspace and using it for routing to a skill. 
+This document walks through an example to create a policy using Conversation Orchestrator and using it for routing to a skill. 
 
 The examples provided here start with a simple implementation, using static attributes (hard coded values), and then add more complexity such as using the session store, LivePerson functions, and Conversation Builder integration. This tutorial will help you understand the high level concepts and create basic building blocks on which you will be able to create more complex solutions. 
 
@@ -34,7 +35,7 @@ In this tutorial we will use the Conversation Builder template. that is prewired
 
 <img class="fancyimage" width="750" src="img/maven/cb-template.png">
 
-A CB bot will handle the incoming consumer message, and then use Maven AI routing policies to route the customer to a VIP agent or Regular Customer Agent. Setting up the CB bot in the beginning will allow you to test the scenarios end to end. 
+A CB bot will handle the incoming consumer message, and then use Conversation Orchestrator routing policies to route the customer to a VIP agent or Regular Customer Agent. Setting up the CB bot in the beginning will allow you to test the scenarios end to end. 
 
 ### Import Maven CB Bot template and setup
 
@@ -96,7 +97,7 @@ A CB bot will handle the incoming consumer message, and then use Maven AI routin
 
         ii. Note: Conversation builder is already integrated with the Context Session store. You can manage the session store from inside Conversation builder using [scripting functions](conversation-builder-scripting-functions-manage-the-context-session-store.html). 
 
-    d. mavenApiKey: copy and paste the Developer Key from Maven Workspace
+    d. mavenApiKey: copy and paste the Developer Key from Conversation Orchestrator
 
     e. Click save
 
@@ -136,7 +137,7 @@ In this example we will create and use static attributes. To check if a customer
 
 ### Create Context Attributes
 
-1. Login to Maven Workspace using your LPA or Admin Credentials, and then navigate to Context Warehouse/Custom. 
+1. Login to Conversation Orchestrator using your LPA or Admin Credentials, and then navigate to Context Warehouse/Custom. 
 
     <img class="fancyimage" width="750" src="img/maven/workspace-custom.png">
 
@@ -223,7 +224,7 @@ We will use a standard web entry point to initiate a conversation with the CB bo
 
 #### Test VIP policy
 
-In the policy list in Maven Workspace, click on the toggle switch and enable the VipRule_Static policy. 
+In the policy list in Conversation Orchestrator, click on the toggle switch and enable the VipRule_Static policy. 
 
 1. Start a new web messaging conversation using the account ID 
 
@@ -239,7 +240,7 @@ In the policy list in Maven Workspace, click on the toggle switch and enable the
 
 #### Test Regular Customer Policy
 
-1. In the policy list in Maven Workspace, click on the toggle switch and disable the VipRule_Static policy. Enable RegularCustomerRule_Static
+1. In the policy list in Conversation Orchestrator, click on the toggle switch and disable the VipRule_Static policy. Enable RegularCustomerRule_Static
 
 2. Logout of LiveEngage, and then log in back using a Regular Agent account
 
@@ -261,7 +262,7 @@ We will be using the Context Session store to store a phone number, and then use
 
 ### Create Policies
 
-1. Disable all policies you have previously created by switching off the toggle switch in Maven Workspace. 
+1. Disable all policies you have previously created by switching off the toggle switch in Conversation Orchestrator. 
 
 2. Create a new policy by clicking Add Policy 
   
@@ -280,7 +281,7 @@ We will be using the Context Session store to store a phone number, and then use
 
 #### Test the policies
 
-1. In the policy list in Maven Workspace, disable the RegularCustomerRule_Static and Vip_Static policies. 
+1. In the policy list in Conversation Orchestrator, disable the RegularCustomerRule_Static and Vip_Static policies. 
 
 2. And enable the VipRule_Session and RegularCustomerRule_Static policy. 
 

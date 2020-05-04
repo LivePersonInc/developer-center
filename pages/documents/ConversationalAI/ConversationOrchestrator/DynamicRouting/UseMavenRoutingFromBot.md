@@ -3,12 +3,13 @@ pagename: Use Maven with Your Bot
 redirect_from:
   - maven-ai-powered-routing-use-maven-with-your-bot.html
   - maven-ai-ai-powered-routing-use-maven-with-your-bot.html
+  - maven-ai-dynamic-routing-use-maven-with-your-bot.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
+documentname: Conversation Orchestrator
 subfoldername: Dynamic Routing
-permalink: maven-ai-dynamic-routing-use-maven-with-your-bot.html
+permalink: conversation-orchestrator-dynamic-routing-use-maven-with-your-bot.html
 indicator: messaging
 ---
 
@@ -68,7 +69,7 @@ Recommendation APIs can be used in a Conversation Builder bot using [Integration
    3. APAC: https://z3.askmaven.liveperson.net
 
    
-   * **Maven API key** is retrieved from Maven workspace.
+   * **Maven API key** is retrieved from Conversation Orchestrator.
 
    * **AccountID**: use your LiveEngage account ID. If you are not sure please contact support or your customer representative to get the account ID.
 

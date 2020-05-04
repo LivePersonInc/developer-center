@@ -3,11 +3,12 @@ pagename: Using SDE attributes in Routing
 Keywords:
 redirect_from:
   - maven-ai-ai-powered-routing-using-sde-attributes-in-routing.html
+  - maven-ai-dynamic-routing-using-sde-attributes-in-routing.html
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
+documentname: Conversation Orchestrator
 subfoldername: Dynamic Routing
-permalink: maven-ai-dynamic-routing-using-sde-attributes-in-routing.html
+permalink: conversation-orchestrator-dynamic-routing-using-sde-attributes-in-routing.html
 indicator: messaging
 ---
 
@@ -123,7 +124,7 @@ SDEs will be supported as an attribute in the Context Warehouse in future. Howev
 
 ## Create the Context Warehouse Attribute
 
-1. Access the Maven Workspace area of Conversational Cloud 
+1. Access the Conversation Orchestrator area of Conversational Cloud 
 
 2. Navigate to the Custom option under Context Warehouse 
 
@@ -144,7 +145,7 @@ SDEs will be supported as an attribute in the Context Warehouse in future. Howev
 
 ## Create the routing policy
 
-1. In the Maven Workspace Navigate to Intent and Context Policies
+1. In the Conversation Orchestrator Navigate to Intent and Context Policies
 
 2. Click Add Policy to create a new routing policy
 

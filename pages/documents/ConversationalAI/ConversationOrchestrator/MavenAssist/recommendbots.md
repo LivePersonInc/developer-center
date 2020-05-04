@@ -2,12 +2,13 @@
 pagename: Recommended Actions for Automations
 redirect_from:
   - maven-maven-assist-recommended-actions-for-bots.html
+  - maven-ai-maven-assist-recommended-actions-for-automations.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
+documentname: Conversation Orchestrator
 subfoldername: Maven Assist
-permalink: maven-ai-maven-assist-recommended-actions-for-automations.html
+permalink: conversation-orchestrator-maven-assist-recommended-actions-for-automations.html
 indicator: messaging
 ---
 
@@ -113,7 +114,7 @@ Follow the steps below to gather information for the form.
 
 2. Click on the **Account** icon at the top right of the page, and choose **Settings**.
 
-Click on the **API** tab, and copy the value listed for **Your API Access Key**. This should be entered in the **Credentials** field of the *Add Bot* page on *Maven Workspace*.
+Click on the **API** tab, and copy the value listed for **Your API Access Key**. This should be entered in the **Credentials** field of the *Add Bot* page on *Conversation Orchestrator*.
 
 
 ##### Add credentials for DialogFlow

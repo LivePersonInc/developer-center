@@ -3,12 +3,13 @@ pagename: Methods
 redirect_from:
   - maven-askmaven-methods.html
   - maven-ai-askmaven-methods.html
+  - maven-ai-recommendation-api-methods.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Maven AI
+documentname: Conversation Orchestrator
 subfoldername: Recommendation API
-permalink: maven-ai-recommendation-api-methods.html
+permalink: conversation-orchestrator-recommendation-api-methods.html
 indicator: messaging
 ---
 

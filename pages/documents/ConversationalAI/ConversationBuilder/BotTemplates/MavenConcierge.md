@@ -59,7 +59,7 @@ Open the bot. On the top navigation click on Global Functions and edit the follo
 
 3. `mavenNamespace`: Please enter the Namespace you have defined in your [Context Warehouse Session Store](https://developers.liveperson.com/maven-ai-context-warehouse-context-session-store.html) for storing and retrieving session variables. 
 
-4. `mavenApiKey`: copy and paste the Developer Key from Maven Workspace
+4. `mavenApiKey`: copy and paste the Developer Key from Conversation Orchestrator
 
 5. `fallbackSkillName`: Please enter the skill name for the fall back skill. This skill is used by the bot if no policies are executed by Maven
 
