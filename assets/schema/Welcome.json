@@ -1,0 +1,38 @@
+    [
+        {
+            "url": "/first-steps.html",
+            "title": "Get Started with LivePerson",
+            "content": "Start connecting to consumers over popular messaging channels and automate conversations with AI-powered bots.",
+            "icon": "ic_get_started"
+        },
+        {
+            "url": "https://knowledge.liveperson.com/troubleshooting-how-to-contact-support.html",
+            "title": "Need help? Get answers to common questions or contact support. ",
+            "content": "",
+            "icon": "ic_support"
+        },
+        {
+            "url": "https://knowledge.liveperson.com/whats-new-latest-whats-new.html",
+            "title": "Stay informed with LivePerson’s latest news and updates.",
+            "content": "",
+            "icon": "ic_news"
+        },
+        {
+            "url": "https://institute.liveperson.com/",
+            "title": "Become a certified professional at the LivePerson Institute.",
+            "content": "",
+            "icon": "ic_APIs"
+        },
+        {
+            "url": "https://www.liveperson.com/signup/",
+            "title": "Are you already a Conversational AI expert? Join the LivePerson partner program",
+            "content": "",
+            "icon": "ic_partners"
+        },
+        {
+            "url": "https://developers.liveperson.com/register.html",
+            "title": "Excited? Let’s start your free trial today.",
+            "content": "",
+            "icon": ""
+        }
+    ]
