@@ -677,12 +677,6 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 }
 ```
 
-### Limitations
-
-<ul>
-  <li>Currently IBM Watson allows <b>only 5</b> response types per node.</li>
-</ul>
-
 ### Sending Encoded Metadata
 
 LiveEngage Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
@@ -887,3 +881,9 @@ It is also possible to send a private text message with the action (e.g. Transfe
   ]
 }
 ```
+
+### Limitations
+
+<ul>
+  <li>Currently IBM Watson allows <b>only 5</b> response types per node.</li>
+</ul>
