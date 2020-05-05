@@ -38,11 +38,11 @@ You can use the debugger (click **Debug** in the upper-right corner) to enter sa
 1. Open the domain.
 2. Ensure the domain has *at least* 5 intents. For each intent, ensure it has *at least* 20 training phrases.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intents_trainingPhrases.png">
+    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingPhrases.png">
 
 3. Click **Train** in the upper-right corner to start the training.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intents_trainingStatus.png">
+    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png">
 
 ### Create a 3rd-party NLU provider credential
 
