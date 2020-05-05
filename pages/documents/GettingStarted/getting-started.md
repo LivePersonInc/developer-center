@@ -2,7 +2,6 @@
 pagename: Overview
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Overview
 permalink: overview.html
 indicator: both
 ---
