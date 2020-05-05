@@ -601,21 +601,14 @@ div.sidebarTitle-holder {
   cursor: default;
   height: 20px;
   align-self: center;
-  margin-left: 13px;
+  margin-right: 12px;
 }
 
 .indicator:nth-child(3) {
   margin-left: 10px;
+  margin-right: 24px;
 }
 
-/*CSS for specific styling of Chat Indicator*/
-.chat {
-  border-left: solid 2px #5879da;
-}
-
-.messaging {
-  border-left: solid 2px #162036;
-}
 
 .breadcrumbs {
   background-color: white;

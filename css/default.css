@@ -121,8 +121,12 @@ code pre {
     color: var(--electric-blue)
 }
 
+/*
+    Margin-left is 12 because the indicator has a marginright of 12 to add up to 24 
+*/
 .suggestbutton {
-    align-self: center
+    align-self: center;
+    margin-left: 12px;
 }
 
 .suggestbutton a {
