@@ -480,6 +480,31 @@ Figure 8.2 showing the Custom Markup message for delay message
 
 **Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
+### Sending Private Text Message
+
+It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. The motivation to develop this feature is to allow users to define some private text information within the conversation flow to give more insight to either agent or managers who might end-up checking the conversation. Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via the Custom Payload response in intent definition (as shown in Figure 9.1). There are two properties, `text` and `messageAudience`, which are part of the Custom Payload response.
+
+<ul>
+  <li> <b>text</b>: This is the text that will be shown in conversation window inside agent workspace</li>
+  <li><b>messageAudience</b>: This property allows the visibility of the message and must be set to "AGENTS_AND_MANAGERS" for private message.</li>
+</ul>
+
+<br />
+
+Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message - Private Text Message - Action) can be seen in Figure 9.1.
+
+<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/private_message_response_custom_payload.png">
+Figure 9.1 An example of transfer action with a simple text message and private text message in the Dialogflow console's intent editor
+
+It is possible to send only a private text message response. The example payload of such response is below:
+
+```json
+{
+  "messageAudience": "AGENTS_AND_MANAGERS",
+  "text": "This is a private message for agent from DialogFlow"
+}
+```
+
 ### Close Chat/Conversation
 
 In the bot’s flow, there will be times when it is appropriate to end the conversation without escalating to a live agent.
@@ -490,14 +515,14 @@ The method for closing a conversation is similar to the transfer action in that 
 The action field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to to close the conversation.
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_12.png">
-Figure 9.1
+Figure 10.1
 
 ### Engagement attributes as context
 
-Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 10.1.
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 11.1.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
-Figure 10.1 Conversation Type step in creation/modification of bot configuration.
+Figure 11.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow V2 these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload` (more information about `payload` parameter can be found [here](https://googleapis.dev/nodejs/dialogflow/latest/google.cloud.dialogflow.v2.html#.QueryParameters)). An example of the request body can be seen below:
 
