@@ -44,6 +44,10 @@ When transferring the consumer to a live agent, it's customary to send some form
 
 In the integration, you supply the transfer message in the **Message to User** field. You don't have to supply a message, but if you don't, you'll need to set the field to `BLANK_MESSAGE` to satisfy the system requirement for a value, as described above.
 
+#### Add a time delay to the transfer if needed
+
+If you're sending one or more text responses prior to the transfer, it's recommended that you add to the Integration interaction an interaction delay that accounts for each response you need to send. This gives the bot sufficient time to send the messages before transferring the conversation. For example, if you're sending 3 text messages prior to the transfer, you might add a 6000 millisecond delay to the Integration interaction (3 messages x 2000 millisecond delay per message = an aggregate 6000 millisecond delay). Specify the delay in the **Interaction Delay** field in the Integration interaction's settings.
+
 #### Handle transfer failures
 
 Most often in Chat, but occasionally with Messaging, an attempt at transferring to a skill will fail. When this happens, the platform sends the message `__agent_escalation_failed__` to the bot. If you don’t have a dialog set up to catch this pattern, the bot will treat it like any other consumer message. In most cases, it will go to the Fallback dialog.
