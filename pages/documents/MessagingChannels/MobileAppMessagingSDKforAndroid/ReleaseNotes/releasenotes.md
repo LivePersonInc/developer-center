@@ -115,6 +115,23 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
 
+# Android Messaging SDK - Version 4.4.2
+
+**Release date:** May 05, 2020
+
+### Bug fixed
+MobileSDK version 4.4.2 contains a bug fix for an unread message count not being reset on pusher.
+
+### Environmental Requirements
+The Android Mobile Messaging SDK version 4.4.2 uses:
+- Minimum API version 19
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.4.1)**
+
+
 # Android Messaging SDK - Version 4.4.1
 
 **Release date:** April 27, 2020
