@@ -133,8 +133,8 @@ The next request body example illustrates how to create a conversation and send 
 
 The above request is much better as it also includes the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](connector-api-send-api-examples.html#create-a-new-conversation-and-report-sdes){:target="blank"}. **Note**: Not best practice, please avoid this method if possible.
 
-The best practice to target conversations to skills when using messaging is to setup campaigns for messaging.
-If you have set up Campaigns for Messaging on your account, you can send the **Campaign ID** and **Enagagement ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Manager. This will also allow the Agent to see the name of your connector as the **source** of the conversation in the Consumer info widget:
+The best practice to target conversations to skills when using messaging is to set up campaigns.
+You can send the **Campaign ID** and **Enagagement ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Builder. This will also allow the Agent to see the name of your connector as the **source** of the conversation in the Consumer info widget:
 
 <img src="img/ConnectorAPI3.png" alt="connectoroverview">
 
@@ -220,7 +220,7 @@ The connector can then use the above properties in the CONVERSATION request body
 | engagementId | The engagementId retrieved by the [Engagement](rt-interactions-monitoring-methods-engagement.html) Monitoring API endpoint | "88888" | false |
 | channelType | Which channel type is used | "MESSAGING" | string | true | Always use "MESSAGING" |
 | brandId | {accountid} - LivePerson site ID | "LivePerson" |  string | true |
-| skillId | Skill ID you would like to route the conversation to | string | false | Use -1 as default to target all skills available | Avoid routing conversations by passing skills. Instead, implement campaigns for messaging and pass the campaignId and engagementId |
+| skillId | Skill ID you would like to route the conversation to | string | false | Use -1 as default to target all skills available | Avoid routing conversations by passing skills. Instead, implement campaigns and pass the campaignId and engagementId |
 
 #### conversationContext Properties
 
