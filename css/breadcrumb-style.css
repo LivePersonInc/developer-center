@@ -22,7 +22,7 @@
   display: inline-block;
   /*padding-right: 0.5rem;*/
   /*padding-left: 0.5rem;*/
-  color: var(--electric-blue);
+  color: var(--grey-button-icons);
   content: "/";
 }
 
@@ -63,7 +63,8 @@
 
 .breadcrumbs .breadcrumb-item {
   font-size: 0.9em;
-  color: var(--electric-blue);
+  color: var(--grey-button-icons);
+  ;
   font-family: "Open Sans";
   font-weight: 300;
 }
