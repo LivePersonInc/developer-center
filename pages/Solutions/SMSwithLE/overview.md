@@ -11,7 +11,7 @@ order: 1
 root-link: true
 indicator:
 ---
-The LiveEngage messaging platform enables brands to provide a continuous connection with consumers, creating the personalized, convenient level of service people expect today - straight to their mobile devices. The LiveEngage SMS solution provides brands with multiple entry points for their consumers, whether it’s IVR Deflection to SMS or Google AdWords Click-to-Message.
+The LiveEngage messaging platform enables brands to provide a continuous connection with consumers, creating the personalized, convenient level of service people expect today - straight to their mobile devices. The LiveEngage SMS solution provides brands with multiple entry points for their consumers.
 
 ![IntroKeys](img/introductionkeys.png)
 
