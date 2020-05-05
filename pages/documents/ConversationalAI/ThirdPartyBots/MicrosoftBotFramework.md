@@ -348,9 +348,9 @@ It is possible to send a private text message from the Live Engage (LE-UI) via a
 
 <br />
 
-#### Sending delay between multiple messages
+#### Sending Private Text Message between multiple messages
 
-Setting a delay in between multiple messages (for more information on multiple message [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Simple Text Message - Private Text Message - Action) can be seen below:
+Setting a private text message in between multiple messages (for more information on multiple message [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Simple Text Message - Private Text Message) can be seen below:
 
 ```javascript
 {
@@ -361,15 +361,18 @@ Setting a delay in between multiple messages (for more information on multiple m
         "value": "Hi How are you doing?"
       },
       {
-        "text": "This is a private text",
-        "messageAudience": "AGENTS_AND_MANAGERS"
+        "type": "private-message",
+         "value": {
+              "text": "This is a private text",
+              "messageAudience": "AGENTS_AND_MANAGERS",
+          }
       }
     ]
   }
 }
 ```
 
-#### Sending Private Text Message with Action
+#### Sending Single Private Text Message with Action
 
 A single private text message with action can be send by adding `text` and `messageAudience` properties with relevant action (e.g. Transfer/Escalate) properties. An example of such case is below:
 
