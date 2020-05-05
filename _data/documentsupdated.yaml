@@ -604,6 +604,7 @@
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
           - subpagename: Debugger
+      - pagename: "Command Line Interface (CLI)"
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
