@@ -346,7 +346,7 @@ ul.mysidebar.nav {
     font-size: 18px;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding: 10px;
-    border-bottom: 1px solid var(--navy-lighter-gray);
+    border-bottom: 1px solid var(--mid-gray);
     padding-left: 30px;
     line-height: 3px;
 }
@@ -423,7 +423,7 @@ table tbody td img {
 }
 
 #featurestable {
-    width: 180%;
+    width: 100%;
     max-width: none
 }
 
@@ -510,14 +510,6 @@ table tbody td img {
     margin: 0 20px 0 24px
 }
 
-.metricstable {
-    width: 150% !important;
-    max-width: none !important
-}
-
-#metrics {
-    width: 109%
-}
 
 #metricsSearch {
     width: 30.5%;
@@ -1323,7 +1315,7 @@ a.loginText {
 .alldocumentscontainer {
     display: flex;
     flex-wrap: wrap;
-    width: 160%;
+    width: 100%;
     flex-direction: column
 }
 
