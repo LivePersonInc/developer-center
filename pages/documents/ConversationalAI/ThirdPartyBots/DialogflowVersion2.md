@@ -484,10 +484,10 @@ Figure 8.2 showing the Custom Markup message for delay message
 
 It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. The motivation to develop this feature is to allow users to define some private text information within the conversation flow to give more insight to either agent or managers who might end-up checking the conversation. Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via the Custom Payload response in intent definition (as shown in Figure 9.1). There are two properties, `text` and `messageAudience`, which are part of the Custom Payload response.
 
-<ul>
-  <li> <b>text</b>: This is the text that will be shown in conversation window inside agent workspace</li>
-  <li><b>messageAudience</b>: This property allows the visibility of the message and must be set to "AGENTS_AND_MANAGERS" for private message.</li>
-</ul>
+| key             | value                                 | notes                     |
+| --------------- | ------------------------------------- | ------------------------- |
+| text            | any string value                      | mandatory                 |
+| messageAudience | value should be "AGENTS_AND_MANAGERS" | case sensitive, mandatory |
 
 <br />
 
