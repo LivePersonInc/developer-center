@@ -374,12 +374,12 @@ Setting a private text message in between multiple messages (for more informatio
 
 #### Sending Single Private Text Message with Action
 
-A single private text message with action can be send by adding `text` and `messageAudience` properties with relevant action (e.g. Transfer/Escalate) properties. An example of such case is below:
+A single private text message with action can be send by adding `text` and `messageAudience` properties with relevant action (e.g. [Transfer/Escalate](third-party-bots-microsoft-bot-framework.html#transfer--escalations)) properties. An example of such case is below:
 
 ```json
 {
   "type": "message",
-  "text": "Transferring",
+  "text": "This is a private text",
   "channelData": {
     "messageAudience": "AGENTS_AND_MANAGERS",
     "action": {
