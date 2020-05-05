@@ -842,6 +842,68 @@ If you have a different context for multiple dialogs in a conversation that are 
 }
 ```
 
+### Sending Private Text Message
+
+It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. The motivation to develop this feature is to allow users to define some private text information within the conversation flow to give more insight to either agent or managers who might end-up checking the conversation. Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via the Watson's `JSON editor` (as shown in Figure 9.1). There are two properties, `text` and `messageAudience` required for sending private text message.
+
+<ul>
+  <li> <b>text</b>: This is the text that will be shown in conversation window inside agent workspace</li>
+  <li><b>messageAudience</b>: This property allows the visibility of the message and must be set to "AGENTS_AND_MANAGERS" for private message.</li>
+</ul>
+
+<br />
+
+<img class="fancyimage" style="width:800px" src="img/watsonassistantv2/context_adding_choices.png">
+Figure 9.1 Showing JSON editor option access via Watson Assistant.
+
+It is possible to send only a private text message response. The example payload of such response is below (also Figure 9.2 `JSON Editor` view):
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        {
+          "text": "This is a private text",
+          "messageAudience": "AGENTS_AND_MANAGERS"
+        }
+      ],
+      "selection_policy": "sequential"
+    }
+  }
+}
+```
+
+<img class="fancyimage" style="width:800px" src="img/watsonassistantv2/private_message_response_custom_payload.png">
+Figure 9.2 Showing single private text message definition inside `JSON Editor`
+
+It is also possible to send a private text message with the action (e.g. Transfer / Escalations). Example payload of such a case (Private Text Message - Action) will be as below:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        {
+          "text": "This is a private text",
+          "messageAudience": "AGENTS_AND_MANAGERS"
+        }
+      ]
+    }
+  },
+  "actions": [
+    {
+      "name": "TRANSFER",
+      "type": "client",
+      "parameters": {
+        "skill": "human_skill"
+      },
+      "result_variable": "none"
+    }
+  ]
+}
+```
+
 ### Limitations
 
 <ul>
