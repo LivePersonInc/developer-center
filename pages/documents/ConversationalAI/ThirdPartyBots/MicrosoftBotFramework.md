@@ -337,6 +337,60 @@ A single delay message can be send by adding `delay` and `typing` properties to 
 
 **Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
+### Sending Pause/Delay Message
+
+It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. The motivation to develop this feature is to allow users to define some private text information within the conversation flow to give more insight to either agent or managers who might end-up checking the conversation. Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. There are two properties, `text` and `messageAudience` which need to be added in with the response body of the function.
+
+| key             | value                                 | notes                     |
+| --------------- | ------------------------------------- | ------------------------- |
+| text            | any string value                      | mandatory                 |
+| messageAudience | value should be "AGENTS_AND_MANAGERS" | case sensitive, mandatory |
+
+<br />
+
+#### Sending delay between multiple messages
+
+Setting a delay in between multiple messages (for more information on multiple message [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Simple Text Message - Private Text Message - Action) can be seen below:
+
+```javascript
+{
+  "channelData": {
+    "multiMessage": [
+      {
+        "type": "text",
+        "value": "Hi How are you doing?"
+      },
+      {
+        "text": "This is a private text",
+        "messageAudience": "AGENTS_AND_MANAGERS"
+      }
+    ]
+  }
+}
+```
+
+#### Sending Private Text Message with Action
+
+A single private text message with action can be send by adding `text` and `messageAudience` properties with relevant action (e.g. Transfer/Escalate) properties. An example of such case is below:
+
+```json
+{
+  "type": "message",
+  "text": "Transferring",
+  "channelData": {
+    "messageAudience": "AGENTS_AND_MANAGERS",
+    "action": {
+      "name": "TRANSFER",
+      "type": "client",
+      "parameters": {
+        "skill": "human_skill"
+      },
+      "result_variable": "none"
+    }
+  }
+}
+```
+
 ### Close Chat/Conversation
 
 To close a chat or messaging conversation, we provide the action object as we did for a transfer. The activity should contain the following action.
