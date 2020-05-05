@@ -6,12 +6,12 @@ redirect_from:
   - essential-resources-retry-policy-recommendations.html
 Keywords:
 sitesection: Documents
-categoryname: "Common Resources"
-documentname: Retry and KeepAlive Best Practices
+categoryname: "Getting Started"
+documentname: API Guidelines
 
 level-order: 11
 order: 10
-permalink: common-resources-retry-policy-recommendations.html
+permalink: api-guidelines-retry-policy-recommendations.html
 root-link: true
 indicator: both  
 ---
