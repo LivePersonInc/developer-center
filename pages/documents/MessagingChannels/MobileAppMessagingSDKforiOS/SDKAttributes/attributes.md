@@ -538,7 +538,7 @@ All masked data will appear as asterisks, will be saved to local db masked and w
  
 
 #### enableRealTimeMasking  
-When this flag is enabled, the SDK will use regular expression defined in 'realTimeMaskingRegex' to mask text originated on the consumer device.  This masking is applied to messages both on the consumer device and sent to the agent. All masked data will appear as asterisks, will be saved to local databases masked and will be sent to the server masked. This feature is only available for Unauthenticated conversations.
+When this flag is enabled, the SDK will use regular expression defined in 'realTimeMaskingRegex' to mask text originated on the consumer device.  This masking is applied to messages both on the consumer device and sent to the agent. All masked data will appear as asterisks, will be saved to local databases masked and will be sent to the server masked.
 
    - **Type:** Bool
    - **Default value:** false 
