@@ -135,75 +135,75 @@ If you have multiple agent connectors deployed for the same bot, remember to add
 By default, a message from the consumer is shown to the consumer as "Read' once it is sent. Set this field to "SENT" if you want the message to be shown as "Sent" instead. Once the agent logs into LiveEngage and views the message, this status will change to "Read."
 
 **Default value**: READ<br>
-**Messaging**: Y<br>
-**Chat**: N
+**Messaging**: Yes<br>
+**Chat**: No
 
 #### defaultGreetingMessage
 The greeting message sent to the bot when the user connects.
 
 **Default value**: hi<br>
-**Messaging**: Y<br>
-**Chat**: Y
+**Messaging**: Yes<br>
+**Chat**: Yes
 
 #### defaultStepupMessage
 The StepUp message sent to the bot when Stepup Authentication happens.
 
 **Default value**: \_STEPUP\_<br>
-**Messaging**: Y<br>
-**Chat**: N
+**Messaging**: Yes<br>
+**Chat**: No
 
 #### fallbackEscalationTime
 The value in milliseconds for the period of time to pass before invoking fallback escalation.
 
 **Default value**: 3 \* 1000 \* 60<br>
-**Messaging**: Y<br>
-**Chat**: N
+**Messaging**: Yes<br>
+**Chat**: No
 
 #### maxEscalationRetries
 When the agent escalation fails, we send an \_agent\_escalation\_failed\_ message. However, this can end in infinitely loop if the escalation keeps failing. This will set the max number of failure messages sent.
 
 **Default value**: 5<br>
-**Messaging**: Y<br>
-**Chat**: N
+**Messaging**: Yes<br>
+**Chat**: No
 
 #### messageDelay
 We have logic to collect and aggregate user messages before sending to the bot service, i.e., if the user sends two messages, “hi” and “how are you,” we will wait 300 milliseconds after the “hi” message and if “how are you” comes in the 300 ms window, we will concatenate both messages and send it as one message “hi how are you” to the bot.
 
 **Default value**: 300 \(default set to \.3 ms, 3 seconds would be 3000\)<br>
-**Messaging**: Y<br>
-**Chat**: N
+**Messaging**: Yes<br>
+**Chat**: No
 
 #### messageResendMaxRetries
 After sending a message to the Conversation Builder chat server, if there is no bot response or mark\_seen message type, it will resend the message up to the messageResendMaxRetries count.
 
 **Default value**: 1<br>
-**Messaging**: Y<br>
-**Chat**: N
+**Messaging**: Yes<br>
+**Chat**: No
 
 #### retryMessageInterval
 Tied with messageResendMaxRetries; wait 30000 milliseconds before re-sending the message.
 
 **Default value**: 30000<br>
-**Messaging**: Y<br>
-**Chat**: N
+**Messaging**: Yes<br>
+**Chat**: No
 
 #### ringAcceptWait
 The amount of time in milliseconds to wait before the bot accepts the ring from UMS.
 
 **Default value**: 100<br>
-**Messaging**: Y<br>
-**Chat**: N
+**Messaging**: Yes<br>
+**Chat**: No
 
 #### skipAgentMessage
 If "false", when a bot receives a conversation, it sees the last utterance in the conversation history *_regardless of who sent it (agent or consumer)_*. If "true", even if the last message in the conversation history is from an agent, it will be ignored, and the receiving bot will "see" the last *_consumer message_* as the first utterance for processing. Setting to "true" is useful when you have a routing bot passing off the conversation to a specialist bot, and you don't want the transfer message sent from the routing bot to be seen by the specialist bot when it receives the conversation.
 
 **Default value**: false<br>
-**Messaging**: Y<br>
-**Chat**: N
+**Messaging**: Yes<br>
+**Chat**: No
 
 #### tileDisplay
 Vertical or horizontal display for rich structured content. Available for FB, Web, and GRBM. Setting tileDisplay to "horizontal" is useful for resolving formatting issues that might occur on specific channels.
 
 **Default value**: vertical<br>
-**Messaging**: Y<br>
-**Chat**: N
+**Messaging**: Yes<br>
+**Chat**: No
