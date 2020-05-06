@@ -1,5 +1,5 @@
 .welcome-card {
-    flex: 0 48%;
+    flex: 0 47%;
     padding: 24px;
     margin-right: 1%;
     /* Primary/White */
@@ -9,6 +9,18 @@
     border: 1px solid var(--navy-lighter-gray);
     box-sizing: border-box;
     border-radius: 8px;
+}
+
+.header-label {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    width: 670px;
+    flex: 2;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: var(--navy-gray);
 }
 
 .success-stories-header {
@@ -48,10 +60,14 @@ img.card-container {
     color: var(--navy-gray)
 }
 
+#success-stories {
+    background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%),
+        url('img/img-BG.png');
+}
 
 #free-trial {
     background: var(--navy);
-    width: 95%;
+    width: 93%;
     display: flex;
     margin-top: 40px;
     padding: 40px 0 40px 40px;
