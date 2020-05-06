@@ -61,7 +61,10 @@ img.card-container {
     color: var(--navy-gray)
 }
 
-#success-stories {}
+#success-stories {
+    /*
+    nothing should be in here load stuff from js */
+}
 
 #free-trial {
     background: var(--navy);
