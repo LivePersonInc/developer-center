@@ -2,10 +2,12 @@ $(document).ready(function () {
 	var url = window.location.href;
 	//add anchor links to all h3 titles. See respective functions below for what they do.
 	anchors.add('h3, h4');
+	handleUniquePages();
 	linkload();
 	sidebarClick();
 	populateAnchors();
 	menuDrop();
+
 	codeButtons();
 	setNoticeIcon();
 	setImportantIcon();
@@ -106,11 +108,15 @@ function navigateContent(url) {
 			}
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
+
+
 			anchors.add('h3, h4');
 			populateAnchors();
+			handleUniquePages();
 			codeButtons();
 			replaceTitle();
 			setNoticeIcon();
+
 			setImportantIcon();
 			searchFunction();
 			capabilitiesSearch();
@@ -159,8 +165,30 @@ function navigateContent(url) {
 			navigateContent(url);
 		});
 }
+// this function checks if root page and disables the jumpto and fixes padding
+function handleUniquePages() {
+	var is_root = location.pathname == "/";
+	console.log('checking if is root folder');
+	var jumpto = $('#jumpto');
+	var sidebar = $('#defaultsidebar');
+	var suggestButton = $('#suggestbutton');
+	var indicatorContainer = $('#indicator-container');
 
-
+	if (is_root) {
+		console.log('In  root folder');
+		jumpto.css("flex", "0");
+		sidebar.css("margin-right", "0%");
+		suggestButton.css("display", "none");
+		indicatorContainer.css("display", "none");
+	}
+	else {
+		console.log('not in  root folder');
+		jumpto.css("flex", "1");
+		sidebar.css("margin-right", "6%");
+		suggestButton.css("display", "flex");
+		indicatorContainer.css("display", "flex");
+	}
+}
 //a function to create copy buttons on all code blocks
 function codeButtons() {
 	// get all <code> elements.
