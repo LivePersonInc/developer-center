@@ -123,24 +123,87 @@ An agent connector can have one of the following statuses:
 - **Offline**: At least one underlying component isn't working, causing end-to-end connections not to function. The connector is in an error state and isn't running.
 - **Stopped**: The connector isn't running because it was manually stopped. 
 
+
 ### Custom configuration fields
 
-Custom configuration fields are key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
-
+Custom configuration fields are optional key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
+ 
 {: .important}
-Use of custom configuration fields potentially can cause many issues because it allows for human error when connecting the bot "brain" to an agent “body.” For example, if you forget and mis-configure these settings for one of your duplicate bot connectors all running the same bot, you'll get different behavior between the bots within an account.
-
-#### Fields
-
-| Field Name   | Default Value      | Description    | Messaging | Chat | Required |
-|--------|---------|-------------|-----------|------|----------|
-| fallbackEscalationTime  | 3 \* 1000 \* 60   | Value in milliseconds for the period of time to pass before invoking fallback Escalation    | Y   | N    | N    |
-| defaultGreetingMessage  | ‘hi’   | Greeting message sent to the bot when the user connects   | Y         | Y    | N  |
-| defaultStepupMessage  | ‘\_STEPUP\_  | StepUp message sent to the bot when Stepup Authentication happens   | Y  | N    | N   |
-| messageDelay  | 300 \(default set to \.3 ms, 3 seconds would be 3000\) | We have logic to collect and aggregate user messages before sending to the bot service\. I\.e\. if the user send two messages, “hi” and “how are you”, we will wait 300 miliseconds after the “hi” message and if “how are you” comes in the 300 ms window, we will concatenate both messages and send it as one message “hi how are you” to the bot          | Y  | N    | N   |
-| skipAgentMessage  | false   | If "false", when a bot receives a conversation it sees the last utterance in the conversation history - **_regardless who sent it (agent or consumer)_**. If "true", even if the last message in the conversation history is from an agent, it will be ignored - and the receiving bot will "see" the last **_consumer message_** as the first utterance for processing. Setting to "true" is useful when you have a routing bot passing off the conversation to a specialist bot and you do not want the transfer message sent from the routing bot to be seen by the specialist bot when it receives the conversation. | Y  | N    | N        |
-| tileDisplay  | vertical  | Vertical or horizontal display for rich structured content\. Available for FB, Web, and GRBM. Setting tileDisplay to **horizontal** is useful for resolving formatting issues that may occur on specific channels.   | Y   | N    | N   |
-| messageResendMaxRetries | 1    | After sending a message to the CB chatserver, if there is no bot response or mark\_seen message type, it will resend the message up to the messageResendMaxRetries count       | Y    | N    | N  |
-| retryMessageInterval  | 30000    | Tied with messageResendMaxRetries, will wait 30000 miliseconds before re\-sending the message   | Y   | N    | N    |
-| maxEscalationRetries    | 5     | When the agent escalation fails, we send an \_agent\_escalation\_failed\_ message, however this can end in infinitely loop if the escalation keep failing\. This will set the max number of failure messages sent                                               | Y    | N    | N   |
-| ringAcceptWait   | 100 milliseconds  | Amount of time to wait before the bot accepts the ring from UMS\.    | Y   | N    | N   |
+If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.
+ 
+#### acceptStatusEventValue
+By default, a message from the consumer is shown to the consumer as "Read' once it is sent. Set this field to "SENT" if you want the message to be shown as "Sent" instead. Once the agent logs into LiveEngage and views the message, this status will change to "Read."
+ 
+**Default value**: READ<br>
+**Messaging**: Y<br>
+**Chat**: N
+ 
+#### defaultGreetingMessage
+The greeting message sent to the bot when the user connects.
+ 
+**Default value**: hi<br>
+**Messaging**: Y<br>
+**Chat**: Y
+ 
+#### defaultStepupMessage
+The StepUp message sent to the bot when Stepup Authentication happens.
+ 
+**Default value**: \_STEPUP\_<br>
+**Messaging**: Y<br>
+**Chat**: N
+ 
+#### fallbackEscalationTime
+The value in milliseconds for the period of time to pass before invoking fallback escalation.
+ 
+**Default value**: 3 \* 1000 \* 60<br>
+**Messaging**: Y<br>
+**Chat**: N
+ 
+#### maxEscalationRetries
+When the agent escalation fails, we send an \_agent\_escalation\_failed\_ message. However, this can end in infinitely loop if the escalation keeps failing. This will set the max number of failure messages sent.
+ 
+**Default value**: 5<br>
+**Messaging**: Y<br>
+**Chat**: N
+ 
+#### messageDelay
+We have logic to collect and aggregate user messages before sending to the bot service, i.e., if the user sends two messages, “hi” and “how are you,” we will wait 300 milliseconds after the “hi” message and if “how are you” comes in the 300 ms window, we will concatenate both messages and send it as one message “hi how are you” to the bot.
+ 
+**Default value**: 300 \(default set to \.3 ms, 3 seconds would be 3000\)<br>
+**Messaging**: Y<br>
+**Chat**: N
+ 
+#### messageResendMaxRetries
+After sending a message to the Conversation Builder chat server, if there is no bot response or mark\_seen message type, it will resend the message up to the messageResendMaxRetries count.
+ 
+**Default value**: 1<br>
+**Messaging**: Y<br>
+**Chat**: N
+ 
+#### retryMessageInterval
+Tied with messageResendMaxRetries; wait 30000 milliseconds before re-sending the message.
+ 
+**Default value**: 30000<br>
+**Messaging**: Y<br>
+**Chat**: N
+ 
+#### ringAcceptWait
+The amount of time in milliseconds to wait before the bot accepts the ring from UMS.
+ 
+**Default value**: 100<br>
+**Messaging**: Y<br>
+**Chat**: N
+ 
+#### skipAgentMessage
+If "false", when a bot receives a conversation, it sees the last utterance in the conversation history *_regardless of who sent it (agent or consumer)_*. If "true", even if the last message in the conversation history is from an agent, it will be ignored, and the receiving bot will "see" the last *_consumer message_* as the first utterance for processing. Setting to "true" is useful when you have a routing bot passing off the conversation to a specialist bot, and you don't want the transfer message sent from the routing bot to be seen by the specialist bot when it receives the conversation.
+ 
+**Default value**: false<br>
+**Messaging**: Y<br>
+**Chat**: N
+ 
+#### tileDisplay
+Vertical or horizontal display for rich structured content. Available for FB, Web, and GRBM. Setting tileDisplay to "horizontal" is useful for resolving formatting issues that might occur on specific channels.
+ 
+**Default value**: vertical<br>
+**Messaging**: Y<br>
+**Chat**: N
