@@ -37,6 +37,7 @@
 .card-container {
     display: flex;
     margin-top: 64px;
+    padding-right: 48px;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -67,7 +68,7 @@ img.card-container {
 
 #free-trial {
     background: var(--navy);
-    width: 93%;
+    width: 91%;
     display: flex;
     margin-top: 40px;
     padding: 40px 0 40px 40px;
@@ -78,7 +79,7 @@ img.card-container {
     flex: 1;
     display: flex;
     align-items: center;
-    padding-right: 0px;
+    padding-right: 24px;
     justify-content: flex-end;
 }
 
@@ -110,8 +111,7 @@ img.card-container {
     font-weight: normal;
     font-size: 12px;
     line-height: 20px;
-    /* identical to box height, or 167% */
+    padding-right: 24px;
     letter-spacing: 0.01em;
-    /* J/Navy Lighter Gray */
     color: var(--navy-lighter-gray);
 }
