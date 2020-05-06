@@ -14,7 +14,7 @@
 <body>
   <div id="mainHeader">
     <div id="logoHeader">
-      <a href="https://developers.liveperson.com/">
+      <a href="/">
         <img alt="LivePerson Knowledge Center" class="sitelogo" src="img/liveperson-header.svg" />
       </a>
     </div>
@@ -46,13 +46,16 @@
         <div class="documenttitle">
           <div class="titlecontainer">
             <div class='h1'>{{ page.pagename }}</div>
-            {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
-            <div class="indicator chat">Chat</div>
-            {% endif %}
-            {% if page.indicator != null and page.indicator == "both" or page.indicator == "messaging" %}
-            <div class="indicator messaging">Messaging</div>
-            {% endif %}
           </div>
+
+        </div>
+        <div style="display:flex;">
+          {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
+          <div class="indicator chat">Chat</div>
+          {% endif %}
+          {% if page.indicator != null and page.indicator == "both" or page.indicator == "messaging" %}
+          <div class="indicator messaging">Messaging</div>
+          {% endif %}
           <div class="suggestbutton"><a
               href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developers-community/edit/master/pages' }}"
               target="_blank"><i class="far fa-edit"></i><span>Suggest changes</span></a></div>
@@ -62,10 +65,16 @@
       {% endif %}
       {{ content | extlinks }}
     </div>
+    <!-- if the page is not welcome page-->
+    {% if page.pagename %}
+    {% if page.pagename  != "Let’s build a conversational future together!" %}
     <div id="jumpto">
       <div id="anchorlist">
+        {{ page.pagename }}
       </div>
     </div>
+    {% endif %}
+    {% endif %}
     <!-- /.container -->
   </div>
 

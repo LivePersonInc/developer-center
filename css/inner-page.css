@@ -1,6 +1,14 @@
+a {
+  color: var(--electric-blue);
+}
+
 a:focus {
   outline: none !important;
   text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--hover-electric-blue);
 }
 
 .footer {
@@ -11,6 +19,7 @@ a:focus {
   display: none;
 }
 
+
 /* this is so the header won't overlap the links */
 :target::before {
   content: "";
@@ -19,6 +28,10 @@ a:focus {
   margin: -120px 0 0;
 }
 
+img {
+  vertical-align: middle;
+  margin: 24px 0;
+}
 
 /*inner page css */
 h1[id],
@@ -28,8 +41,8 @@ h4[id],
 h5[id],
 h6[id],
 dt[id] {
-  margin-top: 30px;
-  margin-bottom: 5px;
+  margin-top: 40px;
+  margin-bottom: 4px;
   padding-top: 0;
 }
 
@@ -46,6 +59,7 @@ h3[id] {
   color: var(--navy);
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 16px;
 }
 
 h4[id] {
@@ -55,12 +69,16 @@ h4[id] {
   font-weight: 600;
   font-style: inherit;
   margin-top: 15px;
+  margin-bottom: 16px;
+
 }
 
 h5[id] {
   font-family: "Roboto", Arial;
   font-weight: bold;
   margin-top: 0;
+  margin-bottom: 16px;
+
 }
 
 h4 code.highlighter-rouge {
@@ -72,7 +90,9 @@ h4 code.highlighter-rouge {
   color: var(--navy);
   font-family: "Roboto", Arial;
   font-size: 32px;
-  font-weight: 400;
+  margin-bottom: 16px;
+
+  font-weight: bold;
 }
 
 .h2 {
@@ -88,7 +108,8 @@ h4 code.highlighter-rouge {
   font-size: 20px;
   font-family: "Roboto", Arial;
   font-size: 0.9333em;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+
   margin-top: 14px;
 }
 
@@ -97,13 +118,15 @@ h4 code.highlighter-rouge {
   font-family: "Roboto", Arial;
   font-size: 0.86em;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   margin-top: 7px;
 }
 
 .post-content table {
   width: 100%;
   max-width: 100%;
+  margin-bottom: 40px;
+  margin-top: 24px;
 }
 
 .post-content table tbody tr td ul {
@@ -329,6 +352,10 @@ div#toc>ul>li>a span {
 }
 
 div#toc ul li a.anchorjs-link {
+  display: none;
+}
+
+.anchorjs-link:after {
   display: none;
 }
 
@@ -574,21 +601,14 @@ div.sidebarTitle-holder {
   cursor: default;
   height: 20px;
   align-self: center;
-  margin-left: 13px;
+  margin-right: 12px;
 }
 
 .indicator:nth-child(3) {
   margin-left: 10px;
+  margin-right: 24px;
 }
 
-/*CSS for specific styling of Chat Indicator*/
-.chat {
-  border-left: solid 2px #5879da;
-}
-
-.messaging {
-  border-left: solid 2px #162036;
-}
 
 .breadcrumbs {
   background-color: white;
@@ -636,7 +656,6 @@ div.sidebarTitle-holder {
 }
 
 .fancyimage {
-  margin: 0 auto;
   display: block;
   box-shadow: 0 0 9px 3px rgba(0, 0, 0, 0.07);
   margin-top: 20px;
@@ -661,10 +680,10 @@ div.sidebarTitle-holder {
 .post-content ul {
   font-family: "Roboto", Arial;
   overflow-wrap: break-word;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.71;
-  color: #4a4a4a !important;
+  color: var(--navy-gray) !important;
 }
 
 .post-content ol ol {
@@ -677,15 +696,14 @@ div.sidebarTitle-holder {
 
 .post-content p strong {
   font-family: "Roboto", "Open Sans", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-  color: var(--navy);
-  font-size: 20px;
+  font-weight: bold;
+  color: var(navy-gray);
 }
 
 .post-content,
 .post-content * {
   overflow-wrap: break-word;
-
+  padding-right: 24px;
 }
 
 .alert-warning {

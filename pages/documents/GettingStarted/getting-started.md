@@ -1,9 +1,8 @@
 ---
-pagename: First Steps
+pagename: Overview
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: First Steps
-permalink: first-steps.html
+permalink: overview.html
 indicator: both
 ---
 

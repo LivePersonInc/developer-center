@@ -43,6 +43,7 @@ $(document).ready(function () {
 	var $title = $('.h1').text();
 	if ($title.indexOf('Welcome') != -1) {
 		console.log("Welcome to LivePerson Developers!");
+		$title.bold();
 	} else {
 		$('.breadcrumbs').removeClass('breadhidden');
 		$('.suggestbutton').removeClass('suggesthidden');
