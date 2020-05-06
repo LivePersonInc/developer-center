@@ -173,13 +173,14 @@ function handleUniquePages() {
 	var sidebar = $('#defaultsidebar');
 	var suggestButton = $('#suggestbutton');
 	var indicatorContainer = $('#indicator-container');
-
+	var successStory = $('#success-stories');
 	if (is_root) {
 		console.log('In  root folder');
 		jumpto.css("flex", "0");
 		sidebar.css("margin-right", "0%");
 		suggestButton.css("display", "none");
 		indicatorContainer.css("display", "none");
+		successStory.css("background-image", "linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%),url('img/img-BG.png')")
 	}
 	else {
 		console.log('not in  root folder');
