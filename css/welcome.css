@@ -62,8 +62,7 @@ img.card-container {
 }
 
 #success-stories {
-    /*
-    nothing should be in here load stuff from js */
+   background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%),url('img/Img-BG.png');
 }
 
 #free-trial {

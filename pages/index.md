@@ -13,10 +13,6 @@ solutions with you!
 </div>
 
 <div class="card-container">
-
-  <div style ="display:none">
-    <img src="img/img-BG.png"/>
-  </div>
   <div id="success-stories" class="welcome-card">
     <a href="https://www.liveperson.com/resources/success-stories/">
       <p class="success-stories-header" style="margin-top: 48px; margin-left: 16px;"> Learn how LivePerson has helped transform businesses.</p>
