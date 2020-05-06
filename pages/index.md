@@ -10,7 +10,8 @@ redirect_from:
 Whether you are a startup or a large enterprise, we look forward to building amazing solutions with you!
 
 <div class="card-container">
-  <div id="success-stories" class="welcome-card">
+  <div id="success-stories" class="welcome-card" style="background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%),
+        url('../img/img-BG.png');">
     <a href="https://www.liveperson.com/resources/success-stories/">
       <p class="success-stories-header" style="margin-top: 48px; margin-left: 16px;"> Learn how LivePerson has helped transform businesses.</p>
       <p class="free-trial-label" style="margin-left: 16px;"> View Success Stories</p>
