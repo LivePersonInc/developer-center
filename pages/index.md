@@ -7,7 +7,10 @@ permalink: index.html
 redirect_from:
   - get-started-LE-APIs.html
 ---
-Whether you are a startup or a large enterprise, we look forward to building amazing solutions with you!
+<div class="header-label">
+Whether you are a startup or a large enterprise, we look forward to building amazing 
+solutions with you!
+</div>
 
 <div class="card-container">
   <div id="success-stories" class="welcome-card" style="background-image: linear-gradient(180deg, rgba(15, 9, 67, 0.88) 0%, rgba(41, 39, 64, 0.8) 100%),

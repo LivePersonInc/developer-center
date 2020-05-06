@@ -49,18 +49,18 @@
           </div>
 
         </div>
-        <div style="display:flex;">
+        <div id="indicator-container" style="display:flex; margin-bottom:24px">
           {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
           <div class="indicator chat">Chat</div>
           {% endif %}
           {% if page.indicator != null and page.indicator == "both" or page.indicator == "messaging" %}
           <div class="indicator messaging">Messaging</div>
           {% endif %}
-          <div class="suggestbutton"><a
+          <div class="suggestbutton" id="suggestbutton"><a
               href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developers-community/edit/master/pages' }}"
               target="_blank"><i class="far fa-edit"></i><span>Suggest changes</span></a></div>
         </div>
-        <hr class="pagehr" />
+
       </div>
       {% endif %}
       {{ content | extlinks }}
