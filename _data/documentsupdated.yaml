@@ -427,6 +427,31 @@
             - subpagename: Delete Agent Groups
             - subpagename: Delete Agent Group
         - pagename: Appendix
+
+    - documentname: Agent Survey For Messaging Configuration API
+      pages:
+        - pagename: Overview
+        - pagename: Appendix
+        - pagename: Methods
+          subpages:
+            - subpagename: Create Agent Survey Object
+            - subpagename: Get All Agent Survey Objects
+            - subpagename: Update Agent Survey Object
+            - subpagename: Delete Agent Survey Object
+            - subpagename: Get Agent Survey Object by ID
+
+    - documentname: Agent Survey For Messaging Runtime API
+      pages:
+        - pagename: Overview
+        - pagename: Appendix
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Agent Survey
+            - subpagename: Get Agent Survey State
+            - subpagename: Save Agent Survey State
+            - subpagename: Submit Agent Survey
+            - subpagename: Dismiss Agent Survey
+
     - documentname: Agent Status Reason API
       basedomain: https://{domain}/api/account/{accountId}/configuration/le-agents/status-reasons
       pages:
