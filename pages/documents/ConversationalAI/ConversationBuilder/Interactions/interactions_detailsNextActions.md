@@ -70,7 +70,7 @@ Variables are the default way to store and access important data points through 
 
 #### Next Step
 
-Select the next step if the displayed condition is satisfied. You have three types of choices:
+Select the next step if the displayed condition is satisfied. You can select from the following:
 
 * Continue to the next interaction (in the dialog).
 * "End interaction," which stops the flow within the dialog.
