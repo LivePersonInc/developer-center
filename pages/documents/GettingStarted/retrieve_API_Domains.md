@@ -65,7 +65,9 @@ JSON Example:
             "service": "etool",
             "account": "EXAMPLE123",
             "baseURI": "z2.etool.liveperson.net"
-        },
+        }
+    ]
+}
 ```
 
 
