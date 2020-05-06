@@ -703,7 +703,7 @@ div.sidebarTitle-holder {
 .post-content,
 .post-content * {
   overflow-wrap: break-word;
-  padding-right: 24px;
+  margin-right: 24px;
 }
 
 .alert-warning {
