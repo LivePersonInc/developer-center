@@ -30,6 +30,9 @@ Used for tracking specific bot events for the purposes of analytics. This functi
 botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API','');
 ```
 
+{: .important}
+For a step-by-step, example guide on implementing custom event logging, see [here](conversation-builder-best-practices-custom-event-logging.html).
+
 ### Log escalation event
 
 Used to count the number of times the user called a particular escalation type. The function requries a user input and the string 'LivePerson' for the type of escalation.

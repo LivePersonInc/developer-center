@@ -196,6 +196,7 @@
       - pagename: Best Practices
         subpages:
           - subpagename: Train & Tune NLU
+          - subpagename: Custom Event Logging
           - subpagename: Reusable Components
           - subpagename: A Pre-Launch Checklist
   - documentname: Maven AI
