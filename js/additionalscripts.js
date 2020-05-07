@@ -109,7 +109,6 @@ function navigateContent(url) {
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
 
-
 			anchors.add('h3, h4');
 			populateAnchors();
 			handleUniquePages();
@@ -366,7 +365,15 @@ function sidebarCollapse(url) {
 			$(".activepage").parent().addClass("activeitem");
 		}
 		$(".innerfolder > .active > button").addClass("clicked");
-
+		$(".topfolder > .active > button").addClass("clicked");
+		if (currentPage.parent().hasClass('pageitem')) {
+			$('.innerpageitem').removeClass("activeitem");
+			currentPage.parent().addClass('activeleaf');
+		}
+		if (currentPage.parent().hasClass('sololink')) {
+			$('.innerpageitem').removeClass("activeitem");
+			currentPage.parent().addClass('activeleafSolo');
+		}
 
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
