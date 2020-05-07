@@ -109,7 +109,6 @@ function navigateContent(url) {
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
 
-
 			anchors.add('h3, h4');
 			populateAnchors();
 			handleUniquePages();
@@ -366,7 +365,15 @@ function sidebarCollapse(url) {
 			$(".activepage").parent().addClass("activeitem");
 		}
 		$(".innerfolder > .active > button").addClass("clicked");
-
+		$(".topfolder > .active > button").addClass("clicked");
+		if (currentPage.parent().hasClass('pageitem')) {
+			$('.innerpageitem').removeClass("activeitem");
+			currentPage.parent().addClass('activeleaf');
+		}
+		if (currentPage.parent().hasClass('sololink')) {
+			$('.innerpageitem').removeClass("activeitem");
+			currentPage.parent().addClass('activeleafSolo');
+		}
 
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
@@ -613,7 +620,26 @@ function scrollToHash() {
 		}
 	}, 1000);
 }
-
+function menuDrop() {
+	//begin by setting the list's data to reflect that it's open
+	$(".anchorlist > a").data("expanded", "true");
+	//when a click on the list occurs
+	$(".anchorlist").on("click", ".anchormain", function (event) {
+		event.preventDefault();
+		//set data to true for toggle behavior
+		var hasExpanded = $(this).data("expanded") == "true";
+		if (hasExpanded) {
+			//if it is open, close it
+			$(this).next().slideUp(400);
+			$(this).data("expanded", "false");
+		} else {
+			//if it is closed, open it
+			$(this).next().slideDown(400);
+			$(this).data("expanded", "true");
+		}
+		return false;
+	});
+};
 //this function is used on the domain API page. You give it an account number, 
 //and it gives you all its domains back, per service
 // currently commented out because I don't have time to make this work for IE
