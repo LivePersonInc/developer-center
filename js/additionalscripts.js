@@ -168,12 +168,13 @@ function navigateContent(url) {
 // this function checks if root page and disables the jumpto and fixes padding
 function handleUniquePages() {
 	var is_root = location.pathname == "/";
+	var is_getting_started = location.pathname == "/overview.html";
 	console.log('checking if is root folder');
 	var jumpto = $('#jumpto');
 	var sidebar = $('#defaultsidebar');
 	var suggestButton = $('#suggestbutton');
 	var indicatorContainer = $('#indicator-container');
-	if (is_root) {
+	if (is_root || is_getting_started) {
 		console.log('In  root folder');
 		jumpto.css("flex", "0");
 		sidebar.css("margin-right", "0%");
