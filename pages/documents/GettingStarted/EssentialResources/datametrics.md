@@ -2,8 +2,8 @@
 pagename: Report Builder Data Metrics
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Common Resources
-permalink: common-resources-report-builder-data-metrics.html
+documentname: API Guidelines
+permalink: api-guidelines-report-builder-data-metrics.html
 indicator: both
 redirect_from:
     - essential-resources-report-builder-data-metrics.html

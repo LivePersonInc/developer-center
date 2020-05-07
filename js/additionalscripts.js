@@ -2,11 +2,15 @@ $(document).ready(function () {
 	var url = window.location.href;
 	//add anchor links to all h3 titles. See respective functions below for what they do.
 	anchors.add('h3, h4');
+	handleUniquePages();
 	linkload();
 	sidebarClick();
 	populateAnchors();
 	menuDrop();
+
 	codeButtons();
+	setNoticeIcon();
+	setImportantIcon();
 	mobileHamburger();
 	isExplorer();
 	searchFunction();
@@ -41,12 +45,39 @@ $(document).ready(function () {
 	var $title = $('.h1').text();
 	if ($title.indexOf('Welcome') != -1) {
 		console.log("Welcome to LivePerson Developers!");
+		$title.bold();
 	} else {
 		$('.breadcrumbs').removeClass('breadhidden');
 		$('.suggestbutton').removeClass('suggesthidden');
 	}
 });
 
+function setNoticeIcon() {
+	var allNoticeIcon = $('p[class^="notice"]');
+	console.log("SET NOTICE");
+	allNoticeIcon.each(function (i) {
+		var noticeIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>';
+		$(this).prepend(noticeIcon);
+	});
+	var allNoticeIconDiv = $('div[class^="notice"]');
+	allNoticeIconDiv.each(function (i) {
+		var noticeIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>';
+		$(this).prepend(noticeIcon);
+	});
+}
+function setImportantIcon() {
+	var allImportantIcon = $('p[class^="important"]');
+
+	allImportantIcon.each(function (i) {
+		var importantIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-info-circle beforeImportant"></i> </div>';
+		$(this).prepend(importantIcon);
+	});
+	var allImportantIconDiv = $('div[class^="important"]');
+	allImportantIconDiv.each(function (i) {
+		var importantIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-info-circle beforeImportant"></i> </div>';
+		$(this).prepend(importantIcon);
+	});
+}
 function navigateContent(url) {
 	//call ajax with the target url
 	$.ajax(url)
@@ -77,10 +108,16 @@ function navigateContent(url) {
 			}
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
+
+
 			anchors.add('h3, h4');
 			populateAnchors();
+			handleUniquePages();
 			codeButtons();
 			replaceTitle();
+			setNoticeIcon();
+
+			setImportantIcon();
 			searchFunction();
 			capabilitiesSearch();
 			searchHighlight();
@@ -107,6 +144,11 @@ function navigateContent(url) {
 			}
 			if (selected.parent().hasClass('pageitem')) {
 				$('.innerpageitem').removeClass("activeitem");
+				selected.parent().addClass('activeleaf');
+			}
+			if (selected.parent().hasClass('sololink')) {
+				$('.innerpageitem').removeClass("activeitem");
+				selected.parent().addClass('activeleafSolo');
 			}
 			//jump to top when page loads
 			if (window.location.hash == "") {
@@ -123,8 +165,29 @@ function navigateContent(url) {
 			navigateContent(url);
 		});
 }
-
-
+// this function checks if root page and disables the jumpto and fixes padding
+function handleUniquePages() {
+	var is_root = location.pathname == "/";
+	console.log('checking if is root folder');
+	var jumpto = $('#jumpto');
+	var sidebar = $('#defaultsidebar');
+	var suggestButton = $('#suggestbutton');
+	var indicatorContainer = $('#indicator-container');
+	if (is_root) {
+		console.log('In  root folder');
+		jumpto.css("flex", "0");
+		sidebar.css("margin-right", "0%");
+		suggestButton.css("display", "none");
+		indicatorContainer.css("display", "none");
+	}
+	else {
+		console.log('not in  root folder');
+		jumpto.css("flex", "1");
+		sidebar.css("margin-right", "6%");
+		suggestButton.css("display", "flex");
+		indicatorContainer.css("display", "flex");
+	}
+}
 //a function to create copy buttons on all code blocks
 function codeButtons() {
 	// get all <code> elements.
@@ -217,47 +280,24 @@ $(window).on('popstate', function (e) {
 	}
 });
 
-
-//a simple dropdown behavior for the anchorlinks box
-function menuDrop() {
-	//begin by setting the list's data to reflect that it's open
-	$(".anchorlist > a").data("expanded", "true");
-	//when a click on the list occurs
-	$(".anchorlist").on("click", ".anchormain", function (event) {
-		event.preventDefault();
-		//set data to true for toggle behavior
-		var hasExpanded = $(this).data("expanded") == "true";
-		if (hasExpanded) {
-			//if it is open, close it
-			$(this).next().slideUp(400);
-			$(this).data("expanded", "false");
-		} else {
-			//if it is closed, open it
-			$(this).next().slideDown(400);
-			$(this).data("expanded", "true");
-		}
-		return false;
-	});
-};
-
 //a function to loop over all anchor elements and create a dropdown menu from them
 function populateAnchors() {
 	//remove all previous anchoritems populated in the box
-	$(".anchoritem").remove();
+	$(".jumpToAnchor").remove();
 	//find all h3 titles on the page
 	var anchorlinks = document.getElementsByTagName("h3");
-	var anchorlist = document.getElementById('inneranchors');
+	var anchorlist = document.getElementById('anchorlist');
 	let html;
 	//if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
 	if (anchorlinks.length == 0) {
 		$('.anchorlist').css('visibility', 'hidden');
 		//if there are anchorlinks, display the box
 	} else {
-		html = '';
+		html = '<p class="jumpToAnchor">Jump to:</p>';
 		$('.anchorlist').css('visibility', 'visible');
 		//for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
 		$.each(anchorlinks, function () {
-			html += '<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>'
+			html += '<p><a class="jumpToAnchor" href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></p>'
 		});
 		anchorlist.innerHTML = html;
 	};
@@ -309,6 +349,9 @@ function sidebarCollapse(url) {
 	};
 	//get rid of any currently open items and then highlight the current page
 	$('a').removeClass("activepage");
+
+	$('li').removeClass('activeleaf');
+	$('li').removeClass('activeleafSolo');
 	$('.homeitem').removeClass("activepage");
 	$('.innerpageitem').removeClass("activeitem");
 	currentPage = currentPage.addClass("activepage");
@@ -323,6 +366,8 @@ function sidebarCollapse(url) {
 			$(".activepage").parent().addClass("activeitem");
 		}
 		$(".innerfolder > .active > button").addClass("clicked");
+
+
 		$(".homeitem").removeClass("active");
 		$(".homeitem > a").data("expanded", "false");
 		if (!currentPage.isInViewport()) {
@@ -353,15 +398,19 @@ function allArticlesClick() {
 function sidebarClick() {
 	$(".topfolder").on("click", ".highlightlink", function () {
 		//if the clicked element is not one of the buttons at the bottom of the sidebar, e.g "status page"
+		$('button').removeClass("clicked");
+
 		if (!$(this).hasClass("bottombuttons")) {
 			var hasExpanded = $(this).data("expanded") == "true";
 			//if it's expanded, close it
 			if (hasExpanded) {
 				$(this).next().slideUp(400);
 				$(this).data("expanded", "false");
+				$(".topfolder > .active > button").removeClass("clicked");
+
 				$(this).removeClass("active");
 				$(this).parent().removeClass("active");
-				$(".innerfolder > .active > button").removeClass("clicked");
+
 				//otherwise, open it
 			} else {
 				$(".innerfolder > .active > button").removeClass("clicked");
@@ -371,12 +420,14 @@ function sidebarClick() {
 				$(this).data("expanded", "true");
 				$(".folder > a").removeClass("active");
 				$(this).addClass("active");
+				$(".topfolder > .active > button").addClass("clicked");
 			}
 			return false;
 		};
 	});
 	//same as above, just one level down
 	$(".innerfolder").on("click", ".highlightlink", function (event) {
+
 		event.preventDefault();
 		var hasExpanded = $(this).data("expanded") == "true";
 		var button = $(this).find("button");
@@ -386,6 +437,7 @@ function sidebarClick() {
 			$(this).removeClass("active");
 			$(this).parent().removeClass("active");
 			$(button).removeClass("clicked");
+
 		} else {
 			$(this).next().slideDown(400);
 			$(this).data("expanded", "true");
@@ -553,8 +605,8 @@ function scrollToHash() {
 				var linkOffset = $(linkScroll).offset().top;
 			}
 			$("body, html").animate({
-					scrollTop: linkOffset,
-				},
+				scrollTop: linkOffset,
+			},
 				1000,
 				"swing"
 			);
@@ -620,45 +672,45 @@ function scrollToHash() {
 // 		csdsButton.addEventListener("click", retrieveUrl);
 // 	}
 // }
-	//detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
-	function isExplorer() {
-		var ua = window.navigator.userAgent;
-		var is_ie = /MSIE|Trident/.test(ua);
+//detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
+function isExplorer() {
+	var ua = window.navigator.userAgent;
+	var is_ie = /MSIE|Trident/.test(ua);
 
-		if (is_ie) {
-			var wrapper = document.getElementById('defaultwrapper');
-			var header = document.getElementById('defaultheader');
-			var sidebar = document.getElementById('defaultsidebar');
-			var documenttitlecontainer = document.getElementById('documenttitlecontainer');
-			var footer = document.getElementById('defaultfooter');
-			var content = document.getElementById('defaultcontent')
-			var heroPanel = document.getElementById('heroPanel')
-			var cardInnerText = document.getElementsByClassName('cardInnerText');
-			var secondConfirmCardImg = document.getElementsByClassName('secondConfirmCardImg');
-			var thirdPanel = document.getElementById('thirdPanel');
-			var confirmationFooter = document.getElementById('confirmationFooter');
-			var formContainer = document.getElementById('formContainer');
-			wrapper.classList.add('defaultwrapperexplorer');
-			header.classList.add('defaultheaderexplorer');
-			sidebar.classList.add('defaultsidebarexplorer');
-			documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
-			footer.classList.add('defaultfooterexplorer');
-			content.classList.add('defaultcontentexplorer');
-			heroPanel.classList.add('heroPanelExplorer');
-			cardInnerText.classList.add('cardInnerTextExplorer');
-			secondConfirmCardImg.classList.add('secondConfirmCardImgExplorer');
-			thirdPanel.classList.add('thirdPanelExplorer');
-			confirmationFooter.classList.add('confirmationFooterExplorer');
-			formContainer.classList.add('formContainerExplorer');
-		};
-	}
-		//clicks on the search dropdown should also use the "pseudo SPA" method
-		function searchClick(event) {
-			$('.ds-dropdown-menu').on('click', 'a', function (event) {
-				event.preventDefault();
-				linkclick(event, this);
-			})
-		};
+	if (is_ie) {
+		var wrapper = document.getElementById('defaultwrapper');
+		var header = document.getElementById('defaultheader');
+		var sidebar = document.getElementById('defaultsidebar');
+		var documenttitlecontainer = document.getElementById('documenttitlecontainer');
+		var footer = document.getElementById('defaultfooter');
+		var content = document.getElementById('defaultcontent')
+		var heroPanel = document.getElementById('heroPanel')
+		var cardInnerText = document.getElementsByClassName('cardInnerText');
+		var secondConfirmCardImg = document.getElementsByClassName('secondConfirmCardImg');
+		var thirdPanel = document.getElementById('thirdPanel');
+		var confirmationFooter = document.getElementById('confirmationFooter');
+		var formContainer = document.getElementById('formContainer');
+		wrapper.classList.add('defaultwrapperexplorer');
+		header.classList.add('defaultheaderexplorer');
+		sidebar.classList.add('defaultsidebarexplorer');
+		documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
+		footer.classList.add('defaultfooterexplorer');
+		content.classList.add('defaultcontentexplorer');
+		heroPanel.classList.add('heroPanelExplorer');
+		cardInnerText.classList.add('cardInnerTextExplorer');
+		secondConfirmCardImg.classList.add('secondConfirmCardImgExplorer');
+		thirdPanel.classList.add('thirdPanelExplorer');
+		confirmationFooter.classList.add('confirmationFooterExplorer');
+		formContainer.classList.add('formContainerExplorer');
+	};
+}
+//clicks on the search dropdown should also use the "pseudo SPA" method
+function searchClick(event) {
+	$('.ds-dropdown-menu').on('click', 'a', function (event) {
+		event.preventDefault();
+		linkclick(event, this);
+	})
+};
 
-		//legacy function, probably not needed
-		$('#mysidebar').height($(".nav").height());
+//legacy function, probably not needed
+$('#mysidebar').height($(".nav").height());

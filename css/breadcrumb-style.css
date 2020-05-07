@@ -5,7 +5,7 @@
   margin-bottom: 1rem;
   list-style: none;
   border-radius: 0.25rem;
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .breadcrumb::after {
@@ -18,25 +18,24 @@
   float: left;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
   display: inline-block;
   /*padding-right: 0.5rem;*/
   /*padding-left: 0.5rem;*/
-  color: #818a91;
+  color: var(--grey-button-icons);
   content: "/";
 }
 
-.breadcrumb-item + .breadcrumb-item:hover::before {
+.breadcrumb-item+.breadcrumb-item:hover::before {
   text-decoration: underline;
 }
 
-.breadcrumb-item + .breadcrumb-item:hover::before {
+.breadcrumb-item+.breadcrumb-item:hover::before {
   text-decoration: none;
 }
 
-.breadcrumb-item.active {
+.breadcrumb-item.active {}
 
-}
 /*if you already use Twitter, you do not need these css lines above, cause they already in Twitter Bootstrap */
 
 /* Additions: imgage integration */
@@ -64,9 +63,15 @@
 
 .breadcrumbs .breadcrumb-item {
   font-size: 0.9em;
-  color:#a2a2a2;
+  color: var(--grey-button-icons);
+  ;
   font-family: "Open Sans";
   font-weight: 300;
+}
+
+.no-after {
+  color: var(--grey-button-icons) !important;
+  ;
 }
 
 .breadcrumbs a.breadcrumb-item:after {
@@ -77,7 +82,7 @@
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  content: "\f105";
+  content: "/";
   padding-right: 1em;
   padding-left: 1em;
   color: #999999;
