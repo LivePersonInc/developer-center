@@ -43,7 +43,8 @@ $(document).ready(function () {
 	var scroll = new SmoothScroll('a[href*="#"]');
 	//set breadcrumbs display if welcome page/normal page.
 	var $title = $('.h1').text();
-	if ($title.indexOf('Welcome') != -1) {
+	console.log('title is :', $title);
+	if ($title.indexOf('Let’s build a conversational future together!') != -1) {
 		console.log("Welcome to LivePerson Developers!");
 		$title.bold();
 	} else {
@@ -338,7 +339,7 @@ function sidebarCollapse(url) {
 	var currentPage = $('a[href="' + modifiedURL + '"]');
 	var currentPageTitle = $(currentPage).html();
 	//if this is the homepage
-	if (currentPageTitle == "WELCOME") {
+	if (currentPageTitle == "Let’s build a conversational future together!") {
 		//make sure no other links are set to active and collapse any open folders before highlighting the current page
 		$(".innerfolder > .active > button").removeClass("clicked");
 		$(".folder ul").slideUp(400, null);
