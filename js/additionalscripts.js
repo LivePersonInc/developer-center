@@ -448,6 +448,14 @@ function sidebarClick() {
 	});
 };
 
+function breadClick (event) {
+	event.preventDefault();
+	let breadText = $(this).innerHTML;
+	var breadSidebar = $('#defaultsidebar');
+	var targetLink = breadSidebar.find("span:contains('" + breadText + "')").trigger("click");
+	console.log(targetLink);
+}
+
 //a function to make sure the page's title is updated on load
 function replaceTitle() {
 	//grab the page's current title
