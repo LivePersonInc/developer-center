@@ -842,6 +842,28 @@ Color code for the conversation resolved message and separator.
 &nbsp;
 </div>
 
+
+#### empty_history_view_text_color
+Define the text color of empty history view.
+
+<div style="float: left; width: 50%;height: 120px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> @color/lp_colorOnBackground1</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/android_empty_history_view_text_color.png" alt="emptyhistoryviewmessage">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
 ---   
 
 ### Data Masking
@@ -1814,6 +1836,8 @@ Enable or disable the scroll down indicator (shown or invisible).
 
 #### scroll_down_indicator_unread_summary_enabled
 Enable or disable the summary in scroll down indicator (shown or invisible). If [unread_indicator_bubble_enable](#unread_indicator_bubble_enable) is **false**, it's in minimized mode without a badge indicating number of unread message.  Tapping scrolls to the last message.
+
+The scroll to bottom button width is dynamic and will be auto adjusted based on length of the summary text.
 
 * **Type:** bool  
 * **Default value:** true
@@ -2995,7 +3019,7 @@ Configuration for bottom right corner radius of structured content card.
 * **Default value:** 5dp
 
 
-#### structured_content_bottom_left_radius
+#### structured_content_top_left_radius
 Configuration for top left corner radius of structured content card.
 
 * **Type:** dimen
@@ -3014,6 +3038,13 @@ Configuration for bottom left corner radius of structured content card.
 
 * **Type:** dimen
 * **Default value:** 5dp
+
+
+#### structured_content_button_background_enabled
+Enable or disable structured content button border.
+
+* **Type:** bool
+* **Default value:** true
 
 
 #### structured_content_button_no_text_lines
