@@ -339,7 +339,7 @@ A single delay message can be send by adding `delay` and `typing` properties to 
 
 ### Sending Private Text Message
 
-It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. The motivation to develop this feature is to allow users to define some private text information within the conversation flow to give more insight to either agent or managers who might end-up checking the conversation. Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. There are two properties, `text` and `messageAudience` which need to be added in with the response body of the function.
+It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take. Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. There are two properties, `text` and `messageAudience` which need to be added in with the response body of the function.
 
 | key             | value                                 | notes                     |
 | --------------- | ------------------------------------- | ------------------------- |
@@ -350,7 +350,7 @@ It is possible to send a private text message from the Live Engage (LE-UI) via a
 
 #### Sending Private Text Message between multiple messages
 
-Setting a private text message in between multiple messages (for more information on multiple message [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Simple Text Message - Private Text Message) can be seen below:
+Setting a private text message in between multiple messages (for more information on multiple messages [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Simple Text Message - Private Text Message) can be seen below:
 
 ```javascript
 {
