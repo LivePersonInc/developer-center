@@ -137,7 +137,7 @@ When we called the Web View Integration API upon submitting the form, we passed 
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/guideWebView_patternMatch2.png">
 
-In the pre-process code for the dialog, we have the following code to retrieve the visitor’s name that was sent in the API payload. This value is then assigned to a bot variable, which we can use in the text interaction.
+In the pre-process code for the interaction, we have the following code to retrieve the visitor’s name that was sent in the API payload. This value is then assigned to a bot variable, which we can use in the text interaction.
 
 ```javascript
 var visitor_name = botContext.getWebViewVariable('name');
