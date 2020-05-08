@@ -6,70 +6,123 @@ permalink: overview.html
 indicator: both
 ---
 
-### Introduction and required reading
+<div class="lp-container">
+    <div class=" welcome-card-modified">
+        <div class="header-lp4">
+            Learn about the LivePerson platform 
+            <div class="getting-started-paragraph">
+            Understand the basics of Conversational AI and how it scales across messaging channels to automate consumer conversations
+            </div>
+              <div class="hyperlink">
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                <img class="dots-container" src="img/four-dots.svg"/>
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="teaser-banner" class="welcome-card-modified">
+            <a target="_blank" href="https://vimeo.com/398468660/03dd5cb78d" style="display:flex;">
+            <p class="teaser-header" > Watch a quick product overview of LivePerson Platform and its tools</p>
+            <img style="margin-top: 44px; flex:1;"  src="img/play_icon.svg">
+            </a> 
+    </div>
+</div>
 
-Most user actions within LiveEngage can be performed programmatically using the REST API. Since we use a REST model, we recommend you be fluent in:
+<div class= "header-lp4">
+    Start building with quick start guides
+</div>
+<div class="getting-started-h5">
+     Follow step-by-step instructions to create your first bot and get started with messaging.
+</div>
+<div class="card-container" style="margin-top:24px;">
+    <div class="welcome-card">
+        <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-conversation-builder-quick-start.html"> 
+        <img class="container-image" src="img/ic_robot.svg"/>
+        <h5 class="getstarted-title">Conversational AI</h5>
+        <p class="getstarted-content ">Automate conversations with AI and bots</p>
+        </a>
+  </div>
+  <div class="welcome-card">
+    <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html"> 
+      <img class="container-image" src="img/ic_FB.svg"/>
+      <h5 class="getstarted-title">Messaging Channels </h5>
+      <h5 class="getstarted-content ">Engage customers with Facebook Message</h5>
+    </a>
+  </div>
+  <div class="welcome-card">
+    <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html"> 
+      <img class="container-image" src="img/ic_SMS.svg"/>
+      <h5 class="getstarted-title">Messaging Channels</h5>
+      <h5 class="getstarted-content ">Expand brand reach using SMS text</h5>
+    </a>
+  </div>
 
-* JavaScript, and its iterations like Node.JS, as well as JSON. Although most JSON payloads tend to be simple, there are exceptions to this rule, like with Structured Content.
-
-* Swift and Java, respectively, for Mobile App Messaging SDKs for iOS and Android.
-
-* HTTP calls and responses, REST APIs, server to server communication and web applications.
-
-* Retrieving information and data analysis/research for the Data APIs.
-
-Also, if you have not already done so:
-
-1. Read the [API Terms of Use](https://www.liveperson.com/policies/apitou).
-
-2. Read the [Systems Requirements and Language Support](https://knowledge.liveperson.com/admin-settings-system-requirements.html) guide.
-
-Before you can do anything, you must configure and understand a few things first. By the end of this Getting Started guide, you will be ready to customize and implement features in LiveEngage.
-
-### Step 1. Create a LiveEngage account
-
-Before you can use LiveEngage, you must first have a working account. If you don't already have one, you can sign up for a [free trial account](https://developers.liveperson.com/register.html). to get started with messaging, Conversation Builder, and LivePerson Functions.  To add more seats or access features not included in the trial, you will need to upgrade to a paid subscription.  You can chat with LivePerson sales on [liveperson.com](https://www.liveperson.com) or from the connection area within LiveEngage to get help from a specialist to find the right package for your business.
-
-Some features you might want to enable are:
-
-* Messaging and push notifications
-
-* Bot for User type
-
-* Authenticated chat
-
-* Audio messaging
-
-* Vibrate on new incoming message
-
-* Photo sharing
-
-{: .notice}
-If you already have a LiveEngage account, you can use that account instead of a creating a free trial account. However, we recommend creating a new account to make sure that any changes and customizations you make do not affect your site visitors until you are ready to launch them.
-
-### Step 2. Accessing LivePerson APIs
-
-Some of our APIs require authorization before you can use them. Authorization refers to the process of verifying what a user has access to. In authorization, a user or application is granted access to an API after the API determines the extent of the permissions that it should assign.
-
-You will be able to read and learn how to work with LivePerson APIs using the following methodologies:
-
-- Authorizing web server applications
-- Authorizing server to server interactions
-- OAuth 1.0 App Keys
-- OAuth 2.0 (App-JWT)
-
-Read the [accessing LivePerson APIs](/common-resources-accessing-liveperson-apis.html) document for more information on the various authorization methods.
-
-### Next steps
-
-Congratulations! You are now ready to customize and implement features in LiveEngage.
-
-- **Integrate LiveEngage with iOS and Android apps** to create and manage digital engagements.  Additionally, customers can communicate with the brand's agents through their channel of choice. For more information, refer to the Mobile Messaging SDK for [Android](mobile-app-messaging-sdk-for-android-overview.html) or [iOS](mobile-app-messaging-sdk-for-ios-overview.html).
-
-- **Enable consumer monitoring and engagement flows** to gather reporting data about the consumer, engagements, and campaigns. By combining monitoring capabilities with our Campaigns feature, you can display tailored engagements to the right consumer at the right time. For more information, refer to the [Monitoring API](monitoring-api-overview.html).
-
-- **Integrate a messaging bot into LiveEngage** to send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation. You use the [Agent Messaging SDK](messaging-agent-sdk-overview.html) to connect a bot, but your account must be enabled to support bot users. To check the enabled features for your account, contact your account team or LivePerson Support.
-
-- **Manage users in LiveEngage** to update user lists that may need updating on a regular basis. You use the [Users API](users-api-overview.html) to make updates such as profile pictures, login names, passwords, or user assignments. You can also synchronize any HR or staffing system with LiveEngage.
-
-- **Implement a retry policy**. We recommend that you add a mechanism to your API call to increase reliability and stability. Each component in a network can return an error, which can cause your application to fail.  If an error returns, the mechanism makes sure that your application attempts to retrieve the relevant information. [More information on our retry policy best practices can be found here](retry-and-keepalive-best-practices-overview.html).
+  <div class="welcome-card">
+    <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-web-messaging-quick-start.html"> 
+      <img class="container-image" src="img/ic_messaging.svg"/>
+      <h5 class="getstarted-title">Messaging Channels</h5>
+      <h5 class="getstarted-content ">Setup web messaging for website </h5>
+    </a>
+  </div>
+</div>
+  <div class="whole-external-link">
+    <div class="external-link-container">
+        <div class="header-lp4-external" >
+            Next Steps
+            <div class="link-padding" style="margin-top:24px">
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            How to guide - messaging for your business 
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-add-the-liveperson-tag-to-your-website.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Add the LivePerson tag to your website
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-bots.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Extended getting started tutorial for bots
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/developer-tools-liveperson-functions-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            Dev Tools - LivePerson Functions
+                </a>
+            </div>
+        </div>  
+    </div>
+    <div class="external-link-container">
+        <div class="header-lp4-external">
+            API Guidelines
+            <div class="link-padding" style="margin-top:24px">
+                <a target="_blank" href="https://developers.liveperson.com/common-resources-accessing-liveperson-apis.html"> 
+                    <img class="dots-container" src="img/four-dots.svg"/>
+                        Accessing LivePerson APIs
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://developers.liveperson.com/common-resources-create-api-keys.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            Create API keys
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://developers.liveperson.com/common-resources-domain-api.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            Domain API 
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://developers.liveperson.com/common-resources-retry-policy-recommendations.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Retry policy recommendations
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

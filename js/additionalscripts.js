@@ -42,8 +42,11 @@ $(document).ready(function () {
 	//call smooth-scroll on all anchorlinks
 	var scroll = new SmoothScroll('a[href*="#"]');
 	//set breadcrumbs display if welcome page/normal page.
+
 	var $title = $('.h1').text();
-	if ($title.indexOf('Welcome') != -1) {
+
+
+	if ($title.indexOf('Let’s build a conversational future together!') != -1) {
 		console.log("Welcome to LivePerson Developers!");
 		$title.bold();
 	} else {
@@ -111,9 +114,10 @@ function navigateContent(url) {
 
 			anchors.add('h3, h4');
 			populateAnchors();
-			handleUniquePages();
 			codeButtons();
 			replaceTitle();
+			handleUniquePages();
+
 			setNoticeIcon();
 
 			setImportantIcon();
@@ -167,16 +171,19 @@ function navigateContent(url) {
 // this function checks if root page and disables the jumpto and fixes padding
 function handleUniquePages() {
 	var is_root = location.pathname == "/";
+	var is_getting_started = location.pathname == "/overview.html";
 	console.log('checking if is root folder');
 	var jumpto = $('#jumpto');
 	var sidebar = $('#defaultsidebar');
 	var suggestButton = $('#suggestbutton');
 	var indicatorContainer = $('#indicator-container');
-	if (is_root) {
+
+	if (is_root || is_getting_started) {
 		console.log('In  root folder');
 		jumpto.css("flex", "0");
 		sidebar.css("margin-right", "0%");
 		suggestButton.css("display", "none");
+
 		indicatorContainer.css("display", "none");
 	}
 	else {
@@ -185,6 +192,10 @@ function handleUniquePages() {
 		sidebar.css("margin-right", "6%");
 		suggestButton.css("display", "flex");
 		indicatorContainer.css("display", "flex");
+	}
+	if (is_getting_started) {
+		console.log('On the getting started page');
+		document.getElementById('document-title-h1').innerText = "Getting Started";
 	}
 }
 //a function to create copy buttons on all code blocks
@@ -338,7 +349,7 @@ function sidebarCollapse(url) {
 	var currentPage = $('a[href="' + modifiedURL + '"]');
 	var currentPageTitle = $(currentPage).html();
 	//if this is the homepage
-	if (currentPageTitle == "WELCOME") {
+	if (currentPageTitle == "Let’s build a conversational future together!") {
 		//make sure no other links are set to active and collapse any open folders before highlighting the current page
 		$(".innerfolder > .active > button").removeClass("clicked");
 		$(".folder ul").slideUp(400, null);
