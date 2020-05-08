@@ -7,17 +7,26 @@ indicator: both
 ---
 
 <div class="card-container">
-    <div class="getting-started-paragraph welcome-card-modified">
-        Understand the basics of Conversational AI and how it scales across messaging channels to automate consumer conversations
+    <div class=" welcome-card-modified">
+        <div class="header-lp4">
+            Learn about the LivePerson platform 
+            <div class="getting-started-paragraph">
+            Understand the basics of Conversational AI and how it scales across messaging channels to automate consumer conversations
+            </div>
+              <div class="hyperlink">
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> Learn More
+                </a>
+            </div>
+        </div>
     </div>
-    <div id="teaser-banner" class="welcome-card">
+    <div id="teaser-banner" class="welcome-card-modified">
             <a target="_blank" href="https://vimeo.com/398468660/03dd5cb78d">
-            </a> <p class="success-stories-header" style="margin-top: 48px; margin-left: 16px;"> Watch a quick product overview of LivePerson Platform and its tools</p>
+            </a> <p class="success-stories-header" style="margin-top: 22px; margin-left: 16px;"> Watch a quick product overview of LivePerson Platform and its tools</p>
     </div>
 </div>
-<div class="hyperlink">
-   <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> Learn More
-   </a>
+
+<div class= "header-lp4">
+    Start building with quick start guides
 </div>
 <div class="getting-started-paragraph">
      Follow step-by-step instructions to create your first bot and get started with messaging.

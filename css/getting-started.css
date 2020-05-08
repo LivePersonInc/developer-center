@@ -24,6 +24,7 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
+    padding-top: 12px;
     letter-spacing: 0.01em;
     color: var(--electric-blue);
 }
@@ -33,6 +34,7 @@
     font-style: normal;
     font-weight: normal;
     width: 509px;
+    margin-top: 8px;
     display: flex;
     flex: 2;
     font-size: 16px;
@@ -47,9 +49,23 @@
 
 .welcome-card-modified {
     flex: 0 47%;
-    padding: 24px 24px 24px 0px;
+    margin-top: 24px;
+    padding: 0px 24px 24px 0px;
     margin-right: 1%;
     background: #FFFFFF;
     margin-bottom: 16px;
+    border-radius: 8px;
     box-sizing: border-box;
+}
+
+.header-lp4 {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+
+    letter-spacing: 0.2px;
+    color: var(--navy);
 }
