@@ -521,7 +521,7 @@ table tbody td img {
     border-left-color: var(--sky-blue);
     padding: 12px 24px 12px 30px;
     margin: 2em 0;
-
+    border-radius: 4px;
     border-left-width: 4px;
     border-left-style: solid;
     background-color: var(--lighter-sky-blue);
