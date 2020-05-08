@@ -42,8 +42,10 @@ $(document).ready(function () {
 	//call smooth-scroll on all anchorlinks
 	var scroll = new SmoothScroll('a[href*="#"]');
 	//set breadcrumbs display if welcome page/normal page.
+
 	var $title = $('.h1').text();
-	console.log('title is :', $title);
+
+
 	if ($title.indexOf('Let’s build a conversational future together!') != -1) {
 		console.log("Welcome to LivePerson Developers!");
 		$title.bold();
@@ -112,9 +114,10 @@ function navigateContent(url) {
 
 			anchors.add('h3, h4');
 			populateAnchors();
-			handleUniquePages();
 			codeButtons();
 			replaceTitle();
+			handleUniquePages();
+
 			setNoticeIcon();
 
 			setImportantIcon();
@@ -174,11 +177,13 @@ function handleUniquePages() {
 	var sidebar = $('#defaultsidebar');
 	var suggestButton = $('#suggestbutton');
 	var indicatorContainer = $('#indicator-container');
+
 	if (is_root || is_getting_started) {
 		console.log('In  root folder');
 		jumpto.css("flex", "0");
 		sidebar.css("margin-right", "0%");
 		suggestButton.css("display", "none");
+
 		indicatorContainer.css("display", "none");
 	}
 	else {
@@ -187,6 +192,10 @@ function handleUniquePages() {
 		sidebar.css("margin-right", "6%");
 		suggestButton.css("display", "flex");
 		indicatorContainer.css("display", "flex");
+	}
+	if (is_getting_started) {
+		console.log('On the getting started page');
+		document.getElementById('document-title-h1').innerText = "Getting Started";
 	}
 }
 //a function to create copy buttons on all code blocks

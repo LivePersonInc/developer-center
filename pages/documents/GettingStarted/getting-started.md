@@ -1,5 +1,5 @@
 ---
-pagename: Getting Started
+pagename: Overview
 sitesection: Documents
 categoryname: "Getting Started"
 permalink: overview.html
@@ -21,7 +21,8 @@ indicator: both
     </div>
     <div id="teaser-banner" class="welcome-card-modified">
             <a target="_blank" href="https://vimeo.com/398468660/03dd5cb78d">
-            </a> <p class="success-stories-header" style="margin-top: 22px; margin-left: 16px;"> Watch a quick product overview of LivePerson Platform and its tools</p>
+            <p class="teaser-header" > Watch a quick product overview of LivePerson Platform and its tools</p>
+            </a> 
     </div>
 </div>
 
