@@ -6,7 +6,7 @@ permalink: overview.html
 indicator: both
 ---
 
-<div class="card-container">
+<div class="lp-container">
     <div class=" welcome-card-modified">
         <div class="header-lp4">
             Learn about the LivePerson platform 
@@ -22,8 +22,9 @@ indicator: both
         </div>
     </div>
     <div id="teaser-banner" class="welcome-card-modified">
-            <a target="_blank" href="https://vimeo.com/398468660/03dd5cb78d">
+            <a target="_blank" href="https://vimeo.com/398468660/03dd5cb78d" style="display:flex;">
             <p class="teaser-header" > Watch a quick product overview of LivePerson Platform and its tools</p>
+            <img style="margin-top: 44px; flex:1;"  src="img/play_icon.svg">
             </a> 
     </div>
 </div>
