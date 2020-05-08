@@ -29,7 +29,7 @@ indicator: both
     </div>
 </div>
 
-<div class= "header-lp4">
+<div class= "header-lp4" style="margin-top:62px;">
     Start building with quick start guides
 </div>
 <div class="getting-started-h5">
