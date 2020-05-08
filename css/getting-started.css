@@ -19,6 +19,8 @@
 }
 
 
+
+
 .teaser-header {
     font-family: Roboto;
     font-style: normal;
@@ -48,8 +50,7 @@
 }
 
 .dots-container {
-    margin: 0px;
-
+    margin: 0px 4px 0px 0px;
 }
 
 .dots-container:hover {
