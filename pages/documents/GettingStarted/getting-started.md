@@ -70,25 +70,25 @@ indicator: both
         <div class="header-lp4-external" >
             Next Steps
             <div class="link-padding" style="margin-top:24px">
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                             How to guide - messaging for your business 
                 </a>
             </div>
             <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-add-the-liveperson-tag-to-your-website.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                         Add the LivePerson tag to your website
                 </a>
             </div>
             <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-bots.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                         Extended getting started tutorial for bots
                 </a>
             </div>
             <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                <a target="_blank" href="https://knowledge.liveperson.com/developer-tools-liveperson-functions-overview.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                             Dev Tools - LivePerson Functions
                 </a>
@@ -99,25 +99,25 @@ indicator: both
         <div class="header-lp4-external">
             API Guidelines
             <div class="link-padding" style="margin-top:24px">
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                <a target="_blank" href="https://developers.liveperson.com/common-resources-accessing-liveperson-apis.html"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
                         Accessing LivePerson APIs
                 </a>
             </div>
             <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                <a target="_blank" href="https://developers.liveperson.com/common-resources-create-api-keys.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                             Create API keys
                 </a>
             </div>
             <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                <a target="_blank" href="https://developers.liveperson.com/common-resources-domain-api.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                             Domain API 
                 </a>
             </div>
             <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                <a target="_blank" href="https://developers.liveperson.com/common-resources-retry-policy-recommendations.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                         Retry policy recommendations
                 </a>
