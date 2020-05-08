@@ -525,7 +525,7 @@ table tbody td img {
     border-left-width: 4px;
     border-left-style: solid;
     background-color: var(--lighter-sky-blue);
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 1.71;
     color: var(--navy);
     font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -577,7 +577,7 @@ table tbody td img {
     border-left-width: 4px;
     border-left-style: solid;
     background-color: var(--lighter-red);
-    font-size: 14px;
+    font-size: 14px !important;
     line-height: 1.71;
     color: var(--navy);
     font-family: "Roboto", Arial, Helvetica, sans-serif;
