@@ -47,11 +47,34 @@
     color: var(--electric-blue);
 }
 
+.dots-container {
+    margin: 0px;
+
+}
+
+.dots-container:hover {
+    color: var(--hover-electric-blue);
+}
+
 .getting-started-paragraph {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    width: 509px;
+    width: 441px;
+    margin-top: 8px;
+    display: flex;
+    flex: 2;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: var(--navy-gray);
+}
+
+.getting-started-h5 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    width: 640px;
     margin-top: 8px;
     display: flex;
     flex: 2;
@@ -79,6 +102,7 @@
 .header-lp4 {
     font-family: Roboto;
     font-size: 20px;
+    flex: 0 50%;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -86,4 +110,40 @@
 
     letter-spacing: 0.2px;
     color: var(--navy);
+}
+
+.header-lp4-external {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+
+    letter-spacing: 0.2px;
+    color: var(--navy);
+}
+
+.external-link-container {
+    width: 300px;
+    flex: 0 50%;
+    display: inline-flex;
+    height: 180px;
+}
+
+.link-padding {
+    margin-bottom: 16px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: var(--electric-blue);
+}
+
+.whole-external-link {
+    display: flex;
+    width: 93%;
+    margin-top: 48px;
 }

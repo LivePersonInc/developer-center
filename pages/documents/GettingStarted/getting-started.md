@@ -14,7 +14,9 @@ indicator: both
             Understand the basics of Conversational AI and how it scales across messaging channels to automate consumer conversations
             </div>
               <div class="hyperlink">
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> Learn More
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                <img class="dots-container" src="img/four-dots.svg"/>
+                    Learn More
                 </a>
             </div>
         </div>
@@ -29,16 +31,16 @@ indicator: both
 <div class= "header-lp4">
     Start building with quick start guides
 </div>
-<div class="getting-started-paragraph">
+<div class="getting-started-h5">
      Follow step-by-step instructions to create your first bot and get started with messaging.
 </div>
-<div class="card-container">
-<div class="welcome-card">
-    <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-conversation-builder-quick-start.html"> 
-      <img class="container-image" src="img/ic_robot.svg"/>
-      <h5 class="getstarted-title">Conversational AI</h5>
-      <p class="getstarted-content ">Automate conversations with AI and bots</p>
-    </a>
+<div class="card-container" style="margin-top:24px;">
+    <div class="welcome-card">
+        <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-conversation-builder-quick-start.html"> 
+        <img class="container-image" src="img/ic_robot.svg"/>
+        <h5 class="getstarted-title">Conversational AI</h5>
+        <p class="getstarted-content ">Automate conversations with AI and bots</p>
+        </a>
   </div>
   <div class="welcome-card">
     <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html"> 
@@ -62,4 +64,64 @@ indicator: both
       <h5 class="getstarted-content ">Setup web messaging for website </h5>
     </a>
   </div>
-  </div>
+</div>
+  <div class="whole-external-link">
+    <div class="external-link-container">
+        <div class="header-lp4-external" >
+            Next Steps
+            <div class="link-padding" style="margin-top:24px">
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            How to guide - messaging for your business 
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Add the LivePerson tag to your website
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Extended getting started tutorial for bots
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            Dev Tools - LivePerson Functions
+                </a>
+            </div>
+        </div>  
+    </div>
+    <div class="external-link-container">
+        <div class="header-lp4-external">
+            API Guidelines
+            <div class="link-padding" style="margin-top:24px">
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                    <img class="dots-container" src="img/four-dots.svg"/>
+                        Accessing LivePerson APIs
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            Create API keys
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            Domain API 
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Retry policy recommendations
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
