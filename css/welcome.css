@@ -25,6 +25,9 @@
 
 .success-stories-header {
     font-size: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
     line-height: 40px;
     color: #ffffff;
     letter-spacing: 0.008em;

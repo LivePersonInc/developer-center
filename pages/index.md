@@ -16,7 +16,9 @@ solutions with you!
   <div id="success-stories" class="welcome-card">
     <a href="https://www.liveperson.com/resources/success-stories/">
       <p class="success-stories-header" style="margin-top: 48px; margin-left: 16px;"> Learn how LivePerson has helped transform businesses.</p>
-      <p class="free-trial-label" style="margin-left: 16px;"> View Success Stories</p>
+      <p class="free-trial-label" style="margin-left: 16px;"> 
+      <img class="dots-container" src="img/four-dots-white.svg"/>
+      View Success Stories</p>
     </a>
   </div>
   <div class="welcome-card">
