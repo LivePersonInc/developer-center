@@ -13,6 +13,112 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.2.0
+
+**Release date:** May 8, 2020
+
+### Overview
+Android Mobile Messaging SDK version 5.2.0 release offers a few new features for devs and comes with a sizable side of bugfixes.
+
+### Environmental Requirements
+The Android Mobile Messaging SDK version 5.2.0 uses:
+- Minimum API version 19
+- Compile API version 29
+- Target API version 29
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 5.1.1)**
+
+# New Features:
+## Improved Unread Message Count
+
+- Get the count of unread messages that are not yet received by the consumer's device. This API returns the count through the provided callback which is a sum of unread messages in the  open as well as closed conversation messages.
+- When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
+- This API method uses a threshold mechanism of 10 seconds. If this API is called within 10 seconds from the last request was made, the counter will be returned from SDK cache otherwise a new request to the server will be made to fetch the latest count. 
+
+**Note:** 
+- This new API is available from SDK version 5.2.0
+- The SDK needs to be initialized before calling this API.
+
+{:.important}
+This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
+
+```java
+public static void getUnreadMessagesCount(String appId, LPAuthenticationParams authenticationParams, final ICallback<Integer, Exception> callback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| appId | The host app ID |
+| callback | An [ICallback](android-callbacks-index.html) implementation |
+| authenticationParams | Authentication parameters |
+
+## Verify your Push Registrations
+
+- Check if the consumer's device is registered to receive push notification messages.
+
+```java
+public static void isPusherRegistered(@NonNull String deviceToken, @NonNull String appId, @NonNull LPAuthenticationParams lpAuthenticationParams, @NonNull ICallback<Boolean, Exception> callback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| deviceToken | The FCM device token |
+| appId | The host app ID |
+| lpAuthenticationParams | Authentication params |
+| callback | An ICallback implementation |
+
+## Control your Logs
+New Logging subsystem, which introduces: 
+- Granular log level controls can now be set as verbose, purely-informational, or completely-off as you desire.
+- Data Masking feature ensures no sensitive consumer data can be leaked through system logs, even if they're set to Verbose.
+Head over [here](mobile-app-messaging-sdk-for-android-advanced-features-logging.html) to find out more!
+
+## Auto adjust "Scroll to bottom" button width
+- The width of the "scroll to bottom" button will be auto adjusted based on length of a message text.
+- The button width can be auto adjusted up to half of the device's screen size. This is applicable for both portrait as well as landscape mode.
+
+## Permission dialog to let consumer grant file sharing permissions
+- Show a permission request dialog when a consumer has disabled or denied either the camera, file or audio permissions and later tries to access these UI element.
+- When clicked on "Go To Settings" button on request dialog, consumer will be taken to app's Settings screen where they have to manually grant respective permissions.
+
+## New User interface to save files on consumer's device
+- When decided to save a file, consumer now can choose a specific folder on their devices, SD card or upload the file to a cloud service such as Google drive.
+
+# New Attribute:
+## [structured_content_button_background_enabled](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured_content_button_background_enabled)
+Enable or disable structured content button border.
+
+* **Type:** bool
+* **Default value:** true
+
+# Bugs Fixed:
+- Corrected an issue where lost connections while sending images could cause a loading spinner to appear forever.
+- Fixed an issue where lost connections while sending a file as the first message would display a confusing error.
+- Adjusted the alignment of the labels beneath the Upload File Type selector icons for languages where "Gallery", "Camera", or "Document" are longer words than the UI previously accounted for.
+- Removed an unnecessary API call that may have been slowing down SDK operations.
+- Added static GIF images to the image type upload whitelist.
+- Corrected an issue that would prevent consumers from receiving an end-of-conversation survey if the agent they were talking to closed their conversation within five seconds of the consumer sending the app to the background.
+- Removed the "Agent Is Typing" indicator for filtered views that show only closed, historical conversations. (This indicator could appear as though an agent were talking in history, if there was also an open conversation visible to other filtered views.)
+- Fixed faulty retry logic that would post code to the Agent console if a Consumer's authentication token expired while they were busy filling in a Secure Form.
+- Reconfigured the default Drawables and animation code for the agent-is-typing 3-dots animation to allow host app implementations to override the animation via the entire animation list in addition to overriding the fixed set of frames.
+- Corrected the behavior of the Voice Clip button, which would sometimes reappear even when the feature was disabled if the user performed certain background-and-foreground steps.
+- Introduced extra safety-check code to ensure no messages can be sent with a String-empty text body or a text body consisting of only whitespace.
+- Fixed an issue where a user looking at a history-only filtered view could have an end-of-conversation survey presented to them, if they were also in an open conversation and the agent closes it.
+
+## Accessibility-Specific Bugs Fixed:
+- The TalkBack implementation surrounding the Voice Clip feature has been refined to better articulate what the controls will do and keep the user from becoming confused as to their state while recording.
+- Fixed a pair of issues surrounding left/right swipe navigation within Structured Content cards.
+
+# Deprecations:
+- The old Logging API, `LivePerson.setIsDebuggable(bool)`, has been deprecated in favor of the new Logging subsystem.
+  - This API will still work for the time being:
+  - Passing `true` is equivalent to calling `LivePerson.Logging.setSDKLoggingLevel(LogLevel.VERBOSE);`
+  - Passing `false` is equivalent to calling `LivePerson.Logging.setSDKLoggingLevel(LogLevel.ERROR);`
+- 'Signup' auth flow is officially deprecated by the LivePerson Mobile SDK, and will reach **end-of-life on the 30th of June, 2020**.
+  - Please contact LivePerson through our client support channels to learn how to migrate your app to Authenticated or Unauthenticated auth flows.
+
+
 # Android Messaging SDK - Version 5.1.1
 
 **Release date:** January 29, 2020

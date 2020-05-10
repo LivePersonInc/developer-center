@@ -1,6 +1,7 @@
 - operatingsystem: Android
   releases:
-  - releasename: 5.1.1
+  - releasename: 5.2.0
+  - releasename: Mobile App Messaging SDK for Android Release Notes 5.1.1
   - releasename: Mobile App Messaging SDK for Android Release Notes 5.1.0
   - releasename: Mobile App Messaging SDK for Android Release Notes 5.0.0
   - releasename: Mobile App Messaging SDK for Android Release Notes 4.4.2
