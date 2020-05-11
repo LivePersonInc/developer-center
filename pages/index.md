@@ -56,18 +56,18 @@ solutions with you!
   </div>
 </div>
 <div class="card-container">
-<div id="free-trial">
-    <div id="free-trial-content-container">
-      <p class="free-trial-header">Excited? Let’s start your free trial today.</p>
-      <div style="display:flex">
-        <p class="free-trial-label"> &#10004; Free 45 days trial</p>
-        <p class="free-trial-label">&#10004; No credit card</p>
-      </div>   
-    </div>
-    <div id="free-trial-button-welcome">
-      <a target="_blank" href="https://developers.liveperson.com/register.html">
-        <button id="create-button">Create account</button>
-      </a>
-    </div>
-</div>
+  <div id="free-trial">
+      <div id="free-trial-content-container">
+        <p class="free-trial-header">Excited? Let’s start your free trial today.</p>
+        <div style="display:flex">
+          <p class="free-trial-label"> &#10004; Free 45 days trial</p>
+          <p class="free-trial-label">&#10004; No credit card</p>
+        </div>   
+      </div>
+      <div id="free-trial-button-welcome">
+        <a target="_blank" href="https://developers.liveperson.com/register.html">
+          <button id="create-button">Create account</button>
+        </a>
+      </div>
+  </div>
 </div>
