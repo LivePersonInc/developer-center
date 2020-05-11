@@ -59,11 +59,11 @@ function crossBrowserSafariCheck() {
 	var isSafari = window.safari !== undefined;
 	if (isSafari) {
 		console.log("Safari, yeah!");
-		$('.sidebarbutton').attr('style', 'top: -3px !important')
+		$('.sidebarbutton').attr('style', 'top: -3px')
 
 	} else {
 		console.log("In another browser");
-		$('.sidebarbutton').attr('style', 'top: 5px !important');
+		$('.sidebarbutton').attr('style', 'top: 5px');
 	}
 }
 function setNoticeIcon() {
