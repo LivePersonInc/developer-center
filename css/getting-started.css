@@ -78,6 +78,13 @@
     color: var(--navy-gray);
 }
 
+.play-icon {
+    margin-top: 48px;
+    flex: 1;
+    width: 48px;
+    height: 48px;
+}
+
 .getting-started-h5 {
     font-family: Roboto;
     font-style: normal;

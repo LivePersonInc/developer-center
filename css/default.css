@@ -348,7 +348,7 @@ ul.mysidebar.nav {
     padding: 10px;
     border-bottom: 1px solid var(--mid-gray);
     padding-left: 30px;
-    line-height: 3px;
+
 }
 
 #aa-search-input:focus {
@@ -655,6 +655,7 @@ a.loginText {
 .loginButton {
     color: var(--electric);
     border: none;
+    background-color: white;
 }
 
 .loginButton:hover {
@@ -668,6 +669,7 @@ a.loginText {
 .trialButton {
     background-color: var(--electric-blue);
     color: white;
+    border: 0px;
 }
 
 .loginButton,
@@ -1086,9 +1088,14 @@ a.loginText {
     text-align: right;
 }
 
+.externalIconImage {
+    margin: 0px;
+    margin-bottom: 4px;
+}
+
 .sidebarbutton {
     color: var(--dark-gray);
-    /* background: var(--darker-gray); */
+    background-color: white;
     width: 20px;
     height: 20px;
     border: 0;

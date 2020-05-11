@@ -80,6 +80,7 @@ img.card-container {
 #free-trial {
     background: var(--navy);
     flex: 0 95%;
+    display: flex;
     margin-top: 40px;
     padding: 40px 0 40px 40px;
     border-radius: 8px;
@@ -91,6 +92,13 @@ img.card-container {
     align-items: center;
     padding-right: 24px;
     justify-content: flex-end;
+}
+
+.free-trial-container {
+    display: flex;
+    padding-right: 48px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 #free-trial-content-container {
