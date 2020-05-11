@@ -1088,6 +1088,25 @@ a.loginText {
     text-align: right;
 }
 
+/*
+ make sure background is white */
+.highlightlink {
+    background-color: white;
+}
+
+.repositionSafariSidebar {
+    color: var(--dark-gray);
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    display: inline-flex;
+    font-size: 1.5em;
+    position: relative;
+    align-self: center;
+    top: -2 !important;
+}
+
 .externalIconImage {
     margin: 0px;
     margin-bottom: 4px;
