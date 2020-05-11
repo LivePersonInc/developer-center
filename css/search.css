@@ -1,14 +1,14 @@
 .aa-dropdown-menu {
-  width: 100%;
+  width: 88%;
   max-width: unset !important;
   min-width: unset !important;
   max-height: 80vh;
+  left: 20px !important;
   min-height: 5vh;
   margin-right: 0 !important;
   overflow-y: auto;
   background: white;
-  padding-left: 20px;
-  padding-right: 40px;
+
   box-shadow: 0px 8px 16px rgba(129, 130, 153, 0.64);
   border-radius: 4px;
 }
@@ -26,13 +26,13 @@
 .searchtitlecontainer:hover {
   background-color: #f2f1f2;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .aa-cursor {
   background-color: #f2f1f2;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .searchtitle {
@@ -47,25 +47,25 @@ span.documentContainer {
 }
 
 span.searchcontentcontainer {
-  font-family: "Roboto",Arial;
+  font-family: "Roboto", Arial;
   overflow-wrap: break-word;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.71;
-  color: #4a4a4a!important;
+  color: #4a4a4a !important;
 }
 
 .ais-Highlight {
   font-style: normal;
   font-weight: 600;
-  color: #FE5E00;
+  color: var(--orange);
 }
 
 .aa-empty {
   font-size: 21px;
   font-family: "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   text-decoration: none;
-  color: #5879DA ;
+  color: var(--electric-blue);
   font-weight: bold;
   margin-left: 20px;
   margin-top: 20px;
