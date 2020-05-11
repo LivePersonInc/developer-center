@@ -126,7 +126,7 @@ function navigateContent(url) {
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
 			$(window).scroll(function () {
-				$('#mainHeader').css('box-shadow', $(this).scrollTop() > 10 ? '0px 4px 8px #DADBE5' : '');
+				$('#mainHeader').css('box-shadow', $(this).scrollTop() > 10 ? '0px 4px 8px var(--navy-lighter-gray)' : '');
 			});
 			crossBrowserSafariCheck();
 
