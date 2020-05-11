@@ -55,6 +55,7 @@ solutions with you!
     </a>
   </div>
 </div>
+<div class="card-container">
 <div id="free-trial">
     <div id="free-trial-content-container">
       <p class="free-trial-header">Excited? Let’s start your free trial today.</p>
@@ -68,4 +69,5 @@ solutions with you!
         <button id="create-button">Create account</button>
       </a>
     </div>
+</div>
 </div>
