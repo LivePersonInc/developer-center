@@ -43,7 +43,7 @@ Bot settings include:
 
 - **Bot Type**: Read-only. This is always Consumer Facing Bot.
 
-- **Bot Language**: Read-only. This setting determines the language of the bot. It must be set to be the same language as that for the domain that's associated with the bot. Otherwise, errors occur during NLU processing. You specify the bot language when you create the bot, and it can’t be changed afterward.
+- **Bot Language**: Read-only. This setting determines the language that the bot uses to respond. For a complex bot, i.e., one that uses an intent [domain](intent-builder-domains.html) for intent matching, this must be the language of the domain that is associated with the bot. Otherwise, errors occur during NLU processing. For a simple bot, i.e., one that doesn't use an intent domain, this can be any language. In this latter case, the bot needs to use pattern matching to handle the user response. You specify the bot language when you create the bot, and it can’t be changed afterward.
 
 - **Bot Template**: Read-only. To facilitate the rapid creation of bots, all bots are based on [templates](conversation-builder-templates-overview.html). The default template is Basic, which uses English and includes just a Welcome dialog. You select the template when you create the bot, and it can’t be changed afterward.
 
