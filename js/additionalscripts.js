@@ -1,5 +1,8 @@
 $(document).ready(function () {
 	var url = window.location.href;
+	$(window).scroll(function () {
+		$('#mainHeader').css('box-shadow', $(this).scrollTop() > 10 ? '0px 4px 8px #DADBE5' : '');
+	});
 	crossBrowserSafariCheck();
 	//add anchor links to all h3 titles. See respective functions below for what they do.
 	anchors.add('h3, h4');
@@ -122,6 +125,9 @@ function navigateContent(url) {
 			}
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
+			$(window).scroll(function () {
+				$('#mainHeader').css('box-shadow', $(this).scrollTop() > 10 ? '0px 4px 8px var(--navy-lighter-gray)' : '');
+			});
 			crossBrowserSafariCheck();
 
 			anchors.add('h3, h4');
