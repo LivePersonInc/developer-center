@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	var url = window.location.href;
+	crossBrowserSafariCheck();
 	//add anchor links to all h3 titles. See respective functions below for what they do.
 	anchors.add('h3, h4');
 	handleUniquePages();
@@ -54,7 +55,17 @@ $(document).ready(function () {
 		$('.suggestbutton').removeClass('suggesthidden');
 	}
 });
+function crossBrowserSafariCheck() {
+	var isSafari = window.safari !== undefined;
+	if (isSafari) {
+		console.log("Safari, yeah!");
+		$('.sidebarbutton').attr('style', 'top: -3px !important')
 
+	} else {
+		console.log("In another browser");
+		$('.sidebarbutton').attr('style', 'top: 5px !important');
+	}
+}
 function setNoticeIcon() {
 	var allNoticeIcon = $('p[class^="notice"]');
 	console.log("SET NOTICE");
@@ -111,6 +122,7 @@ function navigateContent(url) {
 			}
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
+			crossBrowserSafariCheck();
 
 			anchors.add('h3, h4');
 			populateAnchors();
@@ -651,64 +663,7 @@ function menuDrop() {
 		return false;
 	});
 };
-//this function is used on the domain API page. You give it an account number, 
-//and it gives you all its domains back, per service
-// currently commented out because I don't have time to make this work for IE
-// function domainTool() {
-// 	var $title = $('.h1').text();
-// 	//if we're on the Domain API page
-// 	if ($title == "Domain API") {
-// 		let input;
-// 		let accountInput;
-// 		const csdsButton = document.getElementById("csds-button");
-// 		const csdsResult = document.getElementById("csds-result");
-// 		let csdsUrl;
-// 		let html = "";
-// 		//when  a user clicks submit
-// 		function retrieveDomains(account) {
-// 			$.ajax({
-// 				url: csdsUrl,
-// 				headers: {
-// 					'Accept': 'application/json'
-// 				},
-// 				dataType: "json",
-// 				//on success, grab the results from CSDS and display them in a table
-// 				success: function (data) {
-// 					html = '';
-// 					$(csdsResult).css('display', 'table');
-// 					if (data.baseURIs.length > 0) {
-// 						html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
-// 						//sort results alphabetically
-// 						data.baseURIs.sort(function (a, b) {
-// 							var m1 = a.service.toLowerCase();
-// 							var m2 = b.service.toLowerCase();
-// 							if (m1 < m2) return -1;
-// 							if (m1 > m2) return 1;
-// 							return 0;
-// 						})
-// 						$.each(data.baseURIs, function () {
-// 							html += `<tr><td>` + this.service + `</td><td>` + this.baseURI +`</td></tr>`;
-// 						});
-// 						html += '</tbody>'
-// 						csdsResult.innerHTML = html;
-// 					} else {
-// 						csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
-// 					}
-// 				}
-// 			});
-// 		}
 
-// 		function retrieveUrl() {
-// 			input = document.getElementById("account");
-// 			accountInput = input.value;
-// 			//take the account number and populate the CSDS URL
-// 			csdsUrl = 'https://api.liveperson.net/api/account/' + accountInput + '/service/baseURI?version=1.0';
-// 			//take the account we just retrieved and call ajax using the URL we just created above
-// 			retrieveDomains(accountInput);
-// 		}
-// 		csdsButton.addEventListener("click", retrieveUrl);
-// 	}
-// }
 //detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
 function isExplorer() {
 	var ua = window.navigator.userAgent;
