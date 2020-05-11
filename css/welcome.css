@@ -79,8 +79,7 @@ img.card-container {
 
 #free-trial {
     background: var(--navy);
-    width: 91%;
-    display: flex;
+    flex: 0 95%;
     margin-top: 40px;
     padding: 40px 0 40px 40px;
     border-radius: 8px;
