@@ -1131,7 +1131,7 @@ a.loginText {
 
 .innerArrowAdjust {
     margin-left: 22px;
-    top: -1px;
+    top: -1px !important;
 }
 
 .sidebarbutton span {
