@@ -93,6 +93,13 @@ img.card-container {
     justify-content: flex-end;
 }
 
+.free-trial-container {
+    display: flex;
+    padding-right: 48px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
 #free-trial-content-container {
     flex: 3;
 }
