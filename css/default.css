@@ -1091,7 +1091,7 @@ a.loginText {
 /*
  make sure background is white */
 .highlightlink {
-    background-color: white;
+    background-color: white !important;
 }
 
 .repositionSafariSidebar {
@@ -1131,7 +1131,7 @@ a.loginText {
 
 .innerArrowAdjust {
     margin-left: 22px;
-    top: -1px;
+    top: -1px !important;
 }
 
 .sidebarbutton span {
