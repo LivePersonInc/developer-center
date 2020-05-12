@@ -924,7 +924,7 @@ iframe {
 }
 
 /* pixel2 xl */
-@media screen and (max-width:411px, max-height: 800px) {
+@media screen and (max-width:411px) {
   .post-content table {
     max-width: unset;
     width: auto;
@@ -935,15 +935,8 @@ iframe {
   }
 
   ul.mysidebar.nav {
-    height: 65vh !important;
+    height: 171vh !important;
   }
 
 
-}
-
-/* set the sidebar height to be smaller at low height so doesnt overlap footer */
-@media screen and (max-height:800px) {
-  ul.mysidebar.nav {
-    height: 65vh !important;
-  }
 }

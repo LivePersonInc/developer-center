@@ -1395,7 +1395,10 @@ input#csds-button {
 
 @media screen and (max-width:425px) {
     .defaultfooter {
-        width: 250%;
+        width: 100%;
+        position: fixed;
+        margin: 0 auto;
+        bottom: 0;
     }
 
     #jumpto {
@@ -1406,7 +1409,10 @@ input#csds-button {
 
 @media screen and (max-width:500px) {
     .defaultfooter {
-        width: 250%;
+        width: 100%;
+        position: fixed;
+        margin: 0 auto;
+        bottom: 0;
     }
 
     #jumpto {
