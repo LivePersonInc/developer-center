@@ -185,17 +185,6 @@ table tbody tr:last-child {
 }
 
 
-@media screen and (max-width:425px) {
-  .post-content table {
-    max-width: unset;
-    width: auto;
-  }
-
-  .ul.mysidebar.nav {
-    position: relative;
-  }
-
-}
 
 /*
 table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
@@ -389,13 +378,14 @@ ul.mysidebar.nav {
   width: 20%;
   min-width: 270px;
   position: fixed;
-  height: 69vh;
+  height: 75vh;
   overflow-y: auto;
   overflow-x: hidden;
   overflow-x: hidden;
   list-style: none;
 
 }
+
 
 ul.mysidebar>li.folder ul {
   display: none;
@@ -899,3 +889,13 @@ iframe {
   }
 
 }
+
+/* @media screen and (max-width:500px) {
+  .ul.mysidebar.nav {
+    position: relative;
+  }
+
+  ul.mysidebar.nav {
+    height: 171vh;
+  }
+} */
