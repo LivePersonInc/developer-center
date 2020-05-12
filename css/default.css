@@ -201,10 +201,13 @@ ul.mysidebar.nav {
     display: flex;
     padding-top: 2%;
     min-width: 270px;
+    padding-bottom: 2%;
     margin-right: 6%;
     flex-direction: column;
     flex: 1;
 }
+
+
 
 .defaultcontent {
     display: flex;
@@ -1388,4 +1391,23 @@ input#csds-button {
 
 .sidebarSVG {
     width: 24px
+}
+
+@media screen and (max-width:900px) {
+    #defaultcontent{
+        min-width: 900px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .defaultfooter {
+        width: 100%;
+        position: fixed;
+        margin: 0 auto;
+        bottom: 0;
+    }
+
+    #jumpto {
+        display: none;
+    }
 }
