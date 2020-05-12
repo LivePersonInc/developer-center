@@ -201,10 +201,13 @@ ul.mysidebar.nav {
     display: flex;
     padding-top: 2%;
     min-width: 270px;
+    padding-bottom: 2%;
     margin-right: 6%;
     flex-direction: column;
     flex: 1;
 }
+
+
 
 .defaultcontent {
     display: flex;
@@ -1392,14 +1395,22 @@ input#csds-button {
 
 @media screen and (max-width:425px) {
     .defaultfooter {
-
         width: 250%;
+    }
+
+    #jumpto {
+        flex: 0;
+        display: none;
     }
 }
 
 @media screen and (max-width:500px) {
     .defaultfooter {
-
         width: 250%;
+    }
+
+    #jumpto {
+        flex: 0;
+        display: none;
     }
 }

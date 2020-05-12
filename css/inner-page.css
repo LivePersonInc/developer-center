@@ -378,13 +378,14 @@ ul.mysidebar.nav {
   width: 20%;
   min-width: 270px;
   position: fixed;
-  height: 69vh;
+  height: 75vh;
   overflow-y: auto;
   overflow-x: hidden;
   overflow-x: hidden;
   list-style: none;
 
 }
+
 
 ul.mysidebar>li.folder ul {
   display: none;
@@ -905,7 +906,7 @@ iframe {
   }
 }
 
-@media screen and (max-width:501px) {
+@media screen and (max-width:500px) {
   .post-content table {
     max-width: unset;
     width: auto;
@@ -917,6 +918,15 @@ iframe {
 
   ul.mysidebar.nav {
     height: 171vh !important;
+  }
+
+
+}
+
+/* set the sidebar height to be smaller at low height so doesnt overlap footer */
+@media screen and (max-height:800px) {
+  ul.mysidebar.nav {
+    height: 65vh;
   }
 
 }
