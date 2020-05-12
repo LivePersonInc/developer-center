@@ -190,6 +190,11 @@ table tbody tr:last-child {
     max-width: unset;
     width: auto;
   }
+
+  .ul.mysidebar.nav {
+    position: relative;
+  }
+
 }
 
 /*

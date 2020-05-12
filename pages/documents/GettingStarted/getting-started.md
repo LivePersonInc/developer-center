@@ -11,7 +11,7 @@ indicator: both
         <div class="header-lp4">
             Learn about the LivePerson platform 
             <div class="getting-started-paragraph">
-            Understand the basics of Conversational AI and how it scales across messaging channels to automate consumer conversations
+            Understand the basics of Conversational AI and how it scales across messaging channels to automate consumer conversations.
             </div>
               <div class="hyperlink">
                 <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
