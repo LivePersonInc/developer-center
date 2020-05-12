@@ -1393,6 +1393,12 @@ input#csds-button {
     width: 24px
 }
 
+@media screen and (max-width:900px) {
+    #defaultcontent{
+        width: 900px;
+    }
+}
+
 @media screen and (max-width:425px) {
     .defaultfooter {
         width: 100%;

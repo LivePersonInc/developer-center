@@ -890,28 +890,7 @@ iframe {
 
 }
 
-@media screen and (max-width:425px) {
-  .post-content table {
-    max-width: unset;
-    width: auto;
-  }
-
-  .ul.mysidebar.nav {
-    position: relative;
-    height: 171vh;
-  }
-
-  ul.mysidebar.nav {
-    height: 171vh !important;
-  }
-}
-
-@media screen and (max-width:500px) {
-  .post-content table {
-    max-width: unset;
-    width: auto;
-  }
-
+/* @media screen and (max-width:500px) {
   .ul.mysidebar.nav {
     position: relative;
   }
@@ -919,24 +898,4 @@ iframe {
   ul.mysidebar.nav {
     height: 171vh;
   }
-
-
-}
-
-/* pixel2 xl */
-@media screen and (max-width:411px) {
-  .post-content table {
-    max-width: unset;
-    width: auto;
-  }
-
-  .ul.mysidebar.nav {
-    position: relative;
-  }
-
-  ul.mysidebar.nav {
-    height: 171vh !important;
-  }
-
-
-}
+} */
