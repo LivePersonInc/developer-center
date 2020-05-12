@@ -185,17 +185,6 @@ table tbody tr:last-child {
 }
 
 
-@media screen and (max-width:425px) {
-  .post-content table {
-    max-width: unset;
-    width: auto;
-  }
-
-  .ul.mysidebar.nav {
-    position: relative;
-  }
-
-}
 
 /*
 table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
@@ -896,6 +885,38 @@ iframe {
 
   .breadcrumbs {
     margin-bottom: 25px;
+  }
+
+}
+
+@media screen and (max-width:425px) {
+  .post-content table {
+    max-width: unset;
+    width: auto;
+  }
+
+  .ul.mysidebar.nav {
+    position: relative;
+    height: 171vh;
+  }
+
+  ul.mysidebar.nav {
+    height: 171vh !important;
+  }
+}
+
+@media screen and (max-width:501px) {
+  .post-content table {
+    max-width: unset;
+    width: auto;
+  }
+
+  .ul.mysidebar.nav {
+    position: relative;
+  }
+
+  ul.mysidebar.nav {
+    height: 171vh !important;
   }
 
 }

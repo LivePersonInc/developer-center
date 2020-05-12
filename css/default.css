@@ -1389,3 +1389,17 @@ input#csds-button {
 .sidebarSVG {
     width: 24px
 }
+
+@media screen and (max-width:425px) {
+    .defaultfooter {
+
+        width: 250%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .defaultfooter {
+
+        width: 250%;
+    }
+}
