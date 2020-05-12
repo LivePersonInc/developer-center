@@ -22,7 +22,7 @@ There are several types of dialogs:
 - **Fallback**: The fallback dialog is triggered when the bot doesn't recognize the consumer's message. For more on this, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 - **Disambiguation**: The disambiguation dialog is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed. For more on this, see [here](conversation-builder-dialogs-disambiguation-dialogs.html).
 - **Auto Escalation**: This type of dialog frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred. For more on this, see [here](conversation-builder-dialogs-auto-escalation-dialogs.html).
-* **Survey**: Survey dialogs can only be created in survey bots. Use a survey dialog to define a survey. For more on this, see [here](conversation-builder-bots-survey-bots.html).
+* **Survey**: Survey dialogs can only be created in post-conversation survey bots. Use a survey dialog to define a survey. For more on this, see [here](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Context switching
 
@@ -73,7 +73,7 @@ Alternatively, add a Text statement that contains the special string "LP_CLOSEDI
 LP_CLOSEDIALOG is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
 {: .important}
-These methods for closing the dialog **do** trigger a post-conversation [survey](conversation-builder-bots-survey-bots.html).
+These methods for closing the dialog **do** trigger a post-conversation [survey](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Close the conversation
 
@@ -88,7 +88,7 @@ Alternatively, add a Text statement that contains the special string "LP_CLOSECO
 LP_CLOSECONVERSATION is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
 {: .important}
-These methods for closing the conversation **don't** trigger a post-conversation [survey](conversation-builder-bots-survey-bots.html).
+These methods for closing the conversation **don't** trigger a post-conversation [survey](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Configure dialog settings
 

@@ -1,24 +1,24 @@
 ---
-pagename: Survey Bots
+pagename: Post-Conversation Survey Bots
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Bots
-permalink: conversation-builder-bots-survey-bots.html
+permalink: conversation-builder-bots-post-conversation-survey-bots.html
 indicator: messaging
 ---
 
-### What's a survey bot?
+### What's a post-conversation survey bot?
 
-A survey bot lets you collect feedback from consumers at the end of a conversation with a custom bot or human agent. The survey bot can ask:
+A post-conversation survey bot lets you collect feedback from consumers at the end of a conversation with a custom bot or human agent. The survey bot can ask:
 
 * Specialized questions designed to provide First Call Resolution (FCR), Customer Satisfaction (CSAT), and Net Promoter Score (NPS) survey metrics
 * Questions that reflect your brand's key performance indicators
 * Free-text questions
 
-Use a survey bot to measure bot/agent and skill performance and to identify opportunities to improve on your quality targets.
+Use a post-conversation survey bot to measure bot/agent and skill performance and to identify opportunities to improve on your quality targets.
 
 <img style="width:400px" src="img/ConvoBuilder/surveyBot_example.png">
 
@@ -28,7 +28,7 @@ Survey bots are supported only in Messaging, not in Live Chat.
 
 ### Survey bots vs. custom bots
 
-When creating a survey bot, you work in Conversation Builder in the same, general way that you do with a custom bot. Create the bot and define its dialog flow, adding the interactions that meet your survey requirements.
+When creating a post-conversation survey bot, you work in Conversation Builder in the same, general way that you do with a custom bot. Create the bot and define its dialog flow, adding the interactions that meet your survey requirements.
 
 The following are key similarities and differences between building survey bots and custom bots in Conversation Builder.
 
