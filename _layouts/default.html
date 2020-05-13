@@ -74,11 +74,14 @@
   </div>
 
   <div id="defaultfooter" class="defaultfooter">
-    <span> © {{ "now" | date: "%Y" }} LivePerson Inc. All Rights Reserved &#160; <a
-        href="https://www.liveperson.com/policies/copyright" class="termsUseHighlight" target="_blank"> &#8226;
-        Copyright &#160;
-        <a href="https://www.liveperson.com/policies/apitou" class="termsUseHighlight" target="_blank"> &#8226; Terms
-          of Use
+    <span style="display:inline-flex"> © {{ "now" | date: "%Y" }} LivePerson Inc. All Rights Reserved &#160;
+      <a href="https://www.liveperson.com/policies/copyright" class="termsUseHighlight" target="_blank"> &#8226;
+        <span class="footer-tags">
+          Copyright
+        </span>
+        <a href="https://www.liveperson.com/policies/apitou" class="termsUseHighlight" target="_blank"> &#8226;
+          <span class="footer-tags">Terms of Use
+          </span>
         </a>
     </span>
   </div>
