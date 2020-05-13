@@ -51,7 +51,7 @@ solutions with you!
   <div class="welcome-card">
     <a target="_blank" href="https://www.liveperson.com/signup/"> 
       <img class="container-image" src="img/ic_partners.svg"/>
-      <h5 class="welcome-title">Are you already a Conversational AI expert?  Join the LivePerson partner program</h5>
+      <h5 class="welcome-title">Are you already a Conversational AI expert? Join the LivePerson partner program.</h5>
     </a>
   </div>
 </div>
