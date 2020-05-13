@@ -585,18 +585,26 @@ div.sidebarTitle-holder {
   margin-top: 60px;
 }
 
+.footer-tags {
+  display: inline-flex !important;
+  padding: 0px 8px 0px 8px;
+}
+
 /*CSS for general styling of Chat/Messaging Indicator*/
 .indicator {
-  color: #8b8b8b;
-  background-color: #f2f1f2;
-  font-size: 12px;
-  padding: 2px 4px;
-  margin-bottom: -2px;
-  font-family: "Roboto", "Roboto Slab", Arial, Helvetica, sans-serif;
-  cursor: default;
-  height: 20px;
+
+  color: var(--grey-button-icons);
+  background: #F7F8FA;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+  padding: 3px 8px;
   align-self: center;
-  margin-right: 12px;
+  margin: 10px 5px;
 }
 
 .indicator:nth-child(3) {
