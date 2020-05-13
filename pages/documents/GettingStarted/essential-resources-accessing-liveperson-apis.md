@@ -28,7 +28,7 @@ What follows is a general overview of these two authorization methods and how th
 
 Web server applications are traditional web apps that perform most of their application logic on the server. This OAuth 2.0 flow is specifically for user authorization. It is designed for applications that can store confidential information and maintain state. A properly authorized web server application can access LivePerson's APIs while the user interacts with the application.
 
-In order to accomplish this, you will need to implement the LiveEngage Applications Authorization API (which uses the OAuth 2.0 methodology as explained above). [More information on how to do that can be found here](/authorizing-liveengage-applications-overview.html).
+In order to accomplish this, you will need to implement the Conversational Cloud Applications Authorization API (which uses the OAuth 2.0 methodology as explained above). [More information on how to do that can be found here](/authorizing-liveengage-applications-overview.html).
 
 ### Authorizing server to server interactions
 

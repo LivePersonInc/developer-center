@@ -77,7 +77,7 @@ Below, you will find an example of an Application Install Manifest. This JSON fo
 
 After filling in the JSON Template with the required data, please contact your Account Management team to register your connector application. If you're interested in more in-depth information on how this schema is built and why, please refer to the [general Application Install Manifest document](guides-le-applications-installing.html).
 
-### LiveEngage Application Manifest Schema - Example Using the Connector API
+### Conversational Cloud Application Manifest Schema - Example Using the Connector API
 
 ```json
 {

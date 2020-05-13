@@ -1,23 +1,23 @@
 ---
-pagename: Installing LiveEngage Applications
+pagename: Installing Conversational Cloud Applications
 redirect_from:
   - guides-le-applications-installing.html
+  - liveengage-applications-installing-liveengage-applications.html
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: LiveEngage Applications
-order: 20
-permalink: liveengage-applications-installing-liveengage-applications.html
+documentname: Conversational Cloud Applications
+permalink: conversational-cloud-applications-installing-conversational-cloud-applications.html
 indicator: both
 ---
 
 ### Overview
 
-Currently, installation of LiveEngage Applications is performed by LivePerson's internal resources (account team, DevSupport, Tier 1, etc). In order to request this installation, you must first fill out the following schema according to your application needs. Once that is done, please contact the relevant LivePerson resource for your account and they will perform the installation.
+Currently, installation of Conversational Cloud Applications is performed by LivePerson's internal resources (account team, DevSupport, Tier 1, etc). In order to request this installation, you must first fill out the following schema according to your application needs. Once that is done, please contact the relevant LivePerson resource for your account and they will perform the installation.
 
 Once the application has been installed, the LivePerson resource will send you your client_id and client_secret which are required for OAuth2.0 authentication. In the future, installing an application will be possible on your own through LiveEngage, but currently the installation process must be followed.
 
-### LiveEngage Application Manifest Schema - Parameters
+### Conversational Cloud Application Manifest Schema - Parameters
 
 | Property | Description | Type | Required| Notes|
 |--- | --- | ---| ---| ---|

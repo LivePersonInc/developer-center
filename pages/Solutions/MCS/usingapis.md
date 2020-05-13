@@ -13,7 +13,7 @@ indicator:
 
 ### Login Service API
 
-The Login Service API provides developers with the ability to login and take advantage of LiveEngage services outside of the standard LiveEngage application.
+The Login Service API provides developers with the ability to login and take advantage of LiveEngage services outside of the standard Conversational Cloud Application.
 
 This means that once an official LiveEngage user account is provided. That user account, and its applicable access permissions, can then be utilized with custom solutions that leverage any of the supported LiveEngage APIs.
 

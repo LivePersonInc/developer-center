@@ -946,11 +946,11 @@
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API
-    - documentname: LiveEngage Applications
+    - documentname: Conversational Cloud Applications
       pages:
-        - pagename: What Is a LiveEngage Application?
-        - pagename: Installing LiveEngage Applications
-    - documentname: Authorizing LiveEngage Applications
+        - pagename: What Is a Conversational Cloud Application?
+        - pagename: Installing Conversational Cloud Applications
+    - documentname: Authorizing Conversational Cloud Applications
       pages:
         - pagename: Overview
         - pagename: Methods

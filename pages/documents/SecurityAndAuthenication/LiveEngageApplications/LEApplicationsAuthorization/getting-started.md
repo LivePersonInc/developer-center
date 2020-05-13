@@ -1,13 +1,13 @@
 ---
 pagename: Overview
+redirect_from:
+  - authorizing-liveengage-applications-overview.html
 Keywords:
 sitesection:
 categoryname: "Security & Authentication"
-documentname: Authorizing LiveEngage Applications
-order: 8
-permalink: authorizing-liveengage-applications-overview.html
+documentname: Authorizing Conversational Cloud Applications
+permalink: authorizing-conversational-cloud-applications-overview.html
 root-link: true
-level-order: 6
 indicator: both
 ---
 
@@ -21,7 +21,7 @@ The API also provides the identity of the authenticated user for the purpose of 
 
 ### Getting Started
 
-1. Install a LiveEngage application. Here is a [guide to installing LiveEngage applications](guides-le-applications-installing.html). The following two fields are mandatory for this flow, `grant_types` and `redirect_uris`. In addition, all normally mandatory fields, as detailed in the guide above, should be populated as well. Here is an example showing how to configure them:
+1. Install a Conversational Cloud Application. Here is a [guide to installing Conversational Cloud Applications](guides-le-applications-installing.html). The following two fields are mandatory for this flow, `grant_types` and `redirect_uris`. In addition, all normally mandatory fields, as detailed in the guide above, should be populated as well. Here is an example showing how to configure them:
 
 ```json
 {"client_name": "<YOURAPPNAME>",
