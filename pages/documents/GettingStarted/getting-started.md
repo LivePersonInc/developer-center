@@ -23,7 +23,7 @@ indicator: both
     </div>
     <div id="teaser-banner" class="welcome-card-modified">
             <a target="_blank" href="https://vimeo.com/398468660/03dd5cb78d" style="display:flex;">
-            <p class="teaser-header" > Watch a quick product overview of LivePerson Platform and its tools</p>
+            <p class="teaser-header" > Watch a  quickproduct overview of LivePerson Platform and its tools</p>
             <img class="play-icon"  src="img/play_icon.svg">
             </a> 
     </div>
