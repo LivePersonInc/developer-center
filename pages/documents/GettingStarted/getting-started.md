@@ -23,7 +23,7 @@ indicator: both
     </div>
     <div id="teaser-banner" class="welcome-card-modified">
             <a target="_blank" href="https://vimeo.com/398468660/03dd5cb78d" style="display:flex;">
-            <p class="teaser-header" > Watch a quick product overview of LivePerson Platform and its tools</p>
+            <p class="teaser-header" > Watch a  quickproduct overview of LivePerson Platform and its tools</p>
             <img class="play-icon"  src="img/play_icon.svg">
             </a> 
     </div>
@@ -36,35 +36,26 @@ indicator: both
      Follow step-by-step instructions to create your first bot and get started with messaging.
 </div>
 <div class="card-container" style="margin-top:24px;">
-    <div class="welcome-card">
-        <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-conversation-builder-quick-start.html"> 
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-conversation-builder-quick-start.html"> 
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">Conversational AI</h5>
         <p class="getstarted-content ">Automate conversations with AI and bots</p>
         </a>
-  </div>
-  <div class="welcome-card">
-    <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html"> 
-      <img class="container-image" src="img/ic_FB.svg"/>
-      <h5 class="getstarted-title">Messaging Channels </h5>
-      <h5 class="getstarted-content ">Engage customers with Facebook Message</h5>
-    </a>
-  </div>
-  <div class="welcome-card">
-    <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html"> 
-      <img class="container-image" src="img/ic_SMS.svg"/>
-      <h5 class="getstarted-title">Messaging Channels</h5>
-      <h5 class="getstarted-content ">Expand brand reach using SMS text</h5>
-    </a>
-  </div>
-
-  <div class="welcome-card">
-    <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-web-messaging-quick-start.html"> 
-      <img class="container-image" src="img/ic_messaging.svg"/>
-      <h5 class="getstarted-title">Messaging Channels</h5>
-      <h5 class="getstarted-content ">Setup web messaging for website </h5>
-    </a>
-  </div>
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html"> 
+        <img class="container-image" src="img/ic_FB.svg"/>
+        <h5 class="getstarted-title">Messaging Channels </h5>
+        <h5 class="getstarted-content ">Engage customers with Facebook Message</h5>
+        </a>
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html"> 
+        <img class="container-image" src="img/ic_SMS.svg"/>
+        <h5 class="getstarted-title">Messaging Channels</h5>
+        <h5 class="getstarted-content ">Expand brand reach using SMS text</h5>
+        </a>
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-web-messaging-quick-start.html"> 
+        <img class="container-image" src="img/ic_messaging.svg"/>
+        <h5 class="getstarted-title">Messaging Channels</h5>
+        <h5 class="getstarted-content ">Setup web messaging for website </h5>
+        </a>
 </div>
   <div class="whole-external-link">
     <div class="external-link-container">
