@@ -181,7 +181,7 @@ pre code {
 }
 
 table tbody tr:last-child {
-  border-bottom: 1px solid var(--navy-mid-gray) !important;
+  border-bottom: 2px solid var(--navy-mid-gray) !important;
 }
 
 
