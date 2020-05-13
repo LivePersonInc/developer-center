@@ -12,7 +12,7 @@ LivePerson Functions is a Function as a Service (FaaS) platform which enables br
 
 The LiveEngage platform offers a messaging solution that you can harness and enhance by integrating LiveEngage with your native app, customizing LiveEngage reports or creating new reports, and building or integrating workspace widgets. This can be achieved using our various APIs and SDKs.
 
-Our APIs configure and manipulate LiveEngage features and capabilities. To use these APIs, you must make sure to configure your LiveEngage account to access these features. For example, if you want to use the Agent Messaging SDK to connect a bot, then your account must support bot users. Therefore, before working with any of the below documentation, it's best to contact your account team or LivePerson Support to check that the prerequisite features are enabled for your account.
+Our APIs configure and manipulate LiveEngage features and capabilities. To use these APIs, you must make sure to configure your Conversational Cloud account to access these features. For example, if you want to use the Agent Messaging SDK to connect a bot, then your account must support bot users. Therefore, before working with any of the below documentation, it's best to contact your account team or LivePerson Support to check that the prerequisite features are enabled for your account.
 
 Most user actions within LiveEngage can be performed programmatically using the REST API. Some of the key categories are:
 

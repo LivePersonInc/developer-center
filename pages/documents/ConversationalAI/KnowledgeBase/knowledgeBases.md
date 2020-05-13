@@ -75,7 +75,7 @@ If you want to import a set of articles into a knowledge base when you add the k
     * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
     * **Associated Domain**: Read-only. This field is displayed only if the knowledge base uses [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). The domain can't be changed after the knowledge base is created.
     * **Account**: If you logged into Conversation Builder directly (i.e., not via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, you can use this setting to change the organization under which this knowledge base exists. If you logged into Conversation Builder via single sign-on from LiveEngage, the organization you were using in LiveEngage is active and can't be changed, and nothing appears in this list.
-    * **Public**: If you don't want other users in your LiveEngage account to be able to view and edit the knowledge base, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
+    * **Public**: If you don't want other users in your Conversational Cloud account to be able to view and edit the knowledge base, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
 4. Click **Update**.
 
 ### Convert Knowledge Base intents to Domain intents

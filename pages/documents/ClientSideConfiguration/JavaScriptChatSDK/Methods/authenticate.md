@@ -31,7 +31,7 @@ This resource enables consumer SSO with LiveEngage.
 | connectorId | The connectorId that comes back with engagement. If not filled, the SDK will take the ID from the engagement response by itself.| number | Optional |
 | ssoKey | The OAuth2.0 + OpenID Connect (code / JWT). | string | Optional |
 | redirectUri   | The redirect uri | string | Required |
-| engagementId  | The engagement ID in case of a LiveEngage account | number | Optional |
+| engagementId  | The engagement ID in case of a Conversational Cloud account | number | Optional |
 | contextId | The context ID of the engagement that was clicked in case of a LiveEngage account. | string | Optional |
 | sessionId |  The monitored visitor session ID in case of a LiveEngage account. | string | Optional |
 | visitorId | The monitored visitor ID in case of a LiveEngage account. | string | Optional |

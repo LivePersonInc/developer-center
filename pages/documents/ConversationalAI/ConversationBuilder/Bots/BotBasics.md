@@ -42,7 +42,7 @@ Bot settings include:
 
 - **Bot Account**: If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, you can use this setting to change the organization under which this bot exists. If you logged into Conversation Builder via single sign-on from LiveEngage, the organization you were using in LiveEngage is active and can't be changed, and nothing appears in this list.
 
-- **Public**: When you want other users in your LiveEngage account to be able to view and edit the bot, click the slider to On. The default value is Off. 
+- **Public**: When you want other users in your Conversational Cloud account to be able to view and edit the bot, click the slider to On. The default value is Off. 
 
 - **Bot Environment**: If desired, select the set of [environment variables](conversation-builder-environment-variables.html) that you want to associate with the bot. Environment variables allow you to manage certain values and constants outside of the bot, and use of them when appropriate is considered a best practice.
 

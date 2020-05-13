@@ -13,7 +13,7 @@ This Messaging Window SDK for the LiveEngage [Messaging Window API](messaging-wi
 
 ### Prerequisites
 
-This library requires only an active LiveEngage account number.
+This library requires only an active Conversational Cloud account number.
 
 ### Use Cases
 

@@ -16,7 +16,7 @@ indicator:
 
 ### Step 1 - Set Up Your LiveEngage Configuration
 
-1. Ensure your LiveEngage account is provisioned for messaging. (A quick way to know if you have messaging enabled is if you see the 'All Conversations’ list displayed on your workspace).
+1. Ensure your Conversational Cloud account is provisioned for messaging. (A quick way to know if you have messaging enabled is if you see the 'All Conversations’ list displayed on your workspace).
 
 2. Create a user for your bot. Go to the users tab in LiveEngage and create a new user.  Populate the form with the bot information including the name that will display to customers as well as the icon. Some best practices:
 

@@ -35,7 +35,7 @@ When you add messaging to your app, you enable your consumers to communicate wit
 
 To begin, you need:
 
-* LiveEngage account with messaging enabled.
+* Conversational Cloud account with messaging enabled.
   
   <div class="notice">Contact your LivePerson representative to enable messaging on your account.  Tip: If you see 'All Conversations’ when you log in, your account has messaging enabled.</div>
 

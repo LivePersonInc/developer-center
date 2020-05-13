@@ -90,7 +90,7 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
 
         iii. z3 - APAC
 
-    b. accountId: Your LiveEngage account ID
+    b. accountId: Your Conversational Cloud account ID
 
     c. mavenNamespace: The Conversation Orchestrator namespace is used for organizing a set of attributes you may want to use in a policy. See [Context Warehouse Session Store](maven-ai-context-warehouse-context-session-store.html) for more information on how this works. 
 

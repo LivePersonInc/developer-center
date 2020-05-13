@@ -129,7 +129,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 Before you can show a conversation, you must initialize the Messaging SDK.  
 
 1. **Set up your account information.** 
-   1. Provide your LiveEngage account number as a string in the `accountID` constant.
+   1. Provide your Conversational Cloud account number as a string in the `accountID` constant.
    2. Provide a unique JSON Web Token (JWT) in the `jwt` constant.   
 
 2. **Set up instance of LPMessagingSDK** for the accountID provided.
@@ -154,7 +154,7 @@ class DocumentationViewController: UIViewController {
 
     // MARK: - Set up Account information.
 
-    /// Account ID is your LiveEngage Account Number.
+    /// Account ID is your Conversational Cloud account Number.
     let accountID: String = "14800077"
     /// Unique JSON Web Token used for authentication of the consumer.  Enter unique JWT here.
     let jwt: String = "eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdGFydF91c2VyIiwgICJpc3MiOiAiaHR0cHM6Ly9MUC1BdXRoLmNvbSIsICAiZXhwIjoxNTg0Njc0MDc3LCAgImlhdCI6MTU1MzExNjQ3N30.tFtanIwh8SrmJWM5iSUxmj7WaroA_WCtZfTS4KN9N8Q0Vy0O5rRdb7T7ZkFJxnGfwg0fsKfBuM3qTD8NHWNOKqaZX_bQKXQ-cnJHa4DtJX9Udv0MGfg_UHO0DBg5vaC_38beUlSaUPQ0rQAHb9sm0PE1tNOMfLzvPqM1kF3VMBq1dZNpNkDYaV8oleEcm0v8woRj45FYOv34etrgSsf0Pi-68AP8ckG3WJzS_y9dpZAxW3oDIv_XXHZ4TXQw_wPwMKu0UtZoMfctz-5ERk7uTQxeWP6TS9ce2YQ38FqUwIBN3ImAhA3vE2gLsYexFsPiO_I3hSEC272Ya-b-eJZ8vg"

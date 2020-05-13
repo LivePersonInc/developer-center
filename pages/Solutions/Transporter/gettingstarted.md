@@ -96,7 +96,7 @@ Upon first use, please use the ALERTS notifications area at the bottom of the Na
 
 2. Setup encryption - for security reasons, Transporter encrypts all reports before transmission to your selected destination. As such, encryption must be activated by generating a Public/Private key-pair (or by bringing your own) - see Encryption section for more details..
 
-3. Setup LiveEngage - to get started, make sure you have authorized at least 1 LiveEngage account source - you can retrieve an API key from the LiveEngage console.
+3. Setup LiveEngage - to get started, make sure you have authorized at least 1 Conversational Cloud account source - you can retrieve an API key from the LiveEngage console.
 
 ### Encryption
 

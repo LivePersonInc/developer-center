@@ -72,7 +72,7 @@ Recommendation APIs can be used in a Conversation Builder bot using [Integration
    
    * **Conversation Orchestrator API key** is retrieved from Conversation Orchestrator.
 
-   * **AccountID**: use your LiveEngage account ID. If you are not sure please contact support or your customer representative to get the account ID.
+   * **AccountID**: use your Conversational Cloud account ID. If you are not sure please contact support or your customer representative to get the account ID.
 
    * **Conversation ID**: This allows Conversation Orchestrator routing policy to retrieve conversation attributes to evaluate the policy. 
 

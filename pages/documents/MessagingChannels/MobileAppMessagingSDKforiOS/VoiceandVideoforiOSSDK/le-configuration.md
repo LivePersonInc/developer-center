@@ -25,7 +25,7 @@ the CoApp product is deprecated and will be discontinued from February 28th, 202
 
 ### Agent Workspace Requirements
 
-Your agents will be using LiveEngage from a regular web browser to make calls to your consumers. The following sections explain how to setup your LiveEngage account for voice & video support.
+Your agents will be using LiveEngage from a regular web browser to make calls to your consumers. The following sections explain how to setup your Conversational Cloud account for voice & video support.
 
 Note: Legacy systems do NOT support this feature
 

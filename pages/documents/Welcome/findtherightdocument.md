@@ -19,6 +19,6 @@ If you don't have a specific use case in mind, simply browse the site to find ou
 
 * **Real Time Interactions** - this section includes documentation pertaining to events which are fired or information that is passed during a conversation.
 
-* **Account Configuration** - this section includes documentation pertaining to APIs which allow you to configure your LiveEngage account via REST calls. This allows you to perform bulk actions with greater ease on your account or configure it programmatically, according to rules which you determine.
+* **Account Configuration** - this section includes documentation pertaining to APIs which allow you to configure your Conversational Cloud account via REST calls. This allows you to perform bulk actions with greater ease on your account or configure it programmatically, according to rules which you determine.
 
 * **Admin** - this section includes documentation pertaining to APIs which allow you to configure various administration features on your account, such as creating new skills, agent groups and more. Much like the Account Configuration documents, this allows you to perform bulk actions with greater ease on your account or configure it programmatically, according to rules which you determine.

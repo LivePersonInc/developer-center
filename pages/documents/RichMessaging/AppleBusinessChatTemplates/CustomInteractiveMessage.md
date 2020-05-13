@@ -188,7 +188,7 @@ The value of the `URL` metadata property will be passed to Apple's [MSMessage](h
 
 * RecivedBubble image URL - If consumer does not have the extension installed on device, or if consumer has the extension installed but does not use LiveLayout (set to false) then the recivedBubble will default to the imageURL set in the recievedBubble object.  If imageURL was not added to the SC schema defined, the layout view will be an empty frame! Always include an imageURL! 
 
-* ImageURL MUST be whitelisted - to whitelist images for Structured Content contact your LiveEngage account representative
+* ImageURL MUST be whitelisted - to whitelist images for Structured Content contact your Conversational Cloud account representative
 
 * SessionIdentifier - Any interactive message that is sent to ABC has a UUID - either you can set it through this field, or if not set Apple will generate a UUID for the interactive message. We recommend you set the UUID for each interactive message sent from the agent, in order to maintain referencing and correlating between interactions, for grouping messages,  funnel tags and more. 
 

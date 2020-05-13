@@ -47,7 +47,7 @@ The parameters in question are `conversationId`, `participantId`. You will need 
 | contextId | The context ID of the engagement that was clicked in case of a LiveEngage account. | string   | |
 | engagementId  | The engagement ID in case of a LiveEngage account. | string   | |
 | campaignId    | The campaign ID in case of a LiveEngage account. | string | |
-| language  | The language set in the engagement in case of a LiveEngage account (sets the system messages language for the chat). | string | |
+| language  | The language set in the engagement in case of a Conversational Cloud account (sets the system messages language for the chat). | string | |
 | a2aSourceSiteId   | The source site for the account to account transfer **LEGACY ONLY**| string  | Supplied on the account to account event. You must have a valid API key for the new account. |
 | a2aSourceSessionId | The originating session ID for the account to account transfer **LEGACY ONLY**| string | Supplied on the account to account event. You must have a valid API key for the new account |
 | a2aEventId | The event ID of the account to account transfer **LEGACY ONLY**| string | Supplied on the account to account event. You must have a valid API key for the new account |

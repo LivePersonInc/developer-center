@@ -56,7 +56,7 @@ Open the bot. On the top navigation click on Global Functions and edit the follo
 
 1. `deploymentZone`: Z1-Americas, Z2-EMEA, Z3-APAC
 
-2. `accountId`: Your LiveEngage account ID
+2. `accountId`: Your Conversational Cloud account ID
 
 3. `mavenNamespace`: Please enter the Namespace you have defined in your [Context Warehouse Session Store](https://developers.liveperson.com/maven-ai-context-warehouse-context-session-store.html) for storing and retrieving session variables. 
 
