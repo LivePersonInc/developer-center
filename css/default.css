@@ -1396,6 +1396,8 @@ input#csds-button {
 @media screen and (max-width:1024px) {
     #defaultcontent {
         min-width: 900px;
+        z-index: 10;
+        background: white;
     }
 }
 
