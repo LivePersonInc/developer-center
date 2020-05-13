@@ -142,6 +142,10 @@ pre code {
   max-width: initial;
 }
 
+table tbody tr:last-child {
+  border-bottom: 1px solid var(--navy-mid-gray) !important;
+}
+
 .post-content table td:first-child {
   width: unset;
   /*max-width: 150px;*/
@@ -180,9 +184,6 @@ pre code {
   border-bottom: 1px solid var(--navy-light-gray) !important;
 }
 
-table tbody tr:last-child {
-  border-bottom: 2px solid var(--navy-mid-gray) !important;
-}
 
 
 
@@ -593,7 +594,7 @@ div.sidebarTitle-holder {
 /*CSS for general styling of Chat/Messaging Indicator*/
 .indicator {
 
-  color: var(--grey-button-icons);
+  color: var(--navy-mid-gray);
   background: #F7F8FA;
   border-radius: 4px;
   font-family: Roboto;
@@ -604,7 +605,7 @@ div.sidebarTitle-holder {
   text-transform: uppercase;
   padding: 3px 8px;
   align-self: center;
-  margin: 10px 5px;
+  margin-right: 8px;
 }
 
 .indicator:nth-child(3) {
@@ -616,12 +617,11 @@ div.sidebarTitle-holder {
 .breadcrumbs {
   background-color: white;
   border-radius: 0;
-  margin-bottom: 0;
-  margin-top: -39px;
+  margin-bottom: 8px;
   min-height: 42px;
-  padding-bottom: 5px;
+
   padding-left: 0;
-  padding-top: 26px;
+  padding-top: 8px;
   z-index: 10;
 }
 

@@ -108,7 +108,7 @@ code pre {
 .documenttitlecontainer {
     display: flex;
     flex-direction: column;
-    padding-top: 40px
+    margin-top: 40px
 }
 
 .titlecontainer {
@@ -350,7 +350,7 @@ ul.mysidebar.nav {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     padding: 10px;
     border-bottom: 1px solid var(--mid-gray);
-    padding-left: 54px;
+    padding-left: 48px;
 
 }
 
@@ -987,7 +987,7 @@ a.loginText {
 
 .documenttitle {
     display: flex;
-    margin-top: 25px
+    margin-top: 8px;
 }
 
 .documenttitle .h1 {
@@ -1393,7 +1393,7 @@ input#csds-button {
     width: 24px
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1024px) {
     #defaultcontent {
         min-width: 900px;
     }

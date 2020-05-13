@@ -211,10 +211,6 @@ function handleUniquePages() {
 		suggestButton.css("display", "flex");
 		indicatorContainer.css("display", "flex");
 	}
-	if (is_getting_started) {
-		console.log('On the getting started page');
-		document.getElementById('document-title-h1').innerText = "Getting Started";
-	}
 }
 //a function to create copy buttons on all code blocks
 function codeButtons() {
