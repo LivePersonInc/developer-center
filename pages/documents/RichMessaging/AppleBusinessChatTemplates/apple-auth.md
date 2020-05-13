@@ -22,7 +22,7 @@ See the message flow below:
 
 3. Authentication is done by your OAuth 2.0 provider.
 
-4. Upon successful or failed authentication, LiveEngage passes the authentication details back so that you may perform validation.
+4. Upon successful or failed authentication, Conversational Cloud passes the authentication details back so that you may perform validation.
 
 ### Setup
 
@@ -76,7 +76,7 @@ You will send two template payloads (Metadata and Body) for the Apple Auth reque
 
 See [how to send Structured Content](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for a background on how to send these.
 
-The **body** template will only define how the Apple Auth bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
+The **body** template will only define how the Apple Auth bubble is displayed in the Conversational Cloud agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
 **Agent sends auth request to consumer via Agent Workspace SDK widget**
 
@@ -274,7 +274,7 @@ For more about Apple Authentication, see [this document](https://developer.apple
 
 #### Request Body
 
-The request body defines how the Apple Auth bubble looks in the LiveEngage Agent Workspace and not how the bubble looks on the consumer device. This Apple Auth structured content template in the Agent Workspace is for conversational context, transcript and historic records, as well as ease of use for agents.
+The request body defines how the Apple Auth bubble looks in the Conversational Cloud Agent Workspace and not how the bubble looks on the consumer device. This Apple Auth structured content template in the Agent Workspace is for conversational context, transcript and historic records, as well as ease of use for agents.
 
 See the [introduction to templates](structured-content-introduction-to-structured-content.html#templates) for information on a basic template that you can send.
 
@@ -395,6 +395,6 @@ The authentication response metadata is contextual information about the consume
 
 ### Limitations
 
-* Updating the Apple Business Chat authentication status visually in the LiveEngage UI is planned.
+* Updating the Apple Business Chat authentication status visually in the Conversational Cloud UI is planned.
 
 * Touch/Face ID is not currently supported in Apple's authentication solution

@@ -1,9 +1,11 @@
 ---
 pagename: Find the Right Document
+redirect_from:
+  - getting-started-with-liveengage-apis-find-the-right-document.html
 sitesection: Documents
 categoryname: "Welcome"
-documentname: Getting Started with LiveEngage APIs
-permalink: getting-started-with-liveengage-apis-find-the-right-document.html
+documentname: Getting Started with Conversational Cloud APIs
+permalink: getting-started-with-conversational-cloud-apis-find-the-right-document.html
 indicator: both
 ---
 

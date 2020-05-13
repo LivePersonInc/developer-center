@@ -14,7 +14,7 @@ indicator: both
 
 ### Overview
 
-Once users are redirected back to the application with the code from LivePerson's Identity Service, the application will need to retrieve a token in order to access LiveEngage services. This is a request which enables retrieving that token.
+Once users are redirected back to the application with the code from LivePerson's Identity Service, the application will need to retrieve a token in order to access Conversational Cloud services. This is a request which enables retrieving that token.
 
 This request should be made after obtaining the code from the [authorize request](/authorizing-liveengage-applications-methods-authorization-request.html) as it is needed to create the access token.
 

@@ -1,5 +1,5 @@
 ---
-pagename: LiveEngage Configuration
+pagename: Conversational Cloud Configuration
 redirect_from:
   - consumer-experience-voice-video-ios-requirements.html
   - voice-and-video-for-ios-sdk-beta-liveengage-configuration-agent-workspace-requirements.html
@@ -10,11 +10,12 @@ redirect_from:
   - consumer-experience-voice-video-ios-register-app.html
   - voice-and-video-for-ios-sdk-beta-liveengage-configuration-register-your-app.html
   - voice-and-video-for-ios-sdk-beta-liveengage-configuration.html
+  - mobile-app-messaging-sdk-for-ios-voice-and-video-for-ios-sdk-beta-liveengage-configuration.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Voice and Video for iOS SDK (BETA)
-permalink: mobile-app-messaging-sdk-for-ios-voice-and-video-for-ios-sdk-beta-liveengage-configuration.html
+permalink: mobile-app-messaging-sdk-for-ios-voice-and-video-for-ios-sdk-beta-conversational-cloud-configuration.html
 indicator: messaging
 ---
 <div class="important">
@@ -25,7 +26,7 @@ the CoApp product is deprecated and will be discontinued from February 28th, 202
 
 ### Agent Workspace Requirements
 
-Your agents will be using LiveEngage from a regular web browser to make calls to your consumers. The following sections explain how to setup your Conversational Cloud account for voice & video support.
+Your agents will be using Conversational Cloud from a regular web browser to make calls to your consumers. The following sections explain how to setup your Conversational Cloud account for voice & video support.
 
 Note: Legacy systems do NOT support this feature
 
@@ -35,7 +36,7 @@ Note: Legacy systems do NOT support this feature
 | ------------- |:-------------:|:-------------|
 | Chrome | latest (>= v54)  | Windows, MacOSX, Linux |
 
-**Note**: Only web browsers listed here are supported. When using LiveEngage from an unsupported browser the feature is automatically disabled from the agent workspace.
+**Note**: Only web browsers listed here are supported. When using Conversational Cloud from an unsupported browser the feature is automatically disabled from the agent workspace.
 
 #### Required Hardware
 
@@ -49,11 +50,11 @@ Note: Legacy systems do NOT support this feature
 
 ### Account Features
 
-By default, voice & video is **not enabled** in your LiveEngage account. Please contact your LivePerson account manager to have this feature enabled for you.
+By default, voice & video is **not enabled** in your Conversational Cloud account. Please contact your LivePerson account manager to have this feature enabled for you.
 
 ### User Profiles
 
-Your agents on LiveEngage require a specific set of skills in order to use the **voice**, **video** or **In-app CoBrowse** capabilities of your account.
+Your agents on Conversational Cloud require a specific set of skills in order to use the **voice**, **video** or **In-app CoBrowse** capabilities of your account.
 
 By default, these settings are enabled for your agents role. If you wish to disable or customize them for specific **Agent Groups**, follow these steps:
 
@@ -211,7 +212,7 @@ Now delete `myvoipapp-private-key.pem` again.You should end up with two remainin
   * `myvoipapp-certificate.pem`
   * `myvoipapp-private-key-nopass.pem`
 
-This is it. The created files are required to be uploaded to LivePerson's App Configurations of your LiveEngage Account. To learn how to upload your certificates, please continue reading [Register Your App](#register-your-app).
+This is it. The created files are required to be uploaded to LivePerson's App Configurations of your Conversational Cloud Account. To learn how to upload your certificates, please continue reading [Register Your App](#register-your-app).
 
 
 #### Push via Tokens
@@ -222,7 +223,7 @@ Push notifications using tokens are not yet supported. Please contact your LiveP
 
 ### Register Your App
 
-In order to use your app with your LiveEngage account, you need to register it. The steps below are mandatory to receive push-call notifications on iOS.
+In order to use your app with your Conversational Cloud account, you need to register it. The steps below are mandatory to receive push-call notifications on iOS.
 
 #### Register your App ID
 

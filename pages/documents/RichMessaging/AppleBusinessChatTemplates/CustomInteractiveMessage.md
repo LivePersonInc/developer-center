@@ -20,7 +20,7 @@ For how to create an iMessage app / extension, see the Apple documentation [here
 
 The structured content body will allow you to define the layout of the bubble representation in the agent workspace transcript as structured content basic elements.
 
-Please note that the structured content body layout will **not** be represented on the consumer device. The body will help you to create a visual representation in LiveEngage for conversational context, transcript and historic records, as well as ease of use for agents.
+Please note that the structured content body layout will **not** be represented on the consumer device. The body will help you to create a visual representation in Conversational Cloud for conversational context, transcript and historic records, as well as ease of use for agents.
 
 In order to allow you to report on the number of times an iMessage app was sent from an agent widget during a conversation, make sure to add a unique identifier in the structured content body for each type of iMessage app you use. This will allow you to search transcripts and track how many times a specific app was sent.
 
@@ -237,7 +237,7 @@ In order to do this, all code is handled from within your Apple iMessage app / e
 
 5. [Send](https://developer.apple.com/documentation/messages/msconversation/2909036-send) the MSMessage object from your iMessage app / extension.
 
-LiveEngage will recieve this message and display the text in the LiveEngage conversation.
+Conversational Cloud will recieve this message and display the text in the Conversational Cloud conversation.
 
 ### Some Notes About Custom iMessage App Support
 

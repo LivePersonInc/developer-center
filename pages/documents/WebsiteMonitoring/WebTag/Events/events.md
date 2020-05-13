@@ -143,7 +143,7 @@ This event triggers when the conversation data was changed, for example the conv
 | engagementId | The engagement ID that was clicked to open the chat. | ALPHA_NUMERIC | |
 | campaignId | The engagement’s campaign ID. | ALPHA_NUMERIC | |
 | language | The conversation language. | string | An [ISO 639-1 Alpha-2](http://openid.net/specs/openid-connect-core-1_0.html#ISO639-1) language code in lowercase and an [ISO 3166-1 Alpha-2](http://openid.net/specs/openid-connect-core-1_0.html#ISO3166-1) country code in uppercase, separated by a dash. For example, en-US or fr-CA. |
-| engagementName | The engagement name as defined in LiveEngage UI. | string  | |
+| engagementName | The engagement name as defined in Conversational Cloud UI. | string  | |
 
 *Example:*
 
@@ -178,7 +178,7 @@ This event triggers when the state changes to "chatting" to show the engagement 
 
 | Name | Description | Type |
 | :--- | :--- | :--- |
-| engagementName | The engagement name as defined in LiveEngage UI | string | |
+| engagementName | The engagement name as defined in Conversational Cloud UI | string | |
 | state | The chat state ("chatting"). | string |
 
 *Example:*
@@ -253,7 +253,7 @@ This event is triggered when the flow to display the engagement has started.
 | confKey | Internal. CampaignId + EngagementId + Revision. | string | |
 | tglName | Internal. The engagement format description. | string | |
 | done | If the configuration has finished loading. | Boolean | |
-| engagementName | The engagement name as defined in LiveEngage UI. | string | |
+| engagementName | The engagement name as defined in Conversational Cloud UI. | string | |
 
 *Example:*
 

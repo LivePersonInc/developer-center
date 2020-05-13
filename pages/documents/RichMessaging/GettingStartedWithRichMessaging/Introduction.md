@@ -14,7 +14,7 @@ root-link: true
 indicator: both
 ---
 
-Rich Messaging allows you to push something more rich and interactive than just plain text to *existing* messaging channels. This is achieved by using the LiveEngage Structured Content Framework.
+Rich Messaging allows you to push something more rich and interactive than just plain text to *existing* messaging channels. This is achieved by using the Conversational Cloud Structured Content Framework.
 
 For a list of Rich Messaging capabilities for each channel, see the [Rich Messaging Channel Capabilities](getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html) table.
 
@@ -500,7 +500,7 @@ This action will be used also by the clients (the Mobile Messaging App for examp
 
 Metadata is a list of predefined objects that can be sent back to the agent / bot and be used in reporting / analysis. Metadata can be defined in the header section of the request or inside an element click object. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html).
 
-When filling out the structured content template, if the metadata `ExternalID` is supplied, it will be returned to LiveEngage when the associated action is executed.
+When filling out the structured content template, if the metadata `ExternalID` is supplied, it will be returned to Conversational Cloud when the associated action is executed.
 
 This is important for reporting on consumer interactions with the template, as well as for bot activity. A Structured Content object general ID can be defined in the <header> section of the request by using the <metadata> tag. It can also be defined for each click.
 

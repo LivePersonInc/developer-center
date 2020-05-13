@@ -11,7 +11,7 @@ order: 3
 indicator: both
 ---
 
-### LiveEngage UI
+### Conversational Cloud UI
 
 For each account, the following parameters should be defined:
 
@@ -27,7 +27,7 @@ For each account, the following parameters should be defined:
 
 *	OAuth 2.0 Client Secret (when Code Flow is used)
 
-*	JS method name and context (when LiveEngage embedded window is used in Web)
+*	JS method name and context (when Conversational Cloud embedded window is used in Web)
 
 To define the OAuth 2.0 authentication:
 

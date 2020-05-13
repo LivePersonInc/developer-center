@@ -40,7 +40,7 @@ This API supports OAuth 1.0 authentication patterns and requires SSL protocol. P
 <div class="important">The <strong>visitorId</strong> and the <strong>sid</strong> parameters referenced above are retrieved from the Web Tag. Each visitor receives from the Tag their own <strong>visitorId</strong> (also called <strong>vid</strong>) and <strong>sid</strong> (also called <strong>Session ID</strong>) which you can then retrieve and pass to this API. For more information on these events, please see the Tag documentation <a href="/lp-tag-engagement-window.html">here</a>.
 <br>
 <br>
-<strong>This method of retrieving the parameters is relevant to monitored sessions only</strong>. If you're trying to retrieve information on unmonitored sessions (for example, chat windows built by you using our APIs and not the default LiveEngage window), you'll need to use the <a href="/rt-interactions-app-engagement-overview.html">App Engagement API</a> instead, specifically the Create Session method which returns both of these parameters.</div>
+<strong>This method of retrieving the parameters is relevant to monitored sessions only</strong>. If you're trying to retrieve information on unmonitored sessions (for example, chat windows built by you using our APIs and not the default Conversational Cloud window), you'll need to use the <a href="/rt-interactions-app-engagement-overview.html">App Engagement API</a> instead, specifically the Create Session method which returns both of these parameters.</div>
 
 **Request Example**
 

@@ -12,7 +12,7 @@ indicator: messaging
 
 ### Introduction
 
-The LiveEngage Facebook Messenger connector now supports sending structured content elements via a set of templates that are rendered by Facebook. When agents or bots on LiveEngage share structured content templates, consumers will view the rendered templates via the Facebook Messenger mobile or desktop app. 
+The Conversational Cloud Facebook Messenger connector now supports sending structured content elements via a set of templates that are rendered by Facebook. When agents or bots on Conversational Cloud share structured content templates, consumers will view the rendered templates via the Facebook Messenger mobile or desktop app. 
 
 See the [Introduction to Structured Content](structured-content-introduction-to-structured-content.html) for more information.
 

@@ -13,7 +13,7 @@ permalink: push-notification-service-configuration-of-push-proxy.html
 indicator: messaging
 ---
 
-Push proxy is a feature that can be self managed in the LiveEngage console.
+Push proxy is a feature that can be self managed in the Conversational Cloud console.
 
 In order to enable the push proxy feature, you will require the following data and files:
 

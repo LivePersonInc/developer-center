@@ -42,9 +42,9 @@ To track Engagement Attributes, follow the steps described below.
 
 _Notes_:
 
-* _LiveEngage will “trim” any non-numeric characters such as dollar signs for properties that represent numbers, for example, “total”._
+* _Conversational Cloud will “trim” any non-numeric characters such as dollar signs for properties that represent numbers, for example, “total”._
 
-* _Make sure that the identifier class name or ID is unique. LiveEngage will look for your identifier on **all** of your pages._
+* _Make sure that the identifier class name or ID is unique. Conversational Cloud will look for your identifier on **all** of your pages._
 
 ### JavaScript code
 
@@ -65,4 +65,4 @@ _Notes_:
 {:start="3"}
 3. Validate the code by going to the visitor page and simulating the visitor actions that trigger an event.
 
-_Note: When LiveEngage gets a list, the system never calculates totals nor numbers of items. LiveEngage relies on the event to send that information._
+_Note: When Conversational Cloud gets a list, the system never calculates totals nor numbers of items. Conversational Cloud relies on the event to send that information._

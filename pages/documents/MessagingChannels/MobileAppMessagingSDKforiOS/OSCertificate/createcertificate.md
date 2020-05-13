@@ -74,7 +74,7 @@ Download and run the certificate. The certificate is now added to your Keychain,
 
 ### Creating both key.pem file and cert.pem file
 
-*Note: This is used when configuring LiveEngage Push Notification.*
+*Note: This is used when configuring Conversational Cloud Push Notification.*
 
 - Open the terminal and locate the folder in which you would like to save the file.
 

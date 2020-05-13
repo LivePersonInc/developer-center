@@ -15,7 +15,7 @@ indicator: messaging
 
 Web Messaging and the Mobile SDK channels now allow for Quick Replies.
 
-LiveEngage enables creating and displaying up to 24 Quick Replies per template (that is, a consumer will have up to 24 replies to choose from per template they receive).
+Conversational Cloud enables creating and displaying up to 24 Quick Replies per template (that is, a consumer will have up to 24 replies to choose from per template they receive).
 
 Each reply can have:
 
