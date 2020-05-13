@@ -23,7 +23,7 @@ Once you have the video service and accompanying html elements in place, you are
 
 * [Add widget to the agent workspace](/guides-agent-workspace-widget.html)
 
-The Agent Workspace Widget is an iframe-based service that loads your web application according to a URL configured in the LiveEngage Workspace. 
+The Agent Workspace Widget is an iframe-based service that loads your web application according to a URL configured in the Agent Workspace. 
 
 It is comprised of the following:
 

@@ -38,7 +38,7 @@ A few things you'll need to get started with this API:
 
 ### Use cases
 
-This API can be used to display context information to agents about the session, visitor and engagement in a brand’s built Agent Workspace application, examples are the click to call solution in which the voice agents are not LivePerson users or agents that don’t use LiveEngage workspace .
+This API can be used to display context information to agents about the session, visitor and engagement in a brand’s built Agent Workspace application, examples are the click to call solution in which the voice agents are not LivePerson users or agents that don’t use Agent Workspace .
 
 Example of how visitor information is displayed to agents within the LiveEngage worksapce:
 
