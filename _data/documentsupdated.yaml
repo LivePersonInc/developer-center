@@ -141,7 +141,7 @@
           - subpagename: Simple Lead Gen
           - subpagename: Simple Router
           - subpagename: Travel Notification
-          - subpagename: Maven Concierge
+          - subpagename: Conversation Orchestrator Concierge
       - pagename: Dialogs
         subpages:
           - subpagename: Dialog Basics
@@ -216,7 +216,7 @@
         subpages:
           - subpagename: Overview
           - subpagename: Tutorial
-          - subpagename: Use Maven with Your Bot
+          - subpagename: Use Conversation Orchestrator with Your Bot
           - subpagename: Using SDE attributes in Routing
       - pagename: Recommendation API
         subpages:
