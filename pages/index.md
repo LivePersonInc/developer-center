@@ -22,7 +22,7 @@ solutions with you!
     </a>
   </div>
   <div class="welcome-card">
-    <a target="_blank" href="/overview.html"> 
+    <a target="_blank" href="/first-steps.html"> 
       <img class="container-image" src="img/ic_get_started.svg"/>
       <h5 class="welcome-title">Get Started with LivePerson</h5>
       <p class="welcome-content">Start connecting to consumers over popular messaging channels and automate conversations with AI-powered bots.</p>
