@@ -220,6 +220,10 @@ You can use the ``message builder`` <i class="fa fa-magic" aria-hidden="true"></
 
 In order to retrieve the Agent's public profile during a conversation (which is useful if you're looking to display specific agent details, like agent name or picture, during the conversation), please see [this method](messaging-window-api-api-reference-get-agent-public-profile.html).
 
+### Rate-Limiting
+
+These methods are subject to Rate-Limiting policies. This means that the maximum number of concurrent requests is limited on the server side. As most incoming requests are measured in milliseconds, the likelihood of your requests actually encountering an issue is rare; however, if you do encounter a limit, you can expect to receive a 429 status code in an error response from the server.
+
 ### Other APIs
 
 * [Consumer Token Creation](common-consumer-token-creation.html)
