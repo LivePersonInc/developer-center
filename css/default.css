@@ -1077,6 +1077,7 @@ a.loginText {
     padding-left: 40px;
     text-align: right;
     display: block;
+    min-width: 200px;
     max-height: 360px;
     overflow-y: auto;
     margin-top: 154px;
