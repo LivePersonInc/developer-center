@@ -1084,11 +1084,19 @@ a.loginText {
     /* color: var(--secondary-black); */
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 12px;
-    color: var(--navy);
+    color: var(--dark-gray);
+    font-weight: bold;
+    line-height: 16px;
 }
 
 .jumpToAnchor {
     text-align: right;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--navy-gray);
 }
 
 /*
