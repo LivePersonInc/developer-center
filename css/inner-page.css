@@ -378,6 +378,9 @@ ul.mysidebar.nav {
   text-decoration: none;
   position: fixed;
   height: 75vh;
+  width: 20%;
+  min-width: 300px;
+
   overflow-y: auto;
   overflow-x: hidden;
   overflow-x: hidden;
