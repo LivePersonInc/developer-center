@@ -204,7 +204,7 @@ ul.mysidebar.nav {
     background-color: var(--white);
     display: flex;
     padding-top: 2%;
-    min-width: 270px;
+    min-width: 300px;
     padding-bottom: 2%;
     margin-right: 6%;
     flex-direction: column;
@@ -762,7 +762,8 @@ a.loginText {
 }
 
 .topfolder {
-    line-height: 3.3;
+    line-height: 1.5em;
+    padding: 12px 0;
     margin-left: 35px
 }
 
@@ -1127,6 +1128,7 @@ a.loginText {
 .externalIconImage {
     margin: 0px;
     margin-bottom: 4px;
+    padding-right: 5px;
 }
 
 .sidebarbutton {
