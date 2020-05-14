@@ -83,8 +83,8 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "/";
-  padding-right: 1em;
-  padding-left: 1em;
+  padding-right: 8px;
+  padding-left: 8px;
   color: #999999;
   text-decoration: none;
 }

@@ -36,8 +36,8 @@
     display: inline-flex;
     /* or 150% */
     flex: 2;
-    margin-top: 48px;
-    margin-left: 40px;
+    margin-top: 48px !important;
+    margin-left: 40px !important;
     letter-spacing: 0.01em;
 
     color: #FFFFFF;
