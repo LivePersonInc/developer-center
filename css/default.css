@@ -179,8 +179,9 @@ code pre {
 
 .searchimage img {
     height: 24px;
-    margin-top: 10px;
-    padding-left: 28px;
+    right: -35px;
+    position: relative;
+    top: -12px;
 }
 
 ul.mysidebar.nav {
