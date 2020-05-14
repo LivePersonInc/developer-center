@@ -376,8 +376,6 @@ div#toc ul li ul li ul {
 /*left nav bar */
 ul.mysidebar.nav {
   text-decoration: none;
-  width: 20%;
-  min-width: 270px;
   position: fixed;
   height: 75vh;
   overflow-y: auto;
