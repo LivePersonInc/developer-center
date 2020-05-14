@@ -22,6 +22,10 @@ a:focus {
     color: var(--darker-gray);
 }
 
+p {
+    margin: 0 0 16px !important;
+}
+
 .termsUseHighlight {
     font-weight: bold;
     color: var(--dark-gray) !important;
@@ -1096,6 +1100,7 @@ a.loginText {
     font-weight: bold;
     font-size: 12px;
     line-height: 16px;
+    margin-bottom: 24px;
     color: var(--navy-gray);
 }
 
