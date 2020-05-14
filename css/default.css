@@ -1413,6 +1413,14 @@ input#csds-button {
         z-index: 10;
         background: white;
     }
+
+
+}
+
+@media screen and (max-height:900px) {
+    ul.mysidebar.nav {
+        height: 40vh;
+    }
 }
 
 @media screen and (max-width:500px) {
