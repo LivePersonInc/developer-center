@@ -105,7 +105,7 @@ img.card-container {
     flex: 3;
 }
 
-#create-button {
+.create-button {
     border-radius: 25px;
     text-align: center;
     padding: 12px;
@@ -114,6 +114,10 @@ img.card-container {
     color: white;
     border: 1px solid white;
     background-color: inherit;
+}
+
+.create-button:hover {
+    background: rgba(255, 255, 255, 0.16);
 }
 
 .free-trial-header {

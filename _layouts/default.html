@@ -20,9 +20,9 @@
     </div>
     <div id="searchHeader">
       <div class="searchimage">
-        <img alt="LivePerson Knowledge Center" src="img/searchicon.png" />
+        <img alt="LivePerson Search Developer Center" src="img/search_icon.svg" />
       </div>
-      <input type="search" id="aa-search-input" class="aa-input-search" placeholder="        What are you looking for?"
+      <input type="search" id="aa-search-input" class="aa-input-search" placeholder="What are you looking for?"
         name="search" autocomplete="on" />
     </div>
     <div id="loginHeader">
@@ -74,11 +74,14 @@
   </div>
 
   <div id="defaultfooter" class="defaultfooter">
-    <span> © {{ "now" | date: "%Y" }} LivePerson Inc. All Rights Reserved &#160; <a
-        href="https://www.liveperson.com/policies/copyright" class="termsUseHighlight" target="_blank"> &#8226;
-        Copyright &#160;
-        <a href="https://www.liveperson.com/policies/apitou" class="termsUseHighlight" target="_blank"> &#8226; Terms
-          of Use
+    <span style="display:inline-flex"> © {{ "now" | date: "%Y" }} LivePerson Inc. All Rights Reserved &#160;
+      <a href="https://www.liveperson.com/policies/copyright" class="termsUseHighlight" target="_blank"> &#8226;
+        <span class="footer-tags">
+          Copyright
+        </span>
+        <a href="https://www.liveperson.com/policies/apitou" class="termsUseHighlight" target="_blank"> &#8226;
+          <span class="footer-tags">Terms of Use
+          </span>
         </a>
     </span>
   </div>

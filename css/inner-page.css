@@ -142,6 +142,10 @@ pre code {
   max-width: initial;
 }
 
+table tbody tr:last-child {
+  border-bottom: 1px solid var(--navy-mid-gray) !important;
+}
+
 .post-content table td:first-child {
   width: unset;
   /*max-width: 150px;*/
@@ -180,9 +184,6 @@ pre code {
   border-bottom: 1px solid var(--navy-light-gray) !important;
 }
 
-table tbody tr:last-child {
-  border-bottom: 1px solid var(--navy-mid-gray) !important;
-}
 
 
 
@@ -375,10 +376,11 @@ div#toc ul li ul li ul {
 /*left nav bar */
 ul.mysidebar.nav {
   text-decoration: none;
-  width: 20%;
-  min-width: 270px;
   position: fixed;
   height: 75vh;
+  width: 20%;
+  min-width: 300px;
+
   overflow-y: auto;
   overflow-x: hidden;
   overflow-x: hidden;
@@ -585,18 +587,26 @@ div.sidebarTitle-holder {
   margin-top: 60px;
 }
 
+.footer-tags {
+  display: inline-flex !important;
+  padding: 0px 8px 0px 8px;
+}
+
 /*CSS for general styling of Chat/Messaging Indicator*/
 .indicator {
-  color: #8b8b8b;
-  background-color: #f2f1f2;
-  font-size: 12px;
-  padding: 2px 4px;
-  margin-bottom: -2px;
-  font-family: "Roboto", "Roboto Slab", Arial, Helvetica, sans-serif;
-  cursor: default;
-  height: 20px;
+
+  color: var(--navy-mid-gray);
+  background: #F7F8FA;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 14px;
+  text-transform: uppercase;
+  padding: 3px 8px;
   align-self: center;
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .indicator:nth-child(3) {
@@ -608,12 +618,11 @@ div.sidebarTitle-holder {
 .breadcrumbs {
   background-color: white;
   border-radius: 0;
-  margin-bottom: 0;
-  margin-top: -39px;
+  margin-bottom: 8px;
   min-height: 42px;
-  padding-bottom: 5px;
+
   padding-left: 0;
-  padding-top: 26px;
+  padding-top: 8px;
   z-index: 10;
 }
 
@@ -889,13 +898,3 @@ iframe {
   }
 
 }
-
-/* @media screen and (max-width:500px) {
-  .ul.mysidebar.nav {
-    position: relative;
-  }
-
-  ul.mysidebar.nav {
-    height: 171vh;
-  }
-} */

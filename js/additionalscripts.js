@@ -189,7 +189,7 @@ function navigateContent(url) {
 // this function checks if root page and disables the jumpto and fixes padding
 function handleUniquePages() {
 	var is_root = location.pathname == "/";
-	var is_getting_started = location.pathname == "/overview.html";
+	var is_getting_started = location.pathname == "/first-steps.html";
 	console.log('checking if is root folder');
 	var jumpto = $('#jumpto');
 	var sidebar = $('#defaultsidebar');
@@ -210,10 +210,6 @@ function handleUniquePages() {
 		sidebar.css("margin-right", "6%");
 		suggestButton.css("display", "flex");
 		indicatorContainer.css("display", "flex");
-	}
-	if (is_getting_started) {
-		console.log('On the getting started page');
-		document.getElementById('document-title-h1').innerText = "Getting Started";
 	}
 }
 //a function to create copy buttons on all code blocks
