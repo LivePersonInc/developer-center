@@ -37,13 +37,13 @@ Available with IBM Watson:
 * Chinese, Traditional (Taiwan)
 * Dutch (Netherlands)
 * English (non-region-specific, Australia, Canada, Great Britain, India, United States)
-* French (non-region-specific, Canada, France)
+* French (Canada, France)
 * German (Germany)
 * Italian (Italy)
 * Japanese (Japan)
 * Korean (Korea)
 * Portuguese (Brazil)
-* Spanish (non-region-specific, Mexico, Spain)
+* Spanish (Mexico, Spain)
 
 Available with Google Dialogflow:
 
