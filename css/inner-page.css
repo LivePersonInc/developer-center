@@ -388,7 +388,7 @@ ul.mysidebar.nav {
 
 }
 
-.ul.mysidebar.nav::-webkit-scrollbar {
+/* .ul.mysidebar.nav::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 10px;
 }
@@ -397,7 +397,7 @@ ul.mysidebar.nav {
   border-radius: 5px;
   background-color: rgba(0, 0, 0, .5);
   -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-}
+} */
 
 
 ul.mysidebar>li.folder ul {
