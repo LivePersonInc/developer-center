@@ -1400,16 +1400,15 @@ input#csds-button {
     width: 24px
 }
 
-
+/* 
 @media screen and (max-width:1024px) {
     #defaultcontent {
-        /* min-width: 900px; */
         z-index: 10;
         background: white;
     }
 
 
-}
+} */
 
 /* @media screen and (max-height:900px) {
     ul.mysidebar.nav {
@@ -1430,8 +1429,8 @@ input#csds-button {
     }
 } */
 
-/* @media screen and (max-width:1300px) {
+@media screen and (max-width:1300px) {
     ul.mysidebar.nav {
         position: relative !important;
     }
-} */
+}
