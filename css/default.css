@@ -1427,3 +1427,8 @@ input#csds-button {
         display: none;
     }
 } */
+@media screen and (max-height:900px) {
+    ul.mysidebar.nav {
+        position: relative !important;
+    }
+}
