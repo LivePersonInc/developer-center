@@ -194,7 +194,7 @@ ul.mysidebar.nav {
 }
 
 .defaultsidebar {
-    flex: 1;
+
     background-color: var(--white);
     display: flex;
     padding-top: 2%;
@@ -207,7 +207,7 @@ ul.mysidebar.nav {
 .defaultcontent {
     display: flex;
     padding-left: 42px;
-    /* margin-bottom: 80px; */
+    margin-bottom: 80px;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
     flex: 3;
