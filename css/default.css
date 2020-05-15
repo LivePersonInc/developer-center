@@ -163,6 +163,7 @@ code pre {
     margin-top: 90px;
     min-height: calc(100vh - 58px);
     display: flex;
+    min-width: 1300px;
 }
 
 .searchimage {
@@ -193,6 +194,7 @@ ul.mysidebar.nav {
 }
 
 .defaultsidebar {
+    flex:1;
     background-color: var(--white);
     display: flex;
     padding-top: 2%;
@@ -1064,15 +1066,9 @@ a.loginText {
 }
 
 #anchorlist {
-    padding-left: 40px;
+    margin-top: 90px;
+    margin-right:100px;
     text-align: right;
-    display: block;
-    min-width: 200px;
-    max-height: 360px;
-    overflow-y: auto;
-    margin-top: 154px;
-    position: fixed;
-    margin-right: 6%;
 }
 
 #anchorlist a {
@@ -1397,7 +1393,7 @@ input#csds-button {
 .sidebarSVG {
     width: 24px
 }
-
+/* 
 @media screen and (max-width:1024px) {
     #defaultcontent {
         min-width: 900px;
@@ -1406,9 +1402,9 @@ input#csds-button {
     }
 
 
-}
+} */
 
-@media screen and (max-height:900px) {
+/* @media screen and (max-height:900px) {
     ul.mysidebar.nav {
         height: 40vh;
     }
@@ -1425,4 +1421,4 @@ input#csds-button {
     #jumpto {
         display: none;
     }
-}
+} */

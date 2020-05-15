@@ -784,7 +784,7 @@ pre code {
 }
 
 
-@media (max-width: 1190px) {
+/* @media (max-width: 1190px) {
   div.sidebarTitle {
     margin-top: 68px;
   }
@@ -794,10 +794,11 @@ pre code {
   }
 
   div.inside-page-content,
-  .inside-page-content .h2 {}
-
+  .inside-page-content .h2 {} 
 
 }
+*/
+
 
 
 .contactusBtn {
@@ -878,7 +879,7 @@ iframe {
   visibility: none;
 }
 
-@media screen and (max-width: 1440px) {
+/* @media screen and (max-width: 1440px) {
   .post-content table {
     width: 130%;
   }
@@ -897,4 +898,4 @@ iframe {
     margin-bottom: 25px;
   }
 
-}
+} */
