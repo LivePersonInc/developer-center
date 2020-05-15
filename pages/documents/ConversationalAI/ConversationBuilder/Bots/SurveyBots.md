@@ -232,9 +232,7 @@ If you're an existing Bot Studio user with survey bots built in Bot Studio, be a
 
 LivePerson recommends the following workflow:
 
-1. Request that LivePerson enable the Survey Bots feature in Conversation Builder, as discussed in *Prerequisite Steps* above.
+1. Request that LivePerson enable the Post-Conversation Survey Bots feature in Conversation Builder. **Note: Once this is done, your Bot Studio survey bots will no longer be triggered.**
 2. In Conversation Builder, manually recreate your survey bots. (If you're developing in your Production environment, which is not common and not recommended, assign the survey bots to "test" skills that aren't used in a production campaign, so you can test them before assigning production skills to them.)
 3. Test the survey bots.
 4. In Conversation Builder, release the new survey bots to your Production environment.
-
-    Once you perform all these steps, all survey conversations will be routed to the Conversation Builder bots.
