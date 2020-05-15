@@ -388,6 +388,17 @@ ul.mysidebar.nav {
 
 }
 
+.ul.mysidebar.nav::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+.ul.mysidebar.nav::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
 
 ul.mysidebar>li.folder ul {
   display: none;
@@ -552,8 +563,8 @@ ul.mysidebar.nav li ul li {
 ul.mysidebar.nav ul li a {
   border-top: none;
   padding-left: 0px;
-  margin-top: 10px !important;
-  margin-bottom: 10px;
+  margin-top: 16px !important;
+  margin-bottom: 16px;
 }
 
 .innerList {
