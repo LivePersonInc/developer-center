@@ -511,6 +511,12 @@ ul.mysidebar.nav li.activepage a:hover {
 .spacebetweenHyperlink {
   justify-content: space-between;
   display: flex !important;
+  color: var(--dark-gray);
+  font-weight: bold;
+}
+
+.spacebetweenHyperlink:hover {
+  color: var(--darker-gray);
 }
 
 .mysidebar.nav li.folder>a {
