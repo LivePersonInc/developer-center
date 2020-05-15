@@ -32,10 +32,7 @@ LivePerson recommends that —before you create a bot— you set up the [domains
 
     * **Name**: Enter a name that’s concise and clear. Make sure abbreviations can be understood, and consider adding a prefix or suffix to indicate the environment (Dev, Prod, etc.) or language (En, Sp, Fr, etc.) if applicable.
     * **Description**: Enter a description that’s meaningful to you and others. Consider including language that identifies the bot's goal and key behaviors
-    * **Bot Language**: Select the language that the bot will use to respond. For a complex bot, i.e., one that will use an intent [domain](intent-builder-domains.html) for intent matching, specify here the language of the domain that will be associated with the bot. If you don't, errors will occur during NLU processing. For a simple bot, i.e., one that won't use an intent domain, specify here the bot's language. In this latter case, the bot will need to use pattern matching to handle the user response.
-
-        To set this value, select a language from the list. If you don't see the language that you want, select "Other" and enter the language name. This value can't be changed after you create the bot.
-
+    * **Bot Language**: This setting identifies the language that the bot will use to respond. Select the language based on how you'll train the bot: If you will use an intent domain, you must select the language of the domain that will be associated with the bot. For example, if the intent domain uses English, select "English" here. If these languages don't match, errors during NLU processing will occur. Alternatively, if the bot will use only pattern matching, you can select or enter any language.
     * **Bot Group**: Optionally select the [bot group](conversation-builder-bots-bot-groups.html) for the bot. A bot can be a member of exactly one group.
 
 5. Build out the bot, completing and adding the necessary [dialogs](conversation-builder-dialogs-dialog-basics.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the bot using the Preview tool.
