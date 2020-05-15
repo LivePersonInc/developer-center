@@ -55,14 +55,10 @@ p {
 }
 
 #logoHeader {
-    flex: 1;
     display: flex;
+    width:310px;
     padding-top: 5px;
-    width: 20%;
-    margin-right: 8%;
     padding-left: 32px;
-    max-width: 36.5rem;
-    min-width: 270px;
 }
 
 .sitelogo {
@@ -86,6 +82,7 @@ p {
 }
 
 #searchHeader {
+    margin-left: 24px;
     flex: 3;
 }
 
@@ -146,12 +143,6 @@ code pre {
     display: none
 }
 
-.defaultcontent {
-    margin-bottom: 80px;
-    flex-direction: column;
-    -webkit-font-smoothing: antialiased
-}
-
 .defaultfooter {
     padding: 19px 0;
     background-color: var(--lighter-gray);
@@ -183,14 +174,9 @@ code pre {
 
 .searchimage img {
     height: 24px;
-<<<<<<< HEAD
     right: -35px;
     position: relative;
     top: -12px;
-=======
-    margin-top: 10px;
-    padding-left: 34px;
->>>>>>> 4949c3d422f44ed79ff07edd0f83f3eb90ba512b
 }
 
 ul.mysidebar.nav {
@@ -210,18 +196,16 @@ ul.mysidebar.nav {
     background-color: var(--white);
     display: flex;
     padding-top: 2%;
-    min-width: 300px;
+    width:310px;
     padding-bottom: 2%;
-    margin-right: 6%;
     flex-direction: column;
-    flex: 1;
 }
 
 
 
 .defaultcontent {
     display: flex;
-    margin-left: 6rem;
+    padding-left: 42px;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
     flex: 3;
