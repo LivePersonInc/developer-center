@@ -201,8 +201,6 @@ ul.mysidebar.nav {
     flex-direction: column;
 }
 
-
-
 .defaultcontent {
     display: flex;
     padding-left: 42px;
@@ -217,7 +215,6 @@ ul.mysidebar.nav {
     color: var(--darker-gray);
     margin-bottom: -25px;
 }
-
 
 .searchHighlight {
     background: rgba(0, 119, 255, 0.1)
