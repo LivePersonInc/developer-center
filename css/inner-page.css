@@ -394,6 +394,8 @@ ul.mysidebar>li.folder ul {
   list-style: none;
   width: 100%;
   line-height: 1.5;
+  margin-top: 12px;
+  margin-left: 12px;
 }
 
 ul.mysidebar>li.folder ul.folderactive {

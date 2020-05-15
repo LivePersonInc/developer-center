@@ -194,7 +194,7 @@ ul.mysidebar.nav {
 }
 
 .defaultsidebar {
-    flex:1;
+    flex: 1;
     background-color: var(--white);
     display: flex;
     padding-top: 2%;
@@ -833,7 +833,8 @@ a.loginText {
     font-size: 14px !important;
     font-family: "Roboto", Arial, Helvetica, sans-serif !important;
     padding-left: 19px;
-    margin-bottom: 2px
+    margin-bottom: 2px;
+    list-style: none;
 }
 
 .sololink {
@@ -1067,7 +1068,7 @@ a.loginText {
 
 #anchorlist {
     margin-top: 90px;
-    margin-right:100px;
+    margin-right: 100px;
     text-align: right;
 }
 
@@ -1095,6 +1096,9 @@ a.loginText {
  make sure background is white */
 .highlightlink {
     background-color: white !important;
+    color: var(--dark-gray) !important;
+    font-weight: bold;
+
 }
 
 .repositionSafariSidebar {
@@ -1393,6 +1397,7 @@ input#csds-button {
 .sidebarSVG {
     width: 24px
 }
+
 /* 
 @media screen and (max-width:1024px) {
     #defaultcontent {
