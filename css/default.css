@@ -215,6 +215,8 @@ ul.mysidebar.nav {
 
 .defaultfooter {
     display: flex;
+    min-width: 1300px;
+    width: 100%;
     background-color: var(--lighter-gray);
     color: var(--darker-gray);
     margin-bottom: -25px;
@@ -1427,7 +1429,8 @@ input#csds-button {
         display: none;
     }
 } */
-@media screen and (max-height:900px) {
+
+@media screen and (max-width:1300px) {
     ul.mysidebar.nav {
         position: relative !important;
     }
