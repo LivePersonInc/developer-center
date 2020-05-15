@@ -163,6 +163,7 @@ code pre {
     margin-top: 90px;
     min-height: calc(100vh - 58px);
     display: flex;
+    min-width: 1300px;
 }
 
 .searchimage {
@@ -193,6 +194,7 @@ ul.mysidebar.nav {
 }
 
 .defaultsidebar {
+    flex: 1;
     background-color: var(--white);
     display: flex;
     padding-top: 2%;
@@ -213,6 +215,8 @@ ul.mysidebar.nav {
 
 .defaultfooter {
     display: flex;
+    min-width: 1300px;
+    width: 100%;
     background-color: var(--lighter-gray);
     color: var(--darker-gray);
     margin-bottom: -25px;
@@ -831,7 +835,8 @@ a.loginText {
     font-size: 14px !important;
     font-family: "Roboto", Arial, Helvetica, sans-serif !important;
     padding-left: 19px;
-    margin-bottom: 2px
+    margin-bottom: 2px;
+    list-style: none;
 }
 
 .sololink {
@@ -1064,15 +1069,9 @@ a.loginText {
 }
 
 #anchorlist {
-    padding-left: 40px;
+    margin-top: 90px;
+    margin-right: 100px;
     text-align: right;
-    display: block;
-    min-width: 200px;
-    max-height: 360px;
-    overflow-y: auto;
-    margin-top: 154px;
-    position: fixed;
-    margin-right: 6%;
 }
 
 #anchorlist a {
@@ -1099,6 +1098,9 @@ a.loginText {
  make sure background is white */
 .highlightlink {
     background-color: white !important;
+    color: var(--dark-gray) !important;
+    font-weight: bold;
+
 }
 
 .repositionSafariSidebar {
@@ -1398,6 +1400,7 @@ input#csds-button {
     width: 24px
 }
 
+/* 
 @media screen and (max-width:1024px) {
     #defaultcontent {
         min-width: 900px;
@@ -1406,9 +1409,9 @@ input#csds-button {
     }
 
 
-}
+} */
 
-@media screen and (max-height:900px) {
+/* @media screen and (max-height:900px) {
     ul.mysidebar.nav {
         height: 40vh;
     }
@@ -1424,5 +1427,11 @@ input#csds-button {
 
     #jumpto {
         display: none;
+    }
+} */
+
+@media screen and (max-width:1300px) {
+    ul.mysidebar.nav {
+        position: relative !important;
     }
 }

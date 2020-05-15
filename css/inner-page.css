@@ -394,6 +394,8 @@ ul.mysidebar>li.folder ul {
   list-style: none;
   width: 100%;
   line-height: 1.5;
+  margin-top: 12px;
+  margin-left: 12px;
 }
 
 ul.mysidebar>li.folder ul.folderactive {
@@ -509,6 +511,12 @@ ul.mysidebar.nav li.activepage a:hover {
 .spacebetweenHyperlink {
   justify-content: space-between;
   display: flex !important;
+  color: var(--dark-gray);
+  font-weight: bold;
+}
+
+.spacebetweenHyperlink:hover {
+  color: var(--darker-gray);
 }
 
 .mysidebar.nav li.folder>a {
@@ -784,7 +792,7 @@ pre code {
 }
 
 
-@media (max-width: 1190px) {
+/* @media (max-width: 1190px) {
   div.sidebarTitle {
     margin-top: 68px;
   }
@@ -794,10 +802,11 @@ pre code {
   }
 
   div.inside-page-content,
-  .inside-page-content .h2 {}
-
+  .inside-page-content .h2 {} 
 
 }
+*/
+
 
 
 .contactusBtn {
@@ -878,7 +887,7 @@ iframe {
   visibility: none;
 }
 
-@media screen and (max-width: 1440px) {
+/* @media screen and (max-width: 1440px) {
   .post-content table {
     width: 130%;
   }
@@ -897,4 +906,4 @@ iframe {
     margin-bottom: 25px;
   }
 
-}
+} */

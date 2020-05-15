@@ -54,7 +54,7 @@ solutions with you!
     </div>
     <div id="free-trial-button-welcome">
       <a target="_blank" href="https://developers.liveperson.com/register.html">
-        <button class="create-button">Create account</button>
+        <button class="create-button">Start Free Trial</button>
       </a>
     </div>
 </div>
