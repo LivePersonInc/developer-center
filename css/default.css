@@ -56,7 +56,7 @@ p {
 
 #logoHeader {
     display: flex;
-    width:310px;
+    width: 310px;
     padding-top: 5px;
     padding-left: 32px;
 }
@@ -196,7 +196,7 @@ ul.mysidebar.nav {
     background-color: var(--white);
     display: flex;
     padding-top: 2%;
-    width:310px;
+    width: 310px;
     padding-bottom: 2%;
     flex-direction: column;
 }
@@ -204,6 +204,7 @@ ul.mysidebar.nav {
 .defaultcontent {
     display: flex;
     padding-left: 42px;
+    margin-bottom: 80px;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
     flex: 3;
