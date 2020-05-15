@@ -36,7 +36,7 @@
     display: inline-flex;
     /* or 150% */
     flex: 2;
-    margin-top: 48px !important;
+    margin-top: 40px !important;
     margin-left: 40px !important;
     letter-spacing: 0.01em;
 
@@ -78,7 +78,7 @@
 }
 
 .play-icon {
-    margin-top: 48px;
+    margin-top: 40px;
     flex: 1;
     width: 48px;
     height: 48px;
