@@ -24,18 +24,19 @@ This API layer of abstraction allows you to choose from the following NLU engine
 - IBM Watson
 
 {: .important}
-If you choose LivePerson's native NLU, no changes need to be made. This engine is already configured and set up by default.
+If you choose LivePerson's native NLU, no setup work needs to be done to connect the NLU engine to your domain in Intent Builder. Third-party providers require an additional setup process, which is outlined farther below on this page.
 
 ### Language support
 
 LivePerson NLU supports intent detection for English and Spanish.
 
-Available with IBM Watson or Google Dialogflow:
-
+Available with IBM Watson:
+ 
+* Arabic
 * Chinese, Simplified (China)
 * Chinese, Traditional (Taiwan)
 * Dutch (Netherlands)
-* English (Australia, Canada, Great Britain, India, United States)
+* English (non-region-specific, Australia, Canada, Great Britain, India, United States)
 * French (Canada, France)
 * German (Germany)
 * Italian (Italy)
@@ -43,7 +44,31 @@ Available with IBM Watson or Google Dialogflow:
 * Korean (Korea)
 * Portuguese (Brazil)
 * Spanish (Mexico, Spain)
+ 
+Available with Google Dialogflow:
+ 
+* Chinese, Cantonese (Hong Kong)
+* Chinese, Simplified (China)
+* Chinese, Traditional (Taiwan)
+* Danish
+* Dutch (Netherlands)
+* English (non-region-specific, Australia, Canada, Great Britain, India, United States)
+* French (non-region-specific, Canada, France)
+* German (Germany)
+* Hindi
+* Indonesian
+* Italian (Italy)
+* Japanese (Japan)
+* Korean (Korea)
+* Norwegian
+* Polish
+* Portuguese (Brazil, Portugal)
+* Russian
+* Spanish (non-region-specific, Latin America, Mexico, Spain)
+* Swedish
+* Thai
 * Turkish (Turkey)
+* Ukranian
 
 ### LivePerson's NLU engine
 
@@ -62,7 +87,6 @@ Key characteristics include:
     In contrast, NLU v2 is more generalized; it can handle a general set of user questions and still perform well. 
 
 * From an NLU processing perspective, performs well regardless of the number of intents and training phrases involved. However, if you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
-* Recommended over NLU v2 if a domain has a lot of entities due to better processing of the entities.
 * Doesn't require the model to be trained, which can save time.
 * Can't be used with LiveIntent.
 * Supports English and Spanish.

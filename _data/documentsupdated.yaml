@@ -126,7 +126,7 @@
       - pagename: Bots
         subpages:
           - subpagename: Custom Bots
-         # - subpagename: Survey Bots
+          - subpagename: Post-Conversation Survey Bots
           - subpagename: Bot Basics
           - subpagename: Bot Groups
           - subpagename: Bot-to-Bot Transfers
@@ -187,6 +187,7 @@
           - subpagename: Manage Conversation Flow
           - subpagename: Log & Debug
           - subpagename: Manage the Context Session Store
+          - subpagename: askMaven
           - subpagename: Deprecated Functions
       - pagename: Testing & Deployment
         subpages:
