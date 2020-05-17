@@ -1062,7 +1062,8 @@ acSurveyRevision| The AC form revision.                        | string     |
       "intents": [
         {
           "selectedClassification": {
-            "intentName": "other--other--n_a",
+            "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
+            "intentLabel": "ask about discount or promotion",
             "confidenceScore": 1,
             "versions": [
               {
@@ -1077,7 +1078,8 @@ acSurveyRevision| The AC form revision.                        | string     |
           },
           "allClassifications": [
             {
-              "intentName": "other--other--n_a",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
+              "intentLabel": "ask about discount or promotion",
               "confidenceScore": 1,
               "versions": [
                 {
@@ -1091,7 +1093,8 @@ acSurveyRevision| The AC form revision.                        | string     |
               ]
             },
             {
-              "intentName": "billing_and_payment--payment_arrangement--set-up_payment_arrangement",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b59",
+              "intentLabel": "ask about fees",
               "confidenceScore": 0,
               "versions": [
                 {
@@ -1109,7 +1112,8 @@ acSurveyRevision| The AC form revision.                        | string     |
         },
         {
           "selectedClassification": {
-            "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information",
+            "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
+            "intentLabel": "ask about discount or promotion",
             "confidenceScore": 0.908,
             "versions": [
               {
@@ -1124,8 +1128,9 @@ acSurveyRevision| The AC form revision.                        | string     |
           },
           "allClassifications": [
             {
-              "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
               "confidenceScore": 0.908,
+              "intentLabel": "ask about discount or promotion",
               "versions": [
                 {
                   "modelName": "sic",
@@ -1138,7 +1143,8 @@ acSurveyRevision| The AC form revision.                        | string     |
               ]
             },
             {
-              "intentName": "other--other--n_a",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b59",
+              "intentLabel": "ask about fees",
               "confidenceScore": 0.265,
               "versions": [
                 {
@@ -1152,8 +1158,9 @@ acSurveyRevision| The AC form revision.                        | string     |
               ]
             },
             {
-              "intentName": "billing_and_payment--billing_and_payment_support--dispute_or_fix_a_bill",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
               "confidenceScore": 0.224,
+              "intentLabel": "ask about discount or promotion",
               "versions": [
                 {
                   "modelName": "sic",
