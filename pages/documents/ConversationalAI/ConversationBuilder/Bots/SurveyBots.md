@@ -70,7 +70,9 @@ Both outcomes are tracked and reported on as part of the Report Builder, so you 
 
 ### Prerequisite steps
 
-Before you can begin building survey bots, the feature must be enabled in Conversation Builder by LivePerson. Please contact your LivePerson account representative to enable this feature.
+If you're new to working with survey bots, before you can begin building them, the feature must be enabled in Conversation Builder by LivePerson. Please contact your LivePerson account representative to enable this feature.
+
+Conversely, if you've been using Bot Studio to create and manage survey bots, please see the FAQ section for information on how to change to doing so in Conversation Builder.
 
 ### Step 1 - Create the survey bot
 
@@ -228,11 +230,13 @@ There's no way for the consumer to indicate they want to skip the survey entirel
 
 #### I'm an existing Bot Studio user. How do I migrate to using Conversation Builder to create and manage survey bots?
 
-If you're an existing Bot Studio user with survey bots built in Bot Studio, be aware that Bot Studio and Conversation Builder cannot run side by side. You'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder. 
+If you're an existing Bot Studio user with post-conversation survey bots built in Bot Studio, the Post-Conversation Survey Bots feature is enabled in Conversation Builder by default.
+
+Be aware that Bot Studio and Conversation Builder cannot run side by side. You'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder. 
 
 LivePerson recommends the following workflow:
 
-1. In Conversation Builder, manually recreate your survey bots. (If you're developing in your Production environment, which is not common and not recommended, assign the survey bots to "test" skills that aren't used in a production campaign, so you can test them before assigning production skills to them.)
+1. In Conversation Builder, manually recreate your survey bots. (If you're developing in your Production environment, which is not common and not recommended, assign the survey bots to "test" skills that aren't used in a production campaign, so you can test them before assigning production skills to them.) 
 2. Test the survey bots.
 3. Release the new survey bots to your Production environment.
 4. Request that LivePerson switch your brand from triggering surveys from Bot Studio to surveys from Conversation Builder in actual conversations.
