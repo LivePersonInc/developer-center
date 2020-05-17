@@ -6,7 +6,7 @@ sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Scripting Functions
-permalink: conversation-builder-scripting-functions-askMaven.html
+permalink: conversation-builder-scripting-functions-askmaven.html
 indicator: both
 ---
 
