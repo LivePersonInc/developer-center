@@ -239,4 +239,4 @@ LivePerson recommends the following workflow:
 1. In Conversation Builder, manually recreate your survey bots. (If you're developing in your Production environment, which is not common and not recommended, assign the survey bots to "test" skills that aren't used in a production campaign, so you can test them before assigning production skills to them.) 
 2. Test the survey bots.
 3. Release the new survey bots to your Production environment.
-4. Request that LivePerson switch your brand from triggering surveys from Bot Studio to surveys from Conversation Builder in actual conversations.
+4. Request that LivePerson switch your brand from triggering surveys from Bot Studio to triggering surveys from Conversation Builder in actual conversations.
