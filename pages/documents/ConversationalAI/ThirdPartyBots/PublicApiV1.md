@@ -11,10 +11,11 @@ indicator:
 
 ### Introduction
 
-The following document outlines the Public API feature. This enhancement allows brands to takes actions directly on active conversations using provided API to give enriched experience for their customers. Using the API, Brands can take actions on the conversation that are not in direct response to a message passed to the bot. 
-The API allows Brands to take proactive actions on a conversation and grow the usability of a bot in handling and owning the conversational flow with the consumer. 
+The following document outlines the Public API feature. This enhancement allows brands to takes actions directly on active conversations using provided API to give enriched experience for their customers. Using the API, Brands can take actions on the conversation that are not in direct response to a message passed to the bot.
+The API allows Brands to take proactive actions on a conversation and grow the usability of a bot in handling and owning the conversational flow with the consumer.
 
 The API supports the following methods:
+
 <ul>
     <li><a href='#send-messages'>Sending Messages</a></li>
     <li><a href='#transfer-conversation'>Transfer Conversation</a></li>
@@ -148,7 +149,7 @@ This API allows The user to send The message(s) to an ongoing conversation. We s
 
 **Body**
 
-Example payload of the request with Simple Text, Pause/Delay, [Structured Content](getting-started-with-rich-messaging-introduction.html) and Quick Replies messages with [context information/metadata](messaging-agent-sdk-conversation-metadata-guide.html) and encodedMetadata.
+Example payload of the request with Simple Text, Pause/Delay, Private Text, [Structured Content](getting-started-with-rich-messaging-introduction.html) and Quick Replies messages with [context information/metadata](messaging-agent-sdk-conversation-metadata-guide.html) and encodedMetadata.
 
 {: .important}
 **Please note** Quick Replies and encodedMetadata are only supported in messaging conversations
@@ -215,6 +216,10 @@ Example payload of the request with Simple Text, Pause/Delay, [Structured Conten
         }
       ],
       "encodedMetadata": "SGVsbG8gV29ybGQh"
+    },
+    {
+    	"text" :"this is a private message",
+    	"messageAudience": "AGENTS_AND_MANAGERS"
     },
     {
       "structuredContent": {
