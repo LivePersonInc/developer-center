@@ -11,7 +11,17 @@ indicator:
 
 ### Introduction
 
-The following document outlines the Public API feature. This enhancement allows brands to takes actions directly on active conversations using provided API to give enriched experience for their customers.
+The following document outlines the Public API feature. This enhancement allows brands to takes actions directly on active conversations using provided API to give enriched experience for their customers. Using the API, Brands can take actions on the conversation that are not in direct response to a message passed to the bot. 
+The API allows Brands to take proactive actions on a conversation and grow the usability of a bot in handling and owning the conversational flow with the consumer. 
+
+The API supports the following methods:
+<ul>
+    <li><a href='#send-messages'>Sending Messages</a></li>
+    <li><a href='#transfer-conversation'>Transfer Conversation</a></li>
+    <li><a href='#close-conversation'>Close Conversation</a></li>
+    <li><a href='#set-sdes'>Set SDEs</a></li>
+    <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>    
+</ul>
 
 <div class="important">
 Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>, if you haven't already done so.<br>
