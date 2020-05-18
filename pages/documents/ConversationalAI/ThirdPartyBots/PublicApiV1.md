@@ -21,7 +21,7 @@ Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of U
 
 #### Step 1. Identify the Third-Party Bots API Domain
 
-To identify Third-Party Bots API endpoint user first need to get domain information via [Domain Retrieval Tool](/agent-domain-domain-api.html). Enter Account Id/Site Id in the Domain Retrieval Tool and The user will be able to see the Service Names and their Base URIs attached to account. Search for `botConnectorsDomain` and then map service base URI to corresponding Third-Party Bots API Domain from the table below.
+To identify the Third-Party Bots API endpoint user, first get domain information via [Domain Retrieval Tool](/agent-domain-domain-api.html). Enter Account Id/Site Id in the 'Domain Retrieval Tool' and the user will be able to see the 'Service Names' and their Base URIs relevant to the account. Search for `botConnectorsDomain` and then map service base URI to corresponding Third-Party Bots API Domain from the table below.
 
 | Service Domain                   | Third-Party Bots API Domain                      |
 | :------------------------------- | :----------------------------------------------- |
