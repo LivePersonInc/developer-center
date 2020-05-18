@@ -232,7 +232,7 @@ There's no way for the consumer to indicate they want to skip the survey entirel
 
 If you're an existing Bot Studio user with post-conversation survey bots built in Bot Studio, the Post-Conversation Survey Bots feature is enabled in Conversation Builder by default.
 
-Be aware that Bot Studio and Conversation Builder cannot run side by side. You'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder. 
+Be aware that bots in Bot Studio and Conversation Builder cannot run side by side. You'll need to manually recreate your existing Bot Studio survey bots in Conversation Builder. 
 
 LivePerson recommends the following workflow:
 
