@@ -15,6 +15,9 @@ indicator: both
 
 ### Configure bot settings
 
+{: .important}
+Post-conversation survey bots have a few, unique settings that custom bots don't have. For information on these settings, see [here](conversation-builder-bots-post-conversation-survey-bots.html#step-3---configure-the-bot-settings).
+
 **To configure bot settings**
 1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
 2. Select **Bot Settings** from the menu that appears.
@@ -28,7 +31,7 @@ Bot settings include:
 
 - **Bot Type**: Read-only. This is always Consumer Facing Bot.
 
-- **Bot Language**: Read-only. This setting determines the language-specific model for LivePerson NLU; it also supports the proper rendering of left-to-right and right-to-left languages. You specify the bot language when you create the bot, and it can’t be changed afterward.
+- **Bot Language**: Read-only. This setting identifies the language that the bot uses to respond. The language should be selected based on how the bot is trained: If the bot uses an intent domain, the bot language must be the same as the language of the domain that is associated with the bot. If these languages don't match, errors during NLU processing occur. Alternatively, if the bot uses only pattern matching, the bot language can be any language. You specify the bot language when you create the bot, and it can’t be changed afterward.
 
 - **Bot Template**: Read-only. To facilitate the rapid creation of bots, all bots are based on [templates](conversation-builder-templates-overview.html). The default template is Basic, which uses English and includes just a Welcome dialog. You select the template when you create the bot, and it can’t be changed afterward.
 
@@ -46,7 +49,7 @@ Bot settings include:
 
 - **Bot Environment**: If desired, select the set of [environment variables](conversation-builder-environment-variables.html) that you want to associate with the bot. Environment variables allow you to manage certain values and constants outside of the bot, and use of them when appropriate is considered a best practice.
 
-- **Session Length**: Select the length of the bot session, that is, how long the context of a conversation is maintained after the conversation becomes idle. If this is unset, the default of one hour is used. Be aware that there also exists a LivePerson conversation session; it is this setting, not the LivePerson setting, that determines the session length.
+- **Session Length**: Select the length of the bot session, that is, how long the context of a conversation is maintained after the conversation becomes idle. If this is unset, the default of one hour is used. Be aware that Conversation Builder maintains its own session, and LiveEngage maintains its own session. This setting only determines the length of the Conversation Builder session.
 
 - **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons.
 

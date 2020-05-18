@@ -405,7 +405,12 @@ Example:
                    {
                      "personalContact": {
                        "email": "myname@example.com",
-                       "phone": "+1 212-788-8877"
+                       "phone": "+1 212-788-8877",
+		       "address": {
+			"country": "Israel",
+			"region": "Moscow", 
+			"zipCode": 12345 
+				}
                      }
                    }
                  ]

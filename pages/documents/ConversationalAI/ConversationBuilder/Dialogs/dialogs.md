@@ -22,6 +22,7 @@ There are several types of dialogs:
 - **Fallback**: The fallback dialog is triggered when the bot doesn't recognize the consumer's message. For more on this, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 - **Disambiguation**: The disambiguation dialog is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed. For more on this, see [here](conversation-builder-dialogs-disambiguation-dialogs.html).
 - **Auto Escalation**: This type of dialog frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred. For more on this, see [here](conversation-builder-dialogs-auto-escalation-dialogs.html).
+- **Survey**: Survey dialogs can only be created in post-conversation survey bots. Use a survey dialog to define a survey. For more on this, see [here](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Context switching
 
@@ -63,29 +64,34 @@ To disable context switching at the conversation start, you can add this code to
 
 ### Close the dialog
 
-To close the current dialog, create a Text statement that contains the special string “LP_CLOSEDIALOG”.
+To close the current dialog, set the interaction's Next Step to "Close Dialog."
 
- <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keywords_lpCloseDialog.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/closeDialog_old1.png">
 
-This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
+Alternatively, add a Text statement that contains the special string "LP_CLOSEDIALOG." If the statement isn't the last interaction in the dialog, set its **Next Step** to "End Interaction" (not "Next Interaction").
 
-If this Text statement isn't the last in the dialog, set this statement's **Next Step** to "End Interaction" (not "Next Interaction").
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/closeDialog_old2.png">
 
- {: .important}
-LP_CLOSEDIALOG triggers a post-conversation survey. The specific survey that is triggered is based on the conversation's last skill.
+LP_CLOSEDIALOG is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
+
+{: .important}
+These methods for closing the dialog **do** trigger a post-conversation survey.
 
 ### Close the conversation
 
-To close the current conversation, create a Text statement that contains the special string “LP_CLOSECONVERSATION”.
+To close the current conversation, set the interaction's Next Step to "Close Conversation."
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keywords_lpCloseConversation.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/closeConvo_old1.png">
 
-This is a system message; even though it appears in the Preview window, it is not shown to the consumer when deployed.
+Alternatively, add a Text statement that contains the special string "LP_CLOSECONVERSATION." If the statement isn't the last interaction in the dialog, set its **Next Step** to "End Interaction" (not "Next Interaction").
 
-If this Text statement isn't the last in the dialog, set this statement's Next Step to "End Interaction" (not "Next Interaction").
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/closeConvo_old2.png">
+
+LP_CLOSECONVERSATION is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
 {: .important}
-LP_CLOSECONVERSATION does not trigger a post-conversation survey.
+These methods for closing the conversation **don't** trigger a post-conversation survey.
+
 
 ### Configure dialog settings
 

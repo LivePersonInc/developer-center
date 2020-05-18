@@ -10,7 +10,7 @@ permalink: conversation-builder-bot-templates-maven-concierge.html
 indicator: both
 ---
 
-The Maven Concierge Bot template in a Bot template in Conversation builder that comes pre-wired with integration to Maven AI Powered Routing and Context warehouse enabling you to setup and build personalized consumer journeys easily. 
+The Maven Concierge bot template is a bot template in Conversation builder that comes pre-wired with integration to Maven AI Powered Routing and Context Warehouse, enabling you to set up and build personalized consumer journeys easily. 
 
 The following example flow can happen with this template:
 
