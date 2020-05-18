@@ -48,7 +48,7 @@ What are custom events? [Here](conversation-builder-conversation-builder-scripti
 | Average Session Length (Deprecated) | Average of the time lapse between bot connection/disconnection to a conversation |
 | Escalations | Number of times a bot transfers a user to a different skill/agent |
 | Conversation Escalation Rate | Percentage of conversations that are transferred to a different skill/agent |
-| Messages | The number of messages sent and received by the bot. For details on this, see the Messages section in the application. |
+| Messages | The number of messages sent by the consumer and received by the bot. For details on this, see the Messages section in the application. |
 | Questions Asked | The number of intentful messages received by the bot. These are dialog starters and other intentful responses to which patterns and intents were matched. | 
 | Matched Intents | Number of questions asked that are matched with intents or Knowledge Base articles |
 | Unmatched Phrases | Number of questions asked that are not matched with intents or Knowledge Base articles |
