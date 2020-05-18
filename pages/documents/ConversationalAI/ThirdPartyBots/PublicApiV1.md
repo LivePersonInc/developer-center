@@ -31,7 +31,7 @@ To identify the Third-Party Bots API endpoint user, first get domain information
 
 #### Step 2. Get Bearer Token
 
-To get bearer token you must perform a `login` request to Third-Party Bots API Domain
+To get the bearer token you must perform a `login` request to Third-Party Bots API Domain
 
 #### Request
 
