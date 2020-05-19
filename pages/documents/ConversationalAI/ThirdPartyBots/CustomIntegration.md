@@ -111,20 +111,20 @@ A Chat interaction, on the other hand, is considered "started" when the chat is 
 
 To provide some more information and context alongside the messages to the consumer, you can define intent information via the context property. The defined intent will then be displayed in the Agent Escalation Summary Widget.
 
-| key              | value                                       | notes                        |
-| ---------------- | ------------------------------------------- | ---------------------------- |
-| intentId         | String, max len 256                         | Required                     |
-| intentName       | String, max len 256                         | Optional                     |
-| confidenceScore  | Number between 0 and 1                      | Required                     |
+| key             | value                  | notes    |
+| --------------- | ---------------------- | -------- |
+| intentId        | String, max len 256    | Required |
+| intentName      | String, max len 256    | Optional |
+| confidenceScore | Number between 0 and 1 | Required |
 
 ```javascript
 const payload = {
-  messages: ['Hi i am an intent information example'],
+  messages: ["Hi i am an intent information example"],
   context: {
-    intentId: 'intent-info-example', 
-    intentName: 'Intent information example.',
-    confidenceScore: 1
-  }
+    intentId: "intent-info-example",
+    intentName: "Intent information example.",
+    confidenceScore: 1,
+  },
 };
 ```
 
@@ -134,7 +134,7 @@ To define messages the bot should send, you need to place the messages property 
 
 ```javascript
 const payload = {
-  messages: ['Message one', 'Message two', 'Message three']
+  messages: ["Message one", "Message two", "Message three"],
 };
 ```
 
@@ -152,14 +152,14 @@ Below is an example of an payload, which changes the TTR:
 
 ```javascript
 const payload = {
-  messages: ['This conversation has been marked urgent'],
+  messages: ["This conversation has been marked urgent"],
   context: {
-    action: 'CHANGE_TTR',
+    action: "CHANGE_TTR",
     actionParameters: {
-      ttrType: 'CUSTOM',
-      value: '120'
-    }
-  }
+      ttrType: "CUSTOM",
+      value: "120",
+    },
+  },
 };
 ```
 
@@ -179,14 +179,14 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 ```javascript
 const payload = {
   messages: [
-    'Please wait will I check if we have any live agents online that can attend to you'
+    "Please wait will I check if we have any live agents online that can attend to you",
   ],
   context: {
-    action: 'TRANSFER',
+    action: "TRANSFER",
     actionParameters: {
-      skill: 'bot-escalation'
-    }
-  }
+      skill: "bot-escalation",
+    },
+  },
 };
 ```
 
@@ -207,31 +207,31 @@ Structured content can be the part of the `messages` array property and can be s
 ```javascript
 const payload = {
   messages: [
-    'Hi How are you doing?',
+    "Hi How are you doing?",
     {
       structuredContent: {
-        type: 'vertical',
+        type: "vertical",
         elements: [
           {
-            type: 'button',
+            type: "button",
             click: {
               actions: [
                 {
-                  text: 'Recommend me a movie, please',
-                  type: 'publishText'
-                }
-              ]
+                  text: "Recommend me a movie, please",
+                  type: "publishText",
+                },
+              ],
             },
-            title: 'Recommend a movie'
-          }
-        ]
+            title: "Recommend a movie",
+          },
+        ],
       },
       metadata: {
-        type: 'ExternalId',
-        id: '12345'
-      }
-    }
-  ]
+        type: "ExternalId",
+        id: "12345",
+      },
+    },
+  ],
 };
 ```
 
@@ -241,40 +241,40 @@ You can send a single structured content by adding it to `context` variable (Leg
 
 ```javascript
 const payload = {
-  messages: ['Just some structured Content'],
+  messages: ["Just some structured Content"],
   context: {
     metadata: [
       {
-        type: 'ExternalId',
-        id: 'ABCD1234'
-      }
+        type: "ExternalId",
+        id: "ABCD1234",
+      },
     ],
     structuredContent: {
-      type: 'vertical',
+      type: "vertical",
       elements: [
         {
-          type: 'image',
-          url: 'https://i.ytimg.com/vi/zmeByDJ02mQ/hqdefault.jpg',
-          tooltip: 'image tooltip'
+          type: "image",
+          url: "https://i.ytimg.com/vi/zmeByDJ02mQ/hqdefault.jpg",
+          tooltip: "image tooltip",
         },
         {
-          type: 'text',
-          text: 'product name (Title)',
-          tooltip: 'product name (Title)'
+          type: "text",
+          text: "product name (Title)",
+          tooltip: "product name (Title)",
         },
         {
-          type: 'text',
-          text: 'product category (type)',
-          tooltip: 'product category (type)'
+          type: "text",
+          text: "product category (type)",
+          tooltip: "product category (type)",
         },
         {
-          type: 'text',
-          text: '$155.99',
-          tooltip: '$155.99'
-        }
-      ]
-    }
-  }
+          type: "text",
+          text: "$155.99",
+          tooltip: "$155.99",
+        },
+      ],
+    },
+  },
 };
 ```
 
@@ -295,60 +295,60 @@ const payload = {
     {
       structuredContent: {
         // Mandatory, this will be send as text message together with quick replies
-        message: 'Do you like Bots?',
+        message: "Do you like Bots?",
         quickReplies: {
-          type: 'quickReplies',
+          type: "quickReplies",
           itemsPerRow: 8,
           replies: [
             {
-              type: 'button',
-              tooltip: 'yes i do',
-              title: 'yes',
+              type: "button",
+              tooltip: "yes i do",
+              title: "yes",
               click: {
                 actions: [
                   {
-                    type: 'publishText',
-                    text: 'yep'
-                  }
+                    type: "publishText",
+                    text: "yep",
+                  },
                 ],
                 metadata: [
                   {
-                    type: 'ExternalId',
-                    id: 'Yes-1234'
-                  }
-                ]
-              }
+                    type: "ExternalId",
+                    id: "Yes-1234",
+                  },
+                ],
+              },
             },
             {
-              type: 'button',
-              tooltip: 'No!',
-              title: 'No!',
+              type: "button",
+              tooltip: "No!",
+              title: "No!",
               click: {
                 actions: [
                   {
-                    type: 'publishText',
-                    text: 'No!'
-                  }
+                    type: "publishText",
+                    text: "No!",
+                  },
                 ],
                 metadata: [
                   {
-                    type: 'ExternalId',
-                    id: 'No-4321'
-                  }
-                ]
-              }
-            }
-          ]
-        }
+                    type: "ExternalId",
+                    id: "No-4321",
+                  },
+                ],
+              },
+            },
+          ],
+        },
       },
       metadata: [
         {
-          id: '1234',
-          type: 'ExternalId'
-        }
-      ]
-    }
-  ]
+          id: "1234",
+          type: "ExternalId",
+        },
+      ],
+    },
+  ],
 };
 ```
 
@@ -368,39 +368,73 @@ Setting a delay in between multiple messages is possible and an example of such 
 ```javascript
 const payload = {
   messages: [
-    'Hi i am a message before delay',
+    "Hi i am a message before delay",
     {
       delay: 5,
-      typing: true
+      typing: true,
     },
     {
       structuredContent: {
-        type: 'vertical',
+        type: "vertical",
         elements: [
           {
-            type: 'button',
+            type: "button",
             click: {
               actions: [
                 {
-                  text: 'Recommend me a movie, please',
-                  type: 'publishText'
-                }
-              ]
+                  text: "Recommend me a movie, please",
+                  type: "publishText",
+                },
+              ],
             },
-            title: 'Recommend a movie'
-          }
-        ]
+            title: "Recommend a movie",
+          },
+        ],
       },
       metadata: {
-        type: 'ExternalId',
-        id: '12345'
-      }
-    }
-  ]
+        type: "ExternalId",
+        id: "12345",
+      },
+    },
+  ],
 };
 ```
 
 **Note:** using the delay as a single/sole response from the bot to the consumer is effectively a ‘no response’ action. This allows the bot to receive a consumer message without responding to the consumer.
+
+### Sending Private Text Message
+
+It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
+
+{: .important}
+Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to only Agents and Managers.
+
+Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. There are two properties, `text` and `messageAudience` which need to be added in with the response body of the function.
+
+| key             | value                                 | notes                     |
+| --------------- | ------------------------------------- | ------------------------- |
+| text            | any string value                      | mandatory                 |
+| messageAudience | value should be "AGENTS_AND_MANAGERS" | case sensitive, mandatory |
+
+<br />
+
+Setting a private text message between multiple messages (with action) is possible and an example of such a case (Simple Text Message - Private Text Message - Action) can be seen below:
+
+```javascript
+const payload = {
+  messages: [
+    "Transferring",
+    {
+      text: "This is a private text",
+      messageAudience: "AGENTS_AND_MANAGERS",
+    },
+  ],
+  context: {
+    action: "TRANSFER",
+    actionParameters: { skill: "human_skill" },
+  },
+};
+```
 
 ### Close Chat/Conversation
 
@@ -415,11 +449,11 @@ Below is an example of what the response JSON from the LivePerson Function shoul
 ```javascript
 const payload = {
   messages: [
-    'Unfortunately I am unable to help you with this query. Have a nice day.'
+    "Unfortunately I am unable to help you with this query. Have a nice day.",
   ],
   context: {
-    action: 'CLOSE_CONVERSATION' // Close action
-  }
+    action: "CLOSE_CONVERSATION", // Close action
+  },
 };
 ```
 
@@ -436,11 +470,11 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 const {
   message,
   convId,
-  event: { name: eventName = '' } = {},
+  event: { name: eventName = "" } = {},
   context: {
     lpEvent, // contains the original received raw connector event
-    lpSdes: { unauthenticatedSdes, authenticatedSdes } // contains all collected lpSdes on conversation start if collecting is enabled
-  }
+    lpSdes: { unauthenticatedSdes, authenticatedSdes }, // contains all collected lpSdes on conversation start if collecting is enabled
+  },
 } = input.payload;
 ```
 
@@ -469,12 +503,12 @@ For sending `encodedMetadata` with the response of your callback this property m
 ```javascript
 const payload = {
   context: {
-    encodedMetadata: 'ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=='
+    encodedMetadata: "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ==",
   },
   messages: [
-    'I am a text response with encoded metadata',
-    'I am another text response with encoded metadata'
-  ]
+    "I am a text response with encoded metadata",
+    "I am another text response with encoded metadata",
+  ],
 };
 ```
 
@@ -488,30 +522,30 @@ For sending `encodedMetadata` with the response of your callback this property m
 ```javascript
 const payload = {
   context: {
-    encodedMetadata: 'ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=='
+    encodedMetadata: "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ==",
   },
   messages: [
-    'I am a text response with encoded metadata',
+    "I am a text response with encoded metadata",
     {
       structuredContent: {
-        type: 'vertical',
+        type: "vertical",
         elements: [
           {
-            type: 'button',
+            type: "button",
             click: {
               actions: [
                 {
-                  text: 'Recommend me a movie, please',
-                  type: 'publishText'
-                }
-              ]
+                  text: "Recommend me a movie, please",
+                  type: "publishText",
+                },
+              ],
             },
-            title: 'Recommend a movie'
-          }
-        ]
-      }
-    }
-  ]
+            title: "Recommend a movie",
+          },
+        ],
+      },
+    },
+  ],
 };
 ```
 
@@ -520,34 +554,34 @@ If you want to apply `encodedMetadata` specific to a structured content then you
 ```javascript
 const payload = {
   messages: [
-    'Hi How are you doing?',
+    "Hi How are you doing?",
     {
-      encodedMetadata: 'ZGlmZmVyZW50IGVuY29kZWQgbWV0YWRhdGE=',
+      encodedMetadata: "ZGlmZmVyZW50IGVuY29kZWQgbWV0YWRhdGE=",
       structuredContent: {
-        type: 'vertical',
+        type: "vertical",
         elements: [
           {
-            type: 'button',
+            type: "button",
             click: {
               actions: [
                 {
-                  text: 'Recommend me a movie, please',
-                  type: 'publishText'
-                }
-              ]
+                  text: "Recommend me a movie, please",
+                  type: "publishText",
+                },
+              ],
             },
-            title: 'Recommend a movie'
-          }
-        ]
+            title: "Recommend a movie",
+          },
+        ],
       },
       metadata: {
-        type: 'ExternalId',
-        id: '12345'
-      }
-    }
+        type: "ExternalId",
+        id: "12345",
+      },
+    },
   ],
   context: {
-    encodedMetadata: 'ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ=='
-  }
+    encodedMetadata: "ewoic29tZUluZm8iOiAiSSB3YXMgZW5jb2RlZCIKfQ==",
+  },
 };
 ```
