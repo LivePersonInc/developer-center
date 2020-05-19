@@ -259,6 +259,7 @@
       - pagename: Microsoft Bot Framework
       - pagename: Custom Integration
       - pagename: Hook Configuration
+      - pagename: Public API
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
