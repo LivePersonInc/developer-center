@@ -168,7 +168,11 @@ Settings for Chat: <br />
 Settings for Messaging: <br />
 <img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
 
-- No special settings are needed for messaging bots
+Settings for Welcome Messages: <br />
+
+By enabling the Welcome Messages settings, it's possible to send welcome messages to the users when they are transferred to another agent. The bot will be enabled to greet customers directly after the transfer action.
+we want that our bot writes something directly after the transfer, without waiting for the first consumer message
+
 
 Settings for Combine Messages: <br />
 
