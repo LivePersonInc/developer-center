@@ -131,11 +131,11 @@ code pre {
 }
 
 .suggestbutton a {
-    color: var(--electric-blue)
+    color: var(--navy-mid-gray)
 }
 
 .suggestbutton i {
-    color: var(--electric-blue);
+    color: var(--navy-mid-gray);
     margin-right: 8px
 }
 
