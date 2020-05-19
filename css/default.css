@@ -1065,7 +1065,9 @@ a.loginText {
 }
 
 #jumpto {
-    flex: 1
+    flex: 1;
+    margin-right: 6%;
+    justify-content: flex-end;
 }
 
 #anchorlist {
