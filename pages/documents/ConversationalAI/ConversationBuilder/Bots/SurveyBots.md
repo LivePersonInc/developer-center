@@ -240,3 +240,6 @@ LivePerson recommends the following workflow:
 2. Test the survey bots.
 3. Release the new survey bots to your Production environment.
 4. Request that LivePerson switch your brand from triggering surveys from Bot Studio to triggering surveys from Conversation Builder in actual conversations.
+
+{: .important}
+While you're completing steps 1 - 3, you can continue to use Bot Studio. Once you complete step 4, you can no longer use Bot Studio. Step 4 is irreversible. Once you are switched over to triggering surveys from Conversation Builder in actual conversations, this cannot be reversed.
