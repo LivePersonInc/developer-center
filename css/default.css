@@ -1072,6 +1072,7 @@ a.loginText {
     margin-top: 90px;
     margin-right: 100px;
     text-align: right;
+    position: fixed;
 }
 
 #anchorlist a {
