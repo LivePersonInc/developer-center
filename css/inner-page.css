@@ -385,19 +385,21 @@ ul.mysidebar.nav {
   overflow-x: hidden;
   overflow-x: hidden;
   list-style: none;
-
+  scrollbar-width: thin;
+  scrollbar-color: var(--navy-gray) var(--navy-lighter-gray);
 }
 
-/* .ul.mysidebar.nav::-webkit-scrollbar {
-  -webkit-appearance: none;
+
+.nav::-webkit-scrollbar {
   width: 10px;
 }
 
-.ul.mysidebar.nav::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, .5);
-  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
-} */
+.nav::-webkit-scrollbar-thumb {
+  background-color: var(--navy-gray);
+  border-radius: 3px;
+  border: 2px solid var(--navy-lighter-gray);
+}
+
 
 
 ul.mysidebar>li.folder ul {
