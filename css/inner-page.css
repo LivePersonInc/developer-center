@@ -391,13 +391,12 @@ ul.mysidebar.nav {
 
 
 .nav::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 .nav::-webkit-scrollbar-thumb {
-  background-color: var(--navy-gray);
-  border-radius: 3px;
-  border: 2px solid var(--navy-lighter-gray);
+  background-color: var(--mid-gray);
+  border-radius: 100px;
 }
 
 

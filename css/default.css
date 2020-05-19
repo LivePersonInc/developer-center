@@ -206,7 +206,7 @@ ul.mysidebar.nav {
 
 .defaultcontent {
     display: flex;
-    padding-left: 42px;
+    padding: 0 40px;
     margin-bottom: 80px;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
