@@ -131,11 +131,11 @@ code pre {
 }
 
 .suggestbutton a {
-    color: var(--electric-blue)
+    color: var(--navy-mid-gray)
 }
 
 .suggestbutton i {
-    color: var(--electric-blue);
+    color: var(--navy-mid-gray);
     margin-right: 8px
 }
 
@@ -206,7 +206,7 @@ ul.mysidebar.nav {
 
 .defaultcontent {
     display: flex;
-    padding-left: 42px;
+    padding: 0 40px;
     margin-bottom: 80px;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
@@ -1065,7 +1065,9 @@ a.loginText {
 }
 
 #jumpto {
-    flex: 1
+    flex: 1;
+    margin-right: 6%;
+    justify-content: flex-end;
 }
 
 #anchorlist {
