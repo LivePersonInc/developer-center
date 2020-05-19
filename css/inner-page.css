@@ -394,6 +394,10 @@ ul.mysidebar.nav {
   width: 8px;
 }
 
+.navy::-webkit-scrollbar-track {
+  color: var(--lightest-gray);
+}
+
 .nav::-webkit-scrollbar-thumb {
   background-color: var(--mid-gray);
   border-radius: 100px;
