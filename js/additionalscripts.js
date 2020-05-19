@@ -39,10 +39,10 @@ $(document).ready(function () {
 		linkload();
 	};
 	//call scrolltofixed on the anchorlist box so that it goes fixed on scroll
-	$('#anchorlist').scrollToFixed({
-		marginTop: 10,
-		dontSetWidth: false
-	});
+	// $('#anchorlist').scrollToFixed({
+	// 	marginTop: 10,
+	// 	dontSetWidth: false
+	// });
 	//call smooth-scroll on all anchorlinks
 	var scroll = new SmoothScroll('a[href*="#"]');
 	//set breadcrumbs display if welcome page/normal page.
@@ -146,10 +146,10 @@ function navigateContent(url) {
 			scrollToHash();
 			// domainTool();
 			searchClick();
-			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
-			$('#anchorlist').scrollToFixed({
-				dontSetWidth: false
-			});
+			// //call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
+			// $('#anchorlist').scrollToFixed({
+			// 	dontSetWidth: false
+			// });
 			//call smoothscrolling on all anchors
 			var scroll = new SmoothScroll('a[href*="#"]');
 			//from here, the rest of the code has to do with link highlighting for the sidebar
