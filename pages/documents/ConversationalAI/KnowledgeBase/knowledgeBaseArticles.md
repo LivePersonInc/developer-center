@@ -202,6 +202,17 @@ To increase the quality of your content matches, follow the best practices below
 {: .important}
 For more best practices when training and tuning NLU, see [here](conversation-builder-best-practices-train-tune-nlu.html).
 
+#### Number of articles
+
+There isn’t a limit on the number of articles that a knowledge base can have, but the following are best practices:
+
+- A good guideline is 75-100 articles in a knowledge base. Keep in mind that every article requires some level of training if you’re going to use NLU (and not the text-to-text search mode).
+
+- If you have a knowledge base that exceeds 75-100 articles, consider splitting the knowledge base into smaller ones based on category, likewise splitting the intents into domains based on category, and adding multiple knowledge base integrations. Then have the NLU match the consumer’s question to the category-based intent and search the applicable knowledge base. This yields a faster response during the conversation.
+
+    If you have a knowledge base that exceeds 75-100 articles, also consider using domain intents, and, for the domain, use LivePerson NLU v2, which has better performance with large sets of data.
+
+
 #### Titles, intent qualifiers, and training phrases
 
 * Use full sentences, e.g., “How do I reset my password?”
@@ -211,3 +222,11 @@ For more best practices when training and tuning NLU, see [here](conversation-bu
 * When adding intent qualifiers or training phrases, add 10 - 15 per article. Exceeding this likely means that you have overtrained, which might lead to false positives.
 
 * The intent qualifiers or training phrases should be relatively generic. If they are too specific, the likelihood they will match a consumer’s utterance will be slim. Since consumers can phrase their questions in many ways, make sure your intents are broad to allow the NLU a chance to match as many possible versions of the sentence as possible.
+
+#### Summary and details
+
+Technically, there aren’t any limits here, but keep these as brief as possible. Very long pieces of text will be split into multiple messages (after approx. 325 characters) when sent to the consumer, and in rare cases the messages can be sent in the wrong order.
+
+#### Positive and negative learnings
+
+As a general rule, if you're using knowledge base intents, don’t specify more than 20 positive learnings and 20 negative learnings. Too many positive and negative learnings can lead to learnings that “overlap” one another in terms of grammar. This results in an unpredictable user experience.
