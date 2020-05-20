@@ -170,7 +170,7 @@ Settings for Messaging: <br />
 
 Settings for Welcome Messages: <br />
 
-By enabling the Welcome Messages settings, it's possible to send welcome messages to the users when they are transferred to another agent. The bot will be enabled to greet customers directly after the transfer action.
+The Bot Connector system is designed to respond to incoming messaging by the consumer, once the bot is engaged in the conversation. Enabling the Welcome Messages settings, allows Brands to compose an initial message that the bot can send out that is not in direct response to the consumers messages. This allows for the bot to connect to a conversation and send out an initial message without waiting for the consumer to send a message after the bot first joins the conversation.
 
 
 Settings for Combine Messages: <br />
