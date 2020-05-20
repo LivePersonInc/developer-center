@@ -14,7 +14,7 @@ indicator: both
 ---
 ### Introduction
 
-The SDK is a lightweight, client-side code package for communicating with the LiveEngage Engagement Window. Using this SDK, brands can add their own custom widgets to the Engagement Window, making it possible to integrate external web applications as well as widening the scope of communication between their agents and customers.
+The SDK is a lightweight, client-side code package for communicating with the Conversational Cloud Engagement Window. Using this SDK, brands can add their own custom widgets to the Engagement Window, making it possible to integrate external web applications as well as widening the scope of communication between their agents and customers.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wV9ecP0n7d4" frameborder="0" allowfullscreen></iframe>
 

@@ -120,7 +120,7 @@ This section contains API details that are common to every API’s resource and 
 | 10004      | Agent Groups administration   | Create, edit, restructure or delete Agent Groups.          |
 | 10006      | API key administration    | For brands who have enabled the API key management feature, this permission allows the Campaign Manager to view API keys used by the brand.|
 | 10007      | Night Vision (advanced configuration) | Make advanced configurations within Night Vision.     |
-| 10008      | Lines of Business administration   | For brands who have enabled the Lines of Business feature, this permission allows Administrators to create, edit and delete individual Lines of Business within their LiveEngage account.|
+| 10008      | Lines of Business administration   | For brands who have enabled the Lines of Business feature, this permission allows Administrators to create, edit and delete individual Lines of Business within their Conversational Cloud account.|
 | 10009      | View account billing details   | Access to billing details and online invoices.   |
 | 10010      | View support cases in theConnection Area   | View open and closed support cases from the Connection Area.     |
 | 10011      | Create support cases from theConnection Area | For brands who have enabled Support cases creation feature, this permission allows to create support cases from the Connection Area.       |
@@ -190,8 +190,8 @@ This section contains API details that are common to every API’s resource and 
 | 40003      | Configure predefined content                                   | Add and edit Predefined Content in the Agent Workspace           |
 | 40004      | Configure automatic messages                                   | Add and edit Automatic Messages in the Agent Workspace           |
 | 40005      | Configure engagement attributes                                | Add and edit Engagement Attributes used in Campaigns             |
-| 40006      | Import and export predefined content                           | Import and export Predefined Content to and from LiveEngage      |
-| 40007      | Export predefined content                                      | Export Predefined Content from LiveEngage                        |
+| 40006      | Import and export predefined content                           | Import and export Predefined Content to and from Conversational Cloud      |
+| 40007      | Export predefined content                                      | Export Predefined Content from Conversational Cloud                        |
 | 40008      | View API keys   | For brands who have enabled the API key management feature, this permission allows viewing of API keys used by the brand                   |
 | 40012      | Configure authentication server                                | For brands who have enabled the authentication conversation feature, this permission allows users to configure the authentication server   |
 | 40014      | View support cases in theConnection Area                       | View open and closed support cases from the Connection Area.     |

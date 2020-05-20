@@ -18,7 +18,7 @@ SDEs will be supported as an attribute in the Context Warehouse in future. Howev
 
 ## Create a Function to pull the SDE (unauth and/or auth) to the context warehouse
 
-1. Login to LiveEngage and and navigate to Functions from the waffle menu in the bottom left corner 
+1. Login to Conversational Cloud and and navigate to Functions from the waffle menu in the bottom left corner 
 
    <img class="fancyimage" width="450" src="img/maven/live-engage-launcher.png"/>
 

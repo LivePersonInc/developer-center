@@ -13,7 +13,7 @@ redirect_from:
 
 ### Events
 
-LivePerson Functions' `lambdas` can be connected to LiveEngage events at the time of [creation](function-as-a-service-getting-started.html#step-1-choose-a-template). Once those `lambdas` are deployed, they will be executed whenever these events are triggered. Each event comes with a set of connected templates that can be used as an initial scaffolding for the developing the `lambda`.
+LivePerson Functions' `lambdas` can be connected to Conversational Cloud events at the time of [creation](function-as-a-service-getting-started.html#step-1-choose-a-template). Once those `lambdas` are deployed, they will be executed whenever these events are triggered. Each event comes with a set of connected templates that can be used as an initial scaffolding for the developing the `lambda`.
 
 {: .notice}
 The amount of lambdas connected to a specific event is restricted and can be seen in the table below.
@@ -23,9 +23,9 @@ Currently the following events are supported:
 |Event Name|Event Description|Lambda Limit|
 |--- |--- |--- |
 |Chat Post Survey E-Mail Transcript|Triggered after a chat conversation is finished and CSAT survey has been submitted.|10|
-|Conversational Command|Use this event to implement a Conversational Command that can be invoked from within the agent workspace in LiveEngage by typing "/".|30|
+|Conversational Command|Use this event to implement a Conversational Command that can be invoked from within the agent workspace in Conversational Cloud by typing "/".|30|
 |Messaging Conversation End|Triggered when the conversation is closed by agent/consumer.|1|
-|Messaging Conversation Idle|Triggered when agent/consumer is not responsive or the conversation is in queue for over X secs/mins. Where Time X is configurable inside the LiveEngage UI, via the auto-messages feature.|1|
+|Messaging Conversation Idle|Triggered when agent/consumer is not responsive or the conversation is in queue for over X secs/mins. Where Time X is configurable inside the Conversational Cloud UI, via the auto-messages feature.|1|
 |Messaging Conversation Routing|Triggered when the conversation is transferred to a different skill.|1|
 |Messaging Line in Off-Hours|Triggered when a consumer writes a message to a conversation that started in working hours, but is now in off-hours.|1|
 |Messaging New Conversation|Triggered for every new messaging conversation.|1|

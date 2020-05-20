@@ -11,7 +11,7 @@ redirect_from:
   - liveperson-functions-liveperson-integrations-post-chat-survey-transcripts.html
 ---
 
-This use case showcases how the LivePerson Functions platform can help extend the LiveEngage platform functionality. In this case, we will use Functions to re-create one of our Legacy features, the ability to conditionally send out transcripts after a chat conversation ended.
+This use case showcases how the LivePerson Functions platform can help extend the Conversational Cloud platform functionality. In this case, we will use Functions to re-create one of our Legacy features, the ability to conditionally send out transcripts after a chat conversation ended.
 
 **Note:** Within this integration, the chat server will still take care of sending out emails. Functions will only be used to write more sophisticated conditions.
 
@@ -19,7 +19,7 @@ This use case showcases how the LivePerson Functions platform can help extend th
 
 ### Post-Survey Integration Outline
 
-The integration between LiveEngage and Functions in this case is done based on an event that LiveEngage sends to the Functions platform once a Post Conversation Survey has been submitted. This event invokes our function within the platform that we want to use. This event sends the following data to the function:
+The integration between Conversational Cloud and Functions in this case is done based on an event that Conversational Cloud sends to the Functions platform once a Post Conversation Survey has been submitted. This event invokes our function within the platform that we want to use. This event sends the following data to the function:
 
 * CSAT Rank: Numeric value between 1 (Very Dissatisfied) - 5 (Very Satisfied).
 
@@ -33,7 +33,7 @@ The integration between LiveEngage and Functions in this case is done based on a
 
     * Answer: Complete answer. For multi-selection, the answers will be separated by a semicolon.
 
-The following is an example of the payload that LiveEngage Chat sends to Functions in a JSON format:
+The following is an example of the payload that Conversational Cloud Chat sends to Functions in a JSON format:
 
 ```json
 {
@@ -66,7 +66,7 @@ Create a new lambda/function. **Remember**: templates, once selected, cannot be 
 
 Adjust the coding from the template according to your needs by modifying the lambda/function by pressing the edit button on the template function. For more information on developing a function within Functions, [please see this document](function-as-a-service-developing-with-functions.html).
 
-Based on the payload sent from the LiveEngage server described above, this could be an example `lambda` that processes the data within LivePerson Functions and returns a list of email addresses back to LiveEngage:
+Based on the payload sent from the Conversational Cloud server described above, this could be an example `lambda` that processes the data within LivePerson Functions and returns a list of email addresses back to LiveEngage:
 
 ```javascript
 module.exports = (data, cb) => {
@@ -108,4 +108,4 @@ The email result entry needs to contain the following properties:
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
 
-Congratulations, you deployed your first function for LiveEngage! You can now invoke the `lambda` via the LiveEngage post survey invocation.
+Congratulations, you deployed your first function for LiveEngage! You can now invoke the `lambda` via the Conversational Cloud post survey invocation.

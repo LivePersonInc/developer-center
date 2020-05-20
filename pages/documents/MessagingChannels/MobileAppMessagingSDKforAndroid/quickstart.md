@@ -18,7 +18,7 @@ Use this Quick Start guide to get you up and running with a project powered by L
 
 ### Prerequisites
 
-- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a LiveEngage account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
+- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
 - [Latest version](https://developer.android.com/studio) of **Android Studio**. 
 - [Latest version](https://gradle.org/install/) of **Gradle**.
 
@@ -329,7 +329,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
       ```  
 
 
-4. **Initialize your application.**  We have provided examples to use to help you get started. The demo account has basic features available for demonstrating the Conversational Commerce experience in the LiveEngage console.
+4. **Initialize your application.**  We have provided examples to use to help you get started. The demo account has basic features available for demonstrating the Conversational Commerce experience in the Conversational Cloud console.
 
 
    - **Code Flow**
@@ -463,6 +463,6 @@ You can now do any of the following:
 
 - [Configure push notifications](mobile-app-messaging-sdk-for-android-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers. They never have to stay in your app or keep the window open as they get a proactive notification as soon as a reply or notice is available.
 
-- Configure [Photo sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-android-advanced-features-file-sharing.html). Agents within LiveEngage to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device. 
+- Configure [Photo sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-android-advanced-features-file-sharing.html). Agents within Conversational Cloud to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device. 
 
 - [Configure quick replies](mobile-app-messaging-sdk-for-android-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents. 

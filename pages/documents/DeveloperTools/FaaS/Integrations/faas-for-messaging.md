@@ -25,7 +25,7 @@ Functions for messaging listens for messaging events asynchronously. As a conseq
 
 ### Messaging events for Function Invocation
 
-LiveEngage messaging uses a series of "Conversation State Change Events" which get fired when specific actions or events occur within the conversation. You are able to use theses events to trigger functions within Functions.
+Conversational Cloud messaging uses a series of "Conversation State Change Events" which get fired when specific actions or events occur within the conversation. You are able to use theses events to trigger functions within Functions.
 
 The following "Conversation State Change Events" can be used to trigger functions:
 

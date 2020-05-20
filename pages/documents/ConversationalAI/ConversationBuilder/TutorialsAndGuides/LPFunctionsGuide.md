@@ -18,7 +18,7 @@ To enable the use of LivePerson's Function (FaaS) integrations, please contact y
 
 ### LivePerson Functions - Configure the function
 
-1. Access LivePerson Functions from LiveEngage by clicking the menu in the lower-left corner.
+1. Access LivePerson Functions from Conversational Cloud by clicking the menu in the lower-left corner.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/guideFunctions_menuOption.png">
 

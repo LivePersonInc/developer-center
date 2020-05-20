@@ -27,11 +27,11 @@ Conversation Orchestrator currently supports bots created in [Conversation Build
 
 You will first need to enable the feature in LiveEngage. Please contact LivePerson support or your LivePerson customer representative to enable this feature. 
 
-### Create LiveEngage Skill and User For Bot
+### Create Conversational Cloud Skill and User For Bot
 
-Before adding automations to Conversation Orchestrator, you must first properly configure LiveEngage by creating a skill and a bot user.
+Before adding automations to Conversation Orchestrator, you must first properly configure Conversational Cloud by creating a skill and a bot user.
 
-The Conversation Builder [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html) guide explains how to create a skill and a bot user for each of your automations.
+The Conversation Builder [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html) guide explains how to create a skill and a bot user for each of your automations.
 
 {: .important}
 * Create the skill names and bot user names that make sense for your use case
@@ -40,7 +40,7 @@ The Conversation Builder [Connect to LiveEngage tutorial](conversation-builder-t
 
 ### Connect Bots to LiveEngage
 
-Once LiveEngage is configured, your bot(s) need to be connected to enable them to respond to conversations in LiveEngage. 
+Once Conversational Cloud is configured, your bot(s) need to be connected to enable them to respond to conversations in LiveEngage. 
 
 For Conversation Builder bots, see [the next section](#configuring-conversation-builder-bots).
 
@@ -48,7 +48,7 @@ For third party (Watson, DialogFlow) bots, see the section [Configuring Third Pa
 
 #### Configuring Conversation Builder Bots
 
-Follow the steps in the Conversation Builder [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html) to connect your bot.
+Follow the steps in the Conversation Builder [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html) to connect your bot.
 
 {: .important}
 Be sure to select allow **Messaging** conversations when you add the Agent for the automation.
@@ -89,7 +89,7 @@ Now that you have set up LiveEngage, and connected your bot(s), you need to link
 
 #### Log in to Conversation Orchestrator
 
-Log in to Conversation Orchestrator with your LiveEngage credentials and then navigate to Agent Assist > Recommended Actions - Automations. 
+Log in to Conversation Orchestrator with your Conversational Cloud credentials and then navigate to Agent Assist > Recommended Actions - Automations. 
 
 #### Add the bots 
 
@@ -111,7 +111,7 @@ Follow the steps below to gather information for the form.
 
 <img class="fancyimage" width="750" src="img/maven/addBot-CB.png">
 
-1. Login to LiveEngage and select the **Automation Tab**
+1. Login to Conversational Cloud and select the **Automation Tab**
 
 2. Click on the **Account** icon at the top right of the page, and choose **Settings**.
 

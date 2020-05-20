@@ -51,4 +51,4 @@ A few things you'll need to get started with this API:
 
 * Automatically update, edit or delete skills
 
-* Synch skills within LiveEngage with your internal HR or staffing systems.
+* Synch skills within Conversational Cloud with your internal HR or staffing systems.

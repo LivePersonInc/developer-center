@@ -23,7 +23,7 @@ This is appropriate if:
 
 ### Create a Conversation Orchestrator Bot User In LiveEngage
 
-A bot needs to be created in LiveEngage for Conversation Orchestrator to receive conversations and then route them to an appropriate skill or agent. We use Conversation Orchestrator as the name, but it could be any bot name. 
+A bot needs to be created in Conversational Cloud for Conversation Orchestrator to receive conversations and then route them to an appropriate skill or agent. We use Conversation Orchestrator as the name, but it could be any bot name. 
 
 1. Login to LiveEngage, and go to the Users tab, click Action and select Add
 

@@ -75,7 +75,7 @@ Property `aud` defines the audience for whom the token is intended or the servic
 
 An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (JSON Web Signature):
 
-The **ConsumerJWS** is the unique identifier of the user (consumer) and used by the the connector in conjunction with the **AppJWT** to access LiveEngage on behalf of the consumer. Both the **ConsumerJWS** and the **AppJWT** will be passed in the headers of both the [CONVERSATION](sendapi-create.html) and [SEND](sendapi-send.html) requests to LiveEngage in order to authenticate the request.
+The **ConsumerJWS** is the unique identifier of the user (consumer) and used by the the connector in conjunction with the **AppJWT** to access Conversational Cloud on behalf of the consumer. Both the **ConsumerJWS** and the **AppJWT** will be passed in the headers of both the [CONVERSATION](sendapi-create.html) and [SEND](sendapi-send.html) requests to Conversational Cloud in order to authenticate the request.
 
 A **ConsumerJWS** can be obtained with the following HTTPS request URI:
 

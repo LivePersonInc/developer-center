@@ -11,7 +11,7 @@ permalink: engagement-history-api-methods.html
 indicator: chat
 ---
 
-The LiveEngage Engagement History API includes one method, Retrieve Engagement List by Criteria.
+The Conversational Cloud Engagement History API includes one method, Retrieve Engagement List by Criteria.
 
 ### Retrieve Engagement List by Criteria
 

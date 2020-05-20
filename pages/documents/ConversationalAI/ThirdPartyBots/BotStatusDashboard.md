@@ -37,7 +37,7 @@ Figure 2.1 Dashboard Main View
 
 In Section 1 of *Figure 2.1*, the dashboard provides a short configuration overview for the selected bot. The user can see the following:
 
-* connection type to LiveEngage (either Chat or Messaging)
+* connection type to Conversational Cloud (either Chat or Messaging)
 * failover skill
 * the profile the bot user has been assigned to
 * configured A.I. Vendor

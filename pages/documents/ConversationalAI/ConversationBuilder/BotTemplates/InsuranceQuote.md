@@ -36,11 +36,11 @@ The template uses text interactions only, so it can be deployed to any channel w
 - Fallback
  - Will display when the user enters an utterance that is not recognized.
 - Agent_Escalation
- - This will perform a transfer to a particular LiveEngage skill.
+ - This will perform a transfer to a particular Conversational Cloud skill.
 
 #### Integrations
 - Agent_Transfer
- - As you would expect, this will perform a transfer to a LiveEngage skill.
+ - As you would expect, this will perform a transfer to a Conversational Cloud skill.
 You will need to configure the skill name, id, and transfer message in Global Functions
 
 - Send_Email

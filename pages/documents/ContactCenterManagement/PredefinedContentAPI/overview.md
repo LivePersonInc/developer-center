@@ -126,7 +126,7 @@ Issue a REST request to create a new predefined content entry (this example uses
 	`https://{{accountConfigReadWriteDomain}}/api/account/{{accountId}}/configuration/engagement-window/canned-responses?v=2.0&lang=en-US`
 	{% endraw %}
 
-_Note: To get the `accountConfigReadWriteDomain` for your account, see the [Getting Started with LiveEngage APIs](guides-gettingstarted.html) document._
+_Note: To get the `accountConfigReadWriteDomain` for your account, see the [Getting Started with Conversational Cloud APIs](guides-gettingstarted.html) document._
 
 * Select the OAuth 1.0 Authorization type.
 

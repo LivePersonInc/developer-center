@@ -38,7 +38,7 @@ Click on the **User Icon** in the top right corner, and select **Settings**.
 
 ### Configure Conversation Orchestrator
 
-1. Log in to Conversation Orchestrator with your LiveEngage credentials and then navigate to Agent Assist > Recommended Actions - Knowledge Base. 
+1. Log in to Conversation Orchestrator with your Conversational Cloud credentials and then navigate to Agent Assist > Recommended Actions - Knowledge Base. 
 
 2. Paste the API access key that you copied in the previous step in the API Access Key text field, and then click save. Once you save, you should expect to see the Knowledge base you created previously. 
 
@@ -46,7 +46,7 @@ Click on the **User Icon** in the top right corner, and select **Settings**.
 
 1. Start a new messaging conversation from the consumer side
 
-2. Open LiveEngage and accept the conversation. This will open the conversation window
+2. Open Conversational Cloud and accept the conversation. This will open the conversation window
 
 3. Check to see if Recommended Actions Widget is visible
 

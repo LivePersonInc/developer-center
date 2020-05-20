@@ -90,7 +90,7 @@ You can customize the look and feel of the conversation screen with your brandin
       Background color of the agent avatar on action bar is `agent_avatar_background_color`.
 
   
-   - [**lp_messaging_ui_ic_agent_avatar**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lp_messaging_ui_ic_agent_avatar) - Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on LiveEngage and on agent avatar appearing on the action bar.
+   - [**lp_messaging_ui_ic_agent_avatar**](mobile-app-messaging-sdk-for-android-sdk-attributes-attributes.html#lp_messaging_ui_ic_agent_avatar) - Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on Conversational Cloud and on agent avatar appearing on the action bar.
 
       If you want to define the background color for this avatar, override `agent_avatar_background_color` resource ID.
 

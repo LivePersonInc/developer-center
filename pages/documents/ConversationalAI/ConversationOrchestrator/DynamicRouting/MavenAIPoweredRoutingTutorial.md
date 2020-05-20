@@ -42,7 +42,7 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
 
 #### Import the CB Bot Template
 
-1. In LiveEngage navigate to Conversation Builder and then click New Bot
+1. In Conversational Cloud navigate to Conversation Builder and then click New Bot
 
     <img class="fancyimage" width="750" src="img/maven/cb-page.png">
 
@@ -108,14 +108,14 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
 
 2. [Deploy the bot in LiveEngage](conversation-builder-testing-deployment-deploying-to-liveengage.html)
 
-    a. See next step for how to setup a skill in LiveEngage to accent the incoming conversations.
+    a. See next step for how to setup a skill in Conversational Cloud to accent the incoming conversations.
 
 
 ### Setup LiveEngage
 
 1. Create a skill for the conversation (e.g. Conversation_Orchestrator_Routing_Bot), and assign the bot user ID to this skill
 
-2. Setup a LiveEngage campaign to direct incoming conversations to this skill. All incoming conversation will now be picked up by the bot. 
+2. Setup a Conversational Cloud campaign to direct incoming conversations to this skill. All incoming conversation will now be picked up by the bot. 
 
 3. Setup a Vip Agent Skill (e.g. Vip Support) 
 
@@ -193,7 +193,7 @@ In this example we will create and use static attributes. To check if a customer
     
     d. Then select attribute and custom.vipPhoneNumberList from the drop-down
     
-    e. In the Actions block in the first drop-down box select Transfer to a skill, and then select the Vip Support skill from the drop-down (Skills must be created in LiveEngage prior to this step). 
+    e. In the Actions block in the first drop-down box select Transfer to a skill, and then select the Vip Support skill from the drop-down (Skills must be created in Conversational Cloud prior to this step). 
     
         i. Please note not to select the skill used for the Conversation Orchestrator Bot since this would create a circular loop with the policy. 
     
@@ -211,7 +211,7 @@ In this example we will create and use static attributes. To check if a customer
     
     d. Then select attribute and custom.regularCustomerList from the drop down
     
-    e. In the Actions block in the first drop-down select Transfer to a skill, and then select the Regular Support skill from the drop down (Skills must be created in LiveEngage prior to this step)
+    e. In the Actions block in the first drop-down select Transfer to a skill, and then select the Regular Support skill from the drop down (Skills must be created in Conversational Cloud prior to this step)
     
     f. Click Save to save the policy
 
@@ -229,7 +229,7 @@ In the policy list in Conversation Orchestrator, click on the toggle switch and 
 
 1. Start a new web messaging conversation using the account ID 
 
-2. Log in to LiveEngage using a VIP agent account
+2. Log in to Conversational Cloud using a VIP agent account
 
 3. Type “Hi” in the messaging window to engage the bot
 
@@ -237,7 +237,7 @@ In the policy list in Conversation Orchestrator, click on the toggle switch and 
 
 5. This should trigger the VIP policy and the conversation should be transferred to a VIP skill
 
-6. If you are logged in to LiveEngage as a VIP Agent, you will now get a ring 
+6. If you are logged in to Conversational Cloud as a VIP Agent, you will now get a ring 
 
 #### Test Regular Customer Policy
 
@@ -251,7 +251,7 @@ In the policy list in Conversation Orchestrator, click on the toggle switch and 
 
 5. This should now trigger the Regular Customer policy and the conversation should be transferred to a Regular skill
 
-6. If you are logged into LiveEngage as a Regular Agent, you will now get a ring
+6. If you are logged into Conversational Cloud as a Regular Agent, you will now get a ring
 
 ## Create a simple policy using Session Store Attribute
 
@@ -288,7 +288,7 @@ We will be using the Context Session store to store a phone number, and then use
 
 3. Start a new web messaging conversation using the account ID 
 
-4. Log in to LiveEngage using a VIP agent account
+4. Log in to Conversational Cloud using a VIP agent account
 
 5. Type “Hi” in the messaging window to engage the bot
 
@@ -296,7 +296,7 @@ We will be using the Context Session store to store a phone number, and then use
 
 7. This should trigger the VIP policy and the conversation should be transferred to a VIP skill
 
-8. If you are logged in to LiveEngage as a VIP Agent, you will now get a ring 
+8. If you are logged in to Conversational Cloud as a VIP Agent, you will now get a ring 
 
 9. Logout of LiveEngage, and then log in back using a Regular Agent account
 
@@ -306,7 +306,7 @@ We will be using the Context Session store to store a phone number, and then use
 
 12. This should now trigger the Regular policy and the conversation should be transferred to a Regular skill
 
-13. If you are logged into LiveEngage as a Regular Agent, you will now get a ring
+13. If you are logged into Conversational Cloud as a Regular Agent, you will now get a ring
 
 ## Using a LivePerson Function to check VIP Status
 

@@ -54,4 +54,4 @@ A few things you'll need to get started with this API:
 
 * Update or change group managers
 
-* Synch agents groups within LiveEngage with your internal HR or staffing systems.
+* Synch agents groups within Conversational Cloud with your internal HR or staffing systems.

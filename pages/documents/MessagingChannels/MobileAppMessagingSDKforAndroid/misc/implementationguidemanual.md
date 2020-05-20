@@ -365,7 +365,7 @@ compile "com.google.firebase:firebase-core:11.6.0"
 multiDexEnabled true
 ```
 
-### LiveEngage Configuration
+### Conversational Cloud Configuration
 
 1. Connect to your account via LiveEngage, click on the Campaign Builder tab. Then choose "Data Sources"
 

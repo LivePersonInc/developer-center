@@ -74,7 +74,7 @@ Open the bot. On the top navigation click on Global Functions and edit the follo
 
 9. Click save
 
-10. Configure LiveEngage and Deploy the bot. 
+10. Configure Conversational Cloud and Deploy the bot. 
 
 ### Using the Context Session Store 
 

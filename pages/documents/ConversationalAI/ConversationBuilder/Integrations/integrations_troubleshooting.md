@@ -30,7 +30,7 @@ This section describes common errors when implementing a transfer via code inste
 
 The following are common errors in a manual implementation:
 
-* **The transfer API URL is incorrect**: There are a few different server environments where you might be working with Conversation Builder. Depending on your region and whether you’re using LP Cloud, the URL used to connect to LiveEngage changes. Verify the URL is correct.
+* **The transfer API URL is incorrect**: There are a few different server environments where you might be working with Conversation Builder. Depending on your region and whether you’re using LP Cloud, the URL used to connect to Conversational Cloud changes. Verify the URL is correct.
 
 * **The authorization ID is incorrect**: Each Conversation Builder user has a unique API access key that is used in a number of different platform APIs. Verify that your API access key is correct. You can find it on the API tab in the User Settings for your user profile.
 

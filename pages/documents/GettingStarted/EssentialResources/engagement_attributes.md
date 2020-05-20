@@ -12,9 +12,9 @@ order: 20
 indicator: both
 ---
 
-LiveEngage provides out-of-the-box basic information about your visitors. For example, the visitor’s geolocation, the amount of time they spent on a page, and which pages they viewed.
+Conversational Cloud provides out-of-the-box basic information about your visitors. For example, the visitor’s geolocation, the amount of time they spent on a page, and which pages they viewed.
 
-In order to collect more in-depth, specific information such as product viewed, purchase information, errors the visitor encountered, and search results, you can send this information to LiveEngage by using Engagement Attributes (otherwise known as a Standard Data Entity - an SDE). An SDE is a JSON format expected by LivePerson APIs. This format standardizes how visitor traits, behaviors and paths are communicated to LiveEngage. These are in practice data snippets which contain information on the consumer in JSON format.
+In order to collect more in-depth, specific information such as product viewed, purchase information, errors the visitor encountered, and search results, you can send this information to Conversational Cloud by using Engagement Attributes (otherwise known as a Standard Data Entity - an SDE). An SDE is a JSON format expected by LivePerson APIs. This format standardizes how visitor traits, behaviors and paths are communicated to LiveEngage. These are in practice data snippets which contain information on the consumer in JSON format.
 
 Information collected using Engagement Attributes can be used to achieve the following:
 
@@ -36,7 +36,7 @@ By using our SDEs, you can enrich your use of our APIs with more data from your 
 
 * Using our Monitoring API, you can build programmatic logic which displays certain engagements to specific visitors, based on their SDEs.
 
-* Using our Data APIs, you're looking to search through your LiveEngage history for specific users or behaviors. You can use SDEs to filter and analyze the returned data according to diverse set types and categories. This allows you to build your own reporting using these APIs.
+* Using our Data APIs, you're looking to search through your Conversational Cloud history for specific users or behaviors. You can use SDEs to filter and analyze the returned data according to diverse set types and categories. This allows you to build your own reporting using these APIs.
 
 ### Using SDEs
 
@@ -44,7 +44,7 @@ By using our SDEs, you can enrich your use of our APIs with more data from your 
 
 2) Once you've mapped our different data sets into LivePerson SDEs, we have two choices:
 
-  * You can start feeding real time data into these SDEs from your website. A good way to do that is to develop code on your site for example, which will send information via SDEs to LiveEngage programmatically. For example, if a user adds a certain product to their cart, the code should translate this action into an SDE format and send it to LiveEngage via the Web Tag. More documentation on how to use the tag to do so can be found [here](engagement-attributes-setting-up-engagement-attributes.html#javascript-code).
+  * You can start feeding real time data into these SDEs from your website. A good way to do that is to develop code on your site for example, which will send information via SDEs to Conversational Cloud programmatically. For example, if a user adds a certain product to their cart, the code should translate this action into an SDE format and send it to Conversational Cloud via the Web Tag. More documentation on how to use the tag to do so can be found [here](engagement-attributes-setting-up-engagement-attributes.html#javascript-code).
 
   * You can also start feeding real time data into these SDEs from various sources using our APIs. These APIs use different methods in order to accomplish this. Each API has its own methods to handle passing and receiving SDEs. In the Monitoring API for example, this is achieved via [the Report method](rt-interactions-monitoring-methods-report.html).
 
@@ -52,4 +52,4 @@ By using our SDEs, you can enrich your use of our APIs with more data from your 
 
   * Some of our SDEs are automatically displayed in the Agent Workspace. These are displayed in the Visitor Info widget. You may also decide to build your own display or pass them to third party applications to disaply them.
 
-  * Building engagement logic around SDEs. Note, that while you _can_ build your own logic around these SDEs (when to display a certain engagement to a certain visitor or on a certain part of your application), LiveEngage also includes many automatic rules which make it easier to configure campaigns and engagements according to these SDEs. These automatic rules are more scalable and are easier to use so you should use them where possible. For more information on these automatic rules and how LiveEngage uses them, please refer to [this document about Campaigns and how they work](https://knowledge.liveperson.com/contact-center-management-campaigns-campaigns-overview.html).
+  * Building engagement logic around SDEs. Note, that while you _can_ build your own logic around these SDEs (when to display a certain engagement to a certain visitor or on a certain part of your application), Conversational Cloud also includes many automatic rules which make it easier to configure campaigns and engagements according to these SDEs. These automatic rules are more scalable and are easier to use so you should use them where possible. For more information on these automatic rules and how Conversational Cloud uses them, please refer to [this document about Campaigns and how they work](https://knowledge.liveperson.com/contact-center-management-campaigns-campaigns-overview.html).

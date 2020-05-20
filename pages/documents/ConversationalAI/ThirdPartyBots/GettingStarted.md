@@ -19,7 +19,7 @@ indicator:
 
 ### Introduction
 
-External Bot frameworks and Bot builders can be enabled and managed through LiveEngage just like a normal human agent.
+External Bot frameworks and Bot builders can be enabled and managed through Conversational Cloud just like a normal human agent.
 
 Using Third-Party Bots, you can provision a connector for IBM Watson, Google Dialogflow, Amazon Lex, Microsoft Bot
 Framework or leverage LivePerson Functions with the Custom Integrations Option.
@@ -127,7 +127,7 @@ Please note that your bot setup should always return an intent or an action as a
 
 ### Provision a connector
 
-To access Third-Party Bots, contact your Account Manager to enable the the feature in LiveEngage for your account.
+To access Third-Party Bots, contact your Account Manager to enable the the feature in Conversational Cloud for your account.
 
 Upon logging in to LiveEngage, you will see the Conversation AI Tab:
 

@@ -9,7 +9,7 @@ indicator: messaging
 
 <div class="important">In depth documentation for this SDK, including a code sample, can be found <a href="https://github.com/LivePersonInc/messaging-window-sdk">on Github</a>.</div>
 
-This Messaging Window SDK for the LiveEngage [Messaging Window API](messaging-window-api-overview.html) will make building custom messaging windows and JavaScript applications efficient and stable. The SDK does a lot of the work of connecting to LivePerson's messaging servers, subscribing to notifications, and managing the conversation for you. Thus, you can use this SDK to build your own messaging windows for your consumers to use or even moving the conversation entirely out of a window-type experience and embedding it into the webpage.
+This Messaging Window SDK for the Conversational Cloud [Messaging Window API](messaging-window-api-overview.html) will make building custom messaging windows and JavaScript applications efficient and stable. The SDK does a lot of the work of connecting to LivePerson's messaging servers, subscribing to notifications, and managing the conversation for you. Thus, you can use this SDK to build your own messaging windows for your consumers to use or even moving the conversation entirely out of a window-type experience and embedding it into the webpage.
 
 ### Prerequisites
 
@@ -17,7 +17,7 @@ This library requires only an active Conversational Cloud account number.
 
 ### Use Cases
 
-1) Customize the LiveEngage window. Because this SDK enables you to handle the most common messaging events, it allows you to build your own messaging window using JavaScript. Under this use case, you'd build the menu using HTML/CSS and call the various methods of this SDK to handle user and agent input, typing indicators, and the such.
+1) Customize the Conversational Cloud window. Because this SDK enables you to handle the most common messaging events, it allows you to build your own messaging window using JavaScript. Under this use case, you'd build the menu using HTML/CSS and call the various methods of this SDK to handle user and agent input, typing indicators, and the such.
 
 2) Embed the conversation inside a webpage. As the world turns to conversational commerce, interactions with bots and human agents are set to replace outdated tools like website navigation, homepages, and the such. By using this SDK, you can embed these conversations directly into a webpage, providing a seamless and integrated conversational experience. Because this SDK uses JavaScript, the agent handling the conversation can be any type of agent: human agents, bots created using our [Conversation Builder](conversation-builder-bot-workspace.html), or your own [custom bots](custom-third-party-bots.html). You can see an example of such an embedded conversation on LivePerson's [Knowledge Center](www.knowledge.liveperson.com), where the homepage has been replaced by a bot.
 

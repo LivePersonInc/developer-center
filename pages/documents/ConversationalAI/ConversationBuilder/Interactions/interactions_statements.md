@@ -74,4 +74,4 @@ You can populate the statement with static information, or it can be populated d
 <img style="width:600px" src="img/ConvoBuilder/statements_richLink3.png">
 
 #### Notes on Apple Rich Links
-- While LiveEngage supports formatting in Apple rich links, Conversation Builder currently doesn't.
+- While Conversational Cloud supports formatting in Apple rich links, Conversation Builder currently doesn't.

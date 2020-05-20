@@ -46,7 +46,7 @@ We've likewise added a second condition that checks for a "failure" result **(1)
 
 Use an Agent Transfer interaction in a dialog when you want to transfer a conversation from a bot to a live agent, or from a bot in one bot group to a bot in a *different* group.
 
-For some practice with this interaction type, complete the [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html).
+For some practice with this interaction type, complete the [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html).
 
 {: .important}
 There are two ways to implement a transfer: You can add an Agent Transfer interaction, *as discussed here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Agent Transfer interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.
@@ -100,7 +100,7 @@ Use a File Upload interaction in a dialog when you need the consumer to upload a
 When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in LiveEngage, see [here](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html).)
 
 {: .important}
-Some setup of your LiveEngage environment is required before using this feature. Please contact your LivePerson account representative to enable this feature.
+Some setup of your Conversational Cloud environment is required before using this feature. Please contact your LivePerson account representative to enable this feature.
 
 **To add a File Upload interaction**
 
@@ -122,7 +122,7 @@ Some setup of your LiveEngage environment is required before using this feature.
     
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
 
-    The File integration handles upload of the file from LiveEngage to your brand's external file share. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
+    The File integration handles upload of the file from Conversational Cloud to your brand's external file share. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
 
 5. Finish configuring the interactions and overall dialog as per your requirements. For information on potential customization points, see the customization section farther below.
 

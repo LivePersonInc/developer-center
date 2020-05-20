@@ -36,7 +36,7 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 3. If necessary, click **More Settings** to show additional settings.
 4. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
 5. Select one of the following for retrieving the necessary Conversation Orchestrator credentials:
-    * **Use LiveEngage Site Id** (Only available for LivePerson accounts.)
+    * **Use Conversational Cloud Site Id** (Only available for LivePerson accounts.)
     * **Use Conversation Builder Account Id** (This is your organization ID.)
 6. Enter the ID for your selection in step 5.
 7. Click **Update Account**.

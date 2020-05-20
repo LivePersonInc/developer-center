@@ -29,7 +29,7 @@ The Getting Started tutorials include four tutorials that build on one another:
 
 * **Integrations**: Explore integrations, which allow your bot to query external APIs, bringing powerful new options to your conversations. Integrations let you programmatically access catalogs, databases, and other web services to super power your bot responses.
 
-* **Connect to LiveEngage**: Bring it all together by deploying your bot to the LiveEngage environment and testing it out.
+* **Connect to LiveEngage**: Bring it all together by deploying your bot to the Conversational Cloud environment and testing it out.
 
 ### Dialogs & Patterns tutorial
 
@@ -40,7 +40,7 @@ The Getting Started tutorials include four tutorials that build on one another:
 
 #### Prerequisite steps
 
-This tutorial assumes you have a user account for the LiveEngage and Conversation Builder platforms. If you don't, your team should have an administrator who can create one for you.
+This tutorial assumes you have a user account for the Conversational Cloud and Conversation Builder platforms. If you don't, your team should have an administrator who can create one for you.
 
 #### Step 1: Create a new bot
 
@@ -429,7 +429,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 
 ##### Create the skills
 
-1. [Log in](https://authentication.liveperson.net/login.html) to your LiveEngage account. 
+1. [Log in](https://authentication.liveperson.net/login.html) to your Conversational Cloud account. 
 2. Click the **Manage users and skills** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png"> , and then click the **Skills** tab.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/manageUsersAndSkillsIcon.png">
@@ -451,7 +451,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 7. In the list of skills, select the Bot skill, and then note the URL that's displayed in the browser's address bar. Write down the skill ID in the URL, as it will be needed later. The skill ID is the number at the end of the URL: https://z1.le.liveperson.net/a/accountNumber/#um!skills/**skillID**.
 8. Repeat the preceding step to copy down the skill ID for the Human skill.
 
-##### Create the LiveEngage agents
+##### Create the Conversational Cloud agents
 
 In addition to the skills, you also need user agents, one for the bot and one for the agent that will be receiving the inbound transfers (for human escalation).
 
@@ -536,7 +536,7 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/helloworld/agentConnectorsPage1.png">
 
 {: .important}
-LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
+LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 ##### Start the agent connector
 
@@ -582,6 +582,6 @@ In this step, you'll be testing with Messaging, so you'll be using [this test pa
 
    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/webvisitors_accept.png">
 
-    As an agent, when you accept the inbound transfer, you should see something like this below in your LiveEngage dashboard. You can now take part in live chat.
+    As an agent, when you accept the inbound transfer, you should see something like this below in your Conversational Cloud dashboard. You can now take part in live chat.
 
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/confLE_19.png">

@@ -43,7 +43,7 @@ What are custom events? [Here](conversation-builder-conversation-builder-scripti
 | Name | Description |
 | --- | --- |
 | Users | Number of unique users connected to bot |
-| Conversations | Number of LiveEngage Conversations in which the bot is a participant |
+| Conversations | Number of Conversational Cloud Conversations in which the bot is a participant |
 | Automation Sessions (Deprecated) | Number of times a bot connects to a conversation |
 | Average Session Length (Deprecated) | Average of the time lapse between bot connection/disconnection to a conversation |
 | Escalations | Number of times a bot transfers a user to a different skill/agent |

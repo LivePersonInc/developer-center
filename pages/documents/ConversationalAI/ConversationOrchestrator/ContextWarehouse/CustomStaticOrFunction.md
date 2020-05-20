@@ -20,7 +20,7 @@ Conversation Orchestrator allows you to create custom static data, or use LivePe
 
 Static variables are useful for storing constant data or lists that can be used in policies. These are used throughout the lifecycle of the policy, and do not change at runtime. The common use case for this would be creating a list, for example a list of VIPs, and then using the condition (CONTAINS or IS_IN) in a policy. 
 
-1. To create a new static variable login to Conversation Orchestrator using your LiveEngage credentials and then navigate to Context Warehouse/Custom
+1. To create a new static variable login to Conversation Orchestrator using your Conversational Cloud credentials and then navigate to Context Warehouse/Custom
 
 2. Click on the **Static +** button
 
@@ -69,7 +69,7 @@ Next you need to setup an API user to invoke the function.
 
 Once you have created a Function, you can now use that as an attribute in Context Warehouse to fetch external data at runtime. 
 
-1. To create a new FaaS attribute, login to Conversation Orchestrator using your LiveEngage credentials and then navigate to Context Warehouse/Custom
+1. To create a new FaaS attribute, login to Conversation Orchestrator using your Conversational Cloud credentials and then navigate to Context Warehouse/Custom
 
 2. Click on the **FaaS +** button
 

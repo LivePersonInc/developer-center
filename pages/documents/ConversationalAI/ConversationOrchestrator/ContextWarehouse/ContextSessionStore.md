@@ -16,7 +16,7 @@ indicator: messaging
 
 The Context Services API is a REST interface to a cloud based repository for storing and retrieving session state attributes that can be carried over and used throughout the conversational journey. This allows continuity in conversations as context can be transferred between agents and bots enabling a true warm handoff. The context service can be used for several purposes. For example:
 
-1. Save the conversation session state data in LiveEngage (e.g. agent notes), and then retrieve them later in a different conversation session with a different agent.
+1. Save the conversation session state data in Conversational Cloud (e.g. agent notes), and then retrieve them later in a different conversation session with a different agent.
 
 2. Save contextual attributes in a concierge bot (e.g. intents or customer information) and carry this context over to another bot or human skill. 
 
@@ -48,7 +48,7 @@ If you want to use the Context Session Store with Conversation Builder, please u
 
 To use Context Session store APIs you will need to create and use an API key. To get your unique key:
 
-1. Login to Conversation Orchestrator with your LiveEngage credentials and then navigate to **Developer Key**.
+1. Login to Conversation Orchestrator with your Conversational Cloud credentials and then navigate to **Developer Key**.
 
 2. Copy and paste the key you see in the experience and use it in your API headers. 
 

@@ -17,7 +17,7 @@ LivePerson recommends that —before you create a bot— you set up the [domains
 
 
 **To create a custom bot**
-1. If you logged into Conversation Builder directly (that is, _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If the correct organization isn’t displayed, select it from the **Org Name** dropdown list.
+1. If you logged into Conversation Builder directly (that is, _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your Conversational Cloud account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If the correct organization isn’t displayed, select it from the **Org Name** dropdown list.
 
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 

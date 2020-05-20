@@ -94,7 +94,7 @@ In the following `request.body.session` example string, `ea15cd3f-561d-4acf-90ae
 
 * `projects/appointmentscheduler-69117/agent/sessions/ea15cd3f-561d-4acf-90ae-5eb14145d38d`
 
-You can get the LiveEngage conversationId with this line of code:
+You can get the Conversational Cloud conversationId with this line of code:
 
 ```javascript
 request.body.session.substring(request.body.session.lastIndexOf("/") + 1);

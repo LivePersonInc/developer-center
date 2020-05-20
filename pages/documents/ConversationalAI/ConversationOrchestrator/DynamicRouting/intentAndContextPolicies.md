@@ -92,7 +92,7 @@ Similar to conditions an action such as transferring to a skill can use either a
 
 To route to skills, you will need the SkillIds used by LiveEngage. To retrieve all the skill IDs:
 
-1. Login to LiveEngage and then go to Users tab and then Skills
+1. Login to Conversational Cloud and then go to Users tab and then Skills
 2. Then click on Actions and then export all
 
     <img class="fancyimage" width="600" src="img/maven/Get SkillID from LiveEngage.png">

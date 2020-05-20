@@ -16,7 +16,7 @@ indicator: both
 ---
 ### Introduction
 
-By creating individual Lines of Business (LoBs) within one single LiveEngage account, each with its own campaigns and engagements, brands are better able to track campaign success and engagement impact on each area of their business. Each Line of Business will be set up with unique and siloed campaigns and reports.  Campaigns will be assigned to a particular LoB, meaning that campaign managers will have access to all campaigns, with the ability to filter campaign lists and reports by LoB.
+By creating individual Lines of Business (LoBs) within one single Conversational Cloud account, each with its own campaigns and engagements, brands are better able to track campaign success and engagement impact on each area of their business. Each Line of Business will be set up with unique and siloed campaigns and reports.  Campaigns will be assigned to a particular LoB, meaning that campaign managers will have access to all campaigns, with the ability to filter campaign lists and reports by LoB.
 
 ### Getting Started
 
@@ -44,4 +44,4 @@ A few things you'll need to get started with this API:
 
 * Automatically update, edit or delete LoBs
 
-* Synch LoBs within LiveEngage with your internal HR or staffing systems.
+* Synch LoBs within Conversational Cloud with your internal HR or staffing systems.

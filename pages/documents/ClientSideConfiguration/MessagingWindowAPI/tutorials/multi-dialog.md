@@ -59,7 +59,7 @@ Make sure that you have closed any previous conversation sessions by clicking `C
 
 ### Step 1 - Activate the MULTI_DIALOG feature for your conversation
 
-In order to indicate to LiveEngage that your custom window supports multi-dialogs you must provide the “MULTI_DIALOG” feature in the client properties, for example:
+In order to indicate to Conversational Cloud that your custom window supports multi-dialogs you must provide the “MULTI_DIALOG” feature in the client properties, for example:
 
 ```json
 {
@@ -477,7 +477,7 @@ Before closing this dialog it is recommended to send an indication that the Cons
 }
 ```
 
-As we said, we do not actually close the Conversation. We only close the Main Dialog by addressing the conversation manager (cm) component in LiveEngage and requesting a DialogChange. This is done by using `cm.UpdateConversationField` as below:
+As we said, we do not actually close the Conversation. We only close the Main Dialog by addressing the conversation manager (cm) component in Conversational Cloud and requesting a DialogChange. This is done by using `cm.UpdateConversationField` as below:
 
 ```json
 {"kind":"req","id":"2","type":"cm.UpdateConversationField","body":{"conversationId":"__YOUR_CONVERSATION_ID__","conversationField":{"field":"DialogChange","type":"UPDATE","dialog":{"dialogId":"__YOUR_CONVERSATION_ID__","state":"CLOSE","closedCause":"Closed by consumer"}}}}
@@ -492,7 +492,7 @@ Important fields:
 
 * `state`: Should be `CLOSE` in order to close the dialog
 
-* `closedCause`: Describe why the dialog was closed, mainly used by LiveEngage and Bots. Use `Closed by consumer` when closing the conversation from the consumer side.
+* `closedCause`: Describe why the dialog was closed, mainly used by Conversational Cloud and Bots. Use `Closed by consumer` when closing the conversation from the consumer side.
 
 **Note**
 

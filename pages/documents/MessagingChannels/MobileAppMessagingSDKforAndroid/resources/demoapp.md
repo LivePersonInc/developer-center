@@ -43,4 +43,4 @@ The push package contains sample code for implementing push notification in [Goo
 **branding.xml**
 Demonstrate the overriding of parameters (e.g. colors, dimensions etc.) used by the SDK. Please refer to the [Configuring the SDK](android-initialization.html) section for more details.
 
-[LiveEngage Messaging Platform Security Overview](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/LiveEngage+Messaging+Platform+Security+Overview.pdf)
+[Conversational Cloud Messaging Platform Security Overview](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/LiveEngage+Messaging+Platform+Security+Overview.pdf)

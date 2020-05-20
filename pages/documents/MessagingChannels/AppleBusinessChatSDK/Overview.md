@@ -20,7 +20,7 @@ The framework is very lightweight and designed to be an easy addition to any hos
 After sending a [Custom Interactive Message (CIM)](apple-business-chat-templates-custom-interactive-message-template.html) to the consumer, this SDK allows the developer to monitor the consumer behavior and report it back to LivePerson as engagement attributes to enhance the conversation.
 
 - Report SDEs
-  - Allows you to measure incremental lift and ROI from ABC conversations and LiveEngage operational tools
+  - Allows you to measure incremental lift and ROI from ABC conversations and Conversational Cloud operational tools
 - More easily allows Agents to read Custom Interactive Messages from Consumers
   - Provides human and bot agents with context of the consumer’s iMessage app transactional and activity data, allowing them to have a more meaningful and effective conversation
 - Notify the developer of conversational events so that they can take action with custom SDEs
@@ -50,7 +50,7 @@ Path A:
 {:start="5"}
 
 5. Consumer taps on the iMessage app and purchases the oven and delivery package
-6. Agent in LiveEngage can see the consumer transaction details in real time in the agent workspace customer info widget, and asks the consumer if they can help on other matters before closing the conversation
+6. Agent in Conversational Cloud can see the consumer transaction details in real time in the agent workspace customer info widget, and asks the consumer if they can help on other matters before closing the conversation
 7. Agent manager generates a report that looks at the weekly/monthly transaction details (values and product details) per skill/per agent, and attributes incremental conversation lift to the LE conversation
 
 Path B:

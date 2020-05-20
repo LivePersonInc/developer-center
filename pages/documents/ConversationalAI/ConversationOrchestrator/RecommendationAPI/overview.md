@@ -34,7 +34,7 @@ A typical use case for using Recommendation APIs is to get a routing decision to
 
 To use Recommendation APIs you will need to create and use an API key. To get your unique key:
 
-4. Login to Conversation Orchestrator with your LiveEngage credentials and then navigate to **Developer Key**.
+4. Login to Conversation Orchestrator with your Conversational Cloud credentials and then navigate to **Developer Key**.
 
 5. Copy and paste the key you see in the experience and use it in your API headers. 
 

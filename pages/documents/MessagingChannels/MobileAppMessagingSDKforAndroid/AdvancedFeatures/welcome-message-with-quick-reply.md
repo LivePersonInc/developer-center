@@ -21,7 +21,7 @@ You can configure the Welcome message as a simple text message with or without q
 > 
 > *[Questions about existing account] [open a new account] [tech support]*
 
-A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace. 
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the Conversational Cloud Agent Workspace. 
 
 ### How to enable
 

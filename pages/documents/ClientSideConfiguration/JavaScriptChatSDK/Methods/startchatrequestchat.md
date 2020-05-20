@@ -42,11 +42,11 @@ The parameters in question are `conversationId`, `participantId`. You will need 
 | runWithRules  | Specifies if you want rules to be evaluated on the Pre-chat survey and applied to the chat. **LEGACY ONLY**| Boolean | Example: have a skill question change the chat skill. <br> Default: off |
 | interactionTimeout	| The number of seconds that have passed since the last request was sent to the server until the server disconnects the chat. | number | <br> Default: 40 |
 | visitorSession | The monitored visitors session on the page. **LEGACY ONLY**| string | Used to create pipeline reports from the page monitoring to the chat. |
-| visitorId |   The monitored visitor ID in case of a LiveEngage account. | string |    |
-| sessionId | The monitored visitor session ID in case of a LiveEngage account. | string | |
-| contextId | The context ID of the engagement that was clicked in case of a LiveEngage account. | string   | |
-| engagementId  | The engagement ID in case of a LiveEngage account. | string   | |
-| campaignId    | The campaign ID in case of a LiveEngage account. | string | |
+| visitorId |   The monitored visitor ID in case of a Conversational Cloud account. | string |    |
+| sessionId | The monitored visitor session ID in case of a Conversational Cloud account. | string | |
+| contextId | The context ID of the engagement that was clicked in case of a Conversational Cloud account. | string   | |
+| engagementId  | The engagement ID in case of a Conversational Cloud account. | string   | |
+| campaignId    | The campaign ID in case of a Conversational Cloud account. | string | |
 | language  | The language set in the engagement in case of a Conversational Cloud account (sets the system messages language for the chat). | string | |
 | a2aSourceSiteId   | The source site for the account to account transfer **LEGACY ONLY**| string  | Supplied on the account to account event. You must have a valid API key for the new account. |
 | a2aSourceSessionId | The originating session ID for the account to account transfer **LEGACY ONLY**| string | Supplied on the account to account event. You must have a valid API key for the new account |
