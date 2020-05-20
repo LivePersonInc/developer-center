@@ -120,6 +120,7 @@
       - pagename: Tutorials & Guides
         subpages:
           - subpagename: Getting Started
+          - subpagename: Using Meta Intents with Conversation Builder
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
       - pagename: Bot Workspace
@@ -230,6 +231,7 @@
       - pagename: Natural Language Understanding
       - pagename: Domains
       - pagename: Intents
+      - pagename: Meta Intents
       - pagename: Entities
   - documentname: Knowledge Base
     pages:
