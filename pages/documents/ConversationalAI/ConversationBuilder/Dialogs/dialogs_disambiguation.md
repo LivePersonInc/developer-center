@@ -38,7 +38,7 @@ A disambiguation dialog is triggered when the bot matches the message to *multip
 
 <img style="width:350px" src="img/ConvoBuilder/dialogs_disambiguation4.png">
 
-Once the user selects the correct intent, if that intent is associated with a User Says interaction in one of the bot's dialogs, that dialog's flow begins. Or, in the Disambiguation interaction, you can configure response match conditions to direct the flow as desired.
+Once the user selects the correct intent, if that intent is associated with a Dialog Starter interaction in one of the bot's dialogs, that dialog's flow begins. Or, in the Disambiguation interaction, you can configure response match conditions to direct the flow as desired.
 
 ### Create a disambiguation dialog
 
@@ -83,11 +83,11 @@ Not all intents will be matched with a status in the same rank. For example, two
 
 #### Including/excluding intents that don't have dialog starters
 
-In your bot, you might have some dialogs that start with dialog starters (User Says interactions) and others that don't. During disambiguation, when a user clarifies their intent and selects an intent with a dialog starter, matching occurs, and the user is taken to the dialog. But when the user selects an intent *without* a dialog starter, no matching occurs, so the fallback message is displayed. This is because there is no [context switching](conversation-builder-dialogs-dialog-basics.html#context-switching) during disambiguation. You can solve this and avoid the fallback message by adding a Response Match condition inside the Disambiguation dialog--to handle the user's selection and direct the flow as you need. Or, you can configure things so that intents without dialog starters aren't considered for disambiguation. Use the [environment variable](conversation-builder-environment-variables.html) below to control this.
+In your bot, you might have some dialogs that start with dialog starters and others that don't. During disambiguation, when a user clarifies their intent and selects an intent with a dialog starter, matching occurs, and the user is taken to the dialog. But when the user selects an intent *without* a dialog starter, no matching occurs, so the fallback message is displayed. This is because there is no [context switching](conversation-builder-dialogs-dialog-basics.html#context-switching) during disambiguation. You can solve this and avoid the fallback message by adding a Response Match condition inside the Disambiguation dialog--to handle the user's selection and direct the flow as you need. Or, you can configure things so that intents without dialog starters aren't considered for disambiguation. Use the [environment variable](conversation-builder-environment-variables.html) below to control this.
 
 | Environment variable name | Description | Type | Example |
 | ---- | ---- | ---- | ---- |
-| system_useIntentsOnlyWithDialogStartersInDisambiguation | If true, only intents linked to dialog starters (User Says interactions) are considered for disambiguation. If false, intents that aren't linked to dialog starters are also considered. The default value is false. | Boolean | true |
+| system_useIntentsOnlyWithDialogStartersInDisambiguation | If true, only intents linked to dialog starters are considered for disambiguation. If false, intents that aren't linked to dialog starters are also considered. The default value is false. | Boolean | true |
 
 **Example 1** - Assume you set things to show 2 intents for disambiguation, and you set this variable to *true*. The system then matches 2 intents; 1 has a dialog starter, but the other doesn't. In this case, disambiguation does not occur. The user is directed to the only dialog that has a dialog starter. This is because disambiguation only occurs when *multiple* intents must be clarified by the user.
 

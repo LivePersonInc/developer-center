@@ -54,7 +54,7 @@ Use the POST method to set session-scoped variables in the bot runtime.
 | botId | The bot ID | string | Required | |
 | conversationId | The conversation ID | string | Required | |
 | userId | The consumer's user ID | string | Required | |
-| message | The message to send to the bot runtime | string | Optional | If set, this message is posted to the chat client. <br/><br/>To also trigger a dialog starter, this message must match to a User Says interaction in one of the bot’s dialogs. <br/><br/>If unset, the Web View service only posts the variables. |
+| message | The message to send to the bot runtime | string | Optional | If set, this message is posted to the chat client. <br/><br/>To also trigger a dialog starter, this message must match to a Dialog Starter interaction in one of the bot’s dialogs. <br/><br/>If unset, the Web View service only posts the variables. |
 | contextVariables | The key/value pairs that can be passed to the bot platform | object:list of strings | Optional | These key/value pairs can be used in the bot runtime using the [Get Web View Variables](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables) JavaScript functions. |
 
 ##### Example

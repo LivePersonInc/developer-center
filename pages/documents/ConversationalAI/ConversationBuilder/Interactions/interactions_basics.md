@@ -14,7 +14,7 @@ indicator: both
 ### Interaction categories
 There are four, general categories of interactions: 
 
-- **User Says**: User Says interactions are how dialogs are initially triggered, so most dialogs start with a User Says interaction (fallback dialogs work differently). The user starts things off by supplying some user input - a message or a question. In response, the bot tries to match the user input with a pattern or intent that’s specified in a User Says interaction in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins. User Says interactions are sometimes called “dialog starters.” For more on User Says, see [here](conversation-builder-interactions-user-says.html).
+- **Dialog Starter**: Dialog Starter interactions are how dialogs are initially triggered, so most dialogs start with a Dialog Starter interaction (fallback dialogs work differently). The user starts things off by supplying some user input - a message or a question. In response, the bot tries to match the user input with a pattern or intent that’s specified in a dialog starter in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins. For more on dialog starters, see [here](conversation-builder-interactions-dialog-starter.html).
 
 - **Statements**: Statements simply display information and then execute the next action. They don’t expect or wait for a user response. For more on statements, see [here](conversation-builder-interactions-statements.html). 
 
@@ -81,13 +81,13 @@ When selecting an interaction to add, make sure it's supported by the channel yo
 
 - Click **New Interaction**, which appears below the last interaction, and then select the interaction icon from the toolbar that appears. Alternatively, select the last interaction, and then select the interaction on the interactions toolbar on the right.
 
-    Either method adds the interaction as the last unless you added a User Says interaction, which is always inserted at the start of the dialog.
+    Either method adds the interaction as the last unless you added a Dialog Starter interaction, which is always inserted at the start of the dialog.
 
 **To add a new interaction between two interactions**
 
 - Select the interaction that should precede the one you want to add (to highlight it), and then select the interaction on the interactions toolbar.
 
-    This inserts the interaction after the one you selected unless you inserted a User Says interaction, which is always inserted at the start of the dialog.
+    This inserts the interaction after the one you selected unless you inserted a Dialog Starter interaction, which is always inserted at the start of the dialog.
 
 ### Name an interaction
 
@@ -178,7 +178,7 @@ Some but not all changes are automatically saved after you make them. As a gener
 2. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> (3-dot icon) in its upper-right corner, and click **Save**.
 
 ### Move an interaction
-You can move any type of interaction except a User Says interaction. User Says interactions always stay at the start of dialogs.
+You can move any type of interaction except a Dialog Starter interaction. Dialog Starter interactions always stay at the start of dialogs.
 
 **To move an interaction within a dialog**
 
@@ -196,7 +196,7 @@ You can move any type of interaction except a User Says interaction. User Says i
     * Selecting a different dialog moves it to the end of that dialog.
 
 ### Copy an interaction
-You can copy any type of interaction except a User Says interaction. A dialog can only have one User Says interaction.
+You can copy any type of interaction except a Dialog Starter interaction. A dialog can only have one Dialog Starter interaction.
 
 **To copy an interaction**
 

@@ -40,9 +40,9 @@ The **Settings** dialog is where you can configure some key settings for an inte
 * **Interaction Enabled**: Set this On/Off slider to Off to disable the interaction, i.e., to exclude it from being executed as a part of the dialog flow. The default value is On (Enabled).
 * **Fallback Response**: Enter the text to be sent to the user if none of the defined conditions are met.
 
-### Settings in User Says interactions
+### Settings in Dialog Starter interactions
 
-The following are additional settings in [User Says](conversation-builder-interactions-user-says.html) interactions:
+The following are additional settings in [Dialog Starter](conversation-builder-interactions-dialog-starter.html) interactions:
 
 * **Patterns**: A pattern is a text string that is matched against user input in order to trigger a bot message. Enter the pattern against which to match the input. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
 * **Exclude Keywords**: An "exclude keyword" is a text string that is matched against user input in order to *not* trigger a bot message.

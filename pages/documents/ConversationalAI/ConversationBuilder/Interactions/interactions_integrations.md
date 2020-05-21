@@ -158,7 +158,7 @@ If the dialog flow requires that the consumer upload *multiple* files, you'll ne
 
 If desired, you can route the conversation to a different dialog flow *based on whether the upload succeeded or failed*.
 
-To do this for the success flow, create a dialog that begins with a User Says interaction that matches the pattern `file_upload_success:{your success message}`, for example:
+To do this for the success flow, create a dialog that begins with a Dialog Starter interaction that matches the pattern `file_upload_success:{your success message}`, for example:
 
 `file_upload_success:Receipt of file is successful`
 
@@ -166,7 +166,7 @@ To do this for the success flow, create a dialog that begins with a User Says in
 
 Then build out the success dialog flow as desired.
 
-You can create a failure dialog similarly. In this case, the User Says interaction must match the pattern: `file_upload_failed:{your failure message}`.
+You can create a failure dialog similarly. In this case, the Dialog Starter interaction must match the pattern: `file_upload_failed:{your failure message}`.
 
 If your original dialog involves *multiple* uploads--with different success and failure messages for each upload--but you want to handle the uploads with a *single* success dialog (or failure dialog), use the * wildcard character to match all messages like this:
 

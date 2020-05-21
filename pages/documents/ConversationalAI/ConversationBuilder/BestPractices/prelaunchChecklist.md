@@ -20,7 +20,7 @@ Test whether you are catching unexpected answers to questions, and, if needed, u
 
 If there are known phrases or patterns for sensitive consumer intents that you aren't handling in the bot on launch day, it's recommended that you create "placeholder" dialogs that catch these specific patterns and immediately transfer to a human agent (i.e., an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions)).  Doing this prevents the fallback response or a mismatched intent tied to another dialog.
 
-For example, "my partner has passed away" relates to bereavement, and in this case the consumer should be transferred to a live agent immediately. For this, create a dialog with a User Says interaction that listens for the pattern `*passed away*` and other variations, and have this immediately transfer to a human agent.
+For example, "my partner has passed away" relates to bereavement, and in this case the consumer should be transferred to a live agent immediately. For this, create a dialog with a Dialog Starter interaction that listens for the pattern `*passed away*` and other variations, and have this immediately transfer to a human agent.
 
 ### Prepare your incident mitigation strategy
 
