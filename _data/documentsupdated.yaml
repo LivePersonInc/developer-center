@@ -123,6 +123,7 @@
           - subpagename: Using Meta Intents with Conversation Builder
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
+          - subpagename: Implementing the Shift Status & Current Queue Health APIs
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
