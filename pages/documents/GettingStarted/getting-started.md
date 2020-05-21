@@ -5,6 +5,16 @@ categoryname: "Getting Started"
 permalink: first-steps.html
 indicator: both
 ---
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   <iframe id="vimeo-iframe" src="https://player.vimeo.com/video/398468660?app_id=122963" width="500px" height="400px" frameborder="0" allow="autoplay;" title="FTUE" allowfullscreen style="width:100%">
+   </iframe>
+  </div>
+</div>
 
 <div class="lp-container">
     <div class=" welcome-card-modified">
@@ -22,10 +32,10 @@ indicator: both
         </div>
     </div>
     <div id="teaser-banner" class="welcome-card-modified">
-            <a target="_blank" href="https://vimeo.com/398468660/03dd5cb78d" style="display:flex;">
+            <div style="display:flex">
             <p class="teaser-header" > Watch a  quick product overview of LivePerson Platform and its tools</p>
-            <img class="play-icon"  src="img/play_icon.svg">
-            </a> 
+            <img id="vimeoButton" class="play-icon"  src="img/play_icon.svg">
+            </div>
     </div>
 </div>
 
@@ -117,3 +127,22 @@ indicator: both
         </div>
     </div>
 </div>
+<script type="text/javascript">
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the button that opens the modal
+var btn = document.getElementById("vimeoButton");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// var player = document.getElementById('vimeo-iframe').contentWindow.document.getElementById('player');
+// player.setAttribute('style', 'border: 4px solid white ');
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+</script>
