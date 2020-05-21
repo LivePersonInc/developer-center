@@ -29,7 +29,7 @@ permalink: connector-api-getting-started.html
 
 1. **Onboard your connector**
 
-	The connector is a server application that is used to make HTTPS calls on behalf of consumers to LiveEngage. For that purpose, the application must be registered and known to LiveEngage for authorization and user validation. This process can happen before even writing one line of code.
+	The connector is a server application that is used to make HTTPS calls on behalf of consumers to Conversational Cloud. For that purpose, the application must be registered and known to Conversational Cloud for authorization and user validation. This process can happen before even writing one line of code.
 
 	In order to register your application, please contact your Account Management team. You will need to provide details regarding your connector application, via a pre-determined JSON schema (otherwise known as the Application Installation Manifest). Use the default [App Installation Manifest](#app-install-manifest-for-connectors) and replace or fill in the required information.
 
@@ -37,7 +37,7 @@ permalink: connector-api-getting-started.html
 
 	* Your **connector/application name** (`client_name` and optionally also the `description`).
 
-	* **Webhooks URL endpoints** which will be used as URL endpoints for LiveEngage to send its notification events to your connector.
+	* **Webhooks URL endpoints** which will be used as URL endpoints for Conversational Cloud to send its notification events to your connector.
 
 	* **Engagement related fields** - this affects the Engagement design possibilities when designing a campaign for messaging. Without a clear reason to change them, you can use the default values found in the schema.
 
@@ -49,9 +49,9 @@ permalink: connector-api-getting-started.html
 
 	* A secret (`client_secret`; for example kgvbkk7glku72jgtmpi6l4a872)
 
-	These will be used for the first authorization request to LiveEngage in order to identify your connector and provide it with an **AppJWT**. Refer to [Getting an AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt) for more information.
+	These will be used for the first authorization request to Conversational Cloud in order to identify your connector and provide it with an **AppJWT**. Refer to [Getting an AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt) for more information.
 
-3. **Getting a consumer JWS** - An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT, you can obtain a consumer JWS (Java Web Signature) to identify the consumer in LiveEngage:
+3. **Getting a consumer JWS** - An **AppJWT** is not sufficient to identify a consumer with Conversational Cloud. With a valid AppJWT, you can obtain a consumer JWS (Java Web Signature) to identify the consumer in Conversational Cloud:
 
 	**Request Example**
 
@@ -61,23 +61,23 @@ permalink: connector-api-getting-started.html
 
 4. **Develop and run your connector** - refer to the [API Overview](connector-api-overview.html) to get started.
 
-	**Note**: The above **AppJWT** and **ConsumerJWS** will be passed in the request headers of every API call to LiveEngage for authorization of the connector and identification of the consumer.
+	**Note**: The above **AppJWT** and **ConsumerJWS** will be passed in the request headers of every API call to Conversational Cloud for authorization of the connector and identification of the consumer.
 
 ### App Install Manifest for Connectors
 
-Below, you will find an example of an Application Install Manifest. This JSON format instructs LiveEngage in how to install your application and make sure it can communicate with LiveEngage services. You can simply copy and paste the below Connector app manifest template, making sure to populate the following keys:
+Below, you will find an example of an Application Install Manifest. This JSON format instructs Conversational Cloud in how to install your application and make sure it can communicate with Conversational Cloud services. You can simply copy and paste the below Connector app manifest template, making sure to populate the following keys:
 
 * `client_name`  - name of your Connector Application. This will also be shown to the agent as the source of the conversation in the Consumer Info widget.
 
 * `description` - this is an optional key. Here you can describe your application.
 
-* **Webhooks URL endpoints** - these will be used as URL endpoints for LiveEngage to send its notification events to your connector. **Note**: these endpoints must be exposed as HTTPS.
+* **Webhooks URL endpoints** - these will be used as URL endpoints for Conversational Cloud to send its notification events to your connector. **Note**: these endpoints must be exposed as HTTPS.
 
 * `max_retries` - optional key. Use this field to configure the maximum number of retries which our Webhooks service will attempt in case of a failed request. For more information, please see the [Retry Policy](webhooks-retrypolicy.html) page.
 
 After filling in the JSON Template with the required data, please contact your Account Management team to register your connector application. If you're interested in more in-depth information on how this schema is built and why, please refer to the [general Application Install Manifest document](guides-le-applications-installing.html).
 
-### LiveEngage Application Manifest Schema - Example Using the Connector API
+### Conversational Cloud Application Manifest Schema - Example Using the Connector API
 
 ```json
 {

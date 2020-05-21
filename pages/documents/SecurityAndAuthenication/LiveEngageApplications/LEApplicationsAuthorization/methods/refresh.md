@@ -1,12 +1,13 @@
 ---
 pagename: Refresh Request
+redirect_from:
+  - authorizing-liveengage-applications-methods-refresh-request.html
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Authorizing LiveEngage Applications
+documentname: Authorizing Conversational Cloud Applications
 subfoldername: Methods
-order: 11
-permalink: authorizing-liveengage-applications-methods-refresh-request.html
+permalink: authorizing-conversational-cloud-applications-methods-refresh-request.html
 indicator: both
 ---
 

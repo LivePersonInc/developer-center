@@ -1,18 +1,19 @@
 ---
 pagename: Application Login Sample App
+redirect_from:
+  - authorizing-liveengage-applications-samples-application-login-sample-app.html
 sitesection:
 categoryname: "Security & Authentication"
-documentname: Authorizing LiveEngage Applications
+documentname: Authorizing Conversational Cloud Applications
 subfoldername: Sample App
-order: 70
-permalink: authorizing-liveengage-applications-samples-application-login-sample-app.html
+permalink: authorizing-conversational-cloud-applications-samples-application-login-sample-app.html
 ---
 
 ### Overview
 
 This sample application allows you to use the API in a few simple steps:
 
-1. Install a LiveEngage Application. Here is a [LiveEngage Applications installation guide](liveengage-applications-installing-liveengage-applications.html). After finishing the installation please retrieve the AppInstall ID and secret that you will need to use when calling this API's endpoints.
+1. Install a Conversational Cloud Application. Here is a [Conversational Cloud Applications installation guide](liveengage-applications-installing-liveengage-applications.html). After finishing the installation please retrieve the AppInstall ID and secret that you will need to use when calling this API's endpoints.
 
 2. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 

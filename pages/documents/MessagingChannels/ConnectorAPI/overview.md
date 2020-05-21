@@ -21,21 +21,21 @@ order: 1
 
 ### Introduction
 
-The Connector API enables you to build applications that connect common messaging channels (such as Facebook Messenger, WeChat, Viber, Slack and so on) with LiveEngage. This gives you the ability to build your own connector application which can, as an example, open/close conversations and send messages to LiveEngage on behalf of your consumers.
+The Connector API enables you to build applications that connect common messaging channels (such as Facebook Messenger, WeChat, Viber, Slack and so on) with Conversational Cloud. This gives you the ability to build your own connector application which can, as an example, open/close conversations and send messages to Conversational Cloud on behalf of your consumers.
 
-A connector is a broker between LiveEngage data and a messaging channel's (e.g. Facebook Messenger, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the LiveEngage language and passes it to the agent via the [Send API](connector-api-reference-overview.html). The connector can also create/open and close conversations and set the consumer profile upon conversation creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using [Webhooks](webhooks-overview.html) notifications (for example, if the agent/consumer is typing, sent a message, read the message etc.).
+A connector is a broker between Conversational Cloud data and a messaging channel's (e.g. Facebook Messenger, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the Conversational Cloud language and passes it to the agent via the [Send API](connector-api-reference-overview.html). The connector can also create/open and close conversations and set the consumer profile upon conversation creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using [Webhooks](webhooks-overview.html) notifications (for example, if the agent/consumer is typing, sent a message, read the message etc.).
 
 **Why do we need the Connector API?**
 
-LiveEngage already provides out of the box connectors to Facebook, Google My Business, Apple Business Chat, LINE, SMS via Twilio with many more in the pipeline. This API can be used by brands looking to connect with any other messaging channel, such as an SMS Gateway of their choice (not via Twilio). The API also allows brands to develop their own customized messaging connector in collaboration with a third party partner.
+Conversational Cloud already provides out of the box connectors to Facebook, Google My Business, Apple Business Chat, LINE, SMS via Twilio with many more in the pipeline. This API can be used by brands looking to connect with any other messaging channel, such as an SMS Gateway of their choice (not via Twilio). The API also allows brands to develop their own customized messaging connector in collaboration with a third party partner.
 
 **What is the Connector API?**
 
 The Connector API consists of two main components:
 
-1. **The Messaging Send API**: Send HTTPS requests based on the [Messaging Window API](consumer-int-overview.html) framework. This component of the Connector API handles communication between the Connector and LiveEngage. It has two API endpoints, create conversation ([CONVERSATION](sendapi-create.html)) and send message ([SEND](sendapi-send.html)) (close conversation is a send message with a closing context in the payload). These calls communicate events from the third party application to LiveEngage.
+1. **The Messaging Send API**: Send HTTPS requests based on the [Messaging Window API](consumer-int-overview.html) framework. This component of the Connector API handles communication between the Connector and Conversational Cloud. It has two API endpoints, create conversation ([CONVERSATION](sendapi-create.html)) and send message ([SEND](sendapi-send.html)) (close conversation is a send message with a closing context in the payload). These calls communicate events from the third party application to Conversational Cloud.
 
-2. **[Webhooks](webhooks-overview.html) Notification Service**: This component sends notifications from LiveEngage based on the [Messaging Window API](consumer-int-overview.html) framework to the connector Webhooks HTTPS-endpoints. These notifications communicate any messaging events both from the agent and consumer to the connector, such as agent/consumer replied, closed conversation, is typing and so on.
+2. **[Webhooks](webhooks-overview.html) Notification Service**: This component sends notifications from Conversational Cloud based on the [Messaging Window API](consumer-int-overview.html) framework to the connector Webhooks HTTPS-endpoints. These notifications communicate any messaging events both from the agent and consumer to the connector, such as agent/consumer replied, closed conversation, is typing and so on.
 
 Please note: as part of using the Connector API, brands will be required to expose their Webhooks' HTTPS-endpoints. The Webhooks component allows the connector to register for notifications on LivePerson (LP) events. For more information on using Webhooks, please refer to the [Webhooks Overview](webhooks-overview.html).
 
@@ -73,7 +73,7 @@ Please note: as part of using the Connector API, brands will be required to expo
 
 <br>
 
-**Note** - The Connector API was developed for applications/connectors on the **Consumer** side only. Hence, the consumer side capabilities described above are enabled via the **Messaging SEND API** and **Webhooks** components (which are the building blocks of the Connector API). On the Agent side, the capabilities described above are the ones already provided out of the box by LiveEngage and the **Agent Workspace** and that are currently supported by the Connector API. In other words, the Connector API brings new functionality (via the Messaging SEND API and Webhooks) only to the consumer side. On the agent side, it simply supports some of the already existing LiveEngage capabilities and allows them to be used in connector applications.
+**Note** - The Connector API was developed for applications/connectors on the **Consumer** side only. Hence, the consumer side capabilities described above are enabled via the **Messaging SEND API** and **Webhooks** components (which are the building blocks of the Connector API). On the Agent side, the capabilities described above are the ones already provided out of the box by Conversational Cloud and the **Agent Workspace** and that are currently supported by the Connector API. In other words, the Connector API brings new functionality (via the Messaging SEND API and Webhooks) only to the consumer side. On the agent side, it simply supports some of the already existing Conversational Cloud capabilities and allows them to be used in connector applications.
 
 ### Use Cases
 

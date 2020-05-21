@@ -102,7 +102,7 @@ The Android Mobile Messaging SDK version 5.0.0 uses:
 For More information see: [Attributes Page](https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html)
  
 ### Known Issues 
-* **Android 10, Structured Content and Quick reply messages**: Currently, structured content message colors are sent from the LiveEngage Agent Dashboard as hexadecimal colors and we cannot be certain of the appearance setting the consumer will have enabled as the structured content message arrives. Currently the Android Mobile Messaging SDK does not support converting these colors to an alternate appearance for Dark Theme. Therefore we ask our customers to ensure that colors selected for the structured content JSON are visually legible for both appearance modes for backgrounds and text within the Android Mobile Messaging SDK. As an alternative, from SDK 5.0.0 you can also set Dark Mode configuration `darkMode_SC_QR_override_colors_from_LE` in SDk not to override colors from LE and use Quick Replies, Structured Content color attributes in SDK. 
+* **Android 10, Structured Content and Quick reply messages**: Currently, structured content message colors are sent from the Conversational Cloud Agent Workspace as hexadecimal colors and we cannot be certain of the appearance setting the consumer will have enabled as the structured content message arrives. Currently the Android Mobile Messaging SDK does not support converting these colors to an alternate appearance for Dark Theme. Therefore we ask our customers to ensure that colors selected for the structured content JSON are visually legible for both appearance modes for backgrounds and text within the Android Mobile Messaging SDK. As an alternative, from SDK 5.0.0 you can also set Dark Mode configuration `darkMode_SC_QR_override_colors_from_LE` in SDk not to override colors from LE and use Quick Replies, Structured Content color attributes in SDK. 
 
 * **Android 10 and Secure Form web view**: We support Dark Theme for Secure Form by force enabling it with attribute `darkMode_force_enable_for_webView`(enabled by default).
 
@@ -368,7 +368,7 @@ The Android Mobile Messaging SDK version 4.2.0 uses:
 ### Bugs fixed:
 - Reworked logic that caused bot avatars to not show up when fetching history; avatars should now load properly as expected
 - Solved an issue where the setting for the maximum historical conversations kept on-device was not being respected
-- Corrected a problem causing several environmental information fields (os version, device model, etc) to not be reported to LiveEngage
+- Corrected a problem causing several environmental information fields (os version, device model, etc) to not be reported to Conversational Cloud
 - Fixed a bug causing Quick Reply buttons to not appear in certain circumstances
 - Moved several customizable attributes from incorrect locations to the branding.xml files
 - Resolved an issue causing certain Welcome Message Quick Reply items to not appear when using Unauthenticated / Signup flows
@@ -442,7 +442,7 @@ The Android Mobile Messaging SDK version 3.9 requires the minimum Android API ve
 
 ##### Photo and File sharing
 
-Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.    
+Mobile Messaging SDK v3.9 introduces a feature for agents within Conversational Cloud to share photos or files with the consumers.    
 
 Agents can share:
 
@@ -631,7 +631,7 @@ You can configure the Welcome message as a simple text message with or without q
 > 
 > *[Questions about existing account] [open a new account] [tech support]*
 
-A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the LiveEngage agent workspace. 
+A consumer’s quick reply selection or answer gets inserted as their first message in the conversation, which opens the conversation in the Conversational Cloud agent workspace. 
 
 ##### How to enable
 
@@ -733,7 +733,7 @@ Android Mobile App SDK v3.7.0 requires the minimum Android API version 19, SDK i
 
 * TalkBack did not announce out of view contents from Structured Content.
 
-* CSAT question sent via PCS was not visible in the LiveEngage UI conversation info widget.
+* CSAT question sent via PCS was not visible in the Conversational Cloud UI conversation info widget.
 
 * Android SDK crashed with IllegalArgumentException.
 
@@ -820,7 +820,7 @@ The SDK’s minimum API is 19 and the target API is 27.
 
 * SDK uses an old authentication token, even when the consumer is passed a new auth token.
 
-* User conversation system info (OS Type & Device) is not updated in LiveEngage when a consumer switches between IOS and Android.
+* User conversation system info (OS Type & Device) is not updated in Conversational Cloud when a consumer switches between IOS and Android.
 
 * Unauthenticated consumers passing campaign info cannot connect successfully.
 
@@ -1039,11 +1039,11 @@ In Audio messages the Brands can configure:
 
 **Available to all customers?** Yes
 
-Brands can communicate with their consumers in an unauthenticated manner while being able to leverage additional LiveEngage capabilities such as Campaigns for Messaging.
+Brands can communicate with their consumers in an unauthenticated manner while being able to leverage additional Conversational Cloud capabilities such as Campaigns for Messaging.
 
 Unauthenticated messaging allows brands to:
 
-1. Easier & quicker on-boarding to LiveEngage
+1. Easier & quicker on-boarding to Conversational Cloud
 
 2. Having pre authentication messaging use cases, for example, assistance with password recovery
 
@@ -1601,7 +1601,7 @@ These are the main feature releases available in the **Mobile App Messaging SDK 
 
 The addition of campaigns for mobile app and web messaging will allow brands to manage their engagements easily and efficiently across these channels, targeting customers based on unauthenticated attributes or locations and routing them to a desired skill.
 
-Being able to track customer activity in all areas of the brand app and provide information on these interactions to LiveEngage boosts agent efficiency and enables more accurate reporting.
+Being able to track customer activity in all areas of the brand app and provide information on these interactions to Conversational Cloud boosts agent efficiency and enables more accurate reporting.
 
 Using the Monitoring APIs, brands can:
 
@@ -1959,7 +1959,7 @@ The following devices are now also supported and/or certified to host our Mobile
 </table>
 
 
-A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
+A full list of supported and certified devices can be found in the [Conversational Cloud System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
 **Key for items as follows:**
 
@@ -2041,7 +2041,7 @@ The following devices are now also supported and/or certified to host our Mobile
  </tbody>
 </table>
 
-A full list of supported and certified devices can be found in the [LiveEngage System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
+A full list of supported and certified devices can be found in the [Conversational Cloud System Requirements document](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf).
 
 #### New APIs
 
@@ -2316,7 +2316,7 @@ Auto messages are triggered upon specific events that are detected by the system
 
 **Notes**:
 
-* Messages are supported in all LiveEngage languages.
+* Messages are supported in all Conversational Cloud languages.
 * The content of each message can be edited by the brand.
 * Skill variation is supported, including enabling/disabling the messages for each skill.
 * Certain messages can have different parameters, such as the time the conversation is in the queue before the message is sent.
@@ -2530,7 +2530,7 @@ The following devices are now also supported and/or certified to host our Mobile
 | LG G6 | N/A  | N/A | Certified |
 | LG V20 | N/A  | N/A | Certified |
 
-A full list of supported and certified devices can be found in the LiveEngage System Requirements document.
+A full list of supported and certified devices can be found in the Conversational Cloud System Requirements document.
 
 ##### Connectivity improvements
 The user experience when connecting to the app has been significantly improved. When users first log-in, and during all subsequent attempts, the login process is now much smoother and faster.
@@ -2595,7 +2595,7 @@ Related API: Handle Push Message, Get Num Unread Messages, Deprecated API
 
 The secure form gives consumers the confidence to submit sensitive information, such as credit card data and social security numbers, while messaging in-app. The form also enables agents to safely carry out secure processes, such as payment, identification and authorisations. The form can be tailored to match the Mobile App Messaging experience and has a time-out expiry, for added security.
 
-_This feature requires consulting services support. For more information, please refer to the LiveEngage ​[secure form for messaging documentation​](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf)_.
+_This feature requires consulting services support. For more information, please refer to the Conversational Cloud ​[secure form for messaging documentation​](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/security/Secure+form+for+messaging.pdf)_.
 
 ![Secure Form](img/releasesecure.png)
 

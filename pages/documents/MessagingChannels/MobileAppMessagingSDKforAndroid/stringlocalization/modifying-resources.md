@@ -31,7 +31,7 @@ The SDK utilizes several resources as part of its GUI. To customize those resour
 
 
   <tr>
-    <td>Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on LiveEngage and on agent avatar appearing on the action bar.  In case you want to define the background color for this avatar, override "agent_avatar_background_color" resource id. </td>
+    <td>Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on Conversational Cloud and on agent avatar appearing on the action bar.  In case you want to define the background color for this avatar, override "agent_avatar_background_color" resource id. </td>
     <td>lp_messaging_ui_ic_agent_avatar</td>
   </tr>
 

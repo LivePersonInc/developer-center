@@ -2,36 +2,35 @@
 pagename: Overview
 redirect_from:
   - guides-cookies.html
+  - cookies-and-liveengage-overview.html
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Cookies and LiveEngage
-level-order: 12
-order: 10
-permalink: cookies-and-liveengage-overview.html
+documentname: Cookies and Conversational Cloud
+permalink: cookies-and-conversational-cloud-overview.html
 root-link: true
 indicator: both
 ---
 
 A cookie is a small piece of data sent from a website and stored in the visitors' web browser. It helps the website to remember information about a visit; so when a visitor browses the same website in the future, the data stored in the cookie is sent back to the website by the browser.
 
-LiveEngage uses information stored in cookies to maintain session data and to identify returning visitors by saving LiveEngage-specific data, such as visitor ID and last chat date. It is important to note that the cookies **do not contain any private customer data** or any data that can be accessible or useful outside of LiveEngage.
+Conversational Cloud uses information stored in cookies to maintain session data and to identify returning visitors by saving Conversational Cloud-specific data, such as visitor ID and last chat date. It is important to note that the cookies **do not contain any private customer data** or any data that can be accessible or useful outside of Conversational Cloud.
 
 ### Cookie Consent
 
-Brands that elect to use our products and services are responsible for obtaining (and maintaining) consumer consent before using LiveEngage cookies and other tracking technologies on their websites.  While we include suggested best practices below, we also recommend that you seek legal advice about what would be best for your particular websites or applications in light of your offering, the reason you’re using cookies and the laws that apply to you.
+Brands that elect to use our products and services are responsible for obtaining (and maintaining) consumer consent before using Conversational Cloud cookies and other tracking technologies on their websites.  While we include suggested best practices below, we also recommend that you seek legal advice about what would be best for your particular websites or applications in light of your offering, the reason you’re using cookies and the laws that apply to you.
 
-### Best Practices with Cookies and LiveEngage
+### Best Practices with Cookies and Conversational Cloud
 
-In order to stay aligned with the latest regulations, LivePerson recommends that brands adopt the following best practices regarding cookies, tracking and LiveEngage:
+In order to stay aligned with the latest regulations, LivePerson recommends that brands adopt the following best practices regarding cookies, tracking and Conversational Cloud:
 
 1. You should add a cookie consent functionality to your website.  It should contain a prominent banner or similar visual element when the page first loads to concisely inform the consumer about the use of cookies and what action the consumer should take to consent.
 
-  * If the consumer consents, you should remember their response so you can deploy the LiveEngage tag on all subsequent visits and pages.
+  * If the consumer consents, you should remember their response so you can deploy the Web Tag on all subsequent visits and pages.
 
-  * If the consumer declines, you should remember their response, so the LiveEngage tag is **not** deployed on subsequent pages and visits. Additionally you may choose to refresh the current page to apply the consumer’s choice so that the LiveEngage tag would not get deployed on that specific page.
+  * If the consumer declines, you should remember their response, so the Web Tag is **not** deployed on subsequent pages and visits. Additionally you may choose to refresh the current page to apply the consumer’s choice so that the Web Tag would not get deployed on that specific page.
 
 {:start="2"}
-2. You should include information about your use of third party cookies, such as LiveEngage cookies, and the purpose for their use, in your privacy policy or cookie notice.
+2. You should include information about your use of third party cookies, such as Conversational Cloud cookies, and the purpose for their use, in your privacy policy or cookie notice.
 
 3. You should inform consumers about various options they can use to disable cookies.
 
@@ -43,7 +42,7 @@ In order to stay aligned with the latest regulations, LivePerson recommends that
 
 Secure storage is a client-side storage mechanism, that LivePerson has implemented in order to provide the best possible consumer experience. Secure storage uses a combination of modern browser technologies (indexedDB, localStorage, sessionStorage and first party cookies) to store necessary information on LivePerson domains - depending on browser capabilities.
 
-By default, LiveEngage uses the third-party cookie solution type for website visitors. If you have any questions about this approach, please contact LivePerson Customer Support. The following tables list the cookies and their types offered by LivePerson.
+By default, Conversational Cloud uses the third-party cookie solution type for website visitors. If you have any questions about this approach, please contact LivePerson Customer Support. The following tables list the cookies and their types offered by LivePerson.
 
 ### Monitoring Cookies
 
@@ -58,7 +57,7 @@ By default, LiveEngage uses the third-party cookie solution type for website vis
   <tbody>
   <tr>
     <td>LPVID</td>
-    <td>Visitor ID as identified in LiveEngage. Identifies a browser as long as cookie is not deleted.</td>
+    <td>Visitor ID as identified in Conversational Cloud. Identifies a browser as long as cookie is not deleted.</td>
     <td>1st party persistent. Fallback to sessionStorage per Tab. <br><br>Path: parent domain /.</td>
   </tr>
   <tr>
@@ -186,7 +185,7 @@ Note: We do not currently use this data although we do store it.</td>
   </tr>
   <tr>
     <td>session_id</td>
-    <td>LiveEngage agent session identification</td>
+    <td>Conversational Cloud agent session identification</td>
     <td>Third party, httpOnly secure session cookie. <br><br>Path: LivePerson domain</td>
   </tr>
   <tr>
@@ -235,18 +234,18 @@ Note: We do not currently use this data although we do store it.</td>
 
 ### Considerations
 
-The following issues should be considered when working with LiveEngage Cookies.
+The following issues should be considered when working with Conversational Cloud Cookies.
 
 #### Secure Cookies
 
-LiveEngage supports secure cookies, but requires the LiveEngage Tag to be deployed using HTTPS.
+Conversational Cloud supports secure cookies, but requires the Web Tag to be deployed using HTTPS.
 
 #### HttpOnly Attribute
 
-LiveEngage is unable to support the HttpOnly attribute because it does not operate through JavaScript, which enables the LiveEngage Tag to collect cookies.
+Conversational Cloud is unable to support the HttpOnly attribute because it does not operate through JavaScript, which enables the Web Tag to collect cookies.
 
 #### Third Party Cookies - Default
 
-By default, LiveEngage uses third-party session and visitor cookies in order to save visitors’ tracking information. This is due to the fact that while visitors are browsing your site, the LiveEngage cookies are set by the LiveEngage domain and not by your website domain.
+By default, Conversational Cloud uses third-party session and visitor cookies in order to save visitors’ tracking information. This is due to the fact that while visitors are browsing your site, the Conversational Cloud cookies are set by the Conversational Cloud domain and not by your website domain.
 
 If you have any questions that are not addressed through this cookie policy, please contact LivePerson Technical Support.

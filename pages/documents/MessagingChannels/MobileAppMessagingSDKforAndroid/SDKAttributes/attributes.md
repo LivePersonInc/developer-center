@@ -3355,7 +3355,7 @@ Color code for the agent default icon in the avatar next to the bubble.
 
 
 #### lp_messaging_ui_ic_agent_avatar
-Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on LiveEngage and on agent avatar appearing on the action bar.
+Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on Conversational Cloud and on agent avatar appearing on the action bar.
 
 If you want to define the background color for this avatar, override [agent_avatar_background_color](#agent_avatar_background_color) resource ID.
 

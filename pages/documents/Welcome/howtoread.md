@@ -1,9 +1,11 @@
 ---
 pagename: How to Read Our Documents
+redirect_from:
+  - getting-started-with-liveengage-apis-how-to-read-our-documents.html
 sitesection: Documents
 categoryname: "Welcome"
-documentname: Getting Started with LiveEngage APIs
-permalink: getting-started-with-liveengage-apis-how-to-read-our-documents.html
+documentname: Getting Started with Conversational Cloud APIs
+permalink: getting-started-with-conversational-cloud-apis-how-to-read-our-documents.html
 indicator: both
 ---
 
@@ -29,7 +31,7 @@ While there is some variety across LivePerson's documents, we try to stick to an
 
     * Response codes. What are the different codes sent back with this response and what do they represent?
 
-4) Any additional information about the API. This field changes between each API. Some of our APIs require understanding of different LiveEngage services (like the Connector API) or even third party software. In those cases, you'll find additional folders. Sometimes, these will appear before Methods, if they're required for the methods to work, but they will usually appear afterwards.
+4) Any additional information about the API. This field changes between each API. Some of our APIs require understanding of different Conversational Cloud services (like the Connector API) or even third party software. In those cases, you'll find additional folders. Sometimes, these will appear before Methods, if they're required for the methods to work, but they will usually appear afterwards.
 
 5) Appendix. The appendix will include any special requirements or notes necessary to working with the API like security certificates, advanced features and more.
 

@@ -17,7 +17,7 @@ indicator: both
 
 **To access the Conversation Builder application**
 
-1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Conversation Builder**.
 
 ### The Bot Workspace
@@ -27,7 +27,7 @@ indicator: both
 The Conversation Builder application is the primary workspace for designing a bot. It is what ties together all the other aspects of the platform.
 
 {: .important}
-Conversation Builder supports the creation of bots for all the LiveEngage channels. Because a bot simply listens to a piece of text sent from a user, any channel that provides text to LiveEngage can potentially trigger a bot. However, there are channel-specific formats, features and conventions that might not be available for all channels. Please contact your LivePerson account team for information on formats supported for specific channels.
+Conversation Builder supports the creation of bots for all the Conversational Cloud channels. Because a bot simply listens to a piece of text sent from a user, any channel that provides text to Conversational Cloud can potentially trigger a bot. However, there are channel-specific formats, features and conventions that might not be available for all channels. Please contact your LivePerson account team for information on formats supported for specific channels.
 
 A bot consists of one or more dialogs that each have one or more [interactions](conversation-builder-interactions-interaction-basics.html) within them.
 
@@ -39,7 +39,7 @@ In the upper-right corner on the menu bar, you will find:
 
 * **Global Functions** - Write code snippets for use within dialogs. See [scripting functions](conversation-builder-scripting-functions-introduction.html) for built-in methods.
 
-* **Agent Connectors** - [Deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) the bot to a LiveEngage environment.
+* **Agent Connectors** - [Deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) the bot to a Conversational Cloud environment.
 
 * The ellipsis icon makes available more options: **Bot Settings**, **Bot Change History**, **Bot Diff** and **Visualize**.
 

@@ -1,5 +1,5 @@
 ---
-pagename: LiveEngage Configuration
+pagename: Conversational Cloud Configuration
 redirect_from:
   - consumer-experience-voice-video-android-workspace-requirements.html
   - voice-and-video-for-android-sdk-beta-liveengage-configuration-agent-workspace-requirements.html
@@ -8,11 +8,12 @@ redirect_from:
   - consumer-experience-voice-video-android-register-app.html
   - voice-and-video-for-android-sdk-beta-liveengage-configuration-register-your-app.html
   - voice-and-video-for-android-sdk-beta-liveengage-configuration.html
+  - mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-liveengage-configuration.html
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
 subfoldername: Voice & Video for Android SDK (BETA)
-permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-liveengage-configuration.html
+permalink: mobile-app-messaging-sdk-for-android-voice-and-video-for-android-sdk-beta-conversational-cloud-configuration.html
 indicator: messaging
 ---
 
@@ -24,7 +25,7 @@ the CoApp product is deprecated and will be discontinued from February 28th, 202
 
 ### Agent Workspace Requirements
 
-Your agents will be using LiveEngage from a supported web browser to make calls to your consumers. This section explains how to setup your LiveEngage account for voice & video support.
+Your agents will be using Conversational Cloud from a supported web browser to make calls to your consumers. This section explains how to setup your Conversational Cloud account for voice & video support.
 
 **Note:** Legacy systems do NOT support this feature.
 
@@ -34,7 +35,7 @@ Your agents will be using LiveEngage from a supported web browser to make calls 
 | ------------- |:-------------:|:-------------|
 | Chrome |  >= v54)  | Windows, MacOSX, Linux |
 
-**Note:** Only web browsers listed here are supported. When using LiveEngage from an unsupported browser the feature is automatically disabled from the agent workspace.
+**Note:** Only web browsers listed here are supported. When using Conversational Cloud from an unsupported browser the feature is automatically disabled from the agent workspace.
 
 #### Required Hardware
 
@@ -48,11 +49,11 @@ Your agents will be using LiveEngage from a supported web browser to make calls 
 
 #### Account features
 
-By default, voice & video is __not enabled__ in your LiveEngage account. Please contact your LivePerson account manager to have this feature enabled for you.
+By default, voice & video is __not enabled__ in your Conversational Cloud account. Please contact your LivePerson account manager to have this feature enabled for you.
 
 #### User Profiles
 
-Your agents on LiveEngage require a specific set of skills in order to use the **voice**, **video** or **In-app CoBrowse** capabilities of your account.
+Your agents on Conversational Cloud require a specific set of skills in order to use the **voice**, **video** or **In-app CoBrowse** capabilities of your account.
 
 By default, these settings are enabled for your "agent" role. If you wish to disable or customize them for specific **Agent Groups**, follow these steps:
 
@@ -83,14 +84,14 @@ The settings you chose in **User Profiles** will be reflected in all of your acc
 
   ![Conversation Features](img/le_conv_features.png)
 
-### Register Your App with LiveEngage
+### Register Your App with Conversational Cloud
 
-In order to use your app with your LiveEngage account, you need to first register it. Just a few steps are required.
+In order to use your app with your Conversational Cloud account, you need to first register it. Just a few steps are required.
 
 #### Register your App ID
 
-  * Login to your **LiveEngage** account as _Account Admin_
-  * Open **Campaigns** tab
+  * Login to your **Conversational Cloud** account as _Account Admin_
+  * Open **Campaign Builder** tab
   * Select **Data Sources** label below the campaigns list
 
 ![Data Sources](img/le_campaigns_datasources.png)
