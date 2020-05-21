@@ -15,7 +15,7 @@ solutions with you!
 <div class="card-container">
   <div id="success-stories" class="welcome-card" style="padding:58px 22px 58px 22px;">
     <a href="/conversational-ai-overview.html">
-      <p class="success-stories-header" style="margin-left: 18px !important;">Learn about LivePerson Conversational AI</p>
+      <p class="success-stories-header" style="margin-left: 18px !important;">Learn about AI, Bots and Conversational Solutions. </p>
       <p class="free-trial-label" style="margin-left: 18px !important; "> 
       <img class="dots-container" src="img/four-dots-white.svg"/>
       Learn more</p>
@@ -24,14 +24,14 @@ solutions with you!
     <a class="welcome-card" target="_blank" href="/first-steps.html"> 
       <img class="container-image" src="img/ic_get_started.svg"/>
       <h5 class="welcome-title">Get Started with LivePerson</h5>
-      <p class="welcome-content">Start connecting to consumers over popular messaging channels and automate conversations with AI-powered bots.</p>
+      <p class="welcome-content">Build on our platform using quick start guides, APIs and SDKs. </p>
     </a>
     <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/troubleshooting-how-to-contact-support.html"> 
       <img class="container-image" src="img/ic_support.svg"/>
       <h5 class="welcome-title">Need help? Get answers to common questions or contact support.</h5>
     </a>
       <a  class="welcome-card" target="_blank" href="/getting-started-with-rich-messaging-introduction.html"> 
-      <img class="container-image" src="img/ic_partners.svg"/>
+      <img class="container-image" src="img/ic_richmessaging.svg"/>
       <h5 class="welcome-title">Extend your messaging capabilities with Rich Messaging.</h5>
     </a>
     <a  class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/whats-new-latest-whats-new.html"> 
