@@ -32,9 +32,9 @@ indicator: both
         </div>
     </div>
     <div id="teaser-banner" class="welcome-card-modified">
-            <div style="display:flex">
+            <div  style="display: flex;">
             <p class="teaser-header" > Watch a  quick product overview of LivePerson Platform and its tools</p>
-            <img id="vimeoButton" class="play-icon"  src="img/play_icon.svg">
+            <img class="play-icon"  src="img/play_icon.svg">
             </div>
     </div>
 </div>
@@ -131,7 +131,7 @@ indicator: both
 // Get the modal
 var modal = document.getElementById("myModal");
 // Get the button that opens the modal
-var btn = document.getElementById("vimeoButton");
+var btn = document.getElementById("teaser-banner");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 // var player = document.getElementById('vimeo-iframe').contentWindow.document.getElementById('player');
