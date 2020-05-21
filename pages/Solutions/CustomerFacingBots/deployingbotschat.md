@@ -15,7 +15,7 @@ indicator:
 ---
 
 
-### Step 1 - Set Up Your LiveEngage Configuration
+### Step 1 - Set Up Your Conversational Cloud Configuration
 
 If your brand is using Live Chat - both desktop and mobile web chats can incorporate bots utilizing the [Chat Agent API](chat-agent-getting-started.html).
 
@@ -29,7 +29,7 @@ In order to use the Chat Agent API, please follow the steps below:
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information.
 
-2. **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all Chat Agent API requests.
+2. **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all Chat Agent API requests.
 
 3. **Create an agent session** using the [Start Agent Session method](agent-start-agent-session.html).
 
@@ -37,13 +37,13 @@ In order to use the Chat Agent API, please follow the steps below:
 
 You can also use the chatbot simulator in order to learn how to implement the main agent methods provided by the Chat Agent API - [C​lick here](https://github.com/LivePersonInc/agent-sample-app) to review the full code repository on Github.
 
-### Step 3 - Assign your bot to a LiveEngage campaign and manage bot escalations
+### Step 3 - Assign your bot to a Conversational Cloud campaign and manage bot escalations
 
 **Assign your bot to a Campaign**
 
-Once your bot is created, it must be assigned into a LiveEngage campaign in order to be assigned to the right engagements and skills.
+Once your bot is created, it must be assigned into a Conversational Cloud campaign in order to be assigned to the right engagements and skills.
 
-1. Create a new campaign within LiveEngage by navigating to Campaign Builder and click on new campaign.
+1. Create a new campaign within Conversational Cloud by navigating to Campaign Builder and click on new campaign.
 
 2. Create a new engagement - this is the button that invites visitors to begin a chat.  The engagement can be in any format, size, shape of even a simple link (Ensure that in the first step, you select 'conversation type - Live Chat’).
 
@@ -56,7 +56,7 @@ In cases where your bot will not be able to solve the consumer queries, escalati
 
 ### Step 4 - Test your bot
 
-Once your bot is connected to an engagement, you can begin to test the bot and see how it behaves as an agent within LiveEngage.  Conduct the following tests:
+Once your bot is connected to an engagement, you can begin to test the bot and see how it behaves as an agent within Conversational Cloud.  Conduct the following tests:
 
 * Start a conversation and ensure the bot picks up the appropriate skill
 * Ensure you are able to see the bot conversation from the agent workspace and monitor it in real time

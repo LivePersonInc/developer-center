@@ -13,11 +13,11 @@ indicator:
 
 ### Login Service API
 
-The Login Service API provides developers with the ability to login and take advantage of LiveEngage services outside of the standard Conversational Cloud Application.
+The Login Service API provides developers with the ability to login and take advantage of Conversational Cloud services outside of the standard Conversational Cloud Application.
 
-This means that once an official LiveEngage user account is provided. That user account, and its applicable access permissions, can then be utilized with custom solutions that leverage any of the supported LiveEngage APIs.
+This means that once an official Conversational Cloud user account is provided. That user account, and its applicable access permissions, can then be utilized with custom solutions that leverage any of the supported Conversational Cloud APIs.
 
-Alternatively, LiveEngage also supports the use of key based authentication using the oAuth1.0a standard - however, this solution does carry with it a dependency of creating a set of application keys via Data Sources in LiveEngage and persisting these keys to generate the authentication between LiveEngage and the custom API based solution. [More info on this method of logging in can be found here](guides-authentication-introduction.html).
+Alternatively, Conversational Cloud also supports the use of key based authentication using the oAuth1.0a standard - however, this solution does carry with it a dependency of creating a set of application keys via Data Sources in Conversational Cloud and persisting these keys to generate the authentication between Conversational Cloud and the custom API based solution. [More info on this method of logging in can be found here](guides-authentication-introduction.html).
 
 In the case of the MCS Toolkit, a simple prompt asks the user to enter their credentials, ensuring that each session is securely authenticated and allowing the user to only need to remember their login and password rather than a set of obscurer keys.
 

@@ -10,21 +10,21 @@ redirect_from:
 {: .notice}
 LivePerson Functions is a Function as a Service (FaaS) platform which enables brands to develop custom behaviors within LivePerson’s conversational platform to better tailor the system to their specific needs. Get started with a hosted function in less than 60 seconds. [Check out the Functions documentation to get acquainted with this powerful new feature](function-as-a-service-overview.html).
 
-The LiveEngage platform offers a messaging solution that you can harness and enhance by integrating LiveEngage with your native app, customizing LiveEngage reports or creating new reports, and building or integrating workspace widgets. This can be achieved using our various APIs and SDKs.
+The Conversational Cloud platform offers a messaging solution that you can harness and enhance by integrating Conversational Cloud with your native app, customizing Conversational Cloud reports or creating new reports, and building or integrating workspace widgets. This can be achieved using our various APIs and SDKs.
 
-Our APIs configure and manipulate LiveEngage features and capabilities. To use these APIs, you must make sure to configure your Conversational Cloud account to access these features. For example, if you want to use the Agent Messaging SDK to connect a bot, then your account must support bot users. Therefore, before working with any of the below documentation, it's best to contact your account team or LivePerson Support to check that the prerequisite features are enabled for your account.
+Our APIs configure and manipulate Conversational Cloud features and capabilities. To use these APIs, you must make sure to configure your Conversational Cloud account to access these features. For example, if you want to use the Agent Messaging SDK to connect a bot, then your account must support bot users. Therefore, before working with any of the below documentation, it's best to contact your account team or LivePerson Support to check that the prerequisite features are enabled for your account.
 
-Most user actions within LiveEngage can be performed programmatically using the REST API. Some of the key categories are:
+Most user actions within Conversational Cloud can be performed programmatically using the REST API. Some of the key categories are:
 
 - **[Domain API](common-resources-domain-api.html)** for returning the base domain for your LivePerson account, which is used in conjunction with the other APIs outlined in the documentation.
 
-- **[Login Service API](login-service-api-overview.html)** for logging into LiveEngage as a user with credentials or as an application with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
+- **[Login Service API](login-service-api-overview.html)** for logging into Conversational Cloud as a user with credentials or as an application with an API key. After logging in, you receive a session token (Bearer) to use for other related API calls.
 
-- **[Engagement attributes](common-resources-engagement-attributes.html)** for collecting specific information about the visitor such as product viewed, purchase information, errors the visitor encountered, and search results. LiveEngage provides out-of-the-box information for the visitor’s geolocation, the amount of time spent on a page, and the pages they viewed, among other parameters.
+- **[Engagement attributes](common-resources-engagement-attributes.html)** for collecting specific information about the visitor such as product viewed, purchase information, errors the visitor encountered, and search results. Conversational Cloud provides out-of-the-box information for the visitor’s geolocation, the amount of time spent on a page, and the pages they viewed, among other parameters.
 
 - **[Data APIs](common-resources-data-apis.html)** for retrieving your contact center’s information such as types of conversations, load, and messaging transcripts.
 
-- **[Bot connectors](bot-connectors-getting-started.html)** for integrating third-party messaging platforms and LiveEngage.  Bot connectors send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation.
+- **[Bot connectors](bot-connectors-getting-started.html)** for integrating third-party messaging platforms and Conversational Cloud.  Bot connectors send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation.
 
 
 <p style="text-align: right">
@@ -36,17 +36,17 @@ Most user actions within LiveEngage can be performed programmatically using the 
 
 ### Common use cases
 
-To better understand our documentation, APIs, and the LiveEngage platform, we’ve listed our common use cases as entry points into the documentation to help you start building an API client. If, however, you can’t find the project you had in mind, reach out to LivePerson Support for guidance.
+To better understand our documentation, APIs, and the Conversational Cloud platform, we’ve listed our common use cases as entry points into the documentation to help you start building an API client. If, however, you can’t find the project you had in mind, reach out to LivePerson Support for guidance.
 
 <p><br></p>
 
-#### Integrate LiveEngage with your native app
+#### Integrate Conversational Cloud with your native app
 
 You can integrate your native iOS or Android app with LiveEnage using the Mobile Messaging SDK.  When you implement this SDK and its APIs, brands can create and manage digital engagements that start in your native app.  This allows customers to communicate with the brand's agents through their channel of choice. For more information, refer to the Mobile Messaging SDK for [Android](mobile-app-messaging-sdk-for-android-overview.html) or [iOS](mobile-app-messaging-sdk-for-ios-overview.html).
 
 <p><br></p>
 
-#### Customize LiveEngage reports or create new ones
+#### Customize Conversational Cloud reports or create new ones
 
 Working with historical data APIs, brands can address specific goals and KPIs by accessing their entire raw data.  Brands can use this data in data warehouse systems as well as create customized reports.
 
@@ -66,9 +66,9 @@ Some of the key use cases are:
 
 #### Build or integrate workspace widgets
 
-You can integrate your application with the LiveEngage Agent Workspace using the [Agent Workspace Widget SDK](agent-workspace-widget-sdk-overview.html), which is a lightweight, client-side communication package. The Agent Workspace Widget connects with visitors and handles multiple concurrent connections from one central console, by opening applications directly within the Agent Workspace.
+You can integrate your application with the Conversational Cloud Agent Workspace using the [Agent Workspace Widget SDK](agent-workspace-widget-sdk-overview.html), which is a lightweight, client-side communication package. The Agent Workspace Widget connects with visitors and handles multiple concurrent connections from one central console, by opening applications directly within the Agent Workspace.
 
-When you implement this SDK, and its APIs, you can achieve two-way communication between LiveEngage and external applications. This allow you to receive more in-depth information about your visitors, so you can assist them more effectively and efficiently. Brands can also send conversation lines directly from the application, and develop the ability to transfer the conversation transcript automatically to the external application.
+When you implement this SDK, and its APIs, you can achieve two-way communication between Conversational Cloud and external applications. This allow you to receive more in-depth information about your visitors, so you can assist them more effectively and efficiently. Brands can also send conversation lines directly from the application, and develop the ability to transfer the conversation transcript automatically to the external application.
 
 You can also use the [Engagement Window Widget SDK](engagement-window-widget-sdk-overview.html) with the Agent Workspace Widget SDK. This allows sharing of rich media between the customer and the agent. An external platform facilitates a direct connection between the two SDKs using unique session IDs, providing a seamless widget integration framework.
 

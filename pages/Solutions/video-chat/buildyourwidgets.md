@@ -13,7 +13,7 @@ indicator:
 ---
 
 
-Once you have the video service and accompanying html elements in place, you are ready to build the two LiveEngage widgets for your video call: the agent side widget and the customer side widget.
+Once you have the video service and accompanying html elements in place, you are ready to build the two Conversational Cloud widgets for your video call: the agent side widget and the customer side widget.
 
 ### Agent side widget
 
@@ -53,7 +53,7 @@ Recommendations:
 
 **Implement the window application**
 
-Contact your LivePerson representative and request to deploy your window application code into LiveEngage taglet manager
+Contact your LivePerson representative and request to deploy your window application code into Conversational Cloud taglet manager
 
 **Test your application**
 

@@ -191,7 +191,7 @@
       - pagename: Testing & Deployment
         subpages:
           - subpagename: Debugging
-          - subpagename: Deploying to LiveEngage
+          - subpagename: Deploying to Conversational Cloud
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
@@ -762,7 +762,7 @@
       subpages:
       - subpagename: Overview
       - subpagename: Getting Started
-      - subpagename: LiveEngage Configuration
+      - subpagename: Conversational Cloud Configuration
       - subpagename: Customizing
       - subpagename: Sample Apps
       - subpagename: FAQ
@@ -813,7 +813,7 @@
       - subpagename: Overview
       - subpagename: Getting Started
       - subpagename: Customizing
-      - subpagename: LiveEngage Configuration
+      - subpagename: Conversational Cloud Configuration
       - subpagename: Sample App
       - subpagename: Appendix
     - pagename: All Releases
@@ -932,7 +932,7 @@
 - categoryname: 'Security & Authentication'
   image: security-authentication
   documents:
-    - documentname: Cookies and LiveEngage
+    - documentname: Cookies and Conversational Cloud
       pages:
         - pagename: Overview
     - documentname: Apple Business Chat Authentication
@@ -1075,7 +1075,7 @@
         - pagename: Overview
         - pagename: Getting Started
         - pagename: Creating Report Tasks
-    - documentname: SMS with LiveEngage
+    - documentname: SMS with Conversational Cloud
       pages:
         - pagename: Overview
         - pagename: IVR Deflection
