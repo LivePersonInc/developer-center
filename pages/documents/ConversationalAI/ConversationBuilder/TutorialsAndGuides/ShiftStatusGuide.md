@@ -12,21 +12,21 @@ indicator: both
 
 ### Overview
 
-At LivePerson, we’ve provided a variety of APIs that you can call from Conversation Builder in order to improve the user experience of your bots. Two of which are the Shift Status and Current Queue Health APIs, which return data about the availability of your agents and current wait times that users are experiencing when connecting to those agents. This guide will serve as a walkthrough of the implementation of these APIs within an Agent Escalation dialog.
+At LivePerson, we’ve provided a variety of APIs that you can call from Conversation Builder to improve the user experience of your bots. Two of these are the [Shift Status](shift-status-api-methods-get-shift-status-by-account.html) and [Current Queue Health](messaging-operations-api-methods-messaging-current-queue-health.html) APIs, which return data about the availability of your agents and current wait times that users are experiencing when connecting to those agents. This guide will serve as a walkthrough of the implementation of these APIs within an Agent Escalation dialog.
 
 ### Setup needed
 
 For the purpose of configuring these APIs, we will need the following:
 
-- Bearer Token
+- Bearer token
 - Bot account number
 - A deployed bot (demo or production)
 - Site settings configuration
-- URL Domains for each API call
+- URL domains for each API call
 
 #### Bearer token retrieval
 
-For authorization purposes, these API requires that a Bearer Token be passed along in an Authorization Header. To retrieve this Bearer Token, we will take advantage of the `getLPEngagementAttribute()` scripting function. Insert the following code within the `__initConversation()` function inside of Global Functions.
+For authorization purposes, these API requires that a bearer token be passed along in an authorization header. To retrieve this bearer token, we'll take advantage of the [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-and-previous-skills) scripting function. Insert the following code within the `__initConversation()` function inside of **Global Functions**.
 
 ```javascript
 // Bearer Token Needed for Messaging Queue Health & Shift Status APIs
@@ -34,13 +34,15 @@ var bearerToken = botContext.getLPEngagementAttribute("BearerToken");
 botContext.setBotVariable("bearerToken", bearerToken, true, false);
 ```
 
-The Bearer Token is only generated for a deployed bot, therefore simply testing with the Conversation Builder previewer tool will not be sufficient for these APIs.
+The bearer token is only generated for a deployed bot; therefore, simply testing with Conversation Builder's Preview tool will not be sufficient for these APIs.
 
 #### Bot account number
 
-You likely used an account number to log into LiveEngage, but to be clear, your account number can be found in the URL of the LiveEngage Platform, shown below.
+You likely used an account number to log into LiveEngage, but, for awareness, your account number can be found in the URL of the LiveEngage platform, shown below.
 
-Taking advantage of the `getLPAccountId()` function, we are able to bring this account value into our bot and set it as the bot variable ‘botAccountNumber’.
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/guideShiftStatus_botAccountNumber.png">
+
+Taking advantage of the [getLPAccountId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-lp-account-id) function, we're able to bring this account value into our bot and set it as the bot variable ‘botAccountNumber’.
 
 ```javascript
 //LE account number, needed for api calls
@@ -54,17 +56,17 @@ To enable use of the Shift Status and Current Queue Health APIs, LivePerson must
 
 #### URL domains
 
-These APIs use different base URIs, which differ based on account and the service being accessed. To retrieve the specific base domain for each resource, take advantage of our Domain API. Best practices for domain retrieval would have us calling this API from within the bot to guard against the unlikely situation of the domains changing. To keep this document simple, we will be hard coding in these values instead. 
+These APIs use different base URIs, which differ based on the account and the service being accessed. To retrieve the specific base domain for each resource, take advantage of our [Domain API](common-resources-domain-api.html). Best practices for domain retrieval have us calling this API from within the bot to guard against the unlikely situation of the domains changing. To keep this document simple, we'll be hard coding in these values instead.
 
-Using Postman, include the account number and the service name in your API call to retrieve that service’s domain. The service names for these APIs can be found in their respective ‘Overview’ sections in the documentation, however to simplify things here are the service names you will need to use:
+Using [Postman](https://www.postman.com/), include the account number and the service name in your API call to retrieve that service’s domain. The service names for these APIs can be found in their respective ‘Overview’ sections in the documentation; however, to simplify things, here are the service names you'll need to use:
 
 - Shift Status: asyncMessagingEnt
 - Current Queue Health: leDataReporting
 
 For example, the URI for retrieving the Shift Status domain is:
-'http://api.liveperson.net/api/account/34274562/service/asyncMessagingEnt/baseURI.json?version=1.0'
+`http://api.liveperson.net/api/account/34274562/service/asyncMessagingEnt/baseURI.json?version=1.0`
 
-Calls to this URI return an object with a “baseURI” value that you will want to store to a variable within Global Functions. 
+Calls to this URI return an object with a “baseURI” value that you'll want to store to a variable within Global Functions. 
 
 ```javascript
 // variables needed for Shift Status and Queue Health APIs
@@ -76,7 +78,7 @@ botContext.setBotVariable('queueHealthDomain', 'va.data.liveperson.net', true, f
 
 #### Setting the skill ID
 
-Prior to calling on the Shift Status API, you will need to set the Skill ID that is being escalated to. This is typically done with a switch statement within a function defined in Global Functions, setting variables based on a user’s intent. An example of this function can be found in our Simple Router template and is as follows:
+Prior to calling on the Shift Status API, you'll need to set the skill ID that is being escalated to. This is typically done with a switch statement within a function defined in Global Functions, setting variables based on a user’s intent. An example of this function can be found in our [Simple Router template](conversation-builder-bot-templates-simple-router.html) and is as follows:
 
 ```javascript
 // FILL IN THE APPROPRIATE SKILL & INTENT INFORMATION
@@ -113,11 +115,13 @@ function transfer(intent){
 }
 ```
 
-Prior to calling our Shift Status API, we will call this function to provide us with the relevant Skill ID. With the Skill ID now saved in a bot variable, we can work with the results of our API calls.
+Prior to calling our Shift Status API, we will call this function to provide us with the relevant skill ID. With the skill ID now saved in a bot variable, we can work with the results of the API calls.
 
 #### Constructing the Shift Status integration
 
-Having previously done our setup, we are able to quickly interpolate our variable values into our API URL and Authorization header to retrieve data from this API.
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/guideShiftStatus_integrShiftStatus.png">
+
+Having previously done our setup, we're able to quickly interpolate the variable values into the API URL and authorization header to retrieve data from this API.
 
 ```javascript
 // GET URL
@@ -126,7 +130,7 @@ Having previously done our setup, we are able to quickly interpolate our variabl
 'Authorization': 'Bearer {$botContext.bearerToken}'
 ```
 
-As seen from the documentation, the result of this call will be an array of javascript objects. Each object will have a skill and a corresponding `onShift` status. To ensure that the skill we are escalating to has an agent to receive the call, we will want to iterate through our array of objects until we can locate the desired skill and check its `onShift` boolean value. This work will be done within the ‘Transform Result Script’ section of our integration.
+As seen from the [documentation](shift-status-api-methods-get-shift-status-by-account.html), the result of this call will be an array of JavaScript objects. Each object will have a skill and a corresponding `onShift` status. To ensure that the skill we are escalating to has an agent to receive the call, we'll want to iterate through our array of objects until we can locate the desired skill and check its `onShift` Boolean value. This work will be done within the **Transform Result Script** section of the integration.
 
 ```javascript
 // Retrieve json data and parse
@@ -143,11 +147,13 @@ for (var i = 0; i < jsonResponse.length; i++) {
 }
 ```
 
-Resulting from this call, we will have an `agentsAvailable` bot variable with a boolean value indicating if agents with that skill are currently on shift. This will be of use in our Agent Escalation dialog later.
+Resulting from this call, we will have an `agentsAvailable` bot variable with a Boolean value indicating if agents with that skill are currently on shift. This will be of use in our Agent Escalation dialog later.
 
 #### Constructing the Current Queue Health integration
 
-Initial setup of the Current Queue Health API integration is very similar to what we have done for the Shift Status API. Again, we will interpolate our variable data into the URL and Authorization Headers values to form our call.
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/guideShiftStatus_integrQueueHealth.png">
+
+Initial setup of the Current Queue Health API integration is very similar to what we have done for the Shift Status API. Again, we will interpolate our variable data into the URL and Authorization Headers values to form the call.
 
 ```javascript
 // GET URL
@@ -156,17 +162,21 @@ Initial setup of the Current Queue Health API integration is very similar to wha
 'Authorization': 'Bearer {$botContext.bearerToken}'
 ```
 
-As shown in our documentation, the result of this call provides a fair amount of data and metrics that you can use to modify your user’s conversation and set appropriate expectations. Which metrics you deem to be important in adjusting your conversations can vary depending on the brand or situation, so I will not make any prescription here as to what you should be using. For demonstration purposes, we will capture the `avgWaitTimeForAgentAssignment_NewConversation` and `waitTimeForAgentAssignment_90thPercentile` values for use within our escalation dialog.
+As shown in the [documentation](messaging-operations-api-methods-messaging-current-queue-health.html), the result of this call provides a fair amount of data and metrics that you can use to modify your user’s conversation and set appropriate expectations. Which metrics you deem to be important in adjusting your conversations can vary depending on the brand or situation, so we don't make any prescription here as to what you should be using. For demonstration purposes, we'll capture the `avgWaitTimeForAgentAssignment_NewConversation` and `waitTimeForAgentAssignment_90thPercentile` values for use within our escalation dialog.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/guideShiftStatus_customDataFields.png">
 
 ### Implementation
 
-We will call these APIs within our Agent Escalation dialog in order to customize and further improve the flow of our conversation. 
+<img class="fancyimage" style="width:650px" src="img/ConvoBuilder/guideShiftStatus_botImpl.png">
+
+We will call these APIs within our Agent Escalation dialog to customize and further improve the flow of the conversation. 
 
 #### Shift Status
 
-Prior to our shift status call, you will need to make use of the `transfer` function we defined to identify the Skill ID we are getting the status for. If you have not already called this function when you are ready to check the shift status, the pre-process code for this API call would be an appropriate place to do so.
+Prior to the shift status call, you'll need to make use of the `transfer` function we defined to identify the skill ID we are getting the status for. If you have not already called this function when you are ready to check the shift status, the pre-process code for this API call is an appropriate place to do so.
 
-After successful completion of the Shift Status API call and our `agentsAvailable` bot variable in hand, we are able to direct our conversation based on its value. If the value is `false`, explaining that agents are unavailable and directing to alternative methods for resolution is appropriate as shown above. If `true`, we will want to bypass that message to then make our call to our Current Queue Health API. For this demonstration, I’ve inserted the following code into the pre-process code of the question following the shift status check:
+After successful completion of the Shift Status API call and with the `agentsAvailable` bot variable in hand, we are able to direct the conversation based on its value. If the value is `false`, explaining that agents are unavailable and directing to alternative methods for resolution is appropriate as shown above. If `true`, we'll want to bypass that message to then make our call to the Current Queue Health API. For this demonstration, we’ve inserted the following code into the pre-process code of the question following the shift status check:
 
 ```javascript
 var agentsAvailable = getVariable('agentsAvailable');
@@ -177,7 +187,7 @@ if (agentsAvailable) {
 
 #### Current Queue Health
 
-We can similarly direct our conversation based on the values we receive back from the Current Queue Health API. Previously, we had set our integration to save values for the average wait time and the 90% percentile wait time. Our goal is to modify our messaging in the case that our agents are seeing exceptionally high volume. To do so, we will take advantage of these bot variables in the pre-process code of the interaction immediately following this API call. We will perform a comparison between the two values and if our average wait time is higher than our 90% value, we will direct to an alternative message:
+We can similarly direct the conversation based on the values we receive back from the Current Queue Health API. Previously, we had set our integration to save values for the average wait time and the 90% percentile wait time. Our goal is to modify the messaging in the case that our agents are seeing exceptionally high volume. To do so, we'll take advantage of these bot variables in the pre-process code of the interaction immediately following this API call. We'll perform a comparison between the two values, and, if the average wait time is higher than our 90% value, we'll direct to an alternative message:
 
 ```javascript
 var avgWaitTime = parseInt(getVariable('Current_Queue_Health.avgWaitTime'));
@@ -189,4 +199,4 @@ if (avgWaitTime > upperThreshold) {
 
 ### Conclusion
 
-Proper communication and expectation setting is vitally important to the user experience of your bot users. Automations should be instrumented to handle excessive loads and off hours usage, both of which can be addressed with this guide. These APIs can be used together or separately to ensure that you are providing relevant and important information to your users.
+Proper communication and expectation setting is vitally important to the user experience of your bot users. Automations should be instrumented to handle excessive loads and off-hours usage, both of which can be addressed with this guide. These APIs can be used together or separately to ensure that you are providing relevant and important information to your users.
