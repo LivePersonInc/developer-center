@@ -11,7 +11,7 @@ indicator: both
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-   <iframe id="vimeo-iframe" src="https://player.vimeo.com/video/398468660?app_id=122963" width="500px" height="400px" frameborder="0" allow="autoplay;" title="FTUE" allowfullscreen style="width:100%">
+   <iframe id="vimeo-iframe" src="https://player.vimeo.com/video/398468660?app_id=122963" width="100%" height="100%" frameborder="0" allow="autoplay;" title="FTUE" allowfullscreen >
    </iframe>
   </div>
 </div>
