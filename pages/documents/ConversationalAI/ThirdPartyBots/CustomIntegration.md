@@ -8,7 +8,7 @@ permalink: third-party-bots-custom-integration.html
 indicator: both
 ---
 
-The following documentation outlines the configuration for a bot connector using LivePerson Functions. Instead of a vendor, like IBM Watson for example, LivePerson Functions allows you to write your own custom bot and connect it to LiveEngage. In order to achieve this, we will implement a LivePerson Functions **Custom Integration**.
+The following documentation outlines the configuration for a bot connector using LivePerson Functions. Instead of a vendor, like IBM Watson for example, LivePerson Functions allows you to write your own custom bot and connect it to Conversational Cloud. In order to achieve this, we will implement a LivePerson Functions **Custom Integration**.
 
 {: .important}
 As the Custom Integration feature uses [LivePerson Functions](https://developers.liveperson.com/liveperson-functions-overview.html), it's required to enable `FaaS Admin` permissions. To be able to implement your own LivePerson Functions, you will also need to enable `FaaS Developer` permissions. Take a look at this [Getting Started Guide](function-as-a-service-getting-started.html) for more information on setting uo LivePerson Functions and its permissions.
@@ -140,7 +140,7 @@ const payload = {
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the **action** value in the response object. LivePerson uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value progrmatically. The unit of the value is seconds. The other three values ("URGENT" for example) are defined in LiveEngage's Agent Workspace. These values determine how much time, in seconds, a conversation can wait in queue before it is deemed "overdue". For example, if the `ttrtype` is set to "CUSTOM" and the `value` is set to "120", the conversation will be considred "overdue" if it has waited in the queue for an agent response for more than 120 seconds.
+Change the TTR of a conversation based on the **action** value in the response object. LivePerson uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value progrmatically. The unit of the value is seconds. The other three values ("URGENT" for example) are defined in Conversational Cloud's Agent Workspace. These values determine how much time, in seconds, a conversation can wait in queue before it is deemed "overdue". For example, if the `ttrtype` is set to "CUSTOM" and the `value` is set to "120", the conversation will be considred "overdue" if it has waited in the queue for an agent response for more than 120 seconds.
 
 Below is an example of an payload, which changes the TTR:
 

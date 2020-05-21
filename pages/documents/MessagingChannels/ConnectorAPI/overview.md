@@ -21,7 +21,7 @@ order: 1
 
 ### Introduction
 
-The Connector API enables you to build applications that connect common messaging channels (such as Facebook Messenger, WeChat, Viber, Slack and so on) with LiveEngage. This gives you the ability to build your own connector application which can, as an example, open/close conversations and send messages to Conversational Cloud on behalf of your consumers.
+The Connector API enables you to build applications that connect common messaging channels (such as Facebook Messenger, WeChat, Viber, Slack and so on) with Conversational Cloud. This gives you the ability to build your own connector application which can, as an example, open/close conversations and send messages to Conversational Cloud on behalf of your consumers.
 
 A connector is a broker between Conversational Cloud data and a messaging channel's (e.g. Facebook Messenger, WhatsApp, LINE, etc.) messages and data. The connector receives messages and events from a messaging platform, transforms them into the Conversational Cloud language and passes it to the agent via the [Send API](connector-api-reference-overview.html). The connector can also create/open and close conversations and set the consumer profile upon conversation creation. The connector can also make sure that the consumer will be notified of agent activity during the conversation, and vice versa, using [Webhooks](webhooks-overview.html) notifications (for example, if the agent/consumer is typing, sent a message, read the message etc.).
 
@@ -33,7 +33,7 @@ Conversational Cloud already provides out of the box connectors to Facebook, Goo
 
 The Connector API consists of two main components:
 
-1. **The Messaging Send API**: Send HTTPS requests based on the [Messaging Window API](consumer-int-overview.html) framework. This component of the Connector API handles communication between the Connector and LiveEngage. It has two API endpoints, create conversation ([CONVERSATION](sendapi-create.html)) and send message ([SEND](sendapi-send.html)) (close conversation is a send message with a closing context in the payload). These calls communicate events from the third party application to LiveEngage.
+1. **The Messaging Send API**: Send HTTPS requests based on the [Messaging Window API](consumer-int-overview.html) framework. This component of the Connector API handles communication between the Connector and Conversational Cloud. It has two API endpoints, create conversation ([CONVERSATION](sendapi-create.html)) and send message ([SEND](sendapi-send.html)) (close conversation is a send message with a closing context in the payload). These calls communicate events from the third party application to Conversational Cloud.
 
 2. **[Webhooks](webhooks-overview.html) Notification Service**: This component sends notifications from Conversational Cloud based on the [Messaging Window API](consumer-int-overview.html) framework to the connector Webhooks HTTPS-endpoints. These notifications communicate any messaging events both from the agent and consumer to the connector, such as agent/consumer replied, closed conversation, is typing and so on.
 

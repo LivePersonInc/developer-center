@@ -37,10 +37,10 @@ Image statements display a single image.
 | Image URL | The URL for the image file. The URL must start with HTTP or HTTPS and use a valid format, be a bot environment variable, be a bot context variable, or be a combination thereof.<br><br>When specifying a URL, the domain in the URL must be [whitelisted](conversation-builder-interactions-interaction-basics.html#whitelisting).<br><br>Keep images fairly small in size \(MB\) and dimension, so they load quickly. | Required | https://www\.mysite\.com/images/bikes\.jpg |
 
 ### Audio
-Audio statements currently aren't supported by LiveEngage.
+Audio statements currently aren't supported by Conversational Cloud.
 
 ### Video
-Video statements currently aren't supported by LiveEngage. As an alternative, use a Text statement that includes the video URL as a link.
+Video statements currently aren't supported by Conversational Cloud. As an alternative, use a Text statement that includes the video URL as a link.
 
 ### Apple Rich Links
 **For Apple Business Chat only.**

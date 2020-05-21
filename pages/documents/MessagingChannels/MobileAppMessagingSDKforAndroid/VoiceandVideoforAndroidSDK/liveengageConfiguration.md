@@ -84,13 +84,13 @@ The settings you chose in **User Profiles** will be reflected in all of your acc
 
   ![Conversation Features](img/le_conv_features.png)
 
-### Register Your App with LiveEngage
+### Register Your App with Conversational Cloud
 
 In order to use your app with your Conversational Cloud account, you need to first register it. Just a few steps are required.
 
 #### Register your App ID
 
-  * Login to your **LiveEngage** account as _Account Admin_
+  * Login to your **Conversational Cloud** account as _Account Admin_
   * Open **Campaign Builder** tab
   * Select **Data Sources** label below the campaigns list
 

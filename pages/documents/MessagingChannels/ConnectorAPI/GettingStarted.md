@@ -29,7 +29,7 @@ permalink: connector-api-getting-started.html
 
 1. **Onboard your connector**
 
-	The connector is a server application that is used to make HTTPS calls on behalf of consumers to LiveEngage. For that purpose, the application must be registered and known to Conversational Cloud for authorization and user validation. This process can happen before even writing one line of code.
+	The connector is a server application that is used to make HTTPS calls on behalf of consumers to Conversational Cloud. For that purpose, the application must be registered and known to Conversational Cloud for authorization and user validation. This process can happen before even writing one line of code.
 
 	In order to register your application, please contact your Account Management team. You will need to provide details regarding your connector application, via a pre-determined JSON schema (otherwise known as the Application Installation Manifest). Use the default [App Installation Manifest](#app-install-manifest-for-connectors) and replace or fill in the required information.
 
@@ -51,7 +51,7 @@ permalink: connector-api-getting-started.html
 
 	These will be used for the first authorization request to Conversational Cloud in order to identify your connector and provide it with an **AppJWT**. Refer to [Getting an AppJWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt) for more information.
 
-3. **Getting a consumer JWS** - An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid AppJWT, you can obtain a consumer JWS (Java Web Signature) to identify the consumer in LiveEngage:
+3. **Getting a consumer JWS** - An **AppJWT** is not sufficient to identify a consumer with Conversational Cloud. With a valid AppJWT, you can obtain a consumer JWS (Java Web Signature) to identify the consumer in Conversational Cloud:
 
 	**Request Example**
 

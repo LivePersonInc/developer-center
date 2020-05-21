@@ -18,7 +18,7 @@ What follows is a general overview of these two authorization methods and how th
 
 #### Login to Conversational Cloud Using Authentication (OAuth 2.0)
 
-Conversational Cloud users can be agents, agent managers, campaign managers, and administrators. Using the Login Service API, you can log in one of these users to LiveEngage. Once you've logged in a user, you will receive back an authorization token (bearer). Use this token in your authorization header in all following API requests.
+Conversational Cloud users can be agents, agent managers, campaign managers, and administrators. Using the Login Service API, you can log in one of these users to Conversational Cloud. Once you've logged in a user, you will receive back an authorization token (bearer). Use this token in your authorization header in all following API requests.
 
 **Note**: that in order to use the Login Service API, you must first retrieve the service API domain which corresponds with the server that your account is on. For example, for the [Users API](/users-api-overview.html), you'll need to make a GET request to the following endpoint:
 
@@ -38,13 +38,13 @@ Sometimes, your application will need to make API calls on behalf of its user. I
 
 ### Messaging Consumer Authentication and Identification
 
-In order to provide consumers with a personalized experience where all their conversation history and metadata is continuous, uniform and accessible across multiple channels, brands need to authenticate each consumer with Conversational Cloud by passing PII (Personally identifiable information) from your IDP to LiveEngage. In order to make sure that consumers which won't be authenticated by the brand (i.e, the brand did not implement a connection with the IDP by choice) will still be able to start messaging conversations, the brand will need to configure an unauthenticated connector with Conversational Cloud (where Conversational Cloud provides a randomized token for each consumer, effectively enabling anonymous consumers).
+In order to provide consumers with a personalized experience where all their conversation history and metadata is continuous, uniform and accessible across multiple channels, brands need to authenticate each consumer with Conversational Cloud by passing PII (Personally identifiable information) from your IDP to Conversational Cloud. In order to make sure that consumers which won't be authenticated by the brand (i.e, the brand did not implement a connection with the IDP by choice) will still be able to start messaging conversations, the brand will need to configure an unauthenticated connector with Conversational Cloud (where Conversational Cloud provides a randomized token for each consumer, effectively enabling anonymous consumers).
 
 Authentication occurs when the brand's IDP provides unique information on each consumer to Conversational Cloud via the standard [OpenID Connect JWT](https://www.google.com/url?q=http://openid.net/specs/openid-connect-core-1_0.html%23Authentication&sa=D&source=hangouts&ust=1535458465656000&usg=AFQjCNFixAiu0EoD1vIh2UHsr4am6nLhkQ) method. The advantage of this is that Conversational Cloud is then able to display consumer information provided by the brand's IDP to the brand's agents under the OAuth 2.0 and OpenID connect protocols, providing a high degree of security and certainty regarding the consumer's identity. (for more details on what information is available from the IDP, please review the [Personal Info](https://developers.liveperson.com/data-messaging-interactions-appendix.html#personalinfo) engagement attribute and the [Customer Info](https://www.google.com/url?q=https://developers.liveperson.com/data-messaging-interactions-appendix.html%23customerinfo&sa=D&source=hangouts&ust=1535458435619000&usg=AFQjCNF9chrjT20gNhb-ifQS2yMUBx7arw) engagement attribute).
 
 The authentication process occurs when the consumer opens the conversation window by interacting with an engagement. Because of this, every engagement is defined as authenticated or unauthenticated (that is, anonymous) through the Conversational Cloud UI, when creating a campaign. In order for unauthenticated engagements to work, contact your LivePerson account team who will need to enable the feature on your account. In order for authenticated conversations to work, the following several parameters need to be defined in by the brand's administrator in the brand's Conversational Cloud account. In order to define these parameters, follow these steps:
 
-1. In LiveEngage, select **Campaign Builder**.
+1. In Conversational Cloud, select **Campaign Builder**.
 
 2. In the footnote, select **Data Sources**.
 

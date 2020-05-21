@@ -34,7 +34,7 @@ LPABCSDK.initialize(eventSubscription: LPABCEvent.noEvents)
 
 ### Update the SDK with Incoming CIM
 
-Upon an agent sending a [Custom Interactive Message (CIM)](apple-business-chat-templates-custom-interactive-message-template.html) to the consumer, this method will update the SDK with a payload that will enable SDE reporting to LiveEngage.
+Upon an agent sending a [Custom Interactive Message (CIM)](apple-business-chat-templates-custom-interactive-message-template.html) to the consumer, this method will update the SDK with a payload that will enable SDE reporting to Conversational Cloud.
 
 ```swift
 func update(with conversation: MSConversation, message: MSMessage? = nil, abcsdkParams: ABCSDKParams? = nil)

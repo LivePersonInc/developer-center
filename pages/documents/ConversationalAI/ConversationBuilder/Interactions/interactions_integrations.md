@@ -66,7 +66,7 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 3. Click <img style="width:30px" src="img/ConvoBuilder/icon_interactionDetails.png"> to open the **Interaction Details**, and click the **Settings** tab.
 4. Specify the following:
 
-    * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in LiveEngage. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
+    * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 
         When the transfer is attempted, the Agent Skill Id is evaluated first; if it isn't numeric, the fallback message is sent to the user. If the value is numeric, but the bot doesn't respond for more than 3 minutes, an attempt is made to transfer to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-an-agent-connector)*. Otherwise, the transfer fails. For information on handling failures, see below.
 
@@ -97,7 +97,7 @@ File Upload interactions are available for Web Messaging, Apple Business Chat, a
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
-When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in LiveEngage, see [here](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html).)
+When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in Conversational Cloud, see [here](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html).)
 
 {: .important}
 Some setup of your Conversational Cloud environment is required before using this feature. Please contact your LivePerson account representative to enable this feature.

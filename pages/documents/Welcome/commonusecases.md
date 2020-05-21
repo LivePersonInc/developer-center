@@ -15,6 +15,6 @@ Below you'll find a full description of each section of the documentation. This 
 
 * **Customizing Conversational Cloud Reporting or Creating New Reports** - this use case would involve working with our Data APIs, specifically our [Data Access API](data-data-access-overview.html). It would also require developing some sort of UI if you'd like to display these reports.
 
-* **Building or Integrating a New Workspace Widget** - Conversational Cloud gives you the ability to add third party service widgets into the agent workspace for quick reference. For example, you could add your CRM to the agent workspace, allowing your agents to submit or update leads right from LiveEngage. To achieve this, please refer to the [Agent Workspace Widget SDK](agent-workspace-sdk-overview.html).
+* **Building or Integrating a New Workspace Widget** - Conversational Cloud gives you the ability to add third party service widgets into the agent workspace for quick reference. For example, you could add your CRM to the agent workspace, allowing your agents to submit or update leads right from Conversational Cloud. To achieve this, please refer to the [Agent Workspace Widget SDK](agent-workspace-sdk-overview.html).
 
 * **Looking for more use cases?** Check out the Major Flows document, a part of this Getting Started guide, for more detailed  examples of how to use our APIs to build on top of our Open Platform.

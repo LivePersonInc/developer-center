@@ -238,7 +238,7 @@ Transfers and escalations rely on the _action_ item in the response object.
 
 Action: **TRANSFER (Case sensitive)**
 
-Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in LiveEngage.
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
 
 <img class="fancyimage" style="width:600px" src="img/dialogflowversion2/image_10.png">
 

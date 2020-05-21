@@ -29,7 +29,7 @@ The Getting Started tutorials include four tutorials that build on one another:
 
 * **Integrations**: Explore integrations, which allow your bot to query external APIs, bringing powerful new options to your conversations. Integrations let you programmatically access catalogs, databases, and other web services to super power your bot responses.
 
-* **Connect to LiveEngage**: Bring it all together by deploying your bot to the Conversational Cloud environment and testing it out.
+* **Connect to Conversational Cloud**: Bring it all together by deploying your bot to the Conversational Cloud environment and testing it out.
 
 ### Dialogs & Patterns tutorial
 
@@ -45,7 +45,7 @@ This tutorial assumes you have a user account for the Conversational Cloud and C
 #### Step 1: Create a new bot
 
 1. Navigate to [https://authentication.liveperson.net/login.html](https://authentication.liveperson.net/login.html), enter your credentials, and log in.
-2. In the left sidebar in LiveEngage, click the Conversational AI and Bots <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_convers_ai.png"> icon.
+2. In the left sidebar in Conversational Cloud, click the Conversational AI and Bots <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_convers_ai.png"> icon.
 3. In the Conversational AI dashboard, click **Conversation Builder**.
 4. Click **New Bot** in the upper-right corner, and select the **Custom Bot** generic [template](conversation-builder-templates-overview.html).
 5. Give the bot a unique name and description, and click **Create Bot**.
@@ -421,9 +421,9 @@ This tutorial uses an example API that returns random balance data when given an
 
 ### Connect to Live Engage tutorial
 
-In this tutorial, you walk through how to link your bot to LiveEngage, ending with an integration that transfers to a human agent.
+In this tutorial, you walk through how to link your bot to Conversational Cloud, ending with an integration that transfers to a human agent.
 
-#### Step 10: Configure LiveEngage
+#### Step 10: Configure Conversational Cloud
 
 In this step, you create two user agents, one for the bot and one for the human that will be receiving the inbound transfers (for human "escalation"). Each user agent will have an assigned skill, which you'll also create.
 
@@ -455,7 +455,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 
 In addition to the skills, you also need user agents, one for the bot and one for the agent that will be receiving the inbound transfers (for human escalation).
 
-1. Still in LiveEngage, click the **Users** tab.
+1. Still in Conversational Cloud, click the **Users** tab.
 2. Click the **Add user** button at the bottom of the page.
 3. On the Add User page, specify the following:
     * **User type**: Set this to "Bot." If you don't see this field, contact your LivePerson representative to enable this for you.
@@ -492,7 +492,7 @@ You will test this connection with a standard web chat engagement, so now you cr
 
 #### Step 11: Set up the transfer from bot to human
 
-In this step, you set up an "escalation" to transfer the user to a human agent in LiveEngage.
+In this step, you set up an "escalation" to transfer the user to a human agent in Conversational Cloud.
 
 1. Return to Conversation Builder, and open the bot.
 
@@ -518,7 +518,7 @@ In this step, you set up an "escalation" to transfer the user to a human agent i
 
 10. Click **Save**.
 
-#### Step 12: Deploy the bot to LiveEngage
+#### Step 12: Deploy the bot to Conversational Cloud
 
 In this step, you use Conversation Builder to connect your bot to the bot agent you just created and get the connection running in the Demo environment.
 
@@ -552,7 +552,7 @@ LivePerson recommends that, when you connect your bot to Conversational Cloud in
 {: .important}
 In this step, you'll be testing with Messaging, so you'll be using [this test page](https://vx-lp.github.io/v2/lpwm/). When you test with Chat, you can use [this test page](https://livepersoninc.github.io/visitor-page/?siteid=%5Byour%20account%20number%5D), adding your account number to the URL.
 
-1. Be sure you are online as a Human agent in LiveEngage.
+1. Be sure you are online as a Human agent in Conversational Cloud.
 
 2. In a browser, navigate to [this test page](https://vx-lp.github.io/v2/lpwm/).
 
@@ -578,7 +578,7 @@ In this step, you'll be testing with Messaging, so you'll be using [this test pa
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/messageindicator.png">
 
-7. Click the icon to enter the agent workspace in LiveEngage, and then select the connection in the table. Click **Accept** in the lower-left corner.
+7. Click the icon to enter the agent workspace in Conversational Cloud, and then select the connection in the table. Click **Accept** in the lower-left corner.
 
    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/webvisitors_accept.png">
 

@@ -12,13 +12,13 @@ indicator: messaging
 
 The LivePerson SDK provides brands with a secure way to foster connections with their customers and increase app engagement and retention.
 
-Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an Android device and LiveEngage.
+Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an Android device and Conversational Cloud.
 
 
 
 ### Prerequisites
 
-- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
+- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.  
 - [Latest version](https://developer.android.com/studio) of **Android Studio**. 
 - [Latest version](https://gradle.org/install/) of **Gradle**.
 

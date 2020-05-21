@@ -20,7 +20,7 @@ The example below contains four language folders:
 * **pt.lproj**: Portuguese strings
 * **pt-PT.lproj**: Portuguese (Portugal) strings
 
-You can override the string localization of any supported language in LiveEngage. Create **LPLocalizable.strings** files for relevant languages inside your app, which includes the keys to override.  
+You can override the string localization of any supported language in Conversational Cloud. Create **LPLocalizable.strings** files for relevant languages inside your app, which includes the keys to override.  
 
 ### Create and localize a strings file and add languages
 

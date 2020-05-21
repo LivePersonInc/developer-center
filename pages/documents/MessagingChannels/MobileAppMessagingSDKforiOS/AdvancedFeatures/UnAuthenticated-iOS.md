@@ -17,7 +17,7 @@ indicator: messaging
 
 Unauthenticated In-App Messaging allows brands to communicate with consumers in an unauthenticated manner. This allows:
 
-* Easier & quicker on-boarding to LiveEngage
+* Easier & quicker on-boarding to Conversational Cloud
 
 * Having pre authentication messaging use cases, for example, assistance with password recovery
 

@@ -9,7 +9,7 @@ permalink: messaging-window-api-tutorials-unauthenticated-messaging.html
 indicator: messaging
 ---
 
-Conversational Cloud expects to receive a token for every messaging conversation. These tokens identify unique consumers for Conversational Cloud and make sure that all consumers appear with their unique details displayed to the agent once they start a conversation. If you would like to have unauthenticated messaging conversations (where the consumer remains "anonymous"), you will need to provide an "unauthenticated" (not containing any details on the consumer) ID Token to LiveEngage. In this tutorial you will learn how to create and use such a token.
+Conversational Cloud expects to receive a token for every messaging conversation. These tokens identify unique consumers for Conversational Cloud and make sure that all consumers appear with their unique details displayed to the agent once they start a conversation. If you would like to have unauthenticated messaging conversations (where the consumer remains "anonymous"), you will need to provide an "unauthenticated" (not containing any details on the consumer) ID Token to Conversational Cloud. In this tutorial you will learn how to create and use such a token.
 
 
 ### Prerequisites

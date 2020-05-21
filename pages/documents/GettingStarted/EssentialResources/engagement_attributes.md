@@ -14,7 +14,7 @@ indicator: both
 
 Conversational Cloud provides out-of-the-box basic information about your visitors. For example, the visitor’s geolocation, the amount of time they spent on a page, and which pages they viewed.
 
-In order to collect more in-depth, specific information such as product viewed, purchase information, errors the visitor encountered, and search results, you can send this information to Conversational Cloud by using Engagement Attributes (otherwise known as a Standard Data Entity - an SDE). An SDE is a JSON format expected by LivePerson APIs. This format standardizes how visitor traits, behaviors and paths are communicated to LiveEngage. These are in practice data snippets which contain information on the consumer in JSON format.
+In order to collect more in-depth, specific information such as product viewed, purchase information, errors the visitor encountered, and search results, you can send this information to Conversational Cloud by using Engagement Attributes (otherwise known as a Standard Data Entity - an SDE). An SDE is a JSON format expected by LivePerson APIs. This format standardizes how visitor traits, behaviors and paths are communicated to Conversational Cloud. These are in practice data snippets which contain information on the consumer in JSON format.
 
 Information collected using Engagement Attributes can be used to achieve the following:
 

@@ -25,11 +25,11 @@ Also, if you have not already done so:
 
 2. Read the [Systems Requirements and Language Support](https://knowledge.liveperson.com/admin-settings-system-requirements.html) guide.
 
-Before you can do anything, you must configure and understand a few things first. By the end of this Getting Started guide, you will be ready to customize and implement features in LiveEngage.
+Before you can do anything, you must configure and understand a few things first. By the end of this Getting Started guide, you will be ready to customize and implement features in Conversational Cloud.
 
 ### Step 1. Create a Conversational Cloud account
 
-Before you can use LiveEngage, you must first have a working account. If you don't already have one, you can sign up for a [free trial account](https://developers.liveperson.com/register.html). to get started with messaging, Conversation Builder, and LivePerson Functions.  To add more seats or access features not included in the trial, you will need to upgrade to a paid subscription.  You can chat with LivePerson sales on [liveperson.com](https://www.liveperson.com) or from the connection area within Conversational Cloud to get help from a specialist to find the right package for your business.
+Before you can use Conversational Cloud, you must first have a working account. If you don't already have one, you can sign up for a [free trial account](https://developers.liveperson.com/register.html). to get started with messaging, Conversation Builder, and LivePerson Functions.  To add more seats or access features not included in the trial, you will need to upgrade to a paid subscription.  You can chat with LivePerson sales on [liveperson.com](https://www.liveperson.com) or from the connection area within Conversational Cloud to get help from a specialist to find the right package for your business.
 
 Some features you might want to enable are:
 
@@ -63,14 +63,14 @@ Read the [accessing LivePerson APIs](/common-resources-accessing-liveperson-apis
 
 ### Next steps
 
-Congratulations! You are now ready to customize and implement features in LiveEngage.
+Congratulations! You are now ready to customize and implement features in Conversational Cloud.
 
 - **Integrate Conversational Cloud with iOS and Android apps** to create and manage digital engagements.  Additionally, customers can communicate with the brand's agents through their channel of choice. For more information, refer to the Mobile Messaging SDK for [Android](mobile-app-messaging-sdk-for-android-overview.html) or [iOS](mobile-app-messaging-sdk-for-ios-overview.html).
 
 - **Enable consumer monitoring and engagement flows** to gather reporting data about the consumer, engagements, and campaigns. By combining monitoring capabilities with our Campaigns feature, you can display tailored engagements to the right consumer at the right time. For more information, refer to the [Monitoring API](monitoring-api-overview.html).
 
-- **Integrate a messaging bot into LiveEngage** to send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation. You use the [Agent Messaging SDK](messaging-agent-sdk-overview.html) to connect a bot, but your account must be enabled to support bot users. To check the enabled features for your account, contact your account team or LivePerson Support.
+- **Integrate a messaging bot into Conversational Cloud** to send/receive text messages, send structured content, transfer the conversation to other skills, change Time To Response, and close a conversation. You use the [Agent Messaging SDK](messaging-agent-sdk-overview.html) to connect a bot, but your account must be enabled to support bot users. To check the enabled features for your account, contact your account team or LivePerson Support.
 
-- **Manage users in LiveEngage** to update user lists that may need updating on a regular basis. You use the [Users API](users-api-overview.html) to make updates such as profile pictures, login names, passwords, or user assignments. You can also synchronize any HR or staffing system with LiveEngage.
+- **Manage users in Conversational Cloud** to update user lists that may need updating on a regular basis. You use the [Users API](users-api-overview.html) to make updates such as profile pictures, login names, passwords, or user assignments. You can also synchronize any HR or staffing system with Conversational Cloud.
 
 - **Implement a retry policy**. We recommend that you add a mechanism to your API call to increase reliability and stability. Each component in a network can return an error, which can cause your application to fail.  If an error returns, the mechanism makes sure that your application attempts to retrieve the relevant information. [More information on our retry policy best practices can be found here](retry-and-keepalive-best-practices-overview.html).

@@ -148,7 +148,7 @@ There are 3 user permissions pertaining to Functions:
 </table>
 
 
-You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html), but the process is simple:
+You can configure these permissions in Conversational Cloud. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html), but the process is simple:
 
 * Click on the users tab at the top of the Conversational Cloud UI and then click profiles
 

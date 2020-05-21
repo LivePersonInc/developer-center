@@ -21,7 +21,7 @@ The Unified Automatic Messages API enables brands to find and modify Unified Aut
 
 The API is based on the REST architecture style.
 
-The unified automatic messages can be manually updated within LiveEngage. Each message can be translated to all the LE visitor languages and can have different text for different skills.
+The unified automatic messages can be manually updated within Conversational Cloud. Each message can be translated to all the LE visitor languages and can have different text for different skills.
 
 ![AutomaticMessages](img/automaticmessages.png)
 
@@ -37,7 +37,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using _either_ a login or an API key methodology.
 
-	* **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
+	* **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
 	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
 

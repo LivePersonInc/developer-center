@@ -14,18 +14,18 @@ permalink: conversation-orchestrator-dynamic-routing-set-up-conversation-orchest
 indicator: messaging
 ---
 
-You can use policies you have created to route conversations by sending conversations to the Conversation Orchestrator Skill in LiveEngage. Conversation Orchestrator will evaluate all the policies and then execute those policies (e.g. transferring the conversation to a skill). 
+You can use policies you have created to route conversations by sending conversations to the Conversation Orchestrator Skill in Conversational Cloud. Conversation Orchestrator will evaluate all the policies and then execute those policies (e.g. transferring the conversation to a skill). 
 
 This is appropriate if:
 - You are only routing based on [Inbox System Attributes](maven-context-warehouse-inbox-system-attributes.html) or [Custom Static or Function attributes](maven-context-warehouse-custom-static-or-function.html)
 - You don't have a concierge bot
 - You do not need high levels of customizations and therefore programmatic access to Conversation Orchestrator capabilities
 
-### Create a Conversation Orchestrator Bot User In LiveEngage
+### Create a Conversation Orchestrator Bot User In Conversational Cloud
 
 A bot needs to be created in Conversational Cloud for Conversation Orchestrator to receive conversations and then route them to an appropriate skill or agent. We use Conversation Orchestrator as the name, but it could be any bot name. 
 
-1. Login to LiveEngage, and go to the Users tab, click Action and select Add
+1. Login to Conversational Cloud, and go to the Users tab, click Action and select Add
 
     <img class="fancyimage" width="600" src="img/maven/Maven Bot 1.png">
 
@@ -47,7 +47,7 @@ A bot needs to be created in Conversational Cloud for Conversation Orchestrator 
 
 6. Set the Max no. of live chats to Unlimited
 
-### Setup Campaign and Skills in LiveEngage
+### Setup Campaign and Skills in Conversational Cloud
 
 To route your conversations to Conversation Orchestrator, you need to create at least one skill
 1. Create a new skill called **“Conversation Orchestrator”** and assign the Conversation Orchestrator bot user to this skill. We have used Conversation Orchestrator as the skill name, but any name is acceptable. 

@@ -88,9 +88,9 @@ Actions define what to do next if the conditions are valid. An action block may 
 
 Similar to conditions an action such as transferring to a skill can use either a variable or a constant value.
 
-##### Get SkillIds from LiveEngage
+##### Get SkillIds from Conversational Cloud
 
-To route to skills, you will need the SkillIds used by LiveEngage. To retrieve all the skill IDs:
+To route to skills, you will need the SkillIds used by Conversational Cloud. To retrieve all the skill IDs:
 
 1. Login to Conversational Cloud and then go to Users tab and then Skills
 2. Then click on Actions and then export all

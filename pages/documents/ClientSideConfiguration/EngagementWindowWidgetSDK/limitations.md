@@ -33,6 +33,6 @@ databindings that existed before refreshing are removed.
 applications, known as 'Frame Busters’, prevent themselves from opening within an
 iframe.
 - The application must be hosted over SSL, meaning that the URL must start with https.
-- Custom widgets should not include Conversational Cloud chat buttons or any other LiveEngage
+- Custom widgets should not include Conversational Cloud chat buttons or any other Conversational Cloud
 objects such as the lpTag.
 - The SDK works on Chat and Messaging.

@@ -78,7 +78,7 @@ Click the **Global Functions** button to access all the global functions and var
 
 #### LE Escalation Configuration
 
-To set up escalation to an agent in LiveEngage, change the following values:
+To set up escalation to an agent in Conversational Cloud, change the following values:
 
 <table>
  <thead>

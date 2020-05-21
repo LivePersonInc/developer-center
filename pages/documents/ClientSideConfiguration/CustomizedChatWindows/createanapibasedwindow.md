@@ -11,7 +11,7 @@ order: 2
 indicator: chat
 ---
 
-**An “API-based” engagement window must be configured in LiveEngage.**
+**An “API-based” engagement window must be configured in Conversational Cloud.**
 
 * On a monitored flow
 	Attach the API-based window to the relevant web engagement/campaign.

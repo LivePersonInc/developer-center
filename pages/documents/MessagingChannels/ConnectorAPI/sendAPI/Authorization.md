@@ -17,7 +17,7 @@ search: include
 
 ### Get AppJWT
 
-LivePerson uses OAuth 2.0 grant type [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) in order to allow apps to access the Send API. Sentinel, the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any follow-up request to the Send API. However, the AppJWT alone is not sufficient to identify a consumer to LiveEngage. This means, one has to obtain a ConsumerJWS, too. The following HTTPS request exemplifies how to get an AppJWT:
+LivePerson uses OAuth 2.0 grant type [Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) in order to allow apps to access the Send API. Sentinel, the responsible authorization server, generates access tokens for any rightfully authorized client. The access token is a [Json Web Token (JWT)](https://tools.ietf.org/html/rfc7519) encoding information about the granted access and must be attached to any follow-up request to the Send API. However, the AppJWT alone is not sufficient to identify a consumer to Conversational Cloud. This means, one has to obtain a ConsumerJWS, too. The following HTTPS request exemplifies how to get an AppJWT:
 
 ```http
 POST /sentinel/api/account/{accId}/app/token?v=1.0&grant_type=client_credentials HTTP/1.1
@@ -73,7 +73,7 @@ Property `aud` defines the audience for whom the token is intended or the servic
 
 #### Authentication with ConsumerJWS
 
-An **AppJWT** is not sufficient to identify a consumer with LiveEngage. With a valid **AppJWT** you can obtain a **ConsumerJWS** (JSON Web Signature):
+An **AppJWT** is not sufficient to identify a consumer with Conversational Cloud. With a valid **AppJWT** you can obtain a **ConsumerJWS** (JSON Web Signature):
 
 The **ConsumerJWS** is the unique identifier of the user (consumer) and used by the the connector in conjunction with the **AppJWT** to access Conversational Cloud on behalf of the consumer. Both the **ConsumerJWS** and the **AppJWT** will be passed in the headers of both the [CONVERSATION](sendapi-create.html) and [SEND](sendapi-send.html) requests to Conversational Cloud in order to authenticate the request.
 

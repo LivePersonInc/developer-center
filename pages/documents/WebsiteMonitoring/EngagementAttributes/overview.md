@@ -24,9 +24,9 @@ Information collected using Engagement Attributes can be used to achieve the fol
 * Receive a comprehensive view of visitor Conversation History.
 * Measure and track campaign goals.
 
-### Uses of Engagement Attributes in LiveEngage
+### Uses of Engagement Attributes in Conversational Cloud
 
-Described below are some of the uses of Engagement Attributes in LiveEngage.
+Described below are some of the uses of Engagement Attributes in Conversational Cloud.
 
 * **Create more specific visitor targeting**: Segment your visitors according to their properties, behavior, and journey on your website, and provide a tailored experience for each segment. For example, provide assistance to visitors who struggle to log in, or offer insurance to a client that is renting a car.
 
@@ -46,4 +46,4 @@ Described below are some of the uses of Engagement Attributes in LiveEngage.
 
 1. In order for targeting rules (related to target audience or visitor behavior) to be validated, each Engagement Attribute **MUST** be implemented on the visitor's page at least once during a session.
 
-2. For example, a brand wants to exclude all consumers who have received a specific error code on their site from receiving an engagement. In order for the targeting rule to be checked by LiveEngage, **an engagement attribute must be sent** both if the error code was received and also if it was not received, so that Conversational Cloud can determine which consumers to display the engagement to.
+2. For example, a brand wants to exclude all consumers who have received a specific error code on their site from receiving an engagement. In order for the targeting rule to be checked by Conversational Cloud, **an engagement attribute must be sent** both if the error code was received and also if it was not received, so that Conversational Cloud can determine which consumers to display the engagement to.

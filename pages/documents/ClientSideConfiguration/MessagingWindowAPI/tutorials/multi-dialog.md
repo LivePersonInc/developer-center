@@ -951,7 +951,7 @@ The design of your post survey, including its quick replies and button styles, i
 
 After the Post Conversation Survey appears on your custom window, the consumer can choose as per the above example one of the quick reply items which are actionable buttons.
 
-Assuming the consumer just clicked the first button, two requests should be sent to LiveEngage:
+Assuming the consumer just clicked the first button, two requests should be sent to Conversational Cloud:
 
 One request should contain the 'ACTION' (used in conjunction with metadata to reply on structured content sent by the Agent):
 

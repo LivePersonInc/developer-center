@@ -227,7 +227,7 @@ In order to use your app with your Conversational Cloud account, you need to reg
 
 #### Register your App ID
 
-  * Login to your **LiveEngage** account as _Account Admin_
+  * Login to your **Conversational Cloud** account as _Account Admin_
   * Open **Campaign Builder**
   * Select **Datasources** label below the Campaign Builder campaigns list
 

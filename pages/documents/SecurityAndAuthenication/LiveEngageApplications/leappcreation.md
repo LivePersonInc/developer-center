@@ -15,7 +15,7 @@ indicator: both
 
 Currently, installation of Conversational Cloud Applications is performed by LivePerson's internal resources (account team, DevSupport, Tier 1, etc). In order to request this installation, you must first fill out the following schema according to your application needs. Once that is done, please contact the relevant LivePerson resource for your account and they will perform the installation.
 
-Once the application has been installed, the LivePerson resource will send you your client_id and client_secret which are required for OAuth2.0 authentication. In the future, installing an application will be possible on your own through LiveEngage, but currently the installation process must be followed.
+Once the application has been installed, the LivePerson resource will send you your client_id and client_secret which are required for OAuth2.0 authentication. In the future, installing an application will be possible on your own through Conversational Cloud, but currently the installation process must be followed.
 
 ### Conversational Cloud Application Manifest Schema - Parameters
 

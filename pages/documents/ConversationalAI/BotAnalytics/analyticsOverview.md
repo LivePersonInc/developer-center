@@ -14,7 +14,7 @@ indicator: both
 
 **To access the Bot Analytics application**
 
-1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Bot Analytics**.
 
     The first screen that appears is a list of all your bots. Search or scroll through the list and select the bot for which you want to see data.

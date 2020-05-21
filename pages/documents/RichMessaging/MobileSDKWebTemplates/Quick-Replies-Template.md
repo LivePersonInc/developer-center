@@ -19,7 +19,7 @@ Conversational Cloud enables creating and displaying up to 24 Quick Replies per 
 
 Each reply can have:
 
-* **Title:** up to 25 characters (above 25, LiveEngage's default client like the Mobile App SDK will insert an ellipsis after 22 and obscure the rest of the text. If you're building your own client, you can handle this as you'd like, defining your own character limit)
+* **Title:** up to 25 characters (above 25, Conversational Cloud's default client like the Mobile App SDK will insert an ellipsis after 22 and obscure the rest of the text. If you're building your own client, you can handle this as you'd like, defining your own character limit)
 
 * **Click operation:** with actions and metadata
 

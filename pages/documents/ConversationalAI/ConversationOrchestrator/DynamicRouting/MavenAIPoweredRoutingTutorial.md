@@ -106,12 +106,12 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
 
     <img class="fancyimage" width="750" src="img/maven/cb-keys.png">
 
-2. [Deploy the bot in LiveEngage](conversation-builder-testing-deployment-deploying-to-liveengage.html)
+2. [Deploy the bot in Conversational Cloud](conversation-builder-testing-deployment-deploying-to-liveengage.html)
 
     a. See next step for how to setup a skill in Conversational Cloud to accent the incoming conversations.
 
 
-### Setup LiveEngage
+### Setup Conversational Cloud
 
 1. Create a skill for the conversation (e.g. Conversation_Orchestrator_Routing_Bot), and assign the bot user ID to this skill
 
@@ -127,7 +127,7 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
 
 5. Save the skill and agent ids to be used with policy
 
-6. See [documentation](admin-settings-skills-groups-set-the-agent-group-hierarchy.html) on further details on managing users and skills in LiveEngage
+6. See [documentation](admin-settings-skills-groups-set-the-agent-group-hierarchy.html) on further details on managing users and skills in Conversational Cloud
 
 
 ## Create a simple policy using Static Context Attributes
@@ -179,7 +179,7 @@ In this example we will create and use static attributes. To check if a customer
 
 ### Create Routing Policy
 
-“If customer phone number is in the allow list, send them to vipSkill in LiveEngage”.  
+“If customer phone number is in the allow list, send them to vipSkill in Conversational Cloud”.  
 
 1. Navigate to Intent and Context Policies and then click Add Policy. 
  
@@ -243,7 +243,7 @@ In the policy list in Conversation Orchestrator, click on the toggle switch and 
 
 1. In the policy list in Conversation Orchestrator, click on the toggle switch and disable the VipRule_Static policy. Enable RegularCustomerRule_Static
 
-2. Logout of LiveEngage, and then log in back using a Regular Agent account
+2. Logout of Conversational Cloud, and then log in back using a Regular Agent account
 
 3. Close the previous conversation, and then start a new one
 
@@ -298,7 +298,7 @@ We will be using the Context Session store to store a phone number, and then use
 
 8. If you are logged in to Conversational Cloud as a VIP Agent, you will now get a ring 
 
-9. Logout of LiveEngage, and then log in back using a Regular Agent account
+9. Logout of Conversational Cloud, and then log in back using a Regular Agent account
 
 10. Close the previous conversation, and then start a new one
 

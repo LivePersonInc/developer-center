@@ -15,7 +15,7 @@ indicator: both
 ---
 ### Introduction
 
-The Agent Workspace Widget SDK is a lightweight, client-side package for communicating with the Conversational Cloud Agent Workspace. Using this SDK, Agent Managers can add custom widgets to LiveEngage, making it possible to integrate applications into the Agent Workspace.
+The Agent Workspace Widget SDK is a lightweight, client-side package for communicating with the Conversational Cloud Agent Workspace. Using this SDK, Agent Managers can add custom widgets to Conversational Cloud, making it possible to integrate applications into the Agent Workspace.
 
 With the SDK, brands will find two-way communication between LivePerson and external applications, more in-depth information about the visitor and the engagement, the ability to send conversation lines directly from the application, and the ability to transfer the conversation transcript automatically to the external application.
 

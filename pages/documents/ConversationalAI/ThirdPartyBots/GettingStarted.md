@@ -77,7 +77,7 @@ The Bot Connector system is designed to support [all relevant rich content](gett
 
 #### Creating and starting Bots
 
-Due to limitations within LiveEngage's permission system, it is not possible for an operator with the Agent or the Agent Manager profiles to create new bots or start bots. However, they are still able to stop, edit and delete existing bots.
+Due to limitations within Conversational Cloud's permission system, it is not possible for an operator with the Agent or the Agent Manager profiles to create new bots or start bots. However, they are still able to stop, edit and delete existing bots.
 
 If you want to enable creating and starting bots for the Agent and Agent Manager profiles, you need to create a new custom Profile, which will derive its base permissions from the Campaign Manager or Admin profiles. Then, make sure to enable the needed permissions for creating and starting bots only while disabling any other permissions. Afterwards, you will need to assign this new Profile to the Agent/Agent Manager who should be able to start/create bots.
 
@@ -93,9 +93,9 @@ Minimal set of permissions for creating and starting bots for Administrator Prof
 
 Please note that your bot setup should always return an intent or an action as a response. If you return an intent without actions or messages, or return no intent at all, the bot will consider this an error and escalate to the default escalation skill.
 
-### Create Bot User in LiveEngage
+### Create Bot User in Conversational Cloud
 
-1. Add a new user in LiveEngage, choose "Bot" for “User type”. If “User type” is not available, contact your LivePerson account manager to enable the feature.
+1. Add a new user in Conversational Cloud, choose "Bot" for “User type”. If “User type” is not available, contact your LivePerson account manager to enable the feature.
 
   <img style="width:600px" src="img/dialogflowversion2/image_0.png">
 
@@ -129,7 +129,7 @@ Please note that your bot setup should always return an intent or an action as a
 
 To access Third-Party Bots, contact your Account Manager to enable the the feature in Conversational Cloud for your account.
 
-Upon logging in to LiveEngage, you will see the Conversation AI Tab:
+Upon logging in to Conversational Cloud, you will see the Conversation AI Tab:
 
 <img class="fancyimage" style="width:750px" src="img/botconnectordashboard/conversational_ai_app.png">
 

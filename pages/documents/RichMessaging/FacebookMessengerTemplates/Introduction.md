@@ -20,7 +20,7 @@ The structured content templates explained and outlined in this document include
 
 ### Account Setup
 
-If your account is not currently using the Facebook connector, please refer to the [onboarding guide](https://liveengage.liveperson.net/a/new/?connectionOpenArticle=facebook-connector) to start managing your Facebook pages' conversations with LiveEngage.
+If your account is not currently using the Facebook connector, please refer to the [onboarding guide](https://liveengage.liveperson.net/a/new/?connectionOpenArticle=facebook-connector) to start managing your Facebook pages' conversations with Conversational Cloud.
 
 ### Facebook Messenger Setup
 

@@ -12,7 +12,7 @@ permalink: engagement-history-api-engagement-attributes.html
 indicator: chat
 ---
 
-Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart backout etc., from the webpage into LiveEngage. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
+Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart backout etc., from the webpage into Conversational Cloud. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
 
 ###  CartStatus
 

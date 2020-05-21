@@ -15,11 +15,11 @@ indicator: messaging
 <br>
 The LivePerson SDK provides brands with a secure way to foster connections with their customers and increase app engagement and retention.
 
-Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and LiveEngage.
+Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and Conversational Cloud.
 
 ### Prerequisites
 
-- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with LiveEngage.  
+- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.  
 - Bundle ID registered in an Apple developer account.
 - SDK Release version [here](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-all-releases.html)
 

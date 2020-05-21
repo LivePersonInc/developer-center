@@ -249,7 +249,7 @@ For example:
 ### Initialize the SDK with Monitoring Params
 
 {:.important}
-To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage. For more information about it, contact your Account Team.
+To get the App key or appInstallationId, a new Conversation Source needs to be added on Conversational Cloud. For more information about it, contact your Account Team.
 
 
 1. In your app's Application class, initialize the Messaging SDK with Monitoring Params.

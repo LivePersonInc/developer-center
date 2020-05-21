@@ -590,7 +590,7 @@ For more information about campaigns, please [click here](https://www.liveperson
 
 ### Direct skill routing
 
-In this example we create a conversation and pass the **Skill ID** in the Payload in order to route the consumer conversation to the desired skill in LiveEngage.
+In this example we create a conversation and pass the **Skill ID** in the Payload in order to route the consumer conversation to the desired skill in Conversational Cloud.
 
 #### Getting Started
 

@@ -103,7 +103,7 @@ openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
 openssl rsa -in keyWithPassword.pem -out hostkey.pem
 ```
 
-### Upload into LiveEngage
+### Upload into Conversational Cloud
 - Certificate file should be : **dev-cert.pem**
 - Key file should be : **hostkey.pem**
 

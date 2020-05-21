@@ -15,7 +15,7 @@ The following is a step by step walkthrough on how to use LivePerson MTLS servic
 {: .notice}
 **Authorization** - Unless specifically indicated, the authorization mechanism used is a Bearer (oAuth2). Otherwise, it is an AppKey (oAuth1).
 
-1) **Log into LiveEngage** using the [Login Service API](login-service-api-methods-user-login.html). Provide a username and password (for an administrator user) and receive an authorization token (Bearer) in return. Use this token as your authorization header for any request requiring a bearer in the future.
+1) **Log into Conversational Cloud** using the [Login Service API](login-service-api-methods-user-login.html). Provide a username and password (for an administrator user) and receive an authorization token (Bearer) in return. Use this token as your authorization header for any request requiring a bearer in the future.
 
 2) **Domain** - Unless mentioned otherwise, domain refers to the MTLS domain. To get the domain, you can make a simple call to the CSDS endpoint (GET method). For example: 
 

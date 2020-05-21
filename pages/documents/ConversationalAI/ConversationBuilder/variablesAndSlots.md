@@ -27,9 +27,9 @@ There are several system variables that store information that's commonly needed
 
 * `{$chatBotId}` - Returns the ID of the bot.
 * `{$chatBotUserId}` - Returns the ID of the user (the consumer).
-* `{$chatBotUserPlatformId}` - Returns the ID of the bot user agent. This is provided by LiveEngage.
-* `{$conversationId}` - Returns the ID of the current conversation. This is provided by LiveEngage.
-* `{$firstname}` - Returns the first name of the bot user agent. This is provided by LiveEngage.
+* `{$chatBotUserPlatformId}` - Returns the ID of the bot user agent. This is provided by Conversational Cloud.
+* `{$conversationId}` - Returns the ID of the current conversation. This is provided by Conversational Cloud.
+* `{$firstname}` - Returns the first name of the bot user agent. This is provided by Conversational Cloud.
 * `{$quickReplyPayload}` - Returns the quick reply payload for the current interaction.
 * `{$userMessage}` - Returns the current user message.
 

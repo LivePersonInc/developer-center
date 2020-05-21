@@ -58,9 +58,9 @@ Path B:
 {:start="5"}
 
 5. Consumer does not respond to the iMessage app transaction sent to him by the agent, and texts that agent that he still need some time to decide
-6. Agent closes the conversation in LiveEngage
+6. Agent closes the conversation in Conversational Cloud
 7. After a couple of hours the consumer comes back to the ABC conversation and continues with the purchase flow on the iMessage app interaction - consumer does not message the brand, but only opens the iMessage app in the conversation thread
-8. LE Conversation is updated with the transaction items and value via SDEs while the conversation is closed in LiveEngage
+8. LE Conversation is updated with the transaction items and value via SDEs while the conversation is closed in Conversational Cloud
 9. Agent manager generates a report that looks at the cross session conversation (transaction that reported after conversation closed in LE), to evaluate the correlation between consumer conversations and transactions, and to attribute incremental lift for LE conversation
 
 #### Consumer Transaction over Main App
@@ -69,7 +69,7 @@ Path B:
 2. Consumer adds two types of door locks to the cart
 3. Brands report the product in cart and the value to LE unauthenticated SDEs
 4. After an hour, the consumer taps on a link in the app that opens the Apple Business Chat conversation thread
-5. Consumer starts to message brand via ABC, the conversation is triggered in LiveEngage
+5. Consumer starts to message brand via ABC, the conversation is triggered in Conversational Cloud
 6. The human or bot agent joins the conversation and reviews the products and value added by the consumer to the cart, and can manage the conversation with full context to the consumer’s needs.
 7. The consumer decides on the product they would like to purchase and completes the payment funnel while in conversation with the agent.
    1. Another scenario is when the consumer does not decide on the product while in conversation and closed the conversation with the brand. After a couple of hours the consumer goes to the app and completes the purchase flow.

@@ -25,7 +25,7 @@ Conversation Orchestrator currently supports bots created in [Conversation Build
 
 ### Enable Recommended Actions Widget
 
-You will first need to enable the feature in LiveEngage. Please contact LivePerson support or your LivePerson customer representative to enable this feature. 
+You will first need to enable the feature in Conversational Cloud. Please contact LivePerson support or your LivePerson customer representative to enable this feature. 
 
 ### Create Conversational Cloud Skill and User For Bot
 
@@ -38,9 +38,9 @@ The Conversation Builder [Connect to Conversational Cloud tutorial](conversation
 * Be sure to match the bot skill to the bot user
 * Save the API credentials generated from your new bot user(s) as you will need them to [connect your bot](#connect-bots-to-liveengage)
 
-### Connect Bots to LiveEngage
+### Connect Bots to Conversational Cloud
 
-Once Conversational Cloud is configured, your bot(s) need to be connected to enable them to respond to conversations in LiveEngage. 
+Once Conversational Cloud is configured, your bot(s) need to be connected to enable them to respond to conversations in Conversational Cloud. 
 
 For Conversation Builder bots, see [the next section](#configuring-conversation-builder-bots).
 
@@ -85,7 +85,7 @@ For the next [Configuring Conversation Orchestrator](#configure-maven) step, you
 
 ### Configure Conversation Orchestrator
 
-Now that you have set up LiveEngage, and connected your bot(s), you need to link these bots to Conversation Orchestrator so they can be suggested in the Recommended Actions Widget. 
+Now that you have set up Conversational Cloud, and connected your bot(s), you need to link these bots to Conversation Orchestrator so they can be suggested in the Recommended Actions Widget. 
 
 #### Log in to Conversation Orchestrator
 
@@ -101,7 +101,7 @@ Now use the interface to add the bots to Conversation Orchestrator. This enables
 
 3. Enter the bot name. Use the Login Name of the bot user created in Live Engage
 
-4. Enter the bot ID. The **Bot ID** is the value saved from the previous [Connect Bots to LiveEngage](#connect-bots-to-liveengage) section above and differs based on which bot platform you are using.
+4. Enter the bot ID. The **Bot ID** is the value saved from the previous [Connect Bots to Conversational Cloud](#connect-bots-to-liveengage) section above and differs based on which bot platform you are using.
 
 Next you will need to add the credentials from your bot platform into the Conversation Orchestrator Setup. If you are using a Conversation Builder bot, see [the next section](#add-credentials-for-conversation-builder). For [DialogFlow go here](#add-credentials-for-dialogflow), and [Watson go here](#add-credentials-for-watson).
 

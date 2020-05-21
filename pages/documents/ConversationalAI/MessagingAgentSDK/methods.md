@@ -637,7 +637,7 @@ Use `skipTokenGeneration = true` if you want to skip the generation of a new tok
 
 Call `reconnect` on `error` with code `401`.
 
-**Note**: When the `reconnect` method fails to re-establish a connection with LiveEngage, a `closed` and `error` events will fire. Unless these events are handled, multiple instances of a reconnection mechanism will be triggered. See our [retry policy](https://developers.liveperson.com/common-resources-retry-policy-recommendations.html) for more information on how we recommend you handle a retry mechanism.
+**Note**: When the `reconnect` method fails to re-establish a connection with Conversational Cloud, a `closed` and `error` events will fire. Unless these events are handled, multiple instances of a reconnection mechanism will be triggered. See our [retry policy](https://developers.liveperson.com/common-resources-retry-policy-recommendations.html) for more information on how we recommend you handle a retry mechanism.
 
 ### dispose()
 

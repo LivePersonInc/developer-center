@@ -14,7 +14,7 @@ permalink: javascript-chat-sdk-methods-authenticate.html
 indicator: chat
 ---
 
-This resource enables consumer SSO with LiveEngage.
+This resource enables consumer SSO with Conversational Cloud.
 
 
 **Notes**:

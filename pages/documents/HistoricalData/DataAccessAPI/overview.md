@@ -22,7 +22,7 @@ The Conversational Cloud Data Access API provides brands with the ability to add
 
 Brands can use this data in data warehouse systems as well as create customized reports from a combination of their own data, data provided by Conversational Cloud advanced analytics and other 3rd parties data system they are working with.
 
-Data access is not a default function of LiveEngage; it must be configured separately for each account.
+Data access is not a default function of Conversational Cloud; it must be configured separately for each account.
 The four types of data supported and configurable in each account are as follows:
 
 * Agent Activity

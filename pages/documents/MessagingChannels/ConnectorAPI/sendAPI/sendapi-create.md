@@ -13,7 +13,7 @@ permalink: connector-api-send-api-conversation.html
 search: exclude
 ---
 
-The CONVERSATION method is a batch-endpoint (this means that one payload can contain several payloads). It takes a set of at least two JSON payloads. The order of the array is important, as the example shows, since Conversational Cloud expects to receive these payloads in that order. Returns an array of corresponding JSON payloads in the response. The most important value obtained by this endpoint is the `conversationId` which will be used for the following [SEND](sendapi-send.html) calls to LiveEngage.
+The CONVERSATION method is a batch-endpoint (this means that one payload can contain several payloads). It takes a set of at least two JSON payloads. The order of the array is important, as the example shows, since Conversational Cloud expects to receive these payloads in that order. Returns an array of corresponding JSON payloads in the response. The most important value obtained by this endpoint is the `conversationId` which will be used for the following [SEND](sendapi-send.html) calls to Conversational Cloud.
 
 ### Getting Started
 
@@ -62,7 +62,7 @@ This method expects a set of JSON payloads, each representing a different type o
 
 The payload with the `type` _userprofile.SetUserProfile_ is mandatory. Its body can essentially be passed empty or with some engagement attributes in order for the Agent to see the Consumer Info in the Conversational Cloud Agent Workspace.
 
-For the sake of simplicity, the next request body example illustrates the minimal JSON Payload which is mandatory for conversation creation in LiveEngage:
+For the sake of simplicity, the next request body example illustrates the minimal JSON Payload which is mandatory for conversation creation in Conversational Cloud:
 
 ```json
 [
@@ -83,11 +83,11 @@ For the sake of simplicity, the next request body example illustrates the minima
 ]
 ```
 
-Nevertheless, we strongly recommend not to create conversations as such, as there is no user information passed in the body of the payload with `type` _userprofile.SetUserProfile_ nor there is any information passed in the body of the payload with `type` _cm.ConsumerRequestConversation_ that will enable targeting the conversation to the right skill or engagement in LiveEngage.
+Nevertheless, we strongly recommend not to create conversations as such, as there is no user information passed in the body of the payload with `type` _userprofile.SetUserProfile_ nor there is any information passed in the body of the payload with `type` _cm.ConsumerRequestConversation_ that will enable targeting the conversation to the right skill or engagement in Conversational Cloud.
 
-Passing user information is done under the `authenticatedData` object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the `authenticatedData` object is not passed (left blank or deleted altogether), there will be no consumer information for the Agent to see in LiveEngage's Agent Workspace. Under the `authenticatedData` object, you can pass an `lp_sdes` array. This array is used to send [engagement attributes (SDEs)](engagement-attributes-types.html) to LiveEngage.
+Passing user information is done under the `authenticatedData` object in the body of the payload with the `type` _userprofile.SetUserProfile_. If the `authenticatedData` object is not passed (left blank or deleted altogether), there will be no consumer information for the Agent to see in Conversational Cloud's Agent Workspace. Under the `authenticatedData` object, you can pass an `lp_sdes` array. This array is used to send [engagement attributes (SDEs)](engagement-attributes-types.html) to Conversational Cloud.
 
-The [SDEs](engagement-attributes-types.html) are used to populate the consumer information for the Agent to see in LiveEngage's Agent Workspace. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
+The [SDEs](engagement-attributes-types.html) are used to populate the consumer information for the Agent to see in Conversational Cloud's Agent Workspace. Hence, as a best practice we recommend to always pass SDEs when creating a new conversation.
 
 The SDEs supported for sending are the [Customer Info](engagement-attributes-types.html#customer-info) and [Personal Info](engagement-attributes-types.html#personal-info) SDEs.
 
@@ -131,7 +131,7 @@ The next request body example illustrates how to create a conversation and send 
 ]
 ```
 
-The above request is much better as it also includes the user SDEs which will populate the consumer information in LiveEngage's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](connector-api-send-api-examples.html#create-a-new-conversation-and-report-sdes){:target="blank"}. **Note**: Not best practice, please avoid this method if possible.
+The above request is much better as it also includes the user SDEs which will populate the consumer information in Conversational Cloud's Agent Workspace. These SDEs can also be used for to target/route the conversation to a specific skill as it was configured via internal LivePerson configuration (Houston) - i.e. routing rules. See further information and examples in [here](connector-api-send-api-examples.html#create-a-new-conversation-and-report-sdes){:target="blank"}. **Note**: Not best practice, please avoid this method if possible.
 
 The best practice to target conversations to skills when using messaging is to set up campaigns.
 You can send the **Campaign ID** and **Enagagement ID** to Conversational Cloud in order to route the consumer conversation to the desired skill as designed by the Campaign Builder. This will also allow the Agent to see the name of your connector as the **source** of the conversation in the Consumer info widget:

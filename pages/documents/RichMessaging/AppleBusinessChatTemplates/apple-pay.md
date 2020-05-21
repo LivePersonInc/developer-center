@@ -44,7 +44,7 @@ See [how to send Structured Content](structured-content-introduction-to-structur
 
 The **body** template will only define how the Apple Pay bubble is displayed in the Conversational Cloud agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
-*Agent/bot generates Apple Pay Interactive Message to consumer (using structured content on LiveEngage)*
+*Agent/bot generates Apple Pay Interactive Message to consumer (using structured content on Conversational Cloud)*
 
 <img style="width:250px" src="img/apple_pay_consumer1.png"> <img style="width:250px" src="img/apple_pay_consumer2.png">
 
@@ -381,7 +381,7 @@ If you would like to opt in for this additional verification, internal account c
 
 ### Receiving an Apple Pay Response from a Consumer
 
-After the consumer submits their Apple Pay details in the form, the Apple Pay response is delivered back to LiveEngage.
+After the consumer submits their Apple Pay details in the form, the Apple Pay response is delivered back to Conversational Cloud.
 
 If you are looking to receive the payment response using a **bot**, you can listen for the payment response via [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html). Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html). Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Pay response structure.
 
@@ -460,7 +460,7 @@ Apple Pay response metadata is contextual information about the consumer payment
 
   * Reply bubble experience - the image in the reply bubble will be displayed, with the same image that was set in the received bubble. The size of the bubble will stay "large" as set in the received bubble in the SC request.
 
-<div class="important"> The URL passed in `ImageURL` of the received bubble must be whitelisted in LiveEngage. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
+<div class="important"> The URL passed in `ImageURL` of the received bubble must be whitelisted in Conversational Cloud. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
 
 ### Limitations
 

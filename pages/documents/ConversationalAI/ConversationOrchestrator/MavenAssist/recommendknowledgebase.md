@@ -22,7 +22,7 @@ Follow along with this guide to set up the feature.
 
 ### Enable Recommended Actions Widget
 
-You will first need to enable the feature in LiveEngage. Please contact LivePerson support or your LivePerson customer representative to enable this feature. 
+You will first need to enable the feature in Conversational Cloud. Please contact LivePerson support or your LivePerson customer representative to enable this feature. 
 
 ### Create Knowledge Base and Article
 

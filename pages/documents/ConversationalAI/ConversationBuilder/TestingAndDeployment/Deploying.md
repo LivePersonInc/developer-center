@@ -1,10 +1,12 @@
 ---
-pagename: Deploying to LiveEngage
+pagename: Deploying to Conversational Cloud
+redirect_from:
+  - conversation-builder-testing-deployment-deploying-to-liveengage.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Testing & Deployment
-permalink: conversation-builder-testing-deployment-deploying-to-liveengage.html
+permalink: conversation-builder-testing-deployment-deploying-to-conversational-cloud.html
 indicator: both
 ---
 
@@ -14,9 +16,9 @@ As a bot developer, you can use Conversation Builder to quickly deploy bots to a
 
 #### Prerequisite steps
 
-If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place and you're accessing Conversation Builder from within Conversational Cloud (i.e., your browser is pointing to the "liveperson.net" domain), you must whitelist LivePerson's IP addresses within LiveEngage. You can find these details [here](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center. However, if you're accessing Conversation Builder directly (i.e., your browser is pointing to the "livepersonai.com" domain), please contact LivePerson Support to obtain the AWS IP addresses to whitelist.
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place and you're accessing Conversation Builder from within Conversational Cloud (i.e., your browser is pointing to the "liveperson.net" domain), you must whitelist LivePerson's IP addresses within Conversational Cloud. You can find these details [here](https://knowledge.liveperson.com/security-regulations-security-configuring-your-firewall.html) in the Knowledge Center. However, if you're accessing Conversation Builder directly (i.e., your browser is pointing to the "livepersonai.com" domain), please contact LivePerson Support to obtain the AWS IP addresses to whitelist.
 
-Also, before you can deploy a bot, you must complete the following, pre-requisite steps in LiveEngage:
+Also, before you can deploy a bot, you must complete the following, pre-requisite steps in Conversational Cloud:
 
 1. Create a bot agent. This is a user where the type = "Bot." Make sure to enable the agent. Also make sure to create the agent with API-based authentication, not password-based authentication. The API-based authentication is more secure and doesn't expire. If your bot agent is currently using password-based authentication, you should update immediately.
 2. Create a skill and assign it to the bot agent.
@@ -61,8 +63,8 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     - **Conversation Type**: Select either "Chat" or "Messaging." This should match the type of Conversational Cloud account, which is either one or the other.
     - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Bot Status Access or Administrator). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
 6. If desired, click **Advanced Options** and specify any optional, advanced settings:
-    - **Fallback Skill ID**: If the skill (that you assigned to the bot agent) has a defined fallback skill, you can enter the fallback skill's ID here. The fallback skill is the skill to which to route the conversation as a fallback if no agents with the primary skill have free capacity. Fallback skills have several uses, but they're often used to escalate (transfer) a conversation from a bot agent to a live agent. You define fallback skills for skills in LiveEngage. For more on this, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
-    - **External Webhook URL**: This option is for brands that want to use HTTP instead of WebSocket for connection to LiveEngage. Enter the URL to which the HTTP connector will post user messages to external endpoints.
+    - **Fallback Skill ID**: If the skill (that you assigned to the bot agent) has a defined fallback skill, you can enter the fallback skill's ID here. The fallback skill is the skill to which to route the conversation as a fallback if no agents with the primary skill have free capacity. Fallback skills have several uses, but they're often used to escalate (transfer) a conversation from a bot agent to a live agent. You define fallback skills for skills in Conversational Cloud. For more on this, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
+    - **External Webhook URL**: This option is for brands that want to use HTTP instead of WebSocket for connection to Conversational Cloud. Enter the URL to which the HTTP connector will post user messages to external endpoints.
     - **Custom Configurations**: If desired, click " + ", and enter any custom configuration fields to set. For information on these, see [below](conversation-builder-testing-deployment-deploying-to-liveengage.html#custom-configuration-flags) in this topic.
     - **Accessibility**: Select this if you want the bot messages to support Accessibility. If you select this, the fields sent in the JSON object have the tooltip attribute.
 7. Click **Save**.
@@ -72,7 +74,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
     To fully deploy the bot, now you must [start the agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#start-a-bot-agent). 
 
 ### Edit an agent connector
-You can edit an agent connector as long as 1) the agent connector isn't running, and 2) the specified bot agent is active in LiveEngage.
+You can edit an agent connector as long as 1) the agent connector isn't running, and 2) the specified bot agent is active in Conversational Cloud.
 
 **To edit an agent connector**
 

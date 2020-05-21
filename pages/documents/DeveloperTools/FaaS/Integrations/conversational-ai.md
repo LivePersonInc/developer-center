@@ -9,7 +9,7 @@ permalink: liveperson-functions-integrations-conversational-ai.html
 indicator: both
 ---
 ### Bot Connector
-LivePerson Functions allow you to write your own custom bot and connect it to LiveEngage. By doing so no external vendors (e.g. IBM Watson) need to be used. See more information about [Custom Integration](third-party-bots-custom-integration.html).
+LivePerson Functions allow you to write your own custom bot and connect it to Conversational Cloud. By doing so no external vendors (e.g. IBM Watson) need to be used. See more information about [Custom Integration](third-party-bots-custom-integration.html).
 
 ### Conversation Builder
 Users who are tasked with creating bots in Conversation Builder can easily integrate function calls within their dialog flows. Adding this kind of [integration interaction](conversation-builder-conversation-builder-interactions.html#integrations) to a dialog in a bot works just like adding any other type of integration interaction.

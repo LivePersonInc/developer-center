@@ -15,7 +15,7 @@ This use case showcases how the LivePerson Functions platform can help extend th
 
 **Note:** Within this integration, the chat server will still take care of sending out emails. Functions will only be used to write more sophisticated conditions.
 
-<div class="important">Once a Functions lambda is implemented for this specific event, any old logic outside of Functions will not be used anymore (i.e, any rules defined otherwise in LiveEngage). Therefore, make sure that the complete logic was implemented within your function before deploying it.</div>
+<div class="important">Once a Functions lambda is implemented for this specific event, any old logic outside of Functions will not be used anymore (i.e, any rules defined otherwise in Conversational Cloud). Therefore, make sure that the complete logic was implemented within your function before deploying it.</div>
 
 ### Post-Survey Integration Outline
 
@@ -66,7 +66,7 @@ Create a new lambda/function. **Remember**: templates, once selected, cannot be 
 
 Adjust the coding from the template according to your needs by modifying the lambda/function by pressing the edit button on the template function. For more information on developing a function within Functions, [please see this document](function-as-a-service-developing-with-functions.html).
 
-Based on the payload sent from the Conversational Cloud server described above, this could be an example `lambda` that processes the data within LivePerson Functions and returns a list of email addresses back to LiveEngage:
+Based on the payload sent from the Conversational Cloud server described above, this could be an example `lambda` that processes the data within LivePerson Functions and returns a list of email addresses back to Conversational Cloud:
 
 ```javascript
 module.exports = (data, cb) => {
@@ -108,4 +108,4 @@ The email result entry needs to contain the following properties:
 
 Just like any other function, this function must be deployed before it can be used. [Please see this document](function-as-a-service-deploying-functions.html) for more information on how to deploy your function. At this point, you can also test your function.
 
-Congratulations, you deployed your first function for LiveEngage! You can now invoke the `lambda` via the Conversational Cloud post survey invocation.
+Congratulations, you deployed your first function for Conversational Cloud! You can now invoke the `lambda` via the Conversational Cloud post survey invocation.

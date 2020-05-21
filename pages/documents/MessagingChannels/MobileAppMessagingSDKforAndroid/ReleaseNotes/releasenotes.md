@@ -368,7 +368,7 @@ The Android Mobile Messaging SDK version 4.2.0 uses:
 ### Bugs fixed:
 - Reworked logic that caused bot avatars to not show up when fetching history; avatars should now load properly as expected
 - Solved an issue where the setting for the maximum historical conversations kept on-device was not being respected
-- Corrected a problem causing several environmental information fields (os version, device model, etc) to not be reported to LiveEngage
+- Corrected a problem causing several environmental information fields (os version, device model, etc) to not be reported to Conversational Cloud
 - Fixed a bug causing Quick Reply buttons to not appear in certain circumstances
 - Moved several customizable attributes from incorrect locations to the branding.xml files
 - Resolved an issue causing certain Welcome Message Quick Reply items to not appear when using Unauthenticated / Signup flows
@@ -1043,7 +1043,7 @@ Brands can communicate with their consumers in an unauthenticated manner while b
 
 Unauthenticated messaging allows brands to:
 
-1. Easier & quicker on-boarding to LiveEngage
+1. Easier & quicker on-boarding to Conversational Cloud
 
 2. Having pre authentication messaging use cases, for example, assistance with password recovery
 

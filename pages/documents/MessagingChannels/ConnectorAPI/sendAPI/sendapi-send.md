@@ -13,7 +13,7 @@ permalink: connector-api-send-api-send.html
 search: exclude
 ---
 
-The SEND method allows you to send a JSON payload to LiveEngage. This method is used mainly to send a message from the consumer to the agent or to close a conversation. The connector can use this method for one action at a time as it is not a batch endpoint like the CONVERSATION endpoint. Use this method to send a text message, close a conversation, send metadata, set user profile (send SDEs) and send chat-state events (e.g. consumer is typing).
+The SEND method allows you to send a JSON payload to Conversational Cloud. This method is used mainly to send a message from the consumer to the agent or to close a conversation. The connector can use this method for one action at a time as it is not a batch endpoint like the CONVERSATION endpoint. Use this method to send a text message, close a conversation, send metadata, set user profile (send SDEs) and send chat-state events (e.g. consumer is typing).
 
 ### Getting Started
 

@@ -32,7 +32,7 @@ To enable the use of LivePerson's Function (FaaS) integrations, please contact y
 
 ### Conversation Builder - Configure the integration
 
-1. Within LiveEngage, open Conversation Builder and click the **Integrations** tab.
+1. Within Conversational Cloud, open Conversation Builder and click the **Integrations** tab.
 2. Provide a name for the function’s integration. In our example, we'll use `UnsolicitedCommentFunction`.
 3. Set the **Integration Type** to `FaaS`.
 4. Select the `Productive` function that you want to integrate.
