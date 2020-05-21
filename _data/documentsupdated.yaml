@@ -988,6 +988,7 @@
           - subpagename: Authorization Request
           - subpagename: Refresh Request
           - subpagename: Token Request
+          - subpagename: Token Revocation Request
         - pagename: Samples
           subpages:
             - subpagename: Application Login Sample App
