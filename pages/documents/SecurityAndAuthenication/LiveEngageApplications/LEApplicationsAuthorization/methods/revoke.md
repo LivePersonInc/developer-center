@@ -13,9 +13,9 @@ indicator: both
 
 ### Overview
 
-OAuth is often used for manage users' log into a certain site or application. If a complete logout is required from **all** LivePerson's applications, this revocation mechanism should be revoke during the end-user logout proccess. A revocation request will invalidate the access token.
+OAuth is often used to manage users' log in to a certain site or application at LivePerson. If a complete logout from **all** LivePerson applications is required, this revocation mechanism should be used during the end-user logout proccess. This revocation request will invalidate the access token.
 
-**Note**: Revoke will invalidate the user session in all LivePerson's applications.
+**Note**: Using this method will invalidate the user's session in all LivePerson applications.
 
 ### Request
 
