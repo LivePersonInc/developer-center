@@ -14,11 +14,11 @@ solutions with you!
 
 <div class="card-container">
   <div id="success-stories" class="welcome-card" style="padding:58px 22px 58px 22px;">
-    <a href="https://www.liveperson.com/resources/success-stories/">
-      <p class="success-stories-header" style="margin-top: 17px;margin-left: 16px;"> Learn how LivePerson has helped transform businesses.</p>
-      <p class="free-trial-label" style="margin-left: 16px;"> 
+    <a href="/conversational-ai-overview.html">
+      <p class="success-stories-header" style="margin-left: 18px !important;">Learn about LivePerson Conversational AI</p>
+      <p class="free-trial-label" style="margin-left: 18px !important; "> 
       <img class="dots-container" src="img/four-dots-white.svg"/>
-      View Success Stories</p>
+      Learn more</p>
     </a>
   </div>
     <a class="welcome-card" target="_blank" href="/first-steps.html"> 
@@ -30,17 +30,17 @@ solutions with you!
       <img class="container-image" src="img/ic_support.svg"/>
       <h5 class="welcome-title">Need help? Get answers to common questions or contact support.</h5>
     </a>
+      <a  class="welcome-card" target="_blank" href="/getting-started-with-rich-messaging-introduction.html"> 
+      <img class="container-image" src="img/ic_partners.svg"/>
+      <h5 class="welcome-title">Extend your messaging capabilities with Rich Messaging.</h5>
+    </a>
     <a  class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/whats-new-latest-whats-new.html"> 
       <img class="container-image" src="img/ic_news.svg"/>
       <h5 class="welcome-title">Stay informed with LivePerson’s latest news and updates.</h5>
     </a>
-   <a class="welcome-card" target="_blank" href="https://institute.liveperson.com/"> 
+      <a class="welcome-card" target="_blank" href="https://institute.liveperson.com/"> 
       <img class="container-image" src="img/ic_APIs.svg"/>
       <h5 class="welcome-title">Become a certified professional at the LivePerson Institute.</h5>
-    </a>
-    <a  class="welcome-card" target="_blank" href="https://www.liveperson.com/signup/"> 
-      <img class="container-image" src="img/ic_partners.svg"/>
-      <h5 class="welcome-title">Are you already a Conversational AI expert? Join the LivePerson partner program.</h5>
     </a>
 </div>
 <div class="free-trial-container">
