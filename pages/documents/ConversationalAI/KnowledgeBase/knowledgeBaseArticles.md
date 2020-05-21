@@ -225,7 +225,7 @@ There isn’t a limit on the number of articles that a knowledge base can have, 
 
 #### Summary and details
 
-Technically, there aren’t any limits here, but keep these as brief as possible. Very long pieces of text will be split into multiple messages (after approx. 325 characters) when sent to the consumer, and in rare cases the messages can be sent in the wrong order.
+Technically, there aren’t any limits here, but keep these as brief as possible. Very long pieces of text will be split into multiple messages (after 320 characters) when sent to the consumer, and in rare cases the messages can be sent in the wrong order.
 
 #### Positive and negative learnings
 
