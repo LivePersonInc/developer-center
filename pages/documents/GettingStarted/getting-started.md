@@ -69,38 +69,9 @@ indicator: both
         </a>
 </div>
   <div class="whole-external-link">
-    <div class="external-link-container">
-        <div class="header-lp4-external" >
-            Next Steps
-            <div class="link-padding" style="margin-top:24px">
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html"> 
-                        <img class="dots-container" src="img/four-dots.svg"/>
-                            How to guide - messaging for your business 
-                </a>
-            </div>
-            <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-add-the-liveperson-tag-to-your-website.html"> 
-                        <img class="dots-container" src="img/four-dots.svg"/>
-                        Add the LivePerson tag to your website
-                </a>
-            </div>
-            <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-bots.html"> 
-                        <img class="dots-container" src="img/four-dots.svg"/>
-                        Extended getting started tutorial for bots
-                </a>
-            </div>
-            <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/developer-tools-liveperson-functions-overview.html"> 
-                        <img class="dots-container" src="img/four-dots.svg"/>
-                            Dev Tools - LivePerson Functions
-                </a>
-            </div>
-        </div>  
-    </div>
-    <div class="external-link-container">
+  <div class="external-link-container">
         <div class="header-lp4-external">
-            API Guidelines
+            Customize LiveEngage Features
             <div class="link-padding" style="margin-top:24px">
                 <a target="_blank" href="https://developers.liveperson.com/common-resources-accessing-liveperson-apis.html"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
@@ -127,6 +98,36 @@ indicator: both
             </div>
         </div>
     </div>
+    <div class="external-link-container">
+        <div class="header-lp4-external" >
+            Recommended Links
+            <div class="link-padding" style="margin-top:24px">
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            How to guide - messaging for your business 
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-add-the-liveperson-tag-to-your-website.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Add the LivePerson tag to your website
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-bots.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Extended getting started tutorial for bots
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/developer-tools-liveperson-functions-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            Explore LivePerson Functions
+                </a>
+            </div>
+        </div>  
+    </div>
+    
 </div>
 <script type="text/javascript">
 // Get the modal
@@ -145,5 +146,4 @@ btn.onclick = function() {
 span.onclick = function() {
   modal.style.display = "none";
 }
-
 </script>

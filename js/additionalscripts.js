@@ -50,13 +50,15 @@ $(document).ready(function () {
 	var $title = $('.h1').text();
 
 
-	if ($title.indexOf('Let’s build a conversational future together!') != -1) {
+	if ($title.indexOf('Let’s build a conversational future together!') != -1 || $title.indexOf('First Steps') != -1) {
 		console.log("Welcome to LivePerson Developers!");
 		$title.bold();
 	} else {
 		$('.breadcrumbs').removeClass('breadhidden');
 		$('.suggestbutton').removeClass('suggesthidden');
 	}
+	removeTitleFirstSteps();
+
 });
 function crossBrowserSafariCheck() {
 	var isSafari = window.safari !== undefined;
@@ -95,6 +97,15 @@ function setImportantIcon() {
 		$(this).prepend(importantIcon);
 	});
 }
+function removeTitleFirstSteps() {
+	var $title = $('.h1').text();
+	var titleContainer = $('#documentTitleContainer');
+	if ($title.indexOf('First Steps') != -1) {
+		titleContainer.css('display', 'none');
+	} else {
+		titleContainer.css('display', 'flex');
+	}
+}
 function navigateContent(url) {
 	//call ajax with the target url
 	$.ajax(url)
@@ -116,13 +127,20 @@ function navigateContent(url) {
 				$content.html($newData.find('#defaultcontent').html());
 				//hide/display breadcrumbs if on welcome page or not
 				var $title = $('.h1').text();
-				if ($title.indexOf('Welcome') != -1) {
+				if ($title.indexOf('Welcome') != -1 || $title.indexOf('First Steps') != -1) {
 					$('.breadcrumbs').addClass('breadhidden');
 				} else {
 					$('.breadcrumbs').removeClass('breadhidden');
 					$('.suggestbutton').removeClass('suggesthidden');
 				}
 			}
+			if ($title.indexOf('Let’s build a conversational future together!') != -1 || $title.indexOf('First Steps') != -1) {
+				console.log("Welcome to LivePerson Developers!");
+			} else {
+				$('.breadcrumbs').removeClass('breadhidden');
+				$('.suggestbutton').removeClass('suggesthidden');
+			}
+			removeTitleFirstSteps();
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
 			$(window).scroll(function () {
