@@ -53,7 +53,7 @@ To disable context switching at the conversation start, you can add this code to
 ### Create a new dialog
 
 1. Open the bot.
-2. Click **New Dialog** in the lower-left corner.
+2. Click **Add Dialog** in the lower-left corner.
 3. In the dialog that appears, do the following:
     - **Dialog Name**: Enter a descriptive name for the dialog. Use a standard naming convention to make your dialogs more sortable and easier to find.
     - **Dialog Type**: Select the type of dialog; for help with this, see *Dialog types* farther above on this page.
@@ -64,11 +64,11 @@ To disable context switching at the conversation start, you can add this code to
 
 To close the current dialog, set the interaction's Next Step to "Close Dialog."
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeDialog.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/nextAction_closeDialog.png">
 
 Alternatively, add a Text statement that contains the special string "LP_CLOSEDIALOG." If the statement isn't the last interaction in the dialog, set its **Next Step** to "End Interaction" (not "Next Interaction").
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keyword_closeDialog.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keyword_closeDialog.png">
 
 LP_CLOSEDIALOG is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
@@ -79,11 +79,11 @@ These methods for closing the dialog **do** trigger a post-conversation [survey]
 
 To close the current conversation, set the interaction's Next Step to "Close Conversation."
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/nextStep_closeConversation.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/nextAction_closeConv.png">
 
 Alternatively, add a Text statement that contains the special string "LP_CLOSECONVERSATION." If the statement isn't the last interaction in the dialog, set its **Next Step** to "End Interaction" (not "Next Interaction").
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keyword_closeConversation.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keyword_closeConversation.png">
 
 LP_CLOSECONVERSATION is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
