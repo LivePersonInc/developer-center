@@ -41,7 +41,7 @@ When you first open a bot, you are taken to the **Dialogs** view. Use this view 
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botWorkspace_dialogEditor.png">
 
-In the left panel in the Dialogs view, there's an expandable list of the dialogs in the open bot. The dialogs are displayed vertically and in alphabetical order. You can use the search box to search by dialog or interaction name.
+In the left panel in the Dialogs view, there's an expandable list of the dialogs in the open bot. The dialogs are displayed vertically and in alphabetical order. You can use the search box to search by dialog name, interaction name, or interaction content.
 
 <img class="fancyimage" style="width:250px" src="img/ConvoBuilder/botWorkspace_dialogsPanel.png">
 
@@ -54,8 +54,6 @@ The interactions toolbar is located on the right side in the Dialogs view.
 The toolbar contains tools for adding different [types of interactions](conversation-builder-interactions-interaction-basics.html#interaction-categories) to the dialog that's currently open in the dialog editor in the center of the screen.
 
 Select an interaction to add it to the open dialog. You can then start configuring the interaction. For example, if you add a simple, text-based question, you'll be able to enter the question that you want the bot to ask the user.
-
-For more information on interactions, see [here](conversation-builder-interactions-interaction-basics.html).
 
 ### The menu bar
 
@@ -80,6 +78,6 @@ The menu bar is displayed in the upper-left corner and contains the following op
 
 In the upper-right corner, there are a few more options:
 
-* **Preview**: Test the open bot by previewing a conversation. Start a new session by sending "reset". From here you can also access the bot's logs for debugging purposes.
+* **Preview**: Test the open bot by previewing a conversation. Start a new session by sending "reset". From here you can also access the bot's logs for **debugging** purposes.
 
 * **Add Dialog**: Add a dialog to the open bot.
