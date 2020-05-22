@@ -82,7 +82,7 @@ You'll need to use a manual transfer in two situations:
 
 #### Making manual transfers seamless
 
-In a manual transfer, you can *automatically* pass the intent and/or user message from the sender bot to the receiver bot by selecting the **Transfer Bot Context** checkbox in the [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) (in its Interaction Settings):
+In a manual transfer, you can *automatically* pass the intent and/or user message from the sender bot to the receiver bot by selecting the **Transfer Bot Context** checkbox in the [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) (in **Settings**):
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bots_collab9.png">
 
