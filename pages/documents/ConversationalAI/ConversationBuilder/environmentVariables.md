@@ -38,7 +38,7 @@ If you are using multiple bot instances (e.g., a Sandbox version and a Productio
 
 **To add environment variables**
 
-1. From the Conversation Builder dashboard, click **Bot Environments** in the upper-left corner.
+1. From the dashboard that lists your bots, click **Bot Environments** in the upper-left corner.
 2. Click **Add Environment** in the lower-left corner.
 3. Specify the following:
 
@@ -103,7 +103,7 @@ Exporting a set of environment variables is useful when you need to "move" the v
 
 **To export environment variables to a CSV file**
 
-1. From the Conversation Builder dashboard, click **Bot Environments** in the upper-left corner.
+1. From the dashboard that lists your bots, click **Bot Environments** in the upper-left corner.
 2. In the left panel, select the environment.
 3. In the right panel, under **More Options**, click <img style="width:25px" src="img/ConvoBuilder/icon_envVariables_download.png"> (Download icon) beside **Export Environment Variables**.
 4. Follow the browser prompts to access and save the CSV file to a location of your choice.
