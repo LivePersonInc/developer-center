@@ -230,6 +230,8 @@ If you're using [domain intents](knowledge-base-overview.html#knowlege-base-inte
 
 Technically, there aren’t any limits here, but keep these as brief as possible. Very long pieces of text will be split into multiple messages (after 320 characters) when sent to the consumer, and in rare cases the messages can be sent in the wrong order.
 
+If you need to use a long piece of text, you can use the [breakWithDelay](conversation-builder-interactions-interaction-basics.html#break-point-within-a-large-block-of-text) tag to force the break at a specific point. Alternatively, you can override the behavior to break the text using the [setAllowMaxTextResponse](conversation-builder-scripting-functions-manage-conversation-flow.html#set-allow-max-text-response) scripting function.
+
 #### Positive and negative learnings
 
 As a general rule, if you're using knowledge base intents, don’t specify more than 20 positive learnings and 20 negative learnings. Too many positive and negative learnings can lead to learnings that “overlap” one another in terms of grammar. This results in an unpredictable user experience.
