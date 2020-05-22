@@ -73,27 +73,39 @@ indicator: both
         <div class="header-lp4-external">
             Customize LiveEngage Features
             <div class="link-padding" style="margin-top:24px">
-                <a target="_blank" href="https://developers.liveperson.com/common-resources-accessing-liveperson-apis.html"> 
+                <a  href="/mobile-app-messaging-sdk-for-ios-overview.html"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
-                        Accessing LivePerson APIs
+                       Integrate LiveEngage with Mobile Messaging SDK for iOS
                 </a>
             </div>
             <div class="link-padding" >
-                <a target="_blank" href="https://developers.liveperson.com/common-resources-create-api-keys.html"> 
+                <a  href="/mobile-app-messaging-sdk-for-android-overview.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
-                            Create API keys
+                            Integrate LiveEngage with Mobile Messaging SDK for Android 
                 </a>
             </div>
             <div class="link-padding" >
-                <a target="_blank" href="https://developers.liveperson.com/common-resources-domain-api.html"> 
+                <a  href="/monitoring-api-overview.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
-                            Domain API 
+                           Enable consumer monitoring with Monitoring API
                 </a>
             </div>
             <div class="link-padding" >
-                <a target="_blank" href="https://developers.liveperson.com/common-resources-retry-policy-recommendations.html"> 
+                <a  href="/messaging-agent-sdk-overview.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
-                        Retry policy recommendations
+                        Integrate a messaging bot using Agent Messaging SDK
+                </a>
+            </div>
+               <div class="link-padding" >
+                <a  href="/users-api-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                       Manage users with Users API
+                </a>
+            </div>
+               <div class="link-padding" >
+                <a href="/api-guidelines-retry-policy-recommendations.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Implement a retry policy
                 </a>
             </div>
         </div>
