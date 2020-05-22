@@ -54,7 +54,7 @@ indicator: both
     <p>Get familiar about <a href="/api-guidelines-accessing-liveperson-apis.html" alt="LivePerson APIs">accessing LivePerson APIs</a> and guidelines.</p>
   </li>
   <li>
-    <p>Now you are ready to <a href="#LEFeatures" alt="LivePerson Features"> customize LiveEngage features</a>.</p>
+    <p>Now you are ready to <a  class="uniqueAnchor" href="#LEFeatures" alt="LivePerson Features"> customize LiveEngage features</a>.</p>
   </li>
 </ul>
 
