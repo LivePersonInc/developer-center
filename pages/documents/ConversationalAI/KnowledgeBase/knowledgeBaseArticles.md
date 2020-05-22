@@ -223,6 +223,9 @@ There isn’t a limit on the number of articles that a knowledge base can have, 
 
 * The intent qualifiers or training phrases should be relatively generic. If they are too specific, the likelihood they will match a consumer’s utterance will be slim. Since consumers can phrase their questions in many ways, make sure your intents are broad to allow the NLU a chance to match as many possible versions of the sentence as possible.
 
+{: .important}
+If you're using [domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) (not knowledge base intents), the same guidelines apply.
+
 #### Summary and details
 
 Technically, there aren’t any limits here, but keep these as brief as possible. Very long pieces of text will be split into multiple messages (after 320 characters) when sent to the consumer, and in rare cases the messages can be sent in the wrong order.
