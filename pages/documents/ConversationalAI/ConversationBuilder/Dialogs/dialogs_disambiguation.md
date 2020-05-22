@@ -42,19 +42,19 @@ Once the user selects the correct intent, if that intent is associated with a Di
 
 ### Create a disambiguation dialog
 
-1. Open the bot, and click **+ DIALOG** in the lower-left corner.
+1. Open the bot, and click **Add Dialog** in the lower-left corner.
 2. In the dialog that appears, specify the following:
     - **Dialog Name**: Enter a descriptive name.
     - **Dialog Type**: Select "Disambiguation Dialog."
     - **Match Threshold**: Select the minimum ranking that an intent match must have to be considered for disambiguation. For example, if you select FAIR_PLUS, then all intents that match with a rank of FAIR_PLUS and higher are considered for disambiguation.
     - **Disambiguate only selected domains**: If you only want the bot to include matches to intents in specific domains, select this check box, and then select those domains. You can select from all domains associated with dialogs in the bot.
 3. Click **Save**.
-4. Open the **Interaction Details** for the disambiguation interaction, click **Settings**, and specify the following:
+4. In the Disambiguation interaction, click the **Settings** icon, click the **Advanced** tab, and specify the following:
     - **\# of intents to show**: Select whether to show 2 or 3 intent choices to the consumer.
     - **Additional option to show* (checkbox): Select this if you want to add a "none of the above" type of choice to the clarification question. By default, in the conversation, this option returns a reply of, *"That's not what I was expecting, Please select from one of these options."* However, you can add a response condition to the disambiguation interaction and use pattern matching to direct the conversation flow in a different way.
     - **Additional option to show** (label): This is the label for the "Additional option to show" choice. Enter a value, for example, "None of the above."
 5. Click **Save**.
-6. In the Disambiguation interaction, enter the question text to send to the consumer.
+6. Customize the question text to send to the consumer.
     <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation5.png">
 
     The intents will be dynamically populated, and their labels will be drawn from their intent display names as configured in [Intent Builder](intent-builder-overview.html).
@@ -97,7 +97,7 @@ In your bot, you might have some dialogs that start with dialog starters and oth
 
 ### FAQs
 
-#### What happens if I don't use a disambiguation dialog?**
+#### What happens if I don't use a disambiguation dialog?
 
 If you don't use a disambiguation dialog, here's how things work:
 
@@ -105,10 +105,10 @@ If you don't use a disambiguation dialog, here's how things work:
 
 - During matching, the bot considers only intents that evaluate to a VERY_GOOD or GOOD rank; intents that evaluate to FAIR_PLUS and FAIR are not considered.
 
-#### What happens if I use a disambiguation dialog, but no intents at or above the specified threshold are matched?**
+#### What happens if I use a disambiguation dialog, but no intents at or above the specified threshold are matched?
 
 When this happens, the fallback dialog is triggered if one exists. Otherwise, the default fallback message is sent to the consumer. For more on fallback, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 
-#### How many disambiguation dialogs can I create?**
+#### How many disambiguation dialogs can I create?
 
 Like fallback dialogs, there can be only one disambiguation dialog in a bot.
