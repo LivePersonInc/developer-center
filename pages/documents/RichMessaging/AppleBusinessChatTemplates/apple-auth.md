@@ -396,5 +396,3 @@ The authentication response metadata is contextual information about the consume
 ### Limitations
 
 * Updating the Apple Business Chat authentication status visually in the LiveEngage UI is planned.
-
-* Touch/Face ID is not currently supported in Apple's authentication solution

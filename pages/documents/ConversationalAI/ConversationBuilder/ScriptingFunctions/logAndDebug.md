@@ -22,13 +22,16 @@ Used for tracking specific bot events for the purposes of analytics. This functi
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `logCustomEvent(user_message, event_name[, event_detail])` | <em>user_message - </em>the user's message text<br><br><em>event_name - </em>string | Void |
+| `logCustomEvent(user_message, event_name, event_detail)` | <em>user_message - </em>the user's message text<br><br><em>event_name - </em>string<br><br><em>event _detail - </em>string; any **optional** detail | Void |
 
 #### Example
 
 ```javascript
-botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API','');
+botContext.logCustomEvent(botContext.getCurrentUserMessage(), 'Invoice API', 'API call successful');
 ```
+
+{: .important}
+For a step-by-step, example guide on implementing custom event logging, see [here](conversation-builder-best-practices-custom-event-logging.html).<br><br>To view the details of a custom event, in Bot Analytics you must click **Download Event Details** (not **Download**) and examine the downloaded CSV file.
 
 ### Log escalation event
 
