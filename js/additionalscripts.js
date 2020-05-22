@@ -52,7 +52,6 @@ $(document).ready(function () {
 
 	if ($title.indexOf('Let’s build a conversational future together!') != -1 || $title.indexOf('First Steps') != -1) {
 		console.log("Welcome to LivePerson Developers!");
-		$title.bold();
 	} else {
 		$('.breadcrumbs').removeClass('breadhidden');
 		$('.suggestbutton').removeClass('suggesthidden');
@@ -67,13 +66,12 @@ function crossBrowserSafariCheck() {
 		$('.sidebarbutton').attr('style', 'top: -3px')
 
 	} else {
-		console.log("In another browser");
+		console.log("Not in safari");
 		$('.sidebarbutton').attr('style', 'top: 5px');
 	}
 }
 function setNoticeIcon() {
 	var allNoticeIcon = $('p[class^="notice"]');
-	console.log("SET NOTICE");
 	allNoticeIcon.each(function (i) {
 		var noticeIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>';
 		$(this).prepend(noticeIcon);
@@ -164,40 +162,48 @@ function navigateContent(url) {
 			scrollToHash();
 			// domainTool();
 			searchClick();
-			// //call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
-			// $('#anchorlist').scrollToFixed({
-			// 	dontSetWidth: false
-			// });
+
 			//call smoothscrolling on all anchors
 			var scroll = new SmoothScroll('a[href*="#"]');
 			//from here, the rest of the code has to do with link highlighting for the sidebar
 			var selected = $('a[href*="' + url + '"]');
+			if (selected.hasClass('uniqueAnchor')) {
+				// do  nothing // dont append the active page
+				console.log('selected is the unique anchor on getting started page');
+			}
+			else {
+				console.log('Remove active class in navigate content');
+
+				$('.folder').removeClass("active");
+				$('.innerlink').removeClass("active");
+
+				selected = selected.addClass("activepage");
+				//just some code to make sure sidebar styling works well.
+				if (selected.parent().hasClass('innerpageitem')) {
+					$('.innerpageitem').removeClass("activeitem");
+					$(".activepage").parent().addClass("activeitem");
+				}
+				if (selected.parent().hasClass('pageitem')) {
+					$('.innerpageitem').removeClass("activeitem");
+					selected.parent().addClass('activeleaf');
+				}
+				if (selected.parent().hasClass('sololink')) {
+					$('.innerpageitem').removeClass("activeitem");
+					selected.parent().addClass('activeleafSolo');
+				}
+				//jump to top when page loads
+				if (window.location.hash == "") {
+					console.log(window.location.hash);
+					window.scrollTo(0, 0);
+				}
+				if (/Mobi|Android/i.test(navigator.userAgent) == true) {
+					$('#mysidebar').slideUp(400);
+					$('#mysidebar').data("expanded", "false");
+				};
+			}
 			//make the string we found previously active
-			$('.folder').removeClass("active");
-			$('.innerlink').removeClass("active");
-			selected = selected.addClass("activepage");
-			//just some code to make sure sidebar styling works well.
-			if (selected.parent().hasClass('innerpageitem')) {
-				$('.innerpageitem').removeClass("activeitem");
-				$(".activepage").parent().addClass("activeitem");
-			}
-			if (selected.parent().hasClass('pageitem')) {
-				$('.innerpageitem').removeClass("activeitem");
-				selected.parent().addClass('activeleaf');
-			}
-			if (selected.parent().hasClass('sololink')) {
-				$('.innerpageitem').removeClass("activeitem");
-				selected.parent().addClass('activeleafSolo');
-			}
-			//jump to top when page loads
-			if (window.location.hash == "") {
-				console.log(window.location.hash);
-				window.scrollTo(0, 0);
-			}
-			if (/Mobi|Android/i.test(navigator.userAgent) == true) {
-				$('#mysidebar').slideUp(400);
-				$('#mysidebar').data("expanded", "false");
-			};
+
+
 		})
 		.fail(function () {
 			url = "http://developers.liveperson.com/404.html";
@@ -208,7 +214,7 @@ function navigateContent(url) {
 function handleUniquePages() {
 	var is_root = location.pathname == "/";
 	var is_getting_started = location.pathname == "/first-steps.html";
-	console.log('checking if is root folder');
+	console.log('checking if is unique page ');
 	var jumpto = $('#jumpto');
 	var sidebar = $('#defaultsidebar');
 	var suggestButton = $('#suggestbutton');
@@ -392,44 +398,52 @@ function sidebarCollapse(url) {
 		$('a').removeClass("active");
 		currentPage = currentPage.parent().addClass("active");
 	};
-	//get rid of any currently open items and then highlight the current page
-	$('a').removeClass("activepage");
+	var selected = $('a[href*="' + url + '"]');
+	if (selected.hasClass('uniqueAnchor')) {
+		console.log('selected is the unique anchor on getting started page in topen');
+	} else {
+		$('a').removeClass("activepage");
 
-	$('li').removeClass('activeleaf');
-	$('li').removeClass('activeleafSolo');
-	$('.homeitem').removeClass("activepage");
-	$('.innerpageitem').removeClass("activeitem");
-	currentPage = currentPage.addClass("activepage");
-	//grab any parent elements of the active page that has the folder class
-	var toOpen = $(".activepage").parents("folder");
-	//manipulate the active page's parents to open them, hightlight them, etc.
-	if (toOpen) {
-		$(".activepage").parents().show();
-		$(".activepage").parents('ul').prev('.highlightlink').addClass('active');
-		$("a.active").data("expanded", "true");
-		if ($(".activepage").parent().hasClass("innerpageitem")) {
-			$(".activepage").parent().addClass("activeitem");
-		}
-		$(".innerfolder > .active > button").addClass("clicked");
-		$(".topfolder > .active > button").addClass("clicked");
-		if (currentPage.parent().hasClass('pageitem')) {
-			$('.innerpageitem').removeClass("activeitem");
-			currentPage.parent().addClass('activeleaf');
-		}
-		if (currentPage.parent().hasClass('sololink')) {
-			$('.innerpageitem').removeClass("activeitem");
-			currentPage.parent().addClass('activeleafSolo');
-		}
+		$('li').removeClass('activeleaf');
+		$('li').removeClass('activeleafSolo');
+		$('.homeitem').removeClass("activepage");
+		$('.innerpageitem').removeClass("activeitem");
+		currentPage = currentPage.addClass("activepage");
+		//grab any parent elements of the active page that has the folder class
+		var toOpen = $(".activepage").parents("folder");
+		//manipulate the active page's parents to open them, hightlight them, etc.
+		if (toOpen) {
+			console.log('TO OPEN active page stuff');
+			$(".activepage").parents().show();
+			$(".activepage").parents('ul').prev('.highlightlink').addClass('active');
+			$("a.active").data("expanded", "true");
+			if ($(".activepage").parent().hasClass("innerpageitem")) {
+				$(".activepage").parent().addClass("activeitem");
+			}
+			$(".innerfolder > .active > button").addClass("clicked");
+			$(".topfolder > .active > button").addClass("clicked");
+			if (currentPage.parent().hasClass('pageitem')) {
+				$('.innerpageitem').removeClass("activeitem");
+				currentPage.parent().addClass('activeleaf');
+			}
+			if (currentPage.parent().hasClass('sololink')) {
+				$('.innerpageitem').removeClass("activeitem");
+				currentPage.parent().addClass('activeleafSolo');
+			}
 
-		$(".homeitem").removeClass("active");
-		$(".homeitem > a").data("expanded", "false");
-		if (!currentPage.isInViewport()) {
-			$('#mysidebar').animate({
-				scrollTop: currentPage.offset().top - 200
-			}, 2000);
-			$(currentPage).parents('.highlightlink').trigger('click');
+			$(".homeitem").removeClass("active");
+			$(".homeitem > a").data("expanded", "false");
+			if (!currentPage.isInViewport()) {
+				$('#mysidebar').animate({
+					scrollTop: currentPage.offset().top - 200
+				}, 2000);
+				$(currentPage).parents('.highlightlink').trigger('click');
+			};
+
 		};
-	};
+	}
+	//get rid of any currently open items and then highlight the current page
+
 };
 
 function allArticlesClick() {

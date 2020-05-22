@@ -30,6 +30,7 @@
 
 .success-stories-header {
     font-size: 24px;
+    max-width: 418px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -59,6 +60,7 @@ img.card-container {
     color: var(--navy);
     font-weight: bold;
     margin: 0;
+    max-width: 424px;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.01em;
