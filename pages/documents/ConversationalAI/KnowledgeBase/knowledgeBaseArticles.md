@@ -69,6 +69,7 @@ Next, still in Conversation Builder, build out the applicable dialog to make use
 
 <img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3.png">
 <img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3b.png">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3c.png">
 
 #### Preview the conversation
 
