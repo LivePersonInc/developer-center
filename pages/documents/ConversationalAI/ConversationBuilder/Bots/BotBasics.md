@@ -92,7 +92,7 @@ Before you import a bot from a different environment (that is, from one region o
 
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 
-2. In the dashboard that lists your bots, click **Import Bot** in the upper-right corner.
+2. From the dashboard that lists your bots, click **Import Bot** in the upper-right corner.
 3. In the dialog box that appears, navigate to and select the JSON file, and click **Open**.
     The bot is imported and given a name that includes a date and time stamp.
 4. Change the name of the bot and any other configuration as needed. For help, see [Configure bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) above.
