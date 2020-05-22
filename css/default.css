@@ -216,6 +216,7 @@ ul.mysidebar.nav {
 .defaultfooter {
     display: flex;
     min-width: 1300px;
+    margin-top: 64px;
     width: 100%;
     background-color: var(--lighter-gray);
     color: var(--darker-gray);
