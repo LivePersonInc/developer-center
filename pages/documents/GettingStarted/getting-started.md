@@ -40,6 +40,24 @@ indicator: both
     </div>
 </div>
 
+<div class= "header-lp4" style="margin-top: 48px;margin-bottom: 16px;">
+   Steps to get started
+</div>
+<ul>
+  <li>
+    <p>Create your LivePerson <a target="_blank" href="https://developers.liveperson.com/register.html" alt="Start free trial">free trial account</a>.</p>
+  </li>
+  <li>
+    <p>Build with our step-by-step quick start guides.</p>
+  </li>
+  <li>
+    <p>Get familiar about <a href="/api-guidelines-accessing-liveperson-apis.html" alt="LivePerson APIs">accessing LivePerson APIs</a> and guidelines.</p>
+  </li>
+  <li>
+    <p>Now you are ready to <a href="#LEFeatures" alt="LivePerson Features"> customize LiveEngage features</a>.</p>
+  </li>
+</ul>
+
 <div class= "header-lp4" style="margin-top:62px;">
     Start building with quick start guides
 </div>
@@ -70,7 +88,7 @@ indicator: both
 </div>
   <div class="whole-external-link">
   <div class="external-link-container">
-        <div class="header-lp4-external">
+        <div id="LEFeatures" class="header-lp4-external">
             Customize LiveEngage Features
             <div class="link-padding" style="margin-top:24px">
                 <a  href="/mobile-app-messaging-sdk-for-ios-overview.html"> 
