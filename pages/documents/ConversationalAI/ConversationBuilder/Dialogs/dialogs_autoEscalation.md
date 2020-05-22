@@ -28,7 +28,7 @@ A bot can have only one Auto Escalation dialog.
 
 **To create an Auto Escalation dialog**
 
-1. Open the bot, and click **+ DIALOG** in the lower-left corner.
+1. Open the bot, and click **Add Dialog** in the lower-left corner.
 2. In the dialog that appears, specify the following:
     * **Dialog Name**: Enter a descriptive name.
     * **Dialog Type**: Select "Auto Escalation Dialog."
