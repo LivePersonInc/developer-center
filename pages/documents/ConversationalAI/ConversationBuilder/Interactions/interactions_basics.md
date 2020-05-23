@@ -175,7 +175,7 @@ Some but not all changes are automatically saved after you make them. As a gener
 **To save changes to an interaction**
 
 1. Select the interaction.
-2. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> (3-dot icon) in its upper-right corner, and click **Save**.
+2. Click the <img style="width:25px" src="img/ConvoBuilder/icon_save_int.png"> (Save) icon in the upper-right corner.
 
 ### Move an interaction
 You can move any type of interaction except a Dialog Starter interaction. Dialog Starter interactions always stay at the start of dialogs.
@@ -189,8 +189,8 @@ You can move any type of interaction except a Dialog Starter interaction. Dialog
 **To move an interaction to a new dialog**
 
 1. Select the interaction.
-2. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> in its upper-right corner, and click **Move**.
-3. In the dialog box, select the destination dialog:
+2. Click <img style="width:20px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> in its upper-right corner, and click **Move**.
+3. In the Move Interaction dialog box, select the destination dialog:
 
     * Selecting the current dialog moves the interaction to its end.
     * Selecting a different dialog moves it to the end of that dialog.
@@ -201,7 +201,7 @@ You can copy any type of interaction except a Dialog Starter interaction. A dial
 **To copy an interaction**
 
 1. Select the interaction.
-2. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> in its upper-right corner, and click **Copy**. The copy is added directly beneath the original. (You can move it if desired.) The copy is given the same name as the original but with “_copy” appended.
+2. Click <img style="width:20px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> in its upper-right corner, and click **Copy**. The copy is added directly beneath the original. (You can move it if desired.) The copy is given the same name as the original but with “_copy” appended.
 3. Change the name of the copy as appropriate.
 
 ### Disable an interaction
@@ -209,8 +209,8 @@ A disabled interaction is ignored in a dialog flow. Consider disabling an intera
 
 **To disable an interaction**
 
-1. Select the interaction, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> in its upper-right corner, and click **Settings**.
-2. Click the **Interaction Enabled** slider to turn it to the off position.
+1. Select the interaction, click the <img style="width:25px" src="img/ConvoBuilder/icon_settings.png"> (Settings) icon in its upper-right corner.
+2. On the Basic tab, click the **Interaction Enabled** slider to turn it to the off position.
 
 ### Delete an interaction
 Deleting an interaction is a non-recoverable action, so consider disabling the interaction as an alternative.
@@ -221,7 +221,7 @@ After you delete an interaction, verify that the interaction flow isn't broken a
 **To delete an interaction**
 
 1. Select the interaction.
-2. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> in its upper-right corner, and click **Delete**.
+2. Click <img style="width:20px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> in its upper-right corner, and click **Delete**.
 3. Click **Continue** to confirm the deletion.
 
 ### Troubleshooting
