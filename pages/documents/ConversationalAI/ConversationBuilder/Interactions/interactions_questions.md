@@ -47,6 +47,8 @@ Configure the following settings in the [interaction's settings](conversation-bu
 
 - **Text Only Fallback > List Style**: Select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
 
+- **Enable Indentation**: Affects the display of options in text-only channels. Enable this to indent (with one tab space) the multiple choice options under the question. Disable this to align them under the question without an indent.
+
 ### Text questions
 
 Text questions expect and wait for a text-based response from the consumer.

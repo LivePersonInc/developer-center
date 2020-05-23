@@ -27,13 +27,25 @@ What’s an intent? An intent is something a user wants to do. In our example, t
 
 <img style="width:600px" src="img/ConvoBuilder/interactions_userSays3.png">
 
-In the Dialog Starter interaction, you specify the patterns that the bot should look for (a method called pattern matching), or the intent that the bot should find in order to trigger to the dialog. To [add patterns](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) or an intent, click the button that's on the tile. 
-
-<img style="width:500px" src="img/ConvoBuilder/interactions_dialogStarter3.png">
-
 #### When do you use patterns versus intents?
 
 - Use a pattern when the user’s input must match the pattern exactly. Otherwise, it isn’t considered a match, and the dialog isn’t triggered.
 - Use an intent when the match criteria needs to be more flexible, which means the bot can respond to a wider variety of input. Intents are broader and more flexible because the bot makes use of a Natural Language Understanding (NLU) engine when determining if there is a match. Matches are scored based on the confidence level: VERY GOOD, GOOD, FAIR PLUS, and so on.
 
-For some practice with patterns and intents, try the [Getting Started tutorial](conversation-builder-tutorials-guides-getting-started.html).
+### Adding patterns or an intent
+
+In the Dialog Starter interaction, you specify the patterns or the intent that the bot should find in order to trigger the dialog. To start, click the button that's on the tile. 
+
+<img style="width:500px" src="img/ConvoBuilder/interactions_dialogStarter3.png">
+
+This opens up the **Patterns & Intent** tab of the **Interaction Settings** dialog box, where you perform the work.
+
+<img style="width:600px" src="img/ConvoBuilder/interactions_dialogStarter4.png">
+
+For some practice with this, try the [Getting Started tutorial](conversation-builder-tutorials-guides-getting-started.html).
+
+### Interaction settings
+
+* **Patterns**: Patterns (text strings) can be matched against the user input to trigger the dialog. Enter the patterns against which to match the input. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for information on pattern matching.
+* **Exclude Keywords**: An "exclude keyword" is a text string that is matched against user input in order to *not* trigger the dialog.
+* **Intent**: An [intent]((intent-builder-overview.html)) can be matched against the user input to trigger the dialog. Select the intent against which to match the input.
