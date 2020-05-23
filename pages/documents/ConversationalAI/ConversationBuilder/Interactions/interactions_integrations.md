@@ -45,7 +45,7 @@ It's recommended that you take advantage of the ability to define rules based on
 
 In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction...
 
- <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule1.png">
+ <img style="width:700px" src="img/ConvoBuilder/integrations_api_rule1.png">
 
 ...so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
 
@@ -72,8 +72,8 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 
     <img style="width:600px" src="img/ConvoBuilder/interactions_agentTransfer.png">
 
-3. In the upper-right corner of the interaction, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> (3-dot icon), and select **Settings**.
-4. Specify the following:
+3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
+4. Select the **Advanced** tab, and specify the following:
 
     * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in LiveEngage. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 
