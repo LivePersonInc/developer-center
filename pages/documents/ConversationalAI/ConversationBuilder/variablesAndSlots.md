@@ -95,7 +95,7 @@ Slot-filling becomes especially useful when mining the entities that make up a u
 
     <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions2.png">
 
-    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions2.png">
+    <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions3.png">
 
 4. In the [rule](conversation-builder-interactions-configuration-next-action.html#custom-rules) for each question, we will create a slot variable that contains our slot variable (`item`) and whose value is the entity value (`@item`). Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
 
@@ -112,4 +112,4 @@ If a user manages to express all the slots as part of their intent query, it wil
 
 Variables are the default storage unit of Conversation Builder, while slots are a special type of variable. The only reason to favor slots is if you need extra functionality that is linked to entities or if entities will be used in an API Integration catalog search, for example.
 
-When in doubt, it is best to use variables. The [NLU Assist](conversation-builder-nlu-assist.html) tool will help to display when slots are most useful.
+When in doubt, it is best to use variables. The [Assist](conversation-builder-nlu-assist.html) tool will help to display when slots are most useful.
