@@ -93,7 +93,7 @@ Slot-filling becomes especially useful when mining the entities that make up a u
 
     <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions2.png">
 
-4. In the [rule](conversation-builder-interactions-configuration-next-step.html#rules) for each question, we will create a slot variable that contains our slot variable (`item`) and whose value is the entity value `@item`. Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
+4. In the [rule](conversation-builder-interactions-configuration-next-action.html#custom-rules) for each question, we will create a slot variable that contains our slot variable (`item`) and whose value is the entity value `@item`. Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
 
     <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill.png">
 

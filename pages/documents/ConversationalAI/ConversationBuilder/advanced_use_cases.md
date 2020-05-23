@@ -17,7 +17,7 @@ In a bot, at branching points within a dialog, the consumer is asked to answer q
 
 You can help to keep the consumer in the current dialog by offering predefined options in a menu of buttons or predefined choices to a multiple-choice question. However, there's no guarantee that the consumer won't ignore these and type a response of their own. This means you need a way to handle any other response.
 
-To solve this problem, you can create a rule with a [No Match condition](conversation-builder-interactions-configuration-next-step.html#conditions) that directs the flow as you need, either to repeat the same question or to redirect the flow to somewhere else within the bot.
+To solve this problem, you can create a rule with a [No Match condition](conversation-builder-interactions-configuration-next-action.html#conditions) that directs the flow as you need, either to repeat the same question or to redirect the flow to somewhere else within the bot.
 
 **To implement this solution**
 
@@ -37,7 +37,7 @@ When the user enters anything but a well-formed email address, this yields a con
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png">
 
-For more information on the "No Match" match type and other match types that can be used in conditions, see [here](conversation-builder-interactions-configuration-next-step.html#conditions).
+For more information on the "No Match" match type and other match types that can be used in conditions, see [here](conversation-builder-interactions-configuration-next-action.html#conditions).
 
 ### Block consumer interruptions
 
