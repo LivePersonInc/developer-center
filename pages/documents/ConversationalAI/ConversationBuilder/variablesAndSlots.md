@@ -11,7 +11,7 @@ permalink: conversation-builder-variables-slots.html
 indicator: both
 ---
 
-In the Interaction Details [Response Match & Actions](conversation-builder-conversation-builder-response-match-actions.html) settings, you can assign various data points to either Slots or Variables. Both are useful in [API Integrations](conversation-builder-integrations-api-integrations.html).
+In the [custom rules](conversation-builder-interactions-configuration-next-action.html#custom-rules) of an interaction, you can assign various data points to either slots or variables. Both are useful in [API integrations](conversation-builder-integrations-api-integrations.html).
 
 ### Displaying data to the user
 
@@ -39,7 +39,7 @@ The most common use case for variables is storing user responses to [questions](
 
 Frequently you will want to capture what was just said by the user as the value of a variable. You can use `{$userMessage}` to do this, for example:
 
-<img class="fancyimage" width="800" src="img/ConvoBuilder/storeUserResponse.png">
+<img class="fancyimage" width="700" src="img/ConvoBuilder/storeUserResponse.png">
 
 You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 
@@ -59,11 +59,11 @@ For example, if you add a question interaction "what type of shoes are you looki
 
 #### Adding a slot
 
-To configure a slot, simply click the interaction where you'd like to look for entities in the user's input (like a multiple choice question, for example), and go to User Response in the middle of the Interaction Details panel. From there, click the blue **+** icon right to the right of Slot.
+To configure a slot, select the interaction where you'd like to look for entities in the user's input (like a multiple choice question, for example). Then add a custom rule. In the **Add Next Action Rule** dialog box, click **+Add Slot**.
 
-In the menu which opens, first assign the slot a name by filling in the "Name" input field. **We recommend using standard naming conventions for slots. The slot name is later used to refer to and access the data which the slot contains**. Then, look for a pre-configured entity (which you should have set up for your domain previously) by typing in first the "@" character and then the name of your desired entity in the "Value" input field to the right of the Name input field.
+<img class="fancyimage" width="700" src="img/ConvoBuilder/slotAdd.png">
 
-Lastly, decide how long you'd like the slot's data to be kept for. You can set this by using the "Duration" dropdown menu on the right hand side. The dropdown provides four options:
+Enter a slot name. **We recommend using standard naming conventions for slots. The slot name is later used to refer to and access the data that the slot contains**. Then, for the value field, look for a pre-configured entity (which you should have set up for your domain previously) by typing in first the "@" character and then the name of your desired entity. Lastly, decide how long you'd like the slot's data to be kept for, i.e., the duration. There are four options:
 
 * Request - the slot's data will only be saved for that particular use of the slot. Only useful if the next question in the tree depends on the slot's data.
 
@@ -80,7 +80,9 @@ Lastly, decide how long you'd like the slot's data to be kept for. You can set t
 If your bot asked the user "which animal do you like?" and the user answered "dogs" or something similar, the slot for the entity `animal` would be populated with their answer. The bot would then respond with "You answered: dogs!" populating the code above with the user's reply.
 
 #### Slot filling with multi-entity extraction
-Slot-filling becomes especially useful when mining the entities that make up a user's intent to pre-populate your list of questions, and streamline the data collection process. 
+
+Slot-filling becomes especially useful when mining the entities that make up a user's intent to pre-populate your list of questions, and streamline the data collection process.
+ 
 1. Create a [new dialog](conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](conversation-builder-intent-builder-overview.html) as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
 2. Now, devise a few [entities](intent-builder-entities.html) that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `items` with `pants, shoes, shirt, underwear`. and finally, one for `sizes` with the values `small, medium, and large`. Before moving on, [update and train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain) the `ordering` intent with some representative training phrases that contain these entities.
 3. Next we will create the [questions](conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Using [NLU Assist](conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction), assign your entities to the relevant questions.
@@ -106,6 +108,6 @@ If a user manages to express all the slots as part of their intent query, it wil
 
 ### When to use variables vs slots
 
-Variables are the default storage unit of Conversation Builder, while slots are a special type of variable. The only reason to favor Slots is if you need extra functionality that is linked to entities or if entities will be used in an API Integration catalog search, for example.
+Variables are the default storage unit of Conversation Builder, while slots are a special type of variable. The only reason to favor slots is if you need extra functionality that is linked to entities or if entities will be used in an API Integration catalog search, for example.
 
 When in doubt, it is best to use variables. The [NLU Assist](conversation-builder-nlu-assist.html) tool will help to display when slots are most useful.
