@@ -57,7 +57,7 @@ Update existing special occasions.
 
 **Entity structure**
 
-For details on the entity structure, please see the appendix [link](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/special-occasions/appendix.md)
+For details on the entity structure, please see the appendix [link](special-occasions-api-appendix.html)
 
 **'isDefault' entity state**
 

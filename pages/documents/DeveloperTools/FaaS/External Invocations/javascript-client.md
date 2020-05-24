@@ -63,4 +63,4 @@ try {
 }
 ```
 
-More detailed information on errors that can occur can be found [here.](https://lpgithub.dev.lprnd.net/RnD-Mannheim/faas-error-codes/blob/master/index.ts)
+More detailed information on errors that can occur can be found [here.](/liveperson-functions-external-invocations-error-codes.html)
