@@ -161,7 +161,7 @@
           - subpagename: Configuration - Custom Code
           - subpagename: Configuration - Settings
           - subpagename: Troubleshooting
-      - pagename: NLU Assist
+      - pagename: Assist
       - pagename: Variables & Slots
       - pagename: Integrations
         subpages:
