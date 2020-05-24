@@ -85,7 +85,7 @@ Slot-filling becomes especially useful when mining the entities that make up a u
 
 1. Create a [new dialog](conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](conversation-builder-intent-builder-overview.html) as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
 2. Now, devise a few [entities](intent-builder-entities.html) that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `item` with `pants, shoes, shirt, underwear`. and finally, one for `size` with the values `small, medium, and large`. Before moving on, [update and train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain) the `order item` intent with some representative training phrases that contain these entities.
-3. Next we will create the [questions](conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Using [Assist](conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction), assign your entities to the relevant questions.
+3. Next we will create the [questions](conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Using [Assist](conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction), assign your entities to the relevant questions, for example:
 
     <img style="width:900px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_nluassist.png">
 
@@ -97,7 +97,7 @@ Slot-filling becomes especially useful when mining the entities that make up a u
 
     <img style="width:600px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_questions3.png">
 
-4. In the [rule](conversation-builder-interactions-configuration-next-action.html#custom-rules) for each question, we will create a slot variable that contains our slot variable (`item`) and whose value is the entity value (`@item`). Repeat this for every question in our dialog, and associate it with the entity that most closely matches the subject of the question.
+    When you assign an entity to a question, this automatically creates a rule for each question. Each rule creates a slot that contains our slot variable (e.g., `item`) and whose value is the entity value (e.g., `@item`).
 
     <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_fill.png">
 
