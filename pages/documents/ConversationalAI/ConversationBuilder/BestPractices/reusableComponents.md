@@ -14,11 +14,11 @@ Consider adopting the reuse techniques below to avoid building the same componen
 
 ### Create reusable “yes” and “no” intents
 
-One way to handle the responses to yes/no questions is to use pattern matching in the response conditions:
+One way to handle the responses to yes/no questions is to use pattern matching in the custom rule:
 
 <img style="width:500px" src="img/ConvoBuilder/reusableYesNo1.png">
 
-While that approach does work, it's error prone and not the most efficient, as it means you’ll need to enter the same patterns over and over again in the response conditions for all yes/no questions.
+While that approach does work, it's error prone and not the most efficient, as it means you’ll need to enter the same patterns over and over again in the rules for all yes/no questions.
 
 A better approach is to create two intents in the relevant domain--one intent for “yes” and the other for “no”--and to reuse the intents across the bot’s dialogs. You might name these as follows:
 
@@ -29,7 +29,7 @@ For example:
 
 <img style="width:350px" src="img/ConvoBuilder/reusableYesNo2.png">
 
-Once you create the "yes" and "no" intents, you can create response conditions that evaluate the consumer’s response against them. In a condition, simply select “Response Intent,” and then select the appropriate intent.
+Once you create the "yes" and "no" intents, you can create custom rules that evaluate the consumer’s response against them. When specifying the condition, simply select “Response Intent,” and then select the appropriate intent.
 
 <img style="width:800px" src="img/ConvoBuilder/reusableYesNo3.png">
 
@@ -54,13 +54,13 @@ To avoid repeatedly having to build this set of interactions within every dialog
     
     <img style="width:600px" src="img/ConvoBuilder/reusableResolveAndCloseDialog1b.png">
      
-    In the case of a "no" answer, the [Close conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) next step causes the bot to end the conversation.
+    In the case of a "no" answer, the [Close conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) next action causes the bot to close the conversation.
 
     In the case of a "yes" answer, the "Please enter your question below" text statement elicits a user response that is caught by the NLU.
 
-    To configure the yes/no rules, consider using reusable "yes" and "no" intents, as described in the [first section](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents) on this page.
+    To configure the yes/no rules, consider using reusable "yes" and "no" intents. These are discussed farther above in this topic.
 
-3. Go to another dialog in your bot, and, where it reaches its logical end and you want to confirm resolution with the consumer, explicitly set the **Next Step** to be this Confirm Resolution and Close dialog's "Is there anything else?" question.
+3. Go to another dialog in your bot, and, where it reaches its logical end and you want to confirm resolution with the consumer, explicitly set the **Next Action** to be this Confirm Resolution and Close dialog's "Is there anything else?" question.
 
     The following serves as an example:
     <img style="width:600px" src="img/ConvoBuilder/reusableResolveAndCloseDialog2.png">
