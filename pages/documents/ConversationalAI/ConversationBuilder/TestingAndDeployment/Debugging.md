@@ -24,15 +24,16 @@ Here's a visual overview of the Bot Logs window:
 
 Errors and failures are displayed <font color="red">in red</font>, so you can spot them quickly.
 
-### Debugging during bot development
+### Debug during bot development
 
 **To display the log for the conversation that occurred in the Preview window**
 
-* In the upper-right corner of the Preview window, click **Bot Logs**. This toggles the display to show the Bot Logs window.
+1. With the Dialogs page displayed, click **Preview** in the upper-right corner.
+2. In the upper-right corner of the Preview window, click **Bot Logs**. This toggles the display to show the Bot Logs window.
     
     For ease of use during bot development, by default, the user ID for the consumer in the conversation in the Preview window is entered in the User Id input box, and the associated logs are automatically displayed.
 
-### Debugging end-to-end interactions
+### Debug end-to-end interactions
 
 **To display the log for a conversation that occurred in a supported channel**
 
@@ -46,6 +47,6 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 5. Enter or paste the ID into the **User ID** input box.
 6. Click <img style="width:30px" src="img/ConvoBuilder/icon_refresh.png">.
 
-### Printing the most recent user message
+### Print the most recent user message
 
 To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print the consumer's most recent message to the Bot Logs window. For more on this function, see [here](conversation-builder-scripting-functions.html#print-debug-message).
