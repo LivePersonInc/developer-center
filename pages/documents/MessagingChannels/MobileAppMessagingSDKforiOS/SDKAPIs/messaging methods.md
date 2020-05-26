@@ -390,6 +390,55 @@ func resolveConversation(_ conversation: Conversation, completion: (() -> Void)?
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations displays in the following screens. | Default: sorts the conversations by account number.  |
 
 
+### setLoggingLevel
+
+Setter for the logging level of console logs produced by LPMessaging iOS SDK. (Lives within the LPInfraFacade). This will be replacing the previous functionality via LogsManager. 
+
+```swift
+class func setLoggingLevel( level: LPLoggingLevel)
+```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| level | level: The level of logging options in order: (.TRACE, .DEBUG, .INFO, .WARNING, .ERROR, .OFF) | The default value for release mode is .INFO and for debug is .TRACE.  Apps should not log lower than .INFO in release configurations.|
+
+### getLogSnapShot
+
+The mechanism to retrieve LPMessagingIOS SDK logs in an array of Strings (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+
+```swift
+class func getLogSnapshot(level: LPLoggingLevel) -> [String]
+```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| level | level: The level of logging options in order: (.TRACE, .DEBUG, .INFO, .WARNING, .ERROR, .OFF) | The logger only records the last 100 logs total, filtering by log level may reduce the number of logs returned.|
+
+### getLogStringBlock
+
+The mechanism to retrieve LPMessagingIOS SDK logs in a single String block (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+
+```swift
+class func getLogSnapshot(level: LPLoggingLevel) -> [String]
+```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| level | level: The level of logging options in order: (.TRACE, .DEBUG, .INFO, .WARNING, .ERROR, .OFF) | The logger only records the last 100 logs total, filtering by log level may reduce the number of logs returned.|
+
+### setDataMaskingEnabled
+
+Should masking PII be enabled for the logging (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+
+```swift
+class func getLogSnapshot(level: LPLoggingLevel) -> [String]
+```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| enabled | enabled: Is masking PII enabled for the logs. | This is enabled by default for Release builds.|
+
+
 ### setUserProfile
 
 Use this API method to add custom parameters about the user and set them for the messaging agent.
@@ -416,19 +465,6 @@ func showConversation(_ conversationViewParams: LPConversationViewParams, authen
 | :--- | :--- | :--- |
 | conversationViewParams | Object type: LPConversationViewParams <br><br>Represents an object to determine conversation mode, filter and container. Such as Container or Window or if ViewOnly. | For object details see [LPConversationViewParams](consumer-experience-ios-sdk-interfacedefinitions.html). |
 | authenticationParams | Object type: LPAuthenticationParams?<br><br>Represents an object to determine the properties of an authenticated connection. If using authenticated connection, this paramater must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. <br><br>- **Implicit Flow**: pass 'jwt' paramater only.<br>- **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html). |
-
-### subscribeLogEvents
-
-Use this API method to subscribe to log events (Trace, Debug, Info, Warning, Error). Each time a log event with the passed log level occurs, the callback invokes with the log object.
-
-```swift
-func subscribeLogEvents(_ logLevel: LogLevel, logEvent: @escaping LogEventClosure)
-```
-
-| Parameter | Description | Notes |
-| :--- | :--- | :--- |
-| logLevel | object is an instance of [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html). | |
-| logEvent | The completion block passes the [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html) object, which consists of all the information for the log. | To get text, use log.text |
 
 
 ### toggleChatActions
