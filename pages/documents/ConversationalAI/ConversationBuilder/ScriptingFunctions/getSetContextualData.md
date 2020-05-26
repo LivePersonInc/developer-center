@@ -379,7 +379,7 @@ This method is commonly used to provide a different experience or messaging to t
 * **Time zone**: The time zone value should be the time zone of the agent call center, not the user. You can find the appropriate format for all time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 {: .important}
-`getHoursType` is a basic function to specify agent time shifts. For more complex behaviors regarding time shifts, use the [Shift Status API](conversation-builder-tutorials-guides-implementing-the-shift-status-current-queue-health-apis.html), which provides more flexibility based on the actual availability of your shift agents.
+`getHoursType` is a basic function to specify agent time shifts. For more complex behaviors regarding time shifts, use the [Shift Status API](shift-status-api-overview.html), which provides more flexibility based on the actual availability of your shift agents.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
