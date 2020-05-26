@@ -2,8 +2,8 @@
 pagename: Create API keys
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Before You Get Started
-permalink: common-resources-create-api-keys.html
+documentname: API Guidelines
+permalink: api-guidelines-create-api-keys.html
 indicator: both
 redirect_from:
     - essential-resources-create-api-keys.html

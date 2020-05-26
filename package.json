@@ -1,4 +1,7 @@
 {
+  "name": "developers-community",
+  "description": "developers-community",
+  "version": "1.0.0",
   "dependencies": {
     "axios": "^0.19.0",
     "browser-sync": "^2.26.7",
@@ -8,5 +11,18 @@
     "jquery-highlight": "^3.5.0",
     "lodash": ">=4.17.13",
     "lodash.template": ">=4.5.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve --incremental"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LivePersonInc/developers-community.git"
+  },
+  "author": "LivePerson",
+  "license": "ISC",
+  "homepage": "https://github.com/LivePersonInc/developers-community#readme"
 }

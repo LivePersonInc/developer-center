@@ -1,7 +1,5 @@
 ---
 pagename: Overview
-redirect_from:
-  - overview.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

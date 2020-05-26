@@ -7,8 +7,8 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Common Resources
-permalink: common-resources-domain-api.html
+documentname: API Guidelines
+permalink: api-guidelines-domain-api.html
 root-link: true
 indicator:
 ---
@@ -65,7 +65,9 @@ JSON Example:
             "service": "etool",
             "account": "EXAMPLE123",
             "baseURI": "z2.etool.liveperson.net"
-        },
+        }
+    ]
+}
 ```
 
 
