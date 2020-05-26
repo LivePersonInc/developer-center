@@ -372,9 +372,14 @@ For the corresponding curl example, see the [Web View API](conversation-builder-
 
 Given an array of hours classified by type and a time zone, this method returns the type of hours.
 
-This method is commonly used to provide a different experience or messaging to the consumer during regular or after hours. Additionally, the method is able to handle generalized hours (e.g., REG_HOURS, AFTER_HOURS), hours for specific days of the week (FRIDAY, SATURDAY, etc.), and even specific dates (e.g., 12.25.2018 for Christmas).
+This method is commonly used to provide a different experience or messaging to the consumer during regular or after hours. Additionally, the method is able to handle generalized hours, hours for specific days of the week, and specific dates. Note the following:
 
-The time zone value should be the time zone of the agent call center, not the user. You can find the appropriate format for all time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+* **Keys**: The keys are user-defined and arbitrary (REG_HOURS, AFTER_HOURS, etc.). If you want to specify a shift/time period for a particular day, use the name of the day (“FRIDAY\|”, “SATURDAY\|”, etc.) as appropriate. You can also use a specific date (e.g., 12.25.2018 for Christmas).
+* **Values**: If two time frames overlap, the later time frame is used.
+* **Time zone**: The time zone value should be the time zone of the agent call center, not the user. You can find the appropriate format for all time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
+{: .important}
+`getHoursType` is a basic function to specify agent time shifts. For more complex behaviors regarding time shifts, use the [Shift Status API](conversation-builder-tutorials-guides-implementing-the-shift-status-current-queue-health-apis.html), which provides more flexibility based on the actual availability of your shift agents.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
