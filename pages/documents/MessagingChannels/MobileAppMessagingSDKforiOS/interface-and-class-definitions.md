@@ -86,7 +86,7 @@ class LPConversationHistoryControlParam: NSObject {
 enum LPConversationsHistoryStateToDisplay: Int {
     case open
     case close
-    case none
+    case all
 }
 ```
 
