@@ -30,10 +30,10 @@ Any time you might be making large changes to the functionality of a bot, there 
 1. In the upper-left corner, just to the right of the menu bar, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Versions**.
 
     This displays the list of versions of the bot, if any.
-    <img class="fancyimage" width="400" src="img/ConvoBuilder/bestPractices/versions1.png">
+    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/versions1.png">
 
 2. In the Versions window, click **Save Current Version**.
-3. In the dialog that appears, enter a version name if desired, and click **Proceed**. If you don't enter a name, the current date and time is used.
+3. In the dialog that appears, enter a version name if desired, and click **Save**. If you don't enter a name, the current date and time is used.
 
 ### Restore a previous version 
 
@@ -43,7 +43,7 @@ A "restore" completely overwrites your existing bot with the selected, previous 
 **To restore a previous version**
 
 1. Move your mouse over the version you want to restore, and click the **Restore** button that appears.
-2. In the dialog box that appears, verify the name and version of the bot you want to restore, and then click **Proceed**.
+2. In the Restore Version dialog box, enable the provided controls to verify the name and version of the bot you want to restore, and then click **Proceed**.
 
 ### Create a release
 
@@ -51,38 +51,38 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
 **To create a release**
 
-1. From the Conversation Builder dashboard, click **New Bot** and create a new bot based on the *Custom Bot* template. You will be pushing your production version to this bot. You might want to be specific with the naming and append "Production" or "PROD" to the bot name to differentiate it from your Development/Sandbox bot.
+1. From the Conversation Builder dashboard that lists your bots, click **New Bot** and create a new bot based on the *Custom Bot* template. You will be pushing your production version to this bot. You might want to be specific with the naming and append "Production" or "PROD" to the bot name to differentiate it from your Development/Sandbox bot.
 
-    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases1.png">
+    <img class="fancyimage" width="350" src="img/ConvoBuilder/bestPractices/releases1.png">
 
     You only need to create the Production bot; you don't need to build out its dialogs and interactions.
 
 2. Return to your Development bot.
-2. In the upper-left corner, just to the right of the menu bar, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Releases**.
-3. In the Releases window, click **New Release**.
-4. In the dialog box that appears, specify the following:
+3. In the upper-left corner, just to the right of the menu bar, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Releases**.
+4. In the upper-right corner, click **New Release**.
+5. In the New Releases dialog box, specify the following:
 
     * **Release to Bot**: Select your newly created Production bot.
-    * **Version**: Enter a version number.
+    * **Version**: Enter a version number. When you upgrade the Production bot, this automatically creates a version in that bot, so you need to specif a version number here.
     * **Description**: Enter a meaningful description of any changes from the previous version.
 
-5. Click **Create Release**.
+6. Click **Create Release**.
 
-    This creates a release "snapshot," which you can see on the next screen. To complete the push, the new bot must accept the release.
+    This creates a release "snapshot." To complete the push, the new bot must accept the release.
 
-6. Click the link to the new bot that's provided. 
+7. Click the link to the new bot that's provided. 
 
-    <img class="fancyimage" width="900" src="img/ConvoBuilder/bestPractices/releases2.png">
+    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases2.png">
 
-    This takes you to the new bot.
+    This opens the new bot.
 
-7. In the new Production bot, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> in the upper-left corner, and select **Releases**.
+8. In the new Production bot, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> in the upper-left corner, and select **Releases**.
 
-    <img class="fancyimage" width="400" src="img/ConvoBuilder/bestPractices/releases3.png">
+9. Click **Upgrade**.
 
-8. Click **Upgrade**.
+    <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases3.png">
 
-    At this point, the functionality of the Production bot should be identical to the Development bot’s at the time of the push.
+    At this point, the functionality of the Production bot should be identical to the Development bot’s at the time of the push. Additionally, a new version has been created.
 
 {: .important}
 The bot user agents attached to the Development bot are **not** pushed to Production. You will need to create new bot user agents and attach them to the Production bot, if they do not already exist.
