@@ -235,4 +235,4 @@ If you need to use a long piece of text, you can use the [breakWithDelay](conver
 
 #### Positive and negative learnings
 
-As a general rule, if you're using knowledge base intents, don’t specify more than 20 positive learnings and 20 negative learnings. Too many positive and negative learnings can lead to learnings that “overlap” one another in terms of grammar. This results in an unpredictable user experience.
+As a general rule, don’t specify more than 20 positive learnings and 20 negative learnings. Too many positive and negative learnings can lead to learnings that “overlap” one another in terms of grammar. This results in an unpredictable user experience.
