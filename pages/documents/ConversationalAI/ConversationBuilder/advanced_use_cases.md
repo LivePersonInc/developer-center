@@ -22,8 +22,8 @@ To solve this problem, you can create a rule with a [No Match condition](convers
 **To implement this solution**
 
 1. In the interaction, create a *final* (last) rule.
-2. In the rule definition, name the rule. Then add a condition that uses the "No Match" match type. A condition that uses this match type catches all utterances that aren't caught by earlier rules. (In the condition, you can optionally specify a message to send to the consumer before the flow continues to the next step.)
-3. Under **Continue to**, select the desired next step.
+2. In the rule definition, name the rule. Then add a condition that uses the "No Match" match type. A condition that uses this match type catches all utterances that aren't caught by earlier rules. (In the condition, you can optionally specify a message to send to the consumer before the flow continues to the next action.)
+3. Under **And Go To**, select the desired next action.
 
 In our example below, the No Match condition directs the flow to the current interaction in order to repeat it. This interaction is a question that asks for the consumer's email address.
 
