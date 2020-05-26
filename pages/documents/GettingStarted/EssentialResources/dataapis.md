@@ -2,8 +2,8 @@
 pagename: Data APIs
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Common Resources
-permalink: common-resources-data-apis.html
+documentname: API Guidelines
+permalink: api-guidelines-data-apis.html
 order: 30
 indicator: both
 redirect_from:

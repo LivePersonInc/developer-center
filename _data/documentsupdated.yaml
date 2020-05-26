@@ -2,7 +2,7 @@
   image: getting-started
   documents:
   - documentname: First Steps
-  - documentname: Common Resources
+  - documentname: API Guidelines
     pages:
     - pagename: Accessing LivePerson APIs
     - pagename: Create API keys
@@ -657,6 +657,7 @@
           - subpagename: Messaging Conversation Survey
           - subpagename: Conversational AI
           - subpagename: Conversational Commands
+      - pagename: Command Line Interface (CLI)
 
 
 - categoryname: Historical Data

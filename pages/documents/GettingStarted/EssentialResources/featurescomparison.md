@@ -2,8 +2,8 @@
 pagename: Messaging features Capabilities Comparison
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Common Resources
-permalink: common-resources-messaging-features-capabilities-comparison.html
+documentname: API Guidelines
+permalink: api-guidelines-messaging-features-capabilities-comparison.html
 indicator: messaging
 redirect_from:
   - essential-resources-messaging-features-capabilities-comparison.html
