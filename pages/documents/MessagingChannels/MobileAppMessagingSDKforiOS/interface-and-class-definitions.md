@@ -57,18 +57,6 @@ class LPUser: NSObject {
 }
 ```
 
-### LPLog
-
-```swift
-class LPLog: NSObject {
-    var timestamp: String?
-    var className: String?
-    var funcName: String?
-    var text: String?
-    var logLevel: LogLevel?
-}
-```
-
 ### LPConversationViewParams
 
 ```swift
@@ -98,7 +86,7 @@ class LPConversationHistoryControlParam: NSObject {
 enum LPConversationsHistoryStateToDisplay: Int {
     case open
     case close
-    case none
+    case all
 }
 ```
 
@@ -132,19 +120,6 @@ class LPNotification: NSObject {
     var accountID: String
     var isRemote: Bool
     var toString : String
-}
-```
-
-### LogLevel
-
-```swift
-enum LogLevel: Int {
-    case trace = 0
-    case debug
-    case info
-    case warning
-    case error
-    case off
 }
 ```
 
