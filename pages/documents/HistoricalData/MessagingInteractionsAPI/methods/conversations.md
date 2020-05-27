@@ -72,7 +72,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |latestConversationQueueState | The queue state of the conversation  | String| Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
 responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
-|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, latestAgentSurvey, previouslySubmittedAgentSurveys|
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to} | Range of NPS assigned to the conversation. | numeric, numeric| Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
 |questionBrick | Match a specific word within a PCS question name or brick ID | alphanumeric  | Optional |
@@ -82,8 +82,6 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |fcr  | Values of FCR (First Call Resolution) assigned to the conversation.| Array `<String>` | Optional | Possible values: yes, no. |
 |questionTypeAndFormatToRetrieve {type,format} | Type and format of questions to retrieve | String, String| Optional | Possible values: Type: custom, csat, nps, fcr. Format: single, open. |
 |answerText | Specific words or phrases from PCS free text answers | Array `<String>` | Optional |
-|intentName | Intent names in the intentName parameter match the intentName field of any detected intent. Pass the intentName you'd like to filter by | Array `<String>` | Optional | Get only conversations that have at least one intent with a name from the specified list. Intent names must be accurate from  a character standpoint, and are not case sensitive. |
-|intentConfidenceScore | The intentConfidenceScore field is greater or equal to the confidenceScore parameter of any detected intent. | double - up to 3 decimal digits. | Optional | Get only conversations that have at least one intent with a confidenceScore field that is greater or equal to confidenceScore parameter. When using this filter together with the 'intentName' filter above, the score refers to the intents that were specified as part of the 'intentName' list. |
 |selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
 |conversationsWithStepUpOnly | This parameter will return TRUE if a step up took place during the conversation. | boolean. | Optional | Get only conversations that had a step up  |Filters examples:
 |agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional , with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|   
@@ -120,8 +118,6 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |fcr  | {"start":{"from":1470037448000,"to":1472543048000},"fcr":["yes","no"]}|
 |questionTypeAndFormatToRetrieve | {"start":{"from":1470037448000,"to":1472543048000}, "questionTypeAndFormatToRetrieve":{"type":"custom","format":"open}}|
 |answerText  | {"start":{"from":1470037448000,"to":1472543048000},"answerText":["good","bad","ugly"]}|
-|intentName | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["campaign","intents"],"intentName":["Plan_inquiry_46","Remove_Plan_46"]}|
-|intentConfidenceScore | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["messageRecords","intents"],"intentConfidenceScore":0.65} |
 |conversationsWithStepUpOnly | {"start":{"from":1541578792011,"to":1541578895020},,"contentToRetrieve":["messageRecords"],"conversationsWithStepUpOnly":true}|**Note: search by keywords, summary or engagement attributes**
 |agentSurveySearch   | {"start":{"from":1470037448000,"to":1472543048000},"agentSurveySearch":{"pendingAgentSurvey":[true], "questionId":["id1","id2"], "questionName":["id1","id2"], "questionKeywords":["keyword1","keyword2"],"answerKeywords":["keyword1","keyword2"],"surveyId":[3592872510]}}
 
@@ -172,6 +168,7 @@ sdes  | List of Engagement Attributes. | container
 responseTime| Response time| container
 dialogs  | Contains information about the different dialogs for the current conversation. | container
 intents  | Contains information about the intents that relate to the current conversation. | container
+uniqueIntents  | Contains basic information about the unique intents that relate to the current conversation. | container
 
 _Conversation info_
 
@@ -220,6 +217,8 @@ ipAddress | Current connection user IP | string |
 isPartial | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean |
 wasStepUp | Indicates if the conversation had a step up | Boolean |
 pendingAgentSurvey | Indicate if the conversation has a pending agent survey. | Boolean |
+firstIntentName | The intent id of the first message in the conversation that triggered an intent. | string |
+firstIntentLabel | The intent label of the first message in the conversation that triggered an intent. | string |
 
 _Campaign info_
 
@@ -552,7 +551,8 @@ _IntentAnalyzerClassification DTO_
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
-intentName | The name of this intent. | string
+intentName | The id of the intent. | string
+intentLabel | A Friendly label of the intent. | string
 confidenceScore | Intent confidence score. | double - up to 3 decimal digits
 versions| Model versions used to generate this intent. |  Array `<IntentAnalyzerVersionDTO>`
 
@@ -562,6 +562,13 @@ Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
 modelName | The name of the model. | string
 modelVersion | The version of the model. | string**JSON Example**
+
+_BasicUniqueIntents info_
+
+Name| Description| Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+intentName | The id of the intent. | string
+intentLabel | A Friendly label of the intent. | string
 
 _Latest Agent Survey_
 
@@ -1055,7 +1062,8 @@ acSurveyRevision| The AC form revision.                        | string     |
       "intents": [
         {
           "selectedClassification": {
-            "intentName": "other--other--n_a",
+            "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
+            "intentLabel": "ask about discount or promotion",
             "confidenceScore": 1,
             "versions": [
               {
@@ -1070,7 +1078,8 @@ acSurveyRevision| The AC form revision.                        | string     |
           },
           "allClassifications": [
             {
-              "intentName": "other--other--n_a",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
+              "intentLabel": "ask about discount or promotion",
               "confidenceScore": 1,
               "versions": [
                 {
@@ -1084,7 +1093,8 @@ acSurveyRevision| The AC form revision.                        | string     |
               ]
             },
             {
-              "intentName": "billing_and_payment--payment_arrangement--set-up_payment_arrangement",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b59",
+              "intentLabel": "ask about fees",
               "confidenceScore": 0,
               "versions": [
                 {
@@ -1102,7 +1112,8 @@ acSurveyRevision| The AC form revision.                        | string     |
         },
         {
           "selectedClassification": {
-            "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information",
+            "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
+            "intentLabel": "ask about discount or promotion",
             "confidenceScore": 0.908,
             "versions": [
               {
@@ -1117,8 +1128,9 @@ acSurveyRevision| The AC form revision.                        | string     |
           },
           "allClassifications": [
             {
-              "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
               "confidenceScore": 0.908,
+              "intentLabel": "ask about discount or promotion",
               "versions": [
                 {
                   "modelName": "sic",
@@ -1131,7 +1143,8 @@ acSurveyRevision| The AC form revision.                        | string     |
               ]
             },
             {
-              "intentName": "other--other--n_a",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b59",
+              "intentLabel": "ask about fees",
               "confidenceScore": 0.265,
               "versions": [
                 {
@@ -1145,8 +1158,9 @@ acSurveyRevision| The AC form revision.                        | string     |
               ]
             },
             {
-              "intentName": "billing_and_payment--billing_and_payment_support--dispute_or_fix_a_bill",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
               "confidenceScore": 0.224,
+              "intentLabel": "ask about discount or promotion",
               "versions": [
                 {
                   "modelName": "sic",
