@@ -2,6 +2,7 @@
 pagename: Assist
 redirect_from:
     - conversation-builder-conversation-builder-assist.html
+    - conversation-builder-nlu-assist.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
