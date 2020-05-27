@@ -19,7 +19,7 @@ Throughout the bot creation lifecycle, it's important to follow good change mana
 * **Releases** are similar to versions in that they also involve creation of a snapshot of the bot. However, releases are used to push the snapshot to a different bot, updating it with the new bot code.
 
 {: .important}
-Use *versions* during the development cycle to take snapshots at different milestones. Use *releases* to push snapshots to different bots, e.g., to push a snapshot from a Development bot to a Production bot.
+Use *versions* during the development cycle to take snapshots at different milestones. Use *releases* to push snapshots to different bots, e.g., to push a snapshot from a Development bot to a Production bot.<br><br>Conversation Builder stores only the last 10 versions.
 
 ### Save a version
 
