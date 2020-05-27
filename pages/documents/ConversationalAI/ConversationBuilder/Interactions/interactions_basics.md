@@ -195,13 +195,13 @@ You can move any type of interaction except a Dialog Starter interaction. Dialog
     * Selecting the current dialog moves the interaction to its end.
     * Selecting a different dialog moves it to the end of that dialog.
 
-### Copy an interaction
-You can copy any type of interaction except a Dialog Starter interaction. A dialog can only have one Dialog Starter interaction.
+### Duplicate an interaction
+You can duplicate any type of interaction except a Dialog Starter interaction. A dialog can only have one Dialog Starter interaction.
 
-**To copy an interaction**
+**To duplicate an interaction**
 
 1. Select the interaction.
-2. Click <img style="width:20px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> in its upper-right corner, and click **Copy**. The copy is added directly beneath the original. (You can move it if desired.) The copy is given the same name as the original but with “_copy” appended.
+2. Click <img style="width:20px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> in its upper-right corner, and click **Duplicate**. The copy is added directly beneath the original. (You can move it if desired.) The copy is given the same name as the original but with “_copy” appended.
 3. Change the name of the copy as appropriate.
 
 ### Disable an interaction
