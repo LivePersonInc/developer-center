@@ -1,12 +1,20 @@
 $(document).ready(function () {
 	var url = window.location.href;
+	$(window).scroll(function () {
+		$('#mainHeader').css('box-shadow', $(this).scrollTop() > 10 ? '0px 4px 8px #DADBE5' : '');
+	});
+	crossBrowserSafariCheck();
 	//add anchor links to all h3 titles. See respective functions below for what they do.
 	anchors.add('h3, h4');
+	handleUniquePages();
 	linkload();
 	sidebarClick();
 	populateAnchors();
 	menuDrop();
+
 	codeButtons();
+	setNoticeIcon();
+	setImportantIcon();
 	mobileHamburger();
 	isExplorer();
 	searchFunction();
@@ -31,22 +39,71 @@ $(document).ready(function () {
 		linkload();
 	};
 	//call scrolltofixed on the anchorlist box so that it goes fixed on scroll
-	$('#anchorlist').scrollToFixed({
-		marginTop: 10,
-		dontSetWidth: false
-	});
+	// $('#anchorlist').scrollToFixed({
+	// 	marginTop: 10,
+	// 	dontSetWidth: false
+	// });
 	//call smooth-scroll on all anchorlinks
 	var scroll = new SmoothScroll('a[href*="#"]');
 	//set breadcrumbs display if welcome page/normal page.
+
 	var $title = $('.h1').text();
-	if ($title.indexOf('Welcome') != -1) {
+
+
+	if ($title.indexOf('Let’s build a conversational future together!') != -1 || $title.indexOf('First Steps') != -1) {
 		console.log("Welcome to LivePerson Developers!");
 	} else {
 		$('.breadcrumbs').removeClass('breadhidden');
 		$('.suggestbutton').removeClass('suggesthidden');
 	}
-});
+	removeTitleFirstSteps();
 
+});
+function crossBrowserSafariCheck() {
+	var isSafari = window.safari !== undefined;
+	if (isSafari) {
+		console.log("Safari, yeah!");
+		$('.sidebarbutton').attr('style', 'top: -3px')
+
+	} else {
+		console.log("Not in safari");
+		$('.sidebarbutton').attr('style', 'top: 5px');
+	}
+}
+function setNoticeIcon() {
+	var allNoticeIcon = $('p[class^="notice"]');
+	allNoticeIcon.each(function (i) {
+		var noticeIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>';
+		$(this).prepend(noticeIcon);
+	});
+	var allNoticeIconDiv = $('div[class^="notice"]');
+	allNoticeIconDiv.each(function (i) {
+		var noticeIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-exclamation-circle beforeNotice"></i> </div>';
+		$(this).prepend(noticeIcon);
+	});
+}
+function setImportantIcon() {
+	var allImportantIcon = $('p[class^="important"]');
+
+	allImportantIcon.each(function (i) {
+		var importantIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-info-circle beforeImportant"></i> </div>';
+		$(this).prepend(importantIcon);
+	});
+	var allImportantIconDiv = $('div[class^="important"]');
+	allImportantIconDiv.each(function (i) {
+		var importantIcon = '<div class="innerWrapperAlertIcons"> <i class="fas fa-info-circle beforeImportant"></i> </div>';
+		$(this).prepend(importantIcon);
+	});
+}
+function removeTitleFirstSteps() {
+	var $title = $('.h1').text();
+	var titleContainer = $('#documentTitleContainer');
+	if ($title.indexOf('First Steps') != -1) {
+		titleContainer.css('display', 'none');
+	} else {
+		titleContainer.css('display', 'flex');
+	}
+}
 function navigateContent(url) {
 	//call ajax with the target url
 	$.ajax(url)
@@ -68,19 +125,36 @@ function navigateContent(url) {
 				$content.html($newData.find('#defaultcontent').html());
 				//hide/display breadcrumbs if on welcome page or not
 				var $title = $('.h1').text();
-				if ($title.indexOf('Welcome') != -1) {
+				if ($title.indexOf('Welcome') != -1 || $title.indexOf('First Steps') != -1) {
 					$('.breadcrumbs').addClass('breadhidden');
 				} else {
 					$('.breadcrumbs').removeClass('breadhidden');
 					$('.suggestbutton').removeClass('suggesthidden');
 				}
 			}
+			if ($title.indexOf('Let’s build a conversational future together!') != -1 || $title.indexOf('First Steps') != -1) {
+				console.log("Welcome to LivePerson Developers!");
+			} else {
+				$('.breadcrumbs').removeClass('breadhidden');
+				$('.suggestbutton').removeClass('suggesthidden');
+			}
+			removeTitleFirstSteps();
 			//add anchor links to all h3 titles. See respective functions below for what they do.
 			sidebarCollapse(url);
+			$(window).scroll(function () {
+				$('#mainHeader').css('box-shadow', $(this).scrollTop() > 10 ? '0px 4px 8px var(--navy-lighter-gray)' : '');
+			});
+			crossBrowserSafariCheck();
+
 			anchors.add('h3, h4');
 			populateAnchors();
 			codeButtons();
 			replaceTitle();
+			handleUniquePages();
+
+			setNoticeIcon();
+
+			setImportantIcon();
 			searchFunction();
 			capabilitiesSearch();
 			searchHighlight();
@@ -88,43 +162,83 @@ function navigateContent(url) {
 			scrollToHash();
 			// domainTool();
 			searchClick();
-			//call scrolltoFixed on the anchorlinks list to ensure good scrolling experience
-			$('#anchorlist').scrollToFixed({
-				dontSetWidth: false
-			});
+
 			//call smoothscrolling on all anchors
 			var scroll = new SmoothScroll('a[href*="#"]');
 			//from here, the rest of the code has to do with link highlighting for the sidebar
 			var selected = $('a[href*="' + url + '"]');
+			if (selected.hasClass('uniqueAnchor')) {
+				// do  nothing // dont append the active page
+				console.log('selected is the unique anchor on getting started page');
+			}
+			else {
+				console.log('Remove active class in navigate content');
+
+				$('.folder').removeClass("active");
+				$('.innerlink').removeClass("active");
+
+				selected = selected.addClass("activepage");
+				//just some code to make sure sidebar styling works well.
+				if (selected.parent().hasClass('innerpageitem')) {
+					$('.innerpageitem').removeClass("activeitem");
+					$(".activepage").parent().addClass("activeitem");
+				}
+				if (selected.parent().hasClass('pageitem')) {
+					$('.innerpageitem').removeClass("activeitem");
+					selected.parent().addClass('activeleaf');
+				}
+				if (selected.parent().hasClass('sololink')) {
+					$('.innerpageitem').removeClass("activeitem");
+					selected.parent().addClass('activeleafSolo');
+				}
+				//jump to top when page loads
+				if (window.location.hash == "") {
+					console.log(window.location.hash);
+					window.scrollTo(0, 0);
+				}
+				if (/Mobi|Android/i.test(navigator.userAgent) == true) {
+					$('#mysidebar').slideUp(400);
+					$('#mysidebar').data("expanded", "false");
+				};
+			}
 			//make the string we found previously active
-			$('.folder').removeClass("active");
-			$('.innerlink').removeClass("active");
-			selected = selected.addClass("activepage");
-			//just some code to make sure sidebar styling works well.
-			if (selected.parent().hasClass('innerpageitem')) {
-				$('.innerpageitem').removeClass("activeitem");
-				$(".activepage").parent().addClass("activeitem");
-			}
-			if (selected.parent().hasClass('pageitem')) {
-				$('.innerpageitem').removeClass("activeitem");
-			}
-			//jump to top when page loads
-			if (window.location.hash == "") {
-				console.log(window.location.hash);
-				window.scrollTo(0, 0);
-			}
-			if (/Mobi|Android/i.test(navigator.userAgent) == true) {
-				$('#mysidebar').slideUp(400);
-				$('#mysidebar').data("expanded", "false");
-			};
+
+
 		})
 		.fail(function () {
 			url = "http://developers.liveperson.com/404.html";
 			navigateContent(url);
 		});
 }
+// this function checks if root page and disables the jumpto and fixes padding
+function handleUniquePages() {
+	var is_root = location.pathname == "/";
+	var is_getting_started = location.pathname == "/first-steps.html";
+	console.log('checking if is unique page ');
+	var jumpto = $('#jumpto');
+	var sidebar = $('#defaultsidebar');
+	var suggestButton = $('#suggestbutton');
+	var indicatorContainer = $('#indicator-container');
 
+	if (is_root || is_getting_started) {
+		console.log('In  root folder');
+		jumpto.css("flex", "0");
+		jumpto.css("display", "none");
 
+		sidebar.css("margin-right", "0%");
+		suggestButton.css("display", "none");
+
+		indicatorContainer.css("display", "none");
+	}
+	else {
+		console.log('not in  root folder');
+		jumpto.css("flex", "1");
+		jumpto.css("display", "flex");
+		sidebar.css("margin-right", "6%");
+		suggestButton.css("display", "flex");
+		indicatorContainer.css("display", "flex");
+	}
+}
 //a function to create copy buttons on all code blocks
 function codeButtons() {
 	// get all <code> elements.
@@ -217,47 +331,24 @@ $(window).on('popstate', function (e) {
 	}
 });
 
-
-//a simple dropdown behavior for the anchorlinks box
-function menuDrop() {
-	//begin by setting the list's data to reflect that it's open
-	$(".anchorlist > a").data("expanded", "true");
-	//when a click on the list occurs
-	$(".anchorlist").on("click", ".anchormain", function (event) {
-		event.preventDefault();
-		//set data to true for toggle behavior
-		var hasExpanded = $(this).data("expanded") == "true";
-		if (hasExpanded) {
-			//if it is open, close it
-			$(this).next().slideUp(400);
-			$(this).data("expanded", "false");
-		} else {
-			//if it is closed, open it
-			$(this).next().slideDown(400);
-			$(this).data("expanded", "true");
-		}
-		return false;
-	});
-};
-
 //a function to loop over all anchor elements and create a dropdown menu from them
 function populateAnchors() {
 	//remove all previous anchoritems populated in the box
-	$(".anchoritem").remove();
+	$(".jumpToAnchor").remove();
 	//find all h3 titles on the page
 	var anchorlinks = document.getElementsByTagName("h3");
-	var anchorlist = document.getElementById('inneranchors');
+	var anchorlist = document.getElementById('anchorlist');
 	let html;
 	//if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.
 	if (anchorlinks.length == 0) {
 		$('.anchorlist').css('visibility', 'hidden');
 		//if there are anchorlinks, display the box
 	} else {
-		html = '';
+		html = '<p class="jumpToAnchor">Jump to:</p>';
 		$('.anchorlist').css('visibility', 'visible');
 		//for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
 		$.each(anchorlinks, function () {
-			html += '<li><a class="anchoritem" data-scroll href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></li>'
+			html += '<p><a class="jumpToAnchor" href="#' + $(this).attr("id") + '">' + $(this).text() + '</a></p>'
 		});
 		anchorlist.innerHTML = html;
 	};
@@ -299,7 +390,7 @@ function sidebarCollapse(url) {
 	var currentPage = $('a[href="' + modifiedURL + '"]');
 	var currentPageTitle = $(currentPage).html();
 	//if this is the homepage
-	if (currentPageTitle == "WELCOME") {
+	if (currentPageTitle == "Let’s build a conversational future together!") {
 		//make sure no other links are set to active and collapse any open folders before highlighting the current page
 		$(".innerfolder > .active > button").removeClass("clicked");
 		$(".folder ul").slideUp(400, null);
@@ -307,31 +398,52 @@ function sidebarCollapse(url) {
 		$('a').removeClass("active");
 		currentPage = currentPage.parent().addClass("active");
 	};
-	//get rid of any currently open items and then highlight the current page
-	$('a').removeClass("activepage");
-	$('.homeitem').removeClass("activepage");
-	$('.innerpageitem').removeClass("activeitem");
-	currentPage = currentPage.addClass("activepage");
-	//grab any parent elements of the active page that has the folder class
-	var toOpen = $(".activepage").parents("folder");
-	//manipulate the active page's parents to open them, hightlight them, etc.
-	if (toOpen) {
-		$(".activepage").parents().show();
-		$(".activepage").parents('ul').prev('.highlightlink').addClass('active');
-		$("a.active").data("expanded", "true");
-		if ($(".activepage").parent().hasClass("innerpageitem")) {
-			$(".activepage").parent().addClass("activeitem");
-		}
-		$(".innerfolder > .active > button").addClass("clicked");
-		$(".homeitem").removeClass("active");
-		$(".homeitem > a").data("expanded", "false");
-		if (!currentPage.isInViewport()) {
-			$('#mysidebar').animate({
-				scrollTop: currentPage.offset().top - 200
-			}, 2000);
-			$(currentPage).parents('.highlightlink').trigger('click');
+	var selected = $('a[href*="' + url + '"]');
+	if (selected.hasClass('uniqueAnchor')) {
+		console.log('selected is the unique anchor on getting started page in topen');
+	} else {
+		$('a').removeClass("activepage");
+
+		$('li').removeClass('activeleaf');
+		$('li').removeClass('activeleafSolo');
+		$('.homeitem').removeClass("activepage");
+		$('.innerpageitem').removeClass("activeitem");
+		currentPage = currentPage.addClass("activepage");
+		//grab any parent elements of the active page that has the folder class
+		var toOpen = $(".activepage").parents("folder");
+		//manipulate the active page's parents to open them, hightlight them, etc.
+		if (toOpen) {
+			console.log('TO OPEN active page stuff');
+			$(".activepage").parents().show();
+			$(".activepage").parents('ul').prev('.highlightlink').addClass('active');
+			$("a.active").data("expanded", "true");
+			if ($(".activepage").parent().hasClass("innerpageitem")) {
+				$(".activepage").parent().addClass("activeitem");
+			}
+			$(".innerfolder > .active > button").addClass("clicked");
+			$(".topfolder > .active > button").addClass("clicked");
+			if (currentPage.parent().hasClass('pageitem')) {
+				$('.innerpageitem').removeClass("activeitem");
+				currentPage.parent().addClass('activeleaf');
+			}
+			if (currentPage.parent().hasClass('sololink')) {
+				$('.innerpageitem').removeClass("activeitem");
+				currentPage.parent().addClass('activeleafSolo');
+			}
+
+			$(".homeitem").removeClass("active");
+			$(".homeitem > a").data("expanded", "false");
+			if (!currentPage.isInViewport()) {
+				$('#mysidebar').animate({
+					scrollTop: currentPage.offset().top - 200
+				}, 2000);
+				$(currentPage).parents('.highlightlink').trigger('click');
+			};
+
 		};
-	};
+	}
+	//get rid of any currently open items and then highlight the current page
+
 };
 
 function allArticlesClick() {
@@ -353,15 +465,19 @@ function allArticlesClick() {
 function sidebarClick() {
 	$(".topfolder").on("click", ".highlightlink", function () {
 		//if the clicked element is not one of the buttons at the bottom of the sidebar, e.g "status page"
+		$('button').removeClass("clicked");
+
 		if (!$(this).hasClass("bottombuttons")) {
 			var hasExpanded = $(this).data("expanded") == "true";
 			//if it's expanded, close it
 			if (hasExpanded) {
 				$(this).next().slideUp(400);
 				$(this).data("expanded", "false");
+				$(".topfolder > .active > button").removeClass("clicked");
+
 				$(this).removeClass("active");
 				$(this).parent().removeClass("active");
-				$(".innerfolder > .active > button").removeClass("clicked");
+
 				//otherwise, open it
 			} else {
 				$(".innerfolder > .active > button").removeClass("clicked");
@@ -371,12 +487,14 @@ function sidebarClick() {
 				$(this).data("expanded", "true");
 				$(".folder > a").removeClass("active");
 				$(this).addClass("active");
+				$(".topfolder > .active > button").addClass("clicked");
 			}
 			return false;
 		};
 	});
 	//same as above, just one level down
 	$(".innerfolder").on("click", ".highlightlink", function (event) {
+
 		event.preventDefault();
 		var hasExpanded = $(this).data("expanded") == "true";
 		var button = $(this).find("button");
@@ -386,6 +504,7 @@ function sidebarClick() {
 			$(this).removeClass("active");
 			$(this).parent().removeClass("active");
 			$(button).removeClass("clicked");
+
 		} else {
 			$(this).next().slideDown(400);
 			$(this).data("expanded", "true");
@@ -395,6 +514,14 @@ function sidebarClick() {
 		return false;
 	});
 };
+
+function breadClick (event) {
+	event.preventDefault();
+	let breadText = $(this).innerHTML;
+	var breadSidebar = $('#defaultsidebar');
+	var targetLink = breadSidebar.find("span:contains('" + breadText + "')").trigger("click");
+	console.log(targetLink);
+}
 
 //a function to make sure the page's title is updated on load
 function replaceTitle() {
@@ -553,112 +680,74 @@ function scrollToHash() {
 				var linkOffset = $(linkScroll).offset().top;
 			}
 			$("body, html").animate({
-					scrollTop: linkOffset,
-				},
+				scrollTop: linkOffset,
+			},
 				1000,
 				"swing"
 			);
 		}
 	}, 1000);
 }
+function menuDrop() {
+	//begin by setting the list's data to reflect that it's open
+	$(".anchorlist > a").data("expanded", "true");
+	//when a click on the list occurs
+	$(".anchorlist").on("click", ".anchormain", function (event) {
+		event.preventDefault();
+		//set data to true for toggle behavior
+		var hasExpanded = $(this).data("expanded") == "true";
+		if (hasExpanded) {
+			//if it is open, close it
+			$(this).next().slideUp(400);
+			$(this).data("expanded", "false");
+		} else {
+			//if it is closed, open it
+			$(this).next().slideDown(400);
+			$(this).data("expanded", "true");
+		}
+		return false;
+	});
+};
 
-//this function is used on the domain API page. You give it an account number, 
-//and it gives you all its domains back, per service
-// currently commented out because I don't have time to make this work for IE
-// function domainTool() {
-// 	var $title = $('.h1').text();
-// 	//if we're on the Domain API page
-// 	if ($title == "Domain API") {
-// 		let input;
-// 		let accountInput;
-// 		const csdsButton = document.getElementById("csds-button");
-// 		const csdsResult = document.getElementById("csds-result");
-// 		let csdsUrl;
-// 		let html = "";
-// 		//when  a user clicks submit
-// 		function retrieveDomains(account) {
-// 			$.ajax({
-// 				url: csdsUrl,
-// 				headers: {
-// 					'Accept': 'application/json'
-// 				},
-// 				dataType: "json",
-// 				//on success, grab the results from CSDS and display them in a table
-// 				success: function (data) {
-// 					html = '';
-// 					$(csdsResult).css('display', 'table');
-// 					if (data.baseURIs.length > 0) {
-// 						html += '<thead><th>Service name</th><th>Base URI</th></thead><tbody>';
-// 						//sort results alphabetically
-// 						data.baseURIs.sort(function (a, b) {
-// 							var m1 = a.service.toLowerCase();
-// 							var m2 = b.service.toLowerCase();
-// 							if (m1 < m2) return -1;
-// 							if (m1 > m2) return 1;
-// 							return 0;
-// 						})
-// 						$.each(data.baseURIs, function () {
-// 							html += `<tr><td>` + this.service + `</td><td>` + this.baseURI +`</td></tr>`;
-// 						});
-// 						html += '</tbody>'
-// 						csdsResult.innerHTML = html;
-// 					} else {
-// 						csdsResult.innerHTML = "Unable to retrieve base URIs for account, please verify your account number.";
-// 					}
-// 				}
-// 			});
-// 		}
+//detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
+function isExplorer() {
+	var ua = window.navigator.userAgent;
+	var is_ie = /MSIE|Trident/.test(ua);
 
-// 		function retrieveUrl() {
-// 			input = document.getElementById("account");
-// 			accountInput = input.value;
-// 			//take the account number and populate the CSDS URL
-// 			csdsUrl = 'https://api.liveperson.net/api/account/' + accountInput + '/service/baseURI?version=1.0';
-// 			//take the account we just retrieved and call ajax using the URL we just created above
-// 			retrieveDomains(accountInput);
-// 		}
-// 		csdsButton.addEventListener("click", retrieveUrl);
-// 	}
-// }
-	//detect if explorer and then add a bunch of classes with its own CSS because it's oh so special
-	function isExplorer() {
-		var ua = window.navigator.userAgent;
-		var is_ie = /MSIE|Trident/.test(ua);
+	if (is_ie) {
+		var wrapper = document.getElementById('defaultwrapper');
+		var header = document.getElementById('defaultheader');
+		var sidebar = document.getElementById('defaultsidebar');
+		var documenttitlecontainer = document.getElementById('documenttitlecontainer');
+		var footer = document.getElementById('defaultfooter');
+		var content = document.getElementById('defaultcontent')
+		var heroPanel = document.getElementById('heroPanel')
+		var cardInnerText = document.getElementsByClassName('cardInnerText');
+		var secondConfirmCardImg = document.getElementsByClassName('secondConfirmCardImg');
+		var thirdPanel = document.getElementById('thirdPanel');
+		var confirmationFooter = document.getElementById('confirmationFooter');
+		var formContainer = document.getElementById('formContainer');
+		wrapper.classList.add('defaultwrapperexplorer');
+		header.classList.add('defaultheaderexplorer');
+		sidebar.classList.add('defaultsidebarexplorer');
+		documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
+		footer.classList.add('defaultfooterexplorer');
+		content.classList.add('defaultcontentexplorer');
+		heroPanel.classList.add('heroPanelExplorer');
+		cardInnerText.classList.add('cardInnerTextExplorer');
+		secondConfirmCardImg.classList.add('secondConfirmCardImgExplorer');
+		thirdPanel.classList.add('thirdPanelExplorer');
+		confirmationFooter.classList.add('confirmationFooterExplorer');
+		formContainer.classList.add('formContainerExplorer');
+	};
+}
+//clicks on the search dropdown should also use the "pseudo SPA" method
+function searchClick(event) {
+	$('.ds-dropdown-menu').on('click', 'a', function (event) {
+		event.preventDefault();
+		linkclick(event, this);
+	})
+};
 
-		if (is_ie) {
-			var wrapper = document.getElementById('defaultwrapper');
-			var header = document.getElementById('defaultheader');
-			var sidebar = document.getElementById('defaultsidebar');
-			var documenttitlecontainer = document.getElementById('documenttitlecontainer');
-			var footer = document.getElementById('defaultfooter');
-			var content = document.getElementById('defaultcontent')
-			var heroPanel = document.getElementById('heroPanel')
-			var cardInnerText = document.getElementsByClassName('cardInnerText');
-			var secondConfirmCardImg = document.getElementsByClassName('secondConfirmCardImg');
-			var thirdPanel = document.getElementById('thirdPanel');
-			var confirmationFooter = document.getElementById('confirmationFooter');
-			var formContainer = document.getElementById('formContainer');
-			wrapper.classList.add('defaultwrapperexplorer');
-			header.classList.add('defaultheaderexplorer');
-			sidebar.classList.add('defaultsidebarexplorer');
-			documenttitlecontainer.classList.add('documenttitlecontainerexplorer');
-			footer.classList.add('defaultfooterexplorer');
-			content.classList.add('defaultcontentexplorer');
-			heroPanel.classList.add('heroPanelExplorer');
-			cardInnerText.classList.add('cardInnerTextExplorer');
-			secondConfirmCardImg.classList.add('secondConfirmCardImgExplorer');
-			thirdPanel.classList.add('thirdPanelExplorer');
-			confirmationFooter.classList.add('confirmationFooterExplorer');
-			formContainer.classList.add('formContainerExplorer');
-		};
-	}
-		//clicks on the search dropdown should also use the "pseudo SPA" method
-		function searchClick(event) {
-			$('.ds-dropdown-menu').on('click', 'a', function (event) {
-				event.preventDefault();
-				linkclick(event, this);
-			})
-		};
-
-		//legacy function, probably not needed
-		$('#mysidebar').height($(".nav").height());
+//legacy function, probably not needed
+$('#mysidebar').height($(".nav").height());
