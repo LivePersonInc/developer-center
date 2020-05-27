@@ -82,7 +82,7 @@ Once your bot has been deployed, it is live and available to your customers. Bec
 
     <img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/releases3.png">
 
-    At this point, the functionality of the Production bot should be identical to the Development bot’s at the time of the push. Additionally, a new version has been created.
+    At this point, the functionality of the Production bot should be identical to the Development bot’s at the time of the push. Additionally, a new version of the Production bot has been created.
 
 {: .important}
 The bot user agents attached to the Development bot are **not** pushed to Production. You will need to create new bot user agents and attach them to the Production bot, if they do not already exist.
