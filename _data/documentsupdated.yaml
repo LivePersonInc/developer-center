@@ -822,6 +822,7 @@
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Scroll Behavior Configuration
+      - subpagename: Logging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
