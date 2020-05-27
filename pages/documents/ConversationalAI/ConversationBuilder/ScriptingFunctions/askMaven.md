@@ -14,6 +14,8 @@ indicator: both
 
 The following, built-in functions in Conversation Builder can be used to programmatically call [Maven](maven-ai-overview.html) capabilities. These functions conveniently wrap the [askMaven APIs](maven-ai-askmaven-overview.html). You can use them as part of a [Maven Concierge](conversation-builder-bot-templates-maven-concierge.html) bot to ask Maven for the next best actions (route to skill, route to Knowledge Base article, etc.).
 
+Both methods return a String of the JSON response from the askMaven API. For a response example, see [here](maven-ai-askmaven-methods.html#get-next-actions).
+
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `askMaven()` | None<br><br>By default, this method is invoked on the current conversation, i.e., it uses the current conversation ID. | JSON response (String) |

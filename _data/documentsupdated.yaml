@@ -2,7 +2,7 @@
   image: getting-started
   documents:
   - documentname: First Steps
-  - documentname: Common Resources
+  - documentname: API Guidelines
     pages:
     - pagename: Accessing LivePerson APIs
     - pagename: Create API keys
@@ -120,8 +120,10 @@
       - pagename: Tutorials & Guides
         subpages:
           - subpagename: Getting Started
+          - subpagename: Using Meta Intents with Conversation Builder
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
+        #  - subpagename: Implementing the Shift Status & Current Queue Health APIs
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
@@ -230,6 +232,7 @@
       - pagename: Natural Language Understanding
       - pagename: Domains
       - pagename: Intents
+      - pagename: Meta Intents
       - pagename: Entities
   - documentname: Knowledge Base
     pages:
@@ -655,6 +658,7 @@
           - subpagename: Messaging Conversation Survey
           - subpagename: Conversational AI
           - subpagename: Conversational Commands
+      - pagename: Command Line Interface (CLI)
 
 
 - categoryname: Historical Data
@@ -987,6 +991,7 @@
           - subpagename: Authorization Request
           - subpagename: Refresh Request
           - subpagename: Token Request
+          - subpagename: Token Revocation Request
         - pagename: Samples
           subpages:
             - subpagename: Application Login Sample App
