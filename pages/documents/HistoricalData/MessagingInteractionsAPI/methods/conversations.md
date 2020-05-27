@@ -217,8 +217,8 @@ ipAddress | Current connection user IP | string |
 isPartial | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean |
 wasStepUp | Indicates if the conversation had a step up | Boolean |
 pendingAgentSurvey | Indicate if the conversation has a pending agent survey. | Boolean |
-firstIntentName | The intent id of the first intent-able message identified in the conversation. | string |
-firstIntentLabel | The intent label of the first intent-able message identified in the conversation. | string |
+firstIntentName | The id of the intent that was created based on the first intent-able message in the conversation. | string |
+firstIntentLabel | The label of the intent that was created based on first intent-able message in the conversation. | string |
 
 _Campaign info_
 
