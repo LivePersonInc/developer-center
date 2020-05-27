@@ -26,11 +26,11 @@ If desired, this lets you subsequently associate the dialog starter with one of 
 
     <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_findDomain.png">
 
-3. Select the domain from the available domains. This associates it with the dialog starter.
+3. Select the domain from the suggested, available domains. This associates it with the dialog starter.
 
     <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_associatedDomain.png">
 
-    At this point, you can now associate the dialog starter with an intent if desired (i.e., if not using patterns to trigger the dialog).
+    At this point, you can now associate the dialog starter with an intent if desired, i.e., if not using patterns to trigger the dialog.
 
 ### Associate a dialog starter with an intent
 
@@ -60,7 +60,7 @@ To do this in Assist, search for the entity by entering a user message. This pop
 
 (If the question is a multiple choice question, Assist will suggest entities based on the option list in the question.)
 
-Select the entity from the available entities. This associates the entity with the question. It also automatically creates a slot based on the entity, for storing the user message. The slot allows you to store the specific answer that the user sent, which is one of the values of the entity.
+Select the entity from the suggested, available entities. This associates the entity with the question. It also automatically creates a slot based on the entity, for storing the user message. The slot allows you to store the specific answer that the user sent, which is one of the values of the entity.
 
 <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity3.png">
 
