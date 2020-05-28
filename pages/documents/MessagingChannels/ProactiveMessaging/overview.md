@@ -17,14 +17,29 @@ Proactive Messaging allows brands to send an outbound message to a consumer and 
 A few things you'll need to get started with this API:
 * Fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded to Proactive Web Application.
 * Create 2 new bot users in Conversational Cloud. Customer Success Managers can do this on behalf of the brand using elevated LivePerson credentials. Please make sure the bot users have Campaign Manager roles & privileges. 
-* Provide LivePerson Proactive team with the user key and secret of the 2 bots created in step #2. 
-* LivePerson will provide brands the client ID and secrets which will be used to create an app jwt for authentication. For details on how to do this, please refer to the FAQ section. 
+* Provide LivePerson Proactive team with the bot user api key and secret of the 2 bots created in step #2. 
+* LivePerson will provide brands the client ID and secrets which will be used to create an app jwt for authentication. click [here](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) to know how to use APP JWT.
 
+### API Domain and Documentation
+* Proactive messaging is deployed in three regions. **North America**, **EMEA**(Europe, Middle East and Africa), **APAC**(Asia Pacific). Use the domain api to identify the zone of proactive api which is to be used for an account.
 
-### API Documentation
-* [North America](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/v2/outbound/)
-* [EMEA/Europe](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/v2/outbound/)
-* [APAC/Asia/Australia](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/v2/outbound/)
+| Method | URI  |
+| :--- | :--- |
+| GET | http://api.liveperson.net/api/account/{ACCOUNT_ID}/service/agentVep/baseURI.json?version=1.0|
+
+```json
+{
+    "service": "agentVep",
+    "account": "ACCOUNT_ID",
+    "baseURI": "va.agentvep.liveperson.net"
+}
+```
+
+| Sentinel **baseURI** | Proactive Region | Proactive **API domain** | API Documentation |
+|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| **va**.agentvep.liveperson.net  | NA | proactive-messaging.**z1**.fs.liveperson.com | Click [here](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **lo**.agentvep.liveperson.net  | EMEA | proactive-messaging.**z2**.fs.liveperson.com | Click [here](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
+| **sy**.agentvep.liveperson.net  | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
 
 ### Example Request and Response
 <strong>Campaign API</strong>
@@ -33,13 +48,13 @@ A few things you'll need to get started with this API:
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://proactive-messaging.{ZONE}.fs.liveperson.com/api/v2/account/{ACCOUNT_ID}/campaign|
+| POST | https://{domain}/api/v2/account/{ACCOUNT_ID}/campaign|
 
 **Path Parameters**
 
 | Name  | Description | Type/Value |
 | :--- | :--- | :--- |
-| ZONE   | z1 or z2 or z3 | string |
+| domain   | see [API Domain](#api-domain-and-documentation) | string |
 | ACCOUNT_ID | LivePerson site ID | string |
 | domain | IDP Hostname | string |
 
@@ -48,7 +63,7 @@ A few things you'll need to get started with this API:
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](#get-appjwt) | ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM |
+| Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM |
 
 **Request Body Example - JSON Payload**
 
@@ -96,13 +111,13 @@ A few things you'll need to get started with this API:
 
 | Method | URI  |
 | :--- | :--- |
-| GET | https://proactive-messaging.{ZONE}.fs.liveperson.com/api/v2/account/{ACCOUNT_ID}/campaign/{PROACTIVE_CAMPAIGN_ID/conversations|
+| GET | https://{domain}/api/v2/account/{ACCOUNT_ID}/campaign/{PROACTIVE_CAMPAIGN_ID/conversations|
 
 **Path Parameters**
 
 | Name  | Description | Type/Value |
 | :--- | :--- | :--- |
-| ZONE   | z1 or z2 or z3 | string |
+| domain   | see [API Domain](#api-domain-and-documentation)| string |
 | ACCOUNT_ID | LivePerson site ID | string |
 | PROACTIVE_CAMPAIGN_ID | Proactive campaign ID found in campaign response | string |
 
@@ -111,7 +126,7 @@ A few things you'll need to get started with this API:
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](#get-appjwt) | ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM |
+| Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | ayJraWQiOiJhcHBqd3QtMTMtMDUtMTciLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJsZTgxODIzMTE4IiwiYXpwIjoiNzU1ODhlMTgtMDIxMy00ZTMzLTgxNzQtODgzYWNhYzdlM2M0Iiwic2NvcGUiOiJtc2cuY29uc3VtZXIiLCJpc3MiOiJTZW50aW5lbCIsImV4cCI6MTUyNDY0NjI3MCwiaWF0IjoxNTI0NjQyNjcwfQ.aC1EbVQDIKJkrMgfoqhDqo5KZVMILTGP5UnK_4lUJQIfpFcrymvQKU9E6zt_WDhWmM2SOOcr1sz4u5xVZ9rMWZciDW_9KofEM2NDgVw1EVBxAIgGYeO0sbE9o--HKjk9DHZvukJkQFhYaHMDnj6ay4BNUqTJpDn6y3XQY7eh7rM |
 
 **Response Example**
 
