@@ -19,7 +19,7 @@ Use this method to update the session and add SDEs.
 
 | Method | URL |
 | :--- | :--- |
-| PUT |https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/app/engagement/visitors/{visitor-id}` |
+| PUT |https://[{domain}](/agent-domain-domain-api.html)/api/account/{accountId}/app/engagement/visitors/{visitor-id}?sid={session-id}&v={api-version} |
 
 **Path Parameters**
 
