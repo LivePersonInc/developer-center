@@ -12,21 +12,11 @@ indicator: messaging
 
 Proactive Messaging allows brands to send an outbound message to a consumer and funnel the responses from consumers into LiveEngage; creating a two way conversation. Proactive Messaging v2.0 API is a big improvement from the older [1.0 API](https://developers.liveperson.com/livedeflect-api-proactive-alert-api-proactive-alert.html) with rate limiting, support for guardrails, high send rate and integrates with LE campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for only WhatApp channel. Proactive messaging is available as [Proactive APP](https://proactive-messaging.z1.fs.liveperson.com) and [Proactive 2.0 API](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound).
 
-## Screenshot of [Proactive APP](https://proactive-messaging.z1.fs.liveperson.com)
-<p>
-    <img src="/images/prmgs-ui-screenshot.png" alt="Proactive Web App" style="width:900px;height:600px">
-</p>
-
-## Screenshot [Proactive 2.0 API](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound)
-<p>
-    <img src="/images/proactive-api-screenshot.png" alt="Proactive Web App" style="width:900px;height:550px">
-</p>
-
 ### Getting Started
 
 1. For [Proactive APP](https://proactive-messaging.z1.fs.liveperson.com), Fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded. Onboarding to Proactive App is mandatory before onboarding to [Proactive 2.0 API](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound).
 
-2.  For [Proactive 2.0 API](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound),
+2. To onboard on [Proactive 2.0 API](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound),
 - Create 2 new bot users in Conversational Cloud. **Customer Success Managers** can do this on behalf of the brand using elevated LivePerson credentials. Please make sure the bot users have Campaign Manager roles & privileges. 
 - Provide LivePerson Proactive team with the bot user api key and secret of the 2 bots created in step #2. 
 - LivePerson will provide brands the client ID and secrets which will be used to create an app jwt for authentication. click [here](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) to know how to use APP JWT.
