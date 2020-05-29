@@ -62,10 +62,10 @@ Proactive Messaging allows brands to send an outbound message to a consumer and 
 
 **Path Parameters**
 
-| Name  | Description | Type/Value |
+| Name  | Description | Value/Example |
 | :--- | :--- | :--- |
-| domain   | see [API Domain](#api-domain-and-documentation) | string |
-| ACCOUNT_ID | LivePerson site ID | string |
+| domain   | see [API Domain](#api-domain-and-documentation) | proactive-messaging.**z1**.fs.liveperson.com or proactive-messaging.**z2**.fs.liveperson.com or proactive-messaging.**z3**.fs.liveperson.com |
+| ACCOUNT_ID | LivePerson site ID | 34567231 |
 
 **Request Headers**
 
@@ -123,11 +123,11 @@ Proactive Messaging allows brands to send an outbound message to a consumer and 
 
 **Path Parameters**
 
-| Name  | Description | Type/Value |
+| Name  | Description | Value/Example |
 | :--- | :--- | :--- |
-| domain   | see [API Domain](#api-domain-and-documentation)| string |
-| ACCOUNT_ID | LivePerson site ID | string |
-| PROACTIVE_CAMPAIGN_ID | Proactive campaign ID found in campaign response | string |
+| domain   | see [API Domain](#api-domain-and-documentation)| proactive-messaging.**z1**.fs.liveperson.com or proactive-messaging.**z2**.fs.liveperson.com or proactive-messaging.**z3**.fs.liveperson.com |
+| ACCOUNT_ID | LivePerson site ID | 34567231 |
+| PROACTIVE_CAMPAIGN_ID | Proactive campaign ID found in campaign response | 08TwCku2h |
 
 **Request Headers**
 
