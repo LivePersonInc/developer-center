@@ -17,7 +17,7 @@ Proactive Messaging allows brands to send an outbound message to a consumer and 
 1. For [Proactive APP](https://proactive-messaging.z1.fs.liveperson.com), Fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded. Onboarding to Proactive App is mandatory before onboarding to [Proactive 2.0 API](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound).
 
 2. To onboard on [Proactive 2.0 API](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound),
-- Create 2 new bot users in Conversational Cloud. **Customer Success Managers** can do this on behalf of the brand using elevated LivePerson credentials. Please make sure the bot users have Campaign Manager roles & privileges. 
+- Create 2 new bot users (do not share these bot users with other services) in Conversational Cloud. **Customer Success Managers** can do this on behalf of the brand using elevated LivePerson credentials. Please make sure the bot users have Campaign Manager roles & privileges. 
 - Provide LivePerson Proactive team with the bot user api key and secret of the 2 bots created in step #2. 
 - LivePerson will provide brands the client ID and secrets which will be used to create an app jwt for authentication. click [here](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) to know how to use APP JWT.
 
@@ -142,7 +142,10 @@ Proactive Messaging allows brands to send an outbound message to a consumer and 
 }
 ```
 
-### Frequently Asked Questions
+### Proactive 2.0 API: Frequently Asked Questions
+
+<strong>Can we share the bot users for proactive 2.0 api with other systems?</strong>
+The bot users should only be used for proactive 2.0 api. The bot users are needed since we need to send messages on behalf of agent to consumers. The bot users session in proactive 2.0 api can break if these bot users are logged in some where else in some other services.
 
 <strong>What is the rate limit for the API?</strong>
 The current rate limit is 10 TPS/second/brand per api.
