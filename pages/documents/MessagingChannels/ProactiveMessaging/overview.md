@@ -15,10 +15,10 @@ Proactive Messaging allows brands to send an outbound message to a consumer and 
 ### Getting Started
 
 A few things you'll need to get started with this API:
-* Fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded to Proactive Web Application.
-* Create 2 new bot users in Conversational Cloud. Customer Success Managers can do this on behalf of the brand using elevated LivePerson credentials. Please make sure the bot users have Campaign Manager roles & privileges. 
-* Provide LivePerson Proactive team with the bot user api key and secret of the 2 bots created in step #2. 
-* LivePerson will provide brands the client ID and secrets which will be used to create an app jwt for authentication. click [here](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) to know how to use APP JWT.
+1. Fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded to Proactive Web Application. Onboarding to Proactive Web Application is mandatory before onboarding to Proactive Messaging API.
+2.  Create 2 new bot users in Conversational Cloud. Customer Success Managers can do this on behalf of the brand using elevated LivePerson credentials. Please make sure the bot users have Campaign Manager roles & privileges. 
+3.  Provide LivePerson Proactive team with the bot user api key and secret of the 2 bots created in step #2. 
+4. LivePerson will provide brands the client ID and secrets which will be used to create an app jwt for authentication. click [here](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) to know how to use APP JWT.
 
 ### API Domain and Documentation
 * Proactive messaging is deployed in three regions. **North America**, **EMEA**(Europe, Middle East and Africa), **APAC**(Asia Pacific). Use the domain api to identify the zone of proactive api which is to be used for an account.
@@ -35,14 +35,13 @@ A few things you'll need to get started with this API:
 }
 ```
 
-| Sentinel **baseURI** | Proactive Region | Proactive **API domain** | API Documentation |
+| If Sentinel **baseURI** then | Proactive Region | Proactive **API domain** | API Documentation |
 |-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | **va**.agentvep.liveperson.net  | NA | proactive-messaging.**z1**.fs.liveperson.com | Click [here](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
 | **lo**.agentvep.liveperson.net  | EMEA | proactive-messaging.**z2**.fs.liveperson.com | Click [here](https://proactive-messaging.z2.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
 | **sy**.agentvep.liveperson.net  | APAC | proactive-messaging.**z3**.fs.liveperson.com | Click [here](https://proactive-messaging.z3.fs.liveperson.com/api/api-docs/?api=outbound) for API spec
 
-### Example Request and Response
-<strong>Campaign API</strong>
+### Campaign API: Example Request and Response
 
 * Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) to go through API spec and use example here to get started.
 
@@ -103,11 +102,10 @@ A few things you'll need to get started with this API:
 }
 ```
 
-<strong>Conversations API</strong>
+### Conversations API: Example Request and Response
 
 * click [**Conversations**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/conversations) to go through API spec and use example here to get started.
 
-<strong>Campaign API</strong>
 
 | Method | URI  |
 | :--- | :--- |
@@ -147,24 +145,24 @@ A few things you'll need to get started with this API:
 ### Frequently Asked Questions
 
 <strong>What is the rate limit for the API?</strong>
-- The current rate limit is 10 TPS/second/brand. Proactive service will accept 10 api calls cumulative per second per account. For example, at a given second by account X, there are 6 requests for API A and 5 requests per API B. One request of either A or B will be rejected by rate limiter since the total number of requests being attempted is >10 per second.
+The current rate limit is 10 TPS/second/brand per api.
 
 <strong>What is the daily limit when sending outbound messages?</strong>
-- It depends on the channel. Messaging Channel providers like WhatsApp have certain limitations on how many messages can be sent per day. Considering these limitations Proactive Messaging will limit to 100K recipients/message/day/channel/account. For example, if account X creates Y campaigns on 04/28/2020 with total recipients R for SMS channel cumulative. If 100K - R is 100 then creating a new campaign on 04/28/2020 for SMS channel with more than 100 recipients will fail.
+It depends on the channel. Messaging Channel providers like WhatsApp have certain limitations on how many messages can be sent per day. Considering these limitations Proactive Messaging will limit to 100K recipients/message/day/channel/account. For example, if account X creates Y campaigns on 04/28/2020 with total recipients R for SMS channel cumulative. If 100K - R is 100 then creating a new campaign on 04/28/2020 for SMS channel with more than 100 recipients will fail.
 
-<strong>Which channels are supported as of now ?</strong>
-- Proactive messaging API supports only WA as of now. 
+<strong>Which channels are supported as of now?</strong>
+Proactive messaging API supports only WA channel. Soon SMS channel will be supported. 
 
-<strong>Does Proactive Messaging provide a way to adhere to the law of sending sms messages within a certain time window (TCPI compliant)?</strong>
-- Proactive Messaging ensures that messages are sent based on the recipient receiving windows based on recipient phone number. This helps brands adhere to one of the legal requirements for sending SMS texts i.e. sms can only be sent between 8 am and 9 pm to avoid spamming consumers after business hours. 
+<strong>Does Proactive Messaging provide a way to adhere to the law of sending sms messages within a certain time window (TCPA compliance)?</strong>
+Proactive Messaging ensures that messages are sent based on the recipient receiving windows based on recipient phone number. This helps brands adhere to one of the legal requirements for sending SMS texts i.e. sms can only be sent between 8 am and 9 pm to avoid spamming consumers after business hours. 
 
 <strong>Once a campaign is submitted. How soon will these recipients receive the messages?</strong>
-- The recipients will start receiving the message as per the schedule submitted in the campaign. The messages are sent at a rate upto 10 messages per second per channel per account. For example, a campaign is created for an SMS channel using the default receiving window for 100 recipients. Some of these recipients have phone numbers from regions belonging to PST, CST, EST time zones. Once a campaign is submitted/published, based on the phone number, a zone is computed (number with +1 - (201) is found to be in EST). Using the specified receiving window, a decision is made to send a message to the phone number if current time in that zone is within the window. If the recipient receiving window is closed then a message will be sent on the next opening of the window.
+The recipients will start receiving the message as per the schedule submitted in the campaign. The messages are sent at a rate upto 10 messages per second per channel per account. For example, a campaign is created for an SMS channel using the default receiving window for 100 recipients. Some of these recipients have phone numbers from regions belonging to PST, CST, EST time zones. Once a campaign is submitted/published, based on the phone number, a zone is computed (number with +1 - (201) is found to be in EST). Using the specified receiving window, a decision is made to send a message to the phone number if current time in that zone is within the window. If the recipient receiving window is closed then a message will be sent on the next opening of the window.
 
 <strong>How will batching capability work?</strong>
-- Rate limiting on transactions per second does not necessarily limit to sending messages to no of recipients per second. A single campaign can have more than 1 recipient and not more than 1000 recipients. It is recommended to batch recipients in a campaign.
+Rate limiting on transactions per second does not necessarily limit to sending messages to no of recipients per second. A single campaign can have more than 1 recipient and not more than 1000 recipients. It is recommended to batch recipients in a campaign.
 
-<strong>Error handling and error code</strong>
+<strong>What are the error codes for invalid recipients information in the campaign?</strong>
 Consider an example Response of campaigns API:
 ```json
 {
@@ -186,7 +184,7 @@ Consider an example Response of campaigns API:
 ```
 
 | <<ERROR_MESSAGE>> | Description |
-|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+|-------------------------------------------|------------------------------------------------------------------------------------|
 | 'INVALID_NUMBER'                  		| The associated recipient/consumer country code or phone number or both is invalid. |
 | 'DUPLICATE_NUMBER'                		| More than one recipient in a given campaign has the same phone number. |
 | 'TOO_MANY_VARIABLES'              		| The template expects less variables for creating the message to the recipient. |
@@ -195,28 +193,27 @@ Consider an example Response of campaigns API:
 | 'VARIABLE_NOT_STRING=<<VARIABLE_NAME>>'   | The recipient has a variable which is not a string identified by VARIABLE_NAME. |
 
 <strong>Will campaign data change after publish ?</strong>
-- Campaign data wont change after publish. Campaign state of either FAILED or FINISHED is final state after which no changes in recipients and campaign state will happen.
+Campaign data wont change after publish. Campaign state starts from DRAFT to SCHEDULED to QUEUED to IN-PROGRESS to FAILED or FINISHED. Campaign state in FAILED or FINISHED is final state. Campaign data can be changed only if it is in DRAFT State.
  
 <strong>Are Conversation API responses cached?</strong>
-- Conversations API responses are cached for 5 min. 
+[Conversations](#conversations-api-example-request-and-response) API responses are cached for 5 min. 
 
 <strong>What kind of security, encryption, parameter, failures?</strong>
-- The API uses App Jwt Oauth 2.0 authentication. The Proactive Messaging web app will show the clientId and Secret to an administrator.
+The API uses App Jwt Oauth 2.0 authentication. The Proactive Messaging web app will show the clientId and Secret to an administrator.
 
 <strong>Does the new API have status call backs? How do we get the status of the message?</strong>
-- Proactive Messaging does not have call backs to inform the status. Proactive Messaging provides status of messages through [conversations](https://proactive-messaging.fs.liveperson.com/api/api-docs/v2/outbound/#/Campaign/conversations) API.
+Proactive M=messaging does not have call backs to inform the status. Proactive Messaging provides status of messages through [conversations](https://proactive-messaging.fs.liveperson.com/api/api-docs/v2/outbound/#/Campaign/conversations) API.
 
 <strong>Does LivePerson return some sort of error response when the user already opted out? For example if we try to send to a number that's blocked?</strong>
-- WhatsApp block mechanism 
-- Twilio block mechanism
-- Proactive guarantees opt-out from SMS only
+- Proactive guarantees opt-out from SMS only. If a consumer opts out from twilio SMS, we also opt out consumer from WA.
+- Proactive messaging does not have ability to capture opt-out from WA channel. For messages that are sent to consumer who opted out, the state of recipient will be marked 'SKIPPED' in [conversations](#conversations-api-example-request-and-response) api.
 
 <strong>Is there a throughput limitation for the data that gets passed from Twilio to LP? Meaning, if brand sends 100 Twilio msgs/sec (their max throughput), then can the data flow through to LP at the same rate.</strong>
 - Proactive Messaging does not have limitations on data while sending messages to twilio or other channels. However a large message may translate to more than one messages when it ends up being sent to the recipient. 
 - Example: A message of more than 140 characters will be divided into two messages and sent to recipients. When messages are sent back to LP, there are no limits on the number of messages or data.
  
 <strong>What reporting metrics do I get? What metrics are available now?</strong>
-- Proactive Messaging provides the status of messages delivered to recipients through conversations api. Conversations api provides the necessary information to compute the success and failure of messages being sent to connectors. Below are status of recipients that provides the information like
+- Proactive Messaging provides the status of messages delivered to recipients through [conversations](#conversations-api-example-request-and-response) api. [conversations](#conversations-api-example-request-and-response) api provides the necessary information to compute the success and failure of messages being sent to connectors. Below are status of recipients that provides the information like
 
 | <<MESSAGE_STATUS>> | Description |
 |-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -239,23 +236,17 @@ Consider an example Response of campaigns API:
 	}
 	```
 
-<strong>When would we use the consumer JWT vs the app JWT? If we do need to use a consumer JWT, same questions as 1 and 1a above.</strong>
-- Proactive Messaging service does not create or consume consumer JWT. Proactive Messaging api only consumes AppJwt created from provided clientId and Secret for authentication.
+<strong>Do we need any other JWT other than APP JWT e.g. Consumer JWT?</strong>
+Proactive Messaging service does not create or consume consumer JWT or other JWT except APP JWT. Proactive Messaging api only consumes AppJwt created from provided clientId and Secret for authentication.
 
 <strong>What should the authentication header look like, is the bearer token the only thing required even in production usage? Do we need to include our ConsumerKey/Secret or our AccessToken/Secret that we use in the 1.0 API at all, or any other information?</strong>
-- App Jwt will be consumed as Bearer Token. No other key, secret or token will be consumed by Proactive Messaging api.
+App Jwt will be consumed as Bearer Token. No other key, secret or token will be consumed by Proactive Messaging api.
 
-<strong>Add clarification for brands who migrate from 1.0 to 2.0 - As we move from 1.0 to 2.0, we are trying to understand whether or not we lose anything in terms of immediate errors. In 1.0, it was possible to get some success/failure information back in the message and send a response right away. With 2.0, I do see the failedConsumers section of the response, but how do the error cases that drive that section of the response differ from 1.0 since 2.0 does a scheduling/batching mechanism? In other words, what error cases trigger error responses in 1.0 and which error cases trigger error responses in 2.0?</strong>
-- The key difference is that Proactive 2.0 campaign api is asynchronous meaning that the success and failure of a message of a recipient is available only when the recipient is picked from the queue and a message is sent as per desired message rate pre configured. The conversations api will provide the status of recipients tied to the campaign created.
-
-<strong>How much effort does it take for a brand to migrate from 1.0 to 2.0? Talk about an effort. 
-- Add the migration info?</strong>
-
-<strong>What are the error codes i.e. when I give a invalid number?</strong>
-- Refer Error handling and error code.
+<strong>How does proactive 2.0 api provide status of message e.g. success/failure of delivery ?</strong>
+The Proactive 2.0 campaign api is asynchronous meaning that the success and failure of a message to a recipient is noted only when the recipient is picked from the proactive internal queue and a message is sent as per pre configured message rate. The [conversations](#conversations-api-example-request-and-response) api will provide the status of recipients tied to the campaign created.
 
 <strong>Of the error cases described above for 2.0, which of those errors should we consider "retry-able"? For example, a bad request due to a missing field is not retry-able because it will just always fail, but a case where one of the downstream services was temporarily unavailable could warrant a retry. Which error cases that we could get back from the /campaigns endpoint are retryable and how should we handle a retry to avoid sending duplicate messages to a customer?</strong>
-- Proactive Messaging service has retry mechanism internally on dependent services to reduce failures due to transient errors.
+Proactive Messaging service has retry mechanism internally on dependent services to reduce failures due to transient errors.
 
 <strong>What’s the lookback period?</strong>
 - Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer using a campaign. Current lookback period is 30 days from when messages are sent using Proactive api. 
