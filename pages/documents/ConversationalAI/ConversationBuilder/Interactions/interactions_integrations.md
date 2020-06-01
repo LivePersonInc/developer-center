@@ -119,11 +119,11 @@ Some setup of your LiveEngage environment is required before using this feature.
 1. Select the interaction just above where you want to add the File Upload interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_fileUpload.png"> (File Upload) on the interactions toolbar.
 2. In the File Upload interaction, enter the message to send to the consumer.
 
-    <img style="width:550px" src="img/ConvoBuilder/integrations_fileUpload2.png">
+    <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload2.png">
 
     For the file to be uploaded, in step 4, you'll follow this with an integration interaction that invokes a File integration.
 
-3. In the File Upload interaction, in the upper-right corner click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical_int.png"> (3-dot icon), and select **Settings**. Specify the following under **File Upload Settings**:
+3. In the File Upload interaction, in the upper-right corner click <img style="width:25px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon). Select the **Advanced** tab. Then specify the following under **File Upload Settings**:
     - **Accepted File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
     - **Success message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
     - **Failure message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
