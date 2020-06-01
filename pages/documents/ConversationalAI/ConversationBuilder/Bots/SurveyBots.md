@@ -128,7 +128,7 @@ If you change the answer choices for a survey question, remember to update the d
 
 To add a Skip option and thereby make a survey question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_skip.png">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_skip.png">
 
 {: .important}
 In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question plus the Skip option is 12 quick replies. Using Skip will cause the conversation to end abruptly.
@@ -155,16 +155,16 @@ You cannot create a [Fallback dialog](conversation-builder-dialogs-fallback-dial
 
 #### Closing the conversation
 
-As a best practice, end the dialog flow with an interaction whose next step is "Close conversation." This closes the conversation promptly.
+As a best practice, end the dialog flow with an interaction whose next action is "Close conversation." This closes the conversation promptly.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
 
 You don't need to include a Text interaction that thanks the consumer for their participation; you can define the Thank You message in the survey bot's settings (discussed below).
 
 ### Step 3 - Configure the bot settings
 
-1. Open the survey bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
-2. Select **Bot Settings** from the menu that appears.
+1. Open the survey bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+2. Select **Bot Settings**.
 3. Configure the survey bot settings as needed; these are described below.
 4. Configured other bot settings as needed; these are described [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 5. Click **Save**.
