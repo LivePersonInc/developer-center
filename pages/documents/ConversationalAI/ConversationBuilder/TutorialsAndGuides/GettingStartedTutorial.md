@@ -405,15 +405,15 @@ This tutorial uses an example API that returns random balance data when given an
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/accountbalancedialog.png">
 
-5. Add a Text statement <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_textStatement.png"> that says, "I can get your latest balance."
+4. Add a Text statement <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_textStatement.png"> that says, "I can get your latest balance."
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/balanceTextStmt.png">
 
     To get the user's account balance, you need to ask for their account number.
 
-6. Add a Text question <img style="width:20px" src="img/ConvoBuilder/helloworld/icon_textQuestion.png">. For the question text, enter, "Please enter your 6-digit account number (e.g., 123456)."
+5. Add a Text question <img style="width:20px" src="img/ConvoBuilder/helloworld/icon_textQuestion.png">. For the question text, enter, "Please enter your 6-digit account number (e.g., 123456)."
 
-7. Still in the Text question, add a custom rule that checks whether the account number is valid: Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Valid account number". Then click **+ Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match 6-digit numbers: `^\b\d{6}\b`. Next, capture the user’s account number as a slot variable: Click **+ Add Slot**. Name the slot "accountNumber", enter `{$userMessage}` for its value, and make sure it has a duration of "Dialog." Click **Save**.
+6. Still in the Text question, add a custom rule that checks whether the account number is valid: Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Valid account number". Then click **+ Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match 6-digit numbers: `^\b\d{6}\b`. Next, capture the user’s account number as a slot variable: Click **+ Add Slot**. Name the slot "accountNumber", enter `{$userMessage}` for its value, and make sure it has a duration of "Dialog." Click **Save**.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/askaccountnumber.png">
 
@@ -421,9 +421,9 @@ This tutorial uses an example API that returns random balance data when given an
 
     You also need to ask for and capture the user's email address.
 
-8. Add another Text question. For the question text, enter, "Please enter your email address (e.g., fred@home.com)."
+7. Add another Text question. For the question text, enter, "Please enter your email address (e.g., fred@home.com)."
 
-9. Still in the Text question, add a custom rule that checks whether the account number is valid: Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Valid email". Then click **+ Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regex to match email addresses: `^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$`. Next, capture the user's email address as a slot variable: Click **+ Add Slot**. Name the slot "userEmail", enter `{$userMessage}` for its value, and make sure it has a duration of "Dialog." Click **Save**.
+8. Still in the Text question, add a custom rule that checks whether the account number is valid: Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Valid email". Then click **+ Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regex to match email addresses: `^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$`. Next, capture the user's email address as a slot variable: Click **+ Add Slot**. Name the slot "userEmail", enter `{$userMessage}` for its value, and make sure it has a duration of "Dialog." Click **Save**.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/askemail.png">
 
@@ -436,13 +436,13 @@ This tutorial uses an example API that returns random balance data when given an
 
     So here, in the Question interactions, you have configured things so that the user's responses are stored in slots with those slot names. Now, when you call the Balance API, it will use the values in those slots to make the request.
 
-10. Add an API Integration interaction <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_integration.png">.  In the drop-down list in the interaction, select "Balance." This is the name of the integration that you created earlier.
+9. Add an API Integration interaction <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_integration.png">.  In the drop-down list in the interaction, select "Balance." This is the name of the integration that you created earlier.
     
      <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/callapi.png">
 
     To finish, you just need to display the user's balance results.
 
-11. Add a Text statement that says, "Your current balance is {Balance.balance}."
+10. Add a Text statement that says, "Your current balance is {Balance.balance}."
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/displaybalance.png">
     
@@ -450,11 +450,11 @@ This tutorial uses an example API that returns random balance data when given an
   
     Now let's test all this out.
 
-12. Open the Preview window, and start a new session by clicking **Reset Session**.
+11. Open the Preview window, and start a new session by clicking **Reset Session**.
 
-13. Trigger the Account Balance dialog by entering, "I want to see my account balance," or something else with the word "balance."
+12. Trigger the Account Balance dialog by entering, "I want to see my account balance," or something else with the word "balance."
 
-14. Follow the two prompts for an account number and email address. *Any* 6-digit account number and *any* email address will work for this API.
+13. Follow the two prompts for an account number and email address. *Any* 6-digit account number and *any* email address will work for this API.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/integrationtest.png">
 
