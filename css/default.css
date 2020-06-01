@@ -1065,6 +1065,8 @@ a.loginText {
   margin-right: 100px;
   text-align: right;
   position: fixed;
+  max-height: 500px;
+  overflow-y: scroll;
 }
 
 #anchorlist a {
