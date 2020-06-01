@@ -16,7 +16,7 @@ indicator: both
 3. On the Add Domain page, specify the following: 
     * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
     * **Manual** or **Import**: If you want to manually add intents and entities to the domain, select "Manual." If you want to import a pre-configured list in from a file, select "Import."
-    * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files.
+    * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files. **Note:** The import file should only be named with and contain alphanumeric characters.
     * **NLU Provider**: Select the NLU engine to use. For help in making this selection, see the discussion on NLU engines [here](intent-builder-natural-language-understanding.html).
     * **Language**: Select the language.
 4. Click **Add Domain**.
