@@ -130,6 +130,8 @@ To add a Skip option and thereby make a survey question optional, click the **+S
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_skip.png">
 
+Clicking **Skip** automatically adds a custom rule for the "skip" response, so you can build out the survey logic as you require.
+
 {: .important}
 In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question plus the Skip option is 12 quick replies. Using Skip will cause the conversation to end abruptly.
 
@@ -227,6 +229,10 @@ Yes, this works just like for a custom bot. The survey questions are displayed a
 #### Can a consumer skip a survey entirely?
 
 There's no way for the consumer to indicate they want to skip the survey entirely (e.g., no Skip button). However, the consumer can close the window to leave the survey.
+
+#### The dialogs in my custom bots end with Close Conversation (LP_CLOSECONVERSATION). Do I need to change this?
+
+Yes, you'll need to update the custom bots to use Close Dialog (LP_CLOSEDIALOG) instead. [Close Dialog](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) triggers a post-conversation survey, but [Close Conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) does not.
 
 #### I'm an existing Bot Studio user. How do I migrate to using Conversation Builder to create and manage survey bots?
 
