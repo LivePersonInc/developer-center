@@ -95,7 +95,7 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 | Action Type  | If you want the button to be a link that takes the consumer somewhere else, select **Web URL**.<br><br>If you want to use the button to post back a different value other than the button label's value (for example, to post back the number "5" instead of the word "excellent"), select **Postback** (and then enter the data to post (the payload) in the **Callback** field.<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer in use. | Required  | Web URL |
 | Webview | This is a legacy feature that's no longer in use. | Not applicable | Not applicable |
 | Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in the current window or a new window. | Required | New Window |
-| Callback | Enter the data to send back to the bot. <br><br>If you select "Web URL" for the **Action Type**, this value should be a URL. If you selected "Postback" for the **Action Type**, this value  should be whatever value you want to send to the bot. <br><br>If you specify a postback value here, in most channels it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Entering the same value for both the button label and the postback value will always work. | Optional | https://www.mysite.com/coupons/headphonesCoupon.html |
+| Callback | Enter the data to send back to the bot. <br><br>If you select "Web URL" for the **Action Type**, this value should be a URL. If you selected "Postback" for the **Action Type**, this value  should be whatever value you want to send to the bot. <br><br>If you specify a postback value here, it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Make sure to test and verify on the device or in the application, as use of the Callback field works in some channels (like Facebook) but not in others (like SMS). Entering the same value for both the button label and the postback value will always work. | Optional | https://www.mysite.com/coupons/headphonesCoupon.html |
 
 #### Populating a Structured question dynamically
 
@@ -133,7 +133,7 @@ Enter the question to send.
 | Action Type  | If you want the button to be a link that takes the consumer somewhere else, select **Web URL**.<br><br>If you want to use the button to post back a different value other than the button label's value (for example, to post back the number "5" instead of the word "excellent"), select **Postback** (and then enter the data to post (the payload) in the **Callback** field).<br><br>**Postback for Bookmark**, **Phone number**, and **Share** are legacy features that are no longer in use. | Required  | Web URL |
 | Webview | This is a legacy feature that's no longer in use. | Not applicable | Not applicable |
 | Target | Applies when the Action Type equals “Web URL." Select whether to open the URL in the current window or a new window. | Required | New Window |
-| Callback | Enter the data to send back to the bot.<br><br>If you specify a postback value here, in most channels it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Entering the same value for both the button label and the postback value will always work. | Optional | https://www.surveymonkey.com/mysurvey.html |
+| Callback | Enter the data to send back to the bot.<br><br>If you specify a postback value here, it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Make sure to test and verify on the device or in the application, as use of the Callback field works in some channels (like Facebook) but not in others (like SMS). Entering the same value for both the button label and the postback value will always work. | Optional | https://www.surveymonkey.com/mysurvey.html |
 
 ### Quick Reply questions
 
@@ -159,7 +159,7 @@ Enter the question to send.
 | --- | --- | --- | --- |
 | Title | The label to be displayed. | Required | Awesome! |
 | Type  | Always select "Text." <br><br>The "Location" value currently isn't supported. | Required  | Text |
-| Payload | Enter the data to send back to the bot.<br><br>If you specify a postback value here, in most channels it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Entering the same value for both the button label and the postback value will always work. | Optional | Awesome |
+| Payload | Enter the data to send back to the bot.<br><br>If you specify a postback value here, it is sent back to the bot instead of the button label. However, be aware that this depends on the channel in use. Make sure to test and verify on the device or in the application, as use of this field works in some channels (like Facebook) but not in others (like SMS). Entering the same value for both the button label and the postback value will always work. | Optional | Awesome |
 | Image URL | Use this field to specify a small image to be displayed to the left of the Quick Reply title. Typically, this setting isn't used unless the image is an emoji or something of a similar nature. | Optional | https://www.mysite.com/images/emoji_smile.jpg |
 
 
