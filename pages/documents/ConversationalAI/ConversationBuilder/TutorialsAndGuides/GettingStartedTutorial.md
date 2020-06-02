@@ -518,7 +518,7 @@ In addition to the skills, you also need user agents, one for the bot and one fo
 You will test this connection with a standard web chat engagement, so now you create a campaign and an engagement that routes to the new Bot skill.
 
 1. Click the **Manage campaigns and engagements** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_campaigns.png">.
-2. In the upper-right corner, click **Action > Add**.
+2. Click **+ Add Campaign** at the bottom of the page.
 3. On the page that appears, specify the following:
     * **Campaign name**: Enter "Bot test."
     * **Campaign goal**: Click this, select "Interact with consumers" on the page that appears, and click **Done**.
@@ -530,7 +530,7 @@ You will test this connection with a standard web chat engagement, so now you cr
 6. In the Engagement Window Library, click **Done**.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_6.png">
-7. Click **Publish** in the upper-right corner.
+7. Click **Publish** in the upper-right corner. Then click **Publish** again to confirm the action.
 
 #### Step 11: Set up the transfer from bot to human
 
@@ -540,25 +540,25 @@ In this step, you set up an "escalation" to transfer the user to a human agent i
 
 2. Create a new regular dialog named "Agent Handoff" (or similar).
 
-3. In the default User Says interaction that's provided, enter "I want to speak to an agent" as the sample user statement.
+3. In the Dialog Starter interaction, click **+ Pattern**.
 
-4. Open the User Says interaction's **Interaction Details**, and click the **Settings** tab.
+4. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
 
-5. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
+    <img style="width:600px" src="img/ConvoBuilder/helloworld/escalation_ds.png">
 
-6. Add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) ( <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png"> ) beneath the User Says interaction.
+5. Add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) ( <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png"> ) beneath the Dialog Starter interaction.
 
-7. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
+6. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
-8. Still in the Agent Transfer interaction, open the **Interaction Details**, and click the **Settings** tab.
+7. Still in the Agent Transfer interaction, click the **Settings** icon in the upper-right corner. Then click the **Advanced** tab.
 
-9. In the **Agent Skill Id** field, enter the ID number of the human skill that you created; you wrote this down earlier.
+8. In the **Agent Skill Id** field, enter the ID number of the human skill that you created; you wrote this down earlier.
 
     <img style="width:800px" src="img/ConvoBuilder/helloworld/escalation_skillId.png">
 
-    (While you set the skill name and ID to that for a specific skill, you could also set these values using variables for a more dynamic experience.)
+    (While you set the skill ID to that for a specific skill, you could also set the value using a variable for a more dynamic experience.)
 
-10. Click **Save**.
+9. Click **Save**.
 
 #### Step 12: Deploy the bot to LiveEngage
 
@@ -566,10 +566,10 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
 
 ##### Add the agent connector
 
-1. Still in the bot in Conversation Builder, click **Agent Connectors** on the menu bar in the upper-right corner.
-2. Click **New Bot Connector** in the upper-right corner, just under the menu bar.
+1. Still in the bot in Conversation Builder, click **Agent Connectors** on the menu bar in the upper-left corner.
+2. Click **Add Agent Connector** in the upper-right corner.
 3. In the Add Agent Connector dialog box, specify the following based on the bot user you created.
-    - **Agent User ID**: Select the user ID for the bot user agent.
+    - **Agent User ID**: Select the user ID for the bot user agent. This should be "bot_user" or something similar.
     - **Role**: Select "Agent."
     - **Conversation Type**: Select "Messaging."
     - **Deploy to**: Select "Demo." The Demo environment is a testing environment, and the Production environment is the live environment. It's always a best practice to test your bot in the Demo environment first, before deploying it to the Production environment.
@@ -587,7 +587,6 @@ LivePerson recommends that, when you connect your bot to LiveEngage in a product
     It might take a few minutes for the connection to be established.
 
     To view more details about the connector, move your mouse over the **i** icon beside **Details**.
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/agentConnectorsPage3.png">
 
 #### Step 13: Test the bot
 
