@@ -8,14 +8,14 @@ permalink: conversation-builder-testing-deployment-previewing.html
 indicator: both
 ---
 
-The Preview tool is a web widget that's designed to provide a full preview of the conversational experience as you design, develop and test the bot.
+The Preview tool is a web client that's designed to provide a full preview of the conversational experience as you design, develop and test the bot.
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/preview.png">
 
 Note the following about Preview:
 
-- The conversation doesn't go through LiveEngage, so there's no need to deploy an agent connector to use Preview. Functionality that requires LiveEngage features (such as transfers) should be tested in a LiveEngage web widget. You can practice this using the [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html).
-- Messages are formatted in HTML, and structured content is displayed. Depending on the channel, some features in the bot might not render. For a list of what a channel supports, see [here](conversation-builder-interactions-interaction-support.html).
+- The conversation doesn't go through LiveEngage, so there's no need to deploy an agent connector to use Preview. Functionality that requires LiveEngage features (such as transfers) should be tested in a deployed web client. You can practice this using the [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html).
+- Within Preview, all structured content is displayed. Keep in mind that not all channels support all structured content objects. Make sure to test and verify the bot on the device or in the appropriate application. For a list of what a channel supports, see [here](conversation-builder-interactions-interaction-support.html).
 - The Preview window toggles its display to show the Bot Logs window. For details on the Bot Logs window, see [here](conversation-builder-testing-deployment-debugging.html).
 
 ### Access Preview
