@@ -72,7 +72,7 @@ Both outcomes are tracked and reported on as part of the Report Builder, so you 
 
 If you're new to working with survey bots, before you can begin building them, the feature must be enabled in Conversation Builder by LivePerson. Please contact your LivePerson account representative to enable this feature.
 
-Conversely, if you've been using Bot Studio to create and manage survey bots, please see the FAQ section for information on how to change to doing so in Conversation Builder.
+Conversely, if you've been using Bot Studio to create and manage survey bots, please see the FAQ section below for information on how to change to doing so in Conversation Builder.
 
 ### Step 1 - Create the survey bot
 
