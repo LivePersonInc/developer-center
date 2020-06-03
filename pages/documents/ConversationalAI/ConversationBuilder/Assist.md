@@ -12,18 +12,18 @@ permalink: conversation-builder-assist.html
 indicator: both
 ---
 
-You can use the Assist tool to associate a dialog starter with a domain and an intent, and to associate questions with entities.
+You can use the Assist tool to associate a dialog starter with a domain and an intent, and to associate a question with an entity.
 
 ### Associate a dialog starter with a domain
 
-You associate a dialog starter with a domain to give you access inside the dialog to the intents (and entities) within the domain. 
+You associate a dialog starter with a [domain](intent-builder-domains.html) to give you access inside the dialog to the intents (and entities) within the domain. 
 
 If desired, this lets you subsequently associate the dialog starter with one of the domain's intents to trigger the dialog's flow. (Alternatively, you can use patterns to trigger the dialog.)
 
 **To associate a dialog starter with a domain**
 
-1. Select the dialog starter, and open Assist by clicking <img style="width:25px" src="img/ConvoBuilder/icon_assist.png"> (Assist icon).
-2. In Assist, search for the [domain](intent-builder-domains.html) to associate.
+1. Select the dialog starter, and open Assist by clicking <img style="width:25px" src="img/ConvoBuilder/icon_assist.png"> (Assist icon) just to the right of the interaction.
+2. In Assist, search for the domain to associate.
 
     <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_findDomain.png">
 
@@ -35,7 +35,7 @@ If desired, this lets you subsequently associate the dialog starter with one of 
 
 ### Associate a dialog starter with an intent
 
-Associating a dialog starter with an intent means that, when the intent is found in a conversation, the bot will trigger the dialog's flow. For example, if the consumer's message is, "I want to buy a shirt," Assist might trigger an intent named "order item." Depending on the training phrases that you associate with the "order item" [intent](intent-builder-intents.html), the dialog might also be triggered by something like, "Do you have any shirts?"
+Associating a dialog starter with an [intent](intent-builder-intents.html) means that, when the intent is found in a conversation, the bot will trigger the dialog's flow. For example, if the consumer's message is, "I want to buy a shirt," Assist might trigger an intent named "order item." Depending on the training phrases that you associate with the "order item" intent, the dialog might also be triggered by something like, "Do you have any shirts?"
 
 **To associate a dialog starter with an intent**
 
