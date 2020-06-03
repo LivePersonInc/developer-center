@@ -1,4 +1,4 @@
-body {
+body{
     background: #090C43;
     overflow: hidden;
 }
@@ -11,7 +11,6 @@ a {
     font-size: 14px;
 
 }
-
 a:focus {
     outline: none !important;
     text-decoration: none !important;
@@ -23,19 +22,17 @@ a:hover {
     color: #003FA3;
     text-decoration: none !important;
 }
-
 .container {
     display: none;
 }
 
-.row {
+.row{
     display: inline-flex;
 
 }
-
-.greeting-bot-header {
+.greeting-bot-header{
     font-family: Roboto;
-    display: block;
+    display : block;
     width: 144px;
     margin: 0 auto 16px auto;
     font-style: normal;
@@ -45,8 +42,7 @@ a:hover {
     letter-spacing: 0.008em;
     color: #FFFFFF;
 }
-
-.greeting-bot-label {
+.greeting-bot-label{
     width: 672px;
     height: 48px;
     margin: 0 auto 62px auto;
@@ -61,16 +57,14 @@ a:hover {
     letter-spacing: 0.01em;
     color: #FFFFFF;
 }
-
-.spotlight-content-container {
+.spotlight-content-container{
     width: 324px;
     height: 459px;
     display: block !important;
     margin-top: 15%;
     margin-left: 30%;
 }
-
-.heading-h5 {
+.heading-h5{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -81,29 +75,24 @@ a:hover {
     letter-spacing: 0.01em;
     color: #090C43;
 }
-
-.spotlight-title {
+.spotlight-title{
     font-size: 14px;
     font-family: Roboto;
     font-weight: bold;
     padding-top: 24px;
     line-height: 24px;
     letter-spacing: 0.01em;
-    color: #005EF4;
-    /* Primary/Electric Blue */
+    color: #005EF4;     /* Primary/Electric Blue */
 }
-
-.hyperlink-container {
+.hyperlink-container{
     font-size: 14px;
     font-family: Roboto;
     font-weight: bold;
     line-height: 24px;
     letter-spacing: 0.01em;
-    color: #005EF4;
-    /* Primary/Electric Blue */
+    color: #005EF4;     /* Primary/Electric Blue */
 }
-
-.spotlight-content {
+.spotlight-content{
     font-style: normal;
     font-weight: 500;
     font-family: Roboto;
@@ -113,7 +102,6 @@ a:hover {
     letter-spacing: 0.04em;
     color: #5F617A;
 }
-
 .lp-window-root>.lpmx {
     left: 0;
     top: 0 !important;
@@ -122,32 +110,29 @@ a:hover {
     margin-left: auto !important;
 }
 
-.spotlight-container {
+.spotlight-container{
     background-color: #F8F5F3;
     width: 1100px;
     height: 1100px;
 
     position: absolute;
     display: none;
-    right: -300px;
+    right:-300px;
     overflow: hidden;
     border-radius: 600px;
 }
-
-.liveperson-logo {
-    display: block;
+.liveperson-logo{
+    display:block;
     margin: 32px 0 0 32px;
 }
-
-.lp-tips-container {
+.lp-tips-container{
     display: inline-block;
     width: 328px;
-    height: 216px;
+    height:216px;
     margin-left: 40px;
     margin-top: 40px;
 }
-
-.lp-tips-header {
+.lp-tips-header{
     font-weight: bold;
     font-size: 16px;
     line-height: 28px;
@@ -155,8 +140,7 @@ a:hover {
     font-family: Roboto;
     color: #FFFFFF
 }
-
-.lp-tips-content {
+.lp-tips-content{
     width: 328px;
     height: 24px;
     font-weight: normal !important;
