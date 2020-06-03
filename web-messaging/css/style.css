@@ -31,12 +31,10 @@ body {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-
-.liveperson-logo {
-    display: none;
+.liveperson-logo{
+    display:none;
 }
-
-.greeting-bot-header {
+.greeting-bot-header{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -46,12 +44,10 @@ body {
     letter-spacing: 0.008em;
     color: #FFFFFF;
 }
-
-.lp-tips-container {
-    display: none;
+.lp-tips-container{
+    display:none;
 }
-
-.greeting-bot-label {
+.greeting-bot-label{
     display: none;
     font-family: Roboto;
     font-style: normal;
@@ -62,7 +58,6 @@ body {
     letter-spacing: 0.01em;
     color: #FFFFFF;
 }
-
 #lp_btn_login {
     /*width: 291px;*/
     height: 40px;
@@ -144,11 +139,9 @@ body {
     border-radius: 24px;
     background-image: linear-gradient(349deg, #9153f3, #36bff0, #32c6f4);
 }
-
-.spotlight-content-container {
-    display: none;
+.spotlight-content-container{
+    display:none;
 }
-
 #lp_lnk_setup {
     margin-top: 50px;
     width: 170px;
@@ -293,7 +286,7 @@ body {
 }
 
 #info-form {
-    width: 392px;
+    width: 800px;
 }
 
 .modal-body {

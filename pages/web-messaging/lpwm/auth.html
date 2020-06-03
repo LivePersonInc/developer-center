@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function getURLParams(search) {
+            var queryParams = {}, queryArray, singleQuery;
+            queryArray = search.substr(1).split("&");
+            for (var i = 0; i < queryArray.length; i++) {
+                if (queryArray[i].indexOf("=") > -0) {
+                    singleQuery = queryArray[i].split("=");
+                    if (singleQuery.length == 2) {
+                        queryParams[decodeURIComponent(singleQuery[0])] = decodeURIComponent(singleQuery[1]);
+                    }
+                }
+            }
+            return queryParams;
+        }
+        function _getAccountIdFromUnifiedConfig(params) {
+            var state = params.state;
+            var redirectURI = params.redirect_uri;
+            if (state) {
+                state = JSON.parse(state);
+                if (state.lpUnifiedWindowConfig) {
+                    return state.lpUnifiedWindowConfig.accountId;
+                }
+            }
+            else if (redirectURI) {
+                redirectURI = decodeURIComponent(redirectURI);
+                var search = redirectURI.split('?');
+                if (search.length > 0) {
+                    var urlParams = getURLParams('?' + search[1]);
+                    if (urlParams.lpUnifiedWindowConfig) {
+                        var conf = JSON.parse(urlParams.lpUnifiedWindowConfig);
+                        return (conf && conf.accountId) || '';
+                    }
+                }
+            }
+            return '';
+        }
+        window.doLogIn = function () {
+        var visitorName = document.getElementById("visitorNameForUMSAuth").value;
+        var queryParams = getURLParams(window.location.search);
+        if (!visitorName) {
+            visitorName = queryParams.client_id
+        }
+        var state = '';
+        var accountId = '';
+        if(queryParams.state){
+            state = '&state=' + queryParams.state;
+        }
+        if(_getAccountIdFromUnifiedConfig(queryParams)){
+            var accountId = '&accountId=' + _getAccountIdFromUnifiedConfig(queryParams)
+        }
+        window.location.href = queryParams.redirect_uri + (queryParams.redirect_uri.includes('?') ? '&' : '?') + "code=" + visitorName + "&lpDebug=2" + state + accountId;
+    }
+    </script>
+</head>
+
+<body>
+    Visitor name for authentication: <input id="visitorNameForUMSAuth" type="text">
+    <button id="authButton" style="font-size: 15px;" onclick="doLogIn()">Login!</button>
+</body>
+
+</html>
