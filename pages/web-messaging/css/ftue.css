@@ -1,5 +1,5 @@
 body{
-    background: #090C43;
+    background: #00213A;
     overflow: hidden;
 }
 
@@ -10,6 +10,18 @@ a {
     color: #005EF4;
     font-size: 14px;
 
+}
+ul{
+    padding-left: 15px !important;
+}
+
+ul{
+    list-style-image: url("img/Ellipse.png");
+}
+
+li.lp-tips-content ::marker{
+    border: 1px solid #818299;
+    color: #818299 !important;
 }
 a:focus {
     outline: none !important;
@@ -33,8 +45,8 @@ a:hover {
 .greeting-bot-header{
     font-family: Roboto;
     display : block;
-    width: 144px;
-    margin: 0 auto 16px auto;
+    width: 279px;
+    margin: 0 auto 62px auto;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -42,38 +54,48 @@ a:hover {
     letter-spacing: 0.008em;
     color: #FFFFFF;
 }
-.greeting-bot-label{
-    width: 672px;
-    height: 48px;
-    margin: 0 auto 62px auto;
-    padding-bottom: 62px;
-    display: block;
+.container-content{
+    width: 304px;
+    height: 128px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
     letter-spacing: 0.01em;
-    color: #FFFFFF;
+    color: #5F617A;
+}
+.hyperlink-learn{
+    width: 98px;
+    height: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+    letter-spacing: 0.01em;
+    /* Primary/Electric Blue */
+    color: #005EF4;
 }
 .spotlight-content-container{
     width: 324px;
     height: 459px;
     display: block !important;
-    margin-top: 15%;
-    margin-left: 30%;
+    margin-top: 17%;
+    margin-left: 28%;
 }
 .heading-h5{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    width: inherit;
+    width: 321px;
     height: 48px;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.01em;
     color: #090C43;
+    margin-bottom: 8px;
 }
 .spotlight-title{
     font-size: 14px;
@@ -96,30 +118,31 @@ a:hover {
     font-style: normal;
     font-weight: 500;
     font-family: Roboto;
-    text-transform: uppercase;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 0.04em;
     color: #5F617A;
+    margin-bottom: 12px;
 }
 .lp-window-root>.lpmx {
-    left: 0;
+    left: 0 !important;
+    right:0 !important;
     top: 0 !important;
-    margin-top: 11% !important;
+    margin-top: 160px !important;
     margin-right: auto !important;
     margin-left: auto !important;
 }
 
 .spotlight-container{
     background-color: #F8F5F3;
-    width: 1100px;
-    height: 1100px;
-
+    width: 900px;
+    height: 900px;
+    margin-top: 6%;
     position: absolute;
     display: none;
-    right:-300px;
+    right: -10%;
     overflow: hidden;
-    border-radius: 600px;
+    border-radius: 100%;
 }
 .liveperson-logo{
     display:block;
@@ -130,7 +153,7 @@ a:hover {
     width: 328px;
     height:216px;
     margin-left: 40px;
-    margin-top: 40px;
+    margin-top: 180px;
 }
 .lp-tips-header{
     font-weight: bold;
@@ -150,4 +173,12 @@ a:hover {
     font-family: Roboto;
     color: #FFFFFF;
     margin-bottom: 16px;
+
+}
+.elipses{
+    display:inline-block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #818299;
+    box-sizing: border-box;
 }

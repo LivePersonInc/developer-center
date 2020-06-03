@@ -47,17 +47,7 @@ body {
 .lp-tips-container{
     display:none;
 }
-.greeting-bot-label{
-    display: none;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.01em;
-    color: #FFFFFF;
-}
+
 #lp_btn_login {
     /*width: 291px;*/
     height: 40px;
