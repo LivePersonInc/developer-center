@@ -975,6 +975,12 @@ Define date-time format.
 * **Default value:** No value
 
 
+#### message_status_numeric_timestamp_only
+When false (default), time stamps displays information relative to when sent/distributed/read, for example, '5 minutes ago'. When true, shows as numeric only, for example, '11:32.'
+
+* **Type:** bool
+* **Default value:** false
+
 
 #### sendingMessageTimeoutInMinutes
 Define timeout for automatic resending pending message before moving it to failed.
