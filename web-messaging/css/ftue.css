@@ -1,11 +1,10 @@
 body {
     background: #00213A;
-    overflow: hidden;
+    overflow-y: hidden;
+    min-width: 1400px;
 }
 
 a {
-    /*electric blue
-    */
     font-family: Roboto;
     color: #005EF4;
     font-size: 14px;
@@ -14,13 +13,6 @@ a {
 
 ul {
     padding-left: 15px !important;
-}
-
-
-
-li.lp-tips-content ::marker {
-    border: 1px solid #818299;
-    color: #818299 !important;
 }
 
 a:focus {
@@ -198,4 +190,14 @@ a:hover {
     height: 6px;
     border: 1px solid #818299;
     box-sizing: border-box;
+}
+
+@media (max-width: 1400px) {
+    .spotlight-container {
+        right: -25%;
+    }
+
+    .lp-window-root>.lpmx {
+        margin-left: 500px !important;
+    }
 }
