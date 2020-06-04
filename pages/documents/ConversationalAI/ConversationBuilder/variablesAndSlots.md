@@ -13,10 +13,6 @@ indicator: both
 
 In the [custom rules](conversation-builder-interactions-configuration-next-action.html#custom-rules) of an interaction, you can assign various data points to either slots or variables. Both are useful in [API integrations](conversation-builder-integrations-api-integrations.html).
 
-### Displaying data to the user
-
-[See here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions) for how to display variables and slots in interactions.
-
 ### Variables
 
 Variables are the default way to store and access important data points throughout the flow of a bot. 
@@ -121,3 +117,7 @@ There are four options for the duration:
 * **Session**: The data will be saved for the entirety of the consumer's browser session. This is useful when using the data to query APIs and retrieve information that might be useful for multiple dialogs.
 
 * **Forever**: The data will be saved and accessible via Conversation Builder for 180 days. **Note**: Use of the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html) instead of this option is recommended; this option will be deprecated in a future release.
+
+### Displaying data to the consumer
+
+[See here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions) for how to display variables and slots in interactions.
