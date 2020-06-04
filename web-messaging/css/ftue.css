@@ -1,11 +1,9 @@
 body {
     background: #00213A;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 a {
-    /*electric blue
-    */
     font-family: Roboto;
     color: #005EF4;
     font-size: 14px;
@@ -14,13 +12,6 @@ a {
 
 ul {
     padding-left: 15px !important;
-}
-
-
-
-li.lp-tips-content ::marker {
-    border: 1px solid #818299;
-    color: #818299 !important;
 }
 
 a:focus {
@@ -164,8 +155,8 @@ a:hover {
 
 .lp-tips-container {
     display: inline-block;
-    width: 328px;
-    height: 216px;
+    width: 22%;
+    height: 20%;
     margin-left: 40px;
     margin-top: 180px;
 }
@@ -180,8 +171,8 @@ a:hover {
 }
 
 .lp-tips-content {
-    width: 328px;
-    height: 24px;
+    /* width: 328px;
+    height: 24px; */
     font-weight: normal !important;
     font-size: 16px;
     line-height: 28px;
@@ -198,4 +189,20 @@ a:hover {
     height: 6px;
     border: 1px solid #818299;
     box-sizing: border-box;
+}
+
+@media (max-width: 1400px) {
+    .spotlight-container {
+        right: -25%;
+    }
+
+
+}
+
+@media (max-width: 1100px) {
+    .spotlight-container {
+        width: 700px;
+        height: 700px;
+
+    }
 }
