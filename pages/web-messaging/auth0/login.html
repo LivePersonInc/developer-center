@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In with Auth0</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="https://cdn.auth0.com/styleguide/components/2.0.2/media/logos/img/favicon.png">
+    <script>
+        function getURLParams(search) {
+            var queryParams = {}, queryArray, singleQuery;
+            queryArray = search.substr(1).split("&");
+            for (var i = 0; i < queryArray.length; i++) {
+                if (queryArray[i].indexOf("=") > -0) {
+                    singleQuery = queryArray[i].split("=");
+                    if (singleQuery.length == 2) {
+                        queryParams[decodeURIComponent(singleQuery[0])] = decodeURIComponent(singleQuery[1]);
+                    }
+                }
+            }
+            return queryParams;
+        }
+        var urlParams = getURLParams(window.location.search) || {};
+        var site = urlParams.site || '40859459';
+        var redirect_uri = urlParams.redirect_uri || 'https://natiz.github.io/auth0';
+        var state = urlParams.state || {};
+    </script>
+    <!-- BEGIN LivePerson Monitor. -->
+    <script language="javascript">
+        window.lpTag = window.lpTag || {};
+        if (typeof window.lpTag._tagCount === 'undefined') {
+            window.lpTag = {
+                site: site || '',
+                section: lpTag.section || '',
+                autoStart: lpTag.autoStart === false ? false : true,
+                ovr: lpTag.ovr || {domain: 'tags-a.liveperson.net', tagjs: 'tags-a.liveperson.net'},
+                _v: '1.5.1',
+                _tagCount: 1,
+                protocol: location.protocol,
+                events: {
+                    bind: function (app, ev, fn) {
+                        lpTag.defer(function () {
+                            lpTag.events.bind(app, ev, fn)
+                        }, 0)
+                    }, trigger: function (app, ev, json) {
+                        lpTag.defer(function () {
+                            lpTag.events.trigger(app, ev, json)
+                        }, 1)
+                    }
+                },
+                defer: function (fn, fnType) {
+                    if (fnType == 0) {
+                        this._defB = this._defB || [];
+                        this._defB.push(fn)
+                    } else if (fnType == 1) {
+                        this._defT = this._defT || [];
+                        this._defT.push(fn)
+                    } else {
+                        this._defL = this._defL || [];
+                        this._defL.push(fn)
+                    }
+                },
+                load: function (src, chr, id) {
+                    var t = this;
+                    setTimeout(function () {
+                        t._load(src, chr, id)
+                    }, 0)
+                },
+                _load: function (src, chr, id) {
+                    var url = src;
+                    if (!src) {
+                        url = this.protocol + '//' + ((this.ovr && this.ovr.domain) ? this.ovr.domain : 'lptag.liveperson.net') + '/tag/tag.js?site=' + this.site
+                    }
+                    var s = document.createElement('script');
+                    s.setAttribute('charset', chr ? chr : 'UTF-8');
+                    if (id) {
+                        s.setAttribute('id', id)
+                    }
+                    s.setAttribute('src', url);
+                    document.getElementsByTagName('head').item(0).appendChild(s)
+                },
+                init: function () {
+                    this._timing = this._timing || {};
+                    this._timing.start = (new Date()).getTime();
+                    var that = this;
+                    if (window.attachEvent) {
+                        window.attachEvent('onload', function () {
+                            that._domReady('domReady')
+                        })
+                    } else {
+                        window.addEventListener('DOMContentLoaded', function () {
+                            that._domReady('contReady')
+                        }, false);
+                        window.addEventListener('load', function () {
+                            that._domReady('domReady')
+                        }, false)
+                    }
+                    if (typeof(window._lptStop) == 'undefined') {
+                        this.load()
+                    }
+                },
+                start: function () {
+                    this.autoStart = true
+                },
+                _domReady: function (n) {
+                    if (!this.isDom) {
+                        this.isDom = true;
+                        this.events.trigger('LPT', 'DOM_READY', {t: n})
+                    }
+                    this._timing[n] = (new Date()).getTime()
+                },
+                vars: lpTag.vars || [],
+                dbs: lpTag.dbs || [],
+                ctn: lpTag.ctn || [],
+                sdes: lpTag.sdes || [],
+                ev: lpTag.ev || []
+            };
+            lpTag.init()
+        } else {
+            window.lpTag._tagCount += 1
+        }
+        <!-- END LivePerson Monitor. -->
+    </script>
+</head>
+<body>
+    <div>
+        <h1>IMPLICIT LOGIN</h1>
+            <div id="implicit-login" style="width: 320px; margin: 40px auto; padding: 10px; border-style: dashed; border-width: 1px; box-sizing: border-box;">
+        embedded area
+        </div>
+    </div>
+    <div style="float:left;">
+        <h1>CODE LOGIN</h1>
+            <div id="code-login" style="width: 320px; margin: 40px auto; padding: 10px; border-style: dashed; border-width: 1px; box-sizing: border-box;">
+        embedded area
+        </div>
+    </div>
+<script src="https://cdn.auth0.com/js/lock/10.20/lock.min.js"></script>
+<script>
+  var lockImplicit = new Auth0Lock('AMWPs9H_5y1RuBgarnUc8se8RKvHr78z', 'natiz.auth0.com', {
+    container: 'implicit-login',
+    auth: {
+      redirectUrl: 'https://natiz.github.io/auth0/implicit.html',
+      responseType: 'id_token',
+      params: {
+        scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
+      }
+    }
+  });
+  lockImplicit.show();
+    
+    
+  var lockCode = new Auth0Lock('AMWPs9H_5y1RuBgarnUc8se8RKvHr78z', 'natiz.auth0.com', {
+    container: 'code-login',
+    auth: {
+       redirectUrl: 'https://natiz.github.io/auth0/code.html',
+//         redirectUrl: 'https://lpcdn-a.lpsnmedia.net/le_unified_window/index.html',
+      responseType: 'code',
+      params: {
+        scope: 'openid email', // Learn about scopes: https://auth0.com/docs/scopes
+          
+      }
+    }
+  });
+  lockCode.show();
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Auth0 Sample - Code Flow</title>
+
+    <script>
+        
+        function getURLParams(search) {
+            var queryParams = {}, queryArray, singleQuery;
+            queryArray = search.substr(1).split("&");
+            for (var i = 0; i < queryArray.length; i++) {
+                if (queryArray[i].indexOf("=") > -0) {
+                    singleQuery = queryArray[i].split("=");
+                    if (singleQuery.length == 2) {
+                        queryParams[decodeURIComponent(singleQuery[0])] = decodeURIComponent(singleQuery[1]);
+                    }
+                }
+            }
+            return queryParams;
+        }
+        var urlParams = getURLParams(window.location.search) || {};
+        window.site = urlParams.site || '40859459';
+        window.accessToken = urlParams.code;
+        console.log("CODE", window.accessToken);
+        var lpGetAuthenticationToken = function (callback) {
+            console.log("inside lpGetAuthenticationToken!");
+            callback({
+                redirect_uri: "https://natiz.github.io/oauth0/code.html",
+                ssoKey: window.accessToken,
+            });
+        }
+        
+        window.lpTag = window.lpTag || {};
+        window.lpTag.sdes = window.lpTag.sdes || [];
+        lpTag.sdes.push({"type": "ctmrinfo", "info": {customerId: "natiz@liveperson.com"}});
+    </script>
+    <!-- BEGIN LivePerson Monitor. -->
+    <script language="javascript">
+        window.lpTag = window.lpTag || {};
+        if (typeof window.lpTag._tagCount === 'undefined') {
+            window.lpTag = {
+                site: site || '',
+                section: lpTag.section || '',
+                autoStart: lpTag.autoStart === false ? false : true,
+                ovr: lpTag.ovr || {domain: 'tags-a.liveperson.net', tagjs: 'tags-a.liveperson.net'},
+                _v: '1.5.1',
+                _tagCount: 1,
+                protocol: location.protocol,
+                events: {
+                    bind: function (app, ev, fn) {
+                        lpTag.defer(function () {
+                            lpTag.events.bind(app, ev, fn)
+                        }, 0)
+                    }, trigger: function (app, ev, json) {
+                        lpTag.defer(function () {
+                            lpTag.events.trigger(app, ev, json)
+                        }, 1)
+                    }
+                },
+                defer: function (fn, fnType) {
+                    if (fnType == 0) {
+                        this._defB = this._defB || [];
+                        this._defB.push(fn)
+                    } else if (fnType == 1) {
+                        this._defT = this._defT || [];
+                        this._defT.push(fn)
+                    } else {
+                        this._defL = this._defL || [];
+                        this._defL.push(fn)
+                    }
+                },
+                load: function (src, chr, id) {
+                    var t = this;
+                    setTimeout(function () {
+                        t._load(src, chr, id)
+                    }, 0)
+                },
+                _load: function (src, chr, id) {
+                    var url = src;
+                    if (!src) {
+                        url = this.protocol + '//' + ((this.ovr && this.ovr.domain) ? this.ovr.domain : 'lptag.liveperson.net') + '/tag/tag.js?site=' + this.site
+                    }
+                    var s = document.createElement('script');
+                    s.setAttribute('charset', chr ? chr : 'UTF-8');
+                    if (id) {
+                        s.setAttribute('id', id)
+                    }
+                    s.setAttribute('src', url);
+                    document.getElementsByTagName('head').item(0).appendChild(s)
+                },
+                init: function () {
+                    this._timing = this._timing || {};
+                    this._timing.start = (new Date()).getTime();
+                    var that = this;
+                    if (window.attachEvent) {
+                        window.attachEvent('onload', function () {
+                            that._domReady('domReady')
+                        })
+                    } else {
+                        window.addEventListener('DOMContentLoaded', function () {
+                            that._domReady('contReady')
+                        }, false);
+                        window.addEventListener('load', function () {
+                            that._domReady('domReady')
+                        }, false)
+                    }
+                    if (typeof(window._lptStop) == 'undefined') {
+                        this.load()
+                    }
+                },
+                start: function () {
+                    this.autoStart = true
+                },
+                _domReady: function (n) {
+                    if (!this.isDom) {
+                        this.isDom = true;
+                        this.events.trigger('LPT', 'DOM_READY', {t: n})
+                    }
+                    this._timing[n] = (new Date()).getTime()
+                },
+                vars: lpTag.vars || [],
+                dbs: lpTag.dbs || [],
+                ctn: lpTag.ctn || [],
+                sdes: lpTag.sdes || [],
+                ev: lpTag.ev || []
+            };
+            lpTag.init()
+        } else {
+            window.lpTag._tagCount += 1
+        }
+        <!-- END LivePerson Monitor. -->
+    </script>
+</head>
+<body style="text-align: center">
+    <h1>Howdy, <span id="nick"></h1>
+        <h3>AccessToken: <span id="accessToken"></span></h3>
+<script src="https://cdn.auth0.com/js/lock/10.20/lock.min.js"></script>
+<script>
+var lock = new Auth0Lock('AMWPs9H_5y1RuBgarnUc8se8RKvHr78z', 'natiz.auth0.com');
+// lock.on("hash_parsed", function (res) {
+//     console.log("HASH PARSED", res);
+//     if (res.idToken) {
+//         window.accessToken = res.idToken;
+//         document.getElementById('accessToken').textContent = res.idToken;
+//         console.log("GOT ACCESS TOKEN", res.idToken);
+//     }
+//     if (res.idTokenPayload) {
+//         if (res.idTokenPayload.email) {
+//             console.log("PUSHING SDE", res.idTokenPayload.email);
+//             document.getElementById('nick').textContent = res.idTokenPayload.email;
+//             lpTag.sdes.push({"type": "ctmrinfo", "info": {customerId: res.idTokenPayload.email}});
+//         }
+//     }
+// });
+lock.on("authenticated", function(authResult) {
+  // Use the token in authResult to getUserInfo() and save it to localStorage
+  lock.getUserInfo(authResult.accessToken, function(error, profile) {
+    if (error) {
+      // Handle error
+      return;
+    }
+      
+      console.log("GOT PROFILE", profile);
+      window.accessToken = authResult.accessToken;
+      
+
+    document.getElementById('nick').textContent = profile.nickname;
+
+    localStorage.setItem('accessToken', authResult.accessToken);
+    localStorage.setItem('profile', JSON.stringify(profile));
+  });
+});
+
+    </script>
+    
+<script>
+</script>
+</body>
+</html>
