@@ -87,7 +87,7 @@ a:hover {
     font-style: normal;
     font-weight: bold;
     width: 321px;
-    height: 48px;
+
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.01em;
@@ -183,19 +183,14 @@ a:hover {
 
 }
 
-.elipses {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border: 1px solid #818299;
-    box-sizing: border-box;
-}
-
 @media (max-width: 1400px) {
     .spotlight-container {
         right: -25%;
     }
+    .heading-h5 {
+        width: 50%;
 
+    }
 
 }
 
