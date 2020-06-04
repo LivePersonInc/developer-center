@@ -166,26 +166,41 @@ The last device registered to the LP Push Service receives the push, which means
 
 This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache. Otherwise, it will be fetched again with new data.
 
+{:.notice}
+This method doesn't require Consumer to register for Push Notifications. 
+Additionally if authenticationParams are provided those will be use to authenticate, otherwise store authentication will be use.
+
 ```swift
-func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())
+func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams?, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())
 ```
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| authenticationParams | Object type: LPAuthenticationParams?<br><br>Represents an object to determine the properties of an authenticated connection. If using authenticate connection, this parameter must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login.<br><br>-**Implicit Flow**: pass 'jwt' parameter only.<br>- **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html). |
 | completion | called once the operation ends successfully with the counter of unread badge messages. | If no unread message, 0 will be returned. |
 | failure | called once the operation of retrieving unread messages count failed for the provided conversation query. | -- |
 
 
-### getUnreadMessagesCount(Updated)
-**This method is available since SDK version 4.1.0.**
+### isRegisteredForPushNotifications
 
-This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
+This method can be use to check if current consumer and push notification token are registered for Push Notifications on LP Pusher
 
+{:.notice}
+If authenticationParams are provided those will be use to authenticate, otherwise store authentication will be use.
 
 ```swift
-func getUnreadMessagesCount(brandID: String, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:Error)->())
+func isRegisteredForPushNotifications(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams? = nil, token: Data, alternateBundleID: String? = nil, completion: @escaping (Bool) -> (), failure: @escaping (Error) -> ())
 ```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| authenticationParams | Object type: LPAuthenticationParams?<br><br>Represents an object to determine the properties of an authenticated connection. If using authenticate connection, this parameter must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login.<br><br>-**Implicit Flow**: pass 'jwt' parameter only.<br>- **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html). |
+| token | A token that identifies the device to APNs. The token is an opaque data type because that is the form that the provider needs to submit to the APNs servers when it sends a notification to a device. | The APNs servers require a binary format for performance reasons. <br> This is the exact same dictionary as received in application:didRegisterForRemoteNotificationsWithDeviceToken: method |
+| alternateBundleID | An optional value that can be used so that the LivePerson pusher service identifies your app with this identifier. | In debug mode, the SDK appends "-Dev" string to the bundle ID.  |
+| completion | called once the operation ends successfully with registration value. | If current device token and consumerId pair are register, true will be returned. |
+| failure | called once the operation of retrieving registration status failed with provided parameters. | -- |
 
 ### handlePush
 
@@ -315,7 +330,7 @@ Use this API method, in AppDelegate, to register to LPMessagingSDK push notifica
 **Note:** Push notifications must be pre-configured, and you must upload an APN certificate to LiveEngage. For details, see [how to configure push notifications](push-service-overview.html).
 
 ```swift
-`func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil, authenticationParams: LPAuthenticationParams? = nil)`
+func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil, authenticationParams: LPAuthenticationParams? = nil)
 ```
 
 | Parameter | Description | Notes |
@@ -375,6 +390,55 @@ func resolveConversation(_ conversation: Conversation, completion: (() -> Void)?
 | conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations displays in the following screens. | Default: sorts the conversations by account number.  |
 
 
+### setLoggingLevel
+
+Setter for the logging level of console logs produced by LPMessaging iOS SDK. (Lives within the LPInfraFacade). This will be replacing the previous functionality via LogsManager. 
+
+```swift
+class func setLoggingLevel( level: LPLoggingLevel)
+```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| level | level: The level of logging options in order: (.TRACE, .DEBUG, .INFO, .WARNING, .ERROR, .OFF) | The default value for release mode is .INFO and for debug is .TRACE.  Apps should not log lower than .INFO in release configurations.|
+
+### getLogSnapShot
+
+The mechanism to retrieve LPMessagingIOS SDK logs in an array of Strings (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+
+```swift
+class func getLogSnapshot(level: LPLoggingLevel) -> [String]
+```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| level | level: The level of logging options in order: (.TRACE, .DEBUG, .INFO, .WARNING, .ERROR, .OFF) | The logger only records the last 100 logs total, filtering by log level may reduce the number of logs returned.|
+
+### getLogStringBlock
+
+The mechanism to retrieve LPMessagingIOS SDK logs in a single String block (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+
+```swift
+class func getLogSnapshot(level: LPLoggingLevel) -> [String]
+```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| level | level: The level of logging options in order: (.TRACE, .DEBUG, .INFO, .WARNING, .ERROR, .OFF) | The logger only records the last 100 logs total, filtering by log level may reduce the number of logs returned.|
+
+### setDataMaskingEnabled
+
+Should masking PII be enabled for the logging (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+
+```swift
+class func getLogSnapshot(level: LPLoggingLevel) -> [String]
+```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| enabled | enabled: Is masking PII enabled for the logs. | This is enabled by default for Release builds.|
+
+
 ### setUserProfile
 
 Use this API method to add custom parameters about the user and set them for the messaging agent.
@@ -402,19 +466,6 @@ func showConversation(_ conversationViewParams: LPConversationViewParams, authen
 | conversationViewParams | Object type: LPConversationViewParams <br><br>Represents an object to determine conversation mode, filter and container. Such as Container or Window or if ViewOnly. | For object details see [LPConversationViewParams](consumer-experience-ios-sdk-interfacedefinitions.html). |
 | authenticationParams | Object type: LPAuthenticationParams?<br><br>Represents an object to determine the properties of an authenticated connection. If using authenticated connection, this paramater must be passed. LPAuthenticationParams supports Code Flow login or Implicit Flow login. <br><br>- **Implicit Flow**: pass 'jwt' paramater only.<br>- **Code Flow**: pass 'authCode' and 'redirectURI' only. | For object details see [LPAuthenticationParams](consumer-experience-ios-sdk-interfacedefinitions.html). |
 
-### subscribeLogEvents
-
-Use this API method to subscribe to log events (Trace, Debug, Info, Warning, Error). Each time a log event with the passed log level occurs, the callback invokes with the log object.
-
-```swift
-func subscribeLogEvents(_ logLevel: LogLevel, logEvent: @escaping LogEventClosure)
-```
-
-| Parameter | Description | Notes |
-| :--- | :--- | :--- |
-| logLevel | object is an instance of [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html). | |
-| logEvent | The completion block passes the [LPLog](consumer-experience-ios-sdk-interfacedefinitions.html) object, which consists of all the information for the log. | To get text, use log.text |
-
 
 ### toggleChatActions
 
@@ -436,8 +487,49 @@ func toggleChatActions(_ accountID: String, sender: UIBarButtonItem? = nil)
 
 ### Deprecated methods
 
+#### getUnreadMessagesCount (Deprecated)
+
+**This method is deprecated since SDK version 5.2.0.**
+
+*Use [func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams?, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())](consumer-experience-ios-sdk-messaging-methods.html#getunreadmessagescount) instead*
+
+When unread messages are waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon, or another marker to show unread messages.
+
+With every push, the SDK receives the unread messages number through the LP Push Service.
+
+{:.important}
+The last device registered to the LP Push Service receives the push, which means only one device can fetch the unready messages indication.  So, if the user uses two devices in parallel, the device that that does not receive push events receives updates only once a message has been sent from that device and the push arrives.  Additionally, if a conversation is ongoing in web messaging, then the push does not arrive on the device since the web socket is already open. 
+
+**Get the unread message badge counter**
+
+This API method uses a threshold mechanism of 10 seconds from the last time the badge retrieved from the server. If calling this method within less than 10 seconds, the counter will be returned from cache. Otherwise, it will be fetched again with new data.
+
+```swift
+func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())
+```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| conversationQuery | Represents a 'filter’ for the conversation screen, determining which of the conversations will be displayed in the following screens. | Default: sorts the conversations by account number. <br> See helpers methods above for how to generate a conversation query. |
+| completion | called once the operation ends successfully with the counter of unread badge messages. | If no unread message, 0 will be returned. |
+| failure | called once the operation of retrieving unread messages count failed for the provided conversation query. | -- |
+
+
+#### getUnreadMessagesCount(Deprecated)
+**This method is deprecated since SDK version 5.2.0.**
+
+*Use [func getUnreadMessagesCount(_ conversationQuery: ConversationParamProtocol, authenticationParams: LPAuthenticationParams?, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:NSError)->())](consumer-experience-ios-sdk-messaging-methods.html#getunreadmessagescount) instead*
+
+This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
+
+
+```swift
+func getUnreadMessagesCount(brandID: String, completion: @escaping (_ badgeCounter: Int)->(), failure: @escaping (_ error:Error)->())
+```
+
 #### showConversation (Deprecated)
-*This method is deprecated since SDK version 2.7.0.**
+**This method is deprecated since SDK version 2.7.0.**
+
 *Use [showConversation(_ conversationViewParams: LPConversationViewParams, authenticationParams: LPAuthenticationParams? = nil)](consumer-experience-ios-sdk-messaging-methods.html#showconversation) instead*
 
 This method is used to open the conversation screen.

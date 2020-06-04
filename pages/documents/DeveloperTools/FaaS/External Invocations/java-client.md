@@ -37,7 +37,7 @@ The following methods functionality is provided:
 * `isImplemented` which allows to test whether a method, that implements a given event, exists
 * `getLambdas` which returns all lambdas belonging to the user account specified in the client
 
-More detailed documentation can be found [here.](https://lpgithub.dev.lprnd.net/RnD-Mannheim/faas-client/tree/develop)
+More detailed documentation can be found [here.](liveperson-functions-development-overview.html)
 
 ## Exception Handling
 

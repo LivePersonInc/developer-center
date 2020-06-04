@@ -120,13 +120,15 @@
       - pagename: Tutorials & Guides
         subpages:
           - subpagename: Getting Started
+          - subpagename: Using Meta Intents with Conversation Builder
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
+        #  - subpagename: Implementing the Shift Status & Current Queue Health APIs
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
           - subpagename: Custom Bots
-         # - subpagename: Survey Bots
+          - subpagename: Post-Conversation Survey Bots
           - subpagename: Bot Basics
           - subpagename: Bot Groups
           - subpagename: Bot-to-Bot Transfers
@@ -187,6 +189,7 @@
           - subpagename: Manage Conversation Flow
           - subpagename: Log & Debug
           - subpagename: Manage the Context Session Store
+          - subpagename: askMaven
           - subpagename: Deprecated Functions
       - pagename: Testing & Deployment
         subpages:
@@ -196,6 +199,7 @@
       - pagename: Best Practices
         subpages:
           - subpagename: Train & Tune NLU
+          - subpagename: Custom Event Logging
           - subpagename: Reusable Components
           - subpagename: A Pre-Launch Checklist
   - documentname: Maven AI
@@ -228,6 +232,7 @@
       - pagename: Natural Language Understanding
       - pagename: Domains
       - pagename: Intents
+      - pagename: Meta Intents
       - pagename: Entities
   - documentname: Knowledge Base
     pages:
@@ -427,6 +432,31 @@
             - subpagename: Delete Agent Groups
             - subpagename: Delete Agent Group
         - pagename: Appendix
+
+    - documentname: Agent Survey For Messaging Configuration API
+      pages:
+        - pagename: Overview
+        - pagename: Appendix
+        - pagename: Methods
+          subpages:
+            - subpagename: Create Agent Survey Object
+            - subpagename: Get All Agent Survey Objects
+            - subpagename: Update Agent Survey Object
+            - subpagename: Delete Agent Survey Object
+            - subpagename: Get Agent Survey Object by ID
+
+    - documentname: Agent Survey For Messaging Runtime API
+      pages:
+        - pagename: Overview
+        - pagename: Appendix
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Agent Survey
+            - subpagename: Get Agent Survey State
+            - subpagename: Save Agent Survey State
+            - subpagename: Submit Agent Survey
+            - subpagename: Dismiss Agent Survey
+
     - documentname: Agent Status Reason API
       basedomain: https://{domain}/api/account/{accountId}/configuration/le-agents/status-reasons
       pages:
@@ -604,6 +634,7 @@
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
           - subpagename: Debugger
+      - pagename: "Command Line Interface (CLI)"
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
@@ -759,15 +790,6 @@
       - subpagename: String Values
       - subpagename: Override SDK Strings
       - subpagename: Plural String resource Example
-    - pagename: Voice and Video for Android SDK (BETA)
-      subpages:
-      - subpagename: Overview
-      - subpagename: Getting Started
-      - subpagename: LiveEngage Configuration
-      - subpagename: Customizing
-      - subpagename: Sample Apps
-      - subpagename: FAQ
-      - subpagename: Release Notes
     - pagename: Latest Release Notes
     - pagename: All Release Notes
     - pagename: Resources
@@ -791,6 +813,7 @@
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Scroll Behavior Configuration
+      - subpagename: Logging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -808,15 +831,6 @@
       - subpagename: Localization Keys
       - subpagename: String Localization
       - subpagename: Date and Time Styles
-
-    - pagename: Voice and Video for iOS SDK (BETA)
-      subpages:
-      - subpagename: Overview
-      - subpagename: Getting Started
-      - subpagename: Customizing
-      - subpagename: LiveEngage Configuration
-      - subpagename: Sample App
-      - subpagename: Appendix
     - pagename: All Releases
     - pagename: Resources
       subpages:
@@ -959,6 +973,7 @@
           - subpagename: Authorization Request
           - subpagename: Refresh Request
           - subpagename: Token Request
+          - subpagename: Token Revocation Request
         - pagename: Samples
           subpages:
             - subpagename: Application Login Sample App

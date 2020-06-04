@@ -7,3 +7,4 @@ _pdf
 .bundle
 _algolia_api_key
 .vscode
+vendor

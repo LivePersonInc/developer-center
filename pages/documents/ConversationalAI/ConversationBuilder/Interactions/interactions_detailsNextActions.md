@@ -70,11 +70,13 @@ Variables are the default way to store and access important data points through 
 
 #### Next Step
 
-Select the next step if the displayed condition is satisfied. You have three types of choices:
+Select the next step if the displayed condition is satisfied. You can select from the following:
 
-* Continue to the next interaction (in the dialog)
-* "End interaction," which closes the dialog
-* Jump to a specific interaction that you select by name
+* Continue to the next interaction (in the dialog).
+* "End interaction," which stops the flow within the dialog.
+* "Close conversation," which closes the conversation but doesn't trigger a post-conversation survey; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) for more.
+* "Close dialog," which closes the conversation and triggers a post-conversation survey; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) for more.
+* Jump to a specific interaction that you select by name.
 
 ### Fallback Response
 
