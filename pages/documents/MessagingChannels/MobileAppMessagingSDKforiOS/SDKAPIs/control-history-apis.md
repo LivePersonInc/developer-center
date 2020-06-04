@@ -44,7 +44,7 @@ LPConversationViewParams includes LPConversationHistoryControlParam:
 
 ```swift
 class LPConversationHistoryControlParam: NSObject {
-  var historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay?
+var historyConversationsStateToDisplay: LPConversationsHistoryStateToDisplay (default is .all)
   var historyConversationsMaxDays: UInt?
   historyConversationMaxDaysType: LPConversationHistoryMaxDaysDateType?
 }
@@ -60,12 +60,13 @@ You have three relevant parameters for `LPConversationHistoryControlParam`:
 
 #### LPConversationsHistoryStateToDisplay
 
-Use to present open conversations or closed conversations or all conversations. To present all conversations, do not provide a value.
+Use to present open conversations or closed conversations or all conversations. *Updated:* To present all conversations please use the enum ".all"
 
    ```swift
    enum LPConversationsHistoryStateToDisplay: Int {
        case open
        case close
+       case all
    }
    ```
 

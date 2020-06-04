@@ -123,7 +123,7 @@
           - subpagename: Using Meta Intents with Conversation Builder
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
-          - subpagename: Implementing the Shift Status & Current Queue Health APIs
+        #  - subpagename: Implementing the Shift Status & Current Queue Health APIs
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
@@ -790,15 +790,6 @@
       - subpagename: String Values
       - subpagename: Override SDK Strings
       - subpagename: Plural String resource Example
-    - pagename: Voice and Video for Android SDK (BETA)
-      subpages:
-      - subpagename: Overview
-      - subpagename: Getting Started
-      - subpagename: LiveEngage Configuration
-      - subpagename: Customizing
-      - subpagename: Sample Apps
-      - subpagename: FAQ
-      - subpagename: Release Notes
     - pagename: Latest Release Notes
     - pagename: All Release Notes
     - pagename: Resources
@@ -822,6 +813,7 @@
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Scroll Behavior Configuration
+      - subpagename: Logging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -839,15 +831,6 @@
       - subpagename: Localization Keys
       - subpagename: String Localization
       - subpagename: Date and Time Styles
-
-    - pagename: Voice and Video for iOS SDK (BETA)
-      subpages:
-      - subpagename: Overview
-      - subpagename: Getting Started
-      - subpagename: Customizing
-      - subpagename: LiveEngage Configuration
-      - subpagename: Sample App
-      - subpagename: Appendix
     - pagename: All Releases
     - pagename: Resources
       subpages:
