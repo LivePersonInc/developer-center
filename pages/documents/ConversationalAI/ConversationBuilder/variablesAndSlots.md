@@ -63,15 +63,7 @@ To configure a slot, select the interaction where you'd like to look for entitie
 
 <img class="fancyimage" width="700" src="img/ConvoBuilder/slotAdd.png">
 
-Enter a slot name. **We recommend using standard naming conventions for slots. The slot name is later used to refer to and access the data that the slot contains**. Then, for the value field, look for a pre-configured entity (which you should have set up for your domain previously) by typing in first the "@" character and then the name of your desired entity. Lastly, decide how long you'd like the slot's data to be kept for, i.e., the duration. There are four options:
-
-* Request - the slot's data will only be saved for that particular use of the slot. Only useful if the next question in the tree depends on the slot's data.
-
-* Dialog - the slot's data will only be stored for this specific dialog. Once this dialog ends (either by the user closing the conversation or the automation moving on to a different dialog), the slot's data will be cleared.
-
-* Session - the slot's data will be saved for the entirety of the user's browser session. This is useful when using the data to query APIs and retrieve information which might be useful for multiple dialogs.
-
-* Forever - the slot's data will be saved on our servers forever. It will be accessible via the Conversation Builder for as long as you need it.
+Enter a slot name. **We recommend using standard naming conventions for slots. The slot name is later used to refer to and access the data that the slot contains**. Then, for the value field, look for a pre-configured entity (which you should have set up for your domain previously) by typing in first the "@" character and then the name of your desired entity. Lastly, decide how long you'd like the slot's data to be kept for, i.e., the duration.
 
 `{$botContext.slot.slotName}` is how you can access values in slots and use them in other ways. For example, to have the bot respond with a user's previously stored answer under the assigned entity `animal`, you'd set up a text interaction like so:
 
@@ -113,3 +105,19 @@ If a user manages to express all the slots as part of their intent query, it wil
 Variables are the default storage unit of Conversation Builder, while slots are a special type of variable. The only reason to favor slots is if you need extra functionality that is linked to entities or if entities will be used in an API Integration catalog search, for example.
 
 When in doubt, it is best to use variables. The [Assist](conversation-builder-nlu-assist.html) tool will help to display when slots are most useful.
+
+### Duration of variables and slots
+
+When you define a variable or slot, you specify how long to keep the stored data.
+
+<img class="fancyimage" width="800" src="img/ConvoBuilder/variablesSlotsDuration.png">
+
+There are four options for the duration:
+
+* **Request**: The data will be saved for that particular use of the variable or slot. This option is only useful if the next question in the tree depends on the data.
+
+* **Dialog**: The data will be stored for the specific dialog. Once the dialog ends (either by the consumer closing the conversation or the bot switching to a different dialog), the data will be cleared.
+
+* **Session**: The data will be saved for the entirety of the consumer's browser session. This is useful when using the data to query APIs and retrieve information that might be useful for multiple dialogs.
+
+* **Forever**: The data will be saved and accessible via Conversation Builder for 180 days. **Note**: Use of the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html) instead of this option is recommended; this option will be deprecated in a future release.
