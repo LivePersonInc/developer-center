@@ -232,7 +232,7 @@ There's no way for the consumer to indicate they want to skip the survey entirel
 
 #### The dialogs in my custom bots end with Close Conversation (LP_CLOSECONVERSATION). Do I need to change this?
 
-Yes, you'll need to update the custom bots to use Close Dialog (LP_CLOSEDIALOG) instead. [Close Dialog](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) triggers a post-conversation survey, but [Close Conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) does not.
+Yes, you'll need to update the custom bots to use Close Dialog (LP_CLOSEDIALOG) instead. [Close Dialog](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) allows a post-conversation survey to be triggered, but [Close Conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) does not.
 
 #### I'm an existing Bot Studio user. How do I migrate to using Conversation Builder to create and manage survey bots?
 
