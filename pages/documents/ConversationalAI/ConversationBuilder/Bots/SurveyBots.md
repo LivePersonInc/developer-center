@@ -173,7 +173,7 @@ You don't need to include a Text interaction that thanks the consumer for their 
 
 Survey bot settings include:
 
-- **Enable Bot**: Use this to turn a survey bot on and off. When the bot is online, it responds to user messages. When it is offline, it doesn't. Taking a survey bot offline can be useful if you need to temporarily remove it from your customer traffic flow. The default value is Online.
+- **Enable Bot**: This turns a survey bot on and off. When the bot is online, it responds to user messages. When it is offline, it doesn't. The default value is Online. **Note**: Disabling this setting doesn't prevent the survey from being triggered; it merely stops the bot from sending messages. To temporarily remove a survey bot from your customer traffic flow (i.e., prevent it from triggering), access the bot's **Skill** setting in **Bot Settings**, and remove the assigned skills.
 - **Skill**: If desired, change the skill(s) that will trigger this survey bot.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. Then enter the message to send.
 - **Session Expired Message**: Enable this to send a Session Expired message when the user enters text after the session has timed out. Then enter the message to send. (For information on the Session Length setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
@@ -220,7 +220,7 @@ Typically, brands don't develop in their Production environments, but if you do,
 
 #### How do I disable a survey bot?
 
-If you need to temporarily remove a survey bot from your customer traffic flow, you can disable the bot. To do this, set the **Enable Bot** slider to Off in the bot's **Bot Settings**.
+If you need to temporarily remove a survey bot from your customer traffic flow (i.e., prevent it from triggering), access the bot's **Skill** setting in **Bot Settings**, and remove the assigned skill(s).
 
 #### Are survey bots supported in text-only channels?
 
