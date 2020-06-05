@@ -11,7 +11,7 @@ indicator: both
 ### Introduction
 
 {: .notice}
-Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/common-resources-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/api-guidelines-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 The LiveEngage Data Usage Audit API retrieves the most up to date information available about transcript searches and exports usage via LivePerson's other historical data APIs. This API makes it possible to understand what data were exposed and to which API user.
 
