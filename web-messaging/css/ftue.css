@@ -37,7 +37,7 @@ a:hover {
 
 .greeting-bot-header {
     font-family: Roboto;
-    display: block;
+    display: block !important;
     width: 279px;
     margin: 0 auto 62px auto;
     font-style: normal;
@@ -149,12 +149,12 @@ a:hover {
 }
 
 .liveperson-logo {
-    display: block;
+    display: block !important;
     margin: 32px 0 0 32px;
 }
 
 .lp-tips-container {
-    display: inline-block;
+    display: inline-block !important;
     width: 22%;
     height: 20%;
     margin-left: 40px;
