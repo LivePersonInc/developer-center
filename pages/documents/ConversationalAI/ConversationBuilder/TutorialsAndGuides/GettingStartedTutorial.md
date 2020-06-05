@@ -490,8 +490,7 @@ In this step, you create two user agents, one for the bot and one for the human 
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_1.png">
 
-7. In the list of skills, select the Bot skill, and then note the URL that's displayed in the browser's address bar. Write down the skill ID in the URL, as it will be needed later. The skill ID is the number at the end of the URL: https://z1.le.liveperson.net/a/accountNumber/#um!skills/**skillID**.
-8. Repeat the preceding step to copy down the skill ID for the Human skill.
+7. In the list of skills, select the Human skill, and then note the URL that's displayed in the browser's address bar. Write down the skill ID in the URL, as it will be needed later. The skill ID is the number at the end of the URL: https://z1.le.liveperson.net/a/accountNumber/#um!skills/**skillID**.
 
 ##### Create the LiveEngage agents
 
@@ -511,7 +510,7 @@ In addition to the skills, you also need user agents, one for the bot and one fo
     * **Skills**: Click this field, and select "Bot" from the list that appears. This is the default bot skill. **Do NOT add additional skills.**
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/confLE_2.png">
 4. Click **Save**.
-5. Repeat steps 2 - 4 to create a human agent, and assign the Human skill to the human agent. Alternatively, assign the Human skill to your own user account, and make sure your user is set to Available (so you can take chats), not Away or Offline.
+5. Assign the Human skill to your own user account, and make sure your user is set to Available (so you can take chats), not Away or Offline.
 
 ##### Assign the bot skill to an engagement
 
@@ -550,11 +549,13 @@ In this step, you set up an "escalation" to transfer the user to a human agent i
 
 6. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
+    <img style="width:600px" src="img/ConvoBuilder/helloworld/escalation_at.png">
+
 7. Still in the Agent Transfer interaction, click the **Settings** icon in the upper-right corner. Then click the **Advanced** tab.
 
 8. In the **Agent Skill Id** field, enter the ID number of the human skill that you created; you wrote this down earlier.
 
-    <img style="width:800px" src="img/ConvoBuilder/helloworld/escalation_skillId.png">
+    <img style="width:500px" src="img/ConvoBuilder/helloworld/escalation_skillId.png">
 
     (While you set the skill ID to that for a specific skill, you could also set the value using a variable for a more dynamic experience.)
 
@@ -615,14 +616,14 @@ In this step, you'll be testing with Messaging, so you'll be using [this test pa
 
     The conversation should be transferred to you as long as you assigned your test agent with the appropriate skill.
 
-6. Return to Conversation Builder. On the left sidebar, note the message indicator on the "Agent workspace for Chat" icon.
+7. Return to LiveEngage. On the left sidebar, note on the "Agent workspace for Chat" icon that there's a message indicator.
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/messageindicator.png">
+    <img class="fancyimage" style="width:75px" src="img/ConvoBuilder/helloworld/messageindicator.png">
 
-7. Click the icon to enter the agent workspace in LiveEngage, and then select the connection in the table. Click **Accept** in the lower-left corner.
+8. Click the icon to enter the agent workspace in LiveEngage. Then click **Accept** in the lower-left corner.
 
-   <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/webvisitors_accept.png">
+   <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/webvisitors_accept.png">
 
-    As an agent, when you accept the inbound transfer, you should see something like this below in your LiveEngage dashboard. You can now take part in live chat.
+    As an agent, when you accept the inbound transfer, you should see something like this below in your LiveEngage dashboard. You can now take part in a live chat.
 
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/confLE_19.png">
