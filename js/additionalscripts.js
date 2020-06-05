@@ -23,6 +23,7 @@ $(document).ready(function () {
   searchFunction();
   capabilitiesSearch();
   allArticlesClick();
+  scrollToHash();
   // domainTool();
   searchClick(event);
   //detect if mobile user
@@ -177,12 +178,10 @@ function navigateContent(url) {
       capabilitiesSearch();
       searchHighlight();
       allArticlesClick();
- =
+      scrollToHash();
       // domainTool();
       searchClick();
 
-      //call smoothscrolling on all anchors
-      var scroll = new SmoothScroll('a[href*="#"]');
       //from here, the rest of the code has to do with link highlighting for the sidebar
       var selected = $('a[href*="' + url + '"]');
       if (selected.hasClass("uniqueAnchor")) {
@@ -709,6 +708,26 @@ function searchHighlight() {
 }
 
 //this function fixes chrome not scroll to anchor links
+function scrollToHash() {
+  setTimeout(function () {
+    if (window.location.hash && window.location.hash != "#top") {
+      var hash = window.location.hash;
+      var linkScroll = $('a[href*="' + hash + '"]');
+      if (linkScroll.length > 1) {
+        var linkOffset = $(linkScroll[1]).offset().top;
+      } else {
+        var linkOffset = $(linkScroll).offset().top;
+      }
+      $("body, html").animate(
+        {
+          scrollTop: linkOffset,
+        },
+        1000,
+        "swing"
+      );
+    }
+  }, 1000);
+}
 function menuDrop() {
   //begin by setting the list's data to reflect that it's open
   $(".anchorlist > a").data("expanded", "true");
