@@ -576,6 +576,29 @@ Sets the conversation background image (applicable on Activity mode only).
 
 **Type:** drawable
 
+
+#### lp_caption_preview_fragment_background_color
+Define the background color of caption preview screen when sending a file.
+
+<div style="float: left; width: 50%;height: 400px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #ffffff</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/captionpreviewbackgroundcolor.png" alt="captionpreviewbackgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
 #### bubble_system_resolved_text_size
 Conversation resolved message text size.
 
