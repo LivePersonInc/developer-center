@@ -1,10 +1,10 @@
-## LivePerson Developers' Community
+## LivePerson Developer Center
 
 **As of August 2018, please open all Pull Requests DIRECTLY TO THE MASTER BRANCH ON THE PUBLIC VERSION OF THIS REPOSITORY. THERE IS NO MORE NEED FOR THE INTERNAL REPOSITORY**
 
 **This site is maintained by the Product Communications and Experience team. Please contact lmart@liveperson.com for issues, questions, and the such**.
 
-This repository generates LivePerson's Developers' Community, which can be found at https://developers.liveperson.com. The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we'll respond as soon as possible.
+This repository generates LivePerson's Developer Center, which can be found at https://developers.liveperson.com. The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we'll respond as soon as possible.
 
 **Table of Contents**
 
@@ -37,7 +37,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `documentname`: This key accepts either `Documents` or `Solutions`. This designates which part of the site the document is under.
 
-* `categoryname`: This is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management. Therefore, its level2 is "Contact Center Management".
+* `categoryname`: This is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management).
 
 * `documentname`: This is the API to which the document belongs.
 
