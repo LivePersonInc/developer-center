@@ -1,6 +1,8 @@
 ## LivePerson Developers' Community
 
-**As of August 2018, please open all Pull Requests DIRECTLY TO THE MASTER BRANCH**
+**As of August 2018, please open all Pull Requests DIRECTLY TO THE MASTER BRANCH ON THE PUBLIC VERSION OF THIS REPOSITORY. THERE IS NO MORE NEED FOR THE INTERNAL REPOSITORY**
+
+**This site is maintained by the Product Communications and Experience team. Please contact lmart@liveperson.com for issues, questions, and the such**.
 
 This repository generates LivePerson's Developers' Community, which can be found at https://developers.liveperson.com. The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we'll respond as soon as possible.
 
@@ -56,7 +58,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 Once you've created a new document, you'll need to have it manually added. We chose a manual process for the sidebar for a few reasons. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA). Secondly, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options). Lastly, it decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time and resource consuming).
 
-The sidebar's YAML file can be found in the `_data` folder. It's called `documentsupdated.yaml`. **However, only the project's maintainer should edit this file directly. Please do not open Pull Requests with changes to this file but instead contact the project's maintainer directly. As of August 2018, this is Eden Kupermintz, the owner of this repository. You can reach him at edenk [at] liveperson [dot] com.**
+The sidebar's YAML file can be found in the `_data` folder. It's called `documentsupdated.yaml`. You **must** make sure the name of the file and the name in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file's header (see above).
 
 ### Building the Site Locally
 
