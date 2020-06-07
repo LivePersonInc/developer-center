@@ -2,8 +2,8 @@
 pagename: Accessing LivePerson APIs
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Common Resources
-permalink: common-resources-accessing-liveperson-apis.html
+documentname: API Guidelines
+permalink: api-guidelines-accessing-liveperson-apis.html
 order: 11
 indicator: both
 redirect_from:

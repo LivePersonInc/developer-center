@@ -2,7 +2,7 @@
   image: getting-started
   documents:
   - documentname: First Steps
-  - documentname: Common Resources
+  - documentname: API Guidelines
     pages:
     - pagename: Accessing LivePerson APIs
     - pagename: Create API keys
@@ -123,7 +123,7 @@
           - subpagename: Using Meta Intents with Conversation Builder
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
-          - subpagename: Implementing the Shift Status & Current Queue Health APIs
+        #  - subpagename: Implementing the Shift Status & Current Queue Health APIs
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
@@ -657,6 +657,7 @@
           - subpagename: Messaging Conversation Survey
           - subpagename: Conversational AI
           - subpagename: Conversational Commands
+      - pagename: Command Line Interface (CLI)
 
 
 - categoryname: Historical Data
@@ -821,6 +822,7 @@
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Scroll Behavior Configuration
+      - subpagename: Logging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
