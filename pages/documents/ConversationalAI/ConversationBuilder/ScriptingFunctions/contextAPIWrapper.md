@@ -32,7 +32,7 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 **To enable the Context Session Store API for your account**
 
 1. Access the *Bot Accounts* application, and click the organization name.
-2. Click **Edit Account** in the upper-right corner.
+2. Click <img style="width:25px" src="img/ConvoBuilder/icon_editAccount.png"> in the upper-right corner.
 3. If necessary, click **More Settings** to show additional settings.
 4. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
 5. Select one of the following for retrieving the necessary Maven credentials:

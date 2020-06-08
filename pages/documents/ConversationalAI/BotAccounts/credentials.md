@@ -37,7 +37,7 @@ The images in this section illustrate creating an OAuth 2.0 credential to suppor
 **To add an OAuth 2.0 credential**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
-2. Click **Credentials** in the upper-right corner.
+2. Click **Credentials** in the upper-left corner.
 3. Click **Add Credentials** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
@@ -83,7 +83,7 @@ You can create a Mutual Authentication credential and use it in [API integration
 **To add a Mutual Authentication credential**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
-2. Click **Credentials** in the upper-right corner.
+2. Click **Credentials** in the upper-left corner.
 3. Click **Add Credentials** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
@@ -104,7 +104,7 @@ Like the Access Token credential (discussed below), this type of credential isn'
 **To add a Basic Authentication credential**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
-2. Click **Credentials** in the upper-right corner.
+2. Click **Credentials** in the upper-left corner.
 3. Click **Add Credentials** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
@@ -124,7 +124,7 @@ Like the Basic Authentication credential (discussed above), this type of credent
 **To add an Access Token credential**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
-2. Click **Credentials** in the upper-right corner.
+2. Click **Credentials** in the upper-left corner.
 3. Click **Add Credentials** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
@@ -144,7 +144,7 @@ If you're using a supported [third-party NLU engine](intent-builder-natural-lang
 **To add a Third-party NLU (Fire API) credential**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
-2. Click **Credentials** in the upper-right corner.
+2. Click **Credentials** in the upper-left corner.
 3. Click **Add Credentials** in the upper-right corner.
 4. In the Add Credentials dialog box, specify the following:
     - **Name**: Enter a descriptive name.
@@ -161,5 +161,8 @@ Before deleting a credential, manually verify that it isn't in use by a bot or, 
 
 **To delete a credential**
 
-1. In the Credentials view, click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon for the credential, and then click **Delete** from the menu that appears.
-2. Click **Continue** in the confirmation dialog.
+1. In the Bot Accounts application, select the name of the organization for which to delete the credential.
+2. Click **Credentials** in the upper-left corner to display the list of credentials.
+3. Select the credential, and then click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
+4. Select **Delete**.
+5. Click **Continue** in the confirmation dialog.

@@ -59,9 +59,9 @@ In the bot, we have a simple dialog to present the form link to the visitor. The
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_formLink.png">
 
-The dialog has a single Button Question interaction with a single button. This button uses the **formURL** bot variable that was created in the Global Functions as the **Callback**. This way, when the visitor clicks the button, they will be directed to the form URL.
+The dialog also has a single Button Question interaction with a single button. This button uses the **formURL** bot variable that was created in the Global Functions as the **Callback**. This way, when the visitor clicks the button, they will be directed to the form URL.
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/guideWebView_buttonConfig.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/guideWebView_buttonConfig.png">
 
 ### Call the API from the browser
 
@@ -131,7 +131,7 @@ When we called the Web View Integration API upon submitting the form, we passed 
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_patternMatch.png">
 
-In the pre-process code for the dialog, we have the following code to retrieve the visitor’s name that was sent in the API payload. This value is then assigned to a bot variable, which we can use in the text interaction.
+In the pre-process code for the interaction, we have the following code to retrieve the visitor’s name that was sent in the API payload. This value is then assigned to a bot variable, which we can use in the text interaction.
 
 ```javascript
 var visitor_name = botContext.getWebViewVariable('name');

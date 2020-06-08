@@ -17,19 +17,27 @@ In a bot, at branching points within a dialog, the consumer is asked to answer q
 
 You can help to keep the consumer in the current dialog by offering predefined options in a menu of buttons or predefined choices to a multiple-choice question. However, there's no guarantee that the consumer won't ignore these and type a response of their own. This means you need a way to handle any other response.
 
-To solve this problem, you can create a "catch all other utterances" condition that directs the flow as you need, either to repeat the same question or to redirect the flow to somewhere else within the bot.
+To solve this problem, you can create a rule with a [No Match condition](conversation-builder-interactions-configuration-next-action.html#conditions) that directs the flow as you need, either to repeat the same question or to redirect the flow to somewhere else within the bot.
 
 **To implement this solution**
 
-1. In the interaction, create a *final* (last) **Response Match & Actions** set.
-2. Under **Conditions**, add the pattern " * ", which is the asterisk wildcard character. This will catch all utterances other than those caught by earlier conditions.
-3. Under **Next Step**, select the next step. In our example below, we've chosen to repeat the same email question.
+1. In the interaction, create a *final* (last) rule.
+2. In the rule definition, name the rule. Then add a condition that uses the "No Match" match type. A condition that uses this match type catches all utterances that aren't caught by earlier rules. (In the condition, you can optionally specify a message to send to the consumer before the flow continues to the next action.)
+3. Under **And Go To**, select the desired next action.
+
+In our example below, the No Match condition directs the flow to the current interaction in order to repeat it. This interaction is a question that asks for the consumer's email address.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/keepUserInDialog1.png">
 
-When the user enters anything but a well-formed email address, this yields a conversation that looks like this:
+Our example dialog flow now looks like this:
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/keepUserInDialog3.png">
+
+When the user enters anything but a well-formed email address, this yields a conversation that looks like the following, where the email address question is repeated:
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/keepUserInDialog2.png">
+
+For more information on the "No Match" match type and other match types that can be used in conditions, see [here](conversation-builder-interactions-configuration-next-action.html#conditions).
 
 ### Block consumer interruptions
 

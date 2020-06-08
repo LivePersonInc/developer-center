@@ -72,7 +72,7 @@ Both outcomes are tracked and reported on as part of the Report Builder, so you 
 
 If you're new to working with survey bots, before you can begin building them, the feature must be enabled in Conversation Builder by LivePerson. Please contact your LivePerson account representative to enable this feature.
 
-Conversely, if you've been using Bot Studio to create and manage survey bots, please see the FAQ section for information on how to change to doing so in Conversation Builder.
+Conversely, if you've been using Bot Studio to create and manage survey bots, please see the FAQ section below for information on how to change to doing so in Conversation Builder.
 
 ### Step 1 - Create the survey bot
 
@@ -128,7 +128,9 @@ If you change the answer choices for a survey question, remember to update the d
 
 To add a Skip option and thereby make a survey question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_skip.png">
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_skip.png">
+
+Clicking **Skip** automatically adds a custom rule for the "skip" response, so you can build out the survey logic as you require.
 
 {: .important}
 In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question plus the Skip option is 12 quick replies. Using Skip will cause the conversation to end abruptly.
@@ -155,23 +157,23 @@ You cannot create a [Fallback dialog](conversation-builder-dialogs-fallback-dial
 
 #### Closing the conversation
 
-As a best practice, end the dialog flow with an interaction whose next step is "Close conversation." This closes the conversation promptly.
+As a best practice, end the dialog flow with an interaction whose next action is "Close conversation." This closes the conversation promptly.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closeConvo.png">
 
 You don't need to include a Text interaction that thanks the consumer for their participation; you can define the Thank You message in the survey bot's settings (discussed below).
 
 ### Step 3 - Configure the bot settings
 
-1. Open the survey bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
-2. Select **Bot Settings** from the menu that appears.
+1. Open the survey bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+2. Select **Bot Settings**.
 3. Configure the survey bot settings as needed; these are described below.
 4. Configured other bot settings as needed; these are described [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 5. Click **Save**.
 
 Survey bot settings include:
 
-- **Enable Bot**: Use this to turn a survey bot on and off. When the bot is online, it responds to user messages. When it is offline, it doesn't. Taking a survey bot offline can be useful if you need to temporarily remove it from your customer traffic flow. The default value is Online.
+- **Enable Bot**: This turns a survey bot on and off. When the bot is online, it responds to user messages. When it is offline, it doesn't. The default value is Online. **Note**: Disabling this setting doesn't prevent the survey from being triggered; it merely stops the bot from sending messages. To temporarily remove a survey bot from your customer traffic flow (i.e., prevent it from triggering), access the bot's **Skill** setting in **Bot Settings**, and remove the assigned skills.
 - **Skill**: If desired, change the skill(s) that will trigger this survey bot.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. Then enter the message to send.
 - **Session Expired Message**: Enable this to send a Session Expired message when the user enters text after the session has timed out. Then enter the message to send. (For information on the Session Length setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
@@ -218,7 +220,7 @@ Typically, brands don't develop in their Production environments, but if you do,
 
 #### How do I disable a survey bot?
 
-If you need to temporarily remove a survey bot from your customer traffic flow, you can disable the bot. To do this, set the **Enable Bot** slider to Off in the bot's **Bot Settings**.
+If you need to temporarily remove a survey bot from your customer traffic flow (i.e., prevent it from triggering), access the bot's **Skill** setting in **Bot Settings**, and remove the assigned skill(s).
 
 #### Are survey bots supported in text-only channels?
 
@@ -227,6 +229,10 @@ Yes, this works just like for a custom bot. The survey questions are displayed a
 #### Can a consumer skip a survey entirely?
 
 There's no way for the consumer to indicate they want to skip the survey entirely (e.g., no Skip button). However, the consumer can close the window to leave the survey.
+
+#### The dialogs in my custom bots end with Close Conversation (LP_CLOSECONVERSATION). Do I need to change this?
+
+Yes, you'll need to update the custom bots to use Close Dialog (LP_CLOSEDIALOG) instead. [Close Dialog](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) allows a post-conversation survey to be triggered, but [Close Conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) does not.
 
 #### I'm an existing Bot Studio user. How do I migrate to using Conversation Builder to create and manage survey bots?
 
@@ -242,4 +248,4 @@ LivePerson recommends the following workflow:
 4. Request that LivePerson switch your brand from triggering surveys from Bot Studio to triggering surveys from Conversation Builder in actual conversations.
 
 {: .important}
-While you're completing steps 1 - 3, you can continue to use Bot Studio. Once you complete step 4, you can no longer use Bot Studio. Step 4 is irreversible. Once you are switched over to triggering surveys from Conversation Builder in actual conversations, this cannot be reversed. 
+While you're completing steps 1 - 3, you can continue to use Bot Studio. Once you complete step 4, you can no longer use Bot Studio. Step 4 is irreversible. Once you are switched over to triggering surveys from Conversation Builder in actual conversations, this cannot be reversed.

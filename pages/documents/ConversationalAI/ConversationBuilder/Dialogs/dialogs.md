@@ -22,7 +22,7 @@ There are several types of dialogs:
 - **Fallback**: The fallback dialog is triggered when the bot doesn't recognize the consumer's message. For more on this, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 - **Disambiguation**: The disambiguation dialog is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed. For more on this, see [here](conversation-builder-dialogs-disambiguation-dialogs.html).
 - **Auto Escalation**: This type of dialog frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred. For more on this, see [here](conversation-builder-dialogs-auto-escalation-dialogs.html).
-- **Survey**: Survey dialogs can only be created in post-conversation survey bots. Use a survey dialog to define a survey. For more on this, see [here](conversation-builder-bots-post-conversation-survey-bots.html).
+* **Survey**: Survey dialogs can only be created in post-conversation survey bots. Use a survey dialog to define a survey. For more on this, see [here](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Context switching
 
@@ -34,9 +34,7 @@ You can see this context switching occurring in the following conversation:
 
 <img style="width:550px" src="img/ConvoBuilder/contextSwitching2.png">
 
-Your ability to redirect or restrict context switching depends on whether the consumer is responding to an open-ended statement **(1)** or a question **(2)**.
-
- <img style="width:550px" src="img/ConvoBuilder/contextSwitching1.png">
+Your ability to redirect or restrict context switching depends on whether the consumer is responding to an open-ended statement or a question.
 
 When a bot sends an open-ended statement, such as, "Please type your query below," it simply awaits the consumer's response. As a result, whatever the response is, it is processed by the NLU engine to try and find a matching intent and dialog. And if one is found, that dialog is "pushed" to the top of the dialog stack, and its flow immediately begins.
 
@@ -55,7 +53,7 @@ To disable context switching at the conversation start, you can add this code to
 ### Create a new dialog
 
 1. Open the bot.
-2. Click **+ DIALOG** in the lower-left corner.
+2. Click **Add Dialog** in the lower-left corner.
 3. In the dialog that appears, do the following:
     - **Dialog Name**: Enter a descriptive name for the dialog. Use a standard naming convention to make your dialogs more sortable and easier to find.
     - **Dialog Type**: Select the type of dialog; for help with this, see *Dialog types* farther above on this page.
@@ -64,41 +62,40 @@ To disable context switching at the conversation start, you can add this code to
 
 ### Close the dialog
 
-To close the current dialog, set the interaction's Next Step to "Close Dialog."
+To close the current dialog, set the interaction's Next Action to "Close Dialog."
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/closeDialog_old1.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/nextAction_closeDialog.png">
 
-Alternatively, add a Text statement that contains the special string "LP_CLOSEDIALOG." If the statement isn't the last interaction in the dialog, set its **Next Step** to "End Interaction" (not "Next Interaction").
+Alternatively, add a Text statement that contains the special string "LP_CLOSEDIALOG." If the statement isn't the last interaction in the dialog, set its **Next Action** to "End Interaction" (not "Next Interaction").
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/closeDialog_old2.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keyword_closeDialog.png">
 
 LP_CLOSEDIALOG is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
 {: .important}
-These methods for closing the dialog **do** trigger a post-conversation survey.
+These methods for closing the dialog **do** trigger a post-conversation [survey](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Close the conversation
 
-To close the current conversation, set the interaction's Next Step to "Close Conversation."
+To close the current conversation, set the interaction's Next Action to "Close Conversation."
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/closeConvo_old1.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/nextAction_closeConv.png">
 
-Alternatively, add a Text statement that contains the special string "LP_CLOSECONVERSATION." If the statement isn't the last interaction in the dialog, set its **Next Step** to "End Interaction" (not "Next Interaction").
+Alternatively, add a Text statement that contains the special string "LP_CLOSECONVERSATION." If the statement isn't the last interaction in the dialog, set its **Next Action** to "End Interaction" (not "Next Interaction").
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/closeConvo_old2.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keyword_closeConversation.png">
 
 LP_CLOSECONVERSATION is a system message; even though it appears in the Preview window, it isn't shown to the consumer when deployed.
 
 {: .important}
-These methods for closing the conversation **don't** trigger a post-conversation survey.
-
+These methods for closing the conversation **don't** trigger a post-conversation [survey](conversation-builder-bots-post-conversation-survey-bots.html).
 
 ### Configure dialog settings
 
 **To configure dialog settings**
-1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png">
 
 2. Select **Dialog Settings**.
 3. Click **More Settings** to display all the settings.
@@ -117,9 +114,9 @@ Dialog settings include:
 
 **To disable or enable a dialog**
 
-1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png">
 
 2. Select **Dialog Settings**.
 3. Click **More Settings** to display all the settings.
@@ -132,9 +129,9 @@ Deleting a dialog is a non-recoverable action, so be certain about doing so befo
 
 **To delete a dialog**
 
-1. Open the bot, and click the down arrow ( <img style="width:25px" src="img/ConvoBuilder/icon_down_caret.png"> ) beside the dialog's name.
+1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/dialogs_menu.png">
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png">
 
 2. Select **Delete Dialog**.
 3. In the confirmation dialog, click **Yes**. 
