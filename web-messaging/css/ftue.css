@@ -154,7 +154,7 @@ a:hover {
 }
 
 .lp-tips-container {
-    display: inline-block !important;
+    /*display: inline-block !important;*/
     width: 22%;
     height: 20%;
     margin-left: 40px;
@@ -164,7 +164,8 @@ a:hover {
     display:inline-block !important;
     width: 340px;
     height: 580px;
-    background: #025595;
+    /*background: #042b49;*/
+    border : 2px solid #042b49;
     border-radius: 16px;
     position: absolute;
 

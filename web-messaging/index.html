@@ -34,7 +34,7 @@
         Talk to your Greeting Bot
     </div>
 
-    <div class="lp-tips-container" style="display:none">
+    <div id="tips-container"class="lp-tips-container" style="display:none">
         <div class="lp-tips-header">
             Things to try:
         </div>
@@ -317,8 +317,14 @@
             }
             return queryParams;
         }
-        function removeDisplay(){
+        async function removeDisplay(){
+            const sleep = (milliseconds) => {
+                return new Promise(resolve => setTimeout(resolve, milliseconds))
+            }
+            await sleep(2000);
             document.getElementById('template-bot').setAttribute('style', 'display:none !important');
+            document.getElementById('tips-container').setAttribute('style', 'display:inline-block !important');
+
             console.log('template bot should be gone');
         }
         $(window).load( async function() {      //Do the code in the {}s when the window has loaded
