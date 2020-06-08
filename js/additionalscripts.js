@@ -182,8 +182,6 @@ function navigateContent(url) {
       // domainTool();
       searchClick();
 
-      //call smoothscrolling on all anchors
-      var scroll = new SmoothScroll('a[href*="#"]');
       //from here, the rest of the code has to do with link highlighting for the sidebar
       var selected = $('a[href*="' + url + '"]');
       if (selected.hasClass("uniqueAnchor")) {

@@ -33,7 +33,8 @@
     <div class="greeting-bot-header" style="display:none">
         Talk to your Greeting Bot
     </div>
-    <div class="lp-tips-container" style="display:none">
+
+    <div id="tips-container"class="lp-tips-container" style="display:none">
         <div class="lp-tips-header">
             Things to try:
         </div>
@@ -48,6 +49,13 @@
                 Choose 'Talk to an Agent' to connect with a human agent (you!).
             </li>
         </ul>
+    </div>
+    <div id="template-bot" class="template-greeting-bot" style="display:none" >
+        <div class="template-greeting-loading">
+            Loading your chat
+            <br/>
+            experience window...
+        </div>
     </div>
     <div class="container" style="display:none">
         <div class="row">
@@ -272,7 +280,7 @@
                 console.log('removing style sheet');
             }
         }
-        function loadLPTag(env){
+        async function loadLPTag(env){
             if (env === "qa"){
                 //QA
                 console.log('QA TAG');
@@ -309,7 +317,17 @@
             }
             return queryParams;
         }
-        $(window).load(function() {      //Do the code in the {}s when the window has loaded
+        async function removeDisplay(){
+            const sleep = (milliseconds) => {
+                return new Promise(resolve => setTimeout(resolve, milliseconds))
+            }
+            await sleep(2000);
+            document.getElementById('template-bot').setAttribute('style', 'display:none !important');
+            document.getElementById('tips-container').setAttribute('style', 'display:inline-block !important');
+
+            console.log('template bot should be gone');
+        }
+        $(window).load( async function() {      //Do the code in the {}s when the window has loaded
             var site = getURLParams(window.location.search).site || "";
             var username = getURLParams(window.location.search).username || "";
             var experience = getURLParams((window.location.search)).experience || "";
@@ -322,15 +340,30 @@
                 removeStyleSheet('ftue');
                 appendOldStyle();
             }
-            loadLPTag(env);
+            let lpTagPromise = new Promise((resolve, reject) => {
+                setTimeout( function() {
+                    try{
+                        console.log('going through lp tag');
+                        loadLPTag(env);
+                        console.log('went through lp tag');
+                        resolve("Success!")  // Yay! Everything went well!
+                    }catch(e){
+                        console.log('failed when going through lp tag');
+                        reject('ERROR');
+                    }
+                }, 4000);
+            })
+            lpTagPromise.then( (message)=> {
+                console.log('removing display', message);
+                removeDisplay();
+            })
+
             $("#loader").fadeOut("fast");  //Fade out the #loader div
         });
         var site = getURLParams(window.location.search).site || "";
         var username = getURLParams(window.location.search).username || "";
         var experience = getURLParams((window.location.search)).experience || "";
         var env = getURLParams((window.location.search)).env || "";
-
-
 
         function copyToClipboard() {
             /* Get the text field */
