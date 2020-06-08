@@ -124,10 +124,11 @@ An agent connector can have one of the following statuses:
 - **Offline**: At least one underlying component isn't working, causing end-to-end connections not to function. The connector is in an error state and isn't running.
 - **Stopped**: The connector isn't running because it was manually stopped. 
 
+
 ### Custom configuration fields
 
 Custom configuration fields are optional key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
-
+ 
 {: .important}
 If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.
 

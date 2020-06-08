@@ -151,8 +151,37 @@ There are 2 authenticated connection methods:
    | LPAuthenticationParams | authentication params |
    | ConversationViewParams | view params |
 
+### getUnreadMessagesCount
+
+Get the count of unread messages that are not yet received by the consumer's device. This API returns the count through the provided callback which is a sum of unread messages in the  open as well as closed conversation messages.
+
+When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
+
+This API method uses a threshold mechanism of 10 seconds. If this API is called within 10 seconds from the last request was made, the counter will be returned from SDK cache otherwise a new request to the server will be made to fetch the latest count. 
+
+**Note:** 
+- This new API is available from SDK version 4.4.0
+- The SDK needs to be initialized before calling this API.
+
+{:.important}
+This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
+
+```java
+public static void getUnreadMessagesCount(String appId, LPAuthenticationParams authenticationParams, final ICallback<Integer, Exception> callback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| appId | The host app ID |
+| callback | An [ICallback](android-callbacks-index.html) implementation |
+| authenticationParams | Authentication parameters |
+
 
 ### getNumUnreadMessages
+
+{:.important}
+This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
+This API will reach end-of-life and be removed from the SDK by end of October 2020.
 
 Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.
 
@@ -179,6 +208,12 @@ public static void getNumUnreadMessages(String appId, final ICallback<Integer, E
 
 ### getUnreadMessagesCount
 
+{:.important}
+This API is deprecated as of Android SDK version 4.4.0. On this version and newer, please prefer [getUnreadMessagesCount](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#getunreadmessagescount) to receive an accurate count of unread messages.
+This API will reach end-of-life and be removed from the SDK by end of October 2020.
+
+
+
 Get the count of unread messages that are not yet received by the consumer's device. This API returns the count data through the provided callback.
 
 When there are unread messages waiting for the consumer within the brand app, this information can be pushed to display in the app’s notification badge. Within the app, brands can develop their own visualization of a badge, such as a number, icon or other marker to show unread messages.
@@ -188,7 +223,7 @@ This API method uses a threshold mechanism of 10 seconds from the last time the 
 **Note:** The SDK needs to be initialized before calling this API.
 
 {:.important}
-This API will allow the user to get the count of unread messages for all open conversations without the need to be registered to receive push notifications.
+This API will allow the user to get the count of unread messages for all conversations without the need to be registered to pusher service.
 
 This api will be improved in future to show the count of unread messages in the closed conversation as well and the documentation will be updated accordingly.
 
@@ -684,6 +719,21 @@ Call this method before `LivePerson.showConversation(getActivity(), LPAuthentica
 public static void setPushNotificationTapped()
 ```
 
+
+### isPusherRegistered
+
+Check if the consumer's device is registered to receive push notification messages.
+
+```java
+public static void isPusherRegistered(@NonNull String deviceToken, @NonNull String appId, @NonNull LPAuthenticationParams lpAuthenticationParams, @NonNull ICallback<Boolean, Exception> callback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| deviceToken | The FCM device token |
+| appId | The host app ID |
+| lpAuthenticationParams | Authentication params |
+| callback | An ICallback implementation |
 
 
 ### Deprecated

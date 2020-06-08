@@ -50,7 +50,9 @@ If you do not yet have an OAuth2 service or if you need a test service, follow t
 
 5. On the same screen, go to the bottom and select advanced settings -> Endpoints
 
-6. Copy Auth URL, Token Url, Client Secret (it is at the top) and place them in your register.apple.com portal
+6. Copy Auth URL, Token Url, Client Id (it is at the top) and place them in your register.apple.com portal
+
+7. Go to Grant Types tab in advanced settings and check Authorization Code, Password and other features you want to use. 
 
 ### Checking for Apple Auth device compatibility
 
@@ -394,5 +396,3 @@ The authentication response metadata is contextual information about the consume
 ### Limitations
 
 * Updating the Apple Business Chat authentication status visually in the LiveEngage UI is planned.
-
-* Touch/Face ID is not currently supported in Apple's authentication solution

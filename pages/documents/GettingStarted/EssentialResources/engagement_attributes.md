@@ -6,8 +6,8 @@ redirect_from:
   - essential-resources-engagement-attributes.html
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Common Resources
-permalink: common-resources-engagement-attributes.html
+documentname: API Guidelines
+permalink: api-guidelines-engagement-attributes.html
 order: 20
 indicator: both
 ---

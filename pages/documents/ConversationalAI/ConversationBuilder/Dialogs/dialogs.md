@@ -62,11 +62,11 @@ To disable context switching at the conversation start, you can add this code to
 
 ### Close the dialog
 
-To close the current dialog, set the interaction's Next Step to "Close Dialog."
+To close the current dialog, set the interaction's Next Action to "Close Dialog."
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/nextAction_closeDialog.png">
 
-Alternatively, add a Text statement that contains the special string "LP_CLOSEDIALOG." If the statement isn't the last interaction in the dialog, set its **Next Step** to "End Interaction" (not "Next Interaction").
+Alternatively, add a Text statement that contains the special string "LP_CLOSEDIALOG." If the statement isn't the last interaction in the dialog, set its **Next Action** to "End Interaction" (not "Next Interaction").
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keyword_closeDialog.png">
 
@@ -77,11 +77,11 @@ These methods for closing the dialog **do** trigger a post-conversation [survey]
 
 ### Close the conversation
 
-To close the current conversation, set the interaction's Next Step to "Close Conversation."
+To close the current conversation, set the interaction's Next Action to "Close Conversation."
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/nextAction_closeConv.png">
 
-Alternatively, add a Text statement that contains the special string "LP_CLOSECONVERSATION." If the statement isn't the last interaction in the dialog, set its **Next Step** to "End Interaction" (not "Next Interaction").
+Alternatively, add a Text statement that contains the special string "LP_CLOSECONVERSATION." If the statement isn't the last interaction in the dialog, set its **Next Action** to "End Interaction" (not "Next Interaction").
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/keyword_closeConversation.png">
 

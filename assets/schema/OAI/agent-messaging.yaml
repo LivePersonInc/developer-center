@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
   title: Agent Messaging API
-  version: "1.0.0"
+  version: "1.0.1"
   x-logo:
     url: 'img/liveperson-inc-logo.jpg'
   description: |
@@ -194,6 +194,12 @@ paths:
                     type: string
                 event:
                     $ref: ../ms/TextValue.json
+                messageAudience:
+                    type: enum
+                    required: false
+                    enum:
+                      - AGENTS_AND_MANAGERS
+                    description: 'Send as private message to Agents & Agent Managers only'
       responses:
         200:
           description: Success

@@ -337,6 +337,68 @@ A single delay message can be send by adding `delay` and `typing` properties to 
 
 **Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
+### Sending Private Text Message
+
+It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
+
+{: .important}
+Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
+
+Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. There are two properties, `text` and `messageAudience` which need to be added in with the response body of the function.
+
+| key             | value                                 | notes                     |
+| --------------- | ------------------------------------- | ------------------------- |
+| text            | any string value                      | mandatory                 |
+| messageAudience | value should be "AGENTS_AND_MANAGERS" | case sensitive, mandatory |
+
+<br />
+
+#### Sending Private Text Message between multiple messages
+
+Setting a private text message in between multiple messages (for more information on multiple messages [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Simple Text Message - Private Text Message) can be seen below:
+
+```javascript
+{
+  "channelData": {
+    "multiMessage": [
+      {
+        "type": "text",
+        "value": "Hi How are you doing?"
+      },
+      {
+        "type": "private-message",
+         "value": {
+              "text": "This is a private text",
+              "messageAudience": "AGENTS_AND_MANAGERS",
+          }
+      }
+    ]
+  }
+}
+```
+
+#### Sending Single Private Text Message with Action
+
+A single private text message with action can be send by adding `text` and `messageAudience` properties with relevant action (e.g. [Transfer/Escalate](third-party-bots-microsoft-bot-framework.html#transfer--escalations)) properties. An example of such case is below:
+
+```json
+{
+  "type": "message",
+  "text": "This is a private text",
+  "channelData": {
+    "messageAudience": "AGENTS_AND_MANAGERS",
+    "action": {
+      "name": "TRANSFER",
+      "type": "client",
+      "parameters": {
+        "skill": "human_skill"
+      },
+      "result_variable": "none"
+    }
+  }
+}
+```
+
 ### Close Chat/Conversation
 
 To close a chat or messaging conversation, we provide the action object as we did for a transfer. The activity should contain the following action.

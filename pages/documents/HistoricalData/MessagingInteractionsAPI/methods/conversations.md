@@ -31,7 +31,7 @@ v| version of the API (1 or 2)  | string  | Optional | default value is 1. Only 
 
 #### Note: New capability - partial retrieval of data
 
-The API now allows you to retrieve some of the content, per your need, instead of every possible key. This is done by calling the API with the **`contentToRetrive`** parameter and specifying the types of content you would like to get in the response.
+The API now allows you to retrieve some of the content, per your need, instead of every possible key. This is done by calling the API with the `contentToRetrieve` parameter and specifying the types of content you would like to get i
 
 <div class="important">Because this API retrieves <b>some</b> of the SDEs that are supported in LiveEngage by design, it is not suitable for brands looking for <b>all</b> of their data. The data retrieved by this API will be partial, usually limited to the last update LiveEngage performed to the SDEs. If you're looking into retrieving all of your data instead, the <a href="data-access-api-overview.html">Data Access API</a> is better suited to your needs. You can also refer to the <a href="messaging-interactions-api-methods-get-conversation-by-conversation-id.html">Get Conversation by ID method</a> of this API if you're looking for all SDEs for one specific conversation.</div>
 
@@ -544,19 +544,19 @@ _Intents info_
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
-selectedClassification | The selected intent classification for a specific message. | LiveIntentClassification
-allClassifications | All intent classification results for the same message. | Array `<LiveIntentClassification>`
+selectedClassification | The selected intent classification for a specific message. | IntentAnalyzerClassification
+allClassifications | All intent classification results for the same message. | Array `<IntentAnalyzerClassification>`
 messageId | The id of the message that triggered this intent. | string
 
-_LiveIntentClassification DTO_
+_IntentAnalyzerClassification DTO_
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
 intentName | The name of this intent. | string
 confidenceScore | Intent confidence score. | double - up to 3 decimal digits
-versions| Model versions used to generate this intent. |  Array `<LiveIntentVersionDTO>`
+versions| Model versions used to generate this intent. |  Array `<IntentAnalyzerVersionDTO>`
 
-_LiveIntentVersion DTO_
+_IntentAnalyzerVersion DTO_
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------

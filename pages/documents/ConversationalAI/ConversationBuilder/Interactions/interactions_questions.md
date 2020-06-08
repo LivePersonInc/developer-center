@@ -99,7 +99,7 @@ Structured questions aren't supported on all channels; see [here](conversation-b
 
 #### Populating a Structured question dynamically
 
-You can populate the tiles with static information, or they can be dynamically populated during run time, for example, using data received from an [API integration](conversation-builder-integrations-api-integrations.html).
+You can populate the tiles with static information, or they can be dynamically populated during run time, for example, using data received from an API integration. For more information, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 
 <img style="width:300px" src="img/ConvoBuilder/questions_structured3.png">
 
@@ -235,7 +235,7 @@ The Reply Message settings define how to display the consumer’s reply after th
 
 #### Populating a list picker dynamically
 
-Values for many of the settings above can be static, but they can also be populated dynamically at runtime. For example, if the list picker is for selecting items from a product catalog, you’ll likely want to retrieve and use the item information from the catalog.
+Values for many of the settings above can be static, but they can also be populated dynamically at runtime. For example, if the list picker is for selecting items from a product catalog, you’ll likely want to retrieve and use the item information from the catalog. For more information, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 
 #### Scrolling and sorting
 
@@ -338,6 +338,9 @@ Since the API response defines the date and time together in the received payloa
 Additionally, all start dates and times must be defined **in GMT**, so depending on the data received from the API call, you might need to do some preprocessing to convert the data.
 
 The Duration field can't be populated dynamically; you must manually specify this value.
+
+{: .important}
+For more on processing API results with custom data fields, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 
 #### Reply Message settings
 

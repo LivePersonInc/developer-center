@@ -168,7 +168,10 @@ Settings for Chat: <br />
 Settings for Messaging: <br />
 <img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
 
-- No special settings are needed for messaging bots
+Settings for Welcome Messages: <br />
+
+The Bot Connector system is designed to respond to incoming messaging by the consumer, once the bot is engaged in the conversation. Enabling the Welcome Messages settings, allows Brands to compose an initial message that the bot can send out that is not in direct response to the consumers messages. This allows for the bot to connect to a conversation and send out an initial message without waiting for the consumer to send a message after the bot first joins the conversation.
+
 
 Settings for Combine Messages: <br />
 

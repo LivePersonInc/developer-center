@@ -9,6 +9,7 @@
 
 html {
   width: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -45,7 +46,7 @@ body {
 }
 
 #registerHeader img {
-  width: 136px;
+  width: 190px;
   margin-top: 18px;
   margin-bottom: 18px;
   margin-left: 32px;
@@ -58,15 +59,12 @@ body {
 }
 
 #registerTitle {
-  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 40px;
-  font-weight: 300;
   color: #ff720b;
   margin-top: 45px;
 }
 
 #registerSub {
-  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 21px;
   font-weight: 300;
   color: #162036;
@@ -103,7 +101,6 @@ body {
   height: 40px;
   margin-bottom: 16px;
   font-size: 14px;
-  font-family: "Open Sans";
   font-weight: normal;
   font-style: italic;
   color: #666666;
@@ -125,20 +122,17 @@ select {
 }
 
 #passwordReq {
-  font-family: "Open Sans";
   font-size: 14px;
   color: #666666;
 }
 
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-family: "Open Sans";
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
   color: #666666;
 }
 input::-moz-placeholder { /* Firefox 19+ */
-  font-family: "Open Sans";
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
@@ -146,7 +140,6 @@ input::-moz-placeholder { /* Firefox 19+ */
 }
 
 input:-ms-input-placeholder { /* IE 10+ */
-  font-family: "Open Sans";
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
@@ -154,7 +147,6 @@ input:-ms-input-placeholder { /* IE 10+ */
 }
 
 input:-moz-placeholder { /* Firefox 18- */
-  font-family: "Open Sans";
   font-size: 14px;
   font-weight: normal;
   font-style: italic;
@@ -189,7 +181,6 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 #byClicking span {
-  font-family: "Open Sans", Helvetica, sans-serif;
 }
 
 #byClicking span a {
@@ -200,7 +191,7 @@ input:-moz-placeholder { /* Firefox 18- */
   display: flex;
 }
 
-#registerButton {
+#registerButton, #registerButtonTest  {
   border-radius: 5px;
   background-color: #ff720b;
   margin-top: 45px;
@@ -218,7 +209,6 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 #registerButton span {
-  font-family: "Open Sans";
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
@@ -242,7 +232,6 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 #checkboxContainer span {
-  font-family: "Open Sans", Helvetica, sans-serif;
 }
 
 
@@ -253,7 +242,6 @@ input:-moz-placeholder { /* Firefox 18- */
   align-self: baseline;
   margin-top: 5px;
   font-style: italic;
-  font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 15px;
 }
 

@@ -74,7 +74,7 @@ Create new workday object(s) for an account. It is possible to create several it
 
 **Entity structure**
 
-For details on the entity structure, please see the [appendix](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
+For details on the entity structure, please see the [appendix](workdays-api-appendix.html)
 
 **'isDefault' entity state**
 
