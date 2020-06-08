@@ -160,7 +160,28 @@ a:hover {
     margin-left: 40px;
     margin-top: 180px;
 }
+.template-greeting-bot{
+    display:inline-block !important;
+    width: 340px;
+    height: 580px;
+    background: #025595;
+    border-radius: 16px;
+    position: absolute;
 
+    left: 50%;
+    margin-left: -170px;
+}
+.template-greeting-loading{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.008em;
+    color: #FFFFFF;
+    margin-top: 290px;
+}
 .lp-tips-header {
     font-weight: bold;
     font-size: 16px;
