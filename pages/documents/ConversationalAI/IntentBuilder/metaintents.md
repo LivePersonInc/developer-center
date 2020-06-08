@@ -11,7 +11,7 @@ indicator: both
 
 ### What is a meta intent?
 
-A meta intent is a wrapper that can contain many other standard [intents](intent-builder-intents.html). This functionality provides a powerful tool for when you want to funnel a variety of intents from your user into a single dialog. When a user responds with an utterance that matches one of the contained intents, both the standard intent and the meta intent are matched. Once created, the NLU Assist tool inside Conversation Builder can associate a dialog directly with a meta intent, directing all matches for any of the contained intents to that specific dialog.
+A meta intent is a wrapper that can contain many other standard [intents](intent-builder-intents.html). This functionality provides a powerful tool for when you want to funnel a variety of intents from your user into a single dialog. When a user responds with an utterance that matches one of the contained intents, both the standard intent and the meta intent are matched. Once created, the Assist tool inside Conversation Builder can associate a dialog directly with a meta intent, directing all matches for any of the contained intents to that specific dialog.
 
 <img style="width:550px" src="img/ConvoBuilder/meta_intent.png">
 
@@ -29,7 +29,7 @@ As meta intents are a grouping of related intents, you'll need to create at leas
 
 ### Training meta intents
 
-Meta intents are not trained directly, as they are dependent on the intents contained within to be triggered. Continuing to train and tune your intents as you normally would will improve the scoring of your meta intent. Please see [this section](intent-builder-intents.html#best-practices) for best practices when training intents. 
+Meta intents are not trained directly, as they are dependent on the intents contained within to be triggered. Continuing to train and tune your intents as you normally do will improve the scoring of your meta intent. Please see [this section](intent-builder-intents.html#best-practices) for best practices when training intents. 
 
 To test user utterances against your intents and meta intents, use the debug tool provided in the lower-right corner of Intent Builder. Select the ‘Search in domain’ checkbox, and select ‘All’ from the search dropdown. Testing user input will now display search results for both intents and meta intents, which should result in identical scoring for the intent matched and the meta intent it belongs to.
 
