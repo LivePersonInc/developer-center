@@ -50,7 +50,7 @@
             </li>
         </ul>
     </div>
-    <div id="template-bot" class="template-greeting-bot" style="display:none">
+    <div id="template-bot" class="template-greeting-bot" style="display:none" >
         <div class="template-greeting-loading">
             Loading your chat
             <br/>
@@ -318,8 +318,7 @@
             return queryParams;
         }
         function removeDisplay(){
-            document.getElementById('template-bot').style.display = "none";
-            $( "#template-bot" ).hide();
+            document.getElementById('template-bot').setAttribute('style', 'display:none !important');
             console.log('template bot should be gone');
         }
         $(window).load( async function() {      //Do the code in the {}s when the window has loaded
@@ -346,7 +345,7 @@
                         console.log('failed when going through lp tag');
                         reject('ERROR');
                     }
-                }, 8000);
+                }, 4000);
             })
             lpTagPromise.then( (message)=> {
                 console.log('removing display', message);
