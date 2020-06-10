@@ -29,6 +29,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 | consumer | ID of the consumer to search.| string | Required |the consumerId is the same as the participantId in the consumerParticipants section (it is an LP unique identification of the consumer)|
 | status | Latest status of the conversation. | Array | Required | Valid values: "OPEN", " or "CLOSE" |
 |contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, responseTime |
+|source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+
 
 ### Response
 
