@@ -70,7 +70,7 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png">
 
-    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh) icon under the **Training Status** column.
+    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
 
 ### Create a 3rd-party NLU provider credential
 
@@ -112,7 +112,7 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 
 4. Wait until the training is completed.
 
-    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh) icon under the **Training Status** column.
+    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
 
     Once training is completed, you can start testing with the model version in the Debugger.
 
