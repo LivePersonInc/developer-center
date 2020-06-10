@@ -27,3 +27,13 @@ See [NLU Engines](conversation-builder-intent-builder-nlu-engines.html) to learn
 
 1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Intent Builder**.
+
+### High-level workflow
+
+When working in Intent Builder, you’ll use the following high-level workflow:
+
+<img style="width:800px" src="img/ConvoBuilder/ib_highLevelWorkflow.png">
+
+As can be seen, making changes to the domain and training the domain is an iterative step in the workflow.
+
+If the domain is using a 3rd-party NLU engine, before you train you’ll also need to [create the 3rd-party NLU provider credential](intent-builder-domains.html#create-a-3rd-party-nlu-provider-credential).

@@ -9,6 +9,22 @@ permalink: intent-builder-domains.html
 indicator: both
 ---
 
+### Key concepts
+
+#### Domains
+
+The following are key characteristics of a domain:
+
+* A domain is a collection of related intents and entities.
+* A domain has a specified NLU provider and language.
+* In a bot, you can associate a dialog starter with a domain to give you access inside the dialog to the intents (and entities) within the domain. If desired, this lets you subsequently associate the dialog starter with one of the domain’s intents to trigger the dialog’s flow. For more on this, see [here](conversation-builder-assist.html).
+
+#### Training
+
+Domains that use either the LivePerson NLU v2 engine or a 3rd-party NLU engine must be explicitly trained (i.e., click the **Train** button). This process takes the raw training data and uses it to create a “machine-learning” model that generalizes the data. The resulting model is then used to make predictions on user utterances. With domains that use LivePerson NLU v2 or a 3rd-party NLU engine, most of the necessary work to be able to make predictions on user utterances is performed at training time.
+
+In contrast, domains that use the LivePerson NLU v1 engine aren’t trained; there is no machine-learning model created. The comparison of the user utterance against the intents and entities in order to make predictions on the user utterances is performed at run time. With LivePerson NLU v1, be aware that the larger the domain, the more time the response takes. This is because most of the necessary work is performed at run time.
+
 ### Add a domain
 
 1. Access the Intent Builder application as described [here](intent-builder-overview.html#access-intent-builder).
@@ -35,6 +51,12 @@ You can use the debugger (click **Debug** in the upper-right corner) to enter sa
 
 ### Train a LivePerson NLU v2 domain
 
+You must train the LivePerson NLU v2 domain after every update to the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the Debugger to test.
+
+Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
+
+**To train a LivePerson NLU v2 domain**
+
 1. Open the domain.
 2. Ensure the domain has *at least* 5 intents. For each intent, ensure it has *at least* 20 training phrases.
 
@@ -43,6 +65,8 @@ You can use the debugger (click **Debug** in the upper-right corner) to enter sa
 3. Click **Train** in the upper-right corner to start the training.
 
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png">
+
+    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh) icon under the **Training Status** column.
 
 ### Create a 3rd-party NLU provider credential
 
@@ -68,6 +92,12 @@ You can use the debugger (click **Debug** in the upper-right corner) to enter sa
 
 ### Train a 3rd-party NLU domain
 
+You must train the 3rd-party NLU domain after every update to the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the Debugger to test.
+
+Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
+
+**To train a 3rd-party NLU domain**
+
 1. Open the domain.
 2. Click **Train** in the upper-right corner to start the training.
 3. Select the [NLU provider credential](intent-builder-natural-language-understanding.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
@@ -76,9 +106,11 @@ You can use the debugger (click **Debug** in the upper-right corner) to enter sa
 
     Note that you'll need to alternate between using your two sets of credentials, as discussed farther below.
 
-4. Wait until the training is completed. You can click the Refresh button to see the latest training status for the version.
+4. Wait until the training is completed.
 
-    Once training is completed, you can start testing with the model version in the intent tester.
+    To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh) icon under the **Training Status** column.
+
+    Once training is completed, you can start testing with the model version in the Debugger.
 
 #### Alternating service credentials
 
