@@ -30,10 +30,16 @@ See [NLU Engines](conversation-builder-intent-builder-nlu-engines.html) to learn
 
 ### High-level workflow
 
-When working in Intent Builder, you’ll use the following high-level workflow:
+When working in Intent Builder, you’ll use one of the following high-level workflows.
 
-<img style="width:800px" src="img/ConvoBuilder/ib_highLevelWorkflow.png">
+**LivePerson NLU v1 domain**
 
-As can be seen, making changes to the domain and training the domain is an iterative step in the workflow.
+<img style="width:450px" src="img/ConvoBuilder/ib_highLevelWorkflow1.png">
 
-If the domain is using a 3rd-party NLU engine, before you train you’ll also need to [create the 3rd-party NLU provider credential](intent-builder-domains.html#create-a-3rd-party-nlu-provider-credential).
+**LivePerson NLU v2 domain or 3rd-party NLU domain**
+
+<img style="width:700px" src="img/ConvoBuilder/ib_highLevelWorkflow2.png">
+
+There are some iterative steps in each workflow.
+
+If the domain is using a 3rd-party NLU engine, before you train, make sure to [create the 3rd-party NLU provider credential](intent-builder-domains.html#create-a-3rd-party-nlu-provider-credential).
