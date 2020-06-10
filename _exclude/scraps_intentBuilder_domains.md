@@ -1,2 +1,0 @@
-
-### Delete a domain
