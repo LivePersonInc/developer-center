@@ -21,9 +21,13 @@ The following are key characteristics of a domain:
 
 #### Training
 
-Domains that use either the LivePerson NLU v2 engine or a 3rd-party NLU engine must be explicitly trained (i.e., click the **Train** button). This process takes the raw training data and uses it to create a “machine-learning” model that generalizes the data. The resulting model is then used to make predictions on user utterances. With domains that use LivePerson NLU v2 or a 3rd-party NLU engine, most of the necessary work to be able to make predictions on user utterances is performed *at training time*.
+Domains that use either the LivePerson NLU v2 engine or a 3rd-party NLU engine must be explicitly trained (i.e., click the **Train** button). This process takes the raw training data and uses it to create a “machine-learning” model that generalizes the data. The resulting model is then used to make predictions on user utterances.
 
-In contrast, domains that use the LivePerson NLU v1 engine aren’t trained; there is no machine-learning model created. The comparison of the user utterance against the intents and entities in order to make predictions on the user utterances is performed at run time. With LivePerson NLU v1, be aware that the larger the domain, the more time the response takes. This is because most of the necessary work is performed *at run time*.
+With domains that use the LivePerson NLU v2 engine or a 3rd-party NLU engine, most of the work needed to be able to make predictions on user utterances is performed *at training time*.
+
+In contrast, domains that use the LivePerson NLU v1 engine aren’t trained, and there is no machine-learning model created. The comparison of the user utterance against the intents and entities in order to make predictions is performed at run time.
+
+With domains that use the LivePerson NLU v1 engine, be aware that the larger the domain, the more time the prediction response takes. This is because most of the work needed is performed *at run time*.
 
 ### Add a domain
 
