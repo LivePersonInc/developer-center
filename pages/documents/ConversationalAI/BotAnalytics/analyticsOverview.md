@@ -21,7 +21,7 @@ The Bot Analytics application is intended to show you *real time* data on your b
 
     The first screen that appears is a list of all your bots. Search or scroll through the list and select the bot for which you want to see data.
 
-    <img style="width:750px" src="img/ConvoBuilder/analytics_dashboard.png">
+    <img style="width:900px" src="img/ConvoBuilder/analytics_dashboard.png">
 
 ### Views
 
