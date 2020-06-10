@@ -10,6 +10,8 @@ permalink: bot-analytics-overview.html
 indicator: both
 ---
 
+The Bot Analytics application is intended to show you *real time* data on your bots. As such, you can use it to query for and download data for any 60-day time period in the last 13 months. If you need to download at one time the data for a longer time period or you need to download data from farther back in the past, use [Report Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html). The Report Builder application is a reporting tool that's designed for querying for historical data.
+
 ### Access Bot Analytics
 
 **To access the Bot Analytics application**
