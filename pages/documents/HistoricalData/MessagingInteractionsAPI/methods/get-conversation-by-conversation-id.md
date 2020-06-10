@@ -20,17 +20,21 @@ Method     | URL
 --------   | ---
 POST       | https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/conversations/conversation/search
 
+**URL Parameters**
+
+Name| Description  | Type/Value | Required | Notes
+:----- | :----------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
+|source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+
 **BODY/POST Parameters**
 
 Filter is sent in the POST data (body) with the following JSON structure.
 
 Required:
 
-| Name            | Description                        | Type/Value | Required | Notes
-| :---------      | :---------------                   | :----------| :----------| :----------|
+| Name            | Description                        | Type/Value |
+| :---------      | :---------------                   | :----------|
 | conversationId | ID of the conversation to search.    | string|
-|source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
-
 
 ### Response
 
