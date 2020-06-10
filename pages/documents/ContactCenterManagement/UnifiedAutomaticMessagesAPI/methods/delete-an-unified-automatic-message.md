@@ -42,6 +42,8 @@ Deletes an existing Unified Automatic Message for a specific account.
 | Name            | Description                                                                  | Type    | Notes                                          |
 |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
 | v               | API version                                                                  | String  | 2.0 is the current version                     |
+| context_id      | Context Id                                                                   | string  | Optional Context id (default is account id for ACCOUNT context)     |
+| context_type    | Context Type                                                                 | string  | Optional request context type (default is ACCOUNT)     |
 
 ### Response
 
