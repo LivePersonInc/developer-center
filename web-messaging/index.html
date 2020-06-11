@@ -11,52 +11,14 @@
     <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-<!--    <link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/style.css">
 <!--    <link id="ftue" rel="stylesheet" href="css/ftue.css">-->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <style>
-        #loader {
-            width: 100%;
-            height: 100%;
-            background-color: white;
-            margin: 0;
-        }
-    </style>
+
 </head>
 
 <body >
-<div id="loader"></div>
-    <div class="liveperson-logo" style="display:none">
-        <img src="img/Logo.svg" />
-    </div>
-    <div class="greeting-bot-header" style="display:none">
-        Talk to your Greeting Bot
-    </div>
-
-    <div id="tips-container"class="lp-tips-container" style="display:none">
-        <div class="lp-tips-header">
-            Things to try:
-        </div>
-        <ul>
-            <li class="lp-tips-content">
-                Type ‘Hi’ or anything else to get started
-            </li>
-            <li class="lp-tips-content" >
-                Choose any option. All options and dialogs are fully customizable in Conversation Builder
-            </li>
-            <li class="lp-tips-content" >
-                Choose 'Talk to an Agent' to connect with a human agent (you!).
-            </li>
-        </ul>
-    </div>
-    <div id="template-bot" class="template-greeting-bot" style="display:none" >
-        <div class="template-greeting-loading">
-            Loading your chat
-            <br/>
-            experience window...
-        </div>
-    </div>
     <div class="container" style="display:none">
         <div class="row">
             <div class="col-md-8" id="web-message-ex-top">
@@ -215,61 +177,8 @@
             </div>
         </div>
     </div>
-    <div id="spotlight" class="spotlight-container" >
-        <div class="spotlight-content-container" style="display: none">
-            <div class="heading-h5">
-                Start building with LivePerson by extending this greeting bot solution
-            </div>
-            <ul class="container-content">
-                <li class="spotlight-content">
-                    Connect to mobile Channels
-                </li>
-                <li class="spotlight-content">
-                    Personalize the bot dialog
-                </li>
-                <li class="spotlight-content">
-                    Customizing routing rules
-                </li>
-                <li class="spotlight-content">
-                    Get started with Intents
-                </li>
-            </ul>
-            <div class="hyperlink-learn">
-                <a target="_blank" href="https://developers.liveperson.com/first-steps.html"
-                    alt=" Dev Center getting started">
-                    Lets Build
-                </a>
-            </div>
-            <div class="heading-h5" style="margin-top:40px;">
-                Want to learn how we built the Greeting Bot solution
-                <a target="_blank" class="hyperlink-container" href="https://developers.liveperson.com/first-steps.html"
-                    alt="Dev Center Getting Started">
-                    Learn here.
-                </a>
-            </div>
-            <div class="heading-h5" style="margin-top:40px;">
-                Or, go back to continue exploring LivePerson
-            </div>
-        </div>
-    </div>
-    <script>
 
-        function appendFTUE() {
-            var styles = document.createElement('link');
-            styles.rel = 'stylesheet';
-            styles.id = 'ftue';
-            styles.type = 'text/css';
-            styles.href = 'css/ftue.css';
-            document.getElementsByTagName('head')[0].appendChild(styles);
-        };
-        function appendOldStyle() {
-            var styles = document.createElement('link');
-            styles.rel = 'stylesheet';
-            styles.id = 'style';
-            styles.type = 'text/css';
-            styles.href = 'css/style.css';
-            document.getElementsByTagName('head')[0].appendChild(styles);
-        };
+    <script>
         function removeStyleSheet(stylesheetId) {
             try {
                 console.log('removing style sheet,', stylesheetId);
@@ -317,54 +226,13 @@
             }
             return queryParams;
         }
-        async function removeDisplay(){
-            const sleep = (milliseconds) => {
-                return new Promise(resolve => setTimeout(resolve, milliseconds))
-            }
-            await sleep(2000);
-            document.getElementById('template-bot').setAttribute('style', 'display:none !important');
-            document.getElementById('tips-container').setAttribute('style', 'display:inline-block !important');
 
-            console.log('template bot should be gone');
-        }
-        $(window).load( async function() {      //Do the code in the {}s when the window has loaded
-            var site = getURLParams(window.location.search).site || "";
-            var username = getURLParams(window.location.search).username || "";
-            var experience = getURLParams((window.location.search)).experience || "";
-            var env = getURLParams((window.location.search)).env || "";
-            if (experience === "first_time" && site !== "") {
-                // if it is a ftue experience then append the style sheet
-                removeStyleSheet('style');
-                appendFTUE();
-            } else {
-                removeStyleSheet('ftue');
-                appendOldStyle();
-            }
-            let lpTagPromise = new Promise((resolve, reject) => {
-                setTimeout( function() {
-                    try{
-                        console.log('going through lp tag');
-                        loadLPTag(env);
-                        console.log('went through lp tag');
-                        resolve("Success!")  // Yay! Everything went well!
-                    }catch(e){
-                        console.log('failed when going through lp tag');
-                        reject('ERROR');
-                    }
-                }, 4000);
-            })
-            lpTagPromise.then( (message)=> {
-                console.log('removing display', message);
-                removeDisplay();
-            })
-
-            $("#loader").fadeOut("fast");  //Fade out the #loader div
-        });
         var site = getURLParams(window.location.search).site || "";
         var username = getURLParams(window.location.search).username || "";
         var experience = getURLParams((window.location.search)).experience || "";
         var env = getURLParams((window.location.search)).env || "";
-
+        removeStyleSheet('ftue');
+        loadLPTag(env);
         function copyToClipboard() {
             /* Get the text field */
             new ClipboardJS('.copy', {
@@ -372,16 +240,12 @@
             });
         }
     </script>
-
     <script src="script.js"></script>
-
     <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/spotlight.js"></script>
-
 </body>
 
 </html>
