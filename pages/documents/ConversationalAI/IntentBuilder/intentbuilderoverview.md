@@ -19,7 +19,7 @@ Intents directs your bot to be more flexible and respond to a wider variety of u
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_intentDetails.png">
 
 {: .important}
-See [here](conversation-builder-intent-builder-nlu-engines.html) to learn more about the different NLU engines that are compatible with Conversation Builder.
+See [here](intent-builder-natural-language-understanding.html) to learn more about the different NLU engines that are compatible with Conversation Builder.
 
 ### Access Intent Builder
 
