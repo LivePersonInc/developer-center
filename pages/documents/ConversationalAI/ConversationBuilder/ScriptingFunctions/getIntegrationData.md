@@ -52,6 +52,9 @@ if(isApiExecutionSuccessful){
 }
 ```
 
+{: .important}
+You can also define rules in an interaction based on the result of an API integration; for information on this, see [here](conversation-builder-interactions-integrations.html#integration-interactions).
+
 ### Get API integration status code
 
 Used to retrieve the HTTP status (response) code returned from execution of an API integration. The code returned might indicate success or failure, and, in the case of a failure, it can provide insight into the type of error that occurred.
