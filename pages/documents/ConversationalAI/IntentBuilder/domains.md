@@ -9,26 +9,6 @@ permalink: intent-builder-domains.html
 indicator: both
 ---
 
-### Key concepts
-
-#### Domains
-
-The following are key characteristics of a domain:
-
-* A domain is a collection of related intents and entities.
-* A domain has a specified NLU provider and language.
-* In a bot, you can associate a dialog starter with a domain to give you access inside the dialog to the intents (and entities) within the domain. If desired, this lets you subsequently associate the dialog starter with one of the domain’s intents to trigger the dialog’s flow. For more on this, see [here](conversation-builder-assist.html).
-
-#### Training
-
-Domains that use either the LivePerson NLU v2 engine or a 3rd-party NLU engine must be explicitly trained (i.e., click the **Train** button). This process takes the raw training data and uses it to create a “machine-learning” model that generalizes the data. The resulting model is then used to make predictions on user utterances.
-
-With domains that use the LivePerson NLU v2 engine or a 3rd-party NLU engine, most of the work needed to be able to make predictions on user utterances is performed *at training time*.
-
-In contrast, domains that use the LivePerson NLU v1 engine aren’t trained, and there is no machine-learning model created. The comparison of the user utterance against the intents and entities in order to make predictions is performed at run time.
-
-With domains that use the LivePerson NLU v1 engine, be aware that the larger the domain, the more time the prediction response takes. This is because most of the work needed is performed *at run time*.
-
 ### Add a domain
 
 1. Access the Intent Builder application as described [here](intent-builder-overview.html#access-intent-builder).
@@ -121,3 +101,30 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 When you created your 3rd-party service credentials, you created two sets, as discussed [here](intent-builder-natural-language-understanding.html#step-2-sign-up-and-get-the-api-keys). This is so you can alternate between them. When you train the intents in a domain for the first time in Intent Builder, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
 
 <img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
+
+### Test a domain
+
+The purpose of testing is to determine whether the domain is performing as expected. As an example, assume you have a domain with 10 intents that each have 10 training phrases. During testing, you might use a test bank of 20-30 utterances that aren’t a part of the domain to see the results for those utterances. The accuracy would help to define the benchmark for the domain. After evaluating the utterances that didn’t work, you could fine tune the domain, re-train (required depending on the NLU engine), and then re-test for verification.
+
+If the domain uses the LivePerson NLU v2 engine or a 3rd-party engine, you'll need to train the domain before testing it. However, you **don't** need to activate the resulting model version before doing so. In fact, it’s recommended that you never do this, as you can’t deactivate a version once you’ve activated it. The Debug (test) tool lets you select the model version to test. This means you can test the same data set against multiple trained models, and then activate the version that performs best.
+
+**To test a domain**
+
+1. In the dashboard that lists your domains, select the domain.
+2. Click **Debug** in the upper-right corner.
+    
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug1.png">
+
+3. In the Test User Input panel, specify the following:
+    
+    **User text**: Enter the user utterance to test.
+    
+    **Search in domain**: If you disable this, the test will be run against the currently displayed intent. If you enable this, the test will be run against all intents in the domain. In most cases, you'll want to enable this setting.
+    
+    If you select to search within the domain, you can then select whether to test against [intents](intent-builder-intents.html), [meta intents](intent-builder-meta-intents.html), or all.
+    
+    **Model version**: This setting is only displayed and relevant if the domain uses the LivePerson NLU v2 engine or a 3rd-party NLU engine. Select the trained model version test. You can select from all existing versions.
+
+3. Click **Test**.
+
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug2.png">
