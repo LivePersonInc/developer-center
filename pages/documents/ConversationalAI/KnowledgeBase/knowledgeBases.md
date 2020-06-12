@@ -133,7 +133,7 @@ Download of a knowledge base creates a CSV file.
 You might need to download a knowledge base for a few reasons:
 
 * You added the initial set of articles to the knowledge base by importing a CSV file, and now you want to add more articles using an import file too. *The only way to do this is with a Google sheet*, so you plan to download the knowledge base to a CSV file, convert the CSV file to a Google sheet, add the new articles alongside the existing articles (**don't remove the existing articles**), and link the Google sheet to the knowledge base.
-* You want to create a copy of the knowledge base by dowloading it and then adding a new knowledge base using the CSV as the import file.
+* You want to create a copy of the knowledge base by downloading it and then adding a new knowledge base using the CSV as the import file.
 * You want to move or copy the knowledge base to another environment.
 * You want an extra measure of back-up, so you plan to archive the CSV file for safekeeping.
 
