@@ -54,7 +54,7 @@ When working in Intent Builder, you’ll use one of the following high-level wor
 
 **LivePerson NLU v2 domain or 3rd-party NLU domain**
 
-<img style="width:700px" src="img/ConvoBuilder/ib_highLevelWorkflow2.png">
+<img style="width:725px" src="img/ConvoBuilder/ib_highLevelWorkflow2.png">
 
 There are some iterative steps in each workflow.
 
