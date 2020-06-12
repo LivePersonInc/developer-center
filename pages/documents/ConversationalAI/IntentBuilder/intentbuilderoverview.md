@@ -56,4 +56,4 @@ When working in Intent Builder, you’ll use one of the following high-level wor
 
 There are some iterative steps in each workflow.
 
-If the domain is using a 3rd-party NLU engine, before you train, make sure to [create the 3rd-party NLU provider credential](intent-builder-domains.html#create-a-3rd-party-nlu-provider-credential).
+If the domain is using a 3rd-party NLU engine, you'll need to [connect the NLU engine](intent-builder-natural-language-understanding.html#connect-a-3rd-party-nlu-engine) before you train.
