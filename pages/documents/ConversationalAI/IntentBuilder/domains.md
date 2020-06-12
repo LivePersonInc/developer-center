@@ -103,7 +103,7 @@ The purpose of testing is to determine whether the domain is performing as expec
 {: .important}
 If the domain uses the LivePerson NLU v2 engine or a 3rd-party engine, you'll need to train the domain before testing it. However, you **don't** need to activate the resulting model version before testing it. (You can’t deactivate a version once you’ve activated it.) Use the Debug tool to 1) test the **latest trained** model version and 2) compare it with results from testing the **activated** model version. When you have the latest trained model version performing as desired, you can then activate it.
 
-**Tip**: After testing but before making any fine-tuning changes, consider exporting the intents and entities in the domain and archiving the export file in an archive. This gives you the ability to go back and compare the versions of the domain if you choose.
+**Tip**: After testing but before making any fine-tuning changes, consider exporting the intents and entities in the domain and archiving the export file. This gives you the ability to go back and compare the versions of the domain if you choose.
 
 **To test a domain**
 
