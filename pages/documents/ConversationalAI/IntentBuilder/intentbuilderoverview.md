@@ -10,11 +10,9 @@ permalink: intent-builder-overview.html
 indicator: both
 ---
 
-The Conversation Builder platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you can use the [Conversation Builder](conversation-builder-bot-workspace.html) to associate one domain to each dialog.
+The Conversation Builder platform's Intent Builder allows you to build multiple intent domains that can each hold one or many user intents. Thus, you can define specific groups of intents for different use cases. Once you build at least one intent domain, you can use [Conversation Builder](conversation-builder-bot-workspace.html) to associate one domain to each dialog. For example, you might have a "shipping" domain that contains intents for "delivery status", "update address", etc. You could link this "shipping" domain to bot dialogs that do various shipping tasks.
 
-An example might be a "shipping" domain that contains intents for "delivery status", "update address", etc. This "shipping" intent domain could be linked to bot dialogs that do various shipping tasks.
-
-Intents directs your bot to be more flexible and respond to a wider variety of user input; instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot uses a Natural Language Understanding (NLU) engine to look for the intent specified and trigger the interaction you configured to respond to this intent. Therefore, once you configure your intents with robust *training phrases*, expressions like, "I have a question about billing", "Looking to check my account," or "What's my billing status?" yield the same intent and, thus, the same response from the bot.
+Intents direct a bot to be more flexible and respond to a wider variety of user input. Instead of looking for specific patterns in the input (for example, the pattern "bill"), the bot uses a Natural Language Understanding (NLU) engine to look for the intent specified and trigger the bot interaction that's configured to respond to the intent. Therefore, once you configure your intents with robust *training phrases*, expressions like, "I have a question about billing", "Looking to check my account," or "What's my billing status?" yield the same intent and, thus, the same response from the bot.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_intentDetails.png">
 
