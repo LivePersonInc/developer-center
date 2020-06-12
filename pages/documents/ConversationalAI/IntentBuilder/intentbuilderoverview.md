@@ -34,7 +34,7 @@ The following are key characteristics of a domain:
 
 * A domain is a collection of related [intents](intent-builder-intents.html) and [entities](intent-builder-entities.html).
 * A domain has a specified NLU provider and language.
-* In a bot, you can associate one domain with each dialog. This gives you access inside the dialog to the intents and entities within the domain, so you can associate them with interactions. For example, you might associate an intent with a Dialog Starter interaction to use the intent to trigger the dialog's flow. For more on this, see [here](conversation-builder-assist.html).
+* In a bot, you can associate one domain with each dialog. This gives you access inside the dialog to the intents and entities within the domain, so you can associate them with interactions. For example, you might [associate an intent with a Dialog Starter interaction](conversation-builder-assist.html) to use the intent to trigger the dialog's flow.
 
 #### Training
 
