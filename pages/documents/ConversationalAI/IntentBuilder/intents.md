@@ -11,9 +11,9 @@ indicator: both
 
 ### What's an intent?
 
-Instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot will use an NLU engine to look for the intent specified and trigger the interaction you configured to respond to this intent. Intents are great for when you need a looser approach to matching than pattern matching. Since pattern matching looks for an *exact* match for your defined expression, it might "miss" different synonyms, phrasings, formats, and so on.
+Intents are great for when you need a looser approach to matching than pattern matching. Since pattern matching looks for an *exact* match for your defined expression, it might "miss" different synonyms, phrasings, formats, and so on. With intents, instead of looking for specific patterns in the user input (for example, the pattern "bill"), the bot uses a Natural Language Understanding (NLU) engine to look for the intent specified and trigger the interaction configured to respond to the intent. 
 
-Intents match an entire sentence against a set of training sentences or KB articles and the results are scored based on level of confidence (VERY GOOD, GOOD, FAIR PLUS, FAIR, POOR). From this sentence, the NLU engine derives an intent to which the bot responds. For example, if you configured your bot to respond to a "billing" intent, the NLU engine doesn't just look for the word "billing"; it analyzes any sentence the user might input and tries to understand if the "billing" intent is present. If the intent is present, the NLU "tells" the bot that it is, and the relevant dialog triggers.
+Intents match an entire sentence against a set of training sentences or Knowledge Base articles, and the results are scored based on level of confidence: VERY GOOD, GOOD, FAIR PLUS, FAIR, POOR. From the input sentence, the NLU engine derives an intent to which the bot responds. For example, if you configured your bot to respond to a "billing" intent, the NLU engine doesn't just look for the word "billing"; it analyzes any sentence the user might input and tries to understand if the "billing" intent is present. If the intent is present, the NLU "tells" the bot that it is, and the relevant dialog triggers.
 
 ### Add an intent
 
