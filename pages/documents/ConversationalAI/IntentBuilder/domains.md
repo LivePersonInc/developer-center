@@ -123,3 +123,21 @@ If the domain uses the LivePerson NLU v2 engine or a 3rd-party engine, you'll ne
 3. Click **Test**.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug2.png">
+
+### Activate the latest model version
+
+Activating the latest model version is something that you do if the domain is using the LivePerson NLU v2 engine or a 3rd-party NLU engine.
+
+When you’re testing using the Debug tool, you can select the model version to test. This means you can test multiple models, and then activate the **latest** model version when it performs as desired. Once you activate it, it becomes the model version that’s used everywhere **outside of** Intent Builder, for example, in Conversation Builder, in API calls to the NLU engine, in Intent Analyzer, and so on.
+
+{: .important}
+Ensure you test before activating the latest model version, as you can’t deactivate it or revert back to a previous version. In this situation, you’ll need to update the domain as needed, retrain to create a new model version, and then activate that latest version.
+
+The first model version that you create via training is activated automatically. Thereafter, you must manually activate the latest version. You can't activate earlier versions, only the latest.
+
+**To activate the latest model version**
+
+1. Open the domain, and click **Versions** in the upper-left corner.
+2. Click the **Activate** button beside the latest model version.
+
+    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_activate.png">    
