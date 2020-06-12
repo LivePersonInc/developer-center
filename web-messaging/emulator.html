@@ -179,12 +179,13 @@
     </div>
 
     <script>
+
+        removeStyleSheet('ftue');
         var site = getURLParams(window.location.search).site || "";
         var username = getURLParams(window.location.search).username || "";
         var experience = getURLParams((window.location.search)).experience || "";
         var env = getURLParams((window.location.search)).env || "";
-        removeStyleSheet('ftue');
-        await loadLPTag(env);
+         loadLPTag(env);
         function copyToClipboard() {
             /* Get the text field */
             new ClipboardJS('.copy', {

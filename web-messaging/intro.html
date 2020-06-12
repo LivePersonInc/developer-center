@@ -231,11 +231,11 @@
 
         $("#loader").fadeOut("fast");  //Fade out the #loader div
     });
+
     var site = getURLParams(window.location.search).site || "";
     var username = getURLParams(window.location.search).username || "";
     var experience = getURLParams((window.location.search)).experience || "";
     var env = getURLParams((window.location.search)).env || "";
-
     function copyToClipboard() {
         /* Get the text field */
         new ClipboardJS('.copy', {
