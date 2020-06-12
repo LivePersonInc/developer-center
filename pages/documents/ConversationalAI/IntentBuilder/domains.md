@@ -124,6 +124,24 @@ If the domain uses the LivePerson NLU v2 engine or a 3rd-party engine, you'll ne
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug2.png">
 
+    If you searched in the domain, you can select a result to see a more detailed breakdown.
+
+    After reviewing the results, if the score isn't where you’d like it, you can add more training phrases. In addition, using [entities](conversation-builder-intent-builder-entities.html) helps to increase the accuracy of intents and give their score a boost.
+
+#### What is the intent score/threshold?
+
+Because we want to return the best response to users, the NLU has a threshold for which anything below this threshold will not be shown to the user. For intents, this threshold is set to GOOD. This is based on the NLU’s level of confidence in the match. The confidence score breakdown looks like this:
+
+* VERY GOOD: 85-100% match
+
+* GOOD: 70-85% match
+
+* FAIR PLUS: 65-70% match
+
+* FAIR: 50-65% match
+
+You can't change the threshold when using intents (although you can do [this](knowledge-base-overview.html#thresholds) with knowledge bases).
+
 ### Activate the latest model version
 
 Activating the latest model version is something that you do if the domain is using the LivePerson NLU v2 engine or a 3rd-party NLU engine.
