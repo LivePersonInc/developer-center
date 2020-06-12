@@ -14,7 +14,7 @@ indicator: both
 
 One of the essential tools of Conversational AI is Natural Language Understanding (NLU). This is what allows Intent Builder to analyze consumer input and assign accurate intents.
 
-While LivePerson provides its own proprietary NLU out of the box, Intent Builder also allows you to choose your preferred NLU Engine for analyzing text by routing all NLU analysis and training through an API. This API layer of abstraction allows you to choose from the following NLU engines:
+While LivePerson provides its own proprietary NLU out of the box, Intent Builder also allows you to choose your preferred NLU Engine for analyzing text by routing all NLU analysis and training through an API. This API layer of abstraction lets you to choose from the following NLU engines:
 
 - LivePerson's native NLU
 - Google Dialogflow
