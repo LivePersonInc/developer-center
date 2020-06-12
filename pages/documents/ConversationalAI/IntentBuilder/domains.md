@@ -25,14 +25,6 @@ indicator: both
     
     If the domain's NLU provider is LivePerson's NLU v2 (not v1), you'll also need to [train the model](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
 
-### The domain view
-
-Once you've added a domain, you will be automatically navigated to the Domain View. On the left hand side, you can find a list of the intents a domain includes.
-
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_intentDetails.png">
-
-You can use the debugger (click **Debug** in the upper-right corner) to enter sample user input to test against your intents. The NLU engine will take the text you input and see if it can find matches in your intents. It will list these intents and the degree to which they matched the input text.
-
 ### Train a LivePerson NLU v2 domain
 
 You must train the LivePerson NLU v2 domain after every update to the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the Debugger to test.
@@ -104,9 +96,14 @@ When you created your 3rd-party service credentials, you created two sets, as di
 
 ### Test a domain
 
+You can test the intents (and entities) in a domain against sample user utterances using the **Debug** tool. The NLU engine takes the sample utterance and sees if it can find matches in the intents. The results list the intents and the degree to which they matched the utterance.
+
 The purpose of testing is to determine whether the domain is performing as expected. As an example, assume you have a domain with 10 intents that each have 10 training phrases. During testing, you might use a test bank of 20-30 utterances that aren’t a part of the domain to see the results for those utterances. The accuracy would help to define the benchmark for the domain. After evaluating the utterances that didn’t work, you could fine tune the domain, re-train (required depending on the NLU engine), and then re-test for verification.
 
-If the domain uses the LivePerson NLU v2 engine or a 3rd-party engine, you'll need to train the domain before testing it. However, you **don't** need to activate the resulting model version before doing so. In fact, it’s recommended that you never do this, as you can’t deactivate a version once you’ve activated it. The Debug (test) tool lets you select the model version to test. This means you can test the same data set against multiple trained models, and then activate the version that performs best.
+{: .important}
+If the domain uses the LivePerson NLU v2 engine or a 3rd-party engine, you'll need to train the domain before testing it. However, you **don't** need to activate the resulting model version before testing it. (You can’t deactivate a version once you’ve activated it.) Use the Debug tool to 1) test the latest trained model version and 2) compare it with results from testing the activated model version. When you have the latest trained model version performing as desired, you can then activate it.
+
+After testing but before making any fine-tuning changes, consider exporting the intents and entities in the domain and archiving the export file in an archive. This gives you the ability to go back and compare the versions of the domain if you choose.
 
 **To test a domain**
 
