@@ -15,7 +15,7 @@ The Insurance Quote template is designed to capture information related to insur
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/InsuranceQuote3.png">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/templates/InsuranceQuote3.png">
 
 ### Included Items
 
@@ -46,9 +46,7 @@ The template uses text interactions only, so it can be deployed to any channel w
 To customize this template, you will need to do the following
 
 #### General dialog customization
-You will want to review each of the dialogs, starting with Welcome and each insurance dialog, and customize the verbiage used to greet your customer and request their details.
-
-This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
+You will want to review each of the dialogs, starting with Welcome and each insurance dialog, and customize the verbiage used to greet your customer and request their details. This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
 
 #### Insurance (Home|Auto|Life) dialogs
 Each interaction requiring user input is performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if you prefer.
@@ -64,21 +62,21 @@ For each dialog of questions for our user, we allow a certain number of attempts
 
 ```
 
-If you want to remove any capture interactions (eg: vehicle primary use), you will need to be sure to review the Next Step navigation so that the previous interaction will go to the next interaction in the dialog.
+If you want to remove any capture interactions (e.g., vehicle primary use), you will need to be sure to review the Next Action navigation so that the previous interaction will go to the next interaction in the dialog.
 
-#### Quote Dialog
+#### Quote dialog
 The name, email and phone number steps of the Quote dialog are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if you prefer.
 
 #### Analytics
 Custom event logging for this template has been provided by default.
 
-For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction, ex:
+For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction, i.e.:
 
 ```
 botContext.logCustomEvent(‘’, ‘Interaction Name’, ‘’);
 ```
 
-For questions that a user must respond to, the code can be found under Process User Response, ex:
+For questions that a user must respond to, the code can be found under Process User Response, i.e.:
 
 ```
 var response = botContext.getCurrentUserMessage();
@@ -90,9 +88,7 @@ For more information on custom events, please refer to [our developer documentat
 
 #### Global Function customization
 
-Click the Global Functions link to access all the global functions and variables to be configured.
-
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/InsuranceQuote1.png">
+Click **Global Functions** to access all the global functions and variables to be configured.
 
 You’ll want to customize the generateLoanTemplate and getEmailBody functions within Global Functions to reflect your branding and voice.
 
@@ -110,6 +106,8 @@ Modify the following values in Global Functions:
 | replyEmail |Reply To email address, displayed to the recipient in their email program|
 | emailSubject |Email subject line content
 | emailText | Initial email text, default value of  "Loan Consultation Request Results" 
+
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/InsuranceQuote1.png">
 
 The bot captures relevant user information in several variables. These values are used in the `generateLoanTemplate` and `getEmailBody` Global Functions to dynamically generate your email body. 
 

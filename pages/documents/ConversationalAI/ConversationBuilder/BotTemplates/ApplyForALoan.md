@@ -73,13 +73,13 @@ For each dialog of questions for our user, we allow a certain number of attempts
 #### Analytics
 Custom event logging for this template has been provided by default.
 
-For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction, ex:
+For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction, i.e.:
 
 ```
 botContext.logCustomEvent(‘’, ‘Interaction Name’, ‘’);
 ```
 
-For questions that a user must respond to, the code can be found under Process User Response, ex:
+For questions that a user must respond to, the code can be found under Process User Response, i.e.:
 
 ```
 var response = botContext.getCurrentUserMessage();
