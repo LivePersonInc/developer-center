@@ -96,9 +96,9 @@ Key characteristics include:
 * Its primary feature is the enabling of a separate brand-specific model, built and *trained* for each domain.
 * A scalable solution that can handle a greater volume of requests, providing faster response times and accuracy.
 * To perform effectively, expects large sets of data (both intents and training phrases).
-* When you create a domain with NLU v2 and use it in Intent Analyzer or in Conversation Builder, the following is recommended:
-    * At least 5 intents in order to [train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
-    * At least 20 training phrases per intent.
+* When you create a domain with NLU v2 and use it in Intent Analyzer or in Conversation Builder, the following is required:
+    * At least 20 training phrases per intent
+    * At least 5 intents in order to train
 * Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
 * Can be used with Intent Analyzer.
 * Supports English.
