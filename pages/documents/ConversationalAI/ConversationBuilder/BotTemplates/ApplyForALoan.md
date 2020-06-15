@@ -11,8 +11,6 @@ permalink: conversation-builder-bot-templates-apply-for-a-loan.html
 indicator: both
 ---
 
-### Apply for a Loan
-
 The Apply for a Loan template is designed to capture contact and financial information from a customer and send the results to an email address.
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
