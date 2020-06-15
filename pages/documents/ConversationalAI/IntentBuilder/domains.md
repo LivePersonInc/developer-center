@@ -36,7 +36,7 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 1. Open the domain.
 2. Ensure the domain has *at least* 5 intents. For each intent, ensure it has *at least* 20 training phrases.
 
-    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingPhrases.png">
+    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/intents_trainingPhrases.png">
 
 3. Click **Train** in the upper-right corner to start the training.
 
@@ -108,7 +108,7 @@ If the domain uses the LivePerson NLU v2 engine or a 3rd-party engine, you'll ne
 **To test a domain**
 
 1. In the dashboard that lists your domains, select the domain.
-2. Click **Debug** in the upper-right corner.
+2. Click **Test** in the upper-right corner.
     
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_debug1.png">
 
@@ -146,7 +146,7 @@ You can't change the threshold when using intents (although you can do [this](kn
 
 Activating the latest model version is something that you do if the domain is using the LivePerson NLU v2 engine or a 3rd-party NLU engine.
 
-When you’re testing using the Debug tool, you can select the model version to test. This means you can test multiple models, and then activate the **latest** model version when it performs as desired. Once you activate it, it becomes the model version that’s used everywhere **outside of** Intent Builder, for example, in Conversation Builder, in API calls to the NLU engine, in Intent Analyzer, and so on.
+When you’re testing using the Debug tool, you can select the model version to test. This means you can test multiple models, and then activate the *latest* model version when it performs as desired. Once you activate it, it becomes the model version that’s used everywhere *outside of* Intent Builder, for example, in Conversation Builder, in API calls to the NLU engine, in Intent Analyzer, and so on.
 
 {: .important}
 Ensure you test before activating the latest model version, as you can’t deactivate it or revert back to a previous version. In this situation, you’ll need to update the domain as needed, retrain to create a new model version, and then activate that latest version.
