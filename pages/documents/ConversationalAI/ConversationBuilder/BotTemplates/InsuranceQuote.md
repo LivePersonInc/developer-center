@@ -90,7 +90,7 @@ For more information on custom events, please refer to [our developer documentat
 
 Click **Global Functions** to access all the global functions and variables to be configured.
 
-You’ll want to customize the generateLoanTemplate and getEmailBody functions within Global Functions to reflect your branding and voice.
+You’ll want to customize the `setAutoTemplate`, `setHomeTemplate`, `setLifeTemplate`, and `getEmailBody` functions within Global Functions to reflect your branding and voice.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/InsuranceQuote2.png">
 
@@ -109,7 +109,7 @@ Modify the following values in Global Functions:
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/templates/InsuranceQuote1.png">
 
-The bot captures relevant user information in several variables. These values are used in the `generateLoanTemplate` and `getEmailBody` Global Functions to dynamically generate your email body. 
+The bot captures relevant user information in several variables. These values are used in the `setAutoTemplate`, `setHomeTemplate`, `setLifeTemplate`, and `getEmailBody` global functions to dynamically generate the email body. 
 
 ##### Agent escalation
 If the user requests an agent or if they reach the max invalid attempts to validate entered information, they will be escalated to a human agent.
