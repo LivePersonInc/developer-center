@@ -15,9 +15,7 @@ All Conversation Builder bots are based on **templates**.
 
 The Custom Bot template is the best choice if you want to create a completely custom bot from scratch.
 
-For other, more common use cases, Conversation Builder has a set of predefined, industry vertical templates that enable rapid adoption of automation.
-
-Each conversational template consists of the following capabilities:
+For other, more common use cases, Conversation Builder has a set of predefined, industry vertical templates that enable rapid adoption of automation. Each conversational template consists of the following capabilities:
 
 * Intents associated with the use case
 
@@ -120,7 +118,7 @@ The following use cases will be provided for multiple different industry vertica
 
 ### Create a bot from a template
 
-1. On the Bots dashboard, click **New Bot** in the upper-right corner.
+1. From the dashboard that lists your bots, click **New Bot** in the upper-right corner.
 
 2. Select the template.
 
