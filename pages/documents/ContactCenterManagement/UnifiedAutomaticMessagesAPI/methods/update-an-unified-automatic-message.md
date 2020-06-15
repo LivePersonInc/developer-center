@@ -36,6 +36,8 @@ Updates an existing Unified Automatic Message for a specific account.
 | v               | API version                                                                  | String  | 2.0 is the current version                     |
 | lang            | Languages (separated by commas) to filter the response by.                   | string  | Format: en-US, en-UK. Default value: null      |
 | select          | Yoga selector expression.                                                    | string  | Example values: id, name. Default value: null  |
+| context_id      | Context Id                                                                   | string  | Optional Context id (default is account id for ACCOUNT context)     |
+| context_type    | Context Type                                                                 | string  | Optional request context type (default is ACCOUNT)     |
 
 **Request Headers**
 
