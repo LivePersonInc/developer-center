@@ -1,10 +1,12 @@
 ---
-pagename: Proactive Messaging
+pagename: Proactive Messaging API
+redirect_from:
+  - ProactiveMessaging.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Proactive Messaging
-permalink: ProactiveMessaging.html
+permalink: proactive-messaging-api.html
 indicator: messaging
 ---
 
