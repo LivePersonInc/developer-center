@@ -1,6 +1,7 @@
 body {
-    background: #000 url('../img/background.jpeg') no-repeat center center fixed;
-    background-size: cover;
+    /*background: #000 url('../img/background.jpeg') no-repeat center center fixed;*/
+    /*background-size: cover;*/
+    background: #00213A;
     overflow: auto;
 }
 
@@ -11,11 +12,12 @@ body {
 }
 
 #lp_account {
-    background: url('../img/group-14.png') no-repeat scroll 7px 11px;
-    height: 40px;
-    border-radius: 20px;
-    padding-left: 30px;
-    /*background-color: #f9f9f9;*/
+    height: 56px;
+    border-radius: 100px;
+    padding: 0 24px;
+    border: 2px solid white;
+    color:white;
+    background-color: inherit;
 }
 
 #lp_username {
@@ -51,20 +53,22 @@ body {
 
 #lp_btn_login {
     /*width: 291px;*/
-    height: 40px;
-    border-radius: 20px;
-    background-color: #32c6f4;
+    height: 56px;
+    border-radius: 100px;
+    border: none;
+    padding: 0 24px;
+    background-color: #0053f4;
     object-fit: contain;
     font-family: Roboto, sans-serif;
-    font-size: 11px;
-    font-weight: 900;
+    font-size: 14px;
+    font-weight: bold;
     font-style: normal;
     font-stretch: normal;
     line-height: normal;
-    letter-spacing: 3px;
+    letter-spacing: 1.5px;
     text-align: center;
     color: #ffffff;
-    margin-top: 10px;
+
     outline: none;
 }
 
@@ -165,13 +169,13 @@ body {
     width: 65px;
     height: 15px;
     font-family: Roboto;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;
     line-height: 1.25;
     letter-spacing: normal;
-    color: #4a4a4a;
+    color: #ffffff;
 }
 
 #username {
@@ -187,17 +191,19 @@ body {
     color: #4a4a4a;
 }
 
+::-webkit-input-placeholder { /* Edge */
+    color: white;
+    font-size: 16px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+    font-size: 16px;
+}
+
 ::placeholder {
-    width: 124px;
-    height: 15px;
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.25;
-    letter-spacing: normal;
-    color: #c8c8c8;
+    color: white;
+    font-size: 16px;
 }
 
 #lp-info {
@@ -537,7 +543,58 @@ footer .credit {
 a {
     color: #fff;
 }
+.lp-tips-container {
+    display: inline-block !important;
+    width: 22%;
+    height: 20%;
+    margin-left: 40px;
+    margin-top: 180px;
+}
+.lp-tips-content {
+    /* width: 328px;
+    height: 24px; */
+    font-weight: normal !important;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    font-family: Roboto;
+    color: #FFFFFF;
+    margin-bottom: 16px;
 
+}
+.liveperson-logo {
+    display: block !important;
+    margin: 32px 0 0 32px;
+}
+.lp-tips-header {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    font-family: Roboto;
+    color: #FFFFFF
+}
+.form-box{
+    display:inline-block !important;
+    position: absolute;
+    left: 45%;
+    margin-left: -170px;
+}
+.greeting-bot-header {
+    font-family: Roboto;
+    display: block !important;
+    width: 500px;
+    margin: 0 auto 62px auto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.008em;
+    color: #FFFFFF;
+}
+.row{
+    display: inline-flex;
+}
 /*@media only screen and (max-width: 768px) {*/
 /*section {*/
 /*font-size: 2em;*/
