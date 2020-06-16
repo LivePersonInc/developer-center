@@ -83,7 +83,7 @@ Key characteristics include:
     In contrast, NLU v2 is more generalized; it can handle a general set of user questions and still perform well. 
 
 * From an NLU processing perspective, performs well regardless of the number of intents and training phrases involved. However, if you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
-* Supports a *maximum of 40* intents for performance reasons. If you add more than 40, only the first 40 are used.
+* For performance reasons, supports a maximum of 40 training phrases per intent. If you add more than 40, only the first 40 are used.
 * Doesn't require the model to be trained, which can save time.
 * *Can't* be used with Intent Analyzer.
 * Supports English and Spanish.
