@@ -1,6 +1,5 @@
 body {
-    /*background: #000 url('../img/background.jpeg') no-repeat center center fixed;*/
-    /*background-size: cover;*/
+
     background: #00213A;
     overflow: auto;
 }
@@ -13,9 +12,11 @@ body {
 
 #lp_account {
     height: 56px;
+    width:360px;
     border-radius: 100px;
     padding: 0 24px;
     border: 2px solid white;
+    margin-left: -24px;
     color:white;
     background-color: inherit;
 }
@@ -52,7 +53,7 @@ body {
 }
 
 #lp_btn_login {
-    /*width: 291px;*/
+    width: 160px;
     height: 56px;
     border-radius: 100px;
     border: none;
@@ -63,6 +64,7 @@ body {
     font-size: 14px;
     font-weight: bold;
     font-style: normal;
+    margin-left:24px;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 1.5px;
@@ -192,17 +194,14 @@ body {
 }
 
 ::-webkit-input-placeholder { /* Edge */
-    color: white;
     font-size: 16px;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: white;
     font-size: 16px;
 }
 
 ::placeholder {
-    color: white;
     font-size: 16px;
 }
 
@@ -545,7 +544,7 @@ a {
 }
 .lp-tips-container {
     display: inline-block !important;
-    width: 22%;
+    width: 30%;
     height: 20%;
     margin-left: 40px;
     margin-top: 180px;
@@ -583,12 +582,13 @@ a {
 .greeting-bot-header {
     font-family: Roboto;
     display: block !important;
-    width: 500px;
+    width: 430px;
     margin: 0 auto 62px auto;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
+    text-align: center;
     letter-spacing: 0.008em;
     color: #FFFFFF;
 }
