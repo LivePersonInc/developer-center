@@ -27,7 +27,7 @@ indicator: both
 
 ### Train a LivePerson NLU v2 domain
 
-You must train the LivePerson NLU v2 domain after every update to the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the Debugger to test.
+You must train the LivePerson NLU v2 domain after every update to the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the Test tool to test.
 
 Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
 
@@ -68,7 +68,7 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 
 ### Train a 3rd-party NLU domain
 
-You must train the 3rd-party NLU domain after every update to the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the Debugger to test.
+You must train the 3rd-party NLU domain after every update to the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the Test tool to test.
 
 Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
 
