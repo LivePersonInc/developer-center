@@ -22,8 +22,6 @@ indicator: both
 4. Click **Add Domain**.
     
     If you didn't import them, you can now add intents and entities to the domain.
-    
-    If the domain's NLU provider is LivePerson's NLU v2 (not v1), you'll also need to [train the model](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
 
 ### Train a LivePerson NLU v2 domain
 
@@ -149,7 +147,7 @@ You can't change the threshold when using intents (although you can do [this](kn
 
 Activating the latest model version is something that you do if the domain is using the LivePerson NLU v2 engine or a 3rd-party NLU engine.
 
-When you’re testing using the Test tool, you can select the model version to test. This means you can test multiple models, and then activate the *latest* model version when it performs as desired. Once you activate it, it becomes the model version that’s used everywhere *outside of* Intent Builder, for example, in Conversation Builder, in API calls to the NLU engine, in Intent Analyzer, and so on.
+When you’re testing using the Test tool, you can select the model version to test. This means you can test multiple models, and then activate the latest model version when it performs as desired. Once you activate it, it becomes the model version that’s used everywhere *outside of* Intent Builder, for example, in Conversation Builder, in API calls to the NLU engine, in Intent Analyzer, and so on.
 
 {: .important}
 Ensure you test before activating the latest model version, as you can’t deactivate it or revert back to a previous version. In this situation, you’ll need to update the domain as needed, retrain to create a new model version, and then activate that latest version.
