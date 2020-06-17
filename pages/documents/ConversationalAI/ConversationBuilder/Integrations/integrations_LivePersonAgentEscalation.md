@@ -26,7 +26,6 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
     - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
     - **Response Data Variable Name**: Enter the name of the response data variable.
     - **Integration Type**: Select LivePerson Agent Escalation.
-    - **Agent Skill Name**: Enter the name of the skill to which to transfer the conversation. The skill is defined in LiveEngage.
     - **Agent Skill Name**: Enter the name of the agent skill to which to transfer the conversation. The skill is defined in LiveEngage. Entering the name provides you with something display-friendly and "readable" by which to readily understand which skill is being used (since the skill ID is a number).
     - **Agent Skill Id**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in LiveEngage. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
         
