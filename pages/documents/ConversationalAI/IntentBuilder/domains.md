@@ -31,10 +31,12 @@ You must train the LivePerson NLU v2 domain after every update to the domain if 
 
 Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
 
+{: .important}
+Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 20 training phrases.
+
 **To train a LivePerson NLU v2 domain**
 
 1. Open the domain.
-2. Ensure the domain has *at least* 5 intents. For each intent, ensure it has *at least* 20 training phrases.
 
     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/intents_trainingPhrases.png">
 
@@ -60,11 +62,13 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 5. In the Add NLU Provider Credential dialog box, specify the following:
     * **Credential Name**: Enter a name for the credential.
     * **NLU Provider**: Select the 3rd-party NLU engine.
-    * **Credentials**: Paste here the credentials that you download when you set up your IBM Watson  or Google Dialogflow account.
+    * **Credentials**: Paste here the credentials that you downloaded when you [set up your IBM Watson  or Google Dialogflow account](intent-builder-natural-language-understanding.html#connect-a-3rd-party-nlu-engine).
 
     <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/ib_third_party_cred3.png">
 
 6. Click **Save Credentials**.
+
+    During training, you'll need to alternate between 2 sets of service credentials, as described below.
 
 ### Train a 3rd-party NLU domain
 
