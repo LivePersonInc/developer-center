@@ -210,6 +210,85 @@ Metrics from the FCR, CSAT, and NPS questions in surveys are captured in LiveEng
 #### Bot Analytics
 In the [Bot Analytics](https://developers.liveperson.com/bot-analytics-overview.html) application, you'll see survey bots reported in the same way as custom bots. There is no difference between the two.
 
+### Monitoring survey bots
+
+You can use the Bots Status application, which is used for monitoring agent connectors, to monitor the single survey bot connector that supports all survey bots.
+
+There are a few important distinctions to be aware of as you monitor survey bots in Bots Status:
+
+* You can identify survey bots by examining the **User Name**. This is always "Survey Connector." (Normal bots display the agent name that's configured in LiveEngage.)
+* While each survey bot is listed individually, they all share the same agent connector.
+* Successfully deployed survey bots display "Deployed" beneath the bot name.
+
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/surveyBot_monitoring1.png">
+
+In Bots Status, you can redeploy the connector as a debugging technique.
+
+Additionally, there are a few operations that are specifically for brands migrating from Bot Studio to Conversation Builder for survey bot management, namely:
+
+* Migrate to Conversation Builder
+* Refresh the connector
+* Roll back to Bot Studio
+
+Keep in mind that all survey bots share the same agent connector, so performing any operation on one survey bot affects all the survey bots.
+
+For more details on all these operations, see below.
+
+{: .important}
+ADD BOTS STATUS PERMISSIONS NOTE
+
+#### Redeploy the survey bot connector
+
+Use this as a debugging technique when the connector appears to be in a stuck state. This stops and then restarts the connector.
+
+**To redeploy the survey bot connector**
+
+1. In the Conversational AI dashboard, click **Bots Status**.
+2. Use the filter controls to display the survey bots for the relevant environment.
+3. Move the cursor over the area to the left of the name of one of the survey bots, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon).
+4. Select **Redeploy Connector**.
+
+#### Migrate to Conversation Builder
+
+**To migrate to Conversation Builder**
+
+1. In the Conversational AI dashboard, click **Bots Status**.
+2. Use the filter controls to display the survey bots for the relevant environment.
+3. Move the cursor over the area to the left of the name of one of the survey bots, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon).
+4. Select **Migrate to Conversation Builder**.
+
+
+#### Refresh the survey bot connector
+
+Refreshing the connector is
+
+Let's say for some reason the change wasn't picked up by our service...what this will do is look up the feature flag and run the flow....if it's online, it will deploy it....if it's offline it will undeploy it...basically the full deployment flow based on the feature flag
+
+You set Common.Messaging_Survey
+
+**To refresh the survey bot connector**
+
+1. In the Conversational AI dashboard, click **Bots Status**.
+2. Use the filter controls to display the survey bots for the relevant environment.
+3. Move the cursor over the area to the left of the name of one of the survey bots, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon).
+4. Select **Refresh Connector**.
+
+
+
+
+
+#### Roll back to Bot Studio
+
+Will disable the AC app and will delete all the CB bots from the account
+
+**To roll back to Bot Studio**
+
+1. In the Conversational AI dashboard, click **Bots Status**.
+2. Use the filter controls to display the survey bots for the relevant environment.
+3. Move the cursor over the area to the left of the name of one of the survey bots, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon).
+4. Select **Roll back to Bot Studio**.
+
+
 ### FAQs
 
 #### How do I deploy a survey bot?
