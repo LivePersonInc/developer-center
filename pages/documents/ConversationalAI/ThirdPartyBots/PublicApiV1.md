@@ -41,22 +41,37 @@ To identify the Third-Party Bots API endpoint user, first get domain information
 
 #### Step 2. Get Bearer Token
 
-To get the bearer token you must perform a `login` request to Third-Party Bots API Domain. To perform login request you will need a valid user created via LivePerson User Management UI. User must be `Enabled`, have minimum `Agent` role and **Login Method** set to `Password`.
+To use our Public API you must perform a login request to Third-Party Bots API domain which will in response send you a Third-Party Bots bearer token. There are two ways in which you can perform the login.
+
+<ul>
+  <li>Bearer Token via Username/Password</li>
+  <li>Bearer Token via API (OAuth)</li>
+</ul>
+
+To perform login request you will need a valid Bot user created via LivePerson User Management UI. User must be `Enabled`, have minimum `Agent` role and have a **Login Method** selected either to `Password` or `API Key` as shown in Figure 2.1.
 
 {: .important}
-**Please note** We currently only support login with username/password and not with API method (i.e. OAuth). Moreover, only one session is maintained per user in LivePerson so if you receive bearer token error from Public API you can always generate another one by doing the login request again.
+**Please note** LivePerson maintain one session per user thus if you receive invalid bearer token error from Public API you can always generate new bearer by performing the login request again. We recommend making a single Bot Agent user that is dedicated for your Public API call.
 
-#### Request
+<img class="fancyimage" style="width:600px" src="img/tpbPublicApi/bot-user-login-method.png">
+Figure 2.1 Showing two login methods of a Bot user
 
-| Method | URL                                                                                     |
-| :----- | :-------------------------------------------------------------------------------------- |
-| POST   | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/login?v=1.3 |
+#### Bearer Token via Username/Password
+
+In this method, a bot user must be created with Login method `Password` via the LivePerson User Management.
+
+##### Request
+
+| Method | URL                                                                                                            |
+| :----- | :------------------------------------------------------------------------------------------------------------- |
+| POST   | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/login?v=1.3 |
 
 **Path Parameters**
 
 | Parameter | Description                 | Type   | Required | Notes                                                                      |
 | :-------- | :-------------------------- | :----- | :------- | :------------------------------------------------------------------------- |
 | botDomain | Third-Party Bots API domain | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
+| accountId | LP site ID                  | string | Required |                                                                            |
 
 **Query Parameters**
 
@@ -72,13 +87,15 @@ To get the bearer token you must perform a `login` request to Third-Party Bots A
 
 **Body**
 
-Example payload of the request
+Example payload of the request. Please note the `authType` property is set to `USER_PASS` it is case sensitive so should match exactly in your request.
 
 ```javascript
 {
-    "accountId": "1234567",
-    "username": "someusername",
-    "password": "123456"
+    "authType": "USER_PASS",
+    "credentials": {
+        "username": "someuser",
+        "password": "123456"
+    }
 }
 ```
 
@@ -88,13 +105,14 @@ Example payload of the request
 **Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{userName}` and `{password}` from the below command with your information
 
 ```bash
-curl -X POST \
-  'https://{botDomain}/api/login?v=1.3' \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "accountId": "{accountId}"
-    "username": "{userName}",
-    "password": "{password}"
+curl --location --request POST 'https://{botDomain}/api/v1/account/{accountId}/login?v=1.3' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "authType": "USER_PASS",
+    "credentials": {
+        "username": "{userName}",
+        "password": "{password}"
+    }
 }'
 ```
 
@@ -106,7 +124,81 @@ curl -X POST \
 }
 ```
 
-#### Step 2. Call API
+#### Bearer Token via API method (OAuth)
+
+In this method, a bot user must be created with the Login method `API Key` via the LivePerson User Management. Moreover, make sure you have already generated your bot user's credentials before using them.
+
+##### Request
+
+| Method | URL                                                                                                            |
+| :----- | :------------------------------------------------------------------------------------------------------------- |
+| POST   | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/v1/account/{accountId}/login?v=1.3 |
+
+**Path Parameters**
+
+| Parameter | Description                 | Type   | Required | Notes                                                                      |
+| :-------- | :-------------------------- | :----- | :------- | :------------------------------------------------------------------------- |
+| botDomain | Third-Party Bots API domain | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
+| accountId | LP site ID                  | string | Required |                                                                            |
+
+**Query Parameters**
+
+| Parameter | Description    | Type   | Required | Notes      |
+| :-------- | :------------- | :----- | :------- | :--------- |
+| v         | version of API | number | Required | value: 1.3 |
+
+**Headers**
+
+| Header       | Description      |
+| :----------- | :--------------- |
+| Content-Type | application/json |
+
+**Body**
+
+Example payload of the request. Please note the `authType` property is set to `API_KEY` it is case sensitive so should match exactly in your request.
+
+```javascript
+{
+    "authType": "API_KEY",
+    "credentials": {
+      "username": "someusername",
+      "appKey": "1234562ff0464127894f0",
+      "secret": "1233f5bf456",
+      "accessToken": "1233743ad8726e27456",
+      "accessTokenSecret": "76d05123456"
+  }
+}
+```
+
+**Example cURL**:
+
+{: .important}
+**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{userName}`, `{appKey}`, `{secret}`, `{accessToken}` and `{accessTokenSecret}` from the below command with your information
+
+```bash
+curl --location --request POST 'https://{botDomain}/api/v1/account/{accountId}/login?v=1.3' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "authType": "API_KEY",
+    "credentials": {
+        "username": "{username}",
+        "appKey": "{appKey}",
+        "secret": "{secret}",
+        "accessToken": "{accessToken}",
+        "accessTokenSecret": "{accessTokenSecret}"
+    }
+}'
+```
+
+**Response**:
+
+```json
+{
+  "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+}
+```
+
+#### Step 3. Call API
 
 Currently, the user is allowed to carry out following actions using our Public API
 
