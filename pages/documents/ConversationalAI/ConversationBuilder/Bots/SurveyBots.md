@@ -278,7 +278,7 @@ If you currently use Bot Studio to trigger surveys, you must *manually switch* t
 {: .important} 
 This procedure is for brands that are moving from managing surveys in Bot Studio to doing so in Conversation Builder.
 
-If you've just migrated from Bot Studio to Conversation, but things don't seem to be working, use this procedure as a troubleshooting technique. Refreshing the connector toggles an underlying system setting to put things in sync.
+If you've just migrated from Bot Studio to Conversation Builder, but things don't seem to be working, use this procedure as a troubleshooting technique. Refreshing the connector toggles an underlying system setting to put things in sync.
 
 **To refresh the survey bot connector**
 
