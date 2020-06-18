@@ -44,7 +44,7 @@ To identify the Third-Party Bots API endpoint user, first get domain information
 To get the bearer token you must perform a `login` request to Third-Party Bots API Domain. To perform login request you will need a valid user created via LivePerson User Management UI. User must be `Enabled`, have minimum `Agent` role and **Login Method** set to `Password`.
 
 {: .important}
-**Please note** We currently only support login with username/password and not with OAuth. Moreover, only one session is maintained per user in LivePerson so if you receive bearer token error from Public API you can always generate another one by doing the login request again.
+**Please note** We currently only support login with username/password and not with API method (i.e. OAuth). Moreover, only one session is maintained per user in LivePerson so if you receive bearer token error from Public API you can always generate another one by doing the login request again.
 
 #### Request
 
