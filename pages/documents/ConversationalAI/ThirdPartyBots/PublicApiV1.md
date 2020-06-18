@@ -24,9 +24,8 @@ The API supports the following methods:
     <li><a href='#set-time-to-response-ttr'>Set Time to Response (TTR)</a></li>    
 </ul>
 
-<div class="important">
-Refer to the <a href="https://www.liveperson.com/policies/apitou">API Terms of Use</a>, if you haven't already done so.<br>
-</div>
+{: .important}
+**Please note** To use our API, your conversation/chat must be active/ongoing with bot(s) that are created via the Third-Party Bots. Otherwise, you will receive conversation not found the response from our API. Furthermore, refer to the [API Terms of Use](https://www.liveperson.com/policies/apitou), if you haven't already done so.
 
 ### Flow for using Public API
 
@@ -42,20 +41,22 @@ To identify the Third-Party Bots API endpoint user, first get domain information
 
 #### Step 2. Get Bearer Token
 
-To get the bearer token you must perform a `login` request to Third-Party Bots API Domain
+To get the bearer token you must perform a `login` request to Third-Party Bots API Domain. To perform login request you will need a valid user created via LivePerson User Management UI. User must be `Enabled`, have minimum `Agent` role and **Login Method** set to `Password`.
+
+{: .important}
+**Please note** We currently only support login with username/password and not with OAuth. Moreover, only one session is maintained per user in LivePerson so if you receive bearer token error from Public API you can always generate another one by doing the login request again.
 
 #### Request
 
-| Method | URL                                                                                                         |
-| :----- | :---------------------------------------------------------------------------------------------------------- |
-| POST   | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/account/{accountId}/login?v=1.3 |
+| Method | URL                                                                                     |
+| :----- | :-------------------------------------------------------------------------------------- |
+| POST   | https://[{botDomain}](#step-1-identify-the-third-party-bots-api-domain)/api/login?v=1.3 |
 
 **Path Parameters**
 
 | Parameter | Description                 | Type   | Required | Notes                                                                      |
 | :-------- | :-------------------------- | :----- | :------- | :------------------------------------------------------------------------- |
 | botDomain | Third-Party Bots API domain | string | Required | Valid Third-Party API domain belonging to the zone on which account exists |
-| accountId | LP site ID                  | string | Required |                                                                            |
 
 **Query Parameters**
 
@@ -75,6 +76,7 @@ Example payload of the request
 
 ```javascript
 {
+    "accountId": "1234567",
     "username": "someusername",
     "password": "123456"
 }
@@ -87,13 +89,13 @@ Example payload of the request
 
 ```bash
 curl -X POST \
-  'https://{botDomain}/api/account/{accountId}/login?v=1.3' \
+  'https://{botDomain}/api/login?v=1.3' \
   -H 'Content-Type: application/json' \
   -d '{
+    "accountId": "{accountId}"
     "username": "{userName}",
     "password": "{password}"
 }'
-
 ```
 
 **Response**:
@@ -118,7 +120,7 @@ Currently, the user is allowed to carry out following actions using our Public A
 
 ### Send Messages
 
-This API allows The user to send The message(s) to an ongoing conversation. We support the sending of Text, Pause/Delay, Structured Content ([more info](getting-started-with-rich-messaging-introduction.html)), and Quick Replies. Moreover, We also allow sending of encodedMetadata and metadata/context information ([more info](messaging-agent-sdk-conversation-metadata-guide.html)) with the message(s) as well.
+This API allows The user to send The message(s) to an ongoing conversation with bots created via Third-Party Bots. We support the sending of Text, Pause/Delay, Structured Content ([more info](getting-started-with-rich-messaging-introduction.html)), and Quick Replies. Moreover, We also allow sending of encodedMetadata and metadata/context information ([more info](messaging-agent-sdk-conversation-metadata-guide.html)) with the message(s) as well. Please note your conversation must be active and ongoing. You can't send messages to a closed conversation.
 
 #### Request
 
@@ -152,7 +154,7 @@ This API allows The user to send The message(s) to an ongoing conversation. We s
 Example payload of the request with Simple Text, Pause/Delay, Private Text, [Structured Content](getting-started-with-rich-messaging-introduction.html) and Quick Replies messages with [context information/metadata](messaging-agent-sdk-conversation-metadata-guide.html) and encodedMetadata.
 
 {: .important}
-**Please note** Quick Replies and encodedMetadata are only supported in messaging conversations
+**Please note** Quick Replies and encodedMetadata are only supported in messaging conversations. Moreover, You have to **enable** Private Message and Encoded Metadata feature for your account to successfully send such messages. Please contact LP administration if you need help in enabling Private Message and Encoded Metadata for your account.
 
 ```javascript
 {
