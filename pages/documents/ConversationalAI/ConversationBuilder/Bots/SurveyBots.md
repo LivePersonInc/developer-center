@@ -37,7 +37,7 @@ The following are key similarities and differences between building survey bots 
 | Export and import the bot | Yes | Yes, except the bot's assigned skills are not exported. |
 | Create versions and releases | Yes | Yes |
 | Preview | Yes |  Yes |
-| Deploy the bot | Yes, you manually deploy an agent connector. | No, deployment happens behind the scenes. The bot can receive conversations as soon as you assign it a skill. |
+| Deploy the bot | Yes, you manually create and deploy an agent connector. | No, this happens behind the scenes. For more, see *Deploying survey bots* farther below. |
 | Log transcripts | Yes | Yes |
 
 {: .important}
