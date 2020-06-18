@@ -14,7 +14,7 @@ permalink: javascript-chat-sdk-events-onengagement.html
 indicator: chat
 ---
 
-### Request
+### Response
 
 **Object Properties**
 
