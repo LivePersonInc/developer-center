@@ -189,7 +189,8 @@ a:hover {
     line-height: 28px;
     letter-spacing: 0.01em;
     font-family: Roboto;
-    color: #FFFFFF
+    color: #FFFFFF;
+    margin-bottom: 16px;
 }
 
 .lp-tips-content {
