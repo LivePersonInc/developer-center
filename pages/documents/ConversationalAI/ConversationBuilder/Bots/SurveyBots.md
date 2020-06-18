@@ -215,7 +215,7 @@ Some brands are existing Bot Studio users who manage surveys in Bot Studio. Othe
 
 * If you're getting started with surveys in Conversation Builder, you don't manually deploy a survey bot. When LivePerson enables this feature for your brand, this deploys the underlying agent connector that's shared by all survey bots. Therefore, **as soon as you create a survey bot and assign it a skill, the bot is active and can receive conversations.** Typically, brands don't develop in their Production environments, but if you do, for this reason, it's recommended that you assign to the survey bot a "test" skill that isn't used in a production campaign and use that to validate the bot before assigning it a production skill.
 
-* If you're an existing Bot Studio user who plans to move from Bot Studio to Conversation Builder for survey bot management, see the discussion on the migration workflow farther below on this page. When you make the switch from Bot Studio to Conversation Builder, this deploys the underlying agent connector that's shared by all bots.
+* If you're an existing Bot Studio user who plans to move from Bot Studio to Conversation Builder for survey bot management, see *Migrating from Bot Studio to Conversation Builder* farther below on this page. This discusses the recommended workflow. When you make the switch, the underlying agent connector that's shared by all bots is deployed.
 
 ### Monitoring survey bots
 
