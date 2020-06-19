@@ -51,7 +51,7 @@ Key Phrase Matching can be helpful when you know there are specific words that d
 4. Specify the following:
     * **Entity name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
     * **Entity values**: Enter each entity value, pressing Enter after each one.
-5. Click **Add Entity** in the lower-right corner.
+5. Click **Save** in the lower-right corner.
 
 
 ### Delete a domain
