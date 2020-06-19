@@ -57,8 +57,17 @@ This event is fired if a conversation was *opened* during office-hours, but a ne
 
 This event is fired when a conversation is closed.
 
-**Note**: If no message is set in the result of the function (which it returns to the invoker, for example: 'callback();' ), the default automatic message for the account will be triggered.
-**Note** Conversations closed by the Auto Close feature will not trigger this event
+<div class="important">
+  <ul>
+    <li></li>
+    <li>If no message is set in the result of the function (which it returns to the invoker, for example: <code>callback();</code> ), the default automatic message for the account will be triggered.</li>
+    <li>The default automatic message can be overwritten with 
+        <code>{
+            type: "systemMessage",
+            text: "your message"
+        }</code>. To set the message empty just pass <code>[]</code> as text.</li>
+  </ul>
+</div>
 
 ### Callback commands
 
