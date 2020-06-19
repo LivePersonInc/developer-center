@@ -21,7 +21,7 @@ This returns a list of engagements with all their metadata and related transcrip
 
 | Method | URL |
 | :------- | :---------- |
-| POST | https://[{domain}](/agent-domain-domain-api.html)/interaction_history/api/account/{accountID}/interactions/search?<url_parameters> |
+| POST | https://[{domain}](/agent-domain-domain-api.html)/interaction_history/api/account/{accountID}/interactions/search?{url_parameters} |
 
 **URL Parameters**
 
@@ -30,6 +30,8 @@ This returns a list of engagements with all their metadata and related transcrip
 | offset | The offset from where to retrieve the chat. | numeric | Optional | Default is 0.  |
 | limit | Max chats to be received in the response.  | numeric | Optional | Default is 50. Max value is 100. The remaining chats can be obtained using pagination (using offset, in a subsequent request). |
 | sort | Sort the results in a predefined order. | string | Optional | Example: start:des will order chats by descending value of the start time. start:asc,duration:desc will orders chat by ascending value of start time AND then by descending value of duration. <br> Valid values: "start", "end", "duration", "visitor", "engagementId", "interactive", "visitor", "agentId", "skillId"(multiple values are valid). Order:[asc/desc] |
+| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+
 
 **BODY/POST Parameters**
 
