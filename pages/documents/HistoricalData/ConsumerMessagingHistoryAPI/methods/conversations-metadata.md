@@ -29,6 +29,8 @@ sort   | Sort the results in a predefined order.                              | 
 state        | State of the conversation.                 | Comma separated string             | Optional | Valid values: "close", "archive". Example: state=close,archive. Default value - archive
 startFrom    | Conversation started from the given value  | long - epoch time in milliseconds. | Optional | startFrom and startTo must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
 startTo      | Conversation started up to the given value | long - epoch time in milliseconds. | Optional | startTo and startFrom must be passed together or not at all. Default values, in case start parameters are absent, last 13 months.
+source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+
 
 ### Response
 

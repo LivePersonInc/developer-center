@@ -855,6 +855,9 @@
     - pagename: HTTP Response Codes
     - pagename: Configuration of Push Proxy
     - pagename: IP Whitelisting
+  - documentname: Proactive Messaging
+    pages:
+    - pagename: API
 
 - categoryname: Real-Time Data
   image: rt-data
