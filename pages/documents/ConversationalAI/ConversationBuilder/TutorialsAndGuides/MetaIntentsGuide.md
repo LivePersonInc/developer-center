@@ -50,7 +50,7 @@ It is important to note that the intent we are tying to the article, should be o
 
 Let's now tie together everything we’ve done within Conversation Builder. Start by creating a new dialog named “Small Talk”. Using the Assist tool on the Dialog Starter interaction, we want to connect our Small Talk domain as the trigger for this dialog flow. You’ll notice that all of the intents show as options to match our user input; however, we want to make sure that we are selecting the meta intent. Fortunately, meta intents are signified by an asterisk (*) to differentiate them from standard intents.
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/guideMetaIntents_NLUAssist.png">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/guideMetaIntents_NLUAssist.png">
 
 With this in place, we can continue to build our knowledge base integration as we normally would, creating an integration to make a call to our knowledge base and returning the summary as the article. After tying our integration into the dialog flow, we have now completed the construction of our knowledge base search, outside of our fallback dialog.
 

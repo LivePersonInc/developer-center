@@ -9,13 +9,13 @@ permalink: intent-builder-intents.html
 indicator: both
 ---
 
-### What is an intent?
+### What's an intent?
 
-Instead of looking for specific patterns in user input (for example, the pattern "bill"), the bot will use an NLU engine to look for the intent specified and trigger the interaction you configured to respond to this intent. Intents are great for when you need a looser approach to matching than pattern matching. Since pattern matching looks for an *exact* match for your defined expression, it might "miss" different synonyms, phrasings, formats, and so on.
+Intents are meant for when you need a looser approach to matching than pattern matching. Since pattern matching looks for an *exact* match to a defined expression, it might "miss" different synonyms, phrasings, formats, and so on. With intents, instead of looking for specific patterns in the user utterance (for example, the pattern "bill"), the bot uses a Natural Language Understanding (NLU) engine to look for the intent specified, and it triggers the bot interaction that's configured to respond to the intent. 
 
-Intents match an entire sentence against a set of training sentences or KB articles and the results are scored based on level of confidence (VERY GOOD, GOOD, FAIR PLUS, FAIR, POOR). From this sentence, the NLU engine derives an intent to which the bot responds. For example, if you configured your bot to respond to a "billing" intent, the NLU engine doesn't just look for the word "billing"; it analyzes any sentence the user might input and tries to understand if the "billing" intent is present. If the intent is present, the NLU "tells" the bot that it is, and the relevant dialog triggers.
+Intents match an entire sentence against a set of training sentences or Knowledge Base articles, and the results are scored based on level of confidence: VERY GOOD, GOOD, FAIR PLUS, FAIR, POOR. From the input sentence, the NLU engine derives the intent to which the bot responds. For example, if you've configured a bot to respond to a "billing" intent, the NLU engine doesn't just look for the word "billing." It analyzes any sentence the user might input and tries to understand if the "billing" intent is present. If the intent is present, the NLU "tells" the bot that it is, and the relevant bot dialog triggers.
 
-### Adding an intent
+### Add an intent
 
 **To add an intent**
 
@@ -33,7 +33,7 @@ Intents match an entire sentence against a set of training sentences or KB artic
 
 6. Click **Add Intent**.
 
-### Adding training phrases
+### Add training phrases
 
 The NLU engine uses training phrases in order to match a user input with an intent. The more training phrases you include, the more likely the NLU engine will be to accurately match the user's intent with what they were actually looking for. Generally speaking, the phrases should be complete sentences (rather than keywords like pattern matching or very long paragraphs).
 
@@ -60,32 +60,6 @@ The number of training phrases that you need really depends upon your use case a
 {: .important}
 For more best practices, see [Train & Tune NLU](conversation-builder-best-practices-train-tune-nlu.html).
 
-### Training intents
+### Train intents
 
-To test your intents, go to the Intent Builder, select the appropriate domain, click **Debug** (in the upper-right corner), and enter an utterance into the tester. If you select a particular intent, then the tester will be testing against that specific intent. If you’d like to test across ALL intents in the domain, check the "Search in domain" box.
-
-This is what a specific intent search looks like:
-
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_intentSearch.png">
-
-Here are the results of a "domain" search:
-
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_domainSearch.png">
-
-Tapping on each of the intent results will give you a more detailed results breakdown.
-
-If the score is not where you’d like it, you can add more training phrases. In addition, using [entities](conversation-builder-intent-builder-entities.html) will help to increase the accuracy of your intents, as well as giving their score a boost. In the example above you can see that entities are used for ITEM_COLOR, PRODUCT_CATEGORY, etc.
-
-#### What is the intent score/threshold?
-
-Because we want to return the best response to users, our NLU has a threshold for which anything below this threshold will not be shown to the user. For intents, this threshold is set to GOOD. This is based on our NLU’s level of confidence in the match. The confidence score breakdown looks like this:
-
-* VERY GOOD: 85-100% match
-
-* GOOD: 70-85% match
-
-* FAIR PLUS: 65-70% match
-
-* FAIR: 50-65% match
-
-You cannot change the threshold when using intents (although you can do [this](knowledge-base-overview.html#thresholds) with knowledge bases).
+See [Test a domain](intent-builder-domains.html#test-a-domain).
