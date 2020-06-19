@@ -74,3 +74,7 @@ curl -X POST \
 
 #### Retrieve the Web View variables from the bot runtime
 Use the [Get Web View Variables](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables) JavaScript functions to retrieve the variables set via the Web View API.
+
+### Example guide
+
+For a step-by-step, example guide that uses this API, see [here](conversation-builder-tutorials-guides-implementing-a-web-view-integration.html).

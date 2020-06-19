@@ -15,9 +15,6 @@ A meta intent is a wrapper that can contain many other standard [intents](intent
 
 <img style="width:550px" src="img/ConvoBuilder/meta_intent.png">
 
-{: .important}
-For a step-by-step example guide on using meta-intents with Conversation Builder, see [here](conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html).
-
 <img style="width:900px" src="img/ConvoBuilder/meta_intent2.png">
 
 ### Add a meta intent
@@ -34,3 +31,7 @@ Meta intents are not trained directly, as they are dependent on the intents cont
 To test user utterances against your intents and meta intents, use the debug tool provided in the lower-right corner of Intent Builder. Select the ‘Search in domain’ checkbox, and select ‘All’ from the search dropdown. Testing user input will now display search results for both intents and meta intents, which should result in identical scoring for the intent matched and the meta intent it belongs to.
 
 <img style="width:550px" src="img/ConvoBuilder/meta_intent3.png">
+
+### Example guide
+
+For a step-by-step, example guide that uses meta intents, see [here](conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html).
