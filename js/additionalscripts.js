@@ -1,3 +1,7 @@
+var get_started_page = "Getting Started with your Free Trial Account";
+var customized_cloud = "Customizing the Conversational Cloud";
+var do_more_cloud = "Do More with the Conversational Cloud";
+var welcome_page = "Let’s build a conversational future together!";
 $(document).ready(function () {
   var url = window.location.href;
   $(window).scroll(function () {
@@ -53,10 +57,11 @@ $(document).ready(function () {
 
   // below checks title pages and remove the breadcrumbs
   var $title = $(".h1").text();
-
+  // this if should check an objet that has all titles for unique pages
   if (
-    $title.indexOf("Let’s build a conversational future together!") != -1 ||
-    $title.indexOf("Getting Started with your Free") != -1
+    $title.indexOf(welcome_page) != -1 ||
+    $title.indexOf(get_started_page) != -1 || $title.indexOf(customized_cloud) != -1
+    || $title.indexOf(do_more_cloud) != -1
   ) {
     console.log("Welcome to LivePerson Developers!");
   } else {
@@ -130,8 +135,9 @@ function navigateContent(url) {
         //hide/display breadcrumbs if on welcome page or not
         var $title = $(".h1").text();
         if (
-          $title.indexOf("Welcome") != -1 ||
-          $title.indexOf("First Steps") != -1
+          $title.indexOf(welcome_page) != -1 ||
+          $title.indexOf(get_started_page) != -1 || $title.indexOf(customized_cloud) != -1
+          || $title.indexOf(do_more_cloud) != -1
         ) {
           $(".breadcrumbs").addClass("breadhidden");
         } else {
@@ -140,8 +146,9 @@ function navigateContent(url) {
         }
       }
       if (
-        $title.indexOf("Let’s build a conversational future together!") != -1 ||
-        $title.indexOf("First Steps") != -1
+        $title.indexOf(welcome_page) != -1 ||
+        $title.indexOf(get_started_page) != -1 || $title.indexOf(customized_cloud) != -1
+        || $title.indexOf(do_more_cloud) != -1
       ) {
         console.log("Welcome to LivePerson Developers!");
       } else {
@@ -222,13 +229,15 @@ function navigateContent(url) {
 function handleUniquePages() {
   var is_root = location.pathname == "/";
   var is_getting_started = location.pathname == "/getting-started-with-your-free-trial-account.html";
+  var is_conversation_cloud = location.pathname == "/do-more-with-the-conversational-cloud.html";
+  var is_customizing_cloud = location.pathname == "/customizing-the-conversational-cloud.html";
   console.log("checking if is unique page ");
   var jumpto = $("#jumpto");
   var sidebar = $("#defaultsidebar");
   var suggestButton = $("#suggestbutton");
   var indicatorContainer = $("#indicator-container");
 
-  if (is_root || is_getting_started) {
+  if (is_root || is_getting_started || is_conversation_cloud || is_customizing_cloud) {
     console.log("In  root folder");
     jumpto.css("flex", "0");
     jumpto.css("display", "none");
