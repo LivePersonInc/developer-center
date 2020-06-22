@@ -8,7 +8,7 @@ indicator: both
 
 <div class="lp-container">
     <div class=" welcome-card-modified">
-            <div class="getting-started-paragraph" style="margin-bottom:40px">
+            <div class="header-paragraph">
        Now that you know the basics, you’re ready to take a deeper dive into the full capabilities of the Conversational Cloud. Select a journey below to learn more about the tools and customization options available. 
             </div>
         </div>

@@ -8,7 +8,7 @@ indicator: both
 
 <div class="lp-container">
     <div class=" welcome-card-modified">
-            <div class="getting-started-paragraph" style="margin-bottom:40px;">
+            <div class="header-paragraph" >
    The solutions you create using the Conversational Cloud are fully customizable. You can integrate our mobile SDK, create custom solutions with LivePerson APIs, and more. Select a guide below to learn more.
             </div>
         </div>
