@@ -18,11 +18,11 @@ indicator: chat
 {: .notice}
 Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/api-guidelines-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
-The LiveEngage Data Access API provides brands with the ability to address specific Goals and KPIs while also extending the reporting capabilities of their account by accessing their entire raw data. The data includes full information about their agents’ activities and visitors’ journeys.
+The Conversational Cloud Data Access API provides brands with the ability to address specific Goals and KPIs while also extending the reporting capabilities of their account by accessing their entire raw data. The data includes full information about their agents’ activities and visitors’ journeys.
 
-Brands can use this data in data warehouse systems as well as create customized reports from a combination of their own data, data provided by LiveEngage advanced analytics and other 3rd parties data system they are working with.
+Brands can use this data in data warehouse systems as well as create customized reports from a combination of their own data, data provided by Conversational Cloud advanced analytics and other 3rd parties data system they are working with.
 
-Data access is not a default function of LiveEngage; it must be configured separately for each account.
+Data access is not a default function of Conversational Cloud; it must be configured separately for each account.
 The four types of data supported and configurable in each account are as follows:
 
 * Agent Activity
@@ -38,7 +38,7 @@ Data Access retention will soon be reduced to a 30 days period in order to compl
 
 Part of the regulation requires the ability for a consumer to ask for their personal data to be deleted ("Right to be Forgotten") and in order to meet this requirement we will need to reduce the Data Access retention policy to 30 days (instead of 100 days as it was prior to this change).
 
-This means that data access files will be deleted 30 days from the time they were created. This still provides sufficient time for customers to pull their data from LiveEngage and store it in their own data warehouse.
+This means that data access files will be deleted 30 days from the time they were created. This still provides sufficient time for customers to pull their data from Conversational Cloud and store it in their own data warehouse.
 
 The new retention policy will be enforced by May 13th 2018.
 
@@ -54,7 +54,7 @@ A few things you'll need to get started with this API:
 
 	* APAC accounts: sy.da.liveperson.net
 
-2. This API requires authorization using API key that is available in the LiveEngage API Keys tab.
+2. This API requires authorization using API key that is available in the Conversational Cloud API Keys tab.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).  
 

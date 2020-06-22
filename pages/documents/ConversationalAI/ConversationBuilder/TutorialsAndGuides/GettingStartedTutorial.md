@@ -29,7 +29,7 @@ The Getting Started tutorials include four tutorials that build on one another:
 
 * **Integrations**: Explore integrations, which allow your bot to query external APIs, bringing powerful new options to your conversations. Integrations let you programmatically access catalogs, databases, and other web services to super power your bot responses.
 
-* **Connect to LiveEngage**: Bring it all together by deploying your bot to the LiveEngage environment and testing it out.
+* **Connect to Conversational Cloud**: Bring it all together by deploying your bot to the Conversational Cloud environment and testing it out.
 
 ### Dialogs & Patterns tutorial
 
@@ -40,12 +40,12 @@ The Getting Started tutorials include four tutorials that build on one another:
 
 #### Prerequisite steps
 
-This tutorial assumes you have a user account for the LiveEngage and Conversation Builder platforms. If you don't, your team should have an administrator who can create one for you.
+This tutorial assumes you have a user account for the Conversational Cloud and Conversation Builder platforms. If you don't, your team should have an administrator who can create one for you.
 
 #### Step 1: Create a new bot
 
 1. Navigate to [https://authentication.liveperson.net/login.html](https://authentication.liveperson.net/login.html), enter your credentials, and log in.
-2. In the left sidebar in LiveEngage, click the Conversational AI and Bots <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_convers_ai.png"> icon.
+2. In the left sidebar in Conversational Cloud, click the Conversational AI and Bots <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_convers_ai.png"> icon.
 3. In the Conversational AI dashboard, click **Conversation Builder**.
 4. Click **New Bot** in the upper-right corner, and select the generic **Custom Bot** [template](conversation-builder-templates-overview.html).
 5. Give the bot a unique name and description, and click **Create Bot**.
@@ -463,15 +463,15 @@ This tutorial uses an example API that returns random balance data when given an
 
 ### Connect to Live Engage tutorial
 
-In this tutorial, you walk through how to link your bot to LiveEngage, ending with an integration that transfers to a human agent.
+In this tutorial, you walk through how to link your bot to Conversational Cloud, ending with an integration that transfers to a human agent.
 
-#### Step 10: Configure LiveEngage
+#### Step 10: Configure Conversational Cloud
 
 In this step, you create two user agents, one for the bot and one for the human that will be receiving the inbound transfers (for human "escalation"). Each user agent will have an assigned skill, which you'll also create.
 
 ##### Create the skills
 
-1. [Log in](https://authentication.liveperson.net/login.html) to your LiveEngage account. 
+1. [Log in](https://authentication.liveperson.net/login.html) to your Conversational Cloud account. 
 2. Click the **Manage users and skills** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png"> , and then click the **Skills** tab.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/manageUsersAndSkillsIcon.png">
@@ -492,11 +492,11 @@ In this step, you create two user agents, one for the bot and one for the human 
 
 7. In the list of skills, select the Human skill, and then note the URL that's displayed in the browser's address bar. Write down the skill ID in the URL, as it will be needed later. The skill ID is the number at the end of the URL: https://z1.le.liveperson.net/a/accountNumber/#um!skills/**skillID**.
 
-##### Create the LiveEngage agents
+##### Create the Conversational Cloud agents
 
 In addition to the skills, you also need user agents, one for the bot and one for the agent that will be receiving the inbound transfers (for human escalation).
 
-1. Still in LiveEngage, click the **Users** tab.
+1. Still in Conversational Cloud, click the **Users** tab.
 2. Click the **Add user** button at the bottom of the page.
 3. On the Add User page, specify the following:
     * **User type**: Set this to "Bot." If you don't see this field, contact your LivePerson representative to enable this for you.
@@ -533,7 +533,7 @@ You will test this connection with a standard web chat engagement, so now you cr
 
 #### Step 11: Set up the transfer from bot to human
 
-In this step, you set up an "escalation" to transfer the user to a human agent in LiveEngage.
+In this step, you set up an "escalation" to transfer the user to a human agent in Conversational Cloud.
 
 1. Return to Conversation Builder, and open the bot.
 
@@ -561,7 +561,7 @@ In this step, you set up an "escalation" to transfer the user to a human agent i
 
 9. Click **Save**.
 
-#### Step 12: Deploy the bot to LiveEngage
+#### Step 12: Deploy the bot to Conversational Cloud
 
 In this step, you use Conversation Builder to connect your bot to the bot agent you just created and get the connection running in the Demo environment.
 
@@ -579,7 +579,7 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/helloworld/agentConnectorsPage1.png">
 
 {: .important}
-LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
+LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 ##### Start the agent connector
 
@@ -594,7 +594,7 @@ LivePerson recommends that, when you connect your bot to LiveEngage in a product
 {: .important}
 In this step, you'll be testing with Messaging, so you'll be using [this test page](https://vx-lp.github.io/v2/lpwm/). When you test with Chat, you can use [this test page](https://livepersoninc.github.io/visitor-page/?siteid=%5Byour%20account%20number%5D), adding your account number to the URL.
 
-1. Be sure you are online as a Human agent in LiveEngage.
+1. Be sure you are online as a Human agent in Conversational Cloud.
 
 2. In a browser, navigate to [this test page](https://vx-lp.github.io/v2/lpwm/).
 
@@ -620,10 +620,10 @@ In this step, you'll be testing with Messaging, so you'll be using [this test pa
 
     <img class="fancyimage" style="width:75px" src="img/ConvoBuilder/helloworld/messageindicator.png">
 
-8. Click the icon to enter the agent workspace in LiveEngage. Then click **Accept** in the lower-left corner.
+8. Click the icon to enter the agent workspace in Conversational Cloud. Then click **Accept** in the lower-left corner.
 
    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/webvisitors_accept.png">
 
-    As an agent, when you accept the inbound transfer, you should see something like this below in your LiveEngage dashboard. You can now take part in a live chat.
+    As an agent, when you accept the inbound transfer, you should see something like this below in your Conversational Cloud dashboard. You can now take part in live chat.
 
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/confLE_19.png">

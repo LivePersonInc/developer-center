@@ -41,7 +41,7 @@ A few things you'll need to get started with this API:
 
 * Extract types of conversations (e.g. low CSAT score) and take an action on them.
 
-View of Engagement History within LiveEngage:
+View of Engagement History within Conversational Cloud:
 
 ![EngagementHistory](img/engagementhistory1.png)
 

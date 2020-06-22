@@ -17,7 +17,7 @@ indicator: both
 
 **To access the Conversation Builder application**
 
-1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Conversation Builder**.
 
 ### The bot workspace
@@ -33,7 +33,7 @@ A bot consists of one or more [dialogs](conversation-builder-dialogs-dialog-basi
 * The Billing dialog is currently displayed in the dialog editor in the center of the screen. As such, its name appears in bold in the dialogs panel.
 
 {: .important}
-Conversation Builder supports the creation of bots for all the LiveEngage channels. Because a bot simply listens to a piece of text sent from a user, any channel that provides text to LiveEngage can potentially trigger a bot. However, there are channel-specific formats, features and conventions that might not be available for all channels. Please contact your LivePerson account team for information on formats supported for specific channels.
+Conversation Builder supports the creation of bots for all the Conversational Cloud channels. Because a bot simply listens to a piece of text sent from a user, any channel that provides text to Conversational Cloud can potentially trigger a bot. However, there are channel-specific formats, features and conventions that might not be available for all channels. Please contact your LivePerson account team for information on formats supported for specific channels.
 
 ### The Dialogs view
 

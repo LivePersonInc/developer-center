@@ -15,7 +15,7 @@ indicator:
 
 ### Introduction
 
-The MCS Toolkit is a powerful new feature to rapidly access Messaging and Engagement history data in order to analyze your consumer sentiment via Meaningful Connection Scores (MCS). It was built using LiveEngage's APIs and is undergoing product approval before being rolled out to LivePerson clients. It is a strong testimony to LivePerson's open platform and what can be achieved by utilizing APIs which are available for all.
+The MCS Toolkit is a powerful new feature to rapidly access Messaging and Engagement history data in order to analyze your consumer sentiment via Meaningful Conversation Scores (MCS). It was built using Conversational Cloud's APIs and is undergoing product approval before being rolled out to LivePerson clients. It is a strong testimony to LivePerson's open platform and what can be achieved by utilizing APIs which are available for all.
 
 To empower users to better understand their program performance and react to trends, the MCS Toolkit supports these typical use-cases:
 
@@ -33,7 +33,7 @@ To empower users to better understand their program performance and react to tre
 
 ### Technology
 
-The MCS Toolkit was built by utilizing LiveEngage APIs that are available now for any developer to leverage. This showcases the type of rich custom data analytics that can be performed as a result of investment in open platform solutions.
+The MCS Toolkit was built by utilizing Conversational Cloud APIs that are available now for any developer to leverage. This showcases the type of rich custom data analytics that can be performed as a result of investment in open platform solutions.
 
 Specifically, the APIs used to bring the MCS Toolkit to life are:
 

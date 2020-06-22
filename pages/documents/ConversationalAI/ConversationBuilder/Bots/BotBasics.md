@@ -55,9 +55,9 @@ Bot settings include:
 
 - **Entity**: You can use this option to associate _a domain_ with the bot. However, the [NLU Assist](conversation-builder-nlu-assist.html) tool provides you with help in associating domains with dialogs, so typically you don’t need to specify a domain here.
 
-- **Bot Account**: If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, you can use this setting to change the organization under which this bot exists. If you logged into Conversation Builder via single sign-on from LiveEngage, the organization you were using in LiveEngage is active and can't be changed, and nothing appears in this list.
+- **Bot Account**: If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from Conversational Cloud) and you have access to multiple organizations within your Conversational Cloud account, you can use this setting to change the organization under which this bot exists. If you logged into Conversation Builder via single sign-on from Conversational Cloud, the organization you were using in Conversational Cloud is active and can't be changed, and nothing appears in this list.
 
-- **Public**: When you want other users in your LiveEngage account to be able to view and edit the bot, click the slider to On. The default value is Off. 
+- **Public**: When you want other users in your Conversational Cloud account to be able to view and edit the bot, click the slider to On. The default value is Off. 
 
 - **Bot Environment**: If desired, select the set of [environment variables](conversation-builder-environment-variables.html) that you want to associate with the bot. Environment variables allow you to manage certain values and constants outside of the bot, and use of them when appropriate is considered a best practice.
 
@@ -88,7 +88,7 @@ You can add an bot by importing a bot JSON file that was previously exported. Th
 Before you import a bot from a different environment (that is, from one region or hosting platform to another), check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
 
 **To import a bot**
-1. If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If it isn’t displayed, select it from the **Org** Name dropdown list.
+1. If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from Conversational Cloud) and you have access to multiple organizations within your Conversational Cloud account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If it isn’t displayed, select it from the **Org** Name dropdown list.
 
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 

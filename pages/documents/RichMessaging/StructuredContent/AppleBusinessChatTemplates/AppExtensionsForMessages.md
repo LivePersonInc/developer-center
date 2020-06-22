@@ -14,7 +14,7 @@ indicator: messaging
 
 The structured content body will allow you to define the layout of the interactive message bubble representation in the agent workspace transcript as structured content basic elements.
 
-Please note that the structured content body layout will not be represented on the consumer’s message thread, but rather the iMessage bubble and app. The body will help the brands create a visual representation in LiveEngage of the iMessage bubble that was sent (for conversational context, transcript and historic records, as well as ease of use for agents).
+Please note that the structured content body layout will not be represented on the consumer’s message thread, but rather the iMessage bubble and app. The body will help the brands create a visual representation in Conversational Cloud of the iMessage bubble that was sent (for conversational context, transcript and historic records, as well as ease of use for agents).
 
 In order to allow brands to report on the number of times an iMessage app was sent from an agent widget during a conversation, make sure to add a unified indication in the structured content message body for each type of iMessage app the brand uses. This will allow the brand to then track how many times a specific iMessage app was sent via a transcript search.
 

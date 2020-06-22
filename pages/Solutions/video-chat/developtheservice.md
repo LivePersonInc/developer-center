@@ -16,7 +16,7 @@ indicator:
 
 Develop your video service based on your selected vendor technology and take into account the following:
 
-* Integration to LiveEngage using our SDK
+* Integration to Conversational Cloud using our SDK
 
 Define which parameters you’d like to use from the SDK in order to connect between the two widgets you must utilize similar parameters from both sides of the conversation (both agent workspace SDK and window widget SDK).
 

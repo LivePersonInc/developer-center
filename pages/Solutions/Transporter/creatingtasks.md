@@ -54,7 +54,7 @@ After selecting a report, you will need to configure the following report option
 
 In this case, your report will run at 6:00 AM each day and include the data from 12:00 AM to 11:59 PM of the previous day
 
-* **LiveEngage**: the LiveEngage data source.
+* **Conversational Cloud**: the Conversational Cloud data source.
 
 * **Destination**: See below.
 
