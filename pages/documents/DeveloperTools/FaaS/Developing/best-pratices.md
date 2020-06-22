@@ -11,13 +11,13 @@ redirect_from:
   - function-as-a-service-developing-with-best-practices.html
 ---
 
-The following section will show some best practices for using the LivePerson Functions platform.
+The following section shows some best practices for using the LivePerson Functions platform.
 
 - [OAuth 1](#oauth-1)
 - [OAuth 2.0](#oauth-20)
 - [Usage of Environment Variables](#usage-of-environment-variables)
-- [Error handling in async functions](#error-handling-in-async-functions)
 - [Async/Await Functions](#asyncawait-functions)
+- [Error handling in async functions](#error-handling-in-async-functions)
 - [Limitations of Timeouts](#limitations-of-timeouts)
 
 ### OAuth 1
@@ -137,7 +137,11 @@ async function lambda(input, callback) {
 The Environment Variables are used to save configurations for a specific lambda. With this approach you can separate static variables from the code.
 
 <div class="important">
-  Do not save sensitive data in Environment Variables!
+  <ul>
+    <li></li>
+    <li>After changing the value of an environment variable the functions must to be redeployed.</li>
+    <li>Do not save sensitive data in Environment Variables!</li>
+  </ul>
 </div>
 
 ```javascript
@@ -167,34 +171,9 @@ async function lambda(input, callback) {
 
 See [Environment Variables](liveperson-functions-development-overview.html#environment-variables) for more information about it. 
 
-### Error handling in async functions
-
-If an async call has no correct error handling implemented the function will not end in the execution time and the error `Lambda Execution is taking too long` will be thrown.
-
-For [then-catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) promises it is necessary to have a `catch` at the end of a `then`.
-
-```javascript
-const myPromise =
-  (new Promise(myExecutorFunc))
-  .then(handleFulfilledA)
-  .then(handleFulfilledB)
-  .then(handleFulfilledC)
-  .catch(handleRejectedAny);
-```
-
-For [async-await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) a try-catch is necessary. 
-
-```javascript
-try {
-  await myPromise();
-} catch(error) {
-  // handle error
-} 
-```
-
 ### Async/Await Functions
 
-It is possible to use the [async/await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) functionality within the LivePerson Functions. It's important to wrap the await in a try/catch, otherwise the function will have some weird behavior and errors will not be catched and displayed correctly.
+It is possible to use the [async/await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) functionality within LivePerson Functions. Proper error handling is important when using this, check the [best practices](#error-handling-in-async-functions).
 
 The example shows the HTTP-Template with async/await.
 
@@ -234,8 +213,35 @@ async function lambda(input, callback) {
 }
 ```
 
+### Error handling in async functions
+
+If an async call inside of a LivePerson function has no proper error handling, it could be executed longer than the maximum execution time. In such a case a `Lambda Execution is taking too long` error will be thrown. Therefore proper error handling best practices as the following are vital.
+
+For [then-catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) promises it is necessary to have a `catch` at the end of a `then`.
+
+```javascript
+const myPromise =
+  (new Promise(myExecutorFunc))
+  .then(handleFulfilledA)
+  .then(handleFulfilledB)
+  .then(handleFulfilledC)
+  // Handle error or pass it to the callback
+  .catch(error => callback(error, null));
+```
+
+For [async-await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) a try-catch is necessary. 
+
+```javascript
+try {
+  await myPromise();
+} catch(error) {
+  // Handle error or pass it to the callback
+  callback(error, null)
+} 
+```
+
 ### Limitations of Timeouts
 
 The usage of `setTimeout()` in LivePerson Functions must be handled with care. 
 * Functions cannot exceed the runtime of **30 secconds**. The error `Lambda Execution is taking too long` will thrown.
-* If you execute multiple functions with a `setTimeout()` implemented, the event loop of the service will fill up and even functions with a lower execution time than 30 seconds will take longer and may reach the max. execution time.
+* If you execute multiple functions containing a `setTimeout()` call, the event loop of the service may fill up. Even functions with a lower execution time than 30 seconds could therefore take longer, may reach the execution time limit and fail. Because of this timeouts in general should be handled with care and it is encouraged to double check their need in any use case.
