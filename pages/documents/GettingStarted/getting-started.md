@@ -1,14 +1,13 @@
 ---
-pagename: First Steps
+pagename: Getting Started with your Free Trial Account
 sitesection: Documents
 categoryname: "Getting Started"
-permalink: first-steps.html
+permalink: getting-started-with-your-free-trial-account.html
 indicator: both
 ---
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
-  <!-- Modal content -->
   <div class="modal-content">
      <iframe id="vimeo-iframe" src="https://player.vimeo.com/video/398468660?app_id=122963" width="100%" height="100%" frameborder="0" allow="autoplay;" title="FTUE" allowfullscreen >
    </iframe>
@@ -19,19 +18,10 @@ indicator: both
 
 <div class="lp-container">
     <div class=" welcome-card-modified">
-        <div class="header-lp4">
-            Learn about the LivePerson platform 
             <div class="getting-started-paragraph">
-            Understand the basics of Conversational AI and how it scales across messaging channels to automate consumer conversations.
-            </div>
-              <div class="hyperlink">
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html"> 
-                <img class="dots-container" src="img/four-dots.svg"/>
-                    Learn More
-                </a>
+            LivePerson’s Conversational Cloud is an AI-powered conversational platform that connects brands to consumers using their preferred channel and can scale to any number of conversations. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction. 
             </div>
         </div>
-    </div>
     <div id="teaser-banner" class="welcome-card-modified">
             <div  style="display: flex;">
             <p class="teaser-header" > Watch a  quick product overview of LivePerson Platform and its tools</p>
@@ -39,6 +29,19 @@ indicator: both
             </div>
     </div>
 </div>
+<div class="welcome-card-modified">
+    <div class="small-header">
+      Conversational Cloud basics
+    </div>
+    <div class="convo-cloud-paragraph">
+    Learn about the <a href="/api-guidelines-accessing-liveperson-apis.html" alt="LivePerson APIs"> Conversational Cloud </a> and how it scales across popular messaging channels, such as WhatsApp, Facebook Messenger, Apple Business Chat, and more. 
+    </div>
+</div>
+
+<b> Prerequisites </b> If you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html" alt="Start free trial"> register </a>  for a free 45-day trial. Your trial account comes with a pre-configured Concierge Bot who will greet you and offer guidance
+{: .important}
+
+
 
 <div class= "header-lp4" style="margin-top: 48px;margin-bottom: 16px;">
    Steps to get started

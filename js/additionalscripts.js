@@ -50,11 +50,13 @@ $(document).ready(function () {
   //   var scroll = new SmoothScroll('a[href*="#"]');
   //set breadcrumbs display if welcome page/normal page.
 
+
+  // below checks title pages and remove the breadcrumbs
   var $title = $(".h1").text();
 
   if (
     $title.indexOf("Let’s build a conversational future together!") != -1 ||
-    $title.indexOf("First Steps") != -1
+    $title.indexOf("Getting Started with your Free") != -1
   ) {
     console.log("Welcome to LivePerson Developers!");
   } else {
@@ -102,15 +104,7 @@ function setImportantIcon() {
     $(this).prepend(importantIcon);
   });
 }
-function removeTitleFirstSteps() {
-  var $title = $(".h1").text();
-  var titleContainer = $("#documentTitleContainer");
-  if ($title.indexOf("First Steps") != -1) {
-    titleContainer.css("display", "none");
-  } else {
-    titleContainer.css("display", "flex");
-  }
-}
+
 function navigateContent(url) {
   //call ajax with the target url
   $.ajax(url)
@@ -154,7 +148,7 @@ function navigateContent(url) {
         $(".breadcrumbs").removeClass("breadhidden");
         $(".suggestbutton").removeClass("suggesthidden");
       }
-      removeTitleFirstSteps();
+      //removeTitleFirstSteps();
       //add anchor links to all h3 titles. See respective functions below for what they do.
       sidebarCollapse(url);
       $(window).scroll(function () {
@@ -227,7 +221,7 @@ function navigateContent(url) {
 // this function checks if root page and disables the jumpto and fixes padding
 function handleUniquePages() {
   var is_root = location.pathname == "/";
-  var is_getting_started = location.pathname == "/first-steps.html";
+  var is_getting_started = location.pathname == "/getting-started-with-your-free-trial-account.html";
   console.log("checking if is unique page ");
   var jumpto = $("#jumpto");
   var sidebar = $("#defaultsidebar");
@@ -545,12 +539,12 @@ function sidebarClick() {
   });
 }
 
-function breadClick (event) {
-	event.preventDefault();
-	let breadText = $(this).innerHTML;
-	var breadSidebar = $('#defaultsidebar');
-	var targetLink = breadSidebar.find("span:contains('" + breadText + "')").trigger("click");
-	console.log(targetLink);
+function breadClick(event) {
+  event.preventDefault();
+  let breadText = $(this).innerHTML;
+  var breadSidebar = $('#defaultsidebar');
+  var targetLink = breadSidebar.find("span:contains('" + breadText + "')").trigger("click");
+  console.log(targetLink);
 }
 
 //a function to make sure the page's title is updated on load

@@ -21,7 +21,7 @@ solutions with you!
       Learn more</p>
     </a>
   </div>
-    <a class="welcome-card"  href="/first-steps.html"> 
+    <a class="welcome-card"  href="/getting-started-with-your-free-trial-account.html"> 
       <img class="container-image" src="img/ic_get_started.svg"/>
       <h5 class="welcome-title">Get Started with LivePerson</h5>
       <p class="welcome-content">Build on our platform using quick start guides, APIs and SDKs. </p>
