@@ -4,7 +4,6 @@ keywords:
 sitesection: Documents
 categoryname: "Developer Tools"
 documentname: LivePerson Functions
-subfoldername: Developing with FaaS
 permalink: liveperson-functions-command-line-interface-cli.html
 indicator: both
 redirect_from:
