@@ -63,7 +63,7 @@ $(document).ready(function () {
     $(".breadcrumbs").removeClass("breadhidden");
     $(".suggestbutton").removeClass("suggesthidden");
   }
-  removeTitleFirstSteps();
+  // removeTitleFirstSteps();
 });
 function crossBrowserSafariCheck() {
   var isSafari = window.safari !== undefined;
