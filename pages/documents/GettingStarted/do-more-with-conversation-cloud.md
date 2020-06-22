@@ -13,9 +13,11 @@ indicator: both
             </div>
         </div>
 </div>
-
-<b> Prerequisites </b> Before you move ahead be sure you’ve completed the guidance in <a href="/getting-started-with-your-free-trial-account.html" alt="Start free trial"> Getting Started with your Free Trial Account </a> which outlines the first steps to take in the Conversational Cloud.
-{: .important}
+<div class="container-note">
+    <div class="important" style="width:91%">
+    <b> Prerequisites </b> Before you move ahead be sure you’ve completed the guidance in <a href="/getting-started-with-your-free-trial-account.html" alt="Start free trial"> Getting Started with your Free Trial Account </a> which outlines the first steps to take in the Conversational Cloud.
+  </div>
+</div>
 
 
 <div class="card-container" style="margin-top:60px;">

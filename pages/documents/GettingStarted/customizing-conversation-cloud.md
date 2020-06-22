@@ -13,9 +13,11 @@ indicator: both
             </div>
         </div>
 </div>
-
-<b> Prerequisites </b>  Before you begin, check out the <a target="_blank" href="https://developers.liveperson.com/register.html" alt="Start free trial"> Accessing LivePerson APIs </a> article to familiarize yourself with our guidelines.
-{: .important}
+<div class="container-note">
+    <div class="important" style="width:91%">
+        <b> Prerequisites </b>  Before you begin, check out the <a target="_blank" href="https://developers.liveperson.com/register.html" alt="Start free trial"> Accessing LivePerson APIs </a> article to familiarize yourself with our guidelines.
+    </div>
+</div>
 
 <div class="card-container" style="margin-top:24px;">
         <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-conversation-builder-quick-start.html"> 

@@ -178,6 +178,7 @@
 }
 
 .link-padding {
+    width: 720px;
     margin-bottom: 16px;
     font-family: Roboto;
     font-style: normal;
@@ -257,4 +258,11 @@
     line-height: 28px;
     letter-spacing: 0.01em;
     color: var(--navy);
+}
+
+.container-note {
+    display: flex;
+    margin-top: 60px;
+    width: 100%;
+    flex-wrap: wrap;
 }
