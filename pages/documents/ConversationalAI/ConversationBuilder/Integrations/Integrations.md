@@ -60,9 +60,63 @@ if (statusCode === 204 || statusCode === 201) {
 }
 ```
 
-Typically, this block of code is placed in the POST PROCESS section attached to calling an API integration within a dialog.
+Typically, this block of code is placed in the *Post-Process Code* section attached to calling an API integration within a dialog.
 
-<img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/tips_image_41.png">
+### Process API results with custom data fields
+
+Custom data fields allow you to use key/value pairs to capture data from an API response for later use in dialogs. API variables are named in the **key** field, with the path to the JSON value you are saving in the **value** field. For the value, use the following syntax: For an API named ‘GetContext’, `$.api_GetContext` serves as the base for the JSON path:
+
+`{$.api_GetContext.<JSON_PATH>}`
+
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults1.png">
+
+Once you have created these variables, you have access to their values within the dialogs. To do so, use curly braces notation containing the integration name with the variable name you’ve created.
+
+<img class="fancyimage" width="550" src="img/ConvoBuilder/integrations_processAPIResults2.png">
+
+These variables are also accessible in the pre-process or post-process code editors, should you need to use their values in your bot logic:
+
+`var firstName = botContext.getBotVariable('GetContext.firstName');`
+
+#### Iterating through results
+
+Occasionally, you might want to iterate through the JSON data to display multiple results from an API. This can be useful when using Structured Content (or List Picker and Time Picker for Apple Business Chat) to display multiple instances of an item a user has searched for. With this in mind, Conversation Builder has provided a way to record an API result as having an iterable value for use within dialogs. To illustrate, assume you have an API that returns items for sale and is structured in the following JSON format:
+
+```javascript
+{
+ "items": [
+   {
+     "title": "TITLE ONE",
+     "description": "Description 1",
+     "image": "https://www.beautyarmy.com/wp-content/uploads/2019/12/stack.jpg"
+   },
+   {
+     "title": "TITLE TWO",
+     "description": "Description 2",
+     "image": "https://www.salesbabu.com/wp-content/uploads/2014/02/stock.png"
+   },
+   {
+     "title": "TITLE THREE",
+     "description": "Description 3",
+     "image": "https://3.imimg.com/data3/QJ/UW/MY-14248082/stock-inventory-management-system-with-pos-point-of-sale-500x500.jpg"
+   }
+ ]
+}
+```
+
+To capture each value to reproduce in a dialog, you need to iterate through this “items” array and save each key as an API variable. Assuming that you have an API named 'GetContent', you would use the following syntax to properly capture this data:
+
+`{$.api_GetContent.items[i].title}`
+
+Take care to include the bracketed i in your value, as this signifies that the program needs to iterate through the “items” array to save all of the “title” values.
+
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults3.png">
+
+With these variables now set, they can be used within Structured Content interactions to display each of the titles, descriptions, and images together. Add your API variables to the relevant areas of the Structured Content tile, referencing the variables in the same way that was done in the previous example. When saved, Conversation Builder will iterate through each of the variables to display the correct content together in the user's messaging window.
+
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults4.png">
+
+<img class="fancyimage" width="400" src="img/ConvoBuilder/integrations_processAPIResults5.gif">
 
 ### Transform an API result
 
@@ -70,7 +124,9 @@ You can invoke non-LivePerson APIs from Conversation Builder. With JavaScript co
 
 The following screen from the API integration setup shows that you must remember to use the "Response Data Variable Name" with the “api_” prefix when it comes to **_Transform Result Script_** (the place where you manipulate the API response as you want).
 
-<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration-setup.png">
+<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup1.png">
+
+<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup2.png">
 
 1. Get the raw API response and save it in a variable:
 
@@ -164,11 +220,7 @@ botContext.setBotVariable("email", email, true, false);
 botContext.printDebugMessage("*** checking values were set: " + guid + age + email);
 ```
 
-<img class="fancyimage" width="300" src="img/ConvoBuilder/bestPractices/tips_image_40.png">
-
-### Display integration data in an interaction
-
-For information on how to take the data that's retrieved by an integration call and stored in custom data fields, and display it in a bot interaction, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
+<img class="fancyimage" width="600" src="img/ConvoBuilder/bestPractices/tips_image_40.png">
 
 ### Delete an integration
 If the bot is no longer using a particular integration, you might want to delete the integration. Before doing so, make sure there are no integration interactions that reference the specific integration.
@@ -177,6 +229,6 @@ Deleting an integration affects only the bot for which it was added.
 
 **To delete an integration**
 
-1. In the bot, click **Integrations**.
+1. Open the bot, and click **Integrations** in the upper-left corner.
 2. In the left panel, move your mouse over the integration name, and click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
-3. Click **Delete Integration**, and then click **Yes** in the confirmation dialog that appears.
+3. Click **Delete Integration**, and then click **Yes** in the confirmation dialog.

@@ -13,11 +13,26 @@ permalink: conversation-builder-bots-bot-basics.html
 indicator: both
 ---
 
+### Types of bots
+
+There are two, general types of bots:
+
+* **Custom bots**: A [custom bot](conversation-builder-bots-custom-bots.html) is one that you design to accomplish a specific business function, such as fetching a consumer's order status or creating an account for the consumer. You can create a custom bot from scratch, or you can start from a predefined, industry-specific template. Either method allows you to fully customize the bot to meet your needs.
+* **Post-conversation survey bots**: A [post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html) lets you collect feedback from consumers at the end of a conversation with a custom bot or human agent. Use a survey bot to measure bot/agent and skill performance and to identify opportunities to improve on your quality targets.
+
+### Create a bot
+
+* For details on creating a custom bot, see [here](conversation-builder-bots-custom-bots.html).
+* For details on creating a post-conversation survey bot, see [here](conversation-builder-bots-post-conversation-survey-bots.html).
+
 ### Configure bot settings
 
+{: .important}
+Post-conversation survey bots have a few, unique settings that custom bots don't have. For information on these settings, see [here](conversation-builder-bots-post-conversation-survey-bots.html#step-3---configure-the-bot-settings).
+
 **To configure bot settings**
-1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
-2. Select **Bot Settings** from the menu that appears.
+1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+2. Select **Bot Settings**.
 3. Click **More Settings** to display all the settings.
 4. Configure the settings as needed, and click **Save**.
 
@@ -28,7 +43,7 @@ Bot settings include:
 
 - **Bot Type**: Read-only. This is always Consumer Facing Bot.
 
-- **Bot Language**: Read-only. This setting determines the language-specific model for LivePerson NLU; it also supports the proper rendering of left-to-right and right-to-left languages. You specify the bot language when you create the bot, and it can’t be changed afterward.
+- **Bot Language**: Read-only. This setting identifies the language that the bot uses to respond. The language should be selected based on how the bot is trained: If the bot uses an intent domain, the bot language must be the same as the language of the domain that is associated with the bot. If these languages don't match, errors during NLU processing occur. Alternatively, if the bot uses only pattern matching, the bot language can be any language. You specify the bot language when you create the bot, and it can’t be changed afterward.
 
 - **Bot Template**: Read-only. To facilitate the rapid creation of bots, all bots are based on [templates](conversation-builder-templates-overview.html). The default template is Basic, which uses English and includes just a Welcome dialog. You select the template when you create the bot, and it can’t be changed afterward.
 
@@ -46,7 +61,7 @@ Bot settings include:
 
 - **Bot Environment**: If desired, select the set of [environment variables](conversation-builder-environment-variables.html) that you want to associate with the bot. Environment variables allow you to manage certain values and constants outside of the bot, and use of them when appropriate is considered a best practice.
 
-- **Session Length**: Select the length of the bot session, that is, how long the context of a conversation is maintained after the conversation becomes idle. If this is unset, the default of one hour is used. Be aware that there also exists a LivePerson conversation session; it is this setting, not the LivePerson setting, that determines the session length.
+- **Session Length**: Select the length of the bot session, that is, how long the context of a conversation is maintained after the conversation becomes idle. If this is unset, the default of one hour is used. Be aware that Conversation Builder maintains its own session, and LiveEngage maintains its own session. This setting only determines the length of the Conversation Builder session.
 
 - **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons.
 
@@ -54,7 +69,7 @@ Bot settings include:
 
 - **Shorten URLs**: Enable this if you want to shorten the URLs sent in interactions, which can be desirable if you have lengthy web links. Disable this to keep URLs as they are. The default value is Disabled (Off). For more on URL shortening, see [here](conversation-builder-interactions-interaction-basics.html#url-shortening).
 
-    If you enable this setting, the shortened domain might need to be whitelisted. For more on whitelisting, see [here](conversation-builder-interactions-interaction-basics.html#whitelisting).
+    If you enable this setting, the shortened domain might need to be whitelisted. For more on whitelisting, see [here](conversation-builder-networking-security.html#whitelisting-rich-media).
 
     To support backwards compatibility, button interactions use URL shortening even though the new Shorten URLs setting is set initially to Off. To disable URL shortening for buttons, enable the setting, save the change, disable the setting, and then save the change again. From this point forward, button interactions will respect the value of the setting and work like all other interactions.
 
@@ -77,7 +92,7 @@ Before you import a bot from a different environment (that is, from one region o
 
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 
-2. In the Dashboard, click **Import Bot** in the upper-right corner.
+2. From the dashboard that lists your bots, click **Import Bot** in the upper-right corner.
 3. In the dialog box that appears, navigate to and select the JSON file, and click **Open**.
     The bot is imported and given a name that includes a date and time stamp.
 4. Change the name of the bot and any other configuration as needed. For help, see [Configure bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings) above.
@@ -95,8 +110,8 @@ You might need to export a bot for a few reasons:
 In case 2 above—-moving or copying a bot to a different environment (that is, from one region or hosting platform to another)—-check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
 
 **To export a bot**
-1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
-2. Select **Bot Settings** from the menu that appears.
+1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+2. Select **Bot Settings**.
 3. Click **More Settings**, and then click the **Export Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_export.png">.
 4. Follow the browser prompts to access and save the JSON file to a location of your choice.
 
@@ -107,8 +122,8 @@ Deleting a bot is a non-recoverable action, so be certain about doing so before 
 If you want to delete a bot that is deployed, first stop the bot, un-deploy it, and remove any enterprise integrations that are running. This helps to ensure there are no adverse effects.
 
 **To delete a bot**
-1. Open the bot, and click the ellipsis icon ( <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_horizontal.png"> ) in the upper-right corner.
-2. Select **Bot Settings** from the menu that appears.
+1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+2. Select **Bot Settings**.
 3. Click **More Settings**, and then click the **Delete Bot** icon <img style="width:25px" src="img/ConvoBuilder/icon_delete.png">.
 4. In the confirmation dialog:
     1. If you want to delete all the logs and analytics data for the bot, select the checkbox.

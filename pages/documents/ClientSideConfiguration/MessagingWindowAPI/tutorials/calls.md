@@ -12,7 +12,7 @@ This tutorial explains how to start a Voice or Video Call on consumer side using
 
 ### Prerequisites
 * This guide is for web only. The Messaging Window API must be used in a browser environment and the website must be tagged with lpTag.
-* LivePerson account must be enabled with LiveVoice and/or LiveVideo features: ``LiveVoice.LiveVoice_Integration``, ``LiveVoice.LiveVoice_Integration``	and Site-Setting ``coapp.enabled``. If you are not sure that your account is enabled with these two features, please contact LivePerson Support.
+* The LivePerson account must have the LiveVoice and/or LiveVideo features enabled. LivePerson Support can help with the enablement.
 
 ### Important information
 The Voice & Video Call feature leverages WebRTC and tries to establish a peer to peer connection between agent and the consumer. To support calls on different devices and networks, additional video relay infrastructure is required to cover scenarios in which a peer to peer connection is not possible. It is recommended to work with the LivePerson support team to verify that your network infrastructure can support peer to peer connections. On the consumer side, this can not be guaranteed and calls might require an additional relay (TURN) server. For testing purposes, LivePerson will provide such a server using a 3rd party. For production deployments, brands must either set up their own infrastructure or use a 3rd party provider. Your LivePerson representative can assist you with that step and also outline alternatives to hosting your own infrastructure. LivePerson keeps the right to change the use case of this service at any time in the future.  
@@ -66,12 +66,7 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
         "mode": "VIDEO_CALL",
         "expires": 1.502893131855E9,
         "sessionState": "INVITED",
-        "permissions": "audio,screen,control",
-        "host": "https://coapp.dev.lprnd.net",
-        "uid": "le83624296:356285412__cc05f2b9-916b-496e-89fe-66a46d975ae2_1502893040466_1502893041854",
-        "channel": "le83624296:356285412__cc05f2b9-916b-496e-89fe-66a46d975ae2_1502893040466",
-        "token": "...",
-        "role": "visitor"
+        "dialogId": "c26b9d3b-e943-42af-8047-aba830de64ea"
     },
     "state": "OPEN",
     "creationTs": 1502893041905,

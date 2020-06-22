@@ -23,6 +23,8 @@ This method is used to create a subscription for conversation updates. You can s
 ```javascript
 agent.subscribeExConversations({
     'convState': ['OPEN']
+    ,'maxLastUpdatedTime': <time in millis> 
+    ,'minLastUpdatedTime': <time in millis> // can be any of these 'Time' fields, or both, or none.
     ,'agentIds': [agent.agentId] // remove this line to subscribe to all conversations instead of just the bot's conversations
 }, (e, resp) => {
     if (e) { console.error(e) }
@@ -33,6 +35,9 @@ agent.subscribeExConversations({
 Success response:
 
 `{"subScriptionId":"aaaabbbb-cccc-1234-56d7-a1b2c3d4e5f6"}`
+
+In addition to the response, the ExConversationChangeNotification with the recent conversations (maximum 1001 conversation), fitting the parameters set in the subscription request, will be sent. 
+
 
 ### subscribeAgentsState
 

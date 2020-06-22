@@ -13,12 +13,12 @@ indicator: both
 
 The Order Status template is designed to show a customer their order status based on either an order number or email address. This template is integrated with Shopify and a fake Shopify store for demonstration purposes. You can enter the order numbers 1162 or 1163 to return order status results from the test Shopify integration.
 
-<img class="fancyimage" style="width:800px" src="/img/ConvoBuilder/template_orderstatus_0.png">
+<img class="fancyimage" style="width:1000px" src="/img/ConvoBuilder/template_orderstatus_0.png">
 
 {: .important}
 Your app can access the last 60 days of orders for a store. You can request access to a store’s full order history in your Shopify Store.
 
-### Included Items
+### Included items
 
 #### Dialogs
 
@@ -60,19 +60,19 @@ Your app can access the last 60 days of orders for a store. You can request acce
 
     * You will need to configure the skill name, id and transfer message in the Global Functions
 
-### Configuration Needed
+### Configuration needed
 
 To customize this template, you will need to do the following.
 
-#### General Dialog Customization
+#### General dialog customization
 
 As noted previously, you will want to review each of the dialogs, starting with Welcome to customize the verbiage used to greet your customer and request their details.
 
 This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
 
-#### Global Functions Customization
+#### Global Functions customization
 
-Click the **Global Functions** button to access all the global functions and variables to be configured.
+Click **Global Functions** to access all the global functions and variables to be configured.
 
 <img class="fancyimage" style="width:750px" src="/img/ConvoBuilder/template_orderstatus_1.png">
 
@@ -102,7 +102,7 @@ To set up escalation to an agent in Conversational Cloud, change the following v
  </tbody>
 </table>
 
-#### Shopify Integration Settings
+#### Shopify integration settings
 
 Add Shopify credentials to setup your online store integration. These values will need to come from the brand’s Shopify store admin.
 
@@ -134,7 +134,7 @@ More info about how to **generate a Shopify Access Token** is described [here](h
  </tbody>
 </table>
 
-#### Invalid Order Attempts
+#### Invalid order attempts
 
 How many attempts at entering an order number or email should a user get before we escalate to an agent:
 
@@ -152,7 +152,7 @@ How many attempts at entering an order number or email should a user get before 
  </tbody>
 </table>
 
-#### No Order Exists Messages
+#### No Order Exists messages
 
 To modify the messages shown when no order is found, change the following values:
 
@@ -174,7 +174,7 @@ To modify the messages shown when no order is found, change the following values
  </tbody>
 </table>
 
-#### Fallback Message
+#### Fallback message
 
 To modify the messages shown in the Fallback dialog, change the following values:
 

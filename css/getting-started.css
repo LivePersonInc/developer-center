@@ -20,9 +20,7 @@
 
 
 .lp-container {
-
     display: flex;
-    margin-top: 64px;
     padding-right: 48px;
     width: 100%;
 }
@@ -189,8 +187,8 @@
     overflow-y: hidden !important;
     /* Enable scroll if needed */
     /* Fallback color */
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    background-color: rgb(6, 8, 46, 0.96);
+
+    background-color: rgb(6, 8, 46, 0.8);
 
     /* Black w/ opacity */
 }

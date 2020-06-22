@@ -67,12 +67,7 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
         "mode": "shared",
         "expires": 1.502893131855E9,
         "sessionState": "INVITED",
-        "permissions": "audio,screen,control",
-        "host": "https://coapp.dev.lprnd.net",
-        "uid": "le83624296:356285412__cc05f2b9-916b-496e-89fe-66a46d975ae2_1502893040466_1502893041854",
-        "channel": "le83624296:356285412__cc05f2b9-916b-496e-89fe-66a46d975ae2_1502893040466",
-        "token": "...",
-        "role": "visitor"
+        "dialogId": "c26b9d3b-e943-42af-8047-aba830de64ea"
     },
     "state": "OPEN",
     "creationTs": 1502893041905,

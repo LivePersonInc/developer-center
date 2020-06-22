@@ -24,7 +24,7 @@ Currently the following events are supported:
 |--- |--- |--- |
 |Chat Post Survey E-Mail Transcript|Triggered after a chat conversation is finished and CSAT survey has been submitted.|10|
 |Conversational Command|Use this event to implement a Conversational Command that can be invoked from within the agent workspace in Conversational Cloud by typing "/".|30|
-|Messaging Conversation End|Triggered when the conversation is closed by agent/consumer.|1|
+|Messaging Conversation End|Triggered when the conversation is closed by agent/consumer/system.|1|
 |Messaging Conversation Idle|Triggered when agent/consumer is not responsive or the conversation is in queue for over X secs/mins. Where Time X is configurable inside the Conversational Cloud UI, via the auto-messages feature.|1|
 |Messaging Conversation Routing|Triggered when the conversation is transferred to a different skill.|1|
 |Messaging Line in Off-Hours|Triggered when a consumer writes a message to a conversation that started in working hours, but is now in off-hours.|1|

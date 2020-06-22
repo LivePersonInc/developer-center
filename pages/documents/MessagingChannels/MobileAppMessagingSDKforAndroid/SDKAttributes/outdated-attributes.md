@@ -576,6 +576,29 @@ Sets the conversation background image (applicable on Activity mode only).
 
 **Type:** drawable
 
+
+#### lp_caption_preview_fragment_background_color
+Define the background color of caption preview screen when sending a file.
+
+<div style="float: left; width: 50%;height: 400px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #ffffff</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/captionpreviewbackgroundcolor.png" alt="captionpreviewbackgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
 #### bubble_system_resolved_text_size
 Conversation resolved message text size.
 
@@ -800,6 +823,12 @@ Define date-time format.
 * **Type:** string
 * **Default value:** No value
 
+
+#### message_status_numeric_timestamp_only
+When false (default), time stamps displays information relative to when sent/distributed/read, for example, '5 minutes ago'. When true, shows as numeric only, for example, '11:32.'
+
+* **Type:** bool
+* **Default value:** false
 
 
 #### sendingMessageTimeoutInMinutes
@@ -1567,8 +1596,9 @@ Enable or disable the scroll down indicator (shown or invisible).
 
 
 #### scroll_down_indicator_unread_summary_enabled
-- Enable or disable the summary in scroll down indicator (shown or invisible). If [unread_indicator_bubble_enable](#unread_indicator_bubble_enable) is **false**, it's in minimized mode without a badge indicating number of unread message.  Tapping scrolls to the last message.
-- The scroll to bottom button width is dynamic and will be auto adjusted based on length of the summary text.
+Enable or disable the summary in scroll down indicator (shown or invisible). If [unread_indicator_bubble_enable](#unread_indicator_bubble_enable) is **false**, it's in minimized mode without a badge indicating number of unread message.  Tapping scrolls to the last message.
+
+The scroll to bottom button width is dynamic and will be auto adjusted based on length of the summary text.
 
 * **Type:** bool  
 * **Default value:** true
@@ -2683,7 +2713,7 @@ Configuration for bottom right corner radius of structured content card.
 * **Default value:** 0dp
 
 
-#### structured_content_bottom_left_radius
+#### structured_content_top_left_radius
 Configuration for top left corner radius of structured content card.
 
 * **Type:** dimen

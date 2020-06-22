@@ -40,6 +40,24 @@ indicator: both
     </div>
 </div>
 
+<div class= "header-lp4" style="margin-top: 48px;margin-bottom: 16px;">
+   Steps to get started
+</div>
+<ul>
+  <li>
+    <p>Create your LivePerson <a target="_blank" href="https://developers.liveperson.com/register.html" alt="Start free trial">free trial account</a>.</p>
+  </li>
+  <li>
+    <p>Build with our step-by-step quick start guides.</p>
+  </li>
+  <li>
+    <p>Get familiar about <a href="/api-guidelines-accessing-liveperson-apis.html" alt="LivePerson APIs">accessing LivePerson APIs</a> and guidelines.</p>
+  </li>
+  <li>
+    <p>Now you are ready to <a  class="uniqueAnchor" href="#LEFeatures" alt="LivePerson Features"> customize LiveEngage features</a>.</p>
+  </li>
+</ul>
+
 <div class= "header-lp4" style="margin-top:62px;">
     Start building with quick start guides
 </div>
@@ -69,9 +87,50 @@ indicator: both
         </a>
 </div>
   <div class="whole-external-link">
+  <div class="external-link-container">
+        <div id="LEFeatures" class="header-lp4-external">
+            Customize LiveEngage Features
+            <div class="link-padding" style="margin-top:24px">
+                <a  href="/mobile-app-messaging-sdk-for-ios-overview.html"> 
+                    <img class="dots-container" src="img/four-dots.svg"/>
+                       Integrate LiveEngage with Mobile Messaging SDK for iOS
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a  href="/mobile-app-messaging-sdk-for-android-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            Integrate LiveEngage with Mobile Messaging SDK for Android 
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a  href="/monitoring-api-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                           Enable consumer monitoring with Monitoring API
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a  href="/messaging-agent-sdk-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Integrate a messaging bot using Agent Messaging SDK
+                </a>
+            </div>
+               <div class="link-padding" >
+                <a  href="/users-api-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                       Manage users with Users API
+                </a>
+            </div>
+               <div class="link-padding" >
+                <a href="/api-guidelines-retry-policy-recommendations.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Implement a retry policy
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="external-link-container">
         <div class="header-lp4-external" >
-            Next Steps
+            Recommended Links
             <div class="link-padding" style="margin-top:24px">
                 <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
@@ -93,40 +152,12 @@ indicator: both
             <div class="link-padding" >
                 <a target="_blank" href="https://knowledge.liveperson.com/developer-tools-liveperson-functions-overview.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
-                            Dev Tools - LivePerson Functions
+                            Explore LivePerson Functions
                 </a>
             </div>
         </div>  
     </div>
-    <div class="external-link-container">
-        <div class="header-lp4-external">
-            API Guidelines
-            <div class="link-padding" style="margin-top:24px">
-                <a target="_blank" href="https://developers.liveperson.com/common-resources-accessing-liveperson-apis.html"> 
-                    <img class="dots-container" src="img/four-dots.svg"/>
-                        Accessing LivePerson APIs
-                </a>
-            </div>
-            <div class="link-padding" >
-                <a target="_blank" href="https://developers.liveperson.com/common-resources-create-api-keys.html"> 
-                        <img class="dots-container" src="img/four-dots.svg"/>
-                            Create API keys
-                </a>
-            </div>
-            <div class="link-padding" >
-                <a target="_blank" href="https://developers.liveperson.com/common-resources-domain-api.html"> 
-                        <img class="dots-container" src="img/four-dots.svg"/>
-                            Domain API 
-                </a>
-            </div>
-            <div class="link-padding" >
-                <a target="_blank" href="https://developers.liveperson.com/common-resources-retry-policy-recommendations.html"> 
-                        <img class="dots-container" src="img/four-dots.svg"/>
-                        Retry policy recommendations
-                </a>
-            </div>
-        </div>
-    </div>
+    
 </div>
 <script type="text/javascript">
 // Get the modal
@@ -145,5 +176,4 @@ btn.onclick = function() {
 span.onclick = function() {
   modal.style.display = "none";
 }
-
 </script>

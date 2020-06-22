@@ -10,6 +10,8 @@ permalink: bot-analytics-overview.html
 indicator: both
 ---
 
+The Bot Analytics application is intended to show you *real time* data on your bots. As such, you can use it to query for and download data for any 60-day time period in the last 13 months. If you need to download at one time the data for a longer time period, use [Report Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html).
+
 ### Access Bot Analytics
 
 **To access the Bot Analytics application**
@@ -19,7 +21,7 @@ indicator: both
 
     The first screen that appears is a list of all your bots. Search or scroll through the list and select the bot for which you want to see data.
 
-    <img style="width:750px" src="img/beaut_ba_1.png">
+    <img style="width:900px" src="img/ConvoBuilder/analytics_dashboard.png">
 
 ### Views
 
@@ -48,8 +50,8 @@ What are custom events? [Here](conversation-builder-conversation-builder-scripti
 | Average Session Length (Deprecated) | Average of the time lapse between bot connection/disconnection to a conversation |
 | Escalations | Number of times a bot transfers a user to a different skill/agent |
 | Conversation Escalation Rate | Percentage of conversations that are transferred to a different skill/agent |
-| Messages | Number of messages sent or received by bot |
-| Questions Asked | Number of messages received by bot | 
+| Messages | The number of messages sent by the consumer and received by the bot. For details on this, see the Messages section in the application. |
+| Questions Asked | The number of intentful messages received by the bot. These are dialog starters and other intentful responses to which patterns and intents were matched. | 
 | Matched Intents | Number of questions asked that are matched with intents or Knowledge Base articles |
 | Unmatched Phrases | Number of questions asked that are not matched with intents or Knowledge Base articles |
 | Intent Matched Rate | Percentage of questions asked that were matched | 

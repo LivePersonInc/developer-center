@@ -17,6 +17,10 @@ Use this page to help you troubleshoot common issues when working with integrati
 
 If you're trying to transfer a conversation to a live agent or another bot, but it isn't working, the reason could be one of several. (For some practice with transfers, complete the [Connect to Conversational Cloud](conversation-builder-tutorials-guides-getting-started.html) tutorial.)
 
+#### Messages are sent after the transfer
+
+This can happen due to context switching. If, given your use case, you need to prevent context switching from occurring during the transfer, you can do this as described [here](conversation-builder-dialogs-dialog-basics.html#preventing-context-switching).
+
 #### The transfer isn't working
 
 ##### The Agent Skill ID is incorrect

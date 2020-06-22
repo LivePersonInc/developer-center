@@ -229,7 +229,7 @@ botContext.setBotVariable("previousSkill", previousSkill, true, false);
 <img class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
 
 ### Get matched intent
-Used to retrieve the intent (associated with a User Says interaction) that was matched to the most recent user utterance.
+Used to retrieve the intent (associated with a Dialog Starter interaction) that was matched to the most recent user utterance.
 
 This method returns the name of the intent. If you are using a meta intent, it returns the name of the child or sub-intent.
 
@@ -372,9 +372,14 @@ For the corresponding curl example, see the [Web View API](conversation-builder-
 
 Given an array of hours classified by type and a time zone, this method returns the type of hours.
 
-This method is commonly used to provide a different experience or messaging to the consumer during regular or after hours. Additionally, the method is able to handle generalized hours (e.g., REG_HOURS, AFTER_HOURS), hours for specific days of the week (FRIDAY, SATURDAY, etc.), and even specific dates (e.g., 12.25.2018 for Christmas).
+This method is commonly used to provide a different experience or messaging to the consumer during regular or after hours. Additionally, the method is able to handle generalized hours, hours for specific days of the week, and specific dates. Note the following:
 
-The time zone value should be the time zone of the agent call center, not the user. You can find the appropriate format for all time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+* **Keys**: The keys are user-defined and arbitrary (REG_HOURS, AFTER_HOURS, etc.). If you want to specify a shift/time period for a particular day, use the name of the day (“FRIDAY\|”, “SATURDAY\|”, etc.) as appropriate. You can also use a specific date (e.g., 12.25.2018 for Christmas).
+* **Values**: If two time frames overlap, the later time frame is used.
+* **Time zone**: The time zone value should be the time zone of the agent call center, not the user. You can find the appropriate format for all time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+
+{: .important}
+`getHoursType` is a basic function to specify agent time shifts.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |

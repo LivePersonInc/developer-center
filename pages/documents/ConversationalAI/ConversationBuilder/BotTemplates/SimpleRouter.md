@@ -13,9 +13,9 @@ indicator: both
 
 The Simple Router template provides an easy framework for the creation of a routing bot.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_simplerouter.png">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/template_simplerouter.png">
 
-### Included Items
+### Included items
 
 #### Dialogs
 
@@ -34,25 +34,21 @@ The Simple Router template provides an easy framework for the creation of a rout
     - This integration posts a configuration payload to a LivePerson hosted service that will route the customer to a different skill.
     - In the Integrations area, there should be a pre-configured integration named “Transfer” and “Liveperson Agent Escalation” should be selected in the Integration Type menu.
     
-    <img style="width:450px" src="img/ConvoBuilder/template_simplerouter_3.png">
+    <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_3.png">
 
     - The “skillName”, “skillId” and “transferMessage” variables will be populated via our Global Function. You do not need to change anything here.
     
-    <img style="width:550px" src="img/ConvoBuilder/template_simplerouter_4.png">
+    <img style="width:600px" src="img/ConvoBuilder/template_simplerouter_4.png">
 
-
-
-### Configuration Needed
+### Configuration needed
 
 To customize this template, you will need to do the following.
 
 #### Welcome dialog
 
-In the Welcome dialog, click on the first "hi" interaction. In the Interaction Details > Settings, edit the Patterns.
+In the Welcome dialog, in the Dialog Starter interaction, click the defined "hi" patterns. In the Interaction Settings, edit the patterns.
 
-Now click on the multiple choice interaction and edit each option text for your skills.
-
-In the multiple choice Interaction Details > Next Actions, edit each Response Match & Action for the new skills. You will need to edit the Conditions patterns **and** and intent variable value for each. Of course, you should add or remove Response Match & Actions depending on how many skills you plan to route to.
+In the Multiple Choice interaction, edit each option text for your skills. Then edit the custom rules for the new skills. You will need to edit the Conditions patterns **and** and intent variable value for each. Of course, you should add or remove rules depending on how many skills you plan to route to.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_simplerouter_2.png">
 
@@ -68,26 +64,36 @@ Customize the text response to match your brand voice.
 
 The last thing to do is customize some important variables in the Global Functions.
 
-When you click on Global Functions at the top of Conversation Builder, you should see a block of code. Within this block of code, there is a `switch` statement like the below:
+When you click **Global Functions** at the top of Conversation Builder, you should see a block of code. Within this block of code, there is a `switch` statement:
 
 ```javascript
 switch(intent){
-case "billing":
-    transferMessage = "Hold on while I transfer you to someone who can help with your billing issue...";
-    skillId = '1234567890';
-    skillName = intent;
-    break;
-case "account":
-    transferMessage = "Hold on while I transfer you to someone who can help with your account issue...";
-    skillId = '2345678901';
-    skillName = intent;
-    break;
-case "help":
-    transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
-    skillId = '3456789012';
-    skillName = intent;
-    break;  
-}      
+    case "faq":
+      transferMessage = "Let's checkout the FAQ bot!";
+      skillId = '1678104230';
+      skillName = intent;
+      break;
+    case "simple lead gen":
+      transferMessage = "Let's checkout the Simple Lead Gen bot!";
+      skillId = '1678105630';
+      skillName = intent;
+      break;
+    case "full lead gen":
+      transferMessage = "Let's checkout the Full Lead Gen bot!";
+      skillId = '1678104930';
+      skillName = intent;
+      break;
+      case "order status":
+      transferMessage = "Let's checkout the Order Status bot!";
+      skillId = '1678107030';
+      skillName = intent;
+      break;
+    default:
+      transferMessage = "Hold on while I transfer you to someone who can help with your issue...";
+      skillId = '1680373730';
+      skillName = 'help';
+      break;  
+  }      
 ```
 
 For each of your skill options:
