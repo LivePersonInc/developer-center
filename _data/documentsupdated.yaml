@@ -195,6 +195,7 @@
           - subpagename: Deprecated Functions
       - pagename: Testing & Deployment
         subpages:
+          - subpagename: Previewing
           - subpagename: Debugging
           - subpagename: Deploying to LiveEngage
       - pagename: Advanced Use Cases

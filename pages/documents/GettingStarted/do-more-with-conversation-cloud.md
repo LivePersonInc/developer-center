@@ -15,28 +15,28 @@ indicator: both
 </div>
 <div class="container-note">
     <div class="important" style="width:91%">
-    <b> Prerequisites </b> Before you move ahead be sure you’ve completed the guidance in <a href="/getting-started-with-your-free-trial-account.html" alt="Start free trial"> Getting Started with your Free Trial Account </a> which outlines the first steps to take in the Conversational Cloud.
+    <b> Prerequisites </b> Before you move ahead be sure you’ve completed the guidance in <a href="/getting-started-with-your-free-trial-account.html" alt="Developer guide"> Getting Started with your Free Trial Account </a> which outlines the first steps to take in the Conversational Cloud.
   </div>
 </div>
 
 
 <div class="card-container" style="margin-top:60px;">
-        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-conversation-builder-quick-start.html"> 
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html"> 
         <img class="container-image" src="img/ic_Facebook.svg"/>
         <h5 class="getstarted-title">MESSAGING CHANNELS</h5>
         <p class="getstarted-content ">Customize your messaging operations</p>
         </a>
-        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html"> 
+        <a class="welcome-card"  href="/conversation-builder-tutorials-guides-getting-started.html#dialogs--patterns-tutorial"> 
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">CONVERSATIONAL AI </h5>
         <h5 class="getstarted-content ">Create new bots and dialogs</h5>
         </a>
-        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html"> 
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/developer-tools-liveperson-functions-overview.html"> 
         <img class="container-image" src="img/ic_functions.svg"/>
         <h5 class="getstarted-title">FUNCTION AS A SERVICE</h5>
         <h5 class="getstarted-content ">Develop custom behaviors </h5>
         </a>
-        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-web-messaging-quick-start.html"> 
+        <a class="welcome-card" href="/api-guidelines-accessing-liveperson-apis.html"> 
         <img class="container-image" src="img/ic_APIs.svg"/>
         <h5 class="getstarted-title">LIVEPERSON APIS</h5>
         <h5 class="getstarted-content ">Build your own solution</h5>
@@ -46,25 +46,25 @@ indicator: both
         <div id="LEFeatures" class="header-lp4-external">
             Next Steps
             <div class="link-padding" style="margin-top:24px">
-                <a  href="/mobile-app-messaging-sdk-for-ios-overview.html"> 
+                <a  href="/customizing-the-conversational-cloud.html"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
                        Customize Conversational Cloud features
                 </a>
             </div>
             <div class="link-padding" >
-                <a  href="/mobile-app-messaging-sdk-for-android-overview.html"> 
+                <a  href="/conversation-builder-tutorials-guides-getting-started.html#intents-tutorial"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                           Leverage intents in your bots
                 </a>
             </div>
             <div class="link-padding" >
-                <a  href="/monitoring-api-overview.html"> 
+                <a  href="/maven-ai-ai-powered-routing-tutorial.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                         Implement dynamic routing policies with Conversation Orchestrator
                 </a>
             </div>
             <div class="link-padding" >
-                <a  href="/messaging-agent-sdk-overview.html"> 
+                <a  href="https://www.liveperson.com/upgrade/"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                        Learn about your upgrade options and speak with an expert
                 </a>

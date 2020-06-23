@@ -34,13 +34,13 @@ indicator: both
       Conversational Cloud basics
     </div>
     <div class="convo-cloud-paragraph">
-    Learn about the <a href="/api-guidelines-accessing-liveperson-apis.html" alt="LivePerson APIs"> Conversational Cloud </a> and how it scales across popular messaging channels, such as WhatsApp, Facebook Messenger, Apple Business Chat, and more. 
+    Learn about the <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" alt="Conversational Cloud"> Conversational Cloud </a> and how it scales across popular messaging channels, such as WhatsApp, Facebook Messenger, Apple Business Chat, and more. 
     </div>
 </div>
 
 <div class="container-note">
     <div class="important" style="width:91%">
-        <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html" alt="Start free trial"> register </a> for a free 45-day trial. Your trial account comes with a pre-configured Concierge Bot who will greet you and offer guidance.
+        <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html" alt="Register free trial"> register </a> for a free 45-day trial. Your trial account comes with a pre-configured Concierge Bot who will greet you and offer guidance.
     </div>
 </div>
 
@@ -53,7 +53,7 @@ Connect to mobile channels and customize your Concierge Bot
       1. Welcome to the Conversational Cloud
     </div>
     <div class="convo-cloud-paragraph">
-  <a href="/api-guidelines-accessing-liveperson-apis.html" alt="LivePerson APIs">Log in </a> to the Conversational Cloud, where you’ll be greeted by your Concierge Bot. Have your first conversation with the bot for a quick introduction to the platform.
+  <a href="https://authentication.liveperson.net/login.html" alt="LiveEngage Login">Log in </a> to the Conversational Cloud, where you’ll be greeted by your Concierge Bot. Have your first conversation with the bot for a quick introduction to the platform.
     </div>
 </div>
 
@@ -66,12 +66,12 @@ Connect to mobile channels and customize your Concierge Bot
     </div>
 </div>
 <div class="card-container" style="margin-top:24px;">
-  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-conversation-builder-quick-start.html"> 
+  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-the-concierge-bot.html"> 
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">Conversational AI</h5>
         <p class="getstarted-content ">Customize bot dialogs</p>
   </a>
-  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html"> 
+  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversation-builder-conversation-builder-overview.html"> 
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">Conversational AI</h5>
         <h5 class="getstarted-content ">Learn more about Conversation Builder</h5>
@@ -86,17 +86,17 @@ Connect to mobile channels and customize your Concierge Bot
     </div>
 </div>
 <div class="card-container" style="margin-top:24px;">
-  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html"> 
+  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html"> 
     <img class="container-image" src="img/ic_Facebook.svg"/>
     <h5 class="getstarted-title">Messaging Channels</h5>
     <h5 class="getstarted-content ">Enable Facebook Messenger</h5>
     </a>
-    <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-web-messaging-quick-start.html"> 
+    <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-twilio-sms-quick-start.html"> 
     <img class="container-image" src="img/ic_SMS.svg"/>
     <h5 class="getstarted-title">Messaging Channels</h5>
     <h5 class="getstarted-content ">Enable SMS </h5>
   </a>
-  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-web-messaging-quick-start.html"> 
+  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html"> 
         <img class="container-image" src="img/ic_messaging.svg"/>
         <h5 class="getstarted-title">Messaging Channels</h5>
         <h5 class="getstarted-content ">Channels overview </h5>
@@ -107,7 +107,7 @@ Connect to mobile channels and customize your Concierge Bot
       4. Test your bot
     </div>
     <div class="convo-cloud-paragraph">
-      Once you’ve customized your bot and connected it to a messaging channel you can test out the experience. For mobile channels, simply send a message in the relevant app to test out your bot. For Web Messaging, select the  <a href="/api-guidelines-accessing-liveperson-apis.html" alt="LivePerson APIs">preview button </a> in the top right corner of the Dialog Editor to test the interaction.
+      Once you’ve customized your bot and connected it to a messaging channel you can test out the experience. For mobile channels, simply send a message in the relevant app to test out your bot. For Web Messaging, select the  <a href="/conversation-builder-testing-deployment-previewing.html" alt="Convo Builder Preview">preview button </a> in the top right corner of the Dialog Editor to test the interaction.
     </div>
 </div>
 <div class="whole-external-link">
@@ -115,7 +115,7 @@ Connect to mobile channels and customize your Concierge Bot
           <div id="LEFeatures" class="header-lp4-external">
             Next Steps
               <div class="link-padding" style="margin-top:24px">
-                <a  href="/mobile-app-messaging-sdk-for-ios-overview.html"> 
+                <a  href="/do-more-with-the-conversational-cloud.html"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
                        Do More with the Conversational Cloud 
                 </a>
@@ -130,7 +130,7 @@ Connect to mobile channels and customize your Concierge Bot
       <p class="free-trial-header" style="width:55%;">Upgrade your trial account now to enjoy the full capabilities of the Conversational Cloud</p> 
     </div>
     <div id="free-trial-button-welcome">
-      <a target="_blank" href="https://developers.liveperson.com/register.html">
+      <a target="_blank" href="https://www.liveperson.com/upgrade/">
         <button class="create-button">Upgrade Account</button>
       </a>
     </div>
