@@ -423,6 +423,7 @@ ul#mysiderbar li {
 .innerlink {
   color: var(--dark-gray);
   font-size: 12px;
+  width: 150px;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
 

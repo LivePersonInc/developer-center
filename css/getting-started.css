@@ -75,6 +75,32 @@
     color: var(--navy-gray);
 }
 
+.convo-cloud-paragraph {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 8px;
+    display: block;
+    width: 70%;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: var(--navy-gray);
+}
+
+.header-paragraph {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 8px;
+    display: block;
+    width: 720px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: var(--navy-gray);
+}
+
 .play-icon {
     margin-top: 40px;
     flex: 1;
@@ -150,7 +176,14 @@
     height: 180px;
 }
 
+.next-steps-container {
+    width: 300px;
+    flex: 0 50%;
+    display: inline-flex;
+}
+
 .link-padding {
+    width: 720px;
     margin-bottom: 16px;
     font-family: Roboto;
     font-style: normal;
@@ -220,4 +253,37 @@
     color: var(--lightest-gray) !important;
     text-decoration: none;
     cursor: pointer;
+}
+
+.small-header {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    color: var(--navy);
+}
+
+.container-note {
+    display: flex;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.concierge-bot-header {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+
+    letter-spacing: 0.01em;
+
+    /* J/Navy */
+
+    color: #090C43;
 }
