@@ -261,7 +261,8 @@
 
 .container-note {
     display: flex;
-    margin-top: 48px;
+    margin-top: 32px;
+    margin-bottom: 48px;
     width: 100%;
     flex-wrap: wrap;
 }
