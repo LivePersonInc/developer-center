@@ -146,6 +146,7 @@ function navigateContent(url) {
           $(".suggestbutton").removeClass("suggesthidden");
         }
       }
+
       if (
         $title.indexOf(welcome_page) != -1 ||
         $title.indexOf(get_started_page) != -1 || $title.indexOf(customized_cloud) != -1

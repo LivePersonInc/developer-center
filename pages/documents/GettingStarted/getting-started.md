@@ -5,6 +5,7 @@ categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
 indicator: both
 ---
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
