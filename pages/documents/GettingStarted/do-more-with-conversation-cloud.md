@@ -7,12 +7,12 @@ indicator: both
 ---
 
 <div class="lp-container">
-            <div class="convo-cloud-paragraph">
+            <div class="header-paragraph">
        Now that you know the basics, you’re ready to take a deeper dive into the full capabilities of the Conversational Cloud. Select a journey below to learn more about the tools and customization options available. 
             </div>
 </div>
 <div class="container-note">
-    <div class="important" style="width:63%">
+    <div class="important" style="width:91%">
     <b> Prerequisites </b> Before you move ahead be sure you’ve completed the guidance in <a href="/getting-started-with-your-free-trial-account.html" alt="Developer guide"> Getting Started with your Free Trial Account </a> which outlines the first steps to take in the Conversational Cloud.
   </div>
 </div>
