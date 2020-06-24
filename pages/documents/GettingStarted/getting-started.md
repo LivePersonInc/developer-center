@@ -5,6 +5,7 @@ categoryname: "Getting Started"
 permalink: first-steps.html
 indicator: both
 ---
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
