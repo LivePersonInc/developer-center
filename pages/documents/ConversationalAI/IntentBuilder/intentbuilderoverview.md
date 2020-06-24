@@ -23,7 +23,7 @@ See [here](intent-builder-natural-language-understanding.html) to learn more abo
 
 **To access the Intent Builder application**
 
-1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Intent Builder**.
 
 ### High-level concepts

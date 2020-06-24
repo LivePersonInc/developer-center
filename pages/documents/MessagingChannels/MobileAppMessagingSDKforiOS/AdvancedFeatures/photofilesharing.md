@@ -11,7 +11,7 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-photo-and-file-sha
 indicator: messaging
 ---
 Mobile Messaging SDK v4.1 introduces a feature for consumer to share supported type of files to agents.
-Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.    
+Mobile Messaging SDK v3.9 introduces a feature for agents within Conversational Cloud to share photos or files with the consumers.    
 
 Agents can share:
 
@@ -86,7 +86,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
    - **Key:** NSCameraUsageDescription
 
-   - **Value:** "Camera Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"
+   - **Value:** "Camera Privacy Setting for Conversational Cloud Mobile App Messaging SDK for iOS"
 
 3. Set the file sharing privacy settings:
 

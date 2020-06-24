@@ -40,11 +40,11 @@ The proprietary SDK notification is only for display purposes, interacting with 
    }
    ```
 
-### Step 2. Configure push notifications in LiveEngage
+### Step 2. Configure push notifications in Conversational Cloud
 
-1. Log into your [LiveEngage account](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
+1. Log into your [Conversational Cloud account](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
 
-2. In LiveEngage, click the **Campaigns** tab, and then **Data Sources**.
+2. In Conversational Cloud, click the **Campaign Builder** tab, and then **Data Sources**.
 
   ![Data Sources](img/androiddatasources.jpg)
 

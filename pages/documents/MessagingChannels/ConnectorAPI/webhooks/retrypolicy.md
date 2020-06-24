@@ -68,7 +68,7 @@ Retry based on time to live was introduced as an alternative to retry based on n
 
 If any event of type `ms.MessagingEventNotification.ContentEvent` or `ms.MessagingEventNotification.RichContentEnvent` cannot be send, all events belonging to the same conversation will be resend multiple times within the next 24 hours (86400 seconds) until they are either delivered or dropped. That is, retry based on time to live does not affect a single webhook but all webhooks at once. For convenience, we refer to all webhooks as app install. For example, an app install fails if at least one webhook fails.
 
-The time between retries increases exponentially. The first retry attempt is made after 2 seconds, the second after 4 and the third after 8. The maximum gap between two consecutive retries is 5 minutes. The retention time is configured in seconds with a minimum of 2 seconds and a  maximum of 3 days (259200 seconds). When an app install recovered from a failure, events in the retry mechanism are sent in the order, they were stored. New conversations are directly send to the webhook endpoint without delay. If a webhook recovers mid-conversation all events of the conversation are send in the right order. That is, in the order they were received from LiveEngage. For a more detailed explanation of the different states of an app install consider the following drawing:
+The time between retries increases exponentially. The first retry attempt is made after 2 seconds, the second after 4 and the third after 8. The maximum gap between two consecutive retries is 5 minutes. The retention time is configured in seconds with a minimum of 2 seconds and a  maximum of 3 days (259200 seconds). When an app install recovered from a failure, events in the retry mechanism are sent in the order, they were stored. New conversations are directly send to the webhook endpoint without delay. If a webhook recovers mid-conversation all events of the conversation are send in the right order. That is, in the order they were received from Conversational Cloud. For a more detailed explanation of the different states of an app install consider the following drawing:
 
 ```
                             +----------------------------------------------------+
@@ -98,7 +98,7 @@ An app install can be in four states: *Up*, *Failed*, *In Transition* and *Recov
 
 * Applications should consider that data (event) loss is possible. For example, when a failed notification request is retried, once the retry policy is exhausted (e.g. the time to live is exceeded) the event will be dropped.
 
-* Applications should consider that the order of events within a conversation is guaranteed to be the same as they were received from LiveEngage. Ordering guarantee of a drain conversation is dropped, when its app install recovered but an event is sent within the drain period. 
+* Applications should consider that the order of events within a conversation is guaranteed to be the same as they were received from Conversational Cloud. Ordering guarantee of a drain conversation is dropped, when its app install recovered but an event is sent within the drain period. 
 
 * Applications should consider that as long as the retry policy is not exhausted, events duplications are possible. For example, if an event was received at the endpoint but the response takes more than 10 seconds, then Webhooks will consider that event as failed and will apply the retry policy - resulting in the same event being sent more than once.   
 

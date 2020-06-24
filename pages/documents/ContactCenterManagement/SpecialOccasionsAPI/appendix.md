@@ -95,7 +95,7 @@ This section contains API details that are common to every API’s resource, met
     <td>
 <ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul>
 <ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specified, 24/7 is assumed.</li></ul>
-<ul><li>The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used.</li></ul>
+<ul><li>The timezone field for both the start and end array must match. Only Conversational Cloud supported timezones may be used.</li></ul>
 </td>
   </tr>
   <tr>
@@ -106,7 +106,7 @@ This section contains API details that are common to every API’s resource, met
     <td>
 <ul><li>This array receives two possible fields: <br>-dateTime<br>-timezone</li></ul>
 <ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour specified, 24/7 is assumed.</li></ul>
-<ul><li>The timezone field for both the start and end array must match. Only LiveEngage supported timezones may be used.</li></ul>
+<ul><li>The timezone field for both the start and end array must match. Only Conversational Cloud supported timezones may be used.</li></ul>
 </td>
   </tr>
   <tr>

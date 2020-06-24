@@ -25,7 +25,7 @@ All auditing logs are returned in a JSON format, aggregated per account, API typ
 | :-----    | :--------------- | :-------------- | :--- |
 | from | The starting time (in epoch time) from which the data will be filtered.| numeric | required |
 | end| The end time (in epoch time) until which the data will be filtered. Max time range supported is one month | numeric | required |
-| agentId | If the data was accessed from LiveEngage's UI, this is the agentId of the user who did so. In case the data wa accessed using a historical data API, this is the AppKey used <br> Example: agentId=4153. To retrieve all user 4153 audit logs, use agentId=all for all. | numeric | required |
+| agentId | If the data was accessed from Conversational Cloud's UI, this is the agentId of the user who did so. In case the data wa accessed using a historical data API, this is the AppKey used <br> Example: agentId=4153. To retrieve all user 4153 audit logs, use agentId=all for all. | numeric | required |
 | api | History API type. Use msg_search for messaging transcripts expose, chat_search for chat transcripts expose  and chat_export for chat export requests<br> Example: api=msg_search<br> | string | optional |
 
 ### Response

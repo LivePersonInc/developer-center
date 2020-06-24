@@ -55,7 +55,7 @@ In our example below, we've added a rule that checks for a "success" result, and
 
 Use an Agent Transfer interaction in a dialog when you want to transfer a conversation from a bot to a live agent, or from a bot in one bot group to a bot in a *different* group.
 
-For some practice with this interaction type, complete the [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html).
+For some practice with this interaction type, complete the [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html).
 
 {: .important}
 There are two ways to implement a transfer: You can add an Agent Transfer interaction, *as discussed here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Agent Transfer interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.
@@ -75,9 +75,9 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
 4. Select the **Advanced** tab, and specify the following:
 
-    * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in LiveEngage. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
+    * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 
-        When the transfer is attempted, the Agent Skill Id is evaluated first; if it isn't numeric, the fallback message is sent to the user. If the value is numeric, but the bot doesn't respond for more than 3 minutes, an attempt is made to transfer to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-an-agent-connector)*. Otherwise, the transfer fails. For information on handling failures, see below.
+        When the transfer is attempted, the Agent Skill Id is evaluated first; if it isn't numeric, the fallback message is sent to the user. If the value is numeric, but the bot doesn't respond for more than 3 minutes, an attempt is made to transfer to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#add-an-agent-connector)*. Otherwise, the transfer fails. For information on handling failures, see below.
 
     * **Transfer Bot Context**: Used for [manual, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) only. Select this to *automatically* pass the user's intent and/or message from the sender bot to the receiver bot. This lets the receiver bot know the appropriate dialog to start after the transfer.
 
@@ -113,10 +113,10 @@ File Upload interactions are available for Web Messaging, Apple Business Chat, a
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
-When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in LiveEngage, see [here](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html).)
+When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in Conversational Cloud, see [here](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html).)
 
 {: .important}
-Some setup of your LiveEngage environment is required before using this feature. Please contact your LivePerson account representative to enable this feature.
+Some setup of your Conversational Cloud environment is required before using this feature. Please contact your LivePerson account representative to enable this feature.
 
 **To add a File Upload interaction**
 
@@ -138,7 +138,7 @@ Some setup of your LiveEngage environment is required before using this feature.
     
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
 
-    The File integration handles upload of the file from LiveEngage to your brand's external file share. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
+    The File integration handles upload of the file from Conversational Cloud to your brand's external file share. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
 
 5. Finish configuring the interactions and overall dialog as per your requirements. For information on potential customization points, see the customization section farther below.
 

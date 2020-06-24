@@ -23,7 +23,7 @@ See the general message flow below:
 
 2. Payment transactions will be performed by your payment gateway.
 
-3. Upon successful or failed payment, LiveEngage will support passing the payment details back to LiveEngage Conversational Metadata (via the [Agent SDK](messaging-agent-sdk-conversation-metadata-guide.html)) in order to allow you to perform validation on the payment information against the Apple Pay account
+3. Upon successful or failed payment, Conversational Cloud will support passing the payment details back to Conversational Cloud Conversational Metadata (via the [Agent SDK](messaging-agent-sdk-conversation-metadata-guide.html)) in order to allow you to perform validation on the payment information against the Apple Pay account
 
 ### Setup
 
@@ -42,13 +42,13 @@ You will send a metadata template and a body template for the Apple Pay request 
 
 See [how to send Structured Content](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for more information on how to send these.
 
-The **body** template will only define how the Apple Pay bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
+The **body** template will only define how the Apple Pay bubble is displayed in the Conversational Cloud agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
-*Agent/bot generates Apple Pay Interactive Message to consumer (using structured content on LiveEngage)*
+*Agent/bot generates Apple Pay Interactive Message to consumer (using structured content on Conversational Cloud)*
 
 <img style="width:250px" src="img/apple_pay_consumer1.png"> <img style="width:250px" src="img/apple_pay_consumer2.png">
 
-*In the interim, consumer completes payment process and receives the reply message bubble with the payment status. Agent views Apple Pay Request in LiveEngage Agent Workspace*
+*In the interim, consumer completes payment process and receives the reply message bubble with the payment status. Agent views Apple Pay Request in Conversational Cloud Agent Workspace*
 
 <img class="fancyimage" style="width:500px" src="img/apple_pay_agentworkspace2.png">
 
@@ -283,7 +283,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
   <tbody>
   <tr>
     <td>requestIdentifier </td>
-    <td>A UUID for the request. Business Chat includes the identifier in its response to LiveEngage - this is an important property which allows you to correlate the payment response with your backend payment service  </td>
+    <td>A UUID for the request. Business Chat includes the identifier in its response to Conversational Cloud - this is an important property which allows you to correlate the payment response with your backend payment service  </td>
     <td>string</td>
     <td>Y</td>
   </tr>
@@ -335,7 +335,7 @@ This object defines how the Apple Pay template is displayed on the consumer devi
 
 #### Request Body
 
-The request body is standard structured content. The template is sent to LiveEngage and defines how the Apple Pay bubble looks in the LiveEngage Agent Workspace and not how the bubble looks on the consumer device (which is determined by the objects described above). This request body template is useful for conversational context, transcript and historical records, as well as ease of use for agents.
+The request body is standard structured content. The template is sent to Conversational Cloud and defines how the Apple Pay bubble looks in the Conversational Cloud Agent Workspace and not how the bubble looks on the consumer device (which is determined by the objects described above). This request body template is useful for conversational context, transcript and historical records, as well as ease of use for agents.
 
 See the [introduction to templates](structured-content-introduction-to-structured-content.html#templates) for information on a basic template that you can send.
 
@@ -381,7 +381,7 @@ If you would like to opt in for this additional verification, internal account c
 
 ### Receiving an Apple Pay Response from a Consumer
 
-After the consumer submits their Apple Pay details in the form, the Apple Pay response is delivered back to LiveEngage.
+After the consumer submits their Apple Pay details in the form, the Apple Pay response is delivered back to Conversational Cloud.
 
 If you are looking to receive the payment response using a **bot**, you can listen for the payment response via [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html). Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html). Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Pay response structure.
 
@@ -460,8 +460,8 @@ Apple Pay response metadata is contextual information about the consumer payment
 
   * Reply bubble experience - the image in the reply bubble will be displayed, with the same image that was set in the received bubble. The size of the bubble will stay "large" as set in the received bubble in the SC request.
 
-<div class="important"> The URL passed in `ImageURL` of the received bubble must be whitelisted in LiveEngage. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
+<div class="important"> The URL passed in `ImageURL` of the received bubble must be whitelisted in Conversational Cloud. The image added in the RecievedMessage must be whitelisted in the structured content image whitelisting area. Contact your LP representative to whitelist images.</div>
 
 ### Limitations
 
-* In the current version of the Apple Pay template, only a bot in LiveEngage (using the Messaging Agent SDK) will be able to receive the payment response (using the Conversation Metadata). A Human Agent is currently not exposed to these events. There will be an option to receive payment response data without the Messaging Agent SDK in the near future.
+* In the current version of the Apple Pay template, only a bot in Conversational Cloud (using the Messaging Agent SDK) will be able to receive the payment response (using the Conversation Metadata). A Human Agent is currently not exposed to these events. There will be an option to receive payment response data without the Messaging Agent SDK in the near future.

@@ -10,7 +10,7 @@ redirect_from:
   - function-as-a-service-external-invocations-authorization-code.html
 ---
 
-This section describes how to call functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Authorization Code](https://oauth.net/2/grant-types/authorization-code/)). Use this grant type if you want to call LivePerson Functions on behalf of a LiveEngage user such as an Agent or Administrator.
+This section describes how to call functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Authorization Code](https://oauth.net/2/grant-types/authorization-code/)). Use this grant type if you want to call LivePerson Functions on behalf of a Conversational Cloud user such as an Agent or Administrator.
 
 **Note**: This grant type is redirection based. Only use this if a real user like an Agent is involved.
 
@@ -20,7 +20,7 @@ This section describes how to call functions from outside of LivePerson's platfo
 
 ### Step 2: Create User
 
-Create a LiveEngage user with the [FaaS-Invocation permission](function-as-a-service-getting-started.html#before-getting-started). This user will be used by the external invoker to authenticate while calling Functions.
+Create a Conversational Cloud user with the [FaaS-Invocation permission](function-as-a-service-getting-started.html#before-getting-started). This user will be used by the external invoker to authenticate while calling Functions.
 
 * Click on USERS and then Profiles.
 
@@ -105,7 +105,7 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
   9. Click on **Request Token** to send the request and retrieve your token.
 
-  10. Now the OAuth 2.0 flow is triggered and you will first be forwarded to the LiveEngage login page. There you need to provide the credentials of the user that will be used for invocation, which you created earlier.
+  10. Now the OAuth 2.0 flow is triggered and you will first be forwarded to the Conversational Cloud login page. There you need to provide the credentials of the user that will be used for invocation, which you created earlier.
 
   11. On the following screen you can see your generated **Access Token**. You'll use this token to perform the invocation. The access-token will be sent with every Functions invocation.
 

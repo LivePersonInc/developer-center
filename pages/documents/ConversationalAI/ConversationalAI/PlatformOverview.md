@@ -29,7 +29,7 @@ LivePerson's Conversational AI is a suite of integrated apps that work together 
 
 - [Bot Accounts](bot-accounts-permissions-per-role.html) is the administration area for managing permissions of Conversation Builder users.
 
-- [Maven](maven-overview.html) is the Artificial Intelligence engine that runs across the entire Conversational AI suite.
+- [Conversation Orchestrator](maven-overview.html) is the Artificial Intelligence engine that runs across the entire Conversational AI suite.
 
 - [Third-Party Bots](third-party-bots-getting-started.html) explains how to connect external bot builders and frameworks to LivePerson.
 

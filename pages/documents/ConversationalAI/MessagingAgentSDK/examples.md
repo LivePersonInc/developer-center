@@ -10,9 +10,9 @@ indicator: messaging
 
 Here are a few sample bots which demonstrate some of the use cases that can be achieved with the SDK. Before getting started with any of these examples, you must check that you have the following prerequisites:
 
-1. You must have a LiveEngage account.
+1. You must have a Conversational Cloud account.
 
-2. You must be able to configure an agent in your LiveEngage account.
+2. You must be able to configure an agent in your Conversational Cloud account.
 
 3. You must have the latest version of node.js installed on your machine. Here's a guide on how to do so: [Mac](http://blog.teamtreehouse.com/install-node-js-npm-mac) / [Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows).
 

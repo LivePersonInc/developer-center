@@ -13,7 +13,7 @@ indicator: messaging
 
 
 ### File Sharing from Agent to Consumer:
-Mobile Messaging SDK v3.9 introduces a feature for agents within LiveEngage to share photos or files with the consumers.
+Mobile Messaging SDK v3.9 introduces a feature for agents within Conversational Cloud to share photos or files with the consumers.
 
 Agents can share:
 

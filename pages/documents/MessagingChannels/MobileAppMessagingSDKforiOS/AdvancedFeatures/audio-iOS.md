@@ -20,7 +20,7 @@ Audio Messaging allows consumers to send audio messages to agents.
 
    * **Key:** `NSMicrophoneUsageDescription`
 
-   * **Value:** "Microphone Privacy Setting for LiveEngage Mobile App Messaging SDK for iOS"   
+   * **Value:** "Microphone Privacy Setting for Conversational Cloud Mobile App Messaging SDK for iOS"   
 
    When the system prompts the user to approve access to the microphone, it displays as part of the alert.
 

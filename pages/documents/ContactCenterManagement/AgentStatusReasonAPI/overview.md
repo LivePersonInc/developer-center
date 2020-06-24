@@ -15,9 +15,9 @@ indicator: both
 
 ### Overview
 
-This document describes and details LiveEngage's Agent Status Reason backend logic. It includes a description of the capabilities and methods of the Agent Status Reason API as well as a description of the standard "Agent Status object" which LiveEngage's backend uses to describe agent status. This object includes the Status Reason and is the object these methods will be querying and manipulating.
+This document describes and details Conversational Cloud's Agent Status Reason backend logic. It includes a description of the capabilities and methods of the Agent Status Reason API as well as a description of the standard "Agent Status object" which Conversational Cloud's backend uses to describe agent status. This object includes the Status Reason and is the object these methods will be querying and manipulating.
 
-The intended purpose of the Agent Status Reason API is to allow the addition of additional away statuses and reasons. Using it, you could add to the pre-configured status reasons that come with LiveEngage, creating your own, querying the status reasons of your agents in bulk and more.
+The intended purpose of the Agent Status Reason API is to allow the addition of additional away statuses and reasons. Using it, you could add to the pre-configured status reasons that come with Conversational Cloud, creating your own, querying the status reasons of your agents in bulk and more.
 
 ### Getting Started
 
@@ -31,7 +31,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using _either_ a login or an API key methodology.
 
-    * **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
+    * **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
     * [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
 

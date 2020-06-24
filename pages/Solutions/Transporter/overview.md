@@ -7,7 +7,7 @@ permalink: transporter-overview.html
 indicator: Both
 ---
 
-The Transporter 2.0 enable brands and internal users alike to schedule raw and formatted data report exports from LiveEngage Data APIs - each report can be setup on a recurring frequency, including but not limited to weekly, daily, and hourly, and the report will be delivered to a destination of the users choice, including internal LiveEngage storage, Amazon S3, Google Cloud, or SFTP.
+The Transporter 2.0 enable brands and internal users alike to schedule raw and formatted data report exports from Conversational Cloud Data APIs - each report can be setup on a recurring frequency, including but not limited to weekly, daily, and hourly, and the report will be delivered to a destination of the users choice, including internal Conversational Cloud storage, Amazon S3, Google Cloud, or SFTP.
 
 ### Why Should I Use the Transporter?
 
@@ -59,6 +59,6 @@ Transporter 2.0 solves this problem by providing the connection to the Data APIs
 
 **Secure**:
 
-* Log-in with your LiveEngage credentials
+* Log-in with your Conversational Cloud credentials
 
 * Mandatory two-factor authentication

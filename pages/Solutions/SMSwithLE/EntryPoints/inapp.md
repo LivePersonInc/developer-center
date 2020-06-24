@@ -2,11 +2,12 @@
 pagename: SMS via Mobile App Messaging
 redirect_from:
   - products-channels-sms-inapp.html
+  - sms-with-liveengage-sms-via-mobile-app-messaging.html
 sitesection: Solutions
 
-documentname: SMS with LiveEngage
+documentname: SMS with Conversational Cloud
 
-permalink: sms-with-liveengage-sms-via-mobile-app-messaging.html
+permalink: sms-with-conversational-cloud-sms-via-mobile-app-messaging.html
 order: 40
 indicator:
 ---
@@ -34,7 +35,7 @@ When a consumer visits a brand’s app, they will see the option to message with
 
 ### Prerequisites for using the solution
 
-* Messaging enabled on the LiveEngage account
+* Messaging enabled on the Conversational Cloud account
 
 * A live and functioning app
 

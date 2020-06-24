@@ -12,7 +12,7 @@ permalink: operational-realtime-api-sample-code.html
 indicator: chat
 ---
 
-This is a sample application written in Spring, Maven, Java, and HTML, that demonstrates how to call the LiveEngage Operational Real-Time API.
+This is a sample application written in Spring, Maven, Java, and HTML, that demonstrates how to call the Conversational Cloud Operational Real-Time API.
 
 OAuth is a server-to-server authentication method, but the example also includes a basic client to server implementation. This is attached in a zip file.
 

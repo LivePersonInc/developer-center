@@ -14,7 +14,7 @@ indicator: both
 ---
 ### Introduction
 
-The SDK is a lightweight, client-side code package for communicating with the LiveEngage Engagement Window. Using this SDK, brands can add their own custom widgets to the Engagement Window, making it possible to integrate external web applications as well as widening the scope of communication between their agents and customers.
+The SDK is a lightweight, client-side code package for communicating with the Conversational Cloud Engagement Window. Using this SDK, brands can add their own custom widgets to the Engagement Window, making it possible to integrate external web applications as well as widening the scope of communication between their agents and customers.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wV9ecP0n7d4" frameborder="0" allowfullscreen></iframe>
 
@@ -28,7 +28,7 @@ window SDK:
 2. After developing the webapp integration, contact the LivePerson Technical Solutions
 Team to configure the widget over the "LP Unified Window" taglet.
 
-In the near future, Widget configuration will be available directly via LiveEngage.
+In the near future, Widget configuration will be available directly via Conversational Cloud.
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/apitou).
 
@@ -48,7 +48,7 @@ Main capabilities of this SDK include:
 
 * Obtain/bind/unbind any data that can be found within the public model, end commands/notifications to the engagement window, such as a 'Widget Disposal’ command, which signals to the Engagement Window to immediately close the widget.
 
-* Allow external applications to communicate and integrate with LiveEngage.
+* Allow external applications to communicate and integrate with Conversational Cloud.
 
 * Send updates on parameters, as requested from the application (Notifications/Commands) to the Engagement window.
 

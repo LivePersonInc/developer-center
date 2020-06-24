@@ -23,7 +23,7 @@ Use a post-conversation survey bot to measure bot/agent and skill performance an
 <img style="width:400px" src="img/ConvoBuilder/surveyBot_example.png">
 
 {: .important}
-To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through LiveEngage. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.<br><br>
+To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through Conversational Cloud. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.<br><br>
 Survey bots are supported only in Messaging, not in Live Chat.
 
 ### Survey bots vs. custom bots
@@ -183,11 +183,11 @@ In order to trigger the survey, start a conversation on the account and skill on
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/surveyBot_triggerSurvey.png">
 
-While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey (if you've specified "Close Conversation" as the next step) or when the survey times out. In cases of an error with the survey flow or the survey bot, LiveEngage will close the survey after 48 hours as part of a conversation cleanup process.
+While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey (if you've specified "Close Conversation" as the next step) or when the survey times out. In cases of an error with the survey flow or the survey bot, Conversational Cloud will close the survey after 48 hours as part of a conversation cleanup process.
 
 ### The agent experience
 
-Once a conversation ends and a survey begins, the conversation no longer appears in the Open Connections list in LiveEngage. Instead, it appears in the All Connections list with a status that indicates the survey is in progress:
+Once a conversation ends and a survey begins, the conversation no longer appears in the Open Conversations list in Conversational Cloud. Instead, it appears in the All Conversations list with a status that indicates the survey is in progress:
 
 <img class="fancyimage" style="width:850px" src="img/ConvoBuilder/surveyBot_agent1.png">
 
@@ -204,7 +204,7 @@ In the **Conversations panel** of the **Manager Workspace**, managers can view t
 ### Reporting
 
 #### Report Builder
-Metrics from the FCR, CSAT, and NPS questions in surveys are captured in LiveEngage and exposed via the [Report Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html) application. You'll find this information in the predefined [Survey Dashboard for Messaging](https://knowledge.liveperson.com/data-reporting-messaging-messaging-dashboards-survey-dashboard-for-messaging.html), which you can use out-of-the-box or manipulate to create customized reports.
+Metrics from the FCR, CSAT, and NPS questions in surveys are captured in Conversational Cloud and exposed via the [Report Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html) application. You'll find this information in the predefined [Survey Dashboard for Messaging](https://knowledge.liveperson.com/data-reporting-messaging-messaging-dashboards-survey-dashboard-for-messaging.html), which you can use out-of-the-box or manipulate to create customized reports.
 
 #### Bot Analytics
 In the [Bot Analytics](https://developers.liveperson.com/bot-analytics-overview.html) application, you'll see survey bots reported in the same way as custom bots. There is no difference between the two.
@@ -221,7 +221,7 @@ Some brands are existing Bot Studio users who manage surveys in Bot Studio. Othe
 
 If you have Bot Status Access [permissions](bot-accounts-permissions.html), you can use the Bots Status application that's intended for monitoring agent connectors to monitor your survey bots. There are a few important distinctions to be aware of as you do so:
 
-* You can identify survey bots by examining the **User Name**. This is always "Survey Connector." (Normal bots display the agent name that's configured in LiveEngage.)
+* You can identify survey bots by examining the **User Name**. This is always "Survey Connector." (Normal bots display the agent name that's configured in Conversational Cloud.)
 * While each survey bot is listed individually in the dashboard, they all share a single agent connector.
 * Successfully deployed survey bots display "Deployed" beneath the bot name.
 

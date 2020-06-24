@@ -17,7 +17,7 @@ indicator:
 
 The following prerequisites are required:
 
-* An active LiveEngage account
+* An active Conversational Cloud account
 * Bot technology: whether you build it in-house or select a vendor
 * Defined use cases.  Bots can handle a vast array of tasks, however, for bots to be successful, they should be focused on small automated tasks.  Ensure that before you begin working on a bot, the business has identified the use cases that this bot should service.
 * Bot responses and answer tree (including structured content and visual design) configured within the selected technology. 

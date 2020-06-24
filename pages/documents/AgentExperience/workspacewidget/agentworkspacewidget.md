@@ -18,11 +18,11 @@ The integration allows you to transfer information directly from the Visit Info 
 
 In addition, external web page fields can be pre-populated with visitor information, for example, you can pass the Visitor’s name and email parameters from the pre-chat survey into the application to pre-populate specific fields.
 
-The agent workspace default view has five equally-sized widgets, to the right of the chat pane (see a sample in the screenshot below) - Visit Info, Predefined Content, Page Navigation, Agent Survey, and Engagement History. In the example, three of the default widgets are selected and display with the default width. Two more default widgets are unselected and at the end, we can see two custom widgets that have been added. Users can scroll right and left to see all five of the default widgets.
+The agent workspace default view has five equally-sized widgets, to the right of the chat pane (see a sample in the screenshot below) - Visit Info, Predefined Content, Page Navigation, Agent Survey, and Conversation History. In the example, three of the default widgets are selected and display with the default width. Two more default widgets are unselected and at the end, we can see two custom widgets that have been added. Users can scroll right and left to see all five of the default widgets.
 
 ![AgentWorkspaceScreenshot](img/agentworkspacewidget1.png)
 
-Let’s say that your agents use a knowledgebase or an external CRM such as SalesForce, while they are chatting. Up until now they have had to access it in a separate window. Now, you can add a widget that displays Salesforce right next to the existing widgets, allowing agents to quickly view and utilize the information they need at any given moment. You can configure parameters to be passed from LiveEngage to your external system.
+Let’s say that your agents use a knowledgebase or an external CRM such as SalesForce, while they are chatting. Up until now they have had to access it in a separate window. Now, you can add a widget that displays Salesforce right next to the existing widgets, allowing agents to quickly view and utilize the information they need at any given moment. You can configure parameters to be passed from Conversational Cloud to your external system.
 
 You can even define the width of the new widget; it can be the same width as each of the standard widgets or it can be the width of two, three or four widgets combined. You can add as many as five additional widgets to the agent workspace.
 
@@ -58,11 +58,11 @@ To ensure your Agents are focused on the tools most relevant for them, Admins ha
 
 	a. In the **Parameter** name field, enter the query string identifier you wish to bind the value to.
 
-	b. From the **Map to field**, select the LiveEngage parameter that you want to transfer.
+	b. From the **Map to field**, select the Conversational Cloud parameter that you want to transfer.
 
 	c. Click the + icon to add this parameter. You can keep adding parameters in this way.
 
-10. Click **Save parameters**. The complete URL, including visitor parameters will appear in the Complete URL field. This action maps which information will be transferred from LiveEngage to the external webpage.
+10. Click **Save parameters**. The complete URL, including visitor parameters will appear in the Complete URL field. This action maps which information will be transferred from Conversational Cloud to the external webpage.
 
 <img src="img/integration_widget.png" alt="IntegrationWidget">
 
