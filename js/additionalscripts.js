@@ -145,6 +145,7 @@ function navigateContent(url) {
           $(".suggestbutton").removeClass("suggesthidden");
         }
       }
+
       if (
         $title.indexOf("Let’s build a conversational future together!") != -1 ||
         $title.indexOf("First Steps") != -1
@@ -545,12 +546,12 @@ function sidebarClick() {
   });
 }
 
-function breadClick (event) {
-	event.preventDefault();
-	let breadText = $(this).innerHTML;
-	var breadSidebar = $('#defaultsidebar');
-	var targetLink = breadSidebar.find("span:contains('" + breadText + "')").trigger("click");
-	console.log(targetLink);
+function breadClick(event) {
+  event.preventDefault();
+  let breadText = $(this).innerHTML;
+  var breadSidebar = $('#defaultsidebar');
+  var targetLink = breadSidebar.find("span:contains('" + breadText + "')").trigger("click");
+  console.log(targetLink);
 }
 
 //a function to make sure the page's title is updated on load
