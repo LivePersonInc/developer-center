@@ -62,7 +62,7 @@ Connect to mobile channels and customize your Concierge Bot
       2. Extend your Concierge Bot
     </div>
     <div class="convo-cloud-paragraph">
-      LivePerson makes it possible to build custom bots that connect to all messaging channels and systems. Learn how it’s done with these resources:
+      LivePerson makes it possible to build custom bots that connect to all messaging channels and systems. Start out by customizing and extending your pre-built Concierge Bot:
     </div>
 </div>
 <div class="card-container" style="margin-top:24px;">
