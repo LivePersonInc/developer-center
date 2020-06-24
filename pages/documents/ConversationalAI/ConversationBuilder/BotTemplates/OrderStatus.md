@@ -56,7 +56,7 @@ Your app can access the last 60 days of orders for a store. You can request acce
 
 * Transfer
 
-    * As you would expect, this will perform a transfer to a LiveEngage skill.
+    * As you would expect, this will perform a transfer to a Conversational Cloud skill.
 
     * You will need to configure the skill name, id and transfer message in the Global Functions
 
@@ -76,9 +76,9 @@ Click **Global Functions** to access all the global functions and variables to b
 
 <img class="fancyimage" style="width:750px" src="/img/ConvoBuilder/template_orderstatus_1.png">
 
-#### LE Escalation Configuration
+#### Conversational Cloud escalation configuration
 
-To set up escalation to an agent in LiveEngage, change the following values:
+To set up escalation to an agent in Conversational Cloud, change the following values:
 
 <table>
  <thead>
