@@ -12,7 +12,7 @@ To solve this problem, you can offer a consistent greeting when the bot receives
 
 **To implement this solution**
 
-1. In the *first* interaction in the Fallback dialog, access the **[Pre-Process Code](conversation-builder-interactions-details-code.html)** section of the **Interaction Details**, and add the following code.
+1. In the *first* interaction in the Fallback dialog, access the **[Pre-Process Code](conversation-builder-interactions-configuration-custom-code.html)** section of the **Interaction Details**, and add the following code.
 
     ```javascript
     var transferAcknowledged = botContext.getBotVariable("transferAcknowledged");
@@ -25,7 +25,7 @@ To solve this problem, you can offer a consistent greeting when the bot receives
 
     This code checks for a `transferAcknowledged` bot variable. If the variable isn't found or isn't set to "yes," it redirects the conversation flow to whatever is your substitute for the "paybill_flow_start" interaction.
 
-2. Go to your substitute for the "paybill_flow_start" interaction, and, in the **[Pre-Process Code](conversation-builder-interactions-details-code.html)** section of the **Interaction Details**, add the following code:
+2. Go to your substitute for the "paybill_flow_start" interaction, and, in the **[Pre-Process Code](conversation-builder-interactions-configuration-custom-code.html)** section of the **Interaction Details**, add the following code:
 
     ```javascript
     botContext.setBotVariable('transferAcknowledged','yes',true,false);

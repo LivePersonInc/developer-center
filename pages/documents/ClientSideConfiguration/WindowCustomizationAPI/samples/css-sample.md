@@ -8,7 +8,7 @@ permalink: window-customization-api-samples-css-sample.html
 indicator: both
 ---
 
-The below is an example of a full CSS file making use of the CSS classes reserved for window customization. If you load it into a webpage with the LE-tag and start a conversation, you'll see the changes these CSS classes enact.
+The below is an example of a full CSS file making use of the CSS classes reserved for window customization. If you load it into a webpage with the Web Tag and start a conversation, you'll see the changes these CSS classes enact.
 
 ```css
 .lpc_desktop.lpc_body {

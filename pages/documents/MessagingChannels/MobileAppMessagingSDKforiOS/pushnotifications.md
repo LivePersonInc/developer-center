@@ -14,7 +14,7 @@ indicator: messaging
 
 Push and local notifications are a key factor that makes the experience better for consumers - they never have to stay in your app or keep the window open as they will get a proactive notification as soon as a reply or notice is available.
 
-For push notifications to work, you must have a physical device and two .pem files for LiveEngage. Here, you will set up push notifications in your Xcode project, create your app certificate and key files, and create the required .pem files to implement push notifications.  
+For push notifications to work, you must have a physical device and two .pem files for Conversational Cloud. Here, you will set up push notifications in your Xcode project, create your app certificate and key files, and create the required .pem files to implement push notifications.  
 
 ### Prerequisites
 
@@ -135,12 +135,12 @@ In this step, you create a Certificate Signing Request (CSR) file that contains 
     openssl rsa -in keyWithPassword.pem -out hostkey.pem
     ```
 
-### Step 5. Configure push notifications in LiveEngage
-In this step, you add the dev-cert.pem and hostkey.pem to LiveEngage. 
+### Step 5. Configure push notifications in Conversational Cloud
+In this step, you add the dev-cert.pem and hostkey.pem to Conversational Cloud. 
 
-1. Log into your [LiveEngage account](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
+1. Log into your [Conversational Cloud account](https://authentication.liveperson.net/login.html?lpservice=liveEngage&servicepath=a%2F~~accountid~~%2F%23%2C~~ssokey~~).
 
-2. In LiveEngage, click the **Campaigns** tab, and then **Data Sources**.
+2. In Conversational Cloud, click the **Campaign Builder** tab, and then **Data Sources**.
 
    ![Data Sources](img/androiddatasources.jpg)
 

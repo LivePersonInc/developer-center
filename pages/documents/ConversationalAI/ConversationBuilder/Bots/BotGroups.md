@@ -26,8 +26,8 @@ Note the following about the bots dashboard when bot groups exist:
 
 1. The bot group name. **Tip**: Double-click this bar to collapse/hide the bot list.
 2. The list of bots within the bot group. Click any bot name to open the bot in the Message Editor.
-3. The green dot and **Collaboration** indicator let you know that collaboration ([automatic transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group)) is enabled for the group.
-4. No indicator is displayed when collaboration is disabled for the group.
+3. The **Collaboration** icon lets you know that collaboration ([automatic transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group)) is enabled for the group.
+4. No icon is displayed when collaboration is disabled for the group.
 5. Click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> icon to access the group menu, which provides options for editing and deleting the group.
 
 ### Create a bot group only to group bots

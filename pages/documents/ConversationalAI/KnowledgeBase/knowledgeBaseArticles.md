@@ -68,6 +68,8 @@ For the names of the JSON nodes for the content links, see the JSON reference fa
 Next, still in Conversation Builder, build out the applicable dialog to make use of the additional content **(4)**, i.e., use the custom data fields as you require. (For help on displaying variables in interactions, see [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).)
 
 <img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3.png">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3b.png">
+<img class="fancyimage" style="width:550px" src="img/ConvoBuilder/kb_advSettings3c.png">
 
 #### Preview the conversation
 
@@ -79,15 +81,15 @@ Use Conversation Builder's Preview tool or the Knowledge Base's Chat tool to pre
 
 Continuing our example, we've added some JavaScript so that, if there's a content link that is returned by the integration call, it is displayed. And if there isn't one, the conversation ends after the article is sent.
 
-To accomplish this, in the interaction that displays the article, we've configured the next action to be "end interaction" (not shown below). Then, we've added some post-process code to that same interaction. The code (shown below) checks whether the content link (URL) exists, and, if it does, it changes the interaction's next action to be the following interaction.
+To accomplish this, in the Display Article interaction, we've configured the next action to be "End Interaction." Then, we've added some Post-Process code to that same interaction. The code (shown below) checks whether the content link (URL) exists, and, if it does, it changes the interaction's next action to be the following interaction.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_advSettings6.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_advSettings6.png">
 
 ### Train a knowledge base
 
 To train a knowledge base, select the knowledge base, enter an utterance, and review the results. If you don't get any results for a particular utterance, you can adjust the filters by tapping the advanced search icon.
 
-<img class="fancyimage" style="width:700px" src="img/hrfaqdemo.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test.png">
 
 By default, the Search Settings are set to **Intents** and **Fair Plus**. This means that the algorithm will first see if there are any matches using our NLU, with a threshold of Fair Plus. However, if it doesn’t find any, it will attempt a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." This means you should add some more training phrases to an article to improve your results.
 
@@ -99,9 +101,9 @@ To add more training phrases (or intent qualifiers), you can manually add them t
 
 <img class="fancyimage" style="width:700px" src="img/qualifiers.png">
 
-You can also use the Thumb Up and Down icons displayed in a search. Below is an example where the utterance returned some results. The preferred result was only a FAIR match. By tapping the **Thumbs Up** icon, you automatically add the current utterance to a Positive Learning set for this article. Tapping **Thumbs Down** does the opposite.
+You can also use the Thumb Up and Down icons displayed in a search. Below is an example where the utterance returned some results. The preferred result was only a FAIR PLUS match. By tapping the **Thumbs Up** icon, you automatically add the current utterance to a Positive Learning set for this article. Tapping **Thumbs Down** does the opposite.
 
-<img class="fancyimage" style="width:700px" src="img/thumbsup.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test_thumbsUp.png">
 
 If you were to rerun the search, the article would return with a higher score.
 
@@ -121,17 +123,18 @@ The Debugger tool is also *the* way to see the JSON that's returned by the searc
 
 **To test user input**
 
-1. Open the knowledge base, and click <img style="width:30px" src="img/ConvoBuilder/icon_kb_test.png"> in the lower-right corner.
+1. Open the knowledge base.
+2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Test User Input**.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_testUserInput1.png">
 
-2. Specify the following:
+3. Specify the following:
 
     * **Phrase**: Enter the phrase to search for.
     * **Search Modes**: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-overview.html#search-modes).
     * **Threshold**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledge-base-overview.html#thresholds).
 
-3. Click **test**.
+4. Click **test**.
 
     In the results, the JSON of the matched article is displayed. You can examine the "title" to see which article has been matched.
 
@@ -150,7 +153,7 @@ If you're just getting started with knowledge bases and want to try using this t
 
 1. If you haven't already done so, in Conversation Builder, create a bot that includes a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base you want to test.
 2. Return to the Knowledge Base application, and open the knowledge base.
-3. Click <img style="width:30px" src="img/ConvoBuilder/icon_kb_chat.png"> (Chat) in the lower-right corner.
+2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Chat**.
 4. In the Preview panel, select the bot to use.
 
    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_chat1.png">
@@ -161,16 +164,18 @@ If you're just getting started with knowledge bases and want to try using this t
 
 ### Find articles with a specific tag
 
-1. In the knowledge base, click <img style="width:30px" src="img/ConvoBuilder/icon_kb_tags.png"> (Tags) in the lower-right corner.
-2. In the Tags panel, select the tag to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple tags.
+1. Open the knowledge base.
+2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Tags**.
+3. In the Tags panel, select the tag to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple tags.
     
     The result list is updated to include only the articles with the selected tags.
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_findWithTag.png">
 
 ### Find articles assigned to a specific category
 
-1. In the knowledge base, click <img style="width:30px" src="img/ConvoBuilder/icon_kb_categories.png"> (Categories) in the lower-right corner.
-2. In the Categories panel, select the category to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple categories.
+1. Open the knowledge base.
+2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Categories**.
+3. In the Categories panel, select the category to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple categories.
     
     The result list is updated to include only the articles assigned to the selected categories.
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_findInCategory.png">
@@ -198,6 +203,17 @@ To increase the quality of your content matches, follow the best practices below
 {: .important}
 For more best practices when training and tuning NLU, see [here](conversation-builder-best-practices-train-tune-nlu.html).
 
+#### Number of articles
+
+There isn’t a limit on the number of articles that a knowledge base can have, but the following are best practices:
+
+- A good guideline is 75-100 articles in a knowledge base. Keep in mind that every article requires some level of training if you’re going to use NLU (and not the text-to-text search mode).
+
+- If you have a knowledge base that exceeds 75-100 articles, consider splitting the knowledge base into smaller ones based on category, likewise splitting the intents into domains based on category, and adding multiple knowledge base integrations. Then have the NLU match the consumer’s question to the category-based intent and search the applicable knowledge base. This yields a faster response during the conversation.
+
+    If you have a knowledge base that exceeds 75-100 articles, also consider using domain intents, and, for the domain, use LivePerson NLU v2, which has better performance with large sets of data.
+
+
 #### Titles, intent qualifiers, and training phrases
 
 * Use full sentences, e.g., “How do I reset my password?”
@@ -207,3 +223,18 @@ For more best practices when training and tuning NLU, see [here](conversation-bu
 * When adding intent qualifiers or training phrases, add 10 - 15 per article. Exceeding this likely means that you have overtrained, which might lead to false positives.
 
 * The intent qualifiers or training phrases should be relatively generic. If they are too specific, the likelihood they will match a consumer’s utterance will be slim. Since consumers can phrase their questions in many ways, make sure your intents are broad to allow the NLU a chance to match as many possible versions of the sentence as possible.
+
+{: .important}
+If you're using [domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) (not knowledge base intents), the same guidelines apply.
+
+#### Summary and details
+
+Technically, there aren’t any limits here, but keep these as brief as possible. Very long pieces of text will be split into multiple messages (after 320 characters) when sent to the consumer, and in rare cases the messages can be sent in the wrong order.
+
+If you need to use a long piece of text, you can use the [breakWithDelay](conversation-builder-interactions-interaction-basics.html#break-point-within-a-large-block-of-text) tag to force the break at a specific point. Alternatively, you can override the behavior to break the text using the [setAllowMaxTextResponse](conversation-builder-scripting-functions-manage-conversation-flow.html#set-allow-max-text-response) scripting function.
+
+#### Positive and negative learnings
+
+Positive and negative learnings play a role in intent detection regardless of whether you're using knowledge base intents or domain intents. When using NLU v1, both are applied during prediction of user inputs. When using LP NLU v2 or a 3rd-party NLU engine, the positive learnings are applied (added) to the training phrases when the model is trained, and the negative learnings are applied during prediction of user inputs.
+
+As a general rule, don’t specify more than 20 positive learnings and 20 negative learnings. Too many positive and negative learnings can lead to learnings that “overlap” one another in terms of grammar. This results in an unpredictable user experience.

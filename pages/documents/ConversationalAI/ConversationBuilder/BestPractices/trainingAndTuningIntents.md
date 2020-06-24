@@ -36,7 +36,7 @@ There are a number of reasons why your intent or knowledge base might be failing
 
 Training your intents or knowledge base is generally done by testing utterances, reviewing the results, and adding more training phrases as needed if the responses are returning with lower than desired scores.
 
-* [Training intents](intent-builder-intents.html#training-intents)
+* [Training intents](intent-builder-domains.html#test-a-domain)
 * [Training a knowledge base](knowledge-base-articles.html#train-a-knowledge-base)
 
 ### Use entities

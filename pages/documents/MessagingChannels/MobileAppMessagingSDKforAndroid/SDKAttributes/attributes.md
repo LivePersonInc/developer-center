@@ -711,6 +711,30 @@ Sets the conversation background image (applicable on Activity mode only).
 
 **Type:** drawable
 
+
+#### lp_caption_preview_fragment_background_color
+Define the background color of caption preview screen when sending a file.
+
+<div style="float: left; width: 50%;height: 400px;">
+   <ul>
+      <li><b>Type:</b> color</li>
+      <li><b>Default value:</b> #ffffff</li>
+      <li><b>Default value(Dark theme):</b> #000000</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/captionpreviewbackgroundcolor.png" alt="captionpreviewbackgroundcolor">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+
 #### bubble_system_resolved_text_size
 Conversation resolved message text size.
 
@@ -974,6 +998,12 @@ Define date-time format.
 * **Type:** string
 * **Default value:** No value
 
+
+#### message_status_numeric_timestamp_only
+When false (default), time stamps displays information relative to when sent/distributed/read, for example, '5 minutes ago'. When true, shows as numeric only, for example, '11:32.'
+
+* **Type:** bool
+* **Default value:** false
 
 
 #### sendingMessageTimeoutInMinutes
@@ -3386,7 +3416,7 @@ Color code for the agent default icon in the avatar next to the bubble.
 
 
 #### lp_messaging_ui_ic_agent_avatar
-Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on LiveEngage and on agent avatar appearing on the action bar.
+Default agent avatar appearing next to an agent’s bubble when no avatar URL is assigned on Conversational Cloud and on agent avatar appearing on the action bar.
 
 If you want to define the background color for this avatar, override [agent_avatar_background_color](#agent_avatar_background_color) resource ID.
 

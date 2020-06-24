@@ -16,7 +16,7 @@ indicator: both
 ---
 ### Introduction
 
-Users within LiveEngage can be agents, agent managers, administrators or campaign managers.  For brands with large number of agents, the user list may need to be updated on a regular basis.  The user entity includes name, picture URL, password, skill and other important user information.
+Users within Conversational Cloud can be agents, agent managers, administrators or campaign managers.  For brands with large number of agents, the user list may need to be updated on a regular basis.  The user entity includes name, picture URL, password, skill and other important user information.
 
 **Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
 
@@ -38,7 +38,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using _either_ a login or an API key methodology.
 
-	* **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
+	* **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
 	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
 
@@ -55,4 +55,4 @@ A few things you'll need to get started with this API:
 
 * Automatically add new agent users to the system
 
-* Synchronize  any HR or staffing system users to LiveEngage
+* Synchronize  any HR or staffing system users to Conversational Cloud

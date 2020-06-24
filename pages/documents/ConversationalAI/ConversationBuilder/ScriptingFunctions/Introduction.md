@@ -14,7 +14,11 @@ indicator: both
 
 Functions are modules of code that are used for accomplishing a certain task programatically. 
 
-With few exceptions, functions can be used in the [Pre-Process / Post-Process Code](conversation-builder-conversation-builder-interaction-details.html#code) or the [Process User Response](conversation-builder-conversation-builder-interaction-details.html#process-user-response) JavaScript code panels.
+With few exceptions, functions can be used in the following JavaScript [code panels](conversation-builder-interactions-configuration-custom-code.html) in interactions:
+
+* Pre-Process Code
+* Process User Response
+* Post-Process Code
 
 **Note**
 

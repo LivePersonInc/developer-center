@@ -15,11 +15,11 @@ indicator: messaging
 
 Web Messaging and the Mobile SDK channels now allow for Quick Replies.
 
-LiveEngage enables creating and displaying up to 24 Quick Replies per template (that is, a consumer will have up to 24 replies to choose from per template they receive).
+Conversational Cloud enables creating and displaying up to 24 Quick Replies per template (that is, a consumer will have up to 24 replies to choose from per template they receive).
 
 Each reply can have:
 
-* **Title:** up to 25 characters (above 25, LiveEngage's default client like the Mobile App SDK will insert an ellipsis after 22 and obscure the rest of the text. If you're building your own client, you can handle this as you'd like, defining your own character limit)
+* **Title:** up to 25 characters (above 25, Conversational Cloud's default client like the Mobile App SDK will insert an ellipsis after 22 and obscure the rest of the text. If you're building your own client, you can handle this as you'd like, defining your own character limit)
 
 * **Click operation:** with actions and metadata
 

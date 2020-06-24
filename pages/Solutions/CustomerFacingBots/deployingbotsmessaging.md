@@ -14,11 +14,11 @@ permalink: customer-facing-bots-deploying-bots-on-messaging.html
 indicator:
 ---
 
-### Step 1 - Set Up Your LiveEngage Configuration
+### Step 1 - Set Up Your Conversational Cloud Configuration
 
-1. Ensure your LiveEngage account is provisioned for messaging. (A quick way to know if you have messaging enabled is if you see the 'all connections’ list displayed on your workspace).
+1. Ensure your Conversational Cloud account is provisioned for messaging. (A quick way to know if you have messaging enabled is if you see the 'All Conversations’ list displayed on your workspace).
 
-2. Create a user for your bot. Go to the users tab in LiveEngage and create a new user.  Populate the form with the bot information including the name that will display to customers as well as the icon. Some best practices:
+2. Create a user for your bot. Go to the users tab in Conversational Cloud and create a new user.  Populate the form with the bot information including the name that will display to customers as well as the icon. Some best practices:
 
 	* Bot should be assigned to a designated bot skill.  This is critical in order to create dedicated segments to services as well as for the reporting on the performance of your bot.
 
@@ -34,7 +34,7 @@ Based on the use cases identified for your bot, you can create a simple bot for 
 
 #### Creating a simple bot
 
-A simple bot within LiveEngage is one that handles a simple task and does not have any backend integrations.
+A simple bot within Conversational Cloud is one that handles a simple task and does not have any backend integrations.
 
 The following example and sample code demonstrate an 'automatic messages’ bot which subscribes to all incoming conversations and sends them a welcome message.
 
@@ -75,7 +75,7 @@ You can also watch the demo video which will guide you through this example bot:
 
 ### Step 4 - Assign your bot to engagements and manage bot escalations
 
-With LiveEngage your can decide which messaging entry points will be assigned to the different bot skills in your contact center. This means you can decide to have a bot skill dedicated only to your Facebook messaging conversations, and an additional bot skill dedicated only to your Mobile App Messaging conversations.
+With Conversational Cloud your bot can decide which messaging entry points will be assigned to the different bot skills in your contact center. This means you can decide to have a bot skill dedicated only to your Facebook messaging conversations, and an additional bot skill dedicated only to your Mobile App Messaging conversations.
 
 Furthermore, you can decide within each entrypoint on different routing rules, for example you can route messages from your Facebook service page to your service bot skill, and messages from your Facebook store page to your sales bot (or decide on a mix routing between the human skill and the bot skill).
 
@@ -85,7 +85,7 @@ To manage bot escalations, you can teach your bot to escalate to a human skill o
 
 ### Step 5 - Test your bot
 
-Once your bot is assigned to an engagement, you can begin to test the bot and see how it behaves as an agent within LiveEngage.  Conduct the following tests:
+Once your bot is assigned to an engagement, you can begin to test the bot and see how it behaves as an agent within Conversational Cloud.  Conduct the following tests:
 
 * Start a conversation and ensure the bot picks up the appropriate skill
 * Ensure you are able to see the bot conversation from the agent workspace and monitor it in real time
@@ -95,7 +95,7 @@ Once your bot is assigned to an engagement, you can begin to test the bot and se
 
 ### Step 6 - Monitor the performance of your bot
 
-The LivePerson report builder will have detailed data and analysis on the performance of your bot.
+The LivePerson Analytics Builder will have detailed data and analysis on the performance of your bot.
 
 Best practice - monitor the following statistics on your bot agents:
 

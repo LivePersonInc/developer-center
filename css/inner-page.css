@@ -41,13 +41,19 @@ h4[id],
 h5[id],
 h6[id],
 dt[id] {
+
   margin-top: 40px;
   margin-bottom: 4px;
   padding-top: 0;
 }
 
+h1[id] {
+  color: var(--navy);
+}
+
 h2[id] {
   color: var(--navy);
+  font-weight: bold;
   font-family: "Roboto", Arial;
   font-size: 1.0666em;
   margin-bottom: 0;

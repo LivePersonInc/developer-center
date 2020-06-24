@@ -25,7 +25,7 @@ An integration can be one of the following types:
 - **Email**: Use an Email integration when you want Conversation Builder to send an email as the result of a bot's dialog flow. For example, if the consumer completes a survey, you might want to send a thank you email to the consumer or send the survey results to a moderator or administrator for collection. See [here](conversation-builder-integrations-email-integrations.html) for more.
 - **Knowledge Base**: Use this type to search a knowledge base for articles. One use case for this type of integration is within a [fallback dialog](conversation-builder-dialogs-fallback-dialogs.html) to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or escalate the conversation to a human agent. See [here](conversation-builder-integrations-knowledge-base-integrations.html) for more.
 - **LivePerson Agent Escalation**: This type of integration transfers the conversation to a human agent or another bot. See [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) for more.
-- **File**: Use a File integration to take a file that was uploaded by the consumer to LiveEngage via a [File Upload interaction](conversation-builder-interactions-integrations.html#file-upload-interactions) and upload it to your external file share or system. See [here](conversation-builder-integrations-file-integrations.html) for more.
+- **File**: Use a File integration to take a file that was uploaded by the consumer to Conversational Cloud via a [File Upload interaction](conversation-builder-interactions-integrations.html#file-upload-interactions) and upload it to your external file share or system. See [here](conversation-builder-integrations-file-integrations.html) for more.
 - **LivePerson Functions (FaaS)**: Use a LivePerson Functions integration to invoke a function (`lambda`) that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service or FaaS) platform. There are no constraints here; if there is some custom logic (a function) you want to invoke with a bot, you can do it with this integration. See [here](conversation-builder-integrations-liveperson-functions-integrations.html) for more.
 
 ### Check the API response status
@@ -60,9 +60,7 @@ if (statusCode === 204 || statusCode === 201) {
 }
 ```
 
-Typically, this block of code is placed in the POST PROCESS section attached to calling an API integration within a dialog.
-
-<img class="fancyimage" width="700" src="img/ConvoBuilder/bestPractices/tips_image_41.png">
+Typically, this block of code is placed in the *Post-Process Code* section attached to calling an API integration within a dialog.
 
 ### Process API results with custom data fields
 
@@ -126,7 +124,9 @@ You can invoke non-LivePerson APIs from Conversation Builder. With JavaScript co
 
 The following screen from the API integration setup shows that you must remember to use the "Response Data Variable Name" with the “api_” prefix when it comes to **_Transform Result Script_** (the place where you manipulate the API response as you want).
 
-<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration-setup.png">
+<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup1.png">
+
+<img class="fancyimage" width="550" src="img/ConvoBuilder/bestPractices/tips_integration_setup2.png">
 
 1. Get the raw API response and save it in a variable:
 
@@ -220,7 +220,7 @@ botContext.setBotVariable("email", email, true, false);
 botContext.printDebugMessage("*** checking values were set: " + guid + age + email);
 ```
 
-<img class="fancyimage" width="300" src="img/ConvoBuilder/bestPractices/tips_image_40.png">
+<img class="fancyimage" width="600" src="img/ConvoBuilder/bestPractices/tips_image_40.png">
 
 ### Delete an integration
 If the bot is no longer using a particular integration, you might want to delete the integration. Before doing so, make sure there are no integration interactions that reference the specific integration.
@@ -229,6 +229,6 @@ Deleting an integration affects only the bot for which it was added.
 
 **To delete an integration**
 
-1. In the bot, click **Integrations**.
+1. Open the bot, and click **Integrations** in the upper-left corner.
 2. In the left panel, move your mouse over the integration name, and click the <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis.png"> icon that appears.
 3. Click **Delete Integration**, and then click **Yes** in the confirmation dialog.

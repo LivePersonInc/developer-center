@@ -20,7 +20,7 @@ indicator: chat
 
 ![Flow](/img/Flow.png)
 
-Data access is not a default function of LiveEngage; it must be configured separately for each account.
+Data access is not a default function of Conversational Cloud; it must be configured separately for each account.
 The four types of data supported and configurable in each account are as follows:
 
 - Agent Activity

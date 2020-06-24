@@ -120,7 +120,7 @@ This section contains API details that are common to every API’s resource and 
 | 10004      | Agent Groups administration   | Create, edit, restructure or delete Agent Groups.          |
 | 10006      | API key administration    | For brands who have enabled the API key management feature, this permission allows the Campaign Manager to view API keys used by the brand.|
 | 10007      | Night Vision (advanced configuration) | Make advanced configurations within Night Vision.     |
-| 10008      | Lines of Business administration   | For brands who have enabled the Lines of Business feature, this permission allows Administrators to create, edit and delete individual Lines of Business within their LiveEngage account.|
+| 10008      | Lines of Business administration   | For brands who have enabled the Lines of Business feature, this permission allows Administrators to create, edit and delete individual Lines of Business within their Conversational Cloud account.|
 | 10009      | View account billing details   | Access to billing details and online invoices.   |
 | 10010      | View support cases in theConnection Area   | View open and closed support cases from the Connection Area.     |
 | 10011      | Create support cases from theConnection Area | For brands who have enabled Support cases creation feature, this permission allows to create support cases from the Connection Area.       |
@@ -153,7 +153,7 @@ This section contains API details that are common to every API’s resource and 
 | 20010      | View support cases in theConnection Area     | View open and closed support cases from the Connection Area.     |
 | 20011      | Create support cases from theConnection Area     | For brands who have enabled Support cases creation feature, this permission allows to create support cases from the Connection Area.       |
 | 20012      | Contact LivePersonsupport within the Connection Area  | Chat with the LivePerson support team.                           |
-| 20013      | Handle messaging conversations and access All Connections List | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations and view all resolved conversations handled by agents               |
+| 20013      | Handle messaging conversations and access All Conversations List | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations and view all resolved conversations handled by agents               |
 | 20014      | View Connection Area Content      | View relevant content from the Connection Area per journey.      |
 | 20015      | Handle messaging conversations  | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations                       |
 | 20017      | Set manual SLA  | Allows agents to manually configure the response time in a conversation.                    |
@@ -168,12 +168,12 @@ This section contains API details that are common to every API’s resource and 
 | 30006      | Edit Agent Manager profile                                     | Create, edit or delete Agent Manager role profiles               |
 | 30007      | Agent Groups administration                                    | Create, edit, restructure or delete their Agent Groups or Sub-groups  |
 | 30008      | Export users    | Export the list of Agent or Agent Manager users in their groups or sub-groups; this will also export the list of skills, profiles and the groups and sub-groups managed by the Agent Managers |
-| 30009      | View Engagement History                                        | View all engagements handled by Agents within their Group(s) or Sub-group(s)                |
+| 30009      | View Conversation History                                        | View all engagements handled by Agents within their Group(s) or Sub-group(s)                |
 | 30010      | View Agent List | View full list of Agents within their Group                      |
 | 30011      | Night Vision (advanced configuration)                          | Make advanced configurations within Night Vision                 |
-| 30012      | View secure form responses in Engagement History               | For brands who have enabled the secure forms feature, this permission allows the Agent Manager to view all secure form responses in the Engagement History                               |
+| 30012      | View secure form responses in Conversation History               | For brands who have enabled the secure forms feature, this permission allows the Agent Manager to view all secure form responses in the Conversation History                               |
 | 30013      | Edit Skills     | Create, edit or delete Skills                                    |
-| 30015      | View All Connections List                                      | For brands who have enabled the Messaging feature, this permission allows viewing of all resolved conversations handled by Agents          |
+| 30015      | View All Conversations List                                      | For brands who have enabled the Messaging feature, this permission allows viewing of all resolved conversations handled by Agents          |
 | 30018      | View support cases in theConnection Area                       | View open and closed support cases from the Connection Area.     |
 | 30019      | Create support cases from theConnection Area                   | For brands who have enabled Support cases creation feature, this permission allows to create support cases from the Connection Area.       |
 | 30020      | Contact LivePersonsupport within the Connection Area           | Chat with the LivePerson support team.                           |
@@ -190,8 +190,8 @@ This section contains API details that are common to every API’s resource and 
 | 40003      | Configure predefined content                                   | Add and edit Predefined Content in the Agent Workspace           |
 | 40004      | Configure automatic messages                                   | Add and edit Automatic Messages in the Agent Workspace           |
 | 40005      | Configure engagement attributes                                | Add and edit Engagement Attributes used in Campaigns             |
-| 40006      | Import and export predefined content                           | Import and export Predefined Content to and from LiveEngage      |
-| 40007      | Export predefined content                                      | Export Predefined Content from LiveEngage                        |
+| 40006      | Import and export predefined content                           | Import and export Predefined Content to and from Conversational Cloud      |
+| 40007      | Export predefined content                                      | Export Predefined Content from Conversational Cloud                        |
 | 40008      | View API keys   | For brands who have enabled the API key management feature, this permission allows viewing of API keys used by the brand                   |
 | 40012      | Configure authentication server                                | For brands who have enabled the authentication conversation feature, this permission allows users to configure the authentication server   |
 | 40014      | View support cases in theConnection Area                       | View open and closed support cases from the Connection Area.     |

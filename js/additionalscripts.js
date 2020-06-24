@@ -2,6 +2,7 @@ var get_started_page = "Getting Started with your Free Trial Account";
 var customized_cloud = "Customizing the Conversational Cloud";
 var do_more_cloud = "Do More with the Conversational Cloud";
 var welcome_page = "Let’s build a conversational future together!";
+
 $(document).ready(function () {
   var url = window.location.href;
   $(window).scroll(function () {
@@ -12,7 +13,7 @@ $(document).ready(function () {
   });
   crossBrowserSafariCheck();
   //add anchor links to all h3 titles. See respective functions below for what they do.
-  anchors.add("h3, h4");
+  anchors.add("h1, h3, h4");
   handleUniquePages();
   linkload();
   sidebarClick();
@@ -166,7 +167,7 @@ function navigateContent(url) {
       });
       crossBrowserSafariCheck();
 
-      anchors.add("h3, h4");
+      anchors.add("h1, h3, h4");
       populateAnchors();
       codeButtons();
       replaceTitle();
@@ -359,7 +360,7 @@ $(window).on("popstate", function (e) {
 });
 
 //a function to loop over all anchor elements and create a dropdown menu from them
-function populateAnchors() {
+function populateAnchors(tagName) {
   //remove all previous anchoritems populated in the box
   $(".jumpToAnchor").remove();
   //find all h3 titles on the page
