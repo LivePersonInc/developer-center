@@ -364,9 +364,7 @@ function populateAnchors(tagName) {
   //remove all previous anchoritems populated in the box
   $(".jumpToAnchor").remove();
   //find all h3 titles on the page
-  // var anchorlinks = document.getElementsByTagName("h3");
-  var anchorlinks = document.querySelectorAll("h1, h3")
-
+  var anchorlinks = document.getElementsByTagName("h3");
   var anchorlist = document.getElementById("anchorlist");
   let html;
   //if there are no anchrolinks, hide the box. Visibility is used instead of display so not to conflict with the scrollToFixed plugin.

@@ -7,7 +7,7 @@ indicator: both
 ---
 
 
-# What is a Concierge Bot?
+### What is a Concierge Bot?
 
 <br>
 
@@ -21,7 +21,7 @@ This bot provides basic information and contact options to your consumers. If yo
   </div>
 </div>
 
-# Exploring your Concierge Bot
+### Exploring your Concierge Bot
 <br>
 When you are ready to start getting to know your bot, you can check out your Concierge Bot through Conversation Builder by:
 1. Make sure you are <a  target = "_blank" href="https://authentication.liveperson.net/login.html" alt="LiveEngage URL"> logged in </a> .
@@ -35,7 +35,7 @@ Then you will see a screen like this:
 From here you can test your bot by clicking <b>Preview </b> and click on the dialog headers for <i>‘Welcome’ </i>, <i> ‘Open Hours’ </i>, 
 <i> ‘Contact’ </i>, etc. to see your bot from behind the scenes.
 
-# Customize your Concierge Bot
+### Customize your Concierge Bot
 <br>
 Now it’s time to make this bot your own. With LivePerson’s Conversational AI platform, you can fully customize what your bot says and does through our powerful tools and integrations. Here we will focus on customizing your bot in 3 ways: (1) personalizing what your bot says to align to your brand, (2) improving what your bot can understand, and (3) completing your bot’s ability to collect customer information after-hours or when your agents aren’t available.
 
