@@ -368,6 +368,7 @@ function populateAnchors() {
     $(".anchorlist").css("visibility", "hidden");
     //if there are anchorlinks, display the box
   } else {
+
     html = '<p class="jumpToAnchor">Jump to:</p>';
     $(".anchorlist").css("visibility", "visible");
     //for each link found, append an item to the anchor list. The data-scroll attribute is used in the smooth-scroll plugin.
@@ -545,12 +546,12 @@ function sidebarClick() {
   });
 }
 
-function breadClick (event) {
-	event.preventDefault();
-	let breadText = $(this).innerHTML;
-	var breadSidebar = $('#defaultsidebar');
-	var targetLink = breadSidebar.find("span:contains('" + breadText + "')").trigger("click");
-	console.log(targetLink);
+function breadClick(event) {
+  event.preventDefault();
+  let breadText = $(this).innerHTML;
+  var breadSidebar = $('#defaultsidebar');
+  var targetLink = breadSidebar.find("span:contains('" + breadText + "')").trigger("click");
+  console.log(targetLink);
 }
 
 //a function to make sure the page's title is updated on load
