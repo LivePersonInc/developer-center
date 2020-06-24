@@ -18,8 +18,8 @@ indicator: both
 
 <div class="lp-container">
     <div class=" welcome-card-modified">
-            <div class="getting-started-paragraph" style="padding: 0 12px 0 0;">
-           LivePerson’s Conversational Cloud is an AI-powered conversational platform that connects brands to consumers using their preferred channel and can scale to any number of conversations. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction. 
+            <div class="getting-started-paragraph" style="padding: 0 12px 0 0; display:block;">
+         <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" alt="LivePerson's Conversational Commerce Platform"> LivePerson’s Conversational Cloud</a> is an AI powered platform scales conversations with consumers using their preferred messaging channel, such as WhatsApp, Facebook Messenger, Apple Business Chat, and more. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction.
             </div>
         </div>
     <div id="teaser-banner" class="welcome-card-modified">
@@ -31,16 +31,16 @@ indicator: both
 </div>
 <div class="welcome-card-modified">
     <div class="small-header">
-      Conversational Cloud basics
+      About your Free Trial Account
     </div>
     <div class="convo-cloud-paragraph">
-    Learn about the <a target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" alt="Conversational Cloud"> Conversational Cloud </a> and how it scales across popular messaging channels, such as WhatsApp, Facebook Messenger, Apple Business Chat, and more. 
+    Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a  href="/starting-with-your-concierge-bot.html" alt="Start Concierge Bot Building"> here </a>.
     </div>
 </div>
 
 <div class="container-note">
     <div class="important" style="width:63%">
-        <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html" alt="Register free trial"> register </a> for a free 45-day trial. Your trial account comes with a pre-configured Concierge Bot who will greet you and offer guidance.
+        <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html"  alt="Register free trial"> register </a> for a free 45-day trial.
     </div>
 </div>
 
@@ -66,10 +66,10 @@ Connect to mobile channels and customize your Concierge Bot
     </div>
 </div>
 <div class="card-container" style="margin-top:24px;">
-  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-the-concierge-bot.html"> 
+  <a class="welcome-card" target="_blank" href="/starting-with-your-concierge-bot.html"> 
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">Conversational AI</h5>
-        <p class="getstarted-content ">Customize bot dialogs</p>
+        <p class="getstarted-content ">Starting with your Concierge Bot</p>
   </a>
 </div>
 <div class="welcome-card-modified">
