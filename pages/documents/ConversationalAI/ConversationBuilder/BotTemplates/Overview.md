@@ -15,9 +15,7 @@ All Conversation Builder bots are based on **templates**.
 
 The Custom Bot template is the best choice if you want to create a completely custom bot from scratch.
 
-For other, more common use cases, Conversation Builder has a set of predefined, industry vertical templates that enable rapid adoption of automation.
-
-Each conversational template consists of the following capabilities:
+For other, more common use cases, Conversation Builder has a set of predefined, industry vertical templates that enable rapid adoption of automation. Each conversational template consists of the following capabilities:
 
 * Intents associated with the use case
 
@@ -31,14 +29,14 @@ The following use cases will be provided for multiple different industry vertica
 
 | Template | Capabilities | Integrations |
 |------------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------|
-| Simple Router | Welcome message with choices to route to bots or agents. | Route to Bots, Agents |
-| Simple FAQ | Offer detailed responses for frequently asked questions via a knowledge base of questions and answers. | Knowledge Base |
-| Simple Lead Generation | Capture lead’s basic contact info. Sends the captured information to email. | Email |
-| Full Lead Generation | Capture lead’s contact info, interest in product/service and related details. Sends the captured info to email or SMS. | Email, Twilio number |
-| Apply for a Loan | Capture contact and financial information from a customer and send the results | Email, Agents |
-| Insurance Quote | Capture information related to insurance needs from a customer and send the results | Email, Agents |
-| Travel Notification | The Travel Notifications template allows an authenticated user to report their future travel |  |
-| Order Status | Shoppers can check the status of their orders with authentication via order number and name, etc. | Shopify |
+| [Simple Router](conversation-builder-bot-templates-simple-router.html) | Welcome message with choices to route to bots or agents. | Route to Bots, Agents |
+| [Simple FAQ](conversation-builder-bot-templates-simple-faq.html) | Offer detailed responses for frequently asked questions via a knowledge base of questions and answers. | Knowledge Base |
+| [Simple Lead Generation](conversation-builder-bot-templates-simple-lead-gen.html) | Capture lead’s basic contact info. Sends the captured information to email. | Email |
+| [Full Lead Generation](conversation-builder-bot-templates-full-lead-gen.html) | Capture lead’s contact info, interest in product/service and related details. Sends the captured info to email or SMS. | Email, Twilio number |
+| [Apply for a Loan](conversation-builder-bot-templates-apply-for-a-loan.html) | Capture contact and financial information from a customer and send the results | Email, Agents |
+| [Insurance Quote](conversation-builder-bot-templates-insurance-quote.html) | Capture information related to insurance needs from a customer and send the results | Email, Agents |
+| [Travel Notification](conversation-builder-bot-templates-travel-notification.html) | The Travel Notifications template allows an authenticated user to report their future travel |  |
+| [Order Status](conversation-builder-bot-templates-order-status.html) | Shoppers can check the status of their orders with authentication via order number and name, etc. | Shopify |
 
 
 <!--
@@ -120,7 +118,7 @@ The following use cases will be provided for multiple different industry vertica
 
 ### Create a bot from a template
 
-1. On the Bots dashboard, click **New Bot** in the upper-right corner.
+1. From the dashboard that lists your bots, click **New Bot** in the upper-right corner.
 
 2. Select the template.
 

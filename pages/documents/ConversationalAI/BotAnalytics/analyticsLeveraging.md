@@ -19,7 +19,7 @@ The Analytics portal, by default, has a date range set to Yesterday. If you’d 
 
 The Intents view lets you view both "Matched Intents" and “Unmatched Phrases” for your bot’s intents, patterns and attached knowledge bases. You can see all of them together, or you can select them individually in the Source dropdown menu on the left.
 
-<img class="fancyimage" style="width:700px" src="img/hranalytics.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/analytics_intentsView.png">
 
 Here we’re looking at the matched intents for this bot. Most are coming from the knowledge base, but you can see a pattern for the greeting as well.
 

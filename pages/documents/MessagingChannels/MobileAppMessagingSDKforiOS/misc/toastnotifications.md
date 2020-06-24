@@ -199,7 +199,7 @@ return toast
 
 **Note**: Toast() is the CocoaTouch class used to create the new View, you should use the name of the class you created. The LPNotification object gives you access to the following properties:
 
-- **text** -> Actual Push Message, this one is the text typed by the Agent on LiveEngage
+- **text** -> Actual Push Message, this one is the text typed by the Agent on Conversational Cloud
 
 - **accountID** -> Account Number
 

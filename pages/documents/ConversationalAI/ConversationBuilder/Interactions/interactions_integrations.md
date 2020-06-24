@@ -29,24 +29,33 @@ Before you can add an Integration interaction, you need to create the integratio
 
 3. Finish configuring the interaction as desired, and click **Save**.
 
-#### Defining conditions based on the result of the API integration
+#### Order of invocation
+
+When an integration interaction is processed, the order of invocation is as follows:
+
+1. Pre-process code
+2. Integration call, e.g., API call
+3. Post-process code
+4. Next step
+
+#### Defining rules based on the result of the API integration
 
 {: .important}
-It's recommended that you take advantage of the ability to define conditions based on the *result* of the API integration.
+It's recommended that you take advantage of the ability to define rules based on the *result* of the API integration.
 
-In our example below, we've added a condition that checks for a "success" result **(1)**, and we've configured the next step to continue to the next interaction **(2)**. So, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends).
+In our example below, we've added a rule that checks for a "success" result, and we've configured the next step to continue to the next interaction...
 
- <img style="width:800px" src="img/ConvoBuilder/integrations_api_success.png">
+ <img style="width:700px" src="img/ConvoBuilder/integrations_api_rule1.png">
 
-We've likewise added a second condition that checks for a "failure" result **(1)**, and then we've configured the next step to continue to a "fail" interaction **(2)**. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
+...so, if our "Balance" integration succeeds, the user's balance is displayed (and then the interaction ends). We've likewise added a second rule that checks for a "failure" result, and then we've configured the next step to continue to a "fail" interaction. In this case, if our "Balance" integration fails, the user is notified that something went wrong.
 
- <img style="width:800px" src="img/ConvoBuilder/integrations_api_failure.png">
+ <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png">
 
 ### Agent Transfer interactions
 
 Use an Agent Transfer interaction in a dialog when you want to transfer a conversation from a bot to a live agent, or from a bot in one bot group to a bot in a *different* group.
 
-For some practice with this interaction type, complete the [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html).
+For some practice with this interaction type, complete the [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html).
 
 {: .important}
 There are two ways to implement a transfer: You can add an Agent Transfer interaction, *as discussed here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Agent Transfer interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.
@@ -63,16 +72,19 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 
     <img style="width:600px" src="img/ConvoBuilder/interactions_agentTransfer.png">
 
-3. Click <img style="width:30px" src="img/ConvoBuilder/icon_interactionDetails.png"> to open the **Interaction Details**, and click the **Settings** tab.
-4. Specify the following:
+3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
+4. Select the **Advanced** tab, and specify the following:
 
-    * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in LiveEngage. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
+    * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 
-        When the transfer is attempted, the Agent Skill Id is evaluated first; if it isn't numeric, the fallback message is sent to the user. If the value is numeric, but the bot doesn't respond for more than 3 minutes, an attempt is made to transfer to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-liveengage.html#add-an-agent-connector)*. Otherwise, the transfer fails. For information on handling failures, see below.
+        When the transfer is attempted, the Agent Skill Id is evaluated first; if it isn't numeric, the fallback message is sent to the user. If the value is numeric, but the bot doesn't respond for more than 3 minutes, an attempt is made to transfer to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#add-an-agent-connector)*. Otherwise, the transfer fails. For information on handling failures, see below.
 
     * **Transfer Bot Context**: Used for [manual, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) only. Select this to *automatically* pass the user's intent and/or message from the sender bot to the receiver bot. This lets the receiver bot know the appropriate dialog to start after the transfer.
 
 4. Click **Save**.
+
+{: .important}
+If, given your use case, you need to prevent context switching from occurring during the transfer (e.g., messages are sent after the transfer that shouldn't be), you can do this as described [here](conversation-builder-dialogs-dialog-basics.html#preventing-context-switching).
 
 #### Best practices
 
@@ -101,21 +113,21 @@ File Upload interactions are available for Web Messaging, Apple Business Chat, a
 
 Use a File Upload interaction in a dialog when you need the consumer to upload a file that you require. For example, you might have a bot that handles account creation, where the consumer needs to provide an ID card and a document demonstrating proof of a good credit score.
 
-When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in LiveEngage, see [here](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html).)
+When you use a File Upload interaction, on the consumer side in the messaging window, the consumer can upload the file by dragging and dropping it onto the window. (For an overview of file sharing in Conversational Cloud, see [here](https://knowledge.liveperson.com/messaging-channels-rich-messaging-agent-file-sharing-overview.html).)
 
 {: .important}
-Some setup of your LiveEngage environment is required before using this feature. Please contact your LivePerson account representative to enable this feature.
+Some setup of your Conversational Cloud environment is required before using this feature. Please contact your LivePerson account representative to enable this feature.
 
 **To add a File Upload interaction**
 
 1. Select the interaction just above where you want to add the File Upload interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_fileUpload.png"> (File Upload) on the interactions toolbar.
 2. In the File Upload interaction, enter the message to send to the consumer.
 
-    <img style="width:550px" src="img/ConvoBuilder/integrations_fileUpload2.png">
+    <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload2.png">
 
     For the file to be uploaded, in step 4, you'll follow this with an integration interaction that invokes a File integration.
 
-3. In the File Upload interaction, open the **Interaction Details**, click **[Settings]((conversation-builder-interactions-details-settings.html))**, and specify the following under **File Upload Settings**:
+3. In the File Upload interaction, in the upper-right corner click <img style="width:25px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon). Select the **Advanced** tab. Then specify the following under **File Upload Settings**:
     - **Accepted File Types**: Select the types of files that you will accept for upload (PDF, JPEG, PNG, DOCx, etc.). If the consumer attempts to upload a file of any other type, the upload will fail, and the Validation Failure message (below) will be sent to the consumer.
     - **Success message**: Enter the message to send to the consumer if the file upload to your external file share is successful. The default value is, "Successfully processed the file."
     - **Failure message**: Enter the message to send to the consumer if the file upload to your external file share is unsuccessful due to an error. The default value is, "Failed to process the file. Please try again."
@@ -126,7 +138,7 @@ Some setup of your LiveEngage environment is required before using this feature.
     
     <img style="width:600px" src="img/ConvoBuilder/integrations_fileUpload4.png">
 
-    The File integration handles upload of the file from LiveEngage to your brand's external file share. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
+    The File integration handles upload of the file from Conversational Cloud to your brand's external file share. If you haven't already done so, [create the File integration](conversation-builder-integrations-file-integrations.html) now, so you can complete this step.
 
 5. Finish configuring the interactions and overall dialog as per your requirements. For information on potential customization points, see the customization section farther below.
 
@@ -144,20 +156,22 @@ If the dialog flow requires that the consumer upload *multiple* files, you'll ne
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload3.png">
 
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload9.png">
+
 ##### Routing the conversation based on success or failure
 
 If desired, you can route the conversation to a different dialog flow *based on whether the upload succeeded or failed*.
 
-To do this for the success flow, create a dialog that begins with a User Says interaction that matches the pattern `file_upload_success:{your success message}`, for example:
+To do this for the success flow, create a dialog that begins with a Dialog Starter interaction that matches the pattern `file_upload_success:{your success message}`, for example:
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/integrations_fileUpload7.png">
+`file_upload_success:Receipt of file is successful`
 
 *Spaces in the message are permitted.*
 
 Then build out the success dialog flow as desired.
 
-You can create a failure dialog similarly. In this case, the User Says interaction must match the pattern: `file_upload_failed:{your message}`.
+You can create a failure dialog similarly. In this case, the Dialog Starter interaction must match the pattern: `file_upload_failed:{your failure message}`.
 
-If your original dialog involves *multiple* uploads--with different success and failure messages for each upload--but you want to handle the uploads with a *single* success dialog (or failure dialog), use the * wildcard to match all messages like this:
+If your original dialog involves *multiple* uploads--with different success and failure messages for each upload--but you want to handle the uploads with a *single* success dialog (or failure dialog), use the * wildcard character to match all messages like this:
 
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/integrations_fileUpload8.png">
+`file_upload_success:*`

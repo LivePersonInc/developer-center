@@ -16,9 +16,9 @@ indicator: chat
 
 You can find the [Agent Sample App here](https://github.com/LivePersonInc/agent-sample-app). This is a virtual agent simulator built over the Chat Agent API. In this demo the simulator implements the following Chat Agent API endpoints:
 
-* LiveEngage login
+* Conversational Cloud login
 
-* LiveEngage session refresh
+* Conversational Cloud session refresh
 
 * Set availability to online
 

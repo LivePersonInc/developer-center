@@ -16,7 +16,7 @@ Enabling the use of LivePerson's Function (FaaS) integrations requires a configu
 
 ### To add a LivePerson Functions integration
 
-1. Open the automation, and click **Integrations** in the upper-left corner.
+1. Open the bot, and click **Integrations** in the upper-left corner.
 2. Configure the integration settings:
     - **Integration Name**: Enter the name of integration. Enter a name that's meaningful (it describes well the integration's purpose), concise, and follows a consistent pattern. This helps with organization, and it makes it easier for bot developers to work with the integration during bot development.
     - **Response Data Variable Name**: Enter the name of the response data variable.
@@ -29,3 +29,7 @@ Enabling the use of LivePerson's Function (FaaS) integrations requires a configu
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialogs. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
     - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating automations can use and display this data in interactions by referencing these fields as described [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
 3. Click **Save**.
+
+### Example guide
+
+For a step-by-step, example guide that uses this integration, see [here](conversation-builder-tutorials-guides-using-liveperson-functions-with-a-bot.html).

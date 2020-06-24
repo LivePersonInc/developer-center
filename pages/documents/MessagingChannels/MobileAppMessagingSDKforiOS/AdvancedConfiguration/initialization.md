@@ -65,7 +65,7 @@ indicator: messaging
 
 ### Initialize the Messaging SDK with Monitoring Params
 <div class="important">
-To get the App key or appInstallationId, a new Conversation Source needs to be added on LiveEngage, for more information about it, contact your Account Team.
+To get the App key or appInstallationId, a new Conversation Source needs to be added on Conversational Cloud, for more information about it, contact your Account Team.
 </div>
 
 1. Inside **viewController** add the following imports:

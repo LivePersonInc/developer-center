@@ -20,7 +20,7 @@ N/A = Not Available
 | | Mobile App Messaging | Web Messaging |
 | ---- | ---- | ---- |
 | Interaction type: | | |
-| User Says | Yes | Yes |
+| Dialog Starter | Yes | Yes |
 | Text statement | Yes | Yes |
 | Image statement | N/A | Yes |
 | Audio statement | N/A | N/A |
@@ -44,7 +44,7 @@ N/A = Not Available
 | | Apple Business Chat | SMS | Google RCS |
 | ---- | ---- | ---- | ---- |
 | Interaction type: | | | |
-| User Says | Yes | Yes | Yes |
+| Dialog Starter | Yes | Yes | Yes |
 | Text statement | Yes | Yes | Yes |
 | Image statement | N/A | N/A | Yes |
 | Audio statement | N/A | N/A | N/A |
@@ -68,7 +68,7 @@ N/A = Not Available
 | | Facebook | WhatsApp | LINE |
 | ---- | ---- | ---- | ---- |
 | Interaction type: | | | |
-| User Says | Yes | Yes | Yes |
+| Dialog Starter | Yes | Yes | Yes |
 | Text statement | Yes | Yes | Yes |
 | Image statement | N/A | N/A | N/A |
 | Audio statement | N/A (Not supported by Live Engage) | N/A | N/A |
@@ -92,7 +92,7 @@ N/A = Not Available
 | | Messaging Window API | Connector API |
 | ---- | ---- | ---- |
 | Interaction type: | | |
-| User Says | Yes | Yes |
+| Dialog Starter | Yes | Yes |
 | Text statement | Yes | Yes |
 | Image statement | N/A | N/A |
 | Audio statement | N/A | N/A |

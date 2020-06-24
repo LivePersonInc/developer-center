@@ -22,4 +22,4 @@ indicator: both
 
 **A Dialog** - a set of user input prompts, responses, and integrations (otherwise known as interactions) which make up a conversation.
 
-**An Intent** - a re-usable set of patterns to match on User Says interaction
+**An Intent** - a re-usable set of patterns to match on Dialog Starter interaction

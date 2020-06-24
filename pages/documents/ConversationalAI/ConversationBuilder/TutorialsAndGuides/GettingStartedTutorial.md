@@ -29,7 +29,7 @@ The Getting Started tutorials include four tutorials that build on one another:
 
 * **Integrations**: Explore integrations, which allow your bot to query external APIs, bringing powerful new options to your conversations. Integrations let you programmatically access catalogs, databases, and other web services to super power your bot responses.
 
-* **Connect to LiveEngage**: Bring it all together by deploying your bot to the LiveEngage environment and testing it out.
+* **Connect to Conversational Cloud**: Bring it all together by deploying your bot to the Conversational Cloud environment and testing it out.
 
 ### Dialogs & Patterns tutorial
 
@@ -40,37 +40,39 @@ The Getting Started tutorials include four tutorials that build on one another:
 
 #### Prerequisite steps
 
-This tutorial assumes you have a user account for the LiveEngage and Conversation Builder platforms. If you don't, your team should have an administrator who can create one for you.
+This tutorial assumes you have a user account for the Conversational Cloud and Conversation Builder platforms. If you don't, your team should have an administrator who can create one for you.
 
 #### Step 1: Create a new bot
 
 1. Navigate to [https://authentication.liveperson.net/login.html](https://authentication.liveperson.net/login.html), enter your credentials, and log in.
-2. In the left sidebar in LiveEngage, click the Conversational AI and Bots <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_convers_ai.png"> icon.
+2. In the left sidebar in Conversational Cloud, click the Conversational AI and Bots <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_convers_ai.png"> icon.
 3. In the Conversational AI dashboard, click **Conversation Builder**.
-4. Click **New Bot** in the upper-right corner, and select the **Custom Bot** generic [template](conversation-builder-templates-overview.html).
+4. Click **New Bot** in the upper-right corner, and select the generic **Custom Bot** [template](conversation-builder-templates-overview.html).
 5. Give the bot a unique name and description, and click **Create Bot**.
     
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/createAutomation.png">
 
-    This takes you to the new bot in Conversation Builder. Since you selected the Custom Bot template, by default this creates a bot with a “Welcome” dialog that matches and responds to simple forms (patterns) of “hello”. The bot also has a Fallback dialog with some fallback text.
-
-6. Click the **Welcome** tab in the lower-left corner to open the Welcome dialog, so you can examine it.
-
+    This takes you to the new bot in Conversation Builder. Since you selected the Custom Bot template, by default this creates a bot with a “Welcome” dialog that matches and responds to simple forms (patterns) of “hello”. 
+    
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/image_3.png">
+    
+    The bot also has a Fallback dialog with some fallback text.
 
-    (You can learn about the different parts of Conversation Builder [here](conversation-builder-bot-workspace.html).)
+6. Examine the Welcome dialog, which is displayed by default.
+
+   (You can learn about the different parts of Conversation Builder [here](conversation-builder-bot-workspace.html).)
 
 #### Step 2: Test the Welcome dialog
 
 With the bot created, let’s see how to make it respond to user utterances.
 
-The first interaction in the Welcome dialog is a *User Says* interaction that allows us to match a user’s utterance using patterns or intents. Following that is a *Text Statement* interaction that displays some text ("Hi there! Thanks for coming!") to the user.
+The first interaction in the Welcome dialog is a *Dialog Starter* interaction that allows us to match a user’s utterance using patterns or intents. Following that is a *Text Statement* interaction that displays some text ("Hi there! Thanks for coming!") to the user.
 
 Statement interactions (Text, Image, Audio, and Video) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (You can learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).)
 
 Let’s see the interactions in action!
 
-1. Click the Preview icon <img style="width:35px" src="img/ConvoBuilder/helloworld/messaging_client_icon.png"> in the lower-right corner.
+1. Click **Preview** in the upper-right corner.
 
 2. In the Preview window, enter “hello” or “hello there.” You should see the welcome response.
 
@@ -78,96 +80,97 @@ Let’s see the interactions in action!
 
     So how is the Welcome dialog triggered?
 
-4. Click the *User Says* interaction (the top interaction) to select it. There are two small icons to the right of it.
+3. Examine the Dialog Starter interaction. On the interaction tile, note the different patterns used to match this particular dialog. (You can also use an intent to trigger a dialog, but for this exercise we focus on patterns.)
 
-5. Click the top **Interaction Details** icon <img style="width:40px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> to display the window, and then click the **Settings** tab inside.
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/patterns.png">
 
-6. Under **Patterns**, note the different *patterns* used to match this particular dialog. You can also use *intents* to trigger a dialog, but for this exercise we focus on patterns.
+    Since this is a "Welcome" dialog, it uses patterns like “hi”, “hello” and “howdy” to match those phrases exactly and display a response.
 
-    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/helloworld/interactiondetails.png">
+    By adding wildcards (e.g., `hi *` or `hello *`) you can allow for broader matches like “hi there” or “hello my friend”. Using parentheses and pipes allows you to specify a series of alternates. For instance, `(hi|hello|hey)*` will match “hi”, “hello there” and “hey you”.
 
-    Since this is a "welcome" dialog, it uses patterns like “hi”, “hello” and “howdy” to match those phrases exactly and display a response.
+4. Click the patterns (green button). On the Patterns & Intent tab in the Interaction Settings window, add some more patterns (e.g., “hiya”, “ciao”, “hola”). Then click **Save**.
 
-    By adding wildcards (e.g., `hi *` or `hello *`) you can allow for broader matches like “hi there” or “hello my friend”. Using parentheses and pipes allow you to specify a series of alternates. For instance, `(hi|hello|hey)*` will match “hi”, “hello there”, and “hey you”.
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/patterns2.png">
 
-7. Add some more patterns (e.g., “hiya”, “ciao”, “hola”), and then click **Save** in the window.
+5. In the Preview window, click **Reset Session**. This starts a new session that "picks up" your changes.
 
-8. In the Preview window, enter "reset", and press Enter. This starts a new session, so you can "pick up" your changes.
-9. Test the new patterns in the Preview window like you did before.
+6. Test the new patterns in the Preview window like you did before.
 
-    Now that you’ve seen how a dialog is triggered, let’s change the welcome *response* by editing the Text Statement interaction.
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/patterns3.png">
 
-9. Select (click) the Text Statement interaction below the User Says interaction.
+    Now that you’ve seen how a dialog is triggered, let’s change the welcome response by editing the Text Statement interaction.
 
-10. Change the text from `Hi there! Thanks for coming!` to `Hello World!`, and press Enter. (There is no need to open the Interaction Details panel to change simple output text.)
+7. Select (click) the Text Statement interaction below the dialog starter.
 
-11. To see your change, open the Preview window again, enter “reset” and press Enter. Then enter “hi”. You should see the “Hello World!” response.
+8. Change the text from `Hi there! Thanks for coming!` to `Hello World!`, and press Enter. (There is no need to open the Interaction Settings to change simple output text.)
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/helloworld.png">
+9. To see your change, open the Preview window again, and click **Reset Session**. Then enter “hi”. You should see the “Hello World!” response.
+
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/helloworld.png">
 
 #### Step 3: Add a Goodbye dialog
 
 Let’s create another dialog to put these concepts into more practice. Since there is a "Welcome" dialog, let’s now create a “Goodbye” dialog.
 
-1. Click **+ Dialog** in the lower-left corner.
+1. Click **Add Dialog** in the lower-left corner.
 
-2. In the dialog box that appears, name the dialog "Goodbye", and select Dialog for **Dialog Type**.
+2. In the Add Dialog window, name the dialog "Goodbye", and select Dialog for **Dialog Type**. Click **Save**.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/goodbyedialog.png">
+    By default, the new Goodbye dialog has a Dialog Starter interaction; this allows the dialog to be triggered by patterns or an intent. But the interaction isn't configured by default, so let's do that now.
 
-    By default, the new Goodbye dialog has a User Says interaction; this allows the dialog to be triggered by patterns and intents. But the interaction isn't configured by default, so let's do that now.
-    
-3. Select the interaction, enter "Goodbye" as the sample user statement, and press Enter.
+    For the dialog starter to match user input, you need to add some patterns.
 
-    For this User Says interaction to match user input, you need to add some patterns.
+3. Select the interaction, and click **+ Pattern**.
 
-4. Click the Interaction Details icon <img style="width:35px" src="img/ConvoBuilder/helloworld/interaction_details_icon.png"> , and then click **Settings**.
+4. Under Patterns, add a few patterns like `goodbye`, `bye`, `see ya`, etc. Click **Save**.
 
-5. Scroll down to the Patterns section, and add a few patterns like `goodbye`, `bye`, `see ya`, etc.
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addnewpattern.png">
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/addnewpattern.png">
+    Before you test things in the Preview window, you need to add some content to be displayed when the bot matches a pattern. Let's add a Text Statement interaction.
 
-6. Click **Save** in the window.
+5. In the Interactions toolbar, click the Text Statement icon <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_textStatement.png">. This inserts the interaction.
 
-    Before you test things in the Preview window, you need to add some content to be displayed when the bot matches a pattern. Let's a Text Statement interaction.
+    (If you can't see the Interactions toolbar, close the Preview window, which might be covering it up.)
 
-6. In the Interactions toolbar, click the Text Statement icon <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_textStatement.png">. This inserts the interaction.
+6. In the interaction, enter a goodbye message (e.g., "Bye. Thanks for coming!"), and press Enter.
 
-7. In the interaction, enter a goodbye message (e.g., "Bye, thanks for coming!"), and press Enter.
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addByeResponse.png">
 
     Let's test the changes.
 
-8. Open the Preview again, enter “reset”, and press Enter.
+7. Open the Preview window again, and click **Reset Session**.
 
-9. Enter “hi” to trigger the Welcome dialog and see the welcome message. Then enter “bye” to trigger the Goodbye dialog and see the goodbye message.
+8. Enter “hi” to trigger the Welcome dialog and see the welcome message. Then enter “bye” to trigger the Goodbye dialog and see the goodbye message.
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/byetest.png">
 
 #### Step 4: Test the Fallback dialog
 
-You’ve seen how to create a new dialog and trigger it using patterns. But what happens when you enter an utterance that has not been accounted for? To catch these when they occur, you need to provide a "fallback dialog." By default, when you create a bot using the Custom Bot template, one is included. Let's examine and test it now.
+You’ve seen how to create a new dialog and trigger it using patterns. But what happens when you enter an utterance that hasn't been accounted for? To catch and handle these when they occur, you can provide a "fallback dialog." By default, when you create a bot using the Custom Bot template, one is included. Let's examine and test it now.
 
 {: .important}
 There can be only one dialog of type Fallback per bot.
 
-1. Click the **Fallback** tab in the lower-left corner to open the Fallback dialog.
+1. In the Dialogs panel on the left, click **2 Fallback**. This opens the Fallback dialog.
 
-2. Note that there isn't a User Says interaction.
+2. Note how there isn't a Dialog Starter interaction.
 
-    You don't need a User Says interaction in the Fallback dialog because the Fallback dialog has special properties that cause it to display when there are no other matches available. However, you do need to add some type of message to tell the user that the bot didn’t understand their query. A default message is provided for you.
+    You don't need a Dialog Starter interaction in the Fallback dialog because the Fallback dialog has special properties that cause it to display when there are no other matches available. However, you do need to add some type of message to tell the user that the bot didn’t understand their query. A default message is provided for you.
 
 3. Select the Text Statement interaction, and change the message to, `Sorry, I only know ‘hello’ and ‘goodbye’.` Press Enter.
 
-4. Open the Preview window, enter “reset” and press Enter.
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/fallbackTextTile.png">
+
+4. Open the Preview window again, and click **Reset Session**.
 
 5. Enter something other than your hello and goodbye patterns. You should see your fallback message.
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/fallbacktext.png">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/fallbacktext.png">
 
 
 ### Intents tutorial
 
-In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use intents.
+In this tutorial, you take things to the next level. Instead of using patterns to trigger a dialog, you use an intent.
 
 #### Watch the video - intents & entities
 
@@ -181,65 +184,64 @@ In this tutorial, you take things to the next level. Instead of using patterns t
 
 #### Step 5: Create a Billing intent
 
-Since you’re going to be using intents in this tutorial, you need to leave the Conversation Builder application for a moment. 
+Since you’re going to be using an intent in this tutorial, you need to leave the Conversation Builder application for a moment. 
 
-1. In the upper-left corner, click **< Bots** beside the bot name to return to the list of bots.
+1. In the upper-left corner, click **< Back** twice. This returns you to the Conversational AI dashboard.
 
-    <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/helloworld/image_10.png">
+2. Click **Intent Builder**.
 
-2. Again in the upper-left corner, click **< Apps** to return to the Conversational AI dashboard.
-3. Click **Intent Builder**.
-
-    Intent Builder is where you create *domains*, which are collections of *intents* and *entities*. You can learn about the different parts of the Intent Builder application [here](conversation-builder-intent-builder-overview.html).
+    Intent Builder is where you create domains, which are collections of intents and entities. You can learn about Intent Builder [here](conversation-builder-intent-builder-overview.html).
 
     Now let’s create a domain.
 
-4. In the upper-right corner, click **New domain**.
+3. In the upper-right corner, click **New domain**.
 
-5. On the Add Domain page, name the domain after your org (e.g., "ACME Co"), select "Manual", and click **Add Domain**. (While you will manually add intents and entities, they can be imported from a CSV file too.)
+4. On the Add Domain page, name the domain after your org (e.g., "Acme Corporation"), select "Manual", and click **Add Domain**. (While you will manually add intents and entities, they can be imported from a CSV file too.)
 
     This displays the Add Intent page. Now you can begin to create an intent.
 
-6. Enter "Billing question" for **Intent Name**.
+5. Enter "Billing question" for **Intent Name**.
 
-7. In the **Training** section, add the following training phrases, pressing Enter to add each one:
+6. In the **Training** section, add the following training phrases, pressing Enter to add each one:
 
     * i have a question about my bill
     * can you help me with my bill
     * i have a bill related question
     * my bill is past due
 
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addIntent1.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/addIntent1.png">
 
     Using the word “bill” in the training phrases is important because you will create an entity named "bill" that the phrases will recognize. 
 
-8. Scroll down, and click **Add Intent**.
+7. Click **Add Intent** in the lower-right corner.
 
     Now you can use the debugger to test how the training phrases match against a user's utterance.
 
-9. In the left panel, select the *Billing question* intent, and then click the Debug icon <img style="width:35px" src="img/ConvoBuilder/helloworld/debugger_icon.png"> in the lower-right corner.
+8. Click **Debug** in the upper-right corner.
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/image_11.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/image_11.png">
 
-10. Enter an utterance that is close to one of your sentences, like, "I need help with my bill". Then click **Test**.
+9. Enter an utterance that is close to one of your sentences, like, "I need help with my bill". Then click **Test**.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/matchverygood.png">
 
-11. Enter another utterance but use “billing” instead of “bill”, e.g., "I have a billing question".
+10. Test another utterance but use “billing” instead of “bill”, e.g., "I have a billing question".
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/matchfair.png">
 
     The result when using "billing" is only FAIR because it is not recognized as a synonym for “bill”. You can remedy this by creating an [entity](conversation-builder-intent-builder-entities.html). You do this next.
 
-12. In the upper-right corner, click **Entities**.
+11. In the upper-left corner, click **Entities**.
 
-13. On the Add Entity page, create a new entity named "bill" and add a number of entity values (synonyms) like `bill`, `billing`, `payment`, and `statement`. Click the **+** sign to add each one.
+12. On the Add Entity page, create a new entity named "bill" and add a number of entity values (synonyms) like `bill`, `billing`, `payment`, and `statement`. Press Enter to add each one.
 
-14. Click **Add Entity**.
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/helloworld/addbillentity.png">
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/billentity.png">
+13. Click **Add Entity** in the lower-right corner.
 
-15. *Now see how adding an entity can improve the NLU matching*: Click **Intents** in the upper-right corner to return to the Intents tab, select the "Billing question" intent, and use the debugger again. This time re-enter the phrase, "I have a billing question".
+    Now let's see how adding an entity can improve the NLU matching.
+
+14. Click **Intents** in the upper-left corner to return to the Intents tab, select the "Billing question" intent (if necessary), and use the debugger again. This time re-enter the phrase, "I have a billing question".
 
     Now the result is VERY GOOD, and you can see that the entity @bill was detected as well.
 
@@ -249,33 +251,30 @@ Since you’re going to be using intents in this tutorial, you need to leave the
 
 With the "Billing question" intent configured, let’s return to Conversation Builder and use the intent to trigger a new dialog.
 
-1. In the upper-left corner, click **< Domains** to return to the list of domains.
-2. Again in the upper-left corner, click **< Apps** to return to the Conversational AI dashboard.
-3. Click **Conversation Builder**.
-4. Select the bot you previously created.
-5. Create a new regular dialog named "Billing".
+1. In the upper-left corner, click **< Back** twice to return to the Conversational AI dashboard.
+2. Click **Conversation Builder**.
+3. Select the bot you previously created.
+4. Create a new regular dialog named "Billing".
     
-    By default, a regular dialog includes a User Says interaction, but it isn't configured yet.
+    By default, a regular dialog includes a Dialog Starter interaction, but it isn't configured yet. You'll use the [Assist tool](conversation-builder-assist.html) to do this.
 
-    The [NLU Assist tool](conversation-builder-nlu-assist.html) that automatically appears helps you to link the domain and intent to the User Says interaction.
+5. Click <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
+
+6. In Assist, search for the name of the domain that you created (e.g., Acme Corporation).
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/selectdomain.png">
+
+7. Select the domain to associate it with the dialog starter.
+
+    In Assist, the intents within the domain are displayed.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/selectintent.png">
+
+8. Select the "Billing question" intent that you created. This associates the intent with the dialog starter.
     
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selectdomain.png">
+   <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/domainandintent.png"> 
 
-7. In the NLU Assist tool <img style="width:35px" src="img/ConvoBuilder/helloworld/icon_assist.png"> , select the domain you created. This enables NLU Assist to use the platform’s NLU to match your User Says interaction against any available intents. 
-    
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/selecteddomain.png">
-    
-8. Select the User Says interaction, enter the phrase "I have a question about my bill" as the sample text, and press Enter.
-
-    NLU Assist automatically finds appropriate intents to link to the User Says interaction.
-
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/usersaysbilling.png">
-
-9. In the NLU Assist tool, select the "Billing question" intent that you created to associate it with the Billing dialog and the User Says interaction.
-
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/usersaysbilling2.png">
-
-#### Step 7: Add response conditions
+#### Step 7: Add custom rules
 
 Now you can begin to build out the Billing dialog.
 
@@ -287,27 +286,45 @@ Now you can begin to build out the Billing dialog.
 
     When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
 
-3. Add a Text statement to respond to a reply of "yes". For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to http://example.com”. In the **Interaction Details**, on the **Settings** tab, change the interaction's name to "Yes statement" to better differentiate the statement from others. And on the **Next Actions** tab, for **Next Step**, select, "End Interaction." Click **Save**.
+3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes statement" (in the upper-left corner). For the statement's text, enter, "If you'd like a copy of your most recent bill, please go to http://example.com”. Select "End Interaction" as the next action. Click **Save**.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addYesStatement.png">
     
-    You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next step should be to end.
+    You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next action should be to end.
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/yesstatement_end.png">
+4. Add a Text statement to respond to a reply of "no". Name the interaction "No statement" (in the upper-left corner). For the statement's text, enter, “Okay. How else can I help you today?" Click **Save**.
 
-4. Add a Text statement to respond to a reply of "no". For the statement's text, enter, “OK. How else can I help you today?” In the Interaction Details, change this interaction's name to “No statement”. Click **Save**.
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/addNoStatement.png">
 
-    You've got the dialog fleshed out; now you need to add [conditions](conversation-builder-conversation-builder-conditions.html) to detect when a user says "yes" or “no” and direct them to the correct text statement.
+    You've got the dialog fleshed out; now you need to add [custom rules](conversation-builder-interactions-configuration-next-action.html#custom-rules) to detect when a user says "yes" or “no” and direct them to the correct text statement.
 
-5. Select the multiple choice question, and open its Interaction Details. On the **Next Actions** tab, under **Response Match & Actions**, find the Conditions panel.
+5. Return to the multiple choice question, and select the Next Action dropdown.
 
-6. Add a condition to handle a "yes" response: Click the **+** icon beside **Conditions**. Select "Pattern" from the drop-down list, and enter `(yes|yah|yup)` for the pattern. Then, for **Next Step**, select the "Yes statement."
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/customrule1.png">
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/userresponseyes.png">
+6. Add a rule to handle a "yes" response: Click **+ Custom Rule** in the Next Action dropdown. In the Add Next Action Rule window, configure the Yes rule as follows:
 
-7. Add a condition to handle a "no" response: Click the **+** beside **Response Match & Actions** (at the top of the window) to add a second condition set. Add a condition. Select "Pattern" here too, but this time enter `(no|nope|nah)` for the pattern. And for the **Next Step**, select the "No statement."
+    * **Rule name**: Enter "Yes rule".
+    * **Condition**: Click **+ Add Condition**. Select "Pattern" from the drop-down list of match types, and enter `(yes|yah|yup)` for the pattern.
+    * **And Go To**: Select the "Yes statement" as the next action.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/customrule2.png">
+
+7. Add a rule to handle a "no" response: Click the **+ Custom Rule** button that's displayed once you have at least one rule defined. In the Next Action Rule window, configure the No rule as follows:
+
+    * **Rule name**: Enter "No rule".
+    * **Condition**: Click **+ Add Condition**. Select "Pattern" from the drop-down list of match types, and enter `(no|nope|nah)` for the pattern.
+    * **And Go To**: Select the "No statement" as the next action.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/customrule3.png">
+
+    The multiple choice question should now look like this:
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/customrule4.png">
 
     Now let's see the dialog in action.
 
-8. Open the Preview window, and start a new session by entering "reset" and pressing Enter.
+8. Open the Preview window, and start a new session by clicking **Reset Session**.
 
 9. Enter an utterance that should match the billing intent, like, "I have a question about my bill". You should see the billing dialog and multiple choice question. Tap or enter “yes” or “no” and see what response you get.
 
@@ -331,11 +348,12 @@ This tutorial uses an example API that returns random balance data when given an
 #### Step 8: Create an account balance API integration
 
 1. Open the bot in Conversation Builder.
-2. In the upper-right corner, click **Integrations**.
+2. In the upper-left corner, click **Integrations**.
 3. On the Add Integration page, configure the integration as follows, and then click **Save**.
 
   * **Integration Name**: Balance
   * **Response Data Variable Name**: Balance
+  * **Integration Type**: API
   * **Method**: GET
   * **URL**: 
     * For US: https://va.bc-intg.liveperson.net/thirdparty-services-0.1/accountBalance
@@ -354,7 +372,7 @@ This tutorial uses an example API that returns random balance data when given an
     <tbody>
     <tr>
       <td>accountNumber</td>
-      <td>{$botContext.slot.accountNumber} </td>
+      <td>{$botContext.slot.accountNumber}</td>
     </tr>
     <tr>
       <td>email</td>
@@ -381,55 +399,79 @@ This tutorial uses an example API that returns random balance data when given an
 
 #### Step 9: Use the integration in a dialog
 
-1. Return to the dialog editor by clicking the bot name in the upper-left corner.
-  
-    <img style="width:200px" src="img/ConvoBuilder/helloworld/navfromintegrations.png">
+1. In the upper-left corner, click **Dialogs** to return to the dialog editor.
 2. Add a regular dialog named "Account Balance."
-3. In the dialog, in the User Says interaction, enter, "I want to see my account balance" for the sample user statement.
-4. Open the interaction's **Interaction Details**, and click **Settings**. Here you can add a simple pattern to detect the word “balance” (or you can create an intent if you want to get fancy). You can use the wildcards (`*balance*`) to match all instances.
-<img class="fancyimage" style="width:850px" src="img/ConvoBuilder/helloworld/accountbalancedialog.png">
-5. Add a Text statement <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_textStatement.png"> that says, "I can get your latest balance."
+3. In the Dialog Starter interaction, click **+ Pattern**, and enter a simple pattern to detect the word “balance” (or you can create an intent if you want to get fancy). You can use the wildcards (`*balance*`) to match all instances.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/accountbalancedialog.png">
+
+4. Add a Text statement <img style="width:25px" src="img/ConvoBuilder/helloworld/icon_textStatement.png"> that says, "I can get your latest balance."
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/balanceTextStmt.png">
 
     To get the user's account balance, you need to ask for their account number.
-6. Add a Text question <img style="width:20px" src="img/ConvoBuilder/helloworld/icon_textQuestion.png">. For the question text, enter, "Please enter your 6-digit account number (e.g., 123456)."
-7. Still in the Text question, open the Interaction Details, and add a condition on the **Next Actions** tab. To do so, select "Regular Expression," and add the following regular expression (regex) to match 6-digit numbers: `^\b\d{6}\b`. Next, capture the user’s account number as a slot variable. Under Slot, enter a **Slot Name** of "accountNumber"; for **Slot Value**, enter `{$userMessage}`; and for **Duration**, make sure it's set to "Dialog." 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/askaccountnumber.png">
-  You also need to ask for and capture the user's email address.
-8. Add another Text question. For the question text, enter, "Please enter your email address (e.g., fred@home.com)."
-9. Still in the Text question, open the Interaction Details, and add a condition on the **Next Actions** tab. To do so, select "Regular Expression," and add the following regex to match email addresses: `^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$`. Under Slot, enter a **Slot Name** of "userEmail"; for **Slot Value**, enter `{$userMessage}`; and for **Duration**, make sure it’s set to "Dialog."
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/askemail.png">
-  When you created the Balance integration, you told it to use the following slots in the request:
+
+5. Add a Text question <img style="width:20px" src="img/ConvoBuilder/helloworld/icon_textQuestion.png">. For the question text, enter, "Please enter your 6-digit account number (e.g., 123456)."
+
+6. Still in the Text question, add a custom rule that checks whether the account number is valid: Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Valid account number". Then click **+ Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match 6-digit numbers: `^\b\d{6}\b`. Next, capture the user’s account number as a slot variable: Click **+ Add Slot**. Name the slot "accountNumber", enter `{$userMessage}` for its value, and make sure it has a duration of "Dialog." Click **Save**.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/askaccountnumber.png">
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/askaccountnumber2.png">
+
+    You also need to ask for and capture the user's email address.
+
+7. Add another Text question. For the question text, enter, "Please enter your email address (e.g., fred@home.com)."
+
+8. Still in the Text question, add a custom rule that checks whether the account number is valid: Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Valid email". Then click **+ Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regex to match email addresses: `^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$`. Next, capture the user's email address as a slot variable: Click **+ Add Slot**. Name the slot "userEmail", enter `{$userMessage}` for its value, and make sure it has a duration of "Dialog." Click **Save**.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/helloworld/askemail.png">
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/askemail2.png">
+
+    When you created the Balance integration, you told it to use the following slots in the request:
 
     * `{$botContext.slot.accountNumber}`
     * `{$botContext.slot.userEmail}`
 
     So here, in the Question interactions, you have configured things so that the user's responses are stored in slots with those slot names. Now, when you call the Balance API, it will use the values in those slots to make the request.
-10. Add an API Integration interaction <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_integration.png">.  In the drop-down list in the interaction, select "Balance." This is the name of the integration that you created earlier.
+
+9. Add an API Integration interaction <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_integration.png">.  In the drop-down list in the interaction, select "Balance." This is the name of the integration that you created earlier.
     
+     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/callapi.png">
+
     To finish, you just need to display the user's balance results.
-11. Add a Text statement that says, "Your current balance is {Balance.balance}." 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/helloworld/dialogflow_accountbalance.png">
-  When the integration interaction runs, it stores the response data in the custom data field that you configured in the integration. `Balance.balance` is the name of the integration name followed by the name of that custom data field, which is “balance”.
+
+10. Add a Text statement that says, "Your current balance is {Balance.balance}."
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/helloworld/displaybalance.png">
+    
+    When the integration interaction runs, it stores the response data in the custom data field that you configured in the integration. `Balance.balance` is the name of the integration name followed by the name of that custom data field, which is “balance”.
   
     Now let's test all this out.
-12. Open the Preview window, and start a new session by entering "reset" and pressing Enter.
-13. Trigger the Account Balance dialog by entering, "I want to see my account balance," or something else with the word "balance."
-14. Follow the two prompts for an account number and email address. *Any* 6-digit account number and *any* email address will work for this API.
-  <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/integrationtest.png">
-  You now understand the basics of integrations and slots.
+
+11. Open the Preview window, and start a new session by clicking **Reset Session**.
+
+12. Trigger the Account Balance dialog by entering, "I want to see my account balance," or something else with the word "balance."
+
+13. Follow the two prompts for an account number and email address. *Any* 6-digit account number and *any* email address will work for this API.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/integrationtest.png">
+
+    You now understand the basics of integrations and slots.
 
 
-### Connect to Live Engage tutorial
+### Connect to Conversational Cloud tutorial
 
-In this tutorial, you walk through how to link your bot to LiveEngage, ending with an integration that transfers to a human agent.
+In this tutorial, you walk through how to link your bot to Conversational Cloud, ending with an integration that transfers to a human agent.
 
-#### Step 10: Configure LiveEngage
+#### Step 10: Configure Conversational Cloud
 
 In this step, you create two user agents, one for the bot and one for the human that will be receiving the inbound transfers (for human "escalation"). Each user agent will have an assigned skill, which you'll also create.
 
 ##### Create the skills
 
-1. [Log in](https://authentication.liveperson.net/login.html) to your LiveEngage account. 
+1. [Log in](https://authentication.liveperson.net/login.html) to your Conversational Cloud account. 
 2. Click the **Manage users and skills** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_usersAndSkills.png"> , and then click the **Skills** tab.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/manageUsersAndSkillsIcon.png">
@@ -448,14 +490,13 @@ In this step, you create two user agents, one for the bot and one for the human 
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_1.png">
 
-7. In the list of skills, select the Bot skill, and then note the URL that's displayed in the browser's address bar. Write down the skill ID in the URL, as it will be needed later. The skill ID is the number at the end of the URL: https://z1.le.liveperson.net/a/accountNumber/#um!skills/**skillID**.
-8. Repeat the preceding step to copy down the skill ID for the Human skill.
+7. In the list of skills, select the Human skill, and then note the URL that's displayed in the browser's address bar. Write down the skill ID in the URL, as it will be needed later. The skill ID is the number at the end of the URL: https://z1.le.liveperson.net/a/accountNumber/#um!skills/**skillID**.
 
-##### Create the LiveEngage agents
+##### Create the Conversational Cloud agents
 
 In addition to the skills, you also need user agents, one for the bot and one for the agent that will be receiving the inbound transfers (for human escalation).
 
-1. Still in LiveEngage, click the **Users** tab.
+1. Still in Conversational Cloud, click the **Users** tab.
 2. Click the **Add user** button at the bottom of the page.
 3. On the Add User page, specify the following:
     * **User type**: Set this to "Bot." If you don't see this field, contact your LivePerson representative to enable this for you.
@@ -469,14 +510,14 @@ In addition to the skills, you also need user agents, one for the bot and one fo
     * **Skills**: Click this field, and select "Bot" from the list that appears. This is the default bot skill. **Do NOT add additional skills.**
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/confLE_2.png">
 4. Click **Save**.
-5. Repeat steps 2 - 4 to create a human agent, and assign the Human skill to the human agent. Alternatively, assign the Human skill to your own user account, and make sure your user is set to Available (so you can take chats), not Away or Offline.
+5. Assign the Human skill to your own user account, and make sure your user is set to Available (so you can take chats), not Away or Offline.
 
 ##### Assign the bot skill to an engagement
 
 You will test this connection with a standard web chat engagement, so now you create a campaign and an engagement that routes to the new Bot skill.
 
 1. Click the **Manage campaigns and engagements** icon <img style="width:30px" src="img/ConvoBuilder/helloworld/icon_le_campaigns.png">.
-2. In the upper-right corner, click **Action > Add**.
+2. Click **+ Add Campaign** at the bottom of the page.
 3. On the page that appears, specify the following:
     * **Campaign name**: Enter "Bot test."
     * **Campaign goal**: Click this, select "Interact with consumers" on the page that appears, and click **Done**.
@@ -488,46 +529,48 @@ You will test this connection with a standard web chat engagement, so now you cr
 6. In the Engagement Window Library, click **Done**.
 
     <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/confLE_6.png">
-7. Click **Publish** in the upper-right corner.
+7. Click **Publish** in the upper-right corner. Then click **Publish** again to confirm the action.
 
 #### Step 11: Set up the transfer from bot to human
 
-In this step, you set up an "escalation" to transfer the user to a human agent in LiveEngage.
+In this step, you set up an "escalation" to transfer the user to a human agent in Conversational Cloud.
 
 1. Return to Conversation Builder, and open the bot.
 
 2. Create a new regular dialog named "Agent Handoff" (or similar).
 
-3. In the default User Says interaction that's provided, enter "I want to speak to an agent" as the sample user statement.
+3. In the Dialog Starter interaction, click **+ Pattern**.
 
-4. Open the User Says interaction's **Interaction Details**, and click the **Settings** tab.
+4. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
 
-5. Add the following pattern: `*(agent|representative|help|human)*`. Click **Save**.
+    <img style="width:600px" src="img/ConvoBuilder/helloworld/escalation_ds.png">
 
-6. Add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) ( <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png"> ) beneath the User Says interaction.
+5. Add an [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions) ( <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png"> ) beneath the Dialog Starter interaction.
 
-7. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
+6. Note the default message to be sent to the user prior to escalation. Replace this with, "Hold on while I transfer you to an agent..." Alternatively, if you don't want to send a message, enter "BLANK_MESSAGE".
 
-8. Still in the Agent Transfer interaction, open the **Interaction Details**, and click the **Settings** tab.
+    <img style="width:600px" src="img/ConvoBuilder/helloworld/escalation_at.png">
 
-9. In the **Agent Skill Id** field, enter the ID number of the human skill that you created; you wrote this down earlier.
+7. Still in the Agent Transfer interaction, click the **Settings** icon in the upper-right corner. Then click the **Advanced** tab.
 
-    <img style="width:800px" src="img/ConvoBuilder/helloworld/escalation_skillId.png">
+8. In the **Agent Skill Id** field, enter the ID number of the human skill that you created; you wrote this down earlier.
 
-    (While you set the skill name and ID to that for a specific skill, you could also set these values using variables for a more dynamic experience.)
+    <img style="width:500px" src="img/ConvoBuilder/helloworld/escalation_skillId.png">
 
-10. Click **Save**.
+    (While you set the skill ID to that for a specific skill, you could also set the value using a variable for a more dynamic experience.)
 
-#### Step 12: Deploy the bot to LiveEngage
+9. Click **Save**.
+
+#### Step 12: Deploy the bot to Conversational Cloud
 
 In this step, you use Conversation Builder to connect your bot to the bot agent you just created and get the connection running in the Demo environment.
 
 ##### Add the agent connector
 
-1. Still in the bot in Conversation Builder, click **Agent Connectors** on the menu bar in the upper-right corner.
-2. Click **New Bot Connector** in the upper-right corner, just under the menu bar.
+1. Still in the bot in Conversation Builder, click **Agent Connectors** on the menu bar in the upper-left corner.
+2. Click **Add Agent Connector** in the upper-right corner.
 3. In the Add Agent Connector dialog box, specify the following based on the bot user you created.
-    - **Agent User ID**: Select the user ID for the bot user agent.
+    - **Agent User ID**: Select the user ID for the bot user agent. This should be "bot_user" or something similar.
     - **Role**: Select "Agent."
     - **Conversation Type**: Select "Messaging."
     - **Deploy to**: Select "Demo." The Demo environment is a testing environment, and the Production environment is the live environment. It's always a best practice to test your bot in the Demo environment first, before deploying it to the Production environment.
@@ -536,7 +579,7 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/helloworld/agentConnectorsPage1.png">
 
 {: .important}
-LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
+LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 ##### Start the agent connector
 
@@ -545,14 +588,13 @@ LivePerson recommends that, when you connect your bot to LiveEngage in a product
     It might take a few minutes for the connection to be established.
 
     To view more details about the connector, move your mouse over the **i** icon beside **Details**.
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/helloworld/agentConnectorsPage3.png">
 
 #### Step 13: Test the bot
 
 {: .important}
 In this step, you'll be testing with Messaging, so you'll be using [this test page](https://vx-lp.github.io/v2/lpwm/). When you test with Chat, you can use [this test page](https://livepersoninc.github.io/visitor-page/?siteid=%5Byour%20account%20number%5D), adding your account number to the URL.
 
-1. Be sure you are online as a Human agent in LiveEngage.
+1. Be sure you are online as a Human agent in Conversational Cloud.
 
 2. In a browser, navigate to [this test page](https://vx-lp.github.io/v2/lpwm/).
 
@@ -574,14 +616,14 @@ In this step, you'll be testing with Messaging, so you'll be using [this test pa
 
     The conversation should be transferred to you as long as you assigned your test agent with the appropriate skill.
 
-6. Return to Conversation Builder. On the left sidebar, note the message indicator on the "Agent workspace for Chat" icon.
+7. Return to Conversational Cloud. On the left sidebar, note on the "Agent workspace for Chat" icon that there's a message indicator.
 
-    <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/helloworld/messageindicator.png">
+    <img class="fancyimage" style="width:75px" src="img/ConvoBuilder/helloworld/messageindicator.png">
 
-7. Click the icon to enter the agent workspace in LiveEngage, and then select the connection in the table. Click **Accept** in the lower-left corner.
+8. Click the icon to enter the agent workspace in Conversational Cloud. Then click **Accept** in the lower-left corner.
 
-   <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/webvisitors_accept.png">
+   <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/helloworld/webvisitors_accept.png">
 
-    As an agent, when you accept the inbound transfer, you should see something like this below in your LiveEngage dashboard. You can now take part in live chat.
+    As an agent, when you accept the inbound transfer, you should see something like this below in your Conversational Cloud dashboard. You can now take part in a live chat.
 
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/confLE_19.png">

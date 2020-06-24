@@ -327,7 +327,7 @@ func reconnect(_ conversationQuery: ConversationParamProtocol, authenticationPar
 
 Use this API method, in AppDelegate, to register to LPMessagingSDK push notifications.
 
-**Note:** Push notifications must be pre-configured, and you must upload an APN certificate to LiveEngage. For details, see [how to configure push notifications](push-service-overview.html).
+**Note:** Push notifications must be pre-configured, and you must upload an APN certificate to Conversational Cloud. For details, see [how to configure push notifications](push-service-overview.html).
 
 ```swift
 func registerPushNotifications(token: Data, notificationDelegate: LPMessagingSDKNotificationDelegate? = nil, alternateBundleID: String? = nil, authenticationParams: LPAuthenticationParams? = nil)

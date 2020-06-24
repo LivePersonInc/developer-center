@@ -17,7 +17,7 @@ The template can be configured to handle Web, SMS, Apple Business Chat, WhatsApp
 
 <img style="width:300px" src="img/ConvoBuilder/template_full_lead_image_0.png"> <img style="width:300px" src="img/ConvoBuilder/template_full_lead_image_1.png">
 
-### Included Items
+### Included items
 
 #### Dialogs
 
@@ -43,12 +43,12 @@ The template can be configured to handle Web, SMS, Apple Business Chat, WhatsApp
 * Fallback
     * Will display when the user enters an utterance that is not recognized.
 * EscalateLiveAgent
-    * This will perform a transfer to a particular LiveEngage skill.
+    * This will perform a transfer to a particular Conversational Cloud skill.
 
 #### Integrations
 
 * Agent_Transfer
-    * As you would expect, this will perform a transfer to a LiveEngage skill.
+    * As you would expect, this will perform a transfer to a Conversational Cloud skill.
     * You will need to configure the skill name, id and transfer message in the Global Functions.
 * Get_Categories
     * For the API driven options gallery, this integration with Shopify will return the title and image URL from your Shopify account.
@@ -60,19 +60,15 @@ The template can be configured to handle Web, SMS, Apple Business Chat, WhatsApp
     * This integration will send the LeadGen results to an SMS number using your Twilio account information.
     * You will need to configure your Twilio account information in the Global Functions.
 
-### Configuration Needed
+### Configuration needed
 
 To customize this template, you will need to do the following.
 
-#### General Dialog Customization
+#### General dialog customization
 
-You will want to review each of the dialogs, starting with Welcome and Lead Gen, and customize the verbiage used to greet your customer and request their details.
+You will want to review each of the dialogs, starting with Welcome and Lead Gen, and customize the verbiage used to greet your customer and request their details. This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
 
-This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
-
-<img class="fancyimage" style="width:600px" src="/img/ConvoBuilder/template_full_lead_image_2.png">
-
-#### Lead Gen Dialog
+#### Lead Gen dialog
 
 The name, email and phone number steps of the LeadGen dialog are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if you prefer.
 
@@ -84,7 +80,7 @@ setVariable('maxEmailInvalidAttempts', 2);
 setVariable('maxPhoneInvalidAttempts', 2);
 ```
 
-If you want to remove some of the lead gen capture interactions (eg: phone number), you will need to be sure to review the **Next Step** navigation so that the previous interaction will go to the next interaction in the dialog. 
+If you want to remove some of the lead gen capture interactions (e.g., phone number), you will need to be sure to review the **Next Action** navigation so that the previous interaction will go to the next interaction in the dialog. 
 
 Also, if you are using SMS as opposed to Email to send out the results, you will need to change the appropriate variables from "true" to “false” in Global Functions.
 
@@ -93,36 +89,38 @@ setVariable('sendEmail', 'true');
 setVariable('sendSMS', 'false');
 ```
 
-#### Channel Detection
+#### Channel detection
 
-Navigate to the Global Functions. 
+Navigate to **Global Functions**. 
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_7.png">
 
 The first thing our functions do is to get the particular channel the user is coming from. If you would like to force the channel to make the ABC or SMS option dialogs appear, you can set the channel variable to the following:
 
 ```javascript
-//var channel = botContext.getChannel(); // use this by default
-var channel = "CustomContext"; // set this to "CustomContext" for ABC or "sms" for SMS
-botContext.printDebugMessage("=====> USER CHANNEL IS: " + channel);
-setVariable('channel', channel);
+// What channel is the user on? If you'd like to force the display of a particular channel's content, 
+  // set the "channel" variable to: "CustomContext" for ABC, "sms" for SMS. Web will be displayed by default.
+  //var channel = "CustomContext";
+  var channel = botContext.getChannel(); // Comment this line out if forcing the channel
+  botContext.printDebugMessage("=====> USER CHANNEL IS: " + channel);
+  setVariable('channel', channel);
 ```
 
-#### Options Dialogs
+#### Options dialogs
 
 The Options dialogs are offered for a few different channels:
 
-* List picker for Apple Business Chat (ABC);
+* List picker for Apple Business Chat (ABC)
 
-* Simple list with a,b,c, etc variants for SMS
+* Simple list with a,b,c, etc., variants for SMS
 
-* Text card with buttons OR product gallery for Web.
+* Text card with buttons OR product gallery for Web
 
-##### Enable or Disable Options Dialogs
+##### Enable or disable Options dialogs
 
 To configure the display (or not) of these options, navigate to the Global Functions.
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_11.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/template_full_lead_image_11.png">
 
 Options are set to be shown by default, but if you don’t want them to be shown in your bot flow just type ‘off’ value for the 'enableOptions' variable:
 
@@ -157,32 +155,39 @@ Options are set to be shown by default, but if you don’t want them to be shown
 <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_12.png"><img class="fancyimage" style="width:300px" src="img/ConvoBuilder/template_full_lead_image_13.png">
 
 
-##### Configure Options Dialogs
+##### Configure Options dialogs
 
-Each of the Options dialogs are displaying a number of products or services to the user and, based on their selection, setting the result to a variable called **selectedProduct**. When you add your own products and services to these interactions, be sure to configure the [Conditions and Patterns](conversation-builder-conversation-builder-conditions.html) so that your products and services will be matched and sent to the variable.
+Each of the Options dialogs are displaying a number of products or services to the user.
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_3a.png">
+
+ Based on the user's selection, each dialog also sets the result to a variable called **selectedProduct**. When you add your own products and services to these interactions, be sure to configure the [conditions and patterns](conversation-builder-conversation-builder-conditions.html) so that your products and services will be matched and sent to the variable.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_3.png">
 
-If you want to display these options dialogs, after you have configured the Global Functions appropriately, depending on which channels you are supporting, you will want to populate the various options interactions with your content.
+If you want to display these Options dialogs, after you have configured the Global Functions appropriately, depending on which channels you are supporting, you will want to populate the various options interactions with your content.
 
 **Options for ABC**
 
-<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_4.png">
+If supporting Apple Business Chat, you will want to replace and customize the ListPicker that displays your products and services. Just tap on the images or the text fields to edit. You can see over in the preview how it will appear (if you have hard coded the channel in the Global Functions).
 
-If supporting Apple Business Chat, you will want to replace and customize the ListPicker that displays your products and services. Just tap on the images or the text fields to edit. You can see over in the preview how it will appear (if you have hard coded the channel in the global functions).
+<img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_4.png">
 
 **Options for SMS**
 
-If you are supporting SMS, you will need to update the list based menu options. Though they may not look like they are displaying properly in the Chat Preview, they will on SMS.
+If you are supporting SMS, you will need to update the list-based menu options. Though they may not look like they are displaying properly in the Chat Preview, they will on SMS.
 
-As mentioned previously, be sure to add a Condition for each of your menu items (as shown below).
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_5a.png">
+
+As mentioned previously, be sure to add a custom rule for each of your menu items (as shown below).
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_5.png">
 
 **Options for Web Buttons**
 
-If you are supporting a web client and want to show your options as a button tile, once you have configured the Global Functions accordingly, be sure to set up your Condition (as shown below).
+If you are supporting a web client and want to show your options as a button tile, once you have configured the Global Functions accordingly, be sure to set up your custom rule (as shown below).
 
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_full_lead_image_6a.png">
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/template_full_lead_image_6.png">
 
 #### Agent Escalation Integration

@@ -23,7 +23,7 @@ The below solution assumes the following prerequisites are met:
 
 * Your brand’s website is live with Web Messaging
 
-* Your brand is capable of hosting and maintaining a custom LiveEngage Solution
+* Your brand is capable of hosting and maintaining a custom Conversational Cloud Solution
 
 * LivePerson best practice dictates that any custom solutions are hosted by the brand. The code package that goes along with this document is written as a [https://nodejs.org/en/](Node.js web application)
 

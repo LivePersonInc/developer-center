@@ -15,7 +15,7 @@ indicator: messaging
 ---
 
 
-Send logs from LiveEngage to your app. Logs include different severity levels of errors and warnings.  
+Send logs from Conversational Cloud to your app. Logs include different severity levels of errors and warnings.  
 
 1. This method subscribes the host app to recieve log events from a specific log level and above.
 

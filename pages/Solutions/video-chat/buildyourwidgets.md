@@ -13,7 +13,7 @@ indicator:
 ---
 
 
-Once you have the video service and accompanying html elements in place, you are ready to build the two LiveEngage widgets for your video call: the agent side widget and the customer side widget.
+Once you have the video service and accompanying html elements in place, you are ready to build the two Conversational Cloud widgets for your video call: the agent side widget and the customer side widget.
 
 ### Agent side widget
 
@@ -23,7 +23,7 @@ Once you have the video service and accompanying html elements in place, you are
 
 * [Add widget to the agent workspace](/guides-agent-workspace-widget.html)
 
-The Agent Workspace Widget is an iframe-based service that loads your web application according to a URL configured in the LiveEngage Workspace. 
+The Agent Workspace Widget is an iframe-based service that loads your web application according to a URL configured in the Agent Workspace. 
 
 It is comprised of the following:
 
@@ -53,7 +53,7 @@ Recommendations:
 
 **Implement the window application**
 
-Contact your LivePerson representative and request to deploy your window application code into LiveEngage taglet manager
+Contact your LivePerson representative and request to deploy your window application code into Conversational Cloud taglet manager
 
 **Test your application**
 

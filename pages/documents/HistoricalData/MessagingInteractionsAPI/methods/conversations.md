@@ -26,6 +26,8 @@ offset | The offset specifies from which record to retrieve the chat. | numeric 
 limit  | Max amount of conversations to be received in the response.  | numeric | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort| Sort the results in a predefined order. | string  | Optional | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
 v| version of the API (1 or 2)  | string  | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs) be returned. When using v=2, both unauthenticated and authenticated SDEs will have a type as defined in the engagement attribute in question and not String.|
+source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+
 
 **BODY/POST Parameters**
 
@@ -33,7 +35,7 @@ v| version of the API (1 or 2)  | string  | Optional | default value is 1. Only 
 
 The API now allows you to retrieve some of the content, per your need, instead of every possible key. This is done by calling the API with the `contentToRetrieve` parameter and specifying the types of content you would like to get i
 
-<div class="important">Because this API retrieves <b>some</b> of the SDEs that are supported in LiveEngage by design, it is not suitable for brands looking for <b>all</b> of their data. The data retrieved by this API will be partial, usually limited to the last update LiveEngage performed to the SDEs. If you're looking into retrieving all of your data instead, the <a href="data-access-api-overview.html">Data Access API</a> is better suited to your needs. You can also refer to the <a href="messaging-interactions-api-methods-get-conversation-by-conversation-id.html">Get Conversation by ID method</a> of this API if you're looking for all SDEs for one specific conversation.</div>
+<div class="important">Because this API retrieves <b>some</b> of the SDEs that are supported in Conversational Cloud by design, it is not suitable for brands looking for <b>all</b> of their data. The data retrieved by this API will be partial, usually limited to the last update Conversational Cloud performed to the SDEs. If you're looking into retrieving all of your data instead, the <a href="data-access-api-overview.html">Data Access API</a> is better suited to your needs. You can also refer to the <a href="messaging-interactions-api-methods-get-conversation-by-conversation-id.html">Get Conversation by ID method</a> of this API if you're looking for all SDEs for one specific conversation.</div>
 
 When calling the API **without** sending **'contentToRetrieve'** parameter at all, the following default types will be returned:
 
@@ -63,7 +65,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |keyword | Specific word or phrase found in the messages of the conversation. | alphanumeric  | Optional |
 |summary | Specific word or phrase found in the summary of the conversation.  | alphanumeric  | Optional |
 |duration {from, to} | Range of conversation length (in seconds). | numeric, numeric | Optional | If one parameter is filled out, the other parameter must be as well. Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to 0 or the retention time of conversations (13 months), respectively.
-|mcs {from,to} | Range of Meaningful Connection Score in a particular conversation (including the boundaries). | numeric, numeric | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
+|mcs {from,to} | Range of Meaningful Conversation Score in a particular conversation (including the boundaries). | numeric, numeric | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively.
 |alertedMcsValues | Alerted MCS of the conversation up until the most recent message.  | Array `<alertedMCS>`| Optional | Valid values: "-1", "0", "1"
 |csat {from,to}| Range of CSAT assigned to the conversation.| numeric, numeric | Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of CSAT (1 or 5 respectively). For accounts that are using both the old CSAT method and the new PCS based CSAT, this field will return unified results.
 |source  | Source origin (Facebook, App etc.) from which the conversation was initially opened. | Array `<String>` | Optional | Possible values: APP, SHARK (WEB), AGENT, SMS, FACEBOOK, Apple Business Chat, WhatsApp Business
@@ -72,7 +74,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |latestConversationQueueState | The queue state of the conversation  | String| Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
 responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
-|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, latestAgentSurvey, previouslySubmittedAgentSurveys|
+|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to} | Range of NPS assigned to the conversation. | numeric, numeric| Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
 |questionBrick | Match a specific word within a PCS question name or brick ID | alphanumeric  | Optional |
@@ -82,8 +84,6 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |fcr  | Values of FCR (First Call Resolution) assigned to the conversation.| Array `<String>` | Optional | Possible values: yes, no. |
 |questionTypeAndFormatToRetrieve {type,format} | Type and format of questions to retrieve | String, String| Optional | Possible values: Type: custom, csat, nps, fcr. Format: single, open. |
 |answerText | Specific words or phrases from PCS free text answers | Array `<String>` | Optional |
-|intentName | Intent names in the intentName parameter match the intentName field of any detected intent. Pass the intentName you'd like to filter by | Array `<String>` | Optional | Get only conversations that have at least one intent with a name from the specified list. Intent names must be accurate from  a character standpoint, and are not case sensitive. |
-|intentConfidenceScore | The intentConfidenceScore field is greater or equal to the confidenceScore parameter of any detected intent. | double - up to 3 decimal digits. | Optional | Get only conversations that have at least one intent with a confidenceScore field that is greater or equal to confidenceScore parameter. When using this filter together with the 'intentName' filter above, the score refers to the intents that were specified as part of the 'intentName' list. |
 |selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
 |conversationsWithStepUpOnly | This parameter will return TRUE if a step up took place during the conversation. | boolean. | Optional | Get only conversations that had a step up  |Filters examples:
 |agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional , with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|   
@@ -120,8 +120,6 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |fcr  | {"start":{"from":1470037448000,"to":1472543048000},"fcr":["yes","no"]}|
 |questionTypeAndFormatToRetrieve | {"start":{"from":1470037448000,"to":1472543048000}, "questionTypeAndFormatToRetrieve":{"type":"custom","format":"open}}|
 |answerText  | {"start":{"from":1470037448000,"to":1472543048000},"answerText":["good","bad","ugly"]}|
-|intentName | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["campaign","intents"],"intentName":["Plan_inquiry_46","Remove_Plan_46"]}|
-|intentConfidenceScore | {"start":{"from":1541578792011,"to":1541578895020}, "contentToRetrieve":["messageRecords","intents"],"intentConfidenceScore":0.65} |
 |conversationsWithStepUpOnly | {"start":{"from":1541578792011,"to":1541578895020},,"contentToRetrieve":["messageRecords"],"conversationsWithStepUpOnly":true}|**Note: search by keywords, summary or engagement attributes**
 |agentSurveySearch   | {"start":{"from":1470037448000,"to":1472543048000},"agentSurveySearch":{"pendingAgentSurvey":[true], "questionId":["id1","id2"], "questionName":["id1","id2"], "questionKeywords":["keyword1","keyword2"],"answerKeywords":["keyword1","keyword2"],"surveyId":[3592872510]}}
 
@@ -172,6 +170,7 @@ sdes  | List of Engagement Attributes. | container
 responseTime| Response time| container
 dialogs  | Contains information about the different dialogs for the current conversation. | container
 intents  | Contains information about the intents that relate to the current conversation. | container
+uniqueIntents  | Contains basic information about the unique intents that relate to the current conversation. | container
 
 _Conversation info_
 
@@ -187,7 +186,7 @@ closeReason | Reason for closing the conversation - by agent / consumer.  | stri
 closeReasonDescription | Additional information regarding the conversation close reason| string  |
 firstConversation | Whether it is the consumer's first conversation.| Boolean |
 csat  | CSAT score of the conversation (as given in the answer). | int  | Range: 1 to 5.
-mcs| Meaningful Connection Score of the conversation.| int  | Range: 0-100\. If it is for an open conversation, the score is take from the conversation up until the most recent interaction.
+mcs| Meaningful Conversation Score of the conversation.| int  | Range: 0-100\. If it is for an open conversation, the score is take from the conversation up until the most recent interaction.
 alertedMCS  | Divides the MCS score into 3 groups: Positive, Neutral, Negative. | int  | Values: -1, 0, 1
 source| Source origin (Facebook, app, etc). | string  |
 device| Device origin (desktop, smartphone, etc.).| string  |
@@ -220,6 +219,8 @@ ipAddress | Current connection user IP | string |
 isPartial | The response is truncated. This can happen when you attempt to retrieve large amounts of data for a consumer or a conversation too many times, in order to protect server stability | Boolean |
 wasStepUp | Indicates if the conversation had a step up | Boolean |
 pendingAgentSurvey | Indicate if the conversation has a pending agent survey. | Boolean |
+firstIntentName | The id of the intent that was created based on the first intent-able message in the conversation. | string |
+firstIntentLabel | The label of the intent that was created based on first intent-able message in the conversation. | string |
 
 _Campaign info_
 
@@ -246,7 +247,9 @@ _Campaign info_
 | LocationId  | ID of the location of the engagement on the screen.| numeric |
 | LocationName| describes the engagement display location.| alphanumeric  | The default location is the entire website.  
 | behaviorSystemDefault| Indicates whether visitor behavior is the default one.| Boolean |
-| profileSystemDefault | Indicates whether visitor behavior is the default one.| Boolean | _Monitoring_
+| profileSystemDefault | Indicates whether visitor behavior is the default one.| Boolean |  
+
+_Monitoring_
 
 |Name  | Description | Type/Value | Notes|
 |------|-------------|------------|------|
@@ -261,7 +264,9 @@ _Campaign info_
 | browser | Browser of the consumer who engaged in the conversation | alphanumeric  | |
 | operatingSystem | Operating System of the consumer who engageed in the conversation. | alphanumeric | |
 | conversationStartPage | The page's URL from which the conversation started. | alphanumeric| |
-| conversationStartPageTitle | The page's title from which the conversation started. | alphanumeric | |_Message Info_
+| conversationStartPageTitle | The page's title from which the conversation started. | alphanumeric | |  
+
+_Message Info_
 
 Name | Description| Type/Value | Notes
 :------------ | :------------------------------------------ | :--------- | :-------------------------------------------------
@@ -378,7 +383,7 @@ Name| Description  | Type/Value | Notes
 messageId | ID of message.  | string  |
 time| Time the MCS was calculated.| string  |
 timeL  | Time the MCS was calculated, in long format.  | long |
-mcs | Meaningful Connection Score of the conversation up to this message | int  | Range: 0 - 100.
+mcs | Meaningful Conversation Score of the conversation up to this message | int  | Range: 0 - 100.
 messageRawScore | Score of message.  | int
 
 *Conversation CoBrowse Sessions DTO*
@@ -552,7 +557,8 @@ _IntentAnalyzerClassification DTO_
 
 Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
-intentName | The name of this intent. | string
+intentName | The id of the intent. | string
+intentLabel | A Friendly label of the intent. | string
 confidenceScore | Intent confidence score. | double - up to 3 decimal digits
 versions| Model versions used to generate this intent. |  Array `<IntentAnalyzerVersionDTO>`
 
@@ -562,6 +568,13 @@ Name| Description| Type/Value
 :-------------- | :------------------------------------------ | :--------------------------------------------------------------------
 modelName | The name of the model. | string
 modelVersion | The version of the model. | string**JSON Example**
+
+_BasicUniqueIntents info_
+
+Name| Description| Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+intentName | The id of the intent. | string
+intentLabel | A Friendly label of the intent. | string
 
 _Latest Agent Survey_
 
@@ -1055,7 +1068,8 @@ acSurveyRevision| The AC form revision.                        | string     |
       "intents": [
         {
           "selectedClassification": {
-            "intentName": "other--other--n_a",
+            "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
+            "intentLabel": "ask about discount or promotion",
             "confidenceScore": 1,
             "versions": [
               {
@@ -1070,7 +1084,8 @@ acSurveyRevision| The AC form revision.                        | string     |
           },
           "allClassifications": [
             {
-              "intentName": "other--other--n_a",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
+              "intentLabel": "ask about discount or promotion",
               "confidenceScore": 1,
               "versions": [
                 {
@@ -1084,7 +1099,8 @@ acSurveyRevision| The AC form revision.                        | string     |
               ]
             },
             {
-              "intentName": "billing_and_payment--payment_arrangement--set-up_payment_arrangement",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b59",
+              "intentLabel": "ask about fees",
               "confidenceScore": 0,
               "versions": [
                 {
@@ -1102,7 +1118,8 @@ acSurveyRevision| The AC form revision.                        | string     |
         },
         {
           "selectedClassification": {
-            "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information",
+            "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
+            "intentLabel": "ask about discount or promotion",
             "confidenceScore": 0.908,
             "versions": [
               {
@@ -1117,8 +1134,9 @@ acSurveyRevision| The AC form revision.                        | string     |
           },
           "allClassifications": [
             {
-              "intentName": "billing_and_payment--billing_and_payment_support--request_bill_information",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
               "confidenceScore": 0.908,
+              "intentLabel": "ask about discount or promotion",
               "versions": [
                 {
                   "modelName": "sic",
@@ -1131,7 +1149,8 @@ acSurveyRevision| The AC form revision.                        | string     |
               ]
             },
             {
-              "intentName": "other--other--n_a",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b59",
+              "intentLabel": "ask about fees",
               "confidenceScore": 0.265,
               "versions": [
                 {
@@ -1145,8 +1164,9 @@ acSurveyRevision| The AC form revision.                        | string     |
               ]
             },
             {
-              "intentName": "billing_and_payment--billing_and_payment_support--dispute_or_fix_a_bill",
+              "intentName": "321c15e6-fcca-4978-a0ba-281b86803b61",
               "confidenceScore": 0.224,
+              "intentLabel": "ask about discount or promotion",
               "versions": [
                 {
                   "modelName": "sic",

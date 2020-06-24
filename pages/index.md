@@ -57,5 +57,10 @@ solutions with you!
         <button class="create-button">Start Free Trial</button>
       </a>
     </div>
+<<<<<<< HEAD
   </div>
 </div>
+=======
+</div>
+</div>
+>>>>>>> b4d152fbe5b10b528a12bb3a59b8b86aa4c80875

@@ -14,9 +14,9 @@ indicator: both
 
 Users are granted privileges in Conversation Builder by way of assignment of Conversation Builder permissions.
 
-Conversation Builder's permission model is built on LiveEngage’s. You can use LiveEngage’s four roles (Agent, Agent manager, Campaign manager, Admin) as the basis from which to create custom profiles to suit your organization's needs. You can then assign those [profiles](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html) to users.
+Conversation Builder's permission model is built on Conversational Cloud’s. You can use Conversational Cloud’s four roles (Agent, Agent manager, Campaign manager, Admin) as the basis from which to create custom profiles to suit your organization's needs. You can then assign those [profiles](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html) to users.
 
-As an example, in LiveEngage, you might want to create a profile that grants (turns on) all Conversation Builder permissions, naming it something like, "CB - All Permissions," as we've done below.
+As an example, in Conversational Cloud, you might want to create a profile that grants (turns on) all Conversation Builder permissions, naming it something like, "CB - All Permissions," as we've done below.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/permissions2.png">
 

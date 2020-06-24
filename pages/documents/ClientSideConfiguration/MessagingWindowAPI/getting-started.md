@@ -61,7 +61,7 @@ If the connection is closed, you can reconnect using the same ``wscat`` command.
 
 ### Step 4 - Create a New Conversation
 
-Before creating the conversation, log into LiveEngage as an agent. In order for the agent to receive the messages, ensure that no other agent is logged into your account.
+Before creating the conversation, log into Conversational Cloud as an agent. In order for the agent to receive the messages, ensure that no other agent is logged into your account.
 
 To request a new conversation, paste the following message into the connection from the previous step.
 

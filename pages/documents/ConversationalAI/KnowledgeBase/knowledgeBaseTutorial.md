@@ -13,7 +13,7 @@ This tutorial is designed to familiarize you with Knowledge Base.
 
 ### Step 1: Add a knowledge base
 
-1. In the Dashboard, click **Add Knowledge Base** in the upper-right corner.
+1. In the dashboard that lists the available knowledge bases, click **Add Knowledge Base** in the upper-right corner.
 2. For **Data source name**, enter a name for the knowledge base, e.g., "Tutorial KB."
 3. Click **Add**.
 
@@ -98,8 +98,8 @@ Leveraging entities within a knowledge base provides the same benefits that doin
 
 #### Create the entity
 
-1. Inside the domain you just created, click **Entities** in the upper-right corner.
-2. Specify the following:
+1. Inside the domain you just created, click **Entities** in the upper-left corner.
+2. In the Add Entity panel, specify the following:
     * **Entity name**: Enter "credentials."
     * **Entity values**: Add the values below:
         * `log in`
@@ -118,8 +118,8 @@ To use entities within a knowledge base, you'll need to connect the domain to th
 
 1. Exit Intent Builder, and return to Knowledge Base.
 2. Open the knowledge base.
-3. Click <img style="width:25px" src="img/ConvoBuilder/icon_kb_settings.png"> in the lower-right corner.
-4. Click **KB Settings**.
+3. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Knowledge Base Menu**.
+4. In the Settings panel, click **KB Settings**.
 5. Scroll down, and click **More Options**.
 6. In the **Associated Domain for Entity** field, select the name of the domain you just created.
 7. Click **Update**.

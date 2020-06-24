@@ -25,7 +25,9 @@ When using a [knowledge base](knowledge-base-overview.html), it might be desirab
 * A custom event to log when we have a successful response from our FAQ knowledge base
 * A custom event that is triggered from a user response indicating the correctness of the returned article
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bp_eventLogging1.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bp_eventLogging1a.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bp_eventLogging1b.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bp_eventLogging1c.png">
 
 Our first custom event tracks successful knowledge base queries. We'll include the following code in the **Pre-Process Code** section of the interaction that displays our FAQ article. As this interaction is only displayed on a successful API response, we can capture and log information here. 
 
