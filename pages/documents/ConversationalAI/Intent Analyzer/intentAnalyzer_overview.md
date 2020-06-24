@@ -18,7 +18,7 @@ Intent Analyzer is LivePerson's hub for tracking and maintaining intents in real
 You can leverage the consistent flow of data from Intent Analyzer to:
 
 * Power next-generation analytics
-* Orchestrate conversations with [Maven](maven-ai-overview.html)
+* Orchestrate conversations with [Conversation Orchestrator](maven-ai-overview.html)
 * Build effective bots with [Conversation Builder](conversation-builder-bot-workspace.html)
 
 Intent Analyzer integrates seamlessly with [Intent Builder](intent-builder-overview.html) to provide a powerful, unified system for intent modeling and management.
