@@ -39,7 +39,7 @@ indicator: both
 </div>
 
 <div class="container-note">
-    <div class="important" style="width:91%">
+    <div class="important" style="width:63%">
         <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html" alt="Register free trial"> register </a> for a free 45-day trial. Your trial account comes with a pre-configured Concierge Bot who will greet you and offer guidance.
     </div>
 </div>
@@ -71,17 +71,12 @@ Connect to mobile channels and customize your Concierge Bot
         <h5 class="getstarted-title">Conversational AI</h5>
         <p class="getstarted-content ">Customize bot dialogs</p>
   </a>
-  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversation-builder-conversation-builder-overview.html"> 
-        <img class="container-image" src="img/ic_robot.svg"/>
-        <h5 class="getstarted-title">Conversational AI</h5>
-        <h5 class="getstarted-content ">Learn more about Conversation Builder</h5>
-  </a>
 </div>
 <div class="welcome-card-modified">
     <div class="small-header">
       3. Enable Mobile Channels
     </div>
-    <div class="convo-cloud-paragraph">
+    <div class="convo-cloud-paragraph" style="width:64%;">
       The Conversational Cloud enables brands to connect with consumers on their favorite messaging channels. Learn more about popular channels and their capabilities below:
     </div>
 </div>
@@ -106,7 +101,7 @@ Connect to mobile channels and customize your Concierge Bot
     <div class="small-header">
       4. Test your bot
     </div>
-    <div class="convo-cloud-paragraph">
+    <div class="convo-cloud-paragraph"  style="width:64%;">
       Once you’ve customized your bot and connected it to a messaging channel you can test out the experience. For mobile channels, simply send a message in the relevant app to test out your bot. For Web Messaging, select the  <a href="/conversation-builder-testing-deployment-previewing.html" alt="Convo Builder Preview">preview button </a> in the top right corner of the Dialog Editor to test the interaction.
     </div>
 </div>
