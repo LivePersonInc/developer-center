@@ -106,7 +106,7 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
 
     <img class="fancyimage" width="750" src="img/maven/cb-keys.png">
 
-2. [Deploy the bot in Conversational Cloud](conversation-builder-testing-deployment-deploying-to-liveengage.html)
+2. [Deploy the bot in Conversational Cloud](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html)
 
     a. See next step for how to setup a skill in Conversational Cloud to accent the incoming conversations.
 

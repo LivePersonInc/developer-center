@@ -36,7 +36,7 @@ After the pre-requisite steps are performed, at a high level, deployment is a tw
 {: .important}
 LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
-For some practice at deployment, complete the [Connect to Live Engage](conversation-builder-tutorials-guides-getting-started.html) tutorial. 
+For some practice at deployment, complete the [Connect to Conversational Cloud](conversation-builder-tutorials-guides-getting-started.html) tutorial. 
 
 ### The Agent Connectors page
 The Agent Connectors page makes it fast and easy to understand the status **(1)** of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically you won't need to dive into the details **(2)** on the individual components that support the end-to-end connection. Use the Start/Stop toggle button **(3)** to start and stop an agent connector.
@@ -60,7 +60,7 @@ Adding an agent connector creates a connection between the bot and a bot agent i
 
 5. Specify the following in the dialog:
     - **Agent User ID**: Select the login name of the bot agent you intend to use. This was set in Conversational Cloud as a prerequisite step (discussed above). If you don't see the bot agent you need, verify that the agent is enabled; only enabled agents for the account that you specified appear in this list.
-    - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in LiveEngage as a prerequisite step (see farther above).
+    - **Role (Agent or Manager)**: Select the profile that's assigned to the bot agent you intend to use. This was set in Conversational Cloud as a prerequisite step (see farther above).
     - **Conversation Type**: Select either "Chat" or "Messaging." This should match the type of Conversational Cloud account, which is either one or the other.
     - **Deploy to**: Select either "Demo" (for testing) or "Production," as appropriate. To deploy to Production, you must have the necessary privileges (i.e., the role of Bot Status Access or Administrator). As a bot developer who deploys bots for testing purposes, typically you'll set this to "Demo."
 6. If desired, click **Advanced Options** and specify any optional, advanced settings:
@@ -135,7 +135,7 @@ Custom configuration fields are optional key/value pairs that you can add to alt
 If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.
 
 #### acceptStatusEventValue
-By default, a message from the consumer is shown to the consumer as "Read' once it is sent. Set this field to "SENT" if you want the message to be shown as "Sent" instead. Once the agent logs into LiveEngage and views the message, this status will change to "Read."
+By default, a message from the consumer is shown to the consumer as "Read' once it is sent. Set this field to "SENT" if you want the message to be shown as "Sent" instead. Once the agent logs into Conversational Cloud and views the message, this status will change to "Read."
 
 **Default value**: READ<br>
 **Messaging**: Yes<br>

@@ -65,7 +65,7 @@ The menu bar is displayed in the upper-left corner and contains the following op
 
 * **Global Functions**: Write code snippets for use within dialogs here. See [scripting functions](conversation-builder-scripting-functions-introduction.html) for built-in methods.
 
-* **Agent Connectors**: [Deploy](conversation-builder-testing-deployment-deploying-to-liveengage.html) the bot to a Conversational Cloud environment.
+* **Agent Connectors**: [Deploy](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html) the bot to a Conversational Cloud environment.
 
 * The <img style="width:30px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> icon makes available more options: 
 
