@@ -1,12 +1,13 @@
 ---
 pagename: Authorization Request
+redirect_from:
+  - authorizing-liveengage-applications-methods-authorization-request.html
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Authorizing LiveEngage Applications
+documentname: Authorizing Conversational Cloud Applications
 subfoldername: Methods
-order: 9
-permalink: authorizing-liveengage-applications-methods-authorization-request.html
+permalink: authorizing-conversational-cloud-applications-methods-authorization-request.html
 indicator: both
 ---
 

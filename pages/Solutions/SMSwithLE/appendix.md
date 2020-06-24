@@ -2,10 +2,11 @@
 pagename: Appendix
 redirect_from:
   - products-channels-sms-appendix.html
+  - sms-with-liveengage-appendix.html
 sitesection: Solutions
 
-documentname: SMS with LiveEngage
-permalink: sms-with-liveengage-appendix.html
+documentname: SMS with Conversational Cloud
+permalink: sms-with-conversational-cloud-appendix.html
 order: 41
 indicator:
 ---
@@ -23,11 +24,11 @@ Friendly names such as *'1(800) New Home*' and vanity shortcodes such like '*Rea
 
 **Re-purposing existing numbers**
 
-It is possible to take an existing 1(800) number or other business number and 'port' the SMS capabilities across to Twilio so that it can be connected to your LiveEngage account.  It is recommended that you first look at your telephony reports and logs for that number and determine whether text messages are already being sent to it and the types of messages being sent.  Brands should particularly do this if these messages are not being answered today as many brands begin text-enabling a number that has been published for years, only to find that it receives a high volume of junk or spam messages.  This should be evaluated on a case by case basis as it may be more practical and efficient to purchase a dedicated number.
+It is possible to take an existing 1(800) number or other business number and 'port' the SMS capabilities across to Twilio so that it can be connected to your Conversational Cloud account.  It is recommended that you first look at your telephony reports and logs for that number and determine whether text messages are already being sent to it and the types of messages being sent.  Brands should particularly do this if these messages are not being answered today as many brands begin text-enabling a number that has been published for years, only to find that it receives a high volume of junk or spam messages.  This should be evaluated on a case by case basis as it may be more practical and efficient to purchase a dedicated number.
 
 **Different numbers for skill routing**
 
-LiveEngage offers the ability to route SMS messages sent to different phone numbers to their own individual skill.  Numbers can map one to one (one number routes to one skill) or many to one (many numbers route to one skill).  Number-to-skill routing can be used to deliver the right messages to the right agents. It is also key, when evaluating the impact and success of different entry-points, in understanding how a consumer was targeted by the number that they texted.
+Conversational Cloud offers the ability to route SMS messages sent to different phone numbers to their own individual skill.  Numbers can map one to one (one number routes to one skill) or many to one (many numbers route to one skill).  Number-to-skill routing can be used to deliver the right messages to the right agents. It is also key, when evaluating the impact and success of different entry-points, in understanding how a consumer was targeted by the number that they texted.
 
 **Conversation security, consumer authentication**
 
@@ -35,7 +36,7 @@ To help brands navigate security challenges, minimize risk to a brand and its co
 
 **Data Masking**
 
-While LiveEngage's custom ID&V solution provides a means for exchanging such sensitive data securely, it doesn't prevent consumers from unintentionally sharing such data in the body of their conversation.  The LiveEngage integration with the Twilio framework provides a solution for this in the form of Twilio functions which can be used to mask sensitive data from the conversation [Click here to read more on this solution.](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Enhancing+SMS+experience+with+Twilio+Functions.pdf)
+While Conversational Cloud's custom ID&V solution provides a means for exchanging such sensitive data securely, it doesn't prevent consumers from unintentionally sharing such data in the body of their conversation.  The Conversational Cloud integration with the Twilio framework provides a solution for this in the form of Twilio functions which can be used to mask sensitive data from the conversation [Click here to read more on this solution.](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Enhancing+SMS+experience+with+Twilio+Functions.pdf)
 
 **System Messages**
 
@@ -47,4 +48,4 @@ Business requirement for many brands include the ability to send automated respo
 
 * Expectation setting for SLA's (first time consumers)
 
-* Although system messages are not yet available as features within LiveEngage, all of the above can be achieved with Twilio functions [Click here to read more.](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Enhancing+SMS+experience+with+Twilio+Functions.pdf)
+* Although system messages are not yet available as features within Conversational Cloud, all of the above can be achieved with Twilio functions [Click here to read more.](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Messaging/Enhancing+SMS+experience+with+Twilio+Functions.pdf)

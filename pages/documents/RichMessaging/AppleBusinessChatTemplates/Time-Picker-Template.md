@@ -33,7 +33,7 @@ Below is an example image of a Business Chat time picker:
 
 ### Basic Template Overview
 
-In order to comply with the Apple Business Chat JSON structure, the below LiveEngage structured content JSON structure must be applied to any Time Picker template.
+In order to comply with the Apple Business Chat JSON structure, the below Conversational Cloud structured content JSON structure must be applied to any Time Picker template.
 
 Each Time Picker template has the following mandatory sections:
 
@@ -160,7 +160,7 @@ The following JSON metadata and body structures are templates for any Time Picke
 
 ### Metadata - Business Chat Message
 
-Part of the Time Picker LiveEngage Structured Content metadata JSON.
+Part of the Time Picker Conversational Cloud Structured Content metadata JSON.
 
 #### Properties
 
@@ -208,7 +208,7 @@ The Reply Message is the reply card presented to the consumer after selecting th
 
 ### Metadata - Business Event
 
-Part of the Time Picker LiveEngage Structured Content metadata JSON. Defines the object as a time picker object for Apple Business Chat. This section includes timing and location properties.
+Part of the Time Picker Conversational Cloud Structured Content metadata JSON. Defines the object as a time picker object for Apple Business Chat. This section includes timing and location properties.
 
 #### Properties
 
@@ -256,7 +256,7 @@ Part of the Time Picker LiveEngage Structured Content metadata JSON. Defines the
 
 ### Body - Time Picker Items
 
-Part of the Time Picker LiveEngage Structured Content body JSON, enabling an agent to generate an array of time slots for the consumer’s options.
+Part of the Time Picker Conversational Cloud Structured Content body JSON, enabling an agent to generate an array of time slots for the consumer’s options.
 
 The Time Picker item elements consists of a title element and a row of available time slots per specific date to choose from.
 

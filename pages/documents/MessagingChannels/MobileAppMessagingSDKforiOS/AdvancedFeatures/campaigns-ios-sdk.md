@@ -12,7 +12,7 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-campaigns.html
 indicator: messaging
 ---
 
-Campaigns are the cornerstone of LiveEngage - the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences to achieve their business goals, such as increasing sales or generating leads.
+Campaigns are the cornerstone of Conversational Cloud - the place where every digital engagement is created and organized. By using campaigns, brands can target specific audiences to achieve their business goals, such as increasing sales or generating leads.
 
 Use the Monitoring APIs to:
 
@@ -24,7 +24,7 @@ Use the Monitoring APIs to:
 
 * Route conversations to a specific skill (based on engagements)
 
-While web messaging allows automatic capturing of events (using the LE Tag), when using campaigns for In-App Messaging, it is up to the app to report the various events by using the In-App Monitoring APIs.
+While web messaging allows automatic capturing of events (using the Web Tag), when using campaigns for In-App Messaging, it is up to the app to report the various events by using the In-App Monitoring APIs.
 
 ### Prerequisites
 

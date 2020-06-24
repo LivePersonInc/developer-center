@@ -29,12 +29,12 @@ The template uses text interactions only, so it can be deployed to any channel w
 * Fallback
     * Will display when the user enters an utterance that is not recognized.
 * EscalateLiveAgent
-    * This will perform a transfer to a particular LiveEngage skill.
+    * This will perform a transfer to a particular Conversational Cloud skill.
 
 #### Integrations
 
 * Agent_Transfer
-    * As you would expect, this will perform a transfer to a LiveEngage skill.
+    * As you would expect, this will perform a transfer to a Conversational Cloud skill.
 * Send_Email
     * This integration will send an email to the ownerEmail address supplied which contains all of the collected fields from the LeadGen dialog.
 

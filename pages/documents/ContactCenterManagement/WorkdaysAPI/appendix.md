@@ -99,7 +99,7 @@ This section contains API details that are common to every API’s resource, met
 <ul><li>The start date must be at the same day defined in the recurrence value, e.g if the start date is May 1st and the recurrence is Wednesday, then you must make sure that May 1st is actually a Wednesday as well.
 If this is not followed, the reccurence day will be set according to the day of the start date (the reccurence value will be ignored), e.g if you set the start date to May 1st which is a Wendesady but set the recurrence value to Thursday, Wednesday will be used instead.</li></ul>
 <ul><li>The timezone field for both the start and end array must match.</li></ul>
-<ul><li>Only LiveEngage supported timezones may be used.</li></ul>
+<ul><li>Only Conversational Cloud supported timezones may be used.</li></ul>
 </td>
   </tr>
   <tr>
@@ -112,7 +112,7 @@ If this is not followed, the reccurence day will be set according to the day of 
 <ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour is specified, 24/7 is assumed. </li></ul>
 <ul><li>The maximum length of a workday must be 24 hours. You can define 24 hour shifts in one of the following ways: start: "2018-03-27" end: "2018-03-28", or: start: "2018-03-27T00:00" end: "2018-03-27T23:59" </li></ul>
 <ul><li> The timezone field for both the start and end array must match. </li></ul>
-<ul><li> Only LiveEngage supported timezones may be used. </li></ul>
+<ul><li> Only Conversational Cloud supported timezones may be used. </li></ul>
     </td>
   </tr>
   <tr>

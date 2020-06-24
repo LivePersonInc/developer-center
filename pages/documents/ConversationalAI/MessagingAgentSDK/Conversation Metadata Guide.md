@@ -15,7 +15,7 @@ indicator: messaging
 
 ### Overview
 
-LiveEngage provides a way for developers and partners that are building a bot using the Messaging Agent SDK to pass or listen for metadata or context information on a conversation. For example, sending metadata with structured content or listening for a metadata response after sending a request (payment, authorization, etc).
+Conversational Cloud provides a way for developers and partners that are building a bot using the Messaging Agent SDK to pass or listen for metadata or context information on a conversation. For example, sending metadata with structured content or listening for a metadata response after sending a request (payment, authorization, etc).
 
 _**Note:** currently, sending or listening for metadata is useful over Messaging only. Sending metadata over Chat is supported but we are currently developing the consumption of the metadata on Chat conversations. If you would still like to send metadata over Chat conversations and consume it in the future once that is supported, please see [the following example below](#sending-metadata-over-chat)._
 
@@ -428,7 +428,7 @@ this.on('ms.MessagingEventNotification', body => {
 
 #### Structured content
 
-LiveEngage allows brands to send messages in a variety of ways and formats: (human or bot) agents can send simple text and images, or use structured content templates to build layouts with text, images, maps and buttons, to enhance the conversation with the consumer.  Refer to [Structured content templates](structured-content-templates.html) for more information on how to build and send such structured content messages.
+Conversational Cloud allows brands to send messages in a variety of ways and formats: (human or bot) agents can send simple text and images, or use structured content templates to build layouts with text, images, maps and buttons, to enhance the conversation with the consumer.  Refer to [Structured content templates](structured-content-templates.html) for more information on how to build and send such structured content messages.
 
 A template `ExternalId` can be sent as metadata on the agent message (publishEvent method) in order to track the number of times a specific template was sent, delivered, or viewed.
 

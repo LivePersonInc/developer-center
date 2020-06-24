@@ -14,7 +14,7 @@ root-link: true
 indicator: both
 ---
 
-Rich Messaging allows you to push something more rich and interactive than just plain text to *existing* messaging channels. This is achieved by using the LiveEngage Structured Content Framework.
+Rich Messaging allows you to push something more rich and interactive than just plain text to *existing* messaging channels. This is achieved by using the Conversational Cloud Structured Content Framework.
 
 For a list of Rich Messaging capabilities for each channel, see the [Rich Messaging Channel Capabilities](getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html) table.
 
@@ -26,7 +26,7 @@ Most conversations involve plain text like what you are reading now. However, so
 
 For example, rather than sending an address to a location, you can send a picture of the location on a map that links out to a map application.
 
-In order to achieve this behavior, you must send information in a structured format that can be interpreted and rendered by LiveEngage. The most common format is JSON (Javascript Object Notation).
+In order to achieve this behavior, you must send information in a structured format that can be interpreted and rendered by Conversational Cloud. The most common format is JSON (Javascript Object Notation).
 
 So, rather than sending to a consumer the text `1234 Hollywood Boulevard, Los Angeles, CA`, you would send the address in JSON format like below:
 
@@ -477,7 +477,7 @@ Each environment can override the URI for their specific needs.
 In order to support sending a message as a response for a button click, we introduced a new action called "Publish Text".
 This action allows the brand to send a message on behalf of the consumer that will appear in the transcript.
 
-This action will be used also by the clients (the Mobile Messaging App for example or LiveEngage's window) to send a response when a button was clicked.
+This action will be used also by the clients (the Mobile Messaging App for example or Conversational Cloud's window) to send a response when a button was clicked.
 
 ###### Properties
 
@@ -500,7 +500,7 @@ This action will be used also by the clients (the Mobile Messaging App for examp
 
 Metadata is a list of predefined objects that can be sent back to the agent / bot and be used in reporting / analysis. Metadata can be defined in the header section of the request or inside an element click object. For a more in depth guide on how metadata in Structured Content works, please refer to the [Conversation Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html).
 
-When filling out the structured content template, if the metadata `ExternalID` is supplied, it will be returned to LiveEngage when the associated action is executed.
+When filling out the structured content template, if the metadata `ExternalID` is supplied, it will be returned to Conversational Cloud when the associated action is executed.
 
 This is important for reporting on consumer interactions with the template, as well as for bot activity. A Structured Content object general ID can be defined in the <header> section of the request by using the <metadata> tag. It can also be defined for each click.
 

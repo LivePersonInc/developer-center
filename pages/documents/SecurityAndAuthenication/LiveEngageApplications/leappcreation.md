@@ -1,23 +1,23 @@
 ---
-pagename: Installing LiveEngage Applications
+pagename: Installing Conversational Cloud Applications
 redirect_from:
   - guides-le-applications-installing.html
+  - liveengage-applications-installing-liveengage-applications.html
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: LiveEngage Applications
-order: 20
-permalink: liveengage-applications-installing-liveengage-applications.html
+documentname: Conversational Cloud Applications
+permalink: conversational-cloud-applications-installing-conversational-cloud-applications.html
 indicator: both
 ---
 
 ### Overview
 
-Currently, installation of LiveEngage Applications is performed by LivePerson's internal resources (account team, DevSupport, Tier 1, etc). In order to request this installation, you must first fill out the following schema according to your application needs. Once that is done, please contact the relevant LivePerson resource for your account and they will perform the installation.
+Currently, installation of Conversational Cloud Applications is performed by LivePerson's internal resources (account team, DevSupport, Tier 1, etc). In order to request this installation, you must first fill out the following schema according to your application needs. Once that is done, please contact the relevant LivePerson resource for your account and they will perform the installation.
 
-Once the application has been installed, the LivePerson resource will send you your client_id and client_secret which are required for OAuth2.0 authentication. In the future, installing an application will be possible on your own through LiveEngage, but currently the installation process must be followed.
+Once the application has been installed, the LivePerson resource will send you your client_id and client_secret which are required for OAuth2.0 authentication. In the future, installing an application will be possible on your own through Conversational Cloud, but currently the installation process must be followed.
 
-### LiveEngage Application Manifest Schema - Parameters
+### Conversational Cloud Application Manifest Schema - Parameters
 
 | Property | Description | Type | Required| Notes|
 |--- | --- | ---| ---| ---|
@@ -29,7 +29,7 @@ Once the application has been installed, the LivePerson resource will send you y
 |response_types | OAuth 2.0 response type strings that the client can use at the authorization endpoint | array | No |supported values: "code"<br />"token"<br />"id_token"<br />"id_token token"|
 |scope | Space-separated list of scope values that the client can use when requesting access tokens| string| No |supported values: "msg.consumer" <br /> max length: 128|
 |logo_uri | URL string that references a logo for the client | string | No | logo size is must be exactly 70x70 pixels <br /> max length: 1024|
-|capabilities| LiveEngage capabilities utilized by this app. This array defines the various LiveEngage services or applications that can interface with this application| object (See supported values structure in the tables below)| No | supported values: "webhooks", "engagement". <br /> <br /> webhooks: Contains the endpoints where UMS (Messaging Service) will send notifications <br /> <br />  engagement: This determines how the application interfaces with LiveEngage engagements and their creation |
+|capabilities| Conversational Cloud capabilities utilized by this app. This array defines the various Conversational Cloud services or applications that can interface with this application| object (See supported values structure in the tables below)| No | supported values: "webhooks", "engagement". <br /> <br /> webhooks: Contains the endpoints where UMS (Messaging Service) will send notifications <br /> <br />  engagement: This determines how the application interfaces with Conversational Cloud engagements and their creation |
 |quick_launch_enabled | Whether the application should be displayed in the quicklaunch menu | boolean | No | default value: false |
 |entry_uri | The application launch URI (Start the SSO flow) | string | No | max length: 1024 |
 

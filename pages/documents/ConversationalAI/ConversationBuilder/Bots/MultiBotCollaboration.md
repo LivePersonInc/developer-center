@@ -43,7 +43,7 @@ During an automatic transfer, information about the conversation is automaticall
 
 <img style="width:575px" src="img/ConvoBuilder/bots_collab10.png">
 
-How does the automatic transfer happen? If the consumer's utterance can't be handled in some way by the bot, i.e., there are no dialog starters that match, the bot checks whether there is another bot *within the same group* that can handle the request. If there is one, and if it has an active LiveEngage connection, the conversation is transferred automatically to the receiver bot. The receiver bot then takes care of processing the request.
+How does the automatic transfer happen? If the consumer's utterance can't be handled in some way by the bot, i.e., there are no dialog starters that match, the bot checks whether there is another bot *within the same group* that can handle the request. If there is one, and if it has an active Conversational Cloud connection, the conversation is transferred automatically to the receiver bot. The receiver bot then takes care of processing the request.
 
 If there isn't another bot within the group that can handle the request, no automatic transfer occurs. Instead, the bot sends its fallback response to the consumer.
 

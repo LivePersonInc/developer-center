@@ -26,7 +26,7 @@ indicator: messaging
 ---
  
 
-You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, sends logs from LiveEngage to your app, and display consumer information to agents or vice versus. 
+You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, sends logs from Conversational Cloud to your app, and display consumer information to agents or vice versus. 
 
 
 The most suitable time to customize configuration is right after the SDK initialization and before calling `showConversation()`.
@@ -298,7 +298,7 @@ For more details on the different attributes you are able to customize, refer to
 ### Logs and Info
 
 
-Send logs from LiveEngage to your app. Logs include different severity levels of errors and warnings.  
+Send logs from Conversational Cloud to your app. Logs include different severity levels of errors and warnings.  
 
 * Subscribe the host app to receive log events from a specific log level and above:
 
@@ -502,7 +502,7 @@ Pass and display consumer information to agents, and agent information to consum
 
 **Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LPUser` object.
 
-* Set the user profile on LiveEngage:
+* Set the user profile on Conversational Cloud:
 
    ```swift
    public func setUserProfile(lpuser: LPUser, brandID: String)

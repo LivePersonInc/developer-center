@@ -13,7 +13,7 @@ indicator: chat
 
 ### Step 1 - Create a New Engagement
 
-**On the Campaigns page, click "Add engagement" and select the "API" engagement source.**
+**On the Campaign Builder page, click "Add engagement" and select the "API" engagement source.**
 
 ![Customized1](img/customized1.png)
 

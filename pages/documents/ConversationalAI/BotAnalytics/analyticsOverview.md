@@ -16,7 +16,7 @@ The Bot Analytics application is intended to show you *real time* data on your b
 
 **To access the Bot Analytics application**
 
-1. On the left sidebar in LiveEngage, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
+1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Bot Analytics**.
 
     The first screen that appears is a list of all your bots. Search or scroll through the list and select the bot for which you want to see data.
@@ -45,7 +45,7 @@ What are custom events? [Here](conversation-builder-conversation-builder-scripti
 | Name | Description |
 | --- | --- |
 | Users | Number of unique users connected to bot |
-| Conversations | Number of LiveEngage Conversations in which the bot is a participant |
+| Conversations | Number of Conversational Cloud Conversations in which the bot is a participant |
 | Automation Sessions (Deprecated) | Number of times a bot connects to a conversation |
 | Average Session Length (Deprecated) | Average of the time lapse between bot connection/disconnection to a conversation |
 | Escalations | Number of times a bot transfers a user to a different skill/agent |

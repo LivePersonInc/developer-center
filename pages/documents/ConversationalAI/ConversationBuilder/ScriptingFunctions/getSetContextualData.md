@@ -166,7 +166,7 @@ You can also use the `{$conversationId}` [system variable](conversation-builder-
 
 ### Get LP account ID
 
-The Get LP Account ID function retrieves the LiveEngage account ID for the current conversation.
+The Get LP Account ID function retrieves the Conversational Cloud account ID for the current conversation.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |

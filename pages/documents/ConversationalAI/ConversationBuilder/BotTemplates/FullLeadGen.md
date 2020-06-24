@@ -43,12 +43,12 @@ The template can be configured to handle Web, SMS, Apple Business Chat, WhatsApp
 * Fallback
     * Will display when the user enters an utterance that is not recognized.
 * EscalateLiveAgent
-    * This will perform a transfer to a particular LiveEngage skill.
+    * This will perform a transfer to a particular Conversational Cloud skill.
 
 #### Integrations
 
 * Agent_Transfer
-    * As you would expect, this will perform a transfer to a LiveEngage skill.
+    * As you would expect, this will perform a transfer to a Conversational Cloud skill.
     * You will need to configure the skill name, id and transfer message in the Global Functions.
 * Get_Categories
     * For the API driven options gallery, this integration with Shopify will return the title and image URL from your Shopify account.

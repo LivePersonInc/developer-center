@@ -19,7 +19,7 @@ Once a consumer clicks on one of the replies, a pre-rendered message is sent to 
 
 ![Quick Replies](images/quick-replies.gif)
 
-One common use case for Quick Replies is when a bot is attempting to direct the conversation outcome (eg. routing a consumer to a specific LiveEngage skill). Because these possible responses are pre-formatted, it enables a bot to continue the conversation freely and smoothly.
+One common use case for Quick Replies is when a bot is attempting to direct the conversation outcome (eg. routing a consumer to a specific Conversational Cloud skill). Because these possible responses are pre-formatted, it enables a bot to continue the conversation freely and smoothly.
 
 Quick Replies are different from Structured Content in that they are temporary in the conversation and not intended for content for promotion.
 
