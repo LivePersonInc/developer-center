@@ -10,7 +10,7 @@ redirect_from:
   - function-as-a-service-templates.html
 ---
 
-[Conditioned-Based Email Transcript via LiveEngage Chat](function-as-a-service-use-cases-post-conversation-survey-with-functions.html)
+[Conditioned-Based Email Transcript via Conversational Cloud Chat](function-as-a-service-use-cases-post-conversation-survey-with-functions.html)
 
 This integration lets you trigger functions following the submission of a Post Chat Survey. The contents of the chat survey are passed into the `lambda` as a payload. You can then create conditions and send a response back to the LivePerson server with a command to send a transcript of the chat to an email configured in the `lambda`.
 

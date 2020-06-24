@@ -14,7 +14,7 @@ redirect_from:
 ### Before getting started
 
 #### Provisioning
-In order to easily integrate LivePerson Functions we will allow LiveEngage Admins to provision your account when entering LivePerson Functions. Provisioning will be triggered after you agree to our terms of use:
+In order to easily integrate LivePerson Functions we will allow Conversational Cloud Admins to provision your account when entering LivePerson Functions. Provisioning will be triggered after you agree to our terms of use:
 
 <img src="img/faas-terms-of-use.png" alt="FaaS Terms of Use" style="width:100%;"/>
 
@@ -145,9 +145,9 @@ There are 3 user permissions pertaining to Functions:
 </table>
 
 
-You can configure these permissions in LiveEngage. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html), but the process is simple:
+You can configure these permissions in Conversational Cloud. More info on adding permissions can be found [here](https://knowledge.liveperson.com/admin-settings-permissions-profiles.html), but the process is simple:
 
-* Click on the users tab at the top of the LiveEngage UI and then click profiles
+* Click on the users tab at the top of the Conversational Cloud UI and then click profiles
 
 * Create/Edit a profile and add the relevant FaaS-* permission to it
 
@@ -161,7 +161,7 @@ Please follow these steps in order to get SSO unified login working with LivePer
 
 * Once SSO Unified Login is enabled for your account, you can use `https://faas.liveperson.net/api/sso/login?accountId=<accountId>` to login into LivePerson Functions for Production Environments. Please use `https://va-a.faasui.liveperson.net/api/sso/login?accountId=<accountId>` for Alpha Environments. Moreover you can also use the [LivePerson Domain API](https://developers.liveperson.com/retrieve-api-domains-using-the-domain-api.html) to retrieve the corresponding domain per environment, by providing the service `faasUI` to the Domain API.
 
-<div class="important">Make sure to be logged into LiveEngage before accessing LivePerson Functions from your account.</div>
+<div class="important">Make sure to be logged into Conversational Cloud before accessing LivePerson Functions from your account.</div>
 
 ### Configure your firewall
 

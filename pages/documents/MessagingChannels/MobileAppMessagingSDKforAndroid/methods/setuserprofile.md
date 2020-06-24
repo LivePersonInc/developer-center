@@ -14,7 +14,7 @@ permalink: mobile-app-messaging-sdk-for-android-methods-setuserprofile.html
 indicator: messaging
 ---
 
-The setUserProfile API takes custom parameters about the consumer as an input and sets it to be displayed on the messaging Agent Workspace consumer transcript. This can be set at any time either before, after, or during a messaging session.
+The setUserProfile API takes custom parameters about the consumer as an input and sets it to be displayed on the Agent Workspace consumer transcript. This can be set at any time either before, after, or during a messaging session.
 
 `public static void setUserProfile(ConsumerProfile profile)`
 

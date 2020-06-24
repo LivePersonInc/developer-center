@@ -26,7 +26,7 @@ This example illustrates how to create a new conversation using the CONVERSATION
 
 To get an example of the accepted payloads used in this API's methods, please have a look at the [Messaging Window API](consumer-int-overview.html) with its integrated [Request Builder](consumer-int-msg-reqs.html).
 
-This API endpoint expects a set of JSON payloads, each representing a different type of request to LiveEngage messaging service. The order of the payloads is important in order to create a new conversation. First, the payload with the `type` _userprofile.SetUserProfile_ appears, second the payload with the `type` _cm.ConsumerRequestConversation_ appears.
+This API endpoint expects a set of JSON payloads, each representing a different type of request to Conversational Cloud messaging service. The order of the payloads is important in order to create a new conversation. First, the payload with the `type` _userprofile.SetUserProfile_ appears, second the payload with the `type` _cm.ConsumerRequestConversation_ appears.
 
 #### Getting Started
 
@@ -235,7 +235,7 @@ See below a few examples of how to do so.
 
 ### Send a message
 
-This is an example of how to send a message to LiveEngage to an open conversation using the SEND API endpoint. The `conversation ID` is required to address the conversation and it is passed in the JSON payload.
+This is an example of how to send a message to Conversational Cloud to an open conversation using the SEND API endpoint. The `conversation ID` is required to address the conversation and it is passed in the JSON payload.
 
 #### Getting Started
 
@@ -324,7 +324,7 @@ In order to close a conversation you simply use the same SEND API endpoint you u
 
 ### Send Chat State Events
 
-This example illustrates how to send LiveEngage the presence/typing events (chat-state), specifically the "Consumer is Typing" chat-state (`COMPOSING`).
+This example illustrates how to send Conversational Cloud the presence/typing events (chat-state), specifically the "Consumer is Typing" chat-state (`COMPOSING`).
 
 In order to send an indication that the consumer is typing, the connector will send a payload of _ms.PublishEvent_ type. The payload body includes an event of _ChatStateEvent_ and we are passing `COMPOSING` as the **chatState** value.
 
@@ -512,7 +512,7 @@ The following example illustrates how to enable the auto messages feature upon c
 
 ### Campaign for messaging Routing
 
-In this example we create a conversation and pass the **Engagement ID** and **Campaign ID** to LiveEngage in order to route the consumer conversation to the desired skill as designed by the Campaign Manager.
+In this example we create a conversation and pass the **Engagement ID** and **Campaign ID** to Conversational Cloud in order to route the consumer conversation to the desired skill as designed by the Campaign Manager.
 
 #### Getting Started
 
@@ -590,7 +590,7 @@ For more information about campaigns, please [click here](https://www.liveperson
 
 ### Direct skill routing
 
-In this example we create a conversation and pass the **Skill ID** in the Payload in order to route the consumer conversation to the desired skill in LiveEngage.
+In this example we create a conversation and pass the **Skill ID** in the Payload in order to route the consumer conversation to the desired skill in Conversational Cloud.
 
 #### Getting Started
 
@@ -679,7 +679,7 @@ In this example we create a conversation and pass the **Skill ID** in the Payloa
 
 #### Introduction
 
-The LiveEngage Connector API includes a file sharing feature. This feature enables consumers to share files with agents, such as images.
+The Conversational Cloud Connector API includes a file sharing feature. This feature enables consumers to share files with agents, such as images.
 
 
 A typical flow of setting up the file sharing feature using the Messaging Window API:

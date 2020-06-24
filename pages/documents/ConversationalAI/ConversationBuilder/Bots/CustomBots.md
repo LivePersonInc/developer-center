@@ -17,16 +17,16 @@ LivePerson recommends that —before you create a bot— you set up the [domains
 
 
 **To create a custom bot**
-1. If you logged into Conversation Builder directly (that is, _not_ via single sign-on from LiveEngage) and you have access to multiple organizations within your LiveEngage account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If the correct organization isn’t displayed, select it from the **Org Name** dropdown list.
+1. If you logged into Conversation Builder directly (that is, _not_ via single sign-on from Conversational Cloud) and you have access to multiple organizations within your Conversational Cloud account, verify in the upper-right corner that the organization under which the bot should exist is displayed. If the correct organization isn’t displayed, select it from the **Org Name** dropdown list.
 
     <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/org_selection.png">
 
-2. In the Dashboard, click **New Bot** in the upper-right corner.
-3. In the dialog box that appears, select the [template](conversation-builder-templates-overview.html) on which to base the bot.
+2. From the dashboard that lists your bots, click **New Bot** in the upper-right corner.
+3. In the dialog box that appears, select the template on which to base the bot.
     
     The Custom Bot template uses English and includes just a Welcome dialog and a Fallback dialog (see [Dialog Types](conversation-builder-dialogs-dialog-basics.html#dialog-types)), so it’s ideal if you want to start from scratch. In this case, you’ll be prompted to enter a name and configure a few other settings before the bot is created. 
 
-    There are also many, industry-specific, English-language templates available. If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
+    There are also many, industry-specific, English-language [templates available](conversation-builder-bot-templates-overview.html). If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
 4. If you selected the Custom Bot template, in the next dialog, specify the following:
 

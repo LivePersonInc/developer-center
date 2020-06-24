@@ -15,9 +15,9 @@ The Simple Lead Gen template is designed to capture contact information from a c
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/template_simple_lead_image_0.png">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/template_simple_lead_image_0.png">
 
-### Included Items
+### Included items
 
 #### Dialogs
 
@@ -29,26 +29,22 @@ The template uses text interactions only, so it can be deployed to any channel w
 * Fallback
     * Will display when the user enters an utterance that is not recognized.
 * EscalateLiveAgent
-    * This will perform a transfer to a particular LiveEngage skill.
+    * This will perform a transfer to a particular Conversational Cloud skill.
 
 #### Integrations
 
 * Agent_Transfer
-    * As you would expect, this will perform a transfer to a LiveEngage skill.
+    * As you would expect, this will perform a transfer to a Conversational Cloud skill.
 * Send_Email
     * This integration will send an email to the ownerEmail address supplied which contains all of the collected fields from the LeadGen dialog.
 
-### Configuration Needed
+### Configuration needed
 
-#### General Dialog Customization
+#### General dialog customization
 
-You will want to review each of the dialogs, starting with Welcome and Lead Gen, and customize the verbiage used to greet your customer and request their details.
+You will want to review each of the dialogs, starting with Welcome and Lead Gen, and customize the verbiage used to greet your customer and request their details. This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
 
-This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
-
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/template_simple_lead_image_1.png">
-
-#### Lead Gen Dialog
+#### Lead Gen dialog
 
 The name, email and phone number steps of the LeadGen dialog are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if you prefer.
 
@@ -60,11 +56,11 @@ setVariable('maxEmailInvalidAttempts', 2);
 setVariable('maxPhoneInvalidAttempts', 2);
 ```
 
-If you want to remove some of the lead gen capture interactions (eg: phone number), you will need to be sure to review the **Next Step** navigation so that the previous interaction will go to the next interaction in the dialog.
+If you want to remove some of the lead gen capture interactions (e.g., phone number), you will need to be sure to review the **Next Action** navigation so that the previous interaction will go to the next interaction in the dialog.
 
-#### Email Integration
+#### Email integration
 
-Click on the "Global Functions" button to access all the Global functions & variables to be configured.
+Click **Global Functions** to access all the Global functions and variables to be configured.
 
 The Send to Email integration is enabled by default. If you would like to use this, modify the following values:
 
@@ -95,7 +91,7 @@ The Send to Email integration is enabled by default. If you would like to use th
 </tbody>
 </table>
 
-#### Agent Escalation
+#### Agent escalation
 
 If the user requests an agent or if they reach the max invalid attempts on email or phone, they will be escalated to a Liveperson Agent.
 

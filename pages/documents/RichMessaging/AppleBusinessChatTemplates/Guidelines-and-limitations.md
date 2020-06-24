@@ -19,7 +19,7 @@ indicator: messaging
 
 ### Error conditions
 
-The following conditions will receive an error when sending a template via the LiveEngage Agent Workspace:
+The following conditions will receive an error when sending a template via the Conversational Cloud Agent Workspace:
 
 * Time Picker and List Picker with no **title** will be **rejected** by Apple - make sure to add a title to Time Picker and List Picker templates.
 * Time Picker sent with past dates will be rejected by Apple.

@@ -17,9 +17,9 @@ indicator:
 
 Security and privacy are important considerations when developing any solution - to ensure the MCS Toolkit complied with the necessary standards, we took advantage of the Login Service API that enables users to:
 
-* Authenticate with LiveEngage services with an existing LiveEngage user account.
+* Authenticate with Conversational Cloud services with an existing Conversational Cloud user account.
 
-* Adhere to existing LiveEngage user permissions (ensuring a user can / cannot access certain data from LiveEngage data APIs, for example).
+* Adhere to existing Conversational Cloud user permissions (ensuring a user can / cannot access certain data from Conversational Cloud data APIs, for example).
 
 ### Considerations
 
@@ -52,7 +52,7 @@ Otherwise, the prerequisites for extracting data from the APIs can be as simple 
 
 * The method to use: i.e. 'POST’ / 'GET’
 
-* The API URL is, including the associated domain for your LiveEngage account
+* The API URL is, including the associated domain for your Conversational Cloud account
 
 * The Query Strings that are supported and the appropriate convention
 

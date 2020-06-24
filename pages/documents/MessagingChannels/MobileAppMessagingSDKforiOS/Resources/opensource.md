@@ -12,7 +12,7 @@ indicator: messaging
 ---
 
 
-The LiveEngage SDK uses the following open source code.  Licensing terms for the use of this code require you to mention the list of these sources in the end customer product or documentation. No additional fees or costs are associated with the use of these sources.
+The Conversational Cloud SDK uses the following open source code.  Licensing terms for the use of this code require you to mention the list of these sources in the end customer product or documentation. No additional fees or costs are associated with the use of these sources.
 
 
 | Name | License | Version |

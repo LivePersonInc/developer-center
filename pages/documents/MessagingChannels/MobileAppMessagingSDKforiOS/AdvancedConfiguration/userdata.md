@@ -18,7 +18,7 @@ Pass and display consumer information to agents, and agent information to consum
 
 _**Note: for information about the LPUser object, click [here](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser)**_
 
-1. Will set user profile on LiveEngage
+1. Will set user profile on Conversational Cloud
 
 ```swift
 public func setUserProfile(lpuser: LPUser, brandID: String)

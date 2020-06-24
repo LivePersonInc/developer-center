@@ -158,7 +158,7 @@ To handle this gracefully, we recommend building a simple intent that handles a 
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
 
-A Messaging conversation qualifies as "initiated" from a LiveEngage perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow V2 and an intent determined.
+A Messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow V2 and an intent determined.
 
 The below documents cover where to configure the initial message on a given platform.
 
@@ -238,7 +238,7 @@ Transfers and escalations rely on the _action_ item in the response object.
 
 Action: **TRANSFER (Case sensitive)**
 
-Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in LiveEngage.
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
 
 <img class="fancyimage" style="width:600px" src="img/dialogflowversion2/image_10.png">
 
@@ -259,7 +259,7 @@ If Images are sent in Rich content, then their URLs must be added to a whitelist
 
 This should contain valid structured content, along with any optional metadata required for the structured content (as seen in Figure 5.1). Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before entering into the Dialogflow console.
 
-**NOTE:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not LiveEngage will receive a blank text response followed by rich content payload.
+**NOTE:** Caution when creating a custom payload. Delete the existing text response before saving the intent. If not Conversational Cloud will receive a blank text response followed by rich content payload.
 
 Example Metadata
 
@@ -373,7 +373,7 @@ Figure 6.1 QuickReplies Structured Content example
 
 ### Sending Encoded Metadata
 
-LiveEngage Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+Conversational Cloud Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
 
 <ul>
   <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
@@ -485,7 +485,7 @@ Figure 8.2 showing the Custom Markup message for delay message
 It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
 
 {: .important}
-Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to only Agents and Managers.
+Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
 
 Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via the Custom Payload response in intent definition (as shown in Figure 9.1). There are two properties, `text` and `messageAudience`, which are part of the Custom Payload response.
 

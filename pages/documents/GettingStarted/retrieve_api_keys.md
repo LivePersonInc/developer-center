@@ -13,7 +13,7 @@ order: 1
 indicator:
 ---
 <br>
-Application keys are security tokens that you use to log into LiveEngage. The application key gets installed automatically and assumes the security settings granted to the associated user in LiveEngage.
+Application keys are security tokens that you use to log into Conversational Cloud. The application key gets installed automatically and assumes the security settings granted to the associated user in Conversational Cloud.
 
 If required by an API, create an Application Key and it will be installed automatically upon creation.
 
@@ -21,7 +21,7 @@ If required by an API, create an Application Key and it will be installed automa
 {:.notice}
 You use the API key when you create bots.
 
-1. Log into LiveEngage with Administrator or Campaign Manager permissions and along the top open the **Campaigns** area.
+1. Log into Conversational Cloud with Administrator or Campaign Manager permissions and along the top open the **Campaign Builder** area.
 
 2. In the footnote click **Data Sources**.
 

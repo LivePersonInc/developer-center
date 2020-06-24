@@ -19,7 +19,7 @@ Login to Transporter requires:
 
 * Feature access by request (see your account manager).
 
-* A valid LiveEngage username and password.
+* A valid Conversational Cloud username and password.
 
 * Two-factor authentication with an authenticator application.
 
@@ -30,15 +30,15 @@ Once your account is enabled, you can begin by logging in via [https://transport
 
 #### Login Page  
 
-Enter your LiveEngage credentials:
+Enter your Conversational Cloud credentials:
 
 * Account Number
 
-* LiveEngage Username
+* Conversational Cloud Username
 
-* LiveEngage Password
+* Conversational Cloud Password
 
-Note that logging into Transporter will terminate any existing LiveEngage sessions - however, you can login to LiveEngage after logging into Transporter without disrupting your Transporter session.
+Note that logging into Transporter will terminate any existing Conversational Cloud sessions - however, you can login to Conversational Cloud after logging into Transporter without disrupting your Transporter session.
 
 #### Two-factor Authentication  
 
@@ -82,7 +82,7 @@ To the left of the Task Manager, you'll find the Navigation bar. This bar contai
 
 **REPORTS**: view and select available business or integration type reports.
 
-**LIVEENGAGE**: setup your LiveEngage source authorization.
+**Conversational Cloud**: setup your Conversational Cloud source authorization.
 
 **SFTP_AMAZON_GOOGLE**: setup your report destination authorization.
 
@@ -96,7 +96,7 @@ Upon first use, please use the ALERTS notifications area at the bottom of the Na
 
 2. Setup encryption - for security reasons, Transporter encrypts all reports before transmission to your selected destination. As such, encryption must be activated by generating a Public/Private key-pair (or by bringing your own) - see Encryption section for more details..
 
-3. Setup LiveEngage - to get started, make sure you have authorized at least 1 LiveEngage account source - you can retrieve an API key from the LiveEngage console.
+3. Setup Conversational Cloud - to get started, make sure you have authorized at least 1 Conversational Cloud account source - you can retrieve an API key from the Conversational Cloud console.
 
 ### Encryption
 
@@ -119,13 +119,13 @@ Once your keys are generated, your Public Key will be saved to your account, and
 
 	* GPG4Win (Windows) (free).
 
-### Connecting to LiveEngage
+### Connecting to Conversational Cloud
 
 #### API Key Setup
 
-To extract report data from LiveEngage, Transporter requires that you configure a set of API keys from the LiveEngage console and enter them into Transporter in the LIVEENGAGE section, accessible from the Navigation bar.
+To extract report data from Conversational Cloud, Transporter requires that you configure a set of API keys from the Conversational Cloud console and enter them into Transporter in the Conversational Cloud section, accessible from the Navigation bar.
 
-When [configuring API keys](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) from the LiveEngage Console, ensure the following APIs are checked after key creation:
+When [configuring API keys](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) from the Conversational Cloud Console, ensure the following APIs are checked after key creation:
 
 * Data: Data Access API, Engagement History / Messaging Interactions, Operational Realtime / Messaging Operations
 
@@ -133,7 +133,7 @@ When [configuring API keys](https://developers.liveperson.com/retrieve-api-keys-
 
 #### Transporter Authorization
 
-Once you have created your keys, enter them into Transporter via the LIVEENGAGE section and click create.  Your API keys will be encrypted and stored securely.
-After verifying your keys are valid, you will see the LiveEngage setting appear in the table at the bottom of the page - it is now ready for use as your source when you configure your first report.
+Once you have created your keys, enter them into Transporter via the Conversational Cloud section and click create.  Your API keys will be encrypted and stored securely.
+After verifying your keys are valid, you will see the Conversational Cloud setting appear in the table at the bottom of the page - it is now ready for use as your source when you configure your first report.
 
 <div class="important">Once you have performed the initial Transporter configuration as detailed in this guide, it's time to create your reporting tasks! <a href="transporter-creating-report-tasks.html">See this guide</a> for more information on how to do so.</div>

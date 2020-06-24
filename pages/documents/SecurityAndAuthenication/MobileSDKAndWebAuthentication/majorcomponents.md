@@ -17,7 +17,7 @@ The customer mobile app is responsible for user authentication against the brand
 
 ### Customer Web App
 
-The customer web app is very similar to the mobile app, except that it runs on a browser. It embeds the LivePerson Web SDK and should act in the same way as described above for the mobile app. The web app can display the embedded window originated by the LivePerson SDK, or open a LiveEngage popup window to interact with the consumer. When the LiveEngage embedded window is set to pop-out mode, the authentication must take place using a page redirect mechanism.
+The customer web app is very similar to the mobile app, except that it runs on a browser. It embeds the LivePerson Web SDK and should act in the same way as described above for the mobile app. The web app can display the embedded window originated by the LivePerson SDK, or open a Conversational Cloud popup window to interact with the consumer. When the Conversational Cloud embedded window is set to pop-out mode, the authentication must take place using a page redirect mechanism.
 
 ### Customer Token Endpoint (Mandatory for Code Flow)
 

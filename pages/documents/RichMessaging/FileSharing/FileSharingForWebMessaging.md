@@ -15,7 +15,7 @@ indicator: messaging
 
 ### Introduction
 
-The LiveEngage Messaging Window API includes a file sharing feature. This feature enables consumers to share files with agents, such as images. This feature is enabled as part of the Messaging Window API.
+The Conversational Cloud Messaging Window API includes a file sharing feature. This feature enables consumers to share files with agents, such as images. This feature is enabled as part of the Messaging Window API.
 
 <div class="important">The below tutorials assume that you have performed the initial steps required in order to work with this API, which can be found <a href="/messaging-window-api-getting-started.html">here</a>.</div>
 
