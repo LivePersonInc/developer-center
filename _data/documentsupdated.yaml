@@ -884,6 +884,7 @@
           - subpagename: Messaging CSAT Distribution
           - subpagename: Messaging Skill Segment
           - subpagename: Messaging Agent Segment
+          - subpagename: Messaging Queue Health By Group
 
       - pagename: Appendix
   - documentname: Operational Realtime API
