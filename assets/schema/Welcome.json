@@ -1,8 +1,20 @@
     [
         {
-            "url": "/first-steps.html",
+            "url": "/getting-started-with-your-free-trial-account.html",
             "title": "Get Started with LivePerson",
             "content": "Start connecting to consumers over popular messaging channels and automate conversations with AI-powered bots.",
+            "icon": "ic_get_started"
+        },
+        {
+            "url": "/do-more-with-the-conversational-cloud.html",
+            "title": "Do more with Conversational Cloud",
+            "content": "Start connecting to consumers over popular messaging channels and automate conversations with AI-powered bots.",
+            "icon": "ic_get_started"
+        },
+        {
+            "url": "/customizing-the-conversational-cloud.html",
+            "title": "Customize the Conversational Cloud",
+            "content": "Customize the Conversational Cloud",
             "icon": "ic_get_started"
         },
         {

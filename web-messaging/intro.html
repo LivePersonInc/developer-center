@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="user-scalable=0, width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
+        content="user-scalable=0, width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
     <title id="emulator-title">Web Messaging</title>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -22,53 +22,55 @@
             background-color: #00213A !important;
             margin: 0;
         }
-        body{
+
+        body {
             background: #00213A !important;
         }
     </style>
 </head>
 
-<body >
-<div id="loader"></div>
-<div class="liveperson-logo" style="display:none">
-    <img src="img/Logo.svg" />
-</div>
-<div class="greeting-bot-header" style="display:none">
-    Talk to your Concierge Bot
-</div>
-
-<div id="tips-container"class="lp-tips-container" style="display:none">
-    <div class="lp-tips-header">
-        Things to try:
+<body>
+    <div id="loader"></div>
+    <div class="liveperson-logo" style="display:none">
+        <img src="img/Logo.svg" />
     </div>
-    <ul>
-        <li class="lp-tips-content">
-            Type ‘Hi’ to get started
-        </li>
-        <li class="lp-tips-content" >
-            Choose any option to interact with your concierge bot
-        </li>
-        <li class="lp-tips-content" >
-            Choose 'Get Help Now' to connect with a human agent (you!)
-        </li>
-        <li class="lp-tips-content" >
-            Try typing: ‘When are you open?’ or ‘Talk to an agent’
-        </li>
-        <li class="lp-tips-content" >
-            Click 'End conversation' in the context menu (&#8226; &#8226; &#8226;) and refresh this page to start over
-        </li>
-    </ul>
-</div>
-<div id="template-bot" class="template-greeting-bot" style="display:none" >
-    <div class="template-greeting-loading">
-        Loading your chat
-        <br/>
-        experience window...
+    <div class="greeting-bot-header" style="display:none">
+        Talk to your Concierge Bot
     </div>
-</div>
 
-<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
+    <div id="tips-container" class="lp-tips-container" style="display:none">
+        <div class="lp-tips-header">
+            Things to try:
+        </div>
+        <ul>
+            <li class="lp-tips-content">
+                Type ‘Hi’ to get started
+            </li>
+            <li class="lp-tips-content">
+                Choose any option to interact with your concierge bot
+            </li>
+            <li class="lp-tips-content">
+                Choose 'Get Help Now' to connect with a human agent (you!)
+            </li>
+            <li class="lp-tips-content">
+                Try typing: ‘When are you open?’ or ‘Talk to an agent’
+            </li>
+            <li class="lp-tips-content">
+                Click 'End conversation' in the context menu (&#8226; &#8226; &#8226;) and refresh this page to start
+                over
+            </li>
+        </ul>
+    </div>
+    <div id="template-bot" class="template-greeting-bot" style="display:none">
+        <div class="template-greeting-loading">
+            Loading your chat
+            <br />
+            experience window...
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
 
         <div class="modal-dialog" role="document">
             <div class="modal-content" id="collapseSetup">
@@ -90,8 +92,8 @@
                             <div class="col-md-8">
                                 <b class="Authentication-Endpo">Authentication Endpoint:</b>
                                 <button type="button" class="btn btn-link copy" id="auth-copy"
-                                        onClick="copyToClipboard()"
-                                        data-clipboard-text="https://vx-lp.github.io/lpwm/auth.html">COPY</button>
+                                    onClick="copyToClipboard()"
+                                    data-clipboard-text="https://vx-lp.github.io/lpwm/auth.html">COPY</button>
                                 <div class="Rectangle">
                                     <p class="vw-lpgithub">
                                         https://vx-lp.github.io/lpwm/auth.html
@@ -101,7 +103,7 @@
                             <div class="col-md-8">
                                 <b class="Token-Endpoint">Token endpoint:</b>
                                 <button type="button" class="btn btn-link copy" onClick="copyToClipboard()"
-                                        data-clipboard-text="https://va.idp.liveperson.net/test/authenticate">COPY</button><br />
+                                    data-clipboard-text="https://va.idp.liveperson.net/test/authenticate">COPY</button><br />
                                 <div class="Rectangle">
                                     <p class="vw-idplivepe">https://va.idp.liveperson.net/test/authenticate</p>
                                 </div>
@@ -111,7 +113,7 @@
                             <div class="col-md-8">
                                 <b class="JS-method-name">JS method name:</b>
                                 <button type="button" class="btn btn-link copy" onClick="copyToClipboard()"
-                                        data-clipboard-text="LPJsMethodName">COPY</button><br />
+                                    data-clipboard-text="LPJsMethodName">COPY</button><br />
                                 <div class="Rectangle">
                                     <p class="LPJsMethodName">LPJsMethodName</p><br /><br />
                                 </div>
@@ -119,7 +121,7 @@
                             <div class="col-md-8">
                                 <b class="JS-context">JS context:</b>
                                 <button type="button" class="btn btn-link copy" onClick="copyToClipboard()"
-                                        data-clipboard-text="LPJsContext">COPY</button><br />
+                                    data-clipboard-text="LPJsContext">COPY</button><br />
                                 <div class="Rectangle">
                                     <p class="LPJsContext">LPJsContext</p><br />
                                 </div>
@@ -129,7 +131,7 @@
                             <div class="col-md-12">
                                 <b class="JWT">JWT public key:</b>
                                 <button type="button" class="btn btn-link copy" onClick="copyToClipboard()"
-                                        data-clipboard-text='MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvGQctwBFFZBaSu+LC4LVk/4/XyVQmhcwM5a91lT7BwZug/GtpR+ZGpKkiZSgTehRdBJKSPjv5K6D8/cBm28OV11Mekjn1PJrveSXrRsfUbOqIHgpfVtnkxN3ZaV6GSWQrrZArkpbAm+Kf5o5jxFPhCadB8BdRGCbMI3rFEkYSFqnmptI3olIAtAjmtbLJnwYZyXl2WZXMBmORLXnV9aTMGp4uFZdX+QbK808q55zxSB5HM3N9B8NLUP1TELc6N2dhWk2RwR/C9WvQYH/UAnxqVEwrAXt+rb+YWuu92Dj4NLAmpEYbRQi+S+5Y6t5g6kX/QMQ/ycdFOW/WA3JoptUSQIDAQAB'>COPY</button><br>
+                                    data-clipboard-text='MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvGQctwBFFZBaSu+LC4LVk/4/XyVQmhcwM5a91lT7BwZug/GtpR+ZGpKkiZSgTehRdBJKSPjv5K6D8/cBm28OV11Mekjn1PJrveSXrRsfUbOqIHgpfVtnkxN3ZaV6GSWQrrZArkpbAm+Kf5o5jxFPhCadB8BdRGCbMI3rFEkYSFqnmptI3olIAtAjmtbLJnwYZyXl2WZXMBmORLXnV9aTMGp4uFZdX+QbK808q55zxSB5HM3N9B8NLUP1TELc6N2dhWk2RwR/C9WvQYH/UAnxqVEwrAXt+rb+YWuu92Dj4NLAmpEYbRQi+S+5Y6t5g6kX/QMQ/ycdFOW/WA3JoptUSQIDAQAB'>COPY</button><br>
                             </div>
                         </div>
                         <div class="row">
@@ -155,131 +157,132 @@
             </div>
         </div>
     </div>
-</div>
-<div id="spotlight" class="spotlight-container" >
-    <div class="spotlight-content-container" style="display: none">
-        <div class="heading-h5">
-            Start building with LivePerson by extending this greeting bot solution
-        </div>
-        <ul class="container-content">
-            <li class="spotlight-content">
-                Connect to mobile Channels
-            </li>
-            <li class="spotlight-content">
-                Personalize the bot dialog
-            </li>
-            <li class="spotlight-content">
-                Customizing routing rules
-            </li>
-            <li class="spotlight-content">
-                Get started with Intents
-            </li>
-        </ul>
-        <div class="hyperlink-learn">
-            <a target="_blank" href="https://developers.liveperson.com/first-steps.html"
-               alt=" Dev Center getting started">
-                Lets Build
-            </a>
-        </div>
-        <div class="heading-h5" style="margin-top:40px;">
-            Want to learn how we built the Greeting Bot solution
-            <a target="_blank" class="hyperlink-container" href="https://developers.liveperson.com/first-steps.html"
-               alt="Dev Center Getting Started">
-                Learn here.
-            </a>
-        </div>
-        <div class="heading-h5" style="margin-top:40px;">
-            Or, go back to continue exploring LivePerson
+    </div>
+    <div id="spotlight" class="spotlight-container">
+        <div class="spotlight-content-container" style="display: none">
+            <div class="heading-h5">
+                Start building with LivePerson by extending this greeting bot solution
+            </div>
+            <ul class="container-content">
+                <li class="spotlight-content">
+                    Connect to mobile Channels
+                </li>
+                <li class="spotlight-content">
+                    Personalize the bot dialog
+                </li>
+                <li class="spotlight-content">
+                    Customizing routing rules
+                </li>
+                <li class="spotlight-content">
+                    Get started with Intents
+                </li>
+            </ul>
+            <div class="hyperlink-learn">
+                <a target="_blank"
+                    href="https://developers.liveperson.com/getting-started-with-your-free-trial-account.html"
+                    alt=" Dev Center getting started">
+                    Lets Build
+                </a>
+            </div>
+            <div class="heading-h5" style="margin-top:40px;">
+                Want to learn how we built the Greeting Bot solution
+                <a target="_blank" class="hyperlink-container"
+                    href="https://developers.liveperson.com/getting-started-with-your-free-trial-account.html"
+                    alt="Dev Center Getting Started">
+                    Learn here.
+                </a>
+            </div>
+            <div class="heading-h5" style="margin-top:40px;">
+                Or, go back to continue exploring LivePerson
+            </div>
         </div>
     </div>
-</div>
-<script>
+    <script>
+        async function removeDisplay() {
+            const sleep = (milliseconds) => {
+                return new Promise(resolve => setTimeout(resolve, milliseconds))
+            }
+            await sleep(2000);
+            document.getElementById('template-bot').setAttribute('style', 'display:none !important');
+            document.getElementById('tips-container').setAttribute('style', 'display:inline-block !important');
 
-    async function removeDisplay(){
-        const sleep = (milliseconds) => {
-            return new Promise(resolve => setTimeout(resolve, milliseconds))
+            console.log('template bot should be gone');
         }
-        await sleep(2000);
-        document.getElementById('template-bot').setAttribute('style', 'display:none !important');
-        document.getElementById('tips-container').setAttribute('style', 'display:inline-block !important');
+        $(window).load(async function () { //Do the code in the {}s when the window has loaded
+            var site = getURLParams(window.location.search).site || "";
+            var username = getURLParams(window.location.search).username || "";
+            var experience = getURLParams((window.location.search)).experience || "";
+            var env = getURLParams((window.location.search)).env || "";
+            if (experience === "first_time" && site !== "") {
+                // if it is a ftue experience then append the style sheet
+                appendFTUE();
+            } else {
+                let originalEmulator = setUrlPathOld();
+                window.location.href = originalEmulator;
+            }
+            let lpTagPromise = new Promise((resolve, reject) => {
+                setTimeout(function () {
+                    try {
+                        console.log('going through lp tag');
+                        loadLPTag(env);
+                        console.log('went through lp tag');
+                        resolve("Success!") // Yay! Everything went well!
+                    } catch (e) {
+                        console.log('failed when going through lp tag');
+                        reject('ERROR');
+                    }
+                }, 4000);
+            })
+            lpTagPromise.then((message) => {
+                console.log('removing display', message);
+                removeDisplay();
+            })
 
-        console.log('template bot should be gone');
-    }
-    $(window).load( async function() {      //Do the code in the {}s when the window has loaded
+            $("#loader").fadeOut("fast"); //Fade out the #loader div
+        });
+
         var site = getURLParams(window.location.search).site || "";
         var username = getURLParams(window.location.search).username || "";
         var experience = getURLParams((window.location.search)).experience || "";
         var env = getURLParams((window.location.search)).env || "";
-        if (experience === "first_time" && site !== "") {
-            // if it is a ftue experience then append the style sheet
-            appendFTUE();
-        } else {
-            let originalEmulator = setUrlPathOld();
-            window.location.href = originalEmulator;
+
+        // var oldTitle = "Web Messaging";
+        // // var testTitle = "new notification";
+        // // window.setInterval(function()
+        // // {
+        // //     if (document.title.includes('new notification')) {
+        // //         console.log('notification message: ', document.title); //change title
+        // //         var curText = document.getElementById('emulator-title').innerText;
+        // //         document.getElementById('emulator-title').innerText = curText.replace('(1) new notification', '(1) Web Messenging');
+        // //     }
+        // //     //oldTitle = document.title;
+        // // }, 1000);
+        // // window.setInterval(function()
+        // // {
+        // //         if (document.title !== oldTitle) {
+        // //             console.log('incoming message: ', document.title); //change title
+        // //             var curText = document.getElementById('emulator-title').innerText;
+        // //             console.log('curtext is :', curText);
+        // //             document.getElementById('emulator-title').innerText = curText.replace('(1) Web Messaging', '(1) new notification');
+        // //
+        // //         }
+        // //     //oldTitle = document.title;
+        // // }, 1000);
+
+        function copyToClipboard() {
+            /* Get the text field */
+            new ClipboardJS('.copy', {
+                container: document.getElementById('modal')
+            });
         }
-        let lpTagPromise = new Promise((resolve, reject) => {
-            setTimeout( function() {
-                try{
-                    console.log('going through lp tag');
-                    loadLPTag(env);
-                    console.log('went through lp tag');
-                    resolve("Success!")  // Yay! Everything went well!
-                }catch(e){
-                    console.log('failed when going through lp tag');
-                    reject('ERROR');
-                }
-            }, 4000);
-        })
-        lpTagPromise.then( (message)=> {
-            console.log('removing display', message);
-            removeDisplay();
-        })
+    </script>
 
-        $("#loader").fadeOut("fast");  //Fade out the #loader div
-    });
-
-    var site = getURLParams(window.location.search).site || "";
-    var username = getURLParams(window.location.search).username || "";
-    var experience = getURLParams((window.location.search)).experience || "";
-    var env = getURLParams((window.location.search)).env || "";
-
-    // var oldTitle = "Web Messaging";
-    // // var testTitle = "new notification";
-    // // window.setInterval(function()
-    // // {
-    // //     if (document.title.includes('new notification')) {
-    // //         console.log('notification message: ', document.title); //change title
-    // //         var curText = document.getElementById('emulator-title').innerText;
-    // //         document.getElementById('emulator-title').innerText = curText.replace('(1) new notification', '(1) Web Messenging');
-    // //     }
-    // //     //oldTitle = document.title;
-    // // }, 1000);
-    // // window.setInterval(function()
-    // // {
-    // //         if (document.title !== oldTitle) {
-    // //             console.log('incoming message: ', document.title); //change title
-    // //             var curText = document.getElementById('emulator-title').innerText;
-    // //             console.log('curtext is :', curText);
-    // //             document.getElementById('emulator-title').innerText = curText.replace('(1) Web Messaging', '(1) new notification');
-    // //
-    // //         }
-    // //     //oldTitle = document.title;
-    // // }, 1000);
-
-    function copyToClipboard() {
-        /* Get the text field */
-        new ClipboardJS('.copy', {
-            container: document.getElementById('modal')
-        });
-    }
-</script>
-
-<script src="script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-</script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/spotlight.js"></script>
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/spotlight.js"></script>
 
 </body>
 
