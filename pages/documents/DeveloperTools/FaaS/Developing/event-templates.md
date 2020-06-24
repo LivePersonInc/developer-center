@@ -27,12 +27,12 @@ Currently the following events are supported:
 |Messaging Conversation End|Triggered when the conversation is closed by agent/consumer/system.|1|
 |Messaging Conversation Idle|Triggered when agent/consumer is not responsive or the conversation is in queue for over X secs/mins. Where Time X is configurable inside the Conversational Cloud UI, via the auto-messages feature.|1|
 |Messaging Conversation Routing|Triggered when the conversation is transferred to a different skill.|1|
-|Messaging Line in Off-Hours|Triggered when a consumer writes a message to a conversation that started in working hours, but is now in off-hours.|1|
-|Messaging New Conversation|Triggered for every new messaging conversation.|1|
-|Messaging Participants Change|Triggered on every participant change (joins/leaves) of a messaging conversation.|1|
+|Messaging Line in Off-Hours|Triggered when a conversation was *opened* during office-hours, but a new consumer line in the conversation is *written* during off-hours (essentially when a consumer sends an off-hour message).|1|
+|Messaging New Conversation|Triggered for every new messaging conversation. **This event should not be used for routing. Use a routing bot instead.**|1|
+|Messaging Participants Change|Triggered on every participant (consumer/agent) change (joins/leaves) of a messaging conversation.|1|
 |Messaging Survey Ended|Triggered when a messaging post survey ended.|1|
 |Messaging Survey Started|Triggered when a messaging post survey started.|1|
-|Messaging TTR|Triggered when the consumer marks a response as an urgent response, unmarks a response as urgent, or the agent manually updates the response time|1|
+|Messaging TTR (Time to Respond)|Triggered when the consumer marks a response as an urgent response, unmarks a response as urgent, or the agent manually updates the response time|1|
 |No Event|Used for lambdas which only can be invoked externally||
 |Third-Party Bots Custom Integration|Triggered when a bot, which is using the Third-Party Bots' Custom Integration receives a message|15|
 |Third-Party Bots Post Hook|Triggered when a bot, which is using the Third-Party Bots' Post Hooks receives a message. The function will be invoked after the vendor responded|15|

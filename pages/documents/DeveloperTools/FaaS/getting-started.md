@@ -113,31 +113,28 @@ There are 3 user permissions pertaining to Functions:
     <td>✅</td>
     <td>-</td>
   </tr>
-    <tr>
+  <tr>
     <td>schedule</td>
     <td>create/edit/delete</td>
     <td>✅</td>
     <td>✅</td>
     <td>-</td>
   </tr>
-  </tr>
-    <tr>
+  <tr>
     <td>emailReport settings</td>
     <td>create/edit/delete</td>
     <td>✅</td>
     <td>-</td>
     <td>-</td>
   </tr>
-  </tr>
-    <tr>
+  <tr>
     <td>emailReport recipients</td>
     <td>create/delete</td>
     <td>✅</td>
     <td>✅</td>
     <td>-</td>
   </tr>
-  </tr>
-    <tr>
+  <tr>
     <td>emailReport</td>
     <td>read</td>
     <td>✅</td>
@@ -256,7 +253,7 @@ As you can see from the example above, during an invocation the function receive
 function callback(error, result){}
 ```
 
-If during the runtime of your application no error has occurred, you can provide a **null** value as error. After **30** seconds, your function will be killed immediately, regardless of its error state.
+If during the runtime of your application no error has occurred, you can provide a **null** value as error. After a **30** second timeout, your function will be killed immediately, regardless of its error state.
 
 ### Step 5: Deploy your function
 

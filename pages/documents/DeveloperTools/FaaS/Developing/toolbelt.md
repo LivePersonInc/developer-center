@@ -17,17 +17,17 @@ Currently, the Toolbelt offers the following methods:
 
 | Method | Description |
 | :------- | :----- |
-| Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
-| Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
-| Toolbelt.LpClient() | Returns the LivePerson (LP) Client. This is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
-| Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
-| Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
-| Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
-| Toolbelt.SDEUtil() | Returns a SDE Util instance. Provides SDE related functionality, such as setting/ updating SDEs for an Engagement. |
+| [Toolbelt.SFClient()](#salesforce-client) | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
+| [Toolbelt.HTTPClient()](#http-client) | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
+| [Toolbelt.LpClient()](#liveperson-client) | Returns the LivePerson (LP) Client. This is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
+| [Toolbelt.SecretClient()](#secret-storage-client) | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
+| [Toolbelt.ConversationUtil()](#conversation-util) | Returns a Conversation Util instance. |
+| [Toolbelt.GDPRUtil()](#gdpr-util) | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
+| [Toolbelt.SDEUtil()](#sde-util) | Returns a SDE Util instance. Provides SDE related functionality, such as setting/ updating SDEs for an Engagement. |
 
 Here are usage example, which are taken out of the official templates:
 
-### Salesforce Client:
+### Salesforce Client
 
 Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsforce) for connecting LivePerson Functions to any Salesforce system.
 
@@ -45,7 +45,7 @@ const con = sfClient.connectToSalesforce({
 con.query(query, function(err, queryResult) {});
 ```
 
-### HTTP Client:
+### HTTP Client
 
 HTTP Client that is based on [request-promise](https://www.npmjs.com/package/request-promise) for opening external HTTP connections.
 
@@ -68,7 +68,16 @@ httpClient(URL, {
 })
 ```
 
-### LivePerson Client:
+<div class="important">
+  <ul>
+    <li>Please beware of the following restrictions:</li>
+    <li>Error code 403 can mean that the url is not whitelisted!</li>
+    <li>mTLS is not support!</li>
+    <li>Max. 20 requests/sec (all beyond that are rejected with <code>429 - Too Many Requests</code>)</li>
+  </ul>
+</div>
+
+### LivePerson Client
 
 The LivePerson (LP) Client is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization.
 
@@ -221,7 +230,7 @@ lpClient(
 })
 ```
 
-### Secret Storage Client:
+### Secret Storage Client
 
 Storage Client that is able to read & update secret values. The following methods exist:
 

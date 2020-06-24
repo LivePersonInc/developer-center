@@ -87,6 +87,7 @@ Be aware that logs written during manual test invocations will not be written in
 
 <div class="important">
 <ul>
+<li></li>
 <li>This feature allows you to log sensitive information, since there's no sanitation or limitations on the logged parameters! Please be considerate with your logged values and don't pass any sensitive information to this function, e.g a token or password.</li>
 <li>Logs written during invocation are limited to 10 entries, with an overall maximum of 5000 characters per lambda invocation. If this limit is exceeded, only 1 error log will be stored.</li>
 </ul>
