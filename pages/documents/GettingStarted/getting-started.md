@@ -19,7 +19,7 @@ indicator: both
 <div class="lp-container">
     <div class=" welcome-card-modified">
             <div class="getting-started-paragraph" style="padding: 0 12px 0 0; display:block;">
-         <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" alt="LivePerson's Conversational Commerce Platform"> LivePerson’s Conversational Cloud</a> is an AI powered platform scales conversations with consumers using their preferred messaging channel, such as WhatsApp, Facebook Messenger, Apple Business Chat, and more. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction.
+         <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" alt="LivePerson's Conversational Commerce Platform"> LivePerson’s Conversational Cloud</a> is an AI-powered conversational platform that connects brands to consumers through popular channels, such as Facebook Messenger and WhatsApp, and can scale to any number of conversations. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction. 
             </div>
         </div>
     <div id="teaser-banner" class="welcome-card-modified">

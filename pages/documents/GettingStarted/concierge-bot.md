@@ -9,8 +9,6 @@ indicator: both
 
 ### What is a Concierge Bot?
 
-<br>
-
 Your Conversational Cloud free trial account comes preloaded with a Concierge Bot, which is designed to get your brand up and running on our Conversational AI platform quickly. This bot is pre-wired to use our powerful platform components like the Conversation Builder and Conversation Orchestrator. You can use this bot as a starting point to build out more advanced conversational automation.
 
 This bot provides basic information and contact options to your consumers. If you don’t have an agent available, it can also collect consumer contact information and then send it to an email address that you provided so you can respond later. This means you can engage with your consumers 24/7 without needing a 24-hour support staff.
@@ -22,7 +20,7 @@ This bot provides basic information and contact options to your consumers. If yo
 </div>
 
 ### Exploring your Concierge Bot
-<br>
+
 When you are ready to start getting to know your bot, you can check out your Concierge Bot through Conversation Builder by:
 1. Make sure you are <a  target = "_blank" href="https://authentication.liveperson.net/login.html" alt="LiveEngage URL"> logged in </a> .
 2. On the left sidebar, click the bot icon ("Manage conversational AI and bots").
@@ -36,7 +34,7 @@ From here you can test your bot by clicking <b>Preview </b> and click on the dia
 <i> ‘Contact’ </i>, etc. to see your bot from behind the scenes.
 
 ### Customize your Concierge Bot
-<br>
+
 Now it’s time to make this bot your own. With LivePerson’s Conversational AI platform, you can fully customize what your bot says and does through our powerful tools and integrations. Here we will focus on customizing your bot in 3 ways: (1) personalizing what your bot says to align to your brand, (2) improving what your bot can understand, and (3) completing your bot’s ability to collect customer information after-hours or when your agents aren’t available.
 
 
@@ -99,13 +97,13 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
                        Connect to a Mobile Channel
                 </a>
               </div>
-              <div class="link-padding" style="margin-top:24px">
+              <div class="link-padding" >
                 <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
                        Continue learning about Conversational AI
                 </a>
               </div>
-              <div class="link-padding" style="margin-top:24px">
+              <div class="link-padding" >
                 <a  target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversational-ai.html"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
                        Get started with Intents
