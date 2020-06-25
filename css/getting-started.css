@@ -259,7 +259,8 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
+    margin-top: 32px;
     line-height: 28px;
     letter-spacing: 0.01em;
     color: var(--navy);
@@ -268,7 +269,7 @@
 .container-note {
     display: flex;
     margin-top: 32px;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
     width: 100%;
     flex-wrap: wrap;
 }
