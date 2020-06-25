@@ -38,7 +38,7 @@ From here you can test your bot by clicking <b>Preview </b> and click on the dia
 Now it’s time to make this bot your own. With LivePerson’s Conversational AI platform, you can fully customize what your bot says and does through our powerful tools and integrations. Here we will focus on customizing your bot in 3 ways: (1) personalizing what your bot says to align to your brand, (2) improving what your bot can understand, and (3) completing your bot’s ability to collect customer information after-hours or when your agents aren’t available.
 
 
-### Personalize what your bot says
+#### Personalize what your bot says
 
 The Conversation Builder lets you easily update and change what your bot says. Let’s start by getting your bot to greet people using your brand name:
 
@@ -55,7 +55,7 @@ You can update any other dialog in this bot as you see fit the same way!
 
 TIP: We recommend that you update the <i>‘Open Hours’</i> dialog to accurately represent your hours of operation, removing the <i>‘new user tips’</i> in the <i>‘Open Hours’</i> and <i>‘Fallback’ </i> dialogs.
 
-### Improve what your bot can understand
+#### Improve what your bot can understand
 
 Your bot can understand some messages from your customers out-of-the-box.  For example, if a customer asks for an agent, they will be escalated to a human agent (if available). Let’s start by updating your welcome <a  href="/conversation-builder-interactions-dialog-starter.html" alt="Dialog starter"> dialog starter </a> to improve how your bot understands greetings from visitors:
 
@@ -72,7 +72,7 @@ You can update the dialog starters for each of the dialogs in this bot in the sa
 
 TIP: You can use <a  href="/intent-builder-overview.html" alt="Intent builder"> Intent Builder </a> to further improve your bot’s ability to accurately understand and respond to customers. 
 
-### Complete the ‘Contact’ dialog 
+#### Complete the ‘Contact’ dialog 
 
 Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from a customer and send it to you as an email. To complete this dialog so that you can receive this email from your bot, you need to update your bot’s <b> Email Integration </b>.
 
