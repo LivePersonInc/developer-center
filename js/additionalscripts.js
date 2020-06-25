@@ -145,6 +145,7 @@ function navigateContent(url) {
           $(".suggestbutton").removeClass("suggesthidden");
         }
       }
+
       if (
         $title.indexOf("Let’s build a conversational future together!") != -1 ||
         $title.indexOf("First Steps") != -1
