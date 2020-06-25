@@ -203,8 +203,8 @@ In the **Conversations panel** of the **Manager Workspace**, managers can view t
 
 ### Reporting
 
-#### Report Builder
-Metrics from the FCR, CSAT, and NPS questions in surveys are captured in Conversational Cloud and exposed via the [Report Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html) application. You'll find this information in the predefined [Survey Dashboard for Messaging](https://knowledge.liveperson.com/data-reporting-messaging-messaging-dashboards-survey-dashboard-for-messaging.html), which you can use out-of-the-box or manipulate to create customized reports.
+#### Analytics Builder
+Metrics from the FCR, CSAT, and NPS questions in surveys are captured in Conversational Cloud and exposed via the [Analytics Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html) application. You'll find this information in the predefined [Survey Dashboard for Messaging](https://knowledge.liveperson.com/data-reporting-messaging-messaging-dashboards-survey-dashboard-for-messaging.html), which you can use out-of-the-box or manipulate to create customized reports.
 
 #### Bot Analytics
 In the [Bot Analytics](https://developers.liveperson.com/bot-analytics-overview.html) application, you'll see survey bots reported in the same way as custom bots. There is no difference between the two.
