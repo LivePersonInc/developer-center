@@ -17,7 +17,7 @@ indicator: both
     </div>
 </div>
 
-<div class="card-container" style="margin-top:24px;">
+<div class="card-container" style="margin-top:40px;">
         <a class="welcome-card" target="_blank" href="/mobile-app-messaging-sdk-for-ios-overview.html"> 
         <img class="container-image" src="img/ic_FB.svg"/>
         <h5 class="getstarted-title">Messaging Channels</h5>
