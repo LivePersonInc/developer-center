@@ -26,12 +26,12 @@ Intents match an entire sentence against a set of training sentences or Knowledg
 
 3. Specify the following:
 
-    * **Intent name**: Enter the intent name. Using standard naming conventions when creating intents is crucial. A domain can have dozens of intents and being able to easily sort and find intents is the key to making sure your bot runs efficiently and smoothly.
+    * **Intent name**: Enter the intent name. Using standard naming conventions when creating intents is crucial. A domain can have dozens of intents and being able to easily sort and find intents is key to making sure your bot runs efficiently and smoothly.
     * **Intent display name**: Enter the display name.
-    * **Intent type**: Select either "Intent" or "Meta Intent."
+    * **Intent type**: Select either "Intent" or "Meta Intent." For an introduction to meta intents, see [here](intent-builder-meta-intents.html).
     * **Training**: Enter as many trainining phrases as possible. This is discussed in more detail below.
 
-6. Click **Add Intent**.
+6. Click **Save**.
 
 ### Add training phrases
 
@@ -63,3 +63,19 @@ For more best practices, see [Train & Tune NLU](conversation-builder-best-practi
 ### Train intents
 
 See [Test a domain](intent-builder-domains.html#test-a-domain).
+
+### Delete an intent
+
+Deleting an intent is a non-recoverable action, so be certain about doing so before taking this action.
+
+{: .important}
+Ensure the intent isn't being used by any bots or knowledge bases before you delete it.
+
+**To delete an intent**
+
+1. Open the domain.
+    By default, the Intents page is displayed.
+2. In the left panel, select the intent.
+3. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
+4. In the confirmation dialog, click **Yes**.
+5. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the deletion is reflected in a new model version.

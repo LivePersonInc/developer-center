@@ -50,9 +50,21 @@ You can see from the example below, that having 2 entities match the training ph
 
 <img class="fancyimage" style="width:400px" src="img/testuserinput.png">
 
+### Add an entity
+
+**To add an entity**
+
+1. Open the domain.
+2. In the upper-left corner, click **Entities**.
+3. Click **Add Entity** in the upper-right corner.
+4. Specify the following:
+    * **Entity name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
+    * **Entity values**: Enter each entity value, pressing Enter after each one.
+5. Click **Save** in the lower-right corner.
+
 ### Using entities
 
-To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, review [Knowledge Base tutorial](knowledge-base-tutorial.html).
+To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, review the [Knowledge Base tutorial](knowledge-base-tutorial.html).
 
 #### Can I detect entities using JavaScript?
 
@@ -101,3 +113,19 @@ if (color != null && color.length > 0) {
 Sometimes you need a number of entities to map to a single value. For instance, multiple misspellings or alternative utterances that all mean the same thing. Let’s take an Airport example where we want to detect different ways people might enter names of airports. We can use the data value to be the unifier for these different possible utterances.
 
 Using a similar script to the above color example, which returns the data value, would get you the "LAX" or “DFW” you need.
+
+### Delete an entity
+
+Deleting an entity is a non-recoverable action, so be certain about doing so before taking this action.
+
+{: .important}
+Ensure the entity isn't being used in any intents before you delete it.
+
+**To delete an entity**
+
+1. Open the domain.
+2. In the upper-left corner, click **Entities**.
+3. In the left panel, select the entity.
+4. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
+5. In the confirmation dialog, click **Yes**.
+6. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the deletion is reflected in a new model version.
