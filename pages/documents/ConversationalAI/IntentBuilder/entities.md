@@ -12,9 +12,9 @@ indicator: both
 
 ### What's an entity?
 
-Entities are keywords that represent a number of synonyms. For instance, the entity `sports` could refer to or represent the following group of items: "walking", "jogging", "running", "football" and so on. Whenever an entity is referred to, the group which it represents is automatically inserted by the bot. So if a user sends the sentence, "I'm interested in running," the bot invokes the entity `sports`.
+Entities are keywords that represent a number of synonyms. For instance, the entity `sports` could refer to or represent the following group of items: "walking", "jogging", "running", "football" and so on. Whenever an entity is referred to, the group that it represents is automatically inserted by the bot. So if a user sends the sentence, "I'm interested in running," the bot invokes the entity `sports`.
 
-Therefore, when you're creating training phrases for an intent, instead of typing in multiple phrases like so: "I'm interested in walking", "I'm interested in jogging", "I'm interested in running", you can just create one training phrase which will look like the following:
+Therefore, when you're creating training phrases for an intent, instead of typing in multiple phrases like so: "I'm interested in walking", "I'm interested in jogging", "I'm interested in running", you can just create one training phrase that looks like the following:
 
 "I'm interested in `sports`".
 
@@ -119,7 +119,7 @@ Using a similar script to the above color example, which returns the data value,
 Deleting an entity is a non-recoverable action, so be certain about doing so before taking this action.
 
 {: .important}
-Ensure the entity isn't being used in any intents before you delete it.
+Before you delete an entity, ensure that it isn't being used in any intents or Knowledge Base articles.
 
 **To delete an entity**
 

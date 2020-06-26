@@ -11,9 +11,14 @@ indicator: both
 
 ### What's an intent?
 
-Intents are meant for when you need a looser approach to matching than pattern matching. Since pattern matching looks for an *exact* match to a defined expression, it might "miss" different synonyms, phrasings, formats, and so on. With intents, instead of looking for specific patterns in the user utterance (for example, the pattern "bill"), the bot uses a Natural Language Understanding (NLU) engine to look for the intent specified, and it triggers the bot interaction that's configured to respond to the intent. 
+Intents are meant for when you need a more flexible approach to matching than using patterns. With patterns, there must be an *exact* match between the consumer's utterance and a defined expression. This means that alternative expressions (synonyms, phrasings, and formats) are missed.
 
-Intents match an entire sentence against a set of training sentences or Knowledge Base articles, and the results are scored based on level of confidence: VERY GOOD, GOOD, FAIR PLUS, FAIR, POOR. From the input sentence, the NLU engine derives the intent to which the bot responds. For example, if you've configured a bot to respond to a "billing" intent, the NLU engine doesn't just look for the word "billing." It analyzes any sentence the user might input and tries to understand if the "billing" intent is present. If the intent is present, the NLU "tells" the bot that it is, and the relevant bot dialog triggers.
+Intents use a Natural Language Understanding (NLU) engine to match the user's utterance against a set of training phrases or [Knowledge Base articles](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). The results are scored based on the level of confidence in the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, POOR.
+
+As an example, you might configure a "billing" intent that has a defined set of training phrases like, "I have a question about my bill," "Can you help me with my bill?" and similar, alternative expressions. The consumer's utterance is evaluated against these phrases, and a score is determined. *If there's a match of GOOD or better*, the intent is understood to be present, it is sent to the bot, and the bot triggers the associated dialog starter.
+
+{: .important}
+For some practice with intents, try the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html).
 
 ### Add an intent
 
@@ -21,31 +26,26 @@ Intents match an entire sentence against a set of training sentences or Knowledg
 
 1. In the dashboard that lists your domains, select the domain.
 2. Click **Add Intent** in the upper-right corner.
-
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_addIntent.png">
-
 3. Specify the following:
 
     * **Intent name**: Enter the intent name. Using standard naming conventions when creating intents is crucial. A domain can have dozens of intents and being able to easily sort and find intents is key to making sure your bot runs efficiently and smoothly.
     * **Intent display name**: Enter the display name.
     * **Intent type**: Select either "Intent" or "Meta Intent." For an introduction to meta intents, see [here](intent-builder-meta-intents.html).
-    * **Training**: Enter as many trainining phrases as possible. This is discussed in more detail below.
+    * **Training**: Enter as many training phrases as possible. This is discussed in more detail below.
 
 6. Click **Save**.
 
 ### Add training phrases
 
-The NLU engine uses training phrases in order to match a user input with an intent. The more training phrases you include, the more likely the NLU engine will be to accurately match the user's intent with what they were actually looking for. Generally speaking, the phrases should be complete sentences (rather than keywords like pattern matching or very long paragraphs).
+The NLU engine uses training phrases in order to match a user's utterance with an intent. The more training phrases you include, the more likely it is that the NLU engine will accurately match the user's intent. Generally speaking, the phrases should be complete sentences (not long paragraphs, and not keywords).
 
-Let's say that I have an intent which I label "check_bill". I could associate it with the following training phrases:
+As an example, assume you have a "Check bill" intent. You might add the following training phrases, among others:
 
 * I want to check the status of my bill
 
 * Tell me what my bill is
 
 * I need to look into what's going with my bill
-
-The NLU engine will take the user input and compare it to your training phrases. If it finds a match to a degree of certainty exceeding "GOOD", it will send the intent configured to the bot. All of these phrases and similar sentences would result in the "check_bill" intent being sent to the bot and the corresponding action (configured by you in the Conversation Builder) to be triggered.
 
 #### Best practices
 
