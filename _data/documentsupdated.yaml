@@ -245,6 +245,11 @@
       - pagename: Knowledge Bases
       - pagename: Articles
       - pagename: Tutorial
+  - documentname: Bots Status
+    pages:
+      - pagename: Overview
+      - pagename: Managing Normal Bots
+      - pagename: Managing Post-Conversation Survey Bots
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
