@@ -10,7 +10,7 @@ indicator: both
 
 ### Supporting failover
 
-LivePerson recommends that, when you connect your bot to LiveEngage in a production environment, you deploy at least two LiveEngage agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
+LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 ### Stop an agent
 
@@ -26,13 +26,12 @@ Typically, you don't stop an agent, but you might need to in a few cases:
 3. Select the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) beside the bot name.
 4. Select **Stop Agent**.
 5. Click **Yes** to confirm the action.
+
     The status of the agent connector changes to Stopped.
 
 ### Start an agent
 
-Starting an agent gets the connector running so that new conversations can start to occur.
-
-Be aware that it can take a few minutes for the agent to start.
+Starting an agent gets the connector running so that new conversations can start to occur. Be aware that it can take a few minutes for the agent to start.
 
 **To start an agent**
 
@@ -40,6 +39,7 @@ Be aware that it can take a few minutes for the agent to start.
 2. Use the filter controls to display the bots for the relevant environment.
 3. Select the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) beside the bot name.
 4. Select **Start Agent**.
+
     The status of the agent connector changes to Online.
 
 ### Redeploy an agent
