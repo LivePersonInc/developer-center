@@ -85,6 +85,28 @@ To accomplish this, in the Display Article interaction, we've configured the nex
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_advSettings6.png">
 
+### Enable or disable an article
+
+
+In the Knowledge Base application, disabled articles are indentified by a "Pending" indicator.
+
+<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/kb_articleDisabled.png">
+
+**To enable an article**
+
+1. Open the knowledge base, and display the article.
+2. Click **Enable**.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_articleEnable.png">
+
+**To disable an article**
+
+1. Open the knowledge base, and display the article.
+2. Click **Disable**.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_articleDisable.png">
+
+
 ### Train a knowledge base
 
 To train a knowledge base, select the knowledge base, enter an utterance, and review the results. If you don't get any results for a particular utterance, you can adjust the filters by tapping the advanced search icon.
