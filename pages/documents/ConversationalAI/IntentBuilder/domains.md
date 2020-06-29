@@ -16,7 +16,7 @@ indicator: both
 3. On the Add Domain page, specify the following: 
     * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
     * **Manual** or **Import**: If you want to manually add intents and entities to the domain, select "Manual." If you want to import them from a file, select "Import."
-    * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files. **Note:** The import file should only be named with and contain alphanumeric characters.
+    * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
 
         A Google sheet must be public, i.e., with no file restrictions in place. If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
 
@@ -34,7 +34,7 @@ indicator: both
 2. Click **Domain Settings** in the upper-left corner.
 3. Specify the following:
     * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
-    * **Add Intents and Entities**: You can select to add these manually or import them via a CSV file or Google sheet. If you import them via a CSV file, the operation is additive, i.e., the intents and entities are appended to the existing ones. **Note:** The import file should only be named with and contain alphanumeric characters.
+    * **Add Intents and Entities**: You can select to add these manually or import them via a CSV file or Google sheet. If you import them via a CSV file, the operation is additive, i.e., the intents and entities are appended to the existing ones. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
 
         A Google sheet must be public, i.e., with no file restrictions in place. If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
 
