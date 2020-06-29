@@ -635,6 +635,7 @@
           - subpagename: Storing Secrets
           - subpagename: Debugger
           - subpagename: "Best Practices"
+          - subpagename: "Limitations & Restrictions"
       - pagename: "Command Line Interface (CLI)"
       - pagename: Deployment
       - pagename: Monitoring
