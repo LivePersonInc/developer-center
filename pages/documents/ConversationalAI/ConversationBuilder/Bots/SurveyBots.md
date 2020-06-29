@@ -230,7 +230,7 @@ Additionally, there are a few operations available that are specifically for bra
 * Roll back to Bot Studio
 
 {: .important}
-For details on all these operations, see [here](bots-status-managing-post-conversation-survey-bots.html).
+For details on all these operations, see [here](bots-status-managing-post-conversation-survey-bots.html). Keep in mind that all survey bots share a single agent connector, so performing any operation on one survey bot affects all the survey bots.
 
 ### Migrating from Bot Studio to Conversation Builder
 
