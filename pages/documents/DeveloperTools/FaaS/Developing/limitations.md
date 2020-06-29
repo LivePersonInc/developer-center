@@ -21,17 +21,17 @@ The following section describes the limitations and restrictions of the platform
 ### Timeouts
 
 The usage of `setTimeout()` in LivePerson Functions must be handled with care. 
-* Functions cannot exceed the runtime of **30 secconds**. The error `Lambda Execution is taking too long` will thrown.
-* If you execute multiple functions containing a `setTimeout()` call, the event loop of the service may fill up. Even functions with a lower execution time than 30 seconds could therefore take longer, may reach the execution time limit and fail. Because of this timeouts, it's important to double check if they cannot be avoided in your use case.
+* Functions cannot exceed the runtime of **30 secconds**. The error `Lambda Execution is taking too long` will be thrown.
+* If you execute multiple functions containing a `setTimeout()` call, the event loop of the service may fill up. Even functions with a lower execution time than 30 seconds could therefore take longer, may reach the execution time limit and fail. Because of this, it's important to double check if timeouts cannot be avoided in your use case.
 
 ### HTTP-Requests
 
-* mTLS is not support.
+* mTLS is not supported.
 * Max. 20 requests/sec (all beyond that are rejected with `429 - Too Many Requests`).
 
 ### Lambda
 
-* The source code cannot exceed the length of `100.000` characters.
+* The source code must not exceed the length of `100.000` characters.
 * The size of a lambda cannot exceed `256 Mb`. So beware, if you want to use for example large file processing inside a function and reach this limit the function will stop running and the invocation will fail.
 
 ### Logging

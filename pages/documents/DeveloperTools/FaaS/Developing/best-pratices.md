@@ -262,7 +262,7 @@ try {
 
 The [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html) allows you to save the conversation session state data in Conversational Cloud (e.g. agent notes), and then retrieve them later in a different conversation session.
 
-The following steps needs to be performed before using the code examples:
+The following steps need to be performed before using the code examples:
 * Create a [Developer Key](conversation-orchestrator-context-warehouse-context-session-store.html#developer-key) and save it to the [Secret Storage](liveperson-functions-development-storing-secrets.html)
 * Create a [custom namespace](conversation-orchestrator-context-warehouse-context-session-store.html)
 * Whitelist the domains `z1.context.liveperson.net`, `z2.context.liveperson.net` or `z3.context.liveperson.net` (depends on your zone).
