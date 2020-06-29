@@ -64,7 +64,7 @@ Check out the [on-boarding guide](/mtls-onboarding.html) for next steps.
 
   - The P12 Key Tester supports Bearer authentication only.
 
-  - The Forwarding methods support both oAuth1 (app key + app secret) and Bearer.
+  - The Forwarding methods support oAuth1 authorization (app key + app secret).
 
 * The mTLS service is throttling protected, allowing only 10 requests per second (per incoming IP).
 
