@@ -1,5 +1,7 @@
 ---
 pagename: Getting Started with your Free Trial Account
+redirect_from:
+  - first-steps.html
 sitesection: Documents
 categoryname: "Getting Started"
 permalink: getting-started-with-your-free-trial-account.html
