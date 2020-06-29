@@ -96,9 +96,9 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
                     <img class="dots-container" src="img/four-dots.svg"/>
                        Connect to a Mobile Channel
                 </a>
-              </div>
+              </div>       
               <div class="link-padding" >
-                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-facebook-messenger-quick-start.html"> 
+                <a target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversational-ai.html"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
                        Continue learning about Conversational AI
                 </a>
