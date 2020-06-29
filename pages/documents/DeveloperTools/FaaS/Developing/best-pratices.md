@@ -18,11 +18,13 @@ The following section shows some best practices for using the LivePerson Functio
 - [Usage of Environment Variables](#usage-of-environment-variables)
 - [Async/Await Functions](#asyncawait-functions)
 - [Error handling in async functions](#error-handling-in-async-functions)
-- [Limitations of Timeouts](#limitations-of-timeouts)
+- [Working with Context Session Store](#working-with-context-session-store)
 
 ### OAuth 1
 
-LivePerson Functions offers the possibility to use the [oauth-1.0a](https://www.npmjs.com/package/oauth-1.0a) package. 
+OAuth is an open-standard authorization protocol or framework that describes how unrelated servers and services can safely allow authenticated access to their assets without actually sharing the initial, related, single logon credential. In authentication parlance, this is known as secure, third-party, user-agent, delegated authorization.
+
+LivePerson Functions offers the possibility to use the [oauth-1.0a](https://www.npmjs.com/package/oauth-1.0a) package to support the [OAuth 1 authorization flow](https://oauth1.wp-api.org/docs/basics/Auth-Flow.html).
 
 The following code shows an example which performs a `POST` request with `Header`-Authorization.
 
@@ -82,7 +84,11 @@ async function lambda(input, callback) {
 
 ### OAuth 2.0
 
-LivePerson Functions supports the Client Credentials as `Grant Type`. The [Client Credentials](https://oauth.net/2/grant-types/client-credentials/) grant type is used by clients to obtain an access token outside of the context of a user. 
+[OAuth 2.0](https://tools.ietf.org/html/rfc6749) is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service. It works by delegating user authentication to the service that hosts the user account, and authorizing third-party applications to access the user account. OAuth 2 provides authorization flows for web and desktop applications, and mobile devices. To get access OAuth 2.0 supports several different grant types. 
+
+LivePerson Functions supports the [Client Credentials](https://oauth.net/2/grant-types/client-credentials/) as `Grant Type`. The Client Credentials are used by clients to obtain an [Access Token](https://auth0.com/docs/glossary?term=access-token) outside of the context of a user.
+
+<img src="img/faas-oauth-client-credentials-flow.jpg" alt="LivePerson Functions OAuth" style="width:60%;"/>
 
 <div class="important">
   It's recommended to store the <code>clientId</code> and <code>clientSecret</code> in the <a href="liveperson-functions-development-toolbelt.html#secret-storage-client">secret storage</a>
@@ -115,7 +121,7 @@ async function lambda(input, callback) {
         resolveWithFullResponse: false
     })
 
-    // Perform request with token (type may change)
+    // Perform request with token (type may change) to the resource server
     const response = await httpClient(URL, {
       method: "GET", 
       headers: {
@@ -143,6 +149,10 @@ The Environment Variables are used to save configurations for a specific lambda.
     <li>Do not save sensitive data in Environment Variables!</li>
   </ul>
 </div>
+
+Environment Variables are created in the sidebar of the editor. Just unfold the tab "Environment Variables", click on "Set variable", set the desired name and value (will be of type `String`) and click on "Set".
+
+<img src="img/faas-env-variabel.jpg" alt="LivePerson Functions Editor" style="width:80%;"/>
 
 ```javascript
 async function lambda(input, callback) {
@@ -173,7 +183,13 @@ See [Environment Variables](liveperson-functions-development-overview.html#envir
 
 ### Async/Await Functions
 
-It is possible to use the [async/await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) functionality within LivePerson Functions. Proper error handling is important when using this, check the [best practices](#error-handling-in-async-functions).
+There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”. It’s surprisingly easy to understand and use. The word `async` before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically. The keyword `await` makes JavaScript wait until that promise settles and returns its result.
+
+It is possible to use the [async/await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) functionality within LivePerson Functions. Proper error handling is important when using this.
+
+<div class="important"> 
+  To use async/await and LivePerson Functions correctly together, it is mandatory that the function is completed with a callback. Please note that the callback is always the last execution within a function. Everything afterwards is ignored and can lead to a malfunction of the function.
+</div>
 
 The example shows the HTTP-Template with async/await.
 
@@ -229,7 +245,9 @@ const myPromise =
   .catch(error => callback(error, null));
 ```
 
-For [async-await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) a try-catch is necessary. 
+If a promise resolves normally, then `await` promise returns the result. But in the case of a rejection, it throws the error, just as if there were a throw statement at that line. In real situations, the promise may take some time before it rejects. In that case there will be a delay before await throws an error.
+
+We can catch that error using `try..catch`, the same way as a regular `throw`:
 
 ```javascript
 try {
@@ -240,8 +258,93 @@ try {
 } 
 ```
 
-### Limitations of Timeouts
+### Working with Context Session Store
 
-The usage of `setTimeout()` in LivePerson Functions must be handled with care. 
-* Functions cannot exceed the runtime of **30 secconds**. The error `Lambda Execution is taking too long` will thrown.
-* If you execute multiple functions containing a `setTimeout()` call, the event loop of the service may fill up. Even functions with a lower execution time than 30 seconds could therefore take longer, may reach the execution time limit and fail. Because of this timeouts in general should be handled with care and it is encouraged to double check their need in any use case.
+The [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html) allows you to save the conversation session state data in Conversational Cloud (e.g. agent notes), and then retrieve them later in a different conversation session.
+
+The following steps need to be performed before using the code examples:
+* Create a [Developer Key](conversation-orchestrator-context-warehouse-context-session-store.html#developer-key) and save it to the [Secret Storage](liveperson-functions-development-storing-secrets.html)
+* Create a [custom namespace](conversation-orchestrator-context-warehouse-context-session-store.html)
+* Whitelist the domains `z1.context.liveperson.net`, `z2.context.liveperson.net` or `z3.context.liveperson.net` (depends on your zone).
+
+**Save data**
+
+The following code snippets shows how to save data to the `Context Session Store`. 
+
+To save data to a specific sessionId you have to adjust the URL, e.g. `https://z1.context.liveperson.net/v1/account/{accountId}/faas-demo-namespace/{sessionId}/properties`. Otherwise it will use the `__default__` sessionId.
+
+```javascript
+async function lambda(input, callback) {
+  const { Toolbelt } = require('lp-faas-toolbelt');
+  const HttpClient = Toolbelt.HTTPClient();
+  const SecretStorage = Toolbelt.SecretClient();
+
+  // Uses the default sessionId "__default__"
+  // For a specific session the url have to be "../faas-demo-namespace/{sessionId}/properties"
+  const mavenApi = `https://z1.context.liveperson.net/v1/account/${process.env['accountId']}/faas-demo-namespace/properties`;
+
+  // Data you want to save
+  const body = {
+    ...
+  };
+
+  try {
+    // Get your maven-api-key from the secret storage
+    const mavenApiKey = await SecretStorage.readSecret('mavenApiKey');
+
+    // Perform the request to the Context Session Storage and pass a body
+    await HttpClient(mavenApi, {
+      method: 'PATCH',
+      headers: {
+        'maven-api-key': mavenApiKey.value,
+      },
+      simple: false,
+      json: true,
+      resolveWithFullResponse: false,
+      body,
+    });
+
+    callback(null, null);
+  } catch (error) {
+    callback(error, null);
+  }
+}
+```
+
+**Get data**
+
+The following code snippets shows how to get data from the `Context Session Store`. 
+
+To get data from a specific sessionId you have to adjust the URL, e.g. `https://z1.context.liveperson.net/v1/account/{accountId}/faas-demo-namespace/{sessionId}/properties`. Otherwise it will use the `__default__` sessionId.
+
+```javascript
+async function lambda(input, callback) {
+  const { Toolbelt } = require('lp-faas-toolbelt');
+  const HttpClient = Toolbelt.HTTPClient();
+  const SecretStorage = Toolbelt.SecretClient();
+
+  // Uses the default sessionId "__default__"
+  // For a specific session the url have to be "../faas-demo-namespace/{{sessionId}}/properties"
+  const mavenApi = `https://z1.context.liveperson.net/v1/account/${process.env['accountId']}/faas-demo-namespace/properties`;
+
+  try {
+    // Get your maven-api-key from the secret storage
+    const mavenApiKey = await SecretStorage.readSecret('mavenApiKey');
+
+    // Perform the request to access the Context Session Storage
+    const response = await HttpClient(mavenApi, {
+      method: 'GET',
+      headers: {
+        'maven-api-key': mavenApiKey.value,
+      },
+      simple: true,
+      json: true,
+      resolveWithFullResponse: false,
+    });
+
+    callback(null, response);
+  } catch (error) {
+    callback(error, null);
+  }
+}
+```
