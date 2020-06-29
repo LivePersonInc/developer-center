@@ -104,7 +104,7 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
                 </a>
               </div>
               <div class="link-padding" >
-                <a  target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversational-ai.html"> 
+                <a  target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversation-builder-getting-started-tutorials.html#intents-and-entities"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
                        Get started with Intents
                 </a>
