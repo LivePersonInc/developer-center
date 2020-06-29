@@ -28,7 +28,7 @@ For some practice with intents, try the [Intents tutorial](conversation-builder-
 2. Click **Add Intent** in the upper-right corner.
 3. Specify the following:
 
-    * **Intent name**: Enter the intent name. Using standard naming conventions when creating intents is crucial. A domain can have dozens of intents and being able to easily sort and find intents is key to making sure your bot runs efficiently and smoothly.
+    * **Intent name**: Enter the intent name. A domain can have dozens of intents, so using a standard naming convention is important for being able to easily sort and find intents.
     * **Intent display name**: Enter the display name.
     * **Intent type**: Select either "Intent" or "Meta Intent." For an introduction to meta intents, see [here](intent-builder-meta-intents.html).
     * **Training**: Enter as many training phrases as possible. This is discussed in more detail below.
@@ -74,7 +74,9 @@ Ensure the intent isn't being used by any bots or knowledge bases before you del
 **To delete an intent**
 
 1. Open the domain.
+
     By default, the Intents page is displayed.
+
 2. In the left panel, select the intent.
 3. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
 4. In the confirmation dialog, click **Yes**.

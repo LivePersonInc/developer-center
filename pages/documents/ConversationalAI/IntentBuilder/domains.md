@@ -247,5 +247,5 @@ Before you delete a domain, ensure that it isn't being used by any bots or knowl
 
 1. Open the domain.
 2. In the upper-left corner, click **Domain Settings**.
-3. Click **More Settings**, scroll down to the Delete Domain section, and click <img style="width:25px" src="img/ConvoBuilder/icon_delete.png"> (Delete icon).
+3. Click **More Settings**, scroll down to the **Delete Domain** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_delete.png"> (Delete icon).
 4. In the confirmation dialog, click **Yes**. 
