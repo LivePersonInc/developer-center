@@ -56,7 +56,7 @@ With this in place, we can continue to build our knowledge base integration as w
 
 Our Small Talk dialog is being triggered by our meta intent, which again captures any utterance that matches its nested intents. We then take our triggering phrase and feed it into our search to return the appropriate article. If we have correctly tied each of our intents to a knowledge base article, we should get the correct response we’re looking for every time.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/guideMetaIntents_smallTalkDialog.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideMetaIntents_smallTalkDialog.png">
 
 {: .important}
 If your use case requires taking action on the specific, child intent, you can determine this by using the [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent) scripting function.

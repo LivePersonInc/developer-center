@@ -61,11 +61,11 @@
             </li>
         </ul>
     </div>
-    <div id="template-bot" class="template-greeting-bot" style="display:none">
+    <div id="template-bot" class="template-greeting-bot">
         <div class="template-greeting-loading">
-            Loading your chat
-            <br />
-            experience window...
+            If the conversation window doesn't
+            show up automatically
+            click on 'Message Us'.
         </div>
     </div>
 
@@ -201,7 +201,7 @@
                 return new Promise(resolve => setTimeout(resolve, milliseconds))
             }
             await sleep(2000);
-            document.getElementById('template-bot').setAttribute('style', 'display:none !important');
+            // document.getElementById('template-bot').setAttribute('style', 'display:none !important');
             document.getElementById('tips-container').setAttribute('style', 'display:inline-block !important');
 
             console.log('template bot should be gone');
