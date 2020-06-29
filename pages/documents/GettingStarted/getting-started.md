@@ -73,6 +73,11 @@ Connect to mobile channels and customize your Concierge Bot
         <h5 class="getstarted-title">Conversational AI</h5>
         <p class="getstarted-content ">Starting with your Concierge Bot</p>
   </a>
+  <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversation-builder-conversation-builder-overview.html"> 
+        <img class="container-image" src="img/ic_robot.svg"/>
+        <h5 class="getstarted-title">Conversational AI</h5>
+        <p class="getstarted-content ">Learn more about the Conversation Builder</p>
+  </a>
 </div>
 <div class="welcome-card-modified">
     <div class="small-header">
