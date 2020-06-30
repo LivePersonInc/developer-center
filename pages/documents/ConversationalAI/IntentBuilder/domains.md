@@ -39,7 +39,7 @@ The following illustrates a well-formatted intents file:
 {: .important}
 Key phrases are only applicable to the LivePerson NLU v1 engine. You can leave this section blank if you're using another NLU engine. For information on key phrase matching, see *Configure domain settings*, which follows below.
 
-Additionally, having said the above, the following, simpler format also works if it suits your needs:
+Additionally, having said the above, the following, simplified format also works. It should suit most use cases.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_importFile_intents_b.png">
 
