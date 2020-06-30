@@ -37,7 +37,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 
 **To create an import file**
 
-1. Create a new CSV file or Google sheet.
+1. Create a new CSV file or Google sheet. A Google sheet must be public, i.e., with no file restrictions in place.
 2. Add the column headers listed below; use the order listed in the table below.
 3. Fill out the rows with your article data. It's recommended that you complete at least these columns: title, summary, detail, tags, and alternates (if using Knowledge Base intents) or intentName (if using Domain intents).
 
