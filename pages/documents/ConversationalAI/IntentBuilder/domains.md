@@ -30,8 +30,6 @@ indicator: both
 
 If you want to import a set of intents and/or entities into a domain when you add the domain (or later), you'll need to create the import file.
 
-If you're creating a Google sheet, add the intents to the first tab in the sheet, and name the tab "Intents." Then add the entities to a second tab named "Entities." The Google sheet must be public, i.e., with no file restrictions in place.
-
 The easiest way to ensure that the import file is well-formatted is to export a test domain. This provides you with an export file in the proper format. You can then use the export file to create an import file.
 
 The following illustrates a well-formatted intents file:
@@ -48,6 +46,8 @@ Additionally, having said the above, the following, simpler format also works if
 The following illustrates a well-formatted entities file:
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_importFile_entities.png">
+
+If you're creating a Google sheet, add the intents to the first tab in the sheet, and name the tab "Intents." Then add the entities to a second tab named "Entities." The Google sheet must be public, i.e., with no file restrictions in place.
 
 
 ### Configure domain settings
