@@ -17,7 +17,7 @@ indicator: both
     * **Data source name**: Enter a display name for the knowledge base.
     * **Data source type**: Select "Knowledge Base."
     * **Language**: Select the language of the knowledge base. The default value is English. For details on how the language is used, see [here](knowledge-base-overview.html#languages) in the overview.
-    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. The Google sheet must be public, i.e., with no file restrictions in place. For details on creating an import file, see [here](knowledge-base-knowledge-bases.html#create-an-import-file) below. 
+    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. The Google sheet must be public, i.e., with no file restrictions in place. For details on creating an import file, see farther below. 
         
         If you select "Google Sheet" and you provide the URL to the sheet, be aware that this establishes a link between the knowledge base and the sheet. If you later sync the knowledge base, it is updated with the current contents in the sheet. 
 

@@ -26,6 +26,30 @@ indicator: both
     
     If you didn't import them, you can now add intents and entities to the domain.
 
+### Create an import file
+
+If you want to import a set of intents and/or entities into a domain when you add the domain (or later), you'll need to create the import file.
+
+If you're creating a Google sheet, add the intents to the first tab in the sheet, and name the tab "Intents." Then add the entities to a second tab named "Entities." The Google sheet must be public, i.e., with no file restrictions in place.
+
+The easiest way to ensure that the import file is well-formatted is to export a test domain. This provides you with an export file in the proper format. You can then use the export file to create an import file.
+
+The following illustrates a well-formatted intents file:
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ib_importFile_intents_a.png">
+
+{: .important}
+Key phrases are only applicable to the LivePerson NLU v1 engine. You can leave this section blank if you're using another NLU engine. For information on key phrase matching, see *Configure domain settings*, which follows below.
+
+Additionally, having said the above, the following, simpler format also works if it suits your needs:
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_importFile_intents_b.png">
+
+The following illustrates a well-formatted entities file:
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_importFile_entities.png">
+
+
 ### Configure domain settings
 
 **To configure domain settings**
@@ -89,6 +113,10 @@ Before you train, ensure the domain has at least 5 intents. For each intent, ens
     To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
 
 ### Create a 3rd-party NLU provider credential
+
+You must create a 3rd-party NLU provider credential, as the system requires and uses the credentials when training the domain to create a model version.
+
+**To create a 3rd-party NLU provider credential**
 
 1. Open the domain.
 2. Click **Train** in the upper-right corner.
