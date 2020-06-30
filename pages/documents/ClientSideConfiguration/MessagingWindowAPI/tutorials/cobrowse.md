@@ -17,7 +17,6 @@ This tutorial explains how to start a CoBrowse session on consumer side using th
 
 ### Prerequisites
 * This guide is for Web-CoBrowsing only. The Messaging Window API must be used in a browser environment and the website must be tagged with lpTag.
-* LivePerson account must be enabled with CoBrowse feature: ``Cobrowse.Cobrowse_Integration`` (enabled by default) and Site-Setting ``coapp.enabled``. If you are not sure that your account is enabled with these two features, please contact LivePerson Support.
 
 ### Step 1 - Set CoBrowse Feature in Client Properties
 
@@ -54,6 +53,7 @@ If your account is set up correctly, you should see the following button inside 
 Once the agent sends an invitation, you should see a new event of type ``cqm.ExConversationChangeNotification``. Inside the event, there is a ``conversationDetails`` object containing two dialogs. The first one is the existing messaging dialog, the second one is a new dialog with ``channelType=COBROWSE``:
 
 ```json
+...
 {
     "dialogId": "c26b9d3b-e943-42af-8047-aba830de64ea",
     "participants": [
@@ -67,17 +67,14 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
         "mode": "shared",
         "expires": 1.502893131855E9,
         "sessionState": "INVITED",
-        "permissions": "audio,screen,control",
-        "host": "https://coapp.dev.lprnd.net",
-        "uid": "le83624296:356285412__cc05f2b9-916b-496e-89fe-66a46d975ae2_1502893040466_1502893041854",
-        "channel": "le83624296:356285412__cc05f2b9-916b-496e-89fe-66a46d975ae2_1502893040466",
-        "token": "...",
-        "role": "visitor"
+        "dialogId": "c26b9d3b-e943-42af-8047-aba830de64ea"
     },
     "state": "OPEN",
     "creationTs": 1502893041905,
     "metaDataLastUpdateTs": 1502893041905
 }
+...
+
 ```
 
 The relevant fields in this dialog are ``channelType`` and inside ``metaData`` the ``serviceId``, ``mode`` and ``sessionState`` fields. ``channelType`` always equals ``COBROWSE`` and can be used to check if the new dialog is a CoBrowse dialog. The ``serviceId`` is used to match Consumer and Agent and needs to be passed to the CoBrowse API on the website. ``mode`` is equal to the CoBrowse mode the Agent selected. For CoBrowse, the possible values are ``shared`` for shared CoBrowse, ``view`` for view-only CoBrowse where the agent is able to scroll the visitor's view and ``follow`` for view-only without scroll permissions for the agent.

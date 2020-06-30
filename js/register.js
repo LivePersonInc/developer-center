@@ -1,101 +1,274 @@
-//declaring variables
-let firstName;
-let lastName;
-let country;
-let emailAddress;
-let password;
-let confirmPassword;
-let trialButtton;
+const ENDPOINT = 'https://self-service.liveperson.com/api/free-trial/account'
+const ENDPOINT_ALPHA = 'https://free-trial.liveperson.com/api/free-trial/account'
+
+let firstName
+let lastName
+let region
+let emailAddress
+let password
+let confirmPassword
+let trialButtton
+let radioValue
+let passwordStrength
+let passwordLength
+let passwordPassed
+let recaptchaResponseToken
+
+let player = null
+let submitSuccess = false
+let videoComplete = false
 
 $(document).ready(function () {
-  createAccount();
-  disableBtn();
-});
+  player = new Vimeo.Player($('#vid-container iframe'))
+  registerEvents()
+  //if you're working locally, comment out the next function to bypass captcha
+  disableBtn()
+})
 
-//disable the free trial button
-function disableBtn () {
-  trialButton = document.getElementById('registerButton');
-  trialButton.disabled = true;
-  $(trialButton).removeClass('activeButton');
-}
-
-//enable the free trial button
-function enableBtn () {
-  trialButton.disabled = false;
-  $(trialButton).addClass('activeButton');
-}
-
-//on click on the free trial button
-function createAccount () {
-    $('#captchaContainer').on('click', '#registerButton', function (event) {
-      console.log('registerClicked');
-      validateInfo();
+// Register events that need to be handled in register.js.
+function registerEvents() {
+  $('#captchaContainer').on('click', '#registerButton', function (event) {
+    const valid = validateInfo()
+    if (valid) postRequest()
   })
-};
 
-//make sure all the info submitted to the form is valid
-function validateInfo (){
-  //filling variables from the form
-  firstName = $('#firstName').val();
-  lastName = $('#lastName').val();
-  country = $('#country').val();
-  emailAddress = $('#emailAddress').val();
-  password = $('#createPassword').val();
-  confirmPassword = $("#confirmPassword").val();
-  //make sure password and confirmpassword match
+  $('#captchaContainer').on('click', '#registerButtonTest', function (event) {
+    //const valid = validateInfo()
+    postRequestTest()
+  })
+
+  $('#captchaContainer').on('click', 'input', function (event) {
+    radioValue = $('input:checked').val()
+  })
+
+  // Detect when the Vimeo player has finished the video.
+  player.on('ended', function() {
+      videoComplete = true
+      attemptConfirmationTransition()
+  })
+}
+
+// Disable submit button.
+function disableBtn () {
+  trialButton = document.getElementById('registerButton')
+  trialButton.disabled = true
+  $(trialButton).removeClass('activeButton')
+}
+
+// Enabled submit button.
+function enableBtn (token) {
+  recaptchaResponseToken = token
+  trialButton.disabled = false
+  $(trialButton).addClass('activeButton')
+}
+
+// Validate info submitted in form.
+function validateInfo () {
+  firstName = $('#firstName').val()
+  lastName = $('#lastName').val()
+  region = $('#region').val()
+  emailAddress = $('#emailAddress').val()
+  password = $('#createPassword').val()
+  confirmPassword = $("#confirmPassword").val()
+
+  // Ensure "agree button" was clicked.
+  // TODO: This code doesn't seem to actually ensure anything...
+  if (radioValue !== 'on') $('#agreeMessage').show()
+  else $('#agreeMessage').hide()
+
+  // Ensure email is valid.
+  let emailRegexPtn = /^([a-zA-Z0-9_.-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+  let isValidEmail = emailRegexPtn.test(emailAddress)
+  let containsPlus = emailAddress.includes('+')
+
+  if (!isValidEmail) {
+      $('#invalidEmail').show()
+      if (containsPlus) {
+        $('#invalidEmailWithPlus').show()
+      }
+  } else {
+        $('#invalidEmail').hide()
+        // hide has no effect if already hidden so not necessary to track if it was previously visible or not
+        $('#invalidEmailWithPlus').hide()
+  }
+
+  // Check password length.
+  if(password.length < 8) {
+    $('#passwordTooShort').show()
+    passwordLength = false
+  } else {
+    $('#passwordTooShort').hide()
+    passwordLength = true
+  }
+
+  // Check that passwords match.
   if(password != confirmPassword) {
-    //if they don't match, show an error message on screen
-    $('#passwordErrorMatch').show();
+    $('#passwordErrorMatch').show()
   } else {
-    //if they do match, don't show the error message and hide it in case it was displayed previously
-      $('#passwordErrorMatch').hide();
-    }
+      $('#passwordErrorMatch').hide()
+  }
+
+  const includesSpecialCharacter = /.*[~!@#$%^&*()<>,.:/?=]/
+  const includesUppercase = /[A-Z]/
+  const includesNumber = /\d/
+
+  if(!includesSpecialCharacter.test(password)) {
+    $('#passwordSpecialCharacterNeeded').show()
+  } else {
+    $('#passwordSpecialCharacterNeeded').hide()
+  }
+
+  if(!includesUppercase.test(password)) {
+    $('#passwordUppercaseNeeded').show()
+  } else {
+    $('#passwordUppercaseNeeded').hide()
+  }
+
+  if(!includesNumber.test(password)) {
+    $('#passwordNumberNeeded').show()
+  } else {
+    $('#passwordNumberNeeded').hide()
+  }
+
+  // Check that password meets requirements.
+  passwordStrength = new RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()<>,.:/?=])')
+  if (password.match(passwordStrength)){
+    $('#passwordErrorStrength').hide()
+    passwordPassed = true
+  } else {
+    $('#passwordErrorStrength').show()
+    passwordPassed = false
+  }
     //make sure all fields are filled
-  if (firstName && lastName && country && emailAddress && password && confirmPassword) {
-    //if they are filled, don't show an error message and hide it in case it was displayed previously
-    $('#allFields').hide();
+  if (firstName && lastName && region && emailAddress && password && confirmPassword) {
+    $('#allFields').hide()
   } else {
-    //if they aren't filled, show the error message
-    $('#allFields').show();
+    $('#allFields').show()
   }
-  //if all fields were filled and the passwords match, call the request to create an account
-  if ((firstName && lastName && country && emailAddress && password && confirmPassword) && (password == confirmPassword)) {
-    postRequest();
+
+  const isValidForm = (firstName && lastName && region && emailAddress && isValidEmail && password && confirmPassword && passwordLength && passwordPassed) && (radioValue == "on") && (password == confirmPassword)
+
+  // current acceptance criteria as of 9/3/19 for hotjar form submit metrics are to tally an error for
+  //  "Anything that would cause a submit to fail (i.e. both invalid form values and network errors)."
+  if (!isValidForm && window.hj) {
+    window.hj('formSubmitFailed')
   }
+
+  return isValidForm
+}
+
+function getCookie(name) {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^]+)'))
+  if (match) {
+    const result = match[2]
+    if (result !== "null" && result !== "NULL") {
+      return result
+    }
+  }
+  return undefined
 }
 
 function postRequest () {
-//defining the endpoint for account creation
-  const URL = 'https://uohcduank4.execute-api.us-east-2.amazonaws.com/dev/devaccount';
-//filling in request body with variables from the form
-  const user ={
+  videoTransition()
+
+  // Get data from the form.
+  const user = {
     firstName: firstName,
     lastName: lastName,
-    country: country,
+    region: region,
     email: emailAddress,
-    password: password
+    password: password,
+    recaptchaResponseToken: recaptchaResponseToken || '',
+    marketingData: {
+      leadSource: getCookie('lp-leadSource'),
+      referringUrl: getCookie('lp-lsRef'),
+      utmCampaignId: getCookie('lp-lsCampaign'),
+      utmCampaignMedium: getCookie('lp-lsMedium'),
+      utmCampaignSearchKeywords: getCookie('lp-lsTerms'),
+      utmCampaignSource: getCookie('lp-lsSource'),
+      utmContent: getCookie('lp-lsContent')
+    }
   }
-  //using the axios module to make the request
-  axios({
-    method: 'post',
-    url: URL,
-    headers: {'x-api-key': 'gUi91Xlj5lWOJdOiYttA0jA6EqUTxS626YJ0zW20', 'Content-Type': 'application/json', 'Accept': 'application/json'},
-    data: {
-      user
+
+
+  fetch(ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'x-api-key': 'ZfOpH2ParBartRHs1hfFwadaycOPbrum5HUqItEW',
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(user)
+  })
+  .then(function(response) {
+    if (response.status > 400) {
+      console.log('Error response', response)
+      throw(response.status, response)
+    }
+    return response.json()
+  })
+  .then(function (response) {
+    if (response['code'] && response['code'] === 'PROHIBITED_EMAIL_DOMAIN') {
+      if (response['description']) {
+        console.log(response['description'])
+      }
+      if (window.hj) window.hj('formSubmitFailed')
+      document.getElementById('confirmationWrapper').style.display = 'none'
+      document.getElementById('videoWrapper').style.display = 'none'
+      document.getElementById('registerWrapper').style.display = 'block'
+      submitSuccess = false
+      videoComplete = false
+      $('#useBusinessEmail').show()
+    } else {
+      document.getElementById('accountIdOutput').textContent = response.accountId
+      document.getElementById('emailOutput').textContent = emailAddress
+      submitSuccess = true
+      attemptConfirmationTransition()
+      if (window.hj) window.hj('formSubmitSuccessful')
     }
   })
-  .then(data=>console.log(data))
-  .catch(err=>console.log(err))
+  .catch(function (err) {
+    console.log(err)
+    if (window.hj) window.hj('formSubmitFailed')
+    document.getElementById('confirmationWrapper').style.display = 'none'
+    document.getElementById('videoWrapper').style.display = 'none'
+    document.getElementById('registerWrapper').style.display = 'block'
+    submitSuccess = false
+    videoComplete = false
+    $('#requestError').show()
+  })
+}
+
+function postRequestTest () {
+  videoTransition()
+  submitSuccess = true
+  attemptConfirmationTransition()
+}
+
+function attemptConfirmationTransition() {
+  if (submitSuccess === true && videoComplete === true) {
+    document.getElementById('registerWrapper').style.display = 'none'
+    document.getElementById('videoWrapper').style.display = 'none'
+    document.getElementById('confirmationWrapper').style.display = 'block'
+  }
+}
+
+function videoTransition() {
+    document.getElementById('registerWrapper').style.display = 'none'
+    document.getElementById('confirmationWrapper').style.display = 'none'
+    document.getElementById('videoWrapper').style.display = 'block'
+    player.setCurrentTime(0)
+    player.play()
 }
 
 //a simple fuction to hide typed passwords and show them when the relevant checkbox is filled
 function showPassword() {
-  var x = document.getElementsByClassName("passwordField");
+  var x = document.getElementsByClassName("passwordField")
   $(x).each(function () {
     if ($(this).attr('type') === "password") {
-      $(this).attr('type', 'text');
+      $(this).attr('type', 'text')
     } else {
-      $(this).attr('type', 'password');
+      $(this).attr('type', 'password')
     }
   })
 }

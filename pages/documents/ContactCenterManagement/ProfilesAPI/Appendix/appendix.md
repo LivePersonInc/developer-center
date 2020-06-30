@@ -120,7 +120,7 @@ This section contains API details that are common to every API’s resource and 
 | 10004      | Agent Groups administration   | Create, edit, restructure or delete Agent Groups.          |
 | 10006      | API key administration    | For brands who have enabled the API key management feature, this permission allows the Campaign Manager to view API keys used by the brand.|
 | 10007      | Night Vision (advanced configuration) | Make advanced configurations within Night Vision.     |
-| 10008      | Lines of Business administration   | For brands who have enabled the Lines of Business feature, this permission allows Administrators to create, edit and delete individual Lines of Business within their LiveEngage account.|
+| 10008      | Lines of Business administration   | For brands who have enabled the Lines of Business feature, this permission allows Administrators to create, edit and delete individual Lines of Business within their Conversational Cloud account.|
 | 10009      | View account billing details   | Access to billing details and online invoices.   |
 | 10010      | View support cases in theConnection Area   | View open and closed support cases from the Connection Area.     |
 | 10011      | Create support cases from theConnection Area | For brands who have enabled Support cases creation feature, this permission allows to create support cases from the Connection Area.       |
@@ -129,6 +129,19 @@ This section contains API details that are common to every API’s resource and 
 | 10017      | View Connection Area Content    | View relevant content from the Connection Area per journey.      |
 | 10018      | Configure shift status       | For brands who have enabled the Messaging feature, this permission allows an admin to configure the shift status.                          |
 | 10027      | Configure skill workdays       | View a list of skills and assign and edit Schedule and Special Occasion items associated with them.                          |
+| 10030      | FaaS Invocation  | Allows to invoke LivePerson Functions (FaaS)|
+| 10031      | FaaS Admin       | Allows to administrate LivePerson Functions (FaaS) Settings |
+| 10032      | FaaS Developer   | Allows to develop LivePerson Functions (FaaS) |
+| 10033 | Conversation Builder: Administrator | Grants the user full privileges in Conversation Builder with a few exceptions: Users can't create and manage (bot) templates or access the Bot Status application. |
+| 10034 | Conversation Builder: Content User | Grants the user privileges in Conversation Builder to create and manage knowledge bases, articles, domains, intents and entities; to activate and train models; and to view and download analytics data. |
+| 10035 | Conversation Builder: Business User | Grants the user privileges in Conversation Builder to view and download analytics data. |
+| 10036 | Conversation Builder: Bot Status Access | Grants the user access to the Bot Status application, where the user can create, deploy, and manage connectors for the entire organization. |
+| 10037 | Conversation Builder: Bot Builder | Grants the user full privileges in Conversation Builder for creating bots and related resources (versions, releases, integrations, global functions, etc.). For more details, see [here](bot-accounts-permissions.html). |
+| 10038      | Configure messaging agent survey on skill   | Allow admins to assign skills to agent survey, as well as override agent survey timeout |
+| 10040 | Conversation Builder: API Credentials Manager | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only create and manage credentials. If you grant this, also grant Bot Builder Lite (10041) and API Developer (10043). |
+| 10041 | Conversation Builder: Bot Builder Lite | Grants the user privileges in Conversation Builder to create and manage bots, but with no ability to create and work with integrations or credentials,and with no ability to export or import bots. For more details, see [here](bot-accounts-permissions.html). |
+| 10042 | Conversation Builder: Import/Export Manager | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only export and import bots and knowledge bases. Grant this along with Bot Builder Lite (10041) as per your requirements. |
+| 10043 | Conversation Builder: API Developer | An [add-on permission](bot-accounts-permissions.html#add-on-permissions). Grants the user privileges in Conversation Builder to only create and manage integrations. Grant this along with Bot Builder Lite (10041) as per your requirements. |
 | 20000      | Agent core permissions  | Core permissions that are included with the Agent role and cannot be disabled.              |
 | 20001      | Join Agents' conversations  | Join a conversation handled by another Agent within their Group  |
 | 20002      | View Agents' conversations | View conversations handled by other Agents within their Group    |
@@ -140,11 +153,12 @@ This section contains API details that are common to every API’s resource and 
 | 20010      | View support cases in theConnection Area     | View open and closed support cases from the Connection Area.     |
 | 20011      | Create support cases from theConnection Area     | For brands who have enabled Support cases creation feature, this permission allows to create support cases from the Connection Area.       |
 | 20012      | Contact LivePersonsupport within the Connection Area  | Chat with the LivePerson support team.                           |
-| 20013      | Handle messaging conversations and access All Connections List | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations and view all resolved conversations handled by agents               |
+| 20013      | Handle messaging conversations and access All Conversations List | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations and view all resolved conversations handled by agents               |
 | 20014      | View Connection Area Content      | View relevant content from the Connection Area per journey.      |
 | 20015      | Handle messaging conversations  | For brands who have enabled the Messaging feature, this permission allows an agent to handle messaging conversations                       |
 | 20017      | Set manual SLA  | Allows agents to manually configure the response time in a conversation.                    |
-|20020   |Update consumer profile via API. | Allow agent and agent managers to update consumer profile via API   |   
+| 20020      | Update consumer profile via API. | Allow agent and agent managers to update consumer profile via API   |
+| 20040      | View previously submitted messaging agent surveys | Allow agents to view all agent surveys submitted for the current conversation  |   
 | 30000      | Agent Manager core permissions     | Core permissions that are included with the Agent Manager role and cannot be disabled.      |
 | 30001      | Join Agents' conversations                                     | Join a conversation handled by any Agent within their Group(s) or Sub-group(s)              |
 | 30002      | View Agents' conversations                                     | View conversations handled by Agents within their Group(s) or Sub-group(s)                  |
@@ -154,12 +168,12 @@ This section contains API details that are common to every API’s resource and 
 | 30006      | Edit Agent Manager profile                                     | Create, edit or delete Agent Manager role profiles               |
 | 30007      | Agent Groups administration                                    | Create, edit, restructure or delete their Agent Groups or Sub-groups  |
 | 30008      | Export users    | Export the list of Agent or Agent Manager users in their groups or sub-groups; this will also export the list of skills, profiles and the groups and sub-groups managed by the Agent Managers |
-| 30009      | View Engagement History                                        | View all engagements handled by Agents within their Group(s) or Sub-group(s)                |
+| 30009      | View Conversation History                                        | View all engagements handled by Agents within their Group(s) or Sub-group(s)                |
 | 30010      | View Agent List | View full list of Agents within their Group                      |
 | 30011      | Night Vision (advanced configuration)                          | Make advanced configurations within Night Vision                 |
-| 30012      | View secure form responses in Engagement History               | For brands who have enabled the secure forms feature, this permission allows the Agent Manager to view all secure form responses in the Engagement History                               |
+| 30012      | View secure form responses in Conversation History               | For brands who have enabled the secure forms feature, this permission allows the Agent Manager to view all secure form responses in the Conversation History                               |
 | 30013      | Edit Skills     | Create, edit or delete Skills                                    |
-| 30015      | View All Connections List                                      | For brands who have enabled the Messaging feature, this permission allows viewing of all resolved conversations handled by Agents          |
+| 30015      | View All Conversations List                                      | For brands who have enabled the Messaging feature, this permission allows viewing of all resolved conversations handled by Agents          |
 | 30018      | View support cases in theConnection Area                       | View open and closed support cases from the Connection Area.     |
 | 30019      | Create support cases from theConnection Area                   | For brands who have enabled Support cases creation feature, this permission allows to create support cases from the Connection Area.       |
 | 30020      | Contact LivePersonsupport within the Connection Area           | Chat with the LivePerson support team.                           |
@@ -167,14 +181,17 @@ This section contains API details that are common to every API’s resource and 
 | 30022      | View reports in Operational BI                                 | View reports in the Operational BI dashboard                     |
 | 30023      | Configure shift status                                         | For brands who have enabled the Messaging feature, this permission allows an agent manager to configure the shift status                   |
 | 30035      | Configure skill workdays                                       | Access users module, view a list of skills and assign and edit Schedule and Special Occasion items associated with them.    |
+| 30056      | Configure messaging agent survey                               | Allow agent managers to configure agent surveys and assign them to skills   |
+| 30057      | View previously submitted messaging agent surveys              | Allow agent managers to view all agent surveys submitted for the current conversation   |
+| 30058      | Submit messaging agent survey                                  | Allow agent managers to submit agent surveys on behalf of their agents   |
 | 40000      | Campaign Manager core permissions                              | Core permissions that are included with the Campaign Manager role and cannot be disabled.   |
 | 40001      | Edit campaigns  | Create and modify campaigns                                      |
 | 40002      | Publish campaigns    | Control the publishing of campaigns                              |
 | 40003      | Configure predefined content                                   | Add and edit Predefined Content in the Agent Workspace           |
 | 40004      | Configure automatic messages                                   | Add and edit Automatic Messages in the Agent Workspace           |
 | 40005      | Configure engagement attributes                                | Add and edit Engagement Attributes used in Campaigns             |
-| 40006      | Import and export predefined content                           | Import and export Predefined Content to and from LiveEngage      |
-| 40007      | Export predefined content                                      | Export Predefined Content from LiveEngage                        |
+| 40006      | Import and export predefined content                           | Import and export Predefined Content to and from Conversational Cloud      |
+| 40007      | Export predefined content                                      | Export Predefined Content from Conversational Cloud                        |
 | 40008      | View API keys   | For brands who have enabled the API key management feature, this permission allows viewing of API keys used by the brand                   |
 | 40012      | Configure authentication server                                | For brands who have enabled the authentication conversation feature, this permission allows users to configure the authentication server   |
 | 40014      | View support cases in theConnection Area                       | View open and closed support cases from the Connection Area.     |

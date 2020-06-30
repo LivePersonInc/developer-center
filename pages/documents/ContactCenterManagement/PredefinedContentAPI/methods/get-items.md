@@ -48,7 +48,7 @@ Retrieves a list of Predefined Content items from a specific account.
 | Header | Description | Notes|
  |:-------  |:-------------- | :--- |
  |Authorization | Contains token string to allow request authentication and authorization. |
- |If-Match  |Contains data revision, as known by the client. | Allows optimization of backend, networking and client resource utilization. |
+ |If-Match  |This parameter allows you to specify a version of the data object to retrieve. If this parameter is not specified, the latest version of the data object is retrieved.. | Allows optimization of backend, networking and client resource utilization. |
 
 ### Response
 
@@ -66,7 +66,7 @@ Retrieves a list of Predefined Content items from a specific account.
 
  |Header  |Description |
 | :-------  | :-----  |
-| ac-revision | Account config object type collection revision. |
+| ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. |
 
 **Response Body**
 

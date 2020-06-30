@@ -2,7 +2,7 @@
 pagename: Storing secrets
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
 permalink: liveperson-functions-development-storing-secrets.html
@@ -11,20 +11,27 @@ redirect_from:
   - function-as-a-service-developing-with-faas-storing-secrets.html
 ---
 
-The LivePerson Functions' Secrets Storage allows you to centrally store, access and distribute secrets across your lambdas. Thereby, lambdas can use available access tokens, certificates and encryption keys to establish a connection to external systems.
-
-**Note:** It is recommended to always use access tokens for authentication to external services. Never store **user-credentials** within the Functions' Secrets Storage.
+The LivePerson Functions' Secrets Storage allows you to centrally store, access and distribute secrets across your lambdas. Thereby, lambdas can use available access tokens, certificates and encryption keys to establish a connection to external systems. It is recommended to always use access tokens for authentication to external services.
 
 Internally, LivePerson Functions uses [HashiCorp Vault](https://www.hashicorp.com/products/vault/) to encrypt your secrets using a 256-bit AES cipher in GCM mode with a randomly generated 96-bit nonce before writing them to its persistent storage.
 
-Secrets can be maintained via the **Settings** tab as a key/value storage. Each value can be of type number, string or JSON.
+Based on the below roles and permission users can interact with the Secret Storage via the **Settings** tab. The secrets are key-value pairs, where each value can be of type number, string or JSON.
 
-![](img/faas-secret.png)
+{: .notice}
+<br />
+Try to avoid storing <b>user-credentials</b> within the Functions' Secrets Storage. <br />
+Secrets need to be created <b>before</b> deploying the lambda. <br />
+Deleting a used secret will <b>directly</b> impact lambdas using it. <br />
+Created secrets can <b>not be viewed</b> in cleartext via the LivePerson Functions UI. 
+
+
+<img src="img/faas-secret.png" alt="LivePerson Functions Secret Store" style="width:100%;"/>
+
 
 Based on the [permission concept](function-as-a-service-getting-started.html#set-faas-permissions) for Functions, the following permissions for managing and using secrets can be configured across different users.
 
 
-<table>
+<table style="width: 100%;">
 <thead>
   <tr>
     <th>User Role</th>
@@ -34,11 +41,11 @@ Based on the [permission concept](function-as-a-service-getting-started.html#set
 <tbody>
   <tr>
     <td>FaaS-Admin</td>
-    <td>Use this permission sparsely in order to keep the management of the secrets more restrictive and dedicated to a single user. Only the FaaS Admin is able to create, edit, delete & read a secret.</td>
+    <td>This user can create new secrets or delete existing secrets.</td>
   </tr>
   <tr>
     <td>FaaS-Developer</td>
-    <td>This user is only able to use all available secrets within functions via each secret's unique key.</td>
+    <td>This user can only use all available secrets within functions via each secret's unique key.</td>
   </tr>
 </tbody>
 </table>

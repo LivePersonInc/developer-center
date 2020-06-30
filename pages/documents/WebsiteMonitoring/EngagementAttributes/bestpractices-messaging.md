@@ -17,9 +17,9 @@ This feature will display unauthenticated EAs passed in a messaging conversation
 
 EAs will be presented in the Agent Workspace in several areas:
 
-1. **Consumer Info widget** - each EA will be presented in its own section, much like for chat conversations today. They will be available in both Open Connections & All Connections, as well as in the Engagement History widget.
+1. **Consumer Info widget** - each EA will be presented in its own section, much like for chat conversations today. They will be available in both Open Conversations & All Conversations, as well as in the Conversation History widget.
 
-2. **All Connections view** - users will be able to search unauthenticated EAs in the All Connections table, as part of the EAs search.
+2. **All Conversations view** - users will be able to search unauthenticated EAs in the All Conversations table, as part of the EAs search.
 
 The table below explains which EAs should be collected and presented in LE UI.
 
@@ -115,7 +115,7 @@ The table below explains which EAs should be collected and presented in LE UI.
 </table>
 
 
-**Note:** if you pass the `customerId` parameter of the Customer Info SDE, LiveEngage will treat the conversation as authenticated. Since Messaging conversations are unauthenticated in the context of SDEs, **do not pass this parameter**. If you do, our server will look for other prerequisites of authenticated conversations and the call will fail.
+**Note:** if you pass the `customerId` parameter of the Customer Info SDE, Conversational Cloud will treat the conversation as authenticated. Since Messaging conversations are unauthenticated in the context of SDEs, **do not pass this parameter**. If you do, our server will look for other prerequisites of authenticated conversations and the call will fail.
 
 ### Monitored Data
 
@@ -151,7 +151,7 @@ Both unauthenticated EAs and monitored data will be available to view in the Age
 
 5. In an authenticated messaging flow, consumer info EAs must be sent after the login process in order to create a correlation of the user between devices and browsers
 
-6. EAs submitted in a messaging conversation will be available for search in All Connections up two hours later. EAs may appear before, but might not be the most current ones. Avg. estimated time for final EAs to appear would be ~30 min.
+6. EAs submitted in a messaging conversation will be available for search in All Conversations up two hours later. EAs may appear before, but might not be the most current ones. Avg. estimated time for final EAs to appear would be ~30 min.
 
 ### Submitting EAs
 
@@ -185,8 +185,8 @@ A visitor has been to page A, then moved to page B.  How will the Engagement att
 
 | Behavior | Behavior description | Engagement attributes | Example Output |
 |----|--------------|--------------|--------------|
-| *Append New Item* | Appends new item each time EA is sent | Viewed Product (prodView) <br> Visitor Error (error) <br> Transaction (purchase) <br> Lead <br> Searched Content <br> Service Activity (service) | Product 1: <br> property1: a1 <br> property2: a2 <br> Product 2: <br> property1: b1 <br> property3: b3 |
-| *Replace Item* | Updates existing info, does not maintain previous values of attributes that were not supplied in latest update | Cart update, <br> Personal Info (personal) <br> Customer Info (ctmrinfo) <br> Marketing Info (mrktInfo)| Cart: <br> property1: b1 <br> property3: b3 |
+| *Append New Item* | Appends new item each time EA is sent | Viewed Product (prodView) <br> Visitor Error (error) <br> Transaction (purchase) <br> Lead <br> Searched Content | Product 1: <br> property1: a1 <br> property2: a2 <br> Product 2: <br> property1: b1 <br> property3: b3 |
+| *Replace Item* | Updates existing info, does not maintain previous values of attributes that were not supplied in latest update | Cart update, <br> Personal Info (personal) <br> Customer Info (ctmrinfo) <br> Marketing Info (mrktInfo)  <br> Service Activity (service) | Cart: <br> property1: b1 <br> property3: b3 |
 
 * Note: As opposed to _Chat_, updated behavior does not apply to the data, and *replace* behavior will be used instead. It's recommended to always pass the full data in the engagement attribute.
 

@@ -33,7 +33,10 @@ _Optional_ - when using this method, you can also set a special redirect URL whe
 
  2. with jwt - new LPAuthenticationParams().setHostAppJWT(yourJwt)
 
-if you want to connect in an *unAuthenticated* way, you can pass null or an empty LPAuthenticationParams.
+if you want to connect in an *unauthenticated* way, you have two options: Set up Unauth flow messaging, or use Signup flow, by passing an LPAuthenticationParams of type UN_AUTH or SIGN_UP, respectively.
+
+{:.important}
+Signup flow is now deprecated. Please use an authenticated connection method instead, or UN_AUTH for unauthenticated connections. 
 
 **ConversationViewParams:**
 

@@ -2,7 +2,7 @@
 pagename: Authorization Code
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 permalink: liveperson-functions-external-invocations-authorization-code.html
 indicator: both
@@ -10,7 +10,7 @@ redirect_from:
   - function-as-a-service-external-invocations-authorization-code.html
 ---
 
-This section describes how to call functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Authorization Code](https://oauth.net/2/grant-types/authorization-code/)). Use this grant type if you want to call LivePerson Functions on behalf of a LiveEngage user such as an Agent or Administrator.
+This section describes how to call functions from outside of LivePerson's platform via the OAuth 2.0 grant type [Authorization Code](https://oauth.net/2/grant-types/authorization-code/)). Use this grant type if you want to call LivePerson Functions on behalf of a Conversational Cloud user such as an Agent or Administrator.
 
 **Note**: This grant type is redirection based. Only use this if a real user like an Agent is involved.
 
@@ -20,13 +20,14 @@ This section describes how to call functions from outside of LivePerson's platfo
 
 ### Step 2: Create User
 
-Create a LiveEngage user with the [FaaS-Invocation permission](function-as-a-service-getting-started.html#before-getting-started). This user will be used by the external invoker to authenticate while calling Functions.
+Create a Conversational Cloud user with the [FaaS-Invocation permission](function-as-a-service-getting-started.html#before-getting-started). This user will be used by the external invoker to authenticate while calling Functions.
 
 * Click on USERS and then Profiles.
 
 * Create a new profile and make sure it has the FaaS-Invocation permission.
 
 ![](img/faas-permission.png)
+
 
 * Then, add the profile you created to the user you'd like to use for the external invocation.
 
@@ -62,7 +63,8 @@ However, instead of hardcoding the authorization server, it is recommended to us
 
 Use the Functions UI to retrieve the `lambda UUID` of the function that should be invoked. Do so by navigating to the **Deployments** section and opening the Invoke your Function screen by clicking "Invoke" on the function. The function's `UUID` is then displayed at the top of the page which opens, beneath your function's name. Note it down.
 
-![](img/faas-invokeuuid.png)
+<img src="img/faas-invokeuuid.png" alt="LivePerson Functions Get UUID" style="width:100%;"/>
+
 
 ### Step 6: Generate OAuth 2.0 token
 
@@ -72,7 +74,8 @@ Please follow the steps described [here](https://developers.liveperson.com/autho
 
 In the following example, [Postman](https://www.getpostman.com/) will be used to better illustrate how external applications can authenticate against the authorization server and execute an invocation. Feel free to import this ([Postman Collection](https://raw.githubusercontent.com/LivePersonInc/developers-community/master/assets/FaaS.postman_collection.json)) to execute the same steps within your local machine:
 
-![](img/faas-postman.png)
+<img src="img/faas-postman.png" alt="Postman" style="width:100%;"/>
+
 
 1. In your request-tab under your function click on **Authorization**
 
@@ -102,7 +105,7 @@ In the following example, [Postman](https://www.getpostman.com/) will be used to
 
   9. Click on **Request Token** to send the request and retrieve your token.
 
-  10. Now the OAuth 2.0 flow is triggered and you will first be forwarded to the LiveEngage login page. There you need to provide the credentials of the user that will be used for invocation, which you created earlier.
+  10. Now the OAuth 2.0 flow is triggered and you will first be forwarded to the Conversational Cloud login page. There you need to provide the credentials of the user that will be used for invocation, which you created earlier.
 
   11. On the following screen you can see your generated **Access Token**. You'll use this token to perform the invocation. The access-token will be sent with every Functions invocation.
 

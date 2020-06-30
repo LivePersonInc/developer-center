@@ -2,10 +2,12 @@
 pagename: Data APIs
 sitesection: Documents
 categoryname: "Getting Started"
-documentname: Essential Resources
-permalink: essential-resources-data-apis.html
+documentname: API Guidelines
+permalink: api-guidelines-data-apis.html
 order: 30
 indicator: both
+redirect_from:
+    - essential-resources-data-apis.html
 ---
 <br>
 LivePerson offers a variety of Data APIs that are available for our customers to use in order to retrieve their contact center’s information. Each API has its own specific attributes and can be used for different use cases. The purpose of this document is to give an overview of the different APIs and when they should both be used; for more detailed information on how to use them, please see each API's documentation.
@@ -28,7 +30,7 @@ This API exposes open and closed conversations, including their transcript and r
 
 * Extract types of conversations (e.g. low CSAT score, high MCS) and perform an action on them.
 
-* The **All Connections** tab in LiveEngage is also built on top of this API.
+* The **All Conversations** tab in Conversational Cloud is also built on top of this API.
 
 
 #### Limitations
@@ -54,7 +56,7 @@ This API exposes the current state of the messaging agents who are online, inclu
 
 * Combine this information with other data sources in order to create your own real-time dashboard.
 
-* The **Messaging Agents** tab in LiveEngage is also built on top of this API.
+* The **Messaging Agents** tab in Conversational Cloud is also built on top of this API.
 
 #### Limitations
 
@@ -76,7 +78,7 @@ This API exposes information about the contact center at the account, skill, and
 
 * Analyze your contact center performance.
 
-* The **data bar and dashboard** in LiveEngage are also built on top of this API.
+* The **data bar and dashboard** in Conversational Cloud are also built on top of this API.
 
 
 ### Engagement History API (Chat)
@@ -95,7 +97,7 @@ This API exposes closed chats with all their related data (including transcripts
 
 * Extract a type of chat (e.g. long chats, high MCS) and perform an action on them.
 
-* The **Web History** tab in LiveEngage is also built on top of this API.
+* The **Web History** tab in Conversational Cloud is also built on top of this API.
 
 #### Limitations
 

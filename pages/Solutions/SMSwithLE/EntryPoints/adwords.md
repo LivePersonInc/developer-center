@@ -2,24 +2,23 @@
 pagename: Google AdWords - Click-to-Message
 redirect_from:
   - products-channels-sms-adwords.html
+  - sms-with-liveengage-google-adwords-click-to-message.html
 sitesection: Solutions
 
-documentname: SMS with LiveEngage
+documentname: SMS with Conversational Cloud
 
-permalink: sms-with-liveengage-google-adwords-click-to-message.html
+permalink: sms-with-conversational-cloud-google-adwords-click-to-message.html
 order: 31
 indicator:
 ---
 
 ### Overview
 
-Your business already invests in Google AdWords. The LiveEngage SMS integration with Google AdWords enables your brand to make the most out of this expense with Google AdWords Click-to-Message. This integration lets brands tap into consumers who prefer to use SMS as a form of communication.
+Your business already invests in Google AdWords. The Conversational Cloud SMS integration with Google AdWords enables your brand to make the most out of this expense with Google AdWords Click-to-Message. This integration lets brands tap into consumers who prefer to use SMS as a form of communication.
 
-Google AdWords Click-to-Message enables consumers to message a brand via SMS, directly from a mobile pay-per-click ad. LiveEngage ensures that Google AdWords Click-to-Message interactions are routed to the right people at the right time, integrating them into your broader marketing programs and contact center operations.
+Google AdWords Click-to-Message enables consumers to message a brand via SMS, directly from a mobile pay-per-click ad. Conversational Cloud ensures that Google AdWords Click-to-Message interactions are routed to the right people at the right time, integrating them into your broader marketing programs and contact center operations.
 
-For brands, creating a presence on the channels used by their consumers is key to building connections and creating prospects. For brands that want to enable Google AdWords Click-to-message with LiveEngage, they must first onboard to Twilio to receive a number. For full onboarding instructions please contact your LivePerson representative.
-
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="//players.brightcove.net/902047215001/default_default/index.html?videoId=5275429400001" allowfullscreen webkitallowfullscreen mozallowfullscreen style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+For brands, creating a presence on the channels used by their consumers is key to building connections and creating prospects. For brands that want to enable Google AdWords Click-to-message with Conversational Cloud, they must first onboard to Twilio to receive a number. For full onboarding instructions please contact your LivePerson representative.
 
 ### Configuration
 
@@ -83,9 +82,9 @@ Notice the use of:
 
 * Dash between the final two number groups 000-0000
 
-### Integrate Google AdWords Click-to-Message into LiveEngage
+### Integrate Google AdWords Click-to-Message into Conversational Cloud
 
-* When you integrate Google AdWords Click-to-Message, your consumers’ SMS conversations will be routed and managed all within LiveEngage.
+* When you integrate Google AdWords Click-to-Message, your consumers’ SMS conversations will be routed and managed all within Conversational Cloud.
 
 * Real time KPI tracking, plus performance and operational reporting ensures that you will know exactly when and where you can optimize your operations.
 

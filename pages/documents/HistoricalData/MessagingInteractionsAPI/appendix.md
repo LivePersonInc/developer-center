@@ -11,7 +11,7 @@ permalink: messaging-interactions-api-engagement-attributes.html
 
 indicator: messaging
 ---
-Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart abandonment etc., from the webpage into LiveEngage. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
+Engagement Attributes allow a brand to communicate events, for example, purchases, visitor login, shopping cart abandonment etc., from the webpage into Conversational Cloud. This section describes the data retrieved in the response body. All engagement attribute values are of unlimited length (up to 50K chars).
 
 The two versions of this API support Engagement Attributes in different ways:
 
@@ -159,8 +159,7 @@ v2 - will allow to retrieve both authenticated & unauthenticated engagement attr
 
 **JSON Example (including engagement attributes)**
 
-```
-
+```json
  {
 	"_metadata": {
 		"count": 1,

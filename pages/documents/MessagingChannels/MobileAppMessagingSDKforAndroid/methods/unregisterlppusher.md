@@ -16,11 +16,12 @@ indicator: messaging
 
 Unregister from registered push notification service. 
 
-`public static void unregisterLPPusher(String brandId, String appId)`
+`public static void unregisterLPPusher(String brandId, String appId, ICallback<Void, Exception> unregisteringCompletedCallback)`
 
 | Parameter | Description |
 | :--- | :--- |
 | brandId | The account ID. |
 | appId | The host app ID. |
+| unregisteringCompletedCallback | A dual-method callback for handling success and failure results. |
 
 

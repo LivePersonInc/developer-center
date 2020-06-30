@@ -22,7 +22,7 @@ See the message flow below:
 
 3. Authentication is done by your OAuth 2.0 provider.
 
-4. Upon successful or failed authentication, LiveEngage passes the authentication details back so that you may perform validation.
+4. Upon successful or failed authentication, Conversational Cloud passes the authentication details back so that you may perform validation.
 
 ### Setup
 
@@ -50,13 +50,15 @@ If you do not yet have an OAuth2 service or if you need a test service, follow t
 
 5. On the same screen, go to the bottom and select advanced settings -> Endpoints
 
-6. Copy Auth URL, Token Url, Client Secret (it is at the top) and place them in your register.apple.com portal
+6. Copy Auth URL, Token Url, Client Id (it is at the top) and place them in your register.apple.com portal
+
+7. Go to Grant Types tab in advanced settings and check Authorization Code, Password and other features you want to use. 
 
 ### Checking for Apple Auth device compatibility
 
 Before the agent or bot sends an authentication request to a consumer, they will need to know if the consumer device is compatible (that is, using iOS 12 or newer) with Apple Auth.
 
-In an Apple Business Chat Conversation, the messaging channel will automatically send an authenticated "role" engagement attribute to LiveEngage:
+In an Apple Business Chat Conversation, the messaging channel will automatically send an authenticated "role" engagement attribute to Conversational Cloud:
 
 * If consumer Apple device supports authentication, this attribute's value will be: "Apple Authentication supported".
 
@@ -64,7 +66,7 @@ In an Apple Business Chat Conversation, the messaging channel will automatically
 
 The agent or bot should read the consumer engagement attributes to check for this engagement attribute before sending the Apple Authentication request to the consumer.
 
-**Note:** If the consumer updates the iOS version from 11 to 12 when still in an active conversation in LiveEngage, the conversation will not be updated with the consumer’s new capability - to solve this, the conversation should be closed and opened again in LiveEngage.
+**Note:** If the consumer updates the iOS version from 11 to 12 when still in an active conversation in Conversational Cloud, the conversation will not be updated with the consumer’s new capability - to solve this, the conversation should be closed and opened again in Conversational Cloud.
 
 ![role engagement attributes](img/apple_auth_role_sde.png)
 
@@ -74,7 +76,7 @@ You will send two template payloads (Metadata and Body) for the Apple Auth reque
 
 See [how to send Structured Content](structured-content-introduction-to-structured-content.html#how-to-send-structured-content-to-the-conversation) for a background on how to send these.
 
-The **body** template will only define how the Apple Auth bubble is displayed in the LiveEngage agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
+The **body** template will only define how the Apple Auth bubble is displayed in the Conversational Cloud agent workspace. The **metadata** template will define how the bubble is displayed in the consumer's Messages thread.
 
 **Agent sends auth request to consumer via Agent Workspace SDK widget**
 
@@ -110,20 +112,20 @@ Please use the metadata template with the relevant fields, as presented in the e
 ##### Metadata Template Example:
 
 ```json
-[  
-  {  
-    "type":"BusinessChatMessage",
-    "receivedMessage":{  
-      "title":"Sign In to LivePerson",
-      "subtitle":"Thank you",
- "imageURL":"https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
-      "style":"small"
+[
+  {
+    "type": "BusinessChatMessage",
+    "receivedMessage": {
+      "title": "Sign In to LivePerson",
+      "subtitle": "Thank you",
+      "imageURL": "https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
+      "style": "small"
     },
-    "replyMessage":{  
-      "title":"You Signed in",
-      "subtitle":"Thank you",
-"imageURL":"https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
-      "style":"small"
+    "replyMessage": {
+      "title": "You Signed in",
+      "subtitle": "Thank you",
+      "imageURL": "https://www.liveperson.com/sites/default/files/pictures/nav/Logo-LP-White.png",
+      "style": "small"
     }
   },
   {
@@ -272,7 +274,7 @@ For more about Apple Authentication, see [this document](https://developer.apple
 
 #### Request Body
 
-The request body defines how the Apple Auth bubble looks in the LiveEngage Agent Workspace and not how the bubble looks on the consumer device. This Apple Auth structured content template in the Agent Workspace is for conversational context, transcript and historic records, as well as ease of use for agents.
+The request body defines how the Apple Auth bubble looks in the Conversational Cloud Agent Workspace and not how the bubble looks on the consumer device. This Apple Auth structured content template in the Agent Workspace is for conversational context, transcript and historic records, as well as ease of use for agents.
 
 See the [introduction to templates](structured-content-introduction-to-structured-content.html#templates) for information on a basic template that you can send.
 
@@ -282,6 +284,7 @@ A very simple, basic structured content template for Apple Auth would be just an
 
 ```json
 {
+  "tag": "authentication", // required
   "type": "horizontal",
   "elements": [
     {
@@ -298,7 +301,7 @@ A very simple, basic structured content template for Apple Auth would be just an
 
 ### Receiving an Apple Authentication Response from a Consumer
 
-After the consumer submits their Apple Auth details in the form, the Apple Auth response is delivered back to LiveEngage.
+After the consumer submits their Apple Auth details in the form, the Apple Auth response is delivered back to Conversational Cloud.
 
 If you are authenticating the consumer with a **bot**, you can listen for the auth response via [Conversational Metadata](messaging-agent-sdk-conversation-metadata-guide.html). Conversational Metadata provides a way for developers to pass metadata or context information to a bot built with the [Messaging Agent SDK](messaging-agent-sdk-overview.html). Please see [the Conversational Metadata guide](messaging-agent-sdk-conversation-metadata-guide.html#listen-for-payment-or-authorization-response) for how to listen for Conversational Metadata with the correct Apple Auth response structure.
 
@@ -378,7 +381,7 @@ The authentication response metadata is contextual information about the consume
 
 #### General Guidelines
 
-* Image URLs must be whitelisted in LiveEngage. Images added in the ReceivedMessage and ReplyMessage must be whitelisted in the structured content image whitelisting area. Please contact your LP representative to whitelist images.
+* Image URLs must be whitelisted in Conversational Cloud. Images added in the ReceivedMessage and ReplyMessage must be whitelisted in the structured content image whitelisting area. Please contact your LP representative to whitelist images.
 
 #### Consumer received and reply bubble behavior
 
@@ -393,5 +396,3 @@ The authentication response metadata is contextual information about the consume
 ### Limitations
 
 * Updating the Apple Business Chat authentication status visually in the LiveEngage UI is planned.
-
-* Touch/Face ID is not currently supported in Apple's authentication solution

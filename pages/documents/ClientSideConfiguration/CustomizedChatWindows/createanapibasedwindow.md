@@ -11,7 +11,7 @@ order: 2
 indicator: chat
 ---
 
-**An “API-based” engagement window must be configured in LiveEngage.**
+**An “API-based” engagement window must be configured in Conversational Cloud.**
 
 * On a monitored flow
 	Attach the API-based window to the relevant web engagement/campaign.
@@ -37,7 +37,9 @@ indicator: chat
 
 * Name: the window name
 
-* JS method name: the Javascript method name, under which your API-based window code is located on your web page, which will be triggered by the LiveEngage Tag to initiate the window.
+* JS method name: the Javascript method name, under which your API-based window code is located on your web page, which will be triggered by the Web Tag to initiate the window.
+
+**Note**: These fileds are only mandatory for the JavaScript Chat SDK and monitored flows using the LPTag.
 
 **Optional fields**
 

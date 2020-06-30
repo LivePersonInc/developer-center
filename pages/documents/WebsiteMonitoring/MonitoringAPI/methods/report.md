@@ -26,7 +26,7 @@ As engagement attributes are considered unauthenticated, it should not be used f
 
 | Method | URL |
 | :--- | :--- |
-|PUT|https://[{domain}](/agent-domain-domain-api.html)/api/account/{account-id}/app/{app-installation-id}/report?v={api-version}&vid={visitor-id}&sid={session-id} |
+|PUT|https://[{domain}](/agent-domain-domain-api.html)/api/account/{account-id}/app/{app-installation-id}/report?v={api-version}&vid={visitor-id}&sid={session-id}&obh=false |
 
 ### Path Parameters
 
@@ -42,6 +42,7 @@ As engagement attributes are considered unauthenticated, it should not be used f
 | v | API version number | double | Required | Supported Value: 1.0, 1.1 |
 | vid | Visitor Id | String | Optional on first request, otherwise required | If session doesn't exist, a new session will be generated and sent by the server |
 | sid | Session Id | String | Optional on first request, otherwise required |  Will be provided by the server-side in a 201(CREATED) response for this specific consumer and device and should be set by the client-side on all the subsequent requests to the server |
+| obh | is On Behalf | Boolean | Optional | possible values: true/ false (the default is `false`). This parameter can be used (by passing `true`) to let LP servers know that this request is on behalf of the visitor (and not coming from the visitor himself), so the servers should NOT update the visitor Geo-location meta-data according to this request IP |
 
 ### Body Parameters
 
@@ -128,7 +129,7 @@ https://{liveperson-monitor-domain}/api/account/{account-id}/app/123/report?v=1.
 
 ImpressionAcceptEvent:
 
-**Note**: This impression is counted under the ACCEPTED OFFERS metric in LivePerson's Report Builder. For more information on the Report Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf).
+**Note**: This impression is counted under the ACCEPTED OFFERS metric in LivePerson's Analytics Builder. For more information on the Analytics Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf).
 
 ```json
 {
@@ -147,7 +148,7 @@ ImpressionAcceptEvent:
 
 ImpressionDisplayEvent:
 
-**Note**: This impression is counted under the EXPOSURES, EXPOSED and ENGAGEMENT VIEWS metric in LivePerson's Report Builder. For more information on the Report Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf).
+**Note**: This impression is counted under the EXPOSURES, EXPOSED and ENGAGEMENT VIEWS metric in LivePerson's Analytics Builder. For more information on the Analytics Builder and its metrics, please refer to [this document](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Report+Builder/Report+Builder+Overview.pdf).
 
 ```json
 {

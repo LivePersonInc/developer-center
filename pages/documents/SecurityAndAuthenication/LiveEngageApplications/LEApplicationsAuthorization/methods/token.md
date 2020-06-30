@@ -1,19 +1,20 @@
 ---
 pagename: Token Request
+redirect_from:
+  - authorizing-liveengage-applications-methods-token-request.html
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Authorizing LiveEngage Applications
+documentname: Authorizing Conversational Cloud Applications
 subfoldername: Methods
-order: 10
-permalink: authorizing-liveengage-applications-methods-token-request.html
+permalink: authorizing-conversational-cloud-applications-methods-token-request.html
 
 indicator: both
 ---
 
 ### Overview
 
-Once users are redirected back to the application with the code from LivePerson's Identity Service, the application will need to retrieve a token in order to access LiveEngage services. This is a request which enables retrieving that token.
+Once users are redirected back to the application with the code from LivePerson's Identity Service, the application will need to retrieve a token in order to access Conversational Cloud services. This is a request which enables retrieving that token.
 
 This request should be made after obtaining the code from the [authorize request](/authorizing-liveengage-applications-methods-authorization-request.html) as it is needed to create the access token.
 
@@ -21,13 +22,13 @@ This request should be made after obtaining the code from the [authorize request
 
 | Method | URL |
 | :--- | :--- |
-| POST |  https://[{domain}](/agent-domain-domain-api.html)/sentinel/api/account/{accountId}/token?v=2.0 |
+| POST |  https://[{domain}](/agent-domain-domain-api.html)/sentinel/api/account/{accountId}/token?v=1.0 |
 
 **Query Parameters**
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| v | API version number | number| Required | Default Value: 2.0 |
+| v | API version number | number| Required | Default Value: 1.0 |
 
 **Headers**
 
@@ -68,9 +69,23 @@ client_id=xyz&client_secret=yqr&grant_type=authorization_code&code=SplxlOBeZQQYb
 | access_token | token to use as authorization when interacting with LE services  |
 | token_type | Always Bearer |
 | refresh_token | token to use when requesting an access token refresh via the [refresh method](le-applications-login-methods-refresh-endpoint.html)  |
+| id_token | a JWT asserting the id of the user   |
 
 
 *Note: The `token_type` is an attribute of the `access_token` and its value is always "Bearer"*
+
+**ID Token structure**
+
+| Attribute name | Description |
+| :--- | :--- |
+| sub | user ID  |
+| aud | ID of the application asking for authorization  |
+| iss | Always "Sentinel" |
+| iat | JWT creation time. value is seconds since EPOC |
+| exp | JWT expiration time. value is seconds since EPOC |
+| is_admin| boolean, true if user has admin role |
+| is_lpa| boolean, true if user is LPA ||
+
 
 Example:
 
@@ -78,6 +93,7 @@ Example:
     {
       "access_token": "9cf6ee24b6a1031e202f292a0ad20c8f52bfd9f01abc8b9489365995052c6603",
       "token_type": "Bearer",
-      "refresh_token": "a3e5c67af5d8f75034cf23aed24bcfb0d397d6896fe25d5043cce0bd5972639e3ad2d198730ab80959ecf7dcc3c54d07cfd4fc22cb4e1f406e673dc814da84133b7f4ff2bfb800128c"
+      "refresh_token": "a3e5c67af5d8f75034cf23aed24bcfb0d397d6896fe25d5043cce0bd5972639e3ad2d198730ab80959ecf7dcc3c54d07cfd4fc22cb4e1f406e673dc814da84133b7f4ff2bfb800128c",
+      "id_token": "eyJraWQiOiJpZHRva2VuLTE5LTA4LTE5IiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJpc19hZG1pbiI6dHJ1ZSwic3ViIjoiMzU1MjgzMzcxMCIsImF1ZCI6IjVhNTBhNWVhLWM1MjctNDIxYy04YWRhLTg4NDY3ZDMyZjI3ZCIsImlzX2xwYSI6ZmFsc2UsImlzcyI6IlNlbnRpbmVsIiwiZXhwIjoxNTY4MTE2NTY3LCJpYXQiOjE1NjgxMTU5Njd9.F9KBZu6fhyp6lhuGXRpg3LnjCd7PT6GWG_MZu61B7qDZVH2cai8JRGX-j-szEUrm-HTtonUFgxhBi-ZU-Uz-pSRVxtSEuGYIyS4DsPLy1w-Fddd-SHKcywkzTJ4CqDd1dTUSSH4SsMvMNHcc7wtS24Vu5e5OEQYdqN6QGqBEo0s"
     }
 ```

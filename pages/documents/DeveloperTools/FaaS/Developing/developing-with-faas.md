@@ -2,7 +2,7 @@
 pagename: Overview
 keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
 permalink: liveperson-functions-development-overview.html
@@ -14,7 +14,8 @@ redirect_from:
 
 After successfully creating a `lambda` (using the [Getting Started guide](function-as-a-service-getting-started.html)) you will find yourself in the editor, the heart of the LivePerson Functions UI. Here you can develop the function itself.
 
-![](img/faas-editor.png)
+<img src="img/faas-editor.png" alt="LivePerson Functions Editor" style="width:100%;"/>
+
 
 ### Code Completion / Context Menu
 
@@ -22,11 +23,15 @@ While typing, the editor will offer you suggestions based on types, if inferable
 
 By right-clicking inside the editor area, you're able to open the context menu, which provides you access to additional functionality, the most notable being the **Format Document** feature, which will reformat your code.
 
+### Code Validation
+
+The code of each lambda is parsed and syntax validated to reduce the amount of possible errors. These checks ensure that not only compliance with technical requirements (e.g. ECMAScript compliance) are met, but also restrictions mandated by the Functions platform (e.g. <100.000 characters per lambda) are upheld.   
+
 ### Editor Sidebar
 
 By pressing the marked button you are able to hide or show the sidebar. This sidebar offers you access to two tabs (Settings and Payload, see below for more information). On smaller screens it will be hidden by default. On larger screens, it is shown by default.
 
-![](img/faas-sidebar.png)
+<img class="fancyimage" src="img/faas-sidebar.png" alt="LivePerson Functions Editor Sidebar">
 
 #### Settings Tab
 
@@ -48,6 +53,7 @@ Using the relevant button from the Settings tab, you are able to add new Environ
 You can access the variable during runtime by using `process.env['YOUR_ENV']`. **Please be aware** that the value will be available in the form of a string. If the value is a number, you will have to parse it prior to using it. By using the trash icon, you can delete unwanted variables.
 
 **Developer discretion is advised**, please be sure not to use confidential data such as credentials or secrets in the environment variables as these are saved and available in text form to anyone with access to the account. Functions has a secret storage service that can be leveraged for this purpose.
+
 
 ### Next steps
 

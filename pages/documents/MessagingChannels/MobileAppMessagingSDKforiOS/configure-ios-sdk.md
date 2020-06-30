@@ -21,13 +21,12 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-
 permalink: mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html
-
+indicator: messaging
 ---
  
 
-You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, sends logs from LiveEngage to your app, and display consumer information to agents or vice versus. 
+You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, sends logs from Conversational Cloud to your app, and display consumer information to agents or vice versus. 
 
 
 The most suitable time to customize configuration is right after the SDK initialization and before calling `showConversation()`.
@@ -299,7 +298,7 @@ For more details on the different attributes you are able to customize, refer to
 ### Logs and Info
 
 
-Send logs from LiveEngage to your app. Logs include different severity levels of errors and warnings.  
+Send logs from Conversational Cloud to your app. Logs include different severity levels of errors and warnings.  
 
 * Subscribe the host app to receive log events from a specific log level and above:
 
@@ -457,7 +456,12 @@ You can customize the messaging screen by adding more options to the LPMessaging
 For more details on the different attributes you are able to customize, refer to [Customizing and Branding](consumer-experience-ios-sdk-attributes.html).
 
 
+### Push Notifications
+Currently, our default flow for the process of loading the Conversation View Controller (such as registering with several of our internal domains) also registers the consumer to our Push Notification service. If this is not desired, you can now opt out of this process by setting the following flag to "false".  The default is set to "true", and in order for the changes to take effect the consumer must log out of the LPMessagingSDK:
 
+```swift
+configuration.enableLpPusherService: Bool = true
+```
 
 ### UI
 
@@ -498,7 +502,7 @@ Pass and display consumer information to agents, and agent information to consum
 
 **Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LPUser` object.
 
-* Set the user profile on LiveEngage:
+* Set the user profile on Conversational Cloud:
 
    ```swift
    public func setUserProfile(lpuser: LPUser, brandID: String)

@@ -26,7 +26,7 @@ Use this method to add a line.
 
  |Header  |Description |
  |:---|  :---|
- |Authorization Bearer| {bearer-from-login} |
+ |Authorization |Bearer {bearer-from-login} |
  |Content-Type  |application/json |
  |Accept|  application/json|
 
@@ -73,7 +73,7 @@ Request body examples:
 
 It is possible to add different types of lines to the chat. When no text type is defined, it is assumed that a plain type was submitted.
 
-**Best Practice**: our embedded window relies on the LE Agent UI to display the above sent text in an HTML format with a "<div>" wrapper. Therefore, to make sure that the LiveEngage UI displays your text correctly, it is important to use the HTML format as seen in the example above. The provided html cannot include the following: Iframes, Scripts, DOM actions, Links with a target other than "_blank".
+**Best Practice**: our embedded window relies on the LE Agent UI to display the above sent text in an HTML format with a "<div>" wrapper. Therefore, to make sure that the Conversational Cloud UI displays your text correctly, it is important to use the HTML format as seen in the example above. The provided html cannot include the following: Iframes, Scripts, DOM actions, Links with a target other than "_blank".
 
 Changing the text type is handled as follows:
 

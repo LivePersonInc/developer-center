@@ -35,9 +35,9 @@ When you add messaging to your app, you enable your consumers to communicate wit
 
 To begin, you need:
 
-* LiveEngage account with messaging enabled.
+* Conversational Cloud account with messaging enabled.
   
-  <div class="notice">Contact your LivePerson representative to enable messaging on your account.  Tip: If you see 'all connections’ when you log in, your account has messaging enabled.</div>
+  <div class="notice">Contact your LivePerson representative to enable messaging on your account.  Tip: If you see 'All Conversations’ when you log in, your account has messaging enabled.</div>
 
 * LivePerson only supports OAuth2.0 authentication. For more information, please see [Getting Started with Authentication](../../documents/GettingStarted/Getting Started with Authentication.md).
 
@@ -53,7 +53,7 @@ To begin, you need:
 
    * Android Studio (any version)
 
-*For more information, refer to the LiveEngage Enterprise In-App Messaging SDK Supported Devices section of [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) for supported operating systems and devices.* 
+*For more information, refer to the Conversational Cloud Enterprise In-App Messaging SDK Supported Devices section of [System Requirements](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) for supported operating systems and devices.* 
 
 ### Implementation overview
 
@@ -69,7 +69,7 @@ For a successful deployment of messaging within your iOS or Android app, you mus
 
 Deployment of the Mobile App Messaging SDK can have several functions and tasks.  In order to make the process easier for you, we recommend you make decisions on the following topics before beginning your deployment:
 
-* **Supported and Certified Devices**: [Click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) to view the LiveEngage System Requirements document. Under "LiveEngage Enterprise In-App Messenger SDK Supported Devices", you can find the list of devices supported and certified by the In-App SDK. You may need to deploy two different Android APKs (one with messaging and one without) if many of your users are on unsupported devices.
+* **Supported and Certified Devices**: [Click here](https://s3-eu-west-1.amazonaws.com/ce-sr/CA/Admin/Sys+req/System+requirements.pdf) to view the Conversational Cloud System Requirements document. Under "Conversational Cloud Enterprise In-App Messenger SDK Supported Devices", you can find the list of devices supported and certified by the In-App SDK. You may need to deploy two different Android APKs (one with messaging and one without) if many of your users are on unsupported devices.
 
 * **Authentication**: The most important and potentially most complex portion of your Mobile App Messaging deployment can be the the authentication.  
 
@@ -85,7 +85,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
 * **How much control do you want to have over the conversation window?** You can customize the conversations window offered through the SDK in two different levels of control:
 
-    * Customize the window provide by LivePerson: (iOS-Window mode, Android - activity mode) -utilize the LiveEngage window and customize the colors, header and options presented to customers.
+    * Customize the window provide by LivePerson: (iOS-Window mode, Android - activity mode) -utilize the Conversational Cloud window and customize the colors, header and options presented to customers.
 
     * Full control over entire window: (iOS -ViewControler mode Android- Fragment mode): Fully control the look, feel and actions including the footer and header of the conversational window.
 
@@ -105,7 +105,7 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * Note: LivePerson translates SDK texts to various languages.  You can utilize our default translations or override them with your own text and language adjustments.
 
-* **Masking**: will you require real time data masking? Is your brand providing support over potentially sensitive data.  LiveEngage offers two masking capabilities:
+* **Masking**: will you require real time data masking? Is your brand providing support over potentially sensitive data.  Conversational Cloud offers two masking capabilities:
 
     * Client side masking: The data is masked in the conversation transcript (appear as asterisks) but the Agent can read it.
 
@@ -141,16 +141,18 @@ Deployment of the Mobile App Messaging SDK can have several functions and tasks.
 
     * Android
 
-        * Snackbar duration: <integer name = snachbar_duration_for_accessibility> 60000 </integer>
+        * Snackbar duration: `<integer name="snackbar_duration_for_accessibility">60000</integer>`
 
-        * Disable: Link preview -
+            * (Note: This value was previously named 'snachbar_duration_for_accessibility', and its spelling has since been corrected.)
 
-            * <bool name ="link_preview_enable_real_time_preview" > false </bool>
+        * Disable Link preview -
 
-            * <bool name ="link_preview_enable_feature" > false </bool>
+            * `<bool name ="link_preview_enable_real_time_preview">false</bool>`
+
+            * `<bool name="link_preview_enable_feature">false</bool>`
 
         * Disable In-conversation shortcut to new messages
 
-            * <bool name ="scroll_down_indicator_enabled" > false </bool>
+            * `<bool name="scroll_down_indicator_enabled">false</bool>`
 
-            * <bool name ="scroll_down_indicator_unread_summary_enabled" > false </bool>
+            * `<bool name="scroll_down_indicator_unread_summary_enabled">false</bool>`

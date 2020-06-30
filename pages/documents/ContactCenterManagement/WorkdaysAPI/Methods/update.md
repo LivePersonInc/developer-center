@@ -71,7 +71,7 @@ Update existing workday object(s).
 
 **Entity structure**
 
-For details on the entity structure, please see the [appendix](https://lpgithub.dev.lprnd.net/product-marketing/developers-community/blob/workdays-documentation/pages/documents/account-configuration/workdays/appendix.md)
+For details on the entity structure, please see the [appendix](workdays-api-appendix.html)
 
 **'isDefault' entity state**
 
@@ -103,7 +103,7 @@ The `isDefault` field determines whether a workdays object is the default for th
 
 |Header|  Description|
 |:-------|   :-----  |
-|ac-revision|  Account config object type collection revision.|  
+|ac-revision|  This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..|  
 
 **Response example**
 

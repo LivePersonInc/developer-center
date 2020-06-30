@@ -74,7 +74,7 @@ Download and run the certificate. The certificate is now added to your Keychain,
 
 ### Creating both key.pem file and cert.pem file
 
-*Note: This is used when configuring LiveEngage Push Notification.*
+*Note: This is used when configuring Conversational Cloud Push Notification.*
 
 - Open the terminal and locate the folder in which you would like to save the file.
 
@@ -103,7 +103,7 @@ openssl pkcs12 -nocerts -out keyWithPassword.pem -in key.p12
 openssl rsa -in keyWithPassword.pem -out hostkey.pem
 ```
 
-### Upload into LiveEngage
+### Upload into Conversational Cloud
 - Certificate file should be : **dev-cert.pem**
 - Key file should be : **hostkey.pem**
 

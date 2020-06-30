@@ -24,11 +24,11 @@ This method returns the agent's typing status.
 
 **Request Headers**
 
-| Header                                   | Description      |
-|------------------------------------------|------------------|
-| Authorization Bearer {bearer-from-login} |                  |
-| Content-Type                             | application/json |
-| Accept                                   | application/json |
+| Header                                   | Description                |
+|------------------------------------------|----------------------------|
+| Authorization                            | Bearer {bearer-from-login} |
+| Content-Type                             | application/json           |
+| Accept                                   | application/json           |
 
 **Formats**
 

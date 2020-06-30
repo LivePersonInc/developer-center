@@ -271,7 +271,7 @@ The following table describes the information that is available for engagement d
 | transcripts | Transcript data of the conversation. | array[Message] |
 | transfers | List of transfers in the conversations. | array[Transfer] |
 | secureForms | List of secure forms in the conversation. | array[SecureForm] |
-| mcs | Contains information about MCS (Meaningful Connection Score) of the conversation. | MCS |
+| mcs | Contains information about MCS (Meaningful Conversation Score) of the conversation. | MCS |
 | queueStartTime | Time when visitor requested to start conversation. | long |
 | queueEndTime | Time when visitor connected to an agent. | long |
 

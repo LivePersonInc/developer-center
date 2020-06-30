@@ -1,12 +1,13 @@
 ---
 pagename: Refresh Request
+redirect_from:
+  - authorizing-liveengage-applications-methods-refresh-request.html
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Authorizing LiveEngage Applications
+documentname: Authorizing Conversational Cloud Applications
 subfoldername: Methods
-order: 11
-permalink: authorizing-liveengage-applications-methods-refresh-request.html
+permalink: authorizing-conversational-cloud-applications-methods-refresh-request.html
 indicator: both
 ---
 
@@ -18,13 +19,13 @@ In order to refresh an existing access token, the application should use a refre
 
 | Method | URL |
 | :--- | :--- |
-| POST |https://[{domain}](/agent-domain-domain-api.html)/sentinel/api/account/{accountId}/token?v=2.0|
+| POST |https://[{domain}](/agent-domain-domain-api.html)/sentinel/api/account/{accountId}/token?v=1.0|
 
 **Query Parameters**
 
 | Parameter | Description | Type | Required | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| v | API version number | number| Required | Default Value: 2.0 |
+| v | API version number | number| Required | Default Value: 1.0 |
 
 **Headers**
 

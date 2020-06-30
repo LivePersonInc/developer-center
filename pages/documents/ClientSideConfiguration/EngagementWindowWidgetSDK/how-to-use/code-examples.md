@@ -117,7 +117,7 @@ function _onEvent(eventData) {
 
           function _onEvent(eventData) {
               if (eventData && widgetSDKAPI.events.MESSAGES === eventData.type) {
-                  var content =  eventData.data.content = "";
+                  var content =  eventData.data.content;
                   console.log("MESSAGES data: ", eventData );
                   if (content.indexOf("disposeWidget") > -1) {
                       disposeWidget();

@@ -13,7 +13,7 @@ indicator: both
 ---
 
 
-LiveEngage's Audit Trail feature is a list of all changes made to individual users, profiles, skills, lines of business or agent groups across the whole account. In the product, this is available for view by account administrators in the audit trail for users. This API allows you to access the Audit Trail information directly and export it using an API request.
+Conversational Cloud's Audit Trail feature is a list of all changes made to individual users, profiles, skills, lines of business or agent groups across the whole account. In the product, this is available for view by account administrators in the audit trail for users. This API allows you to access the Audit Trail information directly and export it using an API request.
 
 An activity log will display which element has been changed, when and by whom, as well as displaying both the old and the updated value of the changed element. Changes can include adding new elements or modifying or deleting existing ones.
 
@@ -25,9 +25,30 @@ An audit trail is available for the following elements:
 
 * Agent Groups
 
-* Permissions
+* Profiles (Permissions)
 
 * LOBs
+
+* Campaigns
+
+* Predefined content
+ 
+* Post conversation survey
+
+* Agent conversation survey
+
+* Content categories
+
+* Shift scheduler (Working hours)
+
+* Campaign schedule
+
+* Special occasions
+
+* MTLS account mapping
+
+* MTLS certification
+
 
 ### Getting Started
 
@@ -41,7 +62,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using _either_ a login or an API key methodology.
 
-    * **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
+    * **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
     * [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
 

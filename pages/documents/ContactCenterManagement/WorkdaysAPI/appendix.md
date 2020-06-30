@@ -17,13 +17,13 @@ This section contains API details that are common to every API’s resource, met
  |Header | Description | Notes|
  |:------- | :-------------- | :--- |
  |Authorization | Contains token string to allow request authentication and authorization.  |
-| If-Match | Contains data revision, as known by the client. | Allows optimization of backend, networking and client resource utilization. |
+| If-Match | This parameter allows you to specify a version of the data object to retrieve. If this parameter is not specified, the latest version of the data object is retrieved.. | Allows optimization of backend, networking and client resource utilization. |
 
 ### Response Headers
 
 |Header | Description | Notes|
 |:-------  | :----- | :--- |
-|ac-revision | Account config object type collection revision.
+|ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value..
 
 ### Query Parameters
 
@@ -99,7 +99,7 @@ This section contains API details that are common to every API’s resource, met
 <ul><li>The start date must be at the same day defined in the recurrence value, e.g if the start date is May 1st and the recurrence is Wednesday, then you must make sure that May 1st is actually a Wednesday as well.
 If this is not followed, the reccurence day will be set according to the day of the start date (the reccurence value will be ignored), e.g if you set the start date to May 1st which is a Wendesady but set the recurrence value to Thursday, Wednesday will be used instead.</li></ul>
 <ul><li>The timezone field for both the start and end array must match.</li></ul>
-<ul><li>Only LiveEngage supported timezones may be used.</li></ul>
+<ul><li>Only Conversational Cloud supported timezones may be used.</li></ul>
 </td>
   </tr>
   <tr>
@@ -112,7 +112,7 @@ If this is not followed, the reccurence day will be set according to the day of 
 <ul><li>Valid formats are either without hours (yyyy-MM-dd) or with hours (yyyy-MM-dd'T'HH:mm:ss). If no hour is specified, 24/7 is assumed. </li></ul>
 <ul><li>The maximum length of a workday must be 24 hours. You can define 24 hour shifts in one of the following ways: start: "2018-03-27" end: "2018-03-28", or: start: "2018-03-27T00:00" end: "2018-03-27T23:59" </li></ul>
 <ul><li> The timezone field for both the start and end array must match. </li></ul>
-<ul><li> Only LiveEngage supported timezones may be used. </li></ul>
+<ul><li> Only Conversational Cloud supported timezones may be used. </li></ul>
     </td>
   </tr>
   <tr>

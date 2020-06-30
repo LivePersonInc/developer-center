@@ -11,7 +11,7 @@ permalink: engagement-attributes-setting-up-engagement-attributes.html
 indicator: both
 ---
 
-Engagement Attributes configuration is located in the Data Sources page, accessed from the Campaigns footnote.
+Engagement Attributes configuration is located in the Data Sources page, accessed from the Campaign Builder footnote.
 
 ![Data Sources](img/campaigns.png)
 
@@ -25,7 +25,7 @@ This option requires no code, and assumes the information exists on your webpage
 
 To track Engagement Attributes, follow the steps described below.
 
-1. Log into LiveEngage. At the top of the page, click **Campaigns**, and then, in the footnote, click **Data Sources**. The Data Sources page is displayed.
+1. Log into Conversational Cloud. At the top of the page, click Campaign Builder, and then, in the footnote, click **Data Sources**. The Data Sources page is displayed.
 
 ![Scraping Tool](img/scrapingtool.png)
 
@@ -42,9 +42,9 @@ To track Engagement Attributes, follow the steps described below.
 
 _Notes_:
 
-* _LiveEngage will “trim” any non-numeric characters such as dollar signs for properties that represent numbers, for example, “total”._
+* _Conversational Cloud will “trim” any non-numeric characters such as dollar signs for properties that represent numbers, for example, “total”._
 
-* _Make sure that the identifier class name or ID is unique. LiveEngage will look for your identifier on **all** of your pages._
+* _Make sure that the identifier class name or ID is unique. Conversational Cloud will look for your identifier on **all** of your pages._
 
 ### JavaScript code
 
@@ -52,9 +52,9 @@ This option requires the use of JavaScript code. This method is required if the 
 
 To track Engagement Attributes, follow the steps described below.
 
-1. Insert the Engagement Attribute declaration in a script tag, either at the end of the LiveEngage tag script, or in a separate script tag just after.
+1. Insert the Engagement Attribute declaration in a script tag, either at the end of the Web Tag script, or in a separate script tag just after.
 
-2. Insert the push function below the declaration and add the type of Engagement Attribute, for example, “prodView”.
+2. Insert [the push function](le-tag-sdes.html#push-sdes) below the declaration and add the type of Engagement Attribute, for example, “prodView”.
 
 _Notes_:
 
@@ -65,24 +65,4 @@ _Notes_:
 {:start="3"}
 3. Validate the code by going to the visitor page and simulating the visitor actions that trigger an event.
 
-Example for data that is sent when a visitor views “Asics Women's GT 2000 4”:
-
-```javascript
-window.lpTag = window.lpTag || {};
-lpTag.sdes = lpTag.sdes||[];
-lpTag.sdes.push(
-  {
-    "type": "prodView", //MANDATORY
-    "products": [{ //ARRAY OF PRODUCTS
-      "product": {
-        "name": "Asics Women's GT 2000 4", //PRODUCT NAME
-        "category": "Women running shoes", //PRODUCT CATEGORY NAME
-        "sku": "10305020", //PRODUCT SKU OR UNIQUE IDENTIFIER
-        "price": 119.95 //PRODUCT PRICE
-      }
-    }]
-  }
-);
-```
-
-_Note: When LiveEngage gets a list, the system never calculates totals nor numbers of items. LiveEngage relies on the event to send that information._
+_Note: When Conversational Cloud gets a list, the system never calculates totals nor numbers of items. Conversational Cloud relies on the event to send that information._

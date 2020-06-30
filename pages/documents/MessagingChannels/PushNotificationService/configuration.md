@@ -13,9 +13,9 @@ permalink: push-notification-service-configuration-of-push-proxy.html
 indicator: messaging
 ---
 
-Push proxy is a feature configured by LivePerson. To enable this feature, please contact your account team.
+Push proxy is a feature that can be self managed in the Conversational Cloud console.
 
-In order for LivePerson to enable the push proxy feature, you must provide the following data and files:
+In order to enable the push proxy feature, you will require the following data and files:
 
 * **App Name** - The app ID used on registration for push from the mobile app. For example: `com.mybrand.app`
 
@@ -36,3 +36,7 @@ In order for LivePerson to enable the push proxy feature, you must provide the f
 	* **Key** - TLS Key file. _Example_: mybrandpushKey.pem
 
   * **Certificate** - TLS certification file. _Example_: mybrandpushCrt.pem
+
+This information can be added to the Mobile app management section under Data Sources
+
+![Mobile app management](https://knowledge.liveperson.com/img/week-of-october-15th-2018-2.png)

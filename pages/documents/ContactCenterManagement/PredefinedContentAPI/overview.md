@@ -40,7 +40,7 @@ A few things you'll need to get started with this API:
 
 2. This API requires authorization using _either_ a login or an API key methodology.
 
-    * **Log a user into LiveEngage** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
+    * **Log a user into Conversational Cloud** using the [Login Service API](login-getting-started.html). Provide a username and password, and receive an authorization token (bearer). Use this token as your authorization header in all API requests.
 
     * [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
 
@@ -106,7 +106,7 @@ When you create predefined responses, take into consideration what kind of phras
 
 **Step 1: generate API key for predefined content API with write permissions.**
 
-1. Go to **Campaigns** > **Data Sources** > **API**
+1. Go to **Campaign Builder** > **Data Sources** > **API**
 
 2. Click **Manage** > **Add New**
 
@@ -120,9 +120,13 @@ Issue a REST request to create a new predefined content entry (this example uses
 
 * Create a new POST request on POSTMAN.
 
-* URL: https://{{accountConfigReadWriteDomain}}/api/account/{{accountId}}/configuration/engagement-window/canned-responses?v=2.0&lang=en-US
+* URL: 
 
-_Note: To get the `accountConfigReadWriteDomain` for your account, see the [Getting Started with LiveEngage APIs](guides-gettingstarted.html) document._
+	{% raw %}
+	`https://{{accountConfigReadWriteDomain}}/api/account/{{accountId}}/configuration/engagement-window/canned-responses?v=2.0&lang=en-US`
+	{% endraw %}
+
+_Note: To get the `accountConfigReadWriteDomain` for your account, see the [Getting Started with Conversational Cloud APIs](guides-gettingstarted.html) document._
 
 * Select the OAuth 1.0 Authorization type.
 
@@ -165,6 +169,6 @@ Example:
 
 **View new entry in the predefined content library**
 
-Open the predefined content library from the link on the campaigns footnote to view the newly created content entry.
+Open the predefined content library from the link on the Campaign Builder footnote to view the newly created content entry.
 
 ![Predefined Content 5](img/predefinedcontent5.png)

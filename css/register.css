@@ -9,6 +9,7 @@
 
 html {
   width: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -45,7 +46,7 @@ body {
 }
 
 #registerHeader img {
-  width: 136px;
+  width: 190px;
   margin-top: 18px;
   margin-bottom: 18px;
   margin-left: 32px;
@@ -58,15 +59,12 @@ body {
 }
 
 #registerTitle {
-  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 40px;
-  font-weight: 300;
   color: #ff720b;
   margin-top: 45px;
 }
 
 #registerSub {
-  font-family:  "Roboto Slab", "Open Sans", Helvetica, sans-serif;
   font-size: 21px;
   font-weight: 300;
   color: #162036;
@@ -77,6 +75,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 #registerForm {
@@ -90,29 +89,31 @@ body {
 #registerForm input {
   border: solid 1px #d6d6d6;
   background-color: #ffffff;
-  height: 30px;
-  margin-bottom: 20px;
-  padding: 10px 14px;
-  font-size: 18px;
+  height: 22px;
+  margin-bottom: 16px;
+  padding: 7px 10px;
+  font-size: 14px;
 }
 
-#country {
+#region {
   border: solid 1px #d6d6d6;
   background-color: #ffffff;
-  height: 50px;
-  margin-bottom: 20px;
-  padding: 10px 14px;
-  font-size: 18px;
-  font-family: "Open Sans";
+  height: 40px;
+  margin-bottom: 16px;
+  font-size: 14px;
   font-weight: normal;
   font-style: italic;
   color: #666666;
   text-indent: 5px;
+  -webkit-appearance: initial;
+  -webkit-padding-start: 9px;
 }
 
 select {
-  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .mandatory:before {
@@ -121,37 +122,32 @@ select {
 }
 
 #passwordReq {
-  font-family: "Open Sans";
   font-size: 14px;
   color: #666666;
 }
 
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-family: "Open Sans";
-  font-size: 18px;
+  font-size: 14px;
   font-weight: normal;
   font-style: italic;
   color: #666666;
 }
 input::-moz-placeholder { /* Firefox 19+ */
-  font-family: "Open Sans";
-  font-size: 18px;
+  font-size: 14px;
   font-weight: normal;
   font-style: italic;
   color: #666666;
 }
 
 input:-ms-input-placeholder { /* IE 10+ */
-  font-family: "Open Sans";
-  font-size: 18px;
+  font-size: 14px;
   font-weight: normal;
   font-style: italic;
   color: #666666;
 }
 
 input:-moz-placeholder { /* Firefox 18- */
-  font-family: "Open Sans";
-  font-size: 18px;
+  font-size: 14px;
   font-weight: normal;
   font-style: italic;
   color: #666666;
@@ -185,14 +181,17 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 #byClicking span {
-  font-family: "Open Sans", Helvetica, sans-serif;
 }
 
 #byClicking span a {
   text-decoration: none;
 }
 
-#registerButton {
+#registerContainer {
+  display: flex;
+}
+
+#registerButton, #registerButtonTest  {
   border-radius: 5px;
   background-color: #ff720b;
   margin-top: 45px;
@@ -210,10 +209,16 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 #registerButton span {
-  font-family: "Open Sans";
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
+}
+
+#loader {
+  display: none;
+  align-self: flex-end;
+  margin-bottom: 7px;
+  margin-left: 20px;
 }
 
 #checkboxContainer {
@@ -227,27 +232,21 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 #checkboxContainer span {
-  font-family: "Open Sans", Helvetica, sans-serif;
 }
 
-#passwordErrorMatch {
+
+.conditionButton {
   display: none;
+  text-align: left;
   color: red;
   align-self: baseline;
   margin-top: 5px;
   font-style: italic;
-  font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 15px;
 }
 
-#allFields {
-  display: none;
-  color: red;
-  align-self: baseline;
-  margin-top: 5px;
-  font-style: italic;
-  font-family: "Open Sans", Helvetica, sans-serif;
-  font-size: 15px;
+.success {
+  color: #5779da;
 }
 
 /* Media queries begin, don't panic! */

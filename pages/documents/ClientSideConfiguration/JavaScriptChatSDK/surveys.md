@@ -51,7 +51,9 @@ All surveys follow the same structure and behavior patterns. To avoid duplicatio
 Logic Example:
 
 ```json
-logic : {
-    "showLogicId" : [2 ,3 ,4]
+{
+  "logic":{
+   "showLogicId" : [2 ,3 ,4]
+  }
 }
 ```

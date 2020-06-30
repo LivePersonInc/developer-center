@@ -63,7 +63,7 @@ This API retrieves a list of users for a specific account.
 
  |Header  |Description |
 | :-------  | :-----  |
-| ac-revision | Account config object type collection revision. |
+| ac-revision | This parameter specifies the version of the data object retrieved. You can use the If-Match parameter in the request to retrieve a specifc version using this parameter's value.. |
 
 **Response Body**
 

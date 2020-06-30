@@ -8,8 +8,6 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: String Localization
-
-order: 229
 permalink: mobile-app-messaging-sdk-for-ios-string-localization-date-and-time-styles.html
 
 indicator: messaging

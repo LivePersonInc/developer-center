@@ -1,18 +1,17 @@
 - categoryname: Getting Started
   image: getting-started
   documents:
-  - documentname: Before You Get Started
+  - documentname: First Steps
+  - documentname: API Guidelines
     pages:
-    - pagename: Considerations and Requirements
-    - pagename: Let's Get Started
-  - documentname: Essential Resources
-    pages:
-    - pagename: API Data Metrics
-    - pagename: Authentication
-    - pagename: Data APIs
+    - pagename: Accessing LivePerson APIs
+    - pagename: Create API keys
     - pagename: Domain API
+    - pagename: Data APIs
+    - pagename: API Data Metrics
     - pagename: Engagement Attributes
-    - pagename: Report Builder Data Metrics
+    - pagename: Analytics Builder Data Metrics
+    - pagename: Retry Policy Recommendations
 
 - categoryname: Agent Experience
   image: agent-experience-new
@@ -110,65 +109,172 @@
       - pagename: Postman Resources
 
 
-- categoryname: Bots & Automation
+- categoryname: Conversational AI
   image: agent-experience
   documents:
-  - documentname: Messaging Agent SDK
+  - documentname: Conversational AI
     pages:
       - pagename: Overview
-      - pagename: Examples
-      - pagename: Conversation Metadata Guide
-      - pagename: Release Notes
-  - documentname: Bot Connectors
+  - documentname: Conversation Builder
+    pages:
+      - pagename: Tutorials & Guides
+        subpages:
+          - subpagename: Getting Started
+          - subpagename: Using Meta Intents with Conversation Builder
+          - subpagename: Implementing a Web View Integration
+          - subpagename: Using LivePerson Functions with a Bot
+        #  - subpagename: Implementing the Shift Status & Current Queue Health APIs
+      - pagename: Bot Workspace
+      - pagename: Bots
+        subpages:
+          - subpagename: Custom Bots
+          - subpagename: Post-Conversation Survey Bots
+          - subpagename: Bot Basics
+          - subpagename: Bot Groups
+          - subpagename: Bot-to-Bot Transfers
+      - pagename: Bot Templates
+        subpages:
+          - subpagename: Overview
+          - subpagename: Apply for a Loan
+          - subpagename: Full Lead Gen
+          - subpagename: Insurance Quote
+          - subpagename: Order Status
+          - subpagename: Simple FAQ
+          - subpagename: Simple Lead Gen
+          - subpagename: Simple Router
+          - subpagename: Travel Notification
+          - subpagename: Maven Concierge
+      - pagename: Dialogs
+        subpages:
+          - subpagename: Dialog Basics
+          - subpagename: Standard Dialogs
+          - subpagename: Fallback Dialogs
+          - subpagename: Disambiguation Dialogs
+          - subpagename: Auto Escalation Dialogs
+      - pagename: Interactions
+        subpages:
+          - subpagename: Interaction Basics
+          - subpagename: Interaction Support
+          - subpagename: Dialog Starter
+          - subpagename: Statements
+          - subpagename: Questions
+          - subpagename: Integrations
+          - subpagename: Configuration - Next Action
+          - subpagename: Configuration - Custom Code
+          - subpagename: Configuration - Settings
+          - subpagename: Troubleshooting
+      - pagename: Assist
+      - pagename: Variables & Slots
+      - pagename: Integrations
+        subpages:
+          - subpagename: Integration Basics
+          - subpagename: API Integrations
+          - subpagename: Email Integrations
+          - subpagename: Knowledge Base Integrations
+          - subpagename: LivePerson Agent Escalation Integrations
+          - subpagename: File Integrations
+          - subpagename: LivePerson Functions Integrations
+          - subpagename: Web View Integration API
+          - subpagename: Troubleshooting
+      - pagename: Environment Variables
+      - pagename: Versions & Releases
+      - pagename: Scripting Functions
+        subpages:
+          - subpagename: Introduction
+          - subpagename: Functions List
+          - subpagename: Get & Set Contextual Data
+          - subpagename: Get User Data
+          - subpagename: Get Integration Data
+          - subpagename: Send Messages
+          - subpagename: Manage Conversation Flow
+          - subpagename: Log & Debug
+          - subpagename: Manage the Context Session Store
+          - subpagename: askMaven
+          - subpagename: Deprecated Functions
+      - pagename: Testing & Deployment
+        subpages:
+          - subpagename: Previewing
+          - subpagename: Debugging
+          - subpagename: Deploying to Conversational Cloud
+      - pagename: Advanced Use Cases
+      - pagename: Best Practices
+        subpages:
+          - subpagename: Train & Tune NLU
+          - subpagename: Custom Event Logging
+          - subpagename: Reusable Components
+          - subpagename: A Pre-Launch Checklist
+      - pagename: Networking & Security
+  - documentname: Conversation Orchestrator
+    pages:
+      - pagename: Overview
+      - pagename: Agent Assist
+        subpages:
+          - subpagename: Overview
+          - subpagename: Recommended Actions for Automations
+          - subpagename: Recommended Actions for Knowledge Base
+      - pagename: Context Warehouse
+        subpages:
+          - subpagename: Overview
+          - subpagename: Inbox System Attributes
+          - subpagename: Custom Static or Function
+          - subpagename: Context Session Store
+      - pagename: Dynamic Routing
+        subpages:
+          - subpagename: Overview
+          - subpagename: Tutorial
+          - subpagename: Use Conversation Orchestrator with Your Bot
+          - subpagename: Using SDE attributes in Routing
+      - pagename: Recommendation API
+        subpages:
+          - subpagename: Overview
+          - subpagename: Methods
+  - documentname: Intent Builder
+    pages:
+      - pagename: Overview
+      - pagename: Natural Language Understanding
+      - pagename: Domains
+      - pagename: Intents
+      - pagename: Meta Intents
+      - pagename: Entities
+  - documentname: Intent Analyzer
+    pages:
+      - pagename: Overview
+  - documentname: Knowledge Base
+    pages:
+      - pagename: Overview
+      - pagename: Knowledge Bases
+      - pagename: Articles
+      - pagename: Tutorial
+  - documentname: Bot Analytics
+    pages:
+      - pagename: Overview
+      - pagename: Leveraging Analytics
+      - pagename: Troubleshooting
+  - documentname: Bot Accounts
+    pages:
+      - pagename: Permissions
+      - pagename: Credentials
+  #    - pagename: Subscriptions
+  - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
+      - pagename: Bot Status Dashboard
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
+      - pagename: IBM Watson Assistant Version 2
       - pagename: Amazon Lex
-  - documentname: Conversation Builder
+      - pagename: Microsoft Bot Framework
+      - pagename: Custom Integration
+      - pagename: Hook Configuration
+      - pagename: Public API
+  - documentname: Messaging Agent SDK
     pages:
-      - pagename: Platform Overview
-      - pagename: Getting Started
-        subpages:
-          - subpagename: 0 - Video Tutorials
-          - subpagename: 1 - Dialogs and Patterns
-          - subpagename: 2 - Intents
-          - subpagename: 3 - Integrations
-          - subpagename: 4 - Connect to LiveEngage
-          #- subpagename: 5 - Releases and Versioning
-          #- subpagename: Basic - FAQ Bot Tutorial
-          #- subpagename: Basic - Routing Bot Tutorial
-      - pagename: Templates
-        subpages:
-          - subpagename: Overview
-          - subpagename: Simple Router
-          - subpagename: Full Lead Gen
-          - subpagename: Simple Lead Gen
-          - subpagename: Simple FAQ
-      - pagename: Conversation Builder
-        subpages:
-            - subpagename: Overview
-            - subpagename: Interactions
-            - subpagename: Conditions
-            - subpagename: Assist
-            - subpagename: Integrations
-            - subpagename: Scripting Functions
-      - pagename: Intent Builder
-        subpages:
-          - subpagename: Overview
-          - subpagename: Entities
-          - subpagename: NLU Engines
-      - pagename: Knowledge Base
-      - pagename: Analytics
-      - pagename: Best Practices
-        subpages:
-          - subpagename: Transfer to an Agent or Bot
-          - subpagename: Using Environment Variables
-          - subpagename: Training and Tuning Your Intents and FAQs
-      #- pagename: Operations
-  - documentname: Custom Third Party Bots
-
+      - pagename: Overview
+      - pagename: Methods
+      - pagename: Events
+      - pagename: Examples
+      - pagename: Conversation Metadata Guide
 - categoryname: Client Side Configuration
   image: client-side
   documents:
@@ -256,6 +362,7 @@
         - subpagename: Client Properties
         - subpagename: Avoid Websocket Headers
         - subpagename: CoBrowse
+        - subpagename: Voice and Video Calls
         - subpagename: File Sharing
       - pagename: Samples
         subpages:
@@ -306,7 +413,14 @@
         - subpagename: Submit Survey Data
         - subpagename: Send a Transcript
       - pagename: Sample Postman Collection
-
+    - documentname: Window Customization API
+      pages:
+      - pagename: Overview
+      - pagename: Quick Start
+      - pagename: Samples
+        subpages:
+        - subpagename: CSS Sample
+      - pagename: Taglet
 - categoryname: Contact Center Management
   image: contact-center
   documents:
@@ -324,6 +438,31 @@
             - subpagename: Delete Agent Groups
             - subpagename: Delete Agent Group
         - pagename: Appendix
+
+    - documentname: Agent Survey For Messaging Configuration API
+      pages:
+        - pagename: Overview
+        - pagename: Appendix
+        - pagename: Methods
+          subpages:
+            - subpagename: Create Agent Survey Object
+            - subpagename: Get All Agent Survey Objects
+            - subpagename: Update Agent Survey Object
+            - subpagename: Delete Agent Survey Object
+            - subpagename: Get Agent Survey Object by ID
+
+    - documentname: Agent Survey For Messaging Runtime API
+      pages:
+        - pagename: Overview
+        - pagename: Appendix
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Agent Survey
+            - subpagename: Get Agent Survey State
+            - subpagename: Save Agent Survey State
+            - subpagename: Submit Agent Survey
+            - subpagename: Dismiss Agent Survey
+
     - documentname: Agent Status Reason API
       basedomain: https://{domain}/api/account/{accountId}/configuration/le-agents/status-reasons
       pages:
@@ -388,7 +527,6 @@
         - pagename: Introduction
         - pagename: Methods
           subpages:
-            - subpagename: General
             - subpagename: Categories List
             - subpagename: Categories List by Revision
             - subpagename: Category by ID
@@ -400,6 +538,7 @@
             - subpagename: Delete Multiple Categories
             - subpagename: Import Account Categories
             - subpagename: Import Categories Pre Validation
+        - pagename: Appendix
     - documentname: Profiles API
       basedomain: https://{domain}/api/account/{accountId}/configuration/le-users/profiles
       pages:
@@ -500,14 +639,32 @@
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
+          - subpagename: Debugger
+      - pagename: "Command Line Interface (CLI)"
       - pagename: Deployment
+      - pagename: Monitoring
+        subpages:
+          - subpagename: Logs
+          - subpagename: Metrics
+          - subpagename: Email Reporting
       - pagename: Scheduled Invocations
       - pagename: External Invocations
-      - pagename: Use Cases
+        subpages:
+          - subpagename: Overview
+          - subpagename: Client Credentials
+          - subpagename: Authorization Code
+          - subpagename: Error Codes
+          - subpagename: Java Client
+          - subpagename: JavaScript Client
+      - pagename: Integrations
         subpages:
           - subpagename: Post Chat Survey Transcripts
           - subpagename: Messaging Conversations
           - subpagename: Messaging Conversation Survey
+          - subpagename: Conversational AI
+          - subpagename: Conversational Commands
+      - pagename: Command Line Interface (CLI)
+
 
 - categoryname: Historical Data
   image: historical-data
@@ -579,44 +736,26 @@
   - documentname: Connector API
     basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
-    - pagename: First Steps
-      subpages:
-      - subpagename: Overview
-      - subpagename: App Install Manifest for Connectors
-      - subpagename: Getting Started
-    - pagename: Authorization and Authentication
-      subpages:
-      - subpagename: Get AppJWT
-      - subpagename: Get ConsumerJWS
-      - subpagename: Authorization Error Responses
-    - pagename: API Reference
-      subpages:
-      - subpagename: Overview
-      - subpagename: CONVERSATION
-      - subpagename: SEND
-    - pagename: Webhooks
-      subpages:
-      - subpagename: Overview
-      - subpagename: Events
-      - subpagename: Configuration
-      - subpagename: Notification Protocol
-      - subpagename: Retry Policy
-      - subpagename: Disclaimers
-      - subpagename: Troubleshooting
-      - subpagename: Webhooks Examples
-    - pagename: Examples
-      subpages:
-      - subpagename: Create a New Conversation
-      - subpagename: Create a New Conversation and Report SDEs
-      - subpagename: Send a Message
-      - subpagename: Close a Conversation
-      - subpagename: Send Chat State Events
-      - subpagename: How to Enable a Feature
-      - subpagename: Campaign for Messaging Routing
-      - subpagename: File Sharing
-    - pagename: Sample Code
-      subpages:
-      - subpagename: Connector Sample App
+      - pagename: Overview
+      - pagename: Getting Started
+      - pagename: Connector Sample App
+      - pagename: Send API
+        subpages:
+          - subpagename: Overview
+          - subpagename: Authorization and Authentication
+          - subpagename: CONVERSATION
+          - subpagename: SEND
+          - subpagename: Examples
+      - pagename: Webhooks
+        subpages:
+          - subpagename: Overview
+          - subpagename: Events
+          - subpagename: Configuration
+          - subpagename: Notification Protocol
+          - subpagename: Retry Policy
+          - subpagename: Disclaimers
+          - subpagename: Troubleshooting
+          - subpagename: Webhooks Examples
   - documentname: IVR Engagement API
     basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
     pages:
@@ -637,6 +776,8 @@
       - subpagename: CSAT Behavior
       - subpagename: Photo and File Sharing
       - subpagename: Welcome Message with Quick Replies
+      - subpagename: Scroll Behavior Configuration
+      - subpagename: Logging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -646,7 +787,8 @@
       - subpagename: Interface and Class Definitions
     - pagename: SDK Attributes
       subpages:
-      - subpagename: Attributes
+      - subpagename: 5.0 and above
+      - subpagename: 5.0 and below
       - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:
@@ -654,15 +796,6 @@
       - subpagename: String Values
       - subpagename: Override SDK Strings
       - subpagename: Plural String resource Example
-    - pagename: Voice and Video for Android SDK (BETA)
-      subpages:
-      - subpagename: Overview
-      - subpagename: Getting Started
-      - subpagename: LiveEngage Configuration
-      - subpagename: Customizing
-      - subpagename: Sample Apps
-      - subpagename: FAQ
-      - subpagename: Release Notes
     - pagename: Latest Release Notes
     - pagename: All Release Notes
     - pagename: Resources
@@ -685,6 +818,8 @@
       - subpagename: Photo and File Sharing
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
+      - subpagename: Scroll Behavior Configuration
+      - subpagename: Logging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -694,25 +829,15 @@
       - subpagename: Callbacks Index
     - pagename: SDK Attributes
       subpages:
-      - subpagename: Attributes
+      - subpagename: SDK 5.0 and above
+      - subpagename: SDK 4.1 and below
       - subpagename: Attributes Design Sheet
-      - subpagename: Deprecated Attributes
     - pagename: String Localization
       subpages:
       - subpagename: Localization Keys
       - subpagename: String Localization
       - subpagename: Date and Time Styles
-
-    - pagename: Voice and Video for iOS SDK (BETA)
-      subpages:
-      - subpagename: Overview
-      - subpagename: Getting Started
-      - subpagename: Customizing
-      - subpagename: LiveEngage Configuration
-      - subpagename: Sample App
-      - subpagename: Appendix
-    - pagename: Latest Release Notes
-    - pagename: All Release Notes
+    - pagename: All Releases
     - pagename: Resources
       subpages:
       - subpagename: Authentication
@@ -730,6 +855,9 @@
     - pagename: HTTP Response Codes
     - pagename: Configuration of Push Proxy
     - pagename: IP Whitelisting
+  - documentname: Proactive Messaging
+    pages:
+    - pagename: API
 
 - categoryname: Real-Time Data
   image: rt-data
@@ -741,6 +869,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Agent Status
+          - subpagename: Agent List
           - subpagename: Summary
   - documentname: Messaging Operations API
     basedomain: https://{domain}/operations/api/account/{accountID}
@@ -755,6 +884,7 @@
           - subpagename: Messaging CSAT Distribution
           - subpagename: Messaging Skill Segment
           - subpagename: Messaging Agent Segment
+          - subpagename: Messaging Queue Health By Group
 
       - pagename: Appendix
   - documentname: Operational Realtime API
@@ -782,6 +912,7 @@
         - pagename: Card Template
         - pagename: Carousel Template
         - pagename: Quick Replies Template
+        - pagename: Multiple Checklist Template
         - pagename: Best Practices
         - pagename: Complex Layout
         - pagename: Limitations
@@ -801,7 +932,6 @@
         - pagename: Introduction
         - pagename: Generic Template
         - pagename: Button Template
-        - pagename: List Template
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Best Practices
@@ -812,7 +942,13 @@
         - pagename: Card Template
         - pagename: Carousel Template
         - pagename: Quick Replies Template
-        - pagename: Google Pay Template
+        - pagename: Limitations
+    - documentname: LINE Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
         - pagename: Limitations
     #- documentname: Quick Replies
     #  pages:
@@ -821,7 +957,7 @@
 - categoryname: 'Security & Authentication'
   image: security-authentication
   documents:
-    - documentname: Cookies and LiveEngage
+    - documentname: Cookies and Conversational Cloud
       pages:
         - pagename: Overview
     - documentname: Apple Business Chat Authentication
@@ -835,11 +971,11 @@
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API
-    - documentname: LiveEngage Applications
+    - documentname: Conversational Cloud Applications
       pages:
-        - pagename: What Is a LiveEngage Application?
-        - pagename: Installing LiveEngage Applications
-    - documentname: Authorizing LiveEngage Applications
+        - pagename: What Is a Conversational Cloud Application?
+        - pagename: Installing Conversational Cloud Applications
+    - documentname: Authorizing Conversational Cloud Applications
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -847,6 +983,7 @@
           - subpagename: Authorization Request
           - subpagename: Refresh Request
           - subpagename: Token Request
+          - subpagename: Token Revocation Request
         - pagename: Samples
           subpages:
             - subpagename: Application Login Sample App
@@ -860,6 +997,26 @@
             - subpagename: Application Login
             - subpagename: Refresh
             - subpagename: Logout
+    - documentname: MTLS
+      pages:
+        - pagename: Overview
+        - pagename: Onboarding
+        - pagename: Methods
+          subpages:
+            - subpagename: Create certificate for account
+            - subpagename: Create certificate from file
+            - subpagename: Delete certificate by ID
+            - subpagename: Get all certificates by account
+            - subpagename: Get certificate by ID
+            - subpagename: Create certificate for account
+            - subpagename: Update certificate from file
+            - subpagename: Forward delete request
+            - subpagename: Forward get request
+            - subpagename: Forward post request
+            - subpagename: Forward put request
+            - subpagename: Check mapping configuration
+            - subpagename: P12 Key Tester
+
 
 - categoryname: Website Monitoring
   image: website-monitoring
@@ -892,15 +1049,15 @@
             - subpagename: Click
             - subpagename: getEngagementInfo
             - subpagename: getEngagementState
-    - documentname: LE-Tag
+    - documentname: Web Tag
       pages:
         - pagename: Overview
-        - pagename: How to Use LiveEngage Tag Events
+        - pagename: SDEs
         - pagename: Events
           subpages:
-            - subpagename: Visitor Flow Events
-            - subpagename: Engagement Events
-            - subpagename: Engagement Window Events
+            - subpagename: Event Binding
+            - subpagename: Events
+        - pagename: New Page Refresh
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
       pages:
@@ -944,7 +1101,7 @@
         - pagename: Overview
         - pagename: Getting Started
         - pagename: Creating Report Tasks
-    - documentname: SMS with LiveEngage
+    - documentname: SMS with Conversational Cloud
       pages:
         - pagename: Overview
         - pagename: IVR Deflection
@@ -953,9 +1110,9 @@
         - pagename: Google AdWords - Click-to-Message
         - pagename: SMS via Mobile App Messaging
         - pagename: Appendix
-    - documentname: Video Chat
-      pages:
-        - pagename: Add Video to Chat Conversations
-        - pagename: Plan Your Service
-        - pagename: Develop the Service
-        - pagename: Build Your Widgets
+    # - documentname: Video Chat
+    #   pages:
+    #     - pagename: Add Video to Chat Conversations
+    #     - pagename: Plan Your Service
+    #     - pagename: Develop the Service
+    #     - pagename: Build Your Widgets

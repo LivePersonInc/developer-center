@@ -17,7 +17,7 @@ The customer mobile app is responsible for user authentication against the brand
 
 ### Customer Web App
 
-The customer web app is very similar to the mobile app, except that it runs on a browser. It embeds the LivePerson Web SDK and should act in the same way as described above for the mobile app. The web app can display the embedded window originated by the LivePerson SDK, or open a LiveEngage popup window to interact with the consumer. When the LiveEngage embedded window is set to pop-out mode, the authentication must take place using a page redirect mechanism.
+The customer web app is very similar to the mobile app, except that it runs on a browser. It embeds the LivePerson Web SDK and should act in the same way as described above for the mobile app. The web app can display the embedded window originated by the LivePerson SDK, or open a Conversational Cloud popup window to interact with the consumer. When the Conversational Cloud embedded window is set to pop-out mode, the authentication must take place using a page redirect mechanism.
 
 ### Customer Token Endpoint (Mandatory for Code Flow)
 
@@ -76,7 +76,7 @@ The id_token in the response is standard JWT and can be translated to the unpack
 }
 ```
 
-<div class="hide">Cleanup - Should add another component - Customer Authorization Endpoint, which is mandatory for external windows. This is the endpoint where users will log in and then be redirected to the external widnow page with the code/JWT as a query/hash param. Auth0 is an example for such a service, but the customer may want to implement their own landing page to manipulate query parameters and redirects rather than rely on a provided Auth service as is.)</div>
+<div class="hide">Cleanup - Should add another component - Customer Authorization Endpoint, which is mandatory for external windows. This is the endpoint where users will log in and then be redirected to the external window page with the code/JWT as a query/hash param. Auth0 is an example for such a service, but the customer may want to implement their own landing page to manipulate query parameters and redirects rather than rely on a provided Auth service as is.)</div>
 
 ### LivePerson SDK
 

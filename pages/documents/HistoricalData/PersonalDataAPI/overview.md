@@ -14,6 +14,9 @@ indicator: both
 
 ### Introduction
 
+{: .notice}
+Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/api-guidelines-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
+
 Personal Data Deletion API allows brands to comply with the European Union's Right to be Forgotten requirement (a part of the GDPR). This API will permanently delete any personal data that the consumer requests to be deleted. Once the data has been deleted there is no way to restore it.
 
 Personal data may include full conversation transcripts, hosted files or links sent by the consumer, survey free text answers and consumer's PII (personally identifiable information). Data will be deleted within 20 days from the time the deletion request was made final (explanation regarding when requests are made final can be found below).
@@ -55,7 +58,7 @@ This flow is initiated by the consumer requesting for one or all of his chats to
 
 The brand will need to follow the below steps to achieve this:
 
-1. The brand will need to have passed some sort of identifying attribute to LiveEngage during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](engagement-attributes-overview.html), or through the [authentication flow](guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
+1. The brand will need to have passed some sort of identifying attribute to Conversational Cloud during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](engagement-attributes-overview.html), or through the [authentication flow](guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
 2. Use the [Engagement History API](data-engagement-history-overview.html) to search for engagements with the identifying value. Find all relevant engagements and make note of the engagement id(s) to delete
 
@@ -67,7 +70,7 @@ This flow is initiated by the consumer requesting for one or all of his conversa
 
 The brand will need to follow the below steps to achieve this:
 
-1. The brand will need to have passed some sort of identifying attribute to LiveEngage during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](engagement-attributes-overview.html), or through the [authentication flow](guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
+1. The brand will need to have passed some sort of identifying attribute to Conversational Cloud during these engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](engagement-attributes-overview.html), or through the [authentication flow](guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
 2. Use the [Messaging Interactions API](data-messaging-interactions-overview.html) to search for conversations with the identifying value. Find all relevant conversation id(s) for deletion.
 
@@ -79,7 +82,7 @@ This flow is initiated by the consumer requesting for all of his personal data t
 
 The brand will need to follow the below steps to achieve this:
 
-1. The brand will need to have passed some sort of identifying attribute to LiveEngage during this consumer's engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](engagement-attributes-overview.html), or through the [authentication flow](guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
+1. The brand will need to have passed some sort of identifying attribute to Conversational Cloud during this consumer's engagements which can be used to identify those engagements which were associated with the consumer making the request. This can be accomplished via [engagement attributes](engagement-attributes-overview.html), or through the [authentication flow](guides-authentication-detailedapi.html#openid-token-structure) (values are mapped onto engagement attributes).
 
 2. Use the [Messaging Interactions API](data-messaging-interactions-overview.html) to search for conversations with the identifying value. Find all relevant conversation ids and the relevant consumerId for deletion. The consumerId is identified in the Messaging Interactions API under consumerParticipant as participantId.
 
