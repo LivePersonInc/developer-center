@@ -31,11 +31,11 @@ LivePerson recommends that —before you create a bot— you set up the [domains
 4. If you selected the Custom Bot template, in the next dialog, specify the following:
 
     * **Name**: Enter a name that’s concise and clear. Make sure abbreviations can be understood, and consider adding a prefix or suffix to indicate the environment (Dev, Prod, etc.) or language (En, Sp, Fr, etc.) if applicable.
-    * **Description**: Enter a description that’s meaningful to you and others. Consider including language that identifies the bot's goal and key behaviors
+    * **Description**: Enter a description that’s meaningful to you and others. Consider including language that identifies the bot's goal and key behaviors.
     * **Bot Language**: This setting identifies the language that the bot will use to respond. Select the language based on how you'll train the bot: If you will use an intent domain, you must select the language of the domain that will be associated with the bot. For example, if the intent domain uses English, select "English" here. If these languages don't match, errors during NLU processing will occur. Alternatively, if the bot will use only pattern matching, you can select or enter any language.
     * **Bot Group**: Optionally select the [bot group](conversation-builder-bots-bot-groups.html) for the bot. A bot can be a member of exactly one group.
 
-5. Build out the bot, completing and adding the necessary [dialogs](conversation-builder-dialogs-dialog-basics.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the bot using the Preview tool.
+5. Build out the bot, completing and adding the necessary [dialogs](conversation-builder-dialogs-dialog-basics.html) and [interactions](conversation-builder-interactions-interaction-basics.html). As you work, test the bot using the [Preview tool](conversation-builder-testing-deployment-previewing.html).
 6. [Save versions](conversation-builder-versions-releases.html#save-a-version) of the bot at important points in its development. This allows you to restore a version if you need.
 7. [Train and tune](conversation-builder-best-practices-train-tune-nlu.html) things as you do more testing.
 8. [Save a version](conversation-builder-versions-releases.html#save-a-version) of the final “Development” bot.

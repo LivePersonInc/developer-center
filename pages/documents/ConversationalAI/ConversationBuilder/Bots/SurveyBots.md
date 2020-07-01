@@ -66,7 +66,7 @@ A survey can be closed in the following ways:
 * The survey is completed.
 * The survey times out.
 
-Both outcomes are tracked and reported on as part of the Report Builder, so you can fully analyze the results.
+Both outcomes are tracked and reported on as part of the Analytics Builder, so you can fully analyze the results.
 
 ### Prerequisite steps
 
@@ -179,15 +179,15 @@ Survey bot settings include:
 
 ### Step 4 - Trigger the bot
 
-In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes the survey will be triggered and the agent workspace will show the caption, “Survey in progress.”
+In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes, the survey will be triggered, and the agent workspace will show the caption, “Survey in progress.”
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/surveyBot_triggerSurvey.png">
 
-While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey (if you've specified "Close Conversation" as the next step) or when the survey times out. In cases of an error with the survey flow or the survey bot, Conversational Cloud will close the survey after 48 hours as part of a conversation cleanup process.
+While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey (if you've specified "Close Conversation" as the next action) or when the survey times out. In cases of an error with the survey flow or the survey bot, Conversational Cloud will close the survey after 48 hours as part of a conversation cleanup process.
 
 ### The agent experience
 
-Once a conversation ends and a survey begins, the conversation no longer appears in the Open Conversations list in Conversational Cloud. Instead, it appears in the All Conversations list with a status that indicates the survey is in progress:
+Once a conversation ends and a survey begins, the conversation no longer appears in the **Open Conversations** list in Conversational Cloud. Instead, it appears in the **All Conversations** list with a status that indicates the survey is in progress:
 
 <img class="fancyimage" style="width:850px" src="img/ConvoBuilder/surveyBot_agent1.png">
 
@@ -241,7 +241,7 @@ Be aware that bots in Bot Studio and Conversation Builder cannot run side by sid
 1. In Conversation Builder, manually recreate your survey bots. (If you're developing in your Production environment, which is not common and not recommended, assign the survey bots to "test" skills that aren't used in a production campaign, so you can test them before assigning production skills to them.) 
 2. Test the survey bots.
 3. Release the new survey bots to your Production environment.
-4. Use the Bots Status application to migrate your account from Bot Studio to Conversation Builder. For details on this, see *Monitoring Survey Bots* above.
+4. Use the Bots Status application to migrate your account from Bot Studio to Conversation Builder. For details on this, see [here](bots-status-managing-post-conversation-survey-bots.html#migrate-to-conversation-builder).
 
 {: .important}
 While you're completing steps 1 - 3, you can continue to use Bot Studio. Once you complete step 4, you can no longer use Bot Studio.
