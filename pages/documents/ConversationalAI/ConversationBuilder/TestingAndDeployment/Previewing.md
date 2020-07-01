@@ -14,7 +14,7 @@ The Preview tool is a web client that's designed to provide a full preview of th
 
 Note the following about Preview:
 
-- The conversation doesn't go through Conversational Cloud, so there's no need to deploy an agent connector to use Preview. Functionality that requires Conversational Cloud features (such as transfers) should be tested in a deployed web client. You can practice this using the [Connect to LiveEngage tutorial](conversation-builder-tutorials-guides-getting-started.html).
+- The conversation doesn't go through Conversational Cloud, so there's no need to deploy an agent connector to use Preview. Functionality that requires Conversational Cloud features (such as transfers) should be tested in a deployed web client. You can practice this using the [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html).
 - Within Preview, all structured content is displayed. Keep in mind that not all channels support all structured content objects. Make sure to test and verify the bot on the device or in the appropriate application. For a list of what a channel supports, see [here](conversation-builder-interactions-interaction-support.html).
 - The Preview window toggles its display to show the Bot Logs window. For details on the Bot Logs window, see [here](conversation-builder-testing-deployment-debugging.html).
 
