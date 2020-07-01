@@ -74,27 +74,30 @@ a:hover {
     letter-spacing: 0.01em;
     /* Primary/Electric Blue */
     color: #005EF4;
+    margin-bottom: 12px;
 }
 
 .spotlight-content-container {
     width: 324px;
     height: 459px;
     display: block !important;
-    margin-top: 17%;
-    margin-left: 28%;
+    margin-top: 152px;
+    margin-left: 82px;
 }
 
 .heading-h5 {
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
-    width: 321px;
-
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+    /* or 150% */
+    width: 302px;
     letter-spacing: 0.01em;
+    margin-bottom: 16px;
+    /* Brand/Navy */
+
     color: #090C43;
-    margin-bottom: 8px;
 }
 
 .spotlight-title {
@@ -140,12 +143,12 @@ a:hover {
 
 .spotlight-container {
     background-color: #F8F5F3;
-    width: 900px;
-    height: 900px;
-    margin-top: 6%;
+    width: 542px;
+    height: 542px;
+    margin-top: 350px;
     position: absolute;
     display: none;
-    right: -10%;
+    right: -8%;
     overflow: hidden;
     border-radius: 100%;
 }
@@ -157,6 +160,7 @@ a:hover {
 
 .lp-tips-container {
     /*display: inline-block !important;*/
+    display: none;
     width: 24%;
     height: 20%;
     margin-left: 40px;
@@ -190,7 +194,7 @@ a:hover {
     text-align: center;
     letter-spacing: 0.008em;
     color: #FFFFFF;
-    margin-top: 290px;
+    margin-top: 224px;
     padding: 0 12px 0 12px;
 }
 
@@ -217,22 +221,25 @@ a:hover {
 
 }
 
-@media (max-width: 1400px) {
+
+@media (max-width: 1300px) {
     .spotlight-container {
-        right: -25%;
+        right: -16%;
     }
 
     .heading-h5 {
-        width: 50%;
-
+        width: 240px;
     }
 
 }
 
-@media (max-width: 1100px) {
-    .spotlight-container {
-        width: 700px;
-        height: 700px;
+@media (max-width: 1024px) {
 
+    .lp-tips-container {
+        display: none !important
+    }
+
+    .spotlight-container {
+        display: none !important;
     }
 }
