@@ -15,22 +15,22 @@ This bot provides basic information and contact options to your consumers. If yo
 
 <div class="container-note">
     <div class="important" style="width:100%">
-    <b> Prerequisites </b> To use this guide, please create a 45-day trial account <a  target="_blank" href="https://developers.liveperson.com/register.html" alt="Trial Registration"> here </a>.
+    <b> Prerequisites</b> To use this guide, please create a 45-day trial account <a  target="_blank" href="https://developers.liveperson.com/register.html" alt="Trial Registration"> here</a>.
   </div>
 </div>
 
 ### Exploring your Concierge Bot
 
 When you are ready to start getting to know your bot, you can check out your Concierge Bot through Conversation Builder by:
-1. Make sure you are <a  target = "_blank" href="https://authentication.liveperson.net/login.html" alt="LiveEngage URL"> logged in </a> .
+1. Make sure you are <a  target = "_blank" href="https://authentication.liveperson.net/login.html" alt="LiveEngage URL"> logged in</a>.
 2. On the left sidebar, click the bot icon ("Manage conversational AI and bots").
-3. In the Conversational AI dashboard, click <b> Conversation Builder </b>.
-4. Click on <b> Concierge Bot </b>
+3. In the Conversational AI dashboard, click <b> Conversation Builder</b>.
+4. Click on <i> Concierge Bot</i>
 
 Then you will see a screen like this:
 
 <img class="fancyimage" style="width:700px; margin-left: 16px;" src="img/conciergeBot/Concierge-bot-1.jpeg">
-From here you can test your bot by clicking <b>Preview </b> and click on the dialog headers for <i>‘Welcome’ </i>, <i> ‘Open Hours’ </i>, 
+From here you can test your bot by clicking <b>Preview</b> and click on the dialog headers for <i>‘Welcome’ </i>, <i> ‘Open Hours’ </i>, 
 <i> ‘Contact’ </i>, etc. to see your bot from behind the scenes.
 
 ### Customize your Concierge Bot
@@ -45,7 +45,7 @@ The Conversation Builder lets you easily update and change what your bot says. L
 1. Load up your Concierge Bot in Conversation Builder
 2. Click on the <i>‘Welcome’</i> dialog to expand it
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-2.jpeg">
-3. Click on the text in <i> WELCOME_BODY </i> to select and edit that statement
+3. Click on the text in <i> WELCOME_BODY</i> to select and edit that statement
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-3.jpeg">
 4. Replace [Brand] with your company’s name and click <b>Save</b>.
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-4.jpeg">
@@ -53,33 +53,33 @@ The Conversation Builder lets you easily update and change what your bot says. L
 
 You can update any other dialog in this bot as you see fit the same way! 
 
-TIP: We recommend that you update the <i>‘Open Hours’</i> dialog to accurately represent your hours of operation, removing the <i>‘new user tips’</i> in the <i>‘Open Hours’</i> and <i>‘Fallback’ </i> dialogs.
+TIP: We recommend that you update the <i>‘Open Hours’</i> dialog to accurately represent your hours of operation, removing the <i>‘new user tips’</i> in the <i>‘Open Hours’</i> and <i>‘Fallback’</i> dialogs.
 
 #### Improve what your bot can understand
 
 Your bot can understand some messages from your customers out-of-the-box.  For example, if a customer asks for an agent, they will be escalated to a human agent (if available). Let’s start by updating your welcome <a  href="/conversation-builder-interactions-dialog-starter.html" alt="Dialog starter"> dialog starter </a> to improve how your bot understands greetings from visitors:
 
 1. Open your Concierge Bot in Conversation Builder
-2. Click on the <i> ‘Welcome’ </i> dialog to expand it
+2. Click on the <i> ‘Welcome’ </i>dialog to expand it
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-5.jpeg">
 3. Click on <b> Pattern </b>
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-6.jpeg">
 4. Add <i> ‘hey’ </i> and <i> ‘aloha’ </i> to the pattern then click <b>Save</b>.
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-7.jpeg">
-5. Test your changes using <b> Preview </b>.
+5. Test your changes using <b> Preview</b>.
 
 You can update the dialog starters for each of the dialogs in this bot in the same way.
 
-TIP: You can use <a  href="/intent-builder-overview.html" alt="Intent builder"> Intent Builder </a> to further improve your bot’s ability to accurately understand and respond to customers. 
+TIP: You can use <a  href="/intent-builder-overview.html" alt="Intent builder"> Intent Builder</a> to further improve your bot’s ability to accurately understand and respond to customers. 
 
 #### Complete the ‘Contact’ dialog 
 
 Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from a customer and send it to you as an email. To complete this dialog so that you can receive this email from your bot, you need to update your bot’s <b> Email Integration </b>.
 
 1. Open your Concierge Bot in Conversation Builder
-2. Click on <b> Integrations </b>
+2. Click on <b> Integrations</b>
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-8.jpeg">
-3. Select <i>‘Send_Email’ </i>
+3. Select <i>‘Send_Email’</i>
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-9.jpeg">
 4. Update the  <i>‘To’</i> and <i>‘Reply To’</i> fields with your desired email addresses.   Update  <i>‘Subject’</i> with your desired email subject line.
 <img class="fancyimage" style="width:700px" src="img/conciergeBot/Concierge-bot-10.jpeg">
@@ -104,7 +104,7 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
                 </a>
               </div>
               <div class="link-padding" >
-                <a  target="_blank" href="https://knowledge.liveperson.com/ai-bots-automation-conversation-builder-getting-started-tutorials.html#intents-and-entities"> 
+                <a  target="_blank" href="/intent-builder-intents.html"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
                        Get started with Intents
                 </a>
