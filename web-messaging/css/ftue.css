@@ -225,6 +225,7 @@ a:hover {
 @media (max-width: 1300px) {
     .spotlight-container {
         right: -16%;
+        margin-top: 300px;
     }
 
     .heading-h5 {
@@ -233,7 +234,7 @@ a:hover {
 
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1020px) {
 
     .lp-tips-container {
         display: none !important
