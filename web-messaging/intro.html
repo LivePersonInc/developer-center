@@ -24,7 +24,8 @@
         }
 
         body {
-            background: #00213A !important;
+            background: #090C43 !important;
+            min-height: 720px;
         }
     </style>
 </head>
@@ -62,10 +63,10 @@
         </ul>
     </div>
     <div id="template-bot" class="template-greeting-bot">
-        <div class="template-greeting-loading">
-            If the conversation window doesn't
-            show up automatically
-            click on 'Message Us'.
+        <div id="loading-message" class="template-greeting-loading" style="display: none;">
+            Your chat experience is almost ready
+            <br>
+            <span class="template-greeting-reminder">if it doesn't open automatically, click on 'Message us' </span>
         </div>
     </div>
 
@@ -206,6 +207,8 @@
 
             console.log('template bot should be gone');
         }
+
+
         $(window).load(async function () { //Do the code in the {}s when the window has loaded
             var site = getURLParams(window.location.search).site || "";
             var username = getURLParams(window.location.search).username || "";
@@ -213,59 +216,43 @@
             var env = getURLParams((window.location.search)).env || "";
             if (experience === "first_time" && site !== "") {
                 // if it is a ftue experience then append the style sheet
+                document.getElementById('loading-message').setAttribute('style', 'display:block');
+
                 appendFTUE();
             } else {
                 let originalEmulator = setUrlPathOld();
                 window.location.href = originalEmulator;
             }
+
+            let engagementChecker;
             let lpTagPromise = new Promise((resolve, reject) => {
-                setTimeout(function () {
-                    try {
-                        console.log('going through lp tag');
-                        loadLPTag(env);
-                        console.log('went through lp tag');
-                        resolve("Success!") // Yay! Everything went well!
-                    } catch (e) {
-                        console.log('failed when going through lp tag');
-                        reject('ERROR');
+                var intervalCounter = 1;
+                loadLPTag(env);
+                // this interval is checking that the lpchat engagement window exists
+                // if it does exists resolve the promise and let things to try load
+                engagementChecker = setInterval(() => {
+                    if (document.getElementById('lpChat') !== null) {
+                        console.log('loaded', intervalCounter);
+                        resolve("Success!");
+                    } else {
+                        intervalCounter++;
                     }
-                }, 4000);
+                }, 1000);
             })
             lpTagPromise.then((message) => {
                 console.log('removing display', message);
                 removeDisplay();
-            })
+                console.log('trying to clear the interval');
+                clearInterval(engagementChecker);
+                console.log('cleared the interval');
 
+            })
             $("#loader").fadeOut("fast"); //Fade out the #loader div
         });
-
         var site = getURLParams(window.location.search).site || "";
         var username = getURLParams(window.location.search).username || "";
         var experience = getURLParams((window.location.search)).experience || "";
         var env = getURLParams((window.location.search)).env || "";
-
-        // var oldTitle = "Web Messaging";
-        // // var testTitle = "new notification";
-        // // window.setInterval(function()
-        // // {
-        // //     if (document.title.includes('new notification')) {
-        // //         console.log('notification message: ', document.title); //change title
-        // //         var curText = document.getElementById('emulator-title').innerText;
-        // //         document.getElementById('emulator-title').innerText = curText.replace('(1) new notification', '(1) Web Messenging');
-        // //     }
-        // //     //oldTitle = document.title;
-        // // }, 1000);
-        // // window.setInterval(function()
-        // // {
-        // //         if (document.title !== oldTitle) {
-        // //             console.log('incoming message: ', document.title); //change title
-        // //             var curText = document.getElementById('emulator-title').innerText;
-        // //             console.log('curtext is :', curText);
-        // //             document.getElementById('emulator-title').innerText = curText.replace('(1) Web Messaging', '(1) new notification');
-        // //
-        // //         }
-        // //     //oldTitle = document.title;
-        // // }, 1000);
 
         function copyToClipboard() {
             /* Get the text field */
