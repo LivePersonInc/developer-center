@@ -138,8 +138,8 @@ Connect to mobile channels and customize your Concierge Bot
     </div>
   </div>
 </div>
+<script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 <script type="text/javascript">
-// Get the modal
 var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.getElementById("teaser-banner");
@@ -154,5 +154,9 @@ btn.onclick = function() {
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+  var iframe = document.getElementById('vimeo-iframe');
+  // $f == Froogaloop
+  var player = $f(iframe);
+  player.api("pause");
 }
 </script>
