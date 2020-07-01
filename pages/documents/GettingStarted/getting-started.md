@@ -145,9 +145,6 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("teaser-banner");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-// var player = document.getElementById('vimeo-iframe').contentWindow.document.getElementById('player');
-// player.setAttribute('style', 'border: 4px solid white ');
-// When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
 }
@@ -155,7 +152,7 @@ btn.onclick = function() {
 span.onclick = function() {
   modal.style.display = "none";
   var iframe = document.getElementById('vimeo-iframe');
-  // $f == Froogaloop
+  // $f == Froogaloop used for controlling iframe
   var player = $f(iframe);
   player.api("pause");
 }
