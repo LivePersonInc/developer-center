@@ -157,6 +157,7 @@ a:hover {
 
 .lp-tips-container {
     /*display: inline-block !important;*/
+    display: none;
     width: 24%;
     height: 20%;
     margin-left: 40px;
@@ -190,7 +191,7 @@ a:hover {
     text-align: center;
     letter-spacing: 0.008em;
     color: #FFFFFF;
-    margin-top: 290px;
+    margin-top: 224px;
     padding: 0 12px 0 12px;
 }
 
@@ -234,5 +235,9 @@ a:hover {
         width: 700px;
         height: 700px;
 
+    }
+
+    .lp-tips-container {
+        display: none !important
     }
 }

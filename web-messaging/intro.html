@@ -47,19 +47,20 @@
             <li class="lp-tips-content">
                 Type ‘Hi’ to get started
             </li>
-            <li class="lp-tips-content">
+            <!-- <li class="lp-tips-content">
                 Choose any option to interact with your concierge bot
-            </li>
+            </li> -->
             <li class="lp-tips-content">
                 Choose 'Get Help Now' to connect with a human agent (you!)
             </li>
             <li class="lp-tips-content">
                 Try typing: ‘When are you open?’ or ‘Talk to an agent’
             </li>
-            <li class="lp-tips-content">
-                Click 'End conversation' in the context menu (&#8226; &#8226; &#8226;) and refresh this page to start
-                over
-            </li>
+            <!-- <li class="lp-tips-content">
+                Click 'End conversation' in the context menu
+                <br>
+                (&#8226; &#8226; &#8226;) and refresh this page to start over
+            </li> -->
         </ul>
     </div>
     <div id="template-bot" class="template-greeting-bot">
@@ -203,7 +204,7 @@
             }
             await sleep(2000);
             // document.getElementById('template-bot').setAttribute('style', 'display:none !important');
-            document.getElementById('tips-container').setAttribute('style', 'display:inline-block !important');
+            document.getElementById('tips-container').setAttribute('style', 'display:inline-block');
 
             console.log('template bot should be gone');
         }
