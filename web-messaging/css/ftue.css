@@ -1,6 +1,7 @@
 body {
-    background: #00213A;
+    background: #090C43;
     overflow-y: hidden;
+    min-height: 720px;
 }
 
 a {
@@ -55,6 +56,7 @@ a:hover {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
+    margin-bottom: 0px;
     line-height: 32px;
     letter-spacing: 0.01em;
     color: #5F617A;
@@ -72,27 +74,30 @@ a:hover {
     letter-spacing: 0.01em;
     /* Primary/Electric Blue */
     color: #005EF4;
+    margin-bottom: 12px;
 }
 
 .spotlight-content-container {
     width: 324px;
     height: 459px;
     display: block !important;
-    margin-top: 17%;
-    margin-left: 28%;
+    margin-top: 152px;
+    margin-left: 82px;
 }
 
 .heading-h5 {
     font-family: Roboto;
     font-style: normal;
-    font-weight: bold;
-    width: 321px;
-
+    font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+    /* or 150% */
+    width: 302px;
     letter-spacing: 0.01em;
+    margin-bottom: 16px;
+    /* Brand/Navy */
+
     color: #090C43;
-    margin-bottom: 8px;
 }
 
 .spotlight-title {
@@ -138,12 +143,12 @@ a:hover {
 
 .spotlight-container {
     background-color: #F8F5F3;
-    width: 900px;
-    height: 900px;
-    margin-top: 6%;
+    width: 542px;
+    height: 542px;
+    margin-top: 350px;
     position: absolute;
     display: none;
-    right: -10%;
+    right: -8%;
     overflow: hidden;
     border-radius: 100%;
 }
@@ -155,24 +160,32 @@ a:hover {
 
 .lp-tips-container {
     /*display: inline-block !important;*/
+    display: none;
     width: 24%;
     height: 20%;
     margin-left: 40px;
     margin-top: 180px;
 }
-.template-greeting-bot{
-    display:inline-block !important;
+
+.template-greeting-bot {
+    display: inline-block !important;
     width: 340px;
-    height: 580px;
-    /*background: #042b49;*/
-    border : 4px solid #03365C;
+    height: 540px;
+    border: 4px solid #5F617A;
+    ;
     border-radius: 16px;
     position: absolute;
-
     left: 50%;
+    top: 160px;
     margin-left: -170px;
 }
-.template-greeting-loading{
+
+.template-greeting-reminder {
+    color: #818299;
+    display: block !important
+}
+
+.template-greeting-loading {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -181,8 +194,10 @@ a:hover {
     text-align: center;
     letter-spacing: 0.008em;
     color: #FFFFFF;
-    margin-top: 290px;
+    margin-top: 224px;
+    padding: 0 12px 0 12px;
 }
+
 .lp-tips-header {
     font-weight: bold;
     font-size: 16px;
@@ -206,21 +221,26 @@ a:hover {
 
 }
 
-@media (max-width: 1400px) {
-    .spotlight-container {
-        right: -25%;
-    }
-    .heading-h5 {
-        width: 50%;
 
+@media (max-width: 1367px) {
+    .spotlight-container {
+        right: -16%;
+        margin-top: 300px;
+    }
+
+    .heading-h5 {
+        width: 240px;
     }
 
 }
 
-@media (max-width: 1100px) {
-    .spotlight-container {
-        width: 700px;
-        height: 700px;
+@media (max-width: 1020px) {
 
+    .lp-tips-container {
+        display: none !important
+    }
+
+    .spotlight-container {
+        display: none !important;
     }
 }

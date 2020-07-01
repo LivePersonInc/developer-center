@@ -1,6 +1,6 @@
 body {
 
-    background: #00213A;
+    background: #090C43 !important;
     overflow: auto;
 }
 
@@ -12,12 +12,12 @@ body {
 
 #lp_account {
     height: 56px;
-    width:360px;
+    width: 360px;
     border-radius: 100px;
     padding: 0 24px;
     border: 2px solid white;
     margin-left: -24px;
-    color:white;
+    color: white;
     background-color: inherit;
 }
 
@@ -35,10 +35,12 @@ body {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-.liveperson-logo{
-    display:none;
+
+.liveperson-logo {
+    display: none;
 }
-.greeting-bot-header{
+
+.greeting-bot-header {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -48,8 +50,9 @@ body {
     letter-spacing: 0.008em;
     color: #FFFFFF;
 }
-.lp-tips-container{
-    display:none;
+
+.lp-tips-container {
+    display: none;
 }
 
 #lp_btn_login {
@@ -64,7 +67,7 @@ body {
     font-size: 14px;
     font-weight: bold;
     font-style: normal;
-    margin-left:24px;
+    margin-left: 24px;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 1.5px;
@@ -136,9 +139,11 @@ body {
     border-radius: 24px;
     background-image: linear-gradient(349deg, #9153f3, #36bff0, #32c6f4);
 }
-.spotlight-content-container{
-    display:none;
+
+.spotlight-content-container {
+    display: none;
 }
+
 #lp_lnk_setup {
     margin-top: 50px;
     width: 170px;
@@ -193,11 +198,13 @@ body {
     color: #4a4a4a;
 }
 
-::-webkit-input-placeholder { /* Edge */
+::-webkit-input-placeholder {
+    /* Edge */
     font-size: 16px;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     font-size: 16px;
 }
 
@@ -542,6 +549,7 @@ footer .credit {
 a {
     color: #fff;
 }
+
 .lp-tips-container {
     display: inline-block !important;
     width: 30%;
@@ -549,6 +557,7 @@ a {
     margin-left: 40px;
     margin-top: 180px;
 }
+
 .lp-tips-content {
     /* width: 328px;
     height: 24px; */
@@ -561,10 +570,12 @@ a {
     margin-bottom: 16px;
 
 }
+
 .liveperson-logo {
     display: block !important;
     margin: 32px 0 0 32px;
 }
+
 .lp-tips-header {
     font-weight: bold;
     font-size: 16px;
@@ -574,12 +585,14 @@ a {
     color: #FFFFFF;
     margin-bottom: 16px;
 }
-.form-box{
-    display:inline-block !important;
+
+.form-box {
+    display: inline-block !important;
     position: absolute;
     left: 45%;
     margin-left: -170px;
 }
+
 .greeting-bot-header {
     font-family: Roboto;
     display: block !important;
@@ -593,9 +606,11 @@ a {
     letter-spacing: 0.008em;
     color: #FFFFFF;
 }
-.row{
+
+.row {
     display: inline-flex;
 }
+
 /*@media only screen and (max-width: 768px) {*/
 /*section {*/
 /*font-size: 2em;*/
