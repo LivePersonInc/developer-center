@@ -43,6 +43,8 @@ Contains list of `CertificateMappingParamters` objects:
 ]
 ```
 
+**Note: you must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked**
+
 ### Response
 
 **Response Codes**
