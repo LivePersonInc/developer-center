@@ -24,7 +24,7 @@ Entities are usually one or two words as they represent groups of simple objects
 
 ### Built-in entities
 
-The platform automatically detects the entities listed below. Using the [NLU Assist](conversation-builder-nlu-assist.html) tool, you can assign these default entities to user interactions and have the bot populate a [slot](conversation-builder-conversation-builder-variables-slots.html#slots) with the user's input to the question to which the entity was assigned.
+The platform automatically detects the entities listed below. Using the [Assist](conversation-builder-assist.html) tool, you can assign these default entities to user interactions and have the bot populate a [slot](conversation-builder-conversation-builder-variables-slots.html#slots) with the user's input to the question to which the entity was assigned.
 
 * PERSON - Names of people, persons.
 
