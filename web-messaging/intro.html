@@ -228,7 +228,8 @@
             let lpTagPromise = new Promise((resolve, reject) => {
                 var intervalCounter = 1;
                 loadLPTag(env);
-
+                // this interval is checking that the lpchat engagement window exists
+                // if it does exists resolve the promise and let things to try load
                 engagementChecker = setInterval(() => {
                     if (document.getElementById('lpChat') !== null) {
                         console.log('loaded', intervalCounter);

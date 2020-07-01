@@ -166,13 +166,13 @@ a:hover {
 .template-greeting-bot {
     display: inline-block !important;
     width: 340px;
-    height: 580px;
+    height: 540px;
     border: 4px solid #5F617A;
     ;
     border-radius: 16px;
     position: absolute;
-
     left: 50%;
+    top: 160px;
     margin-left: -170px;
 }
 
