@@ -643,6 +643,7 @@
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
           - subpagename: Debugger
+          - subpagename: Common Examples
           - subpagename: "Best Practices"
           - subpagename: "Limitations & Restrictions"
       - pagename: "Command Line Interface (CLI)"
