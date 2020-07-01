@@ -207,6 +207,8 @@
 
             console.log('template bot should be gone');
         }
+
+
         $(window).load(async function () { //Do the code in the {}s when the window has loaded
             var site = getURLParams(window.location.search).site || "";
             var username = getURLParams(window.location.search).username || "";
@@ -222,31 +224,31 @@
                 window.location.href = originalEmulator;
             }
 
-            //
+            let engagementChecker;
             let lpTagPromise = new Promise((resolve, reject) => {
                 var intervalCounter = 1;
-
                 loadLPTag(env);
-                setInterval(function go() {
-                    if (intervalCounter === 10) {
-                        clearInterval();
+
+                engagementChecker = setInterval(() => {
+                    if (document.getElementById('lpChat') !== null) {
+                        console.log('loaded', intervalCounter);
                         resolve("Success!");
-                    } else if (document.getElementById('lpChat') !== null) {
-                        console.log('loaded');
-                        resolve("Success!")
-                        clearInterval();
+                        return;
+                    } else {
+                        intervalCounter++;
                     }
-                    intervalCounter++;
                 }, 1000);
             })
             lpTagPromise.then((message) => {
                 console.log('removing display', message);
                 removeDisplay();
-            })
+                console.log('trying to clear the interval');
+                clearInterval(engagementChecker);
+                console.log('cleared the interval');
 
+            })
             $("#loader").fadeOut("fast"); //Fade out the #loader div
         });
-
         var site = getURLParams(window.location.search).site || "";
         var username = getURLParams(window.location.search).username || "";
         var experience = getURLParams((window.location.search)).experience || "";
