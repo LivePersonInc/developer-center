@@ -64,6 +64,8 @@ public enum Services {
 
 * **url:** The url we will proxy the request to in runtime (represented by runtime header `LP-forward-url`).
 
+**Note: you must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked**
+
 #### Actions to take
 
 Now that we have validated and uploaded our certificate, we must map it to the corresponding objects. This mapping must correspond with runtime submitted parameters **(accountId/serviceName/url)** to identify the context (as explained above).
