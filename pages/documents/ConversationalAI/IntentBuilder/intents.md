@@ -31,17 +31,16 @@ For some practice with intents, complete the [Intents tutorial](conversation-bui
     * **Intent name**: Enter the intent name. A domain can have dozens of intents, so using a standard naming convention is important for being able to easily sort and find intents.
     * **Intent display name**: Enter the display name.
     * **Intent type**: Select either "Intent" or "Meta Intent." For an introduction to meta intents, see [here](intent-builder-meta-intents.html).
-    * **Training**: Enter as many training phrases as possible. The NLU engine uses training phrases in order to match a user's utterance with an intent. The more training phrases you include, the more likely it is that the NLU engine will accurately match the user's intent. Generally speaking, the phrases should be complete sentences (not long paragraphs, and not keywords).
+    * **Training**: Enter as many training phrases as possible. The NLU engine uses training phrases in order to match a user's utterance with an intent. The more training phrases you include, the more likely it is that the NLU engine will accurately match the user's intent. Generally speaking, the phrases should be complete sentences (not long paragraphs, and not keywords). As an example, assume you have a "Check bill" intent. You might add the following training phrases, among others:
+        * I want to check the status of my bill
+        * Tell me what my bill is
+        * I need to look into what's going with my bill
 
-    As an example, assume you have a "Check bill" intent. You might add the following training phrases, among others:
 
-    * I want to check the status of my bill
-    * Tell me what my bill is
-    * I need to look into what's going with my bill
+        For more, see *Best practices* farther below.
 
-    For more, see *Best practices* farther below.
-
-6. Click **Save**.
+4. Click **Save**.
+5. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the addition is reflected in a new model version.
 
 
 ### Train intents
