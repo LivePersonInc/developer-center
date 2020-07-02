@@ -11,6 +11,7 @@ indicator:
 ### Introduction
 
 The following document outlines the Brand Stats Service API. This API presents the status of system test proceedures in a brand scope.
+Details on the tests that are avaialble can be found in the [here](/BrandStatusService_test-details.html)
 
 **Service Domain**
 Please ask your account team to indicate which domain of the below domains your account is in. This can also be seen in the URL in your production account when accessing your Conversational Cloud / Conversation Manager interface.
