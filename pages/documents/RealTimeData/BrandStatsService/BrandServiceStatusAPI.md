@@ -54,13 +54,15 @@ Brand Stats Service requires an external appKey that shall be validated against 
 
 ```bash
 curl -X GET \
-  https://https://z1.bstats.liveperson.net/api/account/le56105173/bstats \
-  -H 'accept: */*' \
-  -H 'authorization: Basic QlNUQVRTOlpCdGtCd2VqZDBjR2hfV1U=' \
-  -H 'cache-control: no-cache' \
-  -H 'content-type: application/json' \
-  -H 'postman-token: 13e20bb3-d36b-5c94-b9f2-64ad09999e07'
+ https://bstats-qa-int.dev.lprnd.net/api/account/le74292582/bstats \
+ -H 'accept: */*' \
+ -H 'authorization: OAuth .....
+ -H 'cache-control: no-cache' \
+ -H 'content-type: application/json' \
 ```
+
+The image below presents an example GET request performed in Postman
+<img class="fancyimage" style="width:600px" src="img/bstats_curl_postman.png">
 
 **Response**:
 
