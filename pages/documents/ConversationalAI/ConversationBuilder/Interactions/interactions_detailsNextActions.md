@@ -52,6 +52,22 @@ Use the guided Add/Edit Next Action Rule window to:
 3. Store data in a [variable or slot]((conversation-builder-variables-slots.html)). (Multiple variables can be added to a rule, but only a single slot can be added to a rule. A rule can fill only a single slot because it evaluates only a single element in the consumer's utterance against the defined condition.)
 4. Specify the next step in the dialog flow.
 
+#### Adding variable conditions
+
+You can create more complex rules by adding one or more variable conditions using **+ Add Variable Condition**.
+
+<img style="width:700px" class="fancyimage" src="img/ConvoBuilder/interactions_addVarCondition1.png">
+
+If you add a variable condition, *both* the first defined condition *and* the variable condition must be true for the next action to be performed.
+
+To specify a `botContext` variable in a variable condition, enter only the variable name.
+
+In our example below, the consumer must answer "yes" to our question and the `channel` variable must be "ABC" for Apple Business Chat. If both are true, then the consumer is offered a promotion.
+
+<img style="width:700px" class="fancyimage" src="img/ConvoBuilder/interactions_addVarCondition2.png">
+
+We could further expand the example to include additional custom rules with variable conditions that checked for other channels, e.g., SMS and so on, and configure next actions for those as well.
+
 #### Multiple rules (order of execution)
 
 If an interaction has multiple custom rules, they are evaluated in the following order:
