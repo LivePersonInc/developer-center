@@ -1,6 +1,7 @@
 body {
     background: #090C43;
     overflow-y: hidden;
+    overflow-x: hidden;
     min-height: 720px;
 }
 
