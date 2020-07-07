@@ -27,35 +27,29 @@ Functions for messaging listens for messaging events asynchronously. As a conseq
 
 Conversational Cloud messaging uses a series of "Conversation State Change Events" which get fired when specific actions or events occur within the conversation. You are able to use theses events to trigger functions within Functions.
 
-The following "Conversation State Change Events" can be used to trigger functions:
+The following "Conversation State Change Events" can be used to trigger functions (see [Events](liveperson-functions-development-events-templates.html#events)):
 
-#### New Conversation
+* New Conversation
 
-This event is fired when a consumer initiates a new conversation. **This event should not be used for routing. Use a routing bot instead.**
+* TTR (Time to Respond)
 
-#### TTR (Time to Respond) changed
+* Participants Change
 
-This event is fired by the consumer or by the agent. This event is fired by the consumer when they mark the conversation as urgent or unmark it as such. This event is fired by the agent when they change the TTR.
+* Conversation Idle
 
-#### Participants Change
+* Conversation Routing
 
-This event is fired if an agent or a consumer joins or leaves the conversation.
+* Messaging Line in Off-Hours
 
-#### Conversation Idle
+* Conversation End
 
-This event is fired if a consumer or agent did not respond within the configured idle time for the account.
+### Callback commands
 
-#### Conversation Routing
+You have the option to send callback commands back to the invoker. You can add multiple commands to the response as the functions itself can return an array or a single object.
 
-This event is fired if the conversation is routed to a different skill
+With the controller bot as the invoker, as is the case for messaging events, you have the option to execute the following callback commands:
 
-#### Messaging Line in Off-Hours
-
-This event is fired if a conversation was *opened* during office-hours, but a new consumer line in the conversation is *written* during off-hours (essentially when a consumer sends an off-hour message).
-
-#### Conversation End
-
-This event is fired when a conversation is closed.
+* Send a message
 
 <div class="important">
   <ul>
@@ -68,14 +62,6 @@ This event is fired when a conversation is closed.
         }</code>. To set the message empty just pass <code>[]</code> as text.</li>
   </ul>
 </div>
-
-### Callback commands
-
-You have the option to send callback commands back to the invoker. You can add multiple commands to the response as the functions itself can return an array or a single object.
-
-With the controller bot as the invoker, as is the case for messaging events, you have the option to execute the following callback commands:
-
-* Send a message
 
 * Transfer Conversation to a different Skill
 

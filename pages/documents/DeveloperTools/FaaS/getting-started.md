@@ -253,7 +253,7 @@ As you can see from the example above, during an invocation the function receive
 function callback(error, result){}
 ```
 
-If during the runtime of your application no error has occurred, you can provide a **null** value as error. After a **30** seconds timeout, your function will be killed immediately, regardless of its error state.
+If during the runtime of your application no error has occurred, you can provide a **null** value as error. After a **30** second timeout, your function will be killed immediately, regardless of its error state.
 
 ### Step 5: Deploy your function
 
