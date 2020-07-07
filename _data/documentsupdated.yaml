@@ -640,6 +640,7 @@
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
           - subpagename: Debugger
+          - subpagename: "Best Practices"
       - pagename: "Command Line Interface (CLI)"
       - pagename: Deployment
       - pagename: Monitoring
@@ -663,8 +664,6 @@
           - subpagename: Messaging Conversation Survey
           - subpagename: Conversational AI
           - subpagename: Conversational Commands
-      - pagename: Command Line Interface (CLI)
-
 
 - categoryname: Historical Data
   image: historical-data
