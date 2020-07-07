@@ -48,10 +48,9 @@ To use our Public API you must perform a login request to Third-Party Bots API d
   <li>Bearer Token via API (OAuth)</li>
 </ul>
 
-To perform login request you will need a valid Bot user created via LivePerson User Management UI. User must be `Enabled`, have minimum `Agent` role and have a **Login Method** selected either to `Password` or `API Key` as shown in Figure 2.1.
+To perform login requests you will need a valid Bot user created via LivePerson User Management UI. User must be `Enabled`, have minimum `Agent` role and have a Login Method selected either to `Password` or `API Key` as shown in Figure 2.1.
 
-{: .important}
-**Please note** LivePerson maintain one session per user thus if you receive invalid bearer token error from Public API you can always generate new bearer by performing the login request again. We recommend making a single Bot Agent user that is dedicated for your Public API call.
+**Please note** LivePerson maintains one session per user, thus if you receive an invalid bearer token error from Public API, you can always generate a new bearer by performing the login request again. We recommend making a single Bot Agent user that is dedicated for your Public API call.
 
 <img class="fancyimage" style="width:600px" src="img/tpbPublicApi/bot-user-login-method.png">
 Figure 2.1 Showing two login methods of a Bot user
