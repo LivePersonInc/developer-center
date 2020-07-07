@@ -49,9 +49,9 @@ Back in the search view, you should now see your new article, which should look 
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial4.png">
 
-Note that the article has a “Pending” notation on it. We add this for new articles and for articles created by agents using the Agent Advisor widget, so that a manager or supervisor can approve them before they are included in the results.
+Note that the article has a “Pending” notation on it. We add this for new articles so that a manager or supervisor can approve them before they are included in the results.
 
-To continue with this tutorial, click the **Approve** link over on the right.
+To continue with this tutorial, click the **Enable** link over on the right.
 
 ### Step 3: Train and tune
 
@@ -81,7 +81,7 @@ Let’s test our knowledge base and see how the NLU will return results.
 
 What about **thumbs down**? This should be used sparingly to differentiate two articles that might have intents that are close in meaning. NLU is not a specific pattern match, but more fuzzy, so having articles with similar intents but different content should be discouraged. That said, using thumbs down can help when that does occur, to indicate which of the two articles you'd like the NLU engine to match. Simply use the thumbs-down button on the article you'd like to de-prioritize, and the NLU engine will "prefer" the other one over it.
 
-For more best practices, see [Training and Tuning your Intents and FAQs](conversation-builder-best-practices-train-tune-nlu.html).
+For more best practices, see [here](conversation-builder-best-practices-train-tune-nlu.html).
 
 ### Step 4: Use entities
 
