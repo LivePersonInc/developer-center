@@ -81,8 +81,8 @@ Technically, there isn’t a limit on the number of intents that a domain can ha
 * The actual number of intents needed in a domain depends on the use case. However, a good guideline for a limit is a maximum of 50 (recommended) to 100 (if necessary).
 
 * If you need to exceed 50 intents, ensure there’s a strong business justification for doing so, and consider the following questions:
-    * Are that many intents truly necessary? 
-    * Should and can they be grouped into different intent domains? Can you conceptually categorize the intents and cluster them?
+    * Are that many intents necessary? 
+    * Can the intents be grouped into different intent domains? Can you conceptually categorize the intents and cluster them?
     * What are the use cases, bot structures, etc., that are impacting the decision?
 
     If you proceed and exceed the guideline, start with a smaller number of intents, and iteratively test as you add more. For example, add 20 intents with training phrases, test them, add 5 more, test again, and repeat the process. This helps to ensure that the intent training yields the results you expect. You might find that at some point (often somewhere between 50 and 100 intents), you will start to see issues with the NLU performance when intent matching.
