@@ -87,11 +87,11 @@ To accomplish this, in the Display Article interaction, we've configured the nex
 
 ### Enable or disable an article
 
-Enabled articles are returned in knowledge base integrations, while disabled articles are not. In the Knowledge Base application, disabled articles are indentified by a "Pending" indicator.
+Enabled articles are returned by knowledge base searches in Knowledge Base integrations, while disabled articles are not. In the Knowledge Base application, disabled articles are indentified by a "Pending" indicator.
 
 <img class="fancyimage" style="width:450px" src="img/ConvoBuilder/kb_articleDisabled.png">
 
-You can enable or disable an article as you need, respectively, to add it or remove it from use in knowledge base integrations.
+You can enable or disable an article as you need, respectively, to add it or remove it from use in Knowledge Base integrations.
 
 **To enable an article**
 
