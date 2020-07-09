@@ -42,6 +42,7 @@ Contains list of `CertificateMappingParamters` objects:
    {"serviceName":"TEST_SERVICE","accountId":"52653865","url":"https://lp-mtls-qa.dev.lprnd.net/test"}
 ]
 ```
+**Note: you must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked**
 
 **Note: you must enter a complete URL, including any URL parameters if they exist. For mapping purposes, the entire URL will be checked**
 
