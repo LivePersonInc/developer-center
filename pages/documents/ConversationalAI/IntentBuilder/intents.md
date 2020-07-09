@@ -94,8 +94,8 @@ Technically, there isn’t a limit on the number of intents that a domain can ha
 
 The following are best practices when creating training phrases; these help to ensure your intents are well-trained and return the results you expect.
 
-##### One sentence, not multiple
-Use a simple, concise sentence. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
+##### One sentence, not multiple (LivePerson NLU v1 only)
+If the domain is using the LivePerson NLU v1 engine, use a simple, concise sentence. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
 
 ##### 10-25 training phrases
 The number of training phrases that you need really depends upon your use case and type of intents. Generally, for intents, it is recommended that you have between 10 - 25 good training phrases. When you have more than that, it's likely that you have overtrained the intent, which might lead to false positives.
