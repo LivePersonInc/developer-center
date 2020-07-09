@@ -10,7 +10,7 @@ indicator: both
 
 Use the Bots Status application to check the status of all your bots from a single location. 
 
-You can use the application to monitor and manage both normal (custom) bots and post-conversation survey bots.
+You can use the application to monitor and manage both custom bots and post-conversation survey bots.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botsStatus_dashboard.png">
 
