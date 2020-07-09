@@ -1,10 +1,10 @@
 ---
-pagename: Managing Normal Bots
+pagename: Managing Custom Bots
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Bots Status
-permalink: bots-status-managing-normal-bots.html
+permalink: bots-status-managing-custom-bots.html
 indicator: both
 ---
 
