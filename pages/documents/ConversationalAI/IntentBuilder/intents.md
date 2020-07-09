@@ -87,14 +87,14 @@ Technically, there isn’t a limit on the number of intents that a domain can ha
 
     If you proceed and exceed the guideline, start with a smaller number of intents, and iteratively test as you add more. For example, add 20 intents with training phrases, test them, add 5 more, test again, and repeat the process. This helps to ensure that the intent training yields the results you expect. You might find that at some point (often somewhere between 50 and 100 intents), you will start to see issues with the NLU performance when intent matching.
 * Keep in mind the following:
-    * Exceeding the aforementioned guideline impacts *training*. The larger the intent model, the longer that training takes. Large, complex models can sometimes time out during training.
-    * Exceeding the aforementioned guideline impacts *tuning*. Every intent requires a set of training phrases that you must manually add and adjust so that the intent model performs as you expect. The more intents you have, the larger this effort is. Moreover, exceeding the guideline might introduce problems, e.g., mistakes and/or overlap among training phrases. This can yield unpredictable results.
+    * Exceeding the aforementioned guideline impacts the *training* of domains using the LivePerson NLU v2 engine or a 3rd-party engine. The larger the intent model, the longer that training takes. Large, complex models can sometimes time out during training.
+    * Exceeding the aforementioned guideline impacts *tuning* in all cases. Every intent requires a set of training phrases that you must manually add and adjust so that the intent model performs as you expect. The more intents you have, the larger this effort is. Moreover, exceeding the guideline might introduce problems, e.g., mistakes and/or overlap among training phrases. This can yield results that are hard to manage.
 
 #### Training phrases
 
 The following are best practices when creating training phrases; these help to ensure your intents are well-trained and return the results you expect.
 
-##### One sentence, not multiple.
+##### One sentence, not multiple
 Use a simple, concise sentence. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
 
 ##### 10-25 training phrases
