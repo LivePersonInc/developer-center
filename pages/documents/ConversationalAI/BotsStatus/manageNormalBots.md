@@ -19,6 +19,8 @@ Typically, you don't stop an agent, but you might need to in a few cases:
 * You need to make a change to the connector's configuration. This requires that you first stop the agent.
 * You're seeing some undesirable behavior in the bot, so you want to take the bot offline temporarily.
 
+When you stop an agent, in-progress conversations are left as is until the agent is started again.
+
 **To stop an agent**
 
 1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
