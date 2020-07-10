@@ -13,167 +13,31 @@ redirect_from:
 
 The following section shows some best practices for using the LivePerson Functions platform.
 
-- [OAuth 1](#oauth-1)
-- [OAuth 2.0](#oauth-20)
-- [Usage of Environment Variables](#usage-of-environment-variables)
-- [Async/Await Functions](#asyncawait-functions)
-- [Error handling in async functions](#error-handling-in-async-functions)
-- [Limitations of Timeouts](#limitations-of-timeouts)
+- [Using Async/Await in Functions](#using-asyncawait-in-functions)
+- [Making Functions configurable](#making-functions-configurable)
 
-### OAuth 1
+### Using Async/Await in Functions
 
-LivePerson Functions offers the possibility to use the [oauth-1.0a](https://www.npmjs.com/package/oauth-1.0a) package. 
+There’s a special syntax to work with promises in a more comfortable fashion, called “async/await”. It's recommended to use this notation, because it provides more readable code and bypasses `then..catch`-chains. It’s surprisingly easy to understand and use. The word `async` before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically. The keyword `await` makes JavaScript wait until that promise settles and returns its result.
 
-The following code shows an example which performs a `POST` request with `Header`-Authorization.
+It is possible to use the [async/await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) functionality within LivePerson Functions. Proper error handling is important when using this. If an async call inside of a LivePerson function has no proper error handling, it could be executed longer than the maximum execution time. In such a case a `Lambda Execution is taking too long` error will be thrown. 
 
-<div class="important">
-  It's recommended to store the <code>consumerKey</code>, <code>consumerSecret</code>, <code>tokenKey</code> and <code>tokenSecret</code> in the <a href="liveperson-functions-development-toolbelt.html#secret-storage-client">secret storage</a>
-</div>
+If a promise resolves normally, then `await` promise returns the result. But in the case of a rejection, it throws the error, just as if there were a throw statement at that line. In real situations, the promise may take some time before it rejects. In that case there will be a delay before await throws an error.
+
+We can catch that error using `try..catch`, the same way as a regular `throw`:
 
 ```javascript
-async function lambda(input, callback) {
-  const { Toolbelt } = require('lp-faas-toolbelt');
-  const httpClient = Toolbelt.HTTPClient();
-  const secretClient = Toolbelt.SecretClient();
-  const OAuth = require('oauth-1.0a');
-  const crypto = require('crypto');
-
-  try {
-    // Get key and secret from secret storage
-    const consumerKey = await secretClient.readSecret('consumerKey');
-    const consumerSecret = await secretClient.readSecret('consumerSecret');
-
-    // Note: The token is optional for some requests
-    const tokenKey = await secretClient.readSecret('tokenKey');
-    const tokenSecret = await secretClient.readSecret('tokenSecret');
-
-    const oauth = OAuth({
-      consumer: { key: consumerKey.value, secret: consumerSecret.value },
-      signature_method: 'HMAC-SHA1',
-      hash_function(base_string, key) {
-        return crypto.createHmac('sha1', key).update(base_string).digest('base64');
-      },
-    });
-
-    // All request data have to been passed to the authorize method. So it's useful to have all in one object
-    const request_data = {
-      url: 'www.mywebsite.com/request',
-      method: 'POST',
-      body: ...,
-    };
-
-    const response = await httpClient(request_data.url, {
-      method: request_data.method,
-      headers: {
-        ...oauth.toHeader(oauth.authorize(request_data, { key: tokenKey.value, secret: tokenSecret.value })),
-        'Content-Type': 'application/json',
-      },
-      body: request_data.body,
-      simple: false,
-      resolveWithFullResponse: true,
-    });
-
-    callback(null, response);
-  } catch (err) {
-    callback(err, null);
-  }
-}
+try {
+  await myPromise();
+} catch(error) {
+  // Handle error or pass it to the callback
+  callback(error, null)
+} 
 ```
 
-### OAuth 2.0
-
-LivePerson Functions supports the Client Credentials as `Grant Type`. The [Client Credentials](https://oauth.net/2/grant-types/client-credentials/) grant type is used by clients to obtain an access token outside of the context of a user. 
-
-<div class="important">
-  It's recommended to store the <code>clientId</code> and <code>clientSecret</code> in the <a href="liveperson-functions-development-toolbelt.html#secret-storage-client">secret storage</a>
+<div class="important"> 
+  To use async/await and LivePerson Functions correctly together, it is mandatory that the function is completed with a callback. Please note that the callback is always the last execution within a function. Everything afterwards is ignored and can lead to a malfunction of the function.
 </div>
-
-```javascript
-async function lambda(input, callback) {
-  const { Toolbelt } = require("lp-faas-toolbelt");
-  const httpClient = Toolbelt.HTTPClient(); 
-  const secretClient = Toolbelt.SecretClient();
-
-  try {
-    const authUrl = 'www.mywebsite.com/auth';
-    const URL = 'www.mywebsite.com/request';
-
-    // Get clientId and clientSecret from secret storage
-    const client_id = await secretClient.readSecret('clientId');
-    const client_secret = await secretClient.readSecret('clientSecret');
-
-    // Obtain the token from the authorization server
-    const token = await hpptClient(authUrl, {
-        method: 'POST',
-        form: {
-            client_id: client_id.value,
-            client_secret: client_secret.value,
-            grant_type: 'client_credentials'
-        },
-        json: true,
-        simple: true,
-        resolveWithFullResponse: false
-    })
-
-    // Perform request with token (type may change)
-    const response = await httpClient(URL, {
-      method: "GET", 
-      headers: {
-        'Authorization': `Bearer ${token}`,
-      },
-      simple: false,
-      resolveWithFullResponse: true
-    });
-    
-    callback(null, token);
-  } catch (err) {
-    callback(err, null)
-  }
-}
-```
-
-### Usage of Environment Variables
-
-The Environment Variables are used to save configurations for a specific lambda. With this approach you can separate static variables from the code.
-
-<div class="important">
-  <ul>
-    <li></li>
-    <li>After changing the value of an environment variable the functions must to be redeployed.</li>
-    <li>Do not save sensitive data in Environment Variables!</li>
-  </ul>
-</div>
-
-```javascript
-async function lambda(input, callback) {
-  const { Toolbelt } = require("lp-faas-toolbelt");
-  const httpClient = Toolbelt.HTTPClient();
-
-  try {
-    const response = await httpClient(process.env['CUSTOMER_URL'], {
-      method: "GET", 
-      headers: {}, 
-      simple: false,
-      resolveWithFullResponse: true
-    });
-      
-    const { statusCode, body } = response;
-    if(statusCode === 200) {
-      callback(null, process.env['SUCCESS_MESSAGE']);
-    } else {
-      callback(null, process.env['ERROR_MESSAGE']);
-    }
-  } catch (err) {
-    callback(err, null)
-  }
-}
-```
-
-See [Environment Variables](liveperson-functions-development-overview.html#environment-variables) for more information about it. 
-
-### Async/Await Functions
-
-It is possible to use the [async/await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) functionality within LivePerson Functions. Proper error handling is important when using this, check the [best practices](#error-handling-in-async-functions).
 
 The example shows the HTTP-Template with async/await.
 
@@ -213,35 +77,30 @@ async function lambda(input, callback) {
 }
 ```
 
-### Error handling in async functions
+### Making Functions configurable
 
-If an async call inside of a LivePerson function has no proper error handling, it could be executed longer than the maximum execution time. In such a case a `Lambda Execution is taking too long` error will be thrown. Therefore proper error handling best practices as the following are vital.
+It's suggested to use Environment Variables to make a function more configurable. With this approach you can separate static variables and configurations from the code, to make it more clean and readable.
 
-For [then-catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) promises it is necessary to have a `catch` at the end of a `then`.
-
-```javascript
-const myPromise =
-  (new Promise(myExecutorFunc))
-  .then(handleFulfilledA)
-  .then(handleFulfilledB)
-  .then(handleFulfilledC)
-  // Handle error or pass it to the callback
-  .catch(error => callback(error, null));
-```
-
-For [async-await](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/await) a try-catch is necessary. 
+For example if you have a function which is triggered by the `Messaging Conversation End`-Event and you want to process the code only if the `closeReason` is equal to `AGENT` or `CONSUMER` then it's a good use case to save this configuration to an Environment Variable (e.g. `['AGENT', 'CONSUMER']`).
 
 ```javascript
-try {
-  await myPromise();
-} catch(error) {
-  // Handle error or pass it to the callback
-  callback(error, null)
-} 
+function lambda(input, callback) {
+  const conversation = input.payload;
+  const closeReason = conversation.end.closeReason
+  if (process.env['CUSTOM_CLOSE_REASON'].includes(closeReason)) {
+    // Some processing...
+  }
+  callback(null, "OK");
+}
 ```
 
-### Limitations of Timeouts
+<div class="important">
+  <ul>
+    <li></li>
+    <li>After changing the value of an Environment Variable the functions must to be redeployed.</li>
+    <li>Do not save sensitive data in Environment Variables!</li>
+    <li>Environment Variables will be served as <code>String</code>. If you save any other type of data, you have to parse it properly.</li>
+  </ul>
+</div>
 
-The usage of `setTimeout()` in LivePerson Functions must be handled with care. 
-* Functions cannot exceed the runtime of **30 secconds**. The error `Lambda Execution is taking too long` will thrown.
-* If you execute multiple functions containing a `setTimeout()` call, the event loop of the service may fill up. Even functions with a lower execution time than 30 seconds could therefore take longer, may reach the execution time limit and fail. Because of this timeouts in general should be handled with care and it is encouraged to double check their need in any use case.
+See [Environment Variables](liveperson-functions-development-overview.html#environment-variables) for more information about it. 
