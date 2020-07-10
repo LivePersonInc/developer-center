@@ -2,5 +2,6 @@
 pagename: Welcome to Conversational Cloud!
 subtitle: Sign-up for your free 45-day trial now
 permalink: register.html
-layout: register2
+<!-- Redirect all requests to register.html to free-trial-registration -->
+redirect_to: /free-trial-registration
 ---
