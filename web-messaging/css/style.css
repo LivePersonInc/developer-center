@@ -1,6 +1,5 @@
 body {
-
-    background: #090C43 !important;
+    <<<<<<< HEAD=======>>>>>>>develop-pass background: #090C43 !important;
     overflow: auto;
 }
 
@@ -11,14 +10,23 @@ body {
 }
 
 #lp_account {
-    height: 56px;
+    <<<<<<< HEAD height: 56px;
     width: 360px;
     border-radius: 100px;
     padding: 0 24px;
     border: 2px solid white;
     margin-left: -24px;
-    color: white;
+    =======height: 44px;
+    width: 286px;
+    border-radius: 8px;
+    padding: 0 16px;
+    border: 1px solid white;
+    >>>>>>>develop-pass color: white;
     background-color: inherit;
+}
+
+#lp_account::placeholder {
+    color: #818299;
 }
 
 #lp_username {
@@ -56,24 +64,22 @@ body {
 }
 
 #lp_btn_login {
-    width: 160px;
-    height: 56px;
-    border-radius: 100px;
+    width: auto;
+    height: 44px;
+    border-radius: 22px;
     border: none;
     padding: 0 24px;
     background-color: #0053f4;
-    object-fit: contain;
     font-family: Roboto, sans-serif;
     font-size: 14px;
     font-weight: bold;
     font-style: normal;
     margin-left: 24px;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1.5px;
+    <<<<<<< HEAD font-stretch: normal;
+    =======>>>>>>>develop-pass line-height: normal;
+    letter-spacing: 0.01em;
     text-align: center;
     color: #ffffff;
-
     outline: none;
 }
 
@@ -196,20 +202,6 @@ body {
     line-height: 1.25;
     letter-spacing: normal;
     color: #4a4a4a;
-}
-
-::-webkit-input-placeholder {
-    /* Edge */
-    font-size: 16px;
-}
-
-:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    font-size: 16px;
-}
-
-::placeholder {
-    font-size: 16px;
 }
 
 #lp-info {
