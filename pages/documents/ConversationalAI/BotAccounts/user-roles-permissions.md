@@ -35,7 +35,7 @@ As shown above, a profile contains a set of permissions. Conversation Builder su
 
 #### Conversation Builder: Administrator
 
-Users with this permission can view all bots within an organiztion, both public and private.
+Users with this permission can view all bots within an organization, both public and private.
 
 Additionally, users with this permission have full privileges (with exceptions noted below), including the ability to create, deploy and manage agent connectors at the bot level within Conversation Builder.
 
