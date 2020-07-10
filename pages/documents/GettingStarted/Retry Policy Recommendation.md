@@ -27,6 +27,7 @@ Below you can find LivePerson best practices to handle errors:
 | Error code   |      Meaning      |  Recommendation |
 |:-------------|:------------------|:----------------|
 | 4xx          | Client side error | Do not retry, need to fix the problem in the code |
+| 429          | Too many requests | Retry after at least 1 second; avoid bursts of requests |
 | 5xx          | Error on server side  | Retry 3 times with 5, 10, 15 second pause between retries |
 
 
@@ -37,6 +38,8 @@ The retry should be with a longer interval than the previous one, for example ev
 An example for Exponential Backoff retry in JavaScript can be found [here](https://jsfiddle.net/orenkatz/xqhxy8x4/).
 
 Too short intervals or too many retries can have an adverse effect on the target resource or service. This may prevent the resource or service from recovering from its overloaded state, and it will continue to block or refuse requests. This results in a vicious cycle where more and more requests are sent to the resource or service, and consequently its ability to recover is further reduced. Therefore, make sure you do not define intervals which are too short, to give the application time to recover and retry.
+
+If you receive a `429` response code, this means that your request is being throttled due to rate-limiting. If you encounter this behavior, it is recommended that you provide a window of at least 1 second in between subsequent request retries. Clients who submit "bursty" traffic patterns to UMS may face rate-limiting issues, so it is recommended to smoothen traffic to a more distributed pattern whenever possible.
 
 ### KeepAlive
 

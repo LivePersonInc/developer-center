@@ -1,4 +1,8 @@
 body {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 741e3c50ecc52a7f4a9e75e1fadd62f7c735db5b
     background: #090C43 !important;
     overflow: auto;
 }
@@ -10,11 +14,20 @@ body {
 }
 
 #lp_account {
+<<<<<<< HEAD
     height: 44px;
     width: 286px;
     border-radius: 8px;
     padding: 0 16px;
     border: 1px solid white;
+=======
+    height: 56px;
+    width: 360px;
+    border-radius: 100px;
+    padding: 0 24px;
+    border: 2px solid white;
+    margin-left: -24px;
+>>>>>>> 741e3c50ecc52a7f4a9e75e1fadd62f7c735db5b
     color: white;
     background-color: inherit;
 }
@@ -69,6 +82,10 @@ body {
     font-weight: bold;
     font-style: normal;
     margin-left: 24px;
+<<<<<<< HEAD
+=======
+    font-stretch: normal;
+>>>>>>> 741e3c50ecc52a7f4a9e75e1fadd62f7c735db5b
     line-height: normal;
     letter-spacing: 0.01em;
     text-align: center;
@@ -197,6 +214,23 @@ body {
     color: #4a4a4a;
 }
 
+<<<<<<< HEAD
+=======
+::-webkit-input-placeholder {
+    /* Edge */
+    font-size: 16px;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-size: 16px;
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+>>>>>>> 741e3c50ecc52a7f4a9e75e1fadd62f7c735db5b
 #lp-info {
     height: 362px;
     box-shadow: 0 5px 10px 0 rgba(131, 146, 167, 0.2);

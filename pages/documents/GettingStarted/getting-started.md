@@ -4,12 +4,14 @@ redirect_from:
   - first-steps.html
 sitesection: Documents
 categoryname: "Getting Started"
-permalink: getting-started-with-your-free-trial-account.html
+permalink: first-steps.html
 indicator: both
 ---
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
+  <!-- Modal content -->
   <div class="modal-content">
      <iframe id="vimeo-iframe" src="https://player.vimeo.com/video/398468660?app_id=122963" width="100%" height="100%" frameborder="0" allow="autoplay;" title="FTUE" allowfullscreen >
    </iframe>
@@ -24,6 +26,7 @@ indicator: both
          <a  target="_blank" href="https://knowledge.liveperson.com/getting-started-livepersons-conversational-commerce-platform.html" alt="LivePerson's Conversational Commerce Platform"> LivePerson’s Conversational Cloud</a> is an AI-powered conversational platform that connects brands to consumers through popular channels, such as Facebook Messenger and WhatsApp, and can scale to any number of conversations. It uses AI to determine a consumer’s intent and route them to the correct agent or resource, boosting brand loyalty and consumer satisfaction. 
             </div>
         </div>
+    </div>
     <div id="teaser-banner" class="welcome-card-modified">
             <div  style="display: flex;">
             <p class="teaser-header" > Watch a  quick product overview of LivePerson Platform and its tools</p>
@@ -31,23 +34,27 @@ indicator: both
             </div>
     </div>
 </div>
-<div class="welcome-card-modified">
-    <div class="small-header">
-      About your Free Trial Account
-    </div>
-    <div class="convo-cloud-paragraph">
-    Your 45-day trial account comes pre-loaded with a Concierge Bot to help you quickly make the most of our conversational AI platform. Learn more about your Concierge Bot <a  href="/starting-with-your-concierge-bot.html" alt="Start Concierge Bot Building"> here </a>.
-    </div>
-</div>
 
-<div class="container-note">
-    <div class="important" style="width:63%">
-        <b> Prerequisites </b> if you don’t already have a Conversational Cloud account, <a target="_blank" href="https://developers.liveperson.com/register.html"  alt="Register free trial"> register </a> for a free 45-day trial.
-    </div>
+<div class= "header-lp4" style="margin-top: 48px;margin-bottom: 16px;">
+   Steps to get started
 </div>
+<ul>
+  <li>
+    <p>Create your LivePerson <a target="_blank" href="https://developers.liveperson.com/register.html" alt="Start free trial">free trial account</a>.</p>
+  </li>
+  <li>
+    <p>Build with our step-by-step quick start guides.</p>
+  </li>
+  <li>
+    <p>Get familiar about <a href="/api-guidelines-accessing-liveperson-apis.html" alt="LivePerson APIs">accessing LivePerson APIs</a> and guidelines.</p>
+  </li>
+  <li>
+    <p>Now you are ready to <a  class="uniqueAnchor" href="#LEFeatures" alt="LivePerson Features"> customize LiveEngage features</a>.</p>
+  </li>
+</ul>
 
-<div class="concierge-bot-header">
-Connect to mobile channels and customize your Concierge Bot
+<div class= "header-lp4" style="margin-top:62px;">
+    Start building with quick start guides
 </div>
 
 <div class="welcome-card-modified">
@@ -68,7 +75,7 @@ Connect to mobile channels and customize your Concierge Bot
     </div>
 </div>
 <div class="card-container" style="margin-top:24px;">
-  <a class="welcome-card" target="_blank" href="/starting-with-your-concierge-bot.html"> 
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-quick-start-guides-conversation-builder-quick-start.html"> 
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">Conversational AI</h5>
         <p class="getstarted-content ">Starting with your Concierge Bot</p>
@@ -101,42 +108,81 @@ Connect to mobile channels and customize your Concierge Bot
   <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/messaging-channels-messaging-connectors-overview.html"> 
         <img class="container-image" src="img/ic_messaging.svg"/>
         <h5 class="getstarted-title">Messaging Channels</h5>
-        <h5 class="getstarted-content ">Channels overview </h5>
-  </a>
+        <h5 class="getstarted-content ">Setup web messaging for website </h5>
+        </a>
 </div>
-<div class="welcome-card-modified">
-    <div class="small-header">
-      4. Test your bot
-    </div>
-    <div class="convo-cloud-paragraph"  style="width:64%;">
-      Once you’ve customized your bot and connected it to a messaging channel you can test out the experience. For mobile channels, simply send a message in the relevant app to test out your bot. For Web Messaging, select the  <a href="/conversation-builder-testing-deployment-previewing.html" alt="Convo Builder Preview">preview button </a> in the top right corner of the Dialog Editor to test the interaction.
-    </div>
-</div>
-<div class="whole-external-link">
-      <div class="next-steps-container">
-          <div id="LEFeatures" class="header-lp4-external">
-            Next Steps
-              <div class="link-padding" style="margin-top:24px">
-                <a  href="/do-more-with-the-conversational-cloud.html"> 
+  <div class="whole-external-link">
+  <div class="external-link-container">
+        <div id="LEFeatures" class="header-lp4-external">
+            Customize LiveEngage Features
+            <div class="link-padding" style="margin-top:24px">
+                <a  href="/mobile-app-messaging-sdk-for-ios-overview.html"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
-                       Do More with the Conversational Cloud 
+                       Integrate LiveEngage with Mobile Messaging SDK for iOS
                 </a>
-              </div>
             </div>
-        </div>   
-</div>
-
-<div class="free-trial-container">
-  <div id="free-trial">
-    <div id="free-trial-content-container">
-      <p class="free-trial-header" style="width:55%;">Upgrade your trial account now to enjoy the full capabilities of the Conversational Cloud</p> 
+            <div class="link-padding" >
+                <a  href="/mobile-app-messaging-sdk-for-android-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            Integrate LiveEngage with Mobile Messaging SDK for Android 
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a  href="/monitoring-api-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                           Enable consumer monitoring with Monitoring API
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a  href="/messaging-agent-sdk-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Integrate a messaging bot using Agent Messaging SDK
+                </a>
+            </div>
+               <div class="link-padding" >
+                <a  href="/users-api-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                       Manage users with Users API
+                </a>
+            </div>
+               <div class="link-padding" >
+                <a href="/api-guidelines-retry-policy-recommendations.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Implement a retry policy
+                </a>
+            </div>
+        </div>
     </div>
-    <div id="free-trial-button-welcome">
-      <a target="_blank" href="https://www.liveperson.com/upgrade/">
-        <button class="create-button">Upgrade Account</button>
-      </a>
+    <div class="external-link-container">
+        <div class="header-lp4-external" >
+            Recommended Links
+            <div class="link-padding" style="margin-top:24px">
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            How to guide - messaging for your business 
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-add-the-liveperson-tag-to-your-website.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Add the LivePerson tag to your website
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-bots.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                        Extended getting started tutorial for bots
+                </a>
+            </div>
+            <div class="link-padding" >
+                <a target="_blank" href="https://knowledge.liveperson.com/developer-tools-liveperson-functions-overview.html"> 
+                        <img class="dots-container" src="img/four-dots.svg"/>
+                            Explore LivePerson Functions
+                </a>
+            </div>
+        </div>  
     </div>
-  </div>
+    
 </div>
 <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 <script type="text/javascript">

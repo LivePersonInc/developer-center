@@ -75,32 +75,6 @@
     color: var(--navy-gray);
 }
 
-.convo-cloud-paragraph {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    margin-top: 8px;
-    display: block;
-    width: 66%;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.01em;
-    color: var(--navy-gray);
-}
-
-.header-paragraph {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    margin-top: 8px;
-    display: block;
-    width: 720px;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.01em;
-    color: var(--navy-gray);
-}
-
 .play-icon {
     margin-top: 40px;
     flex: 1;
@@ -176,14 +150,7 @@
     height: 180px;
 }
 
-.next-steps-container {
-    width: 300px;
-    flex: 0 50%;
-    display: inline-flex;
-}
-
 .link-padding {
-    width: 720px;
     margin-bottom: 16px;
     font-family: Roboto;
     font-style: normal;
