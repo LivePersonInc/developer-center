@@ -71,7 +71,7 @@ httpClient(URL, {
 <div class="important">
   <ul>
     <li>Please beware of the following restrictions:</li>
-    <li>Error code 403 can mean that the url is not whitelisted!</li>
+    <li>Error code <code>403 - You do not have access to the page or resource you are trying to reach</code> means that the url is not whitelisted!</li>
     <li>mTLS is not support!</li>
     <li>Max. 20 requests/sec (all beyond that are rejected with <code>429 - Too Many Requests</code>)</li>
   </ul>

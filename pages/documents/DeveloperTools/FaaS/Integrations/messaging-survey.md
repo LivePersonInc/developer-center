@@ -25,8 +25,6 @@ However, a similar scenario might be implemented by simply connecting LivePerson
 ### Messaging Conversation Survey events for Function Invocation
 
 
-LiveEngage **Messaging Conversation Survey** offers two different triggering events (see [Events](liveperson-functions-development-events-templates.html#events)):
-
 * Messaging Survey Started
 
 * Messaging Survey Ended

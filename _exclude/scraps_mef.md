@@ -119,3 +119,17 @@ You might need to download a domain for a few reasons:
 2. In the upper-left corner, click **Domain Settings**.
 3. Click **More Settings**, scroll down to the **Export Intents and Entities** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_ib_download.png"> (Download icon).
 4. Follow the browser prompts to access and save the ZIP file to a location of your choice.
+
+### Sync with a Google sheet
+
+After you've made changes to the Google sheet that's linked to the domain, sync the domain to update it with the content.
+
+{: .important}
+This action overwrites the content in the domain with the content in the Google sheet, so use caution when performing this.
+
+**To sync a domain with a Google sheet**
+
+1. Open the domain.
+2. In the upper-left corner, click **Domain Settings**.
+3. Click **More Settings**, scroll down to the **Sync Google Sheet** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_ib_syncGoogleSheet.png"> (Refresh icon).
+4. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the changes are reflected in a new model version.

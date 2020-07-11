@@ -49,7 +49,7 @@ If the default dialog implementation doesn't meet your requirements, build out a
 When you create the dialog, you configure two important settings that you might want to change afterward:
 
 * **Auto Escalation Threshold**: Change this in the [dialog's settings](conversation-builder-dialogs-dialog-basics.html#configure-dialog-settings).
-* **Agent Skill Id**: Change this in the settings of the [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions).
+* **Agent Skill Id**: Change this in the settings of the [Agent Transfer interaction](conversation-builder-interactions-integrations.html#agent-transfer-interactions). (You can optionally specify an agent ID as well.)
 
 ### FAQs
 

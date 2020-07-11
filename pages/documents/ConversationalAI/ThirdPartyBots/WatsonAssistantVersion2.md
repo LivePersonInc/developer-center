@@ -10,7 +10,7 @@ indicator:
 
 ### Overview
 
-The following documentation outlines the configuration for the connector and how to implement functions specifically for **IBM Watson API Version 2**.
+The following documentation outlines the configuration for the bot connector and how to implement functions specifically for **IBM Watson Assistant Version 2**.
 
 ### Bot Configuration
 
@@ -20,20 +20,22 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 {: .important}
 **Please note** that Watson does not support processing newline, tab and carriage-return characters. These symbols will be removed from any query that is sent to Watson via the provided connector.
 
-{: .important}
-**IMPORTANT**: In the case of inactivity, the Watson Assistant session only last 5 minutes for the Lite/Standard plans and up to 60 minutes for Plus/Premium plans. Because of the nature of the async messaging feature, provided by LivePerson it could take longer until the user replies to the Bot-Agent. In case the Watson session expires Third-Party Bots connector will create a new conversation session on the Watson side [More Info](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context)
+{: .notice}
+**IMPORTANT**: In case of inactivity, the Watson Assistant session only last 5 minutes for the Lite/Standard plans and up to 60 minutes for Plus/Premium plans. Because of the asynchronous nature of messaging, it could take longer until the user replies to the bot agent. In case the Watson session expires, the bot connector will create a new conversation session on the Watson side [More Info](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context).
 
-With Watson there are two ways of authentication that currently our system support, these are UserPass and IAM (token based) authentication. You can choose one of them for your bot configuration.
+### Authentication
 
-#### UserPass authentication
+With Watson there are two methods of authentication that are currently supported. These methods are username/password and IAM (token based) authentication. You can choose either one for your bot configuration but IAM is **highly recommended** (as it is more secure).
 
-You will be presented with following screen to complete the Vendor Settings in order to add bot connector using UserPass authentication.
+#### Username/Password authentication
+
+You will be presented with following screen to complete the Vendor Settings in order to add the bot connector using username/password authentication.
 
 <img class="fancyimage" style="width:600px" src="img/watsonassistantv2/userpass-based-auth.png">
 
-Figure 1.1 Showing the configuration that needed to be filled using UserPass authentication
+Figure 1.1 Showing the configuration that needs to be filled out when using username/password authentication
 
-Following information needs to be completed for LivePerson:
+You need to fill in the following infromation:
 
 <table>
   <thead>
@@ -46,17 +48,17 @@ Following information needs to be completed for LivePerson:
   <tbody>
   <tr>
     <td>Workspace URL</td>
-    <td>Watson Assistant Workspace URL</td>
+    <td>Watson Assistant Workspace URL. Note that this workspace URL changes according to your account. In order to figure out which URL is correct for you, check the location of your Assistant in IBM's Cloud console. Then, choose the corresponding URL based on geo-location. For example, if your IBM location is "eu-gb", the London URL is the correct one for you.</td>
     <td>https://gateway.watsonplatform.net/conversation/api</td>
   </tr>
   <tr>
     <td>Assistant ID</td>
-    <td>Watson Assistant Assistant ID</td>
+    <td>Watson Assistant Assistant ID. Retrievable from the settings of your Watson Assistant.</td>
     <td>8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74</td>
   </tr>
   <tr>
     <td>Username</td>
-    <td>Username for the Watson Assistant conversation</td>
+    <td>Username for the Watson Assistant conversation. Retrievable from the settings of your Watson Assistant.</td>
     <td>de0a48a5-9f4f-xxxx-xxxx-xxxxx9856751</td>
   </tr>
   <tr>
@@ -69,13 +71,13 @@ Following information needs to be completed for LivePerson:
 
 #### IAM authentication
 
-You will be presented with following screen to complete the Vendor Settings in order to add bot connector using IAM authentication.
+You will be presented with following screen to complete the Vendor Settings in order to add the bot connector using IAM authentication.
 
 <img class="fancyimage" style="width:600px" src="img/watsonassistantv2/token-based-auth.png">
 
-Figure 1.2 Showing the configuration that needed to be filled using IAM authentication authentication
+Figure 1.2 Showing the configuration that needs to be filled in when using the IAM authentication method.
 
-Following information needs to be completed for LivePerson:
+You need to fill in the following infromation:
 
 <table>
   <thead>
@@ -88,22 +90,22 @@ Following information needs to be completed for LivePerson:
   <tbody>
   <tr>
     <td>Workspace URL</td>
-    <td>Watson Assistant Workspace URL</td>
+    <td>Watson Assistant Workspace URL. Note that this workspace URL changes according to your account. In order to figure out which URL is correct for you, check the location of your Assistant in IBM's Cloud console. Then, choose the corresponding URL based on geo-location. For example, if your IBM location is "eu-gb", the London URL is the correct one for you.</td>
     <td>https://gateway.watsonplatform.net/conversation/api</td>
   </tr>
   <tr>
     <td>Assistant ID</td>
     <td>Watson Assistant ID</td>
-    <td>8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74</td>
+    <td>8671e9a1-xxxx-xxxx-xxxx-xxxxf9dfcb74. Retrievable from the settings of your Watson Assistant.</td>
   </tr>
   <tr>
     <td>API key</td>
-    <td>API key which will be used for the Bot's authentication in Watson</td>
+    <td>API key which will be used for the Bot's authentication in Watson. Retrievable from the settings of your Watson Assistant.</td>
     <td>xxxxxxxxxxxxxxxxxxxxx_xxxxxxxxxxxxxxxxxxxxZG</td>
   </tr>
   <tr>
     <td>Token endpoint url</td>
-    <td>URL for creating/refreshing Watson Assistant tokens</td>
+    <td>URL for creating/refreshing Watson Assistant tokens. Leave as is.</td>
     <td>Dxxxxxxxxxx1</td>
   </tr>
   </tbody>
@@ -112,11 +114,11 @@ Following information needs to be completed for LivePerson:
 #### Test Connection
 
 {: .important}
-You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer
+You have to agree to a Data Disclaimer from this point on in order to use the bot connector. To agree to the disclaimer, click on the checkbox "I agree to the Data Disclaimer" at the bottom of the configuration menu.
 
-For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. For UserPass authentication see in Figure 1.3 and 1.4. For IAM authentication see in Figure 1.5 and 1.6.
+To validate the credentials you provided above, you can now perform a test connection request. Click on the "Test Connection" button to do so. For UserPass authentication see in Figure 1.3 and 1.4. For IAM authentication see in Figure 1.5 and 1.6.
 
-<img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-success.png">
+<!-- <img class="fancyimage" style="width:600px" src="img/watsonassistant/userpass-connection-success.png">
 
 Figure 1.3 Showing the success case of the valid credentials for UserPass authentication
 
@@ -129,29 +131,30 @@ Figure 1.5 Showing the success case of the valid credentials for IAM authenticat
 
 <img class="fancyimage" style="width:600px" src="img/watsonassistantv2/token-connection-failed.png">
 
-Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication
+Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication -->
 
 <div class="notice">
-Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure.
+Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure. See the note in the table above for more information on finding the correct workspace URL
 </div>
+Once you are done with the configuration and the connection test succeded, you can save your configuration by pressing on "Done".
 
-Once you are done with providing configuration you can save it by pressing on "Done". **_Congratulations!_** You have completed the configuration of the Watson Assistant bot.
+**Congratulations!** You have completed the configuration of the Watson Assistant bot.
 
 {: .important}
-Following guide is going to present customization for the Watson Assistant on how to implement functions specifically for **IBM Watson**. It is intended for users who are familiar with IBM Watson cloud dashboard. Continue if you are familiar and have access to IBM Watson cloud dashboard.
+The following guide is presetns customization for the Watson Assistant. It is intended for users who are familiar with the IBM Watson cloud dashboard. Continue if you are familiar and have access to the IBM Watson cloud dashboard.
 
 ### Sending Native Content
 
-Watson Assistant allows the user to define native response types to the dialog nodes. The supported Watson Assistant native types include Image, List, Pause, and Text. Users can define single or multiple native content per dialog. The native content types can be defined with Watson wizard or using the JSON editor (Figure 2.1 shows how to access both ways in IBM Watson website).
+The Watson Assistant allows the user to define native response types to the dialog nodes. The supported Watson Assistant native types include Image, List, Pause, and Text. Users can define single or multiple native content types per dialog. The native content types can be defined with the Watson dashboard UI or directly by using the JSON editor (Figure 2.1 shows how to access both methods in the IBM Watson dashboard).
 
 <img class="fancyimage" style="width:100%" src="img/watsonassistant/watson-json-editor.png">
 
 Figure 2.1 IBM Watson Native Rich Content Wizard and JSON Editor
 
 {: .important}
-**Please note** that Watson assistant API version of `2018-09-20` is used to support the native content response in Bot Connectors.
+**Please note** that the Watson Assistant API version from `2018-09-20` is used to support the native content response in our connectors.
 
-If you use **JSON Editor** then the usual body of the native content is as follows:
+If you use the **JSON Editor** then the default body of the native content is as follows:
 
 ```javascript
 {
@@ -165,22 +168,22 @@ If you use **JSON Editor** then the usual body of the native content is as follo
 
 #### Image
 
-User can define Image type using the IBM watson assistant dashboard. To do this, dialog node will need to selected that will hold image response. Click on the "Add response type" and select Image from the select box as shown in Figure 2.1.
+Users can configure the Image native type using the IBM watson assistant dashboard. To do this, a dialog node will need to selected that will hold the image response. Click on the "Add response type" and select `Image` from the select box as shown in Figure 2.1.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Image-Select-Response.png">
 
 Figure 2.1 Response type of Image is highlighted
 
-Once image is selected you will be asked to fill the information. "Image Source" url must be provided. You can also describe the image title and description (example filled form is shown in the Figure 2.2).
+Once `image` is selected, you will be asked to fill in the information for the specific image you want to use. The `Image Source` URL must be provided. You can also fill in the image title and description (example filled form is shown in the Figure 2.2).
 
 {: .important}
-If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`). Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, All domains must be HTTPS secure.
+If Images are sent in Rich content, then their URLs must be added to a whitelist via internal LivePerson configuration. Please contact your account team to do so. Please note that you must add all possible domains to this list manually as wildcards are not supported. Moreover, all image domains must be HTTPS secure.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Image-Fields-Response.png">
 
 Figure 2.2 Image fields filled example
 
-If you are using **JSON editor** you can add a Image type by posting following JSON. Please make sure to change **"source"**, **"title"** and **"description"** property with your data.
+If you are using the **JSON editor**, you can add an Image native type by posting the following JSON. Please make sure to change the `source`, `title` and `description` properties within your data.
 
 ```json
 {
@@ -199,19 +202,19 @@ If you are using **JSON editor** you can add a Image type by posting following J
 
 #### List
 
-User can define List type using the IBM watson assistant dashboard. To do this, dialog node will need to selected that will hold list response. Click on the "Add response type" and select Option from the select box as shown in Figure 2.3.
+Users can define the List native type using the IBM Watson assistant dashboard. To do this, a dialog node will need to selected that will hold the list response. Click on the "Add response type" and select `Option` from the select box as shown in Figure 2.3.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Option-Select-Response.png">
 
 Figure 2.3 Response type of List is highlighted
 
-Once the "Option" is selected the form need to be filled will be shown. You must provide "Title" and also "Description". Furthermore, different choices of options can be added via clicking "Add option" button. Once the button is clicked you will be asked to put a label of option and value. Make sure you fill both of them (example filled form shown in Figure 2.4).
+Once `Option` is selected the form which needs to be filled out will be shown. You must provide the `Title` and `Description` fields. Furthermore, an additional option can be added by clicking the "Add option" button. Once the button is clicked you will be asked to add the option's label and value. Make sure you provide both of them (example filled form shown in Figure 2.4).
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Option-Fields-Response.png">
 
 Figure 2.4 List fields filled example
 
-If you are using **JSON Editor** then you have following structure of List. Note that **"options"** property is array of objects which holds the items for choosing are presented to user.
+If you are using the **JSON Editor** use the below structure to create a list. Note that the `options` property is an array of objects which holds the different choices presented to the user.
 
 ```javascript
 {
@@ -230,7 +233,7 @@ If you are using **JSON Editor** then you have following structure of List. Note
 }
 ```
 
-An example list filled with two options can be seen below. Please note that within options object, "text" **(value->input->text)** is the value that you set for an option.
+An example list populated with two options can be seen below. Please note that within options object,`text` **(value->input->text)** is the content that you set for an option.
 
 ```json
 {
@@ -266,21 +269,21 @@ An example list filled with two options can be seen below. Please note that with
 
 #### Pause/Delay
 
-Users can define Pause type if they want to send some delay in responding. For adding this content type, the dialog node will need to select that will hold pause response. Click on the "Add response type" and select Pause option as shown in Figure 2.5
+Users can configure the Pause type if they want to create a delay in the bot's responses. You will need to first select a node which will create the delay. Click on the "Add response type" and select the Pause option as shown in Figure 2.5
 
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
+**Note:** using the delay as a single/sole response from the bot to the consumer is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Select-Response.png">
 
 Figure 2.5 Response type of Pause is highlighted
 
-Once the "Pause" is selected the form will ask you to provide the duration (unit is in milliseconds). This allows the conversation to be paused for the amount of time defined in "Duration" field. Moreover, If you want to show user a indication of typing you can select choose that with Typing Indicator radio box. (example filled form is shown in Figure 2.6). This will show a indication like "Agent is typing..." for the amount of time of delay that is set in "Duration".
+Once Pause is selected, the form will ask you to provide the duration for the pause (in milliseconds). Moreover, if you want to show user an indication that the bot is typing, you can do that by selecting the Typing Indicator radio box. This will show an indication like "Agent is typing..." for the length of the pause.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Pause-Fields-Response.png">
 
 Figure 2.6 Pause fields filled example
 
-If you are using **JSON Editor** you can use the following JSON structure to define a Pause content type. This example will pause for 5 milliseconds with typing indication on.
+If you are using **JSON Editor** you can use the following JSON structure to define a Pause content type. This example will pause for 5 milliseconds with the typing indication on.
 
 ```json
 {
@@ -298,19 +301,19 @@ If you are using **JSON Editor** you can use the following JSON structure to def
 
 #### Text
 
-Users can define a Text type to send some textual response. For adding this type dialog node will need to select that will hold text response. Click on the "Add response type" and select "Text" option as shown in Figure 2.7
+Users can define a Text native type to send textual responses to the consumer. To add this type, a dialog node will need to be selected that will hold text response. Click on the "Add response type" and select the "Text" option as shown in Figure 2.7
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Select-Response.png">
 
 Figure 2.7 Response type of Text is highlighted
 
-Once the "Text" is selected the form will allow you to add the response texts. You can add multiple responses variation (example filled form is shown in Figure 2.8).
+Once Text is selected, the form will allow you to add the response you wish to send. You can add multiple responses variation (example filled form is shown in Figure 2.8).
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/Text-Fields-Response.png">
 
 Figure 2.8 Text fields filled example
 
-If you are using **JSON Editor** you can use following JSON structure to create text responses. The example below shows two text responses defined that will come sequentially.
+If you are using the **JSON Editor** you can use the following JSON structure to create text responses. The example below shows two text responses defined that will follow each other sequentially.
 
 ```json
 {
@@ -335,7 +338,7 @@ If you are using **JSON Editor** you can use following JSON structure to create 
 
 #### Defining multiple responses with Watson Native content
 
-Users can define a response with various content types. The following example shows a similar case using **JSON Editor**. The response will First send the text. afterwards, it will make a pause for 5 seconds and then finally sends an image.
+Users can define a response with various content types. The following example shows using the **JSON Editor** to do so. First, the text response will be sent. Then, a 5 second delay will follow. Finally, an image will be sent.
 
 ```json
 {
@@ -372,17 +375,17 @@ Users can define a response with various content types. The following example sh
 ### Sending Rich Content (Structured Content)
 
 {: .important}
-**Please note** that Watson assistant API version of `2018-09-20` is used to support the rich content response in Bot Connectors.
+**Please note** that the Watson assistant API version from `2018-09-20` is used to support the rich content response in the connector.
 
 The core Conversational Cloud platform supports the use of rich/structured content. For more information on the format and functionality available, please refer to the documentation found [here](getting-started-with-rich-messaging-introduction.html). As a result, the Bot Connector also supports this.
 
-To send structured content via Watson Assistant you will need send custom JSON. To do this, you will need to select the dialog node that will hold the structured content (Figure 3.1).
+To send structured content via Watson Assistant you will need to send custom JSON. To do this, you will need to first select the dialog node that will hold the structured content (Figure 3.1).
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/dialognode.png">
 
 Figure 3.1 Watson Dialog Node
 
-From there, under the section Then respond with: Click the three vertical dots and select Open JSON Editor (Figure 3.2)
+From there, under the section "Then respond with": Click the three vertical dots and select Open JSON Editor (Figure 3.2)
 
 <img class="fancyimage" style="width:500px" src="img/watsonassistant/dialogjsoneditor.png">
 
@@ -394,7 +397,9 @@ In the JSON Editor you will need to add your custom JSON response (Figure 3.3).
 
 Figure 3.3 Watson Assistant JSON Editor
 
-There is a strict JSON structure for the response that must be used. The JSON structure can be found below in **Figure 3.4**. An example with a sample JSON that uses a standard Structured Content card with a button option in can be seen in **Figure 3.5**.
+There is a strict JSON structure for the response that must be used. The JSON structure can be found below in **Figure 3.4**. An example with a sample JSON structure that uses a standard Structured Content card with a button option can be seen in **Figure 3.5**.
+
+##### Figure 3.4 Structured Content Watson JSON Structure (JSON Editor should contain this object structure for Rich Content)
 
 ```json
 {
@@ -417,7 +422,7 @@ There is a strict JSON structure for the response that must be used. The JSON st
 }
 ```
 
-Figure 3.4 Structured Content Watson JSON Structure (JSON Editor should contain this object structure for Rich Content)
+##### Figure 3.5 Structured Content Watson JSON Example (JSON Editor should contain this object structure for Rich Content)
 
 ```json
 {
@@ -456,13 +461,13 @@ Figure 3.4 Structured Content Watson JSON Structure (JSON Editor should contain 
 }
 ```
 
-Figure 3.5 Structured Content Watson JSON Example (JSON Editor should contain this object structure for Rich Content)
+#### Structured Content Watson JSON Example (IAM)
 
 For new IAM workspaces that have a new Watson response, _Then respond with_ "text" should be used:
 
 <img class="fancyimage" style="width:400px" src="img/watsonassistant/image_5.png">
 
-Put the structured content objects that is shown in Figure 3.6 with the metadata in the text field. Figure 3.7 shows the final picture of how it should look like.
+Put the structured content objects that is shown in the below example alongside the metadata in the `text` field. Figure 3.7 shows the final picture of how it should look like.
 
 ```json
 {
@@ -484,14 +489,15 @@ Put the structured content objects that is shown in Figure 3.6 with the metadata
 }
 ```
 
-Figure 3.6 Structured Content Watson JSON Example (IAM)
+To use [Quick Replies](quick-replies-introduction-to-quick-replies.html), we require a special formatting of the structured content.
+The quick replies rich content should be added to the `quickReplies` property of the `structuredContent` object, and also a message should be included.
 
-For using [quickReplies](quick-replies-introduction-to-quick-replies.html), we require a special formatting of the structured content.
-The quick replies rich content should be added to the quickReplies property of the structuredContent object, and also a message should be included.
-This message will be sent to the customer along with the quick replies. **Figure 3.7** **Figure 3.8**
+This message will be sent to the customer along with the quick replies.
 
-{: .important}
+{: .noice}
 **Please note** Quick Replies are only supported in Messaging Conversations.
+
+##### Figure 3.7 Quick Replies StructuredContent structure.
 
 ```javascript
 {
@@ -515,7 +521,7 @@ This message will be sent to the customer along with the quick replies. **Figure
 
 ```
 
-Figure 3.7 Quick Replies StructuredContent structure.
+Figure 3.8 Watson Quick Replies StructuredContent example.
 
 ```json
 {
@@ -584,11 +590,12 @@ Figure 3.7 Quick Replies StructuredContent structure.
 }
 ```
 
-Figure 3.8 Watson Quick Replies StructuredContent example.
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only the "CUSTOM" can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
+Change the TTR of a conversation based on the action response of Watson. There are 4 different types of Time to Response states: "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only with the "CUSTOM" state can you set a value. The unit of the value is seconds. The value of the other states are defined in the Conversational Cloud Agent Workspace.
+
+##### Figure 4.1 Watson JSON response for changing TTR
 
 ```json
 {
@@ -612,24 +619,22 @@ Change the TTR of a conversation based on the action response of Watson. There h
 }
 ```
 
-Figure 4.1 Watson JSON response for changing TTR
-
 ### Transfer/Escalations
 
 <div class="notice">
-<strong>Naming Conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong> is the naming convention between each.
+<strong>Naming Conventions:</strong> Before going into <strong>actions</strong> and <strong>skills</strong>, we'll need to define the naming conventions used for either.
 
-All non-escalation actions are defined by using underscores. For example, in the case of closing a conversation, the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CONVERSATION</strong>. Further down the line, if any additional functionality is added that can be called by an action from the AI, it will follow the same naming convention.
+All non-escalation actions are signified by using underscores. For example, in the case of closing a conversation, the action name returned by <strong>Watson</strong> needs to be <strong>CLOSE_CONVERSATION</strong>.
 
-For escalations, the naming convention for these skills should use a "-" instead of "\_". Furthermore, if transferring to a skill, specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within Conversational Cloud.
+For escalations, the naming convention for the skills you escalate should use a "-" instead of whitespace. Furthermore, if transferring to a skill specifically assigned to bots, it’s best practice to prefix the skill name with "BOT-" within the Conversational Cloud.
 
 </div>
 
-Transfers and escalations are straightforward in both chat and messaging. At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the skill name is matched to one already on the account and the id is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
+Transfers and escalations are straightforward in both chat and messaging. At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the target skill's name is searched in the stored list and its ID is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/image_6.png">
 
-In the _Then respond with:_ JSON editor block, we see the following:
+In the _Then respond with:_ JSON editor block, use the following:
 
 ```json
 {
@@ -651,13 +656,11 @@ In the _Then respond with:_ JSON editor block, we see the following:
 }
 ```
 
-Figure 5.1 Watson JSON response for escalation
-
-Above is the _actions_ array. Here, we have a escalation skill name in the _skill_ parameter. This is the name of our skill for escalation. This will be sent in the BOSO object to the chat/messaging connector, which will grab the skillId from an array based on the name, and escalate.
+in the example above, you can see the `actions` array. Inside the array, we defien an escalation skill name in the `skill` parameter. This will be sent in an object to the chat/messaging connector, which will grab the `skillId` from a previously stored array based on the name, and escalate.
 
 ### Close Chat/Conversation
 
-To close a chat or messaging conversation, we utilize the action object as we did for a transfer (see **Figure 5.1**). In **Figure 6.1** below, the **Watson Assistant** JSON response should be mirrored as follows:
+To close a chat or messaging conversation, we utilize the action object as we did for a transfer (see example above). In the example below, the **Watson Assistant** JSON response should be used as follows:
 
 ```json
 {
@@ -677,16 +680,14 @@ To close a chat or messaging conversation, we utilize the action object as we di
 }
 ```
 
-Figure 6.1 Watson Assistant JSON response for closing chat/conversation
-
 ### Engagement attributes as context
 
-Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 7.1.
+Third-Party bots allow the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if the `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 7.1.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
 Figure 7.1 Conversation Type step in creation/modification of bot configuration.
 
-These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V2 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/apidocs/assistant-v1#get-response-to-user-input)). An example of the request body can be seen below:
+These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes. Further information on the Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V2 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, the `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/apidocs/assistant-v1#get-response-to-user-input)). An example of the request body can be seen below:
 
 ```javascript
 {
@@ -701,28 +702,26 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 
 ### Sending Encoded Metadata
 
-Conversational Cloud Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+The Conversational Cloud Messaging platform provides a new metadata input type (`encodedMetadata`) for passing a base64 encoded metadata during a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party bots also support this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
 
 <ul>
-  <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
-  <li>Content is base64 encoded</li>
-  <li> Metadata size is limited to 5k</li>
+  <li><b>The feature is turned on for your account. Contact your account team if this is not the case.</li>
+  <li>Content is base64 encoded.</li>
+  <li> Metadata size is limited to 5kb.</li>
 </ul>
 
 {: .important}
-Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
+Failing to comply with the above will cause the message to be dropped. This feature is only available for messaging conversations.
 
-Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. The `encodedMetadata` can be defined with context editor or using the JSON editor(Figure 8.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
+Encoded Metadata can be sent alongside a simple Text response, a Rich Content (structured content) response and Multiple responses. The `encodedMetadata` can be defined with the context editor or using the JSON editor(Figure 8.1). In both methods, the Third-Party bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by a new `encodedMetadata` object.
 
   <img class="fancyimage" style="width:800px" src="img/watsonassistantv2/context_adding_choices.png">
   Figure 8.1 Showing context editor with the encoded metadata.
 
-{: .important}
-Be careful with the camel-case characters `encodedMetadata` you must provide it exactly the same.
 
 #### Sending Watson Native Content with Encoded Metadata
 
-Sending encoded metadata with the Native Content (Text, Image and Options) is possible using Watson `context editor` or also through the `JSON editor`. An example response definition for both ways can be seen below:
+Sending encoded metadata with Native Content (Text, Image and Options) is possible using the Watson `context editor` or also through the `JSON editor`. An example response definition for both methods can be seen below:
 
   <img class="fancyimage" style="width:800px" src="img/watsonassistantv2/watson_encoded_metadata_context_editor.png">
   Figure 8.2 Showing context editor with the encoded metadata.
@@ -754,7 +753,7 @@ Example response body for `JSON editor`:
 
 #### Sending Rich Content (structured content) with Encoded Metadata
 
-Sending encoded metadata with the Native Content is possible using Watson `context editor` or also through the `JSON editor`. An example response definition for both ways can be seen below:
+Sending encoded metadata with the Native Content is possible using the Watson `context editor` or also through the `JSON editor`. An example response definition for both methods can be seen below:
 
   <img class="fancyimage" style="width:800px" src="img/watsonassistantv2/watson_encoded_metadata_with_structured_content.png">
   Figure 8.3 Showing context editor with the encoded metadata.
@@ -801,7 +800,7 @@ Sending encoded metadata with the Native Content is possible using Watson `conte
 }
 ```
 
-If you have a different context for multiple dialogs in a conversation that are responding with structure content, then you can define the `encodedMetadata` for each of the dialog separately. In that case, you will not define `encodedMetadata` via context editor or inside `context` property if using JSON editor. Below example shows where `encodedMetadata` property should be placed in structured content for such cases. Please note you will have to use JSON editor for defining such case:
+If you have a different context for multiple dialogs in a conversation that are using structured content, then you can define the `encodedMetadata` for each of the dialog separately. In that case, you will not define `encodedMetadata` via the context editor or inside the `context` property if using JSON editor. The below example shows where the `encodedMetadata` property should be placed in structured content for such cases. Please note you will have to use the JSON editor in this case:
 
 ```json
 {
@@ -844,24 +843,22 @@ If you have a different context for multiple dialogs in a conversation that are 
 
 ### Sending Private Text Message
 
-It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
+It is possible to send a private text message in the Conversational Cloud agent workspace. This feature can also be used via Third-Party bots. This will allow brands to define private message texts within the conversational flow of the bot. These messages are published into the conversation and visible only to Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or advising on next actions the handover agent should take.
 
 {: .important}
-Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
+Please note: if you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and remain visible only  to Agents and Managers.
 
-Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. The private text message can be added via Watson's `JSON editor` (as shown in Figure 9.1). There are two properties, `text` and `messageAudience` required for sending a private text message.
+The private text message can be added via Watson's `JSON editor` (as shown in Figure 9.1). There are two properties, `text` and `messageAudience` required for sending a private text message.
 
 | key             | value                                 | notes                     |
 | --------------- | ------------------------------------- | ------------------------- |
 | text            | any string value                      | mandatory                 |
 | messageAudience | value should be "AGENTS_AND_MANAGERS" | case sensitive, mandatory |
 
-<br />
-
 <img class="fancyimage" style="width:800px" src="img/watsonassistantv2/context_adding_choices.png">
 Figure 9.1 Showing JSON editor option access via Watson Assistant.
 
-It is possible to send only a private text message response. The example payload of such response is below (also Figure 9.2 `JSON Editor` view):
+It is possible to send only a private text message response in a node. The example payload of such response is below (also Figure 9.2 `JSON Editor` view):
 
 ```json
 {
@@ -882,7 +879,7 @@ It is possible to send only a private text message response. The example payload
 <img class="fancyimage" style="width:800px" src="img/watsonassistantv2/private_message_response_custom_payload.png">
 Figure 9.2 Showing single private text message definition inside `JSON Editor`
 
-It is also possible to send a private text message with the action (e.g. Transfer / Escalations). Example payload of such a case (Private Text Message - Action) will be as below:
+It is also possible to send a private text message with an action (e.g. Transfer / Escalations). An example payload or such a case is below:
 
 ```json
 {
