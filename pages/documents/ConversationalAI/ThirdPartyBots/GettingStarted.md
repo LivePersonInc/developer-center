@@ -14,20 +14,17 @@ sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
 permalink: third-party-bots-getting-started.html
-indicator:
+indicator: both
 ---
 
 ### Introduction
 
-External Bot frameworks and Bot builders can be enabled and managed through Conversational Cloud just like a normal human agent.
-
-Using Third-Party Bots, you can provision a connector for IBM Watson, Google Dialogflow, Amazon Lex, Microsoft Bot
-Framework or leverage LivePerson Functions with the Custom Integrations Option.
+Third party bot providers can be used and managed through LivePerson's Conversational Cloud just like a normal human agent or a LivePerson bot Using our connectors, you can provision IBM Watson, Google Dialogflow, Amazon Lex, or Microsoft bots. You can also leverage LivePerson Functions to build custom integrations with other third party bot providers.
 
 {: .important}
-If you need to connect a external bot that does not have a pre-built connector, see [this document](third-party-bots-custom-integration.html) for instructions.
+If you need to connect an external bot that does not have a pre-built connector, see [this document](third-party-bots-custom-integration.html) for instructions.
 
-Each connector provides the functionality to
+Each connector provides the ability to:
 
 - send/receive text messages
 
@@ -39,27 +36,28 @@ Each connector provides the functionality to
 
 - close a conversation
 
-Some connectors may provide more or less functionality depending on the specifics of the product to which it is connecting.
+{: .important}
+Some connectors may provide more or less functionality depending on the specifics of the provider.
 
 ### Bot Lifecycle
 
-The running Bot can have different states based on the health status of the services it utilizes, such as LivePerson APIs, AI vendors, etc.
+During run-time, your bot may have different operational states. These states are based on the health status of the services it utilizes, such as LivePerson APIs, AI vendors, etc.
 
 #### Offline
 
-The Bot is offline and won't accept any conversations.
+The bot is offline and won't accept any conversations.
 
 #### Online
 
-The Bot is online and will accept and process new conversations.
+The bot is online and will accept and process new conversations.
 
 #### Vendor Interruption
 
-The Bot is online and will accept new conversations, but will directly escalate them to the default transfer skill, because the set up AI Vendor is not reachable/working.
+The bot is online and will accept new conversations, but will directly escalate them to the default transfer skill, because the configured AI Vendor is not reachable/working.
 
 #### Service Interruption
 
-The Bot is in the delayed state and will not accept new conversation or process existing conversations. This state is a result of an interruption within Liveperson APIs/servers.
+The bot is in the delayed state and will not accept new conversation or process existing conversations. This state is a result of an interruption within Liveperson APIs/servers.
 
 In this state the bot will try to restart automatically once every minute until the interruption is resolved.
 
@@ -67,17 +65,17 @@ In this state the bot will try to restart automatically once every minute until 
 
 #### Supported customer content
 
-Currently the connectors only support text input from the customer. If the customer sends an image or a file to the Bot, the Bot will replace it with a special identifier so the Bot can handle this special use-case with custom code.
+Currently, the bot connectors only support plain text input from the customer. If the customer sends an image or a file to the bot, the bot will replace it with a special identifier so the bot can handle this special use-case with custom code.
 
-The send identifier is **com.liveperson.bot-connectors.consumer.send-file**
+The identifier which will replace images or files is **com.liveperson.bot-connectors.consumer.send-file**.
 
-#### Support for different messaging channels and the corresponding rich content
+#### Support for different messaging channels and corresponding rich content
 
-The Bot Connector system is designed to support [all relevant rich content](getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html), since it only forwards the received structured content and metadata to LivePerson's messaging and chat service. We have verified and tested the support for **Web Messaging**, **Facebook** and **Apple Business Chat**. All other channels are not verified, but should work if you send the right structured content for the channel. If you experience any issues, please contact LivePerson support or your account team.
+The bot Connector system is designed to support [all relevant rich content](getting-started-with-rich-messaging-rich-messaging-channel-capabilities.html) since it only forwards the received structured content and metadata to LivePerson's messaging and chat services, where it is handled. We have verified and tested the support for **Web Messaging**, **Facebook** and **Apple Business Chat**. All other channels are not verified, but should work if you send the right structured content for the channel. If you experience any issues, please contact LivePerson support or your account team.
 
-#### Creating and starting Bots
+#### Creating and starting bots
 
-Due to limitations within Conversational Cloud's permission system, it is not possible for an operator with the Agent or the Agent Manager profiles to create new bots or start bots. However, they are still able to stop, edit and delete existing bots.
+Due to limitations within the Conversational Cloud's permission system, it is not possible for an operator with the Agent or the Agent Manager profiles to create new bots or start bots. However, they are still able to stop, edit and delete existing bots.
 
 If you want to enable creating and starting bots for the Agent and Agent Manager profiles, you need to create a new custom Profile, which will derive its base permissions from the Campaign Manager or Admin profiles. Then, make sure to enable the needed permissions for creating and starting bots only while disabling any other permissions. Afterwards, you will need to assign this new Profile to the Agent/Agent Manager who should be able to start/create bots.
 
@@ -93,41 +91,33 @@ Minimal set of permissions for creating and starting bots for Administrator Prof
 
 Please note that your bot setup should always return an intent or an action as a response. If you return an intent without actions or messages, or return no intent at all, the bot will consider this an error and escalate to the default escalation skill.
 
-### Create Bot User in Conversational Cloud
+### Getting Started
 
-1. Add a new user in Conversational Cloud, choose "Bot" for “User type”. If “User type” is not available, contact your LivePerson account manager to enable the feature.
+#### Create a Bot User in the Conversational Cloud
+
+1. Add a new user in the Conversational Cloud. Choose "Bot" for “User type”. If bot is not available as a user type, contact your LivePerson account manager to enable the feature.
 
   <img style="width:600px" src="img/dialogflowversion2/image_0.png">
 
 {:start="2"}
 
-2. Add login method as "API key" and generate new API key for the new user
+1. Under login method, choose "API key" and generate a new API key for the user
 
    <img style="width:600px" src="img/dialogflowversion2/image_1.png">
 
 {:start="3"}
 
-3. Make sure the user has chat and/or messaging slot > 0 based on the target channel of the bot.
+3. Make sure the user has chat and/or messaging slots (more than 0 for either), based on the channel you'd like the bot to take conversations from.
 
 {:start="4"}
 
-4. Set Max No of Live Chats
-
-   - If Chat in the drop down select - Value > 1.
-
-   - If Messaging Max No of Live Chats -> **No Chats and Max No of Messaging Conversations to Custom Setting and enter a value greater than 0**
-
-{:start="5"}
-
-5. Find api key name in bot user profile
+1. Find the API key name you created above the in bot user profile
 
    <img style="width:400px" src="img/dialogflowversion2/image_2.png">
 
----
+#### Provision a connector
 
-### Provision a connector
-
-To access Third-Party Bots, contact your Account Manager to enable the the feature in Conversational Cloud for your account.
+To enable Third-Party bots, contact your Account Manager to enable the feature in the Conversational Cloud for your account.
 
 Upon logging in to Conversational Cloud, you will see the Conversation AI Tab:
 
@@ -143,39 +133,52 @@ Follow the steps below to add a new bot.
 
 {:start="3"}
 
-3. Assign agent: Create a new Bot Agent or select an existing one
+3. Assign agent: Create a new bot agent or select the agent you created in the step above
 
 4. Choose conversation type: Chat or Messaging
 
-Settings for Chat: <br />
+#### Settings for Chat
+
 <img style="width:900px" src="img/botconnectordashboard/chat_settings.png">
 
-<ul>
-  <li>
-  Time until warning: Set up the time span after which the consumer will get an inactivity warning.
-  </li>
-  <li>
-  Warning message: The warning message the chat consumer gets if he reaches the threshold.
-  </li>
-  <li>
-  Time until conversation close: Set up the time duration after which the consumer chat conversation will be closed if the customer is inactive
-  </li>
-  <li>
-  Close message: The message which the consumer will receive prior to closing the conversation
-  </li>
-</ul>
+<table>
+  <thead>
+  <tr>
+    <th>Setting name</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Time until warning</td>
+      <td>Set up the time span after which the consumer will get an inactivity warning.</td>
+    </tr>
+    <tr>
+      <td>Warning message</td>
+      <td>The warning message the chat consumer gets if he reaches the threshold.</td>
+    </tr>
+    <tr>
+      <td>Time until conversation close</td>
+      <td>Set up the time duration after which the consumer chat conversation will be closed if the customer is inactive</td>
+    </tr>
+    <tr>
+      <td>Close message</td>
+      <td>The message which the consumer will receive prior to closing the conversation</td>
+    </tr>
+  </tbody>
+  </table>
 
-Settings for Messaging: <br />
+#### Settings for Messaging:
+
 <img style="width:900px" src="img/botconnectordashboard/messaging_settings.png">
 
-Settings for Welcome Messages: <br />
+##### Settings for Welcome Messages:
 
-The Bot Connector system is designed to respond to incoming messaging by the consumer, once the bot is engaged in the conversation. Enabling the Welcome Messages settings, allows Brands to compose an initial message that the bot can send out that is not in direct response to the consumers messages. This allows for the bot to connect to a conversation and send out an initial message without waiting for the consumer to send a message after the bot first joins the conversation.
+The Bot Connector system is designed to respond to incoming messaging by the consumer, once the bot is engaged in the conversation. Enabling the Welcome Messages setting allows brands to compose an initial message that the bot can send out that is not in direct response to the consumers messages but instead opens the conversation. This allows for the bot to connect to a conversation and send out an initial message without waiting for the consumer to send a message after the bot first joins the conversation.
 
+##### Settings for Combine Messages:
 
-Settings for Combine Messages: <br />
-
-By enabling the Combine Messages settings, it's possible to connect a certain amount of messages to one, before sending it to the bot. In that case, the bot only responds once to them, instead of handling every message as a single intent. Below is a GIF that clarifies the difference between enabled and disabled Combined Messages Feature.
+By enabling the Combine Messages settings you can combine a certain amount of messages into one, before sending it to the bot. If this feature is enabled, the bot only responds to all of the messages once, instead of handling every message as a single intent. Below is a GIF that clarifies the difference between enabled and disabled Combined Messages Feature.
 
 <ul>
   <li>
@@ -195,15 +198,17 @@ By enabling the Combine Messages settings, it's possible to connect a certain am
 </figure>
 <br />
 
-Settings for Engagement Attributes: <br />
+##### Settings for Engagement Attributes:
 
-Third-Party bots allows the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is selected. These attributes are collected only at the **_start_** of every conversation. These attributes are then passed along every message as context information. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Additionally the original Liveperson event from the chat or messaging api is sent along with each request to allow further customization and information.
+Third-Party bots allow the collection of engagement attributes ([documentation](engagement-attributes-types-of-engagement-attributes.html)) if this option is enabled. These attributes are collected only at the **start** of every conversation. These attributes are then passed alongside every message as contextual information. Third-Party bots leverage the LivePerson Visit Information API to collect these engagement attributes.
+
+Further information on the Visit Information API can be found [here](visit-information-api-visit-information.html). Additionally, the original LivePerson event from the chat or messaging API used to start the conversation and send messages is sent along with each request to allow further customization and information.
 
 ##### Example lpSdes object for Chat conversations
 
 The authenticated SDEs for Chat conversations have the same format as described [here](chat-agent-api-methods-retrieve-participant-info.html).
 
-```js
+```javascript
 const lpSdes = {
   unauthenticatedSdes: {
     customerInfo: {
@@ -436,12 +441,11 @@ const lpSdes = {
     }
   }
 };
-
 ```
 
 ##### Example lpSdes object for Messaging conversations
 
-```js
+```javascript
 const lpSdes = {
   unauthenticatedSdes: {
     customerInfo: {
@@ -701,12 +705,11 @@ const lpSdes = {
     }
   }
 };
-
 ```
 
 ##### Example lpEvent object of Messaging API
 
-```js
+```javascript
   const lpEvent = {
     sequence: 0,
     originatorClientProperties: {
@@ -799,7 +802,7 @@ const lpSdes = {
 
 ##### Example lpEvent object of the Chat API
 
-```js
+```javascript
   const lpEvent = {
     '@id': '3',
     '@type': 'line',
@@ -892,32 +895,47 @@ const lpSdes = {
 
 {:start="5"}
 
-5. Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service
+5. Setup Escalation: Skill to transfer to in the event of an error during connection to the AI service.
 
   <img style="width:900px" src="img/botconnectordashboard/error_handling.png">
 
-<ul>
-  <li>
-    Transfer message to Customer: Default escalation message to the consumer in case the bot encounters an error
-  </li>
-  <li>
-    Transfer message to Agent: Message to the Agent from the escalating bot which will be provided together with the conversation when it is transferred
-  </li>
-  <li>
-    Transfer failure message: Message to the customer in case the escalation to the default escalation skill did not work.
-  </li>
-  <li>
-    Transfer to skill: Default escalation skill the bot should escalate to in case of any error.
-  </li>
-    <li>
-    Enable error-hook: Liveperson Function which gets triggered when a bot is having an issue 
-  </li>
+<table>
+  <thead>
+  <tr>
+    <th>Setting name</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Transfer message to Customer</td>
+      <td>Default escalation message to the consumer in case the bot encounters an error.</td>
+    </tr>
+    <tr>
+      <td>Transfer message to Agent</td>
+      <td>Message to the Agent from the escalating bot which will be provided together with the conversation when it is transferred
+  </li>.</td>
+    </tr>
+    <tr>
+      <td>Transfer failure message</td>
+      <td>Message to the customer in case the escalation to the default escalation skill did not work.</td>
+    </tr>
+    <tr>
+      <td>Transfer to skill</td>
+      <td>Default escalation skill the bot should escalate to in case of any error.</td>
+    </tr>
+    <tr>
+      <td>Enable error-hook</td>
+      <td>LivePerson Function which gets triggered when a bot is having an issue .</td>
+    </tr>
+  </tbody>
+  </table>
 
-</ul>
+{: .important}
+If no other skills are configured, it might be that the bot will escalate the conversation to itself. In this case only new messages will be processed.
 
-**Note**: if no other skills are configured, it might be that the bot will escalate the conversation to itself. However in this case only new messages will be processed.
-
-6. Connect to A.I.: Choose an AI engine from a list. Add the configuration of AI. See [Next Steps](#next-steps).
+{:start="6"}
+1. Connect to A.I.: Choose an AI engine from the list of available configuration. See [Next Steps](#next-steps).
 
 ### Next Steps
 
