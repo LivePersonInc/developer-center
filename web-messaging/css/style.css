@@ -1,5 +1,5 @@
 body {
-    <<<<<<< HEAD=======>>>>>>>develop-pass background: #090C43 !important;
+    background: #090C43 !important;
     overflow: auto;
 }
 
@@ -10,18 +10,13 @@ body {
 }
 
 #lp_account {
-    <<<<<<< HEAD height: 56px;
-    width: 360px;
-    border-radius: 100px;
-    padding: 0 24px;
-    border: 2px solid white;
-    margin-left: -24px;
-    =======height: 44px;
+
+    height: 44px;
     width: 286px;
     border-radius: 8px;
     padding: 0 16px;
     border: 1px solid white;
-    >>>>>>>develop-pass color: white;
+    color: white;
     background-color: inherit;
 }
 
@@ -75,8 +70,7 @@ body {
     font-weight: bold;
     font-style: normal;
     margin-left: 24px;
-    <<<<<<< HEAD font-stretch: normal;
-    =======>>>>>>>develop-pass line-height: normal;
+    line-height: normal;
     letter-spacing: 0.01em;
     text-align: center;
     color: #ffffff;
