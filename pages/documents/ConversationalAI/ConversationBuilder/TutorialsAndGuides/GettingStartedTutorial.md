@@ -576,7 +576,7 @@ In this step, you use Conversation Builder to connect your bot to the bot agent 
     - **Deploy to**: Select "Demo." The Demo environment is a testing environment, and the Production environment is the live environment. It's always a best practice to test your bot in the Demo environment first, before deploying it to the Production environment.
 4. Click **Save**.
     
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/agentConnectorsPage1.png">
+    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/helloworld/agentConnectorsPage1.png">
 
 {: .important}
 LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
@@ -584,7 +584,7 @@ LivePerson recommends that, when you connect your bot to Conversational Cloud in
 ##### Start the agent connector
 
 - Click the **Start** button to start the agent connector. This fully deploys the bot.
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/agentConnectorsPage2.png">
+    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/helloworld/agentConnectorsPage2.png">
     It might take a few minutes for the connection to be established.
 
     To view more details about the connector, move your mouse over the **i** icon beside **Details**.
@@ -626,4 +626,4 @@ In this step, you'll be testing with Messaging, so you'll be using [this test pa
 
     As an agent, when you accept the inbound transfer, you should see something like this below in your Conversational Cloud dashboard. You can now take part in a live chat.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/helloworld/confLE_19.png">
+    <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/helloworld/confLE_19.png">

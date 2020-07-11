@@ -15,7 +15,7 @@ A meta intent is a wrapper that can contain many other standard [intents](intent
 
 <img style="width:550px" src="img/ConvoBuilder/meta_intent.png">
 
-<img style="width:800px" src="img/ConvoBuilder/meta_intent2.png">
+<img style="width:900px" src="img/ConvoBuilder/meta_intent2.png">
 
 ### Add a meta intent
 
