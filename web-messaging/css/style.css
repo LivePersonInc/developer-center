@@ -10,6 +10,7 @@ body {
 }
 
 #lp_account {
+
     height: 44px;
     width: 286px;
     border-radius: 8px;
@@ -20,7 +21,7 @@ body {
 }
 
 #lp_account::placeholder {
-  color: #818299;
+    color: #818299;
 }
 
 #lp_username {

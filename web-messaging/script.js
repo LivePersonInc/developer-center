@@ -10,8 +10,8 @@ if (site && username) {
     $("#lp_username").val(username);
     lpTag.identities = [];
     lpTag.identities.push(identityFn);
+    console.log("hello world i am in script");
     const usernameResult = 'lpTest' + username;
-
     function identityFn(callback) {
         callback({
             iss: "LivePerson",
@@ -20,7 +20,7 @@ if (site && username) {
         });
     }
 
-    lpTag.sdes.push({"type": "ctmrinfo", "info": {customerId: usernameResult}});
+    lpTag.sdes.push({ "type": "ctmrinfo", "info": { customerId: usernameResult } });
 
     window.LPJsMethodName = function (callback) {
         callback(username);
@@ -36,7 +36,7 @@ $("#lp_form").submit(function (e) {
     const site = $("#lp_account").val();
     const username = $("#lp_username").val();
 
-    if(window.location.href.includes(username) && username === "") {
+    if (window.location.href.includes(username) && username === "") {
         window.history.replaceState(null, null, window.location.pathname);
     }
     if (username === "") {
