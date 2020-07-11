@@ -57,5 +57,5 @@ solutions with you!
         <button class="create-button">Start Free Trial</button>
       </a>
     </div>
-  </div>
+</div>
 </div>
