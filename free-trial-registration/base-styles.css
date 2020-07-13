@@ -1,0 +1,38 @@
+html, body, #root {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/RobotoSlab-VariableFont_wght.ttf');
+}
+
+/* Override Google Recaptch styles */
+.g-recaptcha {
+    transform:scale(0.77);
+    transform-origin:0 0;
+}
