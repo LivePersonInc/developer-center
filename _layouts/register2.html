@@ -4,6 +4,7 @@
   <meta name="description" content="LivePerson for Developers. Build on the Conversational Cloud with our powerful digital toolbox.">
   <meta name="keywords" content="API, SDK, mobile, LiveEngage, agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
   <meta name="author" content="LivePerson Inc.">
+  
   <link rel="shortcut icon" href="{{ "images/favicon.ico"  }}">
   <link rel="stylesheet" href="{{ "css/register.css" }}">
   <link rel="stylesheet" href="{{ "css/confirmation.css" }}">
@@ -11,7 +12,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,400,500,600,700,300" >
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,400,500,600,700,300" >
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,400italic,700,700italic,300,600" >
-
+  
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -20,9 +21,11 @@
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://cdn.rawgit.com/rikmms/progress-bar-4-axios/0a3acf92/dist/index.js"></script>
+  
   <script  src="{{ "js/additionalscripts.js" }}"></script>
-  <script  src="{{ "js/register.js" }}"></script>
+  <script  src="{{ "js/register2.js" }}"></script>
   <script  src="{{ "js/jquery-scrolltofixed-min.js" }}"></script>
+  
   <script>
    (function(h,o,t,j,a,r){
     h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -33,8 +36,9 @@
     a.appendChild(r);
    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
   </script>
+  
   <script type="text/javascript" id="" src="//info.liveperson.com/js/forms2/js/forms2.js"></script>
-  <script type="text/javascript" src="//lp-site-engagements.s3.amazonaws.com/mkto-custom.min.js?cacheBust={{ site.time | date_to_xmlschema }}"></script>
+  <script type="text/javascript" src="//lp-site-engagements.s3.amazonaws.com/mkto-custom.min.js?cacheBust={{ site.time | date_to_xmlschema }}"></script>  
 </head>
 <body>
 <div id="registerWrapper">
@@ -80,7 +84,6 @@
         <span class="conditionButton" id="agreeMessage">Please agree to the terms & conditions by clicking the button above.</span>
         <span class="conditionButton success" id="successMessage">Looking good! Creating your account now, just a moment.</span>
         <span class="conditionButton failure" id="requestError">Sorry, we were unable to create your account. Please try again.</span>
-        <span class="conditionButton useBusinessEmail" id="useBusinessEmail">Please register with a business email address.</span>
       </div>
     </div>
 

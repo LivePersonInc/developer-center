@@ -14,7 +14,7 @@ The Conversation Builder platform's Intent Builder allows you to build multiple 
 
 Intents direct a bot to be more flexible and respond to a wider variety of user input. Instead of looking for specific patterns in the input (for example, the pattern "bill"), the bot uses a Natural Language Understanding (NLU) engine to look for a defined intent. Then the bot triggers the dialog that's configured to respond to the intent. Therefore, once you configure your intents with robust *training phrases*, expressions like, "I have a question about billing", "Looking to check my account," or "What's my billing status?" yield the same intent and, thus, the same response from the bot.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_intentDetails.png">
+<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/ib_intentDetails.png">
 
 {: .important}
 See [here](intent-builder-natural-language-understanding.html) to learn more about the different NLU engines that are compatible with Conversation Builder.
