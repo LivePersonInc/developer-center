@@ -36,6 +36,9 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 4. Click **Save**.
 
+{: .important}
+When you add an article manually, it is disabled by default. This means it won't be returned by knowledge base searches in Knowledge Base integrations. To have this happen, you must enable the article, which is described farther below on this page. 
+
 ### Add content links
 
 You can use the content links in the **Advanced Settings** of an article to send rich content (hyperlink, audio, image, and/or video) along with an article. 
