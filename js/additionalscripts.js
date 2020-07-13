@@ -711,20 +711,22 @@ function scrollToHash() {
     if (window.location.hash && window.location.hash != "#top") {
       var hash = window.location.hash;
       var linkScroll = $('a[href*="' + hash + '"]');
+      console.log(linkScroll);
       if (linkScroll.length > 1) {
-        var linkOffset = $(linkScroll[1]).offset().top;
+        var linkOffset = $(linkScroll[0]).offset().top;
       } else {
         var linkOffset = $(linkScroll).offset().top;
       }
+      console.log(linkOffset);
       $("body, html").animate(
         {
-          scrollTop: linkOffset,
+          scrollTop: linkOffset - 120,
         },
         1000,
         "swing"
       );
     }
-  }, 1000);
+  }, 3000);
 }
 function menuDrop() {
   //begin by setting the list's data to reflect that it's open
