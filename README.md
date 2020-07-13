@@ -1,5 +1,6 @@
 ## LivePerson Developer Center
 
+In the process of adding verification of files
 **As of August 2018, please open all Pull Requests DIRECTLY TO THE MASTER BRANCH ON THE PUBLIC VERSION OF THIS REPOSITORY. THERE IS NO MORE NEED FOR THE INTERNAL REPOSITORY**
 
 **This site is maintained by the Product Communications and Experience team. Please contact lmart@liveperson.com for issues, questions, and the such**.
@@ -60,8 +61,6 @@ Once you've created a new document, you'll need to have it manually added. We ch
 
 The sidebar's YAML file can be found in the `_data` folder. It's called `documentsupdated.yaml`. You **must** make sure the name of the file and the name in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file's header (see above).
 
-The max width for an image in this repo is 800px.
-
 ### Building the Site Locally
 
 If you have not already done so, make sure your computer has Ruby installed. Here's a helpful guide on how best do that on [Mac](http://railsapps.github.io/installrubyonrails-mac.html) (you can stop once Ruby is installed, you don't need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/).
@@ -95,7 +94,6 @@ You have two options to run the site locally after the first install:
 ### Template
 
 See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to Product Communications *before* starting to write your document so that we can advise on its structure.
-
 
 ### Licensing
 
