@@ -4,7 +4,7 @@ redirect_from:
   - first-steps.html
 sitesection: Documents
 categoryname: "Getting Started"
-permalink: first-steps.html
+permalink: getting-started-with-your-free-trial-account.html
 indicator: both
 ---
 
