@@ -24,7 +24,6 @@ However, a similar scenario might be implemented by simply connecting LivePerson
 
 ### Messaging Conversation Survey events for Function Invocation
 
-
 * Messaging Survey Started
 
 * Messaging Survey Ended
