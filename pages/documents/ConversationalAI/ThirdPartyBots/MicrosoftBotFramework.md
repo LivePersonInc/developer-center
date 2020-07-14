@@ -193,7 +193,6 @@ For detailed information on Quick Replies check out the documentation for the sp
 
 Figure 4.2 Activity with Quick Replies
 
-
 ### Welcome Event
 
 The behavior of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual LivePerson product works..
@@ -218,7 +217,6 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
 
 Figure 5.1 Welcome activity on chat
 
-
 ### Transfer / Escalations
 
 Transfers and escalations are straightforward in both chat and messaging.
@@ -232,8 +230,29 @@ When a transfer is requested by the bot, the provided skill name is matched to t
 When naming skills the bot can escalate to, you should use the Kebab Case <italic>(e.g. human-expert)</italic> for the skill matching to work.
 </div>
 
-For **Microsoft Bot Framework**, the bot should provide the specific action in the **channelData** of the message activity.
-The action must be named **"TRANSFER"** and the skill must be provided in the parameters object as shown in Figure 6.1
+For **Microsoft Bot Framework**, the bot should provide the specific name in the payload of the activity.
+You can use the official Microsoft BotBuilder SDK method called [EventFactory.createHandoffInitiation](https://docs.microsoft.com/en-us/javascript/api/botbuilder/eventfactory?view=botbuilder-ts-latest).
+
+An additional text message can also be provided.
+
+```javascript
+{
+  import { EventFactory, TurnContext } from "botbuilder";
+
+  // context should be of type TurnContext
+  const handoffContext = { skill: "CUSTOM" };
+
+  const payload = {
+    text: "",
+    ...EventFactory.createHandoffInitiation(context, handoffContext),
+  };
+}
+```
+
+Figure 6.1 Bot activity for a transfer request
+
+Also, you can provide the specific action in the **channelData** of the message activity.
+The action must be named **"TRANSFER"** and the skill must be provided in the parameters object as shown in Figure 6.2
 
 An additional text message can also be provided.
 
@@ -252,12 +271,28 @@ An additional text message can also be provided.
 }
 ```
 
-Figure 6.1 Bot activity for a transfer request
+Figure 6.2 Alternative bot activity for a transfer request
 
 ### Close Conversation
 
-To close a chat or messaging conversation, we provide an action object similar to a transfer. 
-The action must be named **"CLOSE_CONVERSATION"**
+To close a chat or messaging conversation, we provide an action object similar to a transfer.
+
+For that, we can use the official Microsoft BotBuilder Activity Type **[End of Conversation](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#endofconversation)**.
+
+An additional text message can also be provided.
+
+```json
+{
+  "type": "endOfConversation",
+  "text": ""
+}
+```
+
+Figure 7.1 Bot Activity for a close conversation request
+
+Also, you can provide the specific action in the **channelData** of the message activity.
+The action must be named **"CLOSE_CONVERSATION"**.
+
 An additional text message can also be provided.
 
 ```json
@@ -272,7 +307,7 @@ An additional text message can also be provided.
 }
 ```
 
-Figure 7.1 Bot Activity for a close conversation request
+Figure 7.2 Alternative bot Activity for a close conversation request
 
 ### Advanced Features
 
@@ -325,16 +360,15 @@ It is possible to send an event of type "delay" before regular content events an
   }
 }
 ```
+
 Figure 8.2 Activity resulting in a delay with typing indicator
 
-* **delay:** This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
-* **typing:** This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
-
+- **delay:** This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
+- **typing:** This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
 
 **Note:**
 This **single** delay activity will only work as expected if you've enabled the "Multiple Activities" feature in the bot configuration.
 Using the delay as a sole response activity without this feature is effectively a ‘no response’ action and might only be useful if the bot should not respond at all without an error escalation.
-
 
 #### Sending Private Text Messages
 
@@ -374,7 +408,6 @@ A single private text message with an action can be send by adding `text` and `m
 
 Figure 8.3 Transfer activity with a private message visible to agents and managers
 
-
 #### Engagement attributes as context
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.3.
@@ -400,17 +433,16 @@ Figure 8.5 Customer activity excerpt on a new chat
 
 #### Sending Multiple Responses
 
-As stated under Limitations the default behaviour of our connector is to process the first responses we find on the channel. In case `Multiple Activities` 
+As stated under Limitations the default behaviour of our connector is to process the first responses we find on the channel. In case `Multiple Activities`
 is not enabled or the waiting period is set to low, the connector might not retrieve every activity your bot is sending.
 
 In that case we also provide a way to define multiple bot responses in a single Direct Line activity. As with all channel specific content this is defined in the channelData property.
 The array in the multiMessage property can contain the objects identified by the following types:
 
-* **text:** A plain message
-* **delay:** A delay between messages. **Important**: This format is different from the one described further above for a single message. You can only define the delay. There is no flag for the typing indicator.</li>
-* **private-message:** A private message as described in [Sending Private Text Messages](#sending-private-text-messages)
-* **structured-content:** A structured content as described in [Rich Content (Structured Content)](#rich-content--structured--content)
-
+- **text:** A plain message
+- **delay:** A delay between messages. **Important**: This format is different from the one described further above for a single message. You can only define the delay. There is no flag for the typing indicator.</li>
+- **private-message:** A private message as described in [Sending Private Text Messages](#sending-private-text-messages)
+- **structured-content:** A structured content as described in [Rich Content (Structured Content)](#rich-content--structured--content)
 
 ```javascript
 {
@@ -463,7 +495,6 @@ Failing to comply with the above validation points will cause the message to be 
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses.
 
-
 ##### Sending a Text Message with Encoded Metadata
 
 For sending `encodedMetadata` with a text message you need to provide this property in `channelData` object. Be careful with the camel-case characters you must provide it exactly the same. An example of the simple text message response is below:
@@ -477,8 +508,8 @@ For sending `encodedMetadata` with a text message you need to provide this prope
   }
 }
 ```
-Figure 8.6 Activity excerpt containing encodedMetadata for plain text
 
+Figure 8.6 Activity excerpt containing encodedMetadata for plain text
 
 ##### Sending Rich Content (structured content) with Encoded Metadata
 
@@ -516,8 +547,8 @@ For sending [structured content](getting-started-with-rich-messaging-introductio
   }
 }
 ```
-Figure 8.7 Activity excerpt containing encodedMetadata for Rich Content
 
+Figure 8.7 Activity excerpt containing encodedMetadata for Rich Content
 
 ##### Sending Multiple Responses with Encoded Metadata
 
