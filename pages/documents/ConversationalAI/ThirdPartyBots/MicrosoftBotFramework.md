@@ -401,13 +401,13 @@ Figure 8.5 Customer activity excerpt on a new chat
 #### Sending Multiple Responses
 
 As stated under Limitations the default behaviour of our connector is to process the first responses we find on the channel. In case `Multiple Activities` 
-is not enabled or the waiting period is set the connector might not retreive every activity your bot is sending.
+is not enabled or the waiting period is set to low, the connector might not retrieve every activity your bot is sending.
 
-In that case we also provide a way to define multiple bot responds in a single Direct Line activity. As with all channel specific content this is defined in the channelData property.
+In that case we also provide a way to define multiple bot responses in a single Direct Line activity. As with all channel specific content this is defined in the channelData property.
 The array in the multiMessage property can contain the objects identified by the following types:
 
 * **text:** A plain message
-* **delay:** A delay between messages. **Important** This format is different than described further above for a single message. You can only define the delay in seconds. There is no flag for the typing indicator.</li>
+* **delay:** A delay between messages. **Important**: This format is different from the one described further above for a single message. You can only define the delay. There is no flag for the typing indicator.</li>
 * **private-message:** A private message as described in [Sending Private Text Messages](#sending-private-text-messages)
 * **structured-content:** A structured content as described in [Rich Content (Structured Content)](#rich-content--structured--content)
 
