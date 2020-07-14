@@ -17,9 +17,9 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 
 ### Get and set bot variable
 
-The **Set** Bot Variable function is used for setting a value to the botVariable so that it can be used in further code and it returns a string data types to the results. These botVariables are available throughout the entire bot.
+The **Set** Bot Variable function is used for setting a value to the botVariable so that it can be used in further code, and it returns a string. These variables are available throughout the entire bot.
 
-The **Get** Bot Variable function is used for getting the bot variable. Bot Variables that are not set will return NULL.
+The **Get** Bot Variable function is used for getting the bot variable. Bot variables that are not set will return NULL.
 
 {: .important}
 botVariables are strings. Whatever the data type of your input, it will be converted to a string. If you set a botVariable to an integer (ie: 10) it will be converted to “10”. When called using `getBotVariable()`, to be used as an integer again, you would need to convert it back to an integer (ie: 10*1).
@@ -31,7 +31,7 @@ botVariables are strings. Whatever the data type of your input, it will be conve
 
 #### Example
 
-In the below example, we are using `getBotVariable` to retrieve a string and an integer which may need to be handled slightly differently, depending on your situation.
+In the example below, we're using `getBotVariable` to retrieve a string that represents an integer, which might need to be handled slightly differently depending on your situation.
 
 ```javascript
 // retrieving an integer
@@ -41,7 +41,7 @@ if (count > 10) {
       botContext.sendMessage('You have more than 10 items!');
 } else {
   botContext.setBotVariable('Howmanyitems',0,true,false);
-  botContext.sendMessage('Sorry, you dont have any items with you... ');
+  botContext.sendMessage('Sorry, you do not have any items with you... ');
 }
 ```
 
@@ -117,32 +117,6 @@ case "help":
     skillName = intent;
     break;  
 }      
-```
-
-
-### Get user channel
-Returns the platform channel the user is currently communicating on. This function returns:
-
-* lp_sms (for SMS)
-* lp_web (for Web)
-* lp_inapp (for In-app SDK)
-* lp_whatsapp (for WhatsApp)
-* lp_rcs (for RCS)
-* lp_abc (for Apple Business Chat)
-* twilio_sms (for Twilio SMS)
-* lp_fb (for Facebook)
-
-The "lp_" prefix indicates the LivePerson platform.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `getUserChannel()` | None | lp_sms, lp_web, lp_inapp, lp_whatsapp, lp_rcs, lp_abc, twilio_sms, lp_fb |
-
-#### Example
-
-```javascript
-var channel = botContext.getUserChannel();
-botContext.printDebugMessage("channel used by the user is: " + channel);
 ```
 
 

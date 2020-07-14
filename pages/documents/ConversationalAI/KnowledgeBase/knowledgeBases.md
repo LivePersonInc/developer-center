@@ -17,7 +17,7 @@ indicator: both
     * **Data source name**: Enter a display name for the knowledge base.
     * **Data source type**: Select "Knowledge Base."
     * **Language**: Select the language of the knowledge base. The default value is English. For details on how the language is used, see [here](knowledge-base-overview.html#languages) in the overview.
-    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. The Google sheet must be public, i.e., with no file restrictions in place. For details on creating an import file, see [here](knowledge-base-knowledge-bases.html#create-an-import-file) below. 
+    * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. The Google sheet must be public, i.e., with no file restrictions in place. For details on creating an import file, see farther below. 
         
         If you select "Google Sheet" and you provide the URL to the sheet, be aware that this establishes a link between the knowledge base and the sheet. If you later sync the knowledge base, it is updated with the current contents in the sheet. 
 
@@ -29,6 +29,8 @@ indicator: both
 
     This creates the knowledge base, and takes you to its search view. In this default view, you can search the title, intent qualifiers and content of articles.
 
+    If you specified a CSV or Google sheet to use as an import file, the articles in the file are enabled by default. This means they will be returned by knowledge base searches in a Knowledge Base integration, once you add an integration. You can disable articles on a per article basis, as described [here](knowledge-base-articles.html#enable-or-disable-an-article). 
+
 ### Create an import file
 
 If you want to import a set of articles into a knowledge base when you add the knowledge base, you'll need to create the import file.
@@ -37,7 +39,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 
 **To create an import file**
 
-1. Create a new CSV file or Google sheet.
+1. Create a new CSV file or Google sheet. A Google sheet must be public, i.e., with no file restrictions in place.
 2. Add the column headers listed below; use the order listed in the table below.
 3. Fill out the rows with your article data. It's recommended that you complete at least these columns: title, summary, detail, tags, and alternates (if using Knowledge Base intents) or intentName (if using Domain intents).
 
@@ -106,7 +108,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
 After you've made changes to the Google sheet that's linked to the knowledge base, sync the knowledge base to update it with the content.
 
 {: .important}
-This action overwrites the content in the knowledge base with the content in the Google sheet, so use caution when performing this.
+This action overwrites the content in the knowledge base with the content in the Google sheet, so use caution when performing this. Also be aware that newly added articles are enabled by default (which means they are returned in knowledge base searches in Knowledge Base integrations), so ensure the contents of the sheet are suitable before you sync. You can disable articles on a per article basis, as described [here](knowledge-base-articles.html#enable-or-disable-an-article).
 
 Before performing a sync, make sure the Google sheet includes the "id" column that contains the IDs for all existing articles. If it doesn't, update the sheet accordingly before syncing.
 

@@ -53,7 +53,7 @@ You will want to review each of the dialogs, starting with Welcome and customize
 
 This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
 
-If you want to remove any capture interactions, you will need to be sure to review the Next Step navigation so that the previous interaction will go to the next interaction in the dialog.
+If you want to remove any capture interactions, you will need to be sure to review the Next Action navigation so that the previous interaction will go to the next interaction in the dialog.
 
 #### Contact Info, Lending, and Financial Info dialogs
 All text-based questions within the dialogs are performing some level of validation on the user’s response using RegEx. You can supply your own RegEx if you prefer.

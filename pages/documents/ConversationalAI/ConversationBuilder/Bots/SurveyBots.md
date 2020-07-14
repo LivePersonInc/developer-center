@@ -66,7 +66,7 @@ A survey can be closed in the following ways:
 * The survey is completed.
 * The survey times out.
 
-Both outcomes are tracked and reported on as part of the Report Builder, so you can fully analyze the results.
+Both outcomes are tracked and reported on as part of the Analytics Builder, so you can fully analyze the results.
 
 ### Prerequisite steps
 
@@ -179,15 +179,15 @@ Survey bot settings include:
 
 ### Step 4 - Trigger the bot
 
-In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes the survey will be triggered and the agent workspace will show the caption, “Survey in progress.”
+In order to trigger the survey, start a conversation on the account and skill on which you’ve defined the survey and bring the conversation to an end, either from the consumer or the agent side. Once the conversation closes, the survey will be triggered, and the agent workspace will show the caption, “Survey in progress.”
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/surveyBot_triggerSurvey.png">
 
-While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey (if you've specified "Close Conversation" as the next step) or when the survey times out. In cases of an error with the survey flow or the survey bot, Conversational Cloud will close the survey after 48 hours as part of a conversation cleanup process.
+While the survey is active the agent won’t be able to write in the conversation. The survey will end when the consumer finishes entering the survey (if you've specified "Close Conversation" as the next action) or when the survey times out. In cases of an error with the survey flow or the survey bot, Conversational Cloud will close the survey after 48 hours as part of a conversation cleanup process.
 
 ### The agent experience
 
-Once a conversation ends and a survey begins, the conversation no longer appears in the Open Conversations list in Conversational Cloud. Instead, it appears in the All Conversations list with a status that indicates the survey is in progress:
+Once a conversation ends and a survey begins, the conversation no longer appears in the **Open Conversations** list in Conversational Cloud. Instead, it appears in the **All Conversations** list with a status that indicates the survey is in progress:
 
 <img class="fancyimage" style="width:850px" src="img/ConvoBuilder/surveyBot_agent1.png">
 
@@ -219,13 +219,7 @@ Some brands are existing Bot Studio users who manage surveys in Bot Studio. Othe
 
 ### Monitoring survey bots
 
-If you have Bot Status Access [permissions](bot-accounts-permissions.html), you can use the Bots Status application that's intended for monitoring agent connectors to monitor your survey bots. There are a few important distinctions to be aware of as you do so:
-
-* You can identify survey bots by examining the **User Name**. This is always "Survey Connector." (Normal bots display the agent name that's configured in Conversational Cloud.)
-* While each survey bot is listed individually in the dashboard, they all share a single agent connector.
-* Successfully deployed survey bots display "Deployed" beneath the bot name.
-
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/surveyBot_monitoring1.png">
+If you have Bot Status Access [permissions](bot-accounts-permissions.html), you can use the Bots Status application that's intended for monitoring agent connectors to monitor your survey bots.
 
 In Bots Status, you can redeploy the connector as a troubleshooting technique.
 
@@ -235,79 +229,8 @@ Additionally, there are a few operations available that are specifically for bra
 * Refresh the connector
 * Roll back to Bot Studio
 
-For details on all these operations, see below.
-
 {: .important}
-Keep in mind that all survey bots share a single agent connector, so performing any operation on one survey bot affects all the survey bots.
-
-#### Redeploy the survey bot connector
-
-Redeploying the connector stops and restarts it. Use this as a troubleshooting technique when the connector appears to be in a stuck state.
-
-**To redeploy the survey bot connector**
-
-1. In the Conversational AI dashboard, click **Bots Status**.
-2. Use the filter controls to display the survey bots for the relevant environment.
-3. Move the cursor over the area to the left of the name of one of the survey bots, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon).
-4. Select **Redeploy Connector**.
-
-#### Migrate to Conversation Builder
-
-{: .important} 
-This procedure is for brands that are moving from managing surveys in Bot Studio to doing so in Conversation Builder.
-
-If you currently use Bot Studio to trigger surveys, you must *manually switch* to triggering surveys from Conversation Builder. Follow this procedure after you've finished with survey development and testing using Conversation Builder.
-
-**To migrate to Conversation Builder**
-
-1. In the Conversational AI dashboard, click **Bots Status**.
-2. Use the filter controls to display the survey bots for the relevant environment.
-3. Move the cursor over the area to the left of the name of one of the survey bots, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon).
-4. Select **Migrate to Conversation Builder**.
-
-    A confirmation message appears to indicate that the account has been migrated to Conversation Builder.
-
-    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/surveyBot_monitoring4.png">
-
-    Subsequently, the page is refreshed. You should see each survey bot listed individually with a "Deployed" indicator.
-
-     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/surveyBot_monitoring5.png">
-
-#### Refresh the survey bot connector
-
-{: .important} 
-This procedure is for brands that are moving from managing surveys in Bot Studio to doing so in Conversation Builder.
-
-If you've just migrated from Bot Studio to Conversation Builder, but things don't seem to be working, use this procedure as a troubleshooting technique. Refreshing the connector toggles an underlying system setting to put things in sync.
-
-**To refresh the survey bot connector**
-
-1. In the Conversational AI dashboard, click **Bots Status**.
-2. Use the filter controls to display the survey bots for the relevant environment.
-3. Move the cursor over the area to the left of the name of one of the survey bots, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon).
-4. Select **Refresh Connector**.
-
-#### Roll back to Bot Studio
-
-{: .important} 
-This procedure is for brands that are moving from managing surveys in Bot Studio to doing so in Conversation Builder.
-
-Rolling back to Bot Studio reverts your account to triggering surveys from Bot Studio instead of Conversation Builder. This undeploys the survey connector in Conversation Builder.
-
-**To roll back to Bot Studio**
-
-1. In the Conversational AI dashboard, click **Bots Status**.
-2. Use the filter controls to display the survey bots for the relevant environment.
-3. Move the cursor over the area to the left of the name of one of the survey bots, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon).
-4. Select **Roll back to Bot Studio**.
-    
-    A confirmation message appears to indicate that the account has been rolled back to Bot Studio.
-
-    <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/surveyBot_monitoring2.png">
-
-    Subsequently, the page is refreshed. You should see a single, undeployed survey connector.
-
-     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/surveyBot_monitoring3.png">
+For details on all these operations, see [here](bots-status-managing-post-conversation-survey-bots.html). Keep in mind that all survey bots share a single agent connector, so performing any operation on one survey bot affects all the survey bots.
 
 ### Migrating from Bot Studio to Conversation Builder
 
@@ -318,7 +241,7 @@ Be aware that bots in Bot Studio and Conversation Builder cannot run side by sid
 1. In Conversation Builder, manually recreate your survey bots. (If you're developing in your Production environment, which is not common and not recommended, assign the survey bots to "test" skills that aren't used in a production campaign, so you can test them before assigning production skills to them.) 
 2. Test the survey bots.
 3. Release the new survey bots to your Production environment.
-4. Use the Bots Status application to migrate your account from Bot Studio to Conversation Builder. For details on this, see *Monitoring Survey Bots* above.
+4. Use the Bots Status application to migrate your account from Bot Studio to Conversation Builder. For details on this, see [here](bots-status-managing-post-conversation-survey-bots.html#migrate-to-conversation-builder).
 
 {: .important}
 While you're completing steps 1 - 3, you can continue to use Bot Studio. Once you complete step 4, you can no longer use Bot Studio.

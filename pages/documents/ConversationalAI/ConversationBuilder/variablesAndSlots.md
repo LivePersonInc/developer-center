@@ -51,7 +51,7 @@ Slots are a *special type* of variable. Most of the time, you will use [variable
 
 When combined with [entities](conversation-builder-intent-builder-entities.html), slots bring dynamic, fluid behavior to storing user input data.
 
-For example, if you add a question interaction "what type of shoes are you looking for?", the [NLU Assist](conversation-builder-nlu-assist.html#assigning-an-entity-and-slots-to-an-interaction) tool will suggest appropriate entities and slots for that interaction. As long as the user stays within the bounds of entities that you have created, slots will automatically adjust and update based upon user input throughout the conversation.
+For example, if you add a question interaction "what type of shoes are you looking for?", the [Assist](conversation-builder-assist.html#associate-a-question-with-an-entity) tool will suggest appropriate entities and slots for that interaction. As long as the user stays within the bounds of entities that you have created, slots will automatically adjust and update based upon user input throughout the conversation.
 
 #### Adding a slot
 

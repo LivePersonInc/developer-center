@@ -35,7 +35,9 @@ As shown above, a profile contains a set of permissions. Conversation Builder su
 
 #### Conversation Builder: Administrator
 
-Users with this permission have full privileges (with exceptions noted below), including the ability to create, deploy and manage agent connectors at the bot level within Conversation Builder.
+Users with this permission can view and edit public bots and their own private bots.
+
+Additionally, users with this permission have full privileges (with exceptions noted below), including the ability to create, deploy and manage agent connectors at the bot level within Conversation Builder.
 
 Users with this permission do have the following limitations:
 
@@ -43,6 +45,8 @@ Users with this permission do have the following limitations:
 * No access to the Bot Status application, which is the operations area where bot deployments for the entire organization can be managed
 
 #### Conversation Builder: Bot Builder
+
+Users with this permission can view and edit public bots and their own private bots.
 
 This permission provides full privileges for creating bots and related resources. More specifically, users with this permission can create and manage:
 

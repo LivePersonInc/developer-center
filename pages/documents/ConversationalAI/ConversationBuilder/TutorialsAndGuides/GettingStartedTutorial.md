@@ -618,7 +618,7 @@ In this step, you'll be testing with Messaging, so you'll be using [this test pa
 
 7. Return to Conversational Cloud. On the left sidebar, note on the "Agent workspace for Chat" icon that there's a message indicator.
 
-    <img class="fancyimage" style="width:75px" src="img/ConvoBuilder/helloworld/messageindicator.png">
+    <img class="fancyimage" style="width:60px" src="img/ConvoBuilder/helloworld/messageindicator.png">
 
 8. Click the icon to enter the agent workspace in Conversational Cloud. Then click **Accept** in the lower-left corner.
 

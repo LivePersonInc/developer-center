@@ -38,7 +38,7 @@ Your ability to redirect or restrict context switching depends on whether the co
 
 When a bot sends an open-ended statement, such as, "Please type your query below," it simply awaits the consumer's response. As a result, whatever the response is, it is processed by the NLU engine to try and find a matching intent and dialog. And if one is found, that dialog is "pushed" to the top of the dialog stack, and its flow immediately begins.
 
-However, in contrast to open-ended statements, questions can have response conditions applied to the consumer's response, so they can be used to redirect the conversation flow (via the Next Step setting). Depending on the implementation, this can restrict context switching or prevent it from occurring. For example, if a dialog includes an interaction that specifies "end interaction" as its Next Step, this ends the conversation.
+However, in contrast to open-ended statements, questions can have response conditions applied to the consumer's response, so they can be used to redirect the conversation flow (via the Next Action setting). Depending on the implementation, this can restrict context switching or prevent it from occurring. For example, if a dialog includes an interaction that specifies "end interaction" as its Next Action, this stops the flow within the dialog.
 
 #### Preventing context switching
 

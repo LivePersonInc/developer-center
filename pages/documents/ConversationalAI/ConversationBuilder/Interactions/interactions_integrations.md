@@ -36,7 +36,7 @@ When an integration interaction is processed, the order of invocation is as foll
 1. Pre-process code
 2. Integration call, e.g., API call
 3. Post-process code
-4. Next step
+4. Next action
 
 #### Defining rules based on the result of the API integration
 

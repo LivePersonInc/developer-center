@@ -53,7 +53,7 @@ Bot settings include:
 
 - **Conversation Builder Platform Version**: Read-only. This identifies the platform version of the bot. Typically, you don’t need this information, but here’s where you can find it if asked for it (for example, in a support scenario).
 
-- **Entity**: You can use this option to associate _a domain_ with the bot. However, the [NLU Assist](conversation-builder-nlu-assist.html) tool provides you with help in associating domains with dialogs, so typically you don’t need to specify a domain here.
+- **Entity**: You can use this option to associate _a domain_ with the bot. However, the [Assist](conversation-builder-assist.html) tool provides you with help in associating domains with dialogs, so typically you don’t need to specify a domain here.
 
 - **Bot Account**: If you logged into Conversation Builder directly (i.e., _not_ via single sign-on from Conversational Cloud) and you have access to multiple organizations within your Conversational Cloud account, you can use this setting to change the organization under which this bot exists. If you logged into Conversation Builder via single sign-on from Conversational Cloud, the organization you were using in Conversational Cloud is active and can't be changed, and nothing appears in this list.
 

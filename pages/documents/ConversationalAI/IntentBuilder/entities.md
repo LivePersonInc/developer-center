@@ -12,9 +12,9 @@ indicator: both
 
 ### What's an entity?
 
-Entities are keywords that represent a number of synonyms. For instance, the entity `sports` could refer to or represent the following group of items: "walking", "jogging", "running", "football" and so on. Whenever an entity is referred to, the group which it represents is automatically inserted by the bot. So if a user sends the sentence, "I'm interested in running," the bot invokes the entity `sports`.
+Entities are keywords that represent a number of synonyms. For instance, the entity `sports` could refer to or represent the following group of items: "walking", "jogging", "running", "football" and so on. Whenever an entity is referred to, the group that it represents is automatically inserted by the bot. So if a user sends the sentence, "I'm interested in running," the bot invokes the entity `sports`.
 
-Therefore, when you're creating training phrases for an intent, instead of typing in multiple phrases like so: "I'm interested in walking", "I'm interested in jogging", "I'm interested in running", you can just create one training phrase which will look like the following:
+Therefore, when you're creating training phrases for an intent, instead of typing in multiple phrases like so: "I'm interested in walking", "I'm interested in jogging", "I'm interested in running", you can just create one training phrase that looks like the following:
 
 "I'm interested in `sports`".
 
@@ -24,7 +24,7 @@ Entities are usually one or two words as they represent groups of simple objects
 
 ### Built-in entities
 
-The platform automatically detects the entities listed below. Using the [NLU Assist](conversation-builder-nlu-assist.html) tool, you can assign these default entities to user interactions and have the bot populate a [slot](conversation-builder-conversation-builder-variables-slots.html#slots) with the user's input to the question to which the entity was assigned.
+The platform automatically detects the entities listed below. Using the [Assist](conversation-builder-assist.html) tool, you can assign these default entities to user interactions and have the bot populate a [slot](conversation-builder-conversation-builder-variables-slots.html#slots) with the user's input to the question to which the entity was assigned.
 
 * PERSON - Names of people, persons.
 
@@ -50,9 +50,22 @@ You can see from the example below, that having 2 entities match the training ph
 
 <img class="fancyimage" style="width:400px" src="img/testuserinput.png">
 
+### Add an entity
+
+**To add an entity**
+
+1. Open the domain.
+2. In the upper-left corner, click **Entities**.
+3. Click **Add Entity** in the upper-right corner.
+4. Specify the following:
+    * **Entity name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
+    * **Entity values**: Enter each entity value, pressing Enter after each one.
+5. Click **Save** in the lower-right corner.
+6. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the addition is reflected in a new model version.
+
 ### Using entities
 
-To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, review [Knowledge Base tutorial](knowledge-base-tutorial.html).
+To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, review the [Knowledge Base tutorial](knowledge-base-tutorial.html).
 
 #### Can I detect entities using JavaScript?
 
@@ -101,3 +114,19 @@ if (color != null && color.length > 0) {
 Sometimes you need a number of entities to map to a single value. For instance, multiple misspellings or alternative utterances that all mean the same thing. Let’s take an Airport example where we want to detect different ways people might enter names of airports. We can use the data value to be the unifier for these different possible utterances.
 
 Using a similar script to the above color example, which returns the data value, would get you the "LAX" or “DFW” you need.
+
+### Delete an entity
+
+Deleting an entity is a non-recoverable action, so be certain about doing so before taking this action.
+
+{: .important}
+Before you delete an entity, ensure that it isn't being used in any intents or Knowledge Base articles.
+
+**To delete an entity**
+
+1. Open the domain.
+2. In the upper-left corner, click **Entities**.
+3. In the left panel, select the entity.
+4. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
+5. In the confirmation dialog, click **Yes**.
+6. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the deletion is reflected in a new model version.

@@ -19,7 +19,9 @@ A meta intent is a wrapper that can contain many other standard [intents](intent
 
 ### Add a meta intent
 
-The process for creating a meta intent is very similar to creating standard intents. From the Add Intent panel in your Domain View, give your meta intent a name, and select “Meta Intent” as the intent type. The ‘Add training phrase’ field below will now display a ‘Select intent to add’ dropdown menu, which will allow you to associate intents to your meta intent. As you add your intents, they will be removed from the dropdown menu, as an intent can belong to only one meta intent. When finished, click the **Add Intent** button in the lower-right corner, and you will see that your standard intents are now nested under the newly created meta intent in the left panel. 
+The process for creating a meta intent is very similar to [creating a standard intent](intent-builder-intents.html#add-an-intent). In the Add Intent panel, give your meta intent a name, and select “Meta Intent” as the **Intent Type**. Under **Intents**, use the dropdown menu to associate intents to the meta intent. As you add intents to the meta intent, they are removed from the dropdown menu; this is because an intent can belong to only one meta intent.
+
+When you are finished, click **Save** in the lower-right corner. In the left panel, you can now see that the standard intents are nested under the newly created meta intent.
 
 {: .important}
 As meta intents are a grouping of related intents, you'll need to create at least one intent prior to creating a meta intent. 
