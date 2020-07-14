@@ -11,7 +11,7 @@ function retrieveDomains(csdsUrl) {
         dataType: "json"
     })
         .done(function (data) {
-            console.log("baseuri is ", data.baseURIs);
+            // console.log("baseuri is ", data.baseURIs);
             if (data.baseURIs.length > 0) {
                 //sort results alphabetically so able to find first service first
                 data.baseURIs.sort(function (a, b) {
