@@ -120,32 +120,6 @@ case "help":
 ```
 
 
-### Get user channel
-Returns the platform channel the user is currently communicating on. This function returns:
-
-* lp_sms (for SMS)
-* lp_web (for Web)
-* lp_inapp (for In-app SDK)
-* lp_whatsapp (for WhatsApp)
-* lp_rcs (for RCS)
-* lp_abc (for Apple Business Chat)
-* twilio_sms (for Twilio SMS)
-* lp_fb (for Facebook)
-
-The "lp_" prefix indicates the LivePerson platform.
-
-| Function Name | Arguments | Returns |
-| --- | --- | --- |
-| `getUserChannel()` | None | lp_sms, lp_web, lp_inapp, lp_whatsapp, lp_rcs, lp_abc, twilio_sms, lp_fb |
-
-#### Example
-
-```javascript
-var channel = botContext.getUserChannel();
-botContext.printDebugMessage("channel used by the user is: " + channel);
-```
-
-
 ### Get conversation ID
 
 The Get Conversation ID function will retrieve the conversation ID for the current conversation.
