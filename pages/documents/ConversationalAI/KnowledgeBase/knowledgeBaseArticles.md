@@ -261,6 +261,6 @@ If you need to use a long piece of text, you can use the [breakWithDelay](conver
 
 #### Positive and negative learnings
 
-Positive and negative learnings play a role in intent detection regardless of whether you're using knowledge base intents or domain intents. When using LivePerson NLU v1, both are applied during prediction of user inputs. When using LivePerson NLU v2 or a 3rd-party NLU engine, the positive learnings are applied (added) to the training phrases when the model is trained, and the negative learnings are applied during prediction of user inputs.
+Positive and negative learnings play a role in intent detection regardless of whether you're using knowledge base intents or domain intents. When using knowledge base intents or when using domain intents with LivePerson NLU v1, positive and negative learnings are applied during processing of user inputs. When using domain intents with LivePerson NLU v2 or a 3rd-party NLU engine, the positive learnings are applied (added) to the training phrases when the model is trained, and the negative learnings are applied during processing of user inputs.
 
 As a general rule, don’t specify more than 20 positive learnings and 20 negative learnings. Too many positive and negative learnings can lead to learnings that “overlap” one another in terms of grammar. This results in an unpredictable user experience.
