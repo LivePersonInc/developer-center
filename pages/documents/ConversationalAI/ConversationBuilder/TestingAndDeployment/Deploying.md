@@ -46,6 +46,9 @@ The Agent Connectors page makes it fast and easy to understand the status of the
 ### Add an agent connector
 Adding an agent connector creates a connection between the bot and a bot agent in the target Conversational Cloud environment.
 
+{: .important}
+An agent can belong to only one bot.
+
 **To add an agent connector**
 
 1. Open the bot.
