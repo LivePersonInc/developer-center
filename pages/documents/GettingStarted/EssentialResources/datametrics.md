@@ -3,11 +3,12 @@ pagename: Analytics Builder Data Metrics
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: API Guidelines
-permalink: api-guidelines-report-builder-data-metrics.html
+permalink: api-guidelines-analytics-builder-data-metrics.html
 indicator: both
 redirect_from:
     - essential-resources-report-builder-data-metrics.html
     - common-resources-report-builder-data-metrics.html
+    - api-guidelines-report-builder-data-metrics.html
 ---
 
 Conversational Cloud uses a large amount of metrics to provide insightful and detailed reporting.
