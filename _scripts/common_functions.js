@@ -5,6 +5,7 @@ const REGEX_AMP = " & ";
 const REGEX_QUOTE = "\"";
 let errorCounter = 0;
 const fs = require("fs"); // Or `import fs from "fs";` with ESM
+const { name } = require("browser-sync");
 module.exports = {
     convertToExpectedFileName: function (file) {
         // console.log('file name is:', file.toLowerCase().split(' ').join('-').trim());
@@ -17,7 +18,7 @@ module.exports = {
         } else if (file.includes(REGEX_PLUS)) {
             regex = / + /gi;
             console.log('UNIQUE FILE', file);
-            file = file.replace(regex, '+');
+            file = file.replace(regex, '-');
             console.log('UNIQUE FILE fixed', file);
         } else if (file.includes(REGEX_SLASH)) {
             regex = / \/ /gi;
@@ -27,7 +28,7 @@ module.exports = {
         } else if (file.includes(REGEX_AMP)) {
             regex = / & /gi;
             console.log('UNIQUE FILE', file);
-            file = file.replace(regex, '&');
+            file = file.replace(regex, '-');
             console.log('UNIQUE FILE fixed', file);
         } else if (file.includes(REGEX_QUOTE)) {
             regex = /"/gi;
@@ -57,7 +58,7 @@ module.exports = {
     pageNameMatchesLayout: function (fileName, path) {
         // console.log('This file exists: ', path);
         this.get_line(path, 1, function (err, line) {
-            // console.log("___pagename___:", line.substring(10));
+            // console.log("___pagename___:", line.substring(10)); this reads the first line of file which is always pagename
             if (line.substring(10).includes("\"")) {
                 console.log(`Page name: ${line.substring(10)} Should not contain double quotes `)
                 errorCounter++;
@@ -68,12 +69,37 @@ module.exports = {
             }
         })
     },
+    findTreePath: function (path) {
+        // todo rename conversation-builder-tutorials-guides-getting-started.html ---
+        let nameArr = { 'documentname': null, 'subfoldername': null, 'permalink': null, 'pagename': null }
+
+        for (let i = 1; i < 22; i++) {
+            try {
+                this.get_line(path, i, function (err, line) {
+                    if (line.includes('documentname:')) {
+                        nameArr.documentname = line.substring(14);
+                    } else if (line.includes('subfoldername:')) {
+                        nameArr.subfoldername = line.substring(15);
+                    } else if (line.includes('permalink:')) {
+                        nameArr.permalink = line.substring(11);
+                    } else if (line.includes('pagename:')) {
+                        nameArr.pagename = line.substring(10);
+                    }
+                })
+            } catch (e) {
+                console.log(' reached the end of file', e);
+                break;
+            }
+        }
+        return nameArr;
+    },
     fileExists: function (fileName, path) {
         // check if file exists
         let convertedFileName = this.convertToExpectedFileName(fileName);
         let fileName_path = path + convertedFileName + '.md'
         if (fs.existsSync(fileName_path)) {
-            this.pageNameMatchesLayout(fileName, fileName_path)
+            this.pageNameMatchesLayout(fileName, fileName_path);
+            this.verifyPermalink(fileName_path);
         }
         else {
             console.log(`Could not find this file:\n ${convertedFileName}.md in: \n ${path}\n\n`);
@@ -86,14 +112,49 @@ module.exports = {
     getErrorCount: function () {
         return errorCounter;
     },
-    verifyPermalink: function () {
-        //     * `permalink`: this key defines the link at which the document can be found. The format of this value **MUST BE** as follows. Any other value format will cause the sidebar to malfunction:
+    verifyPermalink: function (path) {
+        let currentPageInfo = this.findTreePath(path);
+        console.log("CURRENT PAGE INFO : ", currentPageInfo);
+        let expectedPermalink;
+        // loop through get line method to search for documentname, pagename, subfoldername and p
+        let pagename = this.convertToExpectedFileName(currentPageInfo.pagename);
+        let documentname = "";
+        let subfoldername = "";
 
-        //   * If the page has a `subfoldername` value: documentname - subfoldername - pagename. For example: `mobile-app-messaging-sdk-for-android-advanced-features-audio-messages.html`
+        if (currentPageInfo.documentname !== null) {
+            // document name exists check if subfoldername exists
+            documentname = this.convertToExpectedFileName(currentPageInfo.documentname);
+            if (currentPageInfo.subfoldername !== null) {
+                subfoldername = this.convertToExpectedFileName(currentPageInfo.subfoldername);
+                expectedPermalink = `${documentname}-${subfoldername}-${pagename}.html`;
+                if (currentPageInfo.permalink === expectedPermalink) {
+                    console.log("THE PERMALINK IS VALID");
+                } else {
+                    console.log(`The permalink is invalid found: ${currentPageInfo.permalink}`);
+                    console.log(`Expected permalink: ${expectedPermalink}`);
+                    errorCounter++;
+                }
+            }
+            else {
+                expectedPermalink = `${documentname}-${pagename}.html`;
+                if (currentPageInfo.permalink === expectedPermalink) {
+                    console.log("THE PERMALINK IS VALID");
+                } else {
+                    console.log(`The permalink is invalid found: ${currentPageInfo.permalink}`);
+                    console.log(`Expected permalink: ${expectedPermalink}`);
+                    errorCounter++;
+                }
+            }
+        } else {
+            expectedPermalink = `${pagename}.html`;
+            if (currentPageInfo.permalink === expectedPermalink) {
+                console.log("THE PERMALINK IS VALID");
+            } else {
+                console.log(`The permalink is invalid found: ${currentPageInfo.permalink}`);
+                console.log(`Expected permalink: ${expectedPermalink}`);
+                errorCounter++;
+            }
+        }
 
-        //   * If the page does not have a `subfoldername` value: documentname - pagename. For example: users-api-overview.html
-
-        // * `indicator`: this key sets the Chat or Messaging indicator (or both) on a document. It accepts `chat`, `messaging` or `both` as its value.
-        //verifies permalink follows rules
     }
 }

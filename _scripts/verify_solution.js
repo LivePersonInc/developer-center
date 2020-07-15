@@ -54,6 +54,7 @@ let errorCounter = 0;
                                 errorCounter++;
                             }
                         })
+                        commonMethods.verifyPermalink(document_path);
                     }
                     else {
                         console.log('Could not find this file ', document_path);
