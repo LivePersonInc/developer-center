@@ -6,6 +6,9 @@ REGEX_AMP=" & "
 REGEX_SPACE=" "
 REGEX_QUOTE="\""
 REGEX_BASIC_DASH="-"
+find ./pages/* -type d > ./_scripts/newFile.txt
+
+
 # Print all files that end in md.
 # Ignore Release notes folder
 # Write to file list
@@ -67,20 +70,22 @@ REGEX_BASIC_DASH="-"
 ### This handles folder name updates
 
 
-for file in `find ./pages/* -type d` ; do
-    folder=${file##*/}
-     if [[ "$folder" =~ $REGEX_SPACE ]]; then
-        echo "${file}" >> ./_scripts/badFolders.txt
-        echo "BAD SPACE"
+
+input="./_scripts/newFile.txt"
+while IFS= read -r line
+do
+    if [[ "${line}" =~ $REGEX_SPACE ]]; then
+        echo "${line}" >> ./_scripts/badFolders.txt
     fi
-    # firstLetter="${folder:0:1}"
-    # if [[ "$firstLetter" =~ [a-z] ]]; then
-    #     echo "${file}" >> ./_scripts/badFolders.txt
-    # fi
-   
-done
+    folder=${line##*/} 
+    firstLetter="${folder:0:1}"
+    if [[ "$firstLetter" =~ [a-z] ]]; then
+        echo "${line}" >> ./_scripts/badFolders.txt
+    fi
+done < "$input"
+rm -f ./_scripts/newFile.txt
 tail -r ./_scripts/badFolders.txt > ./_scripts/badFoldersR.txt
-# rm -f ./_scripts/badFolders.txt
+rm -f ./_scripts/badFolders.txt
 input="./_scripts/badFoldersR.txt"
 while IFS= read -r line
 do
@@ -89,18 +94,21 @@ do
     # Get file name
     currentFolder=${line##*/}
     folder=$currentFolder
+    
     if [[ $folder =~ $REGEX_BASIC_DASH ]]; then
         while [[ $folder =~ $REGEX_BASIC_DASH ]]; do
             folder=${folder/$REGEX_BASIC_DASH/" "}
         done;
     fi
+    
     # Title case
     folder=$( echo "${folder}" | awk '{for(i=1;i<=NF;i++)sub(/./,toupper(substr($i,1,1)),$i)}1')
-    # Remove spaces
-    if [[ $folder =~ $REGEX_SPACE ]]; then
-        while [[ $folder =~ $REGEX_SPACE ]]; do
-            folder=${folder/$REGEX_SPACE/""}
-        done;
+    # Remove spaces in the titlecase folder namevariab;e
+   if [[ "${folder}" =~ $REGEX_SPACE ]]; then
+         while [[ "${folder}" =~ $REGEX_SPACE ]]; do
+             folder="${folder/$REGEX_SPACE/}"
+            #  echo "${line}" >> ./_scripts/badFolders.txt
+         done;
     fi
     current="${path}/${currentFolder}"
     new="${path}/${folder}"
