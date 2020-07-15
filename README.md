@@ -6,6 +6,7 @@
 
 This repository generates LivePerson's Developer Center, which can be found at https://developers.liveperson.com. The site is generated using [Jekyll](https://jekyllrb.com/). If you find an issue with the documentation, site structure, meta or anything else, please open an issue and we'll respond as soon as possible.
 
+
 **Table of Contents**
 
 * :satellite:[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)

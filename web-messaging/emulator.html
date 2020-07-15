@@ -8,7 +8,6 @@
     <title>Web Messaging </title>
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -47,112 +46,20 @@
         </p>
     </div>
 
-    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" id="collapseSetup">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="Account-Setup">Account Setup</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-12" id="The-following-config">
-                                The following configuration is the default in data sources authentication server
-                                configuration. It can be changed if needed.
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <b class="Authentication-Endpo">Authentication Endpoint:</b>
-                                <button type="button" class="btn btn-link copy" id="auth-copy"
-                                    onClick="copyToClipboard()"
-                                    data-clipboard-text="https://vx-lp.github.io/lpwm/auth.html">COPY</button>
-                                <div class="Rectangle">
-                                    <p class="vw-lpgithub">
-                                        https://vx-lp.github.io/lpwm/auth.html
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <b class="Token-Endpoint">Token endpoint:</b>
-                                <button type="button" class="btn btn-link copy" onClick="copyToClipboard()"
-                                    data-clipboard-text="https://va.idp.liveperson.net/test/authenticate">COPY</button><br />
-                                <div class="Rectangle">
-                                    <p class="vw-idplivepe">https://va.idp.liveperson.net/test/authenticate</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <b class="JS-method-name">JS method name:</b>
-                                <button type="button" class="btn btn-link copy" onClick="copyToClipboard()"
-                                    data-clipboard-text="LPJsMethodName">COPY</button><br />
-                                <div class="Rectangle">
-                                    <p class="LPJsMethodName">LPJsMethodName</p><br /><br />
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <b class="JS-context">JS context:</b>
-                                <button type="button" class="btn btn-link copy" onClick="copyToClipboard()"
-                                    data-clipboard-text="LPJsContext">COPY</button><br />
-                                <div class="Rectangle">
-                                    <p class="LPJsContext">LPJsContext</p><br />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <b class="JWT">JWT public key:</b>
-                                <button type="button" class="btn btn-link copy" onClick="copyToClipboard()"
-                                    data-clipboard-text='MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvGQctwBFFZBaSu+LC4LVk/4/XyVQmhcwM5a91lT7BwZug/GtpR+ZGpKkiZSgTehRdBJKSPjv5K6D8/cBm28OV11Mekjn1PJrveSXrRsfUbOqIHgpfVtnkxN3ZaV6GSWQrrZArkpbAm+Kf5o5jxFPhCadB8BdRGCbMI3rFEkYSFqnmptI3olIAtAjmtbLJnwYZyXl2WZXMBmORLXnV9aTMGp4uFZdX+QbK808q55zxSB5HM3N9B8NLUP1TELc6N2dhWk2RwR/C9WvQYH/UAnxqVEwrAXt+rb+YWuu92Dj4NLAmpEYbRQi+S+5Y6t5g6kX/QMQ/ycdFOW/WA3JoptUSQIDAQAB'>COPY</button><br>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div id="Rectangle-pub">
-                                    <div id="pub-key">
-                                        MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvGQctwBFFZBaSu+LC4LVk/4/XyVQmhcwM5a91lT7BwZug/GtpR+ZGpKkiZSgTehRdBJKSPjv5K6D8/cBm28OV11Mekjn1PJrveSXrRsfUbOqIHgpfVtnkxN3ZaV6GSWQrrZArkpbAm+Kf5o5jxFPhCadB8BdRGCbMI3rFEkYSFqnmptI3olIAtAjmtbLJnwYZyXl2WZXMBmORLXnV9aTMGp4uFZdX+QbK808q55zxSB5HM3N9B8NLUP1TELc6N2dhWk2RwR/C9WvQYH/UAnxqVEwrAXt+rb+YWuu92Dj4NLAmpEYbRQi+S+5Y6t5g6kX/QMQ/ycdFOW/WA3JoptUSQIDAQAB
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="modal-footer">
-                            <a role="button" href="#" id="modal-close" data-dismiss="modal">
-                                CLOSE <img class="expand" src="img/icn-caret-up.png" alt="Account Setup" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+    </div>
     </div>
     </div>
 
     <script>
-        removeStyleSheet('ftue');
+        // removeStyleSheet('ftue');
         var site = getURLParams(window.location.search).site || "";
         var username = getURLParams(window.location.search).username || "";
         var experience = getURLParams((window.location.search)).experience || "";
         var env = getURLParams((window.location.search)).env || "";
-        loadLPTag(env);
-
-        function copyToClipboard() {
-            /* Get the text field */
-            new ClipboardJS('.copy', {
-                container: document.getElementById('modal')
-            });
-        }
+        // loadLPTag(env);
     </script>
-    <!-- <script src="script.js"></script> -->
+    <script src="loadEngagementWindowOld.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
