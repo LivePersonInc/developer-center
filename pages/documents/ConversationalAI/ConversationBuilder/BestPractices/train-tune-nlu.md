@@ -1,14 +1,14 @@
 ---
 pagename: Train & Tune NLU
-redirect_from:
-    - conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html
-    - conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
-    - conversational-ai-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Best Practices
+redirect_from:
+    - conversation-builder-best-practices-training-and-tuning-your-intents-and-faqs.html
+    - conversational-ai-platform-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
+    - conversational-ai-natural-language-understanding-training-and-tuning-your-intents-and-faqs.html
 permalink: conversation-builder-best-practices-train-tune-nlu.html
 indicator: both
 ---
