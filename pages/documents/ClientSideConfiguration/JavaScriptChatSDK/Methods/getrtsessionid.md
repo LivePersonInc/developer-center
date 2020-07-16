@@ -1,5 +1,5 @@
 ---
-pagename: GetRtSessionId
+pagename: getRtSessionId
 redirect_from:
   - consumer-experience-javascript-chat-getrtsessionid.html
 Keywords:

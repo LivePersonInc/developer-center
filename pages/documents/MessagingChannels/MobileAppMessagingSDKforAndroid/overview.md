@@ -1,5 +1,5 @@
 ---
-pagename: Mobile Messaging SDK Overview
+pagename: Overview
 redirect_from:
   - android-overview.html
 Keywords:

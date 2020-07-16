@@ -59,11 +59,11 @@ module.exports = {
         this.get_line(path, 1, function (err, line) {
             // console.log("___pagename___:", line.substring(10)); this reads the first line of file which is always pagename
             if (line.substring(10).includes("\"")) {
-                console.log(`Page name: ${line.substring(10)} Should not contain double quotes `)
+                console.log(`Page name: ${line.substring(10)} Should not contain double quotes \n\n`)
                 errorCounter++;
             }
             else if (!(fileName === line.substring(10))) {
-                console.log(`Page name: ${line.substring(10)} in file does not match the layout spec: ${fileName}`)
+                console.log(`Page name: ${line.substring(10)} in file does not match the layout spec: ${fileName}\n\n`)
                 errorCounter++;
             }
         })
@@ -77,13 +77,13 @@ module.exports = {
             try {
                 this.get_line(path, i, function (err, line) {
                     if (line.includes('documentname:')) {
-                        nameArr.documentname = line.substring(14);
+                        nameArr.documentname = line.substring(14).trim();
                     } else if (line.includes('subfoldername:')) {
-                        nameArr.subfoldername = line.substring(15);
+                        nameArr.subfoldername = line.substring(15).trim();
                     } else if (line.includes('permalink:')) {
-                        nameArr.permalink = line.substring(11);
+                        nameArr.permalink = line.substring(11).trim();
                     } else if (line.includes('pagename:')) {
-                        nameArr.pagename = line.substring(10);
+                        nameArr.pagename = line.substring(10).trim();
                     }
                 })
             } catch (e) {

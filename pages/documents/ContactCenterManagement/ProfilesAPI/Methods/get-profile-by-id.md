@@ -1,5 +1,5 @@
 ---
-pagename: Get profile by ID
+pagename: Get Profile by ID
 redirect_from:
   - administration-get-profile-by-id.html
 keywords:
