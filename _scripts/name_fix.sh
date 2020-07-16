@@ -82,7 +82,7 @@ do
     fi
     if [[ $page =~ $REGEX_PERIOD ]]; then
         while [[ $page =~ $REGEX_PERIOD ]]; do
-            page=${page/$REGEX_PERIOD/""}
+            page=${page/$REGEX_PERIOD/"-"}
         done;
     fi
     if [[ $page =~ $REGEX_OPEN_PARENTHESIS ]]; then

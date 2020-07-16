@@ -8,51 +8,64 @@ const REGEX_APOSTROPHE = "'";
 const REGEX_EXCLAMATION = "!";
 const REGEX_QUESTION = "?";
 const REGEX_PERIOD = ".";
-const REGEX_OPEN_PARENTHESIS = "\(";
-const REGEX_CLOSE_PARENTHESIS = "\)";
+const REGEX_OPEN_PARENTHESIS = "(";
+const REGEX_CLOSE_PARENTHESIS = ")";
 let errorCounter = 0;
 const fs = require("fs"); // Or `import fs from "fs";` with ESM
 const { name } = require("browser-sync");
 module.exports = {
     convertToExpectedFileName: function (file) {
-        // console.log('file name is:', file.toLowerCase().split(' ').join('-').trim());
+
         let regex;
 
         if (file.includes(REGEX_DASH)) {
             regex = / - /gi;
             file = file.replace(regex, '-');
-        } else if (file.includes(REGEX_PLUS)) {
+        }
+        if (file.includes(REGEX_PLUS)) {
             regex = / + /gi;
             file = file.replace(regex, '-');
-        } else if (file.includes(REGEX_SLASH)) {
+        }
+        if (file.includes(REGEX_SLASH)) {
             regex = / \/ /gi;
             file = file.replace(regex, '-');
-        } else if (file.includes(REGEX_AMPERSAND)) {
+        }
+
+        if (file.includes(REGEX_AMPERSAND)) {
             regex = / & /gi;
             file = file.replace(regex, '-');
-        } else if (file.includes(REGEX_QUOTE)) {
+        }
+        if (file.includes(REGEX_QUOTE)) {
             regex = /"/gi;
             file = file.replace(regex, '');
-        } else if (file.includes(REGEX_COMMA)) {
+        }
+        if (file.includes(REGEX_COMMA)) {
             regex = /, /gi;
             file = file.replace(regex, '-');
-        } else if (file.includes(REGEX_APOSTROPHE)) {
+        }
+        if (file.includes(REGEX_APOSTROPHE)) {
             regex = /'/gi;
             file = file.replace(regex, '-');
-        } else if (file.includes(REGEX_EXCLAMATION)) {
+        }
+
+        if (file.includes(REGEX_EXCLAMATION)) {
             regex = /!/gi;
             file = file.replace(regex, '');
-        } else if (file.includes(REGEX_QUESTION)) {
+        }
+        if (file.includes(REGEX_QUESTION)) {
             regex = /\?/gi;
             file = file.replace(regex, '');
-        } else if (file.includes(REGEX_PERIOD)) {
-            regex = /./gi;
-            file = file.replace(regex, '');
-        } else if (file.includes(REGEX_OPEN_PARENTHESIS)) {
+        }
+        if (file.includes(REGEX_PERIOD)) {
+            regex = /\./gi;
+            file = file.replace(regex, '-');
+        }
+        if (file.includes(REGEX_OPEN_PARENTHESIS)) {
             regex = /\(/gi;
             file = file.replace(regex, '');
-        } else if (file.includes(REGEX_CLOSE_PARENTHESIS)) {
-            regex = /)/gi;
+        }
+        if (file.includes(REGEX_CLOSE_PARENTHESIS)) {
+            regex = /\)/gi;
             file = file.replace(regex, '');
         }
         return file.toLowerCase().split(' ').join('-').trim();
@@ -119,14 +132,15 @@ module.exports = {
     },
     fileExists: function (fileName, path) {
         // check if file exists
-        let convertedFileName = this.convertToExpectedFileName(fileName);
+        let convertedFileName = this.convertToExpectedFileName(`${fileName}`);
         let fileName_path = path + convertedFileName + '.md'
         if (fs.existsSync(fileName_path)) {
             this.pageNameMatchesLayout(fileName, fileName_path);
             this.verifyPermalink(fileName_path);
         }
         else {
-            console.log(`Could not find this file:\n ${convertedFileName}.md in: \n ${path}\n\n`);
+            // console.log(`This file ${fileName} was converted into ${convertedFileName} in the path   `)
+            console.log(`Page name: '${fileName}' was converted into file name:\n ${convertedFileName}.md \n And could not be found in:  ${path}\n\n`);
             errorCounter++;
         }
     },
