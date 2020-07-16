@@ -1,5 +1,5 @@
 ---
-pagename: Mobile Messaging SDK Overview
+pagename: Overview
 redirect_from:
   - consumer-experience-ios-sdk-overview.html
 Keywords:

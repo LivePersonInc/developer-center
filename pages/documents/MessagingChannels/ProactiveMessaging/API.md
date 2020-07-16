@@ -1,5 +1,5 @@
 ---
-pagename: Proactive Messaging API
+pagename: API
 redirect_from:
   - ProactiveMessaging.html
 Keywords:
