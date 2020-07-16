@@ -5,7 +5,7 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
-
+documentname: Push Notification Service
 
 order: 40
 permalink: push-notification-service-configuration-of-push-proxy.html
