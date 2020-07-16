@@ -5,7 +5,7 @@ redirect_from:
 sitesection:
 categoryname: "Security & Authentication"
 documentname: Authorizing Conversational Cloud Applications
-subfoldername: Sample App
+subfoldername: Samples
 permalink: authorizing-conversational-cloud-applications-samples-application-login-sample-app.html
 ---
 
