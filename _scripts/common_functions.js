@@ -3,7 +3,8 @@ const REGEX_PLUS = " + ";
 const REGEX_SLASH = " / ";
 const REGEX_AMP = " & ";
 const REGEX_QUOTE = "\"";
-const REGEX_COMMA = ", "
+const REGEX_COMMA = ", ";
+const REGEX_APOS = "'";
 let errorCounter = 0;
 const fs = require("fs"); // Or `import fs from "fs";` with ESM
 const { name } = require("browser-sync");
@@ -29,6 +30,9 @@ module.exports = {
             file = file.replace(regex, '');
         } else if (file.includes(REGEX_COMMA)) {
             regex = /, /gi;
+            file = file.replace(regex, '-');
+        } else if (file.includes(REGEX_APOS)) {
+            regex = /'/gi;
             file = file.replace(regex, '-');
         }
         return file.toLowerCase().split(' ').join('-').trim();
