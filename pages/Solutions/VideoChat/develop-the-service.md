@@ -1,5 +1,5 @@
 ---
-pagename: Develop the Services
+pagename: Develop the Service
 redirect_from:
   - products-video-chat-develop-the-services.html
 sitesection: Solutions

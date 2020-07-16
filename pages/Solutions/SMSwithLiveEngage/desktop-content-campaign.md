@@ -1,5 +1,5 @@
 ---
-pagename: Desktop content campaign
+pagename: Desktop Content Campaign
 redirect_from:
   - products-channels-sms-desktop.html
   - sms-with-liveengage-desktop-content-campaign.html

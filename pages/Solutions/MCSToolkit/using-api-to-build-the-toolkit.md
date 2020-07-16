@@ -1,5 +1,5 @@
 ---
-pagename: Using APIs to Build the Toolkit
+pagename: Using API to Build the Toolkit
 redirect_from:
   - products-mcs-usingtheapis.html
 sitesection: Solutions

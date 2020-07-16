@@ -1,5 +1,5 @@
 ---
-pagename: Salesforce
+pagename: SalesForce
 redirect_from:
   - salesforce.html
 sitesection: Solutions

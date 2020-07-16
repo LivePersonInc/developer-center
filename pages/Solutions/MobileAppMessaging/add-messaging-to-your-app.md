@@ -1,5 +1,5 @@
 ---
-pagename: Add Messaging to your app
+pagename: Add Messaging to Your App
 redirect_from:
   - products-channels-inapp-messaging.html
 sitesection: Solutions

@@ -1,5 +1,5 @@
 ---
-pagename: Add video to chat conversations
+pagename: Add Video to Chat Conversations
 redirect_from:
   - products-video-chat-overview.html
 sitesection: Solutions
