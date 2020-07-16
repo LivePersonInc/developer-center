@@ -1,5 +1,5 @@
 ---
-pagename: LivePerson Agent Escalation integrations
+pagename: LivePerson Agent Escalation Integrations
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"

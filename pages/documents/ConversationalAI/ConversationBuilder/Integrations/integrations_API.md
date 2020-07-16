@@ -1,5 +1,5 @@
 ---
-pagename: API integrations
+pagename: API Integrations
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"

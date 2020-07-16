@@ -1,5 +1,5 @@
 ---
-pagename: Email integrations
+pagename: Email Integrations
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"

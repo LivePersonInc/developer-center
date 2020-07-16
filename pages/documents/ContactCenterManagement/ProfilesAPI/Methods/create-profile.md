@@ -1,5 +1,5 @@
 ---
-pagename: Create profile
+pagename: Create Profile
 redirect_from:
   - administration-create-profile.html
 keywords:
