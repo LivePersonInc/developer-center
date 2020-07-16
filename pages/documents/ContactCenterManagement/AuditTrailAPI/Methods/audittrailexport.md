@@ -1,5 +1,5 @@
 ---
-pagename: Export Audit Trail to CSV file
+pagename: Export Audit Trail to CSV File
 redirect_from:
   - account-configuration-meta-data-audit-trail-export.html
 keywords:

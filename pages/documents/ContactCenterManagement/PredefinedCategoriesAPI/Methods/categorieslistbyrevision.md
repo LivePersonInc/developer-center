@@ -1,5 +1,5 @@
 ---
-pagename: Categories List By Revision
+pagename: Categories List by Revision
 redirect_from:
   - account-configuration-categories-revision.html
 sitesection: Documents

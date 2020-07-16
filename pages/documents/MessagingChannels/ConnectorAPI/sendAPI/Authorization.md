@@ -1,5 +1,5 @@
 ---
-pagename: Authorization and authentication
+pagename: Authorization and Authentication
 redirect_from:
   - Authorization.html
   - connector-api-authorization-and-authentication-get-appjwt.html
