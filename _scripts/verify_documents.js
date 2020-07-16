@@ -30,7 +30,7 @@ let path;
                               commonMethods.fileExists(subpage.subpagename, page_path)
                            })
                         } else {
-                           console.log(`Folder Name: ${page.pagename} doesn't exist or is not named properly. \n`);
+                           console.log(`Folder Name: ${page.pagename} doesn't exist in ${document_path} or is not named properly. \n`);
                         }
                         // TODO
                      } else {
