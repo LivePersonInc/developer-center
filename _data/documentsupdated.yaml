@@ -768,7 +768,7 @@
   - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview
-    - pagename: Quick Start For Android
+    - pagename: Quick Start
     - pagename: Configure the Android SDK
     - pagename: Push Notifications
     - pagename: Advanced Features
@@ -798,8 +798,10 @@
       - subpagename: String Values
       - subpagename: Override SDK Strings
       - subpagename: Plural String Resource Example
-    - pagename: Latest Release Notes
-    - pagename: All Release Notes
+    - pagename: Release Notes
+      subpages:
+      - subpagename: Latest Release Notes
+      - subpagename: All Release Notes
     - pagename: Resources
       subpages:
       - subpagename: Authentication
@@ -839,7 +841,9 @@
       - subpagename: Localization Keys
       - subpagename: String Localization
       - subpagename: Date and Time Styles
-    - pagename: All Releases
+    - pagename: Release Notes
+      subpages:
+      - subpagename: All Releases
     - pagename: Resources
       subpages:
       - subpagename: Authentication
