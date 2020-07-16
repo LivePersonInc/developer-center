@@ -70,7 +70,7 @@ module.exports = {
     },
     findTreePath: function (path) {
         // todo rename conversation-builder-tutorials-guides-getting-started.html ---
-        let nameArr = { 'documentname': null, 'subfoldername': null, 'permalink': null, 'pagename': null, 'categoryname': null }
+        let nameArr = { 'categoryname': null, 'documentname': null, 'subfoldername': null, 'permalink': null, 'pagename': null, }
         // looking though first 50 lines in mark down for all items in array
         let PageHeaderLines = 50
         for (let i = 1; i < PageHeaderLines; i++) {
