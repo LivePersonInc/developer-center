@@ -2,12 +2,17 @@
 REGEX_DASH=" - "
 REGEX_PLUS=" + "
 REGEX_SLASH=" / "
-REGEX_AMP=" & "
-REGEX_SPACE=" "
+REGEX_AMPERSAND=" & "
 REGEX_QUOTE="\""
-REGEX_BASIC_DASH="-"
 REGEX_COMMA=", "
-REGEX_APOS="'"
+REGEX_APOSTROPHE="'"
+REGEX_EXCLAMATION="\!"
+REGEX_SPACE=" "
+REGEX_QUESTION="\?"
+REGEX_PERIOD="\."
+REGEX_OPEN_PARENTHESIS="\("
+REGEX_CLOSE_PARENTHESIS="\)"
+
 find ./pages/* -type d > ./_scripts/newFile.txt
 
 
@@ -40,9 +45,9 @@ do
             page=${page/$REGEX_SLASH/"-"}
         done;
     fi
-    if [[ $page =~ $REGEX_AMP ]]; then
-        while [[ $page =~ $REGEX_AMP ]]; do
-            page=${page/$REGEX_AMP/"-"}
+    if [[ $page =~ $REGEX_AMPERSAND ]]; then
+        while [[ $page =~ $REGEX_AMPERSAND ]]; do
+            page=${page/$REGEX_AMPERSAND/"-"}
         done;
     fi
     if [[ $page =~ $REGEX_COMMA ]]; then
@@ -50,17 +55,44 @@ do
             page=${page/$REGEX_COMMA/"-"}
         done;
     fi
-     if [[ $page =~ $REGEX_APOS ]]; then
-        while [[ $page =~ $REGEX_APOS ]]; do
-            page=${page/$REGEX_APOS/"-"}
+    if [[ $page =~ $REGEX_APOSTROPHE ]]; then
+        while [[ $page =~ $REGEX_APOSTROPHE ]]; do
+            page=${page/$REGEX_APOSTROPHE/"-"}
         done;
     fi
+   
 
     # Removes leading spaces
     page="${page#"${page%%[![:space:]]*}"}"
+   
     if [[ $page =~ $REGEX_SPACE ]]; then
         while [[ $page =~ $REGEX_SPACE ]]; do
             page=${page/$REGEX_SPACE/"-"}
+        done;
+    fi
+    if [[ $page =~ $REGEX_EXCLAMATION ]]; then
+        while [[ $page =~ $REGEX_EXCLAMATION ]]; do
+            page=${page/$REGEX_EXCLAMATION/""}
+        done;
+    fi
+    if [[ $page =~ $REGEX_QUESTION ]]; then
+        while [[ $page =~ $REGEX_QUESTION ]]; do
+            page=${page/$REGEX_QUESTION/""}
+        done;
+    fi
+    if [[ $page =~ $REGEX_PERIOD ]]; then
+        while [[ $page =~ $REGEX_PERIOD ]]; do
+            page=${page/$REGEX_PERIOD/""}
+        done;
+    fi
+    if [[ $page =~ $REGEX_OPEN_PARENTHESIS ]]; then
+        while [[ $page =~ $REGEX_OPEN_PARENTHESIS ]]; do
+            page=${page/$REGEX_OPEN_PARENTHESIS/""}
+        done;
+    fi
+    if [[ $page =~ $REGEX_CLOSE_PARENTHESIS ]]; then
+        while [[ $page =~ $REGEX_CLOSE_PARENTHESIS ]]; do
+            page=${page/$REGEX_CLOSE_PARENTHESIS/""}
         done;
     fi
     if [[ $page =~ $REGEX_QUOTE ]]; then

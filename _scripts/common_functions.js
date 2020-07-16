@@ -1,10 +1,15 @@
 const REGEX_DASH = " - ";
 const REGEX_PLUS = " + ";
 const REGEX_SLASH = " / ";
-const REGEX_AMP = " & ";
+const REGEX_AMPERSAND = " & ";
 const REGEX_QUOTE = "\"";
 const REGEX_COMMA = ", ";
-const REGEX_APOS = "'";
+const REGEX_APOSTROPHE = "'";
+const REGEX_EXCLAMATION = "!";
+const REGEX_QUESTION = "?";
+const REGEX_PERIOD = ".";
+const REGEX_OPEN_PARENTHESIS = "\(";
+const REGEX_CLOSE_PARENTHESIS = "\)";
 let errorCounter = 0;
 const fs = require("fs"); // Or `import fs from "fs";` with ESM
 const { name } = require("browser-sync");
@@ -22,7 +27,7 @@ module.exports = {
         } else if (file.includes(REGEX_SLASH)) {
             regex = / \/ /gi;
             file = file.replace(regex, '-');
-        } else if (file.includes(REGEX_AMP)) {
+        } else if (file.includes(REGEX_AMPERSAND)) {
             regex = / & /gi;
             file = file.replace(regex, '-');
         } else if (file.includes(REGEX_QUOTE)) {
@@ -31,9 +36,24 @@ module.exports = {
         } else if (file.includes(REGEX_COMMA)) {
             regex = /, /gi;
             file = file.replace(regex, '-');
-        } else if (file.includes(REGEX_APOS)) {
+        } else if (file.includes(REGEX_APOSTROPHE)) {
             regex = /'/gi;
             file = file.replace(regex, '-');
+        } else if (file.includes(REGEX_EXCLAMATION)) {
+            regex = /!/gi;
+            file = file.replace(regex, '');
+        } else if (file.includes(REGEX_QUESTION)) {
+            regex = /\?/gi;
+            file = file.replace(regex, '');
+        } else if (file.includes(REGEX_PERIOD)) {
+            regex = /./gi;
+            file = file.replace(regex, '');
+        } else if (file.includes(REGEX_OPEN_PARENTHESIS)) {
+            regex = /\(/gi;
+            file = file.replace(regex, '');
+        } else if (file.includes(REGEX_CLOSE_PARENTHESIS)) {
+            regex = /\)/gi;
+            file = file.replace(regex, '');
         }
         return file.toLowerCase().split(' ').join('-').trim();
 
