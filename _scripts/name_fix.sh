@@ -11,7 +11,7 @@ REGEX_SPACE=" "
 REGEX_QUESTION="\?"
 REGEX_PERIOD="\."
 REGEX_OPEN_PARENTHESIS="\("
-REGEX_CLOSE_PARENTHESIS="\)"
+REGEX_CLOSE_PARENTHESIS=")"
 
 find ./pages/* -type d > ./_scripts/newFile.txt
 

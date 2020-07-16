@@ -52,7 +52,7 @@ module.exports = {
             regex = /\(/gi;
             file = file.replace(regex, '');
         } else if (file.includes(REGEX_CLOSE_PARENTHESIS)) {
-            regex = /\)/gi;
+            regex = /)/gi;
             file = file.replace(regex, '');
         }
         return file.toLowerCase().split(' ').join('-').trim();
