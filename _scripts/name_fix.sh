@@ -7,7 +7,7 @@ REGEX_SPACE=" "
 REGEX_QUOTE="\""
 REGEX_BASIC_DASH="-"
 REGEX_COMMA=", "
-REGEX_APOS="'"
+REGEX_APOS="\'"
 find ./pages/* -type d > ./_scripts/newFile.txt
 
 
@@ -52,7 +52,7 @@ do
     fi
      if [[ $page =~ $REGEX_APOS ]]; then
         while [[ $page =~ $REGEX_APOS ]]; do
-            page=${page/$REGEX_APOS /"-"}
+            page=${page/$REGEX_APOS/"-"}
         done;
     fi
 
