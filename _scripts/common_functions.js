@@ -86,7 +86,7 @@ module.exports = {
                         nameArr.pagename = line.substring(10).trim();
                     }
                     else if (line.includes('categoryname:')) {
-                        nameArr.pagename = line.substring(14).trim();
+                        nameArr.categoryname = line.substring(14).trim();
                     }
                 })
             } catch (e) {
