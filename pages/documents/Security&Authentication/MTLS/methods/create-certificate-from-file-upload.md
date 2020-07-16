@@ -1,20 +1,23 @@
 ---
-pagename: Get all certificates by account
+pagename: Create certificate from file
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS API
+documentname: MTLS 
 subfoldername: Methods
-permalink: mtls-methods-get-all-certificates-by-account.html
+permalink: mtls-methods-create-certificate-from-file.html
 ---
 
-This API gets all certificates from a specific account by account ID.
+{: .important}
+Currently, these methods cannot be used to create certificates. To get started with a certificate, please contact LivePerson Support.
+
+This API creates a certificate by uploading a file, for a specific account ID.
 
 ### Request
 
  |Method|      URL|  
  |:--------  |:---  |
- |GET|  https://[{domain}]/mtls/account/{accountId}/certificates |
+ |POST|  https://[{domain}]/mtls/account/{accountId}/certificates/by-file |
 
 
 **Request Headers**
@@ -23,7 +26,15 @@ This API gets all certificates from a specific account by account ID.
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
 
+
 **Request Body**
+
+This end-point receives information formatted as `form-data`. The below is an example of the body in this format.
+
+|Key         |Value  |
+|:------|        :--------  |
+|file  (File field type)|    p12 file   |
+|certificate  (Text field type)|    {"name":"myCertificate", "password":"1234"}   |
 
 
 **Path Parameters**
@@ -38,7 +49,7 @@ This API gets all certificates from a specific account by account ID.
 
 | Code | Description           |
 |------|-----------------------|
-| 200  | OK                    |
+| 201  | Created               |
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
@@ -49,18 +60,24 @@ This API gets all certificates from a specific account by account ID.
 for example:
 
 ```JSON
-[
-  {
-      "id": 3515906310,
-      "deleted": false,
-      "name": "Cert1",
-      "displayName": "Cert1",
-      "siteId": "le1606809",
-      "status": "UnAvailable",
-      "expirationDate": null
-  }
-]
+{  
+   "successfulySavedCertificates":[  
+      {  
+         "id":2628739923,
+         "deleted":false,
+         "name":"{certificateName}",
+         "displayName":"{certificateName}",
+         "siteId":"{accountId}",
+         "status":"Available",
+	 "expirationDate": null
+      }
+   ],
+   "failedSaveToVaultCertificates":[  
+
+   ]
+}
 ```
+
 
 **Entity Structure:**
 

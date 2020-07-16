@@ -1,47 +1,48 @@
 ---
-pagename: Update certificate from file
+pagename: Create certificate for account
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS API
+documentname: MTLS 
 subfoldername: Methods
-permalink: mtls-methods-update-certificate-from-file.html
+permalink: mtls-methods-create-certificate-for-account.html
 ---
 
-This API updates a certificate by uploading a file for specific account ID.
+{: .important}
+Currently, these methods cannot be used to create certificates. To get started with a certificate, please contact LivePerson Support.
+
+This API creates a certificate for a specific account ID.
 
 ### Request
 
- |Method|      URL|  
- |:--------  |:---  |
- |PUT|  https://[{domain}]/mtls/account/{accountId}/certificates/by-file |
+|Method|      URL|  
+|:--------  |:---  |
+|POST|  https://[{domain}]/mtls/account/{accountId}/certificates |
 
 
 **Request Headers**
 
- |Header         |Description  |
- |:------|        :--------  |
- |Authorization|    Contains token string to allow request authentication and authorization.  |
- |file|    Contains p12 file in multipart/form-data key value field. |
- |certificate|    Contains the certificate DTO in multipart/form-data key value field.  |
+|Header         |Description  |
+|:------|        :--------  |
+|Authorization|    Contains token string to allow request authentication and authorization.  |
 
 **Request Body**
 
-form-data body
-
-KEY: file  (File field type)
-
-VALUE: select p12 file
-
-KEY: certificate  (Text field type)
-
-VALUE: {"name":"myCertificate", "password":"1234", "id":937706832}
+```json
+[
+  {
+  	"name":"myCert1",
+  	"p12":[98,121,116,101,115, ...],
+  	"password":"paw1"
+  }
+]
+```
 
 **Path Parameters**
 
- |Parameter|  Description|  Type/Value |
- |:------    |:--------    |:--------|
- |accountId|  LP site ID |   String |
+|Parameter|  Description|  Type/Value |
+|:------    |:--------    |:--------|
+|accountId|  LP site ID |   String |
 
 ### Response
 
@@ -49,18 +50,17 @@ VALUE: {"name":"myCertificate", "password":"1234", "id":937706832}
 
 | Code | Description           |
 |------|-----------------------|
-| 200  | OK                    |
+| 201  | Created               |
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
 
 
-
 **Response Body**
 
-for example:
+For example:
 
-```JSON
+```json
 {  
    "successfulySavedCertificates":[  
       {  
@@ -78,7 +78,6 @@ for example:
    ]
 }
 ```
-
 
 **Entity Structure:**
 

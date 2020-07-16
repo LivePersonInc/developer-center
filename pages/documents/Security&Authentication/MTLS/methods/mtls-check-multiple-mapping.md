@@ -3,7 +3,7 @@ pagename: Check mapping configuration
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS API
+documentname: MTLS 
 subfoldername: Methods
 permalink: mtls-methods-check-mapping-configuration.html
 ---

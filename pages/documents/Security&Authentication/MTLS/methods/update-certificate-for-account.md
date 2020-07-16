@@ -1,35 +1,50 @@
 ---
-pagename: Get certificate by ID
+pagename: Update certificate for account
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS API
+documentname: MTLS 
 subfoldername: Methods
-permalink: mtls-methods-get-certificate-by-id.html
+permalink: mtls-methods-update-certificate-for-account.html
+redirect_from:
+  - mtls-methods-update-certificate-for-account.html
 ---
 
-This API gets a certificate by account ID and certificate ID.
+This API updates a certificate for a specific account id.
 
 ### Request
 
-|Method|      URL|  
-|:--------  |:---  |
-|GET|  https://[{domain}]/mtls/account/{accountId}/certificates/{certificateId} |
+ |Method|      URL|  
+ |:--------  |:---  |
+ |PUT|  https://[{domain}]/mtls/account/{accountId}/certificates |
 
 
 **Request Headers**
 
-|Header         |Description  |
-|:------|        :--------  |
-|Authorization|    Contains token string to allow request authentication and authorization.  |
+ |Header         |Description  |
+ |:------|        :--------  |
+ |Authorization|    Contains token string to allow request authentication and authorization.  |
 
+**Request Body**
+
+```JSON
+[
+  {
+  	"name":"myCert1",
+  	"p12":[98,121,116,101,115],
+  	"password":"paw1",
+        "id":2628739923
+  }
+]
+```
+{:.notice}
+The body is a byte array input of the p12 file.
 
 **Path Parameters**
 
 |Parameter|  Description|  Type/Value |
 |:------    |:--------    |:--------|
 |accountId|  LP site ID |   String |
-|certificateId|  generated certificate ID for the certificate you'd like to retrieve  |  String |
 
 ### Response
 
@@ -43,21 +58,30 @@ This API gets a certificate by account ID and certificate ID.
 | 500  | Internal Server Error |
 
 
+
 **Response Body**
 
 for example:
 
-```JSON
-{
-    "id": 3515906310,
-    "deleted": false,
-    "name": "Cert1",
-    "displayName": "Cert1",
-    "siteId": "le1606809",
-    "status": "UnAvailable",
-    "expirationDate": null
+```
+{  
+   "successfulySavedCertificates":[  
+      {  
+         "id":2628739923,
+         "deleted":false,
+         "name":"{certificateName}",
+         "displayName":"{certificateName}",
+         "siteId":"{accountId}",
+         "status":"Available",
+	 "expirationDate": null
+      }
+   ],
+   "failedSaveToVaultCertificates":[  
+
+   ]
 }
 ```
+
 
 **Entity Structure:**
 

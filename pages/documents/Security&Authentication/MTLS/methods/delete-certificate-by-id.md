@@ -3,7 +3,7 @@ pagename: Delete certificate by ID
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS API
+documentname: MTLS 
 subfoldername: Methods
 permalink: mtls-methods-delete-certificate-by-id.html
 ---

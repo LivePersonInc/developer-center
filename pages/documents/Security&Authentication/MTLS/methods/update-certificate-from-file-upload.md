@@ -1,23 +1,20 @@
 ---
-pagename: Create certificate from file
+pagename: Update certificate from file
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS API
+documentname: MTLS 
 subfoldername: Methods
-permalink: mtls-methods-create-certificate-from-file.html
+permalink: mtls-methods-update-certificate-from-file.html
 ---
 
-{: .important}
-Currently, these methods cannot be used to create certificates. To get started with a certificate, please contact LivePerson Support.
-
-This API creates a certificate by uploading a file, for a specific account ID.
+This API updates a certificate by uploading a file for specific account ID.
 
 ### Request
 
  |Method|      URL|  
  |:--------  |:---  |
- |POST|  https://[{domain}]/mtls/account/{accountId}/certificates/by-file |
+ |PUT|  https://[{domain}]/mtls/account/{accountId}/certificates/by-file |
 
 
 **Request Headers**
@@ -25,17 +22,20 @@ This API creates a certificate by uploading a file, for a specific account ID.
  |Header         |Description  |
  |:------|        :--------  |
  |Authorization|    Contains token string to allow request authentication and authorization.  |
-
+ |file|    Contains p12 file in multipart/form-data key value field. |
+ |certificate|    Contains the certificate DTO in multipart/form-data key value field.  |
 
 **Request Body**
 
-This end-point receives information formatted as `form-data`. The below is an example of the body in this format.
+form-data body
 
-|Key         |Value  |
-|:------|        :--------  |
-|file  (File field type)|    p12 file   |
-|certificate  (Text field type)|    {"name":"myCertificate", "password":"1234"}   |
+KEY: file  (File field type)
 
+VALUE: select p12 file
+
+KEY: certificate  (Text field type)
+
+VALUE: {"name":"myCertificate", "password":"1234", "id":937706832}
 
 **Path Parameters**
 
@@ -49,10 +49,11 @@ This end-point receives information formatted as `form-data`. The below is an ex
 
 | Code | Description           |
 |------|-----------------------|
-| 201  | Created               |
+| 200  | OK                    |
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
+
 
 
 **Response Body**

@@ -1,48 +1,36 @@
 ---
-pagename: Create certificate for account
+pagename: Get all certificates by account
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS API
+documentname: MTLS 
 subfoldername: Methods
-permalink: mtls-methods-create-certificate-for-account.html
+permalink: mtls-methods-get-all-certificates-by-account.html
 ---
 
-{: .important}
-Currently, these methods cannot be used to create certificates. To get started with a certificate, please contact LivePerson Support.
-
-This API creates a certificate for a specific account ID.
+This API gets all certificates from a specific account by account ID.
 
 ### Request
 
-|Method|      URL|  
-|:--------  |:---  |
-|POST|  https://[{domain}]/mtls/account/{accountId}/certificates |
+ |Method|      URL|  
+ |:--------  |:---  |
+ |GET|  https://[{domain}]/mtls/account/{accountId}/certificates |
 
 
 **Request Headers**
 
-|Header         |Description  |
-|:------|        :--------  |
-|Authorization|    Contains token string to allow request authentication and authorization.  |
+ |Header         |Description  |
+ |:------|        :--------  |
+ |Authorization|    Contains token string to allow request authentication and authorization.  |
 
 **Request Body**
 
-```json
-[
-  {
-  	"name":"myCert1",
-  	"p12":[98,121,116,101,115, ...],
-  	"password":"paw1"
-  }
-]
-```
 
 **Path Parameters**
 
-|Parameter|  Description|  Type/Value |
-|:------    |:--------    |:--------|
-|accountId|  LP site ID |   String |
+ |Parameter|  Description|  Type/Value |
+ |:------    |:--------    |:--------|
+ |accountId|  LP site ID |   String |
 
 ### Response
 
@@ -50,7 +38,7 @@ This API creates a certificate for a specific account ID.
 
 | Code | Description           |
 |------|-----------------------|
-| 201  | Created               |
+| 200  | OK                    |
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
@@ -58,25 +46,20 @@ This API creates a certificate for a specific account ID.
 
 **Response Body**
 
-For example:
+for example:
 
-```json
-{  
-   "successfulySavedCertificates":[  
-      {  
-         "id":2628739923,
-         "deleted":false,
-         "name":"{certificateName}",
-         "displayName":"{certificateName}",
-         "siteId":"{accountId}",
-         "status":"Available",
-	 "expirationDate": null
-      }
-   ],
-   "failedSaveToVaultCertificates":[  
-
-   ]
-}
+```JSON
+[
+  {
+      "id": 3515906310,
+      "deleted": false,
+      "name": "Cert1",
+      "displayName": "Cert1",
+      "siteId": "le1606809",
+      "status": "UnAvailable",
+      "expirationDate": null
+  }
+]
 ```
 
 **Entity Structure:**

@@ -1,14 +1,15 @@
 ---
-pagename: Forward put request
+pagename: Forward post request
 keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: MTLS API
+documentname: MTLS 
 subfoldername: Methods
-permalink: mtls-methods-forward-put-request.html
+permalink: mtls-methods-forward-post-request.html
 ---
 
-The Forward API methods proxies incoming requesst to the `LP-forward-url` supplied parameter. Proxied requests are wrapped with the certificate provided according to the configuration parameters (accountId/servicName/Url which act as a unique key). If no configuration exists, the request will be proxied using regular TLS (rather than mTLS). The proxied http method in this method is `PUT` (this corresponds to the method you'd like to use with the endpoint configured with `LP-forward-url`). 
+The Forward API methods proxies incoming requesst to the `LP-forward-url` supplied parameter. Proxied requests are wrapped with the certificate provided according to the configuration parameters (accountId/servicName/Url which act as a unique key). If no configuration exists, the request will be proxied using regular TLS (rather than mTLS). The proxied http method in this method is `POST` (this corresponds to the method you'd like to use with the endpoint configured with `LP-forward-url`). 
+
 
 When submitting the forward request, the certificate will be fetched according to service name + url, wrapped and forwarded to the desired endponit and the response will be returned as if contacted the remote endpoint directly.
 
@@ -16,7 +17,7 @@ When submitting the forward request, the certificate will be fetched according t
 
  |Method|      URL|  
  |:--------  |:---  |
- |PUT|  https://[{domain}]/mtls/account/{accountId} |
+ |POST|  https://[{domain}]/mtls/account/{accountId} |
 
 
 **Request Headers**
@@ -45,6 +46,7 @@ Body will be proxied as is to the remote  endpoint (`LP-forward-url`), so the bo
 | Code | Description           |
 |------|-----------------------|
 | 200  | OK                    |
+| 201  | Created               |
 | 401  | Not Authenticated     |
 | 403  | Not Authorized        |
 | 500  | Internal Server Error |
