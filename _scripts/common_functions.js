@@ -83,7 +83,7 @@ module.exports = {
                 errorCounter++;
             }
             else if (!(fileName === line.substring(10))) {
-                console.log(`Page name: ${line.substring(10)} in file does not match the layout spec: ${fileName}\n\n`)
+                console.log(`Page name: ${line.substring(10)} in ${path} des not match the layout spec: ${fileName}\n\n`)
                 errorCounter++;
             }
         })
