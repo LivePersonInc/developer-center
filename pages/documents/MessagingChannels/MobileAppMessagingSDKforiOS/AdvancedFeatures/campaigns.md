@@ -1,5 +1,5 @@
 ---
-pagename: Campaigns 
+pagename: Campaigns
 redirect_from:
   - consumer-experience-ios-sdk-advanced-campaigns.html
   - mobile-app-messaging-sdk-for-ios-advanced-features-campaigns-for-mobile-app-messaging.html
