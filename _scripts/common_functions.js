@@ -77,13 +77,13 @@ module.exports = {
             try {
                 this.get_line(path, i, function (err, line) {
                     if (line.includes('documentname:')) {
-                        nameArr.documentname = line.substring(14);
+                        nameArr.documentname = line.substring(14).trim();
                     } else if (line.includes('subfoldername:')) {
-                        nameArr.subfoldername = line.substring(15);
+                        nameArr.subfoldername = line.substring(15).trim();
                     } else if (line.includes('permalink:')) {
-                        nameArr.permalink = line.substring(11);
+                        nameArr.permalink = line.substring(11).trim();
                     } else if (line.includes('pagename:')) {
-                        nameArr.pagename = line.substring(10);
+                        nameArr.pagename = line.substring(10).trim();
                     }
                 })
             } catch (e) {
