@@ -1,5 +1,5 @@
 ---
-pagename: File integrations
+pagename: File Integrations
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"

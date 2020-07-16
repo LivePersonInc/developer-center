@@ -1,5 +1,5 @@
 ---
-pagename: Knowledge Base integrations
+pagename: Knowledge Base Integrations
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"

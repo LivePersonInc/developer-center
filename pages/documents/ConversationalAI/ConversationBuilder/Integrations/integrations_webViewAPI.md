@@ -1,5 +1,5 @@
 ---
-pagename: Web View integration API
+pagename: Web View Integration API
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
