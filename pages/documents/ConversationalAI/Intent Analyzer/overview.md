@@ -7,7 +7,6 @@ documentname: Intent Analyzer
 permalink: intent-analyzer-overview.html
 indicator: both
 ---
-
 ### Overview
 
 Intent Analyzer is LivePerson's hub for tracking and maintaining intents in real time. It provides enhanced reporting and analytics for your bots and automation.
