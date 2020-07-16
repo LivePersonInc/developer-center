@@ -9,7 +9,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Conversation Builder
+subfoldername: Interactions
 permalink: conversation-builder-interactions-configuration-settings.html
 indicator: both
 ---

@@ -1,5 +1,5 @@
 ---
-pagename: "Limitations & Restrictions"
+pagename: Limitations & Restrictions
 keywords:
 sitesection: Documents
 categoryname: "Developer Tools"

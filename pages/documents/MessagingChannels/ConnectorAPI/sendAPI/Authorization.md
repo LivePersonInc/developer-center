@@ -8,7 +8,7 @@ redirect_from:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: SendAPI
+subfoldername: Send API
 order: 14
 indicator: messaging
 permalink: connector-api-send-api-authorization-and-authentication.html

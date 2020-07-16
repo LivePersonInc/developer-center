@@ -6,7 +6,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Conversation Builder
+
 permalink: conversation-builder-variables-slots.html
 indicator: both
 ---

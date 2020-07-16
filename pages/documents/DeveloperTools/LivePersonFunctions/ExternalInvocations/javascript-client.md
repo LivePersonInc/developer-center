@@ -4,6 +4,7 @@ keywords:
 sitesection: Documents
 categoryname: "Developer Tools"
 documentname: LivePerson Functions
+subfoldername: External Invocations
 permalink: liveperson-functions-external-invocations-javascript-client.html
 indicator: both
 redirect_from:

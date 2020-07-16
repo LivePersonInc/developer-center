@@ -8,7 +8,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Conversation Builder
+
 permalink: conversation-builder-bot-workspace.html
 indicator: both
 ---

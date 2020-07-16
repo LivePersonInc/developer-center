@@ -6,7 +6,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Troubleshooting
+subfoldername: Integrations
 permalink: conversation-builder-integrations-troubleshooting.html
 indicator: both
 ---

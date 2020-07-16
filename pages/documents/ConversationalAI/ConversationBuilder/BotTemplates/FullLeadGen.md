@@ -6,7 +6,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Templates
+subfoldername: Bot Templates
 permalink: conversation-builder-bot-templates-full-lead-gen.html
 indicator: both
 ---
