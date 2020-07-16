@@ -1,5 +1,5 @@
 ---
-pagename: Set Agent’s Typing Status
+pagename: Set Agent's Typing Status
 redirect_from:
   - agent-set-agent-typing.html
 Keywords:

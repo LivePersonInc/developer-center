@@ -1,5 +1,5 @@
 ---
-pagename: Retrieve Agent’s Typing Status
+pagename: Retrieve Agent's Typing Status
 redirect_from:
   - agent-retrieve-agent-typing.html
 Keywords:
