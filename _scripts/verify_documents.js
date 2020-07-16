@@ -39,7 +39,7 @@ let path;
                   })
                }
                else {
-                  console.log(`Folder Name: ${doc.documentname} doesn't exist in ${document_path} or is not named properly. \n`);
+                  console.log(`Folder Name: ${doc.documentname} doesn't exist in ${path} or is not named properly. \n`);
                }
             } else {
                commonMethods.fileExists(doc.documentname, document_path)
