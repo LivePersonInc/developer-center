@@ -2,7 +2,6 @@
 pagename: Messaging Channels Capabilities Comparison
 sitesection: Documents
 categoryname: "Messaging Channels"
-documentname:
 permalink: messaging-channels-capabilities-comparison.html
 indicator: messaging
 ---

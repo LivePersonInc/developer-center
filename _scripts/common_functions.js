@@ -90,7 +90,7 @@ module.exports = {
     },
     findTreePath: function (path) {
         // todo rename conversation-builder-tutorials-guides-getting-started.html ---
-        let nameArr = { 'documentname': null, 'subfoldername': null, 'permalink': null, 'pagename': null }
+        let nameArr = { 'categoryname': null, 'documentname': null, 'subfoldername': null, 'permalink': null, 'pagename': null, }
         // looking though first 50 lines in mark down for all items in array
         let PageHeaderLines = 50
         for (let i = 1; i < PageHeaderLines; i++) {
@@ -104,6 +104,9 @@ module.exports = {
                         nameArr.permalink = line.substring(11).trim();
                     } else if (line.includes('pagename:')) {
                         nameArr.pagename = line.substring(10).trim();
+                    }
+                    else if (line.includes('categoryname:')) {
+                        nameArr.categoryname = line.substring(14).trim();
                     }
                 })
             } catch (e) {

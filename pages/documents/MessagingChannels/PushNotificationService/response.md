@@ -5,8 +5,7 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
-
-
+documentname: Push Notification Service
 order: 30
 permalink: push-notification-service-http-response-codes.html
 
