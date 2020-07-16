@@ -9,7 +9,7 @@ let path;
    commonMethods.resetErrorCounter();
    let pass = 0; // 0 is true -1 is false
    data.forEach(item => {
-      path = "pages/documents/";
+      path = "pages/Documents/";
       path += commonMethods.convertToExpectedFolderName(item.categoryname) + '/';
       if (fs.existsSync(path) && item.documents) {
          item.documents.forEach(doc => {
@@ -32,14 +32,14 @@ let path;
                         } else {
                            console.log(`Folder Name: ${page.pagename} doesn't exist in ${document_path} or is not named properly. \n`);
                         }
-                        // TODO
+
                      } else {
                         commonMethods.fileExists(page.pagename, document_path)
                      }
                   })
                }
                else {
-                  console.log(`Folder Name: ${doc.documentname} doesn't existin ${document_path} or is not named properly. \n`);
+                  console.log(`Folder Name: ${doc.documentname} doesn't exist in ${document_path} or is not named properly. \n`);
                }
             } else {
                commonMethods.fileExists(doc.documentname, document_path)
