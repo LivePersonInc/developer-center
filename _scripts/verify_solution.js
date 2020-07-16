@@ -41,16 +41,15 @@ let errorCounter = 0;
                     //solution_path += filefName + '.md';
                     // console.log('solution path is : ', solution_path);
                     if (fs.existsSync(document_path)) {
-                        console.log('This file exists: ', document_path);
-                        let pagename = commonMethods.get_line(document_path, 1, function (err, line) {
+                        // console.log('This file exists: ', document_path);
+                        commonMethods.get_line(document_path, 1, function (err, line) {
                             // console.log("pagename&&&:", line.substring(10));
-                            console.log("\n");
                             if (line.substring(10).includes("\"")) {
-                                console.log(`Page name: ${line.substring(10)} Should not contain double quotes `)
+                                console.log(`Page name: ${line.substring(10)} in ${document_path} Should not contain double quotes `)
                                 errorCounter++;
                             }
                             else if (!(doc.documentname === line.substring(10))) {
-                                console.log(`Page name: ${line.substring(10)} in file does not match the layout spec: ${fileName}`)
+                                console.log(`Page name: ${line.substring(10)} in ${document_path} does not match the layout spec: ${doc.documentname}\n`)
                                 errorCounter++;
                             }
                         })
@@ -68,8 +67,7 @@ let errorCounter = 0;
                 }
             })
         } else {
-            console.log(` ${commonMethods.convertToExpectedFolderName(item.solutionname)} folders doesn't exist or is not named properly.
-            `);
+            console.log(`Folder Name:${commonMethods.convertToExpectedFolderName(item.solutionname)} in pages/Solutions/ doesn't exist or is not named properly. \n`);
             errorCounter++;
         }
     })

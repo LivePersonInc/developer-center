@@ -126,7 +126,6 @@
           - subpagename: Using Meta Intents with Conversation Builder
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
-        #  - subpagename: Implementing the Shift Status & Current Queue Health APIs
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
@@ -262,7 +261,6 @@
     pages:
       - pagename: Permissions
       - pagename: Credentials
-  #    - pagename: Subscriptions
   - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
@@ -737,11 +735,6 @@
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
-  # - documentname: LiveDeflect API
-  #   pages:
-  #   - pagename: Overview
-  #   - pagename: contextAndInvite
-  #   - pagename: getLiveDeflectData
   - documentname: Connector API
     basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
@@ -959,10 +952,6 @@
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Limitations
-    #- documentname: Quick Replies
-    #  pages:
-    #    - pagename: Introduction to Quick Replies
-
 - categoryname: 'Security & Authentication'
   image: security-authentication
   documents:
@@ -1119,9 +1108,3 @@
         - pagename: Google AdWords - Click-to-Message
         - pagename: SMS via Mobile App Messaging
         - pagename: Appendix
-    # - documentname: Video Chat
-    #   pages:
-    #     - pagename: Add Video to Chat Conversations
-    #     - pagename: Plan Your Service
-    #     - pagename: Develop the Service
-    #     - pagename: Build Your Widgets

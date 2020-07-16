@@ -6,6 +6,7 @@ REGEX_AMP=" & "
 REGEX_SPACE=" "
 REGEX_QUOTE="\""
 REGEX_BASIC_DASH="-"
+REGEX_COMMA=", "
 find ./pages/* -type d > ./_scripts/newFile.txt
 
 
@@ -43,6 +44,12 @@ do
             page=${page/$REGEX_AMP/"-"}
         done;
     fi
+    if [[ $page =~ $REGEX_COMMA ]]; then
+        while [[ $page =~ $REGEX_COMMA ]]; do
+            page=${page/$REGEX_COMMA/"-"}
+        done;
+    fi
+
     # Removes leading spaces
     page="${page#"${page%%[![:space:]]*}"}"
     if [[ $page =~ $REGEX_SPACE ]]; then
@@ -111,9 +118,6 @@ do
     fi
     current="${path}/${currentFolder}"
     new="${path}/${folder}"
-    echo $current
-    echo $new
-    echo "\n"
-    # mv -f "$current" "$new"
+    mv -f "$current" "$new"
 done < "$input"
 rm -f ./_scripts/badFoldersR.txt

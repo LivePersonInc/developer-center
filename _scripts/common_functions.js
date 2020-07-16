@@ -3,6 +3,7 @@ const REGEX_PLUS = " + ";
 const REGEX_SLASH = " / ";
 const REGEX_AMP = " & ";
 const REGEX_QUOTE = "\"";
+const REGEX_COMMA = ", "
 let errorCounter = 0;
 const fs = require("fs"); // Or `import fs from "fs";` with ESM
 const { name } = require("browser-sync");
@@ -13,28 +14,22 @@ module.exports = {
 
         if (file.includes(REGEX_DASH)) {
             regex = / - /gi;
-            console.log('UNIQUE FILE', file);
             file = file.replace(regex, '-');
         } else if (file.includes(REGEX_PLUS)) {
             regex = / + /gi;
-            console.log('UNIQUE FILE', file);
             file = file.replace(regex, '-');
-            console.log('UNIQUE FILE fixed', file);
         } else if (file.includes(REGEX_SLASH)) {
             regex = / \/ /gi;
-            console.log('UNIQUE FILE', file);
             file = file.replace(regex, '-');
-            console.log('UNIQUE FILE fixed', file);
         } else if (file.includes(REGEX_AMP)) {
             regex = / & /gi;
-            console.log('UNIQUE FILE', file);
             file = file.replace(regex, '-');
-            console.log('UNIQUE FILE fixed', file);
         } else if (file.includes(REGEX_QUOTE)) {
             regex = /"/gi;
-            console.log('UNIQUE FILE QUOTE', file);
             file = file.replace(regex, '');
-            console.log('UNIQUE FILE fixed', file);
+        } else if (file.includes(REGEX_COMMA)) {
+            regex = /, /gi;
+            file = file.replace(regex, '-');
         }
         return file.toLowerCase().split(' ').join('-').trim();
 
@@ -72,8 +67,9 @@ module.exports = {
     findTreePath: function (path) {
         // todo rename conversation-builder-tutorials-guides-getting-started.html ---
         let nameArr = { 'documentname': null, 'subfoldername': null, 'permalink': null, 'pagename': null }
-
-        for (let i = 1; i < 22; i++) {
+        // looking though first 50 lines in mark down for all items in array
+        let PageHeaderLines = 50
+        for (let i = 1; i < PageHeaderLines; i++) {
             try {
                 this.get_line(path, i, function (err, line) {
                     if (line.includes('documentname:')) {
@@ -87,7 +83,8 @@ module.exports = {
                     }
                 })
             } catch (e) {
-                console.log(' reached the end of file', e);
+                // Breaks at end of file if less then 50
+                // console.log(' reached the end of file', e);
                 break;
             }
         }
@@ -114,7 +111,6 @@ module.exports = {
     },
     verifyPermalink: function (path) {
         let currentPageInfo = this.findTreePath(path);
-        console.log("CURRENT PAGE INFO : ", currentPageInfo);
         let expectedPermalink;
         // loop through get line method to search for documentname, pagename, subfoldername and p
         let pagename = this.convertToExpectedFileName(currentPageInfo.pagename);
@@ -127,31 +123,28 @@ module.exports = {
             if (currentPageInfo.subfoldername !== null) {
                 subfoldername = this.convertToExpectedFileName(currentPageInfo.subfoldername);
                 expectedPermalink = `${documentname}-${subfoldername}-${pagename}.html`;
-                if (currentPageInfo.permalink === expectedPermalink) {
-                    console.log("THE PERMALINK IS VALID");
-                } else {
+                if (currentPageInfo.permalink !== expectedPermalink) {
                     console.log(`The permalink is invalid found: ${currentPageInfo.permalink}`);
-                    console.log(`Expected permalink: ${expectedPermalink}`);
+                    console.log(`Expected permalink: ${expectedPermalink} \n\n`);
+                    console.log("CURRENT PAGE INFO : ", currentPageInfo);
                     errorCounter++;
                 }
             }
             else {
                 expectedPermalink = `${documentname}-${pagename}.html`;
-                if (currentPageInfo.permalink === expectedPermalink) {
-                    console.log("THE PERMALINK IS VALID");
-                } else {
+                if (currentPageInfo.permalink !== expectedPermalink) {
                     console.log(`The permalink is invalid found: ${currentPageInfo.permalink}`);
-                    console.log(`Expected permalink: ${expectedPermalink}`);
+                    console.log(`Expected permalink: ${expectedPermalink} \n\n`);
+                    console.log("CURRENT PAGE INFO : ", currentPageInfo);
                     errorCounter++;
                 }
             }
         } else {
             expectedPermalink = `${pagename}.html`;
-            if (currentPageInfo.permalink === expectedPermalink) {
-                console.log("THE PERMALINK IS VALID");
-            } else {
+            if (currentPageInfo.permalink !== expectedPermalink) {
                 console.log(`The permalink is invalid found: ${currentPageInfo.permalink}`);
-                console.log(`Expected permalink: ${expectedPermalink}`);
+                console.log(`Expected permalink: ${expectedPermalink} \n\n`);
+                console.log("CURRENT PAGE INFO : ", currentPageInfo);
                 errorCounter++;
             }
         }

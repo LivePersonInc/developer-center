@@ -30,26 +30,28 @@ let path;
                               commonMethods.fileExists(subpage.subpagename, page_path)
                            })
                         } else {
-                           console.log(`${page.pagename} folder doesn't exist or is not named properly. \n\n`);
+                           console.log(`Folder Name: ${page.pagename} doesn't exist or is not named properly. \n`);
                         }
                         // TODO
+                     } else {
+                        commonMethods.fileExists(page.pagename, document_path)
                      }
-                     commonMethods.fileExists(page.pagename, document_path)
                   })
                }
                else {
-                  console.log(`${doc.documentname} folder doesn't exist or is not named properly. \n\n`);
+                  console.log(`Folder Name: ${doc.documentname} doesn't exist or is not named properly. \n`);
                }
+            } else {
+               commonMethods.fileExists(doc.documentname, document_path)
             }
-            commonMethods.fileExists(doc.documentname, document_path)
          })
 
       } else {
-         console.log(` ${commonMethods.convertToExpectedFolderName(item.categoryname)} folders doesn't exist or is not named properly. \n\n`);
+         console.log(`Folder Name: ${commonMethods.convertToExpectedFolderName(item.categoryname)} in pages/documents/ doesn't exist or is not named properly. \n`);
       }
    })
    let errorCounter = commonMethods.getErrorCount();
-   console.log("\n\n Number of errors: ", errorCounter)
+   console.log("\n Number of errors: ", errorCounter)
    if (errorCounter > 0) {
       throw new Error('Please address the errors and commit again in the documents folder. These errors are in the logs under the _scripts folder : ' + errorCounter)
    }
