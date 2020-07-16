@@ -638,17 +638,17 @@
     pages:
       - pagename: Overview
       - pagename: Getting Started
-      - pagename: Development
+      - pagename: Developing with FaaS
         subpages:
           - subpagename: Overview
-          - subpagename: "Events & Templates"
+          - subpagename: Events & Templates
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
           - subpagename: Debugger
           - subpagename: Common Examples
-          - subpagename: "Best Practices"
-          - subpagename: "Limitations & Restrictions"
+          - subpagename: Best Practices
+          - subpagename: Limitations & Restrictions
       - pagename: "Command Line Interface (CLI)"
       - pagename: Deployment
       - pagename: Monitoring
@@ -758,13 +758,13 @@
           - subpagename: Disclaimers
           - subpagename: Troubleshooting
           - subpagename: Webhooks Examples
-  - documentname: IVR Engagement API
-    basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
-    pages:
-    - pagename: Overview
-    - pagename: Methods
-      subpages:
-        - subpagename: External Engagement
+  # - documentname: IVR Engagement API
+  #   basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
+  #   pages:
+  #   - pagename: Overview
+  #   - pagename: Methods
+  #     subpages:
+  #       - subpagename: External Engagement
   - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview

@@ -1,11 +1,11 @@
 ---
-pagename: "Best Practices"
+pagename: Best Practices
 keywords:
 sitesection: Documents
 categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
-permalink: liveperson-functions-development-best-practices.html
+permalink: liveperson-functions-developing-with-faas-best-practices.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-best-practices.html

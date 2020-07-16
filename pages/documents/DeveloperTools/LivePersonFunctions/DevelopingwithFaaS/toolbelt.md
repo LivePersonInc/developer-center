@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
-permalink: liveperson-functions-development-toolbelt.html
+permalink: liveperson-functions-developing-with-faas-toolbelt.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-toolbelt.html

@@ -1,11 +1,11 @@
 ---
-pagename: "Events & Templates"
+pagename: Events & Templates
 keywords:
 sitesection: Documents
 categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
-permalink: liveperson-functions-development-events-templates.html
+permalink: liveperson-functions-developing-with-faas-events-templates.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-events-templates.html

@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Developer Tools"
 documentname: LivePerson Functions
 subfoldername: Developing with FaaS
-permalink: liveperson-functions-development-storing-secrets.html
+permalink: liveperson-functions-developing-with-faas-storing-secrets.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-storing-secrets.html
