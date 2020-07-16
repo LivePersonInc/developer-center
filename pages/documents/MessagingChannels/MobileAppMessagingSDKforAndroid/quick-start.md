@@ -1,11 +1,11 @@
 ---
 pagename: Quick Start
-redirect_from:
-  - android-quickstart.html
-Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
+redirect_from:
+  - android-quickstart.html
+Keywords:
 permalink: mobile-app-messaging-sdk-for-android-quick-start.html
 indicator: messaging
 ---

@@ -768,7 +768,7 @@
   - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview
-    - pagename: Quick Start
+    - pagename: Quick Start For Android
     - pagename: Configure the Android SDK
     - pagename: Push Notifications
     - pagename: Advanced Features
