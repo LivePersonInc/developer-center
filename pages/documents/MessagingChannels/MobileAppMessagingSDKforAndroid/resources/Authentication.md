@@ -1,5 +1,5 @@
 ---
-pagename: Authentication for Android
+pagename: Authentication
 redirect_from:
   - android-authentication.html
 Keywords:

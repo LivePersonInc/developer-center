@@ -1,5 +1,5 @@
 ---
-pagename: Storing secrets
+pagename: Storing Secrets
 keywords:
 sitesection: Documents
 categoryname: "Developer Tools"
