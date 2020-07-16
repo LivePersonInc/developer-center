@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Runtime API 
 subfoldername: Methods
-permalink: /agent-survey-for-messaging-runtime-api-methods-submit-agent-survey.html
+permalink: agent-survey-for-messaging-runtime-api-methods-submit-agent-survey.html
 indicator: messaging
 ---
 

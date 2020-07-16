@@ -6,7 +6,6 @@ redirect_from:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
-subfoldername: Sample Code
 order: 70
 indicator: messaging
 permalink: connector-api-connector-sample-app.html

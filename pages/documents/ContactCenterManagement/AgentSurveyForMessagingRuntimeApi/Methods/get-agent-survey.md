@@ -4,7 +4,7 @@ keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
 documentname: Agent Survey For Messaging Runtime API 
-subfoldername: Methodsz
+subfoldername: Methods
 permalink: agent-survey-for-messaging-runtime-api-methods-get-agent-survey.html
 indicator: messaging
 ---
