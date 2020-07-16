@@ -861,7 +861,7 @@
     pages:
     - pagename: API
 
-- categoryname: Real-Time Data
+- categoryname: Real Time Data
   image: rt-data
   documents:
   - documentname: Agent Metrics API
