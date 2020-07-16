@@ -1,5 +1,5 @@
 ---
-pagename: How to use the SDK
+pagename: How to Use the SDK
 redirect_from:
   - rt-interactions-window-sdk-how-to-use.html
 sitesection: Documents
