@@ -21,11 +21,11 @@ We support the Direct Line API version 3.0.
 {: .important}
 See the [Getting Started guide](bot-connectors-getting-started.html) first to complete pre-requisite steps.
 
-Throughout this document, you will be presented with the following screen to fill in the vendor data if you've selected **Microsoft Bot Framework**.
+You will be presented with the following screen to complete the Vendor Settings if you've selected **Microsoft Bot Framework**.
 
 <img class="fancyimage" style="width:600px" src="img/msbotframework/vendor.png">
 
-Figure 1.1 Showing the configuration that needs to be filled out
+Figure 2.1 Showing the configuration that needs to be filled out
 
 The following Microsoft information should be provided to LivePerson:
 
@@ -50,7 +50,8 @@ The following Microsoft information should be provided to LivePerson:
   </tr>
   <tr>
     <td>Multiple Activities (Optional)</td>
-    <td>The connector normally only waits on the first response activity send by the bot and pass it to the customer. If you intent to send multiple activities with the same `ReplyToId` you need to activate this feature. The value describes the maximum time in milliseconds that is allowed to pass between two activities. After this time has elapsed, the connector will regard the request as handled</td>
+    <td>The connector by default only waits on the first response activities send by the bot and pass it to the customer. If you intent to send multiple activities with the same `ReplyToId` you should activate this feature.
+     The value describes the time the connector will wait [in milliseconds] and then check again for further responses. The connector will continue checking in this interval as long as he finds more responses. If no additional responses can be found after this interval all responses until this point will be returned </td>
     <td>1000</td>
   </tr>
   </tbody>
@@ -59,7 +60,7 @@ The following Microsoft information should be provided to LivePerson:
 The Direct Line Secret can be found in the Azure Portal if you select the corresponding Web App Bot and edit the Configuration of the Direct Line Channel.
 
 <img class="fancyimage" style="width:750px" src="img/msbotframework/secret.png">
-Figure 1.2 The Direct Line Secret
+Figure 2.2 The Direct Line Secret
 
 For validation of the credentials provided, you can perform a connection test to see if the messages can be sent to the channel with the provided secret by clicking on the button "Test Connection".
 For this test it is not necessary for the bot to respond with a message.
@@ -72,13 +73,13 @@ The Bot Connector utilizes the **channelData** property for anything besides pla
 It is expected that a bot responds to every message sent by the consumer.
 If no response is detected in a certain time frame, the Bot Connector assumes something is wrong and tries to transfer the conversation to an agent.
 
-If you want the bot to reply with more than one message, you need to use the [multiMessage](#sending-multiple-responses) feature or configure the `Multiple Activities` option.
+If you want the bot to reply with more than one message, you should use the [multiMessage](#sending-multiple-responses) feature or configure the `Multiple Activities` option.
 
-### Sending Rich Content (Structured Content)
+### Rich Content (Structured Content)
 
 Structured content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
-To send structured content from a bot implemented with the Microsoft Bot Framework, send the rich content in the `channelData` of the message activity.
+To send Rich Content from a bot implemented with the Microsoft Bot Framework, send it in the `channelData` of the message activity.
 
 This should contain a valid structured content body, along with an optional property containing metadata required for the structured content. Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before using it in a bot.
 
@@ -119,7 +120,7 @@ If Images are sent in Rich content, then their URLs must be added to a whitelist
 
 Figure 4.1 Activity with Structured Content
 
-### Sending Quick Replies (Structured Content)
+#### Sending Quick Replies
 
 {: .important}
 **Please note** Quick Replies are only supported in Messaging Conversations.
@@ -190,9 +191,127 @@ For detailed information on Quick Replies check out the documentation for the sp
 }
 ```
 
-Figure 5.1 Activity with Quick Replies
+Figure 4.2 Activity with Quick Replies
 
-### Change Time To Response of Conversation
+### Welcome Event
+
+The behavior of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual LivePerson product works..
+
+A Messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by the bot and an intent determined.
+
+A Chat conversation is considered started when the chat is routed to an agent. Best practice is for the agent to provide the first response. In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilized as a start point for the bot to prompt the user to provide input and progress the conversation.
+
+Ensure you have an ‘entry point’ in your bot that responds to the default ‘WELCOME’ action send by a new chat customer.
+
+```json
+{
+  "type": "message",
+  "text": "",
+  "channelData": {
+    "action": {
+      "name": "WELCOME"
+    }
+  }
+}
+```
+
+Figure 5.1 Welcome activity on chat
+
+### Transfer / Escalations
+
+Transfers and escalations are straightforward in both chat and messaging.
+
+At the beginning of a chat session or when a messaging bot logs in, the whole list of enabled skills on the account is retrieved, keyed by name and stored.
+
+When a transfer is requested by the bot, the provided skill name is matched to the skill existing on the account and the conversation is escalated based on this skill.
+
+<div class="notice">
+<strong>Naming Conventions:</strong> 
+When naming skills the bot can escalate to, you should use the Kebab Case <italic>(e.g. human-expert)</italic> for the skill matching to work.
+</div>
+
+For **Microsoft Bot Framework**, the bot should provide the specific name in the payload of the activity.
+You can use the official Microsoft BotBuilder SDK method called [EventFactory.createHandoffInitiation](https://docs.microsoft.com/en-us/javascript/api/botbuilder/eventfactory?view=botbuilder-ts-latest).
+
+An additional text message can also be provided.
+
+```javascript
+{
+  import { EventFactory, TurnContext } from "botbuilder";
+
+  // context should be of type TurnContext
+  const handoffContext = { skill: "CUSTOM" };
+
+  const payload = {
+    text: "",
+    ...EventFactory.createHandoffInitiation(context, handoffContext),
+  };
+}
+```
+
+Figure 6.1 Bot activity for a transfer request
+
+Also, you can provide the specific action in the **channelData** of the message activity.
+The action must be named **"TRANSFER"** and the skill must be provided in the parameters object as shown in Figure 6.2
+
+An additional text message can also be provided.
+
+```json
+{
+  "type": "message",
+  "text": "",
+  "channelData": {
+    "action": {
+      "name": "TRANSFER",
+      "parameters": {
+        "skill": "CUSTOM"
+      }
+    }
+  }
+}
+```
+
+Figure 6.2 Alternative bot activity for a transfer request
+
+### Close Conversation
+
+To close a chat or messaging conversation, we provide an action object similar to a transfer.
+
+For that, we can use the official Microsoft BotBuilder Activity Type **[End of Conversation](https://docs.microsoft.com/en-us/azure/bot-service/dotnet/bot-builder-dotnet-activities?view=azure-bot-service-3.0#endofconversation)**.
+
+An additional text message can also be provided.
+
+```json
+{
+  "type": "endOfConversation",
+  "text": ""
+}
+```
+
+Figure 7.1 Bot Activity for a close conversation request
+
+Also, you can provide the specific action in the **channelData** of the message activity.
+The action must be named **"CLOSE_CONVERSATION"**.
+
+An additional text message can also be provided.
+
+```json
+{
+  "type": "message",
+  "text": "",
+  "channelData": {
+    "action": {
+      "name": "CLOSE_CONVERSATION"
+    }
+  }
+}
+```
+
+Figure 7.2 Alternative bot Activity for a close conversation request
+
+### Advanced Features
+
+#### Change Time To Response of Conversation
 
 By providing a specific **action** in the **channelData**, the bot can change the TTR of a conversation.
 
@@ -223,123 +342,37 @@ A text message can also be provided simultaneously in the activity json.
 }
 ```
 
-Figure 6.1 Activity with TTR Change
+Figure 8.1 Activity with TTR Change
 
-### Transfer / Escalations
+#### Sending Pause/Delay Messages
 
-Transfers and escalations are straightforward in both chat and messaging.
+It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. There are two properties, `delay` and `typing`.
 
-At the beginning of a chat session or when a messaging bot logs in, the whole list of enabled skills on the account is retrieved, keyed by name and stored.
-
-When a transfer is requested by the bot, the skill name is matched to one already on the account and the id is retrieved and escalated to.
-
-For **Microsoft Bot Framework**, the bot should provide the specific action in the **channelData** of the message activity.
-
-An additional text message can also be provided.
-
-```json
+```javascript
 {
   "type": "message",
   "text": "",
   "channelData": {
-    "action": {
-      "name": "TRANSFER",
-      "parameters": {
-        "skill": "CUSTOM"
-      }
+    "delay": {
+      "delay": 1,
+      "typing": true
     }
   }
 }
 ```
 
-Figure 7.1 Activity excerpt for a transfer Request
+Figure 8.2 Activity resulting in a delay with typing indicator
 
-### Sending Pause/Delay Message
+- **delay:** This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
+- **typing:** This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
 
-It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the bot will wait before displaying the next message. There are two properties, `delay` and `typing`.
+**Note:**
+This **single** delay activity will only work as expected if you've enabled the "Multiple Activities" feature in the bot configuration.
+Using the delay as a sole response activity without this feature is effectively a ‘no response’ action and might only be useful if the bot should not respond at all without an error escalation.
 
-<ul>
-  <li> <b>delay</b>: This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
-  <li><b>typing</b>: This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
-</ul>
+#### Sending Private Text Messages
 
-#### Sending delay between multiple messages
-
-Setting a delay in between multiple messages (for more information on multiple message [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Message - Delay - Structured Content - Delay - Message) can be seen below:
-
-```javascript
-{
-  "channelData": {
-    "multiMessage": [
-      {
-        "type": "text",
-        "value": "this is a text"
-      },
-      {
-        "type": "delay",
-        "value": 5
-      },
-      {
-        "type": "structured-content",
-        "value": {
-          "metadata": [],
-          "structuredContent": {
-            "type": "vertical",
-            "elements": [
-              {
-                "type": "button",
-                "click": {
-                  "actions": [
-                    {
-                      "text": "Recommend me a movie, please",
-                      "type": "publishText"
-                    }
-                  ]
-                },
-                "title": "Recommend a movie"
-              }
-            ]
-          }
-        }
-      },
-      {
-        "type": "delay",
-        "value": {
-          "delay": 3
-          "typing": false
-        }
-      },
-      {
-        "type": "text",
-        "value": "this is last message after a delay"
-      },
-    ]
-  }
-}
-```
-
-Please note the different ways of writing delay message in above example. In the first delay message Agent typing indicator will always be shown. In the second delay message user has ability to set the typing indicator as well.
-
-#### Sending a single delay message (Legacy)
-
-A single delay message can be send by adding `delay` and `typing` properties to `channelData`. An example of single text message that comes after delay can be seen below:
-
-```json
-{
-  "type": "message",
-  "text": "Hi i am sending a text coming after the delay!!",
-  "channelData": {
-    "delay": 8,
-    "typing": false
-  }
-}
-```
-
-**Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
-
-### Sending Private Text Message
-
-It is possible to send a private text message from the Live Engage (LE-UI) via agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
+It is possible to send a private text message from the Conversational Cloud via the agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
 
 {: .important}
 Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
@@ -353,33 +386,7 @@ Please note private text message will never be shown to the consumer and will be
 
 <br />
 
-#### Sending Private Text Message between multiple messages
-
-Setting a private text message in between multiple messages (for more information on multiple messages [check here](third-party-bots-microsoft-bot-framework.html#sending-multiple-responses)) is possible and an example of such a case (Simple Text Message - Private Text Message) can be seen below:
-
-```javascript
-{
-  "channelData": {
-    "multiMessage": [
-      {
-        "type": "text",
-        "value": "Hi How are you doing?"
-      },
-      {
-        "type": "private-message",
-         "value": {
-              "text": "This is a private text",
-              "messageAudience": "AGENTS_AND_MANAGERS",
-          }
-      }
-    ]
-  }
-}
-```
-
-#### Sending Single Private Text Message with Action
-
-A single private text message with action can be send by adding `text` and `messageAudience` properties with relevant action (e.g. [Transfer/Escalate](third-party-bots-microsoft-bot-framework.html#transfer--escalations)) properties. An example of such case is below:
+A single private text message with an action can be send by adding `text` and `messageAudience` properties with relevant action (e.g. [Transfer/Escalations](#transfer--escalations)) properties. An example of such case is below:
 
 ```json
 {
@@ -399,32 +406,14 @@ A single private text message with action can be send by adding `text` and `mess
 }
 ```
 
-### Close Chat/Conversation
+Figure 8.3 Transfer activity with a private message visible to agents and managers
 
-To close a chat or messaging conversation, we provide the action object as we did for a transfer. The activity should contain the following action.
+#### Engagement attributes as context
 
-An additional text message can also be provided.
-
-```json
-{
-  "type": "message",
-  "text": "",
-  "channelData": {
-    "action": {
-      "name": "CLOSE_CONVERSATION"
-    }
-  }
-}
-```
-
-Figure 9.1 Activity excerpt for a close conversation request
-
-### Engagement attributes as context
-
-Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 10.1.
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.3.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
-Figure 10.1 Conversation Type step in creation/modification of bot configuration.
+Figure 8.4 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Microsoft Bot these engagement attributes are added to the property `lpSdes` which is part of another custom property of `context`. This context information within a conversation is preserved/passed in `channelData` property (further information about `channelData` can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)). An example of the request body can be seen below:
 
@@ -440,37 +429,20 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 }
 ```
 
-### Welcome Event
+Figure 8.5 Customer activity excerpt on a new chat
 
-The behavior of the welcome event is different depending on whether the bot is for chat or messaging. This divergence comes down to the way that each individual LivePerson product works..
+#### Sending Multiple Responses
 
-A Messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by the bot and an intent determined.
+As stated under Limitations the default behaviour of our connector is to process the first responses we find on the channel. In case `Multiple Activities`
+is not enabled or the waiting period is set to low, the connector might not retrieve every activity your bot is sending.
 
-A Chat conversation is considered started when the chat is routed to an agent. Best practice is for the agent to provide the first response. In this scenario, there is no text from the consumer to parse, thus the default ‘WELCOME’ event is utilized as a start point for the bot to prompt the user to provide input and progress the conversation.
+In that case we also provide a way to define multiple bot responses in a single Direct Line activity. As with all channel specific content this is defined in the channelData property.
+The array in the multiMessage property can contain the objects identified by the following types:
 
-Ensure you have an ‘entry point’ in your bot that responds to the default ‘WELCOME’ action send by a new chat customer.
-
-```json
-{
-  "type": "message",
-  "text": "",
-  "channelData": {
-    "action": {
-      "name": "WELCOME"
-    }
-  }
-}
-```
-
-Figure 11.1 Customer activity excerpt on a new chat
-
-### Sending Multiple Responses
-
-As stated under Limitations we only process the first activity that is send in response to a customer message.
-If your bot should reply with more than one message, you need to send a multiMessage property inside the channelData.
-
-You can define any number of messages in this array. This messages can be plain text, define a delay before the
-next message is send or contain structured content in the same format that could also be be send directly as a channel data object.
+- **text:** A plain message
+- **delay:** A delay between messages. **Important**: This format is different from the one described further above for a single message. You can only define the delay. There is no flag for the typing indicator.</li>
+- **private-message:** A private message as described in [Sending Private Text Messages](#sending-private-text-messages)
+- **structured-content:** A structured content as described in [Rich Content (Structured Content)](#rich-content--structured--content)
 
 ```javascript
 {
@@ -481,6 +453,13 @@ next message is send or contain structured content in the same format that could
       {
         "type": "text",
         "value": "this is a text"
+      },
+      {
+        "type": "private-message",
+         "value": {
+              "text": "This is a private text",
+              "messageAudience": "AGENTS_AND_MANAGERS",
+          }
       },
       {
         "type": "delay",
@@ -498,9 +477,12 @@ next message is send or contain structured content in the same format that could
 }
 ```
 
-### Sending Encoded Metadata
+Figure 8.5 Activity excerpt with a multiMessage array containing messages of different types
 
-Conversational Cloud Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+#### Sending Encoded Metadata
+
+Conversational Cloud Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field.
+Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
 
 <ul>
   <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
@@ -513,7 +495,7 @@ Failing to comply with the above validation points will cause the message to be 
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses.
 
-#### Sending Text Message with Encoded Metadata
+##### Sending a Text Message with Encoded Metadata
 
 For sending `encodedMetadata` with a text message you need to provide this property in `channelData` object. Be careful with the camel-case characters you must provide it exactly the same. An example of the simple text message response is below:
 
@@ -527,7 +509,9 @@ For sending `encodedMetadata` with a text message you need to provide this prope
 }
 ```
 
-#### Sending Rich Content (structured content) with Encoded Metadata
+Figure 8.6 Activity excerpt containing encodedMetadata for plain text
+
+##### Sending Rich Content (structured content) with Encoded Metadata
 
 For sending [structured content](getting-started-with-rich-messaging-introduction.html). You need to add additional property of `encodedMetadata` with your rich content object that you have defined within `channelData` property. An example of the simple Rich Content `JSON` can be seen below:
 
@@ -564,7 +548,9 @@ For sending [structured content](getting-started-with-rich-messaging-introductio
 }
 ```
 
-#### Sending Multiple Responses with Encoded Metadata
+Figure 8.7 Activity excerpt containing encodedMetadata for Rich Content
+
+##### Sending Multiple Responses with Encoded Metadata
 
 For sending Encoded Metadata with multiple responses one must provide an additional property of `encodedMetadata` with the already existing `type` and `value` properties under `multiMessage` array object. Sending encoded metadata is supported for the `text` and `structure-content` types only. An example of sending encoded metadata with both types can be found below.
 
@@ -598,3 +584,5 @@ For sending Encoded Metadata with multiple responses one must provide an additio
   }
 }
 ```
+
+Figure 8.8 MulitMessage Activity excerpt containing encodedMetadata
