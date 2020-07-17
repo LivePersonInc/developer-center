@@ -1,6 +1,5 @@
 ---
-pagename: Scroll Behavior configuration
-
+pagename: Scroll Behavior Configuration
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"

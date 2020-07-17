@@ -333,7 +333,7 @@ Name| Description| Type/Value | Notes
 relativePath | Relative path of the file.| string  |
 fileType  | Type of the file.| string  | Valid values: "JPG", "PNG", "GIF", "TXT", "PDF"
 caption| The caption (heading) of the file. | string  |
-preview      | Preview of the sent image (thumbnail).| string  | Encoded in base64 format
+preview      | Preview of the sent image (thumbnail).| string  | Encoded in base64 format. Available only for specific conversation method (by conversation ID).
 
 _Message Link_
 

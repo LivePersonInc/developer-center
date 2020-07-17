@@ -1,5 +1,5 @@
 ---
-pagename: Get all Agent Groups
+pagename: Get All Agent Groups
 redirect_from:
   - administration-get-all-agent-groups.html
 keywords:

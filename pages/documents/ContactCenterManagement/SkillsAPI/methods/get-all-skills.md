@@ -1,5 +1,5 @@
 ---
-pagename: Get all skills
+pagename: Get All Skills
 redirect_from:
   - administration-get-all-skills.html
 keywords:

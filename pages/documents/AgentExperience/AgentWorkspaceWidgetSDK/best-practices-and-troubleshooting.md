@@ -2,7 +2,7 @@
 pagename: Best Practices and Troubleshooting
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bot"
+categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK
 permalink: agent-workspace-widget-sdk-best-practices-and-troubleshooting.html
 indicator: both

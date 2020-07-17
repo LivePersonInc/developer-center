@@ -1,5 +1,5 @@
 ---
-pagename: OnInit
+pagename: onInit
 redirect_from:
   - consumer-experience-javascript-chat-oninit.html
 Keywords:

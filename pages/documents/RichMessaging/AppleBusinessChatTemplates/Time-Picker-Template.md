@@ -1,5 +1,5 @@
 ---
-pagename: Time Picker
+pagename: Time Picker Template
 redirect_from:
   - rich-messaging-connectors-abc-timepicker.html
   - structured-content-apple-business-chat-templates-time-picker-template.html

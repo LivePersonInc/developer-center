@@ -24,11 +24,21 @@ Both methods return a String of the JSON response from the askMaven API. For a r
 #### Example
 
 ```javascript
-var askMavenResponse = botContext.askMaven("fdf4025dba834eee7618f190ca3d452eaf784063130b8bcb67cd2b38ead497a5", "123456789", "87876");
-var getContextJsonResponse = JSON.parse(askMavenResponse.jsonData);
-var getContextJsonResponseStr = askMavenResponse.jsonData;
-var policyActions = getContextJsonResponse.api_policyResponse.rule.actions[0];
-var policyRule = getContextJsonResponse.api_policyResponse.rule;
-botContext.setBotVariable("policyActions: ", policyActions, true, false);
-botContext.setBotVariable("getContextJsonResponse", getContextJsonResponseStr, true, false);
+// disable context switching
+botContext.setBotVariable('skipPreviousDialog', 'true', true, false);
+// ask maven
+botContext.printDebugMessage("BEGINNING ASK MAVEN CALL");
+var askMavenResponse = botContext.askMaven();
+botContext.printDebugMessage("ASK MAVEN RESPONSE:"+askMavenResponse);
+var getContextJsonResponse = JSON.parse(askMavenResponse);
+var policyActions = getContextJsonResponse.rule.actions;
+botContext.setBotVariable("policyActions", JSON.stringify(policyActions), true, false);
+botContext.printDebugMessage("policyActions: "+JSON.stringify(policyActions));
+
+// test for NO ACTIONS
+if(!policyActions){
+  botContext.setTriggerNextMessage("Agent No Actions Found");
+} else {
+  botContext.setTriggerNextMessage("Agent Maven Response");
+}
 ```
