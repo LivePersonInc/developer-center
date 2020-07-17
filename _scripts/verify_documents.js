@@ -2,7 +2,7 @@
 let data = require('./documentsupdated.json');
 const fs = require("fs"); // Or `import fs from "fs";` with ESM
 const commonMethods = require('./common_functions.js');
-
+let root_folder_name;
 let path;
 
 (function () {
@@ -11,6 +11,7 @@ let path;
    data.forEach(item => {
       path = "pages/Documents/";
       path += commonMethods.convertToExpectedFolderName(item.categoryname) + '/';
+      root_folder_name = item.categoryname;
       if (fs.existsSync(path) && item.documents) {
          item.documents.forEach(doc => {
             var document_path = path
@@ -27,14 +28,14 @@ let path;
                         page_path += commonMethods.convertToExpectedFolderName(page.pagename) + '/'
                         if (fs.existsSync(page_path)) {
                            page.subpages.forEach(subpage => {
-                              commonMethods.fileExists(subpage.subpagename, page_path)
+                              commonMethods.fileExists(subpage.subpagename, page_path, root_folder_name)
                            })
                         } else {
                            console.log(`Folder Name: ${page.pagename} doesn't exist in ${document_path} or is not named properly. \n`);
                         }
 
                      } else {
-                        commonMethods.fileExists(page.pagename, document_path)
+                        commonMethods.fileExists(page.pagename, document_path, root_folder_name)
                      }
                   })
                }
@@ -42,7 +43,7 @@ let path;
                   console.log(`Folder Name: ${doc.documentname} doesn't exist in ${path} or is not named properly. \n`);
                }
             } else {
-               commonMethods.fileExists(doc.documentname, document_path)
+               commonMethods.fileExists(doc.documentname, document_path, root_folder_name);
             }
          })
 
