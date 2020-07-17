@@ -1,5 +1,5 @@
 ---
-pagename: Interface and class definitions
+pagename: Interface and Class Definitions
 redirect_from:
   - consumer-experience-ios-sdk-interfacedefinitions.html
 Keywords:

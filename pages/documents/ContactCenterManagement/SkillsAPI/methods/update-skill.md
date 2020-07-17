@@ -1,5 +1,5 @@
 ---
-pagename: Update skill
+pagename: Update Skill
 redirect_from:
   - administration-update-skill.html
 keywords:

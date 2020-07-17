@@ -5,8 +5,7 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
-
-
+documentname: Push Notification Service
 level-order: 7
 order: 10
 permalink: push-notification-service-overview.html

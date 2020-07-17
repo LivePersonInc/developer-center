@@ -7,7 +7,7 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
-subfoldername: Conversation Builder
+subfoldername: Scripting Functions
 permalink: conversation-builder-scripting-functions-introduction.html
 indicator: both
 ---

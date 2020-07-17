@@ -4,7 +4,7 @@ redirect_from:
   - agent-retrieve-chat-sessions.html
 Keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
 

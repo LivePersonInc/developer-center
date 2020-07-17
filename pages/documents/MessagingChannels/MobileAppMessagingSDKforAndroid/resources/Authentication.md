@@ -1,12 +1,12 @@
 ---
-pagename: Authentication for Android
+pagename: Authentication
 redirect_from:
   - android-authentication.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for Android
-subfolder: Resources
+subfoldername: Resources
 permalink: mobile-app-messaging-sdk-for-android-resources-authentication.html
 indicator: messaging
 ---

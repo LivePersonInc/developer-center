@@ -1,5 +1,5 @@
 ---
-pagename: Get all Users
+pagename: Get All Users
 redirect_from:
   - administration-get-all-users.html
 keywords:

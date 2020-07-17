@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ftue.css">
     <script src="js/helperMethods.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -110,8 +111,6 @@
             if (experience === "first_time" && site !== "") {
                 // if it is a ftue experience then append the style sheet
                 document.getElementById('loading-message').setAttribute('style', 'display:block');
-
-                appendFTUE();
             } else {
                 let originalEmulator = setUrlPathOld();
                 window.location.href = originalEmulator;

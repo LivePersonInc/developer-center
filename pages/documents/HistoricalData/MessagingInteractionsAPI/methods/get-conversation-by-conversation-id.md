@@ -1,5 +1,5 @@
 ---
-pagename: Get conversation by conversation ID
+pagename: Get Conversation by Conversation ID
 redirect_from:
   - data-messaging-interactions-get-conversation-by-conversation-id.html
 sitesection: Documents
