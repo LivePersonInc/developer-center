@@ -4,7 +4,7 @@ redirect_from:
   - agent-workspace-sdk-overview.html
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bot"
+categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK
 
 level-order: 5

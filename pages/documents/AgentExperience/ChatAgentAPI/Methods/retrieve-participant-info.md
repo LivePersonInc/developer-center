@@ -4,7 +4,7 @@ redirect_from:
   - agent-retrieve-participant-info.html
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bots"
+categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
 permalink: chat-agent-api-methods-retrieve-participant-info.html

@@ -54,6 +54,8 @@ let path;
    console.log("\n Number of errors: ", errorCounter)
    if (errorCounter > 0) {
       throw new Error('Please address the errors and commit again in the documents folder. These errors are in the logs under the _scripts folder : ' + errorCounter)
+   } else {
+      console.log('Congrats there are no errors in the repo');
    }
    return errorCounter
 }());

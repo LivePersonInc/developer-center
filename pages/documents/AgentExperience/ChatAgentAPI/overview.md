@@ -4,7 +4,7 @@ redirect_from:
   - chat-agent-getting-started.html
 Keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Agent Experience"
 documentname: Chat Agent API
 
 level-order: 4

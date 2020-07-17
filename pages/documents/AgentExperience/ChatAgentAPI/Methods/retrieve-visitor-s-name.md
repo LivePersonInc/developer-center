@@ -4,7 +4,7 @@ redirect_from:
   - agent-retrieve-visitor-name.html
 Keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Agent Experience"
 documentname: Chat Agent API
 subfoldername: Methods
 
