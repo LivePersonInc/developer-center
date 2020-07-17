@@ -21,7 +21,7 @@
     "fixnaming": "sh ./_scripts/automated-name-fix.sh"
   },
   "pre-commit": [
-    "npm run verify",
+    "npm run verify"
   ],
   "repository": {
     "type": "git",
