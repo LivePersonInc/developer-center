@@ -4,7 +4,7 @@ redirect_from:
   - engagement-attributes-best-practices-messaging.html
 Keywords:
 sitesection: Documents
-categoryname: Guides
+categoryname: Website Monitoring
 documentname: Engagement Attributes
 order: 50
 permalink: engagement-attributes-best-practices-for-messaging.html

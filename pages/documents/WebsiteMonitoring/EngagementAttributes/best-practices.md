@@ -4,7 +4,7 @@ redirect_from:
   - engagement-attributes-bestpractices.html
 Keywords:
 sitesection: Documents
-categoryname: Guides
+categoryname: Website Monitoring
 documentname: Engagement Attributes
 order: 40
 permalink: engagement-attributes-best-practices.html
