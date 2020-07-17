@@ -36,7 +36,7 @@ p {
   cursor: pointer;
 }
 
-.nav > li {
+.nav>li {
   display: flex !important;
   flex-wrap: wrap;
 }
@@ -427,12 +427,12 @@ table tbody td img {
   max-width: none;
 }
 
-#featurestable thead > tr > th {
+#featurestable thead>tr>th {
   padding: 14px 10px;
   text-align: center;
 }
 
-#featurestable thead > tr > th:first-child {
+#featurestable thead>tr>th:first-child {
   width: 13%;
 }
 
@@ -755,73 +755,73 @@ a.loginText {
   margin-left: 35px;
 }
 
-.topfolder > ul {
+.topfolder>ul {
   padding-left: 0;
 }
 
-.topfolder > ul > li {
+.topfolder>ul>li {
   margin-bottom: 3px;
 }
 
-.innerfolder > ul {
+.innerfolder>ul {
   padding-left: 0;
 }
 
-.innerfolder > li {
+.innerfolder>li {
   padding-left: 0;
 }
 
-.subfolder > ul {
+.subfolder>ul {
   padding-left: 0;
 }
 
-.subfolder > li {
+.subfolder>li {
   padding-left: 0;
 }
 
-.subfolder > a > .expand {
+.subfolder>a>.expand {
   margin-right: 10px !important;
 }
 
-.innerfolder > a {
+.innerfolder>a {
   font-size: 12px !important;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
   display: flex;
   margin-left: -4px;
 }
 
-.innerfolder > a > span {
+.innerfolder>a>span {
   margin-left: 14px;
 }
 
-.topfolder > a > span {
+.topfolder>a>span {
   margin-left: 14px;
 }
 
-.innerfolder > a > .expand {
+.innerfolder>a>.expand {
   float: none;
   margin-right: 20px;
   margin-top: 0;
   align-self: center;
 }
 
-.topfolder > ul > li:first-child {
+.topfolder>ul>li:first-child {
   margin-top: 2px;
 }
 
-.innerfolder > ul > li:first-child {
+.innerfolder>ul>li:first-child {
   margin-top: 2px;
 }
 
-.subfolder > ul > li:first-child {
+.subfolder>ul>li:first-child {
   margin-top: 2px;
 }
 
-.innerfolder > ul > li:last-child .innerlink {
+.innerfolder>ul>li:last-child .innerlink {
   margin-bottom: 2px;
 }
 
-.subfolder > ul > li:last-child .innerlink {
+.subfolder>ul>li:last-child .innerlink {
   margin-bottom: 2px;
 }
 
@@ -856,25 +856,25 @@ a.loginText {
   padding-left: 24px !important;
 }
 
-.subfolder > a {
+.subfolder>a {
   color: var(--dark-gray) !important;
   font-size: 12px !important;
   font-weight: normal;
   font-family: "Roboto", Arial, Helvetica, sans-serif !important;
 }
 
-.nav > li > a:focus {
+.nav>li>a:focus {
   background-color: inherit !important;
   outline: inherit;
 }
 
-.homeitem > a {
+.homeitem>a {
   font-family: "Roboto";
   font-size: 16px;
   color: var(--dark-gray) !important;
 }
 
-.homeitem > a:hover {
+.homeitem>a:hover {
   color: var(--darker-gray) !important;
 }
 
@@ -1070,6 +1070,9 @@ a.loginText {
   text-align: right;
   position: fixed;
   max-height: 500px;
+  overflow-wrap: anywhere;
+
+  max-width: 170px;
   overflow-y: scroll;
 }
 
@@ -1199,15 +1202,15 @@ a.loginText {
   top: 0;
 }
 
-.defaultsidebarexplorer .nav > li {
+.defaultsidebarexplorer .nav>li {
   display: block !important;
 }
 
-.defaultsidebarexplorer .nav > li > a:focus {
+.defaultsidebarexplorer .nav>li>a:focus {
   background-color: var(--darker-gray) !important;
 }
 
-.defaultsidebarexplorer .nav > li:first-of-type {
+.defaultsidebarexplorer .nav>li:first-of-type {
   display: flex !important;
 }
 
