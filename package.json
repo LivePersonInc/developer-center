@@ -20,6 +20,9 @@
     "verify": "sh ./_scripts/verify-documents.sh",
     "fixnaming": "sh ./_scripts/automated-name-fix.sh"
   },
+  "pre-commit": [
+    "npm run verify",
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LivePersonInc/developers-community.git"
