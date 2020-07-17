@@ -7,3 +7,24 @@ cat ./_scripts/docOutputError.log
 # rm -f ./_scripts/documentsupdated.json
 echo "FINISHED YAML TO JSON Verify For Documentsupdated.yaml file"
 
+
+input="./_scripts/docOutputError.log"
+allowCommit="false"
+
+while IFS= read -r line
+do
+  message=${line:0:8}
+  echo $message
+    if [[ $message == "Congrats" ]]; then
+
+        allowCommit="true"
+    fi
+done < "$input"
+if [[ $allowCommit == "true" ]]; then
+    rm -f ./_scripts/docOutputError.log
+    else
+    echo $allowCommit
+    echo 'THERE ARE ISSUES IN BUILD PLEASE REVIEW docOutputError.log UNDER THE _scripts FOLDER'
+    exit 1
+fi
+
