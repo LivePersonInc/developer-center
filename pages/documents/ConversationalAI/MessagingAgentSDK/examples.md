@@ -2,7 +2,7 @@
 pagename: Examples
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bot"
+categoryname: Conversational AI
 documentname: Messaging Agent SDK
 permalink: messaging-agent-sdk-examples.html
 indicator: messaging

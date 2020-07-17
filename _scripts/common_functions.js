@@ -130,13 +130,14 @@ module.exports = {
         }
         return nameArr;
     },
-    fileExists: function (fileName, path) {
+    fileExists: function (fileName, path, root_folder_name) {
         // check if file exists
         let convertedFileName = this.convertToExpectedFileName(`${fileName}`);
         let fileName_path = path + convertedFileName + '.md'
         if (fs.existsSync(fileName_path)) {
             this.pageNameMatchesLayout(fileName, fileName_path);
-            this.verifyPermalink(fileName_path);
+            let currentPageInfo = this.verifyPermalink(fileName_path);
+            this.verifyBreadcrumbs(root_folder_name, currentPageInfo, path);
         }
         else {
             // console.log(`This file ${fileName} was converted into ${convertedFileName} in the path   `)
@@ -150,6 +151,21 @@ module.exports = {
     getErrorCount: function () {
         return errorCounter;
     },
+    verifyBreadcrumbs: function (root_folder_name, currentPageInfo, path) {
+        if (currentPageInfo.categoryname === null) {
+            // dont mess with this you are looking at solutions folder
+        }
+        else {
+            if (!(root_folder_name === currentPageInfo.categoryname)) {
+                let root_folder_name_with_quotes = "\"" + root_folder_name + "\"";
+                if (!(root_folder_name_with_quotes === currentPageInfo.categoryname)) {
+                    console.log(`The Category name in the file: ${this.convertToExpectedFileName(currentPageInfo.pagename)}  is ${currentPageInfo.categoryname} \n in path: ${path}\n  should be ${root_folder_name}\n\n`)
+                    errorCounter++;
+                }
+            }
+        }
+    },
+
     verifyPermalink: function (path) {
         let currentPageInfo = this.findTreePath(path);
         let expectedPermalink;
@@ -189,6 +205,7 @@ module.exports = {
                 errorCounter++;
             }
         }
+        return currentPageInfo;
 
     }
 }
