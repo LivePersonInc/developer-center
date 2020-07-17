@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - consumer-experience-messaging-history-overview.html
 sitesection: Documents
-categoryname: Data
+categoryname: Historical Data
 documentname: Consumer Messaging History API
 level-order: 7
 order: 1

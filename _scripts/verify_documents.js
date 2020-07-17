@@ -48,7 +48,7 @@ let path;
          })
 
       } else {
-         console.log(`Folder Name: ${commonMethods.convertToExpectedFolderName(item.categoryname)} in pages/documents/ doesn't exist or is not named properly. \n`);
+         console.log(`Folder Name: ${commonMethods.convertToExpectedFolderName(item.categoryname)} in pages/Documents/ doesn't exist or is not named properly. \n`);
       }
    })
    let errorCounter = commonMethods.getErrorCount();

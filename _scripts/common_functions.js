@@ -152,11 +152,16 @@ module.exports = {
         return errorCounter;
     },
     verifyBreadcrumbs: function (root_folder_name, currentPageInfo, path) {
-        if (!(root_folder_name === currentPageInfo.categoryname)) {
-            let root_folder_name_with_quotes = "\"" + root_folder_name + "\"";
-            if (!(root_folder_name_with_quotes === currentPageInfo.categoryname)) {
-                console.log(`The Category name in the file: ${this.convertToExpectedFileName(currentPageInfo.pagename)}  is ${currentPageInfo.categoryname} \n in path: ${path}\n  should be ${root_folder_name}\n\n`)
-                errorCounter++;
+        if (currentPageInfo.categoryname === null) {
+            // dont mess with this you are looking at solutions folder
+        }
+        else {
+            if (!(root_folder_name === currentPageInfo.categoryname)) {
+                let root_folder_name_with_quotes = "\"" + root_folder_name + "\"";
+                if (!(root_folder_name_with_quotes === currentPageInfo.categoryname)) {
+                    console.log(`The Category name in the file: ${this.convertToExpectedFileName(currentPageInfo.pagename)}  is ${currentPageInfo.categoryname} \n in path: ${path}\n  should be ${root_folder_name}\n\n`)
+                    errorCounter++;
+                }
             }
         }
     },

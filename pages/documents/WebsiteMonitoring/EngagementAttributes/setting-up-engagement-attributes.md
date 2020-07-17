@@ -4,7 +4,7 @@ redirect_from:
   - engagement-attributes-setting-up.html
 Keywords:
 sitesection: Documents
-categoryname: Guides
+categoryname: Website Monitoring
 documentname: Engagement Attributes
 order: 30
 permalink: engagement-attributes-setting-up-engagement-attributes.html

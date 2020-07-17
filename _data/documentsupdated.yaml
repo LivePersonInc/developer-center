@@ -1101,9 +1101,22 @@
     - documentname: SMS with Conversational Cloud
       pages:
         - pagename: Overview
-        - pagename: IVR Deflection
         - pagename: Clickable Mobile Content to SMS
         - pagename: Desktop Content Campaign
         - pagename: Google AdWords - Click-to-Message
         - pagename: SMS via Mobile App Messaging
         - pagename: Appendix
+    - documentname: Video Chat
+      image: video-chat
+      pages:
+        - pagename: Add Video to Chat Conversations
+        - pagename: Plan Your Service
+        - pagename: Develop the Service
+        - pagename: Build Your Widgets
+    - documentname: LiveEngage MMS Viewer
+      image: live-engage-mms-viewer
+      pages:
+        - pagename: Overview
+        - pagename: Technical Description
+        - pagename: Deployment Steps
+        - pagename: Additional Options

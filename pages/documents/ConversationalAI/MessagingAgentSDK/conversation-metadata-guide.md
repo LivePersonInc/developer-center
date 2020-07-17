@@ -4,7 +4,7 @@ redirect_from:
   - guides-conversation-metadata-guide.html
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bot"
+categoryname: Conversational AI
 documentname: Messaging Agent SDK
 level-order: 10
 order: 10
