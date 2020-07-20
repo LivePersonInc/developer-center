@@ -17,10 +17,8 @@ do
         allowCommit="true"
     fi
 done < "$input"
-if [[ $allowCommit == "true" ]]; then
-    rm -f ./_scripts/docOutputError.log
-    else
-    echo 'THERE ARE ISSUES IN BUILD PLEASE REVIEW docOutputError.log UNDER THE _scripts FOLDER BEFORE BEING ABLE TO COMMIT'
+if [[ $allowCommit == "false" ]]; then
+    echo 'THERE ARE ISSUES IN BUILD PLEASE REVIEW'
     exit 1
 fi
 
