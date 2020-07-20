@@ -44,26 +44,25 @@ E.G documentname:  `Add Agent Widgets` should be a folder with name  `AddAgentWi
 
 ### How to understand the documentsupdated yaml file
   Example Layout:
-  `
-  - categoryname: Agent Experience
-  image: agent-experience-new
-  documents:
-  - documentname: Add Agent Widgets
-    pages:
-    - pagename: Add Your Own Widgets to the Agent Workspace
-  - documentname: Agent Workspace Widget SDK
-    pages:
-      - pagename: Overview
-      - pagename: Limitations
-      - pagename: Methods
-      - pagename: Public Model Structure
-      - pagename: Public Properties
-      - pagename: Best Practices and Troubleshooting
-      - pagename: Release Notes
-  - documentname: Chat Agent API
-    basedomain: https://{domain}/api/account/{accountId}/agentSession
-    pages:
-      - pagename: Overview `
+  ` - categoryname: Agent Experience
+      image: agent-experience-new
+      documents:
+      - documentname: Add Agent Widgets
+        pages:
+        - pagename: Add Your Own Widgets to the Agent Workspace
+      - documentname: Agent Workspace Widget SDK
+        pages:
+          - pagename: Overview
+          - pagename: Limitations
+          - pagename: Methods
+          - pagename: Public Model Structure
+          - pagename: Public Properties
+          - pagename: Best Practices and Troubleshooting
+          - pagename: Release Notes
+      - documentname: Chat Agent API
+        basedomain: https://{domain}/api/account/{accountId}/agentSession
+        pages:
+        - pagename: Overview `
 
 #### Environments
 
