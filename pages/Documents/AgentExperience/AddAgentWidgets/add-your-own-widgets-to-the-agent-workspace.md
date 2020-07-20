@@ -1,5 +1,5 @@
 ---
-pagename: Add Your Own Widgets to the Agent Workspace
+pagename: Add Your Own Widgets to the Agent Workspace - potato
 redirect_from:
   - guides-agent-workspace-widget.html
 sitesection: Documents
