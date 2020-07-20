@@ -52,7 +52,7 @@ let path;
       }
    })
    let errorCounter = commonMethods.getErrorCount();
-   console.log("\n Number of errors: ", errorCounter)
+   console.log("\nNumber of errors: ", errorCounter)
    if (errorCounter > 0) {
       throw new Error('Please address the errors and commit again in the documents folder. These errors are in the logs under the _scripts folder : ' + errorCounter)
    } else {
