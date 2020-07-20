@@ -19,10 +19,17 @@ This repository generates LivePerson's Developer Center, which can be found at h
 
 ### Updating the Documentation
 
-All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. There's no need for the old Development branch, so please don't create pull requests to it.
+All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. 
+To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. 
+There's no need for the old Development branch, so please don't create pull requests to it.
 
 ### Commiting Changes to Developer Center
-Before making any commits, please make sure to read the Updating/Creating Headers section. There is now a github precommit hook that makes sure you follow the rules on markdown file creation. This hook will run on every commit and deny commits if they fail the test. The errors will be outputed to `./_scripts/docOutputError.log`. If you are adding new content, please make sure you are updating the content in documentsupdated.yaml file. Our tests will use the documents updated yaml file as the source of truth. So make sure  your header naming structure matches the documentsupdated.yaml.
+Before making any commits, please make sure to read the Updating/Creating Headers section. 
+There is now a github precommit hook that makes sure you follow the rules on markdown file creation. 
+This hook will run on every commit and deny commits if they fail the test. 
+The errors will be outputed to `./_scripts/docOutputError.log`. 
+If you are adding new content, please make sure you are updating the content in documentsupdated.yaml file. 
+Our tests will use the documents updated yaml file as the source of truth. So make sure your header naming structure matches the documentsupdated.yaml.
 
 File name rules:
 1. All markdown files must match the pagename that is provided in the headers
@@ -34,7 +41,7 @@ File name rules:
 Folder name rules:
 1. They must be TitleCase
 2. All files in the folder, must include a reference in its header to its folder name. This will be in either the documentname, categoryname, or subfoldername ( depending on the location of the folder)
-3. All special characters excluding periods and dashes need to be removed from Foldername
+3. All special characters excluding periods, dashes, and & need to be removed from Foldername
 4. Periods are replaced with dashes.
 
 E.G pagename : `Customizing the Conversational Cloud!` should be filename `customizing-the-conversational-cloud.md`
@@ -43,8 +50,9 @@ E.G documentname:  `Add Agent Widgets` should be a folder with name  `AddAgentWi
 * Category name will always be the top most folder in the sidebar
 
 ### How to understand the documentsupdated yaml file
-  Example Layout:
-  ` - categoryname: Agent Experience
+  Example Normal Layout:
+  
+    - categoryname: Agent Experience
       image: agent-experience-new
       documents:
       - documentname: Add Agent Widgets
@@ -62,7 +70,65 @@ E.G documentname:  `Add Agent Widgets` should be a folder with name  `AddAgentWi
       - documentname: Chat Agent API
         basedomain: https://{domain}/api/account/{accountId}/agentSession
         pages:
-        - pagename: Overview `
+        - pagename: Overview 
+        
+The Top layer 0 in this structure is the category name Agent Experience. Its folder name is`AgentExperience`.
+Add Agent Widgets is a folder in layer 1 with path `AgentExperience/AddAgentWidgets`
+The Add Agent Widgets folder only contains one page in it. `AgentExperience/AddAgentWidgets/add-your-own-widgets-to-the-agent-workspace.md`
+the permalink for the file must include all parent folders excluding the layer 0 categoryname. For above example the permalink is:
+`add-agent-widgets-add-your-own-widgets-to-the-agent-workspace.html`
+
+If you look at the next document name `Agent Workspace Widget SDK` it is still on level 1 with path `AgentExperience/AgentWorkspaceWidgetSDK/`
+The files in the folder are all listed below pages until you get to last pagename.
+IE documentname Chat Agent API is not a folder located inside `Agent Workspace Widget SDK`
+
+Example Subfolder Layout:
+
+    - categoryname: Conversational AI
+      image: agent-experience
+      documents:
+      - documentname: Conversational AI
+        pages:
+          - pagename: Overview
+      - documentname: Conversation Builder
+        pages:
+          - pagename: Tutorials & Guides
+            subpages:
+              - subpagename: Getting Started
+              - subpagename: Using Meta Intents with Conversation Builder
+              - subpagename: Implementing a Web View Integration
+              - subpagename: Using LivePerson Functions with a Bot
+  
+  1. pagename `Tutorial & guides` because it has subpages is actually a folder not a file
+  2. in the markdown file for `Using Meta Intents with Conversation Builder` its pagename must match the subpagename.
+  3. the file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2 
+  4. the file must include `Conversation Builder` as a `documentname` in the header. 
+  4. the permalink must be `conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html`
+  5. notice how the `&` in the subfoldername is replaced with a dash in the permalink.
+  
+Example Documentname is pagename:
+
+    - categoryname: Getting Started
+      image: getting-started
+      documents:
+      - documentname: Getting Started with your Free Trial Account
+      - documentname: Do More with the Conversational Cloud
+      - documentname: Customizing the Conversational Cloud
+      - documentname: Starting with your Concierge Bot
+      - documentname: API Guidelines
+        pages:
+        - pagename: Accessing LivePerson APIs
+        - pagename: Create API keys
+        - pagename: Domain API
+        - pagename: Data APIs
+        - pagename: API Data Metrics
+        - pagename: Engagement Attributes
+        - pagename: Analytics Builder Data Metrics
+        - pagename: Retry Policy Recommendations
+        
+1. Documentname name is `Getting Started with your Free Trial Account` is not a folder name becauase it does not contain a pages key below it
+2. Since this above file only contains one parent, there should not be a document name in the file `getting-started-with-your-free-trial-account.md`
+3. The pagename for `getting-started-with-your-free-trial-account.md` must match the documentname in the yaml file  `Getting Started with your Free Trial Account`
 
 #### Environments
 
