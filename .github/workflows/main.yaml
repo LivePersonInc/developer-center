@@ -23,11 +23,6 @@ jobs:
     - uses: actions/setup-ruby@v1
       with:
         ruby-version: '2.6'
-
-    # check env
-    - name: Check Env
-      run: printenv | less
-      
     # Runs a single command using the runners shell
     - name: Verify
       run: npm run verify
