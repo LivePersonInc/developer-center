@@ -148,6 +148,9 @@ module.exports = {
     resetErrorCounter: function () {
         errorCounter = 0;
     },
+    addErrorCount: function () {
+        errorCounter++
+    },
     getErrorCount: function () {
         return errorCounter;
     },
