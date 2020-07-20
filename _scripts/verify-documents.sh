@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Verifying documents match the  documentsupdated yaml file \\n \\n"
 ruby -rjson -ryaml -e "puts YAML.load_file('./_data/documentsupdated.yaml').to_json" > ./_scripts/documentsupdated.json
@@ -11,7 +11,7 @@ allowCommit="false"
 
 while IFS= read -r line
 do
-  message=${line:0:8}
+    message=${line:0:8}
     if [[ $message == "Congrats" ]]; then
 
         allowCommit="true"
