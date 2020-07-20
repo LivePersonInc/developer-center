@@ -26,6 +26,6 @@ jobs:
       
     # Runs a single command using the runners shell
     - name: install node modules
-      run: npm run install
+      run: npm install
     - name: Verify
       run: npm run verify
