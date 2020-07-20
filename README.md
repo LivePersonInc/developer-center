@@ -131,6 +131,7 @@ Example Documentname is pagename:
 3. The pagename for `getting-started-with-your-free-trial-account.md` must match the documentname in the yaml file  `Getting Started with your Free Trial Account`
 
 #### Environments
+To updated production and staging enviornments, create a pull request for master or Staging. When pull request is merged a automated release cycle will start and publish those changes in around five minutes.
 
 * Production (built from the `master` branch): [https://developers.liveperson.com/](https://developers.liveperson.com/)
 
@@ -179,18 +180,14 @@ If you have not already done so, make sure your computer has Ruby installed. Her
 Once you have installed Ruby, clone this repository to your machine. Once done, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you're on Windows, don't forget to run your CLI as an admin**.
 
 **First time install**
-
-0. Run `gem install bundler`. This will install Ruby's package manager which is required for all following commands.
-1. Run `bundle install`. This will install all the gems/plugins that the site depends on.
-2. Run `bundle exec jekyll build`. This builds the `_site` folder for the first time on your machine. The `bundle exec` prefix makes sure that bundler "watches" your build and installs any dependencies that might be missing. It's a precaution and is thus not mandatory.
-3. Run `bundle exec jekyll serve`. This builds the site and serves it over localhost:4000 (by default, you can change the `port` parameter in `config.yml` to whatever port you'd prefer).
-4. Navigate to http://localhost:4000/ (or the port you chose) and you'll see the site.
+1. Run `npm install`
+2. Run `npm run serve`
+3. Navigate to http://localhost:4000/ (or the port you chose) and you'll see the site.
 
 **OSX Installation**
 
-0. We recommend installing a standalone Ruby Installation and RVM
-1. See this for an example: [Stack Overflow](https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac)
-
+1. We recommend installing a standalone Ruby Installation and RVM
+2. See this for an example: [Stack Overflow](https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac)
 
 **Serving the site after the first install**
 
