@@ -19,6 +19,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    # Set up ruby which we use in the verify shell script    
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.6'
 
     # Runs a single command using the runners shell
     - name: Verify
