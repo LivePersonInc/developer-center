@@ -6,7 +6,7 @@ name: CI
 # eventsfor the master and Staging branch
 on:
   pull_request:
-    branches: [ master, Stagining ]
+    branches: [ master, Staging ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
