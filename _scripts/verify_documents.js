@@ -31,7 +31,8 @@ let path;
                               commonMethods.fileExists(subpage.subpagename, page_path, root_folder_name)
                            })
                         } else {
-                           console.log(`Folder Name: ${page.pagename} doesn't exist in ${document_path} or is not named properly. \n`);
+                           console.log(`Folder Name: ${commonMethods.convertToExpectedFolderName(page.pagename)} doesn't exist in ${document_path} or is not named properly. \n`);
+                           commonMethods.addErrorCount();
                         }
 
                      } else {
@@ -40,7 +41,8 @@ let path;
                   })
                }
                else {
-                  console.log(`Folder Name: ${doc.documentname} doesn't exist in ${path} or is not named properly. \n`);
+                  console.log(`Folder Name: ${commonMethods.convertToExpectedFolderName(doc.documentname)} doesn't exist in ${path} or is not named properly. \n`);
+                  commonMethods.addErrorCount();
                }
             } else {
                commonMethods.fileExists(doc.documentname, document_path, root_folder_name);
@@ -49,6 +51,7 @@ let path;
 
       } else {
          console.log(`Folder Name: ${commonMethods.convertToExpectedFolderName(item.categoryname)} in pages/Documents/ doesn't exist or is not named properly. \n`);
+         commonMethods.addErrorCount();
       }
    })
    let errorCounter = commonMethods.getErrorCount();
