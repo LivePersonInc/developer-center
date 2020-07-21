@@ -19,9 +19,119 @@ This repository generates LivePerson's Developer Center, which can be found at h
 
 ### Updating the Documentation
 
-All pages on the site correspond to a Markdown file (.md) which can be found inside `/documents/pages`. To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. There's no need for the old Development branch, so please don't create pull requests to it.
+All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. 
+To update a file, please branch off of the `master` branch, edit the file in question and create a Pull Request **back to the master branch**. 
+There's no need for the old Development branch, so please don't create pull requests to it.
+
+### Commiting Changes to Developer Center
+Before making any commits, please make sure to read the Updating/Creating Headers section. 
+There is now a github precommit hook that makes sure you follow the rules on markdown file creation. 
+This hook will run on every commit and deny commits if they fail the test. 
+The errors will be outputed to `./_scripts/docOutputError.log`. 
+If you are adding new content, please make sure you are updating the content in documentsupdated.yaml file. 
+Our tests will use the documents updated yaml file as the source of truth. So make sure your header naming structure matches the documentsupdated.yaml.
+
+File name rules:
+1. All markdown files must match the pagename that is provided in the headers
+2. Spaces in pagename must be replaced with a '-'
+3. All words are lowercased
+4. All special characters excluding periods and dashes need to be removed from the filename
+5. Periods are replaced with dashes.
+
+Folder name rules:
+1. They must be TitleCase
+2. All files in the folder, must include a reference in its header to its folder name. This will be in either the documentname, categoryname, or subfoldername ( depending on the location of the folder)
+3. All special characters excluding periods, dashes, and & need to be removed from Foldername
+4. Periods are replaced with dashes.
+
+E.G pagename : `Customizing the Conversational Cloud!` should be filename `customizing-the-conversational-cloud.md`
+E.G documentname:  `Add Agent Widgets` should be a folder with name  `AddAgentWidgets`
+
+* Category name will always be the top most folder in the sidebar
+
+### How to understand the documentsupdated yaml file
+  Example Normal Layout:
+  
+    - categoryname: Agent Experience
+      image: agent-experience-new
+      documents:
+      - documentname: Add Agent Widgets
+        pages:
+        - pagename: Add Your Own Widgets to the Agent Workspace
+      - documentname: Agent Workspace Widget SDK
+        pages:
+          - pagename: Overview
+          - pagename: Limitations
+          - pagename: Methods
+          - pagename: Public Model Structure
+          - pagename: Public Properties
+          - pagename: Best Practices and Troubleshooting
+          - pagename: Release Notes
+      - documentname: Chat Agent API
+        basedomain: https://{domain}/api/account/{accountId}/agentSession
+        pages:
+        - pagename: Overview 
+        
+The Top layer 0 in this structure is the category name Agent Experience. Its folder name is`AgentExperience`.
+Add Agent Widgets is a folder in layer 1 with path `AgentExperience/AddAgentWidgets`
+The Add Agent Widgets folder only contains one page in it. `AgentExperience/AddAgentWidgets/add-your-own-widgets-to-the-agent-workspace.md`
+the permalink for the file must include all parent folders excluding the layer 0 categoryname. For above example the permalink is:
+`add-agent-widgets-add-your-own-widgets-to-the-agent-workspace.html`
+
+If you look at the next document name `Agent Workspace Widget SDK` it is still on level 1 with path `AgentExperience/AgentWorkspaceWidgetSDK/`
+The files in the folder are all listed below pages until you get to last pagename.
+IE documentname Chat Agent API is not a folder located inside `Agent Workspace Widget SDK`
+
+Example Subfolder Layout:
+
+    - categoryname: Conversational AI
+      image: agent-experience
+      documents:
+      - documentname: Conversational AI
+        pages:
+          - pagename: Overview
+      - documentname: Conversation Builder
+        pages:
+          - pagename: Tutorials & Guides
+            subpages:
+              - subpagename: Getting Started
+              - subpagename: Using Meta Intents with Conversation Builder
+              - subpagename: Implementing a Web View Integration
+              - subpagename: Using LivePerson Functions with a Bot
+  
+  1. pagename `Tutorial & guides` because it has subpages is actually a folder not a file
+  2. in the markdown file for `Using Meta Intents with Conversation Builder` its pagename must match the subpagename.
+  3. the file must include `Tutorial & Guides` as a `subfoldername` header since it is at level 2 
+  4. the file must include `Conversation Builder` as a `documentname` in the header. 
+  4. the permalink must be `conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html`
+  5. notice how the `&` in the subfoldername is replaced with a dash in the permalink.
+  
+Example Documentname is pagename:
+
+    - categoryname: Getting Started
+      image: getting-started
+      documents:
+      - documentname: Getting Started with your Free Trial Account
+      - documentname: Do More with the Conversational Cloud
+      - documentname: Customizing the Conversational Cloud
+      - documentname: Starting with your Concierge Bot
+      - documentname: API Guidelines
+        pages:
+        - pagename: Accessing LivePerson APIs
+        - pagename: Create API keys
+        - pagename: Domain API
+        - pagename: Data APIs
+        - pagename: API Data Metrics
+        - pagename: Engagement Attributes
+        - pagename: Analytics Builder Data Metrics
+        - pagename: Retry Policy Recommendations
+        
+1. Documentname name is `Getting Started with your Free Trial Account` is not a folder name becauase it does not contain a pages key below it
+2. Since this above file only contains one parent, there should not be a document name in the file `getting-started-with-your-free-trial-account.md`
+3. The pagename for `getting-started-with-your-free-trial-account.md` must match the documentname in the yaml file  `Getting Started with your Free Trial Account`
 
 #### Environments
+To updated production and staging enviornments, create a pull request for master or Staging. When pull request is merged a automated release cycle will start and publish those changes in around five minutes.
 
 * Production (built from the `master` branch): [https://developers.liveperson.com/](https://developers.liveperson.com/)
 
@@ -59,7 +169,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 Once you've created a new document, you'll need to have it manually added. We chose a manual process for the sidebar for a few reasons. First, it reduces the fragility of the sidebar (the extra, manual step gives us another layer of QA). Secondly, it increases the flexibility of the sidebar (we write code once and then maintain a YAML file, making it easier to add options). Lastly, it decreases site build times (since the `forloops` needed to dynamically build a sidebar in a site of our size and complexity are time and resource consuming).
 
-The sidebar's YAML file can be found in the `_data` folder. It's called `documentsupdated.yaml`. You **must** make sure the name of the file and the name in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file's header (see above).
+The sidebar's YAML file can be found in the `_data` folder. It's called `documentsupdated.yaml`. You **must** make sure the name of the file and the pagename in the sidebar correspond; the link the sidebar sends to is auto-generated and **must** match the `permalink` in the file's header (see above). Please make sure the markdown file created contains its pagename, documentname, categoryname, and permalink in its header. The markdown file might need more information depending on where it will need to be in the sidebar. 
 
 The max width for an image in this repo is 800px.
 
@@ -70,18 +180,14 @@ If you have not already done so, make sure your computer has Ruby installed. Her
 Once you have installed Ruby, clone this repository to your machine. Once done, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you're on Windows, don't forget to run your CLI as an admin**.
 
 **First time install**
-
-0. Run `gem install bundler`. This will install Ruby's package manager which is required for all following commands.
-1. Run `bundle install`. This will install all the gems/plugins that the site depends on.
-2. Run `bundle exec jekyll build`. This builds the `_site` folder for the first time on your machine. The `bundle exec` prefix makes sure that bundler "watches" your build and installs any dependencies that might be missing. It's a precaution and is thus not mandatory.
-3. Run `bundle exec jekyll serve`. This builds the site and serves it over localhost:4000 (by default, you can change the `port` parameter in `config.yml` to whatever port you'd prefer).
-4. Navigate to http://localhost:4000/ (or the port you chose) and you'll see the site.
+1. Run `npm install`
+2. Run `npm run serve`
+3. Navigate to http://localhost:4000/ (or the port you chose) and you'll see the site.
 
 **OSX Installation**
 
-0. We recommend installing a standalone Ruby Installation and RVM
-1. See this for an example: [Stack Overflow](https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac)
-
+1. We recommend installing a standalone Ruby Installation and RVM
+2. See this for an example: [Stack Overflow](https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac)
 
 **Serving the site after the first install**
 

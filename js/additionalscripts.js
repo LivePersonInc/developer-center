@@ -53,8 +53,8 @@ $(document).ready(function () {
   var $title = $(".h1").text();
 
   if (
-    $title.indexOf("Let’s build a conversational future together!") != -1 ||
-    $title.indexOf("First Steps") != -1
+    $title.indexOf("Let's build a conversational future together!") != -1 ||
+    $title.indexOf("Index") != -1
   ) {
     console.log("Welcome to LivePerson Developers!");
   } else {
@@ -147,7 +147,7 @@ function navigateContent(url) {
       }
 
       if (
-        $title.indexOf("Let’s build a conversational future together!") != -1 ||
+        $title.indexOf("Let's build a conversational future together!") != -1 ||
         $title.indexOf("First Steps") != -1
       ) {
         console.log("Welcome to LivePerson Developers!");
@@ -231,9 +231,12 @@ function handleUniquePages() {
   var sidebar = $("#defaultsidebar");
   var suggestButton = $("#suggestbutton");
   var indicatorContainer = $("#indicator-container");
+  // var currentPageTitle = $(currentPage).html();
+  var $title = $(".h1").text();
+  var titleContainer = $("#documentTitleContainer");
+
 
   if (is_root || is_getting_started) {
-    console.log("In  root folder");
     jumpto.css("flex", "0");
     jumpto.css("display", "none");
 
@@ -241,6 +244,9 @@ function handleUniquePages() {
     suggestButton.css("display", "none");
 
     indicatorContainer.css("display", "none");
+    if (is_root) {
+      document.getElementById("document-title-h1").innerText = "Let's build a conversational future together!";
+    }
   } else {
     console.log("not in  root folder");
     jumpto.css("flex", "1");
@@ -417,7 +423,7 @@ function sidebarCollapse(url) {
   var currentPage = $('a[href="' + modifiedURL + '"]');
   var currentPageTitle = $(currentPage).html();
   //if this is the homepage
-  if (currentPageTitle == "Let’s build a conversational future together!") {
+  if (currentPageTitle == "Let's build a conversational future together!") {
     //make sure no other links are set to active and collapse any open folders before highlighting the current page
     $(".innerfolder > .active > button").removeClass("clicked");
     $(".folder ul").slideUp(400, null);

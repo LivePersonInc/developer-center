@@ -126,7 +126,6 @@
           - subpagename: Using Meta Intents with Conversation Builder
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
-        #  - subpagename: Implementing the Shift Status & Current Queue Health APIs
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
@@ -262,7 +261,6 @@
     pages:
       - pagename: Permissions
       - pagename: Credentials
-  #    - pagename: Subscriptions
   - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
@@ -640,17 +638,17 @@
     pages:
       - pagename: Overview
       - pagename: Getting Started
-      - pagename: Development
+      - pagename: Developing with FaaS
         subpages:
           - subpagename: Overview
-          - subpagename: "Events & Templates"
+          - subpagename: Events & Templates
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
           - subpagename: Debugger
           - subpagename: Common Examples
-          - subpagename: "Best Practices"
-          - subpagename: "Limitations & Restrictions"
+          - subpagename: Best Practices
+          - subpagename: Limitations & Restrictions
       - pagename: "Command Line Interface (CLI)"
       - pagename: Deployment
       - pagename: Monitoring
@@ -737,11 +735,6 @@
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
-  # - documentname: LiveDeflect API
-  #   pages:
-  #   - pagename: Overview
-  #   - pagename: contextAndInvite
-  #   - pagename: getLiveDeflectData
   - documentname: Connector API
     basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
@@ -765,13 +758,13 @@
           - subpagename: Disclaimers
           - subpagename: Troubleshooting
           - subpagename: Webhooks Examples
-  - documentname: IVR Engagement API
-    basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
-    pages:
-    - pagename: Overview
-    - pagename: Methods
-      subpages:
-        - subpagename: External Engagement
+  # - documentname: IVR Engagement API
+  #   basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
+  #   pages:
+  #   - pagename: Overview
+  #   - pagename: Methods
+  #     subpages:
+  #       - subpagename: External Engagement
   - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview
@@ -804,9 +797,11 @@
       - subpagename: Date and Time Formats
       - subpagename: String Values
       - subpagename: Override SDK Strings
-      - subpagename: Plural String resource Example
-    - pagename: Latest Release Notes
-    - pagename: All Release Notes
+      - subpagename: Plural String Resource Example
+    - pagename: Release Notes
+      subpages:
+      - subpagename: Latest Release Notes
+      - subpagename: All Release Notes
     - pagename: Resources
       subpages:
       - subpagename: Authentication
@@ -846,7 +841,9 @@
       - subpagename: Localization Keys
       - subpagename: String Localization
       - subpagename: Date and Time Styles
-    - pagename: All Releases
+    - pagename: Release Notes
+      subpages:
+      - subpagename: All Releases
     - pagename: Resources
       subpages:
       - subpagename: Authentication
@@ -868,7 +865,7 @@
     pages:
     - pagename: API
 
-- categoryname: Real-Time Data
+- categoryname: Real Time Data
   image: rt-data
   documents:
   - documentname: Agent Metrics API
@@ -959,10 +956,6 @@
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Limitations
-    #- documentname: Quick Replies
-    #  pages:
-    #    - pagename: Introduction to Quick Replies
-
 - categoryname: 'Security & Authentication'
   image: security-authentication
   documents:
@@ -1092,11 +1085,6 @@
         - pagename: NetSuite
         - pagename: SugarCRM
         - pagename: Zendesk
-    - documentname: IVR Deflection
-      pages:
-        - pagename: IVR Deflection
-        - pagename: IVR Deflection for Chat
-        - pagename: Setting Up IVR Deflection for Chat
     - documentname: Mobile App Messaging
       pages:
         - pagename: Add Messaging to Your App
@@ -1113,15 +1101,22 @@
     - documentname: SMS with Conversational Cloud
       pages:
         - pagename: Overview
-        - pagename: IVR Deflection
         - pagename: Clickable Mobile Content to SMS
         - pagename: Desktop Content Campaign
         - pagename: Google AdWords - Click-to-Message
         - pagename: SMS via Mobile App Messaging
         - pagename: Appendix
-    # - documentname: Video Chat
-    #   pages:
-    #     - pagename: Add Video to Chat Conversations
-    #     - pagename: Plan Your Service
-    #     - pagename: Develop the Service
-    #     - pagename: Build Your Widgets
+    - documentname: Video Chat
+      image: video-chat
+      pages:
+        - pagename: Add Video to Chat Conversations
+        - pagename: Plan Your Service
+        - pagename: Develop the Service
+        - pagename: Build Your Widgets
+    - documentname: LiveEngage MMS Viewer
+      image: live-engage-mms-viewer
+      pages:
+        - pagename: Overview
+        - pagename: Technical Description
+        - pagename: Deployment Steps
+        - pagename: Additional Options
