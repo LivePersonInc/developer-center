@@ -230,7 +230,7 @@ var toppingObjects = botContext.getNamedEntities('toppings');
 var toppings = [];
 if (toppingObjects != null && toppingObjects.length > 0) {
     for (j = 0; j < toppingObjects.length; j++) {
-        toppings.push(toppingObjects[j].getPhrase)
+        toppings.push(toppingObjects[j].getPhrase())
     }
 }
 ```
