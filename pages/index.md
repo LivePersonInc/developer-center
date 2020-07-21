@@ -1,6 +1,5 @@
 ---
-pagename:  Let’s build a conversational future together!
-documentname: Welcome
+pagename: Index
 sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
