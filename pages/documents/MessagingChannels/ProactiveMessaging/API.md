@@ -271,4 +271,4 @@ Proactive Messaging service has retry mechanism internally on dependent services
 | skill             | 255 char max length | |
 | templateId | 32 char max length | templateId will be provided by proactive messaging when a template is created |
 | outboundNumber            | 16 char max length | Phone number cannot be more than 16 digit |
-| variable  		  | 1550 char max length | SMS messages more than 160 chars will be sent as multiple messages |
+| variable  		  | 1550 char max length | SMS messages more than 160 chars may be sent as multiple messages |
