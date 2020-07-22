@@ -13,7 +13,7 @@ indicator: messaging
 
 {% assign regularrelease = site.data.releasenotesios['Regular'] %}
 {% for currentversion in regularrelease.versions %}
-{% include_relative regular/{{currentversion.version}}.md %}
+{% include_relative Regular/{{currentversion.version}}.md %}
 <hr/>
 {% endfor %}
 
