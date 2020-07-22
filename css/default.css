@@ -1066,13 +1066,12 @@ a.loginText {
 
 #anchorlist {
   margin-top: 90px;
-  margin-right: 100px;
   text-align: right;
   position: fixed;
-  max-height: 500px;
+  max-height: 292px;
   overflow-wrap: anywhere;
 
-  max-width: 170px;
+  max-width: 110px;
   overflow-y: scroll;
 }
 
@@ -1427,8 +1426,12 @@ input#csds-button {
     }
 } */
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1305px) {
   ul.mysidebar.nav {
     position: relative !important;
+  }
+
+  .defaultcontent {
+    max-width: 800px;
   }
 }
