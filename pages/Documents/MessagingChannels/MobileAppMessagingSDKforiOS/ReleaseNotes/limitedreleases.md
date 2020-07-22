@@ -11,7 +11,7 @@ indicator: messaging
 
 {% assign limitedrelease = site.data.releasenotesios['Limited'] %}
 {% for currentversion in limitedrelease.versions %}
-{% include_relative limited/{{currentversion.version}}.md %}
+{% include_relative Limited/{{currentversion.version}}.md %}
 <hr/>
 {% endfor %}
 
