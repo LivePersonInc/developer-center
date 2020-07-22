@@ -1,5 +1,5 @@
 ---
-pagename: Create skills
+pagename: Create Skills
 redirect_from:
   - administration-create-skills.html
 keywords:

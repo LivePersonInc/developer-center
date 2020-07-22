@@ -1,7 +1,10 @@
 - categoryname: Getting Started
   image: getting-started
   documents:
-  - documentname: First Steps
+  - documentname: Getting Started with your Free Trial Account
+  - documentname: Do More with the Conversational Cloud
+  - documentname: Customizing the Conversational Cloud
+  - documentname: Starting with your Concierge Bot
   - documentname: API Guidelines
     pages:
     - pagename: Accessing LivePerson APIs
@@ -10,7 +13,7 @@
     - pagename: Data APIs
     - pagename: API Data Metrics
     - pagename: Engagement Attributes
-    - pagename: Report Builder Data Metrics
+    - pagename: Analytics Builder Data Metrics
     - pagename: Retry Policy Recommendations
 
 - categoryname: Agent Experience
@@ -123,7 +126,6 @@
           - subpagename: Using Meta Intents with Conversation Builder
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
-        #  - subpagename: Implementing the Shift Status & Current Queue Health APIs
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
@@ -155,15 +157,15 @@
         subpages:
           - subpagename: Interaction Basics
           - subpagename: Interaction Support
-          - subpagename: User Says
+          - subpagename: Dialog Starter
           - subpagename: Statements
           - subpagename: Questions
           - subpagename: Integrations
-          - subpagename: Details - Next Actions
-          - subpagename: Details - Code
-          - subpagename: Details - Settings
+          - subpagename: Configuration - Next Action
+          - subpagename: Configuration - Custom Code
+          - subpagename: Configuration - Settings
           - subpagename: Troubleshooting
-      - pagename: NLU Assist
+      - pagename: Assist
       - pagename: Variables & Slots
       - pagename: Integrations
         subpages:
@@ -193,8 +195,9 @@
           - subpagename: Deprecated Functions
       - pagename: Testing & Deployment
         subpages:
+          - subpagename: Previewing
           - subpagename: Debugging
-          - subpagename: Deploying to LiveEngage
+          - subpagename: Deploying to Conversational Cloud
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
@@ -202,10 +205,11 @@
           - subpagename: Custom Event Logging
           - subpagename: Reusable Components
           - subpagename: A Pre-Launch Checklist
-  - documentname: Maven AI
+      - pagename: Networking & Security
+  - documentname: Conversation Orchestrator
     pages:
       - pagename: Overview
-      - pagename: Maven Assist
+      - pagename: Agent Assist
         subpages:
           - subpagename: Overview
           - subpagename: Recommended Actions for Automations
@@ -216,13 +220,13 @@
           - subpagename: Inbox System Attributes
           - subpagename: Custom Static or Function
           - subpagename: Context Session Store
-      - pagename: AI Powered Routing
+      - pagename: Dynamic Routing
         subpages:
           - subpagename: Overview
           - subpagename: Tutorial
-          - subpagename: Use Maven with Your Bot
+          - subpagename: Use Conversation Orchestrator with Your Bot
           - subpagename: Using SDE attributes in Routing
-      - pagename: AskMaven
+      - pagename: Recommendation API
         subpages:
           - subpagename: Overview
           - subpagename: Methods
@@ -234,12 +238,20 @@
       - pagename: Intents
       - pagename: Meta Intents
       - pagename: Entities
+  - documentname: Intent Analyzer
+    pages:
+      - pagename: Overview
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
       - pagename: Knowledge Bases
       - pagename: Articles
       - pagename: Tutorial
+  - documentname: Bots Status
+    pages:
+      - pagename: Overview
+      - pagename: Managing Custom Bots
+      - pagename: Managing Post-Conversation Survey Bots
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
@@ -249,7 +261,6 @@
     pages:
       - pagename: Permissions
       - pagename: Credentials
-  #    - pagename: Subscriptions
   - documentname: Third-Party Bots
     pages:
       - pagename: Getting Started
@@ -262,6 +273,7 @@
       - pagename: Microsoft Bot Framework
       - pagename: Custom Integration
       - pagename: Hook Configuration
+      - pagename: Public API
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
@@ -626,14 +638,17 @@
     pages:
       - pagename: Overview
       - pagename: Getting Started
-      - pagename: Development
+      - pagename: Developing with FaaS
         subpages:
           - subpagename: Overview
-          - subpagename: "Events & Templates"
+          - subpagename: Events & Templates
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Storing Secrets
           - subpagename: Debugger
+          - subpagename: Common Examples
+          - subpagename: Best Practices
+          - subpagename: Limitations & Restrictions
       - pagename: "Command Line Interface (CLI)"
       - pagename: Deployment
       - pagename: Monitoring
@@ -657,8 +672,6 @@
           - subpagename: Messaging Conversation Survey
           - subpagename: Conversational AI
           - subpagename: Conversational Commands
-      - pagename: Command Line Interface (CLI)
-
 
 - categoryname: Historical Data
   image: historical-data
@@ -722,11 +735,6 @@
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
-  # - documentname: LiveDeflect API
-  #   pages:
-  #   - pagename: Overview
-  #   - pagename: contextAndInvite
-  #   - pagename: getLiveDeflectData
   - documentname: Connector API
     basedomain: https://{domain}/api/account/{accountid}/messaging/consumer
     pages:
@@ -750,13 +758,13 @@
           - subpagename: Disclaimers
           - subpagename: Troubleshooting
           - subpagename: Webhooks Examples
-  - documentname: IVR Engagement API
-    basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
-    pages:
-    - pagename: Overview
-    - pagename: Methods
-      subpages:
-        - subpagename: External Engagement
+  # - documentname: IVR Engagement API
+  #   basedomain: https:///api/account/{accountId}/external/engagement?v=1.0
+  #   pages:
+  #   - pagename: Overview
+  #   - pagename: Methods
+  #     subpages:
+  #       - subpagename: External Engagement
   - documentname: Mobile App Messaging SDK for Android
     pages:
     - pagename: Overview
@@ -789,18 +797,11 @@
       - subpagename: Date and Time Formats
       - subpagename: String Values
       - subpagename: Override SDK Strings
-      - subpagename: Plural String resource Example
-    - pagename: Voice and Video for Android SDK (BETA)
+      - subpagename: Plural String Resource Example
+    - pagename: Release Notes
       subpages:
-      - subpagename: Overview
-      - subpagename: Getting Started
-      - subpagename: LiveEngage Configuration
-      - subpagename: Customizing
-      - subpagename: Sample Apps
-      - subpagename: FAQ
-      - subpagename: Release Notes
-    - pagename: Latest Release Notes
-    - pagename: All Release Notes
+      - subpagename: Latest Release Notes
+      - subpagename: All Release Notes
     - pagename: Resources
       subpages:
       - subpagename: Authentication
@@ -840,16 +841,9 @@
       - subpagename: Localization Keys
       - subpagename: String Localization
       - subpagename: Date and Time Styles
-
-    - pagename: Voice and Video for iOS SDK (BETA)
+    - pagename: Release Notes
       subpages:
-      - subpagename: Overview
-      - subpagename: Getting Started
-      - subpagename: Customizing
-      - subpagename: LiveEngage Configuration
-      - subpagename: Sample App
-      - subpagename: Appendix
-    - pagename: All Releases
+      - subpagename: All Releases
     - pagename: Resources
       subpages:
       - subpagename: Authentication
@@ -871,7 +865,7 @@
     pages:
     - pagename: API
 
-- categoryname: Real-Time Data
+- categoryname: Real Time Data
   image: rt-data
   documents:
   - documentname: Agent Metrics API
@@ -896,6 +890,7 @@
           - subpagename: Messaging CSAT Distribution
           - subpagename: Messaging Skill Segment
           - subpagename: Messaging Agent Segment
+          - subpagename: Messaging Queue Health By Group
 
       - pagename: Appendix
   - documentname: Operational Realtime API
@@ -961,14 +956,10 @@
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Limitations
-    #- documentname: Quick Replies
-    #  pages:
-    #    - pagename: Introduction to Quick Replies
-
 - categoryname: 'Security & Authentication'
   image: security-authentication
   documents:
-    - documentname: Cookies and LiveEngage
+    - documentname: Cookies and Conversational Cloud
       pages:
         - pagename: Overview
     - documentname: Apple Business Chat Authentication
@@ -982,11 +973,11 @@
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API
-    - documentname: LiveEngage Applications
+    - documentname: Conversational Cloud Applications
       pages:
-        - pagename: What Is a LiveEngage Application?
-        - pagename: Installing LiveEngage Applications
-    - documentname: Authorizing LiveEngage Applications
+        - pagename: What Is a Conversational Cloud Application?
+        - pagename: Installing Conversational Cloud Applications
+    - documentname: Authorizing Conversational Cloud Applications
       pages:
         - pagename: Overview
         - pagename: Methods
@@ -1060,7 +1051,7 @@
             - subpagename: Click
             - subpagename: getEngagementInfo
             - subpagename: getEngagementState
-    - documentname: LE-Tag
+    - documentname: Web Tag
       pages:
         - pagename: Overview
         - pagename: SDEs
@@ -1094,11 +1085,6 @@
         - pagename: NetSuite
         - pagename: SugarCRM
         - pagename: Zendesk
-    - documentname: IVR Deflection
-      pages:
-        - pagename: IVR Deflection
-        - pagename: IVR Deflection for Chat
-        - pagename: Setting Up IVR Deflection for Chat
     - documentname: Mobile App Messaging
       pages:
         - pagename: Add Messaging to Your App
@@ -1112,18 +1098,25 @@
         - pagename: Overview
         - pagename: Getting Started
         - pagename: Creating Report Tasks
-    - documentname: SMS with LiveEngage
+    - documentname: SMS with Conversational Cloud
       pages:
         - pagename: Overview
-        - pagename: IVR Deflection
         - pagename: Clickable Mobile Content to SMS
         - pagename: Desktop Content Campaign
         - pagename: Google AdWords - Click-to-Message
         - pagename: SMS via Mobile App Messaging
         - pagename: Appendix
-    # - documentname: Video Chat
-    #   pages:
-    #     - pagename: Add Video to Chat Conversations
-    #     - pagename: Plan Your Service
-    #     - pagename: Develop the Service
-    #     - pagename: Build Your Widgets
+    - documentname: Video Chat
+      image: video-chat
+      pages:
+        - pagename: Add Video to Chat Conversations
+        - pagename: Plan Your Service
+        - pagename: Develop the Service
+        - pagename: Build Your Widgets
+    - documentname: LiveEngage MMS Viewer
+      image: live-engage-mms-viewer
+      pages:
+        - pagename: Overview
+        - pagename: Technical Description
+        - pagename: Deployment Steps
+        - pagename: Additional Options

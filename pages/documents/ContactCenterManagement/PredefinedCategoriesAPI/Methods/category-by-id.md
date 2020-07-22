@@ -1,5 +1,5 @@
 ---
-pagename: Category By ID
+pagename: Category by ID
 redirect_from:
   - account-configuration-categories-id.html
 sitesection: Documents

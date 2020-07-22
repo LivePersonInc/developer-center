@@ -1,5 +1,5 @@
 ---
-pagename: Get skill by ID
+pagename: Get Skill by ID
 redirect_from:
   - administration-get-skill-by-id.html
 keywords:

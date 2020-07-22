@@ -1,5 +1,5 @@
 ---
-pagename: Get conversation by conversation ID
+pagename: Get Conversation by Conversation ID
 redirect_from:
   - data-messaging-interactions-get-conversation-by-conversation-id.html
 sitesection: Documents
@@ -19,6 +19,12 @@ This method retrieves a conversation according to the given conversation ID.
 Method     | URL
 --------   | ---
 POST       | https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/conversations/conversation/search
+
+**URL Parameters**
+
+|Name   | Description  | Type/Value | Required | Notes
+|:----- | :----------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
+|source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
 
 **BODY/POST Parameters**
 

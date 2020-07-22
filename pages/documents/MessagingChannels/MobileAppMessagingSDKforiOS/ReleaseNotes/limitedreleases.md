@@ -9,9 +9,9 @@ permalink: mobile-app-messaging-sdk-for-ios-all-releases-limited-releases.html
 indicator: messaging
 ---
 
-{% assign limitedrelease = site.data.releasenotesios['limited'] %}
+{% assign limitedrelease = site.data.releasenotesios['Limited'] %}
 {% for currentversion in limitedrelease.versions %}
-{% include_relative limited/{{currentversion.version}}.md %}
+{% include_relative Limited/{{currentversion.version}}.md %}
 <hr/>
 {% endfor %}
 

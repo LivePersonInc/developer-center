@@ -139,6 +139,6 @@ Below is an image of a Quick Reply template with four quick replies:
 
 To create unified layouts when looking to use the **Quick Replies** Messenger template, please use these limitation/guidelines to create layouts:
 
-* Facebook has a maximum of 11 replies in each quick reply template. LiveEngage does not have a limit on the number of replies.
-* Facebook does not allow more than 20 characters on button title text.  LiveEngage will allow up to 128 characters.
+* Facebook has a maximum of 11 replies in each quick reply template. Conversational Cloud does not have a limit on the number of replies.
+* Facebook does not allow more than 20 characters on button title text.  Conversational Cloud will allow up to 128 characters.
 * Facebook allows sharing images within quick replies - this is not supported with the template, however.

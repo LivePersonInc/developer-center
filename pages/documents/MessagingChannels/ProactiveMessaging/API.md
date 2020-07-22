@@ -1,5 +1,5 @@
 ---
-pagename: Proactive Messaging API
+pagename: API
 redirect_from:
   - ProactiveMessaging.html
 Keywords:
@@ -253,22 +253,3 @@ Proactive Messaging service has retry mechanism internally on dependent services
 - Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer using a campaign. Current lookback period is 30 days from when messages are sent using Proactive api. 
 - Example: When a message is sent to consumer using Proactive Messaging api and if consumer replies within 30 days from when message was sent, the response will be redirected to LE agent according to specified skill in Proactive Campaign. A response after 30 days will be be treated as any inbound message and routed to a default skill in Conversational Cloud (this is configured by brand). Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
-<strong>Are the scheduling times required? What happens if we don't specify it? What if we only specify one day Monday, etc.?</strong>
-- As indicated in the swagger documentation, this is an optional field. If scheduling times are not passed, then Proactive Messaging will default to channel window times i.e. 13 hrs. (8:00 am - 9:00 pm) for SMS and 24 hrs. for other channels. e.g. If only Monday time is passed, then messages will only be sent in the Monday window times and any remaining messages after Monday window time will be sent in next Monday window times. For SMS, if default window 8:00 am - 9:00 pm is less than required then provide schedule window in campaign request to send SMS outside the default window.
-
-<strong>One variable is required for SMS but what happens when more than 1 variable is passed? Will the payload fail, or will it just take the first variable?</strong>
-- Proactive messaging performs strict checking for variables. If more variables are specified than what are required, proactive messaging will mark the recipient failed with error 'TOO_MANY_VARIABLES' which will be part of campaign response.
-
-<strong> How do we know which field is optional or required?<strong>
-- Proactive messaging is using industry recommended swagger specifications for API documentation. Swagger model specification will specify required and optional fields. e.g. Visit [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/campaign) API spec and click on model as indicated by image below to learn about campaign request optional and required fields.
-- <img src="images/swaggerModelExample.png" alt="Swagger Model" style="width:auto;max-height:500px;">
-
-<strong>What are the restrictions on the field in campaign request?<strong>
-
-| FIELD_NAME | LIMITATIONS | EXPLANATION |
-|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| campaignName         | 255 char max length | |
-| skill             | 255 char max length | |
-| templateId | 32 char max length | templateId will be provided by proactive messaging when a template is created |
-| outboundNumber            | 16 char max length | Phone number cannot be more than 16 digit |
-| variable  		  | 1550 char max length | SMS messages more than 160 chars may be sent as multiple messages |

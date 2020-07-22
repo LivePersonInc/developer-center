@@ -11,7 +11,7 @@ permalink: mobile-app-messaging-sdk-for-ios-string-localization-string-localizat
 indicator: messaging
 ---
 
-The SDK contains language folders for each language supported. For a list of supported languages, see [LiveEngage System Requirements and Language Support](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf). Each folder contains LPLocalizable.strings file for a specific language.
+The SDK contains language folders for each language supported. For a list of supported languages, see [Conversational Cloud System Requirements and Language Support](https://ce-sr.s3.amazonaws.com/CA/Admin/Sys%20req/System%20requirements.pdf). Each folder contains LPLocalizable.strings file for a specific language.
 
 The example below contains four language folders:
 
@@ -20,7 +20,7 @@ The example below contains four language folders:
 * **pt.lproj**: Portuguese strings
 * **pt-PT.lproj**: Portuguese (Portugal) strings
 
-You can override the string localization of any supported language in LiveEngage. Create **LPLocalizable.strings** files for relevant languages inside your app, which includes the keys to override.  
+You can override the string localization of any supported language in Conversational Cloud. Create **LPLocalizable.strings** files for relevant languages inside your app, which includes the keys to override.  
 
 ### Create and localize a strings file and add languages
 

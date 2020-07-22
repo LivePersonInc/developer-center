@@ -4,8 +4,8 @@ redirect_from:
   - chat-agent-postman-resources.html
 Keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
-documentname: Chat Agent API  
+categoryname: "Agent Experience"
+documentname: Chat Agent API
 
 order: 242
 permalink: chat-agent-api-postman-resources.html

@@ -1,5 +1,5 @@
 ---
-pagename: Mobile Messaging SDK Overview
+pagename: Overview
 redirect_from:
   - consumer-experience-ios-sdk-overview.html
 Keywords:
@@ -24,7 +24,7 @@ Messaging and conversational experiences have transformed how businesses engage 
 
 To successfully deploy messaging within your mobile app, it’s important to understand that the SDK has several functions and tasks. We recommend you go through the following list before beginning your deployment.
 
-1. **Supported and certified devices.** Review the LiveEngage system requirements to find the list of devices supported and certified by the In-App SDK. For Android, you may need to deploy two different Android APKs (one with messaging and one without) if many of your users have unsupported devices.  
+1. **Supported and certified devices.** Review the Conversational Cloud system requirements to find the list of devices supported and certified by the In-App SDK. For Android, you may need to deploy two different Android APKs (one with messaging and one without) if many of your users have unsupported devices.  
    
 2. **Authentication.** The most important and possibly the most complex portion of your deployment. Determine if you are placing messaging in authenticated areas of your app.  If so, consider the following:  
 

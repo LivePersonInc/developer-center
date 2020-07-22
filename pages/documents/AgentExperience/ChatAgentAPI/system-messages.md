@@ -4,7 +4,7 @@ redirect_from:
   - agent-system-messages.html
 Keywords:
 sitesection: Documents
-categoryname: "Client Side Configuration"
+categoryname: "Agent Experience"
 documentname: Chat Agent API
 
 order: 240

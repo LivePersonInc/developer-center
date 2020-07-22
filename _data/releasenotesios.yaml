@@ -1,14 +1,15 @@
 
 #Additional Release
-additional:
+Additional:
   versions: [
+    { version: "5.2.1" },
     { version: "5.1.2" },
     { version: "5.0.1" },
     { version: "4.1.0" },
   ]
 
 #Limited Release
-limited:
+Limited:
   versions: [
     { version: "4.0.0.swift4.2.signed" },
     { version: "4.0.0.swift4.2" },
@@ -16,7 +17,7 @@ limited:
   ]
 
 #Regular Release
-regular: 
+Regular: 
   versions: [
     { version: "5.2.0" },
     { version: "5.1.1" },

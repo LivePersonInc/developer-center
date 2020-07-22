@@ -4,7 +4,7 @@ redirect_from:
   - agent-workspace-sdk-overview.html
 Keywords:
 sitesection: Documents
-categoryname: "Agent Experience & Bot"
+categoryname: "Agent Experience"
 documentname: Agent Workspace Widget SDK
 
 level-order: 5
@@ -15,7 +15,7 @@ indicator: both
 ---
 ### Introduction
 
-The Agent Workspace Widget SDK is a lightweight, client-side package for communicating with the LiveEngage Agent Workspace. Using this SDK, Agent Managers can add custom widgets to LiveEngage, making it possible to integrate applications into the Agent Workspace.
+The Agent Workspace Widget SDK is a lightweight, client-side package for communicating with the Conversational Cloud Agent Workspace. Using this SDK, Agent Managers can add custom widgets to Conversational Cloud, making it possible to integrate applications into the Agent Workspace.
 
 With the SDK, brands will find two-way communication between LivePerson and external applications, more in-depth information about the visitor and the engagement, the ability to send conversation lines directly from the application, and the ability to transfer the conversation transcript automatically to the external application.
 
@@ -44,7 +44,7 @@ Instead of flipping between browser tabs, use the Agent Workspace Widget to conn
 Follow the steps below to integrate the application you developed using the client.
 
 1. Reference the [Client SDK](https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js).
-2. In your LiveEngage account, define a new custom widget with the URL of your web application (which uses the client-SDK). [Learn more](guides-agent-workspace-widget.html).
+2. In your Conversational Cloud account, define a new custom widget with the URL of your web application (which uses the client-SDK). [Learn more](guides-agent-workspace-widget.html).
 
 All public properties and methods can be found in the namespace `lpTag.agentSDK`.
 

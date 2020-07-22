@@ -1,0 +1,248 @@
+body {
+    background: #090C43;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    min-height: 720px;
+}
+
+a {
+    font-family: Roboto;
+    color: #005EF4;
+    font-size: 14px;
+
+}
+
+ul {
+    padding-left: 15px !important;
+}
+
+a:focus {
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    /*hover electric blue
+     */
+    color: #003FA3;
+    text-decoration: none !important;
+}
+
+.container {
+    display: none;
+}
+
+.row {
+    display: inline-flex;
+
+}
+
+.greeting-bot-header {
+    font-family: Roboto;
+    display: block !important;
+    width: 360px;
+    white-space: nowrap;
+    margin: 0 auto 62px auto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.008em;
+    color: #FFFFFF;
+}
+
+.container-content {
+    width: 304px;
+    height: 128px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 0px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+    color: #5F617A;
+}
+
+.hyperlink-learn {
+    width: 98px;
+    height: 24px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+    letter-spacing: 0.01em;
+    /* Primary/Electric Blue */
+    color: #005EF4;
+    margin-bottom: 12px;
+}
+
+.spotlight-content-container {
+    width: 324px;
+    height: 459px;
+    display: block !important;
+    margin-top: 152px;
+    margin-left: 82px;
+}
+
+.heading-h5 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    width: 302px;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+    /* Brand/Navy */
+
+    color: #090C43;
+}
+
+.spotlight-title {
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: bold;
+    padding-top: 24px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #005EF4;
+    /* Primary/Electric Blue */
+}
+
+.hyperlink-container {
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #005EF4;
+    /* Primary/Electric Blue */
+}
+
+.spotlight-content {
+    font-style: normal;
+    font-weight: 500;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #5F617A;
+    margin-bottom: 12px;
+}
+
+.lp-window-root>.lpmx {
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    margin-top: 160px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.spotlight-container {
+    background-color: #F8F5F3;
+    width: 542px;
+    height: 542px;
+    bottom: -200px;
+    position: absolute;
+    display: none;
+    right: -8%;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.liveperson-logo {
+    display: block !important;
+    margin: 32px 0 0 32px;
+}
+
+.lp-tips-container {
+    /*display: inline-block !important;*/
+    display: none;
+    width: 24%;
+    height: 20%;
+    margin-left: 40px;
+    margin-top: 180px;
+}
+
+.template-greeting-bot {
+    display: inline-block !important;
+    width: 340px;
+    height: 540px;
+    border: 4px solid #5F617A;
+    ;
+    border-radius: 16px;
+    position: absolute;
+    left: 50%;
+    top: 160px;
+    margin-left: -170px;
+}
+
+.template-greeting-reminder {
+    color: #818299;
+    display: block !important
+}
+
+.template-greeting-loading {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.008em;
+    color: #FFFFFF;
+    margin-top: 224px;
+    padding: 0 12px 0 12px;
+}
+
+.lp-tips-header {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    font-family: Roboto;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.lp-tips-content {
+    /* width: 328px;
+    height: 24px; */
+    font-weight: normal !important;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    font-family: Roboto;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+
+}
+
+
+@media (max-width: 1367px) {
+    .spotlight-container {
+        right: -16%;
+        margin-top: 300px;
+    }
+
+    .heading-h5 {
+        width: 240px;
+    }
+
+}
+
+@media (max-width: 1020px) {
+
+    .lp-tips-container {
+        display: none !important
+    }
+
+    .spotlight-container {
+        display: none !important;
+    }
+}

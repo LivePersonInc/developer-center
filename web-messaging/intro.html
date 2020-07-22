@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="user-scalable=0, width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
+    <title id="emulator-title">Web Messaging</title>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ftue.css">
+    <script src="js/helperMethods.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+        #loader {
+            width: 100%;
+            height: 100%;
+            background-color: #00213A !important;
+            margin: 0;
+        }
+
+        body {
+            background: #090C43 !important;
+            min-height: 720px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader"></div>
+    <div class="liveperson-logo" style="display:none">
+        <img src="img/Logo.svg" />
+    </div>
+    <div class="greeting-bot-header" style="display:none">
+        Message with your Concierge Bot
+    </div>
+
+    <div id="tips-container" class="lp-tips-container" style="display:none">
+        <div class="lp-tips-header">
+            Things to try:
+        </div>
+        <ul>
+            <li class="lp-tips-content">
+                Type ‘Hi’ to get started
+            </li>
+            <!-- <li class="lp-tips-content">
+                Choose any option to interact with your concierge bot
+            </li> -->
+            <li class="lp-tips-content">
+                Choose any option. All options and dialogs are fully customizable in Conversation Builder
+            </li>
+            <li class="lp-tips-content">
+                Try typing: ‘When are you open?’ or ‘Talk to an agent’
+            </li>
+            <!-- <li class="lp-tips-content">
+                Click 'End conversation' in the context menu
+                <br>
+                (&#8226; &#8226; &#8226;) and refresh this page to start over
+            </li> -->
+        </ul>
+    </div>
+    <div id="template-bot" class="template-greeting-bot">
+        <div id="loading-message" class="template-greeting-loading" style="display: none;">
+            Please wait while we load your conversation.
+            <br>
+            <span class="template-greeting-reminder">When you see 'Message us' click on it to get started.</span>
+        </div>
+    </div>
+
+
+    </div>
+    <div id="spotlight" class="spotlight-container">
+        <div class="spotlight-content-container" style="display: none">
+            <div class="heading-h5">
+                Now that you've had your first conversation, it's time to start building with LivePerson.
+            </div>
+            <div class="hyperlink-learn">
+                <a target="_blank" href="/getting-started-with-your-free-trial-account.html"
+                    alt=" Dev Center getting started">
+                    Start Building
+                </a>
+            </div>
+            <a target="_blank" class="hyperlink-container" href="/starting-with-your-concierge-bot.html"
+                alt="Dev Center Getting Started">
+                Learn how to customize your bot
+            </a>
+        </div>
+    </div>
+    <script>
+        async function removeDisplay() {
+            const sleep = (milliseconds) => {
+                return new Promise(resolve => setTimeout(resolve, milliseconds))
+            }
+            await sleep(2000);
+            // document.getElementById('template-bot').setAttribute('style', 'display:none !important');
+            document.getElementById('tips-container').setAttribute('style', 'display:inline-block');
+
+            console.log('template bot should be gone');
+        }
+
+
+        $(window).load(async function () { //Do the code in the {}s when the window has loaded
+            var site = getURLParams(window.location.search).site || "";
+            var username = getURLParams(window.location.search).username || "";
+            var experience = getURLParams((window.location.search)).experience || "";
+            var env = getURLParams((window.location.search)).env || "";
+            if (experience === "first_time" && site !== "") {
+                // if it is a ftue experience then append the style sheet
+                document.getElementById('loading-message').setAttribute('style', 'display:block');
+            } else {
+                let originalEmulator = setUrlPathOld();
+                window.location.href = originalEmulator;
+            }
+
+            let engagementChecker;
+            let lpTagPromise = new Promise((resolve, reject) => {
+                var intervalCounter = 1;
+                loadLPTag(env);
+                // this interval is checking that the lpchat engagement window exists
+                // if it does exists resolve the promise and let things to try load
+                engagementChecker = setInterval(() => {
+                    if (document.getElementById('lpChat') !== null) {
+                        console.log('loaded', intervalCounter);
+                        resolve("Success!");
+                    } else {
+                        intervalCounter++;
+                    }
+                }, 1000);
+            })
+            lpTagPromise.then((message) => {
+                console.log('removing display', message);
+                removeDisplay();
+                console.log('trying to clear the interval');
+                clearInterval(engagementChecker);
+                console.log('cleared the interval');
+
+            })
+            $("#loader").fadeOut("fast"); //Fade out the #loader div
+        });
+        var site = getURLParams(window.location.search).site || "";
+        var username = getURLParams(window.location.search).username || "";
+        var experience = getURLParams((window.location.search)).experience || "";
+        var env = getURLParams((window.location.search)).env || "";
+    </script>
+
+    <!-- <script src="script.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/spotlight.js"></script>
+
+</body>
+
+</html>

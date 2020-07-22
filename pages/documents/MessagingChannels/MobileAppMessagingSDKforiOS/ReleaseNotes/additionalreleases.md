@@ -9,9 +9,9 @@ permalink: mobile-app-messaging-sdk-for-ios-all-releases-additional-releases.htm
 indicator: messaging
 ---
 
-{% assign additionalrelease = site.data.releasenotesios['additional'] %}
+{% assign additionalrelease = site.data.releasenotesios['Additional'] %}
 {% for currentversion in additionalrelease.versions %}
-{% include_relative additional/{{currentversion.version}}.md %}
+{% include_relative Additional/{{currentversion.version}}.md %}
 <hr/>
 {% endfor %}
 
