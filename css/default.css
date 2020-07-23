@@ -1070,7 +1070,7 @@ a.loginText {
   position: fixed;
   max-height: 292px;
   overflow-wrap: anywhere;
-
+  padding-right: 8px;
   max-width: 110px;
   overflow-y: scroll;
 }
@@ -1082,6 +1082,19 @@ a.loginText {
   color: var(--dark-gray);
   font-weight: bold;
   line-height: 16px;
+}
+
+#anchorlist::-webkit-scrollbar {
+  width: 8px;
+}
+
+#anchorlist::-webkit-scrollbar-track {
+  color: var(--lightest-gray);
+}
+
+#anchorlist::-webkit-scrollbar-thumb {
+  background-color: var(--mid-gray);
+  border-radius: 100px;
 }
 
 .jumpToAnchor {
