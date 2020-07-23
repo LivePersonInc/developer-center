@@ -457,6 +457,8 @@ ul#mysiderbar li {
 
 .innerpageitem {
   padding-left: 15px !important;
+  max-width: 194px;
+  overflow-wrap: anywhere;
 }
 
 .activeitem {

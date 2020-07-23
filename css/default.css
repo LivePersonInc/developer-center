@@ -1066,13 +1066,12 @@ a.loginText {
 
 #anchorlist {
   margin-top: 90px;
-  margin-right: 100px;
   text-align: right;
   position: fixed;
-  max-height: 500px;
+  max-height: 360px;
   overflow-wrap: anywhere;
-
-  max-width: 170px;
+  padding-right: 8px;
+  max-width: 110px;
   overflow-y: scroll;
 }
 
@@ -1083,6 +1082,19 @@ a.loginText {
   color: var(--dark-gray);
   font-weight: bold;
   line-height: 16px;
+}
+
+#anchorlist::-webkit-scrollbar {
+  width: 8px;
+}
+
+#anchorlist::-webkit-scrollbar-track {
+  color: var(--lightest-gray);
+}
+
+#anchorlist::-webkit-scrollbar-thumb {
+  background-color: var(--mid-gray);
+  border-radius: 100px;
 }
 
 .jumpToAnchor {
@@ -1427,8 +1439,12 @@ input#csds-button {
     }
 } */
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1305px) {
   ul.mysidebar.nav {
     position: relative !important;
+  }
+
+  .defaultcontent {
+    max-width: 800px;
   }
 }
