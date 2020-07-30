@@ -11,7 +11,7 @@ object-assign
  * @license MIT
  */
 
-/*! @vimeo/player v2.12.0 | (c) 2020 Vimeo | MIT License | https://github.com/vimeo/player.js */
+/*! @vimeo/player v2.12.2 | (c) 2020 Vimeo | MIT License | https://github.com/vimeo/player.js */
 
 /*! Native Promise Only
       v0.8.1 (c) Kyle Simpson
