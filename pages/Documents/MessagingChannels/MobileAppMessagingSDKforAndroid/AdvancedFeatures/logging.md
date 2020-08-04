@@ -69,3 +69,49 @@ public class MyHostApplication extends Application {
 }
 ```
 
+## Gets a snapshot of LivePerson log history
+
+Gets a snapshot of LivePerson log history, as a List of LogLine objects, filtered by LogLevel. The returned List<LogLine> containing all log lines at an equal or lesser logging
+level than "filter", and none of the lines at a greater logging level.
+
+```java
+LivePerson.Logging.getLogSnapshot(LogLevel filter);
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| filter | The highest LogLevel of lines you want included in the snapshot |
+
+## Gets a snapshot of LivePerson log history
+
+List<String> containing all log lines at an equal or lesser logging level than "filter", and none of the lines at a greater logging level.
+
+```java
+LivePerson.Logging.getLogSnapshotStrings(LogLevel filter);
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| filter | The highest LogLevel of lines you want included in the snapshot |
+
+## Gets a snapshot of LivePerson log history
+
+Gets a snapshot of log history, as a single String with each line separated by newline characters, filtered by LogLevel. List<String> containing all log lines at an equal or lesser logging level than "filter", and none of the lines at a greater logging level.
+
+```java
+LivePerson.Logging.getLogSnapshotStringBlock(LogLevel filter);
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| filter | The highest LogLevel of lines you want included in the snapshot |
+
+## Clears the in-memory log line cache
+
+Lines already written to the System Logs (logcat) are not affected, only the logs retrievable via getLogSnapshot and related methods.
+
+```java
+LivePerson.Logging.clearHistory();
+```
+
+
