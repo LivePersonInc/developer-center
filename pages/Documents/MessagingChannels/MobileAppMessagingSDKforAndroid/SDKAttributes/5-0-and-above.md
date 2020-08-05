@@ -2344,14 +2344,6 @@ Expiration of CSAT in minutes from the moment the conversation was ended. If Sur
 * **Type:** integer
 * **Default value:** 1440
 
-
-#### secureForm_fragment_background_color
-Background color of the full screen PCI form.
-
-* **Type:** color
-* **Default value:** @color/lp_colorBackground
-
-
 #### feedback_fragment_background_color
 Background color for the feedback dialog.
 
