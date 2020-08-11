@@ -1,15 +1,15 @@
 ---
-pagename: Quick Start
+pagename: Quick Start 5.2.1 and below
 redirect_from:
-  - consumer-experience-ios-sdk-quick-start.html
+  - consumer-experience-ios-sdk-quick-start-5-2-1-and-below.html
   - mobile-app-messaging-sdk-for-ios-initializing-with-monitoring-params.html
   - initialization-with-monitoring-params.html
-
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-permalink: mobile-app-messaging-sdk-for-ios-quick-start.html
+subfoldername: Quick Starts
+permalink: mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-5-2-1-and-below.html
 indicator: messaging
 ---
 <br>
