@@ -79,16 +79,16 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
 
 The relevant fields in this dialog are ``channelType`` and inside ``metaData`` the ``serviceId``, ``mode`` and ``sessionState`` fields. ``channelType`` always equals ``COBROWSE`` and can be used to check if the new dialog is a CoBrowse dialog. The ``serviceId`` is used to match Consumer and Agent and needs to be passed to the CoBrowse API on the website. ``mode`` is equal to the CoBrowse mode the Agent selected. For CoBrowse, the possible values are ``shared`` for shared CoBrowse, ``view`` for view-only CoBrowse where the agent is able to scroll the visitor's view and ``follow`` for view-only without scroll permissions for the agent.
 
-After the invitation has been received, the following event should be triggered on consumer side using the ``lpTag.events.publish`` function.
+After the invitation has been received, the following event should be triggered on consumer side using the ``lpTag.events.publish`` function. In the event, the mandatory fields `ssid` and `svid` can have arbitrary non-empty string values, but you can also use the values provided by the monitoring SDK (i.e. ``lpTag.taglets.lp_monitoringSDK.getSid()`` and ``lpTag.taglets.lp_monitoringSDK.getVid()``).
 
 ```js
 lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
  	serviceId: "<ServiceId from the dialog>",
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
- 	//optional parameters:
  	ssid: "<Monitoring Session ID>",
  	svid: "<Monitoring Visitor ID>",
+ 	//optional parameters:
  	scid: "<Monitoring Context ID>",
  	cid: "<Engagement Context ID>",
  	eid: "<Engagement ID>"
@@ -104,9 +104,9 @@ lpTag.events.publish("lpCoBrowse", "cobrowseAccepted", {
  	serviceId: "<ServiceId from the dialog>",
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
- 	//optional parameters:
  	ssid: "<Monitoring Session ID>",
  	svid: "<Monitoring Visitor ID>",
+ 	//optional parameters:
  	scid: "<Monitoring Context ID>",
  	cid: "<Context ID>",
  	eid: "<Engagement ID>"
@@ -121,9 +121,9 @@ lpTag.events.publish("lpCoBrowse", "cobrowseDeclined", {
  	serviceId: "<ServiceId from the dialog>",
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
- 	//optional parameters:
  	ssid: "<Monitoring Session ID>",
  	svid: "<Monitoring Visitor ID>",
+ 	//optional parameters:
  	scid: "<Monitoring Context ID>",
  	cid: "<Context ID>",
  	eid: "<Engagement ID>"

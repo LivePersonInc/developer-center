@@ -76,7 +76,7 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
 
 The relevant fields in this dialog are ``channelType`` and inside ``metaData`` the ``serviceId``, ``mode`` and ``sessionState`` fields. ``channelType`` always equals ``COBROWSE`` and can be used to check if the new dialog has the correct type. The ``serviceId`` is used to match Consumer and Agent and needs to be passed to the CoBrowse API on the website. ``mode`` is equal to the mode that the Agent selected. Possible modes are ``VOICE_CALL`` for voice calls and ``VIDEO_CALL`` for video calls.
 
-After the invitation has been received, trigger the following event on consumer side using the ``lpTag.events.publish`` function.
+After the invitation has been received, trigger the following event on consumer side using the ``lpTag.events.publish`` function. In the event, the mandatory fields `ssid` and `svid` can have arbitrary non-empty string values, but you can also use the values provided by the monitoring SDK (i.e. ``lpTag.taglets.lp_monitoringSDK.getSid()`` and ``lpTag.taglets.lp_monitoringSDK.getVid()``).
 
 ```javascript
 lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
@@ -84,9 +84,9 @@ lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
  	mode: "<Mode from the dialog>",
- 	//optional parameters:
  	ssid: "<Monitoring Session ID>",
  	svid: "<Monitoring Visitor ID>",
+ 	//optional parameters:
  	scid: "<Monitoring Context ID>",
  	cid: "<Engagement Context ID>",
  	eid: "<Engagement ID>"
@@ -103,9 +103,9 @@ lpTag.events.publish("lpCoBrowse", "cobrowseAccepted", {
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
  	mode: "<Mode from the dialog>",
- 	//optional parameters:
  	ssid: "<Monitoring Session ID>",
  	svid: "<Monitoring Visitor ID>",
+ 	//optional parameters:
  	scid: "<Monitoring Context ID>",
  	cid: "<Context ID>",
  	eid: "<Engagement ID>"
@@ -121,9 +121,9 @@ lpTag.events.publish("lpCoBrowse", "cobrowseDeclined", {
  	agentId: "<Agent ID>",
  	visitorName: "<Name of the Visitor>",
  	mode: "<Mode from the dialog>",
- 	//optional parameters:
  	ssid: "<Monitoring Session ID>",
  	svid: "<Monitoring Visitor ID>",
+ 	//optional parameters:
  	scid: "<Monitoring Context ID>",
  	cid: "<Context ID>",
  	eid: "<Engagement ID>"
