@@ -83,7 +83,7 @@ Note you also receive events with different ``sessionState`` values in this chan
 - ``"ACCEPTED"``, which is received when the invitation is accepted by the invitee and when the invitee successfully joins the session.
 - ``"CLOSED"``, which is received when the agent cancels the invitation, ends the session, or the session is ended for some reason.
 
-In these cases the event ``metaData`` carries a field ``notificationKey`` to indicate the exact sub-state. These states/sub-states are used by the system bot which (when activated) sends system messages for actions related to the CoBrowse session.
+In these cases the event ``metaData`` carries a field ``notificationKey`` to indicate the exact sub-state. These states/sub-states are also tracked by the system bot which (when activated) sends automatic messages for actions related to the CoBrowse session.
 
 After the invitation has been received, the following event should be triggered on consumer side using the ``lpTag.events.publish`` function. In the event, the mandatory fields `ssid` and `svid` can have arbitrary non-empty string values, but you can also use the values provided by the monitoring SDK (i.e. ``lpTag.taglets.lp_monitoringSDK.getSid()`` and ``lpTag.taglets.lp_monitoringSDK.getVid()``).
 
