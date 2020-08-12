@@ -76,6 +76,8 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
 
 The relevant fields in this dialog are ``channelType`` and inside ``metaData`` the ``serviceId``, ``mode`` and ``sessionState`` fields. ``channelType`` always equals ``COBROWSE`` and can be used to check if the new dialog has the correct type. The ``serviceId`` is used to match Consumer and Agent and needs to be passed to the CoBrowse API on the website. ``mode`` is equal to the mode that the Agent selected. Possible modes are ``VOICE_CALL`` for voice calls and ``VIDEO_CALL`` for video calls.
 
+Note you also receive events with different ``sessionState`` values in this channel as the dialog session state changes. So to ensure the received event is an invitation, you need to check ``sessionState`` is equal to ``"INVITED"``.
+
 After the invitation has been received, trigger the following event on consumer side using the ``lpTag.events.publish`` function. In the event, the mandatory fields `ssid` and `svid` can have arbitrary non-empty string values, but you can also use the values provided by the monitoring SDK (i.e. ``lpTag.taglets.lp_monitoringSDK.getSid()`` and ``lpTag.taglets.lp_monitoringSDK.getVid()``).
 
 ```javascript
