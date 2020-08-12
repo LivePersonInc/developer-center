@@ -202,3 +202,15 @@ This section contains API details that are common to every API’s resource and 
 | 40019      | View reports in Campaign BI                                    | View reports in the Campaign BI dashboard                        |
 | 40021      | View reports in Operational BI                                 | View reports in the Operational BI dashboard                     |
 | 40028      | Configure Schedule and Special Occasion library items          | View and edit Schedule and Special Occasion library items       |
+
+
+
+
+### Data Revisions
+
+The revision mechanism exists in order to maintain order and save historical data. To use the benefits of the revision mechanism, The developers are asked to add the 'IF-MATCH' request header. The 'IF-MATCH' request header contains data revision as known by the client, In addition, it allows to optimize the backend response and allows concurrent modification backend verification.
+
+Every entity will have only one latest revision and the maximum revision number is a global number by account. Each change/update on one of these entities increases The revision. The developer can call the GET entity API in order to retrieve the latest revision. This revision will be part of the response header under ac-revision header.
+
+When sending the API calls using the 'IF-MATCH' header with a specific revision if there was no change the response will be 304 (Not Modified) response. When using 'IF-MATCH' header with '-1' value you will always get the full response.
+
