@@ -79,7 +79,11 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
 
 The relevant fields in this dialog are ``channelType`` and inside ``metaData`` the ``serviceId``, ``mode`` and ``sessionState`` fields. ``channelType`` always equals ``COBROWSE`` and can be used to check if the new dialog is a CoBrowse dialog. The ``serviceId`` is used to match Consumer and Agent and needs to be passed to the CoBrowse API on the website. ``mode`` is equal to the CoBrowse mode the Agent selected. For CoBrowse, the possible values are ``shared`` for shared CoBrowse, ``view`` for view-only CoBrowse where the agent is able to scroll the visitor's view and ``follow`` for view-only without scroll permissions for the agent.
 
-Note you also receive events with different ``sessionState`` values in this channel as the dialog session state changes. So to ensure the received event is an invitation, you need to check ``sessionState`` is equal to ``"INVITED"``.
+Note you also receive events with different ``sessionState`` values in this channel as the dialog session state changes. To ensure the received event is an invitation, you need to check ``sessionState`` is equal to ``"INVITED"``. Other possible ``sessionState`` values (which you do not have to handle) are:
+- ``"ACCEPTED"``, which is received when the invitation is accepted by the invitee and when the invitee successfully joins the session.
+- ``"CLOSED"``, which is received when the agent cancels the invitation, ends the session, or the session is ended for some reason.
+
+In these cases the event ``metaData`` carries a field ``notificationKey`` to indicate the exact sub-state. These states/sub-states are used by the system bot which (when activated) sends system messages for actions related to the CoBrowse session.
 
 After the invitation has been received, the following event should be triggered on consumer side using the ``lpTag.events.publish`` function. In the event, the mandatory fields `ssid` and `svid` can have arbitrary non-empty string values, but you can also use the values provided by the monitoring SDK (i.e. ``lpTag.taglets.lp_monitoringSDK.getSid()`` and ``lpTag.taglets.lp_monitoringSDK.getVid()``).
 
