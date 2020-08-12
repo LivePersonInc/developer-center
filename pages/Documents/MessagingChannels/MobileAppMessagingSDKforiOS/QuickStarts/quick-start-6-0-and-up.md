@@ -10,7 +10,6 @@ subfoldername: Quick Starts
 permalink: mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up.html
 indicator: messaging
 ---
-<br>
 
 ### Overview
 
@@ -24,7 +23,7 @@ In this Quick Start, we will cover the steps that will get you up and running wi
 
 ### Prerequisites
 
-- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.  
+- Followed the [Getting Started Guide](getting-started-with-your-free-trial-account.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.  
 - Bundle ID registered in an Apple developer account.
 - Xcode11 and above
 - Swift 5.1 and above

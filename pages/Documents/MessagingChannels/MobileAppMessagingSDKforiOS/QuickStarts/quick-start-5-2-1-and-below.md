@@ -12,14 +12,13 @@ subfoldername: Quick Starts
 permalink: mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-5-2-1-and-below.html
 indicator: messaging
 ---
-<br>
 The LivePerson SDK provides brands with a secure way to foster connections with their customers and increase app engagement and retention.
 
 Use this Quick Start guide to get you up and running with a project powered by LivePerson. When done, you'll be able to send messages between an iOS device and Conversational Cloud.
 
 ### Prerequisites
 
-- Followed the [Getting Started Guide](before-you-get-started-let-s-get-started.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.  
+- Followed the [Getting Started Guide](getting-started-with-your-free-trial-account.html) to create a Conversational Cloud account, retrieve your domain, authorize API calls, and authenticate with Conversational Cloud.  
 - Bundle ID registered in an Apple developer account.
 - SDK Release version [here](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-all-releases.html)
 

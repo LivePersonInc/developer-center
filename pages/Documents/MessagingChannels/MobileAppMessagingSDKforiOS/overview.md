@@ -61,7 +61,9 @@ To successfully deploy messaging within your mobile app, it’s important to und
         - unreadMessagesDividerEnabled (false)
     - Disable link preview: enableLinkPreview (false)
 
+### SDK support of XCFramework - a new format of packaging frameworks.
 From iOS SDK version 6.0 and up, the SDK will support the new XCFramework. The new framework packages all dependencies under all target platforms and architectes into one single unified bundle, removes the version-lock in swift as well as eliminates the need to build a universal framework. This means that the installation process from V6.0 and up, and version 5.2.1 and down, will have different steps to follow. We have two quick start guides that are dedicated to the different processes, which will help you install the relevant version on your app.
 
-<p style="text-align: right">
-<a href="mobile-app-messaging-sdk-for-ios-quick-start.html" center><img src="../../img/btn-mobile-quick-start.png" style="height: 30px; width: auto;"></a><br></p>
+[**GO TO THE QUICK START GUIDE FOR 5.2.1 AND DOWN**](/mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-5-2-1-and-below.html)
+
+[**GO TO THE QUICK START GUIDE FOR 6.0 AND UP**](/mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up.html)
