@@ -76,11 +76,9 @@ Once the agent sends an invitation, you should see a new event of type ``cqm.ExC
 
 The relevant fields in this dialog are ``channelType`` and inside ``metaData`` the ``serviceId``, ``mode`` and ``sessionState`` fields. ``channelType`` always equals ``COBROWSE`` and can be used to check if the new dialog has the correct type. The ``serviceId`` is used to match Consumer and Agent and needs to be passed to the CoBrowse API on the website. ``mode`` is equal to the mode that the Agent selected. Possible modes are ``VOICE_CALL`` for voice calls and ``VIDEO_CALL`` for video calls.
 
-Note you also receive events with different ``sessionState`` values in this channel as the dialog session state changes. To ensure the received event is an invitation, you need to check ``sessionState`` is equal to ``"INVITED"``. Other possible ``sessionState`` values (which you do not have to handle) are:
-- ``"ACCEPTED"``, which is received when the invitation is accepted by the invitee and when the invitee successfully joins the session.
-- ``"CLOSED"``, which is received when the agent cancels the invitation, ends the session, or the session is ended for some reason.
-
-In these cases the event ``metaData`` carries a field ``notificationKey`` to indicate the exact sub-state. These states/sub-states are also tracked by the system bot which (when activated) sends automatic messages for actions related to the voice/video call session.
+Note you also receive events with different ``sessionState`` values in this channel as the dialog session state changes. To ensure the received event is an invitation, you need to check ``sessionState`` is equal to ``"INVITED"``. This is an important check because the CoBrowse dialog goes through the following changes of state (and sub-state) for internal integrations to work - such as system messages:
+- ``"ACCEPTED"``, which is received when the invitation is accepted by the invitee and when the invitee successfully joins the session. Handling this event is not required.
+- ``"CLOSED"``, see the [last section](#handling-hanging-up-cancelled-invitation-and-expiry).
 
 After the invitation has been received, trigger the following event on consumer side using the ``lpTag.events.publish`` function. In the event, the mandatory fields `ssid` and `svid` can have arbitrary non-empty string values, but you can also use the values provided by the monitoring SDK (i.e. ``lpTag.taglets.lp_monitoringSDK.getSid()`` and ``lpTag.taglets.lp_monitoringSDK.getVid()``).
 
