@@ -20,6 +20,13 @@ Messaging and conversational experiences have transformed how businesses engage 
 
 <img src="img/inappoverview1.png" alt="InAppOverview1" style="width:auto;max-height:400px;"> <img src="img/inappoverview2.png" alt="InAppOverview2" style="width:auto;max-height:400px;"> <img src="img/inappoverview3.png" alt="InAppOverview3" style="width:auto;max-height:400px;">
 
+### SDK support of XCFramework - a new format of packaging frameworks.
+From iOS SDK version 6.0 and up, the SDK will [support the new XCFramework](https://developer.apple.com/videos/play/wwdc2019/416/). The new format packages all dependencies under all target platforms and architectes into one single unified bundle, removing the version-lock in swift as well as eliminating the need to build a fat framework. This means that the installation process from V6.0 and up, and V5.2.1 and down, will have different steps to follow. We have two quick start guides that are dedicated to the different processes, which will help you to install the relevant version on your app. 
+
+[**GO TO THE QUICK START GUIDE FOR 5.2.1 AND DOWN**](/mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-5-2-1-and-below.html)
+
+[**GO TO THE QUICK START GUIDE FOR 6.0 AND UP**](/mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up-xcframework-support.html)
+
 ### Implementation considerations 
 
 To successfully deploy messaging within your mobile app, it’s important to understand that the SDK has several functions and tasks. We recommend you go through the following list before beginning your deployment.
@@ -60,10 +67,3 @@ To successfully deploy messaging within your mobile app, it’s important to und
         - scrollToBottomButtonMessagePreviewEnabled (false)
         - unreadMessagesDividerEnabled (false)
     - Disable link preview: enableLinkPreview (false)
-
-### SDK support of XCFramework - a new format of packaging frameworks.
-From iOS SDK version 6.0 and up, the SDK will support the new XCFramework. The new framework packages all dependencies under all target platforms and architectes into one single unified bundle, removes the version-lock in swift as well as eliminates the need to build a universal framework. This means that the installation process from V6.0 and up, and version 5.2.1 and down, will have different steps to follow. We have two quick start guides that are dedicated to the different processes, which will help you install the relevant version on your app.
-
-[**GO TO THE QUICK START GUIDE FOR 5.2.1 AND DOWN**](/mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-5-2-1-and-below.html)
-
-[**GO TO THE QUICK START GUIDE FOR 6.0 AND UP**](/mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up.html)

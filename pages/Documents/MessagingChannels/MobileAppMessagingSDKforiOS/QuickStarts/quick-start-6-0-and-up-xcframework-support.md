@@ -1,5 +1,5 @@
 ---
-pagename: Quick Start 6.0 and up
+pagename: Quick Start - 6.0 and up (XCFramework support)
 redirect_from:
   - consumer-experience-ios-sdk-quick-start-6-0-and-up.html
 Keywords:
@@ -7,18 +7,24 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: Quick Starts
-permalink: mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up.html
+permalink: mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up-xcframework-support.html
 indicator: messaging
 ---
 
+{: .notice}
+COMING SOON! (August 25th, 2020)
+
 ### Overview
 
-In this Quick Start, we will cover the steps that will get you up and running with SDK version 6.0 and up. SDK V6.0 has been modified in the format of XCFramework. With the new framework both architectures arm64 and x86_64 builds of the library are consolidated into one single bundle of LPMessagingSDK.xcframework, and the four frameworks (LPMessagingSDK.framework, LPInfra.framework, LPAMS.framework and LPMonitoring.framework) have been unified into one framework (LPMessagingSDK.xcframework).  
+In this Quick Start, we will cover the steps that will get you up and running with SDK version 6.0 and up. SDK V6.0 has been modified in the new format of XCFramework. With the new framework that was introduced by Apple, both architectures arm64 and x86_64 builds of the library are consolidated into one single bundle of LPMessagingSDK.xcframework, the four frameworks (LPMessagingSDK.framework, LPInfra.framework, LPAMS.framework and LPMonitoring.framework) have been unified into one framework (LPMessagingSDK.xcframework), and we have reduced the exposure of CoreData Objects to the brands apps.   
 
 **Here are some of the advantages that the new framework provides:** 
-- XCFramework uses Swift Module Interface which lists out all the public APIs of the module in a textual format that behaves like source code. Since they behave like source code, future versions of the Swift Compiler will be able to import the module interfaces created with older versions. This removes the version-lock currently in swift.
+- XCFramework uses Swift Module Interface which lists out all the public APIs of the module in a textual format that behaves like source code. Since they behave like source code, future versions of the Swift Compiler will be able to import the module interfaces created with older versions. This removes the version-lock which is currently in Swift.
+
 - In older versions, the SDK builds the universal framework for the clients which supports both devices and simulators. As a result, the clients, before submitting the app, need to remove x86_64 which is the simulator architecture. The new XCFramework simplifies all this by eliminating the need for building a universal framework - in the process of producing the XCFramework, all the supported architectures can be combined within one XCFramework.
-- XCFramework packages all dependencies under all target platforms and architectures into one single bundle.
+
+
+- XCFramework packages all dependencies under all target platforms and architectures into one single bundle. More information about XCFramework can be found [here](https://developer.apple.com/videos/play/wwdc2019/416/), and the Xcode help article can be found [here](https://help.apple.com/xcode/mac/11.4/#/dev51a648b07). 
 
 
 ### Prerequisites
@@ -27,7 +33,6 @@ In this Quick Start, we will cover the steps that will get you up and running wi
 - Bundle ID registered in an Apple developer account.
 - Xcode11 and above
 - Swift 5.1 and above
-- SDK Release version [here](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-all-releases.html)
 
 ### Step 1: Install the SDK into your project
 
