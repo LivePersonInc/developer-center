@@ -811,7 +811,10 @@
   - documentname: Mobile App Messaging SDK for iOS
     pages:
     - pagename: Overview
-    - pagename: Quick Start
+    - pagename: Quick Starts
+      subpages:
+      - subpagename: Quick Start 5.2.1 and below
+      - subpagename: Quick Start - 6.0 and up (XCFramework support)
     - pagename: Configure the iOS SDK
     - pagename: Push Notifications
     - pagename: Advanced Features
