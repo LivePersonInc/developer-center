@@ -98,6 +98,14 @@ lpTag.events.publish("lpCoBrowse", "cobrowseOffered", {
 );
 ```
 
+#### Tips for Debugging
+``lpTag.events.publish`` can fail if the event contains invalid data. It logs errors in the browser console if you have the debug mode of ``lpTag`` enabled (You can enable it when you load your pages with the additional URL parameter ``lpDebug=2`` appended to the URLs). Since the debug logs also contain logs from other irrelevant ``lpTag`` components, you can use keywords like ``event``, ``error`` or ``cobrowse`` in the console filter to narrow them down.
+
+An example error you get when you publish an event missing mandatory fields looks like the following:
+```
+13:36:38 Events : Error executing cobrowseOffered eventId: evId_5e=win is undefined LEVEL: ERROR
+```
+
 ### Step 4 - Accept/Reject call
 If the consumer decides to accept the call, trigger the following event in order to start the call:
 
