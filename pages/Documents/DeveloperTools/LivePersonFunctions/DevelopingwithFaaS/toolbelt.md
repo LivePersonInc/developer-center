@@ -24,6 +24,7 @@ Currently, the Toolbelt offers the following methods:
 | [Toolbelt.ConversationUtil()](#conversation-util) | Returns a Conversation Util instance. |
 | [Toolbelt.GDPRUtil()](#gdpr-util) | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 | [Toolbelt.SDEUtil()](#sde-util) | Returns a SDE Util instance. Provides SDE related functionality, such as setting/ updating SDEs for an Engagement. |
+| [Toolbelt.ContextServiceClient()](#context-service-client) | Returns a Context Service Client instance. Provides functionality to interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html).|
 
 Here are usage example, which are taken out of the official templates:
 
@@ -512,6 +513,7 @@ conversationUtil.getConversationById(conversationId)
   .then(replacedFiles => //TODO: react on the response)
   .catch(err => //TODO: React to error);
 ```
+
 ### SDE Util
 
 The SDE Util allows SDE related methods to be performed, which are listed below.
@@ -671,3 +673,22 @@ If there were no errors, the result is an object which allways contains an array
         },
     }
 ```
+
+### Context Service Client
+The Context Service Client can be used to easily interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html). This is especially useful for storing data between function calls.
+
+#### Preliminaries
+The following steps need to be performed before using the Context Service Client in a function:
+* Create a [Developer Key](conversation-orchestrator-context-warehouse-context-session-store.html#developer-key) and save it to the [Secret Storage](liveperson-functions-developing-with-faas-storing-secrets.html)
+* [Whitelist](liveperson-functions-developing-with-faas-whitelisting-domains.html) the domain `*.context.liveperson.net`. (covers all domains needed on the production environment, if you are on Alpha environment whitelist `va-a.mavencontext.int.liveperson.net` instead)
+
+#### Coding Examples
+The use of the Context Service Client is demonstrated in the following [code snippets](liveperson-functions-developing-with-faas-snippets.html):
+* [Create Context Session Store
+](liveperson-functions-developing-with-faas-snippets.html#create-context-session-store)
+* [Read Context Session Store
+](liveperson-functions-developing-with-faas-snippets.html#read-context-session-store)
+* [Update Context Session Store
+](liveperson-functions-developing-with-faas-snippets.html#update-context-session-store)
+* [Delete Context Session Store
+](liveperson-functions-developing-with-faas-snippets.html#delete-context-session-store)
