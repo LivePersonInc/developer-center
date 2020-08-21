@@ -27,6 +27,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 
 ### Conversation Util
 
+Adds conversation related methods like fetching conversations or scanning for certain keywords (see [Conversation Util](liveperson-functions-developing-with-faas-toolbelt.html#conversation-util)).
+
 ```javascript
     const { Toolbelt, ConversationContentTypes } = require('lp-faas-toolbelt');
     const conversationUtil = Toolbelt.ConversationUtil();
@@ -56,6 +58,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 ```
 
 ### GDPR Util
+
+Adds GDPR related functionality such as deleting transcripts of a conversation (see [GDPR Util](liveperson-functions-developing-with-faas-toolbelt.html#gdpr-util)).
 
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
@@ -93,6 +97,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 
 ### HTTP
 
+HTTP Client that is based on request-promise for opening external HTTP connections (see [HTTP Client](liveperson-functions-developing-with-faas-toolbelt.html#http-client)).
+
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     // Obtain an HTTPClient Instance from the Toolbelt
@@ -124,6 +130,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 
 ### Read Secret
 
+Reads a secret from the secret storage (see [Secret Storage Client](liveperson-functions-developing-with-faas-toolbelt.html#secret-storage-client)).
+
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     const secretClient = Toolbelt.SecretClient();
@@ -139,6 +147,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 
 ### Update Secret
 
+Updates a secret from the secret storage (see [Secret Storage Client](liveperson-functions-developing-with-faas-toolbelt.html#secret-storage-client)).
+
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     const secretClient = Toolbelt.SecretClient();
@@ -153,6 +163,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 ```
 
 ### Salesforce
+
+Salesforce Client that is based on jsforce for connecting LivePerson Functions to any Salesforce system (see [Salesforce Client](liveperson-functions-developing-with-faas-toolbelt.html#salesforce-client)).
 
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
@@ -190,6 +202,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 
 ### SDE Util
 
+SDE Util allows SDE related methods, like adding SDEs or fetching SDEs from a conversation to be performed (see [SDE Util](liveperson-functions-developing-with-faas-toolbelt.html#sde-util)).
+
 ```javascript
     const { Toolbelt, SDETypes } = require('lp-faas-toolbelt');
     const sdeUtil = Toolbelt.SDEUtil();
@@ -226,6 +240,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 
 ### Create Context Session Store
 
+Creates properties in the context session storage (see [Context Service Client](liveperson-functions-developing-with-faas-toolbelt.html#context-service-client)).
+
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     const contextClient = Toolbelt.ContextServiceClient('YOUR_DEVELOPER_KEY');
@@ -234,7 +250,7 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
     const sessionId = 'YOUR_SESSION_ID';
     const namespace = 'YOUR_NAMESPACE';
     const properties = {
-      // data to store
+      YOUR_PROPERTY: 'YOUR_VALUE'
     };
 
     try {
@@ -252,6 +268,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 ```
 
 ### Read Context Session Store
+
+Reads a property from the context session storage (see [Context Service Client](liveperson-functions-developing-with-faas-toolbelt.html#context-service-client)).
 
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
@@ -273,6 +291,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 
 ### Update Context Session Store
 
+Updates properties in the context session storage (see [Context Service Client](liveperson-functions-developing-with-faas-toolbelt.html#context-service-client)).
+
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     const contextClient = Toolbelt.ContextServiceClient('YOUR_DEVELOPER_KEY');
@@ -281,7 +301,7 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
     const sessionId = 'YOUR_SESSION_ID';
     const namespace = 'YOUR_NAMESPACE';
     const properties = {
-      // data to update
+      YOUR_PROPERTY: 'YOUR_VALUE'
     };
 
     try {
@@ -299,6 +319,8 @@ Snippets allow you to easily paste often-used code into your functions. Simply h
 ```
 
 ### Delete Context Session Store
+
+Deletes a property in the context session storage (see [Context Service Client](liveperson-functions-developing-with-faas-toolbelt.html#context-service-client)).
 
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
