@@ -246,20 +246,15 @@ Creates properties in the context session storage (see [Context Service Client](
     const { Toolbelt } = require('lp-faas-toolbelt');
     const contextClient = Toolbelt.ContextServiceClient('YOUR_DEVELOPER_KEY');
 
-    const accountId = process.env['BRAND_ID'];
-    const sessionId = 'YOUR_SESSION_ID';
-    const namespace = 'YOUR_NAMESPACE';
-    const properties = {
-      YOUR_PROPERTY: 'YOUR_VALUE'
-    };
-
     try {
       // If no sessionId is passed, it will take the __default__ session.
       const sessionProperties = await contextClient.setPropertiesInNamespace(
-        accountId,
-        namespace,
-        properties,
-        sessionId
+        'YOUR_ACCOUNT_ID',
+        'YOUR_NAMESPACE',
+        {
+          YOUR_PROPERTY: 'YOUR_VALUE'
+        },
+        'YOUR_SESSION_ID'
       );
       console.info(sessionProperties);
     } catch (error) {
@@ -275,14 +270,14 @@ Reads a property from the context session storage (see [Context Service Client](
     const { Toolbelt } = require('lp-faas-toolbelt');
     const contextClient = Toolbelt.ContextServiceClient('YOUR_DEVELOPER_KEY');
 
-    const accountId = process.env['BRAND_ID'];
-    const sessionId = 'YOUR_SESSION_ID';
-    const namespace = 'YOUR_NAMESPACE';
-    const property = 'YOUR_PROPERTY';
-
     try {
       // If no sessionId is passed, it will take the __default__ session.
-      const sessionProperty = await contextClient.getPropertyInSession(accountId, namespace, property, sessionId);
+      const sessionProperty = await contextClient.getPropertyInSession(
+        'YOUR_ACCOUNT_ID',
+        'YOUR_NAMESPACE',
+        'YOUR_PROPERTY',
+        'YOUR_SESSION_ID'
+      );
       console.info(sessionProperty);
     } catch (error) {
       console.error('Could not fetch property from the context store');
@@ -297,20 +292,15 @@ Updates properties in the context session storage (see [Context Service Client](
     const { Toolbelt } = require('lp-faas-toolbelt');
     const contextClient = Toolbelt.ContextServiceClient('YOUR_DEVELOPER_KEY');
 
-    const accountId = process.env['BRAND_ID'];
-    const sessionId = 'YOUR_SESSION_ID';
-    const namespace = 'YOUR_NAMESPACE';
-    const properties = {
-      YOUR_PROPERTY: 'YOUR_VALUE'
-    };
-
     try {
       // If no sessionId is passed, it will take the __default__ session.
       const sessionProperties = await contextClient.updatePropertiesInNamespace(
-        accountId,
-        namespace,
-        properties,
-        sessionId
+        'YOUR_ACCOUNT_ID',
+        'YOUR_NAMESPACE',
+        {
+          YOUR_PROPERTY: 'YOUR_VALUE',
+        },
+        'YOUR_SESSION_ID'
       );
       console.info(sessionProperties);
     } catch (error) {
@@ -326,18 +316,13 @@ Deletes a property in the context session storage (see [Context Service Client](
     const { Toolbelt } = require('lp-faas-toolbelt');
     const contextClient = Toolbelt.ContextServiceClient('YOUR_DEVELOPER_KEY');
 
-    const accountId = process.env['BRAND_ID'];
-    const sessionId = 'YOUR_SESSION_ID';
-    const namespace = 'YOUR_NAMESPACE';
-    const property = 'YOUR_PROPERTY';
-
     try {
       // If no sessionId is passed, it will take the __default__ session.
       await contextClient.deletePropertyInSession(
-        accountId,
-        namespace,
-        property,
-        sessionId
+        'YOUR_ACCOUNT_ID',
+        'YOUR_NAMESPACE',
+        'YOUR_PROPERTY',
+        'YOUR_SESSION_ID'
       );
       console.info('Property deleted');
     } catch (error) {
