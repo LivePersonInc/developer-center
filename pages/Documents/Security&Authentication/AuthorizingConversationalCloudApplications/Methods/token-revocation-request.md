@@ -6,7 +6,7 @@ categoryname: "Security & Authentication"
 documentname: Authorizing LiveEngage Applications
 subfoldername: Methods
 order: 12
-permalink: authorizing-conversational-cloud-applications-methods-token-revocation-request.html
+permalink: authorizing-liveengage-applications-methods-token-revocation-request.html 
 
 indicator: both
 ---
