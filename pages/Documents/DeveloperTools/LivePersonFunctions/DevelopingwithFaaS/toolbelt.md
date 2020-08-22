@@ -677,18 +677,371 @@ If there were no errors, the result is an object which allways contains an array
 ### Context Service Client
 The Context Service Client can be used to easily interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html). This is especially useful for storing data between function calls.
 
-#### Preliminaries
-The following steps need to be performed before using the Context Service Client in a function:
-* Create a [Developer Key](conversation-orchestrator-context-warehouse-context-session-store.html#developer-key) and save it to the [Secret Storage](liveperson-functions-developing-with-faas-storing-secrets.html)
-* [Whitelist](liveperson-functions-developing-with-faas-whitelisting-domains.html) the domain `*.context.liveperson.net`. (covers all domains needed on the production environment, if you are on Alpha environment whitelist `va-a.mavencontext.int.liveperson.net` instead)
+After all [prerequisites for using the context session store](liveperson-functions-developing-with-faas-data-storage.html#prerequisitesinstallation) have been set up successfully, the client can be instantiated as follows.
 
-#### Coding Examples
-The use of the Context Service Client is demonstrated in the following [code snippets](liveperson-functions-developing-with-faas-snippets.html):
-* [Create Context Session Store
-](liveperson-functions-developing-with-faas-snippets.html#create-context-session-store)
-* [Read Context Session Store
-](liveperson-functions-developing-with-faas-snippets.html#read-context-session-store)
-* [Update Context Session Store
-](liveperson-functions-developing-with-faas-snippets.html#update-context-session-store)
-* [Delete Context Session Store
-](liveperson-functions-developing-with-faas-snippets.html#delete-context-session-store)
+```javascript
+    const { Toolbelt } = require('lp-faas-toolbelt');
+    // creating a secretClient instance
+    const secretClient = Toolbelt.SecretClient();
+    
+    try {
+      // retrieving your developer key from the secret storage
+      const { value: apiKey } = await secretClient.readSecret('YOUR_DEVELOPER_KEY_SECRET_NAME');
+      // using the developer key to instantiate the contextServiceClient
+      const contextServiceClient = Toolbelt.ContextServiceClient(apiKey);
+    } catch(error) {
+      // Handle error based on your integration by providing a legit fallback operation.
+      console.error(`received following error message: ${error.message}`);
+    }
+
+
+```
+
+#### Methods
+**ContextServiceClient.createNamespace**
+
+Creates a custom namespace with the specified name for the provided account. Given the namespace exists it will not recreate it or throw an error.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account</td>
+</tr>
+<tr>
+<td >namespace</td>
+<td >Yes</td>
+<td >Name of the namespace</td>
+</tr>
+<tr>
+<td >options</td>
+<td >No</td>
+<td >options that should be applied to the namespace. For example TTL</td>
+</tr>
+</tbody>
+</table>
+
+**ContextServiceClient.deleteNamespace**
+
+Deletes a custom namespace with the specified name. Given the namespace was already deleted it will not throw an error.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account you want to delete a namespace for</td>
+</tr>
+<tr>
+<td >namespace</td>
+<td >Yes</td>
+<td >Name of the namespace</td>
+</tr>
+</tbody>
+</table>
+
+**ContextServiceClient.getListOfNamespaces**
+
+Returns a list containing all custom namespaces for the specified account. Please be aware that built-in namespaces won't show up with exception to the default namespace.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account you want to get namespaces for</td>
+</tr>
+</tbody>
+</table>
+
+**ContextServiceClient.setPropertiesInNamespace ([Code Snippet](liveperson-functions-developing-with-faas-snippets.html#create-context-session-store))**
+
+Will set properties on the specified session in the defined namespace. Given no session was provided it will fallback to the default session of the namespace. All values will be stored in their JSON serialized version. Given a property/properties does exist they will be updated.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account</td>
+</tr>
+<tr>
+<td >namespace</td>
+<td >Yes</td>
+<td >Name of the namespace</td>
+</tr>
+<tr>
+<td >properties</td>
+<td >Yes</td>
+<td >object containing the properties that should be set</td>
+</tr>
+<tr>
+<td >sessionId</td>
+<td >No</td>
+<td >if not provided will use default session</td>
+</tr>
+</tbody>
+</table>
+
+**ContextServiceClient.updatePropertiesInNamespace ([Code Snippet](liveperson-functions-developing-with-faas-snippets.html#update-context-session-store))**
+
+Will update properties on the specified session in the defined namespace. Given no session was provided it will fallback to the default session of the namespace. All values will be stored in their JSON serialized version. Given a property/properties does not exist they will be created.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account</td>
+</tr>
+<tr>
+<td >namespace</td>
+<td >Yes</td>
+<td >Name of the namespace</td>
+</tr>
+<tr>
+<td >properties</td>
+<td >Yes</td>
+<td >object containing the properties that should be updated</td>
+</tr>
+<tr>
+<td >sessionId</td>
+<td >No</td>
+<td >if not provided will use default session</td>
+</tr>
+</tbody>
+</table>
+
+**ContextServiceClient.getAllPropertiesInSession**
+
+Returns the specified session containing all of it's properties. Given no session was provided it will fallback to the default session of the namespace.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account</td>
+</tr>
+<tr>
+<td >namespace</td>
+<td >Yes</td>
+<td >Name of the namespace</td>
+</tr>
+<tr>
+<td >sessionId</td>
+<td >No</td>
+<td >if not provided will use default session</td>
+</tr>
+</tbody>
+</table>
+
+
+**ContextServiceClient.getSelectedPropertiesInSession**
+
+Returns the specified session containing all of the defined properties. Given a property does not exist it will be ignored. Given no session was provided it will fallback to default session of the namespace.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account</td>
+</tr>
+<tr>
+<td >namespace</td>
+<td >Yes</td>
+<td >Name of the namespace</td>
+</tr>
+<tr>
+<td >propertyNames</td>
+<td >Yes</td>
+<td >names of the desired properties in a string array</td>
+</tr>
+<tr>
+<td >sessionId</td>
+<td >No</td>
+<td >if not provided will use default session</td>
+</tr>
+</tbody>
+</table>
+
+**ContextServiceClient.getPropertyInSession ([Code Snippet](liveperson-functions-developing-with-faas-snippets.html#read-context-session-store))**
+
+Get the value of the specified property on the defined session. Given no session was provided it will fallback to default session of the namespace.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account</td>
+</tr>
+<tr>
+<td >namespace</td>
+<td >Yes</td>
+<td >Name of the namespace</td>
+</tr>
+<tr>
+<td >propertyName</td>
+<td >Yes</td>
+<td >name of the desired property</td>
+</tr>
+<tr>
+<td >sessionId</td>
+<td >No</td>
+<td >if not provided will use default session</td>
+</tr>
+</tbody>
+</table>
+
+**ContextServiceClient.deletePropertyInSession ([Code Snippet](liveperson-functions-developing-with-faas-snippets.html#delete-context-session-store))**
+
+Deletes the specified property on the defined session. Given no session was provided it will fallback to default session of the namespace. Given the property was already deleted it will not throw an error.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account</td>
+</tr>
+<tr>
+<td >namespace</td>
+<td >Yes</td>
+<td >Name of the namespace</td>
+</tr>
+<tr>
+<td >propertyName</td>
+<td >Yes</td>
+<td >name of the property that should be deleted</td>
+</tr>
+<tr>
+<td >sessionId</td>
+<td >No</td>
+<td >if not provided will use default session</td>
+</tr>
+</tbody>
+</table>
+
+
+**ContextServiceClient.deleteSession**
+
+Deletes the specified session in the defined namespace. Given no session was provided it will fallback to default session of the namespace. Given the session was already deleted it will not throw an error.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account</td>
+</tr>
+<tr>
+<td >namespace</td>
+<td >Yes</td>
+<td >Name of the namespace</td>
+</tr>
+<tr>
+<td >sessionId</td>
+<td >Yes</td>
+<td >ID of the session that should be deleted</td>
+</tr>
+</tbody>
+</table>
+
+**ContextServiceClient.getListOfSessions**
+
+Returns a list containing all session in the specified namespaces.
+
+<table style="width: 100%;">
+<thead>
+<tr>
+<th >Parameter</th>
+<th >Required?</th>
+<th >Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td >accountId</td>
+<td >Yes</td>
+<td >ID of the account</td>
+</tr>
+<tr>
+<td >namespace</td>
+<td >Yes</td>
+<td >Name of the namespace</td>
+</tr>
+</tbody>
+</table>
