@@ -17,14 +17,14 @@ Currently, the Toolbelt offers the following methods:
 
 | Method | Description |
 | :------- | :----- |
-| [Toolbelt.SFClient()](#salesforce-client) | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
-| [Toolbelt.HTTPClient()](#http-client) | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
-| [Toolbelt.LpClient()](#liveperson-client) | Returns the LivePerson (LP) Client. This is a wrapper for the [HTTP Client](liveperson-functions-development-toolbelt.html#http-client). It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
-| [Toolbelt.SecretClient()](#secret-storage-client) | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
-| [Toolbelt.ConversationUtil()](#conversation-util) | Returns a Conversation Util instance. |
-| [Toolbelt.GDPRUtil()](#gdpr-util) | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
-| [Toolbelt.SDEUtil()](#sde-util) | Returns a SDE Util instance. Provides SDE related functionality, such as setting/ updating SDEs for an Engagement. |
-| [Toolbelt.ContextServiceClient()](#context-service-client) | Returns a Context Service Client instance. Provides functionality to interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html).|
+| Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
+| Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
+| Toolbelt.LpClient() | Returns the LivePerson (LP) Client. This is a wrapper for the HTTP Client. It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
+| Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
+| Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
+| Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
+| Toolbelt.SDEUtil() | Returns a SDE Util instance. Provides SDE related functionality, such as setting/ updating SDEs for an Engagement. |
+| Toolbelt.ContextServiceClient() | Returns a Context Service Client instance. Provides functionality to interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html).|
 
 Here are usage example, which are taken out of the official templates:
 
@@ -687,8 +687,12 @@ After all [prerequisites for using the context session store](liveperson-functio
     try {
       // retrieving your developer key from the secret storage
       const { value: apiKey } = await secretClient.readSecret('YOUR_DEVELOPER_KEY_SECRET_NAME');
-      // using the developer key to instantiate the contextServiceClient
-      const contextServiceClient = Toolbelt.ContextServiceClient(apiKey);
+      // retrieving your account ID via e.g. env variable
+      const accountId = process.env.BRAND_ID
+      const config = {accountId, apiKey}
+
+      // using the config to instantiate the contextServiceClient
+      const contextServiceClient = Toolbelt.ContextServiceClient(config);
     } catch(error) {
       // Handle error based on your integration by providing a legit fallback operation.
       console.error(`received following error message: ${error.message}`);
@@ -708,23 +712,21 @@ Creates a custom namespace with the specified name for the provided account. Giv
 <th >Parameter</th>
 <th >Required?</th>
 <th >Description</th>
+<th >Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account</td>
-</tr>
-<tr>
 <td >namespace</td>
 <td >Yes</td>
 <td >Name of the namespace</td>
+<td >-</td>
 </tr>
 <tr>
 <td >options</td>
 <td >No</td>
-<td >options that should be applied to the namespace. For example TTL</td>
+<td >options that should be applied to the namespace. For example Time to Live in seconds. If not provided/defined TTL will be permanent.</td>
+<td >{ ttl: 120 }</td>
 </tr>
 </tbody>
 </table>
@@ -743,11 +745,6 @@ Deletes a custom namespace with the specified name. Given the namespace was alre
 </thead>
 <tbody>
 <tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account you want to delete a namespace for</td>
-</tr>
-<tr>
 <td >namespace</td>
 <td >Yes</td>
 <td >Name of the namespace</td>
@@ -757,7 +754,7 @@ Deletes a custom namespace with the specified name. Given the namespace was alre
 
 **ContextServiceClient.getListOfNamespaces**
 
-Returns a list containing all custom namespaces for the specified account. Please be aware that built-in namespaces won't show up with exception to the default namespace.
+Returns a list containing all custom namespaces for the account the client was initialised for. Please be aware that built-in namespaces won't show up with exception to the default namespace.
 
 <table style="width: 100%;">
 <thead>
@@ -769,9 +766,9 @@ Returns a list containing all custom namespaces for the specified account. Pleas
 </thead>
 <tbody>
 <tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account you want to get namespaces for</td>
+<td >-</td>
+<td >-</td>
+<td >function has no parameters</td>
 </tr>
 </tbody>
 </table>
@@ -789,11 +786,6 @@ Will set properties on the specified session in the defined namespace. Given no 
 </tr>
 </thead>
 <tbody>
-<tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account</td>
-</tr>
 <tr>
 <td >namespace</td>
 <td >Yes</td>
@@ -826,11 +818,6 @@ Will update properties on the specified session in the defined namespace. Given 
 </thead>
 <tbody>
 <tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account</td>
-</tr>
-<tr>
 <td >namespace</td>
 <td >Yes</td>
 <td >Name of the namespace</td>
@@ -862,11 +849,6 @@ Returns the specified session containing all of it's properties. Given no sessio
 </thead>
 <tbody>
 <tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account</td>
-</tr>
-<tr>
 <td >namespace</td>
 <td >Yes</td>
 <td >Name of the namespace</td>
@@ -893,11 +875,6 @@ Returns the specified session containing all of the defined properties. Given a 
 </tr>
 </thead>
 <tbody>
-<tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account</td>
-</tr>
 <tr>
 <td >namespace</td>
 <td >Yes</td>
@@ -930,11 +907,6 @@ Get the value of the specified property on the defined session. Given no session
 </thead>
 <tbody>
 <tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account</td>
-</tr>
-<tr>
 <td >namespace</td>
 <td >Yes</td>
 <td >Name of the namespace</td>
@@ -965,11 +937,6 @@ Deletes the specified property on the defined session. Given no session was prov
 </tr>
 </thead>
 <tbody>
-<tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account</td>
-</tr>
 <tr>
 <td >namespace</td>
 <td >Yes</td>
@@ -1003,11 +970,6 @@ Deletes the specified session in the defined namespace. Given no session was pro
 </thead>
 <tbody>
 <tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account</td>
-</tr>
-<tr>
 <td >namespace</td>
 <td >Yes</td>
 <td >Name of the namespace</td>
@@ -1033,11 +995,6 @@ Returns a list containing all session in the specified namespaces.
 </tr>
 </thead>
 <tbody>
-<tr>
-<td >accountId</td>
-<td >Yes</td>
-<td >ID of the account</td>
-</tr>
 <tr>
 <td >namespace</td>
 <td >Yes</td>
