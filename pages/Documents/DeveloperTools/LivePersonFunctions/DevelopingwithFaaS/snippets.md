@@ -10,25 +10,13 @@ indicator: both
 redirect_from:
   - function-as-a-service-developing-with-snippets.html
 ---
-
-Snippets allow you to easily paste often-used code into your functions. Simply hit `CTRL` + `Spacebar` while writing `snippet` allows you to select a range of snippets from the list below.
-
-- [Conversation Util](#conversation-util)
-- [GDPR Util](#gdpr-util)
-- [HTTP](#http)
-- [Read Secret](#read-secret)
-- [Update Secret](#update-secret)
-- [Salesforce](#salesforce)
-- [SDE Util](#sde-util)
-- [Create Context Session Store](#create-context-session-store)
-- [Read Context Session Store](#read-context-session-store)
-- [Update Context Session Store](#update-context-session-store)
-- [Delete Context Session Store](#delete-context-session-store)
-
+​
+Snippets allow you to easily paste often-used code into your functions. Simply hit `CTRL` + `Spacebar` in the [Functions UI](https://faas.liveperson.net/) while writing `snippet` allows you to select a range of snippets from the list below.
+​
 ### Conversation Util
-
+​
 Adds conversation related methods like fetching conversations or scanning for certain keywords (see [Conversation Util](liveperson-functions-developing-with-faas-toolbelt.html#conversation-util)).
-
+​
 ```javascript
     const { Toolbelt, ConversationContentTypes } = require('lp-faas-toolbelt');
     const conversationUtil = Toolbelt.ConversationUtil();
@@ -56,11 +44,11 @@ Adds conversation related methods like fetching conversations or scanning for ce
       console.error(`received following error message: ${error.message}`);
     }
 ```
-
+​
 ### GDPR Util
-
+​
 Adds GDPR related functionality such as deleting transcripts of a conversation (see [GDPR Util](liveperson-functions-developing-with-faas-toolbelt.html#gdpr-util)).
-
+​
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     
@@ -94,11 +82,11 @@ Adds GDPR related functionality such as deleting transcripts of a conversation (
       console.error(`received following error message: ${error.message}`);
     }
 ```
-
+​
 ### HTTP
-
+​
 HTTP Client that is based on request-promise for opening external HTTP connections (see [HTTP Client](liveperson-functions-developing-with-faas-toolbelt.html#http-client)).
-
+​
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     // Obtain an HTTPClient Instance from the Toolbelt
@@ -127,11 +115,11 @@ HTTP Client that is based on request-promise for opening external HTTP connectio
       console.error(`received following error message: ${error.message}`);
     }
 ```
-
+​
 ### Read Secret
-
+​
 Reads a secret from the secret storage (see [Secret Storage Client](liveperson-functions-developing-with-faas-toolbelt.html#secret-storage-client)).
-
+​
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     const secretClient = Toolbelt.SecretClient();
@@ -144,11 +132,11 @@ Reads a secret from the secret storage (see [Secret Storage Client](liveperson-f
       console.error(`received following error message: ${error.message}`);
     }
 ```
-
+​
 ### Update Secret
-
+​
 Updates a secret from the secret storage (see [Secret Storage Client](liveperson-functions-developing-with-faas-toolbelt.html#secret-storage-client)).
-
+​
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     const secretClient = Toolbelt.SecretClient();
@@ -161,11 +149,11 @@ Updates a secret from the secret storage (see [Secret Storage Client](liveperson
       console.error(`received following error message: ${error.message}`);
     }
 ```
-
+​
 ### Salesforce
-
+​
 Salesforce Client that is based on jsforce for connecting LivePerson Functions to any Salesforce system (see [Salesforce Client](liveperson-functions-developing-with-faas-toolbelt.html#salesforce-client)).
-
+​
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
     const { payload } = input;
@@ -199,11 +187,11 @@ Salesforce Client that is based on jsforce for connecting LivePerson Functions t
       console.info(result);
     });
 ```
-
+​
 ### SDE Util
-
+​
 SDE Util allows SDE related methods, like adding SDEs or fetching SDEs from a conversation to be performed (see [SDE Util](liveperson-functions-developing-with-faas-toolbelt.html#sde-util)).
-
+​
 ```javascript
     const { Toolbelt, SDETypes } = require('lp-faas-toolbelt');
     const sdeUtil = Toolbelt.SDEUtil();
@@ -237,19 +225,18 @@ SDE Util allows SDE related methods, like adding SDEs or fetching SDEs from a co
       console.error(`received following error message: ${error.message}`);
     }
 ```
-
+​
 ### Create Context Session Store
-
+​
 Creates properties in the context session storage (see [Context Service Client](liveperson-functions-developing-with-faas-toolbelt.html#context-service-client)).
-
+​
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
-    const contextClient = Toolbelt.ContextServiceClient('YOUR_DEVELOPER_KEY');
-
+    const contextClient = Toolbelt.ContextServiceClient({ apiKey: 'YOUR_DEVELOPER_KEY', accountId: 'YOUR_ACCOUNT_ID' });
+​
     try {
       // If no sessionId is passed, it will take the __default__ session.
       const sessionProperties = await contextClient.setPropertiesInNamespace(
-        'YOUR_ACCOUNT_ID',
         'YOUR_NAMESPACE',
         {
           YOUR_PROPERTY: 'YOUR_VALUE'
@@ -261,19 +248,18 @@ Creates properties in the context session storage (see [Context Service Client](
       console.error('Could not set properties in the context store');
     }
 ```
-
+​
 ### Read Context Session Store
-
+​
 Reads a property from the context session storage (see [Context Service Client](liveperson-functions-developing-with-faas-toolbelt.html#context-service-client)).
-
+​
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
-    const contextClient = Toolbelt.ContextServiceClient('YOUR_DEVELOPER_KEY');
-
+    const contextClient = Toolbelt.ContextServiceClient({ apiKey: 'YOUR_DEVELOPER_KEY', accountId: 'YOUR_ACCOUNT_ID' });
+​
     try {
       // If no sessionId is passed, it will take the __default__ session.
       const sessionProperty = await contextClient.getPropertyInSession(
-        'YOUR_ACCOUNT_ID',
         'YOUR_NAMESPACE',
         'YOUR_PROPERTY',
         'YOUR_SESSION_ID'
@@ -283,19 +269,18 @@ Reads a property from the context session storage (see [Context Service Client](
       console.error('Could not fetch property from the context store');
     }
 ```
-
+​
 ### Update Context Session Store
-
+​
 Updates properties in the context session storage (see [Context Service Client](liveperson-functions-developing-with-faas-toolbelt.html#context-service-client)).
-
+​
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
-    const contextClient = Toolbelt.ContextServiceClient('YOUR_DEVELOPER_KEY');
-
+    const contextClient = Toolbelt.ContextServiceClient({ apiKey: 'YOUR_DEVELOPER_KEY', accountId: 'YOUR_ACCOUNT_ID' });
+​
     try {
       // If no sessionId is passed, it will take the __default__ session.
       const sessionProperties = await contextClient.updatePropertiesInNamespace(
-        'YOUR_ACCOUNT_ID',
         'YOUR_NAMESPACE',
         {
           YOUR_PROPERTY: 'YOUR_VALUE',
@@ -307,19 +292,18 @@ Updates properties in the context session storage (see [Context Service Client](
       console.error('Could not update properties in the context store');
     }
 ```
-
+​
 ### Delete Context Session Store
-
+​
 Deletes a property in the context session storage (see [Context Service Client](liveperson-functions-developing-with-faas-toolbelt.html#context-service-client)).
-
+​
 ```javascript
     const { Toolbelt } = require('lp-faas-toolbelt');
-    const contextClient = Toolbelt.ContextServiceClient('YOUR_DEVELOPER_KEY');
-
+    const contextClient = Toolbelt.ContextServiceClient({ apiKey: 'YOUR_DEVELOPER_KEY', accountId: 'YOUR_ACCOUNT_ID' });
+​
     try {
       // If no sessionId is passed, it will take the __default__ session.
       await contextClient.deletePropertyInSession(
-        'YOUR_ACCOUNT_ID',
         'YOUR_NAMESPACE',
         'YOUR_PROPERTY',
         'YOUR_SESSION_ID'
