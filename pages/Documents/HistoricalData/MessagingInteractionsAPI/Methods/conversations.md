@@ -221,7 +221,6 @@ wasStepUp | Indicates if the conversation had a step up | Boolean |
 pendingAgentSurvey | Indicate if the conversation has a pending agent survey. | Boolean |
 firstIntentName | The id of the intent that was created based on the first intent-able message in the conversation. | string |
 firstIntentLabel | The label of the intent that was created based on first intent-able message in the conversation. | string |
-brandName | The value of the site setting account.profile.brand.name for the conversation owner account. | string |
 
 _Campaign info_
 
@@ -670,8 +669,7 @@ acSurveyRevision| The AC form revision.                        | string     |
         "latestAgentGroupName": "Unassigned",
         "latestQueueState": "ACTIVE",
         "isPartial": false,
-        "pendingAgentSurvey": false,
-        "brandName": "LivePerson"
+        "pendingAgentSurvey": false
       },
       "campaign": {
         "campaignEngagementId": "2330596212",
