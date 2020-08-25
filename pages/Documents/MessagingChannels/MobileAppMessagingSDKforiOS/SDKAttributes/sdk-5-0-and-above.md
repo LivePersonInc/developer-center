@@ -758,6 +758,25 @@ Examples: TimeToRespond notification, local notification, etc.
 
 --- 
 
+### Hyperlink
+
+#### markdownHyperlinkFromAgent
+Enable or disable hyperlink support. Agent won’t be able to send hyperlink messages if set to false
+    
+- **Type:** bool
+- **Default value:** true
+
+#### remoteUserBubbleHyperlinkColor
+Set the link message text color
+    
+- **Type:** color
+- **Default value:** For iOS 13, we use UIColor.label, anything below that uses UIColor.black
+
+<img src="../../../../img/ios-hyperlink-color-cofiguration.png" alt="Hyperlink color configuration" style="width: 600px;padding: 20px;">
+
+
+---
+
 ### Link Preview
 
 #### enableLinkPreview 
@@ -1539,7 +1558,6 @@ Structured Content Latitude Delta Span. Used to determine which area of the map 
    - **Type:** Double
    - **Default value:** 0.01 
 
- 
 
 #### structuredContentMapLongitudeDeltaSpan  
 Structured Content Longitude Delta Span. Used to determine which area of the map to focus on. If you set this attribute, you must also set `structuredContentMapLatitudeDeltaDeltaSpan`. This parameter is used to create an [MKCoordinateSpan](https://developer.apple.com/documentation/mapkit/mkcoordinatespan). 
@@ -1547,6 +1565,31 @@ Structured Content Longitude Delta Span. Used to determine which area of the map
    - **Type:** Double
    - **Default value:** 0.01 
 
+
+#### structuredContentButtonBorderColor
+Sets border color for button type element on Structured Content
+    
+- **Type:** color
+- **Default value:** [`lightBlue`](#LPColor)
+
+{: .notice}
+Accessibility compliance highlights the need for links and buttons to have a distinctive UI characteristic, changing this value might break compliance.
+
+
+#### structuredContentButtonTextColor
+Sets text color for button type element on Structured Content
+    
+- **Type:** color
+- **Default value:** For iOS 13, we use [`UIColor.label`](#LPColor), anything below that uses [`UIColor.black`](#LPColor)
+
+
+#### structuredContentTextColor
+Sets text color for text type element on Structured Content
+    
+- **Type:** color
+- **Default value:** For iOS 13, we use [`UIColor.label`](#LPColor), anything below that uses [`UIColor.black`](#LPColor)
+
+    
 --- 
 
 ### Surveys Buttons (CSAT and FCR)
