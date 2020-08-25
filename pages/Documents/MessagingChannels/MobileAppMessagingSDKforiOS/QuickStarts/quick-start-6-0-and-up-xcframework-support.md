@@ -11,9 +11,6 @@ permalink: mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up-
 indicator: messaging
 ---
 
-{: .notice}
-COMING SOON! (August 25th, 2020)
-
 ### Overview
 
 In this Quick Start, we will cover the steps that will get you up and running with SDK version 6.0 and up. SDK V6.0 has been modified in the new format of XCFramework. With the new framework that was introduced by Apple, both architectures arm64 and x86_64 builds of the library are consolidated into one single bundle of LPMessagingSDK.xcframework, the four frameworks (LPMessagingSDK.framework, LPInfra.framework, LPAMS.framework and LPMonitoring.framework) have been unified into one framework (LPMessagingSDK.xcframework), and we have reduced the exposure of CoreData Objects to the brands apps.   
@@ -33,6 +30,7 @@ In this Quick Start, we will cover the steps that will get you up and running wi
 - Bundle ID registered in an Apple developer account.
 - Xcode11 and above
 - Swift 5.1 and above
+- Cocoapod 1.9.0 and above
 
 ### Step 1: Install the SDK into your project
 
