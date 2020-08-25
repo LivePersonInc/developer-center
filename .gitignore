@@ -11,3 +11,4 @@ _algolia_api_key
 vendor
 node_modules/
 tmp/.htmlproofer
+_scripts/docOutputError.log
