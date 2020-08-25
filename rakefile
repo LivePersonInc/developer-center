@@ -31,8 +31,7 @@ end
 task :test_all do
   sh "bundle exec jekyll build"
   options = {
-    :http_status_ignore => [429],
-    :disable_external => true,
+    :http_status_ignore => [429, 302],
     :error_sort => :status,
   }
   puts "Checking entire site for script, image and link errors..."
