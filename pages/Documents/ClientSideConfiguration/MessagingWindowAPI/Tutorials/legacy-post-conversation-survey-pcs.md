@@ -1,5 +1,5 @@
 ---
-pagename: Post Conversation Survey (PCS)
+pagename: Legacy - Post Conversation Survey (PCS)
 redirect_from:
   - messaging-window-api-tutorials-post-conversation-survey.html
   - messaging-window-api-tutorials-post-conversation-survey-pcs.html
