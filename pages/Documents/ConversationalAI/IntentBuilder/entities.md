@@ -12,56 +12,130 @@ indicator: both
 
 ### What's an entity?
 
-Entities are keywords that represent a number of synonyms. For instance, the entity `sports` could refer to or represent the following group of items: "walking", "jogging", "running", "football" and so on. Whenever an entity is referred to, the group that it represents is automatically inserted by the bot. So if a user sends the sentence, "I'm interested in running," the bot invokes the entity `sports`.
+Entities are keywords or expressions that represent groups of items. For example, an entity named `SIZE` might represent the following values: small, medium, and large.
 
-Therefore, when you're creating training phrases for an intent, instead of typing in multiple phrases like so: "I'm interested in walking", "I'm interested in jogging", "I'm interested in running", you can just create one training phrase that looks like the following:
+In a conversation, when a bot detects an entity value in a consumer's utterance, the bot invokes the associated entity, substituting it into the utterance before determining the consumer's intent. Therefore, you can use entities in two places:
 
-"I'm interested in `sports`".
+* Training phrases for intents defined in [Intent Builder](intent-builder-overview.html) 
+* Intent qualifiers for articles defined in [Knowledge Base](knowledge-base-overview.html)
 
-Entities can be used both in the context of intents as well as in a [Knowledge Base](conversation-builder-knowledge-base.html). Just like with training phrases for intents, entities can be used in training phrases for Knowledge Base articles.
+There are three types of entities:
 
-Entities are usually one or two words as they represent groups of simple objects.
+* Value Set entities
+* Regular Expression entities
+* Built-in entities
 
-### Built-in entities
+### Types of entities
 
-The platform automatically detects the entities listed below. Using the [Assist](conversation-builder-assist.html) tool, you can assign these default entities to user interactions and have the bot populate a [slot](conversation-builder-conversation-builder-variables-slots.html#slots) with the user's input to the question to which the entity was assigned.
+#### Value Set entities
 
-* PERSON - Names of people, persons.
+As their name suggests, Value Set entities are those that have a defined set of values. For example, the entity `SPORTS` might have the following values in its value set:
+* football
+* running
+* walking
 
-* ORGANIZATION - Names of institutions.
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_entitiesValueSet.png">
 
-* NUMBER - Numbers in a sentence (pure number).
+Whenever the user's utterance contains one of these entity values (e.g., "I'm interested in running"), the bot detects this, invokes the `SPORTS` entity, and substitutes it into the utterance before determining the consumer's intent. This means, when you add training phrases for the intent, instead of adding these...
 
-* MONEY -  Numbers with currency ($2000).
+* "I'm interested in football"
+* "I'm interested in running"
+* "I'm interested in walking"
 
-* DURATION - Time periods.
+...you can add a single training phrase that uses the `SPORTS` entity:
 
-* SET - Group (example month, week).
+* "I'm interested in `SPORTS`"
 
-* ORDINAL - A number used in the context of order. 15th, 10th etc are examples.
+All three utterances above invoke this intent.
 
-* DATE - Date related, Today, Tomorrow or explicit dates such as 03/01/2017.
+The values for Value Set entities are usually one or two words, as they represent groups of simple objects.
 
-### How entities affect the NLU score
+#### Regular Expression entities
 
-The more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
+Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression](https://www.regexlib.com/) rules. As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b` , which is a 6-digit number.
 
-You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the really key elements of your intent, but don’t overuse.
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_entitiesRegEx.png">
+
+Whenever the consumer's utterance contains an expression that conforms to the entity's regular expression (e.g., "I want to check on my order 757575"), the bot detects this, invokes the `ORDER_NO` entity, and substitutes it into the utterance before determining the consumer's intent. In this way, a Regular Expression entity works like a Value Set entity.
+
+Use a Regular Expression entity in situations where the entity's possible values all conform to a specific pattern, and that list of values is so long that it makes use of a Value Set entity unfeasible. Some use cases include:
+
+* Flight numbers
+* Order numbers
+* Help Desk ticket numbers
+
+Continuing our `ORDER_NO` example, you might use the entity in the training phrases for an "order status" intent, like so:
+
+* "I want to check on my order `ORDER_NO`"
+* "What's the status of order `ORDER_NO`"
+
+{: .important}
+Regular Expression entities are available only in domains using the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2).
+
+#### Built-in entities
+
+The platform automatically detects the entities listed below: 
+
+* PERSON - Names of people, persons
+
+* ORGANIZATION - Names of institutions
+
+* NUMBER - Numbers in a sentence (pure number)
+
+* MONEY -  Numbers with currency ($2000)
+
+* DURATION - Time periods
+
+* SET - Group (example month, week)
+
+* ORDINAL - A number used in the context of order. 15th, 10th, etc., are examples.
+
+* DATE - Date-related. Today, Tomorrow or explicit dates such as 03/01/2017
+
+Using the [Assist](conversation-builder-assist.html) tool, you can assign these built-in entities to user interactions and have the bot populate a [slot](conversation-builder-conversation-builder-variables-slots.html#slots) with the user's input to the question to which the entity was assigned.
+
+### How entities affect the NLU score (LivePerson NLU v1 only)
+
+When using the LivePerson NLU v1 engine, the more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
+
+You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.
+
 
 <img class="fancyimage" style="width:400px" src="img/testuserinput.png">
 
-### Add an entity
+### Add a Value Set entity
 
-**To add an entity**
+**To add a Value Set entity**
 
 1. Open the domain.
 2. In the upper-left corner, click **Entities**.
-3. Click **Add Entity** in the upper-right corner.
+3. In the upper-right corner, click **Add Entity**.
 4. Specify the following:
-    * **Entity name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
-    * **Entity values**: Enter each entity value, pressing Enter after each one.
-5. Click **Save** in the lower-right corner.
+    * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
+    * **Entity Type**: Select "Value Set."
+    * **Entity Values**: Enter each entity value.
+5. Click **Save**.
 6. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the addition is reflected in a new model version.
+
+### Add a Regular Expression entity
+
+{: .important}
+Regular Expression entities are available only in domains using the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2).
+
+**To add a Regular Expression entity**
+
+1. Open the domain.
+2. In the upper-left corner, click **Entities**.
+3. In the upper-right corner, click **Add Entity**.
+4. Specify the following:
+    * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
+    * **Entity Type**: Select "Regular Expression."
+    * **Regular Expression**: Enter the regular expression. All standard [RegEx rules](https://www.regexlib.com/) apply.
+    * **Sample Values**: Enter five (5) example values that conform to the regular expression. These values aren't used during entity detection; they're used during domain training to improve the model's performance with respect to intent matching. Within Intent Builder, the sample values also serve as easy-to-read examples of the regular expression, making the expression more understandable at a glance.
+
+        Start with five (5) sample values. If your results aren't as expected, you can add more and then retrain. 
+5. Click **Save**.
+6. Train the domain so that the addition is reflected in a new model version.
 
 ### Using entities
 
