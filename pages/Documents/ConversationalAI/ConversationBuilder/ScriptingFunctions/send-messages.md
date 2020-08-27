@@ -13,9 +13,6 @@ indicator: both
 
 Use the following built-in functions to send different types of messages to the consumer.
 
-{: .important}
-New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
-
 ### Send message
 
 Used to send a single message to user. Using this function we can send messages to the user at any place of the code, without stopping the message flow.

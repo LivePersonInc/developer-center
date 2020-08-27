@@ -50,15 +50,72 @@ This code disables the behavior until the variable is set to "false" once again.
 
 To disable context switching at the conversation start, you can add this code to Global Functions. To disable it at the point of a specific situation, you can add the code to any interaction.
 
-### Create a new dialog
 
+### Import a dialog
+
+You can import dialogs from one bot to another within your organization. This can be useful when you have a well-defined dialog in one bot that you want to quickly and easily reuse in a different bot. Note the following:
+
+* You can import a maximum of 10 dialogs at a time from multiple bots. If you need to import more, you can repeat the process.
+* You can import only dialogs of type Dialog (see *Dialog types* above).
+* You can import dialogs from the bots to which you have access in your organization. For example, you can’t import dialogs from a bot that's owned by another bot developer and isn't [public](conversation-builder-bots-bot-basics.html#configure-bot-settings).
+* The following is imported:  
+    * All selected dialogs and the interactions therein
+    * All integrations referenced in the selected dialogs
+* The following isn't imported and must be added manually:
+    * Global functions
+    * Environment variables (you can [export](conversation-builder-environment-variables.html#export-environment-variables-to-a-csv-file) these)
+* During the import, the associations of domains, intents, and entities to interactions are maintained.
+* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't [public](knowledge-base-knowledge-bases.html#configure-knowledge-base-settings), you can still use the integration in the bot, but you can't view or edit that knowledge base in the Knowledge Base application.
+
+When you import dialogs, consider and address any dependencies across the dialogs. You might or might not want to import all dependent dialogs. Before or after the import, ensure proper conversation flow by checking (and updating, if necessary) the following in the interactions in the relevant dialogs:
+
+* Next Action values
+* JavaScript code
+* Environment variables
+
+**To import one or more dialogs into a bot**
+
+1. Open the destination bot.
+2. Click **Add Dialog** in the lower-left corner.
+3. In the Add Dialog window, select the **From Existing Bots** tab.
+4. Browse and/or search to find and select the dialogs to import. You can search by bot name and dialog name, and you can select up to 10 dialogs.
+
+    <img class="fancyimage" style="width:450px" src="img/ConvoBuilder/dialogs_import1.png">
+
+5. Click **Add**.
+
+    The selected dialogs are imported. At this point, you might want to rename the imported dialogs, interactions, and integrations. They are given standard names based on the element name and destination bot name. 
+
+
+### Duplicate a dialog
+
+You can duplicate a dialog that is of type Dialog (see *Dialog types* above). This can be useful when you have a well-defined dialog that you want to quickly and easily reuse in the same bot. 
+
+During the operation:
+* The associations of domains, intents, and entities to interactions are maintained.
+* In the [Dialog Starter](conversation-builder-interactions-dialog-starter.html) interaction, the patterns or the intent is duplicated. **After the operation, modify or remove these as appropriate so that each dialog starter is unique within the bot.**
+
+**To duplicate a dialog**
+
+1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
+2. Select **Duplicate Dialog**.
+
+    The dialog is duplicated. At this point, you might want to rename the copy. It is given a standard name based on the element name and bot name.
+
+
+### Create a dialog
+
+**To create a dialog**
 1. Open the bot.
 2. Click **Add Dialog** in the lower-left corner.
-3. In the dialog that appears, do the following:
+3. In the Add Dialog window, select the **New Dialog** tab.
+
+4. In the dialog that appears, do the following:
     - **Dialog Name**: Enter a descriptive name for the dialog. Use a standard naming convention to make your dialogs more sortable and easier to find.
+    - **Description**: (Optional) Enter a brief description of the dialog's purpose. The description is displayed in the user interface for importing dialogs, discussed below, to help bot developers make decisions on which dialogs to select to import.
     - **Dialog Type**: Select the type of dialog; for help with this, see *Dialog types* farther above on this page.
-4. Click **Save**.
-5. Build out the dialog as per your requirements.
+5. Click **Save**.
+6. Build out the dialog as per your requirements.
 
 ### Close the dialog
 
@@ -115,9 +172,6 @@ Dialog settings include:
 **To disable or enable a dialog**
 
 1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
-
-    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png">
-
 2. Select **Dialog Settings**.
 3. Click **More Settings** to display all the settings.
 4. For **Enable Dialog**, click the slider. Enable (turn on) the slider to enable the dialog; disable (turn off) the slider to disable the dialog.
@@ -125,13 +179,10 @@ Dialog settings include:
 
 ### Delete a dialog
 
-Deleting a dialog is a non-recoverable action, so be certain about doing so before taking this action. As an alternative, consider disabling the dialog instead; you can do this in the dialog's settings.
+Deleting a dialog is a non-recoverable action, so be certain about doing so before taking this action. For example, make sure the dialog isn't referenced by any others within the bot. As an alternative, consider disabling the dialog instead; you can do this in the dialog's settings.
 
 **To delete a dialog**
 
 1. In the dialogs panel on the left, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_dialogs.png"> (3-dot icon) beside the dialog's name.
-
-    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogs_menu.png">
-
 2. Select **Delete Dialog**.
 3. In the confirmation dialog, click **Yes**. 

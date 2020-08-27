@@ -13,9 +13,6 @@ indicator: both
 
 Use the following built-in functions to get user data.
 
-{: .important}
-New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
-
 ### Get user channel
 Returns the platform channel the user is currently communicating on. This function returns:
 
@@ -32,7 +29,7 @@ The "lp_" prefix indicates the LivePerson platform.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getUserChannel()` | None | lp_sms, lp_web, lp_inapp, lp_whatsapp, lp_rcs, lp_abc, twilio_sms, lp_fb |
+| `getUserChannel()` | None | lp_sms, lp_web, lp_inapp, lp_whatsapp, lp_rcs, lp_abc, twilio_sms, or lp_fb |
 
 #### Example
 

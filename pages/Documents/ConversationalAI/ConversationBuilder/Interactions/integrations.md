@@ -68,7 +68,9 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 **To add an Agent Transfer interaction**
 
 1. Select the interaction just above where you want to add the transfer, and click <img style="width:30px" src="img/ConvoBuilder/icon_agentTransfer.png"> (Agent Transfer) on the interactions toolbar.
-2. In the interaction, enter the message to send to the user prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Transferring to an agent..."
+2. In the interaction, enter the message to send to the user prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. If you need to insert a new line, use an escape character like so: \\\n. 
+
+    This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. The default value is, "Transferring to an agent..."
 
     <img style="width:600px" src="img/ConvoBuilder/interactions_agentTransfer.png">
 

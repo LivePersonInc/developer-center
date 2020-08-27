@@ -87,8 +87,9 @@ Key characteristics include:
     * Supports a maximum of 40 training phrases per intent. If you add more than 40, only the first 40 are used.
     * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledge-base-articles.html#best-practices).
 * Doesn't require the model to be trained, which can save time.
-* *Can't* be used with Intent Analyzer.
-* Supports English and Spanish.
+* Doesn't support [prebuilt domains](intent-builder-overview.html#prebuilt-domains) or [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
+* Can't be used with [Intent Analyzer](intent-analyzer-overview.html).
+* Supports English or Spanish.
 
 #### LivePerson NLU v2
 
@@ -102,15 +103,17 @@ Key characteristics include:
     * At least 20 training phrases per intent
     * At least 5 intents in order to train
 * Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
-* Can be used with Intent Analyzer.
+- Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
+* Can be used with [Intent Analyzer](intent-analyzer-overview.html).
 * Supports English.
 
 ### Connect a 3rd-party NLU engine
 
 #### 3rd-party NLU limitations
 
-- The length of the 3rd-party NLU domain name should not exceed 64 characters. (Watson limitation)
-- Each domain can only support one language, which is specified on the Domain Settings page.
+- Doesn't support [prebuilt domains](intent-builder-overview.html#prebuilt-domains) or [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
+- The length of the domain name should not exceed 64 characters. (Watson limitation)
+- A domain can only support one language, which is specified on the Domain Settings page.
 - LivePerson does not support "pulling" into Intent Builder existing models that have been trained in IBM Watson or Google Dialogflow. Only model "push" is supported; this is accomplished by training the model in Intent Builder.
 
 #### Step 1: Enable 3rd-party NLU support
@@ -154,7 +157,7 @@ Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow s
 
 #### Step 3: Add a domain for the 3rd-party NLU provider
 
-In Intent Builder, [add a domain](intent-builder-domains.html#add-a-domain) that uses the 3rd-party NLU engine as its NLU provider. You can import the intents and entities at that time or add them later but before proceeding to step 5.
+In Intent Builder, [add a domain](intent-builder-domains.html) that uses the 3rd-party NLU engine as its NLU provider. You can import the intents and entities at that time or add them later but before proceeding to step 5.
 
 #### Step 4: Create the NLU provider credentials
 

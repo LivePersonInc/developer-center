@@ -54,7 +54,7 @@ You can create a bot group solely for the purpose of making it easier to access 
 
     * **Bot group name**: Enter a group name that's concise and clear.
     * **Collaboration**: This setting lets you enable/disable automatic transfers on a group-by-group basis. Set this to On (Enabled).
-    * **Transfer message**: Enter the message to send to the consumer prior to the transfer, something like, "Hold on while I transfer you to a chatbot that can assist you..." You can use bot context variables in the message. You can also leave this field blank if desired.
+    * **Transfer message**: Enter the message to send to the consumer prior to the transfer, something like, "Hold on while I transfer you to a chatbot that can assist you..." If you need to insert a new line, use an escape character like so: \\\n. You can use bot context variables in the message. You can also leave this field blank if desired.
     * **Add Bots**: Select each bot to add it to the group. A bot can be a member of only one group. You can select from the bots that are not yet assigned to a group.
 
 4. Click **Create**.

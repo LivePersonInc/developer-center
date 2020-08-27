@@ -61,6 +61,8 @@ If you want to import a set of articles into a knowledge base when you add the k
 | positiveLearnings | These are phrases for which you want a match to the article to occur. A comma-separated list. |
 | negativeLearnings | These are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent. A comma-separated list. |
 | intentName | Applicable if you're using Domain intents, not Knowledge Base intents (see [here](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) for an understanding of the two). This is the intent associated with the article. |
+| validFrom | Specify the date and time on which the article becomes active in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-overview.html#active-versus-inactive-articles). |
+| validTo | Specify the date and time on which the article becomes inactive in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-overview.html#active-versus-inactive-articles). |
 
 ### Configure knowledge base settings
 
@@ -78,7 +80,7 @@ If you want to import a set of articles into a knowledge base when you add the k
     * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
     * **Associated Domain**: Read-only. This field is displayed only if the knowledge base uses [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). The domain can't be changed after the knowledge base is created.
     * **Account**: If you logged into Conversation Builder directly (i.e., not via single sign-on from Conversational Cloud) and you have access to multiple organizations within your Conversational Cloud account, you can use this setting to change the organization under which this knowledge base exists. If you logged into Conversation Builder via single sign-on from Conversational Cloud, the organization you were using in Conversational Cloud is active and can't be changed, and nothing appears in this list.
-    * **Public**: If you don't want other users in your Conversational Cloud account to be able to view and edit the knowledge base, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
+    * **Public**: If you don't want other users in your Conversational Cloud account to be able to view and edit the knowledge base in the Knowledge Base application, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
 5. Click **Update**.
 
 ### Convert Knowledge Base intents to Domain intents
@@ -108,7 +110,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
 After you've made changes to the Google sheet that's linked to the knowledge base, sync the knowledge base to update it with the content.
 
 {: .important}
-This action overwrites the content in the knowledge base with the content in the Google sheet, so use caution when performing this. Also be aware that newly added articles are enabled by default (which means they are returned in knowledge base searches in Knowledge Base integrations), so ensure the contents of the sheet are suitable before you sync. You can disable articles on a per article basis, as described [here](knowledge-base-articles.html#enable-or-disable-an-article).
+This action overwrites the content in the knowledge base with the content in the Google sheet, so use caution when performing this. Also be aware that all new articles in the sheet are enabled by default (which means they are returned in knowledge base searches in Knowledge Base integrations), so ensure the contents of the sheet are suitable before you sync. You can disable articles on a per article basis, as described [here](knowledge-base-articles.html#enable-or-disable-an-article).
 
 Before performing a sync, make sure the Google sheet includes the "id" column that contains the IDs for all existing articles. If it doesn't, update the sheet accordingly before syncing.
 
@@ -117,16 +119,6 @@ Before performing a sync, make sure the Google sheet includes the "id" column th
 2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Knowledge Base Menu**.
 3. In the Settings panel, click **KB Settings**.
 4. Click **More Options**, scroll down to the **Sync Google Sheet Data Source** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_syncGoogleSheet.png"> (Refresh icon).
-
-### Refresh the intents
-
-The intents for every article are stored in a cache that is updated automatically every 5 minutes. But if you've made a recent change to intents--either [Knowledge Base intents or Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents)--and you want to immediately see the result of the changes, you can manually refresh the cache.
-
-**To refresh the intents in a knowledge base**
-1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Knowledge Base Menu**.
-3. In the Settings panel, click **KB Settings**.
-4. Click **More Options**, scroll down to the **Refresh Intents** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_refresh.png"> (Refresh icon).
 
 ### Download a knowledge base 
 
