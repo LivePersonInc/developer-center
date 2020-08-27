@@ -32,20 +32,6 @@ Your bot implementation should meet Conversational Cloud requirements and those 
 
 For information on which interactions are supported in which channels, see [here](conversation-builder-interactions-interaction-support.html).
 
-### Limitations
-
-#### Limitations regarding types of text
-
-The types of text that you can send in a Conversation Builder interaction vary depending if you are building a bot for **chat** or for **messaging**.
-
-**Messaging** only allows plain text to be sent.
-
-**Chat** allows for plain text as well as a subset of HTML limited to the anchor, paragraph and linebreak tags.
-
-* `<a href=""></a>`
-* `<p></p>`
-* `<br>`
-
 ### Whitelisting
 
 For information on whitelisting rich media, see [here](conversation-builder-networking-security.html#whitelisting-rich-media).
@@ -146,13 +132,39 @@ When defining a condition using a regular expression, click **Hint** to view and
   * [API Integration](conversation-builder-integrations-api-integrations.html) custom data values: `{apiName.variableName}`
 
 ### Format text
+#### Types of text
+
+The types of text that you can send in a Conversation Builder interaction vary depending on whether you're building a bot for **Chat** or for **Messaging**.
+
+**Messaging** only allows plain text to be sent. 
+
+**Chat** allows for plain text and a subset of HTML limited to the paragraph, linebreak and anchor tags:
+
+* `<p></p>`
+* `<br>`
+* `<a href=""></a>`
+
+Examples of valid anchor tags:
+
+* `<a href="http://example.com/test.jpg">`
+* `<a href="http://example.com/1$2324%342523">`
+* `<a href="{$botcontext.host}/test.jpg">`
+* `<a href="http://example.com/{$botcontext.fileName}">`
+* `<a href="{$botcontext.link}”>`
+
+Examples of invalid anchor tags:
+
+* `<a href="javascript: alert(’test’)">`
+* `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>`
+* `<a onmouseover="alert('test')" href="http://example.com/test.jpg">`
+
 #### Line Breaks
 CTRL+ENTER - Hold control and hit enter/return.
 
 {: .important}
 This does not render when using the the Preview tool inside Conversation Builder. You will not see line breaks in the preview tool.
 
-#### Character Limit
+#### Character limit
 
 One single text interaction has a limit of 320 characters on the word boundary before it gets split into 2 parts. However, you can override this behavior with the [setAllowMaxTextResponse](conversation-builder-scripting-functions-manage-conversation-flow.html#set-allow-max-text-response) scripting function.
 

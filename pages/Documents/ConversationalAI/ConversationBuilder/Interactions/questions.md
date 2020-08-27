@@ -49,6 +49,10 @@ Configure the following settings in the [interaction's settings](conversation-bu
 
 - **Enable Indentation**: Affects the display of options in text-only channels. Enable this to indent (with one tab space) the multiple choice options under the question. Disable this to align them under the question without an indent.
 
+#### Notes on Multiple Choice questions
+
+- For the number of buttons that you can add, check the limitations for the channels in use. (For example, while Conversational Cloud doesn't have a limitation here, Facebook's limit is 3 buttons.)
+
 ### Text questions
 
 Text questions expect and wait for a text-based response from the consumer.
