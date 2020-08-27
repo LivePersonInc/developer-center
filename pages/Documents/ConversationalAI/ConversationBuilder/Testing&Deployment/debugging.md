@@ -51,3 +51,29 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 ### Print the most recent user message
 
 To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print the consumer's most recent message to the Bot Logs window. For more on this function, see [here](conversation-builder-scripting-functions.html#print-debug-message).
+
+### Events glossary
+
+#### Max limit on daisy chaining of interactions: 10
+
+This error is:
+
+    BREAKING THE INTERACTION FLOW. Reached max limit on daisy chaining of interactions: 10
+
+This error occurs when you have linked together 10 or more, consecutive Statement and/or Integration interactions within a single dialog. In other words, within those interactions, there are no Question interactions that stop the flow to ask for user input.
+
+When the limit of 10 is reached, the interaction flow is stopped.
+
+The limit of 10 is designed to prevent infinite loops and other potential error conditions.
+
+#### Iteration count exceeded 5
+
+This error is: 
+
+    Breaking the interaction flow because iteration count exceeded 5
+
+This error occurs when you have linked together 5 or more, consecutive Statement and/or Integration interactions across multiple dialogs. In other words, within those interactions, there are no Question interactions that stop the flow to ask for user input.
+
+When the limit of 5 is reached, the interaction flow is stopped.
+
+The limit of 5 is designed to prevent infinite loops and other potential error conditions.

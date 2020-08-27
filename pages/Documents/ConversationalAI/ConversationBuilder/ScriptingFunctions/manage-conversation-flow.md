@@ -13,9 +13,6 @@ indicator: both
 
 Use the following built-in functions to affect the flow of a conversation.
 
-{: .important}
-New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
-
 ### Set message delay value
 
 Used to set a delay for a group of messages such that they appear like a real conversation.
@@ -59,15 +56,15 @@ botContext.setAllowMaxTextResponse(true);
 
 ### Set trigger next message
 
-Used for triggering the message flow to selected segment of the bot.
+Used for directing the conversation flow, i.e., for triggering a specified interaction in the bot.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `setTriggerNextMessage(messagename)` | messagename (string) – The message to trigger, as identified by the Name of the message. | None |
+| `setTriggerNextMessage(messagename)` | messagename (string) – The name of the interaction to trigger. (An interaction's name can be found in the interaction's settings.) | None |
 
 #### Example
 
-In the below example, we test for which company the user selected, and if ‘LivePerson’ we trigger the message "Welcome LivePerson", otherwise we trigger "Welcome Other".
+In the example below, we test for which company the user selected, and, if "LivePerson", we trigger the interaction "Welcome LivePerson". Otherwise, we trigger "Welcome Other".
 
 ```javascript
 var company = botContext.getCurrentUserMessage();
