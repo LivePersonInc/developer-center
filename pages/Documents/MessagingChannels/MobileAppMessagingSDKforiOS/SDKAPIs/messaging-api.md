@@ -212,7 +212,7 @@ To receive all incoming push notifications in a single function and handle them,
 
 ```swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-    LPMessagingSDK.instance.handlePush(userInfo)
+    LPMessaging.instance.handlePush(userInfo)
 }
 ```
 
@@ -370,11 +370,11 @@ When using Custom View Controller Mode, you must configure it so that you remove
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
-  LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
+  LPMessaging.instance.removeConversation(self.conversationQuery!)
 }
 ```
 
-**Note:** When using ViewController Mode, and on the Navigation Bar Back Button, you can simply call `LPMessagingSDK.instance.removeConversation(self.conversationQuery!)`.
+**Note:** When using ViewController Mode, and on the Navigation Bar Back Button, you can simply call `LPMessaging.instance.removeConversation(self.conversationQuery!)`.
 
 ### resolveConversation
 
@@ -392,7 +392,7 @@ func resolveConversation(_ conversation: Conversation, completion: (() -> Void)?
 
 ### setLoggingLevel
 
-Setter for the logging level of console logs produced by LPMessaging iOS SDK. (Lives within the LPInfraFacade). This will be replacing the previous functionality via LogsManager. 
+Setter for the logging level of console logs produced by LPMessaging iOS SDK. (Lives within the LPMessaging). This will be replacing the previous functionality via LogsManager. 
 
 ```swift
 class func setLoggingLevel( level: LPLoggingLevel)
@@ -404,7 +404,7 @@ class func setLoggingLevel( level: LPLoggingLevel)
 
 ### getLogSnapShot
 
-The mechanism to retrieve LPMessagingIOS SDK logs in an array of Strings (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+The mechanism to retrieve LPMessagingIOS SDK logs in an array of Strings (Lives within the LPMessaging).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
 
 ```swift
 class func getLogSnapshot(level: LPLoggingLevel) -> [String]
@@ -416,7 +416,7 @@ class func getLogSnapshot(level: LPLoggingLevel) -> [String]
 
 ### getLogStringBlock
 
-The mechanism to retrieve LPMessagingIOS SDK logs in a single String block (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+The mechanism to retrieve LPMessagingIOS SDK logs in a single String block (Lives within the LPMessaging).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
 
 ```swift
 class func getLogSnapshot(level: LPLoggingLevel) -> [String]
@@ -428,7 +428,7 @@ class func getLogSnapshot(level: LPLoggingLevel) -> [String]
 
 ### setDataMaskingEnabled
 
-Should masking PII be enabled for the logging (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+Should masking PII be enabled for the logging (Lives within the LPMessaging).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
 
 ```swift
 class func getLogSnapshot(level: LPLoggingLevel) -> [String]
