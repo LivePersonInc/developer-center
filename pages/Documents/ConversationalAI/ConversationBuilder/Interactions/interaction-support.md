@@ -36,6 +36,7 @@ N/A = Not Available
 | Integration | Yes | Yes |
 | Agent Transfer integration | Yes | Yes|
 | Apple Pay integration | N/A | N/A |
+| survey interactions (NPS, FCR, CSAT) | Yes | Yes |
 
 ### SMS-related applications
 
@@ -60,6 +61,7 @@ N/A = Not Available
 | Integration | Yes | Yes | Yes |
 | Agent Transfer integration | Yes | Yes | Yes |
 | Apple Pay integration | Yes | N/A | N/A |
+| survey interactions (NPS, FCR, CSAT) | Yes | Yes | Yes |
 
 ### Instant messaging applications
 
@@ -84,6 +86,7 @@ N/A = Not Available
 | Integration | Yes | Yes | Yes |
 | Agent Transfer integration | Yes | Yes | Yes |
 | Apple Pay integration | N/A | N/A | N/A |
+| survey interactions (NPS, FCR, CSAT) | Yes | Yes | Yes |
 
 ### APIs
 
@@ -108,3 +111,4 @@ N/A = Not Available
 | Integration | Yes | Yes |
 | Agent Transfer integration | Yes | Yes |
 | Apple Pay integration | N/A | N/A |
+| survey interactions (NPS, FCR, CSAT) | Yes | Yes |

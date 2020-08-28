@@ -1,18 +1,20 @@
 ---
-pagename: Post Conversation Survey (PCS)
+pagename: Legacy - Post Conversation Survey (PCS)
 redirect_from:
   - messaging-window-api-tutorials-post-conversation-survey.html
+  - messaging-window-api-tutorials-post-conversation-survey-pcs.html
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
-permalink: messaging-window-api-tutorials-post-conversation-survey-pcs.html
+permalink: messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html
 indicator: messaging
 ---
 
-In this tutorial, we will demonstrate how to enable the Post Conversation Survey feature. This is a survey sent to the consumer by the agent at the end of the conversation . When we use the term "Post Conversation Survey" in this tutorial, we refer to the **(new) Post Conversation Survey (PCS)** and not to the (older) [existing survey solution](messaging-window-api-tutorials-post-conversation-survey-csat.html), where only a single CSAT question could be presented to the consumer when the conversation ends.
+{: .important}
+This topic discusses a legacy solution for post-conversation surveys (PCS) and is made available for the benefit of brands using this solution. **If you're new to post-conversation surveys, please see [this topic](conversation-builder-bots-post-conversation-survey-bots.html) on implementation using Conversation Builder**.
 
-<div class="important">Once the PCS Survey is configured and working, it will be presented to the consumer instead of the old one (CSAT) i.e. there is no situation in which both will work together.</div>
+In this tutorial, we demonstrate how to enable the Post Conversation Survey feature. This is a survey sent to the consumer by the agent at the end of the conversation. When we use the term "Post Conversation Survey" in this tutorial, we refer to this solution,  not the [older survey solution](messaging-window-api-tutorials-legacy-post-conversation-survey-csat.html) where only a single CSAT question could be presented to the consumer when the conversation ends. Once the Post Conversation Survey is configured and working, it will be presented to the consumer instead of the older CSAT one. There is no situation in which both work together.
 
 ### Multi-Dialog Conversation
 
@@ -241,7 +243,7 @@ You will now get all the existing content of the conversation in the following f
 }
 ```
 
-You will notice that you got all the messages that were published by the consumer, or by the agent. In order to find which messages were published by the consumer, refer to the `originatorId` field. Messages that were published by the consumer will have a value equal to the `consumerId` you found in [Step 2](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-2---retrieve-your-consumer-id) while messages from the agent will have a different `originatorId`. From this point on, you will receive notifications for all messaging events in this conversation.
+You will notice that you got all the messages that were published by the consumer, or by the agent. In order to find which messages were published by the consumer, refer to the `originatorId` field. Messages that were published by the consumer will have a value equal to the `consumerId` you found in [Step 2](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html#step-2---retrieve-your-consumer-id) while messages from the agent will have a different `originatorId`. From this point on, you will receive notifications for all messaging events in this conversation.
 
 #### Notification Examples
 
@@ -514,7 +516,7 @@ After closing the main dialogue, the Post-Survey dialog should automatically app
 
 ![post-survey](img/post-survey.png)
 
-Thanks to [Step 4](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-4---subscribe-the-consumer-to-all-relevant-conversations---subscribeexconversations), we will receive the following notification:
+Thanks to [Step 4](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html#step-4---subscribe-the-consumer-to-all-relevant-conversations---subscribeexconversations), we will receive the following notification:
 
 ```json
 {
@@ -626,9 +628,9 @@ You can see from the above notification that the Conversation now has a new `sta
 
 After the dialog change (main dialog closed, post dialog open), the consumer should no longer receive messaging events on the conversation. Therefore, you'll need to subscribe the consumer once again to the new, open post-survey dialog.
 
-* Use the last notification from [Step 9](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-9---close-the-conversation-the-main-dialog) to extract the dialogId of the dialog with `dialogType` set to `POST_SURVEY`.
+* Use the last notification from [Step 9](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html#step-9---close-the-conversation-the-main-dialog) to extract the dialogId of the dialog with `dialogType` set to `POST_SURVEY`.
 
-* In order to get the post survey content and messaging events on the client side the consumer needs to execute [step 7](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-7---subscribe-to-conversation-content) from above while the dialogId is set to `__YOUR_POST_SURVEY_DIALOG_ID__`, as below:
+* In order to get the post survey content and messaging events on the client side the consumer needs to execute [step 7](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html#step-7---subscribe-to-conversation-content) from above while the dialogId is set to `__YOUR_POST_SURVEY_DIALOG_ID__`, as below:
 
 ```json
 {"kind":"req","id":"2","type":"ms.SubscribeMessagingEvents","body":{"dialogId":"__YOUR_POST_SURVEY_DIALOG_ID__","conversationId":"__YOUR_CONVERSATION_ID__","fromSeq":0}}
@@ -984,7 +986,7 @@ One request should contain the 'ACTION' (used in conjunction with metadata to re
 
 **Note**:
 
-* The `sequenceList` field matters. Review the notification that includes the Survey, received on [step 11](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-10---re-subscribe-to-conversation-content) and check the sequence number field for the object which includes the 'quickReplies' key. Then, use the same value when making this call under the `sequenceList` key (in this example, it is set to "1").
+* The `sequenceList` field matters. Review the notification that includes the Survey, received on [step 11](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html#step-10---re-subscribe-to-conversation-content) and check the sequence number field for the object which includes the 'quickReplies' key. Then, use the same value when making this call under the `sequenceList` key (in this example, it is set to "1").
 
 ![seq-quick-replies-sc](img/seq_quick_replies_sc.png)
 
@@ -1215,7 +1217,7 @@ The Second request is sent to Publish the selected text of the button, again in 
 
 Because we have configured in the Bot Studio one survey question only in this example, the conversation will close immediately after it. When it closes, we'll receive the following and lasts messaging notification regarding survey completion and the closure of the conversation.
 
-In case you have configured multiple sequential questions you'll need to repeat [step 11](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-11---display-the-survey-on-your-custom-window) and [step 12](messaging-window-api-tutorials-post-conversation-survey-pcs.html#step-12---consumer-responds-on-the-post-survey) per each survey question before you'll get this last notification.
+In case you have configured multiple sequential questions you'll need to repeat [step 11](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html#step-11---display-the-survey-on-your-custom-window) and [step 12](messaging-window-api-tutorials-legacy-post-conversation-survey-pcs.html#step-12---consumer-responds-on-the-post-survey) per each survey question before you'll get this last notification.
 
 +**Conversation closed - Survey completed**
 

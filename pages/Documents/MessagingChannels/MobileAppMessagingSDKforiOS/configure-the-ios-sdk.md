@@ -191,14 +191,11 @@ When using Custom View Controller Mode, the Conversation view must be removed wh
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
-    LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
+    LPMessaging.instance.removeConversation(self.conversationQuery!)
 }
 ```
 
-When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call `LPMessagingSDK.instance.removeConversation(self.conversationQuery!)`.
-
-You must customize your Customer Experience Survey before initializing a conversation (calling `LPMessagingSDK.instance.showAgentConversation()`).
-
+When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call `LPMessaging.instance.removeConversation(self.conversationQuery!)`.
 
 
 * Get the object containing the default configurations:
@@ -303,7 +300,7 @@ Send logs from Conversational Cloud to your app. Logs include different severity
 * Subscribe the host app to receive log events from a specific log level and above:
 
    ```swift
-   public func subscribeLogEvents(logLevel: LogLevel)
+   public func setLoggingLevel( level: LPLoggingLevel)
    ```
 
     **Note:** Refer to [Interface and class definitions](consumer-experience-ios-sdk-interfacedefinitions.html#lpuser) to learn more about the `LogLevel` object.
@@ -348,13 +345,13 @@ The SDK uses 2 delegates:
 1. **LPMessagingSDKDelegate** - for lifecycle and connectivity events:
 
    ```swift
-   LPMessagingSDK.instance.delegate = self
+   LPMessaging.instance.delegate = self
    ```
 
 2. **LPMessagingSDKNotificationDelegate** - for handling Push and In-App Notifications:
 
    ```swift
-   LPMessagingSDK.instance.registerPushNotifications(token: deviceToken, notificationDelegate: self)
+   LPMessaging.instance.registerPushNotifications(token: deviceToken, notificationDelegate: self)
    ```
 
 You should implement and set the **LPMessagingSDKNotificationDelegate**, in order to receive Push Notifications from the SDK.
@@ -389,7 +386,7 @@ You can customize the messaging screen by adding more options to the LPMessaging
 * Add options to the messaging menu:
 
    ```swift
-   LPMessagingSDK.instance.toggleChatActions("Your Account Number")
+   LPMessaging.instance.toggleChatActions("Your Account Number")
    ```
 
 * Get the object containing the default configurations:
