@@ -82,7 +82,7 @@ When you import dialogs, consider and address any dependencies across the dialog
 
     <img class="fancyimage" style="width:450px" src="img/ConvoBuilder/dialogs_import1.png">
 
-5. Click **Add**.
+5. Click **Next**, and then **Save**.
 
     The selected dialogs are imported. At this point, you might want to rename the imported dialogs, interactions, and integrations. They are given standard names based on the element name and destination bot name. 
 
