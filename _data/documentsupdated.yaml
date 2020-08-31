@@ -238,6 +238,9 @@
       - pagename: Intents
       - pagename: Meta Intents
       - pagename: Entities
+      - pagename: Testing
+        subpages:
+         - subpagename: Advanced Model Testing
   - documentname: Intent Analyzer
     pages:
       - pagename: Overview
