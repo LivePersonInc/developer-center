@@ -240,6 +240,7 @@
       - pagename: Entities
       - pagename: Testing
         subpages:
+         - subpagename: Single Utterance Testing
          - subpagename: Advanced Model Testing
   - documentname: Intent Analyzer
     pages:
