@@ -256,7 +256,7 @@
       - pagename: LivePerson Knowledge Bases
         subpages:
           - subpagename: High-Level Concepts
-          - subpagename: System Validations
+          - subpagename: Limits
       - pagename: Knowledge Bases
       - pagename: Articles
       - pagename: Tutorial

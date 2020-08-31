@@ -1,24 +1,24 @@
 ---
-pagename: System Validations
+pagename: Limits
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
 subfoldername: LivePerson Knowledge Bases
-permalink: knowledge-base-liveperson-knowledge-bases-system-validations.html
+permalink: knowledge-base-liveperson-knowledge-bases-limits.html
 indicator: both
 ---
 
-As you add and manage articles, there are a number of validation checks that are performed to promote best practices. For knowledge bases created **after the September 2020** release, these validation checks are enforced by the application. However, for knowledge bases created before this time, you are only warned that you are exceeding the limit in question; the operation is still permitted.
+As you add and manage articles, there are a number of validation checks that are performed by the system to enforce limits and thereby promote best practices. For knowledge bases created **after the September 2020** release, the limits are enforced by the application. However, for knowledge bases created before this time, you are only warned that you are exceeding the limit in question; the operation is still permitted.
 
-### Knowledge base-level validations
+### Knowledge base-level limits
 
 | Attribute or setting | Limit |
 | --- | --- |
 | Number of articles per knowledge base | 250 in number |
 
-### Article-level validations
+### Article-level limits
 
 | Attribute or setting | Limit |
 | --- | --- |
