@@ -117,6 +117,7 @@ You can create a Consumer Authentication credential and use it in [API integrati
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
     * **Authentication URL**: Enter the authentication endpoint to be sent to the consumer in order to obtain an access token that is sent to the bot. The URL is provided by the resource provider; see their documentation for this information.
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/creds_consumer_auth_1.png">
 7. Click **Save**.
 
 ### Add a Basic Authentication credential
