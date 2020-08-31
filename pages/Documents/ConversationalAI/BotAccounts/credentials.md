@@ -15,8 +15,9 @@ You define credentials per organization.
 ### Credential types (authentication types)
 There are several types of credentials that you can define to support [API integrations](conversation-builder-integrations-api-integrations.html):
 
-- **OAuth 2.0**: Use this when you require the use of an access token that's obtained via the OAuth 2.0 protocol. This is a more secure choice than others in this list.
-- **Mutual Authentication**: Use this when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. This is a more secure choice than others in this list.
+- **OAuth 2.0**: Use this when you require the use of an access token that's obtained via the OAuth 2.0 protocol. This and Mutual Authentication are more secure choices than others in this list.
+- **Mutual Authentication**: Use this when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. This and OAuth 2.0 are more secure choices than others in this list.
+- **Consumer Authentication**: Use this when you require the bot to make API calls on behalf of the consumer. With this type of credential, the consumer is sent an authentication link, uses it to authenticate, and obtains a token that is sent to the bot. This “delegates” access to the bot, so it can make the API calls.
 - **Basic Authentication**: Use this when the API has a permanent token that you always want to use. The token is created by the system using the user name and password that you specify. This is a simpler but less secure choice than others in this list.
 - **Access Token**: Use this when the API has a permanent token that you always want to use. You specify the token to use. This is a simpler but less secure choice than others in this list.
 
@@ -93,6 +94,29 @@ You can create a Mutual Authentication credential and use it in [API integration
     - **Keys Certificate**: Click **Upload**, and upload the file that contains the private and public keys. The file format must be .pfx, .p12, or .jks.
     - **Trust Certificate**: Click **Upload**, and upload the file that contains the trusted resources. The file format must be .crt, .cer, or .pem.
     - **Cryptographic Protocols**: Select the encryption/decryption protocols that are supported by the trusted resources. If you leave this blank, the default value of TLS 1.2 and TLS1.1 is used.
+7. Click **Save**.
+
+### Add a Consumer Authentication credential
+
+You can create a Consumer Authentication credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require the bot to make API calls on behalf of the consumer. With this credential, the consumer receives an authentication link, uses it to authenticate, and obtains a token that is sent to the bot. This “delegates” access to the bot, so it can make the API calls. The general flow is this:
+
+1. In the bot, the Integration interaction is triggered in the dialog.
+2. The bot sends an authentication URL (a plain link) to the consumer.
+3. The consumer clicks the link to authenticate, is directed to a consent (allow/deny) page, and gives consent, thereby obtaining a token.
+4. The token is sent to the bot.
+5. The bot runs the integration (with the token) and responds with a result.
+
+**To add a Consumer Authentication credential**
+
+1. In the Bot Accounts application, select the name of the organization for which to create the credential.
+2. Click **Credentials** in the upper-left corner.
+3. Click **Add Credentials** in the upper-right corner.
+4. In the Add Credentials dialog box, specify the following:
+    * **Name**: Enter a descriptive name.
+    * **Authentication Type**: Select "Consumer Authentication."
+5. Click **Next**.
+6. In the Add Credentials dialog box, specify the following:
+    * **Authentication URL**: Enter the authentication endpoint to be sent to the consumer in order to obtain an access token that is sent to the bot. The URL is provided by the resource provider; see their documentation for this information.
 7. Click **Save**.
 
 ### Add a Basic Authentication credential
