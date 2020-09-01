@@ -465,9 +465,9 @@ sourceAgentId | The source agent ID.| string
 sourceAgentLoginName| The source agent name. | string
 sourceAgentNickname | The source agent nickname.| string
 sourceAgentFullName | The source agent full name.  | string
-reason  | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver) | string
+reason  | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver) | string **Note**: the `reason` property gives you insight into why the conversation was transferred: * back2Q - the agent transferred the conversation back to the queue. * Agent - the conversation was transferred to a specific agent. * SuggestedAgentTimeout - the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue. * Skill - the conversation was transferred to a skill. * TakeOver - a manager has taken over the conversation.
 contextData| Contains context information about the transfer, including raw and structured metadata.| container| |
-dialogId| The ID of the dialog being transferred.| string**Note**: the `reason` property gives you insight into why the conversation was transferred: * back2Q - the agent transferred the conversation back to the queue. * Agent - the conversation was transferred to a specific agent. * SuggestedAgentTimeout - the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue. * Skill - the conversation was transferred to a skill. * TakeOver - a manager has taken over the conversation.
+dialogId| The ID of the dialog being transferred.| String
 
 _Interaction info_
 
