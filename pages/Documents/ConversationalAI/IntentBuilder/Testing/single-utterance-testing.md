@@ -10,8 +10,6 @@ permalink: intent-builder-testing-single-utterance-testing.html
 indicator: both
 ---
 
-### Test a domain
-
 You can test the intents (and entities) in a domain against sample user utterances using the **Test** tool. The NLU engine takes the sample utterance and sees if it can find matches in the intents. The results list the intents and the degree to which they matched the utterance.
 
 The purpose of testing is to determine whether the domain is performing as expected. As an example, assume you have a domain with 10 intents that each have 10 training phrases. During testing, you might use a test bank of 20-30 utterances that aren’t a part of the domain to see the results for those utterances. The accuracy would help to define the benchmark for the domain. After evaluating the utterances that didn’t work, you could fine tune the domain, re-train (required depending on the NLU engine), and then re-test for verification.
