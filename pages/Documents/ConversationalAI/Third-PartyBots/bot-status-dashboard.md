@@ -89,6 +89,6 @@ Figure 4.1 Bot conversation error logs
 
 You can filter the errors by conversation id upon clicking the filter button.
 
-If you click on the error description, a new page will be opened with detailed information on how to fix the erros.'
+If you click on the error description, a new page will be opened with detailed information on how to fix the errors.
 
-Additionally there is an option to copy the detailed error response for providing this information to LP Support
+Additionally, there is an option to copy the detailed error response for providing this information to LP Support.

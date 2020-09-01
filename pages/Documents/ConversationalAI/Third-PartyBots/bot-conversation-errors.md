@@ -40,7 +40,7 @@ This error indicates an issue in changing the TTR value for the current conversa
 Mostly, the error is a wrong value which is used for the TTL
 #### Solutions
 Please choose the right value for your TTR step.
-See the documentations for the individual vendors on how to set TTR properly
+See the documentation for the individual vendors on how to set TTR properly
 
 ### com.liveperson.bot-connectors-worker.error.connector.messaging.transfer-to-skill
 
@@ -56,7 +56,7 @@ None.
 #### Description
 This happens if the bot could not send a message to a chat conversation
 #### Reasons
-Mostly the structured content format is wrong, so please double check this.
+Mostly the structured content format is wrong, so please double-check this.
 #### Solutions
 Please check [structured content](getting-started-with-rich-messaging-introduction.html)
 
@@ -65,7 +65,7 @@ Please check [structured content](getting-started-with-rich-messaging-introducti
 #### Description
 This happens if a chat conversation could not be closed by the bot.
 #### Reasons
-Usually this happens if the conversation was alreadx closed by the consumer in the meantime.
+Usually, this happens if the conversation was already closed by the consumer in the meantime.
 #### Solutions
 None.
 
@@ -85,7 +85,7 @@ This happens if the provided skill in the action parameters is not valid.
 #### Reasons
 The skill name provided in the action parameters can not be found on the lp account.
 #### Solutions
-Double check that the skill exists on your account and also check the spelling, it's case sensitive.
+Double-check that the skill exists on your account and also check the spelling, it's case sensitive.
 
 ### com.liveperson.bot-connectors-worker.error.pipes.verify-ai-response.missing-action-and-messages
 
@@ -117,7 +117,7 @@ Do not send QuickReplies to Chat Conversations
 ### com.liveperson.bot-connectors-worker.error.events-queue.not-catched-pipeline-error
 
 #### Description
-This error indicates that there is a unknown error while processing the consumer event.
+This error indicates that there is an unknown error while processing the consumer event.
 #### Reasons
 Mostly implementation errors on our end.
 #### Solutions
@@ -126,11 +126,11 @@ Please reach out to LivePerson Support and provide the exact error details. You 
 ### com.liveperson.bot-connectors-worker.error.aivendor.dialogflowv2.send-query
 
 #### Description
-Could not send query to DialogFlow.
+Could not send a query to DialogFlow.
 #### Reasons
 Mostly issues with DialogFlow APIS.
 #### Solutions
-Double check you have enough credits left for your Dialogflow account.
+Double-check you have enough credits left for your Dialogflow account.
 Check for any interruption on Dialogflow side.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.invoke-lambda
@@ -149,25 +149,25 @@ This happens if there is no response body provided.
 #### Reasons
 The Faas callback was invoked without a response body object.
 #### Solutions
-Provide response body in callback.
+Provide a response body in the callback.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-hook
 
 #### Description
-Indicates that the faas hook could not be invoked.
+Indicates that the Faas hook could not be invoked.
 #### Reasons
 Implementation errors inside Faas hook.
 #### Solutions
-Double check and test the Faas Hook code.
+Double-check and test the Faas Hook code.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.lex.composite-format-not-supported
 
 #### Description
 This error is thrown Lex responds with a composite format.
 #### Reasons
-Lex response contained composite format.
+Lex response contained a composite format.
 #### Solutions
-Do not use composite format in Lex for TPB.
+Do not use the composite format in Lex for TPB.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.lex.custom-payload-malformed
 
@@ -176,7 +176,7 @@ The custom format provided by lex is malformed.
 #### Reasons
 Mostly JSON errors.
 #### Solutions
-Please verify your custom JSON payload with a JSON validator of your choise.
+Please verify your custom JSON payload with a JSON validator of your choice.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.lex.custom-payload-no-params
 
@@ -217,20 +217,20 @@ IF this issue happens frequently, please reach out to LP Support with the copied
 ### com.liveperson.bot-connectors-worker.error.aivendor.lex.send-query
 
 #### Description
-Happens if the query to Lex could not be send.
+Happens if the query to Lex could not be sent.
 #### Reasons
 Lex temporarily unavailable.
 #### Solutions
-Double check the credentials for your bot are still valid and you have enough credits left
+Double-check the credentials for your bot are still valid and you have enough credits left
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.watson.parser.custom.undefined-structured-content
 
 #### Description
-This error happens if the strucutred content property is undefined.
+This error happens if the structured content property is undefined.
 #### Reasons
-Strcutred content response is undefined in Watson response
+Structured content response is undefined in Watson response
 #### Solutions
-Fouble check the relevant Watson Payload and also double check the watson docs [Watson Assistant](third-party-bots-ibm-watson-assistant.html)
+Double-check the relevant Watson Payload and also double check the Watson docs [Watson Assistant](third-party-bots-ibm-watson-assistant.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.watson.parser.image.undefined-source
 
@@ -244,16 +244,16 @@ Provide the source parameter for your Image.
 ### com.liveperson.bot-connectors-worker.error.aivendor.watson.parser.list.undefined-options
 
 #### Description
-This error happens because the bot received a list response from watson, without any options inside.
+This error happens because the bot received a list response from Watson, without any options inside.
 #### Reasons
-The bot doesn't know how to handle a empty list, therefore we assume this is an error.
+The bot doesn't know how to handle an empty list, therefore we assume this is an error.
 #### Solutions
 Provide options properties to your Watson List object.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.watson.message-format-not-supported
 
 #### Description
-The message format provided by watson is not supported by our connector.
+The message format provided by Watson is not supported by our connector.
 #### Reasons
 You are using a new format which we do not support yet.
 #### Solutions
@@ -275,7 +275,7 @@ The provided pause time is not defined. Therefore we don't know what to do.
 #### Reasons
 Undefined pause time property.
 #### Solutions
-Double check the pause time property is provided
+Double-check the pause time property is provided
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.watson.parse-message.get-parse-message-failed
 
@@ -289,11 +289,11 @@ Double check the Watson responses here: [Watson Assistant](third-party-bots-ibm-
 ### com.liveperson.bot-connectors-worker.error.aivendor.watson.index.generic-parser-crashed
 
 #### Description
-This happens if there is an issue with parsing the provided watson response.
+This happens if there is an issue with parsing the provided Watson response.
 #### Reasons
 Malformed Watson response.
 #### Solutions
-Double check the Watson responses here: [Watson Assistant](third-party-bots-ibm-watson-assistant.html)[Watson AssistantV2](third-party-bots-ibm-watson-assistant-version-2.html)
+Double-check the Watson responses here: [Watson Assistant](third-party-bots-ibm-watson-assistant.html)[Watson AssistantV2](third-party-bots-ibm-watson-assistant-version-2.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.watson.send-query
 
@@ -318,7 +318,7 @@ Check the error logs on your Watson Instance to find out the root cause of the f
 #### Description
 This happens if we could not send a query to Watson. 
 #### Reasons
-Usually this happens if the quota limit is reached.
+Usually, this happens if the quota limit is reached.
 #### Solutions
 Increase your Watson Quota to match the expected load.
 
@@ -336,10 +336,10 @@ None. If this issue happens frequently, please reach out to LP Support with the 
 #### Description
 The session id used by the conversation is not valid anymore.
 #### Reasons
-The lifespan of a conversation state is different in LP and IBM. It could be that a open conversation in LP is already closed in Watson.
+The lifespan of a conversation state is different in LP and IBM. It could be that an open conversation in LP is already closed in Watson.
 #### Solutions
 Increase the lifetime of a Watson conversation
-Alternatively, you can also auto close conversations from LP side remove any stuck conversations.
+Alternatively, you can also auto close conversations from the LP side remove any stuck conversations.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.send-query
 
@@ -348,7 +348,7 @@ Sending query to MS Bot Framework failed.
 #### Reasons
 This usually happens if the Endpoint is not respoding in time.
 #### Solutions
-Make sure you responde in time.
+Make sure you send the response in time.
 If you are using a custom endpoint, double check it behaves exactly as the one we expect [Microsoft Bots](third-party-bots-microsoft-bot-framework.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.parser-crashed
@@ -358,7 +358,7 @@ The parser could not parse the provided input and therefore crashed.
 #### Reasons
 Malformed JSON, malformed payload.
 #### Solutions
-Double check the payload and make sure it is same as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check the payload and make sure it is same as described [here](third-party-bots-microsoft-bot-framework.html) 
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.response-missing
 
@@ -367,7 +367,7 @@ There is no response provided by the MS bot.
 #### Reasons
 Implementation error on MS bot.
 #### Solutions
-Double check the payload and make sure it is same as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check the payload and make sure it is same as described [here](third-party-bots-microsoft-bot-framework.html) 
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.activity.invalid-type
 
@@ -376,7 +376,7 @@ The provided activity type is not supported.
 #### Reasons
 The bot is not capable of handling this activity type.
 #### Solutions
-Double check that you are only using supported types as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check that you are only using supported types as described [here](third-party-bots-microsoft-bot-framework.html) 
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.activity.invalid-name
 
