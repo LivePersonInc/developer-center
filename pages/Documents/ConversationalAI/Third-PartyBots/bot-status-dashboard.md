@@ -77,3 +77,18 @@ On the left side, in section 1 of *Figure 3.1*, the user can see the accumulated
 | Escalated Conversations | Percentage of total conversations that were escalated due to an error with the bot |
 
 On The right side, in section 2 of *Figure 3.1*, the user can see a timeline representation of the conversation metrics. The user can select between various time scales, the smallest is last ten minutes and the biggest is last week.
+
+
+#### Conversation Errors
+
+When selecting the Conversation Errors tab the bot status dashboard provides an overview of specific bot conversation errors. 
+
+<img class="fancyimage" style="width:800px" src="img/botstatusdashboard/bot_status_conversation_errors.png">
+
+Figure 4.1 Bot conversation error logs
+
+You can filter the errors by conversation id upon clicking the filter button.
+
+If you click on the error description, a new page will be opened with detailed information on how to fix the erros.'
+
+Additionally there is an option to copy the detailed error response for providing this information to LP Support
