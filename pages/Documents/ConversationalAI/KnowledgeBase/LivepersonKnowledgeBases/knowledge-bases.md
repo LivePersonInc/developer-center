@@ -13,6 +13,8 @@ indicator: both
 
 ### Add a knowledge base
 
+**To add a LivePerson knowledge base**
+
 1. Access the Knowledge Base application as described [here](knowledge-base-overview.html#access-the-knowledge-base).
 2. In the dashboard that lists your knowledge bases, click **Add Knowledge Base** in the upper-right corner.
 2. Specify the following:
