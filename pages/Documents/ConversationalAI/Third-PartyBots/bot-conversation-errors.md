@@ -140,7 +140,7 @@ This indicates an issue during Faas invocation.
 #### Reasons
 Mostly this happens if your quota limit is exceeded.
 #### Solutions
-Double check you have enough api calls left for Faas.
+Double-check you have enough api calls left for Faas.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.missing-response-body
 
@@ -284,7 +284,7 @@ This indicates an issue during message parsing.
 #### Reasons
 Wrong structure in the JSON payload.
 #### Solutions
-Double check the Watson responses here: [Watson Assistant](third-party-bots-ibm-watson-assistant.html)[Watson AssistantV2](third-party-bots-ibm-watson-assistant-version-2.html)
+Double-check the Watson responses here: [Watson Assistant](third-party-bots-ibm-watson-assistant.html)[Watson AssistantV2](third-party-bots-ibm-watson-assistant-version-2.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.watson.index.generic-parser-crashed
 
@@ -385,4 +385,4 @@ The provided activity name is not supported.
 #### Reasons
 The bot is not capable of handling this activity name.
 #### Solutions
-Double check that you are only using supported activity names as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check that you are only using supported activity names as described [here](third-party-bots-microsoft-bot-framework.html) 
