@@ -41,6 +41,6 @@ If the domain uses the LivePerson NLU v2 engine or a 3rd-party engine, you'll ne
 
     If you searched in the domain, you can select a result to see a more detailed breakdown.
 
+    For details on the intent scoring, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
+    
     After reviewing the results, if the score isn't where you’d like it, you can add more training phrases. In addition, using [entities](conversation-builder-intent-builder-entities.html) helps to increase the accuracy of intents and give their score a boost.
-
-#### What is the intent score/threshold?
