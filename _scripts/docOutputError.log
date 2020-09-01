@@ -1,26 +1,15 @@
-The permalink is invalid found: mobile-app-messaging-sdk-for-ios-quick-start-guides-quick-start-5-2-1-and-below.html
-Expected permalink: mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-5-2-1-and-below.html 
+The permalink is invalid found: third-party-bots-conversation-errors.html
+Expected permalink: third-party-bots-bot-conversation-errors.html 
 
 
 CURRENT PAGE INFO :  {
-  categoryname: '"Messaging Channels"',
-  documentname: 'Mobile App Messaging SDK for iOS',
-  subfoldername: 'Quick Starts',
-  permalink: 'mobile-app-messaging-sdk-for-ios-quick-start-guides-quick-start-5-2-1-and-below.html',
-  pagename: 'Quick Start 5.2.1 and below'
-}
-The permalink is invalid found: mobile-app-messaging-sdk-for-ios-quick-start-guides-quick-start-6-0-and-up-xcframework-support.html
-Expected permalink: mobile-app-messaging-sdk-for-ios-quick-starts-quick-start-6-0-and-up-xcframework-support.html 
-
-
-CURRENT PAGE INFO :  {
-  categoryname: '"Messaging Channels"',
-  documentname: 'Mobile App Messaging SDK for iOS',
-  subfoldername: 'Quick Starts',
-  permalink: 'mobile-app-messaging-sdk-for-ios-quick-start-guides-quick-start-6-0-and-up-xcframework-support.html',
-  pagename: 'Quick Start - 6.0 and up (XCFramework support)'
+  categoryname: '"Conversational AI"',
+  documentname: 'Third-Party Bots',
+  subfoldername: null,
+  permalink: 'third-party-bots-conversation-errors.html',
+  pagename: 'Bot Conversation Errors'
 }
 
-Number of errors:  2
+Number of errors:  1
 
- Number of errors:  2
+ Number of errors:  1
