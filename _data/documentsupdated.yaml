@@ -251,8 +251,8 @@
       - pagename: CMS Knowledge Bases
         subpages:
           - subpagename: CMS KBs with LivePerson AI
-          - subpagename: Best Practices
           - subpagename: CMS KBs without LivePerson AI
+          - subpagename: Best Practices
       - pagename: LivePerson Knowledge Bases
         subpages:
           - subpagename: Introduction
