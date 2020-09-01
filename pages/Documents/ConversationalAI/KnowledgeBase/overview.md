@@ -42,7 +42,7 @@ If your tool of choice is a simple Google sheet, you can [add a LivePerson knowl
 If your tool of choice is a simple CSV sheet, you can [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html) and import the contents of the CSV file when you do. Note that the import is a one-time operation when you add the knowledge base. Thereafter, you add and update the articles directly in the knowledge base.
 
 #### Starting from scratch
-If you’re starting a knowledge base from scratch, and you prefer to work directly in the Knowledge Base application, you can do this. Simply [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html) and start [adding articles](knowledge-base-liveperson-knowledge-bases-articles.html).
+If you’re starting a knowledge base from scratch, and you prefer to work directly in the Knowledge Base application, you can also do this. Simply [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html) and start [adding articles](knowledge-base-liveperson-knowledge-bases-articles.html).
 
 ### Access Knowledge Base
 

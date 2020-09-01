@@ -21,12 +21,12 @@ A CMS knowledge base with LivePerson AI:
 ### High-level workflow
 When adding a CMS knowledge base with LivePerson AI, follow this high-level workflow:
 
-1. In Intent Builder, create the domain and the intents therein.
+1. In [Intent Builder](intent-builder-overview.html), create the [domain](intent-builder-domains.html) and the [intents](intent-builder-intents.html) therein.
 2. In Knowledge Base:
     1. Add the CMS knowledge base. During this step, you’ll specify the domain that you created in step 1.
     2. In the knowledge base that you added, associate each article with an intent in the domain.
-    3. Train the articles to match consumer utterances, and then test with the Debugger tool. The latter simulates a Knowledge Base integration within a bot.
-3. In Conversation Builder, add a Knowledge Base integration in a bot and test.
+    3. [Train](knowledge-base-common-common-tasks.html#train-a-knowledge-base) the articles to match consumer utterances, and then [test](knowledge-base-common-common-tasks.html#test-user-input) with the Debugger tool. The latter simulates a Knowledge Base integration within a bot.
+3. In Conversation Builder, [add a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and test.
 
 {: .important}
 Sync with the CMS after making changes to the content in the CMS. This updates the knowledge base accordingly.
@@ -43,7 +43,7 @@ Sync with the CMS after making changes to the content in the CMS. This updates t
 5. Set up the configuration needed to map the content’s metadata (article ID, article title, etc.). To do this, specify the following:
     * **Method**: Select the type of HTTP request method. 
     * **URL**: Enter the request target, the URL.
-    * **Credential**: Select the credential to use for authentication if applicable.
+    * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
     * **Request Headers**: Add any request headers to include in the request.
     * **Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Post Body**: Enter the payload to send.
@@ -52,7 +52,7 @@ Sync with the CMS after making changes to the content in the CMS. This updates t
 8. Set up the configuration needed to query the CMS at run time and return the matched content, which is a single article specified by its article ID. To do this, specify the following:
     * **Method**: Select the type of HTTP request method.
     * **URL**: Enter the request target, the URL.
-    * **Credential**: Select the credential to use for authentication if applicable.
+    * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
     * **Request Headers**: Add any request headers to include in the request.
     * **Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Post Body**: Enter the payload to send.

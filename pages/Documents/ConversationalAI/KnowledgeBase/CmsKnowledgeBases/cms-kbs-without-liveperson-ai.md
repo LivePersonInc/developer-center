@@ -15,9 +15,9 @@ indicator: both
 A CMS knowledge base without LivePerson AI:
 
 * Integrates with an external content management system (CMS)
-* *Doesn’t* use a Natural Language Understanding (NLU) engine to evaluate the articles in the knowledge base against the consumer’s utterance and return the highest scoring article. Instead, the utterance (search query) is simply passed on to the CMS, which uses its own query and answer API to find and return the most appropriate article.
+* *Doesn’t* use a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance and return the highest scoring article. Instead, the utterance (search query) is simply passed on to the CMS, which uses its own query and answer API to find and return the most appropriate article.
 
-    LivePerson recommends that you take advantage of the capabilities of NLU to perform this work. However, this isn’t required. You can use the CMS’ API instead.
+    LivePerson recommends that you [take advantage of the capabilities of NLU](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html) to perform this work. However, this isn’t required. You can use the CMS’ API instead.
 
 ### High-level workflow
 
@@ -26,7 +26,7 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 1. In Knowledge Base: 
     1. Add the CMS knowledge base.
     2. Use the Search tool to test the knowledge base.
-2. In Conversation Builder, add a Knowledge Base integration in a bot and test.
+2. In Conversation Builder, [add a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and test.
 
 ### Add a CMS KB without LivePerson AI
 
@@ -40,7 +40,7 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 5. Set up the configuration needed to query the CMS and fetch the resulting article suggestions. To do this, specify the following:
     * **Method**: Select the type of HTTP request method.
     * **URL**: Enter the request target, the URL.
-    * **Credential**: Select the credential to use for authentication if applicable.
+    * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
     * **Request Headers**: Add any request headers to include in the request.
     * **Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Post Body**: Enter the payload to send.

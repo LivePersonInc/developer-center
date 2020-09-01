@@ -14,6 +14,10 @@ This topic contains information on tasks that are relevant to both CMS knowledge
 
 ### Train a knowledge base
 
+Training a knowledge base is applicable when it is a:
+* [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html)
+* [CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
+
 To train a knowledge base, select the knowledge base, enter an utterance, and review the results. If you don't get any results for a particular utterance, you can adjust the filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
 
 
@@ -42,6 +46,10 @@ If you look at the article details, in the **Advanced Settings**, you can see th
 Something to keep in mind when training in general, and using the Thumbs Up/Down icons specifically, is that because they are so easy to use, they are often misused. Often people use Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down. Anything over about 10 - 15 training phrases might begin to return false positives.
 
 ### Test user input
+
+Using the Debugger tool to test user input is applicable when the knowledge base is a:
+* [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html)
+* [CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
 
 Use the Debugger tool to feed user input directly into a knowledge base to test the NLU processing and content matching.
 
