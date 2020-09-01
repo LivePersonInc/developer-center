@@ -165,4 +165,4 @@ In Intent Builder, in the domain that you created in the previous step, [create 
 
 #### Step 5: Train the domain
 
-In Intent Builder, [train the domain](intent-builder-domains.html#train-a-3rd-party-nlu-domain). Once training is completed (which creates the model version), you can start to [test](intent-builder-domains.html#test-a-domain).
+In Intent Builder, [train the domain](intent-builder-domains.html#train-a-3rd-party-nlu-domain). Once training is completed (which creates the model version), you can start to [test](intent-builder-testing-single-utterance-testing.html).

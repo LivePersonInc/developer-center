@@ -74,7 +74,7 @@ When you integrate a knowledge base with a bot via a [Knowledge Base integration
 
 #### Thresholds
 
-When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, or POOR. If you're using Knowledge Base intents, the confidence score breakdown for LivePerson NLU v1 is used. If you're using Domain intents, the breakdown for the NLU engine used by the domain is used. For the breakdowns, see [here](intent-builder-domains.html#what-is-the-intent-scorethreshold).
+When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, or POOR. If you're using Knowledge Base intents, the confidence score breakdown for LivePerson NLU v1 is used. If you're using Domain intents, the breakdown for the NLU engine used by the domain is used. For the breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
 
 When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify the minimum score that a result must have in order to be returned. (The highest performing article with that threshold is returned.) You can select from VERY GOOD, GOOD, or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
 

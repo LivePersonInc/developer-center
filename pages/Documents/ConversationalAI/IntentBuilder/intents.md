@@ -63,7 +63,7 @@ You can't change the threshold when using intents (although you can do [this](kn
 
 ### Train intents
 
-See [Test a domain](intent-builder-domains.html#test-a-domain).
+See [Test a domain](intent-builder-testing-single-utterance-testing.html).
 
 
 ### Delete an intent
