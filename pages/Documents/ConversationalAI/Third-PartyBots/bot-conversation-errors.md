@@ -346,7 +346,7 @@ Alternatively, you can also auto close conversations from the LP side remove any
 #### Description
 Sending query to MS Bot Framework failed.
 #### Reasons
-This usually happens if the Endpoint is not respoding in time.
+This usually happens if the Endpoint is not responding in time.
 #### Solutions
 Make sure you send the response in time.
 If you are using a custom endpoint, double check it behaves exactly as the one we expect [Microsoft Bots](third-party-bots-microsoft-bot-framework.html)
