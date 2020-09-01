@@ -22,6 +22,7 @@ This error indicates that the message could not be send to the conversation
 The reason for this is mostly wrong formatted structured content. Another issue could be missing url whitelisting for  images 
 #### Solutions
 Please check [structured content](getting-started-with-rich-messaging-introduction.html)
+
 ### com.liveperson.bot-connectors-worker.error.connector.messaging.end-conversation
 
 #### Description
@@ -30,6 +31,7 @@ This error indicates an issue with closing a messaging conversation.
 This usually happens if the conversation was already closed/transferred while the bot is evaluating the response.
 #### Solutions
 None.
+
 ### com.liveperson.bot-connectors-worker.error.connector.messaging.change-ttr
 
 #### Description
@@ -231,6 +233,7 @@ Strcutred content response is undefined in Watson response
 Fouble check the relevant Watson Payload and also double check the watson docs [Watson Assistant](third-party-bots-ibm-watson-assistant.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.watson.parser.image.undefined-source
+
 #### Description
 This error happens if there is no image source property provided on the Image object in the Watson response.
 #### Reasons
@@ -248,6 +251,7 @@ The bot doesn't know how to handle a empty list, therefore we assume this is an 
 Provide options properties to your Watson List object.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.watson.message-format-not-supported
+
 #### Description
 The message format provided by watson is not supported by our connector.
 #### Reasons
@@ -346,6 +350,7 @@ This usually happens if the Endpoint is not respoding in time.
 #### Solutions
 Make sure you responde in time.
 If you are using a custom endpoint, double check it behaves exactly as the one we expect [Microsoft Bots](third-party-bots-microsoft-bot-framework.html)
+
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.parser-crashed
 
 #### Description
