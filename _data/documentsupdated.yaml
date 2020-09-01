@@ -255,7 +255,7 @@
           - subpagename: CMS KBs without LivePerson AI
       - pagename: LivePerson Knowledge Bases
         subpages:
-          - subpagename: High-Level Concepts
+          - subpagename: Introduction
           - subpagename: Limits
       - pagename: Knowledge Bases
       - pagename: Articles

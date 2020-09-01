@@ -1,12 +1,12 @@
 ---
-pagename: High-Level Concepts
+pagename: Introduction
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
 subfoldername: LivePerson Knowledge Bases
-permalink: knowledge-base-liveperson-knowledge-bases-high-level-concepts.html
+permalink: knowledge-base-liveperson-knowledge-bases-introduction.html
 indicator: both
 ---
 
