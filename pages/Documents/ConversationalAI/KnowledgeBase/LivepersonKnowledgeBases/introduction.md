@@ -10,7 +10,7 @@ permalink: knowledge-base-liveperson-knowledge-bases-introduction.html
 indicator: both
 ---
 
-### Overview
+### What's a LivePerson knowledge base?
 
 A LivePerson knowledge base is one whose content you can create and manage directly within the Knowledge Base application. You can:
 

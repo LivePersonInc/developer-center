@@ -10,7 +10,7 @@ permalink: knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html
 indicator: both
 ---
 
-### Introduction
+### What's a CMS knowledge base without LivePerson AI?
 
 A CMS knowledge base without LivePerson AI:
 
