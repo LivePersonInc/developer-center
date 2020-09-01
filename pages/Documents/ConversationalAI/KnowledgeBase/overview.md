@@ -30,11 +30,7 @@ You can create knowledge bases using a variety of content sources:
 You can also start from scratch and author articles directly in a knowledge base.
 
 #### Content management systems (CMS)
-If you have a CMS with well-curated content that you want to leverage in bot conversations, you can add a CMS knowledge base. This is one where the content is authored and managed entirely within the external CMS application.
-
-You can integrate with any CMS that has the capability, i.e., an API connector. Notable examples include Salesforce and Zendesk. Integrating with your CMS lets your content creators use familiar tools and workflows to author and manage the content.
-
-Within the Knowledge Base application, a CMS knowledge base serves as a connector to the CMS. You can choose to [use LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html) (recommended) or [use the CMS’ query and answer API](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html) to select and serve the content. If you use LivePerson AI, read-only article information is displayed in the knowledge base to assist you as you do some configuration work. If you use the CMS’ API instead, read-only article information isn’t displayed except when testing the knowledge base.
+If you have a CMS with well-curated content that you want to leverage in bot conversations, you can [add a CMS knowledge base](knowledge-base-cms-knowledge-bases-introduction.html). This is one where the content is authored and managed entirely within the external CMS application.
 
 #### Google sheets
 If your tool of choice is a simple Google sheet, you can [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html) and link the sheet to it. Once you add the knowledge base using the sheet, you can follow one of two workflows:
