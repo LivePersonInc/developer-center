@@ -266,7 +266,7 @@
     pages:
       - pagename: Getting Started
       - pagename: Bot Status Dashboard
-      - pagename: Conversation Errors Dashboard
+      - pagename: Bot Conversation Errors
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
