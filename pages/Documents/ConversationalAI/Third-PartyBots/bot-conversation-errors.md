@@ -1,5 +1,5 @@
 ---
-pagename: Conversation Errors Dashboard
+pagename: Bot Conversation Errors
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
