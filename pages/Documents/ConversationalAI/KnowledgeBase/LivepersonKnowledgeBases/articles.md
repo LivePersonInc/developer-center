@@ -1,11 +1,13 @@
 ---
 pagename: Articles
 redirect_from:
+    - knowledge-base-articles.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-permalink: knowledge-base-articles.html
+subfoldername: LivePerson Knowledge Bases
+permalink: knowledge-base-liveperson-knowledge-bases-articles.html
 indicator: both
 ---
 

@@ -258,8 +258,8 @@
         subpages:
           - subpagename: Introduction
           - subpagename: Knowledge Bases
+          - subpagename: Articles
           - subpagename: Limits
-      - pagename: Articles
       - pagename: Tutorial
   - documentname: Bots Status
     pages:
