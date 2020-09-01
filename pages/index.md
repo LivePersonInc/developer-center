@@ -1,6 +1,5 @@
 ---
-pagename:  Let’s build a conversational future together!
-documentname: Welcome
+pagename: Index
 sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
@@ -57,5 +56,5 @@ solutions with you!
         <button class="create-button">Start Free Trial</button>
       </a>
     </div>
-</div>
+  </div>
 </div>

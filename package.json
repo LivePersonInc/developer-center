@@ -12,11 +12,19 @@
     "lodash": ">=4.17.13",
     "lodash.template": ">=4.5.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bundle exec jekyll build",
-    "serve": "bundle exec jekyll serve --incremental"
+    "serve": "bundle exec jekyll serve --incremental",
+    "verify": "bash ./_scripts/verify-documents.sh",
+    "fixnaming": "bash ./_scripts/automated-name-fix.sh"
+  },
+  "pre-commit": {
+    "silent": true,
+    "run": "verify"
   },
   "repository": {
     "type": "git",
