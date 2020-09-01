@@ -260,7 +260,7 @@
           - subpagename: Knowledge Bases
           - subpagename: Articles
           - subpagename: Limits
-      - pagename: Tutorial
+          - subpagename: Tutorial
   - documentname: Bots Status
     pages:
       - pagename: Overview
