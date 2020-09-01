@@ -37,12 +37,6 @@ Enter the answer choices. The number of choices depends on the channel, so check
 
 The user can either enter or select the answers. 
 
-#### Handling in text-only channels
-
-When you deploy your bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Business Chat or WhatsApp), a multiple choice question is automatically sent as plain text.
-
-You can use the interaction's settings (described next) to specify the list style to use.
-
 #### Interaction settings
 
 Configure the following settings in the [interaction's settings](conversation-builder-interactions-configuration-settings.html):
@@ -51,7 +45,7 @@ Configure the following settings in the [interaction's settings](conversation-bu
 
 <img style="width:350px" src="img/ConvoBuilder/questions_mcq2.png">
 
-- **Text Only Fallback > List Style**: Select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
+- **Text Only Fallback > List Style**: When you deploy your bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Business Chat or WhatsApp), a multiple choice question is automatically sent as plain text. Use this setting to select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
 
 - **Enable Indentation**: Affects the display of options in text-only channels. Enable this to indent (with one tab space) the multiple choice options under the question. Disable this to align them under the question without an indent.
 
