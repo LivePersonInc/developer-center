@@ -259,6 +259,7 @@
           - subpagename: Introduction
           - subpagename: Knowledge Bases
           - subpagename: Articles
+          - subpagename: Best Practices
           - subpagename: Limits
           - subpagename: Tutorial
   - documentname: Bots Status
