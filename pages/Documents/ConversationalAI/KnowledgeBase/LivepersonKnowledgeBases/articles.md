@@ -102,62 +102,6 @@ Enabled articles are returned by knowledge base searches in Knowledge Base integ
     * Turn on (enable) the setting to enable the article.
     * Turn off (disable) the setting to disable the article.
 
-### Train a knowledge base
-
-To train a knowledge base, select the knowledge base, enter an utterance, and review the results. If you don't get any results for a particular utterance, you can adjust the filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
-
-
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test.png">
-
-By default, the Search Settings are set to **Intents** and **Fair Plus**. This means that the algorithm will first see if there are any matches using our NLU, with a threshold of Fair Plus. However, if it doesn’t find any, it will attempt a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." This means you should add some more training phrases to an article to improve your results.
-
-If you don’t want the follow-up text search, you can change the Search Settings to "Intents Only" which will ONLY perform the intents search.
-
-If you ONLY want to perform the text search, you can set the Settings to "All".
-
-To add more training phrases (intent qualifiers), you can manually add them to your article.
-
-<img class="fancyimage" style="width:700px" src="img/qualifiers.png">
-
-You can also use the Thumb Up and Down icons displayed in a search. Below is an example where the utterance returned some results. The preferred result was only a GOOF match. By tapping the **Thumbs Up** icon, you automatically add the current utterance to a Positive Learning set for this article. Tapping **Thumbs Down** does the opposite.
-
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test_thumbsUp.png">
-
-If you were to rerun the search, the article would return with a higher score.
-
-If you look at the article details, in the **Advanced Settings**, you can see that the utterance has been added.
-
-#### Beware of overtraining
-
-Something to keep in mind when training in general, and using the Thumbs Up/Down icons specifically, is that because they are so easy to use, they are often misused. Often people use Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down. Anything over about 10 - 15 training phrases might begin to return false positives.
-
-### Test user input
-
-Use the Debugger tool to feed user input directly into a knowledge base to test the NLU processing and content matching.
-
-The Debugger tool works exactly like a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot. So, if your search selections in the tool match how you've configured the bot, the results you see with the tool will be the same as those returned in a bot conversation. If you don't yet have a bot integrated with your knowledge base, the Debugger tool is also a way to test how the bot will behave once it is.
-
-The Debugger tool is also *the* way to see the JSON that's returned by the search.
-
-**To test user input**
-
-1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Test User Input**.
-
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_testUserInput1.png">
-
-3. Specify the following:
-
-    * **Phrase**: Enter the phrase to search for.
-    * **Search Modes**: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-overview.html#search-modes).
-    * **Threshold**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledge-base-overview.html#thresholds).
-
-4. Click **test**.
-
-    In the results, the JSON of the matched article is displayed. You can examine the "title" to see which article has been matched.
-
-    <img style="width:450px" src="img/ConvoBuilder/kb_testUserInput2.png">
-
 ### Chat with a bot linked to a knowledge base
 
 If you have a bot linked to your knowledge base via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), in the Knowledge Base application, you can feed test user input to the bot to see if it matches, returns and renders content as you'd expect.
@@ -200,45 +144,3 @@ If you're looking for the name of a node not listed here, you can use the Knowle
 | Content Links > Image | imageURL |
 | Content Links > Video | videoURL |
 | Content Links > Audio | audioURL |
-
-### Best practices
-
-To increase the quality of your content matches, follow the best practices below.
-
-{: .important}
-For more best practices when training and tuning NLU, see [here](conversation-builder-best-practices-train-tune-nlu.html).
-
-#### Number of articles
-
-The number of articles that can be added to a knowledge base is limited to 250 or fewer. Knowledge bases created before the August 2020 release are exempt from this limit. However, for an optimal consumer experience, brands are encouraged to design solutions that follow the best practices outlined here below.
-
-- A good guideline is 75-100 articles in a knowledge base. Keep in mind that every article requires some level of training if you’re going to use NLU (and not the text-to-text search mode).
-
-- If you have a knowledge base that exceeds 75-100 articles, consider splitting the knowledge base into smaller ones based on category, likewise splitting the intents into domains based on category, and adding multiple knowledge base integrations. Then have the NLU match the consumer’s question to the category-based intent and search the applicable knowledge base. This yields a faster response during the conversation.
-
-    If you have a knowledge base that exceeds 75-100 articles, also consider using domain intents, and, for the domain, use LivePerson NLU v2, which has better performance with large sets of data.
-
-#### Titles, intent qualifiers, and training phrases
-
-* Use full sentences, e.g., “How do I reset my password?”
-
-* Use a simple, concise sentence, not multiple sentences. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
-
-* When adding intent qualifiers or training phrases, add 10 - 15 per article. Exceeding this likely means that you have overtrained, which might lead to false positives.
-
-* The intent qualifiers or training phrases should be relatively generic. If they are too specific, the likelihood they will match a consumer’s utterance will be slim. Since consumers can phrase their questions in many ways, make sure your intents are broad to allow the NLU a chance to match as many possible versions of the sentence as possible.
-
-{: .important}
-If you're using [domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents) (not knowledge base intents), the same guidelines apply.
-
-#### Summary and details
-
-Technically, there aren’t any limits here, but keep these as brief as possible. Very long pieces of text will be split into multiple messages (after 320 characters) when sent to the consumer, and in rare cases the messages can be sent in the wrong order.
-
-If you need to use a long piece of text, you can use the [breakWithDelay](conversation-builder-interactions-interaction-basics.html#break-point-within-a-large-block-of-text) tag to force the break at a specific point. Alternatively, you can override the behavior to break the text using the [setAllowMaxTextResponse](conversation-builder-scripting-functions-manage-conversation-flow.html#set-allow-max-text-response) scripting function.
-
-#### Positive and negative learnings
-
-Positive and negative learnings play a role in intent detection regardless of whether you're using knowledge base intents or domain intents. When using knowledge base intents or when using domain intents with LivePerson NLU v1, positive and negative learnings are applied during processing of user inputs. When using domain intents with LivePerson NLU v2 or a 3rd-party NLU engine, the positive learnings are applied (added) to the training phrases when the model is trained, and the negative learnings are applied during processing of user inputs.
-
-As a general rule, don’t specify more than 20 positive learnings and 20 negative learnings. Too many positive and negative learnings can lead to learnings that “overlap” one another in terms of grammar. This results in an unpredictable user experience.
