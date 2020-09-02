@@ -31,12 +31,14 @@ The scoring breakdown, which indicates the NLU’s level of confidence in the ma
 * GOOD: 70-85% match
 * FAIR PLUS: 65-70% match
 * FAIR: 50-65% match
+* POOR: 0-50% match
 
 **LivePerson NLU v2**
 * VERY GOOD: 75-100% match
 * GOOD: 60-75% match
 * FAIR PLUS: 45-60% match
 * FAIR: 30-45% match
+* POOR: 0-30% match
 
 You can't change the threshold when using intents (although you can do [this](knowledge-base-common-common-concepts.html#scoring-and-thresholds) with knowledge bases).
 
