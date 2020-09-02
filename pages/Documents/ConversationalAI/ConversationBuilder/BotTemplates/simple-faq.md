@@ -46,7 +46,7 @@ The FAQ Search dialog handles calling the Knowledge Base integration and display
 #### FAQ integration
 
 {: .important}
-You will need to [create a knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html#add-a-knowledge-base) **before** setting up this integration.
+You will need to [create a knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html#add-a-liveperson-knowledge-base) **before** setting up this integration.
 
 In the Integrations area, there will be a pre-configured integration named "FAQs". "Knowledge Base" should be selected as the **Integration Type**.
 

@@ -13,7 +13,7 @@ indicator: both
 
 This tutorial is designed to familiarize you with the Knowledge Base application and [LivePerson knowledge bases](knowledge-base-liveperson-knowledge-bases-introduction.html).
 
-### Step 1: Add a knowledge base
+### Step 1: Add a LivePerson knowledge base
 
 1. In the dashboard that lists the available knowledge bases, click **Add Knowledge Base** in the upper-right corner.
 2. For **Data source name**, enter a name for the knowledge base, e.g., "Tutorial KB."

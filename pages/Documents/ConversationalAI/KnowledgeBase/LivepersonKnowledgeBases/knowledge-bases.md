@@ -11,7 +11,7 @@ permalink: knowledge-base-liveperson-knowledge-bases-knowledge-bases.html
 indicator: both
 ---
 
-### Add a knowledge base
+### Add a LivePerson knowledge base
 
 **To add a LivePerson knowledge base**
 

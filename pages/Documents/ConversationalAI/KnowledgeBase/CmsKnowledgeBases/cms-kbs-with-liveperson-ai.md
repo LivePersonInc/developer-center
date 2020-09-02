@@ -10,7 +10,7 @@ permalink: knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html
 indicator: both
 ---
 
-### What's a CMS knowledge base with LivePerson AI?
+### What's a CMS KB with LivePerson AI?
 A CMS knowledge base with LivePerson AI:
 
 * Integrates with an external content management system (CMS)
