@@ -60,10 +60,12 @@ Sync with the CMS after making changes to the content in the CMS. This updates t
     * Click **Map Content Metadata**, and map the article’s data model to LivePerson’s Knowledge Base data model. For help with this, see farther below on this page.
 9. Click **Save**.
 
-### Map content (popular CMS vendors)
+### Map content metadata
+
+#### Map content metadata (popular CMS vendors)
 To do - need to meet to discuss
 
-### Map content (other vendors)
+#### Map content metadata (other vendors)
 To do - need to meet to discuss
 
 ### Associate an article with an intent
