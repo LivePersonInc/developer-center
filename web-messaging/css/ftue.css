@@ -40,7 +40,8 @@ a:hover {
 .greeting-bot-header {
     font-family: Roboto;
     display: block !important;
-    width: 285px;
+    width: 360px;
+    white-space: nowrap;
     margin: 0 auto 62px auto;
     font-style: normal;
     font-weight: bold;
@@ -146,7 +147,7 @@ a:hover {
     background-color: #F8F5F3;
     width: 542px;
     height: 542px;
-    margin-top: 350px;
+    bottom: -200px;
     position: absolute;
     display: none;
     right: -8%;

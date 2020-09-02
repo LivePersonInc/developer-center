@@ -31,6 +31,7 @@ a:hover {
 img {
   vertical-align: middle;
   margin: 24px 0;
+  max-width: 800px;
 }
 
 /*inner page css */
@@ -456,6 +457,8 @@ ul#mysiderbar li {
 
 .innerpageitem {
   padding-left: 15px !important;
+  max-width: 194px;
+  overflow-wrap: anywhere;
 }
 
 .activeitem {
