@@ -19,8 +19,8 @@ The Model Tester provides broad testing coverage for the domain and helps you to
 1. Define a set of utterances (test phrases) to test against the intents in the domain.
 2. Run the test against a specific model version, and evaluate the report.
 3. Improve the domain and retrain, and/or improve the test set.
-4. Re-run the test against a different model version.
-5. Evaluate the report, and compare reports.
+4. Re-run the test against a different model version, and evaluate the report.
+5. Compare reports to determine if the model is improving or regressing.
 
 You can download test reports and comparison reports.
 
