@@ -1,11 +1,9 @@
 ---
-pagename: Conversation Errors Dashboard
-redirect_from:
-  - third-party-bots-bot-status-dashboard.html
+pagename: Bot Conversation Errors
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
-permalink: third-party-bots-conversation-errors.html
+permalink: third-party-bots-bot-conversation-errors.html
 indicator: both
 ---
 
