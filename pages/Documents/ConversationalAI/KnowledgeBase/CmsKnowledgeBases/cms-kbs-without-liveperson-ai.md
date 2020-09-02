@@ -33,18 +33,18 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 **To add a 3rd-party knowledge base without LivePerson AI**
 
 1. Click **Add Knowledge Base** in the upper-right corner.
-2. Select **Non-AI-Powered Content Source**.
+2. Select **CMS - No LivePerson AI**.
 3. Specify the following:
     * **Content Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
 4. Click **Next**.
-5. Set up the configuration needed to query the CMS and fetch the resulting article suggestions. To do this, specify the following:
+5. Set up on demand content retrieval using your CMS' query and answer API. To do this, specify the following:
     * **Method**: Select the type of HTTP request method.
     * **URL**: Enter the request target, the URL.
     * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
-    * **Request Headers**: Add any request headers to include in the request.
-    * **Request Parameters**: Add any request parameters to pass in the URL’s query string.
-    * **Post Body**: Enter the payload to send.
-6. Click **Content Mapping**, and add the JSON transformation spec needed to transform the article’s data model to LivePerson’s Knowledge Base data model. For help with this, see here.
+    * **Add Request Headers**: Add any request headers to include in the request.
+    * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
+    * **Add Post Body**: Enter the payload to send.
+    * Click **Map Content Metadata**, and add the JSON transformation spec needed to transform the article’s data model to LivePerson’s Knowledge Base data model. For help with this, see here.
 7. Click **Save**.
 
 ### Test the knowledge base

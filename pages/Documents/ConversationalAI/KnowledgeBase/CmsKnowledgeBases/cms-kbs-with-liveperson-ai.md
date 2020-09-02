@@ -35,30 +35,30 @@ Sync with the CMS after making changes to the content in the CMS. This updates t
 **To add a CMS knowledge base with LivePerson AI**
 
 1. Click **Add Knowledge Base** in the upper-right corner.
-2. Select **AI Powered Content Source**.
+2. Select **CMS - LivePerson AI**.
 3. Specify the following:
     * **Content Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
     * **Domain**: Select the name of the domain that contains the intents that you will associate with the articles.
 4. Click **Next**.
-5. Set up the configuration needed to map the content’s metadata (article ID, article title, etc.). To do this, specify the following:
+5. Fetch your content's metadata (article ID, article title, etc.) and map it to LivePerson Knowledge Base. To do this, specify the following:
     * **Method**: Select the type of HTTP request method. 
     * **URL**: Enter the request target, the URL.
     * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
-    * **Request Headers**: Add any request headers to include in the request.
-    * **Request Parameters**: Add any request parameters to pass in the URL’s query string.
-    * **Post Body**: Enter the payload to send.
-6. Click **Content Mapping**, and map the article’s data model to LivePerson’s Knowledge Base data model. For help with this, see farther below on this page.
-7. Click **Next**.
-8. Set up the configuration needed to query the CMS at run time and return the matched content, which is a single article specified by its article ID. To do this, specify the following:
+    * **Add Request Headers**: Add any request headers to include in the request.
+    * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
+    * **Add Post Body**: Enter the payload to send.
+    * Click **Map Content Metadata**, and map the article’s data model to LivePerson’s Knowledge Base data model. For help with this, see farther below on this page.
+6. Click **Next**.
+7. Set up on demand content retrieval. This is the configuration needed to query the CMS at run time and return the matched content, which is a single article specified by its article ID. To do this, specify the following:
     * **Method**: Select the type of HTTP request method.
     * **URL**: Enter the request target, the URL.
     * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
-    * **Request Headers**: Add any request headers to include in the request.
-    * **Request Parameters**: Add any request parameters to pass in the URL’s query string.
-    * **Post Body**: Enter the payload to send.
+    * **Add Request Headers**: Add any request headers to include in the request.
+    * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
+    * **Add Post Body**: Enter the payload to send.
     * **Cache Article Content**: If you want to temporarily cache the article content that’s returned at run time for improved performance, select the duration in minutes. 
-9. Click **Content Mapping**, and map the article’s data model to LivePerson’s Knowledge Base data model. For help with this, see farther below on this page.
-10. Click **Save**.
+    * Click **Map Content Metadata**, and map the article’s data model to LivePerson’s Knowledge Base data model. For help with this, see farther below on this page.
+9. Click **Save**.
 
 ### Map content (popular CMS vendors)
 To do - need to meet to discuss
