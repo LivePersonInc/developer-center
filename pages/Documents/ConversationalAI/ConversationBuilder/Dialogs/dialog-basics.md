@@ -65,7 +65,7 @@ You can import dialogs from one bot to another within your organization. This ca
     * Global functions
     * Environment variables (you can [export](conversation-builder-environment-variables.html#export-environment-variables-to-a-csv-file) these)
 * During the import, the associations of domains, intents, and entities to interactions are maintained.
-* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't [public](knowledge-base-knowledge-bases.html#configure-knowledge-base-settings), you can still use the integration in the bot, but you can't view or edit that knowledge base in the Knowledge Base application.
+* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't [public](knowledge-base-common-common-settings.html), you can still use the integration in the bot, but you can't view or edit that knowledge base in the Knowledge Base application.
 
 When you import dialogs, consider and address any dependencies across the dialogs. You might or might not want to import all dependent dialogs. Before or after the import, ensure proper conversation flow by checking (and updating, if necessary) the following in the interactions in the relevant dialogs:
 

@@ -22,15 +22,15 @@ An article is a focused piece of content (a message) on a single topic that you 
 1. Open the knowledge base, and click **Add New** in the upper-right corner.
 2. Specify the following basic settings:
     * **Title**: Enter a complete sentence or question, e.g., "I can't remember my password." or, "Do we have a company org chart?" See farther below on this page for best practices.
-    * **Intent Qualifiers**: This field is only shown if you're using [Knowledge Base intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See farther below on this page for best practices.
-    * **Intent**: This field is only shown if the knowledge base is using [Domain intents](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). Select the intent to associate with the article. See farther below on this page for best practices. If needed, you can use the **Create intent** option in the drop-down list to create the intent in Intent Builder from this location. Similarly, there's an **Update training phrases** link for updating the training phrases in Intent Builder from here.
+    * **Intent Qualifiers**: This field is only shown if you're using [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents). Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See farther below on this page for best practices.
+    * **Intent**: This field is only shown if the knowledge base is using [Domain intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents). Select the intent to associate with the article. See farther below on this page for best practices. If needed, you can use the **Create intent** option in the drop-down list to create the intent in Intent Builder from this location. Similarly, there's an **Update training phrases** link for updating the training phrases in Intent Builder from here.
     * **Summary**: Enter a short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels.
     * **Detail**: This field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible.
     * **Category**: To assign the article to a category, enter the category name. This lets you subsequently filter and find articles based on category in the Knowledge Base application.
     * **Tags**: Tags are keywords, *not* sentences, that highlight the key noun(s) or word(s) in the title and intent qualifiers/training phrases. Tags can also be [entities](intent-builder-entities.html) that you've defined in a domain in Intent Builder. To increase the accuracy of Knowledge Base search results, add tags. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences.
 
 3. If desired, click **Advanced Settings**, and specify the following:
-     * **Valid From** and **Valid To**: If desired, specify in [UTC](https://www.timeanddate.com/worldclock/timezone/utc) the dates and times during which the article is active. To specify a finite time period, use both date settings. To specify an open-ended date range, omit the **Valid To** date. To activate an article immediately after you add it, omit the **Valid From** date. These settings work with the **Enable Article** setting to determine if and when the article is active. For more on this, see [here](knowledge-base-overview.html#active-versus-inactive-articles).
+     * **Valid From** and **Valid To**: If desired, specify in [UTC](https://www.timeanddate.com/worldclock/timezone/utc) the dates and times during which the article is active. To specify a finite time period, use both date settings. To specify an open-ended date range, omit the **Valid To** date. To activate an article immediately after you add it, omit the **Valid From** date. These settings work with the **Enable Article** setting to determine if and when the article is active. For more on this, see [here](knowledge-base-liveperson-knowledge-bases-introduction.html#active-versus-inactive-articles).
     * **Content**: Use this field to send a *hyperlink*. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
     * **Audio**:  Use this field to send an *audio* file. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
     * **Image**: Use this field to send an *image*. Enter the URL here, and then configure the bot with the Knowledge Base integration accordingly. For help, see the next section.
@@ -91,7 +91,7 @@ To accomplish this, in the Display Article interaction, we've configured the nex
 
 ### Enable or disable an article
 
-Enabled articles are returned by knowledge base searches in Knowledge Base integrations, while disabled articles are not. That said, keep in mind that an enabled article is returned only if the article is [active](knowledge-base-overview.html#active-versus-inactive-articles), i.e., if the current date and time in UTC falls within the time period specified by the article's **Valid From** and/or **Valid To** dates, if specified.
+Enabled articles are returned by knowledge base searches in Knowledge Base integrations, while disabled articles are not. That said, keep in mind that an enabled article is returned only if the article is [active](knowledge-base-liveperson-knowledge-bases-introduction.html#active-versus-inactive-articles), i.e., if the current date and time in UTC falls within the time period specified by the article's **Valid From** and/or **Valid To** dates, if specified.
 
 **To enable or disable an article**
 
@@ -133,7 +133,7 @@ If you're just getting started with knowledge bases and want to try using this t
 
 The following table identifies the JSON node for article information that's often needed when you're integrating the knowledge base with a bot.
 
-If you're looking for the name of a node not listed here, you can use the Knowledge Base's [Debugger tool](knowledge-base-articles.html#test-user-input) to identify it; the tool displays the JSON that's returned by an article search.
+If you're looking for the name of a node not listed here, you can use the Knowledge Base's [Debugger tool](knowledge-base-common-common-tasks.html#test-user-input) to identify it; the tool displays the JSON that's returned by an article search.
 
 | Name of UI field | Name of JSON node |
 |-----|-----|

@@ -13,7 +13,7 @@ indicator: both
 
 Intents are meant for when you need a more flexible approach to matching than using patterns. With patterns, there must be an *exact* match between the consumer's utterance and a defined expression. This means that alternative expressions (synonyms, phrasings, and formats) are missed.
 
-Intents use a Natural Language Understanding (NLU) engine to match the user's utterance against a set of training phrases or [Knowledge Base articles](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). The results are scored based on the level of confidence in the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
+Intents use a Natural Language Understanding (NLU) engine to match the user's utterance against a set of training phrases or [Knowledge Base](knowledge-base-overview.html) articles. The results are scored based on the level of confidence in the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
 
 As an example, you might configure a "billing" intent that has a defined set of training phrases like, "I have a question about my bill," "Can you help me with my bill?" and similar, alternative expressions. The consumer's utterance is evaluated against these phrases, and a score is determined. *If there's a match of GOOD or better*, the intent is understood to be present, it is sent to the bot, and the bot triggers the associated dialog starter.
 
@@ -38,7 +38,7 @@ The scoring breakdown, which indicates the NLU’s level of confidence in the ma
 * FAIR PLUS: 45-60% match
 * FAIR: 30-45% match
 
-You can't change the threshold when using intents (although you can do [this](knowledge-base-overview.html#thresholds) with knowledge bases).
+You can't change the threshold when using intents (although you can do [this](knowledge-base-common-common-concepts.html#scoring-and-thresholds) with knowledge bases).
 
 ### Add an intent
 

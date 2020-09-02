@@ -11,7 +11,7 @@ permalink: knowledge-base-liveperson-knowledge-bases-tutorial.html
 indicator: both
 ---
 
-This tutorial is designed to familiarize you with Knowledge Base.
+This tutorial is designed to familiarize you with the Knowledge Base application and [LivePerson knowledge bases](knowledge-base-liveperson-knowledge-bases-introduction.html).
 
 ### Step 1: Add a knowledge base
 
@@ -55,7 +55,7 @@ This tutorial is designed to familiarize you with Knowledge Base.
 
     Manually added articles are inactive by default because the **Enable Article** setting is turned off by default. This is to give you the opportunity to test the article before enabling it.
 
-    For the purposes of this tutorial, the inactive status is fine, as this tutorial doesn't get into use in an Knowledge Base integration. For more on active versus inactive artcles, see [here](knowledge-base-overview.html#active-versus-inactive-articles). For information on how to enable the article, see [here](knowledge-base-articles.html#enable-or-disable-an-article).
+    For the purposes of this tutorial, the inactive status is fine, as this tutorial doesn't get into use in an Knowledge Base integration. For more on active versus inactive artcles, see [here](knowledge-base-liveperson-knowledge-bases-introduction.html#active-versus-inactive-articles). For information on how to enable the article, see [here](knowledge-base-liveperson-knowledge-bases-articles.html#enable-or-disable-an-article).
 
 
 ### Step 3: Train and tune

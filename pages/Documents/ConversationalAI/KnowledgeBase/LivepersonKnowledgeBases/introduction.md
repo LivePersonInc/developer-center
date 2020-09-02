@@ -42,7 +42,7 @@ Or, you can define these alternate formats in a domain in Intent Builder. Here, 
 
 <img style="width:525px" src="img/ConvoBuilder/kb_intents_IB.png">
 
-When you [add a knowledge base](knowledge-base-knowledge-bases.html#add-a-knowledge-base), you'll specify which configuration approach you're using for the knowlege base:
+When you [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html), you'll specify which configuration approach you're using for the knowlege base:
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_intentAssociation.png">
 
@@ -51,7 +51,7 @@ When you [add a knowledge base](knowledge-base-knowledge-bases.html#add-a-knowle
 
 ### Languages
 
-When you [add a knowledge base](knowledge-base-knowledge-bases.html#add-a-knowledge-base), you'll specify its language.
+When you [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html), you'll specify its language.
 
 When a text-to-text search is performed and a match is found, the knowledge base's language doesn't play a role. Whatever article is matched is simply returned.
 
@@ -76,6 +76,6 @@ In the Knowledge Base application, you can easily identify an article's current 
 
 #### Using Valid From and Valid To dates
 
-You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledge-base-articles.html#add-an-article). 
+You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledge-base-liveperson-knowledge-bases-articles.html#add-an-article). 
 
 For example, you might run a promotion over a holiday that has an associated FAQ, and that FAQ should only be used for a finite period of time. Or, you might have an article that you want to become active on a certain date and remain so indefinitely. You can satisfy requirements like these with **Valid From** and/or **Valid To**.
