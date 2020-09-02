@@ -14,7 +14,15 @@ indicator: both
 
 Intent Builder includes an advanced Model Tester that’s available in domains where you train model versions, i.e., in domains  that use LivePerson NLU v2 or a 3rd-party NLU engine.
 
-The Model Tester lets you define a set of utterances that you can test against the intents in the domain. You define the test set, and then you run the test against a specific model version. By repeating the test with the next model version, and then comparing the reports, you can determine if the model is improving or degrading from one version to another.
+The Model Tester provides broad testing coverage for the domain and helps you to determine if the model is improving or regressing from one version to the next. The general workflow is this:
+
+1. Define a set of utterances (test phrases) to test against the intents in the domain.
+2. Run the test against a specific model version, and evaluate the report.
+3. Improve the domain and retrain, and/or improve the test set.
+4. Re-run the test against a different model version.
+5. Evaluate the report, and compare reports.
+
+You can download test reports and comparison reports.
 
 ### Add phrases to the test set
 In a domain, there are three ways to add a phrase to the Model Tester’s test set:
@@ -37,10 +45,15 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
 2. Click **Model Tester** in the upper-left corner.
 3. Click the **Test Set** tab.
 4. Refine the test set as follows:
-    * First, if you added a number of phrases using the Quick Add icons, make small changes to the phrases as appropriate. The test set shouldn’t contain exact matches to the intents, as this will always yield a passing score. The goal is to test variations and alternatives to determine how well the defined intents are performing when evaluated against them.
-    * Second, for each phrase, select the intent that should be matched to the phrase.
+    * If you added a number of phrases using the Quick Add icons, make small changes to the phrases as appropriate. The test set shouldn’t contain exact matches to the intents. This will always yield a passing score, so it isn't a valid test. In fact, if the phrase is an exact match, the match is found in pre-processing, and NLU processing is never used. 
+    
+        Enter test phrases that are variations of the intents. The goal is to determine how well the intents are performing when these variations are evaluated against the intents using NLU.
+
+    * For each phrase, select the expected intent that should be matched to the phrase.
+    * Ensure that all phrases are unique within the test set.
 
     SCREEN
+
 
 #### Evaluating the intent coverage
 
@@ -48,7 +61,7 @@ The **Test Set** tab shows you the number of intents in the domain that are and 
 
 SCREEN
 
-Click the “Unused” indicator in specific to see the list of intents for which you need to take action and add test phrases.
+Click the “Unused” indicator in specific to see the list of intents for which you need to take action and add test phrases. Assessing your intent coverage can help you find irrelevant intents that should be deleted.
 
 SCREEN - WITH UNUSED TOOLTIP
 
@@ -67,6 +80,7 @@ SCREEN - WITH UNUSED TOOLTIP
     SCREEN - DASHBOARD WITH IN-PROGRESS INDICATOR 
 
 ### View a report
+
 {: .important}
 The system retains the 10 most recent reports.
 
@@ -81,18 +95,28 @@ The system retains the 10 most recent reports.
 
 There are several, important metrics displayed:
 
-* **Passed**: The number of test phrases that matched the expected intents with a rating of GOOD or VERY GOOD.
-* **Failed**: The number of test phrases that matched the expected intents with a rating of FAIR PLUS or FAIR.
-* **Match Rate**: The match rate is the percentage of test phrases that matched with the expected intents regardless of the rating (GOOD, FAIR, etc.). This is calculated by dividing the number of passed tests by the total number of tests.
+* **Test Phrases**: The number of phrases (utterances) in the test set.
+* **Passed**: The number of test phrases that matched the expected intents.
+* **Failed**: The number of test phrases that didn't match the expected intents.
+* **Match Rate**: The match rate is the percentage of test phrases that matched the expected intents regardless of the rating (GOOD, FAIR PLUS, etc.). This is calculated by dividing the number of passed tests by the total number of tests.
 * **Success Rate**: The success rate is the percentage of test phrases that matched with the expected intents with a rating of GOOD or VERY GOOD. This is calculated by dividing the number of passed tests with a rating of GOOD or VERY GOOD by the total number of tests.
-* **Intent Coverage**: The percentage of intents in the domain that are used in the test set, calculated by dividing the number of used intents by the total number of intents.
+* **Intent Coverage**: The percentage of intents in the domain that are used in the test set. This is calculated by dividing the number of used intents by the total number of intents.
 * **Confidence Score**: The percentage score that reflects the NLU’s level of confidence in the intent match.
-* **Rating**: The rating that indicates the NLU’s level of confidence in the match, one of VERY GOOD, GOOD, FAIR PLUS, or FAIR.
+* **Rating**: The rating that indicates the NLU’s level of confidence in the match, one of VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
 * **Test Result**: An at-a-glance, visual indicator of whether the test phrase passed [ ] or failed [ ].
 
 #### Evaluating the report
 
-to be added
+If the report's scores are low, take corrective action as follows:
+
+* **Low Intent Coverage**: This indicates that many intents in the domain aren't represented in the test set.
+    * In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions.
+    * In the Intents list, delete any unused and irrelevant intents. In effect, clean the domain. This can often improve performance.
+* **Low Match Rate**: This indicates that many test phrases didn't match the expected intent at all. In this case, you need to examine the test phrases to determine why the match rate is low.
+    * If there was no match at all, go to the expected intent and improve it.
+    * If there was an actual match to the wrong intent, either correct the test set, or fix/improve the affected intents. 
+* **Low Success Rate**: This indicates that many test phrases didn't match the expected intents with high confidence scores.
+    * Identify the test phrases with low confidence scores. Then focus on training the associated intents to improve the scores. This might involve adding training phrases or removing irrelevant ones. Often, removing irrelevant training phrases can be more effective than adding new training phrases.
 
 ### Compare reports
 **To compare reports**
