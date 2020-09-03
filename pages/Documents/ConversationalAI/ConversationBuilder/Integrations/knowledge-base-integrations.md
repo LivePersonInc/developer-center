@@ -28,7 +28,7 @@ The Simple FAQ bot template provides a bot that answers users' questions by conn
     
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Methods**:
-        - *Phrase Search*: Select this method to use NLU to search for the phrase defined in the request parameter against the articles and their associated "standard" tags. You can define "standard" tags via the Knowledge Base UI or a CSV file import.
+        - *Phrase Search*: Select this method to use an NLU search or a text-to-text search using the phrase defined in the request parameter. This performs a search against the articles and their associated "standard" tags. You can define "standard" tags via the Knowledge Base UI or an import file.
         - *Special Tag Search*: Select this method to search for the special tags defined in the request parameter against the special tags associated with the articles. Special tags are different from standard tags. Special tags have a prescribed format; they don't support NLU searches, and they function more like attributes. Typically, special tags are used for returning products or items. You can define special tags via a CSV file or Google sheet import.
     - **Request Parameters for a Phrase search**:
         - *mode*: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-common-common-concepts.html#knowledge-base-searches).
