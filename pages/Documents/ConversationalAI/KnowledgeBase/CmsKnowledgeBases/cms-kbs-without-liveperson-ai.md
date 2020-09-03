@@ -48,7 +48,7 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 7. Click **Save**.
 
 ### Test the knowledge base
-Testing a knowledge base that doesn’t use LivePerson AI involves using the Search tool to enter a consumer’s utterance to see the results that are returned from the CMS.
+Testing a knowledge base that doesn’t use LivePerson AI involves using the Search tool to enter a consumer’s utterance to see and evaluate the results that are retrieved from the CMS.
 
 **To test the knowledge base**
 

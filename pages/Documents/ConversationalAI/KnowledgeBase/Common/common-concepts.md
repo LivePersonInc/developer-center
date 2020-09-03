@@ -31,14 +31,14 @@ When you integrate a knowledge base with a bot via a [Knowledge Base integration
 
 When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR. 
 
-| If the knowledge base is... | This confidence score breakdown is used... |
+| If the knowledge base is... | Then... |
 | --- | --- |
-| a CMS knowledge base with AI | the scoring breakdown for the NLU engine used by the domain |
-| a LivePerson knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the domain |
-| a LivePerson knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson NLU v1 |
+| a CMS knowledge base with AI | the scoring breakdown for the NLU engine used by the domain is used |
+| a LivePerson knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the domain is used |
+| a LivePerson knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson NLU v1 is used |
 
-For the confidence score breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
+For these confidence score breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
 
-When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify the minimum score that a result must have in order to be returned. (The highest performing article with that threshold is returned.) You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD.
+When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify the minimum score that a result must have in order to be returned. The highest performing article with that threshold is returned. You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD.
 
 If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.

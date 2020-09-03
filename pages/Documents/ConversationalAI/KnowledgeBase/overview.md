@@ -12,7 +12,7 @@ indicator: both
 
 ### Introduction
 
-A knowledge base exposes a repository of articles that support a particular classification in your business. As an example, the following is an illustration of a [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html) that contains Human Resources FAQs.
+A knowledge base exposes a repository of articles that support a particular classification in your business. As an example, the following is an illustration of a [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html), which contains Human Resources FAQs.
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_overview.png">
 

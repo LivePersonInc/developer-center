@@ -16,7 +16,7 @@ A CMS knowledge base with LivePerson AI:
 * Integrates with an external content management system (CMS)
 * Uses a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance (the intent) and return the highest scoring article. Using the capabilities of NLU to do this work is recommended for the best consumer experience.
 
-    When you add this type of knowledge base, some article information is retrieved from the CMS and made visible within the Knowledge Base application. The information isn’t editable; it’s made visible because you need it to be able to associate the articles with the intents in a domain.
+    When you add this type of knowledge base, some article information is retrieved from the CMS and made visible within the Knowledge Base application. The information isn’t editable; it’s made visible because you need it to be able to perform some work, namely, to associate the articles with the intents in a domain.
 
 ### High-level workflow
 When adding a CMS knowledge base with LivePerson AI, follow this high-level workflow:
@@ -24,12 +24,11 @@ When adding a CMS knowledge base with LivePerson AI, follow this high-level work
 1. In [Intent Builder](intent-builder-overview.html), create the [domain](intent-builder-domains.html) and the [intents](intent-builder-intents.html) therein.
 2. In Knowledge Base:
     1. Add the CMS knowledge base. During this step, you’ll specify the domain that you created in step 1.
-    2. In the knowledge base that you added, associate each article with an intent in the domain.
-    3. [Train](knowledge-base-common-common-tasks.html#train-a-knowledge-base) the articles to match consumer utterances, and then [test](knowledge-base-common-common-tasks.html#test-user-input) with the Debugger tool. The latter simulates a Knowledge Base integration within a bot.
+    2. In the CMS knowledge base that you added, associate each article with an intent in the domain. Then [train](knowledge-base-common-common-tasks.html#train-a-knowledge-base) the articles to match consumer utterances, and [test](knowledge-base-common-common-tasks.html#test-user-input) with the Debugger tool. The latter simulates a Knowledge Base integration within a bot.
 3. In Conversation Builder, [add a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and test.
 
 {: .important}
-Sync with the CMS after making changes to the content in the CMS. This updates the knowledge base accordingly.
+After making changes to the content in the CMS, sync with the CMS (described below). This updates the knowledge base accordingly.
 
 ### Add a CMS KB with LivePerson AI
 **To add a CMS knowledge base with LivePerson AI**
@@ -69,7 +68,7 @@ To do - need to meet to discuss
 To do - need to meet to discuss
 
 ### Associate an article with an intent
-You associate an article with an intent so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the article against the consumer’s utterance to determine if there is a match. The highest scoring article that is found in the search is returned. For more on NLU scoring, see here.
+You associate an article with an intent so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the article against the consumer’s utterance to determine if there is a match. The highest [scoring](knowledge-base-common-common-concepts.html#scoring-and-thresholds) article that is found in the search is retrieved from the CMS.
 
 **To associate an article with an intent**
 
