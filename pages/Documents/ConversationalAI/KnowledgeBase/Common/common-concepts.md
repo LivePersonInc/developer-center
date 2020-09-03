@@ -10,7 +10,7 @@ permalink: knowledge-base-common-common-concepts.html
 indicator: both
 ---
 
-This topic contains conceptual information that is relevant to both CMS knowledge bases and LivePerson knowledge bases.
+This topic contains common, conceptual information that is relevant to knowledge bases of various types.
 
 ### Knowledge base searches
 
