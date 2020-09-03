@@ -56,10 +56,7 @@ Something to keep in mind when training in general, and using the Thumbs Up/Down
 
 ### Test user input
 
-Use the Debugger tool to feed user input directly into a knowledge base to test the NLU processing and content matching. This is applicable when the knowledge base is a:
-
-* [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html)
-* [CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
+Use the Debugger tool to feed user input directly into a knowledge base to test content matching.
 
 The Debugger tool works exactly like a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot. So, if your search selections in the tool match how you've configured the bot, the results you see with the tool will be the same as those returned in a bot conversation. If you don't yet have a bot integrated with your knowledge base, the Debugger tool is also a way to test how the bot will behave once it is.
 
