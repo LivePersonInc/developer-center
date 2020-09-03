@@ -21,6 +21,11 @@ Within the Knowledge Base application, a CMS knowledge base serves as a connecto
 * [Using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html). (**Recommended**) 
 * [Without using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html). In this case, the knowledge base uses the CMS' query and answer API instead.
 
-### Getting started - Save a draft
+### Getting started with a draft KB
 
-to be added
+Adding a CMS knowledge base can take some time, so Knowledge Base automatically saves your changes in a "draft" once you start the process. This allows you to stop when you need and return to the task at a later time.
+
+You can find your "draft" CMS knowledge bases at the top of the dashboard that displays all your knowledge bases. A knowledge base is considered no longer "draft" once all required fields are completed for the first time.
+
+{: .important}
+Keep in mind that completing the initial setup of a knowledge base, thereby moving out of "draft" status, doesn't indicate a proper configuration. You must test the knowledge base to verify this. Additionally, be aware that a knowledge base never returns to "draft" status if you subsequently remove required information.
