@@ -39,16 +39,16 @@ After making changes to the content in the CMS, sync with the CMS (described bel
     * **Content Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
     * **Domain**: Select the name of the domain that contains the intents that you will associate with the articles.
 4. Click **Next**.
-5. Fetch your content's metadata (article ID, article title, etc.) and map it to LivePerson Knowledge Base. To do this, specify the following:
+5. Use the request headers, request parameters, and/or post body to fetch your content's metadata, and map it to LivePerson Knowledge Base. The request should return a list of articles, where each article contains a title and unique identifier. Sometimes, an identifier can be unique when combined with other parameters (language, etc.). You can optionally retrieve tags and a category for the articles as well. An article can have multiple tags but exactly one category.
     * **Method**: Select the type of HTTP request method. 
     * **URL**: Enter the request target, the URL.
     * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
     * **Add Request Headers**: Add any request headers to include in the request.
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send.
-    * Click **Map Content Metadata**, and map the article’s data model to LivePerson’s Knowledge Base data model. For help with this, see farther below on this page.
+    * Click **Map Content Metadata**, and map the article’s data model to LivePerson Knowledge Base. For help with this, see farther below on this page.
 6. Click **Next**.
-7. Set up on demand content retrieval. This is the configuration needed to query the CMS at run time and return the matched content, which is a single article specified by its article ID. To do this, specify the following:
+7. Set up the on-demand content retrieval of a single article by its unique identifier. As mentioned above, sometimes, an identifier can be unique when combined with other parameters (language, etc.). The request should return a single article that contains a title, a unique identifier, and at least one of these content attributes: summary, detail, content URL, image URL, video URL, or audio URL.
     * **Method**: Select the type of HTTP request method.
     * **URL**: Enter the request target, the URL.
     * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
@@ -56,7 +56,7 @@ After making changes to the content in the CMS, sync with the CMS (described bel
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send.
     * **Cache Article Content**: If you want to temporarily cache the article content that’s returned at run time for improved performance, select the duration in minutes. 
-    * Click **Map Content Metadata**, and map the article’s data model to LivePerson’s Knowledge Base data model. For help with this, see farther below on this page.
+    * Click **Map Content Metadata**, and map the article’s data model to LivePerson Knowledge Base. For help with this, see farther below on this page.
 9. Click **Save**.
 
 ### Map content metadata
