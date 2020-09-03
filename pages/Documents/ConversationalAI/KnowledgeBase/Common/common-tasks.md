@@ -22,8 +22,8 @@ Training a knowledge base involves:
 
 Training is applicable when the knowledge base is a:
 
-* [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html)
 * [CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
+* [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html)
 
 To train a knowledge base, select the knowledge base, enter an utterance, and review the results. If you don't get any results for a particular utterance, you can adjust the filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
 
