@@ -33,8 +33,8 @@ When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to 
 
 | If the knowledge base is... | Then... |
 | --- | --- |
-| a CMS knowledge base with AI | the scoring breakdown for the NLU engine used by the domain is used |
-| a LivePerson knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the domain is used |
+| a CMS knowledge base with AI | the scoring breakdown for the NLU engine used by the associated domain is used |
+| a LivePerson knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
 | a LivePerson knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson NLU v1 is used |
 
 For these confidence score breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
