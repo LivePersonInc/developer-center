@@ -16,8 +16,9 @@ This tutorial is designed to familiarize you with the Knowledge Base application
 ### Step 1: Add a LivePerson knowledge base
 
 1. In the dashboard that lists the available knowledge bases, click **Add Knowledge Base** in the upper-right corner.
-2. For **Data source name**, enter a name for the knowledge base, e.g., "Tutorial KB."
-3. Click **Add**.
+2. Select **LivePerson**.
+3. For **Data source name**, enter a name for the knowledge base, e.g., "Tutorial KB."
+4. Click **Save**.
 
 ### Step 2: Add an article
 

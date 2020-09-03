@@ -17,7 +17,8 @@ indicator: both
 
 1. Access the Knowledge Base application as described [here](knowledge-base-overview.html#access-knowledge-base).
 2. In the dashboard that lists your knowledge bases, click **Add Knowledge Base** in the upper-right corner.
-2. Specify the following:
+3. Select **LivePerson**.
+4. Specify the following:
     * **Data source name**: Enter a display name for the knowledge base.
     * **Data source type**: Select "Knowledge Base."
     * **Language**: Select the language of the knowledge base. The default value is English. For details on how the language is used, see [here](knowledge-base-liveperson-knowledge-bases-introduction.html#languages) in the overview.
@@ -25,11 +26,11 @@ indicator: both
         
         If you select "Google Sheet" and you provide the URL to the sheet, be aware that this establishes a link between the knowledge base and the sheet. If you later sync the knowledge base, it is updated with the current contents in the sheet. 
 
-    * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Knowledge Base Intents" or "Domain Intents." If you select "Domain Intents," also select the domain from the list that appears. For a more in-depth explanation of these, see [here](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) in the overview.
+    * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Domain Intents" or "Knowledge Base Intents." If you select "Domain Intents," also select the domain from the list that appears. For a more in-depth explanation of these, see [here](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) in the overview.
 
         If and when you are selecting the domain, be aware that it can't be changed after the knowledge base is created.
 
-3. Click **Add**.
+5. Click **Save**.
 
     This creates the knowledge base, and takes you to its search view. In this default view, you can search the title, intent qualifiers and content of articles.
 

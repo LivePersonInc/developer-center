@@ -14,26 +14,35 @@ This topic contains information on tasks that are relevant to both CMS knowledge
 
 ### Train a knowledge base
 
-Training a knowledge base is applicable when it is a:
+Training a knowledge base involves:
+
+1. Entering an utterance.
+2. Reviewing the results.
+3. Adding or removing training phrases in the intents, and adding or removing positive/negative learnings in the articles.
+
+Training is applicable when the knowledge base is a:
+
 * [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html)
 * [CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
 
 To train a knowledge base, select the knowledge base, enter an utterance, and review the results. If you don't get any results for a particular utterance, you can adjust the filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
 
-
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test.png">
 
-By default, the Search Settings are set to **Intents** and **Fair Plus**. This means that the algorithm will first see if there are any matches using our NLU, with a threshold of Fair Plus. However, if it doesn’t find any, it will attempt a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." This means you should add some more training phrases to an article to improve your results.
+By default, the Search Settings are set to **Intents** and **Fair Plus**. This means that the algorithm will first see if there are any matches using our NLU, with a threshold of Fair Plus. However, if it doesn’t find any, it will attempt a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." This means you should add some more training phrases to the intent to improve your results.
 
-If you don’t want the follow-up text search, you can change the Search Settings to "Intents Only" which will ONLY perform the intents search.
+* If you don’t want the follow-up text search, change the Search Settings to "Intents Only." This *only* performs the intents search.
+* If you *only* want to perform the text search, change the Search Settings to "All".
 
-If you ONLY want to perform the text search, you can set the Settings to "All".
+For more on search modes, see [here](knowledge-base-common-common-concepts.html#knowledge-base-searches).
 
 To add more training phrases (intent qualifiers), you can manually add them to your article.
 
 <img class="fancyimage" style="width:700px" src="img/qualifiers.png">
 
-You can also use the Thumb Up and Down icons displayed in a search. Below is an example where the utterance returned some results. The preferred result was only a GOOF match. By tapping the **Thumbs Up** icon, you automatically add the current utterance to a Positive Learning set for this article. Tapping **Thumbs Down** does the opposite.
+#### Adding positive and negative learnings
+
+You can also use the Thumb Up and Down icons displayed in a search. Below is an example where the utterance returned some results. The preferred result was only a GOOD match. By tapping the **Thumbs Up** icon, you automatically add the current utterance to a Positive Learning set for this article. Tapping **Thumbs Down** does the opposite.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test_thumbsUp.png">
 
@@ -47,11 +56,10 @@ Something to keep in mind when training in general, and using the Thumbs Up/Down
 
 ### Test user input
 
-Using the Debugger tool to test user input is applicable when the knowledge base is a:
+Use the Debugger tool to feed user input directly into a knowledge base to test the NLU processing and content matching. This is applicable when the knowledge base is a:
+
 * [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html)
 * [CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
-
-Use the Debugger tool to feed user input directly into a knowledge base to test the NLU processing and content matching.
 
 The Debugger tool works exactly like a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot. So, if your search selections in the tool match how you've configured the bot, the results you see with the tool will be the same as those returned in a bot conversation. If you don't yet have a bot integrated with your knowledge base, the Debugger tool is also a way to test how the bot will behave once it is.
 
