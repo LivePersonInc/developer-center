@@ -10,7 +10,7 @@ permalink: knowledge-base-common-common-settings.html
 indicator: both
 ---
 
-This topic contains information on settings that are common to both CMS knowledge bases and LivePerson knowledge bases.
+This topic contains information on settings that are common to knowledge bases of various types.
 
 Common settings include:
 
