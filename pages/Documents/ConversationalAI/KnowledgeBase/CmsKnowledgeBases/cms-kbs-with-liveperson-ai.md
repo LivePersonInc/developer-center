@@ -46,7 +46,7 @@ After making changes to the content in the CMS, sync with the CMS (described bel
     * **Add Request Headers**: Add any request headers to include in the request.
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send.
-    * Click **Map Content Metadata**, and map the article’s data model to LivePerson Knowledge Base. For help with this, see farther below on this page.
+    * Click **Map Content Metadata**, and map the article’s data model to LivePerson Knowledge Base. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
 6. Click **Next**.
 7. Set up the on-demand content retrieval of a single article by its unique identifier. As mentioned above, sometimes, an identifier can be unique when combined with other parameters (language, etc.). The request should return a single article that contains a title, a unique identifier, and at least one of these content attributes: summary, detail, content URL, image URL, video URL, or audio URL.
     * **Method**: Select the type of HTTP request method.
@@ -56,7 +56,7 @@ After making changes to the content in the CMS, sync with the CMS (described bel
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send.
     * **Cache Article Content**: If you want to temporarily cache the article content that’s returned at run time for improved performance, select the duration in minutes. 
-    * Click **Map Content Metadata**, and map the article’s data model to LivePerson Knowledge Base. For help with this, see farther below on this page.
+    * Click **Map Content Metadata**, and map the article’s data model to LivePerson Knowledge Base. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
 9. Click **Save**.
 
 ### Associate an article with an intent
