@@ -59,14 +59,6 @@ After making changes to the content in the CMS, sync with the CMS (described bel
     * Click **Map Content Metadata**, and map the article’s data model to LivePerson Knowledge Base. For help with this, see farther below on this page.
 9. Click **Save**.
 
-### Map content metadata
-
-#### Map content metadata (popular CMS vendors)
-To do - need to meet to discuss
-
-#### Map content metadata (other vendors)
-To do - need to meet to discuss
-
 ### Associate an article with an intent
 You associate an article with an intent so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the article against the consumer’s utterance to determine if there is a match. The highest [scoring](knowledge-base-common-common-concepts.html#scoring-and-thresholds) article that is found in the search is retrieved from the CMS.
 

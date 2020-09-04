@@ -25,7 +25,8 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 
 1. In Knowledge Base: 
     1. Add the CMS knowledge base.
-    2. Use the Search tool to test the knowledge base.
+    2. Use the Search tool to test the integration.
+    3. [Test](knowledge-base-common-common-tasks.html#test-user-input) with the Debugger tool. This simulates a Knowledge Base integration within a bot.
 2. In Conversation Builder, [add a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and test.
 
 ### Add a CMS KB without LivePerson AI
@@ -44,16 +45,17 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
     * **Add Request Headers**: Add any request headers to include in the request.
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send.
-    * Click **Map Content Metadata**, and map the article’s data model to LivePerson Knowledge Base. For help with this, see here.
+    * Click **Map Content Metadata**, and map the article’s data model to LivePerson Knowledge Base. For help with this, see [here](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#map-content-metadata).
 7. Click **Save**.
 
-### Test the knowledge base
-Testing a knowledge base that doesn’t use LivePerson AI involves using the Search tool to enter a consumer’s utterance to see and evaluate the results that are retrieved from the CMS.
+### Test the CMS integration
 
-**To test the knowledge base**
+After you've add a CMS knowledge base that doesn't use AI, you can test the integration with the Search tool. This involves entering a consumer utterance to see and evaluate the results that are retrieved from the CMS.
+
+**To test the CMS integration**
 
 1. Open the knowledge base.
     By default, the Articles tab is displayed. Initially, it doesn’t show any content because, with this type of knowledge base (one without LivePerson AI), only configuration information is stored within Knowledge Base. The content remains in the CMS.
 2. On the Articles tab, enter an utterance in the search box at the top, and press Enter.
     This performs a search against the CMS.
-3. Evaluate the article results that are displayed.
+3. Evaluate the article results that are displayed. If they aren't what you expect, you might need to adjust the knowledge base's configuration.
