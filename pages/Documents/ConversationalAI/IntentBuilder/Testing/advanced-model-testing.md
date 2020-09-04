@@ -12,15 +12,18 @@ indicator: both
 
 ### Overview
 
-Intent Builder includes an advanced Model Tester that’s available in domains where you train model versions, i.e., in domains  that use LivePerson NLU v2 or a 3rd-party NLU engine.
+Intent Builder includes an advanced Intent Tester that's designed to:
 
-The Model Tester provides broad testing coverage for the domain and helps you to determine if the model is improving or regressing from one version to the next. The general workflow is this:
+* Provide broad testing coverage for the domain
+* Help you determine if the domain/model is improving or regressing from one version to the next
+
+The general workflow for using the Intent Tester is this:
 
 1. Define a set of utterances (test phrases) to test against the intents in the domain.
-2. Run the test against a specific model version, and evaluate the report.
-3. Improve the domain and retrain, and/or improve the test set.
-4. Re-run the test against a different model version, and evaluate the report.
-5. Compare reports to determine if the model is improving or regressing.
+2. Run the test, and evaluate the report.
+3. Improve the domain (and retrain if applicable), and/or improve the test set.
+4. Re-run the test, and evaluate the report.
+5. Compare reports to determine if the domain/model is improving or regressing.
 
 You can download test reports and comparison reports.
 
@@ -73,7 +76,7 @@ SCREEN - WITH UNUSED TOOLTIP
 3. Click **Run Test** in the upper-right corner.
 4. Specify the following:
     * **Test Report Name**: Enter a name for the report.
-    * **Model Version**: Select the model version against which to run the test. You can select the activated model version or any later version.
+    * **Model Version**: Optional. If you're using the LivePerson NLU v2 engine or a third-party NLU engine, select the model version against which to run the test. You can select the activated model version or any later version.
 5. Click **Test**.
     You can click [ ] (Refresh icon) to periodically check the status of the test.
 
@@ -119,6 +122,11 @@ If the report's scores are low, take corrective action as follows:
     * Identify the test phrases with low confidence scores. Then focus on training the associated intents to improve the scores. This might involve adding training phrases or removing irrelevant ones. Often, removing irrelevant training phrases can be more effective than adding new training phrases.
 
 ### Compare reports
+
+A true comparison of reports -- to accurately determine if the domain/model is improving or regressing from one version to another -- is only possible when the test set remains the same in both tests.
+
+If you want to compare reports, LivePerson recommends that you keep the test set the same, changing only the domain/model between tests.
+
 **To compare reports**
 
 1. Open the domain.
@@ -130,7 +138,3 @@ If the report's scores are low, take corrective action as follows:
     SCREEN
 
     Note that a test phrase that is present in one test but not in another is marked with “ -- “ in the latter.
-
-#### Evaluating the comparison
-
-to be added

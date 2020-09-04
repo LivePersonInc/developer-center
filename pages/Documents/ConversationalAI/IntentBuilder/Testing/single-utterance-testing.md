@@ -10,14 +10,9 @@ permalink: intent-builder-testing-single-utterance-testing.html
 indicator: both
 ---
 
-You can test the intents (and entities) in a domain against sample user utterances using the **Test** tool. The NLU engine takes the sample utterance and sees if it can find matches in the intents. The results list the intents and the degree to which they matched the utterance.
+You can use the **Test** tool to test a single utterance against the domain.
 
-The purpose of testing is to determine whether the domain is performing as expected. As an example, assume you have a domain with 10 intents that each have 10 training phrases. During testing, you might use a test bank of 20-30 utterances that aren’t a part of the domain to see the results for those utterances. The accuracy would help to define the benchmark for the domain. After evaluating the utterances that didn’t work, you could fine tune the domain, re-train (required depending on the NLU engine), and then re-test for verification.
-
-{: .important}
-If the domain uses the LivePerson NLU v2 engine or a 3rd-party engine, you'll need to train the domain before testing it. However, you **don't** need to activate the resulting model version before testing it. (You can’t deactivate a version once you’ve activated it.) Use the Test tool to 1) test the **latest trained** model version and 2) compare it with results from testing the **activated** model version. When you have the latest trained model version performing as desired, you can then activate it.
-
-**Tip**: After testing but before making any fine-tuning changes, consider exporting the intents and entities in the domain and archiving the export file. This gives you the ability to go back and compare the versions of the domain.
+The Test tool is primarily used for debugging purposes. For example, you might find that a strange phrase was matched to an intent on Production. Using the Test tool, you can quickly and easily test that phrase to see how it behaves.
 
 **To test a domain**
 

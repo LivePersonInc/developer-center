@@ -54,7 +54,7 @@ Domains added from prebuilt domains use the [LP NLU v2 engine](intent-builder-na
 
 #### Training
 
-Domains that use either the LivePerson NLU v2 engine or a 3rd-party NLU engine must be explicitly trained (i.e., you click the **Train** button that's available). This process takes the raw training data and uses it to create a “machine-learning” model that generalizes the data. The resulting model is then used to make predictions on user utterances. With these NLU engines, most of the work needed to be able to make predictions on user utterances is performed *at training time*, allowing for a faster response at run time.
+Domains that use either the LivePerson NLU v2 engine or a 3rd-party NLU engine must be explicitly trained (i.e., you click the **Train** button that's available) after you make changes. This process takes the raw training data and uses it to create a “machine-learning” model that generalizes the data. The resulting model is then used to make predictions on user utterances. With these NLU engines, most of the work needed to be able to make predictions on user utterances is performed *at training time*, allowing for a faster response at run time.
 
 In contrast, domains that use the LivePerson NLU v1 engine aren’t trained, and there is no machine-learning model created. The comparison of the user utterance against the intents and entities is performed at run time. With this NLU engine, be aware that the larger the domain, the more time the prediction response takes. This is because most of the work needed to be able to make predictions on user utterances is performed *at run time*.
 
