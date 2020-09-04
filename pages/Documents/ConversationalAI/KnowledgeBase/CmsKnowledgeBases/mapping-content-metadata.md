@@ -12,19 +12,28 @@ indicator: both
 
 ### Introduction
 
+When you add a CMS knowledge base, one important step in the process is to map the CMS' article data model to LivePerson Knowledge Base. This is done by providing a Jolt transformation spec that will be used to transform the response returned from the API call.
+
+LivePerson provides default Jolt transformation specs for a few popular CMS vendors, namely, Salesforce and Zendesk. If you use another CMS vendor, you can write the spec using the guidance and examples farther below.
+
 ### Map content metadata (popular CMS vendors)
 
-1. For **Content Provider**, select the name of your CMS provider.
-    This populates the **Transformation Spec** editor with the Jolt transformation spec that transforms the CMS' data model to LivePerson Knowledge Base's data model. This is a pre-built, template spec for a default data structure.
-2. If you've customized your CMS's data model (e.g., you've added a custom attribute), use the editor to adjust the transform spec accordingly.
-3. Click **Validate Spec**.
-    This populates the **Sample Input** editor with some default input in JSON format. 
-4. You can keep the default sample input. Alternatively, use the editor to replace the default input with your own. For example, to see one of your own records, you can take the payload from your API and paste it here.
-5. Click **Preview**.
-    This populates a third, read-only panel that illustrates the output when the sample input is transformed from your CMS' data model to LivePerson Knowledge Base using the spec. Behind the scenes, this is JSON. However, it's presented in a record format, so you can more quickly and easily review whether it is as you expect.
+1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
+2. For **Content Provider**, select the name of your CMS provider.
+    
+    This populates the **Transformation Spec** editor with a vendor-specific Jolt transformation spec that transforms the CMS' data model to LivePerson Knowledge Base's data model. This is a pre-built spec for a default data structure, which you can use as is or as starter template.
 
-### Map content metadata (other vendors)
-To do - need to meet to discuss
+3. If you've customized your CMS's data model (e.g., you've added a custom attribute), use the editor to modify the transform spec accordingly.
+
+4. Click **Validate Spec**.
+    
+    This populates the **Sample Input** editor with some default input in JSON format. 
+
+5. You can keep the default sample input. Alternatively, use the editor to replace it with your own. For example, to see one of your own records, you can take the payload from your API and paste it here.
+
+6. Click **Preview**.
+    
+    This populates a third, read-only panel that illustrates the output when the sample input is transformed using the spec. Behind the scenes, this is JSON. However, it's presented in a record format, so it's quicker and easier to evaluate whether the transformation is as you expect.
 
 ### Errors
 
@@ -42,4 +51,13 @@ To do - need to meet to discuss
 | --- | --- | --- | --- |
 | | "Unsupported content attributes mapped to transformed article" | CMS knowledge bases with AI | In the spec for fetching article metadata, unsupported attributes are included. These are ignored. |
 
+### Map content metadata (other vendors)
+
+1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
+2. For **Content Provider**, select "Other," and enter the name of your CMS provider.
+3. In the **Transformation Spec** editor, enter the Jolt spec.
+4. Click **Validate Spec**.
+
 ### Write a Jolt transformation spec
+
+to be added
