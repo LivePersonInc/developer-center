@@ -29,7 +29,7 @@ LivePerson provides *default* Jolt transformation specs for a few popular CMS ve
     
     This populates the **Sample Input** editor with some default input in JSON format. 
 
-5. You can keep the default sample input. Alternatively, use the editor to replace it with your own. For example, to see one of your own records, you can take the payload from your API and paste it here.
+5. You can keep the default sample input. Alternatively, use the editor to replace it with your own. For example, to see one of your own records, you can take the payload from the API call and paste it here.
 
 6. Click **Preview**.
     
