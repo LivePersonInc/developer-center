@@ -252,8 +252,9 @@
         subpages:
           - subpagename: Introduction
           - subpagename: CMS KBs with LivePerson AI
-          - subpagename: CMS KBs without LivePerson AI
+          - subpagename: Mapping Content Metadata
           - subpagename: Best Practices
+          - subpagename: CMS KBs without LivePerson AI
       - pagename: LivePerson Knowledge Bases
         subpages:
           - subpagename: Introduction
