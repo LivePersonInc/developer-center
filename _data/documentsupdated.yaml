@@ -646,7 +646,9 @@
           - subpagename: Events & Templates
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
+          - subpagename: Snippets
           - subpagename: Storing Secrets
+          - subpagename: Data Storage
           - subpagename: Debugger
           - subpagename: Common Examples
           - subpagename: Best Practices
