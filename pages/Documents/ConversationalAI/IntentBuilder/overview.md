@@ -36,6 +36,22 @@ The following are key characteristics of a domain:
 * A domain has a specified NLU provider and language.
 * In a bot, you can associate one domain with each dialog. This allows you to associate the dialog's interactions with intents and entities from that domain. For example, you might [associate an intent with a Dialog Starter interaction](conversation-builder-assist.html) to use the intent to trigger the dialog's flow.
 
+#### Prebuilt domains
+
+To get you quickly up and running with [intents](intent-builder-intents.html), LivePerson provides a set of prebuilt domains that you can easily add to your Intent Builder environment.
+
+A "prebuilt domain" is a ready-made, pretrained domain that includes a set of well-defined intents. There are two kinds of prebuilt domains available:
+
+* Generic, prebuilt domains for a number of verticals: Telecommunications, Financial Services, Airlines and Insurance.
+* A cross-vertical, prebuilt domain that is appropriate for all verticals. This domain includes intents for things like customer account management, customer order management, e-commerce, billing and payment.
+
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_domainPrebuiltEx.png">
+
+Once you [add a prebuilt domain](intent-builder-domains.html#add-a-prebuilt-domain), you can customize the domain as you see fit. If you later decide that you don't want to use your customizations, you can also [overwrite your domain](intent-builder-domains.html#overwrite-from-a-prebuilt-domain) to reflect the prebuilt domain that's offered by LivePerson.
+
+{: .important}
+Domains added from prebuilt domains use the [LP NLU v2 engine](intent-builder-natural-language-understanding.html#livepersons-nlu-engine).
+
 #### Training
 
 Domains that use either the LivePerson NLU v2 engine or a 3rd-party NLU engine must be explicitly trained (i.e., you click the **Train** button that's available). This process takes the raw training data and uses it to create a “machine-learning” model that generalizes the data. The resulting model is then used to make predictions on user utterances. With these NLU engines, most of the work needed to be able to make predictions on user utterances is performed *at training time*, allowing for a faster response at run time.

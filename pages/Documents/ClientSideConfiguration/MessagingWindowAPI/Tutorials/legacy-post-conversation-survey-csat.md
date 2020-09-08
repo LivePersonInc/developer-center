@@ -1,19 +1,21 @@
 ---
-pagename: Post Conversation Survey (CSAT)
+pagename: Legacy - Post Conversation Survey (CSAT)
 redirect_from:
   - consumer-int-post-survey.html
+  - messaging-window-api-tutorials-post-conversation-survey-csat.html
 sitesection: Documents
 categoryname: "Client Side Configuration"
 documentname: Messaging Window API
 subfoldername: Tutorials
 
 order: 60
-permalink: messaging-window-api-tutorials-post-conversation-survey-csat.html
+permalink: messaging-window-api-tutorials-legacy-post-conversation-survey-csat.html
 
 indicator: messaging
 ---
 
-<div class="important">This CSAT survey has been deprecated, please refer to <a href="messaging-window-api-tutorials-post-conversation-survey-pcs.html">the new Post Conversation Survey (PCS)</a>.</div>
+{: .important}
+This topic discusses a legacy solution for CSAT surveys and is made available for the benefit of brands using this solution. **If you're new to CSAT surveys, please see [this topic](conversation-builder-bots-post-conversation-survey-bots.html) on implementation using Conversation Builder**.
 
 ### Prerequisites
 Run the [Conversation Metadata Tutorial](consumer-int-conversation-md.html).

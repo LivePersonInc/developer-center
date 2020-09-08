@@ -12,9 +12,6 @@ indicator: both
 
 For quick reference, below is an alphabetically-ordered list of all built-in functions in Conversation Builder.
 
-{: .important}
-New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
-
 * [addQuickReplies](conversation-builder-scripting-functions-manage-conversation-flow.html#add-quick-replies)
 * [askMaven](conversation-builder-scripting-functions-askmaven.html)
 * [evaluateOptions](conversation-builder-scripting-functions-manage-conversation-flow.html#evaluate-options)
@@ -29,7 +26,7 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 * [getHoursType](conversation-builder-scripting-functions-get-set-contextual-data.html#get-type-of-hours)
 * [getLPAccountId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-lp-account-id)
 * [getLPCustomerInfo](conversation-builder-scripting-functions-get-user-data.html#get-authenticated-customer-info)
-* [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-and-previous-skills) (current skill, previous skill, etc.)
+* [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-contextual-data.html#get-lp-engagement-attribute)
 * [getLPUserPersonalInfo](conversation-builder-scripting-functions-get-user-data.html#get-authenticated-customer-info)
 * [getNamedEntities](conversation-builder-scripting-functions-get-set-contextual-data.html#get-named-entities)
 * [getNlpResponse](conversation-builder-scripting-functions-get-set-contextual-data.html#get-nlp-responses)
