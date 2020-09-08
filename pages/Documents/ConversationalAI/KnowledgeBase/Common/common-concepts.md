@@ -30,8 +30,9 @@ The Intents Only mode is like the Intents mode (above) except that the final, te
 #### Text mode
 
 When the Text mode is used, a text-to-text search is performed:
-    * With a [CMS knowledge base with AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html) or a [CMS knowledge base without AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
-    * With a [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) (intent qualifiers), and tags.
+
+* With a [CMS knowledge base with AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html) or a [CMS knowledge base without AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
+* With a [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) (intent qualifiers), and tags.
 
 ### Scoring and thresholds
 
