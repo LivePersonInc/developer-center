@@ -24,7 +24,7 @@ When adding a CMS knowledge base with LivePerson AI, follow this high-level work
 1. In [Intent Builder](intent-builder-overview.html), create the [domain](intent-builder-domains.html) and the [intents](intent-builder-intents.html) therein.
 2. In Knowledge Base:
     1. Add the CMS knowledge base. During this step, you’ll specify the domain that you created in step 1.
-    2. In the CMS knowledge base that you added, associate each article with an intent in the domain. Then [train](knowledge-base-common-common-tasks.html#train-a-knowledge-base) the articles to match consumer utterances, and [test](knowledge-base-common-common-tasks.html#test-user-input) with the Debugger tool. The latter simulates a Knowledge Base integration within a bot.
+    2. In the CMS knowledge base that you added, associate each article with an intent in the domain. Then [train](knowledge-base-common-common-tasks.html#train-a-knowledge-base) the articles to match consumer utterances.
 3. In Conversation Builder, [add a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and test.
 
 {: .important}

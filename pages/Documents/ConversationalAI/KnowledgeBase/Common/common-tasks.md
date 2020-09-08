@@ -23,7 +23,7 @@ Training a knowledge base involves:
 Training is applicable when the knowledge base is a:
 
 * [CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
-* [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html)
+* [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html), which also uses AI
 
 To train a knowledge base, select the knowledge base, enter an utterance, and review the results. If you don't get any results for a particular utterance, you can adjust the filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
 
@@ -53,33 +53,6 @@ If you look at the article details, in the **Advanced Settings**, you can see th
 #### Beware of overtraining
 
 Something to keep in mind when training in general, and using the Thumbs Up/Down icons specifically, is that because they are so easy to use, they are often misused. Often people use Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down. Anything over about 10 - 15 training phrases might begin to return false positives.
-
-### Test user input
-
-Use the Debugger tool to feed user input directly into a knowledge base to test content matching.
-
-The Debugger tool works exactly like a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot. So, if your search selections in the tool match how you've configured the bot, the results you see with the tool will be the same as those returned in a bot conversation. If you don't yet have a bot integrated with your knowledge base, the Debugger tool is also a way to test how the bot will behave once it is.
-
-The Debugger tool is also *the* way to see the JSON that's returned by the search.
-
-**To test user input**
-
-1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Test User Input**.
-
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_testUserInput1.png">
-
-3. Specify the following:
-
-    * **Phrase**: Enter the phrase to search for.
-    * **Search Modes**: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-common-common-concepts.html#knowledge-base-searches).
-    * **Threshold**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledge-base-common-common-concepts.html#scoring-and-thresholds).
-
-4. Click **test**.
-
-    In the results, the JSON of the matched article is displayed. You can examine the "title" to see which article has been matched.
-
-    <img style="width:450px" src="img/ConvoBuilder/kb_testUserInput2.png">
 
 ### Delete a knowledge base
 

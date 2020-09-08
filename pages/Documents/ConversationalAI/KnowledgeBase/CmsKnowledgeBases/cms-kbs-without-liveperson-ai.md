@@ -26,7 +26,6 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 1. In Knowledge Base: 
     1. Add the CMS knowledge base.
     2. Use the Search tool to test the integration.
-    3. [Test](knowledge-base-common-common-tasks.html#test-user-input) with the Debugger tool. This simulates a Knowledge Base integration within a bot.
 2. In Conversation Builder, [add a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and test.
 
 ### Add a CMS KB without LivePerson AI

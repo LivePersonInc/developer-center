@@ -32,3 +32,30 @@ The intents for every article are stored in a cache that is updated automaticall
 2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Knowledge Base Menu**.
 3. In the Settings panel, click **KB Settings**.
 4. Click **More Options**, scroll down to the **Refresh Intents** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_refresh.png"> (Refresh icon).
+
+### Test user input
+
+Use the Debugger tool to feed user input directly into a knowledge base to test content matching.
+
+The Debugger tool works exactly like a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot. So, if your search selections in the tool match how you've configured the bot, the results you see with the tool will be the same as those returned in a bot conversation. If you don't yet have a bot integrated with your knowledge base, the Debugger tool is also a way to test how the bot will behave once it is.
+
+The Debugger tool is also *the* way to see the JSON that's returned by the search.
+
+**To test user input**
+
+1. Open the knowledge base.
+2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Test User Input**.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_testUserInput1.png">
+
+3. Specify the following:
+
+    * **Phrase**: Enter the phrase to search for.
+    * **Search Modes**: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-common-common-concepts.html#knowledge-base-searches).
+    * **Threshold**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledge-base-common-common-concepts.html#scoring-and-thresholds).
+
+4. Click **test**.
+
+    In the results, the JSON of the matched article is displayed. You can examine the "title" to see which article has been matched.
+
+    <img style="width:450px" src="img/ConvoBuilder/kb_testUserInput2.png">
