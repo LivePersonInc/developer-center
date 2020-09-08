@@ -16,14 +16,14 @@ This topic contains common, conceptual information that is relevant to knowledge
 
 When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify a "mode" for the search; this determines the type of search that is performed. Possible modes include: **Intents**, **Intents Only**, and **All**.
 
-* **Intents**: When this mode is used, a text-to-text search is performed first. If a match isn't found by the first search, Knowledge Base next uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. And if a match isn't found by the NLU search, a final text-to-text search is performed as a fallback.
+* **Intents**: When this mode is used, an exact match, text-to-text search is performed first. If a match isn't found by the first search, Knowledge Base next uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. And if a match isn't found by the NLU search, a final text-to-text search is performed as a fallback.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_search_modes_cms.png">
     <img style="width:750px" src="img/ConvoBuilder/kb_search_modes_lp.png">
 
 * **Intents Only**: This mode is like the Intents mode except that the final text-to-text search isn't performed as a fallback.
 
-* **All**: When this mode is used, a text-to-text search is performed:
+* **Text**: When this mode is used, a text-to-text search is performed:
     * With a [CMS knowledge base with AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html) or a [CMS knowledge base without AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
     * With a [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) (intent qualifiers), and tags.
 
