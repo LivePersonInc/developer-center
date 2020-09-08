@@ -14,7 +14,7 @@ This topic contains common, conceptual information that is relevant to knowledge
 
 ### Knowledge base searches
 
-When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify a "mode" for the search; this determines the type of search that is performed. Possible modes include: **Intents**, **Intents Only**, and **All**.
+When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify a "mode" for the search; this determines the type of search that is performed. Possible modes include: **Intents**, **Intents Only**, and **Text**.
 
 * **Intents**: When this mode is used, an exact match, text-to-text search is performed first. If a match isn't found by the first search, Knowledge Base next uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. And if a match isn't found by the NLU search, a final text-to-text search is performed as a fallback.
 
