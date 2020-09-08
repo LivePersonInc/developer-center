@@ -42,6 +42,9 @@ If you want to import a set of articles into a knowledge base when you add the k
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_importFile.png">
 
+{: .important}
+The import file can contain the following basic HTML tags: p, br, a (only the “href” attribute and “http”/"https” protocols are supported).
+
 **To create an import file**
 
 1. Create a new CSV file or Google sheet. A Google sheet must be public, i.e., with no file restrictions in place.
