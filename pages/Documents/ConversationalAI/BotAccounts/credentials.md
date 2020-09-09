@@ -102,7 +102,10 @@ You can create a Consumer Authentication credential and use it in [API integrati
 
 1. In the bot, the Integration interaction is triggered in the dialog.
 2. The bot sends an authentication URL (a plain link) to the consumer.
-3. The consumer clicks the link to authenticate, is directed to a consent (allow/deny) page, and gives consent, thereby obtaining a token.
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/creds_consumer_auth_2.png">
+
+3. The consumer clicks the link, is directed to the authentication URL (e.g., a login page), and authenticates, thereby obtaining a token.
 4. The token is sent to the bot.
 5. The bot runs the integration (with the token) and responds with a result.
 
