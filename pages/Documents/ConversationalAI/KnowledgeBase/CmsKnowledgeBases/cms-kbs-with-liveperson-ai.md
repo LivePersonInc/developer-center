@@ -39,7 +39,7 @@ After making changes to the content in the CMS, sync with the CMS (described bel
     * **Content Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
     * **Domain**: Select the name of the domain that contains the intents that you will associate with the articles.
 4. Click **Next**.
-5. Use the request headers, request parameters, and/or post body to fetch your content's metadata, and map it to LivePerson Knowledge Base. The request should return a list of articles, where each article contains a title and unique identifier. Sometimes, an identifier can be unique when combined with other parameters (language, etc.). You can optionally retrieve tags and a category for the articles as well. An article can have multiple tags but exactly one category.
+5. Use the request headers, request parameters, and/or post body to fetch your content's metadata, and map it to LivePerson Knowledge Base. The request should return a list of articles, where each article contains a title and unique identifier. These are mandatory. Optionally, you can retrieve tags and a category for the articles. An article can have multiple tags but exactly one category.
     * **Method**: Select the type of HTTP request method. 
     * **URL**: Enter the request target, the URL.
     * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
@@ -48,7 +48,7 @@ After making changes to the content in the CMS, sync with the CMS (described bel
     * **Add Post Body**: Enter the payload to send.
     * Click **Map Content Metadata**, and map the article’s data model to LivePerson Knowledge Base. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
 6. Click **Next**.
-7. Set up the on-demand content retrieval of a single article by its unique identifier. As mentioned above, sometimes, an identifier can be unique when combined with other parameters (language, etc.). The request should return a single article that contains a title, a unique identifier, and at least one of these content attributes: summary, detail, content URL, image URL, video URL, or audio URL.
+7. Set up the on-demand content retrieval of a single article by its unique identifier. The request must return a single article that contains a title, a unique identifier, and at least one of these content attributes: summary, detail, content URL, image URL, video URL, or audio URL.
     * **Method**: Select the type of HTTP request method.
     * **URL**: Enter the request target, the URL.
     * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
