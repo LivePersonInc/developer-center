@@ -10,6 +10,9 @@ permalink: knowledge-base-overview.html
 indicator: both
 ---
 
+{: .important}
+Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+
 In Conversation Builder, a knowledge base is a great tool to answer questions about a variety of topics specific to your bot's area of expertise. One would typically add a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a fallback dialog to provide simple answers to topics not covered elsewhere in the bot.
 
 The Knowledge Base application in the Conversation Builder platform lets you create and manage knowledge bases and articles, which are then processed by an NLU engine. This allows the bot to leverage [intents](intent-builder-intents.html) and [entities](intent-builder-entities.html) to recommend the most accurate articles to an inquiring consumer. FAQ bots are driven by a knowledge base full of articles, intelligently delivering the right content to the consumer at the right time.
