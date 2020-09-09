@@ -12,12 +12,12 @@ indicator: both
 
 ### Overview
 
-Intent Builder includes an advanced Intent Tester that's designed to:
+If your domain is using the LivePerson NLU v2 engine, there's an advanced Model Tester that's available. The Model Tester is designed to:
 
 * Provide broad testing coverage for the domain
 * Help you determine if the domain/model is improving or regressing from one version to the next
 
-The general workflow for using the Intent Tester is this:
+The general workflow for using the Model Tester is this:
 
 1. Define a set of utterances (test phrases) to test against the intents in the domain.
 2. Run the test, and evaluate the report.
@@ -37,8 +37,6 @@ In a domain, there are three ways to add a phrase to the Model Tester’s test s
 * In an intent’s details, click [ ] (quick add) next to a training phrase.
     SCREEN
 
-The test set can contain a maximum of 300 test phrases.
-
 ### Refine the test set
 Once you’ve added a number of phrases to the test set, you need to refine the test set.
 
@@ -56,6 +54,9 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
     * Ensure that all phrases are unique within the test set.
 
     SCREEN
+
+{: .important}
+The test set overall can contain a maximum of 300 test phrases. Each intent can have a maximum of 25 test phrases.
 
 
 #### Evaluating the intent coverage
