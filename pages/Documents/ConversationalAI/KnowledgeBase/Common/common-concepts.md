@@ -10,7 +10,10 @@ permalink: knowledge-base-common-common-concepts.html
 indicator: both
 ---
 
-This topic contains common, conceptual information that is relevant to knowledge bases of various types.
+This topic contains common, conceptual information that is relevant to:
+
+* [CMS knowledge bases with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
+* [LivePerson knowledge bases](knowledge-base-liveperson-knowledge-bases-introduction.html), which also use LivePerson AI
 
 ### Knowledge base searches
 
@@ -31,7 +34,7 @@ The Intents Only mode is like the Intents mode (above) except that the final, te
 
 When the Text mode is used, a text-to-text search is performed:
 
-* With a [CMS knowledge base with AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html) or a [CMS knowledge base without AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
+* With a [CMS knowledge base with AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
 * With a [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) (intent qualifiers), and tags.
 
 ### Scoring and thresholds
@@ -40,7 +43,7 @@ When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to 
 
 | If the knowledge base is... | Then... |
 | --- | --- |
-| a CMS knowledge base with AI | the scoring breakdown for the NLU engine used by the associated domain is used |
+| a CMS knowledge base with LivePerson AI | the scoring breakdown for the NLU engine used by the associated domain is used |
 | a LivePerson knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
 | a LivePerson knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson NLU v1 is used |
 
