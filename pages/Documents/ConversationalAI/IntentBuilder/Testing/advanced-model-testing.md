@@ -50,7 +50,7 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
     
         Enter test phrases that are variations of the intents. The goal is to determine how well the intents are performing when these variations are evaluated against the intents using NLU.
 
-    * For each phrase, select the expected intent that should be matched to the phrase.
+    * For each phrase, select the expected intent that should be matched to the phrase. You can only select intents, not meta intents.
     * Ensure that all phrases are unique within the test set.
 
     SCREEN
