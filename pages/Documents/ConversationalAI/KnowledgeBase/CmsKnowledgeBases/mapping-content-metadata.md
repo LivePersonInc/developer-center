@@ -35,22 +35,6 @@ LivePerson provides *default* Jolt transformation specs for a few popular CMS ve
     
     This populates a third, read-only panel that illustrates the output when the sample input is transformed using the spec. Behind the scenes, this is JSON. However, it's presented in a record format, so it's quicker and easier to evaluate whether the transformation works as you expect.
 
-### Errors
-
-|Code | Error | Applies to... | Description |
-| --- | --- | --- | --- |
-| | "Invalid input transformation spec" | All CMS knowledge bases | The Jolt transformation spec is invalid. |
-| | "Invalid article Json" | All CMS knowledge bases | The JSON for the sample input is invalid. |
-| | "Mandatory field 'title' is missing" | All CMS knowledge bases | The article's "title" is not mapped in the Jolt transformation spec. This is a mandatory field in every spec. |
-| | "One of the mandatory content attribute(contentUrl/audioUrl/imageUrl/videoUrl/summary/details) is missing in the transformed article" | All CMS knowledge bases | In the spec for fetching article metadata (CMS knowledge base with AI) or in the spec for fetching article suggestions (CMS knowledge base without AI), at least one of these listed attributes must be present, but at least one is not. | 
-| | "Mandatory field 'externalId' is missing" | CMS knowledge bases without AI | The article's "externalId" is not mapped in the Jolt transformation spec. This is a mandatory field in the spec. |
-
-### Warnings
-
-| Code | Warning | Applies to... | Description |
-| --- | --- | --- | --- |
-| | "Unsupported content attributes mapped to transformed article" | CMS knowledge bases with AI | In the spec for fetching article metadata, unsupported attributes are included. These are ignored. |
-
 ### Map content metadata (other vendors)
 
 1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
