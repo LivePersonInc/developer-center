@@ -21,7 +21,7 @@ The toolbelt offers a [Context Service Client](liveperson-functions-developing-w
 The following steps need to be performed before using the Context Service Client in a function:
 * Create a Developer Key as described [here](conversation-orchestrator-context-warehouse-context-session-store.html#developer-key)
 *  Save it to the [Secret Storage](liveperson-functions-developing-with-faas-storing-secrets.html) with an appropriate name (e.g. `context-store-api-key`)
-* [Whitelist](liveperson-functions-developing-with-faas-whitelisting-domains.html) the domain `*.context.liveperson.net`. (covers all domains needed on the production environment, if you are on Alpha environment whitelist `va-a.context.liveperson.net` instead)
+* [Whitelist](liveperson-functions-developing-with-faas-whitelisting-domains.html) the domain `*.context.liveperson.net`. (covers all domains needed on the production environment and Alpha)
 
 ### Code Snippets
 An additional jump start for the implementation are the [code snippets](liveperson-functions-developing-with-faas-snippets.html) that demonstrate the use of the mentioned client:
