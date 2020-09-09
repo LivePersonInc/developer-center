@@ -14,6 +14,9 @@ You can use the **Test** tool to test a single utterance against the domain.
 
 The Test tool is primarily used for debugging purposes. For example, you might find that a strange phrase was matched to an intent on Production. Using the Test tool, you can quickly and easily test that phrase to see how it behaves.
 
+{: .important}
+If the domain uses the LivePerson NLU v2 engine, you can't use the Test tool to directly test and reveal entity matching. This isn't supported for Regular Expression entities. With Value Set entities, you can use the tool to see the entity replacement performed by the tool’s underlying, NLU v1 expansion algorithm. However, in both cases, LivePerson recommends that you test entities by 1) creating an intent that uses the entities and 2) testing the intent itself.
+
 **To test a domain**
 
 1. In the dashboard that lists your domains, select the domain.
