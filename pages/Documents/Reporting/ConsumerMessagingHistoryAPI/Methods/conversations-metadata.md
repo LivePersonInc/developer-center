@@ -3,7 +3,7 @@ pagename: Conversations - Metadata
 redirect_from:
   - consumer-experience-messaging-history-conversations-metadata.html
 sitesection: Documents
-categoryname: Historical Data
+categoryname: Reporting
 documentname: Consumer Messaging History API
 subfoldername: Methods
 order: 10
