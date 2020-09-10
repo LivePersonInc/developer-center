@@ -3,7 +3,7 @@ pagename: Engagement Attributes
 redirect_from:
   - data-messaging-interactions-appendix.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Messaging Interactions API
 
 order: 32

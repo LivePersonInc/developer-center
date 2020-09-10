@@ -1,24 +1,20 @@
 ---
-pagename: Agent Status
-redirect_from:
-  - data-messaging-interactions-methods-agent-status.html
+pagename: Agent List
 sitesection: Documents
-categoryname: "Real Time Data"
+categoryname: "Reporting"
 documentname: Agent Metrics API
 subfoldername: Methods
-order: 10
-permalink: agent-metrics-api-methods-agent-status.html
-
+permalink: agent-metrics-api-methods-agent-list.html
 indicator: messaging
 ---
 
-Returns the current state of logged in agents that are handling messaging conversations with all its related data, including status, number of open conversations, load, skills etc.
+This method returns the list of  agents which are eligible to receive conversations and their state. This list of eligible agents depends on the transferred conversation's skill id and the privileges and permissions that the agent has (see offline users or not, take messages from the specific skill, etc.)
 
 **Request**
 
 | Method   |      URL      |
 |----------|:-------------:|
-| POST |  https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/agent-view/status |
+| POST |  https://[{domain}](/agent-domain-domain-api.html)/messaging_history/api/account/{accountID}/agent-view/list |
 
 **URL Parameters**
 
@@ -34,13 +30,8 @@ Filter is sent in the POST data (body) with the following JSON structure:
 
 | Name   |      Description      |  Type/Value | Notes |
 |----------|-------------|------|------|
-| Status |  List of Agent’s statuses to be filtered  | Array`<String>` | |
-| agentIds |    List of agent ids - when provided, data will be returned for the specified agents who are in logged in state. If not provided, data on all logged in agents will be returned.  |   Array`<String>` ||
-| skillIds | List of skill ids - when provided, data will be returned for the agents with the specified skills who are in logged in state. |    Array`<String>` ||
-| agentGroupIds | List of agent group ids - when provided, data will be returned for the agents that are members of the specified agent groups who are in logged in state.  |    Array`<String>` ||
-| agentPresence | Indicates whether the agent is present  | Boolean | If the filter is not provided, a default filter with the value true will be used |
-| connectionStates | List of agent connection states  | Array`<String>` | Valid values: CONNECTED or DISCONNECTED |
-| timestamp {from} | Epoch | Long - epoch time in milliseconds | Controls how far back to check for connected agents. Default is 5-10 mins unless specified
+| skillIds | Conversation skill id to determine which agents will be filtered by ability to transfer to skill |    Array`<String>` ||
+
 
 **Response**
 
@@ -52,7 +43,7 @@ JSON Example:
 				"count": 2,
 				"self": {
 					"rel": "self",
-					"href": "http://va-a.msghist.liveperson.net/messaging_history/api/account/28045150/agent-view/status?limit=50&offset=0"
+					"href": "http://va-a.msghist.liveperson.net/messaging_history/api/account/28045150/agent-view/list?limit=500"
 				},
 				"shardsStatusResult": {
 					"partialResult": false
@@ -61,14 +52,14 @@ JSON Example:
 			"accountID": "28045150",
 			"agentStatusRecords": [
 				{
-					"agentId": "8",
+					"agentId": "3249823",
 					"lastUpdatedTimeL": 1490033214963,
 					"lastUpdatedTime": "2017-03-20 18:06:54.963+0000",
 					"currentStatusStartTimeL": 1490033214963,
 					"currentStatusStartTime": "2017-03-20 18:06:54.963+0000",
-					"agentName": "lital",
-					"agentNickname": "lital",
-					"agentLoginName": "litalh@liveperson.com",
+					"agentName": "agent_name1",
+					"agentNickname": "agent_nick1",
+					"agentLoginName": "agent1@liveperson.com",
 					"agentSkills": [
 						{
 							"skillId": "2",
@@ -97,16 +88,16 @@ JSON Example:
           "currentConnectionState": "CONNECTED"
 				},
 				{
-					"agentId": "7",
+					"agentId": "9824982",
 					"lastUpdatedTimeL": 1490033214962,
 					"lastUpdatedTime": "2017-03-20 18:06:54.962+0000",
 					"currentStatusStartTimeL": 1490033214962,
 					"currentStatusStartTime": "2017-03-20 18:06:54.962+0000",
 					"currentStatusReasonStartTimeL": 1490033214962,
 					"currentStatusReasonStartTime": "2017-03-20 18:06:54.962+0000",					
-					"agentName": "michal",
-					"agentNickname": "michal",
-					"agentLoginName": "michal@liveperson.com",
+					"agentName": "agent_name2",
+					"agentNickname": "agent_nick2",
+					"agentLoginName": "agent2@liveperson.com",
 					"agentSkills": [
 						{
 							"skillId": "2",

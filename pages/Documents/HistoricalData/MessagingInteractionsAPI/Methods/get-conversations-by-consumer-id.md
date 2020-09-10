@@ -3,7 +3,7 @@ pagename: Get Conversations by Consumer ID
 redirect_from:
   - data-messaging-interactions-get-conversations-by-consumer-id.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Messaging Interactions API
 subfoldername: Methods
 order: 30  

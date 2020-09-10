@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - data-engagement-history-overview.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Engagement History API
 
 level-order: 6

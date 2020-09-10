@@ -3,7 +3,7 @@ pagename: Web Session
 redirect_from:
   - data-data-access-web-session.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Data Access API
 subfoldername: Methods
 order: 30

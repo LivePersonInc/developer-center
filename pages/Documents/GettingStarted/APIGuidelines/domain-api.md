@@ -13,7 +13,7 @@ root-link: true
 indicator:
 ---
 <br>
-A read-only API that returns the base domain of LivePerson and used in the LivePerson APIs.
+A read-only API that returns the base domain of LivePerson and used in the LivePerson APIs. This is a test.
 
 ### Domain Retrieval Tool
 

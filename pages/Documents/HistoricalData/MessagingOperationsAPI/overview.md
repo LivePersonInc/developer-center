@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - data-messaging-operations-overview.html
 sitesection: Documents
-categoryname: "Real Time Data"
+categoryname: "Reporting"
 documentname: Messaging Operations API
 
 level-order: 4

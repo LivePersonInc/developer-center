@@ -3,7 +3,7 @@ pagename: Messaging Agent Segment
 redirect_from:
   - data-messaging-operations-messaging-agent-segment.html
 sitesection: Documents
-categoryname: "Real Time Data"
+categoryname: "Reporting"
 documentname: Messaging Operations API
 subfoldername: Methods
 permalink: messaging-operations-api-methods-messaging-agent-segment.html

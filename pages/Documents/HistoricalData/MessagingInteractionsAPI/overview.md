@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - data-messaging-interactions-overview.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Messaging Interactions API
 
 level-order: 3
@@ -13,6 +13,9 @@ root-link: true
 indicator: messaging
 ---
 ### Introduction
+
+{: .notice}
+This API is intended for reporting and information purposes, not for real-time decisions, such as routing.
 
 <div class="important">The Messaging Interaction API exposes Open and Closed conversations with <b>near real-time data freshness</b>. The API has an inherent delay due to its nature and architecture as a historical API. This means that it has a delay of up to 1 minute.
 <br><br>

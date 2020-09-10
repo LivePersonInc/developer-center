@@ -3,7 +3,7 @@ pagename: Messaging Skill Segment
 redirect_from:
   - data-messaging-operations-messaging-skill-segment.html
 sitesection: Documents
-categoryname: "Real Time Data"
+categoryname: "Reporting"
 documentname: Messaging Operations API
 subfoldername: Methods
 permalink: messaging-operations-api-methods-messaging-skill-segment.html

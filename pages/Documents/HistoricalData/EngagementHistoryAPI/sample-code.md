@@ -3,7 +3,7 @@ pagename: Sample Code
 redirect_from:
   - data-engagement-history-sample-code.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Engagement History API
 
 order: 11

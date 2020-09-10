@@ -1,7 +1,7 @@
 ---
 pagename: Retrieve Data Usage Logs
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Data Usage Audit API
 subfoldername: Methods
 order: 20

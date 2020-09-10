@@ -3,7 +3,7 @@ pagename: Engagement Attributes
 redirect_from:
   - data-engagement-history-appendix.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Engagement History API
 
 order: 12

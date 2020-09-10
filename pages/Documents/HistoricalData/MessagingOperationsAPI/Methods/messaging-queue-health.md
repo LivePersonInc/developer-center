@@ -3,7 +3,7 @@ pagename: Messaging Queue Health
 redirect_from:
   - data-messaging-operations-messaging-queue-health.html
 sitesection: Documents
-categoryname: "Real Time Data"
+categoryname: "Reporting"
 documentname: Messaging Operations API
 subfoldername: Methods
 order: 20

@@ -1,7 +1,7 @@
 ---
 pagename: Overview
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Data Usage Audit API
 permalink: data-usage-audit-api-overview.html
 root-link: true

@@ -3,7 +3,7 @@ pagename: Base Resource
 redirect_from:
   - data-data-access-base-resource.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Data Access API
 subfoldername: Methods
 order: 10

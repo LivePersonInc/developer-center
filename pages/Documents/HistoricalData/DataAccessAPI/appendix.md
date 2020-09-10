@@ -3,7 +3,7 @@ pagename: Appendix
 redirect_from:
   - data-data-access-appendix.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Data Access API
 
 order: 63

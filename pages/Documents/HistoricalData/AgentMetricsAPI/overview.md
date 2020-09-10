@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - data-messaging-agent-metrics-overview.html
 sitesection: Documents
-categoryname: "Real Time Data"
+categoryname: "Reporting"
 documentname: Agent Metrics API
 
 level-order: 2
@@ -15,6 +15,9 @@ indicator: messaging
 ### Introduction
 
 {: .notice}
+This API is intended for reporting and information purposes, not for real-time decisions, such as routing
+
+{: .important}
 Our Data APIs enable you to retrieve many attributes and information types. [Please see this table](https://developers.liveperson.com/api-guidelines-api-data-metrics.html) for the different types of information and attributes which are retrievable via both our Historical and Real Time Data APIs.
 
 The Conversational Cloud Messaging Agent Metrics API provides information about the current state of messaging agents in the contact center. This API exposes different metrics for an overview of the agents’ behavior and performance including: current status, number of open conversations, agent’s skills, load etc.

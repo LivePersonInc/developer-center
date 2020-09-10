@@ -3,7 +3,7 @@ pagename: Messaging Current Queue Health
 redirect_from:
   - data-messaging-operations-messaging-current-queue-health.html
 sitesection: Documents
-categoryname: "Real Time Data"
+categoryname: "Reporting"
 documentname: Messaging Operations API
 subfoldername: Methods
 order: 30

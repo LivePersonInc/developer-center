@@ -1,7 +1,7 @@
 ---
 pagename: Messaging Queue Health By Group
 sitesection: Documents
-categoryname: "Real Time Data"
+categoryname: "Reporting"
 documentname: Messaging Operations API
 subfoldername: Methods
 order: 30

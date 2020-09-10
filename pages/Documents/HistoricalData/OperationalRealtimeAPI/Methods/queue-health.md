@@ -3,7 +3,7 @@ pagename: Queue Health
 redirect_from:
   - data-operational-realtime-queue-health.html
 sitesection: Documents
-categoryname: "Real Time Data"
+categoryname: "Reporting"
 documentname: Operational Realtime API
 subfoldername: Methods
 order: 10

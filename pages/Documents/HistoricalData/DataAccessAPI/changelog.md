@@ -3,7 +3,7 @@ pagename: Changelog
 redirect_from:
   - data-data-access-changelog.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Data Access API
 
 order: 62

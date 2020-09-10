@@ -3,7 +3,7 @@ pagename: Summary
 redirect_from:
   - data-messaging-interactions-methods-summary.html
 sitesection: Documents
-categoryname: "Real Time Data"
+categoryname: "Reporting"
 documentname: Agent Metrics API
 subfoldername: Methods
 

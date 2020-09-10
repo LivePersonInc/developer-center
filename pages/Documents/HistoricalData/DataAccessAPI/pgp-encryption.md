@@ -3,7 +3,7 @@ pagename: PGP Encryption
 redirect_from:
   - data-data-access-pgp-encryption.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Data Access API
 
 order: 61

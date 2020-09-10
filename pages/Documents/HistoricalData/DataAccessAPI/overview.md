@@ -3,7 +3,7 @@ pagename: Overview
 redirect_from:
   - data-data-access-overview.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Data Access API
 
 level-order: 1

@@ -3,7 +3,7 @@ pagename: Methods
 redirect_from:
   - data-engagement-history-methods.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Engagement History API
 
 order: 2

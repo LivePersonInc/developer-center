@@ -3,7 +3,7 @@ pagename: Schema
 redirect_from:
   - data-data-access-schema.html
 sitesection: Documents
-categoryname: "Historical Data"
+categoryname: "Reporting"
 documentname: Data Access API
 subfoldername: Methods
 order: 60
