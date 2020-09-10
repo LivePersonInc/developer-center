@@ -31,6 +31,185 @@ See [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html#attr
 RHS = right-hand side = the input JSON tree<br>
 LHS = left-hand side = the output JSON tree
 
+### Examples - Map a single article's content (CMS KB with AI)
+
+#### Example 1
+
+**Input JSON**
+```JSON 
+{
+   "result": {
+       "id": 360048237271,
+       "url": "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json",
+       "title": "How to Reset password",
+       "label_names": [
+           "Account"
+       ],
+       "body": "<p>Go to login page, and click on \"forgot password\" button below password field, and follow the instructions to receive the password reset email. </p>"
+   }
+}
+```
+
+**Transformation specification**
+```JSON
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "result": {
+        "id": "externalId",
+        "title": "title",
+        "body": "summary",
+        "url": "contentURL",
+        "label_names": "tags"
+      }
+    }
+}]
+```
+
+**Transformed output**
+```JSON
+{
+  "externalId" : 360048237271,
+  "title" : "How to Reset password",
+  "summary" : "<p>Go to login page, and click on \"forgot password\" button below password field, and follow the instructions to receive the password reset email. </p>",
+  "contentURL" : "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json",
+  "tags" : [ "Account" ]
+}
+```
+
+#### Example 2
+
+**Input JSON**
+```JSON 
+{
+  "articleNumber": "000001000",
+  "categoryGroups": [
+    {
+      "groupLabel": "All",
+      "groupName": "All",
+      "selectedCategories": [
+        {
+          "categoryLabel": "Account",
+          "categoryName": "Account",
+          "url": "/services/data/v38.0/support/dataCategoryGroups/All/dataCategories/Account?sObjectName=KnowledgeArticleVersion"
+        }
+      ]
+    },
+    {
+      "groupLabel": "User",
+      "groupName": "User",
+      "selectedCategories": [
+        {
+          "categoryLabel": "Profile",
+          "categoryName": "Profile",
+          "url": "/services/data/v38.0/support/dataCategoryGroups/All/dataCategories/Account?sObjectName=KnowledgeArticleVersion"
+        }
+      ]
+    }
+  ],
+  "createdDate": "2020-08-12T21:20:31Z",
+  "id": "kA0050000004EA3CAM",
+  "summary": "To reset password, click on the link provided below password field on the logon page.",
+  "title": "How to reset password",
+  "url": "/services/data/v38.0/support/knowledgeArticles/kA0050000004EA3CAM"
+}
+```
+
+**Transformation specification**
+```JSON
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "id": "externalId",
+      "title": "title",
+      "summary": "summary",
+      "url": "contentURL",
+      "categoryGroups": {
+        "*": {
+          "selectedCategories": {
+            "*": {
+			// using tags[] array 
+              "categoryLabel": "tags[]"
+            }
+          }
+        }
+      }
+    }
+  }
+]
+```
+
+In the above specification, in the output JSON’s tags attribute, “[ ]” is used to explicitly mention it as an array data type. If we don’t do this, if there is only one selected category, then "tags" is created as a string data type on the RHS due to categoryLabel being a string type. If the selected categories are more than one across all category groups, then mentioning "tags" as an array isn’t required, as the Shift transform automatically does the type casting to hold a list of strings. 
+
+**Using the * wildcard:** In the transform operation, " * " considers all fields/keys matching “ * ” pattern at the current level on the LHS.
+
+In the example above, we use “ * “ to consider all objects under the “categoryGroups” array. 
+
+“ * “ can be used to match all fields/keys/indexes like in the example above. It can also be used to match part of the key on the LHS. For example, “ categor* ” could match keys like “categoryGroups”, “categories”.
+
+**Transformed output**
+```JSON
+{
+  "externalId" : "kA0050000004EA3CAM",
+  "title" : "How to reset password",
+  "summary" : "To reset password, click on the link provided below password field on the logon page.",
+  "contentURL" : "/services/data/v38.0/support/knowledgeArticles/kA0050000004EA3CAM",
+  "tags" : [ "Account", "Profile" ]
+```
+
+#### Example 3
+
+**Input JSON**
+```JSON 
+{
+  "result": [
+    {
+      "id": 360048237271,
+      "url": "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json",
+      "title": "How to Reset password",
+      "label_names": [
+        "Account"
+      ],
+      "body": "<p>Go to login page, and click on \"forgot password\" button below password field, and follow the instructions to receive the password reset email. </p>"
+    }
+  ]
+}
+```
+
+**Transformation specification**
+```JSON
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "result": {
+        "0": {
+          "id": "externalId",
+          "title": "title",
+          "body": "summary",
+          "url": "contentURL",
+          "label_names": "tags"
+        }
+      }
+    }
+}]
+```
+
+When fetching a single article, some CMS systems might return an array as per their contract. However, when mapping a single article’s content, the target schema should be an object. For this reason, in the example above, “0” index is used under the “result” array to consider only a single object on the RHS.
+
+**Transformed output**
+```JSON
+{
+  "externalId" : 360048237271,
+  "title" : "How to Reset password",
+  "summary" : "<p>Go to login page, and click on \"forgot password\" button below password field, and follow the instructions to receive the password reset email. </p>",
+  "contentURL" : "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json",
+  "tags" : [ "Account" ]
+}
+```
+
 ### Examples - Map articles' metadata (CMS KB with AI)
 
 #### Example 1
@@ -190,7 +369,7 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 ]
 ```
 
-**Note:** [&5].tags[ ] is used on the RHS because the “results” array index is five levels up from categoryLabel, i.e., categoryLabel -> selectedCategories index -> selectedCategories key ->  categoryGroups index -> categoryGroups key -> results index.
+[&5].tags[ ] is used on the RHS because the “results” array index is five levels up from categoryLabel, i.e., categoryLabel -> selectedCategories index -> selectedCategories key ->  categoryGroups index -> categoryGroups key -> results index.
 
 **Transformed output**
 ```JSON
@@ -203,185 +382,6 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
   "title" : "How to reset password",
   "tags" : [ "Profile" ]
 } ]
-```
-
-### Examples - Map a single article's content (CMS KB with AI)
-
-#### Example 1
-
-**Input JSON**
-```JSON 
-{
-   "result": {
-       "id": 360048237271,
-       "url": "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json",
-       "title": "How to Reset password",
-       "label_names": [
-           "Account"
-       ],
-       "body": "<p>Go to login page, and click on \"forgot password\" button below password field, and follow the instructions to receive the password reset email. </p>"
-   }
-}
-```
-
-**Transformation specification**
-```JSON
-[
-  {
-    "operation": "shift",
-    "spec": {
-      "result": {
-        "id": "externalId",
-        "title": "title",
-        "body": "summary",
-        "url": "contentURL",
-        "label_names": "tags"
-      }
-    }
-}]
-```
-
-**Transformed output**
-```JSON
-{
-  "externalId" : 360048237271,
-  "title" : "How to Reset password",
-  "summary" : "<p>Go to login page, and click on \"forgot password\" button below password field, and follow the instructions to receive the password reset email. </p>",
-  "contentURL" : "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json",
-  "tags" : [ "Account" ]
-}
-```
-
-#### Example 2
-
-**Input JSON**
-```JSON 
-{
-  "articleNumber": "000001000",
-  "categoryGroups": [
-    {
-      "groupLabel": "All",
-      "groupName": "All",
-      "selectedCategories": [
-        {
-          "categoryLabel": "Account",
-          "categoryName": "Account",
-          "url": "/services/data/v38.0/support/dataCategoryGroups/All/dataCategories/Account?sObjectName=KnowledgeArticleVersion"
-        }
-      ]
-    },
-    {
-      "groupLabel": "User",
-      "groupName": "User",
-      "selectedCategories": [
-        {
-          "categoryLabel": "Profile",
-          "categoryName": "Profile",
-          "url": "/services/data/v38.0/support/dataCategoryGroups/All/dataCategories/Account?sObjectName=KnowledgeArticleVersion"
-        }
-      ]
-    }
-  ],
-  "createdDate": "2020-08-12T21:20:31Z",
-  "id": "kA0050000004EA3CAM",
-  "summary": "To reset password, click on the link provided below password field on the logon page.",
-  "title": "How to reset password",
-  "url": "/services/data/v38.0/support/knowledgeArticles/kA0050000004EA3CAM"
-}
-```
-
-**Transformation specification**
-```JSON
-[
-  {
-    "operation": "shift",
-    "spec": {
-      "id": "externalId",
-      "title": "title",
-      "summary": "summary",
-      "url": "contentURL",
-      "categoryGroups": {
-        "*": {
-          "selectedCategories": {
-            "*": {
-			// using tags[] array 
-              "categoryLabel": "tags[]"
-            }
-          }
-        }
-      }
-    }
-  }
-]
-```
-
-**Note:** In the above specification, in the output JSON’s tags attribute, “[ ]” is used to explicitly mention it as an array data type. If we don’t do this, if there is only one selected category, then "tags" is created as a string data type on the RHS due to categoryLabel being a string type. If the selected categories are more than one across all category groups, then mentioning "tags" as an array isn’t required, as the Shift transform automatically does the type casting to hold a list of strings. 
-
-**Using the * wildcard:** In the transform operation, " * " considers all fields/keys matching “ * ” pattern at the current level on the LHS.
-
-In the example above, we use “ * “ to consider all objects under the “categoryGroups” array. 
-
-“ * “ can be used to match all fields/keys/indexes like in the example above. It can also be used to match part of the key on the LHS. For example, “ categor* ” could match keys like “categoryGroups”, “categories”.
-
-**Transformed output**
-```JSON
-{
-  "externalId" : "kA0050000004EA3CAM",
-  "title" : "How to reset password",
-  "summary" : "To reset password, click on the link provided below password field on the logon page.",
-  "contentURL" : "/services/data/v38.0/support/knowledgeArticles/kA0050000004EA3CAM",
-  "tags" : [ "Account", "Profile" ]
-```
-
-#### Example 3
-
-**Input JSON**
-```JSON 
-{
-  "result": [
-    {
-      "id": 360048237271,
-      "url": "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json",
-      "title": "How to Reset password",
-      "label_names": [
-        "Account"
-      ],
-      "body": "<p>Go to login page, and click on \"forgot password\" button below password field, and follow the instructions to receive the password reset email. </p>"
-    }
-  ]
-}
-```
-
-**Transformation specification**
-```JSON
-[
-  {
-    "operation": "shift",
-    "spec": {
-      "result": {
-        "0": {
-          "id": "externalId",
-          "title": "title",
-          "body": "summary",
-          "url": "contentURL",
-          "label_names": "tags"
-        }
-      }
-    }
-}]
-```
-
-**Note:** When fetching a single article, some CMS systems might return an array as per their contract. However, when mapping a single article’s content, the target schema should be an object. For this reason, in the example above, “0” index is used under the “result” array to consider only a single object on the RHS.
-
-**Transformed output**
-```JSON
-{
-  "externalId" : 360048237271,
-  "title" : "How to Reset password",
-  "summary" : "<p>Go to login page, and click on \"forgot password\" button below password field, and follow the instructions to receive the password reset email. </p>",
-  "contentURL" : "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json",
-  "tags" : [ "Account" ]
-}
 ```
 
 ### Examples - Map article suggestions/answers (CMS KB without AI)
@@ -495,7 +495,7 @@ In the example above, we use “ * “ to consider all objects under the “cate
 ]
 ```
 
-**Note:** “[&2].contentURL” is used on the RHS because the “searchRecords” array index is two levels up from “url”, i.e., url -> attributes -> searchRecords index.
+“[&2].contentURL” is used on the RHS because the “searchRecords” array index is two levels up from “url”, i.e., url -> attributes -> searchRecords index.
 
 **Transformed output**
 ```JSON
