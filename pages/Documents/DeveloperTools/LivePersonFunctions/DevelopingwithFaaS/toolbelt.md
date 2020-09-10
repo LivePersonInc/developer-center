@@ -692,7 +692,7 @@ After all [prerequisites for using the context session store](liveperson-functio
       const config = {accountId, apiKey}
 
       // using the config to instantiate the contextServiceClient
-      const contextServiceClient = Toolbelt.ContextServiceClient(config);
+      const contextClient = Toolbelt.ContextServiceClient(config);
     } catch(error) {
       // Handle error based on your integration by providing a legit fallback operation.
       console.error(`received following error message: ${error.message}`);
