@@ -146,7 +146,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `keywords`: This replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
 
-* `documentname`: This key accepts either `Documents` or `Solutions`. This designates which part of the site the document is under.
+* `sitesection`: This key accepts either `Documents` or `Solutions`. This designates which part of the site the document is under.
 
 * `categoryname`: This is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management).
 
