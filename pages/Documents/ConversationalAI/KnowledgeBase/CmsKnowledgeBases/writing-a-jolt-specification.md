@@ -14,11 +14,11 @@ indicator: both
 
 The data schema used by your CMS differs from that used by LivePerson Knowledge Base, so mapping the content from the former to the latter is a required step in setting up the knowledge base. This involves defining a Jolt transformation specification to transform the data. Jolt is an open-source, JSON-to-JSON transformation library.
 
-If you’re using a popular CMS vendor, LivePerson provides a default, vendor-specific Jolt specification. If you’ve customized the CMS’ data schema, you’ll need to adjust the default specification accordingly. If you’re using another CMS vendor for which no default specification is available, you’ll need to write a specification from scratch. In either case, use the examples that follow as a guide to writing the Jolt specification.
+If you’re using a popular CMS vendor, LivePerson provides a default, vendor-specific Jolt specification. If you’ve customized your CMS’ data schema, you’ll need to adjust the default specification accordingly. If you’re using a CMS vendor for which no default specification is available, you’ll need to write a specification from scratch. In either case, use the examples that follow as a guide to writing the Jolt specification.
 
 Jolt provides several, out-of-the-box transforms that you can use when writing a transform specification; these are listed [here](https://github.com/bazaarvoice/jolt#stock-transforms). The Shift transform in particular does most of the heavy work when it comes to the transform; it specifies how the input JSON should be “shifted around” to make the output JSON. All of the examples that follow use the Shift transform.
 
-The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. However, the examples that follow cover only the knowledge and usage required for transforms to the LivePerson Knowledge Base article schema in particular. If you want to learn about more complex use cases, see the Jolt test samples [here](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
+The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. The examples that follow make use of what's needed for transformation to the LivePerson Knowledge Base article schema in particular. To learn about more complex use cases, see the Jolt test samples [here](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
 
 ### Supported LivePerson attributes
 
@@ -27,8 +27,9 @@ See [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html#attr
 ### Reading the examples
 
 **Terminology:** 
-RHS = right-hand side = input JSON tree
-LHS = left-hand side = output JSON tree
+
+RHS = right-hand side = the input JSON tree<br>
+LHS = left-hand side = the output JSON tree
 
 ### Examples - Map articles' metadata (CMS KB with AI)
 
@@ -80,10 +81,12 @@ LHS = left-hand side = output JSON tree
 ]
 ```
 
-**Using the & wildcard:** Use the wildcard “&” if you want to use the key on LHS as a key on the RHS. This wildcard has sugarcoated canonical syntax “&(n,m)” for complex mappings: The first param tells the level to go up on LHS from current node, and the second param tells which part of key (applicable when using “ * ” on LHS object keys) to use on the RHS.
+**Using the & wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a sugarcoated canonical syntax “&(n,m)” for complex mappings:
+* The first parameter tells the level to go up on the LHS from current node.
+* The second parameter tells which part of the key (applicable when using “ * ” on LHS object keys) to use on the RHS.
  
-The syntaxes below are equal, i.e., params/brackets can be ignored for simple mappings:
-& = &0 = &(0) = &(0,0)
+The syntaxes below are equal, i.e., parameters/brackets can be ignored for simple mappings:<br>
+& = &0 = &(0) = &(0,0)<br>
 &1 = &(1) = &(1,0)
 
 ```JSON
@@ -96,9 +99,9 @@ The syntaxes below are equal, i.e., params/brackets can be ignored for simple ma
      }
 ```
 
-In the Example 1 transformation spec above, we use the index of the results array (&1 = one level up from “title” means index of the results array) as the object's index on the RHS. “ [ ] “ around “&1” is required as the output is an array.
+In the transformation spec farther above, we use the index of the "results" array (&1 = one level up from “title” means index of the "results" array) as the object's index on the RHS. “ [ ] “ around “&1” is required as the output is an array.
 
-On the LHS, the values “0” and “1” are resolved by “&1”, as we have two objects in the results array that are mapped to “[0]”, “[1]” on the RHS in the same order as the LHS.
+On the LHS, the values “0” and “1” are resolved by “&1”, as we have two objects in the "results" array that are mapped to “[0]”, “[1]” on the RHS in the same order as the LHS.
 
 **Transformed output**
 ```JSON
@@ -187,7 +190,7 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 ]
 ```
 
-**Note:** [&5].tags[] is used on the RHS because the “results” array index is five levels up from categoryLabel, i.e., categoryLabel -> selectedCategories index -> selectedCategories key ->  categoryGroups index -> categoryGroups key -> results index.
+**Note:** [&5].tags[ ] is used on the RHS because the “results” array index is five levels up from categoryLabel, i.e., categoryLabel -> selectedCategories index -> selectedCategories key ->  categoryGroups index -> categoryGroups key -> results index.
 
 **Transformed output**
 ```JSON
@@ -312,9 +315,13 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 ]
 ```
 
-**Note:** In the above specification, in the output JSON’s tags attribute, “[]” is used to explicitly mention it as an array data type. If we don’t do this, if there is only one selected category, then tags is created as a string data type on the RHS due to categoryLabel being a string type. If the selected categories are more than one across all category groups, then mentioning tags as an array isn’t required, as the Shift transform automatically does the type casting to hold a list of strings. 
+**Note:** In the above specification, in the output JSON’s tags attribute, “[ ]” is used to explicitly mention it as an array data type. If we don’t do this, if there is only one selected category, then "tags" is created as a string data type on the RHS due to categoryLabel being a string type. If the selected categories are more than one across all category groups, then mentioning "tags" as an array isn’t required, as the Shift transform automatically does the type casting to hold a list of strings. 
 
-**Using the * wildcard:** In the transform operation, " * " considers all fields/keys matching “ * ” pattern at the current level on the LHS. In the example above, we use “ * “ to consider all objects under the “categoryGroups” array. “ * “ can be used to match all fields/keys/indexes like in the example above. It can also be used to match part of the key on the LHS. For example, “ categor* ” could match keys like “categoryGroups”, “categories”.
+**Using the * wildcard:** In the transform operation, " * " considers all fields/keys matching “ * ” pattern at the current level on the LHS.
+
+In the example above, we use “ * “ to consider all objects under the “categoryGroups” array. 
+
+“ * “ can be used to match all fields/keys/indexes like in the example above. It can also be used to match part of the key on the LHS. For example, “ categor* ” could match keys like “categoryGroups”, “categories”.
 
 **Transformed output**
 ```JSON
