@@ -12,13 +12,13 @@ indicator: both
 
 ### Introduction
 
-When you add a CMS knowledge base, one important step in the process is to map the external CMS' article data model to LivePerson Knowledge Base. This is done by providing a Jolt transformation specification that can be used to "transform" the response returned from the API call to the CMS.
+When you add a CMS knowledge base, one important step in the process is to map the external CMS' article data model to LivePerson Knowledge Base. This is done by providing a Jolt transformation specification that can be used to "transform" the response that's returned from the API call to the CMS.
 
 LivePerson provides *default* Jolt transformation specifications for a few, popular CMS vendors, namely, Salesforce and Zendesk. If you use one of these vendors, you can use the default specification as long as you haven't customized the CMS' data schema. If you use another CMS vendor, you can write the specification using the guidance and examples [here](knowledge-base-cms-knowledge-bases-writing-a-jolt-specification.html).
 
 ### Attributes supported when content mapping
 
-When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), one setup step involves configuring the request to fetch the articles' metadata. This step includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
+When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), one setup step involves configuring the request to fetch the articles' metadata. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 
 | Attribute | Mandatory? |
 | --- | --- |
@@ -27,7 +27,7 @@ When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowle
 | tags | no |
 | category | no |
 
-When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), a second setup step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This step includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
+When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), a second setup step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 
 | Attribute | Mandatory? |
 | --- | --- |
