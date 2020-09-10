@@ -31,7 +31,7 @@ See [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html#attr
 RHS = right-hand side = the input JSON tree<br>
 LHS = left-hand side = the output JSON tree
 
-### Examples - Map a single article's content (CMS KB with AI)
+### Examples - Map a single article's content (CMS KB with LivePerson AI)
 
 #### Example 1
 
@@ -210,7 +210,7 @@ When fetching a single article, some CMS systems might return an array as per th
 }
 ```
 
-### Examples - Map articles' metadata (CMS KB with AI)
+### Examples - Map articles' metadata (CMS KB with LivePerson AI)
 
 #### Example 1
 
@@ -384,7 +384,7 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 } ]
 ```
 
-### Examples - Map article suggestions/answers (CMS KB without AI)
+### Examples - Map article suggestions/answers (CMS KB without LivePerson AI)
 
 #### Example 1
 
