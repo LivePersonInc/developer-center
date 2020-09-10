@@ -2,7 +2,7 @@
 pagename: BrandServiceStatusAPI
 redirect_from:
 sitesection: Documents
-categoryname: "RealTimeData"
+categoryname: "Reporting"
 documentname: BrandStatusService_test-details
 permalink: BrandStatusService_test-details.html
 indicator:
