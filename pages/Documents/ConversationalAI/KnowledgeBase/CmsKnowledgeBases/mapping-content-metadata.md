@@ -14,7 +14,7 @@ indicator: both
 
 When you add a CMS knowledge base, one important step in the process is to map the external CMS' article data model to LivePerson Knowledge Base. This is done by providing a Jolt transformation specification that can be used to "transform" the response that's returned from the API call to the CMS.
 
-LivePerson provides *default* Jolt transformation specifications for a few, popular CMS vendors, namely, Salesforce and Zendesk. If you use one of these vendors, you can use the default specification as long as you haven't customized the CMS' data schema. If you use another CMS vendor, you can write the specification using the guidance and examples [here](knowledge-base-cms-knowledge-bases-writing-a-jolt-specification.html).
+LivePerson provides *default* Jolt transformation specifications for a few, popular CMS vendors, namely, Salesforce and Zendesk. If you’ve customized your CMS’ data schema, you’ll need to adjust the default specification accordingly. If you use another CMS vendor, you can write the specification using the guidance and examples [here](knowledge-base-cms-knowledge-bases-writing-a-jolt-specification.html).
 
 ### Attributes supported when content mapping
 
@@ -90,6 +90,6 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
 1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
 2. For **Content Provider**, select "Others," and enter the name of your CMS provider.
-3. In the **Transformation Spec** editor, enter the Jolt specification.
+3. In the **Transformation Spec** editor, enter the Jolt specification. For help with this, see [here](knowledge-base-cms-knowledge-bases-writing-a-jolt-specification.html).
 4. Click **Test Spec**.
 
