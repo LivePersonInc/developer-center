@@ -870,7 +870,7 @@
     pages:
     - pagename: API
 
-- categoryname: Real Time Data
+- categoryname: Reporting APIs
   image: rt-data
   documents:
   - documentname: Agent Metrics API
