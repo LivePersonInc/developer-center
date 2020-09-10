@@ -260,7 +260,7 @@ When fetching a single article, some CMS systems might return an array as per th
 ]
 ```
 
-**Using the & wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a sugarcoated canonical syntax “&(n,m)” for complex mappings:
+**Using the & wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a canonical syntax “&(n,m)” for complex mappings:
 * The first parameter tells the level to go up on the LHS from current node.
 * The second parameter tells which part of the key (applicable when using “ * ” on LHS object keys) to use on the RHS.
  
@@ -278,7 +278,7 @@ The syntaxes below are equal, i.e., parameters/brackets can be ignored for simpl
      }
 ```
 
-In the transformation spec farther above, we use the index of the "results" array (&1 = one level up from “title” means index of the "results" array) as the object's index on the RHS. “ [ ] “ around “&1” is required as the output is an array.
+In the transformation spec farther above, we use the index of the "results" array (&1 = one level up from “title” means index of the "results" array) as the object's index on the RHS. “[ ]“ around “&1” is required as the output is an array.
 
 On the LHS, the values “0” and “1” are resolved by “&1”, as we have two objects in the "results" array that are mapped to “[0]”, “[1]” on the RHS in the same order as the LHS.
 
