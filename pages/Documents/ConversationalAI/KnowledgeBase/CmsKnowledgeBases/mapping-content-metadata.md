@@ -16,6 +16,53 @@ When you add a CMS knowledge base, one important step in the process is to map t
 
 LivePerson provides *default* Jolt transformation specs for a few popular CMS vendors, namely, Salesforce and Zendesk. If you use another CMS vendor, you can write the spec using the guidance and examples farther below.
 
+### Attributes supported when content mapping
+
+If you are adding a CMS knowledge base **with** LivePerson AI, one setup step involves configuring the request to fetch the content’s metadata. When you do this, you also need to define the transformation spec for the returned content. The following LivePerson attributes are supported:
+
+| Attribute | Mandatory? |
+| --- | --- |
+| externalId | yes |
+| title | yes |
+| tags | no |
+| category | no |
+
+If you are adding a CMS knowledge base **with** LivePerson AI, a second setup step involves configuring the request for the on-demand content retrieval of a single article by its unique identifier. When you do this, you also need to define the transformation spec for the returned content. The following LivePerson attributes are supported:
+
+| Attribute | Mandatory? |
+| --- | --- |
+| externalId | yes |
+| title | yes |
+| tags | no |
+| category | no |
+| summary | no, but see note below |
+| detail | no, but see note below |
+| contentURL | no, but see note below |
+| imageURL | no, but see note below |
+| audioURL | no, but see note below |
+| videoURL | no, but see note below |
+
+{: .important}
+One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
+
+If you are adding a CMS knowledge base **without** LivePerson AI, one setup step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. When you do this, you also need to define the transformation spec for the returned content. The following LivePerson attributes are supported:
+
+| Attribute | Mandatory? |
+| --- | --- |
+| externalId | no |
+| title | yes |
+| tags | no |
+| category | no |
+| summary | no, but see note below |
+| detail | no, but see note below |
+| contentURL | no, but see note below |
+| imageURL | no, but see note below |
+| audioURL | no, but see note below |
+| videoURL | no, but see note below |
+
+{: .important}
+One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
+
 ### Map content metadata (popular CMS vendors)
 
 1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
@@ -42,6 +89,3 @@ LivePerson provides *default* Jolt transformation specs for a few popular CMS ve
 3. In the **Transformation Spec** editor, enter the Jolt spec.
 4. Click **Validate Spec**.
 
-### Write a Jolt transformation spec
-
-to be added
