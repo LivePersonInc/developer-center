@@ -70,15 +70,15 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
     
     This populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation spec that's designed for the given request (API call). This is a pre-built Jolt specification for a default data structure. You can use the specification as is or as a starter template.
 
-3. If you've customized your CMS's data model (e.g., you've added a custom attribute), use the editor to modify the specification accordingly.
+3. If you've customized your CMS's data model (e.g., you've added a custom attribute), use the editor to modify the specification accordingly. For help with this, see [here](knowledge-base-cms-knowledge-bases-writing-a-jolt-specification.html).
 
 4. Click **Test Spec**.
 
-    This verifies that the specification uses well-formed JSON.
+    This step verifies that the specification uses well-formed JSON.
 
     The **Sample Input** editor contains some default input in JSON format.
 
-5. You can use the default, sample input. Alternatively, replace it with your own. For example, to see one of your own records, take the payload returned from the API call and paste it here.
+5. You can choose to use the default, sample input, or you can replace it with your own. For example, to see one of your own records, take the payload returned from the API call and paste it here.
 
 6. Click **Validate Spec**.
     
