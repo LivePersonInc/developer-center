@@ -20,7 +20,7 @@ LivePerson provides *default* Jolt transformation specifications for a few, popu
 
 When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), one setup step involves configuring the request to fetch the articles' metadata. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 
-| Attribute | Mandatory? |
+| LivePerson Attribute | Mandatory? |
 | --- | --- |
 | externalId | yes |
 | title | yes |
@@ -29,7 +29,7 @@ When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowle
 
 When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), a second setup step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 
-| Attribute | Mandatory? |
+| LivePerson Attribute | Mandatory? |
 | --- | --- |
 | externalId | yes |
 | title | yes |
@@ -47,7 +47,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
 When you [add a CMS knowledge base without LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html#add-a-cms-kb-without-liveperson-ai), one setup step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation specification for the article suggestions/answers that are returned. The following LivePerson attributes are supported:
 
-| Attribute | Mandatory? |
+| LivePerson Attribute | Mandatory? |
 | --- | --- |
 | externalId | no |
 | title | yes |
