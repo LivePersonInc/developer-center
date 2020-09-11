@@ -15,7 +15,7 @@ indicator: both
 A CMS knowledge base without LivePerson AI:
 
 * Integrates with an external content management system (CMS)
-* *Doesn’t* use a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance and return the highest scoring article. Instead, the utterance (input phrase) is simply passed on to the CMS, which uses its own query and answer API to find and return the most appropriate articles/answers/suggestions. (Every CMS can have a different name for this API.)
+* *Doesn’t* use a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance and return the highest scoring article. Instead, the utterance (input phrase) is simply passed on to the CMS, which uses its own query and answer API to find and return the most appropriate articles. (Every CMS can have a different name for this API.)
 
 ### High-level workflow
 
