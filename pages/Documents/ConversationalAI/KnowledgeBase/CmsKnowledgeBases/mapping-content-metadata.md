@@ -16,7 +16,7 @@ When you add a CMS knowledge base, one important step in the process is to map t
 
 LivePerson provides *default* Jolt transformation specifications for a few, popular CMS vendors, namely, Salesforce and Zendesk. If you’ve customized your CMS’ data schema, you’ll need to adjust the default specification accordingly. If you use another CMS vendor, you can write the specification using the guidance and examples [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html).
 
-### Attributes supported when content mapping
+### Supported LivePerson attributes
 
 When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), one setup step involves configuring the request to fetch the articles' metadata. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 

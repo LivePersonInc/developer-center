@@ -54,7 +54,11 @@ After you've add a CMS knowledge base that doesn't use AI, you can test the inte
 **To test the CMS integration**
 
 1. Open the knowledge base.
+
     By default, the Articles tab is displayed. Initially, it doesn’t show any metadata or content because, with this type of knowledge base (one without LivePerson AI), only configuration information is stored within Knowledge Base. The content remains in the CMS.
+
 2. On the Articles tab, enter an utterance in the search box at the top, and press Enter.
+
     This performs a search against the CMS.
+    
 3. Evaluate the article results that are displayed. If they aren't what you expect, you might need to adjust the knowledge base's configuration.
