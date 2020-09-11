@@ -68,11 +68,11 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
 2. For **Content Provider**, select the name of your CMS provider. If you don't see your provider's name listed, select "Others," and then enter the name.
     
-    If you were able to select your CMS provider's name, this step populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation specification that's designed for the given request (API call). This is a pre-built specification for a default data structure. You can use the specification as is. Alternatively, if you've customized your CMS' data model (e.g., you've added a custom attribute), you can use it as a starter template.
+    If you were able to select your CMS provider's name, this step populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation specification that's designed for the given request (API call). This is a pre-built specification for a default data structure. You can use the specification as is. Alternatively, if you've customized the CMS' data model (e.g., you've added a custom attribute), you can use it as a starter template.
 
-    If your CMS provider's name wasn't listed, no default specification is provided. You'll need to write the specification from scratch.
+    If your weren't able to select your CMS provider's name, a default specification isn't available. You'll need to write the specification from scratch.
 
-3. Adjust or write the Jolt transformation spec if needed, using the examples and guidance [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html). 
+3. If needed, adjust or write the Jolt transformation spec using the examples and guidance [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html). 
 
 4. Click **Test Spec**.
 
@@ -82,8 +82,8 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
 5. In the **Sample Input** editor:
 
+    * If the editor has some default, sample input, you can use it as is or replace it with your own, e.g., with the CMS' response payload.
     * If the editor is empty, take your CMS' response payload and paste it here.
-    * If the editor has some default, sample input, you can use it as is or replace it with your own.
 
 6. Click **Validate Spec**.
     
