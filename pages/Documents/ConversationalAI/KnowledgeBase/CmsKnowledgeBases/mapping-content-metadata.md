@@ -68,7 +68,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
 2. For **Content Provider**, select the name of your CMS provider. If you don't see your provider's name listed, select "Others," and then enter the name.
     
-    If your CMS provider's name was listed, this step populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation specification that's designed for the given request (API call). This is a pre-built Jolt specification for a default data structure. You can use the specification as is. Alternatively, if you've customized your CMS' data model (e.g., you've added a custom attribute), you can use it as a starter template.
+    If you were able to select your CMS provider's name, this step populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation specification that's designed for the given request (API call). This is a pre-built specification for a default data structure. You can use the specification as is. Alternatively, if you've customized your CMS' data model (e.g., you've added a custom attribute), you can use it as a starter template.
 
     If your CMS provider's name wasn't listed, no default specification is provided. You'll need to write the specification from scratch.
 
@@ -87,7 +87,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
 6. Click **Validate Spec**.
     
-    This step verifies that the specification meets all LivePerson requirements. For example, if you've omitted a required field, you'll see an error. If you've included a field that's not supported, you'll see a warning.
+    This step verifies that the specification meets all LivePerson requirements. For example, if you've omitted a mandatory field, you'll see an error. If you've included a field that's not supported, you'll see a warning.
 
     This step also populates a third, read-only panel that illustrates the output when the sample input JSON is transformed using the specification. Behind the scenes, the output is JSON too. However, it's presented in a friendlier, record format, so it's faster and easier to evaluate whether the specification is working as you expect.
 
