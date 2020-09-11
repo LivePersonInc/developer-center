@@ -16,7 +16,7 @@ A CMS knowledge base with LivePerson AI:
 * Integrates with an external content management system (CMS)
 * Uses a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance (the intent) and return the highest scoring article. Using the capabilities of NLU to do this work is recommended for the best consumer experience.
 
-    When you add this type of knowledge base, some article information is retrieved from the CMS and made visible within the Knowledge Base application. The information isn’t editable; it’s made visible because you need it to be able to perform some work, namely, to associate the articles with the intents in a domain and to train the knowledge base.
+    When you add this type of knowledge base, some article information is retrieved from the CMS and made visible within the Knowledge Base application. The information isn’t editable, but it’s made visible because you need it to be able to perform some work, namely, to associate the articles with the intents in a domain and to train the knowledge base.
 
 ### High-level workflow
 When adding a CMS knowledge base with LivePerson AI, follow this high-level workflow:
