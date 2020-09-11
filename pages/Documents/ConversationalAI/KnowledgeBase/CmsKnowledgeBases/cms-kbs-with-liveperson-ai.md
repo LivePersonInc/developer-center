@@ -26,7 +26,7 @@ When adding a CMS knowledge base with LivePerson AI, follow this high-level work
     1. Add the CMS knowledge base. During this step, you’ll specify the domain that you created in step 1.
     2. In the CMS knowledge base that you added, associate each article with an intent in the domain. 
     3. [Train](knowledge-base-common-common-tasks.html#train-a-knowledge-base) the articles to match consumer utterances.
-3. In Conversation Builder, [add a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and test.
+3. In Conversation Builder, [add a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and test. Alternatively, in Conversation Orchestrator, add a Knowledge Base integration as a part of the Agent Assist component.
 
 {: .important}
 After making any changes to the content in the CMS, sync with the CMS (described below). This updates the knowledge base accordingly.
@@ -43,25 +43,25 @@ After making any changes to the content in the CMS, sync with the CMS (described
 5. Define the request to fetch your content's metadata. The request should return a list of articles, and each article must contain a title and unique identifier. You can optionally retrieve tags and a category as well. An article can have multiple tags but exactly one category.
     * **Method**: Select the type of HTTP request method. 
     * **URL**: Enter the request target, the URL.
-    * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
+    * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authorization if applicable.
     * **Add Request Headers**: Add any request headers to include in the request.
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
-    * **Add Post Body**: Enter the payload to send.
-    * Click **Map Content Metadata**, and map the returned articles' metadata to  the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
+    * **Add Post Body**: Enter the payload to send if applicable.
+    * Click **Map Content Metadata**, and map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
 6. Click **Next**.
-7. Define the request for the on-demand retrieval of a single article. Somewhere in the request (request parameters, post body, etc.), you must pass the unique identifier of the article to retrieve. The request should return a single article that must contain a title, a unique identifier, and at least one of these content attributes: summary, detail, contentURL, imageURL, videoURL, or audioURL.
+7. Define the request for the on-demand retrieval of a single article. Somewhere in the request (request parameters, post body, etc.), you must pass the unique identifier of the article to retrieve. (An {externalArticleId} placeholder is provided for this purpose.) The request should return a single article that must contain a title, a unique identifier, and at least one of these content attributes: summary, detail, contentURL, imageURL, videoURL, or audioURL.
     * **Method**: Select the type of HTTP request method.
     * **URL**: Enter the request target, the URL.
-    * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authentication if applicable.
+    * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authorization if applicable.
     * **Add Request Headers**: Add any request headers to include in the request.
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
-    * **Add Post Body**: Enter the payload to send.
+    * **Add Post Body**: Enter the payload to send if applicable.
     * **Cache Article Content**: If you want to temporarily cache the article content that’s returned at run time for improved performance, select the duration in minutes. 
-    * Click **Map Content Metadata**, and map the single article’s content to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
+    * Click **Map Content Metadata**, and map the single article’s content data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
 9. Click **Save**.
 
 ### Associate an article with an intent
-You must associate articles with intents so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest [scoring](knowledge-base-common-common-concepts.html#scoring-and-thresholds) article that is found in the search is then retrieved from the CMS.
+You must associate articles with intents so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest [scoring](knowledge-base-common-common-concepts.html#scoring-and-thresholds) articles that are found in the search are then retrieved from the CMS.
 
 **To associate an article with an intent**
 
@@ -76,7 +76,7 @@ Manually syncing with the CMS does the following:
 
 * Updates the existing articles
 * Adds new articles if there are any
-* Disables all articles that aren’t returned by the CMS
+* Deletes all articles that aren't returned by the CMS but were stored during the previous sync
 
 Sync with the CMS after any making changes to the content in the CMS so that the knowledge base is updated accordingly. Once you sync, you can add or update the intents associated with articles as needed.
 
