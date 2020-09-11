@@ -49,7 +49,9 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Add Post Body**: Enter the payload to send if applicable.
     * Click **Map Content Metadata**, and map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
 6. Click **Next**.
-7. Define the request for the on-demand retrieval of a single article. Somewhere in the request (request parameters, post body, etc.), you must pass the unique identifier of the article to retrieve. (An {externalArticleId} placeholder is provided for this purpose.) The request should return a single article that must contain a title, a unique identifier, and at least one of these content attributes: summary, detail, contentURL, imageURL, videoURL, or audioURL.
+7. Define the request for the on-demand retrieval of a single article. Somewhere in the request (request parameters, post body, etc.), you must pass the unique identifier of the article to retrieve. An {externalArticleId} placeholder is provided for this purpose.
+
+    The request should return a single article that must contain a title, a unique identifier, and at least one of these content attributes: summary, detail, contentURL, imageURL, videoURL, or audioURL.
     * **Method**: Select the type of HTTP request method.
     * **URL**: Enter the request target, the URL.
     * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authorization if applicable.

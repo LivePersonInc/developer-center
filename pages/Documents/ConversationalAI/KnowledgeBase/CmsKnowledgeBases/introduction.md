@@ -19,7 +19,7 @@ You can integrate with any CMS that has the capability, i.e., an API connector. 
 Within the Knowledge Base application, a CMS knowledge base serves as a connector to the CMS. You can configure the knowledge base so that the content is selected and served:
 
 * [Using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html). (**Recommended**) 
-* [Without using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html). In this case, the knowledge base uses the CMS' query and answer API for article selection. (Every CMS can have a different name for this API.)
+* [Without using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html). In this case, the knowledge base uses the CMS' query and answer API for article suggestions/answers. (Every CMS can have a different name for this API.)
 
 ### Getting started with a draft KB
 
