@@ -18,7 +18,7 @@ If you’re using a popular CMS vendor (Salesforce or Zendesk), LivePerson provi
 
 Jolt provides several, out-of-the-box transforms that you can use when writing the specification; these are described [here](https://github.com/bazaarvoice/jolt#stock-transforms). The Shift transform in particular does most of the heavy work when it comes to the transform; it specifies how the input JSON should be “shifted around” to make the output JSON. All of the examples that follow use the Shift transform.
 
-The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. The examples that follow cover what's needed for transformation to the LivePerson Knowledge Base article schema in particular. To learn about more complex use cases, see the Jolt test samples [here](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
+The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. The examples that follow cover what's needed for transformation to the LivePerson Knowledge Base article schema. To learn about more complex use cases, see the Jolt test samples [here](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
 
 ### Supported LivePerson attributes
 
