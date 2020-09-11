@@ -63,22 +63,27 @@ When you [add a CMS knowledge base without LivePerson AI](knowledge-base-cms-kno
 {: .important}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
 
-### Map content metadata (popular CMS vendors)
+### Map content metadata
 
 1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
-2. For **Content Provider**, select the name of your CMS provider.
+2. For **Content Provider**, select the name of your CMS provider. If you don't see your provider's name listed, select "Others," and then enter the name.
     
-    This populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation spec that's designed for the given request (API call). This is a pre-built Jolt specification for a default data structure. You can use the specification as is or as a starter template.
+    If your CMS provider's name was listed, this step populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation specification that's designed for the given request (API call). This is a pre-built Jolt specification for a default data structure. You can use the specification as is. Alternatively, if you've customized your CMS' data model (e.g., you've added a custom attribute), you can use it as a starter template.
 
-3. If you've customized your CMS's data model (e.g., you've added a custom attribute), use the editor to modify the specification accordingly. For help with this, see [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html).
+    If your CMS provider's name wasn't listed, no default specification is provided. You'll need to write the specification from scratch.
+
+3. Adjust or write the Jolt transformation spec if needed, using the examples and guidance [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html). 
 
 4. Click **Test Spec**.
 
     This step verifies that the specification uses well-formed JSON.
 
-    The **Sample Input** editor contains some default input in JSON format.
+    If you were able to select your CMS provider's name in the **Content Provider** field, the **Sample Input** editor contains some default input in JSON format.
 
-5. You can choose to use the default, sample input, or you can replace it with your own. For example, to see one of your own records, take the payload returned from the API call and paste it here.
+5. In the **Sample Input** editor:
+
+    * If the editor is empty, take your CMS' response payload and paste it here.
+    * If the editor has some default, sample input, you can use it as is or replace it with your own.
 
 6. Click **Validate Spec**.
     
@@ -86,10 +91,4 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
     This step also populates a third, read-only panel that illustrates the output when the sample input JSON is transformed using the specification. Behind the scenes, the output is JSON too. However, it's presented in a friendlier, record format, so it's faster and easier to evaluate whether the specification is working as you expect.
 
-### Map content metadata (other vendors)
-
-1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
-2. For **Content Provider**, select "Others," and enter the name of your CMS provider.
-3. In the **Transformation Spec** editor, enter the Jolt specification. For help with this, see [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html).
-4. Click **Test Spec**.
-
+7. If the transformation isn't working as you expect, adjust the specification and repeat this process.
