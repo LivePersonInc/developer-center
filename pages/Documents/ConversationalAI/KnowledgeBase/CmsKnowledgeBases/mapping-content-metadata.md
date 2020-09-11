@@ -14,7 +14,7 @@ indicator: both
 
 When you add a CMS knowledge base, one important step in the process is to map the external CMS' article data model to LivePerson Knowledge Base. This is done by providing a Jolt transformation specification that can be used to "transform" the response that's returned from the API call to the LivePerson Knowledge Base article(s) schema.
 
-LivePerson provides *default* Jolt transformation specifications for a few, popular CMS vendors, namely, Salesforce and Zendesk. If you’ve customized your CMS’ data schema, you’ll need to adjust the default specification accordingly. If you use another CMS vendor, you can write the specification using the guidance and examples [here](knowledge-base-cms-knowledge-bases-writing-a-jolt-specification.html).
+LivePerson provides *default* Jolt transformation specifications for a few, popular CMS vendors, namely, Salesforce and Zendesk. If you’ve customized your CMS’ data schema, you’ll need to adjust the default specification accordingly. If you use another CMS vendor, you can write the specification using the guidance and examples [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html).
 
 ### Attributes supported when content mapping
 
@@ -70,7 +70,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
     
     This populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation spec that's designed for the given request (API call). This is a pre-built Jolt specification for a default data structure. You can use the specification as is or as a starter template.
 
-3. If you've customized your CMS's data model (e.g., you've added a custom attribute), use the editor to modify the specification accordingly. For help with this, see [here](knowledge-base-cms-knowledge-bases-writing-a-jolt-specification.html).
+3. If you've customized your CMS's data model (e.g., you've added a custom attribute), use the editor to modify the specification accordingly. For help with this, see [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html).
 
 4. Click **Test Spec**.
 
@@ -90,6 +90,6 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
 1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
 2. For **Content Provider**, select "Others," and enter the name of your CMS provider.
-3. In the **Transformation Spec** editor, enter the Jolt specification. For help with this, see [here](knowledge-base-cms-knowledge-bases-writing-a-jolt-specification.html).
+3. In the **Transformation Spec** editor, enter the Jolt specification. For help with this, see [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html).
 4. Click **Test Spec**.
 

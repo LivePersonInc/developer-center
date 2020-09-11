@@ -1,12 +1,12 @@
 ---
-pagename: Writing a Jolt Specification
+pagename: Writing a Transformation Specification
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
 subfoldername: CMS Knowledge Bases
-permalink: knowledge-base-cms-knowledge-bases-writing-a-jolt-specification.html
+permalink: knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html
 indicator: both
 ---
 

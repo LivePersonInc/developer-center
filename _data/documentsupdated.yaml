@@ -254,7 +254,7 @@
           - subpagename: CMS KBs with LivePerson AI
           - subpagename: CMS KBs without LivePerson AI
           - subpagename: Mapping Content Metadata
-          - subpagename: Writing a Jolt Specification
+          - subpagename: Writing a Transformation Specification
           - subpagename: Best Practices
       - pagename: LivePerson Knowledge Bases
         subpages:
