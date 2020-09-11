@@ -82,7 +82,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
 5. In the **Sample Input** editor:
 
-    * If the editor has some default, sample input, you can use it as is or replace it with your own, e.g., with the CMS' response payload.
+    * If the editor has default input, you can use it as is or replace it with your own, e.g., with the CMS' response payload.
     * If the editor is empty, take your CMS' response payload and paste it here.
 
 6. Click **Validate Spec**.
