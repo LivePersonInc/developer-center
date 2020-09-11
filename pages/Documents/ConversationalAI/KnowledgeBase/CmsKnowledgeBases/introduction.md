@@ -12,7 +12,7 @@ indicator: both
 
 ### About CMS knowledge bases
 
-If you have a CMS with well-curated content that you want to leverage in bot conversations, you can add a CMS knowledge base. This is one where the content is authored and managed entirely within the external CMS application. Integrating with your CMS lets your content creators use familiar tools and workflows to author and manage the content.
+If you have a CMS with well-curated content that you want to leverage in bot conversations, you can add a CMS knowledge base. This is one where the content is authored and managed entirely within the external CMS application. Integrating with your CMS lets your content creators use familiar tools and workflows.
 
 You can integrate with any CMS that has the capability, i.e., an API connector. Notable examples include Salesforce and Zendesk. 
 
