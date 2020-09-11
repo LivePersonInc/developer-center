@@ -35,7 +35,7 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 3. Specify the following:
     * **Content Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
 4. Click **Next**.
-5. Set up the on-demand content retrieval using your CMS' query and answer API. Use the {inputPhrase} placeholder that's provided to pass the input phrase to use when performing the search in the CMS.
+5. Set up the on-demand content retrieval using your CMS' query and answer API. You must use the {inputPhrase} placeholder that's provided as per your CMS' API contract (in the request parameters, post body, etc.) to pass the input phrase to use when performing the search in the CMS.
 
     The request should return the best article matches. Each article must contain a title and at least one of these content attributes: summary, detail, contentURL, imageURL, videoURL, or audioURL.
     * **Method**: Select the type of HTTP request method.
