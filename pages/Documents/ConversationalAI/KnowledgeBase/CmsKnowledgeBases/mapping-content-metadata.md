@@ -90,5 +90,3 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
     This step verifies that the specification meets all LivePerson requirements. For example, if you've omitted a mandatory field, you'll see an error. If you've included a field that's not supported, you'll see a warning.
 
     This step also populates a third, read-only panel that illustrates the output when the sample input JSON is transformed using the specification. Behind the scenes, the output is JSON too. However, it's presented in a friendlier, record format, so it's faster and easier to evaluate whether the specification is working as you expect.
-
-7. If the transformation isn't working as you expect, adjust the specification and repeat this process.
