@@ -28,8 +28,8 @@ See [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html#attr
 
 **Terminology:** 
 
-RHS = right-hand side = the input JSON tree<br>
-LHS = left-hand side = the output JSON tree
+LHS = left-hand side = the input JSON tree<br>
+RHS = right-hand side = the output JSON tree
 
 ### Examples - Map a single article's content (CMS KB with LivePerson AI)
 
