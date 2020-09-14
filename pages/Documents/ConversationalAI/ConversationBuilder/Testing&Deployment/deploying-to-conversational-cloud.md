@@ -123,14 +123,7 @@ If a connector enters an Offline status, which is an error status, click **Detai
 * **401 "unauthorized" error**: This error can occur if you try to add an agent connector for a bot user that wasn't created by you. Either add the agent connector for a different bot user created by you, or have the creator of the bot user add the agent connector.
 
 ### Deployment statuses
-An agent connector can have one of the following statuses:
-
-- **Ready to Start**: The connector was added successfully, but it hasn't been started for the first time.
-* **Not Connected**: The connection to Conversational Cloud has been dropped, or the connector has just started and hasn't yet had the chance to update its status after connection.
-- **Online**: The connector is running, and all end-to-end connections are working well.
-- **Offline**: At least one underlying component isn't working, causing end-to-end connections not to function. The connector is in an error state and isn't running.
-- **Stopped**: The connector isn't running because it was manually stopped. 
-
+For status descriptions, see [here](bots-status-overview.html#statuses).
 
 ### Custom configuration fields
 
