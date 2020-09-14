@@ -80,7 +80,7 @@ Manually syncing with the CMS does the following:
 * Adds new articles if there are any
 * Deletes all articles that aren't returned by the CMS but were stored during the previous sync
 
-Sync with the CMS after any making changes to the content in the CMS so that the knowledge base is updated accordingly. Once you sync, you can add or update the intents associated with articles as needed.
+Sync with the CMS after making any changes to the content in the CMS so that the knowledge base is updated accordingly. Once you sync, you can add or update the intents associated with articles as needed.
 
 For details on sync operations, check the knowledge base’s Change History page.
 
