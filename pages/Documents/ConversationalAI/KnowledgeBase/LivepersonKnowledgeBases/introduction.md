@@ -12,7 +12,7 @@ indicator: both
 
 ### What's a LivePerson knowledge base?
 
-A LivePerson knowledge base is one whose content you can create and manage directly within the Knowledge Base application. You can:
+A LivePerson knowledge base is a built-in knowledge base, i.e., one whose content you can create and manage directly within the Knowledge Base application. You can:
 
 * Start from scratch, and add articles directly within the application.
 * Do a one-time import of articles from a CSV file, and maintain the articles thereafter within the Knowledge Base application.
