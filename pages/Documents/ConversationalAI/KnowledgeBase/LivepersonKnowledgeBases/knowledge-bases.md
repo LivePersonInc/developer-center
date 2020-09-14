@@ -83,9 +83,7 @@ The import file can contain the following basic HTML tags: p, br, a (only the â€
     * **Data source type**: Read-only.
     * **Language**: Change the language if desired. For information on the role that the language plays, see [here](knowledge-base-liveperson-knowledge-bases-introduction.html#languages).
     * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base, but be aware that, once you sync with the sheet, the contents of the knowledge base are overwritten with the contents in the sheet. The Google sheet must be public, i.e., with no file restrictions in place.
-    * **Intent Association**: Read-only. If the knowledge base uses Knowledge Base intents, you can convert them to Domain intents (discussed farther below).
     * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
-    * **Associated Domain**: Read-only. This field is displayed only if the knowledge base uses [Domain intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents). The domain can't be changed after the knowledge base is created.
     * **NOTE**: There are some additional settings that are common to both CMS knowledge bases and LivePerson knowledge bases. For information on these, see [here](knowledge-base-common-common-settings.html).
 5. Click **Update**.
 
