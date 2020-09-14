@@ -77,13 +77,10 @@ The import file can contain the following basic HTML tags: p, br, a (only the â€
 **To configure knowledge base settings**
 1. Open the knowledge base.
 2. In the upper-left corner, click **Settings**.
-3. Specify the following:
-    * **Data source name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
-    * **Data source type**: Read-only.
+3. Configure the common settings discussed [here](knowledge-base-common-common-settings.html). You can also configure these settings below, which are specific to LivePerson knowledge bases:
     * **Language**: Change the language if desired. For information on the role that the language plays, see [here](knowledge-base-liveperson-knowledge-bases-introduction.html#languages).
     * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base, but be aware that, once you sync with the sheet, the contents of the knowledge base are overwritten with the contents in the sheet. The Google sheet must be public, i.e., with no file restrictions in place.
     * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
-    * **NOTE**: There are some additional settings that are common to both CMS knowledge bases and LivePerson knowledge bases. For information on these, see [here](knowledge-base-common-common-settings.html).
 4. Click **Update**.
 
 ### Convert Knowledge Base intents to Domain intents
