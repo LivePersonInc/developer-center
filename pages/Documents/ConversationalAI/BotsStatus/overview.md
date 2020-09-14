@@ -24,12 +24,20 @@ To access the Bots Status application, you must have the Bot Status Access [perm
 1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Bots Status**.
 
-### Bot agent connector statuses
+### Statuses
+#### Bot agent connector statuses
 
 An agent connector can have one of the following statuses:
 
-* **Ready to Start**: The connector was added successfully, but it hasn't been started for the first time.
-* **Not Connected**: The connection to Conversational Cloud has been dropped, or the connector has just started and hasn't yet had the chance to update its status after connection. 
-* **Online**: The connector is running, and all end-to-end connections are working well.
-* **Offline**: At least one underlying component isn't working, causing end-to-end connections not to function. The connector is in an error state and isn't running.
-* **Stopped**: The connector isn't running because it was manually stopped.
+| Status | Description |
+| --- | --- |
+| Ready to Start | The connector was added successfully, but it hasn't been started for the first time. |
+| Not Connected | The connection to Conversational Cloud has been dropped, or the connector has just started and hasn't yet had the chance to update its status after connection. |
+| Online | The connector is running, and all end-to-end connections are working well. |
+| Offline | At least one underlying component isn't working, causing end-to-end connections not to function. The connector is in an error state and isn't running. |
+| Stopped | The connector isn't running because it was manually stopped. |
+
+#### Conversational Cloud connection statuses
+
+#### Bot Server connection statuses
+
