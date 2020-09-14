@@ -10,7 +10,7 @@ indicator: both
 
 Use the Bots Status application to check the status of all your bots from a single location. 
 
-You can use the application to monitor and manage both custom bots and post-conversation survey bots.
+You can use the application to monitor and manage both custom bots and post-conversation survey (PCS) bots.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botsStatus_dashboard.png">
 
@@ -25,6 +25,11 @@ To access the Bots Status application, you must have the Bot Status Access [perm
 2. In the Conversational AI dashboard, click **Bots Status**.
 
 ### Statuses
+
+To view a connector's statuses, scroll to the right in the dashboard.
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bots_status_statuses.png">
+
 #### Bot agent connector statuses
 
 An agent connector can have one of the following statuses:
