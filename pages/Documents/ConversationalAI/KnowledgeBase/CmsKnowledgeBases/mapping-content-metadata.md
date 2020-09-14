@@ -70,7 +70,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
     
     If you were able to select your CMS provider's name, this step populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation specification that's designed for the given request (API call). This is a pre-built specification for a default data structure. You can use the specification as is. Alternatively, if you've customized the CMS' data model (e.g., you've added a custom attribute), you can use it as a starter template.
 
-    If your weren't able to select your CMS provider's name, a default specification isn't available. You'll need to write the specification from scratch.
+    If you weren't able to select your CMS provider's name, a default specification isn't available. You'll need to write the specification from scratch.
 
 3. If needed, adjust or write the Jolt transformation spec using the examples and guidance [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html). 
 
