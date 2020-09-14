@@ -26,7 +26,7 @@ When adding a LivePerson knowledge base, follow this workflow:
 
 1. In Knowledge Base:
     1. [Add the LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html). In this step you can import articles from a CSV file or link to a Google sheet that contains them.
-    2. Add the articles if necessary.
+    2. [Add the articles](knowledge-base-liveperson-knowledge-bases-articles.html) if necessary.
     3. [Train](knowledge-base-common-common-tasks.html#train-a-knowledge-base) the articles to match consumer utterances.
 2. In Conversation Builder, [add a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and test.
 
@@ -36,11 +36,11 @@ When dealing with a knowledge base, an intent is the question that the consumer 
 
 While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You can do this right inside the article by adding what are called "intent qualifiers":
 
-<img style="width:475px" src="img/ConvoBuilder/kb_intents_KB.png">
+<img style="width:350px" src="img/ConvoBuilder/kb_intents_KB.png">
 
 Or, you can define these alternate formats in a domain in Intent Builder. Here, they're called "training phrases":
 
-<img style="width:525px" src="img/ConvoBuilder/kb_intents_IB.png">
+<img style="width:350px" src="img/ConvoBuilder/kb_intents_IB.png">
 
 When you [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html), you'll specify which configuration approach you're using for the knowlege base:
 

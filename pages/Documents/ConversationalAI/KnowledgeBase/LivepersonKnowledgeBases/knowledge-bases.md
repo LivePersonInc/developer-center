@@ -76,16 +76,15 @@ The import file can contain the following basic HTML tags: p, br, a (only the â€
 
 **To configure knowledge base settings**
 1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Knowledge Base Menu**.
-3. In the Settings panel, click **KB Settings**.
-4. Specify the following:
+2. In the upper-left corner, click **Settings**.
+3. Specify the following:
     * **Data source name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
     * **Data source type**: Read-only.
     * **Language**: Change the language if desired. For information on the role that the language plays, see [here](knowledge-base-liveperson-knowledge-bases-introduction.html#languages).
     * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base, but be aware that, once you sync with the sheet, the contents of the knowledge base are overwritten with the contents in the sheet. The Google sheet must be public, i.e., with no file restrictions in place.
     * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
     * **NOTE**: There are some additional settings that are common to both CMS knowledge bases and LivePerson knowledge bases. For information on these, see [here](knowledge-base-common-common-settings.html).
-5. Click **Update**.
+4. Click **Update**.
 
 ### Convert Knowledge Base intents to Domain intents
 
@@ -98,12 +97,11 @@ Before taking this action, be certain about doing so. Once you convert the inten
 
 **To convert from Knowledge Base intents to Domain intents**
 1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Knowledge Base Menu**.
-3. In the Settings panel, click **KB Settings**.
-4. Click **More Options**, and scroll down to the **Intent Association** section.
-5. Click **Convert to Domain Intents**.
-6. In the dialog that appears, select the domain.
-7. In the confirmation dialog, click **Confirm**.
+2. In the upper-left corner, click **Settings**.
+3. Click **More Options**, and scroll down to the **Intent Association** section.
+4. Click **Convert to Domain Intents**.
+5. In the dialog that appears, select the domain.
+6. In the confirmation dialog, click **Confirm**.
     
     This converts the intents and associates the selected domain.
 
@@ -120,9 +118,8 @@ Before performing a sync, make sure the Google sheet includes the "id" column th
 
 **To sync a knowledge base with a Google sheet**
 1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Knowledge Base Menu**.
-3. In the Settings panel, click **KB Settings**.
-4. Click **More Options**, scroll down to the **Sync Google Sheet Data Source** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_syncGoogleSheet.png"> (Refresh icon).
+2. In the upper-left corner, click **Settings**.
+3. Click **More Options**, scroll down to the **Sync Google Sheet Data Source** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_syncGoogleSheet.png"> (Refresh icon).
 
 ### Download a knowledge base 
 
@@ -136,7 +133,6 @@ You might need to download a knowledge base for a few reasons:
 
 **To download a knowledge base**
 1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Knowledge Base Menu**.
-3. In the Settings panel, click **KB Settings**.
-4. Click **More Options**, scroll down to the **Download Knowledge Base** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_download.png"> (Download icon).
-5. Follow the browser prompts to access and save the CSV file to a location of your choice.
+2. In the upper-left corner, click **Settings**.
+3. Click **More Options**, scroll down to the **Download Knowledge Base** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_kb_download.png"> (Download icon).
+4. Follow the browser prompts to access and save the CSV file to a location of your choice.

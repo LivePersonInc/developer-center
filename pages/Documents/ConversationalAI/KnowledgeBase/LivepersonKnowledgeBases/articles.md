@@ -19,7 +19,7 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 **To add an article to a knowledge base**
 
-1. Open the knowledge base, and click **Add New** in the upper-right corner.
+1. Open the knowledge base, and (on the Articles page) click **Add New** in the upper-right corner.
 2. Specify the following basic settings:
     * **Title**: Enter a complete sentence or question, e.g., "I can't remember my password." or, "Do we have a company org chart?" See farther below on this page for best practices.
     * **Intent Qualifiers**: This field is only shown if you're using [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents). Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See farther below on this page for best practices.
@@ -95,9 +95,9 @@ Enabled articles are returned by knowledge base searches in Knowledge Base integ
 
 **To enable or disable an article**
 
-1. Open the knowledge base, and display the article.
-2. Scroll down, and click **Advanced Settings**.
-3. In the **Enable Article** setting, do either of the following:
+1. Open the knowledge base, find the article, and click its title.
+2. In the Edit Article window, scroll down **Enable Article**.
+3. Do either of the following:
 
     * Turn on (enable) the setting to enable the article.
     * Turn off (disable) the setting to disable the article.
