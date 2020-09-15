@@ -502,6 +502,8 @@ questionId | Survey question ID  | string  |
 answerId| Survey answer ID,| string  | The answer ID from the survey definition, or 'InvalidAnswer', if the answer was invalid
 questionType | Survey question type | string  |
 questionFormat | Survey question format | string |
+answerSeq | Survey answer sequence | string |
+isValidAnswer | If the answer is valid or not | boolean |
 
 _Summary info_
 

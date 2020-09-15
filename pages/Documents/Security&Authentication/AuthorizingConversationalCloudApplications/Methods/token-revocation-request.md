@@ -3,10 +3,10 @@ pagename: Token Revocation Request
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Authorizing LiveEngage Applications
+documentname: Authorizing Conversational Cloud Applications
 subfoldername: Methods
 order: 12
-permalink: authorizing-liveengage-applications-methods-token-revocation-request.html
+permalink: authorizing-conversational-cloud-applications-methods-token-revocation-request.html
 
 indicator: both
 ---

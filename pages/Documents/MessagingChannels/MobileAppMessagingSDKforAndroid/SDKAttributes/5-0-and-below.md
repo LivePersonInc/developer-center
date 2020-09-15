@@ -730,6 +730,14 @@ Color code for the conversation resolved message and separator.
 &nbsp;
 </div>
 
+
+#### lp_hide_ui_until_auth
+Define if SDK shows conversation until pass authentication check.
+
+* **Type:** bool
+* **Default value:** true
+
+
 ---   
 
 ### Data Masking
@@ -1520,6 +1528,13 @@ Use an icon for the send button instead of "Send" text.
 <div style="width: 85%;padding: 5px;">
 &nbsp;
 </div>
+
+
+#### enable_ime_options_action_send
+Enable or disable the action button of the keyboard. If enabled, pressing the action button will send a message. Multi line messages are not supported if enabled.
+
+* **Type:** bool
+* **Default value:** false
 
 
 ---
@@ -3932,6 +3947,38 @@ Corner radius of the unread messages bubble.
 </div>
 
 
+#### enable_markdown_hyperlink
+Enable or disable hyperlink support. Agent won’t be able to send hyperlink messages if set to false.
+
+<div style="float: left; width: 50%;height: 120px;">
+   <ul>
+      <li><b>Type:</b> bool</li>
+      <li><b>Default value:</b> true</li>
+   </ul>
+</div>
+
+<div style="float: right; width: 50%;">
+   <figure>
+   <figcaption></figcaption>
+   <img src="img/markdownhyperlinkmessage.png" alt="markdownhyperlinkmessage">
+   </figure>
+</div>
+
+<div style="width: 85%;padding: 5px;">
+&nbsp;
+</div>
+
+#### lp_markdown_hyperlink_copy_text_only
+Define the copy content of a link message. Copying the message will copy both message and hyperlink. Only the message will be copied if set to true.
+
+* **Type:** bool
+* **Default value:** false
+
+#### agent_bubble_message_markdown_hyperlink_text_color
+Set the link message text color.
+
+* **Type:** color
+* **Default value:** @android:color/white
 
 
 ---
