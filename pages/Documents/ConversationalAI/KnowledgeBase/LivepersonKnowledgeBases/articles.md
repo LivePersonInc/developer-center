@@ -96,20 +96,11 @@ Enabled articles are returned by knowledge base searches in Knowledge Base integ
 **To enable or disable an article**
 
 1. Open the knowledge base, find the article, and click its title.
-2. In the Edit Article window, scroll down **Enable Article**.
+2. In the Edit Article window, scroll down to **Enable Article**.
 3. Do either of the following:
 
     * Turn on (enable) the setting to enable the article.
     * Turn off (disable) the setting to disable the article.
-
-### Chat with a bot linked to a knowledge base
-
-If you have a bot linked to your knowledge base via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), in the Knowledge Base application, you can feed test user input to the bot to see if it matches, returns and renders content as you'd expect.
-
-{: .important}
-If you're just getting started with knowledge bases and want to try using this tool, we recommend you create a bot using the [Simple FAQ bot template](conversation-builder-bot-templates-simple-faq.html) and connect it to your knowledge base. Most of the bot development work is already done. You only need to update the integration in the bot so that it uses your knowledge base, as shown in the image below.
-
-   <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/kb_chat3.png">
 
 ### Find articles with a specific tag
 

@@ -28,7 +28,9 @@ When adding a LivePerson knowledge base, follow this workflow:
     1. [Add the LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html). In this step you can import articles from a CSV file or link to a Google sheet that contains them.
     2. [Add the articles](knowledge-base-liveperson-knowledge-bases-articles.html) if necessary.
     3. [Train](knowledge-base-common-common-tasks.html#train-a-knowledge-base) the articles to match consumer utterances.
-2. In Conversation Builder, [add a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and test.
+2. Expose the articles to consumers by:
+    * [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and then testing
+    * Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
 
 ### Knowlege Base intents versus Domain intents
 

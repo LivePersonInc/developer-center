@@ -24,7 +24,7 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 1. In Knowledge Base: 
     1. Add the CMS knowledge base.
     2. Use the Search tool to test the integration.
-2. Expose articles to consumers by:
+2. Expose the articles to consumers by:
     * [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and then testing
     * Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
 
@@ -33,7 +33,7 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 **To add a 3rd-party knowledge base without LivePerson AI**
 
 1. Click **Add Knowledge Base** in the upper-right corner.
-2. Select **CMS - No LivePerson AI**.
+2. In the window that appears, select the **Other Connection** tab, and then select **External Content Search Only**.
 3. Specify the following:
     * **Content Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
 4. Click **Next**.

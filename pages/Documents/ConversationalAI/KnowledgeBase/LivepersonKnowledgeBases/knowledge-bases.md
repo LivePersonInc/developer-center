@@ -17,7 +17,7 @@ indicator: both
 
 1. Access the Knowledge Base application as described [here](knowledge-base-overview.html#access-knowledge-base).
 2. In the dashboard that lists your knowledge bases, click **Add Knowledge Base** in the upper-right corner.
-3. Select **LivePerson**.
+3. On the **AI Enabled** tab of the window that appears, select **Built-in Content Store**.
 4. Specify the following:
     * **Data source name**: Enter a display name for the knowledge base.
     * **Data source type**: Select "Knowledge Base."
