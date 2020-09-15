@@ -46,7 +46,7 @@ let welcomeMessageParam = LPWelcomeMessage(message: "Hello Mr.Bond")
                                                               conversationHistoryControlParam: conversationHistoryControlParam,
                                                               welcomeMessage: welcomeMessageParam)
 //show conversation
-LPMessagingSDK.instance.showConversation(conversationViewParams,  authenticationParams: authenticationParams)
+LPMessaging.instance.showConversation(conversationViewParams,  authenticationParams: authenticationParams)
 ```
 
 ### Limitations

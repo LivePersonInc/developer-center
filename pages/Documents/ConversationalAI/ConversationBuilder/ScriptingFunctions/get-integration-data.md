@@ -12,9 +12,6 @@ indicator: both
 
 Use the following built-in functions to get information on the results of an integration.
 
-{: .important}
-New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
-
 ### Is API integration execution successful?
 
 Used to determine whether execution of an API integration was successful. Returns "true" if execution was successful; returns "false" if execution was unsuccessful.

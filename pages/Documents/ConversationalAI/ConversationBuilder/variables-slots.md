@@ -71,7 +71,7 @@ If your bot asked the user "which animal do you like?" and the user answered "do
 
 Slot-filling becomes especially useful when mining the entities that make up a user's intent to pre-populate your list of questions, and streamline the data collection process.
 
-1. Create a [new dialog](conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](conversation-builder-intent-builder-overview.html) as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
+1. Create a [new dialog](conversation-builder-dialogs-dialog-basics.html#create-a-dialog) and associate an [intent from your domain](conversation-builder-intent-builder-overview.html) as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
 2. Now, devise a few [entities](intent-builder-entities.html) that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `item` with `pants, shoes, shirt, underwear`. and finally, one for `size` with the values `small, medium, and large`. Before moving on, [update and train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain) the `order item` intent with some representative training phrases that contain these entities.
 3. Next we will create the [questions](conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Using [Assist](conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction), assign your entities to the relevant questions, for example:
 

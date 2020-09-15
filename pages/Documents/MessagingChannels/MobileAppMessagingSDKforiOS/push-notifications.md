@@ -170,7 +170,7 @@ In this step, you add the dev-cert.pem and hostkey.pem to Conversational Cloud.
 This method should be called before calling 'logout' on the SDK.
 
 ```swift
-    LPMessagingSDK.instance.unregisterPusher(brandId: "ACCOUNT_NUM", completion: {
+    LPMessaging.instance.unregisterPusher(brandId: "ACCOUNT_NUM", completion: {
 
     }) { error in
         

@@ -106,7 +106,7 @@ Use to decide whether to count the days from the conversation start date or end 
 
         let conversationViewParams = LPConversationViewParams(conversationQuery: self.conversationQuery!, containerViewController: self, isViewOnly: false, conversationHistoryControlParam: historyControlParam)
         let authenticationParams = LPAuthenticationParams(authenticationCode: "zcKZeImY5h7xOVPj", jwt: nil, redirectURI: nil)
-        LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
+        LPMessaging.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
     }
 
 ```

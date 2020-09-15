@@ -10,6 +10,9 @@ permalink: intent-builder-overview.html
 indicator: both
 ---
 
+{: .important}
+Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+
 The Conversation Builder platform's Intent Builder allows you to build multiple intent domains that can each hold one or many intents and entities. Most brands will find that one domain can handle all their intents, but sometimes breaking them up is necessary or desirable. For example, having a Main intent domain and a Small Talk intent domain is very common.
 
 Intents direct a bot to be more flexible and respond to a wider variety of user input. Instead of looking for specific patterns in the input (for example, the pattern "bill"), the bot uses a Natural Language Understanding (NLU) engine to look for a defined intent. Then the bot triggers the dialog that's configured to respond to the intent. Therefore, once you configure your intents with robust *training phrases*, expressions like, "I have a question about billing", "Looking to check my account," or "What's my billing status?" yield the same intent and, thus, the same response from the bot.
@@ -35,6 +38,22 @@ The following are key characteristics of a domain:
 * A domain is a collection of related [intents](intent-builder-intents.html) and [entities](intent-builder-entities.html).
 * A domain has a specified NLU provider and language.
 * In a bot, you can associate one domain with each dialog. This allows you to associate the dialog's interactions with intents and entities from that domain. For example, you might [associate an intent with a Dialog Starter interaction](conversation-builder-assist.html) to use the intent to trigger the dialog's flow.
+
+#### Prebuilt domains
+
+To get you quickly up and running with [intents](intent-builder-intents.html), LivePerson provides a set of prebuilt domains that you can easily add to your Intent Builder environment.
+
+A "prebuilt domain" is a ready-made, pretrained domain that includes a set of well-defined intents. There are two kinds of prebuilt domains available:
+
+* Generic, prebuilt domains for a number of verticals: Telecommunications, Financial Services, Airlines and Insurance.
+* A cross-vertical, prebuilt domain that is appropriate for all verticals. This domain includes intents for things like customer account management, customer order management, e-commerce, billing and payment.
+
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_domainPrebuiltEx.png">
+
+Once you [add a prebuilt domain](intent-builder-domains.html#add-a-prebuilt-domain), you can customize the domain as you see fit. If you later decide that you don't want to use your customizations, you can also [overwrite your domain](intent-builder-domains.html#overwrite-from-a-prebuilt-domain) to reflect the prebuilt domain that's offered by LivePerson.
+
+{: .important}
+Domains added from prebuilt domains use the [LP NLU v2 engine](intent-builder-natural-language-understanding.html#livepersons-nlu-engine).
 
 #### Training
 

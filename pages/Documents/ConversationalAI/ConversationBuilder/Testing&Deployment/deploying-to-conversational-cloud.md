@@ -136,6 +136,10 @@ An agent connector can have one of the following statuses:
 
 Custom configuration fields are optional key/value pairs that you can add to alter the behavior of the bot. They allow for fundamental changes in the bot's behavior *outside* of the design of the bot and are injected at the point of connecting the bot to an agent on a 1:1 basis.
  
+You add these fields in the **Advanced Options** of the agent connector.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/deploy_customConfig.png">
+
 {: .important}
 If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.
 
