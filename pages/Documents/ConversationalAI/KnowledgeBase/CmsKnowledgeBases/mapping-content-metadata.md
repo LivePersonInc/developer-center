@@ -20,45 +20,45 @@ LivePerson provides default Jolt transformation specifications for a few, popula
 
 When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), one setup step involves configuring the request to fetch the articles' metadata. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 
-| LivePerson Attribute | Mandatory? |
-| --- | --- |
-| externalId | yes |
-| title | yes |
-| tags | no |
-| category | no |
+| LivePerson Attribute | Description | Mandatory? |
+| --- | --- | --- |
+| externalId | A String; a unique ID assigned to the article | yes |
+| title | The article title. This should be a complete sentence or question that the user might ask. | yes |
+| tags | A list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. | no |
+| category | Assigning a category lets you filter and find articles based on categories in the Knowledge Base application. | no |
 
 When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), a second setup step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 
-| LivePerson Attribute | Mandatory? |
-| --- | --- |
-| externalId | yes |
-| title | yes |
-| tags | no |
-| category | no |
-| summary | no, but see note below |
-| detail | no, but see note below |
-| contentURL | no, but see note below |
-| imageURL | no, but see note below |
-| audioURL | no, but see note below |
-| videoURL | no, but see note below |
+| LivePerson Attribute | Description | Mandatory? |
+| --- | --- | --- |
+| externalId | A String; a unique ID assigned to the article | yes |
+| title | The article title. This should be a complete sentence or question that the user might ask. | yes |
+| tags | A list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. | no |
+| category | Assigning a category lets you filter and find articles based on categories in the Knowledge Base application. | no |
+| summary | A short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. | no, but see note below |
+| detail | A longer message to the user. For messaging, it's recommended that you keep the responses as brief as possible. | no, but see note below |
+| contentURL | The URL of a hyperlink.  | no, but see note below |
+| imageURL | The URL of an image. | no, but see note below |
+| audioURL | The URL of an audio file. | no, but see note below |
+| videoURL | The URL of a video file. | no, but see note below |
 
 {: .important}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
 
 When you [add a CMS knowledge base without LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html#add-a-cms-kb-without-liveperson-ai), one setup step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation specification for the articles that are returned. The following LivePerson attributes are supported:
 
-| LivePerson Attribute | Mandatory? |
-| --- | --- |
-| externalId | no |
-| title | yes |
-| tags | no |
-| category | no |
-| summary | no, but see note below |
-| detail | no, but see note below |
-| contentURL | no, but see note below |
-| imageURL | no, but see note below |
-| audioURL | no, but see note below |
-| videoURL | no, but see note below |
+| LivePerson Attribute | Description | Mandatory? |
+| --- | --- | --- |
+| externalId | see above | no |
+| title | see above | yes |
+| tags | see above | no |
+| category | see above | no |
+| summary | see above | no, but see note below |
+| detail | see above | no, but see note below |
+| contentURL | see above | no, but see note below |
+| imageURL | see above | no, but see note below |
+| audioURL | see above | no, but see note below |
+| videoURL | see above | no, but see note below |
 
 {: .important}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
