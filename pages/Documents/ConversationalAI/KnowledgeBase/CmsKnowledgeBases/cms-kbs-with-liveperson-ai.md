@@ -42,6 +42,9 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Content Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
     * **Domain**: Select the name of the domain that contains the intents that you will associate with the articles.
 4. Click **Next**.
+
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_1.png">
+
 5. Define the request to fetch your content's metadata. The request should return a list of articles, and each article must contain a title and unique identifier. You can optionally retrieve tags and a category as well. An article can have multiple tags but exactly one category.
     * **Method**: Select the type of HTTP request method. 
     * **URL**: Enter the request target, the URL.
@@ -51,6 +54,9 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Add Post Body**: Enter the payload to send if applicable.
     * Click **Map Content Metadata**, and map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
 6. Click **Next**.
+
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_2.png">
+
 7. Define the request for the on-demand retrieval of a single article. To pass the unique identifier of the article to retrieve, you must use the {externalArticleId} placeholder that's provided as per your CMS' API contract: in the URL, in the request parameters, or in the post body.
 
     The request should return a single article that must contain a title, a unique identifier, and at least one of these content attributes: summary, detail, contentURL, imageURL, videoURL, or audioURL.

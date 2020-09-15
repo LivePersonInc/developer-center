@@ -37,6 +37,9 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 3. Specify the following:
     * **Content Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
 4. Click **Next**.
+
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_wo_ai_1.png">
+
 5. Define the request for the on-demand content retrieval using your CMS' query and answer API. To pass the input phrase to use when performing the search in the CMS, you must use the {inputPhrase} placeholder that's provided as per your CMS' API contract: in the URL, in the request parameters, or in the post body.
 
     The request should return the best article matches. Each article must contain a title and at least one of these content attributes: summary, detail, contentURL, imageURL, videoURL, or audioURL.
@@ -59,8 +62,12 @@ After you've add a CMS knowledge base that doesn't use AI, you can test the inte
 
     By default, the Articles tab is displayed. Initially, it doesn’t show any metadata or content because, with this type of knowledge base (one without LivePerson AI), only configuration information is stored within Knowledge Base. The content remains in the CMS.
 
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_no_ai_test_1.png">
+
 2. On the Articles tab, enter an utterance in the search box at the top, and press Enter.
 
     This performs a search against the CMS.
     
 3. Evaluate the article results that are displayed. If they aren't what you expect, you might need to adjust the knowledge base's configuration.
+
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_no_ai_test_2.png">
