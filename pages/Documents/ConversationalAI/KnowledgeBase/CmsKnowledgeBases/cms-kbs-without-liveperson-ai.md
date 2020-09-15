@@ -70,4 +70,4 @@ After you've add a CMS knowledge base that doesn't use AI, you can test the inte
     
 3. Evaluate the article results that are displayed. If they aren't what you expect, you might need to adjust the knowledge base's configuration.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_no_ai_test_2.png">
+    <img style="width:800px" src="img/ConvoBuilder/kb_cms_no_ai_test_2.png">
