@@ -70,7 +70,7 @@ An article is either active or inactive. Active articles are returned in knowled
 * An article is *active* if its **Enable Article** setting is turned on. If the article has **Valid From** and/or **Valid To** dates (optional, specified in [UTC](https://www.timeanddate.com/worldclock/timezone/utc)), it is only active during the specified time period. If no dates are specified, an enabled article is always active.
 * An article is *inactive* if its **Enable Article** setting is turned off. It's also inactive if the setting is turned on, but the current date and time in UTC falls outside the time period specified by **Valid From** and/or **Valid To**.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_validDates.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_validDates.png">
 
 In the Knowledge Base application, you can easily identify an article's current status:
 
