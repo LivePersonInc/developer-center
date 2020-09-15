@@ -67,8 +67,12 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
 1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
 2. For **Content Provider**, select the name of your CMS provider. If you don't see your provider's name listed, select "Others," and then enter the name.
+
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_1.png">
     
     If you were able to select your CMS provider's name, this step populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation specification that's designed for the given request (API call). This is a pre-built specification for a default data structure. You can use the specification as is. Alternatively, if you've customized the CMS' data model (e.g., you've added a custom attribute), you can use it as a starter template.
+
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_2.png">
 
     If you weren't able to select your CMS provider's name, a default specification isn't available. You'll need to write the specification from scratch.
 
@@ -78,7 +82,9 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
     This step verifies that the specification uses well-formed JSON.
 
-    If you were able to select your CMS provider's name in the **Content Provider** field, the **Sample Input** editor contains some default input in JSON format.
+    If you were able to select your CMS provider's name in the **Content Provider** field, this step also populates the **Sample Input** editor with some default sample data in JSON format.
+
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_3.png">
 
 5. In the **Sample Input** editor:
 
@@ -89,4 +95,6 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
     
     This step verifies that the specification meets all LivePerson requirements. For example, if you've omitted a mandatory field, you'll see an error. If you've included a field that's not supported, you'll see a warning.
 
-    This step also populates a third, read-only panel that illustrates the output when the sample input JSON is transformed using the specification. Behind the scenes, the output is JSON too. However, it's presented in a friendlier, record format, so it's faster and easier to evaluate whether the specification is working as you expect.
+    This step also populates a third, read-only **Review Output** panel that illustrates the output when the sample input JSON is transformed using the specification. Behind the scenes, the output is JSON too. However, it's presented in a friendlier, record format, so it's faster and easier to evaluate whether the specification is working as you expect.
+
+    <img style="width:800px" src="img/ConvoBuilder/kb_cms_map_metadata_4.png">
