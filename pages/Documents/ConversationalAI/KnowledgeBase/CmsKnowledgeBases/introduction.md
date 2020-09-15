@@ -17,7 +17,7 @@ If you have a CMS that you want to leverage in bot conversations or through Agen
 Within the Knowledge Base application, a CMS knowledge base serves as a connector to the CMS. You can configure the knowledge base so that the content is selected and served:
 
 * [Using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html). (**Recommended**) Use LivePerson’s AI to select the articles to respond to customer utterances.
-* [Without using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html). In this case, the knowledge base uses the CMS' query and answer API for article suggestions/answers. (Every CMS can have a different name for this API.)
+* [Without using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html). Use the CMS' query and answer API for article suggestions/answers. (Every CMS can have a different name for this API.)
 
 ### Why use LivePerson's AI?
 
