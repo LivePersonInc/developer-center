@@ -16,7 +16,7 @@ This topic contains information on tasks that are relevant to knowledge bases of
 
 Training a knowledge base involves:
 
-1. Entering an utterance.
+1. Entering a consumer utterance.
 2. Reviewing the results.
 3. Adding or removing training phrases in the intents as needed. Adding or removing positive/negative learnings in the articles as needed.
 
@@ -25,7 +25,9 @@ Training is applicable when the knowledge base is a:
 * [CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
 * [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html), which also uses LivePerson AI
 
-To train a knowledge base, open the knowledge base, and click **Articles** in the upper-left corner if the page isn't already displayed. Enter an utterance, and review the results. If you don't get any results for a particular utterance, you can adjust the filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
+To train a knowledge base, open the knowledge base, and click **Articles** in the upper-left corner if the page isn't already displayed. Enter an utterance, and review the results.
+
+If you don't get any results for a particular utterance, you can adjust the filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test.png">
 
