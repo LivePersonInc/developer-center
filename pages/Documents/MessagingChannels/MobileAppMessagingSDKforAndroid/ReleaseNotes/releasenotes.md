@@ -319,24 +319,23 @@ The Android Mobile Messaging SDK version 4.6.0 uses:
 **(unchanged from version 4.5.0)**
 
 # New Features:
-## Auto logout
+## Auto logout - Improve logout options
 
-SDK will be able to switch between consumers without calling [logOut API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#logout). The current consumer will be logged out automatically when SDK detects a user change.
+An SDK enhancement has been added that will prevent a second customer from viewing the chat history of the customer who chatted before them, while optimizing the flow in a way that clears just the necessary set of user information in a quick manner. This new feature adds an additional layer of security to our brand’s while verifying that conversation history and information will only be available to the consumer that was logged in to the app at the time of the conversation.
 
-### How to use
-
-Pass the LPAuthenticationParams for another consumer when showing the conversation screen by calling [showConversation API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#showconversation-with-full-authentication-support).
+### How to enable
+It’s enabled out of the box -  there’s nothing the brands need to do.
 
 Note: Auto logout works only for authenticated users. 
 
 # Attribute Update:
-[lp_hide_ui_until_auth](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html#lp_hide_ui_until_auth) is removed in from v4.6.0. Conversation will not be shown until the consumer's authentication information is validated.
+[lp_hide_ui_until_auth](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html#lp_hide_ui_until_auth) is removed. Previous conversations will now not be displayed automatically until the consumer's authentication information is validated.
 
 # Bugs Fixed:
 - Fixed a crash when onSaveInstanceState method is called in SDK.
-- “link_preview_enable_feature” can’t disable link preview.
-- LivePerson.reconnect() does not work when the token is not expired.
-- SDK will fail to connect when opened a conversation screen using a valid JWT and host app is missing reconnect mechanism.
+- Fixed a bug that “link_preview_enable_feature” config can’t disable link preview. The configuration now supports enabling and disabling the link preview in the conversation.
+- Fixed a bug that [Messaging.reconnect()](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect) does not work when the token is expired flag is set to false. New flow will include a reconnect method when the token is expired and the flag is not turned on, which means that the reconnect will be performed on any other IDP errors that are not expired JWT.
+- Fixed a bug that SDK fails to connect when opened a conversation screen using a valid JWT and host app is missing reconnect mechanism.
 
 
 # Android Messaging SDK - Version 4.5.0
