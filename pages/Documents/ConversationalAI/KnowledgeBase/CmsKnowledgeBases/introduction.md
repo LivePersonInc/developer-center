@@ -12,12 +12,16 @@ indicator: both
 
 ### About CMS knowledge bases
 
-If you have a CMS with well-curated content that you want to leverage in bot conversations, you can add a CMS knowledge base. This is one where the content is authored and managed entirely within the external CMS application. Integrating with your CMS lets your content creators use familiar tools and workflows. You can integrate with any CMS that has the capability, i.e., an API connector. Notable examples include Salesforce and Zendesk. 
+If you have a CMS that you want to leverage in bot conversations or through Agent Assist, you can add a CMS knowledge base without needing to migrate your content. This is one where the content is authored and managed entirely within the external CMS application. Integrating with your CMS lets your content creators use familiar tools and workflows. You can integrate with any CMS that has the capability, i.e., an API connector. Notable examples include Salesforce and Zendesk. 
 
 Within the Knowledge Base application, a CMS knowledge base serves as a connector to the CMS. You can configure the knowledge base so that the content is selected and served:
 
-* [Using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html). (**Recommended**) 
+* [Using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html). (**Recommended**) Use LivePerson’s AI to select the articles to respond to customer utterances.
 * [Without using LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html). In this case, the knowledge base uses the CMS' query and answer API for article suggestions/answers. (Every CMS can have a different name for this API.)
+
+### Why use LivePerson's AI?
+
+By using an AI-enabled knowledge base, you can offer your consumers a more helpful experience. AI-enabled knowledge bases use [Natural Language Understanding](intent-builder-natural-language-understanding.html) (NLU) technology to understand and intelligently match what consumers are asking for to articles in your knowledge base.
 
 ### Getting started with a draft KB
 
