@@ -43,7 +43,7 @@ Training your intents or knowledge base is generally done by testing utterances,
 
 [Entities](intent-builder-entities.html) are keywords that refer to a number of synonyms or values. For example, the entity "sports" might have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intents or articles, you can leverage the power of entities as well. This dramatically increases the accuracy and flexibility of your responses.
 
-To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, review the [Knowledge Base tutorial](knowledge-base-liveperson-knowledge-bases-tutorial.html).
+To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, see [here](knowledge-base-liveperson-knowledge-bases-articles.html#using-entities-in-a-knowledge-base).
 
 ### NLU stop words
 
