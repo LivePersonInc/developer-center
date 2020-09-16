@@ -133,7 +133,7 @@ Leveraging entities within a knowledge base provides the same benefits that doin
 
 #### Connect the domain to the knowledge base
 
-To use entities within a knowledge base, you'll need to connect the domain to the knowledge base.
+If you're using [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) instead of Domain intents (like we show in our example below), to use entities within a knowledge base, you'll need to connect the domain to the knowledge base.
 
 1. Exit Intent Builder, and return to Knowledge Base.
 2. Open the knowledge base.
@@ -144,7 +144,9 @@ To use entities within a knowledge base, you'll need to connect the domain to th
 
 #### Use the entities in the knowledge base
 
-In your articles, replace any word where you want the "CREDENTIALS" entity to be substituted in, *including* the tags. This might make some intent qualifiers and tags redundant, which means you can (and should) delete them. Assuming that we have an existing Knowledge Base article with the following content:
+In your articles, replace any word where you want the "CREDENTIALS" entity to be substituted in, *including* the tags. This might make some intent qualifiers and tags redundant, which means you can (and should) delete them.
+
+Assume we have a knowledge base using [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) and an existing article with the following content:
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_1.png">
 
