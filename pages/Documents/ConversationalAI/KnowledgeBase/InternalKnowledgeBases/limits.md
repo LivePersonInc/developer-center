@@ -5,8 +5,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-subfoldername: LivePerson Knowledge Bases
-permalink: knowledge-base-liveperson-knowledge-bases-limits.html
+subfoldername: Internal Knowledge Bases
+permalink: knowledge-base-internal-knowledge-bases-limits.html
 indicator: both
 ---
 

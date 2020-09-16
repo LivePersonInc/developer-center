@@ -5,14 +5,14 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-subfoldername: LivePerson Knowledge Bases
-permalink: knowledge-base-liveperson-knowledge-bases-introduction.html
+subfoldername: Internal Knowledge Bases
+permalink: knowledge-base-internal-knowledge-bases-introduction.html
 indicator: both
 ---
 
-### What's a LivePerson knowledge base?
+### What's an internal knowledge base?
 
-A LivePerson knowledge base is a built-in knowledge base, i.e., one whose content you can create and manage directly within the Knowledge Base application. You can:
+An internal knowledge base is a built-in knowledge base, i.e., one whose content you can create and manage directly within the Knowledge Base application. You can:
 
 * Start from scratch, and add articles directly within the application.
 * Do a one-time import of articles from a CSV file, and maintain the articles thereafter within the Knowledge Base application.

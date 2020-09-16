@@ -256,7 +256,7 @@
           - subpagename: Mapping Content Metadata
           - subpagename: Writing a Transformation Specification
           - subpagename: Best Practices
-      - pagename: LivePerson Knowledge Bases
+      - pagename: Internal Knowledge Bases
         subpages:
           - subpagename: Introduction
           - subpagename: Knowledge Bases

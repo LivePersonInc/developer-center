@@ -6,14 +6,12 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-subfoldername: LivePerson Knowledge Bases
-permalink: knowledge-base-liveperson-knowledge-bases-knowledge-bases.html
+subfoldername: Internal Knowledge Bases
+permalink: knowledge-base-internal-knowledge-bases-knowledge-bases.html
 indicator: both
 ---
 
-### Add a LivePerson knowledge base
-
-**To add a LivePerson knowledge base**
+### Add an internal knowledge base
 
 1. Access the Knowledge Base application as described [here](knowledge-base-overview.html#access-knowledge-base).
 2. In the dashboard that lists your knowledge bases, click **Add Knowledge Base** in the upper-right corner.
