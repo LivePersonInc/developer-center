@@ -5,8 +5,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-subfoldername: CMS Knowledge Bases
-permalink: knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html
+subfoldername: External Knowledge Bases
+permalink: knowledge-base-external-knowledge-bases-writing-a-transformation-specification.html
 indicator: both
 ---
 

@@ -1,18 +1,18 @@
 ---
-pagename: CMS KBs without LivePerson AI
+pagename: External KBs without LivePerson AI
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-subfoldername: CMS Knowledge Bases
-permalink: knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html
+subfoldername: External Knowledge Bases
+permalink: knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html
 indicator: both
 ---
 
-### What's a CMS KB without LivePerson AI?
+### What's an external KB without LivePerson AI?
 
-A CMS knowledge base without LivePerson AI:
+An external knowledge base without LivePerson AI:
 
 * Integrates with an external content management system (CMS)
 * *Doesn’t* use a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance and return the highest scoring article. Instead, the utterance (input phrase) is simply passed on to the CMS, which uses its own query and answer API to find and return the most appropriate articles. (Every CMS can have a different name for this API.)
@@ -28,7 +28,7 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
     * [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and then testing
     * Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
 
-### Add a CMS KB without LivePerson AI
+### Add an external KB without LivePerson AI
 
 **To add a 3rd-party knowledge base without LivePerson AI**
 

@@ -1,17 +1,17 @@
 ---
-pagename: CMS KBs with LivePerson AI
+pagename: External KBs with LivePerson AI
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-subfoldername: CMS Knowledge Bases
-permalink: knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html
+subfoldername: External Knowledge Bases
+permalink: knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html
 indicator: both
 ---
 
-### What's a CMS KB with LivePerson AI?
-A CMS knowledge base with LivePerson AI:
+### What's an external KB with LivePerson AI?
+An external knowledge base with LivePerson AI:
 
 * Integrates with an external content management system (CMS)
 * Uses a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance (the intent) and return the highest scoring article. Using the capabilities of NLU to do this work is recommended for the best consumer experience.
@@ -33,8 +33,8 @@ When adding a CMS knowledge base with LivePerson AI, follow this high-level work
 {: .important}
 After making any changes to the content in the CMS, sync with the CMS (described below). This updates the knowledge base accordingly.
 
-### Add a CMS KB with LivePerson AI
-**To add a CMS knowledge base with LivePerson AI**
+### Add an external KB with LivePerson AI
+**To add an external knowledge base with LivePerson AI**
 
 1. Click **Add Knowledge Base** in the upper-right corner.
 2. On the **AI Enabled** tab of the window that appears, select **External Content Store**.

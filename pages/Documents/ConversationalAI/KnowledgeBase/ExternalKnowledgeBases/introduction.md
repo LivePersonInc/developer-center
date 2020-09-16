@@ -5,12 +5,12 @@ Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-subfoldername: CMS Knowledge Bases
-permalink: knowledge-base-cms-knowledge-bases-introduction.html
+subfoldername: External Knowledge Bases
+permalink: knowledge-base-external-knowledge-bases-introduction.html
 indicator: both
 ---
 
-### About CMS knowledge bases
+### About external knowledge bases
 
 If you have a CMS that you want to leverage in bot conversations or through Agent Assist, you can add a CMS knowledge base without needing to migrate your content. This is one where the content is authored and managed entirely within the external CMS application. Integrating with your CMS lets your content creators use familiar tools and workflows. You can integrate with any CMS that has the capability, i.e., an API connector. Notable examples include Salesforce and Zendesk. 
 

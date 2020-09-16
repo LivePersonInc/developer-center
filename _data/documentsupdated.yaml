@@ -248,11 +248,11 @@
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
-      - pagename: CMS Knowledge Bases
+      - pagename: External Knowledge Bases
         subpages:
           - subpagename: Introduction
-          - subpagename: CMS KBs with LivePerson AI
-          - subpagename: CMS KBs without LivePerson AI
+          - subpagename: External KBs with LivePerson AI
+          - subpagename: External KBs without LivePerson AI
           - subpagename: Mapping Content Metadata
           - subpagename: Writing a Transformation Specification
           - subpagename: Best Practices
