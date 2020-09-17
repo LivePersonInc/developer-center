@@ -13,7 +13,7 @@ indicator: both
 
 This tutorial is designed to familiarize you with the Knowledge Base application and [internal knowledge bases](knowledge-base-internal-knowledge-bases-introduction.html).
 
-### Step 1: Add a LivePerson knowledge base
+### Step 1: Add an external knowledge base
 
 1. In the dashboard that lists the available knowledge bases, click **Add Knowledge Base** in the upper-right corner.
 2. On the **AI Enabled** tab of the window that appears, select **Built-in Content Store**.

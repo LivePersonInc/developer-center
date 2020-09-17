@@ -19,18 +19,18 @@ An external knowledge base without LivePerson AI:
 
 ### High-level workflow
 
-When adding a CMS knowledge base without LivePerson AI, follow this high-level workflow:
+When adding an external knowledge base without LivePerson AI, follow this high-level workflow:
 
 1. In Knowledge Base: 
-    1. Add the CMS knowledge base.
+    1. Add the external knowledge base.
     2. Use the Search tool to test the integration.
 2. Expose the articles to consumers by:
-    * [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and then testing
-    * Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
+    * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
+    * (Conversation Orchestrator) Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
 
 ### Add an external KB without LivePerson AI
 
-**To add a 3rd-party knowledge base without LivePerson AI**
+**To add an external knowledge base without LivePerson AI**
 
 1. Click **Add Knowledge Base** in the upper-right corner.
 2. In the window that appears, select the **Other Connection** tab, and then select **External Content Search Only**.
@@ -54,13 +54,13 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
 
 ### Test the CMS integration
 
-After you've add a CMS knowledge base that doesn't use AI, you can test the integration with the Search tool. This involves entering a consumer utterance to see and evaluate the results that are retrieved from the CMS.
+After you've add an external knowledge base that doesn't use AI, you can test the integration with the Search tool. This involves entering a consumer utterance to see and evaluate the results that are retrieved from the CMS.
 
 **To test the CMS integration**
 
 1. Open the knowledge base.
 
-    By default, the Articles tab is displayed. Initially, it doesn’t show any metadata or content because, with this type of knowledge base (one without LivePerson AI), only configuration information is stored within Knowledge Base. The content remains in the CMS.
+    By default, the Articles tab is displayed. Initially, it doesn’t show any metadata or content because, with this type of external knowledge base (one without LivePerson AI), only configuration information is stored within Knowledge Base. The content remains in the CMS.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_no_ai_test_1.png">
 

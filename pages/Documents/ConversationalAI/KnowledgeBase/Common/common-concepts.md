@@ -17,14 +17,18 @@ This topic contains common, conceptual information that is relevant to:
 
 ### Knowledge base searches
 
-When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify a "mode" for the search; this determines the type of search that is performed. Possible modes include: **Intents**, **Intents Only**, and **Text**.
+When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify a "mode" for the search; this determines the type of search that is performed. Possible modes include:
+
+* Intents
+* Intents Only
+* Text
 
 #### Intents mode
 
 When the Intents mode is used, an exact match, text-to-text search is performed first. If a match isn't found by the first search, Knowledge Base next uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. And if a match isn't found by the NLU search, a final, text-to-text search is performed as a fallback.
 
-<img style="width:750px" src="img/ConvoBuilder/kb_search_modes_cms.png">
-<img style="width:750px" src="img/ConvoBuilder/kb_search_modes_lp.png">
+<img style="width:750px" src="img/ConvoBuilder/kb_search_modes_ext.png">
+<img style="width:750px" src="img/ConvoBuilder/kb_search_modes_int.png">
 
 #### Intents Only mode
 
@@ -43,9 +47,9 @@ When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to 
 
 | If the knowledge base is... | Then... |
 | --- | --- |
-| a CMS knowledge base with LivePerson AI | the scoring breakdown for the NLU engine used by the associated domain is used |
-| a LivePerson knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
-| a LivePerson knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson NLU v1 is used |
+| an external knowledge base with LivePerson AI | the scoring breakdown for the NLU engine used by the associated domain is used |
+| an internal knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
+| an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson NLU v1 is used |
 
 For these confidence score breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
 

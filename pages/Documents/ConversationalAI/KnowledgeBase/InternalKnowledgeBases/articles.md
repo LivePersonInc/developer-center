@@ -17,7 +17,7 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 <img class="fancyimage" style="width:750px" src="img/ConvoBuilder/kb_articles.png">
 
-**To add an article to a knowledge base**
+**To add an article to an internal knowledge base**
 
 1. Open the knowledge base, and (on the Articles page) click **Add New** in the upper-right corner.
 2. Specify the following basic settings:

@@ -12,13 +12,13 @@ indicator: both
 
 ### Introduction
 
-When you add a CMS knowledge base, one important step in the process is to map the external CMS' article data model to LivePerson Knowledge Base. This is done by providing a Jolt transformation specification that can be used to "transform" the response that's returned from the API call into the LivePerson Knowledge Base article schema.
+When you add an external knowledge base, one important step in the process is to map the external CMS' article data model to LivePerson Knowledge Base. This is done by providing a Jolt transformation specification that can be used to "transform" the response that's returned from the API call into the LivePerson Knowledge Base article schema.
 
 LivePerson provides default Jolt transformation specifications for a few, popular CMS vendors, namely, Salesforce and Zendesk. If you’ve customized the CMS’ data schema, you’ll need to adjust the default specification accordingly. If you use another CMS vendor, you'll need to write the specification from scratch.
 
 ### Supported LivePerson attributes
 
-When you [add an external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), one setup step involves configuring the request to fetch the articles' metadata. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
+When you add an external knowledge base [with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), one setup step involves configuring the request to fetch the articles' metadata. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ When you [add an external knowledge base with LivePerson AI](knowledge-base-exte
 | tags | A list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. | no |
 | category | Assigning a category lets you filter and find articles based on categories in the Knowledge Base application. | no |
 
-When you [add an external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), a second setup step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
+When you add an external knowledge base [with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), a second setup step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -45,7 +45,7 @@ When you [add an external knowledge base with LivePerson AI](knowledge-base-exte
 {: .important}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
 
-When you [add a CMS knowledge base without LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one setup step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation specification for the articles that are returned. The following LivePerson attributes are supported:
+When you add an external knowledge base [without LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one setup step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation specification for the articles that are returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |

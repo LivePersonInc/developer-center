@@ -12,7 +12,7 @@ indicator: both
 
 ### Introduction
 
-The data schema used by your CMS differs from that used by LivePerson Knowledge Base, so mapping the content from the former to the latter is a required step in setting up the knowledge base. This involves defining a Jolt transformation specification to transform the data that's retrieved from the CMS. Jolt is an open-source, JSON-to-JSON transformation library.
+The data schema used by your CMS differs from that used by LivePerson Knowledge Base, so mapping the content from the former to the latter is a required step in setting up an external knowledge base. This involves defining a Jolt transformation specification to transform the data that's retrieved from the CMS. Jolt is an open-source, JSON-to-JSON transformation library.
 
 If you’re using a popular CMS vendor (Salesforce or Zendesk), LivePerson provides a default, vendor-specific, Jolt specification. You’ll need to adjust the default specification accordingly if you’ve customized the CMS’ data schema. On the other hand, if you’re using a CMS vendor for which no default specification is available, you’ll need to write one from scratch. In either case, use the examples that follow as a guide.
 
@@ -31,7 +31,7 @@ See [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html
 LHS = left-hand side = the input JSON tree<br>
 RHS = right-hand side = the output JSON tree
 
-### Examples - Map a single article's content (CMS KB with LivePerson AI)
+### Examples - Map a single article's content (external KB with LivePerson AI)
 
 #### Example 1
 
@@ -210,7 +210,7 @@ When fetching a single article, some CMS systems might return an array as per th
 }
 ```
 
-### Examples - Map articles' metadata (CMS KB with LivePerson AI)
+### Examples - Map articles' metadata (external KB with LivePerson AI)
 
 #### Example 1
 
@@ -384,7 +384,7 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
 } ]
 ```
 
-### Examples - Map article suggestions/answers (CMS KB without LivePerson AI)
+### Examples - Map article suggestions/answers (external KB without LivePerson AI)
 
 #### Example 1
 

@@ -14,11 +14,11 @@ indicator: both
 
 An internal knowledge base is a built-in knowledge base, i.e., one whose content you can create and manage directly within the Knowledge Base application. You can:
 
-* Start from scratch, and add articles directly within the application.
+* Start from scratch, and add articles directly within the Knowledge Base application.
 * Do a one-time import of articles from a CSV file, and maintain the articles thereafter within the Knowledge Base application.
 * Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within the Knowledge Base application.
 
-A LivePerson knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to [evaluate the articles](knowledge-base-common-common-concepts.html#knowledge-base-searches) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledge-base-common-common-concepts.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
+An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to [evaluate the articles](knowledge-base-common-common-concepts.html#knowledge-base-searches) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledge-base-common-common-concepts.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
 
 ### High-Level Workflow
 
@@ -29,8 +29,8 @@ When adding an internal knowledge base, follow this workflow:
     2. [Add the articles](knowledge-base-internal-knowledge-bases-articles.html) if necessary.
     3. [Train](knowledge-base-common-common-tasks.html#train-a-knowledge-base) the articles to match consumer utterances.
 2. Expose the articles to consumers by:
-    * [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and then testing
-    * Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
+    * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
+    * (Conversation Orchestrator) Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
 
 ### Knowlege Base intents versus Domain intents
 
