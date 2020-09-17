@@ -18,12 +18,11 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or [Web Tool]
 ### Getting Started
 
 1. Onboarding to [Proactive Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html) is mandatory before onboarding to Proactive 2.0 API. For Proactive Web Tool, fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded. 
-2. To onboard on Proactive 2.0 API,
-- Create 2 new bot users in Conversational Cloud. Customer Success Managers can do this on behalf of the brand using elevated LivePerson credentials. Important points:
-    * Please make sure the bot users have Campaign Manager roles & privileges. If this is not done, API calls to create Proactive campaigns will not be successful. 
-    * It is critical that these two bot users are not used by other services. For example, these two bots should not be shared with Conversational Builder. 
-    * Provide LivePerson Proactive team with the bot user api key and secret of the 2 bots created in step #2. Please email Proactive team for a secured method that you can share this information. 
-    * LivePerson will provide brands the client ID and secrets which will be used to create an app jwt for authentication. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
+2. To onboard on Proactive 2.0 API, perform steps as mentioned below
+- Login to [Proactive](https://proactive-messaging.fs.liveperson.com/) web app with user having administrator privileges.
+    * Click on Settings tab in menu bar.
+    * Click on Enable button to onboard to proactive api.
+    * Click on show secrets to get app Id and secrets which will be used to create APP JWT. Click here to learn how to use [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt).
 
 ### API Specifications
 ## API Domain
