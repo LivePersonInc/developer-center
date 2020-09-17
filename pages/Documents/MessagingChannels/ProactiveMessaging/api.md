@@ -12,7 +12,7 @@ indicator: messaging
 
 ### Introduction
 
-Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into LiveEngage; creating  two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with a lot of improvements from the older 1.0 API version. Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with LE campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS and WhatApp. 
+Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating  two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with a lot of improvements from the older 1.0 API version. Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with LE campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS and WhatApp. 
 Note: Proactive Messaging can be leveraged using Proactive 2.0 API or [Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html).
 
 ### Getting Started
