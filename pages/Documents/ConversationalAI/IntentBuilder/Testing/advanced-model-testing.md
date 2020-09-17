@@ -15,13 +15,13 @@ indicator: both
 If your domain is using the LivePerson NLU v2 engine, there's an advanced Model Tester that's available. The Model Tester is designed to:
 
 * Provide broad testing coverage for the domain
-* Help you determine if the domain/model is improving or regressing from one version to the next
+* Help you determine if the domain is improving or regressing from one version to the next
 
 The general workflow for using the Model Tester is this:
 
 1. Define a set of utterances (test phrases) to test against the intents in the domain.
 2. Run the test, and evaluate the report.
-3. Improve the domain (and retrain if applicable), and/or improve the test set.
+3. Improve the domain and retrain, and/or improve the test set.
 4. Re-run the test, and evaluate the report.
 5. Compare reports to determine if the domain/model is improving or regressing.
 
