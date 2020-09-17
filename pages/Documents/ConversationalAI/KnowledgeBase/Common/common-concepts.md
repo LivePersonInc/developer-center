@@ -12,8 +12,8 @@ indicator: both
 
 This topic contains common, conceptual information that is relevant to:
 
-* [CMS knowledge bases with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
-* [LivePerson knowledge bases](knowledge-base-liveperson-knowledge-bases-introduction.html), which also use LivePerson AI
+* [External knowledge bases with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html)
+* [Internal knowledge bases](knowledge-base-internal-knowledge-bases-introduction.html), which also use LivePerson AI
 
 ### Knowledge base searches
 
@@ -34,8 +34,8 @@ The Intents Only mode is like the Intents mode (above) except that the final, te
 
 When the Text mode is used, a text-to-text search is performed:
 
-* With a [CMS knowledge base with AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
-* With a [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) (intent qualifiers), and tags.
+* With an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
+* With an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) (intent qualifiers), and tags.
 
 ### Scoring and thresholds
 

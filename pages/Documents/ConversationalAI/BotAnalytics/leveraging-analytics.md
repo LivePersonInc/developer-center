@@ -25,4 +25,4 @@ Here we’re looking at the matched intents for this bot. Most are coming from t
 
 Tapping **Unmatched Phrases** displays the user utterances that didn't return any result from the bot patterns, intents or knowledge bases.
 
-If you see utterances in the **Unmatched Phrases** that should be matching a particular intent or Knowledge Base article, you can add them to the training phrases for these items. Keep in mind the best practices for creating training phrases for [intents](intent-builder-intents.html#best-practices) and [LivePerson knowledge bases](knowledge-base-liveperson-knowledge-bases-best-practices.html).
+If you see utterances in the **Unmatched Phrases** that should be matching a particular intent or Knowledge Base article, you can add them to the training phrases for these items. Keep in mind the best practices for creating training phrases for [intents](intent-builder-intents.html#best-practices) and [internal knowledge bases](knowledge-base-internal-knowledge-bases-best-practices.html).

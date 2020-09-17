@@ -36,7 +36,7 @@ Starting in late September 2020, the number of articles that can be added to a k
 * The intent qualifiers or training phrases should be relatively generic. If they are too specific, the likelihood they will match a consumer’s utterance will be slim. Since consumers can phrase their questions in many ways, make sure your intents are broad to allow the NLU a chance to match as many possible versions of the sentence as possible.
 
 {: .important}
-If you're using [domain intents](knowledge-base-liveperson-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) (not knowledge base intents), the same guidelines apply.
+If you're using [domain intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) (not knowledge base intents), the same guidelines apply.
 
 ### Summary and details
 

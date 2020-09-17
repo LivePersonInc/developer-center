@@ -20,10 +20,10 @@ Training a knowledge base involves:
 2. Reviewing the results.
 3. Adding or removing training phrases in the intents as needed. Adding or removing positive/negative learnings in the articles as needed.
 
-Training is applicable when the knowledge base is a:
+Training is applicable when the knowledge base is:
 
-* [CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html)
-* [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html), which also uses LivePerson AI
+* An [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html)
+* An [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), which also uses LivePerson AI
 
 To train a knowledge base, open the knowledge base, and click **Articles** in the upper-left corner if the page isn't already displayed. Enter an utterance, and review the results.
 

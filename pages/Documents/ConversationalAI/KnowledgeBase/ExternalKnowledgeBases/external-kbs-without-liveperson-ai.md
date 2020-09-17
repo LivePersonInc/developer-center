@@ -49,7 +49,7 @@ When adding a CMS knowledge base without LivePerson AI, follow this high-level w
     * **Add Request Headers**: Add any request headers to include in the request.
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send if applicable.
-    * Click **Map Content Metadata**, and map the article suggestions/answers data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
+    * Click **Map Content Metadata**, and map the article suggestions/answers data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
 7. Click **Save**.
 
 ### Test the CMS integration

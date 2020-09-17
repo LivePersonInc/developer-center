@@ -52,7 +52,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Add Request Headers**: Add any request headers to include in the request.
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send if applicable.
-    * Click **Map Content Metadata**, and map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
+    * Click **Map Content Metadata**, and map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
 6. Click **Next**.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_2.png">
@@ -67,7 +67,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send if applicable.
     * **Cache Article Content**: If you want to temporarily cache the article content that’s returned at run time for improved performance, select the duration in minutes. 
-    * Click **Map Content Metadata**, and map the single article’s content data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-cms-knowledge-bases-mapping-content-metadata.html).
+    * Click **Map Content Metadata**, and map the single article’s content data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
 9. Click **Save**.
 
 ### Associate an article with an intent

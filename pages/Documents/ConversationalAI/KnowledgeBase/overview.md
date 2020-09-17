@@ -12,7 +12,7 @@ indicator: both
 
 ### Introduction
 
-A knowledge base exposes a repository of articles that support a particular classification in your business. As an example, the following is an illustration of a [LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-introduction.html), which contains Human Resources FAQs.
+A knowledge base exposes a repository of articles that support a particular classification in your business. As an example, the following is an illustration of an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), which contains Human Resources FAQs.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_overview.png">
 
@@ -30,19 +30,19 @@ You can create knowledge bases using a variety of content sources:
 You can also start from scratch and author articles directly in a knowledge base.
 
 #### Content management systems (CMS)
-If you have a CMS with well-curated content that you want to leverage in bot conversations, you can [add a CMS knowledge base](knowledge-base-cms-knowledge-bases-introduction.html). This is one where the content is authored and managed entirely within the external CMS application. Integrating with your CMS lets your content creators use familiar tools and workflows to author and manage the content. You can integrate with any CMS that has the capability, i.e., an API connector. Notable examples include Salesforce and Zendesk.
+If you have a CMS with well-curated content that you want to leverage in bot conversations, you can [add an external knowledge base](knowledge-base-external-knowledge-bases-introduction.html). This is one where the content is authored and managed entirely within the external CMS application. Integrating with your CMS lets your content creators use familiar tools and workflows to author and manage the content. You can integrate with any CMS that has the capability, i.e., an API connector. Notable examples include Salesforce and Zendesk.
 
 #### Google sheets
-If your tool of choice is a simple Google sheet, you can [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html) and link the sheet to it. Once you add the knowledge base using the sheet, you can follow one of two workflows:
+If your tool of choice is a simple Google sheet, you can [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html) and link the sheet to it. Once you add the knowledge base using the sheet, you can follow one of two workflows:
 
-* Add and update the articles in the linked Google sheet as needed, and then [sync the knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html#sync-with-a-google-sheet) to overwrite the knowledge base with the contents in the sheet.
-* [Add](knowledge-base-liveperson-knowledge-bases-articles.html) and update the articles directly in the knowledge base as needed. They are editable within the UI to support this workflow. Sync plays no role in this workflow.
+* Add and update the articles in the linked Google sheet as needed, and then [sync the knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html#sync-with-a-google-sheet) to overwrite the knowledge base with the contents in the sheet.
+* [Add](knowledge-base-internal-knowledge-bases-articles.html) and update the articles directly in the knowledge base as needed. They are editable within the UI to support this workflow. Sync plays no role in this workflow.
 
 #### CSV files
-If your tool of choice is a simple CSV sheet, you can [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html) and import the contents of the CSV file when you do. The import is a one-time operation when you add the knowledge base. Thereafter, you add and update the articles directly in the knowledge base.
+If your tool of choice is a simple CSV sheet, you can [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html) and import the contents of the CSV file when you do. The import is a one-time operation when you add the knowledge base. Thereafter, you add and update the articles directly in the knowledge base.
 
 #### Starting from scratch
-If you’re starting a knowledge base from scratch, and you prefer to work directly in the Knowledge Base application, you can also do this. Simply [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html) and start [adding articles](knowledge-base-liveperson-knowledge-bases-articles.html).
+If you’re starting a knowledge base from scratch, and you prefer to work directly in the Knowledge Base application, you can also do this. Simply [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html) and start [adding articles](knowledge-base-internal-knowledge-bases-articles.html).
 
 ### Access Knowledge Base
 

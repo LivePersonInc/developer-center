@@ -139,7 +139,7 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 ### Using entities
 
-To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, see [here](knowledge-base-liveperson-knowledge-bases-articles.html#using-entities-in-a-knowledge-base).
+To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, see [here](knowledge-base-internal-knowledge-bases-articles.html#using-entities-in-a-knowledge-base).
 
 #### Can I detect entities using JavaScript?
 

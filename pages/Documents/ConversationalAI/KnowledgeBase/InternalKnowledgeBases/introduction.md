@@ -22,11 +22,11 @@ A LivePerson knowledge base always makes use of a [Natural Language Understandin
 
 ### High-Level Workflow
 
-When adding a LivePerson knowledge base, follow this workflow:
+When adding an internal knowledge base, follow this workflow:
 
 1. In Knowledge Base:
-    1. [Add the LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html). In this step you can import articles from a CSV file or link to a Google sheet that contains them.
-    2. [Add the articles](knowledge-base-liveperson-knowledge-bases-articles.html) if necessary.
+    1. [Add the internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html). In this step you can import articles from a CSV file or link to a Google sheet that contains them.
+    2. [Add the articles](knowledge-base-internal-knowledge-bases-articles.html) if necessary.
     3. [Train](knowledge-base-common-common-tasks.html#train-a-knowledge-base) the articles to match consumer utterances.
 2. Expose the articles to consumers by:
     * [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot and then testing
@@ -44,7 +44,7 @@ Or, you can define these alternate formats in a domain in Intent Builder. Here, 
 
 <img style="width:350px" src="img/ConvoBuilder/kb_intents_IB.png">
 
-When you [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html), you'll specify which configuration approach you're using for the knowlege base:
+When you [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html), you'll specify which configuration approach you're using for the knowlege base:
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_intentAssociation.png">
 
@@ -53,7 +53,7 @@ When you [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-b
 
 ### Languages
 
-When you [add a LivePerson knowledge base](knowledge-base-liveperson-knowledge-bases-knowledge-bases.html), you'll specify its language.
+When you [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html), you'll specify its language.
 
 When a text-to-text search is performed and a match is found, the knowledge base's language doesn't play a role. Whatever article is matched is simply returned.
 
@@ -78,6 +78,6 @@ In the Knowledge Base application, you can easily identify an article's current 
 
 #### Using Valid From and Valid To dates
 
-You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledge-base-liveperson-knowledge-bases-articles.html#add-an-article). 
+You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledge-base-internal-knowledge-bases-articles.html). 
 
 For example, you might run a promotion over a holiday that has an associated FAQ, and that FAQ should only be used for a finite period of time. Or, you might have an article that you want to become active on a certain date and remain so indefinitely. You can satisfy requirements like these with **Valid From** and/or **Valid To**.

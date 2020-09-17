@@ -18,7 +18,7 @@ LivePerson provides default Jolt transformation specifications for a few, popula
 
 ### Supported LivePerson attributes
 
-When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), one setup step involves configuring the request to fetch the articles' metadata. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
+When you [add an external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), one setup step involves configuring the request to fetch the articles' metadata. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowle
 | tags | A list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. | no |
 | category | Assigning a category lets you filter and find articles based on categories in the Knowledge Base application. | no |
 
-When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-with-liveperson-ai.html#add-a-cms-kb-with-liveperson-ai), a second setup step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
+When you [add an external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), a second setup step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -45,7 +45,7 @@ When you [add a CMS knowledge base with LivePerson AI](knowledge-base-cms-knowle
 {: .important}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
 
-When you [add a CMS knowledge base without LivePerson AI](knowledge-base-cms-knowledge-bases-cms-kbs-without-liveperson-ai.html#add-a-cms-kb-without-liveperson-ai), one setup step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation specification for the articles that are returned. The following LivePerson attributes are supported:
+When you [add a CMS knowledge base without LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one setup step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation specification for the articles that are returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -76,7 +76,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
     If you weren't able to select your CMS provider's name, a default specification isn't available. You'll need to write the specification from scratch.
 
-3. If needed, adjust or write the Jolt transformation spec using the examples and guidance [here](knowledge-base-cms-knowledge-bases-writing-a-transformation-specification.html). 
+3. If needed, adjust or write the Jolt transformation spec using the examples and guidance [here](knowledge-base-external-knowledge-bases-writing-a-transformation-specification.html). 
 
 4. Click **Test Spec**.
 

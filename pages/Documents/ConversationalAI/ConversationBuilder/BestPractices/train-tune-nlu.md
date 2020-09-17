@@ -23,14 +23,14 @@ Below are some best practices to keep in mind while using intents, entities, and
 
 The Analytics portal can help you understand which of your intents are matching (or not) and give you the information you need to train and tune your intents. For help with leveraging analytics in this way, see [here](bot-analytics-leveraging-analytics.html).
 
-If you see utterances in the **Unmatched Phrases** that should be matching a particular intent or Knowledge Base article, you can add them to the training phrases for these items. Keep in mind the best practices for creating training phrases for [intents](intent-builder-intents.html#best-practices) and [LivePerson knowledge bases](knowledge-base-liveperson-knowledge-bases-best-practices.html).
+If you see utterances in the **Unmatched Phrases** that should be matching a particular intent or Knowledge Base article, you can add them to the training phrases for these items. Keep in mind the best practices for creating training phrases for [intents](intent-builder-intents.html#best-practices) and [internal knowledge bases](knowledge-base-internal-knowledge-bases-best-practices.html).
 
 ### Use good training phrases
 
 There are a number of reasons why your intent or knowledge base might be failing to return a result as you would expect. One of the most common causes is a lack of adequate training phrases. Follow best practices when creating training phrases; these help to ensure your intents and knowledge bases are well-trained and return the results you expect.
 
 * [Best practices for intents](intent-builder-intents.html#best-practices)
-* [Best practices for LivePerson knowledge bases](knowledge-base-liveperson-knowledge-bases-best-practices.html)
+* [Best practices for internal knowledge bases](knowledge-base-internal-knowledge-bases-best-practices.html)
 
 ### Test, train and tune
 
@@ -43,7 +43,7 @@ Training your intents or knowledge base is generally done by testing utterances,
 
 [Entities](intent-builder-entities.html) are keywords that refer to a number of synonyms or values. For example, the entity "sports" might have a number of synonyms like walking, running, football, jogging, baseball, etc. When creating intents or articles, you can leverage the power of entities as well. This dramatically increases the accuracy and flexibility of your responses.
 
-To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, see [here](knowledge-base-liveperson-knowledge-bases-articles.html#using-entities-in-a-knowledge-base).
+To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, see [here](knowledge-base-internal-knowledge-bases-articles.html#using-entities-in-a-knowledge-base).
 
 ### NLU stop words
 
