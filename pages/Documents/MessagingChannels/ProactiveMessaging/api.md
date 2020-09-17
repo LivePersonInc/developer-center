@@ -12,7 +12,7 @@ indicator: messaging
 
 ### Introduction
 
-Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating  two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with a lot of improvements from the older 1.0 API version. Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with LE campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS and WhatApp. 
+Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating  two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with a lot of improvements from the older 1.0 API version. Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS and WhatApp. 
 Note: Proactive Messaging can be leveraged using Proactive 2.0 API or [Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html).
 
 ### Getting Started
@@ -250,7 +250,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 
 <strong>What’s the lookback period?</strong>
 - Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer using a campaign. Current lookback period is 30 days from when messages are sent using Proactive api. 
-- Example: When a message is sent to consumer using Proactive Messaging api and if consumer replies within 30 days from when message was sent, the response will be redirected to LE agent according to specified skill in Proactive Campaign. A response after 30 days will be be treated as any inbound message and routed to a default skill in Conversational Cloud (this is configured by brand). Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
+- Example: When a message is sent to consumer using Proactive Messaging api and if consumer replies within 30 days from when message was sent, the response will be redirected to Conversational Cloud agent according to specified skill in Proactive Campaign. A response after 30 days will be be treated as any inbound message and routed to a default skill in Conversational Cloud (this is configured by brand). Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
 <strong>Are the scheduling times required? What happens if we don't specify it? What if we only specify one day Monday, etc.?</strong>
 - As indicated in the swagger documentation, this is an optional field. If scheduling times are not passed, then Proactive Messaging will default to channel window times i.e. 13 hrs. (8:00 am - 9:00 pm) for SMS and 24 hrs. for other channels. e.g. If only Monday time is passed, then messages will only be sent in the Monday window times and any remaining messages after Monday window time will be sent in next Monday window times. For SMS, if default window 8:00 am - 9:00 pm is less than required then provide schedule window in campaign request to send SMS outside the default window.
