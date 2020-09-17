@@ -334,7 +334,7 @@ Note: Auto logout works only for authenticated users.
 # Bugs Fixed:
 - Android SDK crash due to empty RecyclerView object.
 - “link_preview_enable_feature” configuration is not working as expected.
-- [Messaging.reconnect()](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect) does not work when the token is expired flag is set to false. New flow will include a reconnect method when the token is expired and the flag is not turned on, which means that the reconnect will be performed on any other IDP errors that are not expired JWT.
+- [Messaging.reconnect()](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect) does not work when the token is not expired.
 - SDK fails to connect when opened a conversation screen using a valid JWT and host app is missing reconnect mechanism.
 
 
