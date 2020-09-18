@@ -35,7 +35,7 @@ If you don't get any results, you can adjust the filters by tapping <img style="
 
 The following image illustrates a search in an internal knowledge base. Things work similarly for an external knowledge base that uses LivePerson AI.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_test.png">
 
 By default, the Search Settings are set to **Intents** and **Fair Plus**. This means that the algorithm first checks for matches using NLU, with a threshold of Fair Plus. If it doesn’t find any, it attempts a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." This means you should add some more training phrases to the intent to improve the results.
 
@@ -57,7 +57,7 @@ Continuing our example of an internal knowledge base, the image below illustrate
 
 Tap the **Thumbs Up** icon (and click **Save** in the resulting window) to add the utterance to the article's Positive Learnings set. (**Thumbs Down** does the opposite.)
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_test_thumbsUp.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_test_thumbsUp.png">
 
 If you were to rerun the search, the article would return with a higher score.
 
