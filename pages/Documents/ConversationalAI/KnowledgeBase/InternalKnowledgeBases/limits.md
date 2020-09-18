@@ -12,7 +12,7 @@ indicator: both
 
 As you add and manage articles, there are a number of validation checks that are performed by the system to enforce limits and thereby promote best practices. 
 
-Starting in late September 2020, these limits are enforced by the application. However, internal knowledge bases created before this time are exempt; you are only warned that you are exceeding the limit in question. The add or update operation is still permitted.
+Starting on September 28, 2020, these limits are enforced by the application. However, internal knowledge bases created before this time are exempt; you are only warned that you are exceeding the limit in question. The add or update operation is still permitted.
 
 ### Knowledge base-level limits
 
