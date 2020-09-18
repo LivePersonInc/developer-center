@@ -14,7 +14,7 @@ indicator: both
 
 When you add an external knowledge base, one important step in the process is to map the external CMS' article data model to LivePerson Knowledge Base. This is done by providing a Jolt transformation specification that can be used to "transform" the response that's returned from the API call into the LivePerson Knowledge Base article schema.
 
-LivePerson provides default Jolt transformation specifications for a few, popular CMS vendors, namely, Salesforce and Zendesk. If you’ve customized the CMS’ data schema, you’ll need to adjust the default specification accordingly. If you use another CMS vendor, you'll need to write the specification from scratch.
+LivePerson provides default Jolt transformation specifications for a few, popular CMS vendors, e.g., Salesforce and Zendesk. If you’ve customized the CMS’ data schema, you’ll need to adjust the default specification accordingly. If you use another CMS vendor, you'll need to write the specification from scratch.
 
 ### Supported LivePerson attributes
 
