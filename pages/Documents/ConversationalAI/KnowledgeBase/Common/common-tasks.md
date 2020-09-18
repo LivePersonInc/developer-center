@@ -33,14 +33,15 @@ If you don't get any results for a particular utterance, you can adjust the filt
 
 By default, the Search Settings are set to **Intents** and **Fair Plus**. This means that the algorithm will first see if there are any matches using our NLU, with a threshold of Fair Plus. However, if it doesn’t find any, it will attempt a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." This means you should add some more training phrases to the intent to improve your results.
 
-* If you don’t want the follow-up text search, change the Search Settings to "Intents Only." This *only* performs the intents search.
-* If you *only* want to perform the text search, change the Search Settings to "All".
+* If you don’t want the follow-up text search, change the **Search Mode** to "Intents Only." This only performs the intents search.
+* If you only want to perform the text search, change the **Search Mode** to "Text."
 
 For more on search modes, see [here](knowledge-base-common-common-concepts.html#knowledge-base-searches).
 
-To add more training phrases (intent qualifiers), you can manually add them to your article.
+To add more training phrases:
 
-<img class="fancyimage" style="width:700px" src="img/qualifiers.png">
+* Add them to the intents in the domain if you're using domain intents
+* Add them as intent qualifiers in the article if you're using knowledge base intents
 
 #### Adding positive and negative learnings
 
