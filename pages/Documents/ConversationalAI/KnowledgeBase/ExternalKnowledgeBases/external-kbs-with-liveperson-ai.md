@@ -37,9 +37,9 @@ After making any changes to the content in the CMS, sync with the CMS (described
 **To add an external knowledge base with LivePerson AI**
 
 1. Click **Add Knowledge Base** in the upper-right corner.
-2. On the **AI Enabled** tab of the window that appears, select **External Content Store**.
+2. On the **AI Enabled** tab of the window that appears, select **External Knowledge Base**.
 3. Specify the following:
-    * **Content Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
+    * **Data Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
     * **Domain**: Select the name of the domain that contains the intents that you will associate with the articles.
 4. Click **Next**.
 

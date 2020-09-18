@@ -25,7 +25,13 @@ By using an AI-enabled knowledge base, you can offer your consumers a more helpf
 
 ### Getting started with a draft KB
 
-Adding an external knowledge base can take some time, so Knowledge Base automatically saves your changes in a "draft" once you start the process. This allows you to stop when you need and return to the task at a later time.
+Adding an external knowledge base can take some time, so the Knowledge Base application gives you the option to save a knowledge base as a "draft." This lets you step away from the configuration work and come back to it at a later time.
+
+Once you get into the process and have provided some basic information (e.g., a name), if you then click **Cancel**, you are prompted to choose whether to save your work.
+
+<img style="width:300px" src="img/ConvoBuilder/kb_ext_save_draft_1.png">
+
+Click **Yes** to save a draft.
 
 You can find your "draft" external knowledge bases at the top of the dashboard that displays all your knowledge bases. A knowledge base is considered no longer "draft" once all required fields are completed for the first time.
 
