@@ -44,7 +44,7 @@ There are two reasons for this constraint:
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/dialogtemplates_2.png">
 
-    The dialog itself is automatically made a part of the template definition, but you need to specify other dependencies. You do this next. *Take care when specifying the dependencies. Successful use of the dialog template by other bot developers depends on whether all needed items (other dialogs, environment variables, etc.) are included.*
+    The dialog itself is automatically made a part of the template definition, but you need to specify other dependencies. *Take care when specifying the dependencies. Successful use of the dialog template by other bot developers depends on whether all needed items (other dialogs, environment variables, etc.) are included.*
 
 5. In the Add Template Definition window, specify the following:
 
