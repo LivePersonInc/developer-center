@@ -41,16 +41,16 @@ botContext.printDebugMessage("channel used by the user is: " + channel);
 
 ### Get user platform ID
 
-Get User Platform Id is used to get the user’s unique platform ID.
+Get User Platform Id is used to get the user’s unique ID that's valid only within the Conversation Builder bot platform. This is the ID by which the bot identifies the user.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getUserPlatformId()` | None | string: unique User platform ID |
+| `getUserPlatformId()` | None | string: unique user ID within Conversation Builder |
 
 #### Example
 
 ```javascript
-// get the user’s platform ID
+// get the user’s ID within CB
 var userId = botContext.getUserPlatformId();
 // display the results...
 botContext.printDebugMessage('The userPlatformId = ' + userId);
