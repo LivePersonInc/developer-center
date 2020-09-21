@@ -11,16 +11,16 @@ indicator: both
 
 ### What’s a dialog template?
 
-A dialog template is a dialog that a bot developer has intentionally made available as a “template” that can be imported by others. A dialog template includes not just the dialog in question but also all required components on which the dialog relies: other dialogs, environment variables, and so on.
+A dialog template is a dialog that a bot developer has intentionally made available as a “template” that can be imported by others. A dialog template includes not just the dialog itself but also all other items on which the dialog relies: other dialogs, environment variables, and so on.
 
 Only dialogs of type Dialog can be made available as dialog templates.
 
 #### Advantages of dialog templates
-You can [import a dialog](conversation-builder-dialogs-dialog-basics.html#import-a-dialog) that isn’t made available as a template, but that process automatically imports only some of the components on which a dialog can rely, namely, the integrations that are used. The rest you must manually include (other dialogs) or add after the import (environment variables and global functions). As a result, a dialog import is better suited to situations where your import requirements are more relaxed, and you’re primarily interested in the dialog itself.
+You can [import a dialog](conversation-builder-dialogs-dialog-basics.html#import-a-dialog) that isn’t made available as a template, but that process automatically imports only some of the items on which a dialog can rely, namely, the integrations that are used. The rest you must manually include (other dialogs) or add after the import (environment variables and global functions). As a result, a dialog import is better suited to situations where your import requirements are more relaxed, and you are mainly interested in the dialog itself.
 
-In contrast, when a bot developer makes a dialog available as a template that can be imported, she must specify all the components on which the dialog relies in a template definition. The system then automatically includes all these components when the dialog template is imported.
+In contrast, when a bot developer makes a dialog available as a template that can be imported, she must specify all the items on which the dialog relies in a "template definition." The system then automatically includes all these items when the dialog template is imported.
 
-For quick, casual copies of dialogs, a dialog import can be handy. But when you want to formalize the import process for a dialog -- and ensure that other bot developers import all required components -- make the dialog available as a dialog template.
+For quick, casual copies of dialogs, a dialog import can be handy. But when you want to formalize the import process for a dialog -- and ensure that other bot developers import all required items -- make the dialog available as a dialog template.
 
 ### Make a dialog available as a template
 
@@ -30,7 +30,7 @@ Once you make a dialog available as a template, the dialog can no longer be impo
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogtemplates_1.png">
 
-There are two reasons for this:
+There are two reasons for this constraint:
 
 * It helps to ensure that all import requirements are met, as the import of a dialog template follows the requirements outlined in the dialog’s template definition.
 * It helps to prevent you from inadvertently importing the same dialog in different ways on different occasions.
@@ -44,22 +44,22 @@ There are two reasons for this:
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/dialogtemplates_2.png">
 
-    The dialog itself is automatically made a part of the template definition, but you need to specify other dependencies.
+    The dialog itself is automatically made a part of the template definition, but you need to specify other dependencies. You do this next. *Take care when specifying the dependencies. Successful use of the dialog template by other bot developers depends on whether all needed items (other dialogs, environment variables, etc.) are included.*
 
 5. In the Add Template Definition window, specify the following:
 
     * **Template Name**: Enter a brief, descriptive name for the template.
     * **Description**: Enter a brief description of the dialog’s functionality. This description is shown to bot developers when importing dialog templates.
-    * **+ Add Dialog**: Add to this list the dialogs upon which this dialog relies.
-    * **Domains**: This is a read-only list of all the domains used by all the dialogs that are a part of this dialog template. All domain associations will be maintained when the dialog template is imported by others. However, only [prebuilt domains](intent-builder-overview.html#prebuilt-domains) are included in the import. If an associated domain doesn't exist within your organization or it isn't a prebuilt domain, you'll need to add it manually.
+    * **+ Add Dialog**: Select the dialogs upon which this dialog relies, if any. You can only select dialogs of type Dialog (normal dialogs). Keep this in mind when designing and building the dialog itself, so there are no dependencies on other [types of dialogs](conversation-builder-dialogs-dialog-basics.html#dialog-types). For example, in a normal dialog, often validation of the consumer's input can rely on the Fallback dialog for handling; consider employing a different technique in this case.
+    * **Domains**: This is a read-only list of all the domains used by all the dialogs that are a part of the dialog template. All domain associations will be maintained when the dialog template is imported by others. However, only [prebuilt domains](intent-builder-overview.html#prebuilt-domains) are included in the actual import. If an associated domain doesn't exist within your organization or it isn't a prebuilt domain, you'll need to add it manually.
     * **+ Add Bot Environment Variable**: Add to this list the environment variables upon which this dialog relies.
     * **+ Add Global Function**: By default, this is populated with the global functions defined for the bot. Remove any functions that aren’t needed by the dialogs that are a part of the dialog template.
 
-    You don't need to specify any integrations here. All integrations used by this dialog and the listed dialogs are automatically included when the dialog template is imported by a bot developer.
+    **Note:** You don't need to specify any integrations. All integrations used by this dialog and the listed dialogs are automatically included in the actual import.
 
 6. Do one of the following:
-    * Click **Save** to save the template definition but keep it in "draft" status. This keeps the dialog template hidden. Use this status to save your work until you're ready to expose the dialog template to others within your organization.
-    * Click **Publish** to save the template definition and make it possible for other bot developers within your organization to import the dialog template.
+    * Click **Save** to save the template definition but keep it in "draft" status. This keeps the dialog template hidden.
+    * Click **Publish** to save the template definition and make it possible for other bot developers within your organization to import the dialog template. This changes the template's status to "Published."
 
     Regardless of which action you take, in the Dialogs panel, you now see an indicator that the dialog has a template definition:
 
@@ -83,23 +83,35 @@ Once you publish a dialog template, there is no way to unpublish it. Delete the 
 4. Scroll down to **Make Available as a Dialog Template**, and click **+ Update Template Definition**.
 5. In the Update Template Definition window, click **Publish** in the lower-right corner.
 
+### Delete a dialog template
+
+Deleting a dialog template has no impact on the dialog itself. The process deletes the template definition for the dialog, which means the dialog can no longer be imported by others as a dialog template.
+
+**To delete a dialog template**
+
+1. Open the bot.
+2. In the dialogs panel on the left, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> beside the dialog name, and select **Dialog Settings**.
+3. On the Dialog Settings page, expand **More Settings**.
+4. Scroll down to **Make Available as a Dialog Template**, and click **+ Update Template Definition**.
+5. In the Update Template Definition window, click **Delete** in the lower-right corner.
+
 ### Import a dialog template
 
-When you import a dialog template, you import the dialog, the integrations used in the dialog, and all other required components upon which the dialog relies. These other components can include:
+When you import a dialog template, you import the dialog, the integrations used in the dialog, and all other required items upon which the dialog relies. These other items can include:
 
-* Other dialogs and the integrations they use
+* Other dialogs and their integrations
 * Domains
 * Environment variables
 * Global functions
 
 Note the following:
-* During the import, the association of domains, intents, and entities are maintained. However, only [prebuilt domains](intent-builder-overview.html#prebuilt-domains) are included in the import. If an associated domain doesn't exist within your organization or it isn't a prebuilt domain, you'll need to add it manually.
+* During the import, the association of domains, intents, and entities are maintained. However, only [prebuilt domains](intent-builder-overview.html#prebuilt-domains) are included in the actual import. If an associated domain doesn't exist within your organization or it isn't a prebuilt domain, you'll need to add it manually.
 * If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't public, you can still use the integration in the bot, but you can't view or edit that knowledge base in the Knowledge Base application.
 
 After you import a dialog template into a destination bot, it becomes a normal dialog within the bot, and it functions as if you had created the dialog from scratch.
 
 {: .important}
-Keep in mind that importing a dialog template imports not only the dialog but also all other dialogs referenced by that dialog. After the import, carefully review all the imported dialogs against the dialogs that existed in the bot before the import. The goal is to ensure that you have not inadvertently imported the same dialog on multiple occasions in multiple ways, i.e., as a stand-alone dialog and/or as a part of one or more dialog templates.
+Keep in mind that importing a dialog template can often involve importing many dialogs. After the import, carefully review all the imported dialogs against the dialogs that existed in the bot before the import. The goal is to ensure that you have not inadvertently imported the same dialog on multiple occasions in multiple ways, i.e., as a stand-alone dialog and/or as a part of one or more dialog templates.
 
 **To import a dialog template**
 
