@@ -24,6 +24,9 @@ There are several types of dialogs:
 - **Auto Escalation**: This type of dialog frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred. For more on this, see [here](conversation-builder-dialogs-auto-escalation-dialogs.html).
 * **Survey**: Survey dialogs can only be created in post-conversation survey bots. Use a survey dialog to define a survey. For more on this, see [here](conversation-builder-bots-post-conversation-survey-bots.html).
 
+### Dialog templates
+You can make a dialog available to other bot developers as a dialog template. For information on working with dialog templates, see [here](conversation-builder-dialog-templates.html).
+
 ### Context switching
 
 “Context switching” is the term used to describe how Conversation Builder navigates the consumer back and forth between dialogs as it matches consumer utterances to intents, in effect, switching the context of the conversation.
@@ -78,13 +81,13 @@ When you import dialogs, consider and address any dependencies across the dialog
 1. Open the destination bot.
 2. Click **Add Dialog** in the lower-left corner.
 3. In the Add Dialog window, select the **From Existing Bots** tab.
-4. Browse and/or search to find and select the dialogs to import. You can search by bot name and dialog name, and you can select up to 10 dialogs.
+4. Browse and/or search to find and select the dialogs to import. You can select up to 10 dialogs. You can't select dialogs that are made available as [dialog templates](conversation-builder-dialog-templates.html); these you must import as a dialog template.
 
-    <img class="fancyimage" style="width:450px" src="img/ConvoBuilder/dialogs_import1.png">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogs_import1.png">
 
 5. Click **Next**, and then **Save**.
 
-    The selected dialogs are imported. At this point, you might want to rename the imported dialogs, interactions, and integrations. They are given standard names based on the element name and destination bot name. 
+    The selected dialogs are imported. At this point, you might want to rename the imported dialogs, interactions, and integrations. They are given standard names that include a timestamp. 
 
 
 ### Duplicate a dialog

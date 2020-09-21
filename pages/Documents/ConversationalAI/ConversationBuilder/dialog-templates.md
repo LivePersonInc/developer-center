@@ -51,7 +51,7 @@ There are two reasons for this:
     * **Template Name**: Enter a brief, descriptive name for the template.
     * **Description**: Enter a brief description of the dialog’s functionality. This description is shown to bot developers when importing dialog templates.
     * **+ Add Dialog**: Add to this list the dialogs upon which this dialog relies.
-    * **Domains**: This is a read-only list of all the domains used by all the dialogs that are a part of this dialog template.
+    * **Domains**: This is a read-only list of all the domains used by all the dialogs that are a part of this dialog template. All domain associations will be maintained when the dialog template is imported by others. However, only [prebuilt domains](intent-builder-overview.html#prebuilt-domains) are included in the import. If an associated domain doesn't exist within your organization or it isn't a prebuilt domain, you'll need to add it manually.
     * **+ Add Bot Environment Variable**: Add to this list the environment variables upon which this dialog relies.
     * **+ Add Global Function**: By default, this is populated with the global functions defined for the bot. Remove any functions that aren’t needed by the dialogs that are a part of the dialog template.
 
@@ -93,7 +93,7 @@ When you import a dialog template, you import the dialog, the integrations used 
 * Global functions
 
 Note the following:
-* During the import, the association of domains, intents, and entities are maintained.
+* During the import, the association of domains, intents, and entities are maintained. However, only [prebuilt domains](intent-builder-overview.html#prebuilt-domains) are included in the import. If an associated domain doesn't exist within your organization or it isn't a prebuilt domain, you'll need to add it manually.
 * If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't public, you can still use the integration in the bot, but you can't view or edit that knowledge base in the Knowledge Base application.
 
 After you import a dialog template into a destination bot, it becomes a normal dialog within the bot, and it functions as if you had created the dialog from scratch.
@@ -106,12 +106,20 @@ Keep in mind that importing a dialog template imports not only the dialog but al
 1. Open the destination bot.
 2. Click **Add Dialog** in the lower-left corner.
 3. In the Add Dialog window, select the **From Dialog Templates** tab.
-4. Browse and/or search to find and select the dialog template to import. You can search by bot name and dialog template name. You can select only a single dialog template. You can select from the dialog templates defined in the bots and bot templates to which you have access in your organization.
+4. Browse and/or search to find and select the dialog template to import. You can select only a single dialog template. You can select from the dialog templates defined in the bots and bot templates to which you have access in your organization.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogtemplates_4.png">
+
 5. Select the dialog template, and click **Next**.
-6. Review the list of associated items (other dialogs, domains, environment variables, global functions) that will be imported as a part of the dialog template. These are the items that the bot developer who created the template has specified as required by the dialog in question.
-7. Click **Next**.
+6. Review the list of associated items (other dialogs, domains, environment variables, global functions) that will be imported as a part of the dialog template. These are the items that the bot developer who created the template has specified as required by the dialog.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogtemplates_5.png">
+
+7. Click **Save**.
+
     This creates a dialog based on the template and imports the associated items into the bot. From this point forward, the dialog works as if you had created it from scratch.
-8. You might want to rename the imported dialogs, interactions, and integrations. They are given standard names based on the element name and destination bot name.
+
+8. You might want to rename the imported dialogs, interactions, and integrations. They are given standard names that include a timestamp.
 9. Ensure proper conversation flow by checking (and updating, if necessary) the following in the interactions in the relevant dialogs:
     * Next Action values
     * JavaScript code
