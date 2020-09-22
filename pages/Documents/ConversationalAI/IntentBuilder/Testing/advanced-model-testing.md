@@ -31,11 +31,11 @@ You can download test reports and comparison reports.
 In a domain, there are three ways to add a phrase to the Model Tester’s test set:
 
 * Click **Model Tester** in the upper-left corner, and enter the phrase manually on the **Test Set** tab.
-    SCREEN
-* In **Test User Input** (where single-phrase testing is performed), click [ ] (quick add) next to the sample utterance.
-    SCREEN
-* In an intent’s details, click [ ] (quick add) next to a training phrase.
-    SCREEN
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase1.png">
+* In **Test User Input** (where single-phrase testing is performed), click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase2.png">
+* In an intent’s details, click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to a training phrase.
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_model_tester_addphrase3.png">
 
 ### Refine the test set
 Once you’ve added a number of phrases to the test set, you need to refine the test set.
@@ -53,21 +53,20 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
     * For each phrase, select the expected intent that should be matched to the phrase. You can only select intents, not meta intents.
     * Ensure that all phrases are unique within the test set.
 
-    SCREEN
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_refine.png">
 
 {: .important}
 The test set overall can contain a maximum of 300 test phrases. Each intent can have a maximum of 25 test phrases.
-
 
 #### Evaluating the intent coverage
 
 The **Test Set** tab shows you the number of intents in the domain that are and aren’t represented in the test set. This determines the test’s Intent Coverage percentage.
 
-SCREEN
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_coverage1.png">
 
-Click the “Unused” indicator in specific to see the list of intents for which you need to take action and add test phrases. Assessing your intent coverage can help you find irrelevant intents that should be deleted.
+Click the message, and then select **Unselected** to see the list of intents for which you need to take action and add test phrases. Assessing your intent coverage can help you find irrelevant intents that should be deleted.
 
-SCREEN - WITH UNUSED TOOLTIP
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_coverage2.png">
 
 ### Run the test
 **To run the test set against the domain**
@@ -77,11 +76,12 @@ SCREEN - WITH UNUSED TOOLTIP
 3. Click **Run Test** in the upper-right corner.
 4. Specify the following:
     * **Test Report Name**: Enter a name for the report.
-    * **Model Version**: Optional. If you're using the LivePerson NLU v2 engine or a third-party NLU engine, select the model version against which to run the test. You can select the activated model version or any later version.
+    * **Model Version**: Select the model version against which to run the test. You can select the activated model version or any later version.
 5. Click **Test**.
-    You can click [ ] (Refresh icon) to periodically check the status of the test.
 
-    SCREEN - DASHBOARD WITH IN-PROGRESS INDICATOR 
+    You can click <img style="width:25px" src="img/ConvoBuilder/icon_ib_refresh.png"> (Refresh icon) to periodically check the status of the test.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_run_report.png">
 
 ### View a report
 
