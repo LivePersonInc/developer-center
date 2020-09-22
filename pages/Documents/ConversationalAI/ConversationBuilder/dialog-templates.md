@@ -111,7 +111,7 @@ Note the following:
 After you import a dialog template into a destination bot, it becomes a normal dialog within the bot, and it functions as if you had created the dialog from scratch.
 
 {: .important}
-Keep in mind that importing a dialog template can often involve importing many dialogs. After the import, carefully review all the imported dialogs against the dialogs that existed in the bot before the import. The goal is to ensure that you have not inadvertently imported the same dialog on multiple occasions in multiple ways, i.e., as a stand-alone dialog and/or as a part of one or more dialog templates.
+Keep in mind that importing a dialog template often can involve importing many dialogs. After the import, carefully review all the imported dialogs against the dialogs that existed in the bot before the import. The goal is to ensure that you have not inadvertently imported the same dialog on multiple occasions in multiple ways, i.e., as a stand-alone dialog and/or as a part of one or more dialog templates.
 
 **To import a dialog template**
 
