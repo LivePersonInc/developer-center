@@ -133,7 +133,7 @@ If you want to compare reports, LivePerson recommends that you keep the test set
 1. Open the domain.
 2. Click **Model Tester** in the upper-left corner. 
 3. Click **Test Reports** tab.
-4. In the dashboard that lists the reports, select the checkbox for both reports.
+4. In the dashboard that lists the reports, select the checkboxes for both reports.
 5. Click **Compare Reports** in the upper-right corner.
 
     SCREEN
