@@ -70,11 +70,7 @@ You can import dialogs from one bot to another within your organization. This ca
 * During the import, the associations of domains, intents, and entities to interactions are maintained.
 * If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't [public](knowledge-base-common-common-settings.html), you can still use the integration in the bot, but you can't view or edit that knowledge base in the Knowledge Base application.
 
-When you import dialogs, consider and address any dependencies across the dialogs. You might or might not want to import all dependent dialogs. Before or after the import, ensure proper conversation flow by checking (and updating, if necessary) the following in the interactions in the relevant dialogs:
-
-* Next Action values
-* JavaScript code
-* Environment variables
+When you import dialogs, consider and address any dependencies across the dialogs. You might or might not want to import all dependent dialogs.
 
 **To import one or more dialogs into a bot**
 
@@ -86,9 +82,17 @@ When you import dialogs, consider and address any dependencies across the dialog
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogs_import1.png">
 
 5. Click **Next**, and then **Save**.
+    
+    The selected dialogs are imported.
+    
+6. You might want to rename the imported dialogs, interactions, and integrations. They are given standard names that include a timestamp.
+7. Ensure proper conversation flow by checking (and updating, if necessary) the following in the interactions in the relevant dialogs:
 
-    The selected dialogs are imported. At this point, you might want to rename the imported dialogs, interactions, and integrations. They are given standard names that include a timestamp. 
+    * Next Action values
+    * JavaScript code
+    * Environment variables 
 
+    You might also need to update the credentials in the imported integrations.
 
 ### Duplicate a dialog
 

@@ -48,7 +48,7 @@ There are two reasons for this constraint:
 
 5. In the Add Template Definition window, specify the following:
 
-    * **Template Name**: Enter a brief, descriptive name for the template.
+    * **Name**: Enter a brief, descriptive name for the template.
     * **Description**: Enter a brief description of the dialog’s functionality. This description is shown to bot developers when importing dialog templates.
     * **+ Add Dialog**: Select and add the dialogs upon which this dialog relies, if any. You can only select to include dialogs of type Dialog (no Fallback, Disambiguation, or Auto Escalation dialog). Keep this in mind when designing and building the dialog itself, so there are no dependencies on other dialog types. For example, often the validation of the consumer's input can rely on the Fallback dialog for handling; consider employing a different technique in this case.
     * **Domains**: This is a read-only list of all the domains used by all the dialogs that are a part of the dialog template. All domain associations will be maintained when the dialog template is imported by others. However, only [prebuilt domains](intent-builder-overview.html#prebuilt-domains) are included in the actual import. If an associated domain doesn't exist within your organization or it isn't a prebuilt domain, you'll need to add it manually.
@@ -136,3 +136,5 @@ Keep in mind that importing a dialog template can often involve importing many d
     * Next Action values
     * JavaScript code
     * Environment variables
+
+    You might also need to update the credentials in the imported integrations.
