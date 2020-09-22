@@ -12,7 +12,7 @@ indicator: both
 
 ### Overview
 
-If your domain is using the LivePerson NLU v2 engine, there's an advanced Model Tester that's available. The Model Tester is designed to:
+If your domain is using the **LivePerson NLU v2 engine**, there's an advanced Model Tester that's available. The Model Tester is designed to:
 
 * Provide broad testing coverage for the domain
 * Help you determine if the domain is improving or regressing from one version to the next
