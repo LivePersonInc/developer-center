@@ -82,6 +82,10 @@ Once you publish a dialog template, there is no way to unpublish it. Delete the 
 3. On the Dialog Settings page, expand **More Settings**.
 4. Scroll down to **Make Available as a Dialog Template**, and click **+ Update Template Definition**.
 5. In the Update Template Definition window, click **Publish** in the lower-right corner.
+    
+    In the Dialogs panel, you now see an indicator that the dialog's dialog template is published:
+
+    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogtemplates_3.png">
 
 ### Delete a dialog template
 
@@ -93,7 +97,8 @@ Deleting a dialog template has no impact on the dialog itself. The process delet
 2. In the dialogs panel on the left, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> beside the dialog name, and select **Dialog Settings**.
 3. On the Dialog Settings page, expand **More Settings**.
 4. Scroll down to **Make Available as a Dialog Template**, and click **+ Update Template Definition**.
-5. In the Update Template Definition window, click **Delete** in the lower-right corner.
+5. In the Update Template Definition window, expand **More Settings**, and then click the **Delete Template Definition** icon <img style="width:25px" src="img/ConvoBuilder/icon_delete.png">.
+6. In the confirmation dialog, click **Proceed**.
 
 ### Import a dialog template
 
