@@ -6,7 +6,7 @@ documentname: Agent manager workspace API
 subfoldername: methods
 order: 10
 permalink: agent-manager-workspace-api.html
-indicator: Agent Manager Experience
+indicator: messaging
 
 ---
 
