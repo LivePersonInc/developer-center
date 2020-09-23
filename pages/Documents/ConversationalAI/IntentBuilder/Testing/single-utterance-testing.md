@@ -10,7 +10,7 @@ permalink: intent-builder-testing-single-utterance-testing.html
 indicator: both
 ---
 
-You can use the **Test** tool to test a single utterance against the domain.
+You can use the **Test** tool to test a single utterance against a domain.
 
 The Test tool is primarily used for debugging purposes. For example, you might find that a strange phrase was matched to an intent on Production. Using the Test tool, you can quickly and easily test that phrase to see how it behaves.
 

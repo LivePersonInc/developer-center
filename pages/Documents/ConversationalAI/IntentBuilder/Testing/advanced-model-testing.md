@@ -50,7 +50,7 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
     
         Enter test phrases that are variations of the intents. The goal is to determine how well the intents are performing when these variations are evaluated against the intents using NLU.
 
-    * For each phrase, select the expected intent that should be matched to the phrase. You can only select intents, not meta intents.
+    * If you added a number of phrases directly in the test set (i.e., not via quick add), for each phrase, select the expected intent that should be matched to the phrase. You can only select intents, not meta intents.
     * Ensure that all phrases are unique within the test set.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_refine.png">
@@ -85,6 +85,10 @@ Click the message, and then select **Unselected** to see the list of intents for
 
 ### View a report
 
+One important goal of the report is to help you quickly determine whether the actual intent matched to a test phrase by the NLU engine is the one you expected. Instances where this isn't the case are identified, so you can fine tune the intent.
+
+SCREEN
+
 {: .important}
 The system retains the 10 most recent reports.
 
@@ -102,10 +106,10 @@ There are several, important metrics displayed:
 * **Test Phrases**: The number of phrases (utterances) in the test set.
 * **Passed**: The number of test phrases that matched the expected intents.
 * **Failed**: The number of test phrases that didn't match the expected intents.
-* **Match Rate**: The match rate is the percentage of test phrases that matched the expected intents regardless of the rating (GOOD, FAIR PLUS, etc.). This is calculated by dividing the number of passed tests by the total number of tests.
-* **Success Rate**: The success rate is the percentage of test phrases that matched with the expected intents with a rating of GOOD or VERY GOOD. This is calculated by dividing the number of passed tests with a rating of GOOD or VERY GOOD by the total number of tests.
+* **Match Rate**: The percentage of test phrases that matched the expected intents regardless of the rating (GOOD, FAIR PLUS, etc.). This is calculated by dividing the number of passed tests by the total number of tests.
+* **Success Rate**: The percentage of test phrases that matched with the expected intents with a rating of GOOD or VERY GOOD. This is calculated by dividing the number of passed tests with a rating of GOOD or VERY GOOD by the total number of tests.
 * **Intent Coverage**: The percentage of intents in the domain that are used in the test set. This is calculated by dividing the number of used intents by the total number of intents.
-* **Confidence Score**: The percentage score that reflects the NLU’s level of confidence in the intent match.
+* **Confidence Score**: The percentage score that reflects the NLU’s level of confidence in the match to the expected intent.
 * **Rating**: The rating that indicates the NLU’s level of confidence in the match, one of VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
 * **Test Result**: An at-a-glance, visual indicator of whether the test phrase passed [ ] or failed [ ].
 
@@ -126,7 +130,7 @@ If the report's scores are low, take corrective action as follows:
 
 A true comparison of reports -- to accurately determine if the domain/model is improving or regressing from one version to another -- is only possible when the test set remains the same in both tests.
 
-If you want to compare reports, LivePerson recommends that you keep the test set the same, changing only the domain/model between tests.
+If you want to compare reports, LivePerson recommends that you keep the test set the same, changing only the model between tests.
 
 **To compare reports**
 
