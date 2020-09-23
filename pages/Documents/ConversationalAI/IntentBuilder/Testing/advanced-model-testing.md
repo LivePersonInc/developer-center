@@ -128,9 +128,7 @@ If the report's scores are low, take corrective action as follows:
 
 ### Compare reports
 
-A true comparison of reports -- to accurately determine if the domain/model is improving or regressing from one version to another -- is only possible when the test set remains the same in both tests.
-
-If you want to compare reports, LivePerson recommends that you keep the test set the same, changing only the model between tests.
+A true comparison of reports -- to accurately determine if the domain/model is improving or regressing from one version to another -- is only possible when the test set remains the same in both tests. Therefore, if you want to compare reports, LivePerson recommends that you keep the test set the same, changing only the model between tests.
 
 **To compare reports**
 
