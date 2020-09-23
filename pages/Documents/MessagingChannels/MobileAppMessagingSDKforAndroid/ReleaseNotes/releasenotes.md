@@ -349,8 +349,6 @@ The Android Mobile Messaging SDK version 4.6.0 uses:
 - Target API version 28
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 
-**(unchanged from version 4.5.0)**
-
 # New Features:
 ## Auto logout - Improve logout options
 
