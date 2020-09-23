@@ -33,7 +33,7 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
 **To add an external knowledge base without LivePerson AI**
 
 1. Click **Add Knowledge Base** in the upper-right corner.
-2. In the window that appears, select the **Other Connection** tab, and then select **External Content Search Only**.
+2. In the window that appears, select the **Other Connection** tab, and then select **External Knowledge Base without LivePerson AI**.
 3. Specify the following:
     * **Data Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
 4. Click **Next**.
