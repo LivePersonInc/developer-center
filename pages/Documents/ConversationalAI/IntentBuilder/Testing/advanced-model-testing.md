@@ -101,7 +101,7 @@ There are several, important metrics displayed:
 
 * **Test Phrases**: The number of phrases in the test set.
 * **Passed**: The number of phrases that matched the expected intents with a match rating of Very Good or Good.
-* **Failed**: The number of test phrases that either didn't match the expected intents or matched them with a match rating of Fair Plus or Fair.
+* **Failed**: The number of test phrases that either didn't match the expected intents or matched them with a match rating of Fair Plus, Fair or Poor.
 * **Success Rate**: The percentage of phrases in the test set that passed the test.
 * **Test Coverage**: The percentage of intents in the domain that are used in the test set.
 * **Result**: A quick, visual indicator of whether the phrase passed, failed, or passed but with a false positive. Respectively, these conditions are represented with: 
