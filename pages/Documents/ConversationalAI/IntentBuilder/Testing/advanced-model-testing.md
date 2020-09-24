@@ -107,7 +107,7 @@ There are several, important metrics displayed:
 * **Result**: A quick, visual indicator of whether the phrase passed, failed, or passed but with a false positive. Respectively, these conditions are represented with: 
 <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_passed.png"> <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_failed.png">
 <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_falsepos.png">
-* **Match Rating**: The rating that indicates the NLU’s level of confidence in the match, one of Very Good, Good, Fair Plus, Fair, or Poor.
+* **Match Rating**: The rating that indicates the NLU’s level of confidence in the match, one of Very Good, Good, Fair Plus, Fair or Poor.
 * **Match Score**: The percentage score that reflects the NLU’s level of confidence in the match to the matched intent.
 
 #### Evaluating the report
