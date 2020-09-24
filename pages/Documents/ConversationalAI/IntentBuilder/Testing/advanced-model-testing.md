@@ -21,7 +21,7 @@ The general workflow for using the Model Tester is this:
 
 1. Define a set of utterances (test phrases) to test against the intents in the domain.
 2. Run the test, and evaluate the report.
-3. Improve the domain and retrain the model, and/or improve the test set.
+3. Improve the domain, and retrain the model.
 4. Re-run the test, and evaluate the report.
 5. Compare reports to determine if the model is improving or regressing.
 
@@ -58,13 +58,13 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
 {: .important}
 The test set overall can contain a maximum of 300 test phrases. Each intent can have a maximum of 25 test phrases.
 
-#### Evaluating the intent coverage
+#### Evaluating the test coverage
 
-The **Test Set** tab shows you the number of intents in the domain that are and aren’t represented in the test set. This determines the test’s Intent Coverage percentage.
+The **Test Set** tab shows you the number of intents in the domain that are and aren’t represented in the test set. This determines the test’s Test Coverage percentage.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_coverage1.png">
 
-Click the message, and then select **Unselected** to see the list of intents for which you need to take action and add test phrases. Assessing your intent coverage can help you find irrelevant intents that should be deleted.
+Click the message, and then select **Unselected** to see the list of intents for which you need to take action and add test phrases. Assessing your test coverage can also help you find irrelevant intents that should be deleted.
 
 <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_coverage2.png">
 
@@ -85,10 +85,6 @@ Click the message, and then select **Unselected** to see the list of intents for
 
 ### View a report
 
-One important goal of the report is to help you quickly determine whether the actual intent matched to a test phrase by the NLU engine is the one you expected. Instances where this isn't the case are identified, so you can fine tune the intent.
-
-SCREEN
-
 {: .important}
 The system retains the 10 most recent reports.
 
@@ -99,32 +95,41 @@ The system retains the 10 most recent reports.
 3. Click the **Test Reports** tab.
 4. Click the report name.
 
-    SCREEN
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_viewreport.png">
 
 There are several, important metrics displayed:
 
-* **Test Phrases**: The number of phrases (utterances) in the test set.
-* **Passed**: The number of test phrases that matched the expected intents.
-* **Failed**: The number of test phrases that didn't match the expected intents.
-* **Match Rate**: The percentage of test phrases that matched the expected intents regardless of the rating (GOOD, FAIR PLUS, etc.). This is calculated by dividing the number of passed tests by the total number of tests.
-* **Success Rate**: The percentage of test phrases that matched with the expected intents with a rating of GOOD or VERY GOOD. This is calculated by dividing the number of passed tests with a rating of GOOD or VERY GOOD by the total number of tests.
-* **Intent Coverage**: The percentage of intents in the domain that are used in the test set. This is calculated by dividing the number of used intents by the total number of intents.
-* **Confidence Score**: The percentage score that reflects the NLU’s level of confidence in the match to the expected intent.
-* **Rating**: The rating that indicates the NLU’s level of confidence in the match, one of VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
-* **Test Result**: An at-a-glance, visual indicator of whether the test phrase passed [ ] or failed [ ].
+* **Test Phrases**: The number of phrases in the test set.
+* **Passed**: The number of phrases that matched the expected intents with a match rating of Very Good or Good.
+* **Failed**: The number of test phrases that either didn't match the expected intents or matched them with a match rating of Fair Plus or Fair.
+* **Success Rate**: The percentage of phrases in the test set that passed the test.
+* **Test Coverage**: The percentage of intents in the domain that are used in the test set.
+* **Result**: A quick, visual indicator of whether the phrase passed, failed, or passed but with a false positive. Respectively, these conditions are represented with: 
+<img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_passed.png"> <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_failed.png">
+<img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_falsepos.png">
+* **Match Rating**: The rating that indicates the NLU’s level of confidence in the match, one of Very Good, Good, Fair Plus, Fair, or Poor.
+* **Match Score**: The percentage score that reflects the NLU’s level of confidence in the match to the matched intent.
 
 #### Evaluating the report
 
 If the report's scores are low, take corrective action as follows:
 
-* **Low Intent Coverage**: This indicates that many intents in the domain aren't represented in the test set.
-    * In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions.
-    * In the Intents list, delete any unused and irrelevant intents. In effect, clean the domain. This can often improve performance.
-* **Low Match Rate**: This indicates that many test phrases didn't match the expected intent at all. In this case, you need to examine the test phrases to determine why the match rate is low.
-    * If there was no match at all, go to the expected intent and improve it.
-    * If there was an actual match to the wrong intent, either correct the test set, or fix/improve the affected intents. 
-* **Low Success Rate**: This indicates that many test phrases didn't match the expected intents with high confidence scores.
-    * Identify the test phrases with low confidence scores. Then focus on training the associated intents to improve the scores. This might involve adding training phrases or removing irrelevant ones. Often, removing irrelevant training phrases can be more effective than adding new training phrases.
+**Low Test Coverage**: This indicates that many intents in the domain aren't represented in the test set. To improve the test coverage:
+
+* In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions.
+* In the Intents list, delete any unused and irrelevant intents. In effect, clean the domain. This can often improve performance.
+
+**Low Success Rate**: This indicates that many test phrases failed the test because they either didn't match the expected intents, or they did so with low match ratings. Here below is an example of the latter:
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_lowsuccessrate.png">
+
+To improve the success rate, focus on training the associated intents to improve the scores. This might involve adding training phrases or removing irrelevant ones. Often, removing irrelevant training phrases can be more effective than adding new training phrases.
+
+**False Positives**: A false positive occurs when a test phrase matches an intent other than the expected intent. False positives are indicated with an "FP" indicator, like is shown in our example below:
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_falsepositive.png">
+
+To correct false positives, here again, focus on training the associated intents.
 
 ### Compare reports
 
@@ -138,6 +143,17 @@ A true comparison of reports -- to accurately determine if the domain/model is i
 4. In the dashboard that lists the reports, select the checkboxes for both reports.
 5. Click **Compare Reports** in the upper-right corner.
 
-    SCREEN
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_comparereports.png">
 
     Note that a test phrase that is present in one test but not in another is marked with “ -- “ in the latter.
+
+### Best practices
+
+LivePerson recommends that you keep modifications to the test set to a minimum, as changing this more often makes comparisons more difficult. A best practice is to:
+
+1. Create a strong test set.
+2. Test the intents.
+3. Improve the intents.
+4. Compare the results.
+
+Steps 2 through 4 should be done frequently. Changes to the test set should only happen if necessary, i.e., if intents are added or removed.
