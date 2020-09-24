@@ -1,8 +1,9 @@
-Don't doc, at least not yet:
-Add Stop Words - might be removed as deprecated
-Add Keyword Patterns - might be removed as deprecated
-Approve Pending Articles - will be changed to enable/disable (BA-3704)
-Search feature - will be changed
+### About draft external KBs
+
+A knowledge base is considered no longer "draft" once all required fields are completed for the first time.
+
+{: .important}
+Keep in mind that completing the initial setup of a knowledge base, thereby moving out of "draft" status, doesn't indicate a proper configuration. You must test the knowledge base to verify this. Additionally, be aware that a knowledge base never returns to "draft" status if you subsequently remove required information.
 
 ### Add keyword patterns
 

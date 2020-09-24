@@ -33,7 +33,4 @@ Once you get into the process and have provided some basic information (e.g., a 
 
 Click **Yes** to save a draft.
 
-You can find your "draft" external knowledge bases at the top of the dashboard that displays all your knowledge bases. A knowledge base is considered no longer "draft" once all required fields are completed for the first time.
-
-{: .important}
-Keep in mind that completing the initial setup of a knowledge base, thereby moving out of "draft" status, doesn't indicate a proper configuration. You must test the knowledge base to verify this. Additionally, be aware that a knowledge base never returns to "draft" status if you subsequently remove required information.
+You can find your "draft" external knowledge bases listed with your other knowledge bases in the main dashboard.
