@@ -19,7 +19,6 @@ This topic contains information on settings that are common to knowledge bases o
 
 ### Common, read-only settings
 
-* **Owner ID**: The ID of the person who added the knowledge base.
 * **Owner Name**: The name of the person who added the knowledge base.
 * **Data source type**: This is either "External knowledge base" or "Internal knowledge base."
 * **Content Provider**: The name of the provider who sources the content. For an external knowledge base, this is the name of the CMS vendor, e.g., Salesforce, Zendesk, and so on. For an internal knowledge base, this is always "LivePerson."

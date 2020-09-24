@@ -44,7 +44,7 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 You can use the content links in the **Advanced Settings** of an article to send rich content (hyperlink, audio, image, and/or video) along with an article. 
 
-<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/kb_advSettings0.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings0.png">
 
 Details on how to set this up follow below.
 
@@ -52,7 +52,7 @@ Details on how to set this up follow below.
 
 First, in the **Advanced Settings** of the article, enter the URLs to send **(1)**.
 
-<img class="fancyimage" style="width:450px" src="img/ConvoBuilder/kb_advSettings1.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings1.png">
 
 #### Configure the Knowledge Base integration in the bot
 
