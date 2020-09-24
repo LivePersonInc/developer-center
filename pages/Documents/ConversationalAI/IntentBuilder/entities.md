@@ -100,8 +100,8 @@ When using the LivePerson NLU v1 engine, the more entities in a training phrase 
 
 You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.
 
-
-<img class="fancyimage" style="width:400px" src="img/testuserinput.png">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test1.png">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test2.png">
 
 ### Add a Value Set entity
 
