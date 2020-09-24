@@ -64,12 +64,6 @@ You can't change the threshold when using intents (although you can do [this](kn
 4. Click **Save**.
 5. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the addition is reflected in a new model version.
 
-
-### Train intents
-
-See [Test a domain](intent-builder-testing-single-utterance-testing.html).
-
-
 ### Delete an intent
 
 Deleting an intent is a non-recoverable action, so be certain about doing so before taking this action.
