@@ -53,6 +53,9 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send if applicable.
     * Click **Map Content Metadata**, and map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
+
+    **Note**: Configure the connector payload to target only the content that you want to use as a part of this knowledge base. If you add the knowledge base with clear domain scoping -- limiting the content as needed -- the knowledge base will perform better and be easier to tune.
+
 6. Click **Next**.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_2.png">
