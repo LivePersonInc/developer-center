@@ -102,6 +102,8 @@ Key characteristics include:
 * When you create a domain with NLU v2 and use it in Intent Analyzer or in Conversation Builder, the following is required:
     * At least 20 training phrases per intent
     * At least 5 intents in order to train
+    
+    If your domain complies with these requirements, LivePerson recommends that you use LivePerson NLU v2 (not v1) if possible.   
 * Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
 * Makes available a [Model Tester](intent-builder-testing-advanced-model-testing.html).
 * Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
