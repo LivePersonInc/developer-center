@@ -12,7 +12,11 @@ indicator: both
 
 ### Overview
 
-If your domain is using the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2), there's an advanced Model Tester that's available. The Model Tester is designed to:
+If your domain is using the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2), there's an advanced Model Tester that's available.
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester.png">
+
+The Model Tester is designed to:
 
 * Provide broad testing coverage for the domain
 * Help you determine if the model is improving or regressing from one version to the next
@@ -130,6 +134,8 @@ To improve the success rate, focus on training the associated intents to improve
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_falsepositive.png">
 
 To correct false positives, here again, focus on training the associated intents.
+
+A false positive is often indicative of some overlap in the training of the two intents. It is recommended that you remove training phrases from each of the intents that are too similar to each other. Adding more training phrases can help as well.
 
 ### Compare reports
 
