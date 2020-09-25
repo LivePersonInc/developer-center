@@ -51,6 +51,15 @@ When you [add an internal knowledge base](knowledge-base-internal-knowledge-base
 * **Knowledge Base Intents**: Select if this if you're using intents (i.e., intent qualifiers) that reside in the article itself.
 * **Domain Intents**: Select this if you're using intents from a domain that's defined in Intent Builder.
 
+#### Choosing between Knowledge Base intents and Domain intents
+
+Your choice to use Knowledge Base intents or Domain intents depends on your use case and the [NLU engine](intent-builder-natural-language-understanding.html) that you intend to use for intent matching.
+
+* If you intend to use a third-party NLU engine, you'll need to use Domain intents in the knowledge base, where those domains use that third-party engine.
+* If you intend to use a LivePerson NLU engine, there are two options available: v1 and v2. Each provides different features and support, discussed [here](intent-builder-natural-language-understanding.html#livepersons-nlu-engine). Your choice between the two will depend on how simple or complex your use case is, the number of intents and training phrases that are involved, and the features you require.
+    * Using Domain intents in the knowledge base lets you use either the v1 or v2 engine in the domains.
+    * Using Knowledge Base intents in the knowledge base means that the v1 engine's algorithm will be used.
+
 ### Languages
 
 When you [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html), you'll specify its language.
