@@ -2,6 +2,7 @@
 #Additional Release
 Additional:
   versions: [
+    { version: "5.2.2" },
     { version: "5.2.1" },
     { version: "5.1.2" },
     { version: "5.0.1" },
