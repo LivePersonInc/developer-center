@@ -58,7 +58,7 @@ With Domain intents, you can use any of the following [NLU engines](intent-build
 * LivePerson NLU v2
 * A third-party NLU engine 
 
-Domain intents make it possible for you to use the same domain in multiple ways: in knowledge bases, bots, or other features like Intent Analyzer.
+Domain intents make it possible for you to use the same domain in multiple ways: in knowledge bases, bots, or other features like [Intent Analyzer](intent-analyzer-overview.html).
 
 Knowledge Base intents are a *legacy feature* that uses the LivePerson NLU v1 engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
 
