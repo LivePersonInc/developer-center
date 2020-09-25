@@ -27,6 +27,8 @@ The Android Mobile Messaging SDK version 5.4.0 uses:
 - Target API version 29
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
 
+**(Minimum API version bump to 21. There is a known issue for API 19)**
+
 # New Features:
 ## Auto logout - Improve logout options
 
@@ -348,6 +350,8 @@ The Android Mobile Messaging SDK version 4.6.0 uses:
 - Compile API version 28
 - Target API version 28
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(Minimum API version bump to 21. There is a known issue for API 19)**
 
 # New Features:
 ## Auto logout - Improve logout options
