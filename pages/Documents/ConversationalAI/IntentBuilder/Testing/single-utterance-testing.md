@@ -39,4 +39,4 @@ If the domain uses the LivePerson NLU v2 engine, you can't use the Test tool to 
 
     For details on the intent scoring, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
     
-    After reviewing the results, if the score isn't where you’d like it, you can add more training phrases. In addition, using [entities](conversation-builder-intent-builder-entities.html) helps to increase the accuracy of intents and give their score a boost.
+    After reviewing the results, if the score isn't where you’d like it, you can add more training phrases. In addition, using [entities](intent-builder-entities.html) helps to increase the accuracy of intents and give their score a boost.
