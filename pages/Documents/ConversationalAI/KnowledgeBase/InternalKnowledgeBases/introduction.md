@@ -53,12 +53,9 @@ When you [add an internal knowledge base](knowledge-base-internal-knowledge-base
 
 #### Choosing between Knowledge Base intents and Domain intents
 
-Your choice to use Knowledge Base intents or Domain intents depends on your use case and the [NLU engine](intent-builder-natural-language-understanding.html) that you intend to use for intent matching.
+With Domain intents, you can use LivePerson NLU v1, LivePerson NLU v2, or a third-party NLU engine for intent matching. See [here](intent-builder-natural-language-understanding.html#livepersons-nlu-engine) for information on the differences between LivePerson NLU v1 and v2.
 
-* If you intend to use a third-party NLU engine, you'll need to use Domain intents in the knowledge base, where those domains use that third-party engine.
-* If you intend to use a LivePerson NLU engine, there are two options available: v1 and v2. Each provides different features and support, discussed [here](intent-builder-natural-language-understanding.html#livepersons-nlu-engine). Your choice between the two will depend on how simple or complex your use case is, the number of intents and training phrases that are involved, and the features you require.
-    * Using Domain intents in the knowledge base lets you use either the v1 or v2 engine in the domains.
-    * Using Knowledge Base intents in the knowledge base means that the v1 engine's algorithm will be used.
+Knowledge Base intents are a *legacy feature* that uses the LivePerson NLU v1 engine for intent matching.
 
 ### Languages
 

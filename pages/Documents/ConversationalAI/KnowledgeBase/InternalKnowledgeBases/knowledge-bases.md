@@ -23,7 +23,7 @@ indicator: both
         
         If you select "Google Sheet" and you provide the URL to the sheet, be aware that this establishes a link between the knowledge base and the sheet. If you later sync the knowledge base, it is updated with the current contents in the sheet.
 
-        **IMPORTANT**: When creating one knowledge base based off of another, don't reuse the same import file for a second knowledge base in the same region. The IDs must be unique within the region.
+        **IMPORTANT**: When creating one knowledge base based off of another, don't reuse the same CSV import file or Google sheet for a second knowledge base in the same hosted region. The article IDs must be unique within the region. In the file for the second knowledge base, clear the article IDs; the application will create article IDs for new articles.
 
     * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Domain Intents" or "Knowledge Base Intents." If you select "Domain Intents," also select the domain from the list that appears. For a more in-depth explanation of these, see [here](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) in the overview.
 
@@ -54,7 +54,7 @@ The import file can contain the following basic HTML tags: p, br, a (only the �
 
 | Column header name | Description |
 |-----|-----|
-| id | A String; a unique ID assigned to an article. <br><br>This column isn't required when you initially create the knowledge base. However, if you're using a Google sheet that you plan to sync periodically, it does play a role then. Before performing a sync, update the Google sheet to include the "id" column and enter the IDs for all existing articles.<br><br>When creating one knowledge base based off of another, don't reuse the same import file for a second knowledge base in the same region. The IDs must be unique within the region. |
+| id | A String; a unique ID assigned to an article. <br><br>This column isn't required when you initially create the knowledge base. However, if you're using a Google sheet that you plan to sync periodically, it does play a role then. Before performing a sync, update the Google sheet to include the "id" column and enter the IDs for all existing articles.<br><br>When creating one knowledge base based off of another, don't reuse the same CSV import file or Google sheet for a second knowledge base in the same hosted region. The article IDs must be unique within the region. In the file for the second knowledge base, clear the article IDs; the application will create article IDs for new articles. |
 | tags | A comma-separated list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. |
 | title | The article title. This should be a complete sentence or question that the user might ask. See [here](knowledge-base-internal-knowledge-bases-best-practices.html) for best practices. |
 | summary | A short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. |
