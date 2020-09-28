@@ -16,7 +16,7 @@ Earlier in our Getting Started guide, we used conditional logic in our Billing Q
 
 ### Step 5: Create the Refund Request dialog
 
-With the "Refund Request" intent created, let’s return to Conversation Builder and use the intent to trigger a new dialog.
+Let's return to Conversation Builder, where we will create our "Refund Request" intent directly from the Assist tool and use it to trigger a new dialog.
 
 1. Navigate into Conversation Builder and select the Order Bot.
 2. In the lower left hand corner, select the **Add Dialog** button and create a new standard dialog with the name **Refund Request**.
