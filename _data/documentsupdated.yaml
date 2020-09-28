@@ -272,7 +272,7 @@
           - subpagename: Articles
           - subpagename: Best Practices
           - subpagename: Limits
-      - pagename: Training
+      - pagename: Using Intents with KBs
       - pagename: Common Settings & Tasks
   - documentname: Bots Status
     pages:

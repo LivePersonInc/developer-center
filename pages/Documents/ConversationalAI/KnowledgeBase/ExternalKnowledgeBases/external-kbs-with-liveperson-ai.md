@@ -25,7 +25,7 @@ When adding an external knowledge base with LivePerson AI, follow this high-leve
 2. In Knowledge Base:
     1. Add the external knowledge base. During this step, you’ll specify the domain that you created in step 1.
     2. In the external knowledge base that you added, associate each article with an intent in the domain. 
-    3. [Train](knowledge-base-training.html) the articles to match consumer utterances.
+    3. [Train](knowledge-base-using-intents-with-kbs.html) the articles to match consumer utterances.
 3. Expose the articles to consumers by:
     * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
     * (Conversation Orchestrator) Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
@@ -74,7 +74,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
 9. Click **Save**.
 
 ### Associate an article with an intent
-You must associate articles with intents so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest [scoring](knowledge-base-training.html#scoring-and-thresholds) articles that are found in the search are then retrieved from the CMS.
+You must associate articles with intents so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest [scoring](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds) articles that are found in the search are then retrieved from the CMS.
 
 **To associate an article with an intent**
 

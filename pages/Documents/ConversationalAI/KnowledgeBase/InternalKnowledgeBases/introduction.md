@@ -18,7 +18,7 @@ An internal knowledge base is a built-in knowledge base, i.e., one whose content
 * Do a one-time import of articles from a CSV file, and maintain the articles thereafter within the Knowledge Base application.
 * Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within the Knowledge Base application.
 
-An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to [evaluate the articles](knowledge-base-training.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledge-base-training.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
+An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to [evaluate the articles](knowledge-base-using-intents-with-kbs.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
 
 ### High-Level Workflow
 
@@ -27,7 +27,7 @@ When adding an internal knowledge base, follow this workflow:
 1. In Knowledge Base:
     1. [Add the internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html). In this step you can import articles from a CSV file or link to a Google sheet that contains them.
     2. [Add the articles](knowledge-base-internal-knowledge-bases-articles.html) if necessary.
-    3. [Train](knowledge-base-training.html) the articles to match consumer utterances.
+    3. [Train](knowledge-base-using-intents-with-kbs.html) the articles to match consumer utterances.
 2. Expose the articles to consumers by:
     * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
     * (Conversation Orchestrator) Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component

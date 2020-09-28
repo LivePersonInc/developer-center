@@ -1,12 +1,12 @@
 ---
-pagename: Training
+pagename: Using Intents with KBs
 redirect_from:
     - conversation-builder-knowledge-base.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-permalink: knowledge-base-training.html
+permalink: knowledge-base-using-intents-with-kbs.html
 indicator: both
 ---
 
