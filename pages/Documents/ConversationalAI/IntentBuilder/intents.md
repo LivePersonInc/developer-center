@@ -40,7 +40,7 @@ The scoring breakdown, which indicates the NLU’s level of confidence in the ma
 * FAIR: 30-45% match
 * POOR: 0-30% match
 
-You can't change the threshold when using intents (although you can do [this](knowledge-base-common-common-concepts.html#scoring-and-thresholds) with knowledge bases).
+You can't change the threshold when using intents (although you can do [this](knowledge-base-training.html#scoring-and-thresholds) with knowledge bases).
 
 ### Add an intent
 

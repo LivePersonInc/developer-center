@@ -40,7 +40,7 @@ By default, the Search Settings are set to **Intents** and **Fair Plus**. This m
 * If you don’t want the follow-up text search, change the **Search Mode** to "Intents Only." This performs only the intents search.
 * If you want to perform only the text search, change the **Search Mode** to "Text."
 
-For more on search modes, see [here](knowledge-base-common-common-concepts.html#knowledge-base-searches).
+For more on search modes, see farther below in this topic.
 
 If you need to, add more training phrases:
 
