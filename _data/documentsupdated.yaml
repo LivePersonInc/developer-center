@@ -118,6 +118,13 @@
   - documentname: Platform Overview
   - documentname: Tutorials & Guides
     pages:
+      - pagename: Bot Groups & Other Techniques
+        subpages:
+          - subpagename: Bot Groups & Collaboration
+          - subpagename: Complex Conditions
+          - subpagename: Auto Escalation
+          - subpagename: Knowledge Bases
+          - subpagename: Meta Intents
       - pagename: Advanced Integrations
         subpages:
           - subpagename: Implementing a Web View Integration
