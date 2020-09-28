@@ -1,13 +1,13 @@
 ---
-pagename: Overview
+pagename: Platform Overview
 redirect_from:
     - conversation-builder-platform-overview.html
     - conversational-ai-platform-platform-overview.html
+    - conversational-ai-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Conversational AI
-permalink: conversational-ai-overview.html
+permalink: platform-overview.html
 indicator: both
 ---
 

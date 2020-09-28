@@ -115,9 +115,7 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-  - documentname: Conversational AI
-    pages:
-      - pagename: Overview
+  - documentname: Platform Overview
   - documentname: Conversation Builder
     pages:
       - pagename: Tutorials & Guides
