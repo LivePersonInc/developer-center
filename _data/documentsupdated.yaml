@@ -127,7 +127,6 @@
       - pagename: Tutorials & Guides
         subpages:
           - subpagename: Getting Started
-          - subpagename: Using Meta Intents with Conversation Builder
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
