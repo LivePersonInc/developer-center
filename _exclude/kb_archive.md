@@ -51,7 +51,7 @@ The Debugger tool is also *the* way to see the JSON that's returned by the searc
 3. Specify the following:
 
     * **Phrase**: Enter the phrase to search for.
-    * **Search Modes**: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-training.html#knowledge-base-searches).
+    * **Search Modes**: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-training.html#search-modes).
     * **Threshold**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledge-base-training.html#scoring-and-thresholds).
 
 4. Click **test**.

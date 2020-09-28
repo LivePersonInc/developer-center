@@ -18,7 +18,7 @@ An internal knowledge base is a built-in knowledge base, i.e., one whose content
 * Do a one-time import of articles from a CSV file, and maintain the articles thereafter within the Knowledge Base application.
 * Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within the Knowledge Base application.
 
-An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to [evaluate the articles](knowledge-base-training.html#knowledge-base-searches) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledge-base-training.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
+An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to [evaluate the articles](knowledge-base-training.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledge-base-training.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
 
 ### High-Level Workflow
 
