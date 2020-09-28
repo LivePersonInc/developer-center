@@ -1,21 +1,15 @@
 ---
-pagename: Common Settings
+pagename: Common Settings & Tasks
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-subfoldername: Common
-permalink: knowledge-base-common-common-settings.html
+permalink: knowledge-base-common-settings-tasks.html
 indicator: both
 ---
 
-This topic contains information on settings that are common to knowledge bases of various types.
-
-**To modify knowledge base settings**
-1. Open the knowledge base.
-2. Click **Settings** in the upper-left corner.
-3. Modify the settings, and click **Update**.
+This topic contains information on settings and tasks that are common to both [external](knowledge-base-external-knowledge-bases-introduction.html) and [internal](knowledge-base-internal-knowledge-bases-introduction.html) knowledge bases.
 
 ### Common, read-only settings
 
@@ -30,3 +24,23 @@ This topic contains information on settings that are common to knowledge bases o
 * **Data source name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
 * **Intent Association**: If you've associated a domain with the knowledge base, this setting is read-only and says, "Domain Intents." However, if the knowledge base is an internal knowledge bases that uses [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents), this says, "Knowledge Base Intents," and it gives you the option to [convert](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) to Domain intents.
 * **Public**: If you don't want other users in your Conversational Cloud account to be able to view and edit the knowledge base in the Knowledge Base application, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
+
+### Modify settings
+
+1. Open the knowledge base.
+2. Click **Settings** in the upper-left corner.
+3. Modify the settings, and click **Update**.
+
+### Delete a knowledge base
+
+Deleting a knowledge base is a non-recoverable action, so be certain about doing so before taking this action.
+
+{: .important}
+Before you delete a knowledge base, ensure it isn't being used in any [Knowledge Base integrations](conversation-builder-integrations-knowledge-base-integrations.html).
+
+**To delete a knowledge base**
+1. Open the knowledge base.
+2. Click **Settings** in the upper-left corner.
+3. Scroll down and click **More Options**.
+4. In the **Delete Knowledge Base** section, click <img style="width:25px" src="img/ConvoBuilder/icon_kb_delete.png"> (Delete icon).
+5. In the confirmation dialog, click **Yes**.

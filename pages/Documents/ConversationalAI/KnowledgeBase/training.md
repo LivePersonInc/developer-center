@@ -1,16 +1,14 @@
 ---
-pagename: Common Tasks
+pagename: Training
 redirect_from:
+    - conversation-builder-knowledge-base.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-subfoldername: Common
-permalink: knowledge-base-common-common-tasks.html
+permalink: knowledge-base-training.html
 indicator: both
 ---
-
-This topic contains information on tasks that are relevant to knowledge bases of various types.
 
 ### Train a knowledge base
 
@@ -70,16 +68,45 @@ Positive and negative learnings work the same way for 1) internal knowledge base
 
 Something to keep in mind when training in general, and using the Thumbs Up/Down icons specifically, is that because they are so easy to use, they are often misused. Often people use Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down. Anything over about 10 - 15 training phrases might begin to return false positives.
 
-### Delete a knowledge base
+### Knowledge base searches
 
-Deleting a knowledge base is a non-recoverable action, so be certain about doing so before taking this action.
+When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify a "mode" for the search; this determines the type of search that is performed. Possible modes include:
 
-{: .important}
-Before you delete a knowledge base, ensure it isn't being used in any [Knowledge Base integrations](conversation-builder-integrations-knowledge-base-integrations.html).
+* Intents
+* Intents Only
+* Text
 
-**To delete a knowledge base**
-1. Open the knowledge base.
-2. Click **Settings** in the upper-left corner.
-3. Scroll down and click **More Options**.
-4. In the **Delete Knowledge Base** section, click <img style="width:25px" src="img/ConvoBuilder/icon_kb_delete.png"> (Delete icon).
-5. In the confirmation dialog, click **Yes**.
+#### Intents mode
+
+When the Intents mode is used, an exact match, text-to-text search is performed first. If a match isn't found by the first search, Knowledge Base next uses Natural Language Understanding (NLU) algorithms to match the consumer input to articles. And if a match isn't found by the NLU search, a final, text-to-text search is performed as a fallback.
+
+<img style="width:750px" src="img/ConvoBuilder/kb_search_modes_ext.png">
+<img style="width:750px" src="img/ConvoBuilder/kb_search_modes_int.png">
+
+#### Intents Only mode
+
+The Intents Only mode is like the Intents mode (above) except that the final, text-to-text search isn't performed as a fallback.
+
+#### Text mode
+
+When the Text mode is used, a text-to-text search is performed:
+
+* With an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
+* With an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) (intent qualifiers), and tags.
+
+### Scoring and thresholds
+
+When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR. 
+
+| If the knowledge base is... | Then... |
+| --- | --- |
+| an external knowledge base with LivePerson AI | the scoring breakdown for the NLU engine used by the associated domain is used |
+| an internal knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
+| an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson NLU v1 is used |
+
+For these confidence score breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
+
+When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify the minimum score that a result must have in order to be returned. The highest performing article with that threshold is returned. You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD.
+
+If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
+

@@ -272,11 +272,8 @@
           - subpagename: Articles
           - subpagename: Best Practices
           - subpagename: Limits
-      - pagename: Common
-        subpages:
-          - subpagename: Common Concepts
-          - subpagename: Common Tasks
-          - subpagename: Common Settings
+      - pagename: Training
+      - pagename: Common Settings & Tasks
   - documentname: Bots Status
     pages:
       - pagename: Overview
