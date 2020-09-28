@@ -111,3 +111,61 @@ As much of the functionality of our Small Talk Bot has yet to be constructed, we
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/bots_3.png">
 
+### Step 4: Deploying the "Many Bots" group
+
+Due to the nature of the Many Bots solution, each bot in our group will need to be deployed with an agent connector in order to see the collaboration in action. To do so, new bot agents will need to be created and assigned to each bot in our group. 
+
+1. Navigate to the **User Management** section of the Conversational Cloud by clicking the **Manage users and skills** icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_user_mgmt.png"> on the left.
+2. From the users menu, select the **+ Add user** button from the lower-left corner.
+3. Fill out the **User details** form with the following information:
+    * **User type**: Bot
+    * **Login name**: Greeter Bot
+    * **Email**: Your email address
+    * **Nickname**: Greeter Bot
+    * **Name**: Greeter Bot
+
+    In the **Add login** method section, complete the following:
+    * **Choose login method**: API key
+    * **Api key**: Generate API Key
+
+    In the **Assignment** section:
+    * **Assign profile**: Agent
+    * **Skills**: Greeter
+
+    Unless you have previously created your Greeter skill, you will need to type it into the skills field to create it. 
+
+	When finished, click **Save**.
+
+4. Repeat the previous steps for both our Order Status and Small Talk bot agents. All fields will remain the same except where you’ll need to replace “Greeter” with either Order Status or Small Talk.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/users_list.png">
+
+5. Once you’ve created all of your bot user agents, navigate to Campaign Builder and click on your Getting Started campaign. We want to ensure that our Greeter Bot is the one that picks up all new conversations, so edit our existing engagement to point to the Greeter Skill.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/engagement.png">
+
+    Click **Edit** in the Engagement section. In the Routing section of the Engagement Settings, set the Specific skill to Greeter.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/engagement_2.png">
+
+    When finished, click **Publish** in the lower right hand corner.
+
+6. Once published, navigate back to Conversation Builder. The bot agents that have been created now need to be connected to their associated bot automations. Within each of our 3 bots, navigate to the Agent Connectors menu, select Add Agent Connector, and complete the **Add Agent Connector** form as follows:
+    * **Agent User ID**: The bot agent which corresponds to this automation.
+    * **Role**: Agent
+    * **Conversation Type**: Messaging
+    * **Deploy to**: Demo
+
+	Click the **> Start** button for each.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/start.png">
+
+7. Once all agent connectors have been added, navigate to the Bot Demo deployment site and test as you did with the previous Getting Started bot. Saying “Hello” will result in your Greeter bot responding. Next, type “I have a question about my bill”. This will result in the Order Status Bot taking over and directing to the appropriate intent. Follow this by typing “agent” to see your Small Talk bot handle the escalation to a human agent.
+
+    Seamlessly, the different bots that have been created will enter and exit the conversation to meet the needs of your users. When the Greeter bot is unable to handle the “Billing Question” intent, it looks to its collaborator bots to see whether they are able to assist. Note that the bot name displayed will change based on which bot is currently working with our users.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_greeter.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_order.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_smalltalk.png">
+
+    With our bots now properly split up and working in tandem to handle a users needs, there are additional improvements and best practices that we can implement to ensure proper handling and understanding of our users intents. 
