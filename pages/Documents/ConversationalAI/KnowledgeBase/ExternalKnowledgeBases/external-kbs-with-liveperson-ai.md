@@ -81,7 +81,9 @@ You must associate articles with intents so that--during a knowledge base search
 1. Open the knowledge base.
 2. Search for and select the article.
 3. In the Article Configuration dialog box, for **Intent**, select the name of the intent to associate with the article.
+
     <img style="width:600px" src="img/ConvoBuilder/kb_cms_associate_article.png">
+    
 4. Click **Save**.
 
 ### Sync with the CMS

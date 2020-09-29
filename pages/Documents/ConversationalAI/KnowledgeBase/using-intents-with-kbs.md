@@ -10,14 +10,38 @@ permalink: knowledge-base-using-intents-with-kbs.html
 indicator: both
 ---
 
+### Introduction
+
+If your knowledge base is an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html) (which also uses LivePerson AI), you'll be using Natural Language Understanding or NLU to evaluate the articles in the knowledge base against the consumer's utterance (the intent) in order to return the highest scoring article.
+
+To set this up, you create a domain with the necessary intents in [Intent Builder](intent-builder-overview.html), where the domain specifies the [NLU engine](intent-builder-natural-language-understanding.html) to use. Then, within the Knowledge Base application, you 1) associate the domain with the knowledge base, 2) associate the domain's intents with the articles, and 3) train the knowledge base to use the intents.
+
+{: .important}
+Intent Builder offers a set of [pre-built domains](intent-builder-overview.html#prebuilt-domains). These are designed to get you up and running quickly with intents.
+
+### Associate a domain with a knowledge base
+
+You associate a domain with an external knowledge base when you [add the knowledge base](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai):
+
+<img style="width:700px" src="img/ConvoBuilder/kb_add_ext.png">
+
+And you likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base): 
+<img style="width:700px" src="img/ConvoBuilder/kb_add_int.png">
+
+Associating the domain gives you access to the domain's intents, so you can associate them with the articles. This is the next step in connecting your content to intents.
+
+{: .important}
+When you are adding the knowledge base, take care when selecting the domain. You can't change the domain after adding the knowledge base.
+
+### Associate intents with articles
+
+After you've added a knowledge base that is associated to a domain, configure the articles so that each is linked to the appropriate intent.
+
+<img style="width:600px" src="img/ConvoBuilder/kb_associate_article.png">
+
 ### Train a knowledge base
 
-Training a knowledge base is applicable when the knowledge base is:
-
-* An [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html)
-* An [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), which also uses LivePerson AI
-
-Training involves:
+After you've added your content and linked it to intents, train the knowledge base. Training involves:
 
 1. Performing a search using a consumer utterance.
 2. Reviewing the results.
@@ -25,52 +49,46 @@ Training involves:
 
 **To train a knowledge base**
 
-Open the knowledge base, and click **Articles** in the upper-left corner if the page isn't already displayed. 
+Open the knowledge base, and click **Articles** in the upper-left corner if the page isn't already displayed. Then enter an utterance, and review the results.
 
-Enter an utterance, and review the results.
-
-If you don't get any results, you can adjust the filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
-
-The following image illustrates a search in an internal knowledge base. Things work similarly for an external knowledge base that uses LivePerson AI.
+The following image illustrates a search in an internal knowledge base. Things work similarly for an external knowledge base.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_test.png">
 
-By default, the Search Settings are set to **Intents** and **Fair Plus**. This means that the algorithm first checks for matches using NLU, with a threshold of Fair Plus. If it doesn’t find any matches, it attempts a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." This means you should add some more training phrases to the intent to improve the results.
+By default, the Sort & Filter settings are set to "Intents" and "Fair Plus." 
 
-* If you don’t want the follow-up text search, change the **Search Mode** to "Intents Only." This performs only the intents search.
-* If you want to perform only the text search, change the **Search Mode** to "Text."
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_sortandfilter.png">
 
-For more on search modes, see farther below in this topic.
+This means that the algorithm first checks for matches using NLU, with a threshold of Fair Plus. If it doesn’t find any matches, it attempts a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." When this happens, you should add some more training phrases to the intent to improve the results.
 
-If you need to, add more training phrases:
+If you don’t want the follow-up text search, change the **Search Mode** to "Intents Only." This performs only the intents search. If you want to perform only the text search, change the **Search Mode** to "Text." For more on search modes, see farther below in this topic.
 
-* Add them to the intents in the domain if you're using Domain intents
-* Add them as intent qualifiers in the article if you're using Knowledge Base intents ([legacy](knowledge-base-internal-knowledge-bases-introduction.html#choosing-between-domain-intents-and-knowledge-base-intents))
+If you don't get any results with your search, you can adjust these filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
+
+Based on your results, add more training phrases to the intents in the domain if needed.
 
 #### Adding positive and negative learnings
 
 You can also use the Thumb Up and Thumbs Down icons displayed in a search.
 
-Continuing our example of an internal knowledge base, the image below illustrates an utterance that returned some results. However, the preferred result was only a FAIR PLUS match.
-
-Tap the **Thumbs Up** icon (and click **Save** in the resulting window) to add the utterance to the article's Positive Learnings set. These are the phrases for which you want a match to occur.
-
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_test_thumbsUp.png">
 
-If you were to rerun the search, the article would return with a higher score.
+Continuing our example of an internal knowledge base, the image above illustrates an utterance that returned some results. However, the preferred result was only a FAIR PLUS match.
 
-Tapping **Thumbs Down** does the opposite: It adds the utterance to the article's Negative Learnings set. These are the phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
+Tap the **Thumbs Up** icon (and click **Save** in the resulting window) to add the utterance to the article's Positive Learnings set. These are the phrases for which you want a match to occur. If you were to rerun the search after doing this, the article would return with a higher score.
+
+Tap **Thumbs Down** to do the opposite. Thumbs Down adds the utterance to the article's Negative Learnings set. These are the phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
 
 {: .important}
-Positive and negative learnings work the same way for 1) internal knowledge bases and 2) external knowledge bases that use LivePerson AI.
+Positive and negative learnings work the same way for internal and external knowledge bases.
 
 #### Beware of overtraining
 
-Something to keep in mind when training in general, and using the Thumbs Up/Down icons specifically, is that because they are so easy to use, they are often misused. Often people use Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down. Anything over about 10 - 15 training phrases might begin to return false positives.
+Something to keep in mind when training in general, and using the Thumbs Up/Down icons in specific, is that because they are so easy to use, they are often misused. Often people use Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down. Anything over about 10 - 15 training phrases might begin to return false positives.
 
 ### Search modes
 
-When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify a "mode" for the search; this determines the type of search that is performed. Possible modes include:
+When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), and when you perform a search within the Knowledge Base application, you specify a "mode" for the search. The search mode determines the type of search that is performed. Possible modes include:
 
 * Intents
 * Intents Only
@@ -109,4 +127,3 @@ For these confidence score breakdowns, see [here](intent-builder-intents.html#wh
 When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify the minimum score that a result must have in order to be returned. The highest performing article with that threshold is returned. You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD.
 
 If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
-
