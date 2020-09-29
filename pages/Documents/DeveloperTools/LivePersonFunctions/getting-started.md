@@ -101,7 +101,11 @@ There are 3 user permissions pertaining to Functions:
   </tr>
   <tr>
     <td>secret</td>
-    <td>read plain</td>
+    <td>
+    <div class="tooltips">read
+        <span class="tooltiptext">secret value is obfuscated</span>
+    </div>
+    </td>
     <td>✅</td>
     <td>-</td>
     <td>-</td>
@@ -136,6 +140,20 @@ There are 3 user permissions pertaining to Functions:
   </tr>
   <tr>
     <td>emailReport</td>
+    <td>read</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>logs</td>
+    <td>write</td>
+    <td>✅</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>reporting</td>
     <td>read</td>
     <td>✅</td>
     <td>✅</td>
@@ -176,7 +194,7 @@ by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-
 
 To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions for your account. Please contact them to do so.
 
-<div class="notice">Functions currently supports the latest versions of <strong>Firefox</strong> and <strong>Chrome</strong>.</div>
+<div class="notice">Functions currently supports the latest versions of <strong>Firefox</strong>, <strong>Edge</strong> and <strong>Chrome</strong>.</div>
 
 The Functions UI is divided into six components. On the left hand side of the UI, you can see the navigation bar which allows you to navigate through these components. The **Home** screen (see below) is the default page that will be visible.
 
