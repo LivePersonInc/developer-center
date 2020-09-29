@@ -25,7 +25,7 @@ If you're just getting started with knowledge bases and want to try using this t
 
 ### Refresh the intents
 
-The intents for every article are stored in a cache that is updated automatically every 5 minutes. But if you've made a recent change to intents--either [Knowledge Base intents or Domain intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents)--and you want to immediately see the result of the changes, you can manually refresh the cache.
+The intents for every article are stored in a cache that is updated automatically every 5 minutes. But if you've made a recent change to intents--either [Knowledge Base intents or Domain intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents)--and you want to immediately see the result of the changes, you can manually refresh the cache.
 
 **To refresh the intents in a knowledge base**
 1. Open the knowledge base.

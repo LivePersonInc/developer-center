@@ -22,8 +22,8 @@ An article is a focused piece of content (a message) on a single topic that you 
 1. Open the knowledge base, and (on the Articles page) click **Add New** in the upper-right corner.
 2. Specify the following basic settings:
     * **Title**: Enter a complete sentence or question, e.g., "I can't remember my password." or, "Do we have a company org chart?" See farther below on this page for best practices.
-    * **Intent Qualifiers**: This field is only shown if you're using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents). Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See farther below on this page for best practices.
-    * **Intent**: This field is only shown if the knowledge base is using [Domain intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents). Select the intent to associate with the article. See farther below on this page for best practices. If needed, you can use the **Create intent** option in the drop-down list to create the intent in Intent Builder from this location. Similarly, there's an **Update training phrases** link for updating the training phrases in Intent Builder from here.
+    * **Intent Qualifiers**: This field is only shown if you're using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See farther below on this page for best practices.
+    * **Intent**: This field is only shown if the knowledge base is using [Domain intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Select the intent to associate with the article. See farther below on this page for best practices. If needed, you can use the **Create intent** option in the drop-down list to create the intent in Intent Builder from this location. Similarly, there's an **Update training phrases** link for updating the training phrases in Intent Builder from here.
     * **Summary**: Enter a short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels.
     * **Detail**: This field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible.
     * **Category**: To assign the article to a category, enter the category name. This lets you subsequently filter and find articles based on category in the Knowledge Base application.
@@ -133,7 +133,7 @@ Leveraging entities within a knowledge base provides the same benefits that doin
 
 #### Connect the domain to the knowledge base
 
-If you're using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) instead of Domain intents (like we show in our example below), to use entities within a knowledge base, you'll need to connect the domain to the knowledge base.
+If you're using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) instead of Domain intents (like we show in our example below), to use entities within a knowledge base, you'll need to connect the domain to the knowledge base.
 
 1. Exit Intent Builder, and return to Knowledge Base.
 2. Open the knowledge base.
@@ -146,7 +146,7 @@ If you're using [Knowledge Base intents](knowledge-base-internal-knowledge-bases
 
 In your articles, replace any word where you want the "CREDENTIALS" entity to be substituted in, *including* the tags. This might make some intent qualifiers and tags redundant, which means you can (and should) delete them.
 
-Assume we have a knowledge base using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) and an existing article with the following content:
+Assume we have a knowledge base using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) and an existing article with the following content:
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_1.png">
 

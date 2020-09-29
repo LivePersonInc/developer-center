@@ -32,26 +32,26 @@ When adding an internal knowledge base, follow this workflow:
     * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
     * (Conversation Orchestrator) Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
 
-### Knowlege Base intents versus Domain intents
+### Domain intents versus Knowledge Base intents
 
 When dealing with a knowledge base, an intent is the question that the consumer has ("What's your return policy?") or a problem the user needs to solve ("I can't remember my password."). 
 
-While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You can do this right inside the article by adding what are called "intent qualifiers":
+While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You can define these alternate formats in a domain in Intent Builder. Here, they're called "training phrases":
+
+<img style="width:300px" src="img/ConvoBuilder/kb_intents_IB.png">
+
+Or, you can do this inside the article by adding what are called "intent qualifiers":
 
 <img style="width:350px" src="img/ConvoBuilder/kb_intents_KB.png">
-
-Or, you can define these alternate formats in a domain in Intent Builder. Here, they're called "training phrases":
-
-<img style="width:350px" src="img/ConvoBuilder/kb_intents_IB.png">
 
 When you [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html), you'll specify which configuration approach you're using for the knowlege base:
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_intentAssociation.png">
 
-* **Knowledge Base Intents**: Select if this if you're using intents (i.e., intent qualifiers) that reside in the article itself.
 * **Domain Intents**: Select this if you're using intents from a domain that's defined in Intent Builder. Then specify the domain.
+* **Knowledge Base Intents**: Select if this if you're using intents (i.e., intent qualifiers) that reside in the article itself. **Note**: Knowledge Base intents are a *legacy feature*, as discussed below.
 
-#### Choosing between Knowledge Base intents and Domain intents
+#### Choosing between Domain intents and Knowledge Base intents
 
 With Domain intents, you can use any of the following [NLU engines](intent-builder-natural-language-understanding.html) for intent matching:
 * LivePerson NLU v1

@@ -20,7 +20,7 @@ To demonstrate this, we'll be using meta intents in conjunction with a “small 
 
 <img class="fancyimage" style="width:550px" src="img/ConvoBuilder/guideMetaIntents_addDomain.png">
 
-Our Small Talk knowledge base is going to be configured to use [domain intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) for its articles, which means we need to start off by building the domain in Intent Builder. Select “New Domain” from Intent Builder, give your domain a name, and you’re ready to start adding your intents. 
+Our Small Talk knowledge base is going to be configured to use [domain intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) for its articles, which means we need to start off by building the domain in Intent Builder. Select “New Domain” from Intent Builder, give your domain a name, and you’re ready to start adding your intents. 
 
 Several intents need to be created that are related to common small talk that a user may utter to the bot during the course of their interaction. “How are you”, “Thank you”, and disagreement utterances should still be answered in an appropriate manner, so we want to make sure that we’re capturing these intents and processing them appropriately. We build these intents as usual, adding training phrases and entities to improve the results from the NLU. Once we have created some initial intents, we can create the Small Talk meta intent, which will contain our created intents.
 
@@ -34,7 +34,7 @@ Take this opportunity to test out some user inputs to make sure that the intents
 
 ### Connect the domain to the Small Talk knowledge base
 
-Next, we’ll create the knowledge base that will house our small talk responses in the form of articles. We’ll start by creating a new knowledge base using [domain intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents), making sure to select "Domain Intents" as the **Intent Association**. This will provide a menu from which to select our newly created Small Talk domain.
+Next, we’ll create the knowledge base that will house our small talk responses in the form of articles. We’ll start by creating a new knowledge base using [domain intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), making sure to select "Domain Intents" as the **Intent Association**. This will provide a menu from which to select our newly created Small Talk domain.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideMetaIntents_kb.png">
 

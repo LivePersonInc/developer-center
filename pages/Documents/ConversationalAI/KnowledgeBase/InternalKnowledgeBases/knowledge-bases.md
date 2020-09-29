@@ -25,7 +25,7 @@ indicator: both
 
         **IMPORTANT**: When creating one knowledge base based off of another, don't reuse the same CSV import file or Google sheet for a second knowledge base in the same hosted region. The article IDs must be unique within the region. In the file for the second knowledge base, clear the article IDs; the application will create article IDs for new articles.
 
-    * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Domain Intents" or "Knowledge Base Intents." If you select "Domain Intents," also select the domain from the list that appears. For a more in-depth explanation of these, see [here](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) in the overview.
+    * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Domain Intents" or "Knowledge Base Intents" (a legacy feature). If you select "Domain Intents," also select the domain from the list that appears. For a more in-depth explanation of these, see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) in the overview.
 
         If and when you are selecting the domain, be aware that it can't be changed after the knowledge base is created.
 
@@ -58,7 +58,7 @@ The import file can contain the following basic HTML tags: p, br, a (only the ‚Ä
 | tags | A comma-separated list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", ‚Äúinsurance‚Äù, ‚Äúbenefits‚Äù. These should be words, not sentences. |
 | title | The article title. This should be a complete sentence or question that the user might ask. See [here](knowledge-base-internal-knowledge-bases-best-practices.html) for best practices. |
 | summary | A short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. |
-| alternates | Applicable if you're using Knowledge Base intents, not Domain intents (see [here](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) for an understanding of the two). In the UI, these are called "intent qualifiers." Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See [here](knowledge-base-internal-knowledge-bases-best-practices.html) for best practices. |
+| alternates | Applicable if you're using Knowledge Base intents, not Domain intents (see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) for an understanding of the two). In the UI, these are called "intent qualifiers." Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See [here](knowledge-base-internal-knowledge-bases-best-practices.html) for best practices. |
 | detail | A longer message to the user. For messaging, it's recommended that you keep the responses as brief as possible. |
 | content_url | The URL of a hyperlink. For more on this, see [here](knowledge-base-internal-knowledge-bases-articles.html#add-content-links). |
 | image_url | The URL of an image. For more on this, see [here](knowledge-base-internal-knowledge-bases-articles.html#add-content-links). |
@@ -67,7 +67,7 @@ The import file can contain the following basic HTML tags: p, br, a (only the ‚Ä
 | category | Assigning a category lets you [filter and find articles based on categories](knowledge-base-internal-knowledge-bases-articles.html#find-articles-with-a-specific-category) in the Knowledge Base application. |
 | positiveLearnings | These are phrases for which you want a match to the article to occur. A comma-separated list. |
 | negativeLearnings | These are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent. A comma-separated list. |
-| intentName | Applicable if you're using Domain intents, not Knowledge Base intents (see [here](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) for an understanding of the two). This is the intent associated with the article. |
+| intentName | Applicable if you're using Domain intents, not Knowledge Base intents (see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) for an understanding of the two). This is the intent associated with the article. |
 | validFrom | Specify the date and time on which the article becomes active in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
 | validTo | Specify the date and time on which the article becomes inactive in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
 
@@ -79,7 +79,7 @@ The import file can contain the following basic HTML tags: p, br, a (only the ‚Ä
 3. Configure the common settings discussed [here](knowledge-base-common-settings-tasks.html#common-configurable-settings). You can also configure these settings below, which are specific to internal knowledge bases:
     * **Language**: Change the language if desired. For information on the role that the language plays, see [here](knowledge-base-internal-knowledge-bases-introduction.html#languages).
     * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base, but be aware that, once you sync with the sheet, the contents of the knowledge base are overwritten with the contents in the sheet. The Google sheet must be public, i.e., with no file restrictions in place.
-    * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
+    * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
 4. Click **Update**.
 
 ### Convert Knowledge Base intents to Domain intents

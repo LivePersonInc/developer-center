@@ -45,7 +45,7 @@ For more on search modes, see farther below in this topic.
 If you need to, add more training phrases:
 
 * Add them to the intents in the domain if you're using Domain intents
-* Add them as intent qualifiers in the article if you're using Knowledge Base intents ([legacy](knowledge-base-internal-knowledge-bases-introduction.html#choosing-between-knowledge-base-intents-and-domain-intents))
+* Add them as intent qualifiers in the article if you're using Knowledge Base intents ([legacy](knowledge-base-internal-knowledge-bases-introduction.html#choosing-between-domain-intents-and-knowledge-base-intents))
 
 #### Adding positive and negative learnings
 
@@ -92,7 +92,7 @@ The Intents Only mode is like the Intents mode (above) except that the final, te
 When the Text mode is used, a text-to-text search is performed:
 
 * With an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
-* With an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#knowlege-base-intents-versus-domain-intents) (intent qualifiers), and tags.
+* With an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) (intent qualifiers), and tags.
 
 ### Scoring and thresholds
 
