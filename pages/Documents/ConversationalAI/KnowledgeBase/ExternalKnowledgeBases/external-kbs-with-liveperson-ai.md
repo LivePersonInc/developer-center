@@ -40,7 +40,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
 2. On the **AI Enabled** tab of the window that appears, select **External Knowledge Base**.
 3. Specify the following:
     * **Data Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
-    * **Domain**: Select the name of the domain that contains the intents that you will associate with the articles.
+    * **Domain**: Select the name of the domain that contains the intents that you will associate with the articles. Take care when selecting the domain; you can't change the domain after adding the knowledge base.
 4. Click **Next**.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_1.png">

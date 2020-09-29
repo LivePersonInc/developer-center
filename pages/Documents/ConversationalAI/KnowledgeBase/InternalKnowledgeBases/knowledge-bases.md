@@ -25,7 +25,7 @@ indicator: both
 
         **IMPORTANT**: When creating one knowledge base based off of another, don't reuse the same CSV import file or Google sheet for a second knowledge base in the same hosted region. The article IDs must be unique within the region. In the file for the second knowledge base, clear the article IDs; the application will create article IDs for new articles.
 
-    * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Domain Intents" or "Knowledge Base Intents" (a legacy feature). If you select "Domain Intents," also select the domain from the list that appears. For a more in-depth explanation of these, see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) in the overview.
+    * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Domain Intents" or "Knowledge Base Intents" (a legacy feature). If you select "Domain Intents," also select the domain from the list that appears. Take care when selecting the domain; you can't change the domain after adding the knowledge base. For an introduction to Domain intents versus Knowledge Base intents, see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents).
 
         If and when you are selecting the domain, be aware that it can't be changed after the knowledge base is created.
 
