@@ -27,8 +27,6 @@ indicator: both
 
     * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Domain Intents" or "Knowledge Base Intents" (a legacy feature). If you select "Domain Intents," also select the domain from the list that appears. Take care when selecting the domain; you can't change the domain after adding the knowledge base. For an introduction to Domain intents versus Knowledge Base intents, see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents).
 
-        If and when you are selecting the domain, be aware that it can't be changed after the knowledge base is created.
-
 5. Click **Save**.
 
     This creates the knowledge base, and takes you to its search view. In this default view, you can search the title, intent qualifiers and content of articles.
