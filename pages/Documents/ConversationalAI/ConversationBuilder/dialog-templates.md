@@ -96,8 +96,9 @@ Deleting a dialog template has no impact on the dialog itself. The process delet
 1. Open the bot.
 2. In the dialogs panel on the left, click <img style="width:30px" src="img/ConvoBuilder/icon_ellipsis_dark.png"> beside the dialog name, and select **Dialog Settings**.
 3. On the Dialog Settings page, expand **More Settings**.
-4. Scroll down to **Delete Template Definition**, and click <img style="width:25px" src="img/ConvoBuilder/icon_delete.png"> (Delete).
-6. In the confirmation dialog, click **Proceed**.
+4. Scroll down to **Make Available as Dialog Template**, and click **Update Template Definition**.
+5. Scroll down, click **More Settings**, and beside **Delete Template Definition** click <img style="width:25px" src="img/ConvoBuilder/icon_delete.png"> (Delete).
+6. In the confirmation dialog, click **Yes**.
 
 ### Import a dialog template
 
