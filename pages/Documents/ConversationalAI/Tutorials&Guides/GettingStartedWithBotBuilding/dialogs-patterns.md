@@ -81,3 +81,60 @@ Let’s see the interactions in action!
 
 9. To see your change, open the Preview window again, and click **Reset Session**. Then enter “hi”. You should see the “Hi there! How can I help you?” response.
 
+### Step 3: Add a Goodbye dialog
+
+Let’s create another dialog to put these concepts into more practice. Since there is a "Welcome" dialog, let’s now create a “Goodbye” dialog.
+
+1. Click **Add Dialog** in the lower-left corner.
+2. In the Add Dialog window, name the dialog "Goodbye", and select Dialog for **Dialog Type**. Click **Save**.
+
+    By default, the new Goodbye dialog has a Dialog Starter interaction; this allows the dialog to be triggered by patterns or an intent. But the interaction isn't configured by default, so let's do that now.
+
+    For the dialog starter to match user input, you need to add some patterns.
+
+3. Select the interaction, and click **+ Pattern**.
+
+4. Under Patterns, add a few patterns like `goodbye`, `bye`, `see ya`, etc. Click **Save**.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/patterns_intent_2.png">
+
+    Before you test things in the Preview window, you need to add some content to be displayed when the bot matches a pattern. Let's add a Text Statement interaction.
+
+5. In the Interactions toolbar, click the Text Statement icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png">. This inserts the interaction.
+
+    (If you can't see the Interactions toolbar, close the Preview window, which might be covering it up.)
+
+6. In the interaction, enter a goodbye message (e.g., "Thanks for stopping by."), and press Enter.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/text_interaction_thanks.png">
+
+    Let's test the changes.
+
+7. Open the Preview window again, and click **Reset Session**.
+
+8. Enter “hi” to trigger the Welcome dialog and see the welcome message. Then enter “goodbye” to trigger the Goodbye dialog and see the goodbye message.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_3.png">
+
+### Step 4: Test the Fallback dialog
+
+You’ve seen how to create a new dialog and trigger it using patterns. But what happens when you enter an utterance that hasn't been accounted for? To catch and handle these when they occur, you can provide a "fallback dialog." By default, when you create a bot using the Custom Bot template, one is included. Let's examine and test it now.
+
+{: .important}
+There can be only one dialog of type Fallback per bot.
+
+1. In the Dialogs panel on the left, click **2 Fallback**. This opens the Fallback dialog.
+
+2. Note how there isn't a Dialog Starter interaction.
+
+    You don't need a Dialog Starter interaction in the Fallback dialog because the Fallback dialog has special properties that cause it to display when there are no other matches available. However, you do need to add some type of message to tell the user that the bot didn’t understand their query. A default message is provided for you.
+
+3. Select the Text Statement interaction, and change the message to, "Sorry, I am not able to understand. Please try again." Press Enter.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/fallback_starter.png">
+
+4. Open the Preview window again, and click **Reset Session**.
+
+5. Enter something other than your hello and goodbye patterns. You should see your fallback message.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_4.png">
