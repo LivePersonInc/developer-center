@@ -103,6 +103,12 @@ As much of the functionality of our Small Talk Bot has yet to be constructed, we
 3. At this time, this bot will only serve to provide Escalation functionality. Delete both the Welcome and Fallback dialogs that are provided on bot creation. 
 4. Select **Add Dialog** from the lower left corner and give our dialog a name of Escalation.
 5. Complete this dialog following the same directions as was done in our Getting Started guide, using the patterns `agent`, `representative`, and `human` to trigger the dialog.
+
+    **Tip**: A quick and easy way to add these patterns is to click the **Library** link, and select the "Help" set of patterns.
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/advtutorial/library_link1.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/library_link2.png">
+
 6. Create a new **Agent Transfer** interaction, modifying the text to read “Transferring to a human agent…”. In the settings menu for this interaction, make sure to enter the corresponding **Human** skill ID for your user profile. Please refer to the Getting Started guide for details on this process.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/agent_transfer_interaction.png">

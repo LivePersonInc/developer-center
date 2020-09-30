@@ -10,6 +10,11 @@ permalink: tutorials-guides-bot-groups-other-techniques-knowledge-bases.html
 indicator: both
 ---
 
+### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/456479762" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
+
 ### Introduction
 
 Brands often have static content, such as frequently asked questions, that can be addressed through automations and delivered with Conversation Builder. As opposed to creating new dialogs and specific interactions to handle these use cases, the Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. A common design pattern at LivePerson is to include this Knowledge Base access in our Fallback Dialog, as a last check before triggering our Fallback interaction. In this section, we will be creating a new Knowledge Base, which will be accessed in the Fallback dialog located in our Greeter Bot.
