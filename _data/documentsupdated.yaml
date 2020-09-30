@@ -118,6 +118,15 @@
   - documentname: Platform Overview
   - documentname: Tutorials & Guides
     pages:
+      - pagename: Getting Started with Bot Building
+        subpages:
+          - subpagename: Overview
+          - subpagename: Dialogs & Patterns
+          - subpagename: Intents
+          - subpagename: Integrations
+          - subpagename: Disambiguation
+          - subpagename: Deploy the Bot
+          - subpagename: Escalate to an Agent
       - pagename: Bot Groups & Other Techniques
         subpages:
           - subpagename: Bot Groups & Collaboration
