@@ -111,3 +111,55 @@ With the "Billing Question" intent configured, let’s return to Conversation Bu
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/billing_dialog.png">
 
+### Step 7: Add custom rules
+Now you can begin to build out the Billing dialog.
+
+1. Add a Text statement that says, “Sure, I can help with that."
+2. Add a Multiple Choice question that asks, "Would you like a copy of your most recent bill?" Enter "Yes" and "No" as the choices.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/text_and_mcq.png">
+
+    When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
+
+3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes" (in the upper-left corner). For the statement's text, enter, "If you would like the most recent copy of your bill, go to http://example.com”. Select "End Interaction" as the next action. Click **Save**.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/respond_to_yes.png">
+
+    You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next action should be to end.
+
+4. Add a Text statement to respond to a reply of "no". Name the interaction "No statement" (in the upper-left corner). For the statement's text, enter, “Ok, how else can I help you?" Click **Save**.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/respond_to_no.png">
+
+    You've got the dialog fleshed out; now you need to add custom rules to detect when a user says "yes" or “no” and direct them to the correct text statement.
+
+5. Return to the multiple choice question, and select the Next Action dropdown.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/next_action.png">
+
+6. Add a rule to handle a "yes" response: Click **+ Custom Rule** in the Next Action dropdown. In the Add Next Action Rule window, configure the Yes rule as follows:
+    * **Rule name**: Enter "Yes".
+    * **Condition**: Click + Add Condition. Select "Pattern" from the drop-down list of match types, and enter yes and y as patterns.
+    * **And Go To**: Select the "Yes" as the next action.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/add_rule_yes.png">
+
+7. Add a rule to handle a "no" response: Click the **+ Custom Rule** button that's displayed once you have at least one rule defined. In the Next Action Rule window, configure the No rule as follows:
+    * **Rule name**: Enter "No".
+    * **Condition**: Click + Add Condition. Select "Pattern" from the drop-down list of match types, and enter no and n as patterns.
+    * **And Go To**: Select the "No" as the next action.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/add_rule_no.png">
+
+    The multiple choice question should now look like this:
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/mcq_finish.png">
+
+    Now let's see the dialog in action.
+
+8. Open the Preview window, and start a new session by clicking **Reset Session**.
+9. Enter an utterance that should match the billing intent, like, "I have a question about my bill". You should see the billing dialog and multiple choice question. Tap or enter “yes” or “no” and see what response you get.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_5.png">
+
+    You now understand the basics of intents, entities, and branching dialog flows.
