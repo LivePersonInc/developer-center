@@ -101,21 +101,17 @@ There are 3 user permissions pertaining to Functions:
   </tr>
   <tr>
     <td>secret</td>
-    <td>
-    <div class="tooltips">read
-        <span class="tooltiptext">secret value is obfuscated</span>
-    </div>
-    </td>
+    <td>read (value is obfuscated)</td>
     <td>✅</td>
-    <td>-</td>
+    <td>✅</td>
     <td>-</td>
   </tr>
   <tr>
-    <td>secret</td>
-    <td>read crypted</td>
+    <td>schedule</td>
+    <td>read</td>
     <td>✅</td>
     <td>✅</td>
-    <td>-</td>
+    <td>✅</td>
   </tr>
   <tr>
     <td>schedule</td>
@@ -145,9 +141,16 @@ There are 3 user permissions pertaining to Functions:
     <td>✅</td>
     <td>✅</td>
   </tr>
+   <tr>
+    <td>logs</td>
+    <td>read</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
   <tr>
     <td>logs</td>
-    <td>write</td>
+    <td>create</td>
     <td>✅</td>
     <td>-</td>
     <td>-</td>
