@@ -63,4 +63,28 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
 
     By saving the result of the user’s response as the variable `orderNumber`, we will have access to that data throughout our automation. In this case, we will use that within our API call to find that user’s order.
 
+### Step 9: Create an Order Status API integration
+
+1. In the upper-left corner, click **Integrations**.
+2. On the Add Integration page, configure the integration as follows:
+    * **Integration Name**: OrderStatus
+    * **Response Data Variable Name**: OrderStatus
+    * **Integration Type**: API
+    * **Method**: GET
+    * **URL**: https://5ed69a5fc2ca2300162c67f1.mockapi.io/api/v1/order-status/{$botContext.orderNumber}
+
+        Note the use of the orderNumber bot variable being interpolated onto the end of the URL string. 
+
+    * **Custom Data Fields**: These provide a simple method of displaying the results in interactions in dialogs. The return data is stored here.
+
+    | Key | Value |
+    | --- | --- |
+    | id | {$.api_OrderStatus.id} |
+    | name | {$.api_OrderStatus.name} |
+    | orderStatus | {$.api_OrderStatus.orderStatus} |
+    | image | {$.api_OrderStatus.image} |
+
+3. Click **Save**, and navigate back to our Order Status dialog.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integration_settings.png">
 
