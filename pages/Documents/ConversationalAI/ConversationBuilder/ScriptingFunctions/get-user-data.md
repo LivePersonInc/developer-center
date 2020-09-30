@@ -43,6 +43,8 @@ botContext.printDebugMessage("channel used by the user is: " + channel);
 
 Get User Platform Id is used to get the user’s unique ID that's valid only within the Conversation Builder bot platform. This is the ID by which the bot identifies the user.
 
+This scripting function isn't commonly used. However, it is used by those currently using the Agent Escalation API.
+
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `getUserPlatformId()` | None | string: unique user ID within Conversation Builder |
