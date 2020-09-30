@@ -88,3 +88,39 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integration_settings.png">
 
+### Step 10: Use the integration in a dialog
+
+1. In the upper-left corner, click **Dialogs** and return to the Order Status dialog.
+2. Following the text question where we’ve captured the users order number, create a new **Integration** interaction.
+
+    From the dropdown, select your newly created OrderStatus API Integration.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/orderstatus_integr.png">
+
+3. To display our returned API data, select a new **Structured** interaction.
+
+    In the Structured Question title section, add `{OrderStatus.name}`.
+
+    **Note**: When the integration interaction runs, it stores the response data in custom data fields that you configured in the integration. OrderStatus.name is the Response Data Variable Name followed by the name of that custom data field, which is “name”.
+
+    For the subtitle, add `{OrderStatus.orderStatus}`.
+
+    Click “ADD IMAGE” and in the **Image URL** field, add `{OrderStatus.image}`.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/structured_q.png">
+
+    **Note**: While images should show properly in the previewer, deployed automations will need to have the image domains whitelisted. Contact your LivePerson account representative for assistance.
+
+    Now let's test all this out.
+
+4. Open the Preview window, and start a new session by clicking **Reset Session**.
+
+5. Trigger the Order Status dialog by entering "What is my order status" or something else that will match our Order Status intent.
+
+6. Follow the prompt for an order number. Type `A001001` as your order number and press Enter.
+
+7. Verify that you are successfully receiving order information that is displayed with a user’s name, order status, and image.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_6.png">
+
+    Congratulations! You now understand the basics of integrations and variables.
