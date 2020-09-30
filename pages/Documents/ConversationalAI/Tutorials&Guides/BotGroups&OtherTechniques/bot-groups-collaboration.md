@@ -12,7 +12,7 @@ indicator: both
 
 ### Introduction
 
-This guide is a continuation of our Getting Started tutorial and expands on the implementations built within. If you are following along, please make sure you’ve completed that tutorial first.
+This guide is a continuation of our [Getting Started tutorial](tutorials-guides-getting-started-with-bot-building-overview.html) and expands on the implementations built within. If you are following along, please make sure you’ve completed that tutorial first.
 
 Here at LivePerson, we continue to iterate and develop new features to simplify the development process and to provide tools to reinforce best practices in bot building. This guide provides an introduction to some of these features that have been deployed more recently, demonstrating cutting-edge techniques in bot development for all channels. 
 
