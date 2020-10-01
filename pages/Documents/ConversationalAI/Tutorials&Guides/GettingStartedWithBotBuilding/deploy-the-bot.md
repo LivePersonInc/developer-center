@@ -62,3 +62,28 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/engagement.png">
 
+### Step 15: Add the agent connector
+
+1. Navigate back to the Getting Started bot in Conversation Builder.
+2. Select the **Agent Connectors** link from the menu bar.
+3. Click **Add Agent Connector** in the upper-right corner.
+4. In the Add Agent Connector dialog box, specify the following based on the bot user you created.
+
+    * **Agent User ID**: Getting Started
+    * **Role**: Agent
+    * **Conversation Type**: Messaging
+    * **Deploy to**: Demo
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/add_agent_connector.png">
+
+5. Click **Save**.
+6. As a result, you will see a row on the Agent Connectors page listing your new bot agent. Select the **Start** button on that row to start the agent connector. This fully deploys the bot.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/agent_connector.png">
+
+    It might take a few minutes for the connection to be established.
+
+    To view more details about the connector, move your mouse over the i icon beside Details.
+
+    {: .important}
+    LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
