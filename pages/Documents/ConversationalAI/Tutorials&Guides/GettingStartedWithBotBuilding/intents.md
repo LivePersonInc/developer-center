@@ -73,7 +73,8 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/add_entity.png">
 
-    **Tip**: It is recommended that you use a unique naming convention when creating your entity name. This allows them to be easily identified in your training phrases. Commonly used conventions at LivePerson are all caps (ex: BILL) or preceding with ‘ent’ (ex: ent_bill).
+    {: .important}
+    It is recommended that you use a unique naming convention when creating your entity name. This allows them to be easily identified in your training phrases. Commonly used conventions at LivePerson are all caps (ex: BILL) or preceding with ‘ent’ (ex: ent_bill).
 
 12. Click **Save** in the lower-right corner.
 

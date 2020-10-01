@@ -12,6 +12,9 @@ indicator: both
 
 Many use cases require integration with an API to send and receive data. Following the "billing" use case, in this tutorial you add an integration to check a user’s account balance.
 
+{: .important}
+This tutorial uses an example API that returns random balance data when given an account number and email address.
+
 ### Watch the video
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/450720977" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
@@ -55,7 +58,8 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
 
     Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Order number". Then click **+ Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match the order number format (a letter followed by six digits): `^\w\d{6}$`. 
 
-    **Note**: This mock API will successfully return order data for accounts A001001, A001010 and A001002. 
+    {: .important}
+    This mock API will successfully return order data for accounts A001001, A001010 and A001002. 
 
     Next, capture the user’s order number as a variable: Click **+ Add Variable**. Name the variable `orderNumber`, enter `{$userMessage}` for its value, and click **Save**.
 
@@ -101,7 +105,8 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
 
     In the Structured Question title section, add `{OrderStatus.name}`.
 
-    **Note**: When the integration interaction runs, it stores the response data in custom data fields that you configured in the integration. OrderStatus.name is the Response Data Variable Name followed by the name of that custom data field, which is “name”.
+    {: .important}
+    When the integration interaction runs, it stores the response data in custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name”.
 
     For the subtitle, add `{OrderStatus.orderStatus}`.
 
@@ -109,7 +114,8 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/structured_q.png">
 
-    **Note**: While images should show properly in the previewer, deployed automations will need to have the image domains whitelisted. Contact your LivePerson account representative for assistance.
+    {: .important}
+    While images should show properly in the previewer, deployed automations will need to have the image domains whitelisted. Contact your LivePerson account representative for assistance.
 
     Now let's test all this out.
 
