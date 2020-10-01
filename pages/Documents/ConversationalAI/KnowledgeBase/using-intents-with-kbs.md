@@ -75,7 +75,7 @@ You can also use the Thumb Up and Thumbs Down icons displayed in a search.
 
 Continuing our example of an internal knowledge base, the image above illustrates an utterance that returned some results. However, the preferred result was only a FAIR PLUS match.
 
-Tap the **Thumbs Up** icon (and click **Save** in the resulting window) to add the utterance to the article's Positive Learnings set. These are the phrases for which you want a match to occur. If you were to rerun the search after doing this, the article would return with a higher score.
+Tap the **Thumbs Up** icon to add the utterance to the article's Positive Learnings set, which can be viewed in the article's **Advanced Settings**. These are the phrases for which you want a match to occur. If you were to rerun the search after doing this, the article would return with a higher score.
 
 Tap **Thumbs Down** to do the opposite. Thumbs Down adds the utterance to the article's Negative Learnings set. These are the phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
 
