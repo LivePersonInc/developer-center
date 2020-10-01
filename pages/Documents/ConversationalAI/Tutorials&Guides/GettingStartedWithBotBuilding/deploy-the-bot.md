@@ -87,3 +87,22 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
     {: .important}
     LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
+
+### Step 16: Test your deployment
+
+{: .important}
+In this step, you'll be testing with Messaging, so you'll be using [this test page](https://vx-lp.github.io/v2/lpwm/). When you test with Chat, you can use [this test page](https://livepersoninc.github.io/visitor-page/?siteid=%5Byour%20account%20number%5D), adding your account number to the URL.
+
+1. In a browser, navigate to the [Messaging test page](https://vx-lp.github.io/v2/lpwm/). 
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/messaging_test_page.png">
+
+2. Enter your account number and optionally a username (just your first name will do fine), and then click **Update**.
+3. After a moment, you will see a Messaging "call to action," which corresponds to what we selected in the Campaign Builder. Click on the Messaging call to action.
+4. Start the bot by messaging ‘hi’ or ‘hello’.
+5. Test out your bot functionality as you would in the Previewer.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/deploy_test.png">
+
+    Congrats! You’ve successfully deployed your automation to a demo environment.
+
