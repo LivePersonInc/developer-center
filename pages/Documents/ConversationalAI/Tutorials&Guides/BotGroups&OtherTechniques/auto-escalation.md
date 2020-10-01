@@ -36,7 +36,8 @@ Prior to this step, make sure that you have captured the skill ID associated wit
     * A Multiple Choice interaction to confirm that a user wants to be escalated to an agent
     * The corresponding escalation
 
-    **Note:** Because the user has not explicitly asked to be transferred to an agent, it’s good practice to confirm that this is what they would like to do.
+    {: .important}
+    Because the user has not explicitly asked to be transferred to an agent, it’s good practice to confirm that this is what they would like to do.
 
 3. Modify the content of the multiple choice interaction to match the voice of your brand. Note that two rules have been automatically created to match the ‘yes’ and ‘no’ responses, so they will need to be updated should you change the response options.
 

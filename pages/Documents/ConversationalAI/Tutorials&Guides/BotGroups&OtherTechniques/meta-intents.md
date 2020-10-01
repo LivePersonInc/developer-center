@@ -98,7 +98,8 @@ Using meta intents, we can funnel a variety of intents into a single dialog for 
     * **Intent Association**: Domain intents
     * **Domain**: Getting Started Domain
 
-    **Note**: Using Domain intents allows us to use intents created via Intent Builder for triggering our Knowledge Base articles. 
+    {: .important}
+    Using Domain intents allows us to use intents created via Intent Builder for triggering our Knowledge Base articles. 
 
 	Click **Save**.
 
@@ -163,3 +164,5 @@ Using meta intents, we can funnel a variety of intents into a single dialog for 
     <img style="width:350px" src="img/ConvoBuilder/advtutorial/small_talk_preview.png">
 
     This is successful because while the meta intent triggers the process, we are sending the user’s message to our knowledge base. Each of the articles within the knowledge base are triggered by individual standard intents. Adding additional small talk phrases simply requires creating new intents, nesting them under our Small Talk meta intent, and creating a corresponding Small Talk KB article. No additional dialogs will be required.
+
+    Congratulations on completing this tutorial series!

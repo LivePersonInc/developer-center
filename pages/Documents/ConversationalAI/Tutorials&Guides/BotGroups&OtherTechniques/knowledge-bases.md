@@ -51,7 +51,8 @@ In this step, a new FAQ knowledge base will be created using an existing CSV fil
         * What time do you close?
     * **Summary**: We are open every day from 9am to 7pm.
 
-    **Note**: Additional details and tags can be included when creating your Knowledge Base articles. Please see our developers documentation on knowledge bases for more details on how to use these features to optimize your Knowledge Base searches.
+    {: .important}
+    Additional details and tags can be included when creating your Knowledge Base articles. Please see our developers documentation on knowledge bases, which is [here](knowledge-base-overview.html), for more details on how to use these features to optimize your Knowledge Base searches.
 
 	Click **Save** in the lower-right corner.
 
