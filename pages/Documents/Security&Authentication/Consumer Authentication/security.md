@@ -5,10 +5,10 @@ redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Mobile SDK and Web Authentication
+documentname: Consumer Authentication
 
 order: 320
-permalink: mobile-sdk-and-web-authentication-security.html
+permalink: consumer-authentication-security.html
 
 indicator: messaging
 ---

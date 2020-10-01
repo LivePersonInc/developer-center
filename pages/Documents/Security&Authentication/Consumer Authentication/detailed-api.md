@@ -5,8 +5,8 @@ redirect_from:
   - authentication-detailed-api.html
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Mobile SDK and Web Authentication
-permalink: mobile-sdk-and-web-authentication-detailed-api.html
+documentname: Consumer Authentication
+permalink: consumer-authentication-detailed-api.html
 order: 5
 indicator: both
 ---
