@@ -20,7 +20,7 @@ permalink: tutorials-guides-getting-started-with-bot-building-overview.html
 indicator: both
 ---
 
-The Getting Started tutorials include six tutorials that build on one another:
+The **Getting Started with Bot Building** tutorial series include six tutorials that build on one another:
 
 * **[Dialogs & Patterns](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html)**: Learn how to get started with a basic bot. This tutorial explores the concept of dialogs (the different conversation flows a bot can have) and patterns, which allow the bot to match user input and respond intelligently. You are guided through the creation of a simple "Hello World" bot.
 * **[Intents](tutorials-guides-getting-started-with-bot-building-intents.html)**: Dive deeper into user input matching and look at the more advanced concepts of intents and entities. Intents allow you to use our Natural Language Understanding (NLU) engine to enable your bot to more accurately match user input, while entities help with storing variable-like parameters for quick and easy data access.

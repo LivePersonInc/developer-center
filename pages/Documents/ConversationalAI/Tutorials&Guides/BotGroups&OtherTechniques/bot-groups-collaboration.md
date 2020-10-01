@@ -10,20 +10,6 @@ permalink: tutorials-guides-bot-groups-other-techniques-bot-groups-collaboration
 indicator: both
 ---
 
-### Introduction
-
-This guide is a continuation of our [Getting Started tutorial](tutorials-guides-getting-started-with-bot-building-overview.html) and expands on the implementations built within. If you are following along, please make sure you’ve completed that tutorial first.
-
-Here at LivePerson, we continue to iterate and develop new features to simplify the development process and to provide tools to reinforce best practices in bot building. This guide provides an introduction to some of these features that have been deployed more recently, demonstrating cutting-edge techniques in bot development for all channels. 
-
-The Bot Groups & Other Techniques series includes five tutorials that build on one another:
-
-* Bot Groups & Collaboration (this tutorial)
-* [Complex Conditions](tutorials-guides-bot-groups-other-techniques-complex-conditions.html)
-* [Auto Escalation](tutorials-guides-bot-groups-other-techniques-auto-escalation.html)
-* [Knowledge Bases](tutorials-guides-bot-groups-other-techniques-knowledge-bases.html)
-* [Meta Intents](tutorials-guides-bot-groups-other-techniques-meta-intents.html)
-
 ### "Many Bots" design approach
 
 Historically, all of our bot capabilities would be included into a single, monolithic bot design. This bot would house all of our intent driven dialogs, our knowledge bases, fallback dialogs, and escalations. 
@@ -174,4 +160,8 @@ Due to the nature of the Many Bots solution, each bot in our group will need to 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_order.png">
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_smalltalk.png">
 
-    With our bots now properly split up and working in tandem to handle a users needs, there are additional improvements and best practices that we can implement to ensure proper handling and understanding of our users intents. 
+    With our bots now properly split up and working in tandem to handle a users needs, there are additional improvements and best practices that we can implement to ensure proper handling and understanding of our users intents.
+
+### What's next?
+
+Continue on to the [next tutorial](tutorials-guides-bot-groups-other-techniques-complex-conditions.html) in the series.

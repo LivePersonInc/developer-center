@@ -146,3 +146,7 @@ There can be only one dialog of type Fallback per bot.
 5. Enter something other than your hello and goodbye patterns. You should see your fallback message.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_4.png">
+
+### What's next?
+
+Continue on to the [next tutorial](tutorials-guides-getting-started-with-bot-building-intents.html) in the series.

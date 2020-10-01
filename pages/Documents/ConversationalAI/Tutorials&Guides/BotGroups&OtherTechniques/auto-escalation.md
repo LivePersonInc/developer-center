@@ -10,8 +10,6 @@ permalink: tutorials-guides-bot-groups-other-techniques-auto-escalation.html
 indicator: both
 ---
 
-### Introduction
-
 Along with disambiguation, every automation should include a way to automatically escalate when a user gets stuck. This often happens when a user is attempting to answer a text question, but their responses are not passing the needed validation. Previously, to implement such a policy required the writing of custom JavaScript to keep track of a user's attempts to answer a question, pointing to an escalation interaction if a threshold is crossed. Now, Conversation Builder provides a special dialog type which takes care of all of this for you without having to write any code.
 
 ### Step 7: Create the Auto Escalation dialog
@@ -58,3 +56,7 @@ Prior to this step, make sure that you have captured the skill ID associated wit
 8. If set to the proper skill ID, you should hear a ring from the Conversational Cloud and see an option to accept the incoming conversation.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/auto_esc_cc.png">
+
+### What's next?
+
+Continue on to the [next tutorial](tutorials-guides-bot-groups-other-techniques-knowledge-bases.html) in the series.

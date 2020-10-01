@@ -130,3 +130,7 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_6.png">
 
     Congratulations! You now understand the basics of integrations and variables.
+
+### What's next?
+
+Continue on to the [next tutorial](tutorials-guides-getting-started-with-bot-building-disambiguation.html) in the series.

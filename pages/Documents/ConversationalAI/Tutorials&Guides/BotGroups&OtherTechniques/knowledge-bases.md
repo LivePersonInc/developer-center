@@ -10,14 +10,12 @@ permalink: tutorials-guides-bot-groups-other-techniques-knowledge-bases.html
 indicator: both
 ---
 
+Brands often have static content, such as frequently asked questions, that can be addressed through automations and delivered with Conversation Builder. As opposed to creating new dialogs and specific interactions to handle these use cases, the Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. A common design pattern at LivePerson is to include this Knowledge Base access in our Fallback Dialog, as a last check before triggering our Fallback interaction. In this section, we will be creating a new Knowledge Base, which will be accessed in the Fallback dialog located in our Greeter Bot.
+
 ### Watch the video
 
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/456479762" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
-
-### Introduction
-
-Brands often have static content, such as frequently asked questions, that can be addressed through automations and delivered with Conversation Builder. As opposed to creating new dialogs and specific interactions to handle these use cases, the Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. A common design pattern at LivePerson is to include this Knowledge Base access in our Fallback Dialog, as a last check before triggering our Fallback interaction. In this section, we will be creating a new Knowledge Base, which will be accessed in the Fallback dialog located in our Greeter Bot.
 
 ### Step 8: Create the FAQ knowledge base
 
@@ -68,7 +66,7 @@ In this step, a new FAQ knowledge base will be created using an existing CSV fil
 
     Navigating back to Conversation Builder, we will provide an integration to access and display this content.
 
-### Step 9: Create the Knowledge Base Integration in the Fallback Dialog
+### Step 9: Create the Knowledge Base integration in the Fallback Dialog
 
 Prior to displaying our Fallback message for unrecognized utterances, create a Knowledge Base integration to check with our FAQ as a last resort to check if the user’s intent can be satisfied using a Knowledge Base article.
 
@@ -116,3 +114,7 @@ Prior to displaying our Fallback message for unrecognized utterances, create a K
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/kb_integration_preview.png">
 
     Knowledge bases are optimized to handle frequently asked questions and other static content that you want to provide for your users. By including them intelligently in your conversation designs, you can round out the bot experience to answer questions and ensure your users will be happy to return to your automation.
+
+### What's next?
+
+Continue on to the [next tutorial](tutorials-guides-bot-groups-other-techniques-meta-intents.html) in the series.

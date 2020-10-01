@@ -167,3 +167,7 @@ Now you can begin to build out the Billing dialog.
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_5.png">
 
     You now understand the basics of intents, entities, and branching dialog flows.
+
+### What's next?
+
+Continue on to the [next tutorial](tutorials-guides-getting-started-with-bot-building-integrations.html) in the series.

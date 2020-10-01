@@ -10,8 +10,6 @@ permalink: tutorials-guides-bot-groups-other-techniques-complex-conditions.html
 indicator: both
 ---
 
-### Introduction
-
 Earlier in our Getting Started guide, we used conditional logic in our Billing Question dialog to determine which interaction to display based on a multiple choice question. Sometimes, however, there are multiple variables that need to be considered when choosing a path for our users. For this purpose, Conversation Builder’s updated Conditions Editor provides a simple, easy to follow rules based system to direct a user's path based on several variables. To demonstrate this, let’s create a new dialog in our Order Bot which will handle refund requests from our user.
 
 ### Step 5: Create the Refund Request dialog
@@ -122,3 +120,7 @@ We’ve now created a dialog which records whether or not a purchase was made in
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/preview.png">
 
     Without a single line of JavaScript code, we now have complex conditional logic to check for multiple variables in determining a flow for our users. 
+
+### What's next?
+
+Continue on to the [next tutorial](tutorials-guides-bot-groups-other-techniques-auto-escalation.html) in the series.
