@@ -140,9 +140,6 @@
           - subpagename: Using LivePerson Functions with a Bot
   - documentname: Conversation Builder
     pages:
-      - pagename: Tutorials & Guides
-        subpages:
-          - subpagename: Getting Started
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:

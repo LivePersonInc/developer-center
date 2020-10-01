@@ -1,23 +1,4 @@
----
-pagename: Getting Started
-redirect_from:
-  - conversation-builder-getting-started-0-video-tutorials.html
-  - conversation-builder-getting-started-1-dialogs-and-patterns.html
-  - conversation-builder-getting-started-getting-started-part-1.html
-  - conversation-builder-getting-started-2-intents.html
-  - conversation-builder-getting-started-getting-started-part-2.html
-  - conversation-builder-getting-started-3-integrations.html
-  - conversation-builder-getting-started-getting-started-part-3.html
-  - conversation-builder-getting-started-4-connect-to-liveengage.html
-  - conversation-builder-getting-started-getting-started-part-4.html
-Keywords:
-sitesection: Documents
-categoryname: "Conversational AI"
-documentname: Conversation Builder
-subfoldername: Tutorials & Guides
-permalink: conversation-builder-tutorials-guides-getting-started.html
-indicator: both
----
+THIS IS AN ARCHIVE OF THE OLD GETTING STARTED TUTORIALS FOR CB.
 
 ### Overview
 
