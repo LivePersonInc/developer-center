@@ -36,4 +36,4 @@ To test user utterances against your intents and meta intents, use the debug too
 
 ### Example guide
 
-For a step-by-step, example guide that uses meta intents, see [here](conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html).
+For some practice with meta intents, complete the [Getting Started tutorial series](tutorials-guides-getting-started-with-bot-building-overview.html), which includes a [tutorial](tutorials-guides-bot-groups-other-techniques-meta-intents.html) on meta intents.
