@@ -15,7 +15,7 @@ Use this page to help you troubleshoot common issues when working with integrati
 
 ### Troubleshooting transfers
 
-If you're trying to transfer a conversation to a live agent or another bot, but it isn't working, the reason could be one of several. (For some practice with transfers, complete the [Connect to Conversational Cloud](conversation-builder-tutorials-guides-getting-started.html) tutorial.)
+If you're trying to transfer a conversation to a live agent or another bot, but it isn't working, the reason could be one of several. (For some practice with transfers, complete the [Escalate to an Agent](tutorials-guides-getting-started-with-bot-building-escalate-to-an-agent.html) tutorial.)
 
 #### Messages are sent after the transfer
 

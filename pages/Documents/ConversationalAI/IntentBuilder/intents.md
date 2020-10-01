@@ -18,7 +18,7 @@ Intents use a Natural Language Understanding (NLU) engine to match the user's ut
 As an example, you might configure a "billing" intent that has a defined set of training phrases like, "I have a question about my bill," "Can you help me with my bill?" and similar, alternative expressions. The consumer's utterance is evaluated against these phrases, and a score is determined. *If there's a match of GOOD or better*, the intent is understood to be present, it is sent to the bot, and the bot triggers the associated dialog starter.
 
 {: .important}
-For some practice with intents, complete the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html).
+For some practice with intents, complete the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).
 
 #### What is the intent score/threshold?
 
