@@ -68,3 +68,24 @@ In our final Getting Started tutorial, we will add an Agent Escalation dialog to
 5. Click **Save**.
 
     Once saved, we’ll want to re-test our deployed automation to ensure that human escalation is happening as expected.
+
+### Step 19: Test the escalation
+
+1. In a separate browser tab, navigate back to the messaging demo page, enter your account number, and update.
+2. Click into the Messaging call to action, and wake your bot with a ‘hi’ or ‘hello’.
+3. From here, type in one of the patterns you used when creating your **Escalation** dialog.
+4. If successful, you will see your updated transfer message from our Agent Escalation interaction. You will also hear a phone ring from your Conversational Cloud browser tab. Navigate back to that tab.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/deploy_test_2.png">
+
+5. Note the **Agent Workspace** icon on the left of the page shows a notification badge with the number 1. Click on the **Agent Workspace** icon.
+6. In the lower left hand corner, click **Accept**.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/accept.png">
+
+7. You are now able to communicate with the demo browser tab using the messaging interface here. Try sending a few messages back and forth to see the conversation in action.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/conversation.png">
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/conversation_2.png">
+    
