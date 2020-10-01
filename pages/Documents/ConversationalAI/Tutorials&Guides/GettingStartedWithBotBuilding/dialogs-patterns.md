@@ -22,18 +22,19 @@ This tutorial assumes you have a user account for the Conversational Cloud and C
 ### Step 1: Create a new bot
 
 1. Navigate to [https://authentication.liveperson.net/login.html](https://authentication.liveperson.net/login.html), enter your credentials, and log in.
-2. In the left sidebar in Conversational Cloud, click the Conversational AI and Bots <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_cb.png"> icon.
+2. In the left sidebar in Conversational Cloud, click the **Conversational AI and Bots** <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_cb.png"> icon.
 3. In the Conversational AI dashboard, click **Conversation Builder**.
 4. Click **New Bot** in the upper-right corner, and select the generic **Custom Bot** [template](conversation-builder-bot-templates-overview.html). Click **Next**.
 5. Give the bot a unique name and description, and click **Create Bot**.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/custom_bot.png">
 
-    This takes you to the new bot in Conversation Builder. Since you selected the Custom Bot template, by default this creates a bot with a “Welcome” dialog that matches and responds to simple forms (patterns) of “hello”.The bot also has a Fallback dialog with some fallback text.
+    This takes you to the new bot in Conversation Builder. Since you selected the Custom Bot template, by default this creates a bot with a “Welcome” dialog that matches and responds to simple forms (patterns) of “hello.” The bot also has a Fallback dialog with some fallback text.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/welcome_dialog.png">
 
 6. Examine the Welcome dialog, which is displayed by default. 
+
     (You can learn about the different parts of Conversation Builder [here](conversation-builder-bot-workspace.html).)
 
 ### Step 2: Test the Welcome dialog
@@ -42,7 +43,7 @@ With the bot created, let’s see how to make it respond to user utterances.
 
 The first interaction in the Welcome dialog is a Dialog Starter interaction that allows us to match a user’s utterance using patterns or intents. Following that is a Text Statement interaction that displays some text ("Hi there! Thanks for coming!") to the user.
 
-Statement interactions (Text, Image, Audio, and Video) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (You can learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).)
+Statement interactions (e.g., Text, Image) are for displaying content to the user, without listening for a user response. Once the statement is displayed, the conversation flow moves on to whatever is next in the dialog. (You can learn more about interactions [here](conversation-builder-interactions-interaction-basics.html).)
 
 Let’s see the interactions in action!
 
@@ -60,12 +61,12 @@ Let’s see the interactions in action!
 
     Since this is a "Welcome" dialog, it uses patterns like “hi”, “hello” and “howdy” to match those phrases exactly and display a response.
 
-    By adding wildcards (e.g., `hi *` or `hello *`) you can allow for broader matches like “hi there” or “hello my friend”. Using parentheses and pipes allows you to specify a series of alternates. For instance, `(hi|hello|hey)*` will match “hi”, “hello there” and “hey you”.
+    By adding wildcards (e.g., `hi *` or `hello *`) you can allow for broader matches like “hi there” or “hello my friend.” Using parentheses and pipes allows you to specify a series of alternates. For instance, `(hi|hello|hey)*` will match “hi”, “hello there” and “hey you.”
 
     {: .important}
-    Patterns are a great way to create hard-coded logic in your bot while you build out the design. As your bot grows, you’ll want to incorporate Natural Language Understanding to provide a more conversational experience for your users. Our next section on Intents and Entities will serve as an introduction to these topics.
+    Patterns are a great way to create hard-coded logic in the bot while you build out the design. As your bot grows, you’ll want to incorporate Natural Language Understanding to provide a more conversational experience for users. Our next tutorial on "intents" and "entities" serves as an introduction to these topics.
 
-4. Click the patterns (green button). On the Patterns & Intent tab in the Interaction Settings window, add some more patterns (e.g., “hiya”, “ciao”, “hola”). Then click **Save**.
+4. Click the patterns (green button). On the Patterns & Intent tab in the Interaction Settings window, add some more patterns (e.g., “hiya”, “ciao”, and “hola”). Click **Save**.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/patterns_intent.png">
 
@@ -88,7 +89,7 @@ Let’s see the interactions in action!
 Let’s create another dialog to put these concepts into more practice. Since there is a "Welcome" dialog, let’s now create a “Goodbye” dialog.
 
 1. Click **Add Dialog** in the lower-left corner.
-2. In the Add Dialog window, name the dialog "Goodbye", and select Dialog for **Dialog Type**. Click **Save**.
+2. In the Add Dialog window, on the New Dialog tab, name the dialog "Goodbye", and select Dialog for **Dialog Type**. Click **Save**.
 
     By default, the new Goodbye dialog has a Dialog Starter interaction; this allows the dialog to be triggered by patterns or an intent. But the interaction isn't configured by default, so let's do that now.
 
@@ -135,7 +136,7 @@ There can be only one dialog of type Fallback per bot.
 
 2. Note how there isn't a Dialog Starter interaction.
 
-    You don't need a Dialog Starter interaction in the Fallback dialog because the Fallback dialog has special properties that cause it to display when there are no other matches available. However, you do need to add some type of message to tell the user that the bot didn’t understand their query. A default message is provided for you.
+    You don't need a dialog starter in the Fallback dialog because the Fallback dialog has special properties that cause it to display when there are no other matches available. However, you do need to add some type of message to tell the user that the bot didn’t understand their query. A default message is provided for you.
 
 3. Select the Text Statement interaction, and change the message to, "Sorry, I am not able to understand. Please try again." Press Enter.
 

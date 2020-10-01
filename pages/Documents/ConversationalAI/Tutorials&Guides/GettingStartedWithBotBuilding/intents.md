@@ -34,13 +34,13 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
     Now let’s create a domain.
 
-3. In the upper-right corner, click **New domain**.
+3. In the upper-right corner, click **Add Domain**.
 
-4. On the Add Domain page, give your domain a name (e.g., "Getting Started Domain"), select "Manual", and click **Add**. (While you will manually add intents and entities, they can be imported from a CSV file too.)
+4. On the Add Domain page, on the New Domain tab, give your domain a name (e.g., "Getting Started Domain"), select "Manual", and click **Add**. (While you will manually add intents and entities, they can be imported from a CSV file too.)
 
     This displays the Add Intent page. Now you can begin to create an intent.
 
-5. Enter "Billing Question" for **Intent Name**.
+5. Enter "Billing Question" for the **Intent Name**.
 
 6. In the **Training** section, add the following training phrases, pressing Enter to add each one:
     * i have a question about my bill
@@ -65,7 +65,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/test_user_input_2.png">
 
-    The result when using "billing" is only FAIR because it is not recognized as a synonym for “bill”. You can remedy this by creating an entity. You do this next.
+    The result when using "billing" is only FAIR because it is not recognized as a synonym for “bill.” You can remedy this by creating an entity. You do this next.
 
 10. In the upper-left corner, click **Entities**.
 
@@ -74,7 +74,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/add_entity.png">
 
     {: .important}
-    It is recommended that you use a unique naming convention when creating your entity name. This allows them to be easily identified in your training phrases. Commonly used conventions at LivePerson are all caps (ex: BILL) or preceding with ‘ent’ (ex: ent_bill).
+    It is recommended that you use a unique naming convention when creating your entity name. This allows them to be easily identified in your training phrases. Commonly used conventions at LivePerson are all caps (e.g., BILL) or preceding with an "ent_" prefix (e.g., ent_bill).
 
 12. Click **Save** in the lower-right corner.
 
@@ -82,7 +82,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 13. Click **Intents** in the upper-left corner to return to the Intents tab, select the "Billing Question" intent (if necessary), and use the debugger again. This time re-enter the phrase, "I have a billing question".
 
-    Now the result is VERY GOOD, and you can see that the entity @BILL was detected as well.
+    Now the result is VERY GOOD, and you can see that the entity @BILL was detected.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/test_user_input_3.png">
 
@@ -97,8 +97,8 @@ With the "Billing Question" intent configured, let’s return to Conversation Bu
 
     By default, a regular dialog includes a Dialog Starter interaction, but it isn't configured yet. You'll use the [Assist tool](conversation-builder-assist.html) to do this.
 
-5. Click <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the interaction to open the Assist tool.
-6. In Assist, search for the name of the domain that you created (e.g., Getting started).
+5. Open the Assist tool by clicking <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_assist.png"> (Assist icon) beside the Dialog Starter interaction.
+6. In Assist, search for the name of the domain that you created (e.g., Getting Started Domain).
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/assist_1.png">
 
@@ -122,7 +122,7 @@ Now you can begin to build out the Billing dialog.
 
     When someone says "yes," you'll want to show them a specific message. The same applies when someone says, "no."
 
-3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes" (in the upper-left corner). For the statement's text, enter, "If you would like the most recent copy of your bill, go to http://example.com”. Select "End Interaction" as the next action. Click **Save**.
+3. Add a Text statement to respond to a reply of "yes". Name the interaction "Yes" in the upper-left corner. For the statement's text, enter, "If you would like the most recent copy of your bill, go to http://example.com.” Select "End Interaction" as the **Next Action**. Click the **Save** icon in the interaction's upper-right corner.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/respond_to_yes.png">
 
@@ -134,7 +134,7 @@ Now you can begin to build out the Billing dialog.
 
     You've got the dialog fleshed out; now you need to add custom rules to detect when a user says "yes" or “no” and direct them to the correct text statement.
 
-5. Return to the multiple choice question, and select the Next Action dropdown.
+5. Return to the multiple choice question, and select the **Next Action** dropdown.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/next_action.png">
 
@@ -145,8 +145,9 @@ Now you can begin to build out the Billing dialog.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/add_rule_yes.png">
 
-7. Click **Save**.
-8. Add a rule to handle a "no" response: Click the **+ Custom Rule** button that's displayed once you have at least one rule defined. In the Next Action Rule window, configure the No rule as follows:
+    Click **Save**.
+
+7. Add a rule to handle a "no" response: Click the **+ Custom Rule** button that's displayed once you have at least one rule defined. In the Next Action Rule window, configure the No rule as follows:
     * **Rule name**: Enter "No".
     * **Condition**: Click **+ Add Condition**. Select "Pattern" from the drop-down list of match types, and enter "no" and "n" as patterns.
     * **And Go To**: Select the "No" statement as the next action.
@@ -161,8 +162,8 @@ Now you can begin to build out the Billing dialog.
 
     Now let's see the dialog in action.
 
-9. Open the Preview window, and start a new session by clicking **Reset Session**.
-10. Enter an utterance that should match the billing intent, like, "I have a question about my bill". You should see the billing dialog and multiple choice question. Tap or enter “yes” or “no” and see what response you get.
+8. Open the Preview window, and start a new session by clicking **Reset Session**.
+9. Enter an utterance that should match the billing intent, like, "I have a question about my bill." You should see the billing dialog's flow and the multiple choice question. Tap or enter “yes” or “no” and see what response you get.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_5.png">
 
