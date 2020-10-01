@@ -36,7 +36,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 3. In the upper-right corner, click **New domain**.
 
-4. On the Add Domain page, give your domain a name (e.g., "Getting Started Domain"), select "Manual", and click **Add Domain**. (While you will manually add intents and entities, they can be imported from a CSV file too.)
+4. On the Add Domain page, give your domain a name (e.g., "Getting Started Domain"), select "Manual", and click **Add**. (While you will manually add intents and entities, they can be imported from a CSV file too.)
 
     This displays the Add Intent page. Now you can begin to create an intent.
 
@@ -69,13 +69,13 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 10. In the upper-left corner, click **Entities**.
 
-11. On the Add Entity page, create a new entity named "BILL" and add a number of entity values (synonyms) like `bill`, `billing`, `payment`, and `statement`. Press Enter to add each one.
+11. On the Add Entity page, create a new entity named "BILL," keeping the default value of "Value Set" for the **Entity Type**. Add a number of entity values (synonyms) like `bill`, `billing`, `payment`, and `statement`. Press Enter to add each one.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/add_entity.png">
 
     **Tip**: It is recommended that you use a unique naming convention when creating your entity name. This allows them to be easily identified in your training phrases. Commonly used conventions at LivePerson are all caps (ex: BILL) or preceding with ‘ent’ (ex: ent_bill).
 
-12. Click **Add Entity** in the lower-right corner.
+12. Click **Save** in the lower-right corner.
 
     Now let's see how adding an entity can improve the NLU matching.
 
@@ -139,26 +139,29 @@ Now you can begin to build out the Billing dialog.
 
 6. Add a rule to handle a "yes" response: Click **+ Custom Rule** in the Next Action dropdown. In the Add Next Action Rule window, configure the Yes rule as follows:
     * **Rule name**: Enter "Yes".
-    * **Condition**: Click + Add Condition. Select "Pattern" from the drop-down list of match types, and enter yes and y as patterns.
-    * **And Go To**: Select the "Yes" as the next action.
+    * **Condition**: Click **+ Add Condition**. Select "Pattern" from the drop-down list of match types, and enter "yes" and "y" as patterns.
+    * **And Go To**: Select the "Yes" statement as the next action.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/add_rule_yes.png">
 
-7. Add a rule to handle a "no" response: Click the **+ Custom Rule** button that's displayed once you have at least one rule defined. In the Next Action Rule window, configure the No rule as follows:
+7. Click **Save**.
+8. Add a rule to handle a "no" response: Click the **+ Custom Rule** button that's displayed once you have at least one rule defined. In the Next Action Rule window, configure the No rule as follows:
     * **Rule name**: Enter "No".
-    * **Condition**: Click + Add Condition. Select "Pattern" from the drop-down list of match types, and enter no and n as patterns.
-    * **And Go To**: Select the "No" as the next action.
+    * **Condition**: Click **+ Add Condition**. Select "Pattern" from the drop-down list of match types, and enter "no" and "n" as patterns.
+    * **And Go To**: Select the "No" statement as the next action.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/add_rule_no.png">
 
+    Click **Save**.
+    
     The multiple choice question should now look like this:
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/mcq_finish.png">
 
     Now let's see the dialog in action.
 
-8. Open the Preview window, and start a new session by clicking **Reset Session**.
-9. Enter an utterance that should match the billing intent, like, "I have a question about my bill". You should see the billing dialog and multiple choice question. Tap or enter “yes” or “no” and see what response you get.
+9. Open the Preview window, and start a new session by clicking **Reset Session**.
+10. Enter an utterance that should match the billing intent, like, "I have a question about my bill". You should see the billing dialog and multiple choice question. Tap or enter “yes” or “no” and see what response you get.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_5.png">
 

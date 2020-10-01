@@ -24,7 +24,7 @@ This tutorial assumes you have a user account for the Conversational Cloud and C
 1. Navigate to [https://authentication.liveperson.net/login.html](https://authentication.liveperson.net/login.html), enter your credentials, and log in.
 2. In the left sidebar in Conversational Cloud, click the Conversational AI and Bots <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_cb.png"> icon.
 3. In the Conversational AI dashboard, click **Conversation Builder**.
-4. Click **New Bot** in the upper-right corner, and select the generic **Custom Bot** [template](conversation-builder-bot-templates-overview.html).
+4. Click **New Bot** in the upper-right corner, and select the generic **Custom Bot** [template](conversation-builder-bot-templates-overview.html). Click **Next**.
 5. Give the bot a unique name and description, and click **Create Bot**.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/custom_bot.png">
@@ -48,13 +48,13 @@ Let’s see the interactions in action!
 
 1. Click **Preview** in the upper-right corner.
 
-2. In the Preview window, enter “hello” or “hello there.” You should see the welcome response.
+2. In the Preview window, enter “hello” or “hello there,” and click **Send**. You should see the welcome response.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview.png">
 
     So how is the Welcome dialog triggered?
 
-3. Examine the Dialog Starter interaction. On the interaction tile, note the different patterns used to match this particular dialog. (You can also use an intent to trigger a dialog, but for this exercise we focus on patterns.)
+3. Examine the Dialog Starter interaction. On the interaction tile, note the different patterns used to match this particular dialog. (You can also use an intent to trigger a dialog, but in this tutorial we focus on patterns.)
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/dialog_starter.png">
 
@@ -62,7 +62,8 @@ Let’s see the interactions in action!
 
     By adding wildcards (e.g., `hi *` or `hello *`) you can allow for broader matches like “hi there” or “hello my friend”. Using parentheses and pipes allows you to specify a series of alternates. For instance, `(hi|hello|hey)*` will match “hi”, “hello there” and “hey you”.
 
-    **Note**: Patterns are a great way to create hard-coded logic in your bot while you build out the design. As your bot grows, you’ll want to incorporate Natural Language Understanding to provide a more conversational experience for your users. Our next section on Intents and Entities will serve as an introduction to these topics.
+    {: .important}
+    Patterns are a great way to create hard-coded logic in your bot while you build out the design. As your bot grows, you’ll want to incorporate Natural Language Understanding to provide a more conversational experience for your users. Our next section on Intents and Entities will serve as an introduction to these topics.
 
 4. Click the patterns (green button). On the Patterns & Intent tab in the Interaction Settings window, add some more patterns (e.g., “hiya”, “ciao”, “hola”). Then click **Save**.
 
@@ -95,25 +96,31 @@ Let’s create another dialog to put these concepts into more practice. Since th
 
 3. Select the interaction, and click **+ Pattern**.
 
-4. Under Patterns, add a few patterns like `goodbye`, `bye`, `see ya`, etc. Click **Save**.
+4. Under Patterns, add a few patterns like `goodbye`, `bye`, `see ya`, etc. You can do this manually:
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/patterns_intent_2.png">
 
+    Alternatively, a quick and easy way to add these patterns is to click the **Library** link, and select the "Bye" set of patterns.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/pattern_intent_library_2.png">
+
+5. Click **Save**.
+
     Before you test things in the Preview window, you need to add some content to be displayed when the bot matches a pattern. Let's add a Text Statement interaction.
 
-5. In the Interactions toolbar, click the Text Statement icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png">. This inserts the interaction.
+6. In the Interactions toolbar, click the Text Statement icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_text_interaction.png">. This inserts the interaction.
 
     (If you can't see the Interactions toolbar, close the Preview window, which might be covering it up.)
 
-6. In the interaction, enter a goodbye message (e.g., "Thanks for stopping by."), and press Enter.
+7. In the interaction, enter a goodbye message (e.g., "Thanks for stopping by."), and press Enter.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/text_interaction_thanks.png">
 
     Let's test the changes.
 
-7. Open the Preview window again, and click **Reset Session**.
+8. Open the Preview window again, and click **Reset Session**.
 
-8. Enter “hi” to trigger the Welcome dialog and see the welcome message. Then enter “goodbye” to trigger the Goodbye dialog and see the goodbye message.
+9. Enter “hi” to trigger the Welcome dialog and see the welcome message. Then enter “goodbye” to trigger the Goodbye dialog and see the goodbye message.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_3.png">
 
