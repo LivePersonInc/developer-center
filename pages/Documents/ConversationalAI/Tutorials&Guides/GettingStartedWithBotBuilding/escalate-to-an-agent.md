@@ -45,3 +45,26 @@ In our final Getting Started tutorial, we will add an Agent Escalation dialog to
 
     From here, we’ll navigate back to Conversation Builder to create our Escalation dialog.
 
+### Step 18: Create the Escalation dialog
+
+1. In **Conversation Builder**, select **Add Dialog** from the lower-left corner, and create a new standard dialog with the name ‘Escalation’.
+2. In the dialog starter, set this dialog to be triggered using patterns. Select **+ Pattern** and enter the following pattern values:
+
+    * Agent
+    * Human
+    * Representative
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/escalation_dialog_starter.png">
+
+3. On triggering this dialog, we want to transfer our user to a human agent. For this, we will use the **Agent Transfer** interaction. Select this from the integrations section of the interaction menu, and notice that we immediately receive an error message stating ‘Agent skill id is not set.’.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/agent_transfer_interaction.png">
+
+4. Modify the transfer message by clicking into the interaction and typing. Modify this message to say, "Transferring to a human agent…"
+5. Click the settings icon in the upper-right corner of the interaction. In the advanced section of **Interaction Settings**, paste in the skill ID for our Human skill that we took note of earlier.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/agent_transfer_settings.png">
+
+5. Click **Save**.
+
+    Once saved, we’ll want to re-test our deployed automation to ensure that human escalation is happening as expected.
