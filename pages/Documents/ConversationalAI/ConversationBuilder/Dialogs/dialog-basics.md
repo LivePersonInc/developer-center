@@ -92,7 +92,7 @@ When you import dialogs, consider and address any dependencies across the dialog
     * JavaScript code
     * Environment variables 
 
-    You might also need to update the credentials in the imported integrations.
+    You might also need to update the credentials in the imported integrations, if any.
 
 ### Duplicate a dialog
 

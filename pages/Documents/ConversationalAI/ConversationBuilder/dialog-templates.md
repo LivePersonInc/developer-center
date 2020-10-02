@@ -13,7 +13,8 @@ indicator: both
 
 A dialog template is a dialog that a bot developer has intentionally made available as a “template” that can be imported by others. A dialog template includes not just the dialog itself but also all other items on which the dialog relies: other dialogs, environment variables, and so on.
 
-Only dialogs of type Dialog can be made available as dialog templates.
+{: .important}
+Only dialogs of [type Dialog](conversation-builder-dialogs-dialog-basics.html#dialog-types) can be made available as dialog templates.
 
 #### Advantages of dialog templates
 You can [import a dialog](conversation-builder-dialogs-dialog-basics.html#import-a-dialog) that isn’t made available as a template, but that process automatically imports only some of the items on which a dialog can rely, namely, the integrations that are used. The rest you must manually include (other dialogs) or add after the import (environment variables and global functions). As a result, a dialog import is better suited to situations where your import requirements are more relaxed, and you are mainly interested in the dialog itself.
@@ -55,15 +56,16 @@ There are two reasons for this constraint:
     * **+ Add Bot Environment Variable**: Click this, and add to this list the environment variables upon which this dialog template relies.
     * **+ Add Global Function**: By default, this is populated with the global functions defined for the bot. Click this, and remove any functions that aren’t needed by this dialog template.
 
-    **Note:** You don't need to specify any integrations. All integrations used by this dialog template are automatically included in the actual import.
+    {: .important}
+    You don't need to specify any integrations. All integrations used by all the dialogs that are a part of the dialog template are automatically included in the actual import.
 
 6. Do one of the following:
-    * Click **Save** to save the template definition but keep it in "draft" status. This keeps the dialog template hidden.
+    * Click **Save** to save the template definition but keep it in "Draft" status. This keeps the dialog template hidden.
     * Click **Publish** to save the template definition and make it possible for other bot developers within your organization to import the dialog template. This changes the template's status to "Published."
 
-    Regardless of which action you take, in the Dialogs panel, you now see an indicator that the dialog has a template definition:
+    In the Dialogs panel, you now see an indicator that the dialog has a template definition:
 
-    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogtemplates_3.png">
+    <img style="width:400px" src="img/ConvoBuilder/dialogtemplates_3.png">
 
 {: .important}
 If you subsequently change the dialog in a way that impacts the template definition, remember to update the template definition accordingly.
@@ -85,7 +87,7 @@ Once you publish a dialog template, there is no way to unpublish it. Delete the 
     
     In the Dialogs panel, you now see an indicator that the dialog's dialog template is published:
 
-    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/dialogtemplates_3.png">
+    <img style="width:400px" src="img/ConvoBuilder/dialogtemplates_3.png">
 
 ### Delete a dialog template
 
@@ -116,7 +118,7 @@ Note the following:
 After you import a dialog template into a destination bot, it becomes a normal dialog within the bot, and it functions as if you had created the dialog from scratch.
 
 {: .important}
-Keep in mind that importing a dialog template often can involve importing many dialogs. After the import, carefully review all the imported dialogs against the dialogs that existed in the bot before the import. The goal is to ensure that you have not inadvertently imported the same dialog on multiple occasions in multiple ways, i.e., as a stand-alone dialog and/or as a part of one or more dialog templates.
+Keep in mind that importing a dialog template often can involve importing many dialogs. After the import, carefully review all the imported dialogs against the dialogs that existed in the bot before the import. The goal is to ensure that you have not inadvertently imported the same dialog in different ways on different occasions, i.e., as a stand-alone dialog and/or as a part of one or more dialog templates.
 
 **To import a dialog template**
 
@@ -142,4 +144,4 @@ Keep in mind that importing a dialog template often can involve importing many d
     * JavaScript code
     * Environment variables
 
-    You might also need to update the credentials in the imported integrations.
+    You might also need to update the credentials in the imported integrations, if any.
