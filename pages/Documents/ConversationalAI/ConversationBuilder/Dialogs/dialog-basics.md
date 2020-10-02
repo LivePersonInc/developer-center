@@ -115,9 +115,7 @@ During the operation:
 **To create a dialog**
 1. Open the bot.
 2. Click **Add Dialog** in the lower-left corner.
-3. In the Add Dialog window, select the **New Dialog** tab.
-
-4. In the dialog that appears, do the following:
+3. In the Add Dialog window, on the New Dialog tab, specify the following:
     - **Dialog Name**: Enter a descriptive name for the dialog. Use a standard naming convention to make your dialogs more sortable and easier to find.
     - **Description**: (Optional) Enter a brief description of the dialog's purpose. The description is displayed in the user interface for importing dialogs, discussed below, to help bot developers make decisions on which dialogs to select to import.
     - **Dialog Type**: Select the type of dialog; for help with this, see *Dialog types* farther above on this page.
