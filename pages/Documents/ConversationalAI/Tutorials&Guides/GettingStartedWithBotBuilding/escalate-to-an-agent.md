@@ -73,7 +73,7 @@ In this final Getting Started tutorial, you add an Agent Escalation dialog to co
 
 ### Step 19: Test the escalation
 
-1. In a separate browser tab, navigate back to the [Messaging demo page](https://vx-lp.github.io/v2/lpwm/), enter your account number, and click **Update**.
+1. Open a new browser tab, and navigate to the [Messaging demo page](https://vx-lp.github.io/v2/lpwm/). Enter your account number, and click **Update**.
 2. Click into the Messaging call to action, and wake your bot with a "hi" or "hello."
 3. From here, type in one of the patterns you used when creating the **Escalation** dialog.
 4. If successful, you now see the updated transfer message from the Agent Escalation interaction. You also hear a phone ring from your Conversational Cloud browser tab.
