@@ -10,7 +10,7 @@ permalink: tutorials-guides-getting-started-with-bot-building-deploy-the-bot.htm
 indicator: both
 ---
 
-In this tutorial, you walk through how to link your bot to Conversational Cloud, ending with an integration that transfers to a human agent.
+In this tutorial, you walk through how to link your bot to Conversational Cloud.
 
 ### Watch the video
 
@@ -19,13 +19,13 @@ In this tutorial, you walk through how to link your bot to Conversational Cloud,
 
 ### Step 13: Create a bot user
 
-In this step, you create a new user agent and skill for the bot, create a new engagement for web messaging, and connect our bot agent to the engagement.
+In this step, you create a new user agent and skill for the bot, create a new engagement for web messaging, and connect the bot agent to the engagement.
 
 1. Click on the User Management icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_user_mgmt.png"> along the left side of the Conversational Cloud page. 
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/getstartedtutorial/users_tab.png">
 
-2. From the Users tab, select the **+ Add user** button from the bottom left of the page.
+2. On the Users tab, click **+ Add user** in the lower-left corner.
 3. Fill out the **Add user** form with the following user details:
 
     * **User type**: Bot
@@ -35,21 +35,21 @@ In this step, you create a new user agent and skill for the bot, create a new en
     * **Name**: Getting Started Bot
     * **Choose login method**: API key
     * **Api key**: Generate API key
-    * **Assign Profile**: Agent
-    * **Skills**: bot
+    * **Assignment > Assign Profile**: Agent
+    * **Skills**: Bot
 	
     {: .important}
-    By typing in the skill name **bot**, a new skill with the name **bot** will be created.
+    By typing in the skill name **Bot**, a new skill with the name **bot** is created.
 
 4. Click **Save**.
 
 ### Step 14: Create an engagement
 
-1. Click on the **Campaign Builder** icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_campaign_builder.png"> along the left side of the Conversational Cloud page. 
-2. Click **+ Add Campaign** at the bottom of the page.
+1. Click the Campaign Builder icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_campaign_builder.png"> along the left side of the Conversational Cloud page. 
+2. Click **+ Add Campaign** in the lower-left corner.
 3. On the page that appears, specify the following:
 
-    * **Campaign name**: Enter "Getting Started"
+    * **Campaign name**: Enter "Getting Started."
     * **Campaign goal**: Click this, select "Interact with consumers" on the page that appears, and click **Done**.
     * **Engagement**: Click **+ Add engagement**. For the engagement source, select "Web." In the gallery that appears next, select a messaging template, and click **Next**. In the resulting Engagement Settings, select "Messaging" for the **Conversation type**. For **Routing**, select "Specific skill," and then select the "Bot" skill.
 
@@ -65,11 +65,11 @@ In this step, you create a new user agent and skill for the bot, create a new en
 ### Step 15: Add the agent connector
 
 1. Navigate back to the Getting Started bot in Conversation Builder.
-2. Select the **Agent Connectors** link from the menu bar.
+2. Click **Agent Connectors** in the menu bar in the upper-left corner.
 3. Click **Add Agent Connector** in the upper-right corner.
 4. In the Add Agent Connector dialog box, specify the following based on the bot user you created.
 
-    * **Agent User ID**: Getting Started
+    * **Agent User ID**: Getting Started Bot
     * **Role**: Agent
     * **Conversation Type**: Messaging
     * **Deploy to**: Demo
@@ -83,7 +83,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
     It might take a few minutes for the connection to be established.
 
-    To view more details about the connector, move your mouse over the i icon beside Details.
+    To view more details about the connector, move your mouse over the "i" icon beside **Details**.
 
     {: .important}
     LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
@@ -98,9 +98,9 @@ In this step, you'll be testing with Messaging, so you'll be using [this test pa
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/messaging_test_page.png">
 
 2. Enter your account number and optionally a username (just your first name will do fine), and then click **Update**.
-3. After a moment, you will see a Messaging "call to action," which corresponds to what we selected in the Campaign Builder. Click on the Messaging call to action.
-4. Start the bot by messaging ‘hi’ or ‘hello’.
-5. Test out your bot functionality as you would in the Previewer.
+3. After a moment, you will see a Messaging "call to action," which corresponds to what we selected in the Campaign Builder. Click the Messaging call to action.
+4. Start the bot by entering ‘hi’ or ‘hello.’
+5. Test the bot's functionality as you would in Conversation Builder's Preview.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/deploy_test.png">
 
