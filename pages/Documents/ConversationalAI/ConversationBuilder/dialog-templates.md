@@ -65,7 +65,7 @@ There are two reasons for this constraint:
 
     In the Dialogs panel, you now see an indicator that the dialog has a template definition:
 
-    <img style="width:400px" src="img/ConvoBuilder/dialogtemplates_3.png">
+    <img style="width:350px" src="img/ConvoBuilder/dialogtemplates_3.png">
 
 {: .important}
 If you subsequently change the dialog in a way that impacts the template definition, remember to update the template definition accordingly.
@@ -87,7 +87,7 @@ Once you publish a dialog template, there is no way to unpublish it. Delete the 
     
     In the Dialogs panel, you now see an indicator that the dialog's dialog template is published:
 
-    <img style="width:400px" src="img/ConvoBuilder/dialogtemplates_3.png">
+    <img style="width:350px" src="img/ConvoBuilder/dialogtemplates_3.png">
 
 ### Delete a dialog template
 
