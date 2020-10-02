@@ -12,60 +12,60 @@ indicator: both
 
 ### "Many Bots" design approach
 
-Historically, all of our bot capabilities would be included into a single, monolithic bot design. This bot would house all of our intent driven dialogs, our knowledge bases, fallback dialogs, and escalations. 
+Historically, all of our bot capabilities would be included in a single, monolithic bot design. This bot would house all of our intent-driven dialogs, knowledge bases, the fallback dialog, and escalations. 
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/single_bot_design.png">
 
-While this approach is certainly appropriate for small scale use cases, it results in difficulty in navigating and developing future iterations of your automation. As the dialogs stack up and become more complex for development teams to approach, scaling our automations becomes a real concern and can be difficult to manage. With this in mind, LivePerson has implemented functionality for a multiple bot approach, with each bot being responsible for its own functionality.
+While this approach is certainly appropriate for small-scale use cases, it results in difficulty in navigating and developing future iterations of your bot. As the dialogs stack up and become more complex for development teams to approach, scaling bots becomes a real concern and can be difficult to manage. With this in mind, LivePerson has implemented functionality for a multiple bot approach, with each bot being responsible for its own functionality.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/many_bots_design.png">
 
-With the addition of Bot Groups and Bot Group Collaboration, we’re able to create multiple bots which work together seamlessly to assist our users. Collaboration allows conversations to be passed around to each bot as needed, ensuring that each user has access to the automation they need to satisfy their intent. An added benefit of the many bot approach is apparent during development. Multiple developers are able to work on the same account, each focusing on a separate bot without the concern of conflicts. 
+With the addition of Bot Groups and Bot Group Collaboration, we’re able to create multiple bots that work together seamlessly to assist users. Collaboration allows conversations to be passed around to each bot as needed, ensuring that each user has access to the bot they need to satisfy their intent. An added benefit of the "many bot" approach is apparent during development. Multiple developers are able to work on the same account, each focusing on a separate bot without the concern of conflicts.
 
 ### Breaking up the monolith
 
-Upon finishing the Getting Started tutorial, you will have a single bot that handles welcoming the user, escalating to a human agent, and processing several intents. As new functionality is introduced, the size and scope of our single bot can become difficult to manage. As breaking a single bot into multiple bots is no small task, it is best to do so as early in your development process as possible. 
+After completing the [Getting Started tutorial](tutorials-guides-getting-started-with-bot-building-overview.html), you have a single bot that handles welcoming the user, processing several intents, and escalating to a human agent. As new functionality is introduced, the size and scope of this single bot can become difficult to manage. Breaking a single bot into multiple bots is no small task, so it is best to do so as early in your development process as possible. 
 
-We’ll use three separate bots as part of our many bot solution:
+We’ll use three separate bots as part of our "many bot" solution:
 
-* **Greeter Bot** which will serve to provide our existing Welcome, Goodbye, and Fallback dialogs.
-* **Order Bot** which will contain our Billing Question and Order Status dialogs.
-* **Small Talk Bot** which will contain our Agent Escalation, as well as Small Talk functionality which we will develop later on in this guide.
+* A **Greeter bot** that will serve to provide our existing Welcome, Goodbye, and Fallback dialogs.
+* An **Order bot** that will contain our Billing Question and Order Status dialogs.
+* A **Small Talk bot** that will contain our Agent Escalation and some Small Talk functionality that we'll develop later in this tutorial.
 
 ### Step 1: Create the Greeter bot
 
-As opposed to creating these new bots from scratch, we will copy our Getting Started bot into three new bots and strip away the unnecessary functionality from each.
+Instead of creating these new bots from scratch, we will copy our Getting Started bot into three new bots and strip away the unnecessary functionality from each.
 
-1. From the Getting Started bot in Conversation Builder, click on the three dot icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_three_dot_ellipsis_vert.png"> in the menu bar and navigate to **Bot Settings**.
-2. Expand the **More Settings** menu and scroll towards the bottom until you see the **Export Bot** option. Click the download icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_download.png"> to generate a JSON-formatted copy of your Getting Started bot.
-3. Back out of the Getting Started bot and from the Conversation Builder menu, select the **Import Bot** button.
-4. Select and open the downloaded JSON as your import, which will fully create a new copy of your bot, bringing you into its dialog editor. 
-5. Navigate to this automation’s **Bot Settings** menu and update the name to Greeter Bot. 
+1. From the Getting Started bot in Conversation Builder, click on the three-dot icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_three_dot_ellipsis_vert.png"> in the menu bar, and select **Bot Settings**.
+2. Expand the **More Settings** menu, and scroll towards the bottom until you see the **Export Bot** option. Click the download icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_download.png"> to generate a JSON-formatted copy of the Getting Started bot.
+3. Back out of the Getting Started bot to the dashboard of bots. Click **Import Bot** in the upper-right corner.
+4. Select and open the downloaded JSON as your import file, which will fully create a new copy of your bot, bringing you into its dialog editor. 
+5. Navigate to this bot’s **Bot Settings**, and update the name to "Greeter Bot." 
 6. Prior to saving, click the **Bot Group** dropdown and select the **Create Group** option and provide the following values in the Create Bot Group form:
     * **Bot group name**: Many bots
     * **Collaboration**: Turn on
     * **Transfer message**: BLANK_MESSAGE
     
-    Click **Create** to exit the Create Bot Group form and click **Save** from the Bot Settings menu.
+    Click **Create** to exit the Create Bot Group form, and click **Save** from the Bot Settings menu.
 
-7. Lastly, delete the dialogs that Greeter Bot is not responsible for. From the **Dialogs** menu, click the three-dot icons next to your Billing Question, Escalation, Disambiguation, and Order Status dialogs and select **Delete Dialog**. Confirm **Yes** for each.
+7. Lastly, delete the dialogs that Greeter Bot is not responsible for. From the **Dialogs** menu, click the three-dot icon next to the Billing Question dialog, and select **Delete Dialog**. Confirm **Yes**. Repeat this process to also delete the Escalation, Disambiguation and Order Status dialogs.
 
     <img class="fancyimage" style="width:250px" src="img/ConvoBuilder/advtutorial/dialog_menu.png">
 
-    Once you’ve deleted the unnecessary dialogs, back out of the Greeter Bot into the Conversation Builder menu page. Two bots should now be visible, your original Getting Started Bot as well as a new Greeter Bot. Note that the Greeter Bot is nested under the "Many bot" group.
+    Once you’ve deleted the unnecessary dialogs, back out of the Greeter Bot and return to the Conversation Builder dashboard of bots. Two bots should now be visible: your original Getting Started Bot and the new Greeter Bot. Note that the Greeter Bot is nested under the "Many bot" group.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/bots.png">
 
 ### Step 2: Create the Order bot
 
-For the Order bot, follow the same process that you used to create the Greeter bot. 
+For the Order bot, follow the same process that you used to create the Greeter bot: 
 
-1. From the Conversation Builder menu, select the **Import Bot** button.
-2. Select and open the downloaded Getting Started JSON as your import, which will fully create a new copy of your bot, bringing you into its dialog editor. 
-3. Navigate to this automation’s **Bot Settings** menu and update the name to "Order Bot." 
-4. Prior to saving, click the **Bot Group** dropdown and notice there is now a selection option for your "Many bots" group. Select that option and click **Save** from the Bot Settings menu.
-5. Delete the dialogs that Order Bot is not responsible for. From the **Dialogs** menu, click the three-dot icons next to your Welcome, Goodbye, Fallback, and Escalation dialogs and select **Delete Dialog**. Confirm **Yes** for each.
-6. Prior to exiting back to the Conversation Builder menu, verify that your Billing Question and Order Status dialogs are still set to be triggered using their associated intents. 
+1. From the Conversation Builder dashboard of bots, click **Import Bot** in the upper-right corner.
+2. Select and open the downloaded Getting Started JSON as your import file, which will fully create a new copy of your bot, bringing you into its dialog editor. 
+3. Navigate to this bot's **Bot Settings**, and update the name to "Order Bot." 
+4. Prior to saving, click the **Bot Group** dropdown, and notice there is now an option for the "Many bots" group. Select that option, and click **Save**.
+5. Delete the dialogs that Order Bot is not responsible for, i.e., the Welcome, Goodbye, Fallback, and Escalation dialogs.
+6. Verify that the Billing Question and Order Status dialogs are still set to be triggered using their associated intents. 
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/billing_question_dialog.png">
 
