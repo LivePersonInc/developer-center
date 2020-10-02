@@ -39,8 +39,8 @@ In this tutorial, a second intent will be used to trigger an Order Status dialog
 
 With the "Order Status" intent created, let’s return to Conversation Builder and use the intent to trigger a new dialog.
 
-1. Open the **Getting Started** bot in Conversation Builder.
-2. Create a new regular dialog named “Order Status”.
+1. Open your Getting Started bot in Conversation Builder.
+2. Create a new regular dialog named “Order Status.”
 
     By default, a regular dialog includes a Dialog Starter interaction, but it isn't configured yet. You'll use the [Assist tool](conversation-builder-assist.html) to do this.
 
@@ -50,7 +50,7 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_status.png">
 
-4. Add a new Text Statement to acknowledge the users intent. Add the text, "Let’s find your order."
+4. Add a new Text Statement to acknowledge the user's intent. Add the text, "Let’s find your order."
 
 5. Add a new Text Question to capture the user’s order number. Add the text, "What is your order number?"
 
@@ -61,11 +61,13 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
     {: .important}
     This mock API will successfully return order data for accounts A001001, A001010 and A001002. 
 
-    Next, capture the user’s order number as a variable: Click **+ Add Variable**. Name the variable `orderNumber`, enter `{$userMessage}` for its value, and click **Save**.
+    Still in the rule, capture the user’s order number as a variable: Click **+ Add Variable**. Name the variable `orderNumber`, and enter `{$userMessage}` for its value.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/order_num_rule.png">
 
-    By saving the result of the user’s response as the variable `orderNumber`, we will have access to that data throughout our automation. In this case, we will use that within our API call to find that user’s order.
+    Click **Save**.
+
+    By saving the result of the user’s response as the variable `orderNumber`, we will have access to that data throughout the bot. In this case, we will use that within our API call to find the user’s order.
 
 ### Step 9: Create an Order Status API integration
 
@@ -88,14 +90,14 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
     | orderStatus | {$.api_OrderStatus.orderStatus} |
     | image | {$.api_OrderStatus.image} |
 
-3. Click **Save**, and navigate back to our Order Status dialog.
-
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integration_settings.png">
+
+3. Click **Save**, and navigate back to the Order Status dialog.
 
 ### Step 10: Use the integration in a dialog
 
-1. In the upper-left corner, click **Dialogs** and return to the Order Status dialog.
-2. Following the text question where we’ve captured the users order number, create a new **Integration** interaction.
+1. In the upper-left corner, click **Dialogs**, and return to the Order Status dialog.
+2. Following the text question where we’ve captured the user's order number, create a new **Integration** interaction.
 
     From the dropdown, select your newly created OrderStatus API Integration.
 
@@ -106,7 +108,7 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
     In the Structured Question title section, add `{OrderStatus.name}`.
 
     {: .important}
-    When the integration interaction runs, it stores the response data in custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name”.
+    When the Integration interaction runs, it stores the response data in the custom data fields that you configured in the integration. `OrderStatus.name` is the Response Data Variable Name followed by the name of that custom data field, which is “name.”
 
     For the subtitle, add `{OrderStatus.orderStatus}`.
 
@@ -115,7 +117,7 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/getstartedtutorial/structured_q.png">
 
     {: .important}
-    While images should show properly in the previewer, deployed automations will need to have the image domains whitelisted. Contact your LivePerson account representative for assistance.
+    While images show properly in Preview, deployed bots need to have the image domains whitelisted. Contact your LivePerson account representative for assistance.
 
     Now let's test all this out.
 
@@ -123,7 +125,7 @@ With the "Order Status" intent created, let’s return to Conversation Builder a
 
 5. Trigger the Order Status dialog by entering "What is my order status" or something else that will match our Order Status intent.
 
-6. Follow the prompt for an order number. Type `A001001` as your order number and press Enter.
+6. Following the prompt for an order number, type `A001001` as your order number, and press Enter.
 
 7. Verify that you are successfully receiving order information that is displayed with a user’s name, order status, and image.
 

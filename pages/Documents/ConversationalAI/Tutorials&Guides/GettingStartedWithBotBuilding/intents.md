@@ -163,7 +163,7 @@ Now you can begin to build out the Billing dialog.
     Now let's see the dialog in action.
 
 8. Open the Preview window, and start a new session by clicking **Reset Session**.
-9. Enter an utterance that should match the billing intent, like, "I have a question about my bill." You should see the billing dialog's flow and the multiple choice question. Tap or enter “yes” or “no” and see what response you get.
+9. Enter an utterance that should match the billing intent, like, "I have a question about my bill." You should see the billing dialog's flow and the multiple choice question. Tap or enter “Yes” or “No” and see what response you get.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/getstartedtutorial/preview_5.png">
 
