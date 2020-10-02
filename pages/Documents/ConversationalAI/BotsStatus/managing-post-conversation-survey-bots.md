@@ -10,10 +10,9 @@ indicator: both
 
 ### Overview
 
-You can use the Bots Status application that's intended for monitoring agent connectors to monitor your [post-conversation survey bots](conversation-builder-bots-post-conversation-survey-bots.html). There are a few important distinctions to be aware of as you do so:
+You can use the Bots Status application that's intended for monitoring agent connectors to monitor the agent connector for your [post-conversation survey bots](conversation-builder-bots-post-conversation-survey-bots.html). Unlike other bots, post-conversation survey bots all share a *single* connector, making them easier to manage.
 
-* While each survey bot is listed individually in the dashboard, they all share a single agent connector.
-* Successfully deployed survey bots display "Deployed" beneath the bot name.
+Successfully deployed survey bots display "Deployed" beneath the bot name.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_monitoring1.png">
 
@@ -31,3 +30,7 @@ Redeploying the connector stops and restarts it. Use this as a troubleshooting t
 3. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon) beside the connector, and select **Redeploy Connector**.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveybot_redeploy.png">
+
+### Disable a single survey bot
+
+For information on this, see [here](conversation-builder-bots-post-conversation-survey-bots.html#how-do-i-disable-a-survey-bot).

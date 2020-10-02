@@ -10,7 +10,7 @@ permalink: tutorials-guides-getting-started-with-bot-building-escalate-to-an-age
 indicator: both
 ---
 
-In our final Getting Started tutorial, we will add an Agent Escalation dialog to connect our users with a human agent.
+In this final Getting Started tutorial, you add an Agent Escalation dialog to connect the user with a human agent.
 
 ### Watch the video
 
@@ -20,7 +20,7 @@ In our final Getting Started tutorial, we will add an Agent Escalation dialog to
 ### Step 17: Create a Human skill
 
 1. Return to the **User Management** section of the Conversational Cloud.
-2. Select the **Skills** link from the menu bar, and select the **+ Add skill** button from the lower left corner. 
+2. Select the **Skills** tab from the menu bar, and click **+ Add skill** in the lower-left corner. 
 3. Complete the **Add skill** form with the following:
 
     * **Name**: Human
