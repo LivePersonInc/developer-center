@@ -252,6 +252,7 @@
       - pagename: Overview
       - pagename: Managing Custom Bots
       - pagename: Managing Post-Conversation Survey Bots
+      - pagename: Alerts
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
@@ -265,6 +266,7 @@
     pages:
       - pagename: Getting Started
       - pagename: Bot Status Dashboard
+      - pagename: Bot Conversation Errors
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
@@ -363,8 +365,8 @@
         - subpagename: Conversation Metadata
         - subpagename: Read and Accept Events
         - subpagename: Authentication
-        - subpagename: Post Conversation Survey (PCS)
-        - subpagename: Post Conversation Survey (CSAT)
+        - subpagename: Legacy - Post Conversation Survey (PCS)
+        - subpagename: Legacy - Post Conversation Survey (CSAT)
         - subpagename: Client Properties
         - subpagename: Avoid Websocket Headers
         - subpagename: CoBrowse
@@ -673,7 +675,7 @@
           - subpagename: Conversational AI
           - subpagename: Conversational Commands
 
-- categoryname: Historical Data
+- categoryname: Reporting
   image: historical-data
   documents:
   - documentname: Consumer Messaging History API
@@ -731,6 +733,42 @@
     - pagename: Methods
       subpages:
         - subpagename: Retrieve Data Usage Logs
+  - documentname: Agent Metrics API
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/agent-view
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Agent Status
+          - subpagename: Agent List
+          - subpagename: Summary
+  - documentname: Messaging Operations API
+    basedomain: https://{domain}/operations/api/account/{accountID}
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Messaging Conversation
+          - subpagename: Messaging Queue Health
+          - subpagename: Messaging Current Queue Health
+          - subpagename: Messaging Estimated Wait Time
+          - subpagename: Messaging CSAT Distribution
+          - subpagename: Messaging Skill Segment
+          - subpagename: Messaging Agent Segment
+          - subpagename: Messaging Queue Health By Group
+
+      - pagename: Appendix
+  - documentname: Operational Realtime API
+    basedomain: https://{domain}/operations/api/account/{accountID}
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Queue Health
+          - subpagename: Engagement Activity
+          - subpagename: Agent Activity
+          - subpagename: Current Queue State
+          - subpagename: SLA Histogram
 
 - categoryname: Messaging Channels
   image: agent-interaction
@@ -811,7 +849,10 @@
   - documentname: Mobile App Messaging SDK for iOS
     pages:
     - pagename: Overview
-    - pagename: Quick Start
+    - pagename: Quick Starts
+      subpages:
+      - subpagename: Quick Start 5.2.1 and below
+      - subpagename: Quick Start - 6.0 and up (XCFramework support)
     - pagename: Configure the iOS SDK
     - pagename: Push Notifications
     - pagename: Advanced Features
@@ -864,46 +905,6 @@
   - documentname: Proactive Messaging
     pages:
     - pagename: API
-
-- categoryname: Real Time Data
-  image: rt-data
-  documents:
-  - documentname: Agent Metrics API
-    basedomain: https://{domain}/messaging_history/api/account/{accountID}/agent-view
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Agent Status
-          - subpagename: Agent List
-          - subpagename: Summary
-  - documentname: Messaging Operations API
-    basedomain: https://{domain}/operations/api/account/{accountID}
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Messaging Conversation
-          - subpagename: Messaging Queue Health
-          - subpagename: Messaging Current Queue Health
-          - subpagename: Messaging Estimated Wait Time
-          - subpagename: Messaging CSAT Distribution
-          - subpagename: Messaging Skill Segment
-          - subpagename: Messaging Agent Segment
-          - subpagename: Messaging Queue Health By Group
-
-      - pagename: Appendix
-  - documentname: Operational Realtime API
-    basedomain: https://{domain}/operations/api/account/{accountID}
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Queue Health
-          - subpagename: Engagement Activity
-          - subpagename: Agent Activity
-          - subpagename: Current Queue State
-          - subpagename: SLA Histogram
 
 - categoryname: Rich Messaging
   image: rich-media

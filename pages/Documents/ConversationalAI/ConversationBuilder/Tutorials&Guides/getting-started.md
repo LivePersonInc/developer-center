@@ -19,6 +19,9 @@ permalink: conversation-builder-tutorials-guides-getting-started.html
 indicator: both
 ---
 
+{: .important}
+Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+
 ### Overview
 
 The Getting Started tutorials include four tutorials that build on one another:
@@ -233,11 +236,11 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 11. In the upper-left corner, click **Entities**.
 
-12. On the Add Entity page, create a new entity named "bill" and add a number of entity values (synonyms) like `bill`, `billing`, `payment`, and `statement`. Press Enter to add each one.
+12. On the Add Entity page, create a new entity named "bill." Select "Value Set" as the **Entity type**, and add a number of entity values (synonyms) like `bill`, `billing`, `payment`, and `statement`. Press Enter to add each one.
 
-    <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/helloworld/addbillentity.png">
+    <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/helloworld/addbillentity.png">
 
-13. Click **Add Entity** in the lower-right corner.
+13. Click **Save** in the lower-right corner.
 
     Now let's see how adding an entity can improve the NLU matching.
 

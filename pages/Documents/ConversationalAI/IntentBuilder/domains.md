@@ -9,11 +9,48 @@ permalink: intent-builder-domains.html
 indicator: both
 ---
 
-### Add a domain
+### Add a prebuilt domain
 
-1. Access the Intent Builder application as described [here](intent-builder-overview.html#access-intent-builder).
-2. In the dashboard that lists your domains, click **New domain** in the upper-right corner.
-3. On the Add Domain page, specify the following: 
+Domains added from prebuilt domains use the [LP NLU v2 engine](intent-builder-natural-language-understanding.html#livepersons-nlu-engine). For an introduction to prebuilt domains, see [here](intent-builder-overview.html#prebuilt-domains).
+
+**To add a prebuilt domain**
+
+1. In the dashboard that lists your domains, click **Add Domain** in the upper-right corner.
+2. In the Add Domain window, click the **Prebuilt Domains** tab.
+3. Move your mouse over the desired domain. Then click **Preview** to see a description of the domain and some example intents. This helps you to verify that the domain is one you want.
+
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_domainPrebuilt.png">
+
+4. Click **Add**.
+
+    {: .important}
+    After you add the domain, there's no need to train or activate it for the first time. This has been done automatically. However, from this point forward, things work as if you had created the domain manually: You can customize the domain as you see fit. If you subsequently make any changes, you must re-train the domain to create a new model version that reflects the changes. And when ready, you’ll need to activate the new model version.
+
+
+### Overwrite from a prebuilt domain
+
+If you've added a [prebuilt domain](intent-builder-overview.html#prebuilt-domains) and customized it, but you no longer want to use your customizations, you can overwrite your domain to reflect the prebuilt domain offered by LivePerson. This operation removes all the model versions in your domain, and it creates a single model version--trained and activated--that is based on the prebuilt domain.
+
+{: .important}
+You can overwrite your domain with a prebuilt domain if you have not customized your domain's *name*. Once you do this, you break the relationship with the source prebuilt domain.
+
+**To overwrite your domain with a prebuilt domain**
+
+1. In the dashboard that lists your domains, click **Add Domain** in the upper-right corner.
+2. In the Add Domain window, click the **Prebuilt Domains** tab.
+3. Move your mouse over the prebuilt domain you want to use to overwrite your domain. Click **Add**.
+4. In the Warning dialog that appears, click **Continue**.
+
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_domainPrebuiltOverwrite.png">
+
+
+### Add a domain manually or using an import file
+
+**To add a domain manually or using an import file**
+
+1. In the dashboard that lists your domains, click **Add domain** in the upper-right corner.
+2. In the Add Domain window, click the **New Domain** tab.
+3. Specify the following: 
     * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
     * **Manual** or **Import**: If you want to manually add intents and entities to the domain, select "Manual." If you want to import them from a file, select "Import."
     * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
@@ -22,7 +59,7 @@ indicator: both
 
     * **NLU Provider**: Select the provider of the NLU engine to use. For help, see the discussion on NLU engines [here](intent-builder-natural-language-understanding.html).
     * **Language**: Select the language of the domain.
-4. Click **Add Domain**.
+4. Click **Add**.
     
     If you didn't import them, you can now add intents and entities to the domain.
 
@@ -45,7 +82,7 @@ Additionally, having said the above, the following, simplified format also works
 
 The following illustrates a well-formatted entities file:
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_importFile_entities.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_importFile_entities.png">
 
 If you're creating a Google sheet, add the intents to the first tab in the sheet, and name the tab "Intents." Then add the entities to a second tab named "Entities." The Google sheet must be public, i.e., with no file restrictions in place.
 
@@ -220,13 +257,17 @@ If the domain uses the LivePerson NLU v2 engine or a 3rd-party engine, you'll ne
 
 Because we want to return the best response to users, the NLU has a threshold for which anything below this threshold will not be shown to the user. For intents, this threshold is set to GOOD. This is based on the NLU’s level of confidence in the match. The confidence score breakdown looks like this:
 
+**LivePerson NLU v1 or 3rd-party NLU**
 * VERY GOOD: 85-100% match
-
 * GOOD: 70-85% match
-
 * FAIR PLUS: 65-70% match
-
 * FAIR: 50-65% match
+
+**LivePerson NLU v2**
+* VERY GOOD: 75-100% match
+* GOOD: 60-75% match
+* FAIR PLUS: 45-60% match
+* FAIR: 30-45% match
 
 You can't change the threshold when using intents (although you can do [this](knowledge-base-overview.html#thresholds) with knowledge bases).
 

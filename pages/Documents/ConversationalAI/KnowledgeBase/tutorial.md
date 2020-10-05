@@ -43,15 +43,18 @@ This tutorial is designed to familiarize you with Knowledge Base.
 
         Tags help to increase the accuracy of Knowledge Base search results by highlighting the key sections of the user's message.
 
-6. Click **Save**.
+3. Click **Save**.
 
-Back in the search view, you should now see your new article, which should look something like this:
+    Back in the search view, you should now see your new article, which should look something like this:
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial4.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tutorial4.png">
 
-Note that the article has a “Pending” notation on it. We add this for new articles so that a manager or supervisor can approve them before they are included in the results.
+    The article is inactive, which means it won't be returned in knowledge base searches in Knowledge Base integrations. 
 
-To continue with this tutorial, click the **Enable** link over on the right.
+    Manually added articles are inactive by default because the **Enable Article** setting is turned off by default. This is to give you the opportunity to test the article before enabling it.
+
+    For the purposes of this tutorial, the inactive status is fine, as this tutorial doesn't get into use in an Knowledge Base integration. For more on active versus inactive artcles, see [here](knowledge-base-overview.html#active-versus-inactive-articles). For information on how to enable the article, see [here](knowledge-base-articles.html#enable-or-disable-an-article).
+
 
 ### Step 3: Train and tune
 
@@ -69,7 +72,7 @@ Let’s test our knowledge base and see how the NLU will return results.
 
     This is different enough that the NLU engine will return as FAIR PLUS. Generally, in a Knowledge Base integration in a bot, we set the threshold to GOOD, so, in this new example, the article wouldn't be shown to a user. However, we can easily “train” the article to respond to this input by clicking the thumbs-up icon that's beneath the result.
 
-3. Click **thumbs up**.
+3. Click <img style="width:25px" src="img/ConvoBuilder/icon_kb_thumbsUp.png"> (**Thumbs Up** icon).
     
     This adds the utterance to a set of “positive learnings” that are used in the matching.
 
@@ -79,7 +82,7 @@ Let’s test our knowledge base and see how the NLU will return results.
 
 <div class="important">Keep in mind that when you are training articles, it's very easy to use the thumbs-up button. It's so easy that you might *overtrain* the bot using lengthy or very specific intents just because you can. Try to keep your intent qualifiers as generalized as possible so that they have a high likelihood of matching many user utterances, not just one. Overall, use the training feature sparingly.</div>
 
-What about **thumbs down**? This should be used sparingly to differentiate two articles that might have intents that are close in meaning. NLU is not a specific pattern match, but more fuzzy, so having articles with similar intents but different content should be discouraged. That said, using thumbs down can help when that does occur, to indicate which of the two articles you'd like the NLU engine to match. Simply use the thumbs-down button on the article you'd like to de-prioritize, and the NLU engine will "prefer" the other one over it.
+What about **Thumbs Down**? This should be used sparingly to differentiate two articles that might have intents that are close in meaning. NLU is not a specific pattern match, but more fuzzy, so having articles with similar intents but different content should be discouraged. That said, using thumbs down can help when that does occur, to indicate which of the two articles you'd like the NLU engine to match. Simply use the thumbs-down button on the article you'd like to de-prioritize, and the NLU engine will "prefer" the other one over it.
 
 For more best practices, see [here](conversation-builder-best-practices-train-tune-nlu.html).
 
@@ -100,7 +103,8 @@ Leveraging entities within a knowledge base provides the same benefits that doin
 
 1. Inside the domain you just created, click **Entities** in the upper-left corner.
 2. In the Add Entity panel, specify the following:
-    * **Entity name**: Enter "credentials."
+    * **Entity name**: Enter "CREDENTIALS."
+    * **Entity type**: Select "Value Set," which is the default.
     * **Entity values**: Add the values below:
         * `log in`
         * `login`
@@ -110,7 +114,7 @@ Leveraging entities within a knowledge base provides the same benefits that doin
         * `username`
         * `pin`
 
-3. Click **Add Entity**.
+3. Click **Save**.
 
 #### Connect the domain to the knowledge base
 

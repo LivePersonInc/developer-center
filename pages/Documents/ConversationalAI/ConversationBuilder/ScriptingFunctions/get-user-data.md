@@ -13,9 +13,6 @@ indicator: both
 
 Use the following built-in functions to get user data.
 
-{: .important}
-New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
-
 ### Get user channel
 Returns the platform channel the user is currently communicating on. This function returns:
 
@@ -32,7 +29,7 @@ The "lp_" prefix indicates the LivePerson platform.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getUserChannel()` | None | lp_sms, lp_web, lp_inapp, lp_whatsapp, lp_rcs, lp_abc, twilio_sms, lp_fb |
+| `getUserChannel()` | None | lp_sms, lp_web, lp_inapp, lp_whatsapp, lp_rcs, lp_abc, twilio_sms, or lp_fb |
 
 #### Example
 
@@ -44,16 +41,18 @@ botContext.printDebugMessage("channel used by the user is: " + channel);
 
 ### Get user platform ID
 
-Get User Platform Id is used to get the user’s unique platform ID.
+Get User Platform Id is used to get the user’s unique ID that's valid only within the Conversation Builder bot platform. This is the ID by which the bot identifies the user.
+
+This scripting function isn't commonly used. However, it is used by those currently using the Agent Escalation API.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getUserPlatformId()` | None | string: unique User platform ID |
+| `getUserPlatformId()` | None | string: unique user ID within Conversation Builder |
 
 #### Example
 
 ```javascript
-// get the user’s platform ID
+// get the user’s ID within CB
 var userId = botContext.getUserPlatformId();
 // display the results...
 botContext.printDebugMessage('The userPlatformId = ' + userId);

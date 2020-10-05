@@ -20,7 +20,7 @@ In Conversation Builder, the following built-in functions for managing the Conte
 {: .important}
 All update operations return a Boolean status. It is the bot developer's responsibility to ensure the operation was executed successfully.
 
-For a more in-depth introducton to the Context Session Store and details on the Conversation Orchestrator API, see [Context Session Store](maven-context-warehouse-context-session-store.html).
+For a more in-depth introducton to the Context Session Store and details on the Conversation Orchestrator API, see [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html).
 
 {: .important}
 New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
@@ -32,14 +32,12 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 **To enable the Context Session Store API for your account**
 
 1. Access the *Bot Accounts* application, and click the organization name.
-2. Click <img style="width:25px" src="img/ConvoBuilder/icon_editAccount.png"> in the upper-right corner.
-3. If necessary, click **More Settings** to show additional settings.
-4. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
-5. Select one of the following for retrieving the necessary Conversation Orchestrator credentials:
+2. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
+3. Select one of the following for retrieving the necessary Conversation Orchestrator credentials:
     * **Use Conversational Cloud Site Id** (Only available for LivePerson accounts.)
     * **Use Conversation Builder Account Id** (This is your organization ID.)
-6. Enter the ID for your selection in step 5.
-7. Click **Update Account**.
+4. Enter the ID for your selection in step 5.
+5. Click **Update Account**.
 
 #### Conversation Builder data scopes
 
@@ -74,11 +72,12 @@ If the namespace already exists, this method does not create an additional one. 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `registerContextNamespace(namespace)` | namespace (string) – The name of the namespace | Boolean |
+| `registerContextNamespace(namespace, ttl)` | namespace (string) – The name of the namespace<br><br>ttl (long) - "time to live," i.e., how long in seconds that the properties in the namespace are available (3 hours = 10,800 seconds, 1 day = 86,400 seconds, 1 week = 604,800 seconds, etc.). The namespace still exists after the `ttl` expires. If you set the `ttl` and subsequently change it, the new `ttl` only applies to properties added to the namespace after the change; existing properties remain unaffected.  | Boolean |
 
 ##### Example
 
 ```javascript
-var success = botContext.registerContextNamespace("airlineTicketingBot");
+var success = botContext.registerContextNamespace("airlineTicketingBot", 10800);
 botContext.printDebugMessage("Register Namespace: " + success);
 ```
 

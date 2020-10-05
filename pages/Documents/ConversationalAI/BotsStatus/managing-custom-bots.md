@@ -24,7 +24,7 @@ When you stop an agent, in-progress conversations are left as is until the agent
 **To stop an agent**
 
 1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
-2. Use the filter controls to display the bots for the relevant environment.
+2. Use the filter controls to display the bots for the relevant environment. (The bots for Production are displayed by default.)
 3. Select the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) beside the bot name.
 4. Select **Stop Agent**.
 5. Click **Yes** to confirm the action.
@@ -38,7 +38,7 @@ Starting an agent gets the connector running so that new conversations can start
 **To start an agent**
 
 1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
-2. Use the filter controls to display the bots for the relevant environment.
+2. Use the filter controls to display the bots for the relevant environment. (The bots for Production are displayed by default.)
 3. Select the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) beside the bot name.
 4. Select **Start Agent**.
 
@@ -54,7 +54,8 @@ This capability to switch the environment eliminates the need to delete the agen
 
 1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
 2. Use the filter controls to display the bots for the relevant environment.
-3. Stop the bot if it is currently online.
+3. Stop the bot if it is currently online. (The bots for Production are displayed by default.)
+
 4. Select the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) beside the bot name.
 5. Select **Re-deploy Agent**.
 

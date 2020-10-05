@@ -2,6 +2,7 @@
 #Additional Release
 Additional:
   versions: [
+    { version: "5.2.2" },
     { version: "5.2.1" },
     { version: "5.1.2" },
     { version: "5.0.1" },
@@ -11,6 +12,7 @@ Additional:
 #Limited Release
 Limited:
   versions: [
+   { version: "5.2.1.swift5.3.xcode12.beta4"},
     { version: "4.0.0.swift4.2.signed" },
     { version: "4.0.0.swift4.2" },
     { version: "4.0.0.xcodebeta6" }
@@ -19,6 +21,8 @@ Limited:
 #Regular Release
 Regular: 
   versions: [
+    { version: "6.0.1" },
+    { version: "6.0.0" },
     { version: "5.2.0" },
     { version: "5.1.1" },
     { version: "5.1.0" },
