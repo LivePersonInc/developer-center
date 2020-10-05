@@ -29,7 +29,7 @@ Adding an external knowledge base can take some time, so the Knowledge Base appl
 
 Once you start the process of adding the knowledge base -- i.e., you provide a name for the knowledge base -- if you then click **Cancel**, you are prompted to choose whether to save your work:
 
-<img style="width:300px" src="img/ConvoBuilder/kb_ext_save_draft_1.png">
+<img style="width:400px" src="img/ConvoBuilder/kb_ext_save_draft_1.png">
 
 Click **Yes** to save a draft.
 
