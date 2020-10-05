@@ -69,46 +69,46 @@ For the Order bot, follow the same process that you used to create the Greeter b
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/billing_question_dialog.png">
 
-    As long as you are still in the same account, this link should still remain active. If you have created a new account for your "Many bots" group, you will need to export and import the previously created domain into this new account. 
+    As long as you are still in the same account, this link remains active. If you have created a new account for your "Many bots" group, you will need to export and import the previously created domain into the new account. 
 
-    Back in the Conversation Builder menu, ensure that your Order Bot is nested underneath your "Many bots" group along with the Greeter Bot.
+    Back in the Conversation Builder dashboard of bots, ensure that your Order Bot is nested underneath your "Many bots" group along with the Greeter Bot.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/bots_2.png">
 
 ### Step 3: Create the Small Talk Bot
 
-As much of the functionality of our Small Talk Bot has yet to be constructed, we will create this bot from scratch and associate it with our "Many bots" group.
+As much of the functionality of the Small Talk Bot has yet to be constructed, you will create this bot from scratch and associate it with the "Many bots" group.
 
-1. From the Conversation Builder menu, select the **New Bot** button from the upper right corner.
-2. Select a new **Custom Bot** and in the resulting Custom Bot form, fill in the following:
+1. From the Conversation Builder dashboard of bots, click **New Bot** in the upper-right corner.
+2. Select a new **Custom Bot**, click **Next**, and in the resulting Custom Bot form, fill in the following:
     * **Name**: Small Talk Bot
     * **Bot Language**: English - United States
     * **Bot Group**: Many bots
 
 	Click **Create Bot** when finished.
-3. At this time, this bot will only serve to provide Escalation functionality. Delete both the Welcome and Fallback dialogs that are provided on bot creation. 
-4. Select **Add Dialog** from the lower left corner and give our dialog a name of Escalation.
-5. Complete this dialog following the same directions as was done in our Getting Started guide, using the patterns `agent`, `representative`, and `human` to trigger the dialog.
+3. At this time, this bot will only serve to provide Escalation functionality, so delete both the Welcome and Fallback dialogs that are provided on bot creation. 
+4. Click **Add Dialog** in the lower-left corner and give our dialog a name of "Escalation."
+5. Complete the Dialog Starter interaction using the process that you used in the Getting Started tutorial, i.e., using the patterns `agent`, `representative`, and `human` to trigger the dialog.
 
     **Tip**: A quick and easy way to add these patterns is to click the **Library** link, and select the "Help" set of patterns.
 
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/advtutorial/library_link1.png">
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/library_link2.png">
 
-6. Create a new **Agent Transfer** interaction, modifying the text to read “Transferring to a human agent…”. In the settings menu for this interaction, make sure to enter the corresponding **Human** skill ID for your user profile. Please refer to the Getting Started guide for details on this process.
+6. Create a new **Agent Transfer** interaction, modifying the text to read “Transferring to a human agent…”. In the Interaction Settings for this interaction, make sure to enter the corresponding **Human** skill ID for your user profile. Please refer to the Getting Started tutorial for details on this process.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/agent_transfer_interaction.png">
 
-    When complete, back out of the Small Talk bot to the Conversation Builder menu. You should see this newly created bot nested under the "Many Bots" group along with the Greeter and Order bots.
+    When complete, back out of the Small Talk bot to the dashboard of bots. You should see the newly created bot nested under the "Many bots" group along with the Greeter and Order bots.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/bots_3.png">
 
 ### Step 4: Deploying the "Many Bots" group
 
-Due to the nature of the Many Bots solution, each bot in our group will need to be deployed with an agent connector in order to see the collaboration in action. To do so, new bot agents will need to be created and assigned to each bot in our group. 
+Due to the nature of the Many Bots solution, each bot in our bot group will need to be deployed with an agent connector in order to see the collaboration in action. To do so, new bot agents will need to be created and assigned to each bot in our group. 
 
 1. Navigate to the **User Management** section of the Conversational Cloud by clicking the **Manage users and skills** icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_user_mgmt.png"> on the left.
-2. From the users menu, select the **+ Add user** button from the lower-left corner.
+2. In the lower-left corner, click **+ Add user**.
 3. Fill out the **User details** form with the following information:
     * **User type**: Bot
     * **Login name**: Greeter Bot
@@ -124,26 +124,26 @@ Due to the nature of the Many Bots solution, each bot in our group will need to 
     * **Assign profile**: Agent
     * **Skills**: Greeter
 
-    Unless you have previously created your Greeter skill, you will need to type it into the skills field to create it. 
+    Unless you have previously created your Greeter skill, you will need to type it into the **Skills** field to create it. 
 
-	When finished, click **Save**.
+	Click **Save**.
 
-4. Repeat the previous steps for both our Order Status and Small Talk bot agents. All fields will remain the same except where you’ll need to replace “Greeter” with either Order Status or Small Talk.
+4. Repeat the previous steps for both our Order Status and Small Talk bot agents. All fields will remain the same except where you’ll need to replace “Greeter” with either "Order Status" or "Small Talk."
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/users_list.png">
 
-5. Once you’ve created all of your bot user agents, navigate to Campaign Builder and click on your Getting Started campaign. We want to ensure that our Greeter Bot is the one that picks up all new conversations, so edit our existing engagement to point to the Greeter Skill.
+5. Once you’ve created all of your bot user agents, navigate to Campaign Builder, and select the Getting Started campaign. We want to ensure that the Greeter Bot is the one that picks up all new conversations, so edit the existing engagement to point to the Greeter Skill.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/engagement.png">
 
-    Click **Edit** in the Engagement section. In the Routing section of the Engagement Settings, set the Specific skill to Greeter.
+    Click **Edit** in the Engagement section. In the Routing section of the Engagement Settings, set the specific skill to "Greeter."
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/engagement_2.png">
 
-    When finished, click **Publish** in the lower right hand corner.
+    When finished, click **Publish** in the lower-right corner.
 
-6. Once published, navigate back to Conversation Builder. The bot agents that have been created now need to be connected to their associated bot automations. Within each of our 3 bots, navigate to the Agent Connectors menu, select Add Agent Connector, and complete the **Add Agent Connector** form as follows:
-    * **Agent User ID**: The bot agent which corresponds to this automation.
+6. Once published, navigate back to Conversation Builder. The bot agents that have been created now need to be connected to their associated bots. Within each of the 3 bots, click **Agent Connectors** on the menu, click **Add Agent Connector**, and complete the **Add Agent Connector** form as follows:
+    * **Agent User ID**: The bot agent that corresponds to this bot
     * **Role**: Agent
     * **Conversation Type**: Messaging
     * **Deploy to**: Demo
