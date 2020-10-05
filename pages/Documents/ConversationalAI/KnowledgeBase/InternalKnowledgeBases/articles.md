@@ -77,7 +77,7 @@ Next, still in Conversation Builder, build out the applicable dialog to make use
 
 #### Preview the conversation
 
-Use Conversation Builder's Preview tool or the Knowledge Base's Chat tool to preview the conversation and verify the content is returned and rendered as you expect.
+Use Conversation Builder's Preview tool to preview the conversation and verify the content is returned and rendered as you expect.
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_advSettings5.png">
 
