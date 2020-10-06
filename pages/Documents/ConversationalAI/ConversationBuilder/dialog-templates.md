@@ -61,9 +61,10 @@ There are two reasons for this constraint:
 
 6. Do one of the following:
     * Click **Save** to save the template definition but keep it in "Draft" status. This keeps the dialog template hidden.
-    * Click **Publish** to save the template definition and make it possible for other bot developers within your organization to import the dialog template. This changes the template's status to "Published."
-
-    In the Dialogs panel, you now see an indicator that the dialog has a template definition:
+    * Click **Publish** to save the template definition and move it to "Published" status. This makes it possible for other bot developers within your organization to import the dialog template.
+    <br>
+    <br>
+    In the Dialogs panel, you now see an indicator that the dialog has a template definition, either in Draft or Published status:
 
     <img style="width:350px" src="img/ConvoBuilder/dialogtemplates_3.png">
 
