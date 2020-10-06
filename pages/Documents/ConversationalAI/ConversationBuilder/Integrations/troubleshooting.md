@@ -13,6 +13,18 @@ indicator: both
 
 Use this page to help you troubleshoot common issues when working with integrations in Conversation Builder.
 
+### Troubleshooting common issues
+
+#### New lines stored in variables
+
+One issue that commonly occurs on mobile phones in particular is that the consumer adds another line to their message, that new line ( \\n ) is stored as a part of a variable, and the variable is subsequently used in an integration, causing it to fail.
+
+For example, if the consumer's address is stored in a variable as "123 my address \n something somewhere 11111," and the variable is used in an integration, the integration will fail. This is by design to help to prevent injection attacks in the API.
+
+You can avoid this new line issue by [cleaning the data](conversation-builder-variables-slots.html#cleaning-variable-data) before setting or storing it in a variable.
+
+To troubleshoot and check for this issue, use the [printDebugMessage](conversation-builder-scripting-functions-log-debug.html#print-debug-message) scripting function to log debug messages to the console and verify that the data is as you expect.
+
 ### Troubleshooting transfers
 
 If you're trying to transfer a conversation to a live agent or another bot, but it isn't working, the reason could be one of several. (For some practice with transfers, complete the [Escalate to an Agent](tutorials-guides-getting-started-with-bot-building-escalate-to-an-agent.html) tutorial.)

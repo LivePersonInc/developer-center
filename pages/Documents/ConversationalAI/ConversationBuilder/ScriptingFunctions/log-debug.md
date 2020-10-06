@@ -46,11 +46,15 @@ botContext.logEscalationEvent(botContext.getCurrentUserMessage(), 'LivePerson');
 
 ### Print debug message
 
-The Print Debug Message is used to log what user said in the debug console of the bot. For instance, the `response` variable stores the most recent messages from the user, which we print to the debugger using `printDebugMessage`.
+Print Debug Message is used to log debug messages to the console, so you can associate events in the console with actions performed in the bot. For example, in the code example below, the `response` variable stores the most recent message from the consumer, which we print to the console using `printDebugMessage`.
+
+Using Print Debug Message is particularly helpful when you are doing something programmatically. You can print debug messages (or log custom events as described farther above) until you're confident that the implementation is working as you expect.
+
+Keep in mind that simply printing a debug message might not always reveal an issue. It can be helpful to use quotation marks to clearly indicate the start and the end of the debug message; this lets you see leading/trailing white space, new lines due to \\n, and so on.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `printDebugMessage(message)` | message (string) – A message to print to the debug logs. | None |
+| `printDebugMessage(message)` | message (string) – A message to print to the debug logs | None |
 
 #### Example
 

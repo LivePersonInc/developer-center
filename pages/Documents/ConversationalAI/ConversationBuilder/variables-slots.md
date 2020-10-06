@@ -43,6 +43,10 @@ You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 
 The [Get and Set Bot Variables functions](conversation-builder-scripting-functions-get-set-contextual-data.html#get-and-set-bot-variable) can be used to store and access variables in the Pre-Process / Post-Process Code or the Process User Response JavaScript [code panels](conversation-builder-interactions-configuration-custom-code.html).
 
+#### Cleaning variable data
+
+Before setting or storing data in a variable, in the [Process User Response code](conversation-builder-interactions-configuration-custom-code.html#process-user-response), it's a good idea to "clean" or "sanitize" the data by parsing it and transforming it to remove problematic issues, i.e., remove leading or trailing white space, remove new lines ( \\n ) and special characters, and so on.
+
 ### Slots
 
 Slots are a *special type* of variable. Most of the time, you will use [variables](#variables) to take what a user says and hold on to it for later use. Slots are useful for more specialized use cases.
