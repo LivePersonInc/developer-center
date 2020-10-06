@@ -19,7 +19,7 @@ Only dialogs of [type Dialog](conversation-builder-dialogs-dialog-basics.html#di
 #### Advantages of dialog templates
 You can [import a dialog](conversation-builder-dialogs-dialog-basics.html#import-a-dialog) that isn’t made available as a template, but that process automatically imports only some of the items on which a dialog can rely, namely, the integrations that are used. The rest you must manually include (other dialogs) or add after the import (environment variables and global functions). As a result, a dialog import is better suited to situations where your import requirements are more relaxed, and you are mainly interested in the dialog itself.
 
-In contrast, when a bot developer makes a dialog available as a template that can be imported, she must specify all the items on which the dialog relies in a "template definition." The system then automatically includes all these items when the dialog template is imported.
+In contrast, when a bot developer makes a dialog available as a template that can be imported, she must specify all the items that the dialog relies on in a "template definition." The system then automatically includes all these items when the dialog template is imported.
 
 For quick, casual copies of dialogs, a dialog import can be handy. But when you want to formalize the import process for a dialog -- and ensure that other bot developers import all required items -- make the dialog available as a dialog template.
 
@@ -53,8 +53,8 @@ There are two reasons for this constraint:
     * **Description**: Enter a brief description of the dialog’s functionality. This description is shown to bot developers when importing dialog templates.
     * **+ Add Dialog**: Select and add the dialogs upon which this dialog relies, if any. You can only select to include dialogs of type Dialog (no Fallback, Disambiguation, or Auto Escalation dialog). Keep this in mind when designing and building the dialog itself, so there are no dependencies on other dialog types. For example, often the validation of the consumer's input can rely on the Fallback dialog for handling; consider employing a different technique in this case.
     * **Domains**: This is a read-only list of all the domains used by all the dialogs that are a part of the dialog template. All domain associations will be maintained when the dialog template is imported by others. However, only [prebuilt domains](intent-builder-overview.html#prebuilt-domains) are included in the actual import. If an associated domain doesn't exist within your organization or it isn't a prebuilt domain, you'll need to add it manually.
-    * **+ Add Bot Environment Variable**: Click this, and add to this list the environment variables upon which this dialog template relies.
-    * **+ Add Global Function**: By default, this is populated with the global functions defined for the bot. Click this, and remove any functions that aren’t needed by this dialog template.
+    * **+ Add Bot Environment Variable**: Click this, and add to this list the environment variables that this dialog template relies on.
+    * **+ Add Global Function**: Click this, and specify the global functions that this dialog template relies on. To do this, copy and paste each needed function from the left panel to the right panel; then click **Add**.
 
     {: .important}
     You don't need to specify any integrations. All integrations used by all the dialogs that are a part of the dialog template are automatically included in the actual import.
