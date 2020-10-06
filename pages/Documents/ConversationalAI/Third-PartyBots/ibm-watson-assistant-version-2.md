@@ -680,6 +680,43 @@ To close a chat or messaging conversation, we utilize the action object as we di
 }
 ```
 
+### Invoke LivePerson Function
+
+During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.
+
+To invoke a LivePerson Function, we utilize the action object as we did for a close chat/conversation (see example above). In the example below, the **Watson Assistant** JSON response should be mirrored as follows:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        "Trigger LivePerson Function"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "name": "INVOCATION",
+      "type": "client",
+      "parameters": {
+        "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
+        "payload": "{ "some": "stuff"}",
+        "failOnError": true
+        
+      },
+      "result_variable": "none"
+    }
+  ]
+}
+```
+
+To retrieve the ***lambdaUuid*** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+
+In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter
+
+The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**
+
 ### Engagement attributes as context
 
 Third-Party bots allow the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if the `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 7.1.
