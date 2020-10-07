@@ -177,8 +177,3 @@ This error happens when there was not possible to get any response from the vend
  
 #### Errors Solution
 Please check [Faas](third-party-bots-custom-integration.html)
-
-
-
-
-
