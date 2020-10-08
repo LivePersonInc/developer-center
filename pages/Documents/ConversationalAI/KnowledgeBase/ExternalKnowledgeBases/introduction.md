@@ -23,6 +23,19 @@ Within the Knowledge Base application, an external knowledge base serves as a co
 
 By using an AI-enabled knowledge base, you can offer your consumers a more helpful experience. AI-enabled knowledge bases use [Natural Language Understanding](intent-builder-natural-language-understanding.html) (NLU) technology to understand and intelligently match what consumers are asking for to articles in your knowledge base.
 
+### Assessing your content for Messaging
+
+Before getting started with an external knowledge base, it’s a good idea to take stock of the content in your CMS in order to assess its readiness for messaging.
+
+In general, messages are short. Sending content that’s too long or complex can create poor consumer experiences. For the best consumer experience, consider the following:
+
+* Make sure that all required information (e.g., title, summary, and content) is as brief as possible.
+* If you require more than a brief answer, use a content URL, so the consumer can be directed to an external location for more information.
+* Use rich content, such as images. For information on supported LivePerson attributes, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html#supported-liveperson-attributes).
+* Consider the channels you are serving when preparing your content. For example, SMS can only support very simple textual content.
+
+Keep in mind that, while knowledge bases do support URLs for video and audio, Video and Audio [statements](conversation-builder-interactions-statements.html) currently aren’t supported by Conversational Cloud. For this reason, they can’t be added to dialogs in Conversation Builder. As an alternative for video, you can use a Text statement that includes a video URL as a link.
+
 ### Getting started with a draft KB
 
 Adding an external knowledge base can take some time, so the Knowledge Base application gives you the option to save a knowledge base as a "draft." This lets you step away from the configuration work and come back to it at a later time.

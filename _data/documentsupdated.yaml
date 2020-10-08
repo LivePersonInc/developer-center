@@ -280,6 +280,7 @@
           - subpagename: Best Practices
           - subpagename: Limits
       - pagename: Using Intents with KBs
+      - pagename: Sending Content to Consumers
       - pagename: Common Settings & Tasks
   - documentname: Bots Status
     pages:
