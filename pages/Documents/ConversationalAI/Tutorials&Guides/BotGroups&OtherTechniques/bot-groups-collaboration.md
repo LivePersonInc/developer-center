@@ -154,15 +154,21 @@ Due to the nature of the Many Bots solution, each bot in our bot group will need
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/start.png">
 
-7. Once all agent connectors have been added, navigate to the [bot demo deployment site](https://vx-lp.github.io/v2/lpwm/) and test as you did with the previous Getting Started bot. Saying “Hello” results in your Greeter bot responding. Next, type “I have a question about my bill”. This results in the Order Bot taking over and directing to the appropriate intent. Follow this by typing “agent” to see the Small Talk bot handle the escalation to a human agent.
+7. Once all agent connectors have been added, navigate to the [bot demo deployment site](https://vx-lp.github.io/v2/lpwm/) and test as you did with the previous Getting Started bot. Saying “Hello” results in your Greeter bot responding.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_greeter.png">
+
+    Next, type “I have a question about my bill”. This results in the Order Bot taking over and directing to the appropriate intent.
+    
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_order.png">
+
+    Follow this by typing “agent” to see the Small Talk bot handle the escalation to a human agent.
+
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_smalltalk.png">
 
     Seamlessly, the different bots that have been created will enter and exit the conversation to meet the needs of your users. When the Greeter bot is unable to handle the “Billing Question” intent, it looks to its collaborator bots to see whether they are able to assist. Note that the bot name displayed will change based on which bot is currently working with our users.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_greeter.png">
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_order.png">
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_smalltalk.png">
-
-    With our bots now properly split up and working in tandem to handle a user's needs, there are additional improvements and best practices that we can implement to ensure proper handling and understanding of our users intents.
+    With our bots now properly split up and working in tandem to handle a user's needs, there are additional improvements and best practices that we can implement to ensure proper handling and understanding of our users' intents.
 
 ### What's next?
 
