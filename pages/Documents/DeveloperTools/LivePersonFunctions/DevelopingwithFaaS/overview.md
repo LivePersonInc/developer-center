@@ -59,8 +59,6 @@ You can access the variable during runtime by using `process.env['YOUR_ENV']`. *
 
 See also [Making Functions configurable](liveperson-functions-development-best-practices.html#making-functions-configurable).
 
-### Headers
-Not all headers are allowed when invoking the lambda manually or through an event source.  Keys inside the Header object will be rejected when they contain a `.` character due to security concerns.
 
 ### Next steps
 
