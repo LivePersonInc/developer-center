@@ -50,7 +50,7 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
 
 ### Print the most recent user message
 
-To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print the consumer's most recent message to the Bot Logs window. For more on this function, see [here](conversation-builder-scripting-functions.html#print-debug-message).
+To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print the consumer's most recent message to the Bot Logs window. For more on this function, see [here](conversation-builder-scripting-functions-log-debug.html#print-debug-message).
 
 ### Events glossary
 
