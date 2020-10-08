@@ -586,3 +586,40 @@ For sending Encoded Metadata with multiple responses one must provide an additio
 ```
 
 Figure 8.8 MulitMessage Activity excerpt containing encodedMetadata
+
+### Invoke LivePerson Function Activity
+
+During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service) platform. This provides a way to run custom logic with a bot.
+
+To invoke a LivePerson Function, we utilize the `channelData` `action-parameter` as we did for the above examples and add the `lambdaUid` of the LivePerson Function.
+
+To retrieve the ***lambdaUuid*** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+
+In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter
+
+The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**
+
+An example of an invocation can be seen below:
+
+
+```json
+{
+  "type": "message",
+  "text": "Trigger LivePerson Function",
+  "channelData": {
+    "messageAudience": "AGENTS_AND_MANAGERS",
+    "action": {
+      "name": "INVOCATION",
+      "type": "client",
+      "parameters": {
+        "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
+        "payload": "{ "some": "stuff"}",
+        "failOnError": true
+      },
+      "result_variable": "none"
+    }
+  }
+}
+```
+
+Figure 9.1 LivePerson Function Invocation with payload
