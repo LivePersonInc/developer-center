@@ -30,7 +30,7 @@ The code of each lambda is parsed and syntax validated to reduce the amount of p
 
 ### Editor Sidebar
 
-By pressing the marked button you are able to hide or show the sidebar. This sidebar offers you access to two tabs (Settings and Payload, see below for more information). On smaller screens it will be hidden by default. On larger screens, it is shown by default.
+By pressing the marked button you are able to hide or show the sidebar. This sidebar offers you access to three tabs (Settings, Debug and Payload, see below for more information). On smaller screens it will be hidden by default. On larger screens, it is shown by default.
 
 <img class="fancyimage" src="img/faas-sidebar.png" alt="LivePerson Functions Editor Sidebar">
 
@@ -55,8 +55,12 @@ You can access the variable during runtime by using `process.env['YOUR_ENV']`. *
 
 **Developer discretion is advised**, please be sure not to use confidential data such as credentials or secrets in the environment variables as these are saved and available in text form to anyone with access to the account. Functions has a secret storage service that can be leveraged for this purpose.
 
+**Note**, they are certain reserved variables, that are used by the platform and therefore they are not available to the consumer.
+
 See also [Making Functions configurable](liveperson-functions-development-best-practices.html#making-functions-configurable).
 
+### Headers
+Not all headers are allowed when invoking the lambda manually or through an event source.  Keys inside the Header object will be rejected when they contain a `.` character due to security concerns.
 
 ### Next steps
 

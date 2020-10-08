@@ -75,7 +75,6 @@ If you add more than one command of a certain type (e.g. 2 messages) **only the 
 
 Please have a look at [this page](function-as-a-service-developing-with-faas-events-templates.html) for further insight into the available events and their related templates. You can also have a look at the related templates per messaging-event within the LivePerson Functions application itself.
 
-### Step-by-Step implementation guide
 
 #### Step 1 - Create function
 
