@@ -52,6 +52,8 @@ Using Print Debug Message to display messages or values from within your JavaScr
 
 Keep in mind that simply printing a debug message might not always reveal an issue. It can be helpful to use quotation marks to clearly indicate the start and the end of the debug message; this lets you see leading/trailing white space, new lines due to \\n, and so on.
 
+Logged debug messages are displayed in the [bot's logs](conversation-builder-testing-deployment-debugging.html).
+
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `printDebugMessage(message)` | message (string) – A message to print to the debug logs | None |

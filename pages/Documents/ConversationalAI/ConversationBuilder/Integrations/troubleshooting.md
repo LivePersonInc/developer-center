@@ -17,9 +17,9 @@ Use this page to help you troubleshoot common issues when working with integrati
 
 #### New lines stored in variables
 
-One issue that commonly occurs on mobile phones in particular is that the consumer adds another line to their message, that new line ( \\n ) is stored as a part of a variable, and the variable is subsequently used in an integration, causing it to fail.
+One issue that commonly occurs (on mobile phones in particular) is that the consumer adds a new line to their message, that new line ( \\n ) is stored as a part of a variable, and the variable is subsequently used in an integration, causing it to fail.
 
-For example, if the consumer's address is stored in a variable as "123 my address \n something somewhere 11111," and the variable is used in an integration, the integration will fail. This is by design to help to prevent injection attacks in the API.
+For example, if the consumer's address is stored in a variable as "123 Main Street \n New York, New York 12345," and the variable is used in an integration, the integration will fail. This is by design to help to prevent injection attacks in the API.
 
 You can avoid this new line issue by [cleaning the data](conversation-builder-variables-slots.html#cleaning-variable-data) before setting or storing it in a variable.
 
