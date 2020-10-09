@@ -12,13 +12,21 @@ indicator: both
 
 ### Introduction
 
-When you add an external knowledge base, one important step in the process is to map the external CMS' article data model to LivePerson Knowledge Base. This is done by providing a Jolt transformation specification that can be used to "transform" the response that's returned from the API call into the LivePerson Knowledge Base article schema.
+When you are adding an external knowledge base, there are a few points in the process where you need to provide a Jolt transformation spec that can be used to "transform" the response that's returned from the given request into the LivePerson Knowledge Base article schema. This is necessary to map the external CMS' article data model to LivePerson Knowledge Base.
 
-LivePerson provides default Jolt transformation specifications for a few, popular CMS vendors, e.g., Salesforce and Zendesk. If you’ve customized the CMS’ data schema, you’ll need to adjust the default specification accordingly. If you use another CMS vendor, you'll need to write the specification from scratch.
+When adding the knowledge base, if you were able to select your CMS provider from the **Content Provider** list in the UI, a default spec is available, and it's provided at these points:
+
+<img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_5.png">
+
+The default spec is pre-built for a default data structure. You can use the spec as is. Alternatively, if you've customized the CMS' data model (e.g., you've added a custom attribute), you can use it as a starter template.
+
+If you weren't able to select your CMS provider from the **Content Provider** list, you'll need to write the spec from scratch, as no default spec is provided at these points:
+
+<img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_6.png">
 
 ### Supported LivePerson attributes
 
-When you add an external knowledge base [with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), one setup step involves configuring the request to fetch the articles' metadata. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
+When adding an external knowledge base [with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), one step involves configuring the request to fetch the articles' metadata. This includes defining the transformation spec for the data that's returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -27,7 +35,7 @@ When you add an external knowledge base [with LivePerson AI](knowledge-base-exte
 | tags | A list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. | no |
 | category | Assigning a category lets you filter and find articles based on categories in the Knowledge Base application. | no |
 
-When you add an external knowledge base [with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), a second setup step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation specification for the data that is returned. The following LivePerson attributes are supported:
+When adding an external knowledge base [with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), a second step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation spec for the data that's returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -45,7 +53,7 @@ When you add an external knowledge base [with LivePerson AI](knowledge-base-exte
 {: .important}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
 
-When you add an external knowledge base [without LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one setup step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation specification for the articles that are returned. The following LivePerson attributes are supported:
+When  adding an external knowledge base [without LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation spec for the articles that are returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -65,36 +73,26 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
 ### Map content metadata
 
-1. In the Add Knowledge Base window, click **Map Content Metadata** if you haven't already done so. 
-2. For **Content Provider**, select the name of your CMS provider. If you don't see your provider's name listed, select "Others," and then enter the name.
+1. In the Add Knowledge Base window, click **Customize** if you haven't already done so.
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_1.png">
-    
-    If you were able to select your CMS provider's name, this step populates the **Transformation Spec** editor with a vendor-specific, Jolt transformation specification that's designed for the given request (API call). This is a pre-built specification for a default data structure. You can use the specification as is. Alternatively, if you've customized the CMS' data model (e.g., you've added a custom attribute), you can use it as a starter template.
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_7.png">
 
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_2.png">
+2. In the **Transformation Spec** editor (left panel), adjust or write the Jolt transformation spec using the examples and guidance [here](knowledge-base-external-knowledge-bases-writing-a-transformation-specification.html). 
 
-    If you weren't able to select your CMS provider's name, a default specification isn't available. You'll need to write the specification from scratch.
+    <img style="width:800px" src="img/ConvoBuilder/kb_cms_map_metadata_1.png">
 
-3. If needed, adjust or write the Jolt transformation spec using the examples and guidance [here](knowledge-base-external-knowledge-bases-writing-a-transformation-specification.html). 
-
-4. Click **Test Spec**.
-
-    This step verifies that the specification uses well-formed JSON.
-
-    If you were able to select your CMS provider's name in the **Content Provider** field, this step also populates the **Sample Input** editor with some default sample data in JSON format.
-
-    <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_3.png">
-
-5. In the **Sample Input** editor:
+3. In the **Sample Data** editor (middle panel):
 
     * If the editor has default input, you can use it as is or replace it with your own, e.g., with the CMS' response payload.
-    * If the editor is empty, take your CMS' response payload and paste it here.
+    * If the editor is empty, take your CMS' response payload and paste it in.
+    <br>
+    <br>
+4. Click **Validate Spec**.
 
-6. Click **Validate Spec**.
-    
-    This step verifies that your sample input uses well-formed JSON. It also verifies that the specification and sample input meet all LivePerson requirements. For example, if you've omitted a mandatory field, you'll see an error. If you've included a field that's not supported, you'll see a warning.
+    This step verifies that the spec uses well-formed JSON and that the spec and sample input meet all LivePerson requirements. For example, if you've omitted a mandatory field, you'll see an error. If you've included a field that's not supported, you'll see a warning.
 
-    This step also populates a third, read-only **Review Output** panel that illustrates the output when the sample input JSON is transformed using the specification. Behind the scenes, the output is JSON too. However, it's presented in a friendlier, record format, so it's faster and easier to evaluate whether the specification is working as you expect.
+    This step also populates the third, read-only **Review Output** panel. This panel illustrates the output when the sample input JSON is transformed using the spec. Behind the scenes, the output is JSON too. However, it's presented in a friendlier, record format, so it's faster and easier to evaluate whether the spec is working as you expect.
 
     <img style="width:800px" src="img/ConvoBuilder/kb_cms_map_metadata_4.png">
+
+5. Click **Save**.

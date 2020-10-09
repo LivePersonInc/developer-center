@@ -38,8 +38,12 @@ After making any changes to the content in the CMS, sync with the CMS (described
 
 1. Click **Add Knowledge Base** in the upper-right corner.
 2. On the **AI Enabled** tab of the window that appears, select **External Knowledge Base**.
+
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_3.png">
+
 3. Specify the following:
-    * **Data Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
+    * **Knowledge Base Name**: Enter a descriptive name, e.g., “Technical Support FAQs.”
+    * **Content Provider**: Select the name of the content provider. If the provider isn't listed, select "Other," and enter the name.
     * **Domain**: Select the name of the domain that contains the intents that you will associate with the articles. Take care when selecting the domain; you can't change the domain after adding the knowledge base.
 4. Click **Next**.
 
@@ -49,10 +53,10 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Method**: Select the type of HTTP request method. 
     * **URL**: Enter the request target, the URL.
     * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authorization if applicable.
-    * **Add Request Headers**: Add any request headers to include in the request.
-    * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
-    * **Add Post Body**: Enter the payload to send if applicable.
-    * Click **Map Content Metadata**, and map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
+    * **+ Add Request Headers**: Add any request headers to include in the request.
+    * **+ Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
+    * **+ Add Post Body**: Enter the payload to send if applicable.
+    * **Map Content Metadata**: Here you need to provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
 
     **Note**: Configure the connector payload to target only the content that you want to use as a part of this knowledge base. If you add the knowledge base with clear domain scoping -- limiting the content as needed -- the knowledge base will perform better and be easier to tune.
 
@@ -70,7 +74,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send if applicable.
     * **Cache Article Content**: If you want to temporarily cache the article content that’s returned at run time for improved performance, select the duration in minutes. 
-    * Click **Map Content Metadata**, and map the single article’s content data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
+    * **Map Content Metadata**: Here again you need to provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the single article’s content data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
 9. Click **Save**.
 
 ### Associate an article with an intent

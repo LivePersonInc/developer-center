@@ -34,8 +34,12 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
 
 1. Click **Add Knowledge Base** in the upper-right corner.
 2. In the window that appears, select the **Other Connection** tab, and then select **External Knowledge Base without LivePerson AI**.
+
+    <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_wo_ai_2.png">
+
 3. Specify the following:
-    * **Data Source Name**: Enter a descriptive name for the knowledge base, e.g., “Technical Support FAQs.”
+    * **Knowledge Base Name**: Enter a descriptive name, e.g., “Technical Support FAQs.”
+    * **Content Provider**: Select the name of the content provider. If the provider isn't listed, select "Other," and enter the name.
 4. Click **Next**.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_wo_ai_1.png">
@@ -46,10 +50,10 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
     * **Method**: Select the type of HTTP request method.
     * **URL**: Enter the request target, the URL.
     * **Credential**: Select the [credential](bot-accounts-credentials.html) to use for authorization if applicable.
-    * **Add Request Headers**: Add any request headers to include in the request.
-    * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
-    * **Add Post Body**: Enter the payload to send if applicable.
-    * Click **Map Content Metadata**, and map the article suggestions/answers data model (schema) to the LivePerson Knowledge Base data model. For help with this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
+    * **+ Add Request Headers**: Add any request headers to include in the request.
+    * **+ Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
+    * **+ Add Post Body**: Enter the payload to send if applicable.
+    * **Map Content Metadata**: Here you need to provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the article suggestions/answers data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
 7. Click **Save**.
 
 ### Test the CMS integration

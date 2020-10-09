@@ -12,11 +12,11 @@ indicator: both
 
 ### Introduction
 
-The data schema used by your CMS differs from that used by LivePerson Knowledge Base, so mapping the content from the former to the latter is a required step in setting up an external knowledge base. This involves defining a Jolt transformation specification to transform the data that's retrieved from the CMS. Jolt is an open-source, JSON-to-JSON transformation library.
+The data schema used by your CMS differs from that used by LivePerson Knowledge Base, so mapping the content from the former to the latter is a required step in setting up an external knowledge base. This involves defining a Jolt transformation spec to transform the data that's retrieved from the CMS. Jolt is an open-source, JSON-to-JSON transformation library.
 
-If you’re using a popular CMS vendor (e.g., Salesforce or Zendesk), LivePerson provides a default, vendor-specific, Jolt specification. You’ll need to adjust the default specification accordingly if you’ve customized the CMS’ data schema. On the other hand, if you’re using a CMS vendor for which no default specification is available, you’ll need to write one from scratch. In either case, use the examples that follow as a guide.
+If you’re using a popular CMS vendor (e.g., Salesforce or Zendesk), LivePerson provides a default, vendor-specific, Jolt spec. You’ll need to adjust the default specification accordingly if you’ve customized the CMS’ data schema. On the other hand, if you’re using a CMS vendor for which no default spec is available, you’ll need to write one from scratch. In either case, use the examples that follow as a guide.
 
-Jolt provides several, out-of-the-box transforms that you can use when writing the specification; these are described [here](https://github.com/bazaarvoice/jolt#stock-transforms). The Shift transform in particular does most of the heavy work when it comes to the transform; it specifies how the input JSON should be “shifted around” to make the output JSON. All of the examples that follow use the Shift transform.
+Jolt provides several, out-of-the-box transforms that you can use when writing the spec; these are described [here](https://github.com/bazaarvoice/jolt#stock-transforms). The Shift transform in particular does most of the heavy work when it comes to the transform; it specifies how the input JSON should be “shifted around” to make the output JSON. All of the examples that follow use the Shift transform.
 
 The Shift transform supports very simple to very complex data transformations, powered by wildcards: *, &, @, $, and #. The examples that follow cover what's needed for transformation to the LivePerson Knowledge Base article schema. To learn about more complex use cases, see the Jolt test samples [here](https://github.com/bazaarvoice/jolt/tree/master/jolt-core/src/test/resources/json/shiftr), which are documented by the Jolt team.
 
