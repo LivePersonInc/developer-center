@@ -17,7 +17,7 @@ indicator: both
 2. In the dashboard that lists your knowledge bases, click **Add Knowledge Base** in the upper-right corner.
 3. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**.
 4. Specify the following:
-    * **Data source name**: Enter a display name for the knowledge base.
+    * **Knowledge Base Name**: Enter a display name for the knowledge base.
     * **Language**: Select the language of the knowledge base. The default value is English. For details on how the language is used, see [here](knowledge-base-internal-knowledge-bases-introduction.html#languages) in the overview.
     * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. The Google sheet must be public, i.e., with no file restrictions in place. For details on creating an import file, see farther below. 
         

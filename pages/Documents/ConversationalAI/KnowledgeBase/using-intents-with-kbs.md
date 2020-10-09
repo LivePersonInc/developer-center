@@ -26,7 +26,8 @@ You associate a domain with an external knowledge base when you [add the knowled
 <img style="width:700px" src="img/ConvoBuilder/kb_add_ext.png">
 
 And you likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base): 
-<img style="width:700px" src="img/ConvoBuilder/kb_add_int.png">
+
+<img style="width:500px" src="img/ConvoBuilder/kb_add_int.png">
 
 Associating the domain gives you access to the domain's intents, so you can associate them with the articles. This is the next step in connecting your content to intents.
 

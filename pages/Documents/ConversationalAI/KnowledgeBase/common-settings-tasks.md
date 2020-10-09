@@ -21,7 +21,7 @@ This topic contains information on settings and tasks that are common to both [e
 
 ### Common, configurable settings
 
-* **Data source name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
+* **Knowledge Base Name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
 * **Intent Association**: If you've associated a domain with the knowledge base, this setting is read-only and says, "Domain Intents." However, if the knowledge base is an internal knowledge bases that uses [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), this says, "Knowledge Base Intents," and it gives you the option to [convert](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) to Domain intents.
 * **Public**: If you don't want other users in your Conversational Cloud account to be able to view and edit the knowledge base in the Knowledge Base application, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
 
