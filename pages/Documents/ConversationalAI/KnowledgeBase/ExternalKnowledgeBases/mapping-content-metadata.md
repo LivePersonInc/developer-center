@@ -73,7 +73,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
 ### Map content metadata
 
-1. In the Add Knowledge Base window, click **Customize** if you haven't already done so.
+1. If you need to adjust or write the Jolt transformation spec, click **Customize** in the Add Knowledge Base window.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_7.png">
 
