@@ -12,9 +12,9 @@ indicator: both
 
 ### Introduction
 
-When you are adding an external knowledge base, there are a few points in the process where you need to provide a Jolt transformation spec that can be used to "transform" the response that's returned from the given request into the LivePerson Knowledge Base article schema. This is necessary to map the external CMS' article data model to LivePerson Knowledge Base.
+When you are adding an external knowledge base, there are a few points in the process where you need to provide a Jolt transformation spec that can be used to "transform" the response returned from the given request into the LivePerson Knowledge Base article schema. This is necessary to map the external CMS' article data model to LivePerson Knowledge Base.
 
-When adding the knowledge base, if you were able to select your CMS provider from the **Content Provider** list in the UI, a default spec is available, and it's provided at these points:
+If you were able to select your CMS provider from the **Content Provider** list, a default spec is available and provided at these points:
 
 <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_5.png">
 
