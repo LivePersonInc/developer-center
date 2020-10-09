@@ -394,6 +394,7 @@ Called to indicate that an internal SDK error occurred.
 >
 > ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION
 >
+> - Deprecated since September 28, 2020.
 > - To get the type param from the Intent, use LivePersonIntents.getOnErrorTaskType(intent).
 > - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
 >
@@ -406,6 +407,21 @@ Called to indicate that an internal SDK error occurred.
 | type      | TaskType (enum) | The category or type of error. |
 | message   | String          | A detailed message on the error. |
 
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
+>
+> - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
+> - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
+>
+> **Callback:** 
+>
+> onError(LpError lpError, String message);
+
+| Parameter | Type | Description |
+|----|----|----|
+| lpError | LpError (enum)| The error.   |
+| message | String        | A detailed message on the error. |
 
 
 ### LivePerson Callbacks
@@ -455,7 +471,9 @@ public interface LivePersonCallback {
     void onConnectionChanged(boolean isConnected);
     
     // Error Events
+    @Deprecated @LPDeprecated(since = 1601280000) // September 28, 2020
     void onError(TaskType type, String message);
+    void onError(LpError lpError, String message);
 }
 ```
 
@@ -528,7 +546,9 @@ public interface ILivePersonIntentExtras{
     String LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA = "LP_IS_CONNECTED_INTENT_BOOLEAN_EXTRA";
     
     // Error Extras
+    @Deprecated @LPDeprecated(since = 1601280000) // September 28, 2020
     String LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA = "LP_ON_ERROR_TASK_TYPE_INTENT_INT_EXTRA";
+    String LP_ON_ERROR_INTENT_INT_EXTRA = "LP_ON_ERROR_INTENT_INT_EXTRA";
     String LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA = "LP_ON_ERROR_MESSAGE_INTENT_STRING_EXTRA";
 }
 ```
@@ -537,6 +557,9 @@ public interface ILivePersonIntentExtras{
 ### TaskType enum:
 
 ```java
+/**
+* @deprecated Since September 28, 2020
+*/
 enum TaskType {
   CSDS,
   IDP,
@@ -557,3 +580,28 @@ enum TaskType {
 | INVALID_CERTIFICATE | Error with a peer's certificate (server cert not valid, cert pinning mismatch, etc). |
 | USER_EXPIRED        | The user's authentication has expired. |
 | CLOSING_SOCKET      | A request has timed out while trying to reach a server, and as a result we are closing our socket. |
+
+### LpError enum:
+
+```java
+enum class LpError {
+  IDP,
+  CSDS,
+  INVALID_CERTIFICATE,
+  SOCKET,
+  TIMEOUT,
+  INVALID_SDK_VERSION,
+  UNKNOWN
+}
+```
+
+| Type | Description |
+|----|----|
+| IDP                 | An error occurred during the authentication process, which is usually because of a wrong or expired authentication key. |
+| CSDS                | Internal server error. |
+| INVALID_CERTIFICATE | Error with a peer's certificate (server cert not valid, cert pinning mismatch, etc). |
+| SOCKET              | Error opening a socket to the server or a request has timed out while trying to reach a server, and as a result we are closing our socket. |
+| TIMEOUT             | A general timed out error. |
+| INVALID_SDK_VERSION | Your host app is using an old SDK version and cannot be initialized. |
+| UNKNOWN             | General SDK error. |
+

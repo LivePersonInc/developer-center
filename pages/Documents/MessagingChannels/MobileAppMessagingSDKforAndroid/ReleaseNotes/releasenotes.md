@@ -15,7 +15,7 @@ indicator: messaging
 
 # Android Messaging SDK - Version 5.4.0
 
-**Release date:** September 23, 2020
+**Release date:** October 08, 2020
 
 # Overview
 Android Mobile Messaging SDK version 5.4.0 release includes  support  of auto logout with few bug fixes.
@@ -41,6 +41,52 @@ Note: Auto logout works only for authenticated users.
 
 # Attribute Update:
 [lp_hide_ui_until_auth](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_hide_ui_until_auth) is removed. Previous conversations will now not be displayed automatically until the consumer's authentication information is validated.
+
+# Retry Mechanism Update:
+Notify host app immediately when failed to authenticate consumer instead of performing periodic reties.
+
+# New Callback:
+## Added following error events and error callback:
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
+>
+> - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
+> - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
+>
+> **Callback:** 
+>
+> onError(LpError lpError, String message);
+
+| Parameter | Type | Description |
+|----|----|----|
+| lpError | LpError (enum)| The error.   |
+| message | String        | A detailed message on the error. |
+
+More details can be found at [LivePerson Callbacks](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks)
+
+## Added [LpError enum](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#lperror-enum)
+```java
+enum class LpError {
+  IDP,
+  CSDS,
+  INVALID_CERTIFICATE,
+  SOCKET,
+  TIMEOUT,
+  INVALID_SDK_VERSION,
+  UNKNOWN
+}
+```
+
+| Type | Description |
+|----|----|
+| IDP                 | An error occurred during the authentication process, which is usually because of a wrong or expired authentication key. |
+| CSDS                | Internal server error. |
+| INVALID_CERTIFICATE | Error with a peer's certificate (server cert not valid, cert pinning mismatch, etc). |
+| SOCKET              | Error opening a socket to the server or a request has timed out while trying to reach a server, and as a result we are closing our socket. |
+| TIMEOUT             | A general timed out error. |
+| INVALID_SDK_VERSION | Your host app is using an old SDK version and cannot be initialized. |
+| UNKNOWN             | General SDK error. |
 
 # Bugs Fixed:
 - Android SDK crash due to empty RecyclerView object.
@@ -336,6 +382,68 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **handlePush(Context context, Bundle data, String brandId, boolean showNotification)** , use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
+
+# Android Messaging SDK - Version 4.6.1
+
+**Release date:** October 08, 2020
+
+# Overview
+Android Mobile Messaging SDK version 4.6.0 release includes the change of retry mechanism of authentication. SDK will notify host app immediately when failed to authenticate consumer instead of performing periodic reties.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.6.0 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.6.0)**
+
+# New Callback:
+## Added following error events and error callback:
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
+>
+> - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
+> - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
+>
+> **Callback:** 
+>
+> onError(LpError lpError, String message);
+
+| Parameter | Type | Description |
+|----|----|----|
+| lpError | LpError (enum)| The error.   |
+| message | String        | A detailed message on the error. |
+
+More details can be found at [LivePerson Callbacks](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks)
+
+## Added [LpError enum](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#lperror-enum)
+```java
+enum class LpError {
+  IDP,
+  CSDS,
+  INVALID_CERTIFICATE,
+  SOCKET,
+  TIMEOUT,
+  INVALID_SDK_VERSION,
+  UNKNOWN
+}
+```
+
+| Type | Description |
+|----|----|
+| IDP                 | An error occurred during the authentication process, which is usually because of a wrong or expired authentication key. |
+| CSDS                | Internal server error. |
+| INVALID_CERTIFICATE | Error with a peer's certificate (server cert not valid, cert pinning mismatch, etc). |
+| SOCKET              | Error opening a socket to the server or a request has timed out while trying to reach a server, and as a result we are closing our socket. |
+| TIMEOUT             | A general timed out error. |
+| INVALID_SDK_VERSION | Your host app is using an old SDK version and cannot be initialized. |
+| UNKNOWN             | General SDK error. |
+
+# Deprecations:
+The old Error Events [ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#error-events) and [Error Callback: void onError(TaskType type, String message);](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks) are deprecated. 
 
 # Android Messaging SDK - Version 4.6.0
 
