@@ -93,6 +93,6 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
     This step also populates the third, read-only **Review Output** panel. This panel illustrates the output when the sample input JSON is transformed using the spec. Behind the scenes, the output is JSON too. However, it's presented in a friendlier, record format, so it's faster and easier to evaluate whether the spec is working as you expect.
 
-    <img style="width:800px" src="img/ConvoBuilder/kb_cms_map_metadata_4.png">
+    <img style="width:500px" src="img/ConvoBuilder/kb_cms_map_metadata_4.png">
 
-5. Click **Save**.
+5. When you have finished with the spec, click **Save**.
