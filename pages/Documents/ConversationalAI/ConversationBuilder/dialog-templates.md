@@ -29,7 +29,7 @@ A dialog that is made available as a template functions just like it would if it
 
 Once you make a dialog available as a template, the dialog can no longer be imported as a dialog. It can only be imported as a dialog template.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogtemplates_1.png">
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/dialogtemplates_1.png">
 
 There are two reasons for this constraint:
 
@@ -53,8 +53,8 @@ There are two reasons for this constraint:
     * **Description**: Enter a brief description of the dialog’s functionality. This description is shown to bot developers when importing dialog templates.
     * **+ Add Dialog**: Select and add the dialogs upon which this dialog relies, if any. You can only select to include dialogs of type Dialog (no Fallback, Disambiguation, or Auto Escalation dialog). Keep this in mind when designing and building the dialog itself. For example, normal dialogs often rely on logic in a Fallback dialog, such as counting how many times a fallback has been triggered in a conversation. As you craft your dialogs and dialog templates, consider employing different techniques.
     * **Domains**: This is a read-only list of all the domains used by all the dialogs that are a part of the dialog template. All domain associations will be maintained when the dialog template is imported by others. However, only [prebuilt domains](intent-builder-overview.html#prebuilt-domains) are included in the actual import. If an associated domain doesn't exist within your organization or it isn't a prebuilt domain, you'll need to add it manually.
-    * **+ Add Bot Environment Variable**: Click this, and add to this list the environment variables that this dialog template relies on.
-    * **+ Add Global Function**: Click this, and specify the global functions that this dialog template relies on. To do this, copy and paste each needed function from the left panel to the right panel; then click **Add**.
+    * **+ Add Bot Environment Variable**: Click this, and add to this list the environment variables that the dialog template relies on.
+    * **+ Add Global Function**: Click this, and specify the global functions that the dialog template relies on. To do this, click **View Existing Global Functions**, copy the needed functions, close the window, and paste them into the Global Functions field.
 
     {: .important}
     You don't need to specify any integrations. All integrations used by all the dialogs that are a part of the dialog template are automatically included in the actual import.
