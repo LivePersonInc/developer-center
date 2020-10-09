@@ -43,7 +43,7 @@ Note: Auto logout works only for authenticated users.
 [lp_hide_ui_until_auth](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_hide_ui_until_auth) is removed. Previous conversations will now not be displayed automatically until the consumer's authentication information is validated.
 
 # Retry Mechanism Update:
-Notify host app immediately when failed to authenticate consumer instead of performing periodic reties.
+Notify host app immediately when failed to authenticate consumer instead of performing periodic retries.
 
 # New Callback:
 ## Added following error events and error callback:
@@ -388,10 +388,10 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 **Release date:** October 08, 2020
 
 # Overview
-Android Mobile Messaging SDK version 4.6.0 release includes the change of retry mechanism of authentication. SDK will notify host app immediately when failed to authenticate consumer instead of performing periodic reties.
+Android Mobile Messaging SDK version 4.6.1 release includes the change of retry mechanism of authentication. SDK will notify host app immediately when failed to authenticate consumer instead of performing periodic retries.
 
 ## Environmental Requirements
-The Android Mobile Messaging SDK version 4.6.0 uses:
+The Android Mobile Messaging SDK version 4.6.1 uses:
 - Minimum API version 21
 - Compile API version 28
 - Target API version 28
