@@ -26,7 +26,7 @@ If you weren't able to select your CMS provider from the **Content Provider** li
 
 ### Supported LivePerson attributes
 
-When adding an external knowledge base [with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), one step involves configuring the request to fetch the articles' metadata. This includes defining the transformation spec for the data that's returned. The following LivePerson attributes are supported:
+When [adding an external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), one step involves configuring the request to fetch the articles' metadata. This includes defining the transformation spec for the data that's returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -35,7 +35,7 @@ When adding an external knowledge base [with LivePerson AI](knowledge-base-exter
 | tags | A list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. | no |
 | category | Assigning a category lets you filter and find articles based on categories in the Knowledge Base application. | no |
 
-When adding an external knowledge base [with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), a second step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation spec for the data that's returned. The following LivePerson attributes are supported:
+When [adding an external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), a second step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation spec for the data that's returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -55,7 +55,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
 **Tip**: For information on how to send article content to consumers, see [here](knowledge-base-sending-content-to-consumers.html).
 
-When  adding an external knowledge base [without LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation spec for the articles that are returned. The following LivePerson attributes are supported:
+When [adding an external knowledge base without LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation spec for the articles that are returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -95,6 +95,6 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
     This step also populates the third, read-only **Review Output** panel. This panel illustrates the output when the sample input JSON is transformed using the spec. Behind the scenes, the output is JSON too. However, it's presented in a friendlier, record format, so it's faster and easier to evaluate whether the spec is working as you expect.
 
-    <img style="width:500px" src="img/ConvoBuilder/kb_cms_map_metadata_4.png">
+    <img style="width:450px" src="img/ConvoBuilder/kb_cms_map_metadata_4.png">
 
 5. When you have finished with the spec, click **Save**.
