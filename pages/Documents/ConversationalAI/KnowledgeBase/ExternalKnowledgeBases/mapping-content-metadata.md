@@ -53,6 +53,8 @@ When adding an external knowledge base [with LivePerson AI](knowledge-base-exter
 {: .important}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
 
+**Tip**: For information on how to send article content to consumers, see [here](knowledge-base-sending-content-to-consumers.html).
+
 When  adding an external knowledge base [without LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation spec for the articles that are returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
