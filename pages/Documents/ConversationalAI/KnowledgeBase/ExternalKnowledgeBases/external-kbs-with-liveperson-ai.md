@@ -56,7 +56,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **+ Add Request Headers**: Add any request headers to include in the request.
     * **+ Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **+ Add Post Body**: Enter the payload to send if applicable.
-    * **Map Content Metadata**: Here you need to provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
+    * **Transformation Spec**: Here you need to provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
 
     **Note**: Configure the connector payload to target only the content that you want to use as a part of this knowledge base. If you add the knowledge base with clear domain scoping -- limiting the content as needed -- the knowledge base will perform better and be easier to tune.
 
@@ -74,7 +74,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **Add Post Body**: Enter the payload to send if applicable.
     * **Cache Article Content**: If you want to temporarily cache the article content that’s returned at run time for improved performance, select the duration in minutes. 
-    * **Map Content Metadata**: Here again you need to provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the single article’s content data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
+    * **Transformation Spec**: Here again you need to provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the single article’s content data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
 9. Click **Save**.
 
 ### Associate an article with an intent

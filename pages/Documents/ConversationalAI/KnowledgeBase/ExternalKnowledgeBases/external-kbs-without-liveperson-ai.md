@@ -53,7 +53,7 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
     * **+ Add Request Headers**: Add any request headers to include in the request.
     * **+ Add Request Parameters**: Add any request parameters to pass in the URL’s query string.
     * **+ Add Post Body**: Enter the payload to send if applicable.
-    * **Map Content Metadata**: Here you need to provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the article suggestions/answers data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
+    * **Transformation Spec**: Here you need to provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the article suggestions/answers data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
 7. Click **Save**.
 
 ### Test the CMS integration
