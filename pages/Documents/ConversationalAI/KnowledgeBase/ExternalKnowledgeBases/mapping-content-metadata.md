@@ -89,7 +89,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
     <br>
 4. Click **Validate Spec**.
 
-    This step verifies that the spec uses well-formed JSON and that the spec and sample input meet all LivePerson requirements. For example, if you've omitted a mandatory field, you'll see an error. If you've included a field that's not supported, you'll see a warning.
+    This verifies that the spec uses well-formed JSON and that the spec and sample input meet all LivePerson requirements. For example, if you've omitted a mandatory field, you'll see an error. If you've included a field that's not supported, you'll see a warning.
 
     This step also populates the third, read-only **Review Output** panel. This panel illustrates the output when the sample input JSON is transformed using the spec. Behind the scenes, the output is JSON too. However, it's presented in a friendlier, record format, so it's faster and easier to evaluate whether the spec is working as you expect.
 
