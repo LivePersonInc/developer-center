@@ -88,16 +88,16 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
 
 ### Step 11: Create the Small Talk knowledge base
 
-1. From the **Conversational AI** section of the Conversational Cloud, navigate to the **Knowledge Base** section, and select the **Add Knowledge Base** button.
+1. From the **Conversational AI** section of Conversational Cloud, navigate to the **Knowledge Base** section. Then click **Add Knowledge Base** in the upper-right corner.
 2. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**.
 3. Specify the following:
-    * **Data source name**: Small Talk KB
+    * **Knowledge Base Name**: Small Talk KB
     * **Language**: English
     * **Intent Association**: Domain intents
     * **Domain**: Getting Started Domain
 
     {: .important}
-    Using Domain intents allows us to use intents created via Intent Builder for triggering our Knowledge Base articles. 
+    Using Domain intents allows us to use intents created via Intent Builder for triggering Knowledge Base articles. 
 
 	Click **Save**.
 
@@ -123,21 +123,23 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
 
     <img style="width:800px" src="img/ConvoBuilder/advtutorial/ib_small_talk_kb.png">
 
-    Our final step will be to include our Knowledge Base search in a dialog to be triggered by our Small Talk meta intent.
+    Our final step will be to include a Knowledge Base search in a dialog triggered by the Small Talk meta intent.
 
 ### Step 12: Create the Small Talk dialog
 
-1. Navigate to **Conversation Builder** and select the Small Talk Bot, which to this point only includes the Escalation dialog.
+1. Navigate to **Conversation Builder**, and select the Small Talk Bot, which at this point only includes the Escalation dialog.
 
-2. Add a new standard Dialog by clicking the **Add Dialog** button in the lower-left corner and giving the Dialog a name of "Small Talk". 
+2. Add a new standard Dialog. Click **Add Dialog** in the lower-left corner, and give the dialog a name of "Small Talk". 
 
-3. Using the Assist tool, select the Getting Started Domain and associate with your Small Talk Meta Intent. Note the asterisk next to the Small Talk Intent, which serves to signify that this is a Meta Intent.
+3. Using the Assist tool, associate the dialog starter with the Getting Started Domain and the Small Talk meta intent in specific. As you do, note the asterisk next to the Small Talk intent, which serves to signify that it is a meta intent.
 
     <img style="width:800px" src="img/ConvoBuilder/advtutorial/ib_assist_tool.png">
 
-    This ensures that any of the contained intents within our Small Talk meta intent will trigger this specific dialog.
+    <img style="width:800px" src="img/ConvoBuilder/advtutorial/ib_assist_tool_2.png">
 
-4. Before moving further, select **Integrations** from the upper menu to create our Knowledge Base integration, following the same procedures for the previously used FAQ knowledge base.
+    This ensures that any of the intents within the Small Talk meta intent will trigger this dialog.
+
+4. Click **Integrations** from the menu in the upper-left corner. Create a Knowledge Base integration following the same procedure used earlier for the FAQ knowledge base.
     * **Integration Name**: SmallTalk
     * **Response Data Variable Name**: SmallTalk
     * **Integration Type**: Knowledge Base
@@ -149,18 +151,18 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
 
     <img style="width:800px" src="img/ConvoBuilder/advtutorial/small_talk_integration.png">
 
-5. Return to the newly created Small Talk dialog, which should only contain the dialog starter which has been tied to the Small Talk intent. 
+5. Return to the newly created Small Talk dialog, which should only contain the dialog starter that has been tied to the Small Talk intent. 
 
-6. Select a new Integration interaction and from the drop down menu, select the SmallTalk integration. 
+6. Add a new **Integration** interaction, and from the dropdown menu, select the "SmallTalk" integration. 
 
-7. Follow this integration with a new text_statement interaction. Modify the text content to read the integration response variable, `{SmallTalk.article}`.
+7. Follow this integration with a new **Text** statement interaction. Modify the text content to read the integration response variable, `{SmallTalk.article}`.
 
-    <img style="width:800px" src="img/ConvoBuilder/advtutorial/small_talk_integration_2.png">
+    <img style="width:700px" src="img/ConvoBuilder/advtutorial/small_talk_integration_2.png">
 
-8. Test by opening the previewer, resetting your session, and typing in a variety of your small talk phrases. If successful, you will receive different responses for each intent despite the fact that we have a single meta intent triggering this dialog.
+8. Test by opening the previewer, resetting your session, and typing in a variety of your small talk phrases. If successful, you will receive different responses for each intent despite the fact that we have a single meta intent that triggers this dialog.
 
     <img style="width:350px" src="img/ConvoBuilder/advtutorial/small_talk_preview.png">
 
-    This is successful because while the meta intent triggers the process, we are sending the user’s message to our knowledge base. Each of the articles within the knowledge base are triggered by individual standard intents. Adding additional small talk phrases simply requires creating new intents, nesting them under our Small Talk meta intent, and creating a corresponding Small Talk KB article. No additional dialogs will be required.
+    This is successful because, while the meta intent triggers the process, we are sending the user’s message to our knowledge base. Each of the articles within the knowledge base are triggered by individual standard intents. Adding additional small talk phrases simply requires creating new intents, nesting them under the Small Talk meta intent, and creating a corresponding Small Talk KB article. No additional dialogs will be required.
 
     Congratulations on completing this tutorial series!
