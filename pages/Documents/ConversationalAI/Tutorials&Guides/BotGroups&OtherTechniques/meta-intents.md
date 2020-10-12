@@ -12,6 +12,11 @@ indicator: both
 
 In order to maintain an optimal user experience, bots should handle not only business-focused intents, but should strive to respond intelligently to small talk from the user. Users asking “how are you” or “are you a bot” should receive a more intelligent response than simply hitting a fallback message. One intelligent solution for handling these types of utterances is by using a Knowledge Base to access and read back responses to a variety of small talk. However, simply pushing all of your KB searches in your Fallback Dialog can complicate your bot design with too many integration calls in one dialog. This final section of this tutorial series details creating a Small Talk meta intent and a Small Talk knowledge base, each of which to be implemented in our Small Talk Bot.
 
+### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/465691767" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
+
 ### Step 10: Create the Small Talk meta intent
 A meta intent is a wrapper for a grouping of related intents.
 
