@@ -112,7 +112,7 @@ When you define a variable or slot, you specify how long to keep the stored data
 
 <img class="fancyimage" width="800" src="img/ConvoBuilder/variablesSlotsDuration.png">
 
-There are four options for the duration:
+There are three options for the duration:
 
 * **Request**: The data will be saved for that particular use of the variable or slot. This option is only useful if the next question in the tree depends on the data.
 
@@ -120,7 +120,7 @@ There are four options for the duration:
 
 * **Session**: The data will be saved for the entirety of the consumer's browser session. This is useful when using the data to query APIs and retrieve information that might be useful for multiple dialogs.
 
-* **Forever**: The data will be saved and accessible by the bot for 180 days. **Note**: The "Forever" option will be deprecated in a future release. Use of the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html) instead of this option is recommended.
+If you need to store data for the long term, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
 
 ### Displaying data to the consumer
 
