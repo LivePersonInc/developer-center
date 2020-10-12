@@ -16,10 +16,11 @@ If your domain is using the [LivePerson NLU v2 engine](intent-builder-natural-la
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester.png">
 
-The Model Tester is designed to:
+The Model Tester is designed to meet the need for broad testing coverage of the intents in a domain.
 
-* Provide broad testing coverage for the domain
-* Help you determine if the model is improving or regressing from one version to the next
+As you test and train the intents, you can use the Model Tester to help you to determine if the resulting model is improving or regressing from one version to the next.
+
+### High-level workflow
 
 The general workflow for using the Model Tester is this:
 
