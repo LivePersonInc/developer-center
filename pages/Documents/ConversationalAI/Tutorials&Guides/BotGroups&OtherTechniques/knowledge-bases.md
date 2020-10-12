@@ -68,52 +68,52 @@ In this step, you create a new FAQ knowledge base using an existing CSV file. Th
 
 ### Step 9: Create the Knowledge Base integration in the Fallback Dialog
 
-Prior to displaying our Fallback message for unrecognized utterances, create a Knowledge Base integration to check with our FAQ as a last resort to check if the user’s intent can be satisfied using a Knowledge Base article.
+Prior to displaying the Fallback message for unrecognized utterances, create a Knowledge Base integration to check if the user’s intent can be satisfied with an FAQ article as a last resort.
 
-1. From the **Conversational AI** section of the Conversational Cloud, navigate to the **Conversation Builder** and select the Greeter Bot.
-2. Click on the **Integrations** menu from the menu bar along the top. In the **Add Integration** form, complete with the following details:
+1. From the **Conversational AI** section of the Conversational Cloud, navigate to **Conversation Builder**, and select the Greeter Bot.
+2. Click **Integrations** in the menu in the upper-left corner, then click **Add Integration** in the upper-right corner. In the **Add Integration** form, specify the following:
 
     * **Integration Name**: FAQ
     * **Response Data Variable Name**: FAQ
     * **Integration Type**: Knowledge Base
     * **Knowledge Base**: Getting Started KB
 
-    The remainder of the form should have been auto completed when the Knowledge Base Integration Type was selected. Ensure that the form matches the content in the screenshot.
+    The remainder of the form should have been auto completed when the Knowledge Base integration type was selected. Ensure that the form matches the content in the screenshot.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_integration_add.png">
 
-3. Click **Save** in the lower right hand corner and on success, navigate to the Fallback dialog.
-4. In the Fallback, create a new **Integration** interaction and drag and drop the interaction above our **fallback_starter** interaction. From the **Select integration** dropdown, select the newly created FAQ Integration. 
+3. Click **Save** in the lower right hand corner, and on success, navigate to the Fallback dialog.
+4. In the Fallback, create a new **Integration** interaction, and drag and drop the interaction above the **fallback_starter** interaction. From the **Select integration** dropdown, select the newly created FAQ integration. 
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_1.png">
 
-    Rules will need to be created to direct the flow of the conversation based on whether there was a successful Knowledge Base query. Prior to doing so, create a new text message interaction which will display a successful search article.
+    Rules will need to be created to direct the flow of the conversation based on whether there was a successful Knowledge Base query. Prior to doing so, create a new text message interaction that will display a successful search article.
 
-5. Create a new **Text message** interaction, which will be nested between the Integration and the fallback_starter.
+5. Create a new **Text message** interaction, and nest it between the integration and the fallback_starter.
 
-    For the text content, type `{FAQ.article}`. For the Next Action, select **End Interaction** to prevent triggering the fallback_starter after display.
+    For the text content, type `{FAQ.article}`. For the **Next Action**, select **End Interaction** to prevent triggering the fallback_starter after display.
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_2.png">
 
-6. Create custom rules to account for successful and unsuccessful FAQ search requests. From the **Next Action** dropdown in the API Integration, select **+ Custom Rule** and complete with the following:
+6. Create custom rules to account for successful and unsuccessful FAQ search requests. In the integration, in the **Next Action** dropdown, click **+ Custom Rule**, and complete with the following:
     * Rule name: KB Success
     * **+ Add Condition**: **API Result** matches **Success**
     * **And Go To**: Go To: Next Interaction
 	
 	Click **Save**.
 
-7. Create a second rule to account for a failed search, which will point to the **fallback_starter** as the next action. Select **+ Custom Rule** and complete with the following:
+7. Create a second rule to account for a failed search; this will point to the **fallback_starter** as the next action. Click **+ Custom Rule**, and complete with the following:
     * **Rule name**: KB Failure
     * **+ Add Condition**: **API Result** matches **Failure**
     * **And Go To**: Go To: fallback_starter
 
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/kb_integration_fallback_3.png">
 
-8. Test out the FAQ search by opening the previewer, resetting your session, and testing user utterances that should trigger FAQ articles, as well as ones you intend to pass through to the fallback_starter.
+8. Test the FAQ search. Open the previewer, reset the session, and test user utterances that trigger the FAQ articles. Also test utterances you intend to pass through to the fallback_starter.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/kb_integration_preview.png">
 
-    Knowledge bases are optimized to handle frequently asked questions and other static content that you want to provide for your users. By including them intelligently in your conversation designs, you can round out the bot experience to answer questions and ensure your users will be happy to return to your automation.
+    Knowledge bases are optimized to handle frequently asked questions and other static content that you want to provide for users. By including them intelligently in your conversation designs, you can round out the bot experience to answer questions and ensure users will be happy to return to your bot.
 
 ### What's next?
 
