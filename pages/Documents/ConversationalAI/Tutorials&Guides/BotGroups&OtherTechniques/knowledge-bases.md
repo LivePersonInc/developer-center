@@ -10,7 +10,7 @@ permalink: tutorials-guides-bot-groups-other-techniques-knowledge-bases.html
 indicator: both
 ---
 
-Brands often have static content, such as frequently asked questions, that can be addressed through automations and delivered with Conversation Builder. As opposed to creating new dialogs and specific interactions to handle these use cases, the Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. A common design pattern at LivePerson is to include this Knowledge Base access in our Fallback Dialog, as a last check before triggering our Fallback interaction. In this section, we will be creating a new Knowledge Base, which will be accessed in the Fallback dialog located in our Greeter Bot.
+Brands often have static content, such as frequently asked questions, that can be addressed through bots and delivered with Conversation Builder. Instead of creating new dialogs and specific interactions to handle these use cases, Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. A common design pattern at LivePerson is to include Knowledge Base access in the Fallback Dialog, as a last check before triggering the Fallback interaction. In this section, you create a new Knowledge Base, which will be accessed in the Fallback dialog located in the Greeter Bot.
 
 ### Watch the video
 
@@ -19,16 +19,16 @@ Brands often have static content, such as frequently asked questions, that can b
 
 ### Step 8: Create the FAQ knowledge base
 
-In this step, a new FAQ knowledge base will be created using an existing CSV file. This demonstration will also show how to add additional FAQ articles to your knowledge base.
+In this step, you create a new FAQ knowledge base using an existing CSV file. This demonstration also shows how to add additional FAQ articles to your knowledge base.
 
 1. From the **Conversational AI** section of the Conversational Cloud, navigate to the **Knowledge Base** section.
 
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/advtutorial/kb_app_option.png">
 
-2. Click on the **Add Knowledge Base** in the upper-right corner.
+2. Click **Add Knowledge Base** in the upper-right corner.
 3. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**. 
 4. Specify the following:
-    * **Data source name**: Getting Started KB
+    * **Knowledge Base Name**: Getting Started KB
     * **Language**: English
     * **Import articles from**: CSV
     * **CSV File**: Download and select this [Retail FAQ file](https://static-assets.fs.liveperson.com/csbs/Retail_FAQ_KB.csv) as a starting point. Click **Upload**.
@@ -38,11 +38,11 @@ In this step, a new FAQ knowledge base will be created using an existing CSV fil
 
     Click **Save** in the lower-right corner.
 
-5. After the KB has been created, we are presented with the various articles contained within our knowledge base. Selecting any individual article, we can see that each article contains intent qualifiers, which the NLU engine will use in conjunction with tags to match user intents to a specific article.
+5. After the KB has been created, you are presented with the various articles contained within the knowledge base. Selecting any, individual article, you can see that each article contains intent qualifiers, which the NLU engine will use in conjunction with tags to match user intents to a specific article.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_samplearticle.png">
 
-6. Back in our Getting Started KB page, click the **Add New** button from the upper-right corner to build upon our provided FAQ content. In the resulting **Add Article** form, complete with the following information: 
+6. Back in the Getting Started KB page, click **Add New** in the upper-right corner to build upon our provided FAQ content. In the resulting **Add Article** form, complete with the following information: 
     * **Title**: When are you open?
     * **Intent Qualifiers**: 
         * What are your hours of operation?
@@ -54,17 +54,17 @@ In this step, a new FAQ knowledge base will be created using an existing CSV fil
 
 	Click **Save** in the lower-right corner.
 
-7. Back in the **Getting Started KB** menu, confirm that the newly created article has been included in your list of articles. Note the **Inactive** designation, as all newly created articles will need to be enabled prior to being accessible.
+7. Back in the **Getting Started KB** page, confirm that the newly created article has been included in your list of articles. Note the **Inactive** designation, as all newly created articles will need to be enabled prior to being accessible.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_article_inactive.png">
 
 	Click the article title, scroll down to the **Enable Article** setting, and turn it on. Click **Save**.
 
-    Our Knowledge Base has now been created and expanded upon.
+    The knowledge base has now been created and expanded upon.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_article_list.png">
 
-    Navigating back to Conversation Builder, we will provide an integration to access and display this content.
+    Navigating back to Conversation Builder, next you will provide an integration to access and display this content.
 
 ### Step 9: Create the Knowledge Base integration in the Fallback Dialog
 
