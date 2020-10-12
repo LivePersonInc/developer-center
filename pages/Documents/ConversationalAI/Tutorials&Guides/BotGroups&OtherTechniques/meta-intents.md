@@ -10,16 +10,16 @@ permalink: tutorials-guides-bot-groups-other-techniques-meta-intents.html
 indicator: both
 ---
 
-In order to maintain an optimal user experience, automations should handle not only business focused intents, but should strive to respond intelligently to small talk from the user. User’s asking “how are you” or “are you a bot” should receive a more intelligent response than simply hitting a fallback message. One intelligent solution for handling these types of utterances is by using a Knowledge Base to access and read back responses to a variety of small talk. However, simply pushing all of your KB searches in your Fallback Dialog can complicate your bot design with too many integration calls in one dialog. This final section of this guide will detail creating a Small Talk meta intent and a Small Talk Knowledge Base, each of which to be implemented in our Small Talk bot.
+In order to maintain an optimal user experience, bots should handle not only business-focused intents, but should strive to respond intelligently to small talk from the user. Users asking “how are you” or “are you a bot” should receive a more intelligent response than simply hitting a fallback message. One intelligent solution for handling these types of utterances is by using a Knowledge Base to access and read back responses to a variety of small talk. However, simply pushing all of your KB searches in your Fallback Dialog can complicate your bot design with too many integration calls in one dialog. This final section of this tutorial series details creating a Small Talk meta intent and a Small Talk knowledge base, each of which to be implemented in our Small Talk Bot.
 
 ### Step 10: Create the Small Talk meta intent
 A meta intent is a wrapper for a grouping of related intents.
 
 <img style="width:600px" src="img/ConvoBuilder/advtutorial/ib_metaintents_diagram.png">
 
-Using meta intents, we can funnel a variety of intents into a single dialog for processing. Additional information about meta intents can be found in our developers documentation [here](intent-builder-meta-intents.html). 
+Using meta intents, you can funnel a variety of intents into a single dialog for processing. Additional information about meta intents can be found in the developers documentation [here](intent-builder-meta-intents.html). 
 
-1. From the **Conversational AI** section of the Conversational Cloud, navigate to **Intent Builder** and select the Getting Started Domain.
+1. From the **Conversational AI** section of the Conversational Cloud, navigate to **Intent Builder**, and select the Getting Started Domain.
 2. Prior to creating the Small Talk meta intent, standard intents for the different types of small talk must be created. Using the **Add Intent** button in the lower left, create the following intents with the following information:
 
     * **Intent name**: How are you?
@@ -68,7 +68,7 @@ Using meta intents, we can funnel a variety of intents into a single dialog for 
     * **Intent name**: Small Talk
     * **Intent Display Name**: Small Talk
     * **Intent type**: Meta intent
-    * **Select intent to add**:
+    * **Intents > Select intent to add**:
         * How are you?
         * I am upset
         * Thank you
@@ -80,11 +80,11 @@ Using meta intents, we can funnel a variety of intents into a single dialog for 
 
     <img style="width:250px" src="img/ConvoBuilder/advtutorial/ib_meta_intent.png">
 
-4. Test to make sure both intents and meta intents are being triggered by your training phrases. In the **Test User Input** panel on the right, turn on the **Search in domain** setting, and keep the default "All" in the resulting dropdown. Test out a few phrases that you would expect to match the newly created intents. If set up correctly, you should show both the standard intent and its parent meta intent triggered with the same confidence score.
+3. Test to make sure both intents and meta intents are being triggered by your training phrases. In the **Test User Input** panel on the right, turn on the **Search in domain** setting, and keep the default "All" in the resulting dropdown. Test out a few phrases that you would expect to match the newly created intents. If set up correctly, you should show both the standard intent and its parent meta intent triggered with the same confidence score.
 
     <img style="width:400px" src="img/ConvoBuilder/advtutorial/ib_test_user_input.png">
 
-    With a newly created meta intent in hand, the next step will be to create a new knowledge base that we will access using domain intents.
+    With a newly created meta intent in hand, the next step will be to create a new knowledge base that you will access using domain intents.
 
 ### Step 11: Create the Small Talk knowledge base
 
