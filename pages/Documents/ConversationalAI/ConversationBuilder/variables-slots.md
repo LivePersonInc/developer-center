@@ -118,7 +118,7 @@ There are three options for the duration:
 
 * **Dialog**: The data will be stored for the specific dialog. Once the dialog ends (either by the consumer closing the conversation or the bot switching to a different dialog), the data will be cleared.
 
-* **Session**: The data will be saved for the entirety of the consumer's browser session. This is useful when using the data to query APIs and retrieve information that might be useful for multiple dialogs.
+* **Session**: The data will be saved for the entirety of the consumer's automation session. This is useful when using the data to query APIs and retrieve information that might be useful across the entire bot.
 
 If you need to store data for the long term, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
 
