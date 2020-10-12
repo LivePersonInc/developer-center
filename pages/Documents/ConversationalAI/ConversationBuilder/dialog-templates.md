@@ -11,13 +11,13 @@ indicator: both
 
 ### What’s a dialog template?
 
-A dialog template is a dialog that a bot developer has intentionally made available as a “template” that can be imported by others. A dialog template includes not just the dialog itself but also all other items on which the dialog relies: other dialogs, environment variables, and so on.
+A dialog template is a set of resources that support a conversational flow and that are defined as a unit for the purpose of import by others. When a bot developer imports a single dialog template, she imports the entire unit of working functionality. This includes not only the main dialog that supports the flow, but also all other necessary resources: other dialogs, domains, integrations, and so on.
 
 {: .important}
 Only dialogs of [type Dialog](conversation-builder-dialogs-dialog-basics.html#dialog-types) can be made available as dialog templates.
 
 #### Advantages of dialog templates
-You can [import a dialog](conversation-builder-dialogs-dialog-basics.html#import-a-dialog) that isn’t made available as a template, but that process automatically imports only some of the items on which a dialog can rely, namely, the integrations that are used. The rest you must manually include (other dialogs) or add after the import (environment variables and global functions). As a result, a dialog import is better suited to situations where your import requirements are more relaxed, and you are mainly interested in the dialog itself.
+You can [import a dialog](conversation-builder-dialogs-dialog-basics.html#import-a-dialog) that isn’t made available as a template, but that process automatically imports only some of the items that a dialog can rely on, namely, the integrations that are used. The rest you must manually include (other dialogs) or add after the import (environment variables and global functions). As a result, a dialog import is better suited to situations where your import requirements are more relaxed, and you are mainly interested in the dialog itself.
 
 In contrast, when a bot developer makes a dialog available as a template that can be imported, she must specify all the items that the dialog relies on in a "template definition." The system then automatically includes all these items when the dialog template is imported.
 
