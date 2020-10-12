@@ -27,7 +27,7 @@ For quick, casual copies of dialogs, a dialog import can be handy. But when you 
 
 A dialog that is made available as a template functions just like it would if it weren’t a template. There is no impact to the dialog itself. 
 
-Once you make a dialog available as a template, the dialog can no longer be imported as a dialog. It can only be imported as a dialog template.
+Once you make a dialog available as a template, the dialog can no longer be [imported as a dialog](conversation-builder-dialogs-dialog-basics.html#import-a-dialog). It can only be imported as a dialog template.
 
 <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/dialogtemplates_1.png">
 
