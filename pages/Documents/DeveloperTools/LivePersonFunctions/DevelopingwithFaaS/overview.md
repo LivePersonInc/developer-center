@@ -26,7 +26,7 @@ By right-clicking inside the editor area, you're able to open the context menu, 
 
 ### Code Validation
 
-The code of each lambda is parsed and syntax validated to reduce the amount of possible errors. These checks ensure that not only compliance with technical requirements (e.g. ECMAScript compliance) are met, but also restrictions mandated by the Functions platform (e.g. <100.000 characters per lambda) are upheld.   
+The code of each lambda is parsed and syntax validated to reduce the amount of possible errors. These checks ensure that not only compliance with technical requirements (e.g. ECMAScript compliance) are met, but also restrictions mandated by the Functions platform (e.g. <100,000 characters per lambda) are upheld.   
 
 ### Editor Sidebar
 
@@ -49,13 +49,27 @@ The Payload Tab shows the example payload, which highlights the structure of the
 
 ### Environment Variables
 
-Using the relevant button from the Settings tab, you are able to add new Environment variables. Clicking the button will open a dialogue window where you can provide a name and a value for your new variable. As mentioned above, we have a set of reserved environment variables. The UI will inform you if you attempt to use them.
+Using the relevant button from the Settings tab, you are able to add new Environment variables. Clicking the button will open a dialogue window where you can provide a name and a value for your new variable.
 
 You can access the variable during runtime by using `process.env['YOUR_ENV']`. **Please be aware** that the value will be available in the form of a string. If the value is a number, you will have to parse it prior to using it. By using the trash icon, you can delete unwanted variables.
 
 **Developer discretion is advised**, please be sure not to use confidential data such as credentials or secrets in the environment variables as these are saved and available in text form to anyone with access to the account. Functions has a secret storage service that can be leveraged for this purpose.
 
-**Note**, they are certain reserved variables, that are used by the platform and therefore they are not available to the consumer.
+**Note**, they are certain reserved variables, that are used by the platform and therefore they are not available to the consumer. The UI will inform you if you attempt to use them. some of these variables are:
+`NODE_ENV`,
+`HTTP_PROXY`,
+`HTTPS_PROXY`,
+`NO_PROXY`,
+`HOST`,
+`PORT`,
+`DC`,
+`BRAND_ID`,
+`LAMBDA_UUID`,
+`DOMAIN`,
+`VAULT_DOMAIN`,
+`VAULT_K8S_MOUNT`,
+`VAULT_LAMBDA_ROLE`,
+`VAULT_SERVICE_ENV`
 
 See also [Making Functions configurable](liveperson-functions-development-best-practices.html#making-functions-configurable).
 

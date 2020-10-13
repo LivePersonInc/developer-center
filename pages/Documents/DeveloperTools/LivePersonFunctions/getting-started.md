@@ -99,19 +99,19 @@ There are 3 user permissions pertaining to Functions:
     <td>-</td>
     <td>-</td>
   </tr>
-  <tr>
+ <tr>
     <td>secret</td>
-    <td>read plain</td>
+    <td>read (value is obfuscated)</td>
     <td>✅</td>
-    <td>-</td>
+    <td>✅</td>
     <td>-</td>
   </tr>
   <tr>
-    <td>secret</td>
-    <td>read crypted</td>
+    <td>schedule</td>
+    <td>read</td>
     <td>✅</td>
     <td>✅</td>
-    <td>-</td>
+    <td>✅</td>
   </tr>
   <tr>
     <td>schedule</td>
@@ -136,6 +136,27 @@ There are 3 user permissions pertaining to Functions:
   </tr>
   <tr>
     <td>emailReport</td>
+    <td>read</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
+   <tr>
+    <td>logs</td>
+    <td>read</td>
+    <td>✅</td>
+    <td>✅</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>logs</td>
+    <td>create</td>
+    <td>✅</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>reporting</td>
     <td>read</td>
     <td>✅</td>
     <td>✅</td>
@@ -176,7 +197,7 @@ by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-
 
 To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions for your account. Please contact them to do so.
 
-<div class="notice">Functions currently supports the latest versions of <strong>Firefox</strong>, <strong>Edge</strong>  and <strong>Chrome</strong>.</div>
+<div class="notice">Functions currently supports the latest versions of <strong>Firefox</strong>, <strong>Edge 86+</strong>  and <strong>Chrome</strong>.</div>
 
 The Functions UI is divided into six components. On the left hand side of the UI, you can see the navigation bar which allows you to navigate through these components. The **Home** screen (see below) is the default page that will be visible.
 
@@ -193,7 +214,7 @@ The **Schedules** section allows to define a time-based execution of lambdas via
 The **Logs** section is for analysing your functions' past invocations by searching through the logs you defined. [More information on logging your function can be found here](function-as-a-service-developing-with-faas-overview.html).
 
 
-The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains and maintain secrets (i.e. OAuth tokens).
+The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains, email reporting and maintain secrets (i.e. OAuth tokens).
 
 Once you've familiarized yourself with the different sections of the UI, it's time to create your first function.
 
