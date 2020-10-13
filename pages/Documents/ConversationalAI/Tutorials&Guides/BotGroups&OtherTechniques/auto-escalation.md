@@ -12,6 +12,11 @@ indicator: both
 
 Along with [disambiguation](tutorials-guides-getting-started-with-bot-building-disambiguation.html), every bot should include a way to automatically escalate when a user gets stuck. This often happens when a user is attempting to answer a text question, but their responses are not passing the needed validation. Previously, to implement such a policy required the writing of custom JavaScript to keep track of a user's attempts to answer a question, pointing to an escalation interaction if a threshold was crossed. Now, Conversation Builder provides a special dialog type which takes care of all this for you without having to write any code.
 
+### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/467390622" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
+
 ### Step 7: Create the Auto Escalation dialog
 
 Prior to this step, make sure that you have captured the skill ID associated with your Human skill. This should be the same ID that you are using in the Escalation dialog in your Small Talk Bot (refer to the interaction settings for the Agent Transfer interaction). Once you have this ID, navigate to your Order Bot in Conversation Builder.
