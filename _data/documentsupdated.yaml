@@ -214,6 +214,7 @@
           - subpagename: Previewing
           - subpagename: Debugging
           - subpagename: Deploying to Conversational Cloud
+          - subpagename: Testing & Debugging Post-Deployment
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
