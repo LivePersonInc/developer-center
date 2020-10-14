@@ -2,6 +2,7 @@
 pagename: onLoad
 redirect_from:
   - consumer-experience-javascript-chat-onload.html
+  - consumer-experience-javascript-chat-events.html
 Keywords:
 sitesection: Documents
 categoryname: "Client Side Configuration"

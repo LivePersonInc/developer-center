@@ -9,6 +9,8 @@ permalink: liveperson-functions-developing-with-faas-storing-secrets.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-storing-secrets.html
+  - liveperson-functions-development-storing-secrets.html
+  - liveperson-functions-development-toolbelt.html#secret-storage-client
 ---
 
 The LivePerson Functions' Secrets Storage allows you to centrally store, access and distribute secrets across your lambdas. Thereby, lambdas can use available access tokens, certificates and encryption keys to establish a connection to external systems. It is recommended to always use access tokens for authentication to external services.
