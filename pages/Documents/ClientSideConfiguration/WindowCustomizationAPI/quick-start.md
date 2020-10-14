@@ -544,3 +544,19 @@ In the unlikely case that `!important` does not override the style, we suggest u
     width: 400px !important;
 }
 ```
+
+To override the existing styles of a border for each element for maximized window, we suggest using the following CSS rule:
+
+```css
+.lpc_window_maximized button:focus, input:focus, textarea:focus, select:focus, a:focus, div:focus {
+    outline: red 2px solid !important;
+}
+```
+
+To override border style for minimized window use the following CSS rule:
+
+```css
+.lpc_window_minimized button:focus, input:focus, textarea:focus, select:focus, a:focus, div:focus {
+    outline: red 2px solid !important;
+}
+```

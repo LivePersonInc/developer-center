@@ -9,6 +9,7 @@ permalink: liveperson-functions-integrations-messaging-conversations.html
 indicator: messaging
 redirect_from:
   - liveperson-functions-liveperson-integrations-messaging-conversations.html
+  - function-as-a-service-use-cases-messaging-conversations-with-functions.html
 ---
 
 This guide explains how to enable LivePerson Functions for messaging.
