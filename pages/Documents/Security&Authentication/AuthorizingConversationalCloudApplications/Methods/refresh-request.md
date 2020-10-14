@@ -2,6 +2,7 @@
 pagename: Refresh Request
 redirect_from:
   - authorizing-liveengage-applications-methods-refresh-request.html
+  - le-applications-login-methods-refresh-endpoint.html
 Keywords:
 sitesection: Documents
 categoryname: "Security & Authentication"
