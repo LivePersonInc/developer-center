@@ -5,8 +5,8 @@ redirect_from:
   - authentication-how-it-works.html
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Mobile SDK and Web Authentication
-permalink: mobile-sdk-and-web-authentication-how-it-works.html
+documentname: Consumer Authentication
+permalink: consumer-authentication-how-it-works.html
 order: 4
 indicator: both
 ---
