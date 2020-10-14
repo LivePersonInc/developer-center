@@ -4,6 +4,7 @@ redirect_from:
   - agent-domain-domain-api.html
   - retrieve-api-domains-using-the-domain-api.html
   - essential-resources-domain-api.html
+  - common-resources-domain-api.html
 Keywords:
 sitesection: Documents
 categoryname: "Getting Started"
