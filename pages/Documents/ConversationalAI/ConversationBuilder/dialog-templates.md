@@ -19,7 +19,7 @@ Only dialogs of [type Dialog](conversation-builder-dialogs-dialog-basics.html#di
 #### Advantages of dialog templates
 You can [import a dialog](conversation-builder-dialogs-dialog-basics.html#import-a-dialog) that isn’t made available as a template, but that process automatically imports only some of the items that a dialog can rely on, namely, the integrations that are used. The rest you must manually include (other dialogs) or add after the import (environment variables and global functions). As a result, a dialog import is better suited to situations where your import requirements are more relaxed, and you are mainly interested in the dialog itself.
 
-In contrast, when a bot developer makes a dialog available as a template that can be imported, the bot developer must specify all the items that the dialog relies on in a "template definition." The system then automatically includes all these items when the template is imported.
+In contrast, when a bot developer makes a dialog available as a template that can be imported, they must specify all the items that the dialog relies on in a "template definition." The system then automatically includes all these items when the template is imported.
 
 For quick, casual copies of dialogs, a dialog import can be handy. But when you want to formalize the import process for a dialog -- and ensure that other bot developers import all required items -- make the dialog available as a dialog template.
 
