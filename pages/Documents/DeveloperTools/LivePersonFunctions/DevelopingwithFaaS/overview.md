@@ -12,7 +12,7 @@ redirect_from:
   - liveperson-functions-development-overview.html
   - function-as-a-service-developing-with-functions.html
   - liveperson-functions-development-overview.html#environment-variables
-
+---
 
 
 After successfully creating a `lambda` (using the [Getting Started guide](function-as-a-service-getting-started.html)) you will find yourself in the editor, the heart of the LivePerson Functions UI. Here you can develop the function itself.
