@@ -30,7 +30,7 @@ Sometimes bots have logic that depends on data that is retrieved from the campai
 The Conversation Tester requires that the entire pipeline for messaging is in place and ready:
 
 * In Conversational Cloud, there must exist a bot user (an agent) that is assigned a skill.
-* In Conversation Builder, the bot must have a deployed agent connector that's assigned to the bot user, and the connector must be online.
+* In Conversation Builder, the bot must have a deployed agent connector that's assigned to the bot user, and the agent connector must be online.
 
 ### Access the Conversation Tester
 You can access the Conversation Tester in two ways:
