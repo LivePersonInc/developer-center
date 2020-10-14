@@ -24,7 +24,10 @@ The Conversation Tester lets you quickly start a conversation and view both the 
 With the Conversation Tester, the conversation travels from the Conversational Cloud channel, to Conversational Cloud, to the agent connector, to the bot server, and back. In short, there is end-to-end testing of the entire flow over the Web.
 
 {: .important}
-Sometimes bots have logic that depends on data that is retrieved from the campaign used in the conversation. For example, the bot might use the engagement ID to direct the conversational flow to a particular dialog. The Conversation Tester doesn’t use a campaign, so it can’t be used for end-to-end testing of this kind of logic.<br><br>The Conversation Tester can't be used for testing [post-conversation survey bots](conversation-builder-bots-post-conversation-survey-bots.html).
+Sometimes bots have logic that depends on data that is retrieved from the campaign used in the conversation. For example, the bot might use the engagement ID to direct the conversational flow to a particular dialog. The Conversation Tester doesn’t use a campaign, so it can’t be used for end-to-end testing of this kind of logic.
+
+#### Testing post-conversation survey bots
+You can't use the Conversation Tester to directly initiate testing of a [post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html). To test a survey bot, use the tool to start a conversation with a custom bot that triggers the survey bot, and bring that conversation to a close. This triggers the survey conversation as expected.
 
 ### Prerequisites
 The Conversation Tester requires that the entire pipeline for messaging is in place and ready:
@@ -60,6 +63,9 @@ If you access the Conversation Tester from outside of a bot, if you want to chan
 
     **Select Skill**: Select only the skill. The skill list displays all the skills available within your organization. If you know the skill name to route to, this one-step method is faster.
 
+    {: .important}
+    It's atypical to have multiple bots associated with the same skill. However, if this is the case, be aware that the tool will start a conversation with the first bot that is found.
+
 3. Click **Start Conversation**.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/conv_tester_start3.png">
@@ -93,24 +99,27 @@ As you use the Conversation Tester, you can monitor two statuses:
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_statuses.png">
 
 * **Connection**: This is the status of the Web socket, either "Open" or "Closed." Typically, this status is "Open" in the Production environment. But if a problem exists, the status will be "Closed." Try reloading the page in this case. A problem with Web socket suggests there might be an issue with the LivePerson environment.
-* **Conversation**: This is the status of the conversation, either "Open" or "Closed." If you access the Conversation Tester from within a bot, but the system can't automatically select a skill to which to route the conversation, this will be "Closed." Try manually selecting a skill in this case. Additionally, this status changes based on your actions in the tool, i.e., **Mark Resolved** closes the conversation, and **Resume Conversation** reopens the conversation.
+* **Conversation**: This is the status of the conversation, either "Open" or "Closed." If you access the Conversation Tester from within a bot, but the system can't automatically select a skill to which to route the conversation, this will be "Closed." Try manually selecting a skill in this case. Additionally, this status changes based on your actions in the tool, i.e., **Mark Resolved** closes the conversation, and **Resume Conversation** opens a new conversation.
 
 #### Performing actions
-
 In the conversation panel, you can perform several actions:
 
 * **Clear Messages**: Clears the conversation panel of all messages.
-* **Resume Conversation**: Reopens the conversation.
+* **Resume Conversation**: Opens a new conversation.
 * **Scroll to Bottom**: Scrolls the display to the bottom of the conversation window.
 * **Reset Bot Session**: Resets the session. 
 * **Mark Resolved**: Closes the conversation.
 
+#### Using a different tab
+Take advantage of the ability to open the Conversation Tester in a new tab. This lets you use the tool beside other important windows.
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/conv_tester_new_tab.png">
+
 ### Use the debugger
 #### Automatically update the debug log
+Keep the **Auto Update** setting on to continuously fetch the latest logs based on the conversation. If you don't need the logging, you can disable this, which keeps the connection clean.
 
-Auto update on - keeps fetching the latest logs
-On/off
-if don't need the info, turn off to keep the connection clean
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_logging.png">
 
 #### Show and hide debug messages
 
@@ -123,3 +132,7 @@ The debug log can become quite long and verbose, so it can be helpful to show an
 The debugger panel in the Conversation Tester can display the log for any conversation that occurred in a supported channel. Simply enter the user ID in the field provided.
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_enter_id.png">
+
+To obtain the user ID, enter "display userid" in the channel (Facebook, etc.).
+
+<img style="width:250px" src="img/ConvoBuilder/debug_displayID.png">

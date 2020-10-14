@@ -34,20 +34,6 @@ Errors and failures are displayed <font color="red">in red</font>, so you can sp
     
     For ease of use during bot development, by default, the user ID for the consumer in the conversation in the Preview window is entered in the User Id input box, and the associated logs are automatically displayed.
 
-### Debug end-to-end interactions
-
-**To display the log for a conversation that occurred in a supported channel**
-
-1. In the channel (Facebook Messenger, Apple iMessage, etc.), enter "display userid."
-    
-    <img style="width:250px" src="img/ConvoBuilder/debug_displayID.png">
-
-2. Copy the ID.
-3. Return to Conversation Builder, open a bot, and click **Preview** in the upper-right corner.
-4. In the upper-right corner of the Preview window, click **Bot Logs**.
-5. Enter or paste the ID into the **User ID** input box.
-6. Click <img style="width:30px" src="img/ConvoBuilder/icon_refresh.png">.
-
 ### Print the most recent user message
 
 To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print the consumer's most recent message to the Bot Logs window. For more on this function, see [here](conversation-builder-scripting-functions-log-debug.html#print-debug-message).

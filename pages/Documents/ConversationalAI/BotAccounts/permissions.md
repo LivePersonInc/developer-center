@@ -63,6 +63,7 @@ Users with this permission can also:
 
 * Activate and train models
 * Create, deploy and manage agent connectors at the bot level within Conversation Builder
+* Use the Conversation Tester
 * View versions and releases (For privileges to create and manage these, add on the "Release Creator" and/or "Release Acceptor" granular permissions, discussed farther below.)
 * View and download analytics data
 
