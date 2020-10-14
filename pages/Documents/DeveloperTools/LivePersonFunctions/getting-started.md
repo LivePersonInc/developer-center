@@ -256,7 +256,7 @@ Once you've reached the editor, it is time to develop the actual function, wheth
 
 #### Function Layout and Framework
 
-Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJs 12. Therefore, you have access to all functionality offered by NodeJS.
+Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJS 12. Therefore, you have access to all functionality offered by NodeJS.
 
 In order for your function to work with LivePerson Functions seamlessly it has to follow a certain pattern. This pattern can be viewed below.
 
