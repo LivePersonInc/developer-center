@@ -1,5 +1,5 @@
 ---
-pagename: Carousel Template
+pagename: Quick Replies Template
 redirect_from:
   - structured-content-google-business-messages-templates-quick-replies-template.html
 Keywords: structured content rich messaging gbm google business messages quick replies quick-replies template
