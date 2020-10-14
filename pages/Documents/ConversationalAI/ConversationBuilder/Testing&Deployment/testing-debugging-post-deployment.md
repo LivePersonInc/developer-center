@@ -39,13 +39,13 @@ The Conversation Tester requires that the entire pipeline for messaging is in pl
 You can access the Conversation Tester in two ways:
 
 * From the bot dashboard, click **Conversation Tester** on the menu bar in the upper-left corner.
-* Open the bot, click <img style="width:30px" src="img/ConvoBuilder/icon_menu_bar.png"> on the menu bar, and select **Conversation Tester**. This option is available only when the bot has an agent connector (regardless of its status).
+* Open a bot, click <img style="width:30px" src="img/ConvoBuilder/icon_menu_bar.png"> on the menu bar, and select **Conversation Tester**. This option is available only when the bot has an agent connector (regardless of its status).
 
 ### Start the conversation
 
-Conversational Cloud routes conversations based on skill, so starting the conversation is done by specifying the skill to use.
+Conversational Cloud routes conversations based on skill, so to start a conversation, you need to specify the skill to which to route it.
 
-If you access the Conversation Tester from within a bot -- and the pipeline for messaging is configured correctly (see *Prerequisites* above) -- the tool automatically starts the conversation with the bot, routing it to the first, associated skill that is found.
+If you access the Conversation Tester from within a bot -- and the pipeline for messaging is configured correctly (see *Prerequisites* above) -- the tool automatically starts a conversation with that bot, routing it to the first, associated skill that is found.
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_start5.png">
 
@@ -64,7 +64,7 @@ If you access the Conversation Tester from outside of a bot, if you want to chan
     **Select Skill**: Select only the skill. The skill list displays all the skills available within your organization. If you know the skill name to route to, this one-step method is faster.
 
     {: .important}
-    It's atypical to have multiple bots associated with the same skill. However, if this is the case, be aware that the tool will start a conversation with the first bot that is found.
+    It's rare to have multiple bots associated with the same skill. However, if this is the case, be aware that the tool will start a conversation with the first bot that is found.
 
 3. Click **Start Conversation**.
 
@@ -86,44 +86,44 @@ If you access the Conversation Tester from outside of a bot, if you want to chan
 
 ### Use the conversation panel
 
-#### Sending messages
+#### Send messages
 
 Once the conversation is started, you can send messages in the conversation panel to direct the conversational flow. This works like [Preview](conversation-builder-testing-deployment-previewing.html).
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_messages.png">
 
-#### Monitoring statuses
+#### Monitor statuses
 
 As you use the Conversation Tester, you can monitor two statuses:
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_statuses.png">
 
-* **Connection**: This is the status of the Web socket, either "Open" or "Closed." Typically, this status is "Open" in the Production environment. But if a problem exists, the status will be "Closed." Try reloading the page in this case. A problem with Web socket suggests there might be an issue with the LivePerson environment.
+* **Connection**: This is the status of the Web socket, either "Open" or "Closed." Typically, this status is "Open" in the Production environment. But if a problem exists, the status will be "Closed." Try reloading the page in this case. A problem with the Web socket suggests there might be an issue with the LivePerson environment.
 * **Conversation**: This is the status of the conversation, either "Open" or "Closed." If you access the Conversation Tester from within a bot, but the system can't automatically select a skill to which to route the conversation, this will be "Closed." Try manually selecting a skill in this case. Additionally, this status changes based on your actions in the tool, i.e., **Mark Resolved** closes the conversation, and **Resume Conversation** opens a new conversation.
 
-#### Performing actions
+#### Perform actions
 In the conversation panel, you can perform several actions:
 
 * **Clear Messages**: Clears the conversation panel of all messages.
 * **Resume Conversation**: Opens a new conversation.
 * **Scroll to Bottom**: Scrolls the display to the bottom of the conversation window.
-* **Reset Bot Session**: Resets the session. 
+* **Reset Bot Session**: Resets the bot session. 
 * **Mark Resolved**: Closes the conversation.
 
-#### Using a different tab
+#### Use a different tab
 Take advantage of the ability to open the Conversation Tester in a new tab. This lets you use the tool beside other important windows.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/conv_tester_new_tab.png">
 
 ### Use the debugger
-#### Automatically update the debug log
-Keep the **Auto Update** setting on to continuously fetch the latest logs based on the conversation. If you don't need the logging, you can disable this, which keeps the connection clean.
+#### Log debug messages
+Keep the **Auto Update** setting on if you want to continuously fetch the latest logs based on the conversation. If you don't need the logging, you can disable this, which keeps the connection clean.
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_logging.png">
 
 #### Show and hide debug messages
 
-The debug log can become quite long and verbose, so it can be helpful to show and hide specific types of debug messages. Click <img style="width:25px" src="img/ConvoBuilder/conv_tester_filters_icon.png"> and use the available filters to do this.
+The debug log can become verbose and long, so it can be helpful to show and hide specific types of messages. Click <img style="width:25px" src="img/ConvoBuilder/conv_tester_filters_icon.png"> and use the available filters to do this.
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_filters.png">
 
