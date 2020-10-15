@@ -115,11 +115,9 @@ Take advantage of the ability to open the Conversation Tester in a new tab. This
 
 ### Use the debugger
 #### Log debug messages
-Keep the **Auto Update** setting **(1)** on if you want to continuously fetch the latest logs based on the conversation. If you don't need the log, you can turn it off, which keeps the connection clean. 
+Keep the **Auto Update** setting **(1)** on if you want to continuously fetch the latest logs based on the conversation. If you don't need the log, you can turn it off, which keeps the connection clean. If you disable the automatic update of the log, you can manually refresh it by clicking <img style="width:25px" src="img/ConvoBuilder/conv_tester_logging_icon.png"> **(2)**.
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_logging.png">
-
-If you disable the automatic update of the log, you can manually refresh it by clicking <img style="width:25px" src="img/ConvoBuilder/conv_tester_logging_icon.png"> **(2)**.
 
 #### Show and hide debug messages
 
