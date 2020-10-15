@@ -473,11 +473,11 @@ The method collects every message which contains a keyword in an array. It retri
 
 ### GDPR Util
 
-This method provides GDPR related functionality, such as replacing files of a conversation. This Util works for **Messaging-Use Cases only**!
+This method provides GDPR related functionality, such as replacing files in a conversation. This Util works for **Messaging-Use Cases only**!
 
 #### Replace files of a conversation
 
-<div class="important">This will replace all files of a conversation permanently! Contact your Account Manager to get access.</div>
+<div class="important">This will replace all files in a conversation permanently! Contact your Account Manager to get access.</div>
 
 This method replaces all files of a conversation from LivePerson's [file storage](file-sharing-file-sharing-for-web-messaging.html#introduction). It expects a conversation, the credentials for the file storage, a callback for filtering files and replacement image.
 

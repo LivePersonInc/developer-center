@@ -57,21 +57,7 @@ You can access the variable during runtime by using `process.env['YOUR_ENV']`. *
 
 **Developer discretion is advised**, please be sure not to use confidential data such as credentials or secrets in the environment variables as these are saved and available in text form to anyone with access to the account. Functions has a secret storage service that can be leveraged for this purpose.
 
-**Note**, they are certain reserved variables, that are used by the platform and therefore they are not available to the consumer. The UI will inform you if you attempt to use them. some of these variables are:
-`NODE_ENV`,
-`HTTP_PROXY`,
-`HTTPS_PROXY`,
-`NO_PROXY`,
-`HOST`,
-`PORT`,
-`DC`,
-`BRAND_ID`,
-`LAMBDA_UUID`,
-`DOMAIN`,
-`VAULT_DOMAIN`,
-`VAULT_K8S_MOUNT`,
-`VAULT_LAMBDA_ROLE`,
-`VAULT_SERVICE_ENV`
+**Note**, they are certain reserved variables, that are used by the platform and therefore they are not available to the consumer. The UI will inform you if you attempt to use them. 
 
 See also [Making Functions configurable](liveperson-functions-development-best-practices.html#making-functions-configurable).
 
