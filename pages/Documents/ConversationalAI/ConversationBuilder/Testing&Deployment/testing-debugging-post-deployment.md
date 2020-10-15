@@ -51,7 +51,7 @@ If you access the Conversation Tester from within a bot, the tool automatically 
 
 If automatic selection of the skill fails for some reason (i.e., the pipeline is not configured correctly; see *Prerequisites* above), if you want to change the skill in use, or if you access the Conversation Tester from outside of a bot, you'll need to explicitly select the skill and manually start the conversation:
 
-1. In the conversation panel on the right, click **Select Entry Point**.
+1. In the Conversation Tester, in the conversation panel on the right, click **Select Entry Point**.
 
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_start1.png">
 
@@ -104,7 +104,7 @@ In the conversation panel, you can perform several actions:
 
 * **Clear Messages**: Clears the conversation panel of all messages.
 * **Resume Conversation**: Opens a new conversation.
-* **Scroll to Bottom**: Scrolls the display to the bottom of the conversation window.
+* **Scroll to Bottom**: Scrolls the display to the bottom of the conversation panel.
 * **Reset Bot Session**: Resets the bot session. Do this to pick up changes to the bot if made.
 * **End Conversation**: Closes the conversation.
 
