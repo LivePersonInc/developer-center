@@ -2,6 +2,8 @@
 pagename: Photo and File Sharing
 redirect_from:
   - android-photo-sharing.html
+  - mobile-app-messaging-sdk-for-android-advanced-features-file-sharing.html
+  - mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
