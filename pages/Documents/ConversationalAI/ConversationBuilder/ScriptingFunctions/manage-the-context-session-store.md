@@ -136,7 +136,7 @@ The following methods get a variable from the Context Session Store at three, di
 
 ```javascript
 var value = botContext.getGlobalContextData("airlineTicketingBot", "intentThreshold");
-botContext.printDebugMessage("get context data for conversation scope: " + value);
+botContext.printDebugMessage("get context data for global scope: " + value);
 
 var value = botContext.getContextDataForUser("airlineTicketingBot", "intentThreshold");
 botContext.printDebugMessage("get context data for user scope: " + value);
