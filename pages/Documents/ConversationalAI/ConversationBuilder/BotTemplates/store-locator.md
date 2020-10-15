@@ -32,7 +32,7 @@ This bot template contains a dialog template that can be used in other bots in y
 * **StoreLocator**: This integration retrieves a collection of retail locations, returning information about their address, opening hours, and links to a Google map. The return data is static on the mock API side, but does demonstrate how to iterate over the data set and display as structured content.
     * Custom code provided in Transform Result Script saves the response as a bot variable for dynamic use in text-only channels.
     * Returned data is not dependent on the zip code provided by the user. This is included in the API URI simply as a demonstration of its use.
-    * You will need to replace the mock api with your own API integration to return store location information.
+    * You will need to replace the mock API with your own API integration to return store location information.
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/templates_store_loc_preview1.png">
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/templates_store_loc_preview2.png">
