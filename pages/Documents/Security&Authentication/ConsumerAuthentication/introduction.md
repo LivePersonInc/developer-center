@@ -5,28 +5,23 @@ redirect_from:
   - guides-authentication-introduction.html
 sitesection: Documents
 categoryname: "Security & Authentication"
-documentname: Mobile SDK and Web Authentication
-permalink: mobile-sdk-and-web-authentication-introduction.html
+documentname: Consumer Authentication
+permalink: consumer-authentication-introduction.html
 root-link: true
 level-order: 6
 order: 1
 indicator: both
 ---
-With Authenticated Customer Information, consumers that have logged into your website or app and initiated a chat show up as being authenticated. The Agent Workspace then displays, in real-time, the correct and verified PII (Personally Identifiable Information) of the authenticated consumer. Agents are able to easily identify which consumer data is authenticated in the CRM, and which has arrived from the page.
+Authenticated Consumers federates(SSO) your existing consumer authentication to LivePerson's Conversational Cloud platform during conversations. Once authenticated, the conversational cloud assigns a profile that is uniquely identified across the consumer's engagements (cross channels, cross-device, cross-browser). Also, consumer's information can be embedded within the federated token (custom claims) which can later be used for easily making purchases for existing consumers or Facilitating billing and payment conversations, etc… Authenticated customer information gives brands the confidence that each consumer is who they say they are, and that the relevant data for a personal conversation is at the disposal of the agent.
 
-<div class="hide">Cleanup - This is the introduction to authentication, but we start off by discussing customer information and PII - we should start by discussing security, identity and logging in. Also, we probably shouldn't call the feature "Authenticated Customer Information", but just "Authentication". Verify with product.)</div>
-
-All authenticated customer information is encrypted and transferred over SSL, using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token. This ensures your customers’ data stays safe and cannot be manipulated.
-
-Authenticated Customer Information gives brands the confidence that each consumer is who they say they are, and that the relevant data for a personal conversation is at the disposal of the agent.
+All authenticated customer information is encrypted and transferred over SSL, using the OAuth 2.0 and OpenID Connect standards, via a JSON Web Token. This ensures your customers’ data is secured and cannot 
+be manipulated.
 
 ![Authenticated Customer Information in the Agent Workspace](img/authintro.png)
 
-This document describes the main components and high level architecture of the consumer SSO solution for LivePerson messaging and chat, for both mobile and web.
+### Why authenticate consumers?
 
-### Why use Authenticated Customer Information?
-
-Authenticated Customer Information increases the security of the communication as the customer’s identity is verified. It also increases the efficiency of agents and ensures that each consumer receives a personalized service. Finally, it enables brands to expand the types of services they offer to consumers during conversations, for example:
+Authenticated customer information increases the security of the communication as the customer’s identity is verified. It also increases the efficiency of agents and ensures that each consumer receives personalized service. Finally, it enables brands to expand the types of services they offer to consumers during conversations, for example:
 
 *	**Making purchases easier for existing consumers**: Once the consumer has logged into the brand's website, Conversational Cloud automatically brings the consumer's PII to the Agent Workspace, including the account number, package details, billing history, and other relevant account info. The conversation can immediately proceed to the new purchase, without the consumer having to identify themselves or make explanations about their account.  The agent can manage the inquiry quickly as they don’t have to open another application to get the information they need.
 
@@ -34,7 +29,7 @@ Authenticated Customer Information increases the security of the communication a
 
 ### Terminology
 
-*	**OAuth 2.0**: A standard way in which a user (referred to as Resource Owner) of one service (referred to as Resource Server) can delegate credentials to another service (referred to as Client Application). In this case, the client application is LivePerson Service, the resource server is the Authentication Service of the customer, and the user/resource_owner is the customer of the customer (the consumer).
+*	**OAuth 2.0**: A standard way in which a user (referred to as Resource Owner) of one service (referred to as Resource Server) can delegate access to another service (referred to as Client Application). In this case, the client application is LivePerson service, the resource server is the Authentication Service of the customer, and the user/resource_owner is the customer of the customer (the consumer).
 
 *	**OpenID Connect**: A simple identity layer on top of the OAuth 2.0 protocol. In this case, the user delegates the access to their identity properties to the other service. OpenID Connect has been adopted by [numerous companies](http://openid.net/foundation/sponsoring-members/) including Google, Cisco, RSA, Verizon, PayPal, PingIdentity, Symantec, and more.
 
@@ -50,19 +45,20 @@ Authenticated Customer Information increases the security of the communication a
 
 The solution is based on two industry standards: OAuth 2.0 and OpenID Connect. For OpenID Connect, Code Flow and Implicit Flow are used. These flows are described in [a section of the OpenID Connect specification](http://openid.net/specs/openid-connect-core-1_0.html#Authentication).
 
-[Google OpenID Connect](https://developers.google.com/identity/protocols/OpenIDConnect?hl=en) will be used as a reference implementation for the Code Flow. This means that the LivePerson solution will be built and tested against Google OpenID Connect servers. Our beta environments will use the Google Identity provider for our end-to-end tests. Customers should follow the Google identity response format to use the LivePerson Authentication Service.
 
 ### Prerequisites
 
-Before you can use Authenticated Customer Information, you are required to prepare the following:
+The following prerequisites are required to authenticate a consumer:
 
-_For mobile app implementation_:
+*	oAuth2.0 authorization server that supports Implicit flow and Code flow.
 
-*	Your mobile app users should be able to log into your backend in a secure manner.
+*   The oAuth2.0 authorization server must return a valid (OpenID Connect) id_token.
 
-*	Your backend must be able to supply, upon request during the session, an OAuth 2.0 code (for Code Flow) or a JWT token (for Implicit Flow).
+**_For mobile app implementation_:**
 
-_For web implementation_:
+*	Your mobile app users should be authenticated within your app.
+
+**_For web implementation_:**
 
 *	All authentication requests are sent over https. Your web server should listen on port 443 (https).
 
