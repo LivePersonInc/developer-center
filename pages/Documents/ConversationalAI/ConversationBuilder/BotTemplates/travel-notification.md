@@ -131,7 +131,7 @@ Modify the following values in Global Functions:
 | botAgentSkillName | The skill name to transfer to |
 
 ### Dialog templates
-This bot template contains a dialog template which allows you to easily copy over the primary data collection flow independently from the bot template.
+This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that allows you to easily copy over the primary data collection flow independently from the bot template.
 
 #### Travel data collection
 Gathers user information on their upcoming travel and debit/credit cards they intend to use.
