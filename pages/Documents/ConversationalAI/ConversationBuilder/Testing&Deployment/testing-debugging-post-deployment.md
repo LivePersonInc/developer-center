@@ -105,7 +105,7 @@ In the conversation panel, you can perform several actions:
 * **Clear Messages**: Clears the conversation panel of all messages.
 * **Resume Conversation**: Opens a new conversation.
 * **Scroll to Bottom**: Scrolls the display to the bottom of the conversation window.
-* **Reset Bot Session**: Resets the bot session. 
+* **Reset Bot Session**: Resets the bot session. Do this to pick up changes to the bot if made.
 * **End Conversation**: Closes the conversation.
 
 #### Use a different tab
