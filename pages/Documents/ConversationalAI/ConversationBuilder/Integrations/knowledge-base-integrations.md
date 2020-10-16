@@ -9,7 +9,7 @@ permalink: conversation-builder-integrations-knowledge-base-integrations.html
 indicator: both
 ---
 
-Use a Knowledge Base integration when you want to search one of your knowledge bases for articles. You’ll need to create the knowledge base first; for help with that, see [here](knowledge-base-knowledge-bases.html#add-a-knowledge-base).
+Use a Knowledge Base integration when you want to search one of your knowledge bases for articles. You’ll need to create the knowledge base first; for help with that, see [here](knowledge-base-overview.html).
 
 One use case for this type of integration is within a fallback dialog to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or [escalate the conversation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) to a human agent.
 
@@ -28,11 +28,11 @@ The Simple FAQ bot template provides a bot that answers users' questions by conn
     
     - **Knowledge Base**: Select the knowledge base to search. You can select from all public knowledge bases that exist under your organization.
     - **Methods**:
-        - *Phrase Search*: Select this method to use NLU to search for the phrase defined in the request parameter against the articles and their associated "standard" tags. You can define "standard" tags via the Knowledge Base UI or a CSV file import.
+        - *Phrase Search*: Select this method to use an NLU search or a text-to-text search using the phrase defined in the request parameter. This performs a search against the articles and their associated "standard" tags. You can define "standard" tags via the Knowledge Base UI or an import file.
         - *Special Tag Search*: Select this method to search for the special tags defined in the request parameter against the special tags associated with the articles. Special tags are different from standard tags. Special tags have a prescribed format; they don't support NLU searches, and they function more like attributes. Typically, special tags are used for returning products or items. You can define special tags via a CSV file or Google sheet import.
     - **Request Parameters for a Phrase search**:
-        - *mode*: Select either Intents, Intents Only, or All. For a description of each mode, see [here](knowledge-base-overview.html#search-modes).
-        - *threshold*: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledge-base-overview.html#thresholds).
+        - *mode*: Select either Intents, Intents Only, or Text. For a description of each mode, see [here](knowledge-base-using-intents-with-kbs.html#search-modes). This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
+        - *threshold*: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. For more on thresholds, see [here](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds). This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html).
         - *phrases*:   Enter the phrase for which to search. The default value is [{$query}](conversation-builder-variables-slots.html#storing-user-responses), which represents/stores the last, complete response sent by the consumer.
         - *multipleResults*: Select the number of results to return from the knowledge base, anywhere from one to five. The default value is 1.
     - **Request Parameters for a Special Tag search**:

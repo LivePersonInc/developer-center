@@ -15,8 +15,8 @@ You define credentials per organization.
 ### Credential types (authentication types)
 There are several types of credentials that you can define to support [API integrations](conversation-builder-integrations-api-integrations.html):
 
-- **OAuth 2.0**: Use this when you require the use of an access token that's obtained via the OAuth 2.0 protocol. This is a more secure choice than others in this list.
-- **Mutual Authentication**: Use this when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. This is a more secure choice than others in this list.
+- **OAuth 2.0**: Use this when you require the use of an access token that's obtained via the OAuth 2.0 protocol. This and Mutual Authentication are more secure choices than others in this list.
+- **Mutual Authentication**: Use this when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. This and OAuth 2.0 are more secure choices than others in this list.
 - **Basic Authentication**: Use this when the API has a permanent token that you always want to use. The token is created by the system using the user name and password that you specify. This is a simpler but less secure choice than others in this list.
 - **Access Token**: Use this when the API has a permanent token that you always want to use. You specify the token to use. This is a simpler but less secure choice than others in this list.
 
