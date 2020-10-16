@@ -12,6 +12,11 @@ indicator: both
 
 Earlier in our Getting Started guide, we used conditional logic in our Billing Question dialog to determine which interaction to display based on a multiple choice question. Sometimes, however, there are multiple variables that need to be considered when choosing a path for users. For this purpose, Conversation Builder’s updated Conditions Editor provides a rules-based system to direct a user's path based on several variables. To demonstrate this, in our Order Bot, let’s create a new dialog to handle refund requests from the user.
 
+### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/468527951" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
+
 ### Step 5: Create the Refund Request dialog
 
 Let's return to Conversation Builder, where we will create our "Refund Request" intent directly from the Assist tool and use it to trigger a new dialog.
