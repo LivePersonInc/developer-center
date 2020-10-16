@@ -118,7 +118,7 @@
   - documentname: Platform Overview
   - documentname: Tutorials & Guides
     pages:
-      - pagename: Getting Started with Bot Building
+      - pagename: Getting Started With Bot Building
         subpages:
           - subpagename: Overview
           - subpagename: Dialogs & Patterns
