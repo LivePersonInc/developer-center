@@ -111,13 +111,15 @@ In the conversation panel, you can perform several actions:
 #### Use a different tab
 Take advantage of the ability to open the Conversation Tester in a new tab. This lets you use the tool beside other important windows.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/conv_tester_new_tab.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_new_tab.png">
 
 ### Use the debugger
 #### Log debug messages
-Keep the **Auto Update** setting **(1)** on if you want to continuously fetch the latest logs based on the conversation. If you don't need the log, you can turn it off, which keeps the connection clean. If you disable the automatic update of the log, you can manually refresh it by clicking <img style="width:25px" src="img/ConvoBuilder/conv_tester_logging_icon.png"> **(2)**.
+Keep the **Auto Update** setting on if you want to continuously fetch the latest logs based on the conversation.
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_logging.png">
+
+If you don't need the log, you can turn **Auto Update** off, which keeps the connection clean. In this case, you can manually refresh the log by clicking <img style="width:25px" src="img/ConvoBuilder/conv_tester_logging_icon.png">.
 
 #### Show and hide debug messages
 
