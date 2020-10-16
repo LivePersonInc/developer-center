@@ -24,8 +24,10 @@ There are several types of dialogs:
 - **Auto Escalation**: This type of dialog frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred. For more on this, see [here](conversation-builder-dialogs-auto-escalation-dialogs.html).
 * **Survey**: Survey dialogs can only be created in post-conversation survey bots. Use a survey dialog to define a survey. For more on this, see [here](conversation-builder-bots-post-conversation-survey-bots.html).
 
+<!--
 ### Dialog templates
 You can make a dialog available to other bot developers as a dialog template. For information on working with dialog templates, see [here](conversation-builder-dialog-templates.html).
+-->
 
 ### Context switching
 
