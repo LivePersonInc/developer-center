@@ -77,7 +77,7 @@ When you import dialogs, consider and address any dependencies across the dialog
 1. Open the destination bot.
 2. Click **Add Dialog** in the lower-left corner.
 3. In the Add Dialog window, select the **From Existing Bots** tab.
-4. Browse and/or search to find and select the dialogs to import. You can select up to 10 dialogs. You can't select dialogs that are made available as [dialog templates](conversation-builder-dialog-templates.html); these you must import as a dialog template.
+4. Browse and/or search to find and select the dialogs to import. You can select up to 10 dialogs. <!-- You can't select dialogs that are made available as [dialog templates](conversation-builder-dialog-templates.html); these you must import as a dialog template. -->
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogs_import1.png">
 
