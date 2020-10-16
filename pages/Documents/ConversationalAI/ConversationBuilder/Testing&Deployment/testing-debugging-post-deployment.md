@@ -136,3 +136,11 @@ The debugger panel in the Conversation Tester can display the log for any conver
 To obtain the user ID, enter "display userid" in the channel (Facebook, etc.).
 
 <img style="width:250px" src="img/ConvoBuilder/debug_displayID.png">
+
+### Print the most recent user message
+
+To aid in debugging, you can use the `printDebugMessage` scripting function in the code areas of an interaction to print messages -- for example, the consumer's most recent message -- to the debug log. For more on this function, see [here](conversation-builder-scripting-functions-log-debug.html#print-debug-message).
+
+### Events glossary
+
+Refer to the events glossary [here](conversation-builder-testing-deployment-debugging.html#events-glossary) to assist you as you debug.
