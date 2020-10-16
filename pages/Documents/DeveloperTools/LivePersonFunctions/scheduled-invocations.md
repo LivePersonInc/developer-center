@@ -20,7 +20,7 @@ In order to schedule a new function invocation, simply navigate to the **Schedul
 
 In the **Create a Scheduled Invocation** dialog you are prompted to select an already deployed function and enter a Cron expression for scheduling the execution.
 
-There are tools that help constructing your cronjobs. You might find [crontab.guru](https://crontab.guru) helpful to create your Cron expression. Please be aware that the highest execution interval for functions is **1 minute**, which means that our Cron expression are limited to 5 digits instead of 6.
+There are tools that help constructing your cronjobs. You might find [crontab.guru](https://crontab.guru) helpful to create your Cron expression. Please be aware that the highest execution interval for functions is **1 minute**, which means that our Cron expression are limited to 5 digits instead of 6. Additionally be aware that to avoid issues with potential difference between local & server timezone, we schedule all times based on **UTC time zone**.
 
 When specifying your cron values please make sure that your values fall within the following ranges:
 
@@ -28,6 +28,6 @@ When specifying your cron values please make sure that your values fall within t
 * Hours: 0-23
 * Day of Month: 1-31
 * Months: 0-11 (Jan-Dec)
-* Day of Week: 0-6 (Sun-Sat)
+* Day of Week: 0-7 (Sun-Sun)
 
 <div class="important">Only deployed <b>NO-EVENT</b> functions will be scheduled. Please note that during undeployment the function schedule will not be removed but marked as warning.</div>
