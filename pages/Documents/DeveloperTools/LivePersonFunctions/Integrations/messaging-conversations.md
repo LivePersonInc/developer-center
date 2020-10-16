@@ -22,7 +22,7 @@ Along with the invocation, the function is sent a payload containing metadata re
 
 ### Best Practices
 
-Functions for messaging listens for messaging events asynchronously. As a consequence this can cause race conditions with other parts of the platform. Therefore, it is considered best practice to use bots instead of Functions for implementing routing logic. Functions is a good option to sync data with third-party systems like CRMs or to save data in the [Context Warehouse](maven-context-warehouse-overview.html) in order to use it within Conversation Orchestrator. Routing via Functions makes sense whenever a conversation is in a stagnant state (i.e. not in process of being routed), e.g. a conversation is idle or a message line has been sent in off-hours. Otherwise, the asynchronous nature of its events might interfere with the proper flow of a "dynamic" conversation. 
+Functions for messaging listens for messaging events asynchronously. As a consequence this can cause race conditions with other parts of the platform. Therefore, it is considered best practice to use bots instead of Functions for implementing routing logic. Functions is a good option to sync data with third-party systems like CRMs or to save data in the [Conversation Context Service](maven-context-warehouse-overview.html) in order to use it within Conversation Orchestrator. Routing via Functions makes sense whenever a conversation is in a stagnant state (i.e. not in process of being routed), e.g. a conversation is idle or a message line has been sent in off-hours. Otherwise, the asynchronous nature of its events might interfere with the proper flow of a "dynamic" conversation. 
 
 ### Messaging events for Function Invocation
 
