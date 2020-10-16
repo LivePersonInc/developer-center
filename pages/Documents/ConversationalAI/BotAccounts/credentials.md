@@ -78,9 +78,31 @@ Depending on the configuration of the resource, you might need to manually reaut
 
 ### Add a Mutual Authentication credential
 
-You can create a Mutual Authentication credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other.
+You can create a Mutual Authentication credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. A Mutual Authentication credential makes use of a key certificate and a trust certificate.
 
-**To add a Mutual Authentication credential**
+#### Key certificates 
+A key certificate is a key store file that contains private and public key pairs. A key certificate identifies the LivePerson platform as a valid entity that is allowed to interact with external systems. The recommended format is .p12 (PKCS12). You can generate a self-signed certificate pair using openssl or keytool, for example:
+
+`keytool -genkeypair -alias nt-ms -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore cb-mtls-server.p12 -validity 3650 -ext SAN=dns:localhost,ip:127.0.0.1`
+
+You can verify the file using:
+
+`keytool -keystore nt-ms.p12 -list`
+
+#### Trust certificates
+A trust certificate is exported from the external system (e.g., Salesforce) to which the LivePerson platform makes the external call. The recommended file format is .pem.
+
+When you add a Mutual Authentication credential, you can upload a trust certificate via the UI, or you can import it into the keystore as follows. If your keystore already has the trust certificate, then one provided via the UI is not required. 
+
+**Note**: The PEM format is the most common format used for trust certificates. Extensions used for PEM certificates are .cer, .crt, and .pem. They are Base64-encoded ASCII files. The DER format is the binary form of the certificate. DER-formatted certificates do not contain the "BEGIN CERTIFICATE/END CERTIFICATE" statements. DER-formatted certificates most often use the .der extension.
+
+You can convert a trust certificate to the required format using openssl. For example, the following commands convert a PEM-format file to DER and then import it into the keystore:
+
+`openssl x509 -outform der -in certificate.pem -out certificate.der`
+
+`keytool -import -alias company-alias -keystore ./cb-mtls-server.p12 -file ./certificate.der`
+
+#### To add a Mutual Authentication credential
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
@@ -90,8 +112,10 @@ You can create a Mutual Authentication credential and use it in [API integration
     - **Authentication Type**: Select "Mutual Authentication."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
-    - **Keys Certificate**: Click **Upload**, and upload the file that contains the private and public keys. The file format must be .pfx, .p12, or .jks.
-    - **Trust Certificate**: Click **Upload**, and upload the file that contains the trusted resources. The file format must be .crt, .cer, or .pem.
+    - **Keys Certificate**: This is required. Click **Upload**, and upload the file that contains the private and public keys. The file format must be .pfx, .p12 (recommended), or .jks.
+    - **Trust Certificate**: Click **Upload**, and upload the file that contains the trusted resources. The file format must be .crt, .cer, or .pem. As mentioned above, if your keystore already has the trust certificate, then one provided via the UI is not required.
+    - **Keys Certificate Password**: Optionally enter the password for the keys certificate.
+    - **Trust Certificate Password**: Optionally enter the password for the trust certificate.
     - **Cryptographic Protocols**: Select the encryption/decryption protocols that are supported by the trusted resources. If you leave this blank, the default value of TLS 1.2 and TLS1.1 is used.
 7. Click **Save**.
 

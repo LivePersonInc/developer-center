@@ -8,6 +8,9 @@ permalink: bots-status-overview.html
 indicator: both
 ---
 
+{: .important}
+Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+
 Use the Bots Status application to check the status of all your bots from a single location. 
 
 You can use the application to monitor and manage both custom bots and post-conversation survey (PCS) bots.

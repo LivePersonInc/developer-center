@@ -10,6 +10,9 @@ permalink: knowledge-base-overview.html
 indicator: both
 ---
 
+{: .important}
+Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+
 ### Introduction
 
 A knowledge base exposes a repository of articles that support a particular classification in your business. As an example, the following is an illustration of an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), which contains Human Resources FAQs.

@@ -418,5 +418,58 @@ You can now do any of the following:
 
 - [Configure quick replies](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents.  
 
+### Upgrading from older SDK versions to 6.0:
+
+This guide will help current users of older versions of the SDK to upgrade to the new SDK 6.0 and upwards.  
+
+**How to upgrade?**
+
+Before you start, important to note:
+* Before SDK 6.0, there was a dependency between Xcode, Swift version, and SDK version - That forced customers to upgrade their Xcode or Swift version, this version unlocks this dependency. 
+* The class '**LPMessagingSDK**' has been renamed  '**LPMessaging**'.
 
 
+**Step 1:**
+* Rename **LPMessagingSDK** to **LPMessaging**.
+* Remove of all import statements such as import LPInfra, import LPAMS, import LPMonitoring - keep only: import LPMessagingSDK.
+
+**Step 2:**
+* Replace any class/facade function calls to the new LPMessaging class. Examples:
+```swift
+LPAMSFacade.getUnreadMessagesCount()
+```
+is now 
+```swift
+LPMessaging.instance.getUnreadMessagesCount()
+```
+```swift
+LPInfraFacade.getUnreadMessagesCount()
+```
+is now 
+```swift
+LPMessaging.instance.getUnreadMessagesCount()
+```
+```swift
+LPMonitoring.sendSDEWithConsumerID()
+```
+is now 
+```swift
+LPMessaging.instance.sendSDEWithConsumerID()
+```
+
+**Step 3:**
+* If  you are using the Logging Module please refer to this [document](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-advanced-features-logging.html).
+* Example of changes in this model:
+    * Setting up the log level is now
+```swift
+LPMessaging.instance.setLoggingLevel(level: .TRACE)
+```
+
+```swift
+LPMessagingSDK.instance.subscribeLogEvents(.trace)
+```
+is now 
+```swift
+LPMessaging.instance.getLogSnapshot(level: LPLoggingLevel) -> [String]
+LPMessaging.instance.getLogStringBlock(level: LPLoggingLevel) -> String
+```

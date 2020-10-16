@@ -303,6 +303,7 @@
     pages:
       - pagename: Getting Started
       - pagename: Bot Status Dashboard
+      - pagename: Bot Conversation Errors
       - pagename: Google Dialogflow
       - pagename: Google Dialogflow Version 2
       - pagename: IBM Watson Assistant
@@ -711,7 +712,7 @@
           - subpagename: Conversational AI
           - subpagename: Conversational Commands
 
-- categoryname: Historical Data
+- categoryname: Reporting
   image: historical-data
   documents:
   - documentname: Consumer Messaging History API
@@ -769,6 +770,42 @@
     - pagename: Methods
       subpages:
         - subpagename: Retrieve Data Usage Logs
+  - documentname: Agent Metrics API
+    basedomain: https://{domain}/messaging_history/api/account/{accountID}/agent-view
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Agent Status
+          - subpagename: Agent List
+          - subpagename: Summary
+  - documentname: Messaging Operations API
+    basedomain: https://{domain}/operations/api/account/{accountID}
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Messaging Conversation
+          - subpagename: Messaging Queue Health
+          - subpagename: Messaging Current Queue Health
+          - subpagename: Messaging Estimated Wait Time
+          - subpagename: Messaging CSAT Distribution
+          - subpagename: Messaging Skill Segment
+          - subpagename: Messaging Agent Segment
+          - subpagename: Messaging Queue Health By Group
+
+      - pagename: Appendix
+  - documentname: Operational Realtime API
+    basedomain: https://{domain}/operations/api/account/{accountID}
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Queue Health
+          - subpagename: Engagement Activity
+          - subpagename: Agent Activity
+          - subpagename: Current Queue State
+          - subpagename: SLA Histogram
 
 - categoryname: Messaging Channels
   image: agent-interaction
@@ -906,46 +943,6 @@
     pages:
     - pagename: API
 
-- categoryname: Real Time Data
-  image: rt-data
-  documents:
-  - documentname: Agent Metrics API
-    basedomain: https://{domain}/messaging_history/api/account/{accountID}/agent-view
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Agent Status
-          - subpagename: Agent List
-          - subpagename: Summary
-  - documentname: Messaging Operations API
-    basedomain: https://{domain}/operations/api/account/{accountID}
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Messaging Conversation
-          - subpagename: Messaging Queue Health
-          - subpagename: Messaging Current Queue Health
-          - subpagename: Messaging Estimated Wait Time
-          - subpagename: Messaging CSAT Distribution
-          - subpagename: Messaging Skill Segment
-          - subpagename: Messaging Agent Segment
-          - subpagename: Messaging Queue Health By Group
-
-      - pagename: Appendix
-  - documentname: Operational Realtime API
-    basedomain: https://{domain}/operations/api/account/{accountID}
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Queue Health
-          - subpagename: Engagement Activity
-          - subpagename: Agent Activity
-          - subpagename: Current Queue State
-          - subpagename: SLA Histogram
-
 - categoryname: Rich Messaging
   image: rich-media
   documents:
@@ -1003,10 +1000,7 @@
     - documentname: Cookies and Conversational Cloud
       pages:
         - pagename: Overview
-    - documentname: Apple Business Chat Authentication
-      pages:
-        - pagename: Overview
-    - documentname: Mobile SDK and Web Authentication
+    - documentname: Consumer Authentication
       pages:
       - pagename: Introduction
       - pagename: Major Components
@@ -1040,6 +1034,9 @@
             - subpagename: Application Login
             - subpagename: Refresh
             - subpagename: Logout
+    - documentname: Apple Business Chat Authentication
+      pages:
+        - pagename: Overview
     - documentname: MTLS
       pages:
         - pagename: Overview

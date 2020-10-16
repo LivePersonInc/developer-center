@@ -4,6 +4,8 @@ redirect_from:
   - agent-domain-domain-api.html
   - retrieve-api-domains-using-the-domain-api.html
   - essential-resources-domain-api.html
+  - common-resources-domain-api.html
+
 Keywords:
 sitesection: Documents
 categoryname: "Getting Started"
@@ -13,7 +15,7 @@ root-link: true
 indicator:
 ---
 <br>
-A read-only API that returns the base domain of LivePerson and used in the LivePerson APIs.
+A read-only API that returns the base domain of LivePerson and used in the LivePerson APIs. This is a test.
 
 ### Domain Retrieval Tool
 

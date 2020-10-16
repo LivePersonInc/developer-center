@@ -1,5 +1,8 @@
 THIS IS AN ARCHIVE OF THE OLD GETTING STARTED TUTORIALS FOR CB.
 
+{: .important}
+Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+
 ### Overview
 
 The Getting Started tutorials include four tutorials that build on one another:

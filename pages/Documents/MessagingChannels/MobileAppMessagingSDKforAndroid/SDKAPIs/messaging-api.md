@@ -378,6 +378,8 @@ Calls [unregisterLPPusher](android-unregisterlppusher.html), [shutDown](android-
 
 In order to unregister from push, it must be called when there is network available. After logout the SDK is unavailable until re-initiated.
 
+Previous conversations will not be displayed automatically until the consumer's authentication information is validated.
+
 **Note:** This method does not require the SDK to be initialized.
 
 *Note: This does not end the current messaging conversation.*

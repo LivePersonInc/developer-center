@@ -13,6 +13,87 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.4.0
+
+**Release date:** October 08, 2020
+
+# Overview
+Android Mobile Messaging SDK version 5.4.0 release includes  support  of auto logout with few bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.4.0 uses:
+- Minimum API version 21
+- Compile API version 29
+- Target API version 29
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(Minimum API version bump to 21. There is a known issue for API 19)**
+
+# New Features:
+## Auto logout - Improve logout options
+
+An SDK enhancement has been added that will prevent a second customer from viewing the chat history of the customer who chatted before them, while optimizing the flow in a way that clears just the necessary set of user information in a quick manner. This new feature adds an additional layer of security to our brand’s while verifying that conversation history and information will only be available to the consumer that was logged in to the app at the time of the conversation.
+
+### How to enable
+It’s enabled out of the box -  there’s nothing the brands need to do.
+
+Note: Auto logout works only for authenticated users. 
+
+# Attribute Update:
+[lp_hide_ui_until_auth](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_hide_ui_until_auth) is removed. Previous conversations will now not be displayed automatically until the consumer's authentication information is validated.
+
+# Retry Mechanism Update:
+Notify host app immediately when failed to authenticate consumer instead of performing periodic retries.
+
+# New Callback:
+## Added following error events and error callback:
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
+>
+> - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
+> - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
+>
+> **Callback:** 
+>
+> onError(LpError lpError, String message);
+
+| Parameter | Type | Description |
+|----|----|----|
+| lpError | LpError (enum)| The error.   |
+| message | String        | A detailed message on the error. |
+
+More details can be found at [LivePerson Callbacks](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks)
+
+## Added [LpError enum](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#lperror-enum)
+```java
+enum class LpError {
+  IDP,
+  CSDS,
+  INVALID_CERTIFICATE,
+  SOCKET,
+  TIMEOUT,
+  INVALID_SDK_VERSION,
+  UNKNOWN
+}
+```
+
+| Type | Description |
+|----|----|
+| IDP                 | An error occurred during the authentication process, which is usually because of a wrong or expired authentication key. |
+| CSDS                | Error while requesting domains. |
+| INVALID_CERTIFICATE | Error with a peer's certificate (server cert not valid, cert pinning mismatch, etc). |
+| SOCKET              | Error opening a socket to the server or a request has timed out while trying to reach a server, and as a result we are closing our socket. |
+| TIMEOUT             | A general timed out error. |
+| INVALID_SDK_VERSION | Your host app is using an old SDK version and cannot be initialized. |
+| UNKNOWN             | General SDK error. |
+
+# Bugs Fixed:
+- Android SDK crash due to empty RecyclerView object.
+- “link_preview_enable_feature” configuration is not working as expected.
+- [Messaging.reconnect()](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect) does not work when the token is not expired.
+- SDK fails to connect when opened a conversation screen using a valid JWT and host app is missing reconnect mechanism.
+
 # Android Messaging SDK - Version 5.3.0
 
 **Release date:** August 10, 2020
@@ -301,6 +382,103 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **handlePush(Context context, Bundle data, String brandId, boolean showNotification)** , use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
+
+# Android Messaging SDK - Version 4.6.1
+
+**Release date:** October 08, 2020
+
+# Overview
+Android Mobile Messaging SDK version 4.6.1 release includes the change of retry mechanism of authentication. SDK will notify host app immediately when failed to authenticate consumer instead of performing periodic retries.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.6.1 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.6.0)**
+
+# New Callback:
+## Added following error events and error callback:
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
+>
+> - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
+> - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
+>
+> **Callback:** 
+>
+> onError(LpError lpError, String message);
+
+| Parameter | Type | Description |
+|----|----|----|
+| lpError | LpError (enum)| The error.   |
+| message | String        | A detailed message on the error. |
+
+More details can be found at [LivePerson Callbacks](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks)
+
+## Added [LpError enum](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#lperror-enum)
+```java
+enum class LpError {
+  IDP,
+  CSDS,
+  INVALID_CERTIFICATE,
+  SOCKET,
+  TIMEOUT,
+  INVALID_SDK_VERSION,
+  UNKNOWN
+}
+```
+
+| Type | Description |
+|----|----|
+| IDP                 | An error occurred during the authentication process, which is usually because of a wrong or expired authentication key. |
+| CSDS                | Error while requesting domains. |
+| INVALID_CERTIFICATE | Error with a peer's certificate (server cert not valid, cert pinning mismatch, etc). |
+| SOCKET              | Error opening a socket to the server or a request has timed out while trying to reach a server, and as a result we are closing our socket. |
+| TIMEOUT             | A general timed out error. |
+| INVALID_SDK_VERSION | Your host app is using an old SDK version and cannot be initialized. |
+| UNKNOWN             | General SDK error. |
+
+# Deprecations:
+The old Error Events [ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#error-events) and [Error Callback: void onError(TaskType type, String message);](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks) are deprecated. 
+
+# Android Messaging SDK - Version 4.6.0
+
+**Release date:** September 16, 2020
+
+# Overview
+Android Mobile Messaging SDK version 4.6.0 release includes  support  of auto logout with few bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.6.0 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(Minimum API version bump to 21. There is a known issue for API 19)**
+
+# New Features:
+## Auto logout - Improve logout options
+
+An SDK enhancement has been added that will prevent a second customer from viewing the chat history of the customer who chatted before them, while optimizing the flow in a way that clears just the necessary set of user information in a quick manner. This new feature adds an additional layer of security to our brand’s while verifying that conversation history and information will only be available to the consumer that was logged in to the app at the time of the conversation.
+
+### How to enable
+It’s enabled out of the box -  there’s nothing the brands need to do.
+
+Note: Auto logout works only for authenticated users. 
+
+# Attribute Update:
+[lp_hide_ui_until_auth](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html#lp_hide_ui_until_auth) is removed. Previous conversations will now not be displayed automatically until the consumer's authentication information is validated.
+
+# Bugs Fixed:
+- Android SDK crash due to empty RecyclerView object.
+- “link_preview_enable_feature” configuration is not working as expected.
+- [Messaging.reconnect()](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect) does not work when the token is not expired.
+- SDK fails to connect when opened a conversation screen using a valid JWT and host app is missing reconnect mechanism.
 
 
 # Android Messaging SDK - Version 4.5.0
