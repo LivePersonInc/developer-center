@@ -55,7 +55,7 @@ If automatic selection of the skill fails for some reason (i.e., the pipeline is
 
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_start1.png">
 
-2. Select the skill to which to route the conversation. You can do this in one of two ways:
+2. Select the skill to which to route the conversation. You do this in one of two ways:
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/conv_tester_start2.png">
 
