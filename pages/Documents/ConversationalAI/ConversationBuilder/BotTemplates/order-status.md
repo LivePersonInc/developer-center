@@ -11,189 +11,97 @@ permalink: conversation-builder-bot-templates-order-status.html
 indicator: both
 ---
 
-The Order Status template is designed to show a customer their order status based on either an order number or email address. This template is integrated with Shopify and a fake Shopify store for demonstration purposes. You can enter the order numbers 1162 or 1163 to return order status results from the test Shopify integration.
+The Order Status template is designed to provide users with information on retail orders that have been placed by providing their order number.
 
-<img class="fancyimage" style="width:1000px" src="/img/ConvoBuilder/template_orderstatus_0.png">
+The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
+<!--
 {: .important}
-Your app can access the last 60 days of orders for a store. You can request access to a store’s full order history in your Shopify Store.
+This bot template contains a dialog template that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).
+-->
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_order_status_de.png">
 
 ### Included items
 
 #### Dialogs
-
-* Welcome
-
-    * The Welcome dialog greets the user and then requests the required information from the user. 
-
-    * The CHECK_ORDER_STATUS API requires either the order number or the email address associated with the order.
-
-    * API Success and Fail messages will be displayed accordingly.
-
-* Fallback
-
-    * When a user enters an input that is not recognized, it will go to the Fallback dialog.
-
-    * If a user hits the Fallback dialog up to a certain threshold, they will be escalated to an Agent.
-
-* Return Policy
-
-    * As an example of how you might want to include your Return Policy or other content, we’ve added an additional dialog.
-
-    * This could also be maintained within a Knowledge Base.
-
-* Agent Escalation
-
-    * If a user reaches their Fallback maximum or if they enter an "agent" keyword or intent, they will be escalated to an Agent.
+* **Order Status**: Greets the user, collects the order number, and displays the results in a text-based format.
+* **Fallback**: This is displayed when the user enters an utterance that is not recognized.
+* **Agent_Escalation**: Performs a transfer to a particular Conversational Cloud skill using the *Agent Transfer* interaction. The skill ID and transfer message are configurable within Global Functions.
+* **No Agents Available**: In the event that the escalation attempt fails, handle the issue appropriately within this dialog.
 
 #### Integrations
-
-* CHECK_ORDER_STATUS
-
-    * This integration connects to a middleware API that returns a Shopify order status.
-
-    * The Shopify store credentials must be configured in the Global Functions. 
-
-* Transfer
-
-    * As you would expect, this will perform a transfer to a Conversational Cloud skill.
-
-    * You will need to configure the skill name, id and transfer message in the Global Functions
+* **OrderStatus**: Retrieves information based on the account number provided by the user.
+    * The default integration is set to return mock data. Please use order numbers A001001 and A001002 to successfully retrieve information.
+    * You need to replace the mock API with your own API integration to return customer order status information.
 
 ### Configuration needed
-
-To customize this template, you will need to do the following.
+To customize this template, you need to do the following:
 
 #### General dialog customization
+Review each of the dialogs, starting with Order Status, and customize the verbiage used to greet your customer and request their details. This is done by editing the text copy of the interactions, and hitting Enter or using the menu to save.
 
-As noted previously, you will want to review each of the dialogs, starting with Welcome to customize the verbiage used to greet your customer and request their details.
+If you want to remove any capture interactions, be sure to review the **Next Action** navigation so that the previous interaction will go to the next interaction in the dialog.
 
-This is done simply by editing the text copy of the interactions and hitting Enter or using the menu to Save.
-
-#### Global Functions customization
-
+#### Global Function customization
 Click **Global Functions** to access all the global functions and variables to be configured.
 
-<img class="fancyimage" style="width:750px" src="/img/ConvoBuilder/template_orderstatus_1.png">
+Within Global Functions, three variables (`brandName`, `transferMessage` and `escalationSkill`) have been created. Configure these with your specific brand name, along with the appropriate skill ID and transfer message to escalate to your agent.
 
-#### Conversational Cloud escalation configuration
+#### Order number validation
+The *get order number* interaction is responsible for collecting a user's order number. Included in this interaction is a Regex validation to ensure the order number meets the correct data format. Modify the rules for this interaction to specify the format for your brand.
 
-To set up escalation to an agent in Conversational Cloud, change the following values:
+#### Pre/Post-Process code blocks included
+The current mock API returns date information in a format that is not structured in a user-friendly manner. To remedy this, the following code has been added to the Pre-Process Code of the *Order Status Text Display* interaction:
 
-<table>
- <thead>
- <tr>
- <th>Variable Name</th>
- <th>Description</th>
- </tr>
- </thead><tbody>
- <tr>
- <td>botAgentSkillName</td>
- <td>Agent Skill name</td>
- </tr>
- <tr>
- <td>botAgentSkillId</td>
- <td>Agent Skill ID</td>
- </tr>
- <tr>
- <td>escalationMessage</td>
- <td>Message will be shown when escalate to an Agent. Change it to be suitable for your business</td>
- </tr>
- </tbody>
-</table>
+```
+// Converting date data from api call to a more human readable form for text display
+var orderDate = new Date(botContext.getBotVariable('OrderStatus.orderDate'));
+var deliverDate = new Date(botContext.getBotVariable('OrderStatus.deliveryDate'));
+var stringedOrderDate = orderDate.toDateString();
+var stringedDeliverDate = deliverDate.toDateString();
+botContext.setBotVariable('orderDate', stringedOrderDate, true, false);
+botContext.setBotVariable('deliveryDate', stringedDeliverDate, true, false);
+```
 
-#### Shopify integration settings
+#### Analytics
+Custom event logging for this template has been provided by default.
 
-Add Shopify credentials to setup your online store integration. These values will need to come from the brand’s Shopify store admin.
+For standard text statements, the function to log custom events can be found in the Pre-Process Code for the interaction:
 
-More info about how to **generate a Shopify Access Token** is described [here](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
+```
+botContext.logCustomEvent('', 'Interaction Name', '');
+```
 
-<table>
-<thead>
- <tr>
- <th>Variable Name</th>
- <th>Description</th>
- </tr>
- </thead><tbody>
- <tr>
- <td>shopifyHostName</td>
- <td>Your store’s Host name (eg: somebrand.myshopify.com)</td>
- </tr>
- <tr>
- <td>shopifyApiKey</td>
- <td>ApiKey for the Shopify app (DO NOT CHANGE)</td>
- </tr>
- <tr>
- <td>shopifyShopPassword</td>
- <td>Password for the Shopify app (DO NOT CHANGE)</td>
- </tr>
- <tr>
- <td>shopifyAccessToken</td>
- <td>AccessToken for your Shopify Store. See Shopify instructions here.</td>
- </tr>
- </tbody>
-</table>
+For questions that a user must respond to, the code can be found under Process User Response:
 
-#### Invalid order attempts
+```
+var response = botContext.getCurrentUserMessage();
+botContext.logCustomEvent(response, ‘Interaction Name’, ‘’);
+```
 
-How many attempts at entering an order number or email should a user get before we escalate to an agent:
+{: .important}
+Personal information collection events are not logged by default in this template. Please consider privacy regulations before enabling this type of logging.
 
-<table>
-<thead>
- <tr>
- <th>Variable Name</th>
- <th>Description</th>
- </tr>
- </thead><tbody>
- <tr>
- <td>invalidOrderAttemptsLimit</td>
- <td>The default is 2 tries before escalation. You can give the user more tries by increasing this number.</td>
- </tr>
- </tbody>
-</table>
+For more information on custom events, see [here](conversation-builder-scripting-functions-log-debug.html#log-custom-event).
 
-#### No Order Exists messages
+<!--
+### Dialog templates
+This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that allows you to easily copy over the primary data collection and API integration flow independently from the bot template.
 
-To modify the messages shown when no order is found, change the following values:
+#### Order Status 
+Just the Order Status dialog flow. This template doesn't include escalation, fallback or other dialogs.
 
-<table>
-<thead>
- <tr>
- <th>Variable Name</th>
- <th>Description</th>
- </tr>
- </thead><tbody>
- <tr>
- <td>noOrderExistsNumber</td>
- <td>This message will be shown when no order is found when using an order number.</td>
- </tr>
- <tr>
- <td>noOrderExistsEmail</td>
- <td>This message will be shown when no order is found when using an email address.</td>
- </tr>
- </tbody>
-</table>
+Included dialogs:
+* Order Status
 
-#### Fallback message
+Pre-built NLU domain:
+* LP_Cross-vertical
 
-To modify the messages shown in the Fallback dialog, change the following values:
+Integrations:
+* OrderStatus
 
-<table>
-<thead>
- <tr>
- <th>Variable Name</th>
- <th>Description</th>
- </tr>
- </thead><tbody>
- <tr>
- <td>fallBackMessages</td>
- <td>There are 2 messages here, delimited by "|" which will be selected at random. You can add more by separating them with a pipe.</td>
- </tr>
- <tr>
- <td>fallbackAttemptsLimit</td>
- <td>How many failures before we escalate to an agent? The default is set to 2.</td>
- </tr>
- </tbody>
-</table>
+Global Function modifications:
 
-
+Global variables for the purpose of escalation (`transferMessage` and `skillId`) have been removed from Global Functions, as the escalation dialog is not included with this dialog template.
+-->

@@ -11,7 +11,7 @@ indicator: both
 
 Questions present information to the user (a question that expects a reply of some kind, a list of things to pick from, etc.), and they expect and wait for a user response before executing the next action.
 
-With a question, you can take the user’s response, evaluate it against a condition (i.e., does it match a pattern, an intent, a regular expression, or an exact value?), and then act accordingly. For example, if you ask the user for a 7-digit account number, you’ll likely want to perform a check that the user entered exactly 7 numbers. If the user did, you can then safely pass that value into an API call or perform some other action with it. For some practice at this, try the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). (You’ll need to complete the [Dialogs and Patterns tutorial](conversation-builder-tutorials-guides-getting-started.html) first, as they build on one another.)
+With a question, you can take the user’s response, evaluate it against a condition (i.e., does it match a pattern, an intent, a regular expression, or an exact value?), and then act accordingly. For example, if you ask the user for a 7-digit account number, you’ll likely want to perform a check that the user entered exactly 7 numbers. If the user did, you can then safely pass that value into an API call or perform some other action with it. For some practice at this, try the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html). (You’ll need to complete the [Dialogs and Patterns tutorial](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html) first, as they build on one another.)
 
 User responses to question interactions can be saved in [variables](conversation-builder-variables-slots.html), making them available for future use.
 
@@ -45,7 +45,7 @@ Configure the following settings in the [interaction's settings](conversation-bu
 
 <img style="width:350px" src="img/ConvoBuilder/questions_mcq2.png">
 
-- **Text Only Fallback > List Style**: Select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
+- **Text Only Fallback > List Style**: When you deploy your bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Business Chat or WhatsApp), a multiple choice question is automatically sent as plain text. Use this setting to select the list style (1. 2. 3. 4. or a. b. c. d.) to use for channels that support only plain text.
 
 - **Enable Indentation**: Affects the display of options in text-only channels. Enable this to indent (with one tab space) the multiple choice options under the question. Disable this to align them under the question without an indent.
 
