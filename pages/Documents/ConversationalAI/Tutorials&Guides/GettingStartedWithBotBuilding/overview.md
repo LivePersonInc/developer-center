@@ -20,6 +20,9 @@ permalink: tutorials-guides-getting-started-with-bot-building-overview.html
 indicator: both
 ---
 
+{: .important}
+Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+
 The **Getting Started with Bot Building** tutorial series include six tutorials that build on one another:
 
 * **[Dialogs & Patterns](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html)**: Learn how to get started with a basic bot. This tutorial explores the concept of dialogs (the different conversation flows a bot can have) and patterns, which allow the bot to match user input and respond intelligently. You are guided through the creation of a simple "Hello World" bot.

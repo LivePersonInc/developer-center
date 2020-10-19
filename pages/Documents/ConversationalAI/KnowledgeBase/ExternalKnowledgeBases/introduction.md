@@ -12,7 +12,9 @@ indicator: both
 
 ### What's an external knowledge base?
 
-If you have a CMS that you want to leverage in bot conversations or through Agent Assist, you can add an external knowledge base without needing to migrate your content. This is one where the content is authored and managed entirely within the external CMS application. Integrating with your CMS lets your content creators use familiar tools and workflows. You can integrate with any CMS that has the capability, i.e., an API connector. Notable examples include Salesforce and Zendesk. 
+If you have a CMS that you want to leverage in bot conversations or through Agent Assist, you can add an external knowledge base without needing to migrate your content.
+
+An external knowledge base is one where the content is authored and managed entirely within the external CMS application. Integrating with your CMS lets your content creators use familiar tools and workflows. You can integrate with any CMS that has the capability, i.e., an API connector. Notable examples include Salesforce and Zendesk. 
 
 Within the Knowledge Base application, an external knowledge base serves as a connector to the CMS. You can configure the knowledge base so that the content is selected and served:
 

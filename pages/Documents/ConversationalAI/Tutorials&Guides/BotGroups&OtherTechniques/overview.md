@@ -10,6 +10,9 @@ permalink: tutorials-guides-bot-groups-other-techniques-overview.html
 indicator: both
 ---
 
+{: .important}
+Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+
 The **Bot Groups & Other Techniques** tutorial series is a continuation of our [Getting Started with Bot Building tutorial series](tutorials-guides-getting-started-with-bot-building-overview.html) and expands on the implementations built within. If you are following along, please make sure you’ve completed the Getting Started series first.
 
 Here at LivePerson, we continue to iterate and develop new features to simplify the development process and to provide tools to reinforce best practices in bot building. This tutorial series provides an introduction to some of these features that have been deployed more recently, demonstrating cutting-edge techniques in bot development for all channels. 
