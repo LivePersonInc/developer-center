@@ -100,8 +100,8 @@ When using the LivePerson NLU v1 engine, the more entities in a training phrase 
 
 You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.
 
-
-<img class="fancyimage" style="width:400px" src="img/testuserinput.png">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test1.png">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test2.png">
 
 ### Add a Value Set entity
 
@@ -139,7 +139,7 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 ### Using entities
 
-To refresh on using entities with intents, check out the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html). For using entities with Knowledge Base articles, review the [Knowledge Base tutorial](knowledge-base-tutorial.html).
+To refresh on using entities with intents, check out the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html). For information on using entities with Knowledge Base articles, see [here](knowledge-base-internal-knowledge-bases-articles.html#using-entities-in-a-knowledge-base).
 
 #### Can I detect entities using JavaScript?
 

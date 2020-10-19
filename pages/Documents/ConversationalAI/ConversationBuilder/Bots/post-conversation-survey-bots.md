@@ -130,7 +130,7 @@ Use the **Display Choices As** setting to specify whether and how to send the an
 
 <img style="width:500px" src="img/ConvoBuilder/surveyBot_displayChoices.png">
 
-When you deploy your survey bot to a channel that doesn't support rich content formatting, the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
+When you deploy your survey bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Business Chat or WhatsApp), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
 
 * **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format.
 * **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer.
