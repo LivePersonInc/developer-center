@@ -57,7 +57,7 @@ You can access the variable during runtime by using `process.env['YOUR_ENV']`. *
 
 **Developer discretion is advised**, please be sure not to use confidential data such as credentials or secrets in the environment variables as these are saved and available in text form to anyone with access to the account. Functions has a secret storage service that can be leveraged for this purpose.
 
-**Note**, they are certain reserved variables, that are used by the platform and therefore they are not available to the consumer. The UI will inform you if you attempt to use them. 
+**Note**, there are certain reserved variables, that are used by the platform and therefore they are not available to the consumer. The UI will inform you if you attempt to use them.
 
 See also [Making Functions configurable](liveperson-functions-development-best-practices.html#making-functions-configurable).
 

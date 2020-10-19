@@ -214,7 +214,7 @@ The **Schedules** section allows to define a time-based execution of lambdas via
 The **Logs** section is for analysing your functions' past invocations by searching through the logs you defined. [More information on logging your function can be found here](function-as-a-service-developing-with-faas-overview.html).
 
 
-The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains, email reporting and maintain secrets (i.e. OAuth tokens).
+The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains, set up email reporting and maintain secrets (e.g. OAuth tokens).
 
 Once you've familiarized yourself with the different sections of the UI, it's time to create your first function.
 
@@ -274,7 +274,7 @@ As you can see from the example above, during an invocation the function receive
 function callback(error, result){}
 ```
 
-If during the runtime of your application no error has occurred, you can provide a **null** value as error. After a **30** second timeout, your function will be killed immediately, regardless of its error state.
+If during the runtime of your application no error has occurred, you can provide a **null** value as error. After a **30** second timeout, your function's execution will be terminated immediately, regardless of its error state.
 
 Errors are only forwarded based on the concrete event source and they react differently to errors, some events repeat the invocation while others they do not repeat the invocation. 
 
