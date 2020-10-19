@@ -86,20 +86,21 @@ As much of the functionality of the Small Talk Bot has yet to be constructed, yo
     * **Bot Group**: Many bots
 
 	Click **Create Bot** when finished.
-3. At this time, this bot will only serve to provide Escalation functionality, so delete both the Welcome and Fallback dialogs that are provided on bot creation. 
-4. Click **Add Dialog** in the lower-left corner and give our dialog a name of "Escalation."
-5. Complete the Dialog Starter interaction using the process that you used in the Getting Started tutorial, i.e., using the patterns `agent`, `representative`, and `human` to trigger the dialog.
+3. Click **Add Dialog** in the lower-left corner and give the new dialog a name of "Escalation."
+4. Complete the Dialog Starter interaction using the process that you used in the Getting Started tutorial, i.e., using the patterns `agent`, `representative`, and `human` to trigger the dialog.
 
     **Tip**: A quick and easy way to add these patterns is to click the **Library** link, and select the "Help" set of patterns.
 
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/advtutorial/library_link1.png">
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/library_link2.png">
 
-6. Create a new **Agent Transfer** interaction, modifying the text to read “Transferring to a human agent…”. In the Interaction Settings for this interaction, make sure to enter the corresponding **Human** skill ID for your user profile. Please refer to the Getting Started tutorial for details on this process.
+5. Create a new **Agent Transfer** interaction, modifying the text to read “Transferring to a human agent…”. In the Interaction Settings for this interaction, make sure to enter the corresponding **Human** skill ID for your user profile. Please refer to the Getting Started tutorial for details on this process.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/agent_transfer_interaction.png">
 
-    When complete, back out of the Small Talk bot to the dashboard of bots. You should see the newly created bot nested under the "Many bots" group along with the Greeter and Order bots.
+6. At this time, this bot will only serve to provide Escalation functionality, so delete both the Welcome and Fallback dialogs that were provided on bot creation. 
+
+7. Back out of the Small Talk bot to the dashboard of bots. You should see the newly created bot nested under the "Many bots" group along with the Greeter and Order bots.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/bots_3.png">
 
