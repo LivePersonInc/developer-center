@@ -10,6 +10,7 @@ redirect_from:
   - connector-api-examples-how-to-enable-a-feature.html
   - connector-api-examples-campaign-for-messaging-routing.html
   - connector-api-examples-file-sharing.html
+  - /%0Aconnector-api-send-api-examples.html#file-sharing
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Connector API
