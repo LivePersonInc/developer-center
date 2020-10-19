@@ -2,6 +2,7 @@
 pagename: Quick Start - 6.0 and up (XCFramework support)
 redirect_from:
   - consumer-experience-ios-sdk-quick-start-6-0-and-up.html
+  - consumer-experience-ios-sdk-quick-start.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
