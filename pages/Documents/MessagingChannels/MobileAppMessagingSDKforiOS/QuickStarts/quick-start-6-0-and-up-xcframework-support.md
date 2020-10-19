@@ -3,6 +3,9 @@ pagename: Quick Start - 6.0 and up (XCFramework support)
 redirect_from:
   - consumer-experience-ios-sdk-quick-start-6-0-and-up.html
   - consumer-experience-ios-sdk-quick-start.html
+  - mobile-app-messaging-sdk-for-ios-quick-start.html
+  - consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params
+  - mobile-app-messaging-sdk-for-ios-quick-start.html#step-3-initialize-the-lpmessagingsdk
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
