@@ -1,7 +1,7 @@
 ---
 pagename: Maven Concierge
 redirect_from:
-  - 
+  - conversation-builder-templates-maven-concierge.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
