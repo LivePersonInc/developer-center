@@ -1,5 +1,5 @@
 ---
-pagename: Important updates
+pagename: Important Updates
 sitesection: Documents
 categoryname: "Getting Started"
 documentname: API Guidelines
