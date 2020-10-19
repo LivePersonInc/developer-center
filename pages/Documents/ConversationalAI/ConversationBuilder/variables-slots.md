@@ -2,7 +2,6 @@
 pagename: Variables & Slots
 redirect_from:
     - conversation-builder-conversation-builder-variables-slots.html
-    - conversation-builder-variables-slots.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
