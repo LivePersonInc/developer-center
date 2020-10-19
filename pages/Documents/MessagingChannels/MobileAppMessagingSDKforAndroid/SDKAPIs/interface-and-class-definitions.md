@@ -2,6 +2,14 @@
 pagename: Interface and Class Definitions
 redirect_from:
   - android-interface-and-class-definitions.html
+  - android-interface-definitions.html#lpauthenticationparams
+  - android-interface-definitions.html#lpconversationdata
+  - android-interface-definitions.html#agentdata
+  - android-interface-definitions.html#permissiontype
+  - android-interface-definitions.html#engagementdetails
+  - android-interface-definitions.html#engagementcallback
+  - android-interface-definitions.html#sdecallback
+  - android-interface-definitions.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
