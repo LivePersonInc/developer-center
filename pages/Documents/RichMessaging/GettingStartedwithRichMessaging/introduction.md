@@ -6,6 +6,7 @@ redirect_from:
   - structured-content-overview.html
   - structured-content-introduction-to-structured-content.html
   - rich-messaging-styling.html
+  - getting-started-with-rich-messaging-basic-elements-button.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
