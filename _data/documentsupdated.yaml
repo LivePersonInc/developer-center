@@ -981,6 +981,12 @@
         - pagename: Quick Replies Template
         - pagename: Best Practices
         - pagename: Limitations
+    - documentname: Google Business Messages Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
     - documentname: Google RCS Business Messaging Templates
       pages:
         - pagename: Introduction
