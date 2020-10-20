@@ -27,6 +27,6 @@ Provide more accurate traffic reports to brands.
 ### What are the APIs in scope?
 All historial API consumers
 
-* Messaging Interactions API
-* Engagement History API
-* Consumer Messaging History API
+* [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html)
+* [Engagement History API](https://developers.liveperson.com/engagement-history-api-overview.html)
+* [Consumer Messaging History API](https://developers.liveperson.com/consumer-messaging-history-api-overview.html)
