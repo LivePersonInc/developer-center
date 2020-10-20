@@ -2,6 +2,7 @@
 pagename: Appendix
 redirect_from:
   - administration-profiles-appendix.html
+  - aadministration-profiles-appendix.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
