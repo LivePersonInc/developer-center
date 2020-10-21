@@ -32,8 +32,8 @@ Meta intents are not trained directly, as they are dependent on the intents cont
 
 To test user utterances against your intents and meta intents, use the debug tool provided in the lower-right corner of Intent Builder. Select the ‘Search in domain’ checkbox, and select ‘All’ from the search dropdown. Testing user input will now display search results for both intents and meta intents, which should result in identical scoring for the intent matched and the meta intent it belongs to.
 
-<img style="width:550px" src="img/ConvoBuilder/meta_intent3.png">
+<img style="width:500px" src="img/ConvoBuilder/meta_intent3.png">
 
 ### Example guide
 
-For a step-by-step, example guide that uses meta intents, see [here](conversation-builder-tutorials-guides-using-meta-intents-with-conversation-builder.html).
+For some practice with meta intents, complete the [Getting Started tutorial series](tutorials-guides-getting-started-with-bot-building-overview.html), which includes a [tutorial](tutorials-guides-bot-groups-other-techniques-meta-intents.html) on meta intents.

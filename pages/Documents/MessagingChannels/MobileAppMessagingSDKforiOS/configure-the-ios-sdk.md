@@ -16,6 +16,7 @@ redirect_from:
   - mobile-app-messaging-sdk-for-ios-configuration-ui.html
   - consumer-experience-ios-sdk-user-data.html
   - mobile-app-messaging-sdk-for-ios-configuration-user-data.html
+  - consumer-experience-ios-sdk-configuration.html
 
 Keywords:
 sitesection: Documents
