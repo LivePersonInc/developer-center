@@ -32,6 +32,11 @@ We’ll use three separate bots as part of our "many bot" solution:
 * An **Order bot** that will contain our Billing Question and Order Status dialogs.
 * A **Small Talk bot** that will contain our Agent Escalation and some Small Talk functionality that we'll develop later in this tutorial.
 
+### Watch the video
+
+<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/470607418" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
+<br>
+
 ### Step 1: Create the Greeter bot
 
 Instead of creating these new bots from scratch, we will copy our Getting Started bot into three new bots and strip away the unnecessary functionality from each.
