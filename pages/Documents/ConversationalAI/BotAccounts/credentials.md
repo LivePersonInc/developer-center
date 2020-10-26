@@ -15,7 +15,7 @@ You define credentials per organization.
 ### Credential types (authentication types)
 There are several types of credentials that you can define to support [API integrations](conversation-builder-integrations-api-integrations.html):
 
-- **OAuth 2.0**: Use this when you require the use of an access token that's obtained via the OAuth 2.0 protocol. This and Mutual Authentication are more secure choices than others in this list.
+- **OAuth 2.0**: Use this when you require the use of an access token that's obtained via the OAuth 2.0 protocol. You can obtain the access token using just the client’s credentials or using the client’s credentials plus an authorization code. This and Mutual Authentication are more secure choices than others in this list.
 - **Mutual Authentication**: Use this when you require an industry-standard, two-way authentication protocol where both the client and the server authenticate each other. This and OAuth 2.0 are more secure choices than others in this list.
 - **Basic Authentication**: Use this when the API has a permanent token that you always want to use. The token is created by the system using the user name and password that you specify. This is a simpler but less secure choice than others in this list.
 - **Access Token**: Use this when the API has a permanent token that you always want to use. You specify the token to use. This is a simpler but less secure choice than others in this list.
@@ -27,14 +27,14 @@ There's also a credential type that supports the use of [third-party NLU engines
 {: .important}
 When working with API integrations, keep in mind that the authentication type that you select for a credential must be supported by the API that you intend to call. For example, don't use Basic Authentication if the API doesn't support it.
 
-### Add an OAuth 2.0 credential using client credentials
+### Add an OAuth 2.0 credential using the client's credentials
 
 You can create an OAuth 2.0 credential and use it in [API integrations](conversation-builder-integrations-api-integrations.html) when you require the use of an access token that's obtained via the OAuth 2.0 protocol.
 
 {: .important}
 The images in this section illustrate creating an OAuth 2.0 credential to support integration with Salesforce in particular, as an example.
 
-**To add an OAuth 2.0 credential**
+**To add an OAuth 2.0 credential using the client's credentials**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
@@ -70,7 +70,7 @@ You can create an OAuth 2.0 credential and use it in [API integrations](conversa
 {: .important}
 The images in this section illustrate creating an OAuth 2.0 credential to support integration with Salesforce in particular, as an example.
 
-**To add an OAuth 2.0 credential**
+**To add an OAuth 2.0 credential using the client's credentials plus an authorization code**
 
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
