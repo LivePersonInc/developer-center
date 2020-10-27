@@ -136,9 +136,11 @@ Check for any interruption on Dialogflow side.
 #### Description
 This indicates an issue during Faas invocation.
 #### Reasons
-Mostly this happens if your quota limit is exceeded.
+This could have multiple reasons: function code non working, function invocation was not finished after 30s, Faas Quota limit was reached.
 #### Solutions
-Double-check you have enough api calls left for Faas.
+Double-check you have enough api calls left for Faas. Also please verify that your Faas function is working. 
+You can refer to the [Faas Documentation](liveperson-functions-deployment.html#testing-your-function) to find out how test your function code.
+Also please verify your function has the current implementation as described in our [Custom Integration Documentation](third-party-bots-custom-integration.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.missing-response-body
 
@@ -147,7 +149,7 @@ This happens if there is no response body provided.
 #### Reasons
 The Faas callback was invoked without a response body object.
 #### Solutions
-Provide a response body in the callback.
+Provide a response body in the callback, see [Custom Integration Documentation](liveperson-functions-deployment.html#testing-your-function)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-hook
 
@@ -156,7 +158,8 @@ Indicates that the Faas hook could not be invoked.
 #### Reasons
 Implementation errors inside Faas hook.
 #### Solutions
-Double-check and test the Faas Hook code.
+Double-check and test the Faas Hook code. You can refer to the [Faas Documentation](liveperson-functions-deployment.html#testing-your-function) to find out how test your function code.
+Please also check the dedicated documentation for [Third-Party-Bots Faas Hooks](https://developers.liveperson.com/third-party-bots-hook-configuration.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.lex.composite-format-not-supported
 
