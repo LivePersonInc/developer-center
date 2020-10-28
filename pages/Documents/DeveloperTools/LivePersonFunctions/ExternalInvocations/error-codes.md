@@ -33,8 +33,7 @@ This section describes possible errors that can occur when invoking a lambda fro
 
 | Code                                               | name             | Description                                              |
 |----------------------------------------------------|-----------------|-----------------------------------------------|
-| '200'           |  Ok   | The request was processed successfully and the result of the request is included in the response.   |
-| '202'           | Accepted     | Accepted response status, request has been accepted for processing                     |
+| '200','202'           |  Processed/Accepted   | The request was processed successfully and the result of the request is included in the response.   |
 | '400'           |  Bad request  | Some validations have failed on the request                                             |
 | '401'           | Unauthorized    | Unauthorized,The request cannot be made without valid authentication                   |
 | '403'           |	Forbidden    | The request was not carried out because the client was not authorized                 |
@@ -42,8 +41,5 @@ This section describes possible errors that can occur when invoking a lambda fro
 | '405'           |  Method not allowed   | The request was made using wrong HTTP method                  |
 | '408'           |  Request timeout | The user opened a connection to the server but did not send any data after a given amount of time.              |
 | '429'           |  Too many requests   | The client sent too many requests in a given period of time.                            |
-| '499'           |  Client Closed Request   | Lambda execution time limit has exceeded                                               |
-| '500'           |  Internal server error   | Internal unexpected server error                                                                  |
-| '502'           | Bad gateway    | The server could not fulfill its function as gateway or proxy because it received an invalid response.           |
-| '504'           | Gateway timeout    | The server could not fulfill its function as a gateway or proxy because it did not receive a response from the servers or services it was using within a specified period of time. |
-| '901'           | Error during lambda execution   | lambda unsuccesfully completed the request due to user defined error                   |
+| '500','502','504'  |  Internal server error   | Internal unexpected server error                                                                  |
+| '901'           | Error during lambda execution   | Lambda Execution failed due to an issue with the lambda coding. This can include runtime exception, exceeding processing window & returning of an error by the lambda.                   |
