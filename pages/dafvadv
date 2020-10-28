@@ -1,0 +1,16 @@
+curl -X GET "https://bot-platform-api.emea.fs.liveperson.com/api/v1/account/52863344/conversation/269cf739-222a-4979-aec2-d93de06d01f1/command" -H  "accept: application/json" -H  "authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJiZWFyZXIiOiJhMGMxYmI3NWRiZjFiOGZkNzNmZjc2ODk0NDQ3MWU0ZDAwMmFmMDY3M2ZmYjM0NDdiMjUzNjlhZjgwNzIxMDY5IiwiaXNMUEEiOnRydWUsInBlcm1pc3Npb25zIjpbMTU2NiwxNTY3LDE3NzAsMTc3NF0sInByb2ZpbGVzIjpbXSwic2VydmVyVGltZSI6IlR1ZSwgMjcgT2N0IDIwMjAgMTY6MTc6MTUgR01UIiwidXNlcklkIjoiOTAwMDAwMjA1MSIsImlhdCI6MTYwMzgxNTQzNSwiZXhwIjoxNjAzODE3MjM1LCJpc3MiOiJCb3QgUGxhdGZvcm0gQVBJIiwic3ViIjoiQXV0aGVudGljYXRpb24ifQ.HJzRzLFkNGW15ECnPmzbUcFGg8LLaN5_n3qusx75YEQ"
+
+
+curl 'https://bot-platform-api.emea.fs.liveperson.com/api/v1/account/53664653/conversation/0746b43a-9e64-4722-a4e4-56e08f4dfb19/command' \
+  -H 'authority: bot-platform-api.emea.fs.liveperson.com' \
+  -H 'accept: application/json' \
+  -H 'authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJiZWFyZXIiOiJhMGMxYmI3NWRiZjFiOGZkNzNmZjc2ODk0NDQ3MWU0ZDAwMmFmMDY3M2ZmYjM0NDdiMjUzNjlhZjgwNzIxMDY5IiwiaXNMUEEiOnRydWUsInBlcm1pc3Npb25zIjpbMTU2NiwxNTY3LDE3NzAsMTc3NF0sInByb2ZpbGVzIjpbXSwic2VydmVyVGltZSI6IlR1ZSwgMjcgT2N0IDIwMjAgMTY6MTc6MTUgR01UIiwidXNlcklkIjoiOTAwMDAwMjA1MSIsImlhdCI6MTYwMzgxNTQzNSwiZXhwIjoxNjAzODE3MjM1LCJpc3MiOiJCb3QgUGxhdGZvcm0gQVBJIiwic3ViIjoiQXV0aGVudGljYXRpb24ifQ.HJzRzLFkNGW15ECnPmzbUcFGg8LLaN5_n3qusx75YEQ' \
+  --compressed
+
+
+curl 'https://bot-platform-api.emea.fs.liveperson.com/api/account/53664653/bot?v=1' \
+  -H 'authority: bot-platform-api.emea.fs.liveperson.com' \
+  -H 'accept: application/json' \
+  -H 'authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJiZWFyZXIiOiJhMGMxYmI3NWRiZjFiOGZkNzNmZjc2ODk0NDQ3MWU0ZDAwMmFmMDY3M2ZmYjM0NDdiMjUzNjlhZjgwNzIxMDY5IiwiaXNMUEEiOnRydWUsInBlcm1pc3Npb25zIjpbMTU2NiwxNTY3LDE3NzAsMTc3NF0sInByb2ZpbGVzIjpbXSwic2VydmVyVGltZSI6IlR1ZSwgMjcgT2N0IDIwMjAgMTY6MTc6MTUgR01UIiwidXNlcklkIjoiOTAwMDAwMjA1MSIsImlhdCI6MTYwMzgxNTQzNSwiZXhwIjoxNjAzODE3MjM1LCJpc3MiOiJCb3QgUGxhdGZvcm0gQVBJIiwic3ViIjoiQXV0aGVudGljYXRpb24ifQ.HJzRzLFkNGW15ECnPmzbUcFGg8LLaN5_n3qusx75YEQ' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36' \
+  --compressed
