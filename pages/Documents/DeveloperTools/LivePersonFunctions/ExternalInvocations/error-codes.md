@@ -33,13 +33,12 @@ This section describes possible errors that can occur when invoking a lambda fro
 
 | Code                                               | name             | Description                                              |
 |----------------------------------------------------|-----------------|-----------------------------------------------|
-| '200','202'           |  Processed/Accepted   | The request was processed successfully and the result of the request is included in the response.   |
-| '400'           |  Bad request  | Some validations have failed on the request                                             |
-| '401'           | Unauthorized    | Unauthorized,The request cannot be made without valid authentication                   |
-| '403'           |	Forbidden    | The request was not carried out because the client was not authorized                 |
-| '404'           |  Not Found  | File/Page/Server/lambda Not Found                                                             |
-| '405'           |  Method not allowed   | The request was made using wrong HTTP method                  |
-| '408'           |  Request timeout | The user opened a connection to the server but did not send any data after a given amount of time.              |
-| '429'           |  Too many requests   | The client sent too many requests in a given period of time.                            |
-| '500','502','504'  |  Internal server error   | Internal unexpected server error                                                                  |
-| '901'           | Error during lambda execution   | Lambda Execution failed due to an issue with the lambda coding. This can include runtime exception, exceeding processing window & returning of an error by the lambda.                   |
+| 200,202           |  Processed/Accepted   | Request was successfully accepted/processe   |
+| 400           |  Bad request  | Some validations have failed on the request                                             |
+| 401,403           | Unauthorized/Forbidden    | The request cannot be made without valid authentication                   |
+| 404           |  Not Found  | File/Page/Server/lambda Not Found                                                             |
+| 405          |  Method not allowed   | The request was made using wrong HTTP method                  |
+| 408           |  Request timeout | The user opened a connection to the server but did not send any data after a given amount of time.              |
+| 429           |  Too many requests   | The client sent too many requests in a given period of time.                            |
+| 500,502,504  |  Internal server error   | Internal unexpected server error                                                                  |
+| 901          | Error during lambda execution   | Lambda Execution failed due to an issue with the lambda coding. This can include runtime exception, exceeding processing window & returning of an error by the lambda.                   |
