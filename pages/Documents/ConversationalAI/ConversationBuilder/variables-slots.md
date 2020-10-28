@@ -43,6 +43,10 @@ You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 
 The [Get and Set Bot Variables functions](conversation-builder-scripting-functions-get-set-contextual-data.html#get-and-set-bot-variable) can be used to store and access variables in the Pre-Process / Post-Process Code or the Process User Response JavaScript [code panels](conversation-builder-interactions-configuration-custom-code.html).
 
+#### Cleaning variable data
+
+Before setting or storing data in a variable, in the [Process User Response code](conversation-builder-interactions-configuration-custom-code.html#process-user-response), it's a good idea to "clean" or "sanitize" the data by parsing it and transforming it to remove problematic issues, i.e., remove leading or trailing white space, remove new lines ( \\n ) and special characters, and so on.
+
 ### Slots
 
 Slots are a *special type* of variable. Most of the time, you will use [variables](#variables) to take what a user says and hold on to it for later use. Slots are useful for more specialized use cases.
@@ -108,15 +112,15 @@ When you define a variable or slot, you specify how long to keep the stored data
 
 <img class="fancyimage" width="800" src="img/ConvoBuilder/variablesSlotsDuration.png">
 
-There are four options for the duration:
+There are three options for the duration:
 
 * **Request**: The data will be saved for that particular use of the variable or slot. This option is only useful if the next question in the tree depends on the data.
 
 * **Dialog**: The data will be stored for the specific dialog. Once the dialog ends (either by the consumer closing the conversation or the bot switching to a different dialog), the data will be cleared.
 
-* **Session**: The data will be saved for the entirety of the consumer's browser session. This is useful when using the data to query APIs and retrieve information that might be useful for multiple dialogs.
+* **Session**: The data will be saved for the entirety of the consumer's automation session. This is useful when using the data to query APIs and retrieve information that might be useful across the entire bot.
 
-* **Forever**: The data will be saved and accessible by the bot for 180 days. **Note**: The "Forever" option will be deprecated in a future release. Use of the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html) instead of this option is recommended.
+If you need to store data for the long term, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
 
 ### Displaying data to the consumer
 

@@ -2,6 +2,7 @@
 pagename: getConversationFragment (full authentication support + view modes)
 redirect_from:
   - android-getconversationfragfull.html
+  - android-getconversationfrag.html
 Keywords:
 
 categoryname: "Messaging Channels"
