@@ -178,13 +178,14 @@ Example Payloads:
 ###### Minimal working Faas example as code
 
 ```js
-const { queryInput } = input.payload;
+const { payload } = input;
+const { queryInput } = payload;
 
 if(queryInput.text && queryInput.text.text){
   queryInput.text.text += 'preHook';
 }
 
-return callback(null, input.payload);
+return callback(null, payload);
 ```
 
 
@@ -210,7 +211,7 @@ return callback(null, input.payload);
 const { payload } = input;
 
 if (payload.message) {
-  input.payload.message += 'preHook';
+  payload.message += 'preHook';
 }
 
 return callback(null, payload);
@@ -239,7 +240,7 @@ return callback(null, payload);
 ```js
 const { payload } = input;
 if (payload.inputText) {
-  input.payload.inputText += 'preHook';
+  payload.inputText += 'preHook';
 }
 return callback(null, payload);
 ```
@@ -270,12 +271,12 @@ return callback(null, payload);
 ```js
 const { payload } = input;
 if (payload.text) {
-  input.payload.text += 'preHook';
+  payload.text += 'preHook';
 }
 return callback(null, payload);
 ```
 
-##### WatsonV1
+##### Watson
 
 ###### Request payload
 
@@ -307,7 +308,7 @@ return callback(null, payload);
 ```js
 const { payload } = input;
 if (payload.message) {
-  input.payload.message += 'preHook';
+  payload.message += 'preHook';
 }
 return callback(null, payload);
 ```
@@ -385,16 +386,17 @@ The Posthook Lambda gets invoked on every message the customer sends. It allows 
 ###### Minimal working Faas example as code 
 
 ```js
-const { payload: { queryResult } } = input.payload;
+const { payload } = input;
+const { payload: { queryResult } } = payload;
 if (
   queryResult &&
   queryResult.fulfillmentMessages &&
   queryResult.fulfillmentMessages[0].text.text[0] === 'Hi there'
 ) {
-  input.payload.queryResult.fulfillmentMessages[0].text.text[0] +=
+  queryResult.fulfillmentMessages[0].text.text[0] +=
     'postHook';
 }
-return callback(null, input.payload);
+return callback(null, payload);
 ```
 
 ##### Custom Integration via Faas
@@ -411,7 +413,7 @@ return callback(null, input.payload);
 ```js
 const { payload } = input;
 if (payload.messages && payload.messages[0]) {
-  input.payload.messages[0] += ' edited by postHook';
+  payload.messages[0] += ' edited by postHook';
 }
 return callback(null, payload);
 ```
@@ -438,7 +440,7 @@ return callback(null, payload);
 ```js
 const { payload } = input;
 if (payload.message) {
-  input.payload.message = 'Changed text by postHook';
+  payload.message = 'Changed text by postHook';
 }
 return callback(null, payload);
 ```
@@ -522,7 +524,7 @@ return callback(null, payload);
 ```js
 const { payload } = input;
 if (payload.output && payload.output.generic[0].text === 'Hi there') {
-  input.payload.output.generic[0].text += 'postHook';
+  payload.output.generic[0].text += 'postHook';
 }
 return callback(null, payload);
 ```
