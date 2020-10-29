@@ -87,3 +87,7 @@ You can delete a bot group at any time; this *doesn't* delete the bots therein. 
 No, this isn't required. Bots that aren't assigned to a bot group are listed below the bot groups.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botGroups_unassigned.png">
+
+#### Can I test bot groups using Preview?
+
+No, [Preview](conversation-builder-testing-deployment-previewing.html) can't be used; you must test bot groups using deployed bots. For some practice at this, complete the [Bot Groups & Other Techniques](tutorials-guides-bot-groups-other-techniques-overview.html) tutorial series.
