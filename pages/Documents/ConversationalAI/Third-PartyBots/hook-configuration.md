@@ -471,7 +471,7 @@ if (
   payload &&
   payload[0].text
 ) {
-  input.payload[0].text += 'postHook changed this message';
+  payload[0].text += 'postHook changed this message';
 }
 return callback(null, payload);
 ```
