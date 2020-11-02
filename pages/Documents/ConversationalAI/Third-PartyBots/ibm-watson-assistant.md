@@ -657,12 +657,50 @@ To close a chat or messaging conversation, we utilize the action object as we di
 
 Figure 6.1 Watson Assistant JSON response for closing chat/conversation
 
+### Invoke LivePerson Function
+
+During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.
+
+To invoke a LivePerson Function, we utilize the action object as we did for a transfer (see **Figure 5.1**). In **Figure 7.1** below, the **Watson Assistant** JSON response should be mirrored as follows:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": [
+        "Trigger LivePerson Function"
+      ]
+    }
+  },
+  "actions": [
+    {
+      "name": "INVOCATION",
+      "type": "client",
+      "parameters": {
+        "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
+        "payload": "{ "some": "stuff"}",
+        "failOnError": true
+        
+      },
+      "result_variable": "none"
+    }
+  ]
+}
+```
+Figure 7.1 Watson Assistant JSON response for invoking LivePerson Function
+
+To retrieve the ***lambdaUuid*** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+
+In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter
+
+The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**
+
 ### Engagement attributes as context
 
-Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 7.1.
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.1.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
-Figure 7.1 Conversation Type step in creation/modification of bot configuration.
+Figure 8.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V1 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/apidocs/assistant-v1#get-response-to-user-input)). An example of the request body can be seen below:
 
@@ -690,7 +728,7 @@ Conversational Cloud Messaging platform provides a new metadata input type (“e
 {: .important}
 Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
 
-Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. The `encodedMetadata` can be defined with context editor or using the JSON editor(Figure 8.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. The `encodedMetadata` can be defined with context editor or using the JSON editor(Figure 9.1). In both ways, Third-Party Bot leverages the context variables to send the encoded metadata. The encoded metadata is passed throughout the conversation responses unless it is overwritten by upcoming `encodedMetadata`. Then the upcoming `encodedMetadata` will be passed along the responses.
 
   <img class="fancyimage" style="width:800px" src="img/watsonassistant/context_adding_choices.png">
   Figure 8.1 Showing context editor with the encoded metadata.
@@ -703,7 +741,7 @@ Be careful with the camel-case characters `encodedMetadata` you must provide it 
 Sending encoded metadata with the Native Content (Text, Image and Options) is possible using Watson `context editor` or also through the `JSON editor`. An example response definition for both ways can be seen below:
 
   <img class="fancyimage" style="width:800px" src="img/watsonassistant/watson_encoded_metadata_context_editor.png">
-  Figure 8.2 Showing context editor with the encoded metadata.
+  Figure 9.2 Showing context editor with the encoded metadata.
 
 <br />
 
@@ -735,7 +773,7 @@ Example response body for `JSON editor`:
 Sending encoded metadata with the Native Content is possible using Watson `context editor` or also through the `JSON editor`. An example response definition for both ways can be seen below:
 
   <img class="fancyimage" style="width:800px" src="img/watsonassistant/watson_encoded_metadata_with_structured_content.png">
-  Figure 8.3 Showing context editor with the encoded metadata.
+  Figure 9.3 Showing context editor with the encoded metadata.
 
 <br />
 
@@ -837,7 +875,7 @@ Please note private text message will never be shown to the consumer and will be
 <br />
 
 <img class="fancyimage" style="width:800px" src="img/watsonassistant/context_adding_choices.png">
-Figure 9.1 Showing JSON editor option access via Watson Assistant.
+Figure 10.1 Showing JSON editor option access via Watson Assistant.
 
 It is possible to send only a private text message response. The example payload of such response is below (also Figure 9.2 `JSON Editor` view):
 
@@ -858,7 +896,7 @@ It is possible to send only a private text message response. The example payload
 ```
 
 <img class="fancyimage" style="width:800px" src="img/watsonassistant/private_message_response_custom_payload.png">
-Figure 9.2 Showing single private text message definition inside `JSON Editor`
+Figure 10.2 Showing single private text message definition inside `JSON Editor`
 
 It is also possible to send a private text message with the action (e.g. Transfer / Escalations). Example payload of such a case (Private Text Message - Action) will be as below:
 

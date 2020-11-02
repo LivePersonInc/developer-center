@@ -10,6 +10,9 @@ permalink: intent-builder-overview.html
 indicator: both
 ---
 
+{: .important}
+Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+
 The Conversation Builder platform's Intent Builder allows you to build multiple intent domains that can each hold one or many intents and entities. Most brands will find that one domain can handle all their intents, but sometimes breaking them up is necessary or desirable. For example, having a Main intent domain and a Small Talk intent domain is very common.
 
 Intents direct a bot to be more flexible and respond to a wider variety of user input. Instead of looking for specific patterns in the input (for example, the pattern "bill"), the bot uses a Natural Language Understanding (NLU) engine to look for a defined intent. Then the bot triggers the dialog that's configured to respond to the intent. Therefore, once you configure your intents with robust *training phrases*, expressions like, "I have a question about billing", "Looking to check my account," or "What's my billing status?" yield the same intent and, thus, the same response from the bot.
@@ -54,7 +57,7 @@ Domains added from prebuilt domains use the [LP NLU v2 engine](intent-builder-na
 
 #### Training
 
-Domains that use either the LivePerson NLU v2 engine or a 3rd-party NLU engine must be explicitly trained (i.e., you click the **Train** button that's available). This process takes the raw training data and uses it to create a “machine-learning” model that generalizes the data. The resulting model is then used to make predictions on user utterances. With these NLU engines, most of the work needed to be able to make predictions on user utterances is performed *at training time*, allowing for a faster response at run time.
+Domains that use either the LivePerson NLU v2 engine or a 3rd-party NLU engine must be explicitly trained (i.e., you click the **Train** button that's available) after you make changes. This process takes the raw training data and uses it to create a “machine-learning” model that generalizes the data. The resulting model is then used to make predictions on user utterances. With these NLU engines, most of the work needed to be able to make predictions on user utterances is performed *at training time*, allowing for a faster response at run time.
 
 In contrast, domains that use the LivePerson NLU v1 engine aren’t trained, and there is no machine-learning model created. The comparison of the user utterance against the intents and entities is performed at run time. With this NLU engine, be aware that the larger the domain, the more time the prediction response takes. This is because most of the work needed to be able to make predictions on user utterances is performed *at run time*.
 

@@ -9,6 +9,10 @@ permalink: line-templates-limitations.html
 indicator: messaging
 ---
 
+### General limitations
+
+* Line does not guarantee message order and some message types might take longer to send than others. Therefore a small timeout is recommended when sending multiple successive messages. 
+
 ### Element limitations
 
 * Cards have a maximum of 3 buttons

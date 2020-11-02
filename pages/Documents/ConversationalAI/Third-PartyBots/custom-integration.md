@@ -1,6 +1,8 @@
 ---
 pagename: Custom Integration
 redirect_from:
+  - custom-third-party-bots.html
+  - bot-connectors-custom-third-party-bots.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
@@ -185,6 +187,42 @@ const payload = {
     action: "TRANSFER",
     actionParameters: {
       skill: "bot-escalation",
+    },
+  },
+};
+```
+
+### Invoke LivePerson Function
+
+During a conversation, it is possible to trigger a different LivePerson Function. This provides a way to run additional custom logic with a bot.
+
+To invoke a different LivePerson Function, we use the `action` key in the response object as we did for a transfer (see example above). 
+
+| key          | value                                                      | notes                     |
+| ------------ | ---------------------------------------------------------- | ------------------------- |
+| action       | INVOCATION                                                 | case sensitive, mandatory |
+| lambdaUuid   | lambda UUID of LivePerson Function                         | case sensitive, mandatory |
+| payload      | content that will be sent to the LivePerson Function       | case sensitive            |
+| failOnError  | boolean that decides if bot escalates on failed invocation | case sensitive            |
+
+To retrieve the ***lambdaUuid*** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+
+In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter.
+
+The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**.
+
+
+```javascript
+const payload = {
+  messages: [
+    "Please wait will I check if we have any live agents online that can attend to you",
+  ],
+  context: {
+    action: "INVOCATION",
+    actionParameters: {
+      "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
+      "payload": "{ "some": "stuff"}",
+      "failOnError": true
     },
   },
 };
