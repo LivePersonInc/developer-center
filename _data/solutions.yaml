@@ -1,9 +1,4 @@
-- solutionname: IVR Deflection
-  image: ivr-deflection
-  documents:
-    - documentname: IVR Deflection
-    - documentname: IVR Deflection for Chat
-    - documentname: Setting Up IVR Deflection for Chat
+
 
 - solutionname: Mobile App Messaging
   image: mobile-app-messaging
@@ -30,7 +25,6 @@
   image: sms-with-live-engage
   documents:
     - documentname: Overview
-    - documentname: IVR Deflection
     - documentname: Clickable Mobile Content to SMS
     - documentname: Desktop Content Campaign
     - documentname: Google AdWords - Click-to-Message
@@ -45,12 +39,6 @@
     - documentname: Deployment Steps
     - documentname: Additional Options
 
-- solutionname: Custom Dashboard
-  image: custom-dashboard
-  documents:
-    - documentname: Create a Custom Real Time Dashboard
-    - documentname: Chat Metrics
-    - documentname: Messaging Metrics
 
 - solutionname: Video Chat
   image: video-chat
