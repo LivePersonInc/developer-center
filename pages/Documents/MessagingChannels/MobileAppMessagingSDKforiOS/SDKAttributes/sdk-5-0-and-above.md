@@ -2032,7 +2032,11 @@ If setting nil - default avatar image will be used with `remoteUserAvatarBackgro
    - **Type:** UIImage?
    - **Default value:** nil 
 
+#### brandAvatarImageContentMode
+Sets content mode for the brand avatar image
 
+- **Type:** UIView.ContentMode
+- **Default value:** .scaleAspectFit
 
 #### csatAgentAvatarBackgroundColor 
 Background color of agent's default avatar in CSAT. 
