@@ -83,7 +83,7 @@ This capability to switch the environment eliminates the need to delete the agen
 
 1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
 
-    The dashboarad is displayed by default.
+    The dashboard is displayed by default.
 
 2. Click **Bot Agents** in the upper-left corner.
 3. On the **Custom Connectors** tab, use the filter controls to display the bots for the relevant environment.  (The bots for Production are displayed by default.)
