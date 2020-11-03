@@ -14,10 +14,10 @@ In Bots Status, you use the **Custom Connectors** tab of the **Bot Agents** page
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_monitoring6.png">
 
-Note the following on the page:
+Use the filters in the upper-right corner to display the desired agents.
 
-* Use the filters in the upper-right corner to display the desired agents.
-* The metrics that are displayed at the top of the page reflect the entire organization. They aren't affected by the filters.
+{: .important}
+The metrics that are displayed at the top of the page reflect the entire organization. They aren't affected by the filters.
 
 ### Supporting failover
 
