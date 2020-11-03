@@ -37,7 +37,7 @@ After the pre-requisite steps are performed, at a high level, deployment is a tw
 {: .important}
 LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
-For some practice at deployment, complete the [Connect to Conversational Cloud](conversation-builder-tutorials-guides-getting-started.html) tutorial. 
+For some practice at deployment, complete the [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial.
 
 ### The Agent Connectors page
 The Agent Connectors page makes it fast and easy to understand the status of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically you won't need to dive into the details on the individual components that support the end-to-end connection. Use the Start/Stop toggle button to start and stop an agent connector.
@@ -123,14 +123,7 @@ If a connector enters an Offline status, which is an error status, click **Detai
 * **401 "unauthorized" error**: This error can occur if you try to add an agent connector for a bot user that wasn't created by you. Either add the agent connector for a different bot user created by you, or have the creator of the bot user add the agent connector.
 
 ### Deployment statuses
-An agent connector can have one of the following statuses:
-
-- **Ready to Start**: The connector was added successfully, but it hasn't been started for the first time.
-* **Not Connected**: The connection to Conversational Cloud has been dropped, or the connector has just started and hasn't yet had the chance to update its status after connection.
-- **Online**: The connector is running, and all end-to-end connections are working well.
-- **Offline**: At least one underlying component isn't working, causing end-to-end connections not to function. The connector is in an error state and isn't running.
-- **Stopped**: The connector isn't running because it was manually stopped. 
-
+For status descriptions, see [here](bots-status-overview.html#statuses).
 
 ### Custom configuration fields
 

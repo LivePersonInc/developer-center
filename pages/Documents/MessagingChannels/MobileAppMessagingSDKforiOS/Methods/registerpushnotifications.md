@@ -2,6 +2,7 @@
 pagename: registerPushNotifications
 redirect_from:
   - consumer-experience-ios-sdk-registerpushnotifications.html
+  - consumer-experience-ios-sdk-methods.html#registerpushnotifications
 Keywords:
 
 categoryname: "Messaging Channels"

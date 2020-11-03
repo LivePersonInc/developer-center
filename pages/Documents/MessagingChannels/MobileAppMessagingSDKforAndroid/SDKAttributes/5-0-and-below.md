@@ -732,7 +732,7 @@ Color code for the conversation resolved message and separator.
 
 
 #### lp_hide_ui_until_auth
-Define if SDK shows conversation until pass authentication check.
+Define if SDK shows conversation until pass authentication check. (Removed from v4.6.0)
 
 * **Type:** bool
 * **Default value:** true
@@ -1365,6 +1365,12 @@ You can replace the existing Close image. Create a drawable file named **lpinfra
 ---
 
 ### Link Preview
+
+#### link_preview_enable_feature
+Enable or disable link preview feature
+
+* **Type:** bool
+* **Default value:** true
 
 #### link_preview_use_big_picture
 Define which configuration to show when sending / receiving s link (big / small picture).
@@ -2755,6 +2761,11 @@ Enable or disable structured content button border.
 * **Type:** bool
 * **Default value:** true
 
+#### structured_content_button_no_text_lines
+Configuration to fit number of text lines in structured content button element.
+
+* **Type:** integer
+* **Default value:** 1
 
 ---  
 

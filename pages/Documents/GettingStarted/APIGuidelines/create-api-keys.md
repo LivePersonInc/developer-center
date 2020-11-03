@@ -7,6 +7,7 @@ permalink: api-guidelines-create-api-keys.html
 indicator: both
 redirect_from:
     - essential-resources-create-api-keys.html
+    - common-resources-create-api-keys.html
 ---
 
 

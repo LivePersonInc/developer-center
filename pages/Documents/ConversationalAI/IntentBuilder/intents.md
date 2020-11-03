@@ -13,12 +13,34 @@ indicator: both
 
 Intents are meant for when you need a more flexible approach to matching than using patterns. With patterns, there must be an *exact* match between the consumer's utterance and a defined expression. This means that alternative expressions (synonyms, phrasings, and formats) are missed.
 
-Intents use a Natural Language Understanding (NLU) engine to match the user's utterance against a set of training phrases or [Knowledge Base articles](knowledge-base-overview.html#knowlege-base-intents-versus-domain-intents). The results are scored based on the level of confidence in the match: VERY GOOD, GOOD, FAIR PLUS, FAIR, POOR.
+Intents use a Natural Language Understanding (NLU) engine to match the user's utterance against a set of training phrases or [Knowledge Base](knowledge-base-overview.html) articles. The results are scored based on the level of confidence in the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
 
 As an example, you might configure a "billing" intent that has a defined set of training phrases like, "I have a question about my bill," "Can you help me with my bill?" and similar, alternative expressions. The consumer's utterance is evaluated against these phrases, and a score is determined. *If there's a match of GOOD or better*, the intent is understood to be present, it is sent to the bot, and the bot triggers the associated dialog starter.
 
 {: .important}
-For some practice with intents, complete the [Intents tutorial](conversation-builder-tutorials-guides-getting-started.html).
+For some practice with intents, complete the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).
+
+#### What is the intent score/threshold?
+
+To return the best response to consumers, the NLU has a threshold of GOOD. This means that an intent that scores below the threshold is not sent to the consumer. 
+
+The scoring breakdown, which indicates the NLU’s level of confidence in the match, is as follows:
+
+**LivePerson NLU v1 or 3rd-party NLU**
+* VERY GOOD: 85-100% match
+* GOOD: 70-85% match
+* FAIR PLUS: 65-70% match
+* FAIR: 50-65% match
+* POOR: 0-50% match
+
+**LivePerson NLU v2**
+* VERY GOOD: 75-100% match
+* GOOD: 60-75% match
+* FAIR PLUS: 45-60% match
+* FAIR: 30-45% match
+* POOR: 0-30% match
+
+You can't change the threshold when using intents (although you can do [this](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds) with knowledge bases).
 
 ### Add an intent
 
@@ -41,12 +63,6 @@ For some practice with intents, complete the [Intents tutorial](conversation-bui
 
 4. Click **Save**.
 5. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the addition is reflected in a new model version.
-
-
-### Train intents
-
-See [Test a domain](intent-builder-domains.html#test-a-domain).
-
 
 ### Delete an intent
 
