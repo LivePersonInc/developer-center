@@ -17,7 +17,7 @@ There are two ways to implement an escalation: You can add an [Agent Transfer in
 {: .important}
 Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.
 
-### Add a LivePerson Agent Escalation
+### Add a LivePerson Agent Escalation 
 
 **To add a LivePerson Agent Escalation integration**
 

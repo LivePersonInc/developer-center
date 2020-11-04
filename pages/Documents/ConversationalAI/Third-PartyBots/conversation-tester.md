@@ -26,33 +26,37 @@ When testing your bot and you get an error in the response, you will be able to 
 
 ### Dialog Flow V2
 
-## Invalid Action Body
+## Dialog Flow V2 Invalid Action Body
 ## Description
 This error happens when the bot has an invalid body and the Google Dialog Flow V2 is unable to parse it. It can be a wrong parameter, a value or missing parameter. 
 
-## Invalid Text Body
+## Dialog Flow V2 Invalid Text Body
 ## Description
 This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content.
 
-## Invalid Structured Content
+## Dialog Flow V2 Invalid Structured Content
 ## Description
 This error happens when the bot's configuration has an invalid content body in its structured content response and the vendor is unable to parse it.It can be wrong parameter or a value;
 
-## Invalid Text With Encoded Metadata Body
+## Dialog Flow V2 Invalid Text With Encoded Metadata Body
 ## Description
 This error happens when the bot's configuration has an invaldid text message with encoded metadata. It can be that the encodedMetadata property is missing or the is something wrong in the encoded metadata body.
 
-## Invalid Delay Body
+## Dialog Flow V2 Invalid Delay Body
 ## Description
 This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that a wrong delay value. 
 
-## Invalid Private Text Body
+## Dialog Flow V2 Invalid Private Text Body
 ## Description
 This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value.
 
-## Invalid AI Vendor Response
+## Dialog Flow V2 Invalid AI Vendor Response
 ## Description
 This error happens when there was not possible to get any response from the vendor.
+
+## Dialog Flow V2 Invalid Parse Response
+## Description
+This error happens when not parsed messages and actions were found from the vendor.
 
 #### Errors Solution
 Please check [Google Dialog Flow Version 2](third-party-bots-google-dialogflow-version-2.html)
@@ -61,41 +65,45 @@ Please check [Google Dialog Flow Version 2](third-party-bots-google-dialogflow-v
 
 ###  Watson Assistant and Watson Assistant V2
 
-## Invalid Text Body
+## Watson Assistant Invalid Text Body
 ## Description
 This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content.
 
-## Invalid Structured Content
+## Watson Assistant Invalid Structured Content
 ## Description
 This error happens when the bot's configuration has an invalid content body in its structured content response and the vendor is unable to parse it.It can be wrong parameter or a value;
 
-## Invalid Delay Body
+## Watson Assistant Invalid Delay Body
 ## Description
 This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that a wrong delay value. 
 
-## Invalid Private Text Body
+## Watson Assistant Invalid Private Text Body
 ## Description
 This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value.
 
-## Invalid Message Format
+## Watson Assistant Invalid Message Format
 ## Description
 This error happens when the bot's response has and invalid value in its message and the vendor is unable to parse it. It can be an unknown type, or a wrong value.
 
-## Invalid Image Body
+## Watson Assistant Invalid Image Body
 ## Description
 This error happens when the bot's response has and invalid property when trying to send an image. The vendor wont be able to validate the watson native content image. It can be a wrong parameter or value. 
 
-## Invalid Option Body
+## Watson Assistant Invalid Option Body
 ## Description
 This error happens when the bot's response option response type has and invalid body and the vendor is unable to parse it. It can be a wrong parameter or value. 
 
-## Invalid Body
+## Watson Assistant Invalid Body
 ## Description
 This error happens when the bot's response has an invalid body. It can be a wrong parameter or value. 
 
-## Invalid AI Vendor Response
+## Watson Assistant Invalid AI Vendor Response
 ## Description
 This error happens when there was not possible to get any response from the vendor.
+
+## Watson Assistant Invalid Parse Response
+## Description
+This error happens when not parsed messages and actions were found from the vendor.
 
 #### Errors Solution
 Please check [Watson Assistant](third-party-bots-ibm-watson-assistant.html) and [Watson Assistant Version 2](third-party-bots-ibm-watson-assistant-version-2.html)
@@ -103,59 +111,63 @@ Please check [Watson Assistant](third-party-bots-ibm-watson-assistant.html) and 
 
 
 ###  Lex
-## Invalid Action Body
+## Lex Invalid Action Body
 ## Description
 This error happens when the bot's has an invalid action body and Lex is unable to parse it. It can be a wrong parameter, a value or missing parameter.
 
-## Invalid Text Body
+## Lex Invalid Text Body
 ## Description
 This error happens when the bot's response has an invalid value in its text message and the vendor is unable to parse the content.
 
-## Invalid Structured Content
+## Lex Invalid Structured Content
 ## Description
 This error happens when the bot's configuration has an invalid content body in its structured content response and the vendor is unable to parse it.It can be wrong parameter or a value;
 
-## Invalid Text With Encoded Metadata Body
+## Lex Invalid Text With Encoded Metadata Body
 ## Description
 This error happens when the bot's configuration has an invaldid text message with encoded metadata. It can be that the encodedMetadata property is missing or the is something wrong in the encoded metadata body.
 
-## Invalid Delay Body
+## Lex Invalid Delay Body
 ## Description
 This error happens when the bot's response has an invalid delay value and the vendor is unable to parse it. It can be that a wrong delay value. 
 
-## Invalid Private Text Body
+## Lex Invalid Private Text Body
 ## Description
 This error happens when the bot's response has an invalid value in its private text message and the vendor is unable to parse the content. It can be a missing property or a wrong parameter or value.
 
-## Invalid Message Format
+## Lex Invalid Message Format
 ## Description
 This error happens when the bot's response has and invalid value in its message and the vendor is unable to parse it. It can be an unknown type, or a wrong value.
 
-## Invalid JSON
+## Lex Invalid JSON
 ## Description
 This happens when the bot's response has an invalid JSON and the vendor is unable to parse it. This usually happens when creating a Custom Payload in the bot's respose.
 
-## Invalid AI Vendor Response
+## Lex Invalid AI Vendor Response
 ## Description
 This error happens when there was not possible to get any response from the vendor.
+
+## Lex Invalid Parse Response
+## Description
+This error happens when not parsed messages and actions were found from the vendor.
 
 #### Errors Solution
 Please check [Amazon Lex](third-party-bots-amazon-lex.html)
 
 
-###  MicrosoftBotFramework
+###  Microsoft Bot Framework
 
-## Invalid Body
+## Microsoft Bot Framework Invalid Body
 ## Description
 This error happens when the bot's response has an invalid body. It can be a wrong parameter or value.
 
-## Invalid Multimessage Format
-## Description
-This error happens the user wants to send more than one message with the MultiMessage feature but, the bot's response has an invalid message format. 
-
-## Invalid AI Vendor Response
+## Microsoft Bot Framework Invalid AI Vendor Response
 ## Description
 This error happens when there was not possible to get any response from the vendor.
+
+## Microsoft Bot Framework Invalid Parse Response
+## Description
+This error happens when not parsed messages and actions were found from the vendor.
 
 #### Errors Solution
 Please check [Microsoft Bot Framework](third-party-bots-microsoft-bot-framework.html)
@@ -166,14 +178,18 @@ Please check [Microsoft Bot Framework](third-party-bots-microsoft-bot-framework.
 ## Description
 This error happens when the bot has an invalid action body and Faas is unable to parse it. It can be a wrong parameter, a value or missing parameter.
 
-## Invalid Body
+## Faas Invalid Body
 ## Description
 This error happens when the bot's response has an invalid body. It can be a wrong parameter or value.
 
 
-## Invalid AI Vendor Response
+## Faas Invalid AI Vendor Response
 ## Description
 This error happens when there was not possible to get any response from the vendor.
+
+## Faas Invalid Parse Response
+## Description
+This error happens when not parsed messages and actions were found from the vendor.
  
 #### Errors Solution
 Please check [Faas](third-party-bots-custom-integration.html)
