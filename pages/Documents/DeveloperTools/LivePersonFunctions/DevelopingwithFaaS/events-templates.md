@@ -22,24 +22,24 @@ The amount of lambdas connected to a specific event is restricted and can be see
 
 Currently the following events are supported:
 
-|Event Name|Event Description|Lambda Limit|
-|--- |--- |--- |
-|Chat Post Survey E-Mail Transcript|Triggered after a chat conversation is finished and CSAT survey has been submitted.|10|
-|Conversational Command|Use this event to implement a Conversational Command that can be invoked from within the agent workspace in Conversational Cloud by typing "/".|30|
-|Messaging Conversation End|Triggered when the conversation is closed by agent/consumer/system.|1|
-|Messaging Conversation Idle|Triggered when agent/consumer is not responsive or the conversation is in queue for over X secs/mins. Where Time X is configurable inside the Conversational Cloud UI, via the auto-messages feature.|1|
-|Messaging Conversation Routing|Triggered when the conversation is transferred to a different skill.|1|
-|Messaging Line in Off-Hours|Triggered when a conversation was *opened* during office-hours, but a new consumer line in the conversation is *written* during off-hours (essentially when a consumer sends an off-hour message).|1|
-|Messaging New Conversation|Triggered for every new messaging conversation. **This event should not be used for routing. Use a routing bot instead.**|1|
-|Messaging Participants Change|Triggered on every participant (consumer/agent) change (joins/leaves) of a messaging conversation.|1|
-|Messaging Survey Ended|Triggered when a messaging post survey ended.|1|
-|Messaging Survey Started|Triggered when a messaging post survey started.|1|
-|Messaging TTR (Time to Respond)|Triggered when the consumer marks a response as an urgent response, unmarks a response as urgent, or the agent manually updates the response time|1|
-|No Event|Used for lambdas which only can be invoked externally||
-|Third-Party Bots Custom Integration|Triggered when a bot, which is using the Third-Party Bots' Custom Integration receives a message|15|
-|Third-Party Bots Post Hook|Triggered when a bot, which is using the Third-Party Bots' Post Hooks receives a message. The function will be invoked after the vendor responded|15|
-|Third-Party Bots Pre Hook|Triggered when a bot, which is using the Third-Party Bots' Post Hooks receives a message. The function will be invoked before the vendor receives the payload|15|
-|Third-Party Bots Error Hook|Triggered when a bot, which is using the Third-Party Bots' Error Hooks is having an issue|15|
+|Event Name|Event Description|Event Source|Lambda Limit|
+|--- |--- |--- |--- |
+|Chat Post Survey E-Mail Transcript|Triggered after a chat conversation is finished and CSAT survey has been submitted.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-post-chat-survey-transcripts.html).|Chat Service (Consumer Post chat survey)|10|
+|Conversational Command|Use this event to implement a Conversational Command that can be invoked from within the agent workspace in Conversational Cloud by typing "/".<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-commands.html). |Agent Workspace (NAW only)|30|
+|Messaging Conversation End|Triggered when the conversation is closed by agent/consumer/system.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversations.html).|Conversational Exchange Service (Messaging Auto Messages)|1|
+|Messaging Conversation Idle|Triggered when agent/consumer is not responsive or the conversation is in queue for over X secs/mins. Where Time X is configurable inside the Conversational Cloud UI, via the auto-messages feature.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversations.html).|Conversational Exchange Service (Messaging Auto Messages)|1|
+|Messaging Conversation Routing|Triggered when the conversation is transferred to a different skill.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversations.html).|Conversational Exchange Service (Messaging Auto Messages)|1|
+|Messaging Line in Off-Hours|Triggered when a conversation was *opened* during office-hours, but a new consumer line in the conversation is *written* during off-hours (essentially when a consumer sends an off-hour message). <br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversations.html).|Conversational Exchange Service (Messaging Auto Messages)|1|
+|Messaging New Conversation|Triggered for every new messaging conversation. **This event should not be used for routing. Use a routing bot instead.** <br/>For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversations.html).|ControllerBot|1|
+|Messaging Participants Change|Triggered on every participant (agent) change (joins/leaves) a messaging conversation. <br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversations.html).|Conversational Exchange Service (Messaging Auto Messages)|1|
+|Messaging Survey Ended|Triggered when a messaging post survey ended.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversation-survey.html).|Post Survey Bot|1|
+|Messaging Survey Started|Triggered when a messaging post survey started.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversation-survey.html).|Post Survey Bot|1|
+|Messaging TTR (Time to Respond)|Triggered when the consumer marks a response as an urgent response, unmarks a response as urgent, or the agent manually updates the response time.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversations.html). |Conversational Exchange Service (Messaging Auto Messages)|1|
+|No Event|Used for lambdas which only can be invoked externally|-||
+|Third-Party Bots Custom Integration|Triggered when a bot, which is using the Third-Party Bots' Custom Integration receives a message.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-ai.html).|Bot Connector|15|
+|Third-Party Bots Post Hook|Triggered when a bot, which is using the Third-Party Bots' Post Hooks receives a message. The function will be invoked after the vendor responded.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-ai.html).|Bot Connector|15|
+|Third-Party Bots Pre Hook|Triggered when a bot, which is using the Third-Party Bots' Post Hooks receives a message. The function will be invoked before the vendor receives the payload.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-ai.html).|Bot Connector|15|
+|Third-Party Bots Error Hook|Triggered when a bot, which is using the Third-Party Bots' Error Hooks is having an issue.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-ai.html).|Bot Connector|15|
 
 
 Each of these events also has an event specific input (payload) associated with it, that the triggering system will provide at runtime. When using the [Invoke](function-as-a-service-deploying-functions.html#testing-your-function) screen, this payload is shown on the left-hand side. During development, the event payload of the `lambda` is visible on the right-hand side at the sidebar-tab. See the [Payload](function-as-a-service-developing-with-faas-overview.html#editor-sidebar) section for more information.

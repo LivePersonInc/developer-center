@@ -13,6 +13,8 @@ redirect_from:
 
 This section gives you an overview of the functionality of the Java Functions client. This client includes functionality to retrieve all lambdas and to invoke them via a `lambda UUID` or `event ID`.
 
+The full documentation can be found in its GitHub repository [here](https://github.com/LivePersonInc/faas-client-jdk).
+
 ### Setting up the client
 
 ## Step 1: Set authentication method
