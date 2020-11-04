@@ -482,7 +482,7 @@ The method for closing a conversation is similar to the transfer action in that 
 
 The `action` key needs to be set to **CLOSE_CONVERSATION** to instruct the connector to close the conversation.
 
-Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a `closeConversation action.
+Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a `closeConversation` action.
 
 ```javascript
 const payload = {
