@@ -33,6 +33,8 @@ The dashboard provides at-a-glance reporting on the status of your agents. Click
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botsStatus_dashboard.png">
 
+Note that "N/A" for "Not Applicable" is shown in cases where an actual value doesn't apply or make sense.
+
 ### Statuses
 
 When monitoring bots, there are three types of statuses:

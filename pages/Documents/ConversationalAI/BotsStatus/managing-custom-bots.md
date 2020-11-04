@@ -12,18 +12,21 @@ indicator: both
 
 In Bots Status, you use the **Custom Connectors** tab of the **Bot Agents** page to perform functions on agents (restart, stop, start, etc.).
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveyBot_monitoring6.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_custom_connectors.png">
 
 Use the filters in the upper-right corner to display the desired agents.
 
-{: .important}
-The metrics that are displayed at the top of the page reflect the entire organization. They aren't affected by the filters.
+The metrics displayed at the top of the page are affected by the **Environment** filter and no others.
+
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/botsStatus_filter.png">
 
 ### Supporting failover
 
 LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
 ### Restart multiple agents
+
+As a convenience, the Restart Agents function lets you restart multiple agents at once. Use this to stop, then start again, agents when needed. For example, you might need to do this to re-establish the agent's connection to a resource (e.g., Conversational Cloud) if the resource happens to go down, then come online again.
 
 **To restart multiple agents**
 
