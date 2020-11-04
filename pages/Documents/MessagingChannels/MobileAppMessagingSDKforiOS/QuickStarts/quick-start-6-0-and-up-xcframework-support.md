@@ -2,6 +2,10 @@
 pagename: Quick Start - 6.0 and up (XCFramework support)
 redirect_from:
   - consumer-experience-ios-sdk-quick-start-6-0-and-up.html
+  - consumer-experience-ios-sdk-quick-start.html
+  - mobile-app-messaging-sdk-for-ios-quick-start.html
+  - consumer-experience-ios-sdk-quick-start.html#step-4-optional-initialization-with-monitoring-params
+  - mobile-app-messaging-sdk-for-ios-quick-start.html#step-3-initialize-the-lpmessagingsdk
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -183,7 +187,7 @@ class DocumentationViewController: UIViewController {
         
         let conversationQuery = LPMessaging.instance.getConversationBrandQuery(accountID)
         
-        let controlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none,
+        let controlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .all,
         historyConversationsMaxDays: -1,
         historyMaxDaysType: .startConversationDate)
         
@@ -325,7 +329,7 @@ class DocumentationViewController: UIViewController {
     Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
     */
     let conversationQuery = LPMessaging.instance.getConversationBrandQuery(accountID)
-    let historyControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none, historyConversationsMaxDays: -1, historyMaxDaysType: .startConversationDate)
+    let historyControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .all, historyConversationsMaxDays: -1, historyMaxDaysType: .startConversationDate)
     let welcomeMessage = LPWelcomeMessage(message: "Hello, how may I help you?", frequency: .FirstTimeConversation)
     let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
     containerViewController: nil, isViewOnly: false, conversationHistoryControlParam: historyControlParam, welcomeMessage: welcomeMessage)

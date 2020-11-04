@@ -14,6 +14,7 @@
     - pagename: API Data Metrics
     - pagename: Engagement Attributes
     - pagename: Analytics Builder Data Metrics
+    - pagename: Important Updates
     - pagename: Retry Policy Recommendations
 
 - categoryname: Agent Experience
@@ -115,17 +116,32 @@
 - categoryname: Conversational AI
   image: agent-experience
   documents:
-  - documentname: Conversational AI
+  - documentname: Platform Overview
+  - documentname: Tutorials & Guides
     pages:
-      - pagename: Overview
-  - documentname: Conversation Builder
-    pages:
-      - pagename: Tutorials & Guides
+      - pagename: Getting Started With Bot Building
         subpages:
-          - subpagename: Getting Started
-          - subpagename: Using Meta Intents with Conversation Builder
+          - subpagename: Overview
+          - subpagename: Dialogs & Patterns
+          - subpagename: Intents
+          - subpagename: Integrations
+          - subpagename: Disambiguation
+          - subpagename: Deploy the Bot
+          - subpagename: Escalate to an Agent
+      - pagename: Bot Groups & Other Techniques
+        subpages:
+          - subpagename: Overview
+          - subpagename: Bot Groups & Collaboration
+          - subpagename: Complex Conditions
+          - subpagename: Auto Escalation
+          - subpagename: Knowledge Bases
+          - subpagename: Meta Intents
+      - pagename: Advanced Integrations
+        subpages:
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
+  - documentname: Conversation Builder
+    pages:
       - pagename: Bot Workspace
       - pagename: Bots
         subpages:
@@ -144,6 +160,7 @@
           - subpagename: Simple FAQ
           - subpagename: Simple Lead Gen
           - subpagename: Simple Router
+          - subpagename: Store Locator
           - subpagename: Travel Notification
           - subpagename: Maven Concierge
       - pagename: Dialogs
@@ -153,6 +170,7 @@
           - subpagename: Fallback Dialogs
           - subpagename: Disambiguation Dialogs
           - subpagename: Auto Escalation Dialogs
+      # - pagename: Dialog Templates
       - pagename: Interactions
         subpages:
           - subpagename: Interaction Basics
@@ -198,6 +216,7 @@
           - subpagename: Previewing
           - subpagename: Debugging
           - subpagename: Deploying to Conversational Cloud
+          - subpagename: Testing & Debugging Post-Deployment
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
@@ -238,15 +257,34 @@
       - pagename: Intents
       - pagename: Meta Intents
       - pagename: Entities
+      - pagename: Testing
+        subpages:
+         - subpagename: Single Utterance Testing
+      #   - subpagename: Advanced Model Testing
   - documentname: Intent Analyzer
     pages:
       - pagename: Overview
   - documentname: Knowledge Base
     pages:
       - pagename: Overview
-      - pagename: Knowledge Bases
-      - pagename: Articles
-      - pagename: Tutorial
+      - pagename: External Knowledge Bases
+        subpages:
+          - subpagename: Introduction
+          - subpagename: External KBs with LivePerson AI
+          - subpagename: External KBs without LivePerson AI
+          - subpagename: Mapping Content Metadata
+          - subpagename: Writing a Transformation Specification
+          - subpagename: Best Practices
+      - pagename: Internal Knowledge Bases
+        subpages:
+          - subpagename: Introduction
+          - subpagename: Knowledge Bases
+          - subpagename: Articles
+          - subpagename: Best Practices
+          - subpagename: Limits
+      - pagename: Using Intents with KBs
+      - pagename: Sending Content to Consumers
+      - pagename: Common Settings & Tasks
   - documentname: Bots Status
     pages:
       - pagename: Overview
@@ -943,6 +981,12 @@
         - pagename: Quick Replies Template
         - pagename: Best Practices
         - pagename: Limitations
+    - documentname: Google Business Messages Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Card Template
+        - pagename: Carousel Template
+        - pagename: Quick Replies Template
     - documentname: Google RCS Business Messaging Templates
       pages:
         - pagename: Introduction
@@ -963,10 +1007,7 @@
     - documentname: Cookies and Conversational Cloud
       pages:
         - pagename: Overview
-    - documentname: Apple Business Chat Authentication
-      pages:
-        - pagename: Overview
-    - documentname: Mobile SDK and Web Authentication
+    - documentname: Consumer Authentication
       pages:
       - pagename: Introduction
       - pagename: Major Components
@@ -1000,6 +1041,9 @@
             - subpagename: Application Login
             - subpagename: Refresh
             - subpagename: Logout
+    - documentname: Apple Business Chat Authentication
+      pages:
+        - pagename: Overview
     - documentname: MTLS
       pages:
         - pagename: Overview

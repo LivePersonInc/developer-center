@@ -11,7 +11,7 @@ indicator: both
 
 API Integrations allow Conversation Builder to perform some action or access the features or data of an external service. For example, you might want to retrieve information on specific items in your product catalog, so you can use that information in interactions in a dialog.
 
-For practice at using an API integration, try the [Integrations tutorial](conversation-builder-tutorials-guides-getting-started.html). (You’ll need to complete the Dialogs & Patterns tutorial and the Intents tutorial first, as the tutorials build on each other.)
+For practice at using an API integration, try the [Integrations tutorial](tutorials-guides-getting-started-with-bot-building-integrations.html). (You’ll need to complete the Dialogs & Patterns tutorial and the Intents tutorial first, as the tutorials build on each other.)
 
 {: .important}
 If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before adding an API integration. For details, see [here](conversation-builder-networking-security.html).
