@@ -38,6 +38,9 @@ The APIs lets brands:
 
 * Every message that arrives from the agent or sent by the consumer removes the filter and conversations present as if no filter was applied.
 
+{: .notice}
+Currently this feature is not fully compatible with the [Welcome Message with Quick Replies](mobile-app-messaging-sdk-for-ios-advanced-features-welcome-message-with-quick-replies.html).
+
 ### Parameters
 
 LPConversationViewParams includes LPConversationHistoryControlParam:
