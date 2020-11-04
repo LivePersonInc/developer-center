@@ -127,6 +127,7 @@ Request by skillIds=12,13 and overdueConversations=true
 | skillsMetrics | An array of skills with their metrics. | element |
 | metricsTotals | The total metrics for all requested skills.  <br> When interval is provided: Total metrics for all requested skills per each interval. | element |
 | skill id | When skillIDs value(/s) provided: The skill ID. | long |
+| The following metrics present the most recent queue metrics. |||
 | time | The timestamp representing the 'freshness' of the returned data. <br> Will return the timestamp associated with the most recent data. |long|
 | unassignedConversations | The number of unassigned conversations. <br> Equal to the number of actionable conversation + not actionable conversation. |long|
 | actionableConversations | The number of actionable conversations. |long|
@@ -136,13 +137,15 @@ Request by skillIds=12,13 and overdueConversations=true
 | actionableAndConsumerLastMessage | The number of actionable conversations in which the consumer wrote the last message. |long|
 | notActionableDuringTransfer | The number of not actionable conversations that were transferred. |long|
 | notActionableAndManualSla | The number of not actionable conversations that have a manual SLA on them. |long|
-| avgWaitTimeForAgentAssignment_NewConversation | The average number of milliseconds a new conversation waited in the queue (unassigned) for the first agent to be assigned to it.|long|
-| avgWaitTimeForAgentAssignment_AfterTransfer | The average number of milliseconds a transferred conversation waited in the queue (unassigned) for the next agent to be assigned to it. This metrics measures for transfers back-to-queue and skill-to-skill.|long|
-| maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation waited in the queue (unassigned) for an agent to be assigned to it.|long|
+| The following metrics present current wait times statistics per skill for conversations that have been opened in the last 24 hours and are also currently in queue (have not been assigned). Conversation that are in queue and have been opened prior to 24 hours ago will be ignored. |||
+| avgWaitTimeForAgentAssignment_NewConversation | The average number of milliseconds a new conversation waiting in the queue (unassigned) for the first agent to be assigned to it.|long|
+| avgWaitTimeForAgentAssignment_AfterTransfer | The average number of milliseconds a transferred conversation waited in queue (unassigned) for the next agent to be assigned to it. This metrics measures for transfers back-to-queue and skill-to-skill.|long|
+| maxWaitTimeForAgentAssignment | The maximum number of milliseconds a conversation waiting in queue (unassigned) for an agent to be assigned to it.|long|
 | waitTimeForAgentAssignment_50thPercentile | 50% of the conversations in the queue (unassigned) waited to be assigned for less time than this value, i.e. the median wait time in queue.|long|
 | waitTimeForAgentAssignment_90thPercentile | 90% of the conversations in the queue (unassigned) waited to be assigned for less time than this value.|long|
+| avgWaitTimeForAgentAssignment_AfterTransferFromAgent|The average number of milliseconds a transferred conversation waiting in queue (unassigned) for the next agent to be assigned to it after it was  sent back-to-queue , transferred to another skill or  transferred to specific agent.|long|
+| maxWaitTimeForAgentAssignment_AfterTransferFromAgent|The  maximum  number of milliseconds a conversation waiting in queue (unassigned) for the next agent to be assigned to it, after it was transferred to a specific agent. This includes cases when destination agent is not available and the conversation is picked up by a fallback agent.|long|
+| The following metrics present the overdue conversation. It includes conversations that have been created in the last 5 daysConversation. |||
 | overdueConversationsInQueue | The number of overdue conversations that are in the queue. | long |
 | overdueConversationsAssigned | The number of overdue conversations that are assigned to an agent. | long |
 | overdueConversationsTotal | The total number of conversations that are overdue (sum of inQueue + assigned). | long |
-|avgWaitTimeForAgentAssignment_AfterTransferFromAgent|The average number of milliseconds a transferred conversation waited in the queue (unassigned) for the next agent to be assigned to it after it was  sent back-to-queue , transferred to another skill or  transferred to specific agent.|long|
-|maxWaitTimeForAgentAssignment_AfterTransferFromAgent|The  maximum  number of milliseconds a conversation waited in the queue (unassigned) for the next agent to be assigned to it, after it was transferred to a specific agent. This includes cases when destination agent is not available and the conversation is picked up by a fallback agent.|long|
