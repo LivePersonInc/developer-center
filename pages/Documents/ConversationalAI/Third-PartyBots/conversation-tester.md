@@ -28,7 +28,7 @@ When testing your bot and you get an error in the response, you will be able to 
 
 ## Dialog Flow V2 Invalid Action Body
 ## Description
-This error happens when the bot has an invalid body and the Google Dialog Flow V2 is unable to parse it. It can be a wrong parameter, a value or missing parameter. 
+This error happens when the bot has an invalid body and the Google Dialog Flow V2 is unable to parse it. It can be a wrong parameter, a value or missing parameter. Even though in the it is shows as and error in the Third Party Bots, the bot gently ingnores unknown actions and the conversation will continue.
 
 ## Dialog Flow V2 Invalid Text Body
 ## Description
@@ -113,7 +113,7 @@ Please check [Watson Assistant](third-party-bots-ibm-watson-assistant.html) and 
 ###  Lex
 ## Lex Invalid Action Body
 ## Description
-This error happens when the bot's has an invalid action body and Lex is unable to parse it. It can be a wrong parameter, a value or missing parameter.
+This error happens when the bot's has an invalid action body and Lex is unable to parse it. It can be a wrong parameter, a value or missing parameter. Even though in the it is shows as and error in the Third Party Bots, the bot gently ingnores unknown actions and the conversation will continue.
 
 ## Lex Invalid Text Body
 ## Description
@@ -176,7 +176,7 @@ Please check [Microsoft Bot Framework](third-party-bots-microsoft-bot-framework.
 
 ## Invalid Action Body
 ## Description
-This error happens when the bot has an invalid action body and Faas is unable to parse it. It can be a wrong parameter, a value or missing parameter.
+This error happens when the bot has an invalid action body and Faas is unable to parse it. It can be a wrong parameter, a value or missing parameter. Even though in the it is shows as and error in the Third Party Bots, the bot gently ingnores unknown actions and the conversation will continue.
 
 ## Faas Invalid Body
 ## Description
