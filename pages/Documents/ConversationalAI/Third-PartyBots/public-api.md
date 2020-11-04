@@ -884,7 +884,5 @@ Example response of a command returned by the API will look like this with state
 
 ### Limitations
 
-<ul>
-    <li>To ensure the safety of the API we are using <a href="https://www.reblaze.com/">Reblaze</a>. if the request throws Security Violation Error (403 - Forbidden) reason could be that your request body contains information that caused Reblaze to mark your request positive as a security risk. To understand security concepts of Reblaze please refer to the official documentation <a href="https://gb.docs.reblaze.com/product-walkthrough/security/concepts">here</a>. You can also refer to the information on best practices to avoid the false positives marking of valid request <a href="https://gb.docs.reblaze.com/using-the-product/best-practices/dealing-with-false-positive">here</a></li>
-    <li>Our Public API only retains a maximum of last 200 commands <b>per bot/agent</b>. There could be the possibility that if a conversation is ongoing but you are not able to fetch the commands because of this max commands retention policy</li>
-</ul>
+- To ensure the safety of the API we are using [Reblaze](https://www.reblaze.com/). if the request throws Security Violation Error (403 - Forbidden) reason could be that your request body contains information that caused Reblaze to mark your request positive as a security risk. To understand security concepts of Reblaze please refer to the official documentation [here](https://gb.docs.reblaze.com/product-walkthrough/security/concepts). You can also refer to the information on best practices to avoid the false positives marking of valid request [here](https://gb.docs.reblaze.com/using-the-product/best-practices/dealing-with-false-positive)
+- Our Public API only retains a maximum of last 200 commands **per bot/agent**. There could be the possibility that if a conversation is ongoing but you are not able to fetch the commands because of this max commands retention policy
