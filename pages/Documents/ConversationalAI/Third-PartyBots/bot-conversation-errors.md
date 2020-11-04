@@ -157,7 +157,7 @@ Indicates that the Faas hook could not be invoked.
 #### Reasons
 Implementation errors inside Faas hook.
 #### Solutions
-Double-check and test the Faas Hook code. You can refer to the [Faas Documentation](liveperson-functions-deployment.html#testing-your-function) to find out how test your function code.
+Double-check and test the Faas Hook code. You can refer to the [Faas Documentation](liveperson-functions-deployment.html#testing-your-function) to find out how to test your function code.
 Please also check the dedicated documentation for [Third-Party-Bots Faas Hooks](https://developers.liveperson.com/third-party-bots-hook-configuration.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.lex.composite-format-not-supported
