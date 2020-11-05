@@ -70,7 +70,7 @@ However, you'll need to explicitly select the skill and manually start the conve
 
     **Select skill**: Select only the skill. The skill list displays all the skills available within your organization. If you know the skill name to route to, this one-step method is faster.
 
-    **Select skill by campaign/engagement**: Select the campaign to use. This filters the list of engagements from which you must then select the engagement. The skill tied to the engagement will be used to start the conversation. This method is preferable when when you want to perform end-to-end testing of the entire Conversational Cloud configuration: engagement, skill, bot agent, and bot. 
+    **Select skill by campaign/engagement**: Select the campaign to use. This filters the list of engagements from which you must then select the engagement. The skill tied to the engagement will be used to start the conversation. This method is preferable when you want to perform end-to-end testing of the entire Conversational Cloud configuration: engagement, skill, bot agent, and bot. 
 
     {: .important}
     It's rare to have multiple bots assigned to the same skill. However, if this is the case (i.e., you have a testing scenario configured this way), be aware that the tool will start a conversation with the first bot that is found.
