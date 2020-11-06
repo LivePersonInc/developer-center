@@ -93,7 +93,7 @@ This capability to switch the environment eliminates the need to delete the agen
 4. Stop the bot if it is currently online.
 5. Select the checkbox for the bot, and then select **Re-deploy Agent** from the **Actions** list.
 
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/botsStatus_redeploy.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_redeploy.png">
 
 6. In the **Environment** drop-down, select the target environment.
 7. Click **Save Settings**.
