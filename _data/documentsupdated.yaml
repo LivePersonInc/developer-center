@@ -311,9 +311,16 @@
       - pagename: IBM Watson Assistant Version 2
       - pagename: Amazon Lex
       - pagename: Microsoft Bot Framework
+      - pagename: Microsoft Direct Line
+        subpages:
+          - subpagename: Introduction
+          - subpagename: Basic Content
+          - subpagename: Advanced Features
+          - subpagename: PVA
       - pagename: Custom Integration
       - pagename: Hook Configuration
       - pagename: Public API
+
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview

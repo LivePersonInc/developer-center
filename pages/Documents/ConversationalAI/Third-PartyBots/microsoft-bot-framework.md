@@ -23,7 +23,7 @@ See the [Getting Started guide](bot-connectors-getting-started.html) first to co
 
 You will be presented with the following screen to complete the Vendor Settings if you've selected **Microsoft Bot Framework**.
 
-<img class="fancyimage" style="width:600px" src="img/msbotframework/vendor.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/microsoft-configuration-step.png">
 
 Figure 2.1 Showing the configuration that needs to be filled out
 
@@ -59,7 +59,7 @@ The following Microsoft information should be provided to LivePerson:
 
 The Direct Line Secret can be found in the Azure Portal if you select the corresponding Web App Bot and edit the Configuration of the Direct Line Channel.
 
-<img class="fancyimage" style="width:750px" src="img/msbotframework/secret.png">
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/microsoft-secret-azure.png">
 Figure 2.2 The Direct Line Secret
 
 For validation of the credentials provided, you can perform a connection test to see if the messages can be sent to the channel with the provided secret by clicking on the button "Test Connection".
