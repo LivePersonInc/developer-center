@@ -17,15 +17,17 @@ content needs to be provided in the described custom format.
 Structured content generally needs to be provided in the format that LivePerson supports.
 Documentation on this format can be found [here](getting-started-with-rich-messaging-introduction.html).
 
-This should contain a valid structured content body, along with an optional property containing metadata required for the structured content.
-Always validate your structured content using [this tool](https://livepersoninc.github.io/json-pollock/editor/) before using it in a bot.
+This should contain a valid structured content body, along with an optional property containing metadata required for 
+the structured content. Always validate your structured content using 
+[this tool](https://livepersoninc.github.io/json-pollock/editor/) before using it in a bot.
 
 Direct Line bots need to send this payload in the **channelData** property of the message activity.
 
 {: .important}
-If Images should be sent in rich content, their URLs must be added to a whitelist via internal LivePerson configuration (Houston: `messaging.rich.content.valid.urls`).
+If Images should be sent in rich content, their URLs must be added to a whitelist via internal LivePerson configuration 
+(Houston: `messaging.rich.content.valid.urls`).
 Please note that you must add all possible domains to this list manually. Wildcards are not supported.
-Moreover, All domains must be HTTPS secure. 
+Moreover, all domains must be HTTPS secure. 
 
 ```json-doc
 {
@@ -68,8 +70,12 @@ Figure 2.1 Activity with Structured Content
 {: .important}
 Quick Replies are only supported in Messaging Conversations.
 
-Quick Replies is a special type of Structured Content. It is a message sent along with predefined answers. The documentation can be found [here](quick-replies-introduction-to-quick-replies.html).
-For detailed information on Quick Replies check out the documentation for the specific channel ([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), [Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), [Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html))
+Quick Replies are a special type of Structured Content. It is a message sent along with predefined answers. The 
+documentation can be found [here](quick-replies-introduction-to-quick-replies.html).
+For detailed information on Quick Replies check out the documentation for the respective channel 
+([Mobile SDK and Web](mobile-sdk-and-web-templates-quick-replies-template.html), 
+[Facebook Messenger](facebook-messenger-templates-quick-replies-template.html), 
+[Google RCS Business Messaging](google-rcs-business-messaging-templates-quick-replies-template.html))
 
 ```json-doc
 {
@@ -169,7 +175,7 @@ TODO: add messaging event info
 
 Figure 4.1 Welcome activity on chat
 
-### Actions
+### Bot Actions
 #### Transfer 
 
 This action allows the bot to request a transfer of the conversation to another skill.
@@ -208,6 +214,7 @@ The action must be named **"TRANSFER"** and a skill must be provided.
 Figure 5.1 Custom `transfer` action
 
 
+
 It is also possible to create a native handoff event. You can use the official Microsoft BotBuilder SDK method called 
 [EventFactory.createHandoffInitiation](https://docs.microsoft.com/en-us/javascript/api/botbuilder/eventfactory?view=botbuilder-ts-latest).
 
@@ -227,7 +234,8 @@ const payload = {
 Figure 5.2 Microsoft BotBuilder example code
 
 
-### Close Conversation
+
+#### Close Conversation
 
 A conversation can be closed by sending an action in the **channelData** similarly to the transfer action. 
 The action must be named **"CLOSE_CONVERSATION"** in this case.
@@ -247,7 +255,8 @@ The action must be named **"CLOSE_CONVERSATION"** in this case.
 Figure 5.3 Activity for a transfer request
 
 
-### Change Time To Response of a Conversation
+
+#### Change Time To Response of a Conversation
 
 The bot can change the TTR of a conversation by sending an action with the name **"CHANGE_TTR"**.
 

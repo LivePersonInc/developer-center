@@ -10,9 +10,12 @@ indicator:
 
 ### Power Virtual Agents - Overview
 
-[Power Virtual Agents](https://powervirtualagents.microsoft.com) is a platform provided by Microsoft for codeless chatbot development.
+[Power Virtual Agents](https://powervirtualagents.microsoft.com) is a platform provided by Microsoft for codeless 
+chatbot development.
 This platform therefore can be used instead of creating a bot with the Microsoft Bot Framework.
-Please read the [Microsoft documentation](https://docs.microsoft.com/en-us/power-virtual-agents/fundamentals-what-is-power-virtual-agents) on a more detailed guide.
+Please read the 
+[Microsoft documentation](https://docs.microsoft.com/en-us/power-virtual-agents/fundamentals-what-is-power-virtual-agents) 
+on a more detailed guide.
 Throughout this document we refer to the platform as "PVA".
 
 ### Usage

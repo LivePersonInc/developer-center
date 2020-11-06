@@ -37,7 +37,7 @@ This **single** delay activity will only work as expected if you've enabled the 
 Using the delay as a sole response activity without this feature is effectively a ‘no response’ action and might only be useful if the bot should not respond at all without an error escalation.
 
 
-#### Sending Private Text Messages
+### Sending Private Text Messages
 
 It is possible to send a private text message from the Conversational Cloud via the agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
 
@@ -74,11 +74,13 @@ A single private text message with an action can be send by adding `text` and `m
 }
 ```
 
-Figure 1.2 Transfer activity with a private message visible to agents and managers
+Figure 2.1 Transfer activity with a private message visible to agents and managers
 
-#### Engagement attributes as context
+### Engagement attributes as context
 
-Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.3.
+Third-Party bots allows the collection of engagement attributes (more information can be found 
+[here](engagement-attributes-types-of-engagement-attributes.html)) if the `Engagement Attributes` option is checked in 
+the `Conversation Type` step as shown in Figure 8.3.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
 Figure 8.4 Conversation Type step in creation/modification of bot configuration.
@@ -99,7 +101,7 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 }
 ```
 
-Figure 1.3 Customer activity excerpt on a new chat
+Figure 3.1 Customer activity excerpt on a new chat
 
 ### Sending Multiple Responses
 
@@ -148,7 +150,7 @@ The array in the multiMessage property can contain the objects identified by the
 }
 ```
 
-Figure 1.4 Activity excerpt with a multiMessage array containing messages of different types
+Figure 4.1 Activity with a multiMessage array containing messages of different types
 
 ### Sending Encoded Metadata
 
@@ -181,7 +183,7 @@ For sending `encodedMetadata` with a text message you need to provide this prope
 }
 ```
 
-Figure 1.5 Activity excerpt containing encodedMetadata for plain text
+Figure 5.1 Activity containing encodedMetadata for plain text
 
 #### Sending Rich Content (structured content) with Encoded Metadata
 
@@ -221,7 +223,7 @@ For sending [structured content](getting-started-with-rich-messaging-introductio
 }
 ```
 
-Figure 1.6 Activity excerpt containing encodedMetadata for Rich Content
+Figure 5.2 Activity containing encodedMetadata for Rich Content
 
 #### Sending Multiple Responses with Encoded Metadata
 
@@ -258,7 +260,7 @@ For sending Encoded Metadata with multiple responses one must provide an additio
 }
 ```
 
-Figure 1.7 MulitMessage Activity excerpt containing encodedMetadata
+Figure 5.3 MultiMessage Activity containing encodedMetadata
 
 ### Invoke LivePerson Function Activity
 
@@ -295,4 +297,4 @@ An example of an invocation can be seen below:
 }
 ```
 
-Figure 9.1 LivePerson Function Invocation with payload
+Figure 6.1 LivePerson Function Invocation with payload

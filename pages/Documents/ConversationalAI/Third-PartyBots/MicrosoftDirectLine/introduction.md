@@ -1,5 +1,8 @@
 ---
 pagename: Introduction
+redirect_from:
+  - bot-connectors-microsoft-bot-framework.html
+  - third-party-bots-microsoft-bot-framework.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
@@ -14,7 +17,10 @@ It describes how the connector is implemented and what limitations this imposes 
 It shows how activities need to be composed to successfully send messages and actions to the **Conversational Cloud**.
 
 It does not go into details on implementation details of such a bot.
-Microsoft provides different ways to implement chat bots. A good starting point is the documentation on [Azure Bot Services](https://docs.microsoft.com/en-us/azure/bot-service/)
+Microsoft provides different ways to implement chat bots like the 
+[Bot Framework SDK](https://github.com/microsoft/botframework-sdk#bot-framework-sdk-v4).
+A good starting point is the documentation on 
+[Azure Bot Services](https://docs.microsoft.com/en-us/azure/bot-service/).
 
 ### Limitations
 
@@ -22,16 +28,20 @@ Microsoft provides different ways to implement chat bots. A good starting point 
 Third Party Bots only supports the Direct Line API version 3.0.
 
 {: .important}
-Third Party Bots only supports authorization with the Direct Line secret. Authorization with a Bot ID and Tenant ID is not supported.
+Third Party Bots only supports authorization with the Direct Line secret. Authorization with a Bot ID and Tenant ID is 
+not supported.
 
 {: .important}
 Third Party Bots uses the replyToId of a bot activity to match it against the consumer message.
 Bot activities that are not an explicit response to a consumer message won't be processed.
 
 {: .important}
-The connector respects the error codes sent by the Direct Line API. For Example the API sends the HTTP Status Code **502** if a bot does not handle a message within 15 seconds.
-This means our connector won't process activities that are send by the bot in this case. Instead, our connector resends the message up to 2 times on server errors.
-For details how a bot can acknowledge the request within 15 seconds, see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp) on the inner workings of a bot.
+The connector respects the error codes sent by the Direct Line API. For Example the API sends the HTTP Status Code 
+**502** if a bot does not handle a message within 15 seconds.
+This means our connector won't process activities that are send by the bot in this case. Instead, our connector resends 
+the message up to 2 times on server errors.
+For details how a bot can acknowledge the request within 15 seconds, see Microsoft's documentation on 
+[how bots work](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp).
 
 ### Configuration
 
@@ -59,13 +69,22 @@ The bot does not necessarily need to send any response activities for this messa
   </tr>
   <tr>
     <td>Direct Line Endpoint</td>
-    <td>The endpoint the connector should use to reach the bot. Apart from the default you can also choose an endpoint that is close to the region that your account is configured for</td>
+    <td>
+        The endpoint the connector should use to reach the bot. Apart from the default you can also choose an endpoint 
+        that is close to the region that your account is configured for
+    </td>
     <td>https://directline.botframework.com/v3/directline</td>
   </tr>
   <tr>
     <td>Multiple Activities (Optional)</td>
-    <td>The connector by default only waits on the first response activities send by the bot and pass it to the customer. If you intent to send multiple activities with the same `ReplyToId` you should activate this feature.
-     The value describes the time the connector will wait [in milliseconds] and then check again for further responses. The connector will continue checking in this interval as long as he finds more responses. If no additional responses can be found after this interval all responses until this point will be returned </td>
+    <td>
+        The connector by default only polls for activities until he finds some on the channel. 
+        If you intent to send multiple activities especially after the bot has acknowledged the request you should 
+        activate this feature.
+        The value describes the time the connector will wait [in milliseconds] and then check again for further 
+        responses. The connector will continue checking in this interval as long as he finds more responses. 
+        If no additional responses can be found after this interval all responses until this point will be returned.
+    </td>
     <td>1000</td>
   </tr>
   </tbody>
@@ -73,7 +92,8 @@ The bot does not necessarily need to send any response activities for this messa
 
 Figure 3.2 Detailed parameter description
 
-The Direct Line Secret can be found in the Azure Portal if you select the corresponding Web App Bot and edit the Configuration of the Direct Line Channel.
+The Direct Line Secret can be found in the Azure Portal if you select the corresponding Web App Bot and edit the 
+Configuration of the Direct Line Channel.
 
 <img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/microsoft-secret-azure.png">
 Figure 3.3 Location of the Direct Line secret in Azure
@@ -81,14 +101,16 @@ Figure 3.3 Location of the Direct Line secret in Azure
 
 ### Implementation Details
 
-If a message is routed to the bot the connector implements the following steps to retrieve the responses from the Direct Line API.
-It will get a client either from the cache or by getting the information from the Direct Line API.
-In case of a new conversation a request to start a new conversation is also send to the Direct Line API.
+If a message is routed to the bot the connector implements the following steps to retrieve the responses from the 
+Direct Line API:
+* It will get a client either from the cache or by getting the information from the Direct Line API.
+* In case of a new conversation, a request to start a new conversation is also send to the Direct Line API.
 
 <img class="fancyimage" src="img/ThirdPartyBots/microsoft-flow-init-conversation.png">
 
-After a conversation client has been retrieved in this way the customer message is send to the Direct Line API.
-The connector does retries on error responses and will poll for the responses after the message has been successfully send. 
+After a conversation client has been retrieved in this way, the customer message is send to the Direct Line API.
+The connector does retries on error responses and will poll for the responses after the message has been successfully 
+send. 
 
 <img class="fancyimage" src="img/ThirdPartyBots/microsoft-flow-send-activity.png">
 

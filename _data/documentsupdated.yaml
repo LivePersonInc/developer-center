@@ -310,7 +310,6 @@
       - pagename: IBM Watson Assistant
       - pagename: IBM Watson Assistant Version 2
       - pagename: Amazon Lex
-      - pagename: Microsoft Bot Framework
       - pagename: Microsoft Direct Line
         subpages:
           - subpagename: Introduction
