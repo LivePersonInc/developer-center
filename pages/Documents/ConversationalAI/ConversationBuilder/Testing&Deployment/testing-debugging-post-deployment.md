@@ -45,6 +45,8 @@ You can access the Conversation Tester in two ways:
 * From the bot dashboard, click **Conversation Tester** on the menu bar in the upper-left corner.
 
     When you want to perform end-to-end testing (of the engagement, skill, bot agent, and bot), this method is recommended because you'll be starting the conversation by specifying the engagement to use, not the bot to use.
+    
+    Access via this method does also allow you to select a skill by bot, or by skill directly.
 
 ### Start the conversation
 
