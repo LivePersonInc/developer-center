@@ -10,8 +10,8 @@ indicator:
 
 ### Sending Pause/Delay Messages
 
-It is possible to send an event of type "delay" before regular content events and actions. This specifies the time the 
-bot will wait before displaying the next message. There are two properties, `delay` and `typing`.
+It is possible to add a delay before regular messages and actions.
+This delay will be added before a message or action provided in this activity will be sent.
 
 ```json-doc
 {
@@ -29,31 +29,43 @@ bot will wait before displaying the next message. There are two properties, `del
 
 Figure 1.1 Activity resulting in a delay with typing indicator
 
-- **delay:** This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value</li>
-- **typing:** This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.</li>
+- `delay` This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value
+- `typing` This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.
 
-**Note:**
-This **single** delay activity will only work as expected if you've enabled the "Multiple Activities" feature in the bot configuration.
-Using the delay as a sole response activity without this feature is effectively a ‘no response’ action and might only be useful if the bot should not respond at all without an error escalation.
+{: .important}
+A pure delay activity without any text or other structured content can e.g. be used if the bot should not respond with any 
+content but an error escalation should be prevented (the connector would assume an issue with the bot if no response at all can 
+be found).
+A pure delay activity can also be used as part of [multiple activity](third-party-bots-microsoft-direct-line-introduction.html#configuration) responses.
 
 
 ### Sending Private Text Messages
 
-It is possible to send a private text message from the Conversational Cloud via the agent workspace. This feature can now be used via the Third-Party bots as well. This will allow Brands to define private message text within the conversational flow of the bot. These messages are published into the conversation for other Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or also advising on next actions the handover agent should take.
+It is possible to send a private text message from the Conversational Cloud via the agent workspace. 
+This feature can now be used via the Third-Party bots as well. This will allow brands to define private message text 
+within the conversational flow of the bot. These messages are published into the conversation for other Agents or 
+Managers. This enables brands to customize messages giving more insight, summarizing actions taken by the bot, or 
+also advising on next actions the handover agent should take.
 
 {: .important}
-Please note If you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to Agents and Managers.
+If you have not migrated to the new Agent Workspace you will not be able to see the `Private` message indicator in the 
+conversation window. Nevertheless, private text messages will not be shown to the consumer and only remain visible to 
+Agents and Managers.
 
-Please note private text message will never be shown to the consumer and will be visible only inside the conversation window of agent workspace. There are two properties, `text` and `messageAudience` which need to be added in with the response body of the function.
+Private text message will never be shown to the consumer and will be visible only inside the conversation window of the
+agent workspace. There are two properties, `text` and `messageAudience`, which need to be added within the response 
+body of the function.
 
 | key             | value                                 | notes                     |
 | --------------- | ------------------------------------- | ------------------------- |
 | text            | any string value                      | mandatory                 |
-| messageAudience | value should be "AGENTS_AND_MANAGERS" | case sensitive, mandatory |
+| messageAudience | value should be `AGENTS_AND_MANAGERS` | case sensitive, mandatory |
 
-<br />
+<br/>
 
-A single private text message with an action can be send by adding `text` and `messageAudience` properties with relevant action (e.g. [Transfer/Escalations](#transfer--escalations)) properties. An example of such case is below:
+A single private text message with an action can be sent by adding `text` and `messageAudience` properties with 
+relevant action (e.g. [Transfer](third-party-bots-microsoft-direct-line-basic-content.html#transfer)) 
+properties. An example of such case is below:
 
 ```json-doc
 {
@@ -80,12 +92,20 @@ Figure 2.1 Transfer activity with a private message visible to agents and manage
 
 Third-Party bots allows the collection of engagement attributes (more information can be found 
 [here](engagement-attributes-types-of-engagement-attributes.html)) if the `Engagement Attributes` option is checked in 
-the `Conversation Type` step as shown in Figure 8.3.
+the `Conversation Type` step as shown in Figure 3.1.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
-Figure 8.4 Conversation Type step in creation/modification of bot configuration.
+Figure 3.1 Conversation Type step in creation/modification of bot configuration.
 
-These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Microsoft Bot these engagement attributes are added to the property `lpSdes` which is part of another custom property of `context`. This context information within a conversation is preserved/passed in `channelData` property (further information about `channelData` can be found [here](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)). An example of the request body can be seen below:
+These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson 
+Visit Information API to collect the engagement attributes. Further information on the Visit Information API 
+can be found [here](visit-information-api-visit-information.html). Moreover, engagement attributes are not updated 
+throughout the life cycle of a conversation and only passed along with each message request. 
+In Microsoft Bot these engagement attributes are added to the property `lpSdes` which is part of another custom 
+property of `context`. This context information within a conversation is preserved/passed in the `channelData` 
+property (further information about `channelData` can be found 
+[here](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object)
+). An example of the activity can be seen below:
 
 ```json-doc
 {
@@ -111,10 +131,10 @@ is not enabled or the waiting period is set to low, the connector might not retr
 In that case we also provide a way to define multiple bot responses in a single Direct Line activity. As with all channel specific content this is defined in the channelData property.
 The array in the multiMessage property can contain the objects identified by the following types:
 
-- **text:** A plain message
-- **delay:** A delay between messages. **Important**: This format is different from the one described further above for a single message. You can only define the delay. There is no flag for the typing indicator.</li>
-- **private-message:** A private message as described in [Sending Private Text Messages](#sending-private-text-messages)
-- **structured-content:** A structured content as described in [Rich Content (Structured Content)](#rich-content--structured--content)
+- `text A plain message
+- `delay` A delay between messages. **Important**: This format is different from the one described further above for a single message. You can only define the delay. There is no flag for the typing indicator.</li>
+- `private-message` A private message as described in [Sending Private Text Messages](#sending-private-text-messages)
+- `structured-content` A structured content as described in [Rich Content (Structured Content)](#rich-content--structured--content)
 
 ```json-doc
 {
@@ -154,23 +174,28 @@ Figure 4.1 Activity with a multiMessage array containing messages of different t
 
 ### Sending Encoded Metadata
 
-Conversational Cloud Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 encoded metadata on a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field.
-Third-party Bot also supports this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
+Conversational Cloud Messaging platform provides a new metadata input type (“encodedMetadata”) for passing a base64 
+encoded metadata on a conversation. The new metadata input type is in addition to the existing 
+[conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field.
+Third-party Bots also supports this property and this section will cover the information needed for you to send encoded 
+metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order 
+to successfully send the data.
 
-<ul>
-  <li><b>Common.EncodedMetadata</b> AC feature is ON</li>
-  <li>Content is base64 encoded</li>
-  <li> Metadata size is limited to 5k</li>
-</ul>
+
+* `Common.EncodedMetadata` AC feature is ON</li>
+* Content is base64 encoded
+* Metadata size is limited to 5k
 
 {: .important}
-Failing to comply with the above validation points will cause the message to be dropped. This feature is only available for the messaging conversations not for chat conversations
+Failing to comply with the above criteria will cause the message to be dropped. This feature is only available for the 
+messaging conversations, not for chat conversations.
 
-Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses.
+Encoded Metadata can be sent with simple Text, Rich Content (structured content) and multiple responses.
 
 #### Sending a Text Message with Encoded Metadata
 
-For sending `encodedMetadata` with a text message you need to provide this property in `channelData` object. Be careful with the camel-case characters you must provide it exactly the same. An example of the simple text message response is below:
+For sending `encodedMetadata` with a text message you need to provide this property in `channelData` object. Make sure 
+that `encodedMetadata` is written in camel case. An example of the simple text message response is below:
 
 ```json-doc
 {

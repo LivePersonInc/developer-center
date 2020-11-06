@@ -37,7 +37,7 @@ Bot activities that are not an explicit response to a consumer message won't be 
 
 {: .important}
 The connector respects the error codes sent by the Direct Line API. For Example the API sends the HTTP Status Code 
-**502** if a bot does not handle a message within 15 seconds.
+`502` if a bot does not handle a message within 15 seconds.
 This means our connector won't process activities that are send by the bot in this case. Instead, our connector resends 
 the message up to 2 times on server errors.
 For details how a bot can acknowledge the request within 15 seconds, see Microsoft's documentation on 
