@@ -29,10 +29,9 @@ This endpoint implements the standard OpenID Connect [token endpoint](http://ope
 POST /oauth2/v3/token HTTP/1.1
 Host: www.customer.com
 Content-Type: application/x-www-form-urlencoded
+Authorization: Basic base64encodedClientId+ClientSecret
 
 code=3shshs92jsls/snxbxismNSsgHSVb&
-client_id=8819981768.lp-integration.customer.com&
-client_secret=fafadshdjkf943yehsjhed&
 redirect_uri=https://liveperson.net/oauth2/code_redirect&
 grant_type=authorization_code
 ```
