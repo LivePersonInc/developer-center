@@ -114,7 +114,7 @@ HTTP/1.1
 Host: server.example.com
 Path: /token  
 Method: POST
-Content-Type: application/json  
+Content-Type: application/x-www-form-urlencoded  
 Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
 Body:    
 {
