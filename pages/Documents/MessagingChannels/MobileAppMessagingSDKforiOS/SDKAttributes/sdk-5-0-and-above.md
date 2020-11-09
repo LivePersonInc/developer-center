@@ -117,6 +117,18 @@ The validation of allowed max number of documents will be when showing and remov
 
 ---  
 
+### Auth
+
+#### hideUIUntilAuthenticated  
+Hides previous chat history until user identify has been verified
+
+   - **Type:** Bool
+   - **Default value:** true (enabled)
+
+{: .notice}
+avaliable on SDK 6.0 and above.
+
+---  
 ### Brand
 
 #### brandName  
@@ -2032,7 +2044,11 @@ If setting nil - default avatar image will be used with `remoteUserAvatarBackgro
    - **Type:** UIImage?
    - **Default value:** nil 
 
+#### brandAvatarImageContentMode
+Sets content mode for the brand avatar image
 
+- **Type:** UIView.ContentMode
+- **Default value:** .scaleAspectFit
 
 #### csatAgentAvatarBackgroundColor 
 Background color of agent's default avatar in CSAT. 
