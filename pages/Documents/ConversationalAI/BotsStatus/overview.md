@@ -15,7 +15,7 @@ Use the Bots Status application to check the status of all your bots from a sing
 
 You can use the application to monitor and manage both custom bots and post-conversation survey (PCS) bots.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botsStatus_bot_agents.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_bot_agents.png">
 
 ### Access Bots Status
 
@@ -31,7 +31,7 @@ To access the Bots Status application, you must have the Bot Status Access [perm
 
 The dashboard provides at-a-glance reporting on the status of your agents. Click any metric to access the **Bot Agents** page with the appropriate filter pre-applied.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botsStatus_dashboard.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_dashboard.png">
 
 Note that "N/A" for "Not Applicable" is shown in cases where an actual value doesn't apply or make sense.
 
