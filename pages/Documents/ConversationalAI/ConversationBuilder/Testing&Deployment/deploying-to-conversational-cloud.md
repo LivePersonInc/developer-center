@@ -171,6 +171,8 @@ For example, assume the bot agent receives a message from the consumer at 1:00 p
 
 Conversely, assume the bot agent receives a message from the consumer at 1:00 p.m., and it then receives the consumer's next message at 2:00 p.m. The delay between consumer messages is 60 minutes. If the maxConsumerMessageDelay is set to 30 minutes, the bot will not respond to the message received at 2:00 p.m.
 
+The default value of 30 minutes should suit most use cases due to the sequential nature of bot conversations, where the conversation either ends in resolution or escalation. However, messaging is asynchronous, so a consumer might reply in intervals that are longer than 30 minutes. As a result, you can increase this value if needed based on your use cases.
+
 **Default value**: 30<br>
 **Messaging**: Yes<br>
 **Chat**: No<br>
