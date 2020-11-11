@@ -386,3 +386,12 @@ The provided activity name is not supported.
 The bot is not capable of handling this activity name.
 #### Solutions
 Double-check that you are only using supported activity names as described [here](third-party-bots-microsoft-bot-framework.html) 
+
+### com.liveperson.bot-connectors-worker.error.pipes.conversation-limit-checker.max-conv-limit-reached
+
+#### Description
+The bot does not accept new conversation anymore and instead error escalates them.
+#### Reasons
+To ensure the stability of our service, a bot can have a maximum number of 999 open conversations assigned.
+#### Solutions
+Add more bots so support handling such kind of load, you can check how to add a bot [here](third-party-bots-getting-started.html)

@@ -39,6 +39,11 @@ Each connector provides the ability to:
 {: .important}
 Some connectors may provide more or less functionality depending on the specifics of the provider.
 
+{: .important}
+Please be advised that we recommend to have one bot for 100 open conversations, if you want your bot to handle more load, please add more bots.
+{: .important}
+We will be automatically error escalate any new conversation if the bot has reached the limit of 999 open conversations.
+
 ### Bot Lifecycle
 
 During run-time, your bot may have different operational states. These states are based on the health status of the services it utilizes, such as LivePerson APIs, AI vendors, etc.
