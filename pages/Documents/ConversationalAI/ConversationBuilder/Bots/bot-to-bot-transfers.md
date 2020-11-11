@@ -88,6 +88,7 @@ Manual transfers are done via:
 You'll need to use a manual transfer in two situations:
 
 * You want to transfer the conversation from a bot in one bot group to a bot in a *different* group.
+* You want to offer the consumer a choice of options, and then transfer the conversation based on the consumer's response.
 * You want to transfer the conversation from a bot to a live agent.
 
 #### Making manual transfers seamless
