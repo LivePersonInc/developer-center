@@ -30,8 +30,6 @@ However, a similar scenario might be implemented by simply connecting LivePerson
 
 * Messaging Survey Ended
 
-### Step-by-Step implementation guide
-
 #### Step 1 - Create function
 
 Create a new function using one of the messaging survey templates.
