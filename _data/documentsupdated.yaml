@@ -925,7 +925,9 @@
       - subpagename: All Releases
     - pagename: Resources
       subpages:
+      - subpagename: About XCFrameworks
       - subpagename: Authentication
+      - subpagename: FAQ
       - subpagename: Open Source List
       - subpagename: Upgrade Guide - iOS
   - documentname: Apple Business Chat SDK
