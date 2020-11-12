@@ -9,14 +9,14 @@ This repository generates LivePerson's Developer Center, which can be found at h
 
 **Table of Contents**
 
-* :satellite: [Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
+* :satellite:&nbsp;[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
 
-* :hammer: [Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+* :hammer: &nbsp;[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
 
-* :clipboard: [Template](https://github.com/LivePersonInc/developers-community#template)
+* :clipboard: &nbsp;[Template](https://github.com/LivePersonInc/developers-community#template)
 
-* :scroll: [Licensing](https://github.com/LivePersonInc/developers-community#licensing)
-* :ghost: [How to Hide files and still make them Accessible](https://github.com/LivePersonInc/developers-community#hiding-files)
+* :scroll: &nbsp;[Licensing](https://github.com/LivePersonInc/developers-community#licensing)
+* :ghost: &nbsp;[How to Hide files and still make them Accessible](https://github.com/LivePersonInc/developers-community#hiding-files)
 ### Updating the Documentation
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. 
