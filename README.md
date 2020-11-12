@@ -16,7 +16,7 @@ This repository generates LivePerson's Developer Center, which can be found at h
 * :clipboard:[Template](https://github.com/LivePersonInc/developers-community#template)
 
 * :scroll:[Licensing](https://github.com/LivePersonInc/developers-community#licensing)
-
+* :ghost:[How to Hide files and still make them Accessible](https://github.com/LivePersonInc/developers-community#HidingFiles)
 ### Updating the Documentation
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. 
@@ -161,6 +161,14 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
   * If the page does not have a `subfoldername` value: documentname - pagename. For example: users-api-overview.html
 
 * `indicator`: this key sets the Chat or Messaging indicator (or both) on a document. It accepts `chat`, `messaging` or `both` as its value.
+
+* `layout`: set the value to `hidden-layout` if you want this file to be ignored in search engines
+
+### HidingFiles
+* Add the Files to the Hidden->Hidden folder. 
+* Do not include them to documentsupdated.yaml file. 
+* Make sure Layout header is set to  `hidden-layout` (This specifically makes it so search engines can't find it)
+* Make sure that the headers are set correctly follow the file header structure of `blank.md` in the Hidden->Hidden folder
 
 **Any other parameters which are not documented here which you might find in the front-matter are deprecated and are only present for backwards compatibility purposes. These should not be used**.
 

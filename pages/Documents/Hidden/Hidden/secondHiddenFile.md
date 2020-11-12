@@ -6,6 +6,7 @@ documentname: Hidden
 order: 20
 permalink: hidden-second-hidden-file.html
 indicator: chat
+layout: hidden-layout
 ---
 ### What is a Concierge Bot?
 

@@ -5,7 +5,7 @@ sitesection: Documents
 categoryname: Hidden
 documentname: Hidden
 permalink: hidden-blank.html
-layout: test
+layout: hidden-layout
 ---
 # This is a test page
  This is where we store hidden files
