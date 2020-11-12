@@ -9,14 +9,14 @@ This repository generates LivePerson's Developer Center, which can be found at h
 
 **Table of Contents**
 
-* :satellite:[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
+* :satellite:[ Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
 
-* :hammer:[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+* :hammer:[ Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
 
-* :clipboard:[Template](https://github.com/LivePersonInc/developers-community#template)
+* :clipboard:[ Template](https://github.com/LivePersonInc/developers-community#template)
 
-* :scroll:[Licensing](https://github.com/LivePersonInc/developers-community#licensing)
-* :ghost:[How to Hide files and still make them Accessible](https://github.com/LivePersonInc/developers-community#HidingFiles)
+* :scroll:[ Licensing](https://github.com/LivePersonInc/developers-community#licensing)
+* :ghost:[ How to Hide files and still make them Accessible](https://github.com/LivePersonInc/developers-community#hiding-files)
 ### Updating the Documentation
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. 
@@ -164,7 +164,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `layout`: set the value to `hidden-layout` if you want this file to be ignored in search engines
 
-### HidingFiles
+### Hiding Files
 * Add the Files to the Hidden->Hidden folder. 
 * Do not include them to documentsupdated.yaml file. 
 * Make sure Layout header is set to  `hidden-layout` (This specifically makes it so search engines can't find it)
