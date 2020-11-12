@@ -40,9 +40,11 @@ Each connector provides the ability to:
 Some connectors may provide more or less functionality depending on the specifics of the provider.
 
 {: .important}
-Please be advised that we recommend to have one bot for 100 open conversations, if you want your bot to handle more load, please add more bots.
+Please be advised that we recommend to have one bot for 100 open and active conversations, if you want your bot to handle more load, please add more bots.
+
 {: .important}
-We will be automatically error escalate any new conversation if the bot has reached the limit of 999 open conversations.
+We will be automatically error escalate any new conversation if the bot has reached the limit of 999 open conversations. To mitigate this issue, please consider setting a lower value for closing inactive conversations for your bot skills and also add more bots.
+
 
 ### Bot Lifecycle
 
