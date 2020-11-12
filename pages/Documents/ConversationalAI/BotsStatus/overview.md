@@ -11,11 +11,11 @@ indicator: both
 {: .important}
 Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
 
-Use the Bots Status application to check the status of all your bots from a single location. 
+Use the Bots Status application to check the status of all your bots from a single location, and to help to resolve issues. 
 
 You can use the application to monitor and manage both custom bots and post-conversation survey (PCS) bots.
 
-<img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botsStatus_dashboard.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_bot_agents.png">
 
 ### Access Bots Status
 
@@ -27,19 +27,32 @@ To access the Bots Status application, you must have the Bot Status Access [perm
 1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Bots Status**.
 
+### Dashboard
+
+The dashboard provides at-a-glance reporting on the status of your agents. Click any metric to access the **Bot Agents** page with the appropriate filter pre-applied.
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_dashboard.png">
+
+* **Active agents**: The number of agents where the Bot Agent Connector status is "Online"
+* **Agents not connected to Conversational Cloud**: The number of agents where the Conversational Cloud Connection status is "Not Connected"
+* **Agents not connected to Bot Server**: The number of agents where the Bot Server Connection status is "Not Connected"
+* **Stopped agents**: The number of agents where the Bot Agent Connector status is "Stopped"
+
+Note that "N/A" for "Not Applicable" is shown in cases where an actual value doesn't apply or make sense.
+
 ### Statuses
 
 When monitoring bots, there are three types of statuses:
 
 * **Bot Agent Connector**: This indicates the status of the deployed connector that’s connected to the bot and handles conversations using the bot.
-* **Conversation Cloud**: This indicates the status of the connection between the bot agent connector and the Conversation Cloud messaging/chat server. This server sends the messages to the consumer via a channel.
-* **Bot Server**: This indicates the status of the connection between the bot agent connector and the bot server. This server handles bot conversations.
+* **Conversation Cloud Connector**: This indicates the status of the connection between the bot agent connector and the Conversation Cloud messaging/chat server. This server sends the messages to the consumer via a channel.
+* **Bot Server Connection**: This indicates the status of the connection between the bot agent connector and the bot server. This server handles bot conversations.
 
 To view a connector's statuses, scroll to the right in the dashboard.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/bots_status_statuses.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/bots_status_statuses.png">
 
-#### Bot agent connector statuses
+#### Bot Agent Connector statuses
 
 | Status | Description |
 | --- | --- |
@@ -48,7 +61,7 @@ To view a connector's statuses, scroll to the right in the dashboard.
 | Online | The connector is online. |
 | Stopped | The connector isn't running because it was manually stopped. |
 
-#### Conversational Cloud connection statuses
+#### Conversational Cloud Connector statuses
 
 | Status | Description |
 | --- | --- |
@@ -58,7 +71,7 @@ To view a connector's statuses, scroll to the right in the dashboard.
 | Offline | *Applies to Chat.* The Conversation Cloud chat server is offline. |
 | Away | Agents are away. |
 
-#### Bot Server connection statuses
+#### Bot Server Connection statuses
 
 | Status | Description |
 | --- | --- |
