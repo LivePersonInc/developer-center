@@ -9,7 +9,7 @@ This repository generates LivePerson's Developer Center, which can be found at h
 
 **Table of Contents**
 
-* :satellite:&nbsp;[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
+* :satellite: &nbsp; &nbsp;[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
 
 * :hammer: &nbsp;[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
 
