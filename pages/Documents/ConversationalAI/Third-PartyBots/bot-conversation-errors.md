@@ -119,7 +119,7 @@ The bot does not accept new conversation anymore and instead error escalates the
 #### Reasons
 To ensure the stability of our service, a bot can have a maximum number of 999 open conversations assigned.
 #### Solutions
-Add more bots so support handling such kind of load, you can check how to add a bot [here](third-party-bots-getting-started.html)
+Add more bots to support handling such kind of load, you can check how to add a bot [here](third-party-bots-getting-started.html)
 
 ### com.liveperson.bot-connectors-worker.error.events-queue.not-catched-pipeline-error
 
