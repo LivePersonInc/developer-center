@@ -9,10 +9,9 @@ permalink: mobile-app-messaging-sdk-for-ios-resources-about-xcframeworks.html
 indicator: messaging
 ---
 
-### What is an XCFramework?
+### What is XCFramework?
 
-Apple defines an XCFramework as:
-- a distributable binary package created by Xcode that contains variants of a framework or library so that it can be used on multiple platforms (iOS, macOS, tvOS, and watchOS), including Simulator builds. An XCFramework can be either static or dynamic and can include headers. (for more information, see [link](https://help.apple.com/xcode/mac/11.4/#/dev6f6ac218b)).
+Apple defines XCFrameworks as a distributable binary package created by Xcode that contains variants of a framework or library so that it can be used on multiple platforms (iOS, macOS, tvOS, and watchOS), including Simulator builds. An XCFramework can be either static or dynamic and can include headers. (for more information, see [link](https://help.apple.com/xcode/mac/11.4/#/dev6f6ac218b)).
 
 ### How to consume the LPMessagingSDK.xcframework
 
@@ -28,9 +27,9 @@ XCFramework can be integrated similarly to how we’re used to integrating the .
 
 The only requirement is that you will need to update to Cocoapods version 1.9.0 or above.
 
-### Why move to an XCFramework, instead of the FAT Framework?
+### Why move to XCFrameworks instead of the FAT Frameworks?
 
-The FAT Framework had a limitation, where in the moment a new Swift version was released (usually through a new Xcode version), the SDK was obsolete and couldn’t be consumed with the new Xcode, this was because FAT Frameworks are tied to the compile Swift version.
+The FAT Framework had a limitation, when a new Swift version was released (usually through a new Xcode version), the SDK was obsolete and couldn’t be consumed with the new Xcode, this was because FAT Frameworks are tied to the compile Swift version.
 
 ### What are the benefits of XCFramework?
 
