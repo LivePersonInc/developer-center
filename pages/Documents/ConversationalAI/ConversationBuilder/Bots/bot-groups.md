@@ -18,6 +18,9 @@ You can create bot groups and add bots to them for two purposes:
 
 * You want to enable [automatic, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group) for the bots within a given bot group.
 
+{: .important}
+While you can include a [post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html) in a bot group for grouping purposes, a survey bot doesn’t participate in [automatic, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group).
+
 It's common to organize bots into groups based on business function. You could then further organize them based on environment. In the image below, bots are grouped based on business function (Checking and Savings).
 
 Note the following about the bots dashboard when bot groups exist:
@@ -80,6 +83,16 @@ You can delete a bot group at any time; this *doesn't* delete the bots therein. 
 2. Select **Delete Group** from the menu that appears.
 3. Click **Yes** to confirm the action.
 
+### Best practices
+
+For bot groups that are intended only for grouping purposes:
+* Make sure to disable the Collaboration setting.
+
+For bot groups that are collaborative (the Collaboration setting is enabled):
+* If the group will include multiple bots, LivePerson recommends the use of the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2).
+* The group should not contain more than 15 bots.
+* Make sure there is no overlap in the intents and patterns used by the bots.
+
 ### FAQs
 
 #### If I use bot groups, must I assign all bots to a bot group?
@@ -87,3 +100,7 @@ You can delete a bot group at any time; this *doesn't* delete the bots therein. 
 No, this isn't required. Bots that aren't assigned to a bot group are listed below the bot groups.
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/botGroups_unassigned.png">
+
+#### Can I test bot groups using Preview?
+
+No, [Preview](conversation-builder-testing-deployment-previewing.html) can't be used; you must test bot groups using deployed bots. For some practice at this, complete the [Bot Groups & Other Techniques](tutorials-guides-bot-groups-other-techniques-overview.html) tutorial series.

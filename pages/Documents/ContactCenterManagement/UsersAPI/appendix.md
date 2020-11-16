@@ -69,7 +69,7 @@ This section contains API details that are common to every API’s resource and 
 | nickname | A user’s nickname. | string | Required | |
 | isEnabled  | Indicates whether the user is enabled or not.  | Boolean | Required | |
 | maxChats | The maximum number of chats a user can take. | number | Required | |
-| skillIds   | The user’s skill IDs. | array of numbers | Optional | |
+| skillIds   | The user’s skill IDs. | array of longs | Optional | |
 | email   | The user's email | string | Required | |
 | memberOf   | The agent group that the agent is a member of.  | An object with the properties agentGroupId (number) and assignmentDate (date, read only)  |  Required | Required only if the user is an agent. |
 | managerOf | The user’s agent groups as a manager. | An array of memberOf objects  | Optional |  Optional if the user is an agent. Only an agent manager can manage agent groups. |
@@ -89,7 +89,7 @@ This section contains API details that are common to every API’s resource and 
 | backgndImgUri | The background image URI. | string| Optional | |
 | pnCertName | The mobile app ID. | string | Optional | |
 | maxAsyncChats | The maximum number of open messaging conversations a user can take. | number | Optional | If null, the user will inherit the account’s default value.  |
-| profileIds  | The user’s profile IDs. | array of numbers| Required | |
+| profileIds  | The user’s profile IDs. | array of longs| Required | |
 | isApiUser | Indicates whether the user is an api user (not a real user/ bot)  | Boolean | Optional (Default: false) | It has the ability to login via API (instead of username and password) |
 | userTypeId | The user's type  | integer number | Optional | 0 - system; 1 - human; 2 - bot; (Default: 1) |
 | allowedAppKeys | The API user's application keys | string | Required (for API user) |  

@@ -26,10 +26,8 @@ Redeploying the connector stops and restarts it. Use this as a troubleshooting t
 **To redeploy the survey bot connector**
 
 1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
-2. Click the **PCS Connector** tab.
+2. Click **Bot Agents** in the upper-left corner, and then click the **PCS Connector** tab.
 3. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon) beside the connector, and select **Redeploy Connector**.
-
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/surveybot_redeploy.png">
 
 ### Disable a single survey bot
 

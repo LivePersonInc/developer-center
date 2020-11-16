@@ -657,6 +657,31 @@ To close a chat or messaging conversation, we utilize the action object as we di
 
 Figure 6.1 Watson Assistant JSON response for closing chat/conversation
 
+To close a conversation without triggering a post conversation survey, see the example below:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": ["Thanks for chatting with us today!"],
+      "selection_policy": "sequential"
+    }
+  },
+  "actions": [
+    {
+      "name": "CLOSE_CONVERSATION",
+      "type": "client",
+      "parameters": {
+        "withoutPcs": true
+      },
+      "result_variable": "none"
+    }
+  ]
+}
+```
+
+Figure 6.2 Watson Assistant JSON response for closing conversations without pcs
+
 ### Invoke LivePerson Function
 
 During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.
