@@ -680,6 +680,29 @@ To close a chat or messaging conversation, we utilize the action object as we di
 }
 ```
 
+To close a messaging conversation without triggering post conversation survey please provide the `withoutPcs` flag with the value true in the action parameters:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": ["Thanks for chatting with us today!"],
+      "selection_policy": "sequential"
+    }
+  },
+  "actions": [
+    {
+      "name": "CLOSE_CONVERSATION",
+      "type": "client",
+      "parameters": {
+        "withoutPcs": true
+      },
+      "result_variable": "none"
+    }
+  ]
+}
+```
+
 ### Invoke LivePerson Function
 
 During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.

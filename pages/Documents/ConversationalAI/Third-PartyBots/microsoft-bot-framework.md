@@ -309,6 +309,25 @@ An additional text message can also be provided.
 
 Figure 7.2 Alternative bot Activity for a close conversation request
 
+To close a conversation without triggering a post conversation survey you need to provide the `withoutPcs` flag with the value true (as shown in Figure 7.3)
+
+```json
+{
+  "type": "message",
+  "text": "",
+  "channelData": {
+    "action": {
+      "name": "CLOSE_CONVERSATION",
+      "parameters": {
+        "withoutPcs": true
+      }
+    }
+  }
+}
+```
+
+Figure 7.3 Activity excerpt for a close conversation without pcs request
+
 ### Advanced Features
 
 #### Change Time To Response of Conversation

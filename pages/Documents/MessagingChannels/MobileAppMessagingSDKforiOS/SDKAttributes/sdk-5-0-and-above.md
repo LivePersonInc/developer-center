@@ -117,6 +117,18 @@ The validation of allowed max number of documents will be when showing and remov
 
 ---  
 
+### Auth
+
+#### hideUIUntilAuthenticated  
+Hides previous chat history until user identify has been verified
+
+   - **Type:** Bool
+   - **Default value:** true (enabled)
+
+{: .notice}
+avaliable on SDK 6.0 and above.
+
+---  
 ### Brand
 
 #### brandName  
