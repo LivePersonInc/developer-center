@@ -768,6 +768,23 @@ Examples: TimeToRespond notification, local notification, etc.
    - **Type:** Double
    - **Default value:**  3 (60 when in VoiceOver mode)
 
+---
+
+### Domains
+
+{:.notice}
+Overriding this values with incorrect domains will create connection issues on the LPMessagingSDK (e.g. "Failed to connect to server" banner)
+
+#### csdsDomain
+For brands that need to control the CSDS URL for LivePerson services, use this key to set a URL of your choice.
+
+- **Type:** String
+
+#### lpTagDomain
+For brands that need to control the LPTAG URL for LivePerson services, use this key to set a URL of your choice.
+
+- **Type:** String
+
 --- 
 
 ### Hyperlink
