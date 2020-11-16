@@ -112,6 +112,15 @@ QuickReplies are only supported for Messaging Conversations
 #### Solutions
 Do not send QuickReplies to Chat Conversations
 
+### com.liveperson.bot-connectors-worker.error.pipes.conversation-limit-checker.max-conv-limit-reached
+
+#### Description
+The bot does not accept new conversation anymore and instead error escalates them.
+#### Reasons
+To ensure the stability of our service, a bot can have a maximum number of 999 open conversations assigned.
+#### Solutions
+Add more bots to support handling such kind of load, you can check how to add a bot [here](third-party-bots-getting-started.html)
+
 ### com.liveperson.bot-connectors-worker.error.events-queue.not-catched-pipeline-error
 
 #### Description
