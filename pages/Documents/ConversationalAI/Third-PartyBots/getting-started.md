@@ -40,6 +40,9 @@ Each connector provides the ability to:
 Some connectors may provide more or less functionality depending on the specifics of the provider.
 
 {: .important}
+Please be advised that you should create fresh bot agents for your bots. Using the same bot agents for ConversationBuilder and ThirdPartyBots will break both bot instances. This happens because only one active user session at time is possible within the ConversationalCloud ecosystem, so bots using the same bot agent will kick each other out.
+
+{: .important}
 Please be advised that we recommend to have one bot for 100 open and active conversations, if you want your bot to handle more load, please add more bots.
 
 {: .important}
