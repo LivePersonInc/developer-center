@@ -15,10 +15,8 @@ The Order Status template is designed to provide users with information on retai
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-<!--
 {: .important}
 This bot template contains a dialog template that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).
--->
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_order_status_de.png">
 
@@ -85,7 +83,6 @@ Personal information collection events are not logged by default in this templat
 
 For more information on custom events, see [here](conversation-builder-scripting-functions-log-debug.html#log-custom-event).
 
-<!--
 ### Dialog templates
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that allows you to easily copy over the primary data collection and API integration flow independently from the bot template.
 
@@ -104,4 +101,3 @@ Integrations:
 Global Function modifications:
 
 Global variables for the purpose of escalation (`transferMessage` and `skillId`) have been removed from Global Functions, as the escalation dialog is not included with this dialog template.
--->
