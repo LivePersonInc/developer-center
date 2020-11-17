@@ -132,4 +132,4 @@ If you need to store data for the long term, use the [Context Session Store](con
 
   * [Environment variable](conversation-builder-environment-variables.html): `{$env.envVariableName}`
 
-  * API integration [custom data fields](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields): `{apiName.variableName}`
+  * API integration [custom data field](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields): `{apiName.variableName}`
