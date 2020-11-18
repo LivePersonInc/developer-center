@@ -17,7 +17,7 @@ indicator: messaging
 
 This document walks through an example to create a policy using Conversation Orchestrator and using it for routing to a skill. 
 
-The examples provided here start with a simple implementation, using static attributes (hard coded values), and then add more complexity such as using the session store, LivePerson functions, and Conversation Builder integration. This tutorial will help you understand the high level concepts and create basic building blocks on which you will be able to create more complex solutions. 
+The examples provided here start with a simple implementation, using static attributes (hard coded values), and then add more complexity such as using the Conversation Context Service, LivePerson functions, and Conversation Builder integration. This tutorial will help you understand the high level concepts and create basic building blocks on which you will be able to create more complex solutions. 
 
 
 
@@ -31,7 +31,7 @@ Let’s start with a policy we want to build.
 
 ### Overview
 
-In this tutorial we will use the Conversation Builder template that is prewired with Conversation Orchestrator and the Context Warehouse.
+In this tutorial we will use the Conversation Builder template that is prewired with Conversation Orchestrator and the Conversation Context Service.
 
 <img class="fancyimage" width="750" src="img/maven/cb-template.png">
 
@@ -57,19 +57,19 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
     
     b. A question that asks basic customer information (e.g. a phone number)
 
-    c. Integration to Conversation Orchestrator Context Session Store
+    c. Integration to Conversation Context Service
 
-    d. Integration to Recommendation API 
+    d. Integration to Dynamic Routing 
     
     e. Based on policy action the bot can then perform the following: transfer to an agent, transfer to a skill, or send a message 
 
-4. Once we have set this up with Conversation Orchestrator and Context warehouse the following happens
+4. Once we have set this up with Conversation Orchestrator and Conversation Context Service, the following happens
   
     a. The conversation starts with a Welcome intent, for example “hi”
 
     b. The bot then asks the customer for a phone number
 
-    c. The phone number is stored in Conversation Orchestrator Context Session Store
+    c. The phone number is stored in Conversation Context Service
 
     d. Conversation Orchestrator evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List)
 
@@ -81,33 +81,23 @@ A CB bot will handle the incoming consumer message, and then use Conversation Or
 
     <img class="fancyimage" width="750" src="img/maven/cb-global-fns.png">
 
-    a. deploymentZone: 
+    a. mavenNamespace: The Conversation Orchestrator namespace is used for organizing a set of attributes you may want to use in a policy. See [Conversation Context Service](maven-ai-context-warehouse-context-session-store.html) for more information on how this works. 
 
-        i. z1 - Americas
+    i. Please enter myNameSpace. You will use this name in a routing policy. 
 
-        ii. z2 - EMEA
-
-        iii. z3 - APAC
-
-    b. accountId: Your Conversational Cloud account ID
-
-    c. mavenNamespace: The Conversation Orchestrator namespace is used for organizing a set of attributes you may want to use in a policy. See [Context Warehouse Session Store](maven-ai-context-warehouse-context-session-store.html) for more information on how this works. 
-
-        i. Please enter myNameSpace. You will use this name in a routing policy. 
-
-        ii. Note: Conversation builder is already integrated with the Context Session store. You can manage the session store from inside Conversation builder using [scripting functions](conversation-builder-scripting-functions-manage-the-context-session-store.html). 
-
-    d. mavenApiKey: copy and paste the Developer Key from Conversation Orchestrator
-
-    e. Click save
-
-    f. CB_API_KEY: On the top right click on the Key Icon, and then copy and paste the key in “Your API Access Key”
-
-    <img class="fancyimage" width="750" src="img/maven/cb-keys.png">
+    ii. Note: Conversation builder is already integrated with the Conversation Context Service. You can manage the Conversation Context Service from inside Conversation builder using [scripting functions](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
 
 2. [Deploy the bot in Conversational Cloud](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html)
 
     a. See next step for how to setup a skill in Conversational Cloud to accent the incoming conversations.
+
+3. Setup an optional Fallback Skill by editing these values. This will be the fallback skill the conversation will be routed to incase there is some failure in Dynamic Routing logic.
+
+   a. fallbackSkillName
+
+   b. fallBackSkillId
+
+   c. fallbackMessage
 
 
 ### Setup Conversational Cloud
@@ -137,7 +127,7 @@ In this example we will create and use static attributes. To check if a customer
 
 ### Create Context Attributes
 
-1. Login to Conversation Orchestrator using your LPA or Admin Credentials, and then navigate to Context Warehouse/Custom. 
+1. Login to Conversation Orchestrator using your LPA or Admin Credentials, and then navigate to Conversation Context Service / Custom. 
 
     <img class="fancyimage" width="750" src="img/maven/workspace-custom.png">
 
@@ -252,13 +242,13 @@ In the policy list in Conversation Orchestrator, click on the toggle switch and 
 
 6. If you are logged into Conversational Cloud as a Regular Agent, you will now get a ring
 
-## Create a simple policy using Session Store Attribute
+## Create a simple policy using Conversation Context Service Attribute
 
-In the previous example we used Static attributes for everything. While this is a great way to test, in the real world, you will need to use attributes that are dynamically retrieved. In this example we will pass the phone number using the context session store, and then check if the phone number is in a static list.
+In the previous example we used Static attributes for everything. While this is a great way to test, in the real world, you will need to use attributes that are dynamically retrieved. In this example we will pass the phone number using the context service, and then check if the phone number is in a static list.
 
 ### Create Context Attributes
 
-We will be using the Context Session store to store a phone number, and then use it in a policy. The CB template bot you setup earlier already sets up a new namespace, and stores the phone number in the Context Session Store. To learn more about the session store please see developer [documentation](maven-ai-context-warehouse-context-session-store.html).
+We will be using the Conversation Context Service to store a phone number, and then use it in a policy. The CB template bot you setup earlier already sets up a new namespace, and stores the phone number in the Conversation Context Service. To learn more about the Conversation Context Service please see developer [documentation](maven-ai-context-warehouse-context-session-store.html).
 
 ### Create Policies
 
@@ -319,7 +309,7 @@ In the previous example we checked for the phone number in a static list. Mainta
     
     b. Add parameters to this function by selecting Attribute and then typing myNameSpace.phoneNumber.
     
-        i. Please note that myNameSpace is the name you used in the Conversation Builder template setup step in the begining. 
+        i. Please note that myNameSpace is the name you used in the Conversation Builder template setup step in the beginning. 
     
     c. Note: creating and deploying a FaaS function is beyond the scope of this document and hence not covered.
 
@@ -341,9 +331,9 @@ In the previous example we checked for the phone number in a static list. Mainta
 
 #### Adding more Context Attributes from a bot
 
-The bot template we used has one basic integration - It asks for a phone number and then stores it in the context warehouse. You can add more context from the bot to use in policies - for example additional information such as customer name, email, or the NLU intent. 
+The bot template we used has one basic integration - It asks for a phone number and then stores it in the Conversation Context Service. You can add more context from the bot to use in policies - for example additional information such as customer name, email, or the NLU intent. 
 
-Please see [Manage the Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html) learn about scripting functions inside Conversation Builder. 
+Please see [Manage the Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) learn about scripting functions inside Conversation Builder. 
 
 To add additional context:
 
