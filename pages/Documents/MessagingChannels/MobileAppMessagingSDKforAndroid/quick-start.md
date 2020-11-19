@@ -340,7 +340,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
          LivePerson.initialize(this, new InitLivePersonProperties(brandID, APP_ID, new InitLivePersonCallBack() {
              @Override
              public void onInitSucceed() {
-                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.AUTH);
+                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.AUTH);
                  lpAuthenticationParams.setAuthKey(authCode);
                  LivePerson.showConversation(MainActivity.this, lpAuthenticationParams, new ConversationViewParams());
              }
@@ -360,7 +360,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
          LivePerson.initialize(this, new InitLivePersonProperties(brandID, APP_ID, new InitLivePersonCallBack() {
              @Override
              public void onInitSucceed() {
-                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.AUTH);
+                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.AUTH);
                  lpAuthenticationParams.setHostAppJWT(jwt);
                  LivePerson.showConversation(MainActivity.this, lpAuthenticationParams, new ConversationViewParams());
              }
@@ -382,7 +382,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
          LivePerson.initialize(this, new InitLivePersonProperties(brandID, APP_ID, monitoringInitParams, new InitLivePersonCallBack() {
              @Override
              public void onInitSucceed() {
-                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.UN_AUTH);
+                 LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.UN_AUTH);
                  LivePerson.showConversation(MainActivity.this, lpAuthenticationParams, new ConversationViewParams());
              }
 
@@ -420,7 +420,7 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
        LivePerson.initialize(this, new InitLivePersonProperties(brandID, APP_ID, new InitLivePersonCallBack() {
            @Override
            public void onInitSucceed() {
-               LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.AUTH);
+               LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.AUTH);
                lpAuthenticationParams.setAuthKey(authCode);
                LivePerson.showConversation(MainActivity.this, lpAuthenticationParams, new ConversationViewParams());
            }
