@@ -48,9 +48,10 @@ https://API_REQUEST?v=4.0
 
  **Query Parameters**
 
-  | Name            | Description                                                                  | Type    | Notes                                          |
-  |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
-  | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: all fields  |
+  | Name            | Description                       | Type    | Required  | Notes                                                |
+  |-----------------|-----------------------------------|---------|-----------|------------------------------------------------------|
+  | v               | API version number                | double  | Required  | Value should be 4.0                                  |
+  | select          | Response field filter expression  | string  | Optional  | Example values: id, name. Default value: all fields  |
 
 
 
