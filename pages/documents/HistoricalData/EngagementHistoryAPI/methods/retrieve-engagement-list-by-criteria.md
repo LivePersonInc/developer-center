@@ -1272,6 +1272,7 @@ count | Number of sessions for the current query/filter. | numeric |
 
 
 _Interaction record_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 info | Information about a specific chat. | container |
@@ -1285,6 +1286,7 @@ sdes | List of Engagement Attributes. | container | See [Appendix](data-engageme
 
 
 _Interaction info_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 isInteractive | The chat was interactive (at least one visitor line). | Boolean |
@@ -1329,18 +1331,21 @@ chatStartPage | The page’s title from which the chat started. | alphanumeric |
 
 
 _Start reason_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 start reason options | Start reason options. |  | 0 - Visitor request, 1 – Transfer (agent transfer), 2 - Transfer failed, 3 - ACD attempt, 4 - ACD no assignment, 5 - Operator assignment, 6 - Skill reassign (skill transfer), 7 - Rep request, 8 - A2A reassign |
 
 
 _End reason_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 End reason options | End reason options. | | 101 - Transfer - rep stopped chat (rep transferred chat to another rep), 106 - Transfer - Reassignment to skill (rep transferred chat to skill, 201 – Rep stopped chat, 202 - Rep disconnected, 205 - Visitor disconnected, 208 - Visitor was no longer in chat, 210 - Visitor closed chat |
 
 
 _Campaign info_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 campaignEngagementId |  ID of the campaign's engagement. | numeric (long) |
@@ -1359,12 +1364,14 @@ lobName | Name of the line of business of the campaign. | alphanumeric |
 
 
 _Transcripts info_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 lines | Lines of a specific chat. | container |
 
 
 _Line info_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 time | Time when the chat line took place. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
@@ -1381,6 +1388,7 @@ agentId | ID of agent who sent the line.  | numeric | In case it is not an agent
 
 
 _Line sentiment info_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 lineSeq | Sequence of line in that chat  | alphanumeric |
@@ -1389,6 +1397,7 @@ mcs | Meaningful Conversation Score of the chat up to this line | numeric |
 
 
 _Visitor info_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 country | The country indicated by the visitor’s IP address. | alphanumeric |
@@ -1405,12 +1414,14 @@ browserType | The type of the browser the visitor used to chat | alphanumeric | 
 
 
 _CoBrowse sessions info_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 coBrowseSessionsList | List of CoBrowse sessions | container |
 
 
 _CoBrowse session info_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 sessionId | CoBrowse session id | alphanumeric |
@@ -1426,6 +1437,7 @@ isInteractive | Indication whether the CoBrowse session is interactive | Boolean
 
 
 _Surveys info_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 preChat | Pre chat survey. | container |
@@ -1434,6 +1446,7 @@ operator | Agent survey. | container |
 
 
 _Survey info_
+
 Name | Description | Type / Value | Notes
 :----- | :-------- | :----------- | :---------
 scope | Survey scope. Support session scope only; meaning, the survey values may change per session.  | alphanumeric | Example: The answer may change with the same visitor on different occasions.
