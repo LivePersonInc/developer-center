@@ -1,6 +1,5 @@
 ---
-pagename:  Let’s build a conversational future together!
-documentname: Welcome
+pagename: Index
 sitesection: Documents
 categoryname: "Welcome"
 permalink: index.html
@@ -14,7 +13,7 @@ solutions with you!
 
 <div class="card-container">
   <div id="success-stories" class="welcome-card" style="padding:58px 22px 58px 22px;">
-    <a href="/conversational-ai-overview.html">
+    <a href="/platform-overview.html">
       <p class="success-stories-header" style="margin-left: 18px !important;">Learn about LivePerson’s Conversational AI, bots and tools </p>
       <p class="free-trial-label" style="margin-left: 18px !important; "> 
       <img class="dots-container" src="img/four-dots-white.svg"/>
