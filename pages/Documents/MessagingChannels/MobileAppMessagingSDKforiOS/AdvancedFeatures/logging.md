@@ -25,7 +25,11 @@ The LivePerson Mobile SDK can now be set to one of six different verbosity setti
 
 As is standard with most logging systems, each of these settings also includes all levels below it. Setting the SDK Logging Level to **OFF** disables SDK logging entirely.  The LivePerson Mobile SDK's will retain up to 100 lines of logs for combined all logging levels regardless of the logging level.  This means that if the logging level is set to "ERROR" for example, you may not be able to retrieve the last 100 logs recorded.    
 
-The default log level is **INFO** in Release builds, and **TRACE** in Debug builds.
+{:.deprecated}
+For SDK 6.0.X and below, the default log level is **INFO** in Release builds, and **TRACE** in Debug builds.
+
+{:.important}
+Since SDK 6.1, the default log level is **INFO** in Release builds, and **DEBUG** in Debug builds.
 
 You can adjust the logging level with the following method:
 

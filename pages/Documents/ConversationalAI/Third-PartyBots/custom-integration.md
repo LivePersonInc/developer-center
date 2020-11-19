@@ -482,7 +482,7 @@ The method for closing a conversation is similar to the transfer action in that 
 
 The `action` key needs to be set to **CLOSE_CONVERSATION** to instruct the connector to close the conversation.
 
-Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a closeConversation action.
+Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a `closeConversation` action.
 
 ```javascript
 const payload = {
@@ -495,6 +495,22 @@ const payload = {
 };
 ```
 
+Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a `closeConversation` action without triggering the post conversation survey.
+
+```javascript
+const payload = {
+  messages: [
+    'Unfortunately I am unable to help you with this query. Have a nice day.'
+  ],
+  context: {
+    action: 'CLOSE_CONVERSATION',
+    actionParameters: {
+      withoutPcs: true // tell the connector not to trigger post conversation survey, instead close entire conversation
+    }
+  }
+};
+```
+
 ### Engagement attributes as context
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure below.
@@ -504,7 +520,7 @@ Figure showing Conversation Type step in creation/modification of bot configurat
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Custom Bots integration these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation `context` property is used. An example of the request body can be seen below:
 
-```javascript 1.8
+```javascript
 const {
   message,
   convId,

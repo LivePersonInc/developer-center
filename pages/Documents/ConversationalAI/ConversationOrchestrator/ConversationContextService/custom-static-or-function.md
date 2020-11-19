@@ -3,24 +3,25 @@ pagename: Custom Static or Function
 redirect_from:
   - maven-context-warehouse-custom-static-or-function.html
   - maven-ai-context-warehouse-custom-static-or-function.html
+  - conversation-orchestrator-context-warehouse-custom-static-or-function.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
-subfoldername: Context Warehouse
-permalink: conversation-orchestrator-context-warehouse-custom-static-or-function.html
+subfoldername: Conversation Context Service
+permalink: conversation-orchestrator-conversation-context-service-custom-static-or-function.html
 indicator: messaging
 ---
 
 Conversation Orchestrator allows you to create custom static data, or use LivePerson Functions to connect to external data sources. 
 
-<img class="fancyimage" width="750" src="img/maven/contextWarehouse-custom.png">
+<img class="fancyimage" width="750" src="img/maven/conversationContextService-custom.png">
 
 ### Create Static Variable
 
 Static variables are useful for storing constant data or lists that can be used in policies. These are used throughout the lifecycle of the policy, and do not change at runtime. The common use case for this would be creating a list, for example a list of VIPs, and then using the condition (CONTAINS or IS_IN) in a policy. 
 
-1. To create a new static variable login to Conversation Orchestrator using your Conversational Cloud credentials and then navigate to Context Warehouse/Custom
+1. To create a new static variable login to Conversation Orchestrator using your Conversational Cloud credentials and then navigate to Conversation Context Service / Custom
 
 2. Click on the **Static +** button
 
@@ -67,9 +68,9 @@ Next you need to setup an API user to invoke the function.
 
 #### Create a FaaS attribute in Conversation Orchestrator
 
-Once you have created a Function, you can now use that as an attribute in Context Warehouse to fetch external data at runtime. 
+Once you have created a Function, you can now use that as an attribute in Conversation Context Service to fetch external data at runtime. 
 
-1. To create a new FaaS attribute, login to Conversation Orchestrator using your Conversational Cloud credentials and then navigate to Context Warehouse/Custom
+1. To create a new FaaS attribute, login to Conversation Orchestrator using your Conversational Cloud credentials and then navigate to Conversation Context Service / Custom
 
 2. Click on the **FaaS +** button
 

@@ -208,7 +208,7 @@
           - subpagename: Send Messages
           - subpagename: Manage Conversation Flow
           - subpagename: Log & Debug
-          - subpagename: Manage the Context Session Store
+          - subpagename: Manage the Conversation Context Service
           - subpagename: askMaven
           - subpagename: Deprecated Functions
       - pagename: Testing & Deployment
@@ -233,12 +233,12 @@
           - subpagename: Overview
           - subpagename: Recommended Actions for Automations
           - subpagename: Recommended Actions for Knowledge Base
-      - pagename: Context Warehouse
+      - pagename: Conversation Context Service
         subpages:
           - subpagename: Overview
           - subpagename: Inbox System Attributes
           - subpagename: Custom Static or Function
-          - subpagename: Context Session Store
+          - subpagename: Conversation Context Service
       - pagename: Dynamic Routing
         subpages:
           - subpagename: Overview
@@ -925,7 +925,9 @@
       - subpagename: All Releases
     - pagename: Resources
       subpages:
+      - subpagename: About XCFrameworks
       - subpagename: Authentication
+      - subpagename: FAQ
       - subpagename: Open Source List
       - subpagename: Upgrade Guide - iOS
   - documentname: Apple Business Chat SDK

@@ -23,6 +23,8 @@ const searchInstance = autocomplete(
           let documentName = suggestion.documentname;
           let category = suggestion.categoryname;
           let title = $('h1');
+          //add category name folder to this array IE Getting Started to remove folder from search
+          let categoryFolderExcludeList = ['Hidden']; 
           let titletext = title.text();
           //if the result has highlighting, populate var with it instead of the non-highlighted text
           if (suggestion._highlightResult.pagename) {
@@ -37,11 +39,12 @@ const searchInstance = autocomplete(
           if (suggestion._highlightResult.documentname) {
             documentName = suggestion._highlightResult.documentname.value;
           }
-          if (documentName && category) {
+          // we added an array list to exclude category folder names from the search
+          if (documentName && category && !categoryFolderExcludeList.includes(category) ) {
           return (
             '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + ' - ' + documentName + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
           )
-        } else if (category) {
+        } else if (category && !categoryFolderExcludeList.includes(category)) {
           return (
             '<a class="searchMainLink" href="'+ link + '"> <div class="searchtitlecontainer"> <span class="searchtitle">' + value + '</span> <br /> <span class="documentContainer">' + category + '</span><span class="searchContentHeading">' + headings + '</span><span class="searchcontentcontainer">' + content + '</span> </div> </a>'
           )

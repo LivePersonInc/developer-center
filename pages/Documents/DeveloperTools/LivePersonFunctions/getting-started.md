@@ -99,7 +99,7 @@ There are 3 user permissions pertaining to Functions:
     <td>-</td>
     <td>-</td>
   </tr>
-  <tr>
+ <tr>
     <td>secret</td>
     <td>read (value is obfuscated)</td>
     <td>✅</td>
@@ -197,7 +197,7 @@ by using the [LivePerson Domain API](https://developers.liveperson.com/retrieve-
 
 To get access to this page, you'll need to ask your LivePerson account team to enable the correct permissions for your account. Please contact them to do so.
 
-<div class="notice">Functions currently supports the latest versions of <strong>Firefox</strong>, <strong>Edge</strong> and <strong>Chrome</strong>.</div>
+<div class="notice">Functions currently supports the latest versions of <strong>Firefox</strong>, <strong>Edge 86+</strong>  and <strong>Chrome</strong>.</div>
 
 The Functions UI is divided into six components. On the left hand side of the UI, you can see the navigation bar which allows you to navigate through these components. The **Home** screen (see below) is the default page that will be visible.
 
@@ -214,7 +214,7 @@ The **Schedules** section allows to define a time-based execution of lambdas via
 The **Logs** section is for analysing your functions' past invocations by searching through the logs you defined. [More information on logging your function can be found here](function-as-a-service-developing-with-faas-overview.html).
 
 
-The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains and maintain secrets (i.e. OAuth tokens).
+The **Settings** section provides access to the available settings of Functions. Currently, users are able to whitelist domains, set up email reporting and maintain secrets (e.g. OAuth tokens).
 
 Once you've familiarized yourself with the different sections of the UI, it's time to create your first function.
 
@@ -256,6 +256,8 @@ Once you've reached the editor, it is time to develop the actual function, wheth
 
 #### Function Layout and Framework
 
+Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJS 12. Therefore, you have access to all functionality offered by NodeJS.
+
 In order for your function to work with LivePerson Functions seamlessly it has to follow a certain pattern. This pattern can be viewed below.
 
 <div class="important">Make sure that the following declaration stays as shown and is in the first line of your function. Otherwise, the FaaS backend will reject the function.</div>
@@ -266,15 +268,15 @@ function lambda(input, callback) {
 }
 ```
 
-Our runtime is built using NodeJS LTS (Long Term Support), which is currently NodeJs 12. Therefore, you have access to all functionality offered by NodeJS.
-
 As you can see from the example above, during an invocation the function receives an event-specific **input**. Furthermore, we provide a callback in the standard Node JS Signature.
 
 ```javascript
 function callback(error, result){}
 ```
 
-If during the runtime of your application no error has occurred, you can provide a **null** value as error. After a **30** second timeout, your function will be killed immediately, regardless of its error state.
+If during the runtime of your application no error has occurred, you can provide a **null** value as error. After a **30** second timeout, your function's execution will be terminated immediately, regardless of its error state.
+
+Errors are only forwarded based on the concrete event source and they react differently to errors, some events repeat the invocation while others they do not repeat the invocation. 
 
 ### Step 5: Deploy your function
 
