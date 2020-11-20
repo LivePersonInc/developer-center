@@ -100,6 +100,21 @@ This capability to switch the environment eliminates the need to delete the agen
 8. Click **Yes** to confirm the action.
 9. Start the agent.
 
+### Edit an agent connector
+
+For convenience, you can edit an agent connector right from the Bot Agents page in Bots Status.
+
+**To edit an agent connector**
+
+1. Access the Bots Status application as described [here](bots-status-overview.html#access-bots-status).
+
+    The dashboard is displayed by default.
+
+2. Click **Bot Agents** in the upper-left corner.
+3. Click the name of the connector, i.e., click the row in the table.
+4. In the **Edit Agent Connector** dialog, edit the connector as desired. For more on this, see [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#add-an-agent-connector).
+5. Click **Save**.
+
 ### Troubleshooting
 
 If you encounter errors or issues, see [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#troubleshoot-a-deployment) for troubleshooting information.
