@@ -19,7 +19,7 @@ This API resets a user’s password.
 
 **Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
 
-```HTTP
+```
 https://API_REQUEST?v=4.0
 ```
 
@@ -49,6 +49,12 @@ https://API_REQUEST?v=4.0
  |:------|    :--------|    :--------|
  |accountId|  LP site ID|   String |
  |userId|  User ID|   Positive long number greater than zero|
+ 
+**Query Parameters**
+
+ | Name            | Description                       | Type    | Required  | Notes                                                |
+ |-----------------|-----------------------------------|---------|-----------|------------------------------------------------------|
+ | v               | API version number                | double  | Required  | Value should be 4.0                                  |
 
 ### Response
 
