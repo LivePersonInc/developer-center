@@ -155,6 +155,20 @@ The following methods get all variables in a namespace in the Conversation Conte
 | `getContextDataForUser(namespace)` | namespace (string) | Object |
 | `getContextDataForConversation(namespace)` | namespace (string) | Object |
 
+Both methods return a java.util.HashMap. To retrieve a specific property, use the keySet method on the returned object, like is done in the following:
+
+```
+function displayAllVars(map) {
+  var stringOfMap = map.toString();
+ 
+  for each (var i in map.keySet()) {
+
+       botContext.printDebugMessage('Key  ---> ' + i);
+       botContext.printDebugMessage('Value ---> ' + map[i]);
+  }
+}
+```
+
 #### Examples
 
 ```javascript
