@@ -32,9 +32,9 @@ Here’s an example of a conversation with two types of failure points:
 
 A MACS is calculated for each bot conversation based on failure points like these above. The conversation is classified with a MACS 1, 2 or 3 where:
 
-* MACS 1 = Needs improvement
-* MACS 2 = Fair
-* MACS 3 = Good
+* MACS 1 = Low
+* MACS 2 = Average
+* MACS 3 = High
 
 An average score (a floating number) is also calculated for each bot to indicate overall bot performance.
 
@@ -81,9 +81,9 @@ There are two models responsible for MACS:
 
 Both of these models were “trained” by having human experts manually annotate thousands of conversations. Using these models, each bot conversation is classified with a MACS 1, 2 or 3 where:
 
-* MACS 1 = Needs improvement
-* MACS 2 = Fair
-* MACS 3 = Good
+* MACS 1 = Low
+* MACS 2 = Average
+* MACS 3 = High
 
 The score is calculated based on the presence of failure points in the conversation, along with a host of other metadata associated with the conversation. The table below describes each failure point that is used to derive the score and provides solutions for fixing them.
 
@@ -155,7 +155,7 @@ Note the following about the filters:
 * Within a filter, an “OR” search is performed. Across the filters, an “AND” search is performed. For example, you can show the data where ((score equals MACS 1 OR MACS 2) AND (MACS reason equals “Around in circles” OR “Bad transfer”)).
 * When you filter the data by **MACS Reason**, only sample conversations that exceed a certain “confidence threshold” that the reason exists are displayed. This threshold is internal to the system and ensures that the quality of the displayed data is good. 
 
-In our example image above, we’ve used the score filters to display just the data for conversations with a score of 1. We’ve also used the MACS Reason filter to further refine the data to display just conversations where the bot didn’t understand. Beneath the charts, this gives us a sample list of bot conversations that meet that criteria.
+In our example image above, we’ve used the score filters to display just the data for conversations with a MACS of 1. We’ve also used the MACS Reason filter to further refine the data to display just conversations where the bot didn’t understand. Beneath the charts, this gives us a sample list of bot conversations that meet that criteria.
 
 {: .important}
 The list of conversations is a sample of up to 100 bot conversations that meet the defined criteria. The conversations are distributed across the selected scores, so, for example, if you select to show conversations with a MACS 1 and 2, you’ll see some number of conversations with a MACS 1 and some number of conversations with a MACS 2. The distribution might not be even since this depends on the data that’s available.
