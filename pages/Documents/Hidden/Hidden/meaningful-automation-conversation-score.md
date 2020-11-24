@@ -28,6 +28,8 @@ LivePerson has found through research that consumer effort and emotion are key d
 
 Here’s an example of a conversation with two types of failure points:
 
+<img style="width:800px" src="img/ConvoBuilder/macs_example_conv.png">
+
 A MACS is calculated for each bot conversation based on failure points like these above. The conversation is classified with a MACS 1, 2 or 3 where:
 
 * MACS 1 = Needs improvement
@@ -35,6 +37,8 @@ A MACS is calculated for each bot conversation based on failure points like thes
 * MACS 3 = Good
 
 An average score (a floating number) is also calculated for each bot to indicate overall bot performance.
+
+<img style="width:800px" src="img/ConvoBuilder/macs_average_score.png">
 
 Scoring like this makes it fast and easy to understand how efficient and fluid a bot conversation was, and a bot’s performance overall. With this knowledge, you can take action and tune your low-performing bots for improved performance.
 
@@ -125,9 +129,13 @@ To be added
 
 The main dashboard in Bot Analytics displays each bot’s average MACS (a floating number), for the specified date range. This helps you to understand at a glance which of your bots are high-performing, and which are low-performing and therefore need tuning.
 
+<img style="width:800px" src="img/ConvoBuilder/macs_on_dashboard.png">
+
 When assessing the MACS of your bots, keep in mind that the score primarily is meaningful for bots that accomplish specific business purposes through the use of conversation flows. The score isn’t as meaningful for other types of bots, e.g., routing bots and FAQ bots.
 
 On the Bot Analytics main dashboard, click a bot’s MACS to go to the **MACS** page for the bot. Here’s where you can analyze the data.
+
+<img style="width:800px" src="img/ConvoBuilder/macs_page.png">
 
 #### The MACS page - Analyze the data & tune the bot
 
@@ -138,6 +146,8 @@ On the **MACS** page, use the filters to refine the data that’s displayed base
 1. **Score filters**: Toggle these on and off to show and hide the data for a score.
 2. **Detail filters**: Filter the data based on specific criteria, for example, the reason for the MACS score.
 3. **Date filter**: Specify the date range for the data.
+
+<img style="width:800px" src="img/ConvoBuilder/macs_filters.png">
 
 Note the following about the filters:
 
@@ -152,16 +162,28 @@ The list of conversations is a sample of up to 100 bot conversations that meet t
 
 If you want to search for a specific conversation—any conversation that falls within the specified date range regardless of whether it appears in the sample—enter its conversation ID in the search box. It will be displayed in the **Sample Conversations** list regardless of how the filters are set.
 
+<img style="width:800px" src="img/ConvoBuilder/macs_search_conv.png">
+
 ##### Analyze the data
 
 Once you’ve displayed the conversations that you want to see, select one by its ID to display the transcript.
 
+<img style="width:800px" src="img/ConvoBuilder/macs_select_conv.png">
+
 Then review the transcript to identify the failure point in the conversation.
+
+<img style="width:800px" src="img/ConvoBuilder/macs_find_failure.png">
 
 ##### Tune the bot
 
 Once you’ve identified the failure point in the conversation, click **Show Dialogs & Interactions** in the upper-right corner of the transcript window.
 
+<img style="width:800px" src="img/ConvoBuilder/macs_show_interactions.png">
+
 Then click the associated link that appears for the interaction that is causing the failure.
 
+<img style="width:800px" src="img/ConvoBuilder/macs_select_interaction.png">
+
 This opens the bot in Conversation Builder and displays that interaction in the dialog editor. You can then tune the bot right at the failure point, for improved performance.
+
+<img style="width:800px" src="img/ConvoBuilder/macs_tune_bot.png">
