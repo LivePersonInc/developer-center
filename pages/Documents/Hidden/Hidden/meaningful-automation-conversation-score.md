@@ -100,7 +100,7 @@ MACS doesn't detect where an error occurs in a conversation; it detects whether 
 
 #### Accuracy of MACS
 
-MACS has a correlation of ~.65 with human judgment. While this is quite good, expect the algorithm to make some classification mistakes from time to time. The strength of MACS comes from looking at the scores in aggregate, where one aspect is in common (e.g., the same error is detected, or the conversations included a specific interaction or intent).
+MACS has a correlation of ~.7 with human judgment. While this is quite good, expect the algorithm to make some classification mistakes from time to time. The strength of MACS comes from looking at the scores in aggregate, where one aspect is in common (e.g., the same error is detected, or the conversations included a specific interaction or intent).
 
 ### Enable or disable MACS
 
