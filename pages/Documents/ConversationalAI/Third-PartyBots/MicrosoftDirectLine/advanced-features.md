@@ -128,7 +128,7 @@ Figure 3.1 Customer activity excerpt on a new chat
 As stated under Limitations the default behaviour of our connector is to process the first responses we find on the channel. In case `Multiple Activities`
 is not enabled or the waiting period is set to low, the connector might not retrieve every activity your bot is sending.
 
-In that case we also provide a way to define multiple bot responses in a single Direct Line activity. As with all channel-specific content, this is defined in the channelData property.
+In that case, we also provide a way to define multiple bot responses in a single Direct Line activity. As with all channel-specific content, this is defined in the channelData property.
 The array in the multiMessage property can contain the objects identified by the following types:
 
 - `text` A plain message
