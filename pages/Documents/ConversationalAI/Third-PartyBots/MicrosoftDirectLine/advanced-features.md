@@ -29,14 +29,14 @@ This delay will be added before a message or action provided in this activity wi
 
 Figure 1.1 Activity resulting in a delay with typing indicator
 
-- `delay` This is the number of seconds the bot will wait. These are expected to be only whole numbers for example for one second delay you will write 1 as a value
-- `typing` This property will enable/disable the typing indicator while delay is happening. It is optional; if not provided then the value will be considered as true.
+- `delay` This is the number of seconds the bot will wait. Only whole numbers can be provided.
+- `typing` This property controls if a typing indicator is shown during the delay. The property is optional and defaults to `true`.
 
 {: .important}
 A pure delay activity without any text or other structured content can e.g. be used if the bot should not respond with any 
 content but an error escalation should be prevented (the connector would assume an issue with the bot if no response at all can 
 be found).
-A pure delay activity can also be used as part of [multiple activity](third-party-bots-microsoft-direct-line-introduction.html#configuration) responses.
+A pure delay activity can also be used if [multiple activities](third-party-bots-microsoft-direct-line-introduction.html#configuration) are being sent.
 
 
 ### Sending Private Text Messages
@@ -128,10 +128,10 @@ Figure 3.1 Customer activity excerpt on a new chat
 As stated under Limitations the default behaviour of our connector is to process the first responses we find on the channel. In case `Multiple Activities`
 is not enabled or the waiting period is set to low, the connector might not retrieve every activity your bot is sending.
 
-In that case we also provide a way to define multiple bot responses in a single Direct Line activity. As with all channel specific content this is defined in the channelData property.
+In that case we also provide a way to define multiple bot responses in a single Direct Line activity. As with all channel-specific content, this is defined in the channelData property.
 The array in the multiMessage property can contain the objects identified by the following types:
 
-- `text A plain message
+- `text` A plain message
 - `delay` A delay between messages. **Important**: This format is different from the one described further above for a single message. You can only define the delay. There is no flag for the typing indicator.</li>
 - `private-message` A private message as described in [Sending Private Text Messages](#sending-private-text-messages)
 - `structured-content` A structured content as described in [Rich Content (Structured Content)](#rich-content--structured--content)

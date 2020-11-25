@@ -25,20 +25,20 @@ A good starting point is the documentation on
 ### Limitations
 
 {: .important}
-Third Party Bots only supports the Direct Line API version 3.0.
+Third-Party Bots only supports the Direct Line API version 3.0.
 
 {: .important}
-Third Party Bots only supports authorization with the Direct Line secret. Authorization with a Bot ID and Tenant ID is 
+Third-Party Bots only supports authorization with the Direct Line secret. Authorization with a Bot ID and Tenant ID is 
 not supported.
 
 {: .important}
-Third Party Bots uses the replyToId of a bot activity to match it against the consumer message.
+Third-Party Bots uses the replyToId of a bot activity to match it against the consumer message.
 Bot activities that are not an explicit response to a consumer message won't be processed.
 
 {: .important}
-The connector respects the error codes sent by the Direct Line API. For Example the API sends the HTTP Status Code 
+The connector respects the error codes sent by the Direct Line API. For example, the API sends the HTTP Status Code 
 `502` if a bot does not handle a message within 15 seconds.
-This means our connector won't process activities that are send by the bot in this case. Instead, our connector resends 
+This means that our connector won't process activities that are sent by the bot in this case. Instead, it resends 
 the message up to 2 times on server errors.
 For details how a bot can acknowledge the request within 15 seconds, see Microsoft's documentation on 
 [how bots work](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=csharp).
