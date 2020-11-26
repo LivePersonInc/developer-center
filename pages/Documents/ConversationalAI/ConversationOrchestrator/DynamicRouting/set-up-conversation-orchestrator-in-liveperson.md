@@ -52,7 +52,7 @@ A bot needs to be created in Conversational Cloud for Conversation Orchestrator 
 To route your conversations to Conversation Orchestrator, you need to create at least one skill
 1. Create a new skill called **“Conversation Orchestrator”** and assign the Conversation Orchestrator bot user to this skill. We have used Conversation Orchestrator as the skill name, but any name is acceptable. 
 2. Assign the Conversation Orchestrator bot user to this skill.
-3. In the Engagement Settings under the Routing section, select Specific skill and then set it to maven.   
+3. In the Engagement Settings under the Routing section, select Specific skill and then set it to the Conversation Orchestrator skill (which you have just created in step 1).   
 
 ####Optional 
 
