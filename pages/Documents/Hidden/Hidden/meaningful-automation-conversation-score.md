@@ -14,7 +14,7 @@ LivePerson is pleased to announce the Beta release of the Meaningful Automation 
 
 #### Sending feedback
 
-Your feedback is important to us! To send feedback on this Beta feature, please feel free to use [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform).
+Your feedback is important to us! To send feedback on this Beta feature, please use [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform).
 
 ### What is MACS?
 
@@ -26,7 +26,7 @@ LivePerson has found through research that consumer effort and emotion are key d
 * Was the consumer stuck in an endless loop? 
 * Did a bad transfer to an agent occur?
 
-Here’s an example of a conversation with two types of failure points:
+As an example, here below is part of a conversation with two types of failure points:
 
 <img style="width:800px" src="img/ConvoBuilder/macs_example_conv.png">
 
@@ -133,7 +133,7 @@ The main dashboard in Bot Analytics displays each bot’s average MACS (a floati
 
 When assessing the MACS of your bots, keep in mind that the score primarily is meaningful for bots that accomplish specific business purposes through the use of conversation flows. The score isn’t as meaningful for other types of bots, e.g., routing bots and FAQ bots.
 
-On the Bot Analytics main dashboard, click a bot’s MACS to go to the **MACS** page for the bot. Here’s where you can analyze the data.
+On the main dashboard, click a bot’s MACS to go to the **MACS** page for the bot. Here’s where you can analyze the data.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_page.png">
 
@@ -155,7 +155,7 @@ Note the following about the filters:
 * Within a filter, an “OR” search is performed. Across the filters, an “AND” search is performed. For example, you can show the data where ((score equals MACS 1 OR MACS 2) AND (MACS reason equals “Around in circles” OR “Bad transfer”)).
 * When you filter the data by **MACS Reason**, only sample conversations that exceed a certain “confidence threshold” that the reason exists are displayed. This threshold is internal to the system and ensures that the quality of the displayed data is good. 
 
-In our example image above, we’ve used the score filters to display just the data for conversations with a MACS of 1. We’ve also used the MACS Reason filter to further refine the data to display just conversations where the bot didn’t understand. Beneath the charts, this gives us a sample list of bot conversations that meet that criteria.
+In our example image above, we’ve used the score filters to display just the data for conversations with a MACS of 1. We’ve also used the MACS Reason detail filter to further refine the data to display just conversations where the bot didn’t understand. Beneath the charts, this gives us a sample list of bot conversations that meet that criteria.
 
 {: .important}
 The list of conversations is a sample of up to 100 bot conversations that meet the defined criteria. The conversations are distributed across the selected scores, so, for example, if you select to show conversations with a MACS 1 and 2, you’ll see some number of conversations with a MACS 1 and some number of conversations with a MACS 2. The distribution might not be even since this depends on the data that’s available.
@@ -166,7 +166,7 @@ If you want to search for a specific conversation—any conversation that falls 
 
 ##### Analyze the data
 
-Once you’ve displayed the conversations that you want to see, select one by its ID to display the transcript.
+Once you’ve displayed the conversations that you want to review, select one by its ID to display the transcript.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_select_conv.png">
 
@@ -176,11 +176,11 @@ Then review the transcript to identify the failure point in the conversation.
 
 ##### Tune the bot
 
-Once you’ve identified the failure point in the conversation, click **Show Dialogs & Interactions** in the upper-right corner of the transcript window.
+After you’ve identified the failure point in the conversation, click **Show Dialogs & Interactions** in the upper-right corner of the transcript window.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_show_interactions.png">
 
-Then click the associated link that appears for the interaction that is causing the failure.
+Then click the associated interaction link that appears for the interaction that is causing the failure.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_select_interaction.png">
 
