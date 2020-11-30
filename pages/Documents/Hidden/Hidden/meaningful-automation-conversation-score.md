@@ -79,7 +79,7 @@ There are two models responsible for MACS:
 * A model that predicts what failure points are present in a conversation
 * A model that estimates a conversation quality score
 
-Both of these models were “trained” by having human experts manually annotate thousands of conversations. Using these models, each bot conversation is classified with a MACS 1, 2 or 3 where:
+Both of these models were “trained” by having human experts manually annotate thousands of conversations. Using these models, each bot conversation that is closed is classified with a MACS 1, 2 or 3 where:
 
 * MACS 1 = Low
 * MACS 2 = Average
@@ -96,7 +96,7 @@ The score is calculated based on the presence of failure points in the conversat
 | Bad transfer | The bot transfers the consumer to an agent, but this either leaves the consumer hanging or abruptly ends the chat.<br><br>The bot might also fail to tell the consumer early enough in the conversation that there are no agents available at that hour. | Give a warning early in conversation that the agent capacity is near capacity<br><br>Check if agents are available before declaring the conversation will be escalated |
 
 {: .important}
-MACS doesn't detect where an error occurs in a conversation; it detects whether or not it occurred somewhere in the conversation. However, you can aggregate MACS over interactions. This gives you an indication of where your bot is underperforming and, by looking at the errors, of what to do to fix it.
+A MACS is only calculated for closed conversations.<br><br>A MACS doesn't detect where an error occurs in a conversation; it detects whether or not it occurred somewhere in the conversation. However, you can aggregate MACS over interactions. This gives you an indication of where your bot is underperforming and, by looking at the errors, of what to do to fix it.
 
 #### Accuracy of MACS
 
