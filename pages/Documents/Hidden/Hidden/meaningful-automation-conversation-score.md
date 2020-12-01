@@ -69,7 +69,7 @@ MACS scoring makes it fast and easy to tune your bots for improved performance a
 Using MACS, you can:
 
 * **Identify failed conversations**: Easily find the ones that required high consumer effort or produced consumer frustration.
-* **Review less, not more**: Perform a targeted review of conversation transcripts—-not a random review—-to locate the bot areas that need improvement.
+* **Review less, not more**: Perform a targeted review of conversation transcripts, not a random review, to locate the bot areas that need improvement.
 * **Diagnose and tune quickly**: Move directly from a failure point in a transcript to the interaction in the bot flow, where you can make changes.
 
 ### How is MACS calculated?
