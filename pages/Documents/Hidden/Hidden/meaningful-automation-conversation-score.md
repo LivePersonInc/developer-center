@@ -32,9 +32,9 @@ As an example, here below is part of a conversation with two types of failure po
 
 A MACS is calculated for each bot conversation based on failure points like these above. The conversation is classified with a MACS 1, 2 or 3 where:
 
-* MACS 1 = Low
-* MACS 2 = Average
-* MACS 3 = High
+* MACS 1 = Bad
+* MACS 2 = Fair
+* MACS 3 = Good
 
 An average score (a floating number) is also calculated for each bot to indicate overall bot performance.
 
@@ -81,9 +81,9 @@ There are two models responsible for MACS:
 
 Both of these models were “trained” by having human experts manually annotate thousands of conversations. Using these models, each bot conversation that is closed is classified with a MACS 1, 2 or 3 where:
 
-* MACS 1 = Low
-* MACS 2 = Average
-* MACS 3 = High
+* MACS 1 = Bad
+* MACS 2 = Fair
+* MACS 3 = Good
 
 The score is calculated based on the presence of failure points in the conversation, along with a host of other metadata associated with the conversation. The table below describes each failure point that is used to derive the score and provides solutions for fixing them.
 
@@ -118,7 +118,7 @@ If you disable MACS, be aware that this only hides the display of the feature in
 3. On the **Account Details** tab, do either of the following:
 
     * To display MACS data, enable (turn on) the **Display Meaningful Automation Conversation Score (MACS)** setting.
-    * To hide MACS data, disable (turn off) the **Display Meaningful Automation Conversation Score** setting.
+    * To hide MACS data, disable (turn off) the **Display Meaningful Automation Conversation Score (MACS)** setting.
 
 ### Using MACS in Bot Analytics
 
