@@ -114,14 +114,12 @@ HTTP/1.1
 Host: server.example.com
 Path: /token  
 Method: POST
-Content-Type: application/json  
+Content-Type: application/x-www-form-urlencoded  
 Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
 Body:    
-{
- "code": "b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c",
- "grant_type" : "authorization_code",
- "redirect_uri" : "https://liveperson.net"
-}
+code=b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c&
+grant_type-authorization_code&
+redirect_uri=https://liveperson.net
 ```
 
 **API Response**
