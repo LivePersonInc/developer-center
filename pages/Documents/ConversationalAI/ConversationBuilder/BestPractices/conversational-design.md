@@ -10,7 +10,7 @@ permalink: conversation-builder-best-practices-conversational-design.html
 indicator: both
 ---
 
-The following are best practices for conversational design:
+For effective bots, follow these best practices for conversational design:
 
 * **Develop a voice**: Create a personality that identifies with your brand and that consumers can connect with.
 * **Identify as a bot**: Be transparent by using terms like "virtual assistant" or "automated assistant."
