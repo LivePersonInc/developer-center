@@ -164,6 +164,10 @@ If you want to search for a specific conversation—any conversation that falls 
 
 <img style="width:800px" src="img/ConvoBuilder/macs_search_conv.png">
 
+When searching for a conversation by its ID, be aware that conversation IDs are truncated on the MACS page. To get the full conversation ID, click the truncated ID to open the transcript window. The full ID is displayed at the top.
+
+<img style="width:800px" src="img/ConvoBuilder/macs_conv_id.png">
+
 ##### Analyze the data
 
 Once you’ve displayed the conversations that you want to review, select one by its ID to display the transcript.
