@@ -220,6 +220,7 @@
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
+          - subpagename: Conversational Design
           - subpagename: Train & Tune NLU
           - subpagename: Custom Event Logging
           - subpagename: Reusable Components
