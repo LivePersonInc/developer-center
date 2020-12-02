@@ -18,7 +18,7 @@ Your feedback is important to us! To send feedback on this Beta feature, please 
 
 ### What is MACS?
 
-A Meaningful Automation Conversation Score or “MACS” is a measure of the quality of a bot conversation. 
+A Meaningful Automation Conversation Score or MACS is a measure of the quality of a bot conversation. 
 
 LivePerson has found through research that consumer effort and emotion are key determiners in how the consumer perceives the quality of a conversational experience. Given this, a MACS is calculated by identifying and quantifying this within the conversation. Failure points within the conversation’s structure are detected and used to derive a score, for example: 
 
@@ -69,7 +69,7 @@ MACS scoring makes it fast and easy to tune your bots for improved performance a
 Using MACS, you can:
 
 * **Identify failed conversations**: Easily find the ones that required high consumer effort or produced consumer frustration.
-* **Review less, not more**: Perform a targeted review of conversation transcripts, not a random review, to locate the bot areas that need improvement.
+* **Review less, not more**: Perform a targeted review of conversation transcripts-not a random review-to locate the bot areas that need improvement.
 * **Diagnose and tune quickly**: Move directly from a failure point in a transcript to the interaction in the bot flow, where you can make changes.
 
 ### How is MACS calculated?
@@ -155,7 +155,7 @@ Note the following about the filters:
 * Within a filter, an “OR” search is performed. Across the filters, an “AND” search is performed. For example, you can show the data where ((score equals MACS 1 OR MACS 2) AND (MACS reason equals “Around in circles” OR “Bad transfer”)).
 * When you filter the data by **MACS Reason**, only sample conversations that exceed a certain “confidence threshold” that the reason exists are displayed. This threshold is internal to the system and ensures that the quality of the displayed data is good. 
 
-In our example image above, we’ve used the score filters to display just the data for conversations with a MACS of 1. We’ve also used the MACS Reason detail filter to further refine the data to display just conversations where the bot didn’t understand. Beneath the charts, this gives us a sample list of bot conversations that meet that criteria.
+In our example image above, we’ve used the score filters to display just the data for conversations with a MACS of 1 (Bad). We’ve also used the MACS Reason detail filter to further refine the data to display just conversations where the bot didn’t understand. Beneath the charts, this gives us a sample list of bot conversations that meet that criteria.
 
 {: .important}
 The list of conversations is a sample of up to 100 bot conversations that meet the defined criteria. The conversations are distributed across the selected scores, so, for example, if you select to show conversations with a MACS 1 and 2, you’ll see some number of conversations with a MACS 1 and some number of conversations with a MACS 2. The distribution might not be even since this depends on the data that’s available.
