@@ -11,13 +11,13 @@ permalink: conversation-builder-bot-templates-maven-concierge.html
 indicator: both
 ---
 
-The Maven Concierge bot template is a bot template in Conversation Builder that comes pre-wired with integration to Conversation Orchestrator's Dynamic Routing and Context Warehouse, enabling you to set up and build personalized consumer journeys easily. 
+The Maven Concierge bot template is a bot template in Conversation Builder that comes pre-wired with integration to Conversation Orchestrator's Dynamic Routing and Conversation Context Service, enabling you to set up and build personalized consumer journeys easily. 
 
 The following example flow can happen with this template:
 
 - The conversation starts with a Welcome intent, for example “hi”
 - The bot then asks the customer for a phone number
-- The phone number is stored in Conversation Orchestrator's Context Session Store
+- The phone number is stored in Conversation Orchestrator's Conversation Context Service
 - Conversation Orchestrator evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List)
 - Bot transfers the conversation to a skill or agent based on the policy outcome 
 
@@ -34,7 +34,7 @@ The following example flow can happen with this template:
 
 #### Integrations
 
-- Conversation Orchestrator's [Context Session Store](maven-ai-context-warehouse-context-session-store.html) integration
+- Conversation Orchestrator's [Conversation Context Service](maven-ai-context-warehouse-context-session-store.html) integration
 
 - [Recommendation API](maven-ai-askmaven-overview.html) integration that allows a bot to consult Conversation Orchestrator on routing decisions
 
@@ -58,7 +58,7 @@ Open the bot. On the top navigation click **Global Functions** and edit the foll
 
 2. `accountId`: Your Conversational Cloud account ID
 
-3. `mavenNamespace`: Please enter the Namespace you have defined in your [Context Warehouse Session Store](https://developers.liveperson.com/maven-ai-context-warehouse-context-session-store.html) for storing and retrieving session variables. 
+3. `mavenNamespace`: Please enter the Namespace you have defined in your [Conversation Context Service](https://developers.liveperson.com/maven-ai-context-warehouse-context-session-store.html) for storing and retrieving session variables. 
 
 4. `mavenApiKey`: Copy and paste the Developer Key from Conversation Orchestrator
 
@@ -76,9 +76,9 @@ Open the bot. On the top navigation click **Global Functions** and edit the foll
 
 10. Configure Conversational Cloud and deploy the bot. 
 
-### Using the Context Session Store 
+### Using the Conversation Context Service
 
-Conversation Orchestrator's [Context Session Store](https://developers.liveperson.com/maven-ai-context-warehouse-context-session-store.html) can be used inside Conversation Builder using [scripting functions](https://developers.liveperson.com/conversation-builder-scripting-functions-manage-the-context-session-store.html) to store and retrieve session attributes. These attributes can be carried through in a conversation or can then be used in defining routing policy. The template provides an example where a phone number retrieved from the Welcome dialog is stored in the session variable. To view: 
+Conversation Orchestrator's [Conversation Context Service](https://developers.liveperson.com/maven-ai-context-warehouse-context-session-store.html) can be used inside Conversation Builder using [scripting functions](https://developers.liveperson.com/conversation-builder-scripting-functions-manage-the-conversation-context-service.html) to store and retrieve session attributes. These attributes can be carried through in a conversation or can then be used in defining routing policy. The template provides an example where a phone number retrieved from the Welcome dialog is stored in the session variable. To view: 
 
 1. Open the dialog in template called - "Start Here - Welcome"
 
@@ -86,7 +86,7 @@ Conversation Orchestrator's [Context Session Store](https://developers.liveperso
 
    <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_6.png">
 
-3. The following code stores the phoneNumber in the Context Session Store. Similarly other attributes for example, NLU intent can also be stored in the session store.  
+3. The following code stores the phoneNumber in the Conversation Context Service. Similarly other attributes for example, NLU intent can also be stored in the Conversation Context Service.  
 
    <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_7.png">
 
