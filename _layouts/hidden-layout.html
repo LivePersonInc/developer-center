@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<head>
+  {% include head.html %}
+  <link rel="stylesheet" href="{{ "css/search.css" }}">
+  <link rel="stylesheet" type="text/css" href="css/inner-page.css">
+  <meta name="description" content="LivePerson for Developers. Build on LiveEngage with our powerful digital toolbox">
+  <meta name="keywords"
+    content="APIs, SDKs, Mobile development, LiveEngage, Agent workspace, Tag, JSON examples, Click to message, Click to chat, Chat window, Skills, Agent Groups, iOS, Android, Mobile devices, Integrations, Live chat, Agent widget, Reporting, Analytics">
+  <meta name="author" content="LivePerson Inc.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+  <meta name="robots" content="noindex" >
+</head>
+
+<body>
+  <div id="mainHeader">
+    <div id="logoHeader">
+      <a href="/">
+        <img alt="LivePerson Knowledge Center" class="sitelogo" src="img/liveperson-header.svg" />
+      </a>
+    </div>
+    <div id="searchHeader">
+      <div class="searchimage">
+        <img alt="LivePerson Search Developer Center" src="img/search_icon.svg" />
+      </div>
+      <input type="search" id="aa-search-input" class="aa-input-search" placeholder="What are you looking for?"
+        name="search" autocomplete="on" />
+    </div>
+    <div id="loginHeader">
+      <a target="_blank" href="https://authentication.liveperson.net/login.html" class="loginText">
+        <button class="loginButton">Sign in</button>
+      </a>
+      <a target="_blank" href="register.html" class="trialText">
+        <button class="trialButton">Start free trial</button>
+      </a>
+    </div>
+  </div>
+  <div class="defaultwrapper" id="defaultwrapper">
+    <div id="defaultsidebar" class="defaultsidebar">
+      {% include sidebar.html %}
+    </div>
+
+    <div id="defaultcontent" class="defaultcontent">
+      {% if page.pagename %}
+      <div class="documenttitlecontainer" id="documenttitlecontainer">
+        {% include nav-breadcrumbs.html %}
+        <div class="documenttitle">
+          <div id="documentTitleContainer" class="titlecontainer">
+            <div id="document-title-h1" class='h1'>{{ page.pagename }}</div>
+          </div>
+
+        </div>
+        <div id="indicator-container" style="display:flex; margin-bottom:40px">
+          {% if page.indicator != null and page.indicator == "both" or page.indicator == "chat" %}
+          <div class="indicator chat">Chat</div>
+          {% endif %}
+          {% if page.indicator != null and page.indicator == "both" or page.indicator == "messaging" %}
+          <div class="indicator messaging">Messaging</div>
+          {% endif %}
+          <div class="suggestbutton" id="suggestbutton"><a
+              href="{{ page.path | replace: 'pages' , 'https://github.com/LivePersonInc/developers-community/edit/master/pages' }}"
+              target="_blank"><i class="far fa-edit"></i><span>Suggest changes</span></a></div>
+        </div>
+
+      </div>
+      {% endif %}
+      <div class="post-content" itemprop="articleBody">
+      
+        {% if page.summary %}
+        <div class="summary">{{page.summary}}</div>
+        {% endif %}
+      
+        {{ content }}
+      </div>
+    </div>
+    <div id="jumpto">
+      <div id="anchorlist">
+      </div>
+    </div>
+
+    <!-- /.container -->
+  </div>
+
+  <div id="defaultfooter" class="defaultfooter">
+    <span style="display:inline-flex"> © {{ "now" | date: "%Y" }} LivePerson Inc. All Rights Reserved &#160;
+      <a href="https://www.liveperson.com/policies/copyright" class="termsUseHighlight" target="_blank"> &#8226;
+        <span class="footer-tags">
+          Copyright
+        </span>
+        <a href="https://www.liveperson.com/policies/apitou" class="termsUseHighlight" target="_blank"> &#8226;
+          <span class="footer-tags">Terms of Use
+          </span>
+        </a>
+    </span>
+  </div>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="{{ "js/algolia.js" }}"></script>
+
+</body>
+
+</html>

@@ -1,35 +1,36 @@
 ---
-pagename: Manage the Context Session Store
+pagename: Manage the Conversation Context Service
 redirect_from:
     - conversation-builder-scripting-functions-context-session-store-wrapper.html
+    - conversation-builder-scripting-functions-manage-the-context-session-store.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Builder
 subfoldername: Scripting Functions
-permalink: conversation-builder-scripting-functions-manage-the-context-session-store.html
+permalink: conversation-builder-scripting-functions-manage-the-conversation-context-service.html
 indicator: both
 ---
 
-The Context Session Store is a cloud-based repository for storing and retrieving session state attributes, so they can be used throughout the conversational journey. This allows for continuity in conversations as context can be transferred between agents and bots, enabling a warm hand-off. The attributes are stored as key/value pairs.
+The Conversation Context Service is a cloud-based repository for storing and retrieving session state attributes, so they can be used throughout the conversational journey. This allows for continuity in conversations as context can be transferred between agents and bots, enabling a warm hand-off. The attributes are stored as key/value pairs.
 
-Within the Context Session Store, you can have multiple namespaces for different business use cases. Typically, a namespace groups together related attributes. For example, a namespace might contain customer information like name, email, phone number, and so on. Namespaces are per account.
+Within the Conversation Context Service, you can have multiple namespaces for different business use cases. Typically, a namespace groups together related attributes. For example, a namespace might contain customer information like name, email, phone number, and so on. Namespaces are per account.
 
-In Conversation Builder, the following built-in functions for managing the Context Session Store are available. These functions are synchronous, server-side, JavaScript calls that conveniently wrap the APIs in Conversation Orchestrator, LivePerson's AI engine.
+In Conversation Builder, the following built-in functions for managing the Conversation Context Service are available. These functions are synchronous, server-side, JavaScript calls that conveniently wrap the APIs in Conversation Orchestrator, LivePerson's AI engine.
 
 {: .important}
 All update operations return a Boolean status. It is the bot developer's responsibility to ensure the operation was executed successfully.
 
-For a more in-depth introducton to the Context Session Store and details on the Conversation Orchestrator API, see [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html).
+For a more in-depth introducton to the Conversation Context Service and details on the Conversation Orchestrator API, see [Conversation Context Service](conversation-orchestrator-conversation-context-service-conversation-context-service.html).
 
 {: .important}
 New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
 
 ### Getting started
 
-#### Set up the Context Session Store
+#### Set up the Conversation Context Service
 
-**To enable the Context Session Store API for your account**
+**To enable the Conversation Context Service API for your account**
 
 1. Access the *Bot Accounts* application, and click the organization name.
 2. Beside **Enable Context API**, click the slider to turn it on, i.e., enable the setting.
@@ -41,7 +42,7 @@ New to scripting functions? Please review the [Introduction](conversation-builde
 
 #### Conversation Builder data scopes
 
-The built-in methods support setting data in the Context Session Store in the following Conversation Builder scopes within a namespace:
+The built-in methods support setting data in the Conversation Context Service in the following Conversation Builder scopes within a namespace:
 
 - **Global**: Data set in this scope is available to the bot in all conversations.
 - **User**: Data set in this scope is available to the user. Once it is set, it is available in all conversations for the same user.
@@ -101,7 +102,7 @@ botContext.printDebugMessage("Delete Namespace: " + success);
 
 ### Set a variable
 
-The following methods set a variable in the Context Session Store at three, different Conversation Builder scopes.
+The following methods set a variable in the Conversation Context Service at three different Conversation Builder scopes.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -124,7 +125,7 @@ botContext.printDebugMessage("set context data for conversation scope: " + succe
 
 ### Get a variable
 
-The following methods get a variable from the Context Session Store at three, different Conversation Builder scopes.
+The following methods get a variable from the Conversation Context Service at three different Conversation Builder scopes.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -147,12 +148,26 @@ botContext.printDebugMessage("get context data for conversation scope: " + value
 
 ### Get all variables
 
-The following methods get all variables in a namespace in the Context Session Store at two, different Conversation Builder scopes.
+The following methods get all variables in a namespace in the Conversation Context Service at two different Conversation Builder scopes.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `getContextDataForUser(namespace)` | namespace (string) | Object |
 | `getContextDataForConversation(namespace)` | namespace (string) | Object |
+
+Both methods return a java.util.HashMap. To retrieve a specific property, use the keySet method on the returned object, like is done in the following:
+
+```
+function displayAllVars(map) {
+  var stringOfMap = map.toString();
+ 
+  for each (var i in map.keySet()) {
+
+       botContext.printDebugMessage('Key  ---> ' + i);
+       botContext.printDebugMessage('Value ---> ' + map[i]);
+  }
+}
+```
 
 #### Examples
 
@@ -166,7 +181,7 @@ botContext.printDebugMessage("get context data for conversation scope: " + value
 
 ### Delete a variable
 
-The following methods delete a variable from the Context Session Store at three, different Conversation Builder scopes.
+The following methods delete a variable from the Conversation Context Service at three different Conversation Builder scopes.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -189,7 +204,7 @@ botContext.printDebugMessage("delete context data for user scope: " + success);
 
 ### Delete all variables
 
-The following methods delete all variables in a namespace from the Context Session Store at two, different Conversation Builder scopes.
+The following methods delete all variables in a namespace from the Conversation Context Service at two different Conversation Builder scopes.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |

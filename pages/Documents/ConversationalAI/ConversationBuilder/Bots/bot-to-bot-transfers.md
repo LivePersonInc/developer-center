@@ -62,6 +62,16 @@ To set up automatic transfers for a group of bots, [create the bot group](conver
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/bots_collab13.png">
 
+{: .important}
+While you can include a [post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html) in a bot group for grouping purposes, a survey bot doesn’t participate in automatic, bot-to-bot transfers.
+
+#### Best practices
+
+For bot groups that are collaborative (the Collaboration setting is enabled):
+* If the group will include multiple bots, LivePerson recommends the use of the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2).
+* The group should not contain more than 15 bots.
+* Make sure there is no overlap in the intents and patterns used by the bots.
+
 ### Manual transfers
 
 #### What's a manual transfer?
@@ -78,6 +88,7 @@ Manual transfers are done via:
 You'll need to use a manual transfer in two situations:
 
 * You want to transfer the conversation from a bot in one bot group to a bot in a *different* group.
+* You want to offer the consumer a choice of options, and then transfer the conversation based on the consumer's response.
 * You want to transfer the conversation from a bot to a live agent.
 
 #### Making manual transfers seamless
@@ -111,7 +122,7 @@ In our example below, we've overwritten the user message, and we've done this in
 
 ### Sharing information between bots
 
-In a transfer from one bot to another--whether automatic or manual--the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. To share this information between bots, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
+In a transfer from one bot to another--whether automatic or manual--the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. To share this information between bots, use the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
 
 ### FAQs
 

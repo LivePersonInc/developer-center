@@ -38,8 +38,15 @@ The Conversation Tester requires that the entire pipeline for messaging is in pl
 ### Access the Conversation Tester
 You can access the Conversation Tester in two ways:
 
+* From within a custom bot, click <img style="width:30px" src="img/ConvoBuilder/icon_menu_bar.png"> on the menu bar, and select **Conversation Tester**.
+
+    This option is available only when the bot has an agent connector (regardless of its status). When you want to test a specific bot, this method is recommended because it automatically starts a conversation with that bot, routing it to the first, associated skill that is found.
+
 * From the bot dashboard, click **Conversation Tester** on the menu bar in the upper-left corner.
-* Open a custom bot, click <img style="width:30px" src="img/ConvoBuilder/icon_menu_bar.png"> on the menu bar, and select **Conversation Tester**. This option is available only when the bot has an agent connector (regardless of its status).
+
+    When you want to perform end-to-end testing (of the engagement, skill, bot agent, and bot), this method is recommended because you'll be starting the conversation by specifying the engagement to use, not the bot to use.
+    
+    Access via this method does also allow you to select a skill by bot, or by skill directly.
 
 ### Start the conversation
 
@@ -49,28 +56,28 @@ If you access the Conversation Tester from within a bot, the tool automatically 
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_start5.png">
 
-If automatic selection of the skill fails for some reason (i.e., the pipeline is not configured correctly; see *Prerequisites* above), if you want to change the skill in use, or if you access the Conversation Tester from outside of a bot, you'll need to explicitly select the skill and manually start the conversation:
+{: .important}
+It's rare to have multiple bots assigned to the same skill. However, if this is the case (i.e., you have a testing scenario configured this way), be aware that the tool will start a conversation with the first bot that is found.
 
-1. In the Conversation Tester, in the conversation panel on the right, click **Select Entry Point**.
+If you access the Conversation Tester from outside of a bot, you'll need to explicitly select the skill and manually start the conversation.
+
+**To select the skill and start the conversation**
+
+1. In the Conversation Tester, in the conversation panel on the right, click **Select entry point**.
 
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/conv_tester_start1.png">
 
-2. Select the skill to which to route the conversation. You do this in one of two ways:
+2. Select the skill to which to route the conversation. You do this in one of three ways:
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/conv_tester_start2.png">
 
-    **Select Skill by Bot**: Select the custom bot, then the skill. For a bot to appear in the bot list, it must be deployed and online. Once you select the bot, the skill list is filtered (narrowed) to display only the skills assigned to the bot's bot agent user. This two-step method is preferable when you want to route the conversation to a specific bot, but you aren't sure of the associated skill name.
+    **Select skill by bot**: Select the custom bot, then the skill. For a bot to appear in the bot list, it must be deployed and online. Once you select the bot, the skill list is filtered (narrowed) to display only the skills assigned to the bot's bot agent user. This two-step method is preferable when you want to route the conversation to a specific bot, but you aren't sure of the associated skill name.
 
-    **Select Skill**: Select only the skill. The skill list displays all the skills available within your organization. If you know the skill name to route to, this one-step method is faster.
+    **Select skill**: Select only the skill. The skill list displays all the skills available within your organization. If you know the skill name to route to, this one-step method is faster.
 
-    {: .important}
-    It's rare to have multiple bots assigned to the same skill. However, if this is the case (i.e., you have a testing scenario configured this way), be aware that the tool will start a conversation with the first bot that is found.
+    **Select skill by campaign/engagement**: Select the campaign to use. This filters the list of engagements from which you must then select the engagement. The skill tied to the engagement will be used to start the conversation. This method is preferable when you want to perform end-to-end testing of the entire Conversational Cloud configuration: engagement, skill, bot agent, and bot.   
 
 3. Click **Start Conversation**.
-
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/conv_tester_start3.png">
-
-    This starts the conversation.
 
 ### Start the debugger
 
@@ -102,11 +109,11 @@ As you use the Conversation Tester, you can monitor two statuses:
 #### Perform actions
 In the conversation panel, you can perform several actions:
 
-* **Clear Messages**: Clears the conversation panel of all messages.
-* **Resume Conversation**: Opens a new conversation.
-* **Scroll to Bottom**: Scrolls the display to the bottom of the conversation panel.
-* **Reset Bot Session**: Resets the bot session. Do this to pick up changes to the bot if made.
-* **End Conversation**: Closes the conversation.
+* **Clear messages**: Clears the conversation panel of all messages.
+* **Resume conversation**: Opens a new conversation.
+* **Scroll to bottom**: Scrolls the display to the bottom of the conversation panel.
+* **Reset bot session**: Resets the bot session. Do this to pick up changes to the bot if made.
+* **End conversation**: Closes the conversation.
 
 #### Use a different tab
 Take advantage of the ability to open the Conversation Tester in a new tab. This lets you use the tool beside other important windows.
