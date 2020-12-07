@@ -254,10 +254,29 @@ The action must be named `CLOSE_CONVERSATION` in this case.
   }
 }
 ```
-Figure 5.3 Activity for a transfer request
+Figure 5.3 Activity for a close conversation request
 <br>
 <br>
 
+To close a conversation without triggering a post conversation survey, you need to provide the `withoutPcs` flag with the value `true` (as shown in Figure 5.4)
+
+```json
+{
+  "type": "message",
+  "text": "",
+  "channelData": {
+    "action": {
+      "name": "CLOSE_CONVERSATION",
+      "parameters": {
+        "withoutPcs": true
+      }
+    }
+  }
+}
+```
+Figure 5.4 Activity to close a conversation without a post conversation survey
+<br>
+<br>
 
 #### Change Time To Response of a Conversation
 
@@ -270,7 +289,7 @@ LivePerson Messaging uses 4 different types of priorities:
 - `PRIORITIZED`
 - `CUSTOM`
 
-Only `CUSTOM` can set a value. The unit of the value is in seconds. The values of the other types can be set in the 
+With `CUSTOM` it is possible to set an exact value. The unit of the value is seconds. The values of the other types can be set in the 
 Agent Workspace.
 
 A text message can also be provided simultaneously in the activity json.
@@ -291,4 +310,4 @@ A text message can also be provided simultaneously in the activity json.
   }
 }
 ```
-Figure 5.4 Activity to change the TTR
+Figure 5.5 Activity to change the TTR
