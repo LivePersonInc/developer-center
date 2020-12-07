@@ -122,7 +122,7 @@ In our example below, we've overwritten the user message, and we've done this in
 
 ### Sharing information between bots
 
-In a transfer from one bot to another--whether automatic or manual--the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. To share this information between bots, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
+In a transfer from one bot to another--whether automatic or manual--the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. To share this information between bots, use the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
 
 ### FAQs
 

@@ -120,7 +120,7 @@ There are three options for the duration:
 
 * **Session**: The data will be saved for the entirety of the consumer's automation session. This is useful when using the data to query APIs and retrieve information that might be useful across the entire bot.
 
-If you need to store data for the long term, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
+If you need to store data for the long term, use the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
 
 ### Using variables and slots in interactions
 

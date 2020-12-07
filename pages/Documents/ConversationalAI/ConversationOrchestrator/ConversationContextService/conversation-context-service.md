@@ -1,26 +1,27 @@
 ---
-pagename: Context Session Store
+pagename: Conversation Context Service
 redirect_from:
   - maven-context-warehouse-context-session-store.html
   - maven-ai-context-warehouse-context-session-store.html
+  - conversation-orchestrator-context-warehouse-context-session-store.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
-subfoldername: Context Warehouse
-permalink: conversation-orchestrator-context-warehouse-context-session-store.html
+subfoldername: Conversation Context Service
+permalink: conversation-orchestrator-conversation-context-service-conversation-context-service.html
 indicator: messaging
 ---
 
 ### Overview
 
-The Context Services API is a REST interface to a cloud based repository for storing and retrieving session state attributes that can be carried over and used throughout the conversational journey. This allows continuity in conversations as context can be transferred between agents and bots enabling a true warm handoff. The context service can be used for several purposes. For example:
+The Conversation Context Service API is a REST interface to a cloud based repository for storing and retrieving session state attributes that can be carried over and used throughout the conversational journey. This allows continuity in conversations as context can be transferred between agents and bots enabling a true warm handoff. The Conversation Context Service can be used for several purposes. For example:
 
 1. Save the conversation session state data in Conversational Cloud (e.g. agent notes), and then retrieve them later in a different conversation session with a different agent.
 
 2. Save contextual attributes in a concierge bot (e.g. intents or customer information) and carry this context over to another bot or human skill. 
 
-The Context APIs are part of Conversation Orchestrator, LivePerson’s AI engine, that allows brands to store, retrieve, and manage custom attributes programmatically. The context store provides a system of hierarchically organizing your data.
+The Conversation Service Context APIs are part of Conversation Orchestrator, LivePerson’s AI engine, that allows brands to store, retrieve, and manage custom attributes programmatically. The context store provides a system of hierarchically organizing your data.
 
 <img class="fancyimage" width="600" src="img/maven/image_37.png">
 
@@ -28,7 +29,7 @@ Each brand can have multiple **namespaces** for different business use cases. Ty
 
 <!--
 {: .important}
-If you want to use the Context Session Store with Conversation Builder, please use the convenient [API wrapper functions](conversation-builder-scripting-functions-context-session-store-wrapper.html).
+If you want to use the Conversation Context Service with Conversation Builder, please use the convenient [API wrapper functions](conversation-builder-scripting-functions-context-session-store-wrapper.html).
 -->
 ### Example Use Cases
 
@@ -46,7 +47,7 @@ If you want to use the Context Session Store with Conversation Builder, please u
 
 ### Developer Key
 
-To use Context Session store APIs you will need to create and use an API key. To get your unique key:
+To use Conversation Context Service APIs you will need to create and use an API key. To get your unique key:
 
 1. Login to Conversation Orchestrator with your Conversational Cloud credentials and then navigate to **Developer Key**.
 
@@ -58,7 +59,7 @@ To use Context Session store APIs you will need to create and use an API key. To
 
 ### Methods
 
-Every API call to the Conversation Orchestrator Context service requires the following Auth Headers to be accepted
+Every API call to the Conversation Orchestrator's Conversation Context Service requires the following Auth Headers to be accepted
 
 `Content-Type : application/json`
 
