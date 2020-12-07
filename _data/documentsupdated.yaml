@@ -295,7 +295,10 @@
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
-      - pagename: Leveraging Analytics
+      - pagename: Account-Level Performance
+      - pagename: Bot Performance
+      - pagename: Transcripts
+      - pagename: Tuning Opportunities
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
