@@ -15,10 +15,8 @@ The Apply for a Loan template is designed to capture contact and financial infor
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-<!--
 {: .important}
 This bot template contains dialog templates that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).
--->
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_apply_loan_de.png">
 
@@ -115,7 +113,6 @@ Modify the following values in Global Functions:
 | botAgentSkillId | The skill ID to transfer to |
 | botAgentSkillName | The skill name to transfer to |
 
-<!--
 ### Dialog templates
 This bot template contains multiple [dialog templates](conversation-builder-dialog-templates.html). All dialog templates are designed to work independently of one another and provide specific use case features to your bot.
 
@@ -185,4 +182,3 @@ Integrations:
 Global Function modifications:
 
 In Global Functions, `loanPurpose` is set to 'Home' to ensure proper routing in Post-Process Code of the `Loan_Starter` interaction.
--->

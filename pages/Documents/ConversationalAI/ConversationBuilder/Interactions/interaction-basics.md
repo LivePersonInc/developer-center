@@ -129,17 +129,8 @@ When defining a [condition](conversation-builder-interactions-configuration-next
 
 <img style="width:800px" class="fancyimage" src="img/ConvoBuilder/regex_hint_2.png">
 
-### Display variables in interactions
-
-* `{}` is used for inserting dynamic values inside of interactions
-
-  * [Bot Variable](conversation-builder-variables-slots.html#variables): `{$botContext.botVariableName}`
-
-  * [Slot Variable](conversation-builder-variables-slots.html#slots): `{$botContext.slot.slotName}`
-
-  * [Environment Variable](conversation-builder-environment-variables.html): `{$env.envVariableName}`
-
-  * [API Integration](conversation-builder-integrations-api-integrations.html) custom data values: `{apiName.variableName}`
+### Use variables and slots in interactions
+For information on this, see [here](conversation-builder-variables-slots.html#using-variables-and-slots-in-interactions).
 
 ### Format text
 #### Types of text
