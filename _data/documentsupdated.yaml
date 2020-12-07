@@ -945,6 +945,9 @@
   - documentname: Proactive Messaging
     pages:
     - pagename: API
+  - documentname: Connect To Messaging
+    pages:
+    - pagename: API
 
 - categoryname: Rich Messaging
   image: rich-media
