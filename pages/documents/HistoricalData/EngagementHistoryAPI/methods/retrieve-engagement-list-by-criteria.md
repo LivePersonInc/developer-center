@@ -54,7 +54,221 @@ Filter is sent in the POST data with the following JSON structure.
 | chatMCS {from,to} | Range of Meaningful Conversation Score in a particular chat (including the boundaries).  | numeric, numeric| Optional | Either “from” or “to” fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively. |
 | hasInteractiveCoBrowse | Indication whether an interactive CoBrowse session occurred during the chat | Boolean | Optional |  |
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
-| lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT
+| lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT | 
+| predictionLabel | An array of prediction labels. | Array `<String>` | Optional | In order to search for a specific phrase, wrap the phrase in quotation marks. |
+
+
+**Elements in the Response**
+
+_Metadata info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+_metadata | Metadata about the whole response. | container |
+rel | Name of a link to be used in the next request. | alphanumeric (256) |
+href | A specific link to be used in the next request. | alphanumeric (256) |
+count | Number of sessions for the current query/filter. | numeric |
+
+
+_Interaction record_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+info | Information about a specific chat. | container |
+transcript | Transcript data of the chat. | container |
+campaign | Campaign data of the chat | container |
+lineScores | Contains information about the line's score, including line raw score and aggregated score up until this line. | container |
+visitorInfo | Conatins inforamtion about the visitor who participated in the chat  | container |
+coBrowseSessions | The CoBrowse data | container |
+surveys | Survey data from the chat. | container |
+predictions | Contains information about the predictions of the chat. | container | Available only for accounts that enabled intent analyzer. | 
+sdes | List of Engagement Attributes. | container | See [Appendix](data-engagement-history-appendix.html)
+
+
+_Interaction info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+isInteractive | The chat was interactive (at least one visitor line). | Boolean |
+engagementId | Real-time Session ID that represents the chat. | alphanumeric (256) | This Id is the accountID combined with the real time ID.
+sharkEngagementId | *ID for internal use only* | alphanumeric (256) |
+chatRequestedTime | The timestamp of the visitor’s first request to chat. Also, the time that the visitor entered the queue. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
+chatRequestedTimeL | The timestamp of the visitor’s first request to chat. Also, the time that the visitor entered the queue. | long - numeric |
+startTime | Engagement start time. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
+startTimeL | Engagement start time (in UTC) | long - numeric |
+endTime | Engagement end time | alphanumeric  | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
+endTimeL | Engagement end time (in UTC) | long - numeric |
+duration | Measurement of the duration of the engagement (in seconds). Amount of time the visitor is connected to an agent until the Engagement Window is closed. | numeric |
+visitorId | Visitor ID. | alphanumeric (256) |
+visitorName | The visitor’s name. | alphanumeric |
+agentId | Agent ID. | numeric |
+agentNickName | The agent’s nickname. | alphanumeric (256) |
+agentLoginName | The agent’s login name. | alphanumeric (256) |
+agentFullname | The agent’s full name. | alphanumeric (256) |
+agentDeleted | Indicates whether agent was deleted. | Boolean |
+agentGroupId | Agent group ID. | numeric |
+agentGroupName | Name of the group the agent belongs to. | alphanumeric (256) |
+skillId | Skill ID. | numeric |
+skillName | The skill name. | alphanumeric (256) |
+isAgentSurvey | Was there an agent survey in the engagement? | Boolean |
+isPostChatSurvey | Was there a post chat survey in the engagement? | Boolean |
+isPreChatSurvey | Was there a pre chat survey in the engagement? | Boolean |
+channel | Engagement channel. Only chat is supported. | numeric |
+engagementSet | Counter for split engagements within one visit session. | numeric |
+engagementSequence | Counter for number of transferred engagements within one visit session. | numeric |
+startReason | Code indicates the reason the chat started. | numeric |
+startReasonDesc | Description of reason the chat started. | alphanumeric |
+endReason | Code indicates the reason the chat ended. | numeric |
+endReasonDesc | Description of reason the chat ended. | alphanumeric |
+mcs | Divides the Meaningful Conversation Score into 3 groups: Positive, Neutral, Negative. This field is deprecated. Use alertedMCS instead| int | Values: -1, 0, 1
+alertedMCS | Divides the chatMCS score into 3 groups: Positive, Neutral, Negative. | int | Values: -1, 0, 1
+chatMCS | Meaningful Conversation Score of the chat.  | int| Range: 0-100.
+isChatDataEnriched | Indication whether chat was enriched with final data (including sdes data). | Boolean | If true, the enrichment process occurred.
+isPartial | Indicates whether the chat’s data is partial. | Boolean | In case isPartial is true - use the same method with EngagementId parameter in order to retrieve the full chat data.
+isEnded | Indicates whether the chat has ended | Boolean | The API returns only ended chats.
+chatStartUrl | The page’s URL from which the chat started. | alphanumeric |
+chatStartPage | The page’s title from which the chat started. | alphanumeric |
+
+
+_Start reason_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+start reason options | Start reason options. |  | 0 - Visitor request, 1 – Transfer (agent transfer), 2 - Transfer failed, 3 - ACD attempt, 4 - ACD no assignment, 5 - Operator assignment, 6 - Skill reassign (skill transfer), 7 - Rep request, 8 - A2A reassign |
+
+
+_End reason_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+End reason options | End reason options. | | 101 - Transfer - rep stopped chat (rep transferred chat to another rep), 106 - Transfer - Reassignment to skill (rep transferred chat to skill, 201 – Rep stopped chat, 202 - Rep disconnected, 205 - Visitor disconnected, 208 - Visitor was no longer in chat, 210 - Visitor closed chat |
+
+
+_Campaign info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+campaignEngagementId |  ID of the campaign's engagement. | numeric (long) |
+campaignEngagementName | Name of the campaign's engagement. | alphanumeric (50) |
+campaignId | ID of the campaign. | numeric (long) |
+campaignName | Name of the campaign. | alphanumeric (50) |
+goalId | ID of the campaign's goal. | numeric |
+goalName | Name of the campaign's goal. | alphanumeric (50) |
+engagementAgentNote | Note to the Agent specified for the campaign's engagement. | alphanumeric  |
+visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement. | numeric (long) |
+visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement. | alphanumeric (50) |
+visitorProfileId | ID of the visitor profile defined for the campaign. | numeric |
+visitorProfileName | Name of the visitor profile defined for the campaign. | alphanumeric | (50) |
+lobId | ID of the line of business of the campaign. | alphanumeric |
+lobName | Name of the line of business of the campaign. | alphanumeric |
+
+
+_Transcripts info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+lines | Lines of a specific chat. | container |
+
+
+_Line info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+time | Time when the chat line took place. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
+timeL | Time when the chat line took place, in long format | alphanumeric | long
+textType | Type of text. | alphanumeric  | Valid formats: plain, html, url, rich-content
+text | The actual text in the chat line. | alphanumeric |
+json | The payload of the rich-content. | container | Relevant for lines of textType `rich-content`
+by | Name of the visitor or the agent’s nickname. | alphanumeric |
+source | Source of line. | alphanumeric | Valid values: "visitor", "agent", "system"
+lineSeq | Sequence of line in that chat | alphanumeric |
+subType | Visibility of line - to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP"
+cannedAnswerType | Type of canned answer (Predefined Content). | numeric | 0: is not canned answer, positive number: canned answer's id, negative number: canned answer's id that was changed.
+agentId | ID of agent who sent the line.  | numeric | In case it is not an agent line, the value is 0.
+
+
+_Line sentiment info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+lineSeq | Sequence of line in that chat  | alphanumeric |
+lineRawScore | Score of line (for internal use only) | numeric |
+mcs | Meaningful Conversation Score of the chat up to this line | numeric |
+
+
+_Visitor info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+country | The country indicated by the visitor’s IP address. | alphanumeric |
+countryCode | The country code indicated by the visitor’s IP address. | alphanumeric |
+state | The state indicated by the visitor’s IP address. | alphanumeric |
+city | The city indicated by the visitor’s IP address. | alphanumeric |
+isp | The internet service provider indicated by the visitor’s IP address. | alphanumeric |
+org | The organization indicated by the visitor’s IP address.| alphanumeric |
+device | The device the visitor used to chat. | alphanumeric | Valid values: "DESKTOP", "TABLET", "MOBILE", "NA"
+ipAddress | The visitor’s IP address. | alphanumeric |
+browser | The browser the visitor used to chat. | alphanumeric |
+operatingSystem | The operating system the visitor used to chat. | alphanumeric |  Valid values: "NA", "WINDOWS", "MAC_OSX", "LINUX", "IOS", "ANDROID"
+browserType | The type of the browser the visitor used to chat | alphanumeric |  Valid values: e.g CHROME or FIREFOX
+
+
+_CoBrowse sessions info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+coBrowseSessionsList | List of CoBrowse sessions | container |
+
+
+_CoBrowse session info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+sessionId | CoBrowse session id | alphanumeric |
+startTime | CoBrowse session start time | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
+startTimeL | CoBrowse session start time in milliseconds | numeric |
+endTime | CoBrowse session end time | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
+endTimeL | CoBrowse session end time in milliseconds | numeric |
+interactiveTime | The time when the CoBrowse session became interactive | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
+interactiveTimeL | The time when the CoBrowse session became interactive in milliseconds | numeric |
+endReason | The reason for the session end | alphanumeric | Valid values: "UNKOWN", "SERVER", "VISITOR", "AGENT", "TIMEOUT"
+duration | The duration of the CoBrowse session in milliseconds | numeric |
+isInteractive | Indication whether the CoBrowse session is interactive | Boolean |
+
+
+_Prediction_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+lineSeq | Sequence of line in the chat that associated with the prediction. | alphanumeric |
+confidenceScore | Prediction confidence score. | numeric |
+predictionId | Prediction ID. | alphanumeric |
+predictionLabel | Prediction label. | alphanumeric |
+
+
+_Surveys info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+preChat | Pre chat survey. | container |
+postChat | Post chat survey. | container |
+operator | Agent survey. | container |
+
+
+_Survey info_
+
+Name | Description | Type / Value | Notes
+:----- | :-------- | :----------- | :---------
+scope | Survey scope. Support session scope only; meaning, the survey values may change per session.  | alphanumeric | Example: The answer may change with the same visitor on different occasions.
+source | Survey type. | alphanumerics | Valid values: "pre-chat", "post-chat", "operator"
+display name | This survey’s questions. | alphanumeric (1000) |
+value | The visitor’s answer to the survey question. | alphanumeric (1000) |
+name | This survey’s name. | alphanumeric (256) |
+time | This survey’s submitted event time. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
+timeL | This survey’s time in milliseconds. | numeric |
+questionId | The question's id that is displayed in the survey (id is generated by the system). | numeric |
+surveyId | The survey's id (id is generated by the system). | numeric |
+answersId | The selected answers IDs of the survey. | container | 0: no answer selected, -1: non index answer and also for CALLMEAT question type, -2: Invalid answer
 
 
 **Request Example 1:**
@@ -1259,190 +1473,4 @@ Example:
 }
 ```
 
-**Elements in the Response**
 
-_Metadata info_
-
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-_metadata | Metadata about the whole response. | container |
-rel | Name of a link to be used in the next request. | alphanumeric (256) |
-href | A specific link to be used in the next request. | alphanumeric (256) |
-count | Number of sessions for the current query/filter. | numeric |
-
-
-_Interaction record_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-info | Information about a specific chat. | container |
-transcript | Transcript data of the chat. | container |
-campaign | Campaign data of the chat | container |
-lineScores | Contains information about the line's score, including line raw score and aggregated score up until this line. | container |
-visitorInfo | Conatins inforamtion about the visitor who participated in the chat  | container |
-coBrowseSessions | The CoBrowse data | container |
-surveys | Survey data from the chat. | container |
-sdes | List of Engagement Attributes. | container | See [Appendix](data-engagement-history-appendix.html)
-
-
-_Interaction info_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-isInteractive | The chat was interactive (at least one visitor line). | Boolean |
-engagementId | Real-time Session ID that represents the chat. | alphanumeric (256) | This Id is the accountID combined with the real time ID.
-sharkEngagementId | *ID for internal use only* | alphanumeric (256) |
-chatRequestedTime | The timestamp of the visitor’s first request to chat. Also, the time that the visitor entered the queue. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
-chatRequestedTimeL | The timestamp of the visitor’s first request to chat. Also, the time that the visitor entered the queue. | long - numeric |
-startTime | Engagement start time. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
-startTimeL | Engagement start time (in UTC) | long - numeric |
-endTime | Engagement end time | alphanumeric  | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
-endTimeL | Engagement end time (in UTC) | long - numeric |
-duration | Measurement of the duration of the engagement (in seconds). Amount of time the visitor is connected to an agent until the Engagement Window is closed. | numeric |
-visitorId | Visitor ID. | alphanumeric (256) |
-visitorName | The visitor’s name. | alphanumeric |
-agentId | Agent ID. | numeric |
-agentNickName | The agent’s nickname. | alphanumeric (256) |
-agentLoginName | The agent’s login name. | alphanumeric (256) |
-agentFullname | The agent’s full name. | alphanumeric (256) |
-agentDeleted | Indicates whether agent was deleted. | Boolean |
-agentGroupId | Agent group ID. | numeric |
-agentGroupName | Name of the group the agent belongs to. | alphanumeric (256) |
-skillId | Skill ID. | numeric |
-skillName | The skill name. | alphanumeric (256) |
-isAgentSurvey | Was there an agent survey in the engagement? | Boolean |
-isPostChatSurvey | Was there a post chat survey in the engagement? | Boolean |
-isPreChatSurvey | Was there a pre chat survey in the engagement? | Boolean |
-channel | Engagement channel. Only chat is supported. | numeric |
-engagementSet | Counter for split engagements within one visit session. | numeric |
-engagementSequence | Counter for number of transferred engagements within one visit session. | numeric |
-startReason | Code indicates the reason the chat started. | numeric |
-startReasonDesc | Description of reason the chat started. | alphanumeric |
-endReason | Code indicates the reason the chat ended. | numeric |
-endReasonDesc | Description of reason the chat ended. | alphanumeric |
-mcs | Divides the Meaningful Conversation Score into 3 groups: Positive, Neutral, Negative. This field is deprecated. Use alertedMCS instead| int | Values: -1, 0, 1
-alertedMCS | Divides the chatMCS score into 3 groups: Positive, Neutral, Negative. | int | Values: -1, 0, 1
-chatMCS | Meaningful Conversation Score of the chat.  | int| Range: 0-100.
-isChatDataEnriched | Indication whether chat was enriched with final data (including sdes data). | Boolean | If true, the enrichment process occurred.
-isPartial | Indicates whether the chat’s data is partial. | Boolean | In case isPartial is true - use the same method with EngagementId parameter in order to retrieve the full chat data.
-isEnded | Indicates whether the chat has ended | Boolean | The API returns only ended chats.
-chatStartUrl | The page’s URL from which the chat started. | alphanumeric |
-chatStartPage | The page’s title from which the chat started. | alphanumeric |
-
-
-_Start reason_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-start reason options | Start reason options. |  | 0 - Visitor request, 1 – Transfer (agent transfer), 2 - Transfer failed, 3 - ACD attempt, 4 - ACD no assignment, 5 - Operator assignment, 6 - Skill reassign (skill transfer), 7 - Rep request, 8 - A2A reassign |
-
-
-_End reason_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-End reason options | End reason options. | | 101 - Transfer - rep stopped chat (rep transferred chat to another rep), 106 - Transfer - Reassignment to skill (rep transferred chat to skill, 201 – Rep stopped chat, 202 - Rep disconnected, 205 - Visitor disconnected, 208 - Visitor was no longer in chat, 210 - Visitor closed chat |
-
-
-_Campaign info_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-campaignEngagementId |  ID of the campaign's engagement. | numeric (long) |
-campaignEngagementName | Name of the campaign's engagement. | alphanumeric (50) |
-campaignId | ID of the campaign. | numeric (long) |
-campaignName | Name of the campaign. | alphanumeric (50) |
-goalId | ID of the campaign's goal. | numeric |
-goalName | Name of the campaign's goal. | alphanumeric (50) |
-engagementAgentNote | Note to the Agent specified for the campaign's engagement. | alphanumeric  |
-visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement. | numeric (long) |
-visitorBehaviorName | Name of the visitor behavior defined for the campaign's engagement. | alphanumeric (50) |
-visitorProfileId | ID of the visitor profile defined for the campaign. | numeric |
-visitorProfileName | Name of the visitor profile defined for the campaign. | alphanumeric | (50) |
-lobId | ID of the line of business of the campaign. | alphanumeric |
-lobName | Name of the line of business of the campaign. | alphanumeric |
-
-
-_Transcripts info_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-lines | Lines of a specific chat. | container |
-
-
-_Line info_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-time | Time when the chat line took place. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
-timeL | Time when the chat line took place, in long format | alphanumeric | long
-textType | Type of text. | alphanumeric  | Valid formats: plain, html, url, rich-content
-text | The actual text in the chat line. | alphanumeric |
-json | The payload of the rich-content. | container | Relevant for lines of textType `rich-content`
-by | Name of the visitor or the agent’s nickname. | alphanumeric |
-source | Source of line. | alphanumeric | Valid values: "visitor", "agent", "system"
-lineSeq | Sequence of line in that chat | alphanumeric |
-subType | Visibility of line - to all or agent only. | alphanumeric  | Valid values: "REGULAR", ONLY_TO_REP"
-cannedAnswerType | Type of canned answer (Predefined Content). | numeric | 0: is not canned answer, positive number: canned answer's id, negative number: canned answer's id that was changed.
-agentId | ID of agent who sent the line.  | numeric | In case it is not an agent line, the value is 0.
-
-
-_Line sentiment info_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-lineSeq | Sequence of line in that chat  | alphanumeric |
-lineRawScore | Score of line (for internal use only) | numeric |
-mcs | Meaningful Conversation Score of the chat up to this line | numeric |
-
-
-_Visitor info_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-country | The country indicated by the visitor’s IP address. | alphanumeric |
-countryCode | The country code indicated by the visitor’s IP address. | alphanumeric |
-state | The state indicated by the visitor’s IP address. | alphanumeric |
-city | The city indicated by the visitor’s IP address. | alphanumeric |
-isp | The internet service provider indicated by the visitor’s IP address. | alphanumeric |
-org | The organization indicated by the visitor’s IP address.| alphanumeric |
-device | The device the visitor used to chat. | alphanumeric | Valid values: "DESKTOP", "TABLET", "MOBILE", "NA"
-ipAddress | The visitor’s IP address. | alphanumeric |
-browser | The browser the visitor used to chat. | alphanumeric |
-operatingSystem | The operating system the visitor used to chat. | alphanumeric |  Valid values: "NA", "WINDOWS", "MAC_OSX", "LINUX", "IOS", "ANDROID"
-browserType | The type of the browser the visitor used to chat | alphanumeric |  Valid values: e.g CHROME or FIREFOX
-
-
-_CoBrowse sessions info_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-coBrowseSessionsList | List of CoBrowse sessions | container |
-
-
-_CoBrowse session info_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-sessionId | CoBrowse session id | alphanumeric |
-startTime | CoBrowse session start time | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
-startTimeL | CoBrowse session start time in milliseconds | numeric |
-endTime | CoBrowse session end time | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
-endTimeL | CoBrowse session end time in milliseconds | numeric |
-interactiveTime | The time when the CoBrowse session became interactive | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
-interactiveTimeL | The time when the CoBrowse session became interactive in milliseconds | numeric |
-endReason | The reason for the session end | alphanumeric | Valid values: "UNKOWN", "SERVER", "VISITOR", "AGENT", "TIMEOUT"
-duration | The duration of the CoBrowse session in milliseconds | numeric |
-isInteractive | Indication whether the CoBrowse session is interactive | Boolean |
-
-
-_Surveys info_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-preChat | Pre chat survey. | container |
-postChat | Post chat survey. | container |
-operator | Agent survey. | container |
-
-
-_Survey info_
-Name | Description | Type / Value | Notes
-:----- | :-------- | :----------- | :---------
-scope | Survey scope. Support session scope only; meaning, the survey values may change per session.  | alphanumeric | Example: The answer may change with the same visitor on different occasions.
-source | Survey type. | alphanumerics | Valid values: "pre-chat", "post-chat", "operator"
-display name | This survey’s questions. | alphanumeric (1000) |
-value | The visitor’s answer to the survey question. | alphanumeric (1000) |
-name | This survey’s name. | alphanumeric (256) |
-time | This survey’s submitted event time. | alphanumeric | Format: yyyy-MM-ddThh:mm:ss.SSS+timezone
-timeL | This survey’s time in milliseconds. | numeric |
-questionId | The question's id that is displayed in the survey (id is generated by the system). | numeric |
-surveyId | The survey's id (id is generated by the system). | numeric |
-answersId | The selected answers IDs of the survey. | container | 0: no answer selected, -1: non index answer and also for CALLMEAT question type, -2: Invalid answer
