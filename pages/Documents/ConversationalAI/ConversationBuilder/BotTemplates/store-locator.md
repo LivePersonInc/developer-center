@@ -14,10 +14,8 @@ The Store Locator template is designed to provide users with information on the 
 
 While this template takes advantage of rich content interactions, alternatives have been included for channels that do not support structured content (SMS, WhatsApp, etc.).
 
-<!--
 {: .important}
 This bot template contains a dialog template that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).
--->
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_store_loc_de.png">
 
@@ -97,7 +95,6 @@ Prior to displaying images within structured content, the image domains will nee
 
 By default, structured content is displayed vertically in messaging. If you want the content to be horizontally scrollable instead, you need to include the `tileDisplay: horizontal` custom configuration when creating your agent connector. For details on this, see [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#tiledisplay).
 
-<!--
 ### Dialog templates
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that allows you to easily copy over the primary data collection and API integration flow independently from the bot template.
 
@@ -117,4 +114,3 @@ Integrations:
 Global Function modifications:
 
 Global variables for the purpose of escalation (`transferMessage` and `skillId`) have been removed from Global Functions, as the escalation dialog is not included with this dialog template.
--->

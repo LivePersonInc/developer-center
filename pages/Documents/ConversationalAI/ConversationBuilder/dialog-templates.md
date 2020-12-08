@@ -57,7 +57,7 @@ There are two reasons for this constraint:
     * **Domains**: This is a read-only list of all the domains used by all the dialogs that are a part of the dialog template. During an import of this template:
         * If the dialogs use [pre-built domains](intent-builder-overview.html#prebuilt-domains) that already exist within your organization, the domain/intent associations are updated accordingly. If the pre-built domains don't exist, they are added automatically. 
         *  If the dialogs use *custom domains* that already exist within your organization, the domain/intent associations are updated accordingly. If the custom domains don't exist, all assocations are removed. To avoid this, add the needed domains and intents before importing the template.
-    * **+ Add Bot Environment Variable**: Click this, and add to this list the environment variables that the dialog template relies on.
+    * **+ Add Bot Environment Variable**: Click this, and add to this list the environment variables that the dialog template relies on. You can add the key/value pairs one by one using the fields provided. Alternatively, click the **Bulk Add** link and enter them in key=value format in the text box provided. The text box also lets you copy the values from another source and paste them in.
     * **+ Add Global Function**: Click this, and specify the global functions that the dialog template relies on. Copy the needed functions in the left panel, paste them into the right panel, and click **Add**.
 
     {: .important}
