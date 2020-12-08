@@ -14,9 +14,19 @@ LivePerson is pleased to announce the Beta release of the Meaningful Automation 
 
 #### Sending feedback
 
-Your feedback is important to us! To send feedback on this Beta feature, please use [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform).
+Your feedback about this Beta feature is important to us, and you can send it to us in two ways. 
 
-### What is MACS?
+First, while you’re working with MACS, if you experience an issue, you can quickly send it to us -- right from where you are in the application: Use the **Feedback** widget in the lower-right corner.
+
+<img style="width:400px" src="img/ConvoBuilder/macs_feedback1.png">
+
+The **Feedback** widget lets you describe the issue that you’re experiencing and optionally include a screenshot.
+
+<img style="width:400px" src="img/ConvoBuilder/macs_feedback2.png">
+
+Second, after you’ve spent some time using MACS, we encourage you to send feedback via [this Google survey](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform). The survey captures valuable information about your experience and helps us to identify areas for enhancement.
+
+### What is a MACS?
 
 A Meaningful Automation Conversation Score or MACS is a measure of the quality of a bot conversation. 
 
@@ -46,7 +56,7 @@ Scoring like this makes it fast and easy to understand how efficient and fluid a
 
 MACS scoring is only available for bots built in Conversation Builder. For a third-party bot, “N/A” for “Not Applicable” is displayed as the MACS.
 
-### Why use MACS?
+### Why use the MACS?
 
 Other measures can inform you about the quality of conversations, but they do have some shortcomings when it comes to conversations with bots:
 
@@ -58,25 +68,23 @@ Other measures can inform you about the quality of conversations, but they do ha
 
 * **Meaningful Connection Score (MCS)**: Research has revealed that humans don’t converse with bots like they do with humans: The number of words in each message decreases, and the use of emotional language is minimal. This means that LivePerson’s MCS, which uses natural language to measure the consumer’s sentiment as they message with an agent, isn’t a good indicator of the quality of a conversation with a bot.
 
-MACS addresses all these shortcomings because it identifies and quantifies the failure points that are *found in the conversation’s structure* to evaluate the conversation’s efficiency and fluidity.
+The MACS addresses all these shortcomings because it identifies and quantifies the failure points that are *found in the conversation’s structure* to evaluate the conversation’s efficiency and fluidity.
 
-What’s more, MACS is available for all bot conversations while post-conversation surveys are not.
+What’s more, a MACS is available for all bot conversations while post-conversation surveys are not.
 
-#### Benefits of MACS
+#### Benefits of the MACS
 
-MACS scoring makes it fast and easy to tune your bots for improved performance at scale.
-
-Using MACS, you can:
+MACS scoring makes it fast and easy to tune your bots for improved performance at scale. Using it, you can:
 
 * **Identify failed conversations**: Easily find the ones that required high consumer effort or produced consumer frustration.
-* **Review less, not more**: Perform a targeted review of conversation transcripts-not a random review-to locate the bot areas that need improvement.
+* **Review less, not more**: Perform a targeted review of conversation transcripts, not a random review, to locate the bot areas that need improvement.
 * **Diagnose and tune quickly**: Move directly from a failure point in a transcript to the interaction in the bot flow, where you can make changes.
 
-### How is MACS calculated?
+### How is a MACS calculated?
 
-There are two models responsible for MACS:
+There are two models responsible for a MACS:
 
-* A model that predicts what failure points are present in a conversation
+* A model that predicts what failure points are present in the conversation
 * A model that estimates a conversation quality score
 
 Both of these models were “trained” by having human experts manually annotate thousands of conversations. Using these models, each bot conversation that is closed is classified with a MACS 1, 2 or 3 where:
@@ -98,9 +106,9 @@ The score is calculated based on the presence of failure points in the conversat
 {: .important}
 A MACS is only calculated for closed conversations.<br><br>A MACS doesn't detect where an error occurs in a conversation; it detects whether or not it occurred somewhere in the conversation. However, you can aggregate MACS over interactions. This gives you an indication of where your bot is underperforming and, by looking at the errors, of what to do to fix it.
 
-#### Accuracy of MACS
+#### Accuracy of the MACS
 
-MACS has a correlation of ~.7 with human judgment. While this is quite good, expect the algorithm to make some classification mistakes from time to time. The strength of MACS comes from looking at the scores in aggregate, where one aspect is in common (e.g., the same error is detected, or the conversations included a specific interaction or intent).
+A MACS has a correlation of ~.7 with human judgment. While this is quite good, expect the algorithm to make some classification mistakes from time to time. The strength of MACS comes from looking at the scores in aggregate, where one aspect is in common (e.g., the same error is detected, or the conversations included a specific interaction or intent).
 
 ### Enable or disable MACS
 
@@ -120,7 +128,7 @@ If you disable MACS, be aware that this only hides the display of the feature in
     * To display MACS data, enable (turn on) the **Display Meaningful Automation Conversation Score (MACS)** setting.
     * To hide MACS data, disable (turn off) the **Display Meaningful Automation Conversation Score (MACS)** setting.
 
-### Using MACS in Bot Analytics
+### Using the MACS in Bot Analytics
 
 #### Watch the video
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/486697904" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
