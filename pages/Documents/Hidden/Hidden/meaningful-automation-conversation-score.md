@@ -8,15 +8,11 @@ indicator: both
 layout: hidden-layout
 ---
 
-### About this Beta release
+### Introduction
 
-LivePerson is pleased to announce the Beta release of the Meaningful Automation Conversation Score or MACS, which is a new measure of bot performance.
+LivePerson is pleased to announce the *Beta release* of the Meaningful Automation Conversation Score or MACS, which is a new measure of bot performance.
 
-#### Sending feedback
-
-Your feedback is important to us! To send feedback on this Beta feature, please use [this Google form](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform).
-
-### What is MACS?
+### What is a MACS?
 
 A Meaningful Automation Conversation Score or MACS is a measure of the quality of a bot conversation. 
 
@@ -43,10 +39,10 @@ An average score (a floating number) is also calculated for each bot to indicate
 Scoring like this makes it fast and easy to understand how efficient and fluid a bot conversation was, and a bot’s performance overall. With this knowledge, you can take action and tune your low-performing bots for improved performance.
 
 #### Constraints and caveats
+* MACS scoring is only available for the North America region, and only for Messaging, not for Chat.
+* MACS scoring is only available for bots built in Conversation Builder. For a third-party bot, “N/A” for “Not Applicable” is displayed as the MACS.
 
-MACS scoring is only available for bots built in Conversation Builder. For a third-party bot, “N/A” for “Not Applicable” is displayed as the MACS.
-
-### Why use MACS?
+### Why use the MACS?
 
 Other measures can inform you about the quality of conversations, but they do have some shortcomings when it comes to conversations with bots:
 
@@ -58,25 +54,23 @@ Other measures can inform you about the quality of conversations, but they do ha
 
 * **Meaningful Connection Score (MCS)**: Research has revealed that humans don’t converse with bots like they do with humans: The number of words in each message decreases, and the use of emotional language is minimal. This means that LivePerson’s MCS, which uses natural language to measure the consumer’s sentiment as they message with an agent, isn’t a good indicator of the quality of a conversation with a bot.
 
-MACS addresses all these shortcomings because it identifies and quantifies the failure points that are *found in the conversation’s structure* to evaluate the conversation’s efficiency and fluidity.
+The MACS addresses all these shortcomings because it identifies and quantifies the failure points that are *found in the conversation’s structure* to evaluate the conversation’s efficiency and fluidity.
 
-What’s more, MACS is available for all bot conversations while post-conversation surveys are not.
+What’s more, a MACS is available for all bot conversations while post-conversation surveys are not.
 
-#### Benefits of MACS
+#### Benefits of the MACS
 
-MACS scoring makes it fast and easy to tune your bots for improved performance at scale.
-
-Using MACS, you can:
+MACS scoring makes it fast and easy to tune your bots for improved performance at scale. Using it, you can:
 
 * **Identify failed conversations**: Easily find the ones that required high consumer effort or produced consumer frustration.
-* **Review less, not more**: Perform a targeted review of conversation transcripts-not a random review-to locate the bot areas that need improvement.
+* **Review less, not more**: Perform a targeted review of conversation transcripts, not a random review, to locate the bot areas that need improvement.
 * **Diagnose and tune quickly**: Move directly from a failure point in a transcript to the interaction in the bot flow, where you can make changes.
 
-### How is MACS calculated?
+### How is a MACS calculated?
 
-There are two models responsible for MACS:
+There are two models responsible for a MACS:
 
-* A model that predicts what failure points are present in a conversation
+* A model that predicts what failure points are present in the conversation
 * A model that estimates a conversation quality score
 
 Both of these models were “trained” by having human experts manually annotate thousands of conversations. Using these models, each bot conversation that is closed is classified with a MACS 1, 2 or 3 where:
@@ -98,27 +92,27 @@ The score is calculated based on the presence of failure points in the conversat
 {: .important}
 A MACS is only calculated for closed conversations.<br><br>A MACS doesn't detect where an error occurs in a conversation; it detects whether or not it occurred somewhere in the conversation. However, you can aggregate MACS over interactions. This gives you an indication of where your bot is underperforming and, by looking at the errors, of what to do to fix it.
 
-#### Accuracy of MACS
+#### Accuracy of the MACS
 
-MACS has a correlation of ~.7 with human judgment. While this is quite good, expect the algorithm to make some classification mistakes from time to time. The strength of MACS comes from looking at the scores in aggregate, where one aspect is in common (e.g., the same error is detected, or the conversations included a specific interaction or intent).
+A MACS has a correlation of ~.7 with human judgment. While this is quite good, expect the algorithm to make some classification mistakes from time to time. The strength of MACS comes from looking at the scores in aggregate, where one aspect is in common (e.g., the same error is detected, or the conversations included a specific interaction or intent).
 
-### Enable or disable MACS
+### Display or hide MACS data
 
-MACS is a self-service feature that you can enable or disable at any time. 
+MACS is a self-service feature that you can display (turn on) or hide (turn off) at any time. 
 
 {: .important}
-Before enabling MACS, please consult with your LivePerson account representative.
+Before turning on MACS, please consult with your LivePerson account representative.
 
-If you disable MACS, be aware that this only hides the display of the feature in the user interface. MACS scoring of bot conversations still takes place behind the scenes.
+If you hide MACS data, be aware that this only hides the display of the feature and the data in the user interface. MACS scoring of bot conversations still takes place behind the scenes.
 
-**To enable or disable MACS**
+**To display or hide MACS data**
 
 1. From the Conversational AI dashboard of applications, select **Bot Accounts**.
 2. On the **Bot Accounts** tab, select your organization name.
 3. On the **Account Details** tab, do either of the following:
 
-    * To display MACS data, enable (turn on) the **Display Meaningful Automation Conversation Score (MACS)** setting.
-    * To hide MACS data, disable (turn off) the **Display Meaningful Automation Conversation Score (MACS)** setting.
+    * To display MACS data, turn on the **Display Meaningful Automation Conversation Score (MACS)** setting.
+    * To hide MACS data, turn off the **Display Meaningful Automation Conversation Score (MACS)** setting.
 
 ### Using MACS in Bot Analytics
 
@@ -192,3 +186,46 @@ Then click the associated interaction link that appears for the interaction that
 This opens the bot in Conversation Builder and displays that interaction in the dialog editor. You can then tune the bot right at the failure point, for improved performance.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_tune_bot.png">
+
+### FAQs
+
+#### For one of my bots, the Conversations metric doesn’t equal the sum of all conversations that received a MACS 1, 2 and 3. Why is this?
+
+On the bot's Overview page, the Conversations metric represents the total number of closed and open Conversational Cloud conversations in which the bot participated.
+
+On the bot’s MACS page, the counts of conversations receiving a MACS 1, 2 and 3 are for closed conversations.
+
+<img style="width:600px" src="img/ConvoBuilder/macs_closed.png">
+
+Since a MACS isn’t calculated for open conversations, the two metrics can be different at times.
+
+#### In the Sample Conversations, I see conversations that have a MACS score, but the MACS reason is blank. How can a score be assigned to a conversation if there are no reasons?
+
+The MACS reasons point towards issues with the bot’s responses. If there are no issues detected, the conversation typically will have higher quality and will receive a MACS of 3. There will be exceptions to this, as our reasons do not capture all possible issues and do not have perfect accuracy.
+
+#### I set a filter to show sample conversations where the bot didn’t understand (MACS Reason = Doesn’t understand). But in the sample conversations, I see conversations where other MACS reasons are found too. Why is this?
+
+A single conversation can have multiple MACS reasons found within it. So if you filter the results using one MACS reason (or a few), you might see conversations that include those reasons as well as others.
+
+### Sending feedback
+
+Your feedback about this Beta feature is important to us, and you can send it to us in two ways:
+
+* Send MACS score-related feedback using the **Feedback** widget
+* Send overall feedback using [this survey](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform)
+
+#### Sending score-related feedback
+
+LivePerson is interested in hearing your feedback regarding MACS scoring. After reviewing a conversation transcript, please let us know whether you agree with the calculated score. And if you didn't agree, please let us know why.
+
+You can quickly and easily provide this feedback using the **Feedback** widget that's available in the lower-right corner of the screen.
+
+<img style="width:800px" src="img/ConvoBuilder/macs_feedback1.png">
+
+The **Feedback** widget lets you rate the experience on a scale of 1 to 5 (Did you agree with the score?), and it provides an area where you can explain your rating (If you didn't agree, why?). So we can trace your feedback back to the conversation, include a screenshot that shows the conversation ID.
+
+<img style="width:400px" src="img/ConvoBuilder/macs_feedback2.png">
+
+#### Sending overall feedback
+
+After you’ve spent some time using MACS, we encourage you to send feedback via [our survey](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform). The survey captures valuable information about your experience and helps us to identify areas for enhancement.

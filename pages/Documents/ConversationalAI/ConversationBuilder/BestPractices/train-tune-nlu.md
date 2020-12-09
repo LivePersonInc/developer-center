@@ -21,7 +21,7 @@ Below are some best practices to keep in mind while using intents, entities, and
 
 ### Leverage bot analytics
 
-The Analytics portal can help you understand which of your intents are matching (or not) and give you the information you need to train and tune your intents. For help with leveraging analytics in this way, see [here](bot-analytics-leveraging-analytics.html).
+The Analytics portal can help you understand which of your intents are matching (or not) and give you the information you need to train and tune your intents. For help with leveraging analytics in this way, see [here](bot-analytics-tuning-opportunities.html).
 
 If you see utterances in the **Unmatched Phrases** that should be matching a particular intent or Knowledge Base article, you can add them to the training phrases for these items. Keep in mind the best practices for creating training phrases for [intents](intent-builder-intents.html#best-practices) and [internal knowledge bases](knowledge-base-internal-knowledge-bases-best-practices.html).
 
