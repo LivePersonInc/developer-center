@@ -961,4 +961,4 @@ Move on to the product guides to learn how to connect and configure your specifi
 
 - [Microsoft Bot Framework](bot-connectors-microsoft-bot-framework.html)
 
-- [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)
+- [Custom Third-Party Bots](bot-connectors-custom-third-party-bots.html)

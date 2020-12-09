@@ -358,7 +358,7 @@ Sending query to MS Bot Framework failed.
 This usually happens if the Endpoint is not responding in time.
 #### Solutions
 Make sure you send the response in time.
-If you are using a custom endpoint, double check it behaves exactly as the one we expect [Microsoft Bots](third-party-bots-microsoft-bot-framework.html)
+If you are using a custom endpoint, double check it behaves exactly as the one we expect [Microsoft Bots](third-party-bots-microsoft-direct-line-introduction.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.parser-crashed
 
@@ -367,7 +367,7 @@ The parser could not parse the provided input and therefore crashed.
 #### Reasons
 Malformed JSON, malformed payload.
 #### Solutions
-Double-check the payload and make sure it is same as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check the payload and make sure it is same as described [here](third-party-bots-microsoft-direct-line-basic-content.html) and [here](third-party-bots-microsoft-direct-line-advanced-features.html) 
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.response-missing
 
@@ -376,7 +376,7 @@ There is no response provided by the MS bot.
 #### Reasons
 Implementation error on MS bot.
 #### Solutions
-Double-check the payload and make sure it is same as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check the payload and make sure it is same as described [here](third-party-bots-microsoft-direct-line-basic-content.html) 
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.activity.invalid-type
 
@@ -385,7 +385,7 @@ The provided activity type is not supported.
 #### Reasons
 The bot is not capable of handling this activity type.
 #### Solutions
-Double-check that you are only using supported types as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check that you are only using supported activity types as described [here](third-party-bots-microsoft-direct-line-basic-content.html) 
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.activity.invalid-name
 
@@ -394,4 +394,4 @@ The provided activity name is not supported.
 #### Reasons
 The bot is not capable of handling this activity name.
 #### Solutions
-Double-check that you are only using supported activity names as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check that you are only using supported activity names as described [here](third-party-bots-microsoft-direct-line-basic-content.html#bot-actions) 
