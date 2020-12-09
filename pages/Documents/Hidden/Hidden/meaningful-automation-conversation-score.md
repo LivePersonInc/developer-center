@@ -165,11 +165,7 @@ Then review the transcript to identify the failure point in the conversation.
 
 ##### Tune the bot
 
-After you’ve identified the failure point in the conversation, click **Show Dialogs & Interactions** in the upper-right corner of the transcript window.
-
-<img style="width:800px" src="img/ConvoBuilder/macs_show_interactions.png">
-
-Then click the associated interaction link that appears for the interaction that is causing the failure.
+After you’ve identified the failure point in the conversation, click the link for the interaction that is causing the failure.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_select_interaction.png">
 
