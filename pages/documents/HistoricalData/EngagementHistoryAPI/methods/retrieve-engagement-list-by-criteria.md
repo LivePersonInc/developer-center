@@ -54,7 +54,8 @@ Filter is sent in the POST data with the following JSON structure.
 | chatMCS {from,to} | Range of Meaningful Conversation Score in a particular chat (including the boundaries).  | numeric, numeric| Optional | Either “from” or “to” fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible values of MCS, respectively. |
 | hasInteractiveCoBrowse | Indication whether an interactive CoBrowse session occurred during the chat | Boolean | Optional |  |
 | coBrowseDuration {from,to} | Range of CoBrowse session duration in seconds | numeric, numeric| Optional | If passed, then from and to are both mandatory. |
-| lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT
+| lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT |
+| predictionLabel | An array of prediction labels. | Array `<String>` | Optional | In order to search for a specific phrase, wrap the phrase in quotation marks. |
 
 
 **Request Example 1:**
