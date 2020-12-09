@@ -54,9 +54,7 @@ Other measures can inform you about the quality of conversations, but they do ha
 
 * **Meaningful Connection Score (MCS)**: Research has revealed that humans don’t converse with bots like they do with humans: The number of words in each message decreases, and the use of emotional language is minimal. This means that LivePerson’s MCS, which uses natural language to measure the consumer’s sentiment as they message with an agent, isn’t a good indicator of the quality of a conversation with a bot.
 
-The MACS addresses all these shortcomings because it identifies and quantifies the failure points that are *found in the conversation’s structure* to evaluate the conversation’s efficiency and fluidity.
-
-What’s more, a MACS is available for all bot conversations while post-conversation surveys are not.
+The MACS addresses all these shortcomings because it identifies and quantifies the failure points that are *found in the conversation’s structure* to evaluate the conversation’s efficiency and fluidity. What’s more, a MACS is available for all bot conversations while post-conversation surveys are not.
 
 #### Benefits of the MACS
 
@@ -155,14 +153,6 @@ In our example image above, we’ve used the score filters to display just the d
 {: .important}
 The list of conversations is a sample of up to 100 bot conversations that meet the defined criteria. The conversations are distributed across the selected scores, so, for example, if you select to show conversations with a MACS 1 and 2, you’ll see some number of conversations with a MACS 1 and some number of conversations with a MACS 2. The distribution might not be even since this depends on the data that’s available.
 
-If you want to search for a specific conversation—any conversation that falls within the specified date range regardless of whether it appears in the sample—enter its conversation ID in the search box. It will be displayed in the **Sample Conversations** list regardless of how the filters are set.
-
-<img style="width:800px" src="img/ConvoBuilder/macs_search_conv.png">
-
-When searching for a conversation by its ID, be aware that conversation IDs are truncated on the MACS page. To get the full conversation ID, click the truncated ID to open the transcript window. The full ID is displayed at the top.
-
-<img style="width:800px" src="img/ConvoBuilder/macs_conv_id.png">
-
 ##### Analyze the data
 
 Once you’ve displayed the conversations that you want to review, select one by its ID to display the transcript.
@@ -186,6 +176,16 @@ Then click the associated interaction link that appears for the interaction that
 This opens the bot in Conversation Builder and displays that interaction in the dialog editor. You can then tune the bot right at the failure point, for improved performance.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_tune_bot.png">
+
+#### Searching for a conversation 
+
+If you want to search for a specific conversation—any conversation that falls within the specified date range regardless of whether it appears in the sample—enter its full conversation ID in the search box on the MACS page. It will be displayed in the **Sample Conversations** list regardless of how the other filters are set.
+
+<img style="width:800px" src="img/ConvoBuilder/macs_search_conv.png">
+
+When searching for a conversation by its full conversation ID, be aware that conversation IDs are truncated on the MACS page for readability. You can get a conversation's full ID by clicking the truncated ID to open the transcript window. The full ID is displayed at the top.
+
+<img style="width:700px" src="img/ConvoBuilder/macs_conv_id.png">
 
 ### FAQs
 
@@ -222,9 +222,13 @@ You can quickly and easily provide this feedback using the **Feedback** widget t
 
 <img style="width:800px" src="img/ConvoBuilder/macs_feedback1.png">
 
-The **Feedback** widget lets you rate the experience on a scale of 1 to 5 (Did you agree with the score?), and it provides an area where you can explain your rating (If you didn't agree, why?). So we can trace your feedback back to the conversation, include a screenshot that shows the conversation ID.
+The **Feedback** widget lets you rate the experience on a scale of 1 to 5 (Did you agree with the score?), and it provides an area where you can explain your rating (If you didn't agree, why?). So we can trace your feedback back to the actual conversation, copy the full conversation ID and paste it into your message, like we've done below.
 
 <img style="width:400px" src="img/ConvoBuilder/macs_feedback2.png">
+
+The full conversation ID can be found at the top of the transcript window.
+
+<img style="width:700px" src="img/ConvoBuilder/macs_feedback3.png">
 
 #### Sending overall feedback
 
