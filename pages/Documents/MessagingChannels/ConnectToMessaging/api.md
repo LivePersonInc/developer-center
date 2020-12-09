@@ -17,7 +17,7 @@ Connect To Messaging (C2M) is a product offering from LivePerson allowing brands
 
 ### Getting Started
 
-1. Onboarding to C2M is mandatory before it.  
+1. Onboarding to C2M is a mandatory process before running APIs.
 2. Brand’s system should integrate with two C2M API endpoints, which are <strong><i>Eligibility</i></strong> and <strong><i>Invite</i></strong>. 
   * <strong><i>Eligibility:</i></strong> Brands call this endpoint to check whether a consumer is reachable via a messaging channel.
   * <strong><i>Invite:</i></strong> Brands call this endpoint to send a messaging invitation to transfer the customer from IVR to one of their supported channels.
@@ -59,7 +59,6 @@ Click [**Eligibility**](https://app.swaggerhub.com/apis-docs/nsavla/Connect_To_M
 | consumerPhoneNumber | string | yes | Consumer’s phone number(E.164 format with leading "+") |
 | handoffId | string | yes | C2M handoff Id |
 | sde | array | no | Array of ctmrinfo and/or personal SDEs |
-| sdes.* | object | no | SDEs: ctmrinfo and/or personal. See from [here](https://developers.liveperson.com/engagement-attributes-types-of-engagement-attributes.html) |
 | templateVariables | object | no | Key-value pairs of variables for the template |
 | ivrNumber | string | no | The ivrNumber that brands want to use. Some brands have more than 1 ivrNumber and this field clears the ambiguity. |
 
@@ -205,7 +204,10 @@ Click [**Invite**](https://app.swaggerhub.com/apis-docs/nsavla/Connect_To_Messag
 ### Frequently Asked Questions
 
 <strong>What is the rate limit for the API?</strong>
-The current rate limit is 30 TPS/second/brand per API.
+The current rate limit is 30 TPS/seconds per brand. 
+
+<strong>What is the recommended action from brands for 429 responses?</strong>
+We recommend a request be retried (3 attempts with exponential retry with delay of 5 sec) when witnessing 429 status code.
 
 <strong>Which channels are supported as of now?</strong>
 C2M supports SMS-Twilio and WA channels.
@@ -231,10 +233,10 @@ C2M service does not create or consume consumer JWT or other JWT except APP JWT.
 <strong>What should the authentication header look like, is the bearer token the only thing required even in production usage? Do we need to include our ConsumerKey/Secret or our AccessToken/Secret that we use in the 1.0 API at all, or any other information?</strong>
 App Jwt will be consumed as Bearer Token. No other key, secret or token will be consumed by C2M Messaging api.
 
-<strong>How does C2M 2.0 api provide status of message e.g. success/failure of delivery ?</strong>
-The C2M 2.0 campaign api is asynchronous meaning that the success and failure of a message to a recipient is noted only when the recipient is picked from the C2M internal queue and a message is sent as per pre configured message rate. The [conversations](#conversations-api-example-request-and-response) api will provide the status of recipients tied to the campaign created.
+<strong>How does C2M 2.0 api provide a report?</strong>
+We will have the report API, so stay tuned. 
 
-<strong>Of the error cases described above, which of those errors should we consider "retry-able"? For example, a bad request due to a missing field is not retry-able because it will just always fail, but a case where one of the downstream services was temporarily unavailable could warrant a retry. Which error cases that we could get back from the /campaigns endpoint are retryable and how should we handle a retry to avoid sending duplicate messages to a customer?</strong>
+<strong>Of the error cases described above, which of those errors should we consider "retry-able"? For example, a bad request due to a missing field is not retry-able because it will just always fail, but a case where one of the downstream services was temporarily unavailable could warrant a retry.</strong>
 C2M Messaging service has retry mechanism internally on dependent services to reduce failures due to transient errors.
 
 <strong>What’s the lookback period?</strong>
