@@ -12,7 +12,7 @@ layout: hidden-layout
 
 LivePerson is pleased to announce the *Beta release* of the Meaningful Automation Conversation Score or MACS, which is a new measure of bot performance.
 
-### What is a MACS?
+### What is MACS?
 
 A Meaningful Automation Conversation Score or MACS is a measure of the quality of a bot conversation. 
 
@@ -40,9 +40,9 @@ Scoring like this makes it fast and easy to understand how efficient and fluid a
 
 #### Constraints and caveats
 * MACS scoring is only available for the North America region, and only for Messaging, not for Chat.
-* MACS scoring is only available for bots built in Conversation Builder. For a third-party bot, “N/A” for “Not Applicable” is displayed as the MACS.
+* MACS scoring is only available for bots built in Conversation Builder. For a third-party bot, “N/A” for “Not Applicable” is displayed as the MACS score.
 
-### Why use the MACS?
+### Why use MACS?
 
 Other measures can inform you about the quality of conversations, but they do have some shortcomings when it comes to conversations with bots:
 
@@ -54,9 +54,9 @@ Other measures can inform you about the quality of conversations, but they do ha
 
 * **Meaningful Connection Score (MCS)**: Research has revealed that humans don’t converse with bots like they do with humans: The number of words in each message decreases, and the use of emotional language is minimal. This means that LivePerson’s MCS, which uses natural language to measure the consumer’s sentiment as they message with an agent, isn’t a good indicator of the quality of a conversation with a bot.
 
-The MACS addresses all these shortcomings because it identifies and quantifies the failure points that are *found in the conversation’s structure* to evaluate the conversation’s efficiency and fluidity. What’s more, a MACS is available for all bot conversations while post-conversation surveys are not.
+MACS addresses all these shortcomings because it identifies and quantifies the failure points that are *found in the conversation’s structure* to evaluate the conversation’s efficiency and fluidity. What’s more, MACS is available for all bot conversations while post-conversation surveys are not.
 
-#### Benefits of the MACS
+#### Benefits of MACS
 
 MACS scoring makes it fast and easy to tune your bots for improved performance at scale. Using it, you can:
 
@@ -64,9 +64,9 @@ MACS scoring makes it fast and easy to tune your bots for improved performance a
 * **Review less, not more**: Perform a targeted review of conversation transcripts, not a random review, to locate the bot areas that need improvement.
 * **Diagnose and tune quickly**: Move directly from a failure point in a transcript to the interaction in the bot flow, where you can make changes.
 
-### How is a MACS calculated?
+### How is MACS calculated?
 
-There are two models responsible for a MACS:
+There are two models responsible for MACS:
 
 * A model that predicts what failure points are present in the conversation
 * A model that estimates a conversation quality score
@@ -90,9 +90,9 @@ The score is calculated based on the presence of failure points in the conversat
 {: .important}
 A MACS is only calculated for closed conversations.<br><br>A MACS doesn't detect where an error occurs in a conversation; it detects whether or not it occurred somewhere in the conversation. However, you can aggregate MACS over interactions. This gives you an indication of where your bot is underperforming and, by looking at the errors, of what to do to fix it.
 
-#### Accuracy of the MACS
+#### Accuracy of MACS
 
-A MACS has a correlation of ~.7 with human judgment. While this is quite good, expect the algorithm to make some classification mistakes from time to time. The strength of MACS comes from looking at the scores in aggregate, where one aspect is in common (e.g., the same error is detected, or the conversations included a specific interaction or intent).
+MACS has a correlation of ~.7 with human judgment. While this is quite good, expect the algorithm to make some classification mistakes from time to time. The strength of MACS comes from looking at the scores in aggregate, where one aspect is in common (e.g., the same error is detected, or the conversations included a specific interaction or intent).
 
 ### Display or hide MACS data
 
@@ -124,7 +124,7 @@ The main dashboard in Bot Analytics displays each bot’s average MACS (a floati
 
 <img style="width:800px" src="img/ConvoBuilder/macs_on_dashboard.png">
 
-When assessing the MACS of your bots, keep in mind that the score primarily is meaningful for bots that accomplish specific business purposes through the use of conversation flows. The score isn’t as meaningful for other types of bots, e.g., routing bots and FAQ bots.
+When assessing the scores of your bots, keep in mind that MACS primarily is meaningful for bots that accomplish specific business purposes through the use of conversation flows. The score isn’t as meaningful for other types of bots, e.g., routing bots and FAQ bots.
 
 On the main dashboard, click a bot’s MACS to go to the **MACS** page for the bot. Here’s where you can analyze the data.
 
@@ -151,7 +151,7 @@ Note the following about the filters:
 In our example image above, we’ve used the score filters to display just the data for conversations with a MACS of 1 (Bad). We’ve also used the MACS Reason detail filter to further refine the data to display just conversations where the bot didn’t understand. Beneath the charts, this gives us a sample list of bot conversations that meet that criteria.
 
 {: .important}
-The list of conversations is a sample of up to 100 bot conversations that meet the defined criteria. The conversations are distributed across the selected scores, so, for example, if you select to show conversations with a MACS 1 and 2, you’ll see some number of conversations with a MACS 1 and some number of conversations with a MACS 2. The distribution might not be even since this depends on the data that’s available.
+The list of conversations is a sample of up to 100 bot conversations that meet the defined criteria. The conversations are distributed across the selected scores, so, for example, if you select to show conversations with a MACS of 1 and 2, you’ll see some number of conversations with a MACS 1 and some number of conversations with a MACS 2. The distribution might not be even since this depends on the data that’s available.
 
 ##### Analyze the data
 
