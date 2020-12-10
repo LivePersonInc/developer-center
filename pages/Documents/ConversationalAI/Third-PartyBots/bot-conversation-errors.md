@@ -9,8 +9,7 @@ indicator: both
 
 ## Introduction
 
-This document describes possible errors which can be thrown during a conversation
-
+This document describes possible errors which can be thrown during a conversation, with the reason for the error and the solution to fix the error.
 
 ### com.liveperson.bot-connectors-worker.error.connector.messaging.send-message
 
@@ -48,7 +47,6 @@ This happens if the bot could not transfer the conversation to the desired messa
 Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
 #### Solutions
 None.
-
 
 ### com.liveperson.bot-connectors-worker.error.connector.messaging.conversation-closed
 
@@ -435,7 +433,6 @@ This indicates an issue fetching the SDEs because required properties are missin
 Mostly this issue happens because of a wrong integration on customer end where no Visitor Session is created before starting the conversation.  
 #### Solutions
 Please ensure that you create a Visitor Session prior to starting the conversation. [Website Monitoring](app-engagement-api-overview.html).
-
 
 ### com.liveperson.bot-connectors-worker.error.sdes-service.uauth-sdes-entry-is-empty
 
