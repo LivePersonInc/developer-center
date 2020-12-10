@@ -442,4 +442,4 @@ This indicates an issue fetching the SDEs.
 Mostly this issue happens because of a wrong integration on customer end where no Visitor Session is created before starting the conversation. Another reason could be that no SDEs were set.
 #### Solutions
 Please ensure that you create a Visitor Session prior to starting the conversation. [Website Monitoring](app-engagement-api-overview.html). 
-Also please check that you set the SDEs correctly accordingly. [Engagement Attributes](engagement-attributes-api-engagement-attributes.html)
+Also please check that you set the SDEs correctly. [Engagement Attributes](engagement-attributes-api-engagement-attributes.html)
