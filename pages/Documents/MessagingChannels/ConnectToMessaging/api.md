@@ -30,7 +30,7 @@ C2M is deployed in three regions. **North America**, **EMEA**(Europe, Middle Eas
 
 ### Eligibility API
 
-Click [**Eligibility**](https://app.swaggerhub.com/apis-docs/nsavla/Connect_To_Messaging/1.0.0#/default/post_account__accountId__eligibility) to go through API spec and use example here to get started.
+Click [**Eligibility**](https://connect-to-messaging.dev.fs.liveperson.com/api/api-docs/?api=c2m#/default/post_account__accountId__eligibility) to go through API spec and use example here to get started.
 
 | Method | URI  |
 | :--- | :--- |
@@ -104,7 +104,7 @@ Click [**Eligibility**](https://app.swaggerhub.com/apis-docs/nsavla/Connect_To_M
 
 ### Invite API
 
-Click [**Invite**](https://app.swaggerhub.com/apis-docs/nsavla/Connect_To_Messaging/1.0.0#/default/post_account__accountId__invite) to go through API spec and use example here to get started.
+Click [**Invite**](https://connect-to-messaging.dev.fs.liveperson.com/api/api-docs/?api=c2m#/default/post_account__accountId__invite) to go through API spec and use example here to get started.
 
 | Method | URI  |
 | :--- | :--- |
@@ -244,7 +244,7 @@ C2M Messaging service has retry mechanism internally on dependent services to re
 - Lookback period can be pre-configured up to 30 days. Current maximum lookback period is 30 days from when messages are sent using C2M API. Example: When a message is sent to consumer using C2M API and if consumer replies within 30 days from when message was sent, the response will be redirected to LE agent according to specified skill. A response after 30 days will not be treated as a conversation. Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
 <strong>How do we know which field is optional or required?</strong>
-Refer to this document and [swagger](https://app.swaggerhub.com/apis-docs/nsavla/Connect_To_Messaging/1.0.0#/).
+Refer to this document and [swagger](https://connect-to-messaging.dev.fs.liveperson.com/api/api-docs/?api=c2m).
 
 
 | Field Name | Limitation |
