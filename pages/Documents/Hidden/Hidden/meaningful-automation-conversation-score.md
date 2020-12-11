@@ -22,7 +22,7 @@ LivePerson has found through research that consumer effort and emotion are key d
 * Was the consumer stuck in an endless loop? 
 * Did a bad transfer to an agent occur?
 
-As an example, here below is part of a conversation with two types of failure points:
+Here below is part of a conversation with two types of failure points:
 
 <img style="width:800px" src="img/ConvoBuilder/macs_example_conv.png">
 
@@ -202,6 +202,12 @@ The MACS reasons point towards issues with the bot’s responses. If there are n
 #### I set a filter to show sample conversations where the bot didn’t understand (MACS Reason = Doesn’t understand). But in the sample conversations, I see conversations where other MACS reasons are found too. Why is this?
 
 A single conversation can have multiple MACS reasons found within it. So if you filter the results using one MACS reason (or a few), you might see conversations that include those reasons as well as others.
+
+#### One of my conversations has multiple scores assigned to it. Why is this?
+A conversation can have multiple “legs,” where a “leg” in a conversation starts with one agent, and it ends when the conversation is transferred to another agent. Multiple legs of a conversation have the same conversation ID. 
+
+A MACS score is calculated for each leg of a conversation, so you might see a single conversation with multiple MACS scores assigned to it.
+
 
 ### Sending feedback
 
