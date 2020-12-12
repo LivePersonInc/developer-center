@@ -707,7 +707,7 @@ In activity mode - Also the color of android:windowBackground.
 
 
 #### conversation_background (image)
-Sets the conversation background image (applicable on Activity mode only).
+Sets the conversation background image.
 
 **Type:** drawable
 
@@ -1822,7 +1822,7 @@ Available options:
 3. FirstUnreadMessage
 
 #### lp_scroll_when_foreground
-Configures the scroll behavior when bring conversaton screen to foreground from background.
+Configures the scroll behavior when bring conversation screen to foreground from background.
 
 - **Type:** string
 - **Default value:** LastPosition
@@ -1833,7 +1833,7 @@ Available options:
 3. FirstUnreadMessage
 
 #### lp_scroll_when_push_notification
-Configures the scroll behavior when open conversaton screen by tapping on push notification.
+Configures the scroll behavior when open conversation screen by tapping on push notification.
 
 - **Type:** string
 - **Default value:** Bottom
