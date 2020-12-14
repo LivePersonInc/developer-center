@@ -116,7 +116,7 @@ There are 2 authenticated connection methods:
     * Possible states:
         * LPConversationsHistoryStateToDisplay.ALL - Show All Conversations (**Default**)
         * LPConversationsHistoryStateToDisplay.CLOSE - Shows only closed Conversations
-        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Converstations
+        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Conversations
 
    ```java
    new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversationsHistoryStateToDisplay.ALL);
@@ -399,6 +399,18 @@ public static void logOut(Context context, String brandId, String appId, LogoutL
 | appId | The host app ID. |
 | logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
 
+```java
+public static void logOut(Context context, String brandId, String appId, boolean forceLogOut, PushUnregisterType type, LogoutLivePersonCallback logoutCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| context | A context from the host app. |
+| brandId | An account ID. |
+| appId | The host app ID. |
+| forceLogOut | When true, SDK force a user logout no matter unregisterPusher succeed or failed. When false, SDK waits unregisterPusher succeed before logout. |
+| type | See [PushUnregisterType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushunregistertype) for details. |
+| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
 
 ### markConversationAsNormal
 
@@ -627,7 +639,7 @@ Signup flow is now deprecated. Please use an authenticated connection method ins
     * Possible states:
         * LPConversationsHistoryStateToDisplay.ALL - Show All Conversations (**Default**)
         * LPConversationsHistoryStateToDisplay.CLOSE - Shows only closed Conversations
-        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Converstations
+        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Conversations
 
    ```java
    new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversationsHistoryStateToDisplay.ALL);
