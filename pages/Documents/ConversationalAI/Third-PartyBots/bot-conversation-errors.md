@@ -9,8 +9,7 @@ indicator: both
 
 ## Introduction
 
-This document describes possible errors which can be thrown during a conversation
-
+This document describes possible errors which can be thrown during a conversation, with the reason for the error and the solution to fix the error.
 
 ### com.liveperson.bot-connectors-worker.error.connector.messaging.send-message
 
@@ -45,7 +44,25 @@ See the documentation for the individual vendors on how to set TTR properly
 #### Description
 This happens if the bot could not transfer the conversation to the desired messaging skill.
 #### Reasons
-Usually, this happens if there is an íssue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
+Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
+#### Solutions
+None.
+
+### com.liveperson.bot-connectors-worker.error.connector.messaging.conversation-closed
+
+#### Description
+This happens if the bot tries to send commands to an already closed conversation.
+#### Reasons
+Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
+#### Solutions
+None.
+
+### com.liveperson.bot-connectors-worker.error.connector.messaging.agent-not-authorized
+
+#### Description
+This happens if the bot tried to send a command to a conversation which is not assigned to the bot anymore.
+#### Reasons
+Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation or the conversation was transferred to a new agent in the meantime
 #### Solutions
 None.
 
@@ -396,3 +413,34 @@ The provided activity name is not supported.
 The bot is not capable of handling this activity name.
 #### Solutions
 Double-check that you are only using supported activity names as described [here](third-party-bots-microsoft-direct-line-basic-content.html#bot-actions) 
+
+### com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-faas-request
+
+#### Description
+This indicates an issue during Faas invocation. 
+#### Reasons
+This could have multiple reasons: function code non working, function invocation was not finished after 30s, Faas Quota limit was reached.
+#### Solutions
+Please verify and ensure that you have enough API calls quota left for FaaS function and make sure that FaaS function is working and invokable. Refer to the [Faas Documentation](liveperson-functions-deployment.html#testing-your-function) to understand how to test your function code. 
+Furthermore, please ensure your defined function follow the standard implementation as described in Third-Party bots documentation for [Custom Integration](third-party-bots-custom-integration.html). Failure to do so will result in the erroneous result.
+
+If none of these applies and the errors persist, please escalate to LP Support and provide the exact error information by copying it from within the Conversation Errors UI.
+
+### com.liveperson.bot-connectors-worker.error.sdes-service.missing-session-or-visitor-id
+
+#### Description
+This indicates an issue fetching the SDEs because required properties are missing. 
+#### Reasons
+Mostly this issue happens because of a wrong integration on customer end where no Visitor Session is created before starting the conversation.  
+#### Solutions
+Please ensure that you create a Visitor Session prior to starting the conversation. [Website Monitoring](app-engagement-api-overview.html).
+
+### com.liveperson.bot-connectors-worker.error.sdes-service.uauth-sdes-entry-is-empty
+
+#### Description
+This indicates an issue fetching the SDEs.
+#### Reasons
+Mostly this issue happens because of a wrong integration on customer end where no Visitor Session is created before starting the conversation. Another reason could be that no SDEs were set.
+#### Solutions
+Please ensure that you create a Visitor Session prior to starting the conversation. [Website Monitoring](app-engagement-api-overview.html). 
+Also please check that you set the SDEs correctly. [Engagement Attributes](engagement-attributes-api-engagement-attributes.html)
