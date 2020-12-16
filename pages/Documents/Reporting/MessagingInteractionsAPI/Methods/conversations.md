@@ -281,6 +281,7 @@ participantId | ID of participant.  | string  |
 source  | Message's origin.| string  | deprecated (not supported)
 device  | Device the message was sent from.  | string  | deprecated (not supported)
 sentBy  | Who sent the message| string  | Valid values: "agent", "consumer"
+audience  | Who can receive the message (eg private message) | string  | Valid values: "ALL", "AGENTS_AND_MANAGERS"
 contextData| Contains context information about the consumer's message, including raw and structured metadata.| container| |
 
 *Context Data*
@@ -725,6 +726,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2016-08-29 15:14:19.564+0000",
           "timeL": 1472483659564,
           "device": "undefined",
+          "audience": "ALL",
           "sentBy": "Consumer"
         },
         {
@@ -745,6 +747,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2016-08-29 15:14:20.569+0000",
           "timeL": 1472483659564,
           "device": "undefined",
+          "audience": "ALL",
           "sentBy": "Agent",
           "contextData": {
             "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some reason\",\"reasonId\":\"some reason ID\"}]",
@@ -787,6 +790,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2016-08-29 15:15:42.568+0000",
           "timeL": 1472483742568,
           "device": "undefined",
+          "audience": "ALL",
           "sentBy": "Consumer"
         },
         {
@@ -807,6 +811,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2017-10-24 10:24:52.962+0000",
           "timeL": 1508840692962,
           "device": "undefined",
+          "audience": "ALL",          
           "sentBy": "Agent"
         }
       ],
