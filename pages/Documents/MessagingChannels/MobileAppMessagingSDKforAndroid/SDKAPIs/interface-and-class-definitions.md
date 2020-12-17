@@ -282,20 +282,3 @@ public interface SdeCallback {
   void onError(MonitoringErrorType errorType, Exception e);
 }
 ```
-
-### PushUnregisterType
-
-```java
-public enum PushUnregisterType {
-  NONE,
-  ALL,
-  AGENT
-}
-```
-
-| PushUnregisterType | Description |
-| :--- | :--- |
-| NONE | User will not be unregistered from pusher. |
-| ALL | User will be unregistered from pusher for both agent message and Proactive Messaging. |
-| AGENT | User will be unregistered from pusher only for agent message. |
-

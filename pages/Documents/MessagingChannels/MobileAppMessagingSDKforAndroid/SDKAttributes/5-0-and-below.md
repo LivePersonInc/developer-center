@@ -574,6 +574,8 @@ In activity mode - Also the color of android:windowBackground.
 #### conversation_background (image)
 Sets the conversation background image.
 
+If using Fragment mode, the minimum SDK version supports this configuration is v4.7.0.
+
 **Type:** drawable
 
 
