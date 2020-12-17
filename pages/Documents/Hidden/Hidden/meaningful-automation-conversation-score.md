@@ -211,10 +211,11 @@ A MACS score is calculated for each leg of a conversation, so you might see a si
 
 ### Sending feedback
 
-Your feedback about this Beta feature is important to us, and you can send it to us in two ways:
+Your feedback about this Beta feature is important to us! You can send it to us in the following ways:
 
-* Send MACS score-related feedback using the **Feedback** widget
-* Send overall feedback using [this survey](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform)
+* Email questions or feedback to `macs-feedback-LP@liveperson.com`.
+* Send MACS score-related feedback using the **Feedback** widget.
+* Send overall feedback via [this survey](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform). The survey captures valuable information about your experience and helps us to identify areas for enhancement.
 
 #### Sending score-related feedback
 
@@ -231,7 +232,3 @@ The **Feedback** widget lets you rate the experience on a scale of 1 to 5 (Did y
 The full conversation ID can be found at the top of the transcript window.
 
 <img style="width:700px" src="img/ConvoBuilder/macs_feedback3.png">
-
-#### Sending overall feedback
-
-After you’ve spent some time using MACS, we encourage you to send feedback via [our survey](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform). The survey captures valuable information about your experience and helps us to identify areas for enhancement.

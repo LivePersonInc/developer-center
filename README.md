@@ -208,6 +208,10 @@ You have two options to run the site locally after the first install:
 
 See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to Product Communications *before* starting to write your document so that we can advise on its structure.
 
+### Algolia
+Aloglia is the tool we use for the search bar. It generates a list of searchable items by indexing it in their dashboard which is then pulled into the search bar within the project
+
+To get the latest data to be added into algolia simply do a pull request on the production branch (master)
 
 ### Licensing
 
