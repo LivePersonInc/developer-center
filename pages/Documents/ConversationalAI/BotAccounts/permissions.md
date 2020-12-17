@@ -52,7 +52,7 @@ This permission provides full privileges for creating bots and related resources
 
 * Bots
 * Bot groups
-* Dialogs
+* Dialogs and dialog templates
 * Integrations
 * Global functions
 * Credentials

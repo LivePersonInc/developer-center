@@ -43,7 +43,7 @@ Some connectors may provide more or less functionality depending on the specific
 Please be advised that you should create fresh bot agents for your bots. Using the same bot agents for ConversationBuilder and ThirdPartyBots will break both bot instances. Conversational Cloud only allows one active user session per agent. Thus, bots created in Conversation Builder and Third-Party Bots with the same bot agent will eventually kick each other out.
 
 {: .important}
-Please be advised that we recommend to have one bot for 100 open and active conversations, if you want your bot to handle more load, please add more bots.
+Please be advised that we recommend to have one bot for 250 open and active conversations, if you want your to handle more load, please add more bots to ensure a smooth and convenient consumer experience. Furthermore we recommend adding at least 2 bots for one bot skill to support a failover and a higher availability in case of any service interruptions and issues.
 
 {: .important}
 We will be automatically error escalate any new conversation if the bot has reached the limit of 999 open conversations. To mitigate this issue, please consider setting a lower value for closing inactive conversations for your bot skills and also add more bots.
@@ -961,4 +961,4 @@ Move on to the product guides to learn how to connect and configure your specifi
 
 - [Microsoft Bot Framework](bot-connectors-microsoft-bot-framework.html)
 
-- [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)
+- [Custom Third-Party Bots](bot-connectors-custom-third-party-bots.html)
