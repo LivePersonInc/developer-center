@@ -73,7 +73,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |messageContentTypes | The type of the message  | Array `<String>` | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation  | String| Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
-responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
+responseTime |Agent's response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
 |contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to} | Range of NPS assigned to the conversation. | numeric, numeric| Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
@@ -167,7 +167,7 @@ conversationSurveys  | Contains information about the different surveys for the 
 coBrowseSessions  | Contains information about CoBrowse sessions for the current conversation.  | container
 summary  | Contains information about the conversation's summary. | container
 sdes  | List of Engagement Attributes. | container
-responseTime| Response time| container
+responseTime| Agent's response time| container
 dialogs  | Contains information about the different dialogs for the current conversation. | container
 intents  | Contains information about the intents that relate to the current conversation. | container
 uniqueIntents  | Contains basic information about the unique intents that relate to the current conversation. | container
@@ -276,7 +276,7 @@ type | Type of data  | string  | Valid values: "text", "file",
 messageData| Content of the message.| container  |
 messageId  | ID of message.| string  |
 seq  | Message's sequence in the conversation.  | string  | Does not have to be continuous, i.e. 0, 2, 5, etc.
-dialogId| ID of dialog bulk.  | long |
+dialogId| Dialog ID. A conversation may contains multiple dialogs (main dialog, survey dialog, etc.), each dialog identified by its unique ID.  | long | The main dialog id is the conversation id
 participantId | ID of participant.  | string  |
 source  | Message's origin.| string  | deprecated (not supported)
 device  | Device the message was sent from.  | string  | deprecated (not supported)
@@ -528,7 +528,7 @@ sdeType| Type of SDE.  | enum  |
 Name| Description| Type/Value
 :-------------- | :------------------------------------------------ | :---------
 latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond (by when should an agent respond to a message before it is considered overdue). -1 indicates waiting for consumer | long – epoch time in milliseconds
-configuredResponseTime | Conversation's configured response time. | long – epoch time in milliseconds
+configuredResponseTime | Conversation's configured agent response time. | long – epoch time in milliseconds
 
 _Dialog info_
 
