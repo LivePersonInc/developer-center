@@ -276,7 +276,7 @@ type | Type of data  | string  | Valid values: "text", "file",
 messageData| Content of the message.| container  |
 messageId  | ID of message.| string  |
 seq  | Message's sequence in the conversation.  | string  | Does not have to be continuous, i.e. 0, 2, 5, etc.
-dialogId| Dialog ID. A conversation may contains multiple dialogs (main dialog, survey dialog, etc.), each dialog identified by its unique ID.  | long | The main dialog id is the conversation id
+dialogId| Dialog ID. A conversation may contain multiple dialogs (main dialog, survey dialog, etc.), each dialog identified by its unique ID.  | long | The main dialog id is the conversation id
 participantId | ID of participant.  | string  |
 source  | Message's origin.| string  | deprecated (not supported)
 device  | Device the message was sent from.  | string  | deprecated (not supported)
