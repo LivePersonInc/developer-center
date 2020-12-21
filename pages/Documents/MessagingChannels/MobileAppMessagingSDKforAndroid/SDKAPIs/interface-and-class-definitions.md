@@ -252,8 +252,10 @@ public class MonitoringParams {
 
 ```java
 public enum PermissionType {
-  PHOTO_SHARING
-}  
+  PHOTO_SHARING,
+  DOCUMENT_SHARING,
+  VOICE_RECORDING
+}
 ```
 
 ### PushMessage

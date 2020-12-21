@@ -64,7 +64,14 @@
 
       </div>
       {% endif %}
-      {{ content | extlinks }}
+      <div class="post-content" itemprop="articleBody">
+      
+        {% if page.summary %}
+        <div class="summary">{{page.summary}}</div>
+        {% endif %}
+      
+        {{ content }}
+      </div>
     </div>
     <div id="jumpto">
       <div id="anchorlist">

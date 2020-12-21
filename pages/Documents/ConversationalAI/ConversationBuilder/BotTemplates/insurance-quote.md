@@ -15,10 +15,8 @@ The Insurance Quote template is designed to capture information related to insur
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-<!--
 {: .important}
 This bot template contains dialog templates that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).
--->
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_insu_quote_de.png">
 
@@ -118,7 +116,6 @@ Modify the following values in Global Functions:
 | botAgentSkillId | The skill id to transfer to |
 | botAgentSkillName | The skill name to transfer to |
 
-<!--
 ### Dialog templates
 This bot template contains multiple [dialog templates](conversation-builder-dialog-templates.html). All dialog templates are designed to work independently of one another and provide specific use case features to your bot.
 
@@ -187,4 +184,3 @@ Integrations:
 Global Function modifications:
 
 In Global Functions, `multiIns` is set to 'false' to ensure proper routing in the Pre-Process Code of the `Life_Other` interaction.
--->
