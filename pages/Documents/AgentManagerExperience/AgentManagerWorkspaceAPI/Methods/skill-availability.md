@@ -9,7 +9,9 @@ permalink: agent-manager-workspace-api.html
 indicator: messaging
 ---
 
-General description should be added here
+### General
+
+Skill availability API retrieves the the number of available agents per login status, grouped by skill
 
 ### Request
 
