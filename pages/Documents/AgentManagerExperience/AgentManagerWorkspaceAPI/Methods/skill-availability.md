@@ -11,7 +11,7 @@ indicator: messaging
 
 ### General
 
-Skill availability API retrieves the the number of available agents per login status, grouped by skill
+Skill availability API retrieves the number of available agents per login status, grouped by skill
 
 ### Request
 
