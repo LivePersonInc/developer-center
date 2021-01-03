@@ -33,7 +33,7 @@ The API is being used today in the LivePerson Conversational Cloud to display th
 
 **Note:**    
 
-This method is subject to Rate Limiting. User manager should not send more than *X concurrent request* (to be defined) and no more than *Y request per minute* (to be defined). Any additional requests might be rejected with a 429 Status Code. 
+This method is subjected to Rate Limiting. User manager should not send more than *X concurrent request* (to be defined) and no more than *Y request per minute* (to be defined). Any additional requests might be rejected with a 429 Status Code. 
 
 
 
