@@ -47,7 +47,7 @@ POST| https://[{domain}](/agent-manager-domain-api.html)/manager_workspace/api/a
 
 Name| Description  | Type/Value | Required | Notes
 :----- | :----------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-sort| Sort the results based on a given metric in a predefined order. | string  | Optional |  <br/>**Valid sort values:**<br/> agentLoad<br/>humanAgentLoad<br/>closedConversations<br/>avgTimeToResponse<br/>avgTimeToFirstResponseFirstAssignment<br/>avgTimeToFirstResponseAllAssignments<br/>avgWaitTime<br/>avgWaitTimeFirstResponse<br/>assignedConversations<br/>activeConversations<br/>onlineAgents<br/>awayAgents<br/>backSoonAgents<br/>**Valid order values:**<br/>asc/desc<br/>**Default sort:**<br/>key:asc
+sort| Sort the results based on a given metric in a predefined order. | string  | Optional |  <br/>**Valid sort values:**<br/> agentLoad<br/>humanAgentLoad<br/>closedConversations<br/>avgTimeToResponse<br/>avgTimeToFirstResponseFirstAssignment<br/>avgWaitTime<br/>avgWaitTimeFirstResponse<br/>assignedConversations<br/>activeConversations<br/>onlineAgents<br/>awayAgents<br/>backSoonAgents<br/>**Valid order values:**<br/>asc/desc<br/>**Default sort:**<br/>key:asc
 offset  | The offset specifies from which record to retrieve the data.  | numeric | Optional | Default is 0
 limit  | Max amount of keys (skillIds/agentGroupIds) to be retrieved in the response.  | numeric | Optional | Default is 50. Max value is 50.
 
