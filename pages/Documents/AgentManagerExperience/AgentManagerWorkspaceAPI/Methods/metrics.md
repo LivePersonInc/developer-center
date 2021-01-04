@@ -57,7 +57,7 @@ limit  | Max amount of keys (skillIds/agentGroupIds) to be retrieved in the resp
 |:---- | :---------- | :---------- | :------- | :---|
 |filters | Contains parameters to filter by. | Container  | Required | See detailed description [below](#filters)
 |metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>closed_conversations<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed
-|metricsToRetrieveCurrentValue | List of metrics retrieving the current value, not influenced by time | Array `<String>` | Optional | Valid values:<br/>assigned_conversations<br/>agent_load<br/>human_agent_load<br/>online_agents<br/>back_soon_agents<br/>away_agents<br/>available_slots
+|metricsToRetrieveCurrentValue | List of metrics retrieving the current value, not influenced by time | Array `<String>` | Optional | Valid values:<br/>assigned_conversations<br/>active_conversations<br/>agent_load<br/>human_agent_load<br/>online_agents<br/>back_soon_agents<br/>away_agents<br/>available_slots
 |responseSections| Represents whether we should return the "all" section, "groupBy" section or both.  | Array `<String>` | Optional | Valid values: all, groupBy. Default value - both sections are returned.
 |groupBy| Field according to which all of the metrics should be grouped.  | String | Optional | Valid values: skillId, agentGroupId. In case responseSections contains groupBy, a groupBy value must be returned in order to retrieve grouped metrics.
 
@@ -137,7 +137,8 @@ _metrics info_
 
 | Name| Description | Type/ Value| Notes|
 |-----|-------------|------------|------|
-| assignedConversations  | The number of open conversations currently handled by agents. limited to conversations which started within the past 30 days.| Long|
+| assignedConversations  | The number of open conversations currently assigned to the agent. limited to conversations which started within the past 30 days.| Long|
+| activeConversations  | The number of open conversations currently handled by the agent. limited to conversations which started within the past 30 days.| Long|
 | agentLoad| The total weight of assigned conversations as a percentage of the maximum concurrent conversations of all agents, including bots.| Double |
 | humanAgentLoad| The total weight of assigned conversations as a percentage of the maximum concurrent conversations of all human agents.| Double |
 | humanOnlineLoad| The total weight of assigned conversations as a percentage of the maximum concurrent conversations of all human online agents.| Double |
