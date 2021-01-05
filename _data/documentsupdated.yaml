@@ -966,8 +966,7 @@
     - documentname: Consumer Authentication
       pages:
       - pagename: Introduction
-      - pagename: Major Components
-      - pagename: Security
+      - pagename: Implementation Considerations
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API

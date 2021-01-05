@@ -1,29 +1,40 @@
 ---
-pagename: Major Components
+pagename: Implementation Considerations
 redirect_from:
-  - guides-authentication-majorcomponents.html
+  - guides-authentication-implementation-considerations.html
   - authentication-major-components.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Consumer Authentication
-permalink: consumer-authentication-major-components.html
+permalink: consumer-authentication-implementation-considerations.html
 order: 2
 indicator: both
 ---
 
-### Consumer Mobile App
+### User Authentication 
 
-The customer mobile app is responsible for user authentication against the brand servers. In order to use LivePerson services, it will use the LivePerson Messaging SDK. Upon opening the communication socket by the SDK, the LivePerson backend detects whether the account requires authentication. If authentication is required, the SDK will ask the mobile app to supply an OAuth 2.0 code or JWT (depending on the specific flow). The specific way that this response is generated is dependent on the brand’s decisions. A common implementation method is to request the customer server to generate such a response based on the user credentials that were already given during the login phase.
+**Brand's Digital Resources (Native Mobile App, Website)**  
+It is the brand responsability to authenticate the user within the brand's digital resrouces. Once authentication is completed, "token exchange" should take place using the LivePerson SDK. The recieved token should indicates which user authenticated.  
+LivePerson supports OIDC ID Tokens. The ID Token is a security token that contains claims about the authentication of an end-user by an authorization server when using a client, and potentially other requested claims. The ID Token is represented as a JSON Web Token ([JWT](https://openid.net/specs/openid-connect-core-1_0.html)).
+Currently, LivePerson supports two methods for passing the ID Token: [implicit](https://oauth.net/2/grant-types/implicit/) or [code flow](https://oauth.net/2/grant-types/authorization-code/).
 
-### Customer Web App
+**LivePerson SDK** ([iOS](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-overview.html), [Android](https://developers.liveperson.com/mobile-app-messaging-sdk-for-android-overview.html))  
+This is a LivePerson layer embedded into the customer app (mobile/web). It mediates between the app and the LivePerson Service and provides the interaction conversation UI. This layer calls the mobile app to supply an OAuth 2.0 code whenever the LivePerson Service needs it.
 
-The customer web app is very similar to the mobile app, except that it runs on a browser. It embeds the LivePerson Web SDK and should act in the same way as described above for the mobile app. The web app can display the embedded window originated by the LivePerson SDK, or open a Conversational Cloud popup window to interact with the consumer. When the Conversational Cloud embedded window is set to pop-out mode, the authentication must take place using a page redirect mechanism.
 
-### Customer Token Endpoint (Mandatory for Code Flow)
+### ID Token Exchange
 
-This endpoint implements the standard OpenID Connect [token endpoint](http://openid.net/specs/openid-connect-core-1_0.html#TokenEndpoint). This API accepts a valid OAuth 2.0 code along with the clientID and secret information. It should then respond with validation approval that contains some of the user’s basic information, encoded and signed as a [JWT](https://tools.ietf.org/html/rfc7519) and access_token for further inquiries.
+**ID Token exchange using LivePerson's SDK for native mobile application**  
+To authenticate a user (brand's consumer), the SDK requires an OAuth 2.0 code or JWT (depending on the specific flow) supplied by the mobile app. for implementation details please read [How It Works?](.....)
 
-**Example Request**:
+**ID Token exchange using JavaScript for web application**  
+The customer web app is based on an embedded LivePerson's Web-SDK. The web app can display the embedded window originated by the LivePerson SDK, or open a Conversational Cloud popup window to interact with the consumer. When the Conversational Cloud embedded window is set to pop-out mode, the authentication must take place using a page redirect mechanism.
+
+
+**Retrieving ID Token using 'Token Endpoint'**  
+In case using token endpoint which accepts a valid OAuth 2.0 code along with the clientID and secret information, response should include a vlaid ID Token. The token should contain user unique identifier and additional claims, encoded and signed as a [JWT](https://tools.ietf.org/html/rfc7519).
+
+Example of ID Token Request (made by LivePerson to your authorization server):
 
 ```http
 POST /oauth2/v3/token HTTP/1.1
@@ -37,7 +48,7 @@ redirect_uri=https://liveperson.net/oauth2/code_redirect&
 grant_type=authorization_code
 ```
 
-**Example Response**:
+Example of ID Token Response (your authorization server response to LivePerson):
 
 ```http
 HTTP/1.1 200 OK
@@ -46,7 +57,7 @@ Cache-Control: no-store
 Pragma: no-cache
 
 {
-   "access_token": "SlAV32hkKG",
+   "access_token": "SlAV32hkKG", # currently not in use
    "token_type": "Bearer",
    "expires_in": 3600,
    "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjFlOWdkazcifQ.ewogImlzc
@@ -78,10 +89,4 @@ The id_token in the response is standard JWT and can be translated to the unpack
 
 <div class="hide">Cleanup - Should add another component - Customer Authorization Endpoint, which is mandatory for external windows. This is the endpoint where users will log in and then be redirected to the external window page with the code/JWT as a query/hash param. Auth0 is an example for such a service, but the customer may want to implement their own landing page to manipulate query parameters and redirects rather than rely on a provided Auth service as is.)</div>
 
-### LivePerson SDK
 
-This is a LivePerson layer embedded into the customer app (mobile/web). It mediates between the app and the LivePerson Service and provides the interaction conversation UI. This layer calls the mobile app to supply an OAuth 2.0 code whenever the LivePerson Service needs it.
-
-### LivePerson Service
-
-This is the LivePerson Service used for interaction between the customer agent and the consumer. In the authentication flow, this server consumes the OAuth 2.0 code and then exchanges it with the customer token endpoint for access_token and id_token using the token endpoint. The service might also ask the userinfo endpoint for complementary information using the access_token.
