@@ -2,7 +2,7 @@
 pagename: Implementation Considerations
 redirect_from:
   - guides-authentication-implementation-considerations.html
-  - authentication-major-components.html
+  - authentication-implementation-considerations.html
 sitesection: Documents
 categoryname: "Security & Authentication"
 documentname: Consumer Authentication
