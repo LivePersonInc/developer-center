@@ -71,11 +71,25 @@ Note that we expect you to send the parameters under the `"request"` key - see t
 
 Request Body Example
 ```json
-    {
-      "request":{
-        "skill":"Sales","interactionTimeout":40,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36","LETagVisitorId":"rloXnVgEQ-iQuoOytvKNqA","LETagSessionId":"rN82d4rATN6EuiA4cJwaPg","LETagContextId":"2","engagementId":27469613,"campaignId":26948813,"language":"en-US"
-        }
+{
+    "request":{
+        "skill":"Sales",
+        "interactionTimeout":40,
+        "userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
+        "preChatLines": {
+          "line": [
+            "This is a pre-chat line 1",
+            "This is a pre-chat line 2"
+          ]
+        },
+        "LETagVisitorId":"rloXnVgEQ-iQuoOytvKNqA",
+        "LETagSessionId":"rN82d4rATN6EuiA4cJwaPg",
+        "LETagContextId":"2",
+        "engagementId":27469613,
+        "campaignId":26948813,
+        "language":"en-US"
     }
+}
 ```
 
 *Notes:*
@@ -127,9 +141,14 @@ Request Body Example
 Request Body Example
 
 ```json
-    {
-      "authChatConnId":568046210,"ssoKey":"k12197","engagementId":567609310,"LETagContextId":"2","LETagSessionId":"90o5l5twRUGu1rN7bzwNMA","LETagVisitorId":"RiM2JlOTcwOGIxZmNiNTk4"
-    }
+{
+    "authChatConnId":568046210,
+    "ssoKey":"k12197",
+    "engagementId":567609310,
+    "LETagContextId":"2",
+    "LETagSessionId":"90o5l5twRUGu1rN7bzwNMA",
+    "LETagVisitorId":"RiM2JlOTcwOGIxZmNiNTk4"
+}
 ```
 
 #### Response

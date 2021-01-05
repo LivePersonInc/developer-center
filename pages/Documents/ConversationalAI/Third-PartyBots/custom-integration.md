@@ -1,6 +1,8 @@
 ---
 pagename: Custom Integration
 redirect_from:
+  - custom-third-party-bots.html
+  - bot-connectors-custom-third-party-bots.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
@@ -40,7 +42,7 @@ Just like any other function, this function must be deployed before it can be us
 
 <div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
 
-#### Last Steps in Third Party Bots
+#### Last Steps in Third-Party Bots
 
 After you successfully implemented and deployed a LivePerson Function, press the refresh button next to the function selection menu and select your function.
 
@@ -185,6 +187,42 @@ const payload = {
     action: "TRANSFER",
     actionParameters: {
       skill: "bot-escalation",
+    },
+  },
+};
+```
+
+### Invoke LivePerson Function
+
+During a conversation, it is possible to trigger a different LivePerson Function. This provides a way to run additional custom logic with a bot.
+
+To invoke a different LivePerson Function, we use the `action` key in the response object as we did for a transfer (see example above). 
+
+| key          | value                                                      | notes                     |
+| ------------ | ---------------------------------------------------------- | ------------------------- |
+| action       | INVOCATION                                                 | case sensitive, mandatory |
+| lambdaUuid   | lambda UUID of LivePerson Function                         | case sensitive, mandatory |
+| payload      | content that will be sent to the LivePerson Function       | case sensitive            |
+| failOnError  | boolean that decides if bot escalates on failed invocation | case sensitive            |
+
+To retrieve the ***lambdaUuid*** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+
+In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter.
+
+The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**.
+
+
+```javascript
+const payload = {
+  messages: [
+    "Please wait will I check if we have any live agents online that can attend to you",
+  ],
+  context: {
+    action: "INVOCATION",
+    actionParameters: {
+      "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
+      "payload": "{ "some": "stuff"}",
+      "failOnError": true
     },
   },
 };
@@ -444,7 +482,7 @@ The method for closing a conversation is similar to the transfer action in that 
 
 The `action` key needs to be set to **CLOSE_CONVERSATION** to instruct the connector to close the conversation.
 
-Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a closeConversation action.
+Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a `closeConversation` action.
 
 ```javascript
 const payload = {
@@ -457,6 +495,22 @@ const payload = {
 };
 ```
 
+Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a `closeConversation` action without triggering the post conversation survey.
+
+```javascript
+const payload = {
+  messages: [
+    'Unfortunately I am unable to help you with this query. Have a nice day.'
+  ],
+  context: {
+    action: 'CLOSE_CONVERSATION',
+    actionParameters: {
+      withoutPcs: true // tell the connector not to trigger post conversation survey, instead close entire conversation
+    }
+  }
+};
+```
+
 ### Engagement attributes as context
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure below.
@@ -466,7 +520,7 @@ Figure showing Conversation Type step in creation/modification of bot configurat
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Custom Bots integration these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation `context` property is used. An example of the request body can be seen below:
 
-```javascript 1.8
+```javascript
 const {
   message,
   convId,

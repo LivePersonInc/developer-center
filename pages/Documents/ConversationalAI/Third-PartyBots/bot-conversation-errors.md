@@ -9,8 +9,7 @@ indicator: both
 
 ## Introduction
 
-This document describes possible errors which can be thrown during a conversation
-
+This document describes possible errors which can be thrown during a conversation, with the reason for the error and the solution to fix the error.
 
 ### com.liveperson.bot-connectors-worker.error.connector.messaging.send-message
 
@@ -45,7 +44,25 @@ See the documentation for the individual vendors on how to set TTR properly
 #### Description
 This happens if the bot could not transfer the conversation to the desired messaging skill.
 #### Reasons
-Usually, this happens if there is an íssue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
+Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
+#### Solutions
+None.
+
+### com.liveperson.bot-connectors-worker.error.connector.messaging.conversation-closed
+
+#### Description
+This happens if the bot tries to send commands to an already closed conversation.
+#### Reasons
+Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation.
+#### Solutions
+None.
+
+### com.liveperson.bot-connectors-worker.error.connector.messaging.agent-not-authorized
+
+#### Description
+This happens if the bot tried to send a command to a conversation which is not assigned to the bot anymore.
+#### Reasons
+Usually, this happens if there is an issue within the Liveperson APIs. Another reason could be that the customer has already closed the conversation or the conversation was transferred to a new agent in the meantime
 #### Solutions
 None.
 
@@ -112,6 +129,15 @@ QuickReplies are only supported for Messaging Conversations
 #### Solutions
 Do not send QuickReplies to Chat Conversations
 
+### com.liveperson.bot-connectors-worker.error.pipes.conversation-limit-checker.max-conv-limit-reached
+
+#### Description
+The bot does not accept new conversation anymore and instead error escalates them.
+#### Reasons
+To ensure the stability of our service, a bot can have a maximum number of 999 open conversations assigned.
+#### Solutions
+Add more bots to support handling such kind of load, you can check how to add a bot [here](third-party-bots-getting-started.html)
+
 ### com.liveperson.bot-connectors-worker.error.events-queue.not-catched-pipeline-error
 
 #### Description
@@ -136,9 +162,10 @@ Check for any interruption on Dialogflow side.
 #### Description
 This indicates an issue during Faas invocation.
 #### Reasons
-Mostly this happens if your quota limit is exceeded.
+This could have multiple reasons: function code non working, function invocation was not finished after 30s, Faas Quota limit was reached.
 #### Solutions
-Double-check you have enough api calls left for Faas.
+Please verify and ensure that you have enough API calls quota left for FaaS function and make sure that FaaS function is working and invokable. Refer to the [Faas Documentation](liveperson-functions-deployment.html#testing-your-function) to understand how to test your function code. 
+Furthermore, please ensure your defined function follow the standard implementation as described in Third-Party bots documentation for [Custom Integration](third-party-bots-custom-integration.html). Failure to do so will result in the erroneous result.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.missing-response-body
 
@@ -147,7 +174,7 @@ This happens if there is no response body provided.
 #### Reasons
 The Faas callback was invoked without a response body object.
 #### Solutions
-Provide a response body in the callback.
+Please make sure to provide a response body in the callback, for further information see [Custom Integration Documentation](liveperson-functions-deployment.html#testing-your-function)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-hook
 
@@ -156,7 +183,8 @@ Indicates that the Faas hook could not be invoked.
 #### Reasons
 Implementation errors inside Faas hook.
 #### Solutions
-Double-check and test the Faas Hook code.
+Double-check and test the Faas Hook code. You can refer to the [Faas Documentation](liveperson-functions-deployment.html#testing-your-function) to find out how to test your function code.
+Please also check the dedicated documentation for [Third-Party-Bots Faas Hooks](https://developers.liveperson.com/third-party-bots-hook-configuration.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.lex.composite-format-not-supported
 
@@ -346,8 +374,9 @@ Sending query to MS Bot Framework failed.
 #### Reasons
 This usually happens if the Endpoint is not responding in time.
 #### Solutions
-Make sure you send the response in time.
-If you are using a custom endpoint, double check it behaves exactly as the one we expect [Microsoft Bots](third-party-bots-microsoft-bot-framework.html)
+
+Make sure you send the response in time. Another reason could be an too small Azure instance, try to increase the provisioned resources for your bot.
+If you are using a custom endpoint, double check it behaves exactly as the one we expect [Microsoft Bots](third-party-bots-microsoft-direct-line-introduction.html)
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.parser-crashed
 
@@ -356,7 +385,7 @@ The parser could not parse the provided input and therefore crashed.
 #### Reasons
 Malformed JSON, malformed payload.
 #### Solutions
-Double-check the payload and make sure it is same as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check the payload and make sure it is same as described [here](third-party-bots-microsoft-direct-line-basic-content.html) and [here](third-party-bots-microsoft-direct-line-advanced-features.html) 
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.response-missing
 
@@ -365,7 +394,7 @@ There is no response provided by the MS bot.
 #### Reasons
 Implementation error on MS bot.
 #### Solutions
-Double-check the payload and make sure it is same as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check the payload and make sure it is same as described [here](third-party-bots-microsoft-direct-line-basic-content.html) 
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.activity.invalid-type
 
@@ -374,7 +403,7 @@ The provided activity type is not supported.
 #### Reasons
 The bot is not capable of handling this activity type.
 #### Solutions
-Double-check that you are only using supported types as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check that you are only using supported activity types as described [here](third-party-bots-microsoft-direct-line-basic-content.html) 
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.microsoft.activity.invalid-name
 
@@ -383,4 +412,35 @@ The provided activity name is not supported.
 #### Reasons
 The bot is not capable of handling this activity name.
 #### Solutions
-Double-check that you are only using supported activity names as described [here](third-party-bots-microsoft-bot-framework.html) 
+Double-check that you are only using supported activity names as described [here](third-party-bots-microsoft-direct-line-basic-content.html#bot-actions) 
+
+### com.liveperson.bot-connectors-worker.error.aivendor.faas.failed-faas-request
+
+#### Description
+This indicates an issue during Faas invocation. 
+#### Reasons
+This could have multiple reasons: function code non working, function invocation was not finished after 30s, Faas Quota limit was reached.
+#### Solutions
+Please verify and ensure that you have enough API calls quota left for FaaS function and make sure that FaaS function is working and invokable. Refer to the [Faas Documentation](liveperson-functions-deployment.html#testing-your-function) to understand how to test your function code. 
+Furthermore, please ensure your defined function follow the standard implementation as described in Third-Party bots documentation for [Custom Integration](third-party-bots-custom-integration.html). Failure to do so will result in the erroneous result.
+
+If none of these applies and the errors persist, please escalate to LP Support and provide the exact error information by copying it from within the Conversation Errors UI.
+
+### com.liveperson.bot-connectors-worker.error.sdes-service.missing-session-or-visitor-id
+
+#### Description
+This indicates an issue fetching the SDEs because required properties are missing. 
+#### Reasons
+Mostly this issue happens because of a wrong integration on customer end where no Visitor Session is created before starting the conversation.  
+#### Solutions
+Please ensure that you create a Visitor Session prior to starting the conversation. [Website Monitoring](app-engagement-api-overview.html).
+
+### com.liveperson.bot-connectors-worker.error.sdes-service.uauth-sdes-entry-is-empty
+
+#### Description
+This indicates an issue fetching the SDEs.
+#### Reasons
+Mostly this issue happens because of a wrong integration on customer end where no Visitor Session is created before starting the conversation. Another reason could be that no SDEs were set.
+#### Solutions
+Please ensure that you create a Visitor Session prior to starting the conversation. [Website Monitoring](app-engagement-api-overview.html). 
+Also please check that you set the SDEs correctly. [Engagement Attributes](engagement-attributes-api-engagement-attributes.html)

@@ -117,6 +117,18 @@ The validation of allowed max number of documents will be when showing and remov
 
 ---  
 
+### Auth
+
+#### hideUIUntilAuthenticated  
+Hides previous chat history until user identify has been verified
+
+   - **Type:** Bool
+   - **Default value:** true (enabled)
+
+{: .notice}
+avaliable on SDK 6.0 and above.
+
+---  
 ### Brand
 
 #### brandName  
@@ -755,6 +767,23 @@ Examples: TimeToRespond notification, local notification, etc.
 
    - **Type:** Double
    - **Default value:**  3 (60 when in VoiceOver mode)
+
+---
+
+### Domains
+
+{:.notice}
+Overriding this values with incorrect domains will create connection issues on the LPMessagingSDK (e.g. "Failed to connect to server" banner)
+
+#### csdsDomain
+For brands that need to control the CSDS URL for LivePerson services, use this key to set a URL of your choice.
+
+- **Type:** String
+
+#### lpTagDomain
+For brands that need to control the LPTAG URL for LivePerson services, use this key to set a URL of your choice.
+
+- **Type:** String
 
 --- 
 
@@ -2032,7 +2061,11 @@ If setting nil - default avatar image will be used with `remoteUserAvatarBackgro
    - **Type:** UIImage?
    - **Default value:** nil 
 
+#### brandAvatarImageContentMode
+Sets content mode for the brand avatar image
 
+- **Type:** UIView.ContentMode
+- **Default value:** .scaleAspectFit
 
 #### csatAgentAvatarBackgroundColor 
 Background color of agent's default avatar in CSAT. 

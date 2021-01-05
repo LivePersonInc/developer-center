@@ -510,6 +510,50 @@ Figure 10.1 Lex Example Close Conversation Payload
 
 Figure 10.2 - Example in Lex console
 
+To close the conversation without triggering the post conversation survey use following payload
+
+```json
+{
+  "type": "ACTION",
+  "params": {
+    "action": "CLOSE_CONVERSATION",
+    "data": {
+      "withoutPcs": true
+    }
+  }
+}
+```
+
+Figure 10.3 Lex Example Close Conversation without PCS payload
+
+
+### Invoke LivePerson Function
+
+During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.
+
+The action field needs to be set to **INVOCATION** to instruct the connector to invoke the specified LivePerson Function.
+
+It is also required to provide the **lambdaUuid**, of the function that should be invoked, in `data`. 
+To retrieve the Lambda UUID of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+
+In addition, it is possible to send your own payload to the function. Set your content inside the **payload** key.
+
+The bot does not escalate on a failed invocation by default. To enable this, just set an additional parameter **failOnError** to **true**
+
+```json
+{
+  "type": "ACTION",
+  "params": {
+    "action": "INVOCATION",
+    "data": {
+     "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
+      "payload": "{ "some": "stuff"}",
+      "failOnError": true
+    }
+  }
+}
+```
+
 ### Engagement attributes as context
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 11.1.

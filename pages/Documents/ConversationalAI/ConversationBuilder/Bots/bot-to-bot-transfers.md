@@ -62,6 +62,16 @@ To set up automatic transfers for a group of bots, [create the bot group](conver
 
 <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/bots_collab13.png">
 
+{: .important}
+While you can include a [post-conversation survey bot](conversation-builder-bots-post-conversation-survey-bots.html) in a bot group for grouping purposes, a survey bot doesn’t participate in automatic, bot-to-bot transfers.
+
+#### Best practices
+
+For bot groups that are collaborative (the Collaboration setting is enabled):
+* If the group will include multiple bots, LivePerson recommends the use of the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2).
+* The group should not contain more than 15 bots.
+* Make sure there is no overlap in the intents and patterns used by the bots.
+
 ### Manual transfers
 
 #### What's a manual transfer?
@@ -78,6 +88,7 @@ Manual transfers are done via:
 You'll need to use a manual transfer in two situations:
 
 * You want to transfer the conversation from a bot in one bot group to a bot in a *different* group.
+* You want to offer the consumer a choice of options, and then transfer the conversation based on the consumer's response.
 * You want to transfer the conversation from a bot to a live agent.
 
 #### Making manual transfers seamless
@@ -111,7 +122,7 @@ In our example below, we've overwritten the user message, and we've done this in
 
 ### Sharing information between bots
 
-In a transfer from one bot to another--whether automatic or manual--the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. To share this information between bots, use the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html).
+In a transfer from one bot to another--whether automatic or manual--the receiver bot won't have all the context (variables, etc.) that you might have collected in the sender bot. To share this information between bots, use the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
 
 ### FAQs
 
@@ -121,7 +132,7 @@ When collaboration is enabled for a bot group, transfers happen seamlessly and a
 
 #### During an automatic transfer, how is a bot within a bot group chosen to handle a request?
 
-The system follows the same NLU selection process as with every bot, just expanded to include all bots in the group. First, the system looks for a bot in the group with a [matching pattern](conversation-builder-tutorials-guides-getting-started.html#dialogs--patterns-tutorial) in its dialog starter. If one is found, the consumer is directed to that bot and the matched dialog starter. If no patterns are found, it then looks for a bot in the group with a [matching intent](conversation-builder-tutorials-guides-getting-started.html#intents-tutorial) in its dialog starter and directs the consumer to the bot and matched dialog starter. As with the current NLU, if multiple matching intents are found, the highest match score is selected. If there are no patterns or intents found, the consumer is directed to the Fallback dialog found within their current bot position.
+The system follows the same NLU selection process as with every bot, just expanded to include all bots in the group. First, the system looks for a bot in the group with a [matching pattern](tutorials-guides-getting-started-with-bot-building-dialogs-patterns.html) in its dialog starter. If one is found, the consumer is directed to that bot and the matched dialog starter. If no patterns are found, it then looks for a bot in the group with a [matching intent](tutorials-guides-getting-started-with-bot-building-intents.html) in its dialog starter and directs the consumer to the bot and matched dialog starter. As with the current NLU, if multiple matching intents are found, the highest match score is selected. If there are no patterns or intents found, the consumer is directed to the Fallback dialog found within their current bot position.
 
 #### How many bot groups do I need?
 There's no limit to the number of bot groups that you can create, but it's likely that you'll need just a few. In general, [create a bot group](conversation-builder-bots-bot-groups.html#create-a-bot-group-that-supports-collaboration-automatic-transfers) whenever you want to divide the bots into groups, such that collaboration occurs only within the group. It's common to organize bots into groups based on business function. You could then further organize them based on environment.

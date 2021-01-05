@@ -8,7 +8,7 @@ permalink: bots-status-alerts.html
 indicator: both
 ---
 
-You can set up alerts to notify you when a deployed bot's [agent connector status](bots-status-overview.html#bot-agent-connector-statuses) changes to Offline or Online. (A bot's status changes to Stopped when it is stopped manually, so notifications about this are not sent.)
+You can set up alerts to notify you when a deployed bot's [agent connector status](bots-status-overview.html#statuses) changes to Offline or Online. (A bot's status changes to Stopped when it is stopped manually, so notifications about this are not sent.)
 
 While these alerts do inform you of changes to the status of the bot's agent connector, they don't provide insight into changes to the status of backend services supporting the Bots and Automation platform. For information on the latter, visit the [LivePerson Service Status Dashboard](https://status.liveperson.com/), which is managed by LivePerson [Support](https://knowledge.liveperson.com/security-regulations-liveperson-support-policy.html). You can subscribe to events posted to the dashbord. You can also use the API to create your own dashboard or integrate with your own monitoring system.
 

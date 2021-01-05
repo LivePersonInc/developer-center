@@ -2,6 +2,7 @@
 pagename: showConversation (full authentication support + view modes)
 redirect_from:
   - android-showconversationfull.html
+  - android-showconversation.html
 Keywords:
 
 categoryname: "Messaging Channels"

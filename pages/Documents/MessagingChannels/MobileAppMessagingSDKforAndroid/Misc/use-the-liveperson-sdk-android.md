@@ -2,6 +2,7 @@
 pagename: Use the LivePerson SDK - Android
 redirect_from:
   - android-integration-guide.html
+  - mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-2---add-enabled-features-to-your-androidmanifestxml-file
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"

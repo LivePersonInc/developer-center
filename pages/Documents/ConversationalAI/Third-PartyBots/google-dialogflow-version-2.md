@@ -517,17 +517,38 @@ If a query has been answered, or the brand has determined that no escalation is 
 
 The method for closing a conversation is similar to the transfer action in that the same "Actions and Parameters" field is utilised in the Dialogflow console.
 
-The action field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to to close the conversation.
+The action field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to close the conversation.
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_12.png">
 Figure 10.1
 
+To close a conversation without triggering a post conversation survey, please add the parameter with the name `withoutPcs` and the value `true` to the action parameters.
+
+### Invoke LivePerson Function
+
+During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.
+
+The method for triggering an invocation is similar to the transfer action in that the same "Actions and Parameters" field is utilised in the Dialogflow console.
+
+The action field needs to be set to **INVOCATION** to instruct the connector to invoke the sepecified LivePerson Function
+
+It is also required to provide the **lambdaUuid** of the function that should be invoked in parameters. 
+To retrieve the Lambda UUID of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+
+In addition, it is possible to send your own payload to the function. Set your content inside the **payload** key.
+
+The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**
+
+
+<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_13.png">
+Figure 11.1
+
 ### Engagement attributes as context
 
-Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 11.1.
+Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 12.1.
 
 <img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
-Figure 11.1 Conversation Type step in creation/modification of bot configuration.
+Figure 12.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow V2 these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload` (more information about `payload` parameter can be found [here](https://googleapis.dev/nodejs/dialogflow/latest/google.cloud.dialogflow.v2.html#.QueryParameters)). An example of the request body can be seen below:
 

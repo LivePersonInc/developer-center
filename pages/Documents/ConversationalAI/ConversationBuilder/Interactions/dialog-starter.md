@@ -42,7 +42,7 @@ This opens up the **Patterns & Intent** tab of the **Interaction Settings** dial
 
 <img style="width:600px" src="img/ConvoBuilder/interactions_dialogStarter4.png">
 
-For some practice with this, try the [Getting Started tutorial](conversation-builder-tutorials-guides-getting-started.html).
+For some practice with this, try the [Getting Started tutorial](tutorials-guides-getting-started-with-bot-building-overview.html).
 
 ### Interaction settings
 

@@ -21,7 +21,7 @@ Follow along with this guide to set up the feature.
 
 ### Create a bot
 
-Conversation Orchestrator currently supports bots created in [Conversation Builder](conversation-builder-tutorials-guides-getting-started.html), [Google DialogFlow](bot-connectors-google-dialogflow-version-2.html), and [IBM Watson](bot-connectors-ibm-watson-assistant.html).
+Conversation Orchestrator currently supports bots created in [Conversation Builder](tutorials-guides-getting-started-with-bot-building-overview.html), [Google DialogFlow](bot-connectors-google-dialogflow-version-2.html), and [IBM Watson](bot-connectors-ibm-watson-assistant.html).
 
 ### Enable Recommended Actions Widget
 
@@ -31,7 +31,7 @@ You will first need to enable the feature in Conversational Cloud. Please contac
 
 Before adding automations to Conversation Orchestrator, you must first properly configure Conversational Cloud by creating a skill and a bot user.
 
-The Conversation Builder [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html) guide explains how to create a skill and a bot user for each of your automations.
+The Conversation Builder [Deploy the Bot tutorial](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) guide explains how to create a skill and a bot user for each of your automations.
 
 {: .important}
 * Create the skill names and bot user names that make sense for your use case
@@ -44,11 +44,11 @@ Once Conversational Cloud is configured, your bot(s) need to be connected to ena
 
 For Conversation Builder bots, see [the next section](#configuring-conversation-builder-bots).
 
-For third party (Watson, DialogFlow) bots, see the section [Configuring Third Party Bots](#configuring-third-party-bots).
+For third party (Watson, DialogFlow) bots, see the section [Configuring Third-Party Bots](#configuring-third-party-bots).
 
 #### Configuring Conversation Builder Bots
 
-Follow the steps in the Conversation Builder [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html) to connect your bot.
+Follow the steps in the Conversation Builder [Deploy the Bot tutorial](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) to connect your bot.
 
 {: .important}
 Be sure to select allow **Messaging** conversations when you add the Agent for the automation.
@@ -70,7 +70,7 @@ For the next Configuring Conversation Orchestrator step, you will need the **Bot
 
 Now skip to the next [configuring maven](#configure-maven) section.
 
-#### Configuring Third Party Bots
+#### Configuring Third-Party Bots
 
 To connect a DialogFlow or Watson bot to LivePerson, you must follow the [Bot Connectors Getting Started](bot-connectors-getting-started.html) guide.
 

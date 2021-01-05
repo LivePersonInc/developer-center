@@ -52,6 +52,7 @@ This permission provides full privileges for creating bots and related resources
 
 * Bots
 * Bot groups
+* Dialogs and dialog templates
 * Integrations
 * Global functions
 * Credentials
@@ -62,6 +63,7 @@ Users with this permission can also:
 
 * Activate and train models
 * Create, deploy and manage agent connectors at the bot level within Conversation Builder
+* Use the Conversation Tester
 * View versions and releases (For privileges to create and manage these, add on the "Release Creator" and/or "Release Acceptor" granular permissions, discussed farther below.)
 * View and download analytics data
 
