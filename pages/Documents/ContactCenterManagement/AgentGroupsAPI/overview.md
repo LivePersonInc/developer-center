@@ -2,6 +2,7 @@
 pagename: Overview
 redirect_from:
   - administration-agent-groups-overview.html
+  - admin-settings-skills-groups-set-the-agent-group-hierarchy.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

@@ -9,6 +9,9 @@ permalink: liveperson-functions-developing-with-faas-toolbelt.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-toolbelt.html
+  - liveperson-functions-development-toolbelt.html
+  - liveperson-functions-development-toolbelt.html#http-client
+  - liveperson-functions-development-toolbelt.html#get-conversation-by-id
 ---
 
 As mentioned in the [Getting Started document](function-as-a-service-getting-started.html), we offer you access to our `lp-faas-toolbelt` Node.js module, which is a language-specific utility library for lambdas.

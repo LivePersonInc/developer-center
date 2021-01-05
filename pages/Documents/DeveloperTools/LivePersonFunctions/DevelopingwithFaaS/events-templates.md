@@ -9,6 +9,8 @@ permalink: liveperson-functions-developing-with-faas-events-templates.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-events-templates.html
+  - liveperson-functions-development-events-templates.html
+  - liveperson-functions-development-events-templates.html#events
 ---
 
 ### Events

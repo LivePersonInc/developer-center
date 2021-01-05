@@ -9,6 +9,7 @@ permalink: liveperson-functions-integrations-messaging-conversation-survey.html
 indicator: messaging
 redirect_from:
   - liveperson-functions-liveperson-integrations-messaging-conversation-survey.html
+  - function-as-a-service-use-cases-post-conversation-survey-with-functions.html
 ---
 
 This guide explains how to enable LivePerson Functions for post conversation survey events.
