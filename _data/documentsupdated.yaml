@@ -1022,7 +1022,6 @@
       pages:
       - pagename: Introduction
       - pagename: Implementation Considerations
-      - pagename: Security
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API
