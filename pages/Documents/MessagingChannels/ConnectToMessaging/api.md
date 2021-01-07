@@ -34,15 +34,15 @@ Click [**Eligibility**](https://connect-to-messaging.dev.fs.liveperson.com/api/a
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{ACCOUNT_ID}/eligibility?v={VERSION}
+| POST | https://{domain}/api/account/{accountId}/eligibility?v={version}
 
 **Path Parameters**
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
 | domain   | see API Domain | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
-| ACCOUNT_ID | LivePerson site ID | 34567231 |
-| VERSION | API Version | 2.0 |
+| accountId | LivePerson site ID | 12345678 |
+| version | API Version | 2.0 |
 
 **Request Headers**
 
@@ -67,7 +67,7 @@ Click [**Eligibility**](https://connect-to-messaging.dev.fs.liveperson.com/api/a
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
-    "handoffId": "H111111111111111",
+    "handoffId": "H123456789",
     "templateVariables": {
         "1": "test"
     },
@@ -108,15 +108,15 @@ Click [**Invite**](https://connect-to-messaging.dev.fs.liveperson.com/api/api-do
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/api/account/{ACCOUNT_ID}/invite?v={VERSION}
+| POST | https://{domain}/api/account/{accountId}/invite?v={version}
 
 **Path Parameters**
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
 | domain   | see API Domain | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
-| ACCOUNT_ID | LivePerson site ID | 34567231 |
-| VERSION | API Version | 2.0 |
+| accountId | LivePerson site ID | 12345678 |
+| version | API Version | 2.0 |
 
 **Request Headers**
 
@@ -167,38 +167,27 @@ Click [**Invite**](https://connect-to-messaging.dev.fs.liveperson.com/api/api-do
 }
 ```
 
-| HTTP Status | Error Code | Error Message | Description/Resolution |
-| :--- | :--- | :--- |:--- |
-| 400 | 11 | Bad request | Onboarding is not completed |
-| 400 | 34 | | Onboarding is not completed |
-| 400 | 42 | No engagement found for skill {{SKILL}} | The skill is not active in Self Service Portal |
-| 400 | 71 | Bad request | A conversation exists between the brand and consumer |
-| 400 | 81 | Bad request | The overridden channel is not eligible for the consumer’s phone number |
-| 400 | 82 | No engagement provided for the override skill | The overridden skill is not active in Self Service Portal |
-| 400 | 91 | Bad request | Payload is invalid |
-| 400 | 92 | Bad request | Invalid API version |
-| 400 | 111 | Bad request | The handoffId is invalid or not active in Self Service Portal |
-| 400 | 112 | Bad request | The handoff channel is not active in Self Service Portal |
-| 400 | 131 | Bad request | No account setting is found in Self Service Portal |
-| 401 |  |  | Invalid OAuth key or AppJWT token |
-| 403 | 95 | Not enough privilege to perform this operation | Not enough privilege with OAuth key or AppJWT token |
-| 404 | 99 | Not Found | Invalid URL |
-| 405 | 99 | Method Not Allowed | Invalid HTTP method |
-| 415 | 99 | Unsupported Media Type | Invalid Media type |
-| 429 |  |  | Rate limit exceeded |
-| 500 | 12 | Internal Server Error | Error retrieving LE user |
-| 500 | 33 | Cannot get C2M app installation due to an internal error | Error fetching App Installation |
-| 500 | 41 | cannot get le campaigns | Error fetching the campaign |
-| 500 | 69 | Internal Server Error | Error fetching the connector capability API |
-| 500 | 72 | Internal Server Error | Error fetching the connector send API |
-| 500 | 73 | Internal Server Error | Surpassed max retry in connector send API |
-| 500 | 75 | Internal Server Error | Error fetching the url from domain service |
-| 500 | 93 | Internal Server Error | Error fetching the connector capability API |
-| 500 | 99 | Internal Server Error | Default error code |
-| 500 | 100 | Internal Server Error | Database connection error |
-| 500 | 101 | Internal Server Error | Database query error |
-| 500 | 110 | Internal Server Error | Error fetching the handoff |
-| 500 | 130 | Internal Server Error | Error fetching the account setting |
+| HTTP Status | Error Code | Error Message | 
+| :--- | :--- | :--- |
+| 400 | 1000 | Invalid request |
+| 400 | 1001 | Invalid customerPhoneNumber |
+| 400 | 1002 | Invalid version |
+| 400 | 1200 | No internal user is available |
+| 400 | 1201 | No internal app is available |
+| 400 | 1300 | No engagement found for skill <<skill>> |
+| 400 | 1400 | Message cannot be sent |
+| 400 | 1500 | No handoff is available |
+| 400 | 1501 | No handoff channel is available |
+| 400 | 1600 | No setting is available |
+| 400 | 1900 | Overridden channel is not available |
+| 400 | 1901 | No engagement provided for the overridden skill |
+| 401 | 1100 | Invalid Bearer token |
+| 403 | 1101 | Not enough privilege to perform this operation |
+| 404 | 1004 | Not Found |
+| 405 | 1005 | Method Not Allowed |
+| 415 | 1015 | Unsupported Media Type |
+| 429 | 1029 | Rate limit hit |
+| 500 | 5000 - 7000 | Internal Server Error |
 
 
 ### Frequently Asked Questions
@@ -244,8 +233,9 @@ C2M Messaging service has retry mechanism internally on dependent services to re
 - Lookback period can be pre-configured up to 30 days. Current maximum lookback period is 30 days from when messages are sent using C2M API. Example: When a message is sent to consumer using C2M API and if consumer replies within 30 days from when message was sent, the response will be redirected to LE agent according to specified skill. A response after 30 days will not be treated as a conversation. Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
 <strong>How do we know which field is optional or required?</strong>
-Refer to this document and [swagger](https://connect-to-messaging.dev.fs.liveperson.com/api/api-docs/?api=c2m).
+Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https://connect-to-messaging.dev.fs.liveperson.com/api/api-docs/?api=c2m).
 
+<strong>What's the restriction on fields?</strong>
 
 | Field Name | Limitation |
 | :--- | :--- |
