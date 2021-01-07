@@ -36,7 +36,7 @@ Click [**Eligibility**](https://connect-to-messaging.dev.fs.liveperson.com/api/a
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountId}/eligibility?v={version}
 
-**Path Parameters**
+**Path/Query Parameters**
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
@@ -110,7 +110,7 @@ Click [**Invite**](https://connect-to-messaging.dev.fs.liveperson.com/api/api-do
 | :--- | :--- |
 | POST | https://{domain}/api/account/{accountId}/invite?v={version}
 
-**Path Parameters**
+**Path/Query Parameters**
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
@@ -193,7 +193,7 @@ Click [**Invite**](https://connect-to-messaging.dev.fs.liveperson.com/api/api-do
 ### Frequently Asked Questions
 
 <strong>What is the rate limit for the API?</strong>
-The current rate limit is 30 TPS/seconds per brand. 
+The current rate limit is 30 transaction per second per brand. 
 
 <strong>What is the recommended action from brands for 429 responses?</strong>
 We recommend a request be retried (3 attempts with exponential retry with delay of 5 sec) when witnessing 429 status code.
@@ -235,7 +235,7 @@ C2M Messaging service has retry mechanism internally on dependent services to re
 <strong>How do we know which field is optional or required?</strong>
 Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https://connect-to-messaging.dev.fs.liveperson.com/api/api-docs/?api=c2m).
 
-<strong>What's the restriction on fields?</strong>
+<strong>What's the restriction on request body parameters?</strong>
 
 | Field Name | Limitation |
 | :--- | :--- |
