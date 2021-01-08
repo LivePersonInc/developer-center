@@ -2,8 +2,8 @@
 pagename: Overview
 sitesection: Documents
 categoryname: Reporting
-documentname: Consumer Experiences API
-permalink: consumer-experiences-api-overview.html
+documentname: Outbound API
+permalink: outbound-api-overview.html
 root-link: true
 indicator: messaging
 redirect_from:
@@ -82,23 +82,23 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Name  | Description | Required | Value/Example |
 | :--- | :--- | :--- | :--- |
-| domain   | see API Domain | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain   | domain | Yes | va.cx-reporting.liveperson.net or lo.cx-reporting.liveperson.net or sy.cx-reporting.liveperson.net |
 | accountId | LivePerson site ID | Yes | 12345678 |
-| app | app | Yes | |
+| app | App name | Yes | "prmsg" or "c2m" |
 
 **Query Parameters**
 
 | Name  | Description | Required | Value/Example |
 | :--- | :--- | :--- | :--- |
-| attemptedStartTime | Starting time (epoch milliseconds) of attempted events | Yes | |
-| attemptedEndTime | Ending time (epoch milliseconds) of attempted events | Yes | |
+| attemptedStartTime | Starting time (epoch milliseconds) of attempted events | Yes | 1602007811000 |
+| attemptedEndTime | Ending time (epoch milliseconds) of attempted events | Yes | 1602008344000 |
 
 **Request Headers**
 
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | OAuth 2.0 or OAuth 1.0 or LE Bearer token | |
+| Authorization | [OAuth 2.0](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) or [OAuth 1.0](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) (Section 8) or LE Bearer token | |
 
 **Response Example**
 
@@ -153,16 +153,16 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Name  | Description | Required | Value/Example |
 | :--- | :--- | :--- | :--- |
-| domain   | see API Domain | Yes | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain   | domain | Yes | va.cx-reporting.liveperson.net or lo.cx-reporting.liveperson.net or sy.cx-reporting.liveperson.net |
 | accountId | LivePerson site ID | Yes | 12345678 |
-| app | app | Yes | |
+| app | App name | Yes | "prmsg" or "c2m" |
 
 **Query Parameters**
 
 | Name  | Description | Required | Value/Example |
 | :--- | :--- | :--- | :--- |
-| attemptedStartTime | Starting time (epoch milliseconds) of attempted events | Yes | |
-| attemptedEndTime | Ending time (epoch milliseconds) of attempted events | Yes | |
+| attemptedStartTime | Starting time (epoch milliseconds) of attempted events | Yes | 1602007811000 |
+| attemptedEndTime | Ending time (epoch milliseconds) of attempted events | Yes | 1602008344000 |
 
 **Body Example**
 
@@ -184,7 +184,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | OAuth 2.0 or OAuth 1.0 or LE Bearer token | |
+| Authorization | [OAuth 2.0](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) or [OAuth 1.0](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) (Section 8) or LE Bearer token | |
 
 **Response Example**
 
@@ -243,7 +243,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 
 | Name  | Description | Required | Value/Example |
 | :--- | :--- | :--- | :--- |
-| domain   | see API Domain | Yes | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain   | domain | Yes | va.cx-reporting.liveperson.net or lo.cx-reporting.liveperson.net or sy.cx-reporting.liveperson.net |
 | accountId | LivePerson site ID | Yes | 12345678 |
 | proactiveCampaignId | | Yes | |
 
@@ -252,7 +252,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | OAuth 2.0 or OAuth 1.0 or LE Bearer token | |
+| Authorization | [OAuth 2.0](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) or [OAuth 1.0](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) (Section 8) or LE Bearer token | |
 
 **Response Example**
 
@@ -295,7 +295,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 
 | Name  | Description | Required | Value/Example |
 | :--- | :--- | :--- | :--- |
-| domain   | see API Domain | Yes | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain   | domain | Yes | va.cx-reporting.liveperson.net or lo.cx-reporting.liveperson.net or sy.cx-reporting.liveperson.net |
 | accountId | LivePerson site ID | Yes | 12345678 |
 | proactiveCampaignId | | Yes | |
 
@@ -304,7 +304,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | OAuth 2.0 or OAuth 1.0 or LE Bearer token | |
+| Authorization | [OAuth 2.0](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) or [OAuth 1.0](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) (Section 8) or LE Bearer token | |
 
 **Response Example**
 
@@ -363,23 +363,23 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 
 | Name  | Description | Required | Value/Example |
 | :--- | :--- | :--- | :--- |
-| domain   | see API Domain | Yes | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain   | domain | Yes | va.cx-reporting.liveperson.net or lo.cx-reporting.liveperson.net or sy.cx-reporting.liveperson.net |
 | accountId | LivePerson site ID | Yes | 12345678 |
-| proactiveCampaignId | | Yes | |
+| app | App name | Yes | "prmsg" or "c2m" |
 
 **Query Parameters**
 
 | Name  | Description | Required | Value/Example |
 | :--- | :--- | :--- | :--- |
-| attemptedStartTime | Starting time (epoch milliseconds) of attempted events | Yes | |
-| attemptedEndTime | Ending time (epoch milliseconds) of attempted events | Yes | |
+| attemptedStartTime | Starting time (epoch milliseconds) of attempted events | Yes | 1602007811000 |
+| attemptedEndTime | Ending time (epoch milliseconds) of attempted events | Yes | 1602008344000 |
 
 **Request Headers**
 
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | OAuth 2.0 or OAuth 1.0 or LE Bearer token | |
+| Authorization | [OAuth 2.0](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) or [OAuth 1.0](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html) (Section 8) or LE Bearer token | |
 
 **Request Body**
 
@@ -478,4 +478,9 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 
 ### Frequently Asked Questions
 
+<strong>What kind of authorizations should I use?</strong>
+
+- For OAuth 2.0, refer to [this document](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt)
+- For OAuth 1.0, refer to [this document Step 8](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html), Keys will be provided seperately
+- For LE bearer token, This is not a preferred auth method consider using OAuth 2.0 or OAuth 1.0
 

@@ -807,7 +807,7 @@
           - subpagename: Agent Activity
           - subpagename: Current Queue State
           - subpagename: SLA Histogram
-  - documentname: Consumer Experiences API
+  - documentname: Outbound API
     pages:
       - pagename: Overview
 
