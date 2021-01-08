@@ -1,16 +1,13 @@
 ---
-pagename: Certificate Pinning - iOS
+pagename: Certificate Pinning
 redirect_from:
   - consumer-experience-ios-sdk-certpinning.html
 Keywords:
 sitesection: Documents
-categoryname:
+categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: Certificate Pinning
-
-order:
-permalink: mobile-app-messaging-sdk-for-ios-certificate-pinning-certificate-pinning---ios.html
-
+subfoldername: Advanced Features
+permalink: mobile-app-messaging-sdk-for-ios-advanced-features-certificate-pinning.html
 indicator: messaging
 ---
 
@@ -59,10 +56,10 @@ func certPinningExample() {
   LPConfig.defaultConfiguration.csdsDomain = "<SOME DOMAIN>"
   LPConfig.defaultConfiguration.lpTagDomain = "<SOME DOMAIN>"
 
-  let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery("accountNumber")
+  let conversationQuery = LPMessaging.instance.getConversationBrandQuery("accountNumber")
   let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery, containerViewController: self, isViewOnly: false)
   let authenticationParams = LPAuthenticationParams(certPinningPublicKeys: ["key1", "key2", "key3"])
 
-  LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
+  LPMessaging.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
 }
 ```

@@ -471,15 +471,20 @@ LPMessaging.instance.sendSDEWithConsumerID()
 **Step 3:**
 * If  you are using the Logging Module please refer to this [document](https://developers.liveperson.com/mobile-app-messaging-sdk-for-ios-advanced-features-logging.html).
 * Example of changes in this model:
-    * Setting up the log level is now
+
+ Setting up the log level is now
 ```swift
 LPMessaging.instance.setLoggingLevel(level: .TRACE)
 ```
-
+  
+Old way subscribing to received logs from LPMessagingSDK  
+  
 ```swift
 LPMessagingSDK.instance.subscribeLogEvents(.trace)
 ```
-is now 
+
+Is now 
+
 ```swift
 LPMessaging.instance.getLogSnapshot(level: LPLoggingLevel) -> [String]
 LPMessaging.instance.getLogStringBlock(level: LPLoggingLevel) -> String
