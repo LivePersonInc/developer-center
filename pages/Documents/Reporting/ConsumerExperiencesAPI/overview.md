@@ -1,17 +1,23 @@
 ---
-pagename: Reporting API
-redirect_from:
-Keywords:
+pagename: Overview
 sitesection: Documents
-categoryname: "Messaging Channels"
-documentname: Connect To Messaging
-permalink: connect-to-messaging-reporting-api.html
+categoryname: Reporting
+documentname: Consumer Experiences API
+permalink: consumer-experiences-api-overview.html
+root-link: true
 indicator: messaging
+redirect_from:
+  - connect-to-messaging-reporting-api.html
+  - proactive-messaging-reporting-api.html
 ---
 
 ### Introduction
 
 Reporting feature presents a complete journey of conversation from beginning to end. The reporting 2.0 API endpoints provide full funnel metrics such as number of deflections sent, how many actually got delivered by the messaging channel, how many were read and responded back by the consumers. The goal of this feature is to stitch pre and post conversation events of every transaction and provide 360° analytical data and raw transactional data to API subscribers.
+
+### API provides reporting for below services
+* Proactive Messaging 2.0
+* Connect To Messaging 2.0
 
 ### Getting Started
 

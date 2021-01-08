@@ -807,6 +807,9 @@
           - subpagename: Agent Activity
           - subpagename: Current Queue State
           - subpagename: SLA Histogram
+  - documentname: Consumer Experiences API
+    pages:
+      - pagename: Overview
 
 - categoryname: Messaging Channels
   image: agent-interaction
@@ -945,10 +948,6 @@
   - documentname: Proactive Messaging
     pages:
     - pagename: API
-  - documentname: Connect To Messaging
-    pages:
-    - pagename: Reporting API
-
 - categoryname: Rich Messaging
   image: rich-media
   documents:
