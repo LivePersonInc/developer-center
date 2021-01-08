@@ -11,7 +11,12 @@ indicator: both
 
 ### What’s a dialog template?
 
-A dialog template is a set of resources that support a conversational flow and that are defined as a unit for the purpose of import by others. When a bot developer imports a single dialog template, the entire unit of working functionality is imported. This includes not only the main dialog that supports the flow, but also all other necessary resources: other dialogs, domains, integrations, and so on.
+A dialog template is a set of resources that:
+
+* Support a conversational flow
+* Are defined as a unit for the purpose of import by others
+
+When a bot developer imports a single dialog template, the entire unit of working functionality is imported. This includes not only the main dialog that supports the flow, but also all other necessary resources: other dialogs, domains, integrations, and so on.
 
 {: .important}
 Only dialogs of [type Dialog](conversation-builder-dialogs-dialog-basics.html#dialog-types) can be included within a dialog template. Fallback, Disambiguation and other dialog types are not allowed, so plan your template accordingly.

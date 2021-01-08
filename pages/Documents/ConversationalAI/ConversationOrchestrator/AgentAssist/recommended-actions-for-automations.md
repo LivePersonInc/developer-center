@@ -44,7 +44,7 @@ Once Conversational Cloud is configured, your bot(s) need to be connected to ena
 
 For Conversation Builder bots, see [the next section](#configuring-conversation-builder-bots).
 
-For third party (Watson, DialogFlow) bots, see the section [Configuring Third Party Bots](#configuring-third-party-bots).
+For third party (Watson, DialogFlow) bots, see the section [Configuring Third-Party Bots](#configuring-third-party-bots).
 
 #### Configuring Conversation Builder Bots
 
@@ -70,7 +70,7 @@ For the next Configuring Conversation Orchestrator step, you will need the **Bot
 
 Now skip to the next [configuring maven](#configure-maven) section.
 
-#### Configuring Third Party Bots
+#### Configuring Third-Party Bots
 
 To connect a DialogFlow or Watson bot to LivePerson, you must follow the [Bot Connectors Getting Started](bot-connectors-getting-started.html) guide.
 

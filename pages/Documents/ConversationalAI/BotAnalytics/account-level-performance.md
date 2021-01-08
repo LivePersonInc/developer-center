@@ -48,7 +48,7 @@ You can use this filter to show the data for any 7-day date range within the las
 * **Conversations**: The total number of closed and open Conversational Cloud conversations in which the bot participated.
 * **Messages**: The total number of messages sent by the consumer and received by the bot.
 * **Users**: The total number of unique users that connected to the bot. Note that this metric doesn’t combine visits, i.e., if a user starts a second conversation at a later time, that is treated as a new user.
-* **Intent Matched Rate**: The percentage of consumer questions that were matched with intents, patterns, Regex, exact value matches, evaluated options, or Knowledge Base articles. Be aware that the system doesn’t make * a determination as to whether a match was a false positive.
+* **Intent Matched Rate**: The percentage of consumer questions that were matched with intents, patterns, Regex, exact value matches, evaluated options, or Knowledge Base articles. Be aware that the system doesn’t make a determination as to whether a match was a false positive.
 * **Transfers**: Previously called “escalations.” The total number of transfers to a human agent or another bot.
 * **Language**: The language of the bot as specified in the bot’s [Bot Language bot setting](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
