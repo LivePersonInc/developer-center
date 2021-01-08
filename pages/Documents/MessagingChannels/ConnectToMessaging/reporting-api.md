@@ -11,10 +11,51 @@ indicator: messaging
 
 ### Introduction
 
-
+Reporting feature presents a complete journey of conversation from beginning to end. The reporting 2.0 API endpoints provide full funnel metrics such as number of deflections sent, how many actually got delivered by the messaging channel, how many were read and responded back by the consumers. The goal of this feature is to stitch pre and post conversation events of every transaction and provide 360° analytical data and raw transactional data to API subscribers.
 
 ### Getting Started
 
+**Who can access this Reporting 2.0 API**
+
+All Brands who use Proactive Messaging version 2.0 and Connect To Messaging version 2.0 have access to the Reporting 2.0 API service.
+ 
+**Why we need this feature**
+
+As of today we don't have the capability to view end-end flow for a given transaction. As of today no other LivePerson service captures asynchronous events before conversation is created. Reporting 2.0 feature will fill this gap.
+What Message channels are supported in this API:
+SMS - Twilio Messaging Gateway
+WhatsApp
+  
+**Feature Details**
+
+Reporting 2.0 API provides the following data fields. This table explains the definition of each field.
+
+| # | Data Field | Definition |
+| 1 | Attempted | Total Outbound Messages sent by the Proactive Messaging system. Total IVR Deflections sent by the Connect To Messaging system. |
+| 2 | Eligibile | From total attempted messages how many messages are eligible to be delivered to the consumers. |
+| 3 | In-Eligible | From the total attempted outbound messages planned to be delivered skip all the consumers who previously opted out from receiving messages. |
+| 4 | Invite Sent | Total eligible messages sent to the messaging gateway from the Conversation cloud platform. |
+| 5 | Delivered | Messages delivered by the messaging gateway |
+| 6 | Read | Messages successfully read by consumers |
+| 7 | Responded / Conversations Created | Messages successfully responded by consumers and conversations created. |
+| 8 | Conversations Closed | Conversations closed by the brand agent. |
+| 9 | Errors | Failure occurred in delivering the messages. Provides error codes and error definitions. |
+| 10 | Opt out | Consumers who declined not to receive any future messages from the brand. |
+| 11 | Skipped | Consumers who declined previously not to receive any messages from the brand. |
+| 12 | CSAT | Consumer satisfaction survey rating score |
+
+**What are the limitations**
+
+- Proactive campaign id data field is not currently available in the Reporting 2.0 API. 
+- Handoff Id, Handoff name data fields are not currently available in the Reporting 2.0 API. 
+- First message and override message data fields are not currently available in the Reporting 2.0 API. 
+- TotaI summary of eligibility, sent, delivered combined for all channels / skills per IVR outbound number is not currently available in the Reporting 2.0 API.
+- TotaI summary of eligibility, sent, delivered combined for all channels / skills per account is not currently available in the Reporting 2.0 API.
+- Generate reports of all the consumers who previously opt out from Proactive messaging to receive any future messages. This capability is not available in the Reporting 2.0 API.
+- The new Analytics UI dashboard for the Reporting 2.0 is currently not available in GA.
+- The user can fetch data for a given 24 hours interval based on the filter criteria. 
+- The data is persisted in the system for a period of 13 months as per the company retention policy period. 
+- In-App message channel events are currently not available in the Reporting 2.0 API.
 
 
 ### API Specifications
