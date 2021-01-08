@@ -1115,6 +1115,7 @@
             - subpagename: Event Binding
             - subpagename: Events
         - pagename: Hooks
+          subpages:
             - subpagename: Hooks
         - pagename: New Page Refresh
     - documentname: Monitoring API
