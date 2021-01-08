@@ -113,7 +113,7 @@ There are several, important metrics displayed:
 <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_passed.png"> <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_failed.png">
 <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_falsepos.png">
 * **Match Rating**: The rating that indicates the NLU’s level of confidence in the match, one of Very Good, Good, Fair Plus, Fair or Poor.
-* **Match Score**: The percentage score that reflects the NLU’s level of confidence in the match to the matched intent.
+<!-- * **Match Score**: The percentage score that reflects the NLU’s level of confidence in the match to the matched intent. -->
 
 #### Evaluating the report
 
@@ -146,7 +146,7 @@ A true comparison of reports -- to accurately determine if the domain/model is i
 
 1. Open the domain.
 2. Click **Model Tester** in the upper-left corner. 
-3. Click **Test Reports** tab.
+3. Click the **Test Reports** tab.
 4. In the dashboard that lists the reports, select the checkboxes for both reports.
 5. Click **Compare Reports** in the upper-right corner.
 
