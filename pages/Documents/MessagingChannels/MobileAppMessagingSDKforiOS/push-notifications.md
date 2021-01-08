@@ -157,9 +157,9 @@ In this step, you add the dev-cert.pem and hostkey.pem to Conversational Cloud.
    - **Key file:** hostkey.pem
 
    {:.notice}
-   If you are using a development certificate you should uncheck the Production checkbox and add 'Dev' postfix to the Mobile app name. For example, if your app Bundle ID is AppId, your mobile app name should be "AppId-Dev". If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.
+   If you are using a development certificate you should uncheck the Production checkbox and add '-Dev' postfix to the Mobile app name. For example, if your app Bundle ID is AppId, your mobile app name should be "AppId-Dev". If you are using a production certificate you should leave the production checkbox checked and insert to the Mobile App name your App Bundle ID as it is.
 
-   **Tip:** You have a **50** character limit for your Bundle ID.
+   **Tip:** You have a **155** character limit for your Bundle ID.
 
 7. Click **Close**.
 
