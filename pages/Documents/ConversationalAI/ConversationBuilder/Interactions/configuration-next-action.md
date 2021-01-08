@@ -27,7 +27,7 @@ You specify an interaction's **Next Action** directly on the interaction tile:
 When specifying the next action, you can select from the following options:
 
 * *Next Interaction*: Directs the flow to the next interaction in the dialog.
-* *Current Interaction*: Repeats the current interaction.
+* *Current Interaction*: Repeats the current interaction. Available only for Question interactions.
 * *End Interaction*: Stops the flow within the dialog.
 * *Close Conversation*: Closes the conversation but **doesn't** trigger a post-conversation survey; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) for more.
 * *Close Dialog*: Closes the conversation and triggers a post-conversation survey; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) for more.
