@@ -1115,6 +1115,7 @@
             - subpagename: Event Binding
             - subpagename: Events
         - pagename: Hooks
+            - subpagename: Hooks
         - pagename: New Page Refresh
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
