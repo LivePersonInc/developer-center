@@ -128,7 +128,7 @@ async function postData(url = '', auth, data = {}) {
 
 ### React to the submitted data in the bot
 
-When we called the Web View Integration API upon submitting the form, we passed a “message” parameter with a value of “request successful.” This “message” can be used to trigger a dialog. You can see in the images below that we have a custom rule to pattern match the message that we sent.
+When we called the Web View Integration API upon submitting the form, we passed a “message” parameter with a value of “request successful.” This “message” can be used in the dialog flow. You can see in the images below that we have a custom rule to pattern match the message that we sent.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_a.png">
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_b.png">
