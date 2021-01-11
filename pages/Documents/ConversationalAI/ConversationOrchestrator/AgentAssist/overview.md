@@ -4,6 +4,9 @@ redirect_from:
   - maven-maven-assist-overview.html
   - maven-ai-maven-assist-overview.html
   - conversation-orchestrator-maven-assist-overview.html
+  - conversation-orchestrator-agent-assist-setting-up-bot-recommendations.html
+  - conversation-orchestrator-agent-assist-setting-up-knowledge-base-recommendations.html
+  - conversation-orchestrator-agent-assist-testing.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
