@@ -115,7 +115,10 @@ There are several, important metrics displayed:
 * **Match Rating**: The rating that indicates the NLU’s level of confidence in the match, one of Very Good, Good, Fair Plus, Fair or Poor.
 <!-- * **Match Score**: The percentage score that reflects the NLU’s level of confidence in the match to the matched intent. -->
 
-#### Evaluating the report
+### Evaluate the report
+
+{: .important}
+On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-builder-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu-v2).
 
 If the report's scores are low, take corrective action as follows:
 
