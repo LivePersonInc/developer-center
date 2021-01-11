@@ -2804,6 +2804,9 @@ Defines whether to disable the TTR snackbar popup (true=disable) false by defaul
 * **Type:** bool
 * **Default value:** false
 
+{:.important}
+When the auto messages feature is enabled, TTR notifications do not display when the auto messages featuer is enabled, regardless of the value set for this attribute.
+
 #### show_timestamp_in_ttr_notification
 When true the TTR snackbar will display the time until the agent responds. If set to false, a general message is displayed.
 

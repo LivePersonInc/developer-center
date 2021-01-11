@@ -10,7 +10,7 @@ permalink: tutorials-guides-bot-groups-other-techniques-knowledge-bases.html
 indicator: both
 ---
 
-Brands often have static content, such as frequently asked questions, that can be addressed through bots and delivered with Conversation Builder. Instead of creating new dialogs and specific interactions to handle these use cases, Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. A common design pattern at LivePerson is to include Knowledge Base access in the Fallback Dialog, as a last check before triggering the Fallback interaction. In this section, you create a new Knowledge Base, which will be accessed in the Fallback dialog located in the Greeter Bot.
+Brands often have static content, such as frequently asked questions, that can be addressed through bots and delivered with Conversation Builder. As opposed to creating new dialogs and specific interactions to handle these use cases, the Conversational Cloud provides Knowledge Base support to provide a seamless experience in delivering this content. A common design pattern at LivePerson is to include this Knowledge Base access in the Fallback Dialog, as a last check before triggering the Fallback interaction. In this section, you create a new knowledge base, which will be accessed in the Fallback dialog located in your Greeter Bot.
 
 ### Watch the video
 
@@ -19,52 +19,74 @@ Brands often have static content, such as frequently asked questions, that can b
 
 ### Step 8: Create the FAQ knowledge base
 
-In this step, you create a new FAQ knowledge base using an existing CSV file. This demonstration also shows how to add additional FAQ articles to your knowledge base.
+In this step, you create a new FAQ knowledge base and add FAQ articles to it.
 
 1. From the **Conversational AI** section of the Conversational Cloud, navigate to the **Knowledge Base** section.
 
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/advtutorial/kb_app_option.png">
 
 2. Click **Add Knowledge Base** in the upper-right corner.
-3. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**. 
-4. Specify the following:
-    * **Knowledge Base Name**: Getting Started KB
-    * **Language**: English
-    * **Import articles from**: CSV
-    * **CSV File**: Download and select this [Retail FAQ file](https://static-assets.fs.liveperson.com/csbs/Retail_FAQ_KB.csv) as a starting point. Click **Upload**.
-    * **Intent Association**: Knowledge Base Intents
+3. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**.
+4. Give the knowledge base the name **Getting Started KB**, and set the language to **English**. Here, you have the option of uploading a CSV or Google Sheet of your Knowledge Base articles. Leave the Upload field blank as you will create articles from scratch.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_int.png">
+    Under **Intent Association**, select **Domain Intents** and create a new NLU V1 domain called **Retail FAQ**.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_int_2.png"> 
 
     Click **Save** in the lower-right corner.
 
-5. After the KB has been created, you are presented with the various articles contained within the knowledge base. Selecting any, individual article, you can see that each article contains intent qualifiers, which the NLU engine will use in conjunction with tags to match user intents to a specific article.
+5. The next step is to add FAQ articles that are triggered by intents in your newly created **Retail FAQ** domain. Create the first article by selecting **Add New** in the upper-right corner. Give the article the title, *“What is your return policy?”* Using the **Select Intent** dropdown, create a new intent with the following details:
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_samplearticle.png">
+    * **Intent name**: Return policy
+    * **Training Phrases**:
+        * What is your return policy
+        * How do i return something
+        * How do i make a return
+        * What is your policy for making returns
 
-6. Back in the Getting Started KB page, click **Add New** in the upper-right corner to build upon our provided FAQ content. In the resulting **Add Article** form, complete with the following information: 
-    * **Title**: When are you open?
-    * **Intent Qualifiers**: 
-        * What are your hours of operation?
-        * What time do you close?
-    * **Summary**: We are open every day from 9am to 7pm.
+    After creating your new intent, finish the article by adding the following summary and clicking **Save**:
+
+    *Complimentary Returns on U.S. orders:*
+
+    *You have up to 30 days from the date you received your order to make a return.*
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_add_article.png">
 
     {: .important}
-    Additional details and tags can be included when creating your Knowledge Base articles. Please see our developers documentation on knowledge bases, which is [here](knowledge-base-overview.html), for more details on how to use these features to optimize your Knowledge Base searches.
+    For the purpose of this demonstration, intents and training phrases are intentionally being kept simplistic to quickly showcase the capabilities of Domain Intents. A benefit of using Domain Intents is that, after creation, you can modify/improve the intents and training phrases using Intent Builder.
+
+6. Back in our Getting Started KB page, repeat this process to add additional articles with the following information:
+
+    * **Article Title**: How much is shipping?
+    * **Intent**:
+        * **Intent name**: Shipping costs
+        * **Training Phrases**:
+            * How much is shipping
+            * What will shipping cost
+            * Do you offer free shipping
+    * **Summary**: *We offer free ground shipping on all orders within the United States. Please allow 3-5 business days for all ground orders.*
+
+    * **Article Title**: How do I cancel an order?
+    * **Intent**:
+        * **Intent name**: Cancel order
+        * **Training Phrases**:
+            * How do I cancel an order
+            * What if I have to cancel my order
+            * I need to cancel my order
+    * **Summary**: *Orders can be cancelled up to an hour after they are placed. Please contact our support team at atyourservice@retail.com for further assistance.*
+
+    {: .important}
+    Additional details and tags can be included when creating your Knowledge Base articles. Please see the [developers' documentation on knowledge bases](knowledge-base-overview.html) for more details on how to use these features to optimize your Knowledge Base searches.
 
 	Click **Save** in the lower-right corner.
 
-7. Back in the **Getting Started KB** page, confirm that the newly created article has been included in your list of articles. Note the **Inactive** designation, as all newly created articles will need to be enabled prior to being accessible.
+7. Back in the **Getting Started KB** menu, confirm that the newly created articles are present in your list of articles. Note the **Inactive** designation, as all newly created articles need to be enabled prior to being accessible.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_article_inactive.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_articles.png">
 
-	Click the article title, scroll down to the **Enable Article** setting, and turn it on. Click **Save**.
+    For each article, click the article title, scroll down to the **Enable Article** setting, and turn it on. Click **Save**.
 
-    The knowledge base has now been created and expanded upon.
-
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/kb_article_list.png">
-
-    Navigating back to Conversation Builder, next you will provide an integration to access and display this content.
+The knowledge base has now been created. Navigating back to Conversation Builder, next you provide an integration to access and display this content.
 
 ### Step 9: Create the Knowledge Base integration in the Fallback Dialog
 
