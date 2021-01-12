@@ -702,6 +702,7 @@
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
+          - subpagename: Activities
           - subpagename: Logs
           - subpagename: Metrics
           - subpagename: Email Reporting

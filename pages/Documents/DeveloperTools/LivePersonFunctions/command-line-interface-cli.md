@@ -14,7 +14,7 @@ redirect_from:
 
 The FaaS Command Line Interface (CLI) is an open-source command-line tool provided by LivePerson that enables developers to create, edit and process their functions on their local development machines, in their favorite IDE of their choice. That way it’s very easy to keep the source code under version control in any Source Control Management (SCM).
 
-The CLI offers nearly all functionality from the platfrom (e.g. deploy, undeploy and invoke). 
+The CLI offers nearly all functionality from the platfrom (e.g. deploy, undeploy and invoke).
 
 Besides that it offers many commands to support developers during the development of a function (e.g. pull, push and debug).
 
@@ -36,7 +36,7 @@ If you have any suggestions or improvements please let us know under [Issues](ht
 <tbody>
   <tr>
     <td>Init</td>
-    <td>Initialize the project with the necessary files. If the project is already initialised it will add a new function.</td>
+    <td>Initialize the project with the necessary files.</td>
   </tr>
   <tr>
     <td>Login</td>
@@ -45,6 +45,14 @@ If you have any suggestions or improvements please let us know under [Issues](ht
   <tr>
     <td>Logout</td>
     <td>Performs the logout.</td>
+  </tr>
+  <tr>
+    <td>Create</td>
+    <td>Creates either functions or schedules</td>
+  </tr>
+  <tr>
+    <td>Add</td>
+    <td>Adds domains to the currently logged account.</td>
   </tr>
   <tr>
     <td>Pull</td>
@@ -61,7 +69,7 @@ If you have any suggestions or improvements please let us know under [Issues](ht
   <tr>
     <td>Undeploy</td>
     <td>Undeploys a function on the LivePerson functions platform.</td>
-  </tr>  
+  </tr>
   <tr>
     <td>Invoke</td>
     <td>Invokes a function (remote or local).</td>
@@ -92,11 +100,11 @@ If you have any suggestions or improvements please let us know under [Issues](ht
 
 Example with `login`
 
-<img src="img/faas-cli-login.gif" alt="LivePerson Functions CLI Login"> 
+<img src="img/faas-cli-login.gif" alt="LivePerson Functions CLI Login">
 
 Example with `pull`
 
-<img src="img/faas-cli-pull.gif" alt="LivePerson Functions CLI Pull"> 
+<img src="img/faas-cli-pull.gif" alt="LivePerson Functions CLI Pull">
 
 ### SSO Support
 
@@ -114,7 +122,7 @@ To get the token and the userId follow these steps:
 5. Copy token and userId.
    - Token: 'glob'
    - UserId: 'config.userId'
-  
+
     <img src="img/faas-cli-fetch-token.png" class="fancyimage" width="100%" alt="LivePerson Functions CLI token">
 
 6. Run the login command as follows: `lpf login --token <bearer> --accountId <accountId> --userId <userId>`
