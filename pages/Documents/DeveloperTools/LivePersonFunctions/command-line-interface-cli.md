@@ -20,7 +20,7 @@ Besides that it offers many commands to support developers during the developmen
 
 ### Get started
 
-To start and get known to the usage of the CLI please visit [npmjs](https://www.npmjs.com/package/liveperson-functions-cli).
+To start and get known to the usage of the CLI please visit [npmjs](https://www.npmjs.com/package/liveperson-functions-cli). Once you have the CLI installed simply use `lpf -h` to peruse the CLI's options.
 
 If you have any suggestions or improvements please let us know under [Issues](https://github.com/LivePersonInc/liveperson-functions-cli/issues).
 
@@ -40,7 +40,7 @@ If you have any suggestions or improvements please let us know under [Issues](ht
   </tr>
   <tr>
     <td>Login</td>
-    <td>Performs the login with LiveEngage Credentials.</td>
+    <td>Performs the login with Conversational Cloud Credentials.</td>
   </tr>
   <tr>
     <td>Logout</td>
@@ -56,19 +56,19 @@ If you have any suggestions or improvements please let us know under [Issues](ht
   </tr>
   <tr>
     <td>Pull</td>
-    <td>Pulls a function from the LivePerson functions platform.</td>
+    <td>Pulls a function from LivePerson Functions.</td>
   </tr>
   <tr>
     <td>Push</td>
-    <td>Pushes a function to the LivePerson functions platform.</td>
+    <td>Pushes a function to LivePerson Functions.</td>
   </tr>
   <tr>
     <td>Deploy</td>
-    <td>Deploys a function on the LivePerson functions platform. If the passed function is already deployed, it will be redeployed.</td>
+    <td>Deploys a function on LivePerson Functions. If the passed function is already deployed, it will be redeployed.</td>
   </tr>
   <tr>
     <td>Undeploy</td>
-    <td>Undeploys a function on the LivePerson functions platform.</td>
+    <td>Undeploys a function on LivePerson Functions.</td>
   </tr>
   <tr>
     <td>Invoke</td>
@@ -80,7 +80,7 @@ If you have any suggestions or improvements please let us know under [Issues](ht
   </tr>
   <tr>
     <td>Get</td>
-    <td>Get information about the passed domain. Possible domains are deployments, functions and account.</td>
+    <td>Gets information about the passed domain. Possible domains are deployments, functions and account.</td>
   </tr>
     <tr>
     <td>Help</td>
