@@ -15,7 +15,7 @@ Use the following built-in functions to affect the flow of a conversation.
 
 ### Set message delay value
 
-Used to set a delay for a group of messages such that they appear like a real conversation.
+`setMessageDelay` is used to set a delay for a group of messages such that they appear like a real conversation.
 
 {: .important}
 The setMessageDelay() function should be used within the preProcess Code JavaScript.
@@ -56,7 +56,7 @@ botContext.setAllowMaxTextResponse(true);
 
 ### Set trigger next message
 
-Used for directing the conversation flow, i.e., for triggering a specified interaction in the bot.
+`setTriggerNextMessage` is used for directing the conversation flow, i.e., for triggering a specified interaction in the bot.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -77,7 +77,7 @@ if (company == 'LivePerson') {
 
 ### Evaluate options
 
-Used for matching the user’s input against an array of options.
+`evaluateOptions` is used for matching the user’s input against an array of options.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -98,7 +98,7 @@ botContext.printDebugMessage('====> User Said: ' + userResponse + ' and MATCH re
 
 ### Add quick replies
 
-The Add Quick Replies function is used for adding quick replies to a message in JavaScript rather than defining in bot creation. This allows for the dynamic addition of the buttons to accommodate various scenarios.
+The `addQuickReplies` function is used for adding quick replies to a message in JavaScript rather than defining in bot creation. This allows for the dynamic addition of the buttons to accommodate various scenarios.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
