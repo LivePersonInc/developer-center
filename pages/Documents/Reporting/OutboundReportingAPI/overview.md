@@ -2,8 +2,8 @@
 pagename: Overview
 sitesection: Documents
 categoryname: Reporting
-documentname: Outbound API
-permalink: outbound-api-overview.html
+documentname: Outbound Reporting API
+permalink: outbound-reporting-api-overview.html
 root-link: true
 indicator: messaging
 redirect_from:
@@ -483,4 +483,53 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 - For OAuth 2.0, refer to [this document](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt)
 - For OAuth 1.0, refer to [this document Step 8](https://developers.liveperson.com/retrieve-api-keys-create-a-new-api-key.html), Keys will be provided seperately
 - For LE bearer token, This is not a preferred auth method consider using OAuth 2.0 or OAuth 1.0
+
+We recommend using the OAuth 2.0
+
+<strong>Who can access the Reporting 2.0 API?</strong>
+
+All Brands who use Proactive Messaging version 2.0 and Connect To Messaging version 2.0 have access to the Reporting 2.0 API service
+
+<strong>What is the rate limit for the API’s?</strong>
+ 
+- Transaction API,  rate: 10 TPS
+- Analytics API, rate: 10 TPS
+- Proactive Campaign API, rate: 10 TPS
+- Proactive Campaign Analytics API, rate: 10 TPS
+ 
+<strong>How can a brand find out which version of proactive messaging or connect to messaging it used ?</strong>
+
+For proactive messaging:
+- Sign in to [this url](https://proactive-messaging.fs.liveperson.com) or click on the quick launch icon from Conversation Cloud for proactive messaging.
+- Click on the user icon at top right corner and see the version.
+
+For connect-to-messaging:
+- Sign in to [this url](https://connect-to-messaging.fs.liveperson.com) or click on the quick launch icon from Conversation Cloud for connect to messaging.
+- Click on the user icon at top right corner and see the version.
+
+<strong>How to access the Reporting 2.0 API?</strong>
+
+Will be updated
+
+<strong>What is a LP data retention policy? And how long data is persisted for Reporting 2.0 API?</strong>
+
+Retention policy period is 13 months.
+	
+<strong>Is Reporting 2.0 API GDPR Compliant?</strong>
+
+Yes
+
+<strong>Date range currently supported by Reporting 2.0 API to pull raw transactional data?</strong>
+
+The users can pull the data for a given 24 hour time interval date range from today or any any previous day back up to 13 months.
+
+<strong>Date range currently supported by Reporting 2.0 API to pull analytical data?</strong>
+
+The users can pull the data for a given 24 hour time interval date range from today or any any previous day back up to 13 months.
+
+<strong>Does the Reporting 2.0 API support Pagination when providing the data?<strong> What is the max number of records users can retrieve in one attempt?</strong>
+- For Transaction API,  Pagination is supported. Page length is dynamic and varies from 1 to 9999.
+- For Analytics API, Pagination is not needed
+- For Proactive Campaign API, Pagination is not supported yet.
+- For Proactive Campaign Analytics API, Pagination is not needed.
 
