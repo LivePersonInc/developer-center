@@ -24,8 +24,8 @@ An article is a focused piece of content (a message) on a single topic that you 
     * **Title**: Enter a complete sentence or question, e.g., "I can't remember my password." or, "Do we have a company org chart?" See farther below on this page for best practices.
     * **Intent Qualifiers**: This field is only shown if you're using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See farther below on this page for best practices. **Note**: An intent qualifier can't be used more than once, i.e., in more than one article.
     * **Intent**: This field is only shown if the knowledge base is using [Domain intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Select the intent to associate with the article. See farther below on this page for best practices. If needed, you can use the **Create intent** option in the drop-down list to create the intent in Intent Builder from this location. Similarly, there's an **Update training phrases** link for updating the training phrases in Intent Builder from here. **Note**: An intent can't be used more than once, i.e., in more than one article.
-    * **Summary**: Enter a short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. For details on the subset of HTML that can be used in this field, see "Format text" farther below.
-    * **Detail**: This field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible. For details on the subset of HTML that can be used in this field, see "Format text" farther below.
+    * **Summary**: Enter a short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. For details on the subset of HTML that can be used in this field, see [here](knowledge-base-common-settings-tasks.html#format-text-in-an-article).
+    * **Detail**: This field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible. For details on the subset of HTML that can be used in this field, see [here](knowledge-base-common-settings-tasks.html#format-text-in-an-article).
     * **Category**: To assign the article to a category, enter the category name. This lets you subsequently filter and find articles based on category in the Knowledge Base application.
     * **Tags**: Tags are keywords, *not* sentences, that highlight the key noun(s) or word(s) in the title and intent qualifiers/training phrases. Tags can also be [entities](intent-builder-entities.html) that you've defined in a domain in Intent Builder. To increase the accuracy of Knowledge Base search results, add tags. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences.
 
@@ -88,24 +88,6 @@ Continuing our example, we've added some JavaScript so that, if there's a conten
 To accomplish this, in the Display Article interaction, we've configured the next action to be "End Interaction." Then, we've added some Post-Process code to that same interaction. The code (shown below) checks whether the content link (URL) exists, and, if it does, it changes the interaction's next action to be the following interaction.
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_advSettings6.png">
-
-### Format text
-
-In the Summary and Detail fields of an article, you can use the following subset of HTML tags:
-* `<strong>`, `<b>` and `<i>`
-* `<a href="">`, with support for HTTP, HTTPS, phone and email
-* `<ul>`, `<ol>` and `<li>`
-
-Examples of valid anchor tags:
-* `<a href="http://example.com/test.jpg">`
-* `<a href="http://example.com/1$2324%342523">`
-* `<a href=”mailto:a.b@example.com”>Email</a>`
-* `<a href=”tel:+123456789”>Phone</a>`
-
-Examples of invalid anchor tags:
-* `<a href="javascript: alert(’test’)">`
-* `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>`
-* `<a onmouseover="alert('test')" href="http://example.com/test.jpg">`
 
 ### Enable or disable an article
 
