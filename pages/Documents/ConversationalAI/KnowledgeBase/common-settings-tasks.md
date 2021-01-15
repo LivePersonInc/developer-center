@@ -42,8 +42,8 @@ In the Summary and Detail fields of an article in an [internal knowledge base](k
 Examples of valid anchor tags:
 * `<a href="http://example.com/test.jpg">click here</a>`
 * `<a href="http://example.com/1$2324%342523">click here</a>`
-* `<a href=”tel:+123456789”>Phone</a>`
-* `<a href=”mailto:a.b@example.com”>Email</a>`
+* `<a href=”tel:+123456789”>phone</a>`
+* `<a href=”mailto:a.b@example.com”>email</a>`
 
 Examples of invalid anchor tags:
 * `<a href="javascript: alert(’test’)">click here</a>`
