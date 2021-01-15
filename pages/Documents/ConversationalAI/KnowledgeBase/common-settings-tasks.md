@@ -40,20 +40,20 @@ In the Summary and Detail fields of an article in an [internal knowledge base](k
 * `<a href="">`, with support for HTTP, HTTPS, phone (`tel`) and email (`mailto`)
 
 Examples of valid anchor tags:
-* `<a href="http://example.com/test.jpg">`
-* `<a href="http://example.com/1$2324%342523">`
+* `<a href="http://example.com/test.jpg">click here</a>`
+* `<a href="http://example.com/1$2324%342523">click here</a>`
 * `<a href=”tel:+123456789”>Phone</a>`
 * `<a href=”mailto:a.b@example.com”>Email</a>`
 
 Examples of invalid anchor tags:
-* `<a href="javascript: alert(’test’)">`
-* `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>`
-* `<a onmouseover="alert('test')" href="http://example.com/test.jpg">`
-
-These HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web chat window based on the capability of the respective tool/window.
+* `<a href="javascript: alert(’test’)">click here</a>`
+* `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>click here</a>`
+* `<a onmouseover="alert('test')" href="http://example.com/test.jpg">click here</a>`
 
 {: .important}
-If you're using an [external knowledge base](knowledge-base-external-knowledge-bases-introduction.html), where your content developers are authoring content in an external CMS, you can use the same, above HTML tags. Again, they render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web chat window based on the capability of the respective tool/window.
+If you're using an [external knowledge base](knowledge-base-external-knowledge-bases-introduction.html), where your content developers are authoring content in an external CMS, you can use the same HTML tags listed above.
+
+The HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web messaging/chat window based on the capability of the respective tool, window, and channel in use. Be sure to test in the target channel to verify support.
 
 ### Delete a knowledge base
 
