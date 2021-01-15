@@ -50,10 +50,10 @@ Examples of invalid anchor tags:
 * `<a href="http://example.com/test.jpg" onmouseover="alert('test')”>`
 * `<a onmouseover="alert('test')" href="http://example.com/test.jpg">`
 
-These HTML tags will render in the bot Preview tool and in the Web chat window based on the capability of the respective tool/window.
+These HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web chat window based on the capability of the respective tool/window.
 
 {: .important}
-If you're using an [external knowledge base](knowledge-base-external-knowledge-bases-introduction.html), where your content developers are authoring content in an external CMS, you can use the same, above HTML tags. Again, they will render in the bot Preview tool and in the Web chat window based on the capability of the respective tool/window.
+If you're using an [external knowledge base](knowledge-base-external-knowledge-bases-introduction.html), where your content developers are authoring content in an external CMS, you can use the same, above HTML tags. Again, they render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web chat window based on the capability of the respective tool/window.
 
 ### Delete a knowledge base
 
