@@ -22,6 +22,9 @@ Throughout this document the platform will be refered to as `PVA`.
 The Direct Line secret necessary to add the bot on Third-Party Bots can be found in the `Manage` Section of the PVA bot.
 
 <img class="fancyimage" alt="PVA-secret" src="img/ThirdPartyBots/microsoft-secret-pva.png">
+Figure 4.1 Direct Line Secret in PVA
+<br>
+<br>
 
 Adding this bot to Third-Party Bots will already enable you to leverage most of the bot functionality.
 For certain features of the PVA platform, however, you should also mark the bot as a PVA bot in the 
@@ -30,49 +33,56 @@ For certain features of the PVA platform, however, you should also mark the bot 
 ### Limitations
 
 {: .important}
-`End of Conversation`: This PVA node type found under `End the conversation`=>`End with survey` will send a native `endOfConversation` activity.
+`End of Conversation`: This PVA node type found under `End the conversation`=>`End with survey` will send a native 
+`endOfConversation` activity.
 As this is [not supported by the Direct Line Channel](https://docs.microsoft.com/en-us/azure/bot-service/rest-api/bot-framework-rest-direct-line-3-0-end-conversation?view=azure-bot-service-4.0)
-this connector is also not capable of supporting this node
+this connector is also not capable of supporting this node. To close a conversation send custom Channel Data as seen 
+in Figure 4.4.
 
 {: .important}
 The connector will send any Markdown as provided and not process the text further. 
 
 
-### Support
+### Features
 
-Currently Third-Party Bots supports the following PVA features:
+Currently Third-Party Bots supports the following features specific to PVA:
 
-### Greeting Topic
-By enabling the PVA setting the connector will  generate a native welcome event on a new conversation instead of the custom one described under 
-`Basic Content`.
-On the PVA platform this will trigger the System Topic `Greeting`.
-TODO: Basic Content Link
+#### Greeting Topic
+By enabling the PVA setting the connector will generate a native welcome event on a new or transfered conversation 
+instead of the custom one described under [Basic Content](third-party-bots-microsoft-direct-line-basic-content.html).
+This will trigger the System Topic `Greeting` configured on the PVA Platform.
 
-### Multiple Choice options
+#### Multiple Choice options
 A question node in PVA can be defined to provide predefined options for users.
 Third-Party Bots will automatically translate these options to quick replies.
 
 <img class="fancyimage" alt="Multiple Choice Example" src="img/ThirdPartyBots/microsoft-example-pva-multiple-choice.png">
+Figure 4.2 Question node in PVA
+<br>
+<br>
 
-### Transfer to Agent
+#### Transfer to Agent
 This PVA node can be selected under `End the conversation`=>`Transfer to agent` and will create a native event activity
 with the name `handoff.initiate`. 3rd-Party Bots supports this event. It is however crutial to take an additional step
 for it to work as a Conversational Cloud transfer request. A variable named `skill` needs to be set before the transfer 
 node is executed. This can e.g. be achieved by calling a Power Automation Action that returns such a value.
 
 <img class="fancyimage" alt="Transfer example" src="img/ThirdPartyBots/microsoft-example-pva-transfer.png">
+Figure 4.3 Transfer to agent
+<br>
+<br>
 
 The node allows to define a `Private Message to agent`.
 This message will be sent before the transfer and is not visible to the customer.
 
-### Channel Data support
+#### Channel Data support
 The PVA platform does not have a native option to send channel data information.
 However, the connector will assume any valid JSON content sent in the message field to be channelData content.
 This means all channelData objects documented for this connector can also be sent as a JSON string in the `Message` node.
 In the following example this is used to send a Close Conversation action.
 
 <img class="fancyimage" alt="Channel Data example" src="img/ThirdPartyBots/microsoft-example-pva-structured-content.png">
-
+Figure 4.4 Close Conversation as Channel Data in PVA
 
 
 
