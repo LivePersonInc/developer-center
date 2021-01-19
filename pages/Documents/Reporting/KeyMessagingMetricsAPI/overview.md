@@ -33,7 +33,7 @@ Combining this information with other data sources enables you to create your ow
 
 The API is being used today in the LivePerson Conversational Cloud to display the agent manager workspace:
 
-![](amws.png)
+![](img/amws.png)
 
 ### Getting Started
 
