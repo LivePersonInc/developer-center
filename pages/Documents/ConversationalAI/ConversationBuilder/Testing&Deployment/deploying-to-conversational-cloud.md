@@ -37,7 +37,7 @@ After the pre-requisite steps are performed, at a high level, deployment is a tw
 {: .important}
 LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
-For some practice at deployment, complete the [Connect to Conversational Cloud](conversation-builder-tutorials-guides-getting-started.html) tutorial. 
+For some practice at deployment, complete the [Deploy the Bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) tutorial.
 
 ### The Agent Connectors page
 The Agent Connectors page makes it fast and easy to understand the status of the agent connectors for a single bot. Unless you're troubleshooting a connector, typically you won't need to dive into the details on the individual components that support the end-to-end connection. Use the Start/Stop toggle button to start and stop an agent connector.
@@ -123,14 +123,7 @@ If a connector enters an Offline status, which is an error status, click **Detai
 * **401 "unauthorized" error**: This error can occur if you try to add an agent connector for a bot user that wasn't created by you. Either add the agent connector for a different bot user created by you, or have the creator of the bot user add the agent connector.
 
 ### Deployment statuses
-An agent connector can have one of the following statuses:
-
-- **Ready to Start**: The connector was added successfully, but it hasn't been started for the first time.
-* **Not Connected**: The connection to Conversational Cloud has been dropped, or the connector has just started and hasn't yet had the chance to update its status after connection.
-- **Online**: The connector is running, and all end-to-end connections are working well.
-- **Offline**: At least one underlying component isn't working, causing end-to-end connections not to function. The connector is in an error state and isn't running.
-- **Stopped**: The connector isn't running because it was manually stopped. 
-
+For status descriptions, see [here](bots-status-overview.html#statuses).
 
 ### Custom configuration fields
 
@@ -170,6 +163,19 @@ The value in milliseconds for the period of time to pass before invoking fallbac
 **Default value**: 3 \* 1000 \* 60<br>
 **Messaging**: Yes<br>
 **Chat**: No
+
+#### maxConsumerMessageDelay
+The maximum time delay in minutes between the bot agent's receipt of the last consumer message (to which the bot responded) and its receipt of the next consumer message. If the next message is received after this time has elapsed, the bot ignores the message and does not respond.
+
+For example, assume the bot agent receives a message from the consumer at 1:00 p.m., and it then receives the consumer's next message at 1:20 p.m. The delay between consumer messages is 20 minutes. If the maxConsumerMessageDelay is set to 30 minutes, the bot will respond to the message received at 1:20 p.m.
+
+Conversely, assume the bot agent receives a message from the consumer at 1:00 p.m., and it then receives the consumer's next message at 2:00 p.m. The delay between consumer messages is 60 minutes. If the maxConsumerMessageDelay is set to 30 minutes, the bot will not respond to the message received at 2:00 p.m.
+
+The default value of 30 minutes should suit most use cases due to the sequential nature of bot conversations, where the conversation either ends in resolution or escalation. However, messaging is asynchronous, so a consumer might reply in intervals that are longer than 30 minutes. As a result, you can increase this value if needed based on your use cases.
+
+**Default value**: 30<br>
+**Messaging**: Yes<br>
+**Chat**: No<br>
 
 #### maxEscalationRetries
 When the agent escalation fails, we send an \_agent\_escalation\_failed\_ message. However, this can end in infinitely loop if the escalation keeps failing. This will set the max number of failure messages sent.

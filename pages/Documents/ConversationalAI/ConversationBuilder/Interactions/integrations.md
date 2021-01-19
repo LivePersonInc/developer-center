@@ -55,7 +55,7 @@ In our example below, we've added a rule that checks for a "success" result, and
 
 Use an Agent Transfer interaction in a dialog when you want to transfer a conversation from a bot to a live agent, or from a bot in one bot group to a bot in a *different* group.
 
-For some practice with this interaction type, complete the [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html).
+For some practice with this interaction type, complete the [Escalate to an Agent tutorial](tutorials-guides-getting-started-with-bot-building-escalate-to-an-agent.html).
 
 {: .important}
 There are two ways to implement a transfer: You can add an Agent Transfer interaction, *as discussed here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Agent Transfer interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.

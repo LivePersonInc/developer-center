@@ -85,7 +85,7 @@ Key characteristics include:
 * From an NLU processing perspective, performs well regardless of the number of intents and training phrases involved. However, if you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
 * For performance reasons:
     * Supports a maximum of 40 training phrases per intent. If you add more than 40, only the first 40 are used.
-    * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledge-base-articles.html#best-practices).
+    * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledge-base-internal-knowledge-bases-best-practices.html).
 * Doesn't require the model to be trained, which can save time.
 * Doesn't support [prebuilt domains](intent-builder-overview.html#prebuilt-domains) or [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
 * Can't be used with [Intent Analyzer](intent-analyzer-overview.html).
@@ -102,8 +102,11 @@ Key characteristics include:
 * When you create a domain with NLU v2 and use it in Intent Analyzer or in Conversation Builder, the following is required:
     * At least 20 training phrases per intent
     * At least 5 intents in order to train
+    
+    If your domain complies with these requirements, LivePerson recommends that you use LivePerson NLU v2 (not v1) if possible.   
 * Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
-- Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
+<!-- * Makes available a [Model Tester](intent-builder-testing-advanced-model-testing.html). -->
+* Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
 * Can be used with [Intent Analyzer](intent-analyzer-overview.html).
 * Supports English.
 
@@ -165,4 +168,4 @@ In Intent Builder, in the domain that you created in the previous step, [create 
 
 #### Step 5: Train the domain
 
-In Intent Builder, [train the domain](intent-builder-domains.html#train-a-3rd-party-nlu-domain). Once training is completed (which creates the model version), you can start to [test](intent-builder-domains.html#test-a-domain).
+In Intent Builder, [train the domain](intent-builder-domains.html#train-a-3rd-party-nlu-domain). Once training is completed (which creates the model version), you can start to [test](intent-builder-testing-single-utterance-testing.html).

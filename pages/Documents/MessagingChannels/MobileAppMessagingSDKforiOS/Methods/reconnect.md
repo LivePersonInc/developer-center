@@ -2,6 +2,7 @@
 pagename: Reconnect
 redirect_from:
   - consumer-experience-ios-sdk-reconnectdeprecated.html
+  - consumer-experience-ios-sdk-reconnect.html
 Keywords:
 
 categoryname: "Messaging Channels"

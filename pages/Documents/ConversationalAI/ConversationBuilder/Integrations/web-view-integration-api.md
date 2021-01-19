@@ -77,4 +77,4 @@ Use the [Get Web View Variables](conversation-builder-scripting-functions-get-se
 
 ### Example guide
 
-For a step-by-step, example guide that uses this API, see [here](conversation-builder-tutorials-guides-implementing-a-web-view-integration.html).
+For a step-by-step, example guide that uses this API, see [here](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html).

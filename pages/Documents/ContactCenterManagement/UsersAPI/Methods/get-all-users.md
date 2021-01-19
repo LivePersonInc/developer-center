@@ -17,6 +17,12 @@ indicator: both
 
 This API retrieves a list of users for a specific account.
 
+**Note: the current version of the API is 4.0. In order to avoid errors, please add a query parameter to your calls specifying the version, like so:**
+
+```
+https://API_REQUEST?v=4.0
+```
+
 ### Request
 
  |Method|URL |
@@ -40,12 +46,12 @@ This API retrieves a list of users for a specific account.
 |:-------  |:-------------- | :--- |
  |AccountId|            LP site ID|             |
 
- **Query Parameters**
+**Query Parameters**
 
- | Name            | Description                                                                  | Type    | Notes                                          |
- |-----------------|------------------------------------------------------------------------------|---------|------------------------------------------------|
- | select          | Response field filter expression .                           | string  | Example values: id, name. Default value: id,pid,deleted,loginName  |
-
+ | Name            | Description                       | Type    | Required  | Notes                                                |
+ |-----------------|-----------------------------------|---------|-----------|------------------------------------------------------|
+ | v               | API version number                | double  | Required  | Value should be 4.0                                  |
+ | select          | Response field filter expression  | string  | Optional  | Example values: id, name. Default value: all fields  |
 
 ### Response
 

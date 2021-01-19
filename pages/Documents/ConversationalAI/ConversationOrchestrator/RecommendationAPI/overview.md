@@ -26,7 +26,7 @@ A typical use case for using Recommendation APIs is to get a routing decision to
 1. A brands concierge bot (for example a bot built in Conversation Builder or Google Dialogflow) handles branded greetings, dialogs, and intents. 
 2. It then calls the Recommendation API which evaluates all the policies setup in Dynamic Routing and then returns the next best best action. 
 3. The concierge bot then uses the action (for example route to a skill), to transfer the conversation to that skill in Conversational Cloud. 
-4. This is often used in conjunction with the Context Session Store to pass custom attributes to use in a policy (for example intents). To learn more about how to use the Context Session Store [please see documentation](maven-context-warehouse-context-session-store.html).
+4. This is often used in conjunction with the Conversation Context Service to pass custom attributes to use in a policy (for example intents). To learn more about how to use the Conversation Context Service [please see documentation](maven-context-warehouse-context-session-store.html).
 
 <img class="fancyimage" style="width:700px" src="img/maven/askmaven2.png">
 

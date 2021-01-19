@@ -14,9 +14,9 @@ indicator: messaging
 
 [SDEs](engagement-attributes-types-of-engagement-attributes.html) are Structured Data Entities, for brands to report/include business, user, and context data in campaigns when conversations are initiated. SDEs provide a valuable way for brands to include additional context information to the conversation when the conversation is initiated. This type of context can then allow brands to provide more personalized conversational journeys for the consumers. This document describes how to use SDEs with Conversation Orchestrator Routing. 
 
-SDEs will be supported as an attribute in the Context Warehouse in future. However, we can use a LivePerson function to get an SDE and then use it in a policy. In the following example we are going to use the Company Branch SDE variable. 
+SDEs will be supported as an attribute in the Conversation Context Service in future. However, we can use a LivePerson function to get an SDE and then use it in a policy. In the following example we are going to use the Company Branch SDE variable. 
 
-## Create a Function to pull the SDE (unauth and/or auth) to the context warehouse
+## Create a Function to pull the SDE (unauth and/or auth) to the Conversation Context Service
 
 1. Login to Conversational Cloud and and navigate to Functions from the waffle menu in the bottom left corner 
 
@@ -34,7 +34,7 @@ SDEs will be supported as an attribute in the Context Warehouse in future. Howev
 
    a. Example Name: Set_SDE_CustomerBranch_for_Dynamic_Routing
 
-   b. Example Description: Sets authenticated SDE CustomerBranch in Context Warehouse for use in dynamic routing policies.
+   b. Example Description: Sets authenticated SDE CustomerBranch in Conversation Context Service for use in dynamic routing policies.
 
    c. Click the Create function button. 
 
@@ -122,11 +122,11 @@ SDEs will be supported as an attribute in the Context Warehouse in future. Howev
 10. In the actions column, Deploy the function.
 
 
-## Create the Context Warehouse Attribute
+## Create the Conversation Context Service Attribute
 
 1. Access the Conversation Orchestrator area of Conversational Cloud 
 
-2. Navigate to the Custom option under Context Warehouse 
+2. Navigate to the Custom option under Conversation Context Service 
 
 3. Select Add New to create a new custom context attribute
 

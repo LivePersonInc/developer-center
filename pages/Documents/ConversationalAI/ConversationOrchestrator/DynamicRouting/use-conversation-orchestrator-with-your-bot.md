@@ -22,15 +22,15 @@ If you want more control and customization on your conversational experience, yo
 
 - You have deeper customization needs to use Conversation Orchestrator capabilities at runtime
 
-This method is usually used alongside Context Session Store APIs to send intents and attributes. 
+This method is usually used alongside Conversation Context Service APIs to send intents and attributes. 
 
 **Example**:
 
-The following example shows how to use [Recommendation API](maven-askmaven-overview.html) and [Context session store](maven-context-warehouse-context-session-store.html) APIs from a concierge bot.
+The following example shows how to use [Recommendation API](maven-askmaven-overview.html) and [Conversation Context Service](maven-context-warehouse-context-session-store.html) APIs from a concierge bot.
 
 1. A concierge bot handles branded greetings and intents. 
 
-2. It uses the Context Session Store APIs to store the value of the intent in the store
+2. It uses the Conversation Context Service APIs to store the value of the intent in the store
 
 3. The bot then calls Recommendation APIs to get a routing decision. Because the intent has been set, Conversation Orchestrator can now use this information to evaluate a routing policy. 
 
@@ -47,11 +47,11 @@ The variable can be used anywhere in conversation builder using the following va
 {$botContext.conversationId}
  
 
-#### Call Session Store APIs
+#### Call Conversation Context Service APIs
 
-The session store is useful in storing any context information gathered in a bot that you may want to use in a routing policy. For instance you may want to set the intent detected by a bot and then use it for any routing policy.
+The Conversation Context Service is useful in storing any context information gathered in a bot that you may want to use in a routing policy. For instance you may want to set the intent detected by a bot and then use it for any routing policy.
 
-You can call the session store API by setting up an [Integration](conversation-builder-integrations-api-integrations.html) with the [Context Session Store API](maven-context-warehouse-context-session-store.html) details. You may use the conversation id to store the session state, and pass the conversation id in the Recommendation API call. 
+You can call the Conversation Context Service API by setting up an [Integration](conversation-builder-integrations-api-integrations.html) with the [Conversation Context Service API](maven-context-warehouse-context-session-store.html) details. You may use the conversation id to store the session state, and pass the conversation id in the Recommendation API call. 
 
 <img class="fancyimage" width="500" src="img/maven/Call Session Store APIs from CB.png">
 
@@ -84,7 +84,7 @@ Recommendation APIs can be used in a Conversation Builder bot using [Integration
 
 #### Get The Conversation ID
 
-The conversation id is required for using the Recommendation APIs. This ID is used by the policy to retrieve conversation and session store parameters. 
+The conversation id is required for using the Recommendation APIs. This ID is used by the policy to retrieve conversation and Conversation Context Service parameters. 
 
 Inside **Dialogflow Fulfillment**, modify the sample code for the event handler for each request. 
 
@@ -102,11 +102,11 @@ request.body.session.substring(request.body.session.lastIndexOf("/") + 1);
 
 For debugging, you can see the logs by clicking the link **“View execution logs in the Firebase console”** inside the Dialogflow Fulfillment page.
 
-#### Call Session Store APIs
+#### Call Conversation Context Service APIs
 
 Click `package.json` to include your favorite Node.js HTTP library. In the example, we include the axios HTTP library.
 
-The session store is useful in storing any context information gathered in a bot that you may want to use in a routing policy. For instance you may want to set the intent detected by a bot and then use it for any routing policy. 
+The Conversation Context Service is useful in storing any context information gathered in a bot that you may want to use in a routing policy. For instance you may want to set the intent detected by a bot and then use it for any routing policy. 
 
 ```javascript
 const contextUrl = 'https://z1.context.liveperson.net/v1/account/55884191/namespace1/' + conversationId + '/properties';
