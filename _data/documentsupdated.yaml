@@ -769,7 +769,13 @@
           - subpagename: Agent Activity
           - subpagename: Current Queue State
           - subpagename: SLA Histogram
-
+  - documentname: Key Messaging Metrics API
+    basedomain: https://{domain}/manager_workspace/api/account/{accountID}
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Metrics
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
