@@ -17,7 +17,7 @@ indicator: messaging
 {: .notice}
 This API is intended for reporting and information purposes, not for real-time decisions, such as routing
 
-The key messaging metrics API retrieves core messaging metrics at the account, skill, agent or agent group level, for up to the last 24 hours.
+The key messaging metrics API retrieves core messaging metrics at the account, skill or agent group level, for up to the last 24 hours.
 
 Combining this information with other data sources enables you to create your own customized real-time dashboard. Here are some example use cases of the API, that can assist you in analyzing your contact center performance:
 
