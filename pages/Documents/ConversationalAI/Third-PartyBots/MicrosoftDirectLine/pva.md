@@ -63,7 +63,7 @@ Figure 4.2 Question node in PVA
 
 #### Transfer to Agent
 This PVA node can be selected under `End the conversation`=>`Transfer to agent` and will create a native event activity
-with the name `handoff.initiate`. 3rd-Party Bots supports this event. It is however crutial to take an additional step
+with the name `handoff.initiate`. Third-Party Bots supports this event. It is,however, crutial to take an additional step
 for it to work as a Conversational Cloud transfer request. A variable named `skill` needs to be set before the transfer 
 node is executed. This can e.g. be achieved by calling a Power Automation Action that returns such a value.
 
