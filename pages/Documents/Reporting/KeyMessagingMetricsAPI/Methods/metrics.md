@@ -1,5 +1,7 @@
 ---
 pagename: Metrics
+redirect_from:
+  - 
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Key Messaging Metrics API
