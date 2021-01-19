@@ -14,7 +14,7 @@ Use the following built-in functions to get and set contextual data.
 
 ### Get and set bot variable
 
-The `setBotVariable` function is used for setting a value to the botVariable so that it can be used in further code, and it returns a string. These variables are available throughout the entire bot.
+The `setBotVariable` function is used to set a bot variable’s state in memory, so it can be used later in the bot flow. By default, it stores the variable state in request scope, but you can specify the scope as a parameter.
 
 The `getBotVariable` function is used for getting the bot variable. Bot variables that are not set will return NULL.
 
