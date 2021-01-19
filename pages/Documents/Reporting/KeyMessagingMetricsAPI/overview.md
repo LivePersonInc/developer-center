@@ -1,14 +1,14 @@
 ---
 pagename: Overview
 redirect_from:
-  - data-messaging-agent-metrics-overview.html
+  - 
 sitesection: Documents
 categoryname: "Reporting"
 documentname: Key Messaging Metrics API
 
 level-order: 2
 order: 1
-permalink: agent-metrics-api-overview.html
+permalink: key-messaging-metrics-api-overview.html
 root-link: true
 indicator: messaging
 ---
