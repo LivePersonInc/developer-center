@@ -70,7 +70,7 @@ An agent can belong to only one bot.
 6. If desired, click **Advanced Options** and specify any optional, advanced settings:
     - **Fallback Skill ID**: If the skill (that you assigned to the bot agent) has a defined fallback skill, you can enter the fallback skill's ID here. The fallback skill is the skill to which to route the conversation as a fallback if no agents with the primary skill have free capacity. Fallback skills have several uses, but they're often used to escalate (transfer) a conversation from a bot agent to a live agent. You define fallback skills for skills in Conversational Cloud. For more on this, see the [LivePerson Knowledge Center](https://knowledge.liveperson.com).
     - **External Webhook URL**: This option is for brands that want to use HTTP instead of WebSocket for connection to Conversational Cloud. Enter the URL to which the HTTP connector will post user messages to external endpoints.
-    - **Custom Configurations**: If desired, click " + ", and enter any custom configuration fields to set. For information on these, see "Custom configuration fields" later in this topic.
+    - **Custom Configurations**: If desired, click **+ Custom Configurations**, and enter any custom configuration fields to set. For information on these, see "Custom configuration fields" later in this topic.
     - **Accessibility**: Select this if you want the bot messages to support Accessibility. If you select this, the fields sent in the JSON object have the tooltip attribute.
 7. Click **Save**.
 
