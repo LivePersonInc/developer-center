@@ -186,7 +186,7 @@ metadata within your conversations. Before sending encoded metadata you must ens
 to successfully send the data.
 
 
-* `Common.EncodedMetadata` AC feature is ON</li>
+* `Common.EncodedMetadata` AC feature is ON
 * Content is base64 encoded
 * Metadata size is limited to 5k
 
