@@ -33,6 +33,8 @@ When specifying the next action, you can select from the following options:
 * *Close Dialog*: Closes the conversation and triggers a post-conversation survey; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) for more.
 * *{interaction name}*: Directs the flow to the interaction with the specified name.
 
+Next Action options depend on the given interaction; only suitable options are available. For example, "Current Interaction" is only available for Question interactions, and "Close Conversation" isn't available for Dialog Starter interactions.
+
 As shown in the image above, in question and integration interactions, you can create *custom rules* that determine the next action that occurs. This is discussed next.
 
 ### Custom Rules

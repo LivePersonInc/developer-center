@@ -486,8 +486,8 @@ Example:
           "lineSeq": "81",
           "lineRawScore": 0,
           "mcs": 0
-        },
-      ]
+        }
+      ],
          "campaign":{
            "campaignEngagementId": "1759631410",
            "campaignEngagementName": "Dummy1",
@@ -539,6 +539,24 @@ Example:
               }
             ]
           },
+	 "predictions": [
+        {
+          "topPrediction": {
+            "predictionId": "28981b77-f249-435a-897b-26f99d9d62e2",
+            "predictionLabel": "add service",
+            "confidenceScore": 0.91
+          },
+          "lineSeq": "28"
+        },
+        {
+          "topPrediction": {
+            "predictionId": "821c9d1b-4c1d-49f5-af87-42a04d06723a",
+            "predictionLabel": "make payment",
+            "confidenceScore": 0.84
+          },
+          "lineSeq": "29"
+        }
+      ], 
          "sdes": {
            "events": [
              {

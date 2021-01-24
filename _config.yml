@@ -35,6 +35,9 @@ plugins:
 algolia:
   application_id: "EICOREWTRW"
   index_name: "devMain"
+  #also index the following html elements
+  nodes_to_index: 'code,p,blockquote,li,div.paragraph'
+
 # #values for the Algolia plugin
 
 

@@ -22,7 +22,7 @@ LivePerson has found through research that consumer effort and emotion are key d
 * Was the consumer stuck in an endless loop? 
 * Did a bad transfer to an agent occur?
 
-As an example, here below is part of a conversation with two types of failure points:
+Here below is part of a conversation with two types of failure points:
 
 <img style="width:800px" src="img/ConvoBuilder/macs_example_conv.png">
 
@@ -136,11 +136,12 @@ On the main dashboard, click a bot’s MACS to go to the **MACS** page for the b
 
 On the **MACS** page, use the filters to refine the data that’s displayed based on your criteria:
 
-1. **Score filters**: Toggle these on and off to show and hide the data for a score.
-2. **Detail filters**: Filter the data based on specific criteria, for example, the reason for the MACS score.
+1. **Detail filters**: Filter the data based on specific criteria, for example, the reason for the MACS score.
+2. **Score filters**: Toggle these on and off to show and hide the data for a score.
 3. **Date filter**: Specify the date range for the data.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_filters.png">
+<img style="width:500px" src="img/ConvoBuilder/macs_filters2.png">
 
 Note the following about the filters:
 
@@ -203,12 +204,19 @@ The MACS reasons point towards issues with the bot’s responses. If there are n
 
 A single conversation can have multiple MACS reasons found within it. So if you filter the results using one MACS reason (or a few), you might see conversations that include those reasons as well as others.
 
+#### One of my conversations has multiple scores assigned to it. Why is this?
+A conversation can have multiple “legs,” where a “leg” in a conversation starts with one agent, and it ends when the conversation is transferred to another agent. Multiple legs of a conversation have the same conversation ID. 
+
+A MACS score is calculated for each leg of a conversation, so you might see a single conversation with multiple MACS scores assigned to it.
+
+
 ### Sending feedback
 
-Your feedback about this Beta feature is important to us, and you can send it to us in two ways:
+Your feedback about this Beta feature is important to us! You can send it to us in the following ways:
 
-* Send MACS score-related feedback using the **Feedback** widget
-* Send overall feedback using [this survey](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform)
+* Email questions or feedback to `macs-feedback-LP@liveperson.com`.
+* Send MACS score-related feedback using the **Feedback** widget.
+* Send overall feedback via [this survey](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform). The survey captures valuable information about your experience and helps us to identify areas for enhancement.
 
 #### Sending score-related feedback
 
@@ -225,7 +233,3 @@ The **Feedback** widget lets you rate the experience on a scale of 1 to 5 (Did y
 The full conversation ID can be found at the top of the transcript window.
 
 <img style="width:700px" src="img/ConvoBuilder/macs_feedback3.png">
-
-#### Sending overall feedback
-
-After you’ve spent some time using MACS, we encourage you to send feedback via [our survey](https://docs.google.com/forms/d/e/1FAIpQLSeD-lc-4e_HhWqPMzufGd7fhNAWGTITGpCT9XKdK5NmpfLMPw/viewform). The survey captures valuable information about your experience and helps us to identify areas for enhancement.

@@ -7,10 +7,7 @@ sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: SDK Attributes
-
-order: 226
 permalink: mobile-app-messaging-sdk-for-ios-sdk-attributes-deprecated-attributes.html
-
 indicator: messaging
 ---
 
@@ -18,7 +15,8 @@ Listed below are attributes that have been deprecated. These keys should no long
 
 In order to configure different string for this key, see String localization in SDK.
 
-*Note: By default, these keys are configured with Localization keys values, and are sensitive to any language changes.  These keys must be reconfigured each time a language is changed.*
+{:.notice}
+By default, these keys are configured with Localization keys values, and are sensitive to any language changes.  These keys must be reconfigured each time a language is changed.*
 
 | Attribute name | Type | Description | Replacement |
 | :--- | :--- | :--- |

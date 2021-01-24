@@ -261,7 +261,7 @@
       - pagename: Testing
         subpages:
          - subpagename: Single Utterance Testing
-      #   - subpagename: Advanced Model Testing
+         - subpagename: Advanced Model Testing
   - documentname: Intent Analyzer
     pages:
       - pagename: Overview
@@ -817,7 +817,13 @@
           - subpagename: Agent Activity
           - subpagename: Current Queue State
           - subpagename: SLA Histogram
-
+  - documentname: Key Messaging Metrics API
+    basedomain: https://{domain}/manager_workspace/api/account/{accountID}
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Metrics
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -897,16 +903,24 @@
   - documentname: Mobile App Messaging SDK for iOS
     pages:
     - pagename: Overview
+    - pagename: Configure the iOS SDK
+    - pagename: Push Notifications
     - pagename: Quick Starts
       subpages:
       - subpagename: Quick Start 5.2.1 and below
       - subpagename: Quick Start - 6.0 and up (XCFramework support)
-    - pagename: Configure the iOS SDK
-    - pagename: Push Notifications
+    - pagename: Advanced Configuration
+      subpages:
+        - subpagename: App Extensions
+        - subpagename: Conversations Lifecycle
+        - subpagename: SDK Delegates
+        - subpagename: UI
+        - subpagename: User Data
     - pagename: Advanced Features
       subpages:
       - subpagename: Audio Messages
       - subpagename: Campaigns
+      - subpagename: Certificate Pinning
       - subpagename: CSAT Behavior
       - subpagename: Photo and File Sharing
       - subpagename: Unauthenticated In-App Messaging
@@ -922,9 +936,10 @@
       - subpagename: Callbacks Index
     - pagename: SDK Attributes
       subpages:
+      - subpagename: Attributes Design Sheet
+      - subpagename: Deprecated Attributes
       - subpagename: SDK 5.0 and above
       - subpagename: SDK 4.1 and below
-      - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:
       - subpagename: Localization Keys
@@ -937,9 +952,9 @@
       subpages:
       - subpagename: About XCFrameworks
       - subpagename: Authentication
+      - subpagename: Customizing Toast Notifications
       - subpagename: FAQ
       - subpagename: Open Source List
-      - subpagename: Upgrade Guide - iOS
   - documentname: Apple Business Chat SDK
     pages:
     - pagename: Overview
@@ -1022,8 +1037,7 @@
     - documentname: Consumer Authentication
       pages:
       - pagename: Introduction
-      - pagename: Major Components
-      - pagename: Security
+      - pagename: Implementation Considerations
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API
