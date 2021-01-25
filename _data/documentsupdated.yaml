@@ -236,6 +236,8 @@
           - subpagename: Setting Up Knowledge Base Recommendations
           - subpagename: Testing
           - subpagename: Agent Experience
+          - subpagename: Best Practices
+          - subpagename: Troubleshooting
       - pagename: Conversation Context Service
         subpages:
           - subpagename: Overview
