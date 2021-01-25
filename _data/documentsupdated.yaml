@@ -319,6 +319,7 @@
           - subpagename: Introduction
           - subpagename: Basic Content
           - subpagename: Advanced Features
+          - subpagename: PVA
       - pagename: Custom Integration
       - pagename: Hook Configuration
       - pagename: Public API
