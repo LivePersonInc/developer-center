@@ -232,7 +232,7 @@
       - pagename: Agent Assist
         subpages:
           - subpagename: Overview
-          - subpagename: Recommended Actions for Automations
+          - subpagename: Setting Up Bot Recommendations
           - subpagename: Recommended Actions for Knowledge Base
       - pagename: Conversation Context Service
         subpages:
