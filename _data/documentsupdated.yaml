@@ -233,7 +233,7 @@
         subpages:
           - subpagename: Overview
           - subpagename: Setting Up Bot Recommendations
-          - subpagename: Recommended Actions for Knowledge Base
+          - subpagename: Setting Up Knowledge Base Recommendations
       - pagename: Conversation Context Service
         subpages:
           - subpagename: Overview

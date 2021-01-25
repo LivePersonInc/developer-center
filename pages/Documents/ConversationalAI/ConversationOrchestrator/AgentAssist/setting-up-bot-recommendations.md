@@ -110,7 +110,7 @@ The **Enable recommendations** setting is a shared setting. Enabling or disablin
 
     <img width="500" src="img/agentassist/enable_recs.png">
 
-4. Turn on the enabled toggle switch.
+4. Turn on the **enabled** toggle switch.
 
 #### Specify the maximum number of recommendations
 You can specify the maximum number of recommendations that Agent Assist will make when recommending articles and bots based on a detected intent (the consumer’s input). By default, up to 3 recommendations are provided to the agent.  You can change this at any time.
