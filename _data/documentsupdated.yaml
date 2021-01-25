@@ -234,6 +234,8 @@
           - subpagename: Overview
           - subpagename: Setting Up Bot Recommendations
           - subpagename: Setting Up Knowledge Base Recommendations
+          - subpagename: Testing
+          - subpagename: Agent Experience
       - pagename: Conversation Context Service
         subpages:
           - subpagename: Overview
