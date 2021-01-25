@@ -9,6 +9,7 @@ permalink: liveperson-functions-integrations-post-chat-survey-transcripts.html
 indicator: chat
 redirect_from:
   - liveperson-functions-liveperson-integrations-post-chat-survey-transcripts.html
+  - function-as-a-service-use-cases-post-chat-survey-transcripts.html
 ---
 
 This use case showcases how the LivePerson Functions platform can help extend the Conversational Cloud platform functionality. In this case, we will use Functions to re-create one of our Legacy features, the ability to conditionally send out transcripts after a chat conversation ended.

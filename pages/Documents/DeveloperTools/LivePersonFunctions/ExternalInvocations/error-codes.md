@@ -27,3 +27,18 @@ This section describes possible errors that can occur when invoking a lambda fro
 | 'com.liveperson.faas.handler.log-limit-reached'     | Lambda exceeds log limits (see https://developers.liveperson.com/liveperson-functions-monitoring-logs.html)      |
 | 'com.liveperson.faas.fm.general'                    | General error, no specific reason                                                                               |
 | 'com.liveperson.faas.fm.unavailable'                | Could not reach/access remote system                                                                            |
+
+
+## Http codes
+
+| Code                                               | name             | Description                                              |
+|----------------------------------------------------|-----------------|-----------------------------------------------|
+| 200,202       |   Success                             | Request was successfully accepted/processed   |
+| 400           |   Bad Request                         | The request is either not correct or malformed                                            |
+| 401,403       |   Unauthorized                        | Missing authentication or missing privileges                   |
+| 404           |   Not Found                           | Requested resource was not found. In the case of lambda, this can also mean it was not deployed  |
+| 405           |   Method Not Allowed                  | The request was using the wrong HTTP method                   |
+| 408           |   Request Timeout                     | Server did not receive the complete request by the client within the read limit |
+| 429           |   Ratelimit                           | The client exceeded the rate-limit, which is based on a per-account level            |
+| 500,502,504   |   Internal Server Error               | Unexpected Server Error, which can be temporarily                               |
+| 901           |   Error during lambda execution       | Lambda Execution failed due to an issue with the lambda coding. This can include runtime exception, exceeding processing window & returning of an error by the lambda                   |

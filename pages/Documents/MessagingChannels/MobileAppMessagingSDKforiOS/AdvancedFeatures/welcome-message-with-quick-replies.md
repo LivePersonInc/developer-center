@@ -49,6 +49,9 @@ let welcomeMessageParam = LPWelcomeMessage(message: "Hello Mr.Bond")
 LPMessaging.instance.showConversation(conversationViewParams,  authenticationParams: authenticationParams)
 ```
 
+{: .notice}
+Currently this feature is not fully compatible with the [Control History APIs](mobile-app-messaging-sdk-for-ios-sdk-apis-control-history-apis.html).
+
 ### Limitations
 - You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
 
@@ -62,10 +65,10 @@ LPMessaging.instance.showConversation(conversationViewParams,  authenticationPar
 
    ```
    "metadata": [
-   {
-   "type": "ExternalId",
-   "id": "Yes-1234"
-   }
+        {
+            "type": "ExternalId",
+            "id": "Yes-1234"
+        }
    ]
    ```
 

@@ -37,7 +37,6 @@ Every function is triggerd (or "invoked") via an event. **Conversational Command
 
 All deployed `lambdas` with this event assigned to them as their triggering event will be available as Conversational Commands in the Agent Workspace.
 
-### Step-by-Step implementation guide
 
 #### Step 1 - Create function
 

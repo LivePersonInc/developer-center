@@ -9,6 +9,8 @@ permalink: liveperson-functions-developing-with-faas-best-practices.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-best-practices.html
+  - liveperson-functions-development-best-practices.html
+  - liveperson-functions-development-best-practices.html#making-functions-configurable
 ---
 
 The following section shows some best practices for using the LivePerson Functions platform.

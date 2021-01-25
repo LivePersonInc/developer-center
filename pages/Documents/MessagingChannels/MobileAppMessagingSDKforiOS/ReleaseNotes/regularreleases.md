@@ -6,6 +6,9 @@ categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
 subfoldername: All Releases
 permalink: mobile-app-messaging-sdk-for-ios-all-releases-regular-releases.html
+redirect_from:
+  - mobile-app-messaging-sdk-for-ios-releases-all-regular-release-notes.html#ios-messaging-sdk---version-410
+  - mobile-app-messaging-sdk-for-ios-releases-all-regular-release-notes.html#ios-messaging-sdk---version-400
 indicator: messaging
 ---
 

@@ -572,7 +572,9 @@ In activity mode - Also the color of android:windowBackground.
 
 
 #### conversation_background (image)
-Sets the conversation background image (applicable on Activity mode only).
+Sets the conversation background image.
+
+If using Fragment mode, the minimum SDK version supports this configuration is v4.7.0.
 
 **Type:** drawable
 
@@ -1559,7 +1561,7 @@ Available options:
 3. FirstUnreadMessage
 
 #### lp_scroll_when_foreground
-Configures the scroll behavior when bring conversaton screen to foreground from background.
+Configures the scroll behavior when bring conversation screen to foreground from background.
 
 - **Type:** string
 - **Default value:** LastPosition
@@ -1570,7 +1572,7 @@ Available options:
 3. FirstUnreadMessage
 
 #### lp_scroll_when_push_notification
-Configures the scroll behavior when open conversaton screen by tapping on push notification.
+Configures the scroll behavior when open conversation screen by tapping on push notification.
 
 - **Type:** string
 - **Default value:** Bottom
@@ -2801,6 +2803,9 @@ Defines whether to disable the TTR snackbar popup (true=disable) false by defaul
 
 * **Type:** bool
 * **Default value:** false
+
+{:.important}
+When the auto messages feature is enabled, TTR notifications do not display when the auto messages featuer is enabled, regardless of the value set for this attribute.
 
 #### show_timestamp_in_ttr_notification
 When true the TTR snackbar will display the time until the agent responds. If set to false, a general message is displayed.

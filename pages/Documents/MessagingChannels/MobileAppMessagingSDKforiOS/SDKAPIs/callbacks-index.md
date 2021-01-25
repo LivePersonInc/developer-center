@@ -2,6 +2,7 @@
 pagename: Callbacks Index
 redirect_from:
   - consumer-experience-ios-sdk-callbacks-index.html
+  - consumer-experience-ios-sdk-callbacks.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"

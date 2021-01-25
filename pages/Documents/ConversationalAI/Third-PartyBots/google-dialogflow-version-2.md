@@ -522,6 +522,8 @@ The action field needs to be set to **CLOSE_CONVERSATION** to instruct the conne
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_12.png">
 Figure 10.1
 
+To close a conversation without triggering a post conversation survey, please add the parameter with the name `withoutPcs` and the value `true` to the action parameters.
+
 ### Invoke LivePerson Function
 
 During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.

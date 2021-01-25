@@ -15,7 +15,7 @@ The following section shows some common examples for using the LivePerson Functi
 
 - [OAuth 1](#oauth-1)
 - [OAuth 2.0](#oauth-20)
-- [Working with Context Session Store](#working-with-context-session-store)
+- [Working with Conversation Context Service](#working-with-conversation-context-service)
 
 ### OAuth 1
 
@@ -178,18 +178,18 @@ The following reduced code snippet shows an example on how to obtain the refresh
   });
 ```
 
-### Working with Context Session Store
+### Working with Conversation Context Service
 
-The [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html) allows you to save the conversation session state data in Conversational Cloud (e.g. agent notes), and then retrieve them later in a different conversation session.
+The [Conversation Context Service](conversation-orchestrator-conversation-context-service-conversation-context-service.html) allows you to save the conversation session state data in Conversational Cloud (e.g. agent notes), and then retrieve them later in a different conversation session.
 
 The following steps need to be performed before using the code examples:
-* Create a [Developer Key](conversation-orchestrator-context-warehouse-context-session-store.html#developer-key) and save it to the [Secret Storage](liveperson-functions-development-storing-secrets.html)
-* Create a [custom namespace](conversation-orchestrator-context-warehouse-context-session-store.html)
+* Create a [Developer Key](conversation-orchestrator-conversation-context-service-conversation-context-service.html#developer-key) and save it to the [Secret Storage](liveperson-functions-development-storing-secrets.html)
+* Create a [custom namespace](conversation-orchestrator-conversation-context-service-conversation-context-service.html)
 * Whitelist the domains `z1.context.liveperson.net`, `z2.context.liveperson.net` or `z3.context.liveperson.net` (depends on your zone).
 
 **Save data**
 
-The following code snippets shows how to save data to the `Context Session Store`. 
+The following code snippets shows how to save data to the `Conversation Context Service`. 
 
 To save data to a specific sessionId you have to adjust the URL, e.g. `https://z1.context.liveperson.net/v1/account/{accountId}/faas-demo-namespace/{sessionId}/properties`. Otherwise it will use the `__default__` sessionId.
 
@@ -233,7 +233,7 @@ async function lambda(input, callback) {
 
 **Get data**
 
-The following code snippets shows how to get data from the `Context Session Store`. 
+The following code snippets shows how to get data from the `Conversation Context Service`. 
 
 To get data from a specific sessionId you have to adjust the URL, e.g. `https://z1.context.liveperson.net/v1/account/{accountId}/faas-demo-namespace/{sessionId}/properties`. Otherwise it will use the `__default__` sessionId.
 

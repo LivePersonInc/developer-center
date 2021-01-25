@@ -14,9 +14,9 @@ Use the following built-in functions to get and set contextual data.
 
 ### Get and set bot variable
 
-The **Set** Bot Variable function is used for setting a value to the botVariable so that it can be used in further code, and it returns a string. These variables are available throughout the entire bot.
+The `setBotVariable` function is used to set a bot variable’s state in memory, so it can be used later in the bot flow. By default, it stores the variable state in request scope, but you can specify the scope as a parameter.
 
-The **Get** Bot Variable function is used for getting the bot variable. Bot variables that are not set will return NULL.
+The `getBotVariable` function is used for getting the bot variable. Bot variables that are not set will return NULL.
 
 {: .important}
 botVariables are strings. Whatever the data type of your input, it will be converted to a string. If you set a botVariable to an integer (ie: 10) it will be converted to “10”. When called using `getBotVariable()`, to be used as an integer again, you would need to convert it back to an integer (ie: 10*1).
@@ -24,7 +24,7 @@ botVariables are strings. Whatever the data type of your input, it will be conve
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `getBotVariable(name)` | name (string) – The name for the variable. | The object defined by `name` |
-| `setBotVariable(name, value, persistForSession, persistForever)` | <em>name (string)</em> – The name for the variable. Used to retrieve the variable in getBotVariable()<br><br> <em>value (object)</em> – The value to be stored, retrieved with getBotVariable() <br><br> <em>persistForSession (bool)</em> – If true, the variable persists for the current user session. If false, the variable is treated as a request variable, which means the variable is available from the time the user posts a question to the time the bot responds. You can set a request variable in the Pre-Process code and use it in the Post-Process code, as both are evaluated in the same request. <br><br> <em>persistForever (bool)</em> – If true, the variable persists for 180 days. **Note**: Support for a value of "true" will be deprecated in a future release. Use of the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html) is recommended instead.| None |
+| `setBotVariable(name, value, persistForSession, persistForever)` | <em>name (string)</em> – The name for the variable. Used to retrieve the variable in getBotVariable()<br><br> <em>value (object)</em> – The value to be stored, retrieved with getBotVariable() <br><br> <em>persistForSession (bool)</em> – If true, the variable persists for the current user session. If false, the variable is treated as a request variable, which means the variable is available from the time the user posts a question to the time the bot responds. You can set a request variable in the Pre-Process code and use it in the Post-Process code, as both are evaluated in the same request. <br><br> <em>persistForever (bool)</em> – If true, the variable persists for 180 days. **Note**: Support for a value of "true" will be deprecated in a future release. Use of the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) is recommended instead.| None |
 
 #### Example
 
@@ -44,7 +44,7 @@ if (count > 10) {
 
 ### Get current user message
 
-Used for getting the most recent message from the user, whether typed or tapped (buttons or quick replies).
+`getCurrentUserMessage` is used for getting the most recent message from the user, whether typed or tapped (buttons or quick replies).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -103,7 +103,7 @@ botContext.setBotTransferUserMessage("order status");
 
 ### Get environment variable
 
-Used for getting an environment variable. An environment variable that isn't set returns NULL.
+`getEnvVariable` is used for getting an environment variable. An environment variable that isn't set returns NULL.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -136,7 +136,7 @@ case "help":
 
 ### Get conversation ID
 
-The Get Conversation ID function will retrieve the conversation ID for the current conversation.
+The `getConversationId` function will retrieve the conversation ID for the current conversation.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -154,7 +154,7 @@ You can also use the `{$conversationId}` [system variable](conversation-builder-
 
 ### Get LP account ID
 
-The Get LP Account ID function retrieves the Conversational Cloud account ID for the current conversation.
+The `getLPAccountId` function retrieves the Conversational Cloud account ID for the current conversation.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -169,7 +169,7 @@ var acctId = botContext.getLPAccountId();
 ```
 ### Get LP engagement attribute
 
-The Get LP Engagement Attribute function retrieves the specified LivePerson engagement attribute for the current conversation.
+The `getLPEngagementAttribute` function retrieves the specified LivePerson engagement attribute for the current conversation.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -198,7 +198,7 @@ botContext.setBotVariable("previousSkill", previousSkill, true, false);
 <img class="fancyimage" style="width:500px;" src="img/ConvoBuilder/previousSkillSetupMessaging.png">
 
 ### Get matched intent
-Used to retrieve the intent (associated with a Dialog Starter interaction) that was matched to the most recent user utterance.
+`getDialogStarterIntent` is used to retrieve the intent (associated with a Dialog Starter interaction) that was matched to the most recent user utterance.
 
 This method returns the name of the intent. If you are using a meta intent, it returns the name of the child or sub-intent.
 
@@ -210,7 +210,7 @@ var intentName = botContext.getDialogStarterIntent();
 
 ### Get named entities
 
-Used to access user utterances that are recognized as entities.
+`getNamedEntities` is used to access user utterances that are recognized as entities.
 
 To access the actual phrases used, call `getPhrase()` on the entity objects.
 
@@ -233,7 +233,7 @@ if (toppingObjects != null && toppingObjects.length > 0) {
 
 ### Get NLP responses
 
-Used to get an array of results derived from Conversation Builder’s Natural Language Processing algorithms.
+`getNlpResponse` is used to get an array of results derived from Conversation Builder’s Natural Language Processing algorithms.
 
 For instance, the sentence, “The quick brown fox jumped over the lazy dog” returns the following nouns [dog, fox], the verb [jumped], the phrases [the quick brown Fox, the lazy Dog] and tokens: [the, over, quick, lazy, jumped, brown, Dog, Fox].
 
@@ -257,7 +257,7 @@ botContext.sendMessage('I found the following nouns: '+ nlpNouns + ' and verbs: 
 
 ### Get sentiment
 
-Used for having the sentiment conversation chatbox messages with the user. Instead of using the sentiments in the intents of the bot, this function relies on programmatically checking the sentiment of the user.
+`getSentiment` is used for having the sentiment conversation chatbox messages with the user. Instead of using the sentiments in the intents of the bot, this function relies on programmatically checking the sentiment of the user.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -280,7 +280,7 @@ if(sentiment == "Positive"){
 
 ### Get quick reply payload
 
-Used to access the Quick Reply buttons that are selected by the user. These buttons have a hidden payload that may be different than the text shown to the user. For instance, Quick Replies asking you to select your favorite color might show: Red, Blue, Green, Purple, etc., but the payloads could be color01, color02, color03, etc.
+`getQuickReplyPayload` is used to access the Quick Reply buttons that are selected by the user. These buttons have a hidden payload that may be different than the text shown to the user. For instance, Quick Replies asking you to select your favorite color might show: Red, Blue, Green, Purple, etc., but the payloads could be color01, color02, color03, etc.
 
 This function is used in Process User Response, where the code for assessing user interaction resides.
 
@@ -301,7 +301,7 @@ botContext.sendImmediateReply('Hey you picked option ' + response  +' with a pay
 
 ### Get disambiguated intent
 
-These functions can be used in preProcess/postProcess/processUserResponse code to get the relevant disambiguated intent data.
+`getDisambiguatedIntentName` and `getDisambiguatedIntentId` can be used in preProcess/postProcess/processUserResponse code to get the relevant disambiguated intent data.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -322,7 +322,7 @@ botContext.printDebugMessage('The intent name = ' + intentName + 'and the intent
 
 ### Get Web View variables
 
-These functions retrieve session-scoped variables that were set via the [Web View API](conversation-builder-integrations-web-view-integration-api.html).
+`getWebViewVariable` and `getWebViewVariables` retrieve session-scoped variables that were set via the [Web View API](conversation-builder-integrations-web-view-integration-api.html).
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -339,7 +339,7 @@ For the corresponding curl example, see the [Web View API](conversation-builder-
 
 ### Get type of hours
 
-Given an array of hours classified by type and a time zone, this method returns the type of hours.
+Given an array of hours classified by type and a time zone, `getHoursType` returns the type of hours.
 
 This method is commonly used to provide a different experience or messaging to the consumer during regular or after hours. Additionally, the method is able to handle generalized hours, hours for specific days of the week, and specific dates. Note the following:
 

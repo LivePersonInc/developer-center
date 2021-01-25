@@ -2,6 +2,7 @@
 pagename: Overview
 redirect_from:
   - account-configuration-predefined-content-overview.html
+  - products-admin-predefined-content.html
 Keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"
