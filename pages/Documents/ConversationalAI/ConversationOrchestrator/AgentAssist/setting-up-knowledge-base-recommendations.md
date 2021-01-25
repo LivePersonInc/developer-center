@@ -55,7 +55,6 @@ Configuration of Agent Assist involves the following:
 4. Specify the maximum number of recommendations that Agent Assist will make. By default, this is 3.
 
 #### Add the knowledge bases to Agent Assist
-**To add your knowledge bases to Agent Assist**
 
 1. In the Knowledge Base application, click <img style="width:30px" src="img/agentassist/icon_apikey.png"> (API Key icon) in the upper-right corner.
 2. On the **User Settings** page, copy your API access key.
