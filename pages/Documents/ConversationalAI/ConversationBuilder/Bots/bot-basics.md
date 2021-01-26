@@ -63,7 +63,7 @@ Bot settings include:
 
 - **Session Length**: Select the length of the bot session, that is, how long the context of a conversation is maintained after the conversation becomes idle. If this is unset, the default of one hour is used. Be aware that Conversation Builder maintains its own session, and Conversational Cloud maintains its own session. This setting only determines the length of the Conversation Builder session.
 
-- **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons.
+- **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety of purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons.
 
     If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t. If you keep this on, you can access the logged transcripts in the Bot Analytics application: Select the bot and then access the **Transcripts** page.
 
@@ -80,6 +80,14 @@ Bot settings include:
     Second, during a LivePerson agent escalation, if the [escalation fails](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures) four times, the escalation then stops, and a default failure response of, "Not able to transfer to Agent at this time. Please try later." is sent to the user. To send a different response, enter a value here.
 
     To enter a value, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.
+
+- **Enable Agent Annotations**: The purpose of this setting is to automate more of the steps taken when training the bot, and to make it easier for agents to participate.
+
+    If you enable this setting, unrecognized utterances that aren't handled by the bot are automatically added to a review list in the Automation Annotator panel in Conversational Cloud. This allows the agent to review the list and mark utterances needing follow-up, with the goal of re-training the domain and/or updating the bot as needed.
+
+    "Unrecognized utterances" are defined as those that trigger the Fallback dialog. If the Fallback dialog employs a knowledge base search, only the utterances that return no results are added to the review list.
+
+    To make use of this setting, the bot must have at least one dialog starter with a specified *intent*.
 
 - **Enable Debug**: When this setting is enabled, you can use the "reset" and "display userid" commands in the conversation for [debugging](conversation-builder-testing-deployment-debugging.html) purposes. Respectively, these commands reset the session and display the unique user ID for the consumer in the conversation.
 

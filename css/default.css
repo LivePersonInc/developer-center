@@ -125,7 +125,7 @@ code pre {
 }
 
 /*
-    Margin-left is 12 because the indicator has a marginright of 12 to add up to 24 
+    Margin-left is 12 because the indicator has a marginright of 12 to add up to 24
 */
 .suggestbutton {
   align-self: center;
@@ -879,6 +879,7 @@ a.loginText {
 }
 
 .language-json,
+.language-json-doc,
 .language-swift,
 .language-html,
 .language-java,
@@ -896,6 +897,7 @@ a.loginText {
 }
 
 .language-json:before,
+.language-json-doc:before,
 .language-swift:before,
 .language-html:before,
 .language-java:before,
@@ -938,7 +940,8 @@ a.loginText {
   content: "CSS";
 }
 
-.language-json:before {
+.language-json:before,
+.language-json-doc:before {
   content: "JSON";
 }
 
@@ -1410,7 +1413,7 @@ input#csds-button {
   width: 24px;
 }
 
-/* 
+/*
 @media screen and (max-width:1024px) {
     #defaultcontent {
         z-index: 10;

@@ -85,7 +85,7 @@ Key characteristics include:
 * From an NLU processing perspective, performs well regardless of the number of intents and training phrases involved. However, if you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
 * For performance reasons:
     * Supports a maximum of 40 training phrases per intent. If you add more than 40, only the first 40 are used.
-    * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledge-base-articles.html#best-practices).
+    * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledge-base-internal-knowledge-bases-best-practices.html).
 * Doesn't require the model to be trained, which can save time.
 * Doesn't support [prebuilt domains](intent-builder-overview.html#prebuilt-domains) or [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
 * Can't be used with [Intent Analyzer](intent-analyzer-overview.html).
@@ -102,10 +102,38 @@ Key characteristics include:
 * When you create a domain with NLU v2 and use it in Intent Analyzer or in Conversation Builder, the following is required:
     * At least 20 training phrases per intent
     * At least 5 intents in order to train
+    
+    If your domain complies with these requirements, LivePerson recommends that you use LivePerson NLU v2 (not v1) if possible.   
 * Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
-- Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
+* Makes available a [Model Tester](intent-builder-testing-advanced-model-testing.html).
+* Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
 * Can be used with [Intent Analyzer](intent-analyzer-overview.html).
 * Supports English.
+
+### Variances in matched intents with LivePerson NLU v2
+
+When using LivePerson tools ([Model Tester](intent-builder-testing-advanced-model-testing.html), [Single Utterance Tester](intent-builder-testing-single-utterance-testing.html)) to improve intent classification results, on occasion you might notice a small number of changes in the matched intents for the test set/test phrase after retraining with no additional training samples. There are a number of contributing factors for this observed variance. Some factors are the by-product of the training algorithm, while others can be tackled by changes to the taxonomy of intents or to the training phrases.
+
+#### Randomness in deep learning 
+LivePerson's NLU utilizes the latest, deep learning technology to achieve the best intent classification performance. Randomness is baked into the training of deep learning models to facilitate the exploration of optimal solutions. The cost of such explorations is that no two models trained on the same dataset yield perfectly identical results. Our repeated tests have shown that despite the potential variance in the matched intents, the overall performance of our models stays stable. In other words, after retraining with the same dataset, what you might lose in one intent is usually recovered by some improvement in others.
+
+#### Intent overlaps or multiple intents
+The variance in matched intents might also indicate that:
+
+* There's a potential intent overlap in the taxonomy, or there's a test sample that contains multiple intents.
+* The training samples for different intents lack diversity or distinction.
+
+When working with multiple developers to create an intent domain with a large taxonomy of intents, it is highly likely that duplicate intents will be created over time, or an overlap between intents will develop. For example, “refund - general” and “refund - defective product” overlap, as the former subsumes the latter. 
+
+Similarly, it is also likely that a message such as “I’d like to return my phone and get a refund” might be matched with the “refund” intent or the “return product” intent depending on the training, as we currently only return the top scoring matched intent for each prediction, and both are valid matches for the message. 
+
+A model might also become confused with a fine-grained taxonomy of intents if the training examples are not carefully curated. The intent “refund - defective product” and “refund - no longer needed” might become problematic if the training samples for both intents are limited and if both share similar patterns starting with “I want to get a refund.” 
+
+All these factors directly influence the intent matching after retraining. Therefore, it's important to ensure that:
+
+* The taxonomy of intents is carefully reviewed for overlaps.
+* The test samples contain clear, single intents.
+* The training samples are diverse within an intent and distinguishable from other intents.
 
 ### Connect a 3rd-party NLU engine
 
@@ -165,4 +193,4 @@ In Intent Builder, in the domain that you created in the previous step, [create 
 
 #### Step 5: Train the domain
 
-In Intent Builder, [train the domain](intent-builder-domains.html#train-a-3rd-party-nlu-domain). Once training is completed (which creates the model version), you can start to [test](intent-builder-domains.html#test-a-domain).
+In Intent Builder, [train the domain](intent-builder-domains.html#train-a-3rd-party-nlu-domain). Once training is completed (which creates the model version), you can start to [test](intent-builder-testing-single-utterance-testing.html).
