@@ -16,7 +16,7 @@ indicator: messaging
 
 [Structured Data Entities](engagement-attributes-types-of-engagement-attributes.html) (SDEs) are for brands to report/include business, user, and context data in campaigns when conversations are initiated. SDEs provide a valuable way for brands to include additional context information to the conversation when the conversation is initiated. This type of context can then allow brands to provide more personalized conversational journeys for consumers. This topic describes how to use SDEs with Conversation Orchestrator routing.
 
-Some SDEs are directly available in the dynamic routing interface and can be used to create policies, but for others LivePerson functions need to be used.
+Some SDEs are directly available in the dynamic routing interface and can be used to create policies, but for others LivePerson Functions need to be used.
  
 ### Create policies using SDEs that are automatically available for routing
  
@@ -40,7 +40,25 @@ The following SDEs are already available in the dynamic routing interface and ca
 * sde.visitorinfo.personalinfo.gender
 * sde.visitorinfo.personalinfo.language
 * sde.visitorinfo.personalinfo.company
+
+**Note:** Three of the SDEs are objects. Please use the appropriate [SDE attribute names](engagement-attributes-types-of-engagement-attributes.html) for these:
  
+* **sde.visitorinfo.customerinfo.lastpaymentdate**
+* sde.visitorinfo.customerinfo.lastpaymentdate.day
+* sde.visitorinfo.customerinfo.lastpaymentdate.month
+* sde.visitorinfo.customerinfo.lastpaymentdate.year
+ 
+* **sde.visitorinfo.customerinfo.registrationdate**
+* sde.visitorinfo.customerinfo.registrationdate.day
+* sde.visitorinfo.customerinfo.registrationdate.month
+* sde.visitorinfo.customerinfo.registrationdate.year
+ 
+* **sde.visitorinfo.customerinfo.age**
+* sde.visitorinfo.customerinfo.age.age
+* sde.visitorinfo.customerinfo.age.day
+* sde.visitorinfo.customerinfo.age.month
+* sde.visitorinfo.customerinfo.age.year
+
 **To use the above SDEs for routing**
  
 **Step 1: Enable SDEs for routing**
@@ -60,38 +78,23 @@ The following SDEs are already available in the dynamic routing interface and ca
        
    Example: sde.visitorinfo.customerinfo.companybranch
    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_managepolicies.png">
-5. Add from the available list of operators. 
+5. Select an operator from the available list of operators. 
        
-   Example: “=” (EQUALS)
-6. In the **Enter a value** field, enter a value, for example, “Sales Branch.” This should be the same as the value of the SDE you will be sending through the messaging client.
-7. In **Actions**, select “Transfer to Skill.”
-8. Select the skill you want to route to.
-9. Save your policy.
-10. Enable the policy for it to start routing.
- 
-**Note:** Three of the SDEs are objects. Please use the appropriate SDE attribute names for these:
- 
-* **sde.visitorinfo.customerinfo.lastpaymentdate**
-* sde.visitorinfo.customerinfo.lastpaymentdate.day
-* sde.visitorinfo.customerinfo.lastpaymentdate.month
-* sde.visitorinfo.customerinfo.lastpaymentdate.year
- 
-* **sde.visitorinfo.customerinfo.registrationdate**
-* sde.visitorinfo.customerinfo.registrationdate.day
-* sde.visitorinfo.customerinfo.registrationdate.month
-* sde.visitorinfo.customerinfo.registrationdate.year
- 
-* **sde.visitorinfo.customerinfo.age**
-* sde.visitorinfo.customerinfo.age.age
-* sde.visitorinfo.customerinfo.age.day
-* sde.visitorinfo.customerinfo.age.month
-* sde.visitorinfo.customerinfo.age.year
+    Example: “=” (EQUALS)
+6. Select the data type.
+
+    Example: string
+7. In the **Enter a value** field, enter a value, for example, “Sales Branch.” This should be the same as the value of the SDE you will be sending through the messaging client.
+8. In **Actions**, select “Transfer to Skill.”
+9. Select the skill you want to route to.
+10. Save your policy.
+11. Enable the policy for it to start routing.
  
 ### Create policies using SDEs that are not automatically available for routing
  
 #### High-level process
  
-1. Write a function to retrieve the SDE and add it to the context service.
+1. Write a function to retrieve the SDE and add it to the Conversational Context Service.
 2. Make the SDE available in the dynamic routing interface.
 3. Create the policy.
  
@@ -110,7 +113,7 @@ The following SDEs are already available in the dynamic routing interface and ca
 
    Example Name: Set_SDE_StoreNumber_for_Dynamic_Routing
 
-   Example Description: Sets authenticated SDE StoreNumber in Conversation Context Service for use in dynamic routing policies.
+   Example Description: Sets authenticated SDE StoreNumber in Conversation Context Service for routing
 8. Click **Create function**.
   <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_createfunction.png">
 9. In the editor, delete any existing code and add the code in the snippet below.
@@ -196,7 +199,7 @@ Save the changes. Then, in the **Actions** column, deploy the function.
 3. Under **Conversation Context Service**, navigate to the **Custom** option.
 4. Select **Add New** to create a new custom context attribute.
 5. Name the attribute “storeNumber.”
-6. Under **Type**, select **Function**.
+6. Under **Type**, select "Function."
 7. In the **Function** dropdown, select the Lambda name that you created in the previous step.
 8. In the parameters dropdown, select “attribute.”
 9. In **Choose an Attribute**, select “conversation.conversationId.”
@@ -209,8 +212,11 @@ Save the changes. Then, in the **Actions** column, deploy the function.
 3. Name the policy.
 4. Under **Conditions**, select the “custom.storeNumber” attribute you created in the previous step.
 5. Add the operator “=” (EQUALS).
-6. In the **Enter a value** field, enter a value, for example, “12131.” This should be the same as the value of the SDE you will be sending through the messaging client.
-7. In **Actions**, select “Transfer to Skill.”
-8. Select the skill you want to route to.
-9. Save your policy.
-10. Enable the policy for it to start routing.
+6. Select the data type.
+
+    Example: string
+7. In the **Enter a value** field, enter a value, for example, “12131.” This should be the same as the value of the SDE you will be sending through the messaging client.
+8. In **Actions**, select “Transfer to Skill.”
+9. Select the skill you want to route to.
+10. Save your policy.
+11. Enable the policy for it to start routing.
