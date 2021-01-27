@@ -97,4 +97,5 @@ Agents can provide feedback on a recommended action by clicking either the **Thu
 
 1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Conversation Orchestrator**. Here’s where you can configure Agent Assist.
-  <img width="600" src="img/agentassist/access.png">
+
+    <img width="600" src="img/agentassist/access.png">
