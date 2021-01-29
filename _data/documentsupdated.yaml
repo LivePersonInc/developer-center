@@ -232,8 +232,12 @@
       - pagename: Agent Assist
         subpages:
           - subpagename: Overview
-          - subpagename: Recommended Actions for Automations
-          - subpagename: Recommended Actions for Knowledge Base
+          - subpagename: Setting Up Bot Recommendations
+          - subpagename: Setting Up Knowledge Base Recommendations
+          - subpagename: Testing
+          - subpagename: Agent Experience
+          - subpagename: Best Practices
+          - subpagename: Troubleshooting
       - pagename: Conversation Context Service
         subpages:
           - subpagename: Overview

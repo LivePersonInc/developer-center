@@ -12,7 +12,7 @@ indicator: both
 
 ### Overview
 
-If your domain is using the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2), there's an advanced Model Tester that's available.
+If your domain is using the LivePerson NLU v2 engine or a 3rd-party NLU engine, there's an advanced Model Tester that's available.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester.png">
 
