@@ -30,7 +30,7 @@ C2M is deployed in three regions. **North America**, **EMEA**(Europe, Middle Eas
 
 ### Eligibility API
 
-Click [**Eligibility**](https://connect-to-messaging.dev.fs.liveperson.com/api/api-docs/?api=c2m#/default/post_account__accountId__eligibility) to go through API spec and use example here to get started.
+Click [**Eligibility**](https://connect-to-messaging.z3.fs.liveperson.com/api/api-docs/?api=c2m#/default/post_account__accountId__eligibility) to go through API spec and use example here to get started.
 
 | Method | URI  |
 | :--- | :--- |
@@ -58,7 +58,7 @@ Click [**Eligibility**](https://connect-to-messaging.dev.fs.liveperson.com/api/a
 | skill | string | yes | Engagement skill |
 | consumerPhoneNumber | string | yes | Consumer’s phone number(E.164 format with leading "+") |
 | handoffId | string | yes | C2M handoff Id |
-| sde | array | no | Array of ctmrinfo and/or personal SDEs |
+| sdes | array | no | Array of ctmrinfo and/or personal SDEs |
 | templateVariables | object | no | Key-value pairs of variables for the template |
 | ivrNumber | string | no | The ivrNumber that brands want to use. Some brands have more than 1 ivrNumber and this field clears the ambiguity. |
 
@@ -104,7 +104,7 @@ Click [**Eligibility**](https://connect-to-messaging.dev.fs.liveperson.com/api/a
 
 ### Invite API
 
-Click [**Invite**](https://connect-to-messaging.dev.fs.liveperson.com/api/api-docs/?api=c2m#/default/post_account__accountId__invite) to go through API spec and use example here to get started.
+Click [**Invite**](https://connect-to-messaging.z3.fs.liveperson.com/api/api-docs/?api=c2m#/default/post_account__accountId__invite) to go through API spec and use example here to get started.
 
 | Method | URI  |
 | :--- | :--- |
@@ -208,14 +208,6 @@ C2M supports SMS-Twilio and WA channels.
 <strong>What is the lifespan of the app JWT? When we do need to get a new JWT, do we have to first make the call to LivePerson Domain API in order to get the sentinel service domain, or is that domain consistent enough that we can hard code that in?</strong>
 - An APP JWT expiration time is 1 hour from the time it is created. To get an app JWT from sentinel API, a call to domain api has to be made to get the sentinel api domain. This domain can be cached for some duration. We expect the domain to change in very rare cases. It’s still recommended that cache duration should not be more than 1 day.
 
-- When using app JWT to call C2M API, a response below indicates the jwt is expired and new app jwt to be obtained from sentinel api.
-	```json
-	{
-		"code": 0,
-		"message": "jwt expired"
-	}
-	```
-
 <strong>Do we need any other JWT other than APP JWT e.g. Consumer JWT?</strong>
 C2M service does not create or consume consumer JWT or other JWT except APP JWT. C2M API consumes AppJWT created from provided clientId and Secret for authentication.
 
@@ -233,7 +225,7 @@ C2M Messaging service has retry mechanism internally on dependent services to re
 - Lookback period can be pre-configured up to 30 days. Current maximum lookback period is 30 days from when messages are sent using C2M API. Example: When a message is sent to consumer using C2M API and if consumer replies within 30 days from when message was sent, the response will be redirected to LE agent according to specified skill. A response after 30 days will not be treated as a conversation. Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
 <strong>How do we know which field is optional or required?</strong>
-Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https://connect-to-messaging.dev.fs.liveperson.com/api/api-docs/?api=c2m).
+Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https://connect-to-messaging.z3.fs.liveperson.com/api/api-docs/?api=c2m).
 
 <strong>What's the restriction on request body parameters?</strong>
 
