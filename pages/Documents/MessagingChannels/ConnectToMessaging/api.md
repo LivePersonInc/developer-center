@@ -163,7 +163,7 @@ Click [**Invite**](https://connect-to-messaging.z3.fs.liveperson.com/api/api-doc
 ```json
 {  
   "errorMessage":"Not Found",
-  "errorCode":99
+  "errorCode":1004
 }
 ```
 
