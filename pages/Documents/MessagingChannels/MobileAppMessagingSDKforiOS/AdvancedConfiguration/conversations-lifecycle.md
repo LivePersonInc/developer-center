@@ -6,11 +6,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: Configuration
-
-order: 6
-permalink: mobile-app-messaging-sdk-for-ios-configuration-conversations-lifecycle.html
-
+subfoldername: Advanced Configuration
+permalink: mobile-app-messaging-sdk-for-ios-advanced-configuration-conversations-lifecycle.html
 indicator: messaging
 ---
 

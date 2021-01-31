@@ -388,57 +388,63 @@ Conversation separator text and line color.
 &nbsp;
 </div> -->
 
-#### enableConversationSeparatorTextMessage 
-Toggle conversation separator text message when conversation resolved from agent or consumer.
+#### enableConversationSeparator
+Toggle conversation separator view when conversation resolved from agent or consumer.
+
+{:.notice}
+This Configuration is avaliable on SDK 6.2.0 & above
+
+{:.important}
+Conversation separator view contains Conversation Separator Text Message and Conversation Separator Line
+
+{:.notice}
+Setting this property to false will also disable **enableConversationSeparatorTextMessage** & **enableConversationSeparatorLine**
 
 - **Type:** Bool
 - **Default value:** true
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
+#### enableConversationSeparatorTextMessage 
+Toggle conversation separator text message when conversation resolved from agent or consumer.
+
+{:.notice}
+if **enableConversationSeparator** is set to **false**, Conversation Separator Text won't be displayed even if this property is enable
+
+- **Type:** Bool
+- **Default value:** true
 
 
-#### enableConversationSeparatorLine  
+#### enableConversationSeparatorLine 
 Toggle conversation separator line when conversation resolved from agent or consumer.
+
+{:.notice}
+if **enableConversationSeparator** is set to **false**, Conversation Separator Line won't be displayed even if this property is enable
 
 - **Type:** Bool
 - **Default value:** true 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
+#### enableConversationSeparatorLineOnAutoClose 
+Toggle conversation separator line when conversation is auto close
+
+{:.notice}
+This Configuration is avaliable on SDK 6.2.0 & above
+
+{:.important}
+For this property to work when is enable, **enableConversationSeparatorLine** needs to be enable too.
+
+{:.notice}
+if **enableConversationSeparator** is set to **false**, Conversation Separator Line won't be displayed for Auto Close Conversations even if this property is enable.
+
+- **Type:** Bool
+- **Default value:** false
+
 
 #### conversationSeparatorFontSize 
 Define the conversation closed separator font size.
 
 - **Type:** UIFontTextStyle
 - **Default value:** UIFontTextStyle.caption1
-
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize"> 
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### conversationSeparatorBottomPadding 

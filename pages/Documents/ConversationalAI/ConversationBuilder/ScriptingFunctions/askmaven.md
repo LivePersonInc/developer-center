@@ -12,7 +12,7 @@ indicator: both
 
 ### askMaven
 
-The following, built-in functions in Conversation Builder can be used to programmatically call [Conversation Orchestrator](maven-ai-overview.html) capabilities. These functions conveniently wrap the [Recommendation APIs](maven-ai-askmaven-overview.html). You can use them as part of a [Maven Concierge](conversation-builder-bot-templates-maven-concierge.html) bot to ask Conversation Orchestrator for the next best actions (route to skill, route to Knowledge Base article, etc.).
+The following, built-in `askMaven` functions in Conversation Builder can be used to programmatically call [Conversation Orchestrator](maven-ai-overview.html) capabilities. These functions conveniently wrap the [Recommendation APIs](maven-ai-askmaven-overview.html). You can use them as part of a [Maven Concierge](conversation-builder-bot-templates-maven-concierge.html) bot to ask Conversation Orchestrator for the next best actions (route to skill, route to Knowledge Base article, etc.).
 
 Both methods return a String of the JSON response from the askMaven API. For a response example, see [here](maven-ai-askmaven-methods.html#get-next-actions).
 

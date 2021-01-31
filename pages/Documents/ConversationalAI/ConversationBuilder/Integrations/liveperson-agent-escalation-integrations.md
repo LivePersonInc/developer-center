@@ -17,7 +17,7 @@ There are two ways to implement an escalation: You can add an [Agent Transfer in
 {: .important}
 Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.
 
-### Add a LivePerson Agent Escalation
+### Add a LivePerson Agent Escalation 
 
 **To add a LivePerson Agent Escalation integration**
 
@@ -53,7 +53,9 @@ If you're sending one or more text responses prior to the transfer, it's recomme
 
 #### Handle transfer failures
 
-Most often in Chat, but occasionally with Messaging, an attempt at transferring to a skill will fail. When this happens, the platform sends the message `__agent_escalation_failed__` to the bot. If you don’t have a dialog set up to catch this pattern, the bot will treat it like any other consumer message. In most cases, it will go to the Fallback dialog.
+First, if an immediate error occurs when calling the escalation API, a failure response will be returned. You can catch and handle these errors by adding a custom rule to the integration interaction that checks for a “failure” result. For more on this, see [here](conversation-builder-interactions-integrations.html#integration-interactions).
+
+Second, most often in Chat, but occasionally with Messaging, it can happen that the escalation API call is successful, but an attempt at transferring to a skill will fail after some time. When this happens, the platform sends the message `__agent_escalation_failed__` to the bot. If you don’t have a dialog set up to catch this pattern, the bot will treat it like any other consumer message. In most cases, it will go to the Fallback dialog.
 
 Setting up a dialog to catch the `__agent_escalation_failed__` pattern allows you to send an appropriate message to the consumer, e.g., "Sorry, we're unable to perform the transfer at this time. Please try again later."
 
