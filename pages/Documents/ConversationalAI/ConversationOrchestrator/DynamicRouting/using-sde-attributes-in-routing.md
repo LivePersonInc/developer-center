@@ -65,7 +65,7 @@ The following SDEs are already available in the dynamic routing interface and ca
 
 1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/convorchestrator/icon_ai_menu.png"> icon.
 2. In the Conversational AI dashboard, click **Conversation Orchestrator**.
-3. Under **Conversational Context Service**, click **Structured Data Entities**.
+3. Under **Conversation Context Service**, click **Structured Data Entities**.
 4. Scroll down to **Enable Context Service to store SDE values**, and turn on the **enabled** setting.
   <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_sdemenuitem.png">
 
@@ -94,18 +94,18 @@ The following SDEs are already available in the dynamic routing interface and ca
  
 #### High-level process
  
-1. Write a function to retrieve the SDE and add it to the Conversational Context Service.
+1. Write a function to retrieve the SDE and add it to the Conversation Context Service.
 2. Make the SDE available in the dynamic routing interface.
 3. Create the policy.
  
 #### Detailed process
  
-**Step 1: Create a function to pull the SDE to the Conversational Context Service**
+**Step 1: Create a function to pull the SDE to the Conversation Context Service**
 
 1. Log in to Conversational Cloud, and navigate to **Functions** from the waffle menu in the lower-left corner.
   <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_functionsmenuitem.png">
 2. Click **Create a function**.
-3. In the **Select and event to see its available responses** dropdown, select “No Event.”
+3. In the **Select an event to see its available responses** dropdown, select “No Event.”
 4. In the **Select a template to start your implementation** dropdown, select “Greeting Template.”
 5. Click **Continue**.
 6. Do not whitelist any additional URLs; click **Continue**.
@@ -116,7 +116,7 @@ The following SDEs are already available in the dynamic routing interface and ca
    Example Description: Sets authenticated SDE StoreNumber in Conversation Context Service for routing
 8. Click **Create function**.
   <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_createfunction.png">
-9. In the editor, delete any existing code and add the code in the snippet below.
+9. In the editor, delete any existing code, and add the code in the snippet below.
 
 ```javascript
   // import FaaS Toolbelt
