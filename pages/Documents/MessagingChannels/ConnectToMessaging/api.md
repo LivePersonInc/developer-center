@@ -49,7 +49,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | Use OAuth 1.0 credentials or get [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | OAuth 1.0 or Bearer «APP_JWT» |
+| Authorization | Use OAuth 1.0 or [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | OAuth 1.0 or Bearer «APP_JWT» |
 
 **Request Body Parameters**
 
@@ -59,8 +59,9 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | consumerPhoneNumber | string | yes | Consumer’s phone number(E.164 format with leading "+") |
 | handoffId | string | yes | C2M handoff Id |
 | sdes | array | no | Array of ctmrinfo and/or personal SDEs |
-| templateVariables | object | no | Key-value pairs of variables for the template |
+| templateVariables | object | no | Key-value pairs of variables for the template. This parameter is only applicable for WA channel. |
 | ivrNumber | string | no | The ivrNumber that brands want to use. Some brands have more than 1 ivrNumber and this field clears the ambiguity. |
+| consumerId | string | no | This parameter is only applicable for INAPP channel. |
 
 **Request Body Example - JSON Payload**
 
@@ -71,22 +72,28 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
     "templateVariables": {
         "1": "test"
     },
-    "skill": "support"
+    "skill": "support",
+    "ivrNumber": "180000"
 }
 
 ```
 
-**Response Body Parameters**
+**Response Body Parameters / Success / HTTP Status Code 200**
 
-| HTTP Status | Name | Datatype | Required | Definition |
-| :--- | :--- | :--- |:--- | :--- |
-| 200 | availableChannels | array | true | list of channels that business can send messages from, can be empty |
-|  | recommendedChannelName | string | true | recommended channel for sending a message based on channel priorities, can be empty |
-|  | eligible | boolean | true | true if consumer is eligible for messaging, otherwise false |
-|  | callId | string<<uuid v4>> | true | the uuid associated with this call |
-|  | recommendedChannelName | string | true | recommended channel for sending a message based on channel priorities, can be empty |
-| 4xx/5xx | errorCode | number | true | C2M API specific error code, not same as the HTTP status code |
-|  | errorMessage | string | true | Error message description |
+| Name | Datatype | Required | Definition |
+| :--- | :--- |:--- | :--- |
+| availableChannels | array | true | list of channels that business can send messages from, can be empty |
+| recommendedChannelName | string | true | recommended channel for sending a message based on channel priorities, can be empty |
+| eligible | boolean | true | true if consumer is eligible for messaging, otherwise false |
+| callId | string<<uuid v4>> | true | the uuid associated with this call |
+| recommendedChannelName | string | true | recommended channel for sending a message based on channel priorities, can be empty |
+
+**Response Body Parameters / Failure / HTTP Status Code 4xx/5xx**
+
+| Name | Datatype | Required | Definition |
+| :--- | :--- |:--- | :--- |
+| errorCode | number | false | C2M API specific error code, not same as the HTTP Status Code |
+| errorMessage | string | false | Error message description |
 
 **Response Example**
 
@@ -123,7 +130,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | Use OAuth 1.0 credentials or get [AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | OAuth 1.0 or Bearer «APP_JWT» |
+| Authorization | OAuth 1.0 or [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | OAuth 1.0 or Bearer «APP_JWT» |
 
 **Request Body Parameters**
 
@@ -142,13 +149,18 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 }
 ```
 
-**Response Body Parameters**
+**Response Body Parameters / Success / HTTP Status Code 200**
 
-| HTTP Status | Name | Datatype | Required | Definition |
-| :--- | :--- | :--- |:--- | :--- |
-| 200 | callId | string | true | the uuid associated with this call |
-| 4xx/5xx | errorCode | number | true | C2M API specific error code, not same as the HTTP status code |
-|  | errorMessage | string | true | Error message description |
+| Name | Datatype | Required | Definition |
+| :--- | :--- |:--- | :--- |
+| callId | string<<uuid v4> | true | the uuid associated with this call |
+
+**Response Body Parameters / Failure / HTTP Status Code 4xx/5xx**
+
+| Name | Datatype | Required | Definition |
+| :--- | :--- |:--- | :--- |
+| errorCode | number | false | C2M API specific error code, not same as the HTTP Status Code |
+| errorMessage | string | false | Error message description |
 
 **Response Example**
 
@@ -192,42 +204,39 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 ### Frequently Asked Questions
 
-<strong>What is the rate limit for the API?</strong>
-The current rate limit is 30 transaction per second per brand. 
+<strong>1. What is the rate limit for the API?</strong>
 
-<strong>What is the recommended action from brands for 429 responses?</strong>
+The current rate limit is 30 requests per second for all messaging channels per brand.
+
+<strong>2. What is the recommended action from brands for 429 responses?</strong>
+
 We recommend a request be retried (3 attempts with exponential retry with delay of 5 sec) when witnessing 429 status code.
 
-<strong>Which channels are supported as of now?</strong>
-C2M supports SMS-Twilio and WA channels.
+<strong>3. Which channels are supported as of now?</strong>
 
-<strong>Is there a throughput limitation for the data that gets passed from Twilio to LP? For example, if brand sends 100 Twilio msgs/sec (their max throughput), then can the data flow through to LP at the same rate?</strong>
-- C2M does not have any limitations on the message size while sending messages to twilio or other channels. However a large message may translate to more than one message when the recipient receives it.
-- Example: A message of more than 140 characters will be divided into two messages and sent to recipients.
+C2M supports SMS-Twilio, WA, and INAPP channels.
+
+<strong>4. Is there a throughput limitation for the data that gets passed from Twilio to LP?</strong>
+
+C2M does not have any limitations on the message size while sending messages to twilio or other channels. 
  
-<strong>What is the lifespan of the app JWT? When we do need to get a new JWT, do we have to first make the call to LivePerson Domain API in order to get the sentinel service domain, or is that domain consistent enough that we can hard code that in?</strong>
-- An APP JWT expiration time is 1 hour from the time it is created. To get an app JWT from sentinel API, a call to domain api has to be made to get the sentinel api domain. This domain can be cached for some duration. We expect the domain to change in very rare cases. It’s still recommended that cache duration should not be more than 1 day.
+<strong>5. What is the lifespan of the APP JWT? </strong>
 
-<strong>Do we need any other JWT other than APP JWT e.g. Consumer JWT?</strong>
-C2M service does not create or consume consumer JWT or other JWT except APP JWT. C2M API consumes AppJWT created from provided clientId and Secret for authentication.
+An APP JWT expiration time is 1 hour from the time it is created. 
 
-<strong>What should the authentication header look like, is the bearer token the only thing required even in production usage? Do we need to include our ConsumerKey/Secret or our AccessToken/Secret that we use in the 1.0 API at all, or any other information?</strong>
-App Jwt will be consumed as Bearer Token. No other key, secret or token will be consumed by C2M Messaging api.
+<strong>6. Does C2M 2.0 API provide a report?</strong>
 
-<strong>How does C2M 2.0 api provide a report?</strong>
-We will have the report API, so stay tuned. 
+We will have the report API, stay tuned. 
 
-<strong>Of the error cases described above, which of those errors should we consider "retry-able"? For example, a bad request due to a missing field is not retry-able because it will just always fail, but a case where one of the downstream services was temporarily unavailable could warrant a retry.</strong>
-C2M Messaging service has retry mechanism internally on dependent services to reduce failures due to transient errors.
-
-<strong>What’s the lookback period?</strong>
+<strong>7. What’s the lookback period?</strong>
 - Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer.  
 - Lookback period can be pre-configured up to 30 days. Current maximum lookback period is 30 days from when messages are sent using C2M API. Example: When a message is sent to consumer using C2M API and if consumer replies within 30 days from when message was sent, the response will be redirected to LE agent according to specified skill. A response after 30 days will not be treated as a conversation. Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
-<strong>How do we know which field is optional or required?</strong>
+<strong>8. How do we know which field is optional or required?</strong>
+
 Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https://connect-to-messaging.z1.fs.liveperson.com/api/api-docs/?api=c2m).
 
-<strong>What's the restriction on request body parameters?</strong>
+<strong>9. What's the restriction on request body parameters?</strong>
 
 | Field Name | Limitation |
 | :--- | :--- |
@@ -235,4 +244,3 @@ Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https:
 | skill | 255 char max length |
 | overrideMessage | 1600 char max length |
 | handoffId | 16 char max length |
-
