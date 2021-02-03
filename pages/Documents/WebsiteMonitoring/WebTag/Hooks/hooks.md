@@ -399,7 +399,6 @@ Parameters:
    <td>Array of objects - [{}]
    </td>
    <td>Lines data before saved in model.
-<p>
 The rational value to change is only the “text”
    </td>
    <td>
