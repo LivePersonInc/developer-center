@@ -927,11 +927,12 @@
       - subpagename: Campaigns
       - subpagename: Certificate Pinning
       - subpagename: CSAT Behavior
+      - subpagename: Logging
+      - subpagename: Proactive and IVR Deflection to App Messaging
       - subpagename: Photo and File Sharing
+      - subpagename: Scroll Behavior Configuration
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
-      - subpagename: Scroll Behavior Configuration
-      - subpagename: Logging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API

@@ -67,7 +67,9 @@ Configuration of Agent Assist involves the following:
 
     <img width="800" src="img/agentassist/add_kb.png">
 
-This adds to Agent Assist’s configuration all the knowledge bases that you have access to, for the account that you're currently logged into. You should now see the knowledge bases listed under **Configure article recommendations**. They are enabled by default. However, their articles will not be recommended in conversations until you assign one or more skills to each knowledge base.
+This adds to Agent Assist’s configuration all the knowledge bases that you have access to, for the account that you're currently logged into. This includes all knowledge bases that you've created (both public and private) and other public knowledge bases within your organization.
+
+You should now see the knowledge bases listed under **Configure article recommendations**. They are enabled by default. However, their articles will not be recommended in conversations until you assign one or more skills to each knowledge base.
 
 #### Assign skills to the knowledge bases
 After adding the knowledge bases, assign at least one skill to each of the knowledge bases. Once this is done, their articles can be recommended in conversations that are currently routed to the same skills. In this manner, you can control and configure which knowledge bases are candidates for recommendation to agents on a skill-by-skill basis. 

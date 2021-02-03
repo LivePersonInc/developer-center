@@ -66,11 +66,11 @@ Configuration of Agent Assist involves the following:
 5. Configure the confidence threshold.
 
 #### Verify the bots have been discovered and enabled
-By default, once you deploy and start a bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Orchestrator and enabled for use. This is the case for both Conversation Builder bots and third-party bots.
+By default, once you deploy and start a Conversation Builder or third-party bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Orchestrator and enabled for use. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
 
 <img width="800" src="img/agentassist/verify_bots.png">
 
-A bot is enabled by default as a convenience, saving you this step. However, it will not be recommended in conversations until you also assign one or more skills to the bot within Agent Assist’s configuration. Both conditions (enabled, assigned at least one skill) must be true for it to be recommended in conversations.
+A discovered bot is enabled by default as a convenience, saving you this step. However, it will not be recommended in conversations until you also assign one or more skills to the bot within Agent Assist’s configuration. Both conditions (enabled, assigned at least one skill) must be true for it to be recommended in conversations.
 
 **To verify your bots have been automatically discovered and enabled**
 

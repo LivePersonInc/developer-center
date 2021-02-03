@@ -59,7 +59,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |status  | Latest status of the conversation.| Array `<status>` | Optional | Valid values: "OPEN", "CLOSE"
 |skillIds| An array of skill IDs, represented as numbers.| Array `<skillID>`| Optional | Any skill, through the entire flow of the conversation.
 |latestSkillIds| An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.  | Array `<skillID>`| Optional | Filters only conversations whose latest skill appears in the array.
-|agentIds| An array of agent IDs, represented as numbers.| Array `<agentID>`| Optional |
+|agentIds            | An array of agent IDs, represented as numbers.                                                | Array `<agentID>`                  | Optional | Filters only when the provided agent Ids are the <b>Assigned Agent</b> of the conversation. </br>To filter conversations when the provided agent Ids are not the <b>Assigned Agent</b> use userPermissions
+|userPermissions     | An array of roles that were part of the conversation                                | Array `<String>`                  | Optional | Commonly used with agentIds. </br>Possible values: ASSIGNED_AGENT,AGENT, AGENT_MANGER, READER.
 |latestAgentIds| An array of latest agent IDs, represented as numbers.  | Array `<agentID>`| Optional | Filters only conversations whose latest agent appears in the array.
 |agentGroupIds | An array of agent group IDs, represented as numbers.| Array `<agentGroupID>` | Optional |
 |keyword | Specific word or phrase found in the messages of the conversation. | alphanumeric  | Optional |
@@ -281,6 +282,7 @@ participantId | ID of participant.  | string  |
 source  | Message's origin.| string  | deprecated (not supported)
 device  | Device the message was sent from.  | string  | deprecated (not supported)
 sentBy  | Who sent the message| string  | Valid values: "agent", "consumer"
+audience  | Who can receive the message (eg private message) | string  | Valid values: "ALL", "AGENTS_AND_MANAGERS"
 contextData| Contains context information about the consumer's message, including raw and structured metadata.| container| |
 
 *Context Data*
@@ -465,9 +467,9 @@ sourceAgentId | The source agent ID.| string
 sourceAgentLoginName| The source agent name. | string
 sourceAgentNickname | The source agent nickname.| string
 sourceAgentFullName | The source agent full name.  | string
-reason  | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver) | string
+reason  | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver) | string **Note**: the `reason` property gives you insight into why the conversation was transferred: * back2Q - the agent transferred the conversation back to the queue. * Agent - the conversation was transferred to a specific agent. * SuggestedAgentTimeout - the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue. * Skill - the conversation was transferred to a skill. * TakeOver - a manager has taken over the conversation.
 contextData| Contains context information about the transfer, including raw and structured metadata.| container| |
-dialogId| The ID of the dialog being transferred.| string**Note**: the `reason` property gives you insight into why the conversation was transferred: * back2Q - the agent transferred the conversation back to the queue. * Agent - the conversation was transferred to a specific agent. * SuggestedAgentTimeout - the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue. * Skill - the conversation was transferred to a skill. * TakeOver - a manager has taken over the conversation.
+dialogId| The ID of the dialog being transferred.| String
 
 _Interaction info_
 
@@ -725,6 +727,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2016-08-29 15:14:19.564+0000",
           "timeL": 1472483659564,
           "device": "undefined",
+          "audience": "ALL",
           "sentBy": "Consumer"
         },
         {
@@ -745,6 +748,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2016-08-29 15:14:20.569+0000",
           "timeL": 1472483659564,
           "device": "undefined",
+          "audience": "ALL",
           "sentBy": "Agent",
           "contextData": {
             "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some reason\",\"reasonId\":\"some reason ID\"}]",
@@ -787,6 +791,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2016-08-29 15:15:42.568+0000",
           "timeL": 1472483742568,
           "device": "undefined",
+          "audience": "ALL",
           "sentBy": "Consumer"
         },
         {
@@ -807,6 +812,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2017-10-24 10:24:52.962+0000",
           "timeL": 1508840692962,
           "device": "undefined",
+          "audience": "ALL",          
           "sentBy": "Agent"
         }
       ],
