@@ -28,7 +28,7 @@ LivePerson recommends that —before you create a bot— you set up the [domains
 
     There are also many, industry-specific, English-language [templates available](conversation-builder-bot-templates-overview.html). If you select one of these, all settings are configured for you. We recommend that you change the bot’s name (removing the date and time stamp at a minimum) and review the other settings. For help, see [Configure bot settings](conversation-builder-bots-bot-basics.html#configure-bot-settings).
 
-4. If you selected the Custom Bot template, in the next dialog, specify the following:
+4. If you want to use an industry-specific template, move your mouse over the template name, and click **Create Bot**. Alternatively, if you want to use the generic Custom Bot template, move your mouse over the template name, and click " **>** ." Then, in the next dialog, specify the following, and click **Create Bot**:
 
     * **Name**: Enter a name that’s concise and clear. Make sure abbreviations can be understood, and consider adding a prefix or suffix to indicate the environment (Dev, Prod, etc.) or language (En, Sp, Fr, etc.) if applicable.
     * **Description**: Enter a description that’s meaningful to you and others. Consider including language that identifies the bot's goal and key behaviors.

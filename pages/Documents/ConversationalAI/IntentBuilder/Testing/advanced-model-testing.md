@@ -12,7 +12,7 @@ indicator: both
 
 ### Overview
 
-If your domain is using the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2), there's an advanced Model Tester that's available.
+If your domain is using the LivePerson NLU v2 engine or a 3rd-party NLU engine, there's an advanced Model Tester that's available.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester.png">
 
@@ -113,15 +113,18 @@ There are several, important metrics displayed:
 <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_passed.png"> <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_failed.png">
 <img style="width:25px" src="img/ConvoBuilder/ib_model_tester_icon_falsepos.png">
 * **Match Rating**: The rating that indicates the NLU’s level of confidence in the match, one of Very Good, Good, Fair Plus, Fair or Poor.
-* **Match Score**: The percentage score that reflects the NLU’s level of confidence in the match to the matched intent.
+<!-- * **Match Score**: The percentage score that reflects the NLU’s level of confidence in the match to the matched intent. -->
 
-#### Evaluating the report
+### Evaluate the report
+
+{: .important}
+On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-builder-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu-v2).
 
 If the report's scores are low, take corrective action as follows:
 
 **Low Test Coverage**: This indicates that many intents in the domain aren't represented in the test set. To improve the test coverage:
 
-* In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions.
+* In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you use actual data to enrich your training set. You can find such data with [Intent Analyzer](intent-analyzer-overview.html).
 * In the Intents list, delete any unused and irrelevant intents. In effect, clean the domain. This can often improve performance.
 
 **Low Success Rate**: This indicates that many test phrases failed the test because they either didn't match the expected intents, or they did so with low match ratings. Here below is an example of the latter:
@@ -146,7 +149,7 @@ A true comparison of reports -- to accurately determine if the domain/model is i
 
 1. Open the domain.
 2. Click **Model Tester** in the upper-left corner. 
-3. Click **Test Reports** tab.
+3. Click the **Test Reports** tab.
 4. In the dashboard that lists the reports, select the checkboxes for both reports.
 5. Click **Compare Reports** in the upper-right corner.
 

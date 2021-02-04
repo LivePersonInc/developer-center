@@ -3999,6 +3999,30 @@ Set the link message text color.
 
 ---
 
+### Proactive and IVR Deflection to App Messaging
+
+#### show_outbound_in_app_message
+- This configuration allows brands that want to display the outbound message in the in-app conversation interface to consumers even after they discard or ignore the message notification.
+- In case the consumer did not tap on the push notification to navigate to the in-app conversation, this configuration can be set to true if the brand wants to display the outbound message to the consumer even in the case that the look back period has expired. If set to false, the outbound message will not be displayed to consumers once they navigate to the in-app conversation screen from the app.
+
+#### PushUnregisterType
+Brands can choose either of the following configurations to unregister user from pusher:
+
+```java
+enum class PushUnregisterType {
+    NONE,
+    ALL,
+    AGENT
+}
+```
+_NONE:_ Do not unregister from pusher at all. Consumer will receive push notifications from both agent as well as outbound notification.
+
+_ALL (Default):_ Unregister/remove consumer from pusher. No push notifications will be sent if the consumer is logged out.
+
+_AGENT:_ Unregister only for agent push notification messages. Consumers will still receive outbound push notifications sent from the Proactive or Connect to Messaging (IVR) services.
+
+---
+
 ### Deprecated Attributes
 
 #### custom_button_icon_name

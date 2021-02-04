@@ -136,11 +136,12 @@ On the main dashboard, click a bot’s MACS to go to the **MACS** page for the b
 
 On the **MACS** page, use the filters to refine the data that’s displayed based on your criteria:
 
-1. **Score filters**: Toggle these on and off to show and hide the data for a score.
-2. **Detail filters**: Filter the data based on specific criteria, for example, the reason for the MACS score.
+1. **Detail filters**: Filter the data based on specific criteria, for example, the reason for the MACS score.
+2. **Score filters**: Toggle these on and off to show and hide the data for a score.
 3. **Date filter**: Specify the date range for the data.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_filters.png">
+<img style="width:500px" src="img/ConvoBuilder/macs_filters2.png">
 
 Note the following about the filters:
 
