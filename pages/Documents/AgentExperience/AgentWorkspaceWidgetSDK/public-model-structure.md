@@ -34,15 +34,19 @@ Structure example:
     },
     "chattingAgentInfo": {
         "agentName": "",
+        "agentNickname": "",
         "agentGroupName": "",
-        "agentId": 1,
+        "agentId": 1
     },
     "agentInfo": {
         "accountId": "",
         "agentName": "",
+        "agentNickname": "",
         "agentId": 1,
         "agentEmail": "",
-        "maxChats": 1
+        "employeeId": "",
+        "maxChats": 1,
+        "agentGroupName": ""
     },
     "chatTranscript": {
         "lines": []
@@ -132,7 +136,7 @@ Structure example:
         "acr": ""
     },
     "applicationInfo": {
-        "theme": "",
+        "theme": ""
     },
     "customVariables": [],
     "splitSession": {
@@ -155,14 +159,18 @@ Structure example:
 | chatInfo.chatSkill                          | The chat skill                                                                                       | The conversation skill                                                                   | string  |                                                            |
 | **chattingAgentInfo**                       | Information about the chatting agent (may not be the agent which is currently logged in)             | Information about the assigned agent (may not be the agent which is currently logged in) | object  |                                                            |
 | chattingAgentInfo.agentName                 | The name of the agent                                                                                | The name of the agent                                                                    | string  |                                                            |
-| chattingAgentInfo.agentGroupName            | The name of the agent group                                                                          | The name of the agent group                                                              | string  |                                                            |
+| chattingAgentInfo.agentNickname             | N/A                                                                                                  | The nickname of the agent                                                                | string  |                                                            |
+| chattingAgentInfo.agentGroupName            | N/A                                                                                                  | The name of the agent group                                                              | string  |                                                            |
 | chattingAgentInfo.agentId                   | The ID of the agent                                                                                  | The ID of the agent                                                                      | number  |                                                            |
 | **agentInfo**                               | Information about the agent which is currently logged in (may not be the chatting agent)             | Information about the agent which is currently logged in (may not be the assigned agent) | object  |                                                            |
 | agentInfo.accountId                         | The account ID                                                                                       | The account ID                                                                           | string  |                                                            |
 | agentInfo.agentName                         | The name of the agent                                                                                | The name of the agent                                                                    | string  |                                                            |
+| agentInfo.agentNickname                     | N/A                                                                                                  | The nickname of the agent                                                                | string  |                                                            |
 | agentInfo.agentId                           | The ID of the agent                                                                                  | The ID of the agent                                                                      | number  |                                                            |
 | agentInfo.agentEmail                        | The email of the agent                                                                               | The email of the agent                                                                   | string  |                                                            |
+| agentInfo.employeeId                        | N/A                                                                                                  | The ID of the employee                                                                   | string  |                                                            |
 | agentInfo.maxChats                          | The maximum number of chats the agent can be in                                                      | The maximum number of (real-time) chats the agent can be in                              | number  |                                                            |
+| agentInfo.agentGroupName                    | N/A                                                                                                  | The name of the agent group                                                              | string  |                                                            |
 | chatTranscript.lines                        | Array of chat lines                                                                                  | Array of chat lines                                                                      | array   |                                                            |
 | **surveyQuestions**                         | All the survey questions divided by survey type                                                      | Profile information about the consumer                                                   | object  |                                                            |
 | surveyQuestions.preChat                     | All the pre-chat survey questions, with separated special questions                                  | Profile information about the consumer                                                   | object  |                                                            |

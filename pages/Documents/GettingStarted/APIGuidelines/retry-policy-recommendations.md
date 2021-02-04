@@ -4,6 +4,7 @@ redirect_from:
   - guides-retry-policy.html
   - retry-and-keepalive-best-practices-overview.html
   - essential-resources-retry-policy-recommendations.html
+  - common-resources-retry-policy-recommendations.html
 Keywords:
 sitesection: Documents
 categoryname: "Getting Started"

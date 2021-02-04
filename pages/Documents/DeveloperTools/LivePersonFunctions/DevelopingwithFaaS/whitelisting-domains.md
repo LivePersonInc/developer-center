@@ -9,6 +9,8 @@ permalink: liveperson-functions-developing-with-faas-whitelisting-domains.html
 indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-whitelisting-domains.html
+  - liveperson-functions-development-whitelisting-domains.html
+  - liveperson-functions-development-whitelisting-domains.html#domains-whitelisted-by-default
 ---
 In order to leverage external domains inside your function(s), you'll need to whitelist them. This can also be done in the **Settings** section. We have a proxy in place which will check incoming requests from functions and see if the requested URL is whitelisted. To ease the usage of some Liveperson APIs, their domains are [whitelisted by default](liveperson-functions-development-whitelisting-domains.html#domains-whitelisted-by-default).
 

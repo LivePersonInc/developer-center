@@ -19,11 +19,11 @@ A policy in Conversation Orchestrator is comprised of a *condition*, *action*, a
 
 To create a policy, start with the **consumer journey you want to achieve**. For example, you may want to achieve the following outcome: “Route a group of intents (e.g. order inquiry, cancellation, scheduling) to a general order skill, unless customer is a VIP, then send them to their dedicated advisor.” 
 
-Next, **identify which attributes you may need to build this policy**. For example, you may need Intents, whether the customer is a VIP, and the customers' dedicated advisors. These attributes can be created, accessed, or managed in the Conversation Orchestrator [Context Warehouse](maven-context-warehouse-overview.html). 
+Next, **identify which attributes you may need to build this policy**. For example, you may need Intents, whether the customer is a VIP, and the customers' dedicated advisors. These attributes can be created, accessed, or managed in the Conversation Orchestrator [Conversation Context Service](maven-context-warehouse-overview.html). 
 
 #### Conditions
 
-Conditions can be applied to each Attribute in Context Warehouse. A condition block may have multiple conditions. They are represented in JSON as follows. 
+Conditions can be applied to each Attribute in Conversation Context Service. A condition block may have multiple conditions. They are represented in JSON as follows. 
 
 **Example 1**: Use a list to check if an email address is in that list. 
 
@@ -169,5 +169,5 @@ Conversation Orchestrator evaluates policies in the order they are created and s
 
 Once you have created some policies there are two ways of using the policies to route conversations:
 1. [Setup Conversation Orchestrator in LivePerson](maven-ai-powered-routing-set-up-maven-in-liveperson.html) to send your conversations to the Conversation Orchestrator bot. The Conversation Orchestrator bot will evaluate all the policies and then route them to the optimal agent, skill, or bot 
-2. [Use Conversation Orchestrator with your bot](maven-ai-powered-routing-use-maven-with-your-bot.html) using the Recommendation API and Context Warehouse APIs. Your bot will handle branded greetings, intents, and other other attributes and then use Recommendation API to get the policy decision. 
+2. [Use Conversation Orchestrator with your bot](maven-ai-powered-routing-use-maven-with-your-bot.html) using the Recommendation API and Conversation Context Service APIs. Your bot will handle branded greetings, intents, and other other attributes and then use Recommendation API to get the policy decision. 
 

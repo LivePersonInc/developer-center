@@ -7,6 +7,10 @@ documentname: Intent Analyzer
 permalink: intent-analyzer-overview.html
 indicator: both
 ---
+
+{: .important}
+Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
+
 ### Overview
 
 Intent Analyzer is LivePerson's hub for tracking and maintaining intents in real time. It provides enhanced reporting and analytics for your bots and automation.

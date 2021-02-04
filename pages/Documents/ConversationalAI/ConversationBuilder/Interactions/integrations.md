@@ -55,7 +55,7 @@ In our example below, we've added a rule that checks for a "success" result, and
 
 Use an Agent Transfer interaction in a dialog when you want to transfer a conversation from a bot to a live agent, or from a bot in one bot group to a bot in a *different* group.
 
-For some practice with this interaction type, complete the [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html).
+For some practice with this interaction type, complete the [Escalate to an Agent tutorial](tutorials-guides-getting-started-with-bot-building-escalate-to-an-agent.html).
 
 {: .important}
 There are two ways to implement a transfer: You can add an Agent Transfer interaction, *as discussed here*. Or, you can add an Integration interaction that uses a supporting [LivePerson Agent Escalation integration](conversation-builder-integrations-liveperson-agent-escalation-integrations.html). There is no difference between the two approaches when it comes to performance. However, use of the Agent Transfer interaction is a simpler, more convenient approach because you specify all necessary information in the interaction itself. If you use an Agent Transfer interaction, you *don't* need to create a supporting integration.
@@ -104,7 +104,9 @@ If you're sending one or more text responses prior to the transfer, it's recomme
 
 ##### Handle transfer failures
 
-Most often in Chat, but occasionally with Messaging, an attempt at transferring to a skill will fail. When this happens, the platform sends the message `__agent_escalation_failed__` to the bot. If you don’t have a dialog set up to catch this pattern, the bot will treat it like any other consumer message. In most cases, it will go to the Fallback dialog.
+First, if an immediate error occurs when calling the transfer API, a failure response will be returned. You can catch and handle these errors by adding a custom rule to the interaction that checks for a “failure” result. For an example of this, see farther above in the *Integration interactions* section in this article.
+
+Second, most often in Chat, but occasionally with Messaging, it can happen that the transfer API call is successful, but an attempt at transferring to a skill will fail after some time. When this happens, the platform sends the message `__agent_escalation_failed__` to the bot. If you don’t have a dialog set up to catch this pattern, the bot will treat it like any other consumer message. In most cases, it will go to the Fallback dialog.
 
 Setting up a dialog to catch the `__agent_escalation_failed__` pattern allows you to send an appropriate message to the consumer, e.g., "Sorry, we're unable to perform the transfer at this time. Please try again later."
 

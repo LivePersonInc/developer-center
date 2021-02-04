@@ -14,7 +14,7 @@ indicator: both
 Use the following built-in functions to get user data.
 
 ### Get user channel
-Returns the platform channel the user is currently communicating on. This function returns:
+`getUserChannel` returns the platform channel the user is currently communicating on. This function returns:
 
 * lp_sms (for SMS)
 * lp_web (for Web)
@@ -41,16 +41,18 @@ botContext.printDebugMessage("channel used by the user is: " + channel);
 
 ### Get user platform ID
 
-Get User Platform Id is used to get the user’s unique platform ID.
+`getUserPlatformId` is used to get the user’s unique ID that's valid only within the Conversation Builder bot platform. This is the ID by which the bot identifies the user.
+
+This scripting function isn't commonly used. However, it is used by those currently using the Agent Escalation API.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getUserPlatformId()` | None | string: unique User platform ID |
+| `getUserPlatformId()` | None | string: unique user ID within Conversation Builder |
 
 #### Example
 
 ```javascript
-// get the user’s platform ID
+// get the user’s ID within CB
 var userId = botContext.getUserPlatformId();
 // display the results...
 botContext.printDebugMessage('The userPlatformId = ' + userId);
@@ -58,7 +60,7 @@ botContext.printDebugMessage('The userPlatformId = ' + userId);
 
 ### Get authenticated customer info
 
-There are two built in methods to return authenticated customer information. You can attempt to see if either of these 2 methods return true or not.  If the visitor is authenticated, (typically they would set personal or customer info being logged in) you can access the Personal Info or Customer Info object array.
+`getLPUserPersonalInfo` and `getLPCustomerInfo` are two, built-in methods to return authenticated customer information. You can attempt to see if either of these 2 methods return true or not.  If the visitor is authenticated, (typically they would set personal or customer info being logged in) you can access the Personal Info or Customer Info object array.
 
 
 | Function Name | Arguments | Returns |
