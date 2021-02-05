@@ -46,7 +46,11 @@ The quick reply container holds all buttons that should be displayed with the me
   <tr>
     <td>replies</td>
     <td>
+<<<<<<< HEAD
     Array of quick replies sent to the consumer. <br/>
+=======
+    Array of quick replies sent to the consumer. </br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     Maximum number of buttons is 13.
     </td>
     <td>Array(<a href="#button">Button</a>)</td>
@@ -89,7 +93,11 @@ A reply button that will be display beneath the message.
   <tr>
     <td>title</td>
     <td>
+<<<<<<< HEAD
     The text of the button.<br/>
+=======
+    The text of the button.</br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     The text can not be longer than 25 characters.
     </td>
     <td>String</td>
@@ -98,11 +106,19 @@ A reply button that will be display beneath the message.
   <tr>
     <td>click</td>
     <td>
+<<<<<<< HEAD
     The click operations that should be executed when the customer clicks the button.<br/>
     These click operations must contain at least one action which can be any action of the following types:
     <li><a href="getting-started-with-rich-messaging-introduction.html#publish-text">publishText</a></li>
     <li><a href="getting-started-with-rich-messaging-introduction.html#navigate">navigate</a></li>
     <li><a href="getting-started-with-rich-messaging-introduction.html#link">link</a></li><br/>
+=======
+    The click operations that should be executed when the customer clicks the button.</br>
+    These click operations must contain at least one action which can be any action of the following types:
+    <li><a href="getting-started-with-rich-messaging-introduction.html#publish-text">publishText</a></li>
+    <li><a href="getting-started-with-rich-messaging-introduction.html#navigate">navigate</a></li>
+    <li><a href="getting-started-with-rich-messaging-introduction.html#link">link</a></li></br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     If an action of type navigate or link is added, a publishText action can additionaly be included in the click operation.
     </td>
     <td><a href="getting-started-with-rich-messaging-introduction.html#element-click-operations">ClickOperations</a></td>

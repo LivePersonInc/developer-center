@@ -1,7 +1,12 @@
 {
   "files": {
+<<<<<<< HEAD
     "main.js": "/free-trial-registration/static/js/main.31e65689.chunk.js",
     "main.js.map": "/free-trial-registration/static/js/main.31e65689.chunk.js.map",
+=======
+    "main.js": "/free-trial-registration/static/js/main.41c9d294.chunk.js",
+    "main.js.map": "/free-trial-registration/static/js/main.41c9d294.chunk.js.map",
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     "runtime-main.js": "/free-trial-registration/static/js/runtime-main.bc1ec851.js",
     "runtime-main.js.map": "/free-trial-registration/static/js/runtime-main.bc1ec851.js.map",
     "static/css/2.0978f8b3.chunk.css": "/free-trial-registration/static/css/2.0978f8b3.chunk.css",
@@ -20,6 +25,10 @@
     "static/js/runtime-main.bc1ec851.js",
     "static/css/2.0978f8b3.chunk.css",
     "static/js/2.1acb610a.chunk.js",
+<<<<<<< HEAD
     "static/js/main.31e65689.chunk.js"
+=======
+    "static/js/main.41c9d294.chunk.js"
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
   ]
 }

@@ -3,13 +3,18 @@
   "description": "developers-community",
   "version": "1.0.0",
   "dependencies": {
+<<<<<<< HEAD
     "axios": "^0.21.1",
     "browser-sync": "^2.26.7",
+=======
+    "axios": "^0.19.0",
+    "browser-sync": "^2.26.12",
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     "gulp": "^4.0.2",
     "gulp-shell": "^0.7.1",
-    "jquery": ">=3.4.0",
+    "jquery": "^3.5.1",
     "jquery-highlight": "^3.5.0",
-    "lodash": ">=4.17.13",
+    "lodash": "^4.17.20",
     "lodash.template": ">=4.5.0"
   },
   "devDependencies": {
