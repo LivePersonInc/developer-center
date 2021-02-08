@@ -698,7 +698,9 @@
           - subpagename: Events & Templates
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
+          - subpagename: Snippets
           - subpagename: Storing Secrets
+          - subpagename: Data Storage
           - subpagename: Debugger
           - subpagename: Common Examples
           - subpagename: Best Practices
@@ -707,6 +709,7 @@
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
+          - subpagename: Activities
           - subpagename: Logs
           - subpagename: Metrics
           - subpagename: Email Reporting
@@ -876,6 +879,7 @@
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Scroll Behavior Configuration
       - subpagename: Logging
+      - subpagename: Proactive and IVR Deflection to App Messaging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
