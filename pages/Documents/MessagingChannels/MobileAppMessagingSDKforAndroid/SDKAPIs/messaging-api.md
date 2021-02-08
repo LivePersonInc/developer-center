@@ -116,7 +116,7 @@ There are 2 authenticated connection methods:
     * Possible states:
         * LPConversationsHistoryStateToDisplay.ALL - Show All Conversations (**Default**)
         * LPConversationsHistoryStateToDisplay.CLOSE - Shows only closed Conversations
-        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Converstations
+        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Conversations
 
    ```java
    new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversationsHistoryStateToDisplay.ALL);
@@ -399,6 +399,20 @@ public static void logOut(Context context, String brandId, String appId, LogoutL
 | appId | The host app ID. |
 | logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
 
+If the logout call on the SDK fails, the local files will not get removed by the SDK. In order to solve this problem, we added a new logOut API to allow brands to perform a forced logout, which will perform the logout without waiting for LP pusher to unregister. In this way, we will not allow a failed logout call and therefore local files will always be removed.
+
+```java
+public static void logOut(Context context, String brandId, String appId, boolean forceLogOut, PushUnregisterType type, LogoutLivePersonCallback logoutCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| context | A context from the host app. |
+| brandId | An account ID. |
+| appId | The host app ID. |
+| forceLogOut | When true, SDK force a user logout no matter unregisterPusher succeed or failed. When false, SDK waits unregisterPusher succeed before logout. |
+| type | [PushUnregisterType](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#pushunregistertype).ALL: User will be unregistered from pusher for both agent message and Proactive Messaging. |
+| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
 
 ### markConversationAsNormal
 
@@ -627,7 +641,7 @@ Signup flow is now deprecated. Please use an authenticated connection method ins
     * Possible states:
         * LPConversationsHistoryStateToDisplay.ALL - Show All Conversations (**Default**)
         * LPConversationsHistoryStateToDisplay.CLOSE - Shows only closed Conversations
-        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Converstations
+        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Conversations
 
    ```java
    new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversationsHistoryStateToDisplay.ALL);

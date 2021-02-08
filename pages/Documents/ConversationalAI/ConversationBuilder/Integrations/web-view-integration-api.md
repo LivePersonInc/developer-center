@@ -75,6 +75,14 @@ curl -X POST \
 #### Retrieve the Web View variables from the bot runtime
 Use the [Get Web View Variables](conversation-builder-scripting-functions-get-set-contextual-data.html#get-web-view-variables) JavaScript functions to retrieve the variables set via the Web View API.
 
+### System environment variables
+
+If you’re using `system_handleIntermediateUserMessage` and `system_intermediateBotResponseTimeout` to block consumer interruptions for a period of time so that the bot can respond to the consumer (see [here](conversation-builder-advanced-use-cases.html#block-consumer-interruptions)), be aware that these environment variables also cause the bot to likewise catch and ignore system messages received via a Web View integration. To get around this—so Web View messages are still processed by the bot—set the `system_processWebviewIntermediateMessage` environment variable to “true.”
+
+| Environment Variable | Description | Type | Example |
+|---|---|---|--|
+| system_processWebviewIntermediateMessage | If true, the bot processes messages received via a Web View integration even though `system_handleIntermediateUserMessage` is true. <br><br>If false, the `system_handleIntermediateUserMessage` environment variable is respected, causing the bot to catch and ignore Web View messages for the time period specified by `system_intermediateBotResponseTimeout`. | Boolean | true |
+
 ### Example guide
 
 For a step-by-step, example guide that uses this API, see [here](tutorials-guides-advanced-integrations-implementing-a-web-view-integration.html).
