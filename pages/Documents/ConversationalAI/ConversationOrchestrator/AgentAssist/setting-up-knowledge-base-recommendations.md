@@ -15,6 +15,9 @@ indicator: messaging
 ---
 
 {: .important}
+For some practice with Agent Assist, complete the [Using Agent Assist](tutorials-guides-using-agent-assist-overview.html) tutorial.
+
+{: .important}
 It takes up to 20 minutes for changes in Agent Assist configuration to take effect.
 
 ### Prerequisite knowledge

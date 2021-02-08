@@ -17,11 +17,11 @@ In a separate browser window, navigate to [https://developers.liveperson.com/web
 
 <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/message_us.png">
 
-Click the **Message us** button to start a conversation with the human agent on the account, which should be yourself. Type in any message and send to see a notification come through on the Conversational Cloud, along with an opportunity to accept the incoming conversation.
+Click the **Message us** button to start a conversation with the human agent on the account, which should be yourself. Type in any message and send it to see a notification come through on the Conversational Cloud, along with an opportunity to accept the incoming conversation.
 
 <img class="fancyimage" style="width:400px" src="img/agentassisttutorial/incoming_message.png">
 
-Once connected, you can now test out Agent Assist simply by conversing with yourself as both the consumer and the agent. To start, test the phrase “I need some help booking a flight” from your user. You will see both the Booking Bot and the Knowledge Base article on booking a flight recommended to your agent to help out your user.
+Once connected, you can now test out Agent Assist by conversing with yourself as both the consumer and the agent. To start, test the phrase “I need some help booking a flight” from your user. You will see both the Booking Bot and the Knowledge Base article on booking a flight recommended to your agent to help out your user.
 
 <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/recommendations.png">
 <img class="fancyimage" style="width:450px" src="img/agentassisttutorial/recommendations_b.png">
@@ -38,7 +38,7 @@ Each time the user sends a message, Agent Assist will check to see if the uttera
 
 <img class="fancyimage" style="width:450px" src="img/agentassisttutorial/upgrade_seat.png">
 
-Agent Assist also allows human agents to train and tune the recommendations in real time. Use the thumbs up/thumbs down buttons to signify when a recommendation is appropriate to improve the NLU over time.
+Agent Assist also allows human agents to train and tune the recommendations in real time. Use the **Thumbs up** and **Thumbs down** buttons to signify when a recommendation is appropriate to improve the NLU over time.
 
 This time, select **Use article** to bring the Seating assignment article into the messaging prompt for the agent. This allows the agent to personalize and update the article text to fit the user's specific needs.
 
