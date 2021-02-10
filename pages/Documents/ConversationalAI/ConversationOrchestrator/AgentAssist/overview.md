@@ -13,6 +13,9 @@ permalink: conversation-orchestrator-agent-assist-overview.html
 indicator: messaging
 ---
 
+{: .important}
+For some practice with Agent Assist, complete the [Using Agent Assist](tutorials-guides-using-agent-assist-overview.html) tutorial.
+
 ### What is Agent Assist?
 Conversation Orchestrator’s Agent Assist is a suite of features that improve the productivity of human agents. Agent Assist’s key features include:
 

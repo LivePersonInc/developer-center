@@ -22,6 +22,8 @@ In Conversational Cloud, bot and/or article recommendations are displayed inline
 
     <img width="550" src="img/agentassist/use_bot.png">
 
+    **Tip**: As shown in the image above, a system message announces when the bot joins the conversation. You can customize this message by changing the bot user's nickname.
+
 **To use a recommended article**
 
 * Click **Use Article** to copy the article’s text to the agent’s text input area. You can edit the text before sending it to the consumer.

@@ -25,7 +25,7 @@ If you choose LivePerson's native NLU, no setup work needs to be done to connect
 
 ### Language support
 
-LivePerson NLU supports intent detection for English and Spanish.
+LivePerson NLU v1 supports intent detection for English and Spanish. LivePerson NLU v2 supports English only.
 
 Available with IBM Watson:
 * Arabic
