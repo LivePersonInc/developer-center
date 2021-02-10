@@ -157,6 +157,23 @@ The StepUp message sent to the bot when Stepup Authentication happens.
 **Messaging**: Yes<br>
 **Chat**: No
 
+#### enableButtonTextOnPostback
+
+{: .important}
+This custom configuration field controls the behavior of Structured and Button questions, not Quick Reply questions.
+
+By default, when you specify a callback value for a button in a [Structured](conversation-builder-interactions-questions.html) or [Button](conversation-builder-interactions-questions.html) question, that value is sent to the bot when the consumer selects the button. What’s more, that value, not the button’s label, is displayed to the consumer as their selected choice.
+
+In many cases though, you want to send the callback value to the bot, but you want to hide this from the consumer, displaying instead the button’s label to the consumer as their choice. You can accomplish this with the enableButtonTextOnPostback custom configuration field.
+
+If you set this field to true, the selected button’s label is displayed to the consumer as their choice. You can still retrieve the callback value that is sent to the bot; to do this, use the [getButtonPayload](conversation-builder-scripting-functions-manage-conversation-flow.html#get-button-payload) scripting function in the Process User Response code for the question interaction.
+
+If this field is unset or you set this field to false, the selected button’s callback value is displayed to the consumer as their choice.
+
+**Default value**: false<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
 #### fallbackEscalationTime
 The value in milliseconds for the period of time to pass before invoking fallback escalation.
 
