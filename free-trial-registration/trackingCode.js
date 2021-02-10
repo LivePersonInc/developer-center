@@ -34,8 +34,6 @@ function getParam(p) {
   return gclid;
 }
 
-console.log("IT LOADED")
-
 // NOTE: Could this be converted into a function. This functionality is repeated a lot
 /* eslint-disable */
 let leadSourceCookie = (name = new RegExp('(?:^|;\\s*)lp-leadSource=([^;]*)').exec(document.cookie)) ? name.split(',')[1] : '';
