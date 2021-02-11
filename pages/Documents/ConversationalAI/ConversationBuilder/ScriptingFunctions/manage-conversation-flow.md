@@ -113,7 +113,7 @@ The example below shows how quick replies can be added easily to your message.
 botContext.addQuickReplies(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03','Hot~sauce04']);
 ```
 
-### Get Button Payload
+### Get button payload
 
 `getButtonPayload` is used to retrieve a button’s callback value that is sent to the bot when the consumer selects that button in a question.
 
