@@ -45,7 +45,7 @@ LivePerson offers a variety of domain-specific starter packs ([pre-built domains
 
 ### Step 2: Create the Airline FAQ knowledge base
 
-With the NLU domain created, the next step is to create a knowledge base with articles to be tied to domain intents. For the purpose of this demonstration, a CSV file will be provided to simplify the process.
+With the NLU domain created, the next step is to create a knowledge base with articles to be tied to domain intents. For the purpose of this demonstration, a CSV file has been provided to simplify the process. You downloaded this file earlier.
 
 {: .important}
 **Customize your POC:** This example uses a single knowledge base in order to quickly showcase the capabilities of recommending articles using Agent Assist. Adding additional knowledge bases to showcase that Agent Assist can pull from multiple data sources can help to create a more substantial and impressive demonstration with your proof-of-concept. Each additional knowledge base can pull from any domain you previously created to showcase their functionality.
