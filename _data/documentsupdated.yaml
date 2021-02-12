@@ -140,6 +140,12 @@
         subpages:
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
+      - pagename: Using Agent Assist
+        subpages:
+          - subpagename: Overview
+          - subpagename: Prerequisite Steps
+          - subpagename: Configure Agent Assist
+          - subpagename: Test Agent Assist
   - documentname: Conversation Builder
     pages:
       - pagename: Bot Workspace
@@ -170,7 +176,7 @@
           - subpagename: Fallback Dialogs
           - subpagename: Disambiguation Dialogs
           - subpagename: Auto Escalation Dialogs
-      # - pagename: Dialog Templates
+      - pagename: Dialog Templates
       - pagename: Interactions
         subpages:
           - subpagename: Interaction Basics
@@ -220,6 +226,7 @@
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
+          - subpagename: Conversational Design
           - subpagename: Train & Tune NLU
           - subpagename: Custom Event Logging
           - subpagename: Reusable Components
@@ -231,8 +238,12 @@
       - pagename: Agent Assist
         subpages:
           - subpagename: Overview
-          - subpagename: Recommended Actions for Automations
-          - subpagename: Recommended Actions for Knowledge Base
+          - subpagename: Setting Up Bot Recommendations
+          - subpagename: Setting Up Knowledge Base Recommendations
+          - subpagename: Testing
+          - subpagename: Agent Experience
+          - subpagename: Best Practices
+          - subpagename: Troubleshooting
       - pagename: Conversation Context Service
         subpages:
           - subpagename: Overview
@@ -260,7 +271,7 @@
       - pagename: Testing
         subpages:
          - subpagename: Single Utterance Testing
-      #   - subpagename: Advanced Model Testing
+         - subpagename: Advanced Model Testing
   - documentname: Intent Analyzer
     pages:
       - pagename: Overview
@@ -294,7 +305,10 @@
   - documentname: Bot Analytics
     pages:
       - pagename: Overview
-      - pagename: Leveraging Analytics
+      - pagename: Account-Level Performance
+      - pagename: Bot Performance
+      - pagename: Transcripts
+      - pagename: Tuning Opportunities
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
@@ -310,10 +324,16 @@
       - pagename: IBM Watson Assistant
       - pagename: IBM Watson Assistant Version 2
       - pagename: Amazon Lex
-      - pagename: Microsoft Bot Framework
+      - pagename: Microsoft Direct Line
+        subpages:
+          - subpagename: Introduction
+          - subpagename: Basic Content
+          - subpagename: Advanced Features
+          - subpagename: PVA
       - pagename: Custom Integration
       - pagename: Hook Configuration
       - pagename: Public API
+
   - documentname: Messaging Agent SDK
     pages:
       - pagename: Overview
@@ -684,7 +704,9 @@
           - subpagename: Events & Templates
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
+          - subpagename: Snippets
           - subpagename: Storing Secrets
+          - subpagename: Data Storage
           - subpagename: Debugger
           - subpagename: Common Examples
           - subpagename: Best Practices
@@ -693,6 +715,7 @@
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
+          - subpagename: Activities
           - subpagename: Logs
           - subpagename: Metrics
           - subpagename: Email Reporting
@@ -807,7 +830,13 @@
           - subpagename: Agent Activity
           - subpagename: Current Queue State
           - subpagename: SLA Histogram
-
+  - documentname: Key Messaging Metrics API
+    basedomain: https://{domain}/manager_workspace/api/account/{accountID}
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Metrics
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -856,6 +885,7 @@
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Scroll Behavior Configuration
       - subpagename: Logging
+      - subpagename: Proactive and IVR Deflection to App Messaging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -887,22 +917,31 @@
   - documentname: Mobile App Messaging SDK for iOS
     pages:
     - pagename: Overview
+    - pagename: Configure the iOS SDK
+    - pagename: Push Notifications
     - pagename: Quick Starts
       subpages:
       - subpagename: Quick Start 5.2.1 and below
       - subpagename: Quick Start - 6.0 and up (XCFramework support)
-    - pagename: Configure the iOS SDK
-    - pagename: Push Notifications
+    - pagename: Advanced Configuration
+      subpages:
+        - subpagename: App Extensions
+        - subpagename: Conversations Lifecycle
+        - subpagename: SDK Delegates
+        - subpagename: UI
+        - subpagename: User Data
     - pagename: Advanced Features
       subpages:
       - subpagename: Audio Messages
       - subpagename: Campaigns
+      - subpagename: Certificate Pinning
       - subpagename: CSAT Behavior
+      - subpagename: Logging
+      - subpagename: Proactive and IVR Deflection to App Messaging
       - subpagename: Photo and File Sharing
+      - subpagename: Scroll Behavior Configuration
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
-      - subpagename: Scroll Behavior Configuration
-      - subpagename: Logging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -912,9 +951,10 @@
       - subpagename: Callbacks Index
     - pagename: SDK Attributes
       subpages:
+      - subpagename: Attributes Design Sheet
+      - subpagename: Deprecated Attributes
       - subpagename: SDK 5.0 and above
       - subpagename: SDK 4.1 and below
-      - subpagename: Attributes Design Sheet
     - pagename: String Localization
       subpages:
       - subpagename: Localization Keys
@@ -927,9 +967,9 @@
       subpages:
       - subpagename: About XCFrameworks
       - subpagename: Authentication
+      - subpagename: Customizing Toast Notifications
       - subpagename: FAQ
       - subpagename: Open Source List
-      - subpagename: Upgrade Guide - iOS
   - documentname: Apple Business Chat SDK
     pages:
     - pagename: Overview
@@ -1012,8 +1052,7 @@
     - documentname: Consumer Authentication
       pages:
       - pagename: Introduction
-      - pagename: Major Components
-      - pagename: Security
+      - pagename: Implementation Considerations
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API

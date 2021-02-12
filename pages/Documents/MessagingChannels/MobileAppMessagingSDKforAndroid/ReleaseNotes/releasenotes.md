@@ -13,6 +13,53 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.5.0
+
+**Release date:** December 11, 2020
+
+# Overview
+Android Mobile Messaging SDK version 5.5.0 release focuses on improvements and bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.5.0 uses:
+- Minimum API version 21
+- Compile API version 30
+- Target API version 30
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(compileSdkVersion and targetSdkVersion bump to 30)**
+
+# New API:
+
+## [logOut API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#logout)
+
+If the logout call on the SDK fails, the local files will not get removed by the SDK. In order to solve this problem, we added a new logOut API to allow brands to perform a forced logout, which will perform the logout without waiting for LP pusher to unregister. In this way, we will not allow a failed logout call and therefore local files will always be removed.
+
+```java
+public static void logOut(Context context, String brandId, String appId, boolean forceLogOut, PushUnregisterType type, LogoutLivePersonCallback logoutCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| context | A context from the host app. |
+| brandId | An account ID. |
+| appId | The host app ID. |
+| forceLogOut | When true, SDK force a user logout no matter unregisterPusher succeed or failed. When false, SDK waits unregisterPusher succeed before logout. |
+| type | PushUnregisterType.ALL: User will be unregistered from pusher for both agent message and Proactive Messaging. |
+| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
+
+# Attribute Update:
+
+## [conversation_background](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#conversation_background)
+Added image support for Fragment mode. 
+Limitation: there will be distortion of background image when keyboard appears.
+
+# Bugs Fixed:
+- Crash on conversation screen.
+- Data masking system message text does not pick up app language.
+- Camera not working the first time request camere permission.
+
+
 # Android Messaging SDK - Version 5.4.0
 
 **Release date:** October 08, 2020
@@ -382,6 +429,52 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **handlePush(Context context, Bundle data, String brandId, boolean showNotification)** , use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
+
+# Android Messaging SDK - Version 4.7.0
+
+**Release date:** December 11, 2020
+
+# Overview
+Android Mobile Messaging SDK version 4.7.0 release focuses on improvements and bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.7.0 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.6.1)**
+
+# New API:
+
+## [logOut API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#logout)
+
+If the logout call on the SDK fails, the local files will not get removed by the SDK. In order to solve this problem, we added a new logOut API to allow brands to perform a forced logout, which will perform the logout without waiting for LP pusher to unregister. In this way, we will not allow a failed logout call and therefore local files will always be removed.
+
+```java
+public static void logOut(Context context, String brandId, String appId, boolean forceLogOut, PushUnregisterType type, LogoutLivePersonCallback logoutCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| context | A context from the host app. |
+| brandId | An account ID. |
+| appId | The host app ID. |
+| forceLogOut | When true, SDK force a user logout no matter unregisterPusher succeed or failed. When false, SDK waits unregisterPusher succeed before logout. |
+| type | PushUnregisterType.ALL: User will be unregistered from pusher for both agent message and Proactive Messaging. |
+| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
+
+# Attribute Update:
+
+## [conversation_background](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html#conversation_background)
+Added image support for Fragment mode. 
+Limitation: there will be distortion of background image when keyboard appears.
+
+# Bugs Fixed:
+- Crash on conversation screen.
+- Data masking system message text does not pick up app language.
+- Camera not working the first time request camere permission.
 
 # Android Messaging SDK - Version 4.6.1
 
