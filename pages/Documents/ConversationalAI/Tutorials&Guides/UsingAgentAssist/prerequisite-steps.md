@@ -20,6 +20,10 @@ This section walks through the steps that are necessary to complete before confi
 * Several bots in Conversation Builder with dialogs triggered by intents from the starter pack domain
 * Web messaging engagement directed to the signed-in “human” skill
 
+### Before you begin
+
+Before you get started with this tutorial, download this [ZIP file](https://publisher.liveperson.net/co-agent-assist/AgentAssistTutorial_resources.zip), which contains a few, necessary resources.
+
 ### Step 1: Create the Airline NLU v2 domain
 
 LivePerson offers a variety of domain-specific starter packs ([pre-built domains](http://localhost:4000/intent-builder-overview.html#prebuilt-domains)) to help you get up and running with Intent Builder quickly. After signing into the LivePerson Conversational Cloud, navigate to the Conversational AI portal and complete the following steps to build out the NLU domain that will be used in the Agent Assist solution.
@@ -57,7 +61,7 @@ With the NLU domain created, the next step is to create a knowledge base with ar
     * **Knowledge Base Name**: Airline FAQ
     * **Language**: English
     * **Import Articles From**: CSV
-        * Use [this CSV file](https://docs.google.com/spreadsheets/d/1akDFpF1KbEFJlmrho5SyrRuOJ1vhJCHDsFs6SEKmO9k/edit#gid=1435782611) for your upload
+        * *Use the CSV file that is in the ZIP file that you downloaded earlier.*
     * **Intent Association**: Domain Intents
     * **Domain**: LP_Airlines
 	
@@ -118,17 +122,19 @@ Every bot and human agent requires a user profile and an associated skill to be 
 
 ### Step 4: Import the Conversation Builder bots
 
-In this step, you create two, new bots in Conversation Builder using the provided JSON files. These bots have been created with dialog starters matched to several of the LP_Airlines intents, and they will be used to recommend actions to agents engaged in conversations with users.
+In this step, you create two, new bots in Conversation Builder using the JSON files that are in the ZIP file that you downloaded earlier. 
 
-* [Booking Bot](https://drive.google.com/file/d/1WO59WqRMw3Hz1eqrbB89mFY3coEedWWz/view)
-* [Seating Bot](https://drive.google.com/file/d/1-EjTjOzE-nDaTroJ8MNoyQorYxhr_jl_/view)
+* Booking Bot
+* Seating Bot
+
+These bots have been created with dialog starters matched to several of the LP_Airlines intents, and they will be used to recommend actions to agents engaged in conversations with users.
 
 1. Download the provided JSON files (available above) for the Booking and Seating bots.
 2. From the Conversational AI portal, click the **Conversation Builder** menu option.
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/cb_menu_option.png">
 
-3. Click **Import Bot** in the upper-right corner, and select the downloaded "Booking Bot" JSON file. 
+3. Click **Import Bot** in the upper-right corner, and select the "Booking Bot" JSON file that you downloaded earlier. 
 
     **Note**: If you have completed the previous step of creating the NLU v2 Domain, the intents will be automatically associated with the correct dialogs in the bots. However, if you have not yet done so, you will need to connect them manually to the appropriate dialog starters using Conversation Builder's Assist tool.
 
@@ -138,7 +144,7 @@ In this step, you create two, new bots in Conversation Builder using the provide
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/agent_connector.png">
 
-7. Follow the same process to upload the "Seating Bot," and connect the Seating Bot user agent. Once finished, you will have two bots up and running with agent connectors.
+7. Follow the same process to upload the "Seating Bot" (which you also downloaded earlier), and connect the Seating Bot user agent. Once finished, you will have two bots up and running with agent connectors.
 
     **Note**: These bots are for demonstration purposes, so they don't do much beyond serving a dialog to a user based on the intent. No booking or seating functionality is built in. As such, they can be modified to meet your use case.
 
