@@ -25,7 +25,7 @@ If you choose LivePerson's native NLU, no setup work needs to be done to connect
 
 ### Language support
 
-LivePerson NLU supports intent detection for English and Spanish.
+LivePerson NLU v1 supports intent detection for English and Spanish. LivePerson NLU v2 supports English only.
 
 Available with IBM Watson:
 * Arabic
@@ -105,10 +105,35 @@ Key characteristics include:
     
     If your domain complies with these requirements, LivePerson recommends that you use LivePerson NLU v2 (not v1) if possible.   
 * Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
-<!-- * Makes available a [Model Tester](intent-builder-testing-advanced-model-testing.html). -->
+* Makes available a [Model Tester](intent-builder-testing-advanced-model-testing.html).
 * Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
 * Can be used with [Intent Analyzer](intent-analyzer-overview.html).
 * Supports English.
+
+### Variances in matched intents with LivePerson NLU v2
+
+When using LivePerson tools ([Model Tester](intent-builder-testing-advanced-model-testing.html), [Single Utterance Tester](intent-builder-testing-single-utterance-testing.html)) to improve intent classification results, on occasion you might notice a small number of changes in the matched intents for the test set/test phrase after retraining with no additional training samples. There are a number of contributing factors for this observed variance. Some factors are the by-product of the training algorithm, while others can be tackled by changes to the taxonomy of intents or to the training phrases.
+
+#### Randomness in deep learning 
+LivePerson's NLU utilizes the latest, deep learning technology to achieve the best intent classification performance. Randomness is baked into the training of deep learning models to facilitate the exploration of optimal solutions. The cost of such explorations is that no two models trained on the same dataset yield perfectly identical results. Our repeated tests have shown that despite the potential variance in the matched intents, the overall performance of our models stays stable. In other words, after retraining with the same dataset, what you might lose in one intent is usually recovered by some improvement in others.
+
+#### Intent overlaps or multiple intents
+The variance in matched intents might also indicate that:
+
+* There's a potential intent overlap in the taxonomy, or there's a test sample that contains multiple intents.
+* The training samples for different intents lack diversity or distinction.
+
+When working with multiple developers to create an intent domain with a large taxonomy of intents, it is highly likely that duplicate intents will be created over time, or an overlap between intents will develop. For example, “refund - general” and “refund - defective product” overlap, as the former subsumes the latter. 
+
+Similarly, it is also likely that a message such as “I’d like to return my phone and get a refund” might be matched with the “refund” intent or the “return product” intent depending on the training, as we currently only return the top scoring matched intent for each prediction, and both are valid matches for the message. 
+
+A model might also become confused with a fine-grained taxonomy of intents if the training examples are not carefully curated. The intent “refund - defective product” and “refund - no longer needed” might become problematic if the training samples for both intents are limited and if both share similar patterns starting with “I want to get a refund.” 
+
+All these factors directly influence the intent matching after retraining. Therefore, it's important to ensure that:
+
+* The taxonomy of intents is carefully reviewed for overlaps.
+* The test samples contain clear, single intents.
+* The training samples are diverse within an intent and distinguishable from other intents.
 
 ### Connect a 3rd-party NLU engine
 

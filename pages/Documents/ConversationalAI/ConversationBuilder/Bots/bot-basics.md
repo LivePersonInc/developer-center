@@ -83,7 +83,7 @@ Bot settings include:
 
 - **Enable Agent Annotations**: The purpose of this setting is to automate more of the steps taken when training the bot, and to make it easier for agents to participate.
 
-    If you enable this setting, unrecognized utterances that aren't handled by the bot are automatically added to a review list in the Automation Annotator panel in Conversational Cloud. This allows the agent to review the list and mark utterances needing follow-up, with the goal of re-training the domain and/or updating the bot as needed.
+    If you enable this setting, unrecognized utterances that aren't handled by the bot are automatically added to a review list in the Intent Annotations widget in Conversational Cloud. This allows the agent to review the list and mark utterances needing follow-up, with the goal of re-training the domain and/or updating the bot as needed.
 
     "Unrecognized utterances" are defined as those that trigger the Fallback dialog. If the Fallback dialog employs a knowledge base search, only the utterances that return no results are added to the review list.
 

@@ -13,7 +13,7 @@ indicator: both
 ### Intents
 Intent tuning is an important step in optimizing a bot for high performance. 
 
-You can readily determine that there are opportunities for intent tuning if you see a low **Intent Matched Rate** for the account overall, or for a specific bot.
+You can readily determine that there are opportunities for intent tuning if you see a low **Intent Match Rate** for the account overall, or for a specific bot.
 
 A bot’s **Intents** view displays both “matched intents” and “unmatched phrases” for your bot’s intents, patterns and attached knowledge bases. You can see all of them together, or you can view them individually using the **Source** dropdown menu on the left.
 
