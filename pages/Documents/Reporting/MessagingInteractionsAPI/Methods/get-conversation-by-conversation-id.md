@@ -32,9 +32,10 @@ Filter is sent in the POST data (body) with the following JSON structure.
 
 Required:
 
-| Name            | Description                        | Type/Value |
-| :---------      | :---------------                   | :----------|
-| conversationId | ID of the conversation to search.    | string|
+| Name            | Description                        | Type/Value | Notes |
+| :---------      | :---------------                   | :----------| :---------- |
+| conversationId | ID of the conversation to search.    | string |   |
+| contentToRetrieve | List of content types that should be retrieved | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys | 
 
 ### Response
 
