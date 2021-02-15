@@ -111,7 +111,7 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
 |responseTime |{"start":{"from":1529566882153,"to":1530171697782},"status":["OPEN"],"responseTime":{"from":1530013618000,to":1530153993000},"contentToRetrieve":["responseTime"]}|
-|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime", "intents", "latestAgentSurvey", "previouslySubmittedAgentSurveys"]}|
+|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords", "agentParticipants", "agentParticipantsLeave", "agentParticipantsActive","consumerParticipants", "transfers", "interactions", "messageScores","messageStatuses", "conversationSurveys", "coBrowseSessions", "summary", "sdes", "unAuthSdes", "monitoring", "responseTime", "intents", "latestAgentSurvey", "previouslySubmittedAgentSurveys"]}|
 |latestUpdateTime | {"start":{"from":1541578792011,"to":1541578895020},"status":["OPEN","CLOSE"],"latestUpdateTime":{"from":1541578792011}} |
 |nps  | {"start":{"from":1470037448000,"to":1472543048000}, "nps":{"from":0,"to":7}}|
 |questionBrick | {"start":{"from":1470037448000,"to":1472543048000},"questionBrick":"Improvement suggestion"}|
@@ -163,7 +163,8 @@ agentParticipants | Contains information about the agent(s) participating in the
 consumerParticipants | Contains information about the consumer(s) participating in the conversation.  | container
 transfers| Contains information about transfers in the conversation. | container
 interactions| Contains information about the interactions in the conversation.| container
-messageScore| Contains information about the message's score, including raw and MCS.| container
+messageScores| Contains information about the message's score, including raw and MCS.| container
+skillChanges| Contains information about the skill changes on the conversation (i.e. default skill/fallback skil).| container
 conversationSurveys  | Contains information about the different surveys for the current conversation. | container
 coBrowseSessions  | Contains information about CoBrowse sessions for the current conversation.  | container
 summary  | Contains information about the conversation's summary. | container
@@ -858,7 +859,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           }
         }
       ],
-      "consumerParticipant": [
+      "consumerParticipants": [
         {
           "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
           "firstName": "Visitor",
@@ -935,7 +936,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "skillName": "skill3"
         }
       ],
-      "messageScore": [
+      "messageScores": [
         {
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
           "messageRawScore": 0,
