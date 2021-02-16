@@ -45,7 +45,7 @@ LivePerson offers a variety of domain-specific starter packs ([pre-built domains
 
 ### Step 2: Create the Airline FAQ knowledge base
 
-With the NLU domain created, the next step is to create a knowledge base with articles to be tied to domain intents. For the purpose of this demonstration, a CSV file will be provided to simplify the process.
+With the NLU domain created, the next step is to create a knowledge base with articles to be tied to domain intents. For the purpose of this demonstration, a CSV file has been provided to simplify the process. You downloaded this file earlier.
 
 {: .important}
 **Customize your POC:** This example uses a single knowledge base in order to quickly showcase the capabilities of recommending articles using Agent Assist. Adding additional knowledge bases to showcase that Agent Assist can pull from multiple data sources can help to create a more substantial and impressive demonstration with your proof-of-concept. Each additional knowledge base can pull from any domain you previously created to showcase their functionality.
@@ -129,22 +129,21 @@ In this step, you create two, new bots in Conversation Builder using the JSON fi
 
 These bots have been created with dialog starters matched to several of the LP_Airlines intents, and they will be used to recommend actions to agents engaged in conversations with users.
 
-1. Download the provided JSON files (available above) for the Booking and Seating bots.
-2. From the Conversational AI portal, click the **Conversation Builder** menu option.
+1. From the Conversational AI portal, click the **Conversation Builder** menu option.
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/cb_menu_option.png">
 
-3. Click **Import Bot** in the upper-right corner, and select the "Booking Bot" JSON file that you downloaded earlier. 
+2. Click **Import Bot** in the upper-right corner, and select the "Booking Bot" JSON file that you downloaded. 
 
     **Note**: If you have completed the previous step of creating the NLU v2 Domain, the intents will be automatically associated with the correct dialogs in the bots. However, if you have not yet done so, you will need to connect them manually to the appropriate dialog starters using Conversation Builder's Assist tool.
 
-4. Once uploaded, click the **Agent Connectors** menu option at the top of Conversation Builder.
-5. Select **Add Agent Connector**, and in the resulting form, select your "Booking Bot" user agent from the **Agent User ID** dropdown. Ensure that the **Conversation Type** is set to "Messaging," and click **Save**.
-6. Click the orange **> Start** button to start the agent connector. 
+3. Once uploaded, click the **Agent Connectors** menu option at the top of Conversation Builder.
+4. Select **Add Agent Connector**, and in the resulting form, select your "Booking Bot" user agent from the **Agent User ID** dropdown. Ensure that the **Conversation Type** is set to "Messaging," and click **Save**.
+5. Click the orange **> Start** button to start the agent connector. 
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/agent_connector.png">
 
-7. Follow the same process to upload the "Seating Bot" (which you also downloaded earlier), and connect the Seating Bot user agent. Once finished, you will have two bots up and running with agent connectors.
+6. Follow the same process to upload the "Seating Bot" that you downloaded, and connect the Seating Bot user agent. Once finished, you will have two bots up and running with agent connectors.
 
     **Note**: These bots are for demonstration purposes, so they don't do much beyond serving a dialog to a user based on the intent. No booking or seating functionality is built in. As such, they can be modified to meet your use case.
 
