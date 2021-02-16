@@ -10,11 +10,6 @@ indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-overview.html
   - liveperson-functions-development-overview.html
-<<<<<<< HEAD
-  - function-as-a-service-developing-with-functions.html
-  - liveperson-functions-development-overview.html#environment-variables
-=======
->>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
 ---
 
 
