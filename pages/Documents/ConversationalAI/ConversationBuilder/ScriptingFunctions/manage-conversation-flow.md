@@ -15,7 +15,7 @@ Use the following built-in functions to affect the flow of a conversation.
 
 ### Set message delay value
 
-Used to set a delay for a group of messages such that they appear like a real conversation.
+`setMessageDelay` is used to set a delay for a group of messages such that they appear like a real conversation.
 
 {: .important}
 The setMessageDelay() function should be used within the preProcess Code JavaScript.
@@ -56,7 +56,7 @@ botContext.setAllowMaxTextResponse(true);
 
 ### Set trigger next message
 
-Used for directing the conversation flow, i.e., for triggering a specified interaction in the bot.
+`setTriggerNextMessage` is used for directing the conversation flow, i.e., for triggering a specified interaction in the bot.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -77,7 +77,7 @@ if (company == 'LivePerson') {
 
 ### Evaluate options
 
-Used for matching the user’s input against an array of options.
+`evaluateOptions` is used for matching the user’s input against an array of options.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -98,7 +98,7 @@ botContext.printDebugMessage('====> User Said: ' + userResponse + ' and MATCH re
 
 ### Add quick replies
 
-The Add Quick Replies function is used for adding quick replies to a message in JavaScript rather than defining in bot creation. This allows for the dynamic addition of the buttons to accommodate various scenarios.
+The `addQuickReplies` function is used for adding quick replies to a message in JavaScript rather than defining in bot creation. This allows for the dynamic addition of the buttons to accommodate various scenarios.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -111,4 +111,26 @@ The example below shows how quick replies can be added easily to your message.
 ```javascript
 // Add these quick replies to an existing message
 botContext.addQuickReplies(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03','Hot~sauce04']);
+```
+
+### Get button payload
+
+`getButtonPayload` is used to retrieve a button’s callback value that is sent to the bot when the consumer selects that button in a question.
+
+By default, when you specify a callback value for a button in a Structured or Button question, that value is sent to the bot when the consumer selects the button. What’s more, that value, not the button’s label, is displayed to the consumer as their selected choice. The latter means you can retrieve the button’s callback value with [getCurrentUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-user-message).
+
+However, in cases where you’re using the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector, the button’s label instead, not the callback value, is displayed to the consumer as their selected choice. In these cases, you need a different way to retrieve the button’s callback value. `getButtonPayload` meets this need.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getButtonPayload()` | None | (string) The button’s callback value that is sent to the bot |
+
+#### Example
+
+In this example, we use `getButtonPayload` in the Process User Response code of the question interaction to retrieve and store the callback value that is sent to the bot after the consumer selects a button:
+
+```javascript
+var callbackValue = botContext.getButtonPayload();
+botContext.printDebugMessage("Callback : " + callbackValue);
+botContext.setBotVariable("callback", callbackValue, true, false);
 ```

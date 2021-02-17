@@ -140,6 +140,12 @@
         subpages:
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
+      - pagename: Using Agent Assist
+        subpages:
+          - subpagename: Overview
+          - subpagename: Prerequisite Steps
+          - subpagename: Configure Agent Assist
+          - subpagename: Test Agent Assist
   - documentname: Conversation Builder
     pages:
       - pagename: Bot Workspace
@@ -232,8 +238,12 @@
       - pagename: Agent Assist
         subpages:
           - subpagename: Overview
-          - subpagename: Recommended Actions for Automations
-          - subpagename: Recommended Actions for Knowledge Base
+          - subpagename: Setting Up Bot Recommendations
+          - subpagename: Setting Up Knowledge Base Recommendations
+          - subpagename: Testing
+          - subpagename: Agent Experience
+          - subpagename: Best Practices
+          - subpagename: Troubleshooting
       - pagename: Conversation Context Service
         subpages:
           - subpagename: Overview
@@ -261,7 +271,7 @@
       - pagename: Testing
         subpages:
          - subpagename: Single Utterance Testing
-      #   - subpagename: Advanced Model Testing
+         - subpagename: Advanced Model Testing
   - documentname: Intent Analyzer
     pages:
       - pagename: Overview
@@ -319,6 +329,7 @@
           - subpagename: Introduction
           - subpagename: Basic Content
           - subpagename: Advanced Features
+          - subpagename: PVA
       - pagename: Custom Integration
       - pagename: Hook Configuration
       - pagename: Public API
@@ -693,7 +704,9 @@
           - subpagename: Events & Templates
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
+          - subpagename: Snippets
           - subpagename: Storing Secrets
+          - subpagename: Data Storage
           - subpagename: Debugger
           - subpagename: Common Examples
           - subpagename: Best Practices
@@ -702,6 +715,7 @@
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
+          - subpagename: Activities
           - subpagename: Logs
           - subpagename: Metrics
           - subpagename: Email Reporting
@@ -816,7 +830,13 @@
           - subpagename: Agent Activity
           - subpagename: Current Queue State
           - subpagename: SLA Histogram
-
+  - documentname: Key Messaging Metrics API
+    basedomain: https://{domain}/manager_workspace/api/account/{accountID}
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+        subpages:
+          - subpagename: Metrics
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -865,6 +885,7 @@
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Scroll Behavior Configuration
       - subpagename: Logging
+      - subpagename: Proactive and IVR Deflection to App Messaging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -915,11 +936,12 @@
       - subpagename: Campaigns
       - subpagename: Certificate Pinning
       - subpagename: CSAT Behavior
+      - subpagename: Logging
+      - subpagename: Proactive and IVR Deflection to App Messaging
       - subpagename: Photo and File Sharing
+      - subpagename: Scroll Behavior Configuration
       - subpagename: Unauthenticated In-App Messaging
       - subpagename: Welcome Message with Quick Replies
-      - subpagename: Scroll Behavior Configuration
-      - subpagename: Logging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
