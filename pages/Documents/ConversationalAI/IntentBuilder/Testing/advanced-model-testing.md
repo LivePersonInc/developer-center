@@ -33,9 +33,9 @@ The general workflow for using the Model Tester is this:
 You can download test reports and comparison reports.
 
 ### Add phrases to the test set
-In a domain, there are several ways to add a phrase to the Model Tester’s test set:
+In a domain, there are several ways to add phrases to the Model Tester’s test set:
 
-* Click **Import Test Set** and import a CSV file.
+* Click **Import Test Set** and import a CSV file that contains the phrases.
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ib_model_tester_addphrase4.png">
     Use the format shown below in the CSV file. Use the first line to name the columns as shown; this line is ignored during the import.
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_model_tester_addphrase5.png">
