@@ -35,10 +35,10 @@ You can download test reports and comparison reports.
 ### Add phrases to the test set
 In a domain, there are several ways to add a phrase to the Model Tester’s test set:
 
-* Click **Import Test Set** and import a specified file.
+* Click **Import Test Set** and import a CSV file.
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ib_model_tester_addphrase4.png">
-    Use the format shown below in the import file. Use the first line to name the columns as shown; this line is ignored during the import.
-    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ib_model_tester_addphrase5.png">
+    Use the format shown below in the CSV file. Use the first line to name the columns as shown; this line is ignored during the import.
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_model_tester_addphrase5.png">
 * Click **Model Tester** in the upper-left corner, and enter the phrase manually on the **Test Set** tab.
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase1.png">
 * In **Test User Input** (where [single-phrase testing](intent-builder-testing-single-utterance-testing.html) is performed), click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
