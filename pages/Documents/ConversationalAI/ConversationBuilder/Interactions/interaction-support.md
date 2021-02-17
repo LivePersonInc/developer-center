@@ -101,6 +101,28 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Apple Pay integration | No |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
+### Instagram
+
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter | Yes |
+| Text statement | Yes |
+| Image statement | Yes |
+| Audio statement | No |
+| Video statement | No |
+| Apple rich link | No |
+| Multiple choice question | No |
+| Text question | No |
+| Structured question | No |
+| Button question | No |
+| Quick Reply question | Yes |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Apple Pay integration | No |
+| survey interactions (NPS, FCR, CSAT) | Yes |
+
 ### LINE
 
 | Interaction | Supported? |
@@ -188,6 +210,28 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Apple Pay integration | No |
 | survey interactions (NPS, FCR, CSAT) | Yes |
+
+### Twitter
+
+| Interaction | Supported? |
+| --- | --- |
+| Dialog Starter |  |
+| Text statement |  |
+| Image statement |  |
+| Audio statement |  |
+| Video statement |  |
+| Apple rich link |  |
+| Multiple choice question |  |
+| Text question |  |
+| Structured question |  |
+| Button question |  |
+| Quick Reply question |  |
+| List Picker question |  |
+| Time Picker question |  |
+| Integration |  |
+| Agent Transfer integration |  |
+| Apple Pay integration |  |
+| survey interactions (NPS, FCR, CSAT) |  |
 
 ### Web messaging
 
