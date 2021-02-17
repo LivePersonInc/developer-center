@@ -171,6 +171,9 @@ var acctId = botContext.getLPAccountId();
 
 The `getLPEngagementAttribute` function retrieves the specified LivePerson engagement attribute for the current conversation.
 
+{: .important}
+When calling engagement attributes, some time is required to retrieve the results. Therefore, LivePerson strongly recommends that you call this function in the Global Functions in the `initConversation` function, which runs immediately when the conversation begins. This is a best practice. If, instead, you're calling engagement attributes in the Pre-Process code of the Integration interaction, add an interaction delay of a couple of seconds to the interaction.
+
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
 | `getLPEngagementAttribute(arg)` | `sharkVisitorId` - The ID of the real-time visitor,<br>`sharkSessionId` - The ID of the session,<br>`sharkContextId` - Conversational Cloud's interactionContextId<br>`campaignId` - The ID of the campaign,<br>`engagementId` - The ID of the engagement,<br>`startTs` - The start time of the engagement,<br>`os` - The consumer's operating system,<br>`appId` - The ID of the app on the consumer's mobile device,<br>`brandId` - The ID of the brand,<br>`BearerToken` - The authentication credential,<br>`currentSkillId` - The ID of the current skill, or <br>`previousSkillId` - The ID of the previous skill<br>`rtSesssionId` - **Chat-specific**; the session ID for the chat engagement<br>`chatSessionKey` - **Chat-specific**; the unique key of the agent session (when the agent talks to the consumer) <br>`agentSessionId` - **Chat-specific**; the agent's login session ID (specific to the agent that's logged in, who can be talking to multiple consumers) | String |
