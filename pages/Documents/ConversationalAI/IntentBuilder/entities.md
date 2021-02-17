@@ -34,7 +34,7 @@ As their name suggests, Value Set entities are those that have a defined set of 
 * running
 * walking
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_entitiesValueSet.png">
+<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_entitiesValueSet.png">
 
 Whenever the user's utterance contains one of these entity values (e.g., "I'm interested in running"), the bot detects this, invokes the `SPORTS` entity, and substitutes it into the utterance before determining the consumer's intent. This means, when you add training phrases for the intent, instead of adding these...
 
@@ -112,6 +112,7 @@ You can see from the example below, that having 2 entities match the training ph
 3. In the upper-right corner, click **Add Entity**.
 4. Specify the following:
     * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
+    * **Description**: Enter a short phrase describing the entity. While this field is optional, it's often useful. Many entity names can be technical. A description adds clarity and is particularly helpful to a person not familiar with the domain.
     * **Entity Type**: Select "Value Set."
     * **Entity Values**: Enter each entity value.
 5. Click **Save**.
@@ -129,6 +130,7 @@ Regular Expression entities are available only in domains using the [LivePerson 
 3. In the upper-right corner, click **Add Entity**.
 4. Specify the following:
     * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
+    * **Description**: Enter a short phrase describing the entity. While this field is optional, it's often useful. Many entity names can be technical. A description adds clarity and is particularly helpful to a person not familiar with the domain.
     * **Entity Type**: Select "Regular Expression."
     * **Regular Expression**: Enter the regular expression. All standard [RegEx rules](https://www.regexlib.com/) apply.
     * **Sample Values**: Enter five (5) example values that conform to the regular expression. These values aren't used during entity detection; they're used during domain training to improve the model's performance with respect to intent matching. Within Intent Builder, the sample values also serve as easy-to-read examples of the regular expression, making the expression more understandable at a glance.
