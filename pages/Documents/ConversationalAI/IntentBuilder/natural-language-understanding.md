@@ -14,7 +14,7 @@ indicator: both
 
 One of the essential tools of Conversational AI is Natural Language Understanding (NLU). This is what allows Intent Builder to analyze consumer input and assign accurate intents.
 
-While LivePerson provides its own proprietary NLU out of the box, Intent Builder also allows you to choose your preferred NLU Engine for analyzing text by routing all NLU analysis and training through an API. This API layer of abstraction means you can choose from the following NLU engines:
+While LivePerson provides its own proprietary NLU out of the box, Intent Builder also allows you to choose your preferred NLU engine for analyzing text by routing all NLU analysis and training through an API. This API layer of abstraction means you can choose from the following NLU engines:
 
 - LivePerson's native NLU
 - Google Dialogflow
@@ -25,7 +25,8 @@ If you choose LivePerson's native NLU, no setup work needs to be done to connect
 
 ### Language support
 
-LivePerson NLU v1 supports intent detection for English and Spanish. LivePerson NLU v2 supports English only.
+LivePerson NLU supports English.<br>
+LivePerson NLU (Legacy) supports English and Spanish. 
 
 Available with IBM Watson:
 * Arabic
@@ -42,7 +43,6 @@ Available with IBM Watson:
 * Spanish (Mexico, Spain)
 
 Available with Google Dialogflow:
-
 * Chinese, Cantonese (Hong Kong)
 * Chinese, Simplified (China)
 * Chinese, Traditional (Taiwan)
@@ -68,19 +68,42 @@ Available with Google Dialogflow:
 
 ### LivePerson's NLU engine
 
-There are two versions of LivePerson's NLU engine: version 1 (v1) and version 2 (v2).
+There are two versions of LivePerson's NLU engine: 
+* LivePerson - formerly known as LivePerson NLU v2
+* LivePerson (Legacy) - formerly known as LivePerson NLU v1
 
-#### LivePerson NLU v1
+#### LivePerson
+
+This is LivePerson's high performing, scalable NLU engine. Key characteristics include:
+
+* A classifier model based on Convolutional Neural Network (CNN) using FastText embeddings.
+* Its primary feature is the enabling of a separate, brand-specific model, built and *trained* for each domain.
+* A scalable solution; capable of handling a large volume of requests; provides fast response times and accuracy.
+* To perform effectively, expects large sets of data (both intents and training phrases).
+* When you create a LivePerson domain and use it in Intent Analyzer or in Conversation Builder, the following is required:
+    * At least 20 training phrases per intent
+    * At least 5 intents in order to train  
+* Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
+* Makes available a [Model Tester](intent-builder-testing-advanced-model-testing.html).
+* Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
+* Can be used with [Intent Analyzer](intent-analyzer-overview.html).
+
+#### LivePerson (Legacy)
+
+This is LivePerson's legacy NLU engine. 
+
+{: .important}
+As of March 2, 2021, you can't create new domains using this engine. Additionally, existing domains using this engine should be migrated to the LivePerson engine before the June 2021 timeframe.
 
 Key characteristics include:
 
 * A recommender model based on Word Mover's Distance (WMD) algorithms. 
-* Considered an "entry level" NLU engine because it's more specific. In other words, for the v1 algorithm to work well, the sample sentences should be close to the expected user input and have only small differences in wording, for example:
+* Considered an "entry level" NLU engine because it's more specific. In other words, for the algorithm to work well, the sample sentences should be close to the expected user input and have only small differences in wording, for example:
 
     Expected user input: *I want to buy a brown Michael Kors bag*
     <br>Tailored sample sentence (with entities): *I want to buy COLOR PRODUCT_BRAND bag*
 
-    In contrast, NLU v2 is more generalized; it can handle a general set of user questions and still perform well. 
+    In contrast, the LivePerson NLU is more generalized; it can handle a general set of user questions and still perform well. 
 
 * From an NLU processing perspective, performs well regardless of the number of intents and training phrases involved. However, if you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
 * For performance reasons:
@@ -89,28 +112,8 @@ Key characteristics include:
 * Doesn't require the model to be trained, which can save time.
 * Doesn't support [prebuilt domains](intent-builder-overview.html#prebuilt-domains) or [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
 * Can't be used with [Intent Analyzer](intent-analyzer-overview.html).
-* Supports English or Spanish.
 
-#### LivePerson NLU v2
-
-Key characteristics include:
-
-* A classifier model based on Convolutional Neural Network (CNN) using Fasttext embeddings.
-* Its primary feature is the enabling of a separate brand-specific model, built and *trained* for each domain.
-* A scalable solution that can handle a greater volume of requests, providing faster response times and accuracy.
-* To perform effectively, expects large sets of data (both intents and training phrases).
-* When you create a domain with NLU v2 and use it in Intent Analyzer or in Conversation Builder, the following is required:
-    * At least 20 training phrases per intent
-    * At least 5 intents in order to train
-    
-    If your domain complies with these requirements, LivePerson recommends that you use LivePerson NLU v2 (not v1) if possible.   
-* Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
-* Makes available a [Model Tester](intent-builder-testing-advanced-model-testing.html).
-* Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
-* Can be used with [Intent Analyzer](intent-analyzer-overview.html).
-* Supports English.
-
-### Variances in matched intents with LivePerson NLU v2
+### Variances in matched intents with LivePerson NLU
 
 When using LivePerson tools ([Model Tester](intent-builder-testing-advanced-model-testing.html), [Single Utterance Tester](intent-builder-testing-single-utterance-testing.html)) to improve intent classification results, on occasion you might notice a small number of changes in the matched intents for the test set/test phrase after retraining with no additional training samples. There are a number of contributing factors for this observed variance. Some factors are the by-product of the training algorithm, while others can be tackled by changes to the taxonomy of intents or to the training phrases.
 
