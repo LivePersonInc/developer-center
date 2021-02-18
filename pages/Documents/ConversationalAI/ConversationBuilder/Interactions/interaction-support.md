@@ -112,13 +112,13 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Video statement | No |
 | Apple rich link | No |
 | Multiple choice question | No |
-| Text question | No |
+| Text question | Yes |
 | Structured question | No |
 | Button question | No |
 | Quick Reply question | Yes |
 | List Picker question | No |
 | Time Picker question | No |
-| Integration | Yes |
+| Integration | No |
 | Agent Transfer integration | Yes |
 | Apple Pay integration | No |
 | survey interactions (NPS, FCR, CSAT) | Yes |
