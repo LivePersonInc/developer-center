@@ -33,7 +33,7 @@ Take care when writing JavaScript for global functions. Errors might not be thro
 ### Global Helper Functions dialog template
 LivePerson offers a Global Helper Functions dialog template that aggregates and makes available many capabilities using global functions. You can import this template into your bot to “add in” the global functions that are included.
 
-<img class="fancyimage" width="800" src="img/ConvoBuilder/gf_dialogtemplate.png">
+<img class="fancyimage" width="600" src="img/ConvoBuilder/gf_dialogtemplate.png">
 
 The helper global functions are based on years of experience with bot building, and they’re designed to speed up and simplify your bot code. There are a numerous global functions defined based on commonly used botContext scripting functions, for example:
 
