@@ -211,7 +211,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Apple Pay integration | No |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
-### Twitter
+### Twitter Direct Messages
 
 | Interaction | Supported? |
 | --- | --- |

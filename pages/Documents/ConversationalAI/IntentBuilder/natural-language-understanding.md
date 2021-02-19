@@ -93,7 +93,7 @@ This is LivePerson's high performing, scalable NLU engine. Key characteristics i
 This is LivePerson's legacy NLU engine. 
 
 {: .important}
-As of March 2, 2021, you can't create new domains using this engine. Additionally, brands with existing domains using this engine are encouraged to migrated to the LivePerson engine as soon as possible.
+As of March 2, 2021, you can't create new domains using the LivePerson (Legacy) engine. Additionally, brands with existing domains using this engine are encouraged to migrated to the LivePerson engine as soon as possible.
 
 Key characteristics include:
 
