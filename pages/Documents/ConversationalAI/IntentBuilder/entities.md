@@ -70,7 +70,7 @@ Continuing our `ORDER_NO` example, you might use the entity in the training phra
 * "What's the status of order `ORDER_NO`"
 
 {: .important}
-Regular Expression entities are available only in domains using the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2).
+Regular Expression entities are available only in domains using the [LivePerson engine](intent-builder-natural-language-understanding.html#livepersons-nlu-engine) for NLU.
 
 #### Built-in entities
 
@@ -94,9 +94,9 @@ The platform automatically detects the entities listed below:
 
 Using the [Assist](conversation-builder-assist.html) tool, you can assign these built-in entities to user interactions and have the bot populate a [slot](conversation-builder-conversation-builder-variables-slots.html#slots) with the user's input to the question to which the entity was assigned.
 
-### How entities affect the NLU score (LivePerson NLU v1 only)
+### How entities affect the NLU score - LivePerson (Legacy) engine only
 
-When using the LivePerson NLU v1 engine, the more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
+When using the LivePerson (Legacy) engine, the more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
 
 You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.
 
@@ -116,12 +116,12 @@ You can see from the example below, that having 2 entities match the training ph
     * **Entity Type**: Select "Value Set."
     * **Entity Values**: Enter each entity value.
 5. Click **Save**.
-6. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the addition is reflected in a new model version.
+6. Train the domain so that the addition is reflected in a new model version.
 
 ### Add a Regular Expression entity
 
 {: .important}
-Regular Expression entities are available only in domains using the [LivePerson NLU v2 engine](intent-builder-natural-language-understanding.html#liveperson-nlu-v2).
+Regular Expression entities are available only in domains using the [LivePerson engine](intent-builder-natural-language-understanding.html#livepersons-nlu-engine) for NLU.
 
 **To add a Regular Expression entity**
 
@@ -205,4 +205,4 @@ Before you delete an entity, ensure that it isn't being used in any intents or K
 3. In the left panel, select the entity.
 4. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
 5. In the confirmation dialog, click **Yes**.
-6. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the deletion is reflected in a new model version.
+6. Train the domain so that the deletion is reflected in a new model version.

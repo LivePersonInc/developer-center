@@ -53,14 +53,14 @@ When you [add an internal knowledge base](knowledge-base-internal-knowledge-base
 
 #### Choosing between Domain intents and Knowledge Base intents
 
-With Domain intents, you can use any of the following [NLU engines](intent-builder-natural-language-understanding.html) for intent matching:
-* LivePerson NLU v1
-* LivePerson NLU v2
+With Domain intents, you can be using any of the following [NLU engines](intent-builder-natural-language-understanding.html) for intent matching:
+* LivePerson
+* LivePerson (Legacy)
 * A third-party NLU engine 
 
-Domain intents make it possible for you to use the same domain in multiple ways: in knowledge bases, bots, or other features like [Intent Analyzer](intent-analyzer-overview.html).
+Domain intents make it possible for you to use the same domain in multiple ways, i.e., in knowledge bases, bots, or other features like [Intent Analyzer](intent-analyzer-overview.html).
 
-Knowledge Base intents are a *legacy feature* that uses the LivePerson NLU v1 engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
+Knowledge Base intents are a *legacy feature* that uses the LivePerson (Legacy) engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
 
 ### Languages
 

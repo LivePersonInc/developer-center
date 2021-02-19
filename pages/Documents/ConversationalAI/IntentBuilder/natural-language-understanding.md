@@ -25,8 +25,8 @@ If you choose LivePerson's native NLU, no setup work needs to be done to connect
 
 ### Language support
 
-LivePerson NLU supports English.<br>
-LivePerson NLU (Legacy) supports English and Spanish. 
+The LivePerson engine supports English.<br>
+The LivePerson (Legacy) engine supports English and Spanish. 
 
 Available with IBM Watson:
 * Arabic
@@ -69,8 +69,8 @@ Available with Google Dialogflow:
 ### LivePerson's NLU engine
 
 There are two versions of LivePerson's NLU engine: 
-* LivePerson - formerly known as LivePerson NLU v2
-* LivePerson (Legacy) - formerly known as LivePerson NLU v1
+* **LivePerson**: Formerly known as LivePerson NLU v2
+* **LivePerson (Legacy)**: Formerly known as LivePerson NLU v1
 
 #### LivePerson
 

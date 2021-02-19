@@ -121,7 +121,7 @@ When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to 
 | --- | --- |
 | an external knowledge base with LivePerson AI | the scoring breakdown for the NLU engine used by the associated domain is used |
 | an internal knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
-| an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson NLU v1 is used |
+| an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson (Legacy) is used |
 
 For these confidence score breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
 

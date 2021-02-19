@@ -53,7 +53,7 @@ A "prebuilt domain" is a ready-made, pretrained domain that includes a set of we
 Once you [add a prebuilt domain](intent-builder-domains.html#add-a-prebuilt-domain), you can customize the domain as you see fit. If you later decide that you don't want to use your customizations, you can also [overwrite your domain](intent-builder-domains.html#overwrite-from-a-prebuilt-domain) to reflect the prebuilt domain that's offered by LivePerson.
 
 {: .important}
-Domains added from prebuilt domains use the [LP NLU v2 engine](intent-builder-natural-language-understanding.html#livepersons-nlu-engine).
+Domains added from prebuilt domains use the [LivePerson NLU engine](intent-builder-natural-language-understanding.html#livepersons-nlu-engine).
 
 #### Training
 
@@ -63,8 +63,8 @@ In contrast, domains that use the LivePerson (Legacy) engine aren’t trained, a
 
 ### High-level workflow
 
-<img style="width:725px" src="img/ConvoBuilder/ib_highLevelWorkflow2.png">
+Use this high-level workflow when working with a domain using the LivePerson engine or a third-party engine.
 
-There are some iterative steps in each workflow.
+<img style="width:725px" src="img/ConvoBuilder/ib_highLevelWorkflow2.png">
 
 If the domain is using a 3rd-party NLU engine, you'll need to [connect the NLU engine](intent-builder-natural-language-understanding.html#connect-a-3rd-party-nlu-engine) before you train.

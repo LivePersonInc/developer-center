@@ -23,7 +23,7 @@ Starting on October 18, 2020, the number of articles that can be added to an int
 
 - If you have a knowledge base that exceeds 75-100 articles, consider splitting the knowledge base into smaller ones based on category, likewise splitting the intents into domains based on category, and adding multiple knowledge base integrations. Then have the NLU match the consumer’s question to the category-based intent and search the applicable knowledge base. This yields a faster response during the conversation.
 
-    If you have a knowledge base that exceeds 75-100 articles, also consider using domain intents, and, for the domain, use LivePerson NLU v2, which has better performance with large sets of data.
+    If you have a knowledge base that exceeds 75-100 articles, also consider using domain intents, and, for the domain, use the LivePerson engine, which has better performance with large sets of data.
 
 ### Titles, intent qualifiers, and training phrases
 
@@ -46,6 +46,10 @@ If you need to use a long piece of text, you can use the [breakWithDelay](conver
 
 ### Positive and negative learnings
 
-Positive and negative learnings play a role in intent detection regardless of whether you're using knowledge base intents or domain intents. When using knowledge base intents or when using domain intents with LivePerson NLU v1, positive and negative learnings are applied during processing of user inputs. When using domain intents with LivePerson NLU v2 or a 3rd-party NLU engine, the positive learnings are applied (added) to the training phrases when the model is trained, and the negative learnings are applied during processing of user inputs.
+Positive and negative learnings play a role in intent detection regardless of whether you're using domain intents or knowledge base intents.
+
+When using domain intents with the LivePerson engine or a 3rd-party NLU engine, the positive learnings are applied (added) to the training phrases when the model is trained, and the negative learnings are applied during processing of user inputs.
+
+When using knowledge base intents or when using domain intents with LivePerson (Legacy) engine, positive and negative learnings are applied during processing of user inputs.
 
 As a general rule, don’t specify more than 20 positive learnings and 20 negative learnings. Too many positive and negative learnings can lead to learnings that “overlap” one another in terms of grammar. This results in an unpredictable user experience.

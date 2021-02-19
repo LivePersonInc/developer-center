@@ -12,7 +12,7 @@ indicator: both
 
 ### Overview
 
-If your domain is using the LivePerson NLU v2 engine or a 3rd-party NLU engine, there's an advanced Model Tester that's available.
+If your domain is using the LivePerson engine or a 3rd-party NLU engine, there's an advanced Model Tester that's available.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester.png">
 
@@ -125,7 +125,7 @@ There are several, important metrics displayed:
 ### Evaluate the report
 
 {: .important}
-On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-builder-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu-v2).
+On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-builder-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu).
 
 If the report's scores are low, take corrective action as follows:
 
