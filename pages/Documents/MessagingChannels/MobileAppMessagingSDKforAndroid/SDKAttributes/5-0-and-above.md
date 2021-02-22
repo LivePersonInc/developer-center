@@ -707,7 +707,9 @@ In activity mode - Also the color of android:windowBackground.
 
 
 #### conversation_background (image)
-Sets the conversation background image (applicable on Activity mode only).
+Sets the conversation background image.
+
+If using Fragment mode, the minimum SDK version supports this configuration is v5.5.0.
 
 **Type:** drawable
 
@@ -1822,7 +1824,7 @@ Available options:
 3. FirstUnreadMessage
 
 #### lp_scroll_when_foreground
-Configures the scroll behavior when bring conversaton screen to foreground from background.
+Configures the scroll behavior when bring conversation screen to foreground from background.
 
 - **Type:** string
 - **Default value:** LastPosition
@@ -1833,7 +1835,7 @@ Available options:
 3. FirstUnreadMessage
 
 #### lp_scroll_when_push_notification
-Configures the scroll behavior when open conversaton screen by tapping on push notification.
+Configures the scroll behavior when open conversation screen by tapping on push notification.
 
 - **Type:** string
 - **Default value:** Bottom
@@ -3153,6 +3155,9 @@ Defines whether to disable the TTR snackbar popup (true=disable) false by defaul
 * **Type:** bool
 * **Default value:** false
 
+{:.important}
+When the auto messages feature is enabled, TTR notifications do not display when the auto messages featuer is enabled, regardless of the value set for this attribute.
+
 #### show_timestamp_in_ttr_notification
 When true the TTR snackbar will display the time until the agent responds. If set to false, a general message is displayed.
 
@@ -4438,6 +4443,30 @@ Action mode background color.
 
 * **Type:** color
 * **Default value:** @color/lp_textColorSecondary
+
+---
+
+### Proactive and IVR Deflection to App Messaging
+
+#### show_outbound_in_app_message
+- This configuration allows brands that want to display the outbound message in the in-app conversation interface to consumers even after they discard or ignore the message notification.
+- In case the consumer did not tap on the push notification to navigate to the in-app conversation, this configuration can be set to true if the brand wants to display the outbound message to the consumer even in the case that the look back period has expired. If set to false, the outbound message will not be displayed to consumers once they navigate to the in-app conversation screen from the app.
+
+#### PushUnregisterType
+Brands can choose either of the following configurations to unregister user from pusher:
+
+```java
+enum class PushUnregisterType {
+    NONE,
+    ALL,
+    AGENT
+}
+```
+_NONE:_ Do not unregister from pusher at all. Consumer will receive push notifications from both agent as well as outbound notification.
+
+_ALL (Default):_ Unregister/remove consumer from pusher. No push notifications will be sent if the consumer is logged out.
+
+_AGENT:_ Unregister only for agent push notification messages. Consumers will still receive outbound push notifications sent from the Proactive or Connect to Messaging (IVR) services.
 
 ---
 

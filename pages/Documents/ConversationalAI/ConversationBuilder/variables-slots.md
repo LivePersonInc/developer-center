@@ -122,6 +122,14 @@ There are three options for the duration:
 
 If you need to store data for the long term, use the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
 
-### Displaying data to the consumer
+### Using variables and slots in interactions
 
-[See here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions) for how to display variables and slots in interactions.
+`{}` is used for inserting dynamic values inside of interactions:
+
+  * Bot variable: `{$botContext.botVariableName}`
+
+  * Slot: `{$botContext.slot.slotName}`
+
+  * [Environment variable](conversation-builder-environment-variables.html): `{$env.envVariableName}`
+
+  * API integration [custom data field](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields): `{apiName.variableName}`

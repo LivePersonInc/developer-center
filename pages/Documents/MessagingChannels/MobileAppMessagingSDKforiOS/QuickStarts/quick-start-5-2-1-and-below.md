@@ -173,41 +173,41 @@ class DocumentationViewController: UIViewController {
         }
 
         //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+        
         /*
          Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
          */
-         let authenticationParams = LPAuthenticationParams(authenticationCode: nil,
-         jwt: jwt,
-         redirectURI: nil,
-         certPinningPublicKeys: nil,
-         authenticationType: .authenticated)
          
-        let welcomeMessageParam = LPWelcomeMessage(message: "How can i help you today?", frequency: .FirstTimeConversation)
+         let authenticationParams = LPAuthenticationParams(authenticationCode: nil,
+                                                                          jwt: jwt,
+                                                                  redirectURI: nil,
+                                                        certPinningPublicKeys: nil,
+                                                           authenticationType: .authenticated)
+         
+        let welcomeMessageParam = LPWelcomeMessage(message: "How can i help you today?", 
+                                                 frequency: .FirstTimeConversation)
         
         let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
         
         let controlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none,
-        historyConversationsMaxDays: -1,
-        historyMaxDaysType: .startConversationDate)
+                                                                    historyConversationsMaxDays: -1,
+                                                                             historyMaxDaysType: .startConversationDate)
         
         let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
-        containerViewController: nil,
-        isViewOnly: false,
-        conversationHistoryControlParam: controlParam,
-        welcomeMessage: welcomeMessageParam)
+                                                        containerViewController: nil,
+                                                                     isViewOnly: false,
+                                                conversationHistoryControlParam: controlParam,
+                                                                 welcomeMessage: welcomeMessageParam)
         
         LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
     }
 
     // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
-    /*
-     The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
-     */
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
+        
+    deinit {
+        let conversationQuery = LPMessaging.instance.getConversationBrandQuery(accountID)
         if (conversationQuery.getBrandID() == accountID) {
-            LPMessagingSDK.instance.removeConversation(conversationQuery)
+            LPMessaging.instance.removeConversation(conversationQuery)
         }
     }
 }
@@ -223,73 +223,68 @@ class DocumentationViewController: UIViewController {
 
 @implementation DocumentationViewController
 
-// MARK: - Setup Account information.
+    // MARK: - Setup Account information.
+    
+    /// Account ID is your site ID for your Conversational Cloud Account.
+    NSString * const accountID = @"14800077";
+    
+    /// Unique JSON Web Token used for authentication of the consumer.  Enter unique JWT here.
+    NSString * const jwt = @"eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdGFydF91c2VyIiwgICJpc3MiOiAiaHR0cHM6Ly9MUC1BdXRoLmNvbSIsICAiZXhwIjoxNTg0Njc0MDc3LCAgImlhdCI6MTU1MzExNjQ3N30.tFtanIwh8SrmJWM5iSUxmj7WaroA_WCtZfTS4KN9N8Q0Vy0O5rRdb7T7ZkFJxnGfwg0fsKfBuM3qTD8NHWNOKqaZX_bQKXQ-cnJHa4DtJX9Udv0MGfg_UHO0DBg5vaC_38beUlSaUPQ0rQAHb9sm0PE1tNOMfLzvPqM1kF3VMBq1dZNpNkDYaV8oleEcm0v8woRj45FYOv34etrgSsf0Pi-68AP8ckG3WJzS_y9dpZAxW3oDIv_XXHZ4TXQw_wPwMKu0UtZoMfctz-5ERk7uTQxeWP6TS9ce2YQ38FqUwIBN3ImAhA3vE2gLsYexFsPiO_I3hSEC272Ya-b-eJZ8vg";
 
-/// Account ID is your site ID for your Conversational Cloud Account.
-NSString * const accountID = @"14800077";
-
-/// Unique JSON Web Token used for authentication of the consumer.  Enter unique JWT here.
-NSString * const jwt = @"eyJhbGciOiJSUzI1NiJ9.eyAgInN1YiI6ICJwdWJsaWNfcXVpY2tzdGFydF91c2VyIiwgICJpc3MiOiAiaHR0cHM6Ly9MUC1BdXRoLmNvbSIsICAiZXhwIjoxNTg0Njc0MDc3LCAgImlhdCI6MTU1MzExNjQ3N30.tFtanIwh8SrmJWM5iSUxmj7WaroA_WCtZfTS4KN9N8Q0Vy0O5rRdb7T7ZkFJxnGfwg0fsKfBuM3qTD8NHWNOKqaZX_bQKXQ-cnJHa4DtJX9Udv0MGfg_UHO0DBg5vaC_38beUlSaUPQ0rQAHb9sm0PE1tNOMfLzvPqM1kF3VMBq1dZNpNkDYaV8oleEcm0v8woRj45FYOv34etrgSsf0Pi-68AP8ckG3WJzS_y9dpZAxW3oDIv_XXHZ4TXQw_wPwMKu0UtZoMfctz-5ERk7uTQxeWP6TS9ce2YQ38FqUwIBN3ImAhA3vE2gLsYexFsPiO_I3hSEC272Ya-b-eJZ8vg";
-
-- (void)viewDidLoad {
-   [super viewDidLoad];
-
-    // MARK: - Setup instance of LPMessagingSDK
-
-    /*
-     Add the following code initializing the SDK instance. You will need to provide your account number as a NSString. We have provided an example to use for the quickstart process in the 'accountID' constant above.
-     */
-
-    NSError *error = nil;
-    [[LPMessagingSDK instance] initialize:accountID
-                     monitoringInitParams:nil
-                                    error:&error];
-
-    //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
-    /*
-     Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
-     */
-
-
-LPAuthenticationParams *authenticationParams = [[LPAuthenticationParams alloc] initWithAuthenticationCode:nil
-jwt:jwt
-redirectURI:nil
-certPinningPublicKeys:nil
-authenticationType:LPAuthenticationTypeAuthenticated];
-
-    id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessagingSDK instance] getConversationBrandQuery:accountID
-                                                                                                       campaignInfo:nil];
-                                                                                    LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may i help you today?"
-                                                                                                       frequency:MessageFrequencyFirstTimeConversation];
-                                                                                  
-                                                                                  LPConversationHistoryControlParam * controlParam = [[LPConversationHistoryControlParam alloc] initWithHistoryConversationsStateToDisplay: LPConversationsHistoryStateToDisplayNone
-                                                                                  historyConversationsMaxDays:-1
-                                                                                  historyMaxDaysType:LPConversationHistoryMaxDaysDateTypeStartConversationDate];
-                                                                                  
-LPConversationViewParams *conversationViewParams = [[LPConversationViewParams alloc]                    initWithConversationQuery:conversationQuery
-        containerViewController:self.conversationViewController
-        isViewOnly:NO
-        conversationHistoryControlParam:controlParam
-        welcomeMessage: welcomeMessageParam];
-
-    [[LPMessagingSDK instance] showConversation:conversationViewParams
-                           authenticationParams:authenticationParams];
-}
-
-// MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
-/*
- The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
- */
-- (void) viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-
-    id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessagingSDK instance] getConversationBrandQuery:accountID
-                                                                                                       campaignInfo:nil];
-
-    if ([[conversationQuery getBrandID] isEqualToString:accountID]) {
-        [[LPMessagingSDK instance] removeConversation:conversationQuery];
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+    
+        #pragma mark - Setup instance of LPMessagingSDK
+    
+        /*
+         Add the following code initializing the SDK instance. You will need to provide your account number as a NSString. We have provided an example to use for the quickstart process in the 'accountID' constant above.
+         */
+    
+        NSError *error = nil;
+        [[LPMessagingSDK instance] initialize: accountID
+                         monitoringInitParams: nil
+                                        error: &error];
+    
+        //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+        /*
+         Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would use either a jwt or an authentication code from your authentication server below in the LPAuthenticationParams object. We have provide you one here as an example.  The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+         */
+    
+    
+        LPAuthenticationParams *authenticationParams = [[LPAuthenticationParams alloc] initWithAuthenticationCode: nil
+                                                                                                              jwt: jwt
+                                                                                                      redirectURI: nil
+                                                                                            certPinningPublicKeys: nil
+                                                                                               authenticationType: LPAuthenticationTypeAuthenticated];
+    
+        id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessagingSDK instance] getConversationBrandQuery:accountID
+                                                                                                           campaignInfo:nil];
+        LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may i help you today?"
+                                                                                 frequency:MessageFrequencyFirstTimeConversation];
+      
+        LPConversationHistoryControlParam * controlParam = [[LPConversationHistoryControlParam alloc] initWithHistoryConversationsStateToDisplay: LPConversationsHistoryStateToDisplayNone
+                                                                                                                     historyConversationsMaxDays: -1
+                                                                                                                              historyMaxDaysType: LPConversationHistoryMaxDaysDateTypeStartConversationDate];
+                                                                                      
+        LPConversationViewParams *conversationViewParams = [[LPConversationViewParams alloc] initWithConversationQuery: conversationQuery
+                                                                                               containerViewController: self.conversationViewController
+                                                                                                            isViewOnly: NO
+                                                                                       conversationHistoryControlParam: controlParam
+                                                                                                        welcomeMessage: welcomeMessageParam];
+    
+        [[LPMessagingSDK instance] showConversation:conversationViewParams
+                               authenticationParams:authenticationParams];
     }
-}
+
+    #pragma mark - Release LPMessagingSDK view stack when client app is backgrounded or suspended
+    - (void) dealloc {
+        id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessaging instance] getConversationBrandQuery:accountID
+                                                                                                        campaignInfo:nil];
+        
+        if ([[conversationQuery getBrandID] isEqualToString:accountID]) {
+            [[LPMessaging instance] removeConversation:conversationQuery];
+        }
+    }
 @end
 ```
 
@@ -312,45 +307,47 @@ class DocumentationViewController: UIViewController {
     let appInstallID: String = "62b50381-4532-42a9-98dd-2045975ce5d3"
 
     override func viewDidLoad() {
-    super.viewDidLoad()
-    /// Create the following monitoring parameters object.  This object will take in the appInstallID described above.
-    let monitoringInitParams: LPMonitoringInitParams? = LPMonitoringInitParams(appInstallID: appInstallID)
-
-    // MARK: - Setup instance of LPMessagingSDK
-
-    /*
-    Add the following code initializing the SDK instance. You will need to provide your account number as a String and the above created monitoring parameters. We have provided an example to use for the quickstart process in the 'accountID' and monitoringInitParams constant.
-    */
-    do {
-    try LPMessagingSDK.instance.initialize(accountID, monitoringInitParams: monitoringInitParams)
-    } catch {
-    fatalError("Was unable to initialize LPMessagingSDK for account \(accountID)")
-    }
-
-    //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
-
-    /*
-    Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
-    */
-    let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
-    let historyControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none, historyConversationsMaxDays: -1, historyMaxDaysType: .startConversationDate)
-    let welcomeMessage = LPWelcomeMessage(message: "Hello, how may I help you?", frequency: .FirstTimeConversation)
-    let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
-    containerViewController: nil, isViewOnly: false, conversationHistoryControlParam: historyControlParam, welcomeMessage: welcomeMessage)
-    LPMessagingSDK.instance.showConversation(conversationViewParams)
+        super.viewDidLoad()
+        /// Create the following monitoring parameters object.  This object will take in the appInstallID described above.
+        let monitoringInitParams: LPMonitoringInitParams? = LPMonitoringInitParams(appInstallID: appInstallID)
+    
+        // MARK: - Setup instance of LPMessagingSDK
+    
+        /*
+        Add the following code initializing the SDK instance. You will need to provide your account number as a String and the above created monitoring parameters. We have provided an example to use for the quickstart process in the 'accountID' and monitoringInitParams constant.
+        */
+        do {
+            try LPMessagingSDK.instance.initialize(accountID, monitoringInitParams: monitoringInitParams)
+        } catch {
+            fatalError("Was unable to initialize LPMessagingSDK for account \(accountID)")
+        }
+    
+        //MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
+    
+        /*
+        Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+        */
+        let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
+        let historyControlParam = LPConversationHistoryControlParam(historyConversationsStateToDisplay: .none, 
+                                                                           historyConversationsMaxDays: -1, 
+                                                                                    historyMaxDaysType: .startConversationDate)
+        let welcomeMessage = LPWelcomeMessage(message: "Hello, how may I help you?", 
+                                            frequency: .FirstTimeConversation)
+        let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
+                                                        containerViewController: nil, 
+                                                                     isViewOnly: false, 
+                                                conversationHistoryControlParam: historyControlParam, 
+                                                                 welcomeMessage: welcomeMessage)
+        LPMessagingSDK.instance.showConversation(conversationViewParams)
     }
 
     // MARK: - Release LPMessagingSDK view stack when client app is backgrounded or suspended
-
-    /*
-    The LPMessagingSDK view stack must be removed and deallocated when the presenting app is backgrounded or suspended.  Foregrounding the application adds an instance of the view stack.
-    */
-    override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountID)
-    if (conversationQuery.getBrandID() == accountID) {
-        LPMessagingSDK.instance.removeConversation(conversationQuery)
-    }
+        
+    deinit {
+        let conversationQuery = LPMessaging.instance.getConversationBrandQuery(accountID)
+        if (conversationQuery.getBrandID() == accountID) {
+            LPMessaging.instance.removeConversation(conversationQuery)
+        }
     }
 }
 ```
@@ -364,53 +361,67 @@ class DocumentationViewController: UIViewController {
 
 @implementation DocumentationViewController
 
-// MARK: - Setup Account information.
+    #pragma mark  - Setup Account information.
+    
+    /// Account ID is your site ID for your Conversational Cloud Account.
+    NSString * const accountID = @"77690044";
+    
+    /// appIntallID is a Application identifier generated by Conversational Cloud for Monitoring API.
+    NSString * const appInstallID = @"62b50381-4532-42a9-98dd-2045975ce5d3";
+    
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        
+        #pragma mark Setup instance of LPMessagingSDK
+        
+        /// Create the following monitoring parameters object.  This object will take in the appInstallID described above.
+        LPMonitoringInitParams * monitoringInitParams = [[LPMonitoringInitParams alloc] initWithAppInstallID:accountID];
+        
+        /*
+        Add the following code initializing the SDK instance. You will need to provide your account number as a String and the above created monitoring parameters. We have provided an example to use for the quickstart process in the 'accountID' and monitoringInitParams constant.
+        */
+        
+        NSError *error = nil;
+        [[LPMessagingSDK instance] initialize:accountID
+                         monitoringInitParams:monitoringInitParams
+                                        error:&error];
+        
+        #pragma mark - Show LPMessagingSDK View Stack and Conversation View Controller.
+    
+        /*
+        Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
+        */
+        
+        LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may i help you today?"
+                                                                                 frequency:MessageFrequencyFirstTimeConversation];
+        
+        LPConversationHistoryControlParam * controlParam = [[LPConversationHistoryControlParam alloc] initWithHistoryConversationsStateToDisplay: LPConversationsHistoryStateToDisplayNone
+                                                                                                                     historyConversationsMaxDays:-1
+                                                                                                                              historyMaxDaysType:LPConversationHistoryMaxDaysDateTypeStartConversationDate];
+        
+        
+        id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessagingSDK instance] getConversationBrandQuery:accountID
+                                                                                                           campaignInfo:nil];
+        
+        
+        LPConversationViewParams *conversationViewParams = [[LPConversationViewParams alloc] initWithConversationQuery: conversationQuery 
+                                                                                               containerViewController: nil 
+                                                                                                            isViewOnly: false 
+                                                                                       conversationHistoryControlParam: controlParam welcomeMessage:welcomeMessageParam];
+        
+        [[LPMessagingSDK instance] showConversation:conversationViewParams
+                               authenticationParams:nil];
+    }
 
-/// Account ID is your site ID for your Conversational Cloud Account.
-NSString * const accountID = @"77690044";
-
-/// appIntallID is a Application identifier generated by Conversational Cloud for Monitoring API.
-NSString * const appInstallID = @"62b50381-4532-42a9-98dd-2045975ce5d3";
-
-- (void)viewDidLoad {
-[super viewDidLoad];
-
-// MARK: - Setup instance of LPMessagingSDK
-
-/// Create the following monitoring parameters object.  This object will take in the appInstallID described above.
-LPMonitoringInitParams * monitoringInitParams = [[LPMonitoringInitParams alloc] initWithAppInstallID:accountID];
-
-/*
-Add the following code initializing the SDK instance. You will need to provide your account number as a String and the above created monitoring parameters. We have provided an example to use for the quickstart process in the 'accountID' and monitoringInitParams constant.
-*/
-
-NSError *error = nil;
-[[LPMessagingSDK instance] initialize:accountID
-monitoringInitParams:monitoringInitParams
-error:&error];
-
-//MARK: - Show LPMessagingSDK View Stack and Conversation View Controller.
-/*
-Here your view controller will call our showConversation method provided by the LPMessagingSDK instance.  This will push on a new navigation stack containing the Conversation View Controller.  You would not need to authenticate as the LPMessagingSDK instance already has knowledge about your account from the monitoring information provided above. The Conversational Cloud console site attached to this account only has a basic set of features available to demonstrate the Conversational Commerce experience.
-*/
-
-LPWelcomeMessage * welcomeMessageParam = [[LPWelcomeMessage alloc] initWithMessage:@"How may i help you today?"
-frequency:MessageFrequencyFirstTimeConversation];
-
-LPConversationHistoryControlParam * controlParam = [[LPConversationHistoryControlParam alloc] initWithHistoryConversationsStateToDisplay: LPConversationsHistoryStateToDisplayNone
-historyConversationsMaxDays:-1
-historyMaxDaysType:LPConversationHistoryMaxDaysDateTypeStartConversationDate];
-
-
-id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessagingSDK instance] getConversationBrandQuery:accountID
-campaignInfo:nil];
-
-
-LPConversationViewParams *conversationViewParams = [[LPConversationViewParams alloc] initWithConversationQuery:conversationQuery containerViewController:nil isViewOnly:false conversationHistoryControlParam:controlParam welcomeMessage:welcomeMessageParam];
-
-[[LPMessagingSDK instance] showConversation:conversationViewParams
-authenticationParams:nil];
-}
+    #pragma mark - Release LPMessagingSDK view stack when client app is backgrounded or suspended
+    - (void) dealloc {
+        id<ConversationParamProtocol> _Nonnull conversationQuery = [[LPMessaging instance] getConversationBrandQuery:accountID
+                                                                                                        campaignInfo:nil];
+        
+        if ([[conversationQuery getBrandID] isEqualToString:accountID]) {
+            [[LPMessaging instance] removeConversation:conversationQuery];
+        }
+    }
 @end
 ```
 

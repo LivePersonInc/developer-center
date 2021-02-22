@@ -15,7 +15,7 @@ Use the following built-in functions to log events and print debug messages.
 
 ### Log custom event
 
-Used for tracking specific bot events for the purposes of analytics. This function requires some type of user message and event name. The event detail is optional. In the example, we are setting the user message to the currentUserMessage and naming the event “Invoice API”.
+`logCustomEvent` is used for tracking specific bot events for the purposes of analytics. This function requires some type of user message and event name. The event detail is optional. In the example, we are setting the user message to the currentUserMessage and naming the event “Invoice API”.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -32,7 +32,7 @@ For a step-by-step, example guide on implementing custom event logging, see [her
 
 ### Log escalation event
 
-Used to count the number of times the user called a particular escalation type. The function requries a user input and the string 'LivePerson' for the type of escalation.
+`logEscalationEvent` is used to count the number of times the user called a particular escalation type. The function requries a user input and the string 'LivePerson' for the type of escalation.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -46,7 +46,7 @@ botContext.logEscalationEvent(botContext.getCurrentUserMessage(), 'LivePerson');
 
 ### Print debug message
 
-Print Debug Message is used to log debug messages to the console. For example, in the code example below, the `response` variable stores the most recent message from the consumer, which we print to the console using `printDebugMessage`.
+`printDebugMessage` is used to log debug messages to the console. For example, in the code example below, the `response` variable stores the most recent message from the consumer, which we print to the console using `printDebugMessage`.
 
 Using Print Debug Message to display messages or values from within your JavaScript is an extremely helpful way of validating your code at various points in the flow. You can print debug messages until you're confident that the implementation is working as you expect.
 

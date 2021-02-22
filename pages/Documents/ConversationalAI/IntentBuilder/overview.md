@@ -13,7 +13,7 @@ indicator: both
 {: .important}
 Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
 
-The Conversation Builder platform's Intent Builder allows you to build multiple intent domains that can each hold one or many intents and entities. Most brands will find that one domain can handle all their intents, but sometimes breaking them up is necessary or desirable. For example, having a Main intent domain and a Small Talk intent domain is very common.
+The Conversation Builder platform's Intent Builder allows you to build multiple intent [domains](#domains_definition) that can each hold one or many intents and entities. Most brands will find that one domain can handle all their intents, but sometimes breaking them up is necessary or desirable. For example, having a Main intent domain and a Small Talk intent domain is very common.
 
 Intents direct a bot to be more flexible and respond to a wider variety of user input. Instead of looking for specific patterns in the input (for example, the pattern "bill"), the bot uses a Natural Language Understanding (NLU) engine to look for a defined intent. Then the bot triggers the dialog that's configured to respond to the intent. Therefore, once you configure your intents with robust *training phrases*, expressions like, "I have a question about billing", "Looking to check my account," or "What's my billing status?" yield the same intent and, thus, the same response from the bot.
 
@@ -31,7 +31,7 @@ See [here](intent-builder-natural-language-understanding.html) to learn more abo
 
 ### High-level concepts
 
-#### Domains
+####  <a name="domains_definition"></a> Domains
 
 The following are key characteristics of a domain:
 
