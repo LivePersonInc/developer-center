@@ -168,7 +168,18 @@ Before you train, ensure the domain has at least 5 intents. For each intent, ens
 
 ### Convert a LivePerson (Legacy) domain to LivePerson
 
+{: .important}
+Brands with existing domains using the LivePerson (Legacy) engine are encouraged to convert the domain to the LivePerson engine as soon as possible. See [here](intent-builder-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy) for the many benefits of LivePerson over LivePerson (Legacy).
 
+**To convert a LivePerson (Legacy) domain to the LivePerson engine**
+
+1. Download the domain that uses the LivePerson (Legacy) engine.
+2. Import the intents and entities into a domain that uses the LivePerson engine.
+3. Update the intents:
+    
+    * Provide at least 5 intents.
+    * Provide at least 20 training phrases per intent.
+    * Update the intents and training phrases so that each is a complete and meaningful sentence or question. This might require that you broaden the use cases and provide utterances that approach the intents from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you use actual data to enrich your training set. You can find such data with [Intent Analyzer](intent-analyzer-overview.html).
 
 ### Create a 3rd-party NLU provider credential
 
