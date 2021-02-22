@@ -1,12 +1,12 @@
 ---
 pagename: Limits
 redirect_from:
+    - knowledge-base-internal-knowledge-bases-limits.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Knowledge Base
-subfoldername: Internal Knowledge Bases
-permalink: knowledge-base-internal-knowledge-bases-limits.html
+permalink: knowledge-base-limits.html
 indicator: both
 ---
 
