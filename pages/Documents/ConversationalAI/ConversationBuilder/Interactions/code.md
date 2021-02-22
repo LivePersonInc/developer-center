@@ -40,4 +40,4 @@ While it’s technically possible to implement dialog starters and integration i
 A validation check is performed to ensure that the code is valid JSON. However, there is no validation check to ensure that the code adheres to the [Conversational Cloud messaging format](getting-started-with-rich-messaging-introduction.html). Therefore, take care when entering the JSON. You cannot use another JSON format.
 
 #### Testing
-To fully test a Universal interaction, use the [Conversation Tester](conversation-builder-testing-deployment-testing-debugging-post-deployment.html) or a Web client.
+To fully test a Universal interaction, use the [Conversation Tester](conversation-builder-testing-deployment-testing-debugging-post-deployment.html) or a Web client. Support for [Preview](conversation-builder-testing-deployment-previewing.html) is limited.
