@@ -30,7 +30,7 @@ C2M is deployed in three regions. **North America**, **EMEA**(Europe, Middle Eas
 
 ### Eligibility API
 
-Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-docs/?api=c2m#/default/post_account__accountId__eligibility) to go through API spec and use example here to get started.
+Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-docs/?api=c2m#/default/post_account__accountId__eligibility) to go through API spec to get started.
 
 | Method | URI  |
 | :--- | :--- |
@@ -49,7 +49,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | Use OAuth 1.0 or [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | OAuth 1.0 or Bearer «APP_JWT» |
+| Authorization | [API key](https://developers.liveperson.com/api-guidelines-create-api-keys.html) or [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | API key or Bearer «APP_JWT» |
 
 **Request Body Parameters**
 
@@ -58,10 +58,10 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | skill | string | yes | Engagement skill |
 | consumerPhoneNumber | string | yes | Consumer’s phone number(E.164 format with leading "+") |
 | handoffId | string | yes | C2M handoff Id |
-| sdes | array | no | Array of ctmrinfo and/or personal SDEs |
+| sdes | array | no | Array of ctmrinfo and/or personal SDEs. See details [here](https://developers.liveperson.com/engagement-attributes-types-of-engagement-attributes.html) |
 | templateVariables | object | no | Key-value pairs of variables for the template. This parameter is only applicable for WA channel. |
 | ivrNumber | string | no | The ivrNumber that brands want to use. Some brands have more than 1 ivrNumber and this field clears the ambiguity. |
-| consumerId | string | no | This parameter is only applicable for INAPP channel. |
+| consumerId | string | no | The consumerId which was used in the app. This parameter is only applicable for INAPP channel. |
 
 **Request Body Example - JSON Payload**
 
@@ -130,7 +130,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | OAuth 1.0 or [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | OAuth 1.0 or Bearer «APP_JWT» |
+| Authorization | [API key](https://developers.liveperson.com/api-guidelines-create-api-keys.html) or [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | API key or Bearer «APP_JWT» |
 
 **Request Body Parameters**
 
@@ -220,23 +220,19 @@ C2M supports SMS-Twilio, WA, and INAPP channels.
 
 C2M does not have any limitations on the message size while sending messages to twilio or other channels. 
  
-<strong>5. What is the lifespan of the APP JWT? </strong>
-
-An APP JWT expiration time is 1 hour from the time it is created. 
-
-<strong>6. Does C2M 2.0 API provide a report?</strong>
+<strong>5. Does C2M 2.0 API provide a report?</strong>
 
 We will have the report API, stay tuned. 
 
-<strong>7. What’s the lookback period?</strong>
+<strong>6. What’s the lookback period?</strong>
 - Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer.  
 - Lookback period can be pre-configured up to 30 days. Current maximum lookback period is 30 days from when messages are sent using C2M API. Example: When a message is sent to consumer using C2M API and if consumer replies within 30 days from when message was sent, the response will be redirected to LE agent according to specified skill. A response after 30 days will not be treated as a conversation. Please note, if a consumer has an existing active conversation with a brand in any channel, the outbound message won’t be delivered.
 
-<strong>8. How do we know which field is optional or required?</strong>
+<strong>7. How do we know which field is optional or required?</strong>
 
 Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https://connect-to-messaging.z1.fs.liveperson.com/api/api-docs/?api=c2m).
 
-<strong>9. What's the restriction on request body parameters?</strong>
+<strong>8. What's the restriction on request body parameters?</strong>
 
 | Field Name | Limitation |
 | :--- | :--- |
@@ -244,3 +240,5 @@ Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https:
 | skill | 255 char max length |
 | overrideMessage | 1600 char max length |
 | handoffId | 16 char max length |
+
+
