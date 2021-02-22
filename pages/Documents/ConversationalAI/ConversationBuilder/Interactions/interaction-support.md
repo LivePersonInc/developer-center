@@ -118,7 +118,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Quick Reply question | Yes |
 | List Picker question | No |
 | Time Picker question | No |
-| Integration | No |
+| Integration | Yes |
 | Agent Transfer integration | Yes |
 | Apple Pay integration | No |
 | survey interactions (NPS, FCR, CSAT) | Yes |
@@ -215,23 +215,23 @@ Interaction support varies by channel. Use this page to understand whether an in
 
 | Interaction | Supported? |
 | --- | --- |
-| Dialog Starter |  |
-| Text statement |  |
+| Dialog Starter | Yes |
+| Text statement | Yes |
 | Image statement |  |
 | Audio statement |  |
 | Video statement |  |
-| Apple rich link |  |
+| Apple rich link | No |
 | Multiple choice question |  |
-| Text question |  |
+| Text question | Yes |
 | Structured question |  |
 | Button question |  |
 | Quick Reply question |  |
-| List Picker question |  |
-| Time Picker question |  |
-| Integration |  |
-| Agent Transfer integration |  |
-| Apple Pay integration |  |
-| survey interactions (NPS, FCR, CSAT) |  |
+| List Picker question | No |
+| Time Picker question | No |
+| Integration | Yes |
+| Agent Transfer integration | Yes |
+| Apple Pay integration | No |
+| survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### Web messaging
 
