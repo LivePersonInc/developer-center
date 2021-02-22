@@ -74,26 +74,37 @@ There are two versions of LivePerson's NLU engine:
 
 #### LivePerson
 
-This is LivePerson's high performing, scalable NLU engine. Key characteristics include:
+This is LivePerson's high-performing NLU engine. Key characteristics include:
 
 * A classifier model based on Convolutional Neural Network (CNN) using FastText embeddings.
 * Its primary feature is the enabling of a separate, brand-specific model, built and *trained* for each domain.
-* A scalable solution; capable of handling a large volume of requests; provides fast response times and accuracy.
+* A scalable solution that's capable of handling a large volume of requests.
+* Provides fast response times and accuracy.
 * To perform effectively, expects large sets of data (both intents and training phrases).
 * When you create a LivePerson domain and use it in Intent Analyzer or in Conversation Builder, the following is required:
     * At least 20 training phrases per intent
     * At least 5 intents in order to train  
 * Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
+
+{: .important}
+As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
+
+#### Benefits of LivePerson over LivePerson (Legacy)
+
+There are significant benefits to using the LivePerson engine instead of the LivePerson (Legacy) engine. The LivePerson engine:
+
+* Benefits from continuing investments. Check the roadmap for upcoming features, for example, support for additional languages.
+* Performs faster and scales better. The LivePerson engine's average response time is approximately 200 milliseconds per prediction, and performance is good and consistent regardless of the number of intents involved. In contrast, the LivePerson (Legacy) engine's average response time is typically above 1 second, and the response time increases linearly with the number of intents involved. With many intents and many training phrases, a response time of 4-5 seconds is common.
 * Makes available a [Model Tester](intent-builder-testing-advanced-model-testing.html).
 * Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
-* Can be used with [Intent Analyzer](intent-analyzer-overview.html).
+* Is widely used with [Intent Analyzer](intent-analyzer-overview.html). In fact, Intent Analyzer itself uses the LivePerson engine. Therefore, domains using the LivePerson engine can be tuned easily using the data gleaned from Intent Analyzer. You cannot use Intent Analyzer with domains using the LivePerson (Legacy) engine.
 
 #### LivePerson (Legacy)
 
 This is LivePerson's legacy NLU engine. 
 
 {: .important}
-As of March 2, 2021, you can't create new domains using the LivePerson (Legacy) engine. Additionally, brands with existing domains using this engine are encouraged to migrated to the LivePerson engine as soon as possible.
+As of March 2, 2021, you can't create new domains using the LivePerson (Legacy) engine. Additionally, brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. See above for the many benefits of LivePerson over LivePerson (Legacy).
 
 Key characteristics include:
 
@@ -103,15 +114,13 @@ Key characteristics include:
     Expected user input: *I want to buy a brown Michael Kors bag*
     <br>Tailored sample sentence (with entities): *I want to buy COLOR PRODUCT_BRAND bag*
 
-    In contrast, the LivePerson NLU is more generalized; it can handle a general set of user questions and still perform well. 
+    In contrast, the LivePerson engine is more generalized; it can handle a general set of user questions and still perform well. 
 
-* From an NLU processing perspective, performs well regardless of the number of intents and training phrases involved. However, if you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
+* If you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
 * For performance reasons:
     * Supports a maximum of 40 training phrases per intent. If you add more than 40, only the first 40 are used.
     * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledge-base-internal-knowledge-bases-best-practices.html).
-* Doesn't require the model to be trained, which can save time.
-* Doesn't support [prebuilt domains](intent-builder-overview.html#prebuilt-domains) or [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
-* Can't be used with [Intent Analyzer](intent-analyzer-overview.html).
+* Doesn't require the model to be trained.
 
 ### Variances in matched intents with LivePerson NLU
 

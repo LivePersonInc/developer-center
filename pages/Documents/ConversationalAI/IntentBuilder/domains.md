@@ -149,6 +149,9 @@ You must train the LivePerson domain after every update to the domain if you wan
 Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
 
 {: .important}
+As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
+
+{: .important}
 Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 20 training phrases.
 
 **To train a LivePerson domain**
@@ -162,6 +165,10 @@ Before you train, ensure the domain has at least 5 intents. For each intent, ens
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png">
 
     To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
+
+### Convert a LivePerson (Legacy) domain to LivePerson
+
+
 
 ### Create a 3rd-party NLU provider credential
 
