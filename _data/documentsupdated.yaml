@@ -201,7 +201,7 @@
           - subpagename: File Integrations
           - subpagename: LivePerson Functions Integrations
           - subpagename: Web View Integration API
-          - subpagename: Using Consumer Access Tokens 
+          - subpagename: Using Consumer Access Tokens
           - subpagename: Troubleshooting
       - pagename: Environment Variables
       - pagename: Versions & Releases
