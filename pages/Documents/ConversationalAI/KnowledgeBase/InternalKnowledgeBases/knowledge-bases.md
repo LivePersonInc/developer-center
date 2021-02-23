@@ -95,6 +95,11 @@ Before taking this action, be certain about doing so. Once you convert the inten
 3. Click **More Options**, and scroll down to the **Intent Association** section.
 4. Click **Convert to Domain Intents**.
 5. In the dialog that appears, select the domain.
+
+    * If, within the knowledge base, you’re already using entities from an associated domain, select that domain here.
+    * If you select a domain that uses the LivePerson (Legacy) engine, you are encouraged to subsequently [convert the domain to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson). See [here](intent-builder-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy) for the benefits of LivePerson over LivePerson (Legacy).
+    * While you can select from all existing domains regardless of the NLU engine that it uses, if you instead create a domain on-the-fly in this step, you can only create a domain that uses the LivePerson engine or a third-party engine.
+
 6. In the confirmation dialog, click **Confirm**.
     
     This converts the intents and associates the selected domain.
