@@ -204,6 +204,7 @@
           - subpagename: Troubleshooting
       - pagename: Environment Variables
       - pagename: Versions & Releases
+      - pagename: Global Functions
       - pagename: Scripting Functions
         subpages:
           - subpagename: Introduction
