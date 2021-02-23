@@ -42,8 +42,7 @@ POST| https://[{domain}](/agent-manager-domain-api.html)/manager_workspace/api/a
 
 Name| Description  | Type/Value | Required | Notes
 :----- | :----------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-interval| Time interval in minutes between the points to be returned  | integer | No | Remark: the number of points in the graph to be returned according to the given interval should not be higher than 100 points.
-If interval value is null or 0, default interval is either 5 minutes , 60 minutes or 1 day or time window divided by 12 points: we select the first time interval that lead to a decent number of points , less than 100 points.
+interval| Time interval in minutes between the points to be returned  | integer | No | The number of points in the graph to be returned according to the given interval should not be higher than 100 points.If interval value is null or 0, the default interval is either 5 minutes , 60 minutes or 1 day or time window divided by 12 points: we select the first time interval that lead to a decent number of points , less than 100 points.
 
 **BODY Parameters**
 
