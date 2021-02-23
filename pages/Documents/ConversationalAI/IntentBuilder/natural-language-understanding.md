@@ -95,8 +95,8 @@ There are significant benefits to using the LivePerson engine instead of the Liv
 
 * Benefits from continuing investments. Check the roadmap for upcoming features, for example, support for additional languages.
 * Performs faster and scales better. The LivePerson engine's average response time is approximately 200 milliseconds per prediction, and performance is good and consistent regardless of the number of intents involved. In contrast, the LivePerson (Legacy) engine's average response time is typically above 1 second, and the response time increases linearly with the number of intents involved. With many intents and many training phrases, a response time of 4-5 seconds is common.
-* Makes available a [Model Tester](intent-builder-testing-advanced-model-testing.html).
-* Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
+* Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) to get you up and running quickly, and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
+* Makes available an advanced [Model Tester](intent-builder-testing-advanced-model-testing.html).
 * Is widely used with [Intent Analyzer](intent-analyzer-overview.html). In fact, Intent Analyzer itself uses the LivePerson engine. Therefore, domains using the LivePerson engine can be tuned easily using the data gleaned from Intent Analyzer. You cannot use Intent Analyzer with domains using the LivePerson (Legacy) engine.
 
 #### LivePerson (Legacy)
