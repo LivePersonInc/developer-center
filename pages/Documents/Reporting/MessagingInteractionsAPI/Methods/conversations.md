@@ -59,7 +59,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |status  | Latest status of the conversation.| Array `<status>` | Optional | Valid values: "OPEN", "CLOSE"
 |skillIds| An array of skill IDs, represented as numbers.| Array `<skillID>`| Optional | Any skill, through the entire flow of the conversation.
 |latestSkillIds| An array of latest skill IDs, represented as numbers. The latest skill ID is the latest skill which the conversation was assigned under.  | Array `<skillID>`| Optional | Filters only conversations whose latest skill appears in the array.
-|agentIds| An array of agent IDs, represented as numbers.| Array `<agentID>`| Optional |
+|agentIds            | An array of agent IDs, represented as numbers.                                                | Array `<agentID>`                  | Optional | Filters only when the provided agent Ids are the <b>Assigned Agent</b> of the conversation. </br>To filter conversations when the provided agent Ids are not the <b>Assigned Agent</b> use userPermissions
+|userPermissions     | An array of roles that were part of the conversation                                | Array `<String>`                  | Optional | Commonly used with agentIds. </br>Possible values: ASSIGNED_AGENT,AGENT, AGENT_MANGER, READER.
 |latestAgentIds| An array of latest agent IDs, represented as numbers.  | Array `<agentID>`| Optional | Filters only conversations whose latest agent appears in the array.
 |agentGroupIds | An array of agent group IDs, represented as numbers.| Array `<agentGroupID>` | Optional |
 |keyword | Specific word or phrase found in the messages of the conversation. | alphanumeric  | Optional |
@@ -73,8 +74,8 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |messageContentTypes | The type of the message  | Array `<String>` | Optional | Valid values: TEXT_PLAIN, TEXT_HTML, LINK, HOSTED_FILE, IMG, SECURE_FORM_INVITATION, SECURE_FORM_SUBMIT, RICH_CONTENT
 |latestConversationQueueState | The queue state of the conversation  | String| Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
-responseTime |Response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
-|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys|
+responseTime |Agent's response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
+|contentToRetrieve | List of content types that should be retrieved | string | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to} | Range of NPS assigned to the conversation. | numeric, numeric| Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
 |questionBrick | Match a specific word within a PCS question name or brick ID | alphanumeric  | Optional |
@@ -110,7 +111,7 @@ responseTime |Response time range | epoch time in milliseconds | Optional | Eith
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
 |responseTime |{"start":{"from":1529566882153,"to":1530171697782},"status":["OPEN"],"responseTime":{"from":1530013618000,to":1530153993000},"contentToRetrieve":["responseTime"]}|
-|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime", "intents", "latestAgentSurvey", "previouslySubmittedAgentSurveys"]}|
+|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords", "agentParticipants", "agentParticipantsLeave", "agentParticipantsActive","consumerParticipants", "transfers", "interactions", "messageScores","messageStatuses", "conversationSurveys", "coBrowseSessions", "summary", "sdes", "unAuthSdes", "monitoring", "responseTime", "intents", "latestAgentSurvey", "previouslySubmittedAgentSurveys"]}|
 |latestUpdateTime | {"start":{"from":1541578792011,"to":1541578895020},"status":["OPEN","CLOSE"],"latestUpdateTime":{"from":1541578792011}} |
 |nps  | {"start":{"from":1470037448000,"to":1472543048000}, "nps":{"from":0,"to":7}}|
 |questionBrick | {"start":{"from":1470037448000,"to":1472543048000},"questionBrick":"Improvement suggestion"}|
@@ -162,12 +163,13 @@ agentParticipants | Contains information about the agent(s) participating in the
 consumerParticipants | Contains information about the consumer(s) participating in the conversation.  | container
 transfers| Contains information about transfers in the conversation. | container
 interactions| Contains information about the interactions in the conversation.| container
-messageScore| Contains information about the message's score, including raw and MCS.| container
+messageScores| Contains information about the message's score, including raw and MCS.| container
+skillChanges| Contains information about the skill changes on the conversation (i.e. default skill/fallback skil).| container
 conversationSurveys  | Contains information about the different surveys for the current conversation. | container
 coBrowseSessions  | Contains information about CoBrowse sessions for the current conversation.  | container
 summary  | Contains information about the conversation's summary. | container
 sdes  | List of Engagement Attributes. | container
-responseTime| Response time| container
+responseTime| Agent's response time| container
 dialogs  | Contains information about the different dialogs for the current conversation. | container
 intents  | Contains information about the intents that relate to the current conversation. | container
 uniqueIntents  | Contains basic information about the unique intents that relate to the current conversation. | container
@@ -276,11 +278,12 @@ type | Type of data  | string  | Valid values: "text", "file",
 messageData| Content of the message.| container  |
 messageId  | ID of message.| string  |
 seq  | Message's sequence in the conversation.  | string  | Does not have to be continuous, i.e. 0, 2, 5, etc.
-dialogId| ID of dialog bulk.  | long |
+dialogId| Dialog ID. A conversation may contain multiple dialogs (main dialog, survey dialog, etc.), each dialog identified by its unique ID.  | long | The main dialog id is the conversation id
 participantId | ID of participant.  | string  |
 source  | Message's origin.| string  | deprecated (not supported)
 device  | Device the message was sent from.  | string  | deprecated (not supported)
 sentBy  | Who sent the message| string  | Valid values: "agent", "consumer"
+audience  | Who can receive the message (eg private message) | string  | Valid values: "ALL", "AGENTS_AND_MANAGERS"
 contextData| Contains context information about the consumer's message, including raw and structured metadata.| container| |
 
 *Context Data*
@@ -465,9 +468,9 @@ sourceAgentId | The source agent ID.| string
 sourceAgentLoginName| The source agent name. | string
 sourceAgentNickname | The source agent nickname.| string
 sourceAgentFullName | The source agent full name.  | string
-reason  | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver) | string
+reason  | Reason for transfer (back2Q, Agent, SuggestedAgentTimeout, Skill, TakeOver) | string **Note**: the `reason` property gives you insight into why the conversation was transferred: * back2Q - the agent transferred the conversation back to the queue. * Agent - the conversation was transferred to a specific agent. * SuggestedAgentTimeout - the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue. * Skill - the conversation was transferred to a skill. * TakeOver - a manager has taken over the conversation.
 contextData| Contains context information about the transfer, including raw and structured metadata.| container| |
-dialogId| The ID of the dialog being transferred.| string**Note**: the `reason` property gives you insight into why the conversation was transferred: * back2Q - the agent transferred the conversation back to the queue. * Agent - the conversation was transferred to a specific agent. * SuggestedAgentTimeout - the conversation was transferred to a specific agent but they did not accept it in time and it was transferred back to the queue. * Skill - the conversation was transferred to a skill. * TakeOver - a manager has taken over the conversation.
+dialogId| The ID of the dialog being transferred.| String
 
 _Interaction info_
 
@@ -528,7 +531,7 @@ sdeType| Type of SDE.  | enum  |
 Name| Description| Type/Value
 :-------------- | :------------------------------------------------ | :---------
 latestEffectiveResponseDueTime  | Latest effective response due time for agent to respond (by when should an agent respond to a message before it is considered overdue). -1 indicates waiting for consumer | long – epoch time in milliseconds
-configuredResponseTime | Conversation's configured response time. | long – epoch time in milliseconds
+configuredResponseTime | Conversation's configured agent response time. | long – epoch time in milliseconds
 
 _Dialog info_
 
@@ -725,6 +728,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2016-08-29 15:14:19.564+0000",
           "timeL": 1472483659564,
           "device": "undefined",
+          "audience": "ALL",
           "sentBy": "Consumer"
         },
         {
@@ -745,6 +749,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2016-08-29 15:14:20.569+0000",
           "timeL": 1472483659564,
           "device": "undefined",
+          "audience": "ALL",
           "sentBy": "Agent",
           "contextData": {
             "rawMetadata": "[{\"type\":\"BotResponse\",\"intents\":[{\"id\":\"some intent identifier\",\"confidence\":\"MEDIUM\",\"confidenceScore\":0.753}],\"externalConversationId\":\"conversation identifier\",\"businessCases\":[\"business case name\"]},{\"type\":\"ActionReason\",\"reason\":\"some reason\",\"reasonId\":\"some reason ID\"}]",
@@ -787,6 +792,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2016-08-29 15:15:42.568+0000",
           "timeL": 1472483742568,
           "device": "undefined",
+          "audience": "ALL",
           "sentBy": "Consumer"
         },
         {
@@ -807,6 +813,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "time": "2017-10-24 10:24:52.962+0000",
           "timeL": 1508840692962,
           "device": "undefined",
+          "audience": "ALL",          
           "sentBy": "Agent"
         }
       ],
@@ -852,7 +859,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           }
         }
       ],
-      "consumerParticipant": [
+      "consumerParticipants": [
         {
           "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
           "firstName": "Visitor",
@@ -929,7 +936,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "skillName": "skill3"
         }
       ],
-      "messageScore": [
+      "messageScores": [
         {
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
           "messageRawScore": 0,

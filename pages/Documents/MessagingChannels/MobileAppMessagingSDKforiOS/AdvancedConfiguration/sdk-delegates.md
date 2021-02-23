@@ -6,11 +6,8 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: Configuration
-
-order: 5
-permalink: mobile-app-messaging-sdk-for-ios-configuration-sdk-delegates.html
-
+subfoldername: Advanced Configuration
+permalink: mobile-app-messaging-sdk-for-ios-advanced-configuration-sdk-delegates.html
 indicator: messaging
 ---
 The SDK uses 2 delegates:

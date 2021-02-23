@@ -43,8 +43,6 @@ The Conversation Orchestrator is a self-service, low-code/no-code experience for
 3. Author **Dynamic Routing** policies based on attributes (intent, content, session, or AI based inferences) to route to the right human or bot - unlocking highly personalized consumer journeys.
 4. Access developer features such as **Recommendation API** for next action or **Conversation Context Service** to customize and integrate Conversation Orchestrator into their decision processes.  
 
-<img class="fancyimage" width="750" src="img/maven/maven-workspace.png">
-
 You can start using Conversation Orchestrator by visiting the following links:
 
 * North America: [https://z1.maven.liveperson.net](https://z1.maven.liveperson.net) 

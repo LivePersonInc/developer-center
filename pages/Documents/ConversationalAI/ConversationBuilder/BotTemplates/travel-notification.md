@@ -15,10 +15,8 @@ The Travel Notifications template allows an authenticated user to report their f
 
 The template uses text interactions only, so it can be deployed to any channel without modification. Escalation to an agent is also included.
 
-<!--
 {: .important}
 This bot template contains a dialog template that can be used in other bots in your account. For more information on dialog templates, see [here](conversation-builder-dialog-templates.html).
--->
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_travel_notif_de.png">
 
@@ -132,7 +130,6 @@ Modify the following values in Global Functions:
 | botAgentSkillId | The skill ID to transfer to | 
 | botAgentSkillName | The skill name to transfer to |
 
-<!--
 ### Dialog templates
 This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that allows you to easily copy over the primary data collection flow independently from the bot template.
 
@@ -147,4 +144,3 @@ Pre-built NLU domain:
 
 Integrations:
 * Send_Email
--->
