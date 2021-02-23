@@ -102,68 +102,6 @@ Enabled articles are returned by knowledge base searches in Knowledge Base integ
     * Turn on (enable) the setting to enable the article.
     * Turn off (disable) the setting to disable the article.
 
-### Using entities in a knowledge base
-
-[Entities](intent-builder-entities.html) are keywords that refer to a number of synonyms. For example, the entity `SPORTS` might have a number of synonyms, like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
-
-Leveraging entities within a knowledge base provides the same benefits that doing so affords you elsewhere: They are a great way to make intents even broader, allowing the NLU to associate a group of words (like similar products, different misspellings of common words, and so on) with an entity instead of pattern matching to every single item in the group.
-
-#### Create the domain
-
-1. Navigate to Intent Builder.
-2. Click **New domain** in the upper-right corner.
-3. Enter a name for the domain, e.g., "Tutorial Domain."
-4. Click **Add Domain**.
-
-#### Create the entity
-
-1. Inside the domain you just created, click **Entities** in the upper-left corner.
-2. In the Add Entity panel, specify the following:
-    * **Entity name**: Enter "CREDENTIALS."
-    * **Entity type**: Select "Value Set," which is the default.
-    * **Entity values**: Add the values below:
-        * `log in`
-        * `login`
-        * `pass word`
-        * `password`
-        * `user name`
-        * `username`
-        * `pin`
-3. Click **Save**.
-
-#### Connect the domain to the knowledge base
-
-If you're using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) instead of Domain intents (like we show in our example below), to use entities within a knowledge base, you'll need to connect the domain to the knowledge base.
-
-1. Exit Intent Builder, and return to Knowledge Base.
-2. Open the knowledge base.
-3. Click **Settings** in the upper-left corner.
-4. Scroll down, and click **More Options**.
-5. In the **Associated Domain for Entity** field, select the name of the domain you just created.
-6. Click **Update**.
-
-#### Use the entities in the knowledge base
-
-In your articles, replace any word where you want the "CREDENTIALS" entity to be substituted in, *including* the tags. This might make some intent qualifiers and tags redundant, which means you can (and should) delete them.
-
-Assume we have a knowledge base using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) and an existing article with the following content:
-
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_1.png">
-
-Our article when taking advantage of entities would result in the following:
-
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_2.png">
-
-Note that we are able to reduce the number of intent qualifiers and tags while actually improving the success rate of our queries, as the "CREDENTIALS" entity will consider all of the entity values that were defined earlier.
-
-{: .important}
-You don't need to enter entities using all capital letters like we've done above, but it does help you to identify the words that are entities.
-
-Now, when someone says an utterance that includes any of the entity synonyms, they should match. Try entering, "My pin doesn't work." This should return with a score of GOOD.
-
-{: .important}
-The entity values are cached, so if you add a number of entities but they aren't matching your articles right away, wait a minute or two. The cache should update.
-
 ### Find articles with a specific tag
 
 1. Open the knowledge base.
@@ -195,3 +133,68 @@ The following table identifies the JSON node for article information that's ofte
 | Content Links > Image | imageURL |
 | Content Links > Video | videoURL |
 | Content Links > Audio | audioURL |
+
+### Using entities within a knowledge base (Legacy)
+
+{: .important}
+This section is applicable to knowledge bases using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) (i.e., intent qualifiers), which is a legacy feature. In this case, behind the scenes the LivePerson (Legacy) engine is used for intent matching.<br><br>For better performance and a more scalable solution, LivePerson recommends that you convert from *Knowledge Base intents* to *Domain intents* as soon as possible. This allows you to associate a domain that uses the LivePerson engine (or a third-party engine).<br><br>If you're using entities within your knowledge base (as discussed in this section), first [convert the knowledge base to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents). Then, if the domain itself uses LivePerson (Legacy), [convert the domain to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson).
+
+[Entities](intent-builder-entities.html) are keywords that refer to a number of synonyms. For example, the entity `SPORTS` might have a number of synonyms, like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
+
+Leveraging entities within a knowledge base provides the same benefits that doing so affords you elsewhere: They are a great way to make intents even broader, allowing the NLU to associate a group of words (like similar products, different misspellings of common words, and so on) with an entity instead of pattern matching to every single item in the group.
+
+#### Create the domain
+
+1. Navigate to Intent Builder.
+2. Click **New domain** in the upper-right corner.
+3. Enter a name for the domain, e.g., "Tutorial Domain."
+4. Click **Add Domain**.
+
+#### Create the entity
+
+1. Inside the domain you just created, click **Entities** in the upper-left corner.
+2. In the Add Entity panel, specify the following:
+    * **Entity name**: Enter "CREDENTIALS."
+    * **Entity type**: Select "Value Set," which is the default.
+    * **Entity values**: Add the values below:
+        * `log in`
+        * `login`
+        * `pass word`
+        * `password`
+        * `user name`
+        * `username`
+        * `pin`
+3. Click **Save**.
+
+#### Connect the domain to the knowledge base
+
+Connect the domain to the knowledge base.
+
+1. Exit Intent Builder, and return to Knowledge Base.
+2. Open the knowledge base.
+3. Click **Settings** in the upper-left corner.
+4. Scroll down, and click **More Options**.
+5. In the **Associated Domain for Entity** field, select the name of the domain you just created.
+6. Click **Update**.
+
+#### Use the entities in the knowledge base
+
+In your articles, replace any word where you want the "CREDENTIALS" entity to be substituted in, *including* the tags. This might make some intent qualifiers and tags redundant, which means you can (and should) delete them.
+
+Assume we have a knowledge base using Knowledge Base intents and an existing article with the following content:
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_1.png">
+
+Our article when taking advantage of entities would result in the following:
+
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_2.png">
+
+Note that we are able to reduce the number of intent qualifiers and tags while actually improving the success rate of our queries, as the "CREDENTIALS" entity will consider all of the entity values that were defined earlier.
+
+{: .important}
+You don't need to enter entities using all capital letters like we've done above, but it helps you to identify the words that are entities.
+
+Now, when someone says an utterance that includes any of the entity synonyms, they should match. Try entering, "My pin doesn't work." This should return with a score of GOOD.
+
+{: .important}
+The entity values are cached, so if you add a number of entities but they aren't matching your articles right away, wait a minute or two. The cache should update.
