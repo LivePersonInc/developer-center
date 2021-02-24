@@ -57,13 +57,17 @@ With Domain intents like these, you can use any of the following [NLU engines](i
 Domain intents make it possible for you to use the same domain in multiple ways, i.e., in knowledge bases, bots, or other features like [Intent Analyzer](intent-analyzer-overview.html).
 
 #### Knowledge Base intents
+
+{: .important}
+As of March 2, 2021, you can no longer create a knowledge base that uses Knowledge Base intents.
+
 If you created your knowledge base before March 2, 2021, you might have chosen *not* to define the intents in a domain in Intent Builder. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
 
 <img style="width:350px" src="img/ConvoBuilder/kb_kb_intents1.png">
 
 Knowledge Base intents like these are a *legacy feature* that uses the LivePerson (Legacy) engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
 
-To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible. As of March 2, 2021, you can no longer create a knowledge base that uses Knowledge Base intents.
+To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible.
 
 ### Languages
 
