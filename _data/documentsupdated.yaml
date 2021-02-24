@@ -1057,6 +1057,11 @@
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API
+    - documentname: Consumer Delegation
+      pages:
+      - pagename: Introduction
+      - pagename: Configuration
+      - pagename: How It Works
     - documentname: Conversational Cloud Applications
       pages:
         - pagename: What Is a Conversational Cloud Application?
