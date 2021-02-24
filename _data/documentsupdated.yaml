@@ -334,6 +334,7 @@
       - pagename: Custom Integration
       - pagename: Hook Configuration
       - pagename: Public API
+      - pagename: Conversation Tester
 
   - documentname: Messaging Agent SDK
     pages:
