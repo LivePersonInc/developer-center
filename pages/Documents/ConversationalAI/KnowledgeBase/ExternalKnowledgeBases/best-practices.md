@@ -12,9 +12,11 @@ indicator: both
 
 For a flexible architecture and an optimal consumer experience, follow these best practices.
 
+<!--
 ### Limits
 
 * To promote best practices, limits are enforced in a few cases. For information on all limits, see [here](knowledge-base-limits.html).
+-->
 
 ### General
 
