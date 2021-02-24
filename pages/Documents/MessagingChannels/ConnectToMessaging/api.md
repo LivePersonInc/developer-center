@@ -222,7 +222,7 @@ C2M does not have any limitations on the message size while sending messages to 
  
 <strong>5. Does C2M 2.0 API provide a report?</strong>
 
-We will have the report API, stay tuned. 
+Yes, it does. See details [here](https://developers.liveperson.com/outbound-reporting-api-overview.html).
 
 <strong>6. What’s the lookback period?</strong>
 - Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer.  
@@ -240,5 +240,3 @@ Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https:
 | skill | 255 char max length |
 | overrideMessage | 1600 char max length |
 | handoffId | 16 char max length |
-
-
