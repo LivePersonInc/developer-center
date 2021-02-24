@@ -12,10 +12,10 @@ indicator: both
 ### Introduction
 
 Brands can provide LivePerson's Conversational Builder Bots a consumer (OAuth 2.0) access token. This token can later be used to access the brand's APIs on behalf of the consumer.  
-By [configuring Consumer Authentication credentials](conversation-builder-integrations-using-consumer-access-tokens.html#configure-consumer-authentication-credentials), an authentication challange is sent to the consumer. Once autnentication is completed, an access token is obtained and sent to the bot. This “delegates” access to the bot, so it can make the API calls.  
+By configuring Consumer Authentication credentials, an authentication challange is sent to the consumer. Once autnentication is completed, an access token is obtained and sent to the bot. This “delegates” access to the bot, so it can make the API calls.  
 This can be done in order to accomplish many business and operational use cases on which Bots integrates with brand's APIs such as:
 * To enrich conversation by retrieving information about the consumer.
-* To making an operation on behalf of the user
+* To perform an operation on behalf of the consumer
 
 ### The Flow
 
