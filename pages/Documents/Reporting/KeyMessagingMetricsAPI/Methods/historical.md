@@ -42,7 +42,7 @@ POST| https://[{domain}](/agent-manager-domain-api.html)/manager_workspace/api/a
 
 Name| Description  | Type/Value | Required | Notes
 :----- | :----------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-interval| Time interval in minutes between the points to be returned  | integer | No | The number of points in the graph to be returned according to the given interval should not be higher than 100 points.If interval value is null or 0, the default interval is either 5 minutes , 60 minutes or 1 day or time window divided by 12 points: we select the first time interval that lead to a decent number of points , less than 100 points.
+interval| Time interval in minutes between the points to be returned  | integer | No | Notice that the number of points in the graph to be returned according to the given interval should not be higher than 100 points. If interval value is null or 0, we compute the optimized interval: it can either 5 minutes, 60 minutes, 1 day or the time window divided by 12 points. We select the first time interval that lead to a valid number of points which is less than 100 points.
 
 **BODY Parameters**
 
@@ -102,9 +102,9 @@ _value info_
 
 Name  | Description  | Type/Value
 :------------------- | :----------------------------------------------------------------------------- | :---------
-transfers  | Number of conversations that were _transferred_ in the time interval (aka during the hour before the timestamp value)  | value
-closedConversations  | Number of conversations that were _closed_ in the time interval  | value
-concludedConversations  | Number of conversations that were _concluded_ in the time interval  | value
+transfers  | Number of conversations that were _transferred_ in the time interval (aka during the hour before the timestamp value)  | Long
+closedConversations  | Number of conversations that were _closed_ in the time interval  | Long
+concludedConversations  | Number of conversations that were _concluded_ in the time interval. Concluded conversations comprises closed and forwarded conversations  | Long
 
 
 
