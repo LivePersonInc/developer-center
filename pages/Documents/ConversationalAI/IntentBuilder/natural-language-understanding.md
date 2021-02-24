@@ -84,7 +84,7 @@ This is LivePerson's high-performing NLU engine. Key characteristics include:
 * When you create a LivePerson domain and use it in Intent Analyzer or in Conversation Builder, the following is required:
     * At least 20 training phrases per intent
     * At least 5 intents in order to train  
-* Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain).
+* Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-domain).
 
 {: .important}
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.

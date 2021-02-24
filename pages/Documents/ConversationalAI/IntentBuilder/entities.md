@@ -54,7 +54,7 @@ The values for Value Set entities are usually one or two words, as they represen
 
 Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression](https://www.regexlib.com/) rules. As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b` , which is a 6-digit number.
 
-<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_entitiesRegEx.png">
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_entitiesRegEx.png">
 
 Whenever the consumer's utterance contains an expression that conforms to the entity's regular expression (e.g., "I want to check on my order 757575"), the bot detects this, invokes the `ORDER_NO` entity, and substitutes it into the utterance before determining the consumer's intent. In this way, a Regular Expression entity works like a Value Set entity.
 
