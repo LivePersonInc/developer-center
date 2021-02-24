@@ -53,4 +53,4 @@ You can create a Consumer Authentication credential and use it in [API integrati
 --@Mary to add--
 
 ### Configure Delegated Access Provider
-Follow this guide: [Consumer Delegation](consumer-delegation-introduction.html)
+Follow this configuration guide: [Consumer Delegation](consumer-delegation-configuration.html)
