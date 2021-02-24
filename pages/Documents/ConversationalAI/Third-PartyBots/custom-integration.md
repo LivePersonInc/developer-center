@@ -51,6 +51,8 @@ You have to agree to Data Disclaimer in order to use the services of the bot con
 
 For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail. If it has suceeded, you're done!
 
+Please note that your LivePerson Function should be capable of handling unsupported messages or as your design pleases. This will ensure the success of the call to the API of Lex for testing the connection.
+
 ### Payload Information
 
 The following payload content will be recieved from the Function during a conversation with the assigned bot.
@@ -140,18 +142,18 @@ const payload = {
       {
         intentId: "alternative-intent-info-example-1",
         intentName: "alternative-Intent information example 1.",
-        confidenceScore: 0.6
+        confidenceScore: 0.6,
       },
       {
         intentId: "alternative-intent-info-example-2",
         intentName: "alternative-Intent information example 2.",
-        confidenceScore: 0.4
-      }
+        confidenceScore: 0.4,
+      },
     ],
     intentId: "intent-info-example",
     intentName: "Intent information example.",
-    confidenceScore: 1
-  }
+    confidenceScore: 1,
+  },
 };
 ```
 

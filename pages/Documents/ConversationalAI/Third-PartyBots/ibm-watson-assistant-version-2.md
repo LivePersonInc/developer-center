@@ -136,6 +136,8 @@ Figure 1.5 Showing the success case of the valid credentials for IAM authenticat
 
 Figure 1.6 Showing the fail case of the invalid credentials for IAM authentication -->
 
+Please note that your bot should be capable of handling unsupported messages either via fallback intents or [as your design pleases](https://cloud.google.com/dialogflow/es/docs/intents-default). This will ensure the success of the call to the API of Lex for testing the connection.
+
 <div class="notice">
 Please be careful while providing credentials that you have selected the right workspace URL. Selecting the wrong Watson Assistant gateway causes connection failure. See the note in the table above for more information on finding the correct workspace URL
 </div>

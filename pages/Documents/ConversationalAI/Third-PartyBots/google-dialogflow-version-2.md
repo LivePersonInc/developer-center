@@ -103,7 +103,7 @@ Figure 1.2
 {: .important}
 You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer"
 
-For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.4 and 1.5 respectively.
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.4 and 1.5 respectively. Please note that your bot should be capable of handling unsupported messages either via [fallback intents](https://cloud.google.com/dialogflow/es/docs/intents-default) or as your design pleases. This will ensure the success of the call to the API of Lex for testing the connection.
 
 <img class="fancyimage" style="width:600px" src="img/dialogflowversion2/wizard_success.png">
 

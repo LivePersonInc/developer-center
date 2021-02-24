@@ -148,6 +148,8 @@ Please be careful while providing credentials that you have selected the right w
 
 Once you are done with providing configuration you can save it by pressing on "Done". **_Congratulations!_** You have completed the configuration of the Watson Assistant bot.
 
+Please note that your bot should be capable of handling unsupported messages either via fallback intents or [as your design pleases](https://cloud.google.com/dialogflow/es/docs/intents-default). This will ensure the success of the call to the API of Lex for testing the connection.
+
 {: .important}
 Following guide is going to present customization for the Watson Assistant on how to implement functions specifically for **IBM Watson**. It is intended for users who are familiar with IBM Watson cloud dashboard. Continue if you are familiar and have access to IBM Watson cloud dashboard.
 
