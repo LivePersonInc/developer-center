@@ -231,7 +231,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Video statement |  |
 | Apple rich link | No |
 | Multiple choice question |  |
-| Text question | Yes |
+| Text question |  |
 | Structured question |  |
 | Button question |  |
 | Quick Reply question |  |
@@ -240,7 +240,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Integration | Yes |
 | Agent Transfer integration | Yes |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| survey interactions (NPS, FCR, CSAT) | No |
 | Universal | Yes, but the JSON must adhere to the [Rich Messaging support](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 
 ### Web messaging
