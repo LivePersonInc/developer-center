@@ -87,11 +87,11 @@ This is LivePerson's high-performing NLU engine. Key characteristics include:
 * Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-domain).
 
 {: .important}
-As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
+As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from the change. No additional tuning is required; simply retrain the domain as is.
 
 #### Benefits of LivePerson over LivePerson (Legacy)
 
-There are significant benefits to using the LivePerson engine instead of the LivePerson (Legacy) engine. The LivePerson engine:
+There are significant benefits to using the LivePerson engine instead of the LivePerson (Legacy) engine for NLU. The LivePerson engine:
 
 * Benefits from continuing investments. Check the roadmap for upcoming features, for example, support for additional languages.
 * Performs faster and scales better. The LivePerson engine's average response time is approximately 200 milliseconds per prediction, and performance is good and consistent regardless of the number of intents involved. In contrast, the LivePerson (Legacy) engine's average response time is typically above 1 second, and the response time increases linearly with the number of intents involved. With many intents and many training phrases, a response time of 4-5 seconds is common.

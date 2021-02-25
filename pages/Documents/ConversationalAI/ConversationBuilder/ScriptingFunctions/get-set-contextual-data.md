@@ -236,6 +236,9 @@ if (toppingObjects != null && toppingObjects.length > 0) {
 
 ### Get NLP responses
 
+{: .important}
+This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. For the many benefits, see [here](intent-builder-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy).
+
 `getNlpResponse` is used to get an array of results derived from Conversation Builder’s Natural Language Processing algorithms.
 
 For instance, the sentence, “The quick brown fox jumped over the lazy dog” returns the following nouns [dog, fox], the verb [jumped], the phrases [the quick brown Fox, the lazy Dog] and tokens: [the, over, quick, lazy, jumped, brown, Dog, Fox].
@@ -259,6 +262,9 @@ botContext.sendMessage('I found the following nouns: '+ nlpNouns + ' and verbs: 
 
 
 ### Get sentiment
+
+{: .important}
+This function is intended to be used in bots using domains that use the LivePerson (Legacy) NLU engine for intent matching. Brands are encouraged to [migrate to the LivePerson NLU engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. For the many benefits, see [here](intent-builder-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy).
 
 `getSentiment` is used for having the sentiment conversation chatbox messages with the user. Instead of using the sentiments in the intents of the bot, this function relies on programmatically checking the sentiment of the user.
 
