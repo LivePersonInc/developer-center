@@ -32,7 +32,7 @@ If you’re using an [internal knowledge base](knowledge-base-internal-knowledge
 | --- | --- |
 | Title | 128 characters |
 | Summary | 300 characters | 
-| Detail | 1,000 characters if no HTML is used, or 320 characters if HTML is used |
+| Detail | 1,000 characters if no HTML is used, or 320 characters if HTML is used<br><br>A single text interaction has a limit of 320 characters on the word boundary before it gets split into 2 parts. For this reason, HTML isn't suitable if you have more than 320 characters, as the HTML might break if the text is split. Thus, this limit is applied. |
 | Intent qualifiers | 40 in number<br><br>*Not applicable when the knowledge base uses Domain intents* |
 | Positive learnings | 10 in number |
 | Negative learnings | 10 in number |

@@ -63,7 +63,7 @@ To promote best practices, the following limits are enforced by the application:
 | Attribute | Limit |
 | --- | --- |
 | Summary | 300 characters |
-| Detail | 1,000 characters if no HTML is used, or 320 characters if HTML is used |
+| Detail | 1,000 characters if no HTML is used, or 320 characters if HTML is used<br><br>A single text interaction has a limit of 320 characters on the word boundary before it gets split into 2 parts. For this reason, HTML isn't suitable if you have more than 320 characters, as the HTML might break if the text is split. Thus, this limit is applied. |
 
 ### The runtime behavior
 
