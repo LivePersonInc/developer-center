@@ -26,7 +26,7 @@ Sometimes, however, these approaches aren’t possible. For example, you might b
     {: .important}
     Step 2 only happens if the content has HTML tags or is more than 1,000 characters, i.e., if the content warrants shortening or clean-up.
 
-3. You manually apply (copy/paste) the transformed content to the Summary and/or Detail fields within the knowledge base.
+3. You manually apply (copy/paste) the transformed content to editable **Summary** and **Detail** fields within the knowledge base, as desired.
 
 To set up and use this approach, follow the workflow described below.
 
@@ -35,7 +35,7 @@ In Step 5 when you [add the knowledge base](knowledge-base-external-knowledge-ba
 
 To use this solution, *augment the request* so that each returned article also contains the content (summary, detail, etc.) that you want to send to the consumer. Then, in the transformation spec that you provide, map this content to an attribute named “messageReadyContent,” which is an optional attribute in the LivePerson Knowledge Base schema.
 
-When the knowledge base is added, the optional attribute is used to populate a **Message Ready Content** field in the UI. This read-only field displays your content, which has been automatically shortened and cleaned up.
+When the knowledge base is added, the optional attribute is used to populate a **Message Ready Content** field in the UI when appropriate. This read-only field displays your content, which has been automatically shortened and cleaned up.
 
 <img style="width:800px" src="img/ConvoBuilder/kb_cms_long_form1.png">
 
@@ -46,7 +46,7 @@ These are the shortening and clean-up rules that are applied:
 
 ### Using the message-ready content
 
-With the content that you intend to use now message-ready, you can quickly copy and paste it into the **Summary** or **Detail** field within an article as desired. Initially, the **Summary** and **Detail** fields are empty. This indicates that the message-ready content has not been applied yet.
+With the content that you intend to use now message-ready, you can quickly copy and paste it into the **Summary** and **Detail** field within an article as desired. Initially, the **Summary** and **Detail** fields are empty. This indicates that the message-ready content has not been applied yet.
 
 <img style="width:800px" src="img/ConvoBuilder/kb_cms_long_form2.png">
 
