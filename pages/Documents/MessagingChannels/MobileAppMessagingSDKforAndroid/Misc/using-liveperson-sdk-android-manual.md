@@ -80,7 +80,7 @@ apply plugin: "com.android.application"
     }
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.shaym.sdk28"
+        applicationId "com.liveperson.sampleapp"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -577,8 +577,8 @@ public class FirebaseRegistrationIntentService extends IntentService {
    protected void onHandleIntent(Intent intent) {
        String token = FirebaseInstanceId.getInstance().getToken();
        // Register to Liveperson Pusher
-       String account = "82055668";
-       String appID = "com.shaym.sdk28";
+       String account = "12345678"; //Replace with your account id.
+       String appID = "com.liveperson.sampleapp"; //Replace with your applicationId.
        LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);
    }
 }
@@ -604,7 +604,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
            Log.d(TAG, "Message data payload: " + remoteMessage.getData());
 
            // Send the data into the SDK
-           String account = "82055668";
+           String account = "12345678"; //Replace with your account id.
            PushMessage message = LivePerson.handlePushMessage(this, remoteMessage.getData(), account, false);
 
            //Code snippet to add push UI notification

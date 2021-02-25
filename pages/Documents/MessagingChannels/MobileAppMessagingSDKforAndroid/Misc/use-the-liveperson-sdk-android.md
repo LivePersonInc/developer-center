@@ -327,7 +327,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
                 Log.d(TAG, "Message data payload: " + remoteMessage.getData());
 
                 // Send the data into the SDK
-                String account = "82055668";
+                String account = "12345678";
                 PushMessage message = LivePerson.handlePushMessage(this, remoteMessage.getData(), account, false);
 
                 //Code snippet to add push UI notification
@@ -361,8 +361,8 @@ The proprietary SDK notification is only for display purposes, interacting with 
         protected void onHandleIntent(Intent intent) {
             String token = FirebaseInstanceId.getInstance().getToken();
             // Register to Liveperson Pusher
-            String account = "82055668";
-            String appID = "com.shaym.sdk28";
+            String account = "12345678"; //Replace with your account id.
+            String appID = "com.liveperson.sampleapp"; //Replace with your applicationId.
             LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);
         }
      }
