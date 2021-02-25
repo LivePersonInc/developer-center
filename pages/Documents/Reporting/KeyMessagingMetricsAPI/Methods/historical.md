@@ -7,7 +7,7 @@ categoryname: "Reporting"
 documentname: Key Messaging Metrics API
 subfoldername: Methods
 order: 10
-permalink: key-messaging-metrics-api-methods-metrics.html
+permalink: key-messaging-metrics-api-methods-historical.html
 
 indicator: messaging
 
