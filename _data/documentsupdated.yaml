@@ -841,6 +841,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Metrics
+          - subpagename: Historical
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
