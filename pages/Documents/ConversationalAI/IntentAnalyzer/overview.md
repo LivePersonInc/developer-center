@@ -57,6 +57,6 @@ It's a best practice to have only one domain enabled for Intent Analyzer at a ti
 
     And in the dashboard that lists your domains, the domain now indicates that Intent Analyzer is enabled.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/intentAnalyzer_intentsDashboard.png">
+    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/intentAnalyzer_intentsDashboard.png">
 
     You can view the enabled intents in the [Intent Analyzer dashboard](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-dashboard.html).
