@@ -44,7 +44,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
 2. In the **dependencies** section, add:
    ```java
    dependencies {
-       implementation  "com.liveperson.android:lp_messaging_sdk:4.7.0"
+       implementation  "com.liveperson.android:lp_messaging_sdk:4.7.1"
    }
    ```
 
@@ -78,7 +78,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
        androidTestImplementation "com.android.support.test:runner:1.0.1"
        androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.1"
        // LivePerson SDK
-       implementation  "com.liveperson.android:lp_messaging_sdk:4.7.0"
+       implementation  "com.liveperson.android:lp_messaging_sdk:4.7.1"
    }
    ```
 
@@ -94,7 +94,7 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
        compileSdkVersion 28
    }
    ```
-6. In the **defaultConfig** section, make sure the *minSDKVersion* is set **19**:
+6. In the **defaultConfig** section, make sure the *minSDKVersion* is set **21**:
    ```java
    defaultConfig {
        applicationId "com.mybrand.app"
@@ -206,9 +206,9 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
 
 2. **Select your choice of authentication** for initializing the SDK instance.
 
-   For more details on Code Flow and Implicit Flow for the Mobile SDK, see [How It Works](mobile-sdk-and-web-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow). 
+   For more details on Code Flow and Implicit Flow for the Mobile SDK, see [How It Works](consumer-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow). 
 
-   - **[Code Flow](mobile-sdk-and-web-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow)** (authenticated) 
+   - **[Code Flow](consumer-authentication-how-it-works.html#sign-on-flow-mobile-sdk-code-flow)** (authenticated) 
 
      The LivePerson back-end verifies the authentication token sent by the SDK with your system servers. If the key cannot be verified on your company’s backend servers, this call fails.
 
@@ -222,21 +222,21 @@ If you want to use the Monitoring API, you must [initialize the Messaging SDK wi
      lpAuthenticationParams.setHostAppRedirectUri("yourRedirectUrl")
      ```
 
-   - **[Implicit Flow](mobile-sdk-and-web-authentication-how-it-works.html#sign-on-flow-mobile-sdk-implicit-flow)** (authenticated)  
+   - **[Implicit Flow](consumer-authentication-how-it-works.html#sign-on-flow-mobile-sdk-implicit-flow)** (authenticated)  
 
       ```java
       LPAuthenticationParams().setHostAppJWT("yourJwt")
       ```
 
-      Once the Authentication key expires, you get notified with a callback / local intent [`void onTokenExpired()`](android-callbacks-index.html#token-expired).
+      Once the Authentication key expires, you get notified with a callback / local intent [`void onTokenExpired()`](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#token-expired).
 
-      To re-connect with a new Authentication key, use [`reconnect(LPAuthenticationParams lpAuthenticationParams)`](android-methods.html#reconnect)
+      To re-connect with a new Authentication key, use [`LivePerson.reconnect() API)`](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect)
 
 
       {:.important}
       Errors while trying to connect uses callback: `void onError(TaskType type, String message);`
 
-   - **[Unauth Flow](mobile-app-messaging-sdk-for-android-advanced-features-unauthenticated-in-app-messaging.html)**
+   - **[Unauth Flow](mobile-app-messaging-sdk-for-android-resources-authentication.html#unauthenticated-in-app-messaging)**
 
      ```java
       String brandID = "53949244";
@@ -459,10 +459,10 @@ Congratulations!  You're all set.
 You can now do any of the following:
 - [Configure the SDK](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html). You can register for LivePerson events related to the conversation, determine the layout of messaging with the app, configure Proguard, or define the backup rules for auto backup and restore.  You can also customize the look and feel of the conversation screen with your branding.xml file. Additionally, you can configure the style of the message EditText in your styles.xml file. 
 
-- [Enable features in your AndroidManifest.xml file](mobile-app-messaging-sdk-for-android-appendix-use-the-liveperson-sdk-android.html#step-2---add-enabled-features-to-your-androidmanifestxml-file). If you have vibrate on new message, photo sharing, or audio messaging enabled, you must add these features to your app's AndroidManifest.xml file.  
+- [Enable features in your AndroidManifest.xml file](mobile-app-messaging-sdk-for-android-resources-use-the-liveperson-sdk-android.html). If you have vibrate on new message, photo sharing, or audio messaging enabled, you must add these features to your app's AndroidManifest.xml file.  
 
 - [Configure push notifications](mobile-app-messaging-sdk-for-android-push-notifications.html). Push and local notifications are a key factor that makes the experience better for consumers. They never have to stay in your app or keep the window open as they get a proactive notification as soon as a reply or notice is available.
 
-- Configure [Photo sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-android-advanced-features-file-sharing.html). Agents within Conversational Cloud to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device. 
+- Configure [Photo sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html) and [File sharing](mobile-app-messaging-sdk-for-android-advanced-features-photo-and-file-sharing.html). Agents within Conversational Cloud to share photos and files with consumers. Once sent, the consumer gets a notification only if push notifications are enabled. Otherwise, when the consumer returns to the conversation, the download icon appears in the unread message area of the conversation. The consumer can tap the thumbnail to view it or share it through the default app on the device. 
 
 - [Configure quick replies](mobile-app-messaging-sdk-for-android-advanced-features-welcome-message-with-quick-replies.html). When a consumer starts a new conversation, or a new customer visits the site, brands can send the first message with a list of quick replies of common intents. 
