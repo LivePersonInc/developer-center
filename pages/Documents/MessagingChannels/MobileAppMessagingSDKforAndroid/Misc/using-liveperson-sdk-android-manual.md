@@ -78,12 +78,11 @@ apply plugin: "com.android.application"
             dirs project(":lp_messaging_sdk").file("aars")
         }
     }
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.shaym.sdk28"
-        minSdkVersion 19
-        targetSdkVersion 26
+        minSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -104,8 +103,7 @@ dependencies {
         exclude group: "com.android.support", module: "support-annotations"
     })
     compile "com.android.support.constraint:constraint-layout:1.0.2"
-    compile "com.google.firebase:firebase-messaging:11.6.0"
-    compile "com.google.firebase:firebase-core:11.6.0"
+    compile "com.google.firebase:firebase-messaging:18.0.0"
 
 
     testCompile "junit:junit:4.12"
@@ -265,7 +263,6 @@ private void initOpenConversationButton() {
                openActivity();
            }
            else {
-// Push - later in this tutorial
                removeNotification();
                initActivityConversation(); // The conversation activity
            }
@@ -282,9 +279,7 @@ A few notes on this step:
 
 * We are using the brandID and appID which we declared in the top of this class.
 
-* If the initialization is a success, we will call the `openActivity` method
-
-* GCMRegistration is a service we will implement in order to use push notifications, we will touch on that later on in this tutorial.
+* If the initialization is a success, we will call the `openActivity` method.
 
 ```java
 private void  initActivityConversation() {
@@ -293,7 +288,7 @@ private void  initActivityConversation() {
          @Override
          public void onInitSucceed() {
              // you can"t register pusher before initialization
-             handleGCMRegistration(MainActivity.this);
+             handlePusherRegistration(MainActivity.this);
              runOnUiThread(new Runnable() {
                  @Override
                  public void run() {
@@ -355,8 +350,7 @@ private void openActivity() {
 **Add the following lines in your app.gradle dependencies section:**
 
 ```java
-compile "com.google.firebase:firebase-messaging:11.6.0"
-compile "com.google.firebase:firebase-core:11.6.0"
+compile "com.google.firebase:firebase-messaging:18.0.0"
 ```
 
 **Change the "multiDexEnabled" under the android tag to true**
@@ -371,7 +365,7 @@ multiDexEnabled true
 
 ![Data Sources](img/androiddatasources.jpg)
 
-![Data Sources Step 2](img/androiddatasources2.jpg)
+![Data Sources Step 2](img/androiddatasources2.png)
 
 {:start="2"}
 2. Click Manage, on the right of "Mobile app management" tab
@@ -402,20 +396,14 @@ Then click "Create app"
 
 1. Add the following services + receiver under the application tag:
 
-```java
-<service
+```xml
+       <service
           android:name=".push.fcm.MyFirebaseMessagingService">
            <intent-filter>
                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
            </intent-filter>
        </service>
-       <!--This service is used to receive and register the token when it is refreshed-->
-       <service
-           android:name=".push.fcm.MyFirebaseInstanceIDService">
-           <intent-filter>
-               <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-           </intent-filter>
-       </service>
+
        <service
            android:name=".push.fcm.FirebaseRegistrationIntentService"
            android:exported="false">
@@ -429,7 +417,7 @@ Then click "Create app"
 ```
 
 
-**Note**: After you"ve added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, MyFirebaseInstanceIDService, Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
+**Note**: After you"ve added the services you will have to create the classes to fit those services. Create new classes called: MyFirebaseMessagingService, Firebase registrationintentservice, NotificationUI (or choose your own names for these classes).
 
 **Change the path of the services according to the classes you just created.**
 
@@ -442,10 +430,10 @@ Then click "Create app"
 ```
 
 {:start="3"}
-3. Following the `handleGCMRegistration(MainActivity.this);` call we added at the `init` stage, add the following function to your messaging activity call in order to register to the pusher:
+3. Following the `handlePusherRegistration(MainActivity.this);` call we added at the `init` stage, add the following function to your messaging activity call in order to register to the pusher:
 
 ```java
-private void handleGCMRegistration(Context ctx) {
+private void handlePusherRegistration(Context ctx) {
    Intent intent = new Intent(ctx, FirebaseRegistrationIntentService.class);
    ctx.startService(intent);
 }
@@ -587,12 +575,11 @@ public class FirebaseRegistrationIntentService extends IntentService {
 
   @Override
    protected void onHandleIntent(Intent intent) {
-       Log.d(TAG, "onHandleIntent: registering the token to pusher");
        String token = FirebaseInstanceId.getInstance().getToken();
        // Register to Liveperson Pusher
        String account = "82055668";
        String appID = "com.shaym.sdk28";
-       LivePerson.registerLPPusher(account, appID, token);
+       LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);
    }
 }
 ```
@@ -633,27 +620,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
    }
 
-}
-```
-
-`MyFirebaseInstanceIDService`
-
-This is a pretty simple service that will be called every time Google’s token is refreshed so you can re-register to the push service.
-
-Simple example:
-
-```java
-public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
-
-  private static final String TAG = "MyFirebaseIIDService";
-
-  @Override
-  public void onTokenRefresh() {
-     // Get updated InstanceID token.
-     Intent intent = new Intent(this, FirebaseRegistrationIntentService.class);
-     startService(intent);
-
-  }
 }
 ```
 

@@ -2,20 +2,7 @@
 pagename: Configure the Android SDK
 
 redirect_from:
-  - android-initialization.html
-  - mobile-app-messaging-sdk-for-android-configuration-initialization.html
-  - android-conversations-lifecycle.html
-  - mobile-app-messaging-sdk-for-android-configuration-conversations-lifecycle.html
-  - android-callbacks-interface.html
   - mobile-app-messaging-sdk-for-android-configuration-liveperson-callbacks-interface.html
-  - android-conversations-lifecycle.html
-  - mobile-app-messaging-sdk-for-android-configuration-conversations-lifecycle.html
-  - android-logs.html
-  - mobile-app-messaging-sdk-for-android-configuration-logs-and-info.html
-  - android-UI.html
-  - mobile-app-messaging-sdk-for-android-configuration-ui.html
-  - android-user-data.html
-  - mobile-app-messaging-sdk-for-android-configuration-user-data.html
   - android-configuring-changing-fonts.html
   - mobile-app-messaging-sdk-for-android-customization-and-branding-changing-fonts.html
   - android-configuring-edittext.html
@@ -234,16 +221,15 @@ For example:
 <string name="lp_google_maps_key">WIdew3245ERsdfsdgretwemyMgF5</string>
 ```
 
-The SDK's manifest uses internally a _**meta-data**_ tag block with _**com.google.android.maps.v2.API_KEY**_. If the host app uses the same meta-data block it needs to add a 'replace' value parameter.
+The SDK's manifest uses internally a _**meta-data**_ tag block with _**com.google.android.geo.API_KEY**_. If the host app uses the same meta-data block it needs to add a 'replace' value parameter.
 For example:
 
 ```xml
 <meta-data
-  android:name="com.google.android.maps.v2.API_KEY"
-  android:value="WIdew3245ERsdfsdgretwemyMgF5"
-  tools:replace = "value"/>
+  android:name = "com.google.android.geo.API_KEY"
+  android:value = "WIdew3245ERsdfsdgretwemyMgF5"
+  tools:replace = "value" />
 ```
-
 
 
 ### Initialize the SDK with Monitoring Params
@@ -597,7 +583,6 @@ startConvBtn.setOnClickListener(new View.OnClickListener() {
             openActivity();
         }
         else {
-// Push - later in this tutorial
             removeNotification();
             initActivityConversation(); // The conversation activity
         }
@@ -618,7 +603,7 @@ private void  initActivityConversation() {
         @Override
         public void onInitSucceed() {
             // you can't register pusher before initialization
-            handleGCMRegistration(MainActivity.this);
+            handlePusherRegistration(MainActivity.this);
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -692,7 +677,7 @@ For the full list of Callbacks, see the [Android Callbacks Index](android-callba
 
 ### User Data
 
-Pass and display consumer information to agents, and agent information to consumers. See more information about each method, see [setUserProfile](android-methods.html#setuserprofile) and [checkAgentID](android-methods.html#checkagentid)
+Pass and display consumer information to agents, and agent information to consumers. See more information about each method, see [setUserProfile](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#setuserprofile) and [checkAgentID](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#checkagentid)
 
 #### Set the User Profile (Not an SDE):
 
