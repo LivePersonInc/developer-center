@@ -114,11 +114,7 @@ When working with the answer choices, if you move your mouse over an answer, you
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_actualvalue1.png">
 
-In some cases, while you might see an English word as the actual value, a numeric value is sent to Analytics Builder behind the scenes.
-
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_actualvalue2.png">
-
-The actual value for an answer choice never changes, not even when you change the answer text, i.e., the text value.
+The actual value never changes, not even when you change the answer text, i.e., the text value.
 
 #### Reordering answer choices
 
