@@ -67,7 +67,7 @@ If you created your knowledge base before March 2, 2021, you might have chosen *
 
 Knowledge Base intents like these are a *legacy feature* that uses the LivePerson (Legacy) engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
 
-To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible.
+To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible, as **LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021**.
 
 ### Languages
 
