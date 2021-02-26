@@ -217,15 +217,15 @@ Interaction support varies by channel. Use this page to understand whether an in
 | --- | --- |
 | Dialog Starter | Yes |
 | Text statement | Yes |
-| Image statement |  |
-| Audio statement |  |
-| Video statement |  |
+| Image statement | No  |
+| Audio statement | No |
+| Video statement | No |
 | Apple rich link | No |
-| Multiple choice question |  |
-| Text question |  |
-| Structured question |  |
-| Button question |  |
-| Quick Reply question |  |
+| Multiple choice question | No |
+| Text question | Yes |
+| Structured question | No |
+| Button question | No |
+| Quick Reply question | No |
 | List Picker question | No |
 | Time Picker question | No |
 | Integration | Yes |
