@@ -185,7 +185,6 @@
           - subpagename: Statements
           - subpagename: Questions
           - subpagename: Integrations
-          - subpagename: Code
           - subpagename: Configuration - Next Action
           - subpagename: Configuration - Custom Code
           - subpagename: Configuration - Settings
