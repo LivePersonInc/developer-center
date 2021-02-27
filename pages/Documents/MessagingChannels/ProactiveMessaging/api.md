@@ -87,7 +87,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
                 "5": "Text5"
             },
             "headerVariables": {
-                "video": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4" // only required for rich text; valid keys are 'image', 'video', 'document'
+                "video": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4" 
             }
         },
         {
@@ -325,7 +325,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 
 <strong>What are different components of a Whatsapp template? Are all the components mandatory to be present in a rich template?</strong>
 - There are four different components of a Whatsapp template
-1> Header (Image, Video, Document is supported currently)
+1> Header (Image, Video, Document is supported currently. Only 1 type is allowed for a template)
 2> Body
 3> Footer
 4> Buttons (2 types: Quick Reply Buttons, Call To Action Buttons)
