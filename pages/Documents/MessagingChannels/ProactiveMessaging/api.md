@@ -67,7 +67,45 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | Content-Type | Used to indicate the media type of the resource | application/json |
 | Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | Bearer <<APP_JWT>> |
 
-**Request Body Example - JSON Payload**
+**Request Body Example - JSON Payload - Old Version**
+
+```json
+{
+    "campaignName": "TestProactiveAPI",
+    "skill": "sales",
+    "templateId": "943679028015322",
+    "consent": true,
+    "outboundNumber": "12025166656",
+    "consumers": [
+        {
+            "consumerCountryCode": "1",
+            "consumerPhoneNumber": "1012959736",
+            "variables": {
+            	"1": "Test outbound api"
+            }
+        }
+    ]
+}
+```
+**Response Example**
+
+```json
+{
+   "proactiveCampaignId": "08TwCku2h",
+   "leCampaignId": "1887624732",
+   "leEngagementId": "1966477634",
+   "requestTraceId": "705ffabe-14bb-4217-9eb7-8c12ff43a5d6",
+   "failedConsumers": [],
+   "acceptedConsumers": [
+       {
+           "id": "tjlaY5FJfv",
+           "phoneNumber": "+11012959736"
+       }
+   ]
+}
+```
+
+**Request Body Example - JSON Payload - New Version - Whatsapp With Rich Template**
 
 ```json
 {
@@ -139,6 +177,118 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
             "phoneNumber": "+12345678891",
             "consumerContent": {
                 "wa": "12345678891"
+            }
+        }
+    ]
+}
+```
+
+**Request Body Example - JSON Payload - New Version - SMS**
+
+```json
+{
+    "campaignName": "TestProactiveAPI",
+    "skill": "sales",
+    "templateId": "666555567888",
+    "outboundNumber": "22222222222",
+    "consent": true,
+    "consumers": [
+        {
+            "consumerContent": {"sms": "12345678891"},
+            "variables": {
+                "1": "Hello X"
+            }
+        },
+        {
+            "consumerContent": {"sms": "1234456678899"},
+            "variables": {
+                "1": "Hello Y"
+            }
+        }
+    ]
+}
+```
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "phoneNumber": "+12345678891",
+            "consumerContent": {
+                "sms": "12345678891"
+            }
+        },
+        {
+            "id": "674476fgf-1a4f-7088-45aa-44e05560e44",
+            "phoneNumber": "+1234456678899",
+            "consumerContent": {
+                "sms": "1234456678899"
+            }
+        }
+    ]
+}
+```
+
+**Request Body Example - JSON Payload - New Version - Handoff(SMS + Whatsapp without Rich Template)**
+
+```json
+{
+    "campaignName": "TestProactiveAPI",
+    "skill": "sales",
+    "templateId": "1234567890",
+    "outboundNumber": "22222222222",
+    "consent": true,
+    "consumers": [
+        {
+            "consumerContent": {"sms": "12345678891", "wa": "12345678891"},
+            "variables": {
+                "1": "Test1",
+                "2": "Test2",
+                "3": "Test3"
+            }
+        },
+        {
+            "consumerContent": {"sms": "1234456678899", "wa": "1234456678899"},
+            "variables": {
+                "1": "Test1",
+                "2": "Test2",
+                "3": "Test3"
+            }
+        }
+    ]
+}
+```
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "phoneNumber": "+12345678891",
+            "consumerContent": {
+                "sms": "12345678891",
+                "wa": "12345678891"
+            }
+        },
+        {
+            "id": "674476fgf-1a4f-7088-45aa-44e05560e44",
+            "phoneNumber": "+1234456678899",
+            "consumerContent": {
+                "sms": "1234456678899",
+                "wa": "1234456678899"
             }
         }
     ]
