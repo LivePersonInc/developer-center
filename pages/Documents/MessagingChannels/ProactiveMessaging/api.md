@@ -67,44 +67,6 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | Content-Type | Used to indicate the media type of the resource | application/json |
 | Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | Bearer <<APP_JWT>> |
 
-**Request Body Example - JSON Payload - Old Version**
-
-```json
-{
-    "campaignName": "TestProactiveAPI",
-    "skill": "sales",
-    "templateId": "943679028015322",
-    "consent": true,
-    "outboundNumber": "12025166656",
-    "consumers": [
-        {
-            "consumerCountryCode": "1",
-            "consumerPhoneNumber": "1012959736",
-            "variables": {
-            	"1": "Test outbound api"
-            }
-        }
-    ]
-}
-```
-**Response Example**
-
-```json
-{
-   "proactiveCampaignId": "08TwCku2h",
-   "leCampaignId": "1887624732",
-   "leEngagementId": "1966477634",
-   "requestTraceId": "705ffabe-14bb-4217-9eb7-8c12ff43a5d6",
-   "failedConsumers": [],
-   "acceptedConsumers": [
-       {
-           "id": "tjlaY5FJfv",
-           "phoneNumber": "+11012959736"
-       }
-   ]
-}
-```
-
 **Request Body Example - JSON Payload - New Version - Whatsapp With Rich Template**
 
 ```json
@@ -295,6 +257,44 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
+**Request Body Example - JSON Payload - Old Version**
+
+```json
+{
+    "campaignName": "TestProactiveAPI",
+    "skill": "sales",
+    "templateId": "943679028015322",
+    "consent": true,
+    "outboundNumber": "12025166656",
+    "consumers": [
+        {
+            "consumerCountryCode": "1",
+            "consumerPhoneNumber": "1012959736",
+            "variables": {
+            	"1": "Test outbound api"
+            }
+        }
+    ]
+}
+```
+**Response Example**
+
+```json
+{
+   "proactiveCampaignId": "08TwCku2h",
+   "leCampaignId": "1887624732",
+   "leEngagementId": "1966477634",
+   "requestTraceId": "705ffabe-14bb-4217-9eb7-8c12ff43a5d6",
+   "failedConsumers": [],
+   "acceptedConsumers": [
+       {
+           "id": "tjlaY5FJfv",
+           "phoneNumber": "+11012959736"
+       }
+   ]
+}
+```
+
 ## Conversations API: Example Request and Response
 * click [**Conversations**](https://proactive-messaging.z1.fs.liveperson.com/api/api-docs/?api=outbound#/Campaign/conversations) to go through API spec and use example here to get started.
 
@@ -471,7 +471,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 | variable  		  | 1550 char max length | SMS messages more than 160 chars may be sent as multiple messages |
 
 <strong>Is Whatsapp Rich template enabled for all accounts?</strong>
-- To use Whatsapp Rich template via API/UI, reach out to Proactive team to get it enabled for the account. Currently the feature is not enabled for all accounts. It is enabled per account level.
+- To use Whatsapp Rich template via API/UI, reach out to Proactive team to get it enabled for the account. Currently the feature is not enabled for all accounts.
 
 <strong>What are different components of a Whatsapp template? Are all the components mandatory to be present in a rich template?</strong>
 - There are four different components of a Whatsapp template
@@ -479,7 +479,7 @@ Proactive Messaging service has retry mechanism internally on dependent services
 2> Body
 3> Footer
 4> Buttons (2 types: Quick Reply Buttons, Call To Action Buttons)
-A template will mandatorily have a message body; other components like header, footer, buttons may or may not be present for a template.
+Message body in WA Rich template is mandatory. Header, footer, buttons are optional in WA Rich template depending on template design.
 
 <strong>What extensions are supported for WA rich template in the header section?</strong>
 - Allowed extensions for different types of header for a rich template: 
