@@ -125,7 +125,6 @@
           - subpagename: Dialogs & Patterns
           - subpagename: Intents
           - subpagename: Integrations
-          - subpagename: Disambiguation
           - subpagename: Deploy the Bot
           - subpagename: Escalate to an Agent
       - pagename: Bot Groups & Other Techniques
