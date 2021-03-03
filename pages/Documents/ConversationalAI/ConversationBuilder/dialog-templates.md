@@ -156,3 +156,6 @@ Keep in mind that importing a dialog template often can involve importing many d
     * Environment variables
 
     You might also need to update the credentials in the imported integrations, if any.
+
+### Global Helper Functions dialog template
+LivePerson makes available a Global Helper Functions dialog template, which you can import as a way of importing a host of commonly used global functions. The global functions are designed to make it faster and easier to code, and to make your code less verbose. For more on this, see [here](conversation-builder-global-functions.html#global-helper-functions-dialog-template).

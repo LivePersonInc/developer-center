@@ -203,6 +203,7 @@
           - subpagename: Troubleshooting
       - pagename: Environment Variables
       - pagename: Versions & Releases
+      - pagename: Global Functions
       - pagename: Scripting Functions
         subpages:
           - subpagename: Introduction
@@ -830,6 +831,9 @@
           - subpagename: Agent Activity
           - subpagename: Current Queue State
           - subpagename: SLA Histogram
+  - documentname: Outbound Reporting API
+    pages:
+      - pagename: Overview
   - documentname: Key Messaging Metrics API
     basedomain: https://{domain}/manager_workspace/api/account/{accountID}
     pages:
@@ -837,6 +841,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Metrics
+          - subpagename: Historical
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -985,7 +990,9 @@
   - documentname: Proactive Messaging
     pages:
     - pagename: API
-
+  - documentname: Connect To Messaging
+    pages:
+    - pagename: API
 - categoryname: Rich Messaging
   image: rich-media
   documents:

@@ -106,6 +106,9 @@ In a single survey bot, you can include only one of each survey interaction type
 {: .important}
 If you change the answer choices for a survey question, remember to update the defined conditions accordingly in the interaction's details.
 
+{: .important}
+When the target channel is Apple Business Chat, the survey interactions (NPS, CSAT, FCR) are automatically sent to the consumer as List Picker interactions.
+
 #### Marking survey questions as optional
 
 To add a Skip option and thereby make a survey question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
