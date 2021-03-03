@@ -14,7 +14,7 @@ indicator: both
 
 This section walks through the steps that are necessary to complete before configuring Agent Assist. These steps include the creation of the following:
 
-* Airline NLU v2 starter pack in Intent Builder
+* Airline domain
 * Airline-specific knowledge base to serve FAQ articles tied to intents in the NLU domain
 * User profiles and associated skills to be tied to both human and bot agents
 * Several bots in Conversation Builder with dialogs triggered by intents from the starter pack domain
@@ -24,9 +24,9 @@ This section walks through the steps that are necessary to complete before confi
 
 Before you get started with this tutorial, download this [ZIP file](https://publisher.liveperson.net/co-agent-assist/AgentAssistTutorial_resources.zip), which contains a few, necessary resources.
 
-### Step 1: Create the Airline NLU v2 domain
+### Step 1: Create the Airline NLU domain
 
-LivePerson offers a variety of domain-specific starter packs ([pre-built domains](http://localhost:4000/intent-builder-overview.html#prebuilt-domains)) to help you get up and running with Intent Builder quickly. After signing into the LivePerson Conversational Cloud, navigate to the Conversational AI portal and complete the following steps to build out the NLU domain that will be used in the Agent Assist solution.
+LivePerson offers a variety of domain-specific starter packs ([pre-built domains](intent-builder-overview.html#prebuilt-domains)) to help you get up and running with Intent Builder quickly. After signing into the LivePerson Conversational Cloud, navigate to the Conversational AI portal and complete the following steps to build out the NLU domain that will be used in the Agent Assist solution.
 
 {: .important}
 **Customize your POC:** For demonstration purposes, this guide assumes a build-out suited for an Airline client. Add in a vertical-specific, pre-built domain to customize for your use case, or optionally add additional domains to supplement the primary one you are using. Agent Assist can pull from multiple domain intents to make recommendations for your users.
@@ -41,7 +41,7 @@ LivePerson offers a variety of domain-specific starter packs ([pre-built domains
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/add_prebuilt_domain.png">
 
-    Once completed, the LP_Airlines NLU v2 domain is created, fully trained and containing intents for use with any airline.
+    Once completed, the LP_Airlines domain is created, fully trained and containing intents for use with any airline.
 
 ### Step 2: Create the Airline FAQ knowledge base
 
@@ -87,7 +87,7 @@ With the NLU domain created, the next step is to create a knowledge base with ar
 
 ### Step 3: Create the users and skills
 
-Every bot and human agent requires a user profile and an associated skill to be deployed and accessible from within the Conversational Cloud. This section provides the details needed to update the logged-in human agent with an associated skill, as well as the details needed to create bot agents for the two bots that will be uploaded. For more details on this procedure, please see [this article](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html#step-13-create-a-bot-user) in the *Conversation Builder Getting Started with Bot Building* tutorial.
+Every bot and human agent requires a user profile and an associated skill to be deployed and accessible from within the Conversational Cloud. This section provides the details needed to update the logged-in human agent with an associated skill, as well as the details needed to create bot agents for the two bots that will be uploaded. For more details on this procedure, please see [this article](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html#step-11-create-a-bot-user) in the *Conversation Builder Getting Started with Bot Building* tutorial.
 
 {: .important}
 **Customize your POC:** This guide provides two bots that agent assist can source recommendations from. These demonstration bots do not provide much functionality out of the box, so bring in your own domain specific bots to fit the needs of your POC. Keep in mind that any additional bots created will need their own corresponding bot user agents and skills.
@@ -135,7 +135,7 @@ These bots have been created with dialog starters matched to several of the LP_A
 
 2. Click **Import Bot** in the upper-right corner, and select the "Booking Bot" JSON file that you downloaded. 
 
-    **Note**: If you have completed the previous step of creating the NLU v2 Domain, the intents will be automatically associated with the correct dialogs in the bots. However, if you have not yet done so, you will need to connect them manually to the appropriate dialog starters using Conversation Builder's Assist tool.
+    **Note**: If you have completed the previous step of creating the LivePerson domain, the intents will be automatically associated with the correct dialogs in the bots. However, if you have not yet done so, you will need to connect them manually to the appropriate dialog starters using Conversation Builder's Assist tool.
 
 3. Once uploaded, click the **Agent Connectors** menu option at the top of Conversation Builder.
 4. Select **Add Agent Connector**, and in the resulting form, select your "Booking Bot" user agent from the **Agent User ID** dropdown. Ensure that the **Conversation Type** is set to "Messaging," and click **Save**.

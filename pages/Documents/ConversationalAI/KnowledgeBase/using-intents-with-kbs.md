@@ -27,7 +27,7 @@ You associate a domain with an external knowledge base when you [add the knowled
 
 And you likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base): 
 
-<img style="width:500px" src="img/ConvoBuilder/kb_add_int.png">
+<img style="width:700px" src="img/ConvoBuilder/kb_add_int.png">
 
 Associating the domain gives you access to the domain's intents, so you can associate them with the articles. This is the next step in connecting your content to intents.
 
@@ -56,15 +56,15 @@ The following image illustrates a search in an internal knowledge base. Things w
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_test.png">
 
-By default, the Sort & Filter settings are set to "Intents" and "Fair Plus." 
+For testing and learning purposes, by default, the Filter settings are set to "Intents" and "Poor." 
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_sortandfilter.png">
 
-This means that the algorithm first checks for matches using NLU, with a threshold of Fair Plus. If it doesn’t find any matches, it attempts a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." When this happens, you should add some more training phrases to the intent to improve the results.
+This means that the algorithm first checks for matches using NLU, with a threshold of Poor. If it doesn’t find any matches, it attempts a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." When this happens, you should add some more training phrases to the intent to improve the results.
 
 If you don’t want the follow-up text search, change the **Search Mode** to "Intents Only." This performs only the intents search. If you want to perform only the text search, change the **Search Mode** to "Text." For more on search modes, see farther below in this topic.
 
-If you don't get any results with your search, you can adjust these filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
+If you don't get any results with your search, you can adjust these filters by clicking **Add Filters** in the upper-left corner.
 
 Based on your results, add more training phrases to the intents in the domain if needed.
 
@@ -121,7 +121,7 @@ When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to 
 | --- | --- |
 | an external knowledge base with LivePerson AI | the scoring breakdown for the NLU engine used by the associated domain is used |
 | an internal knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
-| an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson NLU v1 is used |
+| an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson (Legacy) is used |
 
 For these confidence score breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
 

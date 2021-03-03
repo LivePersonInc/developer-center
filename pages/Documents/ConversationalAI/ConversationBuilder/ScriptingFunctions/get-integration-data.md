@@ -87,3 +87,36 @@ if (results < 1) {
       botContext.sendMessage('Sorry, I was not able to find any notes for this contact.');
 }
 ```
+
+### Get file name
+
+The `getFileCaption` function is used to retrieve the original filename of a file that’s uploaded to an external file share via a [File integration](conversation-builder-integrations-file-integrations.html).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getFileCaption()` | None | (string) The filename of the file that’s uploaded |
+
+#### Example
+
+```javascript
+// get the filename
+var fileName = botContext.getFileCaption();
+// set the filename in a variable
+botContext.setBotVariable('fileName',fileName,true,false);
+```
+
+### Get file type
+The `getFileType` function is used to retrieve the file type (PDF, JPEG, etc.) of the file that’s uploaded to an external file share via a [File integration](conversation-builder-integrations-file-integrations.html).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getFileType()` | None | (string) The file type of the file that’s uploaded |
+
+#### Example
+
+```javascript
+// get the file type
+var fileType = botContext.getFileType();
+// set the file type in a variable
+botContext.setBotVariable('fileType',fileType,true,false);
+```
