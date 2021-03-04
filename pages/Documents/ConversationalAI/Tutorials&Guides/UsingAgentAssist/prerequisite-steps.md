@@ -22,11 +22,11 @@ This section walks through the steps that are necessary to complete before confi
 
 ### Before you begin
 
-Before you get started with this tutorial, download this [ZIP file](https://publisher.liveperson.net/co-agent-assist/AgentAssistTutorial_resources.zip), which contains a few, necessary resources.
+Before you get started with this tutorial, download this [ZIP file](assets/resources/AgentAssistTutorial_resources.zip), which contains a few, necessary resources.
 
 ### Step 1: Create the Airline NLU v2 domain
 
-LivePerson offers a variety of domain-specific starter packs ([pre-built domains](http://localhost:4000/intent-builder-overview.html#prebuilt-domains)) to help you get up and running with Intent Builder quickly. After signing into the LivePerson Conversational Cloud, navigate to the Conversational AI portal and complete the following steps to build out the NLU domain that will be used in the Agent Assist solution.
+LivePerson offers a variety of domain-specific starter packs ([pre-built domains](/intent-builder-overview.html#prebuilt-domains)) to help you get up and running with Intent Builder quickly. After signing into the LivePerson Conversational Cloud, navigate to the Conversational AI portal and complete the following steps to build out the NLU domain that will be used in the Agent Assist solution.
 
 {: .important}
 **Customize your POC:** For demonstration purposes, this guide assumes a build-out suited for an Airline client. Add in a vertical-specific, pre-built domain to customize for your use case, or optionally add additional domains to supplement the primary one you are using. Agent Assist can pull from multiple domain intents to make recommendations for your users.
