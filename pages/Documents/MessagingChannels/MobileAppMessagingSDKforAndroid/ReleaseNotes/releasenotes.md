@@ -13,6 +13,45 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.5.1
+
+**Release date:** February 19, 2021
+
+# Overview
+Android Mobile Messaging SDK version 5.5.1 release provides the push notification support for Huawei devices without Google Mobile Services and bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.5.1 uses:
+- Minimum API version 21
+- Compile API version 30
+- Target API version 30
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+# New API:
+
+## [registerLPPusher API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#registerlppusher)
+
+Added [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) to support Huawei devices without Google Play Services. Note: LivePerson [push notification service](push-notification-service-overview.html) doesn't support sending push notification directly to Huawei Push Kit. Only [push proxy](push-notification-service-configuration-of-push-proxy.html) is supported.
+
+The notificationType in payload for Huawei device is "huawei". See [Android payload json](push-notification-service-tls-authentication.html#payload) for details.
+
+```java
+public static void registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| brandId | The account ID, for example, 652838922. |
+| appId | The host app ID, for example, com.liveperson.myApp. |
+| deviceToken | The device token for push notification. |
+| pushType | The push notification type. See [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) for details. |
+| authenticationParams | An optional parameter that enables registering without first opening a conversation. |
+| registrationCompletedCallback | An optional callback on the registration status. |
+
+# Bugs Fixed:
+- Crash on conversation screen.
+
+
 # Android Messaging SDK - Version 5.5.0
 
 **Release date:** December 11, 2020
@@ -429,6 +468,47 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **handlePush(Context context, Bundle data, String brandId, boolean showNotification)** , use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
+
+# Android Messaging SDK - Version 4.7.1
+
+**Release date:** February 19, 2021
+
+# Overview
+Android Mobile Messaging SDK version 4.7.1 release provides the push notification support for Huawei devices without Google Mobile Services and bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.7.1 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.7.0)**
+
+# New API:
+
+## [registerLPPusher API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#registerlppusher)
+
+Added [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) to support Huawei devices without Google Play Services. Note: LivePerson [push notification service](push-notification-service-overview.html) doesn't support sending push notification directly to Huawei Push Kit. Only [push proxy](push-notification-service-configuration-of-push-proxy.html) is supported.
+
+The notificationType in payload for Huawei device is "huawei". See [Android payload json](push-notification-service-tls-authentication.html#payload) for details.
+
+```java
+public static void registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| brandId | The account ID, for example, 652838922. |
+| appId | The host app ID, for example, com.liveperson.myApp. |
+| deviceToken | The device token for push notification. |
+| pushType | The push notification type. See [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) for details. |
+| authenticationParams | An optional parameter that enables registering without first opening a conversation. |
+| registrationCompletedCallback | An optional callback on the registration status. |
+
+# Bugs Fixed:
+- Crash on conversation screen.
+
 
 # Android Messaging SDK - Version 4.7.0
 

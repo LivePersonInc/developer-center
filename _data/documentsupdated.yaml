@@ -125,7 +125,6 @@
           - subpagename: Dialogs & Patterns
           - subpagename: Intents
           - subpagename: Integrations
-          - subpagename: Disambiguation
           - subpagename: Deploy the Bot
           - subpagename: Escalate to an Agent
       - pagename: Bot Groups & Other Techniques
@@ -287,16 +286,17 @@
           - subpagename: Mapping Content Metadata
           - subpagename: Writing a Transformation Specification
           - subpagename: Best Practices
+          - subpagename: Beta - Shortening Long-Form Content
       - pagename: Internal Knowledge Bases
         subpages:
           - subpagename: Introduction
           - subpagename: Knowledge Bases
           - subpagename: Articles
           - subpagename: Best Practices
-          - subpagename: Limits
       - pagename: Using Intents with KBs
       - pagename: Sending Content to Consumers
       - pagename: Common Settings & Tasks
+      - pagename: Limits
   - documentname: Bots Status
     pages:
       - pagename: Overview
@@ -831,6 +831,9 @@
           - subpagename: Agent Activity
           - subpagename: Current Queue State
           - subpagename: SLA Histogram
+  - documentname: Outbound Reporting API
+    pages:
+      - pagename: Overview
   - documentname: Key Messaging Metrics API
     basedomain: https://{domain}/manager_workspace/api/account/{accountID}
     pages:
@@ -838,6 +841,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Metrics
+          - subpagename: Historical
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -986,7 +990,9 @@
   - documentname: Proactive Messaging
     pages:
     - pagename: API
-
+  - documentname: Connect To Messaging
+    pages:
+    - pagename: API
 - categoryname: Rich Messaging
   image: rich-media
   documents:

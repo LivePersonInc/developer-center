@@ -129,3 +129,7 @@ To get the token and the userId follow these steps:
 
 {: .notice}
 Note: If you get a message that the token is not valid anymore, you have to perform step 1 - 6 again.
+
+### Snippets
+
+Using the `init` command will also create an .idea folder in your project directory. These folders contain the same [snippets](https://developers.liveperson.com/liveperson-functions-developing-with-faas-snippets.html) you'll find in our online UI. We offer these snippets for both vscode and intellij idea/webstorm. The IDEs should automatically detect the snippets files once you open your initialized projects as a workspace. If not you can check out [vscode's](https://code.visualstudio.com/docs/editor/userdefinedsnippets) or [intellij's](https://www.jetbrains.com/help/webstorm/using-live-templates.html) documentations respectively on how to add them manually.
