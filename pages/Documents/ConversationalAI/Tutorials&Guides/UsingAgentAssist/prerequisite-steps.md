@@ -19,6 +19,8 @@ This section walks through the steps that are necessary to complete before confi
 * User profiles and associated skills to be tied to both human and bot agents
 * Several bots in Conversation Builder with dialogs triggered by intents from the starter pack domain
 * Web messaging engagement directed to the signed-in “human” skill
+### Before you Begin
+[Download Tutorial Resources]({{site.url}}/download_files/AgentAssistTutorial_resources.zip)
 
 ### Before you begin
 
