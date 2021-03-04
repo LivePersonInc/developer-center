@@ -40,7 +40,11 @@ The card is the container that holds the information that should be displayed by
   </thead>
   <tr>
     <td>type</td>
+<<<<<<< HEAD
     <td>Type of the Container.<br/>
+=======
+    <td>Type of the Container.</br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
 For Rich Cards in GBM the type should always be <b>vertical</b>, as it best represents the layout on customer side.</td>
     <td>Enum</td>
     <td>Y</td>
@@ -54,16 +58,28 @@ For Rich Cards in GBM the type should always be <b>vertical</b>, as it best repr
   <tr>
     <td>display</td>
     <td>Object that defines how the Image is being displayed.</td>
+<<<<<<< HEAD
     <td><a href="#display-options">DisplayOptions</a></td>
+=======
+    <td><a id="#display-options">DisplayOptions</a></td>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     <td>N</td>
   </tr>
   <tr>
     <td>elements</td>
+<<<<<<< HEAD
     <td>Array of elements/templates that contains the actual content of the Rich Card. The Elements must be in the following order:<br/><br/>
 1) <a href="#image">Image</a><br/>
 2) <a href="#title">Title</a><br/>
 3) <a href="#description">Description</a><br/>
 4-7) <a href="#button">Button</a><br/><br/>
+=======
+    <td>Array of elements/templates that contains the actual content of the Rich Card. The Elements must be in the following order:</br></br>
+1) <a href="#image">Image</a></br>
+2) <a href="#title">Title</a></br>
+3) <a href="#description">Description</a></br>
+4-7) <a href="#button">Button</a></br></br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
 While all of these elements are optional, it is still required to have at least one Image, Title, or Description	</td>
     <td>Array(Element)</td>
     <td>Y</td>
@@ -102,8 +118,13 @@ _If the image size is not matching to the selected display option, it will be cr
   </thead>
   <tr>
     <td>size</td>
+<<<<<<< HEAD
     <td>Defines the height of the Image in a GBM Rich Card.<br/>
     Can be one of:<br/>
+=======
+    <td>Defines the height of the Image in a GBM Rich Card.</br>
+    Can be one of:</br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     <li><b>compact</b> (height = 112dp)</li>
     <li><b>tall</b> (height = 264dp)</li>
     If no value is given the height is 168dp.
@@ -146,7 +167,11 @@ The image that will be displayed at the top of the rich card. If no image is giv
   <tr>
     <td>url</td>
     <td>
+<<<<<<< HEAD
     The URL of the image that will be send to google.<br/>
+=======
+    The URL of the image that will be send to google.</br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     The domain where the image is being stored must be whitelisted before it can be used.
     </td>
     <td>String</td>
@@ -195,7 +220,11 @@ The highlighted headline of the rich card.
   <tr>
     <td>text</td>
     <td>
+<<<<<<< HEAD
     The actual text of the headline.<br/>
+=======
+    The actual text of the headline.</br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     The text can not be longer than 200 characters.
     </td>
     <td>String</td>
@@ -238,7 +267,11 @@ The text of the rich card.
   <tr>
     <td>text</td>
     <td>
+<<<<<<< HEAD
     The description text.<br/>
+=======
+    The description text.</br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     The text can not be longer than 2000 characters.
     </td>
     <td>String</td>
@@ -280,7 +313,11 @@ A button at the bottom of a rich card.
   <tr>
     <td>title</td>
     <td>
+<<<<<<< HEAD
     The text of the button.<br/>
+=======
+    The text of the button.</br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     The text can not be longer than 25 characters.
     </td>
     <td>String</td>
@@ -289,11 +326,19 @@ A button at the bottom of a rich card.
   <tr>
     <td>click</td>
     <td>
+<<<<<<< HEAD
     The click operations that should be executed when the customer clicks the button.<br/>
     These click operations must contain at least one action which can be any action of the following types:
     <li><a href="getting-started-with-rich-messaging-introduction.html#publish-text">publishText</a></li>
     <li><a href="getting-started-with-rich-messaging-introduction.html#navigate">navigate</a></li>
     <li><a href="getting-started-with-rich-messaging-introduction.html#link">link</a></li><br/>
+=======
+    The click operations that should be executed when the customer clicks the button.</br>
+    These click operations must contain at least one action which can be any action of the following types:
+    <li><a href="getting-started-with-rich-messaging-introduction.html#publish-text">publishText</a></li>
+    <li><a href="getting-started-with-rich-messaging-introduction.html#navigate">navigate</a></li>
+    <li><a href="getting-started-with-rich-messaging-introduction.html#link">link</a></li></br>
+>>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     If an action of type navigate or link is added, a publishText action can additionaly be included in the click operation.
     </td>
     <td><a href="getting-started-with-rich-messaging-introduction.html#element-click-operations">ClickOperations</a></td>

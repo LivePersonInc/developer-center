@@ -5,7 +5,11 @@
   "dependencies": {
     "axios": "^0.21.1",
     "gulp": "^4.0.2",
+<<<<<<< HEAD
     "gulp-shell": "^0.7.1",
+=======
+    "gulp-shell": "^0.8.0",
+>>>>>>> d3625f89788e2fba8df1b8a4876fb8df0698757f
     "jquery-highlight": "^3.5.0",
     "lodash": ">=4.17.19",
     "lodash.template": ">=4.5.0",
