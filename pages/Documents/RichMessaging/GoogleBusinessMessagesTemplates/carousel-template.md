@@ -35,28 +35,17 @@ The carousel is the container that holds all cards that should be displayed by t
   </thead>
   <tr>
     <td>type</td>
-<<<<<<< HEAD
-    <td>Type of the Container.<br/>
-=======
     <td>Type of the Container.</br>
->>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
 For carousels, type should always be <b>carousel</b>.</td>
     <td>Enum</td>
     <td>Y</td>
   </tr>
   <tr>
     <td>elements</td>
-<<<<<<< HEAD
-    <td>Array of GBM Rich Cards<br/>
-      Google allows up to 10 cards in a carousel, and requires at least two cards. All Cards in a carousel must use the same <a href="google-business-messages-templates-card-template.html#display-options">display options</a>.
-    </td>
-    <td>Array(<a href="google-business-messages-templates-card-template.html">RichCard</a>)</td>
-=======
     <td>Array of GBM Rich Cards</br>
       Google allows up to 10 cards in a carousel, and requires at least two cards. All Cards in a carousel must use the same <a href="">display options</a>.
     </td>
     <td>Array(<a href="">RichCard</a>)</td>
->>>>>>> bf2c39b2279fe83efe2a0439fde9aff8f5d398e3
     <td>Y</td>
   </tr>
 </table>

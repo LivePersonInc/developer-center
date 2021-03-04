@@ -1,17 +1,5 @@
 {
   "files": {
-<<<<<<< HEAD
-    "main.js": "/free-trial-registration/static/js/main.fafad134.chunk.js",
-    "main.js.map": "/free-trial-registration/static/js/main.fafad134.chunk.js.map",
-    "runtime-main.js": "/free-trial-registration/static/js/runtime-main.6abf0e0b.js",
-    "runtime-main.js.map": "/free-trial-registration/static/js/runtime-main.6abf0e0b.js.map",
-    "static/css/2.0978f8b3.chunk.css": "/free-trial-registration/static/css/2.0978f8b3.chunk.css",
-    "static/js/2.8ce1b9ab.chunk.js": "/free-trial-registration/static/js/2.8ce1b9ab.chunk.js",
-    "static/js/2.8ce1b9ab.chunk.js.map": "/free-trial-registration/static/js/2.8ce1b9ab.chunk.js.map",
-    "index.html": "/free-trial-registration/index.html",
-    "static/css/2.0978f8b3.chunk.css.map": "/free-trial-registration/static/css/2.0978f8b3.chunk.css.map",
-    "static/js/2.8ce1b9ab.chunk.js.LICENSE.txt": "/free-trial-registration/static/js/2.8ce1b9ab.chunk.js.LICENSE.txt",
-=======
     "main.js": "/free-trial-registration/static/js/main.1a90a68a.chunk.js",
     "main.js.map": "/free-trial-registration/static/js/main.1a90a68a.chunk.js.map",
     "runtime-main.js": "/free-trial-registration/static/js/runtime-main.6abf0e0b.js",
@@ -23,7 +11,6 @@
     "static/css/2.0978f8b3.chunk.css.map": "/free-trial-registration/static/css/2.0978f8b3.chunk.css.map",
     "static/js/2.80d87445.chunk.js.LICENSE.txt": "/free-trial-registration/static/js/2.80d87445.chunk.js.LICENSE.txt",
     "static/media/icon-check.61aa2a95.svg": "/free-trial-registration/static/media/icon-check.61aa2a95.svg",
->>>>>>> d3625f89788e2fba8df1b8a4876fb8df0698757f
     "static/media/icon-creating.1f205c91.svg": "/free-trial-registration/static/media/icon-creating.1f205c91.svg",
     "static/media/icon-error.2dd3d152.svg": "/free-trial-registration/static/media/icon-error.2dd3d152.svg",
     "static/media/icon-success.9abe398a.svg": "/free-trial-registration/static/media/icon-success.9abe398a.svg",
@@ -34,12 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.6abf0e0b.js",
     "static/css/2.0978f8b3.chunk.css",
-<<<<<<< HEAD
-    "static/js/2.8ce1b9ab.chunk.js",
-    "static/js/main.fafad134.chunk.js"
-=======
     "static/js/2.80d87445.chunk.js",
     "static/js/main.1a90a68a.chunk.js"
->>>>>>> d3625f89788e2fba8df1b8a4876fb8df0698757f
   ]
 }
