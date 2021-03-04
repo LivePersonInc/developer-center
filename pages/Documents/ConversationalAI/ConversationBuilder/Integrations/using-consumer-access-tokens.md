@@ -46,11 +46,21 @@ You can create a Consumer Authentication credential and use it in [API integrati
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/creds_consumer_auth_1.png">
 7. Click **Save**.
 
-### Add Consumer Delegation Link to the Conversation Flow
---@Mary to add--
-
 ### Integrate with Brand API
---@Mary to add--
+
+To use a defined Consumer Authentication credential in a bot, go into the bot and add an API integration. When you do, select the Consumer Authentication credential that you created and provide the endpoint.
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/consumerAuthCred.png">
+
+Then, add the provided access as an authorization header to the API integration.  
+In request headers, add authozion header:  
+key = Authorization  
+value = Bearer {$botContext.cidp_accessToken}  
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/authorizationDelegation.png">
 
 ### Configure Delegated Access Provider
 Follow this configuration guide: [Consumer Delegation](consumer-delegation-configuration.html)
+
+### Add Consumer Delegation Link to the Conversation Flow
+
