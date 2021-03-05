@@ -105,7 +105,7 @@ There are significant benefits to using the LivePerson engine instead of the Liv
 This is LivePerson's legacy NLU engine. 
 
 {: .important}
-As of March 3, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
+As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 Key characteristics include:
 
