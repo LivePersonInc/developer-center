@@ -59,9 +59,9 @@ Domain intents make it possible for you to use the same domain in multiple ways,
 #### Knowledge Base intents
 
 {: .important}
-As of March 3, 2021, you can no longer create a knowledge base that uses Knowledge Base intents.
+As of March 5, 2021, you can no longer create a knowledge base that uses Knowledge Base intents.
 
-If you created your knowledge base before March 3, 2021, you might have chosen *not* to define the intents in a domain in Intent Builder. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
+If you created your knowledge base before March 5, 2021, you might have chosen *not* to define the intents in a domain in Intent Builder. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
 
 <img style="width:350px" src="img/ConvoBuilder/kb_kb_intents1.png">
 
