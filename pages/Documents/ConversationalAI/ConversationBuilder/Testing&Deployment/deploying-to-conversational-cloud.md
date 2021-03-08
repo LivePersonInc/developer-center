@@ -242,3 +242,51 @@ Vertical or horizontal display for rich structured content. Available for FB, We
 **Default value**: vertical<br>
 **Messaging**: Yes<br>
 **Chat**: No
+
+**The following custom configuration fields are intended for use with Manager bots:**
+
+#### filterPatterns
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+This field is used to filter the messages processed by a Manager bot. Specify a comma-separated list of Regular Expressions, for example:
+
+    ^[a-z0-9_\-]+$, ^[A-Z0-9]{3}(?:List)?$
+
+If you set this field, the bot agent processes only the messages that match a Regular Expression in the list. If the message doesn’t match an expression in the list, the message is ignored.
+
+If you don’t set this field, the bot agent processes the message flow as usual.
+
+**Default value**: null<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### ignoreAcceptStatusEvent
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+If you set this field to “true,” the consumer doesn’t see “read” or “seen” in the messaging window after their message has been read. LivePerson recommends that you set this to "true." Manager bots don't need to send this kind of status update, and doing so can create unnecessary overhead in the bot response time.
+
+**Default value**: false<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### ignoreSubscribeMessagingEvents
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+If you set this true, the bot agent isn’t notified of activity within the conversation by any participant (typing, messages sent, when a message has been read). Doing this can eliminate unnecessary overhead and processing.
+
+**Default value**: false<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### subscribeToMainDialogOnly
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+If you set this true, the bot agent is notified of conversation updates only in the primary/initial conversation, not the survey conversation. Doing this can eliminate unnecessary overhead and processing.
+
+**Default value**: false<br>
+**Messaging**: Yes<br>
+**Chat**: No
