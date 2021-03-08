@@ -243,7 +243,14 @@ Vertical or horizontal display for rich structured content. Available for FB, We
 **Messaging**: Yes<br>
 **Chat**: No
 
-**The following custom configuration fields are intended for use with Manager bots:**
+The following custom configuration fields are intended for use with Manager bots:
+
+* filterPatterns
+* ignoreAcceptStatusEvent
+* ignoreSubscribeMessagingEvents
+* subscribeToMainDialogOnly
+
+See below for details on these:
 
 #### filterPatterns
 
