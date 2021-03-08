@@ -22,7 +22,7 @@ This section walks through the steps that are necessary to complete before confi
 
 ### Before you begin
 
-Before you get started with this tutorial, download this [ZIP file](https://publisher.liveperson.net/co-agent-assist/AgentAssistTutorial_resources.zip), which contains a few, necessary resources.
+Before you get started with this tutorial, download this [ZIP file](assets/resources/AgentAssistTutorial_resources.zip), which contains a few, necessary resources.
 
 ### Step 1: Create the Airline NLU domain
 
