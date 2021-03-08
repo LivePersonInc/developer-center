@@ -250,7 +250,7 @@ The following custom configuration fields are intended for use with Manager bots
 * ignoreSubscribeMessagingEvents
 * subscribeToMainDialogOnly
 
-See below for details on these:
+See below for details on these.
 
 #### filterPatterns
 
