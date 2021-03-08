@@ -19,7 +19,7 @@ For example:
 * The knowledge base should perform as expected using the Knowledge Base search tool.
 
 ### Skills
-Remember to assign skills to your bots within Agent Assist’s configuration, as described [here](conversation-orchestrator-agent-assist-setting-up-bot-recommendations.html#assign-skills-to-the-bots). Otherwise, the bots are not used in recommendations.
+Remember to assign skills to your bots and knowledge bases within Agent Assist’s configuration. Otherwise, they are not used in recommendations.
 
 ### Campaigns
 The campaign must be of the Messaging conversation type. Recommendations aren’t made if the type is Chat. When you enable recommendations for the first time (i.e., you enable the **Enable recommendations** setting within Agent Assist), you are shown the following, one-time message:
