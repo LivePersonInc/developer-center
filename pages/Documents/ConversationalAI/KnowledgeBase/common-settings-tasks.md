@@ -55,6 +55,29 @@ If you're using an [external knowledge base](knowledge-base-external-knowledge-b
 
 The HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web messaging/chat window based on the capability of the respective tool, window, and channel in use. Be sure to test in the target channel to verify support.
 
+### Restore an older version of an article
+
+In an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html) or an [external knowledge that uses LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html), whenever someone changes an article’s content -- that is, its title, summary, detail, or a content URL -- a back-up of the previous version of the article is automatically created. The system stores the three, most recent back-up versions that have been created, and you can restore one of these if desired.
+
+{: .important}
+The system only saves and lets you restore an earlier version of the article’s content (title, summary, detail and content URLs). To change any other article property (for example, the associated intent, tags, and more), you must modify the article directly.
+
+**To restore an older version of an article**
+
+1. Open the knowledge base, and search for the article in question.
+    
+    {screen}
+
+2. Click {version icon}.
+    
+    The system displays the last three versions of the article’s content. The date shown for each reflects when the back-up version was created. However, the person shown is the user who originally created that version of the article, not the person who moved it to the Versions list as a back-up version due to their own changes.
+    
+    {screen}
+
+3. Review the versions, and click the **Restore** link for the version that you want to restore.
+
+    This changes the current version of the article so that it’s now the most recent back-up version, and the back-up version that you selected now becomes the current version of the article.
+
 ### Delete a knowledge base
 
 Deleting a knowledge base is a non-recoverable action, so be certain about doing so before taking this action.
