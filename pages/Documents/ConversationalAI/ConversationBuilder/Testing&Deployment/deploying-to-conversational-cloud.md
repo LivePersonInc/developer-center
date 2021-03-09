@@ -134,7 +134,7 @@ You add these fields in the **Advanced Options** of the agent connector.
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/deploy_customConfig.png">
 
 {: .important}
-If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.
+If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.<br><br>To make a change to a custom configuration field for a deployed agent connector, stop the connector first.
 
 #### acceptStatusEventValue
 By default, a message from the consumer is shown to the consumer as "Read' once it is sent. Set this field to "SENT" if you want the message to be shown as "Sent" instead. Once the agent logs into Conversational Cloud and views the message, this status will change to "Read."
@@ -243,6 +243,8 @@ Vertical or horizontal display for rich structured content. Available for FB, We
 **Messaging**: Yes<br>
 **Chat**: No
 
+**Custom configuration fields for Manager bots**
+
 The following custom configuration fields are intended for use with Manager bots:
 
 * filterPatterns
@@ -258,7 +260,7 @@ For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
 
 This field is used to filter the messages processed by a Manager bot. Specify a comma-separated list of Regular Expressions, for example:
 
-    ^[a-z0-9_\-]+$, ^[A-Z0-9]{3}(?:List)?$
+^[a-z0-9_\-]+$, ^[A-Z0-9]{3}(?:List)?$
 
 If you set this field, the bot agent processes only the messages that match a Regular Expression in the list. If the message doesn’t match an expression in the list, the message is ignored.
 
