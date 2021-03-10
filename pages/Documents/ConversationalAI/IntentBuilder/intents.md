@@ -26,19 +26,19 @@ To return the best response to consumers, the NLU has a threshold of GOOD. This 
 
 The scoring breakdown, which indicates the NLU’s level of confidence in the match, is as follows:
 
-**LivePerson NLU v1 or 3rd-party NLU**
-* VERY GOOD: 85-100% match
-* GOOD: 70-85% match
-* FAIR PLUS: 65-70% match
-* FAIR: 50-65% match
-* POOR: 0-50% match
-
-**LivePerson NLU v2**
+**LivePerson engine**
 * VERY GOOD: 75-100% match
 * GOOD: 60-75% match
 * FAIR PLUS: 45-60% match
 * FAIR: 30-45% match
 * POOR: 0-30% match
+
+**LivePerson (Legacy) engine or 3rd-party engine**
+* VERY GOOD: 85-100% match
+* GOOD: 70-85% match
+* FAIR PLUS: 65-70% match
+* FAIR: 50-65% match
+* POOR: 0-50% match
 
 You can't change the threshold when using intents (although you can do [this](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds) with knowledge bases).
 
@@ -52,6 +52,7 @@ You can't change the threshold when using intents (although you can do [this](kn
 
     * **Intent name**: Enter the intent name. A domain can have dozens of intents, so using a standard naming convention is important for being able to easily sort and find intents.
     * **Intent display name**: Enter the display name.
+    * **Description**: Enter a short phrase describing the intent. While this field is optional, it's often useful. Many intent names can be technical. A description adds clarity and is particularly helpful to a person not familiar with the domain.
     * **Intent type**: Select either "Intent" or "Meta Intent." For an introduction to meta intents, see [here](intent-builder-meta-intents.html).
     * **Training**: Enter as many training phrases as possible. The NLU engine uses training phrases in order to match a user's utterance with an intent. The more training phrases you include, the more likely it is that the NLU engine will accurately match the user's intent. Generally speaking, the phrases should be complete sentences (not long paragraphs, and not keywords). As an example, assume you have a "Check bill" intent. You might add the following training phrases, among others:
         * I want to check the status of my bill
@@ -62,7 +63,7 @@ You can't change the threshold when using intents (although you can do [this](kn
         For more, see *Best practices* farther below.
 
 4. Click **Save**.
-5. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the addition is reflected in a new model version.
+5. Train the domain so that the addition is reflected in a new model version.
 
 ### Delete an intent
 
@@ -80,7 +81,7 @@ Ensure the intent isn't being used by any bots or knowledge bases before you del
 2. In the left panel, select the intent.
 3. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
 4. In the confirmation dialog, click **Yes**.
-5. If the domain is using LivePerson NLU v2 or a 3rd-party NLU engine, train the domain so that the deletion is reflected in a new model version.
+5. Train the domain so that the deletion is reflected in a new model version.
 
 
 ### Best practices
@@ -103,15 +104,15 @@ Technically, there isn’t a limit on the number of intents that a domain can ha
 
     If you proceed and exceed the guideline, start with a smaller number of intents, and iteratively test as you add more. For example, add 20 intents with training phrases, test them, add 5 more, test again, and repeat the process. This helps to ensure that the intent training yields the results you expect. You might find that at some point (often somewhere between 50 and 100 intents), you will start to see issues with the NLU performance when intent matching.
 * Keep in mind the following:
-    * Exceeding the aforementioned guideline impacts the *training* of domains using the LivePerson NLU v2 engine or a 3rd-party engine. The larger the intent model, the longer that training takes. Large, complex models can sometimes time out during training.
-    * Exceeding the aforementioned guideline impacts *tuning* in all cases. Every intent requires a set of training phrases that you must manually add and adjust so that the intent model performs as you expect. The more intents you have, the larger this effort is. Moreover, exceeding the guideline might introduce problems, e.g., mistakes and/or overlap among training phrases. This can yield results that are hard to manage.
+    * Exceeding the aforementioned guideline impacts the *training* of domains. The larger the intent model, the longer that training takes. Large, complex models can sometimes time out during training.
+    * Exceeding the aforementioned guideline also impacts *tuning*. Every intent requires a set of training phrases that you must manually add and adjust so that the intent model performs as you expect. The more intents you have, the larger this effort is. Moreover, exceeding the guideline might introduce problems, e.g., mistakes and/or overlap among training phrases. This can yield results that are hard to manage.
 
 #### Training phrases
 
-The following are best practices when creating training phrases; these help to ensure your intents are well-trained and return the results you expect.
+*If you're using the LivePerson (Legacy) engine for NLU*, the following are best practices when creating training phrases; these help to ensure your intents are well-trained and return the results you expect.
 
-##### One sentence, not multiple (LivePerson NLU v1 only)
-If the domain is using the LivePerson NLU v1 engine, use a simple, concise sentence. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
+##### One sentence, not multiple
+If the domain is using the LivePerson (Legacy) engine, use a simple, concise sentence. For example, "How do I activate my card?" is much better than, “How do I activate my card? I am having trouble at the ATM. Can you help me?” Multiple sentences increase your risk of false positives.
 
 ##### 10-25 training phrases
 The number of training phrases that you need really depends upon your use case and type of intents. Generally, for intents, it is recommended that you have between 10 - 25 good training phrases. When you have more than that, it's likely that you have overtrained the intent, which might lead to false positives.
