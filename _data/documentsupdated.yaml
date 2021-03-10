@@ -716,6 +716,7 @@
       - pagename: Monitoring
         subpages:
           - subpagename: Activities
+          - subpagename: Deployment History
           - subpagename: Logs
           - subpagename: Metrics
           - subpagename: Email Reporting
