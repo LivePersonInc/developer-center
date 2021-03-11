@@ -109,6 +109,29 @@ If you change the answer choices for a survey question, remember to update the d
 {: .important}
 When the target channel is Apple Business Chat, the survey interactions (NPS, CSAT, FCR) are automatically sent to the consumer as List Picker interactions.
 
+#### Customizing interaction text
+
+You can customize the question text and, when applicable, the answer choice text for each of the survey interactions. To do so, simply replace the text with your own. For example, you might want to change the language that’s used.
+
+When working with the answer choices for the FCR, CSAT and NPS interactions, if you move your mouse over an answer, you can see both the answer text (text value) and the actual, underlying value that’s reported to [Analytics Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html).
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_actualvalue1.png">
+
+The actual value never changes, not even when you change the answer text, i.e., the text value.
+
+#### Reordering answer choices
+
+Reordering an answer choice has no impact on the text value or the actual value. You must manually change the answer text (text value) if desired. The actual value never changes.
+
+To reorder an answer choice, select it so that it’s in focus, and click the < (Previous) or > (Next) button.
+
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_reorderanswers.png">
+
+Alternatively, you can use the hotkeys:
+
+* Previous = Shift + Ctrl
+* Next = Shift + Alt
+
 #### Marking survey questions as optional
 
 To add a Skip option and thereby make a survey question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
