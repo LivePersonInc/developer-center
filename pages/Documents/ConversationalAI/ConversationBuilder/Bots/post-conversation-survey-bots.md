@@ -119,6 +119,9 @@ When working with the answer choices for the FCR, CSAT and NPS interactions, if 
 
 The actual value never changes, not even when you change the answer text (text value).
 
+{: .important}
+Take care when changing the answer text; remember to update the rules accordingly.
+
 #### Reordering answer choices
 
 Reordering an answer choice has no impact on its text value or actual value. You must manually change the answer text (text value) if desired. The actual value never changes.
