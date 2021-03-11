@@ -104,9 +104,6 @@ In a single survey bot, you can include only one of each survey interaction type
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_nps.png">
 
 {: .important}
-If you change the answer choices for a survey question, remember to update the defined conditions accordingly in the interaction's details.
-
-{: .important}
 When the target channel is Apple Business Chat, the survey interactions (NPS, CSAT, FCR) are automatically sent to the consumer as List Picker interactions.
 
 #### Customizing interaction text
@@ -120,7 +117,7 @@ When working with the answer choices for the FCR, CSAT and NPS interactions, if 
 The actual value never changes, not even when you change the answer text (text value).
 
 {: .important}
-Take care when changing the answer text; remember to update the rules accordingly.
+Take care when changing the answer text; remember to update the conditions in the rules accordingly.
 
 #### Reordering answer choices
 
