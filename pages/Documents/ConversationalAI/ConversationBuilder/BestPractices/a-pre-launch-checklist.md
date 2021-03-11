@@ -10,6 +10,10 @@ permalink: conversation-builder-best-practices-a-pre-launch-checklist.html
 indicator: both
 ---
 
+### Handle the success and failure of API calls
+
+Take advantage of the ability to create rules in an Integration interaction based on the result of the API call, and handle both success and failure. For more on this, see [here](conversation-builder-interactions-integrations.html#integration-interactions).
+
 ### Test the "unhappy" paths
 
 Try and break the flows you have built. Be as disruptive as possible. 

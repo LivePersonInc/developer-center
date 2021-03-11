@@ -117,6 +117,18 @@ The validation of allowed max number of documents will be when showing and remov
 
 ---  
 
+### Auth
+
+#### hideUIUntilAuthenticated  
+Hides previous chat history until user identify has been verified
+
+   - **Type:** Bool
+   - **Default value:** true (enabled)
+
+{: .notice}
+avaliable on SDK 6.0 and above.
+
+---  
 ### Brand
 
 #### brandName  
@@ -376,57 +388,63 @@ Conversation separator text and line color.
 &nbsp;
 </div> -->
 
-#### enableConversationSeparatorTextMessage 
-Toggle conversation separator text message when conversation resolved from agent or consumer.
+#### enableConversationSeparator
+Toggle conversation separator view when conversation resolved from agent or consumer.
+
+{:.notice}
+This Configuration is avaliable on SDK 6.2.0 & above
+
+{:.important}
+Conversation separator view contains Conversation Separator Text Message and Conversation Separator Line
+
+{:.notice}
+Setting this property to false will also disable **enableConversationSeparatorTextMessage** & **enableConversationSeparatorLine**
 
 - **Type:** Bool
 - **Default value:** true
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
+#### enableConversationSeparatorTextMessage 
+Toggle conversation separator text message when conversation resolved from agent or consumer.
+
+{:.notice}
+if **enableConversationSeparator** is set to **false**, Conversation Separator Text won't be displayed even if this property is enable
+
+- **Type:** Bool
+- **Default value:** true
 
 
-#### enableConversationSeparatorLine  
+#### enableConversationSeparatorLine 
 Toggle conversation separator line when conversation resolved from agent or consumer.
+
+{:.notice}
+if **enableConversationSeparator** is set to **false**, Conversation Separator Line won't be displayed even if this property is enable
 
 - **Type:** Bool
 - **Default value:** true 
 
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/conversationseparatortextcolor.png" alt="conversationseparatortextcolor"> 
-   </figure>
-</div> -->
 
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
+#### enableConversationSeparatorLineOnAutoClose 
+Toggle conversation separator line when conversation is auto close
+
+{:.notice}
+This Configuration is avaliable on SDK 6.2.0 & above
+
+{:.important}
+For this property to work when is enable, **enableConversationSeparatorLine** needs to be enable too.
+
+{:.notice}
+if **enableConversationSeparator** is set to **false**, Conversation Separator Line won't be displayed for Auto Close Conversations even if this property is enable.
+
+- **Type:** Bool
+- **Default value:** false
+
 
 #### conversationSeparatorFontSize 
 Define the conversation closed separator font size.
 
 - **Type:** UIFontTextStyle
 - **Default value:** UIFontTextStyle.caption1
-
-<!--    <div style="float: right; width: 65%;">
-   <figure>
-   <figcaption></figcaption>
-   <img src="img/conversationClosedSeparatorFontSize.png" alt="conversationClosedSeparatorFontSize"> 
-   </figure>
-</div> -->
-
-<!--    <div style="width: 85%;padding: 5px;">
-&nbsp;
-</div> -->
 
 
 #### conversationSeparatorBottomPadding 
@@ -755,6 +773,23 @@ Examples: TimeToRespond notification, local notification, etc.
 
    - **Type:** Double
    - **Default value:**  3 (60 when in VoiceOver mode)
+
+---
+
+### Domains
+
+{:.notice}
+Overriding this values with incorrect domains will create connection issues on the LPMessagingSDK (e.g. "Failed to connect to server" banner)
+
+#### csdsDomain
+For brands that need to control the CSDS URL for LivePerson services, use this key to set a URL of your choice.
+
+- **Type:** String
+
+#### lpTagDomain
+For brands that need to control the LPTAG URL for LivePerson services, use this key to set a URL of your choice.
+
+- **Type:** String
 
 --- 
 
@@ -2032,7 +2067,11 @@ If setting nil - default avatar image will be used with `remoteUserAvatarBackgro
    - **Type:** UIImage?
    - **Default value:** nil 
 
+#### brandAvatarImageContentMode
+Sets content mode for the brand avatar image
 
+- **Type:** UIView.ContentMode
+- **Default value:** .scaleAspectFit
 
 #### csatAgentAvatarBackgroundColor 
 Background color of agent's default avatar in CSAT. 

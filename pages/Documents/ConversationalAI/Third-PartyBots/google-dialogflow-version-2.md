@@ -50,6 +50,11 @@ The following Dialogflow V2 information should be provided to LivePerson:
     <td>Email address of the Google Service account</td>
     <td>dialogflow-xxxxxx@bxx-xxxxxxx-xxx-dialogflow-v2.iam.gserviceaccount.com</td>
   </tr>
+   <tr>
+    <td>Service location</td>
+    <td>Location of the Dialogflow API Backend</td>
+    <td>us-dialogflow.googleapis.com</td>
+  </tr>
   <tr>
     <td>User private key</td>
     <td>Private key of the IAM Account, please keep the formatting as provided by Google</td>
@@ -521,6 +526,8 @@ The action field needs to be set to **CLOSE_CONVERSATION** to instruct the conne
 
 <img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_12.png">
 Figure 10.1
+
+To close a conversation without triggering a post conversation survey, please add the parameter with the name `withoutPcs` and the value `true` to the action parameters.
 
 ### Invoke LivePerson Function
 

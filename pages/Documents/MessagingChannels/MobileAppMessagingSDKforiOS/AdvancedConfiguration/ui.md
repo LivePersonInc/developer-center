@@ -6,17 +6,15 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Mobile App Messaging SDK for iOS
-subfoldername: Configuration
-
-order: 7
-permalink: mobile-app-messaging-sdk-for-ios-configuration-ui.html
-
+subfoldername: Advanced Configuration
+permalink: mobile-app-messaging-sdk-for-ios-advanced-configuration-ui.html
 indicator: messaging
 ---
 
 To determine the layout of messaging within the app, you can utilize various actions to control the behavior and UI such as menus, custom buttons, typing indication, etc.
 
-_**Note: these methods (1,2 and 3) are only available when using the SDK ViewController (Window Mode)**_
+{:.notice} 
+These methods (1,2 and 3) are only available when using the SDK ViewController (Window Mode)
 
 1. This method changes the state of the action menu of the conversation for brandID.
 

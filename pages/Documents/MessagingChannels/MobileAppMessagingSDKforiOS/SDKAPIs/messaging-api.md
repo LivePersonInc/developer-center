@@ -260,7 +260,7 @@ Use this API method to clean a user's data before a second user logs into the sa
 
 The `logout` method conducts the following:
 
-* Unregisters from the push notification service.
+* Unregisters from the push notification service based on unregister type provided.
 
 * Clears all SDK persistent data.
 
@@ -268,16 +268,28 @@ The `logout` method conducts the following:
 
 
 ```swift
-func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())
+func logout(unregisterType: LPPusherUnregisterType, 
+            completion: @escaping ()->(), 
+            failure: @escaping (_ error: Error)->())
 ```
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
+| LPPusherUnregisterType | An enum representing the pusher unregister type | The default option if none provided will be .ALL |
 | Completion block | A completion block for successfully logout. | Completion block invokes only if all logout steps succeeded. |
 | Failure block | A failure block with a specified error for logout failure. | Failure block invokes if at least one of the logout steps has failed. |
 
 {:.important}
 After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize).
+
+
+#### LPPusherUnregisterType
+* **All**: unregister for all types of push notification messages
+
+* **None**: do not unregister from the pusher at all
+
+* **Agent**: Unregister only for agent push notification messages. Consumers can still receive outbound push notifications sent from the Proactive or Connect to Messaging (IVR) services.
+
 
 ### markAsUrgent
 
@@ -572,7 +584,23 @@ This method conducts the following:
 * Cleans running operations (see [destruct](consumer-experience-ios-sdk-messaging-methods.html#destruct))
 
 ```swift
-func logout() (Deprecated)
+func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())
+```
+
+*This method was deprecated since SDK version 6.2.0. Use [func logout(unregisterType: LPPusherUnregisterType, completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](consumer-experience-ios-sdk-messaging-methods.html#logout) instead*
+
+#### logout (Deprecated)
+
+This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
+
+This method conducts the following:
+
+* Unregisters from the push notification service.
+* Clears all SDK persistent data.
+* Cleans running operations (see [destruct](consumer-experience-ios-sdk-messaging-methods.html#destruct))
+
+```swift
+func logout()
 ```
 
 *This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](consumer-experience-ios-sdk-messaging-methods.html#logout) instead*

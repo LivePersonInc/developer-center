@@ -78,20 +78,12 @@ Unauthenticated In-App Messaging allows brands to communicate with consumers in 
 
 #### Related Classes, Parameters & APIs
 
-The `LPAuthenticationParams` object contains an authentication type which should be passed in the ctor. An empty ctor is also available and the default authentication type will be SIGN_UP (is deprecated as of July 2019).
+The `LPAuthenticationParams` object contains an authentication type which should be passed in the constructor. An empty constructor is also available and the default authentication type will be SIGN_UP (is deprecated as of July 2019).
 
 _Note: if you call any methods in LPAuthenticationParams that support authentication (for ex. - `setHostAppJWT()`) - it will automatically set the authentication type to LPAuthenticationType.AUTH_
 
 ```java
-public class LPAuthenticationParams {
-    ...
-    private LPAuthenticationType mType;
-  }
-```
-
-```java
-public enum LPAuthenticationType {SIGN_UP, UN_AUTH, AUTH}
-
+LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.UN_AUTH);
 ```
 
 ##### Server side configurations (In case needed, should be modified by LivePerson)

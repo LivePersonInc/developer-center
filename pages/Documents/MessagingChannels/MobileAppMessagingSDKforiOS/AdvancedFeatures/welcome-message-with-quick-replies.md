@@ -25,29 +25,43 @@ A consumer’s quick reply selection or answer gets inserted as their first mess
 ### How to enable
 
 ```swift
-        //Welcome message
-let welcomeMessageParam = LPWelcomeMessage(message: "Hello Mr.Bond")
+//Welcome message
+var messageTitle = "Hello Mr.Smith, how may we help you?\n"
+messageTitle.append("To know more about our terms and conditions visit:\n")
+messageTitle.append("https://www.mywebsite.com") //this ability is only avaliable on SDK 6.2.0 & Above
 
-        //adding options
-        let options: [LPWelcomeMessage.MessageOption] = [
-            LPWelcomeMessage.MessageOption(value: "music", displayName: "awesome tunes"),
-            LPWelcomeMessage.MessageOption(value: "food", displayName: "Delicious food "),
-        ]
-        do {
-            try welcomeMessageParam.set(options: options)
-        } catch {
-            print(error.localizedDescription)
-        }
+let welcomeMessageParam = LPWelcomeMessage(message: messageTitle, frequency: .everyConversation)
+
+//adding options
+let options = [
+    LPWelcomeMessageOption(value: "My latest bill statement", displayName: "1️⃣ Bill"),
+    LPWelcomeMessageOption(value: "A recent order placed", displayName: "2️⃣ Order"),
+    LPWelcomeMessageOption(value: "Technical support", displayName: "3️⃣ Support"),
+    LPWelcomeMessageOption(value: "Account information", displayName: "4️⃣ Account")
+]
+
+do {
+    try welcomeMessageParam.set(options: options)
+} catch {
+    print(error.localizedDescription)
+}
         
-        //ConversationViewParams
-        let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
-                                                              containerViewController: nil,
-                                                              isViewOnly: false,
-                                                              conversationHistoryControlParam: conversationHistoryControlParam,
-                                                              welcomeMessage: welcomeMessageParam)
+//ConversationViewParams
+let conversationViewParams = LPConversationViewParams(conversationQuery: conversationQuery,
+                                                     containerViewController: nil,
+                                                     isViewOnly: false,
+                                                     conversationHistoryControlParam: conversationHistoryControlParam,
+                                                     welcomeMessage: welcomeMessageParam)
 //show conversation
 LPMessaging.instance.showConversation(conversationViewParams,  authenticationParams: authenticationParams)
 ```
+
+{: .notice}
+Support for rendering links automatically is avaliable on SDK 6.2.0 and above.
+
+{: .notice}
+Currently this feature is not fully compatible with the [Control History APIs](mobile-app-messaging-sdk-for-ios-sdk-apis-control-history-apis.html).
+
 
 ### Limitations
 - You can configure up to 24 quick reply options, but you have a 25 character limit per quick reply option.  
@@ -62,10 +76,11 @@ LPMessaging.instance.showConversation(conversationViewParams,  authenticationPar
 
    ```
    "metadata": [
-   {
-   "type": "ExternalId",
-   "id": "Yes-1234"
-   }
+        {
+            "type": "ExternalId",
+            "id": "Yes-1234"
+        }
    ]
    ```
 
+- Rendering links support only for url, sms, tel, facetime, facetime-audio, and doesn't cover hyperlinks format.

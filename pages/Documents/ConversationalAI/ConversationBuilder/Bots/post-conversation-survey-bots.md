@@ -22,8 +22,10 @@ Use a post-conversation survey bot to measure bot/agent and skill performance an
 
 <img style="width:400px" src="img/ConvoBuilder/surveyBot_example.png">
 
+For a more in-depth introduction to surveys and survey metrics, see [here](https://knowledge.liveperson.com/ai-bots-automation-post-conversation-surveys-post-conversation-survey-bot.html) in the Knowledge Center.
+
 {: .important}
-For a more in-depth introduction to surveys and survey metrics, see [here](https://knowledge.liveperson.com/ai-bots-automation-post-conversation-surveys-post-conversation-survey-bot.html) in the Knowledge Center.<br><br>To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through Conversational Cloud. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.<br><br>Survey bots are supported only in Messaging, not in Live Chat.
+To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through Conversational Cloud. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.<br><br>Survey bots are supported only in Messaging, not in Live Chat.<br><br>Only English-language survey bots are supported.
 
 ### The survey flow
 
@@ -104,6 +106,9 @@ In a single survey bot, you can include only one of each survey interaction type
 {: .important}
 If you change the answer choices for a survey question, remember to update the defined conditions accordingly in the interaction's details.
 
+{: .important}
+When the target channel is Apple Business Chat, the survey interactions (NPS, CSAT, FCR) are automatically sent to the consumer as List Picker interactions.
+
 #### Marking survey questions as optional
 
 To add a Skip option and thereby make a survey question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
@@ -130,7 +135,7 @@ Use the **Display Choices As** setting to specify whether and how to send the an
 
 <img style="width:500px" src="img/ConvoBuilder/surveyBot_displayChoices.png">
 
-When you deploy your survey bot to a channel that doesn't support rich content formatting, the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
+When you deploy your survey bot to a channel that doesn't support rich content formatting (i.e., SMS, Apple Business Chat or WhatsApp), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
 
 * **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format.
 * **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer.

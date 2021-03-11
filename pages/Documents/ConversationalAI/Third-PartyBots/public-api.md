@@ -25,7 +25,7 @@ The API supports the following methods:
 </ul>
 
 {: .important}
-**Please note** To use our API, your conversation/chat must be active/ongoing with bot(s) that are created via the Third-Party Bots. Otherwise, you will receive conversation not found the response from our API. Furthermore, refer to the [API Terms of Use](https://www.liveperson.com/policies/apitou), if you haven't already done so.
+**Please note** To use our API, your conversation/chat must be active/ongoing with bot(s) that are created via the Third-Party Bots. Otherwise, you will receive conversation not found the response from our API. Moreover, our API only retain the history of the last 200 commands. Furthermore, refer to the [API Terms of Use](https://www.liveperson.com/policies/apitou), if you haven't already done so.
 
 ### Flow for using Public API
 
@@ -245,7 +245,7 @@ This API allows The user to send The message(s) to an ongoing conversation with 
 Example payload of the request with Simple Text, Pause/Delay, Private Text, [Structured Content](getting-started-with-rich-messaging-introduction.html) and Quick Replies messages with [context information/metadata](messaging-agent-sdk-conversation-metadata-guide.html) and encodedMetadata.
 
 {: .important}
-**Please note** Quick Replies and encodedMetadata are only supported in messaging conversations. Moreover, You have to **enable** Private Message and Encoded Metadata feature for your account to successfully send such messages. Please contact LP administration if you need help in enabling Private Message and Encoded Metadata for your account.
+**Please note** Quick Replies and encodedMetadata are only supported in messaging conversations. Moreover, You have to **enable** Private Message and Encoded Metadata feature for your account to successfully send such messages. Please contact LP administration if you need help in enabling Private Message and Encoded Metadata for your account. Moreover, If you want to send [Structured Content](getting-started-with-rich-messaging-introduction.html) make sure to follow the max size limit which is 15000 bytes.
 
 ```javascript
 {
@@ -666,7 +666,7 @@ curl -X POST \
 This API allows returning of the commands that were sent to a conversation via Public API.
 
 {: .important}
-**Please note** Only commands of on-going conversation will be returned. If conversation is closed/ended commands will not be returned
+**Please note** Our API only retains the history of last 200 commands per bot/agent. Only commands of ongoing conversation will be returned **AND** if they are found in the history of the last 200 commands. If a conversation is closed/ended or doesn't exist in history then commands will not be returned.
 
 #### Request
 
@@ -796,7 +796,7 @@ Example response of an request with `Array` of commands returned.
 This API allows returning of a single command that was sent to a conversation via Public API.
 
 {: .important}
-**Please note** Only command of on-going conversation will be returned. If conversation is closed/ended command will not be returned
+**Please note** Our API only retains the history of last 200 commands per bot/agent. Only command of ongoing conversation will be returned **AND** if they are found in the history of the last 200 commands. If a conversation is closed/ended or doesn't exist in history then command will not be returned.
 
 #### Request
 
@@ -878,5 +878,11 @@ Example response of a command returned by the API will look like this with state
 | 200  | OK - request for the given API succeeded.                            |
 | 400  | Bad request - Problem with body or query parameters.                 |
 | 401  | Unauthorized - Invalid bearer token.                                 |
+| 403  | Forbidden - If the request was marked as security risk by Reblaze.   |
 | 404  | Not Found - If the provided conversation Id is invalid or not found. |
 | 500  | Internal server error.                                               |
+
+### Limitations
+
+- To ensure the safety of the API we are using [Reblaze](https://www.reblaze.com/). if the request throws Security Violation Error (403 - Forbidden) the reason could be that your request body contains information that caused Reblaze to mark your request positive as a security risk. To understand security concepts of Reblaze please refer to the official documentation [here](https://gb.docs.reblaze.com/product-walkthrough/security/concepts). You can also refer to the information on best practices to avoid the false positives marking of valid request [here](https://gb.docs.reblaze.com/using-the-product/best-practices/dealing-with-false-positive)
+- Our Public API only retains a maximum of last 200 commands **per bot/agent**. Thus, there could be a possibility that an ongoing conversation will not be able to fetch the commands due to this max. commands retention policy.

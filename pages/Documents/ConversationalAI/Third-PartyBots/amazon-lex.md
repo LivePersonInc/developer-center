@@ -510,6 +510,23 @@ Figure 10.1 Lex Example Close Conversation Payload
 
 Figure 10.2 - Example in Lex console
 
+To close the conversation without triggering the post conversation survey use following payload
+
+```json
+{
+  "type": "ACTION",
+  "params": {
+    "action": "CLOSE_CONVERSATION",
+    "data": {
+      "withoutPcs": true
+    }
+  }
+}
+```
+
+Figure 10.3 Lex Example Close Conversation without PCS payload
+
+
 ### Invoke LivePerson Function
 
 During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.

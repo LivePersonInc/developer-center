@@ -2,6 +2,8 @@
 pagename: Monitoring API
 redirect_from:
   - consumer-experience-ios-sdk-monitoring-methods.html
+  - consumer-experience-ios-sdk-methods.html#getEngagement
+  - consumer-experience-ios-sdk-methods.html#sendSDE
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"

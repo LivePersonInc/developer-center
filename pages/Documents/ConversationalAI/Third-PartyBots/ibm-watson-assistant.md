@@ -15,6 +15,9 @@ The following documentation outlines the configuration for the connector and how
 
 ### Bot Configuration
 
+{: .notice}
+**IMPORTANT**: All the old bots that use **watsonplatform.net** domain for their workspace URL will fail to operate after **_12 February 2021_**. IBM has deprecated **watsonplatform.net** endpoints please update your bot configuration in Third-Party Bots if you do not want to disrupt the functioning of the bots. Official news on this announcement can be found [here](https://cloud.ibm.com/docs/watson?topic=watson-endpoint-change)
+
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
@@ -45,7 +48,7 @@ Following information needs to be completed for LivePerson:
   <tr>
     <td>Workspace URL</td>
     <td>Watson Assistant Workspace URL</td>
-    <td>https://gateway.watsonplatform.net/conversation/api</td>
+    <td>https://api.eu-de.assistant.watson.cloud.ibm.com</td>
   </tr>
   <tr>
     <td>Workspace ID</td>
@@ -92,7 +95,7 @@ Following information needs to be completed for LivePerson:
   <tr>
     <td>Workspace URL</td>
     <td>Watson Assistant Workspace URL</td>
-    <td>https://gateway.watsonplatform.net/conversation/api</td>
+    <td>https://api.eu-de.assistant.watson.cloud.ibm.com</td>
   </tr>
   <tr>
     <td>Workspace ID</td>
@@ -657,9 +660,34 @@ To close a chat or messaging conversation, we utilize the action object as we di
 
 Figure 6.1 Watson Assistant JSON response for closing chat/conversation
 
+To close a conversation without triggering a post conversation survey, see the example below:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": ["Thanks for chatting with us today!"],
+      "selection_policy": "sequential"
+    }
+  },
+  "actions": [
+    {
+      "name": "CLOSE_CONVERSATION",
+      "type": "client",
+      "parameters": {
+        "withoutPcs": true
+      },
+      "result_variable": "none"
+    }
+  ]
+}
+```
+
+Figure 6.2 Watson Assistant JSON response for closing conversations without pcs
+
 ### Invoke LivePerson Function
 
-During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.
+During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service) platform. This provides a way to run custom logic with a bot.
 
 To invoke a LivePerson Function, we utilize the action object as we did for a transfer (see **Figure 5.1**). In **Figure 7.1** below, the **Watson Assistant** JSON response should be mirrored as follows:
 
@@ -680,16 +708,17 @@ To invoke a LivePerson Function, we utilize the action object as we did for a tr
         "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
         "payload": "{ "some": "stuff"}",
         "failOnError": true
-        
+
       },
       "result_variable": "none"
     }
   ]
 }
 ```
+
 Figure 7.1 Watson Assistant JSON response for invoking LivePerson Function
 
-To retrieve the ***lambdaUuid*** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+To retrieve the **_lambdaUuid_** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter
 

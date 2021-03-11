@@ -14,6 +14,9 @@ The following documentation outlines the configuration for the bot connector and
 
 ### Bot Configuration
 
+{: .notice}
+**IMPORTANT**: All the old bots that use **watsonplatform.net** domain for their workspace URL will fail to operate after **_12 February 2021_**. IBM has deprecated **watsonplatform.net** endpoints please update your bot configuration in Third-Party Bots if you do not want to disrupt the functioning of the bots. Official news on this announcement can be found [here](https://cloud.ibm.com/docs/watson?topic=watson-endpoint-change)
+
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
@@ -49,7 +52,7 @@ You need to fill in the following infromation:
   <tr>
     <td>Workspace URL</td>
     <td>Watson Assistant Workspace URL. Note that this workspace URL changes according to your account. In order to figure out which URL is correct for you, check the location of your Assistant in IBM's Cloud console. Then, choose the corresponding URL based on geo-location. For example, if your IBM location is "eu-gb", the London URL is the correct one for you.</td>
-    <td>https://gateway.watsonplatform.net/conversation/api</td>
+    <td>https://api.eu-de.assistant.watson.cloud.ibm.com</td>
   </tr>
   <tr>
     <td>Assistant ID</td>
@@ -91,7 +94,7 @@ You need to fill in the following infromation:
   <tr>
     <td>Workspace URL</td>
     <td>Watson Assistant Workspace URL. Note that this workspace URL changes according to your account. In order to figure out which URL is correct for you, check the location of your Assistant in IBM's Cloud console. Then, choose the corresponding URL based on geo-location. For example, if your IBM location is "eu-gb", the London URL is the correct one for you.</td>
-    <td>https://gateway.watsonplatform.net/conversation/api</td>
+    <td>https://api.eu-de.assistant.watson.cloud.ibm.com</td>
   </tr>
   <tr>
     <td>Assistant ID</td>
@@ -590,7 +593,6 @@ Figure 3.8 Watson Quick Replies StructuredContent example.
 }
 ```
 
-
 ### Change Time To Response of Conversation
 
 Change the TTR of a conversation based on the action response of Watson. There are 4 different types of Time to Response states: "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only with the "CUSTOM" state can you set a value. The unit of the value is seconds. The value of the other states are defined in the Conversational Cloud Agent Workspace.
@@ -680,9 +682,32 @@ To close a chat or messaging conversation, we utilize the action object as we di
 }
 ```
 
+To close a messaging conversation without triggering post conversation survey please provide the `withoutPcs` flag with the value true in the action parameters:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": ["Thanks for chatting with us today!"],
+      "selection_policy": "sequential"
+    }
+  },
+  "actions": [
+    {
+      "name": "CLOSE_CONVERSATION",
+      "type": "client",
+      "parameters": {
+        "withoutPcs": true
+      },
+      "result_variable": "none"
+    }
+  ]
+}
+```
+
 ### Invoke LivePerson Function
 
-During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.
+During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service) platform. This provides a way to run custom logic with a bot.
 
 To invoke a LivePerson Function, we utilize the action object as we did for a close chat/conversation (see example above). In the example below, the **Watson Assistant** JSON response should be mirrored as follows:
 
@@ -703,7 +728,7 @@ To invoke a LivePerson Function, we utilize the action object as we did for a cl
         "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
         "payload": "{ "some": "stuff"}",
         "failOnError": true
-        
+
       },
       "result_variable": "none"
     }
@@ -711,7 +736,7 @@ To invoke a LivePerson Function, we utilize the action object as we did for a cl
 }
 ```
 
-To retrieve the ***lambdaUuid*** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+To retrieve the **_lambdaUuid_** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter
 
@@ -742,7 +767,7 @@ These attributes are **only** collected at the start of a conversation. Third-Pa
 The Conversational Cloud Messaging platform provides a new metadata input type (`encodedMetadata`) for passing a base64 encoded metadata during a conversation. The new metadata input type is in addition to the existing [conversation metadata](messaging-agent-sdk-conversation-metadata-guide.html) input field. Third-party bots also support this property and this section will cover the information needed for you to send encoded metadata within your conversations. Before sending encoded metadata you must ensure the following conditions in order to successfully send the data.
 
 <ul>
-  <li><b>The feature is turned on for your account. Contact your account team if this is not the case.</li>
+  <li><b>The feature is turned on for your account. Contact your account team if this is not the case.</b></li>
   <li>Content is base64 encoded.</li>
   <li> Metadata size is limited to 5kb.</li>
 </ul>
@@ -754,7 +779,6 @@ Encoded Metadata can be sent alongside a simple Text response, a Rich Content (s
 
   <img class="fancyimage" style="width:800px" src="img/watsonassistantv2/context_adding_choices.png">
   Figure 8.1 Showing context editor with the encoded metadata.
-
 
 #### Sending Watson Native Content with Encoded Metadata
 
@@ -883,7 +907,7 @@ If you have a different context for multiple dialogs in a conversation that are 
 It is possible to send a private text message in the Conversational Cloud agent workspace. This feature can also be used via Third-Party bots. This will allow brands to define private message texts within the conversational flow of the bot. These messages are published into the conversation and visible only to Agent/Manger participants. This enables Brands to customize messages giving more insight, summarizing actions taken by the bot, or advising on next actions the handover agent should take.
 
 {: .important}
-Please note: if you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and remain visible only  to Agents and Managers.
+Please note: if you have not migrated to new Agent Workspace you will not be able to see the `Private` message indicator in the conversation window. Nevertheless, private text messages will not be shown to the consumer and remain visible only to Agents and Managers.
 
 The private text message can be added via Watson's `JSON editor` (as shown in Figure 9.1). There are two properties, `text` and `messageAudience` required for sending a private text message.
 
@@ -913,8 +937,8 @@ It is possible to send only a private text message response in a node. The examp
 }
 ```
 
-<img class="fancyimage" style="width:800px" src="img/watsonassistantv2/private_message_response_custom_payload.png">
-Figure 9.2 Showing single private text message definition inside `JSON Editor`
+<img class="fancyimage" style="width:800px" src="img/watsonassistantv2/private_message_response_custom_payload.png" />
+Figure 9.2 Showing single private text message definition inside JSON Editor
 
 It is also possible to send a private text message with an action (e.g. Transfer / Escalations). An example payload or such a case is below:
 
@@ -945,7 +969,5 @@ It is also possible to send a private text message with an action (e.g. Transfer
 
 ### Limitations
 
-<ul>
-  <li>Currently IBM Watson Assistant retains sessions only for 5 minutes for Free and 60 minutes for Plus or premium members. For more information <a href='https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context' target='_blank'> read here</a></li>
-  <li>Currently IBM Watson allows <b>only 5</b> response types per node.</li>
-</ul>
+- Currently IBM Watson Assistant retains sessions only for 5 minutes for Free and 60 minutes for Plus or premium members. For more information [read here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context)
+- Currently IBM Watson allows **only 5** response types per node.

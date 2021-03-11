@@ -3,6 +3,7 @@ pagename: Structured Content Rendering Tool
 redirect_from:
   - rich-messaging-structured-content-pollock.html
   - structured-content-mobile-sdk-and-web-templates-structured-content-rendering-tool.html
+  - structured-content-structured-content-rendering-tool.html
 Keywords:
 sitesection: Documents
 categoryname: "Rich Messaging"
