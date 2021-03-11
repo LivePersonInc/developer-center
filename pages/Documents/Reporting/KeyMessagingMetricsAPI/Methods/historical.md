@@ -7,7 +7,7 @@ categoryname: "Reporting"
 documentname: Key Messaging Metrics API
 subfoldername: Methods
 order: 10
-permalink: key-messaging-metrics-api-methods-metrics.html
+permalink: key-messaging-metrics-api-methods-historical.html
 
 indicator: messaging
 
@@ -15,7 +15,7 @@ indicator: messaging
 
 ### General 
 
-The trends API retrieves historical core messaging metrics at the account, skill or group level, for up to the last 30 days.
+The trends API retrieves messaging metrics over time filtered by agent, group or skill  for a time frame of up to 24 hours from the last 30 days.
 
 Using this API, you can enrich your customized real-time dashboard. Here are some example use cases of the API, that can assist you in analyzing your contact center performance:
 
@@ -24,12 +24,6 @@ Using this API, you can enrich your customized real-time dashboard. Here are som
 - Track how many conversation have been transferred over time, for a pre-defined skill / agent / group 
 
 - Track how many conversation have been concluded over time, for a pre-defined skill / agent / group 
-
-
-The API is being used today in the LivePerson Conversational Cloud to display the agent manager workspace:
-
-![](img/amws.png)
-
 
 
 ### Request

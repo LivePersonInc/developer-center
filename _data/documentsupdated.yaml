@@ -125,7 +125,6 @@
           - subpagename: Dialogs & Patterns
           - subpagename: Intents
           - subpagename: Integrations
-          - subpagename: Disambiguation
           - subpagename: Deploy the Bot
           - subpagename: Escalate to an Agent
       - pagename: Bot Groups & Other Techniques
@@ -287,16 +286,17 @@
           - subpagename: Mapping Content Metadata
           - subpagename: Writing a Transformation Specification
           - subpagename: Best Practices
+          - subpagename: Beta - Shortening Long-Form Content
       - pagename: Internal Knowledge Bases
         subpages:
           - subpagename: Introduction
           - subpagename: Knowledge Bases
           - subpagename: Articles
           - subpagename: Best Practices
-          - subpagename: Limits
       - pagename: Using Intents with KBs
       - pagename: Sending Content to Consumers
       - pagename: Common Settings & Tasks
+      - pagename: Limits
   - documentname: Bots Status
     pages:
       - pagename: Overview
@@ -842,6 +842,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Metrics
+          - subpagename: Historical
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
