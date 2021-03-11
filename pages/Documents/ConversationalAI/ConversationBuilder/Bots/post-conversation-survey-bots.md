@@ -204,8 +204,39 @@ Make sure that a custom bot *that triggers a survey bot* also uses Close Dialog.
 Survey bot settings include:
 
 - **Skill**: If desired, change the skill(s) that will trigger this survey bot.
+- **Email Transcript**: Enable this to offer an emailed transcript of the survey to the consumer. For more on this, see the next section.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. Then enter the message to send.
 - **Session Expired Message**: Enable this to send a Session Expired message when the user enters text after the session has timed out. Then enter the message to send. (For information on the **Session Length** setting, a related setting that's displayed for all bots, see [here](conversation-builder-bots-bot-basics.html#configure-bot-settings).)
+
+### Adding support for emailed transcripts
+
+If desired, you can add support for emailing a transcript of the survey conversation to the consumer, and grant the consumer the option to accept or decline this.
+
+
+
+There are a few steps involved in the setup.
+
+First, in the Survey dialog, set the last interaction’s Next Action to “Next Interaction.”
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_nextAction.png">
+
+This must be done so that, as a last step, the conversation flow can be directed to a hidden, final interaction that offers the emailed transcript.
+
+Second, configure the bot’s **Bot Settings** to add support:
+
+1. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
+2. Select **Bot Settings**.
+3. Click **More Settings** to display all the settings.
+4. Scroll down to **Email Transcript**, and enable the toggle.
+5. Configure the settings that appear:
+    * **Email Transcript Message**: Enter the message to send to the consumer to offer an emailed transcript, for example, “To receive a transcript of this survey, enter your email address. Or, select Decline.”
+    * **Sender Name**: Enter the name of the sender of the email.
+    * **Sender Email**: Enter the email address of the sender of the email.
+    * **Interaction Delay**: Set the time delay in milliseconds before sending the message to offer an emailed transcript. Often, a delay is added to present a more human-like experience. You can specify a maximum value of 10000 milliseconds (10 seconds).
+    * **Fallback Response**: Enter the message to send to the consumer when the consumer’s response isn’t understood by the bot, i.e., when the consumer doesn’t enter a valid email address or select to skip the survey. For example, “Please enter a valid email address, or select Decline.”
+    * **Display Choices As**: Select whether and how to display the option to skip the survey. You can display the option as a button or a quick reply.
+    * **Skip Button Text**: Enter the text to display on the button/quick reply for skipping the survey, for example, “Decline” or “Skip.”
+6. Click **Save**.
 
 ### Deploying the survey bot
 
