@@ -59,8 +59,10 @@ The HTML tags render in Conversation Builder's [Preview](conversation-builder-te
 
 In an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html) or an [external knowledge that uses LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html), whenever someone changes an article’s content -- that is, the title, the summary, the detail or a content URL -- a back-up of the previous version of the article is automatically created. The system stores the three, most recent back-up versions that have been created, and you can restore one of these if desired.
 
-{: .important}
-You can only restore an earlier version of the article’s *content* (title, summary, detail and content URLs). To change any other article property, you must modify the article directly.
+Note the following:
+
+* You can only restore an earlier version of the article’s *content* (title, summary, detail and content URLs). To change any other article property, you must modify the article directly.
+* When applicable, a back-up version is also created due to a sync of updated content.
 
 **To restore an earlier version of an article**
 
