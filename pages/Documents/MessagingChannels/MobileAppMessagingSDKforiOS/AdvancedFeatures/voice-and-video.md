@@ -23,7 +23,7 @@ Voice & Video capabilities are available only on iOS SDK 6.3.0 and above
 
 KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-cobrowse-for-messaging.html)
 
-To enable this feature on the Conversational Cloud, please contact your LivePerson representative.
+To enable the feature on your Conversational Cloud account please review the KB article
 
 ### How to enable:
 
