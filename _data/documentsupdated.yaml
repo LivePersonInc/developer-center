@@ -334,6 +334,7 @@
       - pagename: Custom Integration
       - pagename: Hook Configuration
       - pagename: Public API
+      - pagename: Conversation Tester
 
   - documentname: Messaging Agent SDK
     pages:
@@ -928,13 +929,6 @@
       subpages:
       - subpagename: Quick Start 5.2.1 and below
       - subpagename: Quick Start - 6.0 and up (XCFramework support)
-    - pagename: Advanced Configuration
-      subpages:
-        - subpagename: App Extensions
-        - subpagename: Conversations Lifecycle
-        - subpagename: SDK Delegates
-        - subpagename: UI
-        - subpagename: User Data
     - pagename: Advanced Features
       subpages:
       - subpagename: Audio Messages
@@ -946,6 +940,7 @@
       - subpagename: Photo and File Sharing
       - subpagename: Scroll Behavior Configuration
       - subpagename: Unauthenticated In-App Messaging
+      - subpagename: Voice and Video
       - subpagename: Welcome Message with Quick Replies
     - pagename: SDK APIs
       subpages:
