@@ -471,32 +471,32 @@ Proactive Messaging service has retry mechanism internally on dependent services
 | variable  		  | 1550 char max length | SMS messages more than 160 chars may be sent as multiple messages |
 
 <strong>Is Whatsapp Rich template enabled for all accounts?</strong>
-- To use Whatsapp Rich template via API/UI, reach out to Proactive team to get it enabled for the account. Currently the feature is not enabled for all accounts.
+To use Whatsapp Rich template via API/UI, reach out to Proactive team to get it enabled for the account. Currently the feature is not enabled for all accounts.
 
 <strong>What are different components of a Whatsapp template? Are all the components mandatory to be present in a rich template?</strong>
-- There are four different components of a Whatsapp template
-1> Header (Image, Video, Document is supported currently. Only 1 type is allowed for a template)
-2> Body
-3> Footer
-4> Buttons (2 types: Quick Reply Buttons, Call To Action Buttons)
+There are four different components of a Whatsapp template
+- Header (Image, Video, Document is supported currently. Only 1 type is allowed for a template)
+- Body
+- Footer
+- Buttons (2 types: Quick Reply Buttons, Call To Action Buttons)
 Message body in WA Rich template is mandatory. Header, footer, buttons are optional in WA Rich template depending on template design.
 
 <strong>What extensions are supported for WA rich template in the header section?</strong>
-- Allowed extensions for different types of header for a rich template: 
-Image:[jpg,png],
-Document:[pdf],
-video:[mp4,3gpp]
+Allowed extensions for different types of header for a rich template: 
+- Image:[jpg,png],
+- Document:[pdf],
+- Video:[mp4,3gpp]
 
 <strong>Are there any limitations on the URL added for header image/video/document type?</strong>
-- Below are the limitations:
-1> URL provided for header (image/video/document) should be publicly accessible
-2> Only https urls are supported
-3> Before sending WhatsApp rich messages using a template with header of type image, please reach out to your CSM to get the domain whitelisted in Houston. Root Url/ domain has to be whitelisted by CSM in houston site settings messaging.rich.content.valid.urls.
-For example; if the brand wants to send images from upload.wikimedia.org like: 
+Below are the limitations:
+- URL provided for header (image/video/document) should be publicly accessible
+- Only https urls are supported
+- Before sending WhatsApp rich messages using a template with header of type image, please reach out to your CSM to get the domain whitelisted in Houston. Root Url/ domain has to be whitelisted by CSM in houston site settings messaging.rich.content.valid.urls.
+ For example; if the brand wants to send images from upload.wikimedia.org like: 
 https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg
 https://upload.wikimedia.org/wikipedia/commons/6/63/Beity_Logo.jpg
 they should have https://upload.wikimedia.org added in houston site settings. Please see the screenshot below. 
-- <img src="images/URL_whitelisting.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
+<img src="images/URL_whitelisting.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
 
 <strong>Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?</strong>
-- Footer and quick reply buttons have static values and do not need any user input while campaign creation
+Footer and quick reply buttons have static values and do not need any user input while campaign creation
