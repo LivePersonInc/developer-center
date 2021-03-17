@@ -544,5 +544,5 @@ The users can pull the data for a given 24 hour time interval date range from to
 - For Proactive Campaign API, Pagination is not supported yet.
 - For Proactive Campaign Analytics API, Pagination is not needed.
 
-<strong>11. Is reporting data real time ? What is the delay in reporting data from the time proactive campaigns or C2M deflections are created ?</strong>
-- Data in reporting api can be delayed upto 10 min. e.g. Proactive campaign created now will take upto 10 min to be reflected in reporting api. Similarly other messaging data like message delivered, opted out, conversation created etc will also take up to 10 min from the time the event occured.
+<strong>11. Is Outbound Reporting API real time? What is the delay in reporting data from the time Proactive Messaging campaigns or C2M deflections are created ?</strong>
+- Data in outbound reporting api can be delayed by upto 10 min. e.g. Proactive campaign created now will take upto 10 min to be reflected in reporting api. Similarly other messaging data like message delivered, opted out, conversation created etc will also take up to 10 min from the time the event occured.
