@@ -51,6 +51,92 @@ In our example below, we've added a rule that checks for a "success" result, and
 
  <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png">
 
+### Knowledge AI interactions
+
+Use a Knowledge AI interaction in a dialog when you want to search a knowledge base for articles. This interaction always performs the search using the consumer’s most recent message as the search phrase.
+
+![Carousel](img/ConvoBuilder/knowledge_ai.gif)
+
+A common use case for the Knowledge AI interaction is within a Fallback dialog, where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
+
+#### How the search works
+
+* **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search, so it can be used as the search phrase.
+* **The search** - When performing the search, the search mode is always “Intents.” For information on search modes, see [here](knowledge-base-using-intents-with-kbs.html#search-modes).
+* **The results** - The results that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
+
+{: .important}
+You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses an associated [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported. However, the Knowledge AI interaction is a faster and simpler alternative because it doesn’t need an associated Knowledge Base integration.
+
+#### How the results are rendered
+The results from a Knowledge AI search can be rendered in two ways:
+
+* Via automatic rendering
+* Via one or more Statement interactions that you add
+
+Automatic rendering produces output that’s automatically rendered in a specific format, using specific elements of the article’s content.
+
+When you use “rich format” automatic rendering, the output includes rich elements, such as images and links. The output looks like this:
+
+<img style="width:500px" src="img/ConvoBuilder/knowledge_ai_rich.png">
+
+In contrast, when you use “plain text” automatic rendering, the output doesn’t include rich elements, and it looks like this:
+
+<img style="width:500px" src="img/ConvoBuilder/knowledge_ai_plain.png">
+
+Select “rich format” or “plain text format” based on the target channel’s support for rich elements. For more on this interaction’s channel support, see [here](conversation-builder-interactions-interaction-support.html).
+
+If the output above meets your needs in terms of content and format, automatic rendering is the faster and simpler choice, as you don’t need to follow the Knowledge AI interaction with Statement interactions that display the article content. The Knowledge AI interaction handles everything: search of the knowledge base and rendering of the results.
+
+However, if you desire control over the content and format, you can disable automatic rendering. In this case, after the Knowledge AI interaction, you’ll need to manually add one or more Statement interactions that display the article content.
+
+{example image of impl - need syntax from Ravindra first}
+
+Use the following syntax to retrieve the article content:
+
+{table with syntax - need syntax from Ravindra first}
+
+#### Formatting considerations
+
+* Use HTML within the articles only when the target channels support it.
+* Be aware that knowledge bases have article-level [limits](knowledge-base-limits.html) in terms of the number of characters allowed in a Summary or a Detail field. These are enforced by the application to promote best practices. They work to ensure that responses, when rendered, aren’t split in ways that break the HTML.
+
+#### Add a Knowledge AI interaction
+
+1. Select the interaction just above where you want to add the Knowledge AI interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_knowledge_ai.png"> (Knowledge AI) on the interactions toolbar.
+2. In the interaction, select the knowledge base to search.
+
+    <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_add.png">
+
+3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
+4. On the Basic tab, specify the following:
+    * **Message when results not found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. This message is sent regardless of whether you’ve defined a custom rule for the "KB Match Not Found" match type (discussed below).
+5. Review the rest of the basic settings, and make any changes desired. For help with these, see [here](conversation-builder-interactions-configuration-settings.html#basic-settings).
+6. Switch to the Advanced tab, and specify the following:
+    * **Auto rendering format**: Select the type of automatic rendering to use: rich format or plain text format. Alternatively, select “No auto rendering.” Automatic rendering is discussed farther above.
+    * **Max number of answers**: Select the number of results to return from the knowledge base, anywhere from one to three. The default value is one.
+    * **Min confidence score for answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds).
+
+        This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
+
+    * **Label for article’s content URL**: Enter the label to use for the link to the article's content URL. The link will open the URL in a new window. This field is disabled if you select “No auto rendering” for Auto rendering format.
+7. Click **Save**.
+8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve disabled the **Auto rendering format** setting, you’ll also need to add one or more Statement interactions that display the article content.
+
+#### Direct the conversation flow based on the result
+
+By default, a Knowledge AI interaction includes two custom rules: one rule for when the knowledge base search returns an answer and the other rule for when the search doesn’t.
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow1.png">
+
+Within each rule, the condition specifies the particular search result, either "Found" or "Not Found."
+
+<img style="width:800px" src="img/ConvoBuilder/knowledge_ai_flow2.png">
+
+Configure the **Next Action** for each of these rules based on the direction in which the conversation should flow in each case.
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow3.png">
+
 ### Agent Transfer interactions
 
 Use an Agent Transfer interaction in a dialog when you want to transfer a conversation from a bot to a live agent, or from a bot in one bot group to a bot in a *different* group.
