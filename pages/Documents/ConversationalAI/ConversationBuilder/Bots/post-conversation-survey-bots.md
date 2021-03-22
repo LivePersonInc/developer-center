@@ -78,39 +78,58 @@ Before you can begin building survey bots, the feature must be enabled in Conver
 
 ### Building out the survey bot
 
-#### Adding survey interactions
+In the dialog that's of type "Survey," define the survey. There are several types of survey questions:
 
-In the dialog that's of type "Survey," define the survey. There are three types of survey interactions:
+**First Call Resolution (FCR)**
 
-* First Call Resolution (FCR)
-* Customer Satisfaction (CSAT)
-* Net Promoter Score (NPS)
-
-The survey interactions are predefined in the sense that you can't edit their structure, i.e., add or remove answer choices. However, you can change the question and answer text.
-
-{: .important}
-In a single survey bot, you can include only one of each survey interaction type.
-
-##### FCR interaction
+This question is used to measure operational efficiency in resolving consumer issues. This interaction asks a standard FCR question: *Were you able to resolve your inquiry today?* Feedback on this helps you to measure and improve agent/bot and skill performance.
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_fcr.png">
 
-##### CSAT interaction
+**Customer Satisfaction (CSAT)**
+
+Customer Satisfaction (CSAT) metrics are used to measure the frequency at which your brand meets or exceeds consumer expectations. This interaction asks a standard CSAT question: *How would you rate your overall satisfaction with the service you received?*
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_csat.png">
 
-##### NPS interaction
+**Net Promoter Score (NPS)**
+
+Net Promoter Score (NPS) metrics are commonly used to measure the loyalty of a consumer to a brand. This interaction asks a standard NPS question: *Based on your experience today, how likely are you to recommend us to a friend or colleague?*
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_nps.png">
 
+**Closed-ended, custom**
+
+A closed-ended question is a multiple choice question that has a custom, predefined list of answer choices. Use this interaction when you need quantifiable data and want to categorize your consumers.
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_closed.png">
+
 {: .important}
-When the target channel is Apple Business Chat, the survey interactions (NPS, CSAT, FCR) are automatically sent to the consumer as List Picker interactions.
+When adding a closed-ended, custom question, remember to update the conditions in each, corresponding rule that is added automatically.
 
-#### Customizing interaction text
+**Open-ended, custom**
 
-You can customize the question text and the answer choice text for each of the survey interactions. To do so, simply replace the text with your own. For example, you might want to change the language that’s used.
+An open-ended question allows the consumer to provide an answer in their own words, instead of being constrained by a predefined list of answer choices. Use this interaction when you want to offer the opportunity for this type of free-form feedback.
 
-When working with the answer choices for the FCR, CSAT and NPS interactions, if you move your mouse over an answer, you can see both the answer text (text value) and the actual, underlying value that’s reported to [Analytics Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html).
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_open.png">
+
+FCR, CSAT and NPS questions:
+* These are predefined in the sense that you can't edit their structure, i.e., add or remove answer choices. However, you can change the question and answer text.
+* In a survey bot, you can include only one of each of these.
+* You can add a skip option to each of these.
+
+Closed-ended and open-ended, custom questions:
+* In a survey bot, you can include as many of these as required.
+* You can add a skip option to closed-ended questions but not to open-ended questions. 
+
+{: .important}
+When the target channel is Apple Business Chat, applicable survey questions are automatically sent to the consumer as List Picker interactions.
+
+#### Customizing interaction text (FCR, CSAT and NPS)
+
+You can customize the question text and the answer choice text for the FCR, CSAT and NPS interactions. To do so, simply replace the text with your own. For example, you might want to change the language that’s used.
+
+When working with the answer choices, if you move your mouse over an answer, you can see both the answer text (text value) and the actual, underlying value that’s reported to [Analytics Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html).
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_actualvalue1.png">
 
@@ -119,7 +138,7 @@ The actual value never changes, not even when you change the answer text (text v
 {: .important}
 Take care when changing the answer text; remember to update the conditions in the rules accordingly.
 
-#### Reordering answer choices
+#### Reordering answer choices (FCR, CSAT and NPS)
 
 Reordering an answer choice has no impact on its text value or actual value. You must manually change the answer text (text value) if desired. The actual value never changes.
 
@@ -134,18 +153,22 @@ Alternatively, you can use the hotkeys:
 
 #### Marking survey questions as optional
 
-To add a Skip option and thereby make a survey question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
+To add a Skip option to an FCR, CSAT or NPS question and thereby make the question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
 
 <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_skip.png">
 
 Clicking **Skip** automatically adds a custom rule for the "skip" response, so you can build out the survey logic as you require.
+
+To add a Skip option to a closed-ended, custom question, manually add "Skip" as one of the answer choices. This too adds a custom rule for the "skip" response, so you can build out the survey logic as you require.
+
+You cannot add a Skip opton to an open-ended, custom question.
 
 {: .important}
 In an NPS interaction, don't enable Skip if your targeted channel is Facebook. Facebook doesn't support structured content that has more than 11 quick replies. The NPS question plus the Skip option is 12 quick replies. Using Skip will cause the conversation to end abruptly.
 
 #### Configuring the display format
 
-In the **Advanced Settings** of each of the survey interactions, you can configure two display settings:
+In the **Advanced Settings** of many of the survey interactions, you can configure two display settings:
 
 * Display Choices As
 * Text Only Fallback > List Style for Choices
@@ -162,7 +185,6 @@ When you deploy your survey bot to a channel that doesn't support rich content f
 
 * **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format.
 * **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer.
-
 
 #### Handling free text answers
 
@@ -181,8 +203,6 @@ You cannot create a [Fallback dialog](conversation-builder-dialogs-fallback-dial
 #### Adding standard interactions
 
 You can use only a subset of the standard interaction types in the Survey dialog; unavailable interactions are hidden from view on the toolbar.
-
-Use the standard interactions to ask questions that reflect your brand's custom key performance indicators (KPIs) and/or other free-text questions. For example, you might want to obtain the consumer's age.
 
 #### Closing the survey conversation
 
@@ -272,7 +292,7 @@ In the **Conversations panel** of the **Manager Workspace**, managers can view t
 ### Reporting
 
 #### Analytics Builder
-Metrics from the FCR, CSAT, and NPS questions in surveys are captured in Conversational Cloud and exposed via the [Analytics Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html) application. You'll find this information in the predefined [Survey Dashboard for Messaging](https://knowledge.liveperson.com/data-reporting-messaging-messaging-dashboards-survey-dashboard-for-messaging.html), which you can use out-of-the-box or manipulate to create customized reports.
+Metrics from survey questions are captured in Conversational Cloud and exposed via the [Analytics Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html) application. You'll find this information in the predefined [Survey Dashboard for Messaging](https://knowledge.liveperson.com/data-reporting-messaging-messaging-dashboards-survey-dashboard-for-messaging.html), which you can use out-of-the-box or manipulate to create customized reports.
 
 #### Bot Analytics
 In the [Bot Analytics](bot-analytics-overview.html) application, you'll see survey bots reported in the same way as custom bots. There is no difference between the two.
