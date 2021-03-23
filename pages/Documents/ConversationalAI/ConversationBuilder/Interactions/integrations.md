@@ -99,27 +99,27 @@ However, if you desire control over the content and format, you can disable auto
 
 To display a single result, use this syntax:
 
-`{$.api_KaiResults.results[0].title}`
-`{$.api_KaiResults.results[0].summary}`
-`{$.api_KaiResults.results[0].detail}`
-`{$.api_KaiResults.results[0].imageURL}`
-`{$.api_KaiResults.results[0].contentURL}`
+`{$.api_KaiResults.results[0].title}`<br>
+`{$.api_KaiResults.results[0].summary}`<br>
+`{$.api_KaiResults.results[0].detail}`<br>
+`{$.api_KaiResults.results[0].imageURL}`<br>
+`{$.api_KaiResults.results[0].contentURL}`<br>
 
 For example:
 
-<img style="width:500px" src="img/ConvoBuilder/knowledge_ai_result1.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png">
 
 To iterate over and display multiple results, use this syntax:
 
-`{$.api_KaiResults.results[i].title}`
-`{$.api_KaiResults.results[i].summary}`
-`{$.api_KaiResults.results[i].detail}`
-`{$.api_KaiResults.results[i].imageURL}`
-`{$.api_KaiResults.results[i].contentURL}`
+`{$.api_KaiResults.results[i].title}`<br>
+`{$.api_KaiResults.results[i].summary}`<br>
+`{$.api_KaiResults.results[i].detail}`<br>
+`{$.api_KaiResults.results[i].imageURL}`<br>
+`{$.api_KaiResults.results[i].contentURL}`<br>
 
 For example:
 
-
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png">
 
 #### Add a Knowledge AI interaction
 
