@@ -80,11 +80,15 @@ When you use “rich format” automatic rendering, the output includes rich ele
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_rich.png">
 
+With "rich format" automatic rendering, anywhere from one to three results are returned based on how you've configured the interaction.
+
 In contrast, when you use “plain text” automatic rendering, the output doesn’t include rich elements, and it looks like this:
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_plain.png">
 
-Select “rich format” or “plain text format” based on the target channel’s support for rich elements. For more on this interaction’s channel support, see [here](conversation-builder-interactions-interaction-support.html).
+With "plain text" automatic rendering, only a single, best result is returned.
+
+Select “rich format” or “plain text format” based on the target channel’s support for rich elements like images and links. For more on this interaction’s channel support, see [here](conversation-builder-interactions-interaction-support.html).
 
 If the output above meets your needs in terms of content and format, automatic rendering is the faster and simpler choice, as you don’t need to follow the Knowledge AI interaction with Statement interactions that display the article content. The Knowledge AI interaction handles everything: search of the knowledge base and rendering of the results.
 
@@ -113,13 +117,13 @@ Use the following syntax to retrieve the article content:
     * **Message when results not found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. This message is sent regardless of whether you’ve defined a custom rule for the "KB Match Not Found" match type (discussed below).
 5. Review the rest of the basic settings, and make any changes desired. For help with these, see [here](conversation-builder-interactions-configuration-settings.html#basic-settings).
 6. Switch to the Advanced tab, and specify the following:
-    * **Auto rendering format**: Select the type of automatic rendering to use: rich format or plain text format. Alternatively, select “No auto rendering.” Automatic rendering is discussed farther above.
-    * **Max number of answers**: Select the number of results to return from the knowledge base, anywhere from one to three. The default value is one.
     * **Min confidence score for answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds).
 
         This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
 
-    * **Label for article’s content URL**: Enter the label to use for the link to the article's content URL. The link will open the URL in a new window. This field is disabled if you select “No auto rendering” for Auto rendering format.
+    * **Max number of answers**: Select the number of results to return from the knowledge base, anywhere from one to three. The default value is one.
+    * **Auto rendering format**: Select the type of automatic rendering to use: rich format or plain text format. Alternatively, select “No auto rendering.” Automatic rendering is discussed farther above.
+    * **Link text for content URL**: Enter the label to use for the link to the article's content URL. The link will open the URL in a new window. This field is not available if you select "Plain text format" or “No auto rendering” for **Auto rendering format**, since it is not applicable in these cases.
 7. Click **Save**.
 8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve disabled the **Auto rendering format** setting, you’ll also need to add one or more Statement interactions that display the article content.
 

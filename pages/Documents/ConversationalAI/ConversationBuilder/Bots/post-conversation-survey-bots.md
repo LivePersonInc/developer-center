@@ -233,9 +233,7 @@ Survey bot settings include:
 
 ### Adding support for emailed transcripts
 
-If desired, you can add support for emailing a transcript of the survey conversation to the consumer, and grant the consumer the option to accept or decline this.
-
-
+If desired, you can add support for emailing a transcript of the main conversation to the consumer, and grant the consumer the option to accept or decline this at the end of the survey.
 
 There are a few steps involved in the setup.
 
