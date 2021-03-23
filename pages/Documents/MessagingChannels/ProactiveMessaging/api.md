@@ -96,8 +96,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
                 "1": "Test1",
                 "2": "Test2",
                 "3": "Test3",
-                "4": "Test4",
-                "5": "Test5"
+                "4": "Test4"
             },
             "headerVariables": {
                 "video": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4"
