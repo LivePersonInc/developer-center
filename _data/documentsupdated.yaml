@@ -704,6 +704,7 @@
         subpages:
           - subpagename: Overview
           - subpagename: Events & Templates
+          - subpagename: Function Connectivity
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Snippets
