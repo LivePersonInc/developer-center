@@ -76,7 +76,7 @@ The results from a Knowledge AI search can be rendered in two ways:
 
 Automatic rendering produces output that’s automatically rendered in a specific format, using specific elements of the article’s content.
 
-When you use “rich format” automatic rendering, the output includes rich elements, such as images and links. The output looks like this:
+When you use “rich format” automatic rendering, the output includes rich elements, namely, images and links. The output looks like this:
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_rich.png">
 
@@ -88,7 +88,7 @@ In contrast, when you use “plain text” automatic rendering, the output doesn
 
 With "plain text" automatic rendering, only a single, best result is returned.
 
-Select “rich format” or “plain text format” based on the target channel’s support for rich elements like images and links. For more on this interaction’s channel support, see [here](conversation-builder-interactions-interaction-support.html).
+Select “rich format” or “plain text format” based on the target channel’s support for rich elements. For more on this interaction’s channel support, see [here](conversation-builder-interactions-interaction-support.html).
 
 If the output above meets your needs in terms of content and format, automatic rendering is the faster and simpler choice, as you don’t need to follow the Knowledge AI interaction with Statement interactions that display the article content. The Knowledge AI interaction handles everything: search of the knowledge base and rendering of the results.
 
