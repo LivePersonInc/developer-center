@@ -86,24 +86,40 @@ In contrast, when you use “plain text” automatic rendering, the output doesn
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_plain.png">
 
+{: .important}
+Take note of the formatting applied to **Book Now** in the image above. When you use the "plain text" automatic rendering, HTML is not removed. Use HTML in your source knowledge base only when your target channels support it.
+
 With "plain text" automatic rendering, only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
 
 Select “rich format” or “plain text format” based on the target channel’s support for rich elements. For more on this interaction’s channel support, see [here](conversation-builder-interactions-interaction-support.html).
 
 If the output above meets your needs in terms of content and format, automatic rendering is the faster and simpler choice, as you don’t need to follow the Knowledge AI interaction with Statement interactions that display the article content. The Knowledge AI interaction handles everything: search of the knowledge base and rendering of the results.
 
-However, if you desire control over the content and format, you can disable automatic rendering. In this case, after the Knowledge AI interaction, you’ll need to manually add one or more Statement interactions that display the article content.
+However, if you desire control over the content and format, you can disable automatic rendering. In this case, after the Knowledge AI interaction, you’ll need to manually add the interactions that display the article content.
 
-{example image of impl - need syntax from Ravindra first}
+To display a single result, use this syntax:
 
-Use the following syntax to retrieve the article content:
+`{$.api_KaiResults.results[0].title}`
+`{$.api_KaiResults.results[0].summary}`
+`{$.api_KaiResults.results[0].detail}`
+`{$.api_KaiResults.results[0].imageURL}`
+`{$.api_KaiResults.results[0].contentURL}`
 
-{table with syntax - need syntax from Ravindra first}
+For example:
 
-#### Formatting considerations
+<img style="width:500px" src="img/ConvoBuilder/knowledge_ai_result1.png">
 
-* Use HTML within the articles only when the target channels support it.
-* Be aware that knowledge bases have article-level [limits](knowledge-base-limits.html) in terms of the number of characters allowed in a Summary or a Detail field. These are enforced by the application to promote best practices. They work to ensure that responses, when rendered, aren’t split in ways that break the HTML.
+To iterate over and display multiple results, use this syntax:
+
+`{$.api_KaiResults.results[i].title}`
+`{$.api_KaiResults.results[i].summary}`
+`{$.api_KaiResults.results[i].detail}`
+`{$.api_KaiResults.results[i].imageURL}`
+`{$.api_KaiResults.results[i].contentURL}`
+
+For example:
+
+
 
 #### Add a Knowledge AI interaction
 
