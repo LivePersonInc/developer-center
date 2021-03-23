@@ -80,13 +80,13 @@ When you use “rich format” automatic rendering, the output includes rich ele
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_rich.png">
 
-With "rich format" automatic rendering, anywhere from one to three results are returned based on how you've configured the interaction.
+With "rich format" automatic rendering, anywhere from one to three results are returned based on the maximum number of answers that you've specified in the interaction.
 
 In contrast, when you use “plain text” automatic rendering, the output doesn’t include rich elements, and it looks like this:
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_plain.png">
 
-With "plain text" automatic rendering, only a single, best result is returned.
+With "plain text" automatic rendering, only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
 
 Select “rich format” or “plain text format” based on the target channel’s support for rich elements. For more on this interaction’s channel support, see [here](conversation-builder-interactions-interaction-support.html).
 
