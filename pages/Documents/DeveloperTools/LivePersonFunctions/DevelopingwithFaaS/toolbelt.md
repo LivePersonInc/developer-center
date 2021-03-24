@@ -77,8 +77,8 @@ HTTP Client that is based on [request-promise](https://www.npmjs.com/package/req
 <div class="important">
   <ul>
     <li>Please beware of the following restrictions:</li>
-    <li>If the domain is not whitelisted the proxy will close the connection yielding a `Socket is closed`-Error</li>
-    <li>Max. 20 requests/sec (all beyond that are rejected with <code>429 - Too Many Requests</code>)</li>
+    <li>If the domain is not whitelisted the proxy will close the connection yielding a `Socket is closed`-Error.</li>
+    <li>Max. 20 requests/sec (all beyond that are rejected with <code>429 - Too Many Requests.</code>)</li>
   </ul>
 </div>
 
@@ -106,9 +106,9 @@ HTTP Client that is based on [request-promise](https://www.npmjs.com/package/req
 <div class="important">
   <ul>
     <li>Please beware of the following restrictions:</li>
-    <li>If the domain is not whitelisted the proxy will close the connection yielding a `Socket is closed`-Error</li>
-    <li>Max. 20 requests/sec (all beyond that are rejected with <code>429 - Too Many Requests</code>)</li>
-    <li>The expiration date of cert is not tracked, that is something you are responsible for</li>
+    <li>If the domain is not whitelisted the proxy will close the connection yielding a `Socket is closed`-Error.</li>
+    <li>Max. 20 req/sec (all beyond that are rejected with <code>429 - Too Many Requests</code>).</li>
+    <li>The expiration date of cert is not tracked, that is something you are responsible for.</li>
   </ul>
 </div>
 
