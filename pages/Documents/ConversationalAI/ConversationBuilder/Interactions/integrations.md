@@ -61,41 +61,49 @@ A common use case for the Knowledge AI interaction is within a Fallback dialog, 
 
 #### How the search works
 
-* **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search, so it can be used as the search phrase.
+* **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
 * **The search** - When performing the search, the search mode is always “Intents.” For information on search modes, see [here](knowledge-base-using-intents-with-kbs.html#search-modes).
 * **The results** - The results that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
 
 {: .important}
-You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses an associated [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported. However, the Knowledge AI interaction is a faster and simpler alternative because it doesn’t need an associated Knowledge Base integration.
+You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a faster and simpler alternative because it doesn’t need an associated Knowledge Base integration.
 
-#### How the results are rendered
+#### Automatic rendering of results
 The results from a Knowledge AI search can be rendered in two ways:
 
 * Via automatic rendering
-* Via one or more Statement interactions that you add
+* Via one or more interactions that you manually add to the dialog
 
-Automatic rendering produces output that’s automatically rendered in a specific format, using specific elements of the article’s content.
+*Automatic rendering* doesn't require that you add any interactions to display the article content. It produces output that’s automatically rendered in a specific format. You can use:
 
-When you use “rich format” automatic rendering, the output includes rich elements, namely, images and links. The output looks like this:
+* Rich format
+* Plain text format
+
+“Rich format” automatic rendering uses a carousel and includes rich elements of the article's content, namely, the image URL and content URL. The output looks like this:
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_rich.png">
 
-With "rich format" automatic rendering, anywhere from one to three results are returned based on the maximum number of answers that you've specified in the interaction.
+With "rich format" automatic rendering:
 
-In contrast, when you use “plain text” automatic rendering, the output doesn’t include rich elements, and it looks like this:
+* Anywhere from one to three results are returned based on the maximum number of answers that you've specified in the interaction.
+* The results degrade gracefully to "plain text format" when the channel in use doesn't support the carousel.
+
+With “plain text format” automatic rendering, the output doesn’t include rich elements, and it looks like this:
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_plain.png">
 
-{: .important}
-Take note of the formatting applied to **Book Now** in the image above. When you use the "plain text" automatic rendering, HTML is not removed. Use HTML in your source knowledge base only when your target channels support it.
+With "plain text format" automatic rendering:
 
-With "plain text" automatic rendering, only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
+* Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
+* HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
 
-Select “rich format” or “plain text format” based on the target channel’s support for rich elements. For more on this interaction’s channel support, see [here](conversation-builder-interactions-interaction-support.html).
+Select “rich format” or “plain text format” based on the target channel’s support for rich elements. For more on this interaction’s channel-level support, see [here](conversation-builder-interactions-interaction-support.html).
 
-If the output above meets your needs in terms of content and format, automatic rendering is the faster and simpler choice, as you don’t need to follow the Knowledge AI interaction with Statement interactions that display the article content. The Knowledge AI interaction handles everything: search of the knowledge base and rendering of the results.
+If the output above meets your needs in terms of content and format, automatic rendering is the faster and simpler choice, as you don’t need to follow the Knowledge AI interaction with interactions that display the article's content. The Knowledge AI interaction handles both search of the knowledge base and rendering of the results.
 
-However, if you desire control over the content and format, you can disable automatic rendering. In this case, after the Knowledge AI interaction, you’ll need to manually add the interactions that display the article content.
+#### Manual rendering of results
+
+If you require control over the content and format when rendering the search results, you can disable automatic rendering. In this case, after the Knowledge AI interaction, you’ll need to manually add the interactions that display the article content.
 
 To display a single result, use this syntax:
 
@@ -107,7 +115,7 @@ To display a single result, use this syntax:
 
 For example:
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png">
+<img style="width:700px" src="img/ConvoBuilder/knowledge_ai_result1.png">
 
 To iterate over and display multiple results, use this syntax:
 
@@ -119,7 +127,7 @@ To iterate over and display multiple results, use this syntax:
 
 For example:
 
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png">
+<img style="width:700px" src="img/ConvoBuilder/knowledge_ai_result2.png">
 
 #### Add a Knowledge AI interaction
 
