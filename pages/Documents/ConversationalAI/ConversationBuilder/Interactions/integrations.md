@@ -79,7 +79,7 @@ The results from a Knowledge AI search can be rendered in two ways:
 * Rich format
 * Plain text format
 
-“Rich format” automatic rendering uses a carousel and includes rich elements of the article's content, namely, the image URL and content URL. The output looks like this:
+“Rich format” uses a carousel and includes rich elements of the article's content, namely, the image URL and content URL. The output looks like this:
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_rich.png">
 
@@ -88,22 +88,22 @@ With "rich format" automatic rendering:
 * Anywhere from one to three results are returned based on the maximum number of answers that you've specified in the interaction.
 * The results degrade gracefully to "plain text format" when the channel in use doesn't support the carousel.
 
-With “plain text format” automatic rendering, the output doesn’t include rich elements, and it looks like this:
+“Plain text format” produces output that doesn’t include rich elements. It looks like this:
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_plain.png">
 
 With "plain text format" automatic rendering:
 
 * Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
-* HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
+* Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
 
-Select “rich format” or “plain text format” based on the target channel’s support for rich elements. For more on this interaction’s channel-level support, see [here](conversation-builder-interactions-interaction-support.html).
+Select “rich format” or “plain text format” automatic rendering based on the target channel’s support for rich elements. For more on this interaction’s channel-level support, see [here](conversation-builder-interactions-interaction-support.html).
 
-If the output above meets your needs in terms of content and format, automatic rendering is the faster and simpler choice, as you don’t need to follow the Knowledge AI interaction with interactions that display the article's content. The Knowledge AI interaction handles both search of the knowledge base and rendering of the results.
+If the output above meets your needs in terms of content and format, automatic rendering is the faster and simpler choice, as you don’t need to follow the Knowledge AI interaction with interactions that display the article's content. The Knowledge AI interaction handles both the search of the knowledge base and the rendering of the results.
 
 #### Manual rendering of results
 
-If you require control over the content and format when rendering the search results, you can disable automatic rendering. In this case, after the Knowledge AI interaction, you’ll need to manually add the interactions that display the article content.
+If you require control over the content and format when rendering the results of the knowledge base search, you can select not to use automatic rendering. In this case, after the Knowledge AI interaction, manually add the interactions that display the article content.
 
 To display a single result, use this syntax:
 
@@ -149,7 +149,7 @@ For example:
     * **Auto rendering format**: Select the type of automatic rendering to use: rich format or plain text format. Alternatively, select “No auto rendering.” Automatic rendering is discussed farther above.
     * **Link text for content URL**: Enter the label to use for the link to the article's content URL. The link will open the URL in a new window. This field is not available if you select "Plain text format" or “No auto rendering” for **Auto rendering format**, since it is not applicable in these cases.
 7. Click **Save**.
-8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve disabled the **Auto rendering format** setting, you’ll also need to add one or more Statement interactions that display the article content.
+8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "No auto rendering" for the **Auto rendering format** setting, you’ll also need to add the interactions that display the article content.
 
 #### Direct the conversation flow based on the result
 
