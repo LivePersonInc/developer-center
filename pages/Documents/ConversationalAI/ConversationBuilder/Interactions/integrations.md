@@ -115,7 +115,7 @@ To display a single result, use this syntax:
 
 For example:
 
-<img style="width:700px" src="img/ConvoBuilder/knowledge_ai_result1.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png">
 
 To iterate over and display multiple results, use this syntax:
 
@@ -127,7 +127,7 @@ To iterate over and display multiple results, use this syntax:
 
 For example:
 
-<img style="width:700px" src="img/ConvoBuilder/knowledge_ai_result2.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png">
 
 #### Add a Knowledge AI interaction
 
