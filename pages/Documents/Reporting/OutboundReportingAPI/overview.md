@@ -81,7 +81,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Method | URI  |
 | :--- | :--- |
-| GET | https://{domain}/account/{accountId}/app/{app}/analytics/
+| GET | https://{domain}/api/account/{accountId}/app/{app}/analytics/
 
 **Path Parameters**
 
@@ -152,7 +152,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/account/{accountId}/app/{app}/analytics/
+| POST | https://{domain}/api/account/{accountId}/app/{app}/analytics/
 
 **Path Parameters**
 
@@ -243,7 +243,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 
 | Method | URI  |
 | :--- | :--- |
-| GET | https://{domain}/account/{accountId}/app/prmsg/campaigns/{proactiveCampaignId}/
+| GET | https://{domain}/api/account/{accountId}/app/prmsg/campaigns/{proactiveCampaignId}/
 
 **Path Parameters**
 
@@ -295,7 +295,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 
 | Method | URI  |
 | :--- | :--- |
-| GET | https://{domain}​/account​/{accountId}​/app​/prmsg​/campaigns​/{proactiveCampaignId}​/analytics​/
+| GET | https://{domain}​/api/account​/{accountId}​/app​/prmsg​/campaigns​/{proactiveCampaignId}​/analytics​/
 
 **Path Parameters**
 
@@ -363,7 +363,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 
 | Method | URI  |
 | :--- | :--- |
-| GET | https://{domain}/account/{accountId}/app/{app}/transactions/
+| GET | https://{domain}/api/account/{accountId}/app/{app}/transactions/
 
 **Path Parameters**
 
