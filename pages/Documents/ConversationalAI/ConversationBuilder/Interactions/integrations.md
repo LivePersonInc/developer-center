@@ -53,34 +53,31 @@ In our example below, we've added a rule that checks for a "success" result, and
 
 ### Knowledge AI interactions
 
-Use a Knowledge AI interaction in a dialog when you want to search a knowledge base for articles. This interaction always performs the search using the consumer’s most recent message as the search phrase.
+Use a Knowledge AI interaction in a bot when you want to search a knowledge base for articles. This interaction always performs the search using the consumer’s most recent message as the search phrase.
 
 ![Carousel](img/ConvoBuilder/knowledge_ai.gif)
 
 A common use case for the Knowledge AI interaction is within a Fallback dialog, where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
 
-#### How the search works
+#### How the Knowledge AI search works
 
 * **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
 * **The search** - When performing the search, the search mode is always “Intents.” For information on search modes, see [here](knowledge-base-using-intents-with-kbs.html#search-modes).
 * **The results** - The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
 
-{: .important}
-You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated Knowledge Base integration.
-
 #### How the answers are rendered
 
-When you configure a Knowledge AI interaction, you specify one of three **Answer layouts** for the answers:
+When you configure a Knowledge AI interaction, you specify an **Answer layout** for the answers, one of:
 
 * Structured
 * Simple
 * Custom 
 
-Both the Structured and Simple layouts are *rendered automatically*. There's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowled base search and the rendering of the results. When it meets your needs, one of these options is the simpler choice.
+Both the Structured and Simple layouts are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowled base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
 
-However, if you require control over the content and layout, you can choose to use a Custom answer layout. In this case, you must follow the Knowledge AI interaction with subsequent interactions that display the answers.
+If you require control over the article content and layout that's used, you can choose to use a Custom answer layout. In this case, you must follow the Knowledge AI interaction with subsequent interactions that display the answers.
 
-Select an answer layout based on 1) the target channel’s support for rich elements like images and URLs ,and 2) whether you require a custom layout. For more on this interaction’s channel-level support, see [here](conversation-builder-interactions-interaction-support.html).
+Select an answer layout based on the target channels and your requirements. For more on this interaction’s channel-level support, see [here](conversation-builder-interactions-interaction-support.html).
 
 #### The Structured answer layout
 
@@ -104,9 +101,9 @@ With the Simple layout:
 * Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
 * Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
 
-#### The Custom layout
+#### The Custom answer layout
 
-Use the Custom layout option when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
+Choose the Custom answer layout when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
 
 To display a single result, use the syntax below, where "variableName" is the response data variable name that you specified in the Knowledge AI interaction's settings:
 
@@ -120,7 +117,7 @@ For example:
 
 <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png">
 
-To iterate over and display multiple results, use this syntax in a similar manner:
+To iterate over and display multiple results, use the syntax below in a similar manner:
 
 `{$.api_variableName.results[i].title}`<br>
 `{$.api_variableName.results[i].summary}`<br>
@@ -148,13 +145,16 @@ For example:
 
         This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
 
-    * **Max number of answers**: Select the number of results to return from the knowledge base, anywhere from one to three. The default value is one.
+    * **Max number of answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
     * **Answer layout**: Select "Structured," "Simple," or "Custom" based on your requirements. These layout options are discussed farther above.
     * **Link text for content URL**: This setting is available only when you select "Structured" for the **Answer layout**. Enter the label to use for the link to the article's content URL. The link will open the URL in a new window.
-    * **Default image URL**: If you enter an image URL, which is optional, then when an article doesn't have an image, this image is used in the Structured output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might enter a company logo image here.
+    * **Default image URL**: This optional setting is available only when you select "Structured" for the **Answer layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the Structured output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might enter a company logo image here.
     * **Response data variable**: This setting is available only when you select "Custom" for the **Answer layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
 7. Click **Save**.
-8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "Custom" for the **Answer layout** setting, you’ll also need to add the interactions that display the article content.
+8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "Custom" for the **Answer layout** setting, you’ll also need to add the interactions that display the answers.
+
+{: .important}
+You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated Knowledge Base integration.
 
 #### Direct the conversation flow based on the result
 
