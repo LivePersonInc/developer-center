@@ -12,7 +12,10 @@ indicator:
 
 The behaviour of the welcome event is different depending on whether the bot is for chat and messaging. This divergence comes down to the way that each individual Liveperson product works..
 
-A Messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow V2 and an intent determined.
+A Messaging conversation qualifies as "initiated" from a Conversational Cloud perspective only after the consumer sends 
+their first message. The consumer is prompted for their initial message in the channel they have chosen to initiate the 
+conversation. As a result, the consumer’s first message is something that can be parsed by Dialogflow ES and an intent 
+determined.
 
 The below documents cover where to configure the initial message on a given platform.
 
@@ -61,7 +64,7 @@ Figure 2.1 Configuration of the welcome event
 
 Structured Content/Rich Content is supported by the core LivePerson platform. Documentation for the feature can be found [here](getting-started-with-rich-messaging-introduction.html).
 
-To send Structured Content via Dialogflow V2, send a _custom payload_ option via an intent.
+To send Structured Content via Dialogflow ES, send a _custom payload_ option via an intent.
 
 <img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-structured-content.png">
 

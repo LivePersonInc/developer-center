@@ -9,7 +9,7 @@ indicator:
 ---
 
 
-### Sending Pause/Delay Message
+### Sending Pause/Delay Messages
 
 It is possible to send a custom payload of type "delay" along regular content and actions.
 This specifies the time the bot will wait before sending the next message.
@@ -139,7 +139,7 @@ These attributes are **only** collected at the start of a conversation.
 Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes.
 Further information Visit Information API can be found [here](visit-information-api-visit-information.html).
 Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request.
-For DialogFlow V2 these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload`
+For DialogFlow ES, these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload`
 (more information about `payload` parameter can be found
 [here](https://googleapis.dev/nodejs/dialogflow/latest/google.cloud.dialogflow.v2.html#.QueryParameters)).
 An example of the request body can be seen below:
