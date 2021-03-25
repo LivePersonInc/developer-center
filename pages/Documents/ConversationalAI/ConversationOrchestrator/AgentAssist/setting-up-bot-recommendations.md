@@ -67,6 +67,7 @@ Configuration of Agent Assist involves the following:
 3. Enable recommendations.
 4. Specify the maximum number of recommendations that Agent Assist will make. By default, this is 3.
 5. Configure the confidence threshold.
+6. Customize the messages for join/remove bot, if desired.
 
 #### Verify the bots have been discovered and enabled
 By default, once you deploy and start a Conversation Builder or third-party bot (i.e., in the system, it is a valid bot that can serve a conversation), it is automatically discovered by Conversation Orchestrator and enabled for use. For Conversation Builder bots, this includes all bots you've created (both public and private) and other public bots within your organization.
@@ -142,3 +143,18 @@ Bot recommendations have a score indicating how relevant the predicted intent is
 2. On the left navigation bar, under **Agent Assist**, click **Bots**.
 3. Scroll down to **Confidence threshold**.
 4. Move the slider to the desired point.
+
+#### Customize the messages for join/remove bot
+
+If the default messages for when a bot is joined to and removed from the conversation don’t meet your needs, you can customize them. For example, you might need to change the language that’s used.
+
+**To customize the messages for join/remove bot**
+
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+2. On the left navigation bar, under Agent Assist, click **Bots**.
+3. Scroll down to the section named **Customize the bot join/remove messages**.
+
+    <img width="650" src="img/agentassist/customize_msgs.png">
+
+4. Enter new messages using the guidance provided regarding the use of variables.
+5. Click **Save**.
