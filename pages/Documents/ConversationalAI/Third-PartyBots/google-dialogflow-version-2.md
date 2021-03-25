@@ -20,7 +20,7 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/wizard.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-configuration-step.png">
 
 Figure 1.1 Showing the configuration that needed to be filled
 
@@ -149,13 +149,13 @@ To handle this gracefully, we recommend building a simple intent that handles a 
 
 1. Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
 
-   <img style="width:600px" src="img/dialogflowversion2/image_7.png">
+   <img style="width:600px" src="img/ThirdPartyBots/dialogflow-es-char-limit-event.png">
 
    Figure 2.1
 
 2. Do not forget to add a custom response in the **Text response** section.
 
-   <img style="width:700px" src="img/dialogflowversion2/image_8.png">
+   <img style="width:700px" src="img/ThirdPartyBots/dialogflow-es-char-limit-response.png">
 
    Figure 2.2
 
@@ -204,7 +204,7 @@ In this scenario, there is no text from the consumer to parse, thus the default 
 
 Ensure you have an ‘entry point’ intent that utilises the default ‘WELCOME’ event.
 
-<img class="fancyimage" style="width:550px" src="img/dialogflowversion2/image_6.png">
+<img class="fancyimage" style="width:550px" src="img/ThirdPartyBots/dialogflow-es-welcome-event.png">
 
 Figure 3.1
 
@@ -220,7 +220,7 @@ LivePerson Messaging uses 4 different types of priorities:
 
 Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/image_9.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-ttr.png">
 
 Figure 3.2
 
@@ -245,7 +245,7 @@ Action: **TRANSFER (Case sensitive)**
 
 Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowversion2/image_10.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-transfer.png">
 
 Figure 4.1
 
@@ -255,7 +255,7 @@ Structured Content/Rich Content is supported by the core LivePerson platform. Do
 
 To send Structured Content via Dialogflow V2, send a _custom payload_ option via an intent.
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_11.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-structured-content.png">
 
 Figure 5.1
 
@@ -391,7 +391,7 @@ Failing to comply with the above validation points will cause the message to be 
 
 Encoded Metadata can be sent with simple Text, Rich Content (structured content) and Multiple responses. For sending encoded metadata as a Text or Rich Content message you must use `Custom Response` type for your relevant intent as shown in Figure 7.1 below
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_encoded_metadata.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata.png">
 Figure 7.1
 
 #### Sending Text Message with Encoded Metadata
@@ -414,7 +414,7 @@ An example of the custom payload text message response is below:
 
 <br />
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_encodedmetadata_text.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata-text.png">
 Figure 7.2 
  
 #### Sending Rich Content (structured content) with Encoded Metadata
@@ -452,7 +452,7 @@ You need to add another property of `encodedMetadata` with your rich content obj
 
 <br />
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_encodedmetadata_structuredcontent.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-encoded-metadata-structured-content.png">
 Figure 7.3
 
 ### Sending Pause/Delay Message
@@ -468,7 +468,7 @@ It is possible to send an event of type "delay" before regular content events an
 
 Setting a delay in between multiple messages is possible and an example of such a case (Message - Delay - Message) can be seen in Figure 8.1.
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/dialogflow_message_delay_message.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-delay-configuration.png">
 Figure 8.1 An example of Message - Delay - Message  configuration in the Dialogflow console's intent editor
 
 It is possible to send only a single delay response. The example payload of such response is below:
@@ -480,7 +480,7 @@ It is possible to send only a single delay response. The example payload of such
 }
 ```
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/delay_response_custom_payload.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-delay-configuration.png">
 Figure 8.2 showing the Custom Markup message for delay message
 
 **Note:** using the delay as a single/sole response from the bot to the consumer, is effectively a ‘no response’ action. Using this allows the bot to receive a consumer message without responding to the consumer.
@@ -503,7 +503,7 @@ Please note private text message will never be shown to the consumer and will be
 
 Setting a private text message between multiple messages is also possible. Moreover, it is also possible to send a private text message with the combination of actions(e.g. Transfer / Escalations) as well. Example of such a case (Message - Private Text Message - Action) can be seen in Figure 9.1.
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/private_message_response_custom_payload.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-private_message.png">
 Figure 9.1 An example of transfer action with a simple text message and private text message in the Dialogflow console's intent editor
 
 It is possible to send only a private text message response. The example payload of such response is below:
@@ -524,7 +524,7 @@ The method for closing a conversation is similar to the transfer action in that 
 
 The action field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to close the conversation.
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_12.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-action-close-conversation.png">
 Figure 10.1
 
 To close a conversation without triggering a post conversation survey, please add the parameter with the name `withoutPcs` and the value `true` to the action parameters.
@@ -545,14 +545,14 @@ In addition, it is possible to send your own payload to the function. Set your c
 The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**
 
 
-<img class="fancyimage" style="width:800px" src="img/dialogflowversion2/image_13.png">
+<img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-function-invocation.png">
 Figure 11.1
 
 ### Engagement attributes as context
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 12.1.
 
-<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
 Figure 12.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow V2 these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload` (more information about `payload` parameter can be found [here](https://googleapis.dev/nodejs/dialogflow/latest/google.cloud.dialogflow.v2.html#.QueryParameters)). An example of the request body can be seen below:

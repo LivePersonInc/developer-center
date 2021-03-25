@@ -13,7 +13,7 @@ indicator:
 ### Overview
 
 The following documentation outlines the configuration for the connector and how to implement functions specifically for
-**Google Dialogflow ES**, also known as **Google Dialogflow Essentials**
+`Google Dialogflow ES`, also known as `Google Dialogflow Essentials`
 
 ### Configuration
 
@@ -80,7 +80,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 </table>
 
 {: .important}
-Dialogflow ES to Google’s oAuth2. Some degree of familiarity with Google IAM policies and IAM console is 
+Dialogflow ES adheres to Google’s oAuth2. Some degree of familiarity with Google IAM policies and IAM console is 
 necessary for setting up a valid Dialogflow ES client with _Read Only API access_.
 Follow the Dialogflow ES documentation available [here](https://cloud.google.com/dialogflow/es/docs/quick/setup#sa-create) 
 in order to set up the necessary **Service Account**
@@ -123,11 +123,11 @@ Dialogflow ES has a [limitation on the length of the text it can process](https:
 Any query longer than 256 characters will cause Third-Party Bots to invoke a custom event in Dialogflow.
 To handle this gracefully, we recommend building a simple intent that handles a **DIALOGFLOW_CHAR_LIMIT** event.
 
-<img style="width:600px" src="img/dialogflowversion2/image_7.png">
+<img style="width:600px" src="img/ThirdPartyBots/dialogflow-es-char-limit-event.png">
 
-Figure 2.1 Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
+Figure 1.3 Create an intent with an event using the string: DIALOGFLOW_CHAR_LIMIT
 
 
-<img style="width:700px" src="img/dialogflowversion2/image_8.png">
+<img style="width:700px" src="img/ThirdPartyBots/dialogflow-es-char-limit-response.png">
 
-Figure 2.2 Add a custom response in the **Text response** section.
+Figure 1.4 Add a custom response in the **Text response** section.
