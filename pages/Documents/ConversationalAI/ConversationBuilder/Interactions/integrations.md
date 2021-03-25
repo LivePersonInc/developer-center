@@ -92,7 +92,7 @@ With the Structured layout:
 
 #### The Simple answer layout
 
-The Simle layout doesn’t include rich elements like images and URLs. It looks like this:
+The Simple layout doesn’t include rich elements like images and URLs. It looks like this:
 
 <img style="width:500px" src="img/ConvoBuilder/knowledge_ai_plain.png">
 
@@ -105,7 +105,7 @@ With the Simple layout:
 
 Choose the Custom answer layout when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
 
-To display a single result, use the syntax below, where "variableName" is the response data variable name that you specified in the Knowledge AI interaction's settings:
+To display a single, best result, use the syntax below, where "variableName" is the response data variable name that you specified in the Knowledge AI interaction's settings:
 
 `{$.api_variableName.results[0].title}`<br>
 `{$.api_variableName.results[0].summary}`<br>
