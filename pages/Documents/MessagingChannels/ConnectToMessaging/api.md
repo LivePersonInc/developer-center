@@ -40,7 +40,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
-| domain   | see API Domain | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain   | Input accountId and search <b>connectToMessagingDomain</b> from [Domain API](https://developers.liveperson.com/api-guidelines-domain-api.html) | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
 | accountId | LivePerson site ID | 12345678 |
 | version | API Version | 2.0 |
 
@@ -134,7 +134,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
-| domain   | see API Domain | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain   | Input accountId and search <b>connectToMessagingDomain</b> from [Domain API](https://developers.liveperson.com/api-guidelines-domain-api.html) | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
 | accountId | LivePerson site ID | 12345678 |
 | version | API Version | 2.0 |
 
