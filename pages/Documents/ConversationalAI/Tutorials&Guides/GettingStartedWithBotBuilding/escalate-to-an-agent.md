@@ -17,7 +17,7 @@ In this final Getting Started tutorial, you add an Agent Escalation dialog to co
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/451534344" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
 
-### Step 17: Create a Human skill
+### Step 15: Create a Human skill
 
 1. Return to the **User Management** section of the Conversational Cloud.
 2. Select the **Skills** tab from the menu bar, and click **+ Add skill** in the lower-left corner. 
@@ -45,7 +45,7 @@ In this final Getting Started tutorial, you add an Agent Escalation dialog to co
 
     From here, we’ll navigate back to Conversation Builder to create our Escalation dialog.
 
-### Step 18: Create the Escalation dialog
+### Step 16: Create the Escalation dialog
 
 1. In **Conversation Builder**, click **Add Dialog** in the lower-left corner, and create a new standard dialog (dialog type = Dialog) with the name "Escalation."
 2. In the dialog starter, set this dialog to be triggered using patterns. Select **+ Pattern** and enter the following pattern values:
@@ -71,7 +71,7 @@ In this final Getting Started tutorial, you add an Agent Escalation dialog to co
 
     Let's re-test the deployed bot to ensure that human escalation is happening as expected.
 
-### Step 19: Test the escalation
+### Step 17: Test the escalation
 
 1. Open a new browser tab, and navigate to the [Messaging demo page](https://vx-lp.github.io/v2/lpwm/). Enter your account number, and click **Update**.
 2. Click into the Messaging call to action, and wake your bot with a "hi" or "hello."

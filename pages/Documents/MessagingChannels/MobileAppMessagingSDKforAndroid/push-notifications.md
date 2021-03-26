@@ -18,13 +18,15 @@ Push and local notifications are a key factor that makes the experience better f
 
 - Added [Firebase](https://firebase.google.com/docs/android/setup) to your Android project and installed the [Firebase Cloud Messaging (FCM) SDk](https://firebase.google.com/docs/cloud-messaging/android/client).
 
+- Added [Huawei Push Kit](https://developer.huawei.com/consumer/en/hms/huawei-pushkit/) to to your Android project if necessary. [Push Proxy](push-notification-service-configuration-of-push-proxy.html) is required.
+
 ### Step 1. Register the client app instance
 
 The proprietary SDK notification is only for display purposes, interacting with it won't launch the Application or navigate to the Conversation Fragment/Activity. For a fully interactive notification, the host app needs to provide the implementation.
 
-1. Use the registration token for the client app instance and register it using the [registerLPPusher() API call](android-registerlppusher.html) so it knows which device should get each push message.
+1. Use the registration token for the client app instance and register it using the [registerLPPusher() API](android-registerlppusher.html) call so it knows which device should get each push message.
 
-2. Upon receiving a push message to your app, handle it so it is displayed to the customer.
+2. Upon receiving a push message to your app, handle it so it is displayed to the customer. 
 
    ```java
    public class MyFirebase extends FirebaseMessagingService {
@@ -60,20 +62,14 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
 1. Under the **application** tab, add the following services + receiver:
 
-    ```java
-    <service
+    ```xml
+        <service
             android:name=".push.fcm.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
-        <!--This service is used to receive and register the token when it is refreshed-->
-        <service
-            android:name=".push.fcm.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
+
         <service
             android:name=".push.fcm.FirebaseRegistrationIntentService"
             android:exported="false">
@@ -99,11 +95,8 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
          @Override
         public void onMessageReceived(RemoteMessage remoteMessage) {
-                  // TODO(developer): Handle FCM messages here.
-            Log.d(TAG, "From: " + remoteMessage.getFrom());
             // Check if message contains a data payload.
             if (remoteMessage.getData().size() > 0) {
-                Log.d(TAG, "Message data payload: " + remoteMessage.getData());
 
                 // Send the data into the SDK
                 String account = "82055668";
@@ -114,26 +107,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
                     NotificationUI.showNotification(this, message);
                 }
             }
-            // Check if message contains a notification payload.
-            if (remoteMessage.getNotification() != null) {
-                Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
-            }
         }
-     }
-     ```
-
-
-   - **MyFirebaseInstanceIDService**: allows you to re-register to the push service everytime the device token refreshes.
-
-     ```java
-     public class MyFirebaseInstanceIDService extends FirebaseMessagingService {
-
-       @Override
-       public void onNewToken(String token) {
-         super.onNewToken(token);
-         Intent intent = new Intent(this, FirebaseRegistrationIntentService.class);
-         startService(intent);
-       }
      }
      ```
 
@@ -151,24 +125,13 @@ The proprietary SDK notification is only for display purposes, interacting with 
             super(TAG);
         }
 
-        @Override
+       @Override
         protected void onHandleIntent(Intent intent) {
-            FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-                @Override
-                public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                    if (!task.isSuccessful()) {
-                        Log.w(TAG, "getInstanceId failed", task.getException());
-                        return;
-                    }
-
-                    // Get new Instance ID token
-                    String token = task.getResult().getToken();
-                    // Register to Liveperson Pusher
-                    String account = "82055668";
-                    String appID = "com.shaym.sdk28";
-                    LivePerson.registerLPPusher(account, appID, token);
-                }
-            });
+            String token = FirebaseInstanceId.getInstance().getToken();
+            // Register to Liveperson Pusher
+            String account = "82055668";
+            String appID = "com.shaym.sdk28";
+            LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);
         }
      }
      ```
@@ -272,27 +235,20 @@ The proprietary SDK notification is only for display purposes, interacting with 
      }
      ```
 
-3. Add the following permission to your app’s AndroidManifest.xml file:
+3. After the `handlePusherRegistration(MainActivity.this);` call added at the `init` stage, add the function to your messaging activity call to register to the pusher:
 
     ```java
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    ```
-
-4. After the `handleGCMRegistration(MainActivity.this);` call added at the `init` stage, add the function to your messaging activity call to register to the pusher:
-
-    ```java
-    private void handleGCMRegistration(Context ctx) {
-    Intent intent = new Intent(ctx, FirebaseRegistrationIntentService.class);
-    ctx.startService(intent);
+    private void handlePusherRegistration(Context ctx) {
+      Intent intent = new Intent(ctx, FirebaseRegistrationIntentService.class);
+      ctx.startService(intent);
     }
     ```
 
-5. After the `removeNotification();` call added at the `Showconversation` stage, add the following function to hide the push message when entering the conversation view:
+4. After the `removeNotification();` call added at the `Showconversation` stage, add the following function to hide the push message when entering the conversation view:
 
     ```java
     private void removeNotification() {
-    NotificationUI.hideNotification(this);
+      NotificationUI.hideNotification(this);
     }
     ```
 
@@ -310,16 +266,16 @@ To handle a scenario when a push message is clicked, you need to implement a pus
 
     ```java
     private void handlePush(Intent intent) {
-    boolean isFromPush = intent.getBooleanExtra(NotificationUI.PUSH_NOTIFICATION, false);
-    //Check if we came from Push Notification
-    if (isFromPush) {
-        clearPushNotifications();
-                if (LivePerson.isValidState()){
-                    openActivity();
-                }
-                else
-                        initActivityConversation();
-    }
+      boolean isFromPush = intent.getBooleanExtra(NotificationUI.PUSH_NOTIFICATION, false);
+      //Check if we came from Push Notification
+      if (isFromPush) {
+          clearPushNotifications();
+          if (LivePerson.isValidState()){
+            openActivity();
+          } else {
+            initActivityConversation();
+          }
+      }
     }
     ```
 
@@ -327,6 +283,6 @@ To handle a scenario when a push message is clicked, you need to implement a pus
 
     ```java
     private void clearPushNotifications() {
-    ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancel(NotificationUI.NOTIFICATION_ID);
+      ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancel(NotificationUI.NOTIFICATION_ID);
     }
     ```

@@ -14,7 +14,7 @@ In Bots Status, you use the **Custom Connectors** tab of the **Bot Agents** page
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/botsStatus_custom_connectors.png">
 
-Use the filters in the upper-right corner to display the desired agents.
+Use the filter controls in the upper-left corner to display the desired agents.
 
 The metrics displayed at the top of the page are affected by the **Environment** filter and no others.
 
