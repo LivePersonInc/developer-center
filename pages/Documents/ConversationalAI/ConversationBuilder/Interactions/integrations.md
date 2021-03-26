@@ -73,7 +73,7 @@ When you configure a Knowledge AI interaction, you specify an **Answer layout** 
 * Simple
 * Custom 
 
-Both the Structured and Simple layouts are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowled base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
+Both the Structured and Simple layouts are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowledge base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
 
 If you require control over the article content and layout that's used, you can choose to use a Custom answer layout. In this case, you must follow the Knowledge AI interaction with subsequent interactions that display the answers.
 
