@@ -138,7 +138,7 @@ For example:
 
 3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
 4. On the Basic tab, specify the following:
-    * **Message when results not found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. This message is sent regardless of whether you’ve defined a custom rule for the "KB Match Not Found" match type (discussed below).
+    * **Message when results not found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. This message is sent regardless of whether you’ve defined a custom rule for the "KB Match Not Found" match type (discussed below). If you don't want this message to be sent, enter "BLANK_MESSAGE".
 5. Review the rest of the basic settings, and make any changes desired. For help with these, see [here](conversation-builder-interactions-configuration-settings.html#basic-settings).
 6. Switch to the Advanced tab, and specify the following:
     * **Min confidence score for answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds).
