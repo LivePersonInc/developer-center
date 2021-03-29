@@ -235,6 +235,8 @@ Survey bot settings include:
 
 If desired, you can add support for emailing a transcript of the main conversation to the consumer, and grant the consumer the option to accept or decline this at the end of the survey.
 
+<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_offerTranscript.png">
+
 There are a few steps involved in the setup.
 
 First, in the Survey dialog, set the last interaction’s Next Action to “Next Interaction.”
