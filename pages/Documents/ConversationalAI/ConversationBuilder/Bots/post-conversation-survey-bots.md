@@ -151,7 +151,7 @@ Alternatively, you can use the hotkeys:
 * Previous = Shift + Ctrl
 * Next = Shift + Alt
 
-#### Marking survey questions as optional
+#### Making survey questions optional
 
 To add a Skip option to an FCR, CSAT or NPS question and thereby make the question optional, click the **+Skip** response and turn it from Off (blue) to On (white).
 
