@@ -13,6 +13,9 @@ Transcripts of conversations in which a bot participated are logged if the botâ€
 
 Review of transcripts is a great way to identify opportunities for tuning.
 
+{: .important}
+When downloading transcripts, a maximum of 10,000 messages per download is allowed. For example, if you request the transcripts for February 15, 2021 through February 21, 2021, and the bot conversations for that period contain an average of 10 messages each, then the maximum number of bot conversations in the download would be approximately 1,000.
+
 ### Access transcripts
 You can access all the transcripts for the specified date range.
 
