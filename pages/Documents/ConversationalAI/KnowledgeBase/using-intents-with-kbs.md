@@ -89,7 +89,7 @@ Something to keep in mind when training in general, and using the Thumbs Up/Down
 
 ### Search modes
 
-When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), and when you perform a search within the Knowledge Base application, you specify a "mode" for the search. The search mode determines the type of search that is performed. Possible modes include:
+A knowledge base search is performed using a specified "search mode." The search mode determines the type of search. Possible modes include:
 
 * Intents
 * Intents Only
@@ -125,6 +125,4 @@ When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to 
 
 For these confidence score breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
 
-When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify the minimum score that a result must have in order to be returned. The highest performing article with that threshold is returned. You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD.
-
-If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
+When you implement a knowledge base search within a bot via a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions), you specify the minimum score that a result must have in order to be returned. You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
