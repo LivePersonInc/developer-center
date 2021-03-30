@@ -272,6 +272,10 @@
         subpages:
          - subpagename: Single Utterance Testing
          - subpagename: Advanced Model Testing
+      - pagename: External APIs
+        subpages:
+         - subpagename: Getting Started
+         - subpagename: Model Tester External APIs
   - documentname: Intent Analyzer
     pages:
       - pagename: Overview
