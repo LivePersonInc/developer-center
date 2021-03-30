@@ -55,7 +55,7 @@ All path and query parameters must be URL-encoded.
 #### Example
 
 ```
-curl -L -X GET 'https://<region>.bc-nlu.liveperson.net/platform/external/api/model_tester/accounts/14525935/test_reports?domain_name=hii%20test%20v2' -H 'Authorization: <token>' -H 'Accept: application/json'
+curl -L -X GET 'https://<region>.bc-nlu.liveperson.net/platform/external/api/model_tester/accounts/<le_account_id>/test_reports?domain_name=hii%20test%20v2' -H 'Authorization: <token>' -H 'Accept: application/json'
 ```
 
 #### Response
@@ -162,7 +162,7 @@ All path and query parameters must be URL-encoded.
 #### Example
 
 ```
-curl -L -X GET 'https://<region>.bc-nlu.liveperson.net/platform/external/api/model_tester/accounts/14525935/domains/39301012-0c7e-4727-bc37-67b30561f8d5/export_test_report?report_name=1900' -H 'Authorization: <token>’ -H 'Accept: text/csv'
+curl -L -X GET 'https://<region>.bc-nlu.liveperson.net/platform/external/api/model_tester/accounts/<le_account_id>/domains/39301012-0c7e-4727-bc37-67b30561f8d5/export_test_report?report_name=1900' -H 'Authorization: <token>’ -H 'Accept: text/csv'
 ```
 
 #### Response
