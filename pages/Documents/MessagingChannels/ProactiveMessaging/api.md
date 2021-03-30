@@ -255,6 +255,103 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
     ]
 }
 ```
+**Request Body Example - JSON Payload - New Version - Handoff(SMS + Whatsapp without Rich Template)**
+
+```json
+{
+    "campaignName": "TestProactiveAPI",
+    "skill": "sales",
+    "templateId": "1234567890",
+    "outboundNumber": "22222222222",
+    "consent": true,
+    "consumers": [
+        {
+            "consumerContent": {"sms": "12345678891", "wa": "12345678891"},
+            "variables": {
+                "1": "Test1",
+                "2": "Test2",
+                "3": "Test3"
+            }
+        },
+        {
+            "consumerContent": {"sms": "1234456678899", "wa": "1234456678899"},
+            "variables": {
+                "1": "Test1",
+                "2": "Test2",
+                "3": "Test3"
+            }
+        }
+    ]
+}
+```
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "phoneNumber": "+12345678891",
+            "consumerContent": {
+                "sms": "12345678891",
+                "wa": "12345678891"
+            }
+        },
+        {
+            "id": "674476fgf-1a4f-7088-45aa-44e05560e44",
+            "phoneNumber": "+1234456678899",
+            "consumerContent": {
+                "sms": "1234456678899",
+                "wa": "1234456678899"
+            }
+        }
+    ]
+}
+```
+
+**Request Body Example - JSON Payload - New Version - Inapp Handoff**
+
+```json
+{
+    "campaignName": "TestInappProactiveAPI",
+    "skill": "sales",
+    "templateId": "H1234567890",
+    "consent": true,
+    "consumers": [
+        {
+            "consumerContent": {"inapp": "user1"},
+            "variables": {
+                "1": "Hi user1, welcome to proactive messaging.",
+            }
+        }
+    ]
+}
+```
+variables is optional, if it is not set, the default value set in handoff will be used. 
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "consumerContent": {
+                "inapp": "user1"
+            }
+        }
+    ]
+}
+```
 
 **Request Body Example - JSON Payload - Old Version**
 
