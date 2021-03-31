@@ -40,7 +40,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
-| domain   | see API Domain | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain   | Input accountId and search <b>connectToMessagingDomain</b> from [Domain API](https://developers.liveperson.com/api-guidelines-domain-api.html) | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
 | accountId | LivePerson site ID | 12345678 |
 | version | API Version | 2.0 |
 
@@ -61,10 +61,11 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | sdes | array | no | Array of ctmrinfo and/or personal SDEs. See details [here](https://developers.liveperson.com/engagement-attributes-types-of-engagement-attributes.html) |
 | templateVariables | object | no | Key-value pairs of variables for the template. This parameter is only applicable for WA channel. |
 | ivrNumber | string | no | The ivrNumber that brands want to use. Some brands have more than 1 ivrNumber and this field clears the ambiguity. |
-| consumerId | string | no | The consumerId which was used in the app. This parameter is only applicable for INAPP channel. |
+| consumerId | string | no | The consumerId which is used in the app as a user name field. This parameter is mandatory for only INAPP channel. |
 
 **Request Body Example - JSON Payload**
 
+SMS, WA
 ```json
 {
     "consumerPhoneNumber": "+12061234567",
@@ -74,6 +75,18 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
     },
     "skill": "support",
     "ivrNumber": "180000"
+}
+
+```
+
+INAPP
+```json
+{
+    "consumerPhoneNumber": "+12061234567",
+    "handoffId": "H123456789",    
+    "skill": "support",
+    "ivrNumber": "180000",
+    "consumerId": "james"
 }
 
 ```
@@ -121,7 +134,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
-| domain   | see API Domain | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain   | Input accountId and search <b>connectToMessagingDomain</b> from [Domain API](https://developers.liveperson.com/api-guidelines-domain-api.html) | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
 | accountId | LivePerson site ID | 12345678 |
 | version | API Version | 2.0 |
 

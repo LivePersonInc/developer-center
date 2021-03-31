@@ -92,7 +92,7 @@ An intent can't be used more than once, i.e., in more than one article.
 1. Open the knowledge base, and use the **Articles** page to search for the article.
 2. On the search results page, use the **Intent** dropdown to select the name of the intent to associate with the article. From this dropdown, you can also create the intent on-the-fly if needed.
 
-    <img style="width:800px" src="img/ConvoBuilder/kb_cms_associate_article.png">
+    <img style="width:500px" src="img/ConvoBuilder/kb_cms_associate_article.png">
     
 ### Sync with the CMS
 Manually syncing with the CMS does the following:

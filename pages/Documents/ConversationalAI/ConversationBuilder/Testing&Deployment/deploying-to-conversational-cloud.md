@@ -134,7 +134,7 @@ You add these fields in the **Advanced Options** of the agent connector.
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/deploy_customConfig.png">
 
 {: .important}
-If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.
+If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.<br><br>To make a change to a custom configuration field for a deployed agent connector, stop the connector first.
 
 #### acceptStatusEventValue
 By default, a message from the consumer is shown to the consumer as "Read' once it is sent. Set this field to "SENT" if you want the message to be shown as "Sent" instead. Once the agent logs into Conversational Cloud and views the message, this status will change to "Read."
@@ -240,5 +240,62 @@ If "false", when a bot receives a conversation, it sees the last utterance in th
 Vertical or horizontal display for rich structured content. Available for FB, Web, and GRBM. Setting tileDisplay to "horizontal" is useful for resolving formatting issues that might occur on specific channels.
 
 **Default value**: vertical<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+**Custom configuration fields for Manager bots**
+
+The following custom configuration fields are intended for use with Manager bots:
+
+* filterPatterns
+* ignoreAcceptStatusEvent
+* ignoreSubscribeMessagingEvents
+* subscribeToMainDialogOnly
+
+See below for details on these.
+
+#### filterPatterns
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+This field is used to filter the messages processed by a Manager bot. Specify a comma-separated list of Regular Expressions, for example:
+
+^[a-z0-9_\-]+$, ^[A-Z0-9]{3}(?:List)?$
+
+If you set this field, the bot agent processes only the messages that match a Regular Expression in the list. If the message doesn’t match an expression in the list, the message is ignored.
+
+If you don’t set this field, the bot agent processes the message flow as usual.
+
+**Default value**: null<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### ignoreAcceptStatusEvent
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+If you set this field to “true,” the consumer doesn’t see “read” or “seen” in the messaging window after their message has been read. LivePerson recommends that you set this to "true." Manager bots don't need to send this kind of status update, and doing so can create unnecessary overhead in the bot response time.
+
+**Default value**: false<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### ignoreSubscribeMessagingEvents
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+If you set this true, the bot agent isn’t notified of activity within the conversation by any participant (typing, messages sent, when a message has been read). Doing this can eliminate unnecessary overhead and processing.
+
+**Default value**: false<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### subscribeToMainDialogOnly
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+If you set this true, the bot agent is notified of conversation updates only in the primary/initial conversation, not the survey conversation. Doing this can eliminate unnecessary overhead and processing.
+
+**Default value**: false<br>
 **Messaging**: Yes<br>
 **Chat**: No
