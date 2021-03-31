@@ -51,6 +51,125 @@ In our example below, we've added a rule that checks for a "success" result, and
 
  <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png">
 
+### Knowledge AI interactions
+
+Use a Knowledge AI interaction in a bot when you want to search a knowledge base for articles. This interaction always performs the search using the consumer’s most recent message as the search phrase.
+
+![Carousel](img/ConvoBuilder/knowledge_ai.gif)
+
+A common use case for the Knowledge AI interaction is within a Fallback dialog, where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
+
+#### How the Knowledge AI search works
+
+* **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
+* **The search** - When performing the search, the search mode is always “Intents.” For information on search modes, see [here](knowledge-base-using-intents-with-kbs.html#search-modes).
+* **The results** - The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
+
+#### How the answers are rendered
+
+When you configure a Knowledge AI interaction, you specify an **Answer layout** for the answers, one of:
+
+* Structured
+* Simple
+* Custom 
+
+Both the Structured and Simple layouts are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowledge base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
+
+If you require control over the article content and layout that's used, you can choose to use a Custom answer layout. In this case, you must follow the Knowledge AI interaction with subsequent interactions that display the answers.
+
+Select an answer layout based on the target channels and your requirements. For more on this interaction’s channel-level support, see [here](conversation-builder-interactions-interaction-support.html).
+
+#### The Structured answer layout
+
+The Structured layout looks like this:
+
+<img style="width:500px" src="img/ConvoBuilder/knowledge_ai_rich.png">
+
+With the Structured layout:
+
+* Anywhere from one to three results are returned based on the maximum number of answers that you've specified in the interaction.
+* The results degrade gracefully to the Simple layout when the channel in use doesn't support the carousel.
+
+#### The Simple answer layout
+
+The Simple layout doesn’t include rich elements like images and URLs. It looks like this:
+
+<img style="width:500px" src="img/ConvoBuilder/knowledge_ai_plain.png">
+
+With the Simple layout:
+
+* Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
+* Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
+
+#### The Custom answer layout
+
+Choose the Custom answer layout when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
+
+To display a single, best result, use the syntax below, where "variableName" is the response data variable name that you specified in the Knowledge AI interaction's settings:
+
+`{$.api_variableName.results[0].title}`<br>
+`{$.api_variableName.results[0].summary}`<br>
+`{$.api_variableName.results[0].detail}`<br>
+`{$.api_variableName.results[0].imageURL}`<br>
+`{$.api_variableName.results[0].contentURL}`<br>
+
+For example:
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png">
+
+To iterate over and display multiple results, use the syntax below in a similar manner:
+
+`{$.api_variableName.results[i].title}`<br>
+`{$.api_variableName.results[i].summary}`<br>
+`{$.api_variableName.results[i].detail}`<br>
+`{$.api_variableName.results[i].imageURL}`<br>
+`{$.api_variableName.results[i].contentURL}`<br>
+
+For example:
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png">
+
+#### Add a Knowledge AI interaction
+
+1. Select the interaction just above where you want to add the Knowledge AI interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_knowledge_ai.png"> (Knowledge AI) on the interactions toolbar.
+2. In the interaction, select the knowledge base to search.
+
+    <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_add.png">
+
+3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
+4. On the Basic tab, specify the following:
+    * **Message when results not found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. This message is sent regardless of whether you’ve defined a custom rule for the "KB Match Not Found" match type (discussed below). If you don't want this message to be sent, enter "BLANK_MESSAGE".
+5. Review the rest of the basic settings, and make any changes desired. For help with these, see [here](conversation-builder-interactions-configuration-settings.html#basic-settings).
+6. Switch to the Advanced tab, and specify the following:
+    * **Min confidence score for answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds).
+
+        This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
+
+    * **Max number of answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
+    * **Answer layout**: Select "Structured," "Simple," or "Custom" based on your requirements. These layout options are discussed farther above.
+    * **Link text for content URL**: This setting is available only when you select "Structured" for the **Answer layout**. Enter the label to use for the link to the article's content URL, e.g., "Learn more." The link will open the URL in a new window. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
+    * **Default image URL**: This optional setting is available only when you select "Structured" for the **Answer layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the Structured output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
+    * **Response data variable**: This setting is available only when you select "Custom" for the **Answer layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
+7. Click **Save**.
+8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "Custom" for the **Answer layout** setting, you’ll also need to add the interactions that display the answers.
+
+{: .important}
+You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated Knowledge Base integration.
+
+#### Direct the conversation flow based on the result
+
+By default, a Knowledge AI interaction includes two custom rules: one rule for when the knowledge base search returns an answer and the other rule for when the search doesn’t.
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow1.png">
+
+Within each rule, the condition specifies the particular search result, either "Found" or "Not Found."
+
+<img style="width:800px" src="img/ConvoBuilder/knowledge_ai_flow2.png">
+
+Configure the **Next Action** for each of these rules based on the direction in which the conversation should flow in each case.
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow3.png">
+
 ### Agent Transfer interactions
 
 Use an Agent Transfer interaction in a dialog when you want to transfer a conversation from a bot to a live agent, or from a bot in one bot group to a bot in a *different* group.

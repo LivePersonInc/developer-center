@@ -12,12 +12,12 @@ indicator: messaging
 
 ### Introduction
 
-Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating  two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with a lot of improvements from the older 1.0 API version. Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS and WhatApp. 
-Note: Proactive Messaging can be leveraged using Proactive 2.0 API or [Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html).
+Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with many improvements from the older 1.0 API version. The Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS and WhatApp. 
+Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html).
 
 ### Getting Started
 
-1. Onboarding to [Proactive Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html) is mandatory before onboarding to Proactive 2.0 API. For Proactive Web Tool, fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded. 
+1. Onboarding to the [Proactive Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html) is mandatory before onboarding to Proactive 2.0 API. For the Proactive Web Tool, fill out this [request](https://forms.gle/tUqhtE7kjAJpmo9L8) to get on-boarded. 
 2. To onboard on Proactive 2.0 API, perform steps as mentioned below
 - Login to [Proactive](https://proactive-messaging.fs.liveperson.com/) web app with user having administrator privileges.
     * Click on Settings tab in menu bar.
@@ -26,7 +26,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or [Web Tool]
 
 ### API Specifications
 ## API Domain
-* Proactive messaging is deployed in three regions. **North America**, **EMEA**(Europe, Middle East and Africa), **APAC**(Asia Pacific). Use the domain api to identify the zone of proactive api which is to be used for an account.
+* Proactive messaging is deployed in three regions. **North America**, **EMEA** (Europe, Middle East and Africa), **APAC** (Asia Pacific). Use the domain api to identify the zone of proactive api which is to be used for an account.
 
 | Method | URI  |
 | :--- | :--- |
@@ -67,7 +67,196 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or [Web Tool]
 | Content-Type | Used to indicate the media type of the resource | application/json |
 | Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | Bearer <<APP_JWT>> |
 
-**Request Body Example - JSON Payload**
+**Request Body Example - JSON Payload - New Version - Whatsapp With Rich Template**
+
+```json
+{
+    "campaignName": "TestProactiveAPI",
+    "skill": "sales",
+    "templateId": "1111111111111",
+    "outboundNumber": "22222222222",
+    "consent": true,
+    "consumers": [
+        {
+            "consumerContent": {"wa": "12345678891"},
+            "variables": {
+                "1": "Text1",
+                "2": "Text2",
+                "3": "Text3",
+                "4": "Text4",
+                "5": "Text5"
+            },
+            "headerVariables": {
+                "video": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4" 
+            }
+        },
+        {
+            "consumerContent": {"wa": "1234456678899"},
+            "variables": {
+                "1": "Test1",
+                "2": "Test2",
+                "3": "Test3",
+                "4": "Test4"
+            },
+            "headerVariables": {
+                "video": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4"
+            }
+        }
+    ]
+}
+```
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [
+        {
+            "variables": {
+                "1": "Test1",
+                "2": "Test2",
+                "3": "Test3",
+                "4": "Test4"
+            },
+            "consumerContent": {
+                "wa": "1234456678899"
+            },
+            "headerVariables": {
+                "video": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4"
+            },
+            "phone": "+1234456678899",
+            "countryCode": "IN",
+            "errorMessage": "MISSING_VARIABLE=5"
+        }
+    ],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "phoneNumber": "+12345678891",
+            "consumerContent": {
+                "wa": "12345678891"
+            }
+        }
+    ]
+}
+```
+
+**Request Body Example - JSON Payload - New Version - SMS**
+
+```json
+{
+    "campaignName": "TestProactiveAPI",
+    "skill": "sales",
+    "templateId": "666555567888",
+    "outboundNumber": "22222222222",
+    "consent": true,
+    "consumers": [
+        {
+            "consumerContent": {"sms": "12345678891"},
+            "variables": {
+                "1": "Hello X"
+            }
+        },
+        {
+            "consumerContent": {"sms": "1234456678899"},
+            "variables": {
+                "1": "Hello Y"
+            }
+        }
+    ]
+}
+```
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "phoneNumber": "+12345678891",
+            "consumerContent": {
+                "sms": "12345678891"
+            }
+        },
+        {
+            "id": "674476fgf-1a4f-7088-45aa-44e05560e44",
+            "phoneNumber": "+1234456678899",
+            "consumerContent": {
+                "sms": "1234456678899"
+            }
+        }
+    ]
+}
+```
+
+**Request Body Example - JSON Payload - New Version - Handoff(SMS + Whatsapp without Rich Template)**
+
+```json
+{
+    "campaignName": "TestProactiveAPI",
+    "skill": "sales",
+    "templateId": "1234567890",
+    "outboundNumber": "22222222222",
+    "consent": true,
+    "consumers": [
+        {
+            "consumerContent": {"sms": "12345678891", "wa": "12345678891"},
+            "variables": {
+                "1": "Test1",
+                "2": "Test2",
+                "3": "Test3"
+            }
+        },
+        {
+            "consumerContent": {"sms": "1234456678899", "wa": "1234456678899"},
+            "variables": {
+                "1": "Test1",
+                "2": "Test2",
+                "3": "Test3"
+            }
+        }
+    ]
+}
+```
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "phoneNumber": "+12345678891",
+            "consumerContent": {
+                "sms": "12345678891",
+                "wa": "12345678891"
+            }
+        },
+        {
+            "id": "674476fgf-1a4f-7088-45aa-44e05560e44",
+            "phoneNumber": "+1234456678899",
+            "consumerContent": {
+                "sms": "1234456678899",
+                "wa": "1234456678899"
+            }
+        }
+    ]
+}
+```
+
+**Request Body Example - JSON Payload - Old Version**
 
 ```json
 {
@@ -191,12 +380,20 @@ Consider an example response of campaigns API:
 
 | <<ERROR_MESSAGE>> | Description |
 |-------------------------------------------|------------------------------------------------------------------------------------|
-| 'INVALID_NUMBER'                  		| The associated recipient/consumer country code or phone number or both is invalid. |
-| 'DUPLICATE_NUMBER'                		| More than one recipient in a given campaign has the same phone number. |
-| 'TOO_MANY_VARIABLES'              		| The template expects less variables for creating the message to the recipient. |
-| 'INSUFFICIENT_VARIABLES'              	| The template expects more variables for creating the message to the recipient. |
-| 'MISSING_VARIABLE=<<VARIABLE_NAME>>'  	| The recipient has a missing variable identified by VARIABLE_NAME. |
-| 'VARIABLE_NOT_STRING=<<VARIABLE_NAME>>'   | The recipient has a variable which is not a string identified by VARIABLE_NAME. |
+| 'INVALID_NUMBER'                  		         | The associated recipient/consumer country code or phone number or both is invalid. |
+| 'DUPLICATE_NUMBER'                		         | At least one of the consumers has the same phone number as another in the same campaign. |
+| 'MISSING_CONSUMER_INFORMATION==<<CHANNEL>>'        | At least one of the consumers is missing consumer information such as phone number for one of the channels in the template or handoff. |
+| 'TOO_MANY_VARIABLES'              		         | The template expects less variables for creating the message to the recipient. |
+| 'INSUFFICIENT_VARIABLES'              	         | The template expects more variables for creating the message to the recipient. |
+| 'MISSING_VARIABLE=<<VARIABLE_NAME>>'  	         | The consumer has a missing variable identified by VARIABLE_NAME. |
+| 'VARIABLE_NOT_STRING=<<VARIABLE_NAME>>'            | The consumer has a variable which is not a string identified by VARIABLE_NAME. |
+| 'Fields missing in request: <<FIELD_NAME>>'        | The entire request was reject because it was miissing fields.  For example, if the consumers list is missing the variables field. |
+| 'INSUFFICIENT_HEADER_VARIABLES'                    | At least one of the consumers was missing a header variable for a rich text campaign. |
+| 'TOO_MANY_HEADER_VARIABLES'                        | At least one of the consumers had too many header variables for a rich text campaign.  |
+| 'MISSING_HEADER_VARIABLE=<<HEADER_VARIABLE_TYPE>>' | At least one of the consumers had an incorrect header variables for a rich text campaign.  |
+| 'HEADER_VARIABLE_NOT_STRING'                       | At least one of the consumers had a header variable that is not a string for a rich text campaign.  |
+| 'HEADER_VARIABLE_INVALID_URL'                      | At least one of the consumers had a header that is not a valid URL for a rich text campaign.  |
+| 'IMAGE_URL_NOT_WHITELISTED'                        | At least one of the consumers had a image link that is not from a whitelisted host for for a rich text campaign. |
 
 <strong>What kind of security, encryption, parameter, failures?</strong>
 The API uses App Jwt Oauth 2.0 authentication.
@@ -271,3 +468,34 @@ Proactive Messaging service has retry mechanism internally on dependent services
 | templateId | 32 char max length | templateId will be provided by proactive messaging when a template is created |
 | outboundNumber            | 16 char max length | Phone number cannot be more than 16 digit |
 | variable  		  | 1550 char max length | SMS messages more than 160 chars may be sent as multiple messages |
+
+<strong>Is Whatsapp Rich template enabled for all accounts?</strong>
+To use Whatsapp Rich template via API/UI, reach out to Proactive team to get it enabled for the account. Currently the feature is not enabled for all accounts.
+
+<strong>What are different components of a Whatsapp template? Are all the components mandatory to be present in a rich template?</strong>
+There are four different components of a Whatsapp template
+- Header (Image, Video, Document is supported currently. Only 1 type is allowed for a template)
+- Body
+- Footer
+- Buttons (2 types: Quick Reply Buttons, Call To Action Buttons)
+Message body in WA Rich template is mandatory. Header, footer, buttons are optional in WA Rich template depending on template design.
+
+<strong>What extensions are supported for WA rich template in the header section?</strong>
+Allowed extensions for different types of header for a rich template: 
+- Image:[jpg,png],
+- Document:[pdf],
+- Video:[mp4,3gpp]
+
+<strong>Are there any limitations on the URL added for header image/video/document type?</strong>
+Below are the limitations:
+- URL provided for header (image/video/document) should be publicly accessible
+- Only https urls are supported
+- Before sending WhatsApp rich messages using a template with header of type image, please reach out to your CSM to get the domain whitelisted in Houston. Root Url/ domain has to be whitelisted by CSM in houston site settings messaging.rich.content.valid.urls.
+ For example; if the brand wants to send images from upload.wikimedia.org like: 
+https://upload.wikimedia.org/wikipedia/commons/9/97/Art_by_Chance.jpg
+https://upload.wikimedia.org/wikipedia/commons/6/63/Beity_Logo.jpg
+they should have https://upload.wikimedia.org added in houston site settings. Please see the screenshot below. 
+<img src="images/URL_whitelisting.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
+
+<strong>Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?</strong>
+Footer and quick reply buttons have static values and do not need any user input while campaign creation
