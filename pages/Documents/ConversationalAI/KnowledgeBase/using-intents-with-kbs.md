@@ -46,7 +46,7 @@ After you've added your content and linked it to intents, train the knowledge ba
 
 1. Performing a search using a consumer utterance.
 2. Reviewing the results.
-3. Adding or removing training phrases in the intents as needed. Adding or removing positive/negative learnings in the articles as needed.
+3. Adding or removing training phrases in the intents as needed.
 
 **To train a knowledge base**
 
@@ -67,25 +67,6 @@ If you don’t want the follow-up text search, change the **Search Mode** to "In
 If you don't get any results with your search, you can adjust these filters by clicking **Add Filters** in the upper-left corner.
 
 Based on your results, add more training phrases to the intents in the domain if needed.
-
-#### Adding positive and negative learnings
-
-You can also use the Thumb Up and Thumbs Down icons displayed in a search.
-
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_test_thumbsUp.png">
-
-Continuing our example of an internal knowledge base, the image above illustrates an utterance that returned some results. However, the preferred result was only a FAIR PLUS match.
-
-Tap the **Thumbs Up** icon to add the utterance to the article's Positive Learnings set, which can be viewed in the article's **Advanced Settings**. These are the phrases for which you want a match to occur. If you were to rerun the search after doing this, the article would return with a higher score.
-
-Tap **Thumbs Down** to do the opposite. Thumbs Down adds the utterance to the article's Negative Learnings set. These are the phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
-
-{: .important}
-Positive and negative learnings work the same way for internal and external knowledge bases.
-
-#### Beware of overtraining
-
-Something to keep in mind when training in general, and using the Thumbs Up/Down icons in specific, is that because they are so easy to use, they are often misused. Often people use Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down. Anything over about 10 - 15 training phrases might begin to return false positives.
 
 ### Search modes
 
