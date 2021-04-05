@@ -538,3 +538,13 @@ they should have https://upload.wikimedia.org added in houston site settings. Pl
 
 <strong>Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?</strong>
 Footer and quick reply buttons have static values and do not need any user input while campaign creation
+
+<strong>Is inapp enabled for all accounts? And what is the business flow of Proactive Messaging inapp message? </strong>
+To use inapp via UI, reach out to Proactive team to get it enabled for the account. Currently the feature is not enabled for all accounts. The below diagram shows the high level business flow, if you have more questions, please reach out to Proactive Messaging team. 
+<img src="images/prmsgInappDesign.png" alt="URL Whitelisting" style="width:auto;max-height:500px;">
+
+<strong>What kind of customers can get message through Proactive Messaging?</strong>
+Only registered customers can. Because the message is sent by Pusher which only support registered customers. 
+
+<strong>How does first message display in agent workspace?</strong>
+First message is not part of conversations becuase customers cannot send first message on behalf of agent. Agent widget is used to display first message. It's not perfect. we are trying to solve it. 
