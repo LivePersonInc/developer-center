@@ -113,6 +113,9 @@ An open-ended question allows the consumer to provide an answer in their own wor
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_open.png">
 
+All survey questions:
+* Have a limit of 256 characters for the survey question.
+
 FCR, CSAT and NPS questions:
 * These are predefined in the sense that you can't edit their structure, i.e., add or remove answer choices. However, you can change the question and answer text.
 * In a survey bot, you can include only one of each of these.
