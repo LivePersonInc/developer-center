@@ -56,15 +56,11 @@ The following image illustrates a search in an internal knowledge base. Things w
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_test.png">
 
-For testing and learning purposes, by default, the Filter settings are set to "Intents" and "Poor." 
+Note in the image that, for testing and learning purposes, by default the Filter settings are set to "Intents" search mode and "Poor" threshold. This means that the algorithm first checks for matches using NLU, with a threshold of Poor. If it doesn’t find any matches, it attempts a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." When this happens, you should add some more training phrases to the intent to improve the results.
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_sortandfilter.png">
+If you don’t want the follow-up text search, click **Add Filter** and change the **Search Mode** to "Intents Only." This performs only the intents search. If you want to perform only the text search, change the **Search Mode** to "Text." For more on search modes, see farther below in this topic.
 
-This means that the algorithm first checks for matches using NLU, with a threshold of Poor. If it doesn’t find any matches, it attempts a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." When this happens, you should add some more training phrases to the intent to improve the results.
-
-If you don’t want the follow-up text search, change the **Search Mode** to "Intents Only." This performs only the intents search. If you want to perform only the text search, change the **Search Mode** to "Text." For more on search modes, see farther below in this topic.
-
-If you don't get any results with your search, you can adjust these filters by clicking **Add Filters** in the upper-left corner.
+If you don't get any results with your search, you can adjust these filters.
 
 Based on your results, add more training phrases to the intents in the domain if needed.
 

@@ -104,12 +104,12 @@ For example, you might run a promotion over a holiday that has an associated FAQ
 *Positive learnings* are phrases for which you want a match to the article to occur. *Negative learnings* are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
 
 {: .important}
-As of April 13, 2021, you can no longer add new positive and negative learnings to articles. Any existing learnings continue to work as expected, but they are read-only.<br><br>The recommended alternative to adding a positive learning is to add a training phrase to the intent in the domain.
+As of April 19, 2021, you can no longer add new positive and negative learnings to articles. Existing learnings continue to work as expected, but they are read-only.<br><br>The alternative to adding a positive learning is to add a training phrase to the intent in the domain. Updating the domain itself is the preferred approach to boosting the match rate.<br><br>Negative learnings were primarily needed for knowledge bases using the LivePerson (Legacy) NLU engine, to support single-word negation (e.g., "don't buy"). To take advantage of the benefits of performance and flexibility offered by the LivePerson engine, you are encouraged to convert to the LivePerson engine as soon as possible. **LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021**.
 
 #### How positive and negative learnings work
 
 Positive and negative learnings play a role in intent detection regardless of whether you're using domain intents or knowledge base intents.
 
-When using domain intents with the LivePerson engine or a 3rd-party NLU engine, the positive learnings are applied (added) to the training phrases when the model is trained, and the negative learnings are applied during processing of user inputs.
+* When using domain intents with the LivePerson engine or a 3rd-party NLU engine, the positive learnings are applied (added) to the training phrases when the model is trained, and the negative learnings are applied during processing of user inputs.
 
-When using knowledge base intents or when using domain intents with LivePerson (Legacy) engine, positive and negative learnings are applied during processing of user inputs.
+* When using knowledge base intents or when using domain intents with LivePerson (Legacy) engine, positive and negative learnings are applied during processing of user inputs.
