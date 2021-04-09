@@ -101,34 +101,6 @@ With the Simple layout:
 * Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
 * Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
 
-#### The Custom answer layout
-
-Choose the Custom answer layout when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
-
-To display a single, best result, use the syntax below, where "variableName" is the response data variable name that you specified in the Knowledge AI interaction's settings:
-
-`{$.api_variableName.results[0].title}`<br>
-`{$.api_variableName.results[0].summary}`<br>
-`{$.api_variableName.results[0].detail}`<br>
-`{$.api_variableName.results[0].imageURL}`<br>
-`{$.api_variableName.results[0].contentURL}`<br>
-
-For example:
-
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png">
-
-To iterate over and display multiple results, use the syntax below in a similar manner:
-
-`{$.api_variableName.results[i].title}`<br>
-`{$.api_variableName.results[i].summary}`<br>
-`{$.api_variableName.results[i].detail}`<br>
-`{$.api_variableName.results[i].imageURL}`<br>
-`{$.api_variableName.results[i].contentURL}`<br>
-
-For example:
-
-<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png">
-
 #### Add a Knowledge AI interaction
 
 1. Select the interaction just above where you want to add the Knowledge AI interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_knowledge_ai.png"> (Knowledge AI) on the interactions toolbar.
@@ -155,6 +127,34 @@ For example:
 
 {: .important}
 You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated Knowledge Base integration.
+
+#### Using the Custom answer layout
+
+Choose the Custom answer layout when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
+
+To display a single, best result, use the syntax below, where "variableName" is the response data variable name that you specified in the Knowledge AI interaction's settings:
+
+`{$.api_variableName.results[0].title}`<br>
+`{$.api_variableName.results[0].summary}`<br>
+`{$.api_variableName.results[0].detail}`<br>
+`{$.api_variableName.results[0].imageURL}`<br>
+`{$.api_variableName.results[0].contentURL}`<br>
+
+For example:
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png">
+
+To iterate over and display multiple results, use the syntax below in a similar manner:
+
+`{$.api_variableName.results[i].title}`<br>
+`{$.api_variableName.results[i].summary}`<br>
+`{$.api_variableName.results[i].detail}`<br>
+`{$.api_variableName.results[i].imageURL}`<br>
+`{$.api_variableName.results[i].contentURL}`<br>
+
+For example:
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png">
 
 #### Direct the conversation flow based on the result
 
