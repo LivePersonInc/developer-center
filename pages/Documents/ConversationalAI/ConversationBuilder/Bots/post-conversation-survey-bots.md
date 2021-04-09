@@ -226,7 +226,7 @@ Survey bot settings include:
 
 If desired, you can add support for emailing a transcript of the main conversation to the consumer, and grant the consumer the option to accept or decline this at the end of the survey.
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_offerTranscript.png">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/surveyBot_offerTranscript.png">
 
 There are a few steps involved in the setup.
 
@@ -234,43 +234,46 @@ First, in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#con
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_email1.png">
 
-Conversely, disabling this setting removes the Email Transcript interaction from the dialog. And similarly, if you manually delete the Email Transcript interaction, this disables the **Email Transcript** bot setting.
+(Disabling the bot setting removes the Email Transcript interaction from the dialog. And if you manually delete the interaction, this disables the bot setting.)
 
-Second, configure the Email Transcript survey interaction:
+Second, configure the Email Transcript interaction:
 
 * Change the message text and the label for the Decline button as desired.
 * Configure the interaction's basic and advanced settings. Most notably, specify the **Sender Name** and **Sender Email**. By default, these are set using the user details of the bot developer who added the interaction to the bot.
+* Set the Next Action to "Close Conversation" if appropriate. (This is done by default.)
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_email2.png">
 
-Finally, be aware that Email Transcript interaction must be last. If you are also adding support for a Thank You message (discussed below), it can also be the penultimate interaction. You can use the [Move icon](conversation-builder-interactions-interaction-basics.html#move-an-interaction) to reorder these two interactions but only based on these constraints.
+Note the following:
+
+* For convenience, the Email Transcript interaction includes two default rules. One rule uses a Regular Expression to validate whether the consumer has entered a valid email address. If you inadvertently delete this rule, you can easily add it back manually; to enter the RegEx, use the "Hints" feature that's available.
+* The Email Transcript interaction can precede or follow a Thank You Message interaction (discussed below), if used. However, the two must be last in the dialog flow. You can [move](conversation-builder-interactions-interaction-basics.html#move-an-interaction) them to reorder them, but this constraint is enforced.
 
 ### Adding support for a Thank You message
 
-If desired, you can add support for emailing a transcript of the main conversation to the consumer, and grant the consumer the option to accept or decline this at the end of the survey.
+If desired, you can add support for sending a Thank You message to the consumer at the end of the survey.
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_offerTranscript.png">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/surveyBot_thanks1.png">
 
 There are a few steps involved in the setup.
 
-First, in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings), enable the **Email Transcript** bot setting. This adds an Email Transcript survey interaction to the end of the survey dialog. 
+First, in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#configure-bot-settings), enable the **Thank You Message** bot setting. This adds a Thank You Message interaction to the end of the survey dialog. 
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_email1.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_thanks2.png">
 
-Conversely, disabling this setting removes the Email Transcript interaction from the dialog. And similarly, if you manually delete the Email Transcript interaction, this disables the **Email Transcript** bot setting.
+(Disabling the bot setting removes the Thank You Message interaction from the dialog. And if you manually delete the interaction, this disables the bot setting.)
 
-Second, configure the Email Transcript survey interaction:
+Second, configure the Thank You Message interaction:
 
-* Change the message text and the label for the Decline button as desired.
-* Configure the interaction's basic and advanced settings. Most notably, specify the **Sender Name** and **Sender Email**. By default, these are set using the user details of the bot developer who added the interaction to the bot.
+* Change the message text as desired.
+* Configure the interaction's basic and advanced settings.
+* Set the Next Action to "Close Conversation" if appropriate.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_email2.png">
-
-Finally, be aware that Email Transcript interaction must be last. If you are also adding support for a Thank You message (discussed below), it can also be the penultimate interaction. You can use the [Move icon](conversation-builder-interactions-interaction-basics.html#move-an-interaction) to reorder these two interactions but only based on these constraints.
+The Thank You Message interaction can precede or follow an Email Transcript interaction (discussed above), if used. However, the two must be last in the dialog flow. You can [move](conversation-builder-interactions-interaction-basics.html#move-an-interaction) them to reorder them, but this constraint is enforced.
 
 ### Closing the survey conversation
 
-Close a survey conversation with [Close Conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) as the Next Action in the survey dialog.
+Close a survey conversation by setting [Close Conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) as the Next Action in the final interaction in the survey dialog.
 
 {: .important}
 Make sure that a custom bot *that triggers a survey bot* uses Close Dialog. [Close Dialog](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) allows a post-conversation survey to be triggered, but [Close Conversation](conversation-builder-dialogs-dialog-basics.html#close-the-conversation) does not.
