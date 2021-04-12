@@ -185,7 +185,17 @@ Figure 2.3 Welcome activity on chat
 ### Bot Actions
 #### Transfer 
 
-This action allows the bot to request a transfer of the conversation to another skill.
+This action allows the bot to request a transfer of the conversation to another skill or a specific agent.
+
+<div class="notice">
+<strong>Naming Conventions:</strong> 
+When naming skills the bot can escalate to, you should use the Kebab Case <italic>(e.g. human-expert)</italic> for the 
+skill matching to work.
+</div>
+
+#### Transfer To Skill
+
+This option transfers the conversation to the next available agent using the provided skill. 
 
 At the beginning of a chat session or when a messaging bot logs in, the whole list of enabled skills on the account is 
 retrieved, keyed by name and stored.
@@ -193,11 +203,6 @@ retrieved, keyed by name and stored.
 When the bot requests a transfer, the provided skill name is matched to the skill existing on the account and the 
 conversation is transfered based on this skill.
 
-<div class="notice">
-<strong>Naming Conventions:</strong> 
-When naming skills the bot can escalate to, you should use the Kebab Case <italic>(e.g. human-expert)</italic> for the 
-skill matching to work.
-</div>
 
 The payload for a transfer request sent in the `channelData` is shown in Figure 2.4.
 The action must be named `TRANSFER` and a skill name must be provided.
@@ -218,7 +223,7 @@ The action must be named `TRANSFER` and a skill name must be provided.
   }
 }
 ```
-Figure 2.4 Custom transfer action
+Figure 2.4 Custom transfer to skill action
 <br>
 <br>
 
@@ -243,6 +248,38 @@ Figure 2.5 Microsoft BotBuilder example code
 <br>
 <br>
 
+#### Transfer To Agent
+
+{: .important}
+This feature is depending on [permissions](contact-center-management-messaging-operations-transfer-to-agent.html)
+
+This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
+
+
+The payload for a transfer request sent in the `channelData` is shown in Figure 2.4.
+The action must be named `TRANSFER` and a skill name alongside agentId must be provided.
+
+
+```json-doc
+{
+  // ...
+  "type": "message",
+  "text": "I'll transfer you to a certain agent", // an optional message to the customer (can be left empty)
+  "channelData": {
+    "action": {
+      "name": "TRANSFER",
+      "parameters": {
+        "skill": "human-expert",
+        "agentId": "4129463410"
+      }
+    }
+  }
+}
+```
+Figure 2.6 Custom transfer to agent action
+<br>
+<br>
+
 #### Close Conversation
 
 A conversation can be closed by sending an action in the `channelData` similarly to the transfer action. 
@@ -260,11 +297,11 @@ The action must be named `CLOSE_CONVERSATION` in this case.
   }
 }
 ```
-Figure 2.6 Activity for a close conversation request
+Figure 2.7 Activity for a close conversation request
 <br>
 <br>
 
-To close a conversation without triggering a post conversation survey, you need to provide the `withoutPcs` flag with the value `true` (as shown in Figure 2.7)
+To close a conversation without triggering a post conversation survey, you need to provide the `withoutPcs` flag with the value `true` (as shown in Figure 2.8)
 
 ```json
 {
@@ -280,7 +317,7 @@ To close a conversation without triggering a post conversation survey, you need 
   }
 }
 ```
-Figure 2.7 Activity to close a conversation without a post conversation survey
+Figure 2.8 Activity to close a conversation without a post conversation survey
 <br>
 <br>
 
@@ -288,15 +325,13 @@ Figure 2.7 Activity to close a conversation without a post conversation survey
 
 The bot can change the TTR of a conversation by sending an action with the name `CHANGE_TTR`.
 
-LivePerson Messaging uses 4 different types of priorities:
+LivePerson Messaging uses 3 different types of priorities:
 
 - `URGENT`
 - `NORMAL`
 - `PRIORITIZED`
-- `CUSTOM`
 
-With `CUSTOM` it is possible to set an exact value. The unit of the value is seconds. The values of the other types can be set in the 
-Agent Workspace.
+The time values of these are defined in the Agent Workspace.
 
 A text message can also be provided simultaneously in the activity json.
 
@@ -309,11 +344,10 @@ A text message can also be provided simultaneously in the activity json.
     "action": {
       "name": "CHANGE_TTR",
       "parameters": {
-        "ttrType": "CUSTOM",
-        "value": "300" // this property should only be defined for "CUSTOM"
+        "ttrType": "URGENT"
       }
     }
   }
 }
 ```
-Figure 2.8 Activity to change the TTR
+Figure 2.9 Activity to change the TTR
