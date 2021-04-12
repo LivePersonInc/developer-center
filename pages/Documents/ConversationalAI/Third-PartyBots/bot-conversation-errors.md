@@ -157,6 +157,25 @@ Mostly issues with DialogFlow APIS.
 Double-check you have enough credits left for your Dialogflow account.
 Check for any interruption on Dialogflow side.
 
+### com.liveperson.bot-connectors-worker.error.aivendor.dialogflowcx.send-query
+
+#### Description
+Could not send a query to DialogFlow CX.
+#### Reasons
+Mostly issues with DialogFlow CX APIS.
+#### Solutions
+Double-check you have enough credits left for your Dialogflow CX account.
+Check for any interruption on Dialogflow CX side.
+
+### com.liveperson.bot-connectors-worker.error.aivendor.dialogflowcx.test-connection
+
+#### Description
+Testing connection with DialogFlow CX failed.
+#### Reasons
+Mostly credential issues.
+#### Solutions
+Check for your bot credentials.
+
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.invoke-lambda
 
 #### Description
