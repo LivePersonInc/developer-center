@@ -39,7 +39,7 @@ Dynamic Routing requires the following components to operate:
 * Conversation Context Service (CCS)
 * Recommendations API
 
-Here is a representation of how the various components integrate
+Here is a representation of how the various components integrate:
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_components.png">
 
 #### Routing bot
