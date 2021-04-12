@@ -9,6 +9,9 @@ permalink: conversation-orchestrator-agent-assist-agent-experience.html
 indicator: messaging
 ---
 
+{: .important}
+No Knowledge Base article recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).
+
 **Tip:** To train your agents, you can start by enabling recommendations for a single skill.
 
 ### Use a recommended bot or article

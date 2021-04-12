@@ -6,32 +6,6 @@ For "Interaction Support" topic for adding the Universal interaction:
 
 | Universal | Yes, but the JSON must adhere to the [Rich Messaging support](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 
-PCS MULTI-LANGUAGE SUPPORT
-
-#### Customizing interaction text
-
-You can customize the question text and answer choice text for each of the survey interactions. To do so, simply replace the text with your own. For example, you might want to change the language that’s used.
-
-When working with the answer choices, if you move your mouse over an answer, you can see both the answer text (text value) and the actual, underlying value that’s reported to [Analytics Builder](https://knowledge.liveperson.com/data-reporting-report-builder-report-builder-overview.html).
-
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_actualvalue1.png">
-
-The actual value never changes, not even when you change the answer text, i.e., the text value.
-
-#### Reordering answer choices
-
-Reordering an answer choice has no impact on the text value or actual value. You must manually change the answer text (text value) if desired. The actual value never changes.
-
-To reorder an answer choice, select it so that it’s in focus, and click the < (Previous) or > (Next) button.
-
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/surveyBot_reorderanswers.png">
-
-Alternatively, you can use the hotkeys:
-
-* Previous = Shift + Ctrl
-* Next = Shift + Alt
-
-
 SNIPPET FOR TOP SECTION
 
 - **Consumer Authentication**: Use this when you require the bot to make API calls on behalf of the consumer. With this type of credential, the consumer is sent an authentication link, uses it to authenticate, and obtains a token that is sent to the bot. This “delegates” access to the bot, so it can make the API calls.
