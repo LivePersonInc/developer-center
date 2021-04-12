@@ -32,8 +32,10 @@ You can create a Consumer Authentication credential and use it in [API integrati
 4. The token is sent to the bot.
 5. The bot runs the integration (with the token) and responds with a result.
 
-### Configure Consumer Authentication credentials
+### Implementation Steps 
 
+**1. Configure Consumer Authentication credentials**  
+  
 1. In the Bot Accounts application, select the name of the organization for which to create the credential.
 2. Click **Credentials** in the upper-left corner.
 3. Click **Add Credentials** in the upper-right corner.
@@ -42,25 +44,67 @@ You can create a Consumer Authentication credential and use it in [API integrati
     * **Authentication Type**: Select "Consumer Authentication."
 5. Click **Next**.
 6. In the Add Credentials dialog box, specify the following:
-    * **Authentication URL**: Enter the authentication endpoint to be sent to the consumer in order to obtain an access token that is sent to the bot. The URL is provided by the resource provider; see their documentation for this information.
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/creds_consumer_auth_1.png">
+   * **Authentication URL**: Enter the authentication endpoint to be sent to the consumer in order to obtain an access token that is sent to the bot. The URL is provided by the resource provider; see their documentation for this information.
+		*   **Note:**  The authentication URL must include the following query params:
+			* client_id={PROVIDE THE CLIENT ID}
+			* response_type=code
+			* redirectedCode={PROVIDE THE REDIRECT URI}
+			* scope={PROVIDE THE SCOPE}
+
+**Authentication URL Example**
+```
+https://accounts.brand.com/authorize?client_id=34e83335186541078261d83c6d050a32&response_type=code&redirect_uri=https://va.idp.liveperson.net/callback/12345566/redirectedCode&scope=user-read-private 
+```  
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/creds_consumer_auth_1.png">
+    
 7. Click **Save**.
 
-### Integrate with Brand API
-
+**2. Integrate with Brand API**  
+  
 To use a defined Consumer Authentication credential in a bot, go into the bot and add an API integration. When you do, select the Consumer Authentication credential that you created and provide the endpoint.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/consumerAuthCred.png">
 
 Then, add the provided access as an authorization header to the API integration.  
 In request headers, add authozion header:  
-key = Authorization  
-value = Bearer {$botContext.cidp_accessToken}  
+**key** = Authorization  
+**value** = Bearer {$botContext.cidp_accessToken}  
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/authorizationDelegation.png">
 
-### Configure Delegated Access Provider
+**3. Configure Delegated Access Provider**  
+
 Follow this configuration guide: [Consumer Delegation](consumer-delegation-configuration.html)
 
-### Add Consumer Delegation Link to the Conversation Flow
+**4. Configutre Dialog**  
+Dialog should inclde an API integration and consumer verification delegation button.  
+**Note:** The API integration must be included and ordered in the dialog flow before the consumer verification dialog button.  
+
+***4.1 add integration***  
+
+Add the integration that requires the consumer access token and make sure the following are applied:
+* "Next action" should be using custom rules - one for failure and the other for success. 
+In case of API failure, route the dialog to the connsumer delegation link.  
+* The following code should be included as a pre-process code for the Integration API.  
+
+```bash
+var cidp_accessToken = botContext.getWebViewVariable('cidp_accessToken');
+
+if(cidp_accessToken) {
+  botContext.setBotVariable('cidp_accessToken',cidp_accessToken,true,false);
+}
+```
+
+***4.2. Add Consumer Delegation Link to the Conversation Flow***  
+  
+Before accessing the protected integrated API, we need to prompt user to verify his identity. This will be done in the conversation dialog by adding an interactive button to the conversation.  
+The following paraeter should be define in the [inetartive button/questions](conversation-builder-interactions-questions.html):  
+**Button Label** = Login  
+**Action Type** = Web URL  
+**Webview** = Full  
+**Target** = New Window  
+**Callback** = {$botContext.external_auth_url}  
+
+<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/loginDialogBoxInDelegationFlow.png">
 
