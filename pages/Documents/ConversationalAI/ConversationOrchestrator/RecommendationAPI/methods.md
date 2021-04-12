@@ -13,127 +13,79 @@ permalink: conversation-orchestrator-recommendation-api-methods.html
 indicator: messaging
 ---
 
-Every API call to the Recommendation API service requires the following Auth Headers to be accepted
+There are two sets of APIs that can be used to manage properties in the Conversation Context Service (CCS):
 
-`Content-Type : application/json`
+* The REST API that can directly access CCS. A primary use case for this is to retrieve policy routing decisions when using external, third-party bots, such as Watson or DialogFlow. For more information on integrating your third-party bots with Conversational Cloud, see [here](third-party-bots-getting-started.html).
+* A JavaScript function that wraps the REST API for easy use in Conversation Builder. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.
 
-`maven-api-key : <INSERT YOUR API KEY HERE>`
+### JavaScript wrapper
+For information on this, see [here](conversation-builder-scripting-functions-askmaven.html) in the Conversation Builder documentation.
 
-### Base URL per environment
+### REST API
+Every API call to the Conversation Context Service requires the following auth headers to be accepted:  
 
-AMERICAS : https://z1.askmaven.liveperson.net/ 
+* content-Type : application/json  
+* maven-api-key : {YOUR API KEY}
 
-EMEA: https://z2.askmaven.liveperson.net/ 
+Base URL per environment:
 
-APAC: https://z3.askmaven.liveperson.net/
+* AMERICAS : https://z1.askmaven.liveperson.net
+* EMEA: https://z2.askmaven.liveperson.net
+* APAC: https://z3.askmaven.liveperson.net
 
-### Query Parameters
+{: .important}
+The accountId and API key in these examples are fake; please replace them with the accountID and the developer key that you generated.
 
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Value</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>conversationId</td>
-            <td>string</td>
-            <td>Optional - The conversation ID of the current conversation</td>
-        </tr>
-         <tr>
-            <td>userId</td>
-            <td>string</td>
-            <td>Optional - LivePerson consumer ID of the current conversation</td>
-        </tr>
-        <tr>
-            <td>groupId</td>
-            <td>string</td>
-            <td>Optional - The group ID associated with the session store variable call to set values.  If no groupId is specified, then the conversationId will be used to associate with the session store variables.
-</td>
-        </tr>
-    </tbody>
-</table>
+#### Get Next Actions
+Get a routing decision based on Conversation Orchestrator configured policies.
 
-### Get Next Actions
+##### URI
 
-Get Conversation Orchestrator routing decision based on Conversation Orchestrator configured policies.
+| Method | Path |
+| --- | --- |
+| GET | /v1/account/{accountId}/next-actions?conversationId={conversationId}&consumerId={consumerId}&groupId={groupId} |
 
-<table>
-    <thead>
-        <tr>
-            <th>Method</th>
-            <th>Path</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>GET</td>
-            <td>/v1/account/{accountId}/next-actions</td>
-            <td>Get routing decision based on Conversation Orchestrator configured policies</td>
-        </tr>
-    </tbody>
-</table>
+##### Query parameters
 
-#### Example:
+| Name | Type | Description | Required? |
+| --- | --- | --- | --- |
+| accountId | string | The accountId of the brand | Required |
+| conversationId | string | The conversation ID of the current conversation | Optional |
+| consumerId | string | LivePerson consumer ID of the current conversation | Optional |
+| groupId | string | The group ID associated with the session store variable call to set values. If no groupId is specified, then the conversationId is used to associate with the session store variables. | Optional |
 
-Note: the accountId and API key in these examples are fake - please replace it with your accountID and developer key that you generated.
+##### Request payload
+N/A
 
-CURL command:
-
+##### Request example
 ```bash
-
-curl --request GET \
- --url https://z1.askmaven.liveperson.net/v1/account/55884/next-actions \
- --header 'maven-api-key:  7egGDDqV7V9oSj6AIDEWW6yQfUwAyxyz'
- ```
- 
- How to call in JavaScript:
- 
-```bash
-fetch('https://z1.askmaven.liveperson.net/v1/account/55884/next-actions', {
-       method: 'GET',
-       cache: 'no-cache',
-       headers: {
-           'Content-Type': 'application/json',
-           'maven-api-key': '7egGDDqV7V9oSj6AIDEWW6yQfUwAyxyz',
-       }
-   })
-
+curl -X GET "http://localhost:3000/v1/account/le63071475/next-actions?conversationId=myconversationId&consumerId=myconsumerId&groupId=mygroupId" -H  "accept: */*" -H  "maven-api-key: YBrAm6BigSbWF2ZW4tcm91dGluZw=="
 ```
 
-Response body sample:
-
-```bash
-
+##### Response example
+```
 {
-    nextActionId: ‘UUID’, // some uuid 
+    nextActionId: 'UUID', // some uuid
     rule: {
         "id": "12345",
         "name": "This is VIP rule"
         actions: [
-
             {
                 "type": "TRANSFER_TO_AGENT",
                 "payload": {
-                    agentId: ‘g23hasd234’,
-                    fallbackSkillId: ‘12345’
+                    agentId: 'g23hasd234',
+                    fallbackSkillId: '12345'
                 }
             },
             {
                 "type": "SEND_MESSAGE",
                 "payload": {
-                    text: ‘hello from maven”
+                    text: 'hello from maven"
                 }
             }
         ]
     },
-
-    noMatchReason: “NO_MATCHED_RULES” // only added if no rules are matches, rule will be null
-    noMatchReason: “NO_POLICIES_ENABLED”
+    noMatchReason: "NO_MATCHED_RULES" // only added if no rules are matches, rule will be null
+    noMatchReason: "NO_POLICIES_ENABLED"
 }
 ```
-
