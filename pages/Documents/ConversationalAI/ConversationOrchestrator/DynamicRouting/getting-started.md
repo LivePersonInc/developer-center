@@ -241,15 +241,15 @@ You will be using the Conversation Context Service to store a phone number, and 
 ##### Create the policies
 
 1. Disable all policies you have previously created by switching off the toggle switches in Conversation Orchestrator.
-2. Create a new VIP policy by clicking **Add Policy**.
+2. Create a new VIP customer policy by clicking **Add Policy**.
 
-    This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, you are retrieving this value from a session attribute (myNameSpace.phoneNumber) that you created earlier.
+    This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, you are retrieving this value from a session attribute (myNamespace.phoneNumber) that you created earlier.
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_viprulesession.png">
 
 3. Create a new regular customer policy by clicking **Add Policy**.
 
-    This policy is similar to the one you created using static variables, but instead of getting the phone number from a static attribute, you are retrieving this value from a session attribute (myNameSpace.phoneNumber, that you created earlier).
+    This policy is similar to the one you created using static variables, but instead of getting the phone number from a static attribute, you are retrieving this value from a session attribute (myNamespace.phoneNumber, that you created earlier).
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regrulesession.png">
 
@@ -285,7 +285,7 @@ With the function created and deployed, now add a custom attribute of type “fu
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_fxnattr.png">
 
-Add parameters to this function by selecting “attribute”, and then typing myNameSpace.phoneNumber. Note that “myNameSpace” is the name you used in the Conversation Builder template setup step in the beginning.
+Add parameters to this function by selecting “attribute”, and then typing myNamespace.phoneNumber. Note that “myNamespace” is the name you used in the Conversation Builder template setup step in the beginning.
 
 ##### Create a policy to use the LivePerson function (FaaS function)
 
@@ -327,7 +327,7 @@ Similarly you can add other attributes, for example, an intent:
 botContext.setContextDataForConversation(mavenNamespace, "intent", intent);
 ```
 
-You can now use this in a policy by adding a condition that uses the intent, as shown below. In the following example, the namespace is “myNameSpace”.
+You can now use this in a policy by adding a condition that uses the intent, as shown below. In the following example, the namespace is “myNamespace”.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_addattr3.png">
 
@@ -603,7 +603,7 @@ botContext.logCustomEvent(botContext.getCurrentUserMessage(), "Maven Session Sto
 ```
 
 #### Create your routing policy
-Now you can create a routing policy to check if the variable: myNamespace.agentSkillRequired is Complaints,  and if so, route to the Human_Complaint Skill. Anything else will go to your fallback/default skill Human.
+Now you can create a routing policy to check if the variable: myNamespace.agentSkillRequired is Complaints, and if so, route to the Human_Complaint Skill. Anything else will go to your fallback/default skill Human.
 
 Navigate to **Conversation Orchestrator > Dynamic Routing > Intent & Context Policies**.
 
