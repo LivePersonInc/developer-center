@@ -252,7 +252,7 @@ You will be using the Conversation Context Service to store a phone number, and 
     <img class="fancyimage" width="600" src="img/convorchestrator/co_dr_phonenum1.png">
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_phonenum2.png">
 
-    The phoneNumber variable is then saved to the Namespace in the pre-process code on api_integration_4 ( lines 5 and 6 )
+    The phoneNumber variable is then saved to the Namespace in the pre-process code on api_integration_4 (lines 5 and 6).
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_phonenum3.png">
 
