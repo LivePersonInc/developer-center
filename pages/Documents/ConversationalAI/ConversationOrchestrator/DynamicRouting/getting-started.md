@@ -134,3 +134,245 @@ When starting to build your first policy, it is often easy to use static attribu
 
 In this example, you will create and use static attributes. To check if a customer is a VIP, you will use a list of phone numbers, and see if the customer’s number is in that list.
 
+##### Create the context attributes
+
+1. Open **Conversation Orchestrator** in the Conversational Cloud applications menu, and navigate to **Conversation Context Service > Custom**.
+
+    <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_comenuitem.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ccscustom.png">
+
+2. Click **Add New**.
+    1. Select the type “static.”
+    2. Enter a name for the attribute: vipPhoneNumberList.
+    3. For **Value**, select the list type, and then copy these values: +155555501, +155555502 and +155555503. 
+    4. Click **Save**.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_vipno1.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_vipno2.png">
+
+3. Click **Add New**.
+    1. Select the type “static.”
+    2. Enter a new name for the attribute: regularCustomerList.
+    3. For **Value**, select the list type, and then copy these values: +155555505, +155555506 and +155555507. 
+    4. Click **Save**.
+
+4. Add another static attribute:
+    1. Edit the name to be "vipCustomer."
+    2. Leave the **Value** type as string, and add the value +155555501.
+    3. Click **Save**.
+
+5. Add another static attribute:
+    1. Edit the name to be "regularCustomer."
+    2. Leave the **Value** type as string, and add the value +155555506.
+    3. Click **Save**.
+
+##### Create the routing policy
+
+*“If the customer phone number is in the allow list, send them to vipSkill in Conversational Cloud.”*
+
+1. Navigate to **Dynamic Routing > Intent and Context Policies** using the side navigation panel, and click **Add Policy**.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_viprule.png">
+
+2. Edit the name to "VipRule_Static."
+3. In **Conditions**, select "custom.vipCustomer" from the dropdown.
+4. Select the “Is In” operator.
+5. Select “attribute”, and select “custom.vipPhoneNumberList” from the drop-down.
+6. In the **Actions** block, in the first dropdown box select “Transfer to a skill”, and then select the “Vip Support” skill from the dropdown (Skills must be created in Conversational Cloud prior to this step).
+
+    {: .important}
+    Don’t select the skill used for the Conversation Orchestrator Bot since this would create a circular loop with the policy.
+ 
+7. Click **Save** to save the policy.
+8. Add a second policy for routing regular customers by clicking **Add Policy**.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regrule.png">
+
+9. Edit the name to "RegularCustomerRule_Static."
+10. In **Conditions**, select “custom.regularCustomer” from the dropdown.
+11. Select the “Is In” operator.
+12. Select “attribute”, and select “custom.regularCustomerList” from the dropdown.
+13. In the **Actions** block, in the first dropdown select “Transfer to a skill”, and then select the “Regular Support” skill from the dropdown. (Skills must be created in Conversational Cloud prior to this step.)
+14. Click **Save** to save the policy.
+
+You have created two policies: One for a VIP customer and the other for a regular customer. In this example, you evaluate both using static variables. In later sections, you will retrieve the customer phone number from a session.
+
+##### Test the policies
+
+You will use a standard web entry point to initiate a conversation with the Conversation Builder bot you created, which will use the Conversation Orchestrator policies to route to the desired skill.
+
+**Test the VIP policy**
+
+1. In the policy list in Conversation Orchestrator, click the toggle switch to enable the VipRule_Static policy.
+
+    <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_vipenabled.png">
+
+2. Start a new web messaging conversation using the account ID.
+3. Log in to Conversational Cloud using a VIP agent account.
+4. Type “Hi” in the messaging window to engage the bot.
+5. When asked for a phone number please type +155555501. Please note that at this stage, the policy is using Static variables, so you can actually type anything because the policy is not going to be using your input.
+
+    This should trigger the VIP policy and the conversation should be transferred to a VIP skill.If you are logged in to Conversational Cloud as a VIP Agent, you will now get a ring.
+
+    <img class="fancyimage" width="350" src="img/convorchestrator/co_dr_vipsupport.png">
+
+**Test the regular customer policy**
+
+1. In the policy list in Conversation Orchestrator, click on the toggle switch and **disable** the VipRule_Static policy. **Enable** RegularCustomerRule_Static.
+
+    <img class="fancyimage" width="400" src="img/convorchestrator/co_dr_regenabled.png">
+
+2. Log out of Conversational Cloud, and then log in back using a Regular Agent account.
+3. Close the previous conversation, and start a new one.
+4. This time, when asked for the phone number, type +155555506. Note that the policy uses static attributes, and at this stage it is not going to use the phone number you have input.
+
+    This should now trigger the Regular Customer policy and the conversation should be transferred to a Regular skill. If you are logged into Conversational Cloud as a Regular Agent, you will now get a ring.
+
+    <img class="fancyimage" width="350" src="img/convorchestrator/co_dr_regsupport.png">
+
+#### Create a simple policy using Conversation Context Service attributes
+
+In the previous example we used Static attributes for everything. While this is a great way to test, in the real world, you will need to use attributes that are dynamically retrieved. In this example, you will pass the phone number using the Conversation Context Service, and then check if the phone number is in a static list.
+
+##### Create the context attributes
+
+You will be using the Conversation Context Service to store a phone number, and then use it in a policy. The Conversation Builder bot template you set up earlier already sets up a new namespace, and stores the phone number in the Conversation Context Service. To learn more about the Conversation Context Service, see [here](conversation-orchestrator-conversation-context-service-overview.html).
+
+##### Create the policies
+
+1. Disable all policies you have previously created by switching off the toggle switches in Conversation Orchestrator.
+2. Create a new VIP policy by clicking **Add Policy**.
+
+    This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, you are retrieving this value from a session attribute (myNameSpace.phoneNumber) that you created earlier.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_viprulesession.png">
+
+3. Create a new regular customer policy by clicking **Add Policy**.
+
+    This policy is similar to the one you created using static variables, but instead of getting the phone number from a static attribute, you are retrieving this value from a session attribute (myNameSpace.phoneNumber, that you created earlier).
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regrulesession.png">
+
+4. Enable both policies by clicking on the toggle switches.
+
+##### Test the policies
+
+1. In the policy list in Conversation Orchestrator, disable the RegularCustomerRule_Static and Vip_Static policies.
+2. Enable the VipRule_Session and RegularCustomerRule_Session policies.
+3. Start a new web messaging conversation using the account ID.
+4. Log in to Conversational Cloud using a VIP agent account.
+5. Type “Hi” in the messaging window to engage the bot.
+6. When asked for a phone number, please type +155555501. This time the policies will use the phone number to check the Vip List and route accordingly.
+
+    This should trigger the VIP policy, and the conversation should be transferred to a VIP skill. If you are logged in to Conversational Cloud as a VIP Agent, you will now get a ring.
+
+7. Log out of Conversational Cloud, and then log in back using a Regular Agent account.
+8. Close the previous conversation, and then start a new one.
+9. This time, when asked for the phone number, type +155555506.
+
+    This should now trigger the Regular policy, and the conversation should be transferred to a Regular skill. If you are logged into Conversational Cloud as a Regular Agent, you will now get a ring.
+
+#### Using a LivePerson Functions to check VIP status
+
+In the previous example, you checked for the phone number in a static list. Maintaining such a list is cumbersome. You could also use LivePersion Functions to check for VIP status, for example, use a function that calls a CRM backend to check the phone number at run time.
+
+Create and deploy a new [LivePerson function](liveperson-functions-overview.html) that takes a phone number as an input, and then returns true or false based on whether the phone number is for a VIP customer. The function can internally call a CRM backend to check this status.
+
+{: .important}
+Creating and deploying a LivePerson function (FaaS function) is beyond the scope of this topic and hence not covered in this topic. For information on this, see [here](liveperson-functions-overview.html).
+
+With the function created and deployed, now add a custom attribute of type “function” in Conversation Orchestrator.
+
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_fxnattr.png">
+
+Add parameters to this function by selecting “attribute”, and then typing myNameSpace.phoneNumber. Note that “myNameSpace” is the name you used in the Conversation Builder template setup step in the beginning.
+
+##### Create a policy to use the LivePerson function (FaaS function)
+
+1. Create the VIP policy using the FaaS attribute you created in the previous step as shown below, and click **Save**.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_vipfaas.png">
+
+2. Create the regular customer policy as shown below, and click **Save**.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regfaas.png">
+
+3. **Disable** the previous policies, and **enable** the ones you just created.
+4. You can now test the policies in the same way that you tested previously.
+
+##### Add more context attributes from a bot
+
+The bot template that you used has one basic integration: It asks for a phone number and then stores it in the Conversation Context Service. You can add more context from the bot to use in policies, for example, additional information such as customer name, email, or the NLU intent.
+
+Please see [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) to learn about scripting functions inside Conversation Builder.
+
+**To add additional context**
+
+Select the **Custom Code** option on the Phone Number Question, and navigate to **Process User Response**.
+
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_addattr1.png">
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_addattr2.png">
+
+Edit the code to add more contextual information. The following shows how the phone number is added.
+
+```javascript
+var phoneNumber = getVar("phoneNumber");
+
+ botContext.setContextDataForConversation(mavenNamespace, "phoneNumber", phoneNumber);
+```
+
+Similarly you can add other attributes, for example, an intent:
+
+```javascript
+botContext.setContextDataForConversation(mavenNamespace, "intent", intent);
+```
+
+You can now use this in a policy by adding a condition that uses the intent, as shown below. In the following example, the namespace is “myNameSpace”.
+
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_addattr3.png">
+
+### Using your own routing bot
+
+Using your own routing bot with Conversation Orchestrator:
+
+1. Create the dynamic agent / skill escalation integrations.
+2. Define a namespace and fallback / default skill in Global Functions initialization.
+3. Define a function to set your transfer parameters in Global Functions.
+4. Set your routing variable.
+5. Create your dynamic agent escalation dialog.
+6. Create the Ask Maven API call and transfer to the relevant escalation.
+7. Create your agent / skill escalation nodes.
+8. Create your sample routing policy.
+9. Test the Dynamic Routing solution.
+
+#### Create the dynamic agent & skill escalation integrations
+
+Navigate to the **Integrations** tab within your bot.
+
+##### Skill Escalation
+
+Add a new integration, and enter the following information:
+
+* **Integration Name**: TRANSFER_TO_SKILL
+* **Integration Type**: LivePerson Agent Escalation
+* **Agent Skill Name**: {$botContext.skillName}
+* **Agent Skill Id**:	{$botContext.skillId}
+* **Message To User**: {$botContext.transferMessage}
+
+Save the integration.
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_transf_skill.png">
+
+##### Agent Escalation
+
+Add a new integration, and enter the following information:
+
+* **Integration Name**: TRANSFER_TO_AGENT
+* **Integration Type**:	LivePerson Agent Escalation
+* **Agent Skill Name**:	{$botContext.skillName}
+* **Agent Skill Id**: {$botContext.skillId}
+* **Agent Id**:	{$botContext.agentId}
+* **Message To User**: {$botContext.transferMessage}
+
+Save the integration.
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_transf_agent.png">
+
