@@ -241,17 +241,24 @@ You will be using the Conversation Context Service to store a phone number, and 
 ##### Create the policies
 
 1. Disable all policies you have previously created by switching off the toggle switches in Conversation Orchestrator.
-2. Create a new VIP customer policy by clicking **Add Policy**.
-
-    This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, you are retrieving this value from a session attribute (myNamespace.phoneNumber) that you created earlier.
+2. Create a new VIP customer policy by clicking **Add Policy** and entering the following details. Note some must be entered manually since they will not populate on the dropdown menus.
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_viprulesession.png">
 
+    This policy is similar to the one we created using static variables, but instead of getting the phone number from a static attribute, you are retrieving this value from the namespace session attribute (myNamespace.phoneNumber). You created the namespace in the Global Functions during “Set Up the Orchestrator Bot.”
+
+    The phoneNumber variable is captured on the question_phonenumber node in RULE_1.
+
+    <img class="fancyimage" width="600" src="img/convorchestrator/co_dr_phonenum1.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_phonenum2.png">
+
+    The phoneNumber variable is then saved to the Namespace in the pre-process code on api_integration_4 ( lines 5 and 6 )
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_phonenum3.png">
+
 3. Create a new regular customer policy by clicking **Add Policy**.
 
-    This policy is similar to the one you created using static variables, but instead of getting the phone number from a static attribute, you are retrieving this value from a session attribute (myNamespace.phoneNumber, that you created earlier).
-
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regrulesession.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_regrulesession.png">    
 
 4. Enable both policies by clicking on the toggle switches.
 
