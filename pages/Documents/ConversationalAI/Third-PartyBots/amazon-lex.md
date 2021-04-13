@@ -184,7 +184,7 @@ Multiple scenarios for transfer/escalations exist triggered by the transfer acti
 
 Transfers and escalations rely on the _action_ item in the response object.
 
-#### Transfer To Agent
+#### Transfer To Skill
 
 This option transfers the conversation to the next available agent using the provided skill.
 
