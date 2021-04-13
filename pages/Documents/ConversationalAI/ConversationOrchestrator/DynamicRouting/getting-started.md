@@ -376,3 +376,360 @@ Add a new integration, and enter the following information:
 Save the integration.
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_transf_agent.png">
 
+#### Define a namespace and fallback / default skill in Global Functions initialization
+
+Inside your current routing bot, navigate to the **Global Functions**, and add the following code.
+
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_gf_init1.png">
+
+Code:
+
+```javascript
+function __initConversation() {
+  // Define the Namespace you will access from Orchestrator
+  var mavenNamespace = "myNamespace";
+  
+  // Define the Fallback/Default skill
+  // This will be the skill name, SkillId and transfer message used by the bot if no policies are returned by Conversation Orchestrator
+  var fallbackSkillName = "**Your_Fallback_Skill_Name***";
+  var fallbackSkillId = "***Your_Fallback_Skill_ID***";
+  var fallbackMessage = "BLANK_MESSAGE";
+  
+  // Set our variables to the botContext so we can access them later
+  botContext.setBotVariable("accountId", botContext.getLPAccountId(), true, false);
+  botContext.setBotVariable("mavenNamespace", mavenNamespace, true, false);
+  botContext.setBotVariable("fallbackSkillName", fallbackSkillName, true, false);
+  botContext.setBotVariable("fallbackSkillId", fallbackSkillId, true, false);
+  botContext.setBotVariable("fallbackMessage", fallbackMessage, true, false);
+}
+```
+
+#### Define a function to set your transfer parameters in Global Functions
+
+Below the initialization function, add a new function to set your transfer parameters.
+
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_gf_transf_params.png">
+
+Code:
+
+```javascript
+function setTransferParameters(agentId, skillId, skillName, transferType) {
+  // This function recieves our Transfer Parameters and sets them if available.
+  // If they are not available the Transfer Parameters will be set to 
+  // the Fallback/Default Skill Defined in __initConversation()
+  var fallbackSkillId = botContext.getBotVariable("fallbackSkillId");
+  var fallbackSkillName = botContext.getBotVariable("fallbackSkillName");
+  var setAgentId = agentId ? agentId : null;
+  var setSkillId = skillId ? skillId : fallbackSkillId;
+  var setSkillName = skillName ? skillName : fallbackSkillName;
+  var setTransferMessage = transferType ? 'BLANK_MESSAGE' : botContext.getBotVariable("fallbackMessage");
+  var setTransferType = transferType ? transferType : 'TRANSFER_TO_SKILL';
+
+  // Set our variables to the botContext
+  botContext.setBotVariable('agentId', setAgentId, true, false);
+  botContext.setBotVariable('skillId', setSkillId, true, false);
+  botContext.setBotVariable('skillName', setSkillName, true, false);
+  botContext.setBotVariable('transferMessage', setTransferMessage, true, false);
+  botContext.setBotVariable('transferType', setTransferType, true, false);
+
+  // Debug Log Messages
+  botContext.printDebugMessage("agentId:: " + setAgentId);
+  botContext.printDebugMessage("skillId:: " + setSkillId);
+  botContext.printDebugMessage("skillName:: " + setSkillName);
+  botContext.printDebugMessage("transferType:: " + setTransferType);
+  var userId = botContext.getUserPlatformId();
+  botContext.printDebugMessage('The userPlatformId = ' + userId);
+  var personalInfo = botContext.getLPUserPersonalInfo();
+  botContext.printDebugMessage('PERSONAL INFO:'+personalInfo);
+  var customerInfo = botContext.getLPCustomerInfo();
+  botContext.printDebugMessage('CUSTOMER INFO:'+customerInfo);
+}
+```
+
+We will be using some quick get and set functions for botContext Variables, so also add this to Global Functions:
+
+```javascript
+// Quick Get and Set Functions for Variables
+function getVar(key) {
+  return botContext.getBotVariable(key);
+}
+function setVar(variableName, variableValue){
+  botContext.setBotVariable(variableName, variableValue, true, false);
+}
+```
+
+#### Create your dynamic agent escalation dialog
+
+The dynamic escalation dialog will consist of:
+
+* A dialog starter
+* A node with the Ask Maven Api call (populating the transfer parameters)
+* A node to escalate to the skill
+* A node to escalate to the agent
+
+For testing, we will trigger the dialog starter with the pattern “agent”.
+
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_agent_esc_dialog1.png">
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_agent_esc_dialog2.png">
+
+#### Create the Ask Maven API call and transfer to the relevant escalation
+
+{: .important}
+As this interaction makes the dynamic routing decision, all the dialog endpoints that will escalate to an agent need to be directed here.
+
+Create a text interaction, and set the text to BLANK_MESSAGE.
+
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_askmavencall.png">
+
+In the Pre-Process Code, add the following code:
+
+```javascript
+// Get the ConversationId and the CustomerId for the askMaven API call
+var convId = getVar("conversationId");
+var customerInfo = botContext.getLPCustomerInfo();
+if(customerInfo){
+    var customerId = customerInfo.customerId;
+    botContext.setBotVariable("customerId",customerId,true,false);
+}
+
+// Make the askMaven Request and save the response as a Json
+var mavenRecommendations = botContext.askMaven(convId,customerId,"");
+var data = JSON.parse(mavenRecommendations);
+botContext.printDebugMessage("Maven Recommentdations:: " + mavenRecommendations);
+
+// Create a Custom Event log for bot analytics
+botContext.logCustomEvent(botContext.getCurrentUserMessage(), "Ask Maven","Ask Maven was called for namespace '"+ getVar("mavenNamespace") + "' for account '" + getVar("accountId") + "' ("+ convId + ")");
+
+// Set all the transfer parameters to null
+var agentId = null;
+var skillId = null;
+var skillName = null;
+var transferType = null;
+
+// Check if the askMaven Call returned a match
+if(!data.noMatchReason) {
+  // Get the actions recommended by Orchestrator
+  var actions = data.rule.actions;
+  for (var action in actions) {
+    // Determine the action type
+    var type = actions[action].type;
+    // Use the action type to assign the local transfer parameters
+    switch (type) {
+      case "SEND_MESSAGE":
+        sendMessage(actions[action].payload.message);
+        break;
+      case "TRANSFER_TO_AGENT":
+        agentId = botContext.getLPAccountId()+'.'+ actions[action].payload.userId;
+        skillId = actions[action].payload.skillId || "-1";
+        transferType = "TRANSFER_TO_AGENT";
+        break;
+      case "TRANSFER_TO_SKILL":
+        skillId = actions[action].payload.skillId;
+        transferType = "TRANSFER_TO_SKILL";
+        break;
+    }
+  }
+}
+// Set the Transfer Parameters using the Global Function
+setTransferParameters(agentId, skillId, skillName, transferType);
+```
+
+In the Post-Process Code, add the following code:
+
+```javascript
+// Get the Transfer Type variable
+var transferType = getVar("transferType");
+
+// Use the Transfer Type Variable to progress to the correct escalation
+if (transferType) {
+  switch (transferType) {
+    case "TRANSFER_TO_AGENT":
+      botContext.setTriggerNextMessage("TRANSFER_TO_AGENT");
+      break;
+    case "TRANSFER_TO_SKILL":
+      botContext.setTriggerNextMessage("TRANSFER_TO_SKILL");
+      break;
+    default:
+      log("Policy had a transfer-type other than skill or agent defaulting to Skill.");
+      break;
+  }
+}
+```
+
+#### Create the agent / skill escalation nodes
+
+Create an integration interaction, and assign it to the TRANSFER_TO_SKILL integration that you created. Ensure you rename the node to TRANSFER_TO_SKILL.
+
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_node_skill.png">
+
+Create an integration interaction, and assign it to the TRANSFER_TO_AGENT integration that you created. Ensure you rename the node to TRANSFER_TO_AGENT.
+
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_node_agent.png">
+
+#### Set your routing variable
+Next, capture a variable in the Conversation Context Service, so you can leverage it later for routing.
+
+Navigate to where you would like to set the variable that you will use to route to the complaints team. In this case, you will trigger the dialog using the pattern “complaint”.
+
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_complaint_ds.png">
+
+You will be setting a variable called “agentSkillRequired” in the Namespace, so you can route these conversations to a dedicated Complaints skill.
+
+<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_complaint_var_assign.png">
+
+In the Pre-Process Code, add the following code:
+
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_complaint_code.png">
+
+Code:
+
+```javascript
+// Get your Namespace variable and then Check the Namespace is registered
+var mavenNamespace = getVar("mavenNamespace");
+var success = botContext.registerContextNamespace(mavenNamespace);
+botContext.printDebugMessage("Maven registerContextNamespace:: " + success);
+
+// Get the Variable you would like to save to the Namespace
+var agentSkillRequired = 'Complaints';
+// Set the Variable in the Namespace
+botContext.setContextDataForConversation(mavenNamespace, "agentSkillRequired", agentSkillRequired);
+
+// Set the conversationID to botContext
+var convId = botContext.getConversationId();
+setVar("conversationId", convId);
+
+// Log a custom event for your bot analytics
+botContext.logCustomEvent(botContext.getCurrentUserMessage(), "Maven Session Store","Maven Session Store was called for namespace labelled '"+ getVar("mavenNamespace") + "' for account '" + getVar("accountId") + "' ("+ convId + ")");
+```
+
+#### Create your routing policy
+Now you can create a routing policy to check if the variable: myNamespace.agentSkillRequired is Complaints,  and if so, route to the Human_Complaint Skill. Anything else will go to your fallback/default skill Human.
+
+Navigate to **Conversation Orchestrator > Dynamic Routing > Intent & Context Policies**.
+
+<img class="fancyimage" width="300" src="img/convorchestrator/co_dr_comenu.png">
+
+Add a policy called “Complaints Routing”.
+
+In the **Conditions** section:
+
+* Set the **Attribute** to: myNamespace.agentSkillRequired
+* Keep the check as:	=
+* Keep the **Value Type** as:	String
+* Set the **Value** to: Complaints
+
+In the **Actions** section:
+
+* Set the **Action** to: Transfer to skill
+* Set the **Skill** to:	*Your Complaints Skill*
+
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_crpolicy.png">
+
+Finally, enable the policy using the toggle.
+
+<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_crpolicy_enable.png">
+
+#### Test the policy
+You will use a standard web entry point to initiate a conversation with the Conversation Builder bot that you created, which will use the Conversation Orchestrator policies to route to the desired skill.
+
+##### Test the Complaints policy
+In the policy list in Conversation Orchestrator, ensure the Complaints Policy is enabled.
+
+<img class="fancyimage" width="500" src="img/convorchestrator/co_dr_testpolicy1.png">
+
+1. Start a new web messaging conversation using the account ID.
+2. Log in to Conversational Cloud using a Complaints agent account.
+3. Type “complaint” in the messaging window to engage the bot down our chosen dialog.
+
+    This should trigger the Complaints policy, and the conversation should be transferred to the Complaints skill. If you are logged in to Conversational Cloud as a Complaints Agent, you will now get a ring.
+
+    <img class="fancyimage" width="300" src="img/convorchestrator/co_dr_testpolicy2.png">
+
+##### Test the Standard Fallback routing
+Now test a conversation that doesn’t trigger the complaint routing.
+
+1. Start a new web messaging conversation using the account ID.
+2. Log in to Conversational Cloud using a Standard agent account.
+3. Type “agent” in the messaging window to engage the bot directly to the dynamic routing dialog.
+
+    This should not trigger a policy and the conversation should be transferred to the Fallback skill. If you are logged in to Conversational Cloud as a Standard Agent, you will now get a ring.
+
+    <img class="fancyimage" width="300" src="img/convorchestrator/co_dr_testpolicy3.png">
+
+### Using Conversation Orchestrator outside of Conversational Cloud
+This section of the documentation assumes that you are already familiar with linking third-party bots to Conversation Cloud. If not we strongly suggest that you read the documentation that's [here](third-party-bots-getting-started.html). 
+
+Once your third-party bot is ready, you can [set up routing policies](conversation-orchestrator-dynamic-routing-creating-and-managing-policies.html) on Dynamic Routing and leverage the [Recommendations API](conversation-orchestrator-recommendation-api-overview.html) to receive routing recommendations. You need to handle transfers appropriately within your third-party bot in the appropriate channel. Third-party bots can use the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to read or write contextual information that can be leveraged for dynamic routing or even bot-to-bot communication.
+
+<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_co_outside_cc.png">
+
+{: .important}
+Before you start, please make sure you have enabled the Conversation Context Service.
+and the Recommendations API. Information on how to do this is provided earlier on in this topic.
+
+#### Example using Recommendation API from Google DialogFlow
+
+##### Get the conversation ID
+
+The conversation ID is required for using the Recommendation APIs. This ID is used by the policy to retrieve conversation and Conversation Context Service parameters.
+
+Inside Dialogflow Fulfillment, modify the sample code for the event handler for each request.
+
+Inside the request event handler function (i.e., the `functions.https.onRequest`), you can get the conversationId as the last part of the `request.body.session` string after the last /.
+
+In the following `request.body.session` example string, ea15cd3f-561d-4acf-90ae-5eb14145d38d is the conversationId.
+
+`projects/appointmentscheduler-69117/agent/sessions/ea15cd3f-561d-4acf-90ae-5eb14145d38d`
+
+You can get the Conversational Cloud conversationId with this line of JavaScript code:
+
+```javascript
+request.body.session.substring(request.body.session.lastIndexOf("/") + 1);
+```
+
+For debugging, you can see the logs by clicking the link **View execution logs in the Firebase console** inside the Dialogflow Fulfillment page.
+
+##### Call the Conversation Context Service APIs
+
+Click `package.json` to include your favorite Node.js HTTP library. In the example, we include the axios HTTP library.
+
+The Conversation Context Service is useful for storing any context information gathered in a bot that you might want to use in a routing policy. For instance, you might want to set the intent detected by a bot and then use it for any routing policy.
+
+```javascript
+const contextUrl = 'https://z1.context.liveperson.net/v1/account/55884191/namespace1/' + conversationId + '/properties';
+ 
+var data = {
+   'key1': 'val1',
+   'key2': 'val2',
+   'time': Date.now()
+};
+
+axios.patch(
+   contextUrl, 
+   data, 
+   { headers: { 'Content-Type': 'application/json', 'maven-api-key': <MAVEN_API_KEY> } }
+);
+```
+
+##### Call the Recommendation API
+
+Now that you have the conversation id, use it to call the Recommendation API as follows:
+
+```javascript
+const askMavenUrl = 'https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions';
+ 
+axios.get(
+   askMavenUrl, 
+   { headers: { 'Content-Type': 'application/json', 'maven-api-key': <MAVEN_API_KEY> } }
+).then(function(response){
+   const rule = response.rule;
+   if (rule && rule.actions) {
+      // You can inspect the actions and do something according to the actions
+      //   e.g. transfer to an agent or skill, or send back a message.  
+      //        Here we just log the actions to the console.
+      console.log(rule.actions); 
+   }
+});
+```
+
+For more information on using the Recommendations API, see [here](conversation-orchestrator-recommendation-api-overview.html).
