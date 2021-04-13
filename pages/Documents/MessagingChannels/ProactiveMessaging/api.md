@@ -546,5 +546,5 @@ Footer and quick reply buttons have static values and do not need any user input
 <strong>What kind of customers can get Inapp message through Proactive Messaging?</strong>
 Only registered customers can. 
 
-<strong>How does first message display in agent workspace?</strong>
-First message is not part of conversations becuase customers cannot send first message on behalf of agent. Agent widget is used to display first message. It's not perfect. we are trying to solve it. 
+<strong>How does first Inapp message display in agent workspace?</strong>
+First Inapp message is not part of conversations becuase customers cannot send first message on behalf of agent. Agent widget is used to display first message. It's not perfect. we are trying to solve it. 
