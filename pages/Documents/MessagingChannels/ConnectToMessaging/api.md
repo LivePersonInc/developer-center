@@ -219,7 +219,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 **How to generate <b>Authorization</b> header for API key**
 
 1. Retrieve the appKey, secret, accessToken, accessTokenSecret from [API key](https://developers.liveperson.com/api-guidelines-create-api-keys.html)
-2. Retrieve a domain from [Domain API](https://developers.liveperson.com/api-guidelines-domain-api.html) and correct path.
+2. Retrieve a domain from [Domain API](https://developers.liveperson.com/api-guidelines-domain-api.html) and API endpoint path.
 3. Use following code snippet(Nodejs, Java) to generate OAuth string programmatically.
 4. Insert generated OAuth string to <b>Authorization</b> header.
 
