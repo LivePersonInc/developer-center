@@ -46,7 +46,7 @@ The quick reply container holds all buttons that should be displayed with the me
   <tr>
     <td>replies</td>
     <td>
-    Array of quick replies sent to the consumer. <br/>
+    Array of quick replies sent to the consumer. </br>
     Maximum number of buttons is 13.
     </td>
     <td>Array(<a href="#button">Button</a>)</td>
@@ -89,7 +89,7 @@ A reply button that will be display beneath the message.
   <tr>
     <td>title</td>
     <td>
-    The text of the button.<br/>
+    The text of the button.</br>
     The text can not be longer than 25 characters.
     </td>
     <td>String</td>
@@ -98,11 +98,11 @@ A reply button that will be display beneath the message.
   <tr>
     <td>click</td>
     <td>
-    The click operations that should be executed when the customer clicks the button.<br/>
+    The click operations that should be executed when the customer clicks the button.</br>
     These click operations must contain at least one action which can be any action of the following types:
     <li><a href="getting-started-with-rich-messaging-introduction.html#publish-text">publishText</a></li>
     <li><a href="getting-started-with-rich-messaging-introduction.html#navigate">navigate</a></li>
-    <li><a href="getting-started-with-rich-messaging-introduction.html#link">link</a></li><br/>
+    <li><a href="getting-started-with-rich-messaging-introduction.html#link">link</a></li></br>
     If an action of type navigate or link is added, a publishText action can additionaly be included in the click operation.
     </td>
     <td><a href="getting-started-with-rich-messaging-introduction.html#element-click-operations">ClickOperations</a></td>
