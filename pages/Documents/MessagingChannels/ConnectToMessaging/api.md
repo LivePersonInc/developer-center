@@ -24,9 +24,9 @@ Connect To Messaging (C2M) is a product offering from LivePerson allowing brands
 
 
 ### API Specifications
-## API Domain
+## C2M Domain
 
-C2M is deployed in three regions. **North America**, **EMEA**(Europe, Middle East and Africa), **APAC**(Asia Pacific). Use the domain api to identify the zone of C2M api which is to be used for an account.
+C2M is deployed in three regions. **North America**, **EMEA**(Europe, Middle East and Africa), **APAC**(Asia Pacific). Use the [Domain API](api-guidelines-domain-api.html) to identify the zone of C2M API for an account with <b>connectToMessagingDomain</b> as Service Name.
 
 ### Eligibility API
 
@@ -40,7 +40,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
-| domain   | Input accountId and search <b>connectToMessagingDomain</b> from [Domain API](https://developers.liveperson.com/api-guidelines-domain-api.html) | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain | LivePerson C2M Domain | va.connect-to-messaging.liveperson.net |
 | accountId | LivePerson site ID | 12345678 |
 | version | API Version | 2.0 |
 
@@ -49,7 +49,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | [API key](https://developers.liveperson.com/api-guidelines-create-api-keys.html) or [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | API key or Bearer «APP_JWT» |
+| Authorization | [API key](api-guidelines-create-api-keys.html) or [APP JWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt). Details can be found [here](connect-to-messaging-api.html#details-on-authorization). | API key or Bearer «APP_JWT» |
 
 **Request Body Parameters**
 
@@ -58,7 +58,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | skill | string | yes | Engagement skill |
 | consumerPhoneNumber | string | yes | Consumer’s phone number(E.164 format with leading "+") |
 | handoffId | string | yes | C2M handoff Id |
-| sdes | array | no | Array of ctmrinfo and/or personal SDEs. See details [here](https://developers.liveperson.com/engagement-attributes-types-of-engagement-attributes.html) |
+| sdes | array | no | Array of ctmrinfo and/or personal SDEs. See details [here](engagement-attributes-types-of-engagement-attributes.html) |
 | templateVariables | object | no | Key-value pairs of variables for the template. This parameter is only applicable for WA channel. |
 | ivrNumber | string | no | The ivrNumber that brands want to use. Some brands have more than 1 ivrNumber and this field clears the ambiguity. |
 | consumerId | string | no | The consumerId which is used in the app as a user name field. This parameter is mandatory for only INAPP channel. |
@@ -134,7 +134,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
-| domain   | Input accountId and search <b>connectToMessagingDomain</b> from [Domain API](https://developers.liveperson.com/api-guidelines-domain-api.html) | va.connect-to-messaging.liveperson.net or lo.connect-to-messaging.liveperson.net or sy.connect-to-messaging.liveperson.net |
+| domain | LivePerson C2M Domain | va.connect-to-messaging.liveperson.net |
 | accountId | LivePerson site ID | 12345678 |
 | version | API Version | 2.0 |
 
@@ -143,7 +143,7 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 | Header | Description | Value/Example |
 | :--- | :--- | :--- |
 | Content-Type | Used to indicate the media type of the resource | application/json |
-| Authorization | [API key](https://developers.liveperson.com/api-guidelines-create-api-keys.html) or [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | API key or Bearer «APP_JWT» |
+| Authorization | [API key](api-guidelines-create-api-keys.html) or [APP JWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt). Details can be found [here](connect-to-messaging-api.html#details-on-authorization). | API key or Bearer «APP_JWT» |
 
 **Request Body Parameters**
 
@@ -218,8 +218,8 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 **How to generate <b>Authorization</b> header for API key**
 
-1. Retrieve the appKey, secret, accessToken, accessTokenSecret from [API key](https://developers.liveperson.com/api-guidelines-create-api-keys.html)
-2. Retrieve a domain from [Domain API](https://developers.liveperson.com/api-guidelines-domain-api.html) and API endpoint path.
+1. Retrieve the appKey, secret, accessToken, accessTokenSecret from [API key](api-guidelines-create-api-keys.html)
+2. Retrieve a domain from [Domain API](api-guidelines-domain-api.html) and API endpoint path.
 3. Use following code snippet(Nodejs, Java) to generate OAuth string programmatically.
 4. Insert generated OAuth string to <b>Authorization</b> header.
 
@@ -388,7 +388,7 @@ public class OAuthAuthenticator {
 
 **How to generate <b>Authorization</b> header for APP JWT**
 
-1. Retrieve the APP_JWT from [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt)
+1. Retrieve the APP_JWT from [APP JWT](connector-api-send-api-authorization-and-authentication.html#get-appjwt)
 2. Insert to <b>Authorization</b> header as Bearer «APP_JWT».
 
 ### Frequently Asked Questions
@@ -411,7 +411,7 @@ C2M does not have any limitations on the message size while sending messages to 
  
 <strong>5. Does C2M 2.0 API provide a report?</strong>
 
-Yes, it does. See details [here](https://developers.liveperson.com/outbound-reporting-api-overview.html).
+Yes, it does. See details [here](outbound-reporting-api-overview.html).
 
 <strong>6. What’s the lookback period?</strong>
 - Lookback period is how long will LP services maintain context (like campaign info, skill etc) for a reply of a message that is sent to the recipient/consumer.  
