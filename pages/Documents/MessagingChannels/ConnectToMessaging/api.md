@@ -216,7 +216,12 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 ### Details on Authorization
 
-**How to generate <b>Authorization</b> header for [API key](https://developers.liveperson.com/api-guidelines-create-api-keys.html)**
+**How to generate <b>Authorization</b> header for API key**
+
+1. Retrieve the appKey, secret, accessToken, accessTokenSecret from [API key](https://developers.liveperson.com/api-guidelines-create-api-keys.html)
+2. Retrieve a domain from [Domain API](https://developers.liveperson.com/api-guidelines-domain-api.html) and correct path.
+3. Use following code snippet(Nodejs, Java) to generate OAuth string programmatically.
+4. Insert generated OAuth string to <b>Authorization</b> header.
 
 ```javascript
 const OAuth = require('oauth-1.0a');
@@ -282,7 +287,7 @@ public class OAuthAuthenticator {
 
     public static void main(String[] args) {
         String domain = "your domain";
-        // Insert the path without query string: "/api/account/:accountId/eligibility"
+        // Insert the path without the query string: "/api/account/:accountId/eligibility"
         String path = "your path";
         String appKey = "your appkey";
         String secret = "your secret";
@@ -381,9 +386,10 @@ public class OAuthAuthenticator {
 
 ```
 
-**How to generate <b>Authorization</b> header for [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt)**
+**How to generate <b>Authorization</b> header for APP JWT**
 
-Bearer «APP_JWT» 
+1. Retrieve the APP_JWT from [APP JWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt)
+2. Insert to <b>Authorization</b> header as Bearer «APP_JWT».
 
 ### Frequently Asked Questions
 
@@ -423,6 +429,3 @@ Refer to each API's <strong>Request Body Parameters</strong> or [swagger](https:
 | skill | 255 char max length |
 | overrideMessage | 1600 char max length |
 | handoffId | 16 char max length |
-
- 
-
