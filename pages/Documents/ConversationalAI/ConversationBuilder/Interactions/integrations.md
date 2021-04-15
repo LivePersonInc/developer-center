@@ -303,3 +303,83 @@ You can create a failure dialog similarly. In this case, the Dialog Starter inte
 If your original dialog involves *multiple* uploads--with different success and failure messages for each upload--but you want to handle the uploads with a *single* success dialog (or failure dialog), use the * wildcard character to match all messages like this:
 
 `file_upload_success:*`
+
+### Apple Pay interactions
+
+**For Apple Business Chat only.**
+
+If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay. (The interaction has been developed per Apple's Apple Pay specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat).)
+
+#### Prerequisite setup steps
+
+1. Review and follow LivePerson’s Apple Business Chat setup guide that’s [here](https://knowledge.liveperson.com/messaging-channels-apple-business-chat-setup-guide.html).
+2. As a part of the setup for Apple Pay in specific, you’ll need to create and set up your merchant account and the services needed to use Apple Pay, and you’ll need to provide your Merchant ID in Apple Business Register. These steps are covered [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat/initiating_apple_pay) on Apple’s developer site. Contact your LivePerson representative for help with this if needed.
+3. Implement your own merchant session endpoint, which is discussed [here](https://developer.apple.com/documentation/apple_pay_on_the_web/apple_pay_js_api/requesting_an_apple_pay_payment_session) on Apple’s developer site.
+
+Once this setup is completed, you can add the Apple Pay integration to your bot and configure it as described below.
+
+#### Interaction configuration
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay1.png">
+<br>
+<img style="width:350px" src="img/ConvoBuilder/integrations_applepay3.png">
+<br>
+<img style="width:450px" src="img/ConvoBuilder/integrations_applepay4.png">
+
+##### Tile settings
+
+| Setting | Description | Required? | Example |
+| --- | --- | --- | --- |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | https://wwww.mysite/images/mylogo.jpg |
+| ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
+| Title | The title of the Apple Pay bubble. | Required | Your order |
+| Item name | A short description of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.lineItems[i]} |
+| Item price | The amount of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.itemPrices[i]} |
+| Total | The total amount for all items. You can specify a botContext or integration variable name. | Required | {$botContext.total} |
+
+##### Advanced interaction settings
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay2.png">
+
+**Merchant Information**
+
+* **Merchant Identifier**: The unique identifier that represents you as a merchant for Apple Pay.
+* **Merchant Name**: The canonical name for your store, suitable for display and consisting of 64 or fewer UTF-8 characters.
+* **Country**: Your two-letter ISO 3166 country code as a merchant.
+* **Currency**: The three-letter ISO 4217 currency code for the payment.
+* **Merchant Session**: A unique token representing the transaction between the consumer and you as the merchant. This token is used by Apple to confirm that the pay session was created by a valid merchant and that it is being used within the time bounds allowed by Apple. Create an integration that points to your merchant session endpoint, and provide the response received from the endpoint here. You can specify a botContext or integration variable name.
+* **Account Signature**: This field allows for the account signature to be generated and added as a part of the request, for extra validation. The field stores a signed hash of the merchant session payload. The hash is sent as a part of the structured content request to the connector, which validates it and rejects it if invalid. You can enter an alphanumeric string or specify a botContext or integration variable name. This field is optional and only needed for accounts using this sign/validate flow. For more on the Apple Pay signature flow, see [here](apple-business-chat-templates-apple-pay-template.html#apple-pay-signature-flow). Note that opting in to this additional verification requires some internal account configuration; please contact your LivePerson representative for help with setting this up.
+* **Request Identifier**: This field stores the unique identifier representing the merchant session request. The request identifier is a consistent ID throughout the lifetime of the pay session, and it’s used by LivePerson APIs and services to track the pay session from start to finish. You can enter an alphanumeric string or specify a botContext or integration variable name.
+
+**Shipping Methods**
+
+You can add a list of available shipping methods. For each shipping method, specify:
+
+* **Name**: A short description of the shipping method.
+* **Shipping Cost**: The cost associated with the shipping method.
+* **Description**: An additional description of the shipping method.
+* **ID**: (Optional) A value that you provide to identify the shipping method.
+
+{: .important}
+The first shipping method that you add is used as the default method.
+
+**Additional Fields & Payment Capabilities**
+
+* **Required Billing Fields**: Select the billing contact fields required to process the transaction. Tip: Select only the fields that are needed to process the payment. Selecting unnecessary fields adds complexity to the transaction; this can increase the chances of the customer canceling the payment request.
+* **Required Shipping Fields**: Select the shipping contact fields required to fulfill the order. For example, if you need the customer’s email address or phone number, select these.
+* **Merchant Capabilities**: Specify the payment capabilities supported by you as the merchant. You must include “3DS.”
+* **Supported Networks**: Specify one or more of the payment networks supported by you as the merchant.
+
+**Endpoint URLs**
+
+Only the **Payment Gateway URL** is required. This URL is called by Apple Pay to process the payment through the payment provider. 
+
+The optional endpoint URLs are for receiving and managing any updates a customer might make before confirming the payment. These include:
+
+* **Payment Method Update URL**: Called by Apple Pay when the customer changes the payment method.
+* **Shipping Method Update URL**: Called by Apple Pay when the customer changes the shipping method.
+* **Shipping Contact Update URL**: Called by Apple Pay when the customer changes their shipping address information.
+* **Fallback URL**: A URL that opens in a web browser so the customer can complete the purchase if their device is unable to make payments using Apple Pay.
+* **Order Tracking URL**: Called by Apple Business Chat after completing the order; provides you with an opportunity to update the order information in your system.
+
+For more on these endpoints, see [here](https://developer.apple.com/documentation/businesschatapi/applepayendpoints) on the Apple developer site.
