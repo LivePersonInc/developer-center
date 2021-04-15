@@ -322,7 +322,7 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay1.png">
 <br>
-<img style="width:350px" src="img/ConvoBuilder/integrations_applepay3.png">
+<img style="width:400px" src="img/ConvoBuilder/integrations_applepay3.png">
 <br>
 <img style="width:450px" src="img/ConvoBuilder/integrations_applepay4.png">
 
@@ -335,7 +335,7 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 | Title | The title of the Apple Pay bubble. | Required | Your order |
 | Item name | A short description of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.lineItems[i]} |
 | Item price | The amount of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.itemPrices[i]} |
-| Total | The total amount for all items. You can specify a botContext or integration variable name. | Required | {$botContext.total} |
+| Total | The total amount for all items, in effect, the subtotal (minus tax). You can specify a botContext or integration variable name. | Required | {$botContext.total} |
 
 ##### Advanced interaction settings
 
