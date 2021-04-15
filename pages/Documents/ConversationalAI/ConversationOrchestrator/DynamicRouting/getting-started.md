@@ -21,9 +21,9 @@ To get started, you need to direct traffic to a routing bot. Your setup is diffe
 
 Each of these options is further discussed in this topic.
 
-### Turn on the Conversation Context Service
+### Prerequisite steps
 
-**To turn on the Conversation Context Service**
+#### Turn on the Conversation Context Service
 
 1. Navigate to **Bot Accounts** within Conversational Cloud.
 
@@ -37,7 +37,7 @@ Each of these options is further discussed in this topic.
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_enablecontextapi.png">
 
-### Enable the Recommendations API
+#### Enable the Recommendations API
 
 To enable the Recommendation APIs you will need to create and use a Developer API key. To get your unique key:
 
@@ -49,7 +49,7 @@ To enable the Recommendation APIs you will need to create and use a Developer AP
 
     To generate a new key, click the **Regenerate Key** button. This will invalidate the previous key. The key is shared for all Conversation Orchestrator APIs; therefore, you will need to use the new key wherever the APIs are being called.
  
-### Choose your routing bot
+#### Choose your routing bot
 
 * Use the Conversation Orchestrator bot template if you are setting up routing for the first time or if you don’t mind setting up a new routing or concierge bot. This template comes pre-wired with hooks to [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) and the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html). This is the easiest way to get started.
 

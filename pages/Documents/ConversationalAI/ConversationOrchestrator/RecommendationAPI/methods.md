@@ -59,7 +59,7 @@ N/A
 
 ##### Request example
 ```bash
-curl -X GET "http://localhost:3000/v1/account/le63071475/next-actions?conversationId=myconversationId&consumerId=myconsumerId&groupId=mygroupId" -H  "accept: */*" -H  "maven-api-key: YBrAm6BigSbWF2ZW4tcm91dGluZw=="
+curl -X GET "http://localhost:3000/v1/account/le63071475/next-actions?conversationId=myconversationId&consumerId=myconsumerId&groupId=mygroupId" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 ##### Response example

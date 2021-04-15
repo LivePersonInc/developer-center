@@ -59,7 +59,7 @@ Having saved the intent names to the Conversation Context Service, you can now c
 2. Within your newly created policy, set the condition for the policy to look for the ‘intent’ property of the namespace created above. Set this condition to equal the intent name that corresponds to this policy.
 3. Set the Action of this policy to “Transfer to Skill” and select the corresponding skill for this intent from the dropdown.
 4. Save and enable your policy. 
-5. Complete the steps in the “Testing” section (farther below) to enable routing from your Conversation Builder bots.
+5. Complete the steps in the "Testing" section (farther below) to enable routing from your Conversation Builder bots.
 
 #### Detailed process
 
