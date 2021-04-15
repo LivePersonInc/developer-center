@@ -78,7 +78,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple answer layout only |
+| Knowledge AI integration | Yes - Custom answer layout only |
 | Apple Pay integration | No |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
@@ -216,7 +216,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No |
 | Integration | Yes |
 | Agent Transfer integration | Yes |
-| Knowledge AI integration | Yes - Simple answer layout only |
+| Knowledge AI integration | Yes - Custom answer layout only |
 | Apple Pay integration | No |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
@@ -285,6 +285,6 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Time Picker question | No | 
 | Integration | Yes | 
 | Agent Transfer integration | Yes | 
-| Knowledge AI integration | Yes - Simple answer layout only |
+| Knowledge AI integration | Yes - Custom answer layout only |
 | Apple Pay integration | No |
 | survey interactions (NPS, FCR, CSAT) | Yes |
