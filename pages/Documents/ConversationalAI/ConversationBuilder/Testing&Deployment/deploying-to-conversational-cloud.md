@@ -274,9 +274,9 @@ If you don’t set this field, the bot agent processes the message flow as usual
 
 For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
 
-If you set this field to “true,” the consumer doesn’t see “read” or “seen” in the messaging window after their message has been read. LivePerson recommends that you set this to "true." Manager bots don't need to send this kind of status update, and doing so can create unnecessary overhead in the bot response time.
+When this field is “true,” the consumer doesn’t see “read” or “seen” in the messaging window after their message has been read. LivePerson recommends that you keep this set to "true." Manager bots don't need to send this kind of status update, and doing so can create unnecessary overhead in the bot response time.
 
-**Default value**: false<br>
+**Default value**: true<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
