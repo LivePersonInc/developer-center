@@ -83,7 +83,7 @@ Select an answer layout based on the target channels and your requirements. For 
 
 The Structured layout looks like this:
 
-<img style="width:500px" src="img/ConvoBuilder/knowledge_ai_rich.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_rich.png">
 
 With the Structured layout:
 
@@ -94,11 +94,12 @@ With the Structured layout:
 
 The Simple layout doesn’t include rich elements like images. It looks like this:
 
-<img style="width:500px" src="img/ConvoBuilder/knowledge_ai_plain.png">
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_plain.png">
 
 With the Simple layout:
 
 * Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
+* The article's content URL is included only if the channel in use is Web messaging.
 * Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
 
 #### Add a Knowledge AI interaction
