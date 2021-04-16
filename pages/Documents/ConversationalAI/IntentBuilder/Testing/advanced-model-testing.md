@@ -68,7 +68,7 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_refine.png">
 
 {: .important}
-The test set overall can contain a maximum of 300 test phrases. Each intent can have a maximum of 25 test phrases.
+The test set overall can contain a maximum of 2,000 test phrases. LivePerson recommends that you include 5 test phrases for each intent in the domain.
 
 #### Evaluating the test coverage
 
