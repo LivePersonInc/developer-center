@@ -18,7 +18,7 @@ There are two ways to manage properties in the Conversation Context Service (CCS
 
 For information on this, see [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html) in the Conversation Builder documentation.
 
-### REST APIs - Overview
+### REST APIs overview
 
 If the Conversation Context Service(CCS) is summarized in one sentence, it is a service that manages properties in a key-value relationship. So, most APIs are for storing, reading, and deleting properties, and there are some additional APIs.
 
@@ -36,7 +36,72 @@ Base URL per environment:
 {: .important}
 The accountId and API key in these examples are fake; please replace them with your accountID and the developer key that you generated.
 
-### REST APIs - Property API
+### REST Namespace API
+
+#### Create a custom namespace
+This API creates a new namespace in the Conversation Context Service. 
+
+{: .important}
+Saving properties to a namespace that has not been previously created using this method will create the new namespace automatically
+
+| Method | Path |
+| --- | --- |
+| POST | /v1​/account​/{accountId}​ |
+
+Request payload example:<br>
+`{ "name”: “myNamespace”}`
+
+Example:
+```bash
+curl -X POST 
+"http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "{\"name\":\"myNamespace\"}"
+```
+
+Response payload example:<br>
+Empty body; status code = 204
+
+#### Get a list of namespaces created
+This API provides the name and creation date of all namespaces that exist for your account in the Conversation Context Service.
+
+| Method | Path |
+| --- | --- |
+| GET | ​/v1​/account​/{accountId}​ |
+
+Request payload example:<br>
+N/A
+
+```bash
+curl -X GET 
+"http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+```
+
+Response payload example:<br>
+```
+[
+{"name":"myCoolNamespace","createdAt":"2019-08-02T19:41:52.017Z"},
+{"name":"myTestNamepsace","createdAt":"2019-08-08T06:12:23.204Z"}
+]
+```
+
+#### Delete a custom namespace
+This API completely removes a namespace and all of its underlying properties from the Conversation Context Service.
+
+| Method | Path |
+| --- | --- |
+| DELETE | /v1​/account​/{accountId}​/{customNamespace} |
+
+Request payload example:<br>
+N/A
+
+```bash
+curl -X DELETE 
+"http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+```
+
+Response payload example:<br>
+Empty body; status code = 204
+
+### REST Property API
 
 #### Save properties
 
@@ -380,7 +445,7 @@ Response payload example:<br>
 ]
 ```
 
-### REST APIs - TTL API
+### REST TTL API
 
 #### Set TTL on Namespace
 This API takes a namespace and ttlSeconds as parameters, and then sets the TTL of the namespace to ttlSeconds. The TTL of all namespace properties created or updated afterwards has the value of ttlSeconds automatically. One thing to note is that the TTL of an existing namespace property does not change until it is updated.
