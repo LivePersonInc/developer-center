@@ -48,7 +48,7 @@ This is an API for saving one or several namespace properties. This API overwrit
 | PATCH | /v1​/account​/{accountId}​/{customNamespace}​/properties |
 
 Request payload example:<br>
-{ "myProperty1": "myValue1", "myProperty2": 2, "myProperty3": { "name": "myValue3" } }
+`{ "myProperty1": "myValue1", "myProperty2": 2, "myProperty3": { "name": "myValue3" } }`
 
 Example:
 ```bash
@@ -66,7 +66,7 @@ This is an API for saving one namespace property. This API overwrites an existin
 | PUT | /v1​/account​/{accountId}​/{customNamespace}​/properties​/{property} | 
 
 Request payload example:<br>
-"value4"
+`"value4"`
 
 Example:
 ```bash
@@ -84,7 +84,7 @@ This is an API for saving one or several session properties. This API overwrites
 | PATCH | ​/v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties | 
 
 Request payload example:<br>
-{ "myProperty1": ["value1", "value2", "value3"] }
+`{ "myProperty1": ["value1", "value2", "value3"] }`
 
 Example:
 ```bash
@@ -102,7 +102,7 @@ This is an API for saving one session property. This API overwrites an existing 
 | PUT | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties​/{property} | 
 
 Request payload example:<br>
-{ "name": "value2", "items": ["A", "B", "C"] }
+`{ "name": "value2", "items": ["A", "B", "C"] }`
 
 Example:
 ```bash
@@ -156,7 +156,7 @@ curl -X GET "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/m
 ```
 
 Response payload example:<br>
-myValue1
+`myValue1`
 
 #### Read session properties
 This API takes a namespace and a session as a parameter and returns all session properties belonging to the namespace and session.
@@ -303,7 +303,7 @@ This API takes a namespace, a session and a property name as a parameter and del
 | DELETE | /v1​/account​/{accountId}​/{customNamespace}​/{sessionId}​/properties​/{property} | 
 
 Request payload example:<br>
-
+N/A
 
 Example:
 ```bash
@@ -311,6 +311,7 @@ curl -X DELETE "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le6307147
 ```
 
 Response payload example:<br>
+Empty body; status code = 204
 
 #### Get all variables
 The APIs described here are to show a list of sessionIds that have any properties. There are two APIs: The first is to return the SessionIds, and the second is to return the properties with SessionIds.
@@ -352,6 +353,7 @@ Response payload example:<br>
 ```
 
 #### Get all properties within a session
+
 | Method | Path | 
 | --- | --- |
 | GET | /v1​/account​/{accountId}​/{customNamespace}​/session-properties | 
@@ -388,7 +390,7 @@ This API takes a namespace and ttlSeconds as parameters, and then sets the TTL o
 | POST | /v1/account/{accountId}?ttlSecond={ttlSecond} | 
 
 Request payload example:<br>
-{ "name": "someCustomNamespace" }
+`{ "name": "someCustomNamespace" }`
 
 Example:
 ```bash
@@ -412,7 +414,7 @@ This API takes a namespace, session and ttlSeconds as parameters, and then sets 
 | POST | /v1/account/{accountId}/namespace/{customNamespace}/session?ttlSecond={ttlSecond} | 
 
 Request payload example:<br>
-{ "sessionId": "someSessionId" }
+`{ "sessionId": "someSessionId" }`
 
 Example:
 ```bash
