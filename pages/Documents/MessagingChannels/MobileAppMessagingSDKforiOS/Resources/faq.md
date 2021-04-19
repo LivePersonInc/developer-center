@@ -74,3 +74,28 @@ As Apple mentioned in their article:
 
 {:.important}
 For more information, please visit Apple’s documentation [link](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor)
+
+### When using VoiceOver while on the Conversation Screen, Assistant will sometimes read the elements on the ViewController behind it.
+
+In order to prevent this from happening, Host App will need to change the value of the following properties before calling the method `LPMessaging.instance.showConversation`
+
+```swift
+self.view.accessibilityElementsHidden = true
+// NOTE: if there is a TabBar, it should be hidden too:
+// self.tabBarController?.tabBar.accessibilityElementsHidden = true
+```
+
+Once the Conversation Screen is dismissed, HostApp will need to reset the properties changed before to re-enable the VO on this ViewController, a delegate on the SDK will notify Host App of that event:
+
+```swift
+/**
+* This delegate method is optional.
+* It is called when the conversation view controller removed from its container view controller or window.
+*/
+func LPMessagingSDKConversationViewControllerDidDismiss() {
+  // NOTE: Setting Parent ViewController accessibility hidden value to true, so VO will read the elements on this View
+  self.view.accessibilityElementsHidden = false
+  // NOTE: if there is a tabbar, it should reset too:
+  // self.tabBarController?.tabBar.accessibilityElementsHidden = false
+}
+```
