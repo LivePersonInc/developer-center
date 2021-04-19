@@ -396,6 +396,7 @@ perPage
 * Range: A number between 1 and 1000
 
 #### Get all sessionIds
+
 | Method | Path | 
 | --- | --- |
 | GET | /v1​/account​/{accountId}​/{customNamespace}​/session-ids | 
