@@ -40,8 +40,8 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
-| domain | LivePerson C2M Domain | va.connect-to-messaging.liveperson.net |
-| accountId | LivePerson site ID | 12345678 |
+| domain | C2M Domain | va.connect-to-messaging.liveperson.net |
+| accountId | Site ID | 12345678 |
 | version | API Version | 2.0 |
 
 **Request Headers**
@@ -134,8 +134,8 @@ Click [**Invite**](https://connect-to-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Name  | Description | Value/Example |
 | :--- | :--- | :--- |
-| domain | LivePerson C2M Domain | va.connect-to-messaging.liveperson.net |
-| accountId | LivePerson site ID | 12345678 |
+| domain | C2M Domain | va.connect-to-messaging.liveperson.net |
+| accountId | Site ID | 12345678 |
 | version | API Version | 2.0 |
 
 **Request Headers**
