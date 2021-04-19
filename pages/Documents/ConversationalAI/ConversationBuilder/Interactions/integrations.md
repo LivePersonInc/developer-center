@@ -362,7 +362,7 @@ You can add a list of available shipping methods. For each shipping method, spec
 * **ID**: (Optional) A value that you provide to identify the shipping method.
 
 {: .important}
-The first shipping method that you add is used as the default method.
+The shipping method fields can be updated dynamically via an API call, i.e., you can specify a botContext or integration variable name in these fields.<br><br>The first shipping method that you add is used as the default method.
 
 **Additional Fields & Payment Capabilities**
 
