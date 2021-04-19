@@ -256,6 +256,49 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 }
 ```
 
+**Request Body Example - JSON Payload - New Version - Inapp Handoff**
+
+```json
+{
+    "campaignName": "TestInappProactiveAPI",
+    "skill": "sales",
+    "templateId": "H1234567890",
+    "consent": true,
+    "consumers": [
+        {
+            "consumerContent": {"inapp": "user1"},
+            "variables": {
+                "1": "Hi user1, welcome to proactive messaging.",
+            }
+        }
+    ]
+}
+```
+1. All fields are required. 
+2. If variables is empty object, the default value set in handoff will be used.
+3. The value of consent must be true. 
+4. If the vaule of skill or templateId is not correct, it will failed to create proactive campaign and error will be returned.  
+ 
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "consumerContent": {
+                "inapp": "user1"
+            }
+        }
+    ]
+}
+```
+
 **Request Body Example - JSON Payload - Old Version**
 
 ```json
@@ -499,3 +542,9 @@ they should have https://upload.wikimedia.org added in houston site settings. Pl
 
 <strong>Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?</strong>
 Footer and quick reply buttons have static values and do not need any user input while campaign creation
+
+<strong>What kind of customers can get Inapp message through Proactive Messaging?</strong>
+Only registered customers can. 
+
+<strong>How does first Inapp message display in agent workspace?</strong>
+First Inapp message is not part of conversations becuase customers cannot send first message on behalf of agent. Agent widget is used to display first message. It's not perfect. we are trying to solve it. 

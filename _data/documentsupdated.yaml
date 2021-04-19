@@ -200,6 +200,7 @@
           - subpagename: File Integrations
           - subpagename: LivePerson Functions Integrations
           - subpagename: Web View Integration API
+          - subpagename: Using Consumer Access Tokens
           - subpagename: Troubleshooting
       - pagename: Environment Variables
       - pagename: Versions & Releases
@@ -724,6 +725,7 @@
       - pagename: Monitoring
         subpages:
           - subpagename: Activities
+          - subpagename: Deployment History
           - subpagename: Logs
           - subpagename: Metrics
           - subpagename: Email Reporting
@@ -1064,6 +1066,11 @@
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API
+    - documentname: Consumer Delegation
+      pages:
+      - pagename: Introduction
+      - pagename: Configuration
+      - pagename: How It Works
     - documentname: Conversational Cloud Applications
       pages:
         - pagename: What Is a Conversational Cloud Application?
