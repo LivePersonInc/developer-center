@@ -239,10 +239,11 @@ First, in the bot's [Bot Settings](conversation-builder-bots-bot-basics.html#con
 Second, configure the Email Transcript interaction:
 
 * Change the message text and the label for the Decline button as desired.
-* Configure the interaction's basic and advanced settings. Most notably, specify the **Sender Name** and **Sender Email**. By default, these are set using the user details of the bot developer who added the interaction to the bot.
-* Keep the Next Action as "Close Dialog" (which is the default) to close the conversation if appropriate.
+* Configure the interaction's basic and advanced settings. Most notably, specify the **Sender Name** and **Sender Email**. These are the name and email address from whom the consumer receives the email.
 
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_email2.png">
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_email2.png">
+
+* Keep the Next Action as "Close Dialog" (which is the default) to close the conversation if appropriate.
 
 Note the following:
 
@@ -267,7 +268,7 @@ Second, configure the Thank You Message interaction:
 
 * Enter the Thank You message.
 * Configure the interaction's basic and advanced settings.
-* Set the Next Action to "Close Dialog" to close the conversation if appropriate.
+* Keep the Next Action as "Close Dialog" (which is the default) to close the conversation if appropriate.
 
 The Thank You Message interaction can precede or follow an Email Transcript interaction (discussed above), if used. However, the two must be last in the dialog flow. You can [move](conversation-builder-interactions-interaction-basics.html#move-an-interaction) them to reorder them, but this constraint is enforced.
 
