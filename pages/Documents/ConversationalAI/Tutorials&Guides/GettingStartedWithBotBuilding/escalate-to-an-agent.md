@@ -50,13 +50,13 @@ In this final Getting Started tutorial, you add an Agent Escalation dialog to co
 1. In **Conversation Builder**, click **Add Dialog** in the lower-left corner, and create a new standard dialog (dialog type = Dialog) with the name "Escalation."
 2. In the dialog starter, set this dialog to be triggered using patterns. Select **+ Pattern** and enter the following pattern values:
 
-    * Agent
-    * Human
-    * Representative
+    * agent
+    * human
+    * representative
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/escalation_dialog_starter.png">
 
-    Alternatively, use the pattern library that you've used before to add the "Help" set of patterns.
+    Alternatively, use the pattern library that you've used before to add the "Help" set of patterns. Then click **Save**.
 
 3. On triggering this dialog, we want to transfer the user to a human agent. For this, you use the **Agent Transfer** interaction. Select this from the Integrations section of the Interactions menu. Notice that you immediately receive an error message stating ‘Agent skill id is not set.’.
 
@@ -73,7 +73,7 @@ In this final Getting Started tutorial, you add an Agent Escalation dialog to co
 
 ### Step 17: Test the escalation
 
-1. Open a new browser tab, and navigate to the [Messaging demo page](https://vx-lp.github.io/v2/lpwm/). Enter your account number, and click **Update**.
+1. Open a new browser tab, and navigate to the [Messaging demo page](https://vx-lp.github.io/v2/lpwm/). Enter your account number and username, and click **Update**.
 2. Click into the Messaging call to action, and wake your bot with a "hi" or "hello."
 3. From here, type in one of the patterns you used when creating the **Escalation** dialog.
 4. If successful, you now see the updated transfer message from the Agent Escalation interaction. You also hear a phone ring from your Conversational Cloud browser tab.
