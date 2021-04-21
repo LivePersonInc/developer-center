@@ -65,6 +65,30 @@ You can't change the threshold when using intents (although you can do [this](kn
 4. Click **Save**.
 5. Train the domain so that the addition is reflected in a new model version.
 
+### Generate training phrases
+
+If your domain uses the LivePerson engine or a third-party engine for NLU, Intent Builder includes a feature to provide you with assistance when adding meaningful training phrases to an intent. Essentially, you provide a single training phrase as the input, and the system automatically generates phrases that are similar in meaning. The suggestions are based on actual consumer utterances from your Production account.
+
+Generating training phrases is useful when: 
+
+* You’re building out a LivePerson or third-party NLU domain that you’ve created from scratch.
+* You’ve [converted a LivePerson (Legacy) NLU domain to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson), and now you need to increase the number of training phrases to meet the minimum requirements.
+
+**To generate training phrases**
+
+1. Open the domain.
+2. Select the intent.
+3. Beside an existing training phrase (you’ll need to add at least one), click .
+
+
+
+4. Review the generated phrases, and select the ones you want to add to the domain. You might also want to refine the spelling or punctuation. The phrases are based on actual consumer utterances, so they might contain misspellings or poor grammar.
+
+
+
+5. Click **Add**.
+6. Back on the Intents page, click **Save** to save the change.
+
 ### Delete an intent
 
 Deleting an intent is a non-recoverable action, so be certain about doing so before taking this action.
