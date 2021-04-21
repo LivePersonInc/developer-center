@@ -664,19 +664,24 @@ Now test a conversation that doesn’t trigger the complaint routing.
     <img class="fancyimage" width="300" src="img/convorchestrator/co_dr_testpolicy3.png">
 
 ### Using Conversation Orchestrator outside of Conversational Cloud
-This section of the documentation assumes that you are already familiar with linking third-party bots to Conversation Cloud. If not we strongly suggest that you read the documentation that's [here](third-party-bots-getting-started.html). 
+This section of the documentation assumes that you are already familiar with linking third-party bots to Conversation Cloud. If you aren't, we strongly suggest that you read the documentation [here](third-party-bots-getting-started.html). 
 
 Once your third-party bot is ready, you can [set up routing policies](conversation-orchestrator-dynamic-routing-creating-and-managing-policies.html) on Dynamic Routing and leverage the [Recommendations API](conversation-orchestrator-recommendation-api-overview.html) to receive routing recommendations. You need to handle transfers appropriately within your third-party bot in the appropriate channel. Third-party bots can use the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to read or write contextual information that can be leveraged for dynamic routing or even bot-to-bot communication.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_co_outside_cc.png">
 
 {: .important}
-Before you start, please make sure you have enabled the Conversation Context Service.
+Before you start, please make sure you have enabled the Conversation Context Service
 and the Recommendations API. Information on how to do this is provided earlier on in this topic.
 
-#### Example using Recommendation API from Google DialogFlow
+#### Example using the Recommendation API from Google DialogFlow
 
-##### Get the conversation ID
+High-level flow:
+1. Get the conversation ID.
+2. Set the routing variable in the Conversation Context Service.
+3. Call the Recommendation API with the conversation ID.
+
+##### Step 1 - Get the conversation ID
 
 The conversation ID is required for using the Recommendation APIs. This ID is used by the policy to retrieve conversation and Conversation Context Service parameters.
 
@@ -696,7 +701,7 @@ request.body.session.substring(request.body.session.lastIndexOf("/") + 1);
 
 For debugging, you can see the logs by clicking the link **View execution logs in the Firebase console** inside the Dialogflow Fulfillment page.
 
-##### Call the Conversation Context Service APIs
+##### Step 2 - Call the Conversation Context Service APIs
 
 Click `package.json` to include your favorite Node.js HTTP library. In the example, we include the axios HTTP library.
 
@@ -718,9 +723,9 @@ axios.patch(
 );
 ```
 
-##### Call the Recommendation API
+##### Step 3 - Call the Recommendation API
 
-Now that you have the conversation id, use it to call the Recommendation API as follows:
+Now that you have the conversation ID, use it to call the Recommendation API as follows:
 
 ```javascript
 const askMavenUrl = 'https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions';
