@@ -52,27 +52,27 @@ If you’re setting up a knowledge base that associates intents with articles, t
 ### Step 2: Configure Agent Assist
 Configuration of Agent Assist involves the following:
 
-1. Add the knowledge bases to Agent Assist.
+1. Verify that the knowledge bases you created have been automatically discovered and enabled.
 2. Assign one or more skills to the knowledge bases.
 3. Enable recommendations.
 4. Specify the maximum number of recommendations that Agent Assist will make. By default, this is 3.
 
-#### Add the knowledge bases to Agent Assist
+#### Verify the knowledge bases have been discovered and enabled
+By default, once you create a knowledge base in the Knowledge Base application, it is automatically discovered by Conversation Orchestrator and enabled for use.
 
-1. In the Knowledge Base application, click <img style="width:30px" src="img/agentassist/icon_apikey.png"> (API Key icon) in the upper-right corner.
-2. On the **User Settings** page, copy your API access key.
+<img width="800" src="img/agentassist/verify_kbs.png">
 
-    <img width="800" src="img/agentassist/api_key.png">
+A knowledge base is enabled by default as a convenience, saving you this step. However, its articles will not be recommended in conversations until you also assign one or more skills to the knowledge base within Agent Assist’s configuration. Both conditions (enabled, assigned at least one skill) must be true for it to be recommended in conversations.
 
-3. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
-4. On the left navigation bar, under **Agent Assist**, click **Knowledge Bases**.
-5. Scroll down to the **Add KB** section, paste in your API access key, and click **Save**.
+**To verify your knowledge bases have been automatically discovered and enabled**
 
-    <img width="800" src="img/agentassist/add_kb.png">
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+2. On the left navigation bar, under **Agent Assist**, click **Knowledge Bases**.
+3. Scroll down to the **Configure article recommendations** section, which lists all discovered knowledge bases.
+4. Verify that the knowledge bases are listed and enabled. At this point, you should also verify that the desired articles in the knowledge base are active. The knowledge base should have at least one active article.
 
-This adds to Agent Assist’s configuration all the knowledge bases that you have access to, for the account that you're currently logged into. This includes all knowledge bases that you've created (both public and private) and other public knowledge bases within your organization.
-
-You should now see the knowledge bases listed under **Configure article recommendations**. They are enabled by default. However, their articles will not be recommended in conversations until you assign one or more skills to each knowledge base.
+{: .important}
+If you subsequently delete a knowledge base in the Knowledge Base application, the next time you access this page, the list is updated automatically.
 
 #### Assign skills to the knowledge bases
 After adding the knowledge bases, assign at least one skill to each of the knowledge bases. Once this is done, their articles can be recommended in conversations that are currently routed to the same skills. In this manner, you can control and configure which knowledge bases are candidates for recommendation to agents on a skill-by-skill basis. 
