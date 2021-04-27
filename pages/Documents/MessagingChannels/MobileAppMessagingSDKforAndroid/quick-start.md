@@ -37,14 +37,20 @@ You can install the Mobile App Messaging SDK using a couple of different methods
 
 You can use Gradle, an automation tool, to scale your projects effortlessly. 
 
-1. In your project, locate and double-click **Gradle Scripts > build.gradle (Module: app)**.
+1. Add `mavenCentral()` to the project level gradle file:
+```java
+repositories {
+    mavenCentral()
+}
+```
+2. In your project, locate and double-click **Gradle Scripts > build.gradle (Module: app)**.
    
    ![Preview](https://raw.githubusercontent.com/LivePersonInc/developers-community/d8d203c35347a47d337033953670af34cc17afae/pages/documents/consumer%20experience/android-sdk/gradleapppic.png)  
 
-2. In the **dependencies** section, add:
+3. In the **dependencies** section, add:
    ```java
    dependencies {
-       implementation  "com.liveperson.android:lp_messaging_sdk:4.7.1"
+       implementation  "com.liveperson.android:lp_messaging_sdk:4.8.1"
    }
    ```
 
@@ -78,13 +84,15 @@ You can use Gradle, an automation tool, to scale your projects effortlessly.
        androidTestImplementation "com.android.support.test:runner:1.0.1"
        androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.1"
        // LivePerson SDK
-       implementation  "com.liveperson.android:lp_messaging_sdk:4.7.1"
+       implementation  "com.liveperson.android:lp_messaging_sdk:4.8.1"
    }
    ```
 
 #### Option 2: Manually copying the SDK files to your project
 
-1. [Download](https://bintray.com/liveperson-mobile/maven) the latest SDK libraries.
+1. Download the latest SDK libraries. 
+Download 4.7.1 and below, 5.0.0 ~ 5.5.1 [here](https://bintray.com/liveperson-mobile/maven), 
+Download 4.8.1 and above [here](https://search.maven.org/search?q=com.liveperson.android)
 2. You can get a sample app that demonstrates how to use the SDK [here](https://github.com/LP-Messaging/Android-Messaging-SDK).
 3. In your Android Studio project, go to **File->New->New Module->Import .JAR/>AAR Package** and select .aars to add.
 4. Navigate to the folder where you extracted the SDK libraries, and add all libraries one by one.
