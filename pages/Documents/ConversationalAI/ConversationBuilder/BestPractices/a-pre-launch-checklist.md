@@ -32,6 +32,11 @@ Does the bot answer the main intents with an acceptable level of accuracy? | The
 | Does the bot handle the first consumer message of a messaging conversation gracefully? | Whatever the initial consumer utterance might be (greeting or otherwise), the bot should be able to catch and respond in a way that does not result in a fallback/failure. |
 | Does the bot validate consumer input and provide appropriate error handling? | When asking for zip code, email address, phone or account numbers, or other particular content, the bot should perform some level of validation to ensure the quality of the response and prevent issues upon submission. If encountering a malformed input, the consumer should be alerted and potentially reminded of the correct input format. |
 | Does the bot have "graceful" error handling upon an API failure? | If an [API call fails](conversation-builder-integrations-api-integrations.html#handling-api-responses), there should be some human, readable error message that allows the consumer to try again (if transactional) or perhaps to rephrase their query (for FAQs). |
+
+### Recommended
+
+| Use case | Description | 
+| --- | --- |
 | Does the bot provide examples of how to interact? | Showing the consumer examples like, "Ask me about flight status" or "Enter your email address, e.g., jon@smith.com" will encourage interaction and minimize error conditions. | 
 | Does the bot pause between consecutive messages? | LivePerson recommends a 2500 ms pause between consecutive bot messages for a "short" pause, and a 5000 ms pause for a "long" pause. The latter should be used when [context switching](conversation-builder-dialogs-dialog-basics.html#context-switching) or when the consumer needs time to process the previous bot message. |
 | Does the bot reprompt or ask clarifying questions upon failure? | Rather than just presenting the consumer with a failure message, "Sorry, I didn't understand," it is better to reprompt with further instructions to help them move along successfully, or provide a menu of options, examples of FAQs, etc. | 
