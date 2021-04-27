@@ -78,7 +78,7 @@ Generating training phrases is useful when:
 
 1. Open the domain.
 2. Select the intent.
-3. Beside an existing training phrase (you’ll need to add at least one), click .
+3. Beside an existing training phrase (you’ll need to add at least one), click <img style="width:25px" src="img/ConvoBuilder/icon_knn.png">.
 
 
 
