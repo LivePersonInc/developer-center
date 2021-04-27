@@ -899,6 +899,7 @@
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Scroll Behavior Configuration
       - subpagename: Logging
+      - subpagename: Voice and Video
       - subpagename: Proactive and IVR Deflection to App Messaging
     - pagename: SDK APIs
       subpages:
