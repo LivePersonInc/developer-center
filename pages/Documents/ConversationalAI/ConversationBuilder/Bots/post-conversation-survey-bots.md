@@ -59,6 +59,10 @@ Before you can begin building survey bots, the feature must be enabled in Conver
 
 #### Configure account-level, survey settings
 
+These settings affect all survey bots in the account.
+
+**To configure account-level, survey settings**
+
 1. From the Conversational AI dashboard, click **Bot Accounts** to access the application.
 2. Select the organization.
 3. On the **Account Details** tab, specify the following:
