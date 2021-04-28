@@ -58,7 +58,6 @@ Both outcomes are tracked and reported on as part of the Analytics Builder, so y
 Before you can begin building survey bots, the feature must be enabled in Conversation Builder by LivePerson. Please contact your LivePerson account representative to enable this feature.
 
 #### Configure account-level, survey settings
-
 These settings affect all survey bots in the account.
 
 **To configure account-level, survey settings**
