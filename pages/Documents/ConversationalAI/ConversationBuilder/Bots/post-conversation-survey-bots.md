@@ -54,7 +54,17 @@ Both outcomes are tracked and reported on as part of the Analytics Builder, so y
 
 ### Prerequisite steps
 
+#### Enable the feature
 Before you can begin building survey bots, the feature must be enabled in Conversation Builder by LivePerson. Please contact your LivePerson account representative to enable this feature.
+
+#### Configure account-level, survey settings
+
+1. From the Conversational AI dashboard, click **Bot Accounts** to access the application.
+2. Select the organization.
+3. On the **Account Details** tab, specify the following:
+
+    * **Survey Request Interval**: This setting determines how often a consumer is sent a survey when one is triggered. When configuring this, consider how frequently you want a response from the same consumer, as sending surveys too often can create a poor experience. If this setting is disabled, the consumer always receives a survey when one is triggered. You can enable it to control the frequency; in this case, enter the number of days that must elapse before sending another survey to the same consumer. The default value is 7 days. 
+    * **Survey Sampling**: If you have high traffic, you don’t need to send surveys to all your consumers; you can send them to a subset. That’s what this setting is designed for. If it's disabled, all consumers are sent surveys when the surveys are triggered. You can enable it to send surveys to a percentage of randomly sampled consumers. Use the slider to specify the percentage. The default value is 50%.
 
 ### Creating the survey bot
 
