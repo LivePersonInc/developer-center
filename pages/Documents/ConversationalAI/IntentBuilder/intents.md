@@ -77,6 +77,7 @@ Generating training phrases is useful when:
 Note:
 * To have access to this new tool, Intent Analyzer must be [enabled for a domain](intent-analyzer-overview.html#enable-intent-analyzer-for-intents) (any domain) in your account, as the tool makes use of the data that it captures.
 * If you’ve enabled Intent Analyzer recently, expect the tool’s results to improve over time as more data is captured.
+* If you're a new customer, expect no results until suggestions can be offered based on utterances by your users. And here again, expect the tool's results to improve over time.
 
 **To generate training phrases**
 
