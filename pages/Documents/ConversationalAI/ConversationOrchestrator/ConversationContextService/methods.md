@@ -54,7 +54,7 @@ Request payload example:<br>
 Example:
 ```bash
 curl -X POST 
-"http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "{\"name\":\"myNamespace\"}"
+"http://{domain}/v1/account/{accountId}" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "{\"name\":\"myNamespace\"}"
 ```
 
 Response payload example:<br>
@@ -72,7 +72,7 @@ N/A
 
 ```bash
 curl -X GET 
-"http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+"http://{domain}/v1/account/{accountId}" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -95,7 +95,7 @@ N/A
 
 ```bash
 curl -X DELETE 
-"http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+"http://{domain}/v1/account/{accountId}/myNamespace" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -117,7 +117,7 @@ Request payload example:<br>
 
 Example:
 ```bash
-curl -X PATCH "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/properties" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "{\"myProperty1\":\"myValue1\",\"myProperty2\":2,\"myProperty3\":{\"name\":\"myValue3\"}}"
+curl -X PATCH "http://{domain}/v1/account/{accountId}/myNamespace/properties" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "{\"myProperty1\":\"myValue1\",\"myProperty2\":2,\"myProperty3\":{\"name\":\"myValue3\"}}"
 ```
 
 Response payload example:<br>
@@ -135,7 +135,7 @@ Request payload example:<br>
 
 Example:
 ```bash
-curl -X PUT "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/properties/myProperty4" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "\"value4\""
+curl -X PUT "http://{domain}/v1/account/{accountId}/myNamespace/properties/myProperty4" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "\"value4\""
 ```
 
 Response payload example:<br>
@@ -153,7 +153,7 @@ Request payload example:<br>
 
 Example:
 ```bash
-curl -X PATCH "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/mySessionId/properties" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "{\"myProperty1\":[\"value1\",\"value2\",\"value3\"]}"
+curl -X PATCH "http://{domain}/v1/account/{accountId}/myNamespace/mySessionId/properties" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "{\"myProperty1\":[\"value1\",\"value2\",\"value3\"]}"
 ```
 
 Response payload example:<br>
@@ -171,7 +171,7 @@ Request payload example:<br>
 
 Example:
 ```bash
-curl -X PUT "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/mySessionId/properties/myProperty2" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "{\"name\":\"value2\",\"items\":[\"A\",\"B\",\"C\"]}"
+curl -X PUT "http://{domain}/v1/account/{accountId}/myNamespace/mySessionId/properties/myProperty2" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==" -H  "Content-Type: application/json" -d "{\"name\":\"value2\",\"items\":[\"A\",\"B\",\"C\"]}"
 ```
 
 Response payload example:<br>
@@ -191,7 +191,7 @@ N/A
 
 Example:
 ```bash
-curl -X GET "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/properties" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X GET "http://{domain}/v1/account/{accountId}/myNamespace/properties" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -217,7 +217,7 @@ N/A
 
 Example:
 ```bash
-curl -X GET "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/properties/myProperty1" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X GET "http://{domain}/v1/account/{accountId}/myNamespace/properties/myProperty1" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -235,7 +235,7 @@ N/A
 
 Example:
 ```bash
-curl -X GET "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/mySessionId/properties" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X GET "http://{domain}/v1/account/{accountId}/myNamespace/mySessionId/properties" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -261,7 +261,7 @@ N/A
 
 Example:
 ```bash
-curl -X GET "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/mySessionId/properties/myProperty1" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X GET "http://{domain}/v1/account/{accountId}/myNamespace/mySessionId/properties/myProperty1" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -289,7 +289,7 @@ N/A
 
 Example:
 ```bash
-curl -X DELETE "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X DELETE "http://{domain}/v1/account/{accountId}/myNamespace" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -317,7 +317,7 @@ N/A
 
 Example:
 ```bash
-curl -X DELETE "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/namespace/myNamespace/session/mySessionId" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X DELETE "http://{domain}/v1/account/{accountId}/namespace/myNamespace/session/mySessionId" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -336,7 +336,7 @@ N/A
 
 Example:
 ```bash
-curl -X DELETE "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/mySessionId/properties" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X DELETE "http://{domain}/v1/account/{accountId}/myNamespace/mySessionId/properties" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -354,7 +354,7 @@ N/A
 
 Example:
 ```bash
-curl -X DELETE "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/properties/myProperty1" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X DELETE "http://{domain}/v1/account/{accountId}/myNamespace/properties/myProperty1" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -372,7 +372,7 @@ N/A
 
 Example:
 ```bash
-curl -X DELETE "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/myNamespace/mySessionId/properties/myProperty1" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X DELETE "http://{domain}/v1/account/{accountId}/myNamespace/mySessionId/properties/myProperty1" -H  "accept: */*" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -406,7 +406,7 @@ N/A
 
 Example:
 ```bash
-curl -X GET "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/ns1/session-ids?page=0&perPage=100" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X GET "http://{domain}/v1/account/{accountId}/ns1/session-ids?page=0&perPage=100" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -429,7 +429,7 @@ N/A
 
 Example:
 ```bash
-curl -X GET "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/ns1/session-properties?page=0&perPage=100" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X GET "http://{domain}/v1/account/{accountId}/ns1/session-properties?page=0&perPage=100" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -461,7 +461,7 @@ Request payload example:<br>
 Example:
 ```bash
 curl --request POST \
---url http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475?ttlSecond=100 \
+--url http://{domain}/v1/account/{accountId}?ttlSecond=100 \
 --header 'content-type: application/json' \
 --header 'maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==' \
 --data '{
@@ -484,7 +484,7 @@ Request payload example:<br>
 
 Example:
 ```bash
-curl -X POST 'http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/namespace/myNamespace/session?ttlSecond=100' -H  "accept: */*" -H  'maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==' -H  'Content-Type: application/json' -d '{"sessionId":"mySessionId"}'
+curl -X POST 'http://{domain}/v1/account/{accountId}/namespace/myNamespace/session?ttlSecond=100' -H  "accept: */*" -H  'maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw==' -H  'Content-Type: application/json' -d '{"sessionId":"mySessionId"}'
 ```
 
 Response payload example:<br>
@@ -502,7 +502,7 @@ N/A
 
 Example:
 ```bash
-curl -X GET "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X GET "http://{domain}/v1/account/{accountId}" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
@@ -529,7 +529,7 @@ N/A
 
 Example:
 ```bash
-curl -X GET "http://lp-mavencontext-app-qa.dev.lprnd.net/v1/account/le63071475/namespace/myNamespace/session" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
+curl -X GET "http://{domain}/v1/account/{accountId}/namespace/myNamespace/session" -H  "accept: application/json" -H  "maven-api-key: ABCD12BigSbWF2ZW4tcm91dGluZw=="
 ```
 
 Response payload example:<br>
