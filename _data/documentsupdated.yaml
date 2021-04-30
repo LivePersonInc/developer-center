@@ -319,6 +319,7 @@
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
+      - pagename: Account Details
       - pagename: Permissions
       - pagename: Credentials
   - documentname: Third-Party Bots
