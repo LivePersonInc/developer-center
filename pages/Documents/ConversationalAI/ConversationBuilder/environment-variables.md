@@ -85,17 +85,17 @@ For example:
 switch(intent) {
   case "billing":
     transferMessage = "Hold on while I transfer you to someone who can help with your billing";
-    skillId = botcontext.getEnvVariable('billing');
+    skillId = botContext.getEnvVariable('billing');
     skillName = intent;
     break;
   case "account":
     transferMessage = "Hold on while I transfer you to someone who can help with your account";
-    skillId = botcontext.getEnvVariable('account');
+    skillId = botContext.getEnvVariable('account');
     skillName = intent;
     break;
   case "help":
     transferMessage = "Hold on while I transfer you to someone who can help with your issue";
-    skillId = botcontext.getEnvVariable('help');
+    skillId = botContext.getEnvVariable('help');
     skillName = intent;
     break;
 }

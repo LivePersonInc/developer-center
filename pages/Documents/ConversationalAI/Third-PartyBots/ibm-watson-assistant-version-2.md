@@ -595,7 +595,9 @@ Figure 3.8 Watson Quick Replies StructuredContent example.
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the action response of Watson. There are 4 different types of Time to Response states: "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only with the "CUSTOM" state can you set a value. The unit of the value is seconds. The value of the other states are defined in the Conversational Cloud Agent Workspace.
+Change the TTR of a conversation based on the action response of Watson. There are 3 different types of Time to Response states: "URGENT", "NORMAL", "PRIORITIZED".
+
+The time values of these are defined in the Agent Workspace.
 
 ##### Figure 4.1 Watson JSON response for changing TTR
 
@@ -603,7 +605,7 @@ Change the TTR of a conversation based on the action response of Watson. There a
 {
   "output": {
     "text": {
-      "values": ["Sure thing! Change the TTR to 50 minutes."],
+      "values": ["Sure thing! Change the TTR to URGENT."],
       "selection_policy": "sequential"
     }
   },
@@ -612,8 +614,7 @@ Change the TTR of a conversation based on the action response of Watson. There a
       "name": "CHANGE_TTR",
       "type": "CLIENT",
       "parameters": {
-        "ttrType": "CUSTOM",
-        "value": 3000
+        "ttrType": "URGENT"
       },
       "result_variable": "none"
     }
@@ -632,11 +633,17 @@ For escalations, the naming convention for the skills you escalate should use a 
 
 </div>
 
-Transfers and escalations are straightforward in both chat and messaging. At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the target skill's name is searched in the stored list and its ID is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
+#### Transfer To Skill
+
+This option transfers the conversation to the next available agent using the provided skill. 
+
+At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the target skill's name is searched inthe stored list and its ID is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
+
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/image_6.png">
 
-In the _Then respond with:_ JSON editor block, use the following:
+Figure 4.1
 
 ```json
 {
@@ -658,7 +665,44 @@ In the _Then respond with:_ JSON editor block, use the following:
 }
 ```
 
-in the example above, you can see the `actions` array. Inside the array, we defien an escalation skill name in the `skill` parameter. This will be sent in an object to the chat/messaging connector, which will grab the `skillId` from a previously stored array based on the name, and escalate.
+In the example above, you can see the `actions` array. Inside the array, we defien an escalation skill name in the  `skill` parameter. This will be sent in an object to the chat/messaging connector, which will grab the `skillId` from a previously stored array based on the name, and escalate.
+
+#### Transfer to Agent
+
+{: .important}
+This feature is depending on [permissions](contact-center-management-messaging-operations-transfer-to-agent.html)
+
+This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
+
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
+‘agentId **(Case sensitive)** with ‘value’ of agentId in Conversational Cloud.
+
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/image_7.png">
+
+Figure 4.2
+
+In the _Then respond with:_ JSON editor block, use the following:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": ["Escalating to an agent"]
+    }
+  },
+  "actions": [
+    {
+      "name": "TRANSFER",
+      "type": "client",
+      "parameters": {
+        "skill": "human_skill",
+        "agentId": "4129463410"
+      },
+      "result_variable": "none"
+    }
+  ]
+}
+```
 
 ### Close Chat/Conversation
 
@@ -966,6 +1010,11 @@ It is also possible to send a private text message with an action (e.g. Transfer
   ]
 }
 ```
+### Watson Discovery
+
+Discovery Search is a tool that uses the knowledge of websites, documents and other data, to generate an answer the Watson Bot is able to send within a conversation. If enabled, the bot searches for matching parts of the provided information on specified intents or in case no machtching intent was found.
+
+To use Watson Discovery the Watson Assistant Bot needs to have a s[search skill](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-search-skill) linked to a [Watson Discovery Instance](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-watson-discovery-instance)
 
 ### Limitations
 

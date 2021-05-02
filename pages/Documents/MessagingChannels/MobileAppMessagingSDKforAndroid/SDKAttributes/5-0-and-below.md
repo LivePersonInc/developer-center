@@ -734,7 +734,7 @@ Color code for the conversation resolved message and separator.
 
 
 #### lp_hide_ui_until_auth
-Define if SDK shows conversation until pass authentication check. (Removed from v4.6.0)
+Define if SDK shows conversation until pass authentication check.
 
 * **Type:** bool
 * **Default value:** true

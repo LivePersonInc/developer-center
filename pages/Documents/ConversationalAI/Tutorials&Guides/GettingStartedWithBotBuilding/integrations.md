@@ -41,7 +41,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a â
 
 6. Still in the Text question, add a custom rule that checks whether the order number is valid: 
 
-    Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Order number". Then click **+ Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match the order number format (a letter followed by six digits): `^\w\d{6}$`. 
+    Select the **Next Action** dropdown, and click **+ Custom Rule** within it. In the Add Next Action Rule window, name the rule "Order number". Then click **+ Add Condition**. For the condition, select "Regular Expression" from the list of match types, and add the following regular expression (regex) to match the order number format (a letter followed by six digits): `^\w\d{6}$`. 
 
     {: .important}
     This mock API will successfully return order data for accounts A001001, A001010 and A001002. 
@@ -77,7 +77,7 @@ The Cross-vertical domain that you created in the previous tutorial contains a â
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/integration_settings.png">
 
-3. Click **Save**, and navigate back to the Order Status dialog.
+3. Click **Save**.
 
 ### Step 10: Use the integration in a dialog
 

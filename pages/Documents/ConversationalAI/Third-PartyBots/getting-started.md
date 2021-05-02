@@ -184,7 +184,7 @@ Follow the steps below to add a new bot.
 
 ##### Settings for Welcome Messages:
 
-The Bot Connector system is designed to respond to incoming messaging by the consumer, once the bot is engaged in the conversation. Enabling the Welcome Messages setting allows brands to compose an initial message that the bot can send out that is not in direct response to the consumers messages but instead opens the conversation. This allows for the bot to connect to a conversation and send out an initial message without waiting for the consumer to send a message after the bot first joins the conversation.
+By enabling the Welcome Messages option in our Wizard,  Brands will receive a welcome message by the bot immediately after transfer. User will be greeted by the bot. With this feature. It means that the bot will be enabled to greet customers directly after the transfer action.
 
 ##### Settings for Combine Messages:
 

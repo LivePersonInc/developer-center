@@ -14,7 +14,7 @@ API Integrations allow Conversation Builder to perform some action or access the
 For practice at using an API integration, try the [Integrations tutorial](tutorials-guides-getting-started-with-bot-building-integrations.html). (You’ll need to complete the Dialogs & Patterns tutorial and the Intents tutorial first, as the tutorials build on each other.)
 
 {: .important}
-If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before adding an API integration. For details, see [here](conversation-builder-networking-security.html).
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before adding an API integration. For details, see [here](conversation-builder-networking-security.html).<br><br>An API integration call times out in 20 seconds; within that time, the integration attempts 3 retries. This isn’t configurable.
 
 ### Add an API integration
 

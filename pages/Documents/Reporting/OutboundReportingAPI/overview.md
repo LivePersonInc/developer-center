@@ -61,12 +61,13 @@ Outbound Reporting API provides the following data fields. This table explains t
 - Proactive campaign id data field is not currently available in transaction API responses as of now. It will be added soon.
 - Handoff Id, Handoff name data fields are not currently available in the Outbound Reporting API.
 - First message and override message data fields are not currently available in the Outbound Reporting API.
-- TotaI summary of eligibility, sent, delivered combined for all channels / skills per IVR outbound number is not currently available in the Outbound Reporting API.
-- TotaI summary of eligibility, sent, delivered combined for all channels / skills per account is not currently available in the Outbound Reporting API.
+- Total summary of eligibility, sent, delivered combined for all channels / skills per IVR outbound number is not currently available in the Outbound Reporting API.
+- Total summary of eligibility, sent, delivered combined for all channels / skills per account is not currently available in the Outbound Reporting API.
 - The capability of generating reports of all the consumers who previously opt out from Proactive Messaging to receive any future messages is not available in the Outbound Reporting API.
 - Maximum time duration for a reporting api request cannot exceed 24 hours.
 - The data is persisted in the system for a period of 13 months as per the company retention policy period.
 - In-App message channel events are currently not available in the Outbound Reporting API.
+- The Reporting API data is upto 10 min delayed from the time the messaging events are generated.
 
 
 ### API Specifications
@@ -81,7 +82,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Method | URI  |
 | :--- | :--- |
-| GET | https://{domain}/account/{accountId}/app/{app}/analytics/
+| GET | https://{domain}/api/account/{accountId}/app/{app}/analytics/
 
 **Path Parameters**
 
@@ -152,7 +153,7 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
 
 | Method | URI  |
 | :--- | :--- |
-| POST | https://{domain}/account/{accountId}/app/{app}/analytics/
+| POST | https://{domain}/api/account/{accountId}/app/{app}/analytics/
 
 **Path Parameters**
 
@@ -243,7 +244,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 
 | Method | URI  |
 | :--- | :--- |
-| GET | https://{domain}/account/{accountId}/app/prmsg/campaigns/{proactiveCampaignId}/
+| GET | https://{domain}/api/account/{accountId}/app/prmsg/campaigns/{proactiveCampaignId}/
 
 **Path Parameters**
 
@@ -295,7 +296,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
 
 | Method | URI  |
 | :--- | :--- |
-| GET | https://{domain}​/account​/{accountId}​/app​/prmsg​/campaigns​/{proactiveCampaignId}​/analytics​/
+| GET | https://{domain}​/api/account​/{accountId}​/app​/prmsg​/campaigns​/{proactiveCampaignId}​/analytics​/
 
 **Path Parameters**
 
@@ -363,7 +364,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
 
 | Method | URI  |
 | :--- | :--- |
-| GET | https://{domain}/account/{accountId}/app/{app}/transactions/
+| GET | https://{domain}/api/account/{accountId}/app/{app}/transactions/
 
 **Path Parameters**
 
@@ -542,3 +543,6 @@ The users can pull the data for a given 24 hour time interval date range from to
 - For Analytics API, Pagination is not needed.
 - For Proactive Campaign API, Pagination is not supported yet.
 - For Proactive Campaign Analytics API, Pagination is not needed.
+
+<strong>11. Is Outbound Reporting API real time? What is the delay in reporting data from the time Proactive Messaging campaigns or C2M deflections are created ?</strong>
+- Data in outbound reporting api can be delayed by upto 10 min. e.g. Proactive campaign created now will take upto 10 min to be reflected in reporting api. Similarly other messaging data like message delivered, opted out, conversation created etc will also take up to 10 min from the time the event occured.

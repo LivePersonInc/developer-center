@@ -13,31 +13,31 @@ permalink: conversation-orchestrator-recommendation-api-overview.html
 indicator: messaging
 ---
 
-### What is the Recommendation API
+### What is the Recommendations API?
 
-The Recommendation API is a REST API that allows you and your bots, web sites, and apps to call Conversation Orchestrator capabilities programmatically. You can use the API to ask Conversation Orchestrator for the next best actions (route to skill, KB article, etc) for a concierge bot/app.
+The Recommendation API is a REST API that allows you to ask Conversation Orchestrator for the next best actions (route to skill, send a response, etc.) for your bot/app. Accessing the API can be done via a [JavaScript method](conversation-builder-scripting-functions-askmaven.html) from within a Conversation Builder bot or via the REST API for external automations and apps.
 
-<img class="fancyimage" width="750" src="img/maven/askmaven.png">
+### When to use the Recommendations API
+A typical use case for using the Recommendation API is to get a routing decision to transfer to a skill from a bot or LOB app:
 
-### Use Cases
+1. A brand’s concierge bot (for example, a bot built in Conversation Builder) handles branded greetings, dialogs, and intents.
+2. It then calls the Recommendation API, which evaluates all the policies set up in Dynamic Routing and returns the next best action. 
 
-A typical use case for using Recommendation APIs is to get a routing decision to transfer to a skill from a Bot or LOB app. 
+    * If you're using the Conversation Orchestrator bot template, the ask maven call is already pre-configured for you, and you don’t have to do this.
+    * If you're using a different Conversation Builder bot, you can use the [askMaven JavaScript method](conversation-builder-scripting-functions-askmaven.html). 
+    * If you're using a third-party bot on any external platform (for example, Google Dialogflow), use the REST API.
+  
+    Please see Dynamic Routing's [Getting Started](conversation-orchestrator-dynamic-routing-getting-started.html) topic for more information.
 
-1. A brands concierge bot (for example a bot built in Conversation Builder or Google Dialogflow) handles branded greetings, dialogs, and intents. 
-2. It then calls the Recommendation API which evaluates all the policies setup in Dynamic Routing and then returns the next best best action. 
-3. The concierge bot then uses the action (for example route to a skill), to transfer the conversation to that skill in Conversational Cloud. 
-4. This is often used in conjunction with the Conversation Context Service to pass custom attributes to use in a policy (for example intents). To learn more about how to use the Conversation Context Service [please see documentation](maven-context-warehouse-context-session-store.html).
+3. The concierge bot then uses the action (for example, route to a skill) to transfer the conversation to that skill in Conversational Cloud.
 
-<img class="fancyimage" style="width:700px" src="img/maven/askmaven2.png">
+    This is often used in conjunction with the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to pass custom attributes to use in a policy (for example, intents).
 
-### Developer Key
+### Getting started
 
-To use Recommendation APIs you will need to create and use an API key. To get your unique key:
+1. Log in to Conversation Orchestrator with your Conversational Cloud credentials, and navigate to **Developer Key**.  
+2. Copy and paste the key provided, and use it in your API headers. 
 
-4. Login to Conversation Orchestrator with your Conversational Cloud credentials and then navigate to **Developer Key**.
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_ccs_developerkey2.png">
 
-5. Copy and paste the key you see in the experience and use it in your API headers. 
-
-6. To generate a new key, click on the **Regenerate Key** button. Please note that this will invalidate the previous key. The key is shared for all Conversation Orchestrator APIs and therefore you will have to use the new key wherever the APIs are being called.  
-
-<img class="fancyimage" width="750" src="img/maven/devkey.png">
+    To generate a new key, click the **Regenerate Key** button. This will invalidate the previous key. The key is shared for all Conversation Orchestrator APIs; therefore, you must use the new key wherever the APIs are being called.
