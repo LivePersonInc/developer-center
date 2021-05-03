@@ -181,18 +181,18 @@ Check for your bot credentials.
 #### Description
 Testing connection with DialogFlow CX failed.
 #### Reasons
-Mostly credential issues.
+This error happens when credentials are not provided correctly.
 #### Solutions
-Check for your bot credentials.
+Verify the credentials provided for the bot.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.dialogflowcx.parse-message.multiple-actions
 
 #### Description
-Error parsing multiple actions from DialogFlow CX.
+This error happens when there are invalid or unknown multiple actions are received from the vendor.
 #### Reasons
 It was not possible to parse multiple actions from DialogFlow CX
 #### Solutions
-Check the bot response on DialogFlow CX side. 
+Verify the bot response correspond to the standards we provide in our developer's documentation.
 
 ### com.liveperson.bot-connectors-worker.error.aivendor.faas.invoke-lambda
 
