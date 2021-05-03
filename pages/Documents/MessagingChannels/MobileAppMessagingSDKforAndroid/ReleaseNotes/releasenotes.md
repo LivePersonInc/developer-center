@@ -52,7 +52,7 @@ Voice and Video integration allows brand agents to communicate with consumers vi
 </div>
 
 {:.important}
-Voice & Video capabilities are available only on Android SDK 4.8.1 and above. Only enabled for authentication mode: Code flow and JWT flow.
+Voice & Video capabilities are available only on Android SDK 5.6.0 and above. Only enabled for authentication mode: Code flow and JWT flow.
 
 KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-cobrowse-for-messaging.html)
 
