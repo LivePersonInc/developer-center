@@ -31,6 +31,24 @@ This topic contains information on settings and tasks that are common to both [e
 2. Click **Settings** in the upper-left corner.
 3. Modify the settings, and click **Update**.
 
+### Find an article to edit
+
+You can quickly search for and find an article that you want to edit.
+
+**To find an article to edit**
+
+1. Open the knowledge base.
+2. In the Search box at the top of the page, enter a word or phrase that’s contained in the article's content (title, summary, detail).
+
+    {: .important}
+    If you enter a string and press Enter, the search is performed against only the title. However, if you enter a string and wait for the list of results to appear, that list of results reflects a search of the string against all article content fields (title, summary, detail).
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findarticle.png">
+
+3. In the list that appears, select the article.
+
+4. Select the article title. This opens the article for editing.
+
 ### Format text in an article
 
 In the Summary and Detail fields of an article in an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), you can use the following subset of HTML tags:
@@ -66,15 +84,22 @@ Note the following:
 
 **To restore an earlier version of an article**
 
-1. Open the knowledge base, and search for the article in question.
+1. Open the knowledge base, and use the Search box at the top of the page to find the article.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article4.png">
 
 2. Click the <img style="width:25px" src="img/ConvoBuilder/icon_restore_article.png"> icon that's displayed on the right.
     
-    The system displays the current version and three, earlier versions of the article’s content. The date shown for each version reflects when it was created. The name shown is the user who created that version of the article.
+    The system displays the current version and the previous version of the article’s content. The date shown for each version reflects when it was created. The name shown is the user who created that version of the article.
     
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article.png">
 
-3. Review the versions, and click the **Restore** link for the version that you want to restore.
+    To display a different, earlier version (the last three are available), click the dropdown arrow beside **Previous Version**, and select the version from the list.
+
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_restore_article2.png">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_restore_article3.png">
+
+3. Review the earlier version. To restore it, click its **Restore** button.
 
     This changes the current version so that it’s now the most recent back-up version, and the back-up version that you selected now becomes the current version of the article.
 

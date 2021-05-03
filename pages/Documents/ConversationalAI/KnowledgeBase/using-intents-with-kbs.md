@@ -50,19 +50,29 @@ After you've added your content and linked it to intents, train the knowledge ba
 
 **To train a knowledge base**
 
-Open the knowledge base, and click **Articles** in the upper-left corner if the page isn't already displayed. Then enter an utterance, and review the results.
+1. Open the knowledge base.
+2. In the Test User Input panel on the right, specify the following:
 
-The following image illustrates a search in an internal knowledge base. Things work similarly for an external knowledge base.
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test1.png">
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_test.png">
+    * **User Text**: Enter the consumer utterance for which you want to find matching articles.
+    * **Search Mode**: Select the type of search to perform. For explanations of each search mode, see *Search modes* farther below in this topic.
+    * **Confidence**: Select the NLU confidence threshold that an article must meet for it to be returned as a result. For more on thresholds, see *Scoring and thresholds* farther below in this topic.
+    * **# of Results**: Select how many results to return.
+    * **Article Status**: Select the status of the artice, either Active, Inactive, or All.
 
-Note in the image that, for testing and learning purposes, by default the Filter settings are set to "Intents" search mode and "Poor" threshold. This means that the algorithm first checks for matches using NLU, with a threshold of Poor. If it doesn’t find any matches, it attempts a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." When this happens, you should add some more training phrases to the intent to improve the results.
+3. Click **Find Articles**.
+4. Review the results under **Matched Results**.
 
-If you don’t want the follow-up text search, click **Add Filter** and change the **Search Mode** to "Intents Only." This performs only the intents search. If you want to perform only the text search, change the **Search Mode** to "Text." For more on search modes, see farther below in this topic.
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test2.png">
 
-If you don't get any results with your search, you can adjust these filters.
+5. You can click on an article title to see the article’s information, and toggle between this and the article’s JSON.
 
-Based on your results, add more training phrases to the intents in the domain if needed.
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test3.png">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test4.png">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test5.png">
+
+6. Based on the results, adjust the training phrases for the intents in the associated domain if needed.
 
 ### Search modes
 
