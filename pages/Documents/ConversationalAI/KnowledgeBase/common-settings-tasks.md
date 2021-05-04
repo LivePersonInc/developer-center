@@ -38,10 +38,10 @@ You can quickly search for and find an article that you want to edit.
 **To find an article to edit**
 
 1. Open the knowledge base.
-2. In the Search box at the top of the page, enter a word or phrase that’s contained in the article's content (title, summary, detail).
+2. In the Search box at the top of the page, enter a word or phrase that’s contained in the article's content (title, summary, detail, tags).
 
     {: .important}
-    If you enter a string and press Enter, the search is performed against only the title. However, if you enter a string and wait for the list of results to appear, that list of results reflects a search of the string against all article content fields (title, summary, detail).
+    If you enter a string and press Enter, the search is performed against only the title. However, if you enter a string and wait for the list of results to appear, that list of results reflects a search of the string against all article content fields (title, summary, detail, tags).
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findarticle.png">
 

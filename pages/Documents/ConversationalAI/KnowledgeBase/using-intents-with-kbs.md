@@ -59,7 +59,7 @@ After you've added your content and linked it to intents, train the knowledge ba
     * **Search Mode**: Select the type of search to perform. For explanations of each search mode, see *Search modes* farther below in this topic.
     * **Confidence**: Select the NLU confidence threshold that an article must meet for it to be returned as a result. For more on thresholds, see *Scoring and thresholds* farther below in this topic.
     * **# of Results**: Select how many results to return.
-    * **Article Status**: Select the status of the artice, either Active, Inactive, or All.
+    * **Article Status**: Select the status of the artice, either Active, Inactive, or All. This option is only available for internal knowledge bases.
 
 3. Click **Find Articles**.
 4. Review the results under **Matched Results**.
