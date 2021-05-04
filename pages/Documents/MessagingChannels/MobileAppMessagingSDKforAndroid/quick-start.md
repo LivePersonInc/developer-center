@@ -92,7 +92,7 @@ repositories {
 
 1. Download the latest SDK libraries. 
 Download 4.7.1 and below, 5.0.0 ~ 5.5.1 [here](https://bintray.com/liveperson-mobile/maven), 
-Download 4.8.1 and above [here](https://search.maven.org/search?q=com.liveperson.android)
+Download 4.8.1 and above, 5.6.0 and above [here](https://search.maven.org/search?q=com.liveperson.android)
 2. You can get a sample app that demonstrates how to use the SDK [here](https://github.com/LP-Messaging/Android-Messaging-SDK).
 3. In your Android Studio project, go to **File->New->New Module->Import .JAR/>AAR Package** and select .aars to add.
 4. Navigate to the folder where you extracted the SDK libraries, and add all libraries one by one.
