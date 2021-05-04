@@ -327,7 +327,11 @@
       - pagename: Bot Status Dashboard
       - pagename: Bot Conversation Errors
       - pagename: Google Dialogflow
-      - pagename: Google Dialogflow Version 2
+      - pagename: Google Dialogflow ES
+        subpages:
+          - subpagename: Introduction
+          - subpagename: Basic Content
+          - subpagename: Advanced Features
       - pagename: Google Dialogflow CX
       - pagename: IBM Watson Assistant
       - pagename: IBM Watson Assistant Version 2

@@ -107,13 +107,13 @@ Please note that your bot setup should always return an intent or an action as a
 
 1. Add a new user in the Conversational Cloud. Choose "Bot" for “User type”. If bot is not available as a user type, contact your LivePerson account manager to enable the feature.
 
-  <img style="width:600px" src="img/dialogflowversion2/image_0.png">
+  <img style="width:600px" src="img/ThirdPartyBots/common-create-bot-user.png">
 
 {:start="2"}
 
 1. Under login method, choose "API key" and generate a new API key for the user
 
-   <img style="width:600px" src="img/dialogflowversion2/image_1.png">
+   <img style="width:600px" src="img/ThirdPartyBots/common-create-api-key.png">
 
 {:start="3"}
 
@@ -123,7 +123,7 @@ Please note that your bot setup should always return an intent or an action as a
 
 1. Find the API key name you created above the in bot user profile
 
-   <img style="width:400px" src="img/dialogflowversion2/image_2.png">
+   <img style="width:400px" src="img/ThirdPartyBots/common-find-api-key.png">
 
 #### Provision a connector
 
