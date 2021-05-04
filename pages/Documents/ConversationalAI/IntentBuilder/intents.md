@@ -11,9 +11,25 @@ indicator: both
 
 ### What's an intent?
 
+An intent is a consumer request for an action or information from a brand. These consumer requests can be grouped under named categories that we call intents. Some examples of common intents are: 
+
+* check my order status - “What is the status of my lawn mower order?” 
+* request product price - “How much does the iPhone 11 cost?”
+* make a payment - “Can I make a payment today for the total amount?”
+* request a refund - “Hey are you able to give me a refund for this flight that  was cancelled?” 
+* reset my password - “I forgot my password and I need to reset it.” 
+
+Note that each intent is framed as a request. This is important, as an intent should always be a type of consumer request or question. Specifying the consumer request makes the intent actionable and potentially automatable. Subjects by themselves are not intents. Examples of subjects that consumers may discuss are product names, service plan names, bills, service and product orders, locations and dates.
+
+#### Intent versus non-intent example
+
+Instead of creating an intent named “my order,” consider instead looking for the  most common consumer request associated with the subject “my order,” i.e., “check my order status.” This intent could include any consumer request asking to  track their order or see whether their order has been processed.
+
+#### Why use intents?
+
 Intents are meant for when you need a more flexible approach to matching than using patterns. With patterns, there must be an *exact* match between the consumer's utterance and a defined expression. This means that alternative expressions (synonyms, phrasings, and formats) are missed.
 
-Intents use a Natural Language Understanding (NLU) engine to match the user's utterance against a set of training phrases or [Knowledge Base](knowledge-base-overview.html) articles. The results are scored based on the level of confidence in the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
+In contrast, intents use a Natural Language Understanding (NLU) engine to match the user's utterance against a set of training phrases or [Knowledge Base](knowledge-base-overview.html) articles. The results are scored based on the level of confidence in the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR.
 
 As an example, you might configure a "billing" intent that has a defined set of training phrases like, "I have a question about my bill," "Can you help me with my bill?" and similar, alternative expressions. The consumer's utterance is evaluated against these phrases, and a score is determined. *If there's a match of GOOD or better*, the intent is understood to be present, it is sent to the bot, and the bot triggers the associated dialog starter.
 
@@ -21,6 +37,8 @@ As an example, you might configure a "billing" intent that has a defined set of 
 For some practice with intents, complete the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).
 
 #### What is the intent score/threshold?
+
+The confidence score approximates how likely an intent is present in the consumer's message.
 
 To return the best response to consumers, the NLU has a threshold of GOOD. This means that an intent that scores below the threshold is not sent to the consumer. 
 
@@ -50,7 +68,7 @@ You can't change the threshold when using intents (although you can do [this](kn
 2. Click **Add Intent** in the upper-right corner.
 3. Specify the following:
 
-    * **Intent name**: Enter the intent name. A domain can have dozens of intents, so using a standard naming convention is important for being able to easily sort and find intents.
+    * **Intent name**: Enter the intent name. To name an intent, use a short phrase that describes the intent. Typically, an intent name has both a verb and a noun (e.g., "report login problem"). A domain can have dozens of intents, so using a standard naming convention is important for being able to easily sort and find intents.
     * **Intent display name**: Enter the display name.
     * **Description**: Enter a short phrase describing the intent. While this field is optional, it's often useful. Many intent names can be technical. A description adds clarity and is particularly helpful to a person not familiar with the domain.
     * **Intent type**: Select either "Intent" or "Meta Intent." For an introduction to meta intents, see [here](intent-builder-meta-intents.html).
@@ -169,14 +187,14 @@ Intent discovery is the task of finding new intents to add to your current taxon
 
 #### Training a new model
 
-Train your model at regular  intervals as you add new intents and training phrases. Typically, LivePerson advises training a new model at the end of every session of work on Intent Builder or Intent Analyzer.  This allows you to see the results of your changes the next time you revisit the model.
+Train your model at regular  intervals as you add new intents and training phrases. Typically, LivePerson advises training a new model at the end of every session of work on Intent Builder or Intent Analyzer. This allows you to see the results of your changes the next time you revisit the model.
 
 ### FAQs
 
 #### What if I want more than 60 intents?
 LivePerson has experimented with up to 80 intents without a significant performance drawback. Going above that, there is an increasing chance of intent overlap. As your taxonomy grows in size, the intents themselves will likely become more narrow and specific in their definitions. The most important thing to remember is that intents should never overlap each other in definition. This becomes of greater and greater importance as intents become more and more granular. To avoid overlap in a model with very granular intents, make sure that each message being used as training data only contains a singular topic of discussion. This topic should relate directly to the intent. It is very important that “edge case” messages  (i.e., overly long messages or messages that contain multiple topics of discussion) are not used for training data when working on a large, granular taxonomy. Only use strong, clear examples as training data.
 
-Models that have very granular intents usually require a substantial amount of tuning once the first model is trained. Do this by carefully adding new training data in an iterative cycle. Add some training  data and then train a new model, then evaluate and repeat the process if  necessary.
+Models that have very granular intents usually require a substantial amount of tuning once the first model is trained. Do this by carefully adding new training data in an iterative cycle. Add some training data and then train a new model, then evaluate and repeat the process if necessary.
 
 It is also useful to use the “Test” feature in Intent Builder to test consumer messages to see which intents have a strong confidence score for that message. If you see any intents that have a confidence score greater than ~20% - 30% and do not belong, revisit the training data for those intents and remove any messages that are similar to the message that you used in the “Test” feature.
 
@@ -198,4 +216,4 @@ It is rarely advised to create an affirmative/negative intent for a conversation
 Instead, consider simpler and safer ways to capture affirmation and negation by, for example, using pattern matching or button selection. In a controlled situation, like an anticipated consumer response to a bot yes/no question, this should be quite effective. 
 
 #### How do I revert to a previous model? 
-Before you train your new model, go to Intent Builder, select your domain, and then go to **Domain Settings**. From there you can export a CSV of your intents and their training data. Later, you can use this CSV as training data to revert to the  older model if necessary.
+Before you train your new model, go to Intent Builder, select your domain, and then go to **Domain Settings**. From there you can export a CSV of your intents and their training data. Later, you can use this CSV as training data to revert to the older model if necessary.
