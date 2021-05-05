@@ -167,7 +167,7 @@
           - subpagename: Simple Router
           - subpagename: Store Locator
           - subpagename: Travel Notification
-          - subpagename: Maven Concierge
+          - subpagename: Conversation Orchestrator
       - pagename: Dialogs
         subpages:
           - subpagename: Dialog Basics
