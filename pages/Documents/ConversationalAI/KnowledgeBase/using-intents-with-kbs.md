@@ -40,15 +40,15 @@ After you've added a knowledge base that is associated to a domain, configure th
 
 <img style="width:600px" src="img/ConvoBuilder/kb_associate_article.png">
 
-### Train a knowledge base
+### Tune a knowledge base
 
-After you've added your content and linked it to intents, train the knowledge base. Training involves:
+After you've added your content and linked it to intents, tune the knowledge base. Tuning involves:
 
 1. Performing a search using a consumer utterance.
 2. Reviewing the results.
 3. Adding or removing training phrases in the intents as needed.
 
-**To train a knowledge base**
+**To tune a knowledge base**
 
 1. Open the knowledge base.
 2. In the Test User Input panel on the right, specify the following:
