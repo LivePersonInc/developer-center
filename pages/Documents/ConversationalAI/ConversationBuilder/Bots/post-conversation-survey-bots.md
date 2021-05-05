@@ -97,25 +97,25 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 
 In the dialog that's of type "Survey," define the survey. There are several types of survey questions:
 
-**First Call Resolution (FCR)**
+#### First Call Resolution (FCR)
 
 This question is used to measure operational efficiency in resolving consumer issues. This interaction asks a standard FCR question: *Were you able to resolve your inquiry today?* Feedback on this helps you to measure and improve agent/bot and skill performance.
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_fcr.png">
 
-**Customer Satisfaction (CSAT)**
+#### Customer Satisfaction (CSAT)
 
 Customer Satisfaction (CSAT) metrics are used to measure the frequency at which your brand meets or exceeds consumer expectations. This interaction asks a standard CSAT question: *How would you rate your overall satisfaction with the service you received?*
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_csat.png">
 
-**Net Promoter Score (NPS)**
+#### Net Promoter Score (NPS)
 
 Net Promoter Score (NPS) metrics are commonly used to measure the loyalty of a consumer to a brand. This interaction asks a standard NPS question: *Based on your experience today, how likely are you to recommend us to a friend or colleague?*
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_nps.png">
 
-**Closed-ended, custom**
+#### Closed-ended, custom
 
 A closed-ended question is a multiple choice question that has a custom, predefined list of answer choices. Use this interaction when you need quantifiable data and want to categorize your consumers.
 
@@ -124,21 +124,25 @@ A closed-ended question is a multiple choice question that has a custom, predefi
 {: .important}
 When adding a closed-ended, custom question, remember to update the conditions in each, corresponding rule that is added automatically.
 
-**Open-ended, custom**
+#### Open-ended, custom
 
 An open-ended question allows the consumer to provide an answer in their own words, instead of being constrained by a predefined list of answer choices. Use this interaction when you want to offer the opportunity for this type of free-form feedback.
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_open.png">
 
-All survey questions:
+#### All survey questions
 * Have a limit of 256 characters for the survey question.
+* Support any emojis. Just copy and paste them in, but remember to update the rules accordingly.
 
-FCR, CSAT and NPS questions:
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_emoji1.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_emoji2.png">
+
+#### FCR, CSAT and NPS questions
 * These are predefined in the sense that you can't edit their structure, i.e., add or remove answer choices. However, you can change the question and answer text.
 * In a survey bot, you can include only one of each of these.
 * You can add a skip option to each of these.
 
-Closed-ended and open-ended, custom questions:
+#### Closed-ended and open-ended, custom questions
 * In a survey bot, you can include as many of these as required.
 * You can add a skip option to closed-ended questions but not to open-ended questions. 
 
