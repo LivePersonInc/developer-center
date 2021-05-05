@@ -47,7 +47,7 @@ The important environment related variables are stored in the **Global Functions
 
 Open the bot. On the top navigation click **Global Functions** and edit the following fields:
 
-* `mavenNamespace`: Please enter the Namespace you have defined in your [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) for storing and retrieving session variables.
+* `contextNamespace`: Please enter the namespace you have defined in your [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) for storing and retrieving session variables.
 * `fallbackSkillName`: Please enter the skill name for the fall back skill. This skill is used by the bot if no policies are executed by Conversation Orchestrator.
 * `fallbackSkillId`: Please enter the skill ID for the fall back skill. This skill is used by the bot if no policies are executed by Conversation Orchestrator.
 * `fallbackMessage`: Please enter a message to send to customer when the fallback route.
@@ -58,84 +58,85 @@ Configure Conversational Cloud and deploy the bot.
 
 ### Pre/post-process code
 
-The *text_question_3* interaction contains the following **Process User Response** code to use botContext methods to store the phone number in the Conversation Context Service.
+The *COLLECT_PHONE_NUMBER* interaction contains the following **Process User Response** code to use botContext methods to store the phone number in the Conversation Context Service.
 
 ```javascript
-var mavenNamespace = getVar("mavenNamespace");
-var success = botContext.registerContextNamespace(mavenNamespace);
-botContext.printDebugMessage("Maven registerContextNamespace:: " + success);
+// Retrieve namespace bot variable and register context namespace
+var contextNamespace = getBotVar("contextNamespace");
+var success = botContext.registerContextNamespace(contextNamespace);
+debugMsg("Conversation Orchestrator registerContextNamespace:: " + success);
  
-// NEED TO ADD COMMENTS TO EXPLAIN
-var phoneNumber = getVar("phoneNumber");
-botContext.setContextDataForConversation(mavenNamespace, "phoneNumber", phoneNumber);
+// Pull in the phoneNumber variable captured in the conditions and set to the Conversation scoping in the Conversation Context Service
+var phoneNumber = getBotVar("phoneNumber");
+setContextConv("phoneNumber", phoneNumber);
  
-var convId = botContext.getConversationId();
-setSessionVar("conversationId", convId, true, false);
- 
-botContext.logCustomEvent(botContext.getCurrentUserMessage(), "Maven Session Store","Maven Session Store was called for namespace labelled '"+ getVar("mavenNamespace") + "' for account '" + getVar("accountId") + "' ("+ convId + ")");
+// Custom Event Logging for setting Context Session Store
+logEventAdv(getUserMessage(), "Conversation Orchestrator Session Store","Maven Session Store was called for namespace labelled '"+ getBotVar("contextNamespace") + "' for account '" + getBotVar("accountId") + "' ("+ getBotVar('conversationId') + ")");
 ```
 
-The *text_4* interaction contains the following **Pre-Process Code** which uses botContext methods to call the Recommendations API and retrieve the matched routing policy. This policy is then used in the setTransferParameters function to prepare the escalation integration.
+The *PROCESS_ASKMAVEN* interaction contains the following **Pre-Process Code** which uses botContext methods to call the Recommendations API and retrieve the matched routing policy. This policy is then used in the setTransferParameters function to prepare the escalation integration.
 
 ```javascript
-var convId = getVar("conversationId");
-var customerInfo = botContext.getLPCustomerInfo();
+// Call Conversation Orchestrator Recommendation API
+var orchestratorRecommendations = botContext.askMaven();
+var data = JSON.parse(orchestratorRecommendations);
+debugMsg("Maven Recommendations:: " + orchestratorRecommendations);
  
-if(customerInfo){
-   var customerId = customerInfo.customerId;
-   botContext.setBotVariable("customerId",customerId,true,false);
-}
+// Custom Event Log for askMaven response
+logEventAdv(getUserMessage(), "Ask Maven","Ask Maven was called for namespace '"+ getBotVar("contextNamespace") + "' for account '" + getBotVar("accountId") + "' ("+ getBotVar('conversationId') + ")");
  
-var mavenRecommendations = botContext.askMaven(convId,customerId,"");
-var data = JSON.parse(mavenRecommendations);
-botContext.printDebugMessage("Maven Recommentdations:: " + mavenRecommendations);
- 
-botContext.logCustomEvent(botContext.getCurrentUserMessage(), "Ask Maven","Ask Maven was called for namespace '"+ getVar("mavenNamespace") + "' for account '" + getVar("accountId") + "' ("+ convId + ")");
- 
-var actions = data.rule.actions;
- 
+// Set transfer param variables
 var agentId = null;
 var skillId = null;
 var skillName = null;
 var transferType = null;
  
-for (var action in actions) {
+// If a policy is matched, process the policy. If not, transfer via fallback
+if (data.rule) {
+ var actions = data.rule.actions;
  
- var type = actions[action].type;
+ for (var action in actions) {
+   var type = actions[action].type;
  
- switch (type) {
-   case "SEND_MESSAGE":
-     sendMessage(actions[action].payload.message);
-     break;
-   case "TRANSFER_TO_AGENT":
-     agentId = botContext.getLPAccountId()+'.'+ actions[action].payload.userId;
-     skillId = actions[action].payload.skillId || "-1";
-     transferType = "TRANSFER_TO_AGENT";
-     break;
-   case "TRANSFER_TO_SKILL":
-     skillId = actions[action].payload.skillId;
-     transferType = "TRANSFER_TO_SKILL";
-     break;
+   switch (type) {
+     case "SEND_MESSAGE":
+       sendMsg(actions[action].payload.message);
+       break;
+     case "TRANSFER_TO_AGENT":
+       agentId = getBotVar('accountId')+'.'+ actions[action].payload.userId;
+       skillId = actions[action].payload.skillId || "-1";
+       transferType = "TRANSFER_TO_AGENT";
+       setTransferParameters(agentId, skillId, skillName, transferType);
+       break;
+     case "TRANSFER_TO_SKILL":
+       skillId = actions[action].payload.skillId;
+       transferType = "TRANSFER_TO_SKILL";
+       setTransferParameters(agentId, skillId, skillName, transferType);
+       break;
+   }
  }
+} else {
+ sendMsg('No policy matched, routing to fallback skill');
+ setTransferParameters(agentId, skillId, skillName, transferType);
 }
-setTransferParameters(agentId, skillId, skillName, transferType);
 ```
 
-The *text_4* interaction contains the following **Post-Process Code** which takes the transferType variable and routes to the appropriate agent or skill escalation interaction.
+The *PROCESS_ASKMAVEN* interaction contains the following **Post-Process Code** which takes the transferType variable and routes to the appropriate agent or skill escalation interaction.
 
 ```javascript
-var transferType = getVar("transferType");
+// setTriggerNextMessage to appropriate transfer type
+var transferType = getBotVar("transferType");
  
 if (transferType) {
  switch (transferType) {
    case "TRANSFER_TO_AGENT":
-     botContext.setTriggerNextMessage("TRANSFER_TO_AGENT");
+     goNext("TRANSFER_TO_AGENT");
      break;
    case "TRANSFER_TO_SKILL":
-     botContext.setTriggerNextMessage("TRANSFER_TO_SKILL");
+     goNext("TRANSFER_TO_SKILL");
      break;
    default:
-     log("Policy had a transfer-type other than skill or agent.");
+     debugMsg("Policy had a transfer-type other than skill or agent.");
      break;
  }
 }
