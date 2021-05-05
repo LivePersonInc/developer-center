@@ -12,84 +12,135 @@ permalink: conversation-builder-bot-templates-conversation-orchestrator.html
 indicator: both
 ---
 
-The Maven Concierge bot template is a bot template in Conversation Builder that comes pre-wired with integration to Conversation Orchestrator's Dynamic Routing and Conversation Context Service, enabling you to set up and build personalized consumer journeys easily. 
+The Conversation Orchestrator bot template in Conversation Builder comes pre-wired with integration to Conversation Orchestrator's [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) and [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html), enabling you to set up and build personalized consumer journeys easily.
 
 The following example flow can happen with this template:
 
-- The conversation starts with a Welcome intent, for example “hi”
-- The bot then asks the customer for a phone number
-- The phone number is stored in Conversation Orchestrator's Conversation Context Service
-- Conversation Orchestrator evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List)
-- Bot transfers the conversation to a skill or agent based on the policy outcome 
+1. The conversation starts with a Welcome intent, for example “hi.”
+2. The bot then asks the customer for a phone number.
+3. The phone number is stored in Conversation Orchestrator's [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html).
+4. Conversation Orchestrator evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List).
+5. Bot transfers the conversation to a skill or agent based on the policy outcome.
 
-
-### Included Items
+### Included items
 
 #### Dialogs 
 
-- Basic Welcome dialog
+* **1 Welcome**: The Welcome dialog greets the user and collects their phone number for use in dynamic routing policies. 
+* **2 Fallback**: This is displayed when the user enters an utterance that is not recognized.
+* **3 Transfer**: Contains integration tiles to transfer to a different skill or agent based on the result of dynamic routing policies.
 
-- A question that asks basic customer information (e.g., a phone number)
-
-<img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_0.png">
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_1.png">
 
 #### Integrations
 
-- Conversation Orchestrator's [Conversation Context Service](maven-ai-context-warehouse-context-session-store.html) integration
+* **TRANSFER_TO_AGENT**: Performs a transfer to a Conversational Cloud agent and skill. Agent ID, Skill Name, and Skill ID will be provided by a call to the [Recommendation API](conversation-orchestrator-recommendation-api-overview.html) based on dynamic routing policies.
+* **TRANSFER_TO_SKILL**: Performs a transfer to a Conversational Cloud skill. Skill Name and Skill ID will be provided by a call to the [Recommendation API](conversation-orchestrator-recommendation-api-overview.html) based on dynamic routing policies.
 
-- [Recommendation API](maven-ai-askmaven-overview.html) integration that allows a bot to consult Conversation Orchestrator on routing decisions
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_2.png">
 
-  <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_1.png">
+### Configuration needed
 
-  - Pre-built code for transfer to skill and transfer to agent: Routing decisions provided by Conversation Orchestrator are then dispatched to an agent, bot, or a skill using these integrations. 
+The important environment related variables are stored in the **Global Functions**, and for most cases this is the only area you will edit.
 
-  <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_2.png">
-
-  <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_3.png">
-
-### Configuration Needed
-
-The important environment related variables are stored in the Global Functions, and for most cases this is the only file you will likely edit. 
-
-<img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_4.png">
+<img style="width:800px" src="img/ConvoBuilder/template_conv_orch_3.png">
 
 Open the bot. On the top navigation click **Global Functions** and edit the following fields:
 
-1. `deploymentZone`: Z1-Americas, Z2-EMEA, Z3-APAC
+* `mavenNamespace`: Please enter the Namespace you have defined in your [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) for storing and retrieving session variables.
+* `fallbackSkillName`: Please enter the skill name for the fall back skill. This skill is used by the bot if no policies are executed by Conversation Orchestrator.
+* `fallbackSkillId`: Please enter the skill ID for the fall back skill. This skill is used by the bot if no policies are executed by Conversation Orchestrator.
+* `fallbackMessage`: Please enter a message to send to customer when the fallback route.
 
-2. `accountId`: Your Conversational Cloud account ID
+Click **Save**.
 
-3. `mavenNamespace`: Please enter the Namespace you have defined in your [Conversation Context Service](https://developers.liveperson.com/maven-ai-context-warehouse-context-session-store.html) for storing and retrieving session variables. 
+Configure Conversational Cloud and deploy the bot. 
 
-4. `mavenApiKey`: Copy and paste the Developer Key from Conversation Orchestrator
+### Pre/post-process code
 
-5. `fallbackSkillName`: Please enter the skill name for the fall back skill. This skill is used by the bot if no policies are executed by Conversation Orchestrator
+The *text_question_3* interaction contains the following **Process User Response** code to use botContext methods to store the phone number in the Conversation Context Service.
 
-6. `fallbackSkillId`: Please enter the skill ID for the fall back skill. This skill is used by the bot if no policies are executed by Conversation Orchestrator
+```javascript
+var mavenNamespace = getVar("mavenNamespace");
+var success = botContext.registerContextNamespace(mavenNamespace);
+botContext.printDebugMessage("Maven registerContextNamespace:: " + success);
+ 
+// NEED TO ADD COMMENTS TO EXPLAIN
+var phoneNumber = getVar("phoneNumber");
+botContext.setContextDataForConversation(mavenNamespace, "phoneNumber", phoneNumber);
+ 
+var convId = botContext.getConversationId();
+setSessionVar("conversationId", convId, true, false);
+ 
+botContext.logCustomEvent(botContext.getCurrentUserMessage(), "Maven Session Store","Maven Session Store was called for namespace labelled '"+ getVar("mavenNamespace") + "' for account '" + getVar("accountId") + "' ("+ convId + ")");
+```
 
-7. `fallbackMessage`: Please enter a message to send to customer when the fallback route 
+The *text_4* interaction contains the following **Pre-Process Code** which uses botContext methods to call the Recommendations API and retrieve the matched routing policy. This policy is then used in the setTransferParameters function to prepare the escalation integration.
 
-8. `CB_API_KEY`: On the top right, click the Key Icon, and then copy and paste the key in "Your API Access Key"
+```javascript
+var convId = getVar("conversationId");
+var customerInfo = botContext.getLPCustomerInfo();
+ 
+if(customerInfo){
+   var customerId = customerInfo.customerId;
+   botContext.setBotVariable("customerId",customerId,true,false);
+}
+ 
+var mavenRecommendations = botContext.askMaven(convId,customerId,"");
+var data = JSON.parse(mavenRecommendations);
+botContext.printDebugMessage("Maven Recommentdations:: " + mavenRecommendations);
+ 
+botContext.logCustomEvent(botContext.getCurrentUserMessage(), "Ask Maven","Ask Maven was called for namespace '"+ getVar("mavenNamespace") + "' for account '" + getVar("accountId") + "' ("+ convId + ")");
+ 
+var actions = data.rule.actions;
+ 
+var agentId = null;
+var skillId = null;
+var skillName = null;
+var transferType = null;
+ 
+for (var action in actions) {
+ 
+ var type = actions[action].type;
+ 
+ switch (type) {
+   case "SEND_MESSAGE":
+     sendMessage(actions[action].payload.message);
+     break;
+   case "TRANSFER_TO_AGENT":
+     agentId = botContext.getLPAccountId()+'.'+ actions[action].payload.userId;
+     skillId = actions[action].payload.skillId || "-1";
+     transferType = "TRANSFER_TO_AGENT";
+     break;
+   case "TRANSFER_TO_SKILL":
+     skillId = actions[action].payload.skillId;
+     transferType = "TRANSFER_TO_SKILL";
+     break;
+ }
+}
+setTransferParameters(agentId, skillId, skillName, transferType);
+```
 
-   <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_5.png">
+The *text_4* interaction contains the following **Post-Process Code** which takes the transferType variable and routes to the appropriate agent or skill escalation interaction.
 
-9. Click **Save**
+```javascript
+var transferType = getVar("transferType");
+ 
+if (transferType) {
+ switch (transferType) {
+   case "TRANSFER_TO_AGENT":
+     botContext.setTriggerNextMessage("TRANSFER_TO_AGENT");
+     break;
+   case "TRANSFER_TO_SKILL":
+     botContext.setTriggerNextMessage("TRANSFER_TO_SKILL");
+     break;
+   default:
+     log("Policy had a transfer-type other than skill or agent.");
+     break;
+ }
+}
+```
 
-10. Configure Conversational Cloud and deploy the bot. 
+### Using the Conversation Context Service & Dynamic Routing
 
-### Using the Conversation Context Service
-
-Conversation Orchestrator's [Conversation Context Service](https://developers.liveperson.com/maven-ai-context-warehouse-context-session-store.html) can be used inside Conversation Builder using [scripting functions](https://developers.liveperson.com/conversation-builder-scripting-functions-manage-the-conversation-context-service.html) to store and retrieve session attributes. These attributes can be carried through in a conversation or can then be used in defining routing policy. The template provides an example where a phone number retrieved from the Welcome dialog is stored in the session variable. To view: 
-
-1. Open the dialog in template called - "Start Here - Welcome"
-
-2. Click on the interaction - Recommendation API, and then on the right inside Interaction details, **Code**
-
-   <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_6.png">
-
-3. The following code stores the phoneNumber in the Conversation Context Service. Similarly other attributes for example, NLU intent can also be stored in the Conversation Context Service.  
-
-   <img class="fancyimage" style="width:800px" src="img/maven/mave_bot_template_image_7.png">
-
-4. The phoneNumber can then be used to determine customer attributes for example if the customer is a VIP or not and then route them to a specific skill or agent defined inside Conversation Orchestrator Policy editor. To run an end to end example of such a feature, please refer to the [Dynamic Routing Tutorial](https://developers.liveperson.com/maven-ai-ai-powered-routing-tutorial.html#using-a-policy-with-conversation-builder) 
-
+This bot template is designed for use within the [Getting Started](conversation-orchestrator-dynamic-routing-getting-started.html#using-the-conversation-orchestrator-bot-template) guide of our Conversation Orchestrator Dynamic Routing documentation. For details on configuring Conversation Orchestrator to work with this bot template, please follow along with that guide.
