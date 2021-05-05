@@ -143,7 +143,7 @@ For more best practices when training and tuning NLU, see [here](conversation-bu
 
 1. To get up and running quickly with intents, try starting with a [pre-built domain](intent-builder-overview.html#prebuilt-domains). There are several, vertical-specific domains available, as well as a cross-vertical domain. Otherwise, add your initial intents and training phrases manually.
 2. Understand the existing model - Review the model’s coverage, i.e., the intent names and training phrases. This gives you a good understanding of the intents that already exist in the model. This is important to keep in mind, as you don’t want your future work to overlap with any of the existing intents.
-3. Use Intent Analyzer’s Intent Discovery to “discover” new intents to add to your current taxonomy and to classify consumer messages under those intents.
+3. Use [Intent Analyzer](intent-analyzer-overview.html)’s [Intent Discovery](https://knowledge.liveperson.com/ai-bots-automation-liveperson-intent-manager-intent-discovery.html) to “discover” new intents to add to your current taxonomy and to classify consumer messages under those intents.
 4. Train the new model.
 5. Evaluate and optimize the model. As a quick measure, review the results on the Intent Manager [dashboard](https://knowledge.liveperson.com/ai-bots-automation-liveperson-intent-manager-dashboard.html). For more thorough testing, use Intent Builder’s [Model Tester](intent-builder-testing-advanced-model-testing.html).
 
