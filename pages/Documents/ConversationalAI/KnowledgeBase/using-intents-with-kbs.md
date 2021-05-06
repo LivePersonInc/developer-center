@@ -61,7 +61,7 @@ After you've added your content and linked it to intents, tune the knowledge bas
     * **# of Results**: Select how many results to return.
     * **Article Status**: Select the status of the artice, either Active, Inactive, or All. This option is only available for internal knowledge bases.
 
-3. Click **Find Articles**.
+3. Click **Find Answer**.
 4. Review the results under **Matched Answers**.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test2.png">
