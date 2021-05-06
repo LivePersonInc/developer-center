@@ -152,7 +152,7 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
 
 {: .important}
-Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 20 training phrases.<br><br>Also, consider exporting a CSV of the intents before you train. (You can do this via **Domain Settings**.) Later, you can use this CSV as training data to revert the older model if necessary.
+Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 20 training phrases.<br><br>Also, consider exporting a CSV of the intents before you train. (You can do this via **Domain Settings**.) You can't revert to a previous model, but later, if necessary, you can use this CSV as the training data for a new domain.
 
 **To train a LivePerson domain**
 
