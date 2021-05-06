@@ -24,6 +24,34 @@ KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-mana
 
 To enable the feature on your Conversational Cloud account please review the KB article
 
+### Features and Permissions
+Below is the list of features and permissions elements added in the manifest file to support this feature. 
+
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.webkit.resource.AUDIO_CAPTURE" />
+<uses-permission android:name="android.webkit.resource.VIDEO_CAPTURE" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+<uses-feature android:name="android.hardware.audio.pro" />
+<uses-feature android:name="android.hardware.microphone" />
+```
+
+If required, you can disable these features elements from the host app's manifest file by adding:
+
+```xml
+<uses-feature android:name="android.hardware.audio.pro"  android:required="false" tools:replace="required" />
+<uses-feature android:name="android.hardware.microphone"  android:required="false" tools:replace="required" />
+```
+
+Similarly for permissions, you can disable these permissions elements by adding:
+```xml
+<uses-permission android:name="android.permission.CAMERA" tools:node="remove" />
+<uses-permission android:name="android.webkit.resource.AUDIO_CAPTURE" tools:node="remove" />
+<uses-permission android:name="android.webkit.resource.VIDEO_CAPTURE" tools:node="remove" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" tools:node="remove" />
+```
+
 ### How to enable:
 
 ```xml
