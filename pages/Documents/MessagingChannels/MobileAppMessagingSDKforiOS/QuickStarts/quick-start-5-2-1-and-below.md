@@ -425,6 +425,32 @@ class DocumentationViewController: UIViewController {
 @end
 ```
 
+### Supporting Accessibility
+
+When using Window Mode, which is passing a `nil` value as the `containerViewController` on the LPConversationViewParams object, sometimes VO Assistants will read the contents of the ViewController behind the Conversation Screen.
+To prevent this from happening, the accessibility on this VC should be hidden preventing the VO Assistant from reading its content.
+
+```swift 
+self.view.accessibilityElementsHidden = true
+// NOTE: if there is a TabBar, it should be hidden too:
+// self.tabBarController?.tabBar.accessibilityElementsHidden = true
+```
+
+Once the Conversation Screen is dismissed, these elements need to be re-enabled on the ViewController in which they were disabled, the best way to achieve is listening to the following delegate:
+
+```swift
+/**
+* This delegate method is optional.
+* It is called when the conversation view controller removed from its container view controller or window.
+*/
+func LPMessagingSDKConversationViewControllerDidDismiss() {
+  // NOTE: Setting Parent ViewController accessibility hidden value to true, so VO will read the elements on this View
+  self.view.accessibilityElementsHidden = false
+  // NOTE: if there is a tabbar, it should reset too:
+  // self.tabBarController?.tabBar.accessibilityElementsHidden = false
+}
+```
+
 ### Next Steps
 
 Congratulations!  You're all set.  

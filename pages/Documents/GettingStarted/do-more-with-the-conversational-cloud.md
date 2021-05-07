@@ -66,7 +66,7 @@ indicator: both
                 </a>
             </div>
             <div class="link-padding" >
-                <a  href="/conversation-orchestrator-dynamic-routing-tutorial.html"> 
+                <a  href="/conversation-orchestrator-dynamic-routing-overview.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                         Implement dynamic routing policies with Conversation Orchestrator
                 </a>

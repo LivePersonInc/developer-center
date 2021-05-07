@@ -10,4 +10,4 @@ indicator:
 ---
 
 {: .important}
-Support for the Google Dialogflow API v1 has been deprecated in Third-Party Bots. Please migrate to [Dialogflow V2](bot-connectors-google-dialogflow-version-2.html).
+Support for the Google Dialogflow API v1 has been deprecated in Third-Party Bots. Please migrate to [Dialogflow ES](third-party-bots-google-dialogflow-es-introduction.html).
