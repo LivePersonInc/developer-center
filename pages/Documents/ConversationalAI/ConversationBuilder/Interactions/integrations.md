@@ -51,6 +51,129 @@ In our example below, we've added a rule that checks for a "success" result, and
 
  <img style="width:550px" src="img/ConvoBuilder/integrations_api_rule2.png">
 
+### Knowledge AI interactions
+
+Use a Knowledge AI interaction in a bot when you want to search a knowledge base for articles. This interaction always performs the search using the consumer’s most recent message as the search phrase.
+
+![Carousel](img/ConvoBuilder/knowledge_ai.gif)
+
+A common use case for the Knowledge AI interaction is within a Fallback dialog, where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
+
+#### How the Knowledge AI search works
+
+* **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
+* **The search** - When performing the search, the search mode is always “Intents.” For information on search modes, see [here](knowledge-base-using-intents-with-kbs.html#search-modes).
+* **The results** - The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
+
+#### How the answers are rendered
+
+When you configure a Knowledge AI interaction, you specify an **Answer layout** for the answers, one of:
+
+* Structured
+* Simple
+* Custom 
+
+Both the Structured and Simple layouts are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowledge base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
+
+If you require control over the article content and layout that's used, you can choose to use a Custom answer layout. In this case, you must follow the Knowledge AI interaction with subsequent interactions that display the answers.
+
+Select an answer layout based on the target channels and your requirements. For more on this interaction’s channel-level support, see [here](conversation-builder-interactions-interaction-support.html).
+
+#### The Structured answer layout
+
+The Structured layout looks like this:
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_rich.png">
+
+With the Structured layout:
+
+* Anywhere from one to three results are returned based on the maximum number of answers that you've specified in the interaction.
+* The results degrade gracefully to the Simple layout when the channel in use doesn't support the carousel.
+
+#### The Simple answer layout
+
+The Simple layout doesn’t include rich elements like images. It looks like this:
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_plain.png">
+
+With the Simple layout:
+
+* Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
+* The article's content URL is included only if the channel in use is Web messaging.
+* Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
+
+#### Add a Knowledge AI interaction
+
+1. Select the interaction just above where you want to add the Knowledge AI interaction, and click <img style="width:30px" src="img/ConvoBuilder/icon_knowledge_ai.png"> (Knowledge AI) on the interactions toolbar.
+2. In the interaction, select the knowledge base to search.
+
+    <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_add.png">
+
+3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
+4. On the Basic tab, specify the following:
+    * **Message when results not found**: Enter the message to send to the consumer when there is no response returned from the knowledge base search. This might be due to no articles being found or due to a failed search. This message is sent regardless of whether you’ve defined a custom rule for the "KB Match Not Found" match type (discussed below). If you don't want this message to be sent, enter "BLANK_MESSAGE".
+5. Review the rest of the basic settings, and make any changes desired. For help with these, see [here](conversation-builder-interactions-configuration-settings.html#basic-settings).
+6. Switch to the Advanced tab, and specify the following:
+
+    <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_settings.png">
+
+    * **Min confidence score for answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds).
+
+        This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
+
+    * **Max number of answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
+    * **Answer layout**: Select "Structured," "Simple," or "Custom" based on your requirements. These layout options are discussed farther above.
+    * **Link text for content URL**: This setting is available when you select "Structured" or "Simple" for the **Answer layout**. Enter the label to use for the link to the article's content URL, e.g., "Learn more." The link will open the URL in a new window. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
+    * **Default image URL**: This optional setting is available only when you select "Structured" for the **Answer layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the Structured output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
+    * **Response data variable**: This setting is available only when you select "Custom" for the **Answer layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
+7. Click **Save**.
+8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "Custom" for the **Answer layout** setting, you’ll also need to add the interactions that display the answers.
+
+{: .important}
+You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated Knowledge Base integration.
+
+#### Using the Custom answer layout
+
+Choose the Custom answer layout when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
+
+To display a single, best result, use the syntax below, where "variableName" is the response data variable name that you specified in the Knowledge AI interaction's settings:
+
+`{$.api_variableName.results[0].title}`<br>
+`{$.api_variableName.results[0].summary}`<br>
+`{$.api_variableName.results[0].detail}`<br>
+`{$.api_variableName.results[0].imageURL}`<br>
+`{$.api_variableName.results[0].contentURL}`<br>
+
+For example:
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result1.png">
+
+To iterate over and display multiple results, use the syntax below in a similar manner:
+
+`{$.api_variableName.results[i].title}`<br>
+`{$.api_variableName.results[i].summary}`<br>
+`{$.api_variableName.results[i].detail}`<br>
+`{$.api_variableName.results[i].imageURL}`<br>
+`{$.api_variableName.results[i].contentURL}`<br>
+
+For example:
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_result2.png">
+
+#### Direct the conversation flow based on the result
+
+By default, a Knowledge AI interaction includes two custom rules: one rule for when the knowledge base search returns an answer and the other rule for when the search doesn’t.
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow1.png">
+
+Within each rule, the condition specifies the particular search result, either "Found" or "Not Found."
+
+<img style="width:800px" src="img/ConvoBuilder/knowledge_ai_flow2.png">
+
+Configure the **Next Action** for each of these rules based on the direction in which the conversation should flow in each case.
+
+<img style="width:600px" src="img/ConvoBuilder/knowledge_ai_flow3.png">
+
 ### Agent Transfer interactions
 
 Use an Agent Transfer interaction in a dialog when you want to transfer a conversation from a bot to a live agent, or from a bot in one bot group to a bot in a *different* group.
@@ -181,3 +304,83 @@ You can create a failure dialog similarly. In this case, the Dialog Starter inte
 If your original dialog involves *multiple* uploads--with different success and failure messages for each upload--but you want to handle the uploads with a *single* success dialog (or failure dialog), use the * wildcard character to match all messages like this:
 
 `file_upload_success:*`
+
+### Apple Pay interactions
+
+**For Apple Business Chat only.**
+
+If your business uses Apple’s Business Chat service to chat with consumers via the Messages app, you can use the Apple Pay integration interaction to let the consumer make a payment for goods and services using Apple Pay. (The interaction has been developed per Apple's Apple Pay specifications, which you can find [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat).)
+
+#### Prerequisite setup steps
+
+1. Review and follow LivePerson’s Apple Business Chat setup guide that’s [here](https://knowledge.liveperson.com/messaging-channels-apple-business-chat-setup-guide.html).
+2. As a part of the setup for Apple Pay in specific, you’ll need to create and set up your merchant account and the services needed to use Apple Pay, and you’ll need to provide your Merchant ID in Apple Business Register. These steps are covered [here](https://developer.apple.com/documentation/businesschatapi/messages_sent/interactive_messages/apple_pay_in_business_chat/initiating_apple_pay) on Apple’s developer site. Contact your LivePerson representative for help with this if needed.
+3. Implement your own merchant session endpoint, which is discussed [here](https://developer.apple.com/documentation/apple_pay_on_the_web/apple_pay_js_api/requesting_an_apple_pay_payment_session) on Apple’s developer site.
+
+Once this setup is completed, you can add the Apple Pay integration to your bot and configure it as described below.
+
+#### Interaction configuration
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay1.png">
+<br>
+<img style="width:400px" src="img/ConvoBuilder/integrations_applepay3.png">
+<br>
+<img style="width:450px" src="img/ConvoBuilder/integrations_applepay4.png">
+
+##### Tile settings
+
+| Setting | Description | Required? | Example |
+| --- | --- | --- | --- |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | https://wwww.mysite/images/mylogo.jpg |
+| ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
+| Title | The title of the Apple Pay bubble. | Required | Your order |
+| Item name | A short description of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.lineItems[i]} |
+| Item price | The amount of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.itemPrices[i]} |
+| Total | The total amount for all items, in effect, the subtotal (minus tax). You can specify a botContext or integration variable name. | Required | {$botContext.total} |
+
+##### Advanced interaction settings
+
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_applepay2.png">
+
+**Merchant Information**
+
+* **Merchant Identifier**: The unique identifier that represents you as a merchant for Apple Pay.
+* **Merchant Name**: The canonical name for your store, suitable for display and consisting of 64 or fewer UTF-8 characters.
+* **Country**: Your two-letter ISO 3166 country code as a merchant.
+* **Currency**: The three-letter ISO 4217 currency code for the payment.
+* **Merchant Session**: A unique token representing the transaction between the consumer and you as the merchant. This token is used by Apple to confirm that the pay session was created by a valid merchant and that it is being used within the time bounds allowed by Apple. Create an integration that points to your merchant session endpoint, and provide the response received from the endpoint here. You can specify a botContext or integration variable name.
+* **Account Signature**: This field allows for the account signature to be generated and added as a part of the request, for extra validation. The field stores a signed hash of the merchant session payload. The hash is sent as a part of the structured content request to the connector, which validates it and rejects it if invalid. You can enter an alphanumeric string or specify a botContext or integration variable name. This field is optional and only needed for accounts using this sign/validate flow. For more on the Apple Pay signature flow, see [here](apple-business-chat-templates-apple-pay-template.html#apple-pay-signature-flow). Note that opting in to this additional verification requires some internal account configuration; please contact your LivePerson representative for help with setting this up.
+* **Request Identifier**: This field stores the unique identifier representing the merchant session request. The request identifier is a consistent ID throughout the lifetime of the pay session, and it’s used by LivePerson APIs and services to track the pay session from start to finish. You can enter an alphanumeric string or specify a botContext or integration variable name.
+
+**Shipping Methods**
+
+You can add a list of available shipping methods. For each shipping method, specify:
+
+* **Name**: A short description of the shipping method.
+* **Shipping Cost**: The cost associated with the shipping method.
+* **Description**: An additional description of the shipping method.
+* **ID**: (Optional) A value that you provide to identify the shipping method.
+
+{: .important}
+The shipping method fields can be updated dynamically via an API call, i.e., you can specify a botContext or integration variable name in these fields.<br><br>The first shipping method that you add is used as the default method.
+
+**Additional Fields & Payment Capabilities**
+
+* **Required Billing Fields**: Select the billing contact fields required to process the transaction. Tip: Select only the fields that are needed to process the payment. Selecting unnecessary fields adds complexity to the transaction; this can increase the chances of the customer canceling the payment request.
+* **Required Shipping Fields**: Select the shipping contact fields required to fulfill the order. For example, if you need the customer’s email address or phone number, select these.
+* **Merchant Capabilities**: Specify the payment capabilities supported by you as the merchant. You must include “3DS.”
+* **Supported Networks**: Specify one or more of the payment networks supported by you as the merchant.
+
+**Endpoint URLs**
+
+Only the **Payment Gateway URL** is required. This URL is called by Apple Pay to process the payment through the payment provider. 
+
+The optional endpoint URLs are for receiving and managing any updates a customer might make before confirming the payment. These include:
+
+* **Payment Method Update URL**: Called by Apple Pay when the customer changes the payment method.
+* **Shipping Method Update URL**: Called by Apple Pay when the customer changes the shipping method.
+* **Shipping Contact Update URL**: Called by Apple Pay when the customer changes their shipping address information.
+* **Fallback URL**: A URL that opens in a web browser so the customer can complete the purchase if their device is unable to make payments using Apple Pay.
+* **Order Tracking URL**: Called by Apple Business Chat after completing the order; provides you with an opportunity to update the order information in your system.
+
+For more on these endpoints, see [here](https://developer.apple.com/documentation/businesschatapi/applepayendpoints) on the Apple developer site.

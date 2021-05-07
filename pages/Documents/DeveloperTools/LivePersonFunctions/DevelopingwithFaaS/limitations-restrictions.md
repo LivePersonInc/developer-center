@@ -45,3 +45,7 @@ The usage of `setTimeout()` in LivePerson Functions must be handled with care.
 * The maximum timespan between Start Date and End Date of the `Investigate Function Logs` screen is restricted to 7 days.
 
 <img src="img/faas-limitations-investigate-logs.jpg" alt="LivePerson Functions Logs" style="width:80%;"/>
+
+### Deployment History
+
+The deployment history will be stored indefinitely. However, only the 5 most recent versions will be stored for inspection and restoration. If you require a more expansive history we'd urge you to look into using VCS outside of LivePerson systems in combination with our CLI.
