@@ -77,7 +77,6 @@ You can't change the threshold when using intents (although you can do [this](kn
         * Tell me what my bill is
         * I need to look into what's going with my bill
 
-
         For more, see *Best practices* farther below.
 
 4. Click **Save**.
@@ -101,13 +100,13 @@ Note:
 
 1. Open the domain.
 2. Select the intent.
-3. Beside an existing training phrase (you’ll need to add at least one), click <img style="width:25px" src="img/ConvoBuilder/icon_knn.png">.
+3. Beside an existing training phrase (you’ll need to add at least one to the intent), click <img style="width:25px" src="img/ConvoBuilder/icon_knn.png">.
 
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_knn1.png">
 
+4. Review the generated phrases, and select the ones you want to add to the domain. You might also want to refine the spelling or punctuation. The phrases are based on actual consumer utterances, so they might contain misspellings or poor grammar. (See the *FAQs* farther below regarding typos and misspellings.)
 
-4. Review the generated phrases, and select the ones you want to add to the domain. You might also want to refine the spelling or punctuation. The phrases are based on actual consumer utterances, so they might contain misspellings or poor grammar.
-
-
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_knn2.png">
 
 5. Click **Add**.
 6. Back on the Intents page, click **Save** to save the change.
