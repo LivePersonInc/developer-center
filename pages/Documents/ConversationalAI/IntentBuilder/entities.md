@@ -12,7 +12,9 @@ indicator: both
 
 ### What's an entity?
 
-Entities are keywords or expressions that represent groups of items. For example, an entity named `SIZE` might represent the following values: small, medium, and large.
+Entities are keywords or expressions that represent groups of items. For example, an entity named `SIZE` might represent the following values: small, medium, and large. 
+
+Entities facilitate the creation and curation of training phrases. Using entities helps you to extend your training phrases like a "template" and prevents your model from focusing too much on certain words during training.
 
 In a conversation, when a bot detects an entity value in a consumer's utterance, the bot invokes the associated entity, substituting it into the utterance before determining the consumer's intent. Therefore, you can use entities in two places:
 
