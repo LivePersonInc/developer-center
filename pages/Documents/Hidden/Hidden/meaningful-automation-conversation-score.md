@@ -16,7 +16,7 @@ LivePerson is pleased to announce the *Beta release* of the Meaningful Automatio
 
 A Meaningful Automation Conversation Score or MACS is a measure of the quality of a bot conversation. 
 
-LivePerson has found through research that consumer effort is a key determiner in how the consumer perceives the quality of a conversational experience. Given this, a MACS is calculated by identifying and quantifying this within the conversation. Failure points within the conversation’s structure are detected and used to derive a score, for example: 
+LivePerson has found through research that consumer effort is a key determiner in how the consumer perceives the quality of a conversational experience. Given this, a MACS is calculated by identifying and quantifying this within the bot conversation. Failure points within the conversation’s structure are detected and used to derive a score, for example: 
 
 * Did the bot understand the consumer’s question? 
 * Was the consumer stuck in an endless loop? 
