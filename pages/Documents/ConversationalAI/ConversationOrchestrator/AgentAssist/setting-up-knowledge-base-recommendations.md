@@ -86,7 +86,9 @@ In our example below, for the human agent to be presented with an article recomm
 1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Knowledge Bases**.
 3. Scroll down to the **Configure article recommendations** section, which lists all knowledge bases.
-4. Add at least one skill to each available knowledge base. You can select from all the skills that are defined for your account in Conversational Cloud.
+4. Add at least one skill to each available knowledge base. You can select from all the skills that are defined for your account in Conversational Cloud. To assign all available skills at once, select the knowledge base, and then use the menu option that appears.
+
+    <img width="800" src="img/agentassist/assign_skills_kb2.png">
 
 #### Enable recommendations
 With the knowledge base ready to go, enable recommendations. This must be done so that Agent Assist recommends articles and bots inline in conversations.
