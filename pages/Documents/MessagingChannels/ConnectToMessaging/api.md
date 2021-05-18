@@ -58,7 +58,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | skill | string | yes | Engagement skill |
 | consumerPhoneNumber | string | yes | Consumer’s phone number(E.164 format with leading "+") |
 | handoffId | string | yes | C2M handoff Id |
-| sdes | array | no | Array of customer info and/or personal info SDEs. This parameter is only applicable for SMS and WA. See details [here](https://developers.liveperson.com/engagement-attributes-types-of-engagement-attributes.html#visitor-info) |
+| sdes | array | no | Array of [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) SDEs. This parameter is only applicable for SMS and WA.
 | templateVariables | object | no | Key-value pairs of variables for the template. This parameter is only applicable for WA channel. |
 | ivrNumber | string | no | The ivrNumber that brands want to use. Some brands have more than 1 ivrNumber and this field clears the ambiguity. |
 | consumerId | string | no | The consumerId which is used in the app as a user name field. This parameter is mandatory for only INAPP channel. |
@@ -447,9 +447,7 @@ public class OAuthAuthenticator {
 
 <strong>1. What is the rate limit for the API?</strong>
 
-Eligibility endpoint: 30 requests per second for all messaging channels per brand.
-
-Invite endpoint: 30 requests per second for each/all messaging channels per brand.
+Eligibility/Invite endpoints: 30 requests per second per API.
 
 <strong>2. What is the recommended action from brands for 429 responses?</strong>
 
