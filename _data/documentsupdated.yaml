@@ -167,7 +167,7 @@
           - subpagename: Simple Router
           - subpagename: Store Locator
           - subpagename: Travel Notification
-          - subpagename: Maven Concierge
+          - subpagename: Conversation Orchestrator
       - pagename: Dialogs
         subpages:
           - subpagename: Dialog Basics
@@ -319,6 +319,7 @@
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
+      - pagename: Account Details
       - pagename: Permissions
       - pagename: Credentials
   - documentname: Third-Party Bots

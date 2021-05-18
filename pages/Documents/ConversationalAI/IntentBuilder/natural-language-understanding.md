@@ -81,9 +81,7 @@ This is LivePerson's high-performing NLU engine. Key characteristics include:
 * A scalable solution that's capable of handling a large volume of requests.
 * Provides fast response times and accuracy.
 * To perform effectively, expects large sets of data (both intents and training phrases).
-* When you create a LivePerson domain and use it in Intent Analyzer or in Conversation Builder, the following is required:
-    * At least 20 training phrases per intent
-    * At least 5 intents in order to train  
+* The performance of a model depends on both the quantitative and qualitative nature of the training data. Therefore, we require a minimum of **5 intents** with **20 training phrases per intent** to activate training for a model in the Intent Builder. Anything less adversely affects model performance.
 * Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-domain).
 
 {: .important}

@@ -1,8 +1,6 @@
 This is for storing segments of doc temporarily until they can be added to the public files...
 
-UNIVERSAL TILE
-
-For "Interaction Support" topic for adding the Universal interaction:
+SNIPPET RE: INTERACTION SUPPORT TOPIC AND SUPPORT FOR UNIVERSAL TILE
 
 | Universal | Yes, but the JSON must adhere to the [Rich Messaging support](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 
