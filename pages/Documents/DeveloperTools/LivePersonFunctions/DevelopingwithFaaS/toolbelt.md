@@ -23,7 +23,7 @@ Currently, the Toolbelt offers the following methods:
 | :------- | :----- |
 | Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
-| Toolbelt.MTLSClient() | Returns a MTLS Client, that needs to be configured with cert & key. The client is configured to work with the FaaS Proxy. |
+| Toolbelt.MTLSClient() | Returns a MTLS Client, that needs to be configured with cert & key. Please be aware that both certificate and key need to be in the `PEM`-Format. The `Toolbelt.MTLSClient()` can yield an error if the certificate is malformed, so please make sure to catch it. Further the MTLS Client is configured to work with the FaaS Proxy. |
 | Toolbelt.LpClient() | Returns the LivePerson (LP) Client. This is a wrapper for the HTTP Client. It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 | Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
@@ -87,9 +87,10 @@ HTTP Client that is based on [request-promise](https://www.npmjs.com/package/req
 ```javascript
   // Importing the FaaS Toolbelt
   const { Toolbelt } = require("lp-faas-toolbelt");
-  // Configure MTLSClient with cert, key bundle. 
-  // Optional CA-Cert in case upstream cert is self-signed 
-  const mtlsClient = Toolbelt.MTLSClient({cert: 'cert-string', key: 'key-string', ca: 'cert-string'});
+  // Configure MTLSClient with cert & key bundle in PEM format. 
+  // Optional you can provide CA-Cert (PEM-Format) in case upstream cert is self-signed 
+  // Also a soft format check is performed, which will throw an error if failing. Make sure to catch it.
+  const mtlsClient = Toolbelt.MTLSClient({cert: 'cert-string', key: 'key-string'});
   mtlsClient.post('https://your-mtls-endpoint.com', { header: 'test'}, null, {
     json: true, // If true will attempt to parse response body to JSON
     timeout: 10000, // Deadline for request to finish by in MS
@@ -109,6 +110,8 @@ HTTP Client that is based on [request-promise](https://www.npmjs.com/package/req
     <li>If the domain is not whitelisted the proxy will close the connection yielding a `Socket is closed`-Error.</li>
     <li>Max. 20 req/sec (all beyond that are rejected with <code>429 - Too Many Requests</code>).</li>
     <li>The expiration date of cert is not tracked, that is something you are responsible for.</li>
+    <li>Both key and cert need to be in PEM-Format.</li>
+    <li>The provided cert and key is checked for its format and will raise an error if malformed.</li>
   </ul>
 </div>
 
