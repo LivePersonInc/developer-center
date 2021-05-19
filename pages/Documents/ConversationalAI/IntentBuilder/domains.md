@@ -144,7 +144,9 @@ This action overwrites the content in the domain with the content in the Google 
 
 ### Train a LivePerson domain
 
-You must train the LivePerson domain after every update to the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
+You must train the LivePerson domain after every update to the training data in the domain if you want the update to be reflected in subsequent testing/debugging and usage. Training creates a new model version that incorporates the changes. Once the domain is trained, you can use the testing tools to test.
+
+If you haven't updated the training data in the domain (i.e., made changes to the intents, their training phrases, or the entities), the **Train** button is disabled.
 
 Depending on how big the domain is, training typically takes anywhere between 2 to 10 minutes.
 
