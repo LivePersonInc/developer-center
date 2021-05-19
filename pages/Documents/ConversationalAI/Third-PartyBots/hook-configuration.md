@@ -194,7 +194,7 @@ const { payload } = input;
 const { queryInput } = payload;
 
 if (queryInput.text && queryInput.text.text) {
-  queryInput.text.text += "preHook";
+  queryInput.text.text += 'preHook';
 }
 
 return callback(null, payload);
@@ -221,7 +221,7 @@ return callback(null, payload);
 const { payload } = input;
 
 if (payload.message) {
-  payload.message += "preHook";
+  payload.message += 'preHook';
 }
 
 return callback(null, payload);
@@ -249,7 +249,7 @@ return callback(null, payload);
 ```js
 const { payload } = input;
 if (payload.inputText) {
-  payload.inputText += "preHook";
+  payload.inputText += 'preHook';
 }
 return callback(null, payload);
 ```
@@ -279,7 +279,7 @@ return callback(null, payload);
 ```js
 const { payload } = input;
 if (payload.text) {
-  payload.text += "preHook";
+  payload.text += 'preHook';
 }
 return callback(null, payload);
 ```
@@ -316,7 +316,7 @@ return callback(null, payload);
 ```js
 const { payload } = input;
 if (payload.message) {
-  payload.message += "preHook";
+  payload.message += 'preHook';
 }
 return callback(null, payload);
 ```
@@ -353,8 +353,8 @@ return callback(null, payload);
 const { payload } = input;
 const { queryInput } = payload;
 
-if (queryInput.text && queryInput.text.text) {
-  queryInput.text.text += "preHook";
+if(queryInput.text && queryInput.text.text) {
+  queryInput.text.text += 'preHook';
 }
 
 return callback(null, payload);
@@ -366,7 +366,7 @@ The Posthook Lambda gets invoked on every message the customer sends. It allows 
 
 ##### DialogflowV2
 
-###### Request payload
+###### Request payload 
 
 ```json
 {
@@ -430,7 +430,7 @@ The Posthook Lambda gets invoked on every message the customer sends. It allows 
 }
 ```
 
-###### Minimal working Faas example as code
+###### Minimal working Faas example as code 
 
 ```js
 const { payload } = input;
@@ -440,9 +440,9 @@ const {
 if (
   queryResult &&
   queryResult.fulfillmentMessages &&
-  queryResult.fulfillmentMessages[0].text.text[0] === "Hi there"
+  queryResult.fulfillmentMessages[0].text.text[0] === 'Hi there'
 ) {
-  queryResult.fulfillmentMessages[0].text.text[0] += "postHook";
+  queryResult.fulfillmentMessages[0].text.text[0] += 'postHook';
 }
 return callback(null, payload);
 ```
@@ -460,7 +460,7 @@ return callback(null, payload);
 ```js
 const { payload } = input;
 if (payload.messages && payload.messages[0]) {
-  payload.messages[0] += " edited by postHook";
+  payload.messages[0] += ' edited by postHook';
 }
 return callback(null, payload);
 ```
@@ -492,7 +492,7 @@ if (payload.message) {
 return callback(null, payload);
 ```
 
-##### Microsoft Bot Framework
+##### Microsoft Bot Framework 
 
 ###### Request payload
 
@@ -510,17 +510,17 @@ return callback(null, payload);
 }
 ```
 
-###### Minimal working Faas example as code
+###### Minimal working Faas example as code 
 
 ```js
 const { payload } = input;
 if (payload && payload[0].text) {
-  payload[0].text += "postHook changed this message";
+  payload[0].text += 'postHook changed this message';
 }
 return callback(null, payload);
 ```
 
-##### Watson
+##### Watson 
 
 ###### Request payload
 
@@ -567,8 +567,8 @@ return callback(null, payload);
 
 ```js
 const { payload } = input;
-if (payload.output && payload.output.generic[0].text === "Hi there") {
-  payload.output.generic[0].text += "postHook";
+if (payload.output && payload.output.generic[0].text === 'Hi there') {
+  payload.output.generic[0].text += 'postHook';
 }
 return callback(null, payload);
 ```
@@ -638,9 +638,9 @@ const {
 if (
   queryResult &&
   queryResult.responseMessages &&
-  queryResult.responseMessages[0].text.text[0] === "Hi there"
+  queryResult.responseMessages[0].text.text[0] === 'Hi there'
 ) {
-  queryResult.responseMessages[0].text.text[0] += "postHook";
+  queryResult.responseMessages[0].text.text[0] += 'postHook';
 }
 return callback(null, payload);
 ```
