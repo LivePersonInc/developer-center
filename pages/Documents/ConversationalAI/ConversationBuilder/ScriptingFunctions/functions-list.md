@@ -24,6 +24,8 @@ For quick reference, below is an alphabetically-ordered list of all built-in fun
 * [getDisambiguatedIntentId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-disambiguated-intent)
 * [getDisambiguatedIntentName](conversation-builder-scripting-functions-get-set-contextual-data.html#get-disambiguated-intent)
 * [getEnvVariable](conversation-builder-scripting-functions-get-set-contextual-data.html#get-environment-variable)
+* [getFileCaption](conversation-builder-scripting-functions-get-integration-data.html#get-file-caption)
+* [getFileType](conversation-builder-scripting-functions-get-integration-data.html#get-file-type)
 * [getHoursType](conversation-builder-scripting-functions-get-set-contextual-data.html#get-type-of-hours)
 * [getLPAccountId](conversation-builder-scripting-functions-get-set-contextual-data.html#get-lp-account-id)
 * [getLPCustomerInfo](conversation-builder-scripting-functions-get-user-data.html#get-authenticated-customer-info)

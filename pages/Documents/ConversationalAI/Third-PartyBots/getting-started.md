@@ -107,13 +107,13 @@ Please note that your bot setup should always return an intent or an action as a
 
 1. Add a new user in the Conversational Cloud. Choose "Bot" for “User type”. If bot is not available as a user type, contact your LivePerson account manager to enable the feature.
 
-  <img style="width:600px" src="img/dialogflowversion2/image_0.png">
+  <img style="width:600px" src="img/ThirdPartyBots/common-create-bot-user.png">
 
 {:start="2"}
 
 1. Under login method, choose "API key" and generate a new API key for the user
 
-   <img style="width:600px" src="img/dialogflowversion2/image_1.png">
+   <img style="width:600px" src="img/ThirdPartyBots/common-create-api-key.png">
 
 {:start="3"}
 
@@ -123,7 +123,7 @@ Please note that your bot setup should always return an intent or an action as a
 
 1. Find the API key name you created above the in bot user profile
 
-   <img style="width:400px" src="img/dialogflowversion2/image_2.png">
+   <img style="width:400px" src="img/ThirdPartyBots/common-find-api-key.png">
 
 #### Provision a connector
 
@@ -184,7 +184,7 @@ Follow the steps below to add a new bot.
 
 ##### Settings for Welcome Messages:
 
-The Bot Connector system is designed to respond to incoming messaging by the consumer, once the bot is engaged in the conversation. Enabling the Welcome Messages setting allows brands to compose an initial message that the bot can send out that is not in direct response to the consumers messages but instead opens the conversation. This allows for the bot to connect to a conversation and send out an initial message without waiting for the consumer to send a message after the bot first joins the conversation.
+By enabling the Welcome Messages option in our Wizard,  Brands will receive a welcome message by the bot immediately after transfer. User will be greeted by the bot. With this feature. It means that the bot will be enabled to greet customers directly after the transfer action.
 
 ##### Settings for Combine Messages:
 

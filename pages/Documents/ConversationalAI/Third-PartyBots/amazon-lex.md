@@ -142,13 +142,12 @@ Fig 1.1
 
 Change the TTR of a conversation based on the **action** value in the response object.
 
-LivePerson Messaging uses 4 different types of priorities:
+LivePerson Messaging uses 3 different types of priorities:
 "URGENT",
 “NORMAL”
 “PRIORITIZED”
-“CUSTOM”
 
-Only the “CUSTOM” can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
+The time values of these are defined in the Agent Workspace.
 
 ```json
 {
@@ -156,8 +155,7 @@ Only the “CUSTOM” can set a value. The unit of the value is second. And the 
   "params": {
     "action": "CHANGE_TTR",
     "data": {
-      "ttrType": "URGENT",
-      "value": 500
+      "ttrType": "URGENT"
     }
   }
 }
@@ -186,6 +184,10 @@ Multiple scenarios for transfer/escalations exist triggered by the transfer acti
 
 Transfers and escalations rely on the _action_ item in the response object.
 
+#### Transfer To Skill
+
+This option transfers the conversation to the next available agent using the provided skill.
+
 ```json
 {
   "type": "ACTION",
@@ -209,6 +211,30 @@ Fig.4.2 - Example in Lex console
 <img class="fancyimage" style="width:550px" src="img/lex/image_9.png">
 
 fig.4.2
+
+#### Transfer to Agent
+
+{: .important}
+This feature is depending on [permissions](contact-center-management-messaging-operations-transfer-to-agent.html)
+
+This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
+
+```json
+{
+  "type": "ACTION",
+  "params": {
+    "action": "TRANSFER",
+    "data": {
+      "skill": "human_skill",
+      "agentId": "4129463410"
+    }
+  }
+}
+```
+
+<img class="fancyimage" style="width:500px" src="img/lex/image_12.png">
+
+Figure 4.3
 
 ### Sending Rich Content (Structured Content)
 
@@ -558,7 +584,7 @@ The bot does not escalate on a failed invocation by default. To enable this, jus
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 11.1.
 
-<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
 Figure 11.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For Lex, engagement attributes are added to the property `lpSdes` inside another custom sub-property `BC-LP-CONTEXT`. For the preservation of the state of engagement attributes across conversation `requestAttributes` property is used (more information about `requestAttributes` can be found [here](https://docs.aws.amazon.com/lex/latest/dg/API_runtime_PostText.html#API_runtime_PostText_RequestSyntax)). An example of the request body can be seen below:
