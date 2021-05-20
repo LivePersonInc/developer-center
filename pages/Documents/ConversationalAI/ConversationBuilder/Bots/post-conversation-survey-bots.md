@@ -69,7 +69,16 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 2. Select the organization.
 3. On the **Account Details** tab, specify the following:
 
-    * **Survey Request Interval**: This setting determines how often a consumer is sent a survey when one is triggered. When configuring this, consider how frequently you want a response from the same consumer, as sending surveys too often can create a poor experience. If this setting is disabled, the consumer always receives a survey when one is triggered. You can enable it to control the frequency; in this case, enter the number of days that must elapse before sending another survey (any survey within the account) to the same consumer. The default value is 30 days. 
+    * **Survey Request Interval**: This setting determines how often a consumer is sent a survey when one is triggered. When configuring this, consider how frequently you want a response from the same consumer, as sending surveys too often can create a poor experience.
+ 
+        If this setting is disabled, the consumer always receives a survey when one is triggered.
+        
+        If this setting is enabled, you can apply the specified time interval 1) to all bots collectively or 2) to each bot individually. As an example, assume you have surveys A, B and C, and you enable this setting with a value to 20 days.
+
+        With option 1, if the consumer receives survey A, they will not receive survey A again, or receive surveys B and C, until 20 days have passed.
+    
+        With option 2, if the consumer receives survey A, they will not receive survey A again until 20 days have passed. During this time, they still might receive surveys B and C.
+
     * **Survey Sampling**: If you have high traffic, you don’t need to send surveys to all your consumers; you can send them to a subset. That’s what this setting is designed for. If it's disabled, all consumers are sent surveys when the surveys are triggered. You can enable it to send surveys to a percentage of randomly sampled consumers. Use the slider to specify the percentage. The default value is 50%.
 4. [Redeploy the Post Conversation Survey connector](bots-status-managing-post-conversation-survey-bots.html#redeploy-the-connector) for your changes to take effect.
 
