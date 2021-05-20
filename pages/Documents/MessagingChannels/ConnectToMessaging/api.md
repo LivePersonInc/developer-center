@@ -58,7 +58,7 @@ Click [**Eligibility**](https://connect-to-messaging.z1.fs.liveperson.com/api/ap
 | skill | string | yes | Engagement skill |
 | consumerPhoneNumber | string | yes | Consumer’s phone number(E.164 format with leading "+") |
 | handoffId | string | yes | C2M handoff Id |
-| sdes | array | no | Array of ctmrinfo and/or personal SDEs. See details [here](engagement-attributes-types-of-engagement-attributes.html) |
+| sdes | array | no | Array of [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info) SDEs. This parameter is only applicable for SMS and WA.
 | templateVariables | object | no | Key-value pairs of variables for the template. This parameter is only applicable for WA channel. |
 | ivrNumber | string | no | The ivrNumber that brands want to use. Some brands have more than 1 ivrNumber and this field clears the ambiguity. |
 | consumerId | string | no | The consumerId which is used in the app as a user name field. This parameter is mandatory for only INAPP channel. |
@@ -74,7 +74,59 @@ SMS, WA
         "1": "test"
     },
     "skill": "support",
-    "ivrNumber": "180000"
+    "ivrNumber": "180000",
+    "sdes": [{
+        "type": "personal",
+        "info": {
+            "firstname": "Smith",
+            "lastname": "John",
+            "age": {
+                "age": 31,
+                "year": 1990,
+                "month": 1,
+                "day": 11
+            },
+            "contacts": [{
+                "email": "test@example.com",
+                "phone": "+1 480-400-8000",
+                "address": {
+                    "country": "United States",
+                    "region": "NA"
+                }
+            }],
+            "gender": "MALE",
+            "language": "en-US",
+            "company": "LP"
+        }
+    },
+    {
+        "type": "ctmrinfo",
+        "info": {
+            "cstatus": "VIP",
+            "ctype": "Gold",
+            "customerId": "138766AC",
+            "balance": -200.99,
+            "currency": "EUR",
+            "socialId": "11256324780",
+            "imei": "3543546543545688",
+            "userName": "user000",
+            "companySize": 500,
+            "companyBranch": "East Village",
+            "accountName": "Bank corp",
+            "role": "Marketing manager",
+            "lastPaymentDate": {
+                "day": 15,
+                "month": 10,
+                "year": 2016
+            },
+            "registrationDate": {
+                "day": 23,
+                "month": 5,
+                "year": 2015
+            },
+            "loginStatus": 1
+        }
+    }]
 }
 
 ```
@@ -395,7 +447,7 @@ public class OAuthAuthenticator {
 
 <strong>1. What is the rate limit for the API?</strong>
 
-The current rate limit is 30 requests per second for all messaging channels per brand.
+Eligibility/Invite endpoints: 30 requests per second per API.
 
 <strong>2. What is the recommended action from brands for 429 responses?</strong>
 

@@ -25,7 +25,7 @@ Use a post-conversation survey bot to measure bot/agent and skill performance an
 For a more in-depth introduction to surveys and survey metrics, see [here](https://knowledge.liveperson.com/ai-bots-automation-post-conversation-surveys-post-conversation-survey-bot.html) in the Knowledge Center.
 
 {: .important}
-To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through Conversational Cloud. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.<br><br>Survey bots are supported only in Messaging, not in Live Chat.<br><br>Only English-language survey bots are supported.
+To use survey bots created in Conversation Builder, you must be on the LivePerson platform, i.e., you log into Conversation Builder via single sign-on through Conversational Cloud. This feature isn't supported on the AWS platform where you log into Conversation Builder directly.<br><br>Survey bots are supported only in Messaging, not in Live Chat.
 
 ### The survey flow
 
@@ -54,7 +54,24 @@ Both outcomes are tracked and reported on as part of the Analytics Builder, so y
 
 ### Prerequisite steps
 
+#### Enable the feature
 Before you can begin building survey bots, the feature must be enabled in Conversation Builder by LivePerson. Please contact your LivePerson account representative to enable this feature.
+
+#### Configure account-level settings
+There are a few account-level, survey settings that you can configure; these settings affect all survey bots in the account.
+
+{: .important}
+For changes to take effect, you must [redeploy the Post-Conversation Survey connector](bots-status-managing-post-conversation-survey-bots.html#redeploy-the-connector).
+
+**To configure account-level settings**
+
+1. From the Conversational AI dashboard, click **Bot Accounts** to access the application.
+2. Select the organization.
+3. On the **Account Details** tab, specify the following:
+
+    * **Survey Request Interval**: This setting determines how often a consumer is sent a survey when one is triggered. When configuring this, consider how frequently you want a response from the same consumer, as sending surveys too often can create a poor experience. If this setting is disabled, the consumer always receives a survey when one is triggered. You can enable it to control the frequency; in this case, enter the number of days that must elapse before sending another survey (any survey within the account) to the same consumer. The default value is 30 days. 
+    * **Survey Sampling**: If you have high traffic, you don’t need to send surveys to all your consumers; you can send them to a subset. That’s what this setting is designed for. If it's disabled, all consumers are sent surveys when the surveys are triggered. You can enable it to send surveys to a percentage of randomly sampled consumers. Use the slider to specify the percentage. The default value is 50%.
+4. [Redeploy the Post Conversation Survey connector](bots-status-managing-post-conversation-survey-bots.html#redeploy-the-connector) for your changes to take effect.
 
 ### Creating the survey bot
 
@@ -80,25 +97,25 @@ Before you can begin building survey bots, the feature must be enabled in Conver
 
 In the dialog that's of type "Survey," define the survey. There are several types of survey questions:
 
-**First Call Resolution (FCR)**
+#### First Call Resolution (FCR)
 
 This question is used to measure operational efficiency in resolving consumer issues. This interaction asks a standard FCR question: *Were you able to resolve your inquiry today?* Feedback on this helps you to measure and improve agent/bot and skill performance.
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_fcr.png">
 
-**Customer Satisfaction (CSAT)**
+#### Customer Satisfaction (CSAT)
 
 Customer Satisfaction (CSAT) metrics are used to measure the frequency at which your brand meets or exceeds consumer expectations. This interaction asks a standard CSAT question: *How would you rate your overall satisfaction with the service you received?*
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_csat.png">
 
-**Net Promoter Score (NPS)**
+#### Net Promoter Score (NPS)
 
 Net Promoter Score (NPS) metrics are commonly used to measure the loyalty of a consumer to a brand. This interaction asks a standard NPS question: *Based on your experience today, how likely are you to recommend us to a friend or colleague?*
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_nps.png">
 
-**Closed-ended, custom**
+#### Closed-ended, custom
 
 A closed-ended question is a multiple choice question that has a custom, predefined list of answer choices. Use this interaction when you need quantifiable data and want to categorize your consumers.
 
@@ -107,21 +124,25 @@ A closed-ended question is a multiple choice question that has a custom, predefi
 {: .important}
 When adding a closed-ended, custom question, remember to update the conditions in each, corresponding rule that is added automatically.
 
-**Open-ended, custom**
+#### Open-ended, custom
 
 An open-ended question allows the consumer to provide an answer in their own words, instead of being constrained by a predefined list of answer choices. Use this interaction when you want to offer the opportunity for this type of free-form feedback.
 
 <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_open.png">
 
-All survey questions:
+#### All survey questions
 * Have a limit of 256 characters for the survey question.
+* Support any emojis. Just copy and paste them in, but remember to update the rules accordingly.
 
-FCR, CSAT and NPS questions:
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_emoji1.png">
+<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/surveyBot_emoji2.png">
+
+#### FCR, CSAT and NPS questions
 * These are predefined in the sense that you can't edit their structure, i.e., add or remove answer choices. However, you can change the question and answer text.
 * In a survey bot, you can include only one of each of these.
 * You can add a skip option to each of these.
 
-Closed-ended and open-ended, custom questions:
+#### Closed-ended and open-ended, custom questions
 * In a survey bot, you can include as many of these as required.
 * You can add a skip option to closed-ended questions but not to open-ended questions. 
 
