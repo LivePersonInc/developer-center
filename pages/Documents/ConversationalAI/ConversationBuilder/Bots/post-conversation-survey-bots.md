@@ -201,12 +201,13 @@ In an NPS interaction, don't enable Skip if your targeted channel is Facebook. F
 
 #### Configuring the display format
 
-In the **Advanced Settings** of many of the survey interactions, you can configure two display settings:
+In the **Advanced Settings** of many of the survey interactions, you can configure several display settings:
 
-* Display Choices As
-* Text Only Fallback > List Style for Choices
+1. Display Choices As
+2. Choices Per Row
+3. Text Only Fallback > List Style for Choices
 
-Use the **Display Choices As** setting to specify whether and how to send the answer choices to the consumer. You can select:
+1 - Use the **Display Choices As** setting to specify whether and how to send the answer choices to the consumer. You can select:
 
 * **Quick Reply**: Select this to send the answer choices as quick replies in channels that support them. In text-based channels, the format specified in **List Style for Choices** will be used.
 * **Button**: Select this to send the answer choices as buttons in channels that support them. In text-based channels, the format specified in **List Style for Choices** will be used.
@@ -214,7 +215,14 @@ Use the **Display Choices As** setting to specify whether and how to send the an
 
 <img style="width:500px" src="img/ConvoBuilder/surveyBot_displayChoices.png">
 
-When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
+2 - Use the **Choices Per Row** setting to control how the answer choices are presented when they exceed the available space in the messaging window:
+
+* **Best Fit**: If you select this, the answer choices wrap to multiple lines to avoid scrolling. Typically, this is the preferred consumer experience.
+* **Scroll**: If you select this, the answer choices are all presented on the same line, and the consumer must scroll across to see them all.
+
+<img style="width:500px" src="img/ConvoBuilder/surveyBot_bestFit.png">
+
+3 - When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
 
 * **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format.
 * **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer.
