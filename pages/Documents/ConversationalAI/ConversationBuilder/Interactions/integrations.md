@@ -99,7 +99,6 @@ The Simple layout doesn’t include rich elements like images. It looks like thi
 With the Simple layout:
 
 * Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
-* The article's content URL is included only if the channel in use is Web messaging.
 * Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
 
 #### Add a Knowledge AI interaction
