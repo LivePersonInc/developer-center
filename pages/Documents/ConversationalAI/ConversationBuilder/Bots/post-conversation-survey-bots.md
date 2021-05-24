@@ -73,7 +73,7 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
  
         If this setting is disabled, the consumer always receives a survey when one is triggered.
         
-        If this setting is enabled, you can apply the specified time interval 1) to all bots collectively or 2) to each bot individually. As an example, assume you have surveys A, B and C, and you enable this setting with a value to 20 days.
+        If this setting is enabled, you can apply the specified time interval 1) to all bots collectively, i.e., at the account level, or 2) to each bot individually, i.e., at the survey bot level. As an example, assume you have surveys A, B and C, and you enable this setting with a value to 20 days.
 
         With option 1, if the consumer receives survey A, they will not receive survey A again, or receive surveys B and C, until 20 days have passed.
     
