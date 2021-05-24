@@ -213,7 +213,7 @@ Structure example:
 | campaignInfo.goalId                         | The goal ID                                                                                          | The goal ID                                                                              | string  |                                                            |
 | campaignInfo.goalDescription                | The goal description                                                                                 | The goal description                                                                     | string  |                                                            |
 | **engagementInfo**                          | Information regarding the campaign engagement (The click to chat button)                             | N/A                                                                                      | object  |                                                            |
-| engagementInfo.VisitorBehavior              | Array of the behavioral targeting                                                                    | Array of the behavioral targeting                                                            | array   |                                                            |
+| engagementInfo.VisitorBehavior              | Array of the behavioral targeting rules                                                              | Array of the behavioral targeting rules                                                  | array   |                                                            |
 | engagementInfo.skill                        | The chat skill                                                                                       | The conversation skill                                                                   | string  |                                                            |
 | engagementInfo.engagementType               | The engagement type                                                                                  | The engagement type                                                                      | string  |                                                            |
 | engagementInfo.engagementId                 | The engagement ID                                                                                    | The engagement ID                                                                        | string  |                                                            |
@@ -445,9 +445,9 @@ Structure example:
 
 | Property    | Description                             | Type   |
 |-------------|-----------------------------------------|--------|
-| id          | The ID of the target behavioral targeting   | number |
-| name        | The name of the behavioral targeting        | string |
-| description | The description of the behavioral targeting | string |
+| id          | The ID of the behavioral targeting rule   | number |
+| name        | The name of the behavioral targeting rule      | string |
+| description | The description of the behavioral targeting rule | string |
 
 Structure example:
 

@@ -855,7 +855,7 @@ The following table describes the information that is available in the eligibili
 | id | Engagement ID. | long |
 | channel | Channel type. | string |
 | type | Engagement type. | string. Values: <br> peeling corner = 0 <br> overlay = 1 <br> toaster = 2 <br> slide-out = 3 <br> embedded = 5 <br> sticky = 6 |
-| visitorBehaviors | List of behavioral targetings. | container |
+| visitorBehaviors | List of behavioral targeting rules. | container |
 | skillId | Engagement skill ID (in case a skill was defined for it). | int |
 | skillName | Engagement skill name (in case a skill was defined for it). | string |
 | surveySkills | List of skills defined for the survey. | container |
