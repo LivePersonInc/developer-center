@@ -12,23 +12,36 @@ redirect_from:
   - liveperson-functions-development-whitelisting-domains.html
   - liveperson-functions-development-whitelisting-domains.html#domains-whitelisted-by-default
 ---
-In order to leverage external domains inside your function(s), you'll need to whitelist them. This can also be done in the **Settings** section. We have a proxy in place which will check incoming requests from functions and see if the requested URL is whitelisted. To ease the usage of some Liveperson APIs, their domains are [whitelisted by default](liveperson-functions-development-whitelisting-domains.html#domains-whitelisted-by-default).
 
+The communication from function(s) to public websites is controlled by a whitelist. To leverage a domain inside a function it needs to be added to the whitelist. This can be achieved with sufficient permissions via the **Settings** section.
+Further during provisioning, a set of Liveperson APIs is added to a default whitelist. You can see them [here](liveperson-functions-development-whitelisting-domains.html#domains-whitelisted-by-default).
 
 <img src="img/faas-whitelisting.png" alt="LivePerson Functions Domain Whitelisting" style="width:100%;"/>
 
-Within the `lp-faas-toolbelt`, we provide a method that generates the required headers for communication with the proxy. A detailed explanation on how to use this feature is shown [here](function-as-a-service-deploying-functions.html#toolbelt).
+Generally, we will prevent the double whitelisting of a domain. The UI will also indicate that this occurred using a dedicated error message. We also perform validation on the provided domain in order to ensure it is a valid domain name.
 
-Please make sure to whitelist the **fully qualified domain name**. E.g. If you visit `https://liveperson.com` the server will actually redirect to [https://www.liveperson.com](https://www.liveperson.com), which means the domains you need to whitelist would be **www.liveperson.com** **and** **liveperson.com**.
+Please make sure to whitelist the **fully qualified domain name**. Further also simple wild-cards are allowed e.g. `*.example.com` but not `*.*.example.com`.
 
-Generally, we will prevent the double whitelisting of a domain. The UI will also indicate that this occurred using a dedicated error message. We also perform validation on the provided domain in order to ensure it is a valid domain name. For now, we do not support the whitelisting of subdomains such as **.example.com**.
+<div class="important">
+  <ul>
+    <li>Example:</li>
+    <li>If you visit `https://liveperson.com` the server will redirect to https://www.liveperson.com</li>
+    <li>This means you will need to whitelist both www.liveperson.com & liveperson.com or *.liveperson.com</li>
+  </ul>
+</div>
 
-**Please be aware** that it might take up to **5 minutes** until the whitelisted domain becomes active on the proxy.
+{:.notice}
+**Please be aware** that it might take up to **10 minutes** until the whitelisted domain becomes active on the proxy.
 
+Under the hood, the toolbelt configured the HTTP client to communicate with the proxy, which enforces the domain whitelist. Please see this [page](liveperson-functions-developing-with-faas-function-connectivity) for more information on general HTTP communication. 
 
-### Domains Whitelisted by Default
+{:.notice}
+Be aware that the proxy will close the socket if the request is to a domain that is not whitelisted, yielding a `Socket is closed`-Error for the function.
 
-To ease the usage of Liveperson APIs, the domains of the following services are whitelisted by default:
+### Default Domain Whitelist
+
+The following domains are whitelisted during the provisioning process and will be leveraged inside the toolbelt for some features (e.g. LPClient):
+
 * `accountConfigReadOnly`
 * `accountConfigReadWrite`
 * `agentVep`
