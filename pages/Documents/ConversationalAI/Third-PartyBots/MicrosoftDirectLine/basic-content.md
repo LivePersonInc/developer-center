@@ -256,7 +256,7 @@ This feature is depending on [permissions](https://knowledge.liveperson.com/cont
 This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
 
 
-The payload for a transfer request sent in the `channelData` is shown in Figure 2.4.
+The payload for a transfer request sent in the `channelData` is shown in Figure 2.6.
 The action must be named `TRANSFER` and a skill name alongside agentId must be provided.
 
 
