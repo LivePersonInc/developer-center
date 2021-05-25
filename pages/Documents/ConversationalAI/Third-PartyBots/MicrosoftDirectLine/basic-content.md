@@ -251,7 +251,7 @@ Figure 2.5 Microsoft BotBuilder example code
 #### Transfer To Agent
 
 {: .important}
-This feature is depending on [permissions](contact-center-management-messaging-operations-transfer-to-agent.html)
+This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
 
