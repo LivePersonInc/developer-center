@@ -54,11 +54,11 @@ When using Custom View Controller Mode, the Conversation view must be removed wh
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
-    LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
+    LPMessaging.instance.removeConversation(self.conversationQuery!)
 }
 ```
 
-**Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessagingSDK.instance.removeConversation(self.conversationQuery!)**.
+**Note**: When ViewController Mode is used, on the Navigation Bar Back Button, you can simply call **LPMessaging.instance.removeConversation(self.conversationQuery!)**.
 
 
 

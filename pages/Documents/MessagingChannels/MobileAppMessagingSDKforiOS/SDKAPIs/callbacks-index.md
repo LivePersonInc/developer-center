@@ -2,6 +2,7 @@
 pagename: Callbacks Index
 redirect_from:
   - consumer-experience-ios-sdk-callbacks-index.html
+  - consumer-experience-ios-sdk-callbacks.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
@@ -55,7 +56,7 @@ The SDK uses 2 delegates:
 To use the **LPMessagingSDKDelegate**, you'll need to initiate it, and conform the protocol with the required methods:
 
 ```swift
-LPMessagingSDK.instance.delegate = self
+LPMessaging.instance.delegate = self
 ```
 
 ###  LPMessagingSDKCustomButtonTapped

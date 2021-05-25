@@ -19,12 +19,22 @@ indicator: both
 
 
 <div class="card-container" style="margin-top:40px;">
+        <a class="welcome-card"  href="https://knowledge.liveperson.com/getting-started-getting-started-with-intents.html"> 
+        <img class="container-image" src="img/ic_robot.svg"/>
+        <h5 class="getstarted-title">CONVERSATIONAL AI </h5>
+        <h5 class="getstarted-content ">Understand consumer intents</h5>
+        </a>
+        <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-proactive-messaging.html"> 
+        <img class="container-image" src="img/ic_Facebook.svg"/>
+        <h5 class="getstarted-title">MESSAGING CHANNELS</h5>
+        <p class="getstarted-content ">Engage with consumers proactively</p>
+        </a>
         <a class="welcome-card" target="_blank" href="https://knowledge.liveperson.com/getting-started-getting-started-with-messaging.html"> 
         <img class="container-image" src="img/ic_Facebook.svg"/>
         <h5 class="getstarted-title">MESSAGING CHANNELS</h5>
         <p class="getstarted-content ">Customize your messaging operations</p>
         </a>
-        <a class="welcome-card"  href="/conversation-builder-tutorials-guides-getting-started.html#dialogs--patterns-tutorial"> 
+        <a class="welcome-card"  href="/tutorials-guides-getting-started-with-bot-building-overview.html"> 
         <img class="container-image" src="img/ic_robot.svg"/>
         <h5 class="getstarted-title">CONVERSATIONAL AI </h5>
         <h5 class="getstarted-content ">Create new bots and dialogs</h5>
@@ -50,13 +60,13 @@ indicator: both
                 </a>
             </div>
             <div class="link-padding" >
-                <a  href="/conversation-builder-tutorials-guides-getting-started.html#intents-tutorial"> 
+                <a  href="/tutorials-guides-getting-started-with-bot-building-overview.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                           Leverage intents in your bots
                 </a>
             </div>
             <div class="link-padding" >
-                <a  href="/conversation-orchestrator-dynamic-routing-tutorial.html"> 
+                <a  href="/conversation-orchestrator-dynamic-routing-overview.html"> 
                         <img class="dots-container" src="img/four-dots.svg"/>
                         Implement dynamic routing policies with Conversation Orchestrator
                 </a>

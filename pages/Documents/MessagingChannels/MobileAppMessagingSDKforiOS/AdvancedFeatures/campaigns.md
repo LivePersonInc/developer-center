@@ -55,7 +55,7 @@ The Monitoring APIs provide brands access to the LivePerson monitoring system. T
 // 1. Init SDK with Monitoring
 let monitoringInitParams = LPMonitoringInitParams(appInstallID: "appInstallID")
 do {
-    try LPMessagingSDK.instance.initialize("accountNumber", monitoringInitParams: monitoringInitParams)
+    try LPMessaging.instance.initialize("accountNumber", monitoringInitParams: monitoringInitParams)
 } catch let error as NSError {
     print("initialize error: \(error)")
     return
@@ -79,7 +79,7 @@ let monitoringParams = LPMonitoringParams(entryPoints: entryPoints, engagementAt
 let identity = LPMonitoringIdentity(consumerID: "consumerID", issuer: "BrandIssuer")
 
 // SendSDE
-LPMonitoringAPI.instance.sendSDE(identities: [identity], monitoringParams: monitoringParams, completion: { (sendSdeResponse) in
+LPMessaging.instance.sendSDE(identities: [identity], monitoringParams: monitoringParams, completion: { (sendSdeResponse) in
     print("received send sde response: \(String(describing: sendSdeResponse))")
     })
     { [weak self] (error) in
@@ -87,7 +87,7 @@ LPMonitoringAPI.instance.sendSDE(identities: [identity], monitoringParams: monit
     }
 
 // GetEngagement
-LPMonitoringAPI.instance.getEngagement(identities: [identity], monitoringParams: monitoringParams, completion: { (getEngagementResponse) in
+LPMessaging.instance.getEngagement(identities: [identity], monitoringParams: monitoringParams, completion: { (getEngagementResponse) in
     print("received get engagement response: \(String(describing: getEngagementResponse))")
 }) { [weak self] (error) in
     print("get engagement error: \(error.userInfo.description)")
@@ -98,10 +98,10 @@ LPMonitoringAPI.instance.getEngagement(identities: [identity], monitoringParams:
 
 let campaignInfo = LPCampaignInfo(campaignId: campaignID, engagementId: engagementID, contextId: contextID)
 // Add campaignInfo to conversationQuery
-let conversationQuery = LPMessagingSDK.instance.getConversationBrandQuery(accountNumber, campaignInfo: campaignInfo)
+let conversationQuery = LPMessaging.instance.getConversationBrandQuery(accountNumber, campaignInfo: campaignInfo)
 let conversationViewParam = LPConversationViewParams(conversationQuery: conversationQuery, isViewOnly: false)
 // show conversation using campaignInfo
-LPMessagingSDK.instance.showConversation(conversationViewParam)
+LPMessaging.instance.showConversation(conversationViewParam)
 ```
 
 

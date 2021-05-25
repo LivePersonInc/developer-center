@@ -13,6 +13,376 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.6.0
+
+**Release date:** May 3, 2021
+
+# Overview
+Android Mobile Messaging SDK version 5.6.0 release includes Voice & Video support and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.6.0 uses:
+- Minimum API version 21
+- Compile API version 30
+- Target API version 30
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 5.5.1)**
+
+# Maven Central
+
+Maven Central is the new repository for SDK v5.6.0 and above. 
+
+Maven Central Repository: [LivePerson Messaging SDK](https://search.maven.org/search?q=com.liveperson.android)
+
+Add `mavenCentral()` to the project level gradle file.
+
+```java
+repositories {
+    mavenCentral()
+}
+```
+
+# New Feature:
+
+Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
+<div style="width: 100%; position: relative;">
+    <img src="../../../../img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
+    <img src="../../../../img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
+</div>
+
+{:.important}
+Voice & Video capabilities are available only on Android SDK 5.6.0 and above. Only enabled for authentication mode: Code flow and JWT flow.
+
+KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-cobrowse-for-messaging.html)
+
+To enable the feature on your Conversational Cloud account please review the KB article
+
+### Features and Permissions
+Below is the list of features and permissions elements added in the manifest file to support this feature. 
+
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.webkit.resource.AUDIO_CAPTURE" />
+<uses-permission android:name="android.webkit.resource.VIDEO_CAPTURE" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+<uses-feature android:name="android.hardware.audio.pro" />
+<uses-feature android:name="android.hardware.microphone" />
+```
+
+If you want to allow consumers to download the app from Google Play Store, even if their devices don't support Audio latency, please add below features in your app's manifest file:
+
+```xml
+<uses-feature android:name="android.hardware.audio.pro"  android:required="false" tools:replace="required" />
+<uses-feature android:name="android.hardware.microphone"  android:required="false" tools:replace="required" />
+```
+
+Similarly for permissions, you can disable these permissions elements by adding:
+```xml
+<uses-permission android:name="android.permission.CAMERA" tools:node="remove" />
+<uses-permission android:name="android.webkit.resource.AUDIO_CAPTURE" tools:node="remove" />
+<uses-permission android:name="android.webkit.resource.VIDEO_CAPTURE" tools:node="remove" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" tools:node="remove" />
+```
+
+### How to enable:
+
+```xml
+<bool name="lp_enable_voice_video_call">true</bool>
+```
+
+
+### Branding and Configurations
+
+#### lp_enable_voice_video_call
+Enables or disables the ability for an Agent to start a voice or video call.
+
+- **Type:** bool
+- **Default value:** false
+
+#### lp_voice_call_image_icon
+Defines default Image icon for Voice Invite.
+
+- **Type:** drawable
+
+#### lp_video_call_image_icon
+Defines default Image icon for Video Invite.
+
+- **Type:** drawable
+
+#### lp_voice_video_accept_call_button_image
+Defines default background image for Accept button on Voice & Video Invite
+
+- **Type:** drawable
+
+#### lp_voice_video_decline_call_button_image
+Defines default background image for Decline button on Voice & Video Invite
+
+- **Type:** drawable
+
+#### lp_voice_video_end_call_button_image
+Defines default background image for End button on Voice & Video Invite
+
+- **Type:** drawable
+- **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
+- **Notes:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
+
+#### lp_voice_video_join_call_button_image
+Defines default background image for Join button on Voice & Video Invite
+
+- **Type:** drawable
+- **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
+
+---
+
+#### lp_voice_video_invite_icon_tint
+Defines default icon tint color on Voice & Video Invite
+
+- **Type:** color
+- **Default value:** gray
+
+#### lp_voice_video_accept_button_tint
+Defines default tint color for Accept/Join Button on Voice & Video Invite
+
+- **Type:** color
+- **Default value:** white
+- **Note:** This property controls both the Accept and Join call Button
+
+#### lp_voice_video_decline_button_tint
+Defines default tint color for Decline/End Button on Voice & Video Invite
+
+- **Type:** color
+- **Default value:** red
+- **Note:** This property controls both the Decline and End call Button
+
+#### lp_voice_video_accept_button_background_color
+Defines default background color for Accept/Join Button on Voice & Video Invite
+
+- **Type:** color
+- **Default value:** green
+- **Note:** This property controls both the Accept and Join call Button
+
+#### lp_voice_video_decline_button_background_color
+Defines default background color for Decline/End Button on Voice & Video Invite
+
+- **Type:** color
+- **Default value:** clear
+- **Note:** This property controls both the Decline and End call Button
+
+#### lp_voice_video_invite_icon_render_original_image
+Defines if use original image lp_video_call_image_icon or lp_voice_call_image_icon image for Voice or Video Invitation Icon
+
+- **Type:** boolean
+- **Default value:** false
+
+#### lp_voice_video_accept_button_render_original_image
+Defines if use original image lp_voice_video_accept_call_button_image or lp_voice_video_join_call_button_image for Accept Button on Voice & Video Invitation
+
+- **Type:** boolean
+- **Default value:** false
+
+#### lp_voice_video_decline_button_render_original_image
+Defines if use lp_voice_video_decline_call_button_image or lp_voice_video_end_call_button_image for Decline Button on Voice & Video Invitation
+
+- **Type:** boolean
+- **Default value:** false
+
+#### lp_voice_video_end_call_button_type
+Defines which icon to display on Join Button for Voice & Video Invitation
+
+0: Close
+1: Hangup
+
+- **Type:** integer
+- **Default value:** 0
+- **Preconditions:** This type is only shown on the Voice & Video Invite when Consumer has an active Call
+
+#### lp_voice_video_invitation_bubble_background_color
+Defines background color for Voice & Video Bubble
+
+- **Type:** color
+- **Default value:** light gray
+
+
+# Attribute Update:
+[lp_hide_ui_until_auth](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_hide_ui_until_auth) is added back.
+
+
+# Bugs Fixed:
+- Crash on conversation screen.
+- Removed "requestLegacyExternalStorage" from SDK.
+
+# Enhancements:
+- Accessibility enhancements.
+
+# Android Messaging SDK - Version 5.5.1
+
+**Release date:** February 19, 2021
+
+# Overview
+Android Mobile Messaging SDK version 5.5.1 release provides the push notification support for Huawei devices without Google Mobile Services and bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.5.1 uses:
+- Minimum API version 21
+- Compile API version 30
+- Target API version 30
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+# New API:
+
+## [registerLPPusher API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#registerlppusher)
+
+Added [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) to support Huawei devices without Google Play Services. Note: LivePerson [push notification service](push-notification-service-overview.html) doesn't support sending push notification directly to Huawei Push Kit. Only [push proxy](push-notification-service-configuration-of-push-proxy.html) is supported.
+
+The notificationType in payload for Huawei device is "huawei". See [Android payload json](push-notification-service-tls-authentication.html#payload) for details.
+
+```java
+public static void registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| brandId | The account ID, for example, 652838922. |
+| appId | The host app ID, for example, com.liveperson.myApp. |
+| deviceToken | The device token for push notification. |
+| pushType | The push notification type. See [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) for details. |
+| authenticationParams | An optional parameter that enables registering without first opening a conversation. |
+| registrationCompletedCallback | An optional callback on the registration status. |
+
+# Bugs Fixed:
+- Crash on conversation screen.
+
+
+# Android Messaging SDK - Version 5.5.0
+
+**Release date:** December 11, 2020
+
+# Overview
+Android Mobile Messaging SDK version 5.5.0 release focuses on improvements and bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.5.0 uses:
+- Minimum API version 21
+- Compile API version 30
+- Target API version 30
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(compileSdkVersion and targetSdkVersion bump to 30)**
+
+# New API:
+
+## [logOut API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#logout)
+
+If the logout call on the SDK fails, the local files will not get removed by the SDK. In order to solve this problem, we added a new logOut API to allow brands to perform a forced logout, which will perform the logout without waiting for LP pusher to unregister. In this way, we will not allow a failed logout call and therefore local files will always be removed.
+
+```java
+public static void logOut(Context context, String brandId, String appId, boolean forceLogOut, PushUnregisterType type, LogoutLivePersonCallback logoutCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| context | A context from the host app. |
+| brandId | An account ID. |
+| appId | The host app ID. |
+| forceLogOut | When true, SDK force a user logout no matter unregisterPusher succeed or failed. When false, SDK waits unregisterPusher succeed before logout. |
+| type | PushUnregisterType.ALL: User will be unregistered from pusher for both agent message and Proactive Messaging. |
+| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
+
+# Attribute Update:
+
+## [conversation_background](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#conversation_background)
+Added image support for Fragment mode. 
+Limitation: there will be distortion of background image when keyboard appears.
+
+# Bugs Fixed:
+- Crash on conversation screen.
+- Data masking system message text does not pick up app language.
+- Camera not working the first time request camere permission.
+
+
+# Android Messaging SDK - Version 5.4.0
+
+**Release date:** October 08, 2020
+
+# Overview
+Android Mobile Messaging SDK version 5.4.0 release includes  support  of auto logout with few bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.4.0 uses:
+- Minimum API version 21
+- Compile API version 29
+- Target API version 29
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(Minimum API version bump to 21. There is a known issue for API 19)**
+
+# New Features:
+## Auto logout - Improve logout options
+
+An SDK enhancement has been added that will prevent a second customer from viewing the chat history of the customer who chatted before them, while optimizing the flow in a way that clears just the necessary set of user information in a quick manner. This new feature adds an additional layer of security to our brand’s while verifying that conversation history and information will only be available to the consumer that was logged in to the app at the time of the conversation.
+
+### How to enable
+It’s enabled out of the box -  there’s nothing the brands need to do.
+
+Note: Auto logout works only for authenticated users. 
+
+# Attribute Update:
+[lp_hide_ui_until_auth](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#lp_hide_ui_until_auth) is removed. Previous conversations will now not be displayed automatically until the consumer's authentication information is validated.
+
+# Retry Mechanism Update:
+Notify host app immediately when failed to authenticate consumer instead of performing periodic retries.
+
+# New Callback:
+## Added following error events and error callback:
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
+>
+> - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
+> - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
+>
+> **Callback:** 
+>
+> onError(LpError lpError, String message);
+
+| Parameter | Type | Description |
+|----|----|----|
+| lpError | LpError (enum)| The error.   |
+| message | String        | A detailed message on the error. |
+
+More details can be found at [LivePerson Callbacks](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks)
+
+## Added [LpError enum](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#lperror-enum)
+```java
+enum class LpError {
+  IDP,
+  CSDS,
+  INVALID_CERTIFICATE,
+  SOCKET,
+  TIMEOUT,
+  INVALID_SDK_VERSION,
+  UNKNOWN
+}
+```
+
+| Type | Description |
+|----|----|
+| IDP                 | An error occurred during the authentication process, which is usually because of a wrong or expired authentication key. |
+| CSDS                | Error while requesting domains. |
+| INVALID_CERTIFICATE | Error with a peer's certificate (server cert not valid, cert pinning mismatch, etc). |
+| SOCKET              | Error opening a socket to the server or a request has timed out while trying to reach a server, and as a result we are closing our socket. |
+| TIMEOUT             | A general timed out error. |
+| INVALID_SDK_VERSION | Your host app is using an old SDK version and cannot be initialized. |
+| UNKNOWN             | General SDK error. |
+
+# Bugs Fixed:
+- Android SDK crash due to empty RecyclerView object.
+- “link_preview_enable_feature” configuration is not working as expected.
+- [Messaging.reconnect()](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect) does not work when the token is not expired.
+- SDK fails to connect when opened a conversation screen using a valid JWT and host app is missing reconnect mechanism.
+
 # Android Messaging SDK - Version 5.3.0
 
 **Release date:** August 10, 2020
@@ -301,6 +671,392 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **handlePush(Context context, Bundle data, String brandId, boolean showNotification)** , use *handlePushMessage(Context context, Map<String, String> remoteMessage, String brandId, boolean showNotification)* instead
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
+
+# Android Messaging SDK - Version 4.8.1
+
+**Release date:** April 26, 2021
+
+# Overview
+Android Mobile Messaging SDK version 4.8.1 release includes Voice & Video support and enhancements. 
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.8.1 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.7.1)**
+
+# Maven Central
+
+Maven Central is the new repository for SDK v4.8.1 and above. 
+
+Maven Central Repository: [LivePerson Messaging SDK](https://search.maven.org/search?q=com.liveperson.android)
+
+Add `mavenCentral()` to the project level gradle file.
+
+```java
+repositories {
+    mavenCentral()
+}
+```
+
+# New Feature:
+
+Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
+<div style="width: 100%; position: relative;">
+    <img src="../../../../img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
+    <img src="../../../../img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
+</div>
+
+{:.important}
+Voice & Video capabilities are available only on Android SDK 4.8.1 and above. Only enabled for authentication mode: Code flow and JWT flow.
+
+KB article: [Voice & Video Overview](https://knowledge.liveperson.com/agent-manager-workspace-agent-tools-for-messaging-agent-workspace-for-messaging-cobrowse-for-messaging.html)
+
+To enable the feature on your Conversational Cloud account please review the KB article
+
+### Features and Permissions
+Below is the list of features and permissions elements added in the manifest file to support this feature. 
+
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.webkit.resource.AUDIO_CAPTURE" />
+<uses-permission android:name="android.webkit.resource.VIDEO_CAPTURE" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+<uses-feature android:name="android.hardware.audio.pro" />
+<uses-feature android:name="android.hardware.microphone" />
+```
+
+If you want to allow consumers to download the app from Google Play Store, even if their devices don't support Audio latency, please add below features in your app's manifest file:
+
+```xml
+<uses-feature android:name="android.hardware.audio.pro"  android:required="false" tools:replace="required" />
+<uses-feature android:name="android.hardware.microphone"  android:required="false" tools:replace="required" />
+```
+
+Similarly for permissions, you can disable these permissions elements by adding:
+```xml
+<uses-permission android:name="android.permission.CAMERA" tools:node="remove" />
+<uses-permission android:name="android.webkit.resource.AUDIO_CAPTURE" tools:node="remove" />
+<uses-permission android:name="android.webkit.resource.VIDEO_CAPTURE" tools:node="remove" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" tools:node="remove" />
+```
+
+### How to enable:
+
+```xml
+<bool name="lp_enable_voice_video_call">true</bool>
+```
+
+
+### Branding and Configurations
+
+#### lp_enable_voice_video_call
+Enables or disables the ability for an Agent to start a voice or video call.
+
+- **Type:** bool
+- **Default value:** false
+
+#### lp_voice_call_image_icon
+Defines default Image icon for Voice Invite.
+
+- **Type:** drawable
+
+#### lp_video_call_image_icon
+Defines default Image icon for Video Invite.
+
+- **Type:** drawable
+
+#### lp_voice_video_accept_call_button_image
+Defines default background image for Accept button on Voice & Video Invite
+
+- **Type:** drawable
+
+#### lp_voice_video_decline_call_button_image
+Defines default background image for Decline button on Voice & Video Invite
+
+- **Type:** drawable
+
+#### lp_voice_video_end_call_button_image
+Defines default background image for End button on Voice & Video Invite
+
+- **Type:** drawable
+- **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
+- **Notes:** To enable this image lp_voice_video_end_call_button_type should be set to hangup`
+
+#### lp_voice_video_join_call_button_image
+Defines default background image for Join button on Voice & Video Invite
+
+- **Type:** drawable
+- **Preconditions:** This image is only shown on the Voice & Video Invite when Consumer has an active Call
+
+---
+
+#### lp_voice_video_invite_icon_tint
+Defines default icon tint color on Voice & Video Invite
+
+- **Type:** color
+- **Default value:** gray
+
+#### lp_voice_video_accept_button_tint
+Defines default tint color for Accept/Join Button on Voice & Video Invite
+
+- **Type:** color
+- **Default value:** white
+- **Note:** This property controls both the Accept and Join call Button
+
+#### lp_voice_video_decline_button_tint
+Defines default tint color for Decline/End Button on Voice & Video Invite
+
+- **Type:** color
+- **Default value:** red
+- **Note:** This property controls both the Decline and End call Button
+
+#### lp_voice_video_accept_button_background_color
+Defines default background color for Accept/Join Button on Voice & Video Invite
+
+- **Type:** color
+- **Default value:** green
+- **Note:** This property controls both the Accept and Join call Button
+
+#### lp_voice_video_decline_button_background_color
+Defines default background color for Decline/End Button on Voice & Video Invite
+
+- **Type:** color
+- **Default value:** clear
+- **Note:** This property controls both the Decline and End call Button
+
+#### lp_voice_video_invite_icon_render_original_image
+Defines if use original image lp_video_call_image_icon or lp_voice_call_image_icon image for Voice or Video Invitation Icon
+
+- **Type:** boolean
+- **Default value:** false
+
+#### lp_voice_video_accept_button_render_original_image
+Defines if use original image lp_voice_video_accept_call_button_image or lp_voice_video_join_call_button_image for Accept Button on Voice & Video Invitation
+
+- **Type:** boolean
+- **Default value:** false
+
+#### lp_voice_video_decline_button_render_original_image
+Defines if use lp_voice_video_decline_call_button_image or lp_voice_video_end_call_button_image for Decline Button on Voice & Video Invitation
+
+- **Type:** boolean
+- **Default value:** false
+
+#### lp_voice_video_end_call_button_type
+Defines which icon to display on Join Button for Voice & Video Invitation
+
+0: Close
+1: Hangup
+
+- **Type:** integer
+- **Default value:** 0
+- **Preconditions:** This type is only shown on the Voice & Video Invite when Consumer has an active Call
+
+#### lp_voice_video_invitation_bubble_background_color
+Defines background color for Voice & Video Bubble
+
+- **Type:** color
+- **Default value:** light gray
+
+
+# Attribute Update:
+[lp_hide_ui_until_auth](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html#lp_hide_ui_until_auth) is added back.
+
+
+# Bugs Fixed:
+- Crash on conversation screen.
+
+# Enhancements:
+- Accessibility enhancements.
+
+# Android Messaging SDK - Version 4.7.1
+
+**Release date:** February 19, 2021
+
+# Overview
+Android Mobile Messaging SDK version 4.7.1 release provides the push notification support for Huawei devices without Google Mobile Services and bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.7.1 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.7.0)**
+
+# New API:
+
+## [registerLPPusher API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#registerlppusher)
+
+Added [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) to support Huawei devices without Google Play Services. Note: LivePerson [push notification service](push-notification-service-overview.html) doesn't support sending push notification directly to Huawei Push Kit. Only [push proxy](push-notification-service-configuration-of-push-proxy.html) is supported.
+
+The notificationType in payload for Huawei device is "huawei". See [Android payload json](push-notification-service-tls-authentication.html#payload) for details.
+
+```java
+public static void registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| brandId | The account ID, for example, 652838922. |
+| appId | The host app ID, for example, com.liveperson.myApp. |
+| deviceToken | The device token for push notification. |
+| pushType | The push notification type. See [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) for details. |
+| authenticationParams | An optional parameter that enables registering without first opening a conversation. |
+| registrationCompletedCallback | An optional callback on the registration status. |
+
+# Bugs Fixed:
+- Crash on conversation screen.
+
+
+# Android Messaging SDK - Version 4.7.0
+
+**Release date:** December 11, 2020
+
+# Overview
+Android Mobile Messaging SDK version 4.7.0 release focuses on improvements and bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.7.0 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.6.1)**
+
+# New API:
+
+## [logOut API](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#logout)
+
+If the logout call on the SDK fails, the local files will not get removed by the SDK. In order to solve this problem, we added a new logOut API to allow brands to perform a forced logout, which will perform the logout without waiting for LP pusher to unregister. In this way, we will not allow a failed logout call and therefore local files will always be removed.
+
+```java
+public static void logOut(Context context, String brandId, String appId, boolean forceLogOut, PushUnregisterType type, LogoutLivePersonCallback logoutCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| context | A context from the host app. |
+| brandId | An account ID. |
+| appId | The host app ID. |
+| forceLogOut | When true, SDK force a user logout no matter unregisterPusher succeed or failed. When false, SDK waits unregisterPusher succeed before logout. |
+| type | PushUnregisterType.ALL: User will be unregistered from pusher for both agent message and Proactive Messaging. |
+| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
+
+# Attribute Update:
+
+## [conversation_background](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html#conversation_background)
+Added image support for Fragment mode. 
+Limitation: there will be distortion of background image when keyboard appears.
+
+# Bugs Fixed:
+- Crash on conversation screen.
+- Data masking system message text does not pick up app language.
+- Camera not working the first time request camere permission.
+
+# Android Messaging SDK - Version 4.6.1
+
+**Release date:** October 08, 2020
+
+# Overview
+Android Mobile Messaging SDK version 4.6.1 release includes the change of retry mechanism of authentication. SDK will notify host app immediately when failed to authenticate consumer instead of performing periodic retries.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.6.1 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.6.0)**
+
+# New Callback:
+## Added following error events and error callback:
+> **Intent Action:** 
+>
+> ILivePersonIntentAction.LP_ON_ERROR_TYPE_INTENT_ACTION
+>
+> - To get the type param from the Intent, use LivePersonIntents.getErrorType(intent).
+> - To get the message param from the Intent, use LivePersonIntents.getOnErrorMessage(intent).
+>
+> **Callback:** 
+>
+> onError(LpError lpError, String message);
+
+| Parameter | Type | Description |
+|----|----|----|
+| lpError | LpError (enum)| The error.   |
+| message | String        | A detailed message on the error. |
+
+More details can be found at [LivePerson Callbacks](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks)
+
+## Added [LpError enum](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#lperror-enum)
+```java
+enum class LpError {
+  IDP,
+  CSDS,
+  INVALID_CERTIFICATE,
+  SOCKET,
+  TIMEOUT,
+  INVALID_SDK_VERSION,
+  UNKNOWN
+}
+```
+
+| Type | Description |
+|----|----|
+| IDP                 | An error occurred during the authentication process, which is usually because of a wrong or expired authentication key. |
+| CSDS                | Error while requesting domains. |
+| INVALID_CERTIFICATE | Error with a peer's certificate (server cert not valid, cert pinning mismatch, etc). |
+| SOCKET              | Error opening a socket to the server or a request has timed out while trying to reach a server, and as a result we are closing our socket. |
+| TIMEOUT             | A general timed out error. |
+| INVALID_SDK_VERSION | Your host app is using an old SDK version and cannot be initialized. |
+| UNKNOWN             | General SDK error. |
+
+# Deprecations:
+The old Error Events [ILivePersonIntentAction.LP_ON_ERROR_INTENT_ACTION](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#error-events) and [Error Callback: void onError(TaskType type, String message);](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#liveperson-callbacks) are deprecated. 
+
+# Android Messaging SDK - Version 4.6.0
+
+**Release date:** September 16, 2020
+
+# Overview
+Android Mobile Messaging SDK version 4.6.0 release includes  support  of auto logout with few bug fixes.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.6.0 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(Minimum API version bump to 21. There is a known issue for API 19)**
+
+# New Features:
+## Auto logout - Improve logout options
+
+An SDK enhancement has been added that will prevent a second customer from viewing the chat history of the customer who chatted before them, while optimizing the flow in a way that clears just the necessary set of user information in a quick manner. This new feature adds an additional layer of security to our brand’s while verifying that conversation history and information will only be available to the consumer that was logged in to the app at the time of the conversation.
+
+### How to enable
+It’s enabled out of the box -  there’s nothing the brands need to do.
+
+Note: Auto logout works only for authenticated users. 
+
+# Attribute Update:
+[lp_hide_ui_until_auth](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-below.html#lp_hide_ui_until_auth) is removed. Previous conversations will now not be displayed automatically until the consumer's authentication information is validated.
+
+# Bugs Fixed:
+- Android SDK crash due to empty RecyclerView object.
+- “link_preview_enable_feature” configuration is not working as expected.
+- [Messaging.reconnect()](mobile-app-messaging-sdk-for-android-sdk-apis-messaging-api.html#reconnect) does not work when the token is not expired.
+- SDK fails to connect when opened a conversation screen using a valid JWT and host app is missing reconnect mechanism.
 
 
 # Android Messaging SDK - Version 4.5.0

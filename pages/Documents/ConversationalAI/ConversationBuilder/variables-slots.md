@@ -43,6 +43,10 @@ You can also use `{$query}` in the same way; it works like `{$userMessage}`.
 
 The [Get and Set Bot Variables functions](conversation-builder-scripting-functions-get-set-contextual-data.html#get-and-set-bot-variable) can be used to store and access variables in the Pre-Process / Post-Process Code or the Process User Response JavaScript [code panels](conversation-builder-interactions-configuration-custom-code.html).
 
+#### Cleaning variable data
+
+Before setting or storing data in a variable, in the [Process User Response code](conversation-builder-interactions-configuration-custom-code.html#process-user-response), it's a good idea to "clean" or "sanitize" the data by parsing it and transforming it to remove problematic issues, i.e., remove leading or trailing white space, remove new lines ( \\n ) and special characters, and so on.
+
 ### Slots
 
 Slots are a *special type* of variable. Most of the time, you will use [variables](#variables) to take what a user says and hold on to it for later use. Slots are useful for more specialized use cases.
@@ -71,8 +75,8 @@ If your bot asked the user "which animal do you like?" and the user answered "do
 
 Slot-filling becomes especially useful when mining the entities that make up a user's intent to pre-populate your list of questions, and streamline the data collection process.
 
-1. Create a [new dialog](conversation-builder-dialogs-dialog-basics.html#create-a-new-dialog) and associate an [intent from your domain](conversation-builder-intent-builder-overview.html) as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
-2. Now, devise a few [entities](intent-builder-entities.html) that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `item` with `pants, shoes, shirt, underwear`. and finally, one for `size` with the values `small, medium, and large`. Before moving on, [update and train](intent-builder-domains.html#train-a-liveperson-nlu-v2-domain) the `order item` intent with some representative training phrases that contain these entities.
+1. Create a [new dialog](conversation-builder-dialogs-dialog-basics.html#create-a-dialog) and associate an [intent from your domain](conversation-builder-intent-builder-overview.html) as the dialog starter. For this example we will create the dialog `ordering` with the domain intent `order item`.
+2. Now, devise a few [entities](intent-builder-entities.html) that will be captured in our intent. For this example, we are going to create an entity for `color` with the values `blue, white, and red`, one for `item` with `pants, shoes, shirt, underwear`. and finally, one for `size` with the values `small, medium, and large`. Before moving on, [update and train](intent-builder-domains.html#train-a-liveperson-domain) the `order item` intent with some representative training phrases that contain these entities.
 3. Next we will create the [questions](conversation-builder-interactions-questions.html#types-of-questions) our dialog will ask. You should add one question interaction per slot that you are looking to fill. Using [Assist](conversation-builder-nlu-assist.html#assigning-an-intent-to-an-interaction), assign your entities to the relevant questions, for example:
 
     <img style="width:900px" class="fancyimage" src="img/ConvoBuilder/variables_and_slots/slot_nluassist.png">
@@ -108,16 +112,24 @@ When you define a variable or slot, you specify how long to keep the stored data
 
 <img class="fancyimage" width="800" src="img/ConvoBuilder/variablesSlotsDuration.png">
 
-There are four options for the duration:
+There are three options for the duration:
 
 * **Request**: The data will be saved for that particular use of the variable or slot. This option is only useful if the next question in the tree depends on the data.
 
 * **Dialog**: The data will be stored for the specific dialog. Once the dialog ends (either by the consumer closing the conversation or the bot switching to a different dialog), the data will be cleared.
 
-* **Session**: The data will be saved for the entirety of the consumer's browser session. This is useful when using the data to query APIs and retrieve information that might be useful for multiple dialogs.
+* **Session**: The data will be saved for the entirety of the consumer's automation session. This is useful when using the data to query APIs and retrieve information that might be useful across the entire bot.
 
-* **Forever**: The data will be saved and accessible by the bot for 180 days. **Note**: The "Forever" option will be deprecated in a future release. Use of the [Context Session Store](conversation-builder-scripting-functions-manage-the-context-session-store.html) instead of this option is recommended.
+If you need to store data for the long term, use the [Conversation Context Service](conversation-builder-scripting-functions-manage-the-conversation-context-service.html).
 
-### Displaying data to the consumer
+### Using variables and slots in interactions
 
-[See here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions) for how to display variables and slots in interactions.
+`{}` is used for inserting dynamic values inside of interactions:
+
+  * Bot variable: `{$botContext.botVariableName}`
+
+  * Slot: `{$botContext.slot.slotName}`
+
+  * [Environment variable](conversation-builder-environment-variables.html): `{$env.envVariableName}`
+
+  * API integration [custom data field](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields): `{apiName.variableName}`

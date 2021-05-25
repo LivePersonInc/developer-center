@@ -471,7 +471,7 @@ Based on the [Structured Content Basic Element Text](structured-content-introduc
 
 ##### Button Element Properties
 
-Based on the [Structured Content Basic Element Button](structured-content-introduction-to-structured-content.html#button) element with the following restrictions:
+A button element is required for the representation on the Agent workspace side. The content will not be visible on the List Picker that is shown on the consumer device. The text that is getting published after selecting a list picker is always the title of the vertical element. Based on the [Structured Content Basic Element Button](structured-content-introduction-to-structured-content.html#button) element with the following restrictions:
 
 | Property Name | Description                                        | Type | Required | Size Limit |
 | :------------ | :------------------------------------------------- | :--- | :------- | :--------- |

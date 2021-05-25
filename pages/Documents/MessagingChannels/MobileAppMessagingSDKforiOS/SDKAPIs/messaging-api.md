@@ -212,7 +212,7 @@ To receive all incoming push notifications in a single function and handle them,
 
 ```swift
 func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-    LPMessagingSDK.instance.handlePush(userInfo)
+    LPMessaging.instance.handlePush(userInfo)
 }
 ```
 
@@ -260,7 +260,7 @@ Use this API method to clean a user's data before a second user logs into the sa
 
 The `logout` method conducts the following:
 
-* Unregisters from the push notification service.
+* Unregisters from the push notification service based on unregister type provided.
 
 * Clears all SDK persistent data.
 
@@ -268,16 +268,28 @@ The `logout` method conducts the following:
 
 
 ```swift
-func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())
+func logout(unregisterType: LPPusherUnregisterType, 
+            completion: @escaping ()->(), 
+            failure: @escaping (_ error: Error)->())
 ```
 
 | Parameter | Description | Notes |
 | :--- | :--- | :--- |
+| LPPusherUnregisterType | An enum representing the pusher unregister type | The default option if none provided will be .ALL |
 | Completion block | A completion block for successfully logout. | Completion block invokes only if all logout steps succeeded. |
 | Failure block | A failure block with a specified error for logout failure. | Failure block invokes if at least one of the logout steps has failed. |
 
 {:.important}
 After calling `logout,` and before calling any other SDK methods, we recommend that you `initialize` again.  For details, see [initialized](https://developers.liveperson.com/consumer-experience-ios-sdk-messaging-methods.html#initialize).
+
+
+#### LPPusherUnregisterType
+* **All**: unregister for all types of push notification messages
+
+* **None**: do not unregister from the pusher at all
+
+* **Agent**: Unregister only for agent push notification messages. Consumers can still receive outbound push notifications sent from the Proactive or Connect to Messaging (IVR) services.
+
 
 ### markAsUrgent
 
@@ -370,11 +382,11 @@ When using Custom View Controller Mode, you must configure it so that you remove
 
 ```swift
 if (self.conversationQuery != nil && self.isMovingToParentViewController){
-  LPMessagingSDK.instance.removeConversation(self.conversationQuery!)
+  LPMessaging.instance.removeConversation(self.conversationQuery!)
 }
 ```
 
-**Note:** When using ViewController Mode, and on the Navigation Bar Back Button, you can simply call `LPMessagingSDK.instance.removeConversation(self.conversationQuery!)`.
+**Note:** When using ViewController Mode, and on the Navigation Bar Back Button, you can simply call `LPMessaging.instance.removeConversation(self.conversationQuery!)`.
 
 ### resolveConversation
 
@@ -392,7 +404,7 @@ func resolveConversation(_ conversation: Conversation, completion: (() -> Void)?
 
 ### setLoggingLevel
 
-Setter for the logging level of console logs produced by LPMessaging iOS SDK. (Lives within the LPInfraFacade). This will be replacing the previous functionality via LogsManager. 
+Setter for the logging level of console logs produced by LPMessaging iOS SDK. (Lives within the LPMessaging). This will be replacing the previous functionality via LogsManager. 
 
 ```swift
 class func setLoggingLevel( level: LPLoggingLevel)
@@ -404,7 +416,7 @@ class func setLoggingLevel( level: LPLoggingLevel)
 
 ### getLogSnapShot
 
-The mechanism to retrieve LPMessagingIOS SDK logs in an array of Strings (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+The mechanism to retrieve LPMessagingIOS SDK logs in an array of Strings (Lives within the LPMessaging).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
 
 ```swift
 class func getLogSnapshot(level: LPLoggingLevel) -> [String]
@@ -416,7 +428,7 @@ class func getLogSnapshot(level: LPLoggingLevel) -> [String]
 
 ### getLogStringBlock
 
-The mechanism to retrieve LPMessagingIOS SDK logs in a single String block (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+The mechanism to retrieve LPMessagingIOS SDK logs in a single String block (Lives within the LPMessaging).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
 
 ```swift
 class func getLogSnapshot(level: LPLoggingLevel) -> [String]
@@ -428,7 +440,7 @@ class func getLogSnapshot(level: LPLoggingLevel) -> [String]
 
 ### setDataMaskingEnabled
 
-Should masking PII be enabled for the logging (Lives within the LPInfraFacade).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
+Should masking PII be enabled for the logging (Lives within the LPMessaging).  This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
 
 ```swift
 class func getLogSnapshot(level: LPLoggingLevel) -> [String]
@@ -572,7 +584,23 @@ This method conducts the following:
 * Cleans running operations (see [destruct](consumer-experience-ios-sdk-messaging-methods.html#destruct))
 
 ```swift
-func logout() (Deprecated)
+func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())
+```
+
+*This method was deprecated since SDK version 6.2.0. Use [func logout(unregisterType: LPPusherUnregisterType, completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](consumer-experience-ios-sdk-messaging-methods.html#logout) instead*
+
+#### logout (Deprecated)
+
+This method is a destructive method that is typically used to clean a user’s data before a second user logs into the same device or just to log the current user out.
+
+This method conducts the following:
+
+* Unregisters from the push notification service.
+* Clears all SDK persistent data.
+* Cleans running operations (see [destruct](consumer-experience-ios-sdk-messaging-methods.html#destruct))
+
+```swift
+func logout()
 ```
 
 *This method was deprecated since SDK version 2.8.0. Use [func logout(completion: @escaping ()->(), failure: @escaping (_ error: Error)->())](consumer-experience-ios-sdk-messaging-methods.html#logout) instead*

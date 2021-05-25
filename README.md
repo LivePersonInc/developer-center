@@ -9,14 +9,11 @@ This repository generates LivePerson's Developer Center, which can be found at h
 
 **Table of Contents**
 
-* :satellite:[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
-
-* :hammer:[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
-
-* :clipboard:[Template](https://github.com/LivePersonInc/developers-community#template)
-
-* :scroll:[Licensing](https://github.com/LivePersonInc/developers-community#licensing)
-
+* :satellite: &nbsp; &nbsp;[Updating the Documentation](https://github.com/LivePersonInc/developers-community#updating-the-documentation)
+* :hammer: &nbsp; &nbsp;[Building the Site Locally](https://github.com/LivePersonInc/developers-community#building-the-site-locally)
+* :clipboard: &nbsp; &nbsp;[Template](https://github.com/LivePersonInc/developers-community#template)
+* :scroll: &nbsp; &nbsp;[Licensing](https://github.com/LivePersonInc/developers-community#licensing)
+* :ghost: &nbsp; &nbsp;[How to Hide files and still make them Accessible](https://github.com/LivePersonInc/developers-community#hiding-files)
 ### Updating the Documentation
 
 All pages on the site correspond to a Markdown file (.md) which can be found inside `pages/Documents`. 
@@ -146,7 +143,7 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
 
 * `keywords`: This replaces the keywords found in the `<meta>` tag of the page. Leave it unpopulated.
 
-* `documentname`: This key accepts either `Documents` or `Solutions`. This designates which part of the site the document is under.
+* `sitesection`: This key accepts either `Documents` or `Solutions`. This designates which part of the site the document is under.
 
 * `categoryname`: This is the category to which the document's API belongs (for example, the "Create Users" method belongs to the Users API which is under Contact Center Management).
 
@@ -161,6 +158,14 @@ Jekyll uses a [front-matter](https://jekyllrb.com/docs/frontmatter/) to arrange 
   * If the page does not have a `subfoldername` value: documentname - pagename. For example: users-api-overview.html
 
 * `indicator`: this key sets the Chat or Messaging indicator (or both) on a document. It accepts `chat`, `messaging` or `both` as its value.
+
+* `layout`: set the value to `hidden-layout` if you want this file to be ignored in search engines
+
+### Hiding Files
+* Add the Files to the Hidden->Hidden folder. 
+* Do not include them to documentsupdated.yaml file. 
+* Make sure Layout header is set to  `hidden-layout` (This specifically makes it so search engines can't find it)
+* Make sure that the headers are set correctly follow the file header structure of `blank.md` in the Hidden->Hidden folder
 
 **Any other parameters which are not documented here which you might find in the front-matter are deprecated and are only present for backwards compatibility purposes. These should not be used**.
 
@@ -203,6 +208,10 @@ You have two options to run the site locally after the first install:
 
 See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to Product Communications *before* starting to write your document so that we can advise on its structure.
 
+### Algolia
+Aloglia is the tool we use for the search bar. It generates a list of searchable items by indexing it in their dashboard which is then pulled into the search bar within the project
+
+To get the latest data to be added into algolia simply do a pull request on the production branch (master)
 
 ### Licensing
 

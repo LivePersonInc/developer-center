@@ -59,7 +59,7 @@ CampaignInfo campaignInfo = new CampaignInfo(campaignId, engagementId, engagemen
 // Adding the created CampaignInfo to the conversationViewParams
 conversationViewParams.setCampaignInfo(campaignInfo);
 
-LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationParams.LPAuthenticationType.AUTH);
+LPAuthenticationParams lpAuthenticationParams = new LPAuthenticationParams(LPAuthenticationType.AUTH);
 lpAuthenticationParams.setAuthKey(authCode);
 
 // Presenting the conversation window. If a new conversation starts, it will be routed according to the engagement in campaignInfo

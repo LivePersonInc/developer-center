@@ -10,7 +10,7 @@ permalink: mobile-app-messaging-sdk-for-ios-advanced-features-logging.html
 indicator: messaging
 ---
 
-The LivePerson Mobile SDK's Logging system has been redesigned in iOS SDK 5.2.0 to bring enhanced customer control and data safety to what we send to the system logs. This new has the following functionality located within the `LPInfraFacade`.
+The LivePerson Mobile SDK's Logging system has been redesigned in iOS SDK 5.2.0 to bring enhanced customer control and data safety to what we send to the system logs. This new has the following functionality located within the `LPMessaging`.
 
 ## Precise Logging Level Control
 
@@ -25,7 +25,11 @@ The LivePerson Mobile SDK can now be set to one of six different verbosity setti
 
 As is standard with most logging systems, each of these settings also includes all levels below it. Setting the SDK Logging Level to **OFF** disables SDK logging entirely.  The LivePerson Mobile SDK's will retain up to 100 lines of logs for combined all logging levels regardless of the logging level.  This means that if the logging level is set to "ERROR" for example, you may not be able to retrieve the last 100 logs recorded.    
 
-The default log level is **INFO** in Release builds, and **TRACE** in Debug builds.
+{:.deprecated}
+For SDK 6.0.X and below, the default log level is **INFO** in Release builds, and **TRACE** in Debug builds.
+
+{:.important}
+Since SDK 6.1, the default log level is **INFO** in Release builds, and **DEBUG** in Debug builds.
 
 You can adjust the logging level with the following method:
 
@@ -36,7 +40,7 @@ You can adjust the logging level with the following method:
      - level: The level of logging options in order: (.TRACE, .DEBUG, .INFO, .WARNING, .ERROR, .OFF)
  - Info: The default value for release mode is .INFO and for debug is .TRACE.  Apps should not log lower than .INFO in release configurations.
  - Discussion: This will be replacing the previous functionality via LogsManager.
- LPInfraFacade.setLoggingLevel( level: LPLoggingLevel)
+ LPMessaging.instance.setLoggingLevel( level: LPLoggingLevel)
 ```
 
 **WARNING:** While reducing the SDK logging level can reduce how much spam is sent to your system logs, doing so may hinder LivePerson Support Staff from assisting with issues, should system logs be necessary to resolve any future issues.
@@ -49,9 +53,9 @@ The logging level setting are kept as *static* variables, and thus persist for t
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
     #if RELEASE
-        LPInfraFacade.setLoggingLevel(level: .WARN)
+        LPMessaging.instance.setLoggingLevel(level: .WARN)
     #else
-        LPInfraFacade.setLoggingLevel(level: .TRACE)
+        LPMessaging.instance.setLoggingLevel(level: .TRACE)
     #endif
     return true
 }
@@ -68,7 +72,7 @@ The logs within the LivePerson Mobile SDK remain until new logs overwrite them (
  - Returns: An array of strings consisting of up to the last 100 logs based on the log level.
  - Info: The logger only records the last 100 logs total, filtering by log level may reduce the number of logs returned.
  - Discussion: This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
- LPInfraFacade.getLogSnapshot(level: LPLoggingLevel) -> [String]
+ LPMessaging.instance.getLogSnapshot(level: LPLoggingLevel) -> [String]
 
  The mechanism to retrieve LPMessagingIOS SDK logs in a single String block.
 
@@ -77,7 +81,7 @@ The logs within the LivePerson Mobile SDK remain until new logs overwrite them (
  - Returns: An array of strings consisting of up to the last 100 logs based on the log level.
  - Info: The logger only records the last 100 logs total, filtering by log level may reduce the number of logs returned.
  - Discussion: This will be replacing the previous functionality via LogsManager.  The log history does not adhere to the logging level filter.  The log history records all log levels.  You can filter the logs returned by using the 'level' parameter in the same way you can filter the logging level. However be aware log snapshot and logging level work independently.
- LPInfraFacade.getLogStringBlock(level: LPLoggingLevel) -> String
+ LPMessaging.instance.getLogStringBlock(level: LPLoggingLevel) -> String
 ```
 ## Log Data Masking
 
@@ -93,7 +97,7 @@ Should masking PII be enabled for the logging
  - Parameters:
      - enabled: Is masking PII enabled for the logs.
  - Info: This is enabled by default for Release builds.
- LPInfraFacade.setDataMaskingEnabled(enabled: Bool)
+ LPMessaging.instance.setDataMaskingEnabled(enabled: Bool)
 ```
 
 ## Persistence
@@ -104,9 +108,9 @@ These setting are kept as *static* variables, and thus persist for the lifetime 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
     #if RELEASE
-        LPInfraFacade.setLoggingLevel(level: .WARN)
+        LPMessaging.instance.setLoggingLevel(level: .WARN)
     #else
-        LPInfraFacade.setLoggingLevel(level: .TRACE)
+        LPMessaging.instance.setLoggingLevel(level: .TRACE)
     #endif
     return true
 }

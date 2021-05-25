@@ -26,7 +26,7 @@ For the purpose of configuring these APIs, we will need the following:
 
 #### Bearer token retrieval
 
-For authorization purposes, these API requires that a bearer token be passed along in an authorization header. To retrieve this bearer token, we'll take advantage of the [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-and-previous-skills) scripting function. Insert the following code within the `__initConversation()` function inside of **Global Functions**.
+For authorization purposes, these API requires that a bearer token be passed along in an authorization header. To retrieve this bearer token, we'll take advantage of the [getLPEngagementAttribute](conversation-builder-scripting-functions-get-set-contextual-data.html#get-lp-engagement-attribute) scripting function. Insert the following code within the `__initConversation()` function inside of **Global Functions**.
 
 ```javascript
 // Bearer Token Needed for Messaging Queue Health & Shift Status APIs
