@@ -24,8 +24,8 @@ An article is a focused piece of content (a message) on a single topic that you 
     * **Title**: Enter a complete sentence or question, e.g., "I can't remember my password." or, "Do we have a company org chart?" See farther below on this page for best practices.
     * **Intent Qualifiers**: This field is only shown if you're using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See farther below on this page for best practices. **Note**: An intent qualifier can't be used more than once, i.e., in more than one article.
     * **Intent**: This field is only shown if the knowledge base is using [Domain intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Select the intent to associate with the article. See farther below on this page for best practices. If needed, you can use the **Create intent** option in the drop-down list to create the intent in Intent Builder from this location. Similarly, there's an **Update training phrases** link for updating the training phrases in Intent Builder from here. **Note**: An intent can't be used more than once, i.e., in more than one article.
-    * **Summary**: Enter a short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels.
-    * **Detail**: This field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible.
+    * **Summary**: Enter a short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. For details on the subset of HTML that can be used in this field, see [here](knowledge-base-common-settings-tasks.html#format-text-in-an-article).
+    * **Detail**: This field can be used to include longer messages to the user. For messaging, it's recommended that you keep the responses as brief as possible. For details on the subset of HTML that can be used in this field, see [here](knowledge-base-common-settings-tasks.html#format-text-in-an-article).
     * **Category**: To assign the article to a category, enter the category name. This lets you subsequently filter and find articles based on category in the Knowledge Base application.
     * **Tags**: Tags are keywords, *not* sentences, that highlight the key noun(s) or word(s) in the title and intent qualifiers/training phrases. Tags can also be [entities](intent-builder-entities.html) that you've defined in a domain in Intent Builder. To increase the accuracy of Knowledge Base search results, add tags. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences.
 
@@ -53,6 +53,9 @@ Details on how to set this up follow below.
 First, in the **Advanced Settings** of the article, enter the URLs to send **(1)**.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings1.png">
+
+{: .important}
+The remainder of this information below is for the benefit of bot developers using a Knowledge Base integration in a bot. However, there's a more powerful and simpler alternative that doesn't require a Knowledge Base integration, namely, use of the Knowledge AI interaction in Conversation Builder. For details on this interaction, see [here](conversation-builder-interactions-integrations.html#knowledge-ai-interactions).
 
 #### Configure the Knowledge Base integration in the bot
 
@@ -102,7 +105,48 @@ Enabled articles are returned by knowledge base searches in Knowledge Base integ
     * Turn on (enable) the setting to enable the article.
     * Turn off (disable) the setting to disable the article.
 
-### Using entities in a knowledge base
+### Find articles with a specific tag
+
+1. Open the knowledge base.
+2. At the top of the page, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Tags**.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tags_categories.png">
+
+3. In the Tags panel, select the tag to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple tags.
+    
+    The result list is updated to include only the articles with the selected tags.
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findWithTag.png">
+
+### Find articles with a specific category
+
+1. Open the knowledge base.
+2. At the top of the page, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Categories**.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tags_categories.png">
+
+3. In the Categories panel, select the category to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple categories.
+    
+    The result list is updated to include only the articles assigned to the selected categories.
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findInCategory.png">
+
+### JSON reference
+
+The following table identifies the JSON node for article information that's often needed when you're integrating the knowledge base with a bot.
+
+| Name of UI field | Name of JSON node |
+|-----|-----|
+| Title | title |
+| Summary | summary |
+| Detail | detail |
+| Content Links > Content | contentURL |
+| Content Links > Image | imageURL |
+| Content Links > Video | videoURL |
+| Content Links > Audio | audioURL |
+
+### Using entities within a knowledge base (Legacy)
+
+{: .important}
+This section is applicable to knowledge bases using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) (i.e., intent qualifiers), which is a legacy feature. In this case, behind the scenes the LivePerson (Legacy) engine is used for intent matching.<br><br>For better performance and a more scalable solution, LivePerson recommends that you convert from *Knowledge Base intents* to *Domain intents* as soon as possible. This allows you to associate a domain that uses the LivePerson engine (or a third-party engine).<br><br>If you're using entities within your knowledge base (as discussed in this section), first [convert the knowledge base to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents). Then, if the domain itself uses LivePerson (Legacy), [convert the domain to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson).
 
 [Entities](intent-builder-entities.html) are keywords that refer to a number of synonyms. For example, the entity `SPORTS` might have a number of synonyms, like walking, running, football, jogging, baseball, etc. When creating intent qualifiers and tags for your articles, you can leverage the power of entities as well.
 
@@ -133,7 +177,7 @@ Leveraging entities within a knowledge base provides the same benefits that doin
 
 #### Connect the domain to the knowledge base
 
-If you're using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) instead of Domain intents (like we show in our example below), to use entities within a knowledge base, you'll need to connect the domain to the knowledge base.
+Connect the domain to the knowledge base.
 
 1. Exit Intent Builder, and return to Knowledge Base.
 2. Open the knowledge base.
@@ -146,7 +190,7 @@ If you're using [Knowledge Base intents](knowledge-base-internal-knowledge-bases
 
 In your articles, replace any word where you want the "CREDENTIALS" entity to be substituted in, *including* the tags. This might make some intent qualifiers and tags redundant, which means you can (and should) delete them.
 
-Assume we have a knowledge base using [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) and an existing article with the following content:
+Assume we have a knowledge base using Knowledge Base intents and an existing article with the following content:
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_entities_1.png">
 
@@ -157,41 +201,9 @@ Our article when taking advantage of entities would result in the following:
 Note that we are able to reduce the number of intent qualifiers and tags while actually improving the success rate of our queries, as the "CREDENTIALS" entity will consider all of the entity values that were defined earlier.
 
 {: .important}
-You don't need to enter entities using all capital letters like we've done above, but it does help you to identify the words that are entities.
+You don't need to enter entities using all capital letters like we've done above, but it helps you to identify the words that are entities.
 
 Now, when someone says an utterance that includes any of the entity synonyms, they should match. Try entering, "My pin doesn't work." This should return with a score of GOOD.
 
 {: .important}
 The entity values are cached, so if you add a number of entities but they aren't matching your articles right away, wait a minute or two. The cache should update.
-
-### Find articles with a specific tag
-
-1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Tags**.
-3. In the Tags panel, select the tag to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple tags.
-    
-    The result list is updated to include only the articles with the selected tags.
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findWithTag.png">
-
-### Find articles with a specific category
-
-1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Categories**.
-3. In the Categories panel, select the category to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple categories.
-    
-    The result list is updated to include only the articles assigned to the selected categories.
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_findInCategory.png">
-
-### JSON reference
-
-The following table identifies the JSON node for article information that's often needed when you're integrating the knowledge base with a bot.
-
-| Name of UI field | Name of JSON node |
-|-----|-----|
-| Title | title |
-| Summary | summary |
-| Detail | detail |
-| Content Links > Content | contentURL |
-| Content Links > Image | imageURL |
-| Content Links > Video | videoURL |
-| Content Links > Audio | audioURL |

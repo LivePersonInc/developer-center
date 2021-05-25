@@ -26,8 +26,9 @@ This delay will be added before a message or action provided in this activity wi
   }
 }
 ```
-
-Figure 1.1 Activity resulting in a delay with typing indicator
+Figure 3.1 Activity resulting in a delay with typing indicator
+<br>
+<br>
 
 - `delay` This is the number of seconds the bot will wait. Only whole numbers can be provided.
 - `typing` This property controls if a typing indicator is shown during the delay. The property is optional and defaults to `true`.
@@ -60,8 +61,8 @@ body of the function.
 | --------------- | ------------------------------------- | ------------------------- |
 | text            | any string value                      | mandatory                 |
 | messageAudience | value should be `AGENTS_AND_MANAGERS` | case sensitive, mandatory |
-
-<br/>
+<br>
+<br>
 
 A single private text message with an action can be sent by adding `text` and `messageAudience` properties with 
 relevant action (e.g. [Transfer](third-party-bots-microsoft-direct-line-basic-content.html#transfer)) 
@@ -85,17 +86,18 @@ properties. An example of such case is below:
   }
 }
 ```
-
-Figure 2.1 Transfer activity with a private message visible to agents and managers
+Figure 3.2 Transfer activity with a private message visible to agents and managers
+<br>
+<br>
 
 ### Engagement attributes as context
 
 Third-Party bots allows the collection of engagement attributes (more information can be found 
 [here](engagement-attributes-types-of-engagement-attributes.html)) if the `Engagement Attributes` option is checked in 
-the `Conversation Type` step as shown in Figure 3.1.
+the `Conversation Type` step as shown in Figure 3.3.
 
-<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
-Figure 3.1 Conversation Type step in creation/modification of bot configuration.
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
+Figure 3.3 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson 
 Visit Information API to collect the engagement attributes. Further information on the Visit Information API 
@@ -120,8 +122,9 @@ property (further information about `channelData` can be found
   }
 }
 ```
-
-Figure 3.1 Customer activity excerpt on a new chat
+Figure 3.4 Customer activity excerpt on a new chat
+<br>
+<br>
 
 ### Sending Multiple Responses
 
@@ -169,8 +172,9 @@ The array in the multiMessage property can contain the objects identified by the
   }
 }
 ```
-
-Figure 4.1 Activity with a multiMessage array containing messages of different types
+Figure 3.5 Activity with a multiMessage array containing messages of different types
+<br>
+<br>
 
 ### Sending Encoded Metadata
 
@@ -182,7 +186,7 @@ metadata within your conversations. Before sending encoded metadata you must ens
 to successfully send the data.
 
 
-* `Common.EncodedMetadata` AC feature is ON</li>
+* `Common.EncodedMetadata` AC feature is ON
 * Content is base64 encoded
 * Metadata size is limited to 5k
 
@@ -207,8 +211,9 @@ that `encodedMetadata` is written in camel case. An example of the simple text m
   }
 }
 ```
-
-Figure 5.1 Activity containing encodedMetadata for plain text
+Figure 3.6 Activity containing encodedMetadata for plain text
+<br>
+<br>
 
 #### Sending Rich Content (structured content) with Encoded Metadata
 
@@ -247,8 +252,9 @@ For sending [structured content](getting-started-with-rich-messaging-introductio
   }
 }
 ```
-
-Figure 5.2 Activity containing encodedMetadata for Rich Content
+Figure 3.7 Activity containing encodedMetadata for Rich Content
+<br>
+<br>
 
 #### Sending Multiple Responses with Encoded Metadata
 
@@ -284,8 +290,9 @@ For sending Encoded Metadata with multiple responses one must provide an additio
   }
 }
 ```
-
-Figure 5.3 MultiMessage Activity containing encodedMetadata
+Figure 3.8 MultiMessage Activity containing encodedMetadata
+<br>
+<br>
 
 ### Invoke LivePerson Function Activity
 
@@ -313,7 +320,7 @@ An example of an invocation can be seen below:
       "type": "client",
       "parameters": {
         "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
-        "payload": "{ "some": "stuff"}",
+        "payload": { "some": "stuff"},
         "failOnError": true
       },
       "result_variable": "none"
@@ -321,5 +328,4 @@ An example of an invocation can be seen below:
   }
 }
 ```
-
-Figure 6.1 LivePerson Function Invocation with payload
+Figure 3.9 LivePerson Function Invocation with payload

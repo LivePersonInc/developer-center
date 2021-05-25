@@ -1,5 +1,9 @@
 This is for storing segments of doc temporarily until they can be added to the public files...
 
+SNIPPET RE: INTERACTION SUPPORT TOPIC AND SUPPORT FOR UNIVERSAL TILE
+
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging support](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
+
 SNIPPET FOR TOP SECTION
 
 - **Consumer Authentication**: Use this when you require the bot to make API calls on behalf of the consumer. With this type of credential, the consumer is sent an authentication link, uses it to authenticate, and obtains a token that is sent to the bot. This “delegates” access to the bot, so it can make the API calls.

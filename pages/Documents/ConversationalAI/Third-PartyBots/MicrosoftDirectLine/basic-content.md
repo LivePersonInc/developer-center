@@ -63,6 +63,8 @@ Moreover, all domains must be HTTPS secure.
 ```
 
 Figure 2.1 Activity with Structured Content
+<br>
+<br>
 
 
 ### Sending Quick Replies
@@ -140,7 +142,9 @@ For detailed information on Quick Replies check out the documentation for the re
 }
 ```
 
-Figure 3.1 Activity with Quick Replies
+Figure 2.2 Activity with Quick Replies
+<br>
+<br>
 
 ### The Welcome Event
 
@@ -174,18 +178,14 @@ Ensure you have an ‘entry point’ in your bot that responds to the default �
 }
 ```  
 
-Figure 4.1 Welcome activity on chat  
+Figure 2.3 Welcome activity on chat
+<br>
+<br> 
 
 ### Bot Actions
 #### Transfer 
 
-This action allows the bot to request a transfer of the conversation to another skill.
-
-At the beginning of a chat session or when a messaging bot logs in, the whole list of enabled skills on the account is 
-retrieved, keyed by name and stored.
-
-When the bot requests a transfer, the provided skill name is matched to the skill existing on the account and the 
-conversation is transfered based on this skill.
+This action allows the bot to request a transfer of the conversation to another skill or a specific agent.
 
 <div class="notice">
 <strong>Naming Conventions:</strong> 
@@ -193,7 +193,18 @@ When naming skills the bot can escalate to, you should use the Kebab Case <itali
 skill matching to work.
 </div>
 
-The payload for a transfer request sent in the `channelData` is shown in Figure 5.1.
+#### Transfer To Skill
+
+This option transfers the conversation to the next available agent using the provided skill. 
+
+At the beginning of a chat session or when a messaging bot logs in, the whole list of enabled skills on the account is 
+retrieved, keyed by name and stored.
+
+When the bot requests a transfer, the provided skill name is matched to the skill existing on the account and the 
+conversation is transfered based on this skill.
+
+
+The payload for a transfer request sent in the `channelData` is shown in Figure 2.4.
 The action must be named `TRANSFER` and a skill name must be provided.
 
 
@@ -212,9 +223,9 @@ The action must be named `TRANSFER` and a skill name must be provided.
   }
 }
 ```
-Figure 5.1 Custom transfer action
-
-
+Figure 2.4 Custom transfer to skill action
+<br>
+<br>
 
 It is also possible to use a native handoff event to transfer the conversation to another skill. You can use the 
 official Microsoft BotBuilder SDK method called 
@@ -233,7 +244,39 @@ const payload = {
     ...EventFactory.createHandoffInitiation(context, handoffContext),
 };
 ```
-Figure 5.2 Microsoft BotBuilder example code 
+Figure 2.5 Microsoft BotBuilder example code 
+<br>
+<br>
+
+#### Transfer To Agent
+
+{: .important}
+This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
+
+This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
+
+
+The payload for a transfer request sent in the `channelData` is shown in Figure 2.6.
+The action must be named `TRANSFER` and a skill name alongside agentId must be provided.
+
+
+```json-doc
+{
+  // ...
+  "type": "message",
+  "text": "I'll transfer you to a certain agent", // an optional message to the customer (can be left empty)
+  "channelData": {
+    "action": {
+      "name": "TRANSFER",
+      "parameters": {
+        "skill": "human-expert",
+        "agentId": "4129463410"
+      }
+    }
+  }
+}
+```
+Figure 2.6 Custom transfer to agent action
 <br>
 <br>
 
@@ -254,11 +297,11 @@ The action must be named `CLOSE_CONVERSATION` in this case.
   }
 }
 ```
-Figure 5.3 Activity for a close conversation request
+Figure 2.7 Activity for a close conversation request
 <br>
 <br>
 
-To close a conversation without triggering a post conversation survey, you need to provide the `withoutPcs` flag with the value `true` (as shown in Figure 5.4)
+To close a conversation without triggering a post conversation survey, you need to provide the `withoutPcs` flag with the value `true` (as shown in Figure 2.8)
 
 ```json
 {
@@ -274,7 +317,7 @@ To close a conversation without triggering a post conversation survey, you need 
   }
 }
 ```
-Figure 5.4 Activity to close a conversation without a post conversation survey
+Figure 2.8 Activity to close a conversation without a post conversation survey
 <br>
 <br>
 
@@ -282,15 +325,13 @@ Figure 5.4 Activity to close a conversation without a post conversation survey
 
 The bot can change the TTR of a conversation by sending an action with the name `CHANGE_TTR`.
 
-LivePerson Messaging uses 4 different types of priorities:
+LivePerson Messaging uses 3 different types of priorities:
 
 - `URGENT`
 - `NORMAL`
 - `PRIORITIZED`
-- `CUSTOM`
 
-With `CUSTOM` it is possible to set an exact value. The unit of the value is seconds. The values of the other types can be set in the 
-Agent Workspace.
+The time values of these are defined in the Agent Workspace.
 
 A text message can also be provided simultaneously in the activity json.
 
@@ -303,11 +344,10 @@ A text message can also be provided simultaneously in the activity json.
     "action": {
       "name": "CHANGE_TTR",
       "parameters": {
-        "ttrType": "CUSTOM",
-        "value": "300" // this property should only be defined for "CUSTOM"
+        "ttrType": "URGENT"
       }
     }
   }
 }
 ```
-Figure 5.5 Activity to change the TTR
+Figure 2.9 Activity to change the TTR

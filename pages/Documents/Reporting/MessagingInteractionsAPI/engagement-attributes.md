@@ -121,7 +121,8 @@ v2 - will allow to retrieve both authenticated & unauthenticated engagement attr
 | category           | Product category.  | alphanumeric|
 | sku        | Unique product ID identifier in consumer database.    | alphanumeric|
 | price        | Product price.    | double|
-
+| statusInStock | Product stock status | alphanumeric |
+| quantityInStock | Product quantity left in stock | int |
 ### visitorError
 
 | Name            | Description                                 | Type/Value                                                              | Notes                        |

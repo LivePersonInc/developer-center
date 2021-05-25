@@ -21,7 +21,7 @@ In Conversation Builder, the following built-in functions for managing the Conve
 {: .important}
 All update operations return a Boolean status. It is the bot developer's responsibility to ensure the operation was executed successfully.
 
-For a more in-depth introducton to the Conversation Context Service and details on the Conversation Orchestrator API, see [Conversation Context Service](conversation-orchestrator-conversation-context-service-conversation-context-service.html).
+For a more in-depth introducton to the Conversation Context Service and details on the Conversation Orchestrator API, see [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html).
 
 {: .important}
 New to scripting functions? Please review the [Introduction](conversation-builder-scripting-functions-introduction.html).
@@ -102,7 +102,7 @@ botContext.printDebugMessage("Delete Namespace: " + success);
 
 ### Set a variable
 
-The following methods set a variable in the Conversation Context Service at three different Conversation Builder scopes.
+`setGlobalContextData`, `setContextDataForUser` and `setContextDataForConversation` set a variable in the Conversation Context Service at three, different Conversation Builder scopes.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -125,7 +125,7 @@ botContext.printDebugMessage("set context data for conversation scope: " + succe
 
 ### Get a variable
 
-The following methods get a variable from the Conversation Context Service at three different Conversation Builder scopes.
+`getGlobalContextData`, `getContextDataForUser` and `getContextDataForConversation` get a variable from the Conversation Context Service at three, different Conversation Builder scopes.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -148,7 +148,7 @@ botContext.printDebugMessage("get context data for conversation scope: " + value
 
 ### Get all variables
 
-The following methods get all variables in a namespace in the Conversation Context Service at two different Conversation Builder scopes.
+`getContextDataForUser` and  `getContextDataForConversation` get all variables in a namespace in the Conversation Context Service at two, different Conversation Builder scopes.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -181,7 +181,7 @@ botContext.printDebugMessage("get context data for conversation scope: " + value
 
 ### Delete a variable
 
-The following methods delete a variable from the Conversation Context Service at three different Conversation Builder scopes.
+`deleteGlobalContextData`, `deleteContextDataForUser` and `deleteContextDataForConversation` delete a variable from the Conversation Context Service at three, different Conversation Builder scopes.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
@@ -204,7 +204,7 @@ botContext.printDebugMessage("delete context data for user scope: " + success);
 
 ### Delete all variables
 
-The following methods delete all variables in a namespace from the Conversation Context Service at two different Conversation Builder scopes.
+`deleteAllContextDataForUser` and `deleteAllContextDataForConversation` delete all variables in a namespace from the Conversation Context Service at two, different Conversation Builder scopes.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
