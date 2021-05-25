@@ -20,7 +20,7 @@ The following section describes the limitations and restrictions of the platform
 
 ### Timeouts
 
-The usage of `setTimeout()` in LivePerson Functions must be handled with care. 
+The usage of `setTimeout()` in LivePerson Functions must be handled with care.
 * Functions cannot exceed the runtime of **30 seconds**. The error `Lambda Execution is taking too long` will be thrown.
 * If a function is at high load and it contains a `setTimeout()` call, the event loop of the service may fill up. Even functions with a lower execution time than 30 seconds could therefore take longer, may reach the execution time limit and fail. Because of this, it's important to double check if timeouts cannot be avoided in your use case.
 
@@ -31,7 +31,7 @@ The usage of `setTimeout()` in LivePerson Functions must be handled with care.
 ### Lambda
 
 * The source code must not exceed the length of `100.000` characters.
-* The resources of a lambda are limited. CPU is capped at `500m` and the memory at `265 MB`. So beware, if you want to use for example large file processing inside a function and reach this limit the function will stop immediately and the invocation will fail (no results will be saved).
+* The resources of a lambda are limited. CPU is capped at `500m` and the memory at `256 MB`. So beware, if you want to use for example large file processing inside a function and reach this limit the function will stop immediately and the invocation will fail (no results will be saved).
 
 ### Logging
 
@@ -40,3 +40,7 @@ The usage of `setTimeout()` in LivePerson Functions must be handled with care.
 * The maximum timespan between Start Date and End Date of the `Investigate Function Logs` screen is restricted to 7 days.
 
 <img src="img/faas-limitations-investigate-logs.jpg" alt="LivePerson Functions Logs" style="width:80%;"/>
+
+### Deployment History
+
+The deployment history will be stored indefinitely. However, only the 5 most recent versions will be stored for inspection and restoration. If you require a more expansive history we'd urge you to look into using VCS outside of LivePerson systems in combination with our CLI.

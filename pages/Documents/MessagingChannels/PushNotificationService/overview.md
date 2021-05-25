@@ -21,7 +21,7 @@ Mobile App Messaging provides brands with the ability to provide their customers
 
 ![PushServices](img/pushservices.png)
 
-LivePerson’s push service interfaces directly with Apple’s APNS and Google’s GCM push notification services. For brands who wish to refrain from sharing their tokens/certificates, LivePerson offers the option to configure their push to the URIs of their choice and to utilize their own logic.
+LivePerson’s push service interfaces directly with Apple’s APNS and Google’s FCM push notification services. For brands who wish to refrain from sharing their tokens/certificates, LivePerson offers the option to configure their push to the URIs of their choice and to utilize their own logic.
 
 ### Getting Started
 

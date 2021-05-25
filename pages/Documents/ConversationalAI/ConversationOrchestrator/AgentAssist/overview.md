@@ -13,11 +13,11 @@ permalink: conversation-orchestrator-agent-assist-overview.html
 indicator: messaging
 ---
 
-### What is Agent Assist?
-Conversation Orchestrator’s Agent Assist is a suite of features that improve the productivity of human agents. Agent Assist’s key features include:
+{: .important}
+For some practice with Agent Assist, complete the [Using Agent Assist](tutorials-guides-using-agent-assist-overview.html) tutorial.
 
-* Intent-based and skill-based recommendations of knowledge base articles and bots
-* Agent feedback
+### What is Agent Assist?
+Conversation Orchestrator’s Agent Assist is a suite of features that improve the productivity of human agents. Agent Assist’s key feature is intent-based and skill-based recommendations of knowledge base articles and bots.
 
 ### Intent-based recommendations
 Within a messaging conversation, Agent Assist recommends to the agent knowledge base articles and/or bots based on the intent that’s detected in the consumer’s message. The recommendations are presented in real time, inline within the conversation.
@@ -42,6 +42,9 @@ You can specify the maximum number of recommendations made by Agent Assist for a
 
 ### How recommendations are made
 To make recommendations, Agent Assist analyzes the available bots and knowledge base articles that match the consumer’s intent, and it finds the best ones. The recommendations are made by choosing those ranked highest by relevance score, after calibrating the score against agent feedback about the historical performance.
+
+{: .important}
+No Knowledge Base article recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).
 
 The rules for how the recommendations are made and ordered are as follows:
 
@@ -84,13 +87,6 @@ If the account’s Agent Assist settings are 1) maximum number of recommendation
 * knowledge base article 1 = 72%
 
 In this case, the agent doesn’t see any bot recommendations because article recommendations are always included first. The maximum number of recommendations is 4, and there are 4 article recommendations with a relevance score of GOOD or better. 
-
-### Agent feedback
-Agents can provide feedback on a recommended action by clicking either the **Thumbs up** button or the **Thumbs down** button displayed inline in the recommendation.
-
-<img width="550" src="img/agentassist/feedback.png">
-
-“Thumbs up” tells the underlying Conversation Orchestrator model that it was a relevant recommendation, while “thumbs down” tells it that it’s not. The relevance score is calibrated against this feedback so that Agent Assist can continuously improve its recommendations and provide the most relevant content to agents.
 
 ### Access Conversation Orchestrator’s Agent Assist
 **To access Conversation Orchestrator’s Agent Assist application**
