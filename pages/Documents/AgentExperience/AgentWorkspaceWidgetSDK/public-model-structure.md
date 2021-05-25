@@ -712,6 +712,8 @@ Structure example:
 | sku      | The product SKU                                  | string |
 | price    | The price of the product                         | string |
 | quantity | Where applicable - the number of identical items | number |
+| statusInStock | Where applicable - the stock status of the product | string |
+| quantityInStock | Where applicable - available quantity of products | string |
 
 Structure example:
 
@@ -721,10 +723,13 @@ Structure example:
     "category": "",
     "sku": "",
     "price": "",
-    "quantity": 1
+    "quantity": 1,
+    "statusInStock": "low in stock",
+    "quantityInStock": 5
 }
 ```
 **Note: SDE.viewedProducts does not contain the quantity field**
+**Note: SDE.transaction.[].products and SDE.shoppingCart.[].products do not contain statusInStock and quantityInStock fields**
 
 ### SDE.serviceActivity
 
