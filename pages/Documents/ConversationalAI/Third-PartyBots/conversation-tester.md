@@ -72,6 +72,10 @@ This error happens when it was not possible to get any response from the vendor.
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
 
+## Dialog Flow V2 No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
+
 ### DialogFlow CX
  
 ## DialogFlow CX Invalid Action Body
@@ -120,6 +124,10 @@ This error happens when it was not possible to get any response from the vendor.
 ## Dialog Flow CX Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Dialog Flow CX No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
  
 ###  Watson Assistant
  
@@ -188,6 +196,10 @@ This error happens when there was not possible to get any response from the vend
 ## Watson Assistant Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Watson Assistant No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
  
 ### Watson Assistant V2
  
@@ -254,6 +266,10 @@ This error happens when there was not possible to get any response from the vend
 ## Watson Assistant Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Watson Assistant No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
  
 
 ###  Lex
@@ -315,6 +331,10 @@ This error happens when there was not possible to get any response from the vend
 ## Lex Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Lex No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
  
 ###  Microsoft Bot Framework
  
@@ -332,6 +352,10 @@ This error happens when there was not possible to get any response from the vend
 ## Microsoft Bot Framework Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Microsoft Bot Framework No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
  
 ###  Faas
  
@@ -357,3 +381,7 @@ This error happens when there was not possible to get any response from the vend
 ## Faas Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Faas No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
