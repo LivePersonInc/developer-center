@@ -34,6 +34,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | Yes |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### Connector API
@@ -57,6 +58,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### Facebook
@@ -80,6 +82,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### Google RCS
@@ -103,6 +106,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### Instagram
@@ -126,6 +130,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### LINE
@@ -149,6 +154,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### Messaging Window API
@@ -172,6 +178,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### Mobile app messaging
@@ -195,6 +202,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### SMS
@@ -218,6 +226,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### Twitter Direct Messages
@@ -241,6 +250,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | No |
 
 ### Web messaging
@@ -264,6 +274,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
 
 ### WhatsApp
@@ -287,4 +298,5 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes | 
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
+| Universal | Yes, but the JSON must adhere to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud. Some channels might not support all templates. |
 | survey interactions (NPS, FCR, CSAT) | Yes |
