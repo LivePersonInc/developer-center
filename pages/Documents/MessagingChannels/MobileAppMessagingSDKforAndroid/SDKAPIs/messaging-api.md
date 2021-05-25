@@ -116,7 +116,7 @@ There are 2 authenticated connection methods:
     * Possible states:
         * LPConversationsHistoryStateToDisplay.ALL - Show All Conversations (**Default**)
         * LPConversationsHistoryStateToDisplay.CLOSE - Shows only closed Conversations
-        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Converstations
+        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Conversations
 
    ```java
    new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversationsHistoryStateToDisplay.ALL);
@@ -305,7 +305,7 @@ private void  initActivityConversation() {
         @Override
         public void onInitSucceed() {
             // you can't register pusher before initialization
-            handleGCMRegistration(MainActivity.this);
+            handlePusherRegistration(MainActivity.this);
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -359,7 +359,6 @@ startConvBtn.setOnClickListener(new View.OnClickListener() {
             openActivity();
         }
         else {
-// Push - later in this tutorial
             removeNotification();
             initActivityConversation(); // The conversation activity
         }
@@ -399,6 +398,20 @@ public static void logOut(Context context, String brandId, String appId, LogoutL
 | appId | The host app ID. |
 | logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
 
+If the logout call on the SDK fails, the local files will not get removed by the SDK. In order to solve this problem, we added a new logOut API to allow brands to perform a forced logout, which will perform the logout without waiting for LP pusher to unregister. In this way, we will not allow a failed logout call and therefore local files will always be removed.
+
+```java
+public static void logOut(Context context, String brandId, String appId, boolean forceLogOut, PushUnregisterType type, LogoutLivePersonCallback logoutCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| context | A context from the host app. |
+| brandId | An account ID. |
+| appId | The host app ID. |
+| forceLogOut | When true, SDK force a user logout no matter unregisterPusher succeed or failed. When false, SDK waits unregisterPusher succeed before logout. |
+| type | [PushUnregisterType](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#pushunregistertype).ALL: User will be unregistered from pusher for both agent message and Proactive Messaging. |
+| logoutCallback | An [LogoutLivePersonCallback](android-callbacks-index.html) implementation. |
 
 ### markConversationAsNormal
 
@@ -476,6 +489,21 @@ public static void reconnect(LPAuthenticationParams lPAuthenticationParams)
 Register to LPMessagingSDK push notifications. Providing the authenticationParams parameter enables registering to the LPPusher without opening a conversation first. If providing `registrationCompletedCallback` callback, it will be called when registeration is finishes successfully or if it fails and indicates which one happened.
 
 ```java
+public static void registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| brandId | The account ID, for example, 652838922. |
+| appId | The host app ID, for example, com.liveperson.myApp. |
+| deviceToken | The device token for push notification. |
+| pushType | The push notification type. See [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) for details. |
+| authenticationParams | An optional parameter that enables registering without first opening a conversation. |
+| registrationCompletedCallback | An optional callback on the registration status. |
+
+Register to LPMessagingSDK FCM push notifications.
+
+```java
 public static void registerLPPusher(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams, final ICallback<Void, Exception> registrationCompletedCallback)
 ```
 
@@ -483,7 +511,7 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 | :--- | :--- |
 | brandId | The account ID, for example, 652838922. |
 | appId | The host app ID, for example, com.liveperson.myApp. |
-| gcmToken | The GCM Token. Usually used to pass the Google provided token. However, this parameter can contain any string value. If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server. |
+| gcmToken | The device token. Usually used to pass the Google provided token. However, this parameter can contain any string value. If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server. |
 | authenticationParams | An optional parameter that enables registering without first opening a conversation. |
 | registrationCompletedCallback | An optional callback on the registration status. |
 
@@ -539,7 +567,7 @@ public static void resolveConversation()
 
 ### setCallback
 
-Sets the SDK callback listener. The host app gets updates from the SDK using this callback listener. See [LivePerson Callbacks Interface](android-callbacks-interface.html) for more information.
+Sets the SDK callback listener. The host app gets updates from the SDK using this callback listener. See [LivePerson Callbacks Interface](mobile-app-messaging-sdk-for-android-configure-the-android-sdk.html#callbacks-interface) for more information.
 
 ```java
 public static void setCallback(final LivePersonCallback listener)
@@ -627,7 +655,7 @@ Signup flow is now deprecated. Please use an authenticated connection method ins
     * Possible states:
         * LPConversationsHistoryStateToDisplay.ALL - Show All Conversations (**Default**)
         * LPConversationsHistoryStateToDisplay.CLOSE - Shows only closed Conversations
-        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Converstations
+        * LPConversationsHistoryStateToDisplay.OPEN - Shows only open Conversations
 
    ```java
    new ConversationViewParams().setHistoryConversationsStateToDisplay(LPConversationsHistoryStateToDisplay.ALL);
@@ -732,7 +760,7 @@ public static void isPusherRegistered(@NonNull String deviceToken, @NonNull Stri
 
 | Parameter | Description |
 | :--- | :--- |
-| deviceToken | The FCM device token |
+| deviceToken | The device token |
 | appId | The host app ID |
 | lpAuthenticationParams | Authentication params |
 | callback | An ICallback implementation |
@@ -855,7 +883,7 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 | :--- | :--- |
 | brandId | The account ID (e.g. 652838922). |
 | appId | The host app ID (e.g. com.liveperson.myApp). |
-| gcmToken | The GCM Token. Usually used to pass the Google provided token. However, this parameter can contain any string value. |
+| gcmToken | The device token. Usually used to pass the Google provided token. However, this parameter can contain any string value. |
 
 _**Note: If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server.**_
 

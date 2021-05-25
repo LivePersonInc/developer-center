@@ -21,7 +21,21 @@ There are 2 authenticated connection methods:
 
 * Authenticated (authenticationKey) 
 
-* Unauthenticated 
+* Unauthenticated
+
+```java
+public static void registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback)
+```
+
+| Parameter | Description |
+| :--- | :--- |
+| brandId | The account ID, for example, 652838922. |
+| appId | The host app ID, for example, com.liveperson.myApp. |
+| deviceToken | The device token for push notification. |
+| pushType | The push notification type. See [PushType](mobile-app-messaging-sdk-for-android-sdk-apis-interface-and-class-definitions.html#pushtype) for details. |
+| authenticationParams | An optional parameter that enables registering without first opening a conversation. |
+| registrationCompletedCallback | An optional callback on the registration status. |
+
 
 ```java
 public static void registerLPPusher(String brandId, String appId, String gcmToken, LPAuthenticationParams authenticationParams, final ICallback<Void, Exception> registrationCompletedCallback)
@@ -31,7 +45,7 @@ public static void registerLPPusher(String brandId, String appId, String gcmToke
 | :--- | :--- |
 | brandId | The account ID, for example, 652838922. |
 | appId | The host app ID, for example, com.liveperson.myApp. |
-| gcmToken | The GCM Token. Usually used to pass the Google provided token. However, this parameter can contain any string value. If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server. |
+| gcmToken | The device token. Usually used to pass the Google provided token. However, this parameter can contain any string value. If you use the gcmToken as a custom value, you need to handle the mapping between this custom value and the actual gcm token in your server. |
 | authenticationParams | An optional parameter that enables registering without first opening a conversation. |
 | registrationCompletedCallback | An optional callback on the registration status. |
 

@@ -2,6 +2,7 @@
 pagename: Appendix
 redirect_from:
   - administration-lobs-appendix.html
+  - aadministration-lobs-appendix.html
 keywords:
 sitesection: Documents
 categoryname: "Contact Center Management"

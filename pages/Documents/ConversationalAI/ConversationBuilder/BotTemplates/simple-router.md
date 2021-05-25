@@ -110,6 +110,6 @@ You might add or remove `case` branches as needed for the number of your skills.
 
 #### Deploy Your Bot
 
-To connect your bot to Conversational Cloud, follow [these instructions](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html). You can also try the [Connect to Conversational Cloud tutorial](conversation-builder-tutorials-guides-getting-started.html).
+To connect your bot to Conversational Cloud, follow [these instructions](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html). You can also try the [Deploy the Bot tutorial](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
 
 Now you can test your routing bot and see how it routes to your skills.

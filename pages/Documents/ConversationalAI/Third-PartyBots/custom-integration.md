@@ -1,6 +1,8 @@
 ---
 pagename: Custom Integration
 redirect_from:
+  - custom-third-party-bots.html
+  - bot-connectors-custom-third-party-bots.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots
@@ -40,7 +42,7 @@ Just like any other function, this function must be deployed before it can be us
 
 <div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
 
-#### Last Steps in Third Party Bots
+#### Last Steps in Third-Party Bots
 
 After you successfully implemented and deployed a LivePerson Function, press the refresh button next to the function selection menu and select your function.
 
@@ -140,15 +142,14 @@ const payload = {
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the **action** value in the response object. LivePerson uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM”. Only the “CUSTOM” can set a value progrmatically. The unit of the value is seconds. The other three values ("URGENT" for example) are defined in Conversational Cloud's Agent Workspace. These values determine how much time, in seconds, a conversation can wait in queue before it is deemed "overdue". For example, if the `ttrtype` is set to "CUSTOM" and the `value` is set to "120", the conversation will be considred "overdue" if it has waited in the queue for an agent response for more than 120 seconds.
+Change the TTR of a conversation based on the **action** value in the response object. LivePerson uses 4 different types of priorities: "URGENT", “NORMAL”, “PRIORITIZED”. The time values are defined in Conversational Cloud's Agent Workspace. These values determine how much time, in seconds, a conversation can wait in queue before it is deemed "overdue". 
 
 Below is an example of an payload, which changes the TTR:
 
 | key     | value                                       | notes                        |
 | ------- | ------------------------------------------- | ---------------------------- |
 | action  | CHANGE_TTR                                  | Mandatory                    |
-| ttrtype | "URGENT", “NORMAL”, “PRIORITIZED”, “CUSTOM” | Mandatory                    |
-| value   | Seconds, string                             | Mandatory if "CUSTOM" is set |
+| ttrtype | "URGENT", “NORMAL”, “PRIORITIZED” |
 
 ```javascript
 const payload = {
@@ -156,8 +157,7 @@ const payload = {
   context: {
     action: "CHANGE_TTR",
     actionParameters: {
-      ttrType: "CUSTOM",
-      value: "120",
+      ttrType: "URGENT"
     },
   },
 };
@@ -165,16 +165,21 @@ const payload = {
 
 ### Transfer / Escalations
 
-If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to instruct the connector to transfer the conversation to a given skill.
+If the bot needs to transfer the conversation to a human agent, or the conversation flow indicates that another bot is better suited for the identified intent, you will need to instruct the connector to transfer the conversation to a given skill or specific agent.
 
 Transfers and escalations rely on the `action` key in the response object and its value.
 
-| key    | value                                             | notes                     |
-| ------ | ------------------------------------------------- | ------------------------- |
-| action | TRANSFER                                          | case sensitive, mandatory |
-| skill  | a skill name which exists in your account account | case sensitive            |
+| key      | value                                             | notes                         |
+| -------- | ------------------------------------------------- | ----------------------------- |
+| action   | TRANSFER                                          | case sensitive, mandatory     |
+| skill    | a skill name which exists in your account account | case sensitive                |
+| agentId  | id of agent which exists in your account          | optional, premission required |
 
-Below is an example of what the response JSON from the LivePerson Function should look like to complete a transfer action.
+#### Transfer To Skill
+
+This option transfers the conversation to the next available agent using the provided skill. 
+
+Below is an example of what the response JSON from the LivePerson Function should look like to complete a transfer to skill action.
 
 ```javascript
 const payload = {
@@ -185,6 +190,66 @@ const payload = {
     action: "TRANSFER",
     actionParameters: {
       skill: "bot-escalation",
+    },
+  },
+};
+```
+
+#### Transfer to Agent
+
+{: .important}
+This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
+
+This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
+
+Below is an example of what the response JSON from the LivePerson Function should look like to complete a transfer to agent action.
+
+```javascript
+const payload = {
+  messages: [
+    "Please wait will I transfer you to a specific agent",
+  ],
+  context: {
+    action: "TRANSFER",
+    actionParameters: {
+      skill: "bot-escalation",
+      agentId: "4129463410"
+    },
+  },
+};
+```
+
+### Invoke LivePerson Function
+
+During a conversation, it is possible to trigger a different LivePerson Function. This provides a way to run additional custom logic with a bot.
+
+To invoke a different LivePerson Function, we use the `action` key in the response object as we did for a transfer (see example above). 
+
+| key          | value                                                      | notes                     |
+| ------------ | ---------------------------------------------------------- | ------------------------- |
+| action       | INVOCATION                                                 | case sensitive, mandatory |
+| lambdaUuid   | lambda UUID of LivePerson Function                         | case sensitive, mandatory |
+| payload      | content that will be sent to the LivePerson Function       | case sensitive            |
+| failOnError  | boolean that decides if bot escalates on failed invocation | case sensitive            |
+
+To retrieve the ***lambdaUuid*** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+
+In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter.
+
+The bot does not escalate on a failed invocation by default. To enable this, set the additional parameter **failOnError** to **true**.
+
+
+```javascript
+const payload = {
+  messages: [
+    "Please wait will I check if we have any live agents online that can attend to you",
+  ],
+  context: {
+    action: "INVOCATION",
+    actionParameters: {
+      "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
+      "payload": "{ "some": "stuff"}",
+      "failOnError": true
     },
   },
 };
@@ -444,7 +509,7 @@ The method for closing a conversation is similar to the transfer action in that 
 
 The `action` key needs to be set to **CLOSE_CONVERSATION** to instruct the connector to close the conversation.
 
-Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a closeConversation action.
+Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a `closeConversation` action.
 
 ```javascript
 const payload = {
@@ -457,16 +522,32 @@ const payload = {
 };
 ```
 
+Below is an example of what the response JSON from the LivePerson Function should look like in order to complete a `closeConversation` action without triggering the post conversation survey.
+
+```javascript
+const payload = {
+  messages: [
+    'Unfortunately I am unable to help you with this query. Have a nice day.'
+  ],
+  context: {
+    action: 'CLOSE_CONVERSATION',
+    actionParameters: {
+      withoutPcs: true // tell the connector not to trigger post conversation survey, instead close entire conversation
+    }
+  }
+};
+```
+
 ### Engagement attributes as context
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure below.
 
-<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
 Figure showing Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Custom Bots integration these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation `context` property is used. An example of the request body can be seen below:
 
-```javascript 1.8
+```javascript
 const {
   message,
   convId,
