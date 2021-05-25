@@ -36,7 +36,7 @@ Just like any other function, this function must be deployed before it can be us
 
 <div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
 
-#### Last Steps in Third Party Bots
+#### Last Steps in Third-Party Bots
 
 After you successfully implemented and deployed a LivePerson Function, press the refresh button next to the function selection menu and select your function.
 
@@ -149,7 +149,9 @@ The Prehook Lambda gets invoked on every message the customer sends. It allows t
 
 Example Payloads:
 
-###### DialogflowV2
+##### DialogflowV2
+
+###### Example payload
 
 ```json
 {
@@ -173,7 +175,24 @@ Example Payloads:
 }
 ```
 
-###### Custom Integration
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+const { queryInput } = payload;
+
+if(queryInput.text && queryInput.text.text){
+  queryInput.text.text += 'preHook';
+}
+
+return callback(null, payload);
+```
+
+
+
+##### Custom Integration
+
+###### Request payload
 
 ```json
 {
@@ -186,7 +205,22 @@ Example Payloads:
 }
 ```
 
-###### Lex
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+
+if (payload.message) {
+  payload.message += 'preHook';
+}
+
+return callback(null, payload);
+```
+
+
+##### Lex
+
+###### Request payload
 
 ```json
 {
@@ -201,7 +235,20 @@ Example Payloads:
 }
 ```
 
-###### Microsoft
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+if (payload.inputText) {
+  payload.inputText += 'preHook';
+}
+return callback(null, payload);
+```
+
+
+##### Microsoft
+
+###### Request payload
 
 ```json
 {
@@ -219,7 +266,19 @@ Example Payloads:
 }
 ```
 
-###### WatsonV1
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+if (payload.text) {
+  payload.text += 'preHook';
+}
+return callback(null, payload);
+```
+
+##### Watson
+
+###### Request payload
 
 ```json
 {
@@ -244,13 +303,23 @@ Example Payloads:
 }
 ```
 
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+if (payload.message) {
+  payload.message += 'preHook';
+}
+return callback(null, payload);
+```
+
 #### Post Hook
 
 The Posthook Lambda gets invoked on every message the customer sends. It allows to modify or expand the response of the payload. Please also refer to the existing vendor documentation, to get additional information in terms of addtition context properties and more.
 
-Example Responses:
+##### DialogflowV2
 
-###### DialogflowV2
+###### Request payload 
 
 ```json
 {
@@ -314,13 +383,44 @@ Example Responses:
 }
 ```
 
-###### Custom Integration
+###### Minimal working Faas example as code 
+
+```js
+const { payload } = input;
+const { payload: { queryResult } } = payload;
+if (
+  queryResult &&
+  queryResult.fulfillmentMessages &&
+  queryResult.fulfillmentMessages[0].text.text[0] === 'Hi there'
+) {
+  queryResult.fulfillmentMessages[0].text.text[0] +=
+    'postHook';
+}
+return callback(null, payload);
+```
+
+##### Custom Integration via Faas
+
+###### Request payload
 
 ```json
 { "context": {}, "messages": ["customer message"] }
 ```
 
-###### Lex
+
+###### Minimal working Faas example as code  
+
+```js
+const { payload } = input;
+if (payload.messages && payload.messages[0]) {
+  payload.messages[0] += ' edited by postHook';
+}
+return callback(null, payload);
+```
+
+##### Amazon Lex
+
+###### Request payload
 
 ```json
 {
@@ -335,7 +435,19 @@ Example Responses:
 }
 ```
 
-###### Microsoft
+###### Minimal working Faas example as code 
+
+```js
+const { payload } = input;
+if (payload.message) {
+  payload.message = 'Changed text by postHook';
+}
+return callback(null, payload);
+```
+
+##### Microsoft Bot Framework 
+
+###### Request payload
 
 ```json
 {
@@ -351,7 +463,22 @@ Example Responses:
 }
 ```
 
-###### WatsonV1
+###### Minimal working Faas example as code 
+
+```js
+const { payload } = input;
+if (
+  payload &&
+  payload[0].text
+) {
+  payload[0].text += 'postHook changed this message';
+}
+return callback(null, payload);
+```
+
+##### Watson 
+
+###### Request payload
 
 ```json
 {
@@ -390,4 +517,14 @@ Example Responses:
     }
   ]
 }
+```
+
+###### Minimal working Faas example as code 
+
+```js
+const { payload } = input;
+if (payload.output && payload.output.generic[0].text === 'Hi there') {
+  payload.output.generic[0].text += 'postHook';
+}
+return callback(null, payload);
 ```

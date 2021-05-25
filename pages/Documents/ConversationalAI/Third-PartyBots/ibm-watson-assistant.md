@@ -15,6 +15,9 @@ The following documentation outlines the configuration for the connector and how
 
 ### Bot Configuration
 
+{: .notice}
+**IMPORTANT**: All the old bots that use **watsonplatform.net** domain for their workspace URL will fail to operate after **_26 May 2021_**. IBM has deprecated **watsonplatform.net** endpoints please update your bot configuration in Third-Party Bots if you do not want to disrupt the functioning of the bots. Official news on this announcement can be found [here](https://cloud.ibm.com/docs/watson?topic=watson-endpoint-change)
+
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
 
@@ -45,7 +48,7 @@ Following information needs to be completed for LivePerson:
   <tr>
     <td>Workspace URL</td>
     <td>Watson Assistant Workspace URL</td>
-    <td>https://gateway.watsonplatform.net/conversation/api</td>
+    <td>https://api.eu-de.assistant.watson.cloud.ibm.com</td>
   </tr>
   <tr>
     <td>Workspace ID</td>
@@ -92,7 +95,7 @@ Following information needs to be completed for LivePerson:
   <tr>
     <td>Workspace URL</td>
     <td>Watson Assistant Workspace URL</td>
-    <td>https://gateway.watsonplatform.net/conversation/api</td>
+    <td>https://api.eu-de.assistant.watson.cloud.ibm.com</td>
   </tr>
   <tr>
     <td>Workspace ID</td>
@@ -566,13 +569,14 @@ Figure 3.7 Quick Replies StructuredContent example.
 
 ### Change Time To Response of Conversation
 
-Change the TTR of a conversation based on the action response of Watson. There have 4 different types. "URGENT", "NORMAL", "PRIORITIZED", "CUSTOM". Only the "CUSTOM" can set a value. The unit of the value is second. And the value of the others are defined in the Agent Workspace.
+Change the TTR of a conversation based on the action response of Watson. There have 3 different types. "URGENT", "NORMAL", "PRIORITIZED". The time values of these are defined in the Agent Workspace.
+
 
 ```json
 {
   "output": {
     "text": {
-      "values": ["Sure thing! Change the TTR to 50 minutes."],
+      "values": ["Sure thing! Change the TTR to Urgent."],
       "selection_policy": "sequential"
     }
   },
@@ -581,8 +585,7 @@ Change the TTR of a conversation based on the action response of Watson. There h
       "name": "CHANGE_TTR",
       "type": "CLIENT",
       "parameters": {
-        "ttrType": "CUSTOM",
-        "value": 3000
+        "ttrType": "URGENT"
       },
       "result_variable": "none"
     }
@@ -603,11 +606,17 @@ For escalations, the naming convention for these skills should use a "-" instead
 
 </div>
 
-Transfers and escalations are straightforward in both chat and messaging. At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the skill name is matched to one already on the account and the id is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
+#### Transfer To Skill
+
+This option transfers the conversation to the next available agent using the provided skill. 
+
+At the beginning of a chat session or when a messaging bot logs in, all the list of enabled skills on the account are retrieved, keyed by name and stored. When a transfer is requested by the bot, the target skill's name is searched inthe stored list and its ID is retrieved and escalated to. In regards to **Watson Assistant**, this should be configured in the following way:
+
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
 
 <img class="fancyimage" style="width:850px" src="img/watsonassistant/image_6.png">
 
-In the _Then respond with:_ JSON editor block, we see the following:
+Figure 4.1
 
 ```json
 {
@@ -629,9 +638,44 @@ In the _Then respond with:_ JSON editor block, we see the following:
 }
 ```
 
-Figure 5.1 Watson JSON response for escalation
+In the example above, you can see the `actions` array. Inside the array, we defien an escalation skill name in the `skill` parameter. This will be sent in an object to the chat/messaging connector, which will grab the `skillId` from a previously stored array based on the name, and escalate.
 
-Above is the _actions_ array. Here, we have a escalation skill name in the _skill_ parameter. This is the name of our skill for escalation. This will be sent in the BOSO object to the chat/messaging connector, which will grab the skillId from an array based on the name, and escalate.
+#### Transfer to Agent
+
+{: .important}
+This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
+
+This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
+
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
+‘agentId **(Case sensitive)** with ‘value’ of agentId in Conversational Cloud.
+
+<img class="fancyimage" style="width:850px" src="img/watsonassistant/image_7.png">
+
+Figure 4.2
+
+In the _Then respond with:_ JSON editor block, use the following:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": ["Escalating to an agent"]
+    }
+  },
+  "actions": [
+    {
+      "name": "TRANSFER",
+      "type": "client",
+      "parameters": {
+        "skill": "human_skill",
+        "agentId": "4129463410"
+      },
+      "result_variable": "none"
+    }
+  ]
+}
+```
 
 ### Close Chat/Conversation
 
@@ -657,9 +701,34 @@ To close a chat or messaging conversation, we utilize the action object as we di
 
 Figure 6.1 Watson Assistant JSON response for closing chat/conversation
 
+To close a conversation without triggering a post conversation survey, see the example below:
+
+```json
+{
+  "output": {
+    "text": {
+      "values": ["Thanks for chatting with us today!"],
+      "selection_policy": "sequential"
+    }
+  },
+  "actions": [
+    {
+      "name": "CLOSE_CONVERSATION",
+      "type": "client",
+      "parameters": {
+        "withoutPcs": true
+      },
+      "result_variable": "none"
+    }
+  ]
+}
+```
+
+Figure 6.2 Watson Assistant JSON response for closing conversations without pcs
+
 ### Invoke LivePerson Function
 
-During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html)  (Function as a Service) platform. This provides a way to run custom logic with a bot.
+During a conversation, it is possible to trigger a LivePerson Function that is deployed to the [LivePerson Functions](liveperson-functions-overview.html) (Function as a Service) platform. This provides a way to run custom logic with a bot.
 
 To invoke a LivePerson Function, we utilize the action object as we did for a transfer (see **Figure 5.1**). In **Figure 7.1** below, the **Watson Assistant** JSON response should be mirrored as follows:
 
@@ -680,16 +749,17 @@ To invoke a LivePerson Function, we utilize the action object as we did for a tr
         "lambdaUuid": "4ec49ffc-080b-4e59-b302-18d6b826191b",
         "payload": "{ "some": "stuff"}",
         "failOnError": true
-        
+
       },
       "result_variable": "none"
     }
   ]
 }
 ```
+
 Figure 7.1 Watson Assistant JSON response for invoking LivePerson Function
 
-To retrieve the ***lambdaUuid*** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
+To retrieve the **_lambdaUuid_** of your LivePerson Function follow [this guide](liveperson-functions-external-invocations-client-credentials.html#step-4-get-the-lambda-uuid-from-functions)
 
 In addition, it is possible to send your own payload to the function. Set your content inside the **payload** parameter
 
@@ -699,7 +769,7 @@ The bot does not escalate on a failed invocation by default. To enable this, set
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 8.1.
 
-<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
 Figure 8.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V1 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/apidocs/assistant-v1#get-response-to-user-input)). An example of the request body can be seen below:
@@ -924,6 +994,12 @@ It is also possible to send a private text message with the action (e.g. Transfe
   ]
 }
 ```
+
+### Watson Discovery
+
+Discovery Search is a tool that uses the knowledge of websites, documents and other data, to generate an answer the Watson Bot is able to send within a conversation. If enabled, the bot searches for matching parts of the provided information on specified intents or in case no machtching intent was found.
+
+To use Watson Discovery the Watson Assistant Bot needs to have a s[search skill](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-search-skill) linked to a [Watson Discovery Instance](https://www.ibm.com/cloud/architecture/content/course/integrate-ibm-watson-assistant-and-watson-discovery/create-a-watson-discovery-instance)
 
 ### Limitations
 

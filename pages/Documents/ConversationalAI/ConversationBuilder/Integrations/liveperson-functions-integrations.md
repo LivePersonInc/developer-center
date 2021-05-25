@@ -34,4 +34,4 @@ Enabling the use of LivePerson's Function (FaaS) integrations requires a configu
 
 ### Example guide
 
-For a step-by-step, example guide that uses this integration, see [here](conversation-builder-tutorials-guides-using-liveperson-functions-with-a-bot.html).
+For a step-by-step, example guide that uses this integration, see [here](tutorials-guides-advanced-integrations-using-liveperson-functions-with-a-bot.html).

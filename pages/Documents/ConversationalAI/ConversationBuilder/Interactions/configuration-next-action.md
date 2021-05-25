@@ -33,6 +33,8 @@ When specifying the next action, you can select from the following options:
 * *Close Dialog*: Closes the conversation and triggers a post-conversation survey; see [here](conversation-builder-dialogs-dialog-basics.html#close-the-dialog) for more.
 * *{interaction name}*: Directs the flow to the interaction with the specified name.
 
+Next Action options depend on the given interaction; only suitable options are available. For example, "Current Interaction" is only available for Question interactions, and "Close Conversation" isn't available for Dialog Starter interactions.
+
 As shown in the image above, in question and integration interactions, you can create *custom rules* that determine the next action that occurs. This is discussed next.
 
 ### Custom Rules
@@ -103,8 +105,8 @@ In the rule, there's a condition that determines if the user's response matches 
 Like in the example above, when you define a condition (in a rule) in a question interaction, you specify how you want to match the user's input. You can select from the following match types:
 
 * **Response Intent**: This triggers the Next Action when the user input matches the selected [intent](intent-builder-intents.html). Make sure to connect your domain and populate it with intents, so they'll be available for conditions. For an example of usage, see [here](conversation-builder-best-practices-reusable-components.html#create-reusable-yes-and-no-intents).
-* **Regular Expression**: This triggers the Next Action when the user input matches the RegEx that you specify. All standard [Regex rules](http://www.regexlib.com) apply.
-* **Pattern**: This triggers the Next Action when the user input matches the pattern that you specify. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching.
+* **Regular Expression**: This triggers the Next Action when the user input matches the RegEx that you specify. All standard [Regex rules](http://www.regexlib.com) apply. Take advantage of the [hint feature](conversation-builder-interactions-interaction-basics.html#advanced-patterns-with-regular-expressions) that's available.
+* **Pattern**: This triggers the Next Action when the user input matches the pattern that you specify. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for more information on pattern matching. Take advantage of the [pattern library](conversation-builder-interactions-interaction-basics.html#popular-patterns) that's available.
 * **Exact Value**: This triggers the Next Action when the user input matches an exact value that you specify. This is useful for questions where you present the user a set of predefined answers, such as multiple choice questions, since you can anticipate the user's answer precisely.
 * **Evaluate Options**: Available for multiple choice questions only. This triggers the Next Action when the user's choice matches the choice that you select here. For a match to be found, the consumer must select the option, enter the choice exactly, or, in text-only channels, enter the corresponding letter or number (configured in the interaction's settings).
 
