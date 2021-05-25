@@ -13,6 +13,9 @@ redirect_from:
 
 To test drive your `lambda` in a productive environment you can use the Debugger within Functions. Simply click on the "Debug" tab of while developing your `lambda`. Your code will then be executed inside an environment where all of Functions' features (e.g. Secrets, Payload and Domain Whitelist) are at its disposal.
 
+{:.notice}
+Please be aware that the debugger differs in the fact that it has more resources compared to a regular function and also it has no execution timeout to allow debugging. 
+
 <img class="fancyimage" width="90%" src="img/faas-debugger.png" alt="LivePerson Functions Debugger">
 
 The debugging interface consists of three main parts:
@@ -96,5 +99,6 @@ Payloads will be retained client-side for your convenience. If you want to reset
 ### Variable Inspector
 
 If there is a breakpoint set, the debugger will pause at the next breakpoint in the code flow.
-In this state you can inspect the current values of your variables and the environment variables.
+In this state you can inspect the current values of your variables and the environment variables. There is however a limit
+in regards to the maximum depths of properties.
 <img class="fancyimage" src="img/faas-debugger-sidebar-paused.png" alt="LivePerson Functions Sidebar Debugger Paused">

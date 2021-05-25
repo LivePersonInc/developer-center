@@ -60,7 +60,7 @@ botContext.printDebugMessage('The userPlatformId = ' + userId);
 
 ### Get authenticated customer info
 
-`getLPUserPersonalInfo` and `getLPCustomerInfo` are two, built-in methods to return authenticated customer information. You can attempt to see if either of these 2 methods return true or not.  If the visitor is authenticated, (typically they would set personal or customer info being logged in) you can access the Personal Info or Customer Info object array.
+`getLPUserPersonalInfo` and `getLPCustomerInfo` return authenticated customer information. You can attempt to see if either method returns true or not.  If the visitor is authenticated (typically they would set personal or customer info being logged in), you can access the Personal Info or Customer Info object array.
 
 
 | Function Name | Arguments | Returns |
@@ -70,7 +70,7 @@ botContext.printDebugMessage('The userPlatformId = ' + userId);
 
 #### Personal info example
 
-This is an example JSON object for the Personal Info. Keep in mind that not all fields may be available for your conversation. In addition, one of the following fields (firstname, lastname, company) must be populated for this object to return, otherwise it will be null.
+This is an example JSON object for the Personal Info. Keep in mind that all fields might not be available for your conversation. In addition, one of the following fields (firstname, lastname, company) must be populated for this object to return; otherwise, it will be null.
 
 ```json
 {

@@ -49,7 +49,6 @@ _filters info_
 |agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional | 
 |skillIds| An array of skill IDs.| Array `<String>`| Optional |
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: HUMAN, BOT.
-|includeSubGroups|When this is set to true, any metric retrieved for a specific group will include the total value of the metric on the group level, including its sub-groups. Default value is set to false.|boolean|Optional| 
 
 Request body - json example:
 
@@ -119,7 +118,7 @@ _metrics info_
 | agentLoad| The total weight of assigned conversations as a percentage of the maximum concurrent conversations of all agents, including bots.| Double |
 | humanAgentLoad| The total weight of assigned conversations as a percentage of the maximum concurrent conversations of all human agents.| Double |
 | humanOnlineLoad| The total weight of assigned conversations as a percentage of the maximum concurrent conversations of all human online agents.| Double |
-| availableSlots| The total number of available conversations slots to take incoming conversations from the queue (the "Supply"). In case the response is grouped by skilldIds, same slots will be counted under all the skills an agent is assigned to.| Long |
+| availableSlots| The total number of available conversations slots to take incoming conversations from the queue (the "Supply"). In case the response is grouped by skilldIds, same slots will be counted under all the skills an agent is assigned to.| Long | In order to get the total value of the metric on the group level **including its sub-groups**, pass includeSubGroups=true under the filters section |
 | onlineAgents| Agents currently in the ONLINE state.| Long |
 | backSoonAgents| Agents currently in the BACK SOON state.| Long |
 | awayAgents| Agents currently in the AWAY state.| Long |

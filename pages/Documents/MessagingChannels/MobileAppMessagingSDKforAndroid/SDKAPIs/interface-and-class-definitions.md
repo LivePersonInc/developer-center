@@ -273,6 +273,13 @@ public class PushMessage {
 }
 ```
 
+### PushType
+```java
+public enum PushType {
+  FCM,
+  HUAWEI
+}
+```
 
 ### SdeCallback (Monitoring API Related Classes)
 

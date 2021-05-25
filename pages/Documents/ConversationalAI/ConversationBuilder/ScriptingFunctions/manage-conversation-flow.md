@@ -112,3 +112,25 @@ The example below shows how quick replies can be added easily to your message.
 // Add these quick replies to an existing message
 botContext.addQuickReplies(['Ranch~sauce01','Honey Mustard~sauce02','BBQ~sauce03','Hot~sauce04']);
 ```
+
+### Get button payload
+
+`getButtonPayload` is used to retrieve a button’s callback value that is sent to the bot when the consumer selects that button in a question.
+
+By default, when you specify a callback value for a button in a Structured or Button question, that value is sent to the bot when the consumer selects the button. What’s more, that value, not the button’s label, is displayed to the consumer as their selected choice. The latter means you can retrieve the button’s callback value with [getCurrentUserMessage](conversation-builder-scripting-functions-get-set-contextual-data.html#get-current-user-message).
+
+However, in cases where you’re using the [enableButtonTextOnPostback](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#enablebuttontextonpostback) custom configuration field in the bot’s agent connector, the button’s label instead, not the callback value, is displayed to the consumer as their selected choice. In these cases, you need a different way to retrieve the button’s callback value. `getButtonPayload` meets this need.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getButtonPayload()` | None | (string) The button’s callback value that is sent to the bot |
+
+#### Example
+
+In this example, we use `getButtonPayload` in the Process User Response code of the question interaction to retrieve and store the callback value that is sent to the bot after the consumer selects a button:
+
+```javascript
+var callbackValue = botContext.getButtonPayload();
+botContext.printDebugMessage("Callback : " + callbackValue);
+botContext.setBotVariable("callback", callbackValue, true, false);
+```

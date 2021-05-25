@@ -518,6 +518,20 @@ Define the conversation Closed Separator Top padding.
 </div> -->
 
 
+#### conversationSeparatorContentViewTopPadding
+Defines the top padding for the conversation separator content view
+
+- **Type:** CGFloat
+- **Default value:** 0.0
+
+
+#### conversationSeparatorContentViewBottomPadding
+Defines the bottom padding for the conversation separator content view
+
+- **Type:** CGFloat
+- **Default value:** 0.0
+
+
 #### enableVibrationOnMessageFromRemoteUser 
 Toggle device vibration when a remote user sends a new message.
 
@@ -867,6 +881,12 @@ Refers to the style in which the link preview cell will be displayed.
    - **Type:** LPUrlPreviewStyle
    - **Default value:** LPUrlPreviewStyle.slim  
 
+
+#### linkPreviewLoadingImage
+Defines image for link preview loader
+
+- **Type:** UIImage
+- **Default value:** nil
 
 
 #### urlRealTimePreviewBackgroundColor 
@@ -1616,6 +1636,13 @@ Sets text color for button type element on Structured Content
     
 - **Type:** color
 - **Default value:** For iOS 13, we use [`UIColor.label`](#LPColor), anything below that uses [`UIColor.black`](#LPColor)
+
+
+#### structuredButtonWidthConstant
+Defines padding constraint for Structured Constant elements of button type
+
+- **Type:** CGFloat
+- **Default value:** -20.0
 
 
 #### structuredContentTextColor

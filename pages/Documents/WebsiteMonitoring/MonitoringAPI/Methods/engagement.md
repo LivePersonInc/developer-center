@@ -55,7 +55,7 @@ Use this method to access the LivePerson monitoring system in order to retrieve 
 | consumerId | Consumer Id (deprecated) | string | Optional, deprecated - use identities instead |  |
 | identities | List of identities | string (JSON) | Optional |  |
 | identities.iss | URL for domain issuer | string | Optional | For unauth this is the csds-domain/account-id, for authenticated the brand should supply the URL |
-| identities.acr | ACR - account config read | string | Required for each identity | supported value: loa1  |
+| identities.acr | ACR - account config read | string | Required for each identity | Supported values: "0" for unauth, "loa1" for auth  |
 | identities.sub | The subject for identification | string | Required | |
 | clientProperties | Optional JSON format with the following fields: Type, Platform, Name, Version, Client timestamp | string | Optional | JSON structure - The main purpose of this information is for troubleshooting and visibility of the consumer SDK / app version that manages the communication with the server side. |
 | clientProperties.appVersion | Application version | string | Optional | Example: For mobile it will be the host app version |
@@ -220,12 +220,12 @@ API version 1.1, Status code 202 Accepted -
 | engagementDetails | The details of an engagement when it is available | object | Required if there is an engagement  |
 | engagementDetails.campaignId | | number | Required if there is an engagement  |
 | engagementDetails.engagementId | | number | Required if there is an engagement  |
-| engagementDetails.conversationId | | string | Required if there is an engagement |
+| engagementDetails.conversationId | | string | Required if there is an open conversation |
 | engagementDetails.windowId | | string | Required if there is an engagement  |
 | engagementDetails.connectorId | | string | Required if there is an engagement  |
 | engagementDetails.language | | string | Required if there is an engagement  |
 | engagementDetails.engagementRevision | | number | Required if there is an engagement  |
-| engagementDetails.status | | string | Required if there is an engagement, values expose or interaction  |
+| engagementDetails.status | | string | Required if there is an engagement, possible values: "expose" or "conversation" if there is an open conversation  |
 | pageId | Page identification ID for sending event on the current engagement | string | Required  |
 | sessionId | The visit session ID| string | Must be saved in order to reuse for future requests in the same visit  |
 | visitorId | The visit visitor ID | string | Must be saved in order to reuse for future requests in the same visit |

@@ -30,11 +30,11 @@ POST       | https://[{domain}](/agent-domain-domain-api.html)/messaging_history
 
 Filter is sent in the POST data (body) with the following JSON structure.
 
-Required:
 
-| Name            | Description                        | Type/Value |
-| :---------      | :---------------                   | :----------|
-| conversationId | ID of the conversation to search.    | string|
+| Name            | Description                | Type/Value | Required |  Notes |
+| :---------      | :---------------           | :----------| :--------|  :-----|
+| conversationId | ID of the conversation to search.    | string | Required  |
+| contentToRetrieve | List of content types that should be retrieved | string | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys | 
 
 ### Response
 
