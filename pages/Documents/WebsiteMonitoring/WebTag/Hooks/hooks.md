@@ -12,7 +12,7 @@ sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Web Tag
 subfoldername: Hooks
-permalink: web-tag-hooks.html
+permalink: web-tag-hooks-hooks.html
 
 indicator: both
 ---
@@ -180,44 +180,32 @@ Parameters:
    </td>
    <td>Survey questions which would be render by the given data
    </td>
-   <td><code>{  </code>
-<p>
-<code>   "header":"",</code>
-<p>
-<code>   "id":1058794,</code>
-<p>
-<code>   "questions":{  </code>
-<p>
-<code>      "question":[  </code>
-<p>
-<code>         {  </code>
-<p>
-<code>            "type":"Text Field",</code>
-<p>
-<code>            "validationType":"alpha_numeric",</code>
-<p>
-<code>            "id":5567213,</code>
-<p>
-<code>            "logicId":2,</code>
-<p>
-<code>            "order":0,</code>
-<p>
-<code>            "mandatory":true,</code>
-<p>
-<code>            "label":"From Name:",</code>
-<p>
-<code>            "lastKnownValue":""</code>
-<p>
-<code>         }</code>
-<p>
-<code>      ]</code>
-<p>
-<code>   }</code>
-<p>
-<code>}</code>
+   <td>
+     See below for data structure
    </td>
   </tr>
 </table>
+
+```json
+{  
+   "header":"",
+   "id":1058794,
+   "questions":{  
+      "question":[  
+         {  
+            "type":"Text Field",
+            "validationType":"alpha_numeric",
+            "id":5567213,
+            "logicId":2,
+            "order":0,
+            "mandatory":true,
+            "label":"From Name:",
+            "lastKnownValue":""
+         }
+      ]
+   }
+}
+```
 
 
 
@@ -230,6 +218,7 @@ Interference:  Pre-chat / post-chat / offline survey answers before submit
 Timing: Before
 
 Parameters:
+
 ```json
 {
    "data": {
@@ -268,25 +257,8 @@ Parameters:
    </td>
    <td>General info about the questions (Data is not meant to be changed)
    </td>
-   <td>[{  
-<p>
-   "type":"Text Field",
-<p>
-   "validationType":"alpha_numeric",
-<p>
-   "id":5567213,
-<p>
-   "logicId":2,
-<p>
-   "order":0,
-<p>
-   "mandatory":true,
-<p>
-   "label":"From Name:",
-<p>
-   "lastKnownValue":"asf"
-<p>
-}]
+   <td>
+     See data structure below
    </td>
   </tr>
   <tr>
@@ -296,47 +268,50 @@ Parameters:
    </td>
    <td>The actual submitted data - changing the surveyData actually affect the submitted data
    </td>
-   <td><code>{  </code>
-<p>
-<code>   "survey":{  </code>
-<p>
-<code>      "id":1058794,</code>
-<p>
-<code>      "question":[  </code>
-<p>
-<code>         {  </code>
-<p>
-<code>            "id":5567213,</code>
-<p>
-<code>            "answer":"asf"</code>
-<p>
-<code>         },</code>
-<p>
-<code>         {  </code>
-<p>
-<code>            "id":5567214,</code>
-<p>
-<code>            "answer":"sadf@asf.con"</code>
-<p>
-<code>         },</code>
-<p>
-<code>         {  </code>
-<p>
-<code>            "id":5567217,</code>
-<p>
-<code>            "answer":"asdf"</code>
-<p>
-<code>         }</code>
-<p>
-<code>      ]</code>
-<p>
-<code>   }</code>
-<p>
-<code>}</code>
+   <td>
+     See data structure below
    </td>
   </tr>
 </table>
 
+#### Array of Object - Data structure
+
+```json
+[{  
+   "type":"Text Field",
+   "validationType":"alpha_numeric",
+   "id":5567213,
+   "logicId":2,
+   "order":0,
+   "mandatory":true,
+   "label":"From Name:",
+   "lastKnownValue":"asf"
+}]
+```
+
+#### surveyData - Data structure
+
+```json
+{  
+   "survey":{  
+      "id":1058794,
+      "question":[  
+         {  
+            "id":5567213,
+            "answer":"asf"
+         },
+         { 
+            "id":5567214,
+            "answer":"sadf@asf.con"
+         },
+         {  
+            "id":5567217,
+            "answer":"asdf"
+         }
+      ]
+   }
+}
+```
 
 #### NAME: BEFORE_SEND_VISITOR_LINE
 
@@ -378,15 +353,17 @@ Parameters:
    </td>
    <td>Text the visitor sending to agent
    </td>
-   <td><code>{  </code>
-<p>
-<code>   "text":"Can you help me?"</code>
-<p>
-<code>}</code>
+   <td>
+     See data structure below
    </td>
   </tr>
 </table>
 
+```json
+{  
+   "text":"Can you help me?"
+}
+```
 
 #### NAME: AFTER_GET_LINES
 
@@ -422,37 +399,27 @@ Parameters:
    <td>Array of objects - [{}]
    </td>
    <td>Lines data before saved in model.
-<p>
 The rational value to change is only the “text”
    </td>
-   <td><code>[  </code>
-<p>
-<code>   {  </code>
-<p>
-<code>      "@id":"4",</code>
-<p>
-<code>      "@type":"line",</code>
-<p>
-<code>      "time":"2017-03-02T11:51:02.545+02:00",</code>
-<p>
-<code>      "textType":"html",</code>
-<p>
-<code>      "text":"&lt;div dir=\"ltr\" style=\"direction: ltr; text-align: left;\">how are you?&lt;/div>",</code>
-<p>
-<code>      "by":"margalitb@liveperson.com",</code>
-<p>
-<code>      "source":"agent",</code>
-<p>
-<code>      "subType":"REGULAR",</code>
-<p>
-<code>      "type":"line",</code>
-<p>
-<code>      "localId":2</code>
-<p>
-<code>   }</code>
-<p>
-<code>]</code>
+   <td>
+     See data structure below
    </td>
   </tr>
 </table>
 
+```json
+[  
+   {  
+      "@id":"4",
+      "@type":"line",
+      "time":"2017-03-02T11:51:02.545+02:00",
+      "textType":"html",
+      "text":"&lt;div dir=\"ltr\" style=\"direction: ltr; text-align: left;\">how are you?&lt;/div>",
+      "by":"margalitb@liveperson.com",
+      "source":"agent",
+      "subType":"REGULAR",
+      "type":"line",
+      "localId":2
+   }
+]
+```

@@ -125,7 +125,6 @@
           - subpagename: Dialogs & Patterns
           - subpagename: Intents
           - subpagename: Integrations
-          - subpagename: Disambiguation
           - subpagename: Deploy the Bot
           - subpagename: Escalate to an Agent
       - pagename: Bot Groups & Other Techniques
@@ -140,6 +139,12 @@
         subpages:
           - subpagename: Implementing a Web View Integration
           - subpagename: Using LivePerson Functions with a Bot
+      - pagename: Using Agent Assist
+        subpages:
+          - subpagename: Overview
+          - subpagename: Prerequisite Steps
+          - subpagename: Configure Agent Assist
+          - subpagename: Test Agent Assist
   - documentname: Conversation Builder
     pages:
       - pagename: Bot Workspace
@@ -162,7 +167,7 @@
           - subpagename: Simple Router
           - subpagename: Store Locator
           - subpagename: Travel Notification
-          - subpagename: Maven Concierge
+          - subpagename: Conversation Orchestrator
       - pagename: Dialogs
         subpages:
           - subpagename: Dialog Basics
@@ -195,9 +200,11 @@
           - subpagename: File Integrations
           - subpagename: LivePerson Functions Integrations
           - subpagename: Web View Integration API
+          - subpagename: Using Consumer Access Tokens
           - subpagename: Troubleshooting
       - pagename: Environment Variables
       - pagename: Versions & Releases
+      - pagename: Global Functions
       - pagename: Scripting Functions
         subpages:
           - subpagename: Introduction
@@ -232,20 +239,25 @@
       - pagename: Agent Assist
         subpages:
           - subpagename: Overview
-          - subpagename: Recommended Actions for Automations
-          - subpagename: Recommended Actions for Knowledge Base
+          - subpagename: Setting Up Bot Recommendations
+          - subpagename: Setting Up Knowledge Base Recommendations
+          - subpagename: Testing
+          - subpagename: Agent Experience
+          - subpagename: Best Practices
+          - subpagename: Troubleshooting
       - pagename: Conversation Context Service
         subpages:
           - subpagename: Overview
-          - subpagename: Inbox System Attributes
-          - subpagename: Custom Static or Function
-          - subpagename: Conversation Context Service
+          - subpagename: Getting Started
+          - subpagename: Attributes
+          - subpagename: Methods
       - pagename: Dynamic Routing
         subpages:
           - subpagename: Overview
-          - subpagename: Tutorial
-          - subpagename: Use Conversation Orchestrator with Your Bot
-          - subpagename: Using SDE attributes in Routing
+          - subpagename: Getting Started
+          - subpagename: Creating and Managing Policies
+          - subpagename: Routing Conversations by SDEs
+          - subpagename: Routing Conversations by Intents
       - pagename: Recommendation API
         subpages:
           - subpagename: Overview
@@ -262,6 +274,10 @@
         subpages:
          - subpagename: Single Utterance Testing
          - subpagename: Advanced Model Testing
+      - pagename: External APIs
+        subpages:
+         - subpagename: Getting Started
+         - subpagename: Model Tester External APIs
   - documentname: Intent Analyzer
     pages:
       - pagename: Overview
@@ -276,16 +292,17 @@
           - subpagename: Mapping Content Metadata
           - subpagename: Writing a Transformation Specification
           - subpagename: Best Practices
+          - subpagename: Beta - Shortening Long-Form Content
       - pagename: Internal Knowledge Bases
         subpages:
           - subpagename: Introduction
           - subpagename: Knowledge Bases
           - subpagename: Articles
           - subpagename: Best Practices
-          - subpagename: Limits
       - pagename: Using Intents with KBs
       - pagename: Sending Content to Consumers
       - pagename: Common Settings & Tasks
+      - pagename: Limits
   - documentname: Bots Status
     pages:
       - pagename: Overview
@@ -302,6 +319,7 @@
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
+      - pagename: Account Details
       - pagename: Permissions
       - pagename: Credentials
   - documentname: Third-Party Bots
@@ -310,7 +328,12 @@
       - pagename: Bot Status Dashboard
       - pagename: Bot Conversation Errors
       - pagename: Google Dialogflow
-      - pagename: Google Dialogflow Version 2
+      - pagename: Google Dialogflow ES
+        subpages:
+          - subpagename: Introduction
+          - subpagename: Basic Content
+          - subpagename: Advanced Features
+      - pagename: Google Dialogflow CX
       - pagename: IBM Watson Assistant
       - pagename: IBM Watson Assistant Version 2
       - pagename: Amazon Lex
@@ -323,6 +346,7 @@
       - pagename: Custom Integration
       - pagename: Hook Configuration
       - pagename: Public API
+      - pagename: Conversation Tester
 
   - documentname: Messaging Agent SDK
     pages:
@@ -692,9 +716,12 @@
         subpages:
           - subpagename: Overview
           - subpagename: Events & Templates
+          - subpagename: Function Connectivity
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
+          - subpagename: Snippets
           - subpagename: Storing Secrets
+          - subpagename: Data Storage
           - subpagename: Debugger
           - subpagename: Common Examples
           - subpagename: Best Practices
@@ -703,6 +730,8 @@
       - pagename: Deployment
       - pagename: Monitoring
         subpages:
+          - subpagename: Activities
+          - subpagename: Deployment History
           - subpagename: Logs
           - subpagename: Metrics
           - subpagename: Email Reporting
@@ -817,6 +846,9 @@
           - subpagename: Agent Activity
           - subpagename: Current Queue State
           - subpagename: SLA Histogram
+  - documentname: Outbound Reporting API
+    pages:
+      - pagename: Overview
   - documentname: Key Messaging Metrics API
     basedomain: https://{domain}/manager_workspace/api/account/{accountID}
     pages:
@@ -824,6 +856,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Metrics
+          - subpagename: Historical
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
@@ -872,6 +905,8 @@
       - subpagename: Welcome Message with Quick Replies
       - subpagename: Scroll Behavior Configuration
       - subpagename: Logging
+      - subpagename: Voice and Video
+      - subpagename: Proactive and IVR Deflection to App Messaging
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -909,24 +944,19 @@
       subpages:
       - subpagename: Quick Start 5.2.1 and below
       - subpagename: Quick Start - 6.0 and up (XCFramework support)
-    - pagename: Advanced Configuration
-      subpages:
-        - subpagename: App Extensions
-        - subpagename: Conversations Lifecycle
-        - subpagename: SDK Delegates
-        - subpagename: UI
-        - subpagename: User Data
     - pagename: Advanced Features
       subpages:
       - subpagename: Audio Messages
       - subpagename: Campaigns
       - subpagename: Certificate Pinning
       - subpagename: CSAT Behavior
-      - subpagename: Photo and File Sharing
-      - subpagename: Unauthenticated In-App Messaging
-      - subpagename: Welcome Message with Quick Replies
-      - subpagename: Scroll Behavior Configuration
       - subpagename: Logging
+      - subpagename: Proactive and IVR Deflection to App Messaging
+      - subpagename: Photo and File Sharing
+      - subpagename: Scroll Behavior Configuration
+      - subpagename: Unauthenticated In-App Messaging
+      - subpagename: Voice and Video
+      - subpagename: Welcome Message with Quick Replies
     - pagename: SDK APIs
       subpages:
       - subpagename: Messaging API
@@ -970,7 +1000,9 @@
   - documentname: Proactive Messaging
     pages:
     - pagename: API
-
+  - documentname: Connect To Messaging
+    pages:
+    - pagename: API
 - categoryname: Rich Messaging
   image: rich-media
   documents:
@@ -1041,6 +1073,11 @@
       - pagename: Configuration
       - pagename: How It Works
       - pagename: Detailed API
+    - documentname: Consumer Delegation
+      pages:
+      - pagename: Introduction
+      - pagename: Configuration
+      - pagename: How It Works
     - documentname: Conversational Cloud Applications
       pages:
         - pagename: What Is a Conversational Cloud Application?
@@ -1130,6 +1167,9 @@
           subpages:
             - subpagename: Event Binding
             - subpagename: Events
+        - pagename: Hooks
+          subpages:
+            - subpagename: Hooks
         - pagename: New Page Refresh
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}

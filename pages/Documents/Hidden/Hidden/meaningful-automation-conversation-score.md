@@ -16,7 +16,7 @@ LivePerson is pleased to announce the *Beta release* of the Meaningful Automatio
 
 A Meaningful Automation Conversation Score or MACS is a measure of the quality of a bot conversation. 
 
-LivePerson has found through research that consumer effort and emotion are key determiners in how the consumer perceives the quality of a conversational experience. Given this, a MACS is calculated by identifying and quantifying this within the conversation. Failure points within the conversation’s structure are detected and used to derive a score, for example: 
+LivePerson has found through research that consumer effort is a key determiner in how the consumer perceives the quality of a conversational experience. Given this, a MACS is calculated by identifying and quantifying this within the bot conversation. Failure points within the conversation’s structure are detected and used to derive a score, for example: 
 
 * Did the bot understand the consumer’s question? 
 * Was the consumer stuck in an endless loop? 
@@ -60,7 +60,7 @@ MACS addresses all these shortcomings because it identifies and quantifies the f
 
 MACS scoring makes it fast and easy to tune your bots for improved performance at scale. Using it, you can:
 
-* **Identify failed conversations**: Easily find the ones that required high consumer effort or produced consumer frustration.
+* **Identify failed conversations**: Easily find the ones that required high consumer effort.
 * **Review less, not more**: Perform a targeted review of conversation transcripts, not a random review, to locate the bot areas that need improvement.
 * **Diagnose and tune quickly**: Move directly from a failure point in a transcript to the interaction in the bot flow, where you can make changes.
 
@@ -83,7 +83,6 @@ The score is calculated based on the presence of failure points in the conversat
 | --- | --- | --- |
 | Around in circles |  The consumer is stuck in an unintentional loop. | Improve the dialog/conversation flow<br><br>Escalate to agent |
 | Ignored consumer question | The bot doesn’t acknowledge the consumer's query and instead forces the consumer through a dialog flow. | Add intent detection (NLU)<br><br>Add menu options |
-| Frustration | The consumer expresses intense frustration as a reaction to the experience with the bot. | Detect frustration and escalate<br><br>Identify flows that lead to disproportionate frustration; improve the dialog and intent detection |
 | Doesn't understand | The bot fails to understand the consumer's intent and is not offering to repair the conversation. | Improve poor performing intents<br><br>Add intents<br><br>Move to a menu-based approach |
 | Bad transfer | The bot transfers the consumer to an agent, but this either leaves the consumer hanging or abruptly ends the chat.<br><br>The bot might also fail to tell the consumer early enough in the conversation that there are no agents available at that hour. | Give a warning early in conversation that the agent capacity is near capacity<br><br>Check if agents are available before declaring the conversation will be escalated |
 
@@ -137,8 +136,8 @@ On the main dashboard, click a bot’s MACS to go to the **MACS** page for the b
 On the **MACS** page, use the filters to refine the data that’s displayed based on your criteria:
 
 1. **Detail filters**: Filter the data based on specific criteria, for example, the reason for the MACS score.
-2. **Score filters**: Toggle these on and off to show and hide the data for a score.
-3. **Date filter**: Specify the date range for the data.
+2. **Date filter**: Specify the date range for the data.
+3. **Score filters**: Toggle these on and off to show and hide the data for a score. These filters are available when you're viewing the **MACS by Conversations** graph (shown below).
 
 <img style="width:800px" src="img/ConvoBuilder/macs_filters.png">
 <img style="width:500px" src="img/ConvoBuilder/macs_filters2.png">
