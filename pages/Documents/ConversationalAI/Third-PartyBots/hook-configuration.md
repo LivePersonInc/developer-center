@@ -434,9 +434,7 @@ The Posthook Lambda gets invoked on every message the customer sends. It allows 
 
 ```js
 const { payload } = input;
-const {
-  payload: { queryResult },
-} = payload;
+const { queryResult } = payload;
 if (
   queryResult &&
   queryResult.fulfillmentMessages &&
@@ -632,9 +630,7 @@ return callback(null, payload);
 
 ```js
 const { payload } = input;
-const {
-  payload: { queryResult },
-} = payload;
+const { queryResult } = payload;
 if (
   queryResult &&
   queryResult.responseMessages &&
