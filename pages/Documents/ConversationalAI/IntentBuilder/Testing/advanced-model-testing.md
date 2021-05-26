@@ -12,7 +12,7 @@ indicator: both
 
 ### Overview
 
-If your domain is using the LivePerson NLU v2 engine or a 3rd-party NLU engine, there's an advanced Model Tester that's available.
+If your domain is using the LivePerson engine or a 3rd-party NLU engine, there's an advanced Model Tester that's available.
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester.png">
 
@@ -33,9 +33,16 @@ The general workflow for using the Model Tester is this:
 You can download test reports and comparison reports.
 
 ### Add phrases to the test set
-In a domain, there are three ways to add a phrase to the Model Tester’s test set:
+In a domain, there are several ways to add phrases to the Model Tester’s test set:
 
-* Click **Model Tester** in the upper-left corner, and enter the phrase manually on the **Test Set** tab.
+* Click **Model Tester** in the upper-left corner, and then click **Import Test Set** to import a CSV file that contains the phrases.
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ib_model_tester_addphrase4.png">
+    Use the format below in the CSV file. Use the first line to name the columns as shown; this line is ignored during the import.
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_model_tester_addphrase5.png">
+
+    Be aware that uploading a CSV file overwrites any test phrases that already exist in the test set with those in the import file. Additionally, when creating the import file, take care when specifying the intents. If an intent in the file isn't found in the domain, the associated test phrase is skipped during the import.
+
+* Click **Model Tester** in the upper-left corner, and enter the phrases manually on the **Test Set** tab.
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase1.png">
 * In **Test User Input** (where [single-phrase testing](intent-builder-testing-single-utterance-testing.html) is performed), click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase2.png">
@@ -61,7 +68,7 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_refine.png">
 
 {: .important}
-The test set overall can contain a maximum of 300 test phrases. Each intent can have a maximum of 25 test phrases.
+The test set overall can contain a maximum of 2,000 test phrases. LivePerson recommends that you include 5 test phrases for each intent in the domain.
 
 #### Evaluating the test coverage
 
@@ -118,7 +125,7 @@ There are several, important metrics displayed:
 ### Evaluate the report
 
 {: .important}
-On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-builder-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu-v2).
+On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-builder-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu).
 
 If the report's scores are low, take corrective action as follows:
 

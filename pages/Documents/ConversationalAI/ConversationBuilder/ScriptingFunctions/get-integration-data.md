@@ -87,3 +87,36 @@ if (results < 1) {
       botContext.sendMessage('Sorry, I was not able to find any notes for this contact.');
 }
 ```
+
+### Get file caption
+
+The `getFileCaption` function is used to retrieve the caption (message) that’s entered by the consumer following their successful upload of a file (via a [File integration](conversation-builder-integrations-file-integrations.html)). If the consumer doesn’t enter a caption, this function returns “\_\_EMPTYTEXT\_\_”.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getFileCaption()` | None | (string) The caption for the file that’s uploaded |
+
+#### Example
+
+```javascript
+// get the file caption
+var fileCaption = botContext.getFileCaption();
+// set the file caption in a variable
+botContext.setBotVariable('fileCaption',fileCaption,true,false);
+```
+
+### Get file type
+The `getFileType` function is used to retrieve the file type (PDF, JPEG, etc.) of the file that’s uploaded to an external file share via a [File integration](conversation-builder-integrations-file-integrations.html).
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getFileType()` | None | (string) The file type of the file that’s uploaded |
+
+#### Example
+
+```javascript
+// get the file type
+var fileType = botContext.getFileType();
+// set the file type in a variable
+botContext.setBotVariable('fileType',fileType,true,false);
+```

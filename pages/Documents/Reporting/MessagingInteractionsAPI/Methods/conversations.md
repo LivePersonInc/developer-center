@@ -87,7 +87,8 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |answerText | Specific words or phrases from PCS free text answers | Array `<String>` | Optional |
 |selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
 |conversationsWithStepUpOnly | This parameter will return TRUE if a step up took place during the conversation. | boolean. | Optional | Get only conversations that had a step up  |Filters examples:
-|agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional , with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|   
+|agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional , with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|  
+|annotationStates| Search for conversations that have an annotation with the specified state.| Array `<String>`| Optional | Valid values: OPEN,SUBMITTED,VETTED |
 
 |Name | Description |
 |:------------------ |:------------------------------------------------|
@@ -123,6 +124,7 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |answerText  | {"start":{"from":1470037448000,"to":1472543048000},"answerText":["good","bad","ugly"]}|
 |conversationsWithStepUpOnly | {"start":{"from":1541578792011,"to":1541578895020},,"contentToRetrieve":["messageRecords"],"conversationsWithStepUpOnly":true}|**Note: search by keywords, summary or engagement attributes**
 |agentSurveySearch   | {"start":{"from":1470037448000,"to":1472543048000},"agentSurveySearch":{"pendingAgentSurvey":[true], "questionId":["id1","id2"], "questionName":["id1","id2"], "questionKeywords":["keyword1","keyword2"],"answerKeywords":["keyword1","keyword2"],"surveyId":[3592872510]}}
+|annotationStates| {"start":{"from":1470037448000,"to":1472543048000},"annotationStates":["OPEN","SUBMITTED","VETTED"]}|
 
 In order to search for a specific phrase within the messages, summary or engagement attributes of the conversation, you will need to wrap the phrase in quotation marks. This will make sure that the search will run according to all specified characaters in the phrase and in the same position relative to each other. (For example: searching for "tester@liveperson.com", will search for the characters “tester” and “liveperson.com” in that order.)
 
