@@ -326,7 +326,7 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 
 | Setting | Description | Required? | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | https://wwww.mysite/images/mylogo.jpg |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | https://www.mysite/images/mylogo.jpg |
 | ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
 | Title | The title of the Apple Pay bubble. | Required | Your order |
 | Item name | A short description of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.lineItems[i]} |
