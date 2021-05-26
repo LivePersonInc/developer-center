@@ -12,7 +12,7 @@ indicator: messaging
 
 ### Introduction
 
-Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with many improvements from the older 1.0 API version. The Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS and WhatApp. 
+Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with many improvements from the older 1.0 API version. The Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS, WhatApp and Inapp. And it supports customer SDE, which includes [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info). Customer SDE is only applicable for SMS and WA. 
 Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html).
 
 ### Getting Started
@@ -67,7 +67,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | Content-Type | Used to indicate the media type of the resource | application/json |
 | Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | Bearer <<APP_JWT>> |
 
-**Request Body Example - JSON Payload - New Version - Whatsapp With Rich Template**
+**Request Body Example - JSON Payload - New Version - Whatsapp With Rich Template, including customer SDE**
 
 ```json
 {
@@ -100,6 +100,52 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
             },
             "headerVariables": {
                 "video": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4"
+            },
+            "personalInfo": {
+                "firstname": "Smith",
+                "lastname": "John",
+                "age": {
+                    "age": 31,
+                    "year": 1990,
+                    "month": 1,
+                    "day": 11
+                },
+                "contacts": [{
+                    "email": "test@example.com",
+                    "phone": "+1 480-400-8000",
+                    "address": {
+                        "country": "United States",
+                        "region": "NA"
+                    }
+                }],
+                "gender": "MALE",
+                "language": "en-US",
+                "company": "LP"
+            },
+            "customerInfo": {
+                "cstatus": "VIP",
+                "ctype": "Gold",
+                "customerId": "138766AC",
+                "balance": -200.99,
+                "currency": "EUR",
+                "socialId": "11256324780",
+                "imei": "3543546543545688",
+                "userName": "user000",
+                "companySize": 500,
+                "companyBranch": "East Village",
+                "accountName": "Bank corp",
+                "role": "Marketing manager",
+                "lastPaymentDate": {
+                    "day": 15,
+                    "month": 10,
+                    "year": 2016
+                },
+                "registrationDate": {
+                    "day": 23,
+                    "month": 5,
+                    "year": 2015
+                },
+                "loginStatus": 1
             }
         }
     ]
@@ -250,6 +296,49 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
             "consumerContent": {
                 "sms": "1234456678899",
                 "wa": "1234456678899"
+            }
+        }
+    ]
+}
+```
+
+**Request Body Example - JSON Payload - New Version - Inapp Handoff**
+
+```json
+{
+    "campaignName": "TestInappProactiveAPI",
+    "skill": "sales",
+    "templateId": "H1234567890",
+    "consent": true,
+    "consumers": [
+        {
+            "consumerContent": {"inapp": "user1"},
+            "variables": {
+                "1": "Hi user1, welcome to proactive messaging.",
+            }
+        }
+    ]
+}
+```
+1. All fields are required. 
+2. If variables is empty object, the default value set in handoff will be used.
+3. The value of consent must be true. 
+4. If the vaule of skill or templateId is not correct, it will failed to create proactive campaign and error will be returned.  
+ 
+**Response Example**
+
+```json
+{
+    "proactiveCampaignId": "a9cRASfbQ",
+    "leCampaignId": "1239032370",
+    "leEngagementId": "1244018070",
+    "requestTraceId": "f7d5baa8-d4c1-46ad-bd1e-9a98a38b99a3",
+    "failedConsumers": [],
+    "acceptedConsumers": [
+        {
+            "id": "252d195b-1a4f-8807-aa45-97d2a5560e44",
+            "consumerContent": {
+                "inapp": "user1"
             }
         }
     ]
@@ -499,3 +588,12 @@ they should have https://upload.wikimedia.org added in houston site settings. Pl
 
 <strong>Do we need any input from user for footer and quick reply buttons section while creating campaign using rich template?</strong>
 Footer and quick reply buttons have static values and do not need any user input while campaign creation
+
+<strong>What kind of customers can get Inapp message through Proactive Messaging?</strong>
+Only registered customers can. 
+
+<strong>How does first Inapp message display in agent workspace?</strong>
+First Inapp message is not part of conversations becuase customers cannot send first message on behalf of agent. Agent widget is used to display first message. It's not perfect. we are trying to solve it. 
+
+<strong>Is customer SDE enabled for all accounts?</strong>
+To use customer SDE via API, reach out to Proactive team to get it enabled for the account. Currently the feature is not enabled for all accounts.
