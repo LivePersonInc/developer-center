@@ -280,11 +280,7 @@ Some setup of your Conversational Cloud environment is required before using thi
 
 ##### Uploading multiple files
 
-If the dialog flow requires that the consumer upload *multiple* files, you'll need to add a File Upload interaction for every file, and each interaction must be followed by an Integration interaction. You can certainly reuse the [File integration](conversation-builder-integrations-file-integrations.html) that gets called, as we've done below.
-
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload3.png">
-
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload9.png">
+If you require that the consumer upload *multiple* files, use different dialogs to accomplish this so that there is only one File Upload interaction in a single dialog. You can certainly reuse the [File integration](conversation-builder-integrations-file-integrations.html) that gets called.
 
 ##### Routing the conversation based on success or failure
 
