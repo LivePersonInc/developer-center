@@ -167,7 +167,7 @@
           - subpagename: Simple Router
           - subpagename: Store Locator
           - subpagename: Travel Notification
-          - subpagename: Maven Concierge
+          - subpagename: Conversation Orchestrator
       - pagename: Dialogs
         subpages:
           - subpagename: Dialog Basics
@@ -319,6 +319,7 @@
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
+      - pagename: Account Details
       - pagename: Permissions
       - pagename: Credentials
   - documentname: Third-Party Bots
@@ -715,6 +716,7 @@
         subpages:
           - subpagename: Overview
           - subpagename: Events & Templates
+          - subpagename: Function Connectivity
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Snippets
@@ -1165,6 +1167,9 @@
           subpages:
             - subpagename: Event Binding
             - subpagename: Events
+        - pagename: Hooks
+          subpages:
+            - subpagename: Hooks
         - pagename: New Page Refresh
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}
