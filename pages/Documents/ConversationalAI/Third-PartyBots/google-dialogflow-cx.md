@@ -65,7 +65,7 @@ The following Dialogflow CX information should be provided to LivePerson:
     <td>Private key of the IAM Account, please keep the formatting as provided by Google</td>
     <td>-----BEGIN PRIVATE KEY-----
         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        WQpmxLe3h4XeslUI7Eowz2sypu72Q9+j1xOEtc9asl37wLac/zo0xy7wNxnDau+x
         rOOTX/VAniuByeZ98mIRZQBxz6qInJ4el8PFT7eJbC0+IMfiljqrMDqy/N4CR2gE
         qqCVtY4kEWGr6a5IA/IBFENFPlADbY/TRBbInvakA1iqWj5yCOslGo7SmwleuJ6U
         kUbjdmBI937k0AFWrbKAjNXLuF174Qx7B7NQm9G6iud+nGu0XwH2g2FPEQkvA8YL
@@ -547,7 +547,7 @@ Figure 11.1
 
 Third-Party bots allows the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 12.1.
 
-<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
 Figure 12.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes, Further information Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. For DialogFlow CX these engagement attributes are added to the property `lpSdes` that is sub-property of the `payload` (more information about `payload` parameter can be found [here](https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/QueryParameters)). An example of the request body can be seen below:

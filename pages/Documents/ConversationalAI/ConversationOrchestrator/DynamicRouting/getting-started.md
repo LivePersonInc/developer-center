@@ -70,7 +70,7 @@ This example starts with a simple implementation, using static attributes (hard-
 
 #### Use a policy with Conversation Builder
 
-In this tutorial, we’ll use the Conversation Builder template that is pre-wired with Conversation Orchestrator and the Conversation Context Service.
+In this tutorial, we’ll use Conversation Builder's [Conversation Orchestrator bot template](conversation-builder-bot-templates-conversation-orchestrator.html) that is pre-wired with Conversation Orchestrator and the Conversation Context Service.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_usepolicywithcb.png">
 
