@@ -1006,3 +1006,7 @@ To use Watson Discovery the Watson Assistant Bot needs to have a s[search skill]
 <ul>
   <li>Currently IBM Watson allows <b>only 5</b> response types per node.</li>
 </ul>
+
+### Prevent Tranfering loop behaviour
+
+As a good practice and to prevent that the bot goes into a conversation loop during off hours, create a separate bot for off-hour times that only listens to the human skill and not to the regular bot skills. If another bot is not created for that period, the bot can get into a transfering loop.  
