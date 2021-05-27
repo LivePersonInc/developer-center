@@ -12,7 +12,7 @@ indicator: both
 
 Global Helper Functions are recommended and useful for building bots that involve any coding logic that must take place in Pre/Post-Process code or in integrations. This bot template contains a set of recommended global functions that can help to capture needed information and process common methods without the need to write the botContext methods in your bot.
 
-This bot template serves to demonstrate the functionality of many of these global functions. It is not intended for use as a stand-alone bot, but instead as an example of how you might use these functions within your own.
+This bot template serves to demonstrate the functionality of many of these global functions. It is **not** intended for use as a stand-alone bot, but instead as an example of how you might use these functions within your own.
 
 {: .important}
 This Global Helper Functions bot template contains a dialog template that can be imported into any Conversation Builder bot. If you import the dialog template into a bot, do so **before** you begin building out the bot. If you have existing global functions, there could be naming conflicts; so please double check after import.
@@ -34,7 +34,7 @@ This Global Helper Functions bot template contains a dialog template that can be
 
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/templates_ghf1.png">
 
-Functions designed to simplify the use of pre/post process code. All functions are provided with the dialog template.
+The functions are designed to simplify the use of pre/post process code. All functions are provided with the dialog template.
 
 ##### Retrieving user message and intent
 
