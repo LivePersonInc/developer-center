@@ -158,6 +158,7 @@
       - pagename: Bot Templates
         subpages:
           - subpagename: Overview
+          - subpagename: Global Helper Functions
           - subpagename: Apply for a Loan
           - subpagename: Full Lead Gen
           - subpagename: Insurance Quote

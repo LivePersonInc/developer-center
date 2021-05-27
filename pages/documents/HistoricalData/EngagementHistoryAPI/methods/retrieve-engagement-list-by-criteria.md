@@ -699,9 +699,7 @@ Example:
                        "name": "red high heel shoe",
                        "category": "women shoes",
                        "sku": "xyz567",
-                       "price": "77.8", 
-                       "statusInStock": "low",
-                       "quantityInStock": 7
+                       "price": "77.8"
                      }
                    }
                  ]
