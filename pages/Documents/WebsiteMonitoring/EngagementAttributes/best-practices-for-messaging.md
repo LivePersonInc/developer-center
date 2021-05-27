@@ -65,7 +65,7 @@ The table below explains which EAs should be collected and presented in LE UI.
   <tr>
     <td></td>
     <td>Viewed product</td>
-    <td>Used to track a product or service that interests visitors. Each product is described by Name, Category, and SKU.</td>
+    <td>Used to track a product or service that interests visitors. Each product is described by Name, Category, SKU, stock status and quantity in stock</td>
     <td>When a visitor views a product.</td>
     <td>This information will usually be sent more than once per session.</td>
   </tr>

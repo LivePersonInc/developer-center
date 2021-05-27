@@ -7,8 +7,9 @@ documentname: Authorizing Conversational Cloud Applications
 subfoldername: Methods
 order: 12
 permalink: authorizing-conversational-cloud-applications-methods-token-revocation-request.html
-
 indicator: both
+redirect_from: 
+  - authorizing-liveengage-applications-methods-token-revocation-request.html
 ---
 
 ### Overview
