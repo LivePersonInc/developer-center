@@ -15,13 +15,13 @@ root-link: true
 indicator:
 ---
 <br>
-A read-only API that returns the base domain of LivePerson and used in the LivePerson APIs. This is a test.
+A read-only API that returns the base domain of LivePerson and used in the LivePerson APIs.
 
 ### Domain Retrieval Tool
 
-Instead of using the API below yourself, you can use a simple tool that we built to retrieve **all** service names and their respective base URIs. This is useful if you need those URIs for a static project or as a point of reference. You might still want to review the Domain API itself in order to incorporate retrieving your base URIs dynamically, as part of your code.
+Instead of using the API below yourself, you can use the following simple tool to retrieve **all** service names and their respective base URIs. This is useful if you need those URIs as a point of reference or debugging. You should not hardcode any domains retrieved from this in your code, but should instead perform a lookup using the Domain API dynamically since these values may change.
 
-To use the tool, simply input your account number below and hit the button!
+To use the tool, simply input your account number below and hit the button.
 
 <input type="text" id="account" placeholder="Type your account number here">
 <input type="button" id="csds-button" value="Get Base URIs">
