@@ -14,10 +14,7 @@ Global Helper Functions are recommended and useful for building bots that involv
 
 This bot template serves to demonstrate the functionality of many of these global functions. It is **not** intended for use as a stand-alone bot, but instead as an example of how you might use these functions within your own.
 
-{: .important}
-This Global Helper Functions bot template contains a dialog template that can be imported into any Conversation Builder bot. If you import the dialog template into a bot, do so **before** you begin building out the bot. If you have existing global functions, there could be naming conflicts; so please double check after import.
-
-### Included Items
+### Included items
 
 #### Dialogs
 
@@ -245,3 +242,16 @@ Automatically establishes frequently used values as bot variables. Includes LP E
 
 {: .important}
 Many of these bot variables don't return information if you're testing from within Conversation Builder. It is recommended that you [deploy your bot](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html) to a messaging test page.
+
+### Dialog templates
+
+This bot template contains a [dialog template](conversation-builder-dialog-templates.html) that can be imported into any Conversation Builder bot.
+
+{: .important}
+If you import the dialog template into a bot, do so **before** you begin building out the bot. If you have existing global functions, there could be naming conflicts; so please double check after import.
+
+#### Global Helper Functions
+Contains all global helper functions and variables without the demonstration dialogs. 
+
+**Included dialogs:**
+* 00 - Global Functions README
