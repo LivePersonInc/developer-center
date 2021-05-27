@@ -207,7 +207,7 @@ Multiple scenarios for transfer/escalations exist triggered by the transfer acti
 1. Explicit request from visitor to transfer to an agent (Eg, action : transfer)
 
 2. If the Bot does not have an appropriate answer, it should recognise this as a scenario for a transfer.
-   Depending on the connector configuration or the decision making capacity of the bot, the bot will transfer to a particular skill or default skill.
+   Depending on the connector configuration or the decision making capacity of the bot, the bot will transfer to a particular agent, skill or default skill.
 
 3. If there is a internal error or the bot service cannot be reached the connector will transfer to a default skill set up during configuration.
 
@@ -215,10 +215,28 @@ Transfers and escalations rely on the _action_ item in the response object.
 
 Action: **TRANSFER (Case sensitive)**
 
+##### Transfer To Skill
+
+This option transfers the conversation to the next available agent using the provided skill. 
+
+
 Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
 
 <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-transfer.png">
-Figure 2.5 Configuration for a transfer
+Figure 2.5 Configuration for transfer to skill
+
+##### Transfer to Agent
+
+{: .important}
+This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
+
+This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
+
+Parameters: ‘skill’ **(Case sensitive)** with ‘value’ of skill name (case sensitive) in Conversational Cloud.
+‘agentId **(Case sensitive)** with ‘value’ of agentId in Conversational Cloud.
+
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-transfer-agent.png">
+Figure 2.6 Configuration for transfer to agent
 
 <br>
 #### Close Conversation
@@ -231,7 +249,7 @@ The method for closing a conversation is similar to the transfer action in that 
 The action field needs to be set to **CLOSE_CONVERSATION** to instruct the connector to close the conversation.
 
 <img class="fancyimage" style="width:800px" src="img/ThirdPartyBots/dialogflow-es-action-close-conversation.png">
-Figure 2.6 Configuration for closing a conversation
+Figure 2.7 Configuration for closing a conversation
 
 To close a conversation without triggering a post conversation survey, please add the parameter with the name `withoutPcs` and the value `true` to the action parameters.
 
@@ -240,13 +258,12 @@ To close a conversation without triggering a post conversation survey, please ad
 
 Change the TTR of a conversation based on the **action** value in the response object.
 
-LivePerson Messaging uses 4 different types of priorities:
+LivePerson Messaging uses 3 different types of priorities:
 "URGENT",
 “NORMAL”
 “PRIORITIZED”
-“CUSTOM”
 
-Only on “CUSTOM” a value can be set. The unit of the value is second. The value of the other types are defined in the Agent Workspace.
+The time values of these are defined in the Agent Workspace.
 
 <img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-es-action-ttr.png">
-Figure 2.7 Configuration for changing the TTR
+Figure 2.8 Configuration for changing the TTR
