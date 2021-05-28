@@ -10,6 +10,9 @@ permalink: tutorials-guides-bot-groups-other-techniques-bot-groups-collaboration
 indicator: both
 ---
 
+{: .important}
+**This tutorial is currently unavailable. Thanks for your patience as we work to update it to reflect the latest release of Conversation Builder.**
+
 ### "Many Bots" design approach
 
 Historically, all of our bot capabilities would be included in a single, monolithic bot design. This bot would house all of our intent-driven dialogs, knowledge bases, the fallback dialog, and escalations. 

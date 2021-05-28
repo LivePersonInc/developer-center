@@ -15,7 +15,7 @@ The following documentation outlines the configuration for the bot connector and
 ### Bot Configuration
 
 {: .notice}
-**IMPORTANT**: All the old bots that use **watsonplatform.net** domain for their workspace URL will fail to operate after **_12 February 2021_**. IBM has deprecated **watsonplatform.net** endpoints please update your bot configuration in Third-Party Bots if you do not want to disrupt the functioning of the bots. Official news on this announcement can be found [here](https://cloud.ibm.com/docs/watson?topic=watson-endpoint-change)
+**IMPORTANT**: All the old bots that use **watsonplatform.net** domain for their workspace URL will fail to operate after **_26 May 2021_**. IBM has deprecated **watsonplatform.net** endpoints please update your bot configuration in Third-Party Bots if you do not want to disrupt the functioning of the bots. Official news on this announcement can be found [here](https://cloud.ibm.com/docs/watson?topic=watson-endpoint-change)
 
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
@@ -670,7 +670,7 @@ In the example above, you can see the `actions` array. Inside the array, we defi
 #### Transfer to Agent
 
 {: .important}
-This feature is depending on [permissions](contact-center-management-messaging-operations-transfer-to-agent.html)
+This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
 
@@ -790,7 +790,7 @@ The bot does not escalate on a failed invocation by default. To enable this, set
 
 Third-Party bots allow the collection of engagement attributes (more information can be found [here](engagement-attributes-types-of-engagement-attributes.html)) if the `Engagement Attributes` option is checked in the `Conversation Type` step as shown in Figure 7.1.
 
-<img class="fancyimage" style="width:750px" src="img/engagement_attr_select.png">
+<img class="fancyimage" style="width:750px" src="img/ThirdPartyBots/common-engagement-attr-select.png">
 Figure 7.1 Conversation Type step in creation/modification of bot configuration.
 
 These attributes are **only** collected at the start of a conversation. Third-Party bots leverage the LivePerson Visit Information API to collect the engagement attributes. Further information on the Visit Information API can be found [here](visit-information-api-visit-information.html). Moreover, Engagement attributes are not updated throughout the life cycle of a conversation and only passed along with each message request. In Watson Assistant V2 these engagement attributes are added to the property `lpSdes`. For the preservation of these attributes within a conversation, the `context` property is used (further information about `context` can be found [here](https://cloud.ibm.com/docs/assistant?topic=assistant-api-client-get-context)). An example of the request body can be seen below:
