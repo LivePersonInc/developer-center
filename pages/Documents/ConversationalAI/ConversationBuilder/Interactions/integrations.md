@@ -92,9 +92,13 @@ With the Structured layout:
 
 #### The Simple answer layout
 
-The Simple layout doesn’t include rich elements like images. It looks like this:
+The Simple layout doesn’t include rich elements like images. On channels that support `href` tags, the output looks like this:
 
 <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_plain.png">
+
+On channels that don't support `href` tags, "Learn More at" plus the article's content URL, in shortened form, are appended. It looks like this:
+
+<img style="width:700px" src="img/ConvoBuilder/knowledge_ai_plain2.png">
 
 With the Simple layout:
 
@@ -122,7 +126,7 @@ With the Simple layout:
 
     * **Max number of answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
     * **Answer layout**: Select "Structured," "Simple," or "Custom" based on your requirements. These layout options are discussed farther above.
-    * **Link text for content URL**: This setting is available when you select "Structured" or "Simple" for the **Answer layout**. Enter the label to use for the link to the article's content URL, e.g., "Learn more." The link will open the URL in a new window. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
+    * **Link text for content URL**: This setting is available when you select "Structured" or "Simple" for the **Answer layout**. Enter the label to use for the link to the article's content URL, e.g., "Learn more." On channels that support the `href` tag, this label is used, and the link opens the URL in a new window. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
     * **Default image URL**: This optional setting is available only when you select "Structured" for the **Answer layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the Structured output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
     * **Response data variable**: This setting is available only when you select "Custom" for the **Answer layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
 7. Click **Save**.
