@@ -13,7 +13,7 @@ indicator: both
 
 Is there a cutting-edge interaction in a channel that you want to implement in your bot? Do you want to fast track its usage now, before support is added to the interactions in Conversation Builder? There’s no need to wait. Conversation Builder includes a “Universal” interaction to meet this need.
 
-The Universal interaction, which is designed for advanced bot developers, is a flexible, code-based interaction that opens up many opportunities to achieve the exact layout and styling that you require. For example, you might want to use a vertical card layout or perhaps a button question that uses buttons without button labels. In general, if you can code it in JSON according to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud, you can achieve it.
+The Universal interaction, which is designed for advanced bot developers, is a flexible, channel-agnostic, code-based interaction that you can customize to render any conversational response from the bot. It opens up many opportunities to achieve the exact layout and styling that you require. For example, you might want to use a vertical card layout or perhaps a button question that uses buttons without button labels. In general, if you can code it in JSON according to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud, you can achieve it.
 
 <img style="width:600px" src="img/ConvoBuilder/interactions_universal1.png">
 
@@ -56,4 +56,18 @@ Within the code editor, a validation check is performed to ensure that the code 
 However, there is no validation check to ensure that the code adheres to the [Conversational Cloud Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Therefore, take care when entering the JSON. You cannot use another JSON format.
 
 #### Testing
-To fully test a Universal interaction, use the [Conversation Tester](conversation-builder-testing-deployment-testing-debugging-post-deployment.html) or a Web client. Support for [Preview](conversation-builder-testing-deployment-previewing.html) is limited.
+To fully test a Universal interaction, use a Web client.
+
+The [Preview](conversation-builder-testing-deployment-previewing.html) tool won't exactly reflect how the interaction is rendered on a specific channel. Additionally, the [Conversation Tester](conversation-builder-testing-deployment-testing-debugging-post-deployment.html) doesn't support the Universal interaction.
+
+### FAQs
+
+#### When should I use the Universal interaction? And when shouldn't I?
+
+As mentioned above, the Universal interaction isn’t intended to replace the existing interactions in Conversation Builder. For fast and easy bot development, LivePerson recommends that you always use them whenever they meet your requirements.
+
+Use the Universal interaction when you want to render a particular bot response (i.e., layout and styling) that isn't yet supported by one of the Statement or Question interactions. As examples, you can use it instead of the Text, Structured, or Multiple Choice Question interactions.
+
+#### How does use of the Universal tile impact analytics?
+
+To be added
