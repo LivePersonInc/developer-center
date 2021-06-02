@@ -60,14 +60,14 @@ To fully test a Universal interaction, use a Web client.
 
 The [Preview](conversation-builder-testing-deployment-previewing.html) tool won't exactly reflect how the interaction is rendered on a specific channel. Additionally, the [Conversation Tester](conversation-builder-testing-deployment-testing-debugging-post-deployment.html) doesn't support the Universal interaction.
 
-### FAQs
+#### FAQs
 
-#### When should I use the Universal interaction? And when shouldn't I?
+##### When should I use the Universal interaction? And when shouldn't I?
 
 As mentioned above, the Universal interaction isn’t intended to replace the existing interactions in Conversation Builder. For fast and easy bot development, LivePerson recommends that you always use them whenever they meet your requirements.
 
 Use the Universal interaction when you want to render a particular bot response (i.e., layout and styling) that isn't yet supported by one of the Statement or Question interactions. As examples, you can use it instead of the Text, Structured, or Multiple Choice Question interactions.
 
-#### How does use of the Universal tile impact analytics?
+##### How does use of the Universal tile impact analytics?
 
 To be added
