@@ -315,8 +315,9 @@
       - pagename: Overview
       - pagename: Account-Level Performance
       - pagename: Bot Performance
-      - pagename: Transcripts
       - pagename: Tuning Opportunities
+      - pagename: MACS
+      - pagename: Transcripts
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
