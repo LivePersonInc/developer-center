@@ -97,11 +97,9 @@ To close the current conversation, click the icon at the bottom of the messaging
 <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/ct_close_conv.png">
 
 #### Reset the bot
-To reset the bot, click the icon at the bottom of the messaging panel. This deletes the current session, so you’ll need to start a new conversation to continue testing.
+To reset the bot, click the icon at the bottom of the messaging panel. This deletes the bot session, so you can start the conversation flow anew.
 
 <img class="fancyimage" style="width:200px" src="img/ConvoBuilder/ct_reset_bot.png">
-
-You’ll need to reset the bot if you’ve made changes to it that you now want to be used in the Conversation Tester.
 
 ### Use the debug panel
 
