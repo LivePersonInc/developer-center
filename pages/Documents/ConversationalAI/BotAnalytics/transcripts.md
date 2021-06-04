@@ -19,10 +19,10 @@ You can use the **MACS** view to perform a targeted review of transcripts, which
 
 <img style="width:800px" src="img/ConvoBuilder/ba_transcripts_macs.png">
 
-MACS allows for a focused review of transcripts, saving you time. For more on this, see [here](bot-analytics-macs.html).
+To learn more about MACS, see [here](bot-analytics-macs.html).
 
 ### Transcript review via the Transcripts view
-You can use the **Transcripts** view to access all the transcripts for the specified date range.
+You can use the **Transcripts** view to access all the transcripts for the specified date range. This view allows you to download transcripts.
 
 **To access a bot’s transcripts via the Transcripts view**
 
