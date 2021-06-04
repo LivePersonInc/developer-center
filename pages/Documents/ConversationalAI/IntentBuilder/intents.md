@@ -92,6 +92,7 @@ Generating training phrases is useful when:
 * You’ve [converted a LivePerson (Legacy) NLU domain to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson), and now you need to increase the number of training phrases to meet the minimum requirements.
 
 Note:
+* This feature is only available for English-language domains.
 * To use this feature, Intent Analyzer must be enabled for your account, and at least one domain (any domain) in Intent Builder must have Intent Analyzer enabled ([here](intent-analyzer-overview.html#enable-intent-analyzer-for-intents)), as the feature makes use of the data that it captures.
 * If you’ve enabled Intent Analyzer recently, expect the tool’s results to improve over time as more data is captured.
 * If you're a new customer, expect no results until suggestions can be offered based on utterances by your users. And here again, expect the tool's results to improve over time.
