@@ -1020,3 +1020,7 @@ To use Watson Discovery the Watson Assistant Bot needs to have a s[search skill]
 
 - Currently IBM Watson Assistant retains sessions only for 5 minutes for Free and 60 minutes for Plus or premium members. For more information [read here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context)
 - Currently IBM Watson allows **only 5** response types per node.
+
+### Prevent Tranfering loop behaviour
+
+As a good practice and to prevent that the bot goes into a conversation loop during off hours, create a separate bot for off-hour times that only listens to the human skill and not to the regular bot skills. If another bot is not created for that period, the bot can get into a transfering loop.  
