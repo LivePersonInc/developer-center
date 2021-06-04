@@ -45,6 +45,7 @@ You can use this filter to show the data for any 7-day date range within the las
 
 ### Bot-level metrics
 
+* **MACS**: The bot's average Meaningful Automated Conversation Score, or MACS. For more on MACS, see [here](bot-analytics-macs.html).
 * **Conversations**: The total number of closed and open Conversational Cloud conversations in which the bot participated.
 * **Messages**: The total number of messages sent by the consumer and received by the bot.
 * **Users**: The total number of unique users that connected to the bot. Note that this metric doesn’t combine visits, i.e., if a user starts a second conversation at a later time, that is treated as a new user.

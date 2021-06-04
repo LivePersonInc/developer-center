@@ -9,6 +9,8 @@ permalink: bot-analytics-macs.html
 indicator: Messaging
 ---
 
+### Introduction
+
 A Meaningful Automated Conversation Score, or MACS, is a measure of the quality of a bot conversation. Every closed bot conversation is classified with MACS 1, 2, or 3 where:
 
 | Score | Icon | Description |
@@ -20,7 +22,7 @@ A Meaningful Automated Conversation Score, or MACS, is a measure of the quality 
 Within Bot Analytics, you can review in-depth MACS data for your bots. This data helps you to quickly identify underperforming bots, find their issues, and move to bot/intent tuning for enhanced performance.
 
 {: .important}
-Before you begin working with MACS in Bot Analytics, please see [this topic](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html) in the Knowledge Center for an extensive introduction to MACS, its benefits, information on how MACS is scored, solutions for improving scores, and more.
+**Before you begin** working with MACS in Bot Analytics, please see [this topic](https://knowledge.liveperson.com/data-reporting-meaningful-automated-conversation-score-(macs).html) in the Knowledge Center for an extensive introduction to MACS, its benefits, information on how MACS is scored, solutions for improving scores, and more.
 
 ### Main dashboard
 
