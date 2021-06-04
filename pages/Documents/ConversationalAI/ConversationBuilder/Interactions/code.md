@@ -69,6 +69,9 @@ As mentioned above, the Universal interaction isn’t intended to replace the ex
 
 Use the Universal interaction when you want to render a particular bot response (i.e., layout and styling) that isn't yet supported by one of the Statement or Question interactions. As examples, you can use it instead of the Text, Structured, or Multiple Choice Question interactions.
 
+##### Can I use the Universal interaction to update the conversation’s metadata?
+No, this can't be done.
+
 ##### How does use of the Universal tile impact analytics?
 
 To be added
