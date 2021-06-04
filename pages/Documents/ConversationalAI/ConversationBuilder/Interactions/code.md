@@ -32,7 +32,7 @@ This opens the editor, which works as follows:
 
 <img style="width:800px" src="img/ConvoBuilder/interactions_universal3.png">
 
-1. Manually enter the JSON into the editor. You are limited only by what’s supported by the Conversational Cloud, as the JSON must adhere to the [Conversational Cloud Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Otherwise, the interaction won’t render correctly.
+1. Manually enter the JSON into the editor. You are limited only by what’s supported by the Conversational Cloud, as the JSON must adhere to the Conversational Cloud [Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Otherwise, the interaction won’t render correctly.
 2. Use the templates whenever possible to speed up your work. There are JSON templates for common components like a horizontal card, a basic or complex carousel, and more.
 3. To use a template, click the **Copy** icon to copy it to your clipboard. Then paste it into the editor.
 4. Preview as you work.
@@ -54,7 +54,7 @@ Within the code editor, a validation check is performed to ensure that the code 
 
 <img style="width:400px" src="img/ConvoBuilder/interactions_universal4.png">
 
-However, there is no validation check to ensure that the code adheres to the [Conversational Cloud Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Therefore, take care when entering the JSON. If you use a JSON format that isn't in compliance with the Conversational Could Rich Messaging format, the message will not be rendered at runtime.
+However, there is no validation check to ensure that the code adheres to the Conversational Cloud [Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Therefore, take care when entering the JSON. If you use a JSON format that isn't in compliance with the Conversational Could Rich Messaging format, the message will not be rendered at runtime.
 
 #### Testing
 To fully test a Universal interaction, use a Web client.
