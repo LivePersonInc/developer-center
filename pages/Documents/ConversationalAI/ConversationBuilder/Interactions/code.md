@@ -54,7 +54,7 @@ Within the code editor, a validation check is performed to ensure that the code 
 
 <img style="width:400px" src="img/ConvoBuilder/interactions_universal4.png">
 
-However, there is no validation check to ensure that the code adheres to the [Conversational Cloud Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Therefore, take care when entering the JSON. You cannot use another JSON format.
+However, there is no validation check to ensure that the code adheres to the [Conversational Cloud Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Therefore, take care when entering the JSON. If you use a JSON format that isn't in compliance with the Conversational Could Rich Messaging format, the message will not be rendered at runtime.
 
 #### Testing
 To fully test a Universal interaction, use a Web client.
