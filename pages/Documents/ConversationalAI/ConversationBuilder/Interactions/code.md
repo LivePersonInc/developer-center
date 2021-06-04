@@ -9,15 +9,16 @@ permalink: conversation-builder-interactions-code.html
 indicator: both
 ---
 
-### Universal interactions
+### Universal interactions (Beta)
 
-Is there a cutting-edge interaction in a channel that you want to implement in your bot? Do you want to fast track its usage now, before support is added to the interactions in Conversation Builder? There’s no need to wait. Conversation Builder includes a “Universal” interaction to meet this need.
+Is there a cutting-edge interaction in a channel that you want to implement in your bot? Do you want to fast track its usage now, before support is added to the interactions in Conversation Builder? There’s no need to wait. Conversation Builder includes a “Universal” interaction, **now in Beta release**, to meet this need.
 
 The Universal interaction, which is designed for advanced bot developers, is a flexible, channel-agnostic, code-based interaction that you can customize to render any conversational response from the bot. It opens up many opportunities to achieve the exact layout and styling that you require. For example, you might want to use a vertical card layout or perhaps a button question that uses buttons without button labels. In general, if you can code it in JSON according to the [Rich Messaging format](getting-started-with-rich-messaging-introduction.html) for Conversational Cloud, you can achieve it.
 
 <img style="width:600px" src="img/ConvoBuilder/interactions_universal1.png">
 
 {: .important}
+Currently, the Universal interaction only works in the Web messaging channel.<br><br>
 The Universal interaction isn’t intended to replace the existing interactions in Conversation Builder. For fast and easy bot development, LivePerson recommends that you always use them whenever they meet your requirements.
 
 #### Adding a Universal interaction
