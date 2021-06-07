@@ -22,6 +22,9 @@ The following example flow can happen with this template:
 4. Conversation Orchestrator evaluates policies based on the phone number (whether phone number is in a VIP list or a Regular Customer List).
 5. Bot transfers the conversation to a skill or agent based on the policy outcome.
 
+{: .important}
+This bot template contains global functions brought over from the Global Helper Functions bot template. For information on these provided functions, see [here](conversation-builder-bot-templates-global-helper-functions.html).
+
 ### Included items
 
 #### Dialogs 
