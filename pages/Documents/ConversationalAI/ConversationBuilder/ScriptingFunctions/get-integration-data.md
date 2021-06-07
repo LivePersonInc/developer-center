@@ -88,21 +88,21 @@ if (results < 1) {
 }
 ```
 
-### Get file name
+### Get file caption
 
-The `getFileCaption` function is used to retrieve the original filename of a file that’s uploaded to an external file share via a [File integration](conversation-builder-integrations-file-integrations.html).
+The `getFileCaption` function is used to retrieve the caption (message) that’s entered by the consumer following their successful upload of a file (via a [File integration](conversation-builder-integrations-file-integrations.html)). If the consumer doesn’t enter a caption, this function returns “\_\_EMPTYTEXT\_\_”.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |
-| `getFileCaption()` | None | (string) The filename of the file that’s uploaded |
+| `getFileCaption()` | None | (string) The caption for the file that’s uploaded |
 
 #### Example
 
 ```javascript
-// get the filename
-var fileName = botContext.getFileCaption();
-// set the filename in a variable
-botContext.setBotVariable('fileName',fileName,true,false);
+// get the file caption
+var fileCaption = botContext.getFileCaption();
+// set the file caption in a variable
+botContext.setBotVariable('fileCaption',fileCaption,true,false);
 ```
 
 ### Get file type

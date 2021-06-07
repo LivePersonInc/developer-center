@@ -59,9 +59,9 @@ Domain intents make it possible for you to use the same domain in multiple ways,
 #### Knowledge Base intents
 
 {: .important}
-As of March 3, 2021, you can no longer create a knowledge base that uses Knowledge Base intents.
+As of March 5, 2021, you can no longer create a knowledge base that uses Knowledge Base intents.
 
-If you created your knowledge base before March 3, 2021, you might have chosen *not* to define the intents in a domain in Intent Builder. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
+If you created your knowledge base before March 5, 2021, you might have chosen *not* to define the intents in a domain in Intent Builder. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
 
 <img style="width:350px" src="img/ConvoBuilder/kb_kb_intents1.png">
 
@@ -79,14 +79,6 @@ When an NLU search is performed, the knowledge base's language works differently
 
 * If the knowledge base uses *Domain* intents, the domain's language is used instead. In this case, the languages supported depend on the domain's [NLU provider](intent-builder-natural-language-understanding.html).
 * If the knowledge base uses *Knowledge Base* intents (a legacy feature), the knowledge base's language is used. In this case, only English and Spanish are supported.
-
-### Positive and negative learnings
-
-Positive and negative learnings play a role in intent detection regardless of whether you're using domain intents or knowledge base intents.
-
-When using domain intents with the LivePerson engine or a 3rd-party NLU engine, the positive learnings are applied (added) to the training phrases when the model is trained, and the negative learnings are applied during processing of user inputs.
-
-When using knowledge base intents or when using domain intents with LivePerson (Legacy) engine, positive and negative learnings are applied during processing of user inputs.
 
 ### Active versus inactive articles
 
@@ -106,3 +98,18 @@ In the Knowledge Base application, you can easily identify an article's current 
 You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledge-base-internal-knowledge-bases-articles.html). 
 
 For example, you might run a promotion over a holiday that has an associated FAQ, and that FAQ should only be used for a finite period of time. Or, you might have an article that you want to become active on a certain date and remain so indefinitely. You can satisfy requirements like these with **Valid From** and/or **Valid To**.
+
+### Positive and negative learnings (legacy)
+
+*Positive learnings* are phrases for which you want a match to the article to occur. *Negative learnings* are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
+
+{: .important}
+As of April 19, 2021, you can no longer add new positive and negative learnings to articles. Existing learnings continue to work as expected, but they are read-only.<br><br>The alternative to adding a positive learning is to add a training phrase to the intent in the domain. Updating the domain itself is the preferred approach to boosting the match rate.<br><br>Negative learnings were primarily needed for knowledge bases using the LivePerson (Legacy) NLU engine, to support single-word negation (e.g., "I want to buy" versus "I don't want to buy"). To take advantage of the benefits of performance and flexibility offered by the LivePerson engine, you are encouraged to convert to the LivePerson engine as soon as possible. **LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021**.
+
+#### How positive and negative learnings work
+
+Positive and negative learnings play a role in intent detection regardless of whether you're using domain intents or knowledge base intents.
+
+* When using domain intents with the LivePerson engine or a 3rd-party NLU engine, the positive learnings are applied (added) to the training phrases when the model is trained, and the negative learnings are applied during processing of user inputs.
+
+* When using knowledge base intents or when using domain intents with LivePerson (Legacy) engine, positive and negative learnings are applied during processing of user inputs.

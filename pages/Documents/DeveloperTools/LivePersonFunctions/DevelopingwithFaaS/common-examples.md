@@ -180,11 +180,11 @@ The following reduced code snippet shows an example on how to obtain the refresh
 
 ### Working with Conversation Context Service
 
-The [Conversation Context Service](conversation-orchestrator-conversation-context-service-conversation-context-service.html) allows you to save the conversation session state data in Conversational Cloud (e.g. agent notes), and then retrieve them later in a different conversation session.
+The [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) allows you to save the conversation session state data in Conversational Cloud (e.g. agent notes), and then retrieve them later in a different conversation session.
 
 The following steps need to be performed before using the code examples:
-* Create a [Developer Key](conversation-orchestrator-conversation-context-service-conversation-context-service.html#developer-key) and save it to the [Secret Storage](liveperson-functions-development-storing-secrets.html)
-* Create a [custom namespace](conversation-orchestrator-conversation-context-service-conversation-context-service.html)
+* Create a [Developer Key](conversation-orchestrator-conversation-context-service-getting-started.html#developer-key) and save it to the [Secret Storage](liveperson-functions-development-storing-secrets.html)
+* Create a [custom namespace](conversation-orchestrator-conversation-context-service-getting-started.html)
 * Whitelist the domains `z1.context.liveperson.net`, `z2.context.liveperson.net` or `z3.context.liveperson.net` (depends on your zone).
 
 **Save data**

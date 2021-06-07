@@ -54,6 +54,9 @@ First, in the **Advanced Settings** of the article, enter the URLs to send **(1)
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_advSettings1.png">
 
+{: .important}
+The remainder of this information below is for the benefit of bot developers using a Knowledge Base integration in a bot. However, there's a more powerful and simpler alternative that doesn't require a Knowledge Base integration, namely, use of the Knowledge AI interaction in Conversation Builder. For details on this interaction, see [here](conversation-builder-interactions-integrations.html#knowledge-ai-interactions).
+
 #### Configure the Knowledge Base integration in the bot
 
 Next, open Conversation Builder and navigate to the [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) inside the bot that uses the knowledge base.
@@ -105,7 +108,10 @@ Enabled articles are returned by knowledge base searches in Knowledge Base integ
 ### Find articles with a specific tag
 
 1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Tags**.
+2. At the top of the page, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Tags**.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tags_categories.png">
+
 3. In the Tags panel, select the tag to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple tags.
     
     The result list is updated to include only the articles with the selected tags.
@@ -114,7 +120,10 @@ Enabled articles are returned by knowledge base searches in Knowledge Base integ
 ### Find articles with a specific category
 
 1. Open the knowledge base.
-2. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Categories**.
+2. At the top of the page, click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png">, and select **Categories**.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_tags_categories.png">
+
 3. In the Categories panel, select the category to highlight it. You can repeat this step as needed if you're looking for articles assigned to multiple categories.
     
     The result list is updated to include only the articles assigned to the selected categories.
