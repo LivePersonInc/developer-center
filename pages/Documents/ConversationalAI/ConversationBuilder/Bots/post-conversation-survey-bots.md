@@ -217,7 +217,7 @@ In the **Advanced Settings** of many of the survey interactions, you can configu
 
 2 - Use the **Choices Per Row** setting to control how the answer choices are presented when they exceed the available space in the messaging window:
 
-* **Best Fit**: If you select this, the answer choices wrap to multiple lines to avoid scrolling. Typically, this is the preferred consumer experience.
+* **Best Fit**: If you select this, the answer choices wrap to multiple lines to avoid scrolling. Typically, this is the preferred consumer experience. **Note**: This option isn't supported if the target channel is Facebook, Google Business Messaging, or LINE.
 * **Scroll**: If you select this, the answer choices are all presented on the same line, and the consumer must scroll across to see them all.
 
 <img style="width:500px" src="img/ConvoBuilder/surveyBot_bestFit.png">
