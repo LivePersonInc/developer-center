@@ -69,7 +69,7 @@ Followed the [Quick Start Guide for iOS](mobile-app-messaging-sdk-for-ios-quick-
    <LPMessagingSDKNotificationDelegate> optional func LPMessagingSDKNotification(notificationTapped notification: LPNotification)
    ```
 
-   When using a Custom View for the in-app notification (LPMessagingSDKNotification(customLocalPushNotificationView)) the LPMessagingSDKNotificationDelete method gets overridden. 
+   When using `LPMessagingSDKNotification(customLocalPushNotificationView notification: LPNotification) -> UIView` to customize the In App Notification, the following delegate `LPMessagingSDKNotification(notificationTapped notification: LPNotification)` won't be trigger as the behavior for the new InApp Notification should be implemented by the Host App. 
 
    {:.important}
    The proprietary SDK notification is only for display purposes, interacting with it launches the app, but does not navigate to the Conversation Window/ViewController, for a fully interactive notification host app needs to provide the implementation.
