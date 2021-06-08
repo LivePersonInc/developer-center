@@ -495,6 +495,17 @@ func toggleChatActions(_ accountID: String, sender: UIBarButtonItem? = nil)
 | accountID | An account ID | -- |
 | sender | An optional UIBarButtonItem to use for toggling the chat actions | -- |
 
+### handleTapForInAppNotification
+
+Will handle the case when Consumer taps an In App Notification that contains a Proactive Engagement
+
+```swift
+func handleTapForInAppNotification(notification: LPNotification)
+```
+
+| Parameter | Description | Notes |
+| :--- | :--- | :--- |
+| notification | LPNotification| This is received as part of the [LPMessagingSDKNotificationDelegate](mobile-app-messaging-sdk-for-ios-sdk-apis-callbacks-index.html#lpmessagingsdknotificationdelegate) |
 
 
 ### Deprecated methods
