@@ -133,8 +133,7 @@
           - subpagename: Bot Groups & Collaboration
           - subpagename: Complex Conditions
           - subpagename: Auto Escalation
-          - subpagename: Knowledge Bases
-          - subpagename: Meta Intents
+          - subpagename: Meta Intents & Knowledge Bases
       - pagename: Advanced Integrations
         subpages:
           - subpagename: Implementing a Web View Integration
