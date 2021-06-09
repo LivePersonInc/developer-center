@@ -75,5 +75,4 @@ Use the Universal interaction when you want to render a particular bot response 
 No, this can't be done.
 
 ##### How does use of the Universal tile impact analytics?
-
-
+The Universal interaction is reported in analytics like any other interaction.
