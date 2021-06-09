@@ -81,9 +81,7 @@ This is LivePerson's high-performing NLU engine. Key characteristics include:
 * A scalable solution that's capable of handling a large volume of requests.
 * Provides fast response times and accuracy.
 * To perform effectively, expects large sets of data (both intents and training phrases).
-* When you create a LivePerson domain and use it in Intent Analyzer or in Conversation Builder, the following is required:
-    * At least 20 training phrases per intent
-    * At least 5 intents in order to train  
+* The performance of a model depends on both the quantitative and qualitative nature of the training data. Therefore, we require a minimum of **5 intents** with **20 training phrases per intent** to activate training for a model in the Intent Builder. Anything less adversely affects model performance.
 * Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-domain).
 
 {: .important}
@@ -105,7 +103,7 @@ There are significant benefits to using the LivePerson engine instead of the Liv
 This is LivePerson's legacy NLU engine. 
 
 {: .important}
-As of March 3, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
+As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 Key characteristics include:
 

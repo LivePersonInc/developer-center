@@ -14,7 +14,7 @@ indicator: both
 ### User Authentication 
 
 **Brand's Digital Resources (Native Mobile App, Website)**  
-It is the brand responsability to authenticate the user within the brand's digital resrouces. Once authentication is completed, "token exchange" should take place using the LivePerson SDK. The recieved token should indicates which user authenticated.  
+It is the brand responsability to authenticate the user within the brand's digital resources. Once authentication is completed, "token exchange" should take place using the LivePerson SDK. The recieved token should indicates which user authenticated.  
 LivePerson supports OIDC ID Tokens. The ID Token is a security token that contains claims about the authentication of an end-user by an authorization server when using a client, and potentially other requested claims. The ID Token is represented as a JSON Web Token ([JWT](https://openid.net/specs/openid-connect-core-1_0.html)).
 Currently, LivePerson supports two methods for passing the ID Token: [implicit](https://oauth.net/2/grant-types/implicit/) or [code flow](https://oauth.net/2/grant-types/authorization-code/).
 

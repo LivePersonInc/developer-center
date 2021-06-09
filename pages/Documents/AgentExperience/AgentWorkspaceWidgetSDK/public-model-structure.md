@@ -213,7 +213,7 @@ Structure example:
 | campaignInfo.goalId                         | The goal ID                                                                                          | The goal ID                                                                              | string  |                                                            |
 | campaignInfo.goalDescription                | The goal description                                                                                 | The goal description                                                                     | string  |                                                            |
 | **engagementInfo**                          | Information regarding the campaign engagement (The click to chat button)                             | N/A                                                                                      | object  |                                                            |
-| engagementInfo.VisitorBehavior              | Array of the visitor behavior                                                                        | Array of the visitor behavior                                                            | array   |                                                            |
+| engagementInfo.VisitorBehavior              | Array of the behavioral targeting rules                                                              | Array of the behavioral targeting rules                                                  | array   |                                                            |
 | engagementInfo.skill                        | The chat skill                                                                                       | The conversation skill                                                                   | string  |                                                            |
 | engagementInfo.engagementType               | The engagement type                                                                                  | The engagement type                                                                      | string  |                                                            |
 | engagementInfo.engagementId                 | The engagement ID                                                                                    | The engagement ID                                                                        | string  |                                                            |
@@ -445,9 +445,9 @@ Structure example:
 
 | Property    | Description                             | Type   |
 |-------------|-----------------------------------------|--------|
-| id          | The ID of the target visitor behavior   | number |
-| name        | The name of the visitor behavior        | string |
-| description | The description of the visitor behavior | string |
+| id          | The ID of the behavioral targeting rule   | number |
+| name        | The name of the behavioral targeting rule      | string |
+| description | The description of the behavioral targeting rule | string |
 
 Structure example:
 
@@ -712,6 +712,8 @@ Structure example:
 | sku      | The product SKU                                  | string |
 | price    | The price of the product                         | string |
 | quantity | Where applicable - the number of identical items | number |
+| statusInStock | Where applicable - the stock status of the product | string |
+| quantityInStock | Where applicable - available quantity of products | string |
 
 Structure example:
 
@@ -721,10 +723,13 @@ Structure example:
     "category": "",
     "sku": "",
     "price": "",
-    "quantity": 1
+    "quantity": 1,
+    "statusInStock": "low in stock",
+    "quantityInStock": 5
 }
 ```
 **Note: SDE.viewedProducts does not contain the quantity field**
+**Note: SDE.transaction.[].products and SDE.shoppingCart.[].products do not contain statusInStock and quantityInStock fields**
 
 ### SDE.serviceActivity
 

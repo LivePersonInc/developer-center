@@ -22,7 +22,7 @@ This section walks through the steps that are necessary to complete before confi
 
 ### Before you begin
 
-Before you get started with this tutorial, download this [ZIP file](https://publisher.liveperson.net/co-agent-assist/AgentAssistTutorial_resources.zip), which contains a few, necessary resources.
+Before you get started with this tutorial, download this [ZIP file](assets/resources/AgentAssistTutorial_resources.zip), which contains a few, necessary resources.
 
 ### Step 1: Create the Airline NLU domain
 
@@ -83,8 +83,6 @@ With the NLU domain created, the next step is to create a knowledge base with ar
     | Reschedule disrupted flight | reschedule disrupted flight |
     | Book a flight | book flight |
 
-6. Prior to leaving the knowledge base, click the **API Key** icon <img style="width:30px" src="img/agentassisttutorial/icon_apikey.png"> in the upper-right corner, and record the alphanumeric key listed as **Your API Access Key**. This will be needed later when configuring Agent Assist.
-
 ### Step 3: Create the users and skills
 
 Every bot and human agent requires a user profile and an associated skill to be deployed and accessible from within the Conversational Cloud. This section provides the details needed to update the logged-in human agent with an associated skill, as well as the details needed to create bot agents for the two bots that will be uploaded. For more details on this procedure, please see [this article](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html#step-11-create-a-bot-user) in the *Conversation Builder Getting Started with Bot Building* tutorial.
@@ -93,7 +91,7 @@ Every bot and human agent requires a user profile and an associated skill to be 
 **Customize your POC:** This guide provides two bots that agent assist can source recommendations from. These demonstration bots do not provide much functionality out of the box, so bring in your own domain specific bots to fit the needs of your POC. Keep in mind that any additional bots created will need their own corresponding bot user agents and skills.
 
 1. Click the **Manage users and skills** icon <img style="width:30px" src="img/agentassisttutorial/icon_usersandskills.png"> from the left-side menu to go to the **User Management** section of the Conversational Cloud. 
-2. From the list of users, select your logged-in human user. From the **Edit user** form, scroll to the bottom. In the **Skills** field, add the skill “agent.” Click **Save**.
+2. From the list of users, select your logged-in human user. From the **Edit user** form, scroll to the bottom. In the **Skills** field, add the skill “Agent.” Click **Save**.
 3. Back on the Users screen, select the **+ Add user** button in the lower-left corner of the page. Fill out the **Add user** form with the following user details:
 
     * **User type**: Bot
@@ -122,7 +120,7 @@ Every bot and human agent requires a user profile and an associated skill to be 
 
 ### Step 4: Import the Conversation Builder bots
 
-In this step, you create two, new bots in Conversation Builder using the JSON files that are in the ZIP file that you downloaded earlier. 
+In this step, you create two, new bots in Conversation Builder using the JSON files that are in the ZIP file that you downloaded earlier: 
 
 * Booking Bot
 * Seating Bot

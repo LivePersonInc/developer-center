@@ -9,6 +9,9 @@ permalink: conversation-builder-integrations-knowledge-base-integrations.html
 indicator: both
 ---
 
+{: .important}
+Knowledge Base integrations are a legacy feature. For a simpler, more powerful approach, use a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) within the bot; it doesn't require a Knowledge Base integration.
+
 Use a Knowledge Base integration when you want to search one of your knowledge bases for articles. You’ll need to create the knowledge base first; for help with that, see [here](knowledge-base-overview.html).
 
 One use case for this type of integration is within a fallback dialog to funnel user utterances into a knowledge base search. If an appropriate search result is found, it can be displayed; if no results are found, you might then display a "sorry" message or [escalate the conversation](conversation-builder-integrations-liveperson-agent-escalation-integrations.html) to a human agent.

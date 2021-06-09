@@ -13,7 +13,7 @@ indicator: both
 As you add and manage articles, there are a number of validation checks that are performed by the system to enforce limits and thereby promote best practices. This helps to ensure your content is suitable for messages, which should be short.
 
 {: .important}
-As of March 3, 2021, the limits have changed and are as described below. The limits are enforced by the application, and error messages are shown to inform you of them.
+As of March 5, 2021, the limits have changed and are as described below. The limits are enforced by the application, and error messages are shown to inform you of them.
 
 ### Knowledge base-level limits for internal knowledge bases
 If you’re using an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), the following knowlege base-level limits apply. These vary depending on the NLU engine that’s in use.

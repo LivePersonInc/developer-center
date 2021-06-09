@@ -55,7 +55,9 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
     * **Manual** or **Import**: If you want to manually add intents and entities to the domain, select "Manual." If you want to import them from a file, select "Import."
     * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
 
-        A Google sheet must be public, i.e., with no file restrictions in place. If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
+        **Google sheets**: A Google sheet must be public, i.e., with no file restrictions in place. Moreover, it must contain 100 or fewer columns (intents and entities combined); otherwise, the import fails. If your domain is larger and you have more columns than this, use a CSV file instead.
+        
+        If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
 
     * **NLU Provider**: Select the provider of the NLU engine to use. For help, see the discussion on NLU engines [here](intent-builder-natural-language-understanding.html).
     * **Language**: Select the language of the domain.
@@ -152,7 +154,7 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
 
 {: .important}
-Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 20 training phrases.
+Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 20 training phrases.<br><br>Also, consider exporting a CSV of the intents before you train. (You can do this via **Domain Settings**.) You can't revert to a previous model, but later, if necessary, you can use this CSV as the training data for a new domain.
 
 **To train a LivePerson domain**
 
@@ -178,7 +180,7 @@ Brands with existing domains using the LivePerson (Legacy) engine are encouraged
 3. Update the intents:
     
     * Provide at least 5 intents.
-    * Provide at least 20 training phrases per intent.
+    * Provide at least 20 training phrases per intent. If needed, you can generate similar training phrases as described [here](intent-builder-intents.html#generate-training-phrases).
     * Update the intents and training phrases so that each is a complete and meaningful sentence or question. This might require that you broaden the use cases and provide utterances that approach the intents from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you use actual data to enrich your training set. You can find such data with [Intent Analyzer](intent-analyzer-overview.html).
 
 ### Create a 3rd-party NLU provider credential

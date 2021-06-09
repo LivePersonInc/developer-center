@@ -63,8 +63,6 @@ The import file can contain the following basic HTML tags: p, br, a (only the â€
 | audio_url | The URL of an audio file. For more on this, see [here](knowledge-base-internal-knowledge-bases-articles.html#add-content-links). |
 | video_url | The URL of a video file. For more on this, see [here](knowledge-base-internal-knowledge-bases-articles.html#add-content-links). |
 | category | Assigning a category lets you [filter and find articles based on categories](knowledge-base-internal-knowledge-bases-articles.html#find-articles-with-a-specific-category) in the Knowledge Base application. |
-| positiveLearnings | These are phrases for which you want a match to the article to occur. A comma-separated list. |
-| negativeLearnings | These are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent. A comma-separated list. |
 | intentName | Applicable if you're using Domain intents, not Knowledge Base intents (see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) for an understanding of the two). This is the intent associated with the article. |
 | validFrom | Specify the date and time on which the article becomes active in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
 | validTo | Specify the date and time on which the article becomes inactive in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |

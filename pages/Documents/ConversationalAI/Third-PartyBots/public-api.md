@@ -376,7 +376,7 @@ curl -X POST \
 
 ### Transfer Conversation
 
-This API allows an ongoing conversation to be transferred to another skill. User has to provide a skill name that is created previously. The skill name is case-sensitive.
+This API allows an ongoing conversation to be transferred to another skill or an certain agent. User has to provide a skill name and optional an agentId that is created previously. The skill name is case-sensitive.
 
 #### Request
 
@@ -407,7 +407,7 @@ This API allows an ongoing conversation to be transferred to another skill. User
 
 **Body**
 
-Example payload of the request with skill name `human_skill`.
+Example transfer to skill payload of the request with skill name `human_skill`.
 
 {: .important}
 **Please note** the skill name is **case sensitive** so provide with care
@@ -430,6 +430,37 @@ curl -X POST \
   -H 'Authorization: Bearer {bearerToken}' \
   -d '{
   "skill": "{skillName}"
+}'
+
+```
+
+**Body**
+
+Example transfer to agent payload of the request with skill name `human_skill` and agentId `4129463410`.
+
+{: .important}
+**Please note** the skill name is **case sensitive** so provide with care
+
+```javascript
+{
+  "skill": "human_skill",
+  "agentId": "4129463410"
+}
+```
+
+**Example cURL**:
+
+{: .important}
+**Please note** Make sure to replace [`{botDomain}`](#step-1-identify-the-third-party-bots-api-domain), `{accountId}`, `{conversationId}`, [`{bearerToken}`](#step-2-get-bearer-token) and `{skillName}` from the below command with your information
+
+```bash
+curl -X POST \
+  'https://{botDomain}/api/v1/account/{accountId}/conversation/{conversationId}/transfer' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {bearerToken}' \
+  -d '{
+  "skill": "{skillName}",
+  "agentId": "4129463410"
 }'
 
 ```
@@ -588,7 +619,7 @@ curl -X POST \
 
 ### Set Time to Response (TTR)
 
-LivePerson Messaging uses 4 different types of priorities: `URGENT`, `NORMAL`, `PRIORITIZED` and `CUSTOM`. This API allows setting TTR for the ongoing conversation.
+LivePerson Messaging uses 3 different types of priorities: `URGENT`, `NORMAL`, `PRIORITIZED`. This API allows setting TTR for the ongoing conversation.
 
 {: .important}
 **Please note** setting of TTR is supported only for messaging conversation
@@ -627,15 +658,6 @@ Example payload of the request with setting conversation ttr to Urgent
 ```json
 {
   "ttrType": "URGENT"
-}
-```
-
-In case of `CUSTOM` as `ttrType` user must provide a value. The unit of value is seconds. In such case request payload will look like as follows:
-
-```json
-{
-  "ttrType": "CUSTOM",
-  "value": "10"
 }
 ```
 
