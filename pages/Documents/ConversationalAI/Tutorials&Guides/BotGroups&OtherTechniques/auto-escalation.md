@@ -10,19 +10,11 @@ permalink: tutorials-guides-bot-groups-other-techniques-auto-escalation.html
 indicator: both
 ---
 
-{: .important}
-**This tutorial is currently unavailable. Thanks for your patience as we work to update it to reflect the latest release of Conversation Builder.**
-
-Along with [disambiguation](tutorials-guides-getting-started-with-bot-building-disambiguation.html), every bot should include a way to automatically escalate when a user gets stuck. This often happens when a user is attempting to answer a text question, but their responses are not passing the needed validation. Previously, to implement such a policy required the writing of custom JavaScript to keep track of a user's attempts to answer a question, pointing to an escalation interaction if a threshold was crossed. Now, Conversation Builder provides a special dialog type which takes care of all this for you without having to write any code.
-
-### Watch the video
-
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/467390622" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
-<br>
+Every bot should include a way to automatically escalate when a user gets stuck. This often happens when a user is attempting to answer a text question, but their responses are not passing the needed validation. Previously, to implement such a policy required the writing of custom JavaScript to keep track of a user's attempts to answer a question, pointing to an escalation interaction if a threshold was crossed. Now, Conversation Builder provides a special dialog type which takes care of all this for you without having to write any code.
 
 ### Step 7: Create the Auto Escalation dialog
 
-Prior to this step, make sure that you have captured the skill ID associated with your Human skill. This should be the same ID that you are using in the Escalation dialog in your Small Talk Bot (refer to the interaction settings for the Agent Transfer interaction). Once you have this ID, navigate to your Order Bot in Conversation Builder.
+Prior to this step, make sure that you have captured the skill ID associated with your Human skill. This should be the same ID that you are using in the Escalation dialog in your Service Bot (refer to the interaction settings for the Agent Transfer interaction). Once you have this ID, navigate to your Order Bot in Conversation Builder.
 
 1. Click **Add Dialog** in the lower-left corner, and fill the resulting **Add Dialog** form with the following:
 
@@ -49,7 +41,7 @@ Prior to this step, make sure that you have captured the skill ID associated wit
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/advtutorial/auto_esc_mcq.png">
 
-4. In the Agent Transfer (escalation) interaction, click the "Settings" wheel in the upper-right corner, and navigate to the **Advanced** section to confirm that your Agent Skill ID has been properly added.
+4. In the Agent Transfer (escalation) interaction, click the **Settings** wheel in the upper-right corner, and navigate to the **Advanced** section to confirm that your Agent Skill ID has been properly added.
 
 5. To test this new functionality, navigate back to the [demo deployment site](https://vx-lp.github.io/v2/lpwm/) and enter your account number. After being greeted by the Greeter Bot, trigger the Order Status intent by messaging “I want to know my order status”. The Order Bot will recognize the intent and trigger the associated dialog, prompting for an order number. 
 
