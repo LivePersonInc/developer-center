@@ -39,7 +39,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
     * **Skills**: Bot
 	
     {: .important}
-    By typing in the skill name **Bot**, a new skill with the name **bot** is created.
+    By typing in the skill name **Bot**, a new skill with the name **Bot** is created.
 
 4. Click **Save**.
 
