@@ -26,7 +26,7 @@ offset | The offset specifies from which record to retrieve the chat. | numeric 
 limit  | Max amount of conversations to be received in the response.  | numeric | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort| Sort the results in a predefined order. | string  | Optional | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
 v| version of the API (1 or 2)  | string  | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs) be returned. When using v=2, both unauthenticated and authenticated SDEs will have a type as defined in the engagement attribute in question and not String.|
-source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
 
 
 **BODY/POST Parameters**
