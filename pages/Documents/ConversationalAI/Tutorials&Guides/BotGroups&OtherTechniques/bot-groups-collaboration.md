@@ -14,11 +14,11 @@ indicator: both
 
 Historically, all of our bot capabilities would be included in a single, monolithic bot design. This bot would house all of our intent-driven dialogs, knowledge bases, the fallback dialog, and escalations. 
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/single_bot_design.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/advtutorial/single_bot_design.png">
 
 While this approach is certainly appropriate for small-scale use cases, it results in difficulty in navigating and developing future iterations of your bot. As the dialogs stack up and become more complex for development teams to approach, scaling bots becomes a real concern and can be difficult to manage. With this in mind, LivePerson has implemented functionality for a multiple bot approach, with each bot being responsible for its own functionality.
 
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/many_bots_design.png">
+<img class="fancyimage" style="width:500px" src="img/ConvoBuilder/advtutorial/many_bots_design.png">
 
 With the addition of Bot Groups and Bot Group Collaboration, we’re able to create multiple bots that work together seamlessly to assist users. Collaboration allows conversations to be passed around to each bot as needed, ensuring that each user has access to the bot they need to satisfy their intent. An added benefit of the "many bot" approach is apparent during development. Multiple developers are able to work on the same account, each focusing on a separate bot without the concern of conflicts.
 
@@ -67,7 +67,7 @@ For the Order bot, follow the same process that you used to create the Greeter b
 5. Delete the dialogs that Order Bot is not responsible for, i.e., the Welcome, Goodbye, Fallback, and Escalation dialogs.
 6. Verify that the Make Payment and Order Status dialogs are still set to be triggered using their associated intents. 
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/billing_question_dialog.png">
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/make_payment_dialog.png">
 
     As long as you are still in the same account, this link remains active. If you have created a new account for your "Many bots" group, you will need to export and import the previously created domain into the new account. 
 
@@ -159,13 +159,13 @@ Due to the nature of the Many Bots solution, each bot in our bot group will need
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_greeter.png">
 
-    Next, type “I have a question about my bill”. This results in the Order Bot taking over and directing to the appropriate intent.
+    Next, type “I want to check my order status”. This results in the Order Bot taking over and directing to the appropriate intent.
     
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_order.png">
 
     Follow this by typing “agent” to see the Service bot handle the escalation to a human agent.
 
-    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_smalltalk.png">
+    <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_service.png">
 
     Seamlessly, the different bots that have been created will enter and exit the conversation to meet the needs of your users. When the Greeter bot is unable to handle the “Order Status” intent, it looks to its collaborator bots to see whether they are able to assist. Note that the bot name displayed will change based on which bot is currently working with our users.
 
