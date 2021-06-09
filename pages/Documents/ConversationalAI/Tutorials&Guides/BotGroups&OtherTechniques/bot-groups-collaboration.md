@@ -29,13 +29,8 @@ After completing the [Getting Started tutorial](tutorials-guides-getting-started
 We’ll use three separate bots as part of our "many bot" solution:
 
 * A **Greeter bot** that will serve to provide our existing Welcome, Goodbye, and Fallback dialogs.
-* An **Order bot** that will contain our Billing Question and Order Status dialogs.
-* A **Small Talk bot** that will contain our Agent Escalation and some Small Talk functionality that we'll develop later in this tutorial.
-
-### Watch the video
-
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/470607418" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
-<br>
+* An **Order bot** that will contain our Make Payment and Order Status dialogs.
+* A **Service bot** that will contain our Agent Escalation and frequently asked questions that we'll develop later in this tutorial.
 
 ### Step 1: Create the Greeter bot
 
@@ -53,7 +48,7 @@ Instead of creating these new bots from scratch, we will copy our Getting Starte
     
     Click **Create** to exit the Create Bot Group form, and click **Save** from the Bot Settings menu.
 
-7. Lastly, delete the dialogs that Greeter Bot is not responsible for. From the **Dialogs** menu, click the three-dot icon next to the Billing Question dialog, and select **Delete Dialog**. Confirm **Yes**. Repeat this process to also delete the Escalation, Disambiguation and Order Status dialogs.
+7. Lastly, delete the dialogs that Greeter Bot is not responsible for. From the **Dialogs** menu, click the three-dot icon next to the Make Payment dialog, and select **Delete Dialog**. Confirm **Yes**. Repeat this process to also delete the Escalation and Order Status dialogs.
 
     <img class="fancyimage" style="width:250px" src="img/ConvoBuilder/advtutorial/dialog_menu.png">
 
@@ -70,7 +65,7 @@ For the Order bot, follow the same process that you used to create the Greeter b
 3. Navigate to this bot's **Bot Settings**, and update the name to "Order Bot." 
 4. Prior to saving, click the **Bot Group** dropdown, and notice there is now an option for the "Many bots" group. Select that option, and click **Save**.
 5. Delete the dialogs that Order Bot is not responsible for, i.e., the Welcome, Goodbye, Fallback, and Escalation dialogs.
-6. Verify that the Billing Question and Order Status dialogs are still set to be triggered using their associated intents. 
+6. Verify that the Make Payment and Order Status dialogs are still set to be triggered using their associated intents. 
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/billing_question_dialog.png">
 
@@ -80,13 +75,13 @@ For the Order bot, follow the same process that you used to create the Greeter b
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/bots_2.png">
 
-### Step 3: Create the Small Talk Bot
+### Step 3: Create the Service Bot
 
-As much of the functionality of the Small Talk Bot has yet to be constructed, you will create this bot from scratch and associate it with the "Many bots" group.
+As much of the functionality of the Service Bot has yet to be constructed, you will create this bot from scratch and associate it with the "Many bots" group.
 
 1. From the Conversation Builder dashboard of bots, click **New Bot** in the upper-right corner.
 2. Select a new **Custom Bot**, click **Next**, and in the resulting Custom Bot form, fill in the following:
-    * **Name**: Small Talk Bot
+    * **Name**: Service Bot
     * **Bot Language**: English - United States
     * **Bot Group**: Many bots
 
@@ -105,7 +100,7 @@ As much of the functionality of the Small Talk Bot has yet to be constructed, yo
 
 6. At this time, this bot will only serve to provide Escalation functionality, so delete both the Welcome and Fallback dialogs that were provided on bot creation. 
 
-7. Back out of the Small Talk bot to the dashboard of bots. You should see the newly created bot nested under the "Many bots" group along with the Greeter and Order bots.
+7. Back out of the Service bot to the dashboard of bots. You should see the newly created bot nested under the "Many bots" group along with the Greeter and Order bots.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/bots_3.png">
 
@@ -136,7 +131,7 @@ Due to the nature of the Many Bots solution, each bot in our bot group will need
 
 	Click **Save**.
 
-4. Repeat the previous steps for both our Order Status and Small Talk bot agents. All fields will remain the same except where you’ll need to replace “Greeter” with either "Order Status" or "Small Talk."
+4. Repeat the previous steps for both our Order Status and Service bot agents. All fields will remain the same except where you’ll need to replace “Greeter” with either "Order Status" or "Service."
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/users_list.png">
 
@@ -160,7 +155,7 @@ Due to the nature of the Many Bots solution, each bot in our bot group will need
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/start.png">
 
-7. Once all agent connectors have been added, navigate to the [bot demo deployment site](https://vx-lp.github.io/v2/lpwm/) and test as you did with the previous Getting Started bot. Saying “Hello” results in your Greeter bot responding.
+7. Once all agent connectors have been added, navigate to the [bot demo deployment site](https://developers.liveperson.com/web-messaging/emulator.html) and test as you did with the previous Getting Started bot. Saying “Hello” results in your Greeter bot responding.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_greeter.png">
 
@@ -168,11 +163,11 @@ Due to the nature of the Many Bots solution, each bot in our bot group will need
     
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_order.png">
 
-    Follow this by typing “agent” to see the Small Talk bot handle the escalation to a human agent.
+    Follow this by typing “agent” to see the Service bot handle the escalation to a human agent.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_smalltalk.png">
 
-    Seamlessly, the different bots that have been created will enter and exit the conversation to meet the needs of your users. When the Greeter bot is unable to handle the “Billing Question” intent, it looks to its collaborator bots to see whether they are able to assist. Note that the bot name displayed will change based on which bot is currently working with our users.
+    Seamlessly, the different bots that have been created will enter and exit the conversation to meet the needs of your users. When the Greeter bot is unable to handle the “Order Status” intent, it looks to its collaborator bots to see whether they are able to assist. Note that the bot name displayed will change based on which bot is currently working with our users.
 
     With our bots now properly split up and working in tandem to handle a user's needs, there are additional improvements and best practices that we can implement to ensure proper handling and understanding of our users' intents.
 
