@@ -10,9 +10,6 @@ permalink: tutorials-guides-bot-groups-other-techniques-complex-conditions.html
 indicator: both
 ---
 
-{: .important}
-**This tutorial is currently unavailable. Thanks for your patience as we work to update it to reflect the latest release of Conversation Builder.**
-
 Earlier in our Getting Started guide, we used conditional logic in our Billing Question dialog to determine which interaction to display based on a multiple choice question. Sometimes, however, there are multiple variables that need to be considered when choosing a path for users. For this purpose, Conversation Builder’s updated Conditions Editor provides a rules-based system to direct a user's path based on several variables. To demonstrate this, in our Order Bot, let’s create a new dialog to handle refund requests from the user.
 
 ### Watch the video

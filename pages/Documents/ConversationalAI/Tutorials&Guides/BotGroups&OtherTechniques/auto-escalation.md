@@ -67,4 +67,4 @@ Prior to this step, make sure that you have captured the skill ID associated wit
 
 ### What's next?
 
-Continue on to the [next tutorial](tutorials-guides-bot-groups-other-techniques-knowledge-bases.html) in the series.
+Continue on to the [next tutorial](tutorials-guides-bot-groups-other-techniques-meta-intents-knowledge-bases.html) in the series.
