@@ -43,7 +43,7 @@ Prior to this step, make sure that you have captured the skill ID associated wit
 
 4. In the Agent Transfer (escalation) interaction, click the **Settings** wheel in the upper-right corner, and navigate to the **Advanced** section to confirm that your Agent Skill ID has been properly added.
 
-5. To test this new functionality, navigate back to the [demo deployment site](https://vx-lp.github.io/v2/lpwm/) and enter your account number. After being greeted by the Greeter Bot, trigger the Order Status intent by messaging “I want to know my order status”. The Order Bot will recognize the intent and trigger the associated dialog, prompting for an order number. 
+5. To test this new functionality, navigate back to the [demo deployment site](https://developers.liveperson.com/web-messaging/emulator.html) and enter your account number. After being greeted by the Greeter Bot, trigger the Order Status intent by messaging “I want to know my order status”. The Order Bot will recognize the intent and trigger the associated dialog, prompting for an order number. 
 
 6. The question to capture the order number has a validation to ensure that it meets the A001001 format. Type in a message that *fails* this validation, so you receive a re-prompt of the question.
 

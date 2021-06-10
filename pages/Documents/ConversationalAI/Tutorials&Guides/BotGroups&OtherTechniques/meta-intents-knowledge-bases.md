@@ -38,7 +38,7 @@ Using meta intents, you can funnel a variety of intents into a single dialog for
 	<img style="width:300px" src="img/ConvoBuilder/advtutorial/meta_intents_list.png">
 
 3. Once saved, you will need to re-train your domain for your changes to take effect. Click **Train** in the upper-right corner.
-4. After training, test to make sure both intents and meta intents are being triggered by your training phrases. In the **Test User Input** panel on the right, select your newly trained model from the Model version dropdown, turn on the **Search in domain** setting, and keep the default "All" in the resulting dropdown. Test out a few phrases that you would expect to match the newly created intents. If set up correctly, you should show both the standard intent and its parent meta intent triggered with the same confidence score.
+4. After training, test to make sure both intents and meta intents are being triggered by your training phrases. In the **Test User Input** panel on the right, select your newly trained model from the **Model version** dropdown, turn on the **Search in domain** setting, and keep the default "All" in the resulting dropdown. Test out a few phrases that you would expect to match the newly created intents. If set up correctly, you should show both the standard intent and its parent meta intent triggered with the same confidence score.
 
 	<img style="width:400px" src="img/ConvoBuilder/advtutorial/test_user_input.png">	
 
@@ -58,7 +58,7 @@ In this step, you’ll create a new FAQ knowledge base and add FAQ articles to i
 
 4. Give the knowledge base the name "Getting Started KB," and set the language to English. Here, you have the option of uploading a CSV or Google Sheet of your Knowledge Base articles. Leave the **Upload** field blank, as you will create articles from scratch.
 
-	From the Domain dropdown, select our "LP_Cross-vertical" domain.
+	From the Domain dropdown, select our "LP_Cross-vertical" domain. Click **Save**.
 
 	{: .important}
 	Internal knowledge bases leverage LivePerson NLU domains when surfacing articles.
