@@ -49,7 +49,7 @@ Prior to this step, make sure that you have captured the skill ID associated wit
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/preview_auto_esc_1.png">
 
-7. Follow this up with additional messages that also fail the validation. On the 3rd failure, the Auto Escalation dialog will be triggered and will provide the user with the option to escalate to an agent. Select "Yes" to confirm that the escalation has been implemented correctly.
+7. Follow this with additional messages that also fail the validation. On the 3rd failure, the Auto Escalation dialog will be triggered and will provide the user with the option to escalate to an agent. Select "Yes" to confirm that the escalation has been implemented correctly.
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/preview_auto_esc_2.png">
 

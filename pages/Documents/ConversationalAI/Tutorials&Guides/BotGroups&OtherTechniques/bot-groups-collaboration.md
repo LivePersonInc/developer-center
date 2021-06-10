@@ -20,7 +20,7 @@ While this approach is certainly appropriate for small-scale use cases, it resul
 
 <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/advtutorial/many_bots_design.png">
 
-With the addition of Bot Groups and Bot Group Collaboration, we’re able to create multiple bots that work together seamlessly to assist users. Collaboration allows conversations to be passed around to each bot as needed, ensuring that each user has access to the bot they need to satisfy their intent. An added benefit of the "many bot" approach is apparent during development. Multiple developers are able to work on the same account, each focusing on a separate bot without the concern of conflicts.
+With the addition of *bot groups* and *bot group collaboration*, we’re able to create multiple bots that work together seamlessly to assist users. Collaboration allows conversations to be passed around to each bot as needed, ensuring that each user has access to the bot they need to satisfy their intent. An added benefit of the "many bot" approach is apparent during development. Multiple developers are able to work on the same account, each focusing on a separate bot without the concern of conflicts.
 
 ### Breaking up the monolith
 
@@ -34,9 +34,9 @@ We’ll use three separate bots as part of our "many bot" solution:
 
 ### Step 1: Create the Greeter bot
 
-Instead of creating these new bots from scratch, we will copy our Getting Started bot into three new bots and strip away the unnecessary functionality from each.
+Instead of creating these new bots from scratch, we will copy our Getting Started bot into three new bots and strip away the unnecessary functionality from each copy.
 
-1. From the Getting Started bot in Conversation Builder, click on the three-dot icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_three_dot_ellipsis_vert.png"> in the menu bar, and select **Bot Settings**.
+1. From the Getting Started bot in Conversation Builder, click the three-dot icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_three_dot_ellipsis_vert.png"> in the menu bar, and select **Bot Settings**.
 2. Expand the **More Settings** menu, and scroll towards the bottom until you see the **Export Bot** option. Click the download icon <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_download.png"> to generate a JSON-formatted copy of the Getting Started bot.
 3. Back out of the Getting Started bot to the dashboard of bots. Click **Import Bot** in the upper-right corner.
 4. Select and open the downloaded JSON as your import file, which will fully create a new copy of your bot, bringing you into its dialog editor. 
@@ -48,7 +48,7 @@ Instead of creating these new bots from scratch, we will copy our Getting Starte
     
     Click **Create** to exit the Create Bot Group form, and click **Save** from the Bot Settings menu.
 
-7. Lastly, delete the dialogs that Greeter Bot is not responsible for. From the **Dialogs** menu, click the three-dot icon next to the Make Payment dialog, and select **Delete Dialog**. Confirm **Yes**. Repeat this process to also delete the Escalation and Order Status dialogs.
+7. Lastly, delete the dialogs that Greeter Bot isn't responsible for. From the **Dialogs** menu, click the three-dot icon next to the Make Payment dialog, and select **Delete Dialog**. Confirm **Yes**. Repeat this process to also delete the Escalation and Order Status dialogs.
 
     <img class="fancyimage" style="width:250px" src="img/ConvoBuilder/advtutorial/dialog_menu.png">
 
@@ -64,14 +64,14 @@ For the Order bot, follow the same process that you used to create the Greeter b
 2. Select and open the downloaded Getting Started JSON as your import file, which will fully create a new copy of your bot, bringing you into its dialog editor. 
 3. Navigate to this bot's **Bot Settings**, and update the name to "Order Bot." 
 4. Prior to saving, click the **Bot Group** dropdown, and notice there is now an option for the "Many bots" group. Select that option, and click **Save**.
-5. Delete the dialogs that Order Bot is not responsible for, i.e., the Welcome, Goodbye, Fallback, and Escalation dialogs.
+5. Delete the dialogs that Order Bot isn't responsible for, i.e., the Welcome, Goodbye, Fallback, and Escalation dialogs.
 6. Verify that the Make Payment and Order Status dialogs are still set to be triggered using their associated intents. 
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/make_payment_dialog.png">
 
-    As long as you are still in the same account, this link remains active. If you have created a new account for your "Many bots" group, you will need to export and import the previously created domain into the new account. 
+    As long as you are still in the same account, these links remain active. If you have created a new account for your "Many bots" group, you will need to export and import the previously created domain into the new account. 
 
-    Back in the Conversation Builder dashboard of bots, ensure that your Order Bot is nested underneath your "Many bots" group along with the Greeter Bot.
+    Back in the Conversation Builder dashboard of bots, ensure that your Order Bot is nested underneath your "Many bots" group, along with the Greeter Bot.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/bots_2.png">
 
@@ -94,13 +94,13 @@ As much of the functionality of the Service Bot has yet to be constructed, you w
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/advtutorial/library_link1.png">
     <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/advtutorial/library_link2.png">
 
-5. Create a new **Agent Transfer** interaction, modifying the text to read “Transferring to a human agent…”. In the Interaction Settings for this interaction, make sure to enter the corresponding **Human** skill ID for your user profile. Please refer to the Getting Started tutorial for details on this process.
+5. Create a new **Agent Transfer** interaction, modifying the text to read “Transferring to a human agent…” In the Interaction Settings for this interaction, make sure to enter the corresponding **Human** skill ID for your user profile. Please refer to the [Getting Started](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series for details on this process.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/agent_transfer_interaction.png">
 
 6. At this time, this bot will only serve to provide Escalation functionality, so delete both the Welcome and Fallback dialogs that were provided on bot creation. 
 
-7. Back out of the Service bot to the dashboard of bots. You should see the newly created bot nested under the "Many bots" group along with the Greeter and Order bots.
+7. Back out of the Service bot to the dashboard of bots. You should see the newly created bot nested under the "Many bots" group, along with the Greeter and Order bots.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/bots_3.png">
 
@@ -167,7 +167,7 @@ Due to the nature of the Many Bots solution, each bot in our bot group will need
 
     <img class="fancyimage" style="width:350px" src="img/ConvoBuilder/advtutorial/bot_service.png">
 
-    Seamlessly, the different bots that have been created will enter and exit the conversation to meet the needs of your users. When the Greeter bot is unable to handle the “Order Status” intent, it looks to its collaborator bots to see whether they are able to assist. Note that the bot name displayed will change based on which bot is currently working with our users.
+    Seamlessly, the different bots that have been created will enter and exit the conversation to meet the needs of your users. When the Greeter bot is unable to handle the “Order Status” intent, it looks to its collaborator bots to see whether they are able to assist. Note that the bot name displayed changes based on which bot is currently working with our users.
 
     With our bots now properly split up and working in tandem to handle a user's needs, there are additional improvements and best practices that we can implement to ensure proper handling and understanding of our users' intents.
 
