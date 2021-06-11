@@ -59,9 +59,9 @@ Within the code editor, a validation check is performed to ensure that the code 
 However, there is no validation check to ensure that the code adheres to the Conversational Cloud [Rich Messaging format](getting-started-with-rich-messaging-introduction.html). Therefore, take care when entering the JSON. If you use a JSON format that isn't in compliance with the Conversational Could Rich Messaging format, the message will not be rendered at runtime.
 
 #### Testing
-To fully test a Universal interaction, use a Web client.
+To fully test a Universal interaction, use a deployed bot.
 
-The [Preview](conversation-builder-testing-deployment-previewing.html) tool won't exactly reflect how the interaction is rendered on a specific channel. Additionally, the [Conversation Tester](conversation-builder-testing-deployment-testing-debugging-post-deployment.html) doesn't support the Universal interaction.
+The bot-level [Preview](conversation-builder-testing-deployment-previewing.html) tool can only render basic elements, not complex ones like cards or carousels. Additionally, the [Conversation Tester](conversation-builder-testing-deployment-testing-debugging-post-deployment.html) doesn't support the Universal interaction.
 
 #### FAQs
 
