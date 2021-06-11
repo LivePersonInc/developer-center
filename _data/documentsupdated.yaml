@@ -228,6 +228,7 @@
       - pagename: Conversational Payments
         subpages:
           - subpagename: Bring Your Own Payments
+          - subpagename: Apple Pay
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
