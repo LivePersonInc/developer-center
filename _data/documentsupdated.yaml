@@ -225,6 +225,9 @@
           - subpagename: Debugging
           - subpagename: Deploying to Conversational Cloud
           - subpagename: Testing & Debugging Post-Deployment
+      - pagename: Conversational Payments
+        subpages:
+          - subpagename: Bring Your Own Payments
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
