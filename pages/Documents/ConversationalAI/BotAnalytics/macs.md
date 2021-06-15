@@ -101,12 +101,12 @@ Once you’ve used the MACS charts to build the set of filters at the top of the
 
 <img style="width:800px" src="img/ConvoBuilder/macs_viewselectedconvs.png">
 
-This takes you to a list of sample conversations (as many as 100) that are filtered based on the criteria you’ve specified.
+This takes you to a list of conversations (as many as 100) that are filtered based on the criteria you’ve specified.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_conv_list.png">
 
 {: .important}
-The list of conversations is a sample of up to 100 bot conversations that meet the defined criteria. The conversations are distributed across the selected scores, so, for example, if you select to show conversations with a MACS of 1 and 2, you’ll see some number of conversations with a MACS 1 and some number of conversations with a MACS 2. The distribution might not be even since this depends on the data that’s available.
+The conversations in the list are distributed across the selected scores, so, for example, if you select to show conversations with MACS 1 and MACS 2, you’ll see some number of conversations with MACS 1 and some number of conversations with MACS 2. The distribution might not be even since this depends on the data that’s available.
 
 From here, you can also search for a specific conversation: Enter its full conversation ID in the search box. The conversation will be displayed in the **Conversations** list regardless of how the other filters are set.
 
@@ -114,7 +114,7 @@ From here, you can also search for a specific conversation: Enter its full conve
 
 ### Reviewing a transcript
 
-With a list of sample conversations displayed, select a conversation to review its transcript.
+With a list of conversations displayed, select a conversation to review its transcript.
 
 <img style="width:800px" src="img/ConvoBuilder/macs_conv_select.png">
 
