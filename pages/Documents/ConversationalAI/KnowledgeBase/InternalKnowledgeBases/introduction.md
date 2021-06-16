@@ -80,6 +80,10 @@ When an NLU search is performed, the knowledge base's language works differently
 * If the knowledge base uses *Domain* intents, the domain's language is used instead. In this case, the languages supported depend on the domain's [NLU provider](intent-builder-natural-language-understanding.html).
 * If the knowledge base uses *Knowledge Base* intents (a legacy feature), the knowledge base's language is used. In this case, only English and Spanish are supported.
 
+#### Working with special language characters
+
+If you need to support special language characters (e.g., ö, ü, ß), and you’re creating an internal knowledge base by importing a CSV file, ensure the import file is saved as a UTF-8 encoded CSV file beforehand.
+
 ### Active versus inactive articles
 
 An article is either active or inactive. Active articles are returned in knowledge base searches in Knowledge Base integrations while inactive articles aren't returned.

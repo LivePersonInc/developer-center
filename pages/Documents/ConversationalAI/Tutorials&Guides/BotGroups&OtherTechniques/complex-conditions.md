@@ -10,45 +10,27 @@ permalink: tutorials-guides-bot-groups-other-techniques-complex-conditions.html
 indicator: both
 ---
 
-{: .important}
-**This tutorial is currently unavailable. Thanks for your patience as we work to update it to reflect the latest release of Conversation Builder.**
-
-Earlier in our Getting Started guide, we used conditional logic in our Billing Question dialog to determine which interaction to display based on a multiple choice question. Sometimes, however, there are multiple variables that need to be considered when choosing a path for users. For this purpose, Conversation Builder’s updated Conditions Editor provides a rules-based system to direct a user's path based on several variables. To demonstrate this, in our Order Bot, let’s create a new dialog to handle refund requests from the user.
-
-### Watch the video
-
-<div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/468527951" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
-<br>
+In the [Getting Started](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series, we used conditional logic in the Make Payment dialog to determine which interaction to display based on a multiple choice question. Sometimes, however, there are multiple variables that need to be considered when choosing a path for users. For this purpose, Conversation Builder’s Conditions Editor provides a rules-based system to direct a user's path based on several variables. To demonstrate this, in our Order Bot, let’s create a new dialog to handle refund requests from the user.
 
 ### Step 5: Create the Refund Request dialog
 
-Let's return to Conversation Builder, where we will create our "Refund Request" intent directly from the Assist tool and use it to trigger a new dialog.
+Let's return to Conversation Builder, where we will create our "Refund Request" dialog. Our Cross-vertical domain contains a "request refund" intent, which we'll use to trigger this dialog.
 
 1. Navigate to Conversation Builder, and select the Order Bot.
 2. In the lower-left corner, click **Add Dialog**, and create a new standard dialog with the name **Refund Request**.
 3. Open the Assist tool by clicking <img style="width:25px" src="img/ConvoBuilder/advtutorial/icon_assist.png"> (Assist icon) beside the dialog starter.
 
-    Previously, we created all of our intents inside of Intent Builder. However, it is possible to create new intents from within Conversation Builder.
-
-    Select the “Getting Started Domain”, and then click **Create New Intent**.
-
-    Fill out the resulting **Add Intent** form with the following:
-    * **Intent Name**: Refund Request
-    * **Training Phrases**:
-        * I would like to request a refund
-        * How do I get a refund?
-        * I need to return an item for a refund
-        * How do I make a refund request?
-
-    Click **Add Intent** to add the new Refund Request intent to the Getting Started Domain. Upon doing so, the dialog starter will be automatically associated with it.
+    Select the “LP_Cross-vertical” domain, followed by the "request refund" intent. You can locate this intent either by scrolling through the list of intents, or by searching with a phrase such as, "I want to request a refund." Selecting this intent associates it with the dialog starter.
 
 4. Add a new *Text statement* to acknowledge the user's intent. Add the text, "It looks like you have a question about a refund."
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/refund_request_dialog.png">
 
     Next, we’re going to add the first of two questions that will determine where this conversation flows.
 
 5. Add a new *Multiple Choice question* that asks the user whether their order was placed within the last 30 days.
 
-    Tap on the name of the multiple choice question, and give it a name of "Refund Question."
+    Select the name of the multiple choice question, and give it a name of "Refund Question."
 
     Add the question text, "Was the purchase made in the last 30 days?", with multiple choice options of *Yes* and *No*.
 
@@ -56,11 +38,13 @@ Let's return to Conversation Builder, where we will create our "Refund Request" 
 
     To complete the **Add Next Action Rule** section, start by giving the rule a name of "Yes." Next, click **+ Add Condition**, select **Pattern** from the resulting dropdown, and enter the pattern "Yes". Finally, we’ll capture the result in a variable: Click **+ Add Variable**. Name the variable `within30Days`, and set the value to "true". Click **Save**.
 
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/advtutorial/yesrule.png">
+
     Add a second rule, giving it a name of "No." Click **+ Add Condition**, select **Pattern** from the resulting dropdown, and enter the pattern "No". Once again, click **+ Add Variable**. Name the variable `within30Days`, and set the value to "false". Click **Save**.
 
 We’ve now created a dialog that records whether or not a purchase was made in the last 30 days and stores that value to a variable. Next, we’ll add a second question, and then we'll use the results of both questions to determine one of four interactions to display.
 
-### Step 6: Add a second Multiple Choice question
+### Step 6: Add a second multiple choice question
 
 1. Still in the Refund Request dialog, add a new Multiple Choice question. Change the name of the interaction to "Online or Instore".
 
@@ -110,7 +94,7 @@ We’ve now created a dialog that records whether or not a purchase was made in 
     * **Conditions**:
         * Pattern matches `web*`
         * `within30Days` Equals "true"
-    * And Go To: Web Less 30
+    * **And Go To**: Web Less 30
 
     * **Rule name**: Web More 30
     * **Conditions**:

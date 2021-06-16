@@ -25,8 +25,8 @@ If you choose LivePerson's native NLU, no setup work needs to be done to connect
 
 ### Language support
 
-The LivePerson engine supports English.<br>
-The LivePerson (Legacy) engine supports English and Spanish. 
+The LivePerson engine supports English and Spanish.<br>
+The LivePerson (Legacy) engine also supports English and Spanish.
 
 Available with IBM Watson:
 * Arabic
