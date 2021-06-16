@@ -15,7 +15,7 @@ The following documentation outlines the configuration for the bot connector and
 ### Bot Configuration
 
 {: .notice}
-**IMPORTANT**: All the old bots that use **watsonplatform.net** domain for their workspace URL will fail to operate after **_12 February 2021_**. IBM has deprecated **watsonplatform.net** endpoints please update your bot configuration in Third-Party Bots if you do not want to disrupt the functioning of the bots. Official news on this announcement can be found [here](https://cloud.ibm.com/docs/watson?topic=watson-endpoint-change)
+**IMPORTANT**: All the old bots that use **watsonplatform.net** domain for their workspace URL will fail to operate after **_26 May 2021_**. IBM has deprecated **watsonplatform.net** endpoints please update your bot configuration in Third-Party Bots if you do not want to disrupt the functioning of the bots. Official news on this announcement can be found [here](https://cloud.ibm.com/docs/watson?topic=watson-endpoint-change)
 
 {: .important}
 See the [Getting Started](bot-connectors-getting-started.html) guide first to complete pre-requisite steps.
@@ -670,7 +670,7 @@ In the example above, you can see the `actions` array. Inside the array, we defi
 #### Transfer to Agent
 
 {: .important}
-This feature is depending on [permissions](contact-center-management-messaging-operations-transfer-to-agent.html)
+This feature is depending on [permissions](https://knowledge.liveperson.com/contact-center-management-messaging-operations-transfer-to-agent.html#permissions)
 
 This option transfers the conversation to the particular agent matching the provided agentId and skill. If the agent is not available, the conversation will be transfered to an available agent with the same skill
 
@@ -1020,3 +1020,7 @@ To use Watson Discovery the Watson Assistant Bot needs to have a s[search skill]
 
 - Currently IBM Watson Assistant retains sessions only for 5 minutes for Free and 60 minutes for Plus or premium members. For more information [read here](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-runtime#dialog-runtime-context)
 - Currently IBM Watson allows **only 5** response types per node.
+
+### Prevent Tranfering loop behaviour
+
+As a good practice and to prevent that the bot goes into a conversation loop during off hours, create a separate bot for off-hour times that only listens to the human skill and not to the regular bot skills. If another bot is not created for that period, the bot can get into a transfering loop.  

@@ -374,6 +374,8 @@ Example:
 | sku | Product SKU. | alphanumeric |
 | price | Product price. | alphanumeric |
 | currency | Currency code. | alphanumeric |
+| statusInStock | Product stock status | alphanumeric |
+| quantityInStock | Product quantity left in stock | number(int) |
 
  Example:
 
@@ -392,7 +394,9 @@ Example:
                   "name": "red high heel shoe",
                   "category": "women shoes",
                   "sku": "xyz567",
-                  "price": "77.8"
+                  "price": "77.8",
+                  "statusInStock": "Out of stock",
+                  "quantityInStock": 0
                 }
               }
             ]

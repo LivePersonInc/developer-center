@@ -157,6 +157,7 @@
       - pagename: Bot Templates
         subpages:
           - subpagename: Overview
+          - subpagename: Global Helper Functions
           - subpagename: Apply for a Loan
           - subpagename: Full Lead Gen
           - subpagename: Insurance Quote
@@ -224,6 +225,10 @@
           - subpagename: Debugging
           - subpagename: Deploying to Conversational Cloud
           - subpagename: Testing & Debugging Post-Deployment
+      - pagename: Conversational Payments
+        subpages:
+          - subpagename: Bring Your Own Payments
+          - subpagename: Apple Pay
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
@@ -717,6 +722,7 @@
         subpages:
           - subpagename: Overview
           - subpagename: Events & Templates
+          - subpagename: Function Connectivity
           - subpagename: Whitelisting Domains
           - subpagename: Toolbelt
           - subpagename: Snippets
@@ -1167,6 +1173,9 @@
           subpages:
             - subpagename: Event Binding
             - subpagename: Events
+        - pagename: Hooks
+          subpages:
+            - subpagename: Hooks
         - pagename: New Page Refresh
     - documentname: Monitoring API
       basedomain: https://{liveperson-monitor-domain}/api/account/{account-id}/app/{app-installation-id}

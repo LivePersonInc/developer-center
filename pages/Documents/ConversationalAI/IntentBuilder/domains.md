@@ -55,7 +55,9 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
     * **Manual** or **Import**: If you want to manually add intents and entities to the domain, select "Manual." If you want to import them from a file, select "Import."
     * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
 
-        A Google sheet must be public, i.e., with no file restrictions in place. If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
+        **Google sheets**: A Google sheet must be public, i.e., with no file restrictions in place. Moreover, it must contain 100 or fewer columns (intents and entities combined); otherwise, the import fails. If your domain is larger and you have more columns than this, use a CSV file instead.
+        
+        If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
 
     * **NLU Provider**: Select the provider of the NLU engine to use. For help, see the discussion on NLU engines [here](intent-builder-natural-language-understanding.html).
     * **Language**: Select the language of the domain.

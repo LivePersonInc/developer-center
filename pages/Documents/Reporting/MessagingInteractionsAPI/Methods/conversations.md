@@ -26,7 +26,7 @@ offset | The offset specifies from which record to retrieve the chat. | numeric 
 limit  | Max amount of conversations to be received in the response.  | numeric | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort| Sort the results in a predefined order. | string  | Optional | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
 v| version of the API (1 or 2)  | string  | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs) be returned. When using v=2, both unauthenticated and authenticated SDEs will have a type as defined in the engagement attribute in question and not String.|
-source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
 
 
 **BODY/POST Parameters**
@@ -238,8 +238,8 @@ _Campaign info_
 | goalName | Name of the campaign's goal.  | alphanumeric (50)|
 | engagementAgentNote  | Note to the Agent defined for the campaign's engagement. | alphanumeric  |
 | engagementSource  | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc.  | alphanumeric  |
-| visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement (in case engagement id is available).| numeric |
-| visitorBehaviorName  | Name of the visitor behavior defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50)|
+| visitorBehaviorId | ID of the behavioral targeting rule defined for the campaign's engagement (in case engagement id is available).| numeric |
+| visitorBehaviorName  | Name of the behavioral targeting rule defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50)|
 | engagementApplicationId | Engagement's application ID.  | alphanumeric - UUID | The engagement which triggered the conversation
 | engagementApplicationName  | Engagement's application name.| alphanumeric  | The engagement which triggered the conversation
 | engagementApplicationTypeId| Engagement's application type id | alphanumeric  | The engagement which triggered the conversation
@@ -250,8 +250,8 @@ _Campaign info_
 | lobName  | Name of the line of business of the campaign.| alphanumeric  |
 | LocationId  | ID of the location of the engagement on the screen.| numeric |
 | LocationName| describes the engagement display location.| alphanumeric  | The default location is the entire website.  
-| behaviorSystemDefault| Indicates whether visitor behavior is the default one.| Boolean |
-| profileSystemDefault | Indicates whether visitor behavior is the default one.| Boolean |  
+| behaviorSystemDefault| Indicates whether behavioral targeting rule is the default one.| Boolean |
+| profileSystemDefault | Indicates whether behavioral targeting rule is the default one.| Boolean |  
 
 _Monitoring_
 
