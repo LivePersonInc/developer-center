@@ -69,7 +69,16 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 2. Select the organization.
 3. On the **Account Details** tab, specify the following:
 
-    * **Survey Request Interval**: This setting determines how often a consumer is sent a survey when one is triggered. When configuring this, consider how frequently you want a response from the same consumer, as sending surveys too often can create a poor experience. If this setting is disabled, the consumer always receives a survey when one is triggered. You can enable it to control the frequency; in this case, enter the number of days that must elapse before sending another survey (any survey within the account) to the same consumer. The default value is 30 days. 
+    * **Survey Request Interval**: This setting determines how often a consumer is sent a survey when one is triggered. When configuring this, consider how frequently you want a response from the same consumer, as sending surveys too often can create a poor experience.
+ 
+        If this setting is disabled, the consumer always receives a survey when one is triggered.
+        
+        If this setting is enabled, you can apply the specified time interval 1) to all bots collectively, i.e., at the account level, or 2) to each bot individually, i.e., at the survey bot level. As an example, assume you have surveys A, B and C, and you enable this setting with a value to 20 days.
+
+        With option 1, if the consumer receives survey A, they will not receive survey A again, or receive surveys B and C, until 20 days have passed.
+    
+        With option 2, if the consumer receives survey A, they will not receive survey A again until 20 days have passed. During this time, they still might receive surveys B and C.
+
     * **Survey Sampling**: If you have high traffic, you don’t need to send surveys to all your consumers; you can send them to a subset. That’s what this setting is designed for. If it's disabled, all consumers are sent surveys when the surveys are triggered. You can enable it to send surveys to a percentage of randomly sampled consumers. Use the slider to specify the percentage. The default value is 50%.
 4. [Redeploy the Post Conversation Survey connector](bots-status-managing-post-conversation-survey-bots.html#redeploy-the-connector) for your changes to take effect.
 
@@ -192,12 +201,13 @@ In an NPS interaction, don't enable Skip if your targeted channel is Facebook. F
 
 #### Configuring the display format
 
-In the **Advanced Settings** of many of the survey interactions, you can configure two display settings:
+In the **Advanced Settings** of many of the survey interactions, you can configure several display settings:
 
-* Display Choices As
-* Text Only Fallback > List Style for Choices
+1. Display Choices As
+2. Choices Per Row
+3. Text Only Fallback > List Style for Choices
 
-Use the **Display Choices As** setting to specify whether and how to send the answer choices to the consumer. You can select:
+1 - Use the **Display Choices As** setting to specify whether and how to send the answer choices to the consumer. You can select:
 
 * **Quick Reply**: Select this to send the answer choices as quick replies in channels that support them. In text-based channels, the format specified in **List Style for Choices** will be used.
 * **Button**: Select this to send the answer choices as buttons in channels that support them. In text-based channels, the format specified in **List Style for Choices** will be used.
@@ -205,7 +215,14 @@ Use the **Display Choices As** setting to specify whether and how to send the an
 
 <img style="width:500px" src="img/ConvoBuilder/surveyBot_displayChoices.png">
 
-When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
+2 - Use the **Choices Per Row** setting to control how the answer choices are presented when they exceed the available space in the messaging window:
+
+* **Best Fit**: If you select this, the answer choices wrap to multiple lines to avoid scrolling. Typically, this is the preferred consumer experience. **Note**: This option isn't supported if the target channel is Facebook, Google Business Messaging, or LINE.
+* **Scroll**: If you select this, the answer choices are all presented on the same line, and the consumer must scroll across to see them all.
+
+<img style="width:500px" src="img/ConvoBuilder/surveyBot_bestFit.png">
+
+3 - When you deploy your survey bot to a channel that doesn't support rich content formatting (for example, SMS), the survey questions are automatically sent as plain text. Use the **List Style for Choices** setting to control how the choices are presented in a text-only fallback scenario. You can select:
 
 * **1. 2. 3. 4.** or **a. b. c. d.**: Select either of these to send the answer choices using the indicated format.
 * **no list**: Select this to hide the answer choices. Only the survey question will be sent to the consumer.

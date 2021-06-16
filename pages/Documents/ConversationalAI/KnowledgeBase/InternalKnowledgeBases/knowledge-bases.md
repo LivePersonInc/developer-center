@@ -40,7 +40,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_importFile.png">
 
 {: .important}
-The import file can contain the following basic HTML tags: p, br, a (only the “href” attribute and “http”/"https” protocols are supported).
+The import file can contain the subset of HTML that’s discussed [here](knowledge-base-common-settings-tasks.html#format-text-in-an-article). Additionally, as a best practice, ensure the file is saved as a UTF-8 encoded CSV file before you import it. This is particularly important if you need to support special language characters (e.g., ö, ü, ß).
 
 **To create an import file**
 
