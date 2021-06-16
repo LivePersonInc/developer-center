@@ -20,7 +20,7 @@ After you access Bot Analytics, the main dashboard is displayed. The dashboard i
 {: .important}
 The trend charts can show data for November 1, 2020 and later.
 
-**Conversation** metrics and **Transfers** metrics are specific to deployed bots and exclude conversations conducted via the Preview tool. However, the rest of the metrics (**Messages**, **Users**, and **Intent Match Rate**) include conversations conducted via Preview. This means you can test a bot’s performance, for example, its intent matching, without having to deploy it.
+**MACS**, **Conversation**, and **Transfers** metrics are specific to deployed bots and exclude conversations conducted via the Preview tool. However, the rest of the metrics (**Messages**, **Users**, and **Intent Match Rate**) include conversations conducted via Preview. This means you can test a bot’s performance, for example, its intent matching, without having to deploy it.
 
 Use the dashboard page to get a quick indication of the overall performance of your organization’s automation program.
 
@@ -45,6 +45,7 @@ You can use this filter to show the data for any 7-day date range within the las
 
 ### Bot-level metrics
 
+* **MACS**: The bot's average Meaningful Automated Conversation Score, or MACS. For more on MACS, see [here](bot-analytics-macs.html).
 * **Conversations**: The total number of closed and open Conversational Cloud conversations in which the bot participated.
 * **Messages**: The total number of messages sent by the consumer and received by the bot.
 * **Users**: The total number of unique users that connected to the bot. Note that this metric doesn’t combine visits, i.e., if a user starts a second conversation at a later time, that is treated as a new user.

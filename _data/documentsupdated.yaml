@@ -133,8 +133,7 @@
           - subpagename: Bot Groups & Collaboration
           - subpagename: Complex Conditions
           - subpagename: Auto Escalation
-          - subpagename: Knowledge Bases
-          - subpagename: Meta Intents
+          - subpagename: Meta Intents & Knowledge Bases
       - pagename: Advanced Integrations
         subpages:
           - subpagename: Implementing a Web View Integration
@@ -185,6 +184,7 @@
           - subpagename: Statements
           - subpagename: Questions
           - subpagename: Integrations
+          - subpagename: Code
           - subpagename: Configuration - Next Action
           - subpagename: Configuration - Custom Code
           - subpagename: Configuration - Settings
@@ -225,6 +225,10 @@
           - subpagename: Debugging
           - subpagename: Deploying to Conversational Cloud
           - subpagename: Testing & Debugging Post-Deployment
+      - pagename: Conversational Payments
+        subpages:
+          - subpagename: Bring Your Own Payments
+          - subpagename: Apple Pay
       - pagename: Advanced Use Cases
       - pagename: Best Practices
         subpages:
@@ -315,8 +319,9 @@
       - pagename: Overview
       - pagename: Account-Level Performance
       - pagename: Bot Performance
-      - pagename: Transcripts
       - pagename: Tuning Opportunities
+      - pagename: MACS
+      - pagename: Transcripts
       - pagename: Troubleshooting
   - documentname: Bot Accounts
     pages:
