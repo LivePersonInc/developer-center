@@ -39,7 +39,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
     * **Skills**: Bot
 	
     {: .important}
-    By typing in the skill name **Bot**, a new skill with the name **bot** is created.
+    By typing in the skill name **Bot**, a new skill with the name **Bot** is created.
 
 4. Click **Save**.
 
@@ -90,10 +90,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
 ### Step 14: Test the deployment
 
-{: .important}
-In this step, you'll be testing with Messaging, so you'll be using [this test page](https://vx-lp.github.io/v2/lpwm/). When you test with Chat, you can use [this test page](https://livepersoninc.github.io/visitor-page/?siteid=%5Byour%20account%20number%5D), adding your account number to the URL.
-
-1. In a browser, navigate to the [Messaging test page](https://vx-lp.github.io/v2/lpwm/). 
+1. In a browser, navigate to the [Messaging test page](https://developers.liveperson.com/web-messaging/emulator.html). 
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/messaging_test_page.png">
 

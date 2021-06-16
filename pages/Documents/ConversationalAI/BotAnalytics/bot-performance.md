@@ -26,7 +26,10 @@ From the **Overview**, you can access additional views for more detailed informa
 
 <img style="width:700px" src="img/ConvoBuilder/ba_views.png">
 
-Use the views to understand how consumers are interacting with the bot. For example, you can use the **Conversations** and **Users** views to understand and compare volume. These views can show you daily trends that reveal traffic patterns during business hours and off hours, and so on. Additionally, a review of transcripts via the [Transcripts](bot-analytics-transcripts.html) view is a great way to identify opportunities for tuning.
+Use the views to understand how consumers are interacting with the bot. For example:
+
+* Use the **MACS** view to understand the bot's Meaningful Automated Conversation Score, or MACS. This is a great way to identify opportunities for bot/intent tuning. For more on MACS, see [here](bot-analytics-macs.html). 
+* Use the **Conversations** and **Users** views to understand and compare volume. These views can show you daily trends that reveal traffic patterns during business hours and off hours, and so on.
 
 Some measures that are useful to assess while monitoring and improving your bots include:
 
@@ -60,7 +63,7 @@ Some measures that are useful to assess while monitoring and improving your bots
     * Handling the quantity of interactions in an efficient manner
 
 ### Download data
-All bot views except the **Overview** let you download the results to a CSV file. Click the **Download** link in the upper-right corner.
+All bot views except the **Overview** and the **MACS** view, let you download the results to a CSV file. Click the **Download** link in the upper-right corner.
 
 <img style="width:400px" src="img/ConvoBuilder/ba_download.png">
 

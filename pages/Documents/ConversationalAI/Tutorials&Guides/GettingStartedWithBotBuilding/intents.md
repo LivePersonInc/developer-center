@@ -100,7 +100,7 @@ Now you can begin to build out the Make Payment dialog.
 
     You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next action should be to end.
 
-4. Add a Text statement to respond to a reply of "no". Name the interaction "No statement" (in the upper-left corner). For the statement's text, enter, “Ok, we’ll be here to help when you are ready." Select "End Interaction" as the **Next Action**. Click **Save**.
+4. Add a Text statement to respond to a reply of "no". Name the interaction "No" (in the upper-left corner). For the statement's text, enter, “Ok, we’ll be here to help when you are ready." Select "End Interaction" as the **Next Action**. Click **Save**.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules3.png">
 

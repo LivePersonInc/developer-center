@@ -8,6 +8,10 @@ indicator: both
 layout: hidden-layout
 ---
 
+<!--
+This is the OLD MACS content that was used during Early Access. Moving this out-of-date content to the Exclude folder to archive it for the time being.
+-->
+
 ### Introduction
 
 LivePerson is pleased to announce the *Beta release* of the Meaningful Automation Conversation Score or MACS, which is a new measure of bot performance.
