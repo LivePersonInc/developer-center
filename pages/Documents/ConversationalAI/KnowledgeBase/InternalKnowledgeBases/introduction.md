@@ -18,7 +18,7 @@ An internal knowledge base is a built-in knowledge base, i.e., one whose content
 * Do a one-time import of articles from a CSV file, and maintain the articles thereafter within the Knowledge Base application.
 * Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within the Knowledge Base application.
 
-An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to [evaluate the articles](knowledge-base-using-intents-with-kbs.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
+An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding.html) to [evaluate the articles](knowledge-base-using-intents-with-kbs.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
 
 ### High-Level Workflow
 
@@ -49,7 +49,7 @@ Within the newly created knowledge base, you then link each article to an intent
 
 <img style="width:700px" src="img/ConvoBuilder/kb_domain_intents2.png">
 
-With Domain intents like these, you can use any of the following [NLU engines](intent-builder-natural-language-understanding.html) for intent matching:
+With Domain intents like these, you can use any of the following [NLU engines](intent-manager-natural-language-understanding.html) for intent matching:
 * LivePerson
 * LivePerson (Legacy)
 * A third-party NLU engine 
@@ -77,7 +77,7 @@ When a text-to-text search is performed and a match is found, the knowledge base
 
 When an NLU search is performed, the knowledge base's language works differently based on how you've defined the knowledge base:
 
-* If the knowledge base uses *Domain* intents, the domain's language is used instead. In this case, the languages supported depend on the domain's [NLU provider](intent-builder-natural-language-understanding.html).
+* If the knowledge base uses *Domain* intents, the domain's language is used instead. In this case, the languages supported depend on the domain's [NLU provider](intent-manager-natural-language-understanding.html).
 * If the knowledge base uses *Knowledge Base* intents (a legacy feature), the knowledge base's language is used. In this case, only English and Spanish are supported.
 
 #### Working with special language characters

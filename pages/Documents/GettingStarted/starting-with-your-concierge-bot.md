@@ -70,7 +70,7 @@ Your bot can understand some messages from your customers out-of-the-box.  For e
 
 You can update the dialog starters for each of the dialogs in this bot in the same way.
 
-TIP: You can use <a  href="/intent-builder-overview.html" alt="Intent builder"> Intent Builder</a> to further improve your bot’s ability to accurately understand and respond to customers. 
+TIP: You can use [Intent Manager](intent-manager-overview.html) to further improve your bot’s ability to accurately understand and respond to customers. 
 
 #### Complete the ‘Contact’ dialog 
 
@@ -104,7 +104,7 @@ Your Concierge Bot’s ‘Contact’ dialog allows it to gather information from
                 </a>
               </div>
               <div class="link-padding" >
-                <a  target="_blank" href="/intent-builder-intents.html"> 
+                <a  target="_blank" href="/intent-manager-key-terms-concepts.html#intents"> 
                     <img class="dots-container" src="img/four-dots.svg"/>
                        Get started with Intents
                 </a>

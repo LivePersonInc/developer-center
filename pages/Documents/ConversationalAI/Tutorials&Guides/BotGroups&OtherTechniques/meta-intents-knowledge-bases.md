@@ -18,7 +18,7 @@ A meta intent is a wrapper for a grouping of related intents.
 
 <img style="width:500px" src="img/ConvoBuilder/advtutorial/meta_intents_diagram.png">
 
-Using meta intents, you can funnel a variety of intents into a single dialog for processing. A meta intent can have many standard intents, and standard intents can belong to one meta intent. Another way to think about this relationship is as a parent-children model, with the meta intent being the parent and all its standard intents as its children. Additional information about meta intents can be found [here](intent-builder-meta-intents.html).
+Using meta intents, you can funnel a variety of intents into a single dialog for processing. A meta intent can have many standard intents, and standard intents can belong to one meta intent. Another way to think about this relationship is as a parent-children model, with the meta intent being the parent and all its standard intents as its children. Additional information about meta intents can be found [here](intent-manager-key-terms-concepts.html#meta-intents).
 
 1. From the **Conversational AI** section of the Conversational Cloud, navigate to **Intent Builder**, and select the "LP_Cross-vertical" domain.
 2. Create a meta intent by selecting **Add Intent** and completing with the following:

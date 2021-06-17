@@ -83,7 +83,7 @@ This is LivePerson's high-performing NLU engine. Key characteristics include:
 * Provides fast response times and accuracy.
 * To perform effectively, expects large sets of data (both intents and training phrases).
 * The performance of a model depends on both the quantitative and qualitative nature of the training data. Therefore, we require a minimum of **5 intents** with **20 training phrases per intent** to activate training for a model in the Intent Builder. Anything less adversely affects model performance.
-* Requires the model to be [trained](intent-builder-domains.html#train-a-liveperson-domain).
+* Requires the model to be [trained](intent-manager-build-domains.html#train-a-liveperson-domain).
 
 {: .important}
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from the change. No additional tuning is required; simply retrain the domain as is.
@@ -95,8 +95,8 @@ There are significant benefits to using the LivePerson engine instead of the Liv
 * Benefits from continuing investments. Check the roadmap for upcoming features, for example, support for additional languages.
 * Performs faster and scales better. The LivePerson engine's average response time is approximately 200 milliseconds per prediction, and performance is good and consistent regardless of the number of intents involved. In contrast, the LivePerson (Legacy) engine's average response time is typically above 1 second, and the response time increases linearly with the number of intents involved. With many intents and many training phrases, a response time of 4-5 seconds is common.
 * Provides better accuracy and yields no ambiguity in predictions. A properly trained domain using the LivePerson engine doesn't emit ambiguous results. In contrast, with a domain using LivePerson (Legacy), multiple intents in a domain can have a good match, so ambiguity must be handled in the bot.
-* Supports [prebuilt domains](intent-builder-overview.html#prebuilt-domains) to get you up and running quickly, and [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
-* Makes available an advanced [Model Tester](intent-builder-testing-advanced-model-testing.html) for improving domain quality over time.
+* Supports [prebuilt domains](intent-manager-key-terms-concepts.html#pre-built-domains) to get you up and running quickly, and [Regular Expression entities](intent-manager-key-terms-concepts.html#entities).
+* Makes available an advanced [Model Tester](intent-manager-build-test-with-the-model-tester.html) for improving domain quality over time.
 * Is widely used with [Intent Analyzer](intent-analyzer-overview.html). In fact, Intent Analyzer itself uses the LivePerson engine. Therefore, domains using the LivePerson engine can be tuned easily using the data gleaned from Intent Analyzer. You cannot use Intent Analyzer with domains using the LivePerson (Legacy) engine.
 
 #### LivePerson (Legacy)
@@ -104,7 +104,7 @@ There are significant benefits to using the LivePerson engine instead of the Liv
 This is LivePerson's legacy NLU engine. 
 
 {: .important}
-As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
+As of March 5, 2021, you can't create new domains using the LivePerson (Legacy) engine. Brands with existing domains using this engine are encouraged to [migrate to the LivePerson engine](intent-manager-build-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021. See above for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 Key characteristics include:
 
@@ -124,7 +124,7 @@ Key characteristics include:
 
 ### Variances in matched intents with LivePerson NLU
 
-When using LivePerson tools ([Model Tester](intent-builder-testing-advanced-model-testing.html), [Single Utterance Tester](intent-builder-testing-single-utterance-testing.html)) to improve intent classification results, on occasion you might notice a small number of changes in the matched intents for the test set/test phrase after retraining with no additional training samples. There are a number of contributing factors for this observed variance. Some factors are the by-product of the training algorithm, while others can be tackled by changes to the taxonomy of intents or to the training phrases.
+When using LivePerson tools ([Model Tester](intent-manager-build-test-with-the-model-tester.html), [Single Utterance Tester](intent-manager-build-test-a-single-utterance.html)) to improve intent classification results, on occasion you might notice a small number of changes in the matched intents for the test set/test phrase after retraining with no additional training samples. There are a number of contributing factors for this observed variance. Some factors are the by-product of the training algorithm, while others can be tackled by changes to the taxonomy of intents or to the training phrases.
 
 #### Randomness in deep learning 
 LivePerson's NLU utilizes the latest, deep learning technology to achieve the best intent classification performance. Randomness is baked into the training of deep learning models to facilitate the exploration of optimal solutions. The cost of such explorations is that no two models trained on the same dataset yield perfectly identical results. Our repeated tests have shown that despite the potential variance in the matched intents, the overall performance of our models stays stable. In other words, after retraining with the same dataset, what you might lose in one intent is usually recovered by some improvement in others.
@@ -151,7 +151,7 @@ All these factors directly influence the intent matching after retraining. There
 
 #### 3rd-party NLU limitations
 
-- Doesn't support [prebuilt domains](intent-builder-overview.html#prebuilt-domains) or [Regular Expression entities](intent-builder-entities.html#regular-expression-entities).
+- Doesn't support [prebuilt domains](intent-manager-key-terms-concepts.html#pre-built-domains) or [Regular Expression entities](intent-manager-key-terms-concepts.html#entities).
 - The length of the domain name should not exceed 64 characters. (Watson limitation)
 - A domain can only support one language, which is specified on the Domain Settings page.
 - LivePerson does not support "pulling" into Intent Builder existing models that have been trained in IBM Watson or Google Dialogflow. Only model "push" is supported; this is accomplished by training the model in Intent Builder.
@@ -162,7 +162,7 @@ Contact your LivePerson account administrator to enable your account for 3rd-par
 
 #### Step 2: Sign up and get the API keys
 
-Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow service credentials. When you [train](intent-builder-domains.html#train-a-3rd-party-nlu-domain) the intents in a domain for the first time in Intent Builder, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
+Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow service credentials. When you [train](intent-manager-build-domains.html#train-a-3rd-party-nlu-domain) the intents in a domain for the first time in Intent Builder, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
 
 <img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
 
@@ -197,12 +197,12 @@ Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow s
 
 #### Step 3: Add a domain for the 3rd-party NLU provider
 
-In Intent Builder, [add a domain](intent-builder-domains.html) that uses the 3rd-party NLU engine as its NLU provider. You can import the intents and entities at that time or add them later but before proceeding to step 5.
+In Intent Builder, [add a domain](intent-manager-build-domains.html) that uses the 3rd-party NLU engine as its NLU provider. You can import the intents and entities at that time or add them later but before proceeding to step 5.
 
 #### Step 4: Create the NLU provider credentials
 
-In Intent Builder, in the domain that you created in the previous step, [create the NLU provider credentials](intent-builder-domains.html#create-a-3rd-party-nlu-provider-credential) for the 3rd-party NLU engine. This is when you'll copy and paste in the credentials that you downloaded from IBM Watson or Google Dialog flow (step 2 above).
+In Intent Builder, in the domain that you created in the previous step, [create the NLU provider credentials](intent-manager-build-domains.html#create-a-3rd-party-nlu-provider-credential) for the 3rd-party NLU engine. This is when you'll copy and paste in the credentials that you downloaded from IBM Watson or Google Dialog flow (step 2 above).
 
 #### Step 5: Train the domain
 
-In Intent Builder, [train the domain](intent-builder-domains.html#train-a-3rd-party-nlu-domain). Once training is completed (which creates the model version), you can start to [test](intent-builder-testing-single-utterance-testing.html).
+In Intent Builder, [train the domain](intent-manager-build-domains.html#train-a-3rd-party-nlu-domain). Once training is completed (which creates the model version), you can start to [test](intent-manager-build-test-a-single-utterance.html).

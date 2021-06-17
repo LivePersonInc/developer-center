@@ -19,7 +19,7 @@ If your domain is using the LivePerson engine or a 3rd-party NLU engine, there's
 
 The Model Tester is designed to help you to determine if the model is improving or regressing from one version to the next as you train the intents in the domain.
 
-If you need to [test a single utterance](intent-builder-testing-single-utterance-testing.html) against an intent or the domain, use the **Test User Input** tool. But for broad testing coverage of the intents in the domain, use the **Model Tester** if it's available.
+If you need to [test a single utterance](intent-manager-build-test-a-single-utterance.html) against an intent or the domain, use the **Test User Input** tool. But for broad testing coverage of the intents in the domain, use the **Model Tester** if it's available.
 
 ### High-level workflow
 
@@ -45,7 +45,7 @@ In a domain, there are several ways to add phrases to the Model Tester’s test 
 
 * Click **Model Tester** in the upper-left corner, and enter the phrases manually on the **Test Set** tab.
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase1.png">
-* In **Test User Input** (where [single-phrase testing](intent-builder-testing-single-utterance-testing.html) is performed), click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
+* In **Test User Input** (where [single-phrase testing](intent-manager-build-test-a-single-utterance.html) is performed), click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase2.png">
 * In an intent’s details, click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to a training phrase.
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_model_tester_addphrase3.png">
@@ -126,7 +126,7 @@ There are several, important metrics displayed:
 ### Evaluate the report
 
 {: .important}
-On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-builder-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu).
+On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-manager-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu).
 
 If the report's scores are low, take corrective action as follows:
 

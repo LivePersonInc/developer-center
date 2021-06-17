@@ -30,7 +30,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 2. Click **Intent Builder**.
 
-    Intent Builder is where you create domains, which are collections of intents and entities. You can learn about Intent Builder [here](intent-builder-overview.html).
+    Intent Manager is where you create domains, which are collections of intents and entities. You can learn about Intent Manager [here](intent-manager-overview.html).
 
     Now let’s create a domain.
 

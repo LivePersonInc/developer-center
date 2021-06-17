@@ -9,4 +9,30 @@ permalink: intent-manager-key-terms-concepts.html
 indicator: both
 ---
 
-To be added
+### Key terms
+
+### Key concepts
+
+#### Intents
+
+##### Intent versus non-intent example
+
+##### Why use intents?
+
+#### Confidence score and threshold
+
+#### Meta intents
+
+#### Entities
+
+##### Value Set entities
+
+##### Regular Expression entities
+
+##### Built-in entities
+
+#### Domains
+
+#### Pre-built domains
+
+#### Training

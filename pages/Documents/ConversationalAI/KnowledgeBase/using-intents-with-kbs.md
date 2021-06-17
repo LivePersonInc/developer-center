@@ -14,10 +14,10 @@ indicator: both
 
 If your knowledge base is an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html) (which also uses LivePerson AI), it makes use of Natural Language Understanding or NLU to evaluate the articles against the consumer's utterance (the intent) in order to return the highest scoring article.
 
-To set this up, you create a domain with the necessary intents in [Intent Builder](intent-builder-overview.html), where the domain specifies the [NLU engine](intent-builder-natural-language-understanding.html) to use. Then, within the Knowledge Base application, you 1) associate the domain with the knowledge base, 2) associate the domain's intents with the articles, and 3) train the knowledge base to use the intents to return the articles.
+To set this up, you create a domain with the necessary intents in [Intent Manager](intent-manager-overview.html), where the domain specifies the [NLU engine](intent-manager-natural-language-understanding.html) to use. Then, within the Knowledge Base application, you 1) associate the domain with the knowledge base, 2) associate the domain's intents with the articles, and 3) train the knowledge base to use the intents to return the articles.
 
 {: .important}
-Intent Builder offers a set of [pre-built domains](intent-builder-overview.html#prebuilt-domains). These are designed to get you up and running quickly with intents.
+Intent Manager offers a set of [pre-built domains](intent-manager-key-terms-concepts.html#pre-built-domains). These are designed to get you up and running quickly with intents.
 
 ### Associate a domain with a knowledge base
 
@@ -110,6 +110,6 @@ When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to 
 | an internal knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
 | an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson (Legacy) is used |
 
-For these confidence score breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
+For these confidence score breakdowns, see [here](intent-manager-key-terms-concepts.html#confidence-score-and-threshold).
 
 When you implement a knowledge base search within a bot via a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions), you specify the minimum score that a result must have in order to be returned. You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.

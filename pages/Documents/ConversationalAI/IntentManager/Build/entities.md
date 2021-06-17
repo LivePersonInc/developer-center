@@ -14,98 +14,7 @@ indicator: both
 
 ### What's an entity?
 
-Entities are keywords or expressions that represent groups of items. For example, an entity named `SIZE` might represent the following values: small, medium, and large. 
-
-Entities facilitate the creation and curation of training phrases. Using entities helps you to extend your training phrases like a "template" and prevents your model from focusing too much on certain words during training.
-
-In a conversation, when a bot detects an entity value in a consumer's utterance, the bot invokes the associated entity, substituting it into the utterance before determining the consumer's intent. Therefore, you can use entities in two places:
-
-* Training phrases for intents defined in [Intent Builder](intent-builder-overview.html) 
-* Intent qualifiers for articles defined in [Knowledge Base](knowledge-base-overview.html)
-
-There are three types of entities:
-
-* Value Set entities
-* Regular Expression entities
-* Built-in entities
-
-### Types of entities
-
-#### Value Set entities
-
-As their name suggests, Value Set entities are those that have a defined set of values. For example, the entity `SPORTS` might have the following values in its value set:
-* football
-* running
-* walking
-
-<img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_entitiesValueSet.png">
-
-Whenever the user's utterance contains one of these entity values (e.g., "I'm interested in running"), the bot detects this, invokes the `SPORTS` entity, and substitutes it into the utterance before determining the consumer's intent. This means, when you add training phrases for the intent, instead of adding these...
-
-* "I'm interested in football"
-* "I'm interested in running"
-* "I'm interested in walking"
-
-...you can add a single training phrase that uses the `SPORTS` entity:
-
-* "I'm interested in `SPORTS`"
-
-All three utterances above invoke this intent.
-
-The values for Value Set entities are usually one or two words, as they represent groups of simple objects.
-
-#### Regular Expression entities
-
-Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression](https://www.regexlib.com/) rules. As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b` , which is a 6-digit number.
-
-<img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_entitiesRegEx.png">
-
-Whenever the consumer's utterance contains an expression that conforms to the entity's regular expression (e.g., "I want to check on my order 757575"), the bot detects this, invokes the `ORDER_NO` entity, and substitutes it into the utterance before determining the consumer's intent. In this way, a Regular Expression entity works like a Value Set entity.
-
-Use a Regular Expression entity in situations where the entity's possible values all conform to a specific pattern, and that list of values is so long that it makes use of a Value Set entity unfeasible. Some use cases include:
-
-* Flight numbers
-* Order numbers
-* Help Desk ticket numbers
-
-Continuing our `ORDER_NO` example, you might use the entity in the training phrases for an "order status" intent, like so:
-
-* "I want to check on my order `ORDER_NO`"
-* "What's the status of order `ORDER_NO`"
-
-{: .important}
-Regular Expression entities are available only in domains using the [LivePerson engine](intent-builder-natural-language-understanding.html#livepersons-nlu-engine) for NLU.
-
-#### Built-in entities
-
-The platform automatically detects the entities listed below: 
-
-* PERSON - Names of people, persons
-
-* ORGANIZATION - Names of institutions
-
-* NUMBER - Numbers in a sentence (pure number)
-
-* MONEY -  Numbers with currency ($2000)
-
-* DURATION - Time periods
-
-* SET - Group (example month, week)
-
-* ORDINAL - A number used in the context of order. 15th, 10th, etc., are examples.
-
-* DATE - Date-related. Today, Tomorrow or explicit dates such as 03/01/2017
-
-Using the [Assist](conversation-builder-assist.html) tool, you can assign these built-in entities to user interactions and have the bot populate a [slot](conversation-builder-conversation-builder-variables-slots.html#slots) with the user's input to the question to which the entity was assigned.
-
-### How entities affect the NLU score - LivePerson (Legacy) engine only
-
-When using the LivePerson (Legacy) engine, the more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
-
-You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.
-
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test1.png">
-<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test2.png">
+For an explanation of an entity, see [here](intent-manager-key-terms-concepts.html#entities).
 
 ### Add a Value Set entity
 
@@ -125,7 +34,7 @@ You can see from the example below, that having 2 entities match the training ph
 ### Add a Regular Expression entity
 
 {: .important}
-Regular Expression entities are available only in domains using the [LivePerson engine](intent-builder-natural-language-understanding.html#livepersons-nlu-engine) for NLU.
+Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding.html#livepersons-nlu-engine) for NLU.
 
 **To add a Regular Expression entity**
 
@@ -210,3 +119,12 @@ Before you delete an entity, ensure that it isn't being used in any intents or K
 4. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
 5. In the confirmation dialog, click **Yes**.
 6. Train the domain so that the deletion is reflected in a new model version.
+
+### How entities affect the NLU score - LivePerson (Legacy) engine only
+
+When using the LivePerson (Legacy) engine, the more entities in a training phrase that match, the higher the score. This can be a powerful way to increase your matching accuracy, but if overused, can lead to a lot of false positives.
+
+You can see from the example below, that having 2 entities match the training phrases causes a 30% jump in score from the single entity matches. So use them for the key elements of your intent, but don’t overuse.
+
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test1.png">
+<img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_entities_test2.png">
