@@ -267,25 +267,30 @@
         subpages:
           - subpagename: Overview
           - subpagename: Methods
-  - documentname: Intent Builder
+  - documentname: Intent Manager
     pages:
       - pagename: Overview
+      - pagename: Key Terms & Concepts
+      - pagename: Dashboard
       - pagename: Natural Language Understanding
-      - pagename: Domains
-      - pagename: Intents
-      - pagename: Meta Intents
-      - pagename: Entities
-      - pagename: Testing
+      - pagename: Getting Started
+      - pagename: Discover
+      - pagename: Build
         subpages:
-         - subpagename: Single Utterance Testing
-         - subpagename: Advanced Model Testing
+          - subpagename: Domains
+          - subpagename: Intents
+          - subpagename: Meta Intents
+          - subpagename: Entities
+          - subpagename: Test a Single Utterance
+          - subpagename: Test with the Model Tester
+      - pagename: Optimize
+      - pagename: Analyze
+      - pagename: Best Practices
+      - pagename: FAQs
       - pagename: External APIs
         subpages:
-         - subpagename: Getting Started
-         - subpagename: Model Tester External APIs
-  - documentname: Intent Analyzer
-    pages:
-      - pagename: Overview
+          - subpagename: Getting Started
+          - subpagename: Model Tester External APIs
   - documentname: Knowledge Base
     pages:
       - pagename: Overview

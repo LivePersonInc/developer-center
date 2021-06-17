@@ -1,11 +1,13 @@
 ---
 pagename: Meta Intents
 redirect_from:
+    - intent-builder-meta-intents.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Intent Builder
-permalink: intent-builder-meta-intents.html
+documentname: Intent Manager
+subfoldername: Build
+permalink: intent-manager-build-meta-intents.html
 indicator: both
 ---
 

@@ -1,11 +1,13 @@
 ---
 pagename: Intents
 redirect_from:
+    - intent-builder-intents.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Intent Builder
-permalink: intent-builder-intents.html
+documentname: Intent Manager
+subfoldername: Build
+permalink: intent-manager-build-intents.html
 indicator: both
 ---
 

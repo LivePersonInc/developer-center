@@ -2,11 +2,12 @@
 pagename: Overview
 redirect_from:
     - conversation-builder-intent-builder-overview.html
+    - intent-builder-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Intent Builder
-permalink: intent-builder-overview.html
+documentname: Intent Manager
+permalink: intent-manager-overview.html
 indicator: both
 ---
 

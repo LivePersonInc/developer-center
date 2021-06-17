@@ -1,12 +1,13 @@
 ---
-pagename: Advanced Model Testing
+pagename: Test with the Model Tester
 redirect_from:
+    - intent-builder-testing-advanced-model-testing.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Intent Builder
-subfoldername: Testing
-permalink: intent-builder-testing-advanced-model-testing.html
+documentname: Intent Manager
+subfoldername: Build
+permalink: intent-manager-build-test-with-the-model-tester.html
 indicator: both
 ---
 

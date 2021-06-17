@@ -2,11 +2,13 @@
 pagename: Entities
 redirect_from:
     - conversation-builder-intent-builder-entities.html
+    - intent-builder-entities.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Intent Builder
-permalink: intent-builder-entities.html
+documentname: Intent Manager
+subfoldername: Build
+permalink: intent-manager-build-entities.html
 indicator: both
 ---
 

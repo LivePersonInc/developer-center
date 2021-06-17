@@ -1,12 +1,13 @@
 ---
-pagename: Single Utterance Testing
+pagename: Test a Single Utterance
 redirect_from:
+    - intent-builder-testing-single-utterance-testing.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Intent Builder
-subfoldername: Testing
-permalink: intent-builder-testing-single-utterance-testing.html
+documentname: Intent Manager
+subfoldername: Build
+permalink: intent-manager-build-test-a-single-utterance.html
 indicator: both
 ---
 

@@ -4,11 +4,12 @@ redirect_from:
     - conversation-builder-intent-builder-nlu-engines.html
     - conversational-ai-platform-natural-language-understanding-nlu-engines.html
     - conversational-ai-natural-language-understanding-nlu-engines.html
+    - intent-builder-natural-language-understanding.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Intent Builder
-permalink: intent-builder-natural-language-understanding.html
+documentname: Intent Manager
+permalink: intent-manager-natural-language-understanding.html
 indicator: both
 ---
 
