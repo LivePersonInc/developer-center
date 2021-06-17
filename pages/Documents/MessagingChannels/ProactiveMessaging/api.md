@@ -444,7 +444,7 @@ It depends on the channel. Messaging Channel providers like WhatsApp have certai
 Messages are sent at a rate upto 10 messages per second per channel per account. For example, a campaign is created for an SMS channel using the default receiving window for 100 recipients. Some of these recipients have phone numbers from regions belonging to PST, CST, EST time zones. Once a campaign is submitted/published, based on the phone number, a zone is computed (number with +1 - (201) is found to be in EST). Using the specified receiving window, a decision is made to send a message to the phone number if current time in that zone is within the window. If the recipient receiving window is closed then a message will be sent on the next opening of the window.
 
 <strong>How will batching capability work?</strong>
-A single campaign can have more than 1 recipient and not more than 1000 recipients. It is recommended to batch recipients in a campaign.
+A single campaign can have from 1 recipient and not more than 100 recipients. It is recommended to batch recipients in a campaign.
 
 <strong>What are the error codes for invalid recipients information in the campaign?</strong>
 Consider an example response of campaigns API:

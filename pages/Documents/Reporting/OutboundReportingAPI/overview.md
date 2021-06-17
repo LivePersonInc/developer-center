@@ -46,7 +46,6 @@ Outbound Reporting API provides the following data fields. This table explains t
 | 7 | Responded / Conversations Created | Total messages successfully responded by consumers and conversations created. |
 | 8 | Conversations Closed | Total closed conversations. |
 | 9 | Errors | Total failures occurred in delivering the messages. |
-| 10 | Opt out | Total consumers who opted out to receive any future messages from the brand. |
 | 11 | Skipped | Total consumers were not sent messages/deflection by the system since they opted out to receive any messages from the brand. |
 | 12 | CSAT | Average consumer satisfaction survey rating score |
 
@@ -133,12 +132,10 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
      "attempted": 0,
      "eligible": 0,
      "skipped": 0,
-     "optOuts": 0,
      "sent": 0,
      "failed": 0,
      "delivered": 0,
      "read": 0,
-     "optIns": 0,
      "conversationsCreated": 0,
      "conversationsClosed": 0,
      "csat": 0
@@ -219,12 +216,10 @@ Click [**Account**](https://proactive-messaging.z1.fs.liveperson.com/api/api-doc
       "attempted": 0,
       "eligible": 0,
       "skipped": 0,
-      "optOuts": 0,
       "sent": 0,
       "failed": 0,
       "delivered": 0,
       "read": 0,
-      "optIns": 0,
       "conversationsCreated": 0,
       "conversationsClosed": 0,
       "csat": 0
@@ -340,12 +335,10 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
      "attempted": 0,
      "eligible": 0,
      "skipped": 0,
-     "optOuts": 0,
      "sent": 0,
      "failed": 0,
      "delivered": 0,
      "read": 0,
-     "optIns": 0,
      "conversationsCreated": 0,
      "conversationsClosed": 0,
      "csat": 0
@@ -436,8 +429,6 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
      "errorSource": "TWILIO",
      "failedTime": "2020-08-26T21:08:12.198Z",
      "inviteTime": "2020-08-26T21:08:12.198Z",
-     "optInsTime": "2020-08-26T21:08:12.198Z",
-     "optOutsTime": "2020-08-26T21:08:12.198Z",
      "readTime": "2020-08-26T21:08:12.198Z",
      "sentTime": "2020-08-26T21:08:12.198Z"
    }

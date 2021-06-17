@@ -11,7 +11,7 @@ indicator: Messaging
 
 ### Introduction
 
-A Meaningful Automated Conversation Score (MACS) is a measure of the quality of a bot conversation. Every closed bot conversation is classified with MACS 1, 2, or 3 where:
+A Meaningful Automated Conversation Score (MACS) is a measure of the quality of a bot conversation. Every closed bot conversation is classified with MACS 1, 2, or 3 as follows:
 
 | Score | Icon | Description |
 | --- | --- | --- |

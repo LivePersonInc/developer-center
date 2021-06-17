@@ -1006,6 +1006,7 @@
   - documentname: Proactive Messaging
     pages:
     - pagename: API
+    - pagename: CHANGELOG
   - documentname: Connect To Messaging
     pages:
     - pagename: API
