@@ -22,11 +22,9 @@ LivePerson's Conversational AI is a suite of integrated applications that work t
 
 - [Conversation Builder](conversation-builder-bot-workspace.html) is the primary application that allows you to design and build bots. Leveraging all of the other applications, this is where the user configures and designs conversational flows, API integrations, etc.
 
-- [Intent Manager](intent-manager-overview.html) is for building intents and entities that Conversation Builder uses to more accurately match consumer responses.
+- [Intent Manager](intent-manager-overview.html) is for building intents and entities that Conversation Builder uses to more accurately match consumer responses, and for tracking and maintaining intents in real-time.
 
 - [Knowledge Base](conversation-builder-knowledge-base.html) stores articles of information that can be accessed by bots in Conversation Builder.
-
-- [Intent Analyzer](https://knowledge.liveperson.com/ai-bots-automation-intent-analyzer-overview.html) is your hub for tracking and maintaining intents in real-time.
 
 - [Bots Status](bots-status-overview.html) lets you monitor and manage your deployed bots.
 

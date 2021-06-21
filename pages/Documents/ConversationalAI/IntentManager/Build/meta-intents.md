@@ -31,7 +31,7 @@ As meta intents are a grouping of related intents, you'll need to create at leas
 
 Meta intents are not trained directly, as they are dependent on the intents contained within to be triggered. Continuing to train and tune your intents as you normally do will improve the scoring of your meta intent. Please see [this section](intent-manager-best-practices.html) for best practices when training intents. 
 
-To test user utterances against your intents and meta intents, use the debug tool provided in the lower-right corner of Intent Builder. Select the ‘Search in domain’ checkbox, and select ‘All’ from the search dropdown. Testing user input will now display search results for both intents and meta intents, which should result in identical scoring for the intent matched and the meta intent it belongs to.
+To test user utterances against your intents and meta intents, use the **Test User Input** tool provided in the "Build" area of Intent Manager. Select the ‘Search in domain’ checkbox, and select ‘All’ from the search dropdown. Testing user input will now display search results for both intents and meta intents, which should result in identical scoring for the intent matched and the meta intent it belongs to.
 
 <img style="width:500px" src="img/ConvoBuilder/meta_intent3.png">
 

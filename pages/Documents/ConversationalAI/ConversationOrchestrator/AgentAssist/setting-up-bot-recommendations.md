@@ -27,7 +27,7 @@ If you are building your bots using Conversation Builder, you must be able to us
 * Create a bot
 * Deploy a bot
 
-If, for utterance matching, you’ll be using intents instead of patterns, you must be able to use Intent Builder to:
+If, for utterance matching, you’ll be using intents instead of patterns, you must be able to use Intent Manager to:
 * Create a domain
 * Create an intent
 

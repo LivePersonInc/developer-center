@@ -28,7 +28,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 1. In the upper-left corner, click **< Back** twice. This returns you to the Conversational AI dashboard.
 
-2. Click **Intent Builder**.
+2. Click **Intent Manager**.
 
     Intent Manager is where you create domains, which are collections of intents and entities. You can learn about Intent Manager [here](intent-manager-overview.html).
 

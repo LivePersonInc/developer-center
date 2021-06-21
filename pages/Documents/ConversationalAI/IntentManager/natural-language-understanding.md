@@ -13,16 +13,16 @@ permalink: intent-manager-natural-language-understanding.html
 indicator: both
 ---
 
-One of the essential tools of Conversational AI is Natural Language Understanding (NLU). This is what allows Intent Builder to analyze consumer input and assign accurate intents.
+One of the essential tools of Conversational AI is Natural Language Understanding (NLU). This is what allows Intent Manager to analyze consumer input and assign accurate intents.
 
-While LivePerson provides its own proprietary NLU out of the box, Intent Builder also allows you to choose your preferred NLU engine for analyzing text by routing all NLU analysis and training through an API. This API layer of abstraction means you can choose from the following NLU engines:
+While LivePerson provides its own proprietary NLU out of the box, Intent Manager also allows you to choose your preferred NLU engine for analyzing text by routing all NLU analysis and training through an API. This API layer of abstraction means you can choose from the following NLU engines:
 
 - LivePerson's native NLU
 - Google Dialogflow
 - IBM Watson
 
 {: .important}
-If you choose LivePerson's native NLU, no setup work needs to be done to connect the NLU engine to your domain in Intent Builder. Third-party providers require an additional setup process that's outlined farther below on this page.
+If you choose LivePerson's native NLU, no setup work needs to be done to connect the NLU engine to your domain in Intent Manager. Third-party providers require an additional setup process that's outlined farther below on this page.
 
 ### Language support
 
@@ -82,7 +82,7 @@ This is LivePerson's high-performing NLU engine. Key characteristics include:
 * A scalable solution that's capable of handling a large volume of requests.
 * Provides fast response times and accuracy.
 * To perform effectively, expects large sets of data (both intents and training phrases).
-* The performance of a model depends on both the quantitative and qualitative nature of the training data. Therefore, we require a minimum of **5 intents** with **20 training phrases per intent** to activate training for a model in the Intent Builder. Anything less adversely affects model performance.
+* The performance of a model depends on both the quantitative and qualitative nature of the training data. Therefore, we require a minimum of **5 intents** with **20 training phrases per intent** to activate training for a model in the Intent Manager. Anything less adversely affects model performance.
 * Requires the model to be [trained](intent-manager-build-domains.html#train-a-liveperson-domain).
 
 {: .important}
@@ -154,7 +154,7 @@ All these factors directly influence the intent matching after retraining. There
 - Doesn't support [prebuilt domains](intent-manager-key-terms-concepts.html#pre-built-domains) or [Regular Expression entities](intent-manager-key-terms-concepts.html#entities).
 - The length of the domain name should not exceed 64 characters. (Watson limitation)
 - A domain can only support one language, which is specified on the Domain Settings page.
-- LivePerson does not support "pulling" into Intent Builder existing models that have been trained in IBM Watson or Google Dialogflow. Only model "push" is supported; this is accomplished by training the model in Intent Builder.
+- LivePerson does not support "pulling" into Intent Manager existing models that have been trained in IBM Watson or Google Dialogflow. Only model "push" is supported; this is accomplished by training the model in Intent Manager.
 
 #### Step 1: Enable 3rd-party NLU support
 
@@ -162,7 +162,7 @@ Contact your LivePerson account administrator to enable your account for 3rd-par
 
 #### Step 2: Sign up and get the API keys
 
-Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow service credentials. When you [train](intent-manager-build-domains.html#train-a-3rd-party-nlu-domain) the intents in a domain for the first time in Intent Builder, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
+Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow service credentials. When you [train](intent-manager-build-domains.html#train-a-3rd-party-nlu-domain) the intents in a domain for the first time in Intent Manager, you'll use the first set of credentials. Those credentials will then be active for the first model version that gets created. *Since only one set of credentials can be active at a time*, you'll need to use the second set of credentials the second time you train. And with each subsequent training, you'll need to alternate back and forth between the credentials.
 
 <img class="fancyimage" style="width:450px" src="img/ConvoBuilder/3rdpartyNLU_serviceCreds.png">
 
@@ -197,12 +197,12 @@ Repeat this step twice to create *two* sets of IBM Watson or Google DialogFlow s
 
 #### Step 3: Add a domain for the 3rd-party NLU provider
 
-In Intent Builder, [add a domain](intent-manager-build-domains.html) that uses the 3rd-party NLU engine as its NLU provider. You can import the intents and entities at that time or add them later but before proceeding to step 5.
+In Intent Manager, [add a domain](intent-manager-build-domains.html) that uses the 3rd-party NLU engine as its NLU provider. You can import the intents and entities at that time or add them later but before proceeding to step 5.
 
 #### Step 4: Create the NLU provider credentials
 
-In Intent Builder, in the domain that you created in the previous step, [create the NLU provider credentials](intent-manager-build-domains.html#create-a-3rd-party-nlu-provider-credential) for the 3rd-party NLU engine. This is when you'll copy and paste in the credentials that you downloaded from IBM Watson or Google Dialog flow (step 2 above).
+In Intent Manager, in the domain that you created in the previous step, [create the NLU provider credentials](intent-manager-build-domains.html#create-a-3rd-party-nlu-provider-credential) for the 3rd-party NLU engine. This is when you'll copy and paste in the credentials that you downloaded from IBM Watson or Google Dialog flow (step 2 above).
 
 #### Step 5: Train the domain
 
-In Intent Builder, [train the domain](intent-manager-build-domains.html#train-a-3rd-party-nlu-domain). Once training is completed (which creates the model version), you can start to [test](intent-manager-build-test-a-single-utterance.html).
+In Intent Manager, [train the domain](intent-manager-build-domains.html#train-a-3rd-party-nlu-domain). Once training is completed (which creates the model version), you can start to [test](intent-manager-build-test-a-single-utterance.html).

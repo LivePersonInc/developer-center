@@ -46,7 +46,7 @@ Regular Expression entities are available only in domains using the [LivePerson 
     * **Description**: Enter a short phrase describing the entity. While this field is optional, it's often useful. Many entity names can be technical. A description adds clarity and is particularly helpful to a person not familiar with the domain.
     * **Entity Type**: Select "Regular Expression."
     * **Regular Expression**: Enter the regular expression. All standard [RegEx rules](https://www.regexlib.com/) apply.
-    * **Sample Values**: Enter five (5) example values that conform to the regular expression. These values aren't used during entity detection; they're used during domain training to improve the model's performance with respect to intent matching. Within Intent Builder, the sample values also serve as easy-to-read examples of the regular expression, making the expression more understandable at a glance.
+    * **Sample Values**: Enter five (5) example values that conform to the regular expression. These values aren't used during entity detection; they're used during domain training to improve the model's performance with respect to intent matching. Within Intent Manager, the sample values also serve as easy-to-read examples of the regular expression, making the expression more understandable at a glance.
 
         Start with five (5) sample values. If your results aren't as expected, you can add more and then retrain. 
 5. Click **Save**.
@@ -80,7 +80,7 @@ if (toppingObjects != null && toppingObjects.length > 0) {
 
 Sometimes you will want an entity match to return a value, say for sending to an API. For example, if you have an entity for "color" with values like red, blue, green, yellow, black but your API is expecting a numeric data values like red: 10, blue: 11, green: 12, yellow: 13, black: 14 how would you create this mapping?
 
-In the Intent Builder, when creating your entities, you can provide data with additional values by adding a "~" between the phrase and the data value like this: red~10, blue~11, etc. When calling the entity you would use the following to get the data value:
+In the Intent Manager, when creating your entities, you can provide data with additional values by adding a "~" between the phrase and the data value like this: red~10, blue~11, etc. When calling the entity you would use the following to get the data value:
 
 ```javascript
 var color = botContext.getNamedEntities('colors');

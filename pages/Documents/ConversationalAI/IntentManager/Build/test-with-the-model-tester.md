@@ -132,7 +132,7 @@ If the report's scores are low, take corrective action as follows:
 
 **Low Test Coverage**: This indicates that many intents in the domain aren't represented in the test set. To improve the test coverage:
 
-* In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you use actual data to enrich your training set. You can find such data with [Intent Analyzer](intent-analyzer-overview.html).
+* In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you [use actual data](intent-manager-discover.html) to enrich your training set.
 * In the Intents list, delete any unused and irrelevant intents. In effect, clean the domain. This can often improve performance.
 
 **Low Success Rate**: This indicates that many test phrases failed the test because they either didn't match the expected intents, or they did so with low match ratings. Here below is an example of the latter:

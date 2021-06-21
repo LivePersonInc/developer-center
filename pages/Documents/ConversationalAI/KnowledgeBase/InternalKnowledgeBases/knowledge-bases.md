@@ -80,9 +80,9 @@ The import file can contain the subset of HTML that’s discussed [here](knowled
 
 ### Convert Knowledge Base intents to Domain intents
 
-When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Builder in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Builder.
+When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Manager in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Manager.
 
-From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the Knowledge Base application to the Intent Builder application.
+From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the Knowledge Base application to the Intent Manager application.
 
 {: .important}
 Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the affected knowledge base. Also, this action irreversibly modifies the domain that you select as described above.

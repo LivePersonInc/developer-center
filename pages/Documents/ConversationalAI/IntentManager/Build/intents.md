@@ -42,7 +42,7 @@ For some practice with intents, complete the [Getting Started with Bot Building]
 
 ### Generate training phrases
 
-Adding training phrases to an intent can sometimes be a challenge, so Intent Builder includes a tool to help with this. Within an intent, provide just a single training phrase as the input, and the tool automatically generates additional phrases that are similar in meaning. The suggestions are based on actual utterances by your users.
+Adding training phrases to an intent can sometimes be a challenge, so Intent Manager includes a tool to help with this. Within an intent, provide just a single training phrase as the input, and the tool automatically generates additional phrases that are similar in meaning. The suggestions are based on actual utterances by your users.
 
 Generating training phrases is useful when: 
 

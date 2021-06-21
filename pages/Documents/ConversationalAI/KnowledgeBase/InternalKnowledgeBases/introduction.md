@@ -37,7 +37,7 @@ When adding an internal knowledge base, follow this workflow:
 #### Domain intents
 When dealing with a knowledge base, an intent is the question that the consumer has ("What's your return policy?") or a problem the user needs to solve ("I can't remember my password."). 
 
-While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You define these alternate formats in Intent Builder, within an intent in a domain. Here, they're called "training phrases":
+While the article's title represents the intent of the article, you can also specify the intent using alternate formats. You define these alternate formats in Intent Manager, within an intent in a domain. Here, they're called "training phrases":
 
 <img style="width:300px" src="img/ConvoBuilder/kb_domain_intents1.png">
 
@@ -61,7 +61,7 @@ Domain intents make it possible for you to use the same domain in multiple ways,
 {: .important}
 As of March 5, 2021, you can no longer create a knowledge base that uses Knowledge Base intents.
 
-If you created your knowledge base before March 5, 2021, you might have chosen *not* to define the intents in a domain in Intent Builder. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
+If you created your knowledge base before March 5, 2021, you might have chosen *not* to define the intents in a domain in Intent Manager. Instead, you might have specified the intent's alternate formats directly within the article itself. In this case, these alternative formats are called "intent qualifiers":
 
 <img style="width:350px" src="img/ConvoBuilder/kb_kb_intents1.png">
 
