@@ -97,7 +97,7 @@ There are significant benefits to using the LivePerson engine instead of the Liv
 * Provides better accuracy and yields no ambiguity in predictions. A properly trained domain using the LivePerson engine doesn't emit ambiguous results. In contrast, with a domain using LivePerson (Legacy), multiple intents in a domain can have a good match, so ambiguity must be handled in the bot.
 * Supports [prebuilt domains](intent-manager-key-terms-concepts.html#pre-built-domains) to get you up and running quickly, and [Regular Expression entities](intent-manager-key-terms-concepts.html#entities).
 * Makes available an advanced [Model Tester](intent-manager-build-test-with-the-model-tester.html) for improving domain quality over time.
-* Is widely used with [Intent Analyzer](intent-analyzer-overview.html). In fact, Intent Analyzer itself uses the LivePerson engine. Therefore, domains using the LivePerson engine can be tuned easily using the data gleaned from Intent Analyzer. You cannot use Intent Analyzer with domains using the LivePerson (Legacy) engine.
+* Is widely used with Intent Manager's Intent Analyzer feature. In fact, Intent Analyzer itself uses the LivePerson engine. Therefore, domains using the LivePerson engine can be tuned easily using the data gleaned from Intent Analyzer. You cannot use Intent Analyzer with domains using the LivePerson (Legacy) engine.
 
 #### LivePerson (Legacy)
 

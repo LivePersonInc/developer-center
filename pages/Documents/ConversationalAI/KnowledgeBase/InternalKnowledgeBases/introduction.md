@@ -54,7 +54,7 @@ With Domain intents like these, you can use any of the following [NLU engines](i
 * LivePerson (Legacy)
 * A third-party NLU engine 
 
-Domain intents make it possible for you to use the same domain in multiple ways, i.e., in knowledge bases, bots, or other features like [Intent Analyzer](intent-analyzer-overview.html).
+Domain intents make it possible for you to use the same domain in multiple ways, i.e., in knowledge bases, bots, or other features like Intent Manager's [Intent Analyzer](intent-manager-overview.html).
 
 #### Knowledge Base intents
 

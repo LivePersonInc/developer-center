@@ -33,19 +33,25 @@ The general workflow for using the Model Tester is this:
 
 You can download test reports and comparison reports.
 
+### Access the Model Tester
+
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. From the domain list in the Intent Manager dashboard, select the domain that you want to test.
+3. Click **Build** in the menu in the upper-left corner, and then select **Model Tester** from the submenu.
+
 ### Add phrases to the test set
 In a domain, there are several ways to add phrases to the Model Tester’s test set:
 
-* Click **Model Tester** in the upper-left corner, and then click **Import Test Set** to import a CSV file that contains the phrases.
+* Access the Model Tester, and click **Import Test Set** to import a CSV file that contains the phrases.
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ib_model_tester_addphrase4.png">
     Use the format below in the CSV file. Use the first line to name the columns as shown; this line is ignored during the import.
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_model_tester_addphrase5.png">
 
     Be aware that uploading a CSV file overwrites any test phrases that already exist in the test set with those in the import file. Additionally, when creating the import file, take care when specifying the intents. If an intent in the file isn't found in the domain, the associated test phrase is skipped during the import.
 
-* Click **Model Tester** in the upper-left corner, and enter the phrases manually on the **Test Set** tab.
+* Access the Model Tester, and enter the phrases manually on the **Test Set** tab.
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase1.png">
-* In **Test User Input** (where [single-phrase testing](intent-manager-build-test-a-single-utterance.html) is performed), click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
+* In **Test User Input** (where [single-phrase testing](intent-manager-build-test-a-single-utterance.html) is performed; on the **Intents** page), click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase2.png">
 * In an intent’s details, click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to a training phrase.
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_model_tester_addphrase3.png">
@@ -55,10 +61,9 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
 
 **To refine the test set**
 
-1. Open the domain.
-2. Click **Model Tester** in the upper-left corner.
-3. Click the **Test Set** tab.
-4. Refine the test set as follows:
+1. Display the domain, and access the Model Tester.
+2. Click the **Test Set** tab.
+3. Refine the test set as follows:
     * If you added a number of phrases using the Quick Add icons, make small changes to the phrases as appropriate. The test set shouldn’t contain exact matches to the intents. This will always yield a passing score, so it isn't a valid test. In fact, if the phrase is an exact match, the match is found in pre-processing, and NLU processing is never used. 
     
         Enter test phrases that are variations of the intents. The goal is to determine how well the intents are performing when these variations are evaluated against the intents using NLU.
@@ -84,13 +89,12 @@ Click the message, and then select **Unselected** to see the list of intents for
 ### Run the test
 **To run the test set against the domain**
 
-1. Open the domain.
-2. Click **Model Tester** in the upper-left corner. 
-3. Click **Run Test** in the upper-right corner.
-4. Specify the following:
+1. Display the domain, and access the Model Tester. 
+2. Click **Run Test** in the upper-right corner.
+3. Specify the following:
     * **Test Report Name**: Enter a name for the report.
     * **Model Version**: Select the model version against which to run the test. You can select the activated model version or any later version.
-5. Click **Test**.
+4. Click **Test**.
 
     You can click <img style="width:25px" src="img/ConvoBuilder/icon_ib_refresh.png"> (Refresh icon) to periodically check the status of the test.
 
@@ -103,10 +107,9 @@ The system retains the 10 most recent reports.
 
 **To view a report**
 
-1. Open the domain.
-2. Click **Model Tester** in the upper-left corner. 
-3. Click the **Test Reports** tab.
-4. Click the report name.
+1. Display the domain, and access the Model Tester. 
+2. Click the **Test Reports** tab.
+3. Click the report name.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_viewreport.png">
 
@@ -155,11 +158,10 @@ A true comparison of reports -- to accurately determine if the domain/model is i
 
 **To compare reports**
 
-1. Open the domain.
-2. Click **Model Tester** in the upper-left corner. 
-3. Click the **Test Reports** tab.
-4. In the dashboard that lists the reports, select the checkboxes for both reports.
-5. Click **Compare Reports** in the upper-right corner.
+1. Display the domain, and access the Model Tester. 
+2. Click the **Test Reports** tab.
+3. In the dashboard that lists the reports, select the checkboxes for both reports.
+4. Click **Compare Reports** in the upper-right corner.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_comparereports.png">
 

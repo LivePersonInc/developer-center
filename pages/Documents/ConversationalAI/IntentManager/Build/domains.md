@@ -17,17 +17,17 @@ Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manag
 
 **To add a prebuilt domain**
 
-1. In the dashboard that lists your domains, click **Add Domain** in the upper-right corner.
-2. In the Add Domain window, click the **Prebuilt Domains** tab.
-3. Move your mouse over the desired domain. Then click **Preview** to see a description of the domain and some example intents. This helps you to verify that the domain is one you want.
-
-    <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/ib_domainPrebuilt.png">
-
-4. Click **Add**.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. Locate the domain list in the Intent Manager dashboard, and click **Add a domain** in the upper-right corner.
+3. For your **starting point**, select "Prebuilt domain."
+4. Specify the following:
+    * **Use case**: Select your use case. there are generic, prebuilt domains for a number of verticals, such as Telecommunications and Financial Services. Additionally, there's a cross-vertical, prebuilt domain that's appropriate for all verticals. The cross-vertical domain includes intents for things like customer account management, customer order management, e-commerce, billing and payment.
+    * **Enable Intent Tracking**: 
+    * **Set as Primary Domain**: 
+5. Click **Create domain**.
 
     {: .important}
     After you add the domain, there's no need to train or activate it for the first time. This has been done automatically. However, from this point forward, things work as if you had created the domain manually: You can customize the domain as you see fit. If you subsequently make any changes, you must re-train the domain to create a new model version that reflects the changes. And when ready, you’ll need to activate the new model version.
-
 
 ### Overwrite from a prebuilt domain
 
@@ -38,34 +38,43 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
 
 **To overwrite your domain with a prebuilt domain**
 
-1. In the dashboard that lists your domains, click **Add Domain** in the upper-right corner.
-2. In the Add Domain window, click the **Prebuilt Domains** tab.
-3. Move your mouse over the prebuilt domain you want to use to overwrite your domain. Click **Add**.
-4. In the Warning dialog that appears, click **Continue**.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. Locate the domain list in the Intent Manager dashboard, and click **Add a domain** in the upper-right corner.
+3. For your **starting point**, select "Prebuilt domain."
+4. Specify the following:
+    * **Use case**: Select your use case. In other words, select the domain that you want to overwrite.
+    * **Enable Intent Tracking**: 
+    * **Set as Primary Domain**: 
+5. Click **Create domain**.
+6. In the Warning dialog that appears, click **Continue**.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_domainPrebuiltOverwrite.png">
-
 
 ### Add a domain manually or using an import file
 
 **To add a domain manually or using an import file**
 
-1. In the dashboard that lists your domains, click **Add domain** in the upper-right corner.
-2. In the Add Domain window, click the **New Domain** tab.
-3. Specify the following: 
-    * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
-    * **Manual** or **Import**: If you want to manually add intents and entities to the domain, select "Manual." If you want to import them from a file, select "Import."
-    * **CSV** or **Google Sheet**: If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. Locate the domain list in the Intent Manager dashboard, and click **Add a domain** in the upper-right corner.
+3. For your **starting point**, do one of the following:
+    * If you're adding the intents and entities manually, select "None."
+    * If you're using an import file, select "Import."
+4. Specify the following: 
+    * **Domain name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
+    * **Import source**: **CSV** or **Google Sheet**. If you selected to import intents and entities, select the type of import file involved, and then use the controls that appear to upload the files. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
 
         **Google sheets**: A Google sheet must be public, i.e., with no file restrictions in place. Moreover, it must contain 100 or fewer columns (intents and entities combined); otherwise, the import fails. If your domain is larger and you have more columns than this, use a CSV file instead.
         
         If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
 
-    * **NLU Provider**: Select the provider of the NLU engine to use. For help, see the discussion on NLU engines [here](intent-manager-natural-language-understanding.html).
     * **Language**: Select the language of the domain.
-4. Click **Add**.
+    * **NLU Provider**: Select the provider of the NLU engine to use. For help, see the discussion on NLU engines [here](intent-manager-natural-language-understanding.html).
+    * **Enable Intent Tracking**: 
+    * **Set as Primary Domain**:
+
+5. Click **Create domain**.
     
-    If you didn't import them, you can now add intents and entities to the domain.
+    If you didn't import the intents and entities, you can now add them to the domain.
 
 ### Create an import file
 
@@ -95,20 +104,28 @@ If you're creating a Google sheet, add the intents to the first tab in the sheet
 
 **To configure domain settings**
 
-1. Open the domain.
-2. Click **Domain Settings** in the upper-left corner.
-3. Specify the following:
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. In the domain list in the Intent Manager dashboard, select the relevant domain.
+3. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_im_domainsettings.png"> (Domain Settings icon).
+4. Specify the following basic settings:
     * **Domain Name**: Enter a name. Use a standard naming convention to make sorting and finding domains easier.
-    * **Add Intents and Entities**: You can select to add these manually or import them via a CSV file or Google sheet. If you import them via a CSV file, the operation is additive, i.e., the intents and entities are appended to the existing ones. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
-
-        A Google sheet must be public, i.e., with no file restrictions in place. If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
-
+    * **Domain ID**: Read-only. This is a unique identifier that’s generated by the system. In some scenarios (e.g., API calls), you might need to reference the domain ID. Here’s where you can find it.
     * **NLU Provider**: Read-only. The provider of the [NLU engine](intent-manager-natural-language-understanding.html) can’t be changed after you create the domain.
     * **Language**: The language of the domain.
-    * **Domain ID**: Read-only. This is a unique identifier that’s generated by the system. In some scenarios (e.g., API calls), you might need to reference the domain ID. Here’s where you can find it.
+5. Specify the following import/export settings:
+    * **Import method**: **Manual** or **Import**. You can select to add the intents and entities manually or import them via a CSV file or Google sheet. If you import them via a CSV file, the operation is additive, i.e., the intents and entities are appended to the existing ones. You can import intents but not entities if desired; in this case, don't specify an entities file/sheet. **Note:** An import file should only be named with and contain alphanumeric characters.
+
+        **Google sheets**: A Google sheet must be public, i.e., with no file restrictions in place. Moreover, it must contain 100 or fewer columns (intents and entities combined); otherwise, the import fails. If your domain is larger and you have more columns than this, use a CSV file instead.
+        
+        If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
+6. Specify the following intent analysis settings:
+    * **Intent Tracking**: 
+    * **Primary Domain**:
+    * **Analyze Masked Data**: 
+7. Specify the following advanced settings:
     * **Domain Account**: Select the account under which the domain should exist. This is used to move domains from one account (org) to another.
     * **Enable Key Phrase Match**: Available only if the NLU engine used by the domain is LivePerson (Legacy), which is described [here](intent-manager-natural-language-understanding.html#livepersons-nlu-engine). Select this to enable Key Phrase Matching. Once enabled, select the threshold to use. For more on Key Phrase Matching, see farther below.
-4. Click **Update Domain**.
+4. Click **Save changes**.
 
 #### Key Phrase Matching: LivePerson (Legacy) only
 
@@ -130,7 +147,6 @@ And here's a test example with Key Phrase Matching enabled:
 
 <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_keyPhraseMatch2.png">
 
-
 ### Sync with a Google sheet
 
 After you've made changes to the Google sheet that's linked to the domain, sync the domain to update it with the content.
@@ -140,10 +156,11 @@ This action overwrites the content in the domain with the content in the Google 
 
 **To sync a domain with a Google sheet**
 
-1. Open the domain.
-2. In the upper-left corner, click **Domain Settings**.
-3. Click **More Settings**, scroll down to the **Sync Google Sheet** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_ib_syncGoogleSheet.png"> (Refresh icon).
-4. Train the domain so that the changes are reflected in a new model version.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. In the domain list in the Intent Manager dashboard, select the relevant domain.
+3. Click **Build** in the menu in the upper-left corner, and then click <img style="width:25px" src="img/ConvoBuilder/icon_im_domainsettings.png"> (Domain Settings icon) in the upper-right corner.
+4. Scroll down to the import/export settings, and beside **Sync Google Sheet**, click <img style="width:25px" src="img/ConvoBuilder/icon_ib_syncGoogleSheet.png"> (Refresh icon).
+5. Train the domain so that the changes are reflected in a new model version.
 
 ### Train a LivePerson domain
 
@@ -161,11 +178,13 @@ Before you train, ensure the domain has at least 5 intents. For each intent, ens
 
 **To train a LivePerson domain**
 
-1. Open the domain.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. In the domain list in the Intent Manager dashboard, select the relevant domain.
+3. Click **Build** in the menu in the upper-left corner.
 
     <img class="fancyimage" style="width:1000px" src="img/ConvoBuilder/intents_trainingPhrases.png">
 
-3. Click **Train** in the upper-right corner to start the training.
+4. On the **Intents** page, click **Train** in the upper-right corner.
 
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/intents_trainingStatus.png">
 
@@ -192,9 +211,11 @@ You must create a 3rd-party NLU provider credential, as the system requires and 
 
 **To create a 3rd-party NLU provider credential**
 
-1. Open the domain.
-2. Click **Train** in the upper-right corner.
-3. In the Train dialog, click the "Select NLU Provider Credential" option.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. In the domain list in the Intent Manager dashboard, select the relevant domain.
+3. Click **Build** in the menu in the upper-left corner.
+4. On the **Intents** page, click **Train** in the upper-right corner.
+5. In the Train dialog, click the "Select NLU Provider Credential" option.
 
     <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_third_party_cred1.png">
 
@@ -202,15 +223,15 @@ You must create a 3rd-party NLU provider credential, as the system requires and 
 
     <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_third_party_cred2.png">
 
-4. Click "Create a new NLU Provider Credential."
-5. In the Add NLU Provider Credential dialog box, specify the following:
+6. Click "Create a new NLU Provider Credential."
+7. In the Add NLU Provider Credential dialog box, specify the following:
     * **Credential Name**: Enter a name for the credential.
     * **NLU Provider**: Select the 3rd-party NLU engine.
     * **Credentials**: Paste here the credentials that you downloaded when you [set up your IBM Watson  or Google Dialogflow account](intent-manager-natural-language-understanding.html#connect-a-3rd-party-nlu-engine).
 
     <img  class="fancyimage" style="width:750px" src="img/ConvoBuilder/ib_third_party_cred3.png">
 
-6. Click **Save Credentials**.
+8. Click **Save Credentials**.
 
     During training, you'll need to alternate between 2 sets of service credentials, as described below.
 
@@ -222,15 +243,17 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 
 **To train a 3rd-party NLU domain**
 
-1. Open the domain.
-2. Click **Train** in the upper-right corner to start the training.
-3. Select the [NLU provider credential](intent-manager-natural-language-understanding.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. In the domain list in the Intent Manager dashboard, select the relevant domain.
+3. Click **Build** in the menu in the upper-left corner.
+4. On the **Intents** page, click **Train** in the upper-right corner.
+5. Select the [NLU provider credential](intent-manager-natural-language-understanding.html#step-2-sign-up-and-get-the-api-keys) from the list, and click **Train**.
 
     <img  class="fancyimage" style="width:400px" src="img/ConvoBuilder/NLU_image_4.png">
 
     Note that you'll need to alternate between using your two sets of credentials, as discussed farther below.
 
-4. Wait until the training is completed.
+6. Wait until the training is completed.
 
     To refresh the page and check on progress, click <img style="width:25px" src="img/ConvoBuilder/icon_trainRefresh.png"> (Refresh icon) in the **Training Status** column.
 
@@ -255,8 +278,10 @@ The first model version that you create via training is activated automatically.
 
 **To activate the latest model version**
 
-1. Open the domain, and click **Versions** in the upper-left corner.
-2. Click the **Activate** button beside the latest model version.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. In the domain list in the Intent Manager dashboard, select the relevant domain.
+3. Click **Build** in the menu in the upper-left corner, then select **Versions** from the submenu.
+4. Click the **Activate** button beside the latest model version.
 
     <img class="fancyimage" style="width:900px" src="img/ConvoBuilder/ib_activate.png">   
 
@@ -272,9 +297,10 @@ Download of a domain creates a ZIP file that contains 2 CSV files, one for the i
 
 **To download a domain**
 
-1. Open the domain.
-2. In the upper-left corner, click **Domain Settings**.
-3. Click **More Settings**, scroll down to the **Export Intents and Entities** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_ib_download.png"> (Download icon).
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. In the domain list in the Intent Manager dashboard, select the relevant domain.
+3. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_im_domainsettings.png"> (Domain Settings icon).
+4. Scroll down to the import/export settings, and beneath **Download domain data**, click **Export all data**.
 4. Follow the browser prompts to access and save the ZIP file to a location of your choice.
 
 
@@ -287,7 +313,8 @@ Before you delete a domain, ensure that it isn't being used by any bots or knowl
 
 **To delete a domain**
 
-1. Open the domain.
-2. In the upper-left corner, click **Domain Settings**.
-3. Click **More Settings**, scroll down to the **Delete Domain** section, and click <img style="width:25px" src="img/ConvoBuilder/icon_delete.png"> (Delete icon).
-4. In the confirmation dialog, click **Yes**. 
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. In the domain list in the Intent Manager dashboard, select the relevant domain.
+3. In the upper-right corner, click <img style="width:25px" src="img/ConvoBuilder/icon_im_domainsettings.png"> (Domain Settings icon).
+4. Scroll down to the advanced settings, and beneath **Delete domain**, click **Delete permanently**.
+5. In the confirmation dialog, click **Yes**. 

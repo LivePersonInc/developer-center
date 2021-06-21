@@ -22,9 +22,11 @@ For some practice with intents, complete the [Getting Started with Bot Building]
 
 **To add an intent**
 
-1. In the dashboard that lists your domains, select the domain.
-2. Click **Add Intent** in the upper-right corner.
-3. Specify the following:
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. From the domain list in the Intent Manager dashboard, select the relevant domain.
+3. Click **Build** from the menu in the upper-left corner.
+4. On the **Intents** page, click **Add Intent** in the upper-right corner.
+5. Specify the following:
 
     * **Intent name**: Enter the intent name. To name an intent, use a short phrase that describes the intent. Typically, an intent name has both a verb and a noun (e.g., "report login problem"). A domain can have dozens of intents, so using a standard naming convention is important for being able to easily sort and find intents.
     * **Intent display name**: Enter the display name.
@@ -37,8 +39,8 @@ For some practice with intents, complete the [Getting Started with Bot Building]
 
         For more, see *Best practices* farther below.
 
-4. Click **Save**.
-5. Train the domain so that the addition is reflected in a new model version.
+6. Click **Save**.
+7. Train the domain so that the addition is reflected in a new model version.
 
 ### Generate training phrases
 
@@ -51,25 +53,27 @@ Generating training phrases is useful when:
 
 Note:
 * This feature is only available for English-language domains.
-* To use this feature, Intent Analyzer must be enabled for your account, and at least one domain (any domain) in Intent Builder must have Intent Analyzer enabled ([here](intent-analyzer-overview.html#enable-intent-analyzer-for-intents)), as the feature makes use of the data that it captures.
+* To use this feature, Intent Manager's Intent Analyzer feature must be enabled for your account, and at least one domain (any domain) in Intent Manager must have Intent Tracking enabled ([here](intent-manager-build-domains.html#configure-domain-settings)), as the feature makes use of the data that it captures.
 * If you’ve enabled Intent Analyzer recently, expect the tool’s results to improve over time as more data is captured.
 * If you're a new customer, expect no results until suggestions can be offered based on utterances by your users. And here again, expect the tool's results to improve over time.
 
 **To generate training phrases**
 
-1. Open the domain.
-2. Select the intent.
-3. Beside an existing training phrase (you’ll need to add at least one to the intent), click <img style="width:25px" src="img/ConvoBuilder/icon_knn.png">.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. From the domain list in the Intent Manager dashboard, select the relevant domain. 
+3. Click **Build** from the menu in the upper-left corner.
+4. On the **Intents** page, select the intent.
+5. Beside an existing training phrase (you’ll need to add at least one to the intent), click <img style="width:25px" src="img/ConvoBuilder/icon_knn.png">.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_knn1.png">
 
-4. Review the generated phrases, and select the ones you want to add to the domain. You might also want to refine the spelling or punctuation. The phrases are based on actual consumer utterances, so they might contain misspellings or poor grammar. (See the *FAQs* farther below regarding typos and misspellings.)
+6. Review the generated phrases, and select the ones you want to add to the domain. You might also want to refine the spelling or punctuation. The phrases are based on actual consumer utterances, so they might contain misspellings or poor grammar. (See the *FAQs* farther below regarding typos and misspellings.)
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_knn2.png">
 
-5. Click **Add**.
-6. Back on the Intents page, click **Save** to save the change.
-7. Retrain the domain.
+7. Click **Add**.
+8. Back on the Intents page, click **Save** to save the change.
+9. Retrain the domain.
 
 ### Delete an intent
 
@@ -80,11 +84,10 @@ Ensure the intent isn't being used by any bots or knowledge bases before you del
 
 **To delete an intent**
 
-1. Open the domain.
-
-    By default, the Intents page is displayed.
-
-2. In the left panel, select the intent.
-3. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
-4. In the confirmation dialog, click **Yes**.
-5. Train the domain so that the deletion is reflected in a new model version.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. From the domain list in the Intent Manager dashboard, select the relevant domain.
+3. Click **Build** from the menu in the upper-left corner.
+4. On the **Intents** page, select the intent.
+5. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
+6. In the confirmation dialog, click **Yes**.
+7. Train the domain so that the deletion is reflected in a new model version.

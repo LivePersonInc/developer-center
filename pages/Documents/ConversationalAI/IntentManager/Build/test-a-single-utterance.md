@@ -25,8 +25,9 @@ If the domain uses the LivePerson engine for NLU, you can't use the Test User In
 
 **To test a single utterance**
 
-1. In the dashboard that lists your domains, select the domain.
-2. In the **Test User Input** panel on the right, specify the following:
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. From the domain list in the Intent Manager dashboard, select the domain that you want to test.
+3. On the **Intents** page, in the **Test User Input** panel on the right, specify the following:
     
     **User text**: Enter the user utterance to test.
     

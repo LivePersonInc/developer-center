@@ -20,8 +20,9 @@ For an explanation of an entity, see [here](intent-manager-key-terms-concepts.ht
 
 **To add a Value Set entity**
 
-1. Open the domain.
-2. In the upper-left corner, click **Entities**.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. From the domain list in the Intent Manager dashboard, select the relevant domain.
+3. Click **Build** from the menu in the upper-left corner, and then select the **Entities** page.
 3. In the upper-right corner, click **Add Entity**.
 4. Specify the following:
     * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
@@ -38,10 +39,11 @@ Regular Expression entities are available only in domains using the [LivePerson 
 
 **To add a Regular Expression entity**
 
-1. Open the domain.
-2. In the upper-left corner, click **Entities**.
-3. In the upper-right corner, click **Add Entity**.
-4. Specify the following:
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. From the domain list in the Intent Manager dashboard, select the relevant domain.
+3. Click **Build** from the menu in the upper-left corner, and then select the **Entities** page.
+4. In the upper-right corner, click **Add Entity**.
+5. Specify the following:
     * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
     * **Description**: Enter a short phrase describing the entity. While this field is optional, it's often useful. Many entity names can be technical. A description adds clarity and is particularly helpful to a person not familiar with the domain.
     * **Entity Type**: Select "Regular Expression."
@@ -49,8 +51,8 @@ Regular Expression entities are available only in domains using the [LivePerson 
     * **Sample Values**: Enter five (5) example values that conform to the regular expression. These values aren't used during entity detection; they're used during domain training to improve the model's performance with respect to intent matching. Within Intent Manager, the sample values also serve as easy-to-read examples of the regular expression, making the expression more understandable at a glance.
 
         Start with five (5) sample values. If your results aren't as expected, you can add more and then retrain. 
-5. Click **Save**.
-6. Train the domain so that the addition is reflected in a new model version.
+6. Click **Save**.
+7. Train the domain so that the addition is reflected in a new model version.
 
 ### Using entities
 
@@ -113,12 +115,13 @@ Before you delete an entity, ensure that it isn't being used in any intents or K
 
 **To delete an entity**
 
-1. Open the domain.
-2. In the upper-left corner, click **Entities**.
-3. In the left panel, select the entity.
-4. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
-5. In the confirmation dialog, click **Yes**.
-6. Train the domain so that the deletion is reflected in a new model version.
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. From the domain list in the Intent Manager dashboard, select the relevant domain.
+3. Click **Build** from the menu in the upper-left corner, and then select the **Entities** page.
+4. In the left panel, select the entity.
+5. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
+6. In the confirmation dialog, click **Yes**.
+7. Train the domain so that the deletion is reflected in a new model version.
 
 ### How entities affect the NLU score - LivePerson (Legacy) engine only
 
