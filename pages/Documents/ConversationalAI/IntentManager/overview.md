@@ -14,14 +14,27 @@ indicator: both
 {: .important}
 Did you know that LivePerson has a Conversational AI forum for builders? Check it out [here](https://talkyard.livepersonai.com/)!
 
-TO BE ADDED
+Consumers often request an action or information from a brand. These consumer requests can be grouped under named categories that we call “intents.” Examples of common intents include:
+
+* Check order status - “What is the status of my lawn mower order?”
+* Make a payment - “Can I make a payment today for the total amount?”
+* Reset password - “I forgot my password and I need to reset it.”
+
+**Intent Manager** is a suite of tools for intent modeling and management. You can use it to:
+
+* **Discover** intents that can or should be automated
+* **Build** an intent taxonomy
+* **Optimize** how well they are being fulfilled
+* **Analyze** the most popular consumer intents
 
 {: .important}
-See [here](intent-manager-natural-language-understanding.html) to learn more about the different NLU engines that are compatible with Conversation Builder.
+For an in-depth introduction to Intent Manager, its use cases, and a discussion on the power of an intent-driven contact center, see [here](https://knowledge.liveperson.com/ai-bots-automation-liveperson-intent-manager-the-power-of-an-intent-driven-contact-center.html) in our Knowledge Center.
 
 ### Access Intent Manager
 
 1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
 2. In the Conversational AI dashboard, click **Intent Manager**.
 
+### Enable intent discovery & optimization
 
+Intent Manager’s intent discovery and optimization features are disabled by default for all Intent Manager customers. To enable these features, contact your LivePerson account team.
