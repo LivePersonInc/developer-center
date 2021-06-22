@@ -271,9 +271,10 @@
     pages:
       - pagename: Overview
       - pagename: Key Terms & Concepts
-      - pagename: Dashboard
       - pagename: Natural Language Understanding
+      - pagename: Dashboard
       - pagename: Getting Started
+      - pagename: Best Practices
       - pagename: Discover
       - pagename: Build
         subpages:
@@ -285,7 +286,6 @@
           - subpagename: Test with the Model Tester
       - pagename: Optimize
       - pagename: Analyze
-      - pagename: Best Practices
       - pagename: FAQs
       - pagename: External APIs
         subpages:
