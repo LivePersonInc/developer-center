@@ -10,3 +10,7 @@ indicator: both
 ---
 
 To be added
+
+### Split an intent
+
+To be added
