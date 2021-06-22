@@ -47,7 +47,7 @@ Regular Expression entities are available only in domains using the [LivePerson 
     * **Entity Name**: Enter the name of the entity using alphanumeric characters (no special characters). Consider using all capital letters and underscores (instead of spaces) as a convention; this makes the entities readily visible when they are used in intents and knowledge bases.
     * **Description**: Enter a short phrase describing the entity. While this field is optional, it's often useful. Many entity names can be technical. A description adds clarity and is particularly helpful to a person not familiar with the domain.
     * **Entity Type**: Select "Regular Expression."
-    * **Regular Expression**: Enter the regular expression. All standard [RegEx rules](https://www.regexlib.com/) apply.
+    * **Regular Expression**: Enter the regular expression. All standard [RegEx rules](https://regex101.com/) apply.
     * **Sample Values**: Enter five (5) example values that conform to the regular expression. These values aren't used during entity detection; they're used during domain training to improve the model's performance with respect to intent matching. Within Intent Manager, the sample values also serve as easy-to-read examples of the regular expression, making the expression more understandable at a glance.
 
         Start with five (5) sample values. If your results aren't as expected, you can add more and then retrain. 

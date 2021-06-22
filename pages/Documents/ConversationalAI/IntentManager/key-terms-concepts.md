@@ -142,7 +142,7 @@ The values for Value Set entities are usually one or two words, as they represen
 
 ##### Regular Expression entities
 
-Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using Regular Expression rules. As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b`, which is a 6-digit number.
+Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression rules](https://regex101.com/). As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b`, which is a 6-digit number.
 
 <img style="width:800px" src="img/ConvoBuilder/im_entities_regex_ex.png">
 
