@@ -95,7 +95,7 @@ There are significant benefits to using the LivePerson engine instead of the Liv
 * Benefits from continuing investments. Check the roadmap for upcoming features, for example, support for additional languages.
 * Performs faster and scales better. The LivePerson engine's average response time is approximately 200 milliseconds per prediction, and performance is good and consistent regardless of the number of intents involved. In contrast, the LivePerson (Legacy) engine's average response time is typically above 1 second, and the response time increases linearly with the number of intents involved. With many intents and many training phrases, a response time of 4-5 seconds is common.
 * Provides better accuracy and yields no ambiguity in predictions. A properly trained domain using the LivePerson engine doesn't emit ambiguous results. In contrast, with a domain using LivePerson (Legacy), multiple intents in a domain can have a good match, so ambiguity must be handled in the bot.
-* Supports [prebuilt domains](intent-manager-key-terms-concepts.html#pre-built-domains) to get you up and running quickly, and [Regular Expression entities](intent-manager-key-terms-concepts.html#entities).
+* Supports [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains) to get you up and running quickly, and [Regular Expression entities](intent-manager-key-terms-concepts.html#entities).
 * Makes available an advanced [Model Tester](intent-manager-build-test-with-the-model-tester.html) for improving domain quality over time.
 * Is widely used with Intent Manager's Intent Analyzer feature. In fact, Intent Analyzer itself uses the LivePerson engine. Therefore, domains using the LivePerson engine can be tuned easily using the data gleaned from Intent Analyzer. You cannot use Intent Analyzer with domains using the LivePerson (Legacy) engine.
 
@@ -151,7 +151,7 @@ All these factors directly influence the intent matching after retraining. There
 
 #### 3rd-party NLU limitations
 
-- Doesn't support [prebuilt domains](intent-manager-key-terms-concepts.html#pre-built-domains) or [Regular Expression entities](intent-manager-key-terms-concepts.html#entities).
+- Doesn't support [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains) or [Regular Expression entities](intent-manager-key-terms-concepts.html#entities).
 - The length of the domain name should not exceed 64 characters. (Watson limitation)
 - A domain can only support one language, which is specified on the Domain Settings page.
 - LivePerson does not support "pulling" into Intent Manager existing models that have been trained in IBM Watson or Google Dialogflow. Only model "push" is supported; this is accomplished by training the model in Intent Manager.

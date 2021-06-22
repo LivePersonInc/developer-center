@@ -21,7 +21,7 @@ If the domain is using a 3rd-party NLU engine, you'll need to [connect the NLU e
 
 ### Add a prebuilt domain
 
-Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manager-natural-language-understanding.html#livepersons-nlu-engine). For an introduction to prebuilt domains, see [here](intent-manager-key-terms-concepts.html#pre-built-domains).
+Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manager-natural-language-understanding.html#livepersons-nlu-engine). For an introduction to prebuilt domains, see [here](intent-manager-key-terms-concepts.html#prebuilt-domains).
 
 **To add a prebuilt domain**
 
@@ -39,7 +39,7 @@ Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manag
 
 ### Overwrite from a prebuilt domain
 
-If you've added a [prebuilt domain](intent-manager-key-terms-concepts.html#pre-built-domains) and customized it, but you no longer want to use your customizations, you can overwrite your domain to reflect the prebuilt domain offered by LivePerson. This operation removes all the model versions in your domain, and it creates a single model version--trained and activated--that is based on the prebuilt domain.
+If you've added a [prebuilt domain](intent-manager-key-terms-concepts.html#prebuilt-domains) and customized it, but you no longer want to use your customizations, you can overwrite your domain to reflect the prebuilt domain offered by LivePerson. This operation removes all the model versions in your domain, and it creates a single model version--trained and activated--that is based on the prebuilt domain.
 
 {: .important}
 You can overwrite your domain with a prebuilt domain if you have not customized your domain's *name*. Once you do this, you break the relationship with the source prebuilt domain.

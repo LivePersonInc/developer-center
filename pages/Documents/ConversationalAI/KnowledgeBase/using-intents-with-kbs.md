@@ -17,7 +17,7 @@ If your knowledge base is an [external knowledge base with LivePerson AI](knowle
 To set this up, you create a domain with the necessary intents in [Intent Manager](intent-manager-overview.html), where the domain specifies the [NLU engine](intent-manager-natural-language-understanding.html) to use. Then, within the Knowledge Base application, you 1) associate the domain with the knowledge base, 2) associate the domain's intents with the articles, and 3) train the knowledge base to use the intents to return the articles.
 
 {: .important}
-Intent Manager offers a set of [pre-built domains](intent-manager-key-terms-concepts.html#pre-built-domains). These are designed to get you up and running quickly with intents.
+Intent Manager offers a set of [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains). These are designed to get you up and running quickly with intents.
 
 ### Associate a domain with a knowledge base
 
