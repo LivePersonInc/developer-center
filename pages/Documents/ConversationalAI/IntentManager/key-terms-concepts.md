@@ -18,13 +18,13 @@ indicator: both
 | Domain | A list of intents and entities; these can be matched to consumer training phrases (utterances) with an intent-recognition model. |
 | Prebuilt domain | A prebuilt domain is a starting point for you to get going with intents. The intent-recognition model is filled with predefined intents that have been trained and activated for your convenience. The model has been developed using aggregated and anonymized data from several brands. While a prebuilt domain is functional, you’ll need to customize it for your specific needs to get the best performance. |
 | NLU | NLU stands for Natural Language Understanding. In this context, NLU refers to the customized machine-learning algorithms that are trained to understand the intents expressed in your conversations. For more, see [here](intent-manager-natural-language-understanding.html). |
-| Training phrases (utterances) | Training phrases are unambiguous example utterances that are used to teach the machine learning model about each intent in your custom taxonomy.<br><br>Pre-built domains use generic training phrases to get you started. To improve your model, you can replace the generic phrases with examples of real consumer messages from your conversation history. |
-| Training | The process wherein a model learns its parameters by mapping training messages to their target labels. |
-| Inference | The process wherein a model assigns a label for an incoming message using the weights it has learned during training. |
-| Unclassified/Undefined | A statement of intent that contains an intent not seen in the defined set of intents. |
+| Training phrases (utterances) | Messages that reflect a distinct aspect of an intent class and can optionally contain relevant entities for that intent.<br><br>Pre-built domains use generic training phrases to get you started. To improve your model, you can replace the generic phrases with examples of real consumer messages from your conversation history. |
+| Training | The process by which the model learns to differentiate which examples belong to each intent class. |
+| Inference | The process by which a “learned” model attempts to map an incoming message to an intent class. |
+| Unclassified/Undefined | The messages that do belong to an intent class that is defined in the NLU domain. |
 | Coverage | The percentage of the messages that the intent recognition model would classify as one of the defined intents against the total number of intentful messages. |
 | Overfit | A model is overfitting, when it was trained in such a way to produce highly accurate predictions on its training set, which it has seen during training, but produces much less accurate results on a separate, unseen dataset. |
-| Token | A single word or punctuation separated by white space. |
+| Tokens | The pieces of a message after a message is broken down into its smallest elements. |
 
 ### Key concepts
 
@@ -175,4 +175,4 @@ Using the [Assist tool](conversation-builder-assist.html), you can assign these 
 
 #### Training
 
-Domains that use either the LivePerson engine or a 3rd-party NLU engine must be explicitly trained (via the **Train** button that's available) after you make changes to the training data. This process takes the raw training data and uses it to create a “machine-learning” model that generalizes the data. The resulting model is then used to make predictions on user utterances. With these NLU engines, most of the work needed to be able to make predictions on user utterances is performed at training time, allowing for a faster response at run time.
+Domains that use either the LivePerson engine or a 3rd-party NLU engine must be explicitly trained (via the **Train** button that's available) after you make changes to the training data. This process is wherein the model learns to differentiate which examples belong to each intent class. The resulting model is then used to make predictions on user utterances. With these NLU engines, the trained model is able to classify a user utterance into an intent class.
