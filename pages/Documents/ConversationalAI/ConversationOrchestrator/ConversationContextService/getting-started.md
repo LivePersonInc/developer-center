@@ -43,14 +43,6 @@ The ttlSecond value indicates how many seconds the document will last after bein
 
 Since the TTL set on the session has a higher priority than the TTL set on the namespace, if the TTL is set on the session, the TTL on the namespace will be ignored for session properties.
 
-### Developer Key
+### API authorization
 
-To use Conversation Context Service APIs you will need to create and use an API key. To get your unique key:  
-
-1. Login to Conversation Orchestrator with your Conversational Cloud credentials and then navigate to **Developer Key**.
-
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_ccs_developerkey.png">
-
-2. Copy and paste the key provided, and use it in your API headers. 
-
-    To generate a new key, click the **Regenerate Key** button. This will invalidate the previous key. The key is shared for all Conversation Orchestrator APIs; therefore, you must use the new key wherever the APIs are being called.
+To start using the API, you’ll need to authenticate; for details, see [here](conversation-orchestrator-api-authorization.html).
