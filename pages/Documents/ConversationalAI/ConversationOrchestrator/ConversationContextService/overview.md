@@ -49,4 +49,19 @@ Each object within the CCS comes with full CRUD (Create, Read, Update, Delete) f
 
 Additionally, the CCS API offers a RESTful interface with methods to access the desired functionality from services other than Conversation Builder. 
 
-* [Conversation Context Service - Methods](conversation-orchestrator-conversation-context-service-methods.html)
+* [Conversation Context Service - Methods v1](conversation-orchestrator-conversation-context-service-methods-v1.html)
+* [Conversation Context Service - Methods v2](conversation-orchestrator-conversation-context-service-methods-v2.html)
+
+### API versions
+
+v2 of the Conversation Orchestrator APIs was released in July 2021. The new version applies to both the Conversation Context Service and the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html). v2 has the following additional benefits:
+
+* Higher scalability
+* Better data security through OAuth2.0 authorization
+* Visibility into Dynamic Routing [policy execution logs](conversation-orchestrator-dynamic-routing-policy-logs-for-v2.html)
+* Better APIs
+
+All accounts will gradually be migrated from v1 to v2 starting July 2021. Please talk to your LivePerson account executive if you want to be moved to v2 sooner. The v1 APIs will be deprecated on December 31, 2022. Please refer to the [v1](conversation-orchestrator-conversation-context-service-methods-v1.html) or [v2](conversation-orchestrator-conversation-context-service-methods-v2.html) documentation as appropriate for your case.
+
+{: .important}
+You can know you are on v2 if you see OAuth 2.0 authentication on the **API Authorization** page, as discussed [here](conversation-orchestrator-api-authorization.html).
