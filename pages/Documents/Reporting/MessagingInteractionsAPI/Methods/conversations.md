@@ -130,6 +130,21 @@ In order to search for a specific phrase within the messages, summary or engagem
 
 ### Response
 
+#### Response codes
+
+| Code     | Internal Code | Description |
+| :------ | :------- | :-------- |
+| 200 | -- |  OK; Operation performed successfully  |
+| 204 | -- |  No Content; Operation performed successfully  |
+| 400 | -- |  Bad Request; Problem with body or query parameters |
+| 401 | -- |  Unauthorized (no permissions) |
+| 403 | -- |  Forbidden |
+| 429 | -- |  Too many requests |
+| 500 | -- |  Internal Server Error |
+| 500 | 0007 |  Elastic search exception |
+| 500 | 0008 |  Runtime exception |
+| 503 | -- |  Service unavailable |
+
 #### General Characterizations
 
 _Field Types - Max number of digits possible
