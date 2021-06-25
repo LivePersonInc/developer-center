@@ -28,7 +28,7 @@ indicator: both
 
 ### Domains
 
-A domain is a collection of related intents and entities, and adomain has a specified NLU provider and language.
+A domain is a collection of related intents and entities, and a domain has a specified NLU provider and language.
 
 In a bot, you can associate one domain with each dialog. This allows you to associate the dialog's interactions with intents and entities from that domain. For example, you might [associate an intent with a Dialog Starter interaction](conversation-builder-assist.html) to use the intent to trigger the dialog's flow.
 
