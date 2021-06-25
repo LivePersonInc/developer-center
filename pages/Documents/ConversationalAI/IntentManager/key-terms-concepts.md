@@ -26,9 +26,7 @@ indicator: both
 | Overfit | A model is overfitting, when it was trained in such a way to produce highly accurate predictions on its training set, which it has seen during training, but produces much less accurate results on a separate, unseen dataset. |
 | Tokens | The pieces of a message after a message is broken down into its smallest elements. |
 
-### Key concepts
-
-#### Domains
+### Domains
 
 The following are key characteristics of a domain:
 
@@ -38,7 +36,7 @@ The following are key characteristics of a domain:
 
 Intent Manager allows you to build multiple intent domains that can each hold one or many intents and entities. Most brands will find that one domain can handle all their intents, but sometimes breaking them up is necessary or desirable. For example, having a Main intent domain and a Small Talk intent domain is very common. Use multiple domains to keep overlapping intents out of individual intent taxonomies.
 
-#### Prebuilt domains
+### Prebuilt domains
 
 To get you quickly up and running with intents, LivePerson provides a set of prebuilt domains that you can easily add to your Intent Manager environment.
 
@@ -51,7 +49,7 @@ Once you [add a prebuilt domain](intent-manager-build-domains.html#add-a-prebuil
 
 Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manager-natural-language-understanding.html#livepersons-nlu-engine).
 
-#### Intents
+### Intents
 
 Consumers often request an action or information from a brand. These consumer requests can be grouped under named categories that we call “intents.” Some examples of common intents are:
 
@@ -66,17 +64,17 @@ Note that each intent is framed as a request. This is important, as an intent sh
 {: .important}
 For some practice with intents, complete the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).<br><br>For best practices, see [here](intent-manager-best-practices.html#intents).
 
-##### Intent versus non-intent example
+#### Intent versus non-intent example
 
 Instead of creating an intent named “my order,” consider instead looking for the most common consumer request associated with the subject “my order,” i.e., “check my order status.” This intent could include any consumer request asking to track their order or see whether their order has been processed.
 
-##### Why use intents?
+#### Why use intents?
 
 Intents are meant for when you need a more flexible approach to utterance matching than using patterns. With patterns, there must be an *exact match* between the consumer's utterance and the defined pattern. This means that alternative expressions (synonyms, phrasings, and formats) are missed.
 
 In contrast, intents direct a bot to be more flexible and respond to a wider variety of user input. Instead of looking for specific patterns in the input (for example, the pattern "bill"), the bot uses a Natural Language Understanding (NLU) engine to look for a defined intent. Then the bot triggers the dialog that's configured to respond to the intent. Therefore, once you configure your intents with robust *training phrases*, expressions like, "I have a question about billing", "Looking to check my account," or "What's my billing status?" yield the same intent and, thus, the same response from the bot.
 
-#### Confidence score and threshold
+### Confidence score and threshold
 
 Intents use a Natural Language Understanding (NLU) engine to match the consumer’s utterance against a set of training phrases or Knowledge Base articles. The results are scored based on the level of confidence in the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR. This confidence score approximates how likely the intent is present in the consumer's message.
 
@@ -100,7 +98,7 @@ The scoring breakdown that indicates the NLU’s level of confidence in the matc
 
 You can't change the threshold when using intents, although you can do this with knowledge bases.
 
-#### Meta intents
+### Meta intents
 
 You might notice as you are working on your intent taxonomy that the number of intents can become difficult to manage if the taxonomy grows too large. In this case, LivePerson recommends that you use meta intents to help group and sort your intents. All pre-built domains come with meta intents.
 
@@ -109,7 +107,7 @@ A meta intent is a wrapper that can contain many other standard intents. This fu
 <img style="width:600px" src="img/ConvoBuilder/im_meta_intents_diagram.png">
 <img style="width:800px" src="img/ConvoBuilder/im_meta_intents_details.png">
 
-#### Entities
+### Entities
 
 Entities are keywords or expressions that represent groups of items. For example, an entity named `SIZE` might represent the following values: small, medium, and large.
 
@@ -127,7 +125,7 @@ There are three types of entities:
 * Regular Expression entities
 * Built-in entities
 
-##### Value Set entities
+#### Value Set entities
 
 As their name suggests, Value Set entities are those that have a defined set of values. For example, the entity `SPORTS` might have the following values in its value set:
 * football
@@ -140,7 +138,7 @@ The LivePerson NLU engine trains the model with as many as 100 Value Set entity 
 
 The values for Value Set entities are usually one or two words, as they represent groups of simple objects.
 
-##### Regular Expression entities
+#### Regular Expression entities
 
 Unlike a Value Set entity, a Regular Expression entity doesn't have a set of values. Instead, its value is a single regular expression defined using [Regular Expression rules](https://regex101.com/). As an example, you might have an `ORDER_NO` entity whose regular expression is `^\b\d{6}\b`, which is a 6-digit number.
 
@@ -159,7 +157,7 @@ Continuing our `ORDER_NO` example, you might use the entity in the training phra
 
 Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding.html#livepersons-nlu-engine) for NLU.
 
-##### Built-in entities
+#### Built-in entities
 
 The platform automatically detects the entities listed below:
 * PERSON - Names of people, persons
@@ -173,6 +171,6 @@ The platform automatically detects the entities listed below:
 
 Using the [Assist tool](conversation-builder-assist.html), you can assign these built-in entities to user interactions and have the bot populate a [slot](conversation-builder-variables-slots.html) with the user's input to the question to which the entity was assigned.
 
-#### Training
+### Training
 
 Domains that use either the LivePerson engine or a 3rd-party NLU engine must be explicitly trained (via the **Train** button that's available) after you make changes to the training data. This process is wherein the model learns to differentiate which examples belong to each intent class. The resulting model is then used to make predictions on user utterances. With these NLU engines, the trained model is able to classify a user utterance into an intent class.
