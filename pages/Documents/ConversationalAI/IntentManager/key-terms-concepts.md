@@ -47,6 +47,10 @@ Once you [add a prebuilt domain](intent-manager-build-domains.html#add-a-prebuil
 
 Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manager-natural-language-understanding.html#livepersons-nlu-engine).
 
+### Primary domain
+
+
+
 ### Intents
 
 Consumers often request an action or information from a brand. These consumer requests can be grouped under named categories that we call “intents.” Some examples of common intents are:
@@ -95,6 +99,10 @@ The scoring breakdown that indicates the NLU’s level of confidence in the matc
 * POOR: 0-50% match
 
 You can't change the threshold when using intents, although you can do this with knowledge bases.
+
+### Intent tracking
+
+
 
 ### Meta intents
 

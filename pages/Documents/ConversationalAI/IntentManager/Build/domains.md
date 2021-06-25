@@ -33,9 +33,9 @@ Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manag
 2. Locate the domain list in the Intent Manager dashboard, and click **Add a domain** in the upper-right corner.
 3. For your **starting point**, select "Prebuilt domain."
 4. Specify the following:
-    * **Use case**: Select your use case. there are generic, prebuilt domains for a number of verticals, such as Telecommunications and Financial Services. Additionally, there's a cross-vertical, prebuilt domain that's appropriate for all verticals. The cross-vertical domain includes intents for things like customer account management, customer order management, e-commerce, billing and payment.
-    * **Enable Intent Tracking**: 
-    * **Set as Primary Domain**: 
+    * **Use case**: Select your use case. There are generic, prebuilt domains for a number of verticals, such as Telecommunications and Financial Services. Additionally, there's a cross-vertical, prebuilt domain that's appropriate for all verticals. The cross-vertical domain includes intents for things like customer account management, customer order management, e-commerce, billing and payment.
+    * **Enable Intent Tracking**: Select this to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
+    * **Set as Primary Domain**: Select this to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
 5. Click **Create domain**.
 
     {: .important}
@@ -55,8 +55,8 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
 3. For your **starting point**, select "Prebuilt domain."
 4. Specify the following:
     * **Use case**: Select your use case. In other words, select the domain that you want to overwrite.
-    * **Enable Intent Tracking**: 
-    * **Set as Primary Domain**: 
+    * **Enable Intent Tracking**: Select this to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
+    * **Set as Primary Domain**: Select this to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
 5. Click **Create domain**.
 6. In the Warning dialog that appears, click **Continue**.
 
@@ -81,8 +81,8 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
 
     * **Language**: Select the language of the domain.
     * **NLU Provider**: Select the provider of the NLU engine to use. For help, see the discussion on NLU engines [here](intent-manager-natural-language-understanding.html).
-    * **Enable Intent Tracking**: 
-    * **Set as Primary Domain**:
+    * **Enable Intent Tracking**: Select this to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
+    * **Set as Primary Domain**: Select this to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
 
 5. Click **Create domain**.
     
@@ -131,9 +131,8 @@ If you're creating a Google sheet, add the intents to the first tab in the sheet
         
         If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
 6. Specify the following intent analysis settings:
-    * **Intent Tracking**: 
-    * **Primary Domain**:
-    * **Analyze Masked Data**: 
+    * **Intent Tracking**: Select this to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
+    * **Primary Domain**: Select this to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
 7. Specify the following advanced settings:
     * **Domain Account**: Select the account under which the domain should exist. This is used to move domains from one account (org) to another.
     * **Enable Key Phrase Match**: Available only if the NLU engine used by the domain is LivePerson (Legacy), which is described [here](intent-manager-natural-language-understanding.html#livepersons-nlu-engine). Select this to enable Key Phrase Matching. Once enabled, select the threshold to use. For more on Key Phrase Matching, see farther below.
