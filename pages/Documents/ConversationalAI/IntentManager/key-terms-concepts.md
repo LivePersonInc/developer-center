@@ -28,11 +28,9 @@ indicator: both
 
 ### Domains
 
-The following are key characteristics of a domain:
+A domain is a collection of related intents and entities, and adomain has a specified NLU provider and language.
 
-* A domain is a collection of related intents and entities.
-* A domain has a specified NLU provider and language.
-* In a bot, you can associate one domain with each dialog. This allows you to associate the dialog's interactions with intents and entities from that domain. For example, you might [associate an intent with a Dialog Starter interaction](conversation-builder-assist.html) to use the intent to trigger the dialog's flow.
+In a bot, you can associate one domain with each dialog. This allows you to associate the dialog's interactions with intents and entities from that domain. For example, you might [associate an intent with a Dialog Starter interaction](conversation-builder-assist.html) to use the intent to trigger the dialog's flow.
 
 Intent Manager allows you to build multiple intent domains that can each hold one or many intents and entities. Most brands will find that one domain can handle all their intents, but sometimes breaking them up is necessary or desirable. For example, having a Main intent domain and a Small Talk intent domain is very common. Use multiple domains to keep overlapping intents out of individual intent taxonomies.
 

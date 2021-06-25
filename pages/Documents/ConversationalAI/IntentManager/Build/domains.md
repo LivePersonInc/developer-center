@@ -11,6 +11,10 @@ permalink: intent-manager-build-domains.html
 indicator: both
 ---
 
+### What's a domain?
+
+For an explanation of a domain, see [here](intent-manager-key-terms-concepts.html#domains).
+
 ### High-level workflow
 
 Use this high-level workflow when working with a domain using the LivePerson engine or a third-party engine.
