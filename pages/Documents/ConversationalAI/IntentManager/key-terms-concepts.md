@@ -49,7 +49,16 @@ Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manag
 
 ### Primary domain
 
+When you [add or update a domain](intent-manager-build-domains.html), you can set it as the primary domain, i.e., select **Set as Primary Domain**. Only one domain can be primary at a given time. The first domain that you add is considered primary, and this designation can’t be changed if you have only one domain. If you add subsequent domains, you can change which one is primary.
 
+A primary domain has two purposes. First, in applications that make use of a single domain (e.g., Agent Manager Workspace, Performance Optimizer, and Messaging Interaction API), this is the domain that is used.
+
+Second, when intent tracking data is gathered for analysis within Intent Manager, and multiple, good intent matches for an utterance are found, the intent in the primary domain is the one considered to be the best matched intent.
+
+As an example, assume you have three domains A, B and C, and domain B is your primary domain. The consumer says, “I want to disconnect from Acme Telecommunications.” This matches an intent in domain A with a 90% confidence score, an intent in domain B with a 60% confidence score, and an intent in domain C with a 20% confidence score. In this case, the intent in domain B is considered the best matched intent even though it’s confidence score is lower than that for the intent in domain A. This is because domain B is your primary domain, and the scores for the intents in both domains A and B are at least GOOD scores. If the match to the intent in domain B were 59% (FAIR PLUS), then the intent in domain A would be considered the best intent match.
+
+{: .important}
+The designation of a domain as primary affects only intent matching as it relates to the intent tracking data that’s gathered for display on the Analyze page within Intent Manager. It does **not** affect intent matching in any other way. For example, it does **not** affect Conversation Builder/third-party bots, Knowledge Base, Agent Assist, etc. Respectively, the designation of a primary domain plays no role in intent matching when it comes to determining a dialog to start for the consumer, a knowledge base article to send to the consumer, a knowledge base and/or bot to recommend to an agent, etc.
 
 ### Intents
 
@@ -64,7 +73,7 @@ Consumers often request an action or information from a brand. These consumer re
 Note that each intent is framed as a request. This is important, as an intent should always be a type of consumer request or question. Specifying the consumer request makes the intent actionable and potentially automatable. Subjects by themselves are not intents. Examples of subjects that consumers might discuss are product names, service plan names, bills, service and product orders, locations and dates.
 
 {: .important}
-For some practice with intents, complete the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html).<br><br>For best practices, see [here](intent-manager-best-practices.html#intents).
+For some practice with intents, complete the [Intents tutorial](tutorials-guides-getting-started-with-bot-building-intents.html). For best practices, see [here](intent-manager-best-practices.html#intents).
 
 #### Intent versus non-intent example
 
@@ -102,7 +111,13 @@ You can't change the threshold when using intents, although you can do this with
 
 ### Intent tracking
 
+When you [add or update a domain](intent-manager-build-domains.html), you can select to **Enable Intent Tracking**. This enables “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances.
 
+When intent tracking is enabled, the system records and labels all future conversations with intent metadata (e.g., a consumer utterance of “I want to cancel my flight” is labeled as having the “cancel flight” intent in an “Airlines” domain). The system also records other metrics like CSAT, [Meaningful Conversation Score](https://knowledge.liveperson.com/data-reporting-meaningful-conversation-score-(mcs)-meaningful-conversation-score-(mcs)-overview.html) and more. This intent data is then populated into the **Analyze** page within Intent Manager.
+
+The number of domains for which you can enable intent tracking is configurable. To increase the number, contact your LivePerson account representative. If this field is disabled, you’ve reached the limit. You can either increase the number or disable intent tracking for another domain.
+
+You can enable intent tracking at a later time, but be aware that there is no backfill of historical data. Data begins to be recorded when this setting is enabled.
 
 ### Meta intents
 
