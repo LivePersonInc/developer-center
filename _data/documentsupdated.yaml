@@ -241,7 +241,6 @@
   - documentname: Conversation Orchestrator
     pages:
       - pagename: Overview
-      - pagename: API Authorization
       - pagename: Agent Assist
         subpages:
           - subpagename: Overview
@@ -271,6 +270,7 @@
           - subpagename: Overview
           - subpagename: Methods v1
           - subpagename: Methods v2
+      - pagename: API Authorization
   - documentname: Intent Builder
     pages:
       - pagename: Overview

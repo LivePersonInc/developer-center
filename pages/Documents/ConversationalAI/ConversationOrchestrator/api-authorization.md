@@ -11,7 +11,7 @@ indicator: messaging
 Developers need to authenticate in order to use the Conversation Orchestrator APIs. Authentication is required for using both the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html).The authentication mechanism is different for v1 and v2. 
 
 {: .important}
-To understand the differences between v1 and v2, see [here](conversation-orchestrator-conversation-context-service-overview.html#api-versions).<br><br>To know which version you are on (v1 or v2), please visit the **API Authorization** page within Conversation Orchestrator and consult the following information.
+To understand the differences between v1 and v2, see [here](conversation-orchestrator-conversation-context-service-overview.html#api-versions). To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application and consult the following information in this topic.
 
 ### API Authorization for v1
 
@@ -27,7 +27,7 @@ To use the v1 APIs, you need to create an API key. To get your unique key:
 
 ### API Authorization for v2
 
-To use the v2 APIs, you need to authenticate using OAuth2.0:
+To use the v2 APIs, you need a secure Oauth2.0 token. First, you need to generate the secure OAuth 2.0 token using the login endpoint. Then, you can start using this token in the APIs.
 
 1. **Launch the API Authorization page**: Access Conversation Orchestrator and then navigate to "API Authorization." If you have been upgraded to v2, you will see the screen below.
 
@@ -35,17 +35,18 @@ To use the v2 APIs, you need to authenticate using OAuth2.0:
 
     The page has three sections:
 
-    * **Token for testing the v2 APIs**: You can use this token for testing the Context Service API v2 or Next Actions API v2 using API testing tools, such as Postman. This token is temporary and expires quickly. This token should **not** be used in your code.
-    * **Credentials for using the v2 APIs in your code**: This section has a user ID and password that you can use to integrate the APIs into your code. Please see the next step for details.
-    * **API key for v1 APIs**: Users updgraded to v2 will have access to the v1 API key until December 31, 2022.
+    * **Token for testing the v2 APIs**: You can use this secure access token for testing the Context Service API v2 or Next Actions API v2 using API testing tools, such as Postman. This token is temporary and expires quickly. This token should **not** be used in your code.
+    * **Credentials for using the v2 APIs in your code**: This section has a user ID and password that you can use to generate your secure access token. Please see the next step for details.
+    * **API key for v1 APIs**: Users who have been upgraded to v2 will have access to the v1 API key until December 31, 2022.
 
-2. **Generate your OAuth2.0 secure token using the credentials**: Your user ID and password are already generated. To leverage the Conversation Orchestrator v2 APIs, you need to generate an OAuth 2.0 secure token through the login endpoint:
-https://{domain}/v2/authenticate/login
+2. **Generate your OAuth2.0 secure access token using the credentials**: Your user ID and password are already generated. To leverage the Conversation Orchestrator v2 APIs, you need to generate an OAuth 2.0 secure access token through the login endpoint:
+
+    **https://{domain}/v2/authenticate/login**
 
     Domain URL per environment:
-   * AMERICAS : https://z1.context.liveperson.net
-   * EMEA: https://z2.context.liveperson.net
-   * APAC: https://z3.context.liveperson.net
+    * AMERICAS : https://z1.context.liveperson.net
+    * EMEA: https://z2.context.liveperson.net
+    * APAC: https://z3.context.liveperson.net
 
     You will need to authorize the header with the pattern “Basic” followed by a space and a base64-encoded string username:password. For example, to authorize demo / p@55w0rd you would need to send 
     Basic ZGVtbzpwQDU1dzByZA==
