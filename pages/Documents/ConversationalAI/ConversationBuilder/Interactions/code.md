@@ -46,7 +46,10 @@ This opens the editor, which works as follows:
 
 With the exception that you enter JSON code instead of interaction data, a Universal interaction works like any other interaction. This means you can:
 
-* Use bot context and environment variables.
+* Use bot context and environment variables. Enclose the variable in quotes, like so:
+
+    <img style="width:500px" src="img/ConvoBuilder/interactions_universal5.png">
+
 * [Configure](conversation-builder-interactions-configuration-settings.html) basic settings, for example, specify an interaction delay.
 * [Configure](conversation-builder-interactions-configuration-next-action.html) a Next Action, including via custom rules.
 * [Configure](conversation-builder-interactions-configuration-custom-code.html) Pre-Process code, Process User Response code, and Post-Process code.
