@@ -204,7 +204,7 @@ Before you train, ensure the domain has at least 5 intents. For each intent, ens
 ### Convert a LivePerson (Legacy) domain to LivePerson
 
 {: .important}
-Brands with existing domains using the LivePerson (Legacy) engine are encouraged to convert the domains to the LivePerson engine as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021. See [here](intent-manager-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy) for the many benefits of the LivePerson engine over LivePerson (Legacy).
+Brands with existing domains using the LivePerson (Legacy) engine are encouraged to convert the domains to the LivePerson engine as soon as possible. LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021. See [here](intent-manager-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy) for the many benefits of the LivePerson engine over LivePerson (Legacy).
 
 **To convert a LivePerson (Legacy) domain to the LivePerson engine**
 

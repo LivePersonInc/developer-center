@@ -67,7 +67,7 @@ If you created your knowledge base before March 5, 2021, you might have chosen *
 
 Knowledge Base intents like these are a *legacy feature* that uses the LivePerson (Legacy) engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
 
-To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible, as **LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021**.
+To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible, as **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021**.
 
 ### Languages
 
@@ -108,7 +108,7 @@ For example, you might run a promotion over a holiday that has an associated FAQ
 *Positive learnings* are phrases for which you want a match to the article to occur. *Negative learnings* are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
 
 {: .important}
-As of April 19, 2021, you can no longer add new positive and negative learnings to articles. Existing learnings continue to work as expected, but they are read-only.<br><br>The alternative to adding a positive learning is to add a training phrase to the intent in the domain. Updating the domain itself is the preferred approach to boosting the match rate.<br><br>Negative learnings were primarily needed for knowledge bases using the LivePerson (Legacy) NLU engine, to support single-word negation (e.g., "I want to buy" versus "I don't want to buy"). To take advantage of the benefits of performance and flexibility offered by the LivePerson engine, you are encouraged to convert to the LivePerson engine as soon as possible. **LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021**.
+As of April 19, 2021, you can no longer add new positive and negative learnings to articles. Existing learnings continue to work as expected, but they are read-only.<br><br>The alternative to adding a positive learning is to add a training phrase to the intent in the domain. Updating the domain itself is the preferred approach to boosting the match rate.<br><br>Negative learnings were primarily needed for knowledge bases using the LivePerson (Legacy) NLU engine, to support single-word negation (e.g., "I want to buy" versus "I don't want to buy"). To take advantage of the benefits of performance and flexibility offered by the LivePerson engine, you are encouraged to convert to the LivePerson engine as soon as possible. **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021**.
 
 #### How positive and negative learnings work
 
