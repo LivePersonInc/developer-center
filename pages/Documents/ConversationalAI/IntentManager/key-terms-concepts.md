@@ -119,6 +119,19 @@ The number of domains for which you can enable intent tracking is configurable. 
 
 You can enable intent tracking at a later time, but be aware that there is no backfill of historical data. Data begins to be recorded when this setting is enabled.
 
+#### Why enable intent tracking for multiple domains?
+
+Multi-domain support makes it possible to evaluate each consumer message against multiple machine-learning models in real time, unlocking infinite possibilities.
+
+* Development and A/B testing of new domains
+* Support for more than one language per account
+* Support for multiple lines of business
+* Independently tuned models for specific use cases
+    * Sales and marketing
+    * Churn detection and escalation
+    * Social media monitoring
+    * Specialized bots and automation
+
 ### Meta intents
 
 You might notice as you are working on your intent taxonomy that the number of intents can become difficult to manage if the taxonomy grows too large. In this case, LivePerson recommends that you use meta intents to help group and sort your intents. All pre-built domains come with meta intents.
