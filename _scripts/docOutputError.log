@@ -1,3 +1,50 @@
+The Category name in the file: accessing-liveperson-apis  is 'API Guidelines' 
+ in path: pages/Documents/APIGuidelines/
+  should be API Guidelines
 
-Number of errors:  0
-Congrats there are no errors in the repo
+
+The Category name in the file: create-api-keys  is 'API Guidelines' 
+ in path: pages/Documents/APIGuidelines/
+  should be API Guidelines
+
+
+The Category name in the file: domain-api  is 'API Guidelines' 
+ in path: pages/Documents/APIGuidelines/
+  should be API Guidelines
+
+
+The Category name in the file: data-apis  is 'API Guidelines' 
+ in path: pages/Documents/APIGuidelines/
+  should be API Guidelines
+
+
+The permalink is invalid found: api-data-metrics.html
+Expected permalink: api-guidelines-api-data-metrics.html 
+
+
+CURRENT PAGE INFO :  {
+  categoryname: '"API Guidelines"',
+  documentname: 'API Guidelines',
+  subfoldername: null,
+  permalink: 'api-data-metrics.html',
+  pagename: 'API Data Metrics'
+}
+The Category name in the file: engagement-attributes  is 'API Guidelines' 
+ in path: pages/Documents/APIGuidelines/
+  should be API Guidelines
+
+
+The Category name in the file: important-updates  is 'API Guidelines' 
+ in path: pages/Documents/APIGuidelines/
+  should be API Guidelines
+
+
+The Category name in the file: retry-policy-recommendations  is 'API Guidelines' 
+ in path: pages/Documents/APIGuidelines/
+  should be API Guidelines
+
+
+
+Number of errors:  8
+
+ Number of errors:  8

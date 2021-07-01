@@ -1,13 +1,13 @@
 ---
 pagename: Getting Started with Authentication
 sitesection: Documents
-categoryname: "Getting Started"
+categoryname: "API Guidelines"
 documentname: Essential Resources
 permalink: essential-resources-getting-started-with-authentication.html
 order: 10
 indicator: both
 redirect_from:
-  - essential-resources-authentication.html
+    - essential-resources-authentication.html
 ---
 
 Some of our APIs require authorization before you can use them. This is done via either of two methods: user authentication via login (using your regular account credentials) that generates an access token using the OAuth 2.0 methodology or a server authorization via an API key (created and retrieved beforehand via the Conversational Cloud UI) which uses the OAuth 1.0 methodology. Every API uses either of the two methods (or both), as listed in its overview (for example, the [Users API](/users-api-overview.html#getting-started)).
@@ -50,30 +50,28 @@ The authentication process occurs when the consumer opens the conversation windo
 
 ![Data Sources](img/data-sources.png)
 
-{:start="3"}
-3. In the Connectors area, next to the authentication server, click **Configure**. The Authentication Server page is displayed.
+{:start="3"} 3. In the Connectors area, next to the authentication server, click **Configure**. The Authentication Server page is displayed.
 
 ![Configure Server](img/configure-server.png)
 
-{:start="4"}
-4. From the dropdown menu, select your preferred authentication method, and complete the required fields.
+{:start="4"} 4. From the dropdown menu, select your preferred authentication method, and complete the required fields.
 
 ![Authentication Server](img/authserver.png)
 
 In the Authentication Server, you will need to configure the following parameters:
 
-* Implicit or Code Flow
+-   Implicit or Code Flow
 
-* OAuth 2.0 Authentication Endpoint (when a separate browser window is used)
+-   OAuth 2.0 Authentication Endpoint (when a separate browser window is used)
 
-* OAuth 2.0 Token Endpoint (when Code Flow is used)
+-   OAuth 2.0 Token Endpoint (when Code Flow is used)
 
-* OAuth 2.0 JWT Public Key
+-   OAuth 2.0 JWT Public Key
 
-* OAuth 2.0 Client ID
+-   OAuth 2.0 Client ID
 
-* OAuth 2.0 Client Secret (when Code Flow is used)
+-   OAuth 2.0 Client Secret (when Code Flow is used)
 
-* JS method name and context (when Conversational Cloud embedded window is used in Web)
+-   JS method name and context (when Conversational Cloud embedded window is used in Web)
 
 Additional information regarding authentication configuration in Conversational Cloud (including Implicit vs. Code Flow) is available [here](authentication-introduction.html).
