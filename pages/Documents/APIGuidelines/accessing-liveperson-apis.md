@@ -1,13 +1,12 @@
 ---
 pagename: Accessing LivePerson APIs
 sitesection: Documents
-categoryname: "Getting Started"
-documentname: API Guidelines
-permalink: api-guidelines-accessing-liveperson-apis.html
-order: 11
+categoryname: "API Guidelines"
+permalink: accessing-liveperson-apis.html
 indicator: both
 redirect_from:
     - essential-resources-accessing-liveperson-apis.html
+    - api-guidelines-accessing-liveperson-apis.html
 ---
 
 Some of our APIs require authorization before you can use them. This is done via either of the following methods:

@@ -1,36 +1,34 @@
 ---
 pagename: Retry Policy Recommendations
-redirect_from:
-  - guides-retry-policy.html
-  - retry-and-keepalive-best-practices-overview.html
-  - essential-resources-retry-policy-recommendations.html
-  - common-resources-retry-policy-recommendations.html
 Keywords:
 sitesection: Documents
-categoryname: "Getting Started"
-documentname: API Guidelines
-
+categoryname: "API Guidelines"
 level-order: 11
 order: 10
-permalink: api-guidelines-retry-policy-recommendations.html
+permalink: retry-policy-recommendations.html
 root-link: true
-indicator: both  
+indicator: both
+redirect_from:
+    - guides-retry-policy.html
+    - retry-and-keepalive-best-practices-overview.html
+    - essential-resources-retry-policy-recommendations.html
+    - common-resources-retry-policy-recommendations.html
+    - api-guidelines-retry-policy-recommendations.html
 ---
 
 Each component in a network can return an error; whether it’s your local environment or in the cloud, applications can fail. These failures can result from a maintenance activity, a service incident, or a random network hiccup on the server or client side.
 
-For increased reliability and stability of an application, add a retry mechanism for API calls.  If an error returns, the mechanism makes sure that the application makes another attempt to retrieve the relevant information.
+For increased reliability and stability of an application, add a retry mechanism for API calls. If an error returns, the mechanism makes sure that the application makes another attempt to retrieve the relevant information.
 
 Below you can find LivePerson best practices to handle errors:
 
 ### API error codes and retry recommendation
 
-| Error code   |      Meaning      |  Recommendation |
-|:-------------|:------------------|:----------------|
-| 4xx          | Client side error | Do not retry, need to fix the problem in the code |
-| 429          | Too many requests | Retry after at least 1 second; avoid bursts of requests |
-| 5xx          | Error on server side  | Retry 3 times with 5, 10, 15 second pause between retries |
-
+| Error code | Meaning              | Recommendation                                            |
+| :--------- | :------------------- | :-------------------------------------------------------- |
+| 4xx        | Client side error    | Do not retry, need to fix the problem in the code         |
+| 429        | Too many requests    | Retry after at least 1 second; avoid bursts of requests   |
+| 5xx        | Error on server side | Retry 3 times with 5, 10, 15 second pause between retries |
 
 In addition to the table above, in order to make sure the application can recover from more than 3 consecutive failed requests, as in the case of a service incident or a maintenance activity with a few minutes of downtime, another retry should be introduced for login/socket close/etc.
 
@@ -48,13 +46,12 @@ Some services require you to send periodic requests in order to keep your sessio
 
 Below you will find the recommended intervals for KeepAlive per product:
 
-
-| Product   |      Method Name      |  KeepAlive interval |
-|:----------|:-------------|:------|
-| Chat Agent API | [refresh](agent-refresh.html) | Every 5 minutes |
-| Messaging Agent SDK |   getClock   | Every 30 seconds |
-|  Messaging Window API |    GetClock  | Every 30 seconds  |
-| Server Chat API |   [Retrieve Chat Information](consumer-experience-server-chat-retrieve-chat-information.html)   |  Every 30 seconds |
+| Product              | Method Name                                                                                 | KeepAlive interval |
+| :------------------- | :------------------------------------------------------------------------------------------ | :----------------- |
+| Chat Agent API       | [refresh](agent-refresh.html)                                                               | Every 5 minutes    |
+| Messaging Agent SDK  | getClock                                                                                    | Every 30 seconds   |
+| Messaging Window API | GetClock                                                                                    | Every 30 seconds   |
+| Server Chat API      | [Retrieve Chat Information](consumer-experience-server-chat-retrieve-chat-information.html) | Every 30 seconds   |
 
 ### Testing and logs
 
