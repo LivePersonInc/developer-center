@@ -31,12 +31,15 @@ Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manag
 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Locate the domain list in the Intent Manager dashboard, and click **Add a domain** in the upper-right corner.
-3. For your **starting point**, select "Prebuilt domain."
-4. Specify the following:
-    * **Use case**: Select your use case. There are generic, prebuilt domains for a number of verticals, such as Telecommunications and Financial Services. Additionally, there's a cross-vertical, prebuilt domain that's appropriate for all verticals. The cross-vertical domain includes intents for things like customer account management, customer order management, e-commerce, billing and payment.
-    * **Enable Intent Tracking**: Select this to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
-    * **Set as Primary Domain**: Select this to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
-5. Click **Create domain**.
+3. In the Add Domain window, select the **Prebuilt domain** tab.
+4. Move your mouse over the desired domain. Then click **Preview** to see a description of the domain and some example intents. This helps you to verify that the domain is one you want.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_domains_prebuilt_add.png">
+
+5. Specify the following for the domain:
+    * **Intent Tracking**: Select "Enabled" to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
+    * **Primary Domain**: Select "Enabled" to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
+6. Click the **Add** button that's displayed when you move your mouse over the desired domain.
 
     {: .important}
     After you add the domain, there's no need to train or activate it for the first time. This has been done automatically. However, from this point forward, things work as if you had created the domain manually: You can customize the domain as you see fit. If you subsequently make any changes, you must re-train the domain to create a new model version that reflects the changes. And when ready, you’ll need to activate the new model version.
@@ -52,12 +55,11 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Locate the domain list in the Intent Manager dashboard, and click **Add a domain** in the upper-right corner.
-3. For your **starting point**, select "Prebuilt domain."
-4. Specify the following:
-    * **Use case**: Select your use case. In other words, select the domain that you want to overwrite.
-    * **Enable Intent Tracking**: Select this to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
-    * **Set as Primary Domain**: Select this to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
-5. Click **Create domain**.
+3. In the Add Domain window, select the **Prebuilt domain** tab.
+4. Specify the following for the domain:
+    * **Intent Tracking**: Select "Enabled" to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
+    * **Primary Domain**: Select "Enabled" to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
+5. Move your mouse over the desired domain, and click the **Add** button that's displayed.
 6. In the Warning dialog that appears, click **Continue**.
 
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_domainPrebuiltOverwrite.png">
