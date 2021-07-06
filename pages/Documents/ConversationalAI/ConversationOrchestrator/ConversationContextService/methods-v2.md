@@ -42,7 +42,7 @@ This API can be used to add new properties or update existing properties. This A
 #### Request payload example
 ```
 {
-  "accountId": "le17036892",
+  "accountId": "le12345678",
   "nameSpace": "myNamespace",
   "sessionId": "mySessionId",
   "ttlSeconds": 3600,
@@ -55,14 +55,14 @@ This API can be used to add new properties or update existing properties. This A
 
 #### Request example
 ```bash
-curl -X POST "https://{domain}/v2/context/document/create?access_token={Token}" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"accountId\":\"le17036892\",\"nameSpace\":\"myNamespace\",\"sessionId\":\"mySessionId\",\"ttlSeconds\":3600,\"payload\":{\"property1\":100,\"Property2\":\"abc\"}}"
+curl -X POST "https://{domain}/v2/context/document/create?access_token={Token}" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"accountId\":\"le12345678\",\"nameSpace\":\"myNamespace\",\"sessionId\":\"mySessionId\",\"ttlSeconds\":3600,\"payload\":{\"property1\":100,\"Property2\":\"abc\"}}"
 ```
 
 #### Response payload example
 ```
 {
-  "documentKey": "le17036892:myNamespace:mySessionId",
-  "tenantId": "le17036892",
+  "documentKey": "le12345678:myNamespace:mySessionId",
+  "tenantId": "le12345678",
   "success": true
 }
 ```
@@ -71,7 +71,7 @@ status code = 201
 
 ### REST API - Read Properties
 
-#### Retrieve all properties wihtin a namespace
+#### Retrieve all properties within a namespace
 
 This API requires accountId and namespace as input. In its response, it returns all properties within the namespace.
 
@@ -84,21 +84,21 @@ N/A
 
 ##### Request example
 ```bash
-curl -X GET "https://{domain}/v2/context/document/le17036892/myNamespace?access_token={Token}" -H  "accept: application/json"
+curl -X GET "https://{domain}/v2/context/document/le12345678/myNamespace?access_token={Token}" -H  "accept: application/json"
 ```
 
 ##### Response payload example
 ```
 {
-  "accountId": "le17036892",
-  "documentKey": "le17036892:myNamespace:",
+  "accountId": "le12345678",
+  "documentKey": "le12345678:myNamespace:",
   "documentType": "CONTEXT",
   "nameSpace": "myNamespace",
   "payload": {
     "Property2": "abc",
     "property1": 100
   },
-  "tenantId": "le17036892",
+  "tenantId": "le12345678",
   "ttl": "2021-05-11T22:37:39.176Z"
 }
 ```
@@ -117,14 +117,14 @@ N/A
 
 ##### Request example
 ```bash
-curl -X GET "https://{domain}/v2/context/document/le17036892/myNamespace/mySessionId?access_token={Token}" -H  "accept: application/json"
+curl -X GET "https://{domain}/v2/context/document/le12345678/myNamespace/mySessionId?access_token={Token}" -H  "accept: application/json"
 ```
 
 ##### Response payload example
 ```
 {
-  "accountId": "le17036892",
-  "documentKey": "le17036892:myNamespace:mySessionId",
+  "accountId": "le12345678",
+  "documentKey": "le12345678:myNamespace:mySessionId",
   "documentType": "CONTEXT",
   "nameSpace": "myNamespace",
   "payload": {
@@ -132,7 +132,7 @@ curl -X GET "https://{domain}/v2/context/document/le17036892/myNamespace/mySessi
     "property1": 100
   },
   "sessionId": "mySessionId",
-  "tenantId": "le17036892",
+  "tenantId": "le12345678",
   "ttl": "2021-05-11T22:37:39.176Z"
 }
 ```
@@ -149,7 +149,7 @@ This API requires accountId, namespace and sessionId (optional) and properties a
 ##### Request payload example
 ```
 {
-  "accountId": "le17036892",
+  "accountId": "le12345678",
   "nameSpace": "myNamespace",
   "sessionId": "mySessionId",
   "filter": [
@@ -161,7 +161,7 @@ This API requires accountId, namespace and sessionId (optional) and properties a
 
 ##### Request example
 ```bash
-curl -X POST "https://{domain}/v2/context/document/properties?access_token={Token}" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"accountId\":\"le17036892\",\"nameSpace\":\"myNamespace\",\"sessionId\":\"mySessionId\",\"filter\":[\"myNamespace.property1\",\"myNamespace.property2\"]}"
+curl -X POST "https://{domain}/v2/context/document/properties?access_token={Token}" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"accountId\":\"le12345678\",\"nameSpace\":\"myNamespace\",\"sessionId\":\"mySessionId\",\"filter\":[\"myNamespace.property1\",\"myNamespace.property2\"]}"
 ```
 
 ##### Response payload example
@@ -191,7 +191,7 @@ This API takes namespace, session (optional) and properties as parameters and de
 ##### Request payload example
 ```
 {
-  "accountId": "le17036892",
+  "accountId": "le12345678",
   "nameSpace": "myNamespace",
   "sessionId": "mySessionId",
   "propertyToDelete": [
@@ -201,13 +201,13 @@ This API takes namespace, session (optional) and properties as parameters and de
 ```
 
 ##### Request example
-curl -X DELETE "https://{domain}/v2/context/document/delete?access_token={Token}" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"accountId\":\"le17036892\",\"nameSpace\":\"myNamespace\",\"sessionId\":\"mySessionId\"}"
+curl -X DELETE "https://{domain}/v2/context/document/delete?access_token={Token}" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"accountId\":\"le12345678\",\"nameSpace\":\"myNamespace\",\"sessionId\":\"mySessionId\"}"
 
 ##### Response payload example
 ```
 {
-  "documentKey": "le17036892:myNamespace:mySessionId",
-  "tenantId": "le17036892",
+  "documentKey": "le12345678:myNamespace:mySessionId",
+  "tenantId": "le12345678",
   "success": true
 }
 ```
@@ -224,7 +224,7 @@ This API takes namespace and session (optional) and deletes all properties withi
 ##### Request payload example
 ```
 {
-  "accountId": "le17036892",
+  "accountId": "le12345678",
   "nameSpace": "myNamespace",
   "sessionId": "mySessionId"
 }
@@ -232,17 +232,33 @@ This API takes namespace and session (optional) and deletes all properties withi
 
 ##### Request example
 ```bash
-curl -X DELETE "https://{domain}/v2/context/document/property/delete?access_token={Token}" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"accountId\":\"le17036892\",\"nameSpace\":\"myNamespace\",\"sessionId\":\"mySessionId\",\"propertyToDelete\":[\"property1\"]}"
+curl -X DELETE "https://{domain}/v2/context/document/property/delete?access_token={Token}" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"accountId\":\"le12345678\",\"nameSpace\":\"myNamespace\",\"sessionId\":\"mySessionId\",\"propertyToDelete\":[\"property1\"]}"
 ```
 
 ##### Response payload example
 ```
 {
-  "documentKey": "le17036892:myNamespace:mySessionId",
-  "tenantId": "le17036892",
+  "documentKey": "le12345678:myNamespace:mySessionId",
+  "tenantId": "le12345678",
   "success": true
 }
 ```
 
 status code = 200
 
+### Important notes
+
+Note the following when using the API:
+
+* The following namespaces are reserved for internal use only 
+  * `consumer`
+  * `operational`
+  * `conversation`
+  * `faas`
+  * `custom`
+  * `sde`
+* Namespace can be a combination of letter(s), number(s) and underscore(_) only. Other special characters are not permitted.
+* Context Service supports Global namespace, which is independent of session/conversation. Please use Global namespace with caution, as it can cause performance issues when used improperly.
+  * Use context documents per session/conversation. Don’t try to reuse a context document across multiple sessions/conversations if not required.
+  * Assign TTL on context document. In V2, we enforce TTL on context documents. By default, the max retention on context documents is 13 months.
+  * In V2, multiple context properties can be upserted in one API call. Using the new feature can improve performance significantly.

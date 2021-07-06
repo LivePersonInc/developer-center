@@ -21,7 +21,7 @@ For information on this, see [here](conversation-builder-scripting-functions-ask
 ### REST API
 
 #### Overview
-{domain}/{api}?access_token=<Token> 
+{domain}/{api}?access_token=
 
 Domain URL per environment:
 * AMERICAS : https://z1.context.liveperson.net
@@ -52,7 +52,7 @@ Gets a routing decision based on Conversation Orchestrator configured policies.
 ##### Request payload example
 ```
 {
-  "accountId": "le17036892",
+  "accountId": "le12345678",
   "customerId": "myCustomerId",
   "sessionId": "mySessionId",
   "conversationId": "myConversationId",
@@ -62,7 +62,7 @@ Gets a routing decision based on Conversation Orchestrator configured policies.
 
 ##### Request example
 ```bash
-curl -X POST "https://{domain}/v2/policy/nextaction?access_token={Token}" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"accountId\":\"le17036892\",\"customerId\":\"myCustomerId\",\"sessionId\":\"mySessionId\",\"conversationId\":\"myConversationId\",\"lpToken\":\"Bearer myToken\"}"
+curl -X POST "https://{domain}/v2/policy/nextaction?access_token={Token}" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"accountId\":\"le12345678\",\"customerId\":\"myCustomerId\",\"sessionId\":\"mySessionId\",\"conversationId\":\"myConversationId\",\"lpToken\":\"Bearer myToken\"}"
 ```
 
 ##### Response payload example
