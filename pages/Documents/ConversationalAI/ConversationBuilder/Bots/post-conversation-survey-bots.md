@@ -353,6 +353,9 @@ Metrics from survey questions are captured in Conversational Cloud and exposed v
 #### Bot Analytics
 In the [Bot Analytics](bot-analytics-overview.html) application, you'll see survey bots reported in the same way as custom bots. There is no difference between the two.
 
+#### Report of IDs
+If you make use of survey, question, and answer IDs in your reporting, you can download a report on these for a given survey bot. In Conversation Builder, open the survey bot, access the **Bot Settings**, scroll down to **Generate IDs report**, and click the **Download** icon. This type of report is often helpful for users that have migrated from Bot Studio to Conversation Builder for creation and management of survey bots.
+
 ### Monitoring survey bots
 
 If you have Bot Status Access [permissions](bot-accounts-permissions.html), you can use the Bots Status application that's intended for monitoring agent connectors to [monitor your survey bots](bots-status-managing-post-conversation-survey-bots.html). In Bots Status, you can redeploy the connector as a troubleshooting technique.
