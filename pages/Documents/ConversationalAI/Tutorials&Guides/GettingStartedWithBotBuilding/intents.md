@@ -34,7 +34,7 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
     Now let’s create a domain.
 
-3. In the upper-right corner, click **Add Domain**.
+3. Locate the domain list in the Intent Manager dashboard. In the upper-right corner, click **Add a domain**.
 
 4. On the Add Domain page, select the **Prebuilt domains** option along the top. Hover over the "Cross-vertical" option, and select **Add**.
 
