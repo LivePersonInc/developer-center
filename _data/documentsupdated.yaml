@@ -286,6 +286,10 @@
           - subpagename: Test with the Model Tester
       - pagename: Optimize
       - pagename: Analyze
+        subpages:
+          - subpagename: Basic Tasks
+          - subpagename: Intent Trends
+          - subpagename: Conversation Details
       - pagename: FAQs
       - pagename: External APIs
         subpages:
