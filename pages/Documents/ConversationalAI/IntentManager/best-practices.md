@@ -19,7 +19,7 @@ For more best practices when training and tuning NLU, see [here](conversation-bu
 2. Understand the existing model - Review the model’s coverage, i.e., the intent names and training phrases. This gives you a good understanding of the intents that already exist in the model. This is important to keep in mind, as you don’t want your future work to overlap with any of the existing intents.
 3. Use [intent discovery](intent-manager-discover.html) (under “Discover”) to find new intents to add to your current taxonomy and to classify consumer messages under those intents.
 4. Train the new model.
-5. [Evaluate and optimize](intent-manager-optimize.html) the model (under "Optimize"). As a quick measure, review the results on the Intent Manager [dashboard](intent-manager-dashboard.html). For more thorough testing, use the [Model Tester](intent-manager-build-test-with-the-model-tester.html) (under “Build”).
+5. Evaluate and improve the model. As a quick measure, review the results on the Intent Manager [dashboard](intent-manager-dashboard.html). For more thorough testing, use the [Model Tester](intent-manager-build-test-with-the-model-tester.html) (under “Build”).
 
 ### Number of intents
 Intent Manager requires a minimum of 5 intents and 20 training phrases per intent to start training a model. Anything less adversely affects the model’s performance.

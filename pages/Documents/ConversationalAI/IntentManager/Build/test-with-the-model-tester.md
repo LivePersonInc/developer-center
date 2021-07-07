@@ -36,8 +36,9 @@ You can download test reports and comparison reports.
 ### Access the Model Tester
 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
-2. From the domain list in the Intent Manager dashboard, select the domain that you want to test.
-3. Click **Build** in the menu in the upper-left corner, and then select **Model Tester** from the submenu.
+2. Locate the domain list in the Intent Manager dashboard.
+3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
+3. Select the **Model Tester** page.
 
 ### Add phrases to the test set
 In a domain, there are several ways to add phrases to the Model Tester’s test set:

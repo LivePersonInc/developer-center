@@ -23,8 +23,8 @@ For some practice with intents, complete the [Getting Started with Bot Building]
 **To add an intent**
 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
-2. From the domain list in the Intent Manager dashboard, select the relevant domain.
-3. Click **Build** from the menu in the upper-left corner.
+2. Locate the domain list in the Intent Manager dashboard.
+3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
 4. On the **Intents** page, click **Add Intent** in the upper-right corner.
 5. Specify the following:
 
@@ -37,7 +37,7 @@ For some practice with intents, complete the [Getting Started with Bot Building]
         * Tell me what my bill is
         * I need to look into what's going with my bill
 
-        For more, see *Best practices* farther below.
+        For best practices, see [here](intent-manager-best-practices.html#training-phrases).
 
 6. Click **Save**.
 7. Train the domain so that the addition is reflected in a new model version.
@@ -60,8 +60,8 @@ Note:
 **To generate training phrases**
 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
-2. From the domain list in the Intent Manager dashboard, select the relevant domain. 
-3. Click **Build** from the menu in the upper-left corner.
+2. Locate the domain list in the Intent Manager dashboard.
+3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
 4. On the **Intents** page, select the intent.
 5. Beside an existing training phrase (you’ll need to add at least one to the intent), click <img style="width:25px" src="img/ConvoBuilder/icon_knn.png">.
 
@@ -85,8 +85,8 @@ Ensure the intent isn't being used by any bots or knowledge bases before you del
 **To delete an intent**
 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
-2. From the domain list in the Intent Manager dashboard, select the relevant domain.
-3. Click **Build** from the menu in the upper-left corner.
+2. Locate the domain list in the Intent Manager dashboard.
+3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
 4. On the **Intents** page, select the intent.
 5. Click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsis_vertical.png"> (3-dot icon), and select **Delete**.
 6. In the confirmation dialog, click **Yes**.
