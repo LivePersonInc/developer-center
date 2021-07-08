@@ -60,8 +60,8 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 With the "Make Payment" intent configured, let’s return to Conversation Builder and use the intent to trigger a new dialog.
 
-1. In the upper-left corner, click **< Back** twice to return to the Conversational AI dashboard.
-2. Click **Conversation Builder**.
+1. In the upper-left corner, click **Conversational AI** in the breadcrumb trail.
+2. Select **Conversation Builder**.
 3. Select the bot you previously created.
 4. Create a new regular dialog named "Make Payment".
 
