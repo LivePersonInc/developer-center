@@ -36,7 +36,7 @@ Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manag
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/im_domains_prebuilt_add.png">
 
-5. Specify the following for the domain:
+5. If you've [unlocked](intent-manager-overview.html#enable-intent-discovery-optimization--analysis) the Discover/Analyze features of Intent Manager, you can specify the following for the domain:
     * **Intent Tracking**: Select "Enabled" to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
     * **Primary Domain**: Select "Enabled" to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
 6. Click the **Add** button that's displayed when you move your mouse over the desired domain.
@@ -56,7 +56,7 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
 1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
 2. Locate the domain list in the Intent Manager dashboard, and click **Add a domain** in the upper-right corner.
 3. In the Add Domain window, select the **Prebuilt domains** tab.
-4. Specify the following for the domain:
+4. If you've [unlocked](intent-manager-overview.html#enable-intent-discovery-optimization--analysis) the Discover/Analyze features of Intent Manager, you can specify the following for the domain:
     * **Intent Tracking**: If the domain had this enabled, take care to also enable it now, if desired. For more on this setting, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
     * **Primary Domain**: If the domain had this enabled, take care to also enable it now, if desired. For information on this setting, see [here](intent-manager-key-terms-concepts.html#primary-domain).
 5. Move your mouse over the desired domain, and click the **Add** button that's displayed.
@@ -81,8 +81,8 @@ You can overwrite your domain with a prebuilt domain if you have not customized 
         
         If you import a Google sheet, be aware that this establishes a link between the domain and the sheet. If you later sync the domain with the sheet, the domain is updated with the current contents in the sheet.
  
-    * **Intent Tracking**: Select "Enabled" to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
-    * **Primary Domain**: Select "Enabled" to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
+    * **Intent Tracking**: This setting is displayed if you've [unlocked](intent-manager-overview.html#enable-intent-discovery-optimization--analysis) the Discover/Analyze features of Intent Manager. Select "Enabled" to enable “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances. For more on this, see [here](intent-manager-key-terms-concepts.html#intent-tracking).
+    * **Primary Domain**: This setting is displayed if you've [unlocked](intent-manager-overview.html#enable-intent-discovery-optimization--analysis) the Discover/Analyze features of Intent Manager. Select "Enabled" to set the domain as the primary domain. For information on this, see [here](intent-manager-key-terms-concepts.html#primary-domain).
 
 5. Click **Add**.
     

@@ -49,7 +49,7 @@ Domains added from prebuilt domains use the [LivePerson NLU engine](intent-manag
 
 ### Primary domain
 
-When you [add or update a domain](intent-manager-build-domains.html), you can set it as the primary domain, i.e., enable **Primary Domain**. Only one domain can be primary at a given time. The first domain that you add is considered primary, and this designation can’t be changed if you have only one domain. If you add subsequent domains, you can change which one is primary.
+If you've [unlocked](intent-manager-overview.html#enable-intent-discovery-optimization--analysis) the Discover/Analyze features of Intent Manager, then when you [add or update a domain](intent-manager-build-domains.html), you can set the domain as the primary domain (i.e., enable **Primary Domain**). Only one domain can be primary at a given time. The first domain that you add is considered primary, and this designation can’t be changed if you have only one domain. If you add subsequent domains, you can change which one is primary.
 
 A primary domain has two purposes. First, in applications that make use of a single domain (e.g., Agent Manager Workspace, Performance Optimizer, and Messaging Interaction API), this is the domain that is used.
 
@@ -111,7 +111,7 @@ You can't change the threshold when using intents, although you can do this with
 
 ### Intent tracking
 
-When you [add or update a domain](intent-manager-build-domains.html), you can select to enable **Intent Tracking**. This enables “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances.
+If you've [unlocked](intent-manager-overview.html#enable-intent-discovery-optimization--analysis) the Discover/Analyze features of Intent Manager, then when you [add or update a domain](intent-manager-build-domains.html), you can select to enable **Intent Tracking**. This enables “intent listening” for the domain, which provides you with enhanced intent-related reporting on your consumers’ utterances.
 
 When intent tracking is enabled, the system records and labels all future conversations with intent metadata (e.g., a consumer utterance of “I want to cancel my flight” is labeled as having the “cancel flight” intent in an “Airlines” domain). The system also records other metrics like CSAT, [Meaningful Conversation Score](https://knowledge.liveperson.com/data-reporting-meaningful-conversation-score-(mcs)-meaningful-conversation-score-(mcs)-overview.html) and more. This intent data is then populated into the **Analyze** page within Intent Manager.
 
