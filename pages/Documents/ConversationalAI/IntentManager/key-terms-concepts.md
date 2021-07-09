@@ -202,9 +202,9 @@ The platform automatically detects the entities listed below:
 * SET - Group (example month, week)
 * ORDINAL - A number used in the context of order. 15th, 10th, etc., are examples.
 * DATE - Date-related. Today, Tomorrow or explicit dates such as 03/01/2017
-* TIME - For example, 2PM
-* PERCENT - For example, 100%
-* LOCATION - For example, Paris
+* TIME - Time of day, for example, 2PM or 23:00.
+* PERCENT - A percentage, for example, 100%.
+* LOCATION - Names of locations, e.g., countries or cities, such as Paris.
 
 Using the [Assist tool](conversation-builder-assist.html), you can assign these built-in entities to user interactions and have the bot populate a [slot](conversation-builder-variables-slots.html) with the user's input to the question to which the entity was assigned.
 
