@@ -28,6 +28,22 @@ When testing your bot and you get an error in the response, you will be able to 
 ## Dialog Flow V2 Invalid Action Body
 ## Description
 This error happens when the bot has an invalid body and the Google Dialog Flow V2 is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is shown as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue.
+
+## Transfer Action Error
+## Description
+For this action the required parameter is skill that has to be a string, on the other hand agentId is an optional parameter that also has to be a string value.
+
+## Change TTR Action Error 
+## Description
+For this action the only required value is ttrType, it has to be a string.
+
+## Close Conversation Action Error
+## Description
+For this action there are no required parameters. In case the withoutPcs parameter is in the vendor response it has to be a boolean value. 
+
+## Faas Invocation Action Error
+## Description
+For this action the required values are lambdaUuid as string  and payload as object. FailOnError is an optional boolean value. 
  
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-google-dialogflow-version-2.html#change-time-to-response-of-conversation)
@@ -77,6 +93,22 @@ This error happens when not parsed messages and actions were found from the vend
 ## DialogFlow CX Invalid Action Body
 ## Description
 This error happens when the bot has an invalid body and the Google Dialog Flow CX is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is shown as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue.
+
+## Transfer Action Error
+## Description
+For this action the required parameter is skill that has to be a string, on the other hand agentId is an optional parameter that also has to be a string value.
+
+## Change TTR Action Error 
+## Description
+For this action the only required value is ttrType, it has to be a string.
+
+## Close Conversation Action Error
+## Description
+For this action there are no required parameters. In case the withoutPcs parameter is in the vendor response it has to be a boolean value. 
+
+## Faas Invocation Action Error
+## Description
+For this action the required values are lambdaUuid as string  and payload as object. FailOnError is an optional boolean value.
  
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-google-dialogflow-cx.html#change-time-to-response-of-conversation)
@@ -261,6 +293,22 @@ This error happens when not parsed messages and actions were found from the vend
 ## Description
 This error happens when the bot has an invalid action body and Lex is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is showing as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue.
 
+## Transfer Action Error
+## Description
+For this action the required parameter is skill that has to be a string, on the other hand agentId is an optional parameter that also has to be a string value.
+
+## Change TTR Action Error 
+## Description
+For this action the only required value is ttrType, it has to be a string.
+
+## Close Conversation Action Error
+## Description
+For this action there are no required parameters. In case the withoutPcs parameter is in the vendor response it has to be a boolean value. 
+
+## Faas Invocation Action Error
+## Description
+For this action the required values are lambdaUuid as string  and payload as object. FailOnError is an optional boolean value.
+
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-amazon-lex.html#change-time-to-response-of-conversation)
  
@@ -338,6 +386,22 @@ This error happens when not parsed messages and actions were found from the vend
 ## Invalid Action Body
 ## Description
 This error happens when the bot has an invalid action body and Faas is unable to parse it. It can be a wrong parameter, a value, or a missing parameter. Even though it is showing as an error in the Third Party Bots, the bot gently ignores unknown actions and the conversation will continue.
+
+## Transfer Action Error
+## Description
+For this action the required parameter is skill that has to be a string, on the other hand agentId is an optional parameter that also has to be a string value.
+
+## Change TTR Action Error 
+## Description
+For this action the only required value is ttrType, it has to be a string.
+
+## Close Conversation Action Error
+## Description
+For this action there are no required parameters. In case the withoutPcs parameter is in the vendor response it has to be a boolean value. 
+
+## Faas Invocation Action Error
+## Description
+For this action the required values are lambdaUuid as string  and payload as object. FailOnError is an optional boolean value.
  
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-custom-integration.htmll#change-time-to-response-of-conversation)
