@@ -1,16 +1,13 @@
 ---
-pagename: Discover
+pagename: Topic Clustering
 redirect_from:
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Intent Manager
-permalink: intent-manager-discover.html
+subfoldername: Discover
+permalink: intent-manager-discover-topic-clustering.html
 indicator: both
 ---
-
-To be added
-
-### Split an intent
 
 To be added

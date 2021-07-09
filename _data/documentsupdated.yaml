@@ -276,6 +276,9 @@
       - pagename: Getting Started
       - pagename: Best Practices
       - pagename: Discover
+        subpages:
+          - subpagename: Intent Discovery
+          - subpagename: Topic Clustering
       - pagename: Build
         subpages:
           - subpagename: Domains
