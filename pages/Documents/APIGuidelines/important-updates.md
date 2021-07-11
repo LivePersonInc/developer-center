@@ -1,12 +1,13 @@
 ---
 pagename: Important Updates
 sitesection: Documents
-categoryname: "Getting Started"
-documentname: API Guidelines
-permalink: api-guidelines-important-updates.html
+categoryname: "API Guidelines"
+permalink: important-updates.html
+redirect_from:
+    - essential-resources-messaging-features-capabilities-comparison.html
+    - api-guidelines-important-updates.html
 order: 11
 indicator: both
-
 ---
 
 ### Messaging Agent SDK upgrade available
