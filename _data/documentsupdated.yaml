@@ -5,17 +5,19 @@
   - documentname: Do More with the Conversational Cloud
   - documentname: Customizing the Conversational Cloud
   - documentname: Starting with your Concierge Bot
-  - documentname: API Guidelines
-    pages:
-    - pagename: Accessing LivePerson APIs
-    - pagename: Create API keys
-    - pagename: Domain API
-    - pagename: Data APIs
-    - pagename: API Data Metrics
-    - pagename: Engagement Attributes
-    - pagename: Analytics Builder Data Metrics
-    - pagename: Important Updates
-    - pagename: Retry Policy Recommendations
+
+- categoryname: API Guidelines
+  image: api-guidelines
+  documents:
+  - documentname: Accessing LivePerson APIs
+  - documentname: Create API keys
+  - documentname: Domain API
+  - documentname: Data APIs
+  - documentname: API Data Metrics
+  - documentname: Engagement Attributes
+  - documentname: Analytics Builder Data Metrics
+  - documentname: Important Updates
+  - documentname: Retry Policy Recommendations
 
 - categoryname: Agent Experience
   image: agent-experience-new

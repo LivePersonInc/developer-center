@@ -1,13 +1,13 @@
 ---
 pagename: Engagement Attributes
 redirect_from:
-  - engagment-attributes-overview.html
-  - engagement-attributes-overview.html
-  - essential-resources-engagement-attributes.html
+    - engagment-attributes-overview.html
+    - engagement-attributes-overview.html
+    - essential-resources-engagement-attributes.html
+    - api-guidelines-engagement-attributes.html
 sitesection: Documents
-categoryname: "Getting Started"
-documentname: API Guidelines
-permalink: api-guidelines-engagement-attributes.html
+categoryname: "API Guidelines"
+permalink: engagement-attributes.html
 order: 20
 indicator: both
 ---

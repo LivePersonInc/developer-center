@@ -1,11 +1,9 @@
 ---
 pagename: Create a new API Key
 redirect_from:
-  - guides-gettingstarted.html
+    - guides-gettingstarted.html
 sitesection: Documents
-categoryname: "Getting Started"
-documentname: Retrieve API Keys
-
+categoryname: "API Guidelines"
 permalink: retrieve-api-keys-create-a-new-api-key.html
 root-link: true
 level-order: 1
