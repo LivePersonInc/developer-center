@@ -10,7 +10,7 @@ indicator: messaging
 ---
 
 {: .important}
-No Knowledge Base article recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).
+No bot or Knowledge Base article recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).
 
 **Tip:** To train your agents, you can start by enabling recommendations for a single skill.
 
