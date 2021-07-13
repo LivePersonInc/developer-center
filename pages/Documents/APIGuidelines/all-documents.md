@@ -1,8 +1,7 @@
 ---
 pagename: All Documents
 sitesection: Documents
-categoryname: "Getting Started"
-documentname:
+categoryname: "API Guidelines"
 permalink: all-documents.html
 indicator: both
 ---

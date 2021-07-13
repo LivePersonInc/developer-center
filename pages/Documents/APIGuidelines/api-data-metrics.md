@@ -1,9 +1,8 @@
 ---
 pagename: API Data Metrics
 sitesection: Documents
-categoryname: "Getting Started"
-documentname: API Guidelines
-permalink: api-guidelines-api-data-metrics.html
+categoryname: "API Guidelines"
+permalink: api-data-metrics.html
 indicator: both
 redirect_from:
   - essential-resources-api-data-metrics.html

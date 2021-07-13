@@ -1,20 +1,19 @@
 ---
 pagename: Retry Policy Recommendations
-redirect_from:
-  - guides-retry-policy.html
-  - retry-and-keepalive-best-practices-overview.html
-  - essential-resources-retry-policy-recommendations.html
-  - common-resources-retry-policy-recommendations.html
 Keywords:
 sitesection: Documents
-categoryname: "Getting Started"
-documentname: API Guidelines
-
+categoryname: "API Guidelines"
 level-order: 11
 order: 10
-permalink: api-guidelines-retry-policy-recommendations.html
+permalink: retry-policy-recommendations.html
 root-link: true
-indicator: both  
+indicator: both
+redirect_from:
+    - guides-retry-policy.html
+    - retry-and-keepalive-best-practices-overview.html
+    - essential-resources-retry-policy-recommendations.html
+    - common-resources-retry-policy-recommendations.html
+    - api-guidelines-retry-policy-recommendations.html
 ---
 
 Each component in a network can return an error; whether it’s your local environment or in the cloud, applications can fail. These failures can result from a maintenance activity, a service incident, or a random network hiccup on the server or client side.

@@ -1,16 +1,15 @@
 ---
 pagename: Domain API
 redirect_from:
-  - agent-domain-domain-api.html
-  - retrieve-api-domains-using-the-domain-api.html
-  - essential-resources-domain-api.html
-  - common-resources-domain-api.html
-
+    - agent-domain-domain-api.html
+    - retrieve-api-domains-using-the-domain-api.html
+    - essential-resources-domain-api.html
+    - common-resources-domain-api.html
+    - api-guidelines-domain-api.html
 Keywords:
 sitesection: Documents
-categoryname: "Getting Started"
-documentname: API Guidelines
-permalink: api-guidelines-domain-api.html
+categoryname: "API Guidelines"
+permalink: domain-api.html
 root-link: true
 indicator:
 ---
