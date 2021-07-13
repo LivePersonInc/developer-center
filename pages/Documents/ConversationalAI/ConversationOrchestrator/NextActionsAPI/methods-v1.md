@@ -1,19 +1,20 @@
 ---
-pagename: Methods
+pagename: Methods v1
 redirect_from:
   - maven-askmaven-methods.html
   - maven-ai-askmaven-methods.html
   - maven-ai-recommendation-api-methods.html
+  - conversation-orchestrator-recommendation-api-methods.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
-subfoldername: Recommendation API
-permalink: conversation-orchestrator-recommendation-api-methods.html
+subfoldername: Next Actions API
+permalink: conversation-orchestrator-next-actions-api-methods-v1.html
 indicator: messaging
 ---
 
-There are two sets of APIs that can be used to manage properties in the Conversation Context Service (CCS):
+There are two ways to use the Next Actions functionality:
 
 * The REST API that can directly access CCS. A primary use case for this is to retrieve policy routing decisions when using external, third-party bots, such as Watson or DialogFlow. For more information on integrating your third-party bots with Conversational Cloud, see [here](third-party-bots-getting-started.html).
 * A JavaScript function that wraps the REST API for easy use in Conversation Builder. If you want to save and delete properties in Conversation Builder, use the Javascript wrapper functions.

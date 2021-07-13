@@ -51,7 +51,7 @@ This process is not limited to just saving the most recent intent for routing. O
 
 ### Creating policies using intents
 
-Having saved the intent names to the Conversation Context Service, you can now create policies that, when triggered by the Recommendation API, return skill information associated with that intent. 
+Having saved the intent names to the Conversation Context Service, you can now create policies that, when triggered by the Next Actions API, return skill information associated with that intent. 
 
 #### High-level process
 
@@ -89,7 +89,7 @@ Having saved the intent names to the Conversation Context Service, you can now c
 
 ### Testing
 
-Once an intent has been saved to the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the policy has been created, you can call the [Recommendation API](conversation-orchestrator-recommendation-api-overview.html) to receive the appropriate action. The returned action will contain a skill ID that corresponds to a bot agent specialized to handle the user’s intent. By using that skill ID in an Agent Transfer integration in Conversation Builder, you will route the conversation appropriately and seamlessly for the user, displaying that the intent routing solution is working as expected.
+Once an intent has been saved to the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the policy has been created, you can call the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) to receive the appropriate action. The returned action will contain a skill ID that corresponds to a bot agent specialized to handle the user’s intent. By using that skill ID in an Agent Transfer integration in Conversation Builder, you will route the conversation appropriately and seamlessly for the user, displaying that the intent routing solution is working as expected.
 
 #### Prerequisites
 
@@ -105,7 +105,7 @@ First, create a new [Agent Transfer](conversation-builder-interactions-integrati
 
 <img class="fancyimage" width="600" src="img/convorchestrator/co_dr_transfer.png">
 
-Then, in the pre-process code of this interaction, call the Recommendation API using the Conversation Builder scripting function, [askMaven](conversation-builder-scripting-functions-askmaven.html). This method returns a string representation of the matching policy, so you will also need to run the JSON.parse method to properly work with the result. An example of the returned JSON:
+Then, in the pre-process code of this interaction, call the Next Actions API using the Conversation Builder scripting function, [askMaven](conversation-builder-scripting-functions-askmaven.html). This method returns a string representation of the matching policy, so you will also need to run the JSON.parse method to properly work with the result. An example of the returned JSON:
 
 ```
 {

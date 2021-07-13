@@ -20,7 +20,7 @@ To start creating policies, navigate to **Intent & Context Policies** under the 
 Underneath the **Policy Usage** section is the **Manage policies** section, where you can create and manage the policies for the account. Each policy is made up of two different elements:
 
 * *Conditions*, where you define the rules for when you want the policy to be triggered
-* *Actions*, the definition for what is sent back to the bot via the Recommendation API
+* *Actions*, the definition for what is sent back to the bot via the Next Actions API
 
 In the next sections, we’ll dive deeper into how to configure each element to enable dynamic routing. Additionally, we’ll discuss how you can manage and prioritize your policies.
 
@@ -39,7 +39,7 @@ Each condition is built using four form fields to configure when the policy is t
 * The *Data Type* of the expected value of the attribute
 * The *Value* that the attribute returns
 
-Taken together, these four fields are a logical statement. If the statement returns true, the policy will be triggered and return an action to the service that has called the Recommendation API. To add more complex logic, multiple conditions can be added to any policy. However, all conditions must be satisfied for a policy to trigger its action.
+Taken together, these four fields are a logical statement. If the statement returns true, the policy will be triggered and return an action to the service that has called the Next Actions API. To add more complex logic, multiple conditions can be added to any policy. However, all conditions must be satisfied for a policy to trigger its action.
 
 #### Attributes
 
@@ -96,7 +96,7 @@ Add custom functions as attributes in your conditions in the same way that you a
 Functions can be used to integrate with external data sources, i.e., getting data from external systems or even calling external APIs. For more details, see [here](conversation-orchestrator-conversation-context-service-attributes.html#getting-attributes-through-functions). 
 
 {: .important}
-Keep in mind that this function will be invoked every time the [Recommendations API](conversation-orchestrator-recommendation-api-overview.html) is called, and that each invocation of a LivePerson Function counts toward the Fair Use Quota provided for your account. 
+Keep in mind that this function will be invoked every time the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) is called, and that each invocation of a LivePerson Function counts toward the Fair Use Quota provided for your account. 
 
 #### Operators
 
@@ -210,7 +210,7 @@ When creating a new policy, that policy is added to the bottom of the list in a 
 
 #### Enabling or disabling policies
 
-Each policy in the list will include the name and a toggle to signify if it is enabled or not. Policies with a disabled status will not be evaluated when the [Recommendations API](conversation-orchestrator-recommendation-api-overview.html) is called. To enable or disable policies, simply select the toggle button to switch its status.
+Each policy in the list will include the name and a toggle to signify if it is enabled or not. Policies with a disabled status will not be evaluated when the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) is called. To enable or disable policies, simply select the toggle button to switch its status.
 
 <img class="fancyimage" width="500" src="img/convorchestrator/co_dr_enabledisable.png">
 
