@@ -8,14 +8,14 @@ indicator: messaging
 ---
 
 ### Introduction
-Developers need to authenticate in order to use the Conversation Orchestrator APIs. Authentication is required for using both the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html).The authentication mechanism is different for v1 and v2. 
+Server-to-server authentication is required to use Conversation Orchestrator APIs, including the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html).The authentication mechanism differs between version 1 (v1) and version 2 (v2). 
 
 {: .important}
 To understand the differences between v1 and v2, see [here](conversation-orchestrator-conversation-context-service-overview.html#api-versions). To know which version you are on (v1 or v2), please visit the **API Authorization** page within the Conversation Orchestrator application and consult the following information in this topic.
 
 ### API Authorization for v1
 
-To use the v1 APIs, you need to create an API key. To get your unique key:
+Version 1 APIs are dependent on an API authorization key. To get your unique key:
 
 1. **Access the API Authorization page**: Access Conversation Orchestrator and then navigate to "API Authorization." This page displays an API key that you can use.
 
@@ -27,7 +27,7 @@ To use the v1 APIs, you need to create an API key. To get your unique key:
 
 ### API Authorization for v2
 
-To use the v2 APIs, you need a secure Oauth2.0 token. First, you need to generate the secure OAuth 2.0 token using the login endpoint. Then, you can start using this token in the APIs.
+Version 2 APIs are secured with authentication based on the OAuth 2.0 Client Credentials grant flow. To use this flow, you will generate a bearer token from the authorization server and use that for subsequent API calls.
 
 1. **Launch the API Authorization page**: Access Conversation Orchestrator and then navigate to "API Authorization." If you have been upgraded to v2, you will see the screen below.
 
