@@ -23,7 +23,7 @@ The amount of lambdas connected to a specific event is restricted and can be see
 Currently the following events are supported:
 
 |Event Name|Event Description|Event Source|Lambda Limit|Supports Skills|
-|--- |----- |--- |--- |--- |
+|--- |--- |--- |--- |--- |
 |Chat Post Survey E-Mail Transcript|Triggered after a chat conversation is finished and CSAT survey has been submitted.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-post-chat-survey-transcripts.html).|Chat Service (Consumer Post chat survey)|10|
 |Conversational Command|Use this event to implement a Conversational Command that can be invoked from within the agent workspace in Conversational Cloud by typing "/".<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-conversational-commands.html). |Agent Workspace (NAW only)|30|
 |Messaging Conversation End|Triggered when the conversation is closed by agent/consumer/system.<br/> For more details on how to set up a function like this one, please see details [here](liveperson-functions-integrations-messaging-conversations.html).|Conversational Exchange Service (Messaging Auto Messages)|1|✅|
