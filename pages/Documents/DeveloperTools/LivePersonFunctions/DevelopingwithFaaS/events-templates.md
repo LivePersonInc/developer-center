@@ -45,11 +45,14 @@ Currently the following events are supported:
 Each of these events also has an event specific input (payload) associated with it, that the triggering system will provide at runtime. When using the [Invoke](function-as-a-service-deploying-functions.html#testing-your-function) screen, this payload is shown on the left-hand side. During development, the event payload of the `lambda` is visible on the right-hand side at the sidebar-tab. See the [Payload](function-as-a-service-developing-with-faas-overview.html#editor-sidebar) section for more information.
 #### Support for limiting invocations by skills
 
-Certain events can be more restricted to only invoke a lambda on certain skills. This not only allows you to be more specific in your lambda invocations saving you some lines of code but it also means that it reduces the number of meaningless invocations.
+Specific events can be restricted to only invoke a lambda on certain skills. This grants you more control over when your lambda is invoked, saving you lines of boilerplate code as-well-as reducing the number of meaningless invocations.
 
 <img src="img/faas-select-skill.png" alt="Functions select skill" style="width:100%;"/>
 
-To specify to which skill the lambda should react simply select the skills during the creation/editing process of your lambda. By default, the lambda will react to all skills. If the lambda should only react to specific skills then there is a maximum of <b>10</b> skills that can be selected at any given time.
+To specify to which skill the lambda should react, simply select the skills during the creation/editing process of your lambda. By default, the lambda will react to all skills. If the lambda should only react to specific skills then there is a maximum of <b>10</b> skills that can be selected at any given time.
+
+<div class="important">Changing the skills of a lambda does not require a redeployment. The change is reflected within 5 minutes after saving.</div>
+
 ### Templates
 
 Additionally, Functions offers a number of templates. They can be used as a sample to kick-start the development of custom scenarios. Some of them are connected to events which the template list below is grouped by. Templates which have the same name as the related event are to be considered the default template for an event.

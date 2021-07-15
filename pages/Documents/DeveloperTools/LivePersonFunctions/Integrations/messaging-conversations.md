@@ -76,7 +76,7 @@ Once you have selected a "messaging conversations" event you can further specify
 
 <img src="img/faas-select-skill.png" alt="Functions select skill" style="width:100%;"/>
 
-<div class="important">By default no skill is selected. This will cause the lambda to react to all invocations regardless of skill. The maximum number of skills which can be specified is <b>10</b>.</div>
+<div class="important">By default no skill is selected. This will cause the lambda to react to all invocations regardless of skill. The maximum number of skills which can be specified is <b>10</b>. Changing the skills of a lambda does not require a redeployment. The change is reflected within 5 minutes after saving.</div>
 
 Specifying a skill has the advantage of reducing the complexity of the lambda's code. Furthermore, it reduces the number of unnecessary invocations.
 #### Step 2 - Edit the Function
