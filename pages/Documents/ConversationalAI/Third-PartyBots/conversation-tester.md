@@ -96,19 +96,25 @@ This error happens when the bot has an invalid body and the Google Dialog Flow C
 
 ## Transfer Action Error
 ## Description
-For this action the required parameter is skill that has to be a string, on the other hand agentId is an optional parameter that also has to be a string value.
+This error happens when either one or multiple of the following conditions not met
+- `skill` is the required parameter and it has to be provided as a **String**
+- `agentId` is an optional parameter and if provided the value must be a **String**
 
 ## Change TTR Action Error 
 ## Description
-For this action the only required value is ttrType, it has to be a string.
+This error happens when the required parameter `ttrType` is either not provided or if provided the format of the value is not a **String**
+
 
 ## Close Conversation Action Error
 ## Description
-For this action there are no required parameters. In case the withoutPcs parameter is in the vendor response it has to be a boolean value. 
+For this action there are no required parameters. When the withoutPcs optional parameter is provided the format should be **Boolean**
 
 ## Faas Invocation Action Error
 ## Description
-For this action the required values are lambdaUuid as string  and payload as object. FailOnError is an optional boolean value.
+This error happens when either one or multiple of the following conditions not met
+- `lambdaUuid` has not being provided as a **String** 
+- `payload` has not being provided as a **Object** 
+- `failOnError` has not being provided as **Boolean**
  
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-google-dialogflow-cx.html#change-time-to-response-of-conversation)
@@ -295,19 +301,25 @@ This error happens when the bot has an invalid action body and Lex is unable to 
 
 ## Transfer Action Error
 ## Description
-For this action the required parameter is skill that has to be a string, on the other hand agentId is an optional parameter that also has to be a string value.
+This error happens when either one or multiple of the following conditions not met
+- `skill` is the required parameter and it has to be provided as a **String**
+- `agentId` is an optional parameter and if provided the value must be a **String**
 
 ## Change TTR Action Error 
 ## Description
-For this action the only required value is ttrType, it has to be a string.
+This error happens when the required parameter `ttrType` is either not provided or if provided the format of the value is not a **String**
+
 
 ## Close Conversation Action Error
 ## Description
-For this action there are no required parameters. In case the withoutPcs parameter is in the vendor response it has to be a boolean value. 
+For this action there are no required parameters. When the withoutPcs optional parameter is provided the format should be **Boolean**
 
 ## Faas Invocation Action Error
 ## Description
-For this action the required values are lambdaUuid as string  and payload as object. FailOnError is an optional boolean value.
+This error happens when either one or multiple of the following conditions not met
+- `lambdaUuid` has not being provided as a **String** 
+- `payload` has not being provided as a **Object** 
+- `failOnError` has not being provided as **Boolean**
 
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-amazon-lex.html#change-time-to-response-of-conversation)
@@ -389,19 +401,25 @@ This error happens when the bot has an invalid action body and Faas is unable to
 
 ## Transfer Action Error
 ## Description
-For this action the required parameter is skill that has to be a string, on the other hand agentId is an optional parameter that also has to be a string value.
+This error happens when either one or multiple of the following conditions not met
+- `skill` is the required parameter and it has to be provided as a **String**
+- `agentId` is an optional parameter and if provided the value must be a **String**
 
 ## Change TTR Action Error 
 ## Description
-For this action the only required value is ttrType, it has to be a string.
+This error happens when the required parameter `ttrType` is either not provided or if provided the format of the value is not a **String**
+
 
 ## Close Conversation Action Error
 ## Description
-For this action there are no required parameters. In case the withoutPcs parameter is in the vendor response it has to be a boolean value. 
+For this action there are no required parameters. When the withoutPcs optional parameter is provided the format should be **Boolean**
 
 ## Faas Invocation Action Error
 ## Description
-For this action the required values are lambdaUuid as string  and payload as object. FailOnError is an optional boolean value.
+This error happens when either one or multiple of the following conditions not met
+- `lambdaUuid` has not being provided as a **String** 
+- `payload` has not being provided as a **Object** 
+- `failOnError` has not being provided as **Boolean**
  
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-custom-integration.htmll#change-time-to-response-of-conversation)
