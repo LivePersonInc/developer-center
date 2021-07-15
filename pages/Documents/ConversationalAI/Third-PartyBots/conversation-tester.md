@@ -47,9 +47,9 @@ For this action there are no required parameters. When the withoutPcs optional p
 ## Faas Invocation Action Error
 ## Description
 This error happens when either one or multiple of the following conditions not met
-- `lambdaUuid` has not being provided as a **String** 
-- `payload` has not being provided as a **Object** 
-- `failOnError` has not being provided as **Boolean** 
+- `lambdaUuid` is a required parameter and it has not being provided as a **String** 
+- `payload` is a required parameter and it has not being provided as a **Object** 
+- `failOnError` is an optional parameter and it has not being provided as **Boolean** 
  
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-google-dialogflow-version-2.html#change-time-to-response-of-conversation)
@@ -118,9 +118,9 @@ For this action there are no required parameters. When the withoutPcs optional p
 ## Faas Invocation Action Error
 ## Description
 This error happens when either one or multiple of the following conditions not met
-- `lambdaUuid` has not being provided as a **String** 
-- `payload` has not being provided as a **Object** 
-- `failOnError` has not being provided as **Boolean**
+- `lambdaUuid` is a required parameter and it has not being provided as a **String** 
+- `payload` is a required parameter and it has not being provided as a **Object** 
+- `failOnError` is an optional parameter and it has not being provided as **Boolean**
  
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-google-dialogflow-cx.html#change-time-to-response-of-conversation)
@@ -323,9 +323,9 @@ For this action there are no required parameters. When the withoutPcs optional p
 ## Faas Invocation Action Error
 ## Description
 This error happens when either one or multiple of the following conditions not met
-- `lambdaUuid` has not being provided as a **String** 
-- `payload` has not being provided as a **Object** 
-- `failOnError` has not being provided as **Boolean**
+- `lambdaUuid` is a required parameter and it has not being provided as a **String** 
+- `payload` is a required parameter and it has not being provided as a **Object** 
+- `failOnError` is an optional parameter and it has not being provided as **Boolean**
 
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-amazon-lex.html#change-time-to-response-of-conversation)
@@ -423,9 +423,9 @@ For this action there are no required parameters. When the withoutPcs optional p
 ## Faas Invocation Action Error
 ## Description
 This error happens when either one or multiple of the following conditions not met
-- `lambdaUuid` has not being provided as a **String** 
-- `payload` has not being provided as a **Object** 
-- `failOnError` has not being provided as **Boolean**
+- `lambdaUuid` is a required parameter and it has not being provided as a **String** 
+- `payload` is a required parameter and it has not being provided as a **Object** 
+- `failOnError` is an optional parameter and it has not being provided as **Boolean**
  
 #### Error Solution
 Please check [Change Time To Response of Conversation](third-party-bots-custom-integration.htmll#change-time-to-response-of-conversation)
