@@ -1,12 +1,13 @@
 ---
 pagename: Model Tester External APIs
 redirect_from:
+    - intent-builder-external-apis-model-tester-external-apis.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Intent Builder
+documentname: Intent Manager
 subfoldername: External APIs
-permalink: intent-builder-external-apis-model-tester-external-apis.html
+permalink: intent-manager-external-apis-model-tester-external-apis.html
 indicator: both
 ---
 

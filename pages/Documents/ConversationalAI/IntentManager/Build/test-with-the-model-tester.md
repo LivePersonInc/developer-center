@@ -1,12 +1,13 @@
 ---
-pagename: Advanced Model Testing
+pagename: Test with the Model Tester
 redirect_from:
+    - intent-builder-testing-advanced-model-testing.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Intent Builder
-subfoldername: Testing
-permalink: intent-builder-testing-advanced-model-testing.html
+documentname: Intent Manager
+subfoldername: Build
+permalink: intent-manager-build-test-with-the-model-tester.html
 indicator: both
 ---
 
@@ -18,7 +19,7 @@ If your domain is using the LivePerson engine or a 3rd-party NLU engine, there's
 
 The Model Tester is designed to help you to determine if the model is improving or regressing from one version to the next as you train the intents in the domain.
 
-If you need to [test a single utterance](intent-builder-testing-single-utterance-testing.html) against an intent or the domain, use the **Test User Input** tool. But for broad testing coverage of the intents in the domain, use the **Model Tester** if it's available.
+If you need to [test a single utterance](intent-manager-build-test-a-single-utterance.html) against an intent or the domain, use the **Test User Input** tool. But for broad testing coverage of the intents in the domain, use the **Model Tester** if it's available.
 
 ### High-level workflow
 
@@ -32,19 +33,26 @@ The general workflow for using the Model Tester is this:
 
 You can download test reports and comparison reports.
 
+### Access the Model Tester
+
+1. [Access Intent Manager](intent-manager-overview.html#access-intent-manager).
+2. Locate the domain list in the Intent Manager dashboard.
+3. Select the name of the relevant domain, and then select **Build** from the menu that appears.
+3. Select the **Model Tester** page.
+
 ### Add phrases to the test set
 In a domain, there are several ways to add phrases to the Model Tester’s test set:
 
-* Click **Model Tester** in the upper-left corner, and then click **Import Test Set** to import a CSV file that contains the phrases.
+* Access the Model Tester, and click **Import Test Set** to import a CSV file that contains the phrases.
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/ib_model_tester_addphrase4.png">
     Use the format below in the CSV file. Use the first line to name the columns as shown; this line is ignored during the import.
     <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/ib_model_tester_addphrase5.png">
 
     Be aware that uploading a CSV file overwrites any test phrases that already exist in the test set with those in the import file. Additionally, when creating the import file, take care when specifying the intents. If an intent in the file isn't found in the domain, the associated test phrase is skipped during the import.
 
-* Click **Model Tester** in the upper-left corner, and enter the phrases manually on the **Test Set** tab.
+* Access the Model Tester, and enter the phrases manually on the **Test Set** tab.
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase1.png">
-* In **Test User Input** (where [single-phrase testing](intent-builder-testing-single-utterance-testing.html) is performed), click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
+* In **Test User Input** (where [single-phrase testing](intent-manager-build-test-a-single-utterance.html) is performed; on the **Intents** page), click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to the sample utterance.
     <img class="fancyimage" style="width:300px" src="img/ConvoBuilder/ib_model_tester_addphrase2.png">
 * In an intent’s details, click <img style="width:25px" src="img/ConvoBuilder/icon_ib_quick_add.png"> (quick add) next to a training phrase.
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/ib_model_tester_addphrase3.png">
@@ -54,10 +62,9 @@ Once you’ve added a number of phrases to the test set, you need to refine the 
 
 **To refine the test set**
 
-1. Open the domain.
-2. Click **Model Tester** in the upper-left corner.
-3. Click the **Test Set** tab.
-4. Refine the test set as follows:
+1. Display the domain, and access the Model Tester.
+2. Click the **Test Set** tab.
+3. Refine the test set as follows:
     * If you added a number of phrases using the Quick Add icons, make small changes to the phrases as appropriate. The test set shouldn’t contain exact matches to the intents. This will always yield a passing score, so it isn't a valid test. In fact, if the phrase is an exact match, the match is found in pre-processing, and NLU processing is never used. 
     
         Enter test phrases that are variations of the intents. The goal is to determine how well the intents are performing when these variations are evaluated against the intents using NLU.
@@ -83,13 +90,12 @@ Click the message, and then select **Unselected** to see the list of intents for
 ### Run the test
 **To run the test set against the domain**
 
-1. Open the domain.
-2. Click **Model Tester** in the upper-left corner. 
-3. Click **Run Test** in the upper-right corner.
-4. Specify the following:
+1. Display the domain, and access the Model Tester. 
+2. Click **Run Test** in the upper-right corner.
+3. Specify the following:
     * **Test Report Name**: Enter a name for the report.
     * **Model Version**: Select the model version against which to run the test. You can select the activated model version or any later version.
-5. Click **Test**.
+4. Click **Test**.
 
     You can click <img style="width:25px" src="img/ConvoBuilder/icon_ib_refresh.png"> (Refresh icon) to periodically check the status of the test.
 
@@ -102,10 +108,9 @@ The system retains the 10 most recent reports.
 
 **To view a report**
 
-1. Open the domain.
-2. Click **Model Tester** in the upper-left corner. 
-3. Click the **Test Reports** tab.
-4. Click the report name.
+1. Display the domain, and access the Model Tester. 
+2. Click the **Test Reports** tab.
+3. Click the report name.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_viewreport.png">
 
@@ -125,13 +130,13 @@ There are several, important metrics displayed:
 ### Evaluate the report
 
 {: .important}
-On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-builder-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu).
+On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-manager-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu).
 
 If the report's scores are low, take corrective action as follows:
 
 **Low Test Coverage**: This indicates that many intents in the domain aren't represented in the test set. To improve the test coverage:
 
-* In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you use actual data to enrich your training set. You can find such data with [Intent Analyzer](intent-analyzer-overview.html).
+* In the test set, add phrases for the overlooked intents. This might require that you broaden the use cases and provide utterances that approach the intent from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you [use actual data](intent-manager-discover.html) to enrich your training set.
 * In the Intents list, delete any unused and irrelevant intents. In effect, clean the domain. This can often improve performance.
 
 **Low Success Rate**: This indicates that many test phrases failed the test because they either didn't match the expected intents, or they did so with low match ratings. Here below is an example of the latter:
@@ -154,11 +159,10 @@ A true comparison of reports -- to accurately determine if the domain/model is i
 
 **To compare reports**
 
-1. Open the domain.
-2. Click **Model Tester** in the upper-left corner. 
-3. Click the **Test Reports** tab.
-4. In the dashboard that lists the reports, select the checkboxes for both reports.
-5. Click **Compare Reports** in the upper-right corner.
+1. Display the domain, and access the Model Tester. 
+2. Click the **Test Reports** tab.
+3. In the dashboard that lists the reports, select the checkboxes for both reports.
+4. Click **Compare Reports** in the upper-right corner.
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_model_tester_comparereports.png">
 
