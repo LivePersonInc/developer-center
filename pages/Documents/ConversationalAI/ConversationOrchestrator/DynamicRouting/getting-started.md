@@ -17,7 +17,7 @@ To get started, you need to direct traffic to a routing bot. Your setup is diffe
 
 * If you already have a functional routing bot in the Conversational Cloud and you don’t want to move that logic to a new bot, you’ll need to manually hook the bot to [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) and the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html). This approach requires a little more code modification.
 
-* You can use [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) even if all your automation is configured on an external platform like Google DialogFlow. In this case, you can create routing policies in Dynamic Routing, but you need to use the [Recommendations API](conversation-orchestrator-recommendation-api-overview.html) from the external system to perform routing.
+* You can use [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) even if all your automation is configured on an external platform like Google DialogFlow. In this case, you can create routing policies in Dynamic Routing, but you need to use the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) from the external system to perform routing.
 
 Each of these options is further discussed in this topic.
 
@@ -36,18 +36,6 @@ Each of these options is further discussed in this topic.
 3. Toggle to **Enable Context API**, and ensure you select to **Use Conversational Cloud Site ID**, entering your organization’s account number.
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_enablecontextapi.png">
-
-#### Enable the Recommendations API
-
-To enable the Recommendation APIs you will need to create and use a Developer API key. To get your unique key:
-
-1. Open **Conversation Orchestrator** within your Conversational Cloud account, and navigate to **Developer Key**.
-
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_apikey.png">
-
-2. Copy and paste the key you see in the experience, and use it in your API headers.
-
-    To generate a new key, click the **Regenerate Key** button. This will invalidate the previous key. The key is shared for all Conversation Orchestrator APIs; therefore, you will need to use the new key wherever the APIs are being called.
  
 #### Choose your routing bot
 
@@ -55,7 +43,7 @@ To enable the Recommendation APIs you will need to create and use a Developer AP
 
 * If you already have a functional routing bot in the Conversational Cloud and you don’t want to move that logic to a new bot, you’ll need to manually hook the bot to [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html) and the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html). This approach requires a little more code modification.
 
-* You can use Dynamic Routing even if all your automation is configured on an external platform like Google DialogFlow. In this case, you can create routing policies in [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html), but you need to use the [Recommendations API](conversation-orchestrator-recommendation-api-overview.html) from the external system to perform routing.
+* You can use Dynamic Routing even if all your automation is configured on an external platform like Google DialogFlow. In this case, you can create routing policies in [Dynamic Routing](conversation-orchestrator-dynamic-routing-overview.html), but you need to use the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) from the external system to perform routing.
 
 Each of the above options is discussed below.
 
@@ -666,24 +654,20 @@ Now test a conversation that doesn’t trigger the complaint routing.
 ### Using Conversation Orchestrator outside of Conversational Cloud
 This section of the documentation assumes that you are already familiar with linking third-party bots to Conversation Cloud. If you aren't, we strongly suggest that you read the documentation [here](third-party-bots-getting-started.html). 
 
-Once your third-party bot is ready, you can [set up routing policies](conversation-orchestrator-dynamic-routing-creating-and-managing-policies.html) on Dynamic Routing and leverage the [Recommendations API](conversation-orchestrator-recommendation-api-overview.html) to receive routing recommendations. You need to handle transfers appropriately within your third-party bot in the appropriate channel. Third-party bots can use the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to read or write contextual information that can be leveraged for dynamic routing or even bot-to-bot communication.
+Once your third-party bot is ready, you can [set up routing policies](conversation-orchestrator-dynamic-routing-creating-and-managing-policies.html) on Dynamic Routing and leverage the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) to receive routing recommendations. You need to handle transfers appropriately within your third-party bot in the appropriate channel. Third-party bots can use the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) to read or write contextual information that can be leveraged for dynamic routing or even bot-to-bot communication.
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_co_outside_cc.png">
 
-{: .important}
-Before you start, please make sure you have enabled the Conversation Context Service
-and the Recommendations API. Information on how to do this is provided earlier on in this topic.
-
-#### Example using the Recommendation API from Google DialogFlow
+#### Example using the Next Actions API from Google DialogFlow
 
 High-level flow:
 1. Get the conversation ID.
 2. Set the routing variable in the Conversation Context Service.
-3. Call the Recommendation API with the conversation ID.
+3. Call the Next Actions API with the conversation ID.
 
 ##### Step 1 - Get the conversation ID
 
-The conversation ID is required for using the Recommendation APIs. This ID is used by the policy to retrieve conversation and Conversation Context Service parameters.
+The conversation ID is required for using the Next Actions APIs. This ID is used by the policy to retrieve conversation and Conversation Context Service parameters.
 
 Inside Dialogflow Fulfillment, modify the sample code for the event handler for each request.
 
@@ -723,9 +707,9 @@ axios.patch(
 );
 ```
 
-##### Step 3 - Call the Recommendation API
+##### Step 3 - Call the Next Actions API
 
-Now that you have the conversation ID, use it to call the Recommendation API as follows:
+Now that you have the conversation ID, use it to call the Next Actions API as follows:
 
 ```javascript
 const askMavenUrl = 'https://z1.askmaven.liveperson.net/v1/account/55884191/next-actions';
@@ -744,4 +728,4 @@ axios.get(
 });
 ```
 
-For more information on using the Recommendations API, see [here](conversation-orchestrator-recommendation-api-overview.html).
+For more information on using the Next Actions API, see [here](conversation-orchestrator-next-actions-api-overview.html).
