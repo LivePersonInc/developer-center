@@ -57,7 +57,7 @@ Once the user selects the correct intent, if that intent is associated with a Di
 6. Customize the question text to send to the consumer.
     <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation5.png">
 
-    The intents will be dynamically populated, and their labels will be drawn from their intent display names as configured in [Intent Builder](intent-builder-overview.html).
+    The intents will be dynamically populated, and their labels will be drawn from their intent display names as configured in [Intent Manager](intent-manager-overview.html).
 
     <img style="width:600px" src="img/ConvoBuilder/dialogs_disambiguation6.png">
 

@@ -63,7 +63,7 @@ Having saved the intent names to the Conversation Context Service, you can now c
 
 #### Detailed process
 
-1. From the Conversation Orchestrator welcome screen, select [Intents](intent-builder-intents.html) under the **Conversation Context Service** heading to see a list of intents that are available for use in your policies. This intent list is generated from all the domains that have been created for your account.
+1. From the Conversation Orchestrator welcome screen, select [Intents](intent-manager-key-terms-concepts.html#intents) under the **Conversation Context Service** heading to see a list of intents that are available for use in your policies. This intent list is generated from all the domains that have been created for your account.
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_intentlist.png">
 
