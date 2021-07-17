@@ -1029,6 +1029,7 @@
         - pagename: Card Template
         - pagename: Carousel Template
         - pagename: Quick Replies Template
+        - pagename: Date Picker Template
         - pagename: Multiple Checklist Template
         - pagename: Best Practices
         - pagename: Complex Layout
