@@ -23,7 +23,7 @@ Within the Knowledge Base application, an external knowledge base serves as a co
 
 ### Why use LivePerson's AI?
 
-By using an AI-enabled knowledge base, you can offer your consumers a more helpful experience. AI-enabled knowledge bases use [Natural Language Understanding](intent-builder-natural-language-understanding.html) (NLU) technology to understand and intelligently match what consumers are asking for to articles in your knowledge base.
+By using an AI-enabled knowledge base, you can offer your consumers a more helpful experience. AI-enabled knowledge bases use [Natural Language Understanding](intent-manager-natural-language-understanding.html) (NLU) technology to understand and intelligently match what consumers are asking for to articles in your knowledge base.
 
 ### Assessing your content for Messaging
 

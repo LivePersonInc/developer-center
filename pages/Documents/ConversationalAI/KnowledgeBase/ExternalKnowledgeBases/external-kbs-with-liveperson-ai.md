@@ -14,14 +14,14 @@ indicator: both
 An external knowledge base with LivePerson AI:
 
 * Integrates with an external content management system (CMS)
-* Uses a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance (the intent) and return the highest scoring article. Using the capabilities of NLU to do this work is recommended for the best consumer experience.
+* Uses a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance (the intent) and return the highest scoring article. Using the capabilities of NLU to do this work is recommended for the best consumer experience.
 
     When you add this type of knowledge base, some article information (e.g., title and article ID) is retrieved from the CMS and made visible within the Knowledge Base application. The information isn’t editable, but it’s made visible because you need it to be able to perform some work, namely, to associate the articles with the intents in a domain and to train the knowledge base.
 
 ### High-level workflow
 When adding an external knowledge base with LivePerson AI, follow this high-level workflow:
 
-1. In [Intent Builder](intent-builder-overview.html), create the [domain](intent-builder-domains.html) and the [intents](intent-builder-intents.html) therein.
+1. In [Intent Manager](intent-manager-overview.html), create the [domain](intent-manager-key-terms-concepts.html#domains) and the [intents](intent-manager-key-terms-concepts.html#intents) therein.
 2. In Knowledge Base:
     1. Add the external knowledge base. During this step, you’ll specify the domain that you created in step 1.
     2. In the external knowledge base that you added, associate each article with an intent in the domain. 

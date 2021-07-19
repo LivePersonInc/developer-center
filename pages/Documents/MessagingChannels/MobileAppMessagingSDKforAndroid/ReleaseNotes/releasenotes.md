@@ -672,6 +672,42 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
 
+# Android Messaging SDK - Version 4.9.0
+
+**Release date:** July 12, 2021
+
+# Overview
+Android Mobile Messaging SDK version 4.9.0 release includes Date Picker support and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.9.0 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+
+**(unchanged from version 4.8.1)**
+
+# New Feature:
+
+DatePicker allows brand agents to send the Structured Content to consumers to choose desired date or a date range using an inbuilt calendar.
+
+<div style="width: 100%; position: relative;">
+    <img src="../../../../img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="../../../../img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+</div>
+
+# Bugs Fixed:
+
+- [onConversationResolved](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#conversation-resolved) fired twice for main conversation and PCS.
+
+# Enhancements:
+
+- Support bold and italic in system messages.
+- Support five additional languages. (Malaysian, Arabic, French-Canadoan, Indonesian, Latin American Spanish)
+- Optimized [History Control APIs](mobile-app-messaging-sdk-for-android-sdk-apis-control-history-apis.html#important-notes) to allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen.
+
+
 # Android Messaging SDK - Version 4.8.1
 
 **Release date:** April 26, 2021
