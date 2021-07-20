@@ -15,7 +15,7 @@ You can use the Assist tool to associate a dialog starter with a domain and an i
 
 ### Associate a dialog starter with a domain
 
-You associate a dialog starter with a [domain](intent-builder-domains.html) to give you access inside the dialog to the intents (and entities) within the domain. 
+You associate a dialog starter with a [domain](intent-manager-key-terms-concepts.html#domains) to give you access inside the dialog to the intents (and entities) within the domain. 
 
 If desired, this lets you subsequently associate the dialog starter with one of the domain's intents to trigger the dialog's flow. (Alternatively, you can use patterns to trigger the dialog.)
 
@@ -32,7 +32,7 @@ If desired, this lets you subsequently associate the dialog starter with one of 
 
 ### Associate a dialog starter with an intent
 
-Associating a dialog starter with an [intent](intent-builder-intents.html) means that when a user provides an utterance that matches a particular dialog starter's intent, the bot will trigger that dialog's flow.
+Associating a dialog starter with an [intent](intent-manager-key-terms-concepts.html#intents) means that when a user provides an utterance that matches a particular dialog starter's intent, the bot will trigger that dialog's flow.
 
 **To associate a dialog starter with an intent**
 
@@ -46,11 +46,11 @@ Associating a dialog starter with an [intent](intent-builder-intents.html) means
 
 ### Associate a question with an entity
 
-Once you've associated the dialog (or question interaction) with a domain, you can also use Assist to assign [entities](intent-builder-entities.html) to questions. This automatically creates [slots](conversation-builder-variables-slots.html#slots) to store user responses.
+Once you've associated the dialog (or question interaction) with a domain, you can also use Assist to assign [entities](intent-manager-key-terms-concepts.html#entities) to questions. This automatically creates [slots](conversation-builder-variables-slots.html#slots) to store user responses.
 
 <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity1.png">
 
-To do this in Assist, search for the entity by entering a user message. This populates the available entities based on the values you've assigned to the entities in [Intent Builder](intent-builder-overview.html).
+To do this in Assist, search for the entity by entering a user message. This populates the available entities based on the values you've assigned to the entities in [Intent Manager](intent-manager-overview.html).
 
 <img alt="test" class="fancyimage" style="width:800px" src="img/ConvoBuilder/assist_assignEntity2.png">
 

@@ -23,7 +23,7 @@ Multiple choice questions let the consumer select an answer from a list of choic
 
 <img style="width:400px" src="img/ConvoBuilder/questions_mcq1.png">
 
-One powerful feature of multiple choice questions is that the bot can be configured to respond to answers not appearing in the list through the use of [entities](intent-builder-entities.html).
+One powerful feature of multiple choice questions is that the bot can be configured to respond to answers not appearing in the list through the use of [entities](intent-manager-key-terms-concepts.html#entities).
 
 <img style="width:650px" src="img/ConvoBuilder/questions_mcq3.png">
 

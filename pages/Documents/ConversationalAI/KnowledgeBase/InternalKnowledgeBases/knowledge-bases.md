@@ -80,9 +80,9 @@ The import file can contain the subset of HTML that’s discussed [here](knowled
 
 ### Convert Knowledge Base intents to Domain intents
 
-When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Builder in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Builder.
+When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Manager in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Manager.
 
-From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the Knowledge Base application to the Intent Builder application.
+From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the Knowledge Base application to the Intent Manager application.
 
 {: .important}
 Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the affected knowledge base. Also, this action irreversibly modifies the domain that you select as described above.
@@ -95,7 +95,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
 5. In the dialog that appears, select the domain.
 
     * If, within the knowledge base, you’re already using entities from an associated domain, select that domain here.
-    * If you select a domain that uses the LivePerson (Legacy) engine, you are encouraged to subsequently [convert the domain to the LivePerson engine](intent-builder-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. See [here](intent-builder-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy) for the benefits of LivePerson over LivePerson (Legacy). **LivePerson will deprecate the LivePerson (Legacy) engine at the end of July 2021.**
+    * If you select a domain that uses the LivePerson (Legacy) engine, you are encouraged to subsequently [convert the domain to the LivePerson engine](intent-manager-build-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. See [here](intent-manager-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy) for the benefits of LivePerson over LivePerson (Legacy). **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021.**
     * While you can select from all existing domains regardless of the NLU engine that it uses, if you instead create a domain on-the-fly in this step, you can only create a domain that uses the LivePerson engine or a third-party engine.
 
 6. In the confirmation dialog, click **Confirm**.

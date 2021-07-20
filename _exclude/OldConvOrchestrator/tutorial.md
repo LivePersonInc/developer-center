@@ -337,7 +337,7 @@ Please see [Manage the Conversation Context Service](conversation-builder-script
 
 To add additional context:
 
-1. Select the Recommendation API Interaction, and then on the right hand side in the Interaction details, Code
+1. Select the Next Actions API Interaction, and then on the right hand side in the Interaction details, Code
 
     <img class="fancyimage" width="750" src="img/maven/cb-interaction-details.png"/>
 

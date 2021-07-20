@@ -26,7 +26,7 @@ To set up Conversation Orchestrator’s Agent Assist to suggest recommended arti
 * Create a knowledge base
 * Create an article
 
-If you will create a knowledge base that uses intents in Intent Builder (associating the intents with knowledge base’s articles), you must also be able to use the Intent Builder application to:
+If you will create a knowledge base that uses intents in Intent Manager (associating the intents with knowledge base’s articles), you must also be able to use the Intent Manager application to:
 
 * Create a domain
 * Create an intent
@@ -36,7 +36,7 @@ For exposure to these Conversational AI applications and tasks, we recommend tha
 * [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html)
 * [Bot Groups & Other Techniques](tutorials-guides-bot-groups-other-techniques-overview.html)
 
-Both tutorial series focus primarily on using the Conversation Builder application for bot building. However, along the way, they also familiarize you with the Intent Builder and Knowledge Base applications.
+Both tutorial series focus primarily on using the Conversation Builder application for bot building. However, along the way, they also familiarize you with the Intent Manager and Knowledge Base applications.
 
 ### High-level workflow
 1. In the Knowledge Base application, create the knowledge bases and the articles therein, using your content source or working from scratch.
@@ -47,7 +47,7 @@ Before Agent Assist can start recommending articles, you need to create at least
 
 To get started, it’s recommended that you create at least one article in the knowledge base, so you can verify that your setup is complete and working. You can continue to add more articles at any time after setup.
 
-If you’re setting up a knowledge base that associates intents with articles, then as a part of this step, you’ll also need to use [Intent Builder](intent-builder-overview.html) to create the domain and the necessary intents therein. Once this is done, back in Knowledge Base, you’ll need to [associate the intents with the articles](knowledge-base-using-intents-with-kbs.html).
+If you’re setting up a knowledge base that associates intents with articles, then as a part of this step, you’ll also need to use [Intent Manager](intent-manager-overview.html) to create the domain and the necessary intents therein. Once this is done, back in Knowledge Base, you’ll need to [associate the intents with the articles](knowledge-base-using-intents-with-kbs.html).
 
 ### Step 2: Configure Agent Assist
 Configuration of Agent Assist involves the following:
