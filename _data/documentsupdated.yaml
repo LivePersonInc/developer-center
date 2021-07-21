@@ -881,6 +881,13 @@
         subpages:
           - subpagename: Metrics
           - subpagename: Historical
+  - documentname: Agent Activity API
+    basedomain: https://{domain}/api/account/{accountID}
+    pages:
+      - pagename: Overview
+      - pagename: Methods
+      subpages:
+        - subpagename: Get Status Changes
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
