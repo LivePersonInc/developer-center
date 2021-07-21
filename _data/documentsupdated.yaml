@@ -886,8 +886,8 @@
     pages:
       - pagename: Overview
       - pagename: Methods
-      subpages:
-        - subpagename: Get Status Changes
+        subpages:
+          - subpagename: Get Status Changes
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
