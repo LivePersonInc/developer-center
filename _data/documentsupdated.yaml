@@ -888,6 +888,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Get Status Changes
+      - pagename: Error Codes
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
