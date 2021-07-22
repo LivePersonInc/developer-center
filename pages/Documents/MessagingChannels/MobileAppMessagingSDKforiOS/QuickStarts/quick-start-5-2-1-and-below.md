@@ -84,7 +84,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 #### *Option 2: Manually copying the libraries to your Xcode Project*
 
-1. [Download](https://github.com/LP-Messaging/iOS-Messaging-SDK) the SDK package.
+1. [Download](https://github.com/LivePersonInc/iOSFrameworks) the SDK package.
 
 2. Extract the file to a folder on your computer.
 
