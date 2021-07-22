@@ -89,4 +89,6 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 }
 ```
 
+### Error Codes
 
+See [Error Codes](error-codes.html)
