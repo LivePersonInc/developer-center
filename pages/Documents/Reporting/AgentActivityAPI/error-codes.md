@@ -9,11 +9,11 @@ indicator: both
 
 | Error Code | Description | Follow Up |
 | --- | --- | --- |
-| 400 | Bad request due to client error | Fix the issues specified in `causes`, and try again |
-| 401 | Unauthorized | Check if your API key is valid and has the correct permissions (See [overview](overview.html)), then try again. If the issue persists, open a support ticket |
-| 429 | Too many requests | Try again later |
-| 500 | Internal server error | Try again later. If the issue persists, open a support ticket and include the `internalCode` from the response |
-| 503 | Service unavailable | Try again later. If the issue persists, open a support ticket |
+| 400 | Bad request due to client error | Do not retry. Fix the issues specified in `causes` |
+| 401 | Unauthorized | Do not retry. Verify your API key is valid and has the correct permissions (See [overview](agent-activity-api-overview.html)) |
+| 429 | Too many requests | Retry after at least 1 second |
+| 500 | Internal server error | Retry 3 times with increasing pause between retries of at least 5, 10, and 15 seconds |
+| 503 | Service unavailable | Retry 3 times with increasing pause between retries of at least 5, 10, and 15 seconds |
 
 ### Example Responses
 

@@ -23,10 +23,10 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 | Name | Description | Type | Required? | Default | Notes |
 | --- | --- | --- | --- | --- | --- |
 | source | This describes the originator of the call | string | Required | | |
-| from | This filters the results to status changes occurred within the timeframe between `from` and `to` | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Optional | 24 hours prior to request time | <ul> <li>If provided, `to` must also be provided</li> <li>Minimum value: 13 months prior to request time</li> <li>Maximum timeframe between `from` and `to`: 1 month</li> </ul> |
-| to | This filters the results to status changes occurred within the timeframe between `from` and `to`  | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Optional | request time | <ul> <li>If provided, `from` must also be provided</li> <li>Maximum timeframe between `from` and `to`: 1 month</li> </ul> |
-| agentId | This filters the results to status changes of the agent with the specified LivePerson ID | number | Optional | | <ul> <li>If provided, `empId` must not be provided</li> <li>If neither `agentId` nor `empId` are provided, all agents will be returned</li> </ul> |
-| empId | This filters the results to status changes of the employee with the specified employee ID | string | Optional | | <ul> <li>If provided, `agentId` must not be provided</li> <li>If neither `agentId` nor `empId` are provided, all agents will be returned</li> </ul> |
+| from | This filters the results to status changes occurred within the timeframe between `from` and `to` | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Optional | 24 hours prior to request time |{::nomarkdown}<ul> <li>If provided, `to` must also be provided</li> <li>Minimum value: 13 months prior to request time</li> <li>Maximum timeframe between `from` and `to`: 1 month</li> </ul> {:/}|
+| to | This filters the results to status changes occurred within the timeframe between `from` and `to`  | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | Optional | request time |{::nomarkdown}<ul> <li>If provided, `from` must also be provided</li> <li>Maximum timeframe between `from` and `to`: 1 month</li> </ul>{:/}|
+| agentId | This filters the results to status changes of the agent with the specified LivePerson ID | number | Optional | |{::nomarkdown}<ul> <li>If provided, `empId` must not be provided</li> <li>If neither `agentId` nor `empId` are provided, all agents will be returned</li> </ul>{:/}|
+| empId | This filters the results to status changes of the employee with the specified employee ID | string | Optional | |{::nomarkdown}<ul> <li>If provided, `agentId` must not be provided</li> <li>If neither `agentId` nor `empId` are provided, all agents will be returned</li> </ul>{:/}|
 | limit | This limits the number of agents, for which status changes will be included in the results | number | Optional | 50 | Maximum value: 100 |
 | offset | This allows to get more results in case you have more agents than `limit` | number | Optional | 0 |  |
 
@@ -47,8 +47,8 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 | time | Time of this status change | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | |
 | sessionId | Identifier of the session during which this status change took place | number | |
 | sequenceNumber | Sequential number of this status change within the session | number | |
-| statusType | Type of status change | number | <ul> <li>1 - status changed, see `statusSubType`</li> <li>3 - login</li> <li>4 - logout</li> </ul> |
-| statusSubType | Subtype of status change with `statusType`=1 | number | <ul> <li>1 - offline</li> <li>2 - online</li> <li>3 - occupied</li> <li>4 - away</li> </ul> |
+| statusType | Type of status change | number |{::nomarkdown}<ul> <li>1 - status changed, see `statusSubType`</li> <li>3 - login</li> <li>4 - logout</li> </ul>{:/}|
+| statusSubType | Subtype of status change with `statusType`=1 | number |{::nomarkdown}<ul> <li>1 - offline</li> <li>2 - online</li> <li>3 - occupied</li> <li>4 - away</li> </ul>{:/}|
 | statusReasonId | Identifier of optional custom reason for the status change | number | -1 if no custom reason was provided by the agent |
 | statusReasonText | Optional custom reason for the status change | string | null if no custom reason was provided by the agent |
 | prevStatusChangeTime | Time of this agent’s previous status change | [RFC 3339](https://tools.ietf.org/html/rfc3339) date-time string | null if value is missing |
@@ -89,4 +89,4 @@ If you have not done so yet, see the [overview](agent-activity-api-overview.html
 
 ### Error Codes
 
-See [Error Codes](error-codes.html)
+See [Error Codes](agent-activity-api-error-codes.html)

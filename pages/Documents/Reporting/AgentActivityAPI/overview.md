@@ -26,17 +26,17 @@ A few things you'll need to get started with this API:
 
 1. **Retrieve your domain**. Use the [LivePerson Domain API](agent-domain-domain-api.html) to retrieve this information by providing the following service name:
 
-	* Add any relevant service names for the API here.
+	* agentActivity
 
 2. This API requires authorization using an API key methodology.
 
 	* [Follow these instructions](guides-gettingstarted.html), to create and use an API key.
 	
-	* To access this API, the API Key must have the `Data > Workforce Management > Agent Activity API` permission.  
+	* To access this API, the API key must have the `Data > Workforce Management > Agent Activity API` permission.  
 
 3. [Here are the API terms of use](https://www.liveperson.com/policies/terms-of-use).
 
-4. When using this API, it is recommended that you implement our [Retry Policy and KeepAlive best practices](guides-retry-policy.html)
+4. When using this API, it is recommended that you implement our [Retry Policy](guides-retry-policy.html)
 
 ### Use cases
 
