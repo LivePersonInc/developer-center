@@ -1,7 +1,5 @@
 ---
 pagename: Overview
-redirect_from:
-  - agent-activity-api-overview.html
 sitesection: Documents
 categoryname: Reporting
 documentname: Agent Activity API

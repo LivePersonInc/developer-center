@@ -1,7 +1,5 @@
 ---
 pagename: ErrorCodes
-redirect_from:
-  - agent-activity-api-error-codes.html
 sitesection: Documents
 categoryname: Reporting
 documentname: Agent Activity API

@@ -1,7 +1,5 @@
 ---
 pagename: Get Status Changes
-redirect_from:
-  - agent-activity-api-methods-get-status-changes.html
 sitesection: Documents
 categoryname: Reporting
 documentname: Agent Activity API
