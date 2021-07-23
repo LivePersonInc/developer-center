@@ -9,9 +9,9 @@ permalink: conversation-builder-interactions-code.html
 indicator: both
 ---
 
-### Universal interactions (Beta)
+### Universal interactions
 
-Is there a cutting-edge interaction in a channel that you want to implement in your bot? Do you want to fast track its usage now, before support is added to the interactions in Conversation Builder? There’s no need to wait. Conversation Builder includes a “Universal” interaction, **now in Beta release**, to meet this need.
+Is there a cutting-edge interaction in a channel that you want to implement in your bot? Do you want to fast track its usage now, before support is added to the interactions in Conversation Builder? There’s no need to wait. Conversation Builder includes a “Universal” interaction to meet this need.
 
 ![Carousel](img/ConvoBuilder/interactions_universal.gif)
 
@@ -20,7 +20,7 @@ The Universal interaction, which is designed for advanced bot developers, is a f
 <img style="width:600px" src="img/ConvoBuilder/interactions_universal1.png">
 
 {: .important}
-Currently, the Universal interaction is supported only in the Web messaging channel.<br><br>
+Currently, the interaction is supported only in the following channels: Apple Business Chat, Google Business Messages, and Web messaging. Use in other channels isn't supported.<br><br>
 The Universal interaction isn’t intended to replace the existing interactions in Conversation Builder. For fast and easy bot development, LivePerson recommends that you always use them whenever they meet your requirements.
 
 #### Adding a Universal interaction
@@ -46,7 +46,10 @@ This opens the editor, which works as follows:
 
 With the exception that you enter JSON code instead of interaction data, a Universal interaction works like any other interaction. This means you can:
 
-* Use bot context and environment variables.
+* Use bot context and environment variables. Enclose the variable in quotes, like so:
+
+    <img style="width:500px" src="img/ConvoBuilder/interactions_universal5.png">
+
 * [Configure](conversation-builder-interactions-configuration-settings.html) basic settings, for example, specify an interaction delay.
 * [Configure](conversation-builder-interactions-configuration-next-action.html) a Next Action, including via custom rules.
 * [Configure](conversation-builder-interactions-configuration-custom-code.html) Pre-Process code, Process User Response code, and Post-Process code.

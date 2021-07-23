@@ -27,6 +27,8 @@ The APIs lets brands:
 
 ### Important Notes
 
+* The `mHistoryConversationsMaxDays` value will be applicable only for CLOSED conversations.
+
 * In no conversations match the provided filter, an empty state presents with a message (default is "There are no conversations at this time"). The UI elements of the state can be configured. To change the text, change the value of `lp_history_control_api_empty_state` parameters. 
 
 * When opening the window with closed conversations only, the window opens as a view only mode.
