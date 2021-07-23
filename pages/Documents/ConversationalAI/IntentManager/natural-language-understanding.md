@@ -28,6 +28,7 @@ If you choose LivePerson's native NLU, no setup work needs to be done to connect
 
 The LivePerson engine supports:
 * English
+* Italian
 * Japanese
 * Portuguese
 * Spanish
