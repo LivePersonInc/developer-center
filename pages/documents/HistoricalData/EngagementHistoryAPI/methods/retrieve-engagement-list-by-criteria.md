@@ -58,6 +58,23 @@ Filter is sent in the POST data with the following JSON structure.
 | predictionLabel | An array of prediction labels. | Array `<String>` | Optional | In order to search for a specific phrase, wrap the phrase in quotation marks. |
 
 
+## Response
+
+**Response codes**
+
+| Code     | Internal Code | Description |
+| :------ | :------- | :-------- |
+| 200 | -- |  OK; Operation performed successfully  |
+| 204 | -- |  No Content; Operation performed successfully  |
+| 302 | -- |  Too many requests |
+| 400 | -- |  Bad Request; Problem with body or query parameters |
+| 401 | -- |  Unauthorized (no permissions) |
+| 403 | -- |  Forbidden |
+| 500 | -- |  Internal Server Error |
+| 500 | 0007 |  Elastic search exception |
+| 500 | 0008 |  Runtime exception |
+| 503 | -- |  Service unavailable |
+
 **Elements in the Response**
 
 _Metadata info_

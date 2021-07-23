@@ -31,6 +31,182 @@ See [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html
 LHS = left-hand side = the input JSON tree<br>
 RHS = right-hand side = the output JSON tree
 
+
+### Examples - Map articles' metadata (external KB with LivePerson AI)
+
+#### Example 1
+
+**Input JSON**
+```JSON 
+{
+    "results": [
+        {
+            "id": 360048529551,
+            "url": "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048529551-Account-Information.json",
+            "title": "Account Information",
+            "label_names": [
+                "Info",
+                "Account Information",
+                "Information"
+            ],
+            "body": "<p>For account information, go to Settings-&gt;Account-&gt;Basic Information.</p>"
+        },
+        {
+            "id": 360048237271,
+            "url": "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json",
+            "title": "How to Reset password",
+            "label_names": [
+                "Account"
+            ],
+            "body": "<p>Go to login page, and click on \"forgot password\" button below password field, and follow the instructions to receive the password reset email. </p>"
+        }
+    ]
+}
+```
+
+**Transformation specification**
+```JSON
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "results": {
+        "*": {
+          "id": "[&1].externalId",
+          "title": "[&1].title",
+          "label_names": "[&1].tags"
+        }
+      }
+    }
+  }
+]
+```
+
+**Using the & wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a canonical syntax “&(n,m)” for complex mappings:
+* The first parameter tells the level to go up on the LHS from current node.
+* The second parameter tells which part of the key (applicable when using “ * ” on LHS object keys) to use on the RHS.
+ 
+The syntaxes below are equal, i.e., parameters/brackets can be ignored for simple mappings:<br>
+& = &0 = &(0) = &(0,0)<br>
+&1 = &(1) = &(1,0)
+
+```JSON
+    {
+        "foo" : {
+            "bar": {
+                "baz":  // on RHS &0 = baz, &1 = bar, &2 = foo
+            }
+        }
+     }
+```
+
+In the transformation spec farther above, we use the index of the "results" array (&1 = one level up from “title” means index of the "results" array) as the object's index on the RHS. “[ ]“ around “&1” is required as the output is an array.
+
+On the LHS, the values “0” and “1” are resolved by “&1”, as we have two objects in the "results" array that are mapped to “[0]”, “[1]” on the RHS in the same order as the LHS.
+
+**Transformed output**
+```JSON
+[ {
+  "externalId" : 360048529551,
+  "title" : "Account Information",
+  "tags" : [ "Info", "Account Information", "Information" ]
+}, {
+  "externalId" : 360048237271,
+  "title" : "How to Reset password",
+  "tags" : [ "Account" ]
+} ]
+```
+
+#### Example 2
+
+**Input JSON** 
+```JSON
+{
+  "results": [
+    {
+      "categoryGroups": [
+        {
+          "groupLabel": "All",
+          "groupName": "All",
+          "selectedCategories": [
+            {
+              "categoryLabel": "Account",
+              "categoryName": "Account",
+              "url": "/services/data/v42.0/support/dataCategoryGroups/All/dataCategories/Account?sObjectName=KnowledgeArticleVersion"
+            }
+          ]
+        }
+      ],
+      "id": "kA0050000004F1HCAU",
+      "summary": "Go to login page mentioned in the developer documentation, and enter your credentials.",
+      "title": "How to Login",
+      "url": "/services/data/v42.0/support/knowledgeArticles/kA0050000004F1HCAU"
+    },
+    {
+      "categoryGroups": [
+        {
+          "groupLabel": "All",
+          "groupName": "All",
+          "selectedCategories": [
+            {
+              "categoryLabel": "Profile",
+              "categoryName": "Profile",
+              "url": "/services/data/v42.0/support/dataCategoryGroups/All/dataCategories/Account?sObjectName=KnowledgeArticleVersion"
+            }
+          ]
+        }
+      ],
+      "id": "kA0050000004EA3CAM",
+      "summary": "To reset password, click on the link provided below password field on the logon page.",
+      "title": "How to reset password",
+      "url": "/services/data/v42.0/support/knowledgeArticles/kA0050000004EA3CAM"
+    }
+  ]
+}
+```
+
+**Transformation specification**
+```JSON
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "results": {
+        "*": {
+          "id": "[&1].externalId",
+          "title": "[&1].title",
+          "categoryGroups": {
+            "*": {
+              "selectedCategories": {
+                "*": {
+                  "categoryLabel": "[&5].tags[]"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]
+```
+
+[&5].tags[ ] is used on the RHS because the “results” array index is five levels up from categoryLabel, i.e., categoryLabel -> selectedCategories index -> selectedCategories key ->  categoryGroups index -> categoryGroups key -> results index.
+
+**Transformed output**
+```JSON
+[ {
+  "externalId" : "kA0050000004F1HCAU",
+  "title" : "How to Login",
+  "tags" : [ "Account" ]
+}, {
+  "externalId" : "kA0050000004EA3CAM",
+  "title" : "How to reset password",
+  "tags" : [ "Profile" ]
+} ]
+```
+
+
 ### Examples - Map a single article's content (external KB with LivePerson AI)
 
 #### Example 1
@@ -210,179 +386,6 @@ When fetching a single article, some CMS systems might return an array as per th
 }
 ```
 
-### Examples - Map articles' metadata (external KB with LivePerson AI)
-
-#### Example 1
-
-**Input JSON**
-```JSON 
-{
-    "results": [
-        {
-            "id": 360048529551,
-            "url": "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048529551-Account-Information.json",
-            "title": "Account Information",
-            "label_names": [
-                "Info",
-                "Account Information",
-                "Information"
-            ],
-            "body": "<p>For account information, go to Settings-&gt;Account-&gt;Basic Information.</p>"
-        },
-        {
-            "id": 360048237271,
-            "url": "https://livepersonkb.zendesk.com/api/v2/help_center/en-us/articles/360048237271-How-to-Reset-password.json",
-            "title": "How to Reset password",
-            "label_names": [
-                "Account"
-            ],
-            "body": "<p>Go to login page, and click on \"forgot password\" button below password field, and follow the instructions to receive the password reset email. </p>"
-        }
-    ]
-}
-```
-
-**Transformation specification**
-```JSON
-[
-  {
-    "operation": "shift",
-    "spec": {
-      "results": {
-        "*": {
-          "id": "[&1].externalId",
-          "title": "[&1].title",
-          "label_names": "[&1].tags"
-        }
-      }
-    }
-  }
-]
-```
-
-**Using the & wildcard:** Use the wildcard “&” if you want to use the key on the LHS as a key on the RHS. This wildcard has a canonical syntax “&(n,m)” for complex mappings:
-* The first parameter tells the level to go up on the LHS from current node.
-* The second parameter tells which part of the key (applicable when using “ * ” on LHS object keys) to use on the RHS.
- 
-The syntaxes below are equal, i.e., parameters/brackets can be ignored for simple mappings:<br>
-& = &0 = &(0) = &(0,0)<br>
-&1 = &(1) = &(1,0)
-
-```JSON
-    {
-        "foo" : {
-            "bar": {
-                "baz":  // on RHS &0 = baz, &1 = bar, &2 = foo
-            }
-        }
-     }
-```
-
-In the transformation spec farther above, we use the index of the "results" array (&1 = one level up from “title” means index of the "results" array) as the object's index on the RHS. “[ ]“ around “&1” is required as the output is an array.
-
-On the LHS, the values “0” and “1” are resolved by “&1”, as we have two objects in the "results" array that are mapped to “[0]”, “[1]” on the RHS in the same order as the LHS.
-
-**Transformed output**
-```JSON
-[ {
-  "externalId" : 360048529551,
-  "title" : "Account Information",
-  "tags" : [ "Info", "Account Information", "Information" ]
-}, {
-  "externalId" : 360048237271,
-  "title" : "How to Reset password",
-  "tags" : [ "Account" ]
-} ]
-```
-
-#### Example 2
-
-**Input JSON** 
-```JSON
-{
-  "results": [
-    {
-      "categoryGroups": [
-        {
-          "groupLabel": "All",
-          "groupName": "All",
-          "selectedCategories": [
-            {
-              "categoryLabel": "Account",
-              "categoryName": "Account",
-              "url": "/services/data/v42.0/support/dataCategoryGroups/All/dataCategories/Account?sObjectName=KnowledgeArticleVersion"
-            }
-          ]
-        }
-      ],
-      "id": "kA0050000004F1HCAU",
-      "summary": "Go to login page mentioned in the developer documentation, and enter your credentials.",
-      "title": "How to Login",
-      "url": "/services/data/v42.0/support/knowledgeArticles/kA0050000004F1HCAU"
-    },
-    {
-      "categoryGroups": [
-        {
-          "groupLabel": "All",
-          "groupName": "All",
-          "selectedCategories": [
-            {
-              "categoryLabel": "Profile",
-              "categoryName": "Profile",
-              "url": "/services/data/v42.0/support/dataCategoryGroups/All/dataCategories/Account?sObjectName=KnowledgeArticleVersion"
-            }
-          ]
-        }
-      ],
-      "id": "kA0050000004EA3CAM",
-      "summary": "To reset password, click on the link provided below password field on the logon page.",
-      "title": "How to reset password",
-      "url": "/services/data/v42.0/support/knowledgeArticles/kA0050000004EA3CAM"
-    }
-  ]
-}
-```
-
-**Transformation specification**
-```JSON
-[
-  {
-    "operation": "shift",
-    "spec": {
-      "results": {
-        "*": {
-          "id": "[&1].externalId",
-          "title": "[&1].title",
-          "categoryGroups": {
-            "*": {
-              "selectedCategories": {
-                "*": {
-                  "categoryLabel": "[&5].tags[]"
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-]
-```
-
-[&5].tags[ ] is used on the RHS because the “results” array index is five levels up from categoryLabel, i.e., categoryLabel -> selectedCategories index -> selectedCategories key ->  categoryGroups index -> categoryGroups key -> results index.
-
-**Transformed output**
-```JSON
-[ {
-  "externalId" : "kA0050000004F1HCAU",
-  "title" : "How to Login",
-  "tags" : [ "Account" ]
-}, {
-  "externalId" : "kA0050000004EA3CAM",
-  "title" : "How to reset password",
-  "tags" : [ "Profile" ]
-} ]
-```
 
 ### Examples - Map article suggestions/answers (external KB without LivePerson AI)
 

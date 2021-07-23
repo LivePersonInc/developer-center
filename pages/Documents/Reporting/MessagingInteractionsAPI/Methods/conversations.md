@@ -130,6 +130,21 @@ In order to search for a specific phrase within the messages, summary or engagem
 
 ### Response
 
+#### Response codes
+
+| Code     | Internal Code | Description |
+| :------ | :------- | :-------- |
+| 200 | -- |  OK; Operation performed successfully  |
+| 204 | -- |  No Content; Operation performed successfully  |
+| 400 | -- |  Bad Request; Problem with body or query parameters |
+| 401 | -- |  Unauthorized (no permissions) |
+| 403 | -- |  Forbidden |
+| 429 | -- |  Too many requests |
+| 500 | -- |  Internal Server Error |
+| 500 | 0007 |  Elastic search exception |
+| 500 | 0008 |  Runtime exception |
+| 503 | -- |  Service unavailable |
+
 #### General Characterizations
 
 _Field Types - Max number of digits possible
@@ -502,7 +517,7 @@ _SurveyData info_
 Name  | Description  | Type/Value | Notes
 :------- | :-------------------- | :--------- | :----------------------------
 question | Survey question text. | string  |
-answer| Survey answer text,| string  |
+answer| Survey answer text.| string  |
 questionId | Survey question ID  | string  |
 answerId| Survey answer ID,| string  | The answer ID from the survey definition, or 'InvalidAnswer', if the answer was invalid
 questionType | Survey question type | string  |
@@ -602,9 +617,8 @@ assignedAgentName| The name of the agent assigned to the survey.| string     |
 performedByAgentId| The ID of the agent that performed the operation.|string|
 performedByAgentNickName| The nick name of the performing agent| string     |
 performedByAgentName| The name of the performing agent         | string     |
-lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |    
-acSurveyRevision| The AC form revision.                        | string     |
-acSurveyRevision| The AC form revision.                        | string     |
+lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |
+submittedAnswers| Agent survey questions                       | container |
 
 _Previously Submitted Agent Surveys_
 
@@ -626,8 +640,25 @@ performedByAgentId| The ID of the agent that performed the operation.|string|
 performedByAgentNickName| The nick name of the performing agent| string     |
 performedByAgentName| The name of the performing agent         | string     |
 lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |    
-acSurveyRevision| The AC form revision.                        | string     |
-acSurveyRevision| The AC form revision.                        | string     |
+submittedAnswers| Agent survey questions.                      | container  |
+
+_Agent Survey Question_
+
+Name| Description| Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+questionText | Survey question text. | string
+questionId | Survey question ID. | string
+questionDefinition | Survey question definition. | string
+questionCategory | Survey question category. | string
+answers | Agent survey answers. | container
+
+_Agent Survey Answer_
+
+Name| Description| Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+answer | Survey answer text. | string
+answerId | Survey answer ID. | string
+
 
 ```json
 {

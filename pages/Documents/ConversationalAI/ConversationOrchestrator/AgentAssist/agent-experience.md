@@ -10,12 +10,13 @@ indicator: messaging
 ---
 
 {: .important}
-No Knowledge Base article recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).
+No bot or Knowledge Base article recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).<br><br>All recommendations that are made based on consumer utterances are cached for 3 hours. Keep this in mind as you update your bots and knowledge bases. If things look stale during testing, try using a slightly different utterance.
+
 
 **Tip:** To train your agents, you can start by enabling recommendations for a single skill.
 
 ### Use a recommended bot or article
-In Conversational Cloud, bot and/or article recommendations are displayed inline within the conversation.
+In Conversational Cloud, bot and article recommendations are displayed inline within the conversation.
 
 <img width="550" src="img/agentassist/use_recs.png">
 
