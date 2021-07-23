@@ -44,7 +44,7 @@ You can specify the maximum number of recommendations made by Agent Assist for a
 To make recommendations, Agent Assist analyzes the available bots and knowledge base articles that match the consumer’s intent, and it finds the best ones. The recommendations are made by choosing those ranked highest by relevance score, after calibrating the score against agent feedback about the historical performance.
 
 {: .important}
-No bot or Knowledge Base article recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).
+No bot or Knowledge Base article recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).<br><br>All recommendations that are made based on consumer utterances are cached for 3 hours. Keep this in mind as you update your bots and knowledge bases. If things look stale during testing, try using a slightly different utterance.
 
 The rules for how the recommendations are made and ordered are as follows:
 

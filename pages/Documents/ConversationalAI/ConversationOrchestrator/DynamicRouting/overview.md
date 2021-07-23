@@ -31,7 +31,7 @@ Dynamic Routing can be used for a variety of use cases. Here are a few examples:
 
 ### How to use Dynamic Routing
 
-Before starting with Dynamic Routing, familiarize yourself with [Conversation Builder](tutorials-guides-getting-started-with-bot-building-overview.html) and [Intent Builder](intent-builder-overview.html). This documentation makes references to both bots and intents, so prior knowledge is helpful. One great way to gain exposure to these applications is to complete the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series.
+Before starting with Dynamic Routing, familiarize yourself with [Conversation Builder](tutorials-guides-getting-started-with-bot-building-overview.html) and [Intent Manager](intent-manager-overview.html). This documentation makes references to both bots and intents, so prior knowledge is helpful. One great way to gain exposure to these applications is to complete the [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html) tutorial series.
 
 Dynamic Routing requires the following components to operate:
 * Routing bot

@@ -14,7 +14,7 @@ indicator: both
 A dialog can be triggered by either of the following:
 
 - Simple [pattern matching](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions).
-- [Intent matches](conversation-builder-intent-builder-overview.html) within the intent domain that you have linked to the bot.
+- [Intent matches](intent-manager-key-terms-concepts.html#intents) within the intent domain that you have linked to the bot.
 
 Once the bot recognizes the user statement via either of these methods, it triggers the corresponding dialog, listening to user answers and responding as configured by the dialog.
 

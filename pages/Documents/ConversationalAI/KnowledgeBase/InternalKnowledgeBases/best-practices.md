@@ -23,7 +23,7 @@ If your internal knowledge base uses Knowledge Base intents, which is a legacy f
 
 For better performance and a more scalable solution, LivePerson recommends that you [convert from Knowledge Base intents to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible. This allows you to associate a domain that uses the LivePerson engine (or a third-party engine).
 
-See [here](intent-builder-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy) for information on the benefits of LivePerson over LivePerson (Legacy).
+See [here](intent-manager-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy) for information on the benefits of LivePerson over LivePerson (Legacy).
 
 ### Number of articles
 

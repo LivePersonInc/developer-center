@@ -26,16 +26,16 @@ Before you get started with this tutorial, download this [ZIP file](assets/resou
 
 ### Step 1: Create the Airline NLU domain
 
-LivePerson offers a variety of domain-specific starter packs ([pre-built domains](intent-builder-overview.html#prebuilt-domains)) to help you get up and running with Intent Builder quickly. After signing into the LivePerson Conversational Cloud, navigate to the Conversational AI portal and complete the following steps to build out the NLU domain that will be used in the Agent Assist solution.
+LivePerson offers a variety of domain-specific starter packs ([prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains)) to help you get up and running with Intent Manager quickly. After signing into the LivePerson Conversational Cloud, navigate to the Conversational AI portal and complete the following steps to build out the NLU domain that will be used in the Agent Assist solution.
 
 {: .important}
 **Customize your POC:** For demonstration purposes, this guide assumes a build-out suited for an Airline client. Add in a vertical-specific, pre-built domain to customize for your use case, or optionally add additional domains to supplement the primary one you are using. Agent Assist can pull from multiple domain intents to make recommendations for your users.
 
-1. From the Conversational AI portal, click the **Intent Builder** menu option.
+1. From the Conversational AI portal, click the **Intent Manager** menu option.
 
     <img class="fancyimage" style="width:800px" src="img/agentassisttutorial/intent_builder_menu_option.png">
 
-2. Click **Add Domain** in the upper-right corner of the Intent Builder screen.
+2. Click **Add Domain** in the upper-right corner of the Intent Manager screen.
 3. In the resulting **Add Domain** menu, select “Prebuilt Domains” along the top.
 4. The following view will display all intent starter packs available with Conversational Cloud. Highlight the “Airline” domain, and click **Add**.
 
