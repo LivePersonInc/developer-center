@@ -30,7 +30,7 @@ This returns a list of engagements with all their metadata and related transcrip
 | offset | The offset from where to retrieve the chat. | numeric | Optional | Default is 0.  |
 | limit | Max chats to be received in the response.  | numeric | Optional | Default is 50. Max value is 100. The remaining chats can be obtained using pagination (using offset, in a subsequent request). |
 | sort | Sort the results in a predefined order. | string | Optional | Example: start:des will order chats by descending value of the start time. start:asc,duration:desc will orders chat by ascending value of start time AND then by descending value of duration. <br> Valid values: "start", "end", "duration", "visitor", "engagementId", "interactive", "visitor", "agentId", "skillId"(multiple values are valid). Order:[asc/desc] |
-| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+| source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
 
 
 **BODY/POST Parameters**
@@ -57,6 +57,23 @@ Filter is sent in the POST data with the following JSON structure.
 | lineContentTypes | The type of the chat line | Array `<String>` | Optional | Valid values: RICH_CONTENT |
 | predictionLabel | An array of prediction labels. | Array `<String>` | Optional | In order to search for a specific phrase, wrap the phrase in quotation marks. |
 
+
+## Response
+
+**Response codes**
+
+| Code     | Internal Code | Description |
+| :------ | :------- | :-------- |
+| 200 | -- |  OK; Operation performed successfully  |
+| 204 | -- |  No Content; Operation performed successfully  |
+| 302 | -- |  Too many requests |
+| 400 | -- |  Bad Request; Problem with body or query parameters |
+| 401 | -- |  Unauthorized (no permissions) |
+| 403 | -- |  Forbidden |
+| 500 | -- |  Internal Server Error |
+| 500 | 0007 |  Elastic search exception |
+| 500 | 0008 |  Runtime exception |
+| 503 | -- |  Service unavailable |
 
 **Elements in the Response**
 

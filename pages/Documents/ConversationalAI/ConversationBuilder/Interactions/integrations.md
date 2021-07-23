@@ -92,14 +92,17 @@ With the Structured layout:
 
 #### The Simple answer layout
 
-The Simple layout doesn’t include rich elements like images. It looks like this:
+The Simple layout doesn’t include rich elements like images. If the channel is Web messaging, which supports `href` tags, the output looks like this:
 
 <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_plain.png">
+
+On all other channels, it looks like this:
+
+<img style="width:700px" src="img/ConvoBuilder/knowledge_ai_plain2.png">
 
 With the Simple layout:
 
 * Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
-* The article's content URL is included only if the channel in use is Web messaging.
 * Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
 
 #### Add a Knowledge AI interaction
@@ -123,7 +126,7 @@ With the Simple layout:
 
     * **Max number of answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
     * **Answer layout**: Select "Structured," "Simple," or "Custom" based on your requirements. These layout options are discussed farther above.
-    * **Link text for content URL**: This setting is available when you select "Structured" or "Simple" for the **Answer layout**. Enter the label to use for the link to the article's content URL, e.g., "Learn more." The link will open the URL in a new window. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
+    * **Link text for content URL**: This setting is available when you select "Structured" or "Simple" for the **Answer layout**. Enter the "learn more" text to use. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}. When the **Structured** layout is used, and when the **Simple** layout is used and the channel is Web messaging, this is the text for the `href` link to the article's content URL. When the **Simple** layout is used in any other channel, this value is sent as static text: [this value] + [article's content URL in shortened form], for example, "Learn more at www.mysite.com/abc." For illustrations, see the images earlier in this topic.
     * **Default image URL**: This optional setting is available only when you select "Structured" for the **Answer layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the Structured output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
     * **Response data variable**: This setting is available only when you select "Custom" for the **Answer layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
 7. Click **Save**.
@@ -200,7 +203,7 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
 3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
 4. Select the **Advanced** tab, and specify the following:
 
-    * **Agent Id**: Optional. Used for bot-to-human transfers only. Specify the ID of the human agent to which to transfer the conversation. (You can obtain the ID from the address bar when the user profile is displayed in Conversational Cloud.) Transfer of the conversation to this agent ID only occurs if the agent is assigned to the skill ID that you specify and is available; otherwise, transfer to the skill ID occurs instead.
+    * **Agent Id**: Optional. Used for bot-to-human transfers only. Specify the ID of the human agent to which to transfer the conversation. (You can obtain the ID from the address bar when the user profile is displayed in Conversational Cloud.) For Messaging, specify the agent ID as `<account ID>.<agent ID>`. For Live Chat, specify just the `<agent ID>`. Transfer of the conversation to this agent ID only occurs if the agent is assigned to the skill ID that you specify and is available; otherwise, transfer to the skill ID occurs instead.
     
     * **Agent Skill ID**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
 
@@ -281,11 +284,7 @@ Some setup of your Conversational Cloud environment is required before using thi
 
 ##### Uploading multiple files
 
-If the dialog flow requires that the consumer upload *multiple* files, you'll need to add a File Upload interaction for every file, and each interaction must be followed by an Integration interaction. You can certainly reuse the [File integration](conversation-builder-integrations-file-integrations.html) that gets called, as we've done below.
-
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload3.png">
-
-<img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_fileUpload9.png">
+If you require that the consumer upload *multiple* files, use different dialogs to accomplish this so that there is only one File Upload interaction in a single dialog. You can certainly reuse the [File integration](conversation-builder-integrations-file-integrations.html) that gets called.
 
 ##### Routing the conversation based on success or failure
 
@@ -331,7 +330,7 @@ Once this setup is completed, you can add the Apple Pay integration to your bot 
 
 | Setting | Description | Required? | Example |
 | --- | --- | --- | --- |
-| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | https://wwww.mysite/images/mylogo.jpg |
+| ADD IMAGE > Image URL | The URL of the image to display. The domain in the URL must be [whitelisted](conversation-builder-networking-security.html#whitelisting-rich-media). If used, specify an image that’s appropriate for the overall pay experience. | Optional | https://www.mysite/images/mylogo.jpg |
 | ADD IMAGE > Image Style | The size of the image, either Icon (smallest), Small, or Large. | Optional | Icon |
 | Title | The title of the Apple Pay bubble. | Required | Your order |
 | Item name | A short description of the item. You can specify a botContext or integration variable name. You can also express these using an array enumerator, i.e., specify the variable using “i” as the index. | Required | {applePayData.lineItems[i]} |

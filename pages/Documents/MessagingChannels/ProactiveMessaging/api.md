@@ -12,7 +12,7 @@ indicator: messaging
 
 ### Introduction
 
-Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with many improvements from the older 1.0 API version. The Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS and WhatApp. 
+Proactive Messaging allows brands to send outbound messages to consumers and route the responses from consumers into Conversational Cloud; creating two-way messaging conversations. Proactive Messaging v2.0 API is the latest API with many improvements from the older 1.0 API version. The Proactive v2.0 API comes with rate limiting, support for scheduling guardrails, high send rate and integrates with Conversational Cloud campaign and engagement for conversation routing. Proactive Messaging v2.0 API is currently available to customers for SMS, WhatApp and Inapp. And it supports customer SDE, which includes [customer info](engagement-attributes-types-of-engagement-attributes.html#customer-info) and/or [personal info](engagement-attributes-types-of-engagement-attributes.html#personal-info). Customer SDE is only applicable for SMS and WA. 
 Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web Tool](https://knowledge.liveperson.com/messaging-channels-proactive-messaging-proactive-messaging-overview.html).
 
 ### Getting Started
@@ -67,7 +67,7 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
 | Content-Type | Used to indicate the media type of the resource | application/json |
 | Authorization | Extract the access_token value from the response retrieved by the [Get AppJWT](https://developers.liveperson.com/connector-api-send-api-authorization-and-authentication.html#get-appjwt) | Bearer <<APP_JWT>> |
 
-**Request Body Example - JSON Payload - New Version - Whatsapp With Rich Template**
+**Request Body Example - JSON Payload - New Version - Whatsapp With Rich Template, including customer SDE**
 
 ```json
 {
@@ -100,6 +100,52 @@ Note: Proactive Messaging can be leveraged using Proactive 2.0 API or the [Web T
             },
             "headerVariables": {
                 "video": "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4"
+            },
+            "personalInfo": {
+                "firstname": "Smith",
+                "lastname": "John",
+                "age": {
+                    "age": 31,
+                    "year": 1990,
+                    "month": 1,
+                    "day": 11
+                },
+                "contacts": [{
+                    "email": "test@example.com",
+                    "phone": "+1 480-400-8000",
+                    "address": {
+                        "country": "United States",
+                        "region": "NA"
+                    }
+                }],
+                "gender": "MALE",
+                "language": "en-US",
+                "company": "LP"
+            },
+            "customerInfo": {
+                "cstatus": "VIP",
+                "ctype": "Gold",
+                "customerId": "138766AC",
+                "balance": -200.99,
+                "currency": "EUR",
+                "socialId": "11256324780",
+                "imei": "3543546543545688",
+                "userName": "user000",
+                "companySize": 500,
+                "companyBranch": "East Village",
+                "accountName": "Bank corp",
+                "role": "Marketing manager",
+                "lastPaymentDate": {
+                    "day": 15,
+                    "month": 10,
+                    "year": 2016
+                },
+                "registrationDate": {
+                    "day": 23,
+                    "month": 5,
+                    "year": 2015
+                },
+                "loginStatus": 1
             }
         }
     ]
@@ -398,7 +444,7 @@ It depends on the channel. Messaging Channel providers like WhatsApp have certai
 Messages are sent at a rate upto 10 messages per second per channel per account. For example, a campaign is created for an SMS channel using the default receiving window for 100 recipients. Some of these recipients have phone numbers from regions belonging to PST, CST, EST time zones. Once a campaign is submitted/published, based on the phone number, a zone is computed (number with +1 - (201) is found to be in EST). Using the specified receiving window, a decision is made to send a message to the phone number if current time in that zone is within the window. If the recipient receiving window is closed then a message will be sent on the next opening of the window.
 
 <strong>How will batching capability work?</strong>
-A single campaign can have more than 1 recipient and not more than 1000 recipients. It is recommended to batch recipients in a campaign.
+A single campaign can have from 1 recipient and not more than 100 recipients. It is recommended to batch recipients in a campaign.
 
 <strong>What are the error codes for invalid recipients information in the campaign?</strong>
 Consider an example response of campaigns API:
@@ -548,3 +594,6 @@ Only registered customers can.
 
 <strong>How does first Inapp message display in agent workspace?</strong>
 First Inapp message is not part of conversations becuase customers cannot send first message on behalf of agent. Agent widget is used to display first message. It's not perfect. we are trying to solve it. 
+
+<strong>Is customer SDE enabled for all accounts?</strong>
+To use customer SDE via API, reach out to Proactive team to get it enabled for the account. Currently the feature is not enabled for all accounts.

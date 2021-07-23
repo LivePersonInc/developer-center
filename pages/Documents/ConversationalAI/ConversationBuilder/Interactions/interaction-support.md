@@ -34,7 +34,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | Yes |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | Yes | 
+| survey interactions | Yes |
 
 ### Connector API
 
@@ -57,7 +58,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | No | 
+| survey interactions | Yes |
 
 ### Facebook
 
@@ -80,7 +82,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | No | 
+| survey interactions | Yes |
 
 ### Google RCS
 
@@ -103,7 +106,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | No | 
+| survey interactions | Yes |
 
 ### Instagram
 
@@ -126,7 +130,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | No | 
+| survey interactions | Yes |
 
 ### LINE
 
@@ -149,7 +154,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | No | 
+| survey interactions | Yes |
 
 ### Messaging Window API
 
@@ -172,7 +178,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | No | 
+| survey interactions | Yes |
 
 ### Mobile app messaging
 
@@ -195,7 +202,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | No | 
+| survey interactions | Yes |
 
 ### SMS
 
@@ -218,7 +226,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | No | 
+| survey interactions | Yes |
 
 ### Twitter Direct Messages
 
@@ -241,7 +250,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | No |
+| Universal | No | 
+| survey interactions | No |
 
 ### Web messaging
 
@@ -264,7 +274,8 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes |
 | Knowledge AI integration | Yes |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | Yes | 
+| survey interactions | Yes |
 
 ### WhatsApp
 
@@ -287,4 +298,5 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Agent Transfer integration | Yes | 
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
-| survey interactions (NPS, FCR, CSAT) | Yes |
+| Universal | No | 
+| survey interactions | Yes |

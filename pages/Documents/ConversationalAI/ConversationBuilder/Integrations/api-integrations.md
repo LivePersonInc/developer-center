@@ -44,6 +44,21 @@ When implementing API integrations, follow these security best practices:
 * **API**: Your brand’s API should be designed according to security standards. For example, at a minimum, use an authentication mechanism. Also provide support for other best practices, such as protecting the API from high volume and bursts in traffic.
 * **API response handling**: For security and privacy reasons, you must not log returned customer data using the JavaScript API or store the data in permanent variables.
 
+### Disabling the predefined request header fields
+
+As a convenience, the following request header fields are predefined for an API integration:
+
+* Accept: application/json;charset=UTF-8
+* Content-Type: application/json;charset=UTF-8
+
+Since the values are predefined, they're always used regardless of how you've configured the integration. However, if desired, you can disable these predefined header fields in order to use different values. To disable them for only the current request, use the following Pre-Process Code in the Integration interaction:
+
+`botContext.setBotVariable("__standardHeaders__", "off", false, false);`
+
+To disable them for the current session, use:
+
+`botContext.setBotVariable("__standardHeaders__", "off", true, false);`
+
 ### Handling API responses
 
 In the [Integration interaction](conversation-builder-interactions-integrations.html#integration-interactions) that invokes the API, you can define custom rules based on the result of the API call, i.e., its success or failure. This is done using the "API Result" match type, as described [here](conversation-builder-interactions-integrations.html#defining-rules-based-on-the-result-of-the-api-integration).

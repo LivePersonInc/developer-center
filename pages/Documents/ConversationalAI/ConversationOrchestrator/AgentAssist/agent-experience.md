@@ -10,12 +10,13 @@ indicator: messaging
 ---
 
 {: .important}
-No Knowledge Base article recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).
+No bot or Knowledge Base article recommendations are made when the consumer’s message is 3 words or fewer, or when the consumer’s message is non-intentful (e.g., a greeting or other phrase like, “Are you still there” or “Give me a minute,” and so on).<br><br>All recommendations that are made based on consumer utterances are cached for 3 hours. Keep this in mind as you update your bots and knowledge bases. If things look stale during testing, try using a slightly different utterance.
+
 
 **Tip:** To train your agents, you can start by enabling recommendations for a single skill.
 
 ### Use a recommended bot or article
-In Conversational Cloud, bot and/or article recommendations are displayed inline within the conversation.
+In Conversational Cloud, bot and article recommendations are displayed inline within the conversation.
 
 <img width="550" src="img/agentassist/use_recs.png">
 
@@ -41,10 +42,3 @@ After you have joined a bot to a conversation, you can remove or replace it if d
 * To replace the current bot, click **Replace Bot** beside the bot you want to substitute into the conversation. The selected bot joins the conversation, taking over for the previous bot. (Only one bot can be joined to a conversation at a time.)
 
     <img width="550" src="img/agentassist/remove_replace_bot.png">
-
-### Vote up or down to train the model
-To provide feedback on a recommendation, click the **Thumbs up** button or the **Thumbs down** button. 
-
-<img width="550" src="img/agentassist/vote.png">
-
-“Thumbs up” tells the underlying Conversation Orchestrator model that it was a relevant recommendation, while “thumbs down” tells it that it’s not. The relevance score is calibrated against this feedback so that Conversation Orchestrator can continuously improve its recommendations and provide the most relevant content to agents.

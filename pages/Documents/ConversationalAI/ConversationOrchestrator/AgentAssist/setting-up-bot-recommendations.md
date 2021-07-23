@@ -27,7 +27,7 @@ If you are building your bots using Conversation Builder, you must be able to us
 * Create a bot
 * Deploy a bot
 
-If, for utterance matching, you’ll be using intents instead of patterns, you must be able to use Intent Builder to:
+If, for utterance matching, you’ll be using intents instead of patterns, you must be able to use Intent Manager to:
 * Create a domain
 * Create an intent
 
@@ -98,7 +98,9 @@ In our example below, for the human agent to be presented with a recommendation 
 1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Bots**.
 3. Scroll down to the **Configure bot recommendations** section, which lists all discovered bots.
-4. Add at least one skill to each available bot. You can select from all the skills that are defined for your account in Conversational Cloud.
+4. Add at least one skill to each available bot. You can select from all the skills that are defined for your account in Conversational Cloud. To assign all available skills at once, select the bot, and then use the menu option that appears.
+
+    <img width="800" src="img/agentassist/assign_skills2.png">
 
 #### Enable recommendations
 With the bot ready to go, now enable recommendations. This must be done so that Agent Assist recommends articles and bots inline in conversations.
@@ -158,3 +160,11 @@ If the default messages for when a bot is joined to and removed from the convers
 
 4. Enter new messages using the guidance provided regarding the use of variables.
 5. Click **Save**.
+
+### Updating user credentials
+
+When configuring bot recommendations for Agent Assist, if you select one or more bots, menu options for performing actions in bulk appear.
+
+<img width="800" src="img/agentassist/update_user_creds.png">
+
+Use the **Update user credentials** menu option whenever you change the credentials (authentication details) for the associated bot user in the User Management area of Conversational Cloud. This menu option refreshes Agent Assist’s copy of those credentials so that, when necessary, they can be used behind the scenes to allow users with agent profiles to join bots to conversations. Whenever you change the bot user’s credentials in User Management, manually update the credentials here in Agent Assist.

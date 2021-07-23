@@ -90,9 +90,13 @@ Please check [Sending Private Text Message](third-party-bots-google-dialogflow-v
 ## Description
 This error happens when it was not possible to get any response from the vendor.
  
-## Dialog Flow V2 Invalid Parse Response
+## Dialog Flow V2 Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Dialog Flow V2 No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
 
 ### DialogFlow CX
  
@@ -161,9 +165,13 @@ Please check [Sending Private Text Message](third-party-bots-google-dialogflow-c
 ## Description
 This error happens when it was not possible to get any response from the vendor.
  
-## Dialog Flow CX Invalid Parse Response
+## Dialog Flow CX Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Dialog Flow CX No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
  
 ###  Watson Assistant
  
@@ -229,9 +237,13 @@ Please check [Sending Native Content](third-party-bots-ibm-watson-assistant.html
 ## Description
 This error happens when there was not possible to get any response from the vendor.
  
-## Watson Assistant Invalid Parse Response
+## Watson Assistant Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Watson Assistant No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
  
 ### Watson Assistant V2
  
@@ -295,9 +307,13 @@ Please check [Sending Native Content](third-party-bots-ibm-watson-assistant-vers
 ## Description
 This error happens when there was not possible to get any response from the vendor.
  
-## Watson Assistant Invalid Parse Response
+## Watson Assistant Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Watson Assistant No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
  
 
 ###  Lex
@@ -378,9 +394,13 @@ This happens when the bot's response has an invalid JSON and the vendor is unabl
 ## Description
 This error happens when there was not possible to get any response from the vendor.
  
-## Lex Invalid Parse Response
+## Lex Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Lex No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
  
 ###  Microsoft Bot Framework
  
@@ -395,9 +415,13 @@ Please check [Rich Content](third-party-bots-microsoft-bot-framework.html#rich-c
 ## Description
 This error happens when there was not possible to get any response from the vendor.
  
-## Microsoft Bot Framework Invalid Parse Response
+## Microsoft Bot Framework Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Microsoft Bot Framework No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.
  
 ###  Faas
  
@@ -442,6 +466,10 @@ Please check [Sending intent information](third-party-bots-custom-integration.ht
 ## Description
 This error happens when there was not possible to get any response from the vendor.
  
-## Faas Invalid Parse Response
+## Faas Invalid Parsed Response
 ## Description
 This error happens when not parsed messages and actions were found from the vendor.
+
+## Faas No Support for Quick Replies in Chat
+## Description
+Chat connector does not support quick replies.

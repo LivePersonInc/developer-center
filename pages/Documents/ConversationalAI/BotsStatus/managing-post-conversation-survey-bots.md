@@ -19,9 +19,11 @@ Successfully deployed survey bots display "Deployed" beneath the bot name.
 {: .important}
 Since all survey bots share a single agent connector, performing any operation on the agent connector affects all the survey bots.
 
-### Troubleshooting - Redeploy the connector
+### Redeploy the connector
 
-Redeploying the connector stops and restarts it. Use this as a troubleshooting technique when the connector appears to be in a stuck state.
+Redeploying the connector stops and restarts it.
+
+If the connector appears to be in a stuck state, use this as a troubleshooting technique.
 
 **To redeploy the survey bot connector**
 

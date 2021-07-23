@@ -93,14 +93,12 @@ The Customer web page method name can be either the default LivePerson method na
 
 * The interface is implemented as REST/JSON.  In keeping with the REST specification, the verb is POST, since accessing this API changes the state on the server (is not idempotent).
 
-*	LivePerson will POST the following data using the "application/json" format:
+*	LivePerson will POST the following data using the "application/x-www-form-urlencoded" format:
 
-```json
-{
- "code": "b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c",
- "grant_type" : "authorization_code",
- "redirect_uri" : "https://liveperson.net"
-}
+```text
+code=b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c&
+grant_type-authorization_code&
+redirect_uri=https://liveperson.net
 ```
 
 *	The token (JWT) should contain three base64url encoded segments separated by period ('.') characters.
@@ -277,7 +275,7 @@ Example for Mandatory+Standard+Custom Claims JWT:
 
 *	The encryption should use RSA algorithm.
 
-*	JWE header should include header name “alg" with the value: RSA_OAEP_256.
+*	JWE header should include header name “alg" with the value: RSA-OAEP-256.
 
 ### OpenID JWT Signing
 

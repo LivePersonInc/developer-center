@@ -28,13 +28,13 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 1. In the upper-left corner, click **< Back** twice. This returns you to the Conversational AI dashboard.
 
-2. Click **Intent Builder**.
+2. Click **Intent Manager**.
 
-    Intent Builder is where you create domains, which are collections of intents and entities. You can learn about Intent Builder [here](intent-builder-overview.html).
+    Intent Manager is where you create domains, which are collections of intents and entities. You can learn about Intent Manager [here](intent-manager-overview.html).
 
     Now let’s create a domain.
 
-3. In the upper-right corner, click **Add Domain**.
+3. Locate the domain list in the Intent Manager dashboard. In the upper-right corner, click **Add a domain**.
 
 4. On the Add Domain page, select the **Prebuilt domains** option along the top. Hover over the "Cross-vertical" option, and select **Add**.
 
@@ -60,8 +60,8 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 With the "Make Payment" intent configured, let’s return to Conversation Builder and use the intent to trigger a new dialog.
 
-1. In the upper-left corner, click **< Back** twice to return to the Conversational AI dashboard.
-2. Click **Conversation Builder**.
+1. In the upper-left corner, click **Conversational AI** in the breadcrumb trail.
+2. Select **Conversation Builder**.
 3. Select the bot you previously created.
 4. Create a new regular dialog named "Make Payment".
 
@@ -100,7 +100,7 @@ Now you can begin to build out the Make Payment dialog.
 
     You make the last change because the default behavior for statements is to display the next interaction. In our example, the No statement will be next. Since the dialog flow should stop after the Yes statement, the Yes statement's next action should be to end.
 
-4. Add a Text statement to respond to a reply of "no". Name the interaction "No statement" (in the upper-left corner). For the statement's text, enter, “Ok, we’ll be here to help when you are ready." Select "End Interaction" as the **Next Action**. Click **Save**.
+4. Add a Text statement to respond to a reply of "no". Name the interaction "No" (in the upper-left corner). For the statement's text, enter, “Ok, we’ll be here to help when you are ready." Select "End Interaction" as the **Next Action**. Click **Save**.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/getstartedtutorial/intents_rules3.png">
 
