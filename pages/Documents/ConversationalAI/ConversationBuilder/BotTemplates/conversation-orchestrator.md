@@ -37,8 +37,8 @@ This bot template contains global functions brought over from the Global Helper 
 
 #### Integrations
 
-* **TRANSFER_TO_AGENT**: Performs a transfer to a Conversational Cloud agent and skill. Agent ID, Skill Name, and Skill ID will be provided by a call to the [Recommendation API](conversation-orchestrator-recommendation-api-overview.html) based on dynamic routing policies.
-* **TRANSFER_TO_SKILL**: Performs a transfer to a Conversational Cloud skill. Skill Name and Skill ID will be provided by a call to the [Recommendation API](conversation-orchestrator-recommendation-api-overview.html) based on dynamic routing policies.
+* **TRANSFER_TO_AGENT**: Performs a transfer to a Conversational Cloud agent and skill. Agent ID, Skill Name, and Skill ID will be provided by a call to the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) based on dynamic routing policies.
+* **TRANSFER_TO_SKILL**: Performs a transfer to a Conversational Cloud skill. Skill Name and Skill ID will be provided by a call to the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) based on dynamic routing policies.
 
 <img style="width:800px" src="img/ConvoBuilder/template_conv_orch_2.png">
 
@@ -77,10 +77,10 @@ setContextConv("phoneNumber", phoneNumber);
 logEventAdv(getUserMessage(), "Conversation Orchestrator Session Store","Maven Session Store was called for namespace labelled '"+ getBotVar("contextNamespace") + "' for account '" + getBotVar("accountId") + "' ("+ getBotVar('conversationId') + ")");
 ```
 
-The *PROCESS_ASKMAVEN* interaction contains the following **Pre-Process Code** which uses botContext methods to call the Recommendations API and retrieve the matched routing policy. This policy is then used in the setTransferParameters function to prepare the escalation integration.
+The *PROCESS_ASKMAVEN* interaction contains the following **Pre-Process Code** which uses botContext methods to call the Next Actions API and retrieve the matched routing policy. This policy is then used in the setTransferParameters function to prepare the escalation integration.
 
 ```javascript
-// Call Conversation Orchestrator Recommendation API
+// Call Conversation Orchestrator Next Actions API
 var orchestratorRecommendations = botContext.askMaven();
 var data = JSON.parse(orchestratorRecommendations);
 debugMsg("Maven Recommendations:: " + orchestratorRecommendations);

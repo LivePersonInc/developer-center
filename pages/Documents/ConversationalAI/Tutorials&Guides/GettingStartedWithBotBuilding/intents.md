@@ -28,13 +28,13 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 1. In the upper-left corner, click **< Back** twice. This returns you to the Conversational AI dashboard.
 
-2. Click **Intent Builder**.
+2. Click **Intent Manager**.
 
-    Intent Builder is where you create domains, which are collections of intents and entities. You can learn about Intent Builder [here](intent-builder-overview.html).
+    Intent Manager is where you create domains, which are collections of intents and entities. You can learn about Intent Manager [here](intent-manager-overview.html).
 
     Now let’s create a domain.
 
-3. In the upper-right corner, click **Add Domain**.
+3. Locate the domain list in the Intent Manager dashboard. In the upper-right corner, click **Add a domain**.
 
 4. On the Add Domain page, select the **Prebuilt domains** option along the top. Hover over the "Cross-vertical" option, and select **Add**.
 
@@ -60,8 +60,8 @@ Since you’re going to be using an intent in this tutorial, you need to leave t
 
 With the "Make Payment" intent configured, let’s return to Conversation Builder and use the intent to trigger a new dialog.
 
-1. In the upper-left corner, click **< Back** twice to return to the Conversational AI dashboard.
-2. Click **Conversation Builder**.
+1. In the upper-left corner, click **Conversational AI** in the breadcrumb trail.
+2. Select **Conversation Builder**.
 3. Select the bot you previously created.
 4. Create a new regular dialog named "Make Payment".
 
