@@ -16,7 +16,7 @@ No bot or Knowledge Base article recommendations are made when the consumer’s 
 **Tip:** To train your agents, you can start by enabling recommendations for a single skill.
 
 ### Use a recommended bot or article
-In Conversational Cloud, bot and/or article recommendations are displayed inline within the conversation.
+In Conversational Cloud, bot and article recommendations are displayed inline within the conversation.
 
 <img width="550" src="img/agentassist/use_recs.png">
 
