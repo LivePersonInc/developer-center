@@ -24,7 +24,7 @@ You will be presented with following screen to complete the Vendor Settings in o
 
 Figure 1.1 Showing the configuration that needed to be filled
 
-The following Dialogflow CX information should be provided to LivePerson:
+The following Dialogflow CX information should be provided to LivePerson. The only optional parameter is the Environment Id:
 
 <table>
   <thead>
@@ -49,6 +49,12 @@ The following Dialogflow CX information should be provided to LivePerson:
     <td>Agent ID</td>
     <td>Dialogflow CX agent id</td>
     <td>abcderwe-dc8e-4a83-b2f2-369089753c42</td>
+  </tr>
+  </tr>
+    <tr>
+    <td>Environment ID</td>
+    <td>Dialogflow CX environment id. This is optional</td>
+    <td>abc4fff1-380c-4c8a-afbb-0289bc4e1234</td>
   </tr>
   <tr>
     <td>User email address</td>
@@ -94,6 +100,8 @@ The following Dialogflow CX information should be provided to LivePerson:
   </tr>
   </tbody>
 </table>
+
+**EnvironmentId** is an optional parameter. When not filled in the wizard, the Draft Flow will be taken for the Project Id and Agent Id provided. 
 
 **NOTE**: Dialogflow CX adheres to Google’s oAuth2. Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow CX client with _Read Only API access_. A _service account_ is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
 
