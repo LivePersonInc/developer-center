@@ -46,4 +46,4 @@ If the domain uses the LivePerson engine for NLU, you can't use the Test User In
 
     For details on the intent scoring, see [here](intent-manager-key-terms-concepts.html#confidence-score-and-threshold).
     
-    After reviewing the results, if the score isn't where you’d like it, you can add more training phrases.
+    After reviewing the results, if the score isn't where you want it, you can add more training phrases.
