@@ -1,10 +1,11 @@
 ---
 pagename: Agent view
-redirect_from: TBD
+redirect_from:
+  - 
 sitesection: Documents
-categoryname: "Agent Manager Experience"
-documentname: Agent manager workspace API
-subfoldername: methods
+categoryname: "Reporting"
+documentname: Key Messaging Metrics API
+subfoldername: Methods
 order: 10
 permalink: TBD
 indicator: Agent Manager Experience
@@ -183,7 +184,6 @@ agentStatusReasonId |  (NA / away reason id) | String |
 Response DTO - json example:
 
 ```json
-
 {
     "metadata": {
         "count": 2,
