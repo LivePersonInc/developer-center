@@ -1,5 +1,5 @@
 ---
-pagename: ErrorCodes
+pagename: Error Codes
 sitesection: Documents
 categoryname: Reporting
 documentname: Agent Activity API

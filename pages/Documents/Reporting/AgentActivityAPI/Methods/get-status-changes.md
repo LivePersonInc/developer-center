@@ -3,6 +3,7 @@ pagename: Get Status Changes
 sitesection: Documents
 categoryname: Reporting
 documentname: Agent Activity API
+subfoldername: Methods
 permalink: agent-activity-api-methods-get-status-changes.html
 indicator: both
 ---
