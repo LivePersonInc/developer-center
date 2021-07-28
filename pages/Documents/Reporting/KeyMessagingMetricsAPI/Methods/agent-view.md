@@ -7,7 +7,7 @@ categoryname: "Reporting"
 documentname: Key Messaging Metrics API
 subfoldername: Methods
 order: 10
-permalink: TBD
+permalink: key-messaging-metrics-api-methods-agent-view.html
 indicator: Agent Manager Experience
 ---
 
