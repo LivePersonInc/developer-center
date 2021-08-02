@@ -24,7 +24,7 @@ POST| https://[{domain}](/agent-manager-domain-api.html)/manager_workspace/api/a
 
 Name| Description  | Type/Value | Required | Notes
 :----- | :----------------------------------------------------------- | :--------- | :------- | :--------------------------------------------------------------------------------------------------------------------------------------------
-sort| Sort the results based on a given metric in a predefined order. | string  | Optional | Default value: agentId:asc<br/>**Valid sort values:**<br/> agentLoad<br/>closedConversations<br/>avgTimeToResponse<br/>avgTimeToFirstResponseFirstAssignment<br/>avgTimeToFirstResponseAllAssignments<br/>avgWaitTime<br/>avgWaitTimeFirstResponse<br/>assignedConversations<br/>activeConversations<br/>concludedConversations<br/>closedRate<br/>transferRate<br/>onlineRate<br/>intentMatchedRate<br/>pendingAgentResponseRate<br/>agentName<br/>agentStatus<br/>csat<br/>fcr<br/>nps<br/>maxSlots<br/>**Valid order values:**<br/>asc/desc
+sort| Sort the results based on a given metric in a predefined order. | string  | Optional | Default value: agentId:asc<br/>**Valid sort values:**<br/> agentLoad<br/>closedConversations<br/>avgTimeToResponse<br/>avgTimeToFirstResponseFirstAssignment<br/>avgTimeToFirstResponseAllAssignments<br/>avgWaitTime<br/>avgWaitTimeFirstResponse<br/>assignedConversations<br/>activeConversations<br/>concludedConversations<br/>closedRate<br/>transferRate<br/>intentMatchedRate<br/>pendingAgentResponseRate<br/>agentName<br/>agentStatus<br/>csat<br/>fcr<br/>nps<br/>maxSlots<br/>**Valid order values:**<br/>asc/desc
 offset  | The offset specifies from which record to retrieve the data.  | numeric | Optional | Default is 0.
 limit  | Max amount of agents to be received in the response.  | numeric | Optional | Default is 50.
 
@@ -36,7 +36,7 @@ NOTE: Total supported results is 1000, meaning offset+limit can't exceed 1000
 |:---- | :---------- | :---------- | :------- | :---|
 |filters | Contains parameters to filter by. | Container  | Required |
 |includeAgentMetadata| Indicates whether the response should include agent's metadata. | Boolean | Optional | Default value: true.
-|metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>closed_conversations<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>avg_time_to_first_response_all_assignments<br/>transfer_rate<br/>close_rate<br/>concluded_conversations<br/>transfers<br/>back_to_queue<br/>agent_status_duration<br/>agent_status_with_reason_duration<br/>agent_login_duration<br/>agent_online_duration<br/>online_rate<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed<br/>intent_matched_rate<br/>fcr<br/>nps<br/>csat<br/>closed_conversations_per_login_hour<br/>closed_conversations_per_online_hour
+|metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>closed_conversations<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>avg_time_to_first_response_all_assignments<br/>transfer_rate<br/>close_rate<br/>concluded_conversations<br/>transfers<br/>back_to_queue<br/>agent_status_duration<br/>agent_status_with_reason_duration<br/>agent_login_duration<br/>agent_online_duration<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed<br/>intent_matched_rate<br/>fcr<br/>nps<br/>csat<br/>
 |metricsToRetrieveCurrentValue | List of metrics retrieving the current value, not influenced by time | Array `<String>` | Optional | Valid values:<br/>active_conversations<br/>assigned_conversations<br/>agent_load<br/>human_agent_load<br/>human_online_load<br/>human_away_load<br/>agent_current_status<br/>agent_current_status_start_time<br/>agent_current_status_reason<br/>agent_current_status_reason_start_time<br/>pending_agent_response<br/>pending_agent_response_rate<br/>available_slots<br/>max_slots
 
 _filters info_ 
@@ -125,7 +125,7 @@ _agentViewRecords info_
 | agentCurrentStatusReasonStartTime  | The start time of the current status reason as timestamp. Can be used for duration calculation. | Long|
 | activeConversations| The current active conversations of the agent.| Long |
 | assignedConversations  | The current open conversations that are assigned to the agent  | Long|
-| agentLoad| The current load of the agent, including bot agents.| String |
+| agentLoad| The current load of the agent, including bot agents.| Double |
 | avgWaitTime  | The average time difference in millis between each human agent response and consumer message (first message in a seq) during the conversation, including transfers within the selected timeframe.  | Double|
 | avgWaitTimeFirstResponse| The average time difference in millis between the first human agent response and the first consumer message in the conversation (does not include transfers) within the selected timeframe.| Double |
 | avgTimeToResponse  | The average time difference in millis between each human agent response and consumer message (first message in a seq) during the conversation, including transfers within the selected timeframe. This value doesn't include the queue time before the agent assignment.  | Double|
@@ -139,7 +139,6 @@ _agentViewRecords info_
 | backToQueue| The number conversations that were transferred back to queue within the selected timeframe.| Long |
 | csat | The ratio bwtween the number of questions which were answered with 4 or 5 (top two boxes) to the total responses submitted by consumers to a CSAT question within the selected timeframe.| Double |
 | onlineDuration | Agent online duration within the selected timeframe.| Long  | Freshness: 1 minute, does not include bots
-| onlineRate | onlineDuration / loginDuration within the selected timeframe.| Double  | Freshness: 1 minute, does not include bots, Can return -1 (=NA) if the loginDuration is not enough significant.
 | transferRate | transfers / concludedConversations within the selected timeframe.| Double
 | closeRate | closedConversations / concludedConversations within the selected timeframe.| Double
 | concludedConversations | The total number of conversations that were transferred or closed by the agent within the selected timeframe. | Long
@@ -151,8 +150,6 @@ _agentViewRecords info_
 | intentMatchedRate| The number of matched intents out of the total messages in the conversation within the selected timeframe.| Long |
 | maxSlots| Agent's configured max slots.| Long |
 | availableSlots| The number of currently available slots.| Long |
-| closedConversationsPerLoginHour| The number of conversations that were closed per login hour within the selected timeframe.| Double |
-| closedConversationsPerOnlineHour| The number of conversations that were closed per online hour within the selected timeframe.| Double |
 
 _agentMetadata info_
 
