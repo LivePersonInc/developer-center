@@ -8,10 +8,11 @@ documentname: Key Messaging Metrics API
 subfoldername: Methods
 order: 10
 permalink: key-messaging-metrics-api-methods-agent-view.html
-indicator: Agent Manager Experience
+
+indicator: messaging
 ---
 
-General description should be added here
+This method returns core messaging metrics at agent level for up to the last 24 hours.
 
 ### Request
 
