@@ -88,7 +88,7 @@ SMS, WA
             },
             "contacts": [{
                 "email": "test@example.com",
-                "phone": "+14804008000",
+                "phone": "+18004444444",
                 "address": {
                     "country": "United States",
                     "region": "NA"
