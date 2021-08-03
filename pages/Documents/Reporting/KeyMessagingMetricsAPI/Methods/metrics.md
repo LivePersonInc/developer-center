@@ -137,8 +137,8 @@ _metrics info_
 | overdueConversationsInQueue| The number of conversations in queue that are waiting for an agent assignment and exceeded the SLA.| Long |
 | overdueConversationsAssigned| The number of conversations assigned to agents which exceeded the SLA.| Long |
 | overdueConversationsTotal| The number of open conversations which exceeded the SLA.| Long |
-| queueWaitTime50thPercentile| 50% of consumers are waiting in the queue this amount of time or less.| Long |
-| queueWaitTime90thPercentile| 90% of consumers are waiting in the queue this amount of time or less.| Long |
+| queueWaitTime50thPercentile| 50% of the consumers are waiting in the queue this amount of time or less.| Long |
+| queueWaitTime90thPercentile| 90% of the consumers are waiting in the queue this amount of time or less.| Long |
 
 
 
