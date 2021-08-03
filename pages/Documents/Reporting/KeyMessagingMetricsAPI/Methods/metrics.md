@@ -132,6 +132,13 @@ _metrics info_
 | closedByConsumer| The number of conversations closed by the consumer within the selected timeframe.| Long |
 | autoClosed| The number of conversations automatically closed within the selected timeframe.| Long |
 | csat | The ratio bwtween the number of questions which were answered with 4 or 5 (top two boxes) to the total responses submitted by consumers to a CSAT question within the selected timeframe.| Double |
+| unassignedConversations| The number of conversations in queue that are waiting for an agent assignment.| Long |
+| openConversations| The number of open conversations, whether in queue or assigned.| Long |
+| overdueConversationsInQueue| The number of conversations in queue that are waiting for an agent assignment and exceeded the SLA.| Long |
+| overdueConversationsAssigned| The number of conversations assigned to agents which exceeded the SLA.| Long |
+| overdueConversationsTotal| The number of open conversations which exceeded the SLA.| Long |
+| queueWaitTime50thPercentile| 50% of consumers are waiting in the queue this amount of time or less.| Long |
+| queueWaitTime90thPercentile| 90% of consumers are waiting in the queue this amount of time or less.| Long |
 
 
 
