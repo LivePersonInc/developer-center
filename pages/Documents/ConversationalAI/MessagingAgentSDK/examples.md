@@ -155,6 +155,43 @@ To run the [return to same agent bot example](https://github.com/LivePersonInc/n
        node examples/transfer2same-agent-bot/main.js
        ```
 
+
+{: .important}
+The connector on back-end will use the fields replyFromAccountId.
+The fallback mechanism when the replyFromAccountId is not provided is to use the conversationState.dmChatId attribute.
+
+
+#### Social Messaging Bot
+
+The agent bot is an example SDK implementation in which the bot accepts incoming social messaging conversations as the assigned agent. It listens for messages from the consumer and upon receipt marks them as read and echos them back to the consumer.  This example [extends the Agent class](#extending-the-agent-class).
+
+See [example explanation](https://livepersoninc.github.io/node-agent-sdk/social-bot.html)
+
+Pre-requisites:
+- A LivePerson Account
+- A user with Agent permissions
+- [Social Messaging](https://knowledge.liveperson.com/messaging-channels-social-messaging-social-messaging-overview.html) configured on your LivePerson account
+
+To run the [agent bot example](https://github.com/LivePersonInc/node-agent-sdk/tree/master/examples/social-bot)
+
+- Provide the following `env` variables:
+    - `LP_ACCOUNT` - Your LivePerson account ID
+    - `LP_USER` - Your LivePerson agent username
+    - `LP_PASS` - Your LivePerson agent password
+
+- Run:
+    - Unix Shell
+        ```sh
+       LP_ACCOUNT=1234567 LP_USER=BotUserName LP_PASS=b0tpa55word node examples/social-bot/main.js
+        ```
+    - Windows Shell
+       ```sh
+       set LP_ACCOUNT=1234567 
+       set LP_USER=BotUserName 
+       set LP_PASS=b0tpa55word 
+       node examples/social-bot/main.js
+       ```
+
 ### Bot Cluster
 
 See [Bot Cluster Example documentation](https://livepersoninc.github.io/node-agent-sdk/cluster.html)
