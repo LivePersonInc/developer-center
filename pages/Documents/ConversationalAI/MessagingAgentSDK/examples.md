@@ -161,7 +161,7 @@ The connector on back-end will use the fields replyFromAccountId.
 The fallback mechanism when the replyFromAccountId is not provided is to use the conversationState.dmChatId attribute.
 
 
-#### Social Messaging Bot
+### Social Messaging Bot
 
 The agent bot is an example SDK implementation in which the bot accepts incoming social messaging conversations as the assigned agent. It listens for messages from the consumer and upon receipt marks them as read and echos them back to the consumer.  This example [extends the Agent class](#extending-the-agent-class).
 

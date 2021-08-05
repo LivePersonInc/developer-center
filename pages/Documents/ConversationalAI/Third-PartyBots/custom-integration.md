@@ -672,8 +672,8 @@ const payload = {
 ```javascript
 function lambda(input, callback) {
 
-  // Take a look at this guide to get further information about Messages, Actions, Intents and Rich Content
-  // https://developers.liveperson.com/third-party-bots-custom-integration.html
+  // Take a look at this guide to get further information about Social Messaging & Conversation Metadata
+  // https://developers.liveperson.com/messaging-agent-sdk-conversation-metadata-guide.html
 
   const {
     message,

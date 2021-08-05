@@ -500,7 +500,7 @@ The following capability requires additional Account feature to be configured. P
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
-| This metadata is used to define the conversation data for each conversation, and it's processed by NAW only once. The NAW (New Agent Workspace) will use the values received from UMS to render the Social Core Widget. | [](/images/social/facebook/consumer.png)       | 
+| This metadata is used to define the conversation data for each conversation, and it's processed by NAW only once. The NAW (New Agent Workspace) will use the values received from UMS to render the Social Core Widget. | [](images/social/facebook/consumer.png)       | 
 
 ```javascript
 const content = {
@@ -523,7 +523,7 @@ const content = {
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
-| This metadata is used to define the conversation data for each conversation, and it's processed by NAW only once. The NAW (New Agent Workspace) will use the values received from UMS to render the Social Core Widget. | [](/images/social/twitter/consumer.png)       |
+| This metadata is used to define the conversation data for each conversation, and it's processed by NAW only once. The NAW (New Agent Workspace) will use the values received from UMS to render the Social Core Widget. | [](images/social/twitter/consumer.png)       |
 
 ```javascript
 const content = {
@@ -584,7 +584,7 @@ const content = {
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
-| This metadata is used to define the data for each consumer message in the conversation. The NAW (New Agent Workspace) will use the values received from UMS to render the consumer message. | [](/images/social/facebook/public-comment.png)       |
+| This metadata is used to define the data for each consumer message in the conversation. The NAW (New Agent Workspace) will use the values received from UMS to render the consumer message. | [](images/social/facebook/public-comment.png)       |
 
 ```javascript
 const content = {
@@ -616,7 +616,7 @@ const content = {
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
-| The connector on back-end will use the fields replyToId and currentChannel to identify for which Facebook API the message needs to be sent to. | [](/images/social/facebook/public-comment-reply.png)       |
+| The connector on back-end will use the fields replyToId and currentChannel to identify for which Facebook API the message needs to be sent to. | [](images/social/facebook/public-comment-reply.png)       |
 
 ```javascript
 const content = {
@@ -637,7 +637,7 @@ const content = {
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
-| The object enabledChannels is an indication to NAW for which types of channels are set on connector configs. | [](/images/social/facebook/direct-message.png)       |
+| The object enabledChannels is an indication to NAW for which types of channels are set on connector configs. | [](images/social/facebook/direct-message.png)       |
 
 ```javascript
 const content = {
@@ -662,7 +662,7 @@ const content = {
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
-| The connector on the back-end will use the fields replyToId and currentChannel to identify for which only the Facebook API needs to be sent to. | [](/images/social/facebook/direct-message-reply.png)       |
+| The connector on the back-end will use the fields replyToId and currentChannel to identify for which only the Facebook API needs to be sent to. | [](images/social/facebook/direct-message-reply.png)       |
 
 ```javascript
 const content = {
@@ -717,7 +717,7 @@ The attribute conversationState.dmChatId refers to the Twitter account where the
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
-| For Retweet, Quotes and Replies the structure will be the same, changing the type of the event and adding the parent related to tweet replied, or retweeted. | [](/images/social/twitter/public-tweet.png)       |
+| For Retweet, Quotes and Replies the structure will be the same, changing the type of the event and adding the parent related to tweet replied, or retweeted. | [](images/social/twitter/public-tweet.png)       |
 
 ```javascript
 const content = {
@@ -739,7 +739,7 @@ const content = {
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
-| The connector on back-end will use the fields replyToId and currentChannel to identify for which Twitter API the message needs to be sent to. | [](/images/social/twitter/public-tweet-reply.png)       |
+| The connector on back-end will use the fields replyToId and currentChannel to identify for which Twitter API the message needs to be sent to. | [](images/social/twitter/public-tweet-reply.png)       |
 
 ```javascript
 const content = {
@@ -768,7 +768,7 @@ const content = {
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
-| Sometimes it is necessary to reply from a different Twitter handle. | [](/images/social/twitter/reply-from-account.png)       |
+| Sometimes it is necessary to reply from a different Twitter handle. | [](images/social/twitter/reply-from-account.png)       |
 
 ```javascript
 const content = {
@@ -805,7 +805,7 @@ The fallback mechanism when the replyFromAccountId is not provided is to use the
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
-|  | [](/images/social/twitter/direct-message.png)       |
+|  | [](images/social/twitter/direct-message.png)       |
 
 ```javascript
 const content = {
@@ -827,7 +827,7 @@ const content = {
 
 | Description | Outcome     |
 | :---        |    :----:   |
-| The connector on the back-end will use the fields replyToId and currentChannel to identify for which only the Twitter API needs to be sent to. | [](/images/social/twitter/direct-message-reply.png)       |
+| The connector on the back-end will use the fields replyToId and currentChannel to identify for which only the Twitter API needs to be sent to. | [](images/social/twitter/direct-message-reply.png)       |
 
 ```javascript
 const content = {
