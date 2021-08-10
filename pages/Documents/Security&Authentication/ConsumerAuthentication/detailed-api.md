@@ -289,7 +289,7 @@ Example for Mandatory+Standard+Custom Claims JWT:
 
 1. In the Consumer Identity Provider set up page, under the "Choose IDP certificate type:" select the JWKS Endpoint option and enter a valid https JWKS Endpoint.
 
-![](img/consumer_idp_jwks.png)
+![Select JWKS endpoint](img/consumer_idp_jwks.png)
 
 ### If you chose to configure the JWT Public Key
 
@@ -349,4 +349,4 @@ MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA/lnYC8lHMdEJz74m2WHrK8ndDE3LDto1xZ8H
 {:start="3"}
 3. Paste the public key into the Consumer Identity Provider set up:
 
-![](img/consumer_idp_jwt_public_key.png)
+![Select JWT public key](img/consumer_idp_jwt_public_key.png)

@@ -35,22 +35,22 @@ To define the OAuth 2.0 authentication:
 
 2.	Search for "Consumer Identity Provider"
 
-![](img/mgmt_search_consumer_idp.png) 
+![Search for Consumer Identity Provider in the Management Console](img/mgmt_search_consumer_idp.png) 
 
 {:start="3"}
 3.  Click on 'Click to configure'
 
-![](img/mgmt_consumer_idp_configure.png)
+![Click to configure the Consumer Identity Provider](img/mgmt_consumer_idp_configure.png)
 
 {:start="4"}
 4. In section #2 - "Define Identity Provider", select the preferred oAuth 2.0 Authentication Type, and then complete the required fields
 
-![](img/consumer_idp_select_type.png)
+![Select consumer authentication type](img/consumer_idp_select_type.png)
 
 
 ### RFC Compliance
 
-There are actually 2 versions to our Auth service - the "openID" (backwards compatible - default) version, and the "OAuth 2 RFC" (non default) version. If you already have a working comsumer identity provider configured - chances are you're working with the "openID" version. If you're setting up a consumer identity provider for the first time - chances are you want the "OAuth 2 RFC" version.
+There are actually 2 versions to our Auth service - the "openID" (backwards compatible - default) version, and the "OAuth 2 RFC" (non default) version. If you already have a working consumer identity provider configured - chances are you're working with the "openID" version. If you're setting up a consumer identity provider for the first time - chances are you want the "OAuth 2 RFC" version.
 
 Starting with version 9.3.0 of the Unified Window (May 2018) - all newly created consumer identity providers will use the "OAuth 2 RFC" version by default.
 
