@@ -11,25 +11,9 @@ order: 3
 indicator: both
 ---
 
-### Conversational Cloud UI
+### Consumer Identity Provider
 
-The following parameters should be defined:
-
-*	Implicit or Code Flow
-
-*	OAuth 2.0 Authentication Endpoint (when separate browser window is used)
-
-*	OAuth 2.0 Token Endpoint (when Code Flow is used)
-
-*	OAuth 2.0 JWT Public Key / JWKS Endpoint
-
-*	OAuth 2.0 Client ID
-
-*	OAuth 2.0 Client Secret (when Code Flow is used)
-
-*	JS method name and context (when Conversational Cloud embedded window is used in Web)
-
-To define the OAuth 2.0 authentication:
+#### To define the OAuth 2.0 authentication:
 
 1.	In Conversational Cloud, go to [Management Console](https://knowledge.liveperson.com/admin-settings-management-console-overview.html)
 
@@ -47,6 +31,23 @@ To define the OAuth 2.0 authentication:
 
 ![Select consumer authentication type](img/consumer_idp_select_type.png)
 
+The following parameters should be defined:
+
+* **OAuth 2.0 Authentication Type** - Implicit / Code Flow
+
+* **OAuth 2.0 Authentication Endpoint** - An HTTPS URL that used in the case that the consumer conversation window is configured as a [Seperate Browser Window](https://knowledge.liveperson.com/messaging-channels-web-messaging-authenticated-web-messaging.html#separate-browser-window-flow).
+
+* **OAuth 2.0 Token Endpoint** - An HTTPS URL that used in Code Flow
+
+* **Choose IDP Certificate Type** - JWT Public Key / JWKS Endpoint
+
+* **OAuth 2.0 Client ID** - Used in Code Flow
+
+* **OAuth 2.0 Client Secret** - Used in Code Flow
+
+* **JS Method Name** - When Conversational Cloud embedded window is used in Web 
+
+* **JS Context** - When Conversational Cloud embedded window is used in Web
 
 ### RFC Compliance
 
