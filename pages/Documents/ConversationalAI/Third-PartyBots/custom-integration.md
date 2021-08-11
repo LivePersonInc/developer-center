@@ -696,17 +696,18 @@ function lambda(input, callback) {
     if (socialMetadata && socialMetadata.channel === "Public") {
       const privateLink = 'I\'m a BOT, please join to our private chat to talk with a live agent:\n https://m.me/' + socialMetadata.conversationState.dmChatId;
 
+      // The following is an example of Facebook Public Replies
       const socialMetadataResponse = {
         "type": "SocialMessagingEventData",
         "channel": "Public",
         "replyToId": `${socialMetadata.replyToId}`,
-        "event":{
-          "source":"Facebook",
-          "type":"CC"
+        "event": {
+          "source": "Facebook",
+          "type": "CC"
         },
-        "conversationState":{
-          "currentChannel":"Public",
-          "dmChatId":`${socialMetadata.conversationState.dmChatId}`
+        "conversationState": {
+          "currentChannel": "Public",
+          "dmChatId": `${socialMetadata.conversationState.dmChatId}`
         }
       };
 

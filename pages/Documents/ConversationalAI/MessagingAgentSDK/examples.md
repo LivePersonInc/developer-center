@@ -168,7 +168,8 @@ The agent bot is an example SDK implementation in which the bot accepts incoming
 See [example explanation](https://livepersoninc.github.io/node-agent-sdk/social-bot.html)
 
 Pre-requisites:
-- A LivePerson Account
+- A LivePerson Account with Messaging & Social Messaging
+- A LivePerson Account with Feature "Sent_Consumer_Message_Metadata" enabled
 - A user with Agent permissions
 - [Social Messaging](https://knowledge.liveperson.com/messaging-channels-social-messaging-social-messaging-overview.html) configured on your LivePerson account
 
