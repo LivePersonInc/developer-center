@@ -264,6 +264,7 @@ You can use only a subset of the standard interaction types in the Survey dialog
 Survey bot settings include:
 
 - **Skill**: If desired, change the skill(s) that will trigger this survey bot.
+- **Max number of fallback responses**: Consumer responses that are repeatedly unrecognized by the bot result in a loop where the fallback response is sent repeatedly. Use this setting to stop the loop and close the survey. You can specify the maximum number of fallback responses to send and the closing message to send just before closing the survey.
 - **Target Interactive Conversations**: Use this setting to override, on a per bot basis, the rules for targeting surveys based on consumer engagement. When this setting is disabled, the account-level **Target Interactive Conversations** setting that's set in **Account Details** in the Bot Accounts application is used. However, when this bot-level setting is enabled, it has priority over the account-level setting. This bot-level setting works just like the account-level setting. For more details, see the discussion on *configuring account-level settings* farther above on this page.
 - **Email Transcript**: Enable this to offer an emailed transcript of the survey to the consumer. For more on this, see farther below.
 - **Thank You Message**: Enable this to send a Thank You message before the survey conversation is closed. For more on this, see farther below.
