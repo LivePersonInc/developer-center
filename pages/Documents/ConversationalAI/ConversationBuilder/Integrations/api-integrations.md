@@ -14,7 +14,7 @@ API Integrations allow Conversation Builder to perform some action or access the
 For practice at using an API integration, try the [Integrations tutorial](tutorials-guides-getting-started-with-bot-building-integrations.html). (You’ll need to complete the Dialogs & Patterns tutorial and the Intents tutorial first, as the tutorials build on each other.)
 
 {: .important}
-If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before adding an API integration. For details, see [here](conversation-builder-networking-security.html).
+If you have [IP restrictions](https://knowledge.liveperson.com/security-regulations-security-ip-restriction.html) in place, you'll need to do some whitelisting before adding an API integration. For details, see [here](conversation-builder-networking-security.html).<br><br>An API integration call times out in 20 seconds; within that time, the integration attempts 3 retries. This isn’t configurable.
 
 ### Add an API integration
 
@@ -43,6 +43,21 @@ When implementing API integrations, follow these security best practices:
 * **Credentials**: Use a secure form of authentication and authorization. OAuth is recommended, but for a comparative list of credential types, see [here](bot-accounts-credentials.html#credential-types-authentication-types).
 * **API**: Your brand’s API should be designed according to security standards. For example, at a minimum, use an authentication mechanism. Also provide support for other best practices, such as protecting the API from high volume and bursts in traffic.
 * **API response handling**: For security and privacy reasons, you must not log returned customer data using the JavaScript API or store the data in permanent variables.
+
+### Disabling the predefined request header fields
+
+As a convenience, the following request header fields are predefined for an API integration:
+
+* Accept: application/json;charset=UTF-8
+* Content-Type: application/json;charset=UTF-8
+
+Since the values are predefined, they're always used regardless of how you've configured the integration. However, if desired, you can disable these predefined header fields in order to use different values. To disable them for only the current request, use the following Pre-Process Code in the Integration interaction:
+
+`botContext.setBotVariable("__standardHeaders__", "off", false, false);`
+
+To disable them for the current session, use:
+
+`botContext.setBotVariable("__standardHeaders__", "off", true, false);`
 
 ### Handling API responses
 

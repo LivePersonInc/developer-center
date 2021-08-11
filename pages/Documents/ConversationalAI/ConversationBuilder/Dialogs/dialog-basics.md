@@ -18,16 +18,14 @@ A dialog is a group or flow of interactions that are triggered based upon consum
 
 There are several types of dialogs:
 
-- **Dialog (Standard)**: Standard dialogs are triggered when the bot recognizes the consumer's message via an [intent](intent-builder-intents.html) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match. For more on this, see [here](conversation-builder-dialogs-standard-dialogs.html).
+- **Dialog (Standard)**: Standard dialogs are triggered when the bot recognizes the consumer's message via an [intent](intent-manager-key-terms-concepts.html#intents) match or a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) match. For more on this, see [here](conversation-builder-dialogs-standard-dialogs.html).
 - **Fallback**: The fallback dialog is triggered when the bot doesn't recognize the consumer's message. For more on this, see [here](conversation-builder-dialogs-fallback-dialogs.html).
 - **Disambiguation**: The disambiguation dialog is triggered when the bot recognizes the consumer's input, but it can match it to multiple intents. As a result, clarification from the consumer is needed. For more on this, see [here](conversation-builder-dialogs-disambiguation-dialogs.html).
 - **Auto Escalation**: This type of dialog frees the consumer from being stuck within a question, which happens when the bot repeatedly doesn’t recognize the consumer’s input. The dialog is triggered automatically after a configurable threshold of failures is reached; it gives the consumer the option to be transferred. For more on this, see [here](conversation-builder-dialogs-auto-escalation-dialogs.html).
 * **Survey**: Survey dialogs can only be created in post-conversation survey bots. Use a survey dialog to define a survey. For more on this, see [here](conversation-builder-bots-post-conversation-survey-bots.html).
 
-<!--
 ### Dialog templates
 You can make a dialog available to other bot developers as a dialog template. For information on working with dialog templates, see [here](conversation-builder-dialog-templates.html).
--->
 
 ### Context switching
 
@@ -79,7 +77,7 @@ When you import dialogs, consider and address any dependencies across the dialog
 1. Open the destination bot.
 2. Click **Add Dialog** in the lower-left corner.
 3. In the Add Dialog window, select the **From Existing Bots** tab.
-4. Browse and/or search to find and select the dialogs to import. You can select up to 10 dialogs. <!-- You can't select dialogs that are made available as [dialog templates](conversation-builder-dialog-templates.html); these you must import as a dialog template. -->
+4. Browse and/or search to find and select the dialogs to import. You can select up to 10 dialogs. You can't select dialogs that are made available as [dialog templates](conversation-builder-dialog-templates.html); these you must import as a dialog template.
 
     <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/dialogs_import1.png">
 

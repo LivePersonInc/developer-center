@@ -180,6 +180,8 @@ The max width for an image in this repo is 800px.
 
 ### Building the Site Locally
 
+**IMPORTANT:** This repository requires Ruby 2.7.x. Attempts to run the local server on 3.x.x will generate confusing errors.
+
 If you have not already done so, make sure your computer has Ruby installed. Here's a helpful guide on how best do that on [Mac](http://railsapps.github.io/installrubyonrails-mac.html) (you can stop once Ruby is installed, you don't need Rails) and on [any other system](https://www.ruby-lang.org/en/documentation/installation/).
 
 Once you have installed Ruby, clone this repository to your machine. Once done, navigate to it using Terminal or your preferred command line interface. Follow the steps below to run the site from your machine. **If you're on Windows, don't forget to run your CLI as an admin**.
@@ -208,6 +210,10 @@ You have two options to run the site locally after the first install:
 
 See the `_template` folder above for a complete template of a simple REST API. Other templates will follow in the future. However, if you have a unique API to document or need further assistance, please reach out to Product Communications *before* starting to write your document so that we can advise on its structure.
 
+### Algolia
+Aloglia is the tool we use for the search bar. It generates a list of searchable items by indexing it in their dashboard which is then pulled into the search bar within the project
+
+To get the latest data to be added into algolia simply do a pull request on the production branch (master)
 
 ### Licensing
 

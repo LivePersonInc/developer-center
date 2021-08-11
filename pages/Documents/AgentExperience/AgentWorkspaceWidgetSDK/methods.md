@@ -155,7 +155,7 @@ _Note: The updateCallback must be the same callback provided for the bind._
 |Command |Description |Const |Payload |
 |:--- |:--- |:--- |:--- |
 | "Write ChatLine" | write text to the chat input. In real-time chat the text should be sent in **HTML** format, in async messaging conversation in **plain text** format.| lpTag.agentSDK.cmdNames.write | {text: "text to write", quickReplies: {...}} <br><br> quickReplies is optional. |
-| "Write StructuredContent" | send structured content | lpTag.agentSDK.cmdNames.writeSC | {json: {...}, quickReplies: {...}, metadata: [...]} <br><br> quickReplies and matadata are optional |
+| "Write StructuredContent" | send structured content | lpTag.agentSDK.cmdNames.writeSC | {json: {...}, quickReplies: {...}, metadata: [...]} <br><br> quickReplies and metadata are optional |
 | "Send Notification" | send notification | lpTag.agentSDK.cmdNames.notify | {} |
 | "Send File" | send a file. Supported by async messaging only. | lpTag.agentSDK.cmdNames.sendFile | {file: {...//File or Blob}, name: "name_of_file.png"} |
 

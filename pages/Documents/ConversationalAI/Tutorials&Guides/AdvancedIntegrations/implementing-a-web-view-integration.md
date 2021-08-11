@@ -128,9 +128,11 @@ async function postData(url = '', auth, data = {}) {
 
 ### React to the submitted data in the bot
 
-When we called the Web View Integration API upon submitting the form, we passed a “message” parameter with a value of “request successful.” This “message” can be used to trigger a dialog. You can see in the image below that we have a dialog set up to pattern match the message that we sent.
+When we called the Web View Integration API upon submitting the form, we passed a “message” parameter with a value of “request successful.” This “message” can be used in the dialog flow. You can see in the images below that we have a custom rule to pattern match the message that we sent.
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_patternMatch.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_a.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_b.png">
+<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/guideWebView_react_c.png">
 
 In the pre-process code for the interaction, we have the following code to retrieve the visitor’s name that was sent in the API payload. This value is then assigned to a bot variable, which we can use in the text interaction.
 

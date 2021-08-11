@@ -17,7 +17,7 @@ In this tutorial, you walk through how to link your bot to Conversational Cloud.
 <div style="display: block; position: relative; max-width: 70%;margin:0 auto;"><div style="padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/451127135" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" style="width: 100%; height: 100%; position: absolute; top: 10px; bottom: 0px; right: 0px; left: 0px;"></iframe></div></div>
 <br>
 
-### Step 13: Create a bot user
+### Step 11: Create a bot user
 
 In this step, you create a new user agent and skill for the bot, create a new engagement for web messaging, and connect the bot agent to the engagement.
 
@@ -39,11 +39,11 @@ In this step, you create a new user agent and skill for the bot, create a new en
     * **Skills**: Bot
 	
     {: .important}
-    By typing in the skill name **Bot**, a new skill with the name **bot** is created.
+    By typing in the skill name **Bot**, a new skill with the name **Bot** is created.
 
 4. Click **Save**.
 
-### Step 14: Create an engagement
+### Step 12: Create an engagement
 
 1. Click the Campaign Builder icon <img style="width:25px" src="img/ConvoBuilder/getstartedtutorial/icon_campaign_builder.png"> along the left side of the Conversational Cloud page. 
 2. Click **+ Add Campaign** in the lower-left corner.
@@ -62,7 +62,7 @@ In this step, you create a new user agent and skill for the bot, create a new en
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/engagement.png">
 
-### Step 15: Add the agent connector
+### Step 13: Add the agent connector
 
 1. Navigate back to the Getting Started bot in Conversation Builder.
 2. Click **Agent Connectors** in the menu bar in the upper-left corner.
@@ -88,12 +88,9 @@ In this step, you create a new user agent and skill for the bot, create a new en
     {: .important}
     LivePerson recommends that, when you connect your bot to Conversational Cloud in a production environment, you deploy at least two Conversational Cloud agent connectors for a single bot. This is so the second can serve to support failover if the first goes down. Additionally, if you have traffic considerations, you might want to deploy three or more. A good baseline is no more than 50 concurrent conversations per agent connector (e.g., deploy 4 connectors to support 200 concurrent conversations).
 
-### Step 16: Test the deployment
+### Step 14: Test the deployment
 
-{: .important}
-In this step, you'll be testing with Messaging, so you'll be using [this test page](https://vx-lp.github.io/v2/lpwm/). When you test with Chat, you can use [this test page](https://livepersoninc.github.io/visitor-page/?siteid=%5Byour%20account%20number%5D), adding your account number to the URL.
-
-1. In a browser, navigate to the [Messaging test page](https://vx-lp.github.io/v2/lpwm/). 
+1. In a browser, navigate to the [Messaging test page](https://developers.liveperson.com/web-messaging/emulator.html). 
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/getstartedtutorial/messaging_test_page.png">
 

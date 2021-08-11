@@ -14,10 +14,10 @@ indicator: both
 
 If your knowledge base is an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html) (which also uses LivePerson AI), it makes use of Natural Language Understanding or NLU to evaluate the articles against the consumer's utterance (the intent) in order to return the highest scoring article.
 
-To set this up, you create a domain with the necessary intents in [Intent Builder](intent-builder-overview.html), where the domain specifies the [NLU engine](intent-builder-natural-language-understanding.html) to use. Then, within the Knowledge Base application, you 1) associate the domain with the knowledge base, 2) associate the domain's intents with the articles, and 3) train the knowledge base to use the intents to return the articles.
+To set this up, you create a domain with the necessary intents in [Intent Manager](intent-manager-overview.html), where the domain specifies the [NLU engine](intent-manager-natural-language-understanding.html) to use. Then, within the Knowledge Base application, you 1) associate the domain with the knowledge base, 2) associate the domain's intents with the articles, and 3) train the knowledge base to use the intents to return the articles.
 
 {: .important}
-Intent Builder offers a set of [pre-built domains](intent-builder-overview.html#prebuilt-domains). These are designed to get you up and running quickly with intents.
+Intent Manager offers a set of [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains). These are designed to get you up and running quickly with intents.
 
 ### Associate a domain with a knowledge base
 
@@ -27,7 +27,7 @@ You associate a domain with an external knowledge base when you [add the knowled
 
 And you likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base): 
 
-<img style="width:500px" src="img/ConvoBuilder/kb_add_int.png">
+<img style="width:700px" src="img/ConvoBuilder/kb_add_int.png">
 
 Associating the domain gives you access to the domain's intents, so you can associate them with the articles. This is the next step in connecting your content to intents.
 
@@ -40,56 +40,45 @@ After you've added a knowledge base that is associated to a domain, configure th
 
 <img style="width:600px" src="img/ConvoBuilder/kb_associate_article.png">
 
-### Train a knowledge base
+You don’t need to link your articles to intents right away, as the **Intent** field is optional. This is deliberate because it allows you to get started with a knowledge base by adding just the articles first. Then, you can create intents for the content you care about the most, and link those to the relevant articles. This means you can focus on specific content areas in your knowledge base, and manage the content overall with varying levels of effort on your part. The approach gives you flexibility as you maintain the knowledge base over time.
 
-After you've added your content and linked it to intents, train the knowledge base. Training involves:
+### Tune a knowledge base
+
+After you've added your content and linked it to intents, tune the knowledge base. Tuning involves:
 
 1. Performing a search using a consumer utterance.
 2. Reviewing the results.
-3. Adding or removing training phrases in the intents as needed. Adding or removing positive/negative learnings in the articles as needed.
+3. Adding or removing training phrases in the intents as needed.
 
-**To train a knowledge base**
+**To tune a knowledge base**
 
-Open the knowledge base, and click **Articles** in the upper-left corner if the page isn't already displayed. Then enter an utterance, and review the results.
+1. Open the knowledge base.
+2. In the **Question Tester** on the right, specify the following:
 
-The following image illustrates a search in an internal knowledge base. Things work similarly for an external knowledge base.
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test1.png">
 
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_test.png">
+    * **Question**: Enter the consumer utterance for which you want to find matching articles.
+    * **Search Mode**: Select the type of search to perform. For explanations of each search mode, see *Search modes* farther below in this topic.
+    * **Confidence**: Select the NLU confidence threshold that an article must meet for it to be returned as a result. For more on thresholds, see *Scoring and thresholds* farther below in this topic.
+    * **# of Results**: Select how many results to return.
+    * **Article Status**: Select the status of the artice, either Active, Inactive, or All. This option is only available for internal knowledge bases.
 
-By default, the Sort & Filter settings are set to "Intents" and "Fair Plus." 
+3. Click **Find Answer**.
+4. Review the results under **Matched Answers**.
 
-<img class="fancyimage" style="width:350px" src="img/ConvoBuilder/kb_sortandfilter.png">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test2.png">
 
-This means that the algorithm first checks for matches using NLU, with a threshold of Fair Plus. If it doesn’t find any matches, it attempts a text search as well. Because of this, you might see a message like "No intent matched. Performed text search. 3 results found." When this happens, you should add some more training phrases to the intent to improve the results.
+5. You can click on an article title to see the article, and toggle between this and its JSON.
 
-If you don’t want the follow-up text search, change the **Search Mode** to "Intents Only." This performs only the intents search. If you want to perform only the text search, change the **Search Mode** to "Text." For more on search modes, see farther below in this topic.
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test3.png">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test4.png">
+    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test5.png">
 
-If you don't get any results with your search, you can adjust these filters by tapping <img style="width:25px" src="img/ConvoBuilder/icon_kb_sortAndFilter.png"> (Sort & Filters icon).
-
-Based on your results, add more training phrases to the intents in the domain if needed.
-
-#### Adding positive and negative learnings
-
-You can also use the Thumb Up and Thumbs Down icons displayed in a search.
-
-<img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_test_thumbsUp.png">
-
-Continuing our example of an internal knowledge base, the image above illustrates an utterance that returned some results. However, the preferred result was only a FAIR PLUS match.
-
-Tap the **Thumbs Up** icon to add the utterance to the article's Positive Learnings set, which can be viewed in the article's **Advanced Settings**. These are the phrases for which you want a match to occur. If you were to rerun the search after doing this, the article would return with a higher score.
-
-Tap **Thumbs Down** to do the opposite. Thumbs Down adds the utterance to the article's Negative Learnings set. These are the phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent.
-
-{: .important}
-Positive and negative learnings work the same way for internal and external knowledge bases.
-
-#### Beware of overtraining
-
-Something to keep in mind when training in general, and using the Thumbs Up/Down icons in specific, is that because they are so easy to use, they are often misused. Often people use Thumbs Up for extremely specific or lengthy utterances that, although said by an end user, are not great training phrases because they would never match another user’s utterance. Over time, the addition of these utterances (often 50+ added) skew the results in a negative way. The same is true when using Thumbs Down. Anything over about 10 - 15 training phrases might begin to return false positives.
+6. Based on the results, adjust the training phrases for the intents in the associated domain if needed.
 
 ### Search modes
 
-When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), and when you perform a search within the Knowledge Base application, you specify a "mode" for the search. The search mode determines the type of search that is performed. Possible modes include:
+A knowledge base search is performed using a specified "search mode." The search mode determines the type of search. Possible modes include:
 
 * Intents
 * Intents Only
@@ -113,6 +102,15 @@ When the Text mode is used, a text-to-text search is performed:
 * With an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
 * With an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) (intent qualifiers), and tags.
 
+You can improve the quality of your knowledge base answers by linking your articles to intents and performing intent-based searches. However, often this change is introduced gradually, as time and opportunity allow. Typically, Text searches are used when you haven’t yet linked your articles to intents.
+
+Be aware that, when a Text search is performed, if a match for the search phrase is found, the associated confidence score is reduced to FAIR_PLUS if either of the following is true:
+
+* The search phrase has less than three (3) words.
+* The search phrase and the stored content don’t have matched words in sequence (with two deviations).
+
+Therefore, if you’re using a Text search, LivePerson recommends that you test and tune the knowledge base using a threshold of FAIR_PLUS. If you aren’t satisfied with the results, increase the threshold to GOOD.
+
 ### Scoring and thresholds
 
 When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to evaluate a consumer's input against a knowledge base, it scores the articles based on the confidence level of the match: VERY GOOD, GOOD, FAIR PLUS, FAIR or POOR. 
@@ -121,10 +119,8 @@ When the Knowledge Base uses Natural Language Understanding (NLU) algorithms to 
 | --- | --- |
 | an external knowledge base with LivePerson AI | the scoring breakdown for the NLU engine used by the associated domain is used |
 | an internal knowledge base with Domain intents | the scoring breakdown for the NLU engine used by the associated domain is used |
-| an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson NLU v1 is used |
+| an internal knowledge base with Knowledge Base intents (intent qualifiers) | the scoring breakdown for LivePerson (Legacy) is used |
 
-For these confidence score breakdowns, see [here](intent-builder-intents.html#what-is-the-intent-scorethreshold).
+For these confidence score breakdowns, see [here](intent-manager-key-terms-concepts.html#confidence-score-and-threshold).
 
-When you integrate a knowledge base with a bot via a [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html), you specify the minimum score that a result must have in order to be returned. The highest performing article with that threshold is returned. You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD.
-
-If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.
+When you implement a knowledge base search within a bot via a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions), you specify the minimum score that a result must have in order to be returned. You can select from VERY GOOD, GOOD or FAIR PLUS. The default value is GOOD. If you downgrade the threshold to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS.

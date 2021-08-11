@@ -38,7 +38,7 @@ If markdownHyperlinkFromAgent is enabled, link preview won’t be displayed.
 
 ### While updating the SDK, my Structure Content is now showing a border on the buttons:
 
-On SDK 5.2.1, the border was introduce as an accessibility element for compliance, SDK introduce a configuration for versions 6.0 or higher that lets you control the color of this element:
+On SDK 5.2.1, the border was introduced as an accessibility element for compliance, SDK introduce a configuration for versions 6.0 or higher that lets you control the color of this element:
 
 <img src="../../../../img/structuredContentButtonBorderColor.png" alt="Structured Content Button Border" style="width: 600px;padding: 20px;">
 
@@ -62,4 +62,40 @@ On SDK 5.2.1, the border was introduce as an accessibility element for complianc
 - No, you won’t receive Push Notifications. As soon as you log out, SDK unregisters from the Push Notification service and you will not be able to receive any Push Notifications.
 - Starting SDK 4.2.0, we preserve Unread Message count if there is one.
 
+### When opening the Conversation Screen I will encounter empty message bubbles
 
+This may happen as the SDK uses a unique Apple key named `identifierForVendor`, this key is an alphanumeric string that uniquely identifies a consumer device to the app’s vendor/brand, the key helps the SDK during the encryption process to create unique identifier names per device & per bundleId to store keys into the Device Keychain.
+
+This key’s value can change when installing test builds using Xcode or when installing an app on a device using ad-hoc distribution (e.g. TestFlight, TestFairy, etc.). When this value changes it creates an inconsistency between the value that is provided and the value that is recognized by the SDK, and those empty message bubbles are displayed.
+
+As Apple mentioned in their article:
+
+“The value in this property remains the same while the app (or another app from the same vendor) is installed on the iOS device”. 
+
+{:.important}
+For more information, please visit Apple’s documentation [link](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor)
+
+### When using VoiceOver while on the Conversation Screen, Assistant will sometimes read the elements on the ViewController behind it.
+
+In order to prevent this from happening, Host App will need to change the value of the following properties before calling the method `LPMessaging.instance.showConversation`
+
+```swift
+self.view.accessibilityElementsHidden = true
+// NOTE: if there is a TabBar, it should be hidden too:
+// self.tabBarController?.tabBar.accessibilityElementsHidden = true
+```
+
+Once the Conversation Screen is dismissed, HostApp will need to reset the properties changed before to re-enable the VO on this ViewController, a delegate on the SDK will notify Host App of that event:
+
+```swift
+/**
+* This delegate method is optional.
+* It is called when the conversation view controller removed from its container view controller or window.
+*/
+func LPMessagingSDKConversationViewControllerDidDismiss() {
+  // NOTE: Setting Parent ViewController accessibility hidden value to true, so VO will read the elements on this View
+  self.view.accessibilityElementsHidden = false
+  // NOTE: if there is a tabbar, it should reset too:
+  // self.tabBarController?.tabBar.accessibilityElementsHidden = false
+}
+```

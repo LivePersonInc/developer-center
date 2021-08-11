@@ -13,7 +13,7 @@ Use this page to help you troubleshoot common issues encountered in Bot Analytic
 
 #### Unmatched phrases aren't shown
 
-If the bot uses a Knowledge Base integration but doesn’t use intents in Intent Builder, the Bot Analytics application doesn’t automatically track unmatched phrases.
+If the bot uses a Knowledge Base integration but doesn’t use intents in Intent Manager, the Bot Analytics application doesn’t automatically track unmatched phrases.
 
 To enable the tracking of unmatched phrases, set the `__recordUnMatchedPatternPhrases__` variable to "true" as shown below. Doing this using `__initConversation()` in the bot’s global functions will fire the code at the start of every conversation.
 

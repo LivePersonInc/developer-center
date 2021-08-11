@@ -36,7 +36,7 @@ Just like any other function, this function must be deployed before it can be us
 
 <div class="important">Try to deploy functions with a runtime of less than one second. If the runtime is longer, you may get a bad user experience because of race conditions within the server. For example, if you create a function based on the <b> Participants Change</b> event and an agent joins the conversation, the consumer may see the resulting `systemMessage` <b>after the agent already responded to the consumer themselves</b>.</div>
 
-#### Last Steps in Third Party Bots
+#### Last Steps in Third-Party Bots
 
 After you successfully implemented and deployed a LivePerson Function, press the refresh button next to the function selection menu and select your function.
 
@@ -140,6 +140,18 @@ The following payload content will be recieved from the Function when an error i
     <td>>WatsonAssistantV2</td>
     <td>Defines the vendor response </td>
   </tr>
+    <tr>
+    <td>dfCxrequest</td>
+    <td>Object</td>
+    <td>DialogflowCX</td>
+    <td>Defines the vendor payload </td>
+  </tr>
+    <tr>
+    <td>dialogflowcx</td>
+    <td>Object</td>
+    <td>DialogflowCX</td>
+    <td>Defines the vendor response </td>
+  </tr>
   </tbody>
 </table>
 
@@ -181,14 +193,12 @@ Example Payloads:
 const { payload } = input;
 const { queryInput } = payload;
 
-if(queryInput.text && queryInput.text.text){
+if (queryInput.text && queryInput.text.text) {
   queryInput.text.text += 'preHook';
 }
 
 return callback(null, payload);
 ```
-
-
 
 ##### Custom Integration
 
@@ -217,7 +227,6 @@ if (payload.message) {
 return callback(null, payload);
 ```
 
-
 ##### Lex
 
 ###### Request payload
@@ -244,7 +253,6 @@ if (payload.inputText) {
 }
 return callback(null, payload);
 ```
-
 
 ##### Microsoft
 
@@ -310,6 +318,45 @@ const { payload } = input;
 if (payload.message) {
   payload.message += 'preHook';
 }
+return callback(null, payload);
+```
+
+##### DialogflowCX
+
+###### Example payload
+
+```json
+{
+  "session": "us-central1-dialogflow.googleapis.com/projects/projectid/locations/us-central1/agents/agentid",
+  "queryInput": {
+    "text": { "text": "customer message", "languageCode": "en" }
+  },
+  "queryParams": {
+    "payload": {
+      "fields": {
+        "lpEvent": {
+          "kind": "structValue",
+          "structValue": {
+            "fields": {}
+          }
+        },
+        "lpSdes": { "kind": "structValue", "structValue": { "fields": {} } }
+      }
+    }
+  }
+}
+```
+
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+const { queryInput } = payload;
+
+if(queryInput.text && queryInput.text.text) {
+  queryInput.text.text += 'preHook';
+}
+
 return callback(null, payload);
 ```
 
@@ -387,14 +434,13 @@ The Posthook Lambda gets invoked on every message the customer sends. It allows 
 
 ```js
 const { payload } = input;
-const { payload: { queryResult } } = payload;
+const { queryResult } = payload;
 if (
   queryResult &&
   queryResult.fulfillmentMessages &&
   queryResult.fulfillmentMessages[0].text.text[0] === 'Hi there'
 ) {
-  queryResult.fulfillmentMessages[0].text.text[0] +=
-    'postHook';
+  queryResult.fulfillmentMessages[0].text.text[0] += 'postHook';
 }
 return callback(null, payload);
 ```
@@ -407,8 +453,7 @@ return callback(null, payload);
 { "context": {}, "messages": ["customer message"] }
 ```
 
-
-###### Minimal working Faas example as code  
+###### Minimal working Faas example as code
 
 ```js
 const { payload } = input;
@@ -435,12 +480,12 @@ return callback(null, payload);
 }
 ```
 
-###### Minimal working Faas example as code 
+###### Minimal working Faas example as code
 
 ```js
 const { payload } = input;
 if (payload.message) {
-  payload.message = 'Changed text by postHook';
+  payload.message = "Changed text by postHook";
 }
 return callback(null, payload);
 ```
@@ -467,10 +512,7 @@ return callback(null, payload);
 
 ```js
 const { payload } = input;
-if (
-  payload &&
-  payload[0].text
-) {
+if (payload && payload[0].text) {
   payload[0].text += 'postHook changed this message';
 }
 return callback(null, payload);
@@ -519,12 +561,82 @@ return callback(null, payload);
 }
 ```
 
-###### Minimal working Faas example as code 
+###### Minimal working Faas example as code
 
 ```js
 const { payload } = input;
 if (payload.output && payload.output.generic[0].text === 'Hi there') {
   payload.output.generic[0].text += 'postHook';
+}
+return callback(null, payload);
+```
+
+##### DialogflowCX
+
+###### Request payload
+
+```json
+{
+  "responseId": "c85d5898-917d-4a6e-a16a-184f29f89ab3-ssabshsdf",
+  "queryResult": {
+    "responseMessages": [
+      {
+        "text": {
+          "text": ["Hi there!"],
+          "allowPlaybackInterruption": false
+        },
+        "message": "text"
+      }
+    ],
+    "webhookPayloads": [],
+    "webhookStatuses": [],
+    "languageCode": "en",
+    "parameters": null,
+    "intent": {
+      "trainingPhrases": [],
+      "parameters": [],
+      "labels": {},
+      "name": "projects/dialogflow-cx/locations/us-central1/agents/83-b2f2-369089/intents/99130578",
+      "displayName": "",
+      "priority": 0,
+      "isFallback": false,
+      "description": ""
+    },
+    "intentDetectionConfidence": 1,
+    "match": {
+      "intent": {
+        "trainingPhrases": [],
+        "parameters": [],
+        "labels": {},
+        "name": "projects/dialogflow-cx/locations/us-central1/agents/83-b2f2-369089/intents/99130578",
+        "displayName": "",
+        "priority": 0,
+        "isFallback": false,
+        "description": ""
+      },
+      "parameters": null,
+      "resolvedInput": "",
+      "matchType": "INTENT",
+      "confidence": 1,
+      "event": ""
+    },
+    "text": "hi",
+    "query": "text"
+  }
+}
+```
+
+###### Minimal working Faas example as code
+
+```js
+const { payload } = input;
+const { queryResult } = payload;
+if (
+  queryResult &&
+  queryResult.responseMessages &&
+  queryResult.responseMessages[0].text.text[0] === 'Hi there'
+) {
+  queryResult.responseMessages[0].text.text[0] += 'postHook';
 }
 return callback(null, payload);
 ```

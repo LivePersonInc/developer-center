@@ -15,7 +15,7 @@ Use the following built-in functions to send different types of messages to the 
 
 ### Send message
 
-Used to send a single message to user. Using this function we can send messages to the user at any place of the code, without stopping the message flow.
+`sendMessage` is used to send a single message to user. Using this function we can send messages to the user at any place of the code, without stopping the message flow.
 
 {: .important}
 [See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
@@ -39,7 +39,7 @@ if(count > 10){
 
 ### Send messages
 
-Used to send array of the messages to the user. In most cases we use message delay for the send messages function.
+`sendMessages` is used to send an array of the messages to the user. In most cases we use message delay for the send messages function.
 
 {: .important}
 [See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.
@@ -59,7 +59,7 @@ botContext.sendMessages(['Your current cash rewards balance is $37.50.' , 'If yo
 
 ### Send message with quick reply
 
-Used for programatically creating a message containing quick reply buttons. Quick replies have both a title (sauce name) and an optional payload (sauce number).
+`sendMessageWithQuickReplies` is used for programatically creating a message containing quick reply buttons. Quick replies have both a title (sauce name) and an optional payload (sauce number).
 
 {: .important}
 A few limitations apply to quick replies. You can have up to 10 quick replies per message. The quick reply titles have a character limit of 20 chars. The quick reply payload (delimited by `~`) is optional.
@@ -79,7 +79,7 @@ botContext.sendMessageWithQuickReplies('What is your favorite type of dipping sa
 
 ### Send immediate reply
 
-Delivers a message to the user immediately and stops the message flow and any other subsequent code within this message.
+`sendImmediateReply` delivers a message to the user immediately and stops the message flow and any other subsequent code within this message.
 
 {: .important}
 [See here](conversation-builder-conversation-builder-interactions.html#limitations) for limitations on types of text that you can send.

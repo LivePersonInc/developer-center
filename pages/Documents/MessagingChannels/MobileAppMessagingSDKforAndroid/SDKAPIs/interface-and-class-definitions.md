@@ -252,8 +252,10 @@ public class MonitoringParams {
 
 ```java
 public enum PermissionType {
-  PHOTO_SHARING
-}  
+  PHOTO_SHARING,
+  DOCUMENT_SHARING,
+  VOICE_RECORDING
+}
 ```
 
 ### PushMessage
@@ -271,6 +273,13 @@ public class PushMessage {
 }
 ```
 
+### PushType
+```java
+public enum PushType {
+  FCM,
+  HUAWEI
+}
+```
 
 ### SdeCallback (Monitoring API Related Classes)
 

@@ -13,7 +13,7 @@ indicator: both
 
 A cookie is a small piece of data sent from a website and stored in the visitors' web browser. It helps the website to remember information about a visit; so when a visitor browses the same website in the future, the data stored in the cookie is sent back to the website by the browser.
 
-Conversational Cloud uses information stored in cookies to maintain session data and to identify returning visitors by saving Conversational Cloud-specific data, such as visitor ID and last chat date. It is important to note that the cookies **do not contain any private customer data** or any data that can be accessible or useful outside of Conversational Cloud.
+Conversational Cloud uses information stored in browser storage to maintain session data and to identify returning visitors by saving Conversational Cloud-specific data, such as visitor ID and last chat date. It is important to note that the stored data **do not contain any private customer data** or any data that can be accessible or useful outside of Conversational Cloud.
 
 ### Cookie Consent
 
@@ -34,24 +34,24 @@ In order to stay aligned with the latest regulations, LivePerson recommends that
 
 3. You should inform consumers about various options they can use to disable cookies.
 
-### Cookie Types
+### Storage Data Types
 
-<div class="important">If no duration is specified for a Cookie Type below, this means its duration is the browser session</div>
+<div class="important">If no duration is specified for a Storage Type below, this means its duration is the browser session</div>
 
 **SecureStorage**
 
 Secure storage is a client-side storage mechanism, that LivePerson has implemented in order to provide the best possible consumer experience. Secure storage uses a combination of modern browser technologies (indexedDB, localStorage, sessionStorage and first party cookies) to store necessary information on LivePerson domains - depending on browser capabilities.
 
-By default, Conversational Cloud uses the third-party cookie solution type for website visitors. If you have any questions about this approach, please contact LivePerson Customer Support. The following tables list the cookies and their types offered by LivePerson.
+By default, Conversational Cloud uses the third-party storage solution type for website visitors. If you have any questions about this approach, please contact LivePerson Customer Support. The following tables list the stored data and their types offered by LivePerson.
 
-### Monitoring Cookies
+### Monitoring Data
 
 <table>
   <thead>
   <tr>
-    <th>Cookie Type</th>
+    <th>Entry Name</th>
     <th>Description</th>
-    <th>Storage</th>
+    <th>Storage Type</th>
   </tr>
   </thead>
   <tbody>
@@ -82,7 +82,7 @@ By default, Conversational Cloud uses the third-party cookie solution type for w
   </tr>
   <tr>
     <td>lpTabId</td>
-    <td>Tab identifier</td>
+    <td>Tab identifier - uses to share LivePerson data between different browser tabs</td>
     <td>sessionStorage. <br><br>Duration: session - same tab and domain only</td>
   </tr>
   <tr>
@@ -94,14 +94,14 @@ By default, Conversational Cloud uses the third-party cookie solution type for w
 </table>
 
 
-### Conversation Cookies
+### Conversation Data
 
 <table>
   <thead>
   <tr>
-    <th>Cookie Type</th>
+    <th>Entry Name</th>
     <th>Description</th>
-    <th>Storage</th>
+    <th>Storage Type</th>
   </tr>
   </thead>
   <tbody>
@@ -130,22 +130,12 @@ Note: We do not currently use this data although we do store it.</td>
     <td>lpStrMap</td>
     <td>manages storages keys (used for secure storage logic)</td>
     <td>SecureStorage. <br><br>Duration: 1 day</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>Handles window UI states between tabs.</td>
-    <td>SecureStorage. <br><br>Duration: 1 day</td>
-  </tr>
+  </tr>  
   <tr>
     <td>UIConf</td>
     <td>Stores conversation settings (features, logic etc.)</td>
     <td>SecureStorage. <br><br>Duration: 1 day</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>stores chat services locations</td>
-    <td>SecureStorage. <br><br>Duration: 1 day</td>
-  </tr>
+  </tr>  
   <tr>
     <td>lpMessaging-</td>
     <td>Stores the JWT token and authentication code in messaging scenarios for messaging window recovery on navigation and cross tabs</td>
@@ -165,9 +155,9 @@ Note: We do not currently use this data although we do store it.</td>
 <table>
   <thead>
   <tr>
-    <th>Cookie Type</th>
+    <th>Entry Name</th>
     <th>Description</th>
-    <th>Storage</th>
+    <th>Storage Type</th>
   </tr>
   </thead>
   <tbody>
@@ -217,9 +207,9 @@ Note: We do not currently use this data although we do store it.</td>
 <table>
   <thead>
   <tr>
-    <th>Name</th>
+    <th>Entry Name</th>
     <th>Description</th>
-    <th>Storage</th>
+    <th>Storage Type</th>
   </tr>
   </thead>
   <tbody>
@@ -244,8 +234,10 @@ Conversational Cloud supports secure cookies, but requires the Web Tag to be dep
 
 Conversational Cloud is unable to support the HttpOnly attribute because it does not operate through JavaScript, which enables the Web Tag to collect cookies.
 
-#### Third Party Cookies - Default
+#### Third Party Storage - Default
 
-By default, Conversational Cloud uses third-party session and visitor cookies in order to save visitors’ tracking information. This is due to the fact that while visitors are browsing your site, the Conversational Cloud cookies are set by the Conversational Cloud domain and not by your website domain.
+By default, Conversational Cloud uses third-party session and visitor storage in order to save visitors’ tracking information. This is due to the fact that while visitors are browsing your site, the Conversational Cloud cookies are set by the Conversational Cloud domain and not by your website domain.
+
+Some browsers are currently limiting the usage of third-party storage - this can affect the LivePerson loading and monitoring process. it is possible also to enable first-party storage support for the secure storage for additional support.
 
 If you have any questions that are not addressed through this cookie policy, please contact LivePerson Technical Support.

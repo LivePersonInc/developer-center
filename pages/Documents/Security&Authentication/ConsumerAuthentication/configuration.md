@@ -13,7 +13,7 @@ indicator: both
 
 ### Conversational Cloud UI
 
-For each account, the following parameters should be defined:
+The following parameters should be defined:
 
 *	Implicit or Code Flow
 

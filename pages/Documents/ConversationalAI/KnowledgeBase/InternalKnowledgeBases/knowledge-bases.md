@@ -25,7 +25,7 @@ indicator: both
 
         **IMPORTANT**: When creating one knowledge base based off of another, don't reuse the same CSV import file or Google sheet for a second knowledge base in the same hosted region. The article IDs must be unique within the region. In the file for the second knowledge base, clear the article IDs; the application will create article IDs for new articles.
 
-    * **Intent Association**: This field specifies where the intents reside, either in the knowledge base itself or in a domain in Intent Builder. Select either "Domain Intents" or "Knowledge Base Intents" (a legacy feature). If you select "Domain Intents," also select the domain from the list that appears. Take care when selecting the domain; you can't change the domain after adding the knowledge base. For an introduction to Domain intents versus Knowledge Base intents, see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents).
+    * **Domain**: The knowledge base will use Domain intents, so select the domain to use here. For information on Domain intents, see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents).
 
 5. Click **Save**.
 
@@ -40,7 +40,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_importFile.png">
 
 {: .important}
-The import file can contain the following basic HTML tags: p, br, a (only the “href” attribute and “http”/"https” protocols are supported).
+The import file can contain the subset of HTML that’s discussed [here](knowledge-base-common-settings-tasks.html#format-text-in-an-article). Additionally, as a best practice, ensure the file is saved as a UTF-8 encoded CSV file before you import it. This is particularly important if you need to support special language characters (e.g., ö, ü, ß).
 
 **To create an import file**
 
@@ -63,8 +63,6 @@ The import file can contain the following basic HTML tags: p, br, a (only the �
 | audio_url | The URL of an audio file. For more on this, see [here](knowledge-base-internal-knowledge-bases-articles.html#add-content-links). |
 | video_url | The URL of a video file. For more on this, see [here](knowledge-base-internal-knowledge-bases-articles.html#add-content-links). |
 | category | Assigning a category lets you [filter and find articles based on categories](knowledge-base-internal-knowledge-bases-articles.html#find-articles-with-a-specific-category) in the Knowledge Base application. |
-| positiveLearnings | These are phrases for which you want a match to the article to occur. A comma-separated list. |
-| negativeLearnings | These are phrases for which you don't want the article to appear in the result even if it is matched to the consumer's intent. A comma-separated list. |
 | intentName | Applicable if you're using Domain intents, not Knowledge Base intents (see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) for an understanding of the two). This is the intent associated with the article. |
 | validFrom | Specify the date and time on which the article becomes active in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
 | validTo | Specify the date and time on which the article becomes inactive in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
@@ -82,9 +80,9 @@ The import file can contain the following basic HTML tags: p, br, a (only the �
 
 ### Convert Knowledge Base intents to Domain intents
 
-When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Builder in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Builder.
+When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Manager in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Manager.
 
-From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the Knowledge Base application to the Intent Builder application.
+From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the Knowledge Base application to the Intent Manager application.
 
 {: .important}
 Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the affected knowledge base. Also, this action irreversibly modifies the domain that you select as described above.
@@ -95,6 +93,11 @@ Before taking this action, be certain about doing so. Once you convert the inten
 3. Click **More Options**, and scroll down to the **Intent Association** section.
 4. Click **Convert to Domain Intents**.
 5. In the dialog that appears, select the domain.
+
+    * If, within the knowledge base, you’re already using entities from an associated domain, select that domain here.
+    * If you select a domain that uses the LivePerson (Legacy) engine, you are encouraged to subsequently [convert the domain to the LivePerson engine](intent-manager-build-domains.html#convert-a-liveperson-legacy-domain-to-liveperson) as soon as possible. See [here](intent-manager-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy) for the benefits of LivePerson over LivePerson (Legacy). **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021.**
+    * While you can select from all existing domains regardless of the NLU engine that it uses, if you instead create a domain on-the-fly in this step, you can only create a domain that uses the LivePerson engine or a third-party engine.
+
 6. In the confirmation dialog, click **Confirm**.
     
     This converts the intents and associates the selected domain.
