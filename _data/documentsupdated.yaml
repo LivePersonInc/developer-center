@@ -1086,6 +1086,10 @@
         - pagename: Carousel Template
         - pagename: Quick Replies Template
         - pagename: Limitations
+    - documentname: WhatsApp Business Messages Templates
+      pages:
+        - pagename: Introduction
+        - pagename: Reply Button Template
 - categoryname: 'Security & Authentication'
   image: security-authentication
   documents:
