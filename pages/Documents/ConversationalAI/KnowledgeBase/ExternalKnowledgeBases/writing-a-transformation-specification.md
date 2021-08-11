@@ -306,7 +306,6 @@ On the LHS, the values “0” and “1” are resolved by “&1”, as we have 
         "*": {
           "selectedCategories": {
             "*": {
-			// using tags[] array 
               "categoryLabel": "tags[]"
             }
           }
