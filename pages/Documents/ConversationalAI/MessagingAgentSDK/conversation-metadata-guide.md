@@ -580,7 +580,7 @@ const content = {
 };
 ```
 
-**Facebook Public - Consumer to Agent Example:**
+**Facebook Public - Consumer to Agent:**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -612,7 +612,7 @@ const content = {
 };
 ```
 
-**Facebook Public - Agent to Consumer Example:**
+**Facebook Public - Agent to Consumer:**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -626,14 +626,14 @@ const content = {
       "type": "CC"
   },
     "channel": "Public",
-    "replyToId": "107202510969932_151025713254278"
+    "replyToId": "107202510969932_151025713254278",
     "conversationState": {
-    "currentChannel": "Public"
+      "currentChannel": "Public"
   }
 };
 ```
 
-**Facebook DM - Consumer to Agent Example:**
+**Facebook DM - Consumer to Agent:**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -658,7 +658,7 @@ const content = {
 };
 ```
 
-**Facebook DM - Agent to Consumer Example:**
+**Facebook DM - Agent to Consumer:**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -713,7 +713,7 @@ const content = {
 {: .important}
 The attribute conversationState.dmChatId refers to the Twitter account where the conversation was initiated on Twitter Connector.
 
-**Twitter Public - Consumer to Agent Example:**
+**Twitter Public - Consumer to Agent:**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
@@ -735,7 +735,7 @@ const content = {
 };
 ```
 
-**Twitter Public - Agent > Consumer Example:**
+**Twitter Public - Agent to Consumer:**
 
 | Description | Outcome     | 
 | :---        |    :----:   | 
