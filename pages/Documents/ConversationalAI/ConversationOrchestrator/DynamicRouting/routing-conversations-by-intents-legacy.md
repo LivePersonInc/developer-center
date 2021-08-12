@@ -1,5 +1,13 @@
-THIS IS OLD CONVERSATION ORCHESTRATOR DYNAMIC ROUTING CONTENT; Keeping in the archive for posterity in case it needs to be added back; It is replaced by new content under the same topic name: "Routing Conversations by Intents"
-
+---
+pagename: Routing Conversations by Intents - Legacy
+Keywords:
+sitesection: Documents
+categoryname: "Conversational AI"
+documentname: Conversation Orchestrator
+subfoldername: Dynamic Routing
+permalink: conversation-orchestrator-dynamic-routing-routing-conversations-by-intents-legacy.html
+indicator: messaging
+---
 
 ### Getting intents into the Conversation Context Service
 

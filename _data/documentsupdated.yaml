@@ -263,7 +263,6 @@
         subpages:
           - subpagename: Overview
           - subpagename: Getting Started
-          - subpagename: Getting Started - Legacy
           - subpagename: Creating Routing Policies
           - subpagename: Managing Routing Policies
           - subpagename: Routing Conversations by SDEs

@@ -16,9 +16,9 @@ You can create policies to recognize a consumer's channel: Web, Facebook Messeng
 * When a consumr messages from Facebook Messenger, transfer them to the FBMessengerSkill.
 * When a consumer messages from the Web channel, transfer them to WebSkill.
 
-### Prerequisites
-* [Configure the routing bot](conversation-orchestrator-dynamic-routing-getting-started.html).
-* Deploy the engagement and campaign on the respective channel.
+### Prerequisite steps
+* [Configure the routing bot].(conversation-orchestrator-dynamic-routing-getting-started.html).
+* Set up Messaging for the respective channels. For details, see the top-level "Messaging Channels" section in the [Knowledge Center](https://knowledge.liveperson.com/).
  
 ### Process
 
