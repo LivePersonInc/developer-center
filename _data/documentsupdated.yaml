@@ -262,10 +262,13 @@
       - pagename: Dynamic Routing
         subpages:
           - subpagename: Overview
-          - subpagename: Getting Started
-          - subpagename: Creating and Managing Policies
+          - subpagename: Getting Started - Legacy
+          - subpagename: Creating Routing Policies
+          - subpagename: Managing Routing Policies
           - subpagename: Routing Conversations by SDEs
           - subpagename: Routing Conversations by Intents
+          - subpagename: Routing Conversations by Channel
+          - subpagename: Using Dynamic Routing Outside of Conversational Cloud
           - subpagename: Policy Logs for v2
       - pagename: Next Actions API
         subpages:

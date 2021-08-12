@@ -1,11 +1,11 @@
 ---
-pagename: Getting Started
+pagename: Getting Started - Legacy
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
 subfoldername: Dynamic Routing
-permalink: conversation-orchestrator-dynamic-routing-getting-started.html
+permalink: conversation-orchestrator-dynamic-routing-getting-started-legacy.html
 indicator: messaging
 ---
 

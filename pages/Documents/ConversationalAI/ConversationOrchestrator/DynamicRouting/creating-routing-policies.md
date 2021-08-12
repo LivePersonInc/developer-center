@@ -1,11 +1,11 @@
 ---
-pagename: Routing Conversations by Intents
+pagename: Creating Routing Policies
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Conversation Orchestrator
 subfoldername: Dynamic Routing
-permalink: conversation-orchestrator-dynamic-routing-routing-conversations-by-intents.html
+permalink: conversation-orchestrator-dynamic-routing-creating-routing-policies.html
 indicator: messaging
 ---
 
