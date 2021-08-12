@@ -9,6 +9,9 @@ permalink: conversation-orchestrator-dynamic-routing-getting-started-legacy.html
 indicator: messaging
 ---
 
+{: .important}
+In August 2021, LivePerson updated the Conversation Orchestrator - Dynamic Routing bot template that’s available in Conversation Builder so that it uses a newly introduced Dynamic Routing interaction. If your bot is based on the older template, we recommend that you switch to the newer template, which is much simpler. Getting started with the newer template is discussed [here](conversation-orchestrator-dynamic-routing-getting-started.html). This legacy topic remains available for those who still have bots based on the older template.
+
 ### Introduction
 
 To get started, you need to direct traffic to a routing bot. Your setup is different depending on how you are planning to use the Conversation Orchestrator. There are three options:
