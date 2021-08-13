@@ -267,30 +267,6 @@ Structured content identifier metadata is used to both identify a specific "Card
   </tbody>
 </table>
 
-#### Social Messaging Conversation
-
-**Type**: SocialMessagingConversationData
-
-<table>
-  <thead>
-    <th>Property Name</th>
-    <th>Description</th>
-    <th>Type</th>
-  </thead>
-  <tbody>
-  <tr>
-    <td>directMessagingId</td>
-    <td>Consumers Social User Id</td>
-    <td>String</td>
-  </tr>
-   <tr>
-    <td>userProfile</td>
-    <td>Consumers Public Social Profile</td>
-    <td>Object</td>
-  </tr>
-  </tbody>
-</table>
-
 #### Social Messaging Event
 
 **Type**: SocialMessagingEventData
@@ -490,12 +466,10 @@ this.on('ms.MessagingEventNotification', body => {
 })
 ```
 
-#### Social Messaging Conversation
+#### Social Messaging Event
 
 {: .important}
 The following capability requires additional Account feature to be configured. Please contact your account team to enable.
-
-#### Social Messaging Event
 
 ***Facebook - Schema***
 
