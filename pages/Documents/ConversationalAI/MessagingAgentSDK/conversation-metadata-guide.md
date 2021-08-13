@@ -36,7 +36,6 @@ Below are the types of available metadata:
 * Structured Content identifier
 * Payment response
 * Authorization response
-* Social Messaging conversation
 * Social Messaging event
 
 #### Bot response
@@ -495,54 +494,6 @@ this.on('ms.MessagingEventNotification', body => {
 
 {: .important}
 The following capability requires additional Account feature to be configured. Please contact your account team to enable.
-
-**Facebook conversation example:**
-
-| Description | Outcome     | 
-| :---        |    :----:   | 
-| This metadata is used to define the conversation data for each conversation, and it's processed by NAW only once. The NAW (New Agent Workspace) will use the values received from UMS to render the Social Core Widget. | ![](images/social/facebook/consumer.png)       | 
-
-```javascript
-const content = {
-  "type": "SocialMessagingConversationData",
-  "directMessagingId": "107202510969932",
-  "userProfile": {
-    "source": "Facebook",
-    "avatarUrl": "https://scontent.fkbp1-1.fna.fbcdn.net/v/t31.0-1/p480x480/12120168_942785742452681_3518949708454871384_o.jpg",
-    "userName": "Antonio Alves Neto",
-    "psid": "213123123231",
-    "gender": "male",
-    "locale": "en_UK",
-    "timezone": "UTC 1",
-    "profileUrl": "https://www.facebook.com/aaneto18/"
-  },
-};
-```
-
-**Twitter conversation example:**
-
-| Description | Outcome     | 
-| :---        |    :----:   | 
-| This metadata is used to define the conversation data for each conversation, and it's processed by NAW only once. The NAW (New Agent Workspace) will use the values received from UMS to render the Social Core Widget. | ![](images/social/twitter/consumer.png)       |
-
-```javascript
-const content = {
-  "type": "SocialMessagingConversationData",
-  "directMessagingId": "107202510969932",
-  "userProfile": {
-    "source": "Twitter",
-    "avatarUrl": "https://scontent.fkbp1-1.fna.fbcdn.net/v/t31.0-1/p480x480/12120168_942785742452681_3518949708454871384_o.jpg",
-    "profileName": "Glen Ferguson",
-    "handle": "@glenferguson",
-    "dateJoined": "Mar, 2009",
-    "description": "Product Manager @Klarna; Proud father;",
-    "tweets": 156,
-    "likes": 29,
-    "followers": 76,
-    "following": 100
-  },
-};
-```
 
 #### Social Messaging Event
 
