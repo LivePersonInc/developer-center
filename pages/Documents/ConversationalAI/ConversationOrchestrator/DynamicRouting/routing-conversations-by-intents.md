@@ -99,7 +99,7 @@ To test both dynamic routing approaches, you need to deploy an agent connector f
 
 To deploy a bot with an agent connector, follow the information [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html).
 
-1. Once all agents have been assigned the relevant skills, navigate to our Web Messaging test page, enter your account number, and trigger the engagement for your routing bot.
+1. Once all agents have been assigned the relevant skills, navigate to our [Web Messaging test page](https://developers.liveperson.com/web-messaging/emulator.html), enter your account number, and trigger the engagement for your routing bot.
 2. Trigger the routing flow depending on the method you are using to capture the intent:
     * **Dialog starter method**: Enter an utterance that corresponds to one of your dialog starter intents.
     * **Dynamic Routing bot**: Wake the bot by saying “Hi,” “Hello,” etc. Enter your intentful utterance in the following question.
