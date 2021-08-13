@@ -93,8 +93,6 @@ This approach is powered by an API provided by the [Dynamic Routing Bot template
 
     <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_createpolicy4.png">
 
-5. Create intent-based routing policies. Please refer to the section at the bottom of this document 
-
 ### Testing
 
 To test both dynamic routing approaches, you need to deploy an agent connector for the Dynamic Routing bot. Additionally, the skills that you will be routing to need to be assigned to a logged-in human agent or to bot users deployed as agent connectors to other bots.
