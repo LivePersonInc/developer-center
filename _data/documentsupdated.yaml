@@ -879,8 +879,7 @@
       - pagename: Overview
       - pagename: Methods
         subpages:
-          - subpagename: Metrics
-          - subpagename: Agent View
+          - subpagename: Metrics        
           - subpagename: Historical
 - categoryname: Messaging Channels
   image: agent-interaction
