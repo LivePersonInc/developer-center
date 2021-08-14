@@ -1,5 +1,5 @@
 ---
-pagename: Agent view
+pagename: Agent View
 redirect_from:
   - 
 sitesection: Documents
