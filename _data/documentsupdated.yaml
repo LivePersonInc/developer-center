@@ -880,6 +880,7 @@
       - pagename: Methods
         subpages:
           - subpagename: Metrics
+          - subpagename: Agent View
           - subpagename: Historical
           - subpagename: Agent View
 - categoryname: Messaging Channels
