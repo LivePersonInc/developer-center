@@ -29,7 +29,7 @@ Currently, the Toolbelt offers the following methods:
 | Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
 | Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 | Toolbelt.SDEUtil() | Returns a SDE Util instance. Provides SDE related functionality, such as setting/ updating SDEs for an Engagement. |
-| Toolbelt.ContextServiceClient() | Returns a Context Service Client instance. Provides functionality to interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html).|
+| Toolbelt.ContextServiceClient() | Returns a Context Service Client instance. Provides functionality to interact with the [Context Session Store](conversation-orchestrator-conversation-context-service-overview.html).|
 
 Here are usage example, which are taken out of the official templates:
 
@@ -713,7 +713,7 @@ If there were no errors, the result is an object which allways contains an array
 ```
 
 ### Context Service Client
-The Context Service Client can be used to easily interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html). This is especially useful for storing data between function calls.
+The Context Service Client can be used to easily interact with the [Context Session Store](conversation-orchestrator-conversation-context-service-overview.html). This is especially useful for storing data between function calls.
 
 After all [prerequisites for using the context session store](liveperson-functions-developing-with-faas-data-storage.html#prerequisitesinstallation) have been set up successfully, the client can be instantiated as follows.
 
