@@ -38,6 +38,10 @@ In general, messages are short. Sending content that’s too long or complex can
 
 Keep in mind that, while knowledge bases do support URLs for video and audio, Video and Audio [statements](conversation-builder-interactions-statements.html) currently aren’t supported by Conversational Cloud. For this reason, they can’t be added to dialogs in Conversation Builder. As an alternative for video, you can use a Text statement that includes a video URL as a link.
 
+### Languages
+
+
+
 ### Getting started with a draft KB
 
 Adding an external knowledge base can take some time, so the Knowledge Base application gives you the option to save a knowledge base as a "draft." This lets you step away from the configuration work and come back to it at a later time.

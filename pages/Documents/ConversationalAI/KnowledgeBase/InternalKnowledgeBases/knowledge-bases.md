@@ -67,17 +67,6 @@ The import file can contain the subset of HTML that’s discussed [here](knowled
 | validFrom | Specify the date and time on which the article becomes active in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
 | validTo | Specify the date and time on which the article becomes inactive in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
 
-### Configure knowledge base settings
-
-**To configure knowledge base settings**
-1. Open the knowledge base.
-2. In the upper-left corner, click **Settings**.
-3. Configure the common settings discussed [here](knowledge-base-common-settings-tasks.html#common-configurable-settings). You can also configure these settings below, which are specific to internal knowledge bases:
-    * **Language**: Change the language if desired. For information on the role that the language plays, see [here](knowledge-base-internal-knowledge-bases-introduction.html#languages).
-    * **Import articles from**: After you've added a knowledge base, you can't subsequently import articles from a CSV file. However, you can link a Google sheet to the knowledge base, but be aware that, once you sync with the sheet, the contents of the knowledge base are overwritten with the contents in the sheet. The Google sheet must be public, i.e., with no file restrictions in place.
-    * **Associated Domain for Entity**: This field is only displayed if the knowledge base uses [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). If desired, you can change the domain where the entities used in the knowledge base are defined.
-4. Click **Update**.
-
 ### Convert Knowledge Base intents to Domain intents
 
 When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Manager in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Manager.
