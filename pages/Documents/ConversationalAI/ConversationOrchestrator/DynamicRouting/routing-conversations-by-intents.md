@@ -56,51 +56,87 @@ When working with larger domains, assigning individual dialogs to each intent ca
 {: .important}
 This approach is powered by an API provided by the [Dynamic Routing Bot template](conversation-builder-bot-templates-conversation-orchestrator.html). This API is not suitable for use with legacy versions of Liveperson’s NLU engine. Please upgrade to the current NLU domain offering if using this approach.
 
-1. In Conversation Builder, create a new bot using the Dynamic Routing Bot template.
+1. Create the Dynamic Routing bot, and open **Global Functions**.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_drbot1.png">
+    Create a new bot using the **Dynamic Routing Bot** by following the steps [here](conversation-orchestrator-dynamic-routing-getting-started.html). Then open **Global Functions**, and change  two configurations (botAppKey & domainId) as highlighted in the next, few steps.
            
-    In **Global Functions**, there are two values that need to be updated for your account (botAppKey & domainId).
+2. Retrieve the botAppKey.
 
-2. Retrieve the botAppKey value from a bot user agent. This is found in the **User Management** section of the Conversational Cloud. Copy this value for entry into the **Global Functions** of the bot.
+    Retrieve the botAppKey value from a bot user agent. This can be found in the **User Management** section of the Conversational Cloud. Copy this value.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_drbot2.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route1.png">
 
-3. Retrieve the domain ID for your intent domain. This is found within the **Domain Settings** for your domain in Intent Manager. Copy this value for entry into the **Global Functions** of the bot.
-              
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_drbot3.png">
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_drbot4.png">
+3. Retrieve the intent domain ID.
 
-4. Enter the botAppKey and domainId values into their associated variables within the **Global Functions** editor of your bot.
+    Retrieve the Domain ID for your intent domain. You can find this in the **Domain Settings** for your domain in Intent Manager. Copy this value.
 
-5. In the provided **1 Welcome** dialog, delete the COLLECT_PHONE_NUMBER interaction. Enable both the ASK_INTENT and getIntent_API interactions using the interaction settings for each.
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route2.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route3.png">
 
-6. Create the routing policies. For more on this, see the section that immediately follows.
+4. Update configurations in the **Global Functions**.
+    
+    Enter the botAppKey and domainId values into their associated variables within the **Global Functions** editor of your bot.
 
-### Creating intent-based routing policies
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route4.png">
 
-1. Use the **Manage routing policies** link in the Dynamic Routing interaction to navigate to Conversation Orchestrator.
+5. Enable the intent dialogs in the bot.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_createpolicy1.png">
+    Delete the COLLECT_PHONE_NUMBER interaction. Enable both the ASK_INTENT and getIntent_API interactions using the interaction settings for each. Make sure the Dynamic Routing interaction is directly below the getIntent_API as shown below.
 
-2. Create a new policy by selecting **Add Policy**. Give the new policy a name. In the conditions editor, select “orchestrator.intent” from the dropdown, and set it equal to the relevant intent name. 
+    *Enabling ASK_INTENT and getIntent_API interactions:*
 
-3. In the actions editor, select **Transfer to skill** from the left dropdown and the relevant skill from the right dropdown.
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route5.png">
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_createpolicy3.png">
+    *To enable interactions, go to the **Interaction Settings**, and enable the toggle*:
 
-4. Once saved, enable the policy by toggling the switch for the policy in the policy list.
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route6.png">
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_createpolicy4.png">
+6. Create intent-based routing policies. For help with this, see the next section.
 
-### Testing
+### Create intent-based routing policies
 
-To test both dynamic routing approaches, you need to deploy an agent connector for the Dynamic Routing bot. Additionally, the skills that you will be routing to need to be assigned to a logged-in human agent or to bot users deployed as agent connectors to other bots.
+The policy creation flow is identical for both approaches:
+* Dialog starter
+* Enabling intent routing
+ 
+1. Navigate to **Manage Policies**.
 
-To deploy a bot with an agent connector, follow the information [here](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html).
+    Use the **Manage routing policies** link in the Dynamic Routing interaction to navigate to Conversation Orchestrator.
 
-1. Once all agents have been assigned the relevant skills, navigate to our [Web Messaging test page](https://developers.liveperson.com/web-messaging/emulator.html), enter your account number, and trigger the engagement for your routing bot.
-2. Trigger the routing flow depending on the method you are using to capture the intent:
-    * **Dialog starter method**: Enter an utterance that corresponds to one of your dialog starter intents.
-    * **Dynamic Routing bot**: Wake the bot by saying “Hi,” “Hello,” etc. Enter your intentful utterance in the following question.
-3. Confirm in your bot that you have successfully been routed to the correct agent and skill defined in your routing policies.
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies1.png">
+
+2. Create your policy.
+
+    Create a new policy by selecting **Add Policy**. Give the new policy a name. In the conditions editor, select “orchestrator.intent” from the dropdown, and set it equal to the relevant intent name.
+
+3. Configure your policy.
+
+    In the actions editor, select "Transfer to skill" from the left-hand dropdown and the relevant skill from the right-hand dropdown. Ensure that agents are assigned to the book_flight skill.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies2.png">
+
+4. Enable your policy.
+    
+    Once saved, toggle the switch for the policy in the policy list to enable the policy.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies3.png">
+
+5. Test your policy.
+
+    You can test your setup on the web client emulator. For details on this, see [here](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html).
+    
+    Alternatively, to test, you can deploy the bot and connect it to a campaign that’s linked to your production/staging channel of your choice. For this setup, see [here](conversation-orchestrator-dynamic-routing-getting-started.html). 
+
+    Follow these steps once you have configured your testing setup:
+
+    <img class="fancyimage" width="250" src="img/convorchestrator/co_dr_ibpolicies4.png">
+
+    The message routing flow is identical for both approaches (Dialog Starter and Enabling Intent Routing) because we have used the same intent and the same policy in our demonstration. 
+ 
+    Start by saying “Hi.” 
+ 
+    When prompted by the routing bot, provide the phone number 1111. This is when the Dynamic Routing interaction evaluates all your policies to make the routing decision.
+ 
+    The conversation will be routed to the skill SeattleEmployeeSkill. A specific agent within the skill will be picked.
+ 
+    For this example, it will be routed to Agent Bob if you have configured Agent Bob to be the only user who maps to SeattleEmployeeSkill.

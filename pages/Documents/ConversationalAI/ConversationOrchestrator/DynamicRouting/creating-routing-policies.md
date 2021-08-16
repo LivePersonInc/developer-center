@@ -70,7 +70,7 @@ Here you type the variable name “orchestrator.phoneNumber”, choose “IN” 
 “namespace.variableName” is the way to leverage context variables for creating routing policies. 
 
 #### Step 5: Configure your action to transfer to a skill
-Here you pick SeattleEmployeeSkill from the available list of skills. Make sure to have the skill mapped to a human-user and have that user log in to see if routing works.
+Here you pick SeattleEmployeeSkill from the available list of skills. Make sure to have the skill mapped to a human-user and have that user log in to see if routing works. For this example, assume that “SeattleEmployeeSkill” has one single human user “Agent Bob.”
 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_policiescreate9.png">
 
@@ -83,7 +83,7 @@ You can test your setup on the web client emulator. For details, see [here](conv
 
 Alternatively, to test, you can deploy the bot, and connect it to a campaign that’s linked to your production/staging channel of your choice. For this setup, please refer to [Getting Started](conversation-orchestrator-dynamic-routing-getting-started.html).
 
-Follow these steps once you have messaging set up.
+Follow these steps once you have configured your testing setup.
 
 <img class="fancyimage" width="250" src="img/convorchestrator/co_dr_policiescreate11.png">
 
