@@ -666,3 +666,66 @@ const payload = {
   },
 };
 ```
+
+#### Sending Social Messages (Public Message) with Social Metadata
+
+```javascript
+function lambda(input, callback) {
+
+  // Take a look at this guide to get further information about Social Messaging & Conversation Metadata
+  // https://developers.liveperson.com/messaging-agent-sdk-conversation-metadata-guide.html
+
+  const {
+    message,
+    convId,
+    context: {
+      lpEvent: {
+        metadata: umsMetadata = []
+      } = {}
+    } = {}
+  } = input.payload;
+  const response = {
+    context: {
+      metadata: []
+    },
+    messages: []
+  }
+  const socialMetadata = umsMetadata.find(m => m.type === 'SocialMessagingEventData');
+
+  const addPrivateSMLinkMetadata = () => {
+    if (socialMetadata && socialMetadata.channel === "Public") {
+      const privateLink = 'I\'m a BOT, please join to our private chat to talk with a live agent:\n https://m.me/' + socialMetadata.conversationState.dmChatId;
+
+      // The following is an example of Facebook Public Replies
+      const socialMetadataResponse = {
+        "type": "SocialMessagingEventData",
+        "channel": "Public",
+        "replyToId": `${socialMetadata.replyToId}`,
+        "event": {
+          "source": "Facebook",
+          "type": "CC"
+        },
+        "conversationState": {
+          "currentChannel": "Public",
+          "dmChatId": `${socialMetadata.conversationState.dmChatId}`
+        }
+      };
+
+      // LEGACY
+      // See: Sending (single) Structured content via 'context' property (Legacy)
+      response.context.metadata.push(socialMetadataResponse);
+
+      response.messages.push(privateLink);
+
+      // TRANSFER
+      // See: Transfer / Escalations
+      response.context.action = "TRANSFER";
+      response.context.actionParameters = { skill: "facebook" };
+    }
+  }
+
+  addPrivateSMLinkMetadata();
+
+  callback(null, response);
+}
+```
