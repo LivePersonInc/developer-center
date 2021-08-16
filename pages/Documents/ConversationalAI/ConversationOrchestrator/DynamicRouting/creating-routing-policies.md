@@ -79,7 +79,11 @@ Here you pick SeattleEmployeeSkill from the available list of skills. Make sure 
 <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_policiescreate10.png">
 
 #### Step 7: Deploy and test
-Assuming your bot is deployed, and you have a campaign configured on a web client to direct traffic to the routing bot’s skill, you can now test your setup. For this setup, please refer to [Getting Started](conversation-orchestrator-dynamic-routing-getting-started.html).
+You can test your setup on the web client emulator. For details, see [here](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html). 
+
+Alternatively, to test, you can deploy the bot, and connect it to a campaign that’s linked to your production/staging channel of your choice. For this setup, please refer to [Getting Started](conversation-orchestrator-dynamic-routing-getting-started.html).
+
+Follow these steps once you have messaging set up.
 
 <img class="fancyimage" width="250" src="img/convorchestrator/co_dr_policiescreate11.png">
 

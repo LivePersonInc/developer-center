@@ -269,6 +269,7 @@
           - subpagename: Routing Conversations by Intents
           - subpagename: Routing Conversations by Channel
           - subpagename: Using Dynamic Routing Outside of Conversational Cloud
+          - subpagename: Testing with the Web Emulator
           - subpagename: Policy Logs for v2
       - pagename: Next Actions API
         subpages:
