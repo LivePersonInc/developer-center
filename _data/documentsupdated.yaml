@@ -1020,7 +1020,7 @@
     - pagename: Overview
     - pagename: TLS Authentication
     - pagename: HTTP Response Codes
-    - pagename: Configuring on the Conversational Cloud
+    - pagename: Configuration
       subpages:
           - subpagename: Apple Token Authentication
           - subpagename: Push Proxy
