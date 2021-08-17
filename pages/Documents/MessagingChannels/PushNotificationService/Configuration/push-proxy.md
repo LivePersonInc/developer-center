@@ -7,9 +7,9 @@ Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Push Notification Service
-
+subfoldername: Configuration
 order: 40
-permalink: push-notification-service-push-proxy.html
+permalink: push-notification-service-configuration-push-proxy.html
 
 indicator: messaging
 ---
