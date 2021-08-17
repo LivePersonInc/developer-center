@@ -1,19 +1,20 @@
 ---
-pagename: Configuration of Push Proxy
+pagename: Push Proxy
 redirect_from:
   - push-service-configuration.html
+  - configuration-of-push-proxy.html
 Keywords:
 sitesection: Documents
 categoryname: "Messaging Channels"
 documentname: Push Notification Service
 
 order: 40
-permalink: push-notification-service-configuration-of-push-proxy.html
+permalink: push-notification-service-push-proxy.html
 
 indicator: messaging
 ---
 
-Push proxy is a feature that can be self managed in the Conversational Cloud console.
+Push proxy is a feature that can be self-managed in the Conversational Cloud console.
 
 In order to enable the push proxy feature, you will require the following data and files:
 
