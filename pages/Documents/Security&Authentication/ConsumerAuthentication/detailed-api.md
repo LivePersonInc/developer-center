@@ -283,7 +283,8 @@ Example for Mandatory+Standard+Custom Claims JWT:
 
 *	The JWT should be signed with your RSA private key.
 
-*	The public key should be base64 encoded with X509 key spec and can *either* be provided by a JWKS endpoint (for more details on JWKS, please read the [JSON Web Key (JWK) specification](https://datatracker.ietf.org/doc/html/rfc7517)) or added to LivePerson OAuth configuration in the “JWT Public Key" field.
+*	The public key should be base64 encoded with X509 key spec and can *either* be provided by a JWKS endpoint or added to LivePerson OAuth configuration in the “JWT Public Key" field.  
+    **Note:** for more details on JWKS, please read [this(external)](https://inthiraj1994.medium.com/signature-verification-using-jwks-endpoint-in-wso2-identity-server-5ba65c5de086#:~:text=The%20JSON%20Web%20Key%20Set,used%20to%20sign%20the%20tokens.) aritcle
 
 ### If you chose to configure the JWKS Endpoint
 
