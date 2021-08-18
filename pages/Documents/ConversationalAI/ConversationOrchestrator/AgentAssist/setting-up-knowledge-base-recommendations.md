@@ -18,7 +18,7 @@ indicator: messaging
 For some practice with Agent Assist, complete the [Using Agent Assist](tutorials-guides-using-agent-assist-overview.html) tutorial.
 
 {: .important}
-It takes up to 20 minutes for changes in Agent Assist configuration to take effect.
+It takes up to 3 hours for changes in Agent Assist configuration to take effect.
 
 ### Prerequisite knowledge
 To set up Conversation Orchestrator’s Agent Assist to suggest recommended articles, you must have some prerequisite knowledge of other applications in the Conversational AI suite. Most importantly, you must be able to use the Knowledge Base application to:
