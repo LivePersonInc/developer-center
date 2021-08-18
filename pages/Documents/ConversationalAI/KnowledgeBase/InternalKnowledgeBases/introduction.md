@@ -73,7 +73,7 @@ To take advantage of the benefits of performance and flexibility, you are encour
 
 When you [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html), you'll specify its language.
 
-When a text-to-text search is performed and a match is found, the knowledge base's language doesn't play a role. Whatever article is matched is simply returned.
+When a text-to-text search is performed, the knowledge base's language determines the language-specific list of stop words to filter out, for example, "to," "the," and so on.
 
 When an NLU search is performed, the knowledge base's language works differently based on how you've defined the knowledge base:
 
