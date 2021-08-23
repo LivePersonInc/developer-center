@@ -13,7 +13,7 @@ indicator: both
 
 Dialog Starter interactions are how dialogs are initially triggered, so most dialogs start with a Dialog Starter interaction. ([Fallback dialogs](conversation-builder-dialogs-fallback-dialogs.html) work differently.) A dialog can have only one Dialog Starter interaction, and it must start the dialog.
 
-It’s the user that starts things off by supplying some user input: a message or a question. In response, the bot tries to match the user input with either a [pattern](conversation-builder-conversation-builder-response-match-actions.html#pattern-matching) or an [intent](intent-builder-intents.html) in a Dialog Starter interaction in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins.
+It’s the user that starts things off by supplying some user input: a message or a question. In response, the bot tries to match the user input with either a pattern or an [intent](intent-manager-key-terms-concepts.html#intents) in a Dialog Starter interaction in one of its dialogs. If a match is found, that dialog is triggered, and its flow begins.
 
 As an example, the Goodbye dialog below is triggered when the bot matches the user’s message to some form (pattern) of “good-bye.”
 
@@ -23,7 +23,7 @@ In contrast, the Billing dialog below is triggered when the bot matches the user
 
 <img style="width:700px" src="img/ConvoBuilder/interactions_dialogStarter2.png">
 
-What’s an intent? An intent is something a user wants to do. In our example, the intent is to ask a billing question. You create intents in [Intent Builder](intent-builder-overview.html).
+What’s an intent? An intent is something a user wants to do. In our example, the intent is to ask a billing question. You create intents in [Intent Manager](intent-manager-overview.html).
 
 <img style="width:600px" src="img/ConvoBuilder/interactions_userSays3.png">
 
@@ -42,10 +42,10 @@ This opens up the **Patterns & Intent** tab of the **Interaction Settings** dial
 
 <img style="width:600px" src="img/ConvoBuilder/interactions_dialogStarter4.png">
 
-For some practice with this, try the [Getting Started tutorial](conversation-builder-tutorials-guides-getting-started.html).
+For some practice with this, try the [Getting Started tutorial](tutorials-guides-getting-started-with-bot-building-overview.html).
 
 ### Interaction settings
 
 * **Patterns**: Patterns (text strings) can be matched against the user input to trigger the dialog. Enter the patterns against which to match the input. See [here](conversation-builder-interactions-interaction-basics.html#specify-patterns-in-interactions) for information on pattern matching.
 * **Exclude Keywords**: An "exclude keyword" is a text string that is matched against user input in order to *not* trigger the dialog.
-* **Intent**: An [intent]((intent-builder-overview.html)) can be matched against the user input to trigger the dialog. Select the intent against which to match the input.
+* **Intent**: An [intent](intent-manager-key-terms-concepts.html#intents) can be matched against the user input to trigger the dialog. Select the intent against which to match the input.

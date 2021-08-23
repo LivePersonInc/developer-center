@@ -59,13 +59,13 @@ In this step, you add a class to handle LivePerson basic messaging events via Br
     ```java
     public class IntentsHandler {
 
-    private Context mContext;
-    private BroadcastReceiver mLivePersonReceiver;
+      private Context mContext;
+      private BroadcastReceiver mLivePersonReceiver;
 
-    public IntentsHandler(Context ctx){
-        this.mContext = ctx;
-        registerToLivePersonEvents();
-    }
+      public IntentsHandler(Context ctx){
+          this.mContext = ctx;
+          registerToLivePersonEvents();
+      }
     }
     ```
 
@@ -73,10 +73,10 @@ In this step, you add a class to handle LivePerson basic messaging events via Br
 
     ```java
     public void registerToLivePersonEvents(){
-    createLivePersonReceiver();
-    LocalBroadcastManager.getInstance(mContext.getApplicationContext())
-            .registerReceiver(mLivePersonReceiver, LivePersonIntents.getIntentFilterForAllEvents());
-    }
+      createLivePersonReceiver();
+      LocalBroadcastManager.getInstance(mContext.getApplicationContext())
+              .registerReceiver(mLivePersonReceiver, LivePersonIntents.getIntentFilterForAllEvents());
+      }
     ```
 
    In this example, you listen to all events via the **intentfilter**. 
@@ -91,28 +91,28 @@ In this step, you add a class to handle LivePerson basic messaging events via Br
 
     ```java
     private void createLivePersonReceiver() {
-    if (mLivePersonReceiver != null){
-        return;
-    }
-    mLivePersonReceiver = new BroadcastReceiver(){
+      if (mLivePersonReceiver != null){
+          return;
+      }
+      mLivePersonReceiver = new BroadcastReceiver(){
 
-        @Override
-        public void onReceive(Context context, Intent intent) {
+          @Override
+          public void onReceive(Context context, Intent intent) {
 
-            Log.d(TAG, "Got LP intent event with action " + intent.getAction());
-            switch (intent.getAction()){
-                case LivePersonIntents.ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION:
-                    onAgentAvatarTapped(LivePersonIntents.getAgentData(intent));
-                    break;
+              Log.d(TAG, "Got LP intent event with action " + intent.getAction());
+              switch (intent.getAction()){
+                  case LivePersonIntents.ILivePersonIntentAction.LP_ON_AGENT_AVATAR_TAPPED_INTENT_ACTION:
+                      onAgentAvatarTapped(LivePersonIntents.getAgentData(intent));
+                      break;
 
-                case LivePersonIntents.ILivePersonIntentAction.LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION:
-                    AgentData agentData = LivePersonIntents.getAgentData(intent);
-                    onAgentDetailsChanged(agentData);
-                    break;
-            }
+                  case LivePersonIntents.ILivePersonIntentAction.LP_ON_AGENT_DETAILS_CHANGED_INTENT_ACTION:
+                      AgentData agentData = LivePersonIntents.getAgentData(intent);
+                      onAgentDetailsChanged(agentData);
+                      break;
+              }
 
-        }
-    };
+          }
+      };
     }
     ```
 
@@ -120,7 +120,7 @@ In this step, you add a class to handle LivePerson basic messaging events via Br
 
     ```java
     private void onAgentAvatarTapped(AgentData agentData) {
-    showToast("on Agent Avatar Tapped - " + agentData.mFirstName + " " + agentData.mLastName);
+      showToast("on Agent Avatar Tapped - " + agentData.mFirstName + " " + agentData.mLastName);
     }
     ```
 
@@ -134,16 +134,16 @@ In this step, you create a messaging activity that launches the activity session
 
 ```java
 public class MainActivity extends AppCompatActivity {
-// Consumer name inputs
-private EditText fnameInput;
-private EditText lnameInput;
-private Button startConvBtn;
-// Brand login details
-private final String brandID = "82055668";
-// Project’s package
-private final String appID = "com.shaym.sdk28";
-// Intent Handler
-private IntentsHandler mIntentsHandler;
+  // Consumer name inputs
+  private EditText fnameInput;
+  private EditText lnameInput;
+  private Button startConvBtn;
+  // Brand login details
+  private final String brandID = "82055668";
+  // Project’s package
+  private final String appID = "com.shaym.sdk28";
+  // Intent Handler
+  private IntentsHandler mIntentsHandler;
 }
 ```
 
@@ -152,14 +152,14 @@ private IntentsHandler mIntentsHandler;
 ```java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
-super.onCreate(savedInstanceState);
-setContentView(R.layout.activity_main);
-// IntentsHandler is the object we introduced in the previous section of this tutorial
-mIntentsHandler = new IntentsHandler(this);
-// init basic UI views
-initViews();
-// Init the button listener
-initOpenConversationButton();
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.activity_main);
+  // IntentsHandler is the object we introduced in the previous section of this tutorial
+  mIntentsHandler = new IntentsHandler(this);
+  // init basic UI views
+  initViews();
+  // Init the button listener
+  initOpenConversationButton();
 }
 ```
 
@@ -167,21 +167,20 @@ initOpenConversationButton();
 
 ```java
 private void initOpenConversationButton() {
-startConvBtn = (Button) findViewById(R.id.startcnvbtn);
-startConvBtn.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        // This will check if we already in a conversation
-        if (LivePerson.isValidState()) {
-            openActivity();
-        }
-        else {
-// Push - later in this tutorial
-            removeNotification();
-            initActivityConversation(); // The conversation activity
-        }
-    }
-});
+  startConvBtn = (Button) findViewById(R.id.startcnvbtn);
+  startConvBtn.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+          // This will check if we already in a conversation
+          if (LivePerson.isValidState()) {
+              openActivity();
+          }
+          else {
+              removeNotification();
+              initActivityConversation(); // The conversation activity
+          }
+      }
+  });
 }
 ```
 
@@ -197,7 +196,7 @@ private void  initActivityConversation() {
         @Override
         public void onInitSucceed() {
             // you can't register pusher before initialization
-            handleGCMRegistration(MainActivity.this);
+            handlePusherRegistration(MainActivity.this);
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -233,7 +232,7 @@ private void openActivity() {
            .setPhoneNumber("")
            .build();
    LivePerson.setUserProfile(consumerProfile);
-   }
+}
 ```
 
 
@@ -288,20 +287,14 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
 1. Under the **application** tab, add the following services + receiver:
 
-    ```java
-    <service
+    ```xml
+        <service
             android:name=".push.fcm.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
-        <!--This service is used to receive and register the token when it is refreshed-->
-        <service
-            android:name=".push.fcm.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
+
         <service
             android:name=".push.fcm.FirebaseRegistrationIntentService"
             android:exported="false">
@@ -334,7 +327,7 @@ The proprietary SDK notification is only for display purposes, interacting with 
                 Log.d(TAG, "Message data payload: " + remoteMessage.getData());
 
                 // Send the data into the SDK
-                String account = "82055668";
+                String account = "12345678";
                 PushMessage message = LivePerson.handlePushMessage(this, remoteMessage.getData(), account, false);
 
                 //Code snippet to add push UI notification
@@ -347,24 +340,6 @@ The proprietary SDK notification is only for display purposes, interacting with 
                 Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
             }
         }
-     }
-     ```
-
-
-   - **MyFirebaseInstanceIDService**: allows you to re-register to the push service everytime the Google’s token refreshes.
-
-     ```java
-     public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
-
-       private static final String TAG = "MyFirebaseIIDService";
-
-       @Override
-       public void onTokenRefresh() {
-          // Get updated InstanceID token.
-          Intent intent = new Intent(this, FirebaseRegistrationIntentService.class);
-          startService(intent);
-
-       }
      }
      ```
 
@@ -384,12 +359,11 @@ The proprietary SDK notification is only for display purposes, interacting with 
 
        @Override
         protected void onHandleIntent(Intent intent) {
-            Log.d(TAG, "onHandleIntent: registering the token to pusher");
             String token = FirebaseInstanceId.getInstance().getToken();
             // Register to Liveperson Pusher
-            String account = "82055668";
-            String appID = "com.shaym.sdk28";
-            LivePerson.registerLPPusher(account, appID, token);
+            String account = "12345678"; //Replace with your account id.
+            String appID = "com.liveperson.sampleapp"; //Replace with your applicationId.
+            LivePerson.registerLPPusher(String brandId, String appId, String deviceToken, PushType pushType, LPAuthenticationParams authenticationParams, ICallback<Void, Exception> registrationCompletedCallback);
         }
      }
      ```
@@ -493,27 +467,20 @@ The proprietary SDK notification is only for display purposes, interacting with 
      }
      ```
 
-3. Add the following permission to your app’s AndroidManifest.xml file:
+3. After the `handlePusherRegistration(MainActivity.this);` call added at the `init` stage, add the function to your messaging activity call to register to the pusher:
 
     ```java
-    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    ```
-
-4. After the `handleGCMRegistration(MainActivity.this);` call added at the `init` stage, add the function to your messaging activity call to register to the pusher:
-
-    ```java
-    private void handleGCMRegistration(Context ctx) {
-    Intent intent = new Intent(ctx, FirebaseRegistrationIntentService.class);
-    ctx.startService(intent);
+    private void handlePusherRegistration(Context ctx) {
+      Intent intent = new Intent(ctx, FirebaseRegistrationIntentService.class);
+      ctx.startService(intent);
     }
     ```
 
-5. After the `removeNotification();` call added at the `Showconversation` stage, add the following function to hide the push message when entering the conversation view:
+4. After the `removeNotification();` call added at the `Showconversation` stage, add the following function to hide the push message when entering the conversation view:
 
     ```java
     private void removeNotification() {
-    NotificationUI.hideNotification(this);
+      NotificationUI.hideNotification(this);
     }
     ```
 
@@ -531,16 +498,16 @@ To handle a scenario when a push message is clicked, you need to implement a pus
 
     ```java
     private void handlePush(Intent intent) {
-    boolean isFromPush = intent.getBooleanExtra(NotificationUI.PUSH_NOTIFICATION, false);
-    //Check if we came from Push Notification
-    if (isFromPush) {
-        clearPushNotifications();
-                if (LivePerson.isValidState()){
-                    openActivity();
-                }
-                else
-                        initActivityConversation();
-    }
+      boolean isFromPush = intent.getBooleanExtra(NotificationUI.PUSH_NOTIFICATION, false);
+      //Check if we came from Push Notification
+      if (isFromPush) {
+          clearPushNotifications();
+          if (LivePerson.isValidState()){
+            openActivity();
+          } else {
+            initActivityConversation();
+          }
+      }
     }
     ```
 
@@ -548,6 +515,6 @@ To handle a scenario when a push message is clicked, you need to implement a pus
 
     ```java
     private void clearPushNotifications() {
-    ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancel(NotificationUI.NOTIFICATION_ID);
+      ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancel(NotificationUI.NOTIFICATION_ID);
     }
     ```

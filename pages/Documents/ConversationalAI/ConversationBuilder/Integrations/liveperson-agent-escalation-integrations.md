@@ -17,7 +17,7 @@ There are two ways to implement an escalation: You can add an [Agent Transfer in
 {: .important}
 Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) for more information.
 
-### Add a LivePerson Agent Escalation
+### Add a LivePerson Agent Escalation 
 
 **To add a LivePerson Agent Escalation integration**
 
@@ -30,11 +30,13 @@ Implementing a bot-to-bot transfer? See [here](conversation-builder-bots-bot-to-
     - **Agent Skill Id**: Specify the ID of the skill to which to transfer the conversation. The skill is defined in Conversational Cloud. Here you can specify the ID using a bot context variable like `{$botContext.skillId}`, or you can enter a direct, numeric value.
         
         When the escalation is attempted, the Agent Skill Id is evaluated; if it isn't numeric, the fallback message is sent to the user. If the value is numeric, but the bot doesn't respond for more than 3 minutes (e.g., the chat server becomes overloaded and drops the message), an attempt is made to transfer the escalation to the fallback skill ID *if one is specified in the [agent connector](conversation-builder-testing-deployment-deploying-to-conversational-cloud.html#add-an-agent-connector)*. Otherwise, the escalation fails. For information on handling failures, see below [here](conversation-builder-integrations-liveperson-agent-escalation-integrations.html#handle-transfer-failures). 
-    - **Agent Id**: Optional. Used for bot-to-human transfers only. Specify the ID of the human agent to which to transfer the conversation. (You can obtain the ID from the address bar when the user profile is displayed in Conversational Cloud.) Transfer of the conversation to this agent ID only occurs if the agent is assigned to the skill ID that you specify and is available; otherwise, transfer to the skill ID occurs instead.
+    - **Agent Id**: Optional. Used for bot-to-human transfers only. Specify the ID of the human agent to which to transfer the conversation. (You can obtain the ID from the address bar when the user profile is displayed in Conversational Cloud.) For Messaging, specify the agent ID as `<account ID>.<agent ID>`. For Live Chat, specify just the `<agent ID>`. Transfer of the conversation to this agent ID only occurs if the agent is assigned to the skill ID that you specify and is available; otherwise, transfer to the skill ID occurs instead.
     - **Transfer Bot Context**: Used for [manual, bot-to-bot transfers](conversation-builder-bots-bot-to-bot-transfers.html#manual-transfers) only. Select this to *automatically* pass the user's intent and/or message from the sender bot to the receiver bot. This lets the receiver bot know the appropriate dialog to start after the transfer.
-    - **Message to User**: Use this field to guarantee that the user will see a message prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. The system will send this message as a part of the transfer API post body. This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. 
+    - **Message to User**: Use this field to guarantee that the user will see a message prior to being transferred, something like, “Hold on while I connect you with an agent.” You can enter either static text, use a variable, or a combination of both. The system will send this message as a part of the transfer API post body. If you need to insert a new line, use an escape character like so: \\\n. 
+
+    This field is required, so if you don't want to send a message, enter "BLANK_MESSAGE" here. That satisfies the underlying, system requirement for a message, but it doesn't actually send one. 
     - **Transform Result Script**: If applicable, use this section to write JavaScript code that transforms the raw result (typically in JSON format), so you can use the information in the bot's dialog. For more on this, see [Transform an API result](conversation-builder-integrations-integration-basics.html#transform-an-api-result).
-    - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields as described [here](conversation-builder-interactions-interaction-basics.html#display-variables-in-interactions).
+    - **Custom Data Fields**: Add the fields that will store the result data in key/value pairs. Users who are tasked with creating bots can use and display this data in interactions by referencing these fields. For more on this, see [here](conversation-builder-integrations-integration-basics.html#process-api-results-with-custom-data-fields).
 3. Click **Save**.  
 
 ### Best practices
@@ -51,7 +53,9 @@ If you're sending one or more text responses prior to the transfer, it's recomme
 
 #### Handle transfer failures
 
-Most often in Chat, but occasionally with Messaging, an attempt at transferring to a skill will fail. When this happens, the platform sends the message `__agent_escalation_failed__` to the bot. If you don’t have a dialog set up to catch this pattern, the bot will treat it like any other consumer message. In most cases, it will go to the Fallback dialog.
+First, if an immediate error occurs when calling the escalation API, a failure response will be returned. You can catch and handle these errors by adding a custom rule to the integration interaction that checks for a “failure” result. For more on this, see [here](conversation-builder-interactions-integrations.html#integration-interactions).
+
+Second, most often in Chat, but occasionally with Messaging, it can happen that the escalation API call is successful, but an attempt at transferring to a skill will fail after some time. When this happens, the platform sends the message `__agent_escalation_failed__` to the bot. If you don’t have a dialog set up to catch this pattern, the bot will treat it like any other consumer message. In most cases, it will go to the Fallback dialog.
 
 Setting up a dialog to catch the `__agent_escalation_failed__` pattern allows you to send an appropriate message to the consumer, e.g., "Sorry, we're unable to perform the transfer at this time. Please try again later."
 

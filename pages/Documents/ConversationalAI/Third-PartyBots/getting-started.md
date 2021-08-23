@@ -39,6 +39,16 @@ Each connector provides the ability to:
 {: .important}
 Some connectors may provide more or less functionality depending on the specifics of the provider.
 
+{: .important}
+Please be advised that you should create fresh bot agents for your bots. Using the same bot agents for ConversationBuilder and ThirdPartyBots will break both bot instances. Conversational Cloud only allows one active user session per agent. Thus, bots created in Conversation Builder and Third-Party Bots with the same bot agent will eventually kick each other out.
+
+{: .important}
+Please be advised that we recommend to have one bot for 250 open and active conversations, if you want your to handle more load, please add more bots to ensure a smooth and convenient consumer experience. Furthermore we recommend adding at least 2 bots for one bot skill to support a failover and a higher availability in case of any service interruptions and issues.
+
+{: .important}
+We will be automatically error escalate any new conversation if the bot has reached the limit of 999 open conversations. To mitigate this issue, please consider setting a lower value for closing inactive conversations for your bot skills and also add more bots.
+
+
 ### Bot Lifecycle
 
 During run-time, your bot may have different operational states. These states are based on the health status of the services it utilizes, such as LivePerson APIs, AI vendors, etc.
@@ -97,13 +107,13 @@ Please note that your bot setup should always return an intent or an action as a
 
 1. Add a new user in the Conversational Cloud. Choose "Bot" for “User type”. If bot is not available as a user type, contact your LivePerson account manager to enable the feature.
 
-  <img style="width:600px" src="img/dialogflowversion2/image_0.png">
+  <img style="width:600px" src="img/ThirdPartyBots/common-create-bot-user.png">
 
 {:start="2"}
 
 1. Under login method, choose "API key" and generate a new API key for the user
 
-   <img style="width:600px" src="img/dialogflowversion2/image_1.png">
+   <img style="width:600px" src="img/ThirdPartyBots/common-create-api-key.png">
 
 {:start="3"}
 
@@ -113,7 +123,7 @@ Please note that your bot setup should always return an intent or an action as a
 
 1. Find the API key name you created above the in bot user profile
 
-   <img style="width:400px" src="img/dialogflowversion2/image_2.png">
+   <img style="width:400px" src="img/ThirdPartyBots/common-find-api-key.png">
 
 #### Provision a connector
 
@@ -174,7 +184,7 @@ Follow the steps below to add a new bot.
 
 ##### Settings for Welcome Messages:
 
-The Bot Connector system is designed to respond to incoming messaging by the consumer, once the bot is engaged in the conversation. Enabling the Welcome Messages setting allows brands to compose an initial message that the bot can send out that is not in direct response to the consumers messages but instead opens the conversation. This allows for the bot to connect to a conversation and send out an initial message without waiting for the consumer to send a message after the bot first joins the conversation.
+By enabling the Welcome Messages option in our Wizard,  Brands will receive a welcome message by the bot immediately after transfer. User will be greeted by the bot. With this feature. It means that the bot will be enabled to greet customers directly after the transfer action.
 
 ##### Settings for Combine Messages:
 
@@ -951,4 +961,4 @@ Move on to the product guides to learn how to connect and configure your specifi
 
 - [Microsoft Bot Framework](bot-connectors-microsoft-bot-framework.html)
 
-- [Custom Third Party Bots](bot-connectors-custom-third-party-bots.html)
+- [Custom Third-Party Bots](bot-connectors-custom-third-party-bots.html)

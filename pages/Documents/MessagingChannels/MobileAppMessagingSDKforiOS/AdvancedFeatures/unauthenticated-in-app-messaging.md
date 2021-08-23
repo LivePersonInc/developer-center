@@ -57,7 +57,7 @@ When an unauthenticated user session expire - the SDK will notify by presenting 
 // 1. Init SDK with Monitoring
 let monitoringInitParams = LPMonitoringInitParams(appInstallID: "appInstallID")
 do {
-    try LPMessagingSDK.instance.initialize("accountNumber", monitoringInitParams: monitoringInitParams)
+    try LPMessaging.instance.initialize("accountNumber", monitoringInitParams: monitoringInitParams)
 } catch let error as NSError {
     print("initialize error: \(error)")
     return
@@ -71,7 +71,7 @@ let conversationViewParams = LPConversationViewParams(conversationQuery: self.co
 let authenticationParams = LPAuthenticationParams(authenticationCode: nil, jwt: nil, redirectURI: nil, authenticationType: .unauthenticated)
 
 // 4. Call showConversation() with LPConversationViewParams and LPAuthenticationParams
-LPMessagingSDK.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
+LPMessaging.instance.showConversation(conversationViewParams, authenticationParams: authenticationParams)
 ...
 
 ```

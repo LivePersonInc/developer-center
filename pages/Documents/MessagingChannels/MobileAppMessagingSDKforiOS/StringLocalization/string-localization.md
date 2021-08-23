@@ -57,17 +57,17 @@ You can override the string localization of any supported language in Conversati
 * Print all localized keys with a default English value in the SDK:
 
    ```swift
-   LPMessagingSDK.instance.printAllLocalizedKeys()
+   LPMessaging.instance.printAllLocalizedKeys()
    ```
 
 * Get or print all localized supported languages in the SDK:
 
    ```swift
-   LPMessagingSDK.instance.printSupportedLanguages()
+   LPMessaging.instance.printSupportedLanguages()
    ```
 
 * Get all supported languages by key-value (the key is locale key and value is language description):
 
    ```swift
-   LPMessagingSDK.instance.getAllSupportedLanguages()
+   LPMessaging.instance.getAllSupportedLanguages()
    ```

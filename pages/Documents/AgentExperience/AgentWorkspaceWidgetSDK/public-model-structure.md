@@ -34,15 +34,19 @@ Structure example:
     },
     "chattingAgentInfo": {
         "agentName": "",
+        "agentNickname": "",
         "agentGroupName": "",
-        "agentId": 1,
+        "agentId": 1
     },
     "agentInfo": {
         "accountId": "",
         "agentName": "",
+        "agentNickname": "",
         "agentId": 1,
         "agentEmail": "",
-        "maxChats": 1
+        "employeeId": "",
+        "maxChats": 1,
+        "agentGroupName": ""
     },
     "chatTranscript": {
         "lines": []
@@ -132,7 +136,7 @@ Structure example:
         "acr": ""
     },
     "applicationInfo": {
-        "theme": "",
+        "theme": ""
     },
     "customVariables": [],
     "splitSession": {
@@ -155,14 +159,18 @@ Structure example:
 | chatInfo.chatSkill                          | The chat skill                                                                                       | The conversation skill                                                                   | string  |                                                            |
 | **chattingAgentInfo**                       | Information about the chatting agent (may not be the agent which is currently logged in)             | Information about the assigned agent (may not be the agent which is currently logged in) | object  |                                                            |
 | chattingAgentInfo.agentName                 | The name of the agent                                                                                | The name of the agent                                                                    | string  |                                                            |
-| chattingAgentInfo.agentGroupName            | The name of the agent group                                                                          | The name of the agent group                                                              | string  |                                                            |
+| chattingAgentInfo.agentNickname             | N/A                                                                                                  | The nickname of the agent                                                                | string  |                                                            |
+| chattingAgentInfo.agentGroupName            | N/A                                                                                                  | The name of the agent group                                                              | string  |                                                            |
 | chattingAgentInfo.agentId                   | The ID of the agent                                                                                  | The ID of the agent                                                                      | number  |                                                            |
 | **agentInfo**                               | Information about the agent which is currently logged in (may not be the chatting agent)             | Information about the agent which is currently logged in (may not be the assigned agent) | object  |                                                            |
 | agentInfo.accountId                         | The account ID                                                                                       | The account ID                                                                           | string  |                                                            |
 | agentInfo.agentName                         | The name of the agent                                                                                | The name of the agent                                                                    | string  |                                                            |
+| agentInfo.agentNickname                     | N/A                                                                                                  | The nickname of the agent                                                                | string  |                                                            |
 | agentInfo.agentId                           | The ID of the agent                                                                                  | The ID of the agent                                                                      | number  |                                                            |
 | agentInfo.agentEmail                        | The email of the agent                                                                               | The email of the agent                                                                   | string  |                                                            |
+| agentInfo.employeeId                        | N/A                                                                                                  | The ID of the employee                                                                   | string  |                                                            |
 | agentInfo.maxChats                          | The maximum number of chats the agent can be in                                                      | The maximum number of (real-time) chats the agent can be in                              | number  |                                                            |
+| agentInfo.agentGroupName                    | N/A                                                                                                  | The name of the agent group                                                              | string  |                                                            |
 | chatTranscript.lines                        | Array of chat lines                                                                                  | Array of chat lines                                                                      | array   |                                                            |
 | **surveyQuestions**                         | All the survey questions divided by survey type                                                      | Profile information about the consumer                                                   | object  |                                                            |
 | surveyQuestions.preChat                     | All the pre-chat survey questions, with separated special questions                                  | Profile information about the consumer                                                   | object  |                                                            |
@@ -205,7 +213,7 @@ Structure example:
 | campaignInfo.goalId                         | The goal ID                                                                                          | The goal ID                                                                              | string  |                                                            |
 | campaignInfo.goalDescription                | The goal description                                                                                 | The goal description                                                                     | string  |                                                            |
 | **engagementInfo**                          | Information regarding the campaign engagement (The click to chat button)                             | N/A                                                                                      | object  |                                                            |
-| engagementInfo.VisitorBehavior              | Array of the visitor behavior                                                                        | Array of the visitor behavior                                                            | array   |                                                            |
+| engagementInfo.VisitorBehavior              | Array of the behavioral targeting rules                                                              | Array of the behavioral targeting rules                                                  | array   |                                                            |
 | engagementInfo.skill                        | The chat skill                                                                                       | The conversation skill                                                                   | string  |                                                            |
 | engagementInfo.engagementType               | The engagement type                                                                                  | The engagement type                                                                      | string  |                                                            |
 | engagementInfo.engagementId                 | The engagement ID                                                                                    | The engagement ID                                                                        | string  |                                                            |
@@ -437,9 +445,9 @@ Structure example:
 
 | Property    | Description                             | Type   |
 |-------------|-----------------------------------------|--------|
-| id          | The ID of the target visitor behavior   | number |
-| name        | The name of the visitor behavior        | string |
-| description | The description of the visitor behavior | string |
+| id          | The ID of the behavioral targeting rule   | number |
+| name        | The name of the behavioral targeting rule      | string |
+| description | The description of the behavioral targeting rule | string |
 
 Structure example:
 
@@ -704,6 +712,8 @@ Structure example:
 | sku      | The product SKU                                  | string |
 | price    | The price of the product                         | string |
 | quantity | Where applicable - the number of identical items | number |
+| statusInStock | Where applicable - the stock status of the product | string |
+| quantityInStock | Where applicable - available quantity of products | string |
 
 Structure example:
 
@@ -713,10 +723,13 @@ Structure example:
     "category": "",
     "sku": "",
     "price": "",
-    "quantity": 1
+    "quantity": 1,
+    "statusInStock": "low in stock",
+    "quantityInStock": 5
 }
 ```
 **Note: SDE.viewedProducts does not contain the quantity field**
+**Note: SDE.transaction.[].products and SDE.shoppingCart.[].products do not contain statusInStock and quantityInStock fields**
 
 ### SDE.serviceActivity
 

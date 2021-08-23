@@ -2,6 +2,7 @@
 pagename: Overview
 redirect_from:
   - rt-interactions-monitoring-overview.html
+  - rt-interactions-monitor-api-overview.html
 sitesection: Documents
 categoryname: "Website Monitoring"
 documentname: Monitoring API

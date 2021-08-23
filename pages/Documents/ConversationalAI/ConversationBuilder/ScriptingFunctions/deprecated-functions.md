@@ -15,9 +15,9 @@ Deprecated functions are still supported but not recommended. Bot developers are
 ### Get channel
 
 {: .important}
-getChannel is supported but not recommended. Bot developers are encouraged to use [getUserChannel](conversation-builder-scripting-functions-get-user-data.html#get-user-channel) instead.
+This function is supported but not recommended. Bot developers are encouraged to use [getUserChannel](conversation-builder-scripting-functions-get-user-data.html#get-user-channel) instead.
 
-Returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, sms, web, inapp. lp_ prefix indicates the LivePerson platform.
+`getChannel` returns the platform channel the user is currently communicating on. This function returns - lp_sms, lp_web, lp_inapp, sms, web, inapp. lp_ prefix indicates the LivePerson platform.
 
 | Function Name | Arguments | Returns |
 | --- | --- | --- |

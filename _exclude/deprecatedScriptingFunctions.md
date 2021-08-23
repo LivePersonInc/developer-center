@@ -76,3 +76,25 @@ if (email != null) {
 }
 ```
 
+The following scripting function was never re-added to the Dev Center (after being removed at one point) because getUserChannel exists. (07-25-2020)
+
+### Get user platform type
+Returns the type of platform that the user is currently communicating on. This function returns:
+
+* SMS
+* INAPP (for In-app SDK)
+* FACEBOOK
+* ABC (for Apple Business Chat)
+* RCS
+* WHATSAPP
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getUserPlatformType()` | None | SMS, INAPP, FACEBOOK, ABC, RCS, or WHATSAPP |
+
+#### Example
+
+```javascript
+var channel = botContext.getUserPlatformType();
+botContext.printDebugMessage("channel used by the user is: " + channel);
+```

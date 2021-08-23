@@ -28,7 +28,7 @@ There are two, general types of bots:
 ### Configure bot settings
 
 {: .important}
-Post-conversation survey bots have a few, unique settings that custom bots don't have. For information on these settings, see [here](conversation-builder-bots-post-conversation-survey-bots.html#step-3---configure-the-bot-settings).
+Post-conversation survey bots have a few, unique settings that custom bots don't have. For information on these settings, see [here](conversation-builder-bots-post-conversation-survey-bots.html#configuring-the-survey-bots-settings).
 
 **To configure bot settings**
 1. Open the bot, and click <img style="width:25px" src="img/ConvoBuilder/icon_ellipsisVertical.png"> (3-dot icon) in the upper-left corner, just to the right of the menu bar.
@@ -63,7 +63,7 @@ Bot settings include:
 
 - **Session Length**: Select the length of the bot session, that is, how long the context of a conversation is maintained after the conversation becomes idle. If this is unset, the default of one hour is used. Be aware that Conversation Builder maintains its own session, and Conversational Cloud maintains its own session. This setting only determines the length of the Conversation Builder session.
 
-- **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons.
+- **Log Transcripts**: If you don’t want to log transcripts of conversations held via the bot, click the slider to Off. The default value is On. Transcripts can provide insights for a variety of purposes. For example, they can inform the bot flow and help with tuning. However, some cases might prohibit transcript logging for privacy or other reasons.
 
     If you turn this off, metadata on the conversation is still logged, but the content of the conversation isn’t. If you keep this on, you can access the logged transcripts in the Bot Analytics application: Select the bot and then access the **Transcripts** page.
 
@@ -81,8 +81,24 @@ Bot settings include:
 
     To enter a value, click the slider to activate it, enter the text in the field that appears, and save. There is no character limit.
 
+- **Enable Agent Annotations**: The purpose of this setting is to automate more of the steps taken when training the bot, and to make it easier for agents to participate.
+
+    If you enable this setting, unrecognized utterances that aren't handled by the bot are automatically added to a review list in the Intent Annotations widget in Conversational Cloud. This allows the agent to review the list and mark utterances needing follow-up, with the goal of re-training the domain and/or updating the bot as needed.
+
+    "Unrecognized utterances" are defined as those that trigger the Fallback dialog. If the Fallback dialog employs a knowledge base search, only the utterances that return no results are added to the review list.
+
+    To make use of this setting, the bot must have at least one dialog starter with a specified *intent*.
+
+- **Enable Debug**: When this setting is enabled, you can use the "reset" and "display userid" commands in the conversation for [debugging](conversation-builder-testing-deployment-debugging.html) purposes. Respectively, these commands reset the session and display the unique user ID for the consumer in the conversation.
+
+    If you disable this setting, the commands cannot be run in the conversation anywhere, i.e., they cannot be run in a channel post-deployment, nor can they be run within the [Preview tool](conversation-builder-testing-deployment-previewing.html) within Conversation Builder.
+
+    By default, the setting is enabled (on), so that during bot development you can run the commands. To disable them, manually disable this bot-level setting in each applicable bot.
+
+    **Note**: As mentioned above, if you disable this, you are no longer able to use these standard debugging methods within the Preview tool in Conversation Builder. Therefore, LivePerson strongly recommends that you create separate development and production bots, so you can enable this in the former but disable it in the latter.
+
 ### Import a bot
-You can add an bot by importing a bot JSON file that was previously exported. This is useful when you need to make a copy of a bot (just export and then import back into the same environment), or you need to copy or move a bot from one environment to another.
+You can add a bot by importing a bot JSON file that was previously exported. This is useful when you need to make a copy of a bot (just export and then import back into the same environment), or you need to copy or move a bot from one environment to another.
 
 {: .important}
 Before you import a bot from a different environment (that is, from one region or hosting platform to another), check whether the bot uses domains for intents and entities. If it does, you’ll need to export those domains too and import them into the target environment _before_ importing the bot, keeping the domain names identical. If you don’t import the domains _first_, the associations inside the bot to the intents and entities will break during the bot import. If that happens, you’ll need to reassociate the intents and entities manually.
