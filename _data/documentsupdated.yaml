@@ -1021,7 +1021,10 @@
     - pagename: Overview
     - pagename: TLS Authentication
     - pagename: HTTP Response Codes
-    - pagename: Configuration of Push Proxy
+    - pagename: Configuration
+      subpages:
+          - subpagename: Apple Token Authentication
+          - subpagename: Push Proxy
     - pagename: IP Whitelisting
   - documentname: Proactive Messaging
     pages:
