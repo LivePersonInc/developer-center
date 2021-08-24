@@ -882,6 +882,7 @@
           - subpagename: Metrics
           - subpagename: Agent View
           - subpagename: Historical
+          - subpagename: Agent View
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
