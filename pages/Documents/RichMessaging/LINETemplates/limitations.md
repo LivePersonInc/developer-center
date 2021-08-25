@@ -15,7 +15,8 @@ indicator: messaging
 
 ### Element limitations
 
-* Cards have a maximum of 3 buttons
+* `Carousel Template` cards have a maximum of 3 buttons
+* `Card Template` have a maximum of 4 buttons
 * Carousels have a maximum of 10 scrollable cards
 * Quick replies have a maximun of 13 chips 
 
