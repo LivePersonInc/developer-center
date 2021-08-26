@@ -417,7 +417,7 @@ Click [**Transaction**](https://proactive-messaging.z1.fs.liveperson.com/api/api
      "transactionId": "124-23213-123123123",
      "channel": "SMS",
      "skill": "billing",
-     "consumerId": "13777777777",
+     "consumerId": "+13777777777",
      "attemptedTime": "2020-08-26T21:08:12.198Z",
      "cancelledTime": "2020-08-26T21:08:12.198Z",
      "conversationId": "21312-132131-31312-31-321",
