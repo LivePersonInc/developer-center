@@ -275,7 +275,7 @@ Click [**Campaign**](https://proactive-messaging.z1.fs.liveperson.com/api/api-do
  "consumersReport": [
    {
      "id": "string",
-     "consumerId": "13777777777",
+     "consumerId": "string",
      "status": "DELIVERED",
      "errorSource": "PRMSG",
      "errorCode": "string",
