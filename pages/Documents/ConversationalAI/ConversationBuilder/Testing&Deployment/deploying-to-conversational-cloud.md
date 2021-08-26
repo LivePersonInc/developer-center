@@ -144,16 +144,29 @@ By default, a message from the consumer is shown to the consumer as "Read' once 
 **Chat**: No
 
 #### defaultGreetingMessage
-The greeting message sent to the bot when the user connects.
+The greeting message sent to the bot when the bot agent connects to a new conversation. This message is sent to the bot if a message is not received from the consumer within *3 seconds* of the bot agent joining the conversation. The value of 3 seconds cannot be adjusted.
+
+Typically, the bot agent receives a consumer message after joining the conversation, but this isn’t always the case. For example, the consumer might delay in responding. Or, the conversation might have been one that was transferred from another bot agent. In cases like these, the `defaultGreetingMessage` is designed to wake up the bot and trigger the proper dialog flow. Ensure that the bot includes a dialog flow that supports receipt of whatever message you use here.
+
+See also `disableGreetings`, which is farther below.
 
 **Default value**: hi<br>
 **Messaging**: Yes<br>
-**Chat**: Yes
+**Chat**: No
 
 #### defaultStepupMessage
 The StepUp message sent to the bot when Stepup Authentication happens.
 
 **Default value**: \_STEPUP\_<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### disableGreetings
+If true, the greeting message specified in the `defaultGreetingMessage` custom configuration field is *not* sent. If false, the default greeting message is sent when properly triggered.
+
+See also `defaultGreetingMessage`, which is farther above.
+
+**Default value**: false<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
