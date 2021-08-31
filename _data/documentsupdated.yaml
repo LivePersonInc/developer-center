@@ -251,6 +251,7 @@
             - subpagename: Agent Experience
             - subpagename: Best Practices
             - subpagename: Troubleshooting
+            - subpagename: FAQs
         - pagename: Conversation Context Service
           subpages:
             - subpagename: Overview
