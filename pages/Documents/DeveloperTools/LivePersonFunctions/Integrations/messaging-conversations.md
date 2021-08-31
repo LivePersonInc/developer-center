@@ -22,7 +22,7 @@ Along with the invocation, the function is sent a payload containing metadata re
 
 ### Best Practices
 
-Functions for messaging listens for messaging events asynchronously. As a consequence this can cause race conditions with other parts of the platform. Therefore, it is considered best practice to use bots instead of Functions for implementing routing logic. Functions is a good option to sync data with third-party systems like CRMs or to save data in the [Conversation Context Service](maven-context-warehouse-overview.html) in order to use it within Conversation Orchestrator. Routing via Functions makes sense whenever a conversation is in a stagnant state (i.e. not in process of being routed), e.g. a conversation is idle or a message line has been sent in off-hours. Otherwise, the asynchronous nature of its events might interfere with the proper flow of a "dynamic" conversation. 
+Functions for messaging listens for messaging events asynchronously. As a consequence this can cause race conditions with other parts of the platform. Therefore, it is considered best practice to use bots instead of Functions for implementing routing logic. Functions is a good option to sync data with third-party systems like CRMs or to save data in the [Conversation Context Service](maven-context-warehouse-overview.html) in order to use it within Conversation Orchestrator. Routing via Functions makes sense whenever a conversation is in a stagnant state (i.e. not in process of being routed), e.g. a conversation is idle or a message line has been sent in off-hours. Otherwise, the asynchronous nature of its events might interfere with the proper flow of a "dynamic" conversation.
 
 
 <div class="important">if the authenticated consumer's previous conversation was auto-closed, and the new one opened within 48 hours of that, the new conversation event won't be triggered.</div>
@@ -45,7 +45,7 @@ With the controller bot as the invoker, as is the case for messaging events, you
   <ul>
     <li></li>
     <li>If no message is set in the result of the function (which it returns to the invoker, for example: <code>callback();</code> ), the default automatic message for the account will be triggered.</li>
-    <li>The default automatic message can be overwritten with 
+    <li>The default automatic message can be overwritten with
         <code>{
             type: "systemMessage",
             text: "your message"
