@@ -71,15 +71,6 @@ To take advantage of the benefits of performance and flexibility, you are encour
 
 ### Languages
 
-When you [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html), you'll specify its language.
-
-When a text-to-text search is performed, the knowledge base's language determines the language-specific list of stop words to filter out, for example, "to," "the," and so on.
-
-When an NLU search is performed, the knowledge base's language works differently based on how you've defined the knowledge base:
-
-* If the knowledge base uses *Domain* intents, the domain's language is used instead. In this case, the languages supported depend on the domain's [NLU provider](intent-manager-natural-language-understanding.html).
-* If the knowledge base uses *Knowledge Base* intents (a legacy feature), the knowledge base's language is used. In this case, only English and Spanish are supported.
-
 #### Working with special language characters
 
 If you need to support special language characters (e.g., ö, ü, ß), and you’re creating an internal knowledge base by importing a CSV file, ensure the import file is saved as a UTF-8 encoded CSV file beforehand.

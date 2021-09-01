@@ -18,14 +18,15 @@ indicator: both
 3. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**.
 4. Specify the following:
     * **Knowledge Base Name**: Enter a display name for the knowledge base.
-    * **Language**: Select the language of the knowledge base. For details on how the language is used, see [here](knowledge-base-internal-knowledge-bases-introduction.html#languages).
     * **Import articles from**: You can add articles manually, but if you have them in an external file, you can import them now. Select either "CSV" or "Google Sheet," and use the controls provided to upload the file's contents. The Google sheet must be public, i.e., with no file restrictions in place. For details on creating an import file, see farther below. 
         
         If you select "Google Sheet" and you provide the URL to the sheet, be aware that this establishes a link between the knowledge base and the sheet. If you later sync the knowledge base, it is updated with the current contents in the sheet.
 
         **IMPORTANT**: When creating one knowledge base based off of another, don't reuse the same CSV import file or Google sheet for a second knowledge base in the same hosted region. The article IDs must be unique within the region. In the file for the second knowledge base, clear the article IDs; the application will create article IDs for new articles.
 
-    * **Domain**: The knowledge base will use [Domain intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), so select the domain to use here. Note that you don't have to specify the domain at this point, as the field is optional when adding the knowledge base. This allows you to advance the creation of your knowledge base content without having to consider the domain beforehand. Take care when selecting the domain though; once you select it, it can't be changed. 
+    * **Domain**: The knowledge base will use [Domain intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), so select the domain to use here. Note that you don't have to specify the domain at this point, as the field is optional when adding the knowledge base. This allows you to advance the creation of your knowledge base content without having to consider the domain beforehand.
+
+    * **Language**: Select the language of the content. Make an accurate selection here; this helps text-based searches to work as expected and will help with regard to future enhancements related to text-based searches.
 
 5. Click **Save**.
 

@@ -44,7 +44,8 @@ After making any changes to the content in the CMS, sync with the CMS (described
 3. Specify the following:
     * **Knowledge Base Name**: Enter a descriptive name, e.g., “Technical Support FAQs.”
     * **Content Provider**: Select the name of the content provider. If the provider isn't listed, select "Other," and enter the name.
-    * **Domain**: Select the name of the domain that contains the intents that you will associate with the articles. Take care when selecting the domain; you can't change the domain after adding the knowledge base.
+    * **Domain**: Select the name of the domain that contains the intents that you will associate with the articles.
+    * **Language**: Select the language of the content. Make an accurate selection here; this helps text-based searches to work as expected and will help with regard to future enhancements related to text-based searches.
 4. Click **Next**.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_w_ai_1.png">

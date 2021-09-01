@@ -40,6 +40,7 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
 3. Specify the following:
     * **Knowledge Base Name**: Enter a descriptive name, e.g., “Technical Support FAQs.”
     * **Content Provider**: Select the name of the content provider. If the provider isn't listed, select "Other," and enter the name.
+    * **Language**: Select the language of the content. This setting is informational only and doesn't affect the behavior of the knowledge base.
 4. Click **Next**.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_wo_ai_1.png">
