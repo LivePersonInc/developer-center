@@ -17,7 +17,7 @@ The card contains the following elements:
 * Title text
 * Subtitle text
 * Image
-* Up to 3 buttons (LINE limitation) with the following actions:
+* Up to 4 buttons (LINE limitation) with the following actions:
     * Link
     * Publish text 
 

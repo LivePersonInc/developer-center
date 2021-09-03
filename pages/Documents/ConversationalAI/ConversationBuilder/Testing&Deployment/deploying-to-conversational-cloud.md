@@ -134,7 +134,7 @@ You add these fields in the **Advanced Options** of the agent connector.
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/deploy_customConfig.png">
 
 {: .important}
-If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.
+If you have multiple agent connectors deployed for the same bot, remember to add identical custom configuration settings to each of them. Otherwise, you'll get different behavior between the bots within an account.<br><br>To make a change to a custom configuration field for a deployed agent connector, stop the connector first.
 
 #### acceptStatusEventValue
 By default, a message from the consumer is shown to the consumer as "Read' once it is sent. Set this field to "SENT" if you want the message to be shown as "Sent" instead. Once the agent logs into Conversational Cloud and views the message, this status will change to "Read."
@@ -144,16 +144,29 @@ By default, a message from the consumer is shown to the consumer as "Read' once 
 **Chat**: No
 
 #### defaultGreetingMessage
-The greeting message sent to the bot when the user connects.
+The greeting message sent to the bot when the bot agent connects to a new conversation. This message is sent to the bot if a message is not received from the consumer within *3 seconds* of the bot agent joining the conversation. The value of 3 seconds cannot be adjusted.
+
+Typically, the bot agent receives a consumer message after joining the conversation, but this isn’t always the case. For example, the consumer might delay in responding. Or, the conversation might have been one that was transferred from another bot agent. In cases like these, the `defaultGreetingMessage` is designed to wake up the bot and trigger the proper dialog flow. Ensure that the bot includes a dialog flow that supports receipt of whatever message you use here.
+
+See also `disableGreetings`, which is farther below.
 
 **Default value**: hi<br>
 **Messaging**: Yes<br>
-**Chat**: Yes
+**Chat**: No
 
 #### defaultStepupMessage
 The StepUp message sent to the bot when Stepup Authentication happens.
 
 **Default value**: \_STEPUP\_<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### disableGreetings
+If true, the greeting message specified in the `defaultGreetingMessage` custom configuration field is *not* sent. If false, the default greeting message is sent when properly triggered.
+
+See also `defaultGreetingMessage`, which is farther above.
+
+**Default value**: false<br>
 **Messaging**: Yes<br>
 **Chat**: No
 
@@ -188,7 +201,7 @@ For example, assume the bot agent receives a message from the consumer at 1:00 p
 
 Conversely, assume the bot agent receives a message from the consumer at 1:00 p.m., and it then receives the consumer's next message at 2:00 p.m. The delay between consumer messages is 60 minutes. If the maxConsumerMessageDelay is set to 30 minutes, the bot will not respond to the message received at 2:00 p.m.
 
-The default value of 30 minutes should suit most use cases due to the sequential nature of bot conversations, where the conversation either ends in resolution or escalation. However, messaging is asynchronous, so a consumer might reply in intervals that are longer than 30 minutes. As a result, you can increase this value if needed based on your use cases.
+The default value of 30 minutes should suit most use cases due to the sequential nature of bot conversations, where the conversation either ends in resolution or escalation. However, messaging is asynchronous, so a consumer might reply in intervals that are longer than 30 minutes. As a result, you can increase this value if needed based on your use cases. As a best practice, LivePerson recommends a maximum value of 7 days.
 
 **Default value**: 30<br>
 **Messaging**: Yes<br>
@@ -240,5 +253,62 @@ If "false", when a bot receives a conversation, it sees the last utterance in th
 Vertical or horizontal display for rich structured content. Available for FB, Web, and GRBM. Setting tileDisplay to "horizontal" is useful for resolving formatting issues that might occur on specific channels.
 
 **Default value**: vertical<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+**Custom configuration fields for Manager bots**
+
+The following custom configuration fields are intended for use with Manager bots:
+
+* filterPatterns
+* ignoreAcceptStatusEvent
+* ignoreSubscribeMessagingEvents
+* subscribeToMainDialogOnly
+
+See below for details on these.
+
+#### filterPatterns
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+This field is used to filter the messages processed by a Manager bot. Specify a comma-separated list of Regular Expressions, for example:
+
+^[a-z0-9_\-]+$, ^[A-Z0-9]{3}(?:List)?$
+
+If you set this field, the bot agent processes only the messages that match a Regular Expression in the list. If the message doesn’t match an expression in the list, the message is ignored.
+
+If you don’t set this field, the bot agent processes the message flow as usual.
+
+**Default value**: null<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### ignoreAcceptStatusEvent
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+When this field is “true,” the consumer doesn’t see “read” or “seen” in the messaging window after their message has been read. LivePerson recommends that you keep this set to "true." Manager bots don't need to send this kind of status update, and doing so can create unnecessary overhead in the bot response time.
+
+**Default value**: true<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### ignoreSubscribeMessagingEvents
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+If you set this true, the bot agent isn’t notified of activity within the conversation by any participant (typing, messages sent, when a message has been read). Doing this can eliminate unnecessary overhead and processing.
+
+**Default value**: false<br>
+**Messaging**: Yes<br>
+**Chat**: No
+
+#### subscribeToMainDialogOnly
+
+For Manager bots only, i.e., the role of the bot’s agent connector is Manager.
+
+If you set this true, the bot agent is notified of conversation updates only in the primary/initial conversation, not the survey conversation. Doing this can eliminate unnecessary overhead and processing.
+
+**Default value**: false<br>
 **Messaging**: Yes<br>
 **Chat**: No

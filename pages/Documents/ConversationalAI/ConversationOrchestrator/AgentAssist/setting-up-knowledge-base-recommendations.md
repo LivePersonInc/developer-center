@@ -18,7 +18,7 @@ indicator: messaging
 For some practice with Agent Assist, complete the [Using Agent Assist](tutorials-guides-using-agent-assist-overview.html) tutorial.
 
 {: .important}
-It takes up to 20 minutes for changes in Agent Assist configuration to take effect.
+It takes up to 3 hours for changes in Agent Assist configuration to take effect.
 
 ### Prerequisite knowledge
 To set up Conversation Orchestrator’s Agent Assist to suggest recommended articles, you must have some prerequisite knowledge of other applications in the Conversational AI suite. Most importantly, you must be able to use the Knowledge Base application to:
@@ -26,7 +26,7 @@ To set up Conversation Orchestrator’s Agent Assist to suggest recommended arti
 * Create a knowledge base
 * Create an article
 
-If you will create a knowledge base that uses intents in Intent Builder (associating the intents with knowledge base’s articles), you must also be able to use the Intent Builder application to:
+If you will create a knowledge base that uses intents in Intent Manager (associating the intents with knowledge base’s articles), you must also be able to use the Intent Manager application to:
 
 * Create a domain
 * Create an intent
@@ -36,7 +36,7 @@ For exposure to these Conversational AI applications and tasks, we recommend tha
 * [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html)
 * [Bot Groups & Other Techniques](tutorials-guides-bot-groups-other-techniques-overview.html)
 
-Both tutorial series focus primarily on using the Conversation Builder application for bot building. However, along the way, they also familiarize you with the Intent Builder and Knowledge Base applications.
+Both tutorial series focus primarily on using the Conversation Builder application for bot building. However, along the way, they also familiarize you with the Intent Manager and Knowledge Base applications.
 
 ### High-level workflow
 1. In the Knowledge Base application, create the knowledge bases and the articles therein, using your content source or working from scratch.
@@ -47,32 +47,32 @@ Before Agent Assist can start recommending articles, you need to create at least
 
 To get started, it’s recommended that you create at least one article in the knowledge base, so you can verify that your setup is complete and working. You can continue to add more articles at any time after setup.
 
-If you’re setting up a knowledge base that associates intents with articles, then as a part of this step, you’ll also need to use [Intent Builder](intent-builder-overview.html) to create the domain and the necessary intents therein. Once this is done, back in Knowledge Base, you’ll need to [associate the intents with the articles](knowledge-base-using-intents-with-kbs.html).
+If you’re setting up a knowledge base that associates intents with articles, then as a part of this step, you’ll also need to use [Intent Manager](intent-manager-overview.html) to create the domain and the necessary intents therein. Once this is done, back in Knowledge Base, you’ll need to [associate the intents with the articles](knowledge-base-using-intents-with-kbs.html).
 
 ### Step 2: Configure Agent Assist
 Configuration of Agent Assist involves the following:
 
-1. Add the knowledge bases to Agent Assist.
+1. Verify that the knowledge bases you created have been automatically discovered and enabled.
 2. Assign one or more skills to the knowledge bases.
 3. Enable recommendations.
 4. Specify the maximum number of recommendations that Agent Assist will make. By default, this is 3.
 
-#### Add the knowledge bases to Agent Assist
+#### Verify the knowledge bases have been discovered and enabled
+By default, once you create a knowledge base in the Knowledge Base application, it is automatically discovered by Conversation Orchestrator and enabled for use.
 
-1. In the Knowledge Base application, click <img style="width:30px" src="img/agentassist/icon_apikey.png"> (API Key icon) in the upper-right corner.
-2. On the **User Settings** page, copy your API access key.
+<img width="800" src="img/agentassist/verify_kbs.png">
 
-    <img width="800" src="img/agentassist/api_key.png">
+A knowledge base is enabled by default as a convenience, saving you this step. However, its articles will not be recommended in conversations until you also assign one or more skills to the knowledge base within Agent Assist’s configuration. Both conditions (enabled, assigned at least one skill) must be true for it to be recommended in conversations.
 
-3. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
-4. On the left navigation bar, under **Agent Assist**, click **Knowledge Bases**.
-5. Scroll down to the **Add KB** section, paste in your API access key, and click **Save**.
+**To verify your knowledge bases have been automatically discovered and enabled**
 
-    <img width="800" src="img/agentassist/add_kb.png">
+1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
+2. On the left navigation bar, under **Agent Assist**, click **Knowledge Bases**.
+3. Scroll down to the **Configure article recommendations** section, which lists all discovered knowledge bases.
+4. Verify that the knowledge bases are listed and enabled. At this point, you should also verify that the desired articles in the knowledge base are active. The knowledge base should have at least one active article.
 
-This adds to Agent Assist’s configuration all the knowledge bases that you have access to, for the account that you're currently logged into. This includes all knowledge bases that you've created (both public and private) and other public knowledge bases within your organization.
-
-You should now see the knowledge bases listed under **Configure article recommendations**. They are enabled by default. However, their articles will not be recommended in conversations until you assign one or more skills to each knowledge base.
+{: .important}
+If you subsequently delete a knowledge base in the Knowledge Base application, the next time you access this page, the list is updated automatically.
 
 #### Assign skills to the knowledge bases
 After adding the knowledge bases, assign at least one skill to each of the knowledge bases. Once this is done, their articles can be recommended in conversations that are currently routed to the same skills. In this manner, you can control and configure which knowledge bases are candidates for recommendation to agents on a skill-by-skill basis. 
@@ -86,7 +86,9 @@ In our example below, for the human agent to be presented with an article recomm
 1. [Access Conversation Orchestrator’s Agent Assist](conversation-orchestrator-agent-assist-overview.html#access-conversation-orchestrators-agent-assist).
 2. On the left navigation bar, under **Agent Assist**, click **Knowledge Bases**.
 3. Scroll down to the **Configure article recommendations** section, which lists all knowledge bases.
-4. Add at least one skill to each available knowledge base. You can select from all the skills that are defined for your account in Conversational Cloud.
+4. Add at least one skill to each available knowledge base. You can select from all the skills that are defined for your account in Conversational Cloud. To assign all available skills at once, select the knowledge base, and then use the menu option that appears.
+
+    <img width="800" src="img/agentassist/assign_skills_kb2.png">
 
 #### Enable recommendations
 With the knowledge base ready to go, enable recommendations. This must be done so that Agent Assist recommends articles and bots inline in conversations.

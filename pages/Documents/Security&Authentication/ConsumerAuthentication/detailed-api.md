@@ -93,14 +93,12 @@ The Customer web page method name can be either the default LivePerson method na
 
 * The interface is implemented as REST/JSON.  In keeping with the REST specification, the verb is POST, since accessing this API changes the state on the server (is not idempotent).
 
-*	LivePerson will POST the following data using the "application/json" format:
+*	LivePerson will POST the following data using the "application/x-www-form-urlencoded" format:
 
-```json
-{
- "code": "b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c",
- "grant_type" : "authorization_code",
- "redirect_uri" : "https://liveperson.net"
-}
+```text
+code=b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c&
+grant_type-authorization_code&
+redirect_uri=https://liveperson.net
 ```
 
 *	The token (JWT) should contain three base64url encoded segments separated by period ('.') characters.
@@ -277,7 +275,7 @@ Example for Mandatory+Standard+Custom Claims JWT:
 
 *	The encryption should use RSA algorithm.
 
-*	JWE header should include header name “alg" with the value: RSA_OAEP_256.
+*	JWE header should include header name “alg" with the value: RSA-OAEP-256.
 
 ### OpenID JWT Signing
 
@@ -285,9 +283,18 @@ Example for Mandatory+Standard+Custom Claims JWT:
 
 *	The JWT should be signed with your RSA private key.
 
-*	The public key should be added to LivePerson OAuth configuration in the “JWT Public Key" field, and should be base64 encoded with X509 key spec.
+*	The public key should be base64 encoded with X509 key spec and can *either* be provided by a JWKS endpoint or added to LivePerson OAuth configuration in the “JWT Public Key" field.  
+    **Note:** for more details on JWKS, please read [this(external)](https://inthiraj1994.medium.com/signature-verification-using-jwks-endpoint-in-wso2-identity-server-5ba65c5de086#:~:text=The%20JSON%20Web%20Key%20Set,used%20to%20sign%20the%20tokens.) aritcle
 
-### Extract JWT Public and Private Keys
+### If you chose to configure the JWKS Endpoint
+
+1. In the Consumer Identity Provider set up page, under the "Choose IDP certificate type:" select the JWKS Endpoint option and enter a valid https JWKS Endpoint.
+
+![Select JWKS endpoint](img/consumer_idp_jwks.png)
+
+### If you chose to configure the JWT Public Key
+
+**Extract JWT Public and Private Keys**
 
 Conduct the following three steps to receive private and public keys:
 
@@ -297,6 +304,7 @@ Conduct the following three steps to receive private and public keys:
 openssl genrsa -out private_idp.pem 2048
 ```
 
+{:start="2"}
 2.	Extract private key:
 
 ```sh
@@ -304,6 +312,7 @@ openssl pkcs8 -topk8 -inform pem -in private_idp.pem -outform pem -nocrypt -out 
 	(private key can be found in the file: private_key_idp.pem)
 ```
 
+{:start="3"}
 3.	Extract public key:
 
 ```sh
@@ -311,7 +320,7 @@ openssl rsa -in private_idp.pem -outform PEM -pubout -out public_key_idp.pem
 (public  key can be found in the file  : public_key_idp.pem)
 ```
 
-Configure the JWT public key on Conversational Cloud UI:
+**Configure the JWT public key on Conversational Cloud UI:**
 
 1.	Remove the header and tail ( "-----BEGIN PUBLIC KEY-----" & "-----END PUBLIC KEY-----" )
 
@@ -328,6 +337,8 @@ OT/vxvJBf+pNrlNqto+dxNwJtSPKUQ0cnugdiI2mzw40HRtyQxzQONyuttdEMzMX
 6wIDAQAB
 -----END PUBLIC KEY-----
 ```
+
+{:start="2"}
 2.	Wrap text of code to be structured as continuous line (remove any new line char).
 
 Example:
@@ -336,6 +347,7 @@ Example:
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA/lnYC8lHMdEJz74m2WHrK8ndDE3LDto1xZ8HlyOwLWZWkvy71t43zzyMD1cpDfsymv6fSZSfP1NkwF6k9eTWRMYaK0TVivmAXdL4GoO/87XpPiEPn/lxICWL4VTJN/ju1by+h4qVlcpevJic4ZEK5PXF1vhHqlawPcm/IsWRcYAkFb/Mk84d+i7+OQ7NK0ouqb1T57ijUUGTQEqpzLLoTWZ7wjlWnyteuHx2OtRwskfH/3U7A7GP9STFZDC0yyDh7bj9DSuI4ScQWhmXMRy9OT/vxvJBf+pNrlNqto+dxNwJtSPKUQ0cnugdiI2mzw40HRtyQxzQONyuttdEMzMX6wIDAQAB
 ```
 
-3. Paste the public key into the Conversational Cloud authentication server set up:
+{:start="3"}
+3. Paste the public key into the Consumer Identity Provider set up:
 
-![Authentication Setup](img/authenticationserversetup.png)
+![Select JWT public key](img/consumer_idp_jwt_public_key.png)

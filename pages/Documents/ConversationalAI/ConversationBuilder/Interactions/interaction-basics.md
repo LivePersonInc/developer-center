@@ -121,7 +121,7 @@ The library contains a list of popular patterns. Click **Add** to append a set o
 
 #### Advanced patterns with Regular Expressions
 
-If you need more advanced operators, you can use [regular expressions](http://www.regexlib.com) with pattern matching.
+If you need more advanced operators, you can use [regular expressions](https://regex101.com/) with pattern matching.
 
 <img style="width:500px" class="fancyimage" src="img/ConvoBuilder/regex_hint.png">
 

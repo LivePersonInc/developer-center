@@ -84,7 +84,7 @@ You can use CocoaPods, a dependency manager for Swift and Objective-C projects, 
 
 #### *Option 2: Manually copying the libraries to your Xcode Project*
 
-1. [Download](https://github.com/LP-Messaging/iOS-Messaging-SDK) the SDK package.
+1. [Download](https://github.com/LivePersonInc/iOSFrameworks) the SDK package.
 
 2. Extract the file to a folder on your computer.
 
@@ -423,6 +423,32 @@ class DocumentationViewController: UIViewController {
         }
     }
 @end
+```
+
+### Supporting Accessibility
+
+When using Window Mode, which is passing a `nil` value as the `containerViewController` on the LPConversationViewParams object, sometimes VO Assistants will read the contents of the ViewController behind the Conversation Screen.
+To prevent this from happening, the accessibility on this VC should be hidden preventing the VO Assistant from reading its content.
+
+```swift 
+self.view.accessibilityElementsHidden = true
+// NOTE: if there is a TabBar, it should be hidden too:
+// self.tabBarController?.tabBar.accessibilityElementsHidden = true
+```
+
+Once the Conversation Screen is dismissed, these elements need to be re-enabled on the ViewController in which they were disabled, the best way to achieve is listening to the following delegate:
+
+```swift
+/**
+* This delegate method is optional.
+* It is called when the conversation view controller removed from its container view controller or window.
+*/
+func LPMessagingSDKConversationViewControllerDidDismiss() {
+  // NOTE: Setting Parent ViewController accessibility hidden value to true, so VO will read the elements on this View
+  self.view.accessibilityElementsHidden = false
+  // NOTE: if there is a tabbar, it should reset too:
+  // self.tabBarController?.tabBar.accessibilityElementsHidden = false
+}
 ```
 
 ### Next Steps

@@ -26,7 +26,7 @@ offset | The offset specifies from which record to retrieve the chat. | numeric 
 limit  | Max amount of conversations to be received in the response.  | numeric | Optional | Default is 50\. Max value is 100\. The remaining conversations can be obtained using pagination (using offset, in a subsequent request).
 sort| Sort the results in a predefined order. | string  | Optional | Example: start:desc will order conversations by descending value of the start time. Valid values include: start, end. Order:[asc/desc]
 v| version of the API (1 or 2)  | string  | Optional | default value is 1. Only in v=2 will unauthenticated engagement attributes (SDEs) be returned. When using v=2, both unauthenticated and authenticated SDEs will have a type as defined in the engagement attribute in question and not String.|
-source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Optional. Will be required from March 2021 | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
+source | Used to describe the originator of the call. The source name should be unique for every project/process within the organization. | String    | Required | The source name should not exceed 20 characters. Please follow the format of ProjectName+AppName+UseCase. Example: LP_AgentUI_History|  
 
 
 **BODY/POST Parameters**
@@ -75,7 +75,7 @@ Filter is sent in the POST data (body) with the following JSON structure.
 |latestConversationQueueState | The queue state of the conversation  | String| Optional | Valid values: IN_QUEUE,ACTIVE|
 |sdeSearch {list of SDEs types} | Search for values passed via engagement attributes(SDEs) | alphanumeric| Optional | Valid values: all parameters are optional , with a logical OR operator between them. The different SDE types are: personalInfo, customerInfo, userUpdate (relates to the userProfile content),marketingCampaignInfo,lead,purchase, viewedProduct,cartStatus,serviceActivity,visitorError,searchContent. See example below for how to execute a request with this parameter.|
 responseTime |Agent's response time range | epoch time in milliseconds | Optional | Either the "from" or "to" field is mandatory |
-|contentToRetrieve | List of content types that should be retrieved | alphanumeric | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys|
+|contentToRetrieve | List of content types that should be retrieved | string | Optional | Valid values: campaign, messageRecords, agentParticipants, agentParticipantsLeave, agentParticipantsActive, consumerParticipants, transfers, interactions, messageScores, messageStatuses, conversationSurveys, coBrowseSessions, summary, sdes, unAuthSdes, monitoring, dialogs, responseTime, skillChanges, intents, uniqueIntents, latestAgentSurvey, previouslySubmittedAgentSurveys|
 |latestUpdateTime | The earliest time the conversation was updated (e.g, all conversations which were updated between the current time and 19:00 yesterday and no earlier) | long - epoch time in milliseconds. | Optional | Get only conversations that were updated since the specified time. Including bounds. The value is rounded to the last 10 minutes (e.g, a value of 19:10 will be rounded to 19:00). |
 |nps {from,to} | Range of NPS assigned to the conversation. | numeric, numeric| Optional | Either "from" or "to" fields are mandatory. In case one of the fields is missing, its value will be set to the minimal or maximal possible value of NPS (0 or 10 respectively). |
 |questionBrick | Match a specific word within a PCS question name or brick ID | alphanumeric  | Optional |
@@ -87,7 +87,8 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |answerText | Specific words or phrases from PCS free text answers | Array `<String>` | Optional |
 |selectedIntentOnly | When TRUE - only the selectedClassification section will appear and not the allClassifications. | boolean. | Optional | Get only the selectedClassification section in each conversation. When using this parameter with 'intentName' and/or 'intentConfidenceScore' filter, the relevant information refers only to the intent that is found in the selectedClassification section. |
 |conversationsWithStepUpOnly | This parameter will return TRUE if a step up took place during the conversation. | boolean. | Optional | Get only conversations that had a step up  |Filters examples:
-|agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional , with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|   
+|agentSurveySearch {list of agent survey search criterias}| Search conversations according to their agent surveys.| alphanumeric| Optional | Valid values: all parameters are optional , with a logical AND operator between them. The different search criterias are: pendingAgentSurvey Array`<Boolean>`, questionId Array`<String>`, questionName Array`<String>`, questionKeywords Array`<String>`, answerKeywords Array`<String>`, surveyId Array`<numeric>`.|  
+|annotationStates| Search for conversations that have an annotation with the specified state.| Array `<String>`| Optional | Valid values: OPEN,SUBMITTED,VETTED |
 
 |Name | Description |
 |:------------------ |:------------------------------------------------|
@@ -111,7 +112,7 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |latestConversationQueueState | {"start": {"from": "1484830093231", "to": "1485447764498"}, "latestConversationQueueState": "IN_QUEUE"}|
 |sdeSearch | {"start":{"from":"1484830093231","to":"1485447764498"},"sdeSearch":{"personalInfo":"George","customerInfo":"Liveperson","userUpdate":"george@liveperson.com","marketingCampaignInfo":"campainTest","lead":"test1","purchase":"product1","viewedProduct":"product2","cartStatus":"test","serviceActivity":"test2","visitorError":"error1","searchContent":"Liveperson"}}|
 |responseTime |{"start":{"from":1529566882153,"to":1530171697782},"status":["OPEN"],"responseTime":{"from":1530013618000,to":1530153993000},"contentToRetrieve":["responseTime"]}|
-|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords","agentParticipants","agentParticipantsLeave","agentParticipantsActive","consumerParticipants","transfers","interactions","messageScores","messageStatuses","conversationSurveys","coBrowseSessions","summary", "sdes","unAuthSdes","monitoring","responseTime", "intents", "latestAgentSurvey", "previouslySubmittedAgentSurveys"]}|
+|contentToRetrieve | {"start":{"from":1518411320000,"to":-1},"contentToRetrieve":["campaign","messageRecords", "agentParticipants", "agentParticipantsLeave", "agentParticipantsActive","consumerParticipants", "transfers", "interactions", "messageScores","messageStatuses", "conversationSurveys", "coBrowseSessions", "summary", "sdes", "unAuthSdes", "monitoring", "responseTime", "intents", "latestAgentSurvey", "previouslySubmittedAgentSurveys"]}|
 |latestUpdateTime | {"start":{"from":1541578792011,"to":1541578895020},"status":["OPEN","CLOSE"],"latestUpdateTime":{"from":1541578792011}} |
 |nps  | {"start":{"from":1470037448000,"to":1472543048000}, "nps":{"from":0,"to":7}}|
 |questionBrick | {"start":{"from":1470037448000,"to":1472543048000},"questionBrick":"Improvement suggestion"}|
@@ -123,10 +124,26 @@ responseTime |Agent's response time range | epoch time in milliseconds | Optiona
 |answerText  | {"start":{"from":1470037448000,"to":1472543048000},"answerText":["good","bad","ugly"]}|
 |conversationsWithStepUpOnly | {"start":{"from":1541578792011,"to":1541578895020},,"contentToRetrieve":["messageRecords"],"conversationsWithStepUpOnly":true}|**Note: search by keywords, summary or engagement attributes**
 |agentSurveySearch   | {"start":{"from":1470037448000,"to":1472543048000},"agentSurveySearch":{"pendingAgentSurvey":[true], "questionId":["id1","id2"], "questionName":["id1","id2"], "questionKeywords":["keyword1","keyword2"],"answerKeywords":["keyword1","keyword2"],"surveyId":[3592872510]}}
+|annotationStates| {"start":{"from":1470037448000,"to":1472543048000},"annotationStates":["OPEN","SUBMITTED","VETTED"]}|
 
 In order to search for a specific phrase within the messages, summary or engagement attributes of the conversation, you will need to wrap the phrase in quotation marks. This will make sure that the search will run according to all specified characaters in the phrase and in the same position relative to each other. (For example: searching for "tester@liveperson.com", will search for the characters “tester” and “liveperson.com” in that order.)
 
 ### Response
+
+#### Response codes
+
+| Code     | Internal Code | Description |
+| :------ | :------- | :-------- |
+| 200 | -- |  OK; Operation performed successfully  |
+| 204 | -- |  No Content; Operation performed successfully  |
+| 400 | -- |  Bad Request; Problem with body or query parameters |
+| 401 | -- |  Unauthorized (no permissions) |
+| 403 | -- |  Forbidden |
+| 429 | -- |  Too many requests |
+| 500 | -- |  Internal Server Error |
+| 500 | 0007 |  Elastic search exception |
+| 500 | 0008 |  Runtime exception |
+| 503 | -- |  Service unavailable |
 
 #### General Characterizations
 
@@ -163,7 +180,8 @@ agentParticipants | Contains information about the agent(s) participating in the
 consumerParticipants | Contains information about the consumer(s) participating in the conversation.  | container
 transfers| Contains information about transfers in the conversation. | container
 interactions| Contains information about the interactions in the conversation.| container
-messageScore| Contains information about the message's score, including raw and MCS.| container
+messageScores| Contains information about the message's score, including raw and MCS.| container
+skillChanges| Contains information about the skill changes on the conversation (i.e. default skill/fallback skil).| container
 conversationSurveys  | Contains information about the different surveys for the current conversation. | container
 coBrowseSessions  | Contains information about CoBrowse sessions for the current conversation.  | container
 summary  | Contains information about the conversation's summary. | container
@@ -235,8 +253,8 @@ _Campaign info_
 | goalName | Name of the campaign's goal.  | alphanumeric (50)|
 | engagementAgentNote  | Note to the Agent defined for the campaign's engagement. | alphanumeric  |
 | engagementSource  | The source of the campaign's engagement e.g. WEB_SITE, SOCIAL_MEDIA, etc.  | alphanumeric  |
-| visitorBehaviorId | ID of the visitor behavior defined for the campaign's engagement (in case engagement id is available).| numeric |
-| visitorBehaviorName  | Name of the visitor behavior defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50)|
+| visitorBehaviorId | ID of the behavioral targeting rule defined for the campaign's engagement (in case engagement id is available).| numeric |
+| visitorBehaviorName  | Name of the behavioral targeting rule defined for the campaign's engagement (in case engagememt id is available). | alphanumeric (50)|
 | engagementApplicationId | Engagement's application ID.  | alphanumeric - UUID | The engagement which triggered the conversation
 | engagementApplicationName  | Engagement's application name.| alphanumeric  | The engagement which triggered the conversation
 | engagementApplicationTypeId| Engagement's application type id | alphanumeric  | The engagement which triggered the conversation
@@ -247,8 +265,8 @@ _Campaign info_
 | lobName  | Name of the line of business of the campaign.| alphanumeric  |
 | LocationId  | ID of the location of the engagement on the screen.| numeric |
 | LocationName| describes the engagement display location.| alphanumeric  | The default location is the entire website.  
-| behaviorSystemDefault| Indicates whether visitor behavior is the default one.| Boolean |
-| profileSystemDefault | Indicates whether visitor behavior is the default one.| Boolean |  
+| behaviorSystemDefault| Indicates whether behavioral targeting rule is the default one.| Boolean |
+| profileSystemDefault | Indicates whether behavioral targeting rule is the default one.| Boolean |  
 
 _Monitoring_
 
@@ -499,7 +517,7 @@ _SurveyData info_
 Name  | Description  | Type/Value | Notes
 :------- | :-------------------- | :--------- | :----------------------------
 question | Survey question text. | string  |
-answer| Survey answer text,| string  |
+answer| Survey answer text.| string  |
 questionId | Survey question ID  | string  |
 answerId| Survey answer ID,| string  | The answer ID from the survey definition, or 'InvalidAnswer', if the answer was invalid
 questionType | Survey question type | string  |
@@ -599,9 +617,8 @@ assignedAgentName| The name of the agent assigned to the survey.| string     |
 performedByAgentId| The ID of the agent that performed the operation.|string|
 performedByAgentNickName| The nick name of the performing agent| string     |
 performedByAgentName| The name of the performing agent         | string     |
-lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |    
-acSurveyRevision| The AC form revision.                        | string     |
-acSurveyRevision| The AC form revision.                        | string     |
+lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |
+submittedAnswers| Agent survey questions                       | container |
 
 _Previously Submitted Agent Surveys_
 
@@ -623,8 +640,25 @@ performedByAgentId| The ID of the agent that performed the operation.|string|
 performedByAgentNickName| The nick name of the performing agent| string     |
 performedByAgentName| The name of the performing agent         | string     |
 lastUpdateTime| The AC form revision.                          | long – epoch time in milliseconds |    
-acSurveyRevision| The AC form revision.                        | string     |
-acSurveyRevision| The AC form revision.                        | string     |
+submittedAnswers| Agent survey questions.                      | container  |
+
+_Agent Survey Question_
+
+Name| Description| Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+questionText | Survey question text. | string
+questionId | Survey question ID. | string
+questionDefinition | Survey question definition. | string
+questionCategory | Survey question category. | string
+answers | Agent survey answers. | container
+
+_Agent Survey Answer_
+
+Name| Description| Type/Value
+:-------------- | :------------------------------------------ | :--------------------------------------------------------------------
+answer | Survey answer text. | string
+answerId | Survey answer ID. | string
+
 
 ```json
 {
@@ -858,7 +892,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           }
         }
       ],
-      "consumerParticipant": [
+      "consumerParticipants": [
         {
           "participantId": "f92c9890-2c95-428b-8a32-083528620d31",
           "firstName": "Visitor",
@@ -935,7 +969,7 @@ acSurveyRevision| The AC form revision.                        | string     |
           "skillName": "skill3"
         }
       ],
-      "messageScore": [
+      "messageScores": [
         {
           "messageId": "ms::conv:e5c58e49-e4a5-40a8-8a18-d6580d1d5630::msg:0",
           "messageRawScore": 0,

@@ -518,6 +518,20 @@ Define the conversation Closed Separator Top padding.
 </div> -->
 
 
+#### conversationSeparatorContentViewTopPadding
+Defines the top padding for the conversation separator content view
+
+- **Type:** CGFloat
+- **Default value:** 0.0
+
+
+#### conversationSeparatorContentViewBottomPadding
+Defines the bottom padding for the conversation separator content view
+
+- **Type:** CGFloat
+- **Default value:** 0.0
+
+
 #### enableVibrationOnMessageFromRemoteUser 
 Toggle device vibration when a remote user sends a new message.
 
@@ -541,6 +555,27 @@ When announceAgentTyping is false, will not show any "is typing" indicator regar
 
    - **Type:** Bool
    - **Default value:** true 
+
+##### modalPresentationStyle
+The configuration to control our modal presentation styles within the SDK.
+
+- **Type:** UIModalPresentationStyle
+- **Default Value:** fullScreen
+- **Available since:** 6.5.0
+
+##### imagePickerPresentationStyle
+The configuration to control our modal presentation style for image picker controller within the SDK.
+
+- **Type:** UIModalPresentationStyle
+- **Default Value:** fullScreen
+- **Available since:** 6.5.0
+
+##### datePickerPresentationStyle
+The configuration to control our modal presentation stylen for LPDatePicker controller within the SDK.
+
+- **Type:** UIModalPresentationStyle
+- **Default Value:** fullScreen
+- **Available since:** 6.5.0
 
 --- 
 
@@ -709,6 +744,379 @@ Define the Date Separator bottom padding.
 
 --- 
 
+### Date Picker
+
+##### datePickerHeaderFontColor
+Ability to set the date picker’s header font color.
+
+- **Type:** UIColor
+- **Default Value:** black
+- **Available since:** 6.5.0
+
+##### datePickerHeaderBackgroundColor
+Ability to set the date picker’s header background color.
+
+- **Type:** UIColor
+- **Default Value:** white
+- **Available since:** 6.5.0
+
+##### datePickerHeaderAccessoryButtonTintColor
+Ability to set the date picker’s header accessory button tint color.
+
+- **Type:** UIColor
+- **Default Value:** UIColor(red: 0.01, green: 0.39, blue: 0.68, alpha: 1.00)
+- **Available since:** 6.5.0
+
+##### datePickerHeaderAccessoryButtonImage
+Ability to set the date picker’s header accessory button image.
+
+- **Type:** UIImage
+- **Default Value:** nil
+- **Available since:** 6.5.0
+
+##### datePickerHeaderPickerBackgroundColor
+Ability to set the date picker header’s picker background color.
+
+- **Type:** UIColor
+- **Default Value:** White
+- **Available since:** 6.5.0
+
+##### datePickerHeaderPickerToolbarBackgroundColor
+Ability to set the date picker header picker’s toolbar background color.
+
+- **Type:** UIColor
+- **Default Value:** UIColor(red: 0.01, green: 0.39, blue: 0.68, alpha: 1.00)
+- **Available since:** 6.5.0
+
+##### datePickerHeaderPickerFontColor
+Ability to set the date picker header picker font color.
+
+- **Type:** UIColor
+- **Default Value:** UIColor(red: 0.01, green: 0.39, blue: 0.68, alpha: 1.00)
+- **Available since:** 6.5.0
+
+##### datePickerHeaderPickerConfirmationButtonTintColor
+Ability to set the date picker’s UIPicker toolbar button text color
+
+- **Type:** UIColor
+- **Default Value:** white
+- **Available since:** 6.5.0
+
+##### datePickerHeaderPickerConfirmationButtonText
+Ability to set the date picker’s UIPicker toolbar button text
+
+- **Type:** String
+- **Default Value:** Done
+- **Available since:** 6.5.0
+
+##### datePickerHeaderPickerToolbarStyle
+Ability to set the date picker’s UIPicker toolbar style
+
+- **Type:** UIBarStyle
+- **Default Value:** UIBarStyle.default
+- **Available since:** 6.5.0
+
+##### datePickerFooterBackgroundColor
+Ability to set the date picker’s footer background color
+
+- **Type:** UIColor
+- **Default Value:** UIColor(red: 0.01, green: 0.39, blue: 0.68, alpha: 1.00)
+- **Available since:** 6.5.0
+
+##### datePickerFooterButtonBackgroundColor
+Ability to set the date picker’s footer button background color
+
+- **Type:** UIColor
+- **Default Value:** white
+- **Available since:** 6.5.0
+
+##### datePickerFooterButtonFontColor
+Ability to set the date picker’s footer button text color
+
+- **Type:** UIColor
+- **Default Value:** UIColor(red: 0.01, green: 0.39, blue: 0.68, alpha: 1.00)
+- **Available since:** 6.5.0
+
+##### datePickerFooterButtonCornerRadius
+Ability to set the date picker’s footer button corner Radius
+
+- **Type:** Double
+- **Default Value:** 10
+- **Available since:** 6.5.0
+
+##### datePickerFooterButtonText
+Ability to set the date picker’s footer button text
+
+- **Type:** String
+- **Default Value:** Confirm
+- **Available since:** 6.5.0
+
+##### datePickerFooterLabelsFontColor
+Ability to set the date picker’s footer labels text color
+
+- **Type:** UIColor
+- **Default Value:** white
+- **Available since:** 6.5.0
+
+##### datePickerFooterArrowImage
+Ability to set the date picker’s footer arrow image (month to month)
+
+- **Type:** UIImage
+- **Default Value:** UIImage(named: “picker_arrow”, in: LPSDKManager.getBundle(), compatibleWith: nil)
+- **Available since:** 6.5.0
+
+##### datePickerFooterArrowTintColor
+Ability to set the date picker’s footer arrow tint color (month to month)
+
+- **Type:** UIColor
+- **Default Value:** UIColor(red: 0.01, green: 0.39, blue: 0.68, alpha: 1.00)
+- **Available since:** 6.5.0
+
+##### datePickerFooterArrowBackgroundColor
+Ability to set the date picker’s footer arrow background color (month to month)
+
+- **Type:** UIColor
+- **Default Value:** White
+- **Available since:** 6.5.0
+
+##### datePickerCustomFontName
+Ability to set the date picker’s custom font
+
+- **Type:** String
+- **Default Value:** Helvetica
+- **Available since:** 6.5.0
+
+##### calendarBackgroundColor
+Ability to set the date picker calendar’s background color
+
+- **Type:** UIColor
+- **Default Value:** White
+- **Available since:** 6.5.0
+
+##### datePickerCalendarHeaderHeight
+Ability to set the date picker calendar’s header height
+
+- **Type:** CGFloat
+- **Default Value:** 35.0
+- **Available since:** 6.5.0
+
+##### datePickerCalendarHeaderTopMargin
+Ability to set the date picker calendar’s header top margin
+
+- **Type:** CGFloat
+- **Default Value:** 5.0
+- **Available since:** 6.5.0
+
+##### datePickerCalendarHeaderTextColor
+Ability to set the date picker calendar’s header text color
+
+- **Type:** UIColor
+- **Default Value:** UIColor(red:142 / 255.0, green:142 / 255.0, blue:147 / 255.0, alpha:1.0)
+- **Available since:** 6.5.0
+
+##### datePickerCalendarHeaderBackgroundColor
+Ability to set the date picker calendar’s header background color
+
+- **Type:** UIColor
+- **Default Value:** White
+- **Available since:** 6.5.0
+
+##### datePickerCalendarHeaderFont
+Ability to set the date picker calendar’s header font
+
+- **Type:** UIFont
+- **Default Value:** UIFont.systemFont(ofSize: 20)
+- **Available since:** 6.5.0
+
+##### datePickerCalendarWeekdaysTopMargin
+Ability to set the date picker calendar’s weekdays top margin
+
+- **Type:** CGFloat
+- **Default Value:** 5.0
+- **Available since:** 6.5.0
+
+##### datePickerCalendarWeekdaysBottomMargin
+Ability to set the date picker day weekday button margin
+
+- **Type:** CGFloat
+- **Default Value:** 5.0
+- **Available since:** 6.5.0
+
+##### datePickerCalendarWeekdaysHeight
+Ability to set the date picker day weekday cell height
+
+- **Type:** CGFloat
+- **Default Value:** 35.0
+- **Available since:** 6.5.0
+
+##### datePickerCalendarWeekdaysTextColor
+Ability to set the date picker day weekday cell text color
+
+- **Type:** UIColor
+- **Default Value:** gray
+- **Available since:** 6.5.0
+
+##### datePickerCalendarWeekdaysBackgroundColor
+Ability to set the date picker weekday cell background color
+
+- **Type:** UIColor
+- **Default Value:** white
+- **Available since:** 6.5.0
+
+##### datePickerCalendarWeekdaysFont
+Ability to set the date picker weekday cell text font
+
+- **Type:** UIFont
+- **Default Value:** UIFont.systemFont(ofSize: 14)
+- **Available since:** 6.5.0
+
+##### datePickerCalendarWeekDayTransform
+Ability to set the date picker weekdays text to Capitalized or Uppercase
+
+- **Type:** WeekDaysTransform
+- **Default Value:** capitalized
+- **Available since:** 6.5.0
+
+##### datePickerCellShape
+Ability to set the date picker day cell shape
+
+- **Type:** CellShapeOptions
+- **Default Value:** CellShapeOptions.bevel(4.0)
+- **Available since:** 6.5.0
+
+##### datePickerFirstWeekday
+Ability to set the date picker first day of the week
+
+- **Type:**  FirstWeekdayOptions
+- **Default Value:** Sunday
+- **Available since:** 6.5.0
+
+##### datePickerShowAdjacentDays
+Ability to hide selected in-range days
+
+- **Type:** Bool
+- **Default Value:** false
+- **Available since:** 6.5.0
+
+##### datePickerCellColorDefault
+Ability to set the date picker day cell color
+
+- **Type:** UIColor
+- **Default Value:** clear
+- **Available since:** 6.5.0
+
+##### datePickerCellTextColorDefault
+Ability to set the date picker day cell text color
+
+- **Type:** UIColor
+- **Default Value:** black
+- **Available since:** 6.5.0
+
+##### datePickerCellBorderColor
+Ability to set the date picker day cell border color
+
+- **Type:** UIColor
+- **Default Value:** clear
+- **Available since:** 6.5.0
+
+##### datePickerCellBorderWidth
+Ability to set the date picker day cell border width
+
+- **Type:** GCFloat
+- **Default Value:** 0.0
+- **Available since:** 6.5.0
+
+##### datePickerCellFont
+Ability to set the date picker day cell font & size
+
+- **Type:** UIFont
+- **Default Value:** UIFont.systemFont(ofSize: 17)
+- **Available since:** 6.5.0
+
+##### datePickerCellTextColorToday
+Ability to set the date picker today’s text color
+
+- **Type:** UIColor
+- **Default Value:** black
+- **Available since:** 6.5.0
+
+##### datePickerCellColorToday
+Ability to set the date picker today’s cell color
+
+- **Type:** UIColor
+- **Default Value:** clear
+- **Available since:** 6.5.0
+
+##### datePickerCellBorderColorToday
+Ability to set the date picker today’s cell color
+
+- **Type:** UIColor
+- **Default Value:** UIColor(red: 3.0/255.0, green: 99.0/255.0, blue: 173.0/255.0, alpha: 0.8)
+- **Available since:** 6.5.0
+
+##### datePickerCellBorderWidthToday
+Ability to set the date picker today’s border width
+
+- **Type:** CGFloat
+- **Default Value:** 2.0
+- **Available since:** 6.5.0
+
+##### datePickerCellColorOutOfRange
+Ability to set the date picker’s out of range cells color
+
+- **Type:** UIColor
+- **Default Value:** UIColor(white: 0.0, alpha: 0.5)
+- **Available since:** 6.5.0
+
+##### datePickerCellColorAdjacent
+Ability to set the date picker’s in-range cells color
+
+- **Type:** UIColor
+- **Default Value:** clear
+- **Available since:** 6.5.0
+
+##### datePickerCellSelectedBorderColor
+Ability to set the date picker’s selected day cell border color
+
+- **Type:** UIColor
+- **Default Value:** UIColor(red: 3.0/255.0, green: 99.0/255.0, blue: 173.0/255.0, alpha: 0.8)
+- **Available since:** 6.5.0
+
+##### datePickerCellSelectedBorderWidth
+Ability to set the date picker’s selected day cell border width
+
+- **Type:** CGFloat
+- **Default Value:** 0.0
+- **Available since:** 6.5.0
+
+##### datePickerCellSelectedColor
+Ability to set the date picker’s selected day color
+
+- **Type:** UIColor
+- **Default Value:** UIColor(red: 3.0/255.0, green: 99.0/255.0, blue: 173.0/255.0, alpha: 1)
+- **Available since:** 6.5.0
+
+##### datePickerCellSelectedTextColor
+Ability to set the date picker’s selected day text color
+
+- **Type:** UIColor
+- **Default Value:** white
+- **Available since:** 6.5.0
+
+##### datePickerCellTextColorWeekend
+Ability to set the date picker’s weekend text color
+
+- **Type:** UIColor
+- **Default Value:** black
+- **Available since:** 6.5.0
+
+##### Locale
+Ability to set the date picker’s local to control date formats
+
+- **Type:** Locale
+- **Default Value:** Device Current
+- **Available since:** 6.5.0
+
 ### Delivery Notifications
 
 #### checkmarkVisibility 
@@ -868,6 +1276,12 @@ Refers to the style in which the link preview cell will be displayed.
    - **Default value:** LPUrlPreviewStyle.slim  
 
 
+#### linkPreviewLoadingImage
+Defines image for link preview loader
+
+- **Type:** UIImage
+- **Default value:** nil
+
 
 #### urlRealTimePreviewBackgroundColor 
 The background color of the url real time preview.
@@ -916,6 +1330,13 @@ The description text color of the url real time preview.
 ---   
 
 ### Loading View 
+
+##### enableLoadingView
+Will enable/disable presentation of loading view when presenting Conversation Screen.
+
+- **Type:** Bool
+- **Default Value:** false
+- **Available since:** 6.5.0
 
 #### loadingViewBlurEffect
 The type of effect on the loading view.
@@ -1616,6 +2037,13 @@ Sets text color for button type element on Structured Content
     
 - **Type:** color
 - **Default value:** For iOS 13, we use [`UIColor.label`](#LPColor), anything below that uses [`UIColor.black`](#LPColor)
+
+
+#### structuredButtonWidthConstant
+Defines padding constraint for Structured Constant elements of button type
+
+- **Type:** CGFloat
+- **Default value:** -20.0
 
 
 #### structuredContentTextColor

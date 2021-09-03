@@ -41,13 +41,13 @@ cases will be "ams").
 
 - **dialogId** - The associated dialog ID.
 
-- **push-service** - The ENUM describing the service type (APNS - 1, GCM - 2).
+- **push-service** - The ENUM describing the service type (APNS - 1, GCM - 2, HUAWEI - 3).
 
 - **originatorId** - The originator context for the push (AccountID.AgentNumber).
 
 - **brandId** - The account number associated with the push.
 
-- **notificationType** - The type of notification (APN or GCM).
+- **notificationType** - The type of notification (apn, gcm, huawei).
 
 - **device-token** - The device token used for the push.
 
@@ -59,7 +59,7 @@ iOS (APNS) only:
 
 - **aps** - contains the raw iOS push object.
 
-Android (GCM) only:
+Android (FCM & Huawei):
 
 - **data** - Contains payload and raw message objects.
 - **payload** - Contains backendService, conversationId, originatorId, brandID, badge and sequence.
@@ -84,7 +84,7 @@ Android (GCM) only:
   "notificationType":"apn"
 }
 ```
-**Android JSON:**
+**Android JSON (FCM):**
 
 ```json
 {
@@ -103,5 +103,27 @@ Android (GCM) only:
   "push-service":2,
   "device-token":"01408800000259",
   "notificationType":"gcm"
+}
+```
+
+**Android JSON (Huawei):**
+
+```json
+{
+  "data":{
+    "message":"My Test: 456",
+    "payload":{
+      "backendService":"ams",
+      "conversationId":"ff816d0d-3572-4430-956f-cab638d18826",
+      "dialogId":"13a1ca79-22eb-4a60-8cad-cd7f9dbdb9f3",
+      "originatorId":"90588718.2333061110",
+      "brandId":"90588711",
+      "badge":4,
+      "sequence":6
+    }
+  },
+  "push-service":3,
+  "device-token":"01408800000259",
+  "notificationType":"huawei"
 }
 ```

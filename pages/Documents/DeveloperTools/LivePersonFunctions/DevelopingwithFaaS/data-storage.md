@@ -10,7 +10,7 @@ indicator: both
 redirect_from:
   - function-as-a-service-developing-with-faas-data-storage.html
 ---
-To store data beyond the duration of an invocation and even to transfer data back and forth between different functions, LivePerson Functions uses the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html).
+To store data beyond the duration of an invocation and even to transfer data back and forth between different functions, LivePerson Functions uses the [Context Session Store](conversation-orchestrator-conversation-context-service-overview.html).
 
 This service is typically used to store conversation session state data (e.g. agent notes) in the Conversational Cloud. Because of its versatility, it is also well suited to act as a temporary data storage in the context of LivePerson Functions.
 
@@ -19,7 +19,7 @@ The toolbelt offers a [Context Service Client](liveperson-functions-developing-w
 
 ### Prerequisites/Installation
 The following steps need to be performed before using the Context Service Client in a function:
-* Create a Developer Key as described [here](conversation-orchestrator-context-warehouse-context-session-store.html#developer-key)
+* Create a Developer Key as described [here](conversation-orchestrator-api-authorization.html)
 *  Save it to the [Secret Storage](liveperson-functions-developing-with-faas-storing-secrets.html) with an appropriate name (e.g. `context-store-api-key`)
 * [Whitelist](liveperson-functions-developing-with-faas-whitelisting-domains.html) the domain `*.context.liveperson.net`. (covers all domains needed on the production environment and Alpha)
 

@@ -33,8 +33,8 @@ limit  | Max amount of keys (skillIds/agentGroupIds) to be retrieved in the resp
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
 |filters | Contains parameters to filter by. | Container  | Required | See detailed description [below](#filters)
-|metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>closed_conversations<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed
-|metricsToRetrieveCurrentValue | List of metrics retrieving the current value, not influenced by time | Array `<String>` | Optional | Valid values:<br/>assigned_conversations<br/>active_conversations<br/>agent_load<br/>human_agent_load<br/>human_online_load<br/>online_agents<br/>back_soon_agents<br/>away_agents<br/>available_slots
+|metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>closed_conversations<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed<br/>concluded_conversations<br/>csat<br/>
+|metricsToRetrieveCurrentValue | List of metrics retrieving the current value, not influenced by time | Array `<String>` | Optional | Valid values:<br/>assigned_conversations<br/>unassigned_conversations<br/>active_conversations<br/>agent_load<br/>human_agent_load<br/>human_online_load<br/>human_away_load<br/>online_agents<br/>back_soon_agents<br/>away_agents<br/>available_slots<br/>open_conversations<br/>overdue_conversations_in_queue<br/>overdue_conversations_assigned<br/>overdue_conversations_total<br/>queue_wait_time_50th_percentile<br/>queue_wait_time_90th_percentile
 |responseSections| Represents whether we should return the "all" section, "groupBy" section or both.  | Array `<String>` | Optional | Valid values: all, groupBy. Default value - both sections are returned.
 |groupBy| Field according to which all of the metrics should be grouped.  | String | Optional | Valid values: skillId, agentGroupId. In case responseSections contains groupBy, a groupBy value must be returned in order to retrieve grouped metrics.
 
@@ -49,7 +49,6 @@ _filters info_
 |agentGroupIds | An array of agent group IDs.| Array `<String>` | Optional | 
 |skillIds| An array of skill IDs.| Array `<String>`| Optional |
 |userTypes | Type of the user conducting of the conversation. | alphanumeric  | Optional | Valid values: HUMAN, BOT.
-|includeSubGroups|When this is set to true, any metric retrieved for a specific group will include the total value of the metric on the group level, including its sub-groups. Default value is set to false.|boolean|Optional| 
 
 Request body - json example:
 
@@ -119,7 +118,8 @@ _metrics info_
 | agentLoad| The total weight of assigned conversations as a percentage of the maximum concurrent conversations of all agents, including bots.| Double |
 | humanAgentLoad| The total weight of assigned conversations as a percentage of the maximum concurrent conversations of all human agents.| Double |
 | humanOnlineLoad| The total weight of assigned conversations as a percentage of the maximum concurrent conversations of all human online agents.| Double |
-| availableSlots| The total number of available conversations slots to take incoming conversations from the queue (the "Supply"). In case the response is grouped by skilldIds, same slots will be counted under all the skills an agent is assigned to.| Long |
+| humanAwayLoad| The total weight of assigned conversations as a percentage of the maximum concurrent conversations of all human away agents.| Double |
+| availableSlots| The total number of available conversations slots to take incoming conversations from the queue (the "Supply"). In case the response is grouped by skilldIds, same slots will be counted under all the skills an agent is assigned to.| Long | In order to get the total value of the metric on the group level **including its sub-groups**, pass includeSubGroups=true under the filters section |
 | onlineAgents| Agents currently in the ONLINE state.| Long |
 | backSoonAgents| Agents currently in the BACK SOON state.| Long |
 | awayAgents| Agents currently in the AWAY state.| Long |
@@ -131,6 +131,14 @@ _metrics info_
 | closedByAgent| The number of conversations closed by the agent within the selected timeframe.| Long |
 | closedByConsumer| The number of conversations closed by the consumer within the selected timeframe.| Long |
 | autoClosed| The number of conversations automatically closed within the selected timeframe.| Long |
+| csat | The ratio bwtween the number of questions which were answered with 4 or 5 (top two boxes) to the total responses submitted by consumers to a CSAT question within the selected timeframe.| Double |
+| unassignedConversations| The number of conversations in queue that are waiting for an agent assignment.| Long |
+| openConversations| The number of open conversations, whether in queue or assigned.| Long |
+| overdueConversationsInQueue| The number of conversations in queue that are waiting for an agent assignment and exceeded the SLA.| Long |
+| overdueConversationsAssigned| The number of conversations assigned to agents which exceeded the SLA.| Long |
+| overdueConversationsTotal| The number of open conversations which exceeded the SLA.| Long |
+| queueWaitTime50thPercentile| 50% of the consumers are waiting in the queue this amount of time or less.| Long |
+| queueWaitTime90thPercentile| 90% of the consumers are waiting in the queue this amount of time or less.| Long |
 
 
 

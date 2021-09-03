@@ -14,14 +14,14 @@ indicator: both
 An external knowledge base with LivePerson AI:
 
 * Integrates with an external content management system (CMS)
-* Uses a [Natural Language Understanding (NLU) engine](intent-builder-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance (the intent) and return the highest scoring article. Using the capabilities of NLU to do this work is recommended for the best consumer experience.
+* Uses a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding.html) to evaluate the articles in the knowledge base against the consumer’s utterance (the intent) and return the highest scoring article. Using the capabilities of NLU to do this work is recommended for the best consumer experience.
 
     When you add this type of knowledge base, some article information (e.g., title and article ID) is retrieved from the CMS and made visible within the Knowledge Base application. The information isn’t editable, but it’s made visible because you need it to be able to perform some work, namely, to associate the articles with the intents in a domain and to train the knowledge base.
 
 ### High-level workflow
 When adding an external knowledge base with LivePerson AI, follow this high-level workflow:
 
-1. In [Intent Builder](intent-builder-overview.html), create the [domain](intent-builder-domains.html) and the [intents](intent-builder-intents.html) therein.
+1. In [Intent Manager](intent-manager-overview.html), create the [domain](intent-manager-key-terms-concepts.html#domains) and the [intents](intent-manager-key-terms-concepts.html#intents) therein.
 2. In Knowledge Base:
     1. Add the external knowledge base. During this step, you’ll specify the domain that you created in step 1.
     2. In the external knowledge base that you added, associate each article with an intent in the domain. 
@@ -89,10 +89,11 @@ An intent can't be used more than once, i.e., in more than one article.
 
 **To associate an article with an intent**
 
-1. Open the knowledge base, and use the **Articles** page to search for the article.
-2. On the search results page, use the **Intent** dropdown to select the name of the intent to associate with the article. From this dropdown, you can also create the intent on-the-fly if needed.
+1. Open the knowledge base.
+2. Use the **Articles** page to find the article, and select it.
+3. Use the **Intent** dropdown to select the name of the intent to associate with the article. From this dropdown, you can also create the intent on-the-fly if needed.
 
-    <img style="width:800px" src="img/ConvoBuilder/kb_cms_associate_article.png">
+    <img style="width:700px" src="img/ConvoBuilder/kb_cms_associate_article.png">
     
 ### Sync with the CMS
 Manually syncing with the CMS does the following:

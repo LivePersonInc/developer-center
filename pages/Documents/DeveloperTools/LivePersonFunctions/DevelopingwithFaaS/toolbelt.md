@@ -11,6 +11,7 @@ redirect_from:
   - function-as-a-service-developing-with-faas-toolbelt.html
   - liveperson-functions-development-toolbelt.html
   - liveperson-functions-development-toolbelt.html#http-client
+  - liveperson-functions-development-toolbelt.html#mtls-client
   - liveperson-functions-development-toolbelt.html#get-conversation-by-id
 ---
 
@@ -22,12 +23,13 @@ Currently, the Toolbelt offers the following methods:
 | :------- | :----- |
 | Toolbelt.SFClient() | Returns a Salesforce Client, that is configured to work with the FaaS Proxy. |
 | Toolbelt.HTTPClient() | Returns a HTTP Client, that is configured to work with the FaaS Proxy. |
+| Toolbelt.MTLSClient() | Returns a MTLS Client, that needs to be configured with cert & key. Please be aware that both certificate and key need to be in the `PEM`-Format. The `Toolbelt.MTLSClient()` can yield an error if the certificate is malformed, so please make sure to catch it. Further the MTLS Client is configured to work with the FaaS Proxy. |
 | Toolbelt.LpClient() | Returns the LivePerson (LP) Client. This is a wrapper for the HTTP Client. It simplifies the usage of LivePerson APIs by providing automatic service discovery as well as taking care of the authorization. |
 | Toolbelt.SecretClient() | Returns an Secret Storage Client, that is configured to work with the FaaS Secret Storage. |
 | Toolbelt.ConversationUtil() | Returns a Conversation Util instance. |
 | Toolbelt.GDPRUtil() | Returns a GDPR Util instance. Provides GDPR related functionality, such as replacing files of a conversation. |
 | Toolbelt.SDEUtil() | Returns a SDE Util instance. Provides SDE related functionality, such as setting/ updating SDEs for an Engagement. |
-| Toolbelt.ContextServiceClient() | Returns a Context Service Client instance. Provides functionality to interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html).|
+| Toolbelt.ContextServiceClient() | Returns a Context Service Client instance. Provides functionality to interact with the [Context Session Store](conversation-orchestrator-conversation-context-service-overview.html).|
 
 Here are usage example, which are taken out of the official templates:
 
@@ -37,7 +39,7 @@ Salesforce Client that is based on [jsforce](https://www.npmjs.com/package/jsfor
 
 ```javascript
 const { Toolbelt } = require("lp-faas-toolbelt");
-const sfClient = Toolbelt.SFClient(); // for API docs look @ hhtps://jsforce.github.io/
+const sfClient = Toolbelt.SFClient(); // for API docs look @ https://jsforce.github.io/
 
 //This will establish a connection with SF. And leverage Access Token / Refresh Token to login
 const con = sfClient.connectToSalesforce({
@@ -54,32 +56,65 @@ con.query(query, function(err, queryResult) {});
 HTTP Client that is based on [request-promise](https://www.npmjs.com/package/request-promise) for opening external HTTP connections.
 
 ```javascript
-const { Toolbelt } = require("lp-faas-toolbelt");
-//Obtain an HTTPClient instance from the Toolbelt
-const httpClient = Toolbelt.HTTPClient(); // For API Docs look @ https:/www.npmjs.com/package/request-promise
-
-const URL = "https://www.liveperson.com/";
-
-httpClient(URL, {
-	method: "GET", //HTTP VERB
-	headers: {}, //Your headers
-	simple: false, //IF true => Status Code != 2xx & 3xx will throw
-	json: true, // Automatically parses the JSON string in the response
-	resolveWithFullResponse: false //IF true => Includes Status Code, Headers etc.
-})
-.then(response ==> {
+  // Importing the FaaS Toolbelt
+  const { Toolbelt } = require("lp-faas-toolbelt");
+  // Obtain an HTTPClient Instance from the Toolbelt
+  const httpClient = Toolbelt.HTTPClient(); // For API Docs look @ https://www.npmjs.com/package/request-promise
+  httpClient("https://github.com/", {
+    method: "GET", // HTTP VERB
+    headers: {}, // Your Headers
+    simple: false, // IF true => Status Code != 2xx & 3xx will throw
+    resolveWithFullResponse: true //IF true => Includes Status Code, Headers etc.
+  })
+.then(response => {
 	...
+})
+.catch(err => {
+  ...
 })
 ```
 
 <div class="important">
   <ul>
     <li>Please beware of the following restrictions:</li>
-    <li>Error code <code>403 - You do not have access to the page or resource you are trying to reach</code> means that the url is not whitelisted!</li>
-    <li>mTLS is not support!</li>
-    <li>Max. 20 requests/sec (all beyond that are rejected with <code>429 - Too Many Requests</code>)</li>
+    <li>If the domain is not whitelisted the proxy will close the connection yielding a `Socket is closed`-Error.</li>
+    <li>Max. 20 requests/sec (all beyond that are rejected with <code>429 - Too Many Requests.</code>)</li>
   </ul>
 </div>
+
+### MTLS Client
+
+```javascript
+  // Importing the FaaS Toolbelt
+  const { Toolbelt } = require("lp-faas-toolbelt");
+  // Configure MTLSClient with cert & key bundle in PEM format. 
+  // Optional you can provide CA-Cert (PEM-Format) in case upstream cert is self-signed 
+  // Also a soft format check is performed, which will throw an error if failing. Make sure to catch it.
+  const mtlsClient = Toolbelt.MTLSClient({cert: 'cert-string', key: 'key-string'});
+  mtlsClient.post('https://your-mtls-endpoint.com', { header: 'test'}, null, {
+    json: true, // If true will attempt to parse response body to JSON
+    timeout: 10000, // Deadline for request to finish by in MS
+    allowSelfSigned: false, // Allow the upstream cert to be self-signed
+    })
+  .then(response => {
+    ...
+  })
+  .catch(err => {
+    ...
+  })
+```
+
+<div class="important">
+  <ul>
+    <li>Please beware of the following restrictions:</li>
+    <li>If the domain is not whitelisted the proxy will close the connection yielding a `Socket is closed`-Error.</li>
+    <li>Max. 20 req/sec (all beyond that are rejected with <code>429 - Too Many Requests</code>).</li>
+    <li>The expiration date of cert is not tracked, that is something you are responsible for.</li>
+    <li>Both key and cert need to be in PEM-Format.</li>
+    <li>The provided cert and key is checked for its format and will raise an error if malformed.</li>
+  </ul>
+</div>
+
 
 ### LivePerson Client
 
@@ -678,7 +713,7 @@ If there were no errors, the result is an object which allways contains an array
 ```
 
 ### Context Service Client
-The Context Service Client can be used to easily interact with the [Context Session Store](conversation-orchestrator-context-warehouse-context-session-store.html). This is especially useful for storing data between function calls.
+The Context Service Client can be used to easily interact with the [Context Session Store](conversation-orchestrator-conversation-context-service-overview.html). This is especially useful for storing data between function calls.
 
 After all [prerequisites for using the context session store](liveperson-functions-developing-with-faas-data-storage.html#prerequisitesinstallation) have been set up successfully, the client can be instantiated as follows.
 
