@@ -9,138 +9,134 @@ permalink: conversation-orchestrator-dynamic-routing-routing-conversations-by-in
 indicator: messaging
 ---
 
-### Getting intents into the Conversation Context Service
+{: .important}
+This topic assumes that you are familiar with [Intent Manager](intent-manager-overview.html). 
 
-By storing a user’s intent as a variable within the Conversation Context Service, that variable’s value will be available for use within a dynamic routing policy.
+You can create policies to recognize a consumer's intent from their utterance and transfer to the appropriate agent or skill. Routing by intent is very useful when agents or bots are organized by functional departments. 
 
-#### High-level process
+**Examples**
+* When a VIP consumer says, “I want to upgrade my service,” they should be transferred to the Upgrade Service skill that includes all upgrade specialists or bots.
+* When a member says, “I have an outage,” they should be escalated to an Outage specialist.
 
-1. Create a namespace within Conversation Context Service to store intents.
-2. Retrieve the intent using [botContext scripting functions](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent).
-3. Save the intent to the namespace within the Conversation Context Service using [botContext scripting functions](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#set-a-variable).
-
-#### Detailed process
-
-In the Global Function’s ‘__initConversation’ function, create and register a namespace to house intent details. Additionally, save the namespace title as a bot variable that will be used when saving the intent name to the Conversation Context Service.
-
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_initconv.png">
-
-```javascript
-var intentRoutingNamespace = 'intentRouting';
-botContext.registerContextNamespace(intentRoutingNamespace);
-botContext.setBotVariable('intentRoutingNamespace', intentRoutingNamespace, true, false);
-```
-
-Next, use the [getDialogStarterIntent](conversation-builder-scripting-functions-get-set-contextual-data.html#get-matched-intent) scripting function in the pre/post process code of any interaction to retrieve the name of the most recently matched dialog starter intent.
-
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_getintent.png">
-
-Then, save that intent name to the Conversation Context Services conversation scope, using the [setContextDataForConversation](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#set-a-variable) function. Here, we’re demonstrating saving the intent under the chosen namespace with a key of “intent”.
-
-<img class="fancyimage" width="800" src="img/convorchestrator/co_dr_saveintent.png">
-
-```javascript
-var intentTitle = botContext.getDialogStarterIntent();
+**Please Note:**
+The technique is very useful for advanced routing use cases, such as scenarios that involve a combination of intent recognition, contextual information and/or transferring to both humans and bots. 
  
-var intentNamespace = botContext.getBotVariable('intentRoutingNamespace');
-botContext.setContextDataForConversation(intentNamespace, 'intent', intentTitle);
-```
+If all your operations are contained within Conversation Builder bots, and you already have different bots for specific intents, please use the direct approach of [bot collaboration](conversation-builder-bots-bot-to-bot-transfers.html#automatic-transfers-via-bot-group).
+
+### Prerequisite steps
+* Configure the intents using [Intent Manager](intent-manager-overview.html).
+* Configure your [routing bot](conversation-orchestrator-dynamic-routing-getting-started.html).
+
+### Process
+There are two ways to accomplish intent-based routing:
+* If you have a limited number of intents, use the dialog starter approach.
+* If you have many intents and corresponding skills, enable intent routing in the Conversation Orchestrator bot.
 
 {: .important}
-This process is not limited to just saving the most recent intent for routing. Other variables that you save in your Conversation Builder bots can be preserved in the Context Session Store for the purpose of dynamic routing using the same high-level approach.
+Some users might be using older approaches to routing by intents. Typically, this involves writing custom JavaScript to store context variables and call the Next Actions API. However, LivePerson recommends that you use the approaches discussed in this topic; they leverage Conversation Builder's Dynamic Routing interaction, which reduces the need to write custom code. Still, for information to aid in troubleshooting older approaches, you can access an older version of this topic [here](conversation-orchestrator-dynamic-routing-routing-conversations-by-intents-legacy.html).
 
-### Creating policies using intents
+#### Routing by intent using the dialog starter approach
 
-Having saved the intent names to the Conversation Context Service, you can now create policies that, when triggered by the Next Actions API, return skill information associated with that intent. 
+When an intent triggers a dialog starter, the intent name is automatically saved to the default “orchestrator” namespace in the Context Service in a variable named “intent”. This approach is useful when using a small number of intents (5-10). 
 
-#### High-level process
+1. Create a new dialog in your Conversation Builder bot. 
 
-1. Create a new policy in Conversation Orchestrator which will correspond to the intent you plan to route to.
-2. Within your newly created policy, set the condition for the policy to look for the ‘intent’ property of the namespace created above. Set this condition to equal the intent name that corresponds to this policy.
-3. Set the Action of this policy to “Transfer to Skill” and select the corresponding skill for this intent from the dropdown.
-4. Save and enable your policy. 
-5. Complete the steps in the "Testing" section (farther below) to enable routing from your Conversation Builder bots.
+2. In the newly created dialog starter, select the **+ Intent** option to add a domain and intent to trigger this dialog. 
 
-#### Detailed process
+3. Set the **Next Action** to the Dynamic Routing interaction.
 
-1. From the Conversation Orchestrator welcome screen, select [Intents](intent-manager-key-terms-concepts.html#intents) under the **Conversation Context Service** heading to see a list of intents that are available for use in your policies. This intent list is generated from all the domains that have been created for your account.
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_next_action.png">
+           
+4. Create intent-based routing policies. For more on this, see the section at the end of this topic.
 
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_intentlist.png">
+#### Enabling intent routing in the Dynamic Routing bot
 
-2. Selecting **Intent & Context Policies** under the **Dynamic Routing** header gives access to create and manage the policies for your account. Here, you can view the usage statistics for policies, as well as a configurable list of all policies that have been created for the account.
-
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_policies1.png">
-
-3. To create a new policy, select the **Add Policy** button under the **Manage policies** heading to generate the add policy form to the right. This form contains two sections, one which outlines the conditions that will trigger this policy, and a second that dictates the action that will be sent back to Conversation Builder. Give your policy a name of your choosing. Our recommendation is to assign a name that is related to the intent you are using for routing (e.g., cancel order).
-
-4. Under **Conditions**, assign the attribute using the “namespace.key” syntax. Using our example from the section above, name this attribute as “intentRouting.intent”. Keep the equality and data type dropdowns as their defaults (“=” and “string”), and select the desired intent from the **Enter a value** dropdown. Values can also be manually typed in. However, due to the specificity needed for strings, we recommend either choosing the intent from the dropdown or copying the intent name from the list of intents in step 1.
-
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_conditions1.png">
-
-5. Under **Actions**, define the rule and associated information you want to send back to the bot. For routing purposes, select the **Transfer to skill** option from the dropdown. Leave the second dropdown as the default **skill** choice, and from the final dropdown select the skill you would like this policy to transfer to. The list of skills that have been created for your account will display in that final dropdown menu.
-
-    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_skilllist.png">
-
-6. After saving, the policy is added to your list of available policies in a **disabled** status. To use the policy in your Conversation Builder bots, make sure to toggle the switch to **enabled** before navigating away from Conversation Orchestrator.
-
-    <img class="fancyimage" width="600" src="img/convorchestrator/co_dr_enabled.png">
-
-    With the policy enabled, you are ready to move back into Conversation Builder where you will complete the process of adding Intent Based Routing to your bot.
-
-### Testing
-
-Once an intent has been saved to the [Conversation Context Service](conversation-orchestrator-conversation-context-service-overview.html) and the policy has been created, you can call the [Next Actions API](conversation-orchestrator-next-actions-api-overview.html) to receive the appropriate action. The returned action will contain a skill ID that corresponds to a bot agent specialized to handle the user’s intent. By using that skill ID in an Agent Transfer integration in Conversation Builder, you will route the conversation appropriately and seamlessly for the user, displaying that the intent routing solution is working as expected.
-
-#### Prerequisites
-
-In order to test out routing by intents, you’ll need to deploy the bot that you are capturing the intent in. This is due to the fact that we are saving the intent to the Conversation Scoping of the Conversation Context Service, and only deployed bots will have a conversation ID associated with them. Additionally, you’ll need to have a bot that is deployed using a skill selected in Step 5 from the “Creating policies using intents” section above. 
-
-For information on how to deploy bot agents in Conversational Cloud, please see our *Conversation Builder - Getting Started* section [here](tutorials-guides-getting-started-with-bot-building-deploy-the-bot.html).
-
-#### askMaven & route to appropriate agent
-
-Above in the *Getting Intents into the Conversation Context Service* section, you captured the intent from a user after triggering a dialog starter. In that same dialog, follow these steps:
-
-First, create a new [Agent Transfer](conversation-builder-interactions-integrations.html#agent-transfer-interactions) interaction. To create a more seamless experience for the user, add the text content BLANK_MESSAGE.
-
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_transfer.png">
-
-Then, in the pre-process code of this interaction, call the Next Actions API using the Conversation Builder scripting function, [askMaven](conversation-builder-scripting-functions-askmaven.html). This method returns a string representation of the matching policy, so you will also need to run the JSON.parse method to properly work with the result. An example of the returned JSON:
-
-```
-{
- "rule": {
-   "id":"ae5418cf-ec4d-494e-8f2d-49c3e2b29a05",
-   "name":"Request Refund",
-   "actions":[
-     {
-       "type":"TRANSFER_TO_SKILL",
-       "payload":{
-         "skillId":"3078481530"
-         }
-       }
-     ]
-   }
-}
-```
-
-Next, parse out the skill ID from the returned JSON using the following syntax. Save this value to a bot variable for use in the setting of your Agent Transfer integration.
-
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_code.png">
-
-```javascript
-var policy = JSON.parse(botContext.askMaven());
-var skillId = policy.rule.actions[0].payload.skillId;
-botContext.setBotVariable('skillId', skillId, true, false);
-```
-
-Once saved, click the setting wheel for the Agent Transfer integration. Navigate to the **Advanced** tab, and enter `{$botContext.skillId}` into the **Agent Skill Id** field.
-
-<img class="fancyimage" width="600" src="img/convorchestrator/co_dr_intsettings.png">
-
-Lastly, navigate to our messaging test page [here](https://developers.liveperson.com/web-messaging/emulator.html). Enter your account information, open the engagement for your bot, and trigger the dialog by entering an utterance that will match the intent. If successful, the bot will transfer the user to the correct bot to handle their request.
-
-<img class="fancyimage" width="400" src="img/convorchestrator/co_dr_prodbot.png">
+When working with larger domains, assigning individual dialogs to each intent can be difficult to scale. By using the Conversation Orchestrator bot template, bot developers can manually call the analyze intent API and save the intent name to the default namespace, enabling routing to any intent-based skill in the account.
 
 {: .important}
-When using this feature in Production, it might be desirable to modify or disable the [automatic messages](https://knowledge.liveperson.com/contact-center-management-messaging-operations-automatic-messages-automatic-messages-overview.html) if you want to mask the transfers to and from each bot.
+This approach is powered by an API provided by the [Dynamic Routing Bot template](conversation-builder-bot-templates-conversation-orchestrator.html). This API is not suitable for use with legacy versions of Liveperson’s NLU engine. Please upgrade to the current NLU domain offering if using this approach.
+
+1. Create the Dynamic Routing bot, and open **Global Functions**.
+
+    Create a new bot using the **Dynamic Routing Bot** by following the steps [here](conversation-orchestrator-dynamic-routing-getting-started.html). Then open **Global Functions**, and change  two configurations (botAppKey & domainId) as highlighted in the next, few steps.
+           
+2. Retrieve the botAppKey.
+
+    Retrieve the botAppKey value from a bot user agent. This can be found in the **User Management** section of the Conversational Cloud. Copy this value.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route1.png">
+
+3. Retrieve the intent domain ID.
+
+    Retrieve the Domain ID for your intent domain. You can find this in the **Domain Settings** for your domain in Intent Manager. Copy this value.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route2.png">
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route3.png">
+
+4. Update configurations in the **Global Functions**.
+    
+    Enter the botAppKey and domainId values into their associated variables within the **Global Functions** editor of your bot.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route4.png">
+
+5. Enable the intent dialogs in the bot.
+
+    Delete the COLLECT_PHONE_NUMBER interaction. Enable both the ASK_INTENT and getIntent_API interactions using the interaction settings for each. Make sure the Dynamic Routing interaction is directly below the getIntent_API as shown below.
+
+    *Enabling ASK_INTENT and getIntent_API interactions:*
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route5.png">
+
+    *To enable interactions, go to the **Interaction Settings**, and enable the toggle*:
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_route6.png">
+
+6. Create intent-based routing policies. For help with this, see the next section.
+
+### Create intent-based routing policies
+
+The policy creation flow is identical for both approaches:
+* Dialog starter
+* Enabling intent routing
+ 
+1. Navigate to **Manage Policies**.
+
+    Use the **Manage routing policies** link in the Dynamic Routing interaction to navigate to Conversation Orchestrator.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies1.png">
+
+2. Create your policy.
+
+    Create a new policy by selecting **Add Policy**. Give the new policy a name. In the conditions editor, select “orchestrator.intent” from the dropdown, and set it equal to the relevant intent name.
+
+3. Configure your policy.
+
+    In the actions editor, select "Transfer to skill" from the left-hand dropdown and the relevant skill from the right-hand dropdown. Ensure that agents are assigned to the book_flight skill.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies2.png">
+
+4. Enable your policy.
+    
+    Once saved, toggle the switch for the policy in the policy list to enable the policy.
+
+    <img class="fancyimage" width="800" src="img/convorchestrator/co_dr_ibpolicies3.png">
+
+5. Test your policy.
+
+    You can test your setup on the web client emulator. For details on this, see [here](conversation-orchestrator-dynamic-routing-testing-with-the-web-emulator.html).
+    
+    Alternatively, to test, you can deploy the bot and connect it to a campaign that’s linked to your production/staging channel of your choice. For this setup, see [here](conversation-orchestrator-dynamic-routing-getting-started.html). 
+
+    Follow these steps once you have configured your testing setup:
+
+    <img class="fancyimage" width="250" src="img/convorchestrator/co_dr_ibpolicies4.png">
+
+    The message routing flow is identical for both approaches (Dialog Starter and Enabling Intent Routing) because we have used the same intent and the same policy in our demonstration. 
+ 
+    Start by saying “Hi.” 
+ 
+    When prompted by the routing bot, provide the phone number 1111. This is when the Dynamic Routing interaction evaluates all your policies to make the routing decision.
+ 
+    The conversation will be routed to the skill SeattleEmployeeSkill. A specific agent within the skill will be picked.
+ 
+    For this example, it will be routed to Agent Bob if you have configured Agent Bob to be the only user who maps to SeattleEmployeeSkill.
