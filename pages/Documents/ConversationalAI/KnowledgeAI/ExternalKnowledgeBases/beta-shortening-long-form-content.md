@@ -34,7 +34,7 @@ To set up and use this approach, follow the workflow described below.
 ### Adding the external knowledge base
 In Step 5 when you [add the knowledge base](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), you define the request to fetch your content’s metadata.
 
-To use this solution, *augment the request* so that each returned article also contains the content (summary, detail, etc.) that you want to send to the consumer. Then, in the transformation spec that you provide, map this content to an attribute named “messageReadyContent,” which is an optional attribute in the LivePerson Knowledge Base schema.
+To use this solution, *augment the request* so that each returned article also contains the content (summary, detail, etc.) that you want to send to the consumer. Then, in the transformation spec that you provide, map this content to an attribute named “messageReadyContent,” which is an optional attribute in the LivePerson KnowledgeAI schema.
 
 When the knowledge base is added, the optional attribute is used to populate a **Message Ready Content** field in the UI when appropriate. This read-only field displays your content, which has been automatically shortened and cleaned up.
 
