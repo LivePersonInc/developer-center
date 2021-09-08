@@ -583,7 +583,7 @@ Change the TTR of a conversation based on the action response of Watson. There h
   "actions": [
     {
       "name": "CHANGE_TTR",
-      "type": "CLIENT",
+      "type": "client",
       "parameters": {
         "ttrType": "URGENT"
       },

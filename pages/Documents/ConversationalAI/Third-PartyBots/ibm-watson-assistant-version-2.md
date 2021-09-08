@@ -612,7 +612,7 @@ The time values of these are defined in the Agent Workspace.
   "actions": [
     {
       "name": "CHANGE_TTR",
-      "type": "CLIENT",
+      "type": "client",
       "parameters": {
         "ttrType": "URGENT"
       },
