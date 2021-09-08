@@ -16,7 +16,7 @@ For a flexible architecture and an optimal consumer experience, follow these bes
 <!--
 ### Limits
 
-* To promote best practices, limits are enforced in a few cases. For information on all limits, see [here](knowledge-base-limits.html).
+* To promote best practices, limits are enforced in a few cases. For information on all limits, see [here](knowledgeai-limits.html).
 -->
 
 ### General
@@ -28,4 +28,4 @@ For a flexible architecture and an optimal consumer experience, follow these bes
 ### External knowledge bases with AI
 
 * Use the LivePerson engine for NLU, not LivePerson (Legacy).
-* Remember to manually [sync with the CMS](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#sync-with-the-cms) after you make changes in the CMS.
+* Remember to manually [sync with the CMS](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html#sync-with-the-cms) after you make changes in the CMS.

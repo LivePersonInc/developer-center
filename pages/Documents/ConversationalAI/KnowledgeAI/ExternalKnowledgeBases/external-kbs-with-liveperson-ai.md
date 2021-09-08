@@ -26,7 +26,7 @@ When adding an external knowledge base with LivePerson AI, follow this high-leve
 2. In Knowledge Base:
     1. Add the external knowledge base. During this step, you’ll specify the domain that you created in step 1.
     2. In the external knowledge base that you added, associate each article with an intent in the domain. 
-    3. [Train](knowledge-base-using-intents-with-kbs.html) the articles to match consumer utterances.
+    3. [Train](knowledgeai-using-intents-with-kbs.html) the articles to match consumer utterances.
 3. Expose the articles to consumers by:
     * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
     * (Conversation Orchestrator) Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
@@ -60,7 +60,7 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **+ Add Post Body**: Enter the payload to send if applicable.
     * **Transformation Spec**: If you were able to select your **Content Provider** in Step 3 above, a default spec is provided here. You can use it if you haven't customized the CMS' data model. If you weren't able to select your content provider, a default spec isn't provided.
     
-        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
+        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the returned articles' metadata data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
 
     **Note**: Configure the connector payload to target only the content that you want to use as a part of this knowledge base. If you add the knowledge base with clear domain scoping -- limiting the content as needed -- the knowledge base will perform better and be easier to tune.
 
@@ -80,11 +80,11 @@ After making any changes to the content in the CMS, sync with the CMS (described
     * **Cache Article Content**: If you want to temporarily cache the article content that’s returned at run time for improved performance, select the duration in minutes. 
     * **Transformation Spec**: Here again, if you were able to select your **Content Provider** in Step 3 above, a default spec is provided. You can use it if you haven't customized the CMS' data model. If you weren't able to select your content provider, a default spec isn't provided.
     
-        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the single article’s content data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
+        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the single article’s content data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
 9. Click **Save**.
 
 ### Associate an article with an intent
-You must associate articles with intents so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest [scoring](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds) articles that are found in the search are then retrieved from the CMS.
+You must associate articles with intents so that--during a knowledge base search at run time--the knowledge base can use an NLU engine to evaluate the consumer's utterance against the articles' intents to determine if there is a match. The highest [scoring](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) articles that are found in the search are then retrieved from the CMS.
 
 {: .important}
 An intent can't be used more than once, i.e., in more than one article.

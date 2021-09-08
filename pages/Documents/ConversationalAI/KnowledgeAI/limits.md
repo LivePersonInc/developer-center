@@ -17,7 +17,7 @@ As you add and manage articles, there are a number of validation checks that are
 As of March 5, 2021, the limits have changed and are as described below. The limits are enforced by the application, and error messages are shown to inform you of them.
 
 ### Knowledge base-level limits for internal knowledge bases
-If you’re using an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), the following knowlege base-level limits apply. These vary depending on the NLU engine that’s in use.
+If you’re using an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), the following knowlege base-level limits apply. These vary depending on the NLU engine that’s in use.
 
 | Type of knowledge base | NLU engine | Number of articles allowed per knowledge base |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ If you’re using an [internal knowledge base](knowledge-base-internal-knowledge
 
 ### Article-level limits for internal knowledge bases
 
-If you’re using an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), the following article-level limits apply.
+If you’re using an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), the following article-level limits apply.
 
 | Attribute or setting | Limit |
 | --- | --- |

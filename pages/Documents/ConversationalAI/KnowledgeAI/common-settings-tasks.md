@@ -10,7 +10,7 @@ permalink: knowledgeai-common-settings-tasks.html
 indicator: both
 ---
 
-This topic contains information on settings and tasks that are common to both [external](knowledge-base-external-knowledge-bases-introduction.html) and [internal](knowledge-base-internal-knowledge-bases-introduction.html) knowledge bases.
+This topic contains information on settings and tasks that are common to both [external](knowledgeai-external-knowledge-bases-introduction.html) and [internal](knowledgeai-internal-knowledge-bases-introduction.html) knowledge bases.
 
 ### Common, read-only settings
 
@@ -22,7 +22,7 @@ This topic contains information on settings and tasks that are common to both [e
 ### Common, configurable settings
 
 * **Knowledge Base Name**: Enter a new display name for the knowledge base if desired. Changing the name of the knowledge base doesn't require a corresponding update to a [knowledge base integration](conversation-builder-integrations-knowledge-base-integrations.html) that uses the knowledge base; the integration is tied to the knowledge base's underlying primary key, not its name. 
-* **Intent Association**: If you've associated a domain with the knowledge base, this setting is read-only and says, "Domain Intents." However, if the knowledge base is an internal knowledge bases that uses [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), this says, "Knowledge Base Intents," and it gives you the option to [convert](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) to Domain intents.
+* **Intent Association**: If you've associated a domain with the knowledge base, this setting is read-only and says, "Domain Intents." However, if the knowledge base is an internal knowledge bases that uses [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), this says, "Knowledge Base Intents," and it gives you the option to [convert](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) to Domain intents.
 * **Associated Domain**: If the knowledge base's **Intent Association** is "Domain Intents," this indicates the domain that's associated with the knowledge base.
 * **Language**: The language of the content.
 * **Public**: If you don't want other users in your Conversational Cloud account to be able to view and edit the knowledge base in the Knowledge Base application, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
@@ -53,7 +53,7 @@ You can quickly search for and find an article that you want to edit.
 
 ### Format text in an article
 
-In the Summary and Detail fields of an article in an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), you can use the following subset of HTML tags:
+In the Summary and Detail fields of an article in an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), you can use the following subset of HTML tags:
 * `<p>` and `<br>`
 * `<strong>`, `<b>` and `<i>`
 * `<ul>`, `<ol>` and `<li>`
@@ -71,13 +71,13 @@ Examples of invalid anchor tags:
 * `<a onmouseover="alert('test')" href="http://example.com/test.jpg">click here</a>`
 
 {: .important}
-If you're using an [external knowledge base](knowledge-base-external-knowledge-bases-introduction.html), where your content developers are authoring content in an external CMS, you can use the same HTML tags listed above.
+If you're using an [external knowledge base](knowledgeai-external-knowledge-bases-introduction.html), where your content developers are authoring content in an external CMS, you can use the same HTML tags listed above.
 
 The HTML tags render in Conversation Builder's [Preview](conversation-builder-testing-deployment-previewing.html) tool and in the Web messaging/chat window based on the capability of the respective tool, window, and channel in use. Be sure to test in the target channel to verify support.
 
 ### Restore an earlier version of an article
 
-In an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html) or an [external knowledge that uses LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html), whenever someone changes an article’s content -- that is, the title, the summary, the detail or a content URL -- a back-up of the previous version of the article is automatically created. The system stores the three, most recent back-up versions that have been created, and you can restore one of these if desired.
+In an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html) or an [external knowledge that uses LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), whenever someone changes an article’s content -- that is, the title, the summary, the detail or a content URL -- a back-up of the previous version of the article is automatically created. The system stores the three, most recent back-up versions that have been created, and you can restore one of these if desired.
 
 Note the following:
 

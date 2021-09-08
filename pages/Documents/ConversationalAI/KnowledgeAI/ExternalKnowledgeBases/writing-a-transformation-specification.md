@@ -23,7 +23,7 @@ The Shift transform supports very simple to very complex data transformations, p
 
 ### Supported LivePerson attributes
 
-See [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html#supported-liveperson-attributes) for the list of supported LivePerson attributes when content mapping.
+See [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html#supported-liveperson-attributes) for the list of supported LivePerson attributes when content mapping.
 
 ### Reading the examples
 

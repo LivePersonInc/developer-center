@@ -25,7 +25,7 @@ indicator: both
 
         **IMPORTANT**: When creating one knowledge base based off of another, don't reuse the same CSV import file or Google sheet for a second knowledge base in the same hosted region. The article IDs must be unique within the region. In the file for the second knowledge base, clear the article IDs; the application will create article IDs for new articles.
 
-    * **Domain**: The knowledge base will use [Domain intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), so select the domain to use here. Note that you don't have to specify the domain at this point, as the field is optional when adding the knowledge base. This allows you to advance the creation of your knowledge base content without having to consider the domain beforehand.
+    * **Domain**: The knowledge base will use [Domain intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), so select the domain to use here. Note that you don't have to specify the domain at this point, as the field is optional when adding the knowledge base. This allows you to advance the creation of your knowledge base content without having to consider the domain beforehand.
 
     * **Language**: Select the language of the content. Make an accurate selection here; this helps text-based searches to work as expected and will help with regard to future enhancements related to text-based searches.
 
@@ -33,7 +33,7 @@ indicator: both
 
     This creates the knowledge base, and takes you to its search view. In this default view, you can search the title, intent qualifiers and content of articles.
 
-    If you specified a CSV or Google sheet to use as an import file, the articles in the file are enabled by default. This means they will be returned by knowledge base searches in a Knowledge Base integration, once you add an integration. You can disable articles on a per article basis, as described [here](knowledge-base-internal-knowledge-bases-articles.html#enable-or-disable-an-article). 
+    If you specified a CSV or Google sheet to use as an import file, the articles in the file are enabled by default. This means they will be returned by knowledge base searches in a Knowledge Base integration, once you add an integration. You can disable articles on a per article basis, as described [here](knowledgeai-internal-knowledge-bases-articles.html#enable-or-disable-an-article). 
 
 ### Create an import file
 
@@ -42,7 +42,7 @@ If you want to import a set of articles into a knowledge base when you add the k
 <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_importFile.png">
 
 {: .important}
-The import file can contain the subset of HTML that’s discussed [here](knowledge-base-common-settings-tasks.html#format-text-in-an-article). Additionally, as a best practice, ensure the file is saved as a UTF-8 encoded CSV file before you import it. This is particularly important if you need to support special language characters (e.g., ö, ü, ß).
+The import file can contain the subset of HTML that’s discussed [here](knowledgeai-common-settings-tasks.html#format-text-in-an-article). Additionally, as a best practice, ensure the file is saved as a UTF-8 encoded CSV file before you import it. This is particularly important if you need to support special language characters (e.g., ö, ü, ß).
 
 **To create an import file**
 
@@ -56,18 +56,18 @@ The import file can contain the subset of HTML that’s discussed [here](knowled
 |-----|-----|
 | id | A String; a unique ID assigned to an article. <br><br>This column isn't required when you initially create the knowledge base. However, if you're using a Google sheet that you plan to sync periodically, it does play a role then. Before performing a sync, update the Google sheet to include the "id" column and enter the IDs for all existing articles.<br><br>When creating one knowledge base based off of another, don't reuse the same CSV import file or Google sheet for a second knowledge base in the same hosted region. The article IDs must be unique within the region. In the file for the second knowledge base, clear the article IDs; the application will create article IDs for new articles. |
 | tags | A comma-separated list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. |
-| title | The article title. This should be a complete sentence or question that the user might ask. See [here](knowledge-base-internal-knowledge-bases-best-practices.html) for best practices. |
+| title | The article title. This should be a complete sentence or question that the user might ask. See [here](knowledgeai-internal-knowledge-bases-best-practices.html) for best practices. |
 | summary | A short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. |
-| alternates | Applicable if you're using Knowledge Base intents, not Domain intents (see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) for an understanding of the two). In the UI, these are called "intent qualifiers." Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See [here](knowledge-base-internal-knowledge-bases-best-practices.html) for best practices. |
+| alternates | Applicable if you're using Knowledge Base intents, not Domain intents (see [here](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) for an understanding of the two). In the UI, these are called "intent qualifiers." Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See [here](knowledgeai-internal-knowledge-bases-best-practices.html) for best practices. |
 | detail | A longer message to the user. For messaging, it's recommended that you keep the responses as brief as possible. |
-| content_url | The URL of a hyperlink. For more on this, see [here](knowledge-base-internal-knowledge-bases-articles.html#add-content-links). |
-| image_url | The URL of an image. For more on this, see [here](knowledge-base-internal-knowledge-bases-articles.html#add-content-links). |
-| audio_url | The URL of an audio file. For more on this, see [here](knowledge-base-internal-knowledge-bases-articles.html#add-content-links). |
-| video_url | The URL of a video file. For more on this, see [here](knowledge-base-internal-knowledge-bases-articles.html#add-content-links). |
-| category | Assigning a category lets you [filter and find articles based on categories](knowledge-base-internal-knowledge-bases-articles.html#find-articles-with-a-specific-category) in the Knowledge Base application. |
-| intentName | Applicable if you're using Domain intents, not Knowledge Base intents (see [here](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) for an understanding of the two). This is the intent associated with the article. |
-| validFrom | Specify the date and time on which the article becomes active in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
-| validTo | Specify the date and time on which the article becomes inactive in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledge-base-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
+| content_url | The URL of a hyperlink. For more on this, see [here](knowledgeai-internal-knowledge-bases-articles.html#add-content-links). |
+| image_url | The URL of an image. For more on this, see [here](knowledgeai-internal-knowledge-bases-articles.html#add-content-links). |
+| audio_url | The URL of an audio file. For more on this, see [here](knowledgeai-internal-knowledge-bases-articles.html#add-content-links). |
+| video_url | The URL of a video file. For more on this, see [here](knowledgeai-internal-knowledge-bases-articles.html#add-content-links). |
+| category | Assigning a category lets you [filter and find articles based on categories](knowledgeai-internal-knowledge-bases-articles.html#find-articles-with-a-specific-category) in the Knowledge Base application. |
+| intentName | Applicable if you're using Domain intents, not Knowledge Base intents (see [here](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) for an understanding of the two). This is the intent associated with the article. |
+| validFrom | Specify the date and time on which the article becomes active in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledgeai-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
+| validTo | Specify the date and time on which the article becomes inactive in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledgeai-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
 
 ### Convert Knowledge Base intents to Domain intents
 
@@ -100,7 +100,7 @@ Before taking this action, be certain about doing so. Once you convert the inten
 After you've made changes to the Google sheet that's linked to the knowledge base, sync the knowledge base to update it with the content.
 
 {: .important}
-This action overwrites the content in the knowledge base with the content in the Google sheet, so use caution when performing this. Also be aware that all new articles in the sheet are enabled by default (which means they are returned in knowledge base searches in Knowledge Base integrations), so ensure the contents of the sheet are suitable before you sync. You can disable articles on a per article basis, as described [here](knowledge-base-internal-knowledge-bases-articles.html#enable-or-disable-an-article).
+This action overwrites the content in the knowledge base with the content in the Google sheet, so use caution when performing this. Also be aware that all new articles in the sheet are enabled by default (which means they are returned in knowledge base searches in Knowledge Base integrations), so ensure the contents of the sheet are suitable before you sync. You can disable articles on a per article basis, as described [here](knowledgeai-internal-knowledge-bases-articles.html#enable-or-disable-an-article).
 
 Before performing a sync, make sure the Google sheet includes the "id" column that contains the IDs for all existing articles. If it doesn't, update the sheet accordingly before syncing.
 

@@ -12,7 +12,7 @@ indicator: both
 ---
 
 {: .important}
-This topic discusses an experimental feature in Beta release. It’s applicable if you’re using an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html), and you need a solution for shortening your content so that it’s suitable for conversational messaging.
+This topic discusses an experimental feature in Beta release. It’s applicable if you’re using an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), and you need a solution for shortening your content so that it’s suitable for conversational messaging.
 
 Conversational messaging works best with content that’s as brief as possible. Therefore, LivePerson recommends that, when possible, you take one of the following approaches with your external CMS:
 
@@ -32,7 +32,7 @@ Sometimes, however, these approaches aren’t possible. For example, you might b
 To set up and use this approach, follow the workflow described below.
 
 ### Adding the external knowledge base
-In Step 5 when you [add the knowledge base](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), you define the request to fetch your content’s metadata.
+In Step 5 when you [add the knowledge base](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), you define the request to fetch your content’s metadata.
 
 To use this solution, *augment the request* so that each returned article also contains the content (summary, detail, etc.) that you want to send to the consumer. Then, in the transformation spec that you provide, map this content to an attribute named “messageReadyContent,” which is an optional attribute in the LivePerson Knowledge Base schema.
 
@@ -43,7 +43,7 @@ When the knowledge base is added, the optional attribute is used to populate a *
 These are the shortening and clean-up rules that are applied:
 
 * If the content doesn’t include HTML tags, it’s shortened to less than or equal to 1,000 characters, making sure the final sentence always ends with punctuation.
-* If the content includes HTML tags, first, the unsupported HTML tags are removed. Then, if the length is greater than 320 characters (with the [supported HTML](knowledge-base-common-settings-tasks.html#format-text-in-an-article) tags included), all HTML tags are removed. If the resulting plain text length is more than 1,000 characters, it’s then shortened to less than or equal to 1,000 characters, making sure the final sentence always ends with punctuation. 
+* If the content includes HTML tags, first, the unsupported HTML tags are removed. Then, if the length is greater than 320 characters (with the [supported HTML](knowledgeai-common-settings-tasks.html#format-text-in-an-article) tags included), all HTML tags are removed. If the resulting plain text length is more than 1,000 characters, it’s then shortened to less than or equal to 1,000 characters, making sure the final sentence always ends with punctuation. 
 
 ### Using the message-ready content
 
