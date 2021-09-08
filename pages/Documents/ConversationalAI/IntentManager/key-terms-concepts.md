@@ -149,7 +149,7 @@ Entities facilitate the creation and curation of training phrases. Using entitie
 
 You can use entities in two places:
 * Training phrases for intents defined in Intent Manager
-* Intent qualifiers for articles defined in [Knowledge Base](knowledge-base-overview.html)
+* Intent qualifiers for articles defined in [KnowledgeAI](knowledgeai-overview.html)
 
 {: .important}
 Use a maximum of one entity per training phrase, as only a single entity is used when the model is trained.

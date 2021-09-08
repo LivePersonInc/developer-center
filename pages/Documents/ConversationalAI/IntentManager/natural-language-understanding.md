@@ -127,7 +127,7 @@ Key characteristics include:
 * If you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
 * For performance reasons:
     * Supports a maximum of 40 training phrases per intent. If you add more than 40, only the first 40 are used.
-    * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledge-base-internal-knowledge-bases-best-practices.html).
+    * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledgeai-internal-knowledge-bases-best-practices.html).
 * Doesn't require the model to be trained.
 
 ### Variances in matched intents with LivePerson NLU

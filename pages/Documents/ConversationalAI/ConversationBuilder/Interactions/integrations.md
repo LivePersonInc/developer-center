@@ -62,7 +62,7 @@ A common use case for the Knowledge AI interaction is within a Fallback dialog, 
 #### How the Knowledge AI search works
 
 * **The search phrase** - The Knowledge AI interaction always passes the consumer’s most recent message into the search as the search phrase.
-* **The search** - When performing the search, the search mode is always “Intents.” For information on search modes, see [here](knowledge-base-using-intents-with-kbs.html#search-modes).
+* **The search** - When performing the search, the search mode is always “Intents.” For information on search modes, see [here](knowledgeai-using-intents-with-kbs.html#search-modes).
 * **The results** - The answers that are returned must meet or exceed the confidence score that you specify within the interaction’s configuration. This minimum threshold can be VERY GOOD, GOOD or FAIR PLUS.
 
 #### How the answers are rendered
@@ -120,9 +120,9 @@ With the Simple layout:
 
     <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_settings.png">
 
-    * **Min confidence score for answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds).
+    * **Min confidence score for answers**: Select the minimum score that a result must have in order to be returned, either VERY GOOD, GOOD, or FAIR PLUS. If you downgrade this to FAIR PLUS, be sure to test whether the quality of the results meets your expectations. It's generally recommended to keep the quality above FAIR PLUS. For more on confidence scores, see [here](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds).
 
-        This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
+        This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
 
     * **Max number of answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
     * **Answer layout**: Select "Structured," "Simple," or "Custom" based on your requirements. These layout options are discussed farther above.
