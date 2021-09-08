@@ -1,11 +1,12 @@
 ---
 pagename: Sending Content to Consumers
 redirect_from:
+    - knowledge-base-sending-content-to-consumers.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
-permalink: knowledge-base-sending-content-to-consumers.html
+documentname: KnowledgeAI
+permalink: knowledgeai-sending-content-to-consumers.html
 indicator: both
 ---
 

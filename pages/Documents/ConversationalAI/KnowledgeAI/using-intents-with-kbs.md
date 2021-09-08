@@ -2,17 +2,18 @@
 pagename: Using Intents with KBs
 redirect_from:
     - conversation-builder-knowledge-base.html
+    - knowledge-base-using-intents-with-kbs.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
-permalink: knowledge-base-using-intents-with-kbs.html
+documentname: KnowledgeAI
+permalink: knowledgeai-using-intents-with-kbs.html
 indicator: both
 ---
 
 ### Introduction
 
-If your knowledge base is an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html) (which also uses LivePerson AI), it makes use of Natural Language Understanding or NLU to evaluate the articles against the consumer's utterance (the intent) in order to return the highest scoring article.
+If your knowledge base is an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html) or an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html) (which also uses LivePerson AI), it makes use of Natural Language Understanding or NLU to evaluate the articles against the consumer's utterance (the intent) in order to return the highest scoring article.
 
 To set this up, you create a domain with the necessary intents in [Intent Manager](intent-manager-overview.html), where the domain specifies the [NLU engine](intent-manager-natural-language-understanding.html) to use. Then, within the Knowledge Base application, you 1) associate the domain with the knowledge base, 2) associate the domain's intents with the articles, and 3) train the knowledge base to use the intents to return the articles.
 
@@ -21,11 +22,11 @@ Intent Manager offers a set of [prebuilt domains](intent-manager-key-terms-conce
 
 ### Associate a domain with a knowledge base
 
-You associate a domain with an external knowledge base when you [add the knowledge base](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai):
+You associate a domain with an external knowledge base when you [add the knowledge base](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai):
 
 <img style="width:700px" src="img/ConvoBuilder/kb_add_ext.png">
 
-And you likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base): 
+And you likewise associate a domain with an internal knowledge base when you [add the knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html#add-an-internal-knowledge-base): 
 
 <img style="width:700px" src="img/ConvoBuilder/kb_add_int.png">
 
@@ -99,8 +100,8 @@ The Intents Only mode is like the Intents mode (above) except that the final, te
 
 When the Text mode is used, a text-to-text search is performed:
 
-* With an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
-* With an [internal knowledge base](knowledge-base-internal-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledge-base-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) (intent qualifiers), and tags.
+* With an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), the search algorithm checks the consumer's input against the title and tags.
+* With an [internal knowledge base](knowledgeai-internal-knowledge-bases-introduction.html), the search algorithm checks the consumer's input against the title, summary, detail, [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) (intent qualifiers), and tags.
 
 You can improve the quality of your knowledge base answers by linking your articles to intents and performing intent-based searches. However, often this change is introduced gradually, as time and opportunity allow. Typically, Text searches are used when you haven’t yet linked your articles to intents.
 

@@ -1,12 +1,13 @@
 ---
 pagename: External KBs with LivePerson AI
 redirect_from:
+    - knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
+documentname: KnowledgeAI
 subfoldername: External Knowledge Bases
-permalink: knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html
+permalink: knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html
 indicator: both
 ---
 

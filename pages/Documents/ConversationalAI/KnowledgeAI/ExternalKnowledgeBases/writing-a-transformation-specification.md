@@ -1,12 +1,13 @@
 ---
 pagename: Writing a Transformation Specification
 redirect_from:
+  - knowledge-base-external-knowledge-bases-writing-a-transformation-specification.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
+documentname: KnowledgeAI
 subfoldername: External Knowledge Bases
-permalink: knowledge-base-external-knowledge-bases-writing-a-transformation-specification.html
+permalink: knowledgeai-external-knowledge-bases-writing-a-transformation-specification.html
 indicator: both
 ---
 

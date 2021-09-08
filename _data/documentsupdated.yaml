@@ -304,7 +304,7 @@
         subpages:
           - subpagename: Getting Started
           - subpagename: Model Tester External APIs
-  - documentname: Knowledge Base
+  - documentname: KnowledgeAI
     pages:
       - pagename: Overview
       - pagename: External Knowledge Bases

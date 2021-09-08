@@ -1,11 +1,12 @@
 ---
 pagename: Common Settings & Tasks
 redirect_from:
+    - knowledge-base-common-settings-tasks.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
-permalink: knowledge-base-common-settings-tasks.html
+documentname: KnowledgeAI
+permalink: knowledgeai-common-settings-tasks.html
 indicator: both
 ---
 

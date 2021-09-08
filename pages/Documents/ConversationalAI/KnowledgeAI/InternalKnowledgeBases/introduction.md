@@ -1,12 +1,13 @@
 ---
 pagename: Introduction
 redirect_from:
+    - knowledge-base-internal-knowledge-bases-introduction.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
+documentname: KnowledgeAI
 subfoldername: Internal Knowledge Bases
-permalink: knowledge-base-internal-knowledge-bases-introduction.html
+permalink: knowledgeai-internal-knowledge-bases-introduction.html
 indicator: both
 ---
 

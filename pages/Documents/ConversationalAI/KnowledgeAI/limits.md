@@ -2,11 +2,12 @@
 pagename: Limits
 redirect_from:
     - knowledge-base-internal-knowledge-bases-limits.html
+    - knowledge-base-limits.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
-permalink: knowledge-base-limits.html
+documentname: KnowledgeAI
+permalink: knowledgeai-limits.html
 indicator: both
 ---
 

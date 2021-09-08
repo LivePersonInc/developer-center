@@ -1,12 +1,13 @@
 ---
 pagename: Best Practices
 redirect_from:
+    - knowledge-base-internal-knowledge-bases-best-practices.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
+documentname: KnowledgeAI
 subfoldername: Internal Knowledge Bases
-permalink: knowledge-base-internal-knowledge-bases-best-practices.html
+permalink: knowledgeai-internal-knowledge-bases-best-practices.html
 indicator: both
 ---
 

@@ -2,11 +2,12 @@
 pagename: Overview
 redirect_from:
     - conversation-builder-knowledge-base.html
+    - knowledge-base-overview.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
-permalink: knowledge-base-overview.html
+documentname: KnowledgeAI
+permalink: knowledgeai-overview.html
 indicator: both
 ---
 
@@ -47,9 +48,9 @@ If your tool of choice is a simple CSV sheet, you can [add an internal knowledge
 #### Starting from scratch
 If you’re starting a knowledge base from scratch, and you prefer to work directly in the Knowledge Base application, you can also do this. Simply [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html) and start [adding articles](knowledge-base-internal-knowledge-bases-articles.html).
 
-### Access Knowledge Base
+### Access KnowledgeAI
 
-**To access the Knowledge Base application**
+**To access the KnowledgeAI application**
 
 1. On the left sidebar in Conversational Cloud, click the <img style="width:30px" src="img/ConvoBuilder/icon_cb.png"> icon.
-2. In the Conversational AI dashboard, click **Knowledge Base**.
+2. In the Conversational AI dashboard, click **KnowledgeAI**.

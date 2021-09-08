@@ -2,18 +2,19 @@
 pagename: Knowledge Bases
 redirect_from:
     - knowledge-base-knowledge-bases.html
+    - knowledge-base-internal-knowledge-bases-knowledge-bases.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
+documentname: KnowledgeAI
 subfoldername: Internal Knowledge Bases
-permalink: knowledge-base-internal-knowledge-bases-knowledge-bases.html
+permalink: knowledgeai-internal-knowledge-bases-knowledge-bases.html
 indicator: both
 ---
 
 ### Add an internal knowledge base
 
-1. Access the Knowledge Base application as described [here](knowledge-base-overview.html#access-knowledge-base).
+1. Access the Knowledge Base application as described [here](knowledgeai-overview.html#access-knowledgeai).
 2. In the dashboard that lists your knowledge bases, click **Add Knowledge Base** in the upper-right corner.
 3. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**.
 4. Specify the following:
