@@ -22,7 +22,7 @@ Conversational messaging works best with content that’s as brief as possible. 
 Sometimes, however, these approaches aren’t possible. For example, you might be using your long-form content to support a web site, so you need to leave your CMS content as is. You might also need to leave your CMS schema unchanged. In cases like these, LivePerson offers a solution that automates some of the work of readying your content for conversational messaging:
 
 1. You identify the CMS content that you want to use.
-2. The content is propagated to the knowledge base, *automatically shortened and cleaned up*, and exposed in a dedicated field in the Knowledge Base UI, in read-only form.
+2. The content is propagated to the knowledge base, *automatically shortened and cleaned up*, and exposed in a dedicated field in the KnowledgeAI UI, in read-only form.
 
     {: .important}
     Step 2 only happens if the content has HTML tags or is more than 1,000 characters, i.e., if the content warrants shortening or clean-up.

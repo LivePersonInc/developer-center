@@ -49,7 +49,7 @@ To refresh on using entities with intents, check out the [Intents tutorial](tuto
 
 Stop words are words that are not used in the NLU to score an utterance. These words are essentially removed or ignored in the matching process.
 
-If you want to ADD stop words to your Knowledge Base you can in the Settings. These words will be ignored by our NLU algorithms. This is generally used for words or phrases like your company name or brand, which usually is not needed or helping the scoring of an utterance. Below is a list of default stop words:
+If you want to ADD stop words to your knowledge base, you can in the Settings. These words will be ignored by our NLU algorithms. This is generally used for words or phrases like your company name or brand, which usually is not needed or helping the scoring of an utterance. Below is a list of default stop words:
 
 * "a"
 * "about"
