@@ -21,7 +21,7 @@ For some practice with Agent Assist, complete the [Using Agent Assist](tutorials
 It takes up to 20 minutes for changes in Agent Assist configuration to take effect.
 
 ### Prerequisite knowledge
-To set up Conversation Orchestrator’s Agent Assist to suggest recommended articles, you must have some prerequisite knowledge of other applications in the Conversational AI suite. Most importantly, you must be able to use the Knowledge Base application to:
+To set up Conversation Orchestrator’s Agent Assist to suggest recommended articles, you must have some prerequisite knowledge of other applications in the Conversational AI suite. Most importantly, you must be able to use the KnowledgeAI application to:
 
 * Create a knowledge base
 * Create an article
@@ -36,10 +36,10 @@ For exposure to these Conversational AI applications and tasks, we recommend tha
 * [Getting Started with Bot Building](tutorials-guides-getting-started-with-bot-building-overview.html)
 * [Bot Groups & Other Techniques](tutorials-guides-bot-groups-other-techniques-overview.html)
 
-Both tutorial series focus primarily on using the Conversation Builder application for bot building. However, along the way, they also familiarize you with the Intent Manager and Knowledge Base applications.
+Both tutorial series focus primarily on using the Conversation Builder application for bot building. However, along the way, they also familiarize you with the Intent Manager and KnowledgeAI applications.
 
 ### High-level workflow
-1. In the Knowledge Base application, create the knowledge bases and the articles therein, using your content source or working from scratch.
+1. In the KnowledgeAI application, create the knowledge bases and the articles therein, using your content source or working from scratch.
 2. In the Conversation Orchestrator application, configure Agent Assist.
 
 ### Step 1: Create the knowledge bases and articles
@@ -58,7 +58,7 @@ Configuration of Agent Assist involves the following:
 4. Specify the maximum number of recommendations that Agent Assist will make. By default, this is 3.
 
 #### Verify the knowledge bases have been discovered and enabled
-By default, once you create a knowledge base in the Knowledge Base application, it is automatically discovered by Conversation Orchestrator and enabled for use.
+By default, once you create a knowledge base in the KnowledgeAI application, it is automatically discovered by Conversation Orchestrator and enabled for use.
 
 <img width="800" src="img/agentassist/verify_kbs.png">
 
@@ -72,7 +72,7 @@ A knowledge base is enabled by default as a convenience, saving you this step. H
 4. Verify that the knowledge bases are listed and enabled. At this point, you should also verify that the desired articles in the knowledge base are active. The knowledge base should have at least one active article.
 
 {: .important}
-If you subsequently delete a knowledge base in the Knowledge Base application, the next time you access this page, the list is updated automatically.
+If you subsequently delete a knowledge base in the KnowledgeAI application, the next time you access this page, the list is updated automatically.
 
 #### Assign skills to the knowledge bases
 After adding the knowledge bases, assign at least one skill to each of the knowledge bases. Once this is done, their articles can be recommended in conversations that are currently routed to the same skills. In this manner, you can control and configure which knowledge bases are candidates for recommendation to agents on a skill-by-skill basis. 

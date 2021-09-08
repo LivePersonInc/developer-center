@@ -17,7 +17,7 @@ If you have a CMS that you want to leverage in bot conversations or through Agen
 
 An external knowledge base is one where the content is authored and managed entirely within the external CMS application. Integrating with your CMS lets your content creators use familiar tools and workflows. You can integrate with any CMS that has the capability, i.e., an API connector. Notable examples include Salesforce and Zendesk. 
 
-Within the Knowledge Base application, an external knowledge base serves as a connector to the CMS. You can configure the knowledge base so that the content is selected and served:
+Within the KnowledgeAI application, an external knowledge base serves as a connector to the CMS. You can configure the knowledge base so that the content is selected and served:
 
 * [Using LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html). (**Recommended**) Use LivePerson’s AI to select the articles to respond to customer utterances.
 * [Without using LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html). Use the CMS' query and answer API for article suggestions/answers. (Every CMS can have a different name for this API.)
@@ -41,7 +41,7 @@ Keep in mind that, while knowledge bases do support URLs for video and audio, Vi
 
 ### Getting started with a draft KB
 
-Adding an external knowledge base can take some time, so the Knowledge Base application gives you the option to save a knowledge base as a "draft." This lets you step away from the configuration work and come back to it at a later time.
+Adding an external knowledge base can take some time, so the KnowledgeAI application gives you the option to save a knowledge base as a "draft." This lets you step away from the configuration work and come back to it at a later time.
 
 Once you start the process of adding the knowledge base -- i.e., you provide a name for the knowledge base -- if you then click **Cancel**, you are prompted to choose whether to save your work:
 

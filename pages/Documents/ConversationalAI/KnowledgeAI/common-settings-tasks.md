@@ -25,7 +25,7 @@ This topic contains information on settings and tasks that are common to both [e
 * **Intent Association**: If you've associated a domain with the knowledge base, this setting is read-only and says, "Domain Intents." However, if the knowledge base is an internal knowledge bases that uses [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents), this says, "Knowledge Base Intents," and it gives you the option to [convert](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) to Domain intents.
 * **Associated Domain**: If the knowledge base's **Intent Association** is "Domain Intents," this indicates the domain that's associated with the knowledge base.
 * **Language**: The language of the content.
-* **Public**: If you don't want other users in your Conversational Cloud account to be able to view and edit the knowledge base in the Knowledge Base application, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
+* **Public**: If you don't want other users in your Conversational Cloud account to be able to view and edit the knowledge base in the KnowledgeAI application, click the slider to Off. To facilitate the contributions of multiple persons to articles, the default value is On.
 
 ### Modify settings
 

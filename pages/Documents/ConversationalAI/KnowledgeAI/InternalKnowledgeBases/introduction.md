@@ -13,11 +13,11 @@ indicator: both
 
 ### What's an internal knowledge base?
 
-An internal knowledge base is a built-in knowledge base, i.e., one whose content you can create and manage directly within the Knowledge Base application. You can:
+An internal knowledge base is a built-in knowledge base, i.e., one whose content you can create and manage directly within the KnowledgeAI application. You can:
 
-* Start from scratch, and add articles directly within the Knowledge Base application.
-* Do a one-time import of articles from a CSV file, and maintain the articles thereafter within the Knowledge Base application.
-* Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within the Knowledge Base application.
+* Start from scratch, and add articles directly within KnowledgeAI.
+* Do a one-time import of articles from a CSV file, and maintain the articles thereafter within KnowledgeAI.
+* Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within KnowledgeAI.
 
 An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding.html) to [evaluate the articles](knowledgeai-using-intents-with-kbs.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
 
@@ -42,7 +42,7 @@ While the article's title represents the intent of the article, you can also spe
 
 <img style="width:300px" src="img/ConvoBuilder/kb_domain_intents1.png">
 
-Once you've created your domain of intents for the knowledge base, over in the Knowledge Base application, you create the knowledge base and specify the associated domain when you do: 
+Once you've created your domain of intents for the knowledge base, over in the KnowledgeAI application, you create the knowledge base and specify the associated domain when you do: 
 
 <img style="width:700px" src="img/ConvoBuilder/kb_domain_intents3.png">
 
@@ -85,7 +85,7 @@ An article is either active or inactive. Active articles are returned in knowled
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_validDates.png">
 
-In the Knowledge Base application, you can easily identify an article's current status:
+In the KnowledgeAI application, you can easily identify an article's current status:
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_articleStatus.png">
 

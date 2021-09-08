@@ -24,7 +24,7 @@ LivePerson's Conversational AI is a suite of integrated applications that work t
 
 - [Intent Manager](intent-manager-overview.html) is for building intents and entities that Conversation Builder uses to more accurately match consumer responses, and for tracking and maintaining intents in real-time.
 
-- [Knowledge Base](conversation-builder-knowledge-base.html) stores articles of information that can be accessed by bots in Conversation Builder.
+- [KnowledgeAI](knowledgeai-overview.html) lets you seamlessly leverage your own content to provide answers and engage in rich, automated conversations with consumers. Turn your existing content into conversational knowledge for consumers and agents.
 
 - [Bots Status](bots-status-overview.html) lets you monitor and manage your deployed bots.
 

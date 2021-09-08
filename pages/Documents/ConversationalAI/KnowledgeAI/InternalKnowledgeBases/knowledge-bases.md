@@ -14,7 +14,7 @@ indicator: both
 
 ### Add an internal knowledge base
 
-1. Access the Knowledge Base application as described [here](knowledgeai-overview.html#access-knowledgeai).
+1. Access the KnowledgeAI application as described [here](knowledgeai-overview.html#access-knowledgeai).
 2. In the dashboard that lists your knowledge bases, click **Add Knowledge Base** in the upper-right corner.
 3. On the **AI Enabled** tab of the window that appears, select **Internal Knowledge Base**.
 4. Specify the following:
@@ -64,7 +64,7 @@ The import file can contain the subset of HTML that’s discussed [here](knowled
 | image_url | The URL of an image. For more on this, see [here](knowledgeai-internal-knowledge-bases-articles.html#add-content-links). |
 | audio_url | The URL of an audio file. For more on this, see [here](knowledgeai-internal-knowledge-bases-articles.html#add-content-links). |
 | video_url | The URL of a video file. For more on this, see [here](knowledgeai-internal-knowledge-bases-articles.html#add-content-links). |
-| category | Assigning a category lets you [filter and find articles based on categories](knowledgeai-internal-knowledge-bases-articles.html#find-articles-with-a-specific-category) in the Knowledge Base application. |
+| category | Assigning a category lets you [filter and find articles based on categories](knowledgeai-internal-knowledge-bases-articles.html#find-articles-with-a-specific-category) in the KnowledgeAI application. |
 | intentName | Applicable if you're using Domain intents, not Knowledge Base intents (see [here](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents) for an understanding of the two). This is the intent associated with the article. |
 | validFrom | Specify the date and time on which the article becomes active in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledgeai-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
 | validTo | Specify the date and time on which the article becomes inactive in Epoch time in milliseconds. For more on active versus inactive articles, see [here](knowledgeai-internal-knowledge-bases-introduction.html#active-versus-inactive-articles). |
@@ -73,7 +73,7 @@ The import file can contain the subset of HTML that’s discussed [here](knowled
 
 When you convert Knowledge Base intents to Domain intents, the system takes each article title in the knowledge base and creates an intent in Intent Manager in the domain that you specify. Additionally, all the intent qualifiers in the articles are converted to training phrases for their respective intents in Intent Manager.
 
-From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the Knowledge Base application to the Intent Manager application.
+From a workflow perspective, the process of testing the knowledge base and adding/changing training phrases moves from the KnowledgeAI application to the Intent Manager application.
 
 {: .important}
 Before taking this action, be certain about doing so. Once you convert the intents, you no longer see and can no longer use Knowledge Base intents in the affected knowledge base. Also, this action irreversibly modifies the domain that you select as described above.
