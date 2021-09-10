@@ -319,7 +319,7 @@ A button at the bottom of a rich card.
   "elements": [
     {
       "type": "image",
-      "url": "https://d1hryyr5hiabsc.cloudfront.net/web2020/img/resources/rep-great-ai-divide@1x.jpg",
+      "url": "https://d1hryyr5hiabsc.cloudfront.net/web2020/img/resources/rep-great-ai-divide@1x.jpg"
     },
     {
       "type": "text",
