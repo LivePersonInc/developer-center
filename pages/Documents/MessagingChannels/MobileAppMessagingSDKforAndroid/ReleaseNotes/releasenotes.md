@@ -13,6 +13,31 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.7.1
+
+**Release date:** September 10, 2021
+
+# Overview
+Android Mobile Messaging SDK version 5.7.1 release includes Rich Content Push Notification support for Proactive outbound messaging and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.7.1 uses:
+- Minimum API version 21
+- Compile API version 30
+- Target API version 30
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.0”
+
+**(unchanged from version 5.7.0)**
+
+# Bugs Fixed:
+- Link previews for consumer messages are not hidden even when the feature is disabled.
+
+# Enhancements:
+- [Proactive to InApp messaging](mobile-app-messaging-sdk-for-android-advanced-features-proactive-and-ivr-deflection-to-app-messaging.html) feature now has extended to support Rich Content Push Notification messages.
+
+
 # Android Messaging SDK - Version 5.7.0
 
 **Release date:** July 19, 2021
@@ -26,6 +51,8 @@ The Android Mobile Messaging SDK version 5.7.0 uses:
 - Compile API version 30
 - Target API version 30
 - Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.0”
 
 # New Feature:
 
@@ -707,6 +734,31 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
 
+# Android Messaging SDK - Version 4.9.1
+
+**Release date:** September 07, 2021
+
+# Overview
+Android Mobile Messaging SDK version 4.9.1 release includes Rich Content Push Notification support for Proactive outbound messaging and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.9.1 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+- Structured Content Library “com.liveperson.android:lp_structured_content:1.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:1.0.1”
+
+**(unchanged from version 4.9.0)**
+
+# Enhancements:
+- [Proactive to InApp messaging](mobile-app-messaging-sdk-for-android-advanced-features-proactive-and-ivr-deflection-to-app-messaging.html) feature now has extended to support Rich Content Push Notification messages.
+
+# Bugs Fixed:
+- Link previews for consumer messages are not hidden even when the feature is disabled.
+
+
 # Android Messaging SDK - Version 4.9.0
 
 **Release date:** July 12, 2021
@@ -720,6 +772,8 @@ The Android Mobile Messaging SDK version 4.9.0 uses:
 - Compile API version 28
 - Target API version 28
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+- Structured Content Library “com.liveperson.android:lp_structured_content:1.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:1.0.1”
 
 **(unchanged from version 4.8.1)**
 
