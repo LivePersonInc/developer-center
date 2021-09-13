@@ -30,7 +30,7 @@ This topic contains information on settings and tasks that are common to both [e
 ### Modify settings
 
 1. Open the knowledge base.
-2. Click **Settings** in the upper-left corner.
+2. Click **Settings** in the menu in the upper-left corner.
 3. Modify the settings, and click **Update**.
 
 ### Find an article to edit
@@ -114,7 +114,7 @@ Before you delete a knowledge base, ensure it isn't being used in any [Knowledge
 
 **To delete a knowledge base**
 1. Open the knowledge base.
-2. Click **Settings** in the upper-left corner.
+2. Click **Settings** in the menu in the upper-left corner.
 3. Scroll down and click **More Options**.
 4. In the **Delete Knowledge Base** section, click <img style="width:25px" src="img/ConvoBuilder/icon_kb_delete.png"> (Delete icon).
 5. In the confirmation dialog, click **Yes**.

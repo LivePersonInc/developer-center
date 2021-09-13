@@ -32,9 +32,6 @@ And you likewise associate a domain with an internal knowledge base when you [ad
 
 Associating the domain gives you access to the domain's intents, so you can associate them with the articles. This is the next step in connecting your content to intents.
 
-{: .important}
-When you are adding the knowledge base, take care when selecting the domain. You can't change the domain after adding the knowledge base.
-
 ### Associate intents with articles
 
 After you've added a knowledge base that is associated to a domain, configure the articles so that each is linked to the appropriate intent.
@@ -45,7 +42,7 @@ You don’t need to link your articles to intents right away, as the **Intent** 
 
 ### Tune a knowledge base
 
-After you've added your content and linked it to intents, tune the knowledge base. Tuning involves:
+After you've added your content and linked it to intents, tune the knowledge base. At a high-level, tuning involves:
 
 1. Performing a search using a consumer utterance.
 2. Reviewing the results.
@@ -53,27 +50,27 @@ After you've added your content and linked it to intents, tune the knowledge bas
 
 **To tune a knowledge base**
 
-1. Open the knowledge base.
-2. In the **Question Tester** on the right, specify the following:
+1. Open the knowledge base, and click **Articles** in the menu in the upper-left corner.
+2. In the **Answer Tester** on the right, specify the following:
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test1.png">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test1.png">
 
     * **Question**: Enter the consumer utterance for which you want to find matching articles.
     * **Search Mode**: Select the type of search to perform. For explanations of each search mode, see *Search modes* farther below in this topic.
-    * **Confidence**: Select the NLU confidence threshold that an article must meet for it to be returned as a result. For more on thresholds, see *Scoring and thresholds* farther below in this topic.
+    * **Threshold**: Select the NLU confidence threshold that an article must meet for it to be returned as a result. For more on thresholds, see *Scoring and thresholds* farther below in this topic.
     * **# of Results**: Select how many results to return.
     * **Article Status**: Select the status of the artice, either Active, Inactive, or All. This option is only available for internal knowledge bases.
 
-3. Click **Find Answer**.
+3. Click **Find Answers**.
 4. Review the results under **Matched Answers**.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test2.png">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test2.png">
 
 5. You can click on an article title to see the article, and toggle between this and its JSON.
 
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test3.png">
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test4.png">
-    <img class="fancyimage" style="width:400px" src="img/ConvoBuilder/kb_test5.png">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test3.png">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test4.png">
+    <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test5.png">
 
 6. Based on the results, adjust the training phrases for the intents in the associated domain if needed.
 
