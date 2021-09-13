@@ -37,6 +37,11 @@ The Android Mobile Messaging SDK version 5.7.1 uses:
 # Enhancements:
 - [Proactive to InApp messaging](mobile-app-messaging-sdk-for-android-advanced-features-proactive-and-ivr-deflection-to-app-messaging.html) feature now has extended to support Rich Content Push Notification messages.
 
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
+
 
 # Android Messaging SDK - Version 5.7.0
 
@@ -73,6 +78,11 @@ DatePicker allows brand agents to send the Structured Content to consumers to ch
 - Support bold and italic in system messages.
 - Support five additional languages. (Malaysian, Arabic, French-Canadian, Indonesian, Latin American Spanish)
 - Optimized [History Control APIs](mobile-app-messaging-sdk-for-android-sdk-apis-control-history-apis.html#important-notes) to allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen.
+
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
 
 
 # Android Messaging SDK - Version 5.6.0
@@ -758,6 +768,11 @@ The Android Mobile Messaging SDK version 4.9.1 uses:
 # Bugs Fixed:
 - Link previews for consumer messages are not hidden even when the feature is disabled.
 
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
+
 
 # Android Messaging SDK - Version 4.9.0
 
@@ -795,6 +810,11 @@ DatePicker allows brand agents to send the Structured Content to consumers to ch
 - Support bold and italic in system messages.
 - Support five additional languages. (Malaysian, Arabic, French-Canadian, Indonesian, Latin American Spanish)
 - Optimized [History Control APIs](mobile-app-messaging-sdk-for-android-sdk-apis-control-history-apis.html#important-notes) to allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen.
+
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
 
 
 # Android Messaging SDK - Version 4.8.1
