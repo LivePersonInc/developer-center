@@ -23,7 +23,7 @@ An external knowledge base with LivePerson AI:
 When adding an external knowledge base with LivePerson AI, follow this high-level workflow:
 
 1. In [Intent Manager](intent-manager-overview.html), create the [domain](intent-manager-key-terms-concepts.html#domains) and the [intents](intent-manager-key-terms-concepts.html#intents) therein.
-2. In Knowledge Base:
+2. In KnowledgeAI:
     1. Add the external knowledge base. During this step, you’ll specify the domain that you created in step 1.
     2. In the external knowledge base that you added, associate each article with an intent in the domain. 
     3. [Train](knowledgeai-using-intents-with-kbs.html) the articles to match consumer utterances.

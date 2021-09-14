@@ -25,7 +25,7 @@ An internal knowledge base always makes use of a [Natural Language Understanding
 
 When adding an internal knowledge base, follow this workflow:
 
-1. In Knowledge Base:
+1. In KnowledgeAI:
     1. [Add the internal knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html). In this step you can import articles from a CSV file or link to a Google sheet that contains them.
     2. [Add the articles](knowledgeai-internal-knowledge-bases-articles.html) if necessary.
     3. [Train](knowledgeai-using-intents-with-kbs.html) the articles to match consumer utterances.
@@ -78,7 +78,7 @@ If you need to support special language characters (e.g., ö, ü, ß), and you�
 
 ### Active versus inactive articles
 
-An article is either active or inactive. Active articles are returned in knowledge base searches in Knowledge Base integrations while inactive articles aren't returned.
+An article is either active or inactive. Active articles are returned in knowledge base searches in KnowledgeAI integrations while inactive articles aren't returned.
 
 * An article is *active* if its **Enable Article** setting is turned on. If the article has **Valid From** and/or **Valid To** dates (optional, specified in [UTC](https://www.timeanddate.com/worldclock/timezone/utc)), it is only active during the specified time period. If no dates are specified, an enabled article is always active.
 * An article is *inactive* if its **Enable Article** setting is turned off. It's also inactive if the setting is turned on, but the current date and time in UTC falls outside the time period specified by **Valid From** and/or **Valid To**.

@@ -22,7 +22,7 @@ An external knowledge base without LivePerson AI:
 
 When adding an external knowledge base without LivePerson AI, follow this high-level workflow:
 
-1. In Knowledge Base: 
+1. In KnowledgeAI: 
     1. Add the external knowledge base.
     2. Use the Search tool to test the integration.
 2. Expose the articles to consumers by:
@@ -67,12 +67,13 @@ After you've add an external knowledge base that doesn't use AI, you can test th
 **To test the CMS integration**
 
 1. Open the knowledge base.
+2. Click **Articles** in the menu in the upper-left corner.
 
-    By default, the Articles tab is displayed. Initially, it doesn’t show any metadata or content because, with this type of external knowledge base (one without LivePerson AI), only configuration information is stored within Knowledge Base. The content remains in the CMS.
+    Initially, the **Articles** page doesn’t show any metadata or content because, with this type of external knowledge base (one without LivePerson AI), only configuration information is stored within KnowledgeAI. The content remains in the CMS.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_no_ai_test_1.png">
 
-2. On the Articles tab, enter an utterance in the search box at the top, and press Enter.
+2. Enter an utterance in the search box at the top, and press Enter.
 
     This performs a search against the CMS.
     
