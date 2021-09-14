@@ -304,6 +304,88 @@ If your original dialog involves *multiple* uploads--with different success and 
 
 `file_upload_success:*`
 
+### Dynamic Routing interactions
+
+Dynamic Routing is the intelligent routing of consumer conversations to the most qualified agents -- bot or human -- based on intent data and other contextual data: consumer inputs, past interactions, loyalty tier, and other attributes. Dynamic routing makes possible highly personal consumer journeys and routing at scale. It is a key architectural component of Conversation Orchestrator, one of LivePerson’s Conversational AI applications. For an in-depth introduction to Dynamic Routing, see [here](conversation-orchestrator-dynamic-routing-overview.html).
+
+Conversation Builder includes a **Dynamic Routing interaction** that significantly simplifies the usage of the Dynamic Routing capability. While there are other methods of implementing Dynamic Routing, using this interaction instead is recommended for its ease of use and lack of code. 
+
+{: .important}
+The Dynamic Routing interaction is only available to brands who log in with single sign-on via Conversational Cloud. It isn’t available if you log into Conversation Builder directly. <br><br>
+This section provides basic information on Conversation Builder’s Dynamic Routing interaction. For detailed information on using this interaction, see the Conversation Orchestrator getting started documentation that’s [here](conversation-orchestrator-dynamic-routing-getting-started.html).
+
+#### How the interaction works
+
+A Dynamic Routing interaction does the following:
+
+1. It automatically performs an `askMaven` call to get the next routing actions for the current conversation.
+
+    [askMaven](conversation-builder-scripting-functions-askmaven.html) is the Conversation Builder JavaScript function that conveniently wraps Conversation Orchestrator’s Next Actions API. You don’t need to manually add this call; the Dynamic Routing interaction automates the logic.
+
+2. It sets the following in the Conversation Orchestrator namespace:
+
+    * **orchestrator.channel**: The channel in use
+    * **orchestrator.userMessage**: The most recent user message
+    * **orchestrator.intent**: The ID of the most recently matched Dialog Starter intent
+
+3. It iterates through the next actions returned by the `askMaven` call and automatically performs all the actions in the order they were returned. For example, it might send a message to the consumer, and then transfer the conversation to a particular skill. A next action can be one of:
+
+    * Send a message
+    * Route to skill
+    * Route to agent
+
+    **Note**: The end result of this interaction is always a transfer. If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. For this reason, specifying the fallback skill in the interaction is required.
+
+#### Prerequisites
+
+Before using the Dynamic Routing interaction, make sure that Conversation Orchestrator’s Conversation Context Service is enabled for your account, as described [here](conversation-builder-scripting-functions-manage-the-conversation-context-service.html#getting-started). If your account is relatively new, it’s likely that this was done automatically for you by LivePerson when your account was set up. However, brands with older accounts will need to enable this manually.
+
+Enabling the Conversation Context Service for your account is necessary because when the Dynamic Routing interaction performs the `askMaven` call, the CCS is used to store and pass some information.
+
+#### Add a Dynamic Routing interaction
+
+1. Select the interaction just above where you want to perform the dynamic routing, and click <img style="width:30px" src="img/ConvoBuilder/icon_dynrouting.png"> (Dynamic Routing) on the interactions toolbar.
+
+    <img class="fancyimage" style="width:600px" src="img/ConvoBuilder/integrations_dynrouting.png">
+
+2. In the interaction, click **Manage routing policies**. As a convenience, this link takes you to Conversation Orchestrator, where you can define and prioritize your routing policies if you haven’t done so already. For help with this step, see [here](conversation-orchestrator-dynamic-routing-managing-routing-policies.html). 
+3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
+4. On the **Basic** tab, specify the following:
+
+    * **Fallback skill id**: Required. If the `askMaven` call returns just a next action of “send message,” doesn’t return any next actions, returns an error, or fails for some reason, this is the ID of the agent skill to which the conversation is transferred. You can specify the ID using a bot context variable like {botContext.skillId}, or you can enter a direct, numeric value.
+    * **Fallback skill name**: Enter the name of the agent skill that you specified in the **Fallback skill id** setting. Entering the name provides you with something display-friendly and “readable” by which to readily understand which skill is being used (since the skill ID is a number).
+
+5. Select the **Advanced** tab, and specify the following:
+
+    * **Escalation message**: This is the message to send to the consumer before transferring the conversation as determined by the next actions, for example, “Hold on while I connect you with a suitable agent who can assist you.” You can enter static text, use a variable, or both. If you need to insert a new line, use an escape character like so: \\\\n.
+
+6. Click **Save**.
+
+    Optionally, you can add Pre-Process or Post-Process code to the interaction to override standard behaviors. For example, you might want to direct the flow to a different interaction, not to the Dynamic Routing interaction, based on certain conditions. You could do this in the Pre-process Code.
+
+#### Using the Dynamic Routing bot
+
+If you are setting up a new routing or concierge bot, it might be helpful to use the Dynamic Routing bot. The bot already includes the Dynamic Routing interactions and additional, out-of-the-box functionality, such as routing by intent. For more on this, see [here](conversation-orchestrator-dynamic-routing-getting-started.html).
+
+#### FAQs
+
+**How many Dynamic Routing interactions can I add within a bot?**
+
+You can add just one.
+
+**How does disambiguation work when a Dynamic Routing interaction is used?**
+
+Disambiguation is the responsibility of the bot, so if you want to let the consumer clarify their intent before the flow moves to the Dynamic Routing interaction, implement a [Disambiguation dialog](conversation-builder-dialogs-disambiguation-dialogs.html).
+
+**Why can’t I add custom rules to the interaction?**
+
+As mentioned above, the end result of this interaction is always a transfer. Custom rules that control the next action can’t be specified because the transfer happens asynchronously.
+
+**Can I alter the behavior of the askMaven call that’s performed by the Dynamic Routing interaction?**
+
+No, this can’t be done. If you’d like to do this, the Dynamic Routing interaction isn’t the best solution. Use one of the more manual methods described [here](conversation-orchestrator-dynamic-routing-getting-started-legacy.html).
+
+
 ### Apple Pay interactions
 
 **For Apple Business Chat only.**
