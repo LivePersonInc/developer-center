@@ -57,7 +57,11 @@ Use a Knowledge AI interaction in a bot when you want to search a knowledge base
 
 ![Carousel](img/ConvoBuilder/knowledge_ai.gif)
 
-A common use case for the Knowledge AI interaction is within a Fallback dialog, where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
+A common use case for the Knowledge AI interaction is within a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html), where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
+
+Alternatively, you might have an FAQ bot that is driven by a knowledge base full of articles.
+
+Powering bots with intelligent answers can increase containment: It helps to ensure that the conversation stays between the bot and the consumer and that the consumer's need is resolved by the bot.
 
 #### How the Knowledge AI search works
 
