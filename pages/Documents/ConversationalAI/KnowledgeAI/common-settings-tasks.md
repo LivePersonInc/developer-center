@@ -39,7 +39,7 @@ You can quickly search for and find an article that you want to edit.
 
 **To find an article to edit**
 
-1. Open the knowledge base.
+1. Open the knowledge base, and click **Articles** in the menu in the upper-left corner.
 2. In the Search box at the top of the page, enter a word or phrase that’s contained in the article's content (title, summary, detail, tags).
 
     {: .important}
@@ -88,9 +88,9 @@ Note the following:
 
 1. Open the knowledge base, and use the Search box at the top of the page to find the article.
 
-    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article4.png">
+2. Click the <img style="width:25px" src="img/ConvoBuilder/kb_3dot_icon.png"> icon that's displayed on the right, and select **Content Versions** from the menu that appears.
 
-2. Click the <img style="width:25px" src="img/ConvoBuilder/icon_restore_article.png"> icon that's displayed on the right.
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/kb_restore_article5.png">
     
     The system displays the current version and the previous version of the article’s content. The date shown for each version reflects when it was created. The name shown is the user who created that version of the article.
     

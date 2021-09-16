@@ -56,12 +56,12 @@ After you've added your content and linked it to intents, tune the knowledge bas
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test1.png">
 
     * **Question**: Enter the consumer utterance for which you want to find matching articles.
-    * **Search Mode**: Select the type of search to perform. For explanations of each search mode, see *Search modes* farther below in this topic.
+    * **Search mode**: Select the type of search to perform. For explanations of each search mode, see *Search modes* farther below in this topic.
     * **Threshold**: Select the NLU confidence threshold that an article must meet for it to be returned as a result. For more on thresholds, see *Scoring and thresholds* farther below in this topic.
-    * **# of Results**: Select how many results to return.
-    * **Article Status**: Select the status of the artice, either Active, Inactive, or All. This option is only available for internal knowledge bases.
+    * **# of results**: Select how many results to return.
+    * **Article status**: Select the status of the artice, either Active, Inactive, or All. This option is only available for internal knowledge bases.
 
-3. Click **Find Answers**.
+3. Click **Get Answers**.
 4. Review the results under **Matched Answers**.
 
     <img class="fancyimage" style="width:500px" src="img/ConvoBuilder/kb_test2.png">

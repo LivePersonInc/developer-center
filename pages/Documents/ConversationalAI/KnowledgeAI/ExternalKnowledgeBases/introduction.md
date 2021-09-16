@@ -39,25 +39,25 @@ In general, messages are short. Sending content that’s too long or complex can
 
 Keep in mind that, while knowledge bases do support URLs for video and audio, Video and Audio [statements](conversation-builder-interactions-statements.html) currently aren’t supported by Conversational Cloud. For this reason, they can’t be added to dialogs in Conversation Builder. As an alternative for video, you can use a Text statement that includes a video URL as a link.
 
-### Getting started with a draft KB
+### Getting started: Saving an incomplete knowledge base
 
-Adding an external knowledge base can take some time, so the KnowledgeAI application gives you the option to save a knowledge base as a "draft." This lets you step away from the configuration work and come back to it at a later time.
+Adding an external knowledge base can take some time, so the KnowledgeAI application gives you the option to save a knowledge base in an incomplete state. This lets you step away from the configuration work and come back to it at a later time.
 
 Once you start the process of adding the knowledge base -- i.e., you provide a name for the knowledge base -- if you then click **Cancel**, you are prompted to choose whether to save your work:
 
 <img style="width:350px" src="img/ConvoBuilder/kb_ext_save_draft_1.png">
 
-Click **Yes** to save a draft.
+Click **Yes** to save the knowledge base.
 
-You can find your "draft" external knowledge bases listed above your other knowledge bases in the main dashboard.
+You can find your incomplete external knowledge bases listed along with your other knowledge bases on the dashboard. They're given an "Incomplete" status to indicate the the configuration is incomplete.
 
-<img style="width:600px" src="img/ConvoBuilder/kb_ext_save_draft_2.png">
+<img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_2.png">
 
-A knowledge base is considered no longer "draft" once all required fields are completed for the first time.
+A knowledge base is considered no longer "Incomplete" once all required fields are completed for the first time.
 
 {: .important}
-Keep in mind that completing the initial setup of a knowledge base, thereby moving out of "draft" status, doesn't indicate a proper configuration. You must test the knowledge base to verify this. Additionally, be aware that a knowledge base never returns to "draft" status if you subsequently remove or alter required information.
+Keep in mind that completing the initial setup of a knowledge base, thereby moving out of "Incomplete" status, doesn't indicate a proper configuration. You must test the knowledge base to verify this. Additionally, be aware that a knowledge base never returns to "Incomplete" status if you subsequently remove or alter required information.
 
-To delete a draft knowledge base, click the knowledge base's 3-dot icon (on the right), and select **Delete**.
+To delete an incomplete knowledge base, click the knowledge base's 3-dot icon (on the right), and select **Delete**.
 
-<img style="width:175px" src="img/ConvoBuilder/kb_ext_save_draft_3.png">
+<img style="width:500px" src="img/ConvoBuilder/kb_ext_save_draft_3.png">
