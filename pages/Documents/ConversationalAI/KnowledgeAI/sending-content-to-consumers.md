@@ -10,7 +10,16 @@ permalink: knowledgeai-sending-content-to-consumers.html
 indicator: both
 ---
 
-After you’ve added a knowledge base and finalized its content, you can expose its articles to consumers by:
+After you’ve added a knowledge base and finalized its content, you can expose its articles to consumers or agents as desired.
 
-* **Conversation Builder**: Adding a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) within a bot
-* **Conversation Orchestrator**: Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
+**For consumers**
+
+In **Conversation Builder**, add a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) within a bot.
+
+A common use case for a Knowledge AI interaction is within a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html), where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
+
+Alternatively, you might have an FAQ dialog or bot that is driven by a knowledge base full of articles. For an example use case that takes advantage of meta intents to capture all FAQ questions, check out the tutorial that's [here](tutorials-guides-bot-groups-other-techniques-meta-intents-knowledge-bases.html).
+
+**For agents**
+
+Save agents time by offering articles as recommended answers to consumer questions. To do this, add a Knowledge Base integration within [Agent Assist](conversation-orchestrator-agent-assist-overview.html).
