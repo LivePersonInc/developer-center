@@ -14,7 +14,7 @@ After you’ve added a knowledge base and finalized its content, you can expose 
 
 **For consumers**
 
-In **Conversation Builder**, add a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) within a bot.
+In Conversation Builder, add a [Knowledge AI interaction](conversation-builder-interactions-integrations.html#knowledge-ai-interactions) within a bot.
 
 A common use case for a Knowledge AI interaction is within a [Fallback dialog](conversation-builder-dialogs-fallback-dialogs.html), where you want to direct a consumer utterance that didn’t match a dialog starter into a knowledge base search. If an appropriate search result is found, it can be displayed. If no result is found, you might then display a "sorry" message or transfer the conversation to a human agent.
 
