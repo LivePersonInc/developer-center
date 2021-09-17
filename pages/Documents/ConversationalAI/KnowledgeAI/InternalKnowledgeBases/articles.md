@@ -22,7 +22,7 @@ An article is a focused piece of content (a message) on a single topic that you 
 
 1. Open the knowledge base.
 2. Click **Articles** in the menu in the upper-left corner.
-3. Click **Add New** in the upper-right corner.
+3. Click **Add article** in the upper-right corner.
 4. Specify the following basic settings:
     * **Title**: Enter a complete sentence or question, e.g., "I can't remember my password." or, "Do we have a company org chart?" See farther below on this page for best practices.
     * **Intent Qualifiers**: This field is only shown if you're using [Knowledge Base intents](knowledgeai-internal-knowledge-bases-introduction.html#domain-intents-versus-knowledge-base-intents). Intent qualifiers are alternative ways that people ask for the article, i.e., alternative ways to communicate the same intent. See farther below on this page for best practices. **Note**: An intent qualifier can't be used more than once, i.e., in more than one article.
