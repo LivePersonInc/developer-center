@@ -73,7 +73,7 @@ After you've add an external knowledge base that doesn't use AI, you can test th
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_no_ai_test_1.png">
 
-2. Enter an utterance in the search box at the top, and press Enter.
+2. Enter an utterance in the **Answer Tester** on the right, and click **Get answers**.
 
     This performs a search against the CMS.
     
