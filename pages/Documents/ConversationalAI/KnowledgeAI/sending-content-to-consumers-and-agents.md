@@ -1,12 +1,13 @@
 ---
-pagename: Sending Content to Consumers
+pagename: Sending Content to Consumers and Agents
 redirect_from:
     - knowledge-base-sending-content-to-consumers.html
+    - knowledgeai-sending-content-to-consumers.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: KnowledgeAI
-permalink: knowledgeai-sending-content-to-consumers.html
+permalink: knowledgeai-sending-content-to-consumers-and-agents.html
 indicator: both
 ---
 
