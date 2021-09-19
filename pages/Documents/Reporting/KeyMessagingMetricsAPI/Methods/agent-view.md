@@ -138,7 +138,7 @@ _agentViewRecords info_
 | transfers | The number of escalated conversation with Skill or Agent reason, within the selected timeframe.| Long |
 | backToQueue| The number conversations that were transferred back to queue within the selected timeframe.| Long |
 | csat | The ratio bwtween the number of questions which were answered with 4 or 5 (top two boxes) to the total responses submitted by consumers to a CSAT question within the selected timeframe.| Double |
-| avgConversationsDuration| The average handling time of conversations in the selected timeframe.| Long |
+| avgConversationsDuration| The average handling time of closed conversations in the selected timeframe.| Long |
 | onlineDuration | Agent online duration within the selected timeframe.| Long  | Freshness: 1 minute, does not include bots
 | transferRate | transfers / concludedConversations within the selected timeframe.| Double
 | closeRate | closedConversations / concludedConversations within the selected timeframe.| Double
