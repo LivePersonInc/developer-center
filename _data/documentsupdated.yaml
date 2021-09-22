@@ -861,38 +861,38 @@
             - subpagename: Messaging Skill Segment
             - subpagename: Messaging Agent Segment
             - subpagename: Messaging Queue Health By Group
-      - pagename: Appendix
-  - documentname: Operational Realtime API
-    basedomain: https://{domain}/operations/api/account/{accountID}
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Queue Health
-          - subpagename: Engagement Activity
-          - subpagename: Agent Activity
-          - subpagename: Current Queue State
-          - subpagename: SLA Histogram
-  - documentname: Outbound Reporting API
-    pages:
-      - pagename: Overview
-  - documentname: Key Messaging Metrics API
-    basedomain: https://{domain}/manager_workspace/api/account/{accountID}
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Metrics
-          - subpagename: Historical
-          - subpagename: Agent View
-  - documentname: Agent Activity API
-    basedomain: https://{domain}/api/account/{accountID}
-    pages:
-      - pagename: Overview
-      - pagename: Methods
-        subpages:
-          - subpagename: Get Status Changes
-      - pagename: Error Codes
+        - pagename: Appendix
+    - documentname: Operational Realtime API
+      basedomain: https://{domain}/operations/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Queue Health
+            - subpagename: Engagement Activity
+            - subpagename: Agent Activity
+            - subpagename: Current Queue State
+            - subpagename: SLA Histogram
+    - documentname: Outbound Reporting API
+      pages:
+        - pagename: Overview
+    - documentname: Key Messaging Metrics API
+      basedomain: https://{domain}/manager_workspace/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Metrics
+            - subpagename: Historical
+            - subpagename: Agent View
+    - documentname: Agent Activity API
+      basedomain: https://{domain}/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Status Changes
+        - pagename: Error Codes
 
 - categoryname: Messaging Channels
   image: agent-interaction
