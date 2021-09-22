@@ -251,7 +251,7 @@ Interaction support varies by channel. Use this page to understand whether an in
 | Knowledge AI integration | Yes - Simple/Custom answer layout only |
 | Apple Pay integration | No |
 | Universal | No | 
-| survey interactions | No |
+| survey interactions | Yes |
 
 ### Web messaging
 

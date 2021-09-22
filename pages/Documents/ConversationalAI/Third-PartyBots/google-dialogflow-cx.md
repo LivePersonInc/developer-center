@@ -20,9 +20,9 @@ See the [Getting Started](bot-connectors-getting-started.html) guide first to co
 
 You will be presented with following screen to complete the Vendor Settings in order to add bot connector.
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowcx/wizard.png">
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard.png">
 
-Figure 1.1 Showing the configuration that needed to be filled
+Figure 1.1 Dialogflow CX Vendor Step
 
 The following Dialogflow CX information should be provided to LivePerson:
 
@@ -50,6 +50,12 @@ The following Dialogflow CX information should be provided to LivePerson:
     <td>Dialogflow CX agent id</td>
     <td>abcderwe-dc8e-4a83-b2f2-369089753c42</td>
   </tr>
+  </tr>
+    <tr>
+    <td>Environment ID</td>
+    <td>Dialogflow CX environment id (optional)</td>
+    <td>abc4fff1-380c-4c8a-afbb-0289bc4e1234</td>
+  </tr>
   <tr>
     <td>User email address</td>
     <td>Email address of the Google Service account</td>
@@ -65,41 +71,25 @@ The following Dialogflow CX information should be provided to LivePerson:
     <td>Private key of the IAM Account, please keep the formatting as provided by Google</td>
     <td>-----BEGIN PRIVATE KEY-----
         XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        WQpmxLe3h4XeslUI7Eowz2sypu72Q9+j1xOEtc9asl37wLac/zo0xy7wNxnDau+x
-        rOOTX/VAniuByeZ98mIRZQBxz6qInJ4el8PFT7eJbC0+IMfiljqrMDqy/N4CR2gE
-        qqCVtY4kEWGr6a5IA/IBFENFPlADbY/TRBbInvakA1iqWj5yCOslGo7SmwleuJ6U
-        kUbjdmBI937k0AFWrbKAjNXLuF174Qx7B7NQm9G6iud+nGu0XwH2g2FPEQkvA8YL
-        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        VZ10hvsFAgMBAAECggEAOEnJpSNijvHCbV1GIBInxpqNiMCENf+ZDMeQqs9Tbdmh
-        CxQrS/pls2bkn6s/VNBNfY7GU9Sn7qgEzUycvu3SpID95vfQ+T4hrk5hLpKijQr9
-        Wv8aM8eqy0/I1ECn6Lb98WUaUfQVj7YctawoNdTjhxij0xCxY1hmVVQ4CdTf0av6
-        irukA5ySYPR3pahSMYwfnCgnRMLtLFX2NqvMFbUvwDpYJGE6h9k+Pv74Uyw3heEN
-        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        K3ASHyQ9v77+F1KaqR/wog3LUzSJtD0qLRVt0pmyKQKBgQDkvS8a29/dJvlQL+AY
-        NekZpgZ+zNXTPqiXRXyfvDBBJO4eFd4XQlZPCT/Iw5gT9mWzOL9WKxs0ImRrRojZ
-        asOn+BlXfeVZWEpmpvfXYnKwgpm2+sqOjyRhGEovC8yLA8PaDWKgtwPpb+MCzAF3
-        zTMT8UdCE4IFmusDxGIypQjG1wKBgQC4EQMru2806Jadd037TLFY7FoUB5JJPVA1
-        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        ZSnKi8tBU1u8+JY/sWniyyahFNDMDiKkmEd6M/DsM2N/RQZeqXi5R9HSC3INn175
-        bDP7tpg9gwKBgHtby9ugWMrcCfjE2QY1jNDYSQh5T5ftYt6yCtPameuIDyMKiAvj
-        KsjVJCER2yJo79AH+qht9u3W3nE8SPF4MqyTkJcuvlHA298gjOkLnu6ygFO+TR80
-        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        lStr0CKK42MErzQxFzO8VMg982DG/mW+TpaaMRP7yxXVLxUh3/d9aoq+fbzVnudr
-        Y13nJnR6+RPj8Qv2zP39ClwCfGx8rkw9SOMl8pL11kD4Zc1VHzzkDytFmOge2cDO
-        XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        IFRnWV9jafiw2t92CY9mRzqF5puk8iRtMiCRjy3u4L+RHdvYkZPqO9CZUPvq9t0q
-        q+J780stgv56BE7TAuIjRPkN+GPcqnm69qQvJdzSPc5dw5ZmM8b5TtIvlipzjU89
-        BSioVh/nHPX2QX2MKSbue+k=
+        BSioVh/nHPX2QX2MKSbue+k=<br /> 
         -----END PRIVATE KEY-----</td>
   </tr>
   </tbody>
 </table>
 
-**NOTE**: Dialogflow CX adheres to Google’s oAuth2. Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow CX client with _Read Only API access_. A _service account_ is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
+{: .important}
+`EnvironmentId` is an optional parameter. When it is not provided, the current Draft Flow will be used.
+
+{: .important}
+You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer"
+
+<br />
+#### Service Account
+
+Dialogflow CX adheres to Google’s oAuth2. Some degree of familiarity with Google IAM policies and IAM console is necessary for setting up a valid Dialogflow CX client with _Read Only API access_. A _service account_ is a **prerequisite** for setting up the above config. Documentation available [here](https://dialogflow.com/docs/reference/v2-auth-setup).
 
 The expected output of a service account setup is a JSON file, example below:
 
-**Format of JSON file containing credentials**
 
 ```json
 {
@@ -115,23 +105,35 @@ The expected output of a service account setup is a JSON file, example below:
   "Client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/[SERVICE-ACCOUNT-EMAIL]"
 }
 ```
+Figure 1.2 JSON containing Private key that is generated during the Service Account setup
 
-Figure 1.2
+{: .notice}
+The config wizard expects each of the pieces of auth data to be copied from the JSON file, without quotes. For the private_key especially, do not modify the string, do not remove any of the newline characters. Just copy and paste directly.
 
-**NOTE**: The config wizard expects each of the pieces of auth data to be copied from the JSON file, without quotes. For the private_key especially, do not modify the string, do not remove any of the newline characters. Just copy and paste directly.
+<br />
+#### Environments
+The Connector supports [Dialogflow CX environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-environments.png">
+
+Figure 1.3 Environments in the Dialogflow CX Console
+
+The necessary Environment ID is the last part of the environment URI you can copy in the Dialogflow CX console.
 
 {: .important}
-You have to agree to Data Disclaimer from now onward in order to use the services of bot connector. For that you can click on the checkbox "I agree to the Data Disclaimer"
+projects/test-project/locations/us-central1/agents/a11a1aa1-aa1a-1a11-a1a1-1111111111a11/environments/***53ad121d-5196-41a3-4682-d9de6df94203***
 
-For validation of the credentials provided, you can now perform a test connection request to see if everything that you have provided is working and reachable. You can click on the button "Test Connection" to see if connection succeed or fail as shown in Figure 1.4 and 1.5 respectively.
+<br />
+#### Test Connection
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowcx/wizard_success.png">
+For validation of the credentials provided, you can now perform a test connection request to see if everything that you 
+have provided is working and reachable. You can click on the button "Test Connection" to see if the connection succeed 
+or fails.
+You will be able to save the configuration even if the test fails, but your bot will not be able to start successfully.
 
-Figure 1.4 Showing the success case of the valid credentials
+<img class="fancyimage" style="width:600px" src="img/ThirdPartyBots/dialogflow-cx-wizard-failed.png">
 
-<img class="fancyimage" style="width:600px" src="img/dialogflowcx/wizard_failed.png">
-
-Figure 1.5 Showing the fail case of the invalid credentials
+Figure 1.4 Showing the failure case when testing the connection.
 
 Once you are done with providing configuration you can save it by pressing on "Done". **_Congratulations!_** You have completed the configuration of the Google DialogFlow CX bot.
 
@@ -263,7 +265,7 @@ This should contain valid structured content, along with any optional metadata r
 
 Example Metadata
 
-```javascript
+```json-doc
 {
   "metadata": [
     {

@@ -33,7 +33,7 @@ limit  | Max amount of keys (skillIds/agentGroupIds) to be retrieved in the resp
 |Name  | Description | Type/Value  | Required | Notes|
 |:---- | :---------- | :---------- | :------- | :---|
 |filters | Contains parameters to filter by. | Container  | Required | See detailed description [below](#filters)
-|metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>closed_conversations<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed<br/>concluded_conversations<br/>csat<br/>
+|metricsToRetrieveByTime | List of metrics that are calculated for the given time range| Array `<String>` | Optional | Valid values:<br/>avg_wait_time<br/>avg_wait_time_first_response<br/>avg_time_to_response<br/>avg_time_to_first_response_first_assignment<br/>closed_conversations<br/>closed_by_agent<br/>closed_by_consumer<br/>auto_closed<br/>concluded_conversations<br/>csat<br/>avg_conversations_duration<br/>
 |metricsToRetrieveCurrentValue | List of metrics retrieving the current value, not influenced by time | Array `<String>` | Optional | Valid values:<br/>assigned_conversations<br/>unassigned_conversations<br/>active_conversations<br/>agent_load<br/>human_agent_load<br/>human_online_load<br/>human_away_load<br/>online_agents<br/>back_soon_agents<br/>away_agents<br/>available_slots<br/>open_conversations<br/>overdue_conversations_in_queue<br/>overdue_conversations_assigned<br/>overdue_conversations_total<br/>queue_wait_time_50th_percentile<br/>queue_wait_time_90th_percentile
 |responseSections| Represents whether we should return the "all" section, "groupBy" section or both.  | Array `<String>` | Optional | Valid values: all, groupBy. Default value - both sections are returned.
 |groupBy| Field according to which all of the metrics should be grouped.  | String | Optional | Valid values: skillId, agentGroupId. In case responseSections contains groupBy, a groupBy value must be returned in order to retrieve grouped metrics.
@@ -132,6 +132,7 @@ _metrics info_
 | closedByConsumer| The number of conversations closed by the consumer within the selected timeframe.| Long |
 | autoClosed| The number of conversations automatically closed within the selected timeframe.| Long |
 | csat | The ratio bwtween the number of questions which were answered with 4 or 5 (top two boxes) to the total responses submitted by consumers to a CSAT question within the selected timeframe.| Double |
+| avgConversationsDuration| The average handling time of closed conversations within the selected timeframe.| Long |
 | unassignedConversations| The number of conversations in queue that are waiting for an agent assignment.| Long |
 | openConversations| The number of open conversations, whether in queue or assigned.| Long |
 | overdueConversationsInQueue| The number of conversations in queue that are waiting for an agent assignment and exceeded the SLA.| Long |
