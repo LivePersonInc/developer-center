@@ -861,7 +861,6 @@
             - subpagename: Messaging Skill Segment
             - subpagename: Messaging Agent Segment
             - subpagename: Messaging Queue Health By Group
-
         - pagename: Appendix
     - documentname: Operational Realtime API
       basedomain: https://{domain}/operations/api/account/{accountID}
@@ -886,6 +885,15 @@
             - subpagename: Metrics
             - subpagename: Historical
             - subpagename: Agent View
+    - documentname: Agent Activity API
+      basedomain: https://{domain}/api/account/{accountID}
+      pages:
+        - pagename: Overview
+        - pagename: Methods
+          subpages:
+            - subpagename: Get Status Changes
+        - pagename: Error Codes
+
 - categoryname: Messaging Channels
   image: agent-interaction
   documents:
