@@ -187,7 +187,7 @@ Depending on how big the domain is, training typically takes anywhere between 2 
 As communicated in the release notes, on February 17, 2021 LivePerson enhanced the LivePerson engine to further improve its NLU performance. If you retrained your domain after this date, you’re all set: The domain has picked up the enhancement. If you haven’t done so, please retrain your domain as soon as possible, so it benefits from this change. No additional tuning is required; simply retrain the domain as is.
 
 {: .important}
-Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 20 training phrases.<br><br>Also, consider exporting a CSV of the intents before you train. (You can do this via **Domain Settings**.) You can't revert to a previous model, but later, if necessary, you can use this CSV as the training data for a new domain.
+Before you train, ensure the domain has at least 5 intents. For each intent, ensure it has at least 15 training phrases.<br><br>Also, consider exporting a CSV of the intents before you train. (You can do this via **Domain Settings**.) You can't revert to a previous model, but later, if necessary, you can use this CSV as the training data for a new domain.
 
 **To train a LivePerson domain**
 
@@ -214,7 +214,7 @@ Brands with existing domains using the LivePerson (Legacy) engine are encouraged
 3. Update the intents:
     
     * Provide at least 5 intents.
-    * Provide at least 20 training phrases per intent. If needed, you can generate similar training phrases as described [here](intent-manager-build-intents.html#generate-training-phrases).
+    * Provide at least 15 training phrases per intent. If needed, you can generate similar training phrases as described [here](intent-manager-build-intents.html#generate-training-phrases).
     * Update the intents and training phrases so that each is a complete and meaningful sentence or question. This might require that you broaden the use cases and provide utterances that approach the intents from different directions. For example, "Can I get a refund?" might also be approached with, "I want my money back." The idea is to train the model with diverse and relevant sentences for an intent and to avoid overusing similar training phrases. Whenever possible, it is recommended that you [use actual data](intent-manager-discover.html) to enrich your training set.
 
 ### Create a 3rd-party NLU provider credential
