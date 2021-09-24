@@ -114,7 +114,7 @@ In our **Service Bot**, we will now create a FAQs dialog which will be triggered
 
 	<img style="width:600px" src="img/ConvoBuilder/advtutorial/kai_tile.png">
 
-5. In the Knowledge AI interaction, select the **Settings** icon and navigate to the **Advanced** menu. The Knowledge AI offers several options in how to display the article contents. For this example, select the **Simple** option from the **Answer layout** dropdown. This will ensure that the results are displayed in the same conversational fashion as our other interactions. Keep all other fields as their defaults and select the **Save** button.
+5. In the Knowledge AI interaction, select the **Settings** icon and navigate to the **Advanced** menu. The Knowledge AI offers several options in how to display the article contents. For this example, select the "Auto render, plain" option from the **Answer layout** dropdown. This will ensure that the results are displayed in the same conversational fashion as our other interactions. Keep all other fields as their defaults and select the **Save** button.
 
 	<img style="width:600px" src="img/ConvoBuilder/advtutorial/kai_tile_2.png">
 
