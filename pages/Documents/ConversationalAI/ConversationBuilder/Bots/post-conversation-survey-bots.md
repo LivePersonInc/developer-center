@@ -69,7 +69,7 @@ For changes to take effect, you must [redeploy the Post-Conversation Survey conn
 2. Select the organization.
 3. On the **Account Details** tab, specify the following:
 
-    * **Survey Bot User Details**: Click the edit (pencil) icon to display the settings for customizing the survey bot's name and picture that are shown to consumers during conversations. If you customize the picture, whitelist the domain in the URL for the image you specify, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media).
+    * **Survey Bot User Details**: Click the edit (pencil) icon to display the settings for customizing the survey bot's name and picture that are shown to consumers during conversations. Note that the domain in the picture URL is whitelisted automatically; there is no action required by you.
     
     * **Target Interactive Conversations**: Sending surveys to consumers who aren't interacting with your brand can negatively impact your CSAT score without cause. You can enable this setting to send surveys only to engaged consumers. Once you enable the setting, controls are displayed for specifying the minimum number of messages that must be sent by the bot/human agent and by the consumer for the survey to be triggered. You can specify values for one or both. If you specify values for both, *both conditions* must be satisfied for the survey to be triggered.
 
