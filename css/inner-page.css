@@ -876,4 +876,7 @@ iframe {
     display: flex !important;
     flex-direction: column;
   }
+  img {
+    max-width: 100%;
+  }
 }
