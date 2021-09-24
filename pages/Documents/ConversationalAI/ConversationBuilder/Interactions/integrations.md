@@ -71,32 +71,30 @@ Powering bots with intelligent answers can increase containment: It helps to ens
 
 #### How the answers are rendered
 
-When you configure a Knowledge AI interaction, you specify an **Answer layout** for the answers, one of:
+When you configure a Knowledge AI interaction, you specify an **Answer layout** for the answers, i.e., one of these:
 
-* Structured
-* Simple
-* Custom 
+<img style="width:400px" src="img/ConvoBuilder/knowledge_ai_answerlayout.png">
 
-Both the Structured and Simple layouts are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowledge base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
+The first two options are *rendered automatically*, and each uses a particular layout. With these options, there's no need to follow the Knowledge AI interaction with subsequent interactions that display the answers. The Knowledge AI interaction handles it all: both the knowledge base search and the rendering of the answers. When it meets your needs, one of these options is the simpler choice.
 
-If you require control over the article content and layout that's used, you can choose to use a Custom answer layout. In this case, you must follow the Knowledge AI interaction with subsequent interactions that display the answers.
+If you require control over the article content and layout that's used, you can choose to use a custom answer layout instead of auto rendering. In this case, you must follow the Knowledge AI interaction with subsequent interactions that display the answers.
 
 Select an answer layout based on the target channels and your requirements. For more on this interaction’s channel-level support, see [here](conversation-builder-interactions-interaction-support.html).
 
-#### The Structured answer layout
+#### The "Auto render, rich" answer layout
 
-The Structured layout looks like this:
+This layout looks like this:
 
 <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_rich.png">
 
-With the Structured layout:
+With this layout:
 
 * Anywhere from one to three results are returned based on the maximum number of answers that you've specified in the interaction.
-* The results degrade gracefully to the Simple layout when the channel in use doesn't support the carousel.
+* The results degrade gracefully to the "Auto render, plain" layout when the channel in use doesn't support the carousel.
 
-#### The Simple answer layout
+#### The "Auto render, plain" answer layout
 
-The Simple layout doesn’t include rich elements like images. If the channel is Web messaging, which supports `href` tags, the output looks like this:
+This layout doesn’t include rich elements like images. If the channel is Web messaging, which supports `href` tags, the output looks like this:
 
 <img style="width:600px" src="img/ConvoBuilder/knowledge_ai_plain.png">
 
@@ -104,7 +102,7 @@ On all other channels, it looks like this:
 
 <img style="width:700px" src="img/ConvoBuilder/knowledge_ai_plain2.png">
 
-With the Simple layout:
+With this layout:
 
 * Only a single, best result is returned regardless of the maximum number of answers that you've specified in the interaction.
 * Any HTML in the article's content is **not** removed. (Take note of the formatting applied to **Cancel Flight** in the image above.) Use HTML in your source knowledge base only when your target channels support it.
@@ -129,19 +127,19 @@ With the Simple layout:
         This field isn't shown if you've selected an [external knowledge base that doesn't use LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html). In this case, the results are simply those returned by the call to the external CMS.
 
     * **Max number of answers**: Select the maximum number of answers to return from the knowledge base, anywhere from one to three. The default value is one.
-    * **Answer layout**: Select "Structured," "Simple," or "Custom" based on your requirements. These layout options are discussed farther above.
-    * **Link text for content URL**: This setting is available when you select "Structured" or "Simple" for the **Answer layout**. Enter the "learn more" text to use. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}. When the **Structured** layout is used, and when the **Simple** layout is used and the channel is Web messaging, this is the text for the `href` link to the article's content URL. When the **Simple** layout is used in any other channel, this value is sent as static text: [this value] + [article's content URL in shortened form], for example, "Learn more at www.mysite.com/abc." For illustrations, see the images earlier in this topic.
-    * **Default image URL**: This optional setting is available only when you select "Structured" for the **Answer layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the Structured output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
-    * **Response data variable**: This setting is available only when you select "Custom" for the **Answer layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
+    * **Answer layout**: Select "Auto render, rich," "Auto render, plain," or "No auto rendering" based on your requirements. These layout options are discussed farther above.
+    * **Link text for content URL**: This setting is available when you select an "auto rendering" option for the **Answer layout**. Enter the "learn more" text to use. You can enter a botContext or environment variable here, e.g., {$botContext.\<name\>}. When the "Auto render, rich" layout is used, and when the "Auto render, plain" layout is used and the channel is Web messaging, this is the text for the `href` link to the article's content URL. When the "Auto render, plain" layout is used in any other channel, this value is sent as static text: [this value] + [article's content URL in shortened form], for example, "Learn more at www.mysite.com/abc." For illustrations, see the images earlier in this topic.
+    * **Default image URL**: This optional setting is available only when you select "Auto render, rich" for the **Answer layout**. If you enter an image URL, then when an article doesn't have an image URL within the knowledge base, this image is used in the rich output. This presents a uniform consumer experience across all articles, even when some articles have images but others don't. You might specify a company logo. Remember to whitelist the image URL, as discussed [here](conversation-builder-networking-security.html#whitelisting-rich-media). You can also enter a botContext or environment variable here, e.g., {$botContext.\<name\>}.
+    * **Response data variable**: This setting is available only when you select "No auto rendering" for the **Answer layout**. Enter the name of the response data variable that will store the answer results. The default variable name is "kb_search."
 7. Click **Save**.
-8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "Custom" for the **Answer layout** setting, you’ll also need to add the interactions that display the answers.
+8. Configure rules that direct the conversation flow based on the search results; this is described below. If you’ve selected "No auto rendering" for the **Answer layout** setting, you’ll also need to add the interactions that display the answers.
 
 {: .important}
 You might be familiar with implementing a knowledge base search using an Integration interaction that itself uses a specified [Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) to perform the search. That approach is still supported, but it is considered a legacy approach. The Knowledge AI interaction is a simpler alternative because it doesn’t need an associated Knowledge Base integration.
 
-#### Using the Custom answer layout
+#### No auto rendering: Using a custom answer layout
 
-Choose the Custom answer layout when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
+Choose the "No auto rendering" answer layout when you require control over how the answers are rendered. With this option, you must manually add the interactions that display the article content.
 
 To display a single, best result, use the syntax below, where "variableName" is the response data variable name that you specified in the Knowledge AI interaction's settings:
 
