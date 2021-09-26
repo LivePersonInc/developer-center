@@ -44,12 +44,12 @@ This information can be added to the Mobile app management section under Campaig
 
 * Once the App is created, on the **Key File** dropdown select **Apple Key**
 
-<img src="../../../../../img/pusher/AppleKeyOption.png" alt="Apple Push Token Authentication Option" style="width: 800px;padding: 20px;">
+<img src="/img/pusher/AppleKeyOption.png" alt="Apple Push Token Authentication Option" style="width: 800px;padding: 20px;">
 * Locate and upload your p8 file containing your Token Authentication Key.
 
 * Enter both your Team ID and Key ID on their respective fields.
 
-<img src="../../../../../img/pusher/AppleKeyDetails.png" alt="Apple Push Token Authentication Details" style="width: 800px;padding: 20px;">
+<img src="/img/pusher/AppleKeyDetails.png" alt="Apple Push Token Authentication Details" style="width: 800px;padding: 20px;">
 
 {:.important}
 if your Application is running on debug mode (running from Xcode), the **Production** switch should be **OFF**.
