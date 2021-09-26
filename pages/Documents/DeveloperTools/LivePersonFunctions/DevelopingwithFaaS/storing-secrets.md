@@ -15,7 +15,7 @@ redirect_from:
 
 The LivePerson Functions' Secrets Storage allows you to centrally store, access and distribute secrets across your lambdas. Thereby, lambdas can use available access tokens, certificates and encryption keys to establish a connection to external systems. It is recommended to always use access tokens for authentication to external services.
 
-Internally, LivePerson Functions uses [HashiCorp Vault](https://www.hashicorp.com/products/vault/) to encrypt your secrets using a 256-bit AES cipher in GCM mode with a randomly generated 96-bit nonce before writing them to its persistent storage.
+Internally, LivePerson Functions uses [HashiCorp Vault](https://www.hashicorp.com/products/vault) to encrypt your secrets using a 256-bit AES cipher in GCM mode with a randomly generated 96-bit nonce before writing them to its persistent storage.
 
 Based on the below roles and permission users can interact with the Secret Storage via the **Settings** tab. The secrets are key-value pairs, where each value can be of type number, string or JSON.
 

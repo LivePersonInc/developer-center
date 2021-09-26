@@ -1,7 +1,7 @@
 ---
 pagename: Introduction
 redirect_from:
-  - third-party-bots-google-dialogflow-version-2.html
+  - third-party-bots-google-dialogflow-cx.html
 sitesection: Documents
 categoryname: "Conversational AI"
 documentname: Third-Party Bots

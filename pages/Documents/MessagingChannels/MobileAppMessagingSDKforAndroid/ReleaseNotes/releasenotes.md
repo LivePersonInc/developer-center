@@ -64,8 +64,8 @@ The Android Mobile Messaging SDK version 5.7.0 uses:
 DatePicker allows brand agents to send the Structured Content to consumers to choose desired date or a date range using an inbuilt calendar.
 
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="../../../../img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+    <img src="/img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
 </div>
 
 # Bugs Fixed:
@@ -119,8 +119,8 @@ repositories {
 
 Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
-    <img src="../../../../img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
+    <img src="/img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
+    <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
 {:.important}
@@ -797,8 +797,8 @@ The Android Mobile Messaging SDK version 4.9.0 uses:
 DatePicker allows brand agents to send the Structured Content to consumers to choose desired date or a date range using an inbuilt calendar.
 
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="../../../../img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+    <img src="/img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
 </div>
 
 # Bugs Fixed:
@@ -851,8 +851,8 @@ repositories {
 
 Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
-    <img src="../../../../img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
+    <img src="/img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
+    <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
 {:.important}
@@ -1681,7 +1681,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ##### How photo and file sharing works
 
-<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+<img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 ---   
 

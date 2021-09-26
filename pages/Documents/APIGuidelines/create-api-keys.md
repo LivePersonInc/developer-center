@@ -32,7 +32,7 @@ Alternatively, you can click on an existing key to edit its privileges rather th
 
 5. Select the **Agent Interactions** category, click the **User Login** checkbox to select it, and then click **Save**.
 
-   ![](../../../img/APIKeyCreation.png)
+   ![](/img/APIKeyCreation.png)
 
 {:start="6"}
 6. Once the API key has been successfully created, the authentication details display for four AUTH request values, which you use in the request body of this API:
@@ -45,12 +45,12 @@ Alternatively, you can click on an existing key to edit its privileges rather th
 
    - Access token secret
 
-   ![](../../../img/apikeycreation1.png)
+   ![](/img/apikeycreation1.png)
 
 {:start="7"}
 7. If the window does not close automatically, click the **X** in the top right to close the window.
 
-   ![](../../../img/close-window.png)
+   ![](/img/close-window.png)
 
    {:.important}
    Currently, we do not support deleting an API key.

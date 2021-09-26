@@ -18,7 +18,7 @@ This method retrieves core messaging metrics at the account, skill or agent grou
 
 Method | URL
 ------ | ---------------------------------------------------------------------------------------------------
-POST| https://[{domain}](/agent-manager-domain-api.html)/manager_workspace/api/account/{accountId}/metrics?offset=0&limit=50&sort=closedConversations:desc
+POST| https://[{domain}](/domain-api.html)/manager_workspace/api/account/{accountId}/metrics?offset=0&limit=50&sort=closedConversations:desc
 
 **URL Parameters**
 

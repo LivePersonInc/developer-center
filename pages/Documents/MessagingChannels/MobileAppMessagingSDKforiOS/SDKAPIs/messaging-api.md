@@ -244,7 +244,7 @@ func initialize(_ brandID: String? = nil, monitoringInitParams: LPMonitoringInit
 
 Use this API method to check if the active conversation, if existing, is marked as urgent; otherwise, it returns false.
 
-**Note:** You must check that the SDK is in [ready state](consumer-experience-ios-sdk-advanced-configurations.html) before calling this method.
+**Note:** You must check that the SDK is in [ready state](mobile-app-messaging-sdk-for-ios-configure-the-ios-sdk.html) before calling this method.
 
 ```swift
 func isUrgent(_ conversationQuery: ConversationParamProtocol) -> Bool
