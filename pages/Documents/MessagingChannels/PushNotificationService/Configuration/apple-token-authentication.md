@@ -29,7 +29,7 @@ In order to enable Apple Token Authentication, you will require the following da
 {:.important}
 Key File should be an authentication token signing key, specified as a text file (with a .p8 file extension), as downloaded from the Apple Developer Portal.
 
-* **Team ID:** - Unique Apple Team Identifier, for how to achieve this, see [link](http://127.0.0.1:4000/push-notification-service-configuring-on-the-conversational-cloud-apple-token-authentication.html#how-to-get-your-apple-team-id)
+* **Team ID:** - Unique Apple Team Identifier, for how to achieve this, see [link](#how-to-get-your-apple-team-id)
 
 * **Key ID:** - A 10-character string with the Key ID.
   
