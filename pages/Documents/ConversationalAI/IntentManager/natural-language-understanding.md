@@ -28,6 +28,7 @@ If you choose LivePerson's native NLU, no setup work needs to be done to connect
 
 The LivePerson engine supports:
 * English
+* Italian
 * Japanese
 * Portuguese
 * Spanish
@@ -89,7 +90,7 @@ This is LivePerson's high-performing NLU engine. Key characteristics include:
 * A scalable solution that's capable of handling a large volume of requests.
 * Provides fast response times and accuracy.
 * To perform effectively, expects large sets of data (both intents and training phrases).
-* The performance of a model depends on both the quantitative and qualitative nature of the training data. Therefore, we require a minimum of **5 intents** with **20 training phrases per intent** to activate training for a model in the Intent Manager. Anything less adversely affects model performance.
+* The performance of a model depends on both the quantitative and qualitative nature of the training data. Therefore, we require a minimum of **5 intents** with **15 training phrases per intent** to activate training for a model in the Intent Manager. Anything less adversely affects model performance.
 * Requires the model to be [trained](intent-manager-build-domains.html#train-a-liveperson-domain).
 
 {: .important}
@@ -123,10 +124,10 @@ Key characteristics include:
 
     In contrast, the LivePerson engine is more generalized; it can handle a general set of user questions and still perform well. 
 
-* If you have more than 5 intents and more than 20 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
+* If you have more than 5 intents and more than 15 training phrases per intent, there is a degradation of speed at runtime when processing the user inputs.
 * For performance reasons:
     * Supports a maximum of 40 training phrases per intent. If you add more than 40, only the first 40 are used.
-    * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledge-base-internal-knowledge-bases-best-practices.html).
+    * Supports a maximum of 20 positive learnings per Knowledge Base article. If you add more than 20, only the first 20 are used. There is no limit on the number of negative learnings; however, see the best practices discussed [here](knowledgeai-internal-knowledge-bases-best-practices.html).
 * Doesn't require the model to be trained.
 
 ### Variances in matched intents with LivePerson NLU

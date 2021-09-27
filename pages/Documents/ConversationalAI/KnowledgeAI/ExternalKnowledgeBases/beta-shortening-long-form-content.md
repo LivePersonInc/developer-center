@@ -1,17 +1,18 @@
 ---
 pagename: Beta - Shortening Long-Form Content
 redirect_from:
+    - knowledge-base-external-knowledge-bases-beta-shortening-long-form-content.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
+documentname: KnowledgeAI
 subfoldername: External Knowledge Bases
-permalink: knowledge-base-external-knowledge-bases-beta-shortening-long-form-content.html
+permalink: knowledgeai-external-knowledge-bases-beta-shortening-long-form-content.html
 indicator: both
 ---
 
 {: .important}
-This topic discusses an experimental feature in Beta release. It’s applicable if you’re using an [external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html), and you need a solution for shortening your content so that it’s suitable for conversational messaging.
+This topic discusses an experimental feature in Beta release. It’s applicable if you’re using an [external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html), and you need a solution for shortening your content so that it’s suitable for conversational messaging.
 
 Conversational messaging works best with content that’s as brief as possible. Therefore, LivePerson recommends that, when possible, you take one of the following approaches with your external CMS:
 
@@ -21,7 +22,7 @@ Conversational messaging works best with content that’s as brief as possible. 
 Sometimes, however, these approaches aren’t possible. For example, you might be using your long-form content to support a web site, so you need to leave your CMS content as is. You might also need to leave your CMS schema unchanged. In cases like these, LivePerson offers a solution that automates some of the work of readying your content for conversational messaging:
 
 1. You identify the CMS content that you want to use.
-2. The content is propagated to the knowledge base, *automatically shortened and cleaned up*, and exposed in a dedicated field in the Knowledge Base UI, in read-only form.
+2. The content is propagated to the knowledge base, *automatically shortened and cleaned up*, and exposed in a dedicated field in the KnowledgeAI UI, in read-only form.
 
     {: .important}
     Step 2 only happens if the content has HTML tags or is more than 1,000 characters, i.e., if the content warrants shortening or clean-up.
@@ -31,9 +32,9 @@ Sometimes, however, these approaches aren’t possible. For example, you might b
 To set up and use this approach, follow the workflow described below.
 
 ### Adding the external knowledge base
-In Step 5 when you [add the knowledge base](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), you define the request to fetch your content’s metadata.
+In Step 5 when you [add the knowledge base](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), you define the request to fetch your content’s metadata.
 
-To use this solution, *augment the request* so that each returned article also contains the content (summary, detail, etc.) that you want to send to the consumer. Then, in the transformation spec that you provide, map this content to an attribute named “messageReadyContent,” which is an optional attribute in the LivePerson Knowledge Base schema.
+To use this solution, *augment the request* so that each returned article also contains the content (summary, detail, etc.) that you want to send to the consumer. Then, in the transformation spec that you provide, map this content to an attribute named “messageReadyContent,” which is an optional attribute in the LivePerson KnowledgeAI schema.
 
 When the knowledge base is added, the optional attribute is used to populate a **Message Ready Content** field in the UI when appropriate. This read-only field displays your content, which has been automatically shortened and cleaned up.
 
@@ -42,7 +43,7 @@ When the knowledge base is added, the optional attribute is used to populate a *
 These are the shortening and clean-up rules that are applied:
 
 * If the content doesn’t include HTML tags, it’s shortened to less than or equal to 1,000 characters, making sure the final sentence always ends with punctuation.
-* If the content includes HTML tags, first, the unsupported HTML tags are removed. Then, if the length is greater than 320 characters (with the [supported HTML](knowledge-base-common-settings-tasks.html#format-text-in-an-article) tags included), all HTML tags are removed. If the resulting plain text length is more than 1,000 characters, it’s then shortened to less than or equal to 1,000 characters, making sure the final sentence always ends with punctuation. 
+* If the content includes HTML tags, first, the unsupported HTML tags are removed. Then, if the length is greater than 320 characters (with the [supported HTML](knowledgeai-common-settings-tasks.html#format-text-in-an-article) tags included), all HTML tags are removed. If the resulting plain text length is more than 1,000 characters, it’s then shortened to less than or equal to 1,000 characters, making sure the final sentence always ends with punctuation. 
 
 ### Using the message-ready content
 

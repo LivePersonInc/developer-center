@@ -1,12 +1,13 @@
 ---
 pagename: External KBs without LivePerson AI
 redirect_from:
+    - knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
+documentname: KnowledgeAI
 subfoldername: External Knowledge Bases
-permalink: knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html
+permalink: knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html
 indicator: both
 ---
 
@@ -21,7 +22,7 @@ An external knowledge base without LivePerson AI:
 
 When adding an external knowledge base without LivePerson AI, follow this high-level workflow:
 
-1. In Knowledge Base: 
+1. In KnowledgeAI: 
     1. Add the external knowledge base.
     2. Use the Search tool to test the integration.
 2. Expose the articles to consumers by:
@@ -40,6 +41,7 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
 3. Specify the following:
     * **Knowledge Base Name**: Enter a descriptive name, e.g., “Technical Support FAQs.”
     * **Content Provider**: Select the name of the content provider. If the provider isn't listed, select "Other," and enter the name.
+    * **Language**: Select the language of the content. This setting is informational only and doesn't affect the behavior of the knowledge base.
 4. Click **Next**.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_add_wo_ai_1.png">
@@ -55,7 +57,7 @@ When adding an external knowledge base without LivePerson AI, follow this high-l
     * **+ Add Post Body**: Enter the payload to send if applicable.
     * **Transformation Spec**: If you were able to select your **Content Provider** in Step 3 above, a default spec is provided here. You can use it if you haven't customized the CMS' data model. If you weren't able to select your content provider, a default spec isn't provided.
     
-        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson Knowledge Base article schema. In other words, given the request, map the article suggestions/answers data model (schema) to the LivePerson Knowledge Base data model. For more on this, see [here](knowledge-base-external-knowledge-bases-mapping-content-metadata.html).
+        Here, provide a Jolt transformation spec that can be used to "transform" the response into the LivePerson KnowledgeAI article schema. In other words, given the request, map the article suggestions/answers data model (schema) to the LivePerson KnowledgeAI data model. For more on this, see [here](knowledgeai-external-knowledge-bases-mapping-content-metadata.html).
 7. Click **Save**.
 
 ### Test the CMS integration
@@ -65,15 +67,19 @@ After you've add an external knowledge base that doesn't use AI, you can test th
 **To test the CMS integration**
 
 1. Open the knowledge base.
+2. Click **Articles** in the menu in the upper-left corner.
 
-    By default, the Articles tab is displayed. Initially, it doesn’t show any metadata or content because, with this type of external knowledge base (one without LivePerson AI), only configuration information is stored within Knowledge Base. The content remains in the CMS.
+    Initially, the **Articles** page doesn’t show any metadata or content because, with this type of external knowledge base (one without LivePerson AI), only configuration information is stored within KnowledgeAI. The content remains in the CMS.
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_no_ai_test_1.png">
 
-2. On the Articles tab, enter an utterance in the search box at the top, and press Enter.
+2. Enter an utterance in the **Answer Tester** on the right, and click **Get answers**.
 
     This performs a search against the CMS.
     
 3. Evaluate the article results that are displayed. If they aren't what you expect, you might need to adjust the knowledge base's configuration.
 
     <img style="width:800px" src="img/ConvoBuilder/kb_cms_no_ai_test_2.png">
+
+    {: .important}
+    Answers are evaluated by your external CMS. When they're returned, they're always assumed to be a match.

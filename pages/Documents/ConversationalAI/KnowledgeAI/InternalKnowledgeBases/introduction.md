@@ -1,33 +1,34 @@
 ---
 pagename: Introduction
 redirect_from:
+    - knowledge-base-internal-knowledge-bases-introduction.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
+documentname: KnowledgeAI
 subfoldername: Internal Knowledge Bases
-permalink: knowledge-base-internal-knowledge-bases-introduction.html
+permalink: knowledgeai-internal-knowledge-bases-introduction.html
 indicator: both
 ---
 
 ### What's an internal knowledge base?
 
-An internal knowledge base is a built-in knowledge base, i.e., one whose content you can create and manage directly within the Knowledge Base application. You can:
+An internal knowledge base is a built-in knowledge base, i.e., one whose content you can create and manage directly within the KnowledgeAI application. You can:
 
-* Start from scratch, and add articles directly within the Knowledge Base application.
-* Do a one-time import of articles from a CSV file, and maintain the articles thereafter within the Knowledge Base application.
-* Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within the Knowledge Base application.
+* Start from scratch, and add articles directly within KnowledgeAI.
+* Do a one-time import of articles from a CSV file, and maintain the articles thereafter within KnowledgeAI.
+* Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within KnowledgeAI.
 
-An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding.html) to [evaluate the articles](knowledge-base-using-intents-with-kbs.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledge-base-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
+An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding.html) to [evaluate the articles](knowledgeai-using-intents-with-kbs.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
 
 ### High-Level Workflow
 
 When adding an internal knowledge base, follow this workflow:
 
-1. In Knowledge Base:
-    1. [Add the internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html). In this step you can import articles from a CSV file or link to a Google sheet that contains them.
-    2. [Add the articles](knowledge-base-internal-knowledge-bases-articles.html) if necessary.
-    3. [Train](knowledge-base-using-intents-with-kbs.html) the articles to match consumer utterances.
+1. In KnowledgeAI:
+    1. [Add the internal knowledge base](knowledgeai-internal-knowledge-bases-knowledge-bases.html). In this step you can import articles from a CSV file or link to a Google sheet that contains them.
+    2. [Add the articles](knowledgeai-internal-knowledge-bases-articles.html) if necessary.
+    3. [Train](knowledgeai-using-intents-with-kbs.html) the articles to match consumer utterances.
 2. Expose the articles to consumers by:
     * (Conversation Builder) [Adding a Knowledge Base integration](conversation-builder-integrations-knowledge-base-integrations.html) in a bot
     * (Conversation Orchestrator) Adding a Knowledge Base integration as a part of an [Agent Assist](conversation-orchestrator-agent-assist-overview.html) component
@@ -41,7 +42,7 @@ While the article's title represents the intent of the article, you can also spe
 
 <img style="width:300px" src="img/ConvoBuilder/kb_domain_intents1.png">
 
-Once you've created your domain of intents for the knowledge base, over in the Knowledge Base application, you create the knowledge base and specify the associated domain when you do: 
+Once you've created your domain of intents for the knowledge base, over in the KnowledgeAI application, you create the knowledge base and specify the associated domain when you do: 
 
 <img style="width:700px" src="img/ConvoBuilder/kb_domain_intents3.png">
 
@@ -67,18 +68,9 @@ If you created your knowledge base before March 5, 2021, you might have chosen *
 
 Knowledge Base intents like these are a *legacy feature* that uses the LivePerson (Legacy) engine for intent matching. Knowledge Base intents don't allow for reuse, as the intent qualifiers themselves are defined within the articles in the knowledge base.
 
-To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible, as **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021**.
+To take advantage of the benefits of performance and flexibility, you are encouraged to [convert a knowledge base from Knowledge Base intents to Domain intents](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible, as **LivePerson will deprecate the LivePerson (Legacy) engine at the end of 2021**.
 
 ### Languages
-
-When you [add an internal knowledge base](knowledge-base-internal-knowledge-bases-knowledge-bases.html), you'll specify its language.
-
-When a text-to-text search is performed and a match is found, the knowledge base's language doesn't play a role. Whatever article is matched is simply returned.
-
-When an NLU search is performed, the knowledge base's language works differently based on how you've defined the knowledge base:
-
-* If the knowledge base uses *Domain* intents, the domain's language is used instead. In this case, the languages supported depend on the domain's [NLU provider](intent-manager-natural-language-understanding.html).
-* If the knowledge base uses *Knowledge Base* intents (a legacy feature), the knowledge base's language is used. In this case, only English and Spanish are supported.
 
 #### Working with special language characters
 
@@ -86,20 +78,20 @@ If you need to support special language characters (e.g., ö, ü, ß), and you�
 
 ### Active versus inactive articles
 
-An article is either active or inactive. Active articles are returned in knowledge base searches in Knowledge Base integrations while inactive articles aren't returned.
+An article is either active or inactive. Active articles are returned in knowledge base searches in KnowledgeAI integrations while inactive articles aren't returned.
 
 * An article is *active* if its **Enable Article** setting is turned on. If the article has **Valid From** and/or **Valid To** dates (optional, specified in [UTC](https://www.timeanddate.com/worldclock/timezone/utc)), it is only active during the specified time period. If no dates are specified, an enabled article is always active.
 * An article is *inactive* if its **Enable Article** setting is turned off. It's also inactive if the setting is turned on, but the current date and time in UTC falls outside the time period specified by **Valid From** and/or **Valid To**.
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_validDates.png">
 
-In the Knowledge Base application, you can easily identify an article's current status:
+In the KnowledgeAI application, you can easily identify an article's current status:
 
 <img class="fancyimage" style="width:700px" src="img/ConvoBuilder/kb_articleStatus.png">
 
 #### Using Valid From and Valid To dates
 
-You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledge-base-internal-knowledge-bases-articles.html). 
+You can specify optional **Valid From** and/or **Valid To** dates when you [add an article](knowledgeai-internal-knowledge-bases-articles.html). 
 
 For example, you might run a promotion over a holiday that has an associated FAQ, and that FAQ should only be used for a finite period of time. Or, you might have an article that you want to become active on a certain date and remain so indefinitely. You can satisfy requirements like these with **Valid From** and/or **Valid To**.
 

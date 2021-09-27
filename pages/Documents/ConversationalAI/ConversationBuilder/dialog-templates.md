@@ -124,7 +124,7 @@ When you import a dialog template, you import the dialog, the integrations used 
 Note the following:
 * If the dialogs in the template use [prebuilt domains](intent-manager-key-terms-concepts.html#prebuilt-domains) that already exist within your organization, the domain/intent associations are updated accordingly. If the pre-built domains don't exist, they are added automatically. 
 *  If the dialogs in the template use *custom domains* that already exist within your organization, the domain/intent associations are updated accordingly. If the custom domains don't exist, all assocations are removed during the import. To avoid this, add the needed domains and intents before importing the dialog template.
-* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't public, you can still use the integration in the bot, but you can't view or edit that knowledge base in the Knowledge Base application.
+* If you import a dialog that uses a knowledge base integration, and that knowledge base is owned by another bot developer and isn't public, you can still use the integration in the bot, but you can't view or edit that knowledge base in the KnowledgeAI application.
 
 After you import a dialog template into a destination bot, it becomes a normal dialog within the bot, and it functions as if you had created the dialog from scratch.
 

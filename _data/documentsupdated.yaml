@@ -308,7 +308,7 @@
           subpages:
             - subpagename: Getting Started
             - subpagename: Model Tester External APIs
-    - documentname: Knowledge Base
+    - documentname: KnowledgeAI
       pages:
         - pagename: Overview
         - pagename: External Knowledge Bases
@@ -327,7 +327,8 @@
             - subpagename: Articles
             - subpagename: Best Practices
         - pagename: Using Intents with KBs
-        - pagename: Sending Content to Consumers
+        - pagename: Sending Content to Consumers and Agents
+        - pagename: Optimizing via Dashboard Analysis
         - pagename: Common Settings & Tasks
         - pagename: Limits
     - documentname: Bots Status

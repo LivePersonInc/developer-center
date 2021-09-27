@@ -1,12 +1,13 @@
 ---
 pagename: Best Practices
 redirect_from:
+    - knowledge-base-internal-knowledge-bases-best-practices.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
+documentname: KnowledgeAI
 subfoldername: Internal Knowledge Bases
-permalink: knowledge-base-internal-knowledge-bases-best-practices.html
+permalink: knowledgeai-internal-knowledge-bases-best-practices.html
 indicator: both
 ---
 
@@ -15,13 +16,13 @@ For more best practices when training and tuning NLU, see [here](conversation-bu
 
 ### Limits
 
-To promote best practices, limits are enforced for number of articles, the length of fields, and so on. For information on all limits, see [here](knowledge-base-limits.html).
+To promote best practices, limits are enforced for number of articles, the length of fields, and so on. For information on all limits, see [here](knowledgeai-limits.html).
 
 ### LivePerson NLU
 
 If your internal knowledge base uses Knowledge Base intents, which is a legacy feature, behind the scenes the LivePerson (Legacy) engine is used for intent matching.
 
-For better performance and a more scalable solution, LivePerson recommends that you [convert from Knowledge Base intents to Domain intents](knowledge-base-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible. This allows you to associate a domain that uses the LivePerson engine (or a third-party engine).
+For better performance and a more scalable solution, LivePerson recommends that you [convert from Knowledge Base intents to Domain intents](knowledgeai-internal-knowledge-bases-knowledge-bases.html#convert-knowledge-base-intents-to-domain-intents) as soon as possible. This allows you to associate a domain that uses the LivePerson engine (or a third-party engine).
 
 See [here](intent-manager-natural-language-understanding.html#benefits-of-liveperson-over-liveperson-legacy) for information on the benefits of LivePerson over LivePerson (Legacy).
 

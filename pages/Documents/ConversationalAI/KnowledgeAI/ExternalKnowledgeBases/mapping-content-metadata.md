@@ -1,18 +1,19 @@
 ---
 pagename: Mapping Content Metadata
 redirect_from:
+    - knowledge-base-external-knowledge-bases-mapping-content-metadata.html
 Keywords:
 sitesection: Documents
 categoryname: "Conversational AI"
-documentname: Knowledge Base
+documentname: KnowledgeAI
 subfoldername: External Knowledge Bases
-permalink: knowledge-base-external-knowledge-bases-mapping-content-metadata.html
+permalink: knowledgeai-external-knowledge-bases-mapping-content-metadata.html
 indicator: both
 ---
 
 ### Introduction
 
-When you are adding an external knowledge base, there are a few points in the process where you need to provide a Jolt transformation spec that can be used to "transform" the response returned from the given request into the LivePerson Knowledge Base article schema. This is necessary to map the external CMS' article data model to LivePerson Knowledge Base.
+When you are adding an external knowledge base, there are a few points in the process where you need to provide a Jolt transformation spec that can be used to "transform" the response returned from the given request into the LivePerson KnowledgeAI article schema. This is necessary to map the external CMS' article data model to LivePerson KnowledgeAI.
 
 If you were able to select your CMS provider from the **Content Provider** list, a default spec is available and provided at these points:
 
@@ -26,23 +27,23 @@ If you weren't able to select your CMS provider from the **Content Provider** li
 
 ### Supported LivePerson attributes
 
-When [adding an external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), one step involves configuring the request to fetch the articles' metadata. This includes defining the transformation spec for the data that's returned. The following LivePerson attributes are supported:
+When [adding an external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), one step involves configuring the request to fetch the articles' metadata. This includes defining the transformation spec for the data that's returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
 | externalId | A String; a unique ID assigned to the article | yes |
 | title | The article title. This should be a complete sentence or question that the user might ask. | yes |
 | tags | A list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. | no |
-| category | Assigning a category lets you filter and find articles based on categories in the Knowledge Base application. | no |
+| category | Assigning a category lets you filter and find articles based on categories in the KnowledgeAI application. | no |
 
-When [adding an external knowledge base with LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), a second step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation spec for the data that's returned. The following LivePerson attributes are supported:
+When [adding an external knowledge base with LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-with-liveperson-ai.html#add-an-external-kb-with-liveperson-ai), a second step involves configuring the request for the on-demand retrieval of a single article by its unique identifier. This includes defining the transformation spec for the data that's returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
 | externalId | A String; a unique ID assigned to the article | yes |
 | title | The article title. This should be a complete sentence or question that the user might ask. | yes |
 | tags | A list of relevant keywords. These highlight the key noun(s) or word(s) in the training phrases. For example, for an article about health insurance, the tags should be "health", “insurance”, “benefits”. These should be words, not sentences. | no |
-| category | Assigning a category lets you filter and find articles based on categories in the Knowledge Base application. | no |
+| category | Assigning a category lets you filter and find articles based on categories in the KnowledgeAI application. | no |
 | summary | A short response or message to be sent to the user. You can include web links, although depending on the channel they might not display correctly. For SMS/Messaging, you might need to show the URL by itself, not wrapped in HTML, since the HTML will be sent as plain text over these channels. | no, but see note below |
 | detail | A longer message to the user. For messaging, it's recommended that you keep the responses as brief as possible. | no, but see note below |
 | contentURL | The URL of a hyperlink.  | no, but see note below |
@@ -53,9 +54,9 @@ When [adding an external knowledge base with LivePerson AI](knowledge-base-exter
 {: .important}
 One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory.
 
-**Tip**: For information on how to send article content to consumers, see [here](knowledge-base-sending-content-to-consumers.html).
+**Tip**: For information on how to send article content to consumers, see [here](knowledgeai-sending-content-to-consumers-and-agents.html).
 
-When [adding an external knowledge base without LivePerson AI](knowledge-base-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation spec for the articles that are returned. The following LivePerson attributes are supported:
+When [adding an external knowledge base without LivePerson AI](knowledgeai-external-knowledge-bases-external-kbs-without-liveperson-ai.html#add-an-external-kb-without-liveperson-ai), one step involves configuring the request for the on-demand content retrieval using your CMS’ query and answer API. This includes defining the transformation spec for the articles that are returned. The following LivePerson attributes are supported:
 
 | LivePerson Attribute | Description | Mandatory? |
 | --- | --- | --- |
@@ -79,7 +80,7 @@ One of summary, detail, contentURL, imageURL, audioURL, or videoURL is mandatory
 
     <img style="width:750px" src="img/ConvoBuilder/kb_cms_map_metadata_7.png">
 
-2. In the **Transformation Spec** editor (left panel), adjust or write the Jolt transformation spec using the examples and guidance [here](knowledge-base-external-knowledge-bases-writing-a-transformation-specification.html). 
+2. In the **Transformation Spec** editor (left panel), adjust or write the Jolt transformation spec using the examples and guidance [here](knowledgeai-external-knowledge-bases-writing-a-transformation-specification.html). 
 
     <img style="width:800px" src="img/ConvoBuilder/kb_cms_map_metadata_1.png">
 

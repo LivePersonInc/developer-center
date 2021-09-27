@@ -67,7 +67,7 @@ Note:
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_knn1.png">
 
-6. Review the generated phrases, and select the ones you want to add to the domain. You might also want to refine the spelling or punctuation. The phrases are based on actual consumer utterances, so they might contain misspellings or poor grammar. (See the *FAQs* farther below regarding typos and misspellings.)
+6. Review the generated phrases, and select the ones you want to add to the domain. You might also want to refine the spelling or punctuation. The phrases are based on actual consumer utterances, so they might contain misspellings or poor grammar. (See the FAQ [here](intent-manager-faqs.html) regarding typos and misspellings.)
 
     <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/ib_knn2.png">
 

@@ -52,7 +52,7 @@ Some measures that are useful to assess while monitoring and improving your bots
 * Did they express any negative feedback or run into unforeseen problems?
 * How many conversations encountered fallback? 
 
-#### Escalations
+#### Transfers
 * Was the bot equipped with all the resources needed to satisfy the consumer's intent?
 * How often did an experience end up getting transferred from a bot to a human agent?
 
