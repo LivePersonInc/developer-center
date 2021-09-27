@@ -155,6 +155,19 @@ All these factors directly influence the intent matching after retraining. There
 * The test samples contain clear, single intents.
 * The training samples are diverse within an intent and distinguishable from other intents.
 
+### Bug fix for 3rd-party NLU engines
+
+LivePerson has recently resolved an issue impacting intent domains that integrate with third-party NLU engines (i.e., Google Dialogflow or IBM Watson). This fix was deployed on **July 28 and 29, 2021**, and **your action is required** to properly adopt the fix.
+
+If, in Intent Manager, you have one or more domains that uses a third-party NLU engine, please do the following:
+
+1. In Google Dialogflow or IBM Watson, delete the model versions.
+2. In Bot Accounts, disable (turn off) the **WatsonAssistant** or **Google DialogFlow** setting on the **Account** Details page. Wait a few seconds, and then re-enable the setting.
+
+    <img class="fancyimage" style="width:800px" src="img/ConvoBuilder/3rdpartyNLU_bugFix.png">
+
+3. In Intent Manager, train the domains to create new model versions.
+
 ### Connect a 3rd-party NLU engine
 
 #### 3rd-party NLU limitations

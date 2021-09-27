@@ -52,6 +52,10 @@ To perform login requests you will need a valid Bot user created via LivePerson 
 
 **Please note** LivePerson maintains one session per user, thus if you receive an invalid bearer token error from Public API, you can always generate a new bearer by performing the login request again. We recommend making a single Bot Agent user that is dedicated for your Public API call.
 
+{: .notice}
+You should not use the same user that is already assigned to another bot since they would log each other out.
+If the user belongs to a bot that is active and running on Third-Party-Bots the login request will get rejected.
+
 <img class="fancyimage" style="width:600px" src="img/tpbPublicApi/bot-user-login-method.png">
 Figure 2.1 Showing two login methods of a Bot user
 
@@ -902,6 +906,7 @@ Example response of a command returned by the API will look like this with state
 | 401  | Unauthorized - Invalid bearer token.                                 |
 | 403  | Forbidden - If the request was marked as security risk by Reblaze.   |
 | 404  | Not Found - If the provided conversation Id is invalid or not found. |
+| 409  | Conflict - If the credentials are already used by a bot currently running on Third-Party Bots |
 | 500  | Internal server error.                                               |
 
 ### Limitations

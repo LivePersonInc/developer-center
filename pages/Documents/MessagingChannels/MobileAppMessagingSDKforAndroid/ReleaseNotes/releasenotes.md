@@ -13,6 +13,36 @@ indicator: messaging
 
 <div class="subscribe">Working with this SDK or planning to in the future? Make sure to <a href="https://visualping.io/?url=developers.liveperson.com/consumer-experience-android-sdk-release-notes.html&mode=web&css=post-content">subscribe</a> to receive notifications of changes! When we update the Release Notes, you'll get a notification straight to your email of choice!</div>
 
+# Android Messaging SDK - Version 5.7.1
+
+**Release date:** September 10, 2021
+
+# Overview
+Android Mobile Messaging SDK version 5.7.1 release includes Rich Content Push Notification support for Proactive outbound messaging and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 5.7.1 uses:
+- Minimum API version 21
+- Compile API version 30
+- Target API version 30
+- Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.0”
+
+**(unchanged from version 5.7.0)**
+
+# Bugs Fixed:
+- Link previews for consumer messages are not hidden even when the feature is disabled.
+
+# Enhancements:
+- [Proactive to InApp messaging](mobile-app-messaging-sdk-for-android-advanced-features-proactive-and-ivr-deflection-to-app-messaging.html) feature now has extended to support Rich Content Push Notification messages.
+
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
+
+
 # Android Messaging SDK - Version 5.7.0
 
 **Release date:** July 19, 2021
@@ -26,14 +56,16 @@ The Android Mobile Messaging SDK version 5.7.0 uses:
 - Compile API version 30
 - Target API version 30
 - Maps SDK "com.google.android.gms:play-services-maps:17.0.1"
+- Structured Content Library “com.liveperson.android:lp_structured_content:2.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:2.0.0”
 
 # New Feature:
 
 DatePicker allows brand agents to send the Structured Content to consumers to choose desired date or a date range using an inbuilt calendar.
 
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="../../../../img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+    <img src="/img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
 </div>
 
 # Bugs Fixed:
@@ -46,6 +78,11 @@ DatePicker allows brand agents to send the Structured Content to consumers to ch
 - Support bold and italic in system messages.
 - Support five additional languages. (Malaysian, Arabic, French-Canadian, Indonesian, Latin American Spanish)
 - Optimized [History Control APIs](mobile-app-messaging-sdk-for-android-sdk-apis-control-history-apis.html#important-notes) to allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen.
+
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
 
 
 # Android Messaging SDK - Version 5.6.0
@@ -82,8 +119,8 @@ repositories {
 
 Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
-    <img src="../../../../img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
+    <img src="/img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
+    <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
 {:.important}
@@ -707,6 +744,36 @@ For More information see: [Attributes Page](https://developers.liveperson.com/mo
 * **shutDown()** , use *shutDown(final ShutDownLivePersonCallback shutdownCallback)* instead
 * **setUserProfile(String appId, String firstName, String lastName, String phone)** , use *setUserProfile(ConsumerProfile profile)* instead
 
+# Android Messaging SDK - Version 4.9.1
+
+**Release date:** September 07, 2021
+
+# Overview
+Android Mobile Messaging SDK version 4.9.1 release includes Rich Content Push Notification support for Proactive outbound messaging and enhancements.
+
+## Environmental Requirements
+The Android Mobile Messaging SDK version 4.9.1 uses:
+- Minimum API version 21
+- Compile API version 28
+- Target API version 28
+- Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+- Structured Content Library “com.liveperson.android:lp_structured_content:1.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:1.0.1”
+
+**(unchanged from version 4.9.0)**
+
+# Enhancements:
+- [Proactive to InApp messaging](mobile-app-messaging-sdk-for-android-advanced-features-proactive-and-ivr-deflection-to-app-messaging.html) feature now has extended to support Rich Content Push Notification messages.
+
+# Bugs Fixed:
+- Link previews for consumer messages are not hidden even when the feature is disabled.
+
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
+
+
 # Android Messaging SDK - Version 4.9.0
 
 **Release date:** July 12, 2021
@@ -720,6 +787,8 @@ The Android Mobile Messaging SDK version 4.9.0 uses:
 - Compile API version 28
 - Target API version 28
 - Maps SDK "com.google.android.gms:play-services-maps:16.1.0"
+- Structured Content Library “com.liveperson.android:lp_structured_content:1.1.0”
+- Date Picker Library “com.liveperson.android:lp-date-picker:1.0.1”
 
 **(unchanged from version 4.8.1)**
 
@@ -728,8 +797,8 @@ The Android Mobile Messaging SDK version 4.9.0 uses:
 DatePicker allows brand agents to send the Structured Content to consumers to choose desired date or a date range using an inbuilt calendar.
 
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
-    <img src="../../../../img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
+    <img src="/img/DatePickerSingleSelection.gif" alt="Date Picker Single Selection" style="float: left; width: 30%;height: auto; margin-right: 6em">
+    <img src="/img/DatePickerRangeSelection.gif" alt="Date Picker Range Selection" style="width: 30%;height: auto;">
 </div>
 
 # Bugs Fixed:
@@ -741,6 +810,11 @@ DatePicker allows brand agents to send the Structured Content to consumers to ch
 - Support bold and italic in system messages.
 - Support five additional languages. (Malaysian, Arabic, French-Canadian, Indonesian, Latin American Spanish)
 - Optimized [History Control APIs](mobile-app-messaging-sdk-for-android-sdk-apis-control-history-apis.html#important-notes) to allow brands to decide which historical or current conversations displays to the consumer when opening the conversation screen.
+
+# Known Issue:
+
+Deep links shared via Structured Content for InApp navigation are failing due to `http` prefix is getting added when clicked on a link.
+The workaround for this issue is to use [structured_content_link_as_callback](mobile-app-messaging-sdk-for-android-sdk-attributes-5-0-and-above.html#structured-content) configuration of SDK and handle links inside host app when fired SDK event:  [LP_ON_STRUCTURED_CONTENT_LINK_CLICKED](mobile-app-messaging-sdk-for-android-sdk-apis-callbacks-index.html#structured-content-link-clicked)
 
 
 # Android Messaging SDK - Version 4.8.1
@@ -777,8 +851,8 @@ repositories {
 
 Voice and Video integration allows brand agents to communicate with consumers via voice or video calls.
 <div style="width: 100%; position: relative;">
-    <img src="../../../../img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
-    <img src="../../../../img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
+    <img src="/img/android_voice_call.png" alt="Voice call example screen" style="float: left; width: 25%;height: auto; margin-right: 1em">
+    <img src="/img/android_video_call.png" alt="Video call example screen" style="width: 25%;height: auto;">
 </div>
 
 {:.important}
@@ -1607,7 +1681,7 @@ When the agent shares any supported file type from the LE, if the consumer isn't
 
 ##### How photo and file sharing works
 
-<img src="../../../../img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
+<img src="/img/photo-file-sharing-diagram.png" alt="How photo and file sharing works" style="width: 600px;padding: 20px;">
 
 ---   
 

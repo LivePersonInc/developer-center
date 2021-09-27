@@ -133,6 +133,20 @@ case "help":
 }      
 ```
 
+### Get bot ID
+
+The `getChatBotId` function retrieves the bot ID for the current conversation.
+
+| Function Name | Arguments | Returns |
+| --- | --- | --- |
+| `getChatBotId()` | None | Bot ID (string) |
+
+#### Example
+
+```javascript
+// store the bot's ID in a variable inside your current pre/post process code
+var botId = botContext.getChatBotId();
+```
 
 ### Get conversation ID
 

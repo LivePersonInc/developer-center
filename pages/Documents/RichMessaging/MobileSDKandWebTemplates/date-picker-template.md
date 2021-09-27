@@ -15,6 +15,11 @@ Web Messaging and the Mobile SDK channels now allow for Date Picker functionalit
 
 Conversational Cloud enables the agent to send a structured content button with a date picker action. This action will present a graphical user interface widget, which allows the consumer to efficiently select a date or date range.
 
+
+{: .notice}
+DatePicker JSON schema is only supported on accounts using UMS version 4.2, please contact your LivePerson representative to validate your account qualifies for this feature.
+
+
 There are two date picker options:
 
 * **Single:** Selects single date.
@@ -32,9 +37,9 @@ There are two date picker options:
 | type          | Must be `datePicker`  | String | Y        |            |
 | class   | Either `single` or `range` | String | Y        |     |
 | title       | Title displayed on view         | String  | Y        |    |
-| minDate          | minimum date in range  | Int(Seconds) | N        |            |
-| maxDate   | maximum date in range | Int(Seconds) | N        |     |
-| dateFormat       | Title displayed         | String  | N        |    |
+| minDate          | Minimum date in range  | Int(Seconds) | N        |            |
+| maxDate   | Maximum date in range | Int(Seconds) | N        |     |
+| dateFormat       | The date format | String  | N        |    |
 
 ### Example
 
