@@ -336,7 +336,7 @@ A Dynamic Routing interaction does the following:
     * Route to skill
     * Route to agent
 
-    **Note**: The end result of this interaction is always a transfer. If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. For this reason, specifying the fallback skill in the interaction is required.
+    **Note**: If the next action returned by the `askMaven` call is just to send a message, the bot does this and then transfers to the fallback skill specified in the interaction. If a fallback skill isn't specified, the conversation flow continues to the next action in the dialog.
 
 #### Prerequisites
 
@@ -354,7 +354,7 @@ Enabling the Conversation Context Service for your account is necessary because 
 3. In the upper-right corner of the interaction, click <img style="width:20px" src="img/ConvoBuilder/icon_settings.png"> (Settings icon).
 4. On the **Basic** tab, specify the following:
 
-    * **Fallback skill id**: Required. If the `askMaven` call returns just a next action of “send message,” doesn’t return any next actions, returns an error, or fails for some reason, this is the ID of the agent skill to which the conversation is transferred. You can specify the ID using a bot context variable like {botContext.skillId}, or you can enter a direct, numeric value.
+    * **Fallback skill id**: If the `askMaven` call returns just a next action of “send message,” doesn’t return any next actions, returns an error, or fails for some reason, this is the ID of the agent skill to which the conversation is transferred. You can specify the ID using a bot context variable like {botContext.skillId}, or you can enter a direct, numeric value. If this setting isn’t set, the conversation flow continues to the next action in the dialog.
     * **Fallback skill name**: Enter the name of the agent skill that you specified in the **Fallback skill id** setting. Entering the name provides you with something display-friendly and “readable” by which to readily understand which skill is being used (since the skill ID is a number).
 
 5. Select the **Advanced** tab, and specify the following:
