@@ -80,3 +80,6 @@ After you've add an external knowledge base that doesn't use AI, you can test th
 3. Evaluate the article results that are displayed. If they aren't what you expect, you might need to adjust the knowledge base's configuration.
 
     <img style="width:800px" src="img/ConvoBuilder/kb_cms_no_ai_test_2.png">
+
+    {: .important}
+    Answers are evaluated by your external CMS. When they're returned, they're always assumed to be a match.
