@@ -36,7 +36,7 @@ For an explanation of an entity, see [here](intent-manager-key-terms-concepts.ht
 ### Add a Regular Expression entity
 
 {: .important}
-Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding.html#livepersons-nlu-engine) for NLU.
+Regular Expression entities are available only in domains using the [LivePerson engine](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#liveperson-nlu-engine) for NLU.
 
 **To add a Regular Expression entity**
 

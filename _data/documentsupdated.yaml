@@ -282,6 +282,11 @@
         - pagename: Overview
         - pagename: Key Terms & Concepts
         - pagename: Natural Language Understanding
+          subpages:
+            - subpagename: Introduction
+            - subpagename: Language Support
+            - subpagename: LivePerson NLU Engine
+            - subpagename: Third-Party NLU Engines
         - pagename: Dashboard
         - pagename: Getting Started
         - pagename: Best Practices
