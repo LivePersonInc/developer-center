@@ -185,10 +185,10 @@ Additionally, most of the LivePerson API calls need authorization. The LP Client
 <td>Yes</td>
 </tr>
 <tr>
-<td><a href="ivr-engagement-api-overview.html">IVR Engagement API</a></td>
+<!-- <td><a href="ivr-engagement-api-overview.html">IVR Engagement API</a></td>
 <td>Yes</td>
 </tr>
-<tr>
+<tr> -->
 <td><a href="predefined-content-api-overview.html">Predefined Content API</a></td>
 <td>Read only</td>
 </tr>
