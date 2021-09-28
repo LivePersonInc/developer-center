@@ -60,12 +60,17 @@ The statistics presented in the email are:
 
 - **Deployed Functions** shows the current number of functions with a *productive*/*modified* state alongside the maximum allowed *productive* functions for the account.
 
-- **Successful Invocations** represents the total number of *successful* invocations for the functions of the account since the beginning of the current month. 
+- **Successful Invocations** represents the total number of *successful* invocations for the functions of the account during the report period.
 
-- **Failed Invocations** represents the total number of *failed* invocations for the functions of the account since the beginning of the current month.
+- **Failed Invocations** represents the total number of *failed* invocations for the functions of the account during the report period. The uncategorized invocation errors are also counted here.
 
-In addition to the total  numbers, you can also see **Individual Function Statistics** for each deployed function in your account as a table.
+- **Ended with timeout** represents the amount of invocations *failed* due to a timeout error (Execution took more than 30s) for the functions of the account during the report period. 
 
-The table includes the name, the `UUID` associated with the function, **Successful Invocations** and **Failed Invocations** for  each deployed function (deployed at the time of the report creation).
+- **Function failure** represents the amount of invocations *failed*  due to function coding error, for the functions of the account during the report period.
+
+In addition to the total numbers, you can also see **Individual Function Statistics** for each deployed function in your account as a table. The table includes the name, the `EVENT` associated with the function, **Successful Invocations**, **Failed Invocations**, **Ended with timeout** and **Function failure** for  each deployed function (deployed at the time of the report creation).
+
+<div class="important">The numbers in parenthesis on the right of each metric indicate the difference between the current report and the previous.</div>
 
 <div class="important">You will not see any statistics of functions that  were deleted at the time of the report creation</div>
+
