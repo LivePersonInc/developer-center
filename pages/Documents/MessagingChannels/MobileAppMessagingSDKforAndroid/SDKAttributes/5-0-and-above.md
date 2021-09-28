@@ -91,7 +91,7 @@ Announce when the agent is typing. This is applicable only in Activity mode.
 ### Agent Assignment
 
 #### send_agent_profile_updates_when_conversation_closed
-When set to **true** the callback [LivePersonCallback](lp_messaging_ui_brand_logo) `onAgentDetailsChanged` calls with the agent detail updates even if the last conversation is closed. In this case, it provides the assigned agent of the last conversation. If **false**, this callback is only called when the current conversation is active.
+When set to **true** the callback [LivePersonCallback](/android-callbacks-index.html#liveperson-callbacks) `onAgentDetailsChanged` calls with the agent detail updates even if the last conversation is closed. In this case, it provides the assigned agent of the last conversation. If **false**, this callback is only called when the current conversation is active.
 
 * **Type:** bool  
 * **Default value:** true
