@@ -19,7 +19,7 @@ An internal knowledge base is a built-in knowledge base, i.e., one whose content
 * Do a one-time import of articles from a CSV file, and maintain the articles thereafter within KnowledgeAI.
 * Link the knowledge base to a Google sheet. You can maintain the Google sheet and sync the knowledge base to overwrite the knowledge base with the sheet’s contents. Or, you can add the knowledge base using the Google sheet and work thereafter entirely within KnowledgeAI.
 
-An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding.html) to [evaluate the articles](knowledgeai-using-intents-with-kbs.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
+An internal knowledge base always makes use of a [Natural Language Understanding (NLU) engine](intent-manager-natural-language-understanding-introduction.html) to [evaluate the articles](knowledgeai-using-intents-with-kbs.html#search-modes) in the knowledge base against the consumer’s utterance (the intent). The articles, which have associated intents, are matched and [scored](knowledgeai-using-intents-with-kbs.html#scoring-and-thresholds) by the engine, and the most accurate article is sent to the inquiring consumer.
 
 ### High-Level Workflow
 
@@ -50,7 +50,7 @@ Within the newly created knowledge base, you then link each article to an intent
 
 <img style="width:700px" src="img/ConvoBuilder/kb_domain_intents2.png">
 
-With Domain intents like these, you can use any of the following [NLU engines](intent-manager-natural-language-understanding.html) for intent matching:
+With Domain intents like these, you can use any of the following [NLU engines](intent-manager-natural-language-understanding-introduction.html) for intent matching:
 * LivePerson
 * LivePerson (Legacy)
 * A third-party NLU engine 

@@ -130,7 +130,7 @@ There are several, important metrics displayed:
 ### Evaluate the report
 
 {: .important}
-On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-manager-natural-language-understanding.html#variances-in-matched-intents-with-liveperson-nlu).
+On occasion, you might notice a small number of changes in the matched intents for the test set after retraining with no additional training samples. For more on this, see [here](intent-manager-natural-language-understanding-liveperson-nlu-engine.html#variances-in-matched-intents-with-liveperson-nlu).
 
 If the report's scores are low, take corrective action as follows:
 
