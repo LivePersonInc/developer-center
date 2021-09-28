@@ -632,7 +632,7 @@ This method adds/ updates SDEs to an Engagement via the [Engagement Attributes A
 
 #### Get SDEs from Conversation
 
-The method extracts the SDEs from a conversation that has been retrieved fromt the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html). (e.g via the [ConversationUtil](http://localhost:3000/liveperson-functions-development-toolbelt.html#conversation-util)) Before returning them, it sorts the contained SDE-Events in ascending order.
+The method extracts the SDEs from a conversation that has been retrieved fromt the [Messaging Interactions API](https://developers.liveperson.com/messaging-interactions-api-overview.html). (e.g via the [ConversationUtil](#conversation-util)) Before returning them, it sorts the contained SDE-Events in ascending order.
 
 **Sample Usage**
 
